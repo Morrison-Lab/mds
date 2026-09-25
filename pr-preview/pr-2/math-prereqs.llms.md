@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-25 16:13:44 (PDT)
+Last modified: 2026-09-25 16:30:51 (PDT)
 
 ------------------------------------------------------------------------
 
@@ -351,24 +351,24 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > See the red contours in [Figure 2](#fig-double-exponential2) for a visualization.
 >
 > ``` downlit
-> `b*c_f` <- function(b, c) b*c
-> `b^c_f` <- function(b, c) b^c
+> mult_f <- function(b, c) b * c
+> pow_f <- function(b, c) b^c
 > values_b <- seq(0, 5, by = .01)
 > values_c <- seq(-.5, 3, by = .01)
 >
-> `b*c` <- outer(values_b, values_c, `b*c_f`)
-> `b^c` <- outer(values_b, values_c, `b^c_f`)
-> `b^c`[is.infinite(`b^c`)] = NA
+> mult_mat <- outer(values_b, values_c, mult_f)
+> pow_mat <- outer(values_b, values_c, pow_f)
+> pow_mat[is.infinite(pow_mat)] <- NA
 >
 > opacity <- .3
-> z_min <- min(`b*c`, `b^c`, na.rm = TRUE)
+> z_min <- min(mult_mat, pow_mat, na.rm = TRUE)
 > z_max <- 5
 > plotly::plot_ly(
 >   x = ~values_b,
 >   y = ~values_c
 > ) |>
 >   plotly::add_surface(
->     z = ~ t(`b*c`),
+>     z = ~ t(mult_mat),
 >     contours = list(
 >       z = list(
 >         show = TRUE,
@@ -385,7 +385,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >   plotly::add_surface(
 >     opacity = opacity,
 >     colorscale = list(c(0, 1), c("red", "red")),
->     z = ~ t(`b^c`),
+>     z = ~ t(pow_mat),
 >     contours = list(
 >       z = list(
 >         show = TRUE,
@@ -421,10 +421,10 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > Figure 1: Graph of \\b\*c\\ and \\b^c\\
 >
 > ``` downlit
-> `b^c - b*c_f` <- function(b, c) `b^c_f`(b,c) - `b*c_f`(b,c)
+> pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
 >
-> mat1 <- outer(values_b, values_c, `b^c - b*c_f`)
-> mat1[is.infinite(mat1)] = NA
+> mat1 <- outer(values_b, values_c, pow_minus_mult_f)
+> mat1[is.infinite(mat1)] <- NA
 >
 > opacity <- .3
 > plotly::plot_ly(
@@ -554,10 +554,10 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > Code
 >
 > ``` downlit
-> ggplot() +
->   geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
->   labs(x = "x", y = expression(f(x))) +
->   theme_minimal()
+> ggplot2::ggplot() +
+>   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
+>   ggplot2::labs(x = "x", y = expression(f(x))) +
+>   ggplot2::theme_minimal()
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-antiderivatives-f-code-1.png)](math-prereqs_files/figure-html/fig-antiderivatives-f-code-1.png "Figure 3 (b): The function f(x) = x^2.")
@@ -578,10 +578,10 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >   )
 > }))
 >
-> ggplot(df, aes(x = x, y = y, color = C)) +
->   geom_line(linewidth = 0.8) +
->   labs(x = "x", y = expression(F(x)), color = "C") +
->   theme_minimal()
+> ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
+>   ggplot2::geom_line(linewidth = 0.8) +
+>   ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
+>   ggplot2::theme_minimal()
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-antiderivatives-F-code-1.png)](math-prereqs_files/figure-html/fig-antiderivatives-F-code-1.png "Figure 3 (d): Family of antiderivatives F(x) = x^3/3 + C.")
@@ -594,7 +594,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Theorem 28 (Basic integration rules)** Each antiderivative in [Theorem 28](#thm-integral-rules) is defined only up to an arbitrary constant \\C\\ (see [Definition 9](#def-antiderivative)); the table omits \\+ C\\ from every row for brevity.
+> **Theorem 28 (Basic integration rules)** Each antiderivative in the table is defined only up to an arbitrary constant \\C\\ (see [Definition 9](#def-antiderivative)); the table omits \\+ C\\ from every row for brevity.
 >
 > | Function \\f(x)\\ | Antiderivative \\F(x)\\ | Condition |
 > |:--:|:--:|:---|
@@ -699,11 +699,11 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > Code
 >
 > ``` downlit
-> ggplot() +
->   geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
->   geom_point(aes(x = 0, y = 0), size = 3) +
->   labs(x = "x", y = expression(f(x) == abs(x))) +
->   theme_minimal()
+> ggplot2::ggplot() +
+>   ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
+>   ggplot2::geom_point(ggplot2::aes(x = 0, y = 0), size = 3) +
+>   ggplot2::labs(x = "x", y = expression(f(x) == abs(x))) +
+>   ggplot2::theme_minimal()
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-abs-value-code-1.png)](math-prereqs_files/figure-html/fig-abs-value-code-1.png "Figure 4 (a): ")
@@ -739,22 +739,25 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >   segment = c("left", "left", "right", "right")
 > )
 >
-> ggplot() +
->   geom_rect(
->     aes(xmin = 0.5, xmax = 1, ymin = 0, ymax = 1),
+> ggplot2::ggplot() +
+>   ggplot2::geom_rect(
+>     ggplot2::aes(xmin = 0.5, xmax = 1, ymin = 0, ymax = 1),
 >     fill = "steelblue", alpha = 0.3
 >   ) +
->   geom_line(
+>   ggplot2::geom_line(
 >     data = step_df,
->     aes(x = x, y = y, group = segment),
+>     ggplot2::aes(x = x, y = y, group = segment),
 >     linewidth = 1
 >   ) +
->   geom_point(aes(x = 0.5, y = 0), shape = 1, size = 3) +
->   geom_point(aes(x = 0.5, y = 1), shape = 16, size = 3) +
->   scale_x_continuous(breaks = c(0, 0.5, 1), labels = c("0", "1/2", "1")) +
->   scale_y_continuous(limits = c(-0.1, 1.2)) +
->   labs(x = "x", y = "f(x)") +
->   theme_minimal()
+>   ggplot2::geom_point(ggplot2::aes(x = 0.5, y = 0), shape = 1, size = 3) +
+>   ggplot2::geom_point(ggplot2::aes(x = 0.5, y = 1), shape = 16, size = 3) +
+>   ggplot2::scale_x_continuous(
+>     breaks = c(0, 0.5, 1),
+>     labels = c("0", "1/2", "1")
+>   ) +
+>   ggplot2::scale_y_continuous(limits = c(-0.1, 1.2)) +
+>   ggplot2::labs(x = "x", y = "f(x)") +
+>   ggplot2::theme_minimal()
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-step-code-1.png)](math-prereqs_files/figure-html/fig-step-code-1.png "Figure 5 (a): ")
@@ -817,21 +820,21 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > Code
 >
 > ``` downlit
-> ggplot() +
->   geom_area(
+> ggplot2::ggplot() +
+>   ggplot2::geom_area(
 >     data = data.frame(t = seq(0, x_focus, length.out = 200)),
->     aes(x = t, y = 2 * t),
+>     ggplot2::aes(x = t, y = 2 * t),
 >     fill = "steelblue", alpha = 0.4
 >   ) +
->   geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
->   geom_vline(
+>   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
+>   ggplot2::geom_vline(
 >     data = data.frame(x = x_marks),
->     aes(xintercept = x, color = factor(x)),
+>     ggplot2::aes(xintercept = x, color = factor(x)),
 >     linetype = "dashed", linewidth = 0.6
 >   ) +
->   labs(x = "t", y = "f(t) = 2t", color = "x") +
->   theme_minimal() +
->   theme(legend.position = "bottom")
+>   ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-ftc-part1-left-code-1.png)](math-prereqs_files/figure-html/fig-ftc-part1-left-code-1.png "Figure 6 (b): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
@@ -849,25 +852,25 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >   slope = 2 * x_marks
 > )
 >
-> ggplot() +
->   geom_function(fun = \(x) x^2, xlim = c(0, 2.2), linewidth = 1) +
->   geom_point(
+> ggplot2::ggplot() +
+>   ggplot2::geom_function(fun = \(x) x^2, xlim = c(0, 2.2), linewidth = 1) +
+>   ggplot2::geom_point(
 >     data = slope_df,
->     aes(x = x, y = Fx, color = factor(x)),
+>     ggplot2::aes(x = x, y = Fx, color = factor(x)),
 >     size = 3
 >   ) +
->   geom_segment(
+>   ggplot2::geom_segment(
 >     data = slope_df,
->     aes(
+>     ggplot2::aes(
 >       x = x - 0.3, xend = x + 0.3,
 >       y = Fx - 0.3 * slope, yend = Fx + 0.3 * slope,
 >       color = factor(x)
 >     ),
 >     linewidth = 0.8
 >   ) +
->   labs(x = "x", y = expression(F(x) == x^2), color = "x") +
->   theme_minimal() +
->   theme(legend.position = "bottom")
+>   ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-ftc-part1-right-code-1.png)](math-prereqs_files/figure-html/fig-ftc-part1-right-code-1.png "Figure 6 (d): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
@@ -903,18 +906,18 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > Code
 >
 > ``` downlit
-> ggplot() +
->   geom_area(
+> ggplot2::ggplot() +
+>   ggplot2::geom_area(
 >     data = data.frame(t = seq(0, t_focus, length.out = 300)),
->     aes(x = t, y = lambda * exp(-lambda * t)),
+>     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
 >     fill = "steelblue", alpha = 0.4
 >   ) +
->   geom_function(
+>   ggplot2::geom_function(
 >     fun = \(t) lambda * exp(-lambda * t),
 >     xlim = c(0, t_max), linewidth = 1
 >   ) +
->   labs(x = "t", y = "f(t)") +
->   theme_minimal()
+>   ggplot2::labs(x = "t", y = "f(t)") +
+>   ggplot2::theme_minimal()
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-exp-pdf-cdf-pdf-code-1.png)](math-prereqs_files/figure-html/fig-exp-pdf-cdf-pdf-code-1.png "Figure 7 (b): PDF with \lambda = 1; shaded area equals F(2) \approx 0.865.")
@@ -926,25 +929,25 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > Code
 >
 > ``` downlit
-> ggplot() +
->   geom_function(
+> ggplot2::ggplot() +
+>   ggplot2::geom_function(
 >     fun = \(t) 1 - exp(-lambda * t),
 >     xlim = c(0, t_max), linewidth = 1
 >   ) +
->   geom_point(
->     aes(x = t_focus, y = F_at_focus),
+>   ggplot2::geom_point(
+>     ggplot2::aes(x = t_focus, y = F_at_focus),
 >     size = 3, color = "steelblue"
 >   ) +
->   geom_segment(
->     aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
+>   ggplot2::geom_segment(
+>     ggplot2::aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
 >     linetype = "dashed", color = "steelblue"
 >   ) +
->   geom_segment(
->     aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
+>   ggplot2::geom_segment(
+>     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
 >     linetype = "dashed", color = "steelblue"
 >   ) +
->   labs(x = "t", y = "F(t)") +
->   theme_minimal()
+>   ggplot2::labs(x = "t", y = "F(t)") +
+>   ggplot2::theme_minimal()
 > ```
 >
 > [![](math-prereqs_files/figure-html/fig-exp-pdf-cdf-cdf-code-1.png)](math-prereqs_files/figure-html/fig-exp-pdf-cdf-cdf-code-1.png "Figure 7 (d): CDF with \lambda = 1; point marks F(2) \approx 0.865.")
