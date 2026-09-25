@@ -68,18 +68,18 @@ F_at_focus <- 1 - exp(-lambda * t_focus)
 ```{r}
 #| label: fig-exp-pdf-cdf-pdf-code
 #| code-fold: true
-ggplot() +
-  geom_area(
+ggplot2::ggplot() +
+  ggplot2::geom_area(
     data = data.frame(t = seq(0, t_focus, length.out = 300)),
-    aes(x = t, y = lambda * exp(-lambda * t)),
+    ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
     fill = "steelblue", alpha = 0.4
   ) +
-  geom_function(
+  ggplot2::geom_function(
     fun = \(t) lambda * exp(-lambda * t),
     xlim = c(0, t_max), linewidth = 1
   ) +
-  labs(x = "t", y = "f(t)") +
-  theme_minimal()
+  ggplot2::labs(x = "t", y = "f(t)") +
+  ggplot2::theme_minimal()
 ```
 
 PDF with $\lambda = `r lambda`$; shaded area equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
@@ -90,25 +90,25 @@ PDF with $\lambda = `r lambda`$; shaded area equals $F(`r t_focus`) \approx `r r
 ```{r}
 #| label: fig-exp-pdf-cdf-cdf-code
 #| code-fold: true
-ggplot() +
-  geom_function(
+ggplot2::ggplot() +
+  ggplot2::geom_function(
     fun = \(t) 1 - exp(-lambda * t),
     xlim = c(0, t_max), linewidth = 1
   ) +
-  geom_point(
-    aes(x = t_focus, y = F_at_focus),
+  ggplot2::geom_point(
+    ggplot2::aes(x = t_focus, y = F_at_focus),
     size = 3, color = "steelblue"
   ) +
-  geom_segment(
-    aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
+  ggplot2::geom_segment(
+    ggplot2::aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
     linetype = "dashed", color = "steelblue"
   ) +
-  geom_segment(
-    aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
+  ggplot2::geom_segment(
+    ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
     linetype = "dashed", color = "steelblue"
   ) +
-  labs(x = "t", y = "F(t)") +
-  theme_minimal()
+  ggplot2::labs(x = "t", y = "F(t)") +
+  ggplot2::theme_minimal()
 ```
 
 CDF with $\lambda = `r lambda`$; point marks $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.

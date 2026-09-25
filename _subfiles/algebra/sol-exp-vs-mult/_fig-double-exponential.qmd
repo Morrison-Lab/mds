@@ -3,24 +3,24 @@
 ```{R}
 #| label: graph-double-exponential
 
-`b*c_f` <- function(b, c) b*c
-`b^c_f` <- function(b, c) b^c
+mult_f <- function(b, c) b * c
+pow_f <- function(b, c) b^c
 values_b <- seq(0, 5, by = .01)
 values_c <- seq(-.5, 3, by = .01)
 
-`b*c` <- outer(values_b, values_c, `b*c_f`)
-`b^c` <- outer(values_b, values_c, `b^c_f`)
-`b^c`[is.infinite(`b^c`)] = NA
+mult_mat <- outer(values_b, values_c, mult_f)
+pow_mat <- outer(values_b, values_c, pow_f)
+pow_mat[is.infinite(pow_mat)] <- NA
 
 opacity <- .3
-z_min <- min(`b*c`, `b^c`, na.rm = TRUE)
+z_min <- min(mult_mat, pow_mat, na.rm = TRUE)
 z_max <- 5
 plotly::plot_ly(
   x = ~values_b,
   y = ~values_c
 ) |>
   plotly::add_surface(
-    z = ~ t(`b*c`),
+    z = ~ t(mult_mat),
     contours = list(
       z = list(
         show = TRUE,
@@ -37,7 +37,7 @@ plotly::plot_ly(
   plotly::add_surface(
     opacity = opacity,
     colorscale = list(c(0, 1), c("red", "red")),
-    z = ~ t(`b^c`),
+    z = ~ t(pow_mat),
     contours = list(
       z = list(
         show = TRUE,

@@ -3,10 +3,10 @@
 ```{R}
 #| label: graph-double-exponential2
 
-`b^c - b*c_f` <- function(b, c) `b^c_f`(b,c) - `b*c_f`(b,c)
+pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
 
-mat1 <- outer(values_b, values_c, `b^c - b*c_f`)
-mat1[is.infinite(mat1)] = NA
+mat1 <- outer(values_b, values_c, pow_minus_mult_f)
+mat1[is.infinite(mat1)] <- NA
 
 opacity <- .3
 plotly::plot_ly(

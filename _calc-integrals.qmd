@@ -1,9 +1,3 @@
-```{r}
-#| label: setup-calc-integrals
-#| include: false
-library(ggplot2)
-```
-
 \providecommand{\dif}[2]{\frac{d #1}{d #2}}
 
 Integration is the inverse operation of differentiation: it recovers a

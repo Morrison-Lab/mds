@@ -25,10 +25,10 @@ x_lim <- c(-2, 2)
 ```{r}
 #| label: fig-antiderivatives-f-code
 #| code-fold: true
-ggplot() +
-  geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
-  labs(x = "x", y = expression(f(x))) +
-  theme_minimal()
+ggplot2::ggplot() +
+  ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
+  ggplot2::labs(x = "x", y = expression(f(x))) +
+  ggplot2::theme_minimal()
 ```
 
 The function $f(x) = x^2$.
@@ -48,10 +48,10 @@ df <- do.call(rbind, lapply(C_vals, \(C) {
   )
 }))
 
-ggplot(df, aes(x = x, y = y, color = C)) +
-  geom_line(linewidth = 0.8) +
-  labs(x = "x", y = expression(F(x)), color = "C") +
-  theme_minimal()
+ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
+  ggplot2::geom_line(linewidth = 0.8) +
+  ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
+  ggplot2::theme_minimal()
 ```
 
 Family of antiderivatives $F(x) = x^3/3 + C$.

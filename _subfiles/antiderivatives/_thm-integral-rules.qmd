@@ -1,7 +1,7 @@
 :::{#thm-integral-rules}
 #### Basic integration rules
 
-Each antiderivative in @thm-integral-rules is defined only up to an arbitrary constant
+Each antiderivative in the table is defined only up to an arbitrary constant
 $C$ (see @def-antiderivative);
 the table omits $+ C$ from every row for brevity.
 
