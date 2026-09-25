@@ -15,8 +15,10 @@ See also the definitions in
 
 - @dobson4e, §1.3 (equation 1.1, page 7)
 
-- @mosaiccalc,
-[here](https://www.mosaic-web.org/MOSAIC-Calculus/Textbook/Linear-combinations/28-Vectors.html#geometry-arithmetic).
+- @mosaiccalc, chapter on vectors
+<!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
+404 in CI on 2026-09-25, and www.mosaic-web.org is unreachable from agent
+sessions, so the current URL is unverified; restore a deep link once found. -->
 
 - [wikipedia](https://en.wikipedia.org/wiki/Linear_combination)
 

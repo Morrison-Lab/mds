@@ -21,3 +21,11 @@ jobs:
     permissions:
       contents: read
     uses: Morrison-Lab/gha/.github/workflows/check-bibliography-dois.yml@v2
+    with:
+      # Entries carrying no DOI (books, a 1907 paper, an op-ed, a web
+      # textbook). None has been searched for one yet; move a key out of
+      # this list when a DOI is found and verified by content negotiation.
+      exclude-keys: >-
+        banerjee2014linear billingsley1995probability calclifesaver
+        cheng2025math fubini1907 larsonCalc11e mosaiccalc problifesavercalc
+        realanalysislifesaver rudin1976principles searle2017matrix

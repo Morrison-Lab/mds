@@ -1,6 +1,6 @@
 :::{#exm-fubini-fail-tonelli}
 
-#### When neither Fubini–Tonelli condition is satisfied
+#### When neither Fubini--Tonelli condition is satisfied
 
 The same function $f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2$ from
 @exm-fubini-fail illustrates a case where neither condition of

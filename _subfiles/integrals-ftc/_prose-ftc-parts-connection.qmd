@@ -11,5 +11,5 @@ The standard form of the FTC assumes $f$ is continuous on $[a, b]$;
 continuity is *sufficient* but not strictly necessary (see the
 callout note inside @thm-ftc for the more general statement).
 Since differentiability implies continuity (@thm-diff-implies-cont),
-the FTC applies in particular whenever $f$ is differentiable —
+the FTC applies in particular whenever $f$ is differentiable ---
 a common situation in applied statistics.

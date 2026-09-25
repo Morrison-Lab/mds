@@ -1,4 +1,4 @@
-The **Fubini–Tonelli theorem** states conditions under which the order
+The **Fubini--Tonelli theorem** states conditions under which the order
 of integration in a double integral can be exchanged.
 We state two versions:
 the Riemann version (@thm-fubini) is what applied courses usually use
@@ -40,7 +40,7 @@ Let $f$ be **continuous** on a plane region $R \subseteq \mathbb{R}^2$.
    $$
 
 When $R$ can be described both ways, the two iterated integrals are
-equal — so the order of integration can be exchanged.
+equal --- so the order of integration can be exchanged.
 
 [@larsonCalc11e, Theorem 14.2, p. 982]
 

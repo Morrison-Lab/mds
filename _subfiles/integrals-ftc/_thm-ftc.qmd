@@ -20,7 +20,7 @@ integrable on $[a, b]$ (see @def-integrable) and continuous at $x$
 [@larsonCalc11e, Theorem 4.11, p. 288]
 
 **Part 2 (Evaluation theorem).**
-The $F$ here may be *any* antiderivative of $f$ — not just the
+The $F$ here may be *any* antiderivative of $f$ --- not just the
 accumulation function from Part 1.
 If $F$ is an antiderivative of $f$ on $[a, b]$
 (i.e., $\deriv{x} F(x) = f(x)$ for all $x \in [a, b]$), then:

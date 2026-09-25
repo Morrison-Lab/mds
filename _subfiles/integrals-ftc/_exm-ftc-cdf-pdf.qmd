@@ -1,7 +1,7 @@
 ::::{#exm-ftc-cdf-pdf}
 #### CDF and PDF of the exponential distribution
 
-In what follows, $f$ denotes the PDF and $F$ the CDF — the same letters
+In what follows, $f$ denotes the PDF and $F$ the CDF --- the same letters
 as the antiderivative pair in @def-antiderivative, because the FTC will
 show $F$ is exactly an antiderivative of $f$.
 
