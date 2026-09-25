@@ -5,7 +5,7 @@ the Riemann version (@thm-fubini) is what applied courses usually use
 for double integrals of continuous functions on simple regions;
 the σ-finite measure-theoretic version (@thm-fubini-tonelli) is
 included to make the
-[joint-distribution form](https://d-morrison.github.io/rme/chapters/probability.html#cor-fubini-joint)
+[joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint)
 corollary in the probability chapter of *Regression Models for Epidemiology*
 follow from a stated theorem rather than from an aside.
 

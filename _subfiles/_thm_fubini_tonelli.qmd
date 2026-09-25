@@ -34,7 +34,7 @@ $$
 ::: notes
 Applied courses rarely need the measure-theoretic generalization itself,
 but it is what justifies the
-[joint-distribution form](https://d-morrison.github.io/rme/chapters/probability.html#cor-fubini-joint)
+[joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint)
 corollary in the probability
 chapter of *Regression Models for Epidemiology*: probability measures are finite (hence σ-finite), so the
 σ-finiteness condition is automatic.

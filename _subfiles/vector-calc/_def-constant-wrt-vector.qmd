@@ -1,7 +1,7 @@
 :::{#def-constant-wrt-vector}
 #### Constant
 
-$\vx$ is constant with respect to $\vb$ if
+$\vx$ is **constant with respect to** $\vb$ if
 
 $$
 \underbrace{\deriv{\vb} \tp{\vx}}_{p \times p}

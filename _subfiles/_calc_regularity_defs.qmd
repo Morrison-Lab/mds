@@ -89,7 +89,7 @@ exists and is finite.
 #### General Riemann integrability
 
 More generally, using partitions $\mathcal{P}$ of arbitrary mesh — subintervals of varying widths
-$\Delta x_i$ — a bounded function $f$ is Riemann integrable on $[a, b]$ if
+$\Delta x_i$ — a bounded function $f$ is **Riemann integrable in the general sense** on $[a, b]$ if
 
 $$\int_a^b f(x)\,dx \eqdef \lim_{\|\mathcal{P}\| \to 0} \sum_{i=1}^n f(x_i^*)\,\Delta x_i$$
 

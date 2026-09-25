@@ -1,7 +1,7 @@
 :::{#def-scalar-mult}
 #### Scalar multiplication
 
-A matrix $\matr{A}$ can be multiplied by a scalar $c$:
+The **scalar multiple** of a matrix $\matr{A}$ by a scalar $c$ is:
 
 $$(c\matr{A})_{ij} = c \cdot a_{ij}$$
 

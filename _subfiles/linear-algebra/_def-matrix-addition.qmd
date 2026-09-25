@@ -2,7 +2,7 @@
 #### Matrix addition
 
 Two matrices $\matr{A}$ and $\matr{B}$ of the same dimensions $m \times n$
-can be added element-wise:
+can be added element-wise; their **matrix sum** is:
 
 $$(\matr{A} + \matr{B})_{ij} = a_{ij} + b_{ij}$$
 

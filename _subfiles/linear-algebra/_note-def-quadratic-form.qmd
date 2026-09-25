@@ -5,7 +5,7 @@ They occur frequently in statistics:
 - The residual sum of squares in linear regression (@sec-vector-calculus)
   is a quadratic form.
 - The variance of a linear combination of estimates
-  (see [Inference about Gaussian Linear Regression Models](https://d-morrison.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs))
+  (see [Inference about Gaussian Linear Regression Models](https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs))
   is a quadratic form:
   $\Var{\tp{\vx}\hat{\vb}} = \tp{\vx}\,\Var{\hat{\vb}}\,\vx$.
 :::

@@ -2,7 +2,7 @@
 #### Vector derivative
 If $f(\vb)$ is a function that takes a vector $\vb$ as input,
 such as $f(\vb) = x'\vb$,
-then:
+then its **vector derivative** is:
 
 $$
 \deriv{ \vb} f(\vb) =

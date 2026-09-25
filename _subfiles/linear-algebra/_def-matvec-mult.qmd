@@ -1,7 +1,7 @@
 :::{#def-matvec-mult}
 #### Matrix-vector multiplication
 
-The product of an $m \times p$ matrix $\matr{A}$
+The **matrix-vector product** of an $m \times p$ matrix $\matr{A}$
 and a $p \times 1$ column vector $\vx$
 is the $m \times 1$ column vector $\matr{A}\vx$ with entries:
 

@@ -2,7 +2,7 @@
 
 #### Proportion
 
-In statistics, a "proportion" typically means a ratio where the numerator represents 
+In statistics, a **proportion** typically means a ratio where the numerator represents 
 a subset of the denominator.
 
 :::: notes
