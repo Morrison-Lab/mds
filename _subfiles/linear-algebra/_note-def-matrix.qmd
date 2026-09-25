@@ -1,0 +1,6 @@
+::: notes
+The entry in row $i$ and column $j$ is denoted $a_{ij}$
+or $(\matr{A})_{ij}$.
+A column vector of length $p$ is a special case: a $p \times 1$ matrix.
+A row vector of length $p$ is a $1 \times p$ matrix.
+:::

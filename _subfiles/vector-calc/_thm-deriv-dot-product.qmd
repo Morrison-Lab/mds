@@ -1,0 +1,24 @@
+:::{#thm-deriv-dot-product}
+
+#### Product rule for dot-products
+
+If $\mathbf{a} = \mathbf{a}(\vx)$ and $\mathbf{b} = \mathbf{b}(\vx)$
+are differentiable $p \times 1$ vector functions of $\vx$, then:
+
+$$
+\ba
+\deriv{\ubf{\vx}{p \times 1}} \dpf{\ubf{a}{p \times 1}}{\ubf{b}{p \times 1}}
+&=
+\paren{
+    \deriv{\ubf{\vx}{p \times 1}} \ubf{\tp{a}}{1 \times p}
+  }
+\ubf{b}{p \times 1}
++
+\paren{
+  \deriv{\ubf{\vx}{p \times 1}} \ubf{\tp{b}}{1 \times p}
+}
+\ubf{a}{p \times 1}
+\ea
+$$
+
+:::

@@ -1,0 +1,12 @@
+:::{#exm-infimum}
+##### Numerical examples of infimum
+
+- $\inf\{1, 2, 3\} = 1$, since $1$ is the smallest element.
+- $\inf(0.5, 1] = 0.5 = \min[0.5, 1]$:
+  for intervals open below, the infimum equals the minimum of the
+  corresponding closed-below interval, even though $0.5 \notin (0.5, 1]$.
+  More generally, $\inf(c, b] = \min[c, b] = c$ for any $c < b$.
+- $\inf\{t \ge 0 : t > 0.5\} = 0.5$,
+  even though $0.5$ itself is not in the set.
+
+:::

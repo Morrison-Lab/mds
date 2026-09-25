@@ -1,0 +1,6 @@
+::: notes
+The hat matrix appears in the formula for fitted values
+in linear regression:
+$\hat{\vy} = \mX\hat{\vb} = \mX(\tp{\mX}\mX)^{-1}\tp{\mX}\vy = \matr{H}\vy$.
+It "puts a hat" on $\vy$ — hence the name.
+:::

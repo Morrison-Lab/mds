@@ -1,0 +1,24 @@
+:::{#exm-dot-product-matmul}
+#### Dot product as matrix multiplication
+
+The dot product of two column vectors $\vx$ and $\vb$
+can be written as a matrix product of the row vector $\tp{\vx}$
+with the column vector $\vb$:
+
+$$
+\begin{aligned}
+\vx \cdot \vb
+&= \tp{\vx}\, \vb
+\\ &= [x_1,\; x_2,\; \ldots,\; x_p]
+\begin{bmatrix}
+\beta_{1} \\
+\beta_{2} \\
+\vdots \\
+\beta_{p}
+\end{bmatrix}
+\\ &=
+x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
+\end{aligned}
+$$
+
+:::

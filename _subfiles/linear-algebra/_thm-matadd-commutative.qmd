@@ -1,0 +1,6 @@
+:::{#thm-matadd-commutative}
+#### Matrix addition is commutative
+
+$$\matr{A} + \matr{B} = \matr{B} + \matr{A}$$
+
+:::

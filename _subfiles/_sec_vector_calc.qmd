@@ -1,0 +1,103 @@
+{{< include mds/_subfiles/vector-calc/_prose-vector-calc-attribution.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_note-vector-calc-intro.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_prose-vector-calc-notation.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_def-vector-derivative.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_def-row-vector-derivative.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_thm-row-deriv-tp-col-deriv.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_def-constant-wrt-vector.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-constant-wrt-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-deriv-lincom.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_proof-thm-deriv-lincom.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-lincom.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-deriv-dot-product.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-thm-deriv-dot-product.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-dot-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-deriv-linear-map.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-thm-deriv-linear-map.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-linear-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-deriv-matrix-vector.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-thm-deriv-matrix-vector.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-matrix-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_cor-deriv-lincom-tp.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-cor-deriv-lincom-tp-via-lincom.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-cor-deriv-lincom-tp-via-matrix-vector.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-lincom-tp.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_thm-quadratic-form.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-thm-quadratic-form.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_note-thm-quadratic-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-quadratic-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_cor-deriv-normsq.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_proof-cor-deriv-normsq.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_note-cor-deriv-normsq.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-deriv-normsq.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_thm-chain-vec.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_note-thm-chain-vec.qmd >}}
+
+---
+
+{{< include mds/_subfiles/vector-calc/_cor-chain-qf.qmd >}}

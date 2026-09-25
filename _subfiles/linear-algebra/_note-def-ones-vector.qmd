@@ -1,0 +1,4 @@
+::: notes
+The dot product $\tp{\v1}\vx = \v1 \cdot \vx = \sum_{i=1}^p x_i$
+is the sum of all entries of $\vx$.
+:::

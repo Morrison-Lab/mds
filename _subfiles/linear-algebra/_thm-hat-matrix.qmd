@@ -1,0 +1,11 @@
+:::{#thm-hat-matrix}
+#### Hat matrix is a projection matrix
+
+In a linear regression model with full-rank design matrix $\mX$,
+the **hat matrix**
+
+$$\matr{H} = \mX(\tp{\mX}\mX)^{-1}\tp{\mX}$$
+
+is a projection matrix.
+
+:::

@@ -1,0 +1,14 @@
+:::{#exm-deriv-lincom-tp}
+#### Derivative of a transpose product
+
+Let $\vx = \tp{(3, 5)}$ and $\vb = \tp{(\beta_1, \beta_2)}$.
+Then $\tp{\vx}\vb = 3\beta_1 + 5\beta_2$, and by @cor-deriv-lincom-tp:
+
+$$
+\underbrace{\deriv{\vb}\left(\underbrace{\tp{\vx}}_{1 \times 2}\underbrace{\vb}_{2 \times 1}\right)}_{2 \times 1}
+= \underbrace{\vx}_{2 \times 1}
+= \begin{pmatrix} 3 \\
+5 \end{pmatrix}
+$$
+
+:::

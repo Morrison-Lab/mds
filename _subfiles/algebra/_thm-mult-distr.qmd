@@ -1,0 +1,5 @@
+:::{#thm-mult-distr}
+#### Multiplication is distributive
+
+$$a(b+c) = ab + ac$$
+:::

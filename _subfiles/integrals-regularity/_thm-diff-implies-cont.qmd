@@ -1,0 +1,8 @@
+:::{#thm-diff-implies-cont}
+#### Differentiability implies continuity
+
+If $f$ is differentiable at $x = c$, then $f$ is continuous at $x = c$.
+
+[@larsonCalc11e, Theorem 2.1, p. 106]
+
+:::

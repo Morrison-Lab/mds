@@ -1,0 +1,1 @@
+Together, @thm-diff-implies-cont and @thm-cont-implies-int establish the chain:

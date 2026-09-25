@@ -1,0 +1,11 @@
+:::{#def-quadratic-form}
+#### Quadratic form
+
+A **quadratic form** is a mathematical expression of the structure
+
+$$\tp{\vx}\, \matr{S}\, \vx$$
+
+where $\vx$ is a $p \times 1$ vector
+and $\matr{S}$ is a $p \times p$ matrix.
+
+:::

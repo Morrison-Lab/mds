@@ -1,0 +1,10 @@
+:::{#thm-sum-assoc}
+#### Sums are associative
+
+::: notes
+When summing three or more terms, the order in which you sum them does not matter:
+:::
+
+$$(a + b) + c = a + (b + c)$$
+
+:::

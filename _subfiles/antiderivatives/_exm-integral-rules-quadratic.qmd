@@ -1,0 +1,15 @@
+:::{#exm-integral-rules-quadratic}
+#### Antiderivative of $3x^2 - 1$
+
+By the power rule ($n = 2$) and linearity from @thm-integral-rules:
+
+$$
+\int \paren{3x^2 - 1}\,dx
+= 3 \cd \frac{x^3}{3} - x + C
+= x^3 - x + C.
+$$
+
+Verify by differentiating:
+$\deriv{x}\paren{x^3 - x + C} = 3x^2 - 1 = f(x)$, as required.
+
+:::

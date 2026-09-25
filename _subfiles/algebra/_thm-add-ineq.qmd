@@ -1,0 +1,6 @@
+:::{#thm-add-ineq}
+#### Adding to both sides of an inequality
+
+If $a<b$, then $a+c < b+c$
+
+:::

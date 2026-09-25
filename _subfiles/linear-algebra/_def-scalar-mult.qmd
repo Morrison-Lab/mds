@@ -1,0 +1,8 @@
+:::{#def-scalar-mult}
+#### Scalar multiplication
+
+A matrix $\matr{A}$ can be multiplied by a scalar $c$:
+
+$$(c\matr{A})_{ij} = c \cdot a_{ij}$$
+
+:::

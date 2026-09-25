@@ -1,0 +1,9 @@
+:::{#cor-log-quot}
+#### logarithm of a quotient
+
+::: notes
+The logarithm of a quotient is equal to the difference of the logs of the factors:
+:::
+
+$$\log{\frac{a}{b}} = \log{a} - \log{b}$$
+:::

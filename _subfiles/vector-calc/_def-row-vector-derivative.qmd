@@ -1,0 +1,16 @@
+::: {#def-row-vector-derivative}
+#### Row-vector derivative
+If $f(\vb)$ is a function that takes a vector $\vb$ as input,
+such as $f(\vb) = x'\vb$,
+then:
+
+$$
+\deriv{ \vb\'} f(\vb) =
+\sbmat{
+\deriv{\beta_1}f(\vb) &
+\deriv{\beta_2}f(\vb) &
+\cdots &
+\deriv{\beta_p}f(\vb)
+}
+$$
+:::

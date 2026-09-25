@@ -1,0 +1,8 @@
+:::{#thm-indicator-selection}
+#### Indicator vectors select entries
+
+For any vector $\vx$ of length $p$ and any $j \in \{1, \ldots, p\}$:
+
+$$\tp{\vecf{e}_j}\vx = x_j$$
+
+:::

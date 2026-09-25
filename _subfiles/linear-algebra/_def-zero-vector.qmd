@@ -1,0 +1,16 @@
+:::{#def-zero-vector}
+#### Zero vector
+
+The **zero vector** $\vzero$ of length $p$ has all entries equal to zero:
+
+$$
+\vzero =
+\begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix}
+$$
+
+:::

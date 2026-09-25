@@ -1,0 +1,5 @@
+::: notes
+The transpose operation converts a column vector to a row vector,
+or more generally, swaps the rows and columns of a matrix
+(@def-matrix-transpose).
+:::

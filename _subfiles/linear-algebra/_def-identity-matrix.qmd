@@ -1,0 +1,24 @@
+:::{#def-identity-matrix}
+#### Identity matrix
+
+The $p \times p$ **identity matrix** $\matr{I}_p$
+(or $\matr{I}$ when the size is clear from context)
+has ones on the main diagonal and zeros elsewhere:
+
+$$
+(\matr{I}_p)_{ij} =
+\begin{cases}
+1 & \text{if } i = j \\
+0 & \text{if } i \neq j
+\end{cases}
+\qquad
+\matr{I}_p =
+\begin{bmatrix}
+1      & 0      & \cdots & 0      \\
+0      & 1      & \cdots & 0      \\
+\vdots & \vdots & \ddots & \vdots \\
+0      & 0      & \cdots & 1
+\end{bmatrix}
+$$
+
+:::

@@ -1,0 +1,123 @@
+::::{#exm-ftc-cdf-pdf}
+#### CDF and PDF of the exponential distribution
+
+In what follows, $f$ denotes the PDF and $F$ the CDF — the same letters
+as the antiderivative pair in @def-antiderivative, because the FTC will
+show $F$ is exactly an antiderivative of $f$.
+
+For the exponential distribution with rate parameter $\lambda > 0$,
+the probability density function (PDF) is
+[@kleinbaum2012survival, Section II, p. 295, "Survival and Hazard
+Functions for Selected Distributions"]:
+
+$$f(t) = \lambda \ef{-\lambda t}, \quad t \ge 0$$
+
+**FTC Part 2** gives the cumulative distribution function (CDF) from the PDF.
+Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\lambda$ to
+antidifferentiate the integrand:
+
+$$
+\ba
+F(t)
+&= \int_0^t \lambda \ef{-\lambda u}\,du \\
+&= \sb{\lambda \cd \frac{1}{-\lambda}\ef{-\lambda u}}_{u=0}^{u=t} \\
+&= \sb{(-1)\ef{-\lambda u}}_{u=0}^{u=t} \\
+&= \sb{-\ef{-\lambda u}}_{u=0}^{u=t} \\
+&= -\ef{-\lambda t} - \paren{-\ef{0}} \\
+&= -\ef{-\lambda t} - (-1) \\
+&= 1 - \ef{-\lambda t}
+\ea
+$$
+
+**FTC Part 1** recovers the PDF from the CDF:
+
+$$
+\ba
+\deriv{t} F(t)
+&= \deriv{t}\paren{1 - \ef{-\lambda t}} \\
+&= 0 - (-\lambda)\ef{-\lambda t} \\
+&= \lambda\ef{-\lambda t} \\
+&= f(t)
+\ea
+$$
+
+For a concrete instance: with $\lambda = 1$ (standard exponential),
+the probability that $T \le 2$ is:
+
+$$
+F(2) = 1 - \ef{-1 \cd 2} = 1 - \ef{-2} \approx 1 - 0.135 = 0.865
+$$
+
+See @fig-exp-pdf-cdf.
+
+```{r}
+#| label: fig-exp-pdf-cdf-setup
+#| include: false
+lambda <- 1
+t_focus <- 2
+t_max <- 5
+F_at_focus <- 1 - exp(-lambda * t_focus)
+```
+
+{{< slidebreak >}}
+
+:::{#fig-exp-pdf-cdf layout-ncol="2"}
+
+:::{#fig-exp-pdf-cdf-pdf}
+
+```{r}
+#| label: fig-exp-pdf-cdf-pdf-code
+#| code-fold: true
+ggplot() +
+  geom_area(
+    data = data.frame(t = seq(0, t_focus, length.out = 300)),
+    aes(x = t, y = lambda * exp(-lambda * t)),
+    fill = "steelblue", alpha = 0.4
+  ) +
+  geom_function(
+    fun = \(t) lambda * exp(-lambda * t),
+    xlim = c(0, t_max), linewidth = 1
+  ) +
+  labs(x = "t", y = "f(t)") +
+  theme_minimal()
+```
+
+PDF with $\lambda = `r lambda`$; shaded area equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
+:::
+
+:::{#fig-exp-pdf-cdf-cdf}
+
+```{r}
+#| label: fig-exp-pdf-cdf-cdf-code
+#| code-fold: true
+ggplot() +
+  geom_function(
+    fun = \(t) 1 - exp(-lambda * t),
+    xlim = c(0, t_max), linewidth = 1
+  ) +
+  geom_point(
+    aes(x = t_focus, y = F_at_focus),
+    size = 3, color = "steelblue"
+  ) +
+  geom_segment(
+    aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
+    linetype = "dashed", color = "steelblue"
+  ) +
+  geom_segment(
+    aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
+    linetype = "dashed", color = "steelblue"
+  ) +
+  labs(x = "t", y = "F(t)") +
+  theme_minimal()
+```
+
+CDF with $\lambda = `r lambda`$; point marks $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
+:::
+
+Exponential distribution with $\lambda = `r lambda`$.
+Left: the PDF $f(t) = \lambda \ef{-\lambda t}$; the shaded area under the curve from $0$ to $`r t_focus`$ equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
+Right: the CDF $F(t) = 1 - \ef{-\lambda t}$; the dashed lines mark the value $F(`r t_focus`)$ computed via FTC Part 2.
+
+:::
+
+::::

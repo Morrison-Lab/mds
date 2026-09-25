@@ -1,0 +1,18 @@
+:::{#def-zero-matrix}
+#### Zero matrix
+
+The $m \times n$ **zero matrix** $\matr{0}_{m \times n}$
+(or $\matr{0}$ when dimensions are clear from context)
+has all entries equal to zero:
+
+$$
+\matr{0}_{m \times n} =
+\begin{bmatrix}
+0      & 0      & \cdots & 0      \\
+0      & 0      & \cdots & 0      \\
+\vdots & \vdots & \ddots & \vdots \\
+0      & 0      & \cdots & 0
+\end{bmatrix}
+$$
+
+:::

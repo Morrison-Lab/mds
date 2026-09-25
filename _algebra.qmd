@@ -1,0 +1,139 @@
+{{< include latex-macros/macros.qmd >}}
+
+## Elementary Algebra
+
+{{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
+
+### Equalities
+
+{{< include mds/_subfiles/algebra/_thm-equal-trans.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-substitution.qmd >}}
+
+---
+
+### Inequalities
+
+{{< include mds/_subfiles/algebra/_thm-add-ineq.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-neg-ineq.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-mult-ineq.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
+
+---
+
+### Infimum and supremum
+
+{{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-infimum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-supremum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-supremum.qmd >}}
+
+{{< slidebreak >}}
+
+### Sums
+
+{{< include mds/_subfiles/algebra/_thm-add-ident.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-sum-symmetric.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-sum-assoc.qmd >}}
+
+---
+
+### Products
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-mult-one.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-prod-symmetric.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-prod-assoc.qmd >}}
+
+### Division
+
+{{< include mds/_subfiles/algebra/_thm-prod-div.qmd >}}
+
+### Sums and products together
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
+
+---
+
+### Quotients
+
+{{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
+
+{{< include mds/_subfiles/algebra/_def-ratio.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_def-proportion.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_def-proportional.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
+
+---
+
+### Exponentials and Logarithms
+
+{{< include mds/_subfiles/algebra/_thm-log-prod.qmd >}}
+
+{{< include mds/_subfiles/algebra/_cor-log-quot.qmd >}}
+
+{{< include mds/_subfiles/algebra/_thm-log-exp.qmd >}}
+
+{{< include mds/_subfiles/algebra/_thm-exp-sum.qmd >}}
+
+{{< include mds/_subfiles/algebra/_cor-exp-sum.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-double-exp.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_cor-exp-ab.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_exr-double-exponentials.qmd >}}
+
+---
+
+{{< include mds/_subfiles/algebra/_thm-exp-log-inverse.qmd >}}

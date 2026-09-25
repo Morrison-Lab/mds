@@ -1,0 +1,9 @@
+:::{#def-matrix-addition}
+#### Matrix addition
+
+Two matrices $\matr{A}$ and $\matr{B}$ of the same dimensions $m \times n$
+can be added element-wise:
+
+$$(\matr{A} + \matr{B})_{ij} = a_{ij} + b_{ij}$$
+
+:::

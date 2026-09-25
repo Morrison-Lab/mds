@@ -1,0 +1,16 @@
+::: proof
+
+**Using @thm-deriv-lincom:**
+
+Since $\tp{\vx}\vb = \vx \cdot \vb$ (@def-dot-product),
+and $\vx$ is constant with respect to $\vb$:
+
+$$
+\deriv{\vb}(\tp{\vx}\vb)
+= \deriv{\vb}(\vx \cdot \vb)
+= \vx
+$$
+
+by @thm-deriv-lincom.
+
+:::

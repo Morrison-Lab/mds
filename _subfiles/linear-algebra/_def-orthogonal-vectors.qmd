@@ -1,0 +1,9 @@
+:::{#def-orthogonal-vectors}
+#### Orthogonal vectors
+
+Two vectors $\vx$ and $\vy$ of the same length are **orthogonal**
+(written $\vx \perp \vy$) if their dot product is zero:
+
+$$\vx \perp \vy \iff \tp{\vx}\vy = 0$$
+
+:::

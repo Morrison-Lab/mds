@@ -1,0 +1,9 @@
+:::{#cor-deriv-normsq}
+
+#### Derivative of a simple quadratic form
+
+$$
+\underbrace{\deriv{\vb} (\tp{\vb}\vb)}_{p \times 1} = \underbrace{2\vb}_{p \times 1}
+$$
+
+:::

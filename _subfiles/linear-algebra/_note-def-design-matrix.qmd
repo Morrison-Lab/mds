@@ -1,0 +1,16 @@
+::: notes
+The product $\mX\vb$ collects all the linear predictors
+$\tp{\vx_i}\vb$ into a single $n \times 1$ vector:
+
+$$
+\mX\vb =
+\begin{bmatrix}
+\tp{\vx_1}\vb \\
+\vdots \\
+\tp{\vx_n}\vb
+\end{bmatrix}
+$$
+
+The matrix $\tp{\mX}\mX$ is a $p \times p$ symmetric matrix
+that appears in the OLS estimator $\hat{\vb} = (\tp{\mX}\mX)^{-1}\tp{\mX}\vy$.
+:::

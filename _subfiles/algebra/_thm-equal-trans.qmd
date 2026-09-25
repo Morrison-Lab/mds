@@ -1,0 +1,6 @@
+:::{#thm-equal-trans}
+#### Equalities are transitive
+
+If $a=b$ and $b=c$, then $a=c$
+
+:::

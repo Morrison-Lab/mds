@@ -1,0 +1,27 @@
+{{< include latex-macros/macros.qmd >}}
+
+Mathematical notation is not standardized.
+This section states the conventions these notes use,
+and the alternatives you may meet in other sources.
+
+## Natural numbers {#sec-notation-naturals}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exr-naturals-below-three.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_sol-naturals-below-three.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-natural-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-natural-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_note-natural-numbers-other-conventions.qmd >}}

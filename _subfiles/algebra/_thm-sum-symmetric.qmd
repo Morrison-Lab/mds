@@ -1,0 +1,6 @@
+:::{#thm-sum-symmetric}
+#### Sums are symmetric
+
+$$a+b = b+a$$
+
+:::

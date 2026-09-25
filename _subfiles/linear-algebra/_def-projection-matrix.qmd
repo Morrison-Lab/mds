@@ -1,0 +1,11 @@
+:::{#def-projection-matrix}
+#### Projection matrix
+
+A square matrix $\matr{P}$ is a **projection matrix**
+(also called an **orthogonal projector**) if it is both symmetric and idempotent:
+
+$$\tp{\matr{P}} = \matr{P}
+\qquad \text{and} \qquad
+\matr{P}^2 = \matr{P}$$
+
+:::

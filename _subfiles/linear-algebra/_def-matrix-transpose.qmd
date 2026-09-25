@@ -1,0 +1,10 @@
+:::{#def-matrix-transpose}
+#### Matrix transpose
+
+The **transpose** of an $m \times n$ matrix $\matr{A}$
+is the $n \times m$ matrix $\tp{\matr{A}}$ obtained by
+swapping the rows and columns of $\matr{A}$:
+
+$$(\tp{\matr{A}})_{ij} = a_{ji}$$
+
+:::

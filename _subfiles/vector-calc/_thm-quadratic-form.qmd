@@ -1,0 +1,12 @@
+:::{#thm-quadratic-form}
+
+#### Derivative of a quadratic form
+
+For a quadratic form (@def-quadratic-form),
+if $S$ is a symmetric $p \times p$ matrix that is constant with respect to $\vb$, then:
+
+$$
+\underbrace{\deriv{\vb} (\tp{\vb} S \vb)}_{p \times 1} = \underbrace{2 S \vb}_{p \times 1}
+$$
+
+:::

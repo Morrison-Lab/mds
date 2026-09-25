@@ -1,0 +1,2 @@
+@exm-cont-not-diff and @exm-int-not-cont
+show that neither implication reverses in general.

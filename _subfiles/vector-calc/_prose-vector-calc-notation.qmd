@@ -1,0 +1,2 @@
+Let $\vx$ and $\vb$ be column vectors of length $p$
+(see @def-column-vector and @def-dot-product).

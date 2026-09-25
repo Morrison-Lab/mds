@@ -1,0 +1,26 @@
+:::{#exm-deriv-quadratic-form}
+
+#### Derivative of a quadratic form
+
+Let $S = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}$ ($2 \times 2$, symmetric and constant)
+and $\vb = \tp{(\beta_1, \beta_2)}$.
+Then $\tp{\vb}S\vb = 3\beta_1^2 + 2\beta_1\beta_2 + 2\beta_2^2$.
+By @thm-quadratic-form:
+
+$$
+\underbrace{\deriv{\vb}(\tp{\vb}S\vb)}_{2 \times 1}
+= 2 S \vb
+= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta_1 \\ \beta_2 \end{pmatrix}
+= \begin{pmatrix} 6\beta_1 + 2\beta_2 \\ 2\beta_1 + 4\beta_2 \end{pmatrix}
+$$
+
+Differentiating component-wise directly:
+
+$$
+\begin{pmatrix} \deriv{\beta_1}(3\beta_1^2 + 2\beta_1\beta_2 + 2\beta_2^2) \\ \deriv{\beta_2}(3\beta_1^2 + 2\beta_1\beta_2 + 2\beta_2^2) \end{pmatrix}
+= \begin{pmatrix} 6\beta_1 + 2\beta_2 \\ 2\beta_1 + 4\beta_2 \end{pmatrix}
+$$
+
+Both methods agree.
+
+:::

@@ -1,0 +1,13 @@
+:::{#thm-projection-orthogonal}
+#### Projection matrices produce orthogonal decompositions
+
+If $\matr{P}$ is a projection matrix and $\vecf{v}$ is any vector of compatible dimension, then
+the two components of the decomposition
+
+$$\vecf{v} = \underbrace{\matr{P}\vecf{v}}_{\text{projected}} + \underbrace{(\matr{I} - \matr{P})\vecf{v}}_{\text{residual}}$$
+
+are orthogonal:
+
+$$\matr{P}\vecf{v} \;\perp\; (\matr{I} - \matr{P})\vecf{v}$$
+
+:::

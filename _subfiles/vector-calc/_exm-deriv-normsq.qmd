@@ -1,0 +1,16 @@
+:::{#exm-deriv-normsq}
+
+#### Derivative of a sum of squares
+
+Let $\vb = \tp{(\beta_1, \beta_2)}$, so $\tp{\vb}\vb = \beta_1^2 + \beta_2^2$.
+By @cor-deriv-normsq:
+
+$$
+\underbrace{\deriv{\vb}(\tp{\vb}\vb)}_{2 \times 1}
+= 2\vb
+= \begin{pmatrix} 2\beta_1 \\ 2\beta_2 \end{pmatrix}
+$$
+
+Direct partial differentiation yields the same column vector.
+
+:::

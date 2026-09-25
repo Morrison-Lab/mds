@@ -1,0 +1,5 @@
+:::{#thm-prod-assoc}
+#### Products are associative
+
+$$(a \times b) \times c = a \times (b \times c)$$
+:::

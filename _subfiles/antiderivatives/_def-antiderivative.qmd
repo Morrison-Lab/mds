@@ -1,0 +1,16 @@
+:::{#def-antiderivative}
+#### Antiderivative
+
+A function $F$ is an **antiderivative** of $f$ on an interval $I$ if:
+
+$$\deriv{x} F(x) = f(x), \quad \forall x \in I$$
+
+The family of all antiderivatives of $f$ is written as the **indefinite integral**:
+
+$$\int f(x)\,dx = F(x) + C$$
+
+where $C$ is an arbitrary constant of integration.
+
+[@larsonCalc11e, Section 4.1, pp. 248--249]
+
+:::

@@ -1,0 +1,26 @@
+:::{#def-design-matrix}
+#### Design matrix
+
+In a regression model with $n$ observations and $p$ predictors,
+the **design matrix** (or **model matrix**) $\mX$
+is the $n \times p$ matrix whose $i$-th row is the covariate vector $\tp{\vx_i}$
+for observation $i$:
+
+$$
+\mX =
+\begin{bmatrix}
+\tp{\vx_1} \\
+\tp{\vx_2} \\
+\vdots \\
+\tp{\vx_n}
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_{11} & x_{12} & \cdots & x_{1p} \\
+x_{21} & x_{22} & \cdots & x_{2p} \\
+\vdots & \vdots & \ddots & \vdots \\
+x_{n1} & x_{n2} & \cdots & x_{np}
+\end{bmatrix}
+$$
+
+:::

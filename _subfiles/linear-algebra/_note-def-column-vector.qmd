@@ -1,0 +1,4 @@
+::: notes
+Column vectors are the default convention in these notes and in most statistics textbooks.
+They are also called *$p \times 1$ matrices*.
+:::

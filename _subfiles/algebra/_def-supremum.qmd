@@ -1,0 +1,12 @@
+:::{#def-supremum}
+#### Supremum (least upper bound)
+
+The **supremum** of a nonempty set $A \subseteq \mathbb{R}$,
+written $\sup A$,
+is the smallest real number $M$ satisfying $M \ge a$ for all $a \in A$:
+
+$$\sup A \eqdef \min_{t \in \reals}\cb{t : \all a \in A, a \le t}$$
+
+If the supremum belongs to $A$, it equals the maximum: $\sup A = \max A$.
+
+:::

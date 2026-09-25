@@ -1,0 +1,3 @@
+::: notes
+A matrix that has an inverse is called **invertible** or **non-singular**.
+:::

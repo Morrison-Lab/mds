@@ -1,0 +1,8 @@
+:::{#thm-inverse-product}
+#### Inverse of a product
+
+For invertible matrices $\matr{A}$ and $\matr{B}$:
+
+$$(\matr{A}\matr{B})^{-1} = \matr{B}^{-1}\matr{A}^{-1}$$
+
+:::

@@ -1,0 +1,7 @@
+::: notes
+Matrix multiplication is only defined when the number of columns in
+$\matr{A}$ equals the number of rows in $\matr{B}$.
+
+Matrix multiplication is **not** commutative in general:
+$\matr{A}\matr{B} \neq \matr{B}\matr{A}$.
+:::

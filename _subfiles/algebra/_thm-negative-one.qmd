@@ -1,0 +1,6 @@
+:::{#thm-negative-one}
+#### Negation is multiplication by $-1$
+
+$$-a = (-1)*a$$
+
+:::

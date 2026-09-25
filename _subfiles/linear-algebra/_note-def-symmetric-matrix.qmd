@@ -1,0 +1,3 @@
+::: notes
+Covariance matrices and information matrices are symmetric.
+:::

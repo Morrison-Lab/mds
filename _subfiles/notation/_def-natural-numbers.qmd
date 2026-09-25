@@ -1,0 +1,12 @@
+:::{#def-natural-numbers}
+#### Natural numbers (our convention)
+
+In these notes, the **natural numbers** are the positive integers:
+
+$$\mathbb{N} \eqdef \cb{1, 2, 3, \ldots}$$
+
+The **non-negative integers** add $0$:
+
+$$\mathbb{N}_0 \eqdef \cb{0, 1, 2, 3, \ldots} = \mathbb{N} \cup \cb{0}$$
+
+:::

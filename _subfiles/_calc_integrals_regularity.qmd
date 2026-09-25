@@ -1,0 +1,31 @@
+{{< include mds/_subfiles/_calc_regularity_defs.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_prose-regularity-intro.qmd >}}
+
+{{< include mds/_subfiles/integrals-regularity/_thm-diff-implies-cont.qmd >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-diff-implies-cont.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-cont-not-diff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_thm-cont-implies-int.qmd >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-cont-implies-int.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_exm-int-not-cont.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_prose-regularity-chain-intro.qmd >}}
+
+{{< include mds/_subfiles/integrals-regularity/_eq-regularity-chain.qmd >}}
+
+{{< include mds/_subfiles/integrals-regularity/_prose-regularity-converse.qmd >}}

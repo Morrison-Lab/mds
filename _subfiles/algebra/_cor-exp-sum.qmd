@@ -1,0 +1,10 @@
+:::{#cor-exp-sum}
+#### exponential of a difference
+
+::: notes
+The exponential of a difference is equal to the quotient of the exponentials of the addends:
+:::
+
+$$\exp{a-b} = \frac{\exp{a}}{\exp{b}}$$
+
+:::
