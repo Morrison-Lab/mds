@@ -2,6 +2,5 @@
 #### Square matrix
 
 A matrix is **square** if it has the same number of rows as columns.
-The number of rows (= columns) is the **order** of the matrix.
 
 :::

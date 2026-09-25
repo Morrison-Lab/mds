@@ -1,7 +1,7 @@
 :::{#def-transpose}
 #### Transpose
 
-The **transpose** of a column vector $\vx$ is the **row vector**
+The **transpose** of a column vector $\vx$ is the row vector
 with the same sequence of entries, written horizontally:
 
 $$

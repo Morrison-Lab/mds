@@ -6,7 +6,19 @@ A function $f$ is **differentiable at** $x = c$ if the limit
 $$f'(c) \eqdef \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}$$
 
 exists and is finite.
-$f$ is **differentiable on** an interval if it is differentiable at every interior point; at a closed endpoint, the appropriate one-sided derivative is used.
+
+[@larsonCalc11e, Section 2.1, p. 100]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-differentiable-on}
+#### Differentiable on an interval
+
+A function $f$ is **differentiable on** an interval
+if it is differentiable (@def-differentiable) at every interior point of the interval;
+at a closed endpoint, the appropriate one-sided derivative is used.
 
 [@larsonCalc11e, Section 2.1, p. 100]
 
@@ -23,9 +35,38 @@ A function $f$ is **continuous at** $x = c$ if all three conditions hold:
 2. $\lim_{x \to c} f(x)$ exists, and
 3. $\lim_{x \to c} f(x) = f(c)$.
 
-$f$ is **continuous on** a closed interval $[a, b]$ if it is continuous at every point of $[a, b]$.
+[@larsonCalc11e, Section 1.4, p. 73]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-continuous-on}
+#### Continuous on a closed interval
+
+A function $f$ is **continuous on** a closed interval $[a, b]$
+if it is continuous (@def-continuous) at every point of $[a, b]$.
 
 [@larsonCalc11e, Section 1.4, p. 73]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-riemann-integral}
+#### Riemann integral
+
+For a bounded function $f$ on $[a, b]$,
+split $[a, b]$ into $n$ equal-width subintervals of width
+$\Delta x \eqdef (b - a)/n$,
+and let $x_i^*$ be any point in the $i$-th subinterval.
+The **Riemann integral** of $f$ over $[a, b]$ is the limit
+
+$$\int_a^b f(x)\,dx \eqdef \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*)\,\Delta x,$$
+
+when that limit exists.
+
+[@larsonCalc11e, Section 4.3, p. 272]
 
 :::
 
@@ -34,13 +75,9 @@ $f$ is **continuous on** a closed interval $[a, b]$ if it is continuous at every
 :::{#def-integrable}
 #### Riemann integrable
 
-A bounded function $f$ is **Riemann integrable on** $[a, b]$ if the Riemann integral
-
-$$\int_a^b f(x)\,dx \eqdef \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*)\,\Delta x, \quad \Delta x \eqdef \frac{b - a}{n},$$
-
-exists and is finite (for equal-width partitions of width
-$\Delta x = (b - a)/n$), where $x_i^*$ is any point in the $i$-th
-subinterval.
+A bounded function $f$ is **Riemann integrable on** $[a, b]$
+if its Riemann integral (@def-riemann-integral) over $[a, b]$
+exists and is finite.
 
 [@larsonCalc11e, Section 4.3, p. 272]
 

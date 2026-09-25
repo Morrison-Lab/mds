@@ -20,6 +20,10 @@ and the alternatives you may meet in other sources.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/notation/_def-nonnegative-integers.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/notation/_exm-natural-numbers.qmd >}}
 
 {{< slidebreak >}}

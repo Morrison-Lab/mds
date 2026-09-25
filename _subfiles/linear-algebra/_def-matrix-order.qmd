@@ -1,0 +1,7 @@
+:::{#def-matrix-order}
+#### Order of a square matrix
+
+The **order** of a square matrix (@def-square-matrix)
+is its number of rows, which equals its number of columns.
+
+:::

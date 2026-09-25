@@ -2,6 +2,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/antiderivatives/_def-indefinite-integral.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/antiderivatives/_exm-antiderivative-power.qmd >}}
 
 {{< slidebreak >}}

@@ -146,6 +146,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-square-matrix.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-order.qmd >}}
+
 ---
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-power.qmd >}}
