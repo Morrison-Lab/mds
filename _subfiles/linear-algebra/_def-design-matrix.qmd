@@ -2,7 +2,7 @@
 #### Design matrix
 
 In a regression model with $n$ observations and $p$ predictors,
-the **design matrix** (or **model matrix**) $\mX$
+the **design matrix** (or *model matrix*) $\mX$
 is the $n \times p$ matrix whose $i$-th row is the covariate vector $\tp{\vx_i}$
 for observation $i$:
 

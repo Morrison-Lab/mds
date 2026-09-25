@@ -3,7 +3,7 @@
 #### Quotients, fractions, rates
 
 ::: notes
-A **quotient**, **fraction**, or **rate** is a division of one quantity by another:
+A **quotient** (also called a *fraction* or *rate*) is a division of one quantity by another:
 :::
 
 $$\frac{a}{b}$$
