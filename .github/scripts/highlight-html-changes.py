@@ -230,6 +230,15 @@ class HTMLDiffer:
         # element-level highlighting for such pages rather than block the
         # workflow (see Morrison-Lab/mds#7).
         MAX_ELEMENTS_FOR_PAIRWISE = 500
+        # Each SequenceMatcher.ratio() call below is itself
+        # O(len(old_text) * len(new_text)), so the 500-element cap above
+        # bounds element *count* but not per-element size. A page with
+        # long theorem/definition-style elements (math-prereqs.html's
+        # actual failure mode, see Morrison-Lab/mds#8 review) can still
+        # take minutes even under that cap. Skip the ratio() call for any
+        # pair where either text exceeds this length and fall back to a
+        # cheap length-based estimate instead.
+        MAX_TEXT_LENGTH_FOR_RATIO = 2000
 
         # Extract main content for both versions. new_content's span within
         # new_html is captured explicitly (not re-derived later) so the
@@ -289,7 +298,16 @@ class HTMLDiffer:
                 if idx in used_old_indices:
                     continue  # Already matched this element
 
-                ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
+                if len(old_text) > MAX_TEXT_LENGTH_FOR_RATIO or len(new_text) > MAX_TEXT_LENGTH_FOR_RATIO:
+                    # Cheap length-based stand-in for ratio(): identical
+                    # length is treated as a likely match worth a real
+                    # comparison; anything else is skipped rather than
+                    # paying for SequenceMatcher on oversized text.
+                    if len(old_text) != len(new_text):
+                        continue
+                    ratio = 1.0 if old_text == new_text else SIMILARITY_THRESHOLD_MIN
+                else:
+                    ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
                 if ratio > best_ratio:
                     best_ratio = ratio
                     best_match_idx = idx
