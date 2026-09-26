@@ -1,0 +1,8 @@
+# Math for Data Science
+
+> Mathematics prerequisites for data science courses
+
+## Pages
+
+- [Math prerequisites](https://morrison-lab.github.io/mds/math-prereqs.llms.md)
+- [Math for Data Science](https://morrison-lab.github.io/mds/index.llms.md)
