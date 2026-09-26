@@ -4,7 +4,7 @@ Project guidance for Claude Code (CLI, IDE, and the GitHub Action). The same con
 
 ## Project context
 
-`qwt` (Quarto Website Template) is a template repository for [Quarto](https://quarto.org/) websites maintained by the UCD-SERG lab. Downstream repos are created from this template via the GitHub "Use this template" button, so changes here propagate to new books.
+`mds` holds the mathematics that the Morrison-Lab data science courses assume: notation, algebra, calculus, linear algebra and vector calculus, as [Quarto](https://quarto.org/) fragments. It renders on its own as a website, and course sites include it as a git submodule, so a fragment's path and its `#id` anchors are an interface: renaming either breaks every host site. The scaffolding came from the UCD-SERG `qwt` template.
 
 Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-manual/) (source: <https://github.com/UCD-SERG/lab-manual>).
 
