@@ -1,0 +1,13 @@
+---
+title: "Algebra"
+format:
+  html: default
+  revealjs:
+    output-file: algebra-slides.html
+  pdf:
+    output-file: algebra-handout.pdf
+  docx:
+    output-file: algebra.docx
+---
+
+{{< include mds/_algebra.qmd >}}

@@ -1,0 +1,63 @@
+---
+title: "Calculus"
+format:
+  html: default
+  revealjs:
+    output-file: calculus-slides.html
+  pdf:
+    output-file: calculus-handout.pdf
+  docx:
+    output-file: calculus.docx
+---
+
+# Derivatives {#sec-derivatives}
+
+{{< include mds/_calc-derivatives.qmd >}}
+
+# Integration {#sec-integration}
+
+{{< include mds/_calc-integrals.qmd >}}
+
+# Double Integrals {#sec-double-integrals}
+
+{{< include mds/_subfiles/_fubini_intro_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_nonrect.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_fail.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_cor_fubini_rect.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_rect.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_thm_fubini_tonelli.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
+
+# Additional resources {#sec-additional-resources}
+
+- @mosaiccalc
+- @khuri2003advanced
+- @calclifesaver
+- @larsonCalc11e
+- @problifesavercalc
+   - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
+   - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
+- @realanalysislifesaver (the rigorous foundations behind these results)
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

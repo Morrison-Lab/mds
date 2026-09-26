@@ -1,2 +1,3 @@
 Let $\vx$ and $\vb$ be column vectors of length $p$
-(see @def-column-vector and @def-dot-product).
+(see [column vector](linear-algebra.qmd#def-column-vector)
+and [dot product](linear-algebra.qmd#def-dot-product)).
