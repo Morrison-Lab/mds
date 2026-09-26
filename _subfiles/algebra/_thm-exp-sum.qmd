@@ -1,0 +1,10 @@
+:::{#thm-exp-sum}
+#### exponential of a sum
+
+::: notes
+The exponential of a sum is equal to the product of the exponentials of the addends:
+:::
+
+$$\exp{a+b} = \exp{a} \cd \exp{b}$$
+
+:::

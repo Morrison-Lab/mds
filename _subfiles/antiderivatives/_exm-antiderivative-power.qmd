@@ -1,0 +1,65 @@
+::::{#exm-antiderivative-power}
+#### Antiderivative of a power function
+
+For $f(x) = x^2$, an antiderivative is $F(x) = \frac{x^3}{3}$,
+since $\deriv{x}\frac{x^3}{3} = x^2 = f(x)$.
+
+Adding any constant $C$ gives another antiderivative;
+for example, with $C = 7$, $F(x) = \frac{x^3}{3} + 7$ also satisfies
+$F'(x) = x^2$, since adding a constant does not change the derivative.
+See @fig-antiderivatives.
+
+{{< slidebreak >}}
+
+```{r}
+#| label: fig-antiderivatives-setup
+#| include: false
+C_vals <- c(-2, -1, 0, 1, 2)
+x_lim <- c(-2, 2)
+```
+
+:::{#fig-antiderivatives layout-ncol="2"}
+
+:::{#fig-antiderivatives-f}
+
+```{r}
+#| label: fig-antiderivatives-f-code
+#| code-fold: true
+ggplot2::ggplot() +
+  ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
+  ggplot2::labs(x = "x", y = expression(f(x))) +
+  ggplot2::theme_minimal()
+```
+
+The function $f(x) = x^2$.
+:::
+
+:::{#fig-antiderivatives-F}
+
+```{r}
+#| label: fig-antiderivatives-F-code
+#| code-fold: true
+x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
+df <- do.call(rbind, lapply(C_vals, \(C) {
+  data.frame(
+    x = x_seq,
+    y = x_seq^3 / 3 + C,
+    C = factor(C)
+  )
+}))
+
+ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
+  ggplot2::geom_line(linewidth = 0.8) +
+  ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
+  ggplot2::theme_minimal()
+```
+
+Family of antiderivatives $F(x) = x^3/3 + C$.
+:::
+
+The function $f(x) = x^2$ and five antiderivatives $F(x) = x^3/3 + C$ for $C \in \{`r paste(C_vals, collapse = ", ")`\}$.
+Each antiderivative has the same derivative $f$; they differ only by a vertical shift.
+
+:::
+
+::::

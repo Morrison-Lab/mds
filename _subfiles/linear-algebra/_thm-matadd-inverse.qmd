@@ -1,0 +1,9 @@
+:::{#thm-matadd-inverse}
+#### Additive inverse
+
+For any matrix $\matr{A}$, the matrix $-\matr{A}$
+(defined by $(-\matr{A})_{ij} = -a_{ij}$) satisfies:
+
+$$\matr{A} + (-\matr{A}) = \matr{0}$$
+
+:::

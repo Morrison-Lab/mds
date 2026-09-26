@@ -1,0 +1,16 @@
+:::{#def-ones-vector}
+#### Ones vector
+
+The **ones vector** $\v1$ of length $p$ has all entries equal to one:
+
+$$
+\v1 =
+\begin{bmatrix}
+1 \\
+1 \\
+\vdots \\
+1
+\end{bmatrix}
+$$
+
+:::

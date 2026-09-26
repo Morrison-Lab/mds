@@ -1,0 +1,14 @@
+:::{#def-indefinite-integral}
+#### Indefinite integral
+
+The **indefinite integral** of $f$ is the family of all antiderivatives
+(@def-antiderivative) of $f$:
+
+$$\int f(x)\,dx = F(x) + C$$
+
+where $F$ is any one antiderivative of $f$
+and $C$ is an arbitrary constant of integration.
+
+[@larsonCalc11e, Section 4.1, pp. 248--249]
+
+:::

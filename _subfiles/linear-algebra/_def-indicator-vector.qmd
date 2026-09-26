@@ -1,0 +1,27 @@
+:::{#def-indicator-vector}
+#### Indicator vector / standard basis vector
+
+The $j$-th **indicator vector** (or *standard basis vector*) $\vecf{e}_j$
+of length $p$ has a $1$ in position $j$ and $0$s elsewhere:
+
+$$
+(\vecf{e}_j)_i =
+\begin{cases}
+1 & \text{if } i = j \\
+0 & \text{if } i \neq j
+\end{cases}
+\qquad
+\vecf{e}_j =
+\begin{bmatrix}
+0 \\
+\vdots \\
+0 \\
+1 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix}
+\leftarrow \text{position } j
+$$
+
+:::

@@ -1,0 +1,6 @@
+:::{#cor-chain-qf}
+
+#### Vector chain rule for quadratic forms
+$$\deriv{\vb}{\paren{\vec\eps\sparen{\vb}\cdot \vec\eps\sparen{\vb}}} = \paren{\deriv{\vb}\vec{\eps}\sparen{\vb}} \paren{2 \vec\eps\sparen{\vb}}$$
+
+:::

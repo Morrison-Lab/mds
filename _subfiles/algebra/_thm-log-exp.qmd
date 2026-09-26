@@ -1,0 +1,7 @@
+:::{#thm-log-exp}
+#### logarithm of an exponential function
+$$
+\logf{a^b} = b \cd \logf{a}
+$$
+
+:::

@@ -1,0 +1,6 @@
+:::{#thm-double-exp}
+
+#### exponential of a product
+
+$$a^{bc} = \paren{a^b}^c = \paren{a^c}^b$$
+:::

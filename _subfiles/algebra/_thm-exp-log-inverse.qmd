@@ -1,0 +1,7 @@
+:::{#thm-exp-log-inverse}
+
+#### $\expf{}$ and $\logf{}$ are mutual inverses
+
+$$\expf{\logf{a}} = \logf{\expf{a}} = a$$
+
+:::

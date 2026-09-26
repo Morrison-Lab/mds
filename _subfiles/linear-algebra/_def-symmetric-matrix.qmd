@@ -1,0 +1,8 @@
+:::{#def-symmetric-matrix}
+#### Symmetric matrix
+
+A square matrix $\matr{A}$ is **symmetric** if
+$\tp{\matr{A}} = \matr{A}$,
+i.e., $a_{ij} = a_{ji}$ for all $i$ and $j$.
+
+:::

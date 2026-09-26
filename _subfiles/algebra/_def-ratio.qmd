@@ -1,0 +1,10 @@
+:::{#def-ratio}
+#### Ratios
+
+A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+
+::: notes
+c.f. <https://en.wikipedia.org/wiki/Ratio>
+:::
+
+:::

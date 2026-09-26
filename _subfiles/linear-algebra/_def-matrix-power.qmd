@@ -1,0 +1,12 @@
+:::{#def-matrix-power}
+#### Matrix power
+
+For a square matrix $\matr{A}$ of order $p$
+and a positive integer $k$,
+the $k$-th **power** of $\matr{A}$ is:
+
+$$\matr{A}^k = \underbrace{\matr{A}\,\matr{A}\cdots\matr{A}}_{k \text{ copies}}$$
+
+In particular, $\matr{A}^2 = \matr{A}\matr{A}$.
+
+:::

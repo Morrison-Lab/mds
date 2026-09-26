@@ -1,0 +1,24 @@
+::: proof
+
+$$
+\ba
+\deriv{\vb} (\vx \cdot \vb)
+&=
+\begin{bmatrix}
+\deriv{\beta_1}(x_1\beta_1+x_2\beta_2 +...+x_p \beta_p ) \\
+\deriv{\beta_2}(x_1\beta_1+x_2\beta_2 +...+x_p \beta_p ) \\
+\vdots \\
+\deriv{\beta_p}(x_1\beta_1+x_2\beta_2 +...+x_p \beta_p )
+\end{bmatrix}
+\\ &=
+\begin{bmatrix}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{p}
+\end{bmatrix}
+\\ &= \vx
+\ea
+$$
+
+:::

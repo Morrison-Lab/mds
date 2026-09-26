@@ -1,0 +1,13 @@
+{{< include mds/_subfiles/integrals-ftc/_thm-ftc.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-ftc/_prose-ftc-parts-connection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-ftc/_exm-ftc-part1-accumulation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-ftc/_exm-ftc-cdf-pdf.qmd >}}

@@ -1,0 +1,22 @@
+::: proof
+
+Expanding entry-wise, $\tp{\vb} S \vb = \sum_{j=1}^p \sum_{k=1}^p s_{jk} \beta_j \beta_k$.
+Differentiating component-wise with respect to $\beta_i$ for $i = 1, \ldots, p$:
+
+$$
+\ba
+\left[\deriv{\vb}(\tp{\vb}S\vb)\right]_i
+&= \deriv{\beta_i} \sum_{j=1}^p \sum_{k=1}^p s_{jk} \beta_j \beta_k
+&& \text{(expand quadratic form)} \\
+&= \sum_{k=1}^p s_{ik} \beta_k + \sum_{j=1}^p s_{ji} \beta_j
+&& \text{(product rule for } \beta_i \beta_k \text{)} \\
+&= [S\vb]_i + [\tp{S}\vb]_i
+&& \text{(matrix-vector multiplication definition)} \\
+&= [(S + \tp{S})\vb]_i
+&& \text{(linearity of matrix multiplication)}
+\ea
+$$
+
+When $S$ is symmetric ($S = \tp{S}$), $S + \tp{S} = 2S$, so $\deriv{\vb}(\tp{\vb}S\vb) = 2S\vb$.
+
+:::

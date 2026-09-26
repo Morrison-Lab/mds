@@ -1,0 +1,57 @@
+:::{#def-dot-product}
+#### Dot product/linear combination/inner product
+For any two real-valued vectors $\vx = (\x1n)$ and $\vy = (\y1n)$,
+the **dot-product** (also called the *linear combination* or *inner product*) 
+of $\vx$ and $\vy$ is:
+
+$$\vx \cdot \vy = \vx\' \vy \defeq \sumin x_i y_i$$
+
+:::
+
+::: notes
+
+::: callout-note
+See also the definitions in 
+
+- @dobson4e, §1.3 (equation 1.1, page 7)
+
+- @mosaiccalc, chapter on vectors
+<!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
+404 in CI on 2026-09-25, and www.mosaic-web.org is unreachable from agent
+sessions, so the current URL is unverified; restore a deep link once found. -->
+
+- [wikipedia](https://en.wikipedia.org/wiki/Linear_combination)
+
+"Linear combination" can also refer to weighted sums of vectors,
+or in other words matrix-vector multiplication.
+
+The dot-product has a different generalization for two matrices;
+see [wikipedia](https://en.wikipedia.org/wiki/Dot_product#Dyadics_and_matrices) for more.
+
+:::
+
+:::
+
+---
+
+:::{#thm-lincom-symmetric}
+#### Dot product is symmetric
+
+The dot product is symmetric:
+
+$$\vx \cdot \vy = \vy \cdot \vx$$
+
+:::
+
+---
+
+::: proof
+
+Apply:
+
+- @def-dot-product 
+- symmetry of scalar multiplication
+- @def-dot-product again
+
+:::
+

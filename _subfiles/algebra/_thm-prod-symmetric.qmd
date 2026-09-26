@@ -1,0 +1,6 @@
+:::{#thm-prod-symmetric}
+
+#### Products are symmetric
+
+$$a \times b = b \times a$$
+:::

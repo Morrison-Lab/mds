@@ -1,0 +1,10 @@
+:::{#thm-cont-implies-int}
+#### Continuity implies integrability
+
+If $f$ is continuous on the closed interval $[a, b]$,
+then $f$ is integrable on $[a, b]$
+(i.e., the Riemann integral $\int_a^b f(x)\,dx$ exists and is finite).
+
+[@larsonCalc11e, Theorem 4.4, p. 272]
+
+:::

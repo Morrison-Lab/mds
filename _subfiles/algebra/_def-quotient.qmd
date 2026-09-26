@@ -1,0 +1,17 @@
+:::{#def-quotient}
+
+#### Quotients, fractions, rates
+
+::: notes
+A **quotient** (also called a *fraction* or *rate*) is a division of one quantity by another:
+:::
+
+$$\frac{a}{b}$$
+
+::: notes
+In epidemiology, rates typically have a quantity involving time or population in the denominator.
+
+c.f. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
+:::
+
+:::

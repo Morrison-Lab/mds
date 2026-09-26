@@ -1,0 +1,8 @@
+:::{#def-idempotent-matrix}
+#### Idempotent matrix
+
+A square matrix $\matr{A}$ is **idempotent** if
+
+$$\matr{A}^2 = \matr{A}$$
+
+:::

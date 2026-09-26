@@ -1,0 +1,6 @@
+:::{#thm-matadd-assoc}
+#### Matrix addition is associative
+
+$$(\matr{A} + \matr{B}) + \matr{C} = \matr{A} + (\matr{B} + \matr{C})$$
+
+:::

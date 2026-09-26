@@ -1,0 +1,7 @@
+:::{#thm-log-prod}
+#### logarithm of a product is the sum of the logs of the factors
+$$
+\log{a\cd b} = \log{a} + \log{b}
+$$
+
+:::

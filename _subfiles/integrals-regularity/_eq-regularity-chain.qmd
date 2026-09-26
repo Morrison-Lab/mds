@@ -1,0 +1,1 @@
+$$\text{differentiable} \;\Rightarrow\; \text{continuous} \;\Rightarrow\; \text{integrable}$$

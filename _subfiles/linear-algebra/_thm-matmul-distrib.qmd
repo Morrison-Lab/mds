@@ -1,0 +1,8 @@
+:::{#thm-matmul-distrib}
+#### Matrix multiplication is distributive over addition
+
+$$\matr{A}(\matr{B} + \matr{C}) = \matr{A}\matr{B} + \matr{A}\matr{C}$$
+
+$$(\matr{A} + \matr{B})\matr{C} = \matr{A}\matr{C} + \matr{B}\matr{C}$$
+
+:::

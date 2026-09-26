@@ -1,0 +1,6 @@
+Before stating the Fundamental Theorem of Calculus, we record two
+prerequisite results.
+The FTC requires the integrand $f$ to be continuous,
+and the following two theorems establish where continuity comes from
+(differentiability $\Rightarrow$ continuity)
+and what it buys us (continuity $\Rightarrow$ integrability).

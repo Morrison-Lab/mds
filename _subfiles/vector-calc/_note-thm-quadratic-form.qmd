@@ -1,0 +1,3 @@
+::: notes
+This operation is like taking the derivative of $cx^2$ with respect to $x$ in non-vector calculus.
+:::

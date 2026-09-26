@@ -28,3 +28,8 @@ exclude = [
   # quarto.org is a trusted site but may be unreachable from CI runners
   "https://quarto.org/.*",
 ]
+
+# `mds` is a symlink to the repository root, so include paths read
+# `mds/...` both here and when mds is a submodule of another site.
+# Without this exclusion lychee follows it recursively (mds/mds/mds/...).
+exclude_path = ["^(\\./)?mds/"]

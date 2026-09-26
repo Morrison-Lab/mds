@@ -1,0 +1,5 @@
+:::{#thm-neg-ineq}
+#### negating both sides of an inequality
+If $a < b$, then: $-a > -b$
+
+:::

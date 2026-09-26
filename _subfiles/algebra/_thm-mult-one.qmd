@@ -1,0 +1,5 @@
+:::{#thm-mult-one}
+#### Multiplying by 1 changes nothing
+
+$$a \times 1 = a$$
+:::

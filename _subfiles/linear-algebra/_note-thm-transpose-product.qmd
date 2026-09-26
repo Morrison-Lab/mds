@@ -1,0 +1,3 @@
+::: notes
+The order of the factors reverses when transposing a product.
+:::

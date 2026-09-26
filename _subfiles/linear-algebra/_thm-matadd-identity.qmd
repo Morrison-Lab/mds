@@ -1,0 +1,6 @@
+:::{#thm-matadd-identity}
+#### Zero matrix is the additive identity
+
+$$\matr{A} + \matr{0} = \matr{A}$$
+
+:::

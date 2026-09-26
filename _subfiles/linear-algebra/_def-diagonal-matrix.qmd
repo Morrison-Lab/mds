@@ -1,0 +1,18 @@
+:::{#def-diagonal-matrix}
+#### Diagonal matrix
+
+A square matrix $\matr{D}$ is a **diagonal matrix**
+if all off-diagonal entries are zero:
+$d_{ij} = 0$ whenever $i \neq j$:
+
+$$
+\matr{D} =
+\begin{bmatrix}
+d_1    & 0      & \cdots & 0      \\
+0      & d_2    & \cdots & 0      \\
+\vdots & \vdots & \ddots & \vdots \\
+0      & 0      & \cdots & d_p
+\end{bmatrix}
+$$
+
+:::

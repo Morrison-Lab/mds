@@ -1,0 +1,10 @@
+:::{#thm-transpose-sum}
+#### Transpose of a sum
+
+$$\tp{(\matr{A} + \matr{B})} = \tp{\matr{A}} + \tp{\matr{B}}$$
+
+In particular, for column vectors $\vx$ and $\vy$:
+
+$$\tp{(\vx + \vy)} = \tp{\vx} + \tp{\vy}$$
+
+:::

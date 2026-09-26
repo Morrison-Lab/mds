@@ -1,0 +1,7 @@
+$bc = b^c$ in each of the following cases:
+
+1. $c = 1$.
+2. $b=0$ and $c > 0$.
+3. $b = \expf{\frac{\log{c}}{c-1}}$ (for $c \ge 0$).
+
+See the red contours in @fig-double-exponential2 for a visualization.

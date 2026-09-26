@@ -1,0 +1,21 @@
+:::{#exm-deriv-matrix-vector}
+#### Vector-derivative of a matrix-vector product
+
+Let $A = \begin{pmatrix} 2 & 3 \end{pmatrix}$ ($1 \times 2$, constant)
+and $\vecf{v}(\vb) = \tp{(\beta_1^2, \beta_2^2)}$.
+Then $A\vecf{v} = 2\beta_1^2 + 3\beta_2^2$.
+By @thm-deriv-matrix-vector:
+
+$$
+\ba
+\underbrace{\deriv{\vb}(A\vecf{v})}_{2 \times 1}
+&= \begin{pmatrix} 2\beta_1 & 0 \\
+0 & 2\beta_2 \end{pmatrix}
+\begin{pmatrix} 2 \\
+3 \end{pmatrix} \\
+&= \begin{pmatrix} 4\beta_1 \\
+6\beta_2 \end{pmatrix}
+\ea
+$$
+
+:::

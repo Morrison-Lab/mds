@@ -1,0 +1,3 @@
+::: notes
+This vector derivative is like taking the derivative of $x^2$.
+:::

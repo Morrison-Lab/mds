@@ -1,0 +1,231 @@
+## Vectors
+
+{{< include mds/_subfiles/linear-algebra/_def-column-vector.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-column-vector.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-transpose.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}
+
+---
+
+### Special vectors
+
+{{< include mds/_subfiles/linear-algebra/_def-zero-vector.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-zero-vector.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-ones-vector.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-ones-vector.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-indicator-vector.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-indicator-vector.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-indicator-selection.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
+
+---
+
+{{< include mds/_subfiles/_def_lincom.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_exm-dot-product-matmul.qmd >}}
+
+---
+
+### Orthogonality
+
+{{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-orthogonal-vectors.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-orthonormal-vectors.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-orthonormal-vectors.qmd >}}
+
+---
+
+## Matrices
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-matrix.qmd >}}
+
+---
+
+### Matrix transpose {#sec-matrix-transpose}
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-transpose.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-transpose-sum.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-transpose-product.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-thm-transpose-product.qmd >}}
+
+---
+
+### Matrix addition
+
+{{< include mds/_subfiles/linear-algebra/_def-zero-matrix.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-addition.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-matadd-commutative.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-matadd-assoc.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-matadd-identity.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-matadd-inverse.qmd >}}
+
+---
+
+### Scalar multiplication
+
+{{< include mds/_subfiles/linear-algebra/_def-scalar-mult.qmd >}}
+
+---
+
+### Matrix multiplication
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-mult.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-matrix-mult.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-matmul-assoc.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-matmul-distrib.qmd >}}
+
+---
+
+### Matrix-vector multiplication
+
+{{< include mds/_subfiles/linear-algebra/_def-matvec-mult.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-matvec-mult.qmd >}}
+
+---
+
+## Special Matrices
+
+{{< include mds/_subfiles/linear-algebra/_note-special-matrices-intro.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-square-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-order.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-power.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-identity-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-symmetric-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-symmetric-matrix.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-diagonal-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-diagonal-matrix.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-inverse.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-matrix-inverse.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-inverse-product.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-idempotent-matrix.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_def-projection-matrix.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-projection-complement.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_proof-thm-projection-complement.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-hat-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_proof-thm-hat-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-thm-hat-matrix.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-projection-orthogonal.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_proof-thm-projection-orthogonal.qmd >}}
+
+---
+
+## Quadratic Forms
+
+{{< include mds/_subfiles/linear-algebra/_def-quadratic-form.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-quadratic-form.qmd >}}
+
+---
+
+{{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-symmetric.qmd >}}
+
+---
+
+## Design Matrix
+
+{{< include mds/_subfiles/linear-algebra/_def-design-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-def-design-matrix.qmd >}}

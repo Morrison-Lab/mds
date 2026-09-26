@@ -1,0 +1,32 @@
+::::{#exm-cont-not-diff}
+#### Continuous but not differentiable: $\abs{x}$
+
+The absolute-value function $f(x) = \abs{x}$ is continuous at $x = 0$
+($\lim_{x \to 0}\abs{x} = 0 = \abs{0}$),
+but it is not differentiable at $x = 0$:
+the left-derivative is $-1$ and the right-derivative is $+1$.
+
+This counterexample shows that the converse of @thm-diff-implies-cont fails:
+continuity does not imply differentiability.
+See @fig-abs-value.
+
+{{< slidebreak >}}
+
+:::{#fig-abs-value}
+
+```{r}
+#| label: fig-abs-value-code
+#| code-fold: true
+ggplot2::ggplot() +
+  ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
+  ggplot2::geom_point(ggplot2::aes(x = 0, y = 0), size = 3) +
+  ggplot2::labs(x = "x", y = expression(f(x) == abs(x))) +
+  ggplot2::theme_minimal()
+```
+
+$f(x) = \abs{x}$ has a sharp corner at $x = 0$ (not differentiable there)
+but is continuous everywhere: no gaps or jumps.
+
+:::
+
+::::

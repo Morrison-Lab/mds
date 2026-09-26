@@ -1,0 +1,5 @@
+::: notes
+This section covers derivatives of functions of vectors and matrices.
+Linear algebra prerequisites --- including vectors, matrices, transpose,
+dot product, and quadratic forms --- are covered in @sec-linear-algebra.
+:::

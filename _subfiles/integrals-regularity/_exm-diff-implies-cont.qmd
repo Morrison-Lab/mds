@@ -1,0 +1,8 @@
+:::{#exm-diff-implies-cont}
+#### Differentiable, hence continuous: $x^3 - x$
+
+$f(x) = x^3 - x$ is differentiable everywhere
+(with derivative $f'(x) = 3x^2 - 1$),
+so by @thm-diff-implies-cont it is continuous everywhere.
+
+:::

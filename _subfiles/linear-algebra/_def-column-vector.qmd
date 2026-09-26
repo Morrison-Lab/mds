@@ -1,0 +1,17 @@
+:::{#def-column-vector}
+#### Column vector
+
+A **column vector** of length $p$ is an ordered list of $p$ numbers,
+written vertically:
+
+$$
+\vx =
+\begin{bmatrix}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{p}
+\end{bmatrix}
+$$
+
+:::

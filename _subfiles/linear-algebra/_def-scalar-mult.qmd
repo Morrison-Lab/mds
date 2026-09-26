@@ -1,0 +1,8 @@
+:::{#def-scalar-mult}
+#### Scalar multiplication
+
+The **scalar multiple** of a matrix $\matr{A}$ by a scalar $c$ is:
+
+$$(c\matr{A})_{ij} = c \cdot a_{ij}$$
+
+:::

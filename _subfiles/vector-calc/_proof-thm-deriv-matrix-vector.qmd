@@ -1,0 +1,17 @@
+::: proof
+
+For entry $(i,j)$, where row $i$ indexes the denominator $\vb$
+and column $j$ indexes the numerator $A\vecf{v}$:
+
+$$
+\ba
+\left[\deriv{\vb} (A\vecf{v})\right]_{ij}
+&= \deriv{\beta_i} (A\vecf{v})_j \\
+&= \deriv{\beta_i} \sum_{k=1}^{q} a_{jk} v_k \\
+&= \sum_{k=1}^{q} a_{jk} \deriv{\beta_i} v_k \\
+&= \sum_{k=1}^{q} \left[\deriv{\vb} \vecf{v}\right]_{ik} \left[\tp{A}\right]_{kj} \\
+&= \left[\paren{\deriv{\vb} \vecf{v}} \tp{A}\right]_{ij}
+\ea
+$$
+
+:::

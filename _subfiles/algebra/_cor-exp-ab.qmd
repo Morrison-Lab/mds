@@ -1,0 +1,7 @@
+:::{#cor-exp-ab}
+
+#### natural exponential of a product
+
+$$\exp{ab} = (\exp{a})^b = (\exp{b})^a$$
+
+:::

@@ -1,0 +1,26 @@
+:::{.proof}
+We verify symmetry and idempotency.
+
+**Symmetry:**
+$$\ba
+\tp{\matr{H}}
+&= \tp{\left(\mX(\tp{\mX}\mX)^{-1}\tp{\mX}\right)} \\
+&= \tp{(\tp{\mX})} \cdot \tp{\left((\tp{\mX}\mX)^{-1}\right)} \cdot \tp{\mX} \\
+&= \mX \cdot (\tp{\mX}\mX)^{-1} \cdot \tp{\mX} \\
+&= \matr{H}
+\ea$$
+
+where the third line uses $\tp{(\tp{\mX})} = \mX$
+and the fact that $\tp{\mX}\mX$ is symmetric,
+so its inverse is also symmetric
+($\tp{\left((\tp{\mX}\mX)^{-1}\right)} = (\tp{\mX}\mX)^{-1}$).
+
+**Idempotency:**
+$$\ba
+\matr{H}^2
+&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \cdot \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \\
+&= \mX(\tp{\mX}\mX)^{-1}(\tp{\mX}\mX)(\tp{\mX}\mX)^{-1}\tp{\mX} \\
+&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \\
+&= \matr{H}
+\ea$$
+:::

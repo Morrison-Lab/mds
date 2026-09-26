@@ -1,0 +1,8 @@
+:::{#thm-transpose-product}
+#### Transpose of a product
+
+For compatible matrices $\matr{A}$ and $\matr{B}$:
+
+$$\tp{(\matr{A}\matr{B})} = \tp{\matr{B}}\,\tp{\matr{A}}$$
+
+:::

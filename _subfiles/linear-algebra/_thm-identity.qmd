@@ -1,0 +1,10 @@
+:::{#thm-identity}
+#### Identity matrix is a multiplicative identity
+
+For any $m \times p$ matrix $\matr{A}$:
+
+$$\matr{A}\,\matr{I}_p = \matr{A}$$
+
+$$\matr{I}_m\,\matr{A} = \matr{A}$$
+
+:::

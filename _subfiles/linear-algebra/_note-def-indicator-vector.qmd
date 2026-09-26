@@ -1,0 +1,3 @@
+::: notes
+They are also called *unit vectors* or *standard basis vectors*.
+:::

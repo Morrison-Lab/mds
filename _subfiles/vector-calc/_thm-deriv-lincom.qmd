@@ -1,0 +1,13 @@
+:::{#thm-deriv-lincom}
+
+#### Derivative of a dot product
+
+If $\vx$ is constant with respect to $\vb$, then:
+
+$$
+\underbrace{\deriv{\vb} (\vx \cdot \vb)}_{p \times 1} =
+\underbrace{\deriv{\vb} (\vb \cdot \vx)}_{p \times 1} =
+\underbrace{\vx}_{p \times 1}
+$$
+
+:::

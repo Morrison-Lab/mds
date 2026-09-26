@@ -1,0 +1,23 @@
+:::{#thm-deriv-matrix-vector}
+
+#### Vector-derivative of a matrix-vector product
+
+If $A$ is an $m \times q$ matrix that is constant with respect to $\vb$,
+and $\vecf{v} = \vecf{v}(\vb)$ is a $q \times 1$ vector
+that depends on the $p \times 1$ vector $\vb$,
+then:
+
+$$
+\underbrace{\deriv{\vb} (A\vecf{v})}_{p \times m} =
+\underbrace{\paren{\deriv{\vb} \vecf{v}}}_{p \times q}
+\underbrace{\tp{A}}_{q \times m}
+$$
+
+:::: notes
+This result generalizes @thm-deriv-linear-map,
+which is the special case $\vecf{v} = \vb$
+(so that $\deriv{\vb} \vb = \matr{I}$
+and $\deriv{\vb} (A\vb) = \tp{A}$).
+::::
+
+:::

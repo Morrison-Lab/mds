@@ -1,0 +1,17 @@
+{{< include mds/_subfiles/antiderivatives/_def-antiderivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/antiderivatives/_def-indefinite-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/antiderivatives/_exm-antiderivative-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/antiderivatives/_thm-integral-rules.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/antiderivatives/_exm-integral-rules-quadratic.qmd >}}

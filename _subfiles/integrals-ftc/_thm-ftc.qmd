@@ -1,0 +1,41 @@
+:::{#thm-ftc}
+#### Fundamental Theorem of Calculus
+
+Let $f$ be a continuous function on a closed interval $[a, b]$.
+
+**Part 1 (Derivative of an integral).**
+Define $F(x) = \int_a^x f(t)\,dt$ for $x \in [a, b]$.
+Then $F$ is differentiable and:
+
+$$\deriv{x}\int_a^x f(t)\,dt = f(x)$$ {#eq-ftc-deriv-of-integral}
+
+::: {.callout-note}
+Continuity on all of $[a, b]$ is a sufficient condition.
+More generally, Part 1 holds at any individual point $x$ where $f$ is
+integrable on $[a, b]$ (see @def-integrable) and continuous at $x$
+(see @def-continuous), even if $f$ has jump discontinuities elsewhere
+[@rudin1976principles, Theorem 6.20, p. 133].
+:::
+
+[@larsonCalc11e, Theorem 4.11, p. 288]
+
+**Part 2 (Evaluation theorem).**
+The $F$ here may be *any* antiderivative of $f$ --- not just the
+accumulation function from Part 1.
+If $F$ is an antiderivative of $f$ on $[a, b]$
+(i.e., $\deriv{x} F(x) = f(x)$ for all $x \in [a, b]$), then:
+
+$$\int_a^b f(x)\,dx = F(b) - F(a)$$ {#eq-ftc-part2}
+
+Equivalently, with $b$ replaced by a variable upper limit $x$,
+integrating the derivative of $F$ recovers the net change in $F$:
+
+$$\int_a^x F'(t)\,dt = F(x) - F(a)$$ {#eq-ftc-integral-of-deriv}
+
+or equivalently in Leibniz notation:
+
+$$\int_a^x \dif{F}{t}\,dt = F(x) - F(a)$$
+
+[@calclifesaver, Chapter 18; @larsonCalc11e, Theorem 4.9, p. 282]
+
+:::

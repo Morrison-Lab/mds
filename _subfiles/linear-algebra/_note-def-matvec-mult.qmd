@@ -1,0 +1,5 @@
+::: notes
+Matrix-vector multiplication is a generalization of the dot product.
+Each entry of the result is a dot product of a row of $\matr{A}$
+with the vector $\vx$.
+:::

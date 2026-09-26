@@ -1,0 +1,3 @@
+::: notes
+Orthogonality generalizes the geometric notion of perpendicularity to arbitrary dimensions.
+:::

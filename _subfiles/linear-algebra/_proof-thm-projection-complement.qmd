@@ -1,0 +1,15 @@
+:::{.proof}
+We verify symmetry and idempotency.
+
+**Symmetry:**
+$$\tp{(\matr{I} - \matr{P})} = \tp{\matr{I}} - \tp{\matr{P}} = \matr{I} - \matr{P}$$
+
+**Idempotency:**
+$$\ba
+(\matr{I} - \matr{P})^2
+&= (\matr{I} - \matr{P})(\matr{I} - \matr{P}) \\
+&= \matr{I} - \matr{P} - \matr{P} + \matr{P}^2 \\
+&= \matr{I} - \matr{P} - \matr{P} + \matr{P} \\
+&= \matr{I} - \matr{P}
+\ea$$
+:::

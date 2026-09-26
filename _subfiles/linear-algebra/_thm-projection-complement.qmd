@@ -1,0 +1,6 @@
+:::{#thm-projection-complement}
+#### Complement of a projection matrix
+
+If $\matr{P}$ is a projection matrix, then $\matr{I} - \matr{P}$ is also a projection matrix.
+
+:::

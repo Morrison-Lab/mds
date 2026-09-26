@@ -1,0 +1,18 @@
+::: proof
+
+Writing the product componentwise:
+
+$$
+\ba
+\tp{\vecf{e}_j}\vx
+&= \sum_{i=1}^{p} (\vecf{e}_j)_i\, x_i
+\\&= \sum_{i=1}^{p}
+   \begin{cases}
+   1 \cdot x_i & \text{if } i = j \\
+   0 \cdot x_i & \text{if } i \neq j
+   \end{cases}
+\\&= x_j
+\ea
+$$
+
+:::

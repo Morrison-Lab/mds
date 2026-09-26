@@ -1,0 +1,20 @@
+:::{#cor-deriv-lincom-tp}
+
+#### Derivative of a dot product, transpose-product form
+
+If $\vx$ is constant with respect to $\vb$, then:
+
+$$
+\underbrace{\deriv{\vb} (\underbrace{\tp{\vx}}_{1 \times p} \underbrace{\vb}_{p \times 1})}_{p \times 1} =
+\underbrace{\vx}_{p \times 1}
+$$
+
+:::: notes
+This vector derivative formula looks a lot like non-vector calculus,
+except that you have to transpose the coefficient:
+in scalar calculus $\deriv{x}(cx) = c$,
+but here the coefficient $\tp{\vx}$ (a row vector)
+becomes $\vx$ (a column vector) in the result.
+::::
+
+:::

@@ -1,0 +1,4 @@
+::: notes
+The zero vector is the additive identity for vector addition:
+$\vx + \vzero = \vx$ for any vector $\vx$ of the same length.
+:::

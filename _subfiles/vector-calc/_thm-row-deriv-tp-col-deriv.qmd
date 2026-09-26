@@ -1,0 +1,7 @@
+:::{#thm-row-deriv-tp-col-deriv}
+#### Row and column derivatives are transposes
+$$\deriv{ \vb\'} f(\vb) = \pt{\deriv{ \vb} f(\vb)}$$
+
+$$\deriv{ \vb} f(\vb) = \pt{\deriv{ \vb\'} f(\vb)}$$
+
+:::

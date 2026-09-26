@@ -1,0 +1,4 @@
+::: notes
+The indicator vectors $\vecf{e}_1, \vecf{e}_2, \ldots, \vecf{e}_p$
+(@def-indicator-vector) form an orthonormal set.
+:::

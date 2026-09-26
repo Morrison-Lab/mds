@@ -1,0 +1,17 @@
+::: proof
+
+For entry $(i,j)$, where row $i$ indexes the denominator $\vb$
+(see @def-vector-derivative)
+and column $j$ indexes the numerator $A\vb$:
+
+$$
+\ba
+\left[\deriv{\vb} (A\vb)\right]_{ij}
+&= \deriv{\beta_i} (A\vb)_j \\
+&= \deriv{\beta_i} \sum_{k=1}^{p} a_{jk} \beta_k \\
+&= a_{ji} \\
+&= \left[\tp{A}\right]_{ij}
+\ea
+$$
+
+:::

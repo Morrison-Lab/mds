@@ -1,0 +1,4 @@
+::: notes
+Diagonal matrices are denoted $\matr{D} = \text{diag}(d_1, d_2, \ldots, d_p)$,
+where $d_1, \ldots, d_p$ are the diagonal entries.
+:::

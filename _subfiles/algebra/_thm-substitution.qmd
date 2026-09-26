@@ -1,0 +1,6 @@
+:::{#thm-substitution}
+#### Substituting equivalent expressions
+
+If $a = b$, then for any function $f(x)$, $f(a) = f(b)$
+
+:::
