@@ -299,13 +299,18 @@ class HTMLDiffer:
                     continue  # Already matched this element
 
                 if len(old_text) > MAX_TEXT_LENGTH_FOR_RATIO or len(new_text) > MAX_TEXT_LENGTH_FOR_RATIO:
-                    # Cheap length-based stand-in for ratio(): identical
-                    # length is treated as a likely match worth a real
-                    # comparison; anything else is skipped rather than
-                    # paying for SequenceMatcher on oversized text.
-                    if len(old_text) != len(new_text):
-                        continue
-                    ratio = 1.0 if old_text == new_text else SIMILARITY_THRESHOLD_MIN
+                    # Truncate rather than skip: this bounds ratio()'s cost
+                    # to O(MAX_TEXT_LENGTH_FOR_RATIO^2) regardless of the
+                    # true element length, while still producing a real
+                    # similarity ratio, so matching and the highlighting
+                    # branches below behave exactly as they do for
+                    # normal-sized elements (no forced boundary value, no
+                    # skipped candidates for edits that change length).
+                    ratio = difflib.SequenceMatcher(
+                        None,
+                        old_text[:MAX_TEXT_LENGTH_FOR_RATIO],
+                        new_text[:MAX_TEXT_LENGTH_FOR_RATIO],
+                    ).ratio()
                 else:
                     ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
                 if ratio > best_ratio:
