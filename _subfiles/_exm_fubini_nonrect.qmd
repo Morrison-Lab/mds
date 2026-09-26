@@ -91,6 +91,8 @@ The solid whose volume equals this integral is shown in @fig-fubini-nonrect.
 ```{r}
 #| code-fold: true
 #| message: false
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
 
 n_grid <- 51
 x_seq <- seq(0, 1, length.out = n_grid)
@@ -110,6 +112,17 @@ plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
     zaxis = list(title = "z = exp(-x^2)"),
     camera = list(eye = list(x = 1.6, y = -1.6, z = 0.8))
   ))
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
 ```
 
 Surface $z = e^{-x^2}$ over the region $D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}$.
