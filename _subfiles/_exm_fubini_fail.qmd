@@ -62,6 +62,7 @@ failure, are shown in @fig-fubini-fail.
 ```{r}
 #| code-fold: true
 #| message: false
+#| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 
 n_grid <- 81

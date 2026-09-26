@@ -86,6 +86,7 @@ The solid whose volume equals this integral is shown in @fig-fubini-rect.
 ```{r}
 #| code-fold: true
 #| message: false
+#| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 
 n_grid <- 41

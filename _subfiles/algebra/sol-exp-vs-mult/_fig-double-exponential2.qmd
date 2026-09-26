@@ -2,6 +2,7 @@
 
 ```{R}
 #| label: graph-double-exponential2
+#| echo: !expr knitr::is_html_output()
 #| eval: !expr knitr::is_html_output()
 
 pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
