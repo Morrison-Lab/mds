@@ -1,10 +1,8 @@
-# Quarto Website Template
+# Math for Data Science
 
-> A template for creating websites with Quarto
+> Mathematics prerequisites for data science courses
 
 ## Pages
 
-- [Quarto Website Template](https://ucd-serg.github.io/qwt/index.llms.md)
-- [Chapter 2: Advanced Topics](https://ucd-serg.github.io/qwt/chapters/chapter2.llms.md)
-- [Chapter 1: Introduction](https://ucd-serg.github.io/qwt/chapters/chapter1.llms.md)
-- [Theorem Examples](https://ucd-serg.github.io/qwt/chapters/theorem-examples.llms.md)
+- [Math prerequisites](https://morrison-lab.github.io/mds/math-prereqs.llms.md)
+- [Math for Data Science](https://morrison-lab.github.io/mds/index.llms.md)
