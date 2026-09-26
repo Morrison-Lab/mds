@@ -2,6 +2,7 @@
 
 ```{R}
 #| label: graph-double-exponential2
+#| eval: !expr knitr::is_html_output()
 
 pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
 
@@ -46,6 +47,17 @@ plotly::plot_ly(
     )
   )
 
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
 ```
 
 **Graph of $b^c - b*c$**. Red contour lines show where $b^c = b*c$.

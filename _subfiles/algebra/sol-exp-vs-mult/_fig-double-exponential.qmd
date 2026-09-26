@@ -2,6 +2,7 @@
 
 ```{R}
 #| label: graph-double-exponential
+#| eval: !expr knitr::is_html_output()
 
 mult_f <- function(b, c) b * c
 pow_f <- function(b, c) b^c
@@ -69,6 +70,17 @@ plotly::plot_ly(
     )
   )
 
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
 ```
 
 Graph of $b*c$ and $b^c$

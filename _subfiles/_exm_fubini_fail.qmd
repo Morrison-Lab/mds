@@ -62,6 +62,7 @@ failure, are shown in @fig-fubini-fail.
 ```{r}
 #| code-fold: true
 #| message: false
+#| eval: !expr knitr::is_html_output()
 
 n_grid <- 81
 eps <- 0.04
@@ -88,6 +89,17 @@ plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
     zaxis = list(title = "f(x, y)", range = c(-z_clip, z_clip)),
     camera = list(eye = list(x = 1.6, y = 1.6, z = 0.6))
   ))
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
 ```
 
 Surface $f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2$ on $[0, 1]^2$,
