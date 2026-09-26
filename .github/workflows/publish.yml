@@ -43,6 +43,16 @@ jobs:
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
 
+      # GitHub Pages defaults to a Jekyll build when the deployed branch
+      # carries no `.nojekyll` marker. Quarto's rendered output includes
+      # llms.txt-style `*.llms.md` files whose literal `{{...}}` text is not
+      # valid Liquid, so Jekyll's own build step throws a syntax error and
+      # the whole Pages deployment fails silently -- the site then stays
+      # frozen on whatever last deployed successfully, while this workflow's
+      # own render/push steps keep reporting green.
+      - name: Disable Jekyll processing
+        run: touch _site/.nojekyll
+
       - name: Save Quarto freezer
         uses: actions/cache/save@v6
         with:
