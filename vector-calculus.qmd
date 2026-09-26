@@ -10,9 +10,11 @@ format:
     output-file: vector-calculus.docx
 ---
 
+{{< include latex-macros/macros.qmd >}}
+
 {{< include mds/_subfiles/_sec_vector_calc.qmd >}}
 
-# Additional resources
+# Additional resources {#sec-additional-resources}
 
 See also the [Linear Algebra and Vector Calculus
 references](linear-algebra.qmd#sec-additional-resources).

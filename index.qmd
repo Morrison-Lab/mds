@@ -19,7 +19,9 @@ to organize our thoughts and back up our assertions.
 
 @cheng2025math
 
-These notes collect the mathematics that data science courses assume,
+These notes collect the mathematics that data science courses assume:
+mathematical notation, algebra, precalculus, univariate calculus,
+linear algebra, and vector calculus. Some key results are listed here,
 organized by topic:
 
 - [Notation](notation.qmd)
