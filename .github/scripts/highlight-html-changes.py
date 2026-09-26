@@ -232,13 +232,18 @@ class HTMLDiffer:
         MAX_ELEMENTS_FOR_PAIRWISE = 500
         # Each SequenceMatcher.ratio() call below is itself
         # O(len(old_text) * len(new_text)), so the 500-element cap above
-        # bounds element *count* but not per-element size. A page with
-        # long theorem/definition-style elements (math-prereqs.html's
-        # actual failure mode, see Morrison-Lab/mds#8 review) can still
-        # take minutes even under that cap. Skip the ratio() call for any
-        # pair where either text exceeds this length and fall back to a
-        # cheap length-based estimate instead.
-        MAX_TEXT_LENGTH_FOR_RATIO = 2000
+        # bounds element *count* but not per-element size, and a page with
+        # a few very long theorem/definition-style elements could in
+        # theory still be slow even under that cap. Two attempts at a
+        # cheap per-element-length cap here (truncating to a fixed
+        # prefix, and substituting quick_ratio()) each introduced a
+        # correctness regression -- silently dropping highlighting for an
+        # edit outside the truncated prefix, or for an edit whose
+        # quick_ratio() overshoots SIMILARITY_THRESHOLD_MAX -- so this is
+        # deliberately left uncapped and tracked as a follow-up
+        # (Morrison-Lab/mds#10) rather than shipped with a subtle bug.
+        # The reported hang (mds#7) was many small elements, which the
+        # count cap above already fixes.
 
         # Extract main content for both versions. new_content's span within
         # new_html is captured explicitly (not re-derived later) so the
@@ -298,21 +303,7 @@ class HTMLDiffer:
                 if idx in used_old_indices:
                     continue  # Already matched this element
 
-                if len(old_text) > MAX_TEXT_LENGTH_FOR_RATIO or len(new_text) > MAX_TEXT_LENGTH_FOR_RATIO:
-                    # Truncate rather than skip: this bounds ratio()'s cost
-                    # to O(MAX_TEXT_LENGTH_FOR_RATIO^2) regardless of the
-                    # true element length, while still producing a real
-                    # similarity ratio, so matching and the highlighting
-                    # branches below behave exactly as they do for
-                    # normal-sized elements (no forced boundary value, no
-                    # skipped candidates for edits that change length).
-                    ratio = difflib.SequenceMatcher(
-                        None,
-                        old_text[:MAX_TEXT_LENGTH_FOR_RATIO],
-                        new_text[:MAX_TEXT_LENGTH_FOR_RATIO],
-                    ).ratio()
-                else:
-                    ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
+                ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
                 if ratio > best_ratio:
                     best_ratio = ratio
                     best_match_idx = idx
