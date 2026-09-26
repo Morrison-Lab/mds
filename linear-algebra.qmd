@@ -1,0 +1,26 @@
+---
+title: "Linear Algebra"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-slides.html
+  pdf:
+    output-file: linear-algebra-handout.pdf
+  docx:
+    output-file: linear-algebra.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra.qmd >}}
+
+# Additional resources {#sec-additional-resources}
+
+- @fieller2018basics
+- @banerjee2014linear
+- @searle2017matrix
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
