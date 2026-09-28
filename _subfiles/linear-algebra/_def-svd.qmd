@@ -1,0 +1,142 @@
+:::{#def-svd}
+#### Singular value decomposition and singular values
+
+Let $\matr{A}$ be an $n \times p$ matrix with real entries
+and $\operatorname{rank}(\matr{A}) = r$.
+A **singular value decomposition** (SVD) of $\matr{A}$
+is a factorization $\matr{A} = \matr{U}\matr{D}\tp{\matr{V}}$
+with $\matr{U}$, $\matr{D}$ and $\matr{V}$ as in @thm-svd.
+The numbers $\sigma_1 \ge \cdots \ge \sigma_r > 0$ on the diagonal of $\matr{D}$
+are the **singular values** of $\matr{A}$.
+
+:::
+
+::: notes
+An SVD is not unique;
+for example, multiplying column $i$ of both $\matr{U}$ and $\matr{V}$ by $-1$
+gives another one.
+The singular values do not depend on which SVD is chosen
+[@banerjee2014linear, Chapter 12, p. 371].
+
+Some texts, and R's `svd()`,
+also count $\min(n, p) - r$ singular values equal to $0$,
+so that every $n \times p$ matrix has $\min(n, p)$ singular values.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-svd}
+#### An SVD of a $3 \times 2$ matrix
+
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
+\qquad
+\matr{U} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
+0 & 1 & 0 \\
+\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\qquad
+\matr{D} = \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\qquad
+\matr{V} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+$$
+
+$\matr{V}$ is the orthogonal matrix $\matr{Q}$ from @exm-spectral.
+$\matr{U}$ is orthogonal too.
+Entry $(i, j)$ of $\tp{\matr{U}}\matr{U}$
+is the dot product of columns $i$ and $j$ of $\matr{U}$,
+and those columns are
+$\vecf{u}_1 = (\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}})$,
+$\vecf{u}_2 = (0, 1, 0)$ and
+$\vecf{u}_3 = (\frac{1}{\sqrt{2}}, 0, -\frac{1}{\sqrt{2}})$:
+
+$$
+\ba
+\vecf{u}_1 \cdot \vecf{u}_1 &= \tfrac{1}{2} + 0 + \tfrac{1}{2} = 1
+&& \text{(multiply matching entries, then add)}
+\\
+\vecf{u}_2 \cdot \vecf{u}_2 &= 0 + 1 + 0 = 1
+&& \text{(multiply matching entries, then add)}
+\\
+\vecf{u}_3 \cdot \vecf{u}_3 &= \tfrac{1}{2} + 0 + \tfrac{1}{2} = 1
+&& \text{(multiply matching entries, then add)}
+\\
+\vecf{u}_1 \cdot \vecf{u}_2 &= 0 + 0 + 0 = 0
+&& \text{(multiply matching entries, then add)}
+\\
+\vecf{u}_1 \cdot \vecf{u}_3 &= \tfrac{1}{2} + 0 - \tfrac{1}{2} = 0
+&& \text{(multiply matching entries, then add)}
+\\
+\vecf{u}_2 \cdot \vecf{u}_3 &= 0 + 0 + 0 = 0
+&& \text{(multiply matching entries, then add)}
+\ea
+$$
+
+The dot product is symmetric,
+so these six values fill in all nine entries,
+and $\tp{\matr{U}}\matr{U} = \matr{I}_3$.
+
+$\matr{V}$ is symmetric, so $\tp{\matr{V}} = \matr{V}$. Then
+
+$$
+\ba
+\matr{D}\tp{\matr{V}}
+&= \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(move the scalar to the front)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+2 \cd 1 + 0 \cd 1 & 2 \cd 1 + 0 \cd (-1) \\
+0 \cd 1 + \sqrt{2} \cd 1 & 0 \cd 1 + \sqrt{2} \cd (-1) \\
+0 \cd 1 + 0 \cd 1 & 0 \cd 1 + 0 \cd (-1)
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} 2 & 2 \\ \sqrt{2} & -\sqrt{2} \\ 0 & 0 \end{bmatrix}
+&& \text{(multiply and add within each entry)}
+\\
+&= \begin{bmatrix} \sqrt{2} & \sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
+&& \text{(divide by } \sqrt{2} \text{)}
+\ea
+$$
+
+and
+
+$$
+\ba
+\matr{U}\matr{D}\tp{\matr{V}}
+&= \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
+0 & 1 & 0 \\
+\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix} \sqrt{2} & \sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \begin{bmatrix}
+\frac{\sqrt{2}}{\sqrt{2}} + 0 + 0 & \frac{\sqrt{2}}{\sqrt{2}} + 0 + 0 \\
+0 + 1 + 0 & 0 - 1 + 0 \\
+\frac{\sqrt{2}}{\sqrt{2}} + 0 - 0 & \frac{\sqrt{2}}{\sqrt{2}} + 0 - 0
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(simplify)}
+\ea
+$$
+
+which is $\matr{A}$.
+$\matr{A}$ has rank $2$, because its two columns are linearly independent,
+and its singular values are $\sigma_1 = 2$ and $\sigma_2 = \sqrt{2}$.
+
+:::

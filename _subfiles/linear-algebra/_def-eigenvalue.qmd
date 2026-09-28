@@ -2,14 +2,15 @@
 #### Eigenvalue and eigenvector
 
 Let $\matr{A}$ be a $p \times p$ matrix.
-A number $\lambda$ is an **eigenvalue** of $\matr{A}$,
-and a vector $\vecf{v} \neq \vzero$ of length $p$
-is an **eigenvector** of $\matr{A}$ for $\lambda$, if
+A real number $\lambda$ is an **eigenvalue** of $\matr{A}$
+if some real vector $\vecf{v} \neq \vzero$ of length $p$ satisfies
 
 $$
 \underbrace{\matr{A}}_{p \times p}\,\underbrace{\vecf{v}}_{p \times 1}
 = \lambda\,\underbrace{\vecf{v}}_{p \times 1}
 $$
+
+Any such $\vecf{v}$ is an **eigenvector** of $\matr{A}$ for $\lambda$.
 
 :::
 
@@ -19,10 +20,13 @@ and does not change the line it lies on.
 Any nonzero multiple $c\,\vecf{v}$ of an eigenvector
 is also an eigenvector for the same $\lambda$,
 because $\matr{A}(c\,\vecf{v}) = c\,\matr{A}\vecf{v} = c\,\lambda\vecf{v} = \lambda\,(c\,\vecf{v})$.
-Some real matrices, such as a rotation by $90$ degrees,
-have no real eigenvalues;
-their eigenvalues are complex numbers
-[@banerjee2014linear, Chapter 11, Example 11.2 and Definition 11.1, pp. 312-313].
+
+These notes take $\lambda$ and $\vecf{v}$ to be real.
+@banerjee2014linear [Chapter 11, Definition 11.1, pp. 312-313]
+also allows complex eigenvalues and eigenvectors,
+because some real matrices, such as a rotation by $90$ degrees,
+have no real eigenvalues
+[@banerjee2014linear, Chapter 11, Example 11.2, p. 312].
 :::
 
 {{< slidebreak >}}

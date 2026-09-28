@@ -1,0 +1,93 @@
+:::{#def-eigendecomposition}
+#### Eigendecomposition
+
+Let $\matr{A}$ be a $p \times p$ symmetric matrix with real entries.
+An **eigendecomposition**, or **spectral decomposition**, of $\matr{A}$
+is a factorization
+
+$$
+\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+$$
+
+with $\matr{Q}$ a $p \times p$ orthogonal matrix (@def-orthogonal-matrix)
+and $\matr{\Lambda}$ a $p \times p$ diagonal matrix (@def-diagonal-matrix).
+@thm-spectral says that every such $\matr{A}$ has one.
+
+:::
+
+::: notes
+An eigendecomposition is not unique.
+For example, reordering the eigenvalues on the diagonal of $\matr{\Lambda}$,
+and the columns of $\matr{Q}$ with them, gives another one,
+and so does multiplying a column of $\matr{Q}$ by $-1$.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-spectral}
+#### An eigendecomposition of a $2 \times 2$ symmetric matrix
+
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$,
+@exm-eigenvalue found the eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$.
+They are orthogonal (@def-orthogonal-vectors):
+
+$$
+\ba
+(1, 1) \cdot (1, -1)
+&= 1 \cd 1 + 1 \cd (-1)
+&& \text{(definition of the dot product)}
+\\
+&= 0
+&& \text{(multiply and add)}
+\ea
+$$
+
+Each has norm $\sqrt{1^2 + 1^2} = \sqrt{2}$ (@def-euclidean-norm),
+so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors
+(@def-orthonormal-vectors).
+Put them in the columns of $\matr{Q}$,
+and the matching eigenvalues on the diagonal of $\matr{\Lambda}$:
+
+$$
+\matr{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\qquad
+\matr{\Lambda} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+
+This $\matr{Q}$ is symmetric, so $\tp{\matr{Q}} = \matr{Q}$. Then
+
+$$
+\ba
+\matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(collect the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(multiply the first two matrices: column } j \text{ times } \lambda_j \text{)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 \cd 1 + 1 \cd 1 & 3 \cd 1 + 1 \cd (-1) \\ 3 \cd 1 + (-1) \cd 1 & 3 \cd 1 + (-1) \cd (-1) \end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 4 & 2 \\ 2 & 4 \end{bmatrix}
+&& \text{(multiply and add within each entry)}
+\\
+&= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+&& \text{(multiply by } \tfrac{1}{2} \text{)}
+\ea
+$$
+
+which is $\matr{A}$.
+
+:::

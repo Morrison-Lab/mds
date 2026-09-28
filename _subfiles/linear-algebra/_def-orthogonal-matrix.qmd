@@ -33,7 +33,8 @@ $$
 
 rotates each vector in the plane counterclockwise
 by the angle $\theta$ with $\cos\theta = 0.6$ and $\sin\theta = 0.8$
-(about $53$ degrees).
+(about $53$ degrees)
+[@banerjee2014linear, Chapter 8, Example 8.1, p. 207].
 It is orthogonal:
 
 $$

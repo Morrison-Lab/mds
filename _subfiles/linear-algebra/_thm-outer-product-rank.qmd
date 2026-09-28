@@ -35,11 +35,20 @@ v_k\,(v_j \vecf{u}) - v_j\,(v_k \vecf{u})
 && \text{(multiplication of numbers is commutative)}
 \\
 &= \vzero
+&& \text{(a zero multiple of a vector is } \vzero \text{)}
 \ea
 $$
 
-Either way, no two columns are linearly independent,
-so the largest linearly independent set of columns has one column.
+Either way, every pair of columns has a combination
+with coefficients that are not all zero and that equals $\vzero$.
+Now take any set of two or more columns.
+It contains a pair $j \neq k$.
+Use that pair's coefficients for columns $j$ and $k$,
+and the coefficient $0$ for every other column in the set.
+This combination equals $\vzero$,
+and its coefficients are not all zero,
+so the set is not linearly independent (@def-linearly-independent).
+The largest linearly independent set of columns therefore has one column.
 
 :::
 

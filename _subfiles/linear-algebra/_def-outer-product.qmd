@@ -3,18 +3,14 @@
 
 The **outer product** of a vector $\vecf{u}$ of length $m$
 and a vector $\vecf{v}$ of length $n$
-is the $m \times n$ matrix
-
-$$
-\underbrace{\vecf{u}\,\tp{\vecf{v}}}_{m \times n}
-\eqdef
-\underbrace{\vecf{u}}_{m \times 1}\,\underbrace{\tp{\vecf{v}}}_{1 \times n},
-$$
-
-the matrix product (@def-matrix-mult) of the column vector $\vecf{u}$
-with the row vector $\tp{\vecf{v}}$.
+is the $m \times n$ matrix product (@def-matrix-mult) $\vecf{u}\,\tp{\vecf{v}}$
+of the column vector $\vecf{u}$ with the row vector $\tp{\vecf{v}}$.
 Its entries are
-$(\vecf{u}\,\tp{\vecf{v}})_{ij} = u_i v_j$.
+
+$$
+\paren{\underbrace{\vecf{u}}_{m \times 1}\,\underbrace{\tp{\vecf{v}}}_{1 \times n}}_{ij}
+\eqdef u_i v_j
+$$
 
 :::
 

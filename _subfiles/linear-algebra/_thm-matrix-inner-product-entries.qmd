@@ -1,0 +1,102 @@
+:::{#thm-matrix-inner-product-entries}
+#### The matrix inner product multiplies matching entries
+
+For two $n \times p$ matrices $\matr{A}$ and $\matr{B}$:
+
+$$
+\iprod{\matr{A}}{\matr{B}} = \sum_{i=1}^{n} \sum_{j=1}^{p} a_{ij}\, b_{ij}
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\iprod{\matr{A}}{\matr{B}}
+&= \operatorname{tr}(\tp{\matr{A}}\matr{B})
+&& \text{(definition of the inner product)}
+\\
+&= \sum_{j=1}^{p} (\tp{\matr{A}}\matr{B})_{jj}
+&& \text{(definition of the trace)}
+\\
+&= \sum_{j=1}^{p} \sum_{i=1}^{n} (\tp{\matr{A}})_{ji}\, b_{ij}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \sum_{j=1}^{p} \sum_{i=1}^{n} a_{ij}\, b_{ij}
+&& \text{(definition of the transpose)}
+\\
+&= \sum_{i=1}^{n} \sum_{j=1}^{p} a_{ij}\, b_{ij}
+&& \text{(swap the order of two finite sums)}
+\ea
+$$
+
+:::
+
+::: notes
+@thm-matrix-inner-product-entries says that the matrix inner product
+is the dot product (@def-dot-product) of the two matrices'
+entries, each listed as one vector of length $np$.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-matrix-inner-product}
+#### The inner product of two $2 \times 2$ matrices
+
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+\qquad
+\matr{B} = \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}
+$$
+
+From @def-matrix-inner-product:
+
+$$
+\ba
+\iprod{\matr{A}}{\matr{B}}
+&= \operatorname{tr}\paren{\tp{\matr{A}}\matr{B}}
+&& \text{(definition of the inner product)}
+\\
+&= \operatorname{tr}\paren{
+\tp{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}
+\begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}
+}
+&& \text{(substitute)}
+\\
+&= \operatorname{tr}\paren{
+\begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}
+\begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix}
+}
+&& \text{(definition of the transpose)}
+\\
+&= \operatorname{tr}\paren{\begin{bmatrix} -3 & 7 \\ -4 & 10 \end{bmatrix}}
+&& \text{(multiply)}
+\\
+&= -3 + 10
+&& \text{(definition of the trace)}
+\\
+&= 7
+&& \text{(add)}
+\ea
+$$
+
+From @thm-matrix-inner-product-entries:
+
+$$
+\ba
+\iprod{\matr{A}}{\matr{B}}
+&= 1 \cd 0 + 2 \cd 1 + 3 \cd (-1) + 4 \cd 2
+&& \text{(multiply matching entries and add)}
+\\
+&= 0 + 2 - 3 + 8
+&& \text{(multiply)}
+\\
+&= 7
+&& \text{(add)}
+\ea
+$$
+
+:::

@@ -60,8 +60,11 @@ $$
 &= \begin{bmatrix} 0.6 \cd 3 - 0.8 \cd 4 \\ 0.8 \cd 3 + 0.6 \cd 4 \end{bmatrix}
 && \text{(definition of matrix-vector multiplication)}
 \\
+&= \begin{bmatrix} 1.8 - 3.2 \\ 2.4 + 2.4 \end{bmatrix}
+&& \text{(multiply)}
+\\
 &= \begin{bmatrix} -1.4 \\ 4.8 \end{bmatrix}
-&& \text{(multiply and add)}
+&& \text{(add)}
 \ea
 $$
 
@@ -78,6 +81,7 @@ $$
 && \text{(add)}
 \\
 &= 5
+&& \text{(take the square root)}
 \ea
 $$
 
