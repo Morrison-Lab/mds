@@ -1,5 +1,8 @@
 :::{#thm-log-exp}
-#### logarithm of an exponential function
+#### Logarithm of a power
+
+If $a > 0$ and $b \in \reals$, then
+
 $$
 \logf{a^b} = b \cd \logf{a}
 $$

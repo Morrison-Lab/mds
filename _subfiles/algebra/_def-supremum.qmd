@@ -1,12 +1,23 @@
 :::{#def-supremum}
 #### Supremum (least upper bound)
 
-The **supremum** of a nonempty set $A \subseteq \mathbb{R}$,
+Let $A \subseteq \reals$ be nonempty
+and bounded above,
+meaning that some $t \in \reals$ satisfies $a \le t$ for all $a \in A$.
+The **supremum** of $A$,
 written $\sup A$,
-is the smallest real number $M$ satisfying $M \ge a$ for all $a \in A$:
+is the smallest real number $t$ satisfying $a \le t$ for all $a \in A$:
 
-$$\sup A \eqdef \min_{t \in \reals}\cb{t : \all a \in A, a \le t}$$
+$$\sup A \eqdef \min\cb{t \in \reals : \all a \in A,\ a \le t}$$
 
+If $A$ is nonempty but not bounded above,
+we write $\sup A = +\infty$ by convention.
+
+:::
+
+::: notes
+The minimum in @def-supremum always exists:
+that is the completeness (least-upper-bound) property of the real numbers
+[@rudin1976principles, Chapter 1].
 If the supremum belongs to $A$, it equals the maximum: $\sup A = \max A$.
-
 :::

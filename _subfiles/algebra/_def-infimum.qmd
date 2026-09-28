@@ -1,12 +1,23 @@
 :::{#def-infimum}
 #### Infimum (greatest lower bound)
 
-The **infimum** of a nonempty set $A \subseteq \mathbb{R}$,
+Let $A \subseteq \reals$ be nonempty
+and bounded below,
+meaning that some $t \in \reals$ satisfies $t \le a$ for all $a \in A$.
+The **infimum** of $A$,
 written $\inf A$,
-is the greatest real number $m$ satisfying $m \le a$ for all $a \in A$:
+is the greatest real number $t$ satisfying $t \le a$ for all $a \in A$:
 
-$$\inf A \eqdef \max_{t \in \reals}\cb{t : \all a \in A, a \ge t}$$
+$$\inf A \eqdef \max\cb{t \in \reals : \all a \in A,\ t \le a}$$
 
+If $A$ is nonempty but not bounded below,
+we write $\inf A = -\infty$ by convention.
+
+:::
+
+::: notes
+The maximum in @def-infimum always exists:
+that is the completeness (greatest-lower-bound) property of the real numbers
+[@rudin1976principles, Chapter 1].
 If the infimum belongs to $A$, it equals the minimum: $\inf A = \min A$.
-
 :::

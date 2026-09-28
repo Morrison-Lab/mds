@@ -1,5 +1,7 @@
 :::{#thm-prod-div}
 #### Division can be written as a product
 
+If $b \neq 0$, then
+
 $$\frac {a}{b} = a \times \frac{1}{b}$$
 :::

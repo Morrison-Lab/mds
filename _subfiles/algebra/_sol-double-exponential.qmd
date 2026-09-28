@@ -1,22 +1,49 @@
 {{< include latex-macros/macros.qmd >}}
 
-If $(a^b)^c = a^{(b^c)}$, then since $(a^b)^c = a^{bc}$,
-we have:
-$$a^{bc} = a^{(b^c)}$$
-$$\logf{a^{bc}} = \logf{a^{(b^c)}}$$
-$$bc \cdot \logf{a} = b^c\cdot \logf{a}$${#eq-double-exp-log-scale}
+Split on whether $a > 0$ or $a = 0$,
+because the logarithm we use for $a > 0$ is undefined at $a = 0$.
 
-@eq-double-exp-log-scale holds in each of the following cases:
+**Case $a > 0$.**
+By @thm-double-exp, $(a^b)^c = a^{bc}$,
+so the question becomes when $a^{bc} = a^{(b^c)}$
+(for pairs $(b, c)$ where $b^c$ is defined).
+Because $a > 0$, both sides are positive,
+and we can take logarithms (@thm-log-exp):
 
-1. $bc = b^c$ (see @exr-exp-vs-mult).
-2. $a=1$ (i.e., $\logf{a} = 0$).
-3. $a=0$ (i.e., $\logf{a}= -\infty$) 
-*and* $\signf{bc}=\signf{b^c}$.
+$$
+\ba
+a^{bc} &= a^{(b^c)}
+\\
+\logf{a^{bc}} &= \logf{a^{(b^c)}}
+&& \text{(take logarithms of both sides)}
+\\
+bc \cdot \logf{a} &= b^c\cdot \logf{a}
+&& \text{(logarithm of a power)}
+\ea
+$$ {#eq-double-exp-log-scale}
 
-In particular, when $a=0$ and $c=0$,
-$bc = 0$ and $b^c = 1$ (for any $b \in \mathbb{R}$),
-so $\signf{bc}\neq \signf{b^c}$, and
-$(a^b)^c \neq a^{(b^c)}$:
+The last line of @eq-double-exp-log-scale holds exactly when
+
+1. $a = 1$ (so that $\logf{a} = 0$), or
+2. $bc = b^c$ (see @exr-exp-vs-mult).
+
+**Case $a = 0$.**
+Here we cannot take logarithms, so we work from the values of powers of $0$:
+$0^s = 0$ for $s > 0$,
+$0^0 = 1$,
+and $0^s$ is undefined for $s < 0$.
+
+- If $b < 0$, then $0^b$ is undefined, so $(a^b)^c$ is undefined.
+- If $b > 0$, then $(0^b)^c = 0^c$ and $b^c > 0$, so $0^{(b^c)} = 0$;
+  the two sides agree exactly when $c > 0$.
+- If $b = 0$, then $(0^0)^c = 1^c = 1$;
+  for $c > 0$, $0^{(0^c)} = 0^0 = 1$, so the two sides agree,
+  and for $c \le 0$ they do not.
+
+So for $a = 0$, $(a^b)^c = a^{(b^c)}$ exactly when $b \ge 0$ and $c > 0$.
+
+In particular, when $a = 0$, $b \ge 0$, and $c = 0$,
+the two sides differ:
 
 $$
 \ba
@@ -37,4 +64,3 @@ a^{(b^c)}
 &= 0
 \ea
 $$
-

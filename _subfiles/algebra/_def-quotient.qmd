@@ -1,17 +1,32 @@
 :::{#def-quotient}
 
-#### Quotients, fractions, rates
+#### Quotient
 
-::: notes
-A **quotient** (also called a *fraction* or *rate*) is a division of one quantity by another:
-:::
+For real numbers $a$ and $b$ with $b \neq 0$,
+the **quotient** of $a$ by $b$
+is the result of dividing $a$ by $b$:
 
 $$\frac{a}{b}$$
 
+:::
+
 ::: notes
-In epidemiology, rates typically have a quantity involving time or population in the denominator.
+A quotient is also called a *fraction*;
+$a$ is its *numerator* and $b$ its *denominator*.
+A quotient whose denominator measures time or population size
+is often called a *rate*;
+in epidemiology, rates typically have such a denominator.
 
 c.f. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-quotient}
+#### A quotient
+
+The quotient of $6$ by $4$ is $\frac{6}{4} = 1.5$.
+The quotient of $6$ by $0$ is undefined,
+because @def-quotient requires a nonzero denominator.
 
 :::

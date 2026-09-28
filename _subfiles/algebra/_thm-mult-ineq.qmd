@@ -1,5 +1,5 @@
 :::{#thm-mult-ineq}
-#### Multiplying both sides of an inequality by a nonnegative number
-If $a < b$ and $c \geq 0$, then $ca < cb$.
+#### Multiplying both sides of an inequality by a positive number
+If $a < b$ and $c > 0$, then $ca < cb$.
 
 :::
