@@ -9,6 +9,7 @@ import sys
 import re
 import difflib
 import subprocess
+import time
 from pathlib import Path
 from html.parser import HTMLParser
 from html import escape, unescape
@@ -236,20 +237,32 @@ class HTMLDiffer:
         # element-level highlighting for such pages rather than block the
         # workflow (see Morrison-Lab/mds#7).
         MAX_ELEMENTS_FOR_PAIRWISE = 500
-        # Each SequenceMatcher.ratio() call below is itself
-        # O(len(old_text) * len(new_text)), so the 500-element cap above
-        # bounds element *count* but not per-element size, and a page with
-        # a few very long theorem/definition-style elements could in
-        # theory still be slow even under that cap. Two attempts at a
-        # cheap per-element-length cap here (truncating to a fixed
-        # prefix, and substituting quick_ratio()) each introduced a
-        # correctness regression -- silently dropping highlighting for an
-        # edit outside the truncated prefix, or for an edit whose
-        # quick_ratio() overshoots SIMILARITY_THRESHOLD_MAX -- so this is
-        # deliberately left uncapped and tracked as a follow-up
-        # (Morrison-Lab/mds#10) rather than shipped with a subtle bug.
-        # The reported hang (mds#7) was many small elements, which the
-        # count cap above already fixes.
+        # The count cap above does not bound per-element size, and each
+        # SequenceMatcher.ratio() is quadratic in its inputs' length
+        # (Morrison-Lab/mds#10). The element regex below is non-greedy but
+        # tag-agnostic, so a match that opens on a <p> before an htmlwidget
+        # runs across the widget's <script> JSON to the next closing tag:
+        # algebra.html's plotly figures made one "element" 10 MB of text,
+        # and ratio() on that pair never finished inside the 15-minute
+        # preview job. Such an element is not prose, and an over-length one
+        # is not something a reader scans for a changed word, so both are
+        # left out of the comparison entirely (never highlighted) rather
+        # than compared on a truncated prefix or an approximate ratio --
+        # the two shortcuts #8's review rejected because they silently
+        # drop real highlights.
+        MAX_ELEMENT_TEXT_CHARS = int(os.getenv('HIGHLIGHT_MAX_ELEMENT_CHARS', '20000'))
+        # Last-resort bound on the whole pairwise pass for one page, so no
+        # future pathological page can consume the job: when it runs out,
+        # the page keeps its unhighlighted render and the log says why.
+        PAGE_TIME_BUDGET_SECONDS = float(os.getenv('HIGHLIGHT_PAGE_BUDGET_SECONDS', '60'))
+        NON_PROSE_RE = re.compile(r'<(?:script|style)\b', re.IGNORECASE)
+
+        def comparable(elem, text):
+            return (
+                bool(text)
+                and len(text) <= MAX_ELEMENT_TEXT_CHARS
+                and not NON_PROSE_RE.search(elem)
+            )
 
         # Extract main content for both versions. new_content's span within
         # new_html is captured explicitly (not re-derived later) so the
@@ -272,11 +285,14 @@ class HTMLDiffer:
 
         # Create a list of (text, element) tuples to handle duplicates
         old_elem_list = []
+        skipped_elements = 0
         for m in old_matches:
             elem = m.group(1)
             text = self.extract_text_from_element(elem)
-            if text:  # Only store non-empty elements
+            if comparable(elem, text):
                 old_elem_list.append((text, elem))
+            elif text:
+                skipped_elements += 1
 
         if len(old_elem_list) > MAX_ELEMENTS_FOR_PAIRWISE or len(new_matches) > MAX_ELEMENTS_FOR_PAIRWISE:
             print(
@@ -295,21 +311,60 @@ class HTMLDiffer:
         replacements = []
         changes_made = 0
 
+        # Old element indices by exact text. An unchanged element (the
+        # common case on any page) finds its identical, still-unused twin
+        # here in O(1) instead of by a ratio() against every old element;
+        # the outcome is the same one the full scan reached (a 1.0 ratio,
+        # which is above SIMILARITY_THRESHOLD_MAX, so nothing to highlight).
+        old_indices_by_text = {}
+        for idx, (old_text, _) in enumerate(old_elem_list):
+            old_indices_by_text.setdefault(old_text, []).append(idx)
+
+        deadline = time.monotonic() + PAGE_TIME_BUDGET_SECONDS
+
         for m in new_matches:
             new_elem = m.group(1)
             new_text = self.extract_text_from_element(new_elem)
-            if not new_text:
+            if not comparable(new_elem, new_text):
+                if new_text:
+                    skipped_elements += 1
                 continue
 
-            # Try to find a matching old element
+            if any(idx not in used_old_indices
+                   for idx in old_indices_by_text.get(new_text, ())):
+                continue  # Unchanged element
+
+            # Try to find a matching old element. The matcher keeps
+            # new_text as its second sequence, whose index difflib builds
+            # once rather than once per candidate. real_quick_ratio() and
+            # quick_ratio() are upper bounds on ratio(), so a candidate
+            # whose bound cannot beat best_ratio is skipped without
+            # changing which candidate wins (ties already kept the first).
             best_match_idx = None
             best_ratio = 0.0
+            matcher = difflib.SequenceMatcher(None)
+            matcher.set_seq2(new_text)
 
             for idx, (old_text, old_elem) in enumerate(old_elem_list):
                 if idx in used_old_indices:
                     continue  # Already matched this element
 
-                ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
+                if time.monotonic() > deadline:
+                    print(
+                        f"  WARNING: skipping element-level diff highlighting: "
+                        f"pairwise matching exceeded the "
+                        f"{PAGE_TIME_BUDGET_SECONDS:g}s per-page budget "
+                        f"(HIGHLIGHT_PAGE_BUDGET_SECONDS)",
+                        file=sys.stderr, flush=True,
+                    )
+                    return new_html, 0
+
+                matcher.set_seq1(old_text)
+                if matcher.real_quick_ratio() <= best_ratio:
+                    continue
+                if matcher.quick_ratio() <= best_ratio:
+                    continue
+                ratio = matcher.ratio()
                 if ratio > best_ratio:
                     best_ratio = ratio
                     best_match_idx = idx
@@ -348,6 +403,15 @@ class HTMLDiffer:
 
                     replacements.append((m.start(), m.end(), highlighted_elem))
                     changes_made += 1
+
+        if skipped_elements:
+            print(
+                f"  Left {skipped_elements} element(s) unhighlighted: they "
+                f"embed <script>/<style> content or exceed "
+                f"{MAX_ELEMENT_TEXT_CHARS} characters of text "
+                f"(HIGHLIGHT_MAX_ELEMENT_CHARS)",
+                file=sys.stderr, flush=True,
+            )
 
         if not replacements:
             return new_html, 0
@@ -501,7 +565,12 @@ class HTMLDiffer:
         # Fetch the published (main) version
         old_html = self.fetch_base_html(local_filepath)
         
-        if old_html:
+        if old_html == new_html and not has_placeholder:
+            # Nothing to diff. A site-wide change lists every chapter as
+            # changed, including byte-identical ones whose comparison is
+            # all cost and no output.
+            print(f"  Identical to the published version; nothing to highlight")
+        elif old_html:
             print(f"  Old HTML length: {len(old_html)} chars")
             
             # Find what changed
@@ -609,6 +678,11 @@ def checkout_base_html(base_ref='origin/gh-pages', target_dir='/tmp/base-html'):
         return None
 
 def main():
+    # Line-buffer stdout: under CI it is a pipe, so without this a slow
+    # page prints nothing until the step ends or is cancelled, and a
+    # cancelled run's log cannot say which page it was on.
+    sys.stdout.reconfigure(line_buffering=True)
+
     # Get the local HTML directory
     html_dir = os.getenv('HTML_DIR', './docs')
     

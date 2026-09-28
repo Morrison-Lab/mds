@@ -169,6 +169,12 @@ jobs:
 
       - name: Highlight HTML content changes
         if: env.PREVIEW_SHOW_HIGHLIGHTS == 'true'
+        # Highlighting is a reviewer aid, so a slow page must not take the
+        # preview down with it: the script has a per-page time budget, and
+        # this step-level limit backs it up. On timeout the preview still
+        # deploys, without highlights (Morrison-Lab/mds#10).
+        timeout-minutes: 5
+        continue-on-error: true
         run: |
           echo "Changed chapters:"
           echo "${{ env.PREVIEW_CHANGED_CHAPTERS }}"
