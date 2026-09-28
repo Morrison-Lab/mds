@@ -60,6 +60,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/_thm-deriv-matrix-product-vector.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_cor-deriv-lincom-tp.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_proof-cor-deriv-lincom-tp-via-lincom.qmd >}}
@@ -101,3 +105,7 @@
 ---
 
 {{< include mds/_subfiles/vector-calc/_cor-chain-qf.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_thm-deriv-matrix-product-matrix.qmd >}}
