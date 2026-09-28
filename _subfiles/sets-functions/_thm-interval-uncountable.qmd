@@ -1,0 +1,16 @@
+:::{#thm-interval-uncountable}
+#### The unit interval is not countable
+
+The interval $[0, 1]$ is not [countable](#def-countable-set).
+
+:::
+
+::: {.remark .notes}
+
+The standard proof is Cantor's diagonal argument:
+given any sequence of numbers in $[0, 1]$,
+it builds a number in $[0, 1]$ whose decimal expansion differs from the $n$th number's in the $n$th digit,
+so the sequence misses it
+(see [Wikipedia: Cantor's diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)).
+
+:::

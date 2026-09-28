@@ -1,0 +1,13 @@
+---
+title: "Sets and Functions"
+format:
+  html: default
+  revealjs:
+    output-file: sets-functions-slides.html
+  pdf:
+    output-file: sets-functions-handout.pdf
+  docx:
+    output-file: sets-functions.docx
+---
+
+{{< include mds/_sets-functions.qmd >}}

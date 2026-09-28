@@ -1,0 +1,20 @@
+:::{#def-image}
+#### Image
+
+The **image** of a [function](#def-function) $f : A \to B$
+is the set of values that $f$ actually takes:
+
+$$f(A) \eqdef \set{f(a) : a \in A}$$
+
+:::
+
+::: {.remark .notes}
+
+Many sources call the image the **range**,
+but others use "range" for the codomain,
+so these notes avoid "range" for functions in general
+(see [Wikipedia: Range of a function](https://en.wikipedia.org/wiki/Range_of_a_function)).
+The image is always a subset of the codomain,
+because every value $f(a)$ lies in $B$.
+
+:::
