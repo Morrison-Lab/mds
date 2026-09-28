@@ -8,6 +8,8 @@
 
 {{< include mds/_subfiles/vector-calc/_def-vector-derivative.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_note-video-gradients.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-row-vector-derivative.qmd >}}
