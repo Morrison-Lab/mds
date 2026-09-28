@@ -1,4 +1,5 @@
 antiderivatives
+checkable
 CLI
 DOCX
 ebsite
@@ -7,6 +8,7 @@ equalities
 exponentials
 glitchy
 infimum
+Invertible
 lintr
 navbar
 precalculus
@@ -16,6 +18,7 @@ rulesets
 SERG
 subfiles
 submodule
+submodule's
 symlink
 TinyTeX
 uarto
