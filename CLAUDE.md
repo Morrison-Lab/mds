@@ -4,7 +4,7 @@ Project guidance for Claude Code (CLI, IDE, and the GitHub Action). The same con
 
 ## Project context
 
-`mds` holds the mathematics that the Morrison-Lab data science courses assume: notation, algebra, calculus, linear algebra and vector calculus, as [Quarto](https://quarto.org/) fragments. It renders on its own as a website, and course sites include it as a git submodule, so a fragment's path and its `#id` anchors are an interface: renaming either breaks every host site. The scaffolding came from the UCD-SERG `qwt` template.
+`mds` holds the mathematics that the Morrison-Lab data science courses assume: notation, algebra, calculus, linear algebra and vector calculus, as [Quarto](https://quarto.org/) fragments. It renders on its own as a website, and course sites such as `mlds` link to its pages by URL, so a page's path and its `#id` anchors are an interface: renaming either breaks those links. The scaffolding came from the UCD-SERG `qwt` template.
 
 Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-manual/) (source: <https://github.com/UCD-SERG/lab-manual>).
 
@@ -80,6 +80,5 @@ rme will drop those appendices and point readers here
 
 ## Things to avoid
 
-- Adding new top-level dependencies (R packages, Quarto extensions) without a clear reason; this is a template, so every dependency lands in every downstream book.
 - Reformatting unrelated files.
 - Inventing URLs or citations --- only use sources actually present in `references.bib` or explicitly provided.
