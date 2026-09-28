@@ -69,6 +69,12 @@ class HTMLDiffer:
         start, end = span
         return html[start:end]
     
+    def strip_non_prose(self, html):
+        """Drop <script>/<style> blocks, whose payload (e.g. an htmlwidget's
+        embedded JSON) is not reader-visible prose and can dwarf it."""
+        return re.sub(r'<(script|style)\b[^>]*>.*?</\1\s*>', ' ', html,
+                      flags=re.DOTALL | re.IGNORECASE)
+
     def normalize_html(self, html):
         """Normalize HTML for better comparison (remove extra whitespace, etc.)."""
         # Remove extra whitespace
@@ -382,11 +388,19 @@ class HTMLDiffer:
         if not old_html:
             return None, 0
         
-        old_content = self.normalize_html(self.extract_main_content(old_html))
-        new_content = self.normalize_html(self.extract_main_content(new_html))
-        
-        # Calculate similarity ratio
-        similarity = difflib.SequenceMatcher(None, old_content, new_content).ratio()
+        old_content = self.normalize_html(self.strip_non_prose(self.extract_main_content(old_html)))
+        new_content = self.normalize_html(self.strip_non_prose(self.extract_main_content(new_html)))
+
+        # Calculate similarity ratio over word tokens, not characters.
+        # A character-level SequenceMatcher is O(n^2) in the page length,
+        # and a page whose main content embeds htmlwidgets (plotly JSON in
+        # <script> blocks) is ~10 MB of characters: mds's math-prereqs page
+        # ran past the 15-minute preview timeout here. Stripping scripts and
+        # styles (strip_non_prose) plus comparing word tokens keeps this on
+        # the visible prose, a few tens of thousands of tokens at most.
+        similarity = difflib.SequenceMatcher(
+            None, old_content.split(' '), new_content.split(' ')
+        ).ratio()
         
         # If content is nearly identical, no need to highlight
         if similarity > 0.95:
