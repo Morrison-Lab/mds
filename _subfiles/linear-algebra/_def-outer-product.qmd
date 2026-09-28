@@ -1,0 +1,56 @@
+:::{#def-outer-product}
+#### Outer product
+
+The **outer product** of a vector $\vecf{u}$ of length $m$
+and a vector $\vecf{v}$ of length $n$
+is the $m \times n$ matrix product (@def-matrix-mult) $\vecf{u}\,\tp{\vecf{v}}$
+of the column vector $\vecf{u}$ with the row vector $\tp{\vecf{v}}$.
+Its entries are
+
+$$
+\paren{\underbrace{\vecf{u}}_{m \times 1}\,\underbrace{\tp{\vecf{v}}}_{1 \times n}}_{ij}
+= u_i v_j
+\qquad \text{(definition of matrix multiplication; the sum has one term)}
+$$
+
+:::
+
+::: notes
+The dot product $\tp{\vecf{u}}\vecf{v}$ (@exm-dot-product-matmul)
+needs two vectors of the same length and gives a number.
+The outer product $\vecf{u}\,\tp{\vecf{v}}$
+takes vectors of any two lengths and gives a matrix
+[@banerjee2014linear, Chapter 1, p. 11].
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-outer-product}
+#### An outer product
+
+For $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$:
+
+$$
+\ba
+\vecf{u}\,\tp{\vecf{v}}
+&= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+\begin{bmatrix} 4 & 5 \end{bmatrix}
+&& \text{(definition of the outer product)}
+\\
+&= \begin{bmatrix}
+1 \cd 4 & 1 \cd 5 \\
+2 \cd 4 & 2 \cd 5 \\
+3 \cd 4 & 3 \cd 5
+\end{bmatrix}
+&& \text{(entry } (i, j) \text{ is } u_i v_j \text{)}
+\\
+&= \begin{bmatrix}
+4 & 5 \\
+8 & 10 \\
+12 & 15
+\end{bmatrix}
+&& \text{(multiply)}
+\ea
+$$
+
+:::

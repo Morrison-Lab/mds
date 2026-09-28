@@ -1,0 +1,67 @@
+:::{#thm-outer-product-rank}
+#### An outer product has rank one
+
+If $\vecf{u}$ is a nonzero vector of length $m$
+and $\vecf{v}$ is a nonzero vector of length $n$,
+then $\operatorname{rank}(\vecf{u}\,\tp{\vecf{v}}) = 1$ (@def-rank).
+
+:::
+
+::: proof
+
+Column $j$ of $\vecf{u}\,\tp{\vecf{v}}$ has entries $u_1 v_j, \ldots, u_m v_j$,
+so it is the vector $v_j \vecf{u}$.
+
+**The rank is at least one.**
+Because $\vecf{v} \neq \vzero$, some entry $v_j$ is nonzero.
+Then column $j$, $v_j \vecf{u}$, is a nonzero vector,
+and a single nonzero vector is linearly independent (@def-linearly-independent):
+$c\,(v_j \vecf{u}) = \vzero$ forces $c = 0$.
+
+**The rank is at most one.**
+Take any two columns $j \neq k$.
+If $v_j = v_k = 0$, both columns are $\vzero$,
+and $1 \cd (v_j \vecf{u}) + 1 \cd (v_k \vecf{u}) = \vzero$.
+Otherwise, use the coefficients $c_j = v_k$ and $c_k = -v_j$,
+which are not both zero:
+
+$$
+\ba
+v_k\,(v_j \vecf{u}) - v_j\,(v_k \vecf{u})
+&= (v_k v_j - v_j v_k)\,\vecf{u}
+&& \text{(collect the scalar multiples of } \vecf{u} \text{)}
+\\
+&= 0 \cd \vecf{u}
+&& \text{(multiplication of numbers is commutative)}
+\\
+&= \vzero
+&& \text{(a zero multiple of a vector is } \vzero \text{)}
+\ea
+$$
+
+Either way, every pair of columns has a combination
+with coefficients that are not all zero and that equals $\vzero$.
+Now take any set of two or more columns.
+It contains a pair $j \neq k$.
+Use that pair's coefficients for columns $j$ and $k$,
+and the coefficient $0$ for every other column in the set.
+This combination equals $\vzero$,
+and its coefficients are not all zero,
+so the set is not linearly independent (@def-linearly-independent).
+The largest linearly independent set of columns therefore has one column.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-outer-product-rank}
+#### The rank of an outer product
+
+In @exm-outer-product,
+the second column $(5, 10, 15)$ of $\vecf{u}\,\tp{\vecf{v}}$
+is $\frac{5}{4}$ times the first column $(4, 8, 12)$,
+because the columns are $v_1 \vecf{u} = 4\vecf{u}$ and $v_2 \vecf{u} = 5\vecf{u}$.
+So the two columns are not linearly independent,
+and the $3 \times 2$ matrix has rank $1$.
+
+:::

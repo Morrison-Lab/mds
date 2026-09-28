@@ -1,0 +1,90 @@
+:::{#thm-orthogonal-norm}
+#### Orthogonal matrices preserve length
+
+If $\matr{Q}$ is a $p \times p$ orthogonal matrix (@def-orthogonal-matrix)
+and $\vx$ is a vector of length $p$, then
+
+$$
+\norm{\matr{Q}\vx} = \norm{\vx}
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\norm{\matr{Q}\vx}^2
+&= (\matr{Q}\vx) \cdot (\matr{Q}\vx)
+&& \text{(definition of the Euclidean norm)}
+\\
+&= \tp{(\matr{Q}\vx)}\,(\matr{Q}\vx)
+&& \text{(dot product as a matrix product)}
+\\
+&= \tp{\vx}\,\tp{\matr{Q}}\,(\matr{Q}\vx)
+&& \text{(transpose of a product)}
+\\
+&= \tp{\vx}\,(\tp{\matr{Q}}\matr{Q})\,\vx
+&& \text{(regroup; matrix multiplication is associative)}
+\\
+&= \tp{\vx}\,\matr{I}_p\,\vx
+&& \text{(definition of an orthogonal matrix)}
+\\
+&= \tp{\vx}\,\vx
+&& \text{(identity matrix)}
+\\
+&= \norm{\vx}^2
+&& \text{(definition of the Euclidean norm)}
+\ea
+$$
+
+Both norms are nonnegative square roots,
+so equal squares give $\norm{\matr{Q}\vx} = \norm{\vx}$.
+The second step is @exm-dot-product-matmul,
+the third is @thm-transpose-product,
+and the fourth is @thm-matmul-assoc.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthogonal-norm}
+#### Rotating a vector keeps its length
+
+With $\matr{Q}$ from @exm-orthogonal-matrix
+and $\vx = (3, 4)$ from @exm-euclidean-norm:
+
+$$
+\ba
+\matr{Q}\vx
+&= \begin{bmatrix} 0.6 \cd 3 - 0.8 \cd 4 \\ 0.8 \cd 3 + 0.6 \cd 4 \end{bmatrix}
+&& \text{(definition of matrix-vector multiplication)}
+\\
+&= \begin{bmatrix} 1.8 - 3.2 \\ 2.4 + 2.4 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \begin{bmatrix} -1.4 \\ 4.8 \end{bmatrix}
+&& \text{(add)}
+\ea
+$$
+
+$$
+\ba
+\norm{\matr{Q}\vx}
+&= \sqrt{(-1.4)^2 + 4.8^2}
+&& \text{(definition of the norm)}
+\\
+&= \sqrt{1.96 + 23.04}
+&& \text{(square)}
+\\
+&= \sqrt{25}
+&& \text{(add)}
+\\
+&= 5
+&& \text{(take the square root)}
+\ea
+$$
+
+which is $\norm{\vx} = 5$.
+
+:::

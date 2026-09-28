@@ -1,0 +1,58 @@
+:::{#def-orthogonal-matrix}
+#### Orthogonal matrix
+
+A $p \times p$ matrix $\matr{Q}$ is **orthogonal** if
+
+$$
+\underbrace{\tp{\matr{Q}}}_{p \times p}\,\underbrace{\matr{Q}}_{p \times p} = \matr{I}_p
+$$
+
+:::
+
+::: notes
+Entry $(i, j)$ of $\tp{\matr{Q}}\matr{Q}$ is the dot product of
+column $i$ and column $j$ of $\matr{Q}$,
+so $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$ says that
+the columns of $\matr{Q}$ are orthonormal (@def-orthonormal-vectors).
+For a square matrix, $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$
+also implies $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
+so $\matr{Q}^{-1} = \tp{\matr{Q}}$ (@def-matrix-inverse)
+[@banerjee2014linear, Chapter 8, Theorem 8.1 and Definition 8.1, p. 209].
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthogonal-matrix}
+#### A rotation matrix
+
+The matrix
+
+$$
+\matr{Q} = \begin{bmatrix} 0.6 & -0.8 \\ 0.8 & 0.6 \end{bmatrix}
+$$
+
+rotates each vector in the plane counterclockwise
+by the angle $\theta$ with $\cos\theta = 0.6$ and $\sin\theta = 0.8$
+(about $53$ degrees)
+[@banerjee2014linear, Chapter 8, Example 8.1, p. 207].
+It is orthogonal:
+
+$$
+\ba
+\tp{\matr{Q}}\matr{Q}
+&= \begin{bmatrix} 0.6 & 0.8 \\ -0.8 & 0.6 \end{bmatrix}
+\begin{bmatrix} 0.6 & -0.8 \\ 0.8 & 0.6 \end{bmatrix}
+&& \text{(definition of the transpose)}
+\\
+&= \begin{bmatrix}
+0.36 + 0.64 & -0.48 + 0.48 \\
+-0.48 + 0.48 & 0.64 + 0.36
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+&& \text{(add)}
+\ea
+$$
+
+:::

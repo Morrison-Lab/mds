@@ -1,28 +1,3 @@
-:::{#def-trace}
-
-#### Trace
-
-The **trace** of a $p \times p$ matrix $\matr{M}$
-is the sum of its diagonal entries:
-
-$$\operatorname{tr}(\matr{M}) \eqdef \sum_{i=1}^p M_{ii}$$
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-trace}
-
-#### The trace of a $2 \times 2$ matrix
-
-$$
-\operatorname{tr}\paren{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}} = 1 + 4 = 5
-$$
-
-:::
-
-{{< slidebreak >}}
-
 :::{#def-matrix-derivative}
 
 #### Matrix derivative
@@ -46,7 +21,7 @@ $$
 #### The matrix derivative of a trace
 
 Let $\matr{X}$ be a $2 \times 2$ matrix and $f(\matr{X}) = \operatorname{tr}(\matr{X}) = X_{11} + X_{22}$
-(@def-trace).
+(see [trace](linear-algebra.qmd#def-trace)).
 Then $\deriv{X_{ij}} f = 1$ if $i = j$ and $0$ otherwise, so:
 
 $$

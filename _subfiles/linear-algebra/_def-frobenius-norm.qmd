@@ -1,0 +1,50 @@
+:::{#def-frobenius-norm}
+#### Frobenius norm
+
+The **Frobenius norm** of an $n \times p$ matrix $\matr{A}$ is
+
+$$
+\norm{\matr{A}}_F \eqdef \sqrt{\iprod{\matr{A}}{\matr{A}}}
+$$
+
+where $\iprod{\cdot}{\cdot}$ is the matrix inner product
+(@def-matrix-inner-product).
+
+:::
+
+::: notes
+By @thm-matrix-inner-product-entries,
+$\norm{\matr{A}}_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{p} a_{ij}^2$,
+a sum of squares, so the square root is always defined.
+$\norm{\matr{A}}_F$ is the Euclidean norm (@def-euclidean-norm)
+of the entries of $\matr{A}$, listed as one vector of length $np$
+[@banerjee2014linear, Chapter 15, Definition 15.4, p. 492].
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-frobenius-norm}
+#### The Frobenius norm of a $2 \times 2$ matrix
+
+For $\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$:
+
+$$
+\ba
+\norm{\matr{A}}_F
+&= \sqrt{\iprod{\matr{A}}{\matr{A}}}
+&& \text{(definition of the Frobenius norm)}
+\\
+&= \sqrt{1 \cd 1 + 2 \cd 2 + 3 \cd 3 + 4 \cd 4}
+&& \text{(sum of products of matching entries)}
+\\
+&= \sqrt{1 + 4 + 9 + 16}
+&& \text{(multiply)}
+\\
+&= \sqrt{30}
+&& \text{(add)}
+\ea
+$$
+
+The second step is @thm-matrix-inner-product-entries.
+
+:::

@@ -1,0 +1,30 @@
+:::{#thm-spectral}
+#### Spectral theorem for symmetric matrices
+
+If $\matr{A}$ is a $p \times p$ symmetric matrix (@def-symmetric-matrix)
+with real entries,
+then there are a $p \times p$ orthogonal matrix $\matr{Q}$ (@def-orthogonal-matrix)
+and a $p \times p$ diagonal matrix $\matr{\Lambda}$ (@def-diagonal-matrix)
+with real diagonal entries $\lambda_1, \ldots, \lambda_p$ such that
+
+$$
+\underbrace{\matr{A}}_{p \times p}
+= \underbrace{\matr{Q}}_{p \times p}\,
+\underbrace{\matr{\Lambda}}_{p \times p}\,
+\underbrace{\tp{\matr{Q}}}_{p \times p}
+$$
+
+Each $\lambda_i$ is an eigenvalue of $\matr{A}$ (@def-eigenvalue),
+and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\lambda_i$.
+
+:::
+
+::: notes
+The proof, by induction on $p$, is outside the scope of these notes;
+see @banerjee2014linear [Chapter 11, Theorem 11.27, p. 349],
+which states the result in the equivalent form
+$\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$.
+The two forms are equivalent because $\tp{\matr{Q}}\matr{Q} = \matr{Q}\tp{\matr{Q}} = \matr{I}_p$:
+multiply $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+by $\tp{\matr{Q}}$ on the left and by $\matr{Q}$ on the right.
+:::

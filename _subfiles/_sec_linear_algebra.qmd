@@ -140,6 +140,14 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-rank.qmd >}}
 
+### Outer product
+
+{{< include mds/_subfiles/linear-algebra/_def-outer-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-outer-product-rank.qmd >}}
+
 ## Special Matrices
 
 {{< include mds/_subfiles/linear-algebra/_note-special-matrices-intro.qmd >}}
@@ -208,6 +216,14 @@
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-projection-orthogonal.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-orthogonal-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-orthogonal-norm.qmd >}}
+
 ## Quadratic Forms
 
 {{< include mds/_subfiles/linear-algebra/_def-quadratic-form.qmd >}}
@@ -221,6 +237,50 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-symmetric.qmd >}}
+
+## Trace and Matrix Inner Product
+
+{{< include mds/_subfiles/linear-algebra/_def-trace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-trace-cyclic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-matrix-inner-product-entries.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-frobenius-norm.qmd >}}
+
+## Matrix Decompositions
+
+{{< include mds/_subfiles/linear-algebra/_def-eigenvalue.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-spectral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-eigendecomposition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-svd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-svd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-svd-evd.qmd >}}
 
 ## Design Matrix
 

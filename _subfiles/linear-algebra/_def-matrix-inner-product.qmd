@@ -1,0 +1,17 @@
+:::{#def-matrix-inner-product}
+#### Matrix inner product
+
+The **inner product** of two $n \times p$ matrices $\matr{A}$ and $\matr{B}$ is
+
+$$
+\iprod{\matr{A}}{\matr{B}}
+\eqdef
+\operatorname{tr}\paren{\underbrace{\tp{\matr{A}}\matr{B}}_{p \times p}}
+$$
+
+:::
+
+::: notes
+@banerjee2014linear [Chapter 15, eq. 15.7, p. 491]
+defines the same inner product on $n \times p$ matrices with the trace.
+:::

@@ -1,0 +1,30 @@
+:::{#thm-svd}
+#### Singular value decomposition
+
+Let $\matr{A}$ be an $n \times p$ matrix with real entries
+and $\operatorname{rank}(\matr{A}) = r$ (@def-rank).
+Then there are
+an $n \times n$ orthogonal matrix $\matr{U}$,
+a $p \times p$ orthogonal matrix $\matr{V}$ (@def-orthogonal-matrix),
+and numbers $\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$
+such that
+
+$$
+\underbrace{\matr{A}}_{n \times p}
+= \underbrace{\matr{U}}_{n \times n}\,
+\underbrace{\matr{D}}_{n \times p}\,
+\underbrace{\tp{\matr{V}}}_{p \times p}
+$$
+
+where $\matr{D}$ has entries $d_{ii} = \sigma_i$ for $i = 1, \ldots, r$
+and every other entry $0$.
+
+:::
+
+::: notes
+The proof is outside the scope of these notes;
+see @banerjee2014linear [Chapter 12, Theorem 12.1, p. 373].
+Unlike the spectral theorem (@thm-spectral),
+@thm-svd applies to every real matrix,
+including one that is not square or not symmetric.
+:::
