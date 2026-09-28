@@ -20,17 +20,15 @@ to organize our thoughts and back up our assertions.
 @cheng2025math
 
 These notes collect the mathematics that data science courses assume:
-mathematical notation, proof writing, algebra
+mathematical notation, algebra
 (including exponentials and logarithms),
-univariate calculus, linear algebra, and vector calculus.
+univariate calculus, linear algebra, vector calculus, and proof writing.
 Some key results are listed here,
 organized by topic:
 
 - [Notation](notation.qmd):
   common symbols, natural numbers, the percent sign,
   proof symbols, and indicator functions
-- [Proof Writing](proof-writing.qmd):
-  showing and annotating every step of a derivation
 - [Algebra](algebra.qmd):
   equalities and inequalities, infimum and supremum,
   sums, products, quotients, exponentials and logarithms
@@ -43,6 +41,8 @@ organized by topic:
 - [Vector Calculus](vector-calculus.qmd):
   derivatives with respect to vectors and matrices,
   quadratic forms, and the vector chain rule
+- [Proof Writing](proof-writing.qmd):
+  showing and annotating every step of a derivation
 
 ## Using these notes in another site {.unnumbered}
 
@@ -58,11 +58,11 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
-| [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.qmd) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd` |
+| [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
 `_notation.qmd` and `_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
