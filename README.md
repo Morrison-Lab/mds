@@ -16,13 +16,13 @@ website, and course sites include it as a git submodule.
 The site has one page per topic. Each page is a thin wrapper around one
 or more fragments, which are what a host site includes:
 
-| Page                                                                       | Fragment(s) to include                                                                                                 |
-|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [Notation](https://morrison-lab.github.io/mds/notation.html)               | `mds/_notation.qmd`                                                                                                    |
-| [Algebra](https://morrison-lab.github.io/mds/algebra.html)                 | `mds/_algebra.qmd`                                                                                                     |
-| [Calculus](https://morrison-lab.github.io/mds/calculus.html)               | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
-| [Linear Algebra](https://morrison-lab.github.io/mds/linear-algebra.html)   | `mds/_subfiles/_sec_linear_algebra.qmd`                                                                                |
-| [Vector Calculus](https://morrison-lab.github.io/mds/vector-calculus.html) | `mds/_subfiles/_sec_vector_calc.qmd`                                                                                   |
+| Page                                   | Fragment(s) to include                                                                                                 |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| [Notation](notation.qmd)               | `mds/_notation.qmd`                                                                                                    |
+| [Algebra](algebra.qmd)                 | `mds/_algebra.qmd`                                                                                                     |
+| [Calculus](calculus.qmd)               | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
+| [Linear Algebra](linear-algebra.qmd)   | `mds/_subfiles/_sec_linear_algebra.qmd`                                                                                |
+| [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd`                                                                                   |
 
 `_notation.qmd` and `_algebra.qmd` include `latex-macros/macros.qmd`
 themselves; a host page that includes any of the other fragments must

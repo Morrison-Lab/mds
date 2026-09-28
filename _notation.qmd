@@ -15,10 +15,10 @@ and the alternatives you may meet in other sources.
 | $\sum$      | sum                                              | `\sum`
 | $\prod$     | product                                          | `\prod`
 | $\mu$       | mean                                             | `\mu`
-| $\Expp$     | [expectation](https://morrison-lab.github.io/pds/probability-prereqs.html#def-expectation)   | `\mathbb{E}`
+| $\Expp$     | [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)   | `\mathbb{E}`
 | $x^{\top}$  | transpose of $x$                                 | `x^{\top}`
 | $'$         | transpose or derivative[^3]                      | `'`
-| $\ind$      | [independent](https://morrison-lab.github.io/pds/probability-prereqs.html#def-indpt)         | `\perp\!\!\!\perp`
+| $\ind$      | [independent](https://morrison-lab.github.io/rme/chapters/probability.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | therefore, thus                                  | `\therefore`
 | $\eta$      | [linear component of a GLM][eta]                 | `\eta`
 | $\floor{x}$ | floor of $x$: largest integer smaller than $x$   | `\lfloor x \rfloor`
