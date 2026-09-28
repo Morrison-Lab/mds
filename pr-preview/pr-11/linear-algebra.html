@@ -161,15 +161,25 @@ cookieconsent.run({
 </script> 
   
 <style>
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -191,26 +201,6 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -220,16 +210,6 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -241,16 +221,6 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-exr.callout {
   border-left-color: #FFA500;
 }
@@ -260,6 +230,36 @@ div.callout-exr.callout-style-default .callout-header {
 div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -573,7 +573,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-09-27 23:50:28 (PDT)</p>
+      <p class="date">Last modified: 2026-09-28 00:06:07 (PDT)</p>
     </div>
   </div>
   
@@ -611,7 +611,6 @@ x_{p}
 <div class="notes">
 <p>Column vectors are the default convention in these notes and in most statistics textbooks. They are also called <em><span class="math inline">\(p \times 1\)</span> matrices</em>.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -630,7 +629,6 @@ x_{p}
 <div class="notes">
 <p>The transpose operation converts a column vector to a row vector, or more generally, swaps the rows and columns of a matrix (<a href="#def-matrix-transpose" class="quarto-xref">Definition&nbsp;10</a>).</p>
 </div>
-<hr>
 <section id="special-vectors" class="level3" data-number="0.1.1">
 <h3 data-number="0.1.1" class="anchored" data-anchor-id="special-vectors"><span class="header-section-number">0.1.1</span> Special vectors</h3>
 <div class="callout callout-style-simple callout-def no-icon">
@@ -657,7 +655,6 @@ x_{p}
 <div class="notes">
 <p>The zero vector is the additive identity for vector addition: <span class="math inline">\(\tilde{x}+ \tilde{0}= \tilde{x}\)</span> for any vector <span class="math inline">\(\tilde{x}\)</span> of the same length.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -682,7 +679,6 @@ x_{p}
 <div class="notes">
 <p>The dot product <span class="math inline">\({\tilde{1}}^{\top}\tilde{x}= \tilde{1} \cdot \tilde{x}= \sum_{i=1}^p x_i\)</span> is the sum of all entries of <span class="math inline">\(\tilde{x}\)</span>.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -717,7 +713,6 @@ x_{p}
 <div class="notes">
 <p>They are also called <em>unit vectors</em> or <em>standard basis vectors</em>.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -761,7 +756,6 @@ x_{p}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -799,7 +793,6 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -813,7 +806,6 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-default callout-proof callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -837,7 +829,6 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-exm no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -865,7 +856,6 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="orthogonality" class="level3" data-number="0.1.2">
 <h3 data-number="0.1.2" class="anchored" data-anchor-id="orthogonality"><span class="header-section-number">0.1.2</span> Orthogonality</h3>
@@ -885,7 +875,6 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 <div class="notes">
 <p>Orthogonality generalizes the geometric notion of perpendicularity to arbitrary dimensions.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -906,7 +895,6 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 <div class="notes">
 <p>The indicator vectors <span class="math inline">\(\tilde{e}_1, \tilde{e}_2, \ldots, \tilde{e}_p\)</span> (<a href="#def-indicator-vector" class="quarto-xref">Definition&nbsp;5</a>) form an orthonormal set.</p>
 </div>
-<hr>
 </section>
 </section>
 <section id="matrices" class="level2" data-number="0.2">
@@ -935,7 +923,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <div class="notes">
 <p>The entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> is denoted <span class="math inline">\(a_{ij}\)</span> or <span class="math inline">\((\mathbf{A})_{ij}\)</span>. A column vector of length <span class="math inline">\(p\)</span> is a special case: a <span class="math inline">\(p \times 1\)</span> matrix. A row vector of length <span class="math inline">\(p\)</span> is a <span class="math inline">\(1 \times p\)</span> matrix.</p>
 </div>
-<hr>
 <section id="sec-matrix-transpose" class="level3" data-number="0.2.1">
 <h3 data-number="0.2.1" class="anchored" data-anchor-id="sec-matrix-transpose"><span class="header-section-number">0.2.1</span> Matrix transpose</h3>
 <div class="callout callout-style-simple callout-def no-icon">
@@ -951,7 +938,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -966,7 +952,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -983,7 +968,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <div class="notes">
 <p>The order of the factors reverses when transposing a product.</p>
 </div>
-<hr>
 </section>
 <section id="matrix-addition" class="level3" data-number="0.2.2">
 <h3 data-number="0.2.2" class="anchored" data-anchor-id="matrix-addition"><span class="header-section-number">0.2.2</span> Matrix addition</h3>
@@ -1008,7 +992,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1022,7 +1005,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1035,7 +1017,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1048,7 +1029,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1061,7 +1041,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1075,7 +1054,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="scalar-multiplication" class="level3" data-number="0.2.3">
 <h3 data-number="0.2.3" class="anchored" data-anchor-id="scalar-multiplication"><span class="header-section-number">0.2.3</span> Scalar multiplication</h3>
@@ -1092,7 +1070,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="matrix-multiplication" class="level3" data-number="0.2.4">
 <h3 data-number="0.2.4" class="anchored" data-anchor-id="matrix-multiplication"><span class="header-section-number">0.2.4</span> Matrix multiplication</h3>
@@ -1113,7 +1090,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <p>Matrix multiplication is only defined when the number of columns in <span class="math inline">\(\mathbf{A}\)</span> equals the number of rows in <span class="math inline">\(\mathbf{B}\)</span>.</p>
 <p>Matrix multiplication is <strong>not</strong> commutative in general: <span class="math inline">\(\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}\)</span>.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1126,7 +1102,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1140,7 +1115,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="matrix-vector-multiplication" class="level3" data-number="0.2.5">
 <h3 data-number="0.2.5" class="anchored" data-anchor-id="matrix-vector-multiplication"><span class="header-section-number">0.2.5</span> Matrix-vector multiplication</h3>
@@ -1160,7 +1134,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <div class="notes">
 <p>Matrix-vector multiplication is a generalization of the dot product. Each entry of the result is a dot product of a row of <span class="math inline">\(\mathbf{A}\)</span> with the vector <span class="math inline">\(\tilde{x}\)</span>.</p>
 </div>
-<hr>
 </section>
 </section>
 <section id="special-matrices" class="level2" data-number="0.3">
@@ -1192,7 +1165,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1207,7 +1179,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1249,7 +1220,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1265,7 +1235,6 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <div class="notes">
 <p>Covariance matrices and information matrices are symmetric.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1290,7 +1259,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <div class="notes">
 <p>Diagonal matrices are denoted <span class="math inline">\(\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\)</span>, where <span class="math inline">\(d_1, \ldots, d_p\)</span> are the diagonal entries.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1307,7 +1275,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <div class="notes">
 <p>A matrix that has an inverse is called <strong>invertible</strong> or <strong>non-singular</strong>.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1321,7 +1288,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1335,7 +1301,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1351,7 +1316,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1390,7 +1354,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1441,7 +1404,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <div class="notes">
 <p>The hat matrix appears in the formula for fitted values in linear regression: <span class="math inline">\(\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\)</span>. It “puts a hat” on <span class="math inline">\(\tilde{y}\)</span> — hence the name.</p>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1484,7 +1446,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="quadratic-forms" class="level2" data-number="0.4">
 <h2 data-number="0.4" class="anchored" data-anchor-id="quadratic-forms"><span class="header-section-number">0.4</span> Quadratic Forms</h2>
@@ -1509,7 +1470,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <li>The variance of a linear combination of estimates (see <a href="https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs">Inference about Gaussian Linear Regression Models</a>) is a quadratic form: <span class="math inline">\(\operatorname{Var}\mathopen{}\left({\tilde{x}}^{\top}\hat{\tilde{\beta}}\right)\mathclose{} = {\tilde{x}}^{\top}\,\operatorname{Var}\mathopen{}\left(\hat{\tilde{\beta}}\right)\mathclose{}\,\tilde{x}\)</span>.</li>
 </ul>
 </div>
-<hr>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1528,7 +1488,6 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="design-matrix" class="level2" data-number="0.5">
 <h2 data-number="0.5" class="anchored" data-anchor-id="design-matrix"><span class="header-section-number">0.5</span> Design Matrix</h2>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-27 23:50:28 (PDT)
+Last modified: 2026-09-28 00:06:07 (PDT)
 
 ## 0.1 Vectors
 
@@ -16,8 +16,6 @@ Last modified: 2026-09-27 23:50:28 (PDT)
 
 Column vectors are the default convention in these notes and in most statistics textbooks. They are also called *\\p \times 1\\ matrices*.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 2 (Transpose)** The **transpose** of a column vector \\\tilde{x}\\ is the row vector with the same sequence of entries, written horizontally:
@@ -25,8 +23,6 @@ Column vectors are the default convention in these notes and in most statistics 
 > \\ {\tilde{x}}^{\top} \equiv \tilde{x}' \equiv \[x_1,\\ x_2,\\ \ldots,\\ x_p\] \\
 
 The transpose operation converts a column vector to a row vector, or more generally, swaps the rows and columns of a matrix ([Definition 10](#def-matrix-transpose)).
-
-------------------------------------------------------------------------
 
 ### 0.1.1 Special vectors
 
@@ -38,8 +34,6 @@ The transpose operation converts a column vector to a row vector, or more genera
 
 The zero vector is the additive identity for vector addition: \\\tilde{x}+ \tilde{0}= \tilde{x}\\ for any vector \\\tilde{x}\\ of the same length.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 4 (Ones vector)** The **ones vector** \\\tilde{1}\\ of length \\p\\ has all entries equal to one:
@@ -48,8 +42,6 @@ The zero vector is the additive identity for vector addition: \\\tilde{x}+ \tild
 
 The dot product \\{\tilde{1}}^{\top}\tilde{x}= \tilde{1} \cdot \tilde{x}= \sum\_{i=1}^p x_i\\ is the sum of all entries of \\\tilde{x}\\.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 5 (Indicator vector / standard basis vector)** The \\j\\-th **indicator vector** (or *standard basis vector*) \\\tilde{e}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
@@ -57,8 +49,6 @@ The dot product \\{\tilde{1}}^{\top}\tilde{x}= \tilde{1} \cdot \tilde{x}= \sum\_
 > \\ (\tilde{e}\_j)\_i = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \tilde{e}\_j = \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} \leftarrow \text{position } j \\
 
 They are also called *unit vectors* or *standard basis vectors*.
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -71,8 +61,6 @@ They are also called *unit vectors* or *standard basis vectors*.
 > *Proof*. Writing the product componentwise:
 >
 > \\ \begin{aligned} {\tilde{e}\_j}^{\top}\tilde{x} &= \sum\_{i=1}^{p} (\tilde{e}\_j)\_i\\ x_i \\&= \sum\_{i=1}^{p} \begin{cases} 1 \cdot x_i & \text{if } i = j \\ 0 \cdot x_i & \text{if } i \neq j \end{cases} \\&= x_j \end{aligned} \\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -94,15 +82,11 @@ They are also called *unit vectors* or *standard basis vectors*.
 >
 > The dot-product has a different generalization for two matrices; see [wikipedia](https://en.wikipedia.org/wiki/Dot_product#Dyadics_and_matrices) for more.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 2 (Dot product is symmetric)** The dot product is symmetric:
 >
 > \\\tilde{x}\cdot \tilde{y}= \tilde{y}\cdot \tilde{x}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -112,15 +96,11 @@ They are also called *unit vectors* or *standard basis vectors*.
 > - symmetry of scalar multiplication
 > - [Definition 6](#def-dot-product) again
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Example 1 (Dot product as matrix multiplication)** The dot product of two column vectors \\\tilde{x}\\ and \\\tilde{\beta}\\ can be written as a matrix product of the row vector \\{\tilde{x}}^{\top}\\ with the column vector \\\tilde{\beta}\\:
 >
 > \\ \begin{aligned} \tilde{x}\cdot \tilde{\beta} &= {\tilde{x}}^{\top}\\ \tilde{\beta} \\ &= \[x_1,\\ x_2,\\ \ldots,\\ x_p\] \begin{bmatrix} \beta\_{1} \\ \beta\_{2} \\ \vdots \\ \beta\_{p} \end{bmatrix} \\ &= x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p \end{aligned} \\
-
-------------------------------------------------------------------------
 
 ### 0.1.2 Orthogonality
 
@@ -132,8 +112,6 @@ They are also called *unit vectors* or *standard basis vectors*.
 
 Orthogonality generalizes the geometric notion of perpendicularity to arbitrary dimensions.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 8 (Orthonormal vectors)** A set of vectors \\\\\tilde{x}\_1, \tilde{x}\_2, \ldots, \tilde{x}\_k\\\\ is **orthonormal** if the vectors are mutually orthogonal and each has unit length:
@@ -141,8 +119,6 @@ Orthogonality generalizes the geometric notion of perpendicularity to arbitrary 
 > \\{\tilde{x}\_i}^{\top}\tilde{x}\_j = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases}\\
 
 The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Definition 5](#def-indicator-vector)) form an orthonormal set.
-
-------------------------------------------------------------------------
 
 ## 0.2 Matrices
 
@@ -154,8 +130,6 @@ The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Def
 
 The entry in row \\i\\ and column \\j\\ is denoted \\a\_{ij}\\ or \\(\mathbf{A})\_{ij}\\. A column vector of length \\p\\ is a special case: a \\p \times 1\\ matrix. A row vector of length \\p\\ is a \\1 \times p\\ matrix.
 
-------------------------------------------------------------------------
-
 ### 0.2.1 Matrix transpose
 
 > **NOTE:**
@@ -163,8 +137,6 @@ The entry in row \\i\\ and column \\j\\ is denoted \\a\_{ij}\\ or \\(\mathbf{A})
 > **Definition 10 (Matrix transpose)** The **transpose** of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\{\mathbf{A}}^{\top}\\ obtained by swapping the rows and columns of \\\mathbf{A}\\:
 >
 > \\({\mathbf{A}}^{\top})\_{ij} = a\_{ji}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -174,8 +146,6 @@ The entry in row \\i\\ and column \\j\\ is denoted \\a\_{ij}\\ or \\(\mathbf{A})
 >
 > \\{(\tilde{x}+ \tilde{y})}^{\top} = {\tilde{x}}^{\top} + {\tilde{y}}^{\top}\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 4 (Transpose of a product)** For compatible matrices \\\mathbf{A}\\ and \\\mathbf{B}\\:
@@ -183,8 +153,6 @@ The entry in row \\i\\ and column \\j\\ is denoted \\a\_{ij}\\ or \\(\mathbf{A})
 > \\{(\mathbf{A}\mathbf{B})}^{\top} = {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top}\\
 
 The order of the factors reverses when transposing a product.
-
-------------------------------------------------------------------------
 
 ### 0.2.2 Matrix addition
 
@@ -194,41 +162,29 @@ The order of the factors reverses when transposing a product.
 >
 > \\ \mathbf{0}\_{m \times n} = \begin{bmatrix} 0 & 0 & \cdots & 0 \\ 0 & 0 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 0 \end{bmatrix} \\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 12 (Matrix addition)** Two matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ of the same dimensions \\m \times n\\ can be added element-wise; their **matrix sum** is:
 >
 > \\(\mathbf{A} + \mathbf{B})\_{ij} = a\_{ij} + b\_{ij}\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 5 (Matrix addition is commutative)** \\\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
 > **Theorem 6 (Matrix addition is associative)** \\(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 7 (Zero matrix is the additive identity)** \\\mathbf{A} + \mathbf{0} = \mathbf{A}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
 > **Theorem 8 (Additive inverse)** For any matrix \\\mathbf{A}\\, the matrix \\-\mathbf{A}\\ (defined by \\(-\mathbf{A})\_{ij} = -a\_{ij}\\) satisfies:
 >
 > \\\mathbf{A} + (-\mathbf{A}) = \mathbf{0}\\
-
-------------------------------------------------------------------------
 
 ### 0.2.3 Scalar multiplication
 
@@ -237,8 +193,6 @@ The order of the factors reverses when transposing a product.
 > **Definition 13 (Scalar multiplication)** The **scalar multiple** of a matrix \\\mathbf{A}\\ by a scalar \\c\\ is:
 >
 > \\(c\mathbf{A})\_{ij} = c \cdot a\_{ij}\\
-
-------------------------------------------------------------------------
 
 ### 0.2.4 Matrix multiplication
 
@@ -252,21 +206,15 @@ Matrix multiplication is only defined when the number of columns in \\\mathbf{A}
 
 Matrix multiplication is **not** commutative in general: \\\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}\\.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 9 (Matrix multiplication is associative)** \\(\mathbf{A}\mathbf{B})\mathbf{C} = \mathbf{A}(\mathbf{B}\mathbf{C})\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
 > **Theorem 10 (Matrix multiplication is distributive over addition)** \\\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\\
 >
 > \\(\mathbf{A} + \mathbf{B})\mathbf{C} = \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C}\\
-
-------------------------------------------------------------------------
 
 ### 0.2.5 Matrix-vector multiplication
 
@@ -277,8 +225,6 @@ Matrix multiplication is **not** commutative in general: \\\mathbf{A}\mathbf{B} 
 > \\(\mathbf{A}\tilde{x})\_i = \sum\_{j=1}^{p} a\_{ij}\\ x_j\\
 
 Matrix-vector multiplication is a generalization of the dot product. Each entry of the result is a dot product of a row of \\\mathbf{A}\\ with the vector \\\tilde{x}\\.
-
-------------------------------------------------------------------------
 
 ## 0.3 Special Matrices
 
@@ -292,8 +238,6 @@ See also [Definition 11](#def-zero-matrix) for the zero matrix.
 >
 > **Definition 17 (Order of a square matrix)** The **order** of a square matrix ([Definition 16](#def-square-matrix)) is its number of rows, which equals its number of columns.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 18 (Matrix power)** For a square matrix \\\mathbf{A}\\ of order \\p\\ and a positive integer \\k\\, the \\k\\-th **power** of \\\mathbf{A}\\ is:
@@ -301,8 +245,6 @@ See also [Definition 11](#def-zero-matrix) for the zero matrix.
 > \\\mathbf{A}^k = \underbrace{\mathbf{A}\\\mathbf{A}\cdots\mathbf{A}}\_{k \text{ copies}}\\
 >
 > In particular, \\\mathbf{A}^2 = \mathbf{A}\mathbf{A}\\.
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -318,15 +260,11 @@ See also [Definition 11](#def-zero-matrix) for the zero matrix.
 >
 > \\\mathbf{I}\_m\\\mathbf{A} = \mathbf{A}\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 20 (Symmetric matrix)** A square matrix \\\mathbf{A}\\ is **symmetric** if \\{\mathbf{A}}^{\top} = \mathbf{A}\\, i.e., \\a\_{ij} = a\_{ji}\\ for all \\i\\ and \\j\\.
 
 Covariance matrices and information matrices are symmetric.
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -336,8 +274,6 @@ Covariance matrices and information matrices are symmetric.
 
 Diagonal matrices are denoted \\\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\\, where \\d_1, \ldots, d_p\\ are the diagonal entries.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 22 (Matrix inverse)** For a square \\p \times p\\ matrix \\\mathbf{A}\\, the **inverse** \\\mathbf{A}^{-1}\\ (if it exists) is the unique matrix satisfying:
@@ -346,15 +282,11 @@ Diagonal matrices are denoted \\\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\
 
 A matrix that has an inverse is called **invertible** or **non-singular**.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 12 (Inverse of a product)** For invertible matrices \\\mathbf{A}\\ and \\\mathbf{B}\\:
 >
 > \\(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -362,15 +294,11 @@ A matrix that has an inverse is called **invertible** or **non-singular**.
 >
 > \\\mathbf{A}^2 = \mathbf{A}\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 24 (Projection matrix)** A square matrix \\\mathbf{P}\\ is a **projection matrix** (also called an *orthogonal projector*) if it is both symmetric and idempotent:
 >
 > \\{\mathbf{P}}^{\top} = \mathbf{P} \qquad \text{and} \qquad \mathbf{P}^2 = \mathbf{P}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -383,8 +311,6 @@ A matrix that has an inverse is called **invertible** or **non-singular**.
 > **Symmetry:** \\{(\mathbf{I} - \mathbf{P})}^{\top} = {\mathbf{I}}^{\top} - {\mathbf{P}}^{\top} = \mathbf{I} - \mathbf{P}\\
 >
 > **Idempotency:** \\\begin{aligned} (\mathbf{I} - \mathbf{P})^2 &= (\mathbf{I} - \mathbf{P})(\mathbf{I} - \mathbf{P}) \\ &= \mathbf{I} - \mathbf{P} - \mathbf{P} + \mathbf{P}^2 \\ &= \mathbf{I} - \mathbf{P} - \mathbf{P} + \mathbf{P} \\ &= \mathbf{I} - \mathbf{P} \end{aligned}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -406,8 +332,6 @@ A matrix that has an inverse is called **invertible** or **non-singular**.
 
 The hat matrix appears in the formula for fitted values in linear regression: \\\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\\. It “puts a hat” on \\\tilde{y}\\ — hence the name.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 15 (Projection matrices produce orthogonal decompositions)** If \\\mathbf{P}\\ is a projection matrix and \\\tilde{v}\\ is any vector of compatible dimension, then the two components of the decomposition
@@ -424,8 +348,6 @@ The hat matrix appears in the formula for fitted values in linear regression: \\
 >
 > where the second line uses symmetry (\\{\mathbf{P}}^{\top} = \mathbf{P}\\) and the fourth line uses idempotency (\\\mathbf{P}^2 = \mathbf{P}\\).
 
-------------------------------------------------------------------------
-
 ## 0.4 Quadratic Forms
 
 > **NOTE:**
@@ -441,8 +363,6 @@ Quadratic forms are the matrix generalizations of the scalar expression \\c x^2\
 - The residual sum of squares in linear regression (see [Vector Calculus](vector-calculus.llms.md)) is a quadratic form.
 - The variance of a linear combination of estimates (see [Inference about Gaussian Linear Regression Models](https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs)) is a quadratic form: \\\operatorname{Var}\mathopen{}\left({\tilde{x}}^{\top}\hat{\tilde{\beta}}\right)\mathclose{} = {\tilde{x}}^{\top}\\\operatorname{Var}\mathopen{}\left(\hat{\tilde{\beta}}\right)\mathclose{}\\\tilde{x}\\.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 16 (Symmetric part of a quadratic form)** If \\\mathbf{S}\\ is a square matrix, then
@@ -450,8 +370,6 @@ Quadratic forms are the matrix generalizations of the scalar expression \\c x^2\
 > \\ {\tilde{x}}^{\top}\mathbf{S}\tilde{x} = {\tilde{x}}^{\top}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\tilde{x}. \\
 >
 > So the value of a quadratic form depends only on the symmetric part of \\\mathbf{S}\\.
-
-------------------------------------------------------------------------
 
 ## 0.5 Design Matrix
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-27 23:50:28 (PDT)
+Last modified: 2026-09-28 00:06:07 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -12,15 +12,11 @@ This section covers derivatives of functions of vectors and matrices. Linear alg
 
 Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [column vector](linear-algebra.llms.md#def-column-vector) and [dot product](linear-algebra.llms.md#def-dot-product)).
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 1 (Vector derivative)** If \\f(\tilde{\beta})\\ is a function that takes a vector \\\tilde{\beta}\\ as input, such as \\f(\tilde{\beta}) = x'\tilde{\beta}\\, then its **vector derivative** is:
 >
 > \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) \\ \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -28,15 +24,11 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > \\ \frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) & \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) & \cdots & \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 1 (Row and column derivatives are transposes)** \\\frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta}) = \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})\right)\mathclose{}^{\top}\\
 >
 > \\\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta})\right)\mathclose{}^{\top}\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -57,8 +49,6 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > **Theorem 2 (Derivative of a dot product)** If \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{x}\cdot \tilde{\beta})}\_{p \times 1} = \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta}\cdot \tilde{x})}\_{p \times 1} = \underbrace{\tilde{x}}\_{p \times 1} \\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -192,8 +182,6 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}\left(\underbrace{{\tilde{x}}^{\top}}\_{1 \times 2}\underbrace{\tilde{\beta}}\_{2 \times 1}\right)}\_{2 \times 1} = \underbrace{\tilde{x}}\_{2 \times 1} = \begin{pmatrix} 3 \\ 5 \end{pmatrix} \\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 7 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra.llms.md#def-quadratic-form)), if \\S\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
@@ -242,8 +230,6 @@ This vector derivative is like taking the derivative of \\x^2\\.
 >
 > Direct partial differentiation yields the same column vector.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 8 (Vector chain rule)** \\\frac{\partial z}{\partial \tilde{x}} = \frac{\partial y}{\partial \tilde{x}} \frac{\partial z}{\partial y}\\
@@ -257,8 +243,6 @@ See <https://quickfem.com/finite-element-analysis/>, specifically <https://quick
 See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_derivative>
 
 This chain rule is like the univariate [chain rule](calculus.llms.md#thm-chain-rule), but the order matters now. The version presented here is for the [gradient](https://en.wikipedia.org/wiki/Gradient) (column vector); the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector) would be the [transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative).
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -278,7 +262,7 @@ This chain rule is like the univariate [chain rule](calculus.llms.md#thm-chain-r
 
 > **NOTE:**
 >
-> **Theorem 9 (Matrix-derivative of a product of matrices)** If \\A\\ (\\r \times m\\) and \\B\\ (\\n \times r\\) are constant with respect to the \\m \times n\\ matrix \\\mathbf{X}\\, then:
+> **Theorem 9 (Matrix derivative of the trace of a matrix product)** If \\A\\ (\\r \times m\\) and \\B\\ (\\n \times r\\) are constant with respect to the \\m \times n\\ matrix \\\mathbf{X}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(A \mathbf{X} B)}\_{m \times n} = \underbrace{{A}^{\top}}\_{m \times r} \underbrace{{B}^{\top}}\_{r \times n} \\
 >

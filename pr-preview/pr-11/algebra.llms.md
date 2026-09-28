@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-27 23:50:28 (PDT)
+Last modified: 2026-09-28 00:06:07 (PDT)
 
 ## 1 Elementary Algebra
 
@@ -16,13 +16,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 1 (Equalities are transitive)** If \\a=b\\ and \\b=c\\, then \\a=c\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 2 (Substituting equivalent expressions)** If \\a = b\\, then for any function \\f(x)\\, \\f(a) = f(b)\\
-
-------------------------------------------------------------------------
 
 ### 1.2 Inequalities
 
@@ -30,25 +26,17 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 3 (Adding to both sides of an inequality)** If \\a\<b\\, then \\a+c \< b+c\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 4 (negating both sides of an inequality)** If \\a \< b\\, then: \\-a \> -b\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
 > **Theorem 5 (Multiplying both sides of an inequality by a nonnegative number)** If \\a \< b\\ and \\c \geq 0\\, then \\ca \< cb\\.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 6 (Negation is multiplication by \\-1\\)** \\-a = (-1)\*a\\
-
-------------------------------------------------------------------------
 
 ### 1.3 Infimum and supremum
 
@@ -89,13 +77,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 7 (adding zero changes nothing)** \\a+0=a\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 8 (Sums are symmetric)** \\a+b = b+a\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -105,23 +89,15 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > \\(a + b) + c = a + (b + c)\\
 
-------------------------------------------------------------------------
-
 ### 1.5 Products
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
 > **Theorem 10 (Multiplying by 1 changes nothing)** \\a \times 1 = a\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 11 (Products are symmetric)** \\a \times b = b \times a\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -135,13 +111,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 ### 1.7 Sums and products together
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 14 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
-
-------------------------------------------------------------------------
 
 ### 1.8 Quotients
 
@@ -163,8 +135,6 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > c.f. <https://en.wikipedia.org/wiki/Ratio>
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 5 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
@@ -173,17 +143,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > See also <https://en.wikipedia.org/wiki/Proportion_(mathematics)> for other meanings.
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Definition 6 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (c.f. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
-------------------------------------------------------------------------
-
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
-
-------------------------------------------------------------------------
 
 ### 1.9 Exponentials and Logarithms
 
@@ -219,25 +183,17 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > \\\operatorname{exp}\mathopen{}\left\\a-b\right\\\mathclose{} = \frac{\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}}\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Theorem 18 (exponential of a product)** \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
 > **Corollary 3 (natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Exercise 1** For \\a \ge 0,~b,c \in \mathbb{R}\\, When does \\(a^b)^c = a^{(b^c)}\\?
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -259,13 +215,9 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > \\ \begin{aligned} a^{(b^c)} &= 0^{(b^0)} \\ &= 0^1 \\ &= 0 \end{aligned} \\
 
-------------------------------------------------------------------------
-
 > **NOTE:**
 >
 > **Exercise 2** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >
@@ -393,8 +345,6 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > ```
 >
 > Figure 2: **Graph of \\b^c - b\*c\\**. Red contour lines show where \\b^c = b\*c\\.
-
-------------------------------------------------------------------------
 
 > **NOTE:**
 >

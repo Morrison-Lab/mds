@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-27 23:50:28 (PDT)
+Last modified: 2026-09-28 00:06:07 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -81,7 +81,7 @@ Table 1: Notation used in this book
 
 ## 0.2 Percent sign (“%”)
 
-The percent sign “%” is just a shorthand for “\\/100\\”. The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (c.f., <https://en.wikipedia.org/wiki/Percentage>)
+The percent sign “%” is just a shorthand for “\\/100\\”. The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (cf. <https://en.wikipedia.org/wiki/Percentage>)
 
 So, contrary to what you may have learned previously, \\10\\ = 0.1\\ is a true and correct equality, just as \\10 \text{kg} = 10,000 \text{g}\\ is true and correct.
 
@@ -232,7 +232,7 @@ This fundamental identity connects probability theory directly to linear expecta
 
 ## 0.5 Why is notation in probability and statistics so inconsistent and disorganized?
 
-In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to encounter into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
+In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
 It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 (Nelder and Wedderburn ([1972](#ref-nelder1972generalized))), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 

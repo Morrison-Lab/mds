@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-27 23:50:28 (PDT)
+Last modified: 2026-09-28 00:06:07 (PDT)
 
 # 1 Derivatives
 
@@ -14,7 +14,7 @@ Last modified: 2026-09-27 23:50:28 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 2 (Power rule)** If \\a\\ is constant with respect to \\x\\, then: \\\frac{\partial}{\partial x}ay = a \frac{\partial x}{\partial y}\\
+> **Theorem 2 (Constant multiple rule)** If \\a\\ is constant with respect to \\x\\, then: \\\frac{\partial}{\partial x}ay = a \frac{\partial x}{\partial y}\\
 
 > **NOTE:**
 >
@@ -51,8 +51,6 @@ Last modified: 2026-09-27 23:50:28 (PDT)
 > **NOTE:**
 >
 > *Proof*. Apply [Theorem 8](#thm-chain-rule) and [Theorem 4](#thm-deriv-log).
-
-------------------------------------------------------------------------
 
 # 2 Integration
 
