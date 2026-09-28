@@ -161,45 +161,25 @@ cookieconsent.run({
 </script> 
   
 <style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -231,26 +211,6 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -260,6 +220,46 @@ div.callout-cnj.callout-style-default .callout-header {
 div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -489,6 +489,10 @@ window.Quarto = {
  <span class="dropdown-text">Notation</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./proof-writing.html">
+ <span class="dropdown-text">Proof Writing</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./algebra.html">
  <span class="dropdown-text">Algebra</span></a>
   </li>  
@@ -535,23 +539,25 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vectors" id="toc-vectors" class="nav-link active" data-scroll-target="#vectors"><span class="header-section-number">0.1</span> Vectors</a>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link active" data-scroll-target="#vectors"><span class="header-section-number">1</span> Vectors</a>
   <ul class="collapse">
-  <li><a href="#special-vectors" id="toc-special-vectors" class="nav-link" data-scroll-target="#special-vectors"><span class="header-section-number">0.1.1</span> Special vectors</a></li>
-  <li><a href="#orthogonality" id="toc-orthogonality" class="nav-link" data-scroll-target="#orthogonality"><span class="header-section-number">0.1.2</span> Orthogonality</a></li>
+  <li><a href="#special-vectors" id="toc-special-vectors" class="nav-link" data-scroll-target="#special-vectors"><span class="header-section-number">1.1</span> Special vectors</a></li>
+  <li><a href="#orthogonality" id="toc-orthogonality" class="nav-link" data-scroll-target="#orthogonality"><span class="header-section-number">1.2</span> Orthogonality</a></li>
   </ul></li>
-  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices"><span class="header-section-number">0.2</span> Matrices</a>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices"><span class="header-section-number">2</span> Matrices</a>
   <ul class="collapse">
-  <li><a href="#sec-matrix-transpose" id="toc-sec-matrix-transpose" class="nav-link" data-scroll-target="#sec-matrix-transpose"><span class="header-section-number">0.2.1</span> Matrix transpose</a></li>
-  <li><a href="#matrix-addition" id="toc-matrix-addition" class="nav-link" data-scroll-target="#matrix-addition"><span class="header-section-number">0.2.2</span> Matrix addition</a></li>
-  <li><a href="#scalar-multiplication" id="toc-scalar-multiplication" class="nav-link" data-scroll-target="#scalar-multiplication"><span class="header-section-number">0.2.3</span> Scalar multiplication</a></li>
-  <li><a href="#matrix-multiplication" id="toc-matrix-multiplication" class="nav-link" data-scroll-target="#matrix-multiplication"><span class="header-section-number">0.2.4</span> Matrix multiplication</a></li>
-  <li><a href="#matrix-vector-multiplication" id="toc-matrix-vector-multiplication" class="nav-link" data-scroll-target="#matrix-vector-multiplication"><span class="header-section-number">0.2.5</span> Matrix-vector multiplication</a></li>
+  <li><a href="#sec-matrix-transpose" id="toc-sec-matrix-transpose" class="nav-link" data-scroll-target="#sec-matrix-transpose"><span class="header-section-number">2.1</span> Matrix transpose</a></li>
+  <li><a href="#matrix-addition" id="toc-matrix-addition" class="nav-link" data-scroll-target="#matrix-addition"><span class="header-section-number">2.2</span> Matrix addition</a></li>
+  <li><a href="#scalar-multiplication" id="toc-scalar-multiplication" class="nav-link" data-scroll-target="#scalar-multiplication"><span class="header-section-number">2.3</span> Scalar multiplication</a></li>
+  <li><a href="#matrix-multiplication" id="toc-matrix-multiplication" class="nav-link" data-scroll-target="#matrix-multiplication"><span class="header-section-number">2.4</span> Matrix multiplication</a></li>
+  <li><a href="#matrix-vector-multiplication" id="toc-matrix-vector-multiplication" class="nav-link" data-scroll-target="#matrix-vector-multiplication"><span class="header-section-number">2.5</span> Matrix-vector multiplication</a></li>
+  <li><a href="#transposes-of-sums-and-products" id="toc-transposes-of-sums-and-products" class="nav-link" data-scroll-target="#transposes-of-sums-and-products"><span class="header-section-number">2.6</span> Transposes of sums and products</a></li>
+  <li><a href="#rank" id="toc-rank" class="nav-link" data-scroll-target="#rank"><span class="header-section-number">2.7</span> Rank</a></li>
   </ul></li>
-  <li><a href="#special-matrices" id="toc-special-matrices" class="nav-link" data-scroll-target="#special-matrices"><span class="header-section-number">0.3</span> Special Matrices</a></li>
-  <li><a href="#quadratic-forms" id="toc-quadratic-forms" class="nav-link" data-scroll-target="#quadratic-forms"><span class="header-section-number">0.4</span> Quadratic Forms</a></li>
-  <li><a href="#design-matrix" id="toc-design-matrix" class="nav-link" data-scroll-target="#design-matrix"><span class="header-section-number">0.5</span> Design Matrix</a></li>
-  <li><a href="#sec-additional-resources" id="toc-sec-additional-resources" class="nav-link" data-scroll-target="#sec-additional-resources"><span class="header-section-number">1</span> Additional resources</a></li>
+  <li><a href="#special-matrices" id="toc-special-matrices" class="nav-link" data-scroll-target="#special-matrices"><span class="header-section-number">3</span> Special Matrices</a></li>
+  <li><a href="#quadratic-forms" id="toc-quadratic-forms" class="nav-link" data-scroll-target="#quadratic-forms"><span class="header-section-number">4</span> Quadratic Forms</a></li>
+  <li><a href="#design-matrix" id="toc-design-matrix" class="nav-link" data-scroll-target="#design-matrix"><span class="header-section-number">5</span> Design Matrix</a></li>
+  <li><a href="#sec-additional-resources" id="toc-sec-additional-resources" class="nav-link" data-scroll-target="#sec-additional-resources"><span class="header-section-number">6</span> Additional resources</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/linear-algebra.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/linear-algebra.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="linear-algebra-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="linear-algebra-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="linear-algebra.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
@@ -573,7 +579,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-09-28 01:17:18 (PDT)</p>
+      <p class="date">Last modified: 2026-09-28 01:25:54 (PDT)</p>
     </div>
   </div>
   
@@ -585,8 +591,8 @@ window.Quarto = {
 </header>
 
 
-<section id="vectors" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="vectors"><span class="header-section-number">0.1</span> Vectors</h2>
+<section id="vectors" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="vectors"><span class="header-section-number">1</span> Vectors</h2>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -627,10 +633,149 @@ x_{p}
 </div>
 </div>
 <div class="notes">
-<p>The transpose operation converts a column vector to a row vector, or more generally, swaps the rows and columns of a matrix (<a href="#def-matrix-transpose" class="quarto-xref">Definition&nbsp;10</a>).</p>
+<p>The transpose operation converts a column vector to a row vector, or more generally, swaps the rows and columns of a matrix (<a href="#def-matrix-transpose" class="quarto-xref">Definition&nbsp;12</a>).</p>
 </div>
-<section id="special-vectors" class="level3" data-number="0.1.1">
-<h3 data-number="0.1.1" class="anchored" data-anchor-id="special-vectors"><span class="header-section-number">0.1.1</span> Special vectors</h3>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-vector-addition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Vector addition)</strong></span> The <strong>sum</strong> of two column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length <span class="math inline">\(p\)</span> is the column vector <span class="math inline">\(\tilde{x}+ \tilde{y}\)</span> of length <span class="math inline">\(p\)</span> obtained by adding entry by entry:</p>
+<p><span class="math display">\[(\tilde{x}+ \tilde{y})_i \stackrel{\text{def}}{=}x_i + y_i, \quad i = 1, \ldots, p\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-vector-addition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Adding two vectors)</strong></span> <span class="math display">\[
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
++
+\begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}
+=
+\begin{bmatrix} 1 + 4 \\ 2 + 5 \\ 3 + 6 \end{bmatrix}
+=
+\begin{bmatrix} 5 \\ 7 \\ 9 \end{bmatrix}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-dot-product" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Dot product)</strong></span> For any two real-valued vectors <span class="math inline">\(\tilde{x}= (x_1, \ldots, x_p)\)</span> and <span class="math inline">\(\tilde{y}= (y_1, \ldots, y_p)\)</span> of the same length <span class="math inline">\(p\)</span>, the <strong>dot product</strong> of <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> is:</p>
+<p><span class="math display">\[\tilde{x}\cdot \tilde{y}\stackrel{\text{def}}{=}\sum_{i=1}^px_i y_i\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The dot product <span class="math inline">\(\tilde{x}\cdot \tilde{y}\)</span> is a <em>linear combination</em> of the entries of <span class="math inline">\(\tilde{y}\)</span>, with coefficients <span class="math inline">\(x_1, \ldots, x_p\)</span>. It is also the standard <em>inner product</em> on <span class="math inline">\(\mathbb{R}^p\)</span>; “inner product” is the general notion, of which the dot product is one example.</p>
+<p>See also the definitions in</p>
+<ul>
+<li><p><span class="citation" data-cites="dobson4e">Dobson and Barnett (<a href="#ref-dobson4e" role="doc-biblioref">2018</a>)</span>, Section 1.3 (equation 1.1, page 7)</p></li>
+<li><p><span class="citation" data-cites="mosaiccalc">Kaplan (<a href="#ref-mosaiccalc" role="doc-biblioref">2022</a>)</span>, chapter on vectors <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
+404 in CI on 2026-09-25, and www.mosaic-web.org is unreachable from agent
+sessions, so the current URL is unverified; restore a deep link once found. --></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Linear_combination">wikipedia</a></p></li>
+</ul>
+<p>“Linear combination” can also refer to weighted sums of vectors, or in other words matrix-vector multiplication.</p>
+<p>The dot-product has a different generalization for two matrices; see <a href="https://en.wikipedia.org/wiki/Dot_product#Dyadics_and_matrices">wikipedia</a> for more.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-dot-product" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (A dot product)</strong></span> For <span class="math inline">\(\tilde{x}= (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{y}= (4, 5, 6)\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x}\cdot \tilde{y}
+&amp;= 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6
+&amp;&amp; \text{(definition of the dot product)}
+\\
+&amp;= 4 + 10 + 18
+&amp;&amp; \text{(multiply)}
+\\
+&amp;= 32
+&amp;&amp; \text{(add)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-lincom-symmetric" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Dot product is symmetric)</strong></span> The dot product is symmetric:</p>
+<p><span class="math display">\[\tilde{x}\cdot \tilde{y}= \tilde{y}\cdot \tilde{x}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
+\begin{aligned}
+\tilde{x}\cdot \tilde{y}
+&amp;= \sum_{i=1}^px_i y_i
+&amp;&amp; \text{(definition of the dot product)}
+\\
+&amp;= \sum_{i=1}^py_i x_i
+&amp;&amp; \text{(products of numbers are symmetric)}
+\\
+&amp;= \tilde{y}\cdot \tilde{x}
+&amp;&amp; \text{(definition of the dot product)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<section id="special-vectors" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="special-vectors"><span class="header-section-number">1.1</span> Special vectors</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -638,7 +783,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="def-zero-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Zero vector)</strong></span> The <strong>zero vector</strong> <span class="math inline">\(\tilde{0}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to zero:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Zero vector)</strong></span> The <strong>zero vector</strong> <span class="math inline">\(\tilde{0}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to zero:</p>
 <p><span class="math display">\[
 \tilde{0}=
 \begin{bmatrix}
@@ -662,7 +807,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="def-ones-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\tilde{1}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
+<p><span class="theorem-title"><strong>Definition 6 (Ones vector)</strong></span> The <strong>ones vector</strong> <span class="math inline">\(\tilde{1}\)</span> of length <span class="math inline">\(p\)</span> has all entries equal to one:</p>
 <p><span class="math display">\[
 \tilde{1} =
 \begin{bmatrix}
@@ -677,7 +822,7 @@ x_{p}
 </div>
 </div>
 <div class="notes">
-<p>The dot product <span class="math inline">\({\tilde{1}}^{\top}\tilde{x}= \tilde{1} \cdot \tilde{x}= \sum_{i=1}^p x_i\)</span> is the sum of all entries of <span class="math inline">\(\tilde{x}\)</span>.</p>
+<p>The dot product <span class="math inline">\(\tilde{1} \cdot \tilde{x}= \sum_{i=1}^p x_i\)</span> is the sum of all entries of <span class="math inline">\(\tilde{x}\)</span>.</p>
 </div>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
@@ -686,7 +831,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="def-indicator-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Indicator vector / standard basis vector)</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <em>standard basis vector</em>) <span class="math inline">\(\tilde{e}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 7 (Indicator vector / standard basis vector)</strong></span> The <span class="math inline">\(j\)</span>-th <strong>indicator vector</strong> (or <em>standard basis vector</em>) <span class="math inline">\(\tilde{e}_j\)</span> of length <span class="math inline">\(p\)</span> has a <span class="math inline">\(1\)</span> in position <span class="math inline">\(j\)</span> and <span class="math inline">\(0\)</span>s elsewhere:</p>
 <p><span class="math display">\[
 (\tilde{e}_j)_i =
 \begin{cases}
@@ -720,88 +865,8 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="thm-indicator-selection" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Indicator vectors select entries)</strong></span> For any vector <span class="math inline">\(\tilde{x}\)</span> of length <span class="math inline">\(p\)</span> and any <span class="math inline">\(j \in \{1, \ldots, p\}\)</span>:</p>
-<p><span class="math display">\[{\tilde{e}_j}^{\top}\tilde{x}= x_j\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Proof</span>Proof
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Writing the product componentwise:</p>
-<p><span class="math display">\[
-\begin{aligned}
-{\tilde{e}_j}^{\top}\tilde{x}
-&amp;= \sum_{i=1}^{p} (\tilde{e}_j)_i\, x_i
-\\&amp;= \sum_{i=1}^{p}
-   \begin{cases}
-   1 \cdot x_i &amp; \text{if } i = j \\
-   0 \cdot x_i &amp; \text{if } i \neq j
-   \end{cases}
-\\&amp;= x_j
-\end{aligned}
-\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="def-dot-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Dot product/linear combination/inner product)</strong></span> For any two real-valued vectors <span class="math inline">\(\tilde{x}= (x_1, \ldots, x_n)\)</span> and <span class="math inline">\(\tilde{y}= (y_1, \ldots, y_n)\)</span>, the <strong>dot-product</strong> (also called the <em>linear combination</em> or <em>inner product</em>) of <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> is:</p>
-<p><span class="math display">\[\tilde{x}\cdot \tilde{y}= \tilde{x}^{\top} \tilde{y}\stackrel{\text{def}}{=}\sum_{i=1}^nx_i y_i\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="notes">
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>See also the definitions in</p>
-<ul>
-<li><p><span class="citation" data-cites="dobson4e">Dobson and Barnett (<a href="#ref-dobson4e" role="doc-biblioref">2018</a>)</span>, Section 1.3 (equation 1.1, page 7)</p></li>
-<li><p><span class="citation" data-cites="mosaiccalc">Kaplan (<a href="#ref-mosaiccalc" role="doc-biblioref">2022</a>)</span>, chapter on vectors <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
-404 in CI on 2026-09-25, and www.mosaic-web.org is unreachable from agent
-sessions, so the current URL is unverified; restore a deep link once found. --></p></li>
-<li><p><a href="https://en.wikipedia.org/wiki/Linear_combination">wikipedia</a></p></li>
-</ul>
-<p>“Linear combination” can also refer to weighted sums of vectors, or in other words matrix-vector multiplication.</p>
-<p>The dot-product has a different generalization for two matrices; see <a href="https://en.wikipedia.org/wiki/Dot_product#Dyadics_and_matrices">wikipedia</a> for more.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="thm-lincom-symmetric" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (Dot product is symmetric)</strong></span> The dot product is symmetric:</p>
-<p><span class="math display">\[\tilde{x}\cdot \tilde{y}= \tilde{y}\cdot \tilde{x}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 2 (Indicator vectors select entries)</strong></span> For any vector <span class="math inline">\(\tilde{x}\)</span> of length <span class="math inline">\(p\)</span> and any <span class="math inline">\(j \in \{1, \ldots, p\}\)</span>:</p>
+<p><span class="math display">\[\tilde{e}_j \cdot \tilde{x}= x_j\]</span></p>
 </div>
 </div>
 </div>
@@ -819,37 +884,20 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Apply:</p>
-<ul>
-<li><a href="#def-dot-product" class="quarto-xref">Definition&nbsp;6</a></li>
-<li>symmetry of scalar multiplication</li>
-<li><a href="#def-dot-product" class="quarto-xref">Definition&nbsp;6</a> again</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="exm-dot-product-matmul" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Dot product as matrix multiplication)</strong></span> The dot product of two column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{\beta}\)</span> can be written as a matrix product of the row vector <span class="math inline">\({\tilde{x}}^{\top}\)</span> with the column vector <span class="math inline">\(\tilde{\beta}\)</span>:</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Writing the dot product componentwise:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\tilde{x}\cdot \tilde{\beta}
-&amp;= {\tilde{x}}^{\top}\, \tilde{\beta}
-\\ &amp;= [x_1,\; x_2,\; \ldots,\; x_p]
-\begin{bmatrix}
-\beta_{1} \\
-\beta_{2} \\
-\vdots \\
-\beta_{p}
-\end{bmatrix}
-\\ &amp;=
-x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
+\tilde{e}_j \cdot \tilde{x}
+&amp;= \sum_{i=1}^{p} (\tilde{e}_j)_i\, x_i
+&amp;&amp; \text{(definition of the dot product)}
+\\&amp;= \sum_{i=1}^{p}
+   \begin{cases}
+   1 \cdot x_i &amp; \text{if } i = j \\
+   0 \cdot x_i &amp; \text{if } i \neq j
+   \end{cases}
+&amp;&amp; \text{(definition of } \tilde{e}_j \text{)}
+\\&amp;= x_j
+&amp;&amp; \text{(only the } i = j \text{ term is nonzero)}
 \end{aligned}
 \]</span></p>
 </div>
@@ -857,8 +905,8 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 </div>
 </div>
 </section>
-<section id="orthogonality" class="level3" data-number="0.1.2">
-<h3 data-number="0.1.2" class="anchored" data-anchor-id="orthogonality"><span class="header-section-number">0.1.2</span> Orthogonality</h3>
+<section id="orthogonality" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="orthogonality"><span class="header-section-number">1.2</span> Orthogonality</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -866,8 +914,8 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 </div>
 <div class="callout-body-container">
 <div id="def-orthogonal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length are <strong>orthogonal</strong> (written <span class="math inline">\(\tilde{x}\perp \tilde{y}\)</span>) if their dot product is zero:</p>
-<p><span class="math display">\[\tilde{x}\perp \tilde{y}\iff {\tilde{x}}^{\top}\tilde{y}= 0\]</span></p>
+<p><span class="theorem-title"><strong>Definition 8 (Orthogonal vectors)</strong></span> Two vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length are <strong>orthogonal</strong> (written <span class="math inline">\(\tilde{x}\perp \tilde{y}\)</span>) if their dot product (<a href="#def-dot-product" class="quarto-xref">Definition&nbsp;4</a>) is zero:</p>
+<p><span class="math display">\[\tilde{x}\perp \tilde{y}\iff \tilde{x}\cdot \tilde{y}= 0\]</span></p>
 </div>
 </div>
 </div>
@@ -881,9 +929,47 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
+<div id="def-euclidean-norm" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Euclidean norm)</strong></span> The <strong>Euclidean norm</strong> (or <em>length</em>) of a vector <span class="math inline">\(\tilde{x}\)</span> of length <span class="math inline">\(p\)</span> is</p>
+<p><span class="math display">\[\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum_{i=1}^px_i^2}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-euclidean-norm" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (The length of a vector)</strong></span> For <span class="math inline">\(\tilde{x}= (3, 4)\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}
+&amp;= \sqrt{3^2 + 4^2}
+&amp;&amp; \text{(definition of the norm)}
+\\
+&amp;= \sqrt{25}
+&amp;&amp; \text{(square and add)}
+\\
+&amp;= 5
+\end{aligned}
+\]</span></p>
+<p>The vector <span class="math inline">\((0.6, 0.8)\)</span> has norm <span class="math inline">\(\sqrt{0.36 + 0.64} = 1\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <div id="def-orthonormal-vectors" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\tilde{x}_1, \tilde{x}_2, \ldots, \tilde{x}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal and each has unit length:</p>
-<p><span class="math display">\[{\tilde{x}_i}^{\top}\tilde{x}_j =
+<p><span class="theorem-title"><strong>Definition 10 (Orthonormal vectors)</strong></span> A set of vectors <span class="math inline">\(\{\tilde{x}_1, \tilde{x}_2, \ldots, \tilde{x}_k\}\)</span> is <strong>orthonormal</strong> if the vectors are mutually orthogonal (<a href="#def-orthogonal-vectors" class="quarto-xref">Definition&nbsp;8</a>) and each has norm <span class="math inline">\(1\)</span> (<a href="#def-euclidean-norm" class="quarto-xref">Definition&nbsp;9</a>), that is, unit length:</p>
+<p><span class="math display">\[\tilde{x}_i \cdot \tilde{x}_j =
 \begin{cases}
 1 &amp; \text{if } i = j \\
 0 &amp; \text{if } i \neq j
@@ -893,12 +979,12 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 </div>
 </div>
 <div class="notes">
-<p>The indicator vectors <span class="math inline">\(\tilde{e}_1, \tilde{e}_2, \ldots, \tilde{e}_p\)</span> (<a href="#def-indicator-vector" class="quarto-xref">Definition&nbsp;5</a>) form an orthonormal set.</p>
+<p>The indicator vectors <span class="math inline">\(\tilde{e}_1, \tilde{e}_2, \ldots, \tilde{e}_p\)</span> (<a href="#def-indicator-vector" class="quarto-xref">Definition&nbsp;7</a>) form an orthonormal set.</p>
 </div>
 </section>
 </section>
-<section id="matrices" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="matrices"><span class="header-section-number">0.2</span> Matrices</h2>
+<section id="matrices" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="matrices"><span class="header-section-number">2</span> Matrices</h2>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -906,7 +992,7 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 </div>
 <div class="callout-body-container">
 <div id="def-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Matrix)</strong></span> A <strong>matrix</strong> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Matrix)</strong></span> A <strong>matrix</strong> of dimensions <span class="math inline">\(m \times n\)</span> is a rectangular array of <span class="math inline">\(m \cdot n\)</span> numbers, arranged in <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:</p>
 <p><span class="math display">\[
 \mathbf{A} =
 \begin{bmatrix}
@@ -923,8 +1009,8 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <div class="notes">
 <p>The entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> is denoted <span class="math inline">\(a_{ij}\)</span> or <span class="math inline">\((\mathbf{A})_{ij}\)</span>. A column vector of length <span class="math inline">\(p\)</span> is a special case: a <span class="math inline">\(p \times 1\)</span> matrix. A row vector of length <span class="math inline">\(p\)</span> is a <span class="math inline">\(1 \times p\)</span> matrix.</p>
 </div>
-<section id="sec-matrix-transpose" class="level3" data-number="0.2.1">
-<h3 data-number="0.2.1" class="anchored" data-anchor-id="sec-matrix-transpose"><span class="header-section-number">0.2.1</span> Matrix transpose</h3>
+<section id="sec-matrix-transpose" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="sec-matrix-transpose"><span class="header-section-number">2.1</span> Matrix transpose</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -932,45 +1018,15 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-matrix-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Matrix transpose)</strong></span> The <strong>transpose</strong> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 12 (Matrix transpose)</strong></span> The <strong>transpose</strong> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span> obtained by swapping the rows and columns of <span class="math inline">\(\mathbf{A}\)</span>:</p>
 <p><span class="math display">\[({\mathbf{A}}^{\top})_{ij} = a_{ji}\]</span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="thm-transpose-sum" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (Transpose of a sum)</strong></span> <span class="math display">\[{(\mathbf{A} + \mathbf{B})}^{\top} = {\mathbf{A}}^{\top} + {\mathbf{B}}^{\top}\]</span></p>
-<p>In particular, for column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span>:</p>
-<p><span class="math display">\[{(\tilde{x}+ \tilde{y})}^{\top} = {\tilde{x}}^{\top} + {\tilde{y}}^{\top}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div id="thm-transpose-product" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Transpose of a product)</strong></span> For compatible matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
-<p><span class="math display">\[{(\mathbf{A}\mathbf{B})}^{\top} = {\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="notes">
-<p>The order of the factors reverses when transposing a product.</p>
-</div>
 </section>
-<section id="matrix-addition" class="level3" data-number="0.2.2">
-<h3 data-number="0.2.2" class="anchored" data-anchor-id="matrix-addition"><span class="header-section-number">0.2.2</span> Matrix addition</h3>
+<section id="matrix-addition" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="matrix-addition"><span class="header-section-number">2.2</span> Matrix addition</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -978,7 +1034,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-zero-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
+<p><span class="theorem-title"><strong>Definition 13 (Zero matrix)</strong></span> The <span class="math inline">\(m \times n\)</span> <strong>zero matrix</strong> <span class="math inline">\(\mathbf{0}_{m \times n}\)</span> (or <span class="math inline">\(\mathbf{0}\)</span> when dimensions are clear from context) has all entries equal to zero:</p>
 <p><span class="math display">\[
 \mathbf{0}_{m \times n} =
 \begin{bmatrix}
@@ -999,7 +1055,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-matrix-addition" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Matrix addition)</strong></span> Two matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> of the same dimensions <span class="math inline">\(m \times n\)</span> can be added element-wise; their <strong>matrix sum</strong> is:</p>
+<p><span class="theorem-title"><strong>Definition 14 (Matrix addition)</strong></span> Two matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> of the same dimensions <span class="math inline">\(m \times n\)</span> can be added element-wise; their <strong>matrix sum</strong> is:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})_{ij} = a_{ij} + b_{ij}\]</span></p>
 </div>
 </div>
@@ -1012,7 +1068,8 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="thm-matadd-commutative" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (Matrix addition is commutative)</strong></span> <span class="math display">\[\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 3 (Matrix addition is commutative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="math display">\[\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}\]</span></p>
 </div>
 </div>
 </div>
@@ -1024,7 +1081,8 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="thm-matadd-assoc" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (Matrix addition is associative)</strong></span> <span class="math display">\[(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 4 (Matrix addition is associative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathbf{B}\)</span>, and <span class="math inline">\(\mathbf{C}\)</span>:</p>
+<p><span class="math display">\[(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})\]</span></p>
 </div>
 </div>
 </div>
@@ -1036,7 +1094,8 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="thm-matadd-identity" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Zero matrix is the additive identity)</strong></span> <span class="math display">\[\mathbf{A} + \mathbf{0} = \mathbf{A}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 5 (Zero matrix is the additive identity)</strong></span> For an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>:</p>
+<p><span class="math display">\[\mathbf{A} + \mathbf{0}_{m \times n} = \mathbf{A}\]</span></p>
 </div>
 </div>
 </div>
@@ -1048,15 +1107,15 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="thm-matadd-inverse" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (Additive inverse)</strong></span> For any matrix <span class="math inline">\(\mathbf{A}\)</span>, the matrix <span class="math inline">\(-\mathbf{A}\)</span> (defined by <span class="math inline">\((-\mathbf{A})_{ij} = -a_{ij}\)</span>) satisfies:</p>
-<p><span class="math display">\[\mathbf{A} + (-\mathbf{A}) = \mathbf{0}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 6 (Additive inverse)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(-\mathbf{A}\)</span> (defined by <span class="math inline">\((-\mathbf{A})_{ij} = -a_{ij}\)</span>) satisfies:</p>
+<p><span class="math display">\[\mathbf{A} + (-\mathbf{A}) = \mathbf{0}_{m \times n}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="scalar-multiplication" class="level3" data-number="0.2.3">
-<h3 data-number="0.2.3" class="anchored" data-anchor-id="scalar-multiplication"><span class="header-section-number">0.2.3</span> Scalar multiplication</h3>
+<section id="scalar-multiplication" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="scalar-multiplication"><span class="header-section-number">2.3</span> Scalar multiplication</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1064,15 +1123,15 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-scalar-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Scalar multiplication)</strong></span> The <strong>scalar multiple</strong> of a matrix <span class="math inline">\(\mathbf{A}\)</span> by a scalar <span class="math inline">\(c\)</span> is:</p>
 <p><span class="math display">\[(c\mathbf{A})_{ij} = c \cdot a_{ij}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="matrix-multiplication" class="level3" data-number="0.2.4">
-<h3 data-number="0.2.4" class="anchored" data-anchor-id="matrix-multiplication"><span class="header-section-number">0.2.4</span> Matrix multiplication</h3>
+<section id="matrix-multiplication" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="matrix-multiplication"><span class="header-section-number">2.4</span> Matrix multiplication</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1080,7 +1139,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-matrix-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Matrix multiplication)</strong></span> The <strong>product</strong> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Matrix multiplication)</strong></span> The <strong>product</strong> of an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span> is the <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{C} = \mathbf{A}\mathbf{B}\)</span> with entries:</p>
 <p><span class="math display">\[c_{ij} = \sum_{s=1}^{k} a_{is}\, b_{sj}\]</span></p>
 </div>
 </div>
@@ -1090,6 +1149,33 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <p>Matrix multiplication is only defined when the number of columns in <span class="math inline">\(\mathbf{A}\)</span> equals the number of rows in <span class="math inline">\(\mathbf{B}\)</span>.</p>
 <p>Matrix multiplication is <strong>not</strong> commutative in general: <span class="math inline">\(\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}\)</span>.</p>
 </div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-dot-product-matmul" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Dot product as matrix multiplication)</strong></span> The dot product of two column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{\beta}\)</span> can be written as a matrix product of the row vector <span class="math inline">\({\tilde{x}}^{\top}\)</span> with the column vector <span class="math inline">\(\tilde{\beta}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x}\cdot \tilde{\beta}
+&amp;= {\tilde{x}}^{\top}\, \tilde{\beta}
+\\ &amp;= [x_1,\; x_2,\; \ldots,\; x_p]
+\begin{bmatrix}
+\beta_{1} \\
+\beta_{2} \\
+\vdots \\
+\beta_{p}
+\end{bmatrix}
+\\ &amp;=
+x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1097,7 +1183,48 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="thm-matmul-assoc" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Matrix multiplication is associative)</strong></span> <span class="math display">\[(\mathbf{A}\mathbf{B})\mathbf{C} = \mathbf{A}(\mathbf{B}\mathbf{C})\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 7 (Matrix multiplication is associative)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, a <span class="math inline">\(k \times l\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>, and an <span class="math inline">\(l \times n\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span>:</p>
+<p><span class="math display">\[
+\underbrace{(\mathbf{A}\mathbf{B})\mathbf{C}}_{m \times n}
+= \underbrace{\mathbf{A}(\mathbf{B}\mathbf{C})}_{m \times n}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\((i, j)\)</span> of each side, from <a href="#def-matrix-mult" class="quarto-xref">Definition&nbsp;16</a>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left[(\mathbf{A}\mathbf{B})\mathbf{C}\right]\mathclose{}_{ij}
+&amp;= \sum_{t=1}^{l} (\mathbf{A}\mathbf{B})_{it}\, c_{tj}
+&amp;&amp; \text{(definition of } (\mathbf{A}\mathbf{B})\mathbf{C} \text{)}
+\\
+&amp;= \sum_{t=1}^{l} \mathopen{}\left(\sum_{s=1}^{k} a_{is}\, b_{st}\right)\mathclose{} c_{tj}
+&amp;&amp; \text{(definition of } \mathbf{A}\mathbf{B} \text{)}
+\\
+&amp;= \sum_{s=1}^{k} a_{is} \mathopen{}\left(\sum_{t=1}^{l} b_{st}\, c_{tj}\right)\mathclose{}
+&amp;&amp; \text{(distribute and swap the finite sums)}
+\\
+&amp;= \sum_{s=1}^{k} a_{is}\, (\mathbf{B}\mathbf{C})_{sj}
+&amp;&amp; \text{(definition of } \mathbf{B}\mathbf{C} \text{)}
+\\
+&amp;= \mathopen{}\left[\mathbf{A}(\mathbf{B}\mathbf{C})\right]\mathclose{}_{ij}
+&amp;&amp; \text{(definition of } \mathbf{A}(\mathbf{B}\mathbf{C}) \text{)}
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1109,15 +1236,17 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="thm-matmul-distrib" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (Matrix multiplication is distributive over addition)</strong></span> <span class="math display">\[\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 8 (Matrix multiplication is distributive over addition)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(k \times n\)</span> matrices <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{C}\)</span>:</p>
+<p><span class="math display">\[\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\]</span></p>
+<p>For <span class="math inline">\(m \times k\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span>:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})\mathbf{C} = \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="matrix-vector-multiplication" class="level3" data-number="0.2.5">
-<h3 data-number="0.2.5" class="anchored" data-anchor-id="matrix-vector-multiplication"><span class="header-section-number">0.2.5</span> Matrix-vector multiplication</h3>
+<section id="matrix-vector-multiplication" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="matrix-vector-multiplication"><span class="header-section-number">2.5</span> Matrix-vector multiplication</h3>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1125,7 +1254,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-matvec-mult" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Matrix-vector multiplication)</strong></span> The <strong>matrix-vector product</strong> of an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(p \times 1\)</span> column vector <span class="math inline">\(\tilde{x}\)</span> is the <span class="math inline">\(m \times 1\)</span> column vector <span class="math inline">\(\mathbf{A}\tilde{x}\)</span> with entries:</p>
+<p><span class="theorem-title"><strong>Definition 17 (Matrix-vector multiplication)</strong></span> The <strong>matrix-vector product</strong> of an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(p \times 1\)</span> column vector <span class="math inline">\(\tilde{x}\)</span> is the <span class="math inline">\(m \times 1\)</span> column vector <span class="math inline">\(\mathbf{A}\tilde{x}\)</span> with entries:</p>
 <p><span class="math display">\[(\mathbf{A}\tilde{x})_i = \sum_{j=1}^{p} a_{ij}\, x_j\]</span></p>
 </div>
 </div>
@@ -1135,11 +1264,178 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 <p>Matrix-vector multiplication is a generalization of the dot product. Each entry of the result is a dot product of a row of <span class="math inline">\(\mathbf{A}\)</span> with the vector <span class="math inline">\(\tilde{x}\)</span>.</p>
 </div>
 </section>
-</section>
-<section id="special-matrices" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="special-matrices"><span class="header-section-number">0.3</span> Special Matrices</h2>
+<section id="transposes-of-sums-and-products" class="level3" data-number="2.6">
+<h3 data-number="2.6" class="anchored" data-anchor-id="transposes-of-sums-and-products"><span class="header-section-number">2.6</span> Transposes of sums and products</h3>
+<!-- heading shares the slide; do not re-flag -->
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-transpose-sum" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 (Transpose of a sum)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="math display">\[{(\mathbf{A} + \mathbf{B})}^{\top} = {\mathbf{A}}^{\top} + {\mathbf{B}}^{\top}\]</span></p>
+<p>In particular, for column vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> of the same length:</p>
+<p><span class="math display">\[{(\tilde{x}+ \tilde{y})}^{\top} = {\tilde{x}}^{\top} + {\tilde{y}}^{\top}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\((i, j)\)</span> of each side:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left[{(\mathbf{A} + \mathbf{B})}^{\top}\right]\mathclose{}_{ij}
+&amp;= (\mathbf{A} + \mathbf{B})_{ji}
+&amp;&amp; \text{(definition of the transpose)}
+\\
+&amp;= a_{ji} + b_{ji}
+&amp;&amp; \text{(definition of matrix addition)}
+\\
+&amp;= ({\mathbf{A}}^{\top})_{ij} + ({\mathbf{B}}^{\top})_{ij}
+&amp;&amp; \text{(definition of the transpose)}
+\\
+&amp;= \mathopen{}\left[{\mathbf{A}}^{\top} + {\mathbf{B}}^{\top}\right]\mathclose{}_{ij}
+&amp;&amp; \text{(definition of matrix addition)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-transpose-product" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10 (Transpose of a product)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="math display">\[
+\underbrace{{(\mathbf{A}\mathbf{B})}^{\top}}_{n \times m}
+= \underbrace{{\mathbf{B}}^{\top}}_{n \times k}\,\underbrace{{\mathbf{A}}^{\top}}_{k \times m}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\((i, j)\)</span> of each side:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left[{(\mathbf{A}\mathbf{B})}^{\top}\right]\mathclose{}_{ij}
+&amp;= (\mathbf{A}\mathbf{B})_{ji}
+&amp;&amp; \text{(definition of the transpose)}
+\\
+&amp;= \sum_{s=1}^{k} a_{js}\, b_{si}
+&amp;&amp; \text{(definition of matrix multiplication)}
+\\
+&amp;= \sum_{s=1}^{k} ({\mathbf{B}}^{\top})_{is}\, ({\mathbf{A}}^{\top})_{sj}
+&amp;&amp; \text{(definition of the transpose; reorder each product)}
+\\
+&amp;= \mathopen{}\left[{\mathbf{B}}^{\top}\,{\mathbf{A}}^{\top}\right]\mathclose{}_{ij}
+&amp;&amp; \text{(definition of matrix multiplication)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
 <div class="notes">
-<p>See also <a href="#def-zero-matrix" class="quarto-xref">Definition&nbsp;11</a> for the zero matrix.</p>
+<p>The order of the factors reverses when transposing a product.</p>
+</div>
+</section>
+<section id="rank" class="level3" data-number="2.7">
+<h3 data-number="2.7" class="anchored" data-anchor-id="rank"><span class="header-section-number">2.7</span> Rank</h3>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-linearly-independent" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Linearly independent vectors)</strong></span> Vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> of the same length <span class="math inline">\(p\)</span> are <strong>linearly independent</strong> if the only numbers <span class="math inline">\(c_1, \ldots, c_k\)</span> with</p>
+<p><span class="math display">\[c_1 \tilde{v}_1 + \cdots + c_k \tilde{v}_k = \tilde{0}\]</span></p>
+<p>are <span class="math inline">\(c_1 = \cdots = c_k = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-linearly-independent" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Independent and dependent pairs of vectors)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(\tilde{v}_1 = (1, 0)\)</span> and <span class="math inline">\(\tilde{v}_2 = (1, 1)\)</span> are linearly independent: <span class="math inline">\(c_1 \tilde{v}_1 + c_2 \tilde{v}_2 = (c_1 + c_2, c_2)\)</span>, which is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>.</li>
+<li><span class="math inline">\(\tilde{v}_1 = (1, 2)\)</span> and <span class="math inline">\(\tilde{v}_2 = (2, 4)\)</span> are not: <span class="math inline">\(2 \tilde{v}_1 - \tilde{v}_2 = \tilde{0}\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-rank" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 19 (Rank)</strong></span> The <strong>rank</strong> of a matrix <span class="math inline">\(\mathbf{A}\)</span>, written <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>, is the largest number of columns of <span class="math inline">\(\mathbf{A}\)</span> that are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;18</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>An <span class="math inline">\(n \times p\)</span> matrix whose rank is <span class="math inline">\(p\)</span>, so that all of its columns are linearly independent, is said to have <em>full column rank</em>; that can only happen when <span class="math inline">\(p \le n\)</span>, because more than <span class="math inline">\(n\)</span> vectors of length <span class="math inline">\(n\)</span> are never linearly independent.</p>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-rank" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (The rank of two <span class="math inline">\(3 \times 2\)</span> matrices)</strong></span> The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span> has rank <span class="math inline">\(2\)</span>: if <span class="math inline">\(c_1 (1, 1, 1) + c_2 (1, 2, 3) = \tilde{0}\)</span>, then subtracting the first entry from the second gives <span class="math inline">\(c_2 = 0\)</span>, and then <span class="math inline">\(c_1 = 0\)</span>.</p>
+<p>The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 1 &amp; 2 \\ 1 &amp; 2 \end{bmatrix}\)</span> has rank <span class="math inline">\(1\)</span>: its second column is twice its first, so the two columns are not linearly independent, but the first column on its own is.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="special-matrices" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="special-matrices"><span class="header-section-number">3</span> Special Matrices</h2>
+<div class="notes">
+<p>See also <a href="#def-zero-matrix" class="quarto-xref">Definition&nbsp;13</a> for the zero matrix.</p>
 </div>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
@@ -1148,7 +1444,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-square-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Square matrix)</strong></span> A matrix is <strong>square</strong> if it has the same number of rows as columns.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Square matrix)</strong></span> A matrix is <strong>square</strong> if it has the same number of rows as columns.</p>
 </div>
 </div>
 </div>
@@ -1160,7 +1456,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-matrix-order" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Order of a square matrix)</strong></span> The <strong>order</strong> of a square matrix (<a href="#def-square-matrix" class="quarto-xref">Definition&nbsp;16</a>) is its number of rows, which equals its number of columns.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Order of a square matrix)</strong></span> The <strong>order</strong> of a square matrix (<a href="#def-square-matrix" class="quarto-xref">Definition&nbsp;20</a>) is its number of rows, which equals its number of columns.</p>
 </div>
 </div>
 </div>
@@ -1172,7 +1468,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-matrix-power" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Matrix power)</strong></span> For a square matrix <span class="math inline">\(\mathbf{A}\)</span> of order <span class="math inline">\(p\)</span> and a positive integer <span class="math inline">\(k\)</span>, the <span class="math inline">\(k\)</span>-th <strong>power</strong> of <span class="math inline">\(\mathbf{A}\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 22 (Matrix power)</strong></span> For a square matrix <span class="math inline">\(\mathbf{A}\)</span> of order <span class="math inline">\(p\)</span> and a positive integer <span class="math inline">\(k\)</span>, the <span class="math inline">\(k\)</span>-th <strong>power</strong> of <span class="math inline">\(\mathbf{A}\)</span> is:</p>
 <p><span class="math display">\[\mathbf{A}^k = \underbrace{\mathbf{A}\,\mathbf{A}\cdots\mathbf{A}}_{k \text{ copies}}\]</span></p>
 <p>In particular, <span class="math inline">\(\mathbf{A}^2 = \mathbf{A}\mathbf{A}\)</span>.</p>
 </div>
@@ -1186,7 +1482,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-identity-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Identity matrix)</strong></span> The <span class="math inline">\(p \times p\)</span> <strong>identity matrix</strong> <span class="math inline">\(\mathbf{I}_p\)</span> (or <span class="math inline">\(\mathbf{I}\)</span> when the size is clear from context) has ones on the main diagonal and zeros elsewhere:</p>
+<p><span class="theorem-title"><strong>Definition 23 (Identity matrix)</strong></span> The <span class="math inline">\(p \times p\)</span> <strong>identity matrix</strong> <span class="math inline">\(\mathbf{I}_p\)</span> (or <span class="math inline">\(\mathbf{I}\)</span> when the size is clear from context) has ones on the main diagonal and zeros elsewhere:</p>
 <p><span class="math display">\[
 (\mathbf{I}_p)_{ij} =
 \begin{cases}
@@ -1227,7 +1523,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-symmetric-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Symmetric matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>symmetric</strong> if <span class="math inline">\({\mathbf{A}}^{\top} = \mathbf{A}\)</span>, i.e., <span class="math inline">\(a_{ij} = a_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Symmetric matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>symmetric</strong> if <span class="math inline">\({\mathbf{A}}^{\top} = \mathbf{A}\)</span>, i.e., <span class="math inline">\(a_{ij} = a_{ji}\)</span> for all <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1242,7 +1538,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 </div>
 <div class="callout-body-container">
 <div id="def-diagonal-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Diagonal matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{D}\)</span> is a <strong>diagonal matrix</strong> if all off-diagonal entries are zero: <span class="math inline">\(d_{ij} = 0\)</span> whenever <span class="math inline">\(i \neq j\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 25 (Diagonal matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{D}\)</span> is a <strong>diagonal matrix</strong> if all off-diagonal entries are zero: <span class="math inline">\(d_{ij} = 0\)</span> whenever <span class="math inline">\(i \neq j\)</span>:</p>
 <p><span class="math display">\[
 \mathbf{D} =
 \begin{bmatrix}
@@ -1266,14 +1562,36 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="def-matrix-inverse" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Matrix inverse)</strong></span> For a square <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the <strong>inverse</strong> <span class="math inline">\(\mathbf{A}^{-1}\)</span> (if it exists) is the unique matrix satisfying:</p>
+<p><span class="theorem-title"><strong>Definition 26 (Matrix inverse)</strong></span> For a square <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>, the <strong>inverse</strong> <span class="math inline">\(\mathbf{A}^{-1}\)</span> (if it exists) is the unique matrix satisfying:</p>
 <p><span class="math display">\[\mathbf{A}\,\mathbf{A}^{-1} = \mathbf{A}^{-1}\,\mathbf{A} = \mathbf{I}_p\]</span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="notes">
-<p>A matrix that has an inverse is called <strong>invertible</strong> or <strong>non-singular</strong>.</p>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-invertible-matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 27 (Invertible matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>invertible</strong> (or <em>non-singular</em>) if it has an inverse <span class="math inline">\(\mathbf{A}^{-1}\)</span> (<a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;26</a>). A square matrix with no inverse is <em>singular</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-invertible-matrix" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (An invertible matrix and a singular one)</strong></span> The matrix <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span> is invertible, with <span class="math inline">\(\mathbf{A}^{-1} = \begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span>: multiplying out gives <span class="math inline">\(\mathbf{A}\mathbf{A}^{-1} = \mathbf{A}^{-1}\mathbf{A} = \mathbf{I}_2\)</span>.</p>
+<p>The matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> is singular: for any <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span>, the two rows of <span class="math inline">\(\mathbf{B}\mathbf{C}\)</span> are equal, so <span class="math inline">\(\mathbf{B}\mathbf{C}\)</span> can never be <span class="math inline">\(\mathbf{I}_2\)</span>, whose two rows differ.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
@@ -1282,8 +1600,189 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="thm-inverse-product" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (Inverse of a product)</strong></span> For invertible matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 12 (Inverse of a product)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> are invertible <span class="math inline">\(p \times p\)</span> matrices, then <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is invertible, and</p>
 <p><span class="math display">\[(\mathbf{A}\mathbf{B})^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Multiply <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> by the candidate inverse on the right:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathbf{A}\mathbf{B})(\mathbf{B}^{-1}\mathbf{A}^{-1})
+&amp;= \mathbf{A}(\mathbf{B}\mathbf{B}^{-1})\mathbf{A}^{-1}
+&amp;&amp; \text{(matrix multiplication is associative)}
+\\
+&amp;= \mathbf{A}\,\mathbf{I}_p\,\mathbf{A}^{-1}
+&amp;&amp; \text{(definition of } \mathbf{B}^{-1} \text{)}
+\\
+&amp;= \mathbf{A}\mathbf{A}^{-1}
+&amp;&amp; \text{(identity matrix)}
+\\
+&amp;= \mathbf{I}_p
+&amp;&amp; \text{(definition of } \mathbf{A}^{-1} \text{)}
+\end{aligned}
+\]</span></p>
+<p>and on the left:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathbf{B}^{-1}\mathbf{A}^{-1})(\mathbf{A}\mathbf{B})
+&amp;= \mathbf{B}^{-1}(\mathbf{A}^{-1}\mathbf{A})\mathbf{B}
+&amp;&amp; \text{(matrix multiplication is associative)}
+\\
+&amp;= \mathbf{B}^{-1}\,\mathbf{I}_p\,\mathbf{B}
+&amp;&amp; \text{(definition of } \mathbf{A}^{-1} \text{)}
+\\
+&amp;= \mathbf{B}^{-1}\mathbf{B}
+&amp;&amp; \text{(identity matrix)}
+\\
+&amp;= \mathbf{I}_p
+&amp;&amp; \text{(definition of } \mathbf{B}^{-1} \text{)}
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(\mathbf{B}^{-1}\mathbf{A}^{-1}\)</span> satisfies <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;26</a> for <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>. The steps use <a href="#thm-matmul-assoc" class="quarto-xref">Theorem&nbsp;7</a> and <a href="#thm-identity" class="quarto-xref">Theorem&nbsp;11</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-inverse-transpose" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 13 (Inverse of a transpose)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is an invertible <span class="math inline">\(p \times p\)</span> matrix, then <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is invertible, and</p>
+<p><span class="math display">\[\mathopen{}\left({\mathbf{A}}^{\top}\right)^{-1}\mathclose{} = {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Multiply <span class="math inline">\({\mathbf{A}}^{\top}\)</span> by the candidate inverse on each side:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{A}}^{\top}\,{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}
+&amp;= {\mathopen{}\left(\mathbf{A}^{-1}\mathbf{A}\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(transpose of a product)}
+\\
+&amp;= {\mathbf{I}_p}^{\top}
+&amp;&amp; \text{(definition of } \mathbf{A}^{-1} \text{)}
+\\
+&amp;= \mathbf{I}_p
+&amp;&amp; \text{(} \mathbf{I}_p \text{ is symmetric)}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\,{\mathbf{A}}^{\top}
+&amp;= {\mathopen{}\left(\mathbf{A}\mathbf{A}^{-1}\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(transpose of a product)}
+\\
+&amp;= {\mathbf{I}_p}^{\top}
+&amp;&amp; \text{(definition of } \mathbf{A}^{-1} \text{)}
+\\
+&amp;= \mathbf{I}_p
+&amp;&amp; \text{(} \mathbf{I}_p \text{ is symmetric)}
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\({\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\)</span> satisfies <a href="#def-matrix-inverse" class="quarto-xref">Definition&nbsp;26</a> for <span class="math inline">\({\mathbf{A}}^{\top}\)</span>. The first step of each display is <a href="#thm-transpose-product" class="quarto-xref">Theorem&nbsp;10</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-inverse-transpose" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Inverting a transpose)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 0 &amp; 1 \end{bmatrix}\)</span>, <a href="#exm-invertible-matrix" class="quarto-xref">Example&nbsp;7</a> gives <span class="math inline">\(\mathbf{A}^{-1} = \begin{bmatrix} 0.5 &amp; -0.5 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <a href="#thm-inverse-transpose" class="quarto-xref">Theorem&nbsp;13</a> says</p>
+<p><span class="math display">\[
+\mathopen{}\left({\mathbf{A}}^{\top}\right)^{-1}\mathclose{}
+= \mathopen{}\left(\begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 1 \end{bmatrix}\right)^{-1}\mathclose{}
+= {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}
+= \begin{bmatrix} 0.5 &amp; 0 \\ -0.5 &amp; 1 \end{bmatrix},
+\]</span></p>
+<p>and multiplying <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 1 \end{bmatrix}\begin{bmatrix} 0.5 &amp; 0 \\ -0.5 &amp; 1 \end{bmatrix}\)</span> out does give <span class="math inline">\(\mathbf{I}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-cor no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="cor-inverse-symmetric" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (The inverse of a symmetric matrix is symmetric)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is symmetric and invertible, then <span class="math inline">\(\mathbf{A}^{-1}\)</span> is symmetric.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
+\begin{aligned}
+{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}
+&amp;= \mathopen{}\left({\mathbf{A}}^{\top}\right)^{-1}\mathclose{}
+&amp;&amp; \text{(inverse of a transpose)}
+\\
+&amp;= \mathbf{A}^{-1}
+&amp;&amp; \text{(} \mathbf{A} \text{ is symmetric)}
+\end{aligned}
+\]</span></p>
+<p>The first step is <a href="#thm-inverse-transpose" class="quarto-xref">Theorem&nbsp;13</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-inverse-symmetric" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Inverting a symmetric matrix)</strong></span> <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> is symmetric, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 2 \end{bmatrix}\)</span> is symmetric too, as <a href="#cor-inverse-symmetric" class="quarto-xref">Corollary&nbsp;1</a> says.</p>
 </div>
 </div>
 </div>
@@ -1295,7 +1794,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="def-idempotent-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Idempotent matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>idempotent</strong> if</p>
+<p><span class="theorem-title"><strong>Definition 28 (Idempotent matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>idempotent</strong> if</p>
 <p><span class="math display">\[\mathbf{A}^2 = \mathbf{A}\]</span></p>
 </div>
 </div>
@@ -1308,10 +1807,33 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="def-projection-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Projection matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{P}\)</span> is a <strong>projection matrix</strong> (also called an <em>orthogonal projector</em>) if it is both symmetric and idempotent:</p>
+<p><span class="theorem-title"><strong>Definition 29 (Orthogonal projection matrix)</strong></span> A square matrix <span class="math inline">\(\mathbf{P}\)</span> is an <strong>orthogonal projection matrix</strong> if it is both symmetric (<a href="#def-symmetric-matrix" class="quarto-xref">Definition&nbsp;24</a>) and idempotent (<a href="#def-idempotent-matrix" class="quarto-xref">Definition&nbsp;28</a>):</p>
 <p><span class="math display">\[{\mathbf{P}}^{\top} = \mathbf{P}
 \qquad \text{and} \qquad
 \mathbf{P}^2 = \mathbf{P}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>Any idempotent matrix is called a <em>projection matrix</em>; an idempotent matrix that is not symmetric is an <em>oblique</em> projection. Regression texts often say “projection matrix” when they mean an orthogonal one. In these notes, “projection matrix” always means an orthogonal projection matrix in the sense of <a href="#def-projection-matrix" class="quarto-xref">Definition&nbsp;29</a>.</p>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-projection-matrix" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (An orthogonal projection and an oblique one)</strong></span> <span class="math inline">\(\mathbf{P} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> is symmetric, and <span class="math inline">\(\mathbf{P}^2 = \mathbf{P}\)</span>, so <span class="math inline">\(\mathbf{P}\)</span> is an orthogonal projection matrix; it maps <span class="math inline">\((v_1, v_2)\)</span> to <span class="math inline">\((v_1, 0)\)</span>.</p>
+<p><span class="math inline">\(\mathbf{Q} = \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span> is idempotent:</p>
+<p><span class="math display">\[
+\mathbf{Q}^2
+= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 0 &amp; 1 \cdot 1 + 1 \cdot 0 \\ 0 \cdot 1 + 0 \cdot 0 &amp; 0 \cdot 1 + 0 \cdot 0 \end{bmatrix}
+= \begin{bmatrix} 1 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}
+= \mathbf{Q},
+\]</span></p>
+<p>but <span class="math inline">\({\mathbf{Q}}^{\top} \neq \mathbf{Q}\)</span>, so <span class="math inline">\(\mathbf{Q}\)</span> is an oblique projection, not an orthogonal projection matrix.</p>
 </div>
 </div>
 </div>
@@ -1323,13 +1845,13 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="thm-projection-complement" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 13 (Complement of a projection matrix)</strong></span> If <span class="math inline">\(\mathbf{P}\)</span> is a projection matrix, then <span class="math inline">\(\mathbf{I} - \mathbf{P}\)</span> is also a projection matrix.</p>
+<p><span class="theorem-title"><strong>Theorem 14 (Complement of a projection matrix)</strong></span> If <span class="math inline">\(\mathbf{P}\)</span> is a <span class="math inline">\(p \times p\)</span> orthogonal projection matrix (<a href="#def-projection-matrix" class="quarto-xref">Definition&nbsp;29</a>), then <span class="math inline">\(\mathbf{I}_p - \mathbf{P}\)</span> is also an orthogonal projection matrix.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1338,7 +1860,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>We verify symmetry and idempotency.</p>
@@ -1360,67 +1882,17 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="thm-hat-matrix" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 14 (Hat matrix is a projection matrix)</strong></span> In a linear regression model with full-rank design matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>hat matrix</strong></p>
-<p><span class="math display">\[\mathbf{H} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\]</span></p>
-<p>is a projection matrix.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Proof</span>Proof
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>We verify symmetry and idempotency.</p>
-<p><strong>Symmetry:</strong> <span class="math display">\[\begin{aligned}
-{\mathbf{H}}^{\top}
-&amp;= {\left(\mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\right)}^{\top} \\
-&amp;= {({\mathbf{X}}^{\top})}^{\top} \cdot {\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1}\right)}^{\top} \cdot {\mathbf{X}}^{\top} \\
-&amp;= \mathbf{X}\cdot ({\mathbf{X}}^{\top}\mathbf{X})^{-1} \cdot {\mathbf{X}}^{\top} \\
-&amp;= \mathbf{H}
-\end{aligned}\]</span></p>
-<p>where the third line uses <span class="math inline">\({({\mathbf{X}}^{\top})}^{\top} = \mathbf{X}\)</span> and the fact that <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is symmetric, so its inverse is also symmetric (<span class="math inline">\({\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1}\right)}^{\top} = ({\mathbf{X}}^{\top}\mathbf{X})^{-1}\)</span>).</p>
-<p><strong>Idempotency:</strong> <span class="math display">\[\begin{aligned}
-\mathbf{H}^2
-&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} \cdot \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} \\
-&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}({\mathbf{X}}^{\top}\mathbf{X})({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} \\
-&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} \\
-&amp;= \mathbf{H}
-\end{aligned}\]</span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="notes">
-<p>The hat matrix appears in the formula for fitted values in linear regression: <span class="math inline">\(\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\)</span>. It “puts a hat” on <span class="math inline">\(\tilde{y}\)</span> — hence the name.</p>
-</div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
 <div id="thm-projection-orthogonal" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 15 (Projection matrices produce orthogonal decompositions)</strong></span> If <span class="math inline">\(\mathbf{P}\)</span> is a projection matrix and <span class="math inline">\(\tilde{v}\)</span> is any vector of compatible dimension, then the two components of the decomposition</p>
-<p><span class="math display">\[\tilde{v} = \underbrace{\mathbf{P}\tilde{v}}_{\text{projected}} + \underbrace{(\mathbf{I} - \mathbf{P})\tilde{v}}_{\text{residual}}\]</span></p>
+<p><span class="theorem-title"><strong>Theorem 15 (Projection matrices produce orthogonal decompositions)</strong></span> If <span class="math inline">\(\mathbf{P}\)</span> is a <span class="math inline">\(p \times p\)</span> orthogonal projection matrix (<a href="#def-projection-matrix" class="quarto-xref">Definition&nbsp;29</a>) and <span class="math inline">\(\tilde{v}\)</span> is any vector of length <span class="math inline">\(p\)</span>, then the two components of the decomposition</p>
+<p><span class="math display">\[\tilde{v} = \underbrace{\mathbf{P}\tilde{v}}_{\text{projected}} + \underbrace{(\mathbf{I}_p - \mathbf{P})\tilde{v}}_{\text{residual}}\]</span></p>
 <p>are orthogonal:</p>
-<p><span class="math display">\[\mathbf{P}\tilde{v} \;\perp\; (\mathbf{I} - \mathbf{P})\tilde{v}\]</span></p>
+<p><span class="math display">\[\mathbf{P}\tilde{v} \;\perp\; (\mathbf{I}_p - \mathbf{P})\tilde{v}\]</span></p>
 </div>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1429,7 +1901,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[\begin{aligned}
@@ -1447,8 +1919,8 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 </div>
 </section>
-<section id="quadratic-forms" class="level2" data-number="0.4">
-<h2 data-number="0.4" class="anchored" data-anchor-id="quadratic-forms"><span class="header-section-number">0.4</span> Quadratic Forms</h2>
+<section id="quadratic-forms" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="quadratic-forms"><span class="header-section-number">4</span> Quadratic Forms</h2>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1456,7 +1928,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="def-quadratic-form" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Quadratic form)</strong></span> A <strong>quadratic form</strong> is a mathematical expression of the structure</p>
+<p><span class="theorem-title"><strong>Definition 30 (Quadratic form)</strong></span> A <strong>quadratic form</strong> is a mathematical expression of the structure</p>
 <p><span class="math display">\[{\tilde{x}}^{\top}\, \mathbf{S}\, \tilde{x}\]</span></p>
 <p>where <span class="math inline">\(\tilde{x}\)</span> is a <span class="math inline">\(p \times 1\)</span> vector and <span class="math inline">\(\mathbf{S}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix.</p>
 </div>
@@ -1470,6 +1942,40 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <li>The variance of a linear combination of estimates (see <a href="https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs">Inference about Gaussian Linear Regression Models</a>) is a quadratic form: <span class="math inline">\(\operatorname{Var}\mathopen{}\left({\tilde{x}}^{\top}\hat{\tilde{\beta}}\right)\mathclose{} = {\tilde{x}}^{\top}\,\operatorname{Var}\mathopen{}\left(\hat{\tilde{\beta}}\right)\mathclose{}\,\tilde{x}\)</span>.</li>
 </ul>
 </div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-symmetric-part" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 31 (Symmetric part of a square matrix)</strong></span> The <strong>symmetric part</strong> of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{S}\)</span> is</p>
+<p><span class="math display">\[\frac{1}{2}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-symmetric-part" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (The symmetric part of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> For <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span>, the symmetric part is</p>
+<p><span class="math display">\[
+\frac{1}{2}\mathopen{}\left(
+\begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}
++ \begin{bmatrix} 1 &amp; 0 \\ 2 &amp; 3 \end{bmatrix}
+\right)\mathclose{}
+= \frac{1}{2}\begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 6 \end{bmatrix}
+= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 3 \end{bmatrix},
+\]</span></p>
+<p>which is symmetric.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1477,20 +1983,84 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="thm-quadratic-form-symmetric" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 16 (Symmetric part of a quadratic form)</strong></span> If <span class="math inline">\(\mathbf{S}\)</span> is a square matrix, then</p>
+<p><span class="theorem-title"><strong>Theorem 16 (A quadratic form depends only on the symmetric part)</strong></span> If <span class="math inline">\(\mathbf{S}\)</span> is a <span class="math inline">\(p \times p\)</span> matrix and <span class="math inline">\(\tilde{x}\)</span> is a vector of length <span class="math inline">\(p\)</span>, then</p>
 <p><span class="math display">\[
 {\tilde{x}}^{\top}\mathbf{S}\tilde{x}
 =
 {\tilde{x}}^{\top}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\tilde{x}.
 \]</span></p>
-<p>So the value of a quadratic form depends only on the symmetric part of <span class="math inline">\(\mathbf{S}\)</span>.</p>
+<p>So the value of a quadratic form depends only on the symmetric part (<a href="#def-symmetric-part" class="quarto-xref">Definition&nbsp;31</a>) of <span class="math inline">\(\mathbf{S}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The quadratic form <span class="math inline">\({\tilde{x}}^{\top}\mathbf{S}\tilde{x}\)</span> is a <span class="math inline">\(1 \times 1\)</span> matrix, so it equals its own transpose:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{x}}^{\top}\mathbf{S}\tilde{x}
+&amp;= {\mathopen{}\left({\tilde{x}}^{\top}\mathbf{S}\tilde{x}\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(a } 1 \times 1 \text{ matrix is symmetric)}
+\\
+&amp;= {\tilde{x}}^{\top}\,{\mathbf{S}}^{\top}\,{\mathopen{}\left({\tilde{x}}^{\top}\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(transpose of a product, twice)}
+\\
+&amp;= {\tilde{x}}^{\top}\,{\mathbf{S}}^{\top}\,\tilde{x}
+&amp;&amp; \text{(transposing twice changes nothing)}
+\end{aligned}
+\]</span></p>
+<p>Averaging the two expressions for <span class="math inline">\({\tilde{x}}^{\top}\mathbf{S}\tilde{x}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{x}}^{\top}\mathbf{S}\tilde{x}
+&amp;= \frac{1}{2}\mathopen{}\left({\tilde{x}}^{\top}\mathbf{S}\tilde{x}+ {\tilde{x}}^{\top}\,{\mathbf{S}}^{\top}\,\tilde{x}\right)\mathclose{}
+&amp;&amp; \text{(average of two equal numbers)}
+\\
+&amp;= \frac{1}{2}\,{\tilde{x}}^{\top}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\tilde{x}
+&amp;&amp; \text{(distributive law)}
+\\
+&amp;= {\tilde{x}}^{\top}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\tilde{x}
+&amp;&amp; \text{(move the scalar } \tfrac{1}{2} \text{ inside)}
+\end{aligned}
+\]</span></p>
+<p>The distributive step is <a href="#thm-matmul-distrib" class="quarto-xref">Theorem&nbsp;8</a>, and the transpose step is <a href="#thm-transpose-product" class="quarto-xref">Theorem&nbsp;10</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-quadratic-form-symmetric" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Replacing a matrix by its symmetric part)</strong></span> With <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 2 \\ 0 &amp; 3 \end{bmatrix}\)</span> from <a href="#exm-symmetric-part" class="quarto-xref">Example&nbsp;11</a> and <span class="math inline">\(\tilde{x}= (1, 1)\)</span>:</p>
+<p><span class="math display">\[
+{\tilde{x}}^{\top}\mathbf{S}\tilde{x}= 1 + 2 + 0 + 3 = 6
+\qquad
+{\tilde{x}}^{\top}\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}\tilde{x}= 1 + 1 + 1 + 3 = 6
+\]</span></p>
+<p>Both quadratic forms equal the sum of their matrix’s entries, because every entry of <span class="math inline">\(\tilde{x}\)</span> is <span class="math inline">\(1\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="design-matrix" class="level2" data-number="0.5">
-<h2 data-number="0.5" class="anchored" data-anchor-id="design-matrix"><span class="header-section-number">0.5</span> Design Matrix</h2>
+<section id="design-matrix" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="design-matrix"><span class="header-section-number">5</span> Design Matrix</h2>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1498,7 +2068,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 </div>
 <div class="callout-body-container">
 <div id="def-design-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Design matrix)</strong></span> In a regression model with <span class="math inline">\(n\)</span> observations and <span class="math inline">\(p\)</span> predictors, the <strong>design matrix</strong> (or <em>model matrix</em>) <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(n \times p\)</span> matrix whose <span class="math inline">\(i\)</span>-th row is the covariate vector <span class="math inline">\({\tilde{x}_i}^{\top}\)</span> for observation <span class="math inline">\(i\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 32 (Design matrix)</strong></span> In a regression model with <span class="math inline">\(n\)</span> observations and <span class="math inline">\(p\)</span> predictors, the <strong>design matrix</strong> (or <em>model matrix</em>) <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(n \times p\)</span> matrix whose <span class="math inline">\(i\)</span>-th row is the covariate vector <span class="math inline">\({\tilde{x}_i}^{\top}\)</span> for observation <span class="math inline">\(i\)</span>:</p>
 <p><span class="math display">\[
 \mathbf{X}=
 \begin{bmatrix}
@@ -1531,17 +2101,203 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \]</span></p>
 <p>The matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is a <span class="math inline">\(p \times p\)</span> symmetric matrix that appears in the OLS estimator <span class="math inline">\(\hat{\tilde{\beta}} = ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\)</span>.</p>
 </div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-gram-invertible" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 17 (<span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible when <span class="math inline">\(\mathbf{X}\)</span> has full column rank)</strong></span> If <span class="math inline">\(\mathbf{X}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span> (<a href="#def-rank" class="quarto-xref">Definition&nbsp;19</a>), then the <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{c}\)</span> be a vector of length <span class="math inline">\(p\)</span> with <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\tilde{c} = \tilde{0}\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+0
+&amp;= {\tilde{c}}^{\top}\,{\mathbf{X}}^{\top}\mathbf{X}\tilde{c}
+&amp;&amp; \text{(multiply } {\mathbf{X}}^{\top}\mathbf{X}\tilde{c} = \tilde{0}\text{ on the left by } {\tilde{c}}^{\top} \text{)}
+\\
+&amp;= {\mathopen{}\left(\mathbf{X}\tilde{c}\right)\mathclose{}}^{\top}\mathopen{}\left(\mathbf{X}\tilde{c}\right)\mathclose{}
+&amp;&amp; \text{(transpose of a product)}
+\\
+&amp;= \mathopen{}\left\lVert\mathbf{X}\tilde{c}\right\rVert\mathclose{}^2
+&amp;&amp; \text{(definition of the Euclidean norm)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\mathbf{X}\tilde{c} = \tilde{0}\)</span>. Because <span class="math inline">\(\mathbf{X}\tilde{c} = c_1 (\text{column } 1) + \cdots + c_p (\text{column } p)\)</span> and the columns of <span class="math inline">\(\mathbf{X}\)</span> are linearly independent, <span class="math inline">\(\tilde{c} = \tilde{0}\)</span>. So the only solution of <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\tilde{c} = \tilde{0}\)</span> is <span class="math inline">\(\tilde{c} = \tilde{0}\)</span>, which says that the columns of the square matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> are linearly independent, and a square matrix with linearly independent columns is invertible <span class="citation" data-cites="banerjee2014linear">(<a href="#ref-banerjee2014linear" role="doc-biblioref">Banerjee and Roy 2014</a>)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-gram-invertible" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (Inverting <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span>)</strong></span> For the rank-<span class="math inline">\(2\)</span> matrix <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span> from <a href="#exm-rank" class="quarto-xref">Example&nbsp;6</a>:</p>
+<p><span class="math display">\[
+{\mathbf{X}}^{\top}\mathbf{X}= \begin{bmatrix} 3 &amp; 6 \\ 6 &amp; 14 \end{bmatrix},
+\qquad
+\mathopen{}\left({\mathbf{X}}^{\top}\mathbf{X}\right)^{-1}\mathclose{} = \frac{1}{6}\begin{bmatrix} 14 &amp; -6 \\ -6 &amp; 3 \end{bmatrix},
+\]</span></p>
+<p>and multiplying the two out gives <span class="math inline">\(\mathbf{I}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-hat-matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 33 (Hat matrix)</strong></span> For an <span class="math inline">\(n \times p\)</span> design matrix <span class="math inline">\(\mathbf{X}\)</span> (<a href="#def-design-matrix" class="quarto-xref">Definition&nbsp;32</a>) with <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span>, the <strong>hat matrix</strong> is the <span class="math inline">\(n \times n\)</span> matrix</p>
+<p><span class="math display">\[
+\underbrace{\mathbf{H}}_{n \times n}
+\stackrel{\text{def}}{=}
+\underbrace{\mathbf{X}}_{n \times p}
+\underbrace{({\mathbf{X}}^{\top}\mathbf{X})^{-1}}_{p \times p}
+\underbrace{{\mathbf{X}}^{\top}}_{p \times n}
+\]</span></p>
+<p>The inverse exists by <a href="#thm-gram-invertible" class="quarto-xref">Theorem&nbsp;17</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-hat-matrix" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (The hat matrix of an intercept-only model)</strong></span> With <span class="math inline">\(n = 2\)</span> observations and only an intercept, <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span> (<span class="math inline">\(2 \times 1\)</span>, rank <span class="math inline">\(1\)</span>), so <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}= 2\)</span> and</p>
+<p><span class="math display">\[
+\mathbf{H}
+= \begin{bmatrix} 1 \\ 1 \end{bmatrix} \cdot\frac{1}{2} \cdot\begin{bmatrix} 1 &amp; 1 \end{bmatrix}
+= \begin{bmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{bmatrix}.
+\]</span></p>
+<p>Then <span class="math inline">\(\mathbf{H}\tilde{y}= (\bar{y}, \bar{y})\)</span>, where <span class="math inline">\(\bar{y} = (y_1 + y_2)/2\)</span>: the fitted values of an intercept-only model are the sample mean.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-hat-matrix" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 18 (Hat matrix is a projection matrix)</strong></span> If <span class="math inline">\(\mathbf{X}\)</span> is an <span class="math inline">\(n \times p\)</span> design matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span>, then the hat matrix <span class="math inline">\(\mathbf{H}\)</span> (<a href="#def-hat-matrix" class="quarto-xref">Definition&nbsp;33</a>) is an orthogonal projection matrix (<a href="#def-projection-matrix" class="quarto-xref">Definition&nbsp;29</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>We verify symmetry and idempotency. Both use that <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is symmetric, <span class="math inline">\({\mathopen{}\left({\mathbf{X}}^{\top}\mathbf{X}\right)\mathclose{}}^{\top} = {\mathbf{X}}^{\top}\,{\mathopen{}\left({\mathbf{X}}^{\top}\right)\mathclose{}}^{\top} = {\mathbf{X}}^{\top}\mathbf{X}\)</span> (<a href="#thm-transpose-product" class="quarto-xref">Theorem&nbsp;10</a>), so its inverse is symmetric too (<a href="#cor-inverse-symmetric" class="quarto-xref">Corollary&nbsp;1</a>).</p>
+<p><strong>Symmetry:</strong> <span class="math display">\[\begin{aligned}
+{\mathbf{H}}^{\top}
+&amp;= {\left(\mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\right)}^{\top}
+&amp;&amp; \text{(definition of } \mathbf{H} \text{)}
+\\
+&amp;= {({\mathbf{X}}^{\top})}^{\top} \cdot {\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1}\right)}^{\top} \cdot {\mathbf{X}}^{\top}
+&amp;&amp; \text{(transpose of a product, twice)}
+\\
+&amp;= \mathbf{X}\cdot {\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1}\right)}^{\top} \cdot {\mathbf{X}}^{\top}
+&amp;&amp; \text{(transposing twice changes nothing)}
+\\
+&amp;= \mathbf{X}\cdot ({\mathbf{X}}^{\top}\mathbf{X})^{-1} \cdot {\mathbf{X}}^{\top}
+&amp;&amp; \text{(the inverse of a symmetric matrix is symmetric)}
+\\
+&amp;= \mathbf{H}
+&amp;&amp; \text{(definition of } \mathbf{H} \text{)}
+\end{aligned}\]</span></p>
+<p><strong>Idempotency:</strong> <span class="math display">\[\begin{aligned}
+\mathbf{H}^2
+&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top} \cdot \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(definition of } \mathbf{H} \text{)}
+\\
+&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}({\mathbf{X}}^{\top}\mathbf{X})({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(regroup; matrix multiplication is associative)}
+\\
+&amp;= \mathbf{X}\,\mathbf{I}_p\,({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(definition of the inverse)}
+\\
+&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(identity matrix)}
+\\
+&amp;= \mathbf{H}
+&amp;&amp; \text{(definition of } \mathbf{H} \text{)}
+\end{aligned}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-hat-matrix-projection" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (The intercept-only hat matrix is a projection)</strong></span> For <span class="math inline">\(\mathbf{H} = \begin{bmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{bmatrix}\)</span> from <a href="#exm-hat-matrix" class="quarto-xref">Example&nbsp;14</a>, <span class="math inline">\({\mathbf{H}}^{\top} = \mathbf{H}\)</span>, and</p>
+<p><span class="math display">\[
+\mathbf{H}^2
+= \begin{bmatrix} 0.5 \cdot 0.5 + 0.5 \cdot 0.5 &amp; 0.5 \cdot 0.5 + 0.5 \cdot 0.5 \\ 0.5 \cdot 0.5 + 0.5 \cdot 0.5 &amp; 0.5 \cdot 0.5 + 0.5 \cdot 0.5 \end{bmatrix}
+= \begin{bmatrix} 0.5 &amp; 0.5 \\ 0.5 &amp; 0.5 \end{bmatrix}
+= \mathbf{H},
+\]</span></p>
+<p>as <a href="#thm-hat-matrix" class="quarto-xref">Theorem&nbsp;18</a> says.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="notes">
+<p>The hat matrix appears in the formula for fitted values in linear regression: <span class="math inline">\(\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\)</span>. It “puts a hat” on <span class="math inline">\(\tilde{y}\)</span> — hence the name.</p>
+</div>
 </section>
-<section id="sec-additional-resources" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Additional resources</h1>
+<section id="sec-additional-resources" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-additional-resources"><span class="header-section-number">6</span> Additional resources</h2>
 <ul>
 <li><span class="citation" data-cites="fieller2018basics">Fieller (<a href="#ref-fieller2018basics" role="doc-biblioref">2016</a>)</span></li>
 <li><span class="citation" data-cites="banerjee2014linear">Banerjee and Roy (<a href="#ref-banerjee2014linear" role="doc-biblioref">2014</a>)</span></li>
 <li><span class="citation" data-cites="searle2017matrix">Searle and Khuri (<a href="#ref-searle2017matrix" role="doc-biblioref">2017</a>)</span></li>
 </ul>
 </section>
-<section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">References</h1>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
 Banerjee, Sudipto, and Anindya Roy. 2014. <em>Linear Algebra and Matrix Analysis for Statistics</em>. Vol. 181. Crc Press Boca Raton. <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>.
@@ -2269,13 +3025,13 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_linear_algebra.qmd &gt;}}</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># Additional resources {#sec-additional-resources}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional resources {#sec-additional-resources}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@fieller2018basics</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@banerjee2014linear</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@searle2017matrix</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>

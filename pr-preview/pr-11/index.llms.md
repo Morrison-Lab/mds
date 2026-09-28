@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 01:13:01 (PDT)
+Last modified: 2026-09-28 01:21:39 (PDT)
 
 # Welcome
 
@@ -12,15 +12,16 @@ Last modified: 2026-09-28 01:13:01 (PDT)
 
 Cheng ([2025](#ref-cheng2025math))
 
-These notes collect the mathematics that data science courses assume: mathematical notation, algebra, precalculus, univariate calculus, linear algebra, and vector calculus. Some key results are listed here, organized by topic:
+These notes collect the mathematics that data science courses assume: mathematical notation, proof writing, algebra (including exponentials and logarithms), univariate calculus, linear algebra, and vector calculus. Some key results are listed here, organized by topic:
 
 - [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, proof symbols, and indicator functions
+- [Proof Writing](proof-writing.llms.md): showing and annotating every step of a derivation
 - [Algebra](algebra.llms.md): equalities and inequalities, infimum and supremum, sums, products, quotients, exponentials and logarithms
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions, the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 
-## 0.1 Using these notes in another site
+## Using these notes in another site
 
 Course sites include these notes as a git submodule named `mds` at the site’s root, and include fragments with paths that start with `mds/`, for example `{{< include mds/_notation.qmd >}}`. This site includes its own fragments the same way, through a `mds` symlink that points at the repository root.
 
@@ -29,6 +30,7 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |----|----|
 | [Notation](notation.llms.md) | `mds/_notation.qmd` |
+| [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 | [Algebra](algebra.llms.md) | `mds/_algebra.qmd` |
 | [Calculus](calculus.llms.md) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.llms.md) | `mds/_subfiles/_sec_linear_algebra.qmd` |

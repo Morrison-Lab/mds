@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 01:17:18 (PDT)
+Last modified: 2026-09-28 01:25:54 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -107,7 +107,7 @@ to denote logical entailments (deductive consequences).
 
 Let’s save \\\rightarrow\\ (`\rightarrow`) for convergence results.
 
-See [Proof Writing](https://morrison-lab.github.io/rme/chapters/proof-writing.html) for general guidance on how to present proofs and derivations.
+See [Proof Writing](proof-writing.llms.md) for general guidance on how to present proofs and derivations.
 
 ## 5 Indicator functions
 
