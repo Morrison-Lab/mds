@@ -18,6 +18,6 @@ we write $\inf A = -\infty$ by convention.
 ::: notes
 The maximum in @def-infimum always exists:
 that is the completeness (greatest-lower-bound) property of the real numbers
-[@rudin1976principles, Chapter 1].
+[@rudin1976principles, Definition 1.8, p. 4, and Theorem 1.19, p. 8].
 If the infimum belongs to $A$, it equals the minimum: $\inf A = \min A$.
 :::
