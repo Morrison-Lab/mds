@@ -4,6 +4,9 @@ Mathematical notation is not standardized.
 This section states the conventions these notes use,
 and the alternatives you may meet in other sources.
 
+<!-- repoint the expectation link to https://morrison-lab.github.io/pds/expectation.html#def-expectation once pds#8 is published -->
+<!-- repoint the independence link to https://morrison-lab.github.io/pds/independence.html#def-indpt once pds#8 is published -->
+
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
 | $\neg$      | not                                              | `\neg`
@@ -21,8 +24,8 @@ and the alternatives you may meet in other sources.
 | $\ind$      | [independent](https://morrison-lab.github.io/rme/chapters/probability.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | therefore, thus                                  | `\therefore`
 | $\eta$      | [linear component of a GLM][eta]                 | `\eta`
-| $\floor{x}$ | floor of $x$: largest integer smaller than $x$   | `\lfloor x \rfloor`
-| $\ceil{x}$  | ceiling of $x$: smallest integer larger than $x$ | `\lceil x \rceil`
+| $\floor{x}$ | floor of $x$: largest integer less than or equal to $x$ | `\lfloor x \rfloor`
+| $\ceil{x}$  | ceiling of $x$: smallest integer greater than or equal to $x$ | `\lceil x \rceil`
 | $\indic{A}(x)$, $\indicp{P}$ | indicator function (@sec-indicator-functions): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 : Notation used in this book {#tbl-notation-collected}
@@ -30,6 +33,19 @@ and the alternatives you may meet in other sources.
 [eta]: https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation"
 
 [^3]: depending on whether it is applied to a matrix or a function
+
+## Writing math in Quarto {#sec-writing-math-quarto}
+
+The third column of @tbl-notation-collected
+gives the LaTeX command for each symbol.
+Quarto and R Markdown documents write math in LaTeX syntax:
+put inline math between single dollar signs, as in `$x^2$`,
+and displayed equations between double dollar signs, as in `$$x^2$$`.
+The [equations section of Quarto's Markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#equations)
+shows the details.
+These notes also use shorthand macros,
+such as `\floor{x}` for $\floor{x}$,
+defined in the `latex-macros` submodule's `macros.qmd`.
 
 ## Natural numbers {#sec-notation-naturals}
 
@@ -131,5 +147,5 @@ And calculus still has [several competing notation systems](https://en.wikipedia
 In contrast, the field of statistics only emerged in the 
 [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), 
 so it's not surprising that the notation and terminology is still developing.
-Generalized linear models were only formalized in 1972 (@nelder1972generalized),
+Generalized linear models were only formalized in 1972 [@nelder1972generalized],
 which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).

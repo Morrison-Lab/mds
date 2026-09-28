@@ -52,7 +52,11 @@ $$
 
 Consider the real line $\Omega = \reals$,
 the set of nonnegative numbers $A = [0, \infty)$,
-and a continuous random variable $Y$.
+and a continuous
+[random variable](https://morrison-lab.github.io/rme/chapters/probability.html)
+$Y$.
+
+<!-- repoint the random-variable link to https://morrison-lab.github.io/pds/random-variables.html#def-random-variable once pds#8 is published -->
 
 1. **Set indicator** $\indic{A}(x)$:
    - For $x = 3.5$: since $3.5 \in [0, \infty)$, $\indic{A}(3.5) = 1$.
@@ -129,7 +133,13 @@ Kenneth Iverson introduced a compact notation in the programming language APL,
 later popularized in mathematics and computer science by Donald Knuth:
 the [Iverson bracket](https://en.wikipedia.org/wiki/Iverson_bracket).
 
-The Iverson bracket encloses any mathematical predicate $P$ inside square brackets:
+{{< slidebreak >}}
+
+:::{#def-iverson-bracket}
+#### Iverson bracket
+
+For any logical proposition $P$,
+the **Iverson bracket** of $P$ is
 
 $$
 [P] \eqdef \begin{cases}
@@ -138,9 +148,55 @@ $$
 \end{cases}
 $$
 
+:::
+
+::: notes
+The Iverson bracket $[P]$ is the predicate indicator $\indicp{P}$
+(@def-indicator-function) in different notation.
 Under this notation,
-set membership is written $[x \in A]$,
-and the Kronecker delta is simply $\delta_{ij} = [i = j]$.
+set membership is written $[x \in A]$.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-iverson-bracket}
+#### Evaluating Iverson brackets
+
+- $[3 > 2] = 1$, because $3 > 2$ is true.
+- $[2 > 3] = 0$, because $2 > 3$ is false.
+- $[4 \in \cb{1, 2}] = 0$, because $4$ is not an element of $\cb{1, 2}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-kronecker-delta}
+#### Kronecker delta
+
+For integers $i$ and $j$,
+the **Kronecker delta** is
+
+$$\delta_{ij} \eqdef [i = j]$$
+
+that is,
+$\delta_{ij} = 1$ when $i = j$
+and $\delta_{ij} = 0$ when $i \neq j$
+(@def-iverson-bracket).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-kronecker-delta}
+#### Evaluating the Kronecker delta
+
+- $\delta_{22} = [2 = 2] = 1$.
+- $\delta_{23} = [2 = 3] = 0$.
+- The entries of the $p \times p$ identity matrix
+  are Kronecker deltas: $(\matr{I}_p)_{ij} = \delta_{ij}$
+  (see [identity matrix](linear-algebra.qmd#def-identity-matrix)).
+
+:::
 
 #### Strengths and limitations of the Iverson bracket
 
@@ -151,6 +207,9 @@ For example:
 $$
 \sum_{x \in A} f(x) = \sum_{x} f(x) [x \in A]
 $$
+
+With $A = \cb{2, 4}$, $f(x) = x$, and $x$ running over $\cb{1, 2, 3, 4, 5}$,
+both sides equal $2 + 4 = 6$.
 
 However,
 in statistics and epidemiology,
@@ -197,21 +256,28 @@ and the information matrices ($\oinf$, $\einf$).
 
 Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:
 
+For subsets $A$ and $B$ of $\Omega$,
+with complement $A^c \eqdef \Omega \setminus A$,
+and for every $x \in \Omega$:
+
 - **Intersection ("and"):**
-  $\indicp{A \cap B} = \indicp{A} \cdot \indicp{B}$
+  $\indic{A \cap B}(x) = \indic{A}(x) \cdot \indic{B}(x)$
 - **Union ("or"):**
-  $\indicp{A \cup B} = \indicp{A} + \indicp{B} - \indicp{A} \cdot \indicp{B}$
+  $\indic{A \cup B}(x) = \indic{A}(x) + \indic{B}(x) - \indic{A}(x) \cdot \indic{B}(x)$
 - **Complement ("not"):**
-  $\indicp{\neg A} = 1 - \indicp{A}$
+  $\indic{A^c}(x) = 1 - \indic{A}(x)$
 - **Idempotence:**
-  $(\indicp{A})^2 = \indicp{A}$
+  $(\indic{A}(x))^2 = \indic{A}(x)$
 - **Expectation gives probability:**
   For any event $A$,
-  the expectation of its indicator is the probability of the event:
+  the [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)
+  of its indicator is the probability of the event:
 
   $$
-  \Expp[\indicp{A}] = 0 \cdot \Pr(\neg A) + 1 \cdot \Pr(A) = \Pr(A)
+  \Expp[\indic{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
   $$
+
+<!-- repoint the expectation link to https://morrison-lab.github.io/pds/expectation.html#def-expectation once pds#8 is published -->
 
 This fundamental identity connects probability theory directly to linear expectation.
 It provides the mathematical foundation for empirical proportions,

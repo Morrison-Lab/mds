@@ -12,7 +12,7 @@ format:
 
 {{< include mds/_notation.qmd >}}
 
-# References {.unnumbered}
+## References {.unnumbered}
 
 ::: {#refs}
 :::
