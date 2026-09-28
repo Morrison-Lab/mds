@@ -82,9 +82,7 @@ is a finite list of points
 $$a = x_0 < x_1 < \cdots < x_n = b.$$
 
 It splits $[a, b]$ into the $n$ subintervals $[x_{i-1}, x_i]$,
-of widths $\Delta x_i \eqdef x_i - x_{i-1}$,
-and its **mesh** is the largest width,
-$\|\mathcal{P}\| \eqdef \max_i \Delta x_i$.
+of widths $\Delta x_i \eqdef x_i - x_{i-1}$.
 
 [@larsonCalc11e, Section 4.3]
 
@@ -97,8 +95,31 @@ $\|\mathcal{P}\| \eqdef \max_i \Delta x_i$.
 
 The points $0 < 0.25 < 0.5 < 1$ form a partition of $[0, 1]$
 with $n = 3$ subintervals,
-of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
-so its mesh is $0.5$.
+of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-mesh}
+#### Mesh of a partition
+
+The **mesh** of a partition $\mathcal{P}$ (@def-partition) is its largest subinterval width,
+
+$$\|\mathcal{P}\| \eqdef \max_i \Delta x_i.$$
+
+[@larsonCalc11e, Section 4.3]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-mesh}
+#### The mesh of a partition of $[0, 1]$
+
+For the partition of $[0, 1]$ in @exm-partition,
+with widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
+the mesh is the largest of these widths, $\|\mathcal{P}\| = 0.5$.
 
 :::
 
@@ -110,7 +131,7 @@ so its mesh is $0.5$.
 Let $f$ be a bounded function on $[a, b]$.
 For each partition $\mathcal{P}$ of $[a, b]$ (@def-partition),
 choose a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$.
-The **Riemann integral** of $f$ over $[a, b]$ is the limit
+The **Riemann integral** of $f$ over $[a, b]$ is the limit as the mesh (@def-mesh) shrinks to zero:
 
 $$\int_a^b f(x)\,dx \eqdef \lim_{\|\mathcal{P}\| \to 0} \sum_{i=1}^n f(x_i^*)\,\Delta x_i,$$
 

@@ -11,7 +11,7 @@ $$\lim_{n \to \infty} S_n = \int_a^b f(x)\,dx.$$
 
 ::: proof
 The $n$ equal-width subintervals form a partition of $[a, b]$
-whose mesh is $(b - a)/n$,
+whose mesh (@def-mesh) is $(b - a)/n$,
 which goes to $0$ as $n \to \infty$.
 So $S_n$ is one of the sums in the limit that defines the integral
 (@def-riemann-integral),
