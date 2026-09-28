@@ -271,7 +271,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-09-28 16:23:58 (PDT)</p>
+  <p class="date">Last modified: 2026-09-28 16:24:06 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -339,8 +339,50 @@
 </section>
 <section class="slide level2">
 
+<div id="def-strict-subset" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Strict subset)</strong></span> A set <span class="math inline">\(A\)</span> is a <strong>strict subset</strong> of a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \subsetneq B\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#/def-subset">subset</a> of <span class="math inline">\(B\)</span> and <span class="math inline">\(A \neq B\)</span>.</p>
+</div>
+<aside class="notes proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span>Other sources call a strict subset a <strong>proper subset</strong>. Sources disagree about the symbol <span class="math inline">\(\subset\)</span>: some use it for “subset” (<span class="math inline">\(\subseteq\)</span>), and others for “strict subset” (<span class="math inline">\(\subsetneq\)</span>) (see <a href="https://en.wikipedia.org/wiki/Subset">Wikipedia: Subset</a>). These notes avoid <span class="math inline">\(\subset\)</span> and write <span class="math inline">\(\subseteq\)</span> or <span class="math inline">\(\subsetneq\)</span>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div id="def-superset" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Superset)</strong></span> A set <span class="math inline">\(B\)</span> is a <strong>superset</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(B \supseteq A\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#/def-subset">subset</a> of <span class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-strict-superset" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Strict superset)</strong></span> A set <span class="math inline">\(B\)</span> is a <strong>strict superset</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(B \supsetneq A\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#/def-strict-subset">strict subset</a> of <span class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-strict-subset-superset" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Strict subsets and supersets of die rolls)</strong></span> For the even rolls <span class="math inline">\(A = \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and the possible rolls <span class="math inline">\(B = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>:</p>
+<ul>
+<li><span class="math inline">\(A \subsetneq B\)</span>, because <span class="math inline">\(A \subseteq B\)</span> (<a href="#/exm-subset" class="quarto-xref">Example&nbsp;3</a>) and <span class="math inline">\(1 \in B\)</span> but <span class="math inline">\(1 \notin A\)</span>, so <span class="math inline">\(A \neq B\)</span>;</li>
+<li><span class="math inline">\(B \supseteq A\)</span> and <span class="math inline">\(B \supsetneq A\)</span>, for the same reasons;</li>
+<li><span class="math inline">\(B \subseteq B\)</span>, but <span class="math inline">\(B\)</span> is not a strict subset of itself, because <span class="math inline">\(B = B\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-empty-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Empty set)</strong></span> The <strong>empty set</strong>, denoted <span class="math inline">\(\emptyset\)</span>, is the set that has no elements.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Empty set)</strong></span> The <strong>empty set</strong>, denoted <span class="math inline">\(\emptyset\)</span>, is the set that has no elements.</p>
 </div>
 <aside class="notes proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>Other sources write <span class="math inline">\(\mathopen{}\left\{\right\}\mathclose{}\)</span> (see <a href="https://en.wikipedia.org/wiki/Empty_set">Wikipedia: Empty set</a>). Some sources call it the <strong>null set</strong>, but in measure theory a “null set” usually means a set of measure zero, which need not be empty.</p>
@@ -359,7 +401,7 @@
 <section class="slide level2">
 
 <div id="exm-empty-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Impossible die rolls)</strong></span> No roll of a six-sided die is greater than 6, so <span class="math inline">\(\mathopen{}\left\{x \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} : x &gt; 6\right\}\mathclose{} = \emptyset\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 5 (Impossible die rolls)</strong></span> No roll of a six-sided die is greater than 6, so <span class="math inline">\(\mathopen{}\left\{x \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} : x &gt; 6\right\}\mathclose{} = \emptyset\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -383,7 +425,7 @@
 <section id="combining-sets" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Combining sets</h2>
 <div id="def-union" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Union)</strong></span> The <strong>union</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of elements that are in <span class="math inline">\(A\)</span>, in <span class="math inline">\(B\)</span>, or in both:</p>
+<p><span class="theorem-title"><strong>Definition 8 (Union)</strong></span> The <strong>union</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of elements that are in <span class="math inline">\(A\)</span>, in <span class="math inline">\(B\)</span>, or in both:</p>
 <p><span class="math display">\[A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\{x : x \in A \text{ or } x \in B\right\}\mathclose{}\]</span></p>
 <p>More generally, the union of sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, written <span class="math inline">\(\bigcup_{i} A_i\)</span>, is the set of elements that are in at least one <span class="math inline">\(A_i\)</span>.</p>
 </div>
@@ -391,7 +433,7 @@
 <section class="slide level2">
 
 <div id="def-intersection" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Intersection)</strong></span> The <strong>intersection</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of elements that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 9 (Intersection)</strong></span> The <strong>intersection</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of elements that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\{x : x \in A \text{ and } x \in B\right\}\mathclose{}\]</span></p>
 <p>More generally, the intersection of sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, written <span class="math inline">\(\bigcap_{i} A_i\)</span>, is the set of elements that are in every <span class="math inline">\(A_i\)</span>.</p>
 </div>
@@ -399,14 +441,14 @@
 <section class="slide level2">
 
 <div id="def-set-difference" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Set difference)</strong></span> The <strong>set difference</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \setminus B\)</span>, is the set of elements of <span class="math inline">\(A\)</span> that are not in <span class="math inline">\(B\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 10 (Set difference)</strong></span> The <strong>set difference</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \setminus B\)</span>, is the set of elements of <span class="math inline">\(A\)</span> that are not in <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : x \notin B\right\}\mathclose{}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-set-operations" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Combining sets of die rolls)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> (the even rolls) and <span class="math inline">\(B = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> (the rolls of at most 3). Then:</p>
+<p><span class="theorem-title"><strong>Example 6 (Combining sets of die rolls)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> (the even rolls) and <span class="math inline">\(B = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> (the rolls of at most 3). Then:</p>
 <ul>
 <li><span class="math inline">\(A \cup B = \mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}\)</span>, the rolls that are even or at most 3;</li>
 <li><span class="math inline">\(A \cap B = \mathopen{}\left\{2\right\}\mathclose{}\)</span>, the only roll that is both;</li>
@@ -418,19 +460,19 @@
 <section id="countable-sets" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Countable sets</h2>
 <div id="def-countable-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Countable set)</strong></span> A set is <strong>countable</strong> if it is finite, or if its elements can be listed as a sequence <span class="math inline">\(a_1, a_2, a_3, \ldots\)</span> in which every element appears.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Countable set)</strong></span> A set is <strong>countable</strong> if it is finite, or if its elements can be listed as a sequence <span class="math inline">\(a_1, a_2, a_3, \ldots\)</span> in which every element appears.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-countably-infinite" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Countably infinite set)</strong></span> A set is <strong>countably infinite</strong> if it is <a href="#/def-countable-set">countable</a> and not finite.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Countably infinite set)</strong></span> A set is <strong>countably infinite</strong> if it is <a href="#/def-countable-set">countable</a> and not finite.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-countable-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Countable and uncountable sets)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 7 (Countable and uncountable sets)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> is countable, because it is finite.</li>
 <li>The non-negative integers <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> are countably infinite: the sequence <span class="math inline">\(0, 1, 2, \ldots\)</span> lists them.</li>
@@ -460,31 +502,31 @@
 <section id="functions" class="slide level2" data-number="4">
 <h2><span class="header-section-number">4</span> Functions</h2>
 <div id="def-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Function)</strong></span> A <strong>function</strong> <span class="math inline">\(f\)</span> from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(f : A \to B\)</span>, assigns to each element <span class="math inline">\(a \in A\)</span> exactly one element <span class="math inline">\(f(a) \in B\)</span>, called the value of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Function)</strong></span> A <strong>function</strong> <span class="math inline">\(f\)</span> from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(f : A \to B\)</span>, assigns to each element <span class="math inline">\(a \in A\)</span> exactly one element <span class="math inline">\(f(a) \in B\)</span>, called the value of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-function" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Doubling a die roll)</strong></span> The rule <span class="math inline">\(f(a) = 2a\)</span> defines a function <span class="math inline">\(f : \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} \to \mathbb{R}\)</span>, because it assigns exactly one real number to each possible roll; for example, <span class="math inline">\(f(3) = 6\)</span>. A rule that assigned both <span class="math inline">\(2\)</span> and <span class="math inline">\(-2\)</span> to the roll <span class="math inline">\(1\)</span> would not be a function, because a function assigns exactly one value to each element.</p>
+<p><span class="theorem-title"><strong>Example 8 (Doubling a die roll)</strong></span> The rule <span class="math inline">\(f(a) = 2a\)</span> defines a function <span class="math inline">\(f : \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} \to \mathbb{R}\)</span>, because it assigns exactly one real number to each possible roll; for example, <span class="math inline">\(f(3) = 6\)</span>. A rule that assigned both <span class="math inline">\(2\)</span> and <span class="math inline">\(-2\)</span> to the roll <span class="math inline">\(1\)</span> would not be a function, because a function assigns exactly one value to each element.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-domain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Domain)</strong></span> The <strong>domain</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Domain)</strong></span> The <strong>domain</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-codomain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Codomain)</strong></span> The <strong>codomain</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Codomain)</strong></span> The <strong>codomain</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-image" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Image)</strong></span> The <strong>image</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Image)</strong></span> The <strong>image</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
 <p><span class="math display">\[f(A) \stackrel{\text{def}}{=}\mathopen{}\left\{f(a) : a \in A\right\}\mathclose{}\]</span></p>
 </div>
 <aside class="notes proof remark">
@@ -504,7 +546,7 @@
 <section class="slide level2">
 
 <div id="exm-domain-codomain-image" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Domain, codomain, and image of the doubled die roll)</strong></span> For the function <span class="math inline">\(f : \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} \to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = 2a\)</span> from <a href="#/exm-function" class="quarto-xref">Example&nbsp;7</a>:</p>
+<p><span class="theorem-title"><strong>Example 9 (Domain, codomain, and image of the doubled die roll)</strong></span> For the function <span class="math inline">\(f : \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} \to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = 2a\)</span> from <a href="#/exm-function" class="quarto-xref">Example&nbsp;8</a>:</p>
 <ul>
 <li>the domain is <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>;</li>
 <li>the codomain is <span class="math inline">\(\mathbb{R}\)</span>;</li>
@@ -516,7 +558,7 @@
 <section id="extended-non-negative-real-numbers" class="slide level2" data-number="5">
 <h2><span class="header-section-number">5</span> Extended non-negative real numbers</h2>
 <div id="def-extended-nonneg-reals" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Extended non-negative real numbers)</strong></span> The <strong>extended non-negative real numbers</strong>, written <span class="math inline">\([0, \infty]\)</span>, are the non-negative real numbers together with an extra element <span class="math inline">\(\infty\)</span> that is greater than every real number:</p>
+<p><span class="theorem-title"><strong>Definition 17 (Extended non-negative real numbers)</strong></span> The <strong>extended non-negative real numbers</strong>, written <span class="math inline">\([0, \infty]\)</span>, are the non-negative real numbers together with an extra element <span class="math inline">\(\infty\)</span> that is greater than every real number:</p>
 <p><span class="math display">\[[0, \infty] \stackrel{\text{def}}{=}[0, \infty) \cup \mathopen{}\left\{\infty\right\}\mathclose{}\]</span></p>
 <p>Addition extends to <span class="math inline">\([0, \infty]\)</span> by setting <span class="math inline">\(x + \infty = \infty + x = \infty\)</span> for every <span class="math inline">\(x \in [0, \infty]\)</span>.</p>
 </div>
@@ -537,7 +579,7 @@
 <section class="slide level2">
 
 <div id="exm-extended-nonneg-reals" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Adding with <span class="math inline">\(\infty\)</span>)</strong></span> In <span class="math inline">\([0, \infty]\)</span>, <span class="math inline">\(2 + 3 = 5\)</span> as usual, while <span class="math inline">\(2 + \infty = \infty\)</span> and <span class="math inline">\(\infty + \infty = \infty\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 10 (Adding with <span class="math inline">\(\infty\)</span>)</strong></span> In <span class="math inline">\([0, \infty]\)</span>, <span class="math inline">\(2 + 3 = 5\)</span> as usual, while <span class="math inline">\(2 + \infty = \infty\)</span> and <span class="math inline">\(\infty + \infty = \infty\)</span>.</p>
 </div>
 
 

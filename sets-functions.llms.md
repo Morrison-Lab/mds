@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 16:23:58 (PDT)
+Last modified: 2026-09-28 16:24:06 (PDT)
 
 > **NOTE:**
 >
@@ -50,7 +50,31 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Empty set)** The **empty set**, denoted \\\emptyset\\, is the set that has no elements.
+> **Definition 4 (Strict subset)** A set \\A\\ is a **strict subset** of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+
+> **NOTE:**
+>
+> *Remark*. Other sources call a strict subset a **proper subset**. Sources disagree about the symbol \\\subset\\: some use it for “subset” (\\\subseteq\\), and others for “strict subset” (\\\subsetneq\\) (see [Wikipedia: Subset](https://en.wikipedia.org/wiki/Subset)). These notes avoid \\\subset\\ and write \\\subseteq\\ or \\\subsetneq\\.
+
+> **NOTE:**
+>
+> **Definition 5 (Superset)** A set \\B\\ is a **superset** of a set \\A\\, written \\B \supseteq A\\, if \\A\\ is a [subset](#def-subset) of \\B\\.
+
+> **NOTE:**
+>
+> **Definition 6 (Strict superset)** A set \\B\\ is a **strict superset** of a set \\A\\, written \\B \supsetneq A\\, if \\A\\ is a [strict subset](#def-strict-subset) of \\B\\.
+
+> **NOTE:**
+>
+> **Example 4 (Strict subsets and supersets of die rolls)** For the even rolls \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and the possible rolls \\B = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
+>
+> - \\A \subsetneq B\\, because \\A \subseteq B\\ ([Example 3](#exm-subset)) and \\1 \in B\\ but \\1 \notin A\\, so \\A \neq B\\;
+> - \\B \supseteq A\\ and \\B \supsetneq A\\, for the same reasons;
+> - \\B \subseteq B\\, but \\B\\ is not a strict subset of itself, because \\B = B\\.
+
+> **NOTE:**
+>
+> **Definition 7 (Empty set)** The **empty set**, denoted \\\emptyset\\, is the set that has no elements.
 
 > **NOTE:**
 >
@@ -58,7 +82,7 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Example 4 (Impossible die rolls)** No roll of a six-sided die is greater than 6, so \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \> 6\right\\\mathclose{} = \emptyset\\.
+> **Example 5 (Impossible die rolls)** No roll of a six-sided die is greater than 6, so \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \> 6\right\\\mathclose{} = \emptyset\\.
 
 > **NOTE:**
 >
@@ -80,7 +104,7 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Union)** The **union** of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
+> **Definition 8 (Union)** The **union** of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
 >
 > \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
 >
@@ -88,7 +112,7 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Intersection)** The **intersection** of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
+> **Definition 9 (Intersection)** The **intersection** of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
 >
 > \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
 >
@@ -96,13 +120,13 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Set difference)** The **set difference** of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
+> **Definition 10 (Set difference)** The **set difference** of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
 >
 > \\A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 5 (Combining sets of die rolls)** Let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ (the even rolls) and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ (the rolls of at most 3). Then:
+> **Example 6 (Combining sets of die rolls)** Let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ (the even rolls) and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ (the rolls of at most 3). Then:
 >
 > - \\A \cup B = \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}\\, the rolls that are even or at most 3;
 > - \\A \cap B = \mathopen{}\left\\2\right\\\mathclose{}\\, the only roll that is both;
@@ -113,15 +137,15 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Countable set)** A set is **countable** if it is finite, or if its elements can be listed as a sequence \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 11 (Countable set)** A set is **countable** if it is finite, or if its elements can be listed as a sequence \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 9 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 12 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 6 (Countable and uncountable sets)**  
+> **Example 7 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The non-negative integers \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
@@ -139,23 +163,23 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\, called the value of \\f\\ at \\a\\.
+> **Definition 13 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\, called the value of \\f\\ at \\a\\.
 
 > **NOTE:**
 >
-> **Example 7 (Doubling a die roll)** The rule \\f(a) = 2a\\ defines a function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\, because it assigns exactly one real number to each possible roll; for example, \\f(3) = 6\\. A rule that assigned both \\2\\ and \\-2\\ to the roll \\1\\ would not be a function, because a function assigns exactly one value to each element.
+> **Example 8 (Doubling a die roll)** The rule \\f(a) = 2a\\ defines a function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\, because it assigns exactly one real number to each possible roll; for example, \\f(3) = 6\\. A rule that assigned both \\2\\ and \\-2\\ to the roll \\1\\ would not be a function, because a function assigns exactly one value to each element.
 
 > **NOTE:**
 >
-> **Definition 11 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+> **Definition 14 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
 
 > **NOTE:**
 >
-> **Definition 12 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+> **Definition 15 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
 
 > **NOTE:**
 >
-> **Definition 13 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
+> **Definition 16 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
 
@@ -165,7 +189,7 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Example 8 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 7](#exm-function):
+> **Example 9 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 8](#exm-function):
 >
 > - the domain is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\;
 > - the codomain is \\\mathbb{R}\\;
@@ -177,7 +201,7 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 17 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -189,6 +213,6 @@ Last modified: 2026-09-28 16:23:58 (PDT)
 
 > **NOTE:**
 >
-> **Example 9 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 10 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 Back to top

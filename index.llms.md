@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 16:23:58 (PDT)
+Last modified: 2026-09-28 16:24:06 (PDT)
 
 ## Welcome
 
@@ -15,7 +15,7 @@ Cheng ([2025](#ref-cheng2025math))
 These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, and proof writing. Some key results are listed here, organized by topic:
 
 - [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, proof symbols, and indicator functions
-- [Sets and Functions](sets-functions.llms.md): sets, subsets, the empty set, unions and intersections, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
+- [Sets and Functions](sets-functions.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
 - [Algebra](algebra.llms.md): equalities and inequalities, infimum and supremum, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions, the Fundamental Theorem of Calculus, and double integrals
