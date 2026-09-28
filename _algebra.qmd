@@ -1,10 +1,8 @@
 {{< include latex-macros/macros.qmd >}}
 
-## Elementary Algebra
-
 {{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
 
-### Equalities
+## Equalities
 
 {{< include mds/_subfiles/algebra/_thm-equal-trans.qmd >}}
 
@@ -12,7 +10,7 @@
 
 {{< include mds/_subfiles/algebra/_thm-substitution.qmd >}}
 
-### Inequalities
+## Inequalities
 
 {{< include mds/_subfiles/algebra/_thm-add-ineq.qmd >}}
 
@@ -28,7 +26,7 @@
 
 {{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
 
-### Infimum and supremum
+## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
 
@@ -44,9 +42,7 @@
 
 {{< include mds/_subfiles/algebra/_exm-supremum.qmd >}}
 
-{{< slidebreak >}}
-
-### Sums
+## Sums
 
 {{< include mds/_subfiles/algebra/_thm-add-ident.qmd >}}
 
@@ -58,7 +54,7 @@
 
 {{< include mds/_subfiles/algebra/_thm-sum-assoc.qmd >}}
 
-### Products
+## Products
 
 <!-- heading shares the slide; do not re-flag -->
 
@@ -72,17 +68,17 @@
 
 {{< include mds/_subfiles/algebra/_thm-prod-assoc.qmd >}}
 
-### Division
+## Division
 
 {{< include mds/_subfiles/algebra/_thm-prod-div.qmd >}}
 
-### Sums and products together
+## Sums and products together
 
 <!-- heading shares the slide; do not re-flag -->
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
-### Quotients
+## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
 
@@ -102,7 +98,7 @@
 
 {{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
 
-### Exponentials and Logarithms
+## Exponentials and Logarithms
 
 In these notes,
 $\logf{x}$ is the natural logarithm of $x > 0$,

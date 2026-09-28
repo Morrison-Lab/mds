@@ -12,15 +12,15 @@ format:
 
 {{< include latex-macros/macros.qmd >}}
 
-# Derivatives {#sec-derivatives}
+## Derivatives {#sec-derivatives}
 
 {{< include mds/_calc-derivatives.qmd >}}
 
-# Integration {#sec-integration}
+## Integration {#sec-integration}
 
 {{< include mds/_calc-integrals.qmd >}}
 
-# Double Integrals {#sec-double-integrals}
+## Double Integrals {#sec-double-integrals}
 
 {{< include mds/_subfiles/_fubini_intro_thm.qmd >}}
 
@@ -48,7 +48,7 @@ format:
 
 {{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
 
-# Additional resources {#sec-additional-resources}
+## Additional resources {#sec-additional-resources}
 
 - @mosaiccalc
 - @khuri2003advanced
@@ -59,7 +59,7 @@ format:
    - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - @realanalysislifesaver (the rigorous foundations behind these results)
 
-# References {.unnumbered}
+## References {.unnumbered}
 
 ::: {#refs}
 :::

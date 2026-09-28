@@ -10,7 +10,7 @@ format:
     output-file: index.docx
 ---
 
-# Welcome {.unnumbered}
+## Welcome {.unnumbered}
 
 > Math is not just a way of calculating numerical answers;
 it is a way of thinking,
@@ -73,7 +73,7 @@ Quarto resolves `@id` cross-references only within one rendered page,
 so a host site that links to a result here
 uses an explicit link, `[text](notation.qmd#id)`.
 
-# References {.unnumbered}
+## References {.unnumbered}
 
 ::: {#refs}
 :::

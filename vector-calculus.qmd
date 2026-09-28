@@ -14,14 +14,14 @@ format:
 
 {{< include mds/_subfiles/_sec_vector_calc.qmd >}}
 
-# Additional resources {#sec-additional-resources}
+## Additional resources {#sec-additional-resources}
 
 See also the [Linear Algebra and Vector Calculus
 references](linear-algebra.qmd#sec-additional-resources).
 
 - [Hua Zhou](https://hua-zhou.github.io/)'s [lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
 
-# References {.unnumbered}
+## References {.unnumbered}
 
 ::: {#refs}
 :::
