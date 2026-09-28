@@ -1,0 +1,118 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+Probability and statistics describe events, outcomes, and parameters as sets,
+and random variables, densities, and measures as functions.
+This page collects the definitions of sets and functions
+that the Morrison Lab's probability and statistics notes build on.
+
+:::
+
+## Sets
+
+{{< include mds/_subfiles/sets-functions/_def-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-set-builder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-set-builder.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-subset.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_thm-subset-reflexive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-empty-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-empty-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_thm-empty-set-unique.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_thm-empty-subset.qmd >}}
+
+## Combining sets
+
+{{< include mds/_subfiles/sets-functions/_def-union.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-intersection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-set-difference.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-set-operations.qmd >}}
+
+## Countable sets
+
+{{< include mds/_subfiles/sets-functions/_def-countable-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-countably-infinite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-countable-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_thm-interval-uncountable.qmd >}}
+
+## Functions
+
+{{< include mds/_subfiles/sets-functions/_def-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-domain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-codomain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_def-image.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-domain-codomain-image.qmd >}}
+
+## Extended non-negative real numbers
+
+{{< include mds/_subfiles/sets-functions/_def-extended-nonneg-reals.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-extended-nonneg-reals.qmd >}}

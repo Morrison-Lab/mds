@@ -1,0 +1,10 @@
+:::{#def-function}
+#### Function
+
+A **function** $f$ from a set $A$ to a set $B$,
+written $f : A \to B$,
+assigns to each element $a \in A$
+exactly one element $f(a) \in B$,
+called the value of $f$ at $a$.
+
+:::

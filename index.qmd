@@ -29,6 +29,10 @@ organized by topic:
 - [Notation](notation.qmd):
   common symbols, natural numbers, the percent sign,
   proof symbols, and indicator functions
+- [Sets and Functions](sets-functions.qmd):
+  sets, subsets, the empty set, unions and intersections, countable sets,
+  functions with their domains, codomains, and images,
+  and the extended non-negative real numbers
 - [Algebra](algebra.qmd):
   equalities and inequalities, infimum and supremum,
   sums, products, quotients, exponentials and logarithms
@@ -58,13 +62,14 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
+| [Sets and Functions](sets-functions.qmd) | `mds/_sets-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.qmd) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd` and `_algebra.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_sets-functions.qmd`, and `_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.
