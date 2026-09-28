@@ -58,7 +58,7 @@ if all three conditions hold:
 {{< slidebreak >}}
 
 :::{#exm-continuous-on-sqrt}
-#### Continuity on $[0, 1]$ uses one-sided limits at the endpoints
+#### Continuity on $\lbrack 0, 1\rbrack$ uses one-sided limits at the endpoints
 
 Let $f(x) = \sqrt{x}$, defined for $x \ge 0$.
 Because $f$ is undefined for $x < 0$,
@@ -91,7 +91,7 @@ of widths $\Delta x_i \eqdef x_i - x_{i-1}$.
 {{< slidebreak >}}
 
 :::{#exm-partition}
-#### A partition of $[0, 1]$
+#### A partition of $\lbrack 0, 1\rbrack$
 
 The points $0 < 0.25 < 0.5 < 1$ form a partition of $[0, 1]$
 with $n = 3$ subintervals,
@@ -115,7 +115,7 @@ $$\|\mathcal{P}\| \eqdef \max_i \Delta x_i.$$
 {{< slidebreak >}}
 
 :::{#exm-mesh}
-#### The mesh of a partition of $[0, 1]$
+#### The mesh of a partition of $\lbrack 0, 1\rbrack$
 
 For the partition of $[0, 1]$ in @exm-partition,
 with widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
