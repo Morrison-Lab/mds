@@ -11,6 +11,23 @@ notation, algebra, calculus, linear algebra and vector calculus, as
 [Quarto](https://quarto.org/) fragments. It renders on its own as a
 website, and course sites include it as a git submodule.
 
+## Pages
+
+The site has one page per topic. Each page is a thin wrapper around one
+or more fragments, which are what a host site includes:
+
+| Page                                                                       | Fragment(s) to include                                                                                                 |
+|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| [Notation](https://morrison-lab.github.io/mds/notation.html)               | `mds/_notation.qmd`                                                                                                    |
+| [Algebra](https://morrison-lab.github.io/mds/algebra.html)                 | `mds/_algebra.qmd`                                                                                                     |
+| [Calculus](https://morrison-lab.github.io/mds/calculus.html)               | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
+| [Linear Algebra](https://morrison-lab.github.io/mds/linear-algebra.html)   | `mds/_subfiles/_sec_linear_algebra.qmd`                                                                                |
+| [Vector Calculus](https://morrison-lab.github.io/mds/vector-calculus.html) | `mds/_subfiles/_sec_vector_calc.qmd`                                                                                   |
+
+`_notation.qmd` and `_algebra.qmd` include `latex-macros/macros.qmd`
+themselves; a host page that includes any of the other fragments must
+include `latex-macros/macros.qmd` first, as the pages of this site do.
+
 ## Using these notes in another site
 
 Add this repository as a git submodule named `mds` at the root of the
