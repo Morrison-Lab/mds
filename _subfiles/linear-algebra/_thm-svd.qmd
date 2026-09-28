@@ -1,0 +1,107 @@
+:::{#thm-svd}
+#### Singular value decomposition
+
+Let $\matr{A}$ be an $n \times p$ matrix with real entries
+and $\operatorname{rank}(\matr{A}) = r$ (@def-rank).
+Then there are
+an $n \times n$ orthogonal matrix $\matr{U}$,
+a $p \times p$ orthogonal matrix $\matr{V}$ (@def-orthogonal-matrix),
+and numbers $\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$
+such that
+
+$$
+\underbrace{\matr{A}}_{n \times p}
+= \underbrace{\matr{U}}_{n \times n}\,
+\underbrace{\matr{D}}_{n \times p}\,
+\underbrace{\tp{\matr{V}}}_{p \times p}
+$$
+
+where $\matr{D}$ has entries $d_{ii} = \sigma_i$ for $i = 1, \ldots, r$
+and every other entry $0$.
+The numbers $\sigma_1, \ldots, \sigma_r$ are the **singular values** of $\matr{A}$,
+and $\matr{U}\matr{D}\tp{\matr{V}}$ is a
+**singular value decomposition** (SVD) of $\matr{A}$.
+
+:::
+
+::: notes
+The proof is outside the scope of these notes;
+see @banerjee2014linear [Chapter 12, Theorem 12.1, p. 373].
+Unlike the spectral theorem (@thm-spectral),
+the SVD applies to every real matrix,
+including one that is not square or not symmetric.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-svd}
+#### The SVD of a $3 \times 2$ matrix
+
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
+\qquad
+\matr{U} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
+0 & 1 & 0 \\
+\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\qquad
+\matr{D} = \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\qquad
+\matr{V} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+$$
+
+The columns of $\matr{U}$ are orthonormal,
+and $\matr{V}$ is the orthogonal matrix $\matr{Q}$ from @exm-spectral,
+so $\matr{U}$ and $\matr{V}$ are orthogonal.
+$\matr{V}$ is symmetric, so $\tp{\matr{V}} = \matr{V}$. Then
+
+$$
+\ba
+\matr{D}\tp{\matr{V}}
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute; move the scalar to the front)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} 2 & 2 \\ \sqrt{2} & -\sqrt{2} \\ 0 & 0 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \begin{bmatrix} \sqrt{2} & \sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
+&& \text{(divide by } \sqrt{2} \text{)}
+\ea
+$$
+
+and
+
+$$
+\ba
+\matr{U}\matr{D}\tp{\matr{V}}
+&= \begin{bmatrix}
+\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
+0 & 1 & 0 \\
+\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix} \sqrt{2} & \sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \begin{bmatrix}
+\frac{\sqrt{2}}{\sqrt{2}} + 0 + 0 & \frac{\sqrt{2}}{\sqrt{2}} + 0 + 0 \\
+0 + 1 + 0 & 0 - 1 + 0 \\
+\frac{\sqrt{2}}{\sqrt{2}} + 0 - 0 & \frac{\sqrt{2}}{\sqrt{2}} + 0 - 0
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(simplify)}
+\ea
+$$
+
+which is $\matr{A}$.
+$\matr{A}$ has rank $2$, because its two columns are linearly independent,
+and its singular values are $\sigma_1 = 2$ and $\sigma_2 = \sqrt{2}$.
+
+:::

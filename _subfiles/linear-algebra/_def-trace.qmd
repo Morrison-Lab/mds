@@ -1,0 +1,22 @@
+:::{#def-trace}
+
+#### Trace
+
+The **trace** of a $p \times p$ matrix $\matr{M}$
+is the sum of its diagonal entries:
+
+$$\operatorname{tr}(\matr{M}) \eqdef \sum_{i=1}^p M_{ii}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-trace}
+
+#### The trace of a $2 \times 2$ matrix
+
+$$
+\operatorname{tr}\paren{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}} = 1 + 4 = 5
+$$
+
+:::

@@ -1,0 +1,156 @@
+:::{#thm-svd-evd}
+#### The SVD gives the eigendecomposition of the cross-product matrix
+
+Let $\matr{A} = \matr{U}\matr{D}\tp{\matr{V}}$
+be a singular value decomposition (@thm-svd) of an $n \times p$ matrix $\matr{A}$
+with singular values $\sigma_1, \ldots, \sigma_r$.
+Then
+
+$$
+\underbrace{\tp{\matr{A}}\matr{A}}_{p \times p}
+= \underbrace{\matr{V}}_{p \times p}\,
+\underbrace{\matr{\Lambda}}_{p \times p}\,
+\underbrace{\tp{\matr{V}}}_{p \times p}
+$$
+
+where $\matr{\Lambda} \eqdef \tp{\matr{D}}\matr{D}$
+is the $p \times p$ diagonal matrix
+with $\lambda_i = \sigma_i^2$ for $i = 1, \ldots, r$
+and $\lambda_i = 0$ for $i > r$.
+So $\matr{V}\matr{\Lambda}\tp{\matr{V}}$ is an eigendecomposition
+(@thm-spectral) of $\tp{\matr{A}}\matr{A}$:
+column $i$ of $\matr{V}$ is an eigenvector of $\tp{\matr{A}}\matr{A}$
+for the eigenvalue $\lambda_i$.
+
+:::
+
+::: proof
+
+**The factorization.**
+
+$$
+\ba
+\tp{\matr{A}}\matr{A}
+&= \tp{\paren{\matr{U}\matr{D}\tp{\matr{V}}}}\,\matr{U}\matr{D}\tp{\matr{V}}
+&& \text{(substitute the SVD)}
+\\
+&= \tp{\paren{\tp{\matr{V}}}}\,\tp{\matr{D}}\,\tp{\matr{U}}\,\matr{U}\matr{D}\tp{\matr{V}}
+&& \text{(transpose of a product, twice)}
+\\
+&= \matr{V}\,\tp{\matr{D}}\,\tp{\matr{U}}\,\matr{U}\matr{D}\tp{\matr{V}}
+&& \text{(transposing twice changes nothing)}
+\\
+&= \matr{V}\,\tp{\matr{D}}\,\paren{\tp{\matr{U}}\matr{U}}\,\matr{D}\tp{\matr{V}}
+&& \text{(regroup; matrix multiplication is associative)}
+\\
+&= \matr{V}\,\tp{\matr{D}}\,\matr{I}_n\,\matr{D}\tp{\matr{V}}
+&& \text{(} \matr{U} \text{ is orthogonal)}
+\\
+&= \matr{V}\,\paren{\tp{\matr{D}}\matr{D}}\,\tp{\matr{V}}
+&& \text{(identity matrix)}
+\\
+&= \matr{V}\matr{\Lambda}\tp{\matr{V}}
+&& \text{(definition of } \matr{\Lambda} \text{)}
+\ea
+$$
+
+**The entries of $\matr{\Lambda}$.**
+Write $\lambda_{ij}$ for entry $(i, j)$ of $\matr{\Lambda}$.
+Only the entries $d_{kk}$ with $k \le r$ of $\matr{D}$ can be nonzero.
+
+$$
+\ba
+\lambda_{ij}
+&= \sum_{k=1}^{n} (\tp{\matr{D}})_{ik}\, d_{kj}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \sum_{k=1}^{n} d_{ki}\, d_{kj}
+&& \text{(definition of the transpose)}
+\ea
+$$
+
+The term for $k$ is nonzero only if $k = i \le r$ and $k = j$.
+So $\lambda_{ij} = 0$ when $i \neq j$,
+$\lambda_{ii} = d_{ii}^2 = \sigma_i^2$ when $i \le r$,
+and $\lambda_{ii} = 0$ when $i > r$.
+
+**The eigenvectors.**
+Write $\vecf{v}_i$ for column $i$ of $\matr{V}$,
+and $\vecf{e}_i$ for the indicator vector (@def-indicator-vector) of length $p$.
+Column $i$ of $\tp{\matr{V}}\matr{V} = \matr{I}_p$ says $\tp{\matr{V}}\vecf{v}_i = \vecf{e}_i$.
+Then
+
+$$
+\ba
+\tp{\matr{A}}\matr{A}\,\vecf{v}_i
+&= \matr{V}\matr{\Lambda}\,\tp{\matr{V}}\vecf{v}_i
+&& \text{(the factorization)}
+\\
+&= \matr{V}\matr{\Lambda}\,\vecf{e}_i
+&& \text{(} \tp{\matr{V}}\vecf{v}_i = \vecf{e}_i \text{)}
+\\
+&= \matr{V}\,(\lambda_i\,\vecf{e}_i)
+&& \text{(column } i \text{ of the diagonal matrix } \matr{\Lambda} \text{)}
+\\
+&= \lambda_i\,\matr{V}\vecf{e}_i
+&& \text{(move the scalar } \lambda_i \text{ to the front)}
+\\
+&= \lambda_i\,\vecf{v}_i
+&& \text{(} \matr{V}\vecf{e}_i \text{ is column } i \text{ of } \matr{V} \text{)}
+\ea
+$$
+
+and $\vecf{v}_i \neq \vzero$ because it has norm $1$.
+
+:::
+
+::: notes
+@thm-svd-evd matches @banerjee2014linear [Chapter 12, p. 373],
+which constructs the SVD from the spectral decomposition of $\tp{\matr{A}}\matr{A}$
+and sets $\sigma_i = \sqrt{\lambda_i}$.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-svd-evd}
+#### The cross-product matrix of the SVD example
+
+For $\matr{A}$ in @exm-svd:
+
+$$
+\ba
+\tp{\matr{A}}\matr{A}
+&= \begin{bmatrix} 1 & 1 & 1 \\ 1 & -1 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(definition of the transpose)}
+\\
+&= \begin{bmatrix} 1 + 1 + 1 & 1 - 1 + 1 \\ 1 - 1 + 1 & 1 + 1 + 1 \end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}
+&& \text{(add)}
+\ea
+$$
+
+@thm-svd-evd says its eigenvalues are
+$\sigma_1^2 = 4$ and $\sigma_2^2 = 2$,
+with the columns of $\matr{V}$ as eigenvectors.
+Checking the first column, up to its factor $\frac{1}{\sqrt{2}}$:
+
+$$
+\begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}
+\begin{bmatrix} 1 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 4 \\ 4 \end{bmatrix}
+= 4 \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+$$
+
+and the second:
+
+$$
+\begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}
+\begin{bmatrix} 1 \\ -1 \end{bmatrix}
+= \begin{bmatrix} 2 \\ -2 \end{bmatrix}
+= 2 \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+$$
+
+:::

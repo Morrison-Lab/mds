@@ -1,0 +1,84 @@
+:::{#thm-spectral}
+#### Spectral theorem for symmetric matrices
+
+If $\matr{A}$ is a $p \times p$ symmetric matrix (@def-symmetric-matrix)
+with real entries,
+then there are a $p \times p$ orthogonal matrix $\matr{Q}$ (@def-orthogonal-matrix)
+and a $p \times p$ diagonal matrix $\matr{\Lambda}$ (@def-diagonal-matrix)
+with real diagonal entries $\lambda_1, \ldots, \lambda_p$ such that
+
+$$
+\underbrace{\matr{A}}_{p \times p}
+= \underbrace{\matr{Q}}_{p \times p}\,
+\underbrace{\matr{\Lambda}}_{p \times p}\,
+\underbrace{\tp{\matr{Q}}}_{p \times p}
+$$
+
+Each $\lambda_i$ is an eigenvalue of $\matr{A}$ (@def-eigenvalue),
+and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\lambda_i$.
+The factorization $\matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+is the **eigendecomposition**, or **spectral decomposition**, of $\matr{A}$.
+
+:::
+
+::: notes
+The proof, by induction on $p$, is outside the scope of these notes;
+see @banerjee2014linear [Chapter 11, Theorem 11.27, p. 349],
+which states the result in the equivalent form
+$\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$.
+The two forms are equivalent because $\tp{\matr{Q}}\matr{Q} = \matr{Q}\tp{\matr{Q}} = \matr{I}_p$:
+multiply $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+by $\tp{\matr{Q}}$ on the left and by $\matr{Q}$ on the right.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-spectral}
+#### The eigendecomposition of a $2 \times 2$ symmetric matrix
+
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$,
+@exm-eigenvalue found the eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$.
+Each has norm $\sqrt{2}$ (@def-euclidean-norm),
+so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors.
+Put them in the columns of $\matr{Q}$,
+and the matching eigenvalues on the diagonal of $\matr{\Lambda}$:
+
+$$
+\matr{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\qquad
+\matr{\Lambda} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+
+This $\matr{Q}$ is symmetric, so $\tp{\matr{Q}} = \matr{Q}$. Then
+
+$$
+\ba
+\matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(collect the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(multiply the first two matrices)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 4 & 2 \\ 2 & 4 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+&& \text{(multiply by } \tfrac{1}{2} \text{)}
+\ea
+$$
+
+which is $\matr{A}$.
+
+:::

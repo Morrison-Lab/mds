@@ -1,0 +1,82 @@
+:::{#def-eigenvalue}
+#### Eigenvalue and eigenvector
+
+Let $\matr{A}$ be a $p \times p$ matrix.
+A number $\lambda$ is an **eigenvalue** of $\matr{A}$,
+and a vector $\vecf{v} \neq \vzero$ of length $p$
+is an **eigenvector** of $\matr{A}$ for $\lambda$, if
+
+$$
+\underbrace{\matr{A}}_{p \times p}\,\underbrace{\vecf{v}}_{p \times 1}
+= \lambda\,\underbrace{\vecf{v}}_{p \times 1}
+$$
+
+:::
+
+::: notes
+Multiplying by $\matr{A}$ rescales an eigenvector by $\lambda$
+and does not change the line it lies on.
+Any nonzero multiple $c\,\vecf{v}$ of an eigenvector
+is also an eigenvector for the same $\lambda$,
+because $\matr{A}(c\,\vecf{v}) = c\,\matr{A}\vecf{v} = c\,\lambda\vecf{v} = \lambda\,(c\,\vecf{v})$.
+Some real matrices, such as a rotation by $90$ degrees,
+have no real eigenvalues;
+their eigenvalues are complex numbers
+[@banerjee2014linear, Chapter 11, Example 11.2 and Definition 11.1, pp. 312-313].
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-eigenvalue}
+#### Eigenvectors of a $2 \times 2$ matrix
+
+Let $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$.
+
+$(1, 1)$ is an eigenvector for the eigenvalue $3$:
+
+$$
+\ba
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} 1 \\ 1 \end{bmatrix}
+&= \begin{bmatrix} 2 + 1 \\ 1 + 2 \end{bmatrix}
+&& \text{(definition of matrix-vector multiplication)}
+\\
+&= 3 \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+&& \text{(factor out } 3 \text{)}
+\ea
+$$
+
+$(1, -1)$ is an eigenvector for the eigenvalue $1$:
+
+$$
+\ba
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} 1 \\ -1 \end{bmatrix}
+&= \begin{bmatrix} 2 - 1 \\ 1 - 2 \end{bmatrix}
+&& \text{(definition of matrix-vector multiplication)}
+\\
+&= 1 \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+&& \text{(factor out } 1 \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-eigenvector}
+#### A vector that is not an eigenvector
+
+For the same $\matr{A}$,
+$(1, 0)$ is not an eigenvector:
+
+$$
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} 1 \\ 0 \end{bmatrix}
+= \begin{bmatrix} 2 \\ 1 \end{bmatrix},
+$$
+
+and no number $\lambda$ gives $(2, 1) = \lambda\,(1, 0)$,
+because the second entries would need $1 = \lambda \cd 0$.
+
+:::
