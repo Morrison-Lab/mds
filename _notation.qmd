@@ -4,8 +4,8 @@ Mathematical notation is not standardized.
 This section states the conventions these notes use,
 and the alternatives you may meet in other sources.
 
-<!-- repoint the expectation link to https://morrison-lab.github.io/pds/expectation.html#def-expectation once pds#8 is published -->
-<!-- repoint the independence link to https://morrison-lab.github.io/pds/independence.html#def-indpt once pds#8 is published -->
+<!-- repoint the expectation link to pds expectation.qmd#def-expectation once pds#8 is published -->
+<!-- repoint the independence link to pds independence.qmd#def-indpt once pds#8 is published -->
 
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------

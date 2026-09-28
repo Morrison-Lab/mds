@@ -31,7 +31,7 @@ $$
 
 :::
 
-<!-- repoint the joint-distribution link to https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint once pds#8 is published -->
+<!-- repoint the joint-distribution link to pds expectation.qmd#cor-fubini-joint once pds#8 is published -->
 
 ::: notes
 Applied courses rarely need the measure-theoretic generalization itself,
@@ -56,7 +56,7 @@ Let $X$ and $Y$ be independent $\operatorname{Exponential}(1)$
 with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf)
 $f(x, y) = e^{-(x+y)}$ for $x, y \ge 0$.
 
-<!-- repoint the random-variable and density links to https://morrison-lab.github.io/pds/random-variables.html#def-random-variable and https://morrison-lab.github.io/pds/random-variables.html#def-pdf once pds#8 is published -->
+<!-- repoint the random-variable and density links to pds random-variables.qmd#def-random-variable and pds random-variables.qmd#def-pdf once pds#8 is published -->
 
 The probability $P(X \le 1,\, Y \le 1)$
 is the integral of $f$ over $[0, 1]^2$

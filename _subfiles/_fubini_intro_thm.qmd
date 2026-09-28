@@ -9,7 +9,7 @@ included to make the
 corollary in the probability chapter of *Regression Models for Epidemiology*
 follow from a stated theorem rather than from an aside.
 
-<!-- repoint the joint-distribution link to https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint once pds#8 is published -->
+<!-- repoint the joint-distribution link to pds expectation.qmd#cor-fubini-joint once pds#8 is published -->
 
 {{< slidebreak >}}
 

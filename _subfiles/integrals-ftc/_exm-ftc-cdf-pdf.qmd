@@ -20,7 +20,7 @@ $F(t) = P(T \le t)$, from the PDF.
 Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\lambda$ to
 antidifferentiate the integrand:
 
-<!-- repoint the random-variable, PDF and CDF links to https://morrison-lab.github.io/pds/random-variables.html (#def-random-variable, #def-pdf, #def-cdf) once pds#8 is published -->
+<!-- repoint the random-variable, PDF and CDF links to pds random-variables.qmd (#def-random-variable, #def-pdf, #def-cdf) once pds#8 is published -->
 
 $$
 \ba
