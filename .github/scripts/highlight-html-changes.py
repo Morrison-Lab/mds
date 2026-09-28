@@ -8,10 +8,92 @@ import os
 import sys
 import re
 import difflib
+import math
+import shutil
 import subprocess
+import tempfile
+import time
 from pathlib import Path
 from html.parser import HTMLParser
 from html import escape, unescape
+
+def _env_float(name, default):
+    """Read a float from the environment, falling back to `default` when the
+    variable is unset, empty, unparsable, or not finite (inf/nan)."""
+    raw = os.environ.get(name, '').strip()
+    try:
+        value = float(raw) if raw else default
+    except ValueError:
+        return default
+    return value if math.isfinite(value) else default
+
+
+# Elements with more visible text than this are left out of the pairwise
+# comparison (never highlighted). A backstop: with the word boundary in
+# ELEMENT_PATTERN, real Quarto elements stay far below it.
+MAX_ELEMENT_TEXT_CHARS = max(0, int(_env_float('HIGHLIGHT_MAX_ELEMENT_CHARS', 20000)))
+# Last-resort bound on one page's pairwise pass, so no future pathological
+# page can consume the job: when it runs out, the page keeps its
+# unhighlighted render, the log says why, and the page banner says so.
+PAGE_TIME_BUDGET_SECONDS = max(0.0, _env_float('HIGHLIGHT_PAGE_BUDGET_SECONDS', 60.0))
+
+COMPARABLE_ELEMENTS = 'p|h[1-6]|li|blockquote'
+# The \b is load-bearing. Without it `<p` also matches `<pre ...>`, and since
+# no `</p>` closes a <pre>, the match runs through the code chunk -- and any
+# htmlwidget <script> JSON after it -- to the next real paragraph's </p>.
+# On algebra.html that made one 10 MB "element" (a downlit <pre>, a plotly
+# widget, and Exercise 2's sentence), whose quadratic ratio() hung the
+# preview job (Morrison-Lab/mds#10). It must stay an rf-string: in a plain
+# f-string, \b is a backspace character.
+ELEMENT_PATTERN = re.compile(
+    rf'(<(?:{COMPARABLE_ELEMENTS})\b[^>]*>.*?</(?:{COMPARABLE_ELEMENTS})>)',
+    re.DOTALL,
+)
+NON_PROSE_RE = re.compile(r'<(?:script|style)\b', re.IGNORECASE)
+SCRIPT_STYLE_BLOCK_RE = re.compile(
+    r'<(script|style)\b[^>]*>.*?</\1\s*>', re.DOTALL | re.IGNORECASE
+)
+
+
+def is_comparable(elem, text, max_chars):
+    """Whether an element takes part in the pairwise comparison: it has
+    text, the text is at most `max_chars` long, and it embeds no
+    <script>/<style> block."""
+    return (
+        bool(text)
+        and len(text) <= max_chars
+        and not NON_PROSE_RE.search(elem)
+    )
+
+
+def visible_snippet(elem, width=60):
+    """The first `width` characters of an element's reader-visible text,
+    with script/style payloads dropped, for naming it in a log line."""
+    text = SCRIPT_STYLE_BLOCK_RE.sub(' ', elem)
+    text = unescape(re.sub(r'<[^>]+>', ' ', text))
+    text = ' '.join(text.split())
+    return text if len(text) <= width else text[:width - 3] + '...'
+
+
+def write_atomic(path, text):
+    """Write `text` to `path` via a temporary file in the same directory and
+    os.replace(), so a job killed mid-write (the step's timeout) leaves the
+    old file whole instead of deploying a truncated page."""
+    path = Path(path)
+    fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f'.{path.name}.', suffix='.tmp')
+    try:
+        with os.fdopen(fd, 'w', encoding='utf-8') as f:
+            f.write(text)
+        if path.exists():
+            shutil.copymode(path, tmp)
+        os.replace(tmp, path)
+    except BaseException:
+        try:
+            os.unlink(tmp)
+        except FileNotFoundError:
+            pass
+        raise
+
 
 class HTMLDiffer:
     """Compare HTML files and inject highlighting for changed sections."""
@@ -221,9 +303,13 @@ class HTMLDiffer:
         return unescape(text).strip()
     
     def highlight_changed_elements(self, old_html, new_html):
-        """Find and highlight changed paragraphs and sections in the HTML."""
+        """Find and highlight changed paragraphs and sections in the HTML.
+
+        Returns (html, changes_made, note). `note` is None, or a sentence
+        saying why the page was left unhighlighted, for the page banner.
+        """
         if not old_html:
-            return new_html, 0
+            return new_html, 0, None
 
         # Constants for similarity matching
         SIMILARITY_THRESHOLD_MIN = 0.5  # Minimum similarity to consider elements related
@@ -236,20 +322,8 @@ class HTMLDiffer:
         # element-level highlighting for such pages rather than block the
         # workflow (see Morrison-Lab/mds#7).
         MAX_ELEMENTS_FOR_PAIRWISE = 500
-        # Each SequenceMatcher.ratio() call below is itself
-        # O(len(old_text) * len(new_text)), so the 500-element cap above
-        # bounds element *count* but not per-element size, and a page with
-        # a few very long theorem/definition-style elements could in
-        # theory still be slow even under that cap. Two attempts at a
-        # cheap per-element-length cap here (truncating to a fixed
-        # prefix, and substituting quick_ratio()) each introduced a
-        # correctness regression -- silently dropping highlighting for an
-        # edit outside the truncated prefix, or for an edit whose
-        # quick_ratio() overshoots SIMILARITY_THRESHOLD_MAX -- so this is
-        # deliberately left uncapped and tracked as a follow-up
-        # (Morrison-Lab/mds#10) rather than shipped with a subtle bug.
-        # The reported hang (mds#7) was many small elements, which the
-        # count cap above already fixes.
+        # The count cap above does not bound per-element size: see
+        # ELEMENT_PATTERN and MAX_ELEMENT_TEXT_CHARS at module level.
 
         # Extract main content for both versions. new_content's span within
         # new_html is captured explicitly (not re-derived later) so the
@@ -259,23 +333,20 @@ class HTMLDiffer:
         new_span = self._find_main_content_span(new_html)
         new_content = new_html if new_span is None else new_html[new_span[0]:new_span[1]]
 
-        # Define element types to compare
-        COMPARABLE_ELEMENTS = 'p|h[1-6]|li|blockquote'
-        element_pattern = f'(<(?:{COMPARABLE_ELEMENTS})[^>]*>.*?</(?:{COMPARABLE_ELEMENTS})>)'
-
         # Use finditer (not findall) so we keep each element's position in
         # new_content -- that lets us splice all replacements into the
         # output in a single pass below, instead of re-scanning the whole
         # (growing) HTML string once per changed element.
-        old_matches = list(re.finditer(element_pattern, old_content, re.DOTALL))
-        new_matches = list(re.finditer(element_pattern, new_content, re.DOTALL))
+        old_matches = list(ELEMENT_PATTERN.finditer(old_content))
+        new_matches = list(ELEMENT_PATTERN.finditer(new_content))
 
         # Create a list of (text, element) tuples to handle duplicates
         old_elem_list = []
+        skipped_elements = []  # the new page's, which a reader sees
         for m in old_matches:
             elem = m.group(1)
             text = self.extract_text_from_element(elem)
-            if text:  # Only store non-empty elements
+            if is_comparable(elem, text, MAX_ELEMENT_TEXT_CHARS):
                 old_elem_list.append((text, elem))
 
         if len(old_elem_list) > MAX_ELEMENTS_FOR_PAIRWISE or len(new_matches) > MAX_ELEMENTS_FOR_PAIRWISE:
@@ -285,7 +356,7 @@ class HTMLDiffer:
                 f"elements exceeds the {MAX_ELEMENTS_FOR_PAIRWISE}-element cap",
                 file=sys.stderr,
             )
-            return new_html, 0
+            return new_html, 0, None
 
         # Track which old elements have been matched to avoid reuse
         used_old_indices = set()
@@ -295,21 +366,68 @@ class HTMLDiffer:
         replacements = []
         changes_made = 0
 
+        # Old element indices by exact text. An unchanged element (the
+        # common case on any page) finds its identical, still-unused twin
+        # here in O(1) instead of by a ratio() against every old element;
+        # the outcome is the same one the full scan reached (a 1.0 ratio,
+        # which is above SIMILARITY_THRESHOLD_MAX, so nothing to highlight).
+        old_indices_by_text = {}
+        for idx, (old_text, _) in enumerate(old_elem_list):
+            old_indices_by_text.setdefault(old_text, []).append(idx)
+
+        deadline = time.monotonic() + PAGE_TIME_BUDGET_SECONDS
+
         for m in new_matches:
             new_elem = m.group(1)
             new_text = self.extract_text_from_element(new_elem)
-            if not new_text:
+            if not is_comparable(new_elem, new_text, MAX_ELEMENT_TEXT_CHARS):
+                if new_text:
+                    skipped_elements.append(new_elem)
                 continue
 
-            # Try to find a matching old element
+            if any(idx not in used_old_indices
+                   for idx in old_indices_by_text.get(new_text, ())):
+                continue  # Unchanged element
+
+            # Try to find a matching old element. The matcher keeps
+            # new_text as its second sequence, whose index difflib builds
+            # once rather than once per candidate. real_quick_ratio() and
+            # quick_ratio() are upper bounds on ratio(), so a candidate
+            # whose bound cannot beat best_ratio is skipped without
+            # changing which candidate wins (ties already kept the first).
             best_match_idx = None
             best_ratio = 0.0
+            matcher = difflib.SequenceMatcher(None)
+            matcher.set_seq2(new_text)
 
             for idx, (old_text, old_elem) in enumerate(old_elem_list):
                 if idx in used_old_indices:
                     continue  # Already matched this element
 
-                ratio = difflib.SequenceMatcher(None, old_text, new_text).ratio()
+                if time.monotonic() > deadline:
+                    print(
+                        f"  WARNING: skipping element-level diff highlighting: "
+                        f"pairwise matching exceeded the "
+                        f"{PAGE_TIME_BUDGET_SECONDS:g}s per-page budget "
+                        f"(HIGHLIGHT_PAGE_BUDGET_SECONDS)",
+                        file=sys.stderr, flush=True,
+                    )
+                    # Deliberately drop the replacements found so far: the
+                    # page is left wholly unhighlighted rather than partly
+                    # highlighted, which would read as "nothing else changed".
+                    return new_html, 0, (
+                        "Highlighting was skipped for this page: comparing it "
+                        "with the published version took longer than the "
+                        f"{PAGE_TIME_BUDGET_SECONDS:g}-second limit, so changed "
+                        "text on it is not marked."
+                    )
+
+                matcher.set_seq1(old_text)
+                if matcher.real_quick_ratio() <= best_ratio:
+                    continue
+                if matcher.quick_ratio() <= best_ratio:
+                    continue
+                ratio = matcher.ratio()
                 if ratio > best_ratio:
                     best_ratio = ratio
                     best_match_idx = idx
@@ -349,8 +467,19 @@ class HTMLDiffer:
                     replacements.append((m.start(), m.end(), highlighted_elem))
                     changes_made += 1
 
+        if skipped_elements:
+            print(
+                f"  Left {len(skipped_elements)} element(s) unhighlighted: "
+                f"each embeds <script>/<style> content or exceeds "
+                f"{MAX_ELEMENT_TEXT_CHARS} characters of text "
+                f"(HIGHLIGHT_MAX_ELEMENT_CHARS):",
+                file=sys.stderr, flush=True,
+            )
+            for elem in skipped_elements:
+                print(f"    - {visible_snippet(elem)!r}", file=sys.stderr, flush=True)
+
         if not replacements:
-            return new_html, 0
+            return new_html, 0, None
 
         # Splice every replacement into new_content in a single left-to-right
         # pass (spans came from finditer over new_content, so they're
@@ -381,7 +510,7 @@ class HTMLDiffer:
             start, end = new_span
             highlighted_new_html = new_html[:start] + highlighted_content + new_html[end:]
 
-        return highlighted_new_html, changes_made
+        return highlighted_new_html, changes_made, None
     
     def find_changed_sections(self, old_html, new_html):
         """Find sections that changed between old and new HTML."""
@@ -418,10 +547,12 @@ class HTMLDiffer:
         
         return diff_lines if changes > 0 else None, similarity
     
-    def inject_combined_banner(self, html, num_changes, similarity, filename):
-        """Add a combined banner about all changes to the HTML."""
+    def inject_combined_banner(self, html, num_changes, similarity, filename, note=None):
+        """Add a combined banner about all changes to the HTML. `note`, when
+        given, is one more line saying why the page is not highlighted."""
         # Calculate change percentage
         change_pct = int((1 - similarity) * 100)
+        note_html = f'\n        <br>\n        <strong>Not highlighted:</strong> {escape(note)}' if note else ''
         
         # Create combined notice HTML - using CSS class defined in styles.css
         # Note: DOCX link removed from chapter banners - it's only in the home page banner
@@ -433,7 +564,7 @@ class HTMLDiffer:
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
         <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
-        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.{note_html}
     </p>
 </div>
 '''
@@ -501,7 +632,12 @@ class HTMLDiffer:
         # Fetch the published (main) version
         old_html = self.fetch_base_html(local_filepath)
         
-        if old_html:
+        if old_html == new_html and not has_placeholder:
+            # Nothing to diff. A site-wide change lists every chapter as
+            # changed, including byte-identical ones whose comparison is
+            # all cost and no output.
+            print("  Identical to the published version; nothing to highlight")
+        elif old_html:
             print(f"  Old HTML length: {len(old_html)} chars")
             
             # Find what changed
@@ -510,7 +646,7 @@ class HTMLDiffer:
             # Always try to apply inline highlighting, regardless of similarity
             # This catches paragraph-level changes even when overall similarity is high
             print(f"  Checking for inline changes (overall similarity: {similarity:.2%})...")
-            highlighted_html, inline_changes = self.highlight_changed_elements(old_html, new_html)
+            highlighted_html, inline_changes, note = self.highlight_changed_elements(old_html, new_html)
             
             if inline_changes > 0:
                 print(f"  ✓ Highlighted {inline_changes} changed element(s) inline")
@@ -523,17 +659,16 @@ class HTMLDiffer:
             else:
                 print(f"  No inline changes detected")
             
-            if diff_lines or has_placeholder:
+            if diff_lines or has_placeholder or note:
                 # Add combined banner with DOCX link
                 num_changes = len([l for l in diff_lines if l.startswith('+') or l.startswith('-')]) if diff_lines else 0
                 print(f"  Adding combined banner (changes: {num_changes}, similarity: {similarity:.2%})")
-                new_html = self.inject_combined_banner(new_html, num_changes, similarity, local_filepath)
+                new_html = self.inject_combined_banner(new_html, num_changes, similarity, local_filepath, note=note)
             
             # Always write back if we made ANY changes (inline or banner)
-            if diff_lines or has_placeholder or inline_changes > 0:
+            if diff_lines or has_placeholder or inline_changes > 0 or note:
                 print(f"  Writing changes back to file...")
-                with open(local_filepath, 'w', encoding='utf-8') as f:
-                    f.write(new_html)
+                write_atomic(local_filepath, new_html)
                 print(f"  ✓ Updated {local_filepath}")
                 
                 # Verify the file was written correctly
@@ -551,8 +686,7 @@ class HTMLDiffer:
             print(f"  Replacing placeholder with new file banner")
             # Use 0 similarity to show 100% changed
             new_html = self.inject_combined_banner(new_html, 1, 0.0, local_filepath)
-            with open(local_filepath, 'w', encoding='utf-8') as f:
-                f.write(new_html)
+            write_atomic(local_filepath, new_html)
             print(f"  ✓ Updated {local_filepath}")
         else:
             print(f"  Could not fetch base version (file may be new)")
@@ -609,6 +743,11 @@ def checkout_base_html(base_ref='origin/gh-pages', target_dir='/tmp/base-html'):
         return None
 
 def main():
+    # Line-buffer stdout: under CI it is a pipe, so without this a slow
+    # page prints nothing until the step ends or is cancelled, and a
+    # cancelled run's log cannot say which page it was on.
+    sys.stdout.reconfigure(line_buffering=True)
+
     # Get the local HTML directory
     html_dir = os.getenv('HTML_DIR', './docs')
     
@@ -668,8 +807,7 @@ def main():
             
             # Only write back if something changed
             if highlighted_html != html:
-                with open(html_path, 'w', encoding='utf-8') as f:
-                    f.write(highlighted_html)
+                write_atomic(html_path, highlighted_html)
                 print(f"  Added TOC highlighting to {html_path.name}")
         except Exception as e:
             print(f"  Error processing {html_path}: {e}", file=sys.stderr)
