@@ -13,7 +13,7 @@ $$\vx \cdot \vy = \vx\' \vy \defeq \sumin x_i y_i$$
 ::: callout-note
 See also the definitions in 
 
-- @dobson4e, §1.3 (equation 1.1, page 7)
+- @dobson4e, Section 1.3 (equation 1.1, page 7)
 
 - @mosaiccalc, chapter on vectors
 <!-- The chapter link (Textbook/Linear-combinations/28-Vectors.html) returned
