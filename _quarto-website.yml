@@ -33,8 +33,6 @@ website:
     left:
       - text: "Notation"
         href: notation.qmd
-      - text: "Proof Writing"
-        href: proof-writing.qmd
       - text: "Algebra"
         href: algebra.qmd
       - text: "Calculus"
@@ -43,6 +41,8 @@ website:
         href: linear-algebra.qmd
       - text: "Vector Calculus"
         href: vector-calculus.qmd
+      - text: "Proof Writing"
+        href: proof-writing.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mds
