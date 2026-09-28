@@ -168,6 +168,7 @@ jobs:
         run: pip install python-docx
 
       - name: Highlight HTML content changes
+        id: highlight
         if: env.PREVIEW_SHOW_HIGHLIGHTS == 'true'
         # Highlighting is a reviewer aid, so a slow page must not take the
         # preview down with it: the script has a per-page time budget, and
@@ -182,6 +183,12 @@ jobs:
         env:
           HTML_DIR: ./_site
           PREVIEW_CHANGED_CHAPTERS: ${{ env.PREVIEW_CHANGED_CHAPTERS }}
+
+      # continue-on-error above would otherwise turn a crash or a timeout
+      # into a silently green step; surface it as a run annotation.
+      - name: Warn that highlighting did not complete
+        if: steps.highlight.outcome == 'failure'
+        run: echo "::warning::Highlighting failed or timed out; preview deployed without highlights"
 
       - name: Create DOCX with tracked changes
         if: contains(github.event.pull_request.labels.*.name, 'docx')
