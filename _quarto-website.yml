@@ -31,22 +31,18 @@ website:
   repo-actions: [edit, issue, source]
   navbar:
     left:
-      - text: "Home"
-        href: index.qmd
-      - text: "Notes"
-        menu:
-          - text: "Notation"
-            href: notation.qmd
-          - text: "Proof Writing"
-            href: proof-writing.qmd
-          - text: "Algebra"
-            href: algebra.qmd
-          - text: "Calculus"
-            href: calculus.qmd
-          - text: "Linear Algebra"
-            href: linear-algebra.qmd
-          - text: "Vector Calculus"
-            href: vector-calculus.qmd
+      - text: "Notation"
+        href: notation.qmd
+      - text: "Proof Writing"
+        href: proof-writing.qmd
+      - text: "Algebra"
+        href: algebra.qmd
+      - text: "Calculus"
+        href: calculus.qmd
+      - text: "Linear Algebra"
+        href: linear-algebra.qmd
+      - text: "Vector Calculus"
+        href: vector-calculus.qmd
     right:
       - icon: github
         href: https://github.com/Morrison-Lab/mds
