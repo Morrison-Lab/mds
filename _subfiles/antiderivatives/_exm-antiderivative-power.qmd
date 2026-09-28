@@ -12,7 +12,7 @@ See @fig-antiderivatives.
 {{< slidebreak >}}
 
 ```{r}
-#| label: fig-antiderivatives-setup
+#| label: antiderivatives-setup
 #| include: false
 C_vals <- c(-2, -1, 0, 1, 2)
 x_lim <- c(-2, 2)
@@ -23,7 +23,7 @@ x_lim <- c(-2, 2)
 :::{#fig-antiderivatives-f}
 
 ```{r}
-#| label: fig-antiderivatives-f-code
+#| label: antiderivatives-f-code
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
@@ -37,7 +37,7 @@ The function $f(x) = x^2$.
 :::{#fig-antiderivatives-F}
 
 ```{r}
-#| label: fig-antiderivatives-F-code
+#| label: antiderivatives-F-code
 #| code-fold: true
 x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
 df <- do.call(rbind, lapply(C_vals, \(C) {

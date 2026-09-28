@@ -15,7 +15,7 @@ and the accumulation function $F(x) = x^2$ on the right
 {{< slidebreak >}}
 
 ```{r}
-#| label: fig-ftc-part1-setup
+#| label: ftc-part1-setup
 #| include: false
 x_marks <- c(1, 1.5, 2)
 x_focus <- 1.5
@@ -26,7 +26,7 @@ x_focus <- 1.5
 :::{#fig-ftc-part1-left}
 
 ```{r}
-#| label: fig-ftc-part1-left-code
+#| label: ftc-part1-left-code
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_area(
@@ -51,7 +51,7 @@ $f(t) = 2t$; shaded area equals $F(`r x_focus`) = `r x_focus^2`$; vertical lines
 :::{#fig-ftc-part1-right}
 
 ```{r}
-#| label: fig-ftc-part1-right-code
+#| label: ftc-part1-right-code
 #| code-fold: true
 slope_df <- data.frame(
   x = x_marks,

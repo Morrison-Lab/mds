@@ -15,7 +15,7 @@ See @fig-abs-value.
 :::{#fig-abs-value}
 
 ```{r}
-#| label: fig-abs-value-code
+#| label: abs-value-code
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
