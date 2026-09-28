@@ -11,7 +11,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <title>Math for Data Science</title>
+  <title>Math for Data Science – Proof Writing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -285,76 +285,65 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Math for Data Science</h1>
+  <h1 class="title">Proof Writing</h1>
 
 <div class="quarto-title-authors">
 </div>
 
   <p class="date">Last modified: 2026-09-28 03:24:06 (PDT)</p>
 </section>
-<section id="welcome" class="slide level2 unnumbered">
-<h2>Welcome</h2>
-<blockquote>
-<p>Math is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.</p>
-</blockquote>
-<p><span class="citation" data-cites="cheng2025math">Cheng (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
-<p>These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, and proof writing. Some key results are listed here, organized by topic:</p>
-<ul>
-<li><a href="./notation.html">Notation</a>: common symbols, natural numbers, the percent sign, proof symbols, and indicator functions</li>
-<li><a href="./algebra.html">Algebra</a>: equalities and inequalities, infimum and supremum, sums, products, quotients, exponentials and logarithms</li>
-<li><a href="./calculus.html">Calculus</a>: derivative rules, antiderivatives, regularity conditions, the Fundamental Theorem of Calculus, and double integrals</li>
-<li><a href="./linear-algebra.html">Linear Algebra</a>: vectors, matrices and their operations, special matrices, quadratic forms, and the design matrix</li>
-<li><a href="./vector-calculus.html">Vector Calculus</a>: derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule</li>
-<li><a href="./proof-writing.html">Proof Writing</a>: showing and annotating every step of a derivation</li>
-</ul>
+<section class="slide level2">
+
+<p>This page collects general advice on how to write proofs and derivations. The goal of a proof is not just to convince yourself that a result is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under <a href="./notation.html#proofs">Proofs</a> on the Notation page.</p>
 </section>
-<section id="using-these-notes-in-another-site" class="slide level2 unnumbered">
-<h2>Using these notes in another site</h2>
-<p>Course sites include these notes as a git submodule named <code>mds</code> at the site’s root, and include fragments with paths that start with <code>mds/</code>, for example <code>{{&lt; include mds/_notation.qmd &gt;}}</code>. This site includes its own fragments the same way, through a <code>mds</code> symlink that points at the repository root.</p>
-<p>Each page is a thin wrapper around one or more fragments:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Page</th>
-<th>Fragment(s) to include</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="./notation.html">Notation</a></td>
-<td><code>mds/_notation.qmd</code></td>
-</tr>
-<tr class="even">
-<td><a href="./algebra.html">Algebra</a></td>
-<td><code>mds/_algebra.qmd</code></td>
-</tr>
-<tr class="odd">
-<td><a href="./calculus.html">Calculus</a></td>
-<td><code>mds/_calc-derivatives.qmd</code>, <code>mds/_calc-integrals.qmd</code>, and the double-integral subfiles <code>mds/_subfiles/_*fubini*.qmd</code></td>
-</tr>
-<tr class="even">
-<td><a href="./linear-algebra.html">Linear Algebra</a></td>
-<td><code>mds/_subfiles/_sec_linear_algebra.qmd</code></td>
-</tr>
-<tr class="odd">
-<td><a href="./vector-calculus.html">Vector Calculus</a></td>
-<td><code>mds/_subfiles/_sec_vector_calc.qmd</code></td>
-</tr>
-<tr class="even">
-<td><a href="./proof-writing.html">Proof Writing</a></td>
-<td><code>mds/_proof-writing.qmd</code></td>
-</tr>
-</tbody>
-</table>
-<p><code>_notation.qmd</code> and <code>_algebra.qmd</code> include <code>latex-macros/macros.qmd</code> themselves; a host page that includes any of the other fragments must include <code>latex-macros/macros.qmd</code> first, as the pages of this site do.</p>
-<p>Quarto resolves <code>@id</code> cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, <code>[text](notation.qmd#id)</code>.</p>
+<section id="sec-dont-skip-steps" class="slide level2" data-number="1">
+<h2><span class="header-section-number">1</span> Don’t skip steps</h2>
+<p>Show every step of the derivation. Each line should follow from the previous line by a single, identifiable move:</p>
+<ul>
+<li>applying a definition,</li>
+<li>substituting a known result, or</li>
+<li>performing one algebraic operation.</li>
+</ul>
+<p>When you skip steps, you force the reader to reconstruct your reasoning, which is exactly the work the proof was supposed to do <em>for</em> them. A step that feels “obvious” while you are writing it is often the step a reader gets stuck on. Phrases like “it can be shown that” or “clearly” usually mark a skipped step; show the step instead.</p>
+</section>
+<section id="sec-annotate-each-step" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Annotate each step</h2>
+<p>For each step, note the definition, theorem, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.</p>
+<p>For example, here is a derivation that the <a href="./linear-algebra.html#def-hat-matrix">hat matrix</a> <span class="math inline">\(\mathbf{H} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\)</span> is idempotent, <span class="math inline">\(\mathbf{H}^2 = \mathbf{H}\)</span>, with each step annotated:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{H}^2
+&amp;= \mathbf{H}\mathbf{H}
+&amp;&amp; \text{(definition of a matrix power)}
+\\
+&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\,\mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(definition of } \mathbf{H} \text{)}
+\\
+&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}({\mathbf{X}}^{\top}\mathbf{X})({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(regroup; matrix multiplication is associative)}
+\\
+&amp;= \mathbf{X}\,\mathbf{I}_p\,({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(a matrix inverse times the matrix is } \mathbf{I}_p \text{)}
+\\
+&amp;= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}
+&amp;&amp; \text{(the identity matrix changes nothing)}
+\\
+&amp;= \mathbf{H}
+&amp;&amp; \text{(definition of } \mathbf{H} \text{)}
+\end{aligned}
+\]</span></p>
+<p>The <a href="./linear-algebra.html#thm-hat-matrix">Linear Algebra</a> page uses this derivation to show that <span class="math inline">\(\mathbf{H}\)</span> is a projection matrix. The probability notes derive the variance identity <span class="math inline">\(\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left[X^2\right]\mathclose{} - \mathopen{}\left(\operatorname{E}\mathopen{}\left[X\right]\mathclose{}\right)^2\mathclose{}\)</span> <a href="https://morrison-lab.github.io/rme/chapters/probability.html#thm-variance">in the same annotated style</a>.</p>
+<!-- repoint the variance link to pds variance-covariance.qmd#thm-variance once pds#8 is published -->
+</section>
+<section id="sec-golden-rule" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Follow the golden rule</h2>
+<p>In general, follow the golden rule: treat your readers the way you want to be treated as a reader.</p>
+<p>When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.</p>
 </section>
 <section id="references" class="slide level2 unnumbered smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-cheng2025math" class="csl-entry" role="listitem">
-Cheng, Eugenia. 2025. <span>“Opinion | How Math Turned Me from a <span>D.E.I.</span> Skeptic to a Supporter.”</span> <em>The New York Times</em>. <a href="https://www.nytimes.com/2025/09/05/opinion/math-dei.html">https://www.nytimes.com/2025/09/05/opinion/math-dei.html</a>.
-</div>
+<div id="refs" role="list">
+
 </div>
 
 
