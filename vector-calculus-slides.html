@@ -290,7 +290,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-09-28 03:37:09 (PDT)</p>
+  <p class="date">Last modified: 2026-09-28 05:02:54 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -914,23 +914,8 @@ x_{p}
 </section>
 <section class="slide level2">
 
-<div id="def-trace" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Trace)</strong></span> The <strong>trace</strong> of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{M}\)</span> is the sum of its diagonal entries:</p>
-<p><span class="math display">\[\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum_{i=1}^p M_{ii}\]</span></p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-trace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (The trace of a <span class="math inline">\(2 \times 2\)</span> matrix)</strong></span> <span class="math display">\[
-\operatorname{tr}\mathopen{}\left(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\right)\mathclose{} = 1 + 4 = 5
-\]</span></p>
-</div>
-</section>
-<section class="slide level2">
-
 <div id="def-matrix-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Matrix derivative)</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Matrix derivative)</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
 <p><span class="math display">\[
 \left[\frac{\partial}{\partial \mathbf{X}} f\right]_{ij} = \frac{\partial}{\partial X_{ij}} f
 \]</span></p>
@@ -939,7 +924,7 @@ x_{p}
 <section class="slide level2">
 
 <div id="exm-matrix-derivative" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (The matrix derivative of a trace)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(2 \times 2\)</span> matrix and <span class="math inline">\(f(\mathbf{X}) = \operatorname{tr}(\mathbf{X}) = X_{11} + X_{22}\)</span> (<a href="#/def-trace" class="quarto-xref">Definition&nbsp;5</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
+<p><span class="theorem-title"><strong>Example 13 (The matrix derivative of a trace)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(2 \times 2\)</span> matrix and <span class="math inline">\(f(\mathbf{X}) = \operatorname{tr}(\mathbf{X}) = X_{11} + X_{22}\)</span> (see <a href="./linear-algebra.html#def-trace">trace</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
 <p><span class="math display">\[
 \frac{\partial}{\partial \mathbf{X}} f = \mathbf{I}_2
 \]</span></p>
@@ -991,7 +976,7 @@ x_{p}
 <section class="slide level2">
 
 <div id="exm-deriv-matrix-product-matrix" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Differentiating a weighted trace)</strong></span> Let <span class="math inline">\(\mathbf{A} = \mathbf{I}_2\)</span> (<span class="math inline">\(2 \times 2\)</span>) and <span class="math inline">\(\mathbf{B} = \begin{pmatrix}2 &amp; 0 \\
+<p><span class="theorem-title"><strong>Example 14 (Differentiating a weighted trace)</strong></span> Let <span class="math inline">\(\mathbf{A} = \mathbf{I}_2\)</span> (<span class="math inline">\(2 \times 2\)</span>) and <span class="math inline">\(\mathbf{B} = \begin{pmatrix}2 &amp; 0 \\
 0 &amp; 3\end{pmatrix}\)</span> (<span class="math inline">\(2 \times 2\)</span>). Then <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B}) = 2X_{11} + 3X_{22}\)</span>, and:</p>
 <p><span class="math display">\[
 \underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})}_{2 \times 2}
