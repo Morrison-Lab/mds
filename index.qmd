@@ -30,7 +30,8 @@ organized by topic:
   common symbols, natural numbers, the percent sign,
   proof symbols, and indicator functions
 - [Sets and Functions](sets-functions.qmd):
-  sets, subsets, the empty set, unions and intersections, countable sets,
+  sets, subsets and supersets, the empty set,
+  unions, intersections, and set differences, countable sets,
   functions with their domains, codomains, and images,
   and the extended non-negative real numbers
 - [Algebra](algebra.qmd):
