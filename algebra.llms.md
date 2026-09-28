@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 03:24:06 (PDT)
+Last modified: 2026-09-28 03:31:56 (PDT)
 
 Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra) (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.
 
@@ -46,7 +46,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > If \\A\\ is nonempty but not bounded below, we write \\\inf A = -\infty\\ by convention.
 
-The maximum in [Definition 1](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976, chap. 1](#ref-rudin1976principles)). If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\.
+The maximum in [Definition 1](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\.
 
 > **NOTE:**
 >
@@ -65,7 +65,7 @@ The maximum in [Definition 1](#def-infimum) always exists: that is the complete
 >
 > If \\A\\ is nonempty but not bounded above, we write \\\sup A = +\infty\\ by convention.
 
-The minimum in [Definition 2](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976, chap. 1](#ref-rudin1976principles)). If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\.
+The minimum in [Definition 2](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\.
 
 > **NOTE:**
 >
