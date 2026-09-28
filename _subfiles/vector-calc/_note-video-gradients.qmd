@@ -1,0 +1,6 @@
+::: {.callout-tip title="Video lecture"}
+Hutchinson's [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min)
+covers gradients and partial derivatives, the ideas behind this section
+[@hutchinson_wwu_ml_videos].
+The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+:::

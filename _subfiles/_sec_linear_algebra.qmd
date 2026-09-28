@@ -58,6 +58,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_note-def-orthonormal-vectors.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-video-linear-function-basics.qmd >}}
+
 ## Matrices
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix.qmd >}}
