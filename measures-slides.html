@@ -11,7 +11,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <title>Math for Data Science – Sets and Functions</title>
+  <title>Math for Data Science – Measures</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -266,7 +266,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Sets and Functions</h1>
+  <h1 class="title">Measures</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -276,175 +276,393 @@
 <section class="slide level2">
 
 <div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Probability and statistics describe events, outcomes, and parameters as sets, and random variables, densities, and measures as functions. This page collects the definitions of sets and functions that the Morrison Lab’s probability and statistics notes build on.</p>
+<p><span class="proof-title"><em>Remark</em>. </span>A measure assigns a size to each set in a collection of sets: how many elements it has, how long it is, or how likely it is. This page builds measures from <span class="math inline">\(\sigma\)</span>-algebras and additivity, using the <a href="./sets-functions.html">sets and functions</a> page’s definitions. The Morrison Lab’s probability notes define a probability measure as a measure that gives the whole space size 1 (<a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability measure</a>).</p>
 </div>
 </section>
-<section id="sets" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Sets</h2>
-<div id="def-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Set)</strong></span> A <strong>set</strong> is a collection of distinct objects, called its elements. We write <span class="math inline">\(a \in A\)</span> when <span class="math inline">\(a\)</span> is an element of the set <span class="math inline">\(A\)</span>, and <span class="math inline">\(a \notin A\)</span> when it is not. Two sets are equal when they have exactly the same elements.</p>
-</div>
-<aside class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span><a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a> is the informal (“naive”) notion of a set, which is all these notes need. Formal set theory states axioms for sets instead (see <a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia: Set (mathematics)</a>).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div id="exm-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Sets of die rolls)</strong></span> The possible results of rolling a six-sided die form the set <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, with <span class="math inline">\(3 \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(7 \notin \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>. The sets <span class="math inline">\(\mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{3, 2, 1\right\}\mathclose{}\)</span> are equal, because they have the same elements; the order in which the elements are listed does not matter.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-set-builder" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Set-builder notation)</strong></span> For a set <span class="math inline">\(A\)</span> and a statement <span class="math inline">\(P(x)\)</span> about an element <span class="math inline">\(x\)</span>, <strong>set-builder notation</strong> <span class="math inline">\(\mathopen{}\left\{x \in A : P(x)\right\}\mathclose{}\)</span> denotes the set of elements <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is true.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-set-builder" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Even die rolls in set-builder notation)</strong></span> <span class="math inline">\(\mathopen{}\left\{x \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} : x \text{ is even}\right\}\mathclose{} = \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, and <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x &gt; 0\right\}\mathclose{}\)</span> is the set of positive real numbers.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-subset" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Subset)</strong></span> A set <span class="math inline">\(A\)</span> is a <strong>subset</strong> of a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \subseteq B\)</span>, if every element of <span class="math inline">\(A\)</span> is an element of <span class="math inline">\(B\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-subset" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Even die rolls)</strong></span> The even die rolls form a subset of the possible rolls: <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \subseteq \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, because each of <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span>, and <span class="math inline">\(6\)</span> is a possible roll. The set <span class="math inline">\(\mathopen{}\left\{2, 4, 7\right\}\mathclose{}\)</span> is not a subset of <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, because <span class="math inline">\(7\)</span> is not a possible roll.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="thm-subset-reflexive" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Every set is a subset of itself)</strong></span> For every set <span class="math inline">\(A\)</span>, <span class="math inline">\(A \subseteq A\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Every element of <span class="math inline">\(A\)</span> is an element of <span class="math inline">\(A\)</span>, which is <a href="#/def-subset" class="quarto-xref">Definition&nbsp;3</a> with <span class="math inline">\(B = A\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-empty-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Empty set)</strong></span> The <strong>empty set</strong>, denoted <span class="math inline">\(\emptyset\)</span>, is the set that has no elements.</p>
-</div>
-<aside class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Other sources write <span class="math inline">\(\mathopen{}\left\{\right\}\mathclose{}\)</span> (see <a href="https://en.wikipedia.org/wiki/Empty_set">Wikipedia: Empty set</a>). Some sources call it the <strong>null set</strong>, but in measure theory a “null set” usually means a set of measure zero, which need not be empty.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div id="exm-empty-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Impossible die rolls)</strong></span> No roll of a six-sided die is greater than 6, so <span class="math inline">\(\mathopen{}\left\{x \in \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} : x &gt; 6\right\}\mathclose{} = \emptyset\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="thm-empty-set-unique" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (There is only one empty set)</strong></span> If <span class="math inline">\(E_1\)</span> and <span class="math inline">\(E_2\)</span> are sets with no elements, then <span class="math inline">\(E_1 = E_2\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Neither set has any elements, so every element of <span class="math inline">\(E_1\)</span> is an element of <span class="math inline">\(E_2\)</span> and vice versa, vacuously. Sets with the same elements are equal (<a href="#/def-set" class="quarto-xref">Definition&nbsp;1</a>).</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="thm-empty-subset" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3 (The empty set is a subset of every set)</strong></span> For every set <span class="math inline">\(A\)</span>, <span class="math inline">\(\emptyset \subseteq A\)</span>.</p>
-</div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#/def-subset" class="quarto-xref">Definition&nbsp;3</a>, <span class="math inline">\(\emptyset \subseteq A\)</span> fails only if some element of <span class="math inline">\(\emptyset\)</span> is not in <span class="math inline">\(A\)</span>. The <a href="#/def-empty-set">empty set</a> has no elements, so no such element exists.</p>
-</div>
-</section>
-<section id="combining-sets" class="slide level2" data-number="2">
-<h2><span class="header-section-number">2</span> Combining sets</h2>
-<div id="def-union" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Union)</strong></span> The <strong>union</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of elements that are in <span class="math inline">\(A\)</span>, in <span class="math inline">\(B\)</span>, or in both:</p>
-<p><span class="math display">\[A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\{x : x \in A \text{ or } x \in B\right\}\mathclose{}\]</span></p>
-<p>More generally, the union of sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, written <span class="math inline">\(\bigcup_{i} A_i\)</span>, is the set of elements that are in at least one <span class="math inline">\(A_i\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-intersection" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Intersection)</strong></span> The <strong>intersection</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of elements that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
-<p><span class="math display">\[A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\{x : x \in A \text{ and } x \in B\right\}\mathclose{}\]</span></p>
-<p>More generally, the intersection of sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, written <span class="math inline">\(\bigcap_{i} A_i\)</span>, is the set of elements that are in every <span class="math inline">\(A_i\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-set-difference" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Set difference)</strong></span> The <strong>set difference</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \setminus B\)</span>, is the set of elements of <span class="math inline">\(A\)</span> that are not in <span class="math inline">\(B\)</span>:</p>
-<p><span class="math display">\[A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : x \notin B\right\}\mathclose{}\]</span></p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-set-operations" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Combining sets of die rolls)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> (the even rolls) and <span class="math inline">\(B = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> (the rolls of at most 3). Then:</p>
+<section id="sigma-algebras" class="slide level2" data-number="1">
+<h2><span class="header-section-number">1</span> <span class="math inline">\(\sigma\)</span>-algebras</h2>
+<div id="def-sigma-algebra" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\sigma\)</span>-algebra)</strong></span> A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> on a set <span class="math inline">\(S\)</span> is a collection <span class="math inline">\(\mathscr{S}\)</span> of <a href="./sets-functions.html#def-subset">subsets</a> of <span class="math inline">\(S\)</span> that satisfies:</p>
 <ul>
-<li><span class="math inline">\(A \cup B = \mathopen{}\left\{1, 2, 3, 4, 6\right\}\mathclose{}\)</span>, the rolls that are even or at most 3;</li>
-<li><span class="math inline">\(A \cap B = \mathopen{}\left\{2\right\}\mathclose{}\)</span>, the only roll that is both;</li>
-<li><span class="math inline">\(A \setminus B = \mathopen{}\left\{4, 6\right\}\mathclose{}\)</span>, the even rolls greater than 3;</li>
-<li><span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \cap \mathopen{}\left\{1, 3, 5\right\}\mathclose{} = \emptyset\)</span>: no roll is both even and odd.</li>
+<li><span class="math inline">\(\mathscr{S}\)</span> contains <span class="math inline">\(S\)</span> itself.</li>
+<li>For each set <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, <span class="math inline">\(\mathscr{S}\)</span> contains its complement <span class="math inline">\(S \setminus A\)</span>.</li>
+<li>For each sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathscr{S}\)</span>, <span class="math inline">\(\mathscr{S}\)</span> contains their union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span>.</li>
+</ul>
+</div>
+<aside class="notes proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span>Other sources call it a <strong><span class="math inline">\(\sigma\)</span>-field</strong> (see <a href="https://en.wikipedia.org/wiki/%CE%A3-algebra">Wikipedia: <span class="math inline">\(\sigma\)</span>-algebra</a>).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div id="exm-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
+<p><span class="math display">\[\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\]</span></p>
+<p>which contains <span class="math inline">\(D\)</span>, the complement of each of its sets, and every union of its sets: for example, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \cup \mathopen{}\left\{1, 3, 5\right\}\mathclose{} = D\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-sigma-algebra-closure" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Closure properties of a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> If <span class="math inline">\(\mathscr{S}\)</span> is a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>, then <span class="math inline">\(\mathscr{S}\)</span> contains:</p>
+<ul>
+<li>the <a href="./sets-functions.html#def-empty-set">empty set</a> <span class="math inline">\(\emptyset\)</span>;</li>
+<li>the union <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span> of any finitely many sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathscr{S}\)</span>;</li>
+<li>the intersection <span class="math inline">\(\bigcap_{i=1}^{\infty} A_i\)</span> of any sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathscr{S}\)</span>.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><em>Empty set.</em> <span class="math inline">\(\mathscr{S}\)</span> contains <span class="math inline">\(S\)</span>, so it contains the complement of <span class="math inline">\(S\)</span>, which is <span class="math inline">\(S \setminus S = \emptyset\)</span>.</p>
+<p><em>Finite unions.</em> Extend <span class="math inline">\(A_1, \ldots, A_n\)</span> to a sequence by setting <span class="math inline">\(A_{n+1} = A_{n+2} = \cdots = \emptyset\)</span>; each of these sets is in <span class="math inline">\(\mathscr{S}\)</span>, by the first part. Then:</p>
+<p><span class="math display">\[
+\begin{aligned}
+A_1 \cup \cdots \cup A_n
+&amp;= A_1 \cup \cdots \cup A_n \cup \emptyset \cup \emptyset \cup \cdots
+&amp;&amp; \text{(a union with } \emptyset \text{ adds no elements)} \\
+&amp;= \bigcup_{i=1}^{\infty} A_i
+&amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)}
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(\mathscr{S}\)</span> contains <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> by the union rule of <a href="#/def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a>.</p>
+<p><em>Countable intersections.</em> An element of <span class="math inline">\(S\)</span> is in every <span class="math inline">\(A_i\)</span> exactly when it is in none of the complements <span class="math inline">\(S \setminus A_i\)</span>, so:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\bigcap_{i=1}^{\infty} A_i
+&amp;= S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
+&amp;&amp; \text{(De Morgan's law)}
+\end{aligned}
+\]</span></p>
+<p>Each <span class="math inline">\(S \setminus A_i\)</span> is in <span class="math inline">\(\mathscr{S}\)</span> by the complement rule, so their union is in <span class="math inline">\(\mathscr{S}\)</span> by the union rule, and the complement of that union is in <span class="math inline">\(\mathscr{S}\)</span> by the complement rule again.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-power-set-sigma-algebra" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (All subsets form a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> For any set <span class="math inline">\(S\)</span>, the collection of all subsets of <span class="math inline">\(S\)</span> is a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on <span class="math inline">\(S\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Each condition of <a href="#/def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> holds:</p>
+<ul>
+<li><span class="math inline">\(S\)</span> is a subset of itself.</li>
+<li>For each subset <span class="math inline">\(A\)</span> of <span class="math inline">\(S\)</span>, the complement <span class="math inline">\(S \setminus A\)</span> contains only elements of <span class="math inline">\(S\)</span>, so it is a subset of <span class="math inline">\(S\)</span>.</li>
+<li>For each sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of subsets of <span class="math inline">\(S\)</span>, every element of <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> is in some <span class="math inline">\(A_i\)</span> and so in <span class="math inline">\(S\)</span>; the union is a subset of <span class="math inline">\(S\)</span>.</li>
 </ul>
 </div>
 </section>
-<section id="countable-sets" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Countable sets</h2>
-<div id="def-countable-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Countable set)</strong></span> A set is <strong>countable</strong> if it is finite, or if its elements can be listed as a sequence <span class="math inline">\(a_1, a_2, a_3, \ldots\)</span> in which every element appears.</p>
+<section id="pairwise-disjoint-sets" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Pairwise disjoint sets</h2>
+<div id="def-pairwise-disjoint" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Pairwise disjoint sets)</strong></span> Finitely or countably many sets <span class="math inline">\(A_1, A_2, \ldots\)</span> are <strong>pairwise disjoint</strong> (also called <strong>disjoint</strong> or <strong>mutually disjoint</strong>) when no two of them share an element:</p>
+<p><span class="math display">\[A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\]</span></p>
+</div>
+<aside class="notes proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span>In probability, pairwise disjoint events are usually called <strong>mutually exclusive</strong>.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div id="exm-pairwise-disjoint" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+</div>
+</section>
+<section id="additivity" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Additivity</h2>
+<div id="def-finite-additivity" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathscr{S}\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span>, with values in the <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#/def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="math display">\[\mu(A_1 \cup \cdots \cup A_n) = \sum_{i=1}^{n} \mu(A_i)\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="def-countably-infinite" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Countably infinite set)</strong></span> A set is <strong>countably infinite</strong> if it is <a href="#/def-countable-set">countable</a> and not finite.</p>
+<div id="exm-finite-additivity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span>, for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#/exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;2</a>), and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(\mathopen{}\left\{1, 2\right\}\mathclose{} \cup \mathopen{}\left\{5, 6\right\}\mathclose{})
+&amp;= \mu(\mathopen{}\left\{1, 2, 5, 6\right\}\mathclose{})
+&amp;&amp; \text{(take the union)} \\
+&amp;= 4
+&amp;&amp; \text{(count the elements)} \\
+&amp;= 2 + 2
+&amp;&amp; \text{(write 4 as a sum)} \\
+&amp;= \mu(\mathopen{}\left\{1, 2\right\}\mathclose{}) + \mu(\mathopen{}\left\{5, 6\right\}\mathclose{})
+&amp;&amp; \text{(count each set's elements)}
+\end{aligned}
+\]</span></p>
+<p>The same holds for any pairwise disjoint sets, because the sizes of disjoint sets add, so <span class="math inline">\(\mu\)</span> is finitely additive.</p>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="exm-countable-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Countable and uncountable sets)</strong></span> &nbsp;</p>
+<div id="def-countable-additivity" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Countable additivity)</strong></span> Let <span class="math inline">\(\mathscr{S}\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#/def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="math display">\[\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-countable-additivity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="lem-nonneg-series" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1 (Sums of non-negative terms)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be values in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n \stackrel{\text{def}}{=}\sum_{i=1}^{n} a_i\)</span>, where <span class="math inline">\(x + \infty = \infty\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\([0, \infty]\)</span>. Then the partial sums are non-decreasing, <span class="math inline">\(s_1 \le s_2 \le \cdots\)</span>, so their limit, the sum <span class="math inline">\(\sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} s_n\)</span>, always exists, and it is either a finite number or <span class="math inline">\(\infty\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For each <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+s_{n+1}
+&amp;= s_n + a_{n+1}
+&amp;&amp; \text{(definition of } s_{n+1} \text{)} \\
+&amp;\ge s_n
+&amp;&amp; \text{(} a_{n+1} \ge 0 \text{)}
+\end{aligned}
+\]</span></p>
+<p>If some partial sum <span class="math inline">\(s_N\)</span> is <span class="math inline">\(\infty\)</span>, then <span class="math inline">\(s_n = \infty\)</span> for every <span class="math inline">\(n \ge N\)</span>, so the limit is <span class="math inline">\(\infty\)</span>. Otherwise, the partial sums form a non-decreasing sequence of real numbers. If that sequence is bounded above, it converges to a finite number (see <a href="https://en.wikipedia.org/wiki/Monotone_convergence_theorem">Wikipedia: Monotone convergence theorem</a>). If it is not bounded above, then for every number <span class="math inline">\(M\)</span> some <span class="math inline">\(s_N\)</span> exceeds <span class="math inline">\(M\)</span>, and so does every later <span class="math inline">\(s_n \ge s_N\)</span>; the limit is <span class="math inline">\(\infty\)</span>.</p>
+</div>
+<aside class="notes proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span>By <a href="#/lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>, the right-hand side of the equation in <a href="#/def-countable-additivity" class="quarto-xref">Definition&nbsp;4</a> always has a value.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div id="lem-countable-additivity-empty" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2 (Countable additivity and the empty set)</strong></span> If <span class="math inline">\(\mu\)</span> is a <a href="#/def-countable-additivity">countably additive</a> function on a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span>, then <span class="math inline">\(\mu(\emptyset) = 0\)</span> or <span class="math inline">\(\mu(\emptyset) = \infty\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The set <span class="math inline">\(\emptyset = S \setminus S\)</span> is in <span class="math inline">\(\mathscr{S}\)</span>, as the complement of <span class="math inline">\(S\)</span>, and the sequence <span class="math inline">\(\emptyset, \emptyset, \ldots\)</span> is pairwise disjoint with union <span class="math inline">\(\emptyset\)</span>, so:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(\emptyset)
+&amp;= \mu\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
+&amp;&amp; \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\
+&amp;= \sum_{i=1}^{\infty} \mu(\emptyset)
+&amp;&amp; \text{(countable additivity)}
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\mu(\emptyset) = c\)</span> for a finite <span class="math inline">\(c &gt; 0\)</span>, the right-hand side is <span class="math inline">\(c + c + \cdots = \infty \neq c\)</span>, a contradiction. So <span class="math inline">\(\mu(\emptyset)\)</span> is 0 or <span class="math inline">\(\infty\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-empty-set-zero" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-countable-additivity" class="quarto-xref">Example&nbsp;4</a> is countably additive, and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(\emptyset)
+&amp;= \mathopen{}\left|\emptyset\right|\mathclose{}
+&amp;&amp; \text{(definition of } \mu \text{)} \\
+&amp;= 0
+&amp;&amp; \text{(} \emptyset \text{ has no elements)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-empty-set-infinity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&amp;= \infty
+&amp;&amp; \text{(definition of } \mu \text{)}
+\end{aligned}
+\]</span></p>
+<p>and the right-hand side, the limit of its partial sums (<a href="#/lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>), is:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{\infty} \mu(A_i)
+&amp;= \infty + \infty + \cdots
+&amp;&amp; \text{(definition of } \mu \text{)} \\
+&amp;= \infty
+&amp;&amp; \text{(every partial sum is } \infty \text{)}
+\end{aligned}
+\]</span></p>
+<p>The two sides agree, so <span class="math inline">\(\mu\)</span> is countably additive, and <span class="math inline">\(\mu(\emptyset) = \infty\)</span>.</p>
+</div>
+<aside class="notes proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span><a href="#/exm-empty-set-zero" class="quarto-xref">Example&nbsp;5</a> and <a href="#/exm-empty-set-infinity" class="quarto-xref">Example&nbsp;6</a> show that both values allowed by <a href="#/lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div id="thm-countable-implies-finite" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Countable additivity implies finite additivity)</strong></span> If <span class="math inline">\(\mu\)</span> is a <a href="#/def-countable-additivity">countably additive</a> function on a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span>, and <span class="math inline">\(\mu(\emptyset) = 0\)</span>, then <span class="math inline">\(\mu\)</span> is <a href="#/def-finite-additivity">finitely additive</a>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(A_1, \ldots, A_n\)</span> be pairwise disjoint sets in <span class="math inline">\(\mathscr{S}\)</span>, and extend them to a sequence by setting <span class="math inline">\(A_{n+1} = A_{n+2} = \cdots = \emptyset\)</span>. The extended sequence is still pairwise disjoint, since <span class="math inline">\(\emptyset\)</span> shares no element with any set, and its union is <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span>. So:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(A_1 \cup \cdots \cup A_n)
+&amp;= \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)} \\
+&amp;= \sum_{i=1}^{\infty} \mu(A_i)
+&amp;&amp; \text{(countable additivity)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
+&amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i)
+&amp;&amp; \text{(} \mu(\emptyset) = 0 \text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-finite-not-countable" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#/thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
+<p><span class="math display">\[
+\mu(A) \stackrel{\text{def}}{=}\begin{cases}
+0 &amp; \text{if } A \text{ is finite} \\
+\infty &amp; \text{if } A \text{ is infinite}
+\end{cases}
+\]</span></p>
+<p><em><span class="math inline">\(\mu\)</span> is finitely additive.</em> Let <span class="math inline">\(A_1, \ldots, A_n\)</span> be pairwise disjoint subsets of <span class="math inline">\(S\)</span>. If every <span class="math inline">\(A_i\)</span> is finite, then so is their union, and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(A_1 \cup \cdots \cup A_n)
+&amp;= 0
+&amp;&amp; \text{(a finite union of finite sets is finite)} \\
+&amp;= \sum_{i=1}^{n} 0
+&amp;&amp; \text{(a sum of zeros is 0)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i)
+&amp;&amp; \text{(each } A_i \text{ is finite)}
+\end{aligned}
+\]</span></p>
+<p>If some <span class="math inline">\(A_k\)</span> is infinite, then the union, which contains <span class="math inline">\(A_k\)</span>, is infinite too, and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(A_1 \cup \cdots \cup A_n)
+&amp;= \infty
+&amp;&amp; \text{(the union is infinite)} \\
+&amp;= \mu(A_k) + \sum_{i \neq k} \mu(A_i)
+&amp;&amp; \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i)
+&amp;&amp; \text{(regroup the terms)}
+\end{aligned}
+\]</span></p>
+<p><em><span class="math inline">\(\mu\)</span> is not countably additive.</em> The single-element sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \ldots\)</span> are pairwise disjoint, and their union is <span class="math inline">\(S\)</span>, which is infinite. So:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu\!\left(\bigcup_{k=0}^{\infty} \mathopen{}\left\{k\right\}\mathclose{}\right)
+&amp;= \mu(S)
+&amp;&amp; \text{(the union is } S \text{)} \\
+&amp;= \infty
+&amp;&amp; \text{(} S \text{ is infinite)}
+\end{aligned}
+\]</span></p>
+<p>but:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{k\right\}\mathclose{})
+&amp;= 0 + 0 + \cdots
+&amp;&amp; \text{(each } \mathopen{}\left\{k\right\}\mathclose{} \text{ is finite)} \\
+&amp;= 0
+&amp;&amp; \text{(every partial sum is 0)}
+\end{aligned}
+\]</span></p>
+</div>
+<aside class="notes proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span><a href="#/exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> shows that the converse of <a href="#/thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function — An additive function which is not <span class="math inline">\(\sigma\)</span>-additive</a>).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="measures" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Measures</h2>
+<div id="def-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Measure)</strong></span> A <strong>measure</strong> on a set <span class="math inline">\(S\)</span> with a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span> is a function <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span> that satisfies:</p>
 <ul>
-<li><span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> is countable, because it is finite.</li>
-<li>The non-negative integers <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> are countably infinite: the sequence <span class="math inline">\(0, 1, 2, \ldots\)</span> lists them.</li>
-<li>The integers are countably infinite too: the sequence <span class="math inline">\(0, 1, -1, 2, -2, 3, -3, \ldots\)</span> lists every one of them.</li>
+<li><span class="math inline">\(\mu(\emptyset) = 0\)</span>.</li>
+<li><span class="math inline">\(\mu\)</span> is <a href="#/def-countable-additivity">countably additive</a>.</li>
 </ul>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="thm-interval-uncountable" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (The unit interval is not countable)</strong></span> The interval <span class="math inline">\([0, 1]\)</span> is not <a href="#/def-countable-set">countable</a>.</p>
+<div id="exm-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#/exm-countable-additivity" class="quarto-xref">Example&nbsp;4</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="cor-measure-finitely-additive" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (Measures are finitely additive)</strong></span> Every <a href="#/def-measure">measure</a> is <a href="#/def-finite-additivity">finitely additive</a>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>A measure <span class="math inline">\(\mu\)</span> is countably additive and has <span class="math inline">\(\mu(\emptyset) = 0\)</span> (<a href="#/def-measure" class="quarto-xref">Definition&nbsp;5</a>), so <a href="#/thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> applies to it.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-counting-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Counting measure)</strong></span> The <strong>counting measure</strong> on a set <span class="math inline">\(S\)</span> is the <a href="#/def-measure">measure</a> on the <a href="#/thm-power-set-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span></a> that assigns each finite set its number of elements, and each infinite set the value <span class="math inline">\(\infty\)</span>:</p>
+<p><span class="math display">\[
+\mu(A) \stackrel{\text{def}}{=}\begin{cases}
+\mathopen{}\left|A\right|\mathclose{} &amp; \text{if } A \text{ is finite} \\
+\infty &amp; \text{if } A \text{ is infinite}
+\end{cases}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-counting-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees: <span class="math inline">\(\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{2k\right\}\mathclose{}) = 1 + 1 + \cdots = \infty\)</span>.</p>
 </div>
 <aside class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>The standard proof is Cantor’s diagonal argument: given any sequence of numbers in <span class="math inline">\([0, 1]\)</span>, it builds a number in <span class="math inline">\([0, 1]\)</span> whose decimal expansion differs from the <span class="math inline">\(n\)</span>th number’s in the <span class="math inline">\(n\)</span>th digit, so the sequence misses it (see <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Wikipedia: Cantor’s diagonal argument</a>).</p>
+<p><span class="proof-title"><em>Remark</em>. </span>A <a href="#/def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#/def-counting-measure" class="quarto-xref">Definition&nbsp;6</a>, or how long a set of real numbers is, as <a href="https://en.wikipedia.org/wiki/Lebesgue_measure">Lebesgue measure</a> does, assigning each interval <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. Both appear as reference measures in the <a href="./calculus.html#thm-fubini-tonelli">Fubini–Tonelli theorem</a>.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -456,89 +674,6 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="functions" class="slide level2" data-number="4">
-<h2><span class="header-section-number">4</span> Functions</h2>
-<div id="def-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Function)</strong></span> A <strong>function</strong> <span class="math inline">\(f\)</span> from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(f : A \to B\)</span>, assigns to each element <span class="math inline">\(a \in A\)</span> exactly one element <span class="math inline">\(f(a) \in B\)</span>, called the value of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-function" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Doubling a die roll)</strong></span> The rule <span class="math inline">\(f(a) = 2a\)</span> defines a function <span class="math inline">\(f : \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} \to \mathbb{R}\)</span>, because it assigns exactly one real number to each possible roll; for example, <span class="math inline">\(f(3) = 6\)</span>. A rule that assigned both <span class="math inline">\(2\)</span> and <span class="math inline">\(-2\)</span> to the roll <span class="math inline">\(1\)</span> would not be a function, because a function assigns exactly one value to each element.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-domain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Domain)</strong></span> The <strong>domain</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(A\)</span> of elements that <span class="math inline">\(f\)</span> assigns values to.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-codomain" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Codomain)</strong></span> The <strong>codomain</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set <span class="math inline">\(B\)</span> that its values are required to lie in.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="def-image" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Image)</strong></span> The <strong>image</strong> of a <a href="#/def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is the set of values that <span class="math inline">\(f\)</span> actually takes:</p>
-<p><span class="math display">\[f(A) \stackrel{\text{def}}{=}\mathopen{}\left\{f(a) : a \in A\right\}\mathclose{}\]</span></p>
-</div>
-<aside class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Many sources call the image the <strong>range</strong>, but others use “range” for the codomain, so these notes avoid “range” for functions in general (see <a href="https://en.wikipedia.org/wiki/Range_of_a_function">Wikipedia: Range of a function</a>). The image is always a subset of the codomain, because every value <span class="math inline">\(f(a)\)</span> lies in <span class="math inline">\(B\)</span>.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div id="exm-domain-codomain-image" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Domain, codomain, and image of the doubled die roll)</strong></span> For the function <span class="math inline">\(f : \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{} \to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = 2a\)</span> from <a href="#/exm-function" class="quarto-xref">Example&nbsp;7</a>:</p>
-<ul>
-<li>the domain is <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>;</li>
-<li>the codomain is <span class="math inline">\(\mathbb{R}\)</span>;</li>
-<li>the image is <span class="math inline">\(\mathopen{}\left\{2, 4, 6, 8, 10, 12\right\}\mathclose{}\)</span>.</li>
-</ul>
-<p>The image is a subset of the codomain, and here a much smaller one: most real numbers, such as <span class="math inline">\(3\)</span> and <span class="math inline">\(-1\)</span>, are not values of <span class="math inline">\(f\)</span>.</p>
-</div>
-</section>
-<section id="extended-non-negative-real-numbers" class="slide level2" data-number="5">
-<h2><span class="header-section-number">5</span> Extended non-negative real numbers</h2>
-<div id="def-extended-nonneg-reals" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Extended non-negative real numbers)</strong></span> The <strong>extended non-negative real numbers</strong>, written <span class="math inline">\([0, \infty]\)</span>, are the non-negative real numbers together with an extra element <span class="math inline">\(\infty\)</span> that is greater than every real number:</p>
-<p><span class="math display">\[[0, \infty] \stackrel{\text{def}}{=}[0, \infty) \cup \mathopen{}\left\{\infty\right\}\mathclose{}\]</span></p>
-<p>Addition extends to <span class="math inline">\([0, \infty]\)</span> by setting <span class="math inline">\(x + \infty = \infty + x = \infty\)</span> for every <span class="math inline">\(x \in [0, \infty]\)</span>.</p>
-</div>
-<aside class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span><span class="math inline">\(\infty\)</span> is not a real number, so some real-number arithmetic does not extend to it: <span class="math inline">\(\infty - \infty\)</span> is left undefined, and <span class="math inline">\(\infty + 1 = \infty + 2\)</span> does not imply <span class="math inline">\(1 = 2\)</span>. Measure theory uses <span class="math inline">\([0, \infty]\)</span> because the size of a set, such as the length of the whole real line, can be infinite (see <a href="https://en.wikipedia.org/wiki/Extended_real_number_line">Wikipedia: Extended real number line</a>).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div id="exm-extended-nonneg-reals" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Adding with <span class="math inline">\(\infty\)</span>)</strong></span> In <span class="math inline">\([0, \infty]\)</span>, <span class="math inline">\(2 + 3 = 5\)</span> as usual, while <span class="math inline">\(2 + \infty = \infty\)</span> and <span class="math inline">\(\infty + \infty = \infty\)</span>.</p>
-</div>
 
 
 <script>

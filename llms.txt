@@ -6,9 +6,10 @@
 
 - [Vector Calculus](https://morrison-lab.github.io/mds/vector-calculus.llms.md)
 - [Proof Writing](https://morrison-lab.github.io/mds/proof-writing.llms.md)
-- [Linear Algebra](https://morrison-lab.github.io/mds/linear-algebra.llms.md)
-- [Calculus](https://morrison-lab.github.io/mds/calculus.llms.md)
-- [Algebra](https://morrison-lab.github.io/mds/algebra.llms.md)
+- [Measures](https://morrison-lab.github.io/mds/measures.llms.md)
 - [Math for Data Science](https://morrison-lab.github.io/mds/index.llms.md)
+- [Algebra](https://morrison-lab.github.io/mds/algebra.llms.md)
+- [Calculus](https://morrison-lab.github.io/mds/calculus.llms.md)
+- [Linear Algebra](https://morrison-lab.github.io/mds/linear-algebra.llms.md)
 - [Notation](https://morrison-lab.github.io/mds/notation.llms.md)
 - [Sets and Functions](https://morrison-lab.github.io/mds/sets-functions.llms.md)

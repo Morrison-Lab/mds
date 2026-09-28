@@ -290,7 +290,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-09-28 16:01:14 (PDT)</p>
+  <p class="date">Last modified: 2026-09-28 16:23:58 (PDT)</p>
 </section>
 <section id="welcome" class="slide level2 unnumbered">
 <h2>Welcome</h2>
@@ -303,6 +303,7 @@
 <li><a href="./notation.html">Notation</a>: common symbols, natural numbers, the percent sign, proof symbols, and indicator functions</li>
 <li><a href="./sets-functions.html">Sets and Functions</a>: sets, subsets, the empty set, unions and intersections, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers</li>
 <li><a href="./algebra.html">Algebra</a>: equalities and inequalities, infimum and supremum, sums, products, quotients, exponentials and logarithms</li>
+<li><a href="./measures.html">Measures</a>: <span class="math inline">\(\sigma\)</span>-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure</li>
 <li><a href="./calculus.html">Calculus</a>: derivative rules, antiderivatives, regularity conditions, the Fundamental Theorem of Calculus, and double integrals</li>
 <li><a href="./linear-algebra.html">Linear Algebra</a>: vectors, matrices and their operations, special matrices, quadratic forms, and the design matrix</li>
 <li><a href="./vector-calculus.html">Vector Calculus</a>: derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule</li>
@@ -334,24 +335,28 @@
 <td><code>mds/_algebra.qmd</code></td>
 </tr>
 <tr class="even">
+<td><a href="./measures.html">Measures</a></td>
+<td><code>mds/_measures.qmd</code></td>
+</tr>
+<tr class="odd">
 <td><a href="./calculus.html">Calculus</a></td>
 <td><code>mds/_calc-derivatives.qmd</code>, <code>mds/_calc-integrals.qmd</code>, and the double-integral subfiles <code>mds/_subfiles/_*fubini*.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./linear-algebra.html">Linear Algebra</a></td>
 <td><code>mds/_subfiles/_sec_linear_algebra.qmd</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="./vector-calculus.html">Vector Calculus</a></td>
 <td><code>mds/_subfiles/_sec_vector_calc.qmd</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="./proof-writing.html">Proof Writing</a></td>
 <td><code>mds/_proof-writing.qmd</code></td>
 </tr>
 </tbody>
 </table>
-<p><code>_notation.qmd</code>, <code>_sets-functions.qmd</code>, and <code>_algebra.qmd</code> include <code>latex-macros/macros.qmd</code> themselves; a host page that includes any of the other fragments must include <code>latex-macros/macros.qmd</code> first, as the pages of this site do.</p>
+<p><code>_notation.qmd</code>, <code>_sets-functions.qmd</code>, <code>_algebra.qmd</code>, and <code>_measures.qmd</code> include <code>latex-macros/macros.qmd</code> themselves; a host page that includes any of the other fragments must include <code>latex-macros/macros.qmd</code> first, as the pages of this site do.</p>
 <p>Quarto resolves <code>@id</code> cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, <code>[text](notation.qmd#id)</code>.</p>
 </section>
 <section id="references" class="slide level2 unnumbered smaller scrollable">
