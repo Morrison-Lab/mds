@@ -357,6 +357,9 @@ class HTMLDiffer:
                         f"(HIGHLIGHT_PAGE_BUDGET_SECONDS)",
                         file=sys.stderr, flush=True,
                     )
+                    # Deliberately drop the replacements found so far: the
+                    # page is left wholly unhighlighted rather than partly
+                    # highlighted, which would read as "nothing else changed".
                     return new_html, 0
 
                 matcher.set_seq1(old_text)
@@ -569,7 +572,7 @@ class HTMLDiffer:
             # Nothing to diff. A site-wide change lists every chapter as
             # changed, including byte-identical ones whose comparison is
             # all cost and no output.
-            print(f"  Identical to the published version; nothing to highlight")
+            print("  Identical to the published version; nothing to highlight")
         elif old_html:
             print(f"  Old HTML length: {len(old_html)} chars")
             
