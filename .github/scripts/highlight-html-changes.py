@@ -291,8 +291,6 @@ class HTMLDiffer:
             text = self.extract_text_from_element(elem)
             if comparable(elem, text):
                 old_elem_list.append((text, elem))
-            elif text:
-                skipped_elements += 1
 
         if len(old_elem_list) > MAX_ELEMENTS_FOR_PAIRWISE or len(new_matches) > MAX_ELEMENTS_FOR_PAIRWISE:
             print(
