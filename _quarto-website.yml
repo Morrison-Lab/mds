@@ -37,6 +37,8 @@ website:
         menu:
           - text: "Notation"
             href: notation.qmd
+          - text: "Proof Writing"
+            href: proof-writing.qmd
           - text: "Algebra"
             href: algebra.qmd
           - text: "Calculus"
