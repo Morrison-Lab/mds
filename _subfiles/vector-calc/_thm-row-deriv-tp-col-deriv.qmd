@@ -5,3 +5,29 @@ $$\deriv{ \vb\'} f(\vb) = \pt{\deriv{ \vb} f(\vb)}$$
 $$\deriv{ \vb} f(\vb) = \pt{\deriv{ \vb\'} f(\vb)}$$
 
 :::
+
+::: proof
+By @def-vector-derivative and @def-row-vector-derivative,
+entry $j$ of both $\deriv{\vb} f(\vb)$ and $\deriv{\vb\'} f(\vb)$
+is $\deriv{\beta_j} f(\vb)$;
+the first is a $p \times 1$ column and the second a $1 \times p$ row
+with the same entries in the same order,
+so each is the transpose of the other.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-row-deriv-tp-col-deriv}
+#### Row and column derivatives of a linear function
+
+For $f(\vb) = 3\beta_1 + 5\beta_2$:
+
+$$
+\deriv{\vb} f(\vb) = \sbmat{3 \\ 5},
+\qquad
+\deriv{\vb\'} f(\vb) = \sbmat{3 & 5},
+$$
+
+and each is the transpose of the other.
+
+:::

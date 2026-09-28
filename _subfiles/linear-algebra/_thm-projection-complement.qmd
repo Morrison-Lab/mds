@@ -1,6 +1,7 @@
 :::{#thm-projection-complement}
 #### Complement of a projection matrix
 
-If $\matr{P}$ is a projection matrix, then $\matr{I} - \matr{P}$ is also a projection matrix.
+If $\matr{P}$ is a $p \times p$ orthogonal projection matrix (@def-projection-matrix),
+then $\matr{I}_p - \matr{P}$ is also an orthogonal projection matrix.
 
 :::

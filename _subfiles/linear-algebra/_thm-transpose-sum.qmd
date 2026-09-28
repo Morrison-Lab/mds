@@ -1,10 +1,35 @@
 :::{#thm-transpose-sum}
 #### Transpose of a sum
 
+For $m \times n$ matrices $\matr{A}$ and $\matr{B}$:
+
 $$\tp{(\matr{A} + \matr{B})} = \tp{\matr{A}} + \tp{\matr{B}}$$
 
-In particular, for column vectors $\vx$ and $\vy$:
+In particular, for column vectors $\vx$ and $\vy$ of the same length:
 
 $$\tp{(\vx + \vy)} = \tp{\vx} + \tp{\vy}$$
+
+:::
+
+::: proof
+
+Entry $(i, j)$ of each side:
+
+$$
+\ba
+\sb{\tp{(\matr{A} + \matr{B})}}_{ij}
+&= (\matr{A} + \matr{B})_{ji}
+&& \text{(definition of the transpose)}
+\\
+&= a_{ji} + b_{ji}
+&& \text{(definition of matrix addition)}
+\\
+&= (\tp{\matr{A}})_{ij} + (\tp{\matr{B}})_{ij}
+&& \text{(definition of the transpose)}
+\\
+&= \sb{\tp{\matr{A}} + \tp{\matr{B}}}_{ij}
+&& \text{(definition of matrix addition)}
+\ea
+$$
 
 :::

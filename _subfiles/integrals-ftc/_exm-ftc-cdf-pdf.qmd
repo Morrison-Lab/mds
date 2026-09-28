@@ -5,27 +5,46 @@ In what follows, $f$ denotes the PDF and $F$ the CDF --- the same letters
 as the antiderivative pair in @def-antiderivative, because the FTC will
 show $F$ is exactly an antiderivative of $f$.
 
-For the exponential distribution with rate parameter $\lambda > 0$,
-the probability density function (PDF) is
+Let $T$ be a
+[random variable](https://morrison-lab.github.io/rme/chapters/probability.html)
+with the exponential distribution with rate parameter $\lambda > 0$.
+Its [probability density function (PDF)](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf) is
 [@kleinbaum2012survival, Section II, p. 295, "Survival and Hazard
 Functions for Selected Distributions"]:
 
 $$f(t) = \lambda \ef{-\lambda t}, \quad t \ge 0$$
 
-**FTC Part 2** gives the cumulative distribution function (CDF) from the PDF.
+**FTC Part 2** gives the
+[cumulative distribution function (CDF)](https://morrison-lab.github.io/rme/chapters/probability.html#def-cdf),
+$F(t) = P(T \le t)$, from the PDF.
 Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\lambda$ to
 antidifferentiate the integrand:
+
+<!-- repoint the random-variable, PDF and CDF links to pds random-variables.qmd (#def-random-variable, #def-pdf, #def-cdf) once pds#8 is published -->
 
 $$
 \ba
 F(t)
-&= \int_0^t \lambda \ef{-\lambda u}\,du \\
-&= \sb{\lambda \cd \frac{1}{-\lambda}\ef{-\lambda u}}_{u=0}^{u=t} \\
-&= \sb{(-1)\ef{-\lambda u}}_{u=0}^{u=t} \\
-&= \sb{-\ef{-\lambda u}}_{u=0}^{u=t} \\
-&= -\ef{-\lambda t} - \paren{-\ef{0}} \\
-&= -\ef{-\lambda t} - (-1) \\
+&= \int_0^t \lambda \ef{-\lambda u}\,du
+&& \text{(the CDF integrates the PDF)}
+\\
+&= \sb{\lambda \cd \frac{1}{-\lambda}\ef{-\lambda u}}_{u=0}^{u=t}
+&& \text{(FTC Part 2, with the } \ef{cx} \text{ rule)}
+\\
+&= \sb{(-1)\ef{-\lambda u}}_{u=0}^{u=t}
+&& \text{(} \lambda / (-\lambda) = -1 \text{)}
+\\
+&= \sb{-\ef{-\lambda u}}_{u=0}^{u=t}
+&& \text{(multiply by } -1 \text{)}
+\\
+&= -\ef{-\lambda t} - \paren{-\ef{0}}
+&& \text{(evaluate at the limits)}
+\\
+&= -\ef{-\lambda t} - (-1)
+&& \text{(} \ef{0} = 1 \text{)}
+\\
 &= 1 - \ef{-\lambda t}
+&& \text{(rearrange)}
 \ea
 $$
 
@@ -34,10 +53,26 @@ $$
 $$
 \ba
 \deriv{t} F(t)
-&= \deriv{t}\paren{1 - \ef{-\lambda t}} \\
-&= 0 - (-\lambda)\ef{-\lambda t} \\
-&= \lambda\ef{-\lambda t} \\
+&= \deriv{t}\paren{1 - \ef{-\lambda t}}
+&& \text{(substitute } F \text{)}
+\\
+&= \deriv{t} 1 - \deriv{t} \ef{-\lambda t}
+&& \text{(derivative of a difference)}
+\\
+&= 0 - \deriv{t} \ef{-\lambda t}
+&& \text{(constant rule)}
+\\
+&= 0 - \ef{-\lambda t} \cd \deriv{t}(-\lambda t)
+&& \text{(chain rule, with inner function } -\lambda t \text{)}
+\\
+&= 0 - \ef{-\lambda t} \cd (-\lambda)
+&& \text{(constant multiple rule)}
+\\
+&= \lambda\ef{-\lambda t}
+&& \text{(simplify)}
+\\
 &= f(t)
+&& \text{(definition of } f \text{)}
 \ea
 $$
 
@@ -51,7 +86,7 @@ $$
 See @fig-exp-pdf-cdf.
 
 ```{r}
-#| label: fig-exp-pdf-cdf-setup
+#| label: exp-pdf-cdf-setup
 #| include: false
 lambda <- 1
 t_focus <- 2
@@ -66,7 +101,7 @@ F_at_focus <- 1 - exp(-lambda * t_focus)
 :::{#fig-exp-pdf-cdf-pdf}
 
 ```{r}
-#| label: fig-exp-pdf-cdf-pdf-code
+#| label: exp-pdf-cdf-pdf-code
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_area(
@@ -88,7 +123,7 @@ PDF with $\lambda = `r lambda`$; shaded area equals $F(`r t_focus`) \approx `r r
 :::{#fig-exp-pdf-cdf-cdf}
 
 ```{r}
-#| label: fig-exp-pdf-cdf-cdf-code
+#| label: exp-pdf-cdf-cdf-code
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_function(

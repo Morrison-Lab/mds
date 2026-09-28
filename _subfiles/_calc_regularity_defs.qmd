@@ -45,9 +45,60 @@ A function $f$ is **continuous at** $x = c$ if all three conditions hold:
 #### Continuous on a closed interval
 
 A function $f$ is **continuous on** a closed interval $[a, b]$
-if it is continuous (@def-continuous) at every point of $[a, b]$.
+if all three conditions hold:
+
+1. $f$ is continuous (@def-continuous) at every point of the open interval $(a, b)$,
+2. $\lim_{x \to a^+} f(x) = f(a)$, and
+3. $\lim_{x \to b^-} f(x) = f(b)$.
 
 [@larsonCalc11e, Section 1.4, p. 73]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-continuous-on-sqrt}
+#### Continuity on $[0, 1]$ uses one-sided limits at the endpoints
+
+Let $f(x) = \sqrt{x}$, defined for $x \ge 0$.
+Because $f$ is undefined for $x < 0$,
+only the right-hand limit of $f$ at $0$ makes sense,
+and @def-continuous-on asks only for that one-sided limit at the endpoint $0$.
+Here $f$ is continuous at every point of $(0, 1)$,
+$\lim_{x \to 0^+} \sqrt{x} = 0 = f(0)$,
+and $\lim_{x \to 1^-} \sqrt{x} = 1 = f(1)$,
+so $f$ is continuous on $[0, 1]$ (@def-continuous-on).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-partition}
+#### Partition of an interval
+
+A **partition** $\mathcal{P}$ of a closed interval $[a, b]$
+is a finite list of points
+
+$$a = x_0 < x_1 < \cdots < x_n = b.$$
+
+It splits $[a, b]$ into the $n$ subintervals $[x_{i-1}, x_i]$,
+of widths $\Delta x_i \eqdef x_i - x_{i-1}$,
+and its **mesh** is the largest width,
+$\|\mathcal{P}\| \eqdef \max_i \Delta x_i$.
+
+[@larsonCalc11e, Section 4.3]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-partition}
+#### A partition of $[0, 1]$
+
+The points $0 < 0.25 < 0.5 < 1$ form a partition of $[0, 1]$
+with $n = 3$ subintervals,
+of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
+so its mesh is $0.5$.
 
 :::
 
@@ -56,15 +107,15 @@ if it is continuous (@def-continuous) at every point of $[a, b]$.
 :::{#def-riemann-integral}
 #### Riemann integral
 
-For a bounded function $f$ on $[a, b]$,
-split $[a, b]$ into $n$ equal-width subintervals of width
-$\Delta x \eqdef (b - a)/n$,
-and let $x_i^*$ be any point in the $i$-th subinterval.
+Let $f$ be a bounded function on $[a, b]$.
+For each partition $\mathcal{P}$ of $[a, b]$ (@def-partition),
+choose a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$.
 The **Riemann integral** of $f$ over $[a, b]$ is the limit
 
-$$\int_a^b f(x)\,dx \eqdef \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*)\,\Delta x,$$
+$$\int_a^b f(x)\,dx \eqdef \lim_{\|\mathcal{P}\| \to 0} \sum_{i=1}^n f(x_i^*)\,\Delta x_i,$$
 
-when that limit exists.
+when that limit exists and has the same value
+for every choice of the partitions and of the sample points $x_i^*$.
 
 [@larsonCalc11e, Section 4.3, p. 272]
 
@@ -85,24 +136,42 @@ exists and is finite.
 
 {{< slidebreak >}}
 
-:::{#def-integrable-general}
-#### General Riemann integrability
+:::{#def-riemann-sum-equal-width}
+#### Equal-width Riemann sum
 
-More generally, using partitions $\mathcal{P}$ of arbitrary mesh --- subintervals of varying widths
-$\Delta x_i$ --- a bounded function $f$ is **Riemann integrable in the general sense** on $[a, b]$ if
+For a bounded function $f$ on $[a, b]$ and a positive integer $n$,
+split $[a, b]$ into $n$ subintervals of equal width
+$\Delta x \eqdef (b - a)/n$,
+and let $x_i^*$ be any point in the $i$-th subinterval.
+The **equal-width Riemann sum** is
 
-$$\int_a^b f(x)\,dx \eqdef \lim_{\|\mathcal{P}\| \to 0} \sum_{i=1}^n f(x_i^*)\,\Delta x_i$$
-
-exists and is finite, where $\|\mathcal{P}\| = \max_i \Delta x_i$ is the mesh of the partition.
+$$S_n \eqdef \sum_{i=1}^n f(x_i^*)\,\Delta x.$$
 
 :::
 
-:::{#thm-riemann-general}
-#### Equivalence of Riemann sum formulations
+{{< slidebreak >}}
 
-For continuous $f$ on a closed interval $[a, b]$, the equal-width Riemann sum
-(@def-integrable) and the arbitrary-mesh Riemann sum (@def-integrable-general)
-give the same value [@rudin1976principles, Chapter 6].
-Applied statistics courses mostly use the equal-width form in @def-integrable.
+:::{#exm-equal-width-sum}
+#### An equal-width Riemann sum
+
+Let $f(x) = x^2$ on $[0, 1]$, with $n = 2$,
+so $\Delta x = 1/2$,
+and take each sample point at the right end of its subinterval:
+$x_1^* = \frac{1}{2}$ and $x_2^* = 1$.
+Then
+
+$$
+\ba
+S_2
+&= f\paren{\tfrac{1}{2}} \cd \tfrac{1}{2} + f(1) \cd \tfrac{1}{2}
+&& \text{(equal-width Riemann sum with } n = 2 \text{)}
+\\
+&= \tfrac{1}{4} \cd \tfrac{1}{2} + 1 \cd \tfrac{1}{2}
+&& \text{(evaluate } f(x) = x^2 \text{)}
+\\
+&= \tfrac{5}{8}
+&& \text{(add)}
+\ea
+$$
 
 :::

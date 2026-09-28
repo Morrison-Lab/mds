@@ -1,0 +1,50 @@
+:::{#def-vector-valued-derivative}
+#### Derivative of a vector-valued function
+
+If $\vy = \vy(\vb) = \tp{(y_1, \ldots, y_q)}$ is a $q \times 1$ vector-valued function
+of the $p \times 1$ vector $\vb$,
+its **derivative with respect to** $\vb$
+is the $p \times q$ matrix whose $(i, j)$ entry is
+
+$$
+\sb{\deriv{\vb} \tp{\vy}}_{ij} \eqdef \deriv{\beta_i} y_j,
+\qquad i = 1, \ldots, p, \quad j = 1, \ldots, q.
+$$
+
+These notes use this *denominator layout* throughout:
+rows index the entries of $\vb$ (the denominator)
+and columns index the entries of $\vy$ (the numerator),
+so column $j$ is the vector derivative $\deriv{\vb} y_j$ (@def-vector-derivative).
+Both $\deriv{\vb} \vy$ and $\deriv{\vb} \tp{\vy}$ denote this $p \times q$ matrix.
+
+:::
+
+::: notes
+Some sources use the transposed, *numerator layout*,
+in which the derivative is the $q \times p$ Jacobian matrix
+with $(j, i)$ entry $\deriv{\beta_i} y_j$.
+Check a source's layout before combining its formulas with these.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-vector-valued-derivative}
+#### Differentiating a $3 \times 1$ function of a $2 \times 1$ vector
+
+Let $\vb = \tp{(\beta_1, \beta_2)}$ ($p = 2$)
+and $\vy(\vb) = \tp{(\beta_1^2,\ \beta_1\beta_2,\ 3\beta_2)}$ ($q = 3$).
+Then
+
+$$
+\underbrace{\deriv{\vb} \tp{\vy}}_{2 \times 3}
+= \sbmat{
+\deriv{\beta_1} \beta_1^2 & \deriv{\beta_1} \beta_1\beta_2 & \deriv{\beta_1} 3\beta_2 \\
+\deriv{\beta_2} \beta_1^2 & \deriv{\beta_2} \beta_1\beta_2 & \deriv{\beta_2} 3\beta_2
+}
+= \sbmat{
+2\beta_1 & \beta_2 & 0 \\
+0 & \beta_1 & 3
+}
+$$
+
+:::

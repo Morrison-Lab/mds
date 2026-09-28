@@ -1,6 +1,46 @@
 :::{#thm-double-exp}
 
-#### exponential of a product
+#### Power of a power
+
+If $a > 0$ and $b, c \in \reals$, then
 
 $$a^{bc} = \paren{a^b}^c = \paren{a^c}^b$$
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-double-exp-negative-base}
+#### A negative base
+
+With $a = -1$, $b = 2$, and $c = \frac{1}{2}$:
+
+$$
+\ba
+a^{bc}
+&= (-1)^{2 \cd \frac{1}{2}}
+\\
+&= (-1)^{1}
+\\
+&= -1
+\ea
+$$
+
+but
+
+$$
+\ba
+\paren{a^b}^c
+&= \paren{(-1)^2}^{\frac{1}{2}}
+\\
+&= 1^{\frac{1}{2}}
+\\
+&= 1
+\ea
+$$
+
+So $a^{bc} \neq \paren{a^b}^c$ here,
+which is why @thm-double-exp requires $a > 0$.
+The third expression, $\paren{a^c}^b = \paren{(-1)^{\frac{1}{2}}}^2$,
+is not even a real number.
+
 :::

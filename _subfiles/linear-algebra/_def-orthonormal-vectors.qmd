@@ -2,9 +2,10 @@
 #### Orthonormal vectors
 
 A set of vectors $\{\vx_1, \vx_2, \ldots, \vx_k\}$ is **orthonormal** if
-the vectors are mutually orthogonal and each has unit length:
+the vectors are mutually orthogonal (@def-orthogonal-vectors)
+and each has norm $1$ (@def-euclidean-norm), that is, unit length:
 
-$$\tp{\vx_i}\vx_j =
+$$\vx_i \cdot \vx_j =
 \begin{cases}
 1 & \text{if } i = j \\
 0 & \text{if } i \neq j

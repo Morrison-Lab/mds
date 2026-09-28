@@ -4,7 +4,7 @@
 Let $\vb = \tp{(\beta_1, \beta_2)}$ and $\vx = \tp{(3, 5)}$,
 so $x_1 = 3$ and $x_2 = 5$ do not depend on $\vb$.
 Expanding $\deriv{\vb} \tp{\vx}$ into its matrix of scalar partial derivatives
-(@def-vector-derivative, applied to each component of the row $\tp{\vx}$)
+(@def-vector-valued-derivative)
 and evaluating each entry:
 
 $$
@@ -22,10 +22,10 @@ $$
 0 & 0 \\
 0 & 0
 }
-= \underbrace{\mathbf{0}}_{2 \times 2}
+= \underbrace{\matr{0}}_{2 \times 2}
 $$
 
-Every entry is the derivative of a constant, so $\deriv{\vb} \tp{\vx} = \underbrace{\mathbf{0}}_{2 \times 2}$
+Every entry is the derivative of a constant, so $\deriv{\vb} \tp{\vx} = \underbrace{\matr{0}}_{2 \times 2}$
 and $\vx$ is constant with respect to $\vb$ (@def-constant-wrt-vector).
 
 :::

@@ -1,6 +1,62 @@
 :::{#cor-chain-qf}
 
 #### Vector chain rule for quadratic forms
-$$\deriv{\vb}{\paren{\vec\eps\sparen{\vb}\cdot \vec\eps\sparen{\vb}}} = \paren{\deriv{\vb}\vec{\eps}\sparen{\vb}} \paren{2 \vec\eps\sparen{\vb}}$$
+
+If $\vec\eps = \vec\eps\sparen{\vb}$ is an $n \times 1$ vector-valued function
+of the $p \times 1$ vector $\vb$,
+with continuous partial derivatives, then
+
+$$
+\underbrace{\deriv{\vb}{\paren{\vec\eps\sparen{\vb}\cdot \vec\eps\sparen{\vb}}}}_{p \times 1}
+= \underbrace{\paren{\deriv{\vb}\vec{\eps}\sparen{\vb}}}_{p \times n}
+\underbrace{\paren{2 \vec\eps\sparen{\vb}}}_{n \times 1}
+$$
+
+:::
+
+::: proof
+Apply @thm-chain-vec with $\vx = \vb$, $\vy = \vec\eps$, $q = n$,
+and $z = f(\vec\eps) = \vec\eps \cdot \vec\eps = \tp{\vec\eps}\vec\eps$:
+
+$$
+\ba
+\deriv{\vb}\paren{\vec\eps \cdot \vec\eps}
+&= \paren{\deriv{\vb}\vec\eps} \deriv{\vec\eps}\paren{\tp{\vec\eps}\vec\eps}
+&& \text{(vector chain rule)}
+\\
+&= \paren{\deriv{\vb}\vec\eps} \paren{2\vec\eps}
+&& \text{(derivative of a simple quadratic form, in } \vec\eps \text{)}
+\ea
+$$
+
+The second step is @cor-deriv-normsq,
+applied to the $n \times 1$ vector $\vec\eps$ in place of $\vb$.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-chain-qf-residuals}
+#### Derivative of the residual sum of squares
+
+Let $\vy$ ($n \times 1$) and $\mX$ ($n \times p$) be constant with respect to $\vb$,
+and let $\vec\eps(\vb) = \vy - \mX\vb$ be the vector of residuals.
+By @thm-deriv-linear-map, $\deriv{\vb}(\mX\vb) = \tp{\mX}$,
+and $\deriv{\vb}\vy = \matr{0}_{p \times n}$ because $\vy$ is constant,
+so $\deriv{\vb}\vec\eps = -\tp{\mX}$ ($p \times n$).
+By @cor-chain-qf:
+
+$$
+\ba
+\deriv{\vb}\paren{\vec\eps \cdot \vec\eps}
+&= \paren{-\tp{\mX}} \paren{2\vec\eps}
+&& \text{(vector chain rule for quadratic forms)}
+\\
+&= -2\,\tp{\mX}\paren{\vy - \mX\vb}
+&& \text{(substitute } \vec\eps = \vy - \mX\vb \text{)}
+\ea
+$$
+
+Setting this $p \times 1$ vector to $\vzero$ gives the normal equations
+$\tp{\mX}\mX\vb = \tp{\mX}\vy$ of least squares.
 
 :::

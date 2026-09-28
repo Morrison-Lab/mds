@@ -21,7 +21,7 @@ See @fig-step.
 :::{#fig-step}
 
 ```{r}
-#| label: fig-step-code
+#| label: step-code
 #| code-fold: true
 step_df <- data.frame(
   x = c(0, 0.5, 0.5, 1),

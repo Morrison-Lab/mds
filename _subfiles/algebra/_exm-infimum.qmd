@@ -8,5 +8,7 @@
   More generally, $\inf(c, b] = \min[c, b] = c$ for any $c < b$.
 - $\inf\{t \ge 0 : t > 0.5\} = 0.5$,
   even though $0.5$ itself is not in the set.
+- $\inf\{-1, -2, -3, \ldots\} = -\infty$,
+  because no real number is less than or equal to every element of that set.
 
 :::

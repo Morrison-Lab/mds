@@ -2,8 +2,8 @@
 #### Orthogonal vectors
 
 Two vectors $\vx$ and $\vy$ of the same length are **orthogonal**
-(written $\vx \perp \vy$) if their dot product is zero:
+(written $\vx \perp \vy$) if their dot product (@def-dot-product) is zero:
 
-$$\vx \perp \vy \iff \tp{\vx}\vy = 0$$
+$$\vx \perp \vy \iff \vx \cdot \vy = 0$$
 
 :::

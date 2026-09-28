@@ -1,0 +1,106 @@
+:::{#thm-inverse-transpose}
+#### Inverse of a transpose
+
+If $\matr{A}$ is an invertible $p \times p$ matrix,
+then $\tp{\matr{A}}$ is invertible, and
+
+$$\inv{\tp{\matr{A}}} = \tp{\paren{\matr{A}^{-1}}}$$
+
+:::
+
+::: proof
+
+Multiply $\tp{\matr{A}}$ by the candidate inverse on each side:
+
+$$
+\ba
+\tp{\matr{A}}\,\tp{\paren{\matr{A}^{-1}}}
+&= \tp{\paren{\matr{A}^{-1}\matr{A}}}
+&& \text{(transpose of a product)}
+\\
+&= \tp{\matr{I}_p}
+&& \text{(definition of } \matr{A}^{-1} \text{)}
+\\
+&= \matr{I}_p
+&& \text{(} \matr{I}_p \text{ is symmetric)}
+\ea
+$$
+
+$$
+\ba
+\tp{\paren{\matr{A}^{-1}}}\,\tp{\matr{A}}
+&= \tp{\paren{\matr{A}\matr{A}^{-1}}}
+&& \text{(transpose of a product)}
+\\
+&= \tp{\matr{I}_p}
+&& \text{(definition of } \matr{A}^{-1} \text{)}
+\\
+&= \matr{I}_p
+&& \text{(} \matr{I}_p \text{ is symmetric)}
+\ea
+$$
+
+So $\tp{\paren{\matr{A}^{-1}}}$ satisfies @def-matrix-inverse for $\tp{\matr{A}}$.
+The first step of each display is @thm-transpose-product.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-inverse-transpose}
+#### Inverting a transpose
+
+For
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$,
+@exm-invertible-matrix gives
+$\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$,
+so @thm-inverse-transpose says
+
+$$
+\inv{\tp{\matr{A}}}
+= \inv{\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}}
+= \tp{\paren{\matr{A}^{-1}}}
+= \begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix},
+$$
+
+and multiplying $\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix}$
+out does give $\matr{I}_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-inverse-symmetric}
+#### The inverse of a symmetric matrix is symmetric
+
+If $\matr{A}$ is symmetric and invertible, then $\matr{A}^{-1}$ is symmetric.
+
+:::
+
+::: proof
+
+$$
+\ba
+\tp{\paren{\matr{A}^{-1}}}
+&= \inv{\tp{\matr{A}}}
+&& \text{(inverse of a transpose)}
+\\
+&= \matr{A}^{-1}
+&& \text{(} \matr{A} \text{ is symmetric)}
+\ea
+$$
+
+The first step is @thm-inverse-transpose.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-inverse-symmetric}
+#### Inverting a symmetric matrix
+
+$\matr{S} = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$ is symmetric,
+and $\matr{S}^{-1} = \begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix}$
+is symmetric too, as @cor-inverse-symmetric says.
+
+:::

@@ -6,14 +6,14 @@ totals, and probabilities. We begin with antiderivatives, then state
 basic integration rules, and conclude with the Fundamental Theorem of
 Calculus and a worked example from probability.
 
-## Antiderivatives
+### Antiderivatives
 
 {{< include mds/_subfiles/_calc_antiderivatives.qmd >}}
 
-## Regularity Conditions
+### Regularity Conditions
 
 {{< include mds/_subfiles/_calc_integrals_regularity.qmd >}}
 
-## Fundamental Theorem of Calculus
+### Fundamental Theorem of Calculus
 
 {{< include mds/_subfiles/_calc_integrals_ftc.qmd >}}

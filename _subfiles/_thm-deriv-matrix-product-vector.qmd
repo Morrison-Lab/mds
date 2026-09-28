@@ -2,17 +2,17 @@
 
 #### Vector-derivative of a product of matrices
 
-If $A$ ($\ell \times m$) and $B$ ($m \times q$)
+If $\matr{A}$ ($\ell \times m$) and $\matr{B}$ ($m \times q$)
 are constant with respect to $\vb$,
 and $\vecf{v} = \vecf{v}(\vb)$ is a $q \times 1$ vector
 that depends on the $p \times 1$ vector $\vb$,
 then:
 
 $$
-\underbrace{\deriv{\vb} (A B \vecf{v})}_{p \times \ell} =
+\underbrace{\deriv{\vb} (\matr{A} \matr{B} \vecf{v})}_{p \times \ell} =
 \underbrace{\paren{\deriv{\vb} \vecf{v}}}_{p \times q}
-\underbrace{\tp{B}}_{q \times m}
-\underbrace{\tp{A}}_{m \times \ell}
+\underbrace{\tp{\matr{B}}}_{q \times m}
+\underbrace{\tp{\matr{A}}}_{m \times \ell}
 $$
 
 :::
@@ -20,14 +20,17 @@ $$
 ::: proof
 
 Apply @thm-deriv-matrix-vector
-with the constant $\ell \times q$ matrix $AB$,
-then use $\tp{(AB)} = \tp{B}\,\tp{A}$:
+with the constant $\ell \times q$ matrix $\matr{A}\matr{B}$,
+then use the [transpose of a product](linear-algebra.qmd#thm-transpose-product):
 
 $$
 \ba
-\deriv{\vb} (A B \vecf{v})
-&= \paren{\deriv{\vb} \vecf{v}} \tp{(AB)} \\
-&= \paren{\deriv{\vb} \vecf{v}} \tp{B}\,\tp{A}
+\deriv{\vb} (\matr{A} \matr{B} \vecf{v})
+&= \paren{\deriv{\vb} \vecf{v}} \tp{(\matr{A}\matr{B})}
+&& \text{(derivative of a matrix-vector product)}
+\\
+&= \paren{\deriv{\vb} \vecf{v}} \tp{\matr{B}}\,\tp{\matr{A}}
+&& \text{(transpose of a product)}
 \ea
 $$
 
@@ -35,17 +38,17 @@ $$
 
 :::{#exm-deriv-matrix-product-vector}
 
-Let $A = \begin{pmatrix}1 & 0\end{pmatrix}$ ($1 \times 2$),
-$B = \begin{pmatrix}2 & 0 \\
+Let $\matr{A} = \begin{pmatrix}1 & 0\end{pmatrix}$ ($1 \times 2$),
+$\matr{B} = \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}$ ($2 \times 2$),
 and $\vecf{v}(\vb) = \vb$ where $\vb = \tp{(\beta_1, \beta_2)}$.
-Then $AB\vecf{v} = 2\beta_1$, and:
+Then $\matr{A}\matr{B}\vecf{v} = 2\beta_1$, and:
 
 $$
-\underbrace{\deriv{\vb}(AB\vecf{v})}_{2 \times 1}
+\underbrace{\deriv{\vb}(\matr{A}\matr{B}\vecf{v})}_{2 \times 1}
 = \underbrace{\paren{\deriv{\vb}\vb}}_{2 \times 2}
-\underbrace{\tp{B}}_{2 \times 2}
-\underbrace{\tp{A}}_{2 \times 1}
+\underbrace{\tp{\matr{B}}}_{2 \times 2}
+\underbrace{\tp{\matr{A}}}_{2 \times 1}
 = \matr{I}_2
 \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}

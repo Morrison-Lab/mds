@@ -1,7 +1,7 @@
 :::{#thm-quadratic-form-symmetric}
-#### Symmetric part of a quadratic form
+#### A quadratic form depends only on the symmetric part
 
-If $\matr{S}$ is a square matrix, then
+If $\matr{S}$ is a $p \times p$ matrix and $\vx$ is a vector of length $p$, then
 
 $$
 \tp{\vx}\matr{S}\vx
@@ -9,6 +9,66 @@ $$
 \tp{\vx}\left(\frac{1}{2}(\matr{S}+\tp{\matr{S}})\right)\vx.
 $$
 
-So the value of a quadratic form depends only on the symmetric part of $\matr{S}$.
+So the value of a quadratic form depends only on the symmetric part
+(@def-symmetric-part) of $\matr{S}$.
+
+:::
+
+::: proof
+
+The quadratic form $\tp{\vx}\matr{S}\vx$ is a $1 \times 1$ matrix,
+so it equals its own transpose:
+
+$$
+\ba
+\tp{\vx}\matr{S}\vx
+&= \tp{\paren{\tp{\vx}\matr{S}\vx}}
+&& \text{(a } 1 \times 1 \text{ matrix is symmetric)}
+\\
+&= \tp{\vx}\,\tp{\matr{S}}\,\tp{\paren{\tp{\vx}}}
+&& \text{(transpose of a product, twice)}
+\\
+&= \tp{\vx}\,\tp{\matr{S}}\,\vx
+&& \text{(transposing twice changes nothing)}
+\ea
+$$
+
+Averaging the two expressions for $\tp{\vx}\matr{S}\vx$:
+
+$$
+\ba
+\tp{\vx}\matr{S}\vx
+&= \frac{1}{2}\paren{\tp{\vx}\matr{S}\vx + \tp{\vx}\,\tp{\matr{S}}\,\vx}
+&& \text{(average of two equal numbers)}
+\\
+&= \frac{1}{2}\,\tp{\vx}\paren{\matr{S} + \tp{\matr{S}}}\vx
+&& \text{(distributive law)}
+\\
+&= \tp{\vx}\left(\frac{1}{2}(\matr{S}+\tp{\matr{S}})\right)\vx
+&& \text{(move the scalar } \tfrac{1}{2} \text{ inside)}
+\ea
+$$
+
+The distributive step is @thm-matmul-distrib,
+and the transpose step is @thm-transpose-product.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-quadratic-form-symmetric}
+#### Replacing a matrix by its symmetric part
+
+With $\matr{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ from @exm-symmetric-part
+and $\vx = (1, 1)$:
+
+$$
+\tp{\vx}\matr{S}\vx = 1 + 2 + 0 + 3 = 6
+\qquad
+\tp{\vx}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\vx = 1 + 1 + 1 + 3 = 6
+$$
+
+Both quadratic forms equal the sum of their matrix's entries,
+because every entry of $\vx$ is $1$.
 
 :::

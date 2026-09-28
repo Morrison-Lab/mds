@@ -4,10 +4,16 @@
 
 Adapted from [@larsonCalc11e, Section 14.2, Example 4, pp. 984--985].
 
-Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$ random variables,
-with joint density $f(x, y) = 1$ on the unit square $[0, 1]^2$.
+Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$
+[random variables](https://morrison-lab.github.io/rme/chapters/probability.html),
+with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf)
+$f(x, y) = 1$ on the unit square $[0, 1]^2$.
 Define the function $g(x, y) = \ef{-x^2}\,\indicp{y \le x}$,
-and compute its expectation $\E{g(X, Y)}$.
+and compute its
+[expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)
+$\E{g(X, Y)}$.
+
+<!-- repoint the random-variable, density and expectation links to pds (random-variables.html#def-random-variable, random-variables.html#def-pdf, expectation.html#def-expectation) once pds#8 is published -->
 
 Because the joint density equals $1$ on $[0, 1]^2$,
 this expectation is the double integral of $g$ over the unit square:
@@ -75,11 +81,45 @@ $$
 \ba
 \iint_D \ef{-x^2}\,dA
 &= \int_0^1\!\int_0^x \ef{-x^2}\,dy\,dx
+&& \text{(Fubini, vertically simple region)}
 \\&= \int_0^1 \ef{-x^2}\paren{\int_0^x dy}\,dx
+&& \text{(} \ef{-x^2} \text{ is constant in } y \text{)}
 \\&= \int_0^1 x\,\ef{-x^2}\,dx
-\\&= \sb{-\frac{1}{2}\,\ef{-x^2}}_0^1
+&& \text{(} \textstyle\int_0^x dy = x \text{)}
+\ea
+$$
+
+To antidifferentiate $x\,\ef{-x^2}$,
+let $u = x^2$ be the inner function.
+By the chain rule (@thm-chain-rule), with $\dif{u}{x} = 2x$,
+
+$$
+\ba
+\dif{}{x}\paren{-\frac{1}{2}\,\ef{-u}}
+&= -\frac{1}{2}\,\ef{-u} \cd (-1) \cd \dif{u}{x}
+&& \text{(chain rule)}
+\\&= -\frac{1}{2}\,\ef{-x^2} \cd (-1) \cd 2x
+&& \text{(substitute } u = x^2 \text{ and } du/dx = 2x \text{)}
+\\&= x\,\ef{-x^2}
+&& \text{(multiply)}
+\ea
+$$
+
+so $-\frac{1}{2}\,\ef{-x^2}$ is an antiderivative of $x\,\ef{-x^2}$, and
+
+$$
+\ba
+\int_0^1 x\,\ef{-x^2}\,dx
+&= \sb{-\frac{1}{2}\,\ef{-x^2}}_0^1
+&& \text{(FTC Part 2)}
+\\&= -\frac{1}{2}\paren{\ef{-1} - \ef{0}}
+&& \text{(evaluate at the limits)}
 \\&= -\frac{1}{2}\paren{\ef{-1} - 1}
+&& \text{(} \ef{0} = 1 \text{)}
+\\&= \frac{1 - \ef{-1}}{2}
+&& \text{(distribute } -\tfrac{1}{2} \text{)}
 \\&= \frac{e - 1}{2e}
+&& \text{(multiply numerator and denominator by } e \text{)}
 \\&\approx 0.316
 \ea
 $$

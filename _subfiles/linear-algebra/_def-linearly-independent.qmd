@@ -1,0 +1,24 @@
+:::{#def-linearly-independent}
+#### Linearly independent vectors
+
+Vectors $\vecf{v}_1, \ldots, \vecf{v}_k$ of the same length $p$
+are **linearly independent** if the only numbers $c_1, \ldots, c_k$ with
+
+$$c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k = \vzero$$
+
+are $c_1 = \cdots = c_k = 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-linearly-independent}
+#### Independent and dependent pairs of vectors
+
+- $\vecf{v}_1 = (1, 0)$ and $\vecf{v}_2 = (1, 1)$ are linearly independent:
+  $c_1 \vecf{v}_1 + c_2 \vecf{v}_2 = (c_1 + c_2, c_2)$,
+  which is $\vzero$ only if $c_2 = 0$ and then $c_1 = 0$.
+- $\vecf{v}_1 = (1, 2)$ and $\vecf{v}_2 = (2, 4)$ are not:
+  $2 \vecf{v}_1 - \vecf{v}_2 = \vzero$.
+
+:::

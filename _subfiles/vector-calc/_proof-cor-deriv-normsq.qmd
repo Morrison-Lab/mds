@@ -1,6 +1,6 @@
 ::: proof
 
-Applying @thm-quadratic-form with $S = \matr{I}_{p \times p}$ (which is symmetric and constant with respect to $\vb$):
+Applying @thm-quadratic-form with $\matr{S} = \matr{I}_{p \times p}$ (which is symmetric and constant with respect to $\vb$):
 
 $$
 \ba
@@ -8,7 +8,7 @@ $$
 &= \deriv{\vb}(\tp{\vb}\matr{I}_{p \times p}\vb)
 && \text{(rewrite with identity matrix)} \\
 &= 2\matr{I}_{p \times p}\vb
-&& \text{(apply } \text{@thm-quadratic-form} \text{ with } S = \matr{I}_{p \times p} \text{)} \\
+&& \text{(derivative of a quadratic form, with } \matr{S} = \matr{I}_{p \times p} \text{)} \\
 &= 2\vb
 && \text{(identity matrix property)}
 \ea

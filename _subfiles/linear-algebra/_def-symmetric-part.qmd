@@ -1,0 +1,29 @@
+:::{#def-symmetric-part}
+#### Symmetric part of a square matrix
+
+The **symmetric part** of a $p \times p$ matrix $\matr{S}$ is
+
+$$\frac{1}{2}\paren{\matr{S} + \tp{\matr{S}}}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-symmetric-part}
+#### The symmetric part of a $2 \times 2$ matrix
+
+For $\matr{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$,
+the symmetric part is
+
+$$
+\frac{1}{2}\paren{
+\begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
++ \begin{bmatrix} 1 & 0 \\ 2 & 3 \end{bmatrix}
+}
+= \frac{1}{2}\begin{bmatrix} 2 & 2 \\ 2 & 6 \end{bmatrix}
+= \begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix},
+$$
+
+which is symmetric.
+
+:::

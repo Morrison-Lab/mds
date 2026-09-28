@@ -1,8 +1,34 @@
 :::{#thm-transpose-product}
 #### Transpose of a product
 
-For compatible matrices $\matr{A}$ and $\matr{B}$:
+For an $m \times k$ matrix $\matr{A}$ and a $k \times n$ matrix $\matr{B}$:
 
-$$\tp{(\matr{A}\matr{B})} = \tp{\matr{B}}\,\tp{\matr{A}}$$
+$$
+\underbrace{\tp{(\matr{A}\matr{B})}}_{n \times m}
+= \underbrace{\tp{\matr{B}}}_{n \times k}\,\underbrace{\tp{\matr{A}}}_{k \times m}
+$$
+
+:::
+
+::: proof
+
+Entry $(i, j)$ of each side:
+
+$$
+\ba
+\sb{\tp{(\matr{A}\matr{B})}}_{ij}
+&= (\matr{A}\matr{B})_{ji}
+&& \text{(definition of the transpose)}
+\\
+&= \sum_{s=1}^{k} a_{js}\, b_{si}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \sum_{s=1}^{k} (\tp{\matr{B}})_{is}\, (\tp{\matr{A}})_{sj}
+&& \text{(definition of the transpose; reorder each product)}
+\\
+&= \sb{\tp{\matr{B}}\,\tp{\matr{A}}}_{ij}
+&& \text{(definition of matrix multiplication)}
+\ea
+$$
 
 :::

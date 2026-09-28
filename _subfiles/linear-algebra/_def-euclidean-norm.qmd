@@ -1,0 +1,32 @@
+:::{#def-euclidean-norm}
+#### Euclidean norm
+
+The **Euclidean norm** (or *length*) of a vector $\vx$ of length $p$ is
+
+$$\norm{\vx} \eqdef \sqrt{\vx \cdot \vx} = \sqrt{\sumip x_i^2}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-euclidean-norm}
+#### The length of a vector
+
+For $\vx = (3, 4)$:
+
+$$
+\ba
+\norm{\vx}
+&= \sqrt{3^2 + 4^2}
+&& \text{(definition of the norm)}
+\\
+&= \sqrt{25}
+&& \text{(square and add)}
+\\
+&= 5
+\ea
+$$
+
+The vector $(0.6, 0.8)$ has norm $\sqrt{0.36 + 0.64} = 1$.
+
+:::

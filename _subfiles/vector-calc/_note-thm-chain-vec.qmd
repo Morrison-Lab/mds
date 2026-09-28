@@ -4,7 +4,8 @@ specifically <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>
 
 See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_derivative>
 
-This chain rule is like the univariate chain rule (@thm-chain-rule),
+This chain rule is like the univariate
+[chain rule](calculus.qmd#thm-chain-rule),
 but the order matters now.
 The version presented here is for the
 [gradient](https://en.wikipedia.org/wiki/Gradient) (column vector);

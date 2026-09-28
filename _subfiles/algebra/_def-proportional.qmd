@@ -4,6 +4,6 @@
 
 Two functions $f(x)$ and $g(x)$ are **proportional** if 
 their ratio $\frac{f(x)}{g(x)}$ does not depend on $x$.
-(c.f. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+(cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 :::

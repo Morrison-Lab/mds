@@ -1,38 +1,32 @@
 {{< include latex-macros/macros.qmd >}}
 
-## Elementary Algebra
-
 {{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
 
-### Equalities
+## Equalities
 
 {{< include mds/_subfiles/algebra/_thm-equal-trans.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-substitution.qmd >}}
 
----
-
-### Inequalities
+## Inequalities
 
 {{< include mds/_subfiles/algebra/_thm-add-ineq.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-neg-ineq.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-mult-ineq.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
 
----
-
-### Infimum and supremum
+## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
 
@@ -48,92 +42,103 @@
 
 {{< include mds/_subfiles/algebra/_exm-supremum.qmd >}}
 
-{{< slidebreak >}}
-
-### Sums
+## Sums
 
 {{< include mds/_subfiles/algebra/_thm-add-ident.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-sum-symmetric.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-sum-assoc.qmd >}}
 
----
+## Products
 
-### Products
-
----
+<!-- heading shares the slide; do not re-flag -->
 
 {{< include mds/_subfiles/algebra/_thm-mult-one.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-prod-symmetric.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-prod-assoc.qmd >}}
 
-### Division
+## Division
 
 {{< include mds/_subfiles/algebra/_thm-prod-div.qmd >}}
 
-### Sums and products together
+## Sums and products together
 
----
+<!-- heading shares the slide; do not re-flag -->
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
----
-
-### Quotients
+## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-ratio.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-proportion.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-proportional.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
 
----
+## Exponentials and Logarithms
 
-### Exponentials and Logarithms
+In these notes,
+$\logf{x}$ is the natural logarithm of $x > 0$,
+the logarithm with base $e \approx 2.718$,
+and $\expf{x} = e^x$ is the exponential function.
+Some sources write $\ln x$ for the natural logarithm
+and reserve $\log x$ for base 10.
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-exp-log-inverse.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-log-prod.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_cor-log-quot.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-log-exp.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-exp-sum.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_cor-exp-sum.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-double-exp.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_cor-exp-ab.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exr-double-exponentials.qmd >}}
-
----
-
-{{< include mds/_subfiles/algebra/_thm-exp-log-inverse.qmd >}}

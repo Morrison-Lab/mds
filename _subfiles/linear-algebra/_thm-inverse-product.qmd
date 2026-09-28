@@ -1,8 +1,54 @@
 :::{#thm-inverse-product}
 #### Inverse of a product
 
-For invertible matrices $\matr{A}$ and $\matr{B}$:
+If $\matr{A}$ and $\matr{B}$ are invertible $p \times p$ matrices,
+then $\matr{A}\matr{B}$ is invertible, and
 
 $$(\matr{A}\matr{B})^{-1} = \matr{B}^{-1}\matr{A}^{-1}$$
+
+:::
+
+::: proof
+
+Multiply $\matr{A}\matr{B}$ by the candidate inverse on the right:
+
+$$
+\ba
+(\matr{A}\matr{B})(\matr{B}^{-1}\matr{A}^{-1})
+&= \matr{A}(\matr{B}\matr{B}^{-1})\matr{A}^{-1}
+&& \text{(matrix multiplication is associative)}
+\\
+&= \matr{A}\,\matr{I}_p\,\matr{A}^{-1}
+&& \text{(definition of } \matr{B}^{-1} \text{)}
+\\
+&= \matr{A}\matr{A}^{-1}
+&& \text{(identity matrix)}
+\\
+&= \matr{I}_p
+&& \text{(definition of } \matr{A}^{-1} \text{)}
+\ea
+$$
+
+and on the left:
+
+$$
+\ba
+(\matr{B}^{-1}\matr{A}^{-1})(\matr{A}\matr{B})
+&= \matr{B}^{-1}(\matr{A}^{-1}\matr{A})\matr{B}
+&& \text{(matrix multiplication is associative)}
+\\
+&= \matr{B}^{-1}\,\matr{I}_p\,\matr{B}
+&& \text{(definition of } \matr{A}^{-1} \text{)}
+\\
+&= \matr{B}^{-1}\matr{B}
+&& \text{(identity matrix)}
+\\
+&= \matr{I}_p
+&& \text{(definition of } \matr{B}^{-1} \text{)}
+\ea
+$$
+
+So $\matr{B}^{-1}\matr{A}^{-1}$ satisfies @def-matrix-inverse for $\matr{A}\matr{B}$.
+The steps use @thm-matmul-assoc and @thm-identity.
 
 :::

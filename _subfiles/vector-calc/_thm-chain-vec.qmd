@@ -1,10 +1,19 @@
 :::{#thm-chain-vec}
 #### Vector chain rule
 
-$$\derivf{z}{\vx} = \derivf{y}{\vx} \derivf{z}{y}$$
+Let $\vx$ be a $p \times 1$ vector,
+let $\vy = \vec{g}(\vx)$ be a $q \times 1$ vector-valued function of $\vx$,
+and let $z = f(\vy)$ be a scalar-valued function of $\vy$,
+where $\vec{g}$ and $f$ have continuous partial derivatives.
+Then $z = f(\vec{g}(\vx))$, as a function of $\vx$, satisfies
 
-or in Euler/Lagrange notation:
+$$
+\underbrace{\derivf{z}{\vx}}_{p \times 1}
+= \underbrace{\derivf{\vy}{\vx}}_{p \times q}
+\underbrace{\derivf{z}{\vy}}_{q \times 1}
+$$
 
-$$(f(g(\vx)))' = \vec{g}'(\vx) f'(g(\vx))$$
+where $\derivf{\vy}{\vx}$ is the derivative of @def-vector-valued-derivative
+and $\derivf{z}{\vx}$ and $\derivf{z}{\vy}$ are vector derivatives (@def-vector-derivative).
 
 :::

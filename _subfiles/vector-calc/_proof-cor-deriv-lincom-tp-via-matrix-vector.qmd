@@ -3,7 +3,7 @@
 **Using @thm-deriv-matrix-vector:**
 
 Since $\vx$ is constant with respect to $\vb$,
-$A = \tp{\vx}$ is a constant $1 \times p$ matrix.
+$\matr{A} = \tp{\vx}$ is a constant $1 \times p$ matrix.
 Applying @thm-deriv-matrix-vector with $\vecf{v} = \vb$
 (so $\deriv{\vb}\vb = \matr{I}$):
 

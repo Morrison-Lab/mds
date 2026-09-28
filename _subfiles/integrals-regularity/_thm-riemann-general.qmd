@@ -1,0 +1,55 @@
+:::{#thm-riemann-general}
+#### Equal-width Riemann sums converge to the integral
+
+If $f$ is Riemann integrable on $[a, b]$ (@def-integrable),
+then for every choice of the sample points $x_i^*$,
+the equal-width Riemann sums (@def-riemann-sum-equal-width) converge to the integral:
+
+$$\lim_{n \to \infty} S_n = \int_a^b f(x)\,dx.$$
+
+:::
+
+::: proof
+The $n$ equal-width subintervals form a partition of $[a, b]$
+whose mesh is $(b - a)/n$,
+which goes to $0$ as $n \to \infty$.
+So $S_n$ is one of the sums in the limit that defines the integral
+(@def-riemann-integral),
+along a sequence of partitions whose mesh goes to $0$,
+and a limit that has the same value for every choice of partitions
+has that value along this sequence too.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-riemann-equal-width}
+#### Equal-width sums for $\int_0^1 x\,dx$
+
+Let $f(x) = x$ on $[0, 1]$,
+which is continuous and so Riemann integrable (@thm-cont-implies-int),
+and take each sample point at the right end of its subinterval,
+$x_i^* = i/n$.
+With $\Delta x = 1/n$:
+
+$$
+\ba
+S_n
+&= \sum_{i=1}^n \frac{i}{n} \cd \frac{1}{n}
+&& \text{(equal-width Riemann sum with } x_i^* = i/n \text{)}
+\\
+&= \frac{1}{n^2} \sum_{i=1}^n i
+&& \text{(factor out } 1/n^2 \text{)}
+\\
+&= \frac{1}{n^2} \cd \frac{n(n+1)}{2}
+&& \text{(sum of the first } n \text{ integers)}
+\\
+&= \frac{n+1}{2n}
+&& \text{(cancel one factor of } n \text{)}
+\ea
+$$
+
+So $S_{10} = 0.55$, $S_{100} = 0.505$, $S_{1000} = 0.5005$,
+and $S_n \to \frac{1}{2}$ as $n \to \infty$.
+By @thm-riemann-general, $\int_0^1 x\,dx = \frac{1}{2}$.
+
+:::

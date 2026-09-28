@@ -1,0 +1,31 @@
+:::{#def-invertible-matrix}
+#### Invertible matrix
+
+A square matrix $\matr{A}$ is **invertible**
+(or *non-singular*)
+if it has an inverse $\matr{A}^{-1}$ (@def-matrix-inverse).
+A square matrix with no inverse is *singular*.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-invertible-matrix}
+#### An invertible matrix and a singular one
+
+The matrix
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
+is invertible, with
+$\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$:
+multiplying out gives
+$\matr{A}\matr{A}^{-1} = \matr{A}^{-1}\matr{A} = \matr{I}_2$.
+
+The matrix
+$\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
+is singular:
+for any $2 \times 2$ matrix $\matr{C}$,
+the two rows of $\matr{B}\matr{C}$ are equal,
+so $\matr{B}\matr{C}$ can never be $\matr{I}_2$,
+whose two rows differ.
+
+:::

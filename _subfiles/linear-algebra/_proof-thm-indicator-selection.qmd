@@ -1,17 +1,20 @@
 ::: proof
 
-Writing the product componentwise:
+Writing the dot product componentwise:
 
 $$
 \ba
-\tp{\vecf{e}_j}\vx
+\vecf{e}_j \cdot \vx
 &= \sum_{i=1}^{p} (\vecf{e}_j)_i\, x_i
+&& \text{(definition of the dot product)}
 \\&= \sum_{i=1}^{p}
    \begin{cases}
    1 \cdot x_i & \text{if } i = j \\
    0 \cdot x_i & \text{if } i \neq j
    \end{cases}
+&& \text{(definition of } \vecf{e}_j \text{)}
 \\&= x_j
+&& \text{(only the } i = j \text{ term is nonzero)}
 \ea
 $$
 

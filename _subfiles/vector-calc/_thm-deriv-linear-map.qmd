@@ -2,13 +2,13 @@
 
 #### Derivative of a linear map
 
-If $A$ is an $m \times p$ matrix
+If $\matr{A}$ is an $m \times p$ matrix
 that is constant with respect to $\vb$,
 then:
 
 $$
-\underbrace{\deriv{\vb} (A\vb)}_{p \times m} =
-\underbrace{\tp{A}}_{p \times m}
+\underbrace{\deriv{\vb} (\matr{A}\vb)}_{p \times m} =
+\underbrace{\tp{\matr{A}}}_{p \times m}
 $$
 
 :::

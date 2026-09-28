@@ -2,6 +2,7 @@
 
 #### $\expf{}$ and $\logf{}$ are mutual inverses
 
-$$\expf{\logf{a}} = \logf{\expf{a}} = a$$
+1. For every $a > 0$: $\expf{\logf{a}} = a$.
+2. For every $a \in \reals$: $\logf{\expf{a}} = a$.
 
 :::

@@ -1,7 +1,13 @@
 :::{#thm-matmul-distrib}
 #### Matrix multiplication is distributive over addition
 
+For an $m \times k$ matrix $\matr{A}$
+and $k \times n$ matrices $\matr{B}$ and $\matr{C}$:
+
 $$\matr{A}(\matr{B} + \matr{C}) = \matr{A}\matr{B} + \matr{A}\matr{C}$$
+
+For $m \times k$ matrices $\matr{A}$ and $\matr{B}$
+and a $k \times n$ matrix $\matr{C}$:
 
 $$(\matr{A} + \matr{B})\matr{C} = \matr{A}\matr{C} + \matr{B}\matr{C}$$
 

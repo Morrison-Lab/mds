@@ -1,1 +1,1 @@
-$$\text{differentiable} \;\Rightarrow\; \text{continuous} \;\Rightarrow\; \text{integrable}$$
+$$\text{differentiable on } [a, b] \;\Rightarrow\; \text{continuous on } [a, b] \;\Rightarrow\; \text{integrable on } [a, b]$$

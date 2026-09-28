@@ -1,11 +1,106 @@
+:::{#thm-gram-invertible}
+#### $\tp{\mX}\mX$ is invertible when $\mX$ has full column rank
+
+If $\mX$ is an $n \times p$ matrix with $\operatorname{rank}(\mX) = p$ (@def-rank),
+then the $p \times p$ matrix $\tp{\mX}\mX$ is invertible.
+
+:::
+
+::: proof
+Let $\vecf{c}$ be a vector of length $p$ with $\tp{\mX}\mX\vecf{c} = \vzero$.
+Then
+
+$$
+\ba
+0
+&= \tp{\vecf{c}}\,\tp{\mX}\mX\vecf{c}
+&& \text{(multiply } \tp{\mX}\mX\vecf{c} = \vzero \text{ on the left by } \tp{\vecf{c}} \text{)}
+\\
+&= \tp{\paren{\mX\vecf{c}}}\paren{\mX\vecf{c}}
+&& \text{(transpose of a product)}
+\\
+&= \norm{\mX\vecf{c}}^2
+&& \text{(definition of the Euclidean norm)}
+\ea
+$$
+
+so $\mX\vecf{c} = \vzero$.
+Because $\mX\vecf{c} = c_1 (\text{column } 1) + \cdots + c_p (\text{column } p)$
+and the columns of $\mX$ are linearly independent,
+$\vecf{c} = \vzero$.
+So the only solution of $\tp{\mX}\mX\vecf{c} = \vzero$ is $\vecf{c} = \vzero$,
+which says that the columns of the square matrix $\tp{\mX}\mX$ are linearly independent,
+and a square matrix with linearly independent columns is invertible
+[@banerjee2014linear].
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gram-invertible}
+#### Inverting $\tp{\mX}\mX$
+
+For the rank-$2$ matrix
+$\mX = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}$
+from @exm-rank:
+
+$$
+\tp{\mX}\mX = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix},
+\qquad
+\inv{\tp{\mX}\mX} = \frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix},
+$$
+
+and multiplying the two out gives $\matr{I}_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-hat-matrix}
+#### Hat matrix
+
+For an $n \times p$ design matrix $\mX$ (@def-design-matrix)
+with $\operatorname{rank}(\mX) = p$,
+the **hat matrix** is the $n \times n$ matrix
+
+$$
+\underbrace{\matr{H}}_{n \times n}
+\eqdef
+\underbrace{\mX}_{n \times p}
+\underbrace{(\tp{\mX}\mX)^{-1}}_{p \times p}
+\underbrace{\tp{\mX}}_{p \times n}
+$$
+
+The inverse exists by @thm-gram-invertible.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hat-matrix}
+#### The hat matrix of an intercept-only model
+
+With $n = 2$ observations and only an intercept,
+$\mX = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ ($2 \times 1$, rank $1$),
+so $\tp{\mX}\mX = 2$ and
+
+$$
+\matr{H}
+= \begin{bmatrix} 1 \\ 1 \end{bmatrix} \cd \frac{1}{2} \cd \begin{bmatrix} 1 & 1 \end{bmatrix}
+= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}.
+$$
+
+Then $\matr{H}\vy = (\bar{y}, \bar{y})$, where $\bar{y} = (y_1 + y_2)/2$:
+the fitted values of an intercept-only model are the sample mean.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#thm-hat-matrix}
 #### Hat matrix is a projection matrix
 
-In a linear regression model with full-rank design matrix $\mX$,
-the **hat matrix**
-
-$$\matr{H} = \mX(\tp{\mX}\mX)^{-1}\tp{\mX}$$
-
-is a projection matrix.
+If $\mX$ is an $n \times p$ design matrix with $\operatorname{rank}(\mX) = p$,
+then the hat matrix $\matr{H}$ (@def-hat-matrix)
+is an orthogonal projection matrix (@def-projection-matrix).
 
 :::

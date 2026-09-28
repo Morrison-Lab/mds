@@ -3,11 +3,56 @@ of integration in a double integral can be exchanged.
 We state two versions:
 the Riemann version (@thm-fubini) is what applied courses usually use
 for double integrals of continuous functions on simple regions;
-the σ-finite measure-theoretic version (@thm-fubini-tonelli) is
+the $\sigma$-finite measure-theoretic version (@thm-fubini-tonelli) is
 included to make the
 [joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint)
 corollary in the probability chapter of *Regression Models for Epidemiology*
 follow from a stated theorem rather than from an aside.
+
+<!-- repoint the joint-distribution link to pds expectation.qmd#cor-fubini-joint once pds#8 is published -->
+
+{{< slidebreak >}}
+
+:::{#def-double-integral}
+#### Double integral
+
+Let $f$ be a bounded function on a closed, bounded plane region $R \subseteq \mathbb{R}^2$.
+Cover $R$ with a grid of rectangles,
+keep the $n$ rectangles that lie entirely inside $R$,
+with areas $\Delta A_1, \ldots, \Delta A_n$,
+and choose a point $(x_i, y_i)$ in the $i$-th rectangle.
+The **double integral** of $f$ over $R$ is
+
+$$\iint_R f(x, y)\,dA \eqdef \lim_{\|\Delta\| \to 0} \sum_{i=1}^n f(x_i, y_i)\,\Delta A_i,$$
+
+where $\|\Delta\|$ is the length of the longest diagonal among the $n$ rectangles,
+when that limit exists and has the same value
+for every choice of grids and of the points $(x_i, y_i)$.
+
+[@larsonCalc11e, Section 14.2]
+
+:::
+
+::: notes
+The symbol $dA$ stands for an element of area.
+An *iterated integral* such as $\int_a^b \int_c^d f(x, y)\,dy\,dx$
+means $\int_a^b \paren{\int_c^d f(x, y)\,dy}\,dx$:
+integrate over the inner variable ($y$) first,
+holding the outer variable ($x$) fixed.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-double-integral-area}
+#### The double integral of $1$ is an area
+
+Let $f(x, y) = 1$ on the rectangle $R = [0, 2] \times [0, 3]$.
+Every sum in @def-double-integral
+adds up the areas of rectangles inside $R$,
+and those sums approach the area of $R$ as the grid gets finer,
+so $\iint_R 1\,dA = 2 \cd 3 = 6$.
+
+:::
 
 {{< slidebreak >}}
 
