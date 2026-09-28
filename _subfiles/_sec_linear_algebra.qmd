@@ -10,6 +10,14 @@
 
 {{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-vector-addition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_def_lincom.qmd >}}
+
 ### Special vectors
 
 {{< include mds/_subfiles/linear-algebra/_def-zero-vector.qmd >}}
@@ -34,19 +42,15 @@
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
 
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_def_lincom.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_exm-dot-product-matmul.qmd >}}
-
 ### Orthogonality
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-orthogonal-vectors.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-euclidean-norm.qmd >}}
 
 {{< slidebreak >}}
 
@@ -63,16 +67,6 @@
 ### Matrix transpose {#sec-matrix-transpose}
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-transpose.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-transpose-sum.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-transpose-product.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-thm-transpose-product.qmd >}}
 
 ### Matrix addition
 
@@ -110,6 +104,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exm-dot-product-matmul.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-matmul-assoc.qmd >}}
 
 {{< slidebreak >}}
@@ -121,6 +119,26 @@
 {{< include mds/_subfiles/linear-algebra/_def-matvec-mult.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-matvec-mult.qmd >}}
+
+### Transposes of sums and products
+
+<!-- heading shares the slide; do not re-flag -->
+
+{{< include mds/_subfiles/linear-algebra/_thm-transpose-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-transpose-product.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-thm-transpose-product.qmd >}}
+
+### Rank
+
+{{< include mds/_subfiles/linear-algebra/_def-linearly-independent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-rank.qmd >}}
 
 ## Special Matrices
 
@@ -158,11 +176,17 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-inverse.qmd >}}
 
-{{< include mds/_subfiles/linear-algebra/_note-def-matrix-inverse.qmd >}}
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-invertible-matrix.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-inverse-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-inverse-transpose.qmd >}}
 
 {{< slidebreak >}}
 
@@ -180,14 +204,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_thm-hat-matrix.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_proof-thm-hat-matrix.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_note-thm-hat-matrix.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_thm-projection-orthogonal.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-projection-orthogonal.qmd >}}
@@ -200,6 +216,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-symmetric-part.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-symmetric.qmd >}}
 
 ## Design Matrix
@@ -207,3 +227,15 @@
 {{< include mds/_subfiles/linear-algebra/_def-design-matrix.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-design-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-hat-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_proof-thm-hat-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-hat-matrix-projection.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-thm-hat-matrix.qmd >}}

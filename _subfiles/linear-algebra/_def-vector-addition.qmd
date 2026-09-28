@@ -1,0 +1,27 @@
+:::{#def-vector-addition}
+#### Vector addition
+
+The **sum** of two column vectors $\vx$ and $\vy$ of the same length $p$
+is the column vector $\vx + \vy$ of length $p$
+obtained by adding entry by entry:
+
+$$(\vx + \vy)_i \eqdef x_i + y_i, \quad i = 1, \ldots, p$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-vector-addition}
+#### Adding two vectors
+
+$$
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
++
+\begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}
+=
+\begin{bmatrix} 1 + 4 \\ 2 + 5 \\ 3 + 6 \end{bmatrix}
+=
+\begin{bmatrix} 5 \\ 7 \\ 9 \end{bmatrix}
+$$
+
+:::

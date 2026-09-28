@@ -1,0 +1,17 @@
+:::{#exm-hat-matrix-projection}
+#### The intercept-only hat matrix is a projection
+
+For $\matr{H} = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}$
+from @exm-hat-matrix,
+$\tp{\matr{H}} = \matr{H}$, and
+
+$$
+\matr{H}^2
+= \begin{bmatrix} 0.5 \cd 0.5 + 0.5 \cd 0.5 & 0.5 \cd 0.5 + 0.5 \cd 0.5 \\ 0.5 \cd 0.5 + 0.5 \cd 0.5 & 0.5 \cd 0.5 + 0.5 \cd 0.5 \end{bmatrix}
+= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}
+= \matr{H},
+$$
+
+as @thm-hat-matrix says.
+
+:::

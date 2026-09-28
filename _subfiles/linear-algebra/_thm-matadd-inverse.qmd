@@ -1,9 +1,9 @@
 :::{#thm-matadd-inverse}
 #### Additive inverse
 
-For any matrix $\matr{A}$, the matrix $-\matr{A}$
+For any $m \times n$ matrix $\matr{A}$, the $m \times n$ matrix $-\matr{A}$
 (defined by $(-\matr{A})_{ij} = -a_{ij}$) satisfies:
 
-$$\matr{A} + (-\matr{A}) = \matr{0}$$
+$$\matr{A} + (-\matr{A}) = \matr{0}_{m \times n}$$
 
 :::

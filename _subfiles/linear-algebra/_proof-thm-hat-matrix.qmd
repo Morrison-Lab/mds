@@ -1,26 +1,45 @@
 :::{.proof}
 We verify symmetry and idempotency.
+Both use that $\tp{\mX}\mX$ is symmetric,
+$\tp{\paren{\tp{\mX}\mX}} = \tp{\mX}\,\tp{\paren{\tp{\mX}}} = \tp{\mX}\mX$
+(@thm-transpose-product),
+so its inverse is symmetric too (@cor-inverse-symmetric).
 
 **Symmetry:**
 $$\ba
 \tp{\matr{H}}
-&= \tp{\left(\mX(\tp{\mX}\mX)^{-1}\tp{\mX}\right)} \\
-&= \tp{(\tp{\mX})} \cdot \tp{\left((\tp{\mX}\mX)^{-1}\right)} \cdot \tp{\mX} \\
-&= \mX \cdot (\tp{\mX}\mX)^{-1} \cdot \tp{\mX} \\
+&= \tp{\left(\mX(\tp{\mX}\mX)^{-1}\tp{\mX}\right)}
+&& \text{(definition of } \matr{H} \text{)}
+\\
+&= \tp{(\tp{\mX})} \cdot \tp{\left((\tp{\mX}\mX)^{-1}\right)} \cdot \tp{\mX}
+&& \text{(transpose of a product, twice)}
+\\
+&= \mX \cdot \tp{\left((\tp{\mX}\mX)^{-1}\right)} \cdot \tp{\mX}
+&& \text{(transposing twice changes nothing)}
+\\
+&= \mX \cdot (\tp{\mX}\mX)^{-1} \cdot \tp{\mX}
+&& \text{(the inverse of a symmetric matrix is symmetric)}
+\\
 &= \matr{H}
+&& \text{(definition of } \matr{H} \text{)}
 \ea$$
-
-where the third line uses $\tp{(\tp{\mX})} = \mX$
-and the fact that $\tp{\mX}\mX$ is symmetric,
-so its inverse is also symmetric
-($\tp{\left((\tp{\mX}\mX)^{-1}\right)} = (\tp{\mX}\mX)^{-1}$).
 
 **Idempotency:**
 $$\ba
 \matr{H}^2
-&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \cdot \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \\
-&= \mX(\tp{\mX}\mX)^{-1}(\tp{\mX}\mX)(\tp{\mX}\mX)^{-1}\tp{\mX} \\
-&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \\
+&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX} \cdot \mX(\tp{\mX}\mX)^{-1}\tp{\mX}
+&& \text{(definition of } \matr{H} \text{)}
+\\
+&= \mX(\tp{\mX}\mX)^{-1}(\tp{\mX}\mX)(\tp{\mX}\mX)^{-1}\tp{\mX}
+&& \text{(regroup; matrix multiplication is associative)}
+\\
+&= \mX\,\matr{I}_p\,(\tp{\mX}\mX)^{-1}\tp{\mX}
+&& \text{(definition of the inverse)}
+\\
+&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX}
+&& \text{(identity matrix)}
+\\
 &= \matr{H}
+&& \text{(definition of } \matr{H} \text{)}
 \ea$$
 :::

@@ -1,6 +1,8 @@
 :::{#thm-matadd-commutative}
 #### Matrix addition is commutative
 
+For $m \times n$ matrices $\matr{A}$ and $\matr{B}$:
+
 $$\matr{A} + \matr{B} = \matr{B} + \matr{A}$$
 
 :::

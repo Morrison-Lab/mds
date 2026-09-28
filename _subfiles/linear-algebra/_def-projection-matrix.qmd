@@ -1,11 +1,47 @@
 :::{#def-projection-matrix}
-#### Projection matrix
+#### Orthogonal projection matrix
 
-A square matrix $\matr{P}$ is a **projection matrix**
-(also called an *orthogonal projector*) if it is both symmetric and idempotent:
+A square matrix $\matr{P}$ is an **orthogonal projection matrix**
+if it is both symmetric (@def-symmetric-matrix)
+and idempotent (@def-idempotent-matrix):
 
 $$\tp{\matr{P}} = \matr{P}
 \qquad \text{and} \qquad
 \matr{P}^2 = \matr{P}$$
+
+:::
+
+::: notes
+Any idempotent matrix is called a *projection matrix*;
+an idempotent matrix that is not symmetric is an *oblique* projection.
+Regression texts often say "projection matrix"
+when they mean an orthogonal one.
+In these notes, "projection matrix" always means
+an orthogonal projection matrix in the sense of @def-projection-matrix.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-projection-matrix}
+#### An orthogonal projection and an oblique one
+
+$\matr{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+is symmetric, and $\matr{P}^2 = \matr{P}$,
+so $\matr{P}$ is an orthogonal projection matrix;
+it maps $(v_1, v_2)$ to $(v_1, 0)$.
+
+$\matr{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$
+is idempotent:
+
+$$
+\matr{Q}^2
+= \begin{bmatrix} 1 \cd 1 + 1 \cd 0 & 1 \cd 1 + 1 \cd 0 \\ 0 \cd 1 + 0 \cd 0 & 0 \cd 1 + 0 \cd 0 \end{bmatrix}
+= \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}
+= \matr{Q},
+$$
+
+but $\tp{\matr{Q}} \neq \matr{Q}$,
+so $\matr{Q}$ is an oblique projection,
+not an orthogonal projection matrix.
 
 :::

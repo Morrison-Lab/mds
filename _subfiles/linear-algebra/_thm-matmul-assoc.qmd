@@ -1,6 +1,39 @@
 :::{#thm-matmul-assoc}
 #### Matrix multiplication is associative
 
-$$(\matr{A}\matr{B})\matr{C} = \matr{A}(\matr{B}\matr{C})$$
+For an $m \times k$ matrix $\matr{A}$,
+a $k \times l$ matrix $\matr{B}$,
+and an $l \times n$ matrix $\matr{C}$:
+
+$$
+\underbrace{(\matr{A}\matr{B})\matr{C}}_{m \times n}
+= \underbrace{\matr{A}(\matr{B}\matr{C})}_{m \times n}
+$$
+
+:::
+
+::: proof
+
+Entry $(i, j)$ of each side, from @def-matrix-mult:
+
+$$
+\ba
+\sb{(\matr{A}\matr{B})\matr{C}}_{ij}
+&= \sum_{t=1}^{l} (\matr{A}\matr{B})_{it}\, c_{tj}
+&& \text{(definition of } (\matr{A}\matr{B})\matr{C} \text{)}
+\\
+&= \sum_{t=1}^{l} \paren{\sum_{s=1}^{k} a_{is}\, b_{st}} c_{tj}
+&& \text{(definition of } \matr{A}\matr{B} \text{)}
+\\
+&= \sum_{s=1}^{k} a_{is} \paren{\sum_{t=1}^{l} b_{st}\, c_{tj}}
+&& \text{(distribute and swap the finite sums)}
+\\
+&= \sum_{s=1}^{k} a_{is}\, (\matr{B}\matr{C})_{sj}
+&& \text{(definition of } \matr{B}\matr{C} \text{)}
+\\
+&= \sb{\matr{A}(\matr{B}\matr{C})}_{ij}
+&& \text{(definition of } \matr{A}(\matr{B}\matr{C}) \text{)}
+\ea
+$$
 
 :::

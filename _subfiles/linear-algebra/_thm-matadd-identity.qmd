@@ -1,6 +1,8 @@
 :::{#thm-matadd-identity}
 #### Zero matrix is the additive identity
 
-$$\matr{A} + \matr{0} = \matr{A}$$
+For an $m \times n$ matrix $\matr{A}$:
+
+$$\matr{A} + \matr{0}_{m \times n} = \matr{A}$$
 
 :::

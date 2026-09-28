@@ -14,13 +14,13 @@ format:
 
 {{< include mds/_subfiles/_sec_linear_algebra.qmd >}}
 
-# Additional resources {#sec-additional-resources}
+## Additional resources {#sec-additional-resources}
 
 - @fieller2018basics
 - @banerjee2014linear
 - @searle2017matrix
 
-# References {.unnumbered}
+## References {.unnumbered}
 
 ::: {#refs}
 :::
