@@ -112,9 +112,6 @@ to denote logical entailments (deductive consequences).
 
 Let's save $\rightarrow$ (`\rightarrow`) for convergence results.
 
-See [Proof Writing](proof-writing.qmd)
-for general guidance on how to present proofs and derivations.
-
 ## Indicator functions {#sec-indicator-functions}
 
 {{< include mds/_subfiles/notation/_sec-indicator-functions.qmd >}}
