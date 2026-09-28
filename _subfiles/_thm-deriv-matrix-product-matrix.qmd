@@ -29,7 +29,7 @@ $$
 
 :::{#thm-deriv-matrix-product-matrix}
 
-#### Matrix-derivative of a product of matrices
+#### Matrix derivative of the trace of a matrix product
 
 If $A$ ($r \times m$) and $B$ ($n \times r$)
 are constant with respect to the $m \times n$ matrix $\matr{X}$,

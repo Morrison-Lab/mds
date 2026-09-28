@@ -63,7 +63,7 @@ The percent sign "%" is just a shorthand for "$/100$".
 The word "percent" comes from the Latin "per centum"; 
 "centum" is Latin for 100, 
 so "percent" means "per hundred" 
-(c.f., <https://en.wikipedia.org/wiki/Percentage>)
+(cf. <https://en.wikipedia.org/wiki/Percentage>)
 
 So, contrary to what you may have learned previously, 
 $10\% = 0.1$ is a true and correct equality,
@@ -117,7 +117,7 @@ and the amount of inconsistency in notation and content increases
 (both between multiple references and within single references!). 
 In other words, 
 as you approach the cutting-edge of most fields, 
-you start to encounter into content 
+you start to run into content 
 that hasn't been fully thought through or standardized. 
 This lack of clarity 
 is unfortunate and undesirable, 

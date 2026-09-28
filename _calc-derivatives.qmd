@@ -7,9 +7,8 @@ $$\deriv{x}c = 0$$
 
 {{< slidebreak >}}
 
-
 :::{#thm-deriv-const-factor}
-#### Power rule
+#### Constant multiple rule
 
 If $a$ is constant with respect to $x$, then:
 $$\deriv{x}ay = a \derivf{x}{y}$$
@@ -17,7 +16,6 @@ $$\deriv{x}ay = a \derivf{x}{y}$$
 :::
 
 {{< slidebreak >}}
-
 
 :::{#thm-deriv-polynomial}
 #### Power rule
@@ -87,4 +85,3 @@ $$
 Apply @thm-chain-rule and @thm-deriv-log.
 :::
 
----
