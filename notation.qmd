@@ -11,3 +11,8 @@ format:
 ---
 
 {{< include mds/_notation.qmd >}}
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
