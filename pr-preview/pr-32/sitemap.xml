@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://morrison-lab.github.io/mds/vector-calculus.html</loc>
-    <lastmod>2026-09-28T23:12:26.694Z</lastmod>
+    <lastmod>2026-09-28T23:32:03.330Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mds/proof-writing.html</loc>
-    <lastmod>2026-09-28T23:12:26.694Z</lastmod>
+    <lastmod>2026-09-28T23:32:03.330Z</lastmod>
   </url>
   <url>
-    <loc>https://morrison-lab.github.io/mds/linear-algebra.html</loc>
-    <lastmod>2026-09-28T23:12:26.694Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mds/calculus.html</loc>
-    <lastmod>2026-09-28T23:12:26.693Z</lastmod>
-  </url>
-  <url>
-    <loc>https://morrison-lab.github.io/mds/algebra.html</loc>
-    <lastmod>2026-09-28T23:12:26.693Z</lastmod>
+    <loc>https://morrison-lab.github.io/mds/measures.html</loc>
+    <lastmod>2026-09-28T23:32:03.330Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mds/index.html</loc>
-    <lastmod>2026-09-28T23:08:28.920Z</lastmod>
+    <lastmod>2026-09-28T23:28:02.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mds/algebra.html</loc>
+    <lastmod>2026-09-28T23:32:03.329Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mds/calculus.html</loc>
+    <lastmod>2026-09-28T23:32:03.329Z</lastmod>
+  </url>
+  <url>
+    <loc>https://morrison-lab.github.io/mds/linear-algebra.html</loc>
+    <lastmod>2026-09-28T23:32:03.330Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mds/notation.html</loc>
-    <lastmod>2026-09-28T23:12:26.694Z</lastmod>
+    <lastmod>2026-09-28T23:32:03.330Z</lastmod>
   </url>
   <url>
     <loc>https://morrison-lab.github.io/mds/sets-functions.html</loc>
-    <lastmod>2026-09-28T23:12:26.694Z</lastmod>
+    <lastmod>2026-09-28T23:32:03.330Z</lastmod>
   </url>
 </urlset>
