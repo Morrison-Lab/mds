@@ -1,0 +1,8 @@
+:::{#def-strict-superset}
+#### Strict superset
+
+A set $B$ is a **strict superset** of a set $A$,
+written $B \supsetneq A$,
+if $A$ is a [strict subset](#def-strict-subset) of $B$.
+
+:::
