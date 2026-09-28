@@ -2,7 +2,8 @@
 
 #### Derivative of a quadratic form
 
-For a quadratic form (@def-quadratic-form),
+For a quadratic form
+(see [quadratic form](linear-algebra.qmd#def-quadratic-form)),
 if $S$ is a symmetric $p \times p$ matrix that is constant with respect to $\vb$, then:
 
 $$

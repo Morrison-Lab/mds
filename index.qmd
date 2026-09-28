@@ -12,20 +12,38 @@ format:
 
 # Welcome {.unnumbered}
 
-These notes collect the mathematics that data science courses assume:
-notation, algebra, calculus, linear algebra and vector calculus.
+> Math is not just a way of calculating numerical answers;
+it is a way of thinking,
+using clear definitions for concepts and rigorous logic
+to organize our thoughts and back up our assertions.
 
-- [Math prerequisites](math-prereqs.qmd)
+@cheng2025math
+
+These notes collect the mathematics that data science courses assume:
+mathematical notation, algebra, precalculus, univariate calculus,
+linear algebra, and vector calculus. Some key results are listed here,
+organized by topic:
+
+- [Notation](notation.qmd)
+- [Algebra](algebra.qmd)
+- [Calculus](calculus.qmd)
+- [Linear Algebra](linear-algebra.qmd)
+- [Vector Calculus](vector-calculus.qmd)
 
 ## Using these notes in another site
 
 Course sites include these notes as a git submodule named `mds`
 at the site's root,
 and include fragments with paths that start with `mds/`,
-for example `{{</* include mds/_math-prereqs.qmd */>}}`.
+for example `{{</* include mds/_notation.qmd */>}}`.
 This site includes its own fragments the same way,
 through a `mds` symlink that points at the repository root.
 
 Quarto resolves `@id` cross-references only within one rendered page,
 so a host site that links to a result here
-uses an explicit link, `[text](math-prereqs.qmd#id)`.
+uses an explicit link, `[text](notation.qmd#id)`.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

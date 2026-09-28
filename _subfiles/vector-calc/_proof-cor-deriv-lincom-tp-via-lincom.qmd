@@ -2,7 +2,8 @@
 
 **Using @thm-deriv-lincom:**
 
-Since $\tp{\vx}\vb = \vx \cdot \vb$ (@def-dot-product),
+Since $\tp{\vx}\vb = \vx \cdot \vb$
+(see [dot product](linear-algebra.qmd#def-dot-product)),
 and $\vx$ is constant with respect to $\vb$:
 
 $$
