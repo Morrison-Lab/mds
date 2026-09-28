@@ -1,0 +1,13 @@
+---
+title: "Measures"
+format:
+  html: default
+  revealjs:
+    output-file: measures-slides.html
+  pdf:
+    output-file: measures-handout.pdf
+  docx:
+    output-file: measures.docx
+---
+
+{{< include mds/_measures.qmd >}}

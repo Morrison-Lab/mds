@@ -1,0 +1,11 @@
+:::{#def-measure}
+#### Measure
+
+A **measure** on a set $S$ with a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$
+is a function $\mu : \mathscr{S} \to [0, \infty]$
+that satisfies:
+
+- $\mu(\emptyset) = 0$.
+- $\mu$ is [countably additive](#def-countable-additivity).
+
+:::

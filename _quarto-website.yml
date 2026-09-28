@@ -37,6 +37,8 @@ website:
         href: sets-functions.qmd
       - text: "Algebra"
         href: algebra.qmd
+      - text: "Measures"
+        href: measures.qmd
       - text: "Calculus"
         href: calculus.qmd
       - text: "Linear Algebra"

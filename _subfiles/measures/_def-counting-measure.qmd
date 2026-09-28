@@ -1,0 +1,17 @@
+:::{#def-counting-measure}
+#### Counting measure
+
+The **counting measure** on a set $S$
+is the [measure](#def-measure) on the
+[$\sigma$-algebra of all subsets of $S$](#thm-power-set-sigma-algebra)
+that assigns each finite set its number of elements,
+and each infinite set the value $\infty$:
+
+$$
+\mu(A) \eqdef \begin{cases}
+\abs{A} & \text{if } A \text{ is finite} \\
+\infty & \text{if } A \text{ is infinite}
+\end{cases}
+$$
+
+:::

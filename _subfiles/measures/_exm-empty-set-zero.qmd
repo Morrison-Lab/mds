@@ -1,0 +1,17 @@
+:::{#exm-empty-set-zero}
+#### A countably additive function with $\mu(\emptyset) = 0$
+
+The counting function $\mu(A) \eqdef \abs{A}$ of @exm-countable-additivity
+is countably additive, and:
+
+$$
+\ba
+\mu(\emptyset)
+&= \abs{\emptyset}
+&& \text{(definition of } \mu \text{)} \\
+&= 0
+&& \text{(} \emptyset \text{ has no elements)}
+\ea
+$$
+
+:::

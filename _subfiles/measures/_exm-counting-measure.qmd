@@ -1,0 +1,25 @@
+:::{#exm-counting-measure}
+#### Counting measure on the non-negative integers
+
+For the counting measure $\mu$ on $\set{0, 1, 2, \ldots}$,
+$\mu(\set{0, 1, 2}) = 3$,
+and the set of even numbers has $\mu(\set{0, 2, 4, \ldots}) = \infty$.
+The even numbers are the union of the pairwise disjoint sets
+$\set{0}, \set{2}, \set{4}, \ldots$,
+and countable additivity agrees:
+$\sum_{k=0}^{\infty} \mu(\set{2k}) = 1 + 1 + \cdots = \infty$.
+
+:::
+
+::: {.remark .notes}
+
+A [measure](#def-measure) generalizes size:
+it can measure how many elements a set has,
+as in @def-counting-measure,
+or how long a set of real numbers is,
+as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does,
+assigning each interval $[a, b]$ its length $b - a$.
+Both appear as reference measures in the
+[Fubini--Tonelli theorem](calculus.qmd#thm-fubini-tonelli).
+
+:::
