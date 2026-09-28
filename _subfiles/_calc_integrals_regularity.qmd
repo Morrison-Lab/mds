@@ -29,3 +29,7 @@
 {{< include mds/_subfiles/integrals-regularity/_eq-regularity-chain.qmd >}}
 
 {{< include mds/_subfiles/integrals-regularity/_prose-regularity-converse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-regularity/_thm-riemann-general.qmd >}}

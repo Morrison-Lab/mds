@@ -1,6 +1,8 @@
 :::{#thm-deriv-const}
 #### Constant rule
 
+If $c$ is constant with respect to $x$, then
+
 $$\deriv{x}c = 0$$
 
 :::
@@ -10,8 +12,9 @@ $$\deriv{x}c = 0$$
 :::{#thm-deriv-const-factor}
 #### Constant multiple rule
 
-If $a$ is constant with respect to $x$, then:
-$$\deriv{x}ay = a \derivf{x}{y}$$
+If $a$ is constant with respect to $x$
+and $y$ is a differentiable function of $x$, then:
+$$\deriv{x}ay = a \derivf{y}{x}$$
 
 :::
 
@@ -20,7 +23,12 @@ $$\deriv{x}ay = a \derivf{x}{y}$$
 :::{#thm-deriv-polynomial}
 #### Power rule
 
+For every real number $q$ and every $x > 0$:
+
 $$\deriv{x}x^q = qx^{q-1}$$
+
+When $q$ is a positive integer,
+the same formula holds for every real $x$.
 
 :::
 
@@ -29,6 +37,9 @@ $$\deriv{x}x^q = qx^{q-1}$$
 :::{#thm-deriv-log}
 
 #### Derivative of natural logarithm
+
+For every $x > 0$:
+
 $$\dlogf{x} = \frac{1}{x} = x^{-1}$$
 :::
 
@@ -36,6 +47,9 @@ $$\dlogf{x} = \frac{1}{x} = x^{-1}$$
 
 :::{#thm-deriv-exp}
 #### derivative of exponential
+
+For every real $x$:
+
 $$\dexpf{x} = \expf{x}$$
 :::
 
@@ -43,6 +57,9 @@ $$\dexpf{x} = \expf{x}$$
 
 :::{#thm-product-rule}
 #### Product rule
+
+If $a$ and $b$ are differentiable functions of $x$, then
+
 $$(ab)' = ab' + ba'$$
 :::
 
@@ -50,6 +67,10 @@ $$(ab)' = ab' + ba'$$
 
 :::{#thm-quotient-rule}
 #### Quotient rule
+
+If $a$ and $b$ are differentiable functions of $x$
+and $b \neq 0$, then
+
 $$(a/b)' = a'/b - (a/b^2)b'$$
 :::
 
@@ -57,15 +78,22 @@ $$(a/b)' = a'/b - (a/b^2)b'$$
 
 :::{#thm-chain-rule}
 #### Chain rule
+
+If $a$ is a differentiable function of $b$,
+and $b$ is a differentiable function of $c$,
+then $a$ is a differentiable function of $c$, and
+
 $$\ba
-\derivf{a}{c} &=
-\derivf{a}{b} \derivf{b}{c}
+\dif{a}{c} &=
+\dif{a}{b} \dif{b}{c}
 \\
-&= \derivf{b}{c} \derivf{a}{b}
+&= \dif{b}{c} \dif{a}{b}
 \ea
 $$
 
-or in [Euler/Lagrange notation](https://en.wikipedia.org/wiki/Notation_for_differentiation#Lagrange's_notation):
+or in [Lagrange's notation](https://en.wikipedia.org/wiki/Notation_for_differentiation#Lagrange's_notation),
+if $g$ is differentiable at $x$
+and $f$ is differentiable at $g(x)$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::
@@ -75,13 +103,30 @@ $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::{#cor-deriv-log-chain}
 
 #### Chain rule for logarithms
+
+If $f$ is differentiable at $x$ and $f(x) > 0$, then
+
 $$
-\deriv{x}\log{f(x)} = \frac{f'(x)}{f(x)}
+\dif{}{x}\logf{f(x)} = \frac{f'(x)}{f(x)}
 $$
 
 :::
 
 ::: proof
-Apply @thm-chain-rule and @thm-deriv-log.
+Apply @thm-chain-rule and @thm-deriv-log:
+
+$$
+\ba
+\dif{}{x}\logf{f(x)}
+&= f'(x) \cd \dlogf{f(x)}
+&& \text{(chain rule, with } g = f \text{ and outer function } \log \text{)}
+\\
+&= f'(x) \cd \frac{1}{f(x)}
+&& \text{(derivative of } \log \text{, valid because } f(x) > 0 \text{)}
+\\
+&= \frac{f'(x)}{f(x)}
+&& \text{(multiply)}
+\ea
+$$
 :::
 

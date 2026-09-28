@@ -6,12 +6,18 @@ Structure adapted from [@larsonCalc11e, Section 14.2, Example 2, pp. 982--983];
 the integrand $x^2 + y^2$ is original, chosen so the integral equals
 $\E{g(X, Y)}$ for $g(x, y) = x^2 + y^2$.
 
-Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$ random variables,
-with joint density $f(x, y) = 1$ on the unit square
+Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$
+[random variables](https://morrison-lab.github.io/rme/chapters/probability.html),
+with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf)
+$f(x, y) = 1$ on the unit square
 $R = \{(x, y) : x \in [0, 1],\; y \in [0, 1]\}$
 (@fig-fubini-rect-region).
 Define the function $g(x, y) = x^2 + y^2$,
-and compute its expectation $\E{g(X, Y)}$.
+and compute its
+[expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)
+$\E{g(X, Y)}$.
+
+<!-- repoint the random-variable, density and expectation links to pds (random-variables.html#def-random-variable, random-variables.html#def-pdf, expectation.html#def-expectation) once pds#8 is published -->
 
 Because the joint density equals $1$ on $R$,
 this expectation is the double integral of $g$ over $R$:

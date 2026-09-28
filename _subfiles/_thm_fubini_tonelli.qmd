@@ -31,6 +31,8 @@ $$
 
 :::
 
+<!-- repoint the joint-distribution link to https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint once pds#8 is published -->
+
 ::: notes
 Applied courses rarely need the measure-theoretic generalization itself,
 but it is what justifies the
@@ -49,31 +51,71 @@ in each application.
 
 #### Positive application of @thm-fubini-tonelli
 
-Let $X$ and $Y$ be independent $\operatorname{Exponential}(1)$ random variables,
-with joint density $f(x, y) = e^{-(x+y)}$ for $x, y \ge 0$.
-Their distributions are probability measures on $[0,\infty)$,
-and probability measures are finite (hence $\sigma$-finite),
-so the product measure on $[0,\infty)^2$ satisfies the
-$\sigma$-finiteness condition of @thm-fubini-tonelli.
-Since $f(x,y) = e^{-(x+y)} \ge 0$,
-condition (a) (Tonelli theorem, nonnegativity) is also satisfied.
+Let $X$ and $Y$ be independent $\operatorname{Exponential}(1)$
+[random variables](https://morrison-lab.github.io/rme/chapters/probability.html),
+with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf)
+$f(x, y) = e^{-(x+y)}$ for $x, y \ge 0$.
 
-By @thm-fubini-tonelli, both iterated integrals exist and agree:
+<!-- repoint the random-variable and density links to https://morrison-lab.github.io/pds/random-variables.html#def-random-variable and https://morrison-lab.github.io/pds/random-variables.html#def-pdf once pds#8 is published -->
+
+The probability $P(X \le 1,\, Y \le 1)$
+is the integral of $f$ over $[0, 1]^2$
+with respect to Lebesgue measure (ordinary length) in each coordinate.
+Lebesgue measure on $[0, \infty)$ is $\sigma$-finite,
+because $[0, \infty)$ is the union of the intervals $[0, n]$, $n \in \mathbb{N}$,
+each of finite length $n$;
+so the $\sigma$-finiteness condition of @thm-fubini-tonelli holds.
+Since $f(x,y) = e^{-(x+y)} \ge 0$,
+condition (a) (Tonelli's theorem, nonnegativity) is also satisfied.
+
+By @thm-fubini-tonelli, both iterated integrals exist and agree.
+Integrating $y$ first, then $x$:
 
 $$
 \ba
 P(X \le 1,\, Y \le 1)
 &= \int_0^1\!\int_0^1 e^{-(x+y)}\,dy\,dx
+\\&= \int_0^1\!\int_0^1 e^{-x} e^{-y}\,dy\,dx
+&& \text{(exponential of a sum)}
 \\&= \int_0^1 e^{-x}\paren{\int_0^1 e^{-y}\,dy}\,dx
+&& \text{(} e^{-x} \text{ is constant in } y \text{)}
+\\&= \int_0^1 e^{-x}\sb{-e^{-y}}_{y=0}^{y=1}\,dx
+&& \text{(antiderivative of } e^{-y} \text{)}
 \\&= \int_0^1 e^{-x}(1 - e^{-1})\,dx
-\\&= (1 - e^{-1})\sb{-e^{-x}}_0^1
-\\&= (1 - e^{-1})^2.
+&& \text{(evaluate at the limits)}
+\\&= (1 - e^{-1})\int_0^1 e^{-x}\,dx
+&& \text{(} 1 - e^{-1} \text{ is constant in } x \text{)}
+\\&= (1 - e^{-1})\sb{-e^{-x}}_{x=0}^{x=1}
+&& \text{(antiderivative of } e^{-x} \text{)}
+\\&= (1 - e^{-1})^2
+&& \text{(evaluate at the limits)}
 \ea
 $$
 
-The joint probability calculation also equals $\left(\int_0^1 e^{-x}\,dx\right)^2 = (1 - e^{-1})^2$,
-since $f(x,y) = e^{-x} \cdot e^{-y}$ factors as a product of independent densities.
-Both iterated integrals agree,
+Integrating $x$ first, then $y$:
+
+$$
+\ba
+P(X \le 1,\, Y \le 1)
+&= \int_0^1\!\int_0^1 e^{-(x+y)}\,dx\,dy
+\\&= \int_0^1\!\int_0^1 e^{-y} e^{-x}\,dx\,dy
+&& \text{(exponential of a sum)}
+\\&= \int_0^1 e^{-y}\paren{\int_0^1 e^{-x}\,dx}\,dy
+&& \text{(} e^{-y} \text{ is constant in } x \text{)}
+\\&= \int_0^1 e^{-y}\sb{-e^{-x}}_{x=0}^{x=1}\,dy
+&& \text{(antiderivative of } e^{-x} \text{)}
+\\&= \int_0^1 e^{-y}(1 - e^{-1})\,dy
+&& \text{(evaluate at the limits)}
+\\&= (1 - e^{-1})\int_0^1 e^{-y}\,dy
+&& \text{(} 1 - e^{-1} \text{ is constant in } y \text{)}
+\\&= (1 - e^{-1})\sb{-e^{-y}}_{y=0}^{y=1}
+&& \text{(antiderivative of } e^{-y} \text{)}
+\\&= (1 - e^{-1})^2
+&& \text{(evaluate at the limits)}
+\ea
+$$
+
+Both iterated integrals equal $(1 - e^{-1})^2 \approx 0.400$,
 as @thm-fubini-tonelli guarantees when condition (a) holds.
 
 :::

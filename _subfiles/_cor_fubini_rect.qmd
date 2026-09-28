@@ -9,7 +9,7 @@ $$
 \ba
 \int_a^b \paren{\int_c^d f(x, y)\,dy}\,dx
 &= \int_c^d \paren{\int_a^b f(x, y)\,dx}\,dy\\
-&= \iint_{[a,b]\times[c,d]} f(x, y)\,dx\,dy.
+&= \iint_{[a,b]\times[c,d]} f(x, y)\,dA.
 \ea
 $$
 

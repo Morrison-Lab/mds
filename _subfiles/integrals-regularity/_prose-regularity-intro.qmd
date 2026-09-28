@@ -1,6 +1,10 @@
 Before stating the Fundamental Theorem of Calculus, we record two
 prerequisite results.
-The FTC requires the integrand $f$ to be continuous,
-and the following two theorems establish where continuity comes from
-(differentiability $\Rightarrow$ continuity)
-and what it buys us (continuity $\Rightarrow$ integrability).
+The usual statement of the Fundamental Theorem of Calculus
+assumes that the integrand $f$ is continuous on $[a, b]$;
+continuity is sufficient there, though not necessary.
+The two results are
+"differentiability implies continuity",
+which says where continuity comes from,
+and "continuity implies integrability",
+which says what continuity buys us.

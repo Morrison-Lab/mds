@@ -6,3 +6,28 @@ If $f$ is differentiable at $x = c$, then $f$ is continuous at $x = c$.
 [@larsonCalc11e, Theorem 2.1, p. 106]
 
 :::
+
+::: proof
+Because $f'(c)$ exists, $f(c)$ is defined, and:
+
+$$
+\ba
+\lim_{h \to 0} \paren{f(c + h) - f(c)}
+&= \lim_{h \to 0} \paren{\frac{f(c + h) - f(c)}{h} \cd h}
+&& \text{(multiply and divide by } h \neq 0 \text{)}
+\\
+&= \paren{\lim_{h \to 0} \frac{f(c + h) - f(c)}{h}} \cd \paren{\lim_{h \to 0} h}
+&& \text{(limit of a product, both limits exist)}
+\\
+&= f'(c) \cd 0
+&& \text{(definition of } f'(c) \text{)}
+\\
+&= 0
+&& \text{(multiply)}
+\ea
+$$
+
+So $\lim_{h \to 0} f(c + h) = f(c)$,
+which is $\lim_{x \to c} f(x) = f(c)$ with $x = c + h$;
+all three conditions of @def-continuous hold.
+:::
