@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 00:06:07 (PDT)
+Last modified: 2026-09-28 01:17:18 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -25,13 +25,17 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/rme/chapters/probability.html#def-indpt) | `\perp\!\!\!\perp` |
 | \\\therefore\\ | therefore, thus | `\therefore` |
 | \\\eta\\ | [linear component of a GLM](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") | `\eta` |
-| \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest integer smaller than \\x\\ | `\lfloor x \rfloor` |
-| \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest integer larger than \\x\\ | `\lceil x \rceil` |
-| \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 0.4](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
+| \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest integer less than or equal to \\x\\ | `\lfloor x \rfloor` |
+| \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest integer greater than or equal to \\x\\ | `\lceil x \rceil` |
+| \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 5](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 Table 1: Notation used in this book
 
-## 0.1 Natural numbers
+## 1 Writing math in Quarto
+
+The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in `$x^2$`, and displayed equations between double dollar signs, as in `$$x^2$$`. The [equations section of Quarto’s Markdown guide](https://quarto.org/docs/authoring/markdown-basics.html#equations) shows the details. These notes also use shorthand macros, such as `\floor{x}` for \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\, defined in the `latex-macros` submodule’s `macros.qmd`.
+
+## 2 Natural numbers
 
 > **NOTE:**
 >
@@ -79,7 +83,7 @@ Table 1: Notation used in this book
 >
 > Source: [Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”](https://en.wikipedia.org/w/index.php?title=Natural_number&oldid=1375965996), which cites ISO 80000-2:2019 and the textbooks using each notation.
 
-## 0.2 Percent sign (“%”)
+## 3 Percent sign (“%”)
 
 The percent sign “%” is just a shorthand for “\\/100\\”. The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (cf. <https://en.wikipedia.org/wiki/Percentage>)
 
@@ -91,7 +95,7 @@ So, contrary to what you may have learned previously, \\10\\ = 0.1\\ is a true a
 
 You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.
 
-## 0.3 Proofs
+## 4 Proofs
 
 We can use any of:
 
@@ -105,7 +109,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for convergence results.
 
 See [Proof Writing](https://morrison-lab.github.io/rme/chapters/proof-writing.html) for general guidance on how to present proofs and derivations.
 
-## 0.4 Indicator functions
+## 5 Indicator functions
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous: they represent binary variables, censor and event indicators in survival analysis, membership in subpopulations, and domain restrictions in integrals and sums.
 
@@ -123,7 +127,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 2 (Evaluating set and predicate indicators)** Consider the real line \\\Omega = \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous random variable \\Y\\.
+> **Example 2 (Evaluating set and predicate indicators)** Consider the real line \\\Omega = \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/rme/chapters/probability.html) \\Y\\.
 >
 > 1.  **Set indicator** \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
@@ -132,7 +136,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 >     - If an observation yields \\Y = 7.2\\, the predicate \\7.2 \> 5\\ is true, so \\\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\.
 >     - If an observation yields \\Y = 4.1\\, the predicate \\4.1 \> 5\\ is false, so \\\mathbb{1}\mathopen{}\left(4.1 \> 5\right)\mathclose{} = 0\\.
 
-### 0.4.1 Two primary notational paradigms: set vs. predicate notation
+### 5.1 Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families: **set notation** or **predicate notation**.
 
@@ -168,15 +172,41 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
 
-### 0.4.2 Iverson bracket notation
+### 5.2 Iverson bracket notation
 
 In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the [Iverson bracket](https://en.wikipedia.org/wiki/Iverson_bracket).
 
-The Iverson bracket encloses any mathematical predicate \\P\\ inside square brackets:
+> **NOTE:**
+>
+> **Definition 4 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
+>
+> \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
-\\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
+The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 3](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\.
 
-Under this notation, set membership is written \\\[x \in A\]\\, and the Kronecker delta is simply \\\delta\_{ij} = \[i = j\]\\.
+> **NOTE:**
+>
+> **Example 3 (Evaluating Iverson brackets)**  
+>
+> - \\\[3 \> 2\] = 1\\, because \\3 \> 2\\ is true.
+> - \\\[2 \> 3\] = 0\\, because \\2 \> 3\\ is false.
+> - \\\[4 \in \mathopen{}\left\\1, 2\right\\\mathclose{}\] = 0\\, because \\4\\ is not an element of \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 5 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
+>
+> \\\delta\_{ij} \stackrel{\text{def}}{=}\[i = j\]\\
+>
+> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 4](#def-iverson-bracket)).
+
+> **NOTE:**
+>
+> **Example 4 (Evaluating the Kronecker delta)**  
+>
+> - \\\delta\_{22} = \[2 = 2\] = 1\\.
+> - \\\delta\_{23} = \[2 = 3\] = 0\\.
+> - The entries of the \\p \times p\\ identity matrix are Kronecker deltas: \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\ (see [identity matrix](linear-algebra.llms.md#def-identity-matrix)).
 
 #### Strengths and limitations of the Iverson bracket
 
@@ -184,9 +214,11 @@ The primary advantage of the Iverson bracket is algebraic conciseness: it conver
 
 \\ \sum\_{x \in A} f(x) = \sum\_{x} f(x) \[x \in A\] \\
 
+With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\x\\ running over \\\mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
+
 However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote closed intervals \\\[a, b\]\\, conditional expectations \\\operatorname{E}\[Y \mid X\]\\, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
-### 0.4.3 Summary of indicator notations
+### 5.3 Summary of indicator notations
 
 [Table 2](#tbl-indicator-notations) compares the major notations encountered across the literature.
 
@@ -201,7 +233,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 
 Table 2: Notations for indicator functions across mathematical and statistical literature
 
-### 0.4.4 Conventions in this book
+### 5.4 Conventions in this book
 
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
@@ -212,31 +244,33 @@ In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros 
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the information matrices (\\I\\, \\\mathcal{I}\\).
 
-### 0.4.5 Key algebraic properties
+### 5.5 Key algebraic properties
 
 Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:
 
-- **Intersection (“and”):** \\\mathbb{1}\mathopen{}\left(A \cap B\right)\mathclose{} = \mathbb{1}\mathopen{}\left(A\right)\mathclose{} \cdot \mathbb{1}\mathopen{}\left(B\right)\mathclose{}\\
+For subsets \\A\\ and \\B\\ of \\\Omega\\, with complement \\A^c \stackrel{\text{def}}{=}\Omega \setminus A\\, and for every \\x \in \Omega\\:
 
-- **Union (“or”):** \\\mathbb{1}\mathopen{}\left(A \cup B\right)\mathclose{} = \mathbb{1}\mathopen{}\left(A\right)\mathclose{} + \mathbb{1}\mathopen{}\left(B\right)\mathclose{} - \mathbb{1}\mathopen{}\left(A\right)\mathclose{} \cdot \mathbb{1}\mathopen{}\left(B\right)\mathclose{}\\
+- **Intersection (“and”):** \\\mathbb{1}\_{A \cap B}(x) = \mathbb{1}\_{A}(x) \cdot \mathbb{1}\_{B}(x)\\
 
-- **Complement (“not”):** \\\mathbb{1}\mathopen{}\left(\neg A\right)\mathclose{} = 1 - \mathbb{1}\mathopen{}\left(A\right)\mathclose{}\\
+- **Union (“or”):** \\\mathbb{1}\_{A \cup B}(x) = \mathbb{1}\_{A}(x) + \mathbb{1}\_{B}(x) - \mathbb{1}\_{A}(x) \cdot \mathbb{1}\_{B}(x)\\
 
-- **Idempotence:** \\(\mathbb{1}\mathopen{}\left(A\right)\mathclose{})^2 = \mathbb{1}\mathopen{}\left(A\right)\mathclose{}\\
+- **Complement (“not”):** \\\mathbb{1}\_{A^c}(x) = 1 - \mathbb{1}\_{A}(x)\\
 
-- **Expectation gives probability:** For any event \\A\\, the expectation of its indicator is the probability of the event:
+- **Idempotence:** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
 
-  \\ \operatorname{E}\[\mathbb{1}\mathopen{}\left(A\right)\mathclose{}\] = 0 \cdot \Pr(\neg A) + 1 \cdot \Pr(A) = \Pr(A) \\
+- **Expectation gives probability:** For any event \\A\\, the [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation) of its indicator is the probability of the event:
+
+  \\ \operatorname{E}\[\mathbb{1}\_{A}\] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A) \\
 
 This fundamental identity connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.
 
-## 0.5 Why is notation in probability and statistics so inconsistent and disorganized?
+## 6 Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
-It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 (Nelder and Wedderburn ([1972](#ref-nelder1972generalized))), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
+It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 ([Nelder and Wedderburn 1972](#ref-nelder1972generalized)), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 
-# References
+## References
 
 Nelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” *Journal of the Royal Statistical Society Series A: Statistics in Society* 135 (3): 370–84. <https://doi.org/10.2307/2344614>.
 
