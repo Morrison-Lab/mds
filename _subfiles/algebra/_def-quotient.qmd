@@ -17,7 +17,7 @@ A quotient whose denominator measures time or population size
 is often called a *rate*;
 in epidemiology, rates typically have such a denominator.
 
-c.f. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
+cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 :::
 
 {{< slidebreak >}}

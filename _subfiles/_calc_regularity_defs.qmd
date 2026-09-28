@@ -136,10 +136,7 @@ exists and is finite.
 
 {{< slidebreak >}}
 
-<!-- This id predates the reframing that made the general-partition form
-@def-riemann-integral; it is kept so links to it keep working. -->
-
-:::{#def-integrable-general}
+:::{#def-riemann-sum-equal-width}
 #### Equal-width Riemann sum
 
 For a bounded function $f$ on $[a, b]$ and a positive integer $n$,

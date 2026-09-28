@@ -3,7 +3,7 @@
 
 If $f$ is Riemann integrable on $[a, b]$ (@def-integrable),
 then for every choice of the sample points $x_i^*$,
-the equal-width Riemann sums (@def-integrable-general) converge to the integral:
+the equal-width Riemann sums (@def-riemann-sum-equal-width) converge to the integral:
 
 $$\lim_{n \to \infty} S_n = \int_a^b f(x)\,dx.$$
 
