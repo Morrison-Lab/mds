@@ -1,0 +1,13 @@
+:::{#cor-measure-finitely-additive}
+#### Measures are finitely additive
+
+Every [measure](#def-measure) is [finitely additive](#def-finite-additivity).
+
+:::
+
+::: proof
+
+A measure $\mu$ is countably additive and has $\mu(\emptyset) = 0$ (@def-measure),
+so @thm-countable-implies-finite applies to it.
+
+:::
