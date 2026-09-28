@@ -31,7 +31,7 @@ $\vecf{c} = \vzero$.
 So the only solution of $\tp{\mX}\mX\vecf{c} = \vzero$ is $\vecf{c} = \vzero$,
 which says that the columns of the square matrix $\tp{\mX}\mX$ are linearly independent,
 and a square matrix with linearly independent columns is invertible
-[@banerjee2014linear].
+[@banerjee2014linear, Corollary 5.7, p. 143].
 :::
 
 {{< slidebreak >}}
