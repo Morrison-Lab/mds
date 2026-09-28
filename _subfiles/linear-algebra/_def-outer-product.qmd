@@ -9,7 +9,8 @@ Its entries are
 
 $$
 \paren{\underbrace{\vecf{u}}_{m \times 1}\,\underbrace{\tp{\vecf{v}}}_{1 \times n}}_{ij}
-\eqdef u_i v_j
+= u_i v_j
+\qquad \text{(definition of matrix multiplication; the sum has one term)}
 $$
 
 :::

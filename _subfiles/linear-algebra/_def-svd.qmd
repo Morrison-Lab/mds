@@ -12,11 +12,13 @@ are the **singular values** of $\matr{A}$.
 :::
 
 ::: notes
-An SVD is not unique;
-for example, multiplying column $i$ of both $\matr{U}$ and $\matr{V}$ by $-1$
+An SVD is not unique
+[@banerjee2014linear, Chapter 12, Examples 12.2 and 12.3, p. 378].
+For example, for any $i \le r$,
+multiplying column $i$ of both $\matr{U}$ and $\matr{V}$ by $-1$
 gives another one.
 The singular values do not depend on which SVD is chosen
-[@banerjee2014linear, Chapter 12, p. 371].
+[@banerjee2014linear, Chapter 12, pp. 371 and 378].
 
 Some texts, and R's `svd()`,
 also count $\min(n, p) - r$ singular values equal to $0$,
@@ -55,23 +57,85 @@ $\vecf{u}_3 = (\frac{1}{\sqrt{2}}, 0, -\frac{1}{\sqrt{2}})$:
 
 $$
 \ba
-\vecf{u}_1 \cdot \vecf{u}_1 &= \tfrac{1}{2} + 0 + \tfrac{1}{2} = 1
-&& \text{(multiply matching entries, then add)}
+\vecf{u}_1 \cdot \vecf{u}_1
+&= \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}} + 0 \cd 0 + \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}
+&& \text{(definition of the dot product)}
 \\
-\vecf{u}_2 \cdot \vecf{u}_2 &= 0 + 1 + 0 = 1
-&& \text{(multiply matching entries, then add)}
+&= \tfrac{1}{2} + 0 + \tfrac{1}{2}
+&& \text{(multiply)}
 \\
-\vecf{u}_3 \cdot \vecf{u}_3 &= \tfrac{1}{2} + 0 + \tfrac{1}{2} = 1
-&& \text{(multiply matching entries, then add)}
+&= 1
+&& \text{(add)}
+\ea
+$$
+
+$$
+\ba
+\vecf{u}_2 \cdot \vecf{u}_2
+&= 0 \cd 0 + 1 \cd 1 + 0 \cd 0
+&& \text{(definition of the dot product)}
 \\
-\vecf{u}_1 \cdot \vecf{u}_2 &= 0 + 0 + 0 = 0
-&& \text{(multiply matching entries, then add)}
+&= 0 + 1 + 0
+&& \text{(multiply)}
 \\
-\vecf{u}_1 \cdot \vecf{u}_3 &= \tfrac{1}{2} + 0 - \tfrac{1}{2} = 0
-&& \text{(multiply matching entries, then add)}
+&= 1
+&& \text{(add)}
+\ea
+$$
+
+$$
+\ba
+\vecf{u}_3 \cdot \vecf{u}_3
+&= \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}} + 0 \cd 0 + \paren{-\tfrac{1}{\sqrt{2}}} \cd \paren{-\tfrac{1}{\sqrt{2}}}
+&& \text{(definition of the dot product)}
 \\
-\vecf{u}_2 \cdot \vecf{u}_3 &= 0 + 0 + 0 = 0
-&& \text{(multiply matching entries, then add)}
+&= \tfrac{1}{2} + 0 + \tfrac{1}{2}
+&& \text{(multiply)}
+\\
+&= 1
+&& \text{(add)}
+\ea
+$$
+
+$$
+\ba
+\vecf{u}_1 \cdot \vecf{u}_2
+&= \tfrac{1}{\sqrt{2}} \cd 0 + 0 \cd 1 + \tfrac{1}{\sqrt{2}} \cd 0
+&& \text{(definition of the dot product)}
+\\
+&= 0 + 0 + 0
+&& \text{(multiply)}
+\\
+&= 0
+&& \text{(add)}
+\ea
+$$
+
+$$
+\ba
+\vecf{u}_1 \cdot \vecf{u}_3
+&= \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}} + 0 \cd 0 + \tfrac{1}{\sqrt{2}} \cd \paren{-\tfrac{1}{\sqrt{2}}}
+&& \text{(definition of the dot product)}
+\\
+&= \tfrac{1}{2} + 0 - \tfrac{1}{2}
+&& \text{(multiply)}
+\\
+&= 0
+&& \text{(add)}
+\ea
+$$
+
+$$
+\ba
+\vecf{u}_2 \cdot \vecf{u}_3
+&= 0 \cd \tfrac{1}{\sqrt{2}} + 1 \cd 0 + 0 \cd \paren{-\tfrac{1}{\sqrt{2}}}
+&& \text{(definition of the dot product)}
+\\
+&= 0 + 0 + 0
+&& \text{(multiply)}
+\\
+&= 0
+&& \text{(add)}
 \ea
 $$
 
@@ -102,8 +166,12 @@ $$
 && \text{(definition of matrix multiplication)}
 \\
 &= \frac{1}{\sqrt{2}}
+\begin{bmatrix} 2 + 0 & 2 + 0 \\ 0 + \sqrt{2} & 0 - \sqrt{2} \\ 0 + 0 & 0 + 0 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{\sqrt{2}}
 \begin{bmatrix} 2 & 2 \\ \sqrt{2} & -\sqrt{2} \\ 0 & 0 \end{bmatrix}
-&& \text{(multiply and add within each entry)}
+&& \text{(add)}
 \\
 &= \begin{bmatrix} \sqrt{2} & \sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
 && \text{(divide by } \sqrt{2} \text{)}
@@ -124,14 +192,21 @@ $$
 && \text{(substitute)}
 \\
 &= \begin{bmatrix}
-\frac{\sqrt{2}}{\sqrt{2}} + 0 + 0 & \frac{\sqrt{2}}{\sqrt{2}} + 0 + 0 \\
-0 + 1 + 0 & 0 - 1 + 0 \\
-\frac{\sqrt{2}}{\sqrt{2}} + 0 - 0 & \frac{\sqrt{2}}{\sqrt{2}} + 0 - 0
+\frac{1}{\sqrt{2}} \cd \sqrt{2} + 0 \cd 1 + \frac{1}{\sqrt{2}} \cd 0 & \frac{1}{\sqrt{2}} \cd \sqrt{2} + 0 \cd (-1) + \frac{1}{\sqrt{2}} \cd 0 \\
+0 \cd \sqrt{2} + 1 \cd 1 + 0 \cd 0 & 0 \cd \sqrt{2} + 1 \cd (-1) + 0 \cd 0 \\
+\frac{1}{\sqrt{2}} \cd \sqrt{2} + 0 \cd 1 - \frac{1}{\sqrt{2}} \cd 0 & \frac{1}{\sqrt{2}} \cd \sqrt{2} + 0 \cd (-1) - \frac{1}{\sqrt{2}} \cd 0
 \end{bmatrix}
 && \text{(definition of matrix multiplication)}
 \\
+&= \begin{bmatrix}
+1 + 0 + 0 & 1 + 0 + 0 \\
+0 + 1 + 0 & 0 - 1 + 0 \\
+1 + 0 - 0 & 1 + 0 - 0
+\end{bmatrix}
+&& \text{(multiply)}
+\\
 &= \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
-&& \text{(simplify)}
+&& \text{(add)}
 \ea
 $$
 

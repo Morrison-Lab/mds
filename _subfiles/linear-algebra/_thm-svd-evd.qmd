@@ -4,7 +4,7 @@
 Let $\matr{A} = \matr{U}\matr{D}\tp{\matr{V}}$
 be a singular value decomposition (@def-svd) of an $n \times p$ matrix $\matr{A}$
 with singular values $\sigma_1, \ldots, \sigma_r$.
-Then
+Then $\tp{\matr{A}}\matr{A}$ is symmetric (@def-symmetric-matrix), and
 
 $$
 \underbrace{\tp{\matr{A}}\matr{A}}_{p \times p}
@@ -15,9 +15,9 @@ $$
 
 where $\matr{\Lambda} \eqdef \tp{\matr{D}}\matr{D}$
 is the $p \times p$ diagonal matrix
-whose diagonal entries $\lambda_i \eqdef \lambda_{ii}$ are
-$\lambda_i = \sigma_i^2$ for $i = 1, \ldots, r$
-and $\lambda_i = 0$ for $i > r$.
+whose $i$-th diagonal entry $\lambda_i$ is
+$\sigma_i^2$ for $i \le r$
+and $0$ for $i > r$.
 So $\matr{V}\matr{\Lambda}\tp{\matr{V}}$ is an eigendecomposition
 (@def-eigendecomposition) of $\tp{\matr{A}}\matr{A}$:
 column $i$ of $\matr{V}$ is an eigenvector of $\tp{\matr{A}}\matr{A}$
@@ -26,6 +26,23 @@ for the eigenvalue $\lambda_i$.
 :::
 
 ::: proof
+
+**Symmetry.**
+
+$$
+\ba
+\tp{\paren{\tp{\matr{A}}\matr{A}}}
+&= \tp{\matr{A}}\,\tp{\paren{\tp{\matr{A}}}}
+&& \text{(transpose of a product)}
+\\
+&= \tp{\matr{A}}\matr{A}
+&& \text{(transposing twice changes nothing)}
+\ea
+$$
+
+The first step is @thm-transpose-product,
+and the second follows from @def-matrix-transpose,
+which swaps rows and columns, so swapping them again restores $\matr{A}$.
 
 **The factorization.**
 
@@ -91,6 +108,7 @@ $$
 && \text{(definition of } \matr{D} \text{)}
 \\
 &= \sigma_i^2
+&& \text{(notation for a square)}
 \ea
 $$
 
@@ -166,8 +184,11 @@ $$
 &= \begin{bmatrix} 3 \cd 1 + 1 \cd 1 \\ 1 \cd 1 + 3 \cd 1 \end{bmatrix}
 && \text{(definition of matrix-vector multiplication)}
 \\
+&= \begin{bmatrix} 3 + 1 \\ 1 + 3 \end{bmatrix}
+&& \text{(multiply)}
+\\
 &= \begin{bmatrix} 4 \\ 4 \end{bmatrix}
-&& \text{(multiply and add)}
+&& \text{(add)}
 \\
 &= 4 \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 && \text{(factor out } 4 \text{)}
@@ -183,8 +204,11 @@ $$
 &= \begin{bmatrix} 3 \cd 1 + 1 \cd (-1) \\ 1 \cd 1 + 3 \cd (-1) \end{bmatrix}
 && \text{(definition of matrix-vector multiplication)}
 \\
+&= \begin{bmatrix} 3 - 1 \\ 1 - 3 \end{bmatrix}
+&& \text{(multiply)}
+\\
 &= \begin{bmatrix} 2 \\ -2 \end{bmatrix}
-&& \text{(multiply and add)}
+&& \text{(add)}
 \\
 &= 2 \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 && \text{(factor out } 2 \text{)}

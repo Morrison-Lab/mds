@@ -37,8 +37,11 @@ $$
 &= 1 \cd 1 + 1 \cd (-1)
 && \text{(definition of the dot product)}
 \\
+&= 1 - 1
+&& \text{(multiply)}
+\\
 &= 0
-&& \text{(multiply and add)}
+&& \text{(add)}
 \ea
 $$
 
@@ -64,24 +67,44 @@ $$
 \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 && \text{(substitute)}
 \\
+&= \frac{1}{\sqrt{2}} \cd \frac{1}{\sqrt{2}}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(move the scalars to the front)}
+\\
 &= \frac{1}{2}
 \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
 \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-&& \text{(collect the scalars)}
+&& \text{(multiply the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 \cd 3 + 1 \cd 0 & 1 \cd 0 + 1 \cd 1 \\ 1 \cd 3 + (-1) \cd 0 & 1 \cd 0 + (-1) \cd 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(definition of matrix multiplication, first two matrices)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 + 0 & 0 + 1 \\ 3 + 0 & 0 - 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(multiply)}
 \\
 &= \frac{1}{2}
 \begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix}
 \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-&& \text{(multiply the first two matrices: column } j \text{ times } \lambda_j \text{)}
+&& \text{(add)}
 \\
 &= \frac{1}{2}
 \begin{bmatrix} 3 \cd 1 + 1 \cd 1 & 3 \cd 1 + 1 \cd (-1) \\ 3 \cd 1 + (-1) \cd 1 & 3 \cd 1 + (-1) \cd (-1) \end{bmatrix}
 && \text{(definition of matrix multiplication)}
 \\
 &= \frac{1}{2}
+\begin{bmatrix} 3 + 1 & 3 - 1 \\ 3 - 1 & 3 + 1 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{2}
 \begin{bmatrix} 4 & 2 \\ 2 & 4 \end{bmatrix}
-&& \text{(multiply and add within each entry)}
+&& \text{(add)}
 \\
 &= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
 && \text{(multiply by } \tfrac{1}{2} \text{)}
