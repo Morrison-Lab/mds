@@ -1,3 +1,28 @@
+:::{#def-trace}
+
+#### Trace
+
+The **trace** of a $p \times p$ matrix $\matr{M}$
+is the sum of its diagonal entries:
+
+$$\operatorname{tr}(\matr{M}) \eqdef \sum_{i=1}^p M_{ii}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-trace}
+
+#### The trace of a $2 \times 2$ matrix
+
+$$
+\operatorname{tr}\paren{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}} = 1 + 4 = 5
+$$
+
+:::
+
+{{< slidebreak >}}
+
 :::{#def-matrix-derivative}
 
 #### Matrix derivative
@@ -14,9 +39,14 @@ $$
 
 :::
 
+{{< slidebreak >}}
+
 :::{#exm-matrix-derivative}
 
-Let $\matr{X}$ be a $2 \times 2$ matrix and $f(\matr{X}) = \operatorname{tr}(\matr{X}) = X_{11} + X_{22}$.
+#### The matrix derivative of a trace
+
+Let $\matr{X}$ be a $2 \times 2$ matrix and $f(\matr{X}) = \operatorname{tr}(\matr{X}) = X_{11} + X_{22}$
+(@def-trace).
 Then $\deriv{X_{ij}} f = 1$ if $i = j$ and $0$ otherwise, so:
 
 $$
@@ -31,52 +61,64 @@ $$
 
 #### Matrix derivative of the trace of a matrix product
 
-If $A$ ($r \times m$) and $B$ ($n \times r$)
+If $\matr{A}$ ($r \times m$) and $\matr{B}$ ($n \times r$)
 are constant with respect to the $m \times n$ matrix $\matr{X}$,
 then:
 
 $$
-\underbrace{\deriv{\matr{X}} \operatorname{tr}(A \matr{X} B)}_{m \times n} =
-\underbrace{\tp{A}}_{m \times r}
-\underbrace{\tp{B}}_{r \times n}
+\underbrace{\deriv{\matr{X}} \operatorname{tr}(\matr{A} \matr{X} \matr{B})}_{m \times n} =
+\underbrace{\tp{\matr{A}}}_{m \times r}
+\underbrace{\tp{\matr{B}}}_{r \times n}
 $$
 
 :::: notes
-The trace makes $\operatorname{tr}(A \matr{X} B)$ a scalar,
+The trace makes $\operatorname{tr}(\matr{A} \matr{X} \matr{B})$ a scalar,
 so its matrix derivative is again an $m \times n$ matrix.
-The derivative of the matrix product $A \matr{X} B$ itself
+The derivative of the matrix product $\matr{A} \matr{X} \matr{B}$ itself
 (without the trace) is a fourth-order tensor,
-which is why this result is stated for the scalar $\operatorname{tr}(A \matr{X} B)$.
+which is why this result is stated for the scalar $\operatorname{tr}(\matr{A} \matr{X} \matr{B})$.
 ::::
 
 :::
 
 ::: proof
 
-Write $\operatorname{tr}(A \matr{X} B) = \sum_{a} \sum_{b} \sum_{c} A_{ab} X_{bc} B_{ca}$.
+Write $A_{kl}$, $X_{kl}$, and $B_{kl}$ for the entries of
+$\matr{A}$, $\matr{X}$, and $\matr{B}$.
 For entry $(i,j)$:
 
 $$
 \ba
-\left[\deriv{\matr{X}} \operatorname{tr}(A \matr{X} B)\right]_{ij}
-&= \deriv{X_{ij}} \sum_{a} \sum_{b} \sum_{c} A_{ab} X_{bc} B_{ca} \\
-&= \sum_{a} A_{ai} B_{ja} \\
-&= \sum_{a} \left[\tp{A}\right]_{ia} \left[\tp{B}\right]_{aj} \\
-&= \left[\tp{A}\,\tp{B}\right]_{ij}
+\left[\deriv{\matr{X}} \operatorname{tr}(\matr{A} \matr{X} \matr{B})\right]_{ij}
+&= \deriv{X_{ij}} \sum_{a=1}^{r} \sum_{b=1}^{m} \sum_{c=1}^{n} A_{ab} X_{bc} B_{ca}
+&& \text{(trace of the } r \times r \text{ product } \matr{A}\matr{X}\matr{B} \text{)}
+\\
+&= \sum_{a=1}^{r} A_{ai} B_{ja}
+&& \text{(only the terms with } b = i,\ c = j \text{ depend on } X_{ij} \text{)}
+\\
+&= \sum_{a=1}^{r} \left[\tp{\matr{A}}\right]_{ia} \left[\tp{\matr{B}}\right]_{aj}
+&& \text{(definition of the transpose)}
+\\
+&= \left[\tp{\matr{A}}\,\tp{\matr{B}}\right]_{ij}
+&& \text{(definition of matrix multiplication)}
 \ea
 $$
 
 :::
 
+{{< slidebreak >}}
+
 :::{#exm-deriv-matrix-product-matrix}
 
-Let $A = \matr{I}_2$ ($2 \times 2$) and $B = \begin{pmatrix}2 & 0 \\
+#### Differentiating a weighted trace
+
+Let $\matr{A} = \matr{I}_2$ ($2 \times 2$) and $\matr{B} = \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}$ ($2 \times 2$).
-Then $\operatorname{tr}(A \matr{X} B) = 2X_{11} + 3X_{22}$, and:
+Then $\operatorname{tr}(\matr{A} \matr{X} \matr{B}) = 2X_{11} + 3X_{22}$, and:
 
 $$
-\underbrace{\deriv{\matr{X}} \operatorname{tr}(A \matr{X} B)}_{2 \times 2}
-= \underbrace{\tp{A}}_{2 \times 2} \underbrace{\tp{B}}_{2 \times 2}
+\underbrace{\deriv{\matr{X}} \operatorname{tr}(\matr{A} \matr{X} \matr{B})}_{2 \times 2}
+= \underbrace{\tp{\matr{A}}}_{2 \times 2} \underbrace{\tp{\matr{B}}}_{2 \times 2}
 = \matr{I}_2 \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}
 = \begin{pmatrix}2 & 0 \\

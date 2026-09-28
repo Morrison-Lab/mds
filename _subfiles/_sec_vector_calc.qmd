@@ -18,6 +18,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-vector-valued-derivative.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-constant-wrt-vector.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-constant-wrt-vector.qmd >}}

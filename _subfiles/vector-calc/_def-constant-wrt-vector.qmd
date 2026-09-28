@@ -1,11 +1,12 @@
 :::{#def-constant-wrt-vector}
 #### Constant
 
-$\vx$ is **constant with respect to** $\vb$ if
+A $q \times 1$ vector $\vx$ is **constant with respect to** the $p \times 1$ vector $\vb$ if
+its derivative (@def-vector-valued-derivative) is zero:
 
 $$
-\underbrace{\deriv{\vb} \tp{\vx}}_{p \times p}
-= \underbrace{\mathbf{0}}_{p \times p}
+\underbrace{\deriv{\vb} \tp{\vx}}_{p \times q}
+= \underbrace{\matr{0}}_{p \times q}
 $$
 
 :::
