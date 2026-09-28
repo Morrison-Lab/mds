@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 01:25:54 (PDT)
+Last modified: 2026-09-28 01:38:09 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -208,7 +208,7 @@ The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}
 > - \\\delta\_{23} = \[2 = 3\] = 0\\.
 > - The entries of the \\p \times p\\ identity matrix are Kronecker deltas: \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\ (see [identity matrix](linear-algebra.llms.md#def-identity-matrix)).
 
-#### Strengths and limitations of the Iverson bracket
+### 5.3 Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness: it converts domain restrictions in sums and integrals into unrestricted operations. For example:
 
@@ -218,7 +218,7 @@ With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\x\\
 
 However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote closed intervals \\\[a, b\]\\, conditional expectations \\\operatorname{E}\[Y \mid X\]\\, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
-### 5.3 Summary of indicator notations
+### 5.4 Summary of indicator notations
 
 [Table 2](#tbl-indicator-notations) compares the major notations encountered across the literature.
 
@@ -233,7 +233,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 
 Table 2: Notations for indicator functions across mathematical and statistical literature
 
-### 5.4 Conventions in this book
+### 5.5 Conventions in this book
 
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
@@ -244,7 +244,7 @@ In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros 
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the information matrices (\\I\\, \\\mathcal{I}\\).
 
-### 5.5 Key algebraic properties
+### 5.6 Key algebraic properties
 
 Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:
 

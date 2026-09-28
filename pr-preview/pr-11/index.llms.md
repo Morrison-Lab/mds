@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-09-28 01:21:39 (PDT)
+Last modified: 2026-09-28 01:33:55 (PDT)
 
-# Welcome
+## Welcome
 
 > Math is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.
 
@@ -40,7 +40,7 @@ Each page is a thin wrapper around one or more fragments:
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 
-# References
+## References
 
 Cheng, Eugenia. 2025. “Opinion \| How Math Turned Me from a D.E.I. Skeptic to a Supporter.” *The New York Times*. <https://www.nytimes.com/2025/09/05/opinion/math-dei.html>.
 

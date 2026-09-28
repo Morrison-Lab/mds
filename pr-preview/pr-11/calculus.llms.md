@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-09-28 01:25:54 (PDT)
+Last modified: 2026-09-28 01:38:09 (PDT)
 
-# 1 Derivatives
+## 1 Derivatives
 
 > **NOTE:**
 >
@@ -72,11 +72,11 @@ Last modified: 2026-09-28 01:25:54 (PDT)
 >
 > \\ \begin{aligned} \frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} &= f'(x) \cdot\operatorname{log}'\mathopen{}\left\\f(x)\right\\\mathclose{} && \text{(chain rule, with } g = f \text{ and outer function } \log \text{)} \\ &= f'(x) \cdot\frac{1}{f(x)} && \text{(derivative of } \log \text{, valid because } f(x) \> 0 \text{)} \\ &= \frac{f'(x)}{f(x)} && \text{(multiply)} \end{aligned} \\
 
-# 2 Integration
+## 2 Integration
 
 Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.
 
-## 2.1 Antiderivatives
+### 2.1 Antiderivatives
 
 > **NOTE:**
 >
@@ -163,7 +163,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > Verify by differentiating: \\\frac{\partial}{\partial x}\mathopen{}\left(x^3 - x + C\right)\mathclose{} = 3x^2 - 1 = f(x)\\, as required.
 
-## 2.2 Regularity Conditions
+### 2.2 Regularity Conditions
 
 > **NOTE:**
 >
@@ -347,7 +347,7 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 
 > **NOTE:**
 >
-> **Theorem 12 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 9](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 10](#def-integrable-general)) converge to the integral:
+> **Theorem 12 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 9](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 10](#def-riemann-sum-equal-width)) converge to the integral:
 >
 > \\\lim\_{n \to \infty} S_n = \int_a^b f(x)\\dx.\\
 
@@ -363,7 +363,7 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 >
 > So \\S\_{10} = 0.55\\, \\S\_{100} = 0.505\\, \\S\_{1000} = 0.5005\\, and \\S_n \to \frac{1}{2}\\ as \\n \to \infty\\. By [Theorem 12](#thm-riemann-general), \\\int_0^1 x\\dx = \frac{1}{2}\\.
 
-## 2.3 Fundamental Theorem of Calculus
+### 2.3 Fundamental Theorem of Calculus
 
 > **NOTE:**
 >
@@ -541,7 +541,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Figure 5: Exponential distribution with \\\lambda = 1\\. Left: the PDF \\f(t) = \lambda \text{e}^{-\lambda t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-\lambda t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
 
-# 3 Double Integrals
+## 3 Double Integrals
 
 The **Fubini–Tonelli theorem** states conditions under which the order of integration in a double integral can be exchanged. We state two versions: the Riemann version ([Theorem 14](#thm-fubini)) is what applied courses usually use for double integrals of continuous functions on simple regions; the \\\sigma\\-finite measure-theoretic version ([Theorem 15](#thm-fubini-tonelli)) is included to make the [joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint) corollary in the probability chapter of *Regression Models for Epidemiology* follow from a stated theorem rather than from an aside.
 
@@ -852,7 +852,7 @@ Applied courses rarely need the measure-theoretic generalization itself, but it 
 >
 > ([Wikipedia contributors 2024](#ref-wp:fubini))
 
-# 4 Additional resources
+## 4 Additional resources
 
 - Kaplan ([2022](#ref-mosaiccalc))
 - Khuri ([2003](#ref-khuri2003advanced))
@@ -863,7 +863,7 @@ Applied courses rarely need the measure-theoretic generalization itself, but it 
   - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - Grinberg ([2017](#ref-realanalysislifesaver)) (the rigorous foundations behind these results)
 
-# References
+## References
 
 Banner, Adrian D. 2007. *The Calculus Lifesaver : All the Tools You Need to Excel at Calculus*. A Princeton Lifesaver Study Guide. Princeton University Press. <https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver>.
 

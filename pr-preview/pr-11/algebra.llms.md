@@ -4,13 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-09-28 01:25:54 (PDT)
-
-## 1 Elementary Algebra
+Last modified: 2026-09-28 01:38:09 (PDT)
 
 Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra) (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.
 
-### 1.1 Equalities
+## 1 Equalities
 
 > **NOTE:**
 >
@@ -20,7 +18,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 2 (Substituting equivalent expressions)** If \\a = b\\, then for any function \\f(x)\\, \\f(a) = f(b)\\
 
-### 1.2 Inequalities
+## 2 Inequalities
 
 > **NOTE:**
 >
@@ -38,7 +36,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 6 (Negation is multiplication by \\-1\\)** \\-a = (-1)\*a\\
 
-### 1.3 Infimum and supremum
+## 3 Infimum and supremum
 
 > **NOTE:**
 >
@@ -77,7 +75,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
 > - \\\sup\\1, 2, 3, \ldots\\ = +\infty\\, because no real number is greater than or equal to every element of that set.
 
-### 1.4 Sums
+## 4 Sums
 
 > **NOTE:**
 >
@@ -95,7 +93,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > \\(a + b) + c = a + (b + c)\\
 
-### 1.5 Products
+## 5 Products
 
 > **NOTE:**
 >
@@ -109,7 +107,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > **Theorem 12 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
 
-### 1.6 Division
+## 6 Division
 
 > **NOTE:**
 >
@@ -117,13 +115,13 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > \\\frac {a}{b} = a \times \frac{1}{b}\\
 
-### 1.7 Sums and products together
+## 7 Sums and products together
 
 > **NOTE:**
 >
 > **Theorem 14 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
 
-### 1.8 Quotients
+## 8 Quotients
 
 > **NOTE:**
 >
@@ -133,7 +131,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 
 A quotient is also called a *fraction*; \\a\\ is its *numerator* and \\b\\ its *denominator*. A quotient whose denominator measures time or population size is often called a *rate*; in epidemiology, rates typically have such a denominator.
 
-c.f. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
+cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
@@ -143,7 +141,7 @@ c.f. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 >
 > **Definition 4 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
-> c.f. <https://en.wikipedia.org/wiki/Ratio>
+> cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
@@ -155,11 +153,11 @@ c.f. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 6 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (c.f. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 6 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-### 1.9 Exponentials and Logarithms
+## 9 Exponentials and Logarithms
 
 In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is the natural logarithm of \\x \> 0\\, the logarithm with base \\e \approx 2.718\\, and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} = e^x\\ is the exponential function. Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for base 10.
 
