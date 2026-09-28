@@ -8,29 +8,25 @@
 
 {{< include mds/_subfiles/algebra/_thm-equal-trans.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-substitution.qmd >}}
-
----
 
 ### Inequalities
 
 {{< include mds/_subfiles/algebra/_thm-add-ineq.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-neg-ineq.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-mult-ineq.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
-
----
 
 ### Infimum and supremum
 
@@ -54,27 +50,25 @@
 
 {{< include mds/_subfiles/algebra/_thm-add-ident.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-sum-symmetric.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-sum-assoc.qmd >}}
 
----
-
 ### Products
 
----
+<!-- heading shares the slide; do not re-flag -->
 
 {{< include mds/_subfiles/algebra/_thm-mult-one.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-prod-symmetric.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-prod-assoc.qmd >}}
 
@@ -84,11 +78,9 @@
 
 ### Sums and products together
 
----
+<!-- heading shares the slide; do not re-flag -->
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
-
----
 
 ### Quotients
 
@@ -96,19 +88,17 @@
 
 {{< include mds/_subfiles/algebra/_def-ratio.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-proportion.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-proportional.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
-
----
 
 ### Exponentials and Logarithms
 
@@ -122,18 +112,18 @@
 
 {{< include mds/_subfiles/algebra/_cor-exp-sum.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-double-exp.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_cor-exp-ab.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exr-double-exponentials.qmd >}}
 
----
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-exp-log-inverse.qmd >}}

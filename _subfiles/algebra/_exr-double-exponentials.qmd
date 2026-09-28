@@ -7,7 +7,7 @@ When does $(a^b)^c = a^{(b^c)}$?
 
 :::
 
----
+{{< slidebreak >}}
 
 :::{#sol-double-exponential}
 
@@ -19,7 +19,7 @@ Long answer:
 
 :::
 
----
+{{< slidebreak >}}
 
 :::{#exr-exp-vs-mult}
 
@@ -27,12 +27,11 @@ For $b,c \in \reals$, when does $b^c = bc$?
 
 :::
 
----
+{{< slidebreak >}}
 
 :::{#sol-exp-vs-mult}
 
 {{< include mds/_subfiles/algebra/_sol-exp-vs-mult.qmd >}}
 
 :::
-
 

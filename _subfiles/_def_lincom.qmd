@@ -32,7 +32,7 @@ see [wikipedia](https://en.wikipedia.org/wiki/Dot_product#Dyadics_and_matrices) 
 
 :::
 
----
+{{< slidebreak >}}
 
 :::{#thm-lincom-symmetric}
 #### Dot product is symmetric
@@ -43,7 +43,7 @@ $$\vx \cdot \vy = \vy \cdot \vx$$
 
 :::
 
----
+{{< slidebreak >}}
 
 ::: proof
 
