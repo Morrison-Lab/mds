@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 20:17:14 (PDT)
+Last modified: 2026-09-28 22:02:47 (PDT)
 
 ## Welcome
 
@@ -19,7 +19,7 @@ These notes collect the mathematics that data science courses assume: mathematic
 - [Algebra](algebra.llms.md): equalities and inequalities, infimum and supremum, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions, the Fundamental Theorem of Calculus, and double integrals
-- [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, and the design matrix
+- [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Proof Writing](proof-writing.llms.md): showing and annotating every step of a derivation
 
