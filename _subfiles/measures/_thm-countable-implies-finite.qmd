@@ -1,0 +1,33 @@
+:::{#thm-countable-implies-finite}
+#### Countable additivity implies finite additivity
+
+If $\mu$ is a [countably additive](#def-countable-additivity) function
+on a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$,
+and $\mu(\emptyset) = 0$,
+then $\mu$ is [finitely additive](#def-finite-additivity).
+
+:::
+
+::: proof
+
+Let $A_1, \ldots, A_n$ be pairwise disjoint sets in $\mathscr{S}$,
+and extend them to a sequence by setting $A_{n+1} = A_{n+2} = \cdots = \emptyset$.
+The extended sequence is still pairwise disjoint,
+since $\emptyset$ shares no element with any set,
+and its union is $A_1 \cup \cdots \cup A_n$. So:
+
+$$
+\ba
+\mu(A_1 \cup \cdots \cup A_n)
+&= \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&& \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
+&= \sum_{i=1}^{\infty} \mu(A_i)
+&& \text{(countable additivity)} \\
+&= \sum_{i=1}^{n} \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
+&& \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
+&= \sum_{i=1}^{n} \mu(A_i)
+&& \text{(} \mu(\emptyset) = 0 \text{)}
+\ea
+$$
+
+:::

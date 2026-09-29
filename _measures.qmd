@@ -1,0 +1,97 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+A measure assigns a size to each set in a collection of sets:
+how many elements it has, how long it is, or how likely it is.
+This page builds measures from $\sigma$-algebras and additivity,
+using the [sets and functions](sets-functions.qmd) page's definitions.
+The Morrison Lab's probability notes define a probability measure as a measure
+that gives the whole space size 1
+([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
+
+:::
+
+## $\sigma$-algebras
+
+{{< include mds/_subfiles/measures/_def-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-sigma-algebra-closure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-power-set-sigma-algebra.qmd >}}
+
+## Pairwise disjoint sets
+
+{{< include mds/_subfiles/measures/_def-pairwise-disjoint.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-pairwise-disjoint.qmd >}}
+
+## Additivity
+
+{{< include mds/_subfiles/measures/_def-finite-additivity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-finite-additivity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-countable-additivity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-countable-additivity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_lem-nonneg-series.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_lem-countable-additivity-empty.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-empty-set-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-empty-set-infinity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-countable-implies-finite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-finite-not-countable.qmd >}}
+
+## Measures
+
+{{< include mds/_subfiles/measures/_def-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_cor-measure-finitely-additive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-counting-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-counting-measure.qmd >}}

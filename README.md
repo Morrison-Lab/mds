@@ -21,12 +21,13 @@ or more fragments, which are what a host site includes:
 | [Notation](notation.qmd)               | `mds/_notation.qmd`                                                                                                    |
 | [Sets and Functions](sets-functions.qmd) | `mds/_sets-functions.qmd` |
 | [Algebra](algebra.qmd)                 | `mds/_algebra.qmd`                                                                                                     |
+| [Measures](measures.qmd) | `mds/_measures.qmd` |
 | [Calculus](calculus.qmd)               | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.qmd)   | `mds/_subfiles/_sec_linear_algebra.qmd`                                                                                |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd`                                                                                   |
 | [Proof Writing](proof-writing.qmd)     | `mds/_proof-writing.qmd`                                                                                               |
 
-`_notation.qmd`, `_sets-functions.qmd`, and `_algebra.qmd` include
+`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, and `_measures.qmd` include
 `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must
 include `latex-macros/macros.qmd` first, as the pages of this site do.
 

@@ -1,0 +1,12 @@
+:::{#exm-measure}
+#### Counting elements is a measure
+
+The counting function $\mu(A) \eqdef \abs{A}$ of @exm-finite-additivity,
+defined on the $\sigma$-algebra of all subsets of $D$
+(@exm-sigma-algebra),
+takes values in $[0, \infty]$,
+is countably additive (@exm-countable-additivity),
+and gives $\mu(\emptyset) = 0$,
+so it is a measure.
+
+:::

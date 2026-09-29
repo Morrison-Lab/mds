@@ -1,0 +1,50 @@
+:::{#lem-nonneg-series}
+#### Sums of non-negative terms
+
+Let $a_1, a_2, \ldots$ be values in $[0, \infty]$,
+with partial sums $s_n \eqdef \sum_{i=1}^{n} a_i$,
+where $x + \infty = \infty$ for every $x$ in $[0, \infty]$.
+Then the partial sums are non-decreasing,
+$s_1 \le s_2 \le \cdots$,
+so their limit,
+the sum $\sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} s_n$,
+always exists,
+and it is either a finite number or $\infty$.
+
+:::
+
+::: proof
+
+For each $n$:
+
+$$
+\ba
+s_{n+1}
+&= s_n + a_{n+1}
+&& \text{(definition of } s_{n+1} \text{)} \\
+&\ge s_n
+&& \text{(} a_{n+1} \ge 0 \text{)}
+\ea
+$$
+
+If some partial sum $s_N$ is $\infty$,
+then $s_n = \infty$ for every $n \ge N$,
+so the limit is $\infty$.
+Otherwise, the partial sums form a non-decreasing sequence of real numbers.
+If that sequence is bounded above,
+it converges to a finite number
+(see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)).
+If it is not bounded above,
+then for every number $M$ some $s_N$ exceeds $M$,
+and so does every later $s_n \ge s_N$;
+the limit is $\infty$.
+
+:::
+
+::: {.remark .notes}
+
+By @lem-nonneg-series,
+the right-hand side of the equation in @def-countable-additivity
+always has a value.
+
+:::
