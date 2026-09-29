@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 22:56:22 (PDT)
+Last modified: 2026-09-28 23:45:45 (PDT)
 
 Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra) (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.
 
