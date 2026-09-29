@@ -1,0 +1,50 @@
+:::{#def-positive-definite}
+#### Positive definite matrix
+
+A $p \times p$ matrix $\matr{A}$ is **positive definite**
+if it satisfies both conditions:
+
+- $\matr{A}$ is symmetric (@def-symmetric-matrix).
+- Every quadratic form (@def-quadratic-form) in $\matr{A}$
+  at a nonzero vector is positive:
+  $\tp{\vx}\matr{A}\vx > 0$ for every vector $\vx \neq \vzero$ of length $p$.
+
+:::
+
+::: {.remark .notes}
+
+A positive definite matrix is positive semidefinite
+(@def-positive-semidefinite),
+because $\tp{\vzero}\matr{A}\vzero = 0$.
+Some sources drop the symmetry condition from both definitions.
+These notes keep it,
+because without it a matrix can pass the quadratic-form condition
+and still have no real eigenvalues:
+$\matr{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$
+has $\tp{\vx}\matr{C}\vx = x_1^2 + x_2^2$,
+which is positive for every $\vx \neq \vzero$,
+yet no real $\lambda$ solves $\matr{C}\vecf{v} = \lambda\vecf{v}$
+with $\vecf{v} \neq \vzero$
+(see also <https://en.wikipedia.org/wiki/Definite_matrix>).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-positive-definite}
+#### Positive definite, semidefinite, and neither
+
+- The identity matrix $\matr{I}_p$ (@def-identity-matrix) is positive definite:
+  $\tp{\vx}\matr{I}_p\vx = \sum_{i=1}^p x_i^2$,
+  which is positive unless every $x_i$ is $0$.
+- $\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
+  from @exm-positive-semidefinite is positive semidefinite
+  but not positive definite:
+  at $\vx = (1, -1) \neq \vzero$,
+  $\tp{\vx}\matr{B}\vx = (1 - 1)^2 = 0$.
+- $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ is symmetric
+  but not positive semidefinite:
+  at $\vx = (1, -1)$,
+  $\tp{\vx}\matr{D}\vx = 1 - 2 - 2 + 1 = -2 < 0$.
+
+:::

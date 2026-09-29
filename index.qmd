@@ -45,7 +45,8 @@ organized by topic:
   the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.qmd):
   vectors, matrices and their operations, special matrices,
-  quadratic forms, and the design matrix
+  quadratic forms, eigendecompositions, definite matrices,
+  determinants, and the design matrix
 - [Vector Calculus](vector-calculus.qmd):
   derivatives with respect to vectors and matrices,
   quadratic forms, and the vector chain rule
