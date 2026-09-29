@@ -1,0 +1,118 @@
+:::{#thm-pd-inverse}
+#### A positive definite matrix has a positive definite inverse
+
+Let $\matr{A}$ be a $p \times p$ positive definite matrix
+(@def-positive-definite) with real entries,
+with eigendecomposition $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+(@def-eigendecomposition)
+and eigenvalues $\lambda_1, \ldots, \lambda_p$.
+Then $\matr{A}$ is invertible (@def-invertible-matrix),
+
+$$
+\matr{A}^{-1} = \matr{Q}\,\matr{\Lambda}^{-1}\,\tp{\matr{Q}},
+\qquad
+\matr{\Lambda}^{-1} =
+\begin{bmatrix}
+1/\lambda_1 & \cdots & 0           \\
+\vdots      & \ddots & \vdots      \\
+0           & \cdots & 1/\lambda_p
+\end{bmatrix},
+$$
+
+and $\matr{A}^{-1}$ is positive definite.
+
+:::
+
+::: proof
+
+By @thm-definite-eigenvalues, every $\lambda_i > 0$,
+so $\matr{\Lambda}^{-1}$ is well defined,
+and multiplying the two diagonal matrices entry by entry
+gives $\matr{\Lambda}\matr{\Lambda}^{-1} = \matr{\Lambda}^{-1}\matr{\Lambda} = \matr{I}_p$.
+Write $\matr{B} = \matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}}$. Then:
+
+$$
+\ba
+\matr{A}\matr{B}
+&= \matr{Q}\matr{\Lambda}\tp{\matr{Q}}\matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}}
+&& \text{(substitute)}
+\\
+&= \matr{Q}\matr{\Lambda}\matr{I}_p\matr{\Lambda}^{-1}\tp{\matr{Q}}
+&& \text{(} \tp{\matr{Q}}\matr{Q} = \matr{I}_p \text{)}
+\\
+&= \matr{Q}\matr{\Lambda}\matr{\Lambda}^{-1}\tp{\matr{Q}}
+&& \text{(identity matrix)}
+\\
+&= \matr{Q}\tp{\matr{Q}}
+&& \text{(} \matr{\Lambda}\matr{\Lambda}^{-1} = \matr{I}_p \text{)}
+\\
+&= \matr{I}_p
+&& \text{(} \matr{Q} \text{ is orthogonal)}
+\ea
+$$
+
+The same steps, with $\matr{\Lambda}^{-1}$ and $\matr{\Lambda}$ swapped,
+give $\matr{B}\matr{A} = \matr{I}_p$,
+so $\matr{B} = \matr{A}^{-1}$ (@def-matrix-inverse).
+The steps with $\matr{Q}$ use @def-orthogonal-matrix,
+whose remark records that $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$ too,
+and the identity step uses @thm-identity.
+
+$\matr{A}^{-1}$ is symmetric by @cor-inverse-symmetric.
+For $\vx \neq \vzero$, let $\vecf{y} = \tp{\matr{Q}}\vx$,
+which is not $\vzero$ because $\vx = \matr{Q}\vecf{y}$.
+As in the proof of @thm-definite-eigenvalues:
+
+$$
+\ba
+\tp{\vx}\matr{A}^{-1}\vx
+&= \tp{\vecf{y}}\matr{\Lambda}^{-1}\vecf{y}
+&& \text{(substitute } \matr{A}^{-1} = \matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}} \text{)}
+\\
+&= \sum_{i=1}^p \frac{y_i^2}{\lambda_i}
+&& \text{(} \matr{\Lambda}^{-1} \text{ is diagonal)}
+\\
+&> 0
+&& \text{(each } \lambda_i > 0 \text{, and some } y_i \neq 0 \text{)}
+\ea
+$$
+
+So $\matr{A}^{-1}$ is positive definite.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-pd-inverse}
+#### Inverting a positive definite matrix
+
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$,
+@exm-spectral gives
+$\matr{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$
+and eigenvalues $3$ and $1$, so:
+
+$$
+\ba
+\matr{A}^{-1}
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 1/3 & 0 \\ 0 & 1 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute; } \matr{Q} \text{ is symmetric)}
+\\
+&= \frac{1}{2} \begin{bmatrix} 1/3 & 1 \\ 1/3 & -1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(multiply the first two matrices)}
+\\
+&= \frac{1}{2} \begin{bmatrix} 4/3 & -2/3 \\ -2/3 & 4/3 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}
+&& \text{(simplify)}
+\ea
+$$
+
+Multiplying out,
+$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \cd \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}
+= \frac{1}{3}\begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} = \matr{I}_2$.
+
+:::

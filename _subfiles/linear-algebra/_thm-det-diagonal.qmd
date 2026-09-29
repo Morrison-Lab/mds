@@ -1,0 +1,63 @@
+:::{#thm-det-diagonal}
+#### Determinant of a diagonal matrix
+
+The determinant (@def-determinant) of a $p \times p$ diagonal matrix
+(@def-diagonal-matrix)
+is the product of its diagonal entries:
+
+$$
+\det\paren{
+\begin{bmatrix}
+d_1    & \cdots & 0      \\
+\vdots & \ddots & \vdots \\
+0      & \cdots & d_p
+\end{bmatrix}
+} = \prod_{i=1}^p d_i
+$$
+
+:::
+
+::: proof
+
+By induction on $p$.
+For $p = 1$, the matrix is $\begin{bmatrix} d_1 \end{bmatrix}$,
+and its determinant is $d_1$ by definition.
+
+For $p \ge 2$, suppose the result holds for $(p-1) \times (p-1)$ diagonal matrices,
+and let $\matr{D}$ be $p \times p$ and diagonal.
+Row 1 of $\matr{D}$ is $(d_1, 0, \ldots, 0)$,
+so only the $j = 1$ term of the definition can be nonzero,
+and deleting row 1 and column 1 of $\matr{D}$
+leaves the diagonal matrix with diagonal entries $d_2, \ldots, d_p$:
+
+$$
+\ba
+\det(\matr{D})
+&= (-1)^{1+1}\, d_1 \det\paren{\matr{D}_{(11)}}
+ + \sum_{j=2}^p (-1)^{1+j} \cd 0 \cd \det\paren{\matr{D}_{(1j)}}
+&& \text{(definition)}
+\\
+&= d_1 \det\paren{\matr{D}_{(11)}}
+&& \text{(drop the zero terms)}
+\\
+&= d_1 \prod_{i=2}^p d_i
+&& \text{(induction hypothesis)}
+\\
+&= \prod_{i=1}^p d_i
+&& \text{(combine)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-det-diagonal}
+#### Determinant of a scaled identity matrix
+
+For a number $c$,
+$c\,\matr{I}_p$ is diagonal with every diagonal entry equal to $c$,
+so $\det(c\,\matr{I}_p) = c^p$.
+In particular, $\det(\matr{I}_p) = 1$.
+
+:::

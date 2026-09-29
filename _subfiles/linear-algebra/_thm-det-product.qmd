@@ -1,0 +1,40 @@
+:::{#thm-det-product}
+#### Determinant of a product
+
+For $p \times p$ matrices $\matr{A}$ and $\matr{B}$,
+
+$$
+\det(\matr{A}\matr{B}) = \det(\matr{A}) \det(\matr{B}).
+$$
+
+:::
+
+::: {.remark .notes}
+
+The proof needs properties of the determinant
+that these notes don't develop;
+see @banerjee2014linear
+and <https://en.wikipedia.org/wiki/Determinant>.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-det-product}
+#### Checking the product rule
+
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
+and $\matr{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}$,
+@exm-determinant gives $\det(\matr{A}) = 2 \cd 1 - 1 \cd 0 = 2$
+and $\det(\matr{B}) = 1 \cd 1 - 0 \cd 3 = 1$.
+The product is
+
+$$
+\matr{A}\matr{B}
+= \begin{bmatrix} 2 \cd 1 + 1 \cd 3 & 2 \cd 0 + 1 \cd 1 \\ 0 \cd 1 + 1 \cd 3 & 0 \cd 0 + 1 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 5 & 1 \\ 3 & 1 \end{bmatrix},
+$$
+
+with $\det(\matr{A}\matr{B}) = 5 \cd 1 - 1 \cd 3 = 2 = \det(\matr{A})\det(\matr{B})$.
+
+:::

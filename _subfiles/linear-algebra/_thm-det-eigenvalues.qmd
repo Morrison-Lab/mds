@@ -1,0 +1,91 @@
+:::{#thm-det-eigenvalues}
+#### The determinant of a symmetric matrix is the product of its eigenvalues
+
+Let $\matr{A}$ be a $p \times p$ symmetric matrix with real entries,
+with eigendecomposition $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+(@def-eigendecomposition)
+and eigenvalues $\lambda_1, \ldots, \lambda_p$
+on the diagonal of $\matr{\Lambda}$.
+Then
+
+$$
+\det(\matr{A}) = \prod_{i=1}^p \lambda_i.
+$$
+
+:::
+
+::: proof
+
+First, $\det(\tp{\matr{Q}})\det(\matr{Q}) = 1$:
+
+$$
+\ba
+\det(\tp{\matr{Q}})\det(\matr{Q})
+&= \det(\tp{\matr{Q}}\matr{Q})
+&& \text{(determinant of a product)}
+\\
+&= \det(\matr{I}_p)
+&& \text{(} \matr{Q} \text{ is orthogonal)}
+\\
+&= 1
+&& \text{(determinant of the identity)}
+\ea
+$$
+
+Then:
+
+$$
+\ba
+\det(\matr{A})
+&= \det(\matr{Q}\matr{\Lambda}\tp{\matr{Q}})
+&& \text{(substitute the eigendecomposition)}
+\\
+&= \det(\matr{Q}) \det(\matr{\Lambda}) \det(\tp{\matr{Q}})
+&& \text{(determinant of a product, twice)}
+\\
+&= \det(\matr{\Lambda}) \cd \det(\tp{\matr{Q}})\det(\matr{Q})
+&& \text{(reorder the three numbers)}
+\\
+&= \det(\matr{\Lambda})
+&& \text{(the first display)}
+\\
+&= \prod_{i=1}^p \lambda_i
+&& \text{(determinant of a diagonal matrix)}
+\ea
+$$
+
+The product steps are @thm-det-product,
+the orthogonality step is @def-orthogonal-matrix,
+and the identity and diagonal steps are @thm-det-diagonal and @exm-det-diagonal.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-det-pd}
+#### A positive definite matrix has a positive determinant
+
+If $\matr{A}$ is positive definite (@def-positive-definite),
+then $\det(\matr{A}) > 0$.
+
+:::
+
+::: proof
+
+By @thm-definite-eigenvalues, every eigenvalue of $\matr{A}$ is positive,
+so their product, which is $\det(\matr{A})$ by @thm-det-eigenvalues,
+is positive.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-det-eigenvalues}
+#### Two ways to the same determinant
+
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+has eigenvalues $3$ and $1$ (@exm-eigenvalue),
+so @thm-det-eigenvalues gives $\det(\matr{A}) = 3 \cd 1 = 3$,
+matching $2 \cd 2 - 1 \cd 1 = 3$ from @exm-determinant.
+
+:::

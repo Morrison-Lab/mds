@@ -1,0 +1,77 @@
+:::{#thm-definite-eigenvalues}
+#### Definiteness and eigenvalues
+
+Let $\matr{A}$ be a $p \times p$ symmetric matrix with real entries,
+with eigendecomposition $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+(@def-eigendecomposition)
+and eigenvalues $\lambda_1, \ldots, \lambda_p$
+on the diagonal of $\matr{\Lambda}$.
+Then:
+
+- $\matr{A}$ is positive semidefinite (@def-positive-semidefinite)
+  if and only if every $\lambda_i \ge 0$.
+- $\matr{A}$ is positive definite (@def-positive-definite)
+  if and only if every $\lambda_i > 0$.
+
+:::
+
+::: proof
+
+For any vector $\vx$ of length $p$, let $\vecf{y} = \tp{\matr{Q}}\vx$.
+Then:
+
+$$
+\ba
+\tp{\vx}\matr{A}\vx
+&= \tp{\vx}\matr{Q}\matr{\Lambda}\tp{\matr{Q}}\vx
+&& \text{(substitute the eigendecomposition)}
+\\
+&= \tp{\paren{\tp{\matr{Q}}\vx}}\matr{\Lambda}\paren{\tp{\matr{Q}}\vx}
+&& \text{(transpose of a product)}
+\\
+&= \tp{\vecf{y}}\matr{\Lambda}\vecf{y}
+&& \text{(definition of } \vecf{y} \text{)}
+\\
+&= \sum_{i=1}^p \lambda_i y_i^2
+&& \text{(} \matr{\Lambda} \text{ is diagonal)}
+\ea
+$$
+
+The second step is @thm-transpose-product.
+Also, $\vx = \vzero$ exactly when $\vecf{y} = \vzero$:
+$\matr{Q}\tp{\matr{Q}} = \matr{I}_p$ for an orthogonal matrix
+(@def-orthogonal-matrix),
+so $\vx = \matr{Q}\vecf{y}$.
+
+*If every $\lambda_i \ge 0$*, then every term $\lambda_i y_i^2 \ge 0$,
+so $\tp{\vx}\matr{A}\vx \ge 0$.
+*If every $\lambda_i > 0$* and $\vx \neq \vzero$,
+then some $y_i \neq 0$,
+so at least one term is positive and the rest are non-negative,
+and $\tp{\vx}\matr{A}\vx > 0$.
+
+*Conversely*, take $\vx = \vecf{q}_i$, column $i$ of $\matr{Q}$,
+which is not $\vzero$ because it has norm 1.
+Then $\vecf{y} = \tp{\matr{Q}}\vecf{q}_i$ is column $i$ of $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$,
+so $y_i = 1$ and every other entry of $\vecf{y}$ is $0$,
+and the display gives $\tp{\vecf{q}_i}\matr{A}\vecf{q}_i = \lambda_i$.
+So if $\matr{A}$ is positive semidefinite, $\lambda_i \ge 0$,
+and if $\matr{A}$ is positive definite, $\lambda_i > 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-definite-eigenvalues}
+#### Reading definiteness off the eigenvalues
+
+- $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+  has eigenvalues $3$ and $1$ (@exm-eigenvalue),
+  both positive, so it is positive definite.
+- $\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
+  has eigenvalues $2$, for the eigenvector $(1, 1)$,
+  and $0$, for the eigenvector $(1, -1)$,
+  so it is positive semidefinite but not positive definite,
+  as @exm-positive-definite found directly.
+
+:::

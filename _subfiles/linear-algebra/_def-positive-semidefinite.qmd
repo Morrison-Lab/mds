@@ -1,0 +1,38 @@
+:::{#def-positive-semidefinite}
+#### Positive semidefinite matrix
+
+A $p \times p$ matrix $\matr{A}$ is **positive semidefinite**
+if it satisfies both conditions:
+
+- $\matr{A}$ is symmetric (@def-symmetric-matrix).
+- Every quadratic form (@def-quadratic-form) in $\matr{A}$ is non-negative:
+  $\tp{\vx}\matr{A}\vx \ge 0$ for every vector $\vx$ of length $p$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-positive-semidefinite}
+#### A positive semidefinite matrix
+
+Let $\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$,
+which is symmetric.
+For any $\vx = (x_1, x_2)$:
+
+$$
+\ba
+\tp{\vx}\matr{B}\vx
+&= x_1^2 + x_1 x_2 + x_2 x_1 + x_2^2
+&& \text{(multiply out the quadratic form)}
+\\
+&= (x_1 + x_2)^2
+&& \text{(complete the square)}
+\\
+&\ge 0
+&& \text{(a square is non-negative)}
+\ea
+$$
+
+So $\matr{B}$ is positive semidefinite.
+
+:::

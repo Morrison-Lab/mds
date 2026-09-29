@@ -286,6 +286,38 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-svd-evd.qmd >}}
 
+## Definite Matrices
+
+{{< include mds/_subfiles/linear-algebra/_def-positive-semidefinite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-positive-definite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-definite-eigenvalues.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-pd-inverse.qmd >}}
+
+## Determinants
+
+{{< include mds/_subfiles/linear-algebra/_def-determinant.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-det-diagonal.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-det-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-det-eigenvalues.qmd >}}
+
 ## Design Matrix
 
 {{< include mds/_subfiles/linear-algebra/_def-design-matrix.qmd >}}

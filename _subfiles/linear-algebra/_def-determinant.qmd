@@ -1,0 +1,55 @@
+:::{#def-determinant}
+#### Determinant
+
+The **determinant** of a $p \times p$ matrix $\matr{A}$
+with entries $a_{ij}$,
+written $\det(\matr{A})$ or $\abs{\matr{A}}$,
+is the number defined recursively in $p$:
+
+- For $p = 1$, $\det(\matr{A}) = a_{11}$.
+- For $p \ge 2$,
+  $$
+  \det(\matr{A}) = \sum_{j=1}^p (-1)^{1+j}\, a_{1j} \det\paren{\matr{A}_{(1j)}},
+  $$
+  where $\matr{A}_{(1j)}$ is the $(p-1) \times (p-1)$ matrix
+  left after deleting row $1$ and column $j$ of $\matr{A}$.
+
+:::
+
+::: {.remark .notes}
+
+This recursive formula is the *cofactor expansion* along the first row.
+Other sources define the determinant
+as a sum over all orderings of the columns
+and derive this expansion from it;
+the two definitions agree
+[@banerjee2014linear; see also <https://en.wikipedia.org/wiki/Determinant>].
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-determinant}
+#### Determinant of a $2 \times 2$ matrix
+
+For $\matr{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$,
+deleting row 1 and column 1 leaves $\begin{bmatrix} d \end{bmatrix}$,
+and deleting row 1 and column 2 leaves $\begin{bmatrix} c \end{bmatrix}$.
+So:
+
+$$
+\ba
+\det(\matr{A})
+&= (-1)^{1+1}\, a \det\paren{\begin{bmatrix} d \end{bmatrix}}
+ + (-1)^{1+2}\, b \det\paren{\begin{bmatrix} c \end{bmatrix}}
+&& \text{(definition, } p = 2 \text{)}
+\\
+&= a d - b c
+&& \text{(definition, } p = 1 \text{)}
+\ea
+$$
+
+For example,
+$\det\paren{\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}} = 2 \cd 2 - 1 \cd 1 = 3$.
+
+:::
