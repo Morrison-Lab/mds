@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 22:22:15 (PDT)
+Last modified: 2026-09-28 22:56:22 (PDT)
 
 ## 1 Derivatives
 
@@ -102,7 +102,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > Adding any constant \\C\\ gives another antiderivative; for example, with \\C = 7\\, \\F(x) = \frac{x^3}{3} + 7\\ also satisfies \\F'(x) = x^2\\, since adding a constant does not change the derivative. See [Figure 1](#fig-antiderivatives).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > ggplot2::ggplot() +
@@ -115,7 +115,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > \(a\) The function \\f(x) = x^2\\.
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
@@ -285,7 +285,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > This counterexample shows that the converse of [Theorem 10](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > ggplot2::ggplot() +
@@ -317,7 +317,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > This counterexample shows that the converse of [Theorem 11](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 3](#fig-step).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > step_df <- data.frame(
@@ -420,7 +420,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 13](#thm-ftc) Part 1 predicts. [Figure 4](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > ggplot2::ggplot() +
@@ -444,7 +444,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > slope_df <- data.frame(
@@ -502,7 +502,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > See [Figure 5](#fig-exp-pdf-cdf).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > ggplot2::ggplot() +
@@ -523,7 +523,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \(a\) PDF with \\\lambda = 1\\; shaded area equals \\F(2) \approx 0.865\\.
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > ggplot2::ggplot() +
@@ -603,7 +603,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_D \text{e}^{-x^2}\\dA.\\
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > region <- data.frame(x = c(0, 1, 1), y = c(0, 0, 1))
@@ -656,7 +656,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > The solid whose volume equals this integral is shown in [Figure 7](#fig-fubini-nonrect).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > n_grid <- 51
@@ -707,7 +707,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > The surface, and the singularity at the origin responsible for the failure, are shown in [Figure 8](#fig-fubini-fail).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > n_grid <- 81
@@ -761,7 +761,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_R \mathopen{}\left(x^2 + y^2\right)\mathclose{}\\dA.\\
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > ggplot2::ggplot() +
@@ -801,7 +801,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > The solid whose volume equals this integral is shown in [Figure 10](#fig-fubini-rect).
 >
-> Code
+> Show R code
 >
 > ``` downlit
 > n_grid <- 41
