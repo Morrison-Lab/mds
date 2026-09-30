@@ -190,11 +190,10 @@ and $\delta_{ij} = 0$ when $i \neq j$
 :::{#exm-kronecker-delta}
 #### Evaluating the Kronecker delta
 
+- $\delta_{11} = [1 = 1] = 1$.
+- $\delta_{12} = [1 = 2] = 0$.
 - $\delta_{22} = [2 = 2] = 1$.
 - $\delta_{23} = [2 = 3] = 0$.
-- The entries of the $p \times p$ identity matrix
-  are Kronecker deltas: $(\matr{I}_p)_{ij} = \delta_{ij}$
-  (see [identity matrix](linear-algebra.qmd#def-identity-matrix)).
 
 :::
 
