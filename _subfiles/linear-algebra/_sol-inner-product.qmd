@@ -17,8 +17,7 @@ a norm is a square root of a sum of squares, so it is never below zero.
 
 Python has both operations built in, and R builds them from `sum`.
 
-```{python}
-#| code-fold: false
+```python
 import numpy as np
 
 a = np.array([3.0, -1.0, 2.0])
