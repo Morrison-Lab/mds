@@ -1,0 +1,22 @@
+::: {#exr-write-in-matrix-form}
+
+#### Write a rule in matrix form
+
+A clinic scores a patient's risk from three measurements.
+
+| symbol | meaning | units |
+|---|---|---|
+| $x_1$ | age | years |
+| $x_2$ | systolic blood pressure | mmHg |
+| $x_3$ | body mass index | kg/m$^2$ |
+
+The rule in use is
+
+$$\text{score} = 0.4\,x_1 + 0.2\,x_2 + 1.5\,x_3 - 30$$
+
+Write this rule in the form of @eq-linear-scalar,
+naming $\vec w$, $b$ and $p$ explicitly,
+and give the score for a patient aged $50$ with blood pressure $130$ and BMI
+$28$.
+
+:::

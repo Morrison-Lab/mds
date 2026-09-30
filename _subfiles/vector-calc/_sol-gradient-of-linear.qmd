@@ -1,0 +1,30 @@
+::: {#sol-gradient-of-linear}
+
+Written out over the six positions,
+
+$$g(W) = 2W_{11} - W_{12} + 0\,W_{13} + 4W_{21} + 3W_{22} - 2W_{23}$$
+
+Each $W_{ij}$ appears in exactly one term, multiplied by $A_{ij}$ and by
+nothing else, so differentiating with respect to it leaves $A_{ij}$ behind:
+
+$$\frac{\partial g}{\partial W_{ij}} = A_{ij}$$
+
+Collecting those partial derivatives into a matrix of the same shape as $W$,
+as @tbl-gradient-shape requires,
+
+$$\nabla_W\, g(W) = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix} = A$$
+
+What is unusual is that the gradient came out **constant**:
+it does not mention $W$ at all.
+The constant answer is not a quirk of this particular $A$.
+$g$ is a linear function of $W$, and the gradient of a linear function is
+constant everywhere,
+for the same reason the derivative of $f(w) = cw$ is $c$ no matter where it
+is evaluated.
+
+A constant gradient is the easy case, and it is not the case we usually face.
+Most objectives are curved --- the squared error of a linear model is the standard example ---
+so their gradient changes from point to point
+and the downhill direction has to be worked out afresh at every step.
+
+:::

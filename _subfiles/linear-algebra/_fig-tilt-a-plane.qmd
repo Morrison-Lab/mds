@@ -1,0 +1,129 @@
+::: {.content-visible when-format="html"}
+
+::: {#fig-tilt-a-plane}
+
+::: {.columns .widget-panel style="display:flex;
+gap:1rem;
+align-items:flex-start;
+background-color:#fbfbfb;
+color:#222;
+color-scheme:light;
+padding:0.5rem;
+border-radius:6px;
+font-size:min(1em, 18px)"}
+
+::: {.column width="30%"}
+
+```{ojs}
+viewof planeW1 = Inputs.range([-1.5, 1.5], {value: 1, step: 0.1, label: "w1"})
+viewof planeW2 = Inputs.range([-1.5, 1.5], {value: 0.5, step: 0.1, label: "w2"})
+viewof planeB = Inputs.range([-2, 2], {value: 0, step: 0.1, label: "b"})
+viewof planeTurn = Inputs.range([0, 360], {value: 30, step: 5, label: "turn the view"})
+```
+
+```{ojs}
+{
+  const sign = (v) => (v < 0 ? "\u2212" : "+");
+  const fmt = (v) => Math.abs(v).toFixed(1);
+  return md`f(x1, x2) = ${planeW1.toFixed(1)} x1 ${sign(planeW2)} ${fmt(planeW2)} x2 ${sign(planeB)} ${fmt(planeB)}.
+The orange slice, along x1 with x2 = 0, rises ${planeW1.toFixed(1)} for each unit of x1;
+the green slice, along x2, rises ${planeW2.toFixed(1)} for each unit of x2.
+Both slices cross the vertical axis at height b = ${planeB.toFixed(1)}.`;
+}
+```
+
+:::
+
+::: {.column width="70%"}
+
+::: {style="display:flex; flex-wrap:wrap; gap:0.5rem; align-items:flex-start"}
+
+```{ojs}
+// The graph z = f(x1, x2) over the square [-2, 2] x [-2, 2], drawn in 3-D:
+// turn the square about the vertical axis, then look down on it from 30 degrees.
+planeView = {
+  const f = (x1, x2) => planeW1 * x1 + planeW2 * x2 + planeB;
+  const w = 340, h = 300, s = 38, sz = 16, elev = 30 * Math.PI / 180;
+  const turn = planeTurn * Math.PI / 180;
+  const at = (x1, x2, z) => {
+    const u = x1 * Math.cos(turn) - x2 * Math.sin(turn);
+    const v = x1 * Math.sin(turn) + x2 * Math.cos(turn);
+    return [w / 2 + s * u, h / 2 - s * Math.sin(elev) * v - sz * Math.cos(elev) * z];
+  };
+  const path = (pts) => d3.line()(pts.map(([a, b, z]) => at(a, b, z)));
+  const svg = d3.create("svg").attr("width", w).attr("height", h)
+    .attr("role", "img")
+    .attr("aria-label", "A tilted plane drawn in three dimensions over a square of inputs, " +
+      "with its two slices through the origin highlighted, " +
+      "and a vertical marker at the origin showing the height b.");
+  const ticks = d3.range(-2, 2.01, 0.5);
+  const corners = [[-2, -2], [2, -2], [2, 2], [-2, 2], [-2, -2]];
+  // the floor, z = 0, and the three axes
+  svg.append("path").attr("d", path(corners.map(([a, b]) => [a, b, 0])))
+    .attr("fill", "#eee").attr("stroke", "#bbb");
+  const axis = (p, q, name) => {
+    svg.append("path").attr("d", path([p, q])).attr("stroke", "#888");
+    const [tx, ty] = at(...q);
+    svg.append("text").attr("x", tx + 4).attr("y", ty).attr("font-size", 13).text(name);
+  };
+  axis([0, 0, 0], [2.6, 0, 0], "x1");
+  axis([0, 0, 0], [0, 2.6, 0], "x2");
+  axis([0, 0, -8], [0, 0, 8], "f");
+  // the plane itself, as a mesh of lines along each input
+  svg.append("path").attr("d", path(corners.map(([a, b]) => [a, b, f(a, b)])))
+    .attr("fill", "#1f77b4").attr("fill-opacity", 0.18).attr("stroke", "#1f77b4");
+  for (const t of ticks) {
+    svg.append("path").attr("d", path([[t, -2, f(t, -2)], [t, 2, f(t, 2)]]))
+      .attr("stroke", "#1f77b4").attr("stroke-opacity", 0.35).attr("fill", "none");
+    svg.append("path").attr("d", path([[-2, t, f(-2, t)], [2, t, f(2, t)]]))
+      .attr("stroke", "#1f77b4").attr("stroke-opacity", 0.35).attr("fill", "none");
+  }
+  // the slice along x1 (x2 = 0) has slope w1; the slice along x2 has slope w2
+  svg.append("path").attr("d", path([[-2, 0, f(-2, 0)], [2, 0, f(2, 0)]]))
+    .attr("stroke", "#ff7f0e").attr("stroke-width", 3);
+  svg.append("path").attr("d", path([[0, -2, f(0, -2)], [0, 2, f(0, 2)]]))
+    .attr("stroke", "#2ca02c").attr("stroke-width", 3);
+  const [ox, oy] = at(0, 0, planeB);
+  svg.append("circle").attr("cx", ox).attr("cy", oy).attr("r", 4).attr("fill", "#222");
+  svg.append("text").attr("x", ox + 6).attr("y", oy - 6).attr("font-size", 13).text("b");
+  return svg.node();
+}
+```
+
+```{ojs}
+Plot.plot({
+  ariaLabel: 'Contour map of the same plane seen from directly above, ' +
+    'with x1 across and x2 up, ' +
+    'shaded by the value of f, ' +
+    'with straight level lines one unit of f apart.',
+  width: 300, height: 300, marginLeft: 40,
+  x: {domain: [-2, 2], label: "x1"},
+  y: {domain: [-2, 2], label: "x2"},
+  color: {type: "diverging", scheme: "RdBu", domain: [-8, 8], legend: true, label: "f(x1, x2)"},
+  marks: [
+    Plot.contour({
+      x1: -2, y1: -2, x2: 2, y2: 2,
+      fill: (x1, x2) => planeW1 * x1 + planeW2 * x2 + planeB,
+      thresholds: d3.range(-8, 8.01, 1), stroke: "#333", strokeOpacity: 0.5
+    }),
+    Plot.ruleY([0], {stroke: "#ff7f0e", strokeWidth: 3}),
+    Plot.ruleX([0], {stroke: "#2ca02c", strokeWidth: 3})
+  ]
+})
+```
+
+:::
+
+:::
+
+:::
+
+The graph of $f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b$, in three dimensions and from above.
+
+:::
+
+:::
+
+::: {.content-visible when-format="pdf"}
+The course website's version of this page has an interactive plot here.
+:::

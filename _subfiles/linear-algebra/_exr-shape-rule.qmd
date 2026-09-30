@@ -1,0 +1,15 @@
+::: {#exr-shape-rule}
+
+#### Which of these products are defined?
+
+Let $\matr{A}$ be $4 \times 3$, let $\matr{B}$ be $3 \times 2$, and let $\vx \in \mathbb{R}^3$.
+For each expression, say whether it is defined,
+and if so give the shape of the result:
+
+1.  $\matr{A}\matr{B}$
+2.  $\matr{B}\matr{A}$
+3.  $\matr{A} \vx$
+4.  $\vx^\top \vx$
+5.  $\vx \vx^\top$
+
+:::
