@@ -42,7 +42,11 @@
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
 
-### Orthogonality
+### Dot product and orthogonality
+
+{{< include mds/_subfiles/linear-algebra/_def-dot-product.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
 
@@ -57,6 +61,12 @@
 {{< include mds/_subfiles/linear-algebra/_def-orthonormal-vectors.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-orthonormal-vectors.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-inner-product.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-inner-product.qmd >}}
 
 {{< slidebreak >}}
 
@@ -118,11 +128,45 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-matmul-distrib.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-shape-rule.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-shape-rule.qmd >}}
+
 ### Matrix-vector multiplication
 
 {{< include mds/_subfiles/linear-algebra/_def-matvec-mult.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-matvec-mult.qmd >}}
+
+### Linear and affine maps
+
+{{< include mds/_subfiles/linear-algebra/_def-linear-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-hyperplane.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_fig-tilt-a-plane.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-write-in-matrix-form.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-write-in-matrix-form.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-which-are-linear.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-which-are-linear.qmd >}}
 
 ### Transposes of sums and products
 

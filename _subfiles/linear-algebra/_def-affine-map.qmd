@@ -1,0 +1,17 @@
+:::{#def-affine-map}
+#### Affine transformation
+
+An **affine transformation** is a function $f: \mathbb{R}^p \to \mathbb{R}^m$
+composed of a linear map followed by a translation:
+
+$$f(\vx) = \mA \vx + \vb, \qquad \mA \in \mathbb{R}^{m \times p}, \quad \vb \in \mathbb{R}^m$$
+
+For a scalar-valued function ($m = 1$), this is an inner product plus an offset:
+
+$$f(\vx) = \vw^\top \vx + b, \qquad \vw \in \mathbb{R}^p, \quad b \in \mathbb{R}$$ {#eq-linear-scalar}
+
+When $\vb \neq \vzero$ (or $b \neq 0$), an affine transformation does not send $\vzero$ to $\vzero$,
+so it is not strictly linear.
+In machine learning and statistics, functions of this form are commonly referred to as
+**linear models** or linear functions, with $\vb$ (or $b$) called the **bias** or **intercept**.
+:::

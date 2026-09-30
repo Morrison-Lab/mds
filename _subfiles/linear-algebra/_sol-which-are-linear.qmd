@@ -1,0 +1,32 @@
+::: {#sol-which-are-linear}
+
+1.  **Linear.** It is @eq-linear-scalar with $b = 0$.
+2.  **Linear.** Still an inner product plus an offset; here the offset is
+    $b = -y$, which is a constant because $y$ is held fixed.
+3.  **Not linear.** Squaring is not an inner product plus an offset.
+    This expression is the squared error of one observation, and its
+    curvature in $\vec w$ is exactly why fitting a model is an optimization
+    problem rather than a lookup.
+4.  **Not linear.** By @eq-l2-norm this is $\vec w^\top \vec w$,
+    which has $\vec w$ in both slots at once.
+    Hold either slot fixed and it is linear in the other;
+    as a function of the single variable $\vec w$ it is quadratic.
+5.  **Linear.** It is @eq-linear-scalar with coefficient vector
+    $\vec a = (x_1, 0, \dots, 0)^\top$ and $b = 3$.
+    The data $\vec x$ is untouched --- $\vec a$ is a new vector built from
+    its first entry.
+
+Items 1, 2 and 5 are linear and items 3 and 4 are not,
+which is the split that matters:
+a *model* can be linear in its weights while the *quantity we minimize* is
+not.
+Squared error and the norm penalty are both curved in $\vec w$,
+and that curvature is what makes fitting an optimization problem at all:
+there is always a downhill direction to follow.
+Curvature alone does not promise a *single* answer.
+The squared error of one observation is completely flat along a whole line of
+weight vectors, every one of which fits that observation exactly,
+and pinning down one of them is part of what the norm penalty is added for in
+week 3.
+
+:::

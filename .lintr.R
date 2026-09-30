@@ -26,5 +26,8 @@ rm(snake_case_ACROs1)
 exclusions <- list(
   `data-raw` = list(
     pipe_consistency_linter = Inf
-  )
+  ),
+  `_subfiles/linear-algebra/_fig-tilt-a-plane.qmd` = Inf,
+  `_subfiles/vector-calc/_fig-linear-approx.qmd` = Inf,
+  `_subfiles/vector-calc/_fig-gradient-explorer.qmd` = Inf
 )

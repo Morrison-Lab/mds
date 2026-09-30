@@ -1,0 +1,15 @@
+::: {#exr-shape-rule}
+
+#### Which of these products are defined?
+
+Let $A$ be $4 \times 3$, let $B$ be $3 \times 2$, and let $\vec x \in \mathbb{R}^3$.
+For each expression, say whether it is defined,
+and if so give the shape of the result:
+
+1.  $AB$
+2.  $BA$
+3.  $A \vec x$
+4.  $\vec x^\top \vec x$
+5.  $\vec x \vec x^\top$
+
+:::

@@ -1,0 +1,17 @@
+:::{#def-hyperplane}
+#### Hyperplane
+
+A **hyperplane** in $\mathbb{R}^p$ is an affine subspace of dimension $p - 1$.
+It is defined as the set of points $\vx \in \mathbb{R}^p$ satisfying:
+
+$$\vw^\top \vx + b = 0$$
+
+where $\vw \in \mathbb{R}^p \setminus \{\vzero\}$ is the normal vector orthogonal to the hyperplane and $b \in \mathbb{R}$ is the offset.
+When $b = 0$, the hyperplane passes through the origin and forms a $(p-1)$-dimensional linear subspace.
+
+Geometrically:
+
+- In $\mathbb{R}^2$ ($p = 2$), a hyperplane is a 1-dimensional line: $w_1 x_1 + w_2 x_2 + b = 0$.
+- In $\mathbb{R}^3$ ($p = 3$), a hyperplane is a 2-dimensional plane.
+- A hyperplane divides the space $\mathbb{R}^p$ into two open **half-spaces**: $\{\vx : \vw^\top \vx + b > 0\}$ and $\{\vx : \vw^\top \vx + b < 0\}$.
+:::

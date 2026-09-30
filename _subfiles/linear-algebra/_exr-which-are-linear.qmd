@@ -1,0 +1,17 @@
+::: {#exr-which-are-linear}
+
+#### Which of these are linear in $\vec w$?
+
+Each of the five expressions is a function of the weights
+$\vec w \in \mathbb{R}^D$,
+with the data $\vec x$ and $y$ held fixed.
+Say which ones have the form @eq-linear-scalar --- an inner product plus an
+offset --- and which do not.
+
+1.  $\vec w^\top \vec x$
+2.  $\vec w^\top \vec x - y$
+3.  $(\vec w^\top \vec x - y)^2$
+4.  $\lVert \vec w \rVert_2^2$
+5.  $w_1 x_1 + 3$
+
+:::

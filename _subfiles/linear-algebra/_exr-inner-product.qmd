@@ -1,0 +1,13 @@
+::: {#exr-inner-product}
+
+#### Compute an inner product and a norm
+
+Let
+
+$$\vec a = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
+\qquad
+\vec b = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}$$
+
+Compute $\vec a^\top \vec b$ and $\lVert \vec a \rVert_2$.
+
+:::

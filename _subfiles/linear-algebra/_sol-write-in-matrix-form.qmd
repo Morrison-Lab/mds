@@ -1,0 +1,26 @@
+::: {#sol-write-in-matrix-form}
+
+Read the coefficients straight off the rule.
+There are three inputs, so $D = 3$:
+
+$$\vec w = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
+\qquad b = -30$$
+
+and the rule is $f(\vec x) = \vec w^\top \vec x + b$.
+For the patient,
+
+$$\vec x = \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
+
+$$\vec w^\top \vec x = (0.4)(50) + (0.2)(130) + (1.5)(28) = 20 + 26 + 42 = 88$$
+
+$$f(\vec x) = 88 - 30 = 58$$
+
+Two things are worth noticing.
+The coefficients are not comparable as they stand: $1.5$ is the largest
+number but BMI is measured on the smallest scale,
+so the weight on a feature says nothing on its own about how much that
+feature matters.
+And $b = -30$ is doing real work --- without it the score would be $88$,
+which is a different clinical claim entirely.
+
+:::

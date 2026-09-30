@@ -12,6 +12,20 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_sec-gradient-shape.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-gradient-explorer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-partials-by-hand.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-partials-by-hand.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-row-vector-derivative.qmd >}}
 
 {{< slidebreak >}}
@@ -115,3 +129,9 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/_thm-deriv-matrix-product-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exr-gradient-of-linear.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-gradient-of-linear.qmd >}}

@@ -1,0 +1,8 @@
+:::{#def-dot-product}
+#### Dot product (inner product)
+
+The **dot product** (or **inner product**) of two vectors $\vx, \vy \in \mathbb{R}^p$ is:
+
+$$\vx^\top \vy = \vx \cdot \vy = \sum_{i=1}^p x_i y_i$$ {#eq-inner-product}
+
+:::

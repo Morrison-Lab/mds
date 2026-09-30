@@ -1,0 +1,13 @@
+::: {#exr-flat-point}
+
+#### Find the flat point, and check the approximation
+
+Let $f(w) = w^2 - 4w + 7$.
+
+1.  Differentiate $f$.
+2.  Find the $w$ at which $f$ is flat, and say whether it is a minimum or a
+    maximum.
+3.  Evaluate the derivative at $w = 1$, use @eq-linear-approx to predict
+    $f(1.01)$, and compare that prediction with the exact value.
+
+:::

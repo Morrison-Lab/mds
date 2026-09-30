@@ -1,0 +1,28 @@
+::: {#sol-flat-point}
+
+**1.** Term by term:
+
+$$\frac{df}{dw} = 2w - 4$$
+
+**2.** Set it to zero: $2w - 4 = 0$ gives $w = 2$.
+It is a minimum.
+The coefficient on $w^2$ is positive, so the parabola opens upward;
+equivalently, the derivative is negative below $w = 2$ and positive above it,
+so the function falls into that point and rises out of it.
+
+**3.** At $w = 1$ the derivative is $2(1) - 4 = -2$, so $f$ is falling there.
+With $\epsilon = 0.01$, @eq-linear-approx predicts a change of
+$(0.01)(-2) = -0.02$, from $f(1) = 1 - 4 + 7 = 4$ to $3.98$.
+The exact value is
+
+$$f(1.01) = (1.01)^2 - 4(1.01) + 7 = 1.0201 - 4.04 + 7 = 3.9801$$
+
+a change of $-0.0199$.
+The prediction is off by $0.0001$, which is $\epsilon^2$:
+the linear approximation drops everything of that order and smaller,
+so halving the step quarters the error.
+That trade is the whole bargain of gradient-based fitting.
+We take a step in the direction the derivative recommends,
+and the recommendation is trustworthy only as far as the step is small.
+
+:::

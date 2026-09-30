@@ -1,0 +1,16 @@
+:::{#def-linear-map}
+#### Linear map
+
+A function $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** (or linear transformation)
+if it preserves vector addition and scalar multiplication:
+for all $\vx, \vy \in \mathbb{R}^p$ and $c \in \mathbb{R}$,
+
+1. $f(\vx + \vy) = f(\vx) + f(\vy)$
+2. $f(c\vx) = c f(\vx)$
+
+Every such function can be represented as multiplication by an $m \times p$ matrix $\mA$:
+
+$$f(\vx) = \mA \vx$$
+
+A linear map always maps the zero vector to the zero vector: $f(\vzero) = \vzero$.
+:::
