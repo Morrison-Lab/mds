@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-30 14:57:58 (PDT)
+Last modified: 2026-09-30 15:08:19 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -202,9 +202,10 @@ The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}
 >
 > **Example 4 (Evaluating the Kronecker delta)**  
 >
+> - \\\delta\_{11} = \[1 = 1\] = 1\\.
+> - \\\delta\_{12} = \[1 = 2\] = 0\\.
 > - \\\delta\_{22} = \[2 = 2\] = 1\\.
 > - \\\delta\_{23} = \[2 = 3\] = 0\\.
-> - The entries of the \\p \times p\\ identity matrix are Kronecker deltas: \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\ (see [identity matrix](linear-algebra.llms.md#def-identity-matrix)).
 
 ### 5.3 Strengths and limitations of the Iverson bracket
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-30 14:57:58 (PDT)
+Last modified: 2026-09-30 15:08:19 (PDT)
 
 ## 1 Vectors
 
@@ -646,6 +646,8 @@ See also [Definition 13](#def-zero-matrix) for the zero matrix.
 > **Definition 27 (Identity matrix)** The \\p \times p\\ **identity matrix** \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the main diagonal and zeros elsewhere:
 >
 > \\ (\mathbf{I}\_p)\_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathbf{I}\_p = \begin{bmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{bmatrix} \\
+>
+> Equivalently, the entries of the identity matrix are given by the [Kronecker delta](notation.llms.md#def-kronecker-delta): \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\.
 
 > **NOTE:**
 >
