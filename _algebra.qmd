@@ -1,8 +1,8 @@
+## Equalities
+
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
-
-## Equalities
 
 {{< include mds/_subfiles/algebra/_thm-equal-trans.qmd >}}
 

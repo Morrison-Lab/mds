@@ -1,5 +1,7 @@
 ## Vectors
 
+{{< include latex-macros/macros.qmd >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-column-vector.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-column-vector.qmd >}}

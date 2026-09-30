@@ -13,8 +13,3 @@ format:
 {{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_proof-writing.qmd >}}
-
-## References {.unnumbered}
-
-::: {#refs}
-:::
