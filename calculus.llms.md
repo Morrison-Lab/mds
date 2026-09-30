@@ -2,9 +2,19 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 Published
 
-Last modified: 2026-09-28 23:45:45 (PDT)
+Last modified: 2026-09-29 21:33:59 (PDT)
 
 ## 1 Derivatives
 
@@ -72,6 +82,96 @@ Last modified: 2026-09-28 23:45:45 (PDT)
 >
 > \\ \begin{aligned} \frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} &= f'(x) \cdot\operatorname{log}'\mathopen{}\left\\f(x)\right\\\mathclose{} && \text{(chain rule, with } g = f \text{ and outer function } \log \text{)} \\ &= f'(x) \cdot\frac{1}{f(x)} && \text{(derivative of } \log \text{, valid because } f(x) \> 0 \text{)} \\ &= \frac{f'(x)}{f(x)} && \text{(multiply)} \end{aligned} \\
 
+### 1.1 Linear approximation
+
+For a differentiable function \\f\\ and a small step \\\epsilon\\,
+
+\\f(w + \epsilon) \approx f(w) + \epsilon\\\frac{d }{d w}f(w) \tag{1}\\
+
+> **NOTE:**
+>
+> **Definition 1 (Flat point)** A derivative of zero marks a **flat point** (also called a *stationary point*). A point where the derivative is zero or does not exist is a *critical point*.
+
+Show R code
+
+``` js
+tanF = (w) => w * w - 4 * w + 7
+tanDf = (w) => 2 * w - 4
+tanPred = tanF(tanW) + tanEps * tanDf(tanW)
+tanExact = tanF(tanW + tanEps)
+```
+
+Show R code
+
+``` js
+viewof tanW = Inputs.range([-1, 4], {value: 1, step: 0.05, label: "w"})
+viewof tanEps = Inputs.range([0.01, 2], {value: 0.5, transform: Math.log, label: "step \u03b5", format: d3.format(".3~f")})
+```
+
+Show R code
+
+``` js
+md`At w = ${tanW.toFixed(2)}, f(w) = ${tanF(tanW).toFixed(4)} and f\u2032(w) = ${tanDf(tanW).toFixed(2)}.
+
+A step of \u03b5 = ${tanEps.toFixed(3)}:
+
+- predicted by the tangent line, f(w) + \u03b5 f\u2032(w) = ${tanPred.toFixed(4)};
+- exact, f(w + \u03b5) = ${tanExact.toFixed(4)};
+- error ${(tanExact - tanPred).toPrecision(3)}, and error / \u03b5\u00b2 = ${((tanExact - tanPred) / tanEps ** 2).toFixed(3)}.`
+```
+
+Show R code
+
+``` js
+Plot.plot({
+  ariaLabel: 'The parabola f of w, ' +
+    'with the tangent line at the chosen w, ' +
+    'and two points above w plus epsilon: ' +
+    'one on the tangent line (the prediction) and one on the curve (the exact value), ' +
+    'joined by a red segment showing the error.',
+  width: 460, height: 340, grid: true,
+  x: {domain: [-1.5, 6.5], label: "w"},
+  y: {domain: [0, 20], label: "f(w)"},
+  marks: [
+    Plot.line(d3.range(-1.5, 6.51, 0.05), {x: (w) => w, y: tanF, stroke: "#555", strokeWidth: 2, clip: true}),
+    Plot.line([-1.5, 6.5], {x: (w) => w, y: (w) => tanF(tanW) + (w - tanW) * tanDf(tanW),
+                        stroke: "#1f77b4", strokeWidth: 2, strokeDasharray: "6,4", clip: true}),
+    Plot.ruleX([tanW + tanEps], {stroke: "#bbb", strokeDasharray: "2,3"}),
+    Plot.link([0], {x1: tanW + tanEps, x2: tanW + tanEps, y1: tanPred, y2: tanExact,
+                    stroke: "#d62728", strokeWidth: 3, clip: true}),
+    Plot.dot([[tanW, tanF(tanW)]], {x: (d) => d[0], y: (d) => d[1], r: 5, fill: "#222"}),
+    Plot.dot([[tanW + tanEps, tanPred]], {x: (d) => d[0], y: (d) => d[1], r: 4, fill: "#1f77b4", clip: true}),
+    Plot.dot([[tanW + tanEps, tanExact]], {x: (d) => d[0], y: (d) => d[1], r: 4, fill: "#555", clip: true})
+  ]
+})
+```
+
+The dashed blue line is the tangent at \\w\\; the red segment is the error of the prediction.
+
+Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\epsilon\\.
+
+> **NOTE:**
+>
+> **Exercise 1 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
+>
+> 1.  Differentiate \\f\\.
+> 2.  Find the \\w\\ at which \\f\\ is flat, and say whether it is a minimum or a maximum.
+> 3.  Evaluate the derivative at \\w = 1\\, use [Equation 1](#eq-linear-approx) to predict \\f(1.01)\\, and compare that prediction with the exact value.
+
+> **NOTE:**
+>
+> *Solution 1*. **1.** Term by term:
+>
+> \\\frac{df}{dw} = 2w - 4\\
+>
+> **2.** Set it to zero: \\2w - 4 = 0\\ gives \\w = 2\\. It is a minimum. The coefficient on \\w^2\\ is positive, so the parabola opens upward; equivalently, the derivative is negative below \\w = 2\\ and positive above it, so the function falls into that point and rises out of it.
+>
+> **3.** At \\w = 1\\ the derivative is \\2(1) - 4 = -2\\, so \\f\\ is falling there. With \\\epsilon = 0.01\\, [Equation 1](#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from \\f(1) = 1 - 4 + 7 = 4\\ to \\3.98\\. The exact value is
+>
+> \\f(1.01) = (1.01)^2 - 4(1.01) + 7 = 1.0201 - 4.04 + 7 = 3.9801\\
+>
+> a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\epsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of gradient-based fitting. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
+
 ## 2 Integration
 
 Integration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability.
@@ -80,7 +180,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 1 (Antiderivative)** A function \\F\\ is an **antiderivative** of \\f\\ on an interval \\I\\ if:
+> **Definition 2 (Antiderivative)** A function \\F\\ is an **antiderivative** of \\f\\ on an interval \\I\\ if:
 >
 > \\\frac{\partial}{\partial x} F(x) = f(x), \quad \forall x \in I\\
 >
@@ -88,7 +188,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 2 (Indefinite integral)** The **indefinite integral** of \\f\\ is the family of all antiderivatives ([Definition 1](#def-antiderivative)) of \\f\\:
+> **Definition 3 (Indefinite integral)** The **indefinite integral** of \\f\\ is the family of all antiderivatives ([Definition 2](#def-antiderivative)) of \\f\\:
 >
 > \\\int f(x)\\dx = F(x) + C\\
 >
@@ -100,7 +200,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Example 1 (Antiderivative of a power function)** For \\f(x) = x^2\\, an antiderivative is \\F(x) = \frac{x^3}{3}\\, since \\\frac{\partial}{\partial x}\frac{x^3}{3} = x^2 = f(x)\\.
 >
-> Adding any constant \\C\\ gives another antiderivative; for example, with \\C = 7\\, \\F(x) = \frac{x^3}{3} + 7\\ also satisfies \\F'(x) = x^2\\, since adding a constant does not change the derivative. See [Figure 1](#fig-antiderivatives).
+> Adding any constant \\C\\ gives another antiderivative; for example, with \\C = 7\\, \\F(x) = \frac{x^3}{3} + 7\\ also satisfies \\F'(x) = x^2\\, since adding a constant does not change the derivative. See [Figure 2](#fig-antiderivatives).
 >
 > Show R code
 >
@@ -111,7 +211,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/antiderivatives-f-code-1.png)](calculus_files/figure-html/antiderivatives-f-code-1.png "Figure 1 (a): The function f(x) = x^2.")
+> [![](calculus_files/figure-html/antiderivatives-f-code-1.png)](calculus_files/figure-html/antiderivatives-f-code-1.png "Figure 2 (a): The function f(x) = x^2.")
 >
 > \(a\) The function \\f(x) = x^2\\.
 >
@@ -133,15 +233,15 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/antiderivatives-F-code-1.png)](calculus_files/figure-html/antiderivatives-F-code-1.png "Figure 1 (b): Family of antiderivatives F(x) = x^3/3 + C.")
+> [![](calculus_files/figure-html/antiderivatives-F-code-1.png)](calculus_files/figure-html/antiderivatives-F-code-1.png "Figure 2 (b): Family of antiderivatives F(x) = x^3/3 + C.")
 >
 > \(b\) Family of antiderivatives \\F(x) = x^3/3 + C\\.
 >
-> Figure 1: The function \\f(x) = x^2\\ and five antiderivatives \\F(x) = x^3/3 + C\\ for \\C \in \\-2, -1, 0, 1, 2\\\\. Each antiderivative has the same derivative \\f\\; they differ only by a vertical shift.
+> Figure 2: The function \\f(x) = x^2\\ and five antiderivatives \\F(x) = x^3/3 + C\\ for \\C \in \\-2, -1, 0, 1, 2\\\\. Each antiderivative has the same derivative \\f\\; they differ only by a vertical shift.
 
 > **NOTE:**
 >
-> **Theorem 9 (Basic integration rules)** Each antiderivative in the table is defined only up to an arbitrary constant \\C\\ (see [Definition 1](#def-antiderivative)); the table omits \\+ C\\ from every row for brevity.
+> **Theorem 9 (Basic integration rules)** Each antiderivative in the table is defined only up to an arbitrary constant \\C\\ (see [Definition 2](#def-antiderivative)); the table omits \\+ C\\ from every row for brevity.
 >
 > | Function \\f(x)\\ | Antiderivative \\F(x)\\ | Condition |
 > |:--:|:--:|:---|
@@ -167,7 +267,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 3 (Differentiable function)** A function \\f\\ is **differentiable at** \\x = c\\ if the limit
+> **Definition 4 (Differentiable function)** A function \\f\\ is **differentiable at** \\x = c\\ if the limit
 >
 > \\f'(c) \stackrel{\text{def}}{=}\lim\_{h \to 0} \frac{f(c + h) - f(c)}{h}\\
 >
@@ -177,13 +277,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 4 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 3](#def-differentiable)) at every interior point of the interval; at a closed endpoint, the appropriate one-sided derivative is used.
+> **Definition 5 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 4](#def-differentiable)) at every interior point of the interval; at a closed endpoint, the appropriate one-sided derivative is used.
 >
 > ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
 
 > **NOTE:**
 >
-> **Definition 5 (Continuous function)** A function \\f\\ is **continuous at** \\x = c\\ if all three conditions hold:
+> **Definition 6 (Continuous function)** A function \\f\\ is **continuous at** \\x = c\\ if all three conditions hold:
 >
 > 1.  \\f(c)\\ is defined,
 > 2.  \\\lim\_{x \to c} f(x)\\ exists, and
@@ -193,9 +293,9 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 6 (Continuous on a closed interval)** A function \\f\\ is **continuous on** a closed interval \\\[a, b\]\\ if all three conditions hold:
+> **Definition 7 (Continuous on a closed interval)** A function \\f\\ is **continuous on** a closed interval \\\[a, b\]\\ if all three conditions hold:
 >
-> 1.  \\f\\ is continuous ([Definition 5](#def-continuous)) at every point of the open interval \\(a, b)\\,
+> 1.  \\f\\ is continuous ([Definition 6](#def-continuous)) at every point of the open interval \\(a, b)\\,
 > 2.  \\\lim\_{x \to a^+} f(x) = f(a)\\, and
 > 3.  \\\lim\_{x \to b^-} f(x) = f(b)\\.
 >
@@ -203,11 +303,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 3 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 6](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\, \\\lim\_{x \to 0^+} \sqrt{x} = 0 = f(0)\\, and \\\lim\_{x \to 1^-} \sqrt{x} = 1 = f(1)\\, so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 6](#def-continuous-on)).
+> **Example 3 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 7](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\, \\\lim\_{x \to 0^+} \sqrt{x} = 0 = f(0)\\, and \\\lim\_{x \to 1^-} \sqrt{x} = 1 = f(1)\\, so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 7](#def-continuous-on)).
 
 > **NOTE:**
 >
-> **Definition 7 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
+> **Definition 8 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
 >
 > \\a = x_0 \< x_1 \< \cdots \< x_n = b.\\
 >
@@ -221,7 +321,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 8 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 7](#def-partition)) is its largest subinterval width,
+> **Definition 9 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 8](#def-partition)) is its largest subinterval width,
 >
 > \\\\\mathcal{P}\\ \stackrel{\text{def}}{=}\max_i \Delta x_i.\\
 >
@@ -233,7 +333,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 9 (Riemann integral)** Let \\f\\ be a bounded function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 7](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ is the limit as the mesh ([Definition 8](#def-mesh)) shrinks to zero:
+> **Definition 10 (Riemann integral)** Let \\f\\ be a bounded function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ is the limit as the mesh ([Definition 9](#def-mesh)) shrinks to zero:
 >
 > \\\int_a^b f(x)\\dx \stackrel{\text{def}}{=}\lim\_{\\\mathcal{P}\\ \to 0} \sum\_{i=1}^n f(x_i^\*)\\\Delta x_i,\\
 >
@@ -243,13 +343,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 10 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if its Riemann integral ([Definition 9](#def-riemann-integral)) over \\\[a, b\]\\ exists and is finite.
+> **Definition 11 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if its Riemann integral ([Definition 10](#def-riemann-integral)) over \\\[a, b\]\\ exists and is finite.
 >
 > ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e), p. 272)
 
 > **NOTE:**
 >
-> **Definition 11 (Equal-width Riemann sum)** For a bounded function \\f\\ on \\\[a, b\]\\ and a positive integer \\n\\, split \\\[a, b\]\\ into \\n\\ subintervals of equal width \\\Delta x \stackrel{\text{def}}{=}(b - a)/n\\, and let \\x_i^\*\\ be any point in the \\i\\-th subinterval. The **equal-width Riemann sum** is
+> **Definition 12 (Equal-width Riemann sum)** For a bounded function \\f\\ on \\\[a, b\]\\ and a positive integer \\n\\, split \\\[a, b\]\\ into \\n\\ subintervals of equal width \\\Delta x \stackrel{\text{def}}{=}(b - a)/n\\, and let \\x_i^\*\\ be any point in the \\i\\-th subinterval. The **equal-width Riemann sum** is
 >
 > \\S_n \stackrel{\text{def}}{=}\sum\_{i=1}^n f(x_i^\*)\\\Delta x.\\
 
@@ -273,7 +373,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > \\ \begin{aligned} \lim\_{h \to 0} \mathopen{}\left(f(c + h) - f(c)\right)\mathclose{} &= \lim\_{h \to 0} \mathopen{}\left(\frac{f(c + h) - f(c)}{h} \cdot h\right)\mathclose{} && \text{(multiply and divide by } h \neq 0 \text{)} \\ &= \mathopen{}\left(\lim\_{h \to 0} \frac{f(c + h) - f(c)}{h}\right)\mathclose{} \cdot\mathopen{}\left(\lim\_{h \to 0} h\right)\mathclose{} && \text{(limit of a product, both limits exist)} \\ &= f'(c) \cdot 0 && \text{(definition of } f'(c) \text{)} \\ &= 0 && \text{(multiply)} \end{aligned} \\
 >
-> So \\\lim\_{h \to 0} f(c + h) = f(c)\\, which is \\\lim\_{x \to c} f(x) = f(c)\\ with \\x = c + h\\; all three conditions of [Definition 5](#def-continuous) hold.
+> So \\\lim\_{h \to 0} f(c + h) = f(c)\\, which is \\\lim\_{x \to c} f(x) = f(c)\\ with \\x = c + h\\; all three conditions of [Definition 6](#def-continuous) hold.
 
 > **NOTE:**
 >
@@ -283,7 +383,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > **Example 8 (Continuous but not differentiable: \\\mathopen{}\left\|x\right\|\mathclose{}\\)** The absolute-value function \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is continuous at \\x = 0\\ (\\\lim\_{x \to 0}\mathopen{}\left\|x\right\|\mathclose{} = 0 = \mathopen{}\left\|0\right\|\mathclose{}\\), but it is not differentiable at \\x = 0\\: the left-derivative is \\-1\\ and the right-derivative is \\+1\\.
 >
-> This counterexample shows that the converse of [Theorem 10](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
+> This counterexample shows that the converse of [Theorem 10](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 3](#fig-abs-value).
 >
 > Show R code
 >
@@ -295,9 +395,9 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/abs-value-code-1.png)](calculus_files/figure-html/abs-value-code-1.png "Figure 2: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps.")
+> [![](calculus_files/figure-html/abs-value-code-1.png)](calculus_files/figure-html/abs-value-code-1.png "Figure 3: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps.")
 >
-> Figure 2: \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ has a sharp corner at \\x = 0\\ (not differentiable there) but is continuous everywhere: no gaps or jumps.
+> Figure 3: \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ has a sharp corner at \\x = 0\\ (not differentiable there) but is continuous everywhere: no gaps or jumps.
 
 > **NOTE:**
 >
@@ -315,7 +415,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > \\ \int_0^1 f(x)\\dx = \int_0^{1/2} 0\\dx + \int\_{1/2}^1 1\\dx = 0 + \tfrac{1}{2} = \tfrac{1}{2}. \\
 >
-> This counterexample shows that the converse of [Theorem 11](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 3](#fig-step).
+> This counterexample shows that the converse of [Theorem 11](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 4](#fig-step).
 >
 > Show R code
 >
@@ -347,9 +447,9 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/step-code-1.png)](calculus_files/figure-html/step-code-1.png "Figure 3: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 10.")
+> [![](calculus_files/figure-html/step-code-1.png)](calculus_files/figure-html/step-code-1.png "Figure 4: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 10.")
 >
-> Figure 3: Step function: \\f(x) = 0\\ on \\\[0, \tfrac{1}{2})\\ (open circle at the jump) and \\f(x) = 1\\ on \\\[\tfrac{1}{2}, 1\]\\ (filled circle). The shaded rectangle has area \\\tfrac{1}{2}\\, matching the integral computed in [Example 10](#exm-int-not-cont).
+> Figure 4: Step function: \\f(x) = 0\\ on \\\[0, \tfrac{1}{2})\\ (open circle at the jump) and \\f(x) = 1\\ on \\\[\tfrac{1}{2}, 1\]\\ (filled circle). The shaded rectangle has area \\\tfrac{1}{2}\\, matching the integral computed in [Example 10](#exm-int-not-cont).
 
 Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-implies-int) establish the chain:
 
@@ -359,13 +459,13 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 
 > **NOTE:**
 >
-> **Theorem 12 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 10](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 11](#def-riemann-sum-equal-width)) converge to the integral:
+> **Theorem 12 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 11](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 12](#def-riemann-sum-equal-width)) converge to the integral:
 >
 > \\\lim\_{n \to \infty} S_n = \int_a^b f(x)\\dx.\\
 
 > **NOTE:**
 >
-> *Proof*. The \\n\\ equal-width subintervals form a partition of \\\[a, b\]\\ whose mesh ([Definition 8](#def-mesh)) is \\(b - a)/n\\, which goes to \\0\\ as \\n \to \infty\\. So \\S_n\\ is one of the sums in the limit that defines the integral ([Definition 9](#def-riemann-integral)), along a sequence of partitions whose mesh goes to \\0\\, and a limit that has the same value for every choice of partitions has that value along this sequence too.
+> *Proof*. The \\n\\ equal-width subintervals form a partition of \\\[a, b\]\\ whose mesh ([Definition 9](#def-mesh)) is \\(b - a)/n\\, which goes to \\0\\ as \\n \to \infty\\. So \\S_n\\ is one of the sums in the limit that defines the integral ([Definition 10](#def-riemann-integral)), along a sequence of partitions whose mesh goes to \\0\\, and a limit that has the same value for every choice of partitions has that value along this sequence too.
 
 > **NOTE:**
 >
@@ -383,21 +483,21 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 >
 > **Part 1 (Derivative of an integral).** Define \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\. Then \\F\\ is differentiable and:
 >
-> \\\frac{\partial}{\partial x}\int_a^x f(t)\\dt = f(x) \tag{1}\\
+> \\\frac{\partial}{\partial x}\int_a^x f(t)\\dt = f(x) \tag{2}\\
 >
 > > **NOTE:**
 > >
-> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 10](#def-integrable)) and continuous at \\x\\ (see [Definition 5](#def-continuous)), even if \\f\\ has jump discontinuities elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
+> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 11](#def-integrable)) and continuous at \\x\\ (see [Definition 6](#def-continuous)), even if \\f\\ has jump discontinuities elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
 >
 > ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.11, p. 288)
 >
 > **Part 2 (Evaluation theorem).** The \\F\\ here may be *any* antiderivative of \\f\\ — not just the accumulation function from Part 1. If \\F\\ is an antiderivative of \\f\\ on \\\[a, b\]\\ (i.e., \\\frac{\partial}{\partial x} F(x) = f(x)\\ for all \\x \in \[a, b\]\\), then:
 >
-> \\\int_a^b f(x)\\dx = F(b) - F(a) \tag{2}\\
+> \\\int_a^b f(x)\\dx = F(b) - F(a) \tag{3}\\
 >
 > Equivalently, with \\b\\ replaced by a variable upper limit \\x\\, integrating the derivative of \\F\\ recovers the net change in \\F\\:
 >
-> \\\int_a^x F'(t)\\dt = F(x) - F(a) \tag{3}\\
+> \\\int_a^x F'(t)\\dt = F(x) - F(a) \tag{4}\\
 >
 > or equivalently in Leibniz notation:
 >
@@ -407,8 +507,8 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 
 The two parts of the FTC together express that **differentiation and integration are inverse operations**:
 
-- Part 1: differentiating the integral of \\f\\ recovers \\f\\ ([Equation 1](#eq-ftc-deriv-of-integral)).
-- Part 2: the integral of \\f\\ over \\\[a, b\]\\ equals the difference of any antiderivative’s values at the endpoints ([Equation 2](#eq-ftc-part2)), which rearranges to “integrating the derivative of \\F\\ recovers the net change in \\F\\” ([Equation 3](#eq-ftc-integral-of-deriv)).
+- Part 1: differentiating the integral of \\f\\ recovers \\f\\ ([Equation 2](#eq-ftc-deriv-of-integral)).
+- Part 2: the integral of \\f\\ over \\\[a, b\]\\ equals the difference of any antiderivative’s values at the endpoints ([Equation 3](#eq-ftc-part2)), which rearranges to “integrating the derivative of \\F\\ recovers the net change in \\F\\” ([Equation 4](#eq-ftc-integral-of-deriv)).
 
 The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; continuity is *sufficient* but not strictly necessary (see the callout note inside [Theorem 13](#thm-ftc) for the more general statement). Since differentiability implies continuity ([Theorem 10](#thm-diff-implies-cont)), the FTC applies in particular whenever \\f\\ is differentiable — a common situation in applied statistics.
 
@@ -418,7 +518,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \\F(x) \\\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\=\\ x^2 - 0^2 \\=\\ x^2,\\
 >
-> so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 13](#thm-ftc) Part 1 predicts. [Figure 4](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
+> so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 13](#thm-ftc) Part 1 predicts. [Figure 5](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
 >
 > Show R code
 >
@@ -440,7 +540,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >   ggplot2::theme(legend.position = "bottom")
 > ```
 >
-> [![](calculus_files/figure-html/ftc-part1-left-code-1.png)](calculus_files/figure-html/ftc-part1-left-code-1.png "Figure 4 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
+> [![](calculus_files/figure-html/ftc-part1-left-code-1.png)](calculus_files/figure-html/ftc-part1-left-code-1.png "Figure 5 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
 >
 > \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
 >
@@ -474,15 +574,15 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >   ggplot2::theme(legend.position = "bottom")
 > ```
 >
-> [![](calculus_files/figure-html/ftc-part1-right-code-1.png)](calculus_files/figure-html/ftc-part1-right-code-1.png "Figure 4 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
+> [![](calculus_files/figure-html/ftc-part1-right-code-1.png)](calculus_files/figure-html/ftc-part1-right-code-1.png "Figure 5 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
 >
 > \(b\) \\F(x) = x^2\\; tangent slope at each marked \\x\\ equals \\f(x) = 2x\\.
 >
-> Figure 4: Left: \\f(t) = 2t\\; the shaded area \\\int_0^{1.5} 2t\\dt = F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
+> Figure 5: Left: \\f(t) = 2t\\; the shaded area \\\int_0^{1.5} 2t\\dt = F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
 
 > **NOTE:**
 >
-> **Example 13 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 1](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
+> **Example 13 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 2](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
 >
 > Let \\T\\ be a [random variable](https://morrison-lab.github.io/rme/chapters/probability.html) with the exponential distribution with rate parameter \\\lambda \> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf) is ([Kleinbaum and Klein 2012, sec. II](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”):
 >
@@ -500,7 +600,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \\ F(2) = 1 - \text{e}^{-1 \cdot 2} = 1 - \text{e}^{-2} \approx 1 - 0.135 = 0.865 \\
 >
-> See [Figure 5](#fig-exp-pdf-cdf).
+> See [Figure 6](#fig-exp-pdf-cdf).
 >
 > Show R code
 >
@@ -519,7 +619,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 5 (a): PDF with \lambda = 1; shaded area equals F(2) \approx 0.865.")
+> [![](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 6 (a): PDF with \lambda = 1; shaded area equals F(2) \approx 0.865.")
 >
 > \(a\) PDF with \\\lambda = 1\\; shaded area equals \\F(2) \approx 0.865\\.
 >
@@ -547,11 +647,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 5 (b): CDF with \lambda = 1; point marks F(2) \approx 0.865.")
+> [![](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 6 (b): CDF with \lambda = 1; point marks F(2) \approx 0.865.")
 >
 > \(b\) CDF with \\\lambda = 1\\; point marks \\F(2) \approx 0.865\\.
 >
-> Figure 5: Exponential distribution with \\\lambda = 1\\. Left: the PDF \\f(t) = \lambda \text{e}^{-\lambda t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-\lambda t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
+> Figure 6: Exponential distribution with \\\lambda = 1\\. Left: the PDF \\f(t) = \lambda \text{e}^{-\lambda t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-\lambda t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
 
 ## 3 Double Integrals
 
@@ -559,7 +659,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Definition 12 (Double integral)** Let \\f\\ be a bounded function on a closed, bounded plane region \\R \subseteq \mathbb{R}^2\\. Cover \\R\\ with a grid of rectangles, keep the \\n\\ rectangles that lie entirely inside \\R\\, with areas \\\Delta A_1, \ldots, \Delta A_n\\, and choose a point \\(x_i, y_i)\\ in the \\i\\-th rectangle. The **double integral** of \\f\\ over \\R\\ is
+> **Definition 13 (Double integral)** Let \\f\\ be a bounded function on a closed, bounded plane region \\R \subseteq \mathbb{R}^2\\. Cover \\R\\ with a grid of rectangles, keep the \\n\\ rectangles that lie entirely inside \\R\\, with areas \\\Delta A_1, \ldots, \Delta A_n\\, and choose a point \\(x_i, y_i)\\ in the \\i\\-th rectangle. The **double integral** of \\f\\ over \\R\\ is
 >
 > \\\iint_R f(x, y)\\dA \stackrel{\text{def}}{=}\lim\_{\\\Delta\\ \to 0} \sum\_{i=1}^n f(x_i, y_i)\\\Delta A_i,\\
 >
@@ -571,7 +671,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 
 > **NOTE:**
 >
-> **Example 14 (The double integral of \\1\\ is an area)** Let \\f(x, y) = 1\\ on the rectangle \\R = \[0, 2\] \times \[0, 3\]\\. Every sum in [Definition 12](#def-double-integral) adds up the areas of rectangles inside \\R\\, and those sums approach the area of \\R\\ as the grid gets finer, so \\\iint_R 1\\dA = 2 \cdot 3 = 6\\.
+> **Example 14 (The double integral of \\1\\ is an area)** Let \\f(x, y) = 1\\ on the rectangle \\R = \[0, 2\] \times \[0, 3\]\\. Every sum in [Definition 13](#def-double-integral) adds up the areas of rectangles inside \\R\\, and those sums approach the area of \\R\\ as the grid gets finer, so \\\iint_R 1\\dA = 2 \cdot 3 = 6\\.
 
 > **NOTE:**
 >
@@ -599,7 +699,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint\_{\[0, 1\]^2} g(x, y)\\dA.\\
 >
-> The indicator factor \\\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}\\ equals \\1\\ on the triangular region where \\y \le x\\ and \\0\\ elsewhere, so only that region, namely \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\ ([Figure 6](#fig-fubini-nonrect-region)), contributes, and there \\g(x, y) = \text{e}^{-x^2}\\:
+> The indicator factor \\\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}\\ equals \\1\\ on the triangular region where \\y \le x\\ and \\0\\ elsewhere, so only that region, namely \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\ ([Figure 7](#fig-fubini-nonrect-region)), contributes, and there \\g(x, y) = \text{e}^{-x^2}\\:
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_D \text{e}^{-x^2}\\dA.\\
 >
@@ -632,9 +732,9 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/unnamed-chunk-1-1.png)](calculus_files/figure-html/unnamed-chunk-1-1.png "Figure 6: Triangular integration region D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}, bounded below by y = 0, above-left by y = x, and on the right by x = 1.")
+> [![](calculus_files/figure-html/unnamed-chunk-5-1.png)](calculus_files/figure-html/unnamed-chunk-5-1.png "Figure 7: Triangular integration region D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}, bounded below by y = 0, above-left by y = x, and on the right by x = 1.")
 >
-> Figure 6: Triangular integration region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\, bounded below by \\y = 0\\, above-left by \\y = x\\, and on the right by \\x = 1\\.
+> Figure 7: Triangular integration region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\, bounded below by \\y = 0\\, above-left by \\y = x\\, and on the right by \\x = 1\\.
 >
 > **Order \\dx\\dy\\ is intractable.** Re-describing \\D\\ as \\D = \\(x, y) : y \in \[0, 1\],\\ x \in \[y, 1\]\\\\, the inner integral is
 >
@@ -654,7 +754,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > \\ \begin{aligned} \int_0^1 x\\\text{e}^{-x^2}\\dx &= \mathopen{}\left\[-\frac{1}{2}\\\text{e}^{-x^2}\right\]\mathclose{}\_0^1 && \text{(FTC Part 2)} \\&= -\frac{1}{2}\mathopen{}\left(\text{e}^{-1} - \text{e}^{0}\right)\mathclose{} && \text{(evaluate at the limits)} \\&= -\frac{1}{2}\mathopen{}\left(\text{e}^{-1} - 1\right)\mathclose{} && \text{(} \text{e}^{0} = 1 \text{)} \\&= \frac{1 - \text{e}^{-1}}{2} && \text{(distribute } -\tfrac{1}{2} \text{)} \\&= \frac{e - 1}{2e} && \text{(multiply numerator and denominator by } e \text{)} \\&\approx 0.316 \end{aligned} \\
 >
-> The solid whose volume equals this integral is shown in [Figure 7](#fig-fubini-nonrect).
+> The solid whose volume equals this integral is shown in [Figure 8](#fig-fubini-nonrect).
 >
 > Show R code
 >
@@ -679,7 +779,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >   ))
 > ```
 >
-> Figure 7: Surface \\z = e^{-x^2}\\ over the region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\. The surface depends only on \\x\\ (constant in \\y\\), so for each \\x\\ the inner integral over \\y \in \[0, x\]\\ contributes \\x \cdot e^{-x^2}\\.
+> Figure 8: Surface \\z = e^{-x^2}\\ over the region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\. The surface depends only on \\x\\ (constant in \\y\\), so for each \\x\\ the inner integral over \\y \in \[0, x\]\\ contributes \\x \cdot e^{-x^2}\\.
 
 > **NOTE:**
 >
@@ -705,7 +805,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > ([Wikipedia contributors 2024](#ref-wp:fubini))
 >
-> The surface, and the singularity at the origin responsible for the failure, are shown in [Figure 8](#fig-fubini-fail).
+> The surface, and the singularity at the origin responsible for the failure, are shown in [Figure 9](#fig-fubini-fail).
 >
 > Show R code
 >
@@ -737,7 +837,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >   ))
 > ```
 >
-> Figure 8: Surface \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ on \\\[0, 1\]^2\\, sampled away from the origin and clipped to \\\[-50, 50\]\\ for display. The function diverges to \\+\infty\\ along the \\x\\-axis (red ridge, \\f \> 0\\ when \\\|x\| \> \|y\|\\) and to \\-\infty\\ along the \\y\\-axis (blue ridge, \\f \< 0\\ when \\\|y\| \> \|x\|\\). The singularity at \\(0, 0)\\ is why \\f\\ is not continuous on \\R\\ and [Theorem 14](#thm-fubini) does not apply.
+> Figure 9: Surface \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ on \\\[0, 1\]^2\\, sampled away from the origin and clipped to \\\[-50, 50\]\\ for display. The function diverges to \\+\infty\\ along the \\x\\-axis (red ridge, \\f \> 0\\ when \\\|x\| \> \|y\|\\) and to \\-\infty\\ along the \\y\\-axis (blue ridge, \\f \< 0\\ when \\\|y\| \> \|x\|\\). The singularity at \\(0, 0)\\ is why \\f\\ is not continuous on \\R\\ and [Theorem 14](#thm-fubini) does not apply.
 
 > **NOTE:**
 >
@@ -755,7 +855,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > **Example 17 (Evaluating a double integral on a rectangle)** Structure adapted from ([Larson and Edwards 2018, sec. 14.2](#ref-larsonCalc11e), Example 2, pp. 982–983); the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\ for \\g(x, y) = x^2 + y^2\\.
 >
-> Let \\X\\ and \\Y\\ be independent \\\operatorname{Uniform}(0, 1)\\ [random variables](https://morrison-lab.github.io/rme/chapters/probability.html), with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\R = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, 1\]\\\\ ([Figure 9](#fig-fubini-rect-region)). Define the function \\g(x, y) = x^2 + y^2\\, and compute its [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
+> Let \\X\\ and \\Y\\ be independent \\\operatorname{Uniform}(0, 1)\\ [random variables](https://morrison-lab.github.io/rme/chapters/probability.html), with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\R = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, 1\]\\\\ ([Figure 10](#fig-fubini-rect-region)). Define the function \\g(x, y) = x^2 + y^2\\, and compute its [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
 >
 > Because the joint density equals \\1\\ on \\R\\, this expectation is the double integral of \\g\\ over \\R\\:
 >
@@ -779,9 +879,9 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/unnamed-chunk-6-1.png)](calculus_files/figure-html/unnamed-chunk-6-1.png "Figure 9: Integration region R = [0, 1]^2, the unit square.")
+> [![](calculus_files/figure-html/unnamed-chunk-10-1.png)](calculus_files/figure-html/unnamed-chunk-10-1.png "Figure 10: Integration region R = [0, 1]^2, the unit square.")
 >
-> Figure 9: Integration region \\R = \[0, 1\]^2\\, the unit square.
+> Figure 10: Integration region \\R = \[0, 1\]^2\\, the unit square.
 >
 > The integrand is continuous on \\R\\, so [Corollary 2](#cor-fubini-rect) applies and either order of integration yields the same value.
 >
@@ -799,7 +899,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{} = \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} + \operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{} = \frac{1}{3} + \frac{1}{3} = \frac{2}{3}.\\
 >
-> The solid whose volume equals this integral is shown in [Figure 10](#fig-fubini-rect).
+> The solid whose volume equals this integral is shown in [Figure 11](#fig-fubini-rect).
 >
 > Show R code
 >
@@ -818,7 +918,7 @@ The symbol \\dA\\ stands for an element of area. An *iterated integral* such as 
 >   ))
 > ```
 >
-> Figure 10: Surface \\z = x^2 + y^2\\ over the unit square \\\[0, 1\]^2\\. The double integral \\\tfrac{2}{3}\\ is the volume between this surface and the \\xy\\-plane, and equals \\\operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}\\.
+> Figure 11: Surface \\z = x^2 + y^2\\ over the unit square \\\[0, 1\]^2\\. The double integral \\\tfrac{2}{3}\\ is the volume between this surface and the \\xy\\-plane, and equals \\\operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}\\.
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-28 23:45:45 (PDT)
+Last modified: 2026-09-29 21:33:59 (PDT)
 
 ## 1 Vectors
 
@@ -38,7 +38,7 @@ The transpose operation converts a column vector to a row vector, or more genera
 >
 > **Definition 4 (Dot product)** For any two real-valued vectors \\\tilde{x}= (x_1, \ldots, x_p)\\ and \\\tilde{y}= (y_1, \ldots, y_p)\\ of the same length \\p\\, the **dot product** of \\\tilde{x}\\ and \\\tilde{y}\\ is:
 >
-> \\\tilde{x}\cdot \tilde{y}\stackrel{\text{def}}{=}\sum\_{i=1}^px_i y_i\\
+> \\\tilde{x}\cdot \tilde{y}= \tilde{x}^\top \tilde{y}\stackrel{\text{def}}{=}\sum\_{i=1}^px_i y_i \tag{1}\\
 
 > **NOTE:**
 >
@@ -122,9 +122,9 @@ Orthogonality generalizes the geometric notion of perpendicularity to arbitrary 
 
 > **NOTE:**
 >
-> **Definition 9 (Euclidean norm)** The **Euclidean norm** (or *length*) of a vector \\\tilde{x}\\ of length \\p\\ is
+> **Definition 9 (Euclidean norm)** The **Euclidean norm** (or *length*, also called the \\L_2\\ norm and written \\\lVert \tilde{x}\rVert_2\\) of a vector \\\tilde{x}\\ of length \\p\\ is
 >
-> \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum\_{i=1}^px_i^2}\\
+> \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum\_{i=1}^px_i^2} \tag{2}\\
 
 > **NOTE:**
 >
@@ -141,6 +141,51 @@ Orthogonality generalizes the geometric notion of perpendicularity to arbitrary 
 > \\\tilde{x}\_i \cdot \tilde{x}\_j = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases}\\
 
 The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Definition 7](#def-indicator-vector)) form an orthonormal set.
+
+> **NOTE:**
+>
+> **Exercise 1 (Compute an inner product and a norm)** Let
+>
+> \\\tilde{a} = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}, \qquad \tilde{b} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\\
+>
+> Compute \\\tilde{a}^\top \tilde{b}\\ and \\\lVert \tilde{a} \rVert_2\\.
+
+> **NOTE:**
+>
+> *Solution 1*. Multiply entry by entry and add:
+>
+> \\\tilde{a}^\top \tilde{b} = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8\\
+>
+> For the norm, take the inner product of \\\tilde{a}\\ with itself first:
+>
+> \\\tilde{a}^\top \tilde{a} = 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14\\
+>
+> so
+>
+> \\\lVert \tilde{a} \rVert_2 = \sqrt{14} \approx 3.742\\
+>
+> The inner product came out negative while the norm cannot: a norm is a square root of a sum of squares, so it is never below zero.
+>
+> Python has both operations built in, and R builds them from `sum`.
+>
+> ``` python
+> import numpy as np
+>
+> a = np.array([3.0, -1.0, 2.0])
+> b = np.array([0.0, 4.0, -2.0])
+>
+> print(a @ b, round(float(np.linalg.norm(a)), 3))
+> ```
+>
+> ``` downlit
+> a <- c(3, -1, 2)
+> b <- c(0, 4, -2)
+>
+> print(c(sum(a * b), round(sqrt(sum(a^2)), 3)))
+> #> [1] -8.000  3.742
+> ```
+>
+> Both print \\-8\\ and \\3.742\\.
 
 > **TIP:**
 >
@@ -250,6 +295,28 @@ Matrix multiplication is **not** commutative in general: \\\mathbf{A}\mathbf{B} 
 >
 > \\(\mathbf{A} + \mathbf{B})\mathbf{C} = \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C}\\
 
+> **NOTE:**
+>
+> **Exercise 2 (Which of these products are defined?)** Let \\\mathbf{A}\\ be \\4 \times 3\\, let \\\mathbf{B}\\ be \\3 \times 2\\, and let \\\tilde{x}\in \mathbb{R}^3\\. For each expression, say whether it is defined, and if so give the shape of the result:
+>
+> 1.  \\\mathbf{A}\mathbf{B}\\
+> 2.  \\\mathbf{B}\mathbf{A}\\
+> 3.  \\\mathbf{A} \tilde{x}\\
+> 4.  \\\tilde{x}^\top \tilde{x}\\
+> 5.  \\\tilde{x}\tilde{x}^\top\\
+
+> **NOTE:**
+>
+> *Solution 2*. A vector in \\\mathbb{R}^3\\ is a \\3 \times 1\\ matrix, so the same rule settles every case.
+>
+> 1.  \\\mathbf{A}\mathbf{B}\\: \\(4 \times 3)(3 \times 2)\\. The inner pair is \\3\\ and \\3\\, so it is defined, and the result is \\4 \times 2\\.
+> 2.  \\\mathbf{B}\mathbf{A}\\: \\(3 \times 2)(4 \times 3)\\. The inner pair is \\2\\ and \\4\\, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
+> 3.  \\\mathbf{A} \tilde{x}\\: \\(4 \times 3)(3 \times 1)\\, defined, result \\4 \times 1\\ — a vector in \\\mathbb{R}^4\\.
+> 4.  \\\tilde{x}^\top \tilde{x}\\: \\(1 \times 3)(3 \times 1)\\, defined, result \\1 \times 1\\ — a single number. The product is the inner product of [Equation 1](#eq-inner-product).
+> 5.  \\\tilde{x}\tilde{x}^\top\\: \\(3 \times 1)(1 \times 3)\\, defined, result \\3 \times 3\\ — a matrix.
+>
+> The last two use the same two vectors and differ only in order, and they return objects of different kinds. Reading a transpose as decoration rather than as a shape change is the commonest way to lose track of an expression.
+
 ### 2.5 Matrix-vector multiplication
 
 > **NOTE:**
@@ -260,7 +327,204 @@ Matrix multiplication is **not** commutative in general: \\\mathbf{A}\mathbf{B} 
 
 Matrix-vector multiplication is a generalization of the dot product. Each entry of the result is a dot product of a row of \\\mathbf{A}\\ with the vector \\\tilde{x}\\.
 
-### 2.6 Transposes of sums and products
+### 2.6 Linear and affine maps
+
+> **NOTE:**
+>
+> **Definition 18 (Linear map)** A function \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (or linear transformation) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
+>
+> 1.  \\f(\tilde{x}+ \tilde{y}) = f(\tilde{x}) + f(\tilde{y})\\
+> 2.  \\f(c\tilde{x}) = c f(\tilde{x})\\
+>
+> Every such function can be represented as multiplication by an \\m \times p\\ matrix \\\mathbf{A}\\:
+>
+> \\f(\tilde{x}) = \mathbf{A} \tilde{x}\\
+>
+> A linear map always maps the zero vector to the zero vector: \\f(\tilde{0}) = \tilde{0}\\.
+
+> **NOTE:**
+>
+> **Definition 19 (Affine transformation)** An **affine transformation** is a function \\f: \mathbb{R}^p \to \mathbb{R}^m\\ composed of a linear map followed by a translation:
+>
+> \\f(\tilde{x}) = \mathbf{A} \tilde{x}+ \tilde{b}, \qquad \mathbf{A} \in \mathbb{R}^{m \times p}, \quad \tilde{b} \in \mathbb{R}^m\\
+>
+> For a scalar-valued function (\\m = 1\\), this is an inner product plus an offset:
+>
+> \\f(\tilde{x}) = \tilde{w}^\top \tilde{x}+ b, \qquad \tilde{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{3}\\
+>
+> When \\\tilde{b} \neq \tilde{0}\\ (or \\b \neq 0\\), an affine transformation does not send \\\tilde{0}\\ to \\\tilde{0}\\, so it is not strictly linear. In machine learning and statistics, functions of this form are commonly referred to as **linear models** or linear functions, with \\\tilde{b}\\ (or \\b\\) called the **bias** or **intercept**.
+
+> **NOTE:**
+>
+> **Definition 20 (Hyperplane)** A **hyperplane** in \\\mathbb{R}^p\\ is an affine subspace of dimension \\p - 1\\. It is defined as the set of points \\\tilde{x}\in \mathbb{R}^p\\ satisfying:
+>
+> \\\tilde{w}^\top \tilde{x}+ b = 0\\
+>
+> where \\\tilde{w} \in \mathbb{R}^p \setminus \\\tilde{0}\\\\ is the normal vector orthogonal to the hyperplane and \\b \in \mathbb{R}\\ is the offset. When \\b = 0\\, the hyperplane passes through the origin and forms a \\(p-1)\\-dimensional linear subspace.
+>
+> Geometrically:
+>
+> - In \\\mathbb{R}^2\\ (\\p = 2\\), a hyperplane is a 1-dimensional line: \\w_1 x_1 + w_2 x_2 + b = 0\\.
+> - In \\\mathbb{R}^3\\ (\\p = 3\\), a hyperplane is a 2-dimensional plane.
+> - A hyperplane divides the space \\\mathbb{R}^p\\ into two open **half-spaces**: \\\\\tilde{x}: \tilde{w}^\top \tilde{x}+ b \> 0\\\\ and \\\\\tilde{x}: \tilde{w}^\top \tilde{x}+ b \< 0\\\\.
+
+Show R code
+
+``` js
+viewof planeW1 = Inputs.range([-1.5, 1.5], {value: 1, step: 0.1, label: "w1"})
+viewof planeW2 = Inputs.range([-1.5, 1.5], {value: 0.5, step: 0.1, label: "w2"})
+viewof planeB = Inputs.range([-2, 2], {value: 0, step: 0.1, label: "b"})
+viewof planeTurn = Inputs.range([0, 360], {value: 30, step: 5, label: "turn the view"})
+```
+
+Show R code
+
+``` js
+{
+  const sign = (v) => (v < 0 ? "\u2212" : "+");
+  const fmt = (v) => Math.abs(v).toFixed(1);
+  return md`f(x1, x2) = ${planeW1.toFixed(1)} x1 ${sign(planeW2)} ${fmt(planeW2)} x2 ${sign(planeB)} ${fmt(planeB)}.
+The orange slice, along x1 with x2 = 0, rises ${planeW1.toFixed(1)} for each unit of x1;
+the green slice, along x2, rises ${planeW2.toFixed(1)} for each unit of x2.
+Both slices cross the vertical axis at height b = ${planeB.toFixed(1)}.`;
+}
+```
+
+Show R code
+
+``` js
+// The graph z = f(x1, x2) over the square [-2, 2] x [-2, 2], drawn in 3-D:
+// turn the square about the vertical axis, then look down on it from 30 degrees.
+planeView = {
+  const f = (x1, x2) => planeW1 * x1 + planeW2 * x2 + planeB;
+  const w = 340, h = 300, s = 38, sz = 16, elev = 30 * Math.PI / 180;
+  const turn = planeTurn * Math.PI / 180;
+  const at = (x1, x2, z) => {
+    const u = x1 * Math.cos(turn) - x2 * Math.sin(turn);
+    const v = x1 * Math.sin(turn) + x2 * Math.cos(turn);
+    return [w / 2 + s * u, h / 2 - s * Math.sin(elev) * v - sz * Math.cos(elev) * z];
+  };
+  const path = (pts) => d3.line()(pts.map(([a, b, z]) => at(a, b, z)));
+  const svg = d3.create("svg").attr("width", w).attr("height", h)
+    .attr("role", "img")
+    .attr("aria-label", "A tilted plane drawn in three dimensions over a square of inputs, " +
+      "with its two slices through the origin highlighted, " +
+      "and a vertical marker at the origin showing the height b.");
+  const ticks = d3.range(-2, 2.01, 0.5);
+  const corners = [[-2, -2], [2, -2], [2, 2], [-2, 2], [-2, -2]];
+  // the floor, z = 0, and the three axes
+  svg.append("path").attr("d", path(corners.map(([a, b]) => [a, b, 0])))
+    .attr("fill", "#eee").attr("stroke", "#bbb");
+  const axis = (p, q, name) => {
+    svg.append("path").attr("d", path([p, q])).attr("stroke", "#888");
+    const [tx, ty] = at(...q);
+    svg.append("text").attr("x", tx + 4).attr("y", ty).attr("font-size", 13).text(name);
+  };
+  axis([0, 0, 0], [2.6, 0, 0], "x1");
+  axis([0, 0, 0], [0, 2.6, 0], "x2");
+  axis([0, 0, -8], [0, 0, 8], "f");
+  // the plane itself, as a mesh of lines along each input
+  svg.append("path").attr("d", path(corners.map(([a, b]) => [a, b, f(a, b)])))
+    .attr("fill", "#1f77b4").attr("fill-opacity", 0.18).attr("stroke", "#1f77b4");
+  for (const t of ticks) {
+    svg.append("path").attr("d", path([[t, -2, f(t, -2)], [t, 2, f(t, 2)]]))
+      .attr("stroke", "#1f77b4").attr("stroke-opacity", 0.35).attr("fill", "none");
+    svg.append("path").attr("d", path([[-2, t, f(-2, t)], [2, t, f(2, t)]]))
+      .attr("stroke", "#1f77b4").attr("stroke-opacity", 0.35).attr("fill", "none");
+  }
+  // the slice along x1 (x2 = 0) has slope w1; the slice along x2 has slope w2
+  svg.append("path").attr("d", path([[-2, 0, f(-2, 0)], [2, 0, f(2, 0)]]))
+    .attr("stroke", "#ff7f0e").attr("stroke-width", 3);
+  svg.append("path").attr("d", path([[0, -2, f(0, -2)], [0, 2, f(0, 2)]]))
+    .attr("stroke", "#2ca02c").attr("stroke-width", 3);
+  const [ox, oy] = at(0, 0, planeB);
+  svg.append("circle").attr("cx", ox).attr("cy", oy).attr("r", 4).attr("fill", "#222");
+  svg.append("text").attr("x", ox + 6).attr("y", oy - 6).attr("font-size", 13).text("b");
+  return svg.node();
+}
+```
+
+Show R code
+
+``` js
+Plot.plot({
+  ariaLabel: 'Contour map of the same plane seen from directly above, ' +
+    'with x1 across and x2 up, ' +
+    'shaded by the value of f, ' +
+    'with straight level lines one unit of f apart.',
+  width: 300, height: 300, marginLeft: 40,
+  x: {domain: [-2, 2], label: "x1"},
+  y: {domain: [-2, 2], label: "x2"},
+  color: {type: "diverging", scheme: "RdBu", domain: [-8, 8], legend: true, label: "f(x1, x2)"},
+  marks: [
+    Plot.contour({
+      x1: -2, y1: -2, x2: 2, y2: 2,
+      fill: (x1, x2) => planeW1 * x1 + planeW2 * x2 + planeB,
+      thresholds: d3.range(-8, 8.01, 1), stroke: "#333", strokeOpacity: 0.5
+    }),
+    Plot.ruleY([0], {stroke: "#ff7f0e", strokeWidth: 3}),
+    Plot.ruleX([0], {stroke: "#2ca02c", strokeWidth: 3})
+  ]
+})
+```
+
+Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimensions and from above.
+
+> **NOTE:**
+>
+> **Exercise 3 (Write a rule in matrix form)** A clinic scores a patient’s risk from three measurements.
+>
+> | symbol  | meaning                 | units      |
+> |---------|-------------------------|------------|
+> | \\x_1\\ | age                     | years      |
+> | \\x_2\\ | systolic blood pressure | mmHg       |
+> | \\x_3\\ | body mass index         | kg/m\\^2\\ |
+>
+> The rule in use is
+>
+> \\\text{score} = 0.4\\x_1 + 0.2\\x_2 + 1.5\\x_3 - 30\\
+>
+> Write this rule in the form of [Equation 3](#eq-linear-scalar), naming \\\tilde{w}\\, \\b\\ and \\p\\ explicitly, and give the score for a patient aged \\50\\ with blood pressure \\130\\ and BMI \\28\\.
+
+> **NOTE:**
+>
+> *Solution 3*. Read the coefficients straight off the rule. There are three inputs, so \\p = 3\\:
+>
+> \\\tilde{w} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix}, \qquad b = -30\\
+>
+> and the rule is \\f(\tilde{x}) = \tilde{w}^\top \tilde{x} + b\\. For the patient,
+>
+> \\\tilde{x} = \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\\
+>
+> \\\tilde{w}^\top \tilde{x} = (0.4)(50) + (0.2)(130) + (1.5)(28) = 20 + 26 + 42 = 88\\
+>
+> \\f(\tilde{x}) = 88 - 30 = 58\\
+>
+> Two things are worth noticing. The coefficients are not comparable as they stand: \\1.5\\ is the largest number but BMI is measured on the smallest scale, so the weight on a feature says nothing on its own about how much that feature matters. And \\b = -30\\ is doing real work — without it the score would be \\88\\, which is a different clinical claim entirely.
+
+> **NOTE:**
+>
+> **Exercise 4 (Which of these are linear in \\\tilde{w}\\?)** Each of the five expressions is a function of the weights \\\tilde{w} \in \mathbb{R}^p\\, with the data \\\tilde{x}\\ and \\y\\ held fixed. Say which ones have the form [Equation 3](#eq-linear-scalar) — an inner product plus an offset — and which do not.
+>
+> 1.  \\\tilde{w}^\top \tilde{x}\\
+> 2.  \\\tilde{w}^\top \tilde{x} - y\\
+> 3.  \\(\tilde{w}^\top \tilde{x} - y)^2\\
+> 4.  \\\lVert \tilde{w} \rVert_2^2\\
+> 5.  \\w_1 x_1 + 3\\
+
+> **NOTE:**
+>
+> *Solution 4*.
+>
+> 1.  **Linear.** It is [Equation 3](#eq-linear-scalar) with \\b = 0\\.
+> 2.  **Linear.** Still an inner product plus an offset; here the offset is \\b = -y\\, which is a constant because \\y\\ is held fixed.
+> 3.  **Not linear.** Squaring is not an inner product plus an offset. This expression is the squared error of one observation, and its curvature in \\\tilde{w}\\ is exactly why fitting a model is an optimization problem rather than a lookup.
+> 4.  **Not linear.** By [Equation 2](#eq-l2-norm) this is \\\tilde{w}^\top \tilde{w}\\, which has \\\tilde{w}\\ in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable \\\tilde{w}\\ it is quadratic.
+> 5.  **Linear.** It is [Equation 3](#eq-linear-scalar) with coefficient vector \\\tilde{a} = (x_1, 0, \dots, 0)^\top\\ and \\b = 3\\. The data \\\tilde{x}\\ is untouched — \\\tilde{a}\\ is a new vector built from its first entry.
+>
+> Items 1, 2 and 5 are linear and items 3 and 4 are not, which is the split that matters: a *model* can be linear in its weights while the *quantity we minimize* is not. Squared error and the norm penalty are both curved in \\\tilde{w}\\, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a *single* answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.
+
+### 2.7 Transposes of sums and products
 
 > **NOTE:**
 >
@@ -292,11 +556,11 @@ Matrix-vector multiplication is a generalization of the dot product. Each entry 
 
 The order of the factors reverses when transposing a product.
 
-### 2.7 Rank
+### 2.8 Rank
 
 > **NOTE:**
 >
-> **Definition 18 (Linearly independent vectors)** Vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ of the same length \\p\\ are **linearly independent** if the only numbers \\c_1, \ldots, c_k\\ with
+> **Definition 21 (Linearly independent vectors)** Vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ of the same length \\p\\ are **linearly independent** if the only numbers \\c_1, \ldots, c_k\\ with
 >
 > \\c_1 \tilde{v}\_1 + \cdots + c_k \tilde{v}\_k = \tilde{0}\\
 >
@@ -311,7 +575,7 @@ The order of the factors reverses when transposing a product.
 
 > **NOTE:**
 >
-> **Definition 19 (Rank)** The **rank** of a matrix \\\mathbf{A}\\, written \\\operatorname{rank}(\mathbf{A})\\, is the largest number of columns of \\\mathbf{A}\\ that are linearly independent ([Definition 18](#def-linearly-independent)).
+> **Definition 22 (Rank)** The **rank** of a matrix \\\mathbf{A}\\, written \\\operatorname{rank}(\mathbf{A})\\, is the largest number of columns of \\\mathbf{A}\\ that are linearly independent ([Definition 21](#def-linearly-independent)).
 
 An \\n \times p\\ matrix whose rank is \\p\\, so that all of its columns are linearly independent, is said to have *full column rank*; that can only happen when \\p \le n\\, because more than \\n\\ vectors of length \\n\\ are never linearly independent.
 
@@ -321,11 +585,11 @@ An \\n \times p\\ matrix whose rank is \\p\\, so that all of its columns are lin
 >
 > The matrix \\\begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ has rank \\1\\: its second column is twice its first, so the two columns are not linearly independent, but the first column on its own is.
 
-### 2.8 Outer product
+### 2.9 Outer product
 
 > **NOTE:**
 >
-> **Definition 20 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 16](#def-matrix-mult)) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
+> **Definition 23 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 16](#def-matrix-mult)) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
 >
 > \\ \mathopen{}\left(\underbrace{\tilde{u}}\_{m \times 1}\\\underbrace{{\tilde{v}}^{\top}}\_{1 \times n}\right)\mathclose{}\_{ij} = u_i v_j \qquad \text{(definition of matrix multiplication; the sum has one term)} \\
 
@@ -339,19 +603,19 @@ The dot product \\{\tilde{u}}^{\top}\tilde{v}\\ ([Example 4](#exm-dot-product-m
 
 > **NOTE:**
 >
-> **Theorem 11 (An outer product has rank one)** If \\\tilde{u}\\ is a nonzero vector of length \\m\\ and \\\tilde{v}\\ is a nonzero vector of length \\n\\, then \\\operatorname{rank}(\tilde{u}\\{\tilde{v}}^{\top}) = 1\\ ([Definition 19](#def-rank)).
+> **Theorem 11 (An outer product has rank one)** If \\\tilde{u}\\ is a nonzero vector of length \\m\\ and \\\tilde{v}\\ is a nonzero vector of length \\n\\, then \\\operatorname{rank}(\tilde{u}\\{\tilde{v}}^{\top}) = 1\\ ([Definition 22](#def-rank)).
 
 > **NOTE:**
 >
 > *Proof*. Column \\j\\ of \\\tilde{u}\\{\tilde{v}}^{\top}\\ has entries \\u_1 v_j, \ldots, u_m v_j\\, so it is the vector \\v_j \tilde{u}\\.
 >
-> **The rank is at least one.** Because \\\tilde{v} \neq \tilde{0}\\, some entry \\v_j\\ is nonzero. Then column \\j\\, \\v_j \tilde{u}\\, is a nonzero vector, and a single nonzero vector is linearly independent ([Definition 18](#def-linearly-independent)): \\c\\(v_j \tilde{u}) = \tilde{0}\\ forces \\c = 0\\.
+> **The rank is at least one.** Because \\\tilde{v} \neq \tilde{0}\\, some entry \\v_j\\ is nonzero. Then column \\j\\, \\v_j \tilde{u}\\, is a nonzero vector, and a single nonzero vector is linearly independent ([Definition 21](#def-linearly-independent)): \\c\\(v_j \tilde{u}) = \tilde{0}\\ forces \\c = 0\\.
 >
 > **The rank is at most one.** Take any two columns \\j \neq k\\. If \\v_j = v_k = 0\\, both columns are \\\tilde{0}\\, and \\1 \cdot(v_j \tilde{u}) + 1 \cdot(v_k \tilde{u}) = \tilde{0}\\. Otherwise, use the coefficients \\c_j = v_k\\ and \\c_k = -v_j\\, which are not both zero:
 >
 > \\ \begin{aligned} v_k\\(v_j \tilde{u}) - v_j\\(v_k \tilde{u}) &= (v_k v_j - v_j v_k)\\\tilde{u} && \text{(collect the scalar multiples of } \tilde{u} \text{)} \\ &= 0 \cdot\tilde{u} && \text{(multiplication of numbers is commutative)} \\ &= \tilde{0} && \text{(a zero multiple of a vector is } \tilde{0}\text{)} \end{aligned} \\
 >
-> Either way, every pair of columns has a combination with coefficients that are not all zero and that equals \\\tilde{0}\\. Now take any set of two or more columns. It contains a pair \\j \neq k\\. Use that pair’s coefficients for columns \\j\\ and \\k\\, and the coefficient \\0\\ for every other column in the set. This combination equals \\\tilde{0}\\, and its coefficients are not all zero, so the set is not linearly independent ([Definition 18](#def-linearly-independent)). The largest linearly independent set of columns therefore has one column.
+> Either way, every pair of columns has a combination with coefficients that are not all zero and that equals \\\tilde{0}\\. Now take any set of two or more columns. It contains a pair \\j \neq k\\. Use that pair’s coefficients for columns \\j\\ and \\k\\, and the coefficient \\0\\ for every other column in the set. This combination equals \\\tilde{0}\\, and its coefficients are not all zero, so the set is not linearly independent ([Definition 21](#def-linearly-independent)). The largest linearly independent set of columns therefore has one column.
 
 > **NOTE:**
 >
@@ -363,15 +627,15 @@ See also [Definition 13](#def-zero-matrix) for the zero matrix.
 
 > **NOTE:**
 >
-> **Definition 21 (Square matrix)** A matrix is **square** if it has the same number of rows as columns.
+> **Definition 24 (Square matrix)** A matrix is **square** if it has the same number of rows as columns.
 
 > **NOTE:**
 >
-> **Definition 22 (Order of a square matrix)** The **order** of a square matrix ([Definition 21](#def-square-matrix)) is its number of rows, which equals its number of columns.
+> **Definition 25 (Order of a square matrix)** The **order** of a square matrix ([Definition 24](#def-square-matrix)) is its number of rows, which equals its number of columns.
 
 > **NOTE:**
 >
-> **Definition 23 (Matrix power)** For a square matrix \\\mathbf{A}\\ of order \\p\\ and a positive integer \\k\\, the \\k\\-th **power** of \\\mathbf{A}\\ is:
+> **Definition 26 (Matrix power)** For a square matrix \\\mathbf{A}\\ of order \\p\\ and a positive integer \\k\\, the \\k\\-th **power** of \\\mathbf{A}\\ is:
 >
 > \\\mathbf{A}^k = \underbrace{\mathbf{A}\\\mathbf{A}\cdots\mathbf{A}}\_{k \text{ copies}}\\
 >
@@ -379,7 +643,7 @@ See also [Definition 13](#def-zero-matrix) for the zero matrix.
 
 > **NOTE:**
 >
-> **Definition 24 (Identity matrix)** The \\p \times p\\ **identity matrix** \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the main diagonal and zeros elsewhere:
+> **Definition 27 (Identity matrix)** The \\p \times p\\ **identity matrix** \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the main diagonal and zeros elsewhere:
 >
 > \\ (\mathbf{I}\_p)\_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathbf{I}\_p = \begin{bmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{bmatrix} \\
 
@@ -393,13 +657,13 @@ See also [Definition 13](#def-zero-matrix) for the zero matrix.
 
 > **NOTE:**
 >
-> **Definition 25 (Symmetric matrix)** A square matrix \\\mathbf{A}\\ is **symmetric** if \\{\mathbf{A}}^{\top} = \mathbf{A}\\, i.e., \\a\_{ij} = a\_{ji}\\ for all \\i\\ and \\j\\.
+> **Definition 28 (Symmetric matrix)** A square matrix \\\mathbf{A}\\ is **symmetric** if \\{\mathbf{A}}^{\top} = \mathbf{A}\\, i.e., \\a\_{ij} = a\_{ji}\\ for all \\i\\ and \\j\\.
 
 Covariance matrices and information matrices are symmetric.
 
 > **NOTE:**
 >
-> **Definition 26 (Diagonal matrix)** A square matrix \\\mathbf{D}\\ is a **diagonal matrix** if all off-diagonal entries are zero: \\d\_{ij} = 0\\ whenever \\i \neq j\\:
+> **Definition 29 (Diagonal matrix)** A square matrix \\\mathbf{D}\\ is a **diagonal matrix** if all off-diagonal entries are zero: \\d\_{ij} = 0\\ whenever \\i \neq j\\:
 >
 > \\ \mathbf{D} = \begin{bmatrix} d_1 & 0 & \cdots & 0 \\ 0 & d_2 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & d_p \end{bmatrix} \\
 
@@ -407,13 +671,13 @@ Diagonal matrices are denoted \\\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\
 
 > **NOTE:**
 >
-> **Definition 27 (Matrix inverse)** For a square \\p \times p\\ matrix \\\mathbf{A}\\, the **inverse** \\\mathbf{A}^{-1}\\ (if it exists) is the unique matrix satisfying:
+> **Definition 30 (Matrix inverse)** For a square \\p \times p\\ matrix \\\mathbf{A}\\, the **inverse** \\\mathbf{A}^{-1}\\ (if it exists) is the unique matrix satisfying:
 >
 > \\\mathbf{A}\\\mathbf{A}^{-1} = \mathbf{A}^{-1}\\\mathbf{A} = \mathbf{I}\_p\\
 
 > **NOTE:**
 >
-> **Definition 28 (Invertible matrix)** A square matrix \\\mathbf{A}\\ is **invertible** (or *non-singular*) if it has an inverse \\\mathbf{A}^{-1}\\ ([Definition 27](#def-matrix-inverse)). A square matrix with no inverse is *singular*.
+> **Definition 31 (Invertible matrix)** A square matrix \\\mathbf{A}\\ is **invertible** (or *non-singular*) if it has an inverse \\\mathbf{A}^{-1}\\ ([Definition 30](#def-matrix-inverse)). A square matrix with no inverse is *singular*.
 
 > **NOTE:**
 >
@@ -437,7 +701,7 @@ Diagonal matrices are denoted \\\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\
 >
 > \\ \begin{aligned} (\mathbf{B}^{-1}\mathbf{A}^{-1})(\mathbf{A}\mathbf{B}) &= \mathbf{B}^{-1}(\mathbf{A}^{-1}\mathbf{A})\mathbf{B} && \text{(matrix multiplication is associative)} \\ &= \mathbf{B}^{-1}\\\mathbf{I}\_p\\\mathbf{B} && \text{(definition of } \mathbf{A}^{-1} \text{)} \\ &= \mathbf{B}^{-1}\mathbf{B} && \text{(identity matrix)} \\ &= \mathbf{I}\_p && \text{(definition of } \mathbf{B}^{-1} \text{)} \end{aligned} \\
 >
-> So \\\mathbf{B}^{-1}\mathbf{A}^{-1}\\ satisfies [Definition 27](#def-matrix-inverse) for \\\mathbf{A}\mathbf{B}\\. The steps use [Theorem 7](#thm-matmul-assoc) and [Theorem 12](#thm-identity).
+> So \\\mathbf{B}^{-1}\mathbf{A}^{-1}\\ satisfies [Definition 30](#def-matrix-inverse) for \\\mathbf{A}\mathbf{B}\\. The steps use [Theorem 7](#thm-matmul-assoc) and [Theorem 12](#thm-identity).
 
 > **NOTE:**
 >
@@ -453,7 +717,7 @@ Diagonal matrices are denoted \\\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\
 >
 > \\ \begin{aligned} {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\{\mathbf{A}}^{\top} &= {\mathopen{}\left(\mathbf{A}\mathbf{A}^{-1}\right)\mathclose{}}^{\top} && \text{(transpose of a product)} \\ &= {\mathbf{I}\_p}^{\top} && \text{(definition of } \mathbf{A}^{-1} \text{)} \\ &= \mathbf{I}\_p && \text{(} \mathbf{I}\_p \text{ is symmetric)} \end{aligned} \\
 >
-> So \\{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\ satisfies [Definition 27](#def-matrix-inverse) for \\{\mathbf{A}}^{\top}\\. The first step of each display is [Theorem 10](#thm-transpose-product).
+> So \\{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\ satisfies [Definition 30](#def-matrix-inverse) for \\{\mathbf{A}}^{\top}\\. The first step of each display is [Theorem 10](#thm-transpose-product).
 
 > **NOTE:**
 >
@@ -479,17 +743,17 @@ Diagonal matrices are denoted \\\mathbf{D} = \text{diag}(d_1, d_2, \ldots, d_p)\
 
 > **NOTE:**
 >
-> **Definition 29 (Idempotent matrix)** A square matrix \\\mathbf{A}\\ is **idempotent** if
+> **Definition 32 (Idempotent matrix)** A square matrix \\\mathbf{A}\\ is **idempotent** if
 >
 > \\\mathbf{A}^2 = \mathbf{A}\\
 
 > **NOTE:**
 >
-> **Definition 30 (Orthogonal projection matrix)** A square matrix \\\mathbf{P}\\ is an **orthogonal projection matrix** if it is both symmetric ([Definition 25](#def-symmetric-matrix)) and idempotent ([Definition 29](#def-idempotent-matrix)):
+> **Definition 33 (Orthogonal projection matrix)** A square matrix \\\mathbf{P}\\ is an **orthogonal projection matrix** if it is both symmetric ([Definition 28](#def-symmetric-matrix)) and idempotent ([Definition 32](#def-idempotent-matrix)):
 >
 > \\{\mathbf{P}}^{\top} = \mathbf{P} \qquad \text{and} \qquad \mathbf{P}^2 = \mathbf{P}\\
 
-Any idempotent matrix is called a *projection matrix*; an idempotent matrix that is not symmetric is an *oblique* projection. Regression texts often say “projection matrix” when they mean an orthogonal one. In these notes, “projection matrix” always means an orthogonal projection matrix in the sense of [Definition 30](#def-projection-matrix).
+Any idempotent matrix is called a *projection matrix*; an idempotent matrix that is not symmetric is an *oblique* projection. Regression texts often say “projection matrix” when they mean an orthogonal one. In these notes, “projection matrix” always means an orthogonal projection matrix in the sense of [Definition 33](#def-projection-matrix).
 
 > **NOTE:**
 >
@@ -503,7 +767,7 @@ Any idempotent matrix is called a *projection matrix*; an idempotent matrix that
 
 > **NOTE:**
 >
-> **Theorem 15 (Complement of a projection matrix)** If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 30](#def-projection-matrix)), then \\\mathbf{I}\_p - \mathbf{P}\\ is also an orthogonal projection matrix.
+> **Theorem 15 (Complement of a projection matrix)** If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 33](#def-projection-matrix)), then \\\mathbf{I}\_p - \mathbf{P}\\ is also an orthogonal projection matrix.
 
 > **NOTE:**
 >
@@ -515,7 +779,7 @@ Any idempotent matrix is called a *projection matrix*; an idempotent matrix that
 
 > **NOTE:**
 >
-> **Theorem 16 (Projection matrices produce orthogonal decompositions)** If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 30](#def-projection-matrix)) and \\\tilde{v}\\ is any vector of length \\p\\, then the two components of the decomposition
+> **Theorem 16 (Projection matrices produce orthogonal decompositions)** If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 33](#def-projection-matrix)) and \\\tilde{v}\\ is any vector of length \\p\\, then the two components of the decomposition
 >
 > \\\tilde{v} = \underbrace{\mathbf{P}\tilde{v}}\_{\text{projected}} + \underbrace{(\mathbf{I}\_p - \mathbf{P})\tilde{v}}\_{\text{residual}}\\
 >
@@ -531,11 +795,11 @@ Any idempotent matrix is called a *projection matrix*; an idempotent matrix that
 
 > **NOTE:**
 >
-> **Definition 31 (Orthogonal matrix)** A \\p \times p\\ matrix \\\mathbf{Q}\\ is **orthogonal** if
+> **Definition 34 (Orthogonal matrix)** A \\p \times p\\ matrix \\\mathbf{Q}\\ is **orthogonal** if
 >
 > \\ \underbrace{{\mathbf{Q}}^{\top}}\_{p \times p}\\\underbrace{\mathbf{Q}}\_{p \times p} = \mathbf{I}\_p \\
 
-Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 10](#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 27](#def-matrix-inverse)) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
+Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 10](#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 30](#def-matrix-inverse)) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
 
 > **NOTE:**
 >
@@ -549,7 +813,7 @@ Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of colu
 
 > **NOTE:**
 >
-> **Theorem 17 (Orthogonal matrices preserve length)** If \\\mathbf{Q}\\ is a \\p \times p\\ orthogonal matrix ([Definition 31](#def-orthogonal-matrix)) and \\\tilde{x}\\ is a vector of length \\p\\, then
+> **Theorem 17 (Orthogonal matrices preserve length)** If \\\mathbf{Q}\\ is a \\p \times p\\ orthogonal matrix ([Definition 34](#def-orthogonal-matrix)) and \\\tilde{x}\\ is a vector of length \\p\\, then
 >
 > \\ \mathopen{}\left\lVert\mathbf{Q}\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \\
 
@@ -573,7 +837,7 @@ Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of colu
 
 > **NOTE:**
 >
-> **Definition 32 (Quadratic form)** A **quadratic form** is a mathematical expression of the structure
+> **Definition 35 (Quadratic form)** A **quadratic form** is a mathematical expression of the structure
 >
 > \\{\tilde{x}}^{\top}\\ \mathbf{S}\\ \tilde{x}\\
 >
@@ -586,7 +850,7 @@ Quadratic forms are the matrix generalizations of the scalar expression \\c x^2\
 
 > **NOTE:**
 >
-> **Definition 33 (Symmetric part of a square matrix)** The **symmetric part** of a \\p \times p\\ matrix \\\mathbf{S}\\ is
+> **Definition 36 (Symmetric part of a square matrix)** The **symmetric part** of a \\p \times p\\ matrix \\\mathbf{S}\\ is
 >
 > \\\frac{1}{2}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\\
 
@@ -604,7 +868,7 @@ Quadratic forms are the matrix generalizations of the scalar expression \\c x^2\
 >
 > \\ {\tilde{x}}^{\top}\mathbf{S}\tilde{x} = {\tilde{x}}^{\top}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\tilde{x}. \\
 >
-> So the value of a quadratic form depends only on the symmetric part ([Definition 33](#def-symmetric-part)) of \\\mathbf{S}\\.
+> So the value of a quadratic form depends only on the symmetric part ([Definition 36](#def-symmetric-part)) of \\\mathbf{S}\\.
 
 > **NOTE:**
 >
@@ -630,7 +894,7 @@ Quadratic forms are the matrix generalizations of the scalar expression \\c x^2\
 
 > **NOTE:**
 >
-> **Definition 34 (Trace)** The **trace** of a \\p \times p\\ matrix \\\mathbf{M}\\ is the sum of its diagonal entries:
+> **Definition 37 (Trace)** The **trace** of a \\p \times p\\ matrix \\\mathbf{M}\\ is the sum of its diagonal entries:
 >
 > \\\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum\_{i=1}^p M\_{ii}\\
 
@@ -672,7 +936,7 @@ Quadratic forms are the matrix generalizations of the scalar expression \\c x^2\
 
 > **NOTE:**
 >
-> **Definition 35 (Matrix inner product)** The **inner product** of two \\n \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ is
+> **Definition 38 (Matrix inner product)** The **inner product** of two \\n \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ is
 >
 > \\ \left\langle \mathbf{A}, \mathbf{B} \right\rangle \stackrel{\text{def}}{=} \operatorname{tr}\mathopen{}\left(\underbrace{{\mathbf{A}}^{\top}\mathbf{B}}\_{p \times p}\right)\mathclose{} \\
 
@@ -696,7 +960,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > \\ \mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \qquad \mathbf{B} = \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \\
 >
-> From [Definition 35](#def-matrix-inner-product):
+> From [Definition 38](#def-matrix-inner-product):
 >
 > \\ \begin{aligned} \left\langle \mathbf{A}, \mathbf{B} \right\rangle &= \operatorname{tr}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{B}\right)\mathclose{} && \text{(definition of the inner product)} \\ &= \operatorname{tr}\mathopen{}\left( {\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}^{\top} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \right)\mathclose{} && \text{(substitute)} \\ &= \operatorname{tr}\mathopen{}\left( \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \right)\mathclose{} && \text{(definition of the transpose)} \\ &= \operatorname{tr}\mathopen{}\left(\begin{bmatrix} -3 & 7 \\ -4 & 10 \end{bmatrix}\right)\mathclose{} && \text{(multiply)} \\ &= -3 + 10 && \text{(definition of the trace)} \\ &= 7 && \text{(add)} \end{aligned} \\
 >
@@ -706,11 +970,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 36 (Frobenius norm)** The **Frobenius norm** of an \\n \times p\\ matrix \\\mathbf{A}\\ is
+> **Definition 39 (Frobenius norm)** The **Frobenius norm** of an \\n \times p\\ matrix \\\mathbf{A}\\ is
 >
 > \\ \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F \stackrel{\text{def}}{=}\sqrt{\left\langle \mathbf{A}, \mathbf{A} \right\rangle} \\
 >
-> where \\\left\langle \cdot, \cdot \right\rangle\\ is the matrix inner product ([Definition 35](#def-matrix-inner-product)).
+> where \\\left\langle \cdot, \cdot \right\rangle\\ is the matrix inner product ([Definition 38](#def-matrix-inner-product)).
 
 By [Theorem 20](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^{n} \sum\_{j=1}^{p} a\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 9](#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
 
@@ -726,7 +990,7 @@ By [Theorem 20](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\ma
 
 > **NOTE:**
 >
-> **Definition 37 (Eigenvalue and eigenvector)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix. A real number \\\lambda\\ is an **eigenvalue** of \\\mathbf{A}\\ if some real vector \\\tilde{v} \neq \tilde{0}\\ of length \\p\\ satisfies
+> **Definition 40 (Eigenvalue and eigenvector)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix. A real number \\\lambda\\ is an **eigenvalue** of \\\mathbf{A}\\ if some real vector \\\tilde{v} \neq \tilde{0}\\ of length \\p\\ satisfies
 >
 > \\ \underbrace{\mathbf{A}}\_{p \times p}\\\underbrace{\tilde{v}}\_{p \times 1} = \lambda\\\underbrace{\tilde{v}}\_{p \times 1} \\
 >
@@ -758,21 +1022,21 @@ These notes take \\\lambda\\ and \\\tilde{v}\\ to be real. Banerjee and Roy ([20
 
 > **NOTE:**
 >
-> **Theorem 21 (Spectral theorem for symmetric matrices)** If \\\mathbf{A}\\ is a \\p \times p\\ symmetric matrix ([Definition 25](#def-symmetric-matrix)) with real entries, then there are a \\p \times p\\ orthogonal matrix \\\mathbf{Q}\\ ([Definition 31](#def-orthogonal-matrix)) and a \\p \times p\\ diagonal matrix \\\mathbf{\Lambda}\\ ([Definition 26](#def-diagonal-matrix)) with real diagonal entries \\\lambda_1, \ldots, \lambda_p\\ such that
+> **Theorem 21 (Spectral theorem for symmetric matrices)** If \\\mathbf{A}\\ is a \\p \times p\\ symmetric matrix ([Definition 28](#def-symmetric-matrix)) with real entries, then there are a \\p \times p\\ orthogonal matrix \\\mathbf{Q}\\ ([Definition 34](#def-orthogonal-matrix)) and a \\p \times p\\ diagonal matrix \\\mathbf{\Lambda}\\ ([Definition 29](#def-diagonal-matrix)) with real diagonal entries \\\lambda_1, \ldots, \lambda_p\\ such that
 >
 > \\ \underbrace{\mathbf{A}}\_{p \times p} = \underbrace{\mathbf{Q}}\_{p \times p}\\ \underbrace{\mathbf{\Lambda}}\_{p \times p}\\ \underbrace{{\mathbf{Q}}^{\top}}\_{p \times p} \\
 >
-> Each \\\lambda_i\\ is an eigenvalue of \\\mathbf{A}\\ ([Definition 37](#def-eigenvalue)), and column \\i\\ of \\\mathbf{Q}\\ is an eigenvector of \\\mathbf{A}\\ for \\\lambda_i\\.
+> Each \\\lambda_i\\ is an eigenvalue of \\\mathbf{A}\\ ([Definition 40](#def-eigenvalue)), and column \\i\\ of \\\mathbf{Q}\\ is an eigenvector of \\\mathbf{A}\\ for \\\lambda_i\\.
 
 The proof, by induction on \\p\\, is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Theorem 11.27, p. 349), which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\: multiply \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ by \\{\mathbf{Q}}^{\top}\\ on the left and by \\\mathbf{Q}\\ on the right.
 
 > **NOTE:**
 >
-> **Definition 38 (Eigendecomposition)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition**, or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
+> **Definition 41 (Eigendecomposition)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition**, or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
 >
 > \\ \mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top} \\
 >
-> with \\\mathbf{Q}\\ a \\p \times p\\ orthogonal matrix ([Definition 31](#def-orthogonal-matrix)) and \\\mathbf{\Lambda}\\ a \\p \times p\\ diagonal matrix ([Definition 26](#def-diagonal-matrix)). [Theorem 21](#thm-spectral) says that every such \\\mathbf{A}\\ has one.
+> with \\\mathbf{Q}\\ a \\p \times p\\ orthogonal matrix ([Definition 34](#def-orthogonal-matrix)) and \\\mathbf{\Lambda}\\ a \\p \times p\\ diagonal matrix ([Definition 29](#def-diagonal-matrix)). [Theorem 21](#thm-spectral) says that every such \\\mathbf{A}\\ has one.
 
 An eigendecomposition is not unique. For example, reordering the eigenvalues on the diagonal of \\\mathbf{\Lambda}\\, and the columns of \\\mathbf{Q}\\ with them, gives another one, and so does multiplying a column of \\\mathbf{Q}\\ by \\-1\\.
 
@@ -794,7 +1058,7 @@ An eigendecomposition is not unique. For example, reordering the eigenvalues on 
 
 > **NOTE:**
 >
-> **Theorem 22 (Singular value decomposition)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\ ([Definition 19](#def-rank)). Then there are an \\n \times n\\ orthogonal matrix \\\mathbf{U}\\, a \\p \times p\\ orthogonal matrix \\\mathbf{V}\\ ([Definition 31](#def-orthogonal-matrix)), and numbers \\\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r \> 0\\ such that
+> **Theorem 22 (Singular value decomposition)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\ ([Definition 22](#def-rank)). Then there are an \\n \times n\\ orthogonal matrix \\\mathbf{U}\\, a \\p \times p\\ orthogonal matrix \\\mathbf{V}\\ ([Definition 34](#def-orthogonal-matrix)), and numbers \\\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r \> 0\\ such that
 >
 > \\ \underbrace{\mathbf{A}}\_{n \times p} = \underbrace{\mathbf{U}}\_{n \times n}\\ \underbrace{\mathbf{D}}\_{n \times p}\\ \underbrace{{\mathbf{V}}^{\top}}\_{p \times p} \\
 >
@@ -804,11 +1068,11 @@ The proof is outside the scope of these notes; see Banerjee and Roy ([2014, chap
 
 > **NOTE:**
 >
-> **Definition 39 (Singular value decomposition and singular values)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\. A **singular value decomposition** (SVD) of \\\mathbf{A}\\ is a factorization \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ with \\\mathbf{U}\\, \\\mathbf{D}\\ and \\\mathbf{V}\\ as in [Theorem 22](#thm-svd). The numbers \\\sigma_1 \ge \cdots \ge \sigma_r \> 0\\ on the diagonal of \\\mathbf{D}\\ are the **singular values** of \\\mathbf{A}\\.
+> **Definition 42 (Singular value decomposition and singular values)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\. A **singular value decomposition** (SVD) of \\\mathbf{A}\\ is a factorization \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ with \\\mathbf{U}\\, \\\mathbf{D}\\ and \\\mathbf{V}\\ as in [Theorem 22](#thm-svd). The numbers \\\sigma_1 \ge \cdots \ge \sigma_r \> 0\\ on the diagonal of \\\mathbf{D}\\ are the **singular values** of \\\mathbf{A}\\.
 
 An SVD is not unique ([Banerjee and Roy 2014, chap. 12](#ref-banerjee2014linear), Examples 12.2 and 12.3, p. 378). For example, for any \\i \le r\\, multiplying column \\i\\ of both \\\mathbf{U}\\ and \\\mathbf{V}\\ by \\-1\\ gives another one. The singular values do not depend on which SVD is chosen ([Banerjee and Roy 2014, chap. 12](#ref-banerjee2014linear), pp. 371 and 378).
 
-Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equal to \\0\\, so that every \\n \times p\\ matrix has \\\min(n, p)\\ singular values.
+Some texts, and R’s [`svd()`](https://rdrr.io/r/base/svd.html), also count \\\min(n, p) - r\\ singular values equal to \\0\\, so that every \\n \times p\\ matrix has \\\min(n, p)\\ singular values.
 
 > **NOTE:**
 >
@@ -844,11 +1108,11 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Theorem 23 (An SVD gives an eigendecomposition of \\{\mathbf{A}}^{\top}\mathbf{A}\\)** Let \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ be a singular value decomposition ([Definition 39](#def-svd)) of an \\n \times p\\ matrix \\\mathbf{A}\\ with singular values \\\sigma_1, \ldots, \sigma_r\\. Then \\{\mathbf{A}}^{\top}\mathbf{A}\\ is symmetric ([Definition 25](#def-symmetric-matrix)), and
+> **Theorem 23 (An SVD gives an eigendecomposition of \\{\mathbf{A}}^{\top}\mathbf{A}\\)** Let \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ be a singular value decomposition ([Definition 42](#def-svd)) of an \\n \times p\\ matrix \\\mathbf{A}\\ with singular values \\\sigma_1, \ldots, \sigma_r\\. Then \\{\mathbf{A}}^{\top}\mathbf{A}\\ is symmetric ([Definition 28](#def-symmetric-matrix)), and
 >
 > \\ \underbrace{{\mathbf{A}}^{\top}\mathbf{A}}\_{p \times p} = \underbrace{\mathbf{V}}\_{p \times p}\\ \underbrace{\mathbf{\Lambda}}\_{p \times p}\\ \underbrace{{\mathbf{V}}^{\top}}\_{p \times p} \\
 >
-> where \\\mathbf{\Lambda} \stackrel{\text{def}}{=}{\mathbf{D}}^{\top}\mathbf{D}\\ is the \\p \times p\\ diagonal matrix whose \\i\\-th diagonal entry \\\lambda_i\\ is \\\sigma_i^2\\ for \\i \le r\\ and \\0\\ for \\i \> r\\. So \\\mathbf{V}\mathbf{\Lambda}{\mathbf{V}}^{\top}\\ is an eigendecomposition ([Definition 38](#def-eigendecomposition)) of \\{\mathbf{A}}^{\top}\mathbf{A}\\: column \\i\\ of \\\mathbf{V}\\ is an eigenvector of \\{\mathbf{A}}^{\top}\mathbf{A}\\ for the eigenvalue \\\lambda_i\\.
+> where \\\mathbf{\Lambda} \stackrel{\text{def}}{=}{\mathbf{D}}^{\top}\mathbf{D}\\ is the \\p \times p\\ diagonal matrix whose \\i\\-th diagonal entry \\\lambda_i\\ is \\\sigma_i^2\\ for \\i \le r\\ and \\0\\ for \\i \> r\\. So \\\mathbf{V}\mathbf{\Lambda}{\mathbf{V}}^{\top}\\ is an eigendecomposition ([Definition 41](#def-eigendecomposition)) of \\{\mathbf{A}}^{\top}\mathbf{A}\\: column \\i\\ of \\\mathbf{V}\\ is an eigenvector of \\{\mathbf{A}}^{\top}\mathbf{A}\\ for the eigenvalue \\\lambda_i\\.
 
 > **NOTE:**
 >
@@ -898,10 +1162,10 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Definition 40 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** if it satisfies both conditions:
+> **Definition 43 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** if it satisfies both conditions:
 >
-> - \\\mathbf{A}\\ is symmetric ([Definition 25](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 32](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\ge 0\\ for every vector \\\tilde{x}\\ of length \\p\\.
+> - \\\mathbf{A}\\ is symmetric ([Definition 28](#def-symmetric-matrix)).
+> - Every quadratic form ([Definition 35](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\ge 0\\ for every vector \\\tilde{x}\\ of length \\p\\.
 
 > **NOTE:**
 >
@@ -913,29 +1177,29 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Definition 41 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** if it satisfies both conditions:
+> **Definition 44 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** if it satisfies both conditions:
 >
-> - \\\mathbf{A}\\ is symmetric ([Definition 25](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 32](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for every vector \\\tilde{x}\neq \tilde{0}\\ of length \\p\\.
+> - \\\mathbf{A}\\ is symmetric ([Definition 28](#def-symmetric-matrix)).
+> - Every quadratic form ([Definition 35](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for every vector \\\tilde{x}\neq \tilde{0}\\ of length \\p\\.
 
 > **NOTE:**
 >
-> *Remark*. A positive definite matrix is positive semidefinite ([Definition 40](#def-positive-semidefinite)), because \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues: \\\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\\ has \\{\tilde{x}}^{\top}\mathbf{C}\tilde{x}= x_1^2 + x_2^2\\, which is positive for every \\\tilde{x}\neq \tilde{0}\\, yet no real \\\lambda\\ solves \\\mathbf{C}\tilde{v} = \lambda\tilde{v}\\ with \\\tilde{v} \neq \tilde{0}\\ (see also <https://en.wikipedia.org/wiki/Definite_matrix>).
+> *Remark*. A positive definite matrix is positive semidefinite ([Definition 43](#def-positive-semidefinite)), because \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues: \\\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\\ has \\{\tilde{x}}^{\top}\mathbf{C}\tilde{x}= x_1^2 + x_2^2\\, which is positive for every \\\tilde{x}\neq \tilde{0}\\, yet no real \\\lambda\\ solves \\\mathbf{C}\tilde{v} = \lambda\tilde{v}\\ with \\\tilde{v} \neq \tilde{0}\\ (see also <https://en.wikipedia.org/wiki/Definite_matrix>).
 
 > **NOTE:**
 >
 > **Example 27 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 24](#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top}\mathbf{I}\_p\tilde{x}= \sum\_{i=1}^p x_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
+> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 27](#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top}\mathbf{I}\_p\tilde{x}= \sum\_{i=1}^p x_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
 > - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 26](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{B}\tilde{x}= (1 - 1)^2 = 0\\.
 > - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\tilde{x}= (1, -1)\\, \\{\tilde{x}}^{\top}\mathbf{D}\tilde{x}= 1 - 2 - 2 + 1 = -2 \< 0\\.
 
 > **NOTE:**
 >
-> **Theorem 24 (Definiteness and eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 38](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then:
+> **Theorem 24 (Definiteness and eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 41](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then:
 >
-> - \\\mathbf{A}\\ is positive semidefinite ([Definition 40](#def-positive-semidefinite)) if and only if every \\\lambda_i \ge 0\\.
-> - \\\mathbf{A}\\ is positive definite ([Definition 41](#def-positive-definite)) if and only if every \\\lambda_i \> 0\\.
+> - \\\mathbf{A}\\ is positive semidefinite ([Definition 43](#def-positive-semidefinite)) if and only if every \\\lambda_i \ge 0\\.
+> - \\\mathbf{A}\\ is positive definite ([Definition 44](#def-positive-definite)) if and only if every \\\lambda_i \> 0\\.
 
 > **NOTE:**
 >
@@ -943,7 +1207,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 >
 > \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}\tilde{x} &= {\tilde{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\tilde{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\tilde{y}}^{\top}\mathbf{\Lambda}\tilde{y} && \text{(definition of } \tilde{y} \text{)} \\ &= \sum\_{i=1}^p \lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
 >
-> The second step is [Theorem 10](#thm-transpose-product). Also, \\\tilde{x}= \tilde{0}\\ exactly when \\\tilde{y} = \tilde{0}\\: \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ for an orthogonal matrix ([Definition 31](#def-orthogonal-matrix)), so \\\tilde{x}= \mathbf{Q}\tilde{y}\\.
+> The second step is [Theorem 10](#thm-transpose-product). Also, \\\tilde{x}= \tilde{0}\\ exactly when \\\tilde{y} = \tilde{0}\\: \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ for an orthogonal matrix ([Definition 34](#def-orthogonal-matrix)), so \\\tilde{x}= \mathbf{Q}\tilde{y}\\.
 >
 > *If every \\\lambda_i \ge 0\\*, then every term \\\lambda_i y_i^2 \ge 0\\, so \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\ge 0\\. *If every \\\lambda_i \> 0\\* and \\\tilde{x}\neq \tilde{0}\\, then some \\y_i \neq 0\\, so at least one term is positive and the rest are non-negative, and \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\.
 >
@@ -958,7 +1222,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Theorem 25 (A positive definite matrix has a positive definite inverse)** Let \\\mathbf{A}\\ be a \\p \times p\\ positive definite matrix ([Definition 41](#def-positive-definite)) with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 38](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\. Then \\\mathbf{A}\\ is invertible ([Definition 28](#def-invertible-matrix)),
+> **Theorem 25 (A positive definite matrix has a positive definite inverse)** Let \\\mathbf{A}\\ be a \\p \times p\\ positive definite matrix ([Definition 44](#def-positive-definite)) with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 41](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\. Then \\\mathbf{A}\\ is invertible ([Definition 31](#def-invertible-matrix)),
 >
 > \\ \mathbf{A}^{-1} = \mathbf{Q}\\\mathbf{\Lambda}^{-1}\\{\mathbf{Q}}^{\top}, \qquad \mathbf{\Lambda}^{-1} = \begin{bmatrix} 1/\lambda_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 1/\lambda_p \end{bmatrix}, \\
 >
@@ -970,7 +1234,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 >
 > \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} && \text{(substitute)} \\ &= \mathbf{Q}\mathbf{\Lambda}\mathbf{I}\_p\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} && \text{(} {\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p \text{)} \\ &= \mathbf{Q}\mathbf{\Lambda}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} && \text{(identity matrix)} \\ &= \mathbf{Q}{\mathbf{Q}}^{\top} && \text{(} \mathbf{\Lambda}\mathbf{\Lambda}^{-1} = \mathbf{I}\_p \text{)} \\ &= \mathbf{I}\_p && \text{(} \mathbf{Q} \text{ is orthogonal)} \end{aligned} \\
 >
-> The same steps, with \\\mathbf{\Lambda}^{-1}\\ and \\\mathbf{\Lambda}\\ swapped, give \\\mathbf{B}\mathbf{A} = \mathbf{I}\_p\\, so \\\mathbf{B} = \mathbf{A}^{-1}\\ ([Definition 27](#def-matrix-inverse)). The steps with \\\mathbf{Q}\\ use [Definition 31](#def-orthogonal-matrix), whose remark records that \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ too, and the identity step uses [Theorem 12](#thm-identity).
+> The same steps, with \\\mathbf{\Lambda}^{-1}\\ and \\\mathbf{\Lambda}\\ swapped, give \\\mathbf{B}\mathbf{A} = \mathbf{I}\_p\\, so \\\mathbf{B} = \mathbf{A}^{-1}\\ ([Definition 30](#def-matrix-inverse)). The steps with \\\mathbf{Q}\\ use [Definition 34](#def-orthogonal-matrix), whose remark records that \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ too, and the identity step uses [Theorem 12](#thm-identity).
 >
 > \\\mathbf{A}^{-1}\\ is symmetric by [Corollary 1](#cor-inverse-symmetric). For \\\tilde{x}\neq \tilde{0}\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\, which is not \\\tilde{0}\\ because \\\tilde{x}= \mathbf{Q}\tilde{y}\\. As in the proof of [Theorem 24](#thm-definite-eigenvalues):
 >
@@ -990,7 +1254,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Definition 42 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
+> **Definition 45 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
 > - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p (-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
@@ -1009,7 +1273,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Theorem 26 (Determinant of a diagonal matrix)** The determinant ([Definition 42](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 26](#def-diagonal-matrix)) is the product of its diagonal entries:
+> **Theorem 26 (Determinant of a diagonal matrix)** The determinant ([Definition 45](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 29](#def-diagonal-matrix)) is the product of its diagonal entries:
 >
 > \\ \det\mathopen{}\left( \begin{bmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_p \end{bmatrix} \right)\mathclose{} = \prod\_{i=1}^p d_i \\
 
@@ -1045,7 +1309,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Theorem 28 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 38](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then
+> **Theorem 28 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 41](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then
 >
 > \\ \det(\mathbf{A}) = \prod\_{i=1}^p \lambda_i. \\
 
@@ -1059,11 +1323,11 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= \det(\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}) && \text{(substitute the eigendecomposition)} \\ &= \det(\mathbf{Q}) \det(\mathbf{\Lambda}) \det({\mathbf{Q}}^{\top}) && \text{(determinant of a product, twice)} \\ &= \det(\mathbf{\Lambda}) \cdot\det({\mathbf{Q}}^{\top})\det(\mathbf{Q}) && \text{(reorder the three numbers)} \\ &= \det(\mathbf{\Lambda}) && \text{(the first display)} \\ &= \prod\_{i=1}^p \lambda_i && \text{(determinant of a diagonal matrix)} \end{aligned} \\
 >
-> The product steps are [Theorem 27](#thm-det-product), the orthogonality step is [Definition 31](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 26](#thm-det-diagonal) and [Example 31](#exm-det-diagonal).
+> The product steps are [Theorem 27](#thm-det-product), the orthogonality step is [Definition 34](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 26](#thm-det-diagonal) and [Example 31](#exm-det-diagonal).
 
 > **NOTE:**
 >
-> **Corollary 2 (A positive definite matrix has a positive determinant)** If \\\mathbf{A}\\ is positive definite ([Definition 41](#def-positive-definite)), then \\\det(\mathbf{A}) \> 0\\.
+> **Corollary 2 (A positive definite matrix has a positive determinant)** If \\\mathbf{A}\\ is positive definite ([Definition 44](#def-positive-definite)), then \\\det(\mathbf{A}) \> 0\\.
 
 > **NOTE:**
 >
@@ -1077,7 +1341,7 @@ Some texts, and R’s `svd()`, also count \\\min(n, p) - r\\ singular values equ
 
 > **NOTE:**
 >
-> **Definition 43 (Design matrix)** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** (or *model matrix*) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\tilde{x}\_i}^{\top}\\ for observation \\i\\:
+> **Definition 46 (Design matrix)** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** (or *model matrix*) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\tilde{x}\_i}^{\top}\\ for observation \\i\\:
 >
 > \\ \mathbf{X}= \begin{bmatrix} {\tilde{x}\_1}^{\top} \\ {\tilde{x}\_2}^{\top} \\ \vdots \\ {\tilde{x}\_n}^{\top} \end{bmatrix} = \begin{bmatrix} x\_{11} & x\_{12} & \cdots & x\_{1p} \\ x\_{21} & x\_{22} & \cdots & x\_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ x\_{n1} & x\_{n2} & \cdots & x\_{np} \end{bmatrix} \\
 
@@ -1089,7 +1353,7 @@ The matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is a \\p \times p\\ symmetric matri
 
 > **NOTE:**
 >
-> **Theorem 29 (\\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible when \\\mathbf{X}\\ has full column rank)** If \\\mathbf{X}\\ is an \\n \times p\\ matrix with \\\operatorname{rank}(\mathbf{X}) = p\\ ([Definition 19](#def-rank)), then the \\p \times p\\ matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible.
+> **Theorem 29 (\\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible when \\\mathbf{X}\\ has full column rank)** If \\\mathbf{X}\\ is an \\n \times p\\ matrix with \\\operatorname{rank}(\mathbf{X}) = p\\ ([Definition 22](#def-rank)), then the \\p \times p\\ matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible.
 
 > **NOTE:**
 >
@@ -1109,7 +1373,7 @@ The matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is a \\p \times p\\ symmetric matri
 
 > **NOTE:**
 >
-> **Definition 44 (Hat matrix)** For an \\n \times p\\ design matrix \\\mathbf{X}\\ ([Definition 43](#def-design-matrix)) with \\\operatorname{rank}(\mathbf{X}) = p\\, the **hat matrix** is the \\n \times n\\ matrix
+> **Definition 47 (Hat matrix)** For an \\n \times p\\ design matrix \\\mathbf{X}\\ ([Definition 46](#def-design-matrix)) with \\\operatorname{rank}(\mathbf{X}) = p\\, the **hat matrix** is the \\n \times n\\ matrix
 >
 > \\ \underbrace{\mathbf{H}}\_{n \times n} \stackrel{\text{def}}{=} \underbrace{\mathbf{X}}\_{n \times p} \underbrace{({\mathbf{X}}^{\top}\mathbf{X})^{-1}}\_{p \times p} \underbrace{{\mathbf{X}}^{\top}}\_{p \times n} \\
 >
@@ -1125,7 +1389,7 @@ The matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is a \\p \times p\\ symmetric matri
 
 > **NOTE:**
 >
-> **Theorem 30 (Hat matrix is a projection matrix)** If \\\mathbf{X}\\ is an \\n \times p\\ design matrix with \\\operatorname{rank}(\mathbf{X}) = p\\, then the hat matrix \\\mathbf{H}\\ ([Definition 44](#def-hat-matrix)) is an orthogonal projection matrix ([Definition 30](#def-projection-matrix)).
+> **Theorem 30 (Hat matrix is a projection matrix)** If \\\mathbf{X}\\ is an \\n \times p\\ design matrix with \\\operatorname{rank}(\mathbf{X}) = p\\, then the hat matrix \\\mathbf{H}\\ ([Definition 47](#def-hat-matrix)) is an orthogonal projection matrix ([Definition 33](#def-projection-matrix)).
 
 > **NOTE:**
 >

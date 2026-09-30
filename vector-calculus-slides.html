@@ -36,6 +36,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -280,6 +346,8 @@
     }
   })();
   </script>
+  <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+  <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -291,7 +359,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-09-28 23:45:45 (PDT)</p>
+  <p class="date">Last modified: 2026-09-29 21:33:59 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -339,6 +407,278 @@
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="sec-gradient-shape" class="slide level2" data-number="1">
+<h2><span class="header-section-number">1</span> Checking a gradient by its shape</h2>
+<p>The gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:</p>
+<div id="tbl-gradient-shape" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gradient-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The shape of a gradient follows the shape of what it differentiates with respect to.
+</figcaption>
+<div aria-describedby="tbl-gradient-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(f\)</span> is a function of</th>
+<th>its gradient is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a single number</td>
+<td>a single number — the ordinary derivative</td>
+</tr>
+<tr class="even">
+<td>a vector in <span class="math inline">\(\mathbb{R}^p\)</span></td>
+<td>a vector in <span class="math inline">\(\mathbb{R}^p\)</span></td>
+</tr>
+<tr class="odd">
+<td>a matrix in <span class="math inline">\(\mathbb{R}^{m \times n}\)</span></td>
+<td>a matrix in <span class="math inline">\(\mathbb{R}^{m \times n}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The table is the cheapest check there is on a gradient just worked out by hand: if the shapes disagree, something went wrong. It is the shape rule of matrix multiplication again, applied to calculus.</p>
+</section>
+<section class="slide level2">
+
+<div class="cell hidden">
+<details class="code-fold">
+<summary>[R code]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="3" data-source-offset="-153"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 2;"><span id="cb1-3"><a aria-label="3"></a>gradFns <span class="op">=</span> ({</span>
+<span id="cb1-4"><a aria-label="4"></a>  <span class="st">"3 w1 w2 + w2^3 - 5 w1"</span><span class="op">:</span> {</span>
+<span id="cb1-5"><a aria-label="5"></a>    <span class="dt">f</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> <span class="dv">3</span> <span class="op">*</span> a <span class="op">*</span> b <span class="op">+</span> b <span class="op">**</span> <span class="dv">3</span> <span class="op">-</span> <span class="dv">5</span> <span class="op">*</span> a<span class="op">,</span></span>
+<span id="cb1-6"><a aria-label="6"></a>    <span class="dt">grad</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> [<span class="dv">3</span> <span class="op">*</span> b <span class="op">-</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">3</span> <span class="op">*</span> a <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> b <span class="op">*</span> b]</span>
+<span id="cb1-7"><a aria-label="7"></a>  }<span class="op">,</span></span>
+<span id="cb1-8"><a aria-label="8"></a>  <span class="st">"w1^2 + 4 w2^2"</span><span class="op">:</span> {</span>
+<span id="cb1-9"><a aria-label="9"></a>    <span class="dt">f</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">*</span> a <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> b <span class="op">*</span> b<span class="op">,</span></span>
+<span id="cb1-10"><a aria-label="10"></a>    <span class="dt">grad</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> [<span class="dv">2</span> <span class="op">*</span> a<span class="op">,</span> <span class="dv">8</span> <span class="op">*</span> b]</span>
+<span id="cb1-11"><a aria-label="11"></a>  }</span>
+<span id="cb1-12"><a aria-label="12"></a>})</span>
+<span id="cb1-13"><a aria-label="13"></a>gradDeg <span class="op">=</span> (rad) <span class="kw">=&gt;</span> ((rad <span class="op">*</span> <span class="dv">180</span> <span class="op">/</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span>) <span class="op">%</span> <span class="dv">360</span> <span class="op">+</span> <span class="dv">360</span>) <span class="op">%</span> <span class="dv">360</span></span>
+<span id="cb1-14"><a aria-label="14"></a><span class="co">// The chosen function, and its gradient at the chosen point.</span></span>
+<span id="cb1-15"><a aria-label="15"></a>gradF <span class="op">=</span> gradFns[gradWhich]<span class="op">.</span><span class="at">f</span></span>
+<span id="cb1-16"><a aria-label="16"></a>gradG <span class="op">=</span> gradFns[gradWhich]<span class="op">.</span><span class="fu">grad</span>(gradW1<span class="op">,</span> gradW2)</span>
+<span id="cb1-17"><a aria-label="17"></a>gradLen <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">hypot</span>(<span class="op">...</span>gradG)</span>
+<span id="cb1-18"><a aria-label="18"></a>gradPhi <span class="op">=</span> <span class="fu">gradDeg</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">atan2</span>(gradG[<span class="dv">1</span>]<span class="op">,</span> gradG[<span class="dv">0</span>]))</span>
+<span id="cb1-19"><a aria-label="19"></a><span class="co">// The rate f changes at, per unit step in direction deg: the gradient dotted with that direction.</span></span>
+<span id="cb1-20"><a aria-label="20"></a>gradRate <span class="op">=</span> (deg) <span class="kw">=&gt;</span> gradG[<span class="dv">0</span>] <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(deg <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>) <span class="op">+</span> gradG[<span class="dv">1</span>] <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(deg <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<p>Turn the blue arrow in <a href="#/fig-gradient-explorer" class="quarto-xref">Figure&nbsp;1</a> and watch the rate: it is largest along the red arrow, zero along the black level curve, and most negative pointing straight back. Then look for a point where the red arrow shrinks to nothing.</p>
+<details class="code-fold">
+<summary>[R code]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb2-0"><a aria-label="0"></a>viewof gradWhich <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(<span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(gradFns)<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"3 w1 w2 + w2^3 - 5 w1"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w) ="</span>})</span>
+<span id="cb2-1"><a aria-label="1"></a>viewof gradW1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w1"</span>})</span>
+<span id="cb2-2"><a aria-label="2"></a>viewof gradW2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w2"</span>})</span>
+<span id="cb2-3"><a aria-label="3"></a>viewof gradTheta <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">359</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step direction (degrees)"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<details class="code-fold">
+<summary>[R code]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb3--1"><a aria-label="-1"></a>{</span>
+<span id="cb3-0"><a aria-label="0"></a>  <span class="kw">const</span> f2 <span class="op">=</span> (v) <span class="kw">=&gt;</span> v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb3-1"><a aria-label="1"></a>  <span class="kw">const</span> deg <span class="op">=</span> <span class="st">"</span><span class="sc">\u00b0</span><span class="st">"</span><span class="op">;</span></span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="cf">return</span> <span class="fu">md</span><span class="vs">`f(w) = </span><span class="sc">${</span><span class="fu">f2</span>(<span class="fu">gradF</span>(gradW1<span class="op">,</span> gradW2))<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb3-3"><a aria-label="3"></a><span class="vs">gradient (</span><span class="sc">${</span><span class="fu">f2</span>(gradG[<span class="dv">0</span>])<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f2</span>(gradG[<span class="dv">1</span>])<span class="sc">}</span><span class="vs">), length </span><span class="sc">${</span><span class="fu">f2</span>(gradLen)<span class="sc">}</span><span class="vs">, at </span><span class="sc">${</span>gradPhi<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}${</span>deg<span class="sc">}</span><span class="vs">.</span></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="vs">Along the blue arrow, f changes at rate </span><span class="sc">${</span><span class="fu">f2</span>(<span class="fu">gradRate</span>(gradTheta))<span class="sc">}</span><span class="vs"> per unit step,</span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="sc">${</span>(<span class="fu">gradRate</span>(gradTheta) <span class="op">/</span> (gradLen <span class="op">||</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">100</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs">% of the steepest rate.`</span><span class="op">;</span></span>
+<span id="cb3-6"><a aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<details class="code-fold">
+<summary>[R code]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb4--1"><a aria-label="-1"></a>{</span>
+<span id="cb4-0"><a aria-label="0"></a>  <span class="kw">const</span> u <span class="op">=</span> [<span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(gradTheta <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>)<span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(gradTheta <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>)]<span class="op">;</span></span>
+<span id="cb4-1"><a aria-label="1"></a>  <span class="kw">const</span> g <span class="op">=</span> gradLen <span class="op">&gt;</span> <span class="fl">1e-9</span> <span class="op">?</span> gradG<span class="op">.</span><span class="fu">map</span>((v) <span class="kw">=&gt;</span> v <span class="op">/</span> gradLen) <span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb4-2"><a aria-label="2"></a>  <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-3"><a aria-label="3"></a>    <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'Contour map of f over w1 and w2, '</span> <span class="op">+</span></span>
+<span id="cb4-4"><a aria-label="4"></a>      <span class="st">'with the chosen point, '</span> <span class="op">+</span></span>
+<span id="cb4-5"><a aria-label="5"></a>      <span class="st">'the level curve through it drawn in black, '</span> <span class="op">+</span></span>
+<span id="cb4-6"><a aria-label="6"></a>      <span class="st">'a red arrow along the gradient and a blue arrow in the chosen step direction.'</span><span class="op">,</span></span>
+<span id="cb4-7"><a aria-label="7"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">310</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">310</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb4-8"><a aria-label="8"></a>    <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w1"</span>}<span class="op">,</span></span>
+<span id="cb4-9"><a aria-label="9"></a>    <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w2"</span>}<span class="op">,</span></span>
+<span id="cb4-10"><a aria-label="10"></a>    <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">"YlGnBu"</span><span class="op">,</span> <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w)"</span>}<span class="op">,</span></span>
+<span id="cb4-11"><a aria-label="11"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-12"><a aria-label="12"></a>      Plot<span class="op">.</span><span class="fu">contour</span>({<span class="dt">x1</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> gradF<span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb4-13"><a aria-label="13"></a>                    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="dt">strokeOpacity</span><span class="op">:</span> <span class="fl">0.4</span>})<span class="op">,</span></span>
+<span id="cb4-14"><a aria-label="14"></a>      <span class="co">// Sampled past the edges and clipped, so the border is not drawn as part of the curve.</span></span>
+<span id="cb4-15"><a aria-label="15"></a>      Plot<span class="op">.</span><span class="fu">contour</span>({<span class="dt">x1</span><span class="op">:</span> <span class="op">-</span><span class="fl">3.5</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="op">-</span><span class="fl">3.5</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="fl">3.5</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> <span class="fl">3.5</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> gradF<span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-16"><a aria-label="16"></a>                    <span class="dt">thresholds</span><span class="op">:</span> [<span class="fu">gradF</span>(gradW1<span class="op">,</span> gradW2)]<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#222"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb4-17"><a aria-label="17"></a>      Plot<span class="op">.</span><span class="fu">arrow</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> gradW1<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> gradW2<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> gradW1 <span class="op">+</span> u[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> gradW2 <span class="op">+</span> u[<span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb4-18"><a aria-label="18"></a>                       <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">2.5</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb4-19"><a aria-label="19"></a>      Plot<span class="op">.</span><span class="fu">arrow</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> gradW1<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> gradW2<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> gradW1 <span class="op">+</span> g[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> gradW2 <span class="op">+</span> g[<span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb4-20"><a aria-label="20"></a>                       <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb4-21"><a aria-label="21"></a>      Plot<span class="op">.</span><span class="fu">dot</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> gradW1<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> gradW2<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#222"</span>})</span>
+<span id="cb4-22"><a aria-label="22"></a>    ]</span>
+<span id="cb4-23"><a aria-label="23"></a>  })<span class="op">;</span></span>
+<span id="cb4-24"><a aria-label="24"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<details class="code-fold">
+<summary>[R code]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb5--1"><a aria-label="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-0"><a aria-label="0"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'The rate at which f changes when stepping from the chosen point, '</span> <span class="op">+</span></span>
+<span id="cb5-1"><a aria-label="1"></a>    <span class="st">'plotted against the step direction in degrees: '</span> <span class="op">+</span></span>
+<span id="cb5-2"><a aria-label="2"></a>    <span class="st">'a cosine wave whose peak is at the gradient direction and whose zeros are a quarter turn either side of it.'</span><span class="op">,</span></span>
+<span id="cb5-3"><a aria-label="3"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">220</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb5-4"><a aria-label="4"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">360</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step direction (degrees)"</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">361</span><span class="op">,</span> <span class="dv">90</span>)}<span class="op">,</span></span>
+<span id="cb5-5"><a aria-label="5"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"rate of change of f"</span>}<span class="op">,</span></span>
+<span id="cb5-6"><a aria-label="6"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-7"><a aria-label="7"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#888"</span>})<span class="op">,</span></span>
+<span id="cb5-8"><a aria-label="8"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([gradPhi]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})<span class="op">,</span></span>
+<span id="cb5-9"><a aria-label="9"></a>    Plot<span class="op">.</span><span class="fu">line</span>(d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">0</span><span class="op">,</span> <span class="fl">360.1</span><span class="op">,</span> <span class="dv">2</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> gradRate<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#555"</span>})<span class="op">,</span></span>
+<span id="cb5-10"><a aria-label="10"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([gradTheta]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> gradRate<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#1f77b4"</span>})</span>
+<span id="cb5-11"><a aria-label="11"></a>  ]</span>
+<span id="cb5-12"><a aria-label="12"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="fig-gradient-explorer" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-gradient-explorer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at the chosen point, and the blue arrow along the chosen step direction.
+</figcaption>
+<div aria-describedby="fig-gradient-explorer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="columns widget-panel" style="display:flex; gap:1rem; align-items:flex-start; background-color:#fbfbfb; color:#222; color-scheme:light; padding:0.5rem; border-radius:6px; font-size:min(1em, 18px)">
+<div class="column" style="width:32%;">
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:68%;">
+<div style="display:flex; flex-wrap:wrap; gap:0.5rem; align-items:flex-start">
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</figure>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="exr-partials-by-hand" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (Take a gradient by hand)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span> be</p>
+<p><span class="math display">\[f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\]</span></p>
+<ol type="1">
+<li>Compute <span class="math inline">\(\partial f / \partial w_1\)</span>, treating <span class="math inline">\(w_2\)</span> as a constant.</li>
+<li>Compute <span class="math inline">\(\partial f / \partial w_2\)</span>, treating <span class="math inline">\(w_1\)</span> as a constant.</li>
+<li>Assemble <span class="math inline">\(\nabla_{\tilde{w}} f\)</span> and evaluate it at <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^\top\)</span>.</li>
+<li>Check the shape of your answer against <a href="#/tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a>.</li>
+</ol>
+</div>
+<div id="sol-partials-by-hand" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span><strong>1.</strong> Differentiate with respect to <span class="math inline">\(w_1\)</span>, holding <span class="math inline">\(w_2\)</span> fixed. The first term is the constant <span class="math inline">\(3w_2\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(3w_2\)</span>. The second term has no <span class="math inline">\(w_1\)</span> in it, so it contributes <span class="math inline">\(0\)</span>. The third term is <span class="math inline">\(-5\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(-5\)</span>:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\]</span></p>
+<p><strong>2.</strong> Now with respect to <span class="math inline">\(w_2\)</span>, holding <span class="math inline">\(w_1\)</span> fixed. The first term is the constant <span class="math inline">\(3w_1\)</span> times <span class="math inline">\(w_2\)</span>, contributing <span class="math inline">\(3w_1\)</span>. The second term contributes <span class="math inline">\(3w_2^2\)</span>. The third has no <span class="math inline">\(w_2\)</span> in it, contributing <span class="math inline">\(0\)</span>:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2\]</span></p>
+<p><strong>3.</strong> Stack the two, in the order the coordinates are numbered:</p>
+<p><span class="math display">\[\nabla_{\tilde{w}} f(\tilde{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\]</span></p>
+<p>The gradient is a vector-valued <em>function</em> of <span class="math inline">\(\tilde{w}\)</span>, not a single vector. At <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^\top\)</span>,</p>
+<p><span class="math display">\[\nabla_{\tilde{w}} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix}
+= \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix}
+= \begin{bmatrix} -8 \\ 9 \end{bmatrix}\]</span></p>
+<p><strong>4.</strong> The input was a vector in <span class="math inline">\(\mathbb{R}^2\)</span> and so is the answer, as <a href="#/tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a> requires. Note the signs: from this point, increasing <span class="math inline">\(w_1\)</span> <em>decreases</em> <span class="math inline">\(f\)</span> while increasing <span class="math inline">\(w_2\)</span> increases it, so the uphill direction is neither axis.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1004,8 +1344,28 @@ x_{p}
 \]</span></p>
 </div>
 </section>
-<section id="sec-additional-resources" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Additional resources</h2>
+<section class="slide level2">
+
+<div id="exr-gradient-of-linear" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (A gradient that does not mention its variable)</strong></span> Fix</p>
+<p><span class="math display">\[A = \begin{bmatrix} 2 &amp; -1 &amp; 0 \\ 4 &amp; 3 &amp; -2 \end{bmatrix}\]</span></p>
+<p>let <span class="math inline">\(W \in \mathbb{R}^{2 \times 3}\)</span> vary, and define</p>
+<p><span class="math display">\[g(W) = \sum_{i=1}^{2} \sum_{j=1}^{3} W_{ij} A_{ij}\]</span></p>
+<p>which is the entry-by-entry version of the inner product for matrices. Compute <span class="math inline">\(\nabla_W\, g(W)\)</span>, and say what is unusual about the answer.</p>
+</div>
+<div id="sol-gradient-of-linear" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span>Written out over the six positions,</p>
+<p><span class="math display">\[g(W) = 2W_{11} - W_{12} + 0\,W_{13} + 4W_{21} + 3W_{22} - 2W_{23}\]</span></p>
+<p>Each <span class="math inline">\(W_{ij}\)</span> appears in exactly one term, multiplied by <span class="math inline">\(A_{ij}\)</span> and by nothing else, so differentiating with respect to it leaves <span class="math inline">\(A_{ij}\)</span> behind:</p>
+<p><span class="math display">\[\frac{\partial g}{\partial W_{ij}} = A_{ij}\]</span></p>
+<p>Collecting those partial derivatives into a matrix of the same shape as <span class="math inline">\(W\)</span>, as <a href="#/tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a> requires,</p>
+<p><span class="math display">\[\nabla_W\, g(W) = \begin{bmatrix} 2 &amp; -1 &amp; 0 \\ 4 &amp; 3 &amp; -2 \end{bmatrix} = A\]</span></p>
+<p>What is unusual is that the gradient came out <strong>constant</strong>: it does not mention <span class="math inline">\(W\)</span> at all. The constant answer is not a quirk of this particular <span class="math inline">\(A\)</span>. <span class="math inline">\(g\)</span> is a linear function of <span class="math inline">\(W\)</span>, and the gradient of a linear function is constant everywhere, for the same reason the derivative of <span class="math inline">\(f(w) = cw\)</span> is <span class="math inline">\(c\)</span> no matter where it is evaluated.</p>
+<p>A constant gradient is the easy case, and it is not the case we usually face. Most objectives are curved — the squared error of a linear model is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.</p>
+</div>
+</section>
+<section id="sec-additional-resources" class="slide level2" data-number="2">
+<h2><span class="header-section-number">2</span> Additional resources</h2>
 <p>See also the <a href="./linear-algebra.html#sec-additional-resources">Linear Algebra and Vector Calculus references</a>.</p>
 <ul>
 <li><a href="https://hua-zhou.github.io/">Hua Zhou</a>’s <a href="https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html">lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)</a></li>
@@ -1428,6 +1788,17 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
+    </script>
+    <script type="ojs-module-contents">
+    eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFR3byBmdW5jdGlvbnMgb2YgdyA9ICh3MSwgdzIpLCBlYWNoIHdpdGggaXRzIGdyYWRpZW50IHdvcmtlZCBvdXQgYnkgaGFuZDpcbi8vIHRoZSBvbmUgZnJvbSB0aGUgdGFrZS1hLWdyYWRpZW50LWJ5LWhhbmQgZXhlcmNpc2UsIGFuZCBhIHN0cmV0Y2hlZCBib3dsLlxuZ3JhZEZucyA9ICh7XG4gIFwiMyB3MSB3MiArIHcyXjMgLSA1IHcxXCI6IHtcbiAgICBmOiAoYSwgYikgPT4gMyAqIGEgKiBiICsgYiAqKiAzIC0gNSAqIGEsXG4gICAgZ3JhZDogKGEsIGIpID0+IFszICogYiAtIDUsIDMgKiBhICsgMyAqIGIgKiBiXVxuICB9LFxuICBcIncxXjIgKyA0IHcyXjJcIjoge1xuICAgIGY6IChhLCBiKSA9PiBhICogYSArIDQgKiBiICogYixcbiAgICBncmFkOiAoYSwgYikgPT4gWzIgKiBhLCA4ICogYl1cbiAgfVxufSlcbmdyYWREZWcgPSAocmFkKSA9PiAoKHJhZCAqIDE4MCAvIE1hdGguUEkpICUgMzYwICsgMzYwKSAlIDM2MFxuLy8gVGhlIGNob3NlbiBmdW5jdGlvbiwgYW5kIGl0cyBncmFkaWVudCBhdCB0aGUgY2hvc2VuIHBvaW50LlxuZ3JhZEYgPSBncmFkRm5zW2dyYWRXaGljaF0uZlxuZ3JhZEcgPSBncmFkRm5zW2dyYWRXaGljaF0uZ3JhZChncmFkVzEsIGdyYWRXMilcbmdyYWRMZW4gPSBNYXRoLmh5cG90KC4uLmdyYWRHKVxuZ3JhZFBoaSA9IGdyYWREZWcoTWF0aC5hdGFuMihncmFkR1sxXSwgZ3JhZEdbMF0pKVxuLy8gVGhlIHJhdGUgZiBjaGFuZ2VzIGF0LCBwZXIgdW5pdCBzdGVwIGluIGRpcmVjdGlvbiBkZWc6IHRoZSBncmFkaWVudCBkb3R0ZWQgd2l0aCB0aGF0IGRpcmVjdGlvbi5cbmdyYWRSYXRlID0gKGRlZykgPT4gZ3JhZEdbMF0gKiBNYXRoLmNvcyhkZWcgKiBNYXRoLlBJIC8gMTgwKSArIGdyYWRHWzFdICogTWF0aC5zaW4oZGVnICogTWF0aC5QSSAvIDE4MClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBncmFkV2hpY2ggPSBJbnB1dHMucmFkaW8oT2JqZWN0LmtleXMoZ3JhZEZucyksIHt2YWx1ZTogXCIzIHcxIHcyICsgdzJeMyAtIDUgdzFcIiwgbGFiZWw6IFwiZih3KSA9XCJ9KVxudmlld29mIGdyYWRXMSA9IElucHV0cy5yYW5nZShbLTMsIDNdLCB7dmFsdWU6IDIsIHN0ZXA6IDAuMDUsIGxhYmVsOiBcIncxXCJ9KVxudmlld29mIGdyYWRXMiA9IElucHV0cy5yYW5nZShbLTMsIDNdLCB7dmFsdWU6IC0xLCBzdGVwOiAwLjA1LCBsYWJlbDogXCJ3MlwifSlcbnZpZXdvZiBncmFkVGhldGEgPSBJbnB1dHMucmFuZ2UoWzAsIDM1OV0sIHt2YWx1ZTogMCwgc3RlcDogMSwgbGFiZWw6IFwic3RlcCBkaXJlY3Rpb24gKGRlZ3JlZXMpXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBmMiA9ICh2KSA9PiB2LnRvRml4ZWQoMik7XG4gIGNvbnN0IGRlZyA9IFwiXFx1MDBiMFwiO1xuICByZXR1cm4gbWRgZih3KSA9ICR7ZjIoZ3JhZEYoZ3JhZFcxLCBncmFkVzIpKX07XG5ncmFkaWVudCAoJHtmMihncmFkR1swXSl9LCAke2YyKGdyYWRHWzFdKX0pLCBsZW5ndGggJHtmMihncmFkTGVuKX0sIGF0ICR7Z3JhZFBoaS50b0ZpeGVkKDApfSR7ZGVnfS5cbkFsb25nIHRoZSBibHVlIGFycm93LCBmIGNoYW5nZXMgYXQgcmF0ZSAke2YyKGdyYWRSYXRlKGdyYWRUaGV0YSkpfSBwZXIgdW5pdCBzdGVwLFxuJHsoZ3JhZFJhdGUoZ3JhZFRoZXRhKSAvIChncmFkTGVuIHx8IDEpICogMTAwKS50b0ZpeGVkKDApfSUgb2YgdGhlIHN0ZWVwZXN0IHJhdGUuYDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgdSA9IFtNYXRoLmNvcyhncmFkVGhldGEgKiBNYXRoLlBJIC8gMTgwKSwgTWF0aC5zaW4oZ3JhZFRoZXRhICogTWF0aC5QSSAvIDE4MCldO1xuICBjb25zdCBnID0gZ3JhZExlbiA+IDFlLTkgPyBncmFkRy5tYXAoKHYpID0+IHYgLyBncmFkTGVuKSA6IFswLCAwXTtcbiAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgYXJpYUxhYmVsOiAnQ29udG91ciBtYXAgb2YgZiBvdmVyIHcxIGFuZCB3MiwgJyArXG4gICAgICAnd2l0aCB0aGUgY2hvc2VuIHBvaW50LCAnICtcbiAgICAgICd0aGUgbGV2ZWwgY3VydmUgdGhyb3VnaCBpdCBkcmF3biBpbiBibGFjaywgJyArXG4gICAgICAnYSByZWQgYXJyb3cgYWxvbmcgdGhlIGdyYWRpZW50IGFuZCBhIGJsdWUgYXJyb3cgaW4gdGhlIGNob3NlbiBzdGVwIGRpcmVjdGlvbi4nLFxuICAgIHdpZHRoOiAzMTAsIGhlaWdodDogMzEwLCBtYXJnaW5MZWZ0OiA0MCxcbiAgICB4OiB7ZG9tYWluOiBbLTMsIDNdLCBsYWJlbDogXCJ3MVwifSxcbiAgICB5OiB7ZG9tYWluOiBbLTMsIDNdLCBsYWJlbDogXCJ3MlwifSxcbiAgICBjb2xvcjoge3NjaGVtZTogXCJZbEduQnVcIiwgbGVnZW5kOiB0cnVlLCBsYWJlbDogXCJmKHcpXCJ9LFxuICAgIG1hcmtzOiBbXG4gICAgICBQbG90LmNvbnRvdXIoe3gxOiAtMywgeTE6IC0zLCB4MjogMywgeTI6IDMsIGZpbGw6IGdyYWRGLCB0aHJlc2hvbGRzOiAyMCxcbiAgICAgICAgICAgICAgICAgICAgc3Ryb2tlOiBcIiNmZmZcIiwgc3Ryb2tlT3BhY2l0eTogMC40fSksXG4gICAgICAvLyBTYW1wbGVkIHBhc3QgdGhlIGVkZ2VzIGFuZCBjbGlwcGVkLCBzbyB0aGUgYm9yZGVyIGlzIG5vdCBkcmF3biBhcyBwYXJ0IG9mIHRoZSBjdXJ2ZS5cbiAgICAgIFBsb3QuY29udG91cih7eDE6IC0zLjUsIHkxOiAtMy41LCB4MjogMy41LCB5MjogMy41LCB2YWx1ZTogZ3JhZEYsIGNsaXA6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgIHRocmVzaG9sZHM6IFtncmFkRihncmFkVzEsIGdyYWRXMildLCBzdHJva2U6IFwiIzIyMlwiLCBzdHJva2VXaWR0aDogMn0pLFxuICAgICAgUGxvdC5hcnJvdyhbMF0sIHt4MTogZ3JhZFcxLCB5MTogZ3JhZFcyLCB4MjogZ3JhZFcxICsgdVswXSwgeTI6IGdyYWRXMiArIHVbMV0sXG4gICAgICAgICAgICAgICAgICAgICAgIHN0cm9rZTogXCIjMWY3N2I0XCIsIHN0cm9rZVdpZHRoOiAyLjUsIGNsaXA6IHRydWV9KSxcbiAgICAgIFBsb3QuYXJyb3coWzBdLCB7eDE6IGdyYWRXMSwgeTE6IGdyYWRXMiwgeDI6IGdyYWRXMSArIGdbMF0sIHkyOiBncmFkVzIgKyBnWzFdLFxuICAgICAgICAgICAgICAgICAgICAgICBzdHJva2U6IFwiI2Q2MjcyOFwiLCBzdHJva2VXaWR0aDogMywgY2xpcDogdHJ1ZX0pLFxuICAgICAgUGxvdC5kb3QoWzBdLCB7eDogZ3JhZFcxLCB5OiBncmFkVzIsIHI6IDUsIGZpbGw6IFwiIzIyMlwifSlcbiAgICBdXG4gIH0pO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgYXJpYUxhYmVsOiAnVGhlIHJhdGUgYXQgd2hpY2ggZiBjaGFuZ2VzIHdoZW4gc3RlcHBpbmcgZnJvbSB0aGUgY2hvc2VuIHBvaW50LCAnICtcbiAgICAncGxvdHRlZCBhZ2FpbnN0IHRoZSBzdGVwIGRpcmVjdGlvbiBpbiBkZWdyZWVzOiAnICtcbiAgICAnYSBjb3NpbmUgd2F2ZSB3aG9zZSBwZWFrIGlzIGF0IHRoZSBncmFkaWVudCBkaXJlY3Rpb24gYW5kIHdob3NlIHplcm9zIGFyZSBhIHF1YXJ0ZXIgdHVybiBlaXRoZXIgc2lkZSBvZiBpdC4nLFxuICB3aWR0aDogMzAwLCBoZWlnaHQ6IDIyMCwgZ3JpZDogdHJ1ZSxcbiAgeDoge2RvbWFpbjogWzAsIDM2MF0sIGxhYmVsOiBcInN0ZXAgZGlyZWN0aW9uIChkZWdyZWVzKVwiLCB0aWNrczogZDMucmFuZ2UoMCwgMzYxLCA5MCl9LFxuICB5OiB7bGFiZWw6IFwicmF0ZSBvZiBjaGFuZ2Ugb2YgZlwifSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJ1bGVZKFswXSwge3N0cm9rZTogXCIjODg4XCJ9KSxcbiAgICBQbG90LnJ1bGVYKFtncmFkUGhpXSwge3N0cm9rZTogXCIjZDYyNzI4XCIsIHN0cm9rZURhc2hhcnJheTogXCI0LDNcIn0pLFxuICAgIFBsb3QubGluZShkMy5yYW5nZSgwLCAzNjAuMSwgMiksIHt4OiAoZCkgPT4gZCwgeTogZ3JhZFJhdGUsIHN0cm9rZTogXCIjNTU1XCJ9KSxcbiAgICBQbG90LmRvdChbZ3JhZFRoZXRhXSwge3g6IChkKSA9PiBkLCB5OiBncmFkUmF0ZSwgcjogNSwgZmlsbDogXCIjMWY3N2I0XCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdncmFkV2hpY2gnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ3JhZFcxJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2dyYWRXMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdncmFkVGhldGEnKSJ9XX0=
+    </script>
+    <script type="module">
+    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+    window._ojs.paths.runtimeToDoc = "../..";
+    window._ojs.paths.runtimeToRoot = "../..";
+    window._ojs.paths.docToRoot = "";
+    window._ojs.selfContained = false;
+    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
