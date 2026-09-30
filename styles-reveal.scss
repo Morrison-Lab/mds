@@ -82,3 +82,45 @@ body.qwt-dark {
   color: var(--qwt-muted);
   background-color: transparent;
 }
+
+/* In a narrow panel column the number box beside a slider shrank to 56px,
+which cut a value like -0.05 short. Keep it wide enough to read. The floor
+takes width from the slider, so it applies only on screens wide enough to
+spare it; on a phone it would leave the slider about 20px wide. */
+@media (min-width: 768px) {
+  .widget-panel input[type="number"] {
+    min-width: 4.5em;
+  }
+}
+
+/* Interactive widgets sit on a light panel (`.widget-panel`), so their text is
+dark. Keep input boxes light under dark slide deck mode. */
+body.qwt-dark .widget-panel input[type="number"],
+body.qwt-dark .widget-panel input[type="text"],
+body.qwt-dark .widget-panel select {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #adb5bd;
+}
+
+/* Tables inside light widget panels: keep table text and headers dark ink with transparent backgrounds. */
+.widget-panel table {
+  color: #222;
+  --bs-table-color: #222;
+  --bs-table-bg: transparent;
+  --bs-table-border-color: #dee2e6;
+  --bs-table-striped-color: #222;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+}
+
+.widget-panel table thead tr th {
+  background-color: transparent;
+  color: #222;
+  border-bottom: 2px solid #adb5bd;
+}
+
+.widget-panel table th,
+.widget-panel table td {
+  color: #222;
+  border-color: #dee2e6;
+}
