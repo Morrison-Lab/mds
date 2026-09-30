@@ -161,37 +161,9 @@ cookieconsent.run({
 });
 </script> 
   
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -202,6 +174,16 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -211,6 +193,46 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -232,35 +254,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -544,11 +546,22 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<div class="preview-combined-banner">
+    <p style="margin: 0;">
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~22% of content changed).
+        <br>
+        <strong>🎨 Highlighting Legend:</strong> 
+        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
+        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
+        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
+    </p>
+</div>
+
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Vector Calculus</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Vector Calculus</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><mark class="preview-element-added"><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></mark></li><li><mark class="preview-element-added"><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></mark></li><li><hr class="dropdown-divider"></li><li><mark class="preview-element-added"><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></mark></li></ul></div></div>
 </div>
 
 
@@ -559,7 +572,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: <mark class="preview-text-changed">2026-09-29</mark> <mark class="preview-text-changed">17:13:58</mark> (PDT)</p>
+      <p class="date">Last modified: <mark class="preview-text-changed">2026-09-29</mark> <mark class="preview-text-changed">17:42:46</mark> (PDT)</p>
     </div>
   </div>
   
@@ -610,6 +623,294 @@ window.Quarto = {
 <p>Hutchinson’s <a href="https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients">Gradients Refresher</a> (17 min) covers gradients and partial derivatives, the ideas behind this section <span class="citation" data-cites="hutchinson_wwu_ml_videos">(<a href="#ref-hutchinson_wwu_ml_videos" role="doc-biblioref">Hutchinson, n.d.</a>)</span>. The login for the video site is posted <a href="https://wwu.instructure.com/courses/1906010/modules#module_3922392">on Canvas</a>.</p>
 </div>
 </div>
+<p><mark class="preview-element-added">The gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:</mark></p>
+<div id="tbl-gradient-shape" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gradient-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The shape of a gradient follows the shape of what it differentiates with respect to.
+</figcaption>
+<div aria-describedby="tbl-gradient-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(f\)</span> is a function of</th>
+<th>its gradient is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a single number</td>
+<td>a single number — the ordinary derivative</td>
+</tr>
+<tr class="even">
+<td>a vector in <span class="math inline">\(\mathbb{R}^p\)</span></td>
+<td>a vector in <span class="math inline">\(\mathbb{R}^p\)</span></td>
+</tr>
+<tr class="odd">
+<td>a matrix in <span class="math inline">\(\mathbb{R}^{m \times n}\)</span></td>
+<td>a matrix in <span class="math inline">\(\mathbb{R}^{m \times n}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><mark class="preview-element-added">The table is the cheapest check there is on a gradient just worked out by hand: if the shapes disagree, something went wrong. It is the shape rule of matrix multiplication again, applied to calculus.</mark></p>
+<div class="cell hidden">
+<details class="code-fold">
+<summary>Show R code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="3" data-source-offset="-153"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 2;"><span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>gradFns <span class="op">=</span> ({</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"3 w1 w2 + w2^3 - 5 w1"</span><span class="op">:</span> {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">f</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> <span class="dv">3</span> <span class="op">*</span> a <span class="op">*</span> b <span class="op">+</span> b <span class="op">**</span> <span class="dv">3</span> <span class="op">-</span> <span class="dv">5</span> <span class="op">*</span> a<span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grad</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> [<span class="dv">3</span> <span class="op">*</span> b <span class="op">-</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">3</span> <span class="op">*</span> a <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> b <span class="op">*</span> b]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"w1^2 + 4 w2^2"</span><span class="op">:</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">f</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">*</span> a <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> b <span class="op">*</span> b<span class="op">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grad</span><span class="op">:</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> [<span class="dv">2</span> <span class="op">*</span> a<span class="op">,</span> <span class="dv">8</span> <span class="op">*</span> b]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>gradDeg <span class="op">=</span> (rad) <span class="kw">=&gt;</span> ((rad <span class="op">*</span> <span class="dv">180</span> <span class="op">/</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span>) <span class="op">%</span> <span class="dv">360</span> <span class="op">+</span> <span class="dv">360</span>) <span class="op">%</span> <span class="dv">360</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">// The chosen function, and its gradient at the chosen point.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>gradF <span class="op">=</span> gradFns[gradWhich]<span class="op">.</span><span class="at">f</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>gradG <span class="op">=</span> gradFns[gradWhich]<span class="op">.</span><span class="fu">grad</span>(gradW1<span class="op">,</span> gradW2)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>gradLen <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">hypot</span>(<span class="op">...</span>gradG)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>gradPhi <span class="op">=</span> <span class="fu">gradDeg</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">atan2</span>(gradG[<span class="dv">1</span>]<span class="op">,</span> gradG[<span class="dv">0</span>]))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">// The rate f changes at, per unit step in direction deg: the gradient dotted with that direction.</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>gradRate <span class="op">=</span> (deg) <span class="kw">=&gt;</span> gradG[<span class="dv">0</span>] <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(deg <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>) <span class="op">+</span> gradG[<span class="dv">1</span>] <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(deg <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<p><mark class="preview-element-added">Turn the blue arrow in <a href="#fig-gradient-explorer" class="quarto-xref">Figure&nbsp;1</a> and watch the rate: it is largest along the red arrow, zero along the black level curve, and most negative pointing straight back. Then look for a point where the red arrow shrinks to nothing.</mark></p>
+<details class="code-fold">
+<summary>Show R code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb2-0"><a href="#cb2-0" aria-hidden="true" tabindex="-1"></a>viewof gradWhich <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>(<span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(gradFns)<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"3 w1 w2 + w2^3 - 5 w1"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w) ="</span>})</span>
+<span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>viewof gradW1 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w1"</span>})</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>viewof gradW2 <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w2"</span>})</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>viewof gradTheta <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">359</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step direction (degrees)"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<details class="code-fold">
+<summary>Show R code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb3--1"><a href="#cb3--1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb3-0"><a href="#cb3-0" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> f2 <span class="op">=</span> (v) <span class="kw">=&gt;</span> v<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> deg <span class="op">=</span> <span class="st">"</span><span class="sc">\u00b0</span><span class="st">"</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">md</span><span class="vs">`f(w) = </span><span class="sc">${</span><span class="fu">f2</span>(<span class="fu">gradF</span>(gradW1<span class="op">,</span> gradW2))<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="vs">gradient (</span><span class="sc">${</span><span class="fu">f2</span>(gradG[<span class="dv">0</span>])<span class="sc">}</span><span class="vs">, </span><span class="sc">${</span><span class="fu">f2</span>(gradG[<span class="dv">1</span>])<span class="sc">}</span><span class="vs">), length </span><span class="sc">${</span><span class="fu">f2</span>(gradLen)<span class="sc">}</span><span class="vs">, at </span><span class="sc">${</span>gradPhi<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}${</span>deg<span class="sc">}</span><span class="vs">.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="vs">Along the blue arrow, f changes at rate </span><span class="sc">${</span><span class="fu">f2</span>(<span class="fu">gradRate</span>(gradTheta))<span class="sc">}</span><span class="vs"> per unit step,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="sc">${</span>(<span class="fu">gradRate</span>(gradTheta) <span class="op">/</span> (gradLen <span class="op">||</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">100</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">0</span>)<span class="sc">}</span><span class="vs">% of the steepest rate.`</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<details class="code-fold">
+<summary>Show R code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb4--1"><a href="#cb4--1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-0"><a href="#cb4-0" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> u <span class="op">=</span> [<span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(gradTheta <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>)<span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(gradTheta <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> <span class="dv">180</span>)]<span class="op">;</span></span>
+<span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> g <span class="op">=</span> gradLen <span class="op">&gt;</span> <span class="fl">1e-9</span> <span class="op">?</span> gradG<span class="op">.</span><span class="fu">map</span>((v) <span class="kw">=&gt;</span> v <span class="op">/</span> gradLen) <span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'Contour map of f over w1 and w2, '</span> <span class="op">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">'with the chosen point, '</span> <span class="op">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">'the level curve through it drawn in black, '</span> <span class="op">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">'a red arrow along the gradient and a blue arrow in the chosen step direction.'</span><span class="op">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">310</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">310</span><span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w1"</span>}<span class="op">,</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w2"</span>}<span class="op">,</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> {<span class="dt">scheme</span><span class="op">:</span> <span class="st">"YlGnBu"</span><span class="op">,</span> <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w)"</span>}<span class="op">,</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">contour</span>({<span class="dt">x1</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="op">-</span><span class="dv">3</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> gradF<span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#fff"</span><span class="op">,</span> <span class="dt">strokeOpacity</span><span class="op">:</span> <span class="fl">0.4</span>})<span class="op">,</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Sampled past the edges and clipped, so the border is not drawn as part of the curve.</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">contour</span>({<span class="dt">x1</span><span class="op">:</span> <span class="op">-</span><span class="fl">3.5</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="op">-</span><span class="fl">3.5</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="fl">3.5</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> <span class="fl">3.5</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> gradF<span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">thresholds</span><span class="op">:</span> [<span class="fu">gradF</span>(gradW1<span class="op">,</span> gradW2)]<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#222"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">arrow</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> gradW1<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> gradW2<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> gradW1 <span class="op">+</span> u[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> gradW2 <span class="op">+</span> u[<span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                       <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="fl">2.5</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">arrow</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> gradW1<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> gradW2<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> gradW1 <span class="op">+</span> g[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> gradW2 <span class="op">+</span> g[<span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                       <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">dot</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> gradW1<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> gradW2<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#222"</span>})</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<details class="code-fold">
+<summary>Show R code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb5--1"><a href="#cb5--1" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-0"><a href="#cb5-0" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'The rate at which f changes when stepping from the chosen point, '</span> <span class="op">+</span></span>
+<span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="st">'plotted against the step direction in degrees: '</span> <span class="op">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'a cosine wave whose peak is at the gradient direction and whose zeros are a quarter turn either side of it.'</span><span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">220</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">360</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step direction (degrees)"</span><span class="op">,</span> <span class="dt">ticks</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">361</span><span class="op">,</span> <span class="dv">90</span>)}<span class="op">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"rate of change of f"</span>}<span class="op">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#888"</span>})<span class="op">,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([gradPhi]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,3"</span>})<span class="op">,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">0</span><span class="op">,</span> <span class="fl">360.1</span><span class="op">,</span> <span class="dv">2</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> gradRate<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#555"</span>})<span class="op">,</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([gradTheta]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> gradRate<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#1f77b4"</span>})</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="fig-gradient-explorer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-gradient-explorer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at the chosen point, and the blue arrow along the chosen step direction.
+</figcaption>
+<div aria-describedby="fig-gradient-explorer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="columns widget-panel" style="display:flex; gap:1rem; align-items:flex-start; background-color:#fbfbfb; color:#222; color-scheme:light; padding:0.5rem; border-radius:6px; font-size:min(1em, 18px)">
+<div class="column" style="width:32%;">
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:68%;">
+<div style="display:flex; flex-wrap:wrap; gap:0.5rem; align-items:flex-start">
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-exr no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exr-partials-by-hand" class="theorem exercise">
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Exercise 1 (Take a gradient by hand)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span> be</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\]</span></mark></p>
+<ol type="1">
+<li><mark class="preview-element-added">Compute <span class="math inline">\(\partial f / \partial w_1\)</span>, treating <span class="math inline">\(w_2\)</span> as a constant.</mark></li>
+<li><mark class="preview-element-added">Compute <span class="math inline">\(\partial f / \partial w_2\)</span>, treating <span class="math inline">\(w_1\)</span> as a constant.</mark></li>
+<li><mark class="preview-element-added">Assemble <span class="math inline">\(\nabla_{\tilde{w}} f\)</span> and evaluate it at <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^\top\)</span>.</mark></li>
+<li><mark class="preview-element-added">Check the shape of your answer against <a href="#tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a>.</mark></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-partials-by-hand" class="proof solution">
+<p><mark class="preview-element-added"><span class="proof-title"><em>Solution 1</em>. </span><strong>1.</strong> Differentiate with respect to <span class="math inline">\(w_1\)</span>, holding <span class="math inline">\(w_2\)</span> fixed. The first term is the constant <span class="math inline">\(3w_2\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(3w_2\)</span>. The second term has no <span class="math inline">\(w_1\)</span> in it, so it contributes <span class="math inline">\(0\)</span>. The third term is <span class="math inline">\(-5\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(-5\)</span>:</mark></p>
+<p><span class="math display"><mark class="preview-text-changed">\[\frac{\partial</mark> <mark class="preview-text-changed">f}{\partial</mark> <mark class="preview-text-changed">w_1}</mark> = <mark class="preview-text-changed">3w_2 + 0 - 5 = 3w_2 - 5\]</mark></span></p>
+<p><mark class="preview-element-added"><strong>2.</strong> Now with respect to <span class="math inline">\(w_2\)</span>, holding <span class="math inline">\(w_1\)</span> fixed. The first term is the constant <span class="math inline">\(3w_1\)</span> times <span class="math inline">\(w_2\)</span>, contributing <span class="math inline">\(3w_1\)</span>. The second term contributes <span class="math inline">\(3w_2^2\)</span>. The third has no <span class="math inline">\(w_2\)</span> in it, contributing <span class="math inline">\(0\)</span>:</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2\]</span></mark></p>
+<p><mark class="preview-element-added"><strong>3.</strong> Stack the two, in the order the coordinates are numbered:</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[\nabla_{\tilde{w}} f(\tilde{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\]</span></mark></p>
+<p><mark class="preview-element-added">The gradient is a vector-valued <em>function</em> of <span class="math inline">\(\tilde{w}\)</span>, not a single vector. At <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^\top\)</span>,</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[\nabla_{\tilde{w}} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix}
+= \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix}
+= \begin{bmatrix} -8 \\ 9 \end{bmatrix}\]</span></mark></p>
+<p><mark class="preview-element-added"><strong>4.</strong> The input was a vector in <span class="math inline">\(\mathbb{R}^2\)</span> and so is the answer, as <a href="#tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a> requires. Note the signs: from this point, increasing <span class="math inline">\(w_1\)</span> <em>decreases</em> <span class="math inline">\(f\)</span> while increasing <span class="math inline">\(w_2\)</span> increases it, so the uphill direction is neither axis.</mark></p>
+</div>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -645,7 +946,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -654,7 +955,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;1</a> and <a href="#def-row-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>, entry <span class="math inline">\(j\)</span> of both <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})\)</span> and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta})\)</span> is <span class="math inline">\(\frac{\partial}{\partial \beta_j} f(\tilde{\beta})\)</span>; the first is a <span class="math inline">\(p \times 1\)</span> column and the second a <span class="math inline">\(1 \times p\)</span> row with the same entries in the same order, so each is the transpose of the other.</p>
@@ -787,7 +1088,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -796,7 +1097,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
@@ -878,7 +1179,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -887,7 +1188,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Entry-wise, for <span class="math inline">\(i = 1, \ldots, p\)</span>:</p>
@@ -967,7 +1268,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -976,7 +1277,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For entry <span class="math inline">\((i,j)\)</span>, where row <span class="math inline">\(i\)</span> indexes the denominator <span class="math inline">\(\tilde{\beta}\)</span> (see <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>) and column <span class="math inline">\(j\)</span> indexes the numerator <span class="math inline">\(\mathbf{A}\tilde{\beta}\)</span>:</p>
@@ -1032,7 +1333,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1041,7 +1342,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For entry <span class="math inline">\((i,j)\)</span>, where row <span class="math inline">\(i\)</span> indexes the denominator <span class="math inline">\(\tilde{\beta}\)</span> and column <span class="math inline">\(j\)</span> indexes the numerator <span class="math inline">\(\mathbf{A}\tilde{v}\)</span> (see <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>):</p>
@@ -1101,7 +1402,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1110,7 +1411,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-deriv-matrix-vector" class="quarto-xref">Theorem&nbsp;5</a> with the constant <span class="math inline">\(\ell \times q\)</span> matrix <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>, then use the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>:</p>
@@ -1174,7 +1475,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1183,7 +1484,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Using <a href="#thm-deriv-lincom" class="quarto-xref">Theorem&nbsp;2</a>:</strong></p>
@@ -1199,7 +1500,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1208,7 +1509,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Using <a href="#thm-deriv-matrix-vector" class="quarto-xref">Theorem&nbsp;5</a>:</strong></p>
@@ -1259,7 +1560,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1268,7 +1569,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Expanding entry-wise, <span class="math inline">\({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum_{j=1}^p \sum_{k=1}^p s_{jk} \beta_j \beta_k\)</span>. Differentiating component-wise with respect to <span class="math inline">\(\beta_i\)</span> for <span class="math inline">\(i = 1, \ldots, p\)</span>:</p>
@@ -1332,7 +1633,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1341,7 +1642,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Applying <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> with <span class="math inline">\(\mathbf{S} = \mathbf{I}_{p \times p}\)</span> (which is symmetric and constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>):</p>
@@ -1422,7 +1723,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1431,7 +1732,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a> with <span class="math inline">\(\tilde{x}= \tilde{\beta}\)</span>, <span class="math inline">\(\tilde{y}= \tilde{\varepsilon}\)</span>, <span class="math inline">\(q = n\)</span>, and <span class="math inline">\(z = f(\tilde{\varepsilon}) = \tilde{\varepsilon}\cdot \tilde{\varepsilon}= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\)</span>:</p>
@@ -1497,7 +1798,7 @@ x_{p}
 <div id="exm-matrix-derivative" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (The matrix derivative of a trace)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(2 \times 2\)</span> matrix and <span class="math inline">\(f(\mathbf{X}) = \operatorname{tr}(\mathbf{X}) = X_{11} + X_{22}\)</span> (see <a href="./linear-algebra.html#def-trace">trace</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
 <p><span class="math display">\[
-\frac{\partial}{\partial \mathbf{X}} f = \mathbf{I}_2
+<mark class="preview-text-changed">\frac{\partial}{\partial</mark> \mathbf{X}} <mark class="preview-text-changed">f</mark> = <mark class="preview-text-changed">\mathbf{I}_2</mark>
 \]</span></p>
 </div>
 </div>
@@ -1524,7 +1825,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1533,7 +1834,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Write <span class="math inline">\(A_{kl}\)</span>, <span class="math inline">\(X_{kl}\)</span>, and <span class="math inline">\(B_{kl}\)</span> for the entries of <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathbf{X}\)</span>, and <span class="math inline">\(\mathbf{B}\)</span>. For entry <span class="math inline">\((i,j)\)</span>:</p>
@@ -1574,6 +1875,47 @@ x_{p}
 = \begin{pmatrix}2 &amp; 0 \\
 0 &amp; 3\end{pmatrix}
 \]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exr no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exr-gradient-of-linear" class="theorem exercise">
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Exercise 2 (A gradient that does not mention its variable)</strong></span> Fix</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[A = \begin{bmatrix} 2 &amp; -1 &amp; 0 \\ 4 &amp; 3 &amp; -2 \end{bmatrix}\]</span></mark></p>
+<p><mark class="preview-element-added">let <span class="math inline">\(W \in \mathbb{R}^{2 \times 3}\)</span> vary, and define</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[g(W) = \sum_{i=1}^{2} \sum_{j=1}^{3} W_{ij} A_{ij}\]</span></mark></p>
+<p><mark class="preview-element-added">which is the entry-by-entry version of the inner product for matrices. Compute <span class="math inline">\(\nabla_W\, g(W)\)</span>, and say what is unusual about the answer.</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Solution</span>Solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="sol-gradient-of-linear" class="proof solution">
+<p><mark class="preview-element-added"><span class="proof-title"><em>Solution 2</em>. </span>Written out over the six positions,</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[g(W) = 2W_{11} - W_{12} + 0\,W_{13} + 4W_{21} + 3W_{22} - 2W_{23}\]</span></mark></p>
+<p><mark class="preview-element-added">Each <span class="math inline">\(W_{ij}\)</span> appears in exactly one term, multiplied by <span class="math inline">\(A_{ij}\)</span> and by nothing else, so differentiating with respect to it leaves <span class="math inline">\(A_{ij}\)</span> behind:</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[\frac{\partial g}{\partial W_{ij}} = A_{ij}\]</span></mark></p>
+<p><mark class="preview-element-added">Collecting those partial derivatives into a matrix of the same shape as <span class="math inline">\(W\)</span>, as <a href="#tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a> requires,</mark></p>
+<p><mark class="preview-element-added"><span class="math display">\[\nabla_W\, g(W) = \begin{bmatrix} 2 &amp; -1 &amp; 0 \\ 4 &amp; 3 &amp; -2 \end{bmatrix} = A\]</span></mark></p>
+<p><mark class="preview-element-added">What is unusual is that the gradient came out <strong>constant</strong>: it does not mention <span class="math inline">\(W\)</span> at all. The constant answer is not a quirk of this particular <span class="math inline">\(A\)</span>. <span class="math inline">\(g\)</span> is a linear function of <span class="math inline">\(W\)</span>, and the gradient of a linear function is constant everywhere, for the same reason the derivative of <span class="math inline">\(f(w) = cw\)</span> is <span class="math inline">\(c\)</span> no matter where it is evaluated.</mark></p>
+<p><mark class="preview-element-added">A constant gradient is the easy case, and it is not the case we usually face. Most objectives are curved — the squared error of a linear model is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.</mark></p>
 </div>
 </div>
 </div>
@@ -1823,6 +2165,17 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFR3byBmdW5jdGlvbnMgb2YgdyA9ICh3MSwgdzIpLCBlYWNoIHdpdGggaXRzIGdyYWRpZW50IHdvcmtlZCBvdXQgYnkgaGFuZDpcbi8vIHRoZSBvbmUgZnJvbSB0aGUgdGFrZS1hLWdyYWRpZW50LWJ5LWhhbmQgZXhlcmNpc2UsIGFuZCBhIHN0cmV0Y2hlZCBib3dsLlxuZ3JhZEZucyA9ICh7XG4gIFwiMyB3MSB3MiArIHcyXjMgLSA1IHcxXCI6IHtcbiAgICBmOiAoYSwgYikgPT4gMyAqIGEgKiBiICsgYiAqKiAzIC0gNSAqIGEsXG4gICAgZ3JhZDogKGEsIGIpID0+IFszICogYiAtIDUsIDMgKiBhICsgMyAqIGIgKiBiXVxuICB9LFxuICBcIncxXjIgKyA0IHcyXjJcIjoge1xuICAgIGY6IChhLCBiKSA9PiBhICogYSArIDQgKiBiICogYixcbiAgICBncmFkOiAoYSwgYikgPT4gWzIgKiBhLCA4ICogYl1cbiAgfVxufSlcbmdyYWREZWcgPSAocmFkKSA9PiAoKHJhZCAqIDE4MCAvIE1hdGguUEkpICUgMzYwICsgMzYwKSAlIDM2MFxuLy8gVGhlIGNob3NlbiBmdW5jdGlvbiwgYW5kIGl0cyBncmFkaWVudCBhdCB0aGUgY2hvc2VuIHBvaW50LlxuZ3JhZEYgPSBncmFkRm5zW2dyYWRXaGljaF0uZlxuZ3JhZEcgPSBncmFkRm5zW2dyYWRXaGljaF0uZ3JhZChncmFkVzEsIGdyYWRXMilcbmdyYWRMZW4gPSBNYXRoLmh5cG90KC4uLmdyYWRHKVxuZ3JhZFBoaSA9IGdyYWREZWcoTWF0aC5hdGFuMihncmFkR1sxXSwgZ3JhZEdbMF0pKVxuLy8gVGhlIHJhdGUgZiBjaGFuZ2VzIGF0LCBwZXIgdW5pdCBzdGVwIGluIGRpcmVjdGlvbiBkZWc6IHRoZSBncmFkaWVudCBkb3R0ZWQgd2l0aCB0aGF0IGRpcmVjdGlvbi5cbmdyYWRSYXRlID0gKGRlZykgPT4gZ3JhZEdbMF0gKiBNYXRoLmNvcyhkZWcgKiBNYXRoLlBJIC8gMTgwKSArIGdyYWRHWzFdICogTWF0aC5zaW4oZGVnICogTWF0aC5QSSAvIDE4MClcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBncmFkV2hpY2ggPSBJbnB1dHMucmFkaW8oT2JqZWN0LmtleXMoZ3JhZEZucyksIHt2YWx1ZTogXCIzIHcxIHcyICsgdzJeMyAtIDUgdzFcIiwgbGFiZWw6IFwiZih3KSA9XCJ9KVxudmlld29mIGdyYWRXMSA9IElucHV0cy5yYW5nZShbLTMsIDNdLCB7dmFsdWU6IDIsIHN0ZXA6IDAuMDUsIGxhYmVsOiBcIncxXCJ9KVxudmlld29mIGdyYWRXMiA9IElucHV0cy5yYW5nZShbLTMsIDNdLCB7dmFsdWU6IC0xLCBzdGVwOiAwLjA1LCBsYWJlbDogXCJ3MlwifSlcbnZpZXdvZiBncmFkVGhldGEgPSBJbnB1dHMucmFuZ2UoWzAsIDM1OV0sIHt2YWx1ZTogMCwgc3RlcDogMSwgbGFiZWw6IFwic3RlcCBkaXJlY3Rpb24gKGRlZ3JlZXMpXCJ9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCBmMiA9ICh2KSA9PiB2LnRvRml4ZWQoMik7XG4gIGNvbnN0IGRlZyA9IFwiXFx1MDBiMFwiO1xuICByZXR1cm4gbWRgZih3KSA9ICR7ZjIoZ3JhZEYoZ3JhZFcxLCBncmFkVzIpKX07XG5ncmFkaWVudCAoJHtmMihncmFkR1swXSl9LCAke2YyKGdyYWRHWzFdKX0pLCBsZW5ndGggJHtmMihncmFkTGVuKX0sIGF0ICR7Z3JhZFBoaS50b0ZpeGVkKDApfSR7ZGVnfS5cbkFsb25nIHRoZSBibHVlIGFycm93LCBmIGNoYW5nZXMgYXQgcmF0ZSAke2YyKGdyYWRSYXRlKGdyYWRUaGV0YSkpfSBwZXIgdW5pdCBzdGVwLFxuJHsoZ3JhZFJhdGUoZ3JhZFRoZXRhKSAvIChncmFkTGVuIHx8IDEpICogMTAwKS50b0ZpeGVkKDApfSUgb2YgdGhlIHN0ZWVwZXN0IHJhdGUuYDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IntcbiAgY29uc3QgdSA9IFtNYXRoLmNvcyhncmFkVGhldGEgKiBNYXRoLlBJIC8gMTgwKSwgTWF0aC5zaW4oZ3JhZFRoZXRhICogTWF0aC5QSSAvIDE4MCldO1xuICBjb25zdCBnID0gZ3JhZExlbiA+IDFlLTkgPyBncmFkRy5tYXAoKHYpID0+IHYgLyBncmFkTGVuKSA6IFswLCAwXTtcbiAgcmV0dXJuIFBsb3QucGxvdCh7XG4gICAgYXJpYUxhYmVsOiAnQ29udG91ciBtYXAgb2YgZiBvdmVyIHcxIGFuZCB3MiwgJyArXG4gICAgICAnd2l0aCB0aGUgY2hvc2VuIHBvaW50LCAnICtcbiAgICAgICd0aGUgbGV2ZWwgY3VydmUgdGhyb3VnaCBpdCBkcmF3biBpbiBibGFjaywgJyArXG4gICAgICAnYSByZWQgYXJyb3cgYWxvbmcgdGhlIGdyYWRpZW50IGFuZCBhIGJsdWUgYXJyb3cgaW4gdGhlIGNob3NlbiBzdGVwIGRpcmVjdGlvbi4nLFxuICAgIHdpZHRoOiAzMTAsIGhlaWdodDogMzEwLCBtYXJnaW5MZWZ0OiA0MCxcbiAgICB4OiB7ZG9tYWluOiBbLTMsIDNdLCBsYWJlbDogXCJ3MVwifSxcbiAgICB5OiB7ZG9tYWluOiBbLTMsIDNdLCBsYWJlbDogXCJ3MlwifSxcbiAgICBjb2xvcjoge3NjaGVtZTogXCJZbEduQnVcIiwgbGVnZW5kOiB0cnVlLCBsYWJlbDogXCJmKHcpXCJ9LFxuICAgIG1hcmtzOiBbXG4gICAgICBQbG90LmNvbnRvdXIoe3gxOiAtMywgeTE6IC0zLCB4MjogMywgeTI6IDMsIGZpbGw6IGdyYWRGLCB0aHJlc2hvbGRzOiAyMCxcbiAgICAgICAgICAgICAgICAgICAgc3Ryb2tlOiBcIiNmZmZcIiwgc3Ryb2tlT3BhY2l0eTogMC40fSksXG4gICAgICAvLyBTYW1wbGVkIHBhc3QgdGhlIGVkZ2VzIGFuZCBjbGlwcGVkLCBzbyB0aGUgYm9yZGVyIGlzIG5vdCBkcmF3biBhcyBwYXJ0IG9mIHRoZSBjdXJ2ZS5cbiAgICAgIFBsb3QuY29udG91cih7eDE6IC0zLjUsIHkxOiAtMy41LCB4MjogMy41LCB5MjogMy41LCB2YWx1ZTogZ3JhZEYsIGNsaXA6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgIHRocmVzaG9sZHM6IFtncmFkRihncmFkVzEsIGdyYWRXMildLCBzdHJva2U6IFwiIzIyMlwiLCBzdHJva2VXaWR0aDogMn0pLFxuICAgICAgUGxvdC5hcnJvdyhbMF0sIHt4MTogZ3JhZFcxLCB5MTogZ3JhZFcyLCB4MjogZ3JhZFcxICsgdVswXSwgeTI6IGdyYWRXMiArIHVbMV0sXG4gICAgICAgICAgICAgICAgICAgICAgIHN0cm9rZTogXCIjMWY3N2I0XCIsIHN0cm9rZVdpZHRoOiAyLjUsIGNsaXA6IHRydWV9KSxcbiAgICAgIFBsb3QuYXJyb3coWzBdLCB7eDE6IGdyYWRXMSwgeTE6IGdyYWRXMiwgeDI6IGdyYWRXMSArIGdbMF0sIHkyOiBncmFkVzIgKyBnWzFdLFxuICAgICAgICAgICAgICAgICAgICAgICBzdHJva2U6IFwiI2Q2MjcyOFwiLCBzdHJva2VXaWR0aDogMywgY2xpcDogdHJ1ZX0pLFxuICAgICAgUGxvdC5kb3QoWzBdLCB7eDogZ3JhZFcxLCB5OiBncmFkVzIsIHI6IDUsIGZpbGw6IFwiIzIyMlwifSlcbiAgICBdXG4gIH0pO1xufVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC01IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiUGxvdC5wbG90KHtcbiAgYXJpYUxhYmVsOiAnVGhlIHJhdGUgYXQgd2hpY2ggZiBjaGFuZ2VzIHdoZW4gc3RlcHBpbmcgZnJvbSB0aGUgY2hvc2VuIHBvaW50LCAnICtcbiAgICAncGxvdHRlZCBhZ2FpbnN0IHRoZSBzdGVwIGRpcmVjdGlvbiBpbiBkZWdyZWVzOiAnICtcbiAgICAnYSBjb3NpbmUgd2F2ZSB3aG9zZSBwZWFrIGlzIGF0IHRoZSBncmFkaWVudCBkaXJlY3Rpb24gYW5kIHdob3NlIHplcm9zIGFyZSBhIHF1YXJ0ZXIgdHVybiBlaXRoZXIgc2lkZSBvZiBpdC4nLFxuICB3aWR0aDogMzAwLCBoZWlnaHQ6IDIyMCwgZ3JpZDogdHJ1ZSxcbiAgeDoge2RvbWFpbjogWzAsIDM2MF0sIGxhYmVsOiBcInN0ZXAgZGlyZWN0aW9uIChkZWdyZWVzKVwiLCB0aWNrczogZDMucmFuZ2UoMCwgMzYxLCA5MCl9LFxuICB5OiB7bGFiZWw6IFwicmF0ZSBvZiBjaGFuZ2Ugb2YgZlwifSxcbiAgbWFya3M6IFtcbiAgICBQbG90LnJ1bGVZKFswXSwge3N0cm9rZTogXCIjODg4XCJ9KSxcbiAgICBQbG90LnJ1bGVYKFtncmFkUGhpXSwge3N0cm9rZTogXCIjZDYyNzI4XCIsIHN0cm9rZURhc2hhcnJheTogXCI0LDNcIn0pLFxuICAgIFBsb3QubGluZShkMy5yYW5nZSgwLCAzNjAuMSwgMiksIHt4OiAoZCkgPT4gZCwgeTogZ3JhZFJhdGUsIHN0cm9rZTogXCIjNTU1XCJ9KSxcbiAgICBQbG90LmRvdChbZ3JhZFRoZXRhXSwge3g6IChkKSA9PiBkLCB5OiBncmFkUmF0ZSwgcjogNSwgZmlsbDogXCIjMWY3N2I0XCJ9KVxuICBdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdncmFkV2hpY2gnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnZ3JhZFcxJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2dyYWRXMicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdncmFkVGhldGEnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -2289,33 +2642,33 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Vector Calculus"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: vector-calculus-slides.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: vector-calculus-handout.pdf</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: vector-calculus.docx</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">preview-changed:</span><span class="co"> true</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_vector_calc.qmd &gt;}}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional resources {#sec-additional-resources}</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>See also the [Linear Algebra and Vector Calculus</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>references](linear-algebra.qmd#sec-additional-resources).</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hua Zhou</span><span class="co">](https://hua-zhou.github.io/)</span>'s <span class="co">[</span><span class="ot">lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2023 Fall)</span><span class="co">](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Vector Calculus"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: vector-calculus-slides.html</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: vector-calculus-handout.pdf</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: vector-calculus.docx</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="an">preview-changed:</span><span class="co"> true</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_vector_calc.qmd &gt;}}</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional resources {#sec-additional-resources}</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>See also the [Linear Algebra and Vector Calculus</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>references](linear-algebra.qmd#sec-additional-resources).</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hua Zhou</span><span class="co">](https://hua-zhou.github.io/)</span>'s <span class="co">[</span><span class="ot">lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2023 Fall)</span><span class="co">](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

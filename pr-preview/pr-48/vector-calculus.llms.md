@@ -2,9 +2,19 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 Published
 
-Last modified: 2026-09-29 17:13:58 (PDT)
+Last modified: 2026-09-29 17:42:46 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -21,6 +31,148 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > **TIP:**
 >
 > Hutchinson’s [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min) covers gradients and partial derivatives, the ideas behind this section ([Hutchinson, n.d.](#ref-hutchinson_wwu_ml_videos)). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+
+The gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:
+
+| \\f\\ is a function of | its gradient is |
+|----|----|
+| a single number | a single number — the ordinary derivative |
+| a vector in \\\mathbb{R}^p\\ | a vector in \\\mathbb{R}^p\\ |
+| a matrix in \\\mathbb{R}^{m \times n}\\ | a matrix in \\\mathbb{R}^{m \times n}\\ |
+
+Table 1: The shape of a gradient follows the shape of what it differentiates with respect to.
+
+The table is the cheapest check there is on a gradient just worked out by hand: if the shapes disagree, something went wrong. It is the shape rule of matrix multiplication again, applied to calculus.
+
+Show R code
+
+``` js
+gradFns = ({
+  "3 w1 w2 + w2^3 - 5 w1": {
+    f: (a, b) => 3 * a * b + b ** 3 - 5 * a,
+    grad: (a, b) => [3 * b - 5, 3 * a + 3 * b * b]
+  },
+  "w1^2 + 4 w2^2": {
+    f: (a, b) => a * a + 4 * b * b,
+    grad: (a, b) => [2 * a, 8 * b]
+  }
+})
+gradDeg = (rad) => ((rad * 180 / Math.PI) % 360 + 360) % 360
+// The chosen function, and its gradient at the chosen point.
+gradF = gradFns[gradWhich].f
+gradG = gradFns[gradWhich].grad(gradW1, gradW2)
+gradLen = Math.hypot(...gradG)
+gradPhi = gradDeg(Math.atan2(gradG[1], gradG[0]))
+// The rate f changes at, per unit step in direction deg: the gradient dotted with that direction.
+gradRate = (deg) => gradG[0] * Math.cos(deg * Math.PI / 180) + gradG[1] * Math.sin(deg * Math.PI / 180)
+```
+
+Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: it is largest along the red arrow, zero along the black level curve, and most negative pointing straight back. Then look for a point where the red arrow shrinks to nothing.
+
+Show R code
+
+``` js
+viewof gradWhich = Inputs.radio(Object.keys(gradFns), {value: "3 w1 w2 + w2^3 - 5 w1", label: "f(w) ="})
+viewof gradW1 = Inputs.range([-3, 3], {value: 2, step: 0.05, label: "w1"})
+viewof gradW2 = Inputs.range([-3, 3], {value: -1, step: 0.05, label: "w2"})
+viewof gradTheta = Inputs.range([0, 359], {value: 0, step: 1, label: "step direction (degrees)"})
+```
+
+Show R code
+
+``` js
+{
+  const f2 = (v) => v.toFixed(2);
+  const deg = "\u00b0";
+  return md`f(w) = ${f2(gradF(gradW1, gradW2))};
+gradient (${f2(gradG[0])}, ${f2(gradG[1])}), length ${f2(gradLen)}, at ${gradPhi.toFixed(0)}${deg}.
+Along the blue arrow, f changes at rate ${f2(gradRate(gradTheta))} per unit step,
+${(gradRate(gradTheta) / (gradLen || 1) * 100).toFixed(0)}% of the steepest rate.`;
+}
+```
+
+Show R code
+
+``` js
+{
+  const u = [Math.cos(gradTheta * Math.PI / 180), Math.sin(gradTheta * Math.PI / 180)];
+  const g = gradLen > 1e-9 ? gradG.map((v) => v / gradLen) : [0, 0];
+  return Plot.plot({
+    ariaLabel: 'Contour map of f over w1 and w2, ' +
+      'with the chosen point, ' +
+      'the level curve through it drawn in black, ' +
+      'a red arrow along the gradient and a blue arrow in the chosen step direction.',
+    width: 310, height: 310, marginLeft: 40,
+    x: {domain: [-3, 3], label: "w1"},
+    y: {domain: [-3, 3], label: "w2"},
+    color: {scheme: "YlGnBu", legend: true, label: "f(w)"},
+    marks: [
+      Plot.contour({x1: -3, y1: -3, x2: 3, y2: 3, fill: gradF, thresholds: 20,
+                    stroke: "#fff", strokeOpacity: 0.4}),
+      // Sampled past the edges and clipped, so the border is not drawn as part of the curve.
+      Plot.contour({x1: -3.5, y1: -3.5, x2: 3.5, y2: 3.5, value: gradF, clip: true,
+                    thresholds: [gradF(gradW1, gradW2)], stroke: "#222", strokeWidth: 2}),
+      Plot.arrow([0], {x1: gradW1, y1: gradW2, x2: gradW1 + u[0], y2: gradW2 + u[1],
+                       stroke: "#1f77b4", strokeWidth: 2.5, clip: true}),
+      Plot.arrow([0], {x1: gradW1, y1: gradW2, x2: gradW1 + g[0], y2: gradW2 + g[1],
+                       stroke: "#d62728", strokeWidth: 3, clip: true}),
+      Plot.dot([0], {x: gradW1, y: gradW2, r: 5, fill: "#222"})
+    ]
+  });
+}
+```
+
+Show R code
+
+``` js
+Plot.plot({
+  ariaLabel: 'The rate at which f changes when stepping from the chosen point, ' +
+    'plotted against the step direction in degrees: ' +
+    'a cosine wave whose peak is at the gradient direction and whose zeros are a quarter turn either side of it.',
+  width: 300, height: 220, grid: true,
+  x: {domain: [0, 360], label: "step direction (degrees)", ticks: d3.range(0, 361, 90)},
+  y: {label: "rate of change of f"},
+  marks: [
+    Plot.ruleY([0], {stroke: "#888"}),
+    Plot.ruleX([gradPhi], {stroke: "#d62728", strokeDasharray: "4,3"}),
+    Plot.line(d3.range(0, 360.1, 2), {x: (d) => d, y: gradRate, stroke: "#555"}),
+    Plot.dot([gradTheta], {x: (d) => d, y: gradRate, r: 5, fill: "#1f77b4"})
+  ]
+})
+```
+
+Figure 1: A gradient explorer: the red arrow points along the gradient at the chosen point, and the blue arrow along the chosen step direction.
+
+> **NOTE:**
+>
+> **Exercise 1 (Take a gradient by hand)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
+>
+> \\f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\\
+>
+> 1.  Compute \\\partial f / \partial w_1\\, treating \\w_2\\ as a constant.
+> 2.  Compute \\\partial f / \partial w_2\\, treating \\w_1\\ as a constant.
+> 3.  Assemble \\\nabla\_{\tilde{w}} f\\ and evaluate it at \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^\top\\.
+> 4.  Check the shape of your answer against [Table 1](#tbl-gradient-shape).
+
+> **NOTE:**
+>
+> *Solution 1*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
+>
+> \\\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\\
+>
+> **2.** Now with respect to \\w_2\\, holding \\w_1\\ fixed. The first term is the constant \\3w_1\\ times \\w_2\\, contributing \\3w_1\\. The second term contributes \\3w_2^2\\. The third has no \\w_2\\ in it, contributing \\0\\:
+>
+> \\\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2\\
+>
+> **3.** Stack the two, in the order the coordinates are numbered:
+>
+> \\\nabla\_{\tilde{w}} f(\tilde{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\\
+>
+> The gradient is a vector-valued *function* of \\\tilde{w}\\, not a single vector. At \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^\top\\,
+>
+> \\\nabla\_{\tilde{w}} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix} = \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix} = \begin{bmatrix} -8 \\ 9 \end{bmatrix}\\
+>
+> **4.** The input was a vector in \\\mathbb{R}^2\\ and so is the answer, as [Table 1](#tbl-gradient-shape) requires. Note the signs: from this point, increasing \\w_1\\ *decreases* \\f\\ while increasing \\w_2\\ increases it, so the uphill direction is neither axis.
 
 > **NOTE:**
 >
@@ -329,6 +481,36 @@ This chain rule is like the univariate [chain rule](calculus.llms.md#thm-chain-r
 > **Example 14 (Differentiating a weighted trace)** Let \\\mathbf{A} = \mathbf{I}\_2\\ (\\2 \times 2\\) and \\\mathbf{B} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}\\ (\\2 \times 2\\). Then \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B}) = 2X\_{11} + 3X\_{22}\\, and:
 >
 > \\ \underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})}\_{2 \times 2} = \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} = \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \\
+
+> **NOTE:**
+>
+> **Exercise 2 (A gradient that does not mention its variable)** Fix
+>
+> \\A = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix}\\
+>
+> let \\W \in \mathbb{R}^{2 \times 3}\\ vary, and define
+>
+> \\g(W) = \sum\_{i=1}^{2} \sum\_{j=1}^{3} W\_{ij} A\_{ij}\\
+>
+> which is the entry-by-entry version of the inner product for matrices. Compute \\\nabla_W\\ g(W)\\, and say what is unusual about the answer.
+
+> **NOTE:**
+>
+> *Solution 2*. Written out over the six positions,
+>
+> \\g(W) = 2W\_{11} - W\_{12} + 0\\W\_{13} + 4W\_{21} + 3W\_{22} - 2W\_{23}\\
+>
+> Each \\W\_{ij}\\ appears in exactly one term, multiplied by \\A\_{ij}\\ and by nothing else, so differentiating with respect to it leaves \\A\_{ij}\\ behind:
+>
+> \\\frac{\partial g}{\partial W\_{ij}} = A\_{ij}\\
+>
+> Collecting those partial derivatives into a matrix of the same shape as \\W\\, as [Table 1](#tbl-gradient-shape) requires,
+>
+> \\\nabla_W\\ g(W) = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix} = A\\
+>
+> What is unusual is that the gradient came out **constant**: it does not mention \\W\\ at all. The constant answer is not a quirk of this particular \\A\\. \\g\\ is a linear function of \\W\\, and the gradient of a linear function is constant everywhere, for the same reason the derivative of \\f(w) = cw\\ is \\c\\ no matter where it is evaluated.
+>
+> A constant gradient is the easy case, and it is not the case we usually face. Most objectives are curved — the squared error of a linear model is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.
 
 ## 1 Additional resources
 
