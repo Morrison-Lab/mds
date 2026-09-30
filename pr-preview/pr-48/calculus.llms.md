@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-09-29 17:52:05 (PDT)
+Last modified: 2026-09-29 20:30:21 (PDT)
 
 ## 1 Derivatives
 
@@ -86,7 +86,7 @@ Last modified: 2026-09-29 17:52:05 (PDT)
 
 For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
-\\f(w + \epsilon) \approx f(w) + \epsilon\\\frac{d f}{d w}(w) \tag{1}\\
+\\f(w + \epsilon) \approx f(w) + \epsilon\\\frac{d }{d w}f(w) \tag{1}\\
 
 > **NOTE:**
 >
