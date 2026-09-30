@@ -49,8 +49,6 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 ## Natural numbers {#sec-notation-naturals}
 
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/notation/_exr-naturals-below-three.qmd >}}
 
 {{< slidebreak >}}

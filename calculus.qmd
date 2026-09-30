@@ -10,9 +10,9 @@ format:
     output-file: calculus.docx
 ---
 
-{{< include latex-macros/macros.qmd >}}
-
 ## Derivatives {#sec-derivatives}
+
+{{< include latex-macros/macros.qmd >}}
 
 {{< include mds/_calc-derivatives.qmd >}}
 
