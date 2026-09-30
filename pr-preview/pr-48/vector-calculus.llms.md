@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-09-29 17:42:46 (PDT)
+Last modified: 2026-09-29 17:52:05 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -31,6 +31,8 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > **TIP:**
 >
 > Hutchinson’s [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min) covers gradients and partial derivatives, the ideas behind this section ([Hutchinson, n.d.](#ref-hutchinson_wwu_ml_videos)). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+
+### 0.1 Checking a gradient by its shape
 
 The gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:
 

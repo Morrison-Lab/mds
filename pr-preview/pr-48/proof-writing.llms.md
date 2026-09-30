@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-29 17:42:46 (PDT)
+Last modified: 2026-09-29 17:52:05 (PDT)
 
 This page collects general advice on how to write proofs and derivations. The goal of a proof is not just to convince yourself that a result is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
