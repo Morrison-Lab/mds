@@ -1,3 +1,5 @@
+### Checking a gradient by its shape {#sec-gradient-shape}
+
 The gradient always has the same shape as the input it is taken with respect
 to, because it holds exactly one partial derivative per component of that
 input:
