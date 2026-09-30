@@ -134,7 +134,7 @@ $$
 
 For a differentiable function $f$ and a small step $\epsilon$,
 
-$$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{f}{w}(w)$$ {#eq-linear-approx}
+$$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{}{w}f(w)$$ {#eq-linear-approx}
 
 {{< slidebreak >}}
 
