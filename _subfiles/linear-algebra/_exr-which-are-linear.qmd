@@ -3,7 +3,7 @@
 #### Which of these are linear in $\vec w$?
 
 Each of the five expressions is a function of the weights
-$\vec w \in \mathbb{R}^D$,
+$\vec w \in \mathbb{R}^p$,
 with the data $\vec x$ and $y$ held fixed.
 Say which ones have the form @eq-linear-scalar --- an inner product plus an
 offset --- and which do not.

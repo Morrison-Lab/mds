@@ -5,7 +5,7 @@ input:
 | $f$ is a function of | its gradient is |
 |---|---|
 | a single number | a single number --- the ordinary derivative |
-| a vector in $\mathbb{R}^D$ | a vector in $\mathbb{R}^D$ |
+| a vector in $\mathbb{R}^p$ | a vector in $\mathbb{R}^p$ |
 | a matrix in $\mathbb{R}^{m \times n}$ | a matrix in $\mathbb{R}^{m \times n}$ |
 
 : The shape of a gradient follows the shape of what it differentiates with respect to. {#tbl-gradient-shape}

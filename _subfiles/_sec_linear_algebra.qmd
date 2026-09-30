@@ -42,11 +42,7 @@
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
 
-### Dot product and orthogonality
-
-{{< include mds/_subfiles/linear-algebra/_def-dot-product.qmd >}}
-
-{{< slidebreak >}}
+### Orthogonality
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
 

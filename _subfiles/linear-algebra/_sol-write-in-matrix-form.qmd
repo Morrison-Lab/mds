@@ -1,7 +1,7 @@
 ::: {#sol-write-in-matrix-form}
 
 Read the coefficients straight off the rule.
-There are three inputs, so $D = 3$:
+There are three inputs, so $p = 3$:
 
 $$\vec w = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix},
 \qquad b = -30$$
