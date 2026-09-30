@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-30 14:04:39 (PDT)
+Last modified: 2026-09-30 14:36:42 (PDT)
 
 ## Welcome
 
@@ -40,7 +40,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Vector Calculus](vector-calculus.llms.md) | `mds/_subfiles/_sec_vector_calc.qmd` |
 | [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, and `_measures.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
+`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 Quarto resolves `@id` cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, `[text](notation.qmd#id)`.
 

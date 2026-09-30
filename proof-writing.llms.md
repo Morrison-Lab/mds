@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-09-30 14:04:39 (PDT)
+Last modified: 2026-09-30 14:36:42 (PDT)
 
 This page collects general advice on how to write proofs and derivations. The goal of a proof is not just to convince yourself that a result is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
@@ -33,7 +33,5 @@ The [Linear Algebra](linear-algebra.llms.md#thm-hat-matrix) page uses this deriv
 In general, follow the golden rule: treat your readers the way you want to be treated as a reader.
 
 When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.
-
-## References
 
 Back to top

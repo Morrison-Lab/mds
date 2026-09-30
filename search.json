@@ -77,13 +77,6 @@
     "text": "3 Follow the golden rule\nIn general, follow the golden rule: treat your readers the way you want to be treated as a reader.\nWhen you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard."
   },
   {
-    "objectID": "proof-writing.html#references",
-    "href": "proof-writing.html#references",
-    "title": "Proof Writing",
-    "section": "References",
-    "text": "References"
-  },
-  {
     "objectID": "proof-writing-slides.html#sec-dont-skip-steps",
     "href": "proof-writing-slides.html#sec-dont-skip-steps",
     "title": "Proof Writing",
@@ -103,13 +96,6 @@
     "title": "Proof Writing",
     "section": "3 Follow the golden rule",
     "text": "3 Follow the golden rule\nIn general, follow the golden rule: treat your readers the way you want to be treated as a reader.\nWhen you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard."
-  },
-  {
-    "objectID": "proof-writing-slides.html#references",
-    "href": "proof-writing-slides.html#references",
-    "title": "Proof Writing",
-    "section": "References",
-    "text": "References"
   },
   {
     "objectID": "measures.html",
@@ -193,7 +179,7 @@
     "href": "index.html#using-these-notes-in-another-site",
     "title": "Math for Data Science",
     "section": "Using these notes in another site",
-    "text": "Using these notes in another site\nCourse sites include these notes as a git submodule named mds at the site’s root, and include fragments with paths that start with mds/, for example {{&lt; include mds/_notation.qmd &gt;}}. This site includes its own fragments the same way, through a mds symlink that points at the repository root.\nEach page is a thin wrapper around one or more fragments:\n\n\n\nPage\nFragment(s) to include\n\n\n\n\nNotation\nmds/_notation.qmd\n\n\nSets and Functions\nmds/_sets-functions.qmd\n\n\nAlgebra\nmds/_algebra.qmd\n\n\nMeasures\nmds/_measures.qmd\n\n\nCalculus\nmds/_calc-derivatives.qmd, mds/_calc-integrals.qmd, and the double-integral subfiles mds/_subfiles/_*fubini*.qmd\n\n\nLinear Algebra\nmds/_subfiles/_sec_linear_algebra.qmd\n\n\nVector Calculus\nmds/_subfiles/_sec_vector_calc.qmd\n\n\nProof Writing\nmds/_proof-writing.qmd\n\n\n\n_notation.qmd, _sets-functions.qmd, _algebra.qmd, and _measures.qmd include latex-macros/macros.qmd themselves; a host page that includes any of the other fragments must include latex-macros/macros.qmd first, as the pages of this site do.\nQuarto resolves @id cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, [text](notation.qmd#id)."
+    "text": "Using these notes in another site\nCourse sites include these notes as a git submodule named mds at the site’s root, and include fragments with paths that start with mds/, for example {{&lt; include mds/_notation.qmd &gt;}}. This site includes its own fragments the same way, through a mds symlink that points at the repository root.\nEach page is a thin wrapper around one or more fragments:\n\n\n\nPage\nFragment(s) to include\n\n\n\n\nNotation\nmds/_notation.qmd\n\n\nSets and Functions\nmds/_sets-functions.qmd\n\n\nAlgebra\nmds/_algebra.qmd\n\n\nMeasures\nmds/_measures.qmd\n\n\nCalculus\nmds/_calc-derivatives.qmd, mds/_calc-integrals.qmd, and the double-integral subfiles mds/_subfiles/_*fubini*.qmd\n\n\nLinear Algebra\nmds/_subfiles/_sec_linear_algebra.qmd\n\n\nVector Calculus\nmds/_subfiles/_sec_vector_calc.qmd\n\n\nProof Writing\nmds/_proof-writing.qmd\n\n\n\n_notation.qmd, _sets-functions.qmd, _algebra.qmd, _measures.qmd, and _subfiles/_sec_linear_algebra.qmd include latex-macros/macros.qmd themselves; a host page that includes any of the other fragments must include latex-macros/macros.qmd first, as the pages of this site do.\nQuarto resolves @id cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, [text](notation.qmd#id)."
   },
   {
     "objectID": "index.html#references",
@@ -214,7 +200,7 @@
     "href": "index-slides.html#using-these-notes-in-another-site",
     "title": "Math for Data Science",
     "section": "Using these notes in another site",
-    "text": "Using these notes in another site\nCourse sites include these notes as a git submodule named mds at the site’s root, and include fragments with paths that start with mds/, for example {{&lt; include mds/_notation.qmd &gt;}}. This site includes its own fragments the same way, through a mds symlink that points at the repository root.\nEach page is a thin wrapper around one or more fragments:\n\n\n\nPage\nFragment(s) to include\n\n\n\n\nNotation\nmds/_notation.qmd\n\n\nSets and Functions\nmds/_sets-functions.qmd\n\n\nAlgebra\nmds/_algebra.qmd\n\n\nMeasures\nmds/_measures.qmd\n\n\nCalculus\nmds/_calc-derivatives.qmd, mds/_calc-integrals.qmd, and the double-integral subfiles mds/_subfiles/_*fubini*.qmd\n\n\nLinear Algebra\nmds/_subfiles/_sec_linear_algebra.qmd\n\n\nVector Calculus\nmds/_subfiles/_sec_vector_calc.qmd\n\n\nProof Writing\nmds/_proof-writing.qmd\n\n\n\n_notation.qmd, _sets-functions.qmd, _algebra.qmd, and _measures.qmd include latex-macros/macros.qmd themselves; a host page that includes any of the other fragments must include latex-macros/macros.qmd first, as the pages of this site do.\nQuarto resolves @id cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, [text](notation.qmd#id)."
+    "text": "Using these notes in another site\nCourse sites include these notes as a git submodule named mds at the site’s root, and include fragments with paths that start with mds/, for example {{&lt; include mds/_notation.qmd &gt;}}. This site includes its own fragments the same way, through a mds symlink that points at the repository root.\nEach page is a thin wrapper around one or more fragments:\n\n\n\nPage\nFragment(s) to include\n\n\n\n\nNotation\nmds/_notation.qmd\n\n\nSets and Functions\nmds/_sets-functions.qmd\n\n\nAlgebra\nmds/_algebra.qmd\n\n\nMeasures\nmds/_measures.qmd\n\n\nCalculus\nmds/_calc-derivatives.qmd, mds/_calc-integrals.qmd, and the double-integral subfiles mds/_subfiles/_*fubini*.qmd\n\n\nLinear Algebra\nmds/_subfiles/_sec_linear_algebra.qmd\n\n\nVector Calculus\nmds/_subfiles/_sec_vector_calc.qmd\n\n\nProof Writing\nmds/_proof-writing.qmd\n\n\n\n_notation.qmd, _sets-functions.qmd, _algebra.qmd, _measures.qmd, and _subfiles/_sec_linear_algebra.qmd include latex-macros/macros.qmd themselves; a host page that includes any of the other fragments must include latex-macros/macros.qmd first, as the pages of this site do.\nQuarto resolves @id cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, [text](notation.qmd#id)."
   },
   {
     "objectID": "index-slides.html#references",
@@ -228,14 +214,14 @@
     "href": "algebra.html",
     "title": "Algebra",
     "section": "",
-    "text": "Mastery of Elementary Algebra (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference."
+    "text": "Mastery of Elementary Algebra (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.\n\n\n\n\n\n\n\n\nTheorem 1 (Equalities are transitive) If \\(a=b\\) and \\(b=c\\), then \\(a=c\\)\n\n\n\n\n\n\n\n\n\n\n\nTheorem 2 (Substituting equivalent expressions) If \\(a = b\\), then for any function \\(f(x)\\), \\(f(a) = f(b)\\)"
   },
   {
     "objectID": "algebra.html#equalities",
     "href": "algebra.html#equalities",
     "title": "Algebra",
-    "section": "\n1 Equalities",
-    "text": "1 Equalities\n\n\n\n\n\n\n\nTheorem 1 (Equalities are transitive) If \\(a=b\\) and \\(b=c\\), then \\(a=c\\)\n\n\n\n\n\n\n\n\n\n\n\nTheorem 2 (Substituting equivalent expressions) If \\(a = b\\), then for any function \\(f(x)\\), \\(f(a) = f(b)\\)"
+    "section": "",
+    "text": "Mastery of Elementary Algebra (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.\n\n\n\n\n\n\n\n\nTheorem 1 (Equalities are transitive) If \\(a=b\\) and \\(b=c\\), then \\(a=c\\)\n\n\n\n\n\n\n\n\n\n\n\nTheorem 2 (Substituting equivalent expressions) If \\(a = b\\), then for any function \\(f(x)\\), \\(f(a) = f(b)\\)"
   },
   {
     "objectID": "algebra.html#inequalities",
@@ -298,7 +284,7 @@
     "href": "algebra-slides.html#equalities",
     "title": "Algebra",
     "section": "\n1 Equalities",
-    "text": "1 Equalities\n\nTheorem 1 (Equalities are transitive) If \\(a=b\\) and \\(b=c\\), then \\(a=c\\)"
+    "text": "1 Equalities\nMastery of Elementary Algebra (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.\n\nTheorem 1 (Equalities are transitive) If \\(a=b\\) and \\(b=c\\), then \\(a=c\\)"
   },
   {
     "objectID": "algebra-slides.html#inequalities",
@@ -613,7 +599,7 @@
     "href": "notation-slides.html#sec-notation-naturals",
     "title": "Notation",
     "section": "2 Natural numbers",
-    "text": "2 Natural numbers"
+    "text": "2 Natural numbers\n\nExercise 1 (Which numbers are natural?) List the elements of the set \\(\\mathopen{}\\left\\{n \\in \\mathbb{N} : n &lt; 3\\right\\}\\mathclose{}\\). Is your answer the same in every textbook?"
   },
   {
     "objectID": "notation-slides.html#percent-sign",
