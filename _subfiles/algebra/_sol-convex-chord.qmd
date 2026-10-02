@@ -1,7 +1,7 @@
 :::{#sol-convex-chord}
 
 1. With $t = \tfrac{1}{2}$,
-   $t a + (1 - t) b = \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 = 2$,
+   $t x + (1 - t) y = \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 = 2$,
    so $f(2) = (2 - 2)^2 = 0$.
 
 2. $f(0) = (0 - 2)^2 = 4$ and $f(4) = (4 - 2)^2 = 4$,

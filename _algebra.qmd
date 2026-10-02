@@ -82,6 +82,8 @@
 
 {{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
 
+{{< include mds/_subfiles/algebra/_proof-thm-convex-local-global.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
