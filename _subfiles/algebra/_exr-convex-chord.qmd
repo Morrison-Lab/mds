@@ -1,0 +1,11 @@
+:::{#exr-convex-chord}
+#### A chord above a parabola
+
+Let $f(x) = (x - 2)^2$,
+and take the points $x = 0$ and $y = 4$ with $t = \tfrac{1}{2}$.
+
+1. Compute $f(t x + (1 - t) y)$.
+2. Compute $t f(x) + (1 - t) f(y)$.
+3. Is $f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)$?
+
+:::
