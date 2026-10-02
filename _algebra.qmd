@@ -50,6 +50,22 @@
 
 {{< include mds/_subfiles/algebra/_def-argmax.qmd >}}
 
+## Global and local minimizers {#sec-minimizers}
+
+{{< include mds/_subfiles/algebra/_exr-local-vs-global-min.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-local-vs-global-min.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-global-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-local-minimizer.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
