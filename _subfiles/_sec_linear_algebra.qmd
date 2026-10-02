@@ -68,6 +68,22 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-euclidean-distance.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-euclidean-distance.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-euclidean-distance.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-distance-from-origin.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-orthonormal-vectors.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-orthonormal-vectors.qmd >}}
