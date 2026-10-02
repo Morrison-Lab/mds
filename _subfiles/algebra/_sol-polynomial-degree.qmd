@@ -1,0 +1,10 @@
+:::{#sol-polynomial-degree}
+
+1. $f(x) = 3x^4 + 0 \cdot x^3 + 0 \cdot x^2 + (-1) \cdot x + 7$,
+   so $a_4 = 3$, $a_3 = 0$, $a_2 = 0$, $a_1 = -1$, and $a_0 = 7$.
+   Powers of $x$ that do not appear have coefficient $0$.
+
+2. The highest power with a nonzero coefficient is $x^4$,
+   so the degree is $4$ and the leading coefficient is $a_4 = 3$.
+
+:::
