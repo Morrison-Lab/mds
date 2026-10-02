@@ -1,0 +1,19 @@
+:::{#thm-square-of-a-sum}
+#### Square of a sum
+
+For any numbers $a$ and $b$,
+
+$$
+(a + b)^2 = a^2 + 2ab + b^2
+$$
+
+:::
+
+::: proof
+By @sol-square-of-a-sum.
+:::
+
+::: notes
+Replacing $b$ by $-b$ gives $(a - b)^2 = a^2 - 2ab + b^2$.
+Squared errors such as $(y - \hat{y})^2$ are expanded this way.
+:::

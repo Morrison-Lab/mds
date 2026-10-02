@@ -118,6 +118,18 @@
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-square-of-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-square-of-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
+
 ## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
