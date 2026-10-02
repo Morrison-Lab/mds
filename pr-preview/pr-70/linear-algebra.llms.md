@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-02 09:33:25 (PDT)
+Last modified: 2026-10-02 09:41:46 (PDT)
 
 ## 1 Vectors
 
@@ -183,7 +183,11 @@ Orthogonality generalizes the geometric notion of perpendicularity to arbitrary 
 >
 > \\d(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\tilde{x}- \tilde{y}\right\rVert\mathclose{} = \sqrt{\sum\_{i=1}^p(x_i - y_i)^2} \tag{3}\\
 
-In [Exercise 2](#exr-euclidean-distance), \\d\mathopen{}\left((1, 2), (4, 6)\right)\mathclose{} = \sqrt{(1 - 4)^2 + (2 - 6)^2} = 5\\. The distance from the origin to \\\tilde{x}\\ is \\d(\tilde{x}, \tilde{0}) = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\, the case Goodfellow et al. ([2016, 39](#ref-goodfellow2016deep)) describe.
+> **NOTE:**
+>
+> *Remark 1* (Distance from the origin). The distance from the origin \\\tilde{0}\\ to a vector \\\tilde{x}\\ is the norm of \\\tilde{x}\\: \\d(\tilde{x}, \tilde{0}) = \mathopen{}\left\lVert\tilde{x}- \tilde{0}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\ ([Goodfellow et al. 2016, 39](#ref-goodfellow2016deep)).
+>
+> For example, the distance from \\\tilde{0}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 3](#exm-euclidean-norm).
 
 > **NOTE:**
 >
