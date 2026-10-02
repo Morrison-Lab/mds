@@ -1,0 +1,23 @@
+:::{#def-summation}
+#### Summation notation
+
+Let $m$ and $n$ be integers with $m \le n$,
+and let $a_m, a_{m+1}, \ldots, a_n$ be numbers.
+The **sum** of $a_m$ through $a_n$ is
+
+$$
+\sum_{i=m}^{n} a_i \eqdef a_m + a_{m+1} + \cdots + a_n
+$$
+
+The variable $i$ is the **index** of the sum;
+$m$ and $n$ are its **lower** and **upper limits**.
+
+:::
+
+::: notes
+The index is a placeholder:
+$\sum_{i=1}^{n} a_i$ and $\sum_{j=1}^{n} a_j$ are the same number.
+When the upper limit is less than the lower limit,
+the sum has no terms,
+and by convention it equals $0$.
+:::
