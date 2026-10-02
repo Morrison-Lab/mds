@@ -1,0 +1,50 @@
+:::{#def-sum-over-set}
+#### Sum over a finite set
+
+Let $A = \cb{x_1, x_2, \ldots, x_k}$ be a finite [set](sets-functions.qmd#def-set)
+with $k \ge 1$ different elements.
+Let $f$ be a [function](sets-functions.qmd#def-function)
+that gives a number $f(x)$ for each element $x$ of $A$.
+The **sum of $f$ over $A$** is
+
+$$
+\sum_{x \in A} f(x) \eqdef f(x_1) + f(x_2) + \cdots + f(x_k)
+$$
+
+If $A$ has no elements, the sum has no terms,
+and by convention it equals $0$.
+For example, $\sum_{x \in \cb{}} x^2 = 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-sum-over-set-order}
+#### The order of the terms does not matter
+
+The order in which we list the elements of $A$ does not change the sum.
+The reason is that addition is commutative and associative:
+we can reorder and regroup the terms of a finite sum
+without changing the total.
+For example, if $A = \cb{1, 2, 3}$ and $f(x) = x^2$,
+listing $A$ as $1, 2, 3$ gives $1 + 4 + 9 = 14$,
+and listing $A$ as $3, 1, 2$ gives $9 + 1 + 4 = 14$.
+@exr-sum-over-set, part 2, shows another example.
+
+When $A = \cb{m, m+1, \ldots, n}$,
+this sum is the same as $\sum_{i=m}^{n} f(i)$ from @def-summation.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-sum-without-set}
+#### Leaving the set out
+
+Some authors leave the set out and write $\sum_{x} f(x)$.
+This shorthand means the sum over every value $x$ can take.
+For example, if $x$ is the outcome of one roll of a six-sided die,
+$\sum_{x} f(x)$ means $\sum_{x \in \cb{1, 2, 3, 4, 5, 6}} f(x)$.
+In these notes, we write the set out in full.
+
+:::

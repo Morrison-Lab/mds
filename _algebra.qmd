@@ -176,6 +176,18 @@
 
 {{< include mds/_subfiles/algebra/_thm-sum-of-sums.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-sum-over-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-over-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-sum-over-set.qmd >}}
+
 ## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
