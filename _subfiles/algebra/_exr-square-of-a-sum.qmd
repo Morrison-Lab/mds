@@ -1,0 +1,8 @@
+:::{#exr-square-of-a-sum}
+#### Expand a squared sum
+
+Is $(3 + 4)^2$ equal to $3^2 + 4^2$?
+Then expand $(a + b)^2$ for any numbers $a$ and $b$,
+using only the distributive law and the rules above.
+
+:::
