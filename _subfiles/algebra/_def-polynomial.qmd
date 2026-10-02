@@ -22,4 +22,7 @@ In @exr-polynomial-degree,
 $f(x) = 3x^4 - x + 7$ is a polynomial
 with $n = 4$, $a_4 = 3$, $a_3 = 0$, $a_2 = 0$, $a_1 = -1$, and $a_0 = 7$.
 A constant function $f(x) = 7$ is a polynomial with $n = 0$ and $a_0 = 7$.
+The requirement $a_n \ne 0$ means this definition covers nonzero polynomials only,
+so that the degree is defined (@def-polynomial-degree);
+the zero function $f(x) = 0$ is excluded here.
 :::

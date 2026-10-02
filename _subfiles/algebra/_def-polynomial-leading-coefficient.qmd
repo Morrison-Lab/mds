@@ -3,8 +3,7 @@
 #### Leading coefficient
 
 Let $f(x) = a_n x^n + \cdots + a_1 x + a_0$
-be a [polynomial](#def-polynomial) of degree $n$
-([degree](#def-polynomial-degree)).
+be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) $n$.
 The constant $a_n$ is the **leading coefficient** of $f$.
 
 :::
