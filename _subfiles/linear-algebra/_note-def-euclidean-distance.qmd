@@ -2,5 +2,5 @@
 In @exr-euclidean-distance,
 $d\paren{(1, 2), (4, 6)} = \sqrt{(1 - 4)^2 + (2 - 6)^2} = 5$.
 The distance from the origin to $\vx$ is $d(\vx, \vzero) = \norm{\vx}$,
-the case Goodfellow et al. (2016, p. 39) describe.
+the case @goodfellow2016deep [p. 39] describe.
 :::
