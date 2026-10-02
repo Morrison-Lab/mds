@@ -3,6 +3,12 @@
 
 A set $B$ is a **strict superset** of a set $A$,
 written $B \supsetneq A$,
-if $A$ is a [strict subset](#def-strict-subset) of $B$.
+if $B$ is a [superset](#def-superset) of $A$
+and $B \neq A$.
 
+:::
+
+::: notes
+So $B \supsetneq A$ means the same thing as $A \subsetneq B$
+([strict subset](#def-strict-subset)).
 :::

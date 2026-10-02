@@ -3,6 +3,12 @@
 
 A set $B$ is a **superset** of a set $A$,
 written $B \supseteq A$,
-if $A$ is a [subset](#def-subset) of $B$.
+if every element of $A$ is an element of $B$.
 
+:::
+
+::: notes
+So $B \supseteq A$ means the same thing as $A \subseteq B$
+([subset](#def-subset)).
+For example, $\set{1, 2, 3} \supseteq \set{1, 3}$.
 :::
