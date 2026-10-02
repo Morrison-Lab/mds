@@ -88,6 +88,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_note-def-matrix.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-tensor.qmd >}}
+
 ### Matrix transpose {#sec-matrix-transpose}
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-transpose.qmd >}}

@@ -1,0 +1,28 @@
+<!--
+Source: OpenStax, Calculus Volume 1, section 1.2 "Basic Classes of Functions"
+(online text, https://openstax.org/books/calculus-volume-1/pages/1-2-basic-classes-of-functions;
+print page number not verified).
+-->
+:::{#def-polynomial}
+#### Polynomial
+
+A **polynomial** (in one variable $x$) is a
+[function](sets-functions.qmd#def-function) $f : \reals \to \reals$
+that can be written as
+$$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+$$
+for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \reals$
+with $a_n \ne 0$.
+The integer $n$ is the **degree** of $f$,
+and $a_n$ is its **leading coefficient**.
+
+:::
+
+::: notes
+In @exr-polynomial-degree,
+$f(x) = 3x^4 - x + 7$ has degree $n = 4$ and leading coefficient $a_4 = 3$.
+A constant function $f(x) = 7$ is a polynomial of degree $0$.
+The zero function $f(x) = 0$ has no nonzero coefficient,
+so this definition does not assign it a degree.
+:::
