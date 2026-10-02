@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-02 09:27:16 (PDT)
+Last modified: 2026-10-02 09:44:08 (PDT)
 
 > **NOTE:**
 >
@@ -60,13 +60,17 @@ Last modified: 2026-10-02 09:27:16 (PDT)
 >
 > **Definition 5 (Superset)** A set \\B\\ is a **superset** of a set \\A\\, written \\B \supseteq A\\, if every element of \\A\\ is an element of \\B\\.
 
-So \\B \supseteq A\\ means the same thing as \\A \subseteq B\\ ([subset](#def-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supseteq \mathopen{}\left\\1, 3\right\\\mathclose{}\\.
+> **NOTE:**
+>
+> *Remark 1* (Superset and subset). \\B \supseteq A\\ means the same thing as \\A \subseteq B\\ ([subset](#def-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supseteq \mathopen{}\left\\1, 3\right\\\mathclose{}\\, and \\\mathopen{}\left\\1, 3\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
 > **Definition 6 (Strict superset)** A set \\B\\ is a **strict superset** of a set \\A\\, written \\B \supsetneq A\\, if \\B\\ is a [superset](#def-superset) of \\A\\ and \\B \neq A\\.
 
-So \\B \supsetneq A\\ means the same thing as \\A \subsetneq B\\ ([strict subset](#def-strict-subset)).
+> **NOTE:**
+>
+> *Remark 2* (Strict superset and strict subset). \\B \supsetneq A\\ means the same thing as \\A \subsetneq B\\ ([strict subset](#def-strict-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supsetneq \mathopen{}\left\\1, 3\right\\\mathclose{}\\, because \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ contains \\2\\ and \\\mathopen{}\left\\1, 3\right\\\mathclose{}\\ does not.
 
 > **NOTE:**
 >
