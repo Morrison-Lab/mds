@@ -1,0 +1,39 @@
+:::{#sol-sum-rules}
+
+Each step below applies @def-summation,
+the distributive law (@thm-mult-distr),
+or the commutative and associative laws of addition
+(@thm-sum-symmetric and @thm-sum-assoc).
+
+1.  Expand the sum, then factor out $c$:
+
+    $$
+    \ba
+    \sum_{i=1}^{3} c\, a_i
+    &= c\, a_1 + c\, a_2 + c\, a_3
+    && \text{(expand the sum)}
+    \\ &= c \left(a_1 + a_2 + a_3\right)
+    && \text{(distributive law)}
+    \\ &= c \sum_{i=1}^{3} a_i
+    && \text{(collect the sum)}
+    \ea
+    $$
+
+2.  Expand the sum, then regroup the terms:
+
+    $$
+    \ba
+    \sum_{i=1}^{3} \left(a_i + b_i\right)
+    &= \left(a_1 + b_1\right) + \left(a_2 + b_2\right) + \left(a_3 + b_3\right)
+    && \text{(expand the sum)}
+    \\ &= \left(a_1 + a_2 + a_3\right) + \left(b_1 + b_2 + b_3\right)
+    && \text{(commutative and associative laws)}
+    \\ &= \sum_{i=1}^{3} a_i + \sum_{i=1}^{3} b_i
+    && \text{(collect the sum)}
+    \ea
+    $$
+
+Neither argument uses the number of terms:
+the same steps work for any lower and upper limits.
+
+:::

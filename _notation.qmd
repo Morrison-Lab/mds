@@ -15,7 +15,7 @@ and the alternatives you may meet in other sources.
 | $\cup$      | union, "or"                                      | `\cup`
 | $\cap$      | intersection, "and"                              | `\cap`
 | $\mid$      | given, conditional on                            | `\mid`, `|`
-| $\sum$      | sum                                              | `\sum`
+| $\sum$      | [sum](algebra.qmd#sec-summation)                 | `\sum`
 | $\prod$     | product                                          | `\prod`
 | $\mu$       | mean                                             | `\mu`
 | $\Expp$     | [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)   | `\mathbb{E}`

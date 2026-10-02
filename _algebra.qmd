@@ -130,6 +130,34 @@
 
 {{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
 
+## Summation notation {#sec-summation}
+
+{{< include mds/_subfiles/algebra/_exr-expand-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-expand-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-summation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-sum-rules.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-rules.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-sum-constant-factor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-sum-of-sums.qmd >}}
+
 ## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}

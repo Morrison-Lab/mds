@@ -1,0 +1,14 @@
+:::{#thm-sum-constant-factor}
+#### A constant factor comes out of a sum
+
+For any number $c$ and numbers $a_m, \ldots, a_n$,
+
+$$
+\sum_{i=m}^{n} c\, a_i = c \sum_{i=m}^{n} a_i
+$$
+
+:::
+
+::: proof
+By @sol-sum-rules, part 1.
+:::
