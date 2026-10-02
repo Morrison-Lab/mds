@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-02 01:26:26 (PDT)
+Last modified: 2026-10-02 01:33:15 (PDT)
 
 ## 1 Equalities
 
@@ -124,17 +124,57 @@ The global minimizers of \\f\\ are exactly the elements of \\\arg \min\_{x \in A
 
 For \\p = 1\\, \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x - x^\*\right\|\mathclose{}\\. Every global minimizer ([Definition 5](#def-global-minimizer)) is a local minimizer: take any \\\delta \> 0\\. The converse fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f\\ (take \\\delta = 1\\), but not a global one.
 
-## 5 Infimum and supremum
+## 5 Convex functions
 
 > **NOTE:**
 >
-> **Definition 7 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below, meaning that some \\t \in \mathbb{R}\\ satisfies \\t \le a\\ for all \\a \in A\\. The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
+> **Exercise 3 (A chord above a parabola)** Let \\f(x) = (x - 2)^2\\, and take the points \\x = 0\\ and \\y = 4\\ with \\t = \tfrac{1}{2}\\.
+>
+> 1.  Compute \\f(t x + (1 - t) y)\\.
+> 2.  Compute \\t f(x) + (1 - t) f(y)\\.
+> 3.  Is \\f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y)\\?
+
+> **NOTE:**
+>
+> *Solution 3*.
+>
+> 1.  With \\t = \tfrac{1}{2}\\, \\t x + (1 - t) y = \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 = 2\\, so \\f(2) = (2 - 2)^2 = 0\\.
+>
+> 2.  \\f(0) = (0 - 2)^2 = 4\\ and \\f(4) = (4 - 2)^2 = 4\\, so \\\tfrac{1}{2} \cdot 4 + \tfrac{1}{2} \cdot 4 = 4\\.
+>
+> 3.  Yes: \\0 \le 4\\. The value of \\f\\ at the midpoint of \\0\\ and \\4\\ is below the average of its values at the two endpoints.
+
+> **NOTE:**
+>
+> **Definition 7 (Convex function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). \\f\\ is **convex** if \\ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y) \\ for all \\x, y \in \mathbb{R}^p\\ and all \\t \in \[0, 1\]\\.
+
+The point \\t x + (1 - t) y\\ lies on the line segment from \\x\\ to \\y\\, and the right-hand side is the height of the chord joining \\(x, f(x))\\ and \\(y, f(y))\\ above that point. So \\f\\ is convex when every chord lies on or above the graph. In [Exercise 3](#exr-convex-chord), \\f(x) = (x - 2)^2\\ with \\x = 0\\, \\y = 4\\, \\t = \tfrac{1}{2}\\ gives \\f(2) = 0 \le 4\\, which is one instance of the inequality. The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\: \\f(-1) = 2\\, but \\\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} \cdot (-2) + 0 = -1\\, and \\2 \le -1\\ is false.
+
+> **NOTE:**
+>
+> **Theorem 7 (Local minimizers of convex functions are global)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Every [local minimizer](#def-local-minimizer) of \\f\\ is a [global minimizer](#def-global-minimizer) of \\f\\ over \\\mathbb{R}^p\\.
+
+For example, \\f(x) = (x - 2)^2\\ is convex (by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\), and \\x^\* = 2\\ is a local minimizer of \\f\\. The theorem says \\x^\* = 2\\ is a global minimizer, which is also visible directly: \\f(x) = (x - 2)^2 \ge 0 = f(2)\\ for every \\x\\. The theorem fails without convexity: \\f(x) = x^3 - 3x\\ has a local minimizer at \\x^\* = 1\\ that is not global ([Exercise 2](#exr-local-vs-global-min)).
+
+> **NOTE:**
+>
+> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta \> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 6](#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 5](#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
+>
+> Let \\t = \min\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta / 2 \< \delta\\.
+>
+> By convexity, \\ f(z) \le t f(y) + (1 - t) f(x^\*) \< t f(x^\*) + (1 - t) f(x^\*) = f(x^\*), \\ where the strict inequality uses \\t \> 0\\ and \\f(y) \< f(x^\*)\\. So \\f(z) \< f(x^\*)\\ with \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} \< \delta\\, which contradicts \\x^\*\\ being a local minimizer. Hence \\x^\*\\ is a global minimizer.
+
+## 6 Infimum and supremum
+
+> **NOTE:**
+>
+> **Definition 8 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below, meaning that some \\t \in \mathbb{R}\\ satisfies \\t \le a\\ for all \\a \in A\\. The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
 >
 > \\\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ t \le a\right\\\mathclose{}\\
 >
 > If \\A\\ is nonempty but not bounded below, we write \\\inf A = -\infty\\ by convention.
 
-The maximum in [Definition 7](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\.
+The maximum in [Definition 8](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\.
 
 > **NOTE:**
 >
@@ -147,13 +187,13 @@ The maximum in [Definition 7](#def-infimum) always exists: that is the complete
 
 > **NOTE:**
 >
-> **Definition 8 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above, meaning that some \\t \in \mathbb{R}\\ satisfies \\a \le t\\ for all \\a \in A\\. The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
+> **Definition 9 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above, meaning that some \\t \in \mathbb{R}\\ satisfies \\a \le t\\ for all \\a \in A\\. The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
 >
 > \\\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ a \le t\right\\\mathclose{}\\
 >
 > If \\A\\ is nonempty but not bounded above, we write \\\sup A = +\infty\\ by convention.
 
-The minimum in [Definition 8](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\.
+The minimum in [Definition 9](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\.
 
 > **NOTE:**
 >
@@ -163,90 +203,90 @@ The minimum in [Definition 8](#def-supremum) always exists: that is the complet
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
 > - \\\sup\\1, 2, 3, \ldots\\ = +\infty\\, because no real number is greater than or equal to every element of that set.
 
-## 6 Sums
+## 7 Sums
 
 > **NOTE:**
 >
-> **Theorem 7 (adding zero changes nothing)** \\a+0=a\\
+> **Theorem 8 (adding zero changes nothing)** \\a+0=a\\
 
 > **NOTE:**
 >
-> **Theorem 8 (Sums are symmetric)** \\a+b = b+a\\
+> **Theorem 9 (Sums are symmetric)** \\a+b = b+a\\
 
 > **NOTE:**
 >
-> **Theorem 9 (Sums are associative)**  
+> **Theorem 10 (Sums are associative)**  
 >
 > When summing three or more terms, the order in which you sum them does not matter:
 >
 > \\(a + b) + c = a + (b + c)\\
 
-## 7 Products
+## 8 Products
 
 > **NOTE:**
 >
-> **Theorem 10 (Multiplying by 1 changes nothing)** \\a \times 1 = a\\
+> **Theorem 11 (Multiplying by 1 changes nothing)** \\a \times 1 = a\\
 
 > **NOTE:**
 >
-> **Theorem 11 (Products are symmetric)** \\a \times b = b \times a\\
+> **Theorem 12 (Products are symmetric)** \\a \times b = b \times a\\
 
 > **NOTE:**
 >
-> **Theorem 12 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
+> **Theorem 13 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
 
-## 8 Division
+## 9 Division
 
 > **NOTE:**
 >
-> **Theorem 13 (Division can be written as a product)** If \\b \neq 0\\, then
+> **Theorem 14 (Division can be written as a product)** If \\b \neq 0\\, then
 >
 > \\\frac {a}{b} = a \times \frac{1}{b}\\
 
-## 9 Sums and products together
+## 10 Sums and products together
 
 > **NOTE:**
 >
-> **Theorem 14 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
+> **Theorem 15 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
 
 > **NOTE:**
 >
-> **Exercise 3 (Expand a squared sum)** Is \\(3 + 4)^2\\ equal to \\3^2 + 4^2\\? Then expand \\(a + b)^2\\ for any numbers \\a\\ and \\b\\, using only the distributive law and the rules above.
+> **Exercise 4 (Expand a squared sum)** Is \\(3 + 4)^2\\ equal to \\3^2 + 4^2\\? Then expand \\(a + b)^2\\ for any numbers \\a\\ and \\b\\, using only the distributive law and the rules above.
 
 > **NOTE:**
 >
-> *Solution 3*. No: \\(3 + 4)^2 = 7^2 = 49\\, while \\3^2 + 4^2 = 9 + 16 = 25\\. The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
+> *Solution 4*. No: \\(3 + 4)^2 = 7^2 = 49\\, while \\3^2 + 4^2 = 9 + 16 = 25\\. The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
 >
-> To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 14](#thm-mult-distr)) twice:
+> To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 15](#thm-mult-distr)) twice:
 >
 > \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms)} \end{aligned} \\
 >
-> The step “commutative and associative laws” uses [Theorem 11](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 9](#thm-sum-assoc) to drop the parentheses.
+> The step “commutative and associative laws” uses [Theorem 12](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 10](#thm-sum-assoc) to drop the parentheses.
 
 > **NOTE:**
 >
-> **Theorem 15 (Square of a sum)** For any numbers \\a\\ and \\b\\,
+> **Theorem 16 (Square of a sum)** For any numbers \\a\\ and \\b\\,
 >
 > \\ (a + b)^2 = a^2 + 2ab + b^2 \\
 
 > **NOTE:**
 >
-> *Proof*. By [Solution 3](#sol-square-of-a-sum).
+> *Proof*. By [Solution 4](#sol-square-of-a-sum).
 
 Replacing \\b\\ by \\-b\\ gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors such as \\(y - \hat{y})^2\\ are expanded this way.
 
-## 10 Summation notation
+## 11 Summation notation
 
 > **NOTE:**
 >
-> **Exercise 4 (Expand a sum)** The expression \\\sum\_{i=1}^{4} i^2\\ is shorthand for a sum of four terms.
+> **Exercise 5 (Expand a sum)** The expression \\\sum\_{i=1}^{4} i^2\\ is shorthand for a sum of four terms.
 >
 > 1.  Guess which four terms, and add them up.
 > 2.  Write \\\frac{1}{N} \sum\_{i=1}^{N} \left(y_i - \hat{y}\_i\right)^2\\ for \\N = 3\\ without the \\\sum\\ symbol.
 
 > **NOTE:**
 >
-> *Solution 4*.
+> *Solution 5*.
 >
 > 1.  Replace \\i\\ by each of \\1, 2, 3, 4\\ in turn, and add the results:
 >
@@ -258,7 +298,7 @@ Replacing \\b\\ by \\-b\\ gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors 
 
 > **NOTE:**
 >
-> **Definition 9 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
+> **Definition 10 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
@@ -268,7 +308,7 @@ The index is a placeholder: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ 
 
 > **NOTE:**
 >
-> **Exercise 5 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 9](#def-summation) and the rules of algebra above, show that:
+> **Exercise 6 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 10](#def-summation) and the rules of algebra above, show that:
 >
 > 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
 > 2.  \\\sum\_{i=1}^{3} \left(a_i + b_i\right) = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
@@ -277,7 +317,7 @@ The index is a placeholder: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ 
 
 > **NOTE:**
 >
-> *Solution 5*. Each step below applies [Definition 9](#def-summation), the distributive law ([Theorem 14](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 8](#thm-sum-symmetric) and [Theorem 9](#thm-sum-assoc)).
+> *Solution 6*. Each step below applies [Definition 10](#def-summation), the distributive law ([Theorem 15](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 9](#thm-sum-symmetric) and [Theorem 10](#thm-sum-assoc)).
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
@@ -291,29 +331,29 @@ The index is a placeholder: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ 
 
 > **NOTE:**
 >
-> **Theorem 16 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
+> **Theorem 17 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
 >
 > \\ \sum\_{i=m}^{n} c\\ a_i = c \sum\_{i=m}^{n} a_i \\
 
 > **NOTE:**
 >
-> *Proof*. By [Solution 5](#sol-sum-rules), part 1.
+> *Proof*. By [Solution 6](#sol-sum-rules), part 1.
 
 > **NOTE:**
 >
-> **Theorem 17 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
+> **Theorem 18 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
 >
 > \\ \sum\_{i=m}^{n} \left(a_i + b_i\right) = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
 
 > **NOTE:**
 >
-> *Proof*. By [Solution 5](#sol-sum-rules), part 2.
+> *Proof*. By [Solution 6](#sol-sum-rules), part 2.
 
-## 11 Quotients
+## 12 Quotients
 
 > **NOTE:**
 >
-> **Definition 10 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Definition 11 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
@@ -323,17 +363,17 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 10](#def-quotient) requires a nonzero denominator.
+> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 11](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 11 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 12 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Definition 12 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 13 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -341,22 +381,22 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 13 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 14 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 12 Polynomials
+## 13 Polynomials
 
 > **NOTE:**
 >
-> **Exercise 6 (Reading a polynomial)** Let \\f(x) = 3x^4 - x + 7\\.
+> **Exercise 7 (Reading a polynomial)** Let \\f(x) = 3x^4 - x + 7\\.
 >
 > 1.  Write \\f\\ in the form \\a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0\\, listing every coefficient \\a_4, a_3, a_2, a_1, a_0\\.
 > 2.  What is the degree of \\f\\, and what is its leading coefficient?
 
 > **NOTE:**
 >
-> *Solution 6*.
+> *Solution 7*.
 >
 > 1.  \\f(x) = 3x^4 + 0 \cdot x^3 + 0 \cdot x^2 + (-1) \cdot x + 7\\, so \\a_4 = 3\\, \\a_3 = 0\\, \\a_2 = 0\\, \\a_1 = -1\\, and \\a_0 = 7\\. Powers of \\x\\ that do not appear have coefficient \\0\\.
 >
@@ -364,36 +404,36 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 14 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
+> **Definition 15 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
 
-In [Exercise 6](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ is a polynomial with \\n = 4\\, \\a_4 = 3\\, \\a_3 = 0\\, \\a_2 = 0\\, \\a_1 = -1\\, and \\a_0 = 7\\. A constant function \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only, so that the degree is defined ([Definition 15](#def-polynomial-degree)); the zero function \\f(x) = 0\\ is excluded here.
-
-> **NOTE:**
->
-> **Definition 15 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
-
-In [Exercise 6](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has degree \\4\\. A constant polynomial \\f(x) = 7\\ has degree \\0\\.
+In [Exercise 7](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ is a polynomial with \\n = 4\\, \\a_4 = 3\\, \\a_3 = 0\\, \\a_2 = 0\\, \\a_1 = -1\\, and \\a_0 = 7\\. A constant function \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only, so that the degree is defined ([Definition 16](#def-polynomial-degree)); the zero function \\f(x) = 0\\ is excluded here.
 
 > **NOTE:**
 >
-> **Definition 16 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+> **Definition 16 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
 
-In [Exercise 6](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has leading coefficient \\3\\.
+In [Exercise 7](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has degree \\4\\. A constant polynomial \\f(x) = 7\\ has degree \\0\\.
 
-## 13 Exponentials and Logarithms
+> **NOTE:**
+>
+> **Definition 17 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+
+In [Exercise 7](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has leading coefficient \\3\\.
+
+## 14 Exponentials and Logarithms
 
 In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is the natural logarithm of \\x \> 0\\, the logarithm with base \\e \approx 2.718\\, and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} = e^x\\ is the exponential function. Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for base 10.
 
 > **NOTE:**
 >
-> **Theorem 18 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
+> **Theorem 19 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 
 > **NOTE:**
 >
-> **Theorem 19 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
+> **Theorem 20 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} \\
 
@@ -405,21 +445,21 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 19](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
+> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 20](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
 >
 > \\ \begin{aligned} \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} && \text{(logarithm of a product)} \end{aligned} \\
 >
-> The second step applies [Theorem 19](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
+> The second step applies [Theorem 20](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Theorem 20 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
+> **Theorem 21 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{} = b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} \\
 
 > **NOTE:**
 >
-> **Theorem 21 (exponential of a sum)**  
+> **Theorem 22 (exponential of a sum)**  
 >
 > The exponential of a sum is equal to the product of the exponentials of the addends:
 >
@@ -435,7 +475,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Theorem 22 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 23 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
 
@@ -449,7 +489,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} \mathopen{}\left(a^b\right)\mathclose{}^c &= \mathopen{}\left((-1)^2\right)\mathclose{}^{\frac{1}{2}} \\ &= 1^{\frac{1}{2}} \\ &= 1 \end{aligned} \\
 >
-> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 22](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
+> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 23](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
 
 > **NOTE:**
 >
@@ -457,11 +497,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 7** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 8** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 7*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 8*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
@@ -596,24 +636,24 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 8** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 9** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
-> *Solution 8*. Short answer: rarely (that’s all you need to know for this course).
+> *Solution 9*. Short answer: rarely (that’s all you need to know for this course).
 >
 > Long answer:
 >
 > Split on whether \\a \> 0\\ or \\a = 0\\, because the logarithm we use for \\a \> 0\\ is undefined at \\a = 0\\.
 >
-> **Case \\a \> 0\\.** By [Theorem 22](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 20](#thm-log-exp)):
+> **Case \\a \> 0\\.** By [Theorem 23](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 21](#thm-log-exp)):
 >
 > \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
-> 2.  \\bc = b^c\\ (see [Exercise 7](#exr-exp-vs-mult)).
+> 2.  \\bc = b^c\\ (see [Exercise 8](#exr-exp-vs-mult)).
 >
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\, \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
