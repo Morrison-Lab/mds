@@ -11,14 +11,6 @@ is the standard extension of that statement and is not stated on that page.
 The **Euclidean distance** between two vectors $\vx$ and $\vy$ of length $p$
 is the [Euclidean norm](#def-euclidean-norm) of their difference:
 
-$$d(\vx, \vy) \eqdef \norm{\vx - \vy} = \sqrt{\sumip (x_i - y_i)^2}$$
+$$d(\vx, \vy) \eqdef \norm{\vx - \vy} = \sqrt{\sumip (x_i - y_i)^2}$$ {#eq-euclidean-distance}
 
-:::
-
-::: notes
-In @exr-euclidean-distance,
-$d\paren{(1, 2), (4, 6)} = \sqrt{(1 - 4)^2 + (2 - 6)^2} = 5$.
-The distance from the origin to $\vx$ is $d(\vx, \vzero) = \norm{\vx}$,
-the case Goodfellow et al. (2016, p. 39) describe.
-For $\vx = (3, 4)$, $d(\vx, \vzero) = 5$.
 :::

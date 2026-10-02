@@ -78,6 +78,8 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-euclidean-distance.qmd >}}
 
+{{< include mds/_subfiles/linear-algebra/_note-def-euclidean-distance.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-orthonormal-vectors.qmd >}}
