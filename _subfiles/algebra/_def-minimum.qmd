@@ -1,0 +1,17 @@
+:::{#def-minimum}
+#### Minimum
+
+Let $A \subseteq \reals$.
+A number $m$ is the **minimum** of $A$,
+written $\min A$,
+if $m \in A$ and $m \le a$ for all $a \in A$.
+
+:::
+
+::: notes
+Not every set has a minimum.
+The interval $(0, 1]$ has none:
+every element $a$ of it has a smaller element, $a/2$, also in it.
+In @exr-min-and-argmin,
+the smallest value of $g$ is $\min\cb{5, 2, 2, 5} = 2$.
+:::
