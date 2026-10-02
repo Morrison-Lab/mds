@@ -1,0 +1,14 @@
+:::{#exr-sum-over-set}
+#### Sum over a set
+
+Let $A = \cb{-1, 2, 5}$ and let $f(x) = x^2$.
+The expression $\sum_{x \in A} f(x)$
+means: add up $f(x)$ for each element $x$ of $A$.
+
+1.  Write $\sum_{x \in A} f(x)$ without the $\sum$ symbol,
+    and compute its value.
+2.  List the elements of $A$ in a different order,
+    and add up the same terms in that order.
+    Is the total the same?
+
+:::

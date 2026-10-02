@@ -1,0 +1,11 @@
+:::{#rem-distance-from-origin}
+#### Distance from the origin
+
+The distance from the origin $\vzero$ to a vector $\vx$ is the norm of $\vx$:
+$d(\vx, \vzero) = \norm{\vx - \vzero} = \norm{\vx}$
+[@goodfellow2016deep, p. 39].
+
+For example, the distance from $\vzero$ to $(3, 4)$ is $\norm{(3, 4)} = 5$,
+as in @exm-euclidean-norm.
+
+:::
