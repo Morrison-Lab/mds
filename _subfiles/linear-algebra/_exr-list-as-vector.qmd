@@ -1,0 +1,14 @@
+:::{#exr-list-as-vector}
+#### Store a data point as one object
+
+A house has a floor area of $120$ square meters,
+$3$ bedrooms,
+and an age of $15$ years.
+
+1. Write these three numbers as a single vertical list $\vx$,
+   in the order given,
+   and call its entries $x_1$, $x_2$ and $x_3$.
+   What is $x_2$?
+2. Does the list $(3, 120, 15)$ describe the same house?
+
+:::

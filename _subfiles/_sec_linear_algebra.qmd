@@ -2,9 +2,21 @@
 
 {{< include latex-macros/macros.qmd >}}
 
+{{< include mds/_subfiles/linear-algebra/_exr-list-as-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-list-as-vector.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-column-vector.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-column-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-real-coordinate-space.qmd >}}
 
 {{< slidebreak >}}
 
