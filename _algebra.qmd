@@ -66,6 +66,24 @@
 
 {{< include mds/_subfiles/algebra/_def-local-minimizer.qmd >}}
 
+## Convex functions {#sec-convexity}
+
+{{< include mds/_subfiles/algebra/_exr-convex-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-convex-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-convex-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
+
+{{< include mds/_subfiles/algebra/_proof-thm-convex-local-global.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
@@ -177,6 +195,26 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
+
+## Polynomials {#sec-polynomials}
+
+{{< include mds/_subfiles/algebra/_exr-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-leading-coefficient.qmd >}}
 
 ## Exponentials and Logarithms
 

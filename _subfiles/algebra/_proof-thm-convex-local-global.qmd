@@ -1,0 +1,23 @@
+:::{.proof}
+Let $x^*$ be a local minimizer of $f$,
+so there is a $\delta > 0$ with $f(x^*) \le f(x)$
+whenever $\norm{x - x^*} < \delta$ (@def-local-minimizer).
+Suppose $x^*$ is not a global minimizer (@def-global-minimizer).
+Then some $y \in \reals^p$ has $f(y) < f(x^*)$,
+and in particular $y \ne x^*$.
+
+Let $t = \min\left\{\tfrac{1}{2}, \dfrac{\delta}{2 \norm{y - x^*}}\right\}$,
+so $t \in (0, 1)$,
+and let $z = t y + (1 - t) x^*$.
+Then $z - x^* = t (y - x^*)$,
+so $\norm{z - x^*} = t \norm{y - x^*} \le \delta / 2 < \delta$.
+
+By convexity,
+$$
+f(z) \le t f(y) + (1 - t) f(x^*) < t f(x^*) + (1 - t) f(x^*) = f(x^*),
+$$
+where the strict inequality uses $t > 0$ and $f(y) < f(x^*)$.
+So $f(z) < f(x^*)$ with $\norm{z - x^*} < \delta$,
+which contradicts $x^*$ being a local minimizer.
+Hence $x^*$ is a global minimizer.
+:::

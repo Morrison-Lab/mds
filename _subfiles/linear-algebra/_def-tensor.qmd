@@ -1,0 +1,31 @@
+<!--
+Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
+section 2.1, p. 33 ("an array of numbers arranged on a regular grid
+with a variable number of axes is known as a tensor").
+The term "order" for the number of indices, the notation $\mathcal{A}$,
+and the image examples in the notes are this repository's own illustration,
+not taken from that page.
+-->
+:::{#def-tensor}
+#### Tensor
+
+A **tensor** of order $k \ge 1$ is an array of numbers
+with $k$ indices,
+$$
+\mathcal{A} = \paren{a_{i_1 i_2 \cdots i_k}},
+\quad i_1 = 1, \ldots, n_1, \ \ldots, \ i_k = 1, \ldots, n_k,
+$$
+and its dimensions are $n_1 \times n_2 \times \cdots \times n_k$.
+
+:::
+
+::: notes
+A vector of length $p$ is a tensor of order $1$,
+and an $m \times n$ [matrix](#def-matrix) is a tensor of order $2$.
+A $28 \times 28$ grayscale image is a matrix:
+the entry $a_{ij}$ is the brightness of the pixel in row $i$ and column $j$.
+A $28 \times 28$ color image stores three numbers per pixel (red, green, blue),
+so it is an order-3 tensor with dimensions $28 \times 28 \times 3$,
+and $a_{ijc}$ is the value of color channel $c$ at the pixel in row $i$ and column $j$.
+It has $28 \cdot 28 \cdot 3 = 2352$ entries.
+:::

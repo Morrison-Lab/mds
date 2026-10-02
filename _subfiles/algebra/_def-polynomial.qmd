@@ -1,0 +1,28 @@
+<!--
+Source: OpenStax, Calculus Volume 1, section 1.2 "Basic Classes of Functions"
+(online text, https://openstax.org/books/calculus-volume-1/pages/1-2-basic-classes-of-functions;
+print page number not verified).
+-->
+:::{#def-polynomial}
+#### Polynomial
+
+A **polynomial** (in one variable $x$) is a
+[function](sets-functions.qmd#def-function) $f : \reals \to \reals$
+that can be written as
+$$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+$$
+for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \reals$
+with $a_n \ne 0$.
+
+:::
+
+::: notes
+In @exr-polynomial-degree,
+$f(x) = 3x^4 - x + 7$ is a polynomial
+with $n = 4$, $a_4 = 3$, $a_3 = 0$, $a_2 = 0$, $a_1 = -1$, and $a_0 = 7$.
+A constant function $f(x) = 7$ is a polynomial with $n = 0$ and $a_0 = 7$.
+The requirement $a_n \ne 0$ means this definition covers nonzero polynomials only,
+so that the degree is defined (@def-polynomial-degree);
+the zero function $f(x) = 0$ is excluded here.
+:::
