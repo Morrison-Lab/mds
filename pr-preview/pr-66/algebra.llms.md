@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-01 22:26:12 (PDT)
+Last modified: 2026-10-01 23:46:02 (PDT)
 
 ## 1 Equalities
 
@@ -36,17 +36,68 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 6 (Negation is multiplication by \\-1\\)** \\-a = (-1)\*a\\
 
-## 3 Infimum and supremum
+## 3 Minimum, maximum, argmin and argmax
 
 > **NOTE:**
 >
-> **Definition 1 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below, meaning that some \\t \in \mathbb{R}\\ satisfies \\t \le a\\ for all \\a \in A\\. The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
+> **Exercise 1 (Smallest value, and where it occurs)**  
+>
+> 1.  Let \\f(x) = (x - 2)^2 + 1\\ for every \\x \in \mathbb{R}\\. What is the smallest value \\f\\ takes, and at which \\x\\ does it take that value?
+> 2.  Now let \\g(x) = (x - 2)^2 + 1\\ only for \\x \in \mathopen{}\left\\0, 1, 3, 4\right\\\mathclose{}\\. What is the smallest value \\g\\ takes, and at which \\x\\ does it take that value?
+
+> **NOTE:**
+>
+> *Solution 1*.
+>
+> 1.  The square of a real number is never negative, so \\(x - 2)^2 \ge 0\\ for every \\x\\, and therefore \\f(x) \ge 0 + 1 = 1\\. The square is \\0\\ only when \\x - 2 = 0\\, that is, when \\x = 2\\, and there \\f(2) = 1\\. So the smallest value of \\f\\ is \\1\\, and \\x = 2\\ is the only input where \\f\\ takes it.
+>
+> 2.  Evaluate \\g\\ at each of its four inputs:
+>
+>     | \\x\\    | \\0\\ | \\1\\ | \\3\\ | \\4\\ |
+>     |----------|-------|-------|-------|-------|
+>     | \\g(x)\\ | \\5\\ | \\2\\ | \\2\\ | \\5\\ |
+>
+>     The smallest value of \\g\\ is \\2\\, and \\g\\ takes it at two inputs, \\x = 1\\ and \\x = 3\\. The answer to “where?” is the set \\\mathopen{}\left\\1, 3\right\\\mathclose{}\\, not a single number.
+
+> **NOTE:**
+>
+> **Definition 1 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\, written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
+
+Not every set has a minimum. The interval \\(0, 1\]\\ has none: every element \\a\\ of it has a smaller element, \\a/2\\, also in it. In [Exercise 1](#exr-min-and-argmin), the smallest value of \\g\\ is \\\min\mathopen{}\left\\5, 2, 2, 5\right\\\mathclose{} = 2\\.
+
+> **NOTE:**
+>
+> **Definition 2 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\, written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
+
+> **NOTE:**
+>
+> **Definition 3 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
+>
+> \\\arg \min\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(x) \le f(a)\right\\\mathclose{}\\
+>
+> When this set has exactly one element \\\hat{x}\\, we write \\\hat{x} = \arg \min\_{x \in A} f(x)\\.
+
+The smallest value itself is \\\min f(A)\\, the minimum ([Definition 1](#def-minimum)) of the [image](sets-functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. In [Exercise 1](#exr-min-and-argmin), \\\arg \min\_{x \in \mathbb{R}} f(x) = 2\\ and \\\arg \min\_{x \in \mathopen{}\left\\0, 1, 3, 4\right\\\mathclose{}} g(x) = \mathopen{}\left\\1, 3\right\\\mathclose{}\\. The argmin is empty when \\f\\ has no smallest value, for example \\f(x) = x\\ on \\(0, 1\]\\.
+
+> **NOTE:**
+>
+> **Definition 4 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
+>
+> \\\arg \max\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(a) \le f(x)\right\\\mathclose{}\\
+>
+> When this set has exactly one element \\\hat{x}\\, we write \\\hat{x} = \arg \max\_{x \in A} f(x)\\.
+
+## 4 Infimum and supremum
+
+> **NOTE:**
+>
+> **Definition 5 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below, meaning that some \\t \in \mathbb{R}\\ satisfies \\t \le a\\ for all \\a \in A\\. The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
 >
 > \\\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ t \le a\right\\\mathclose{}\\
 >
 > If \\A\\ is nonempty but not bounded below, we write \\\inf A = -\infty\\ by convention.
 
-The maximum in [Definition 1](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\.
+The maximum in [Definition 5](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\.
 
 > **NOTE:**
 >
@@ -59,13 +110,13 @@ The maximum in [Definition 1](#def-infimum) always exists: that is the complete
 
 > **NOTE:**
 >
-> **Definition 2 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above, meaning that some \\t \in \mathbb{R}\\ satisfies \\a \le t\\ for all \\a \in A\\. The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
+> **Definition 6 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above, meaning that some \\t \in \mathbb{R}\\ satisfies \\a \le t\\ for all \\a \in A\\. The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
 >
 > \\\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ a \le t\right\\\mathclose{}\\
 >
 > If \\A\\ is nonempty but not bounded above, we write \\\sup A = +\infty\\ by convention.
 
-The minimum in [Definition 2](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\.
+The minimum in [Definition 6](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\.
 
 > **NOTE:**
 >
@@ -75,7 +126,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
 > - \\\sup\\1, 2, 3, \ldots\\ = +\infty\\, because no real number is greater than or equal to every element of that set.
 
-## 4 Sums
+## 5 Sums
 
 > **NOTE:**
 >
@@ -93,7 +144,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > \\(a + b) + c = a + (b + c)\\
 
-## 5 Products
+## 6 Products
 
 > **NOTE:**
 >
@@ -107,7 +158,7 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > **Theorem 12 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
 
-## 6 Division
+## 7 Division
 
 > **NOTE:**
 >
@@ -115,17 +166,43 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > \\\frac {a}{b} = a \times \frac{1}{b}\\
 
-## 7 Sums and products together
+## 8 Sums and products together
 
 > **NOTE:**
 >
 > **Theorem 14 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
 
-## 8 Quotients
+> **NOTE:**
+>
+> **Exercise 2 (Expand a squared sum)** Is \\(3 + 4)^2\\ equal to \\3^2 + 4^2\\? Then expand \\(a + b)^2\\ for any numbers \\a\\ and \\b\\, using only the distributive law and the rules above.
 
 > **NOTE:**
 >
-> **Definition 3 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> *Solution 2*. No: \\(3 + 4)^2 = 7^2 = 49\\, while \\3^2 + 4^2 = 9 + 16 = 25\\. The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
+>
+> To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 14](#thm-mult-distr)) twice:
+>
+> \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms)} \end{aligned} \\
+>
+> The step “commutative and associative laws” uses [Theorem 11](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 9](#thm-sum-assoc) to drop the parentheses.
+
+> **NOTE:**
+>
+> **Theorem 15 (Square of a sum)** For any numbers \\a\\ and \\b\\,
+>
+> \\ (a + b)^2 = a^2 + 2ab + b^2 \\
+
+> **NOTE:**
+>
+> *Proof*. By [Solution 2](#sol-square-of-a-sum).
+
+Replacing \\b\\ by \\-b\\ gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors such as \\(y - \hat{y})^2\\ are expanded this way.
+
+## 9 Quotients
+
+> **NOTE:**
+>
+> **Definition 7 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
@@ -135,17 +212,17 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 3](#def-quotient) requires a nonzero denominator.
+> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 7](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 4 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 8 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Definition 5 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 9 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -153,24 +230,24 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 6 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 10 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 9 Exponentials and Logarithms
+## 10 Exponentials and Logarithms
 
 In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is the natural logarithm of \\x \> 0\\, the logarithm with base \\e \approx 2.718\\, and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} = e^x\\ is the exponential function. Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for base 10.
 
 > **NOTE:**
 >
-> **Theorem 15 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
+> **Theorem 16 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 
 > **NOTE:**
 >
-> **Theorem 16 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
+> **Theorem 17 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} \\
 
@@ -182,21 +259,21 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 16](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
+> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 17](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
 >
 > \\ \begin{aligned} \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} && \text{(logarithm of a product)} \end{aligned} \\
 >
-> The second step applies [Theorem 16](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
+> The second step applies [Theorem 17](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Theorem 17 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
+> **Theorem 18 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{} = b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} \\
 
 > **NOTE:**
 >
-> **Theorem 18 (exponential of a sum)**  
+> **Theorem 19 (exponential of a sum)**  
 >
 > The exponential of a sum is equal to the product of the exponentials of the addends:
 >
@@ -212,7 +289,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Theorem 19 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 20 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
 
@@ -226,7 +303,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} \mathopen{}\left(a^b\right)\mathclose{}^c &= \mathopen{}\left((-1)^2\right)\mathclose{}^{\frac{1}{2}} \\ &= 1^{\frac{1}{2}} \\ &= 1 \end{aligned} \\
 >
-> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 19](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
+> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 20](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
 
 > **NOTE:**
 >
@@ -234,11 +311,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 1** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 3** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 1*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 3*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
@@ -373,24 +450,24 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 2** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 4** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
-> *Solution 2*. Short answer: rarely (that’s all you need to know for this course).
+> *Solution 4*. Short answer: rarely (that’s all you need to know for this course).
 >
 > Long answer:
 >
 > Split on whether \\a \> 0\\ or \\a = 0\\, because the logarithm we use for \\a \> 0\\ is undefined at \\a = 0\\.
 >
-> **Case \\a \> 0\\.** By [Theorem 19](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 17](#thm-log-exp)):
+> **Case \\a \> 0\\.** By [Theorem 20](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 18](#thm-log-exp)):
 >
 > \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
-> 2.  \\bc = b^c\\ (see [Exercise 1](#exr-exp-vs-mult)).
+> 2.  \\bc = b^c\\ (see [Exercise 3](#exr-exp-vs-mult)).
 >
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\, \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
