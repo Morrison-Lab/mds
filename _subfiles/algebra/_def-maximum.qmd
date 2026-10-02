@@ -1,0 +1,9 @@
+:::{#def-maximum}
+#### Maximum
+
+Let $A \subseteq \reals$.
+A number $M$ is the **maximum** of $A$,
+written $\max A$,
+if $M \in A$ and $a \le M$ for all $a \in A$.
+
+:::

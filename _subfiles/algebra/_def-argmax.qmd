@@ -1,0 +1,13 @@
+:::{#def-argmax}
+#### Argmax
+
+Let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+The **argmax** of $f$ over $A$
+is the set of inputs where $f$ takes its largest value:
+
+$$\argmax_{x \in A} f(x) \eqdef \cb{x \in A : \all a \in A,\ f(a) \le f(x)}$$
+
+When this set has exactly one element $\hat{x}$,
+we write $\hat{x} = \argmax_{x \in A} f(x)$.
+
+:::
