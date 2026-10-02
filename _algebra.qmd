@@ -190,6 +190,14 @@
 
 {{< include mds/_subfiles/algebra/_def-polynomial.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-leading-coefficient.qmd >}}
+
 ## Exponentials and Logarithms
 
 In these notes,

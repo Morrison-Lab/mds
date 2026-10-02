@@ -2,13 +2,14 @@
 Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
 section 2.1, p. 33 ("an array of numbers arranged on a regular grid
 with a variable number of axes is known as a tensor").
-The term "order" for the number of indices is standard usage
-and is not taken from that page.
+The term "order" for the number of indices, the notation $\mathcal{A}$,
+and the image examples in the notes are this repository's own illustration,
+not taken from that page.
 -->
 :::{#def-tensor}
 #### Tensor
 
-A **tensor** of order $k$ is an array of numbers
+A **tensor** of order $k \ge 1$ is an array of numbers
 with $k$ indices,
 $$
 \mathcal{A} = \paren{a_{i_1 i_2 \cdots i_k}},

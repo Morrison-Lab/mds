@@ -1,0 +1,14 @@
+<!-- Source: same as _def-polynomial.qmd (OpenStax Calculus Volume 1, section 1.2). -->
+:::{#def-polynomial-leading-coefficient}
+#### Leading coefficient
+
+Let $f(x) = a_n x^n + \cdots + a_1 x + a_0$
+be a [polynomial](#def-polynomial) of degree $n$
+([degree](#def-polynomial-degree)).
+The constant $a_n$ is the **leading coefficient** of $f$.
+
+:::
+
+::: notes
+In @exr-polynomial-degree, $f(x) = 3x^4 - x + 7$ has leading coefficient $3$.
+:::
