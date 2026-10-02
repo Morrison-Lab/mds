@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-02 10:10:00 (PDT)
+Last modified: 2026-10-02 10:19:10 (PDT)
 
 ## 1 Equalities
 
@@ -349,11 +349,46 @@ The index is a placeholder: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ 
 >
 > *Proof*. By [Solution 6](#sol-sum-rules), part 2.
 
+> **NOTE:**
+>
+> **Exercise 7 (Sum over a set)** Let \\A = \mathopen{}\left\\-1, 2, 5\right\\\mathclose{}\\ and let \\f(x) = x^2\\. The expression \\\sum\_{x \in A} f(x)\\ means: add up \\f(x)\\ for each element \\x\\ of \\A\\.
+>
+> 1.  Write \\\sum\_{x \in A} f(x)\\ without the \\\sum\\ symbol, and compute its value.
+> 2.  List the elements of \\A\\ in a different order, and add up the same terms in that order. Is the total the same?
+
+> **NOTE:**
+>
+> *Solution 7*.
+>
+> 1.  Replace \\x\\ by each element of \\A\\ in turn, and add the results:
+>
+>     \\ \begin{aligned} \sum\_{x \in A} f(x) &= f(-1) + f(2) + f(5) \\ &= (-1)^2 + 2^2 + 5^2 \\ &= 1 + 4 + 25 \\ &= 30 \end{aligned} \\
+>
+> 2.  In the order \\5, -1, 2\\, the terms are \\25\\, \\1\\ and \\4\\. Their total is \\25 + 1 + 4 = 30\\. The total is the same, because addition does not depend on the order of the terms.
+
+> **NOTE:**
+>
+> **Definition 11 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a finite [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
+>
+> \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
+>
+> If \\A\\ has no elements, the sum has no terms, and by convention it equals \\0\\. For example, \\\sum\_{x \in \mathopen{}\left\\\right\\\mathclose{}} x^2 = 0\\.
+
+> **NOTE:**
+>
+> *Remark 1* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 7](#exr-sum-over-set), part 2, shows another example.
+>
+> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 10](#def-summation).
+
+> **NOTE:**
+>
+> *Remark 2* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full.
+
 ## 12 Quotients
 
 > **NOTE:**
 >
-> **Definition 11 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Definition 12 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
@@ -363,17 +398,17 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 11](#def-quotient) requires a nonzero denominator.
+> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 12](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 12 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 13 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Definition 13 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 14 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -381,7 +416,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 14 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 15 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
@@ -389,14 +424,14 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Exercise 7 (Reading a polynomial)** Let \\f(x) = 3x^4 - x + 7\\.
+> **Exercise 8 (Reading a polynomial)** Let \\f(x) = 3x^4 - x + 7\\.
 >
 > 1.  Write \\f\\ in the form \\a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0\\, listing every coefficient \\a_4, a_3, a_2, a_1, a_0\\.
 > 2.  What is the degree of \\f\\, and what is its leading coefficient?
 
 > **NOTE:**
 >
-> *Solution 7*.
+> *Solution 8*.
 >
 > 1.  \\f(x) = 3x^4 + 0 \cdot x^3 + 0 \cdot x^2 + (-1) \cdot x + 7\\, so \\a_4 = 3\\, \\a_3 = 0\\, \\a_2 = 0\\, \\a_1 = -1\\, and \\a_0 = 7\\. Powers of \\x\\ that do not appear have coefficient \\0\\.
 >
@@ -404,21 +439,21 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 15 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
+> **Definition 16 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
 
-In [Exercise 7](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ is a polynomial with \\n = 4\\, \\a_4 = 3\\, \\a_3 = 0\\, \\a_2 = 0\\, \\a_1 = -1\\, and \\a_0 = 7\\. A constant function \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only, so that the degree is defined ([Definition 16](#def-polynomial-degree)); the zero function \\f(x) = 0\\ is excluded here.
-
-> **NOTE:**
->
-> **Definition 16 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
-
-In [Exercise 7](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has degree \\4\\. A constant polynomial \\f(x) = 7\\ has degree \\0\\.
+In [Exercise 8](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ is a polynomial with \\n = 4\\, \\a_4 = 3\\, \\a_3 = 0\\, \\a_2 = 0\\, \\a_1 = -1\\, and \\a_0 = 7\\. A constant function \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only, so that the degree is defined ([Definition 17](#def-polynomial-degree)); the zero function \\f(x) = 0\\ is excluded here.
 
 > **NOTE:**
 >
-> **Definition 17 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+> **Definition 17 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
 
-In [Exercise 7](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has leading coefficient \\3\\.
+In [Exercise 8](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has degree \\4\\. A constant polynomial \\f(x) = 7\\ has degree \\0\\.
+
+> **NOTE:**
+>
+> **Definition 18 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+
+In [Exercise 8](#exr-polynomial-degree), \\f(x) = 3x^4 - x + 7\\ has leading coefficient \\3\\.
 
 ## 14 Exponentials and Logarithms
 
@@ -497,11 +532,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 8** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 9** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 8*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 9*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
@@ -636,11 +671,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 9** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 10** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
-> *Solution 9*. Short answer: rarely (that’s all you need to know for this course).
+> *Solution 10*. Short answer: rarely (that’s all you need to know for this course).
 >
 > Long answer:
 >
@@ -653,7 +688,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
-> 2.  \\bc = b^c\\ (see [Exercise 8](#exr-exp-vs-mult)).
+> 2.  \\bc = b^c\\ (see [Exercise 9](#exr-exp-vs-mult)).
 >
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\, \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
