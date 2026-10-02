@@ -66,6 +66,22 @@
 
 {{< include mds/_subfiles/algebra/_def-local-minimizer.qmd >}}
 
+## Convex functions {#sec-convexity}
+
+{{< include mds/_subfiles/algebra/_exr-convex-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-convex-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-convex-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
