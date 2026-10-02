@@ -78,6 +78,18 @@
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-square-of-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-square-of-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
+
 ## Summation notation {#sec-summation}
 
 {{< include mds/_subfiles/algebra/_exr-expand-a-sum.qmd >}}
