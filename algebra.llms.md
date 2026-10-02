@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-01 18:10:18 (PDT)
+Last modified: 2026-10-01 23:40:11 (PDT)
 
 ## 1 Equalities
 
@@ -121,6 +121,32 @@ The minimum in [Definition 2](#def-supremum) always exists: that is the complet
 >
 > **Theorem 14 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
 
+> **NOTE:**
+>
+> **Exercise 1 (Expand a squared sum)** Is \\(3 + 4)^2\\ equal to \\3^2 + 4^2\\? Then expand \\(a + b)^2\\ for any numbers \\a\\ and \\b\\, using only the distributive law and the rules above.
+
+> **NOTE:**
+>
+> *Solution 1*. No: \\(3 + 4)^2 = 7^2 = 49\\, while \\3^2 + 4^2 = 9 + 16 = 25\\. The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
+>
+> To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 14](#thm-mult-distr)) twice:
+>
+> \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms)} \end{aligned} \\
+>
+> The step “commutative and associative laws” uses [Theorem 11](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 9](#thm-sum-assoc) to drop the parentheses.
+
+> **NOTE:**
+>
+> **Theorem 15 (Square of a sum)** For any numbers \\a\\ and \\b\\,
+>
+> \\ (a + b)^2 = a^2 + 2ab + b^2 \\
+
+> **NOTE:**
+>
+> *Proof*. By [Solution 1](#sol-square-of-a-sum).
+
+Replacing \\b\\ by \\-b\\ gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors such as \\(y - \hat{y})^2\\ are expanded this way.
+
 ## 8 Quotients
 
 > **NOTE:**
@@ -163,14 +189,14 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Theorem 15 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
+> **Theorem 16 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 
 > **NOTE:**
 >
-> **Theorem 16 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
+> **Theorem 17 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} \\
 
@@ -182,21 +208,21 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 16](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
+> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 17](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
 >
 > \\ \begin{aligned} \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} && \text{(logarithm of a product)} \end{aligned} \\
 >
-> The second step applies [Theorem 16](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
+> The second step applies [Theorem 17](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Theorem 17 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
+> **Theorem 18 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{} = b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} \\
 
 > **NOTE:**
 >
-> **Theorem 18 (exponential of a sum)**  
+> **Theorem 19 (exponential of a sum)**  
 >
 > The exponential of a sum is equal to the product of the exponentials of the addends:
 >
@@ -212,7 +238,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Theorem 19 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 20 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
 
@@ -226,7 +252,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} \mathopen{}\left(a^b\right)\mathclose{}^c &= \mathopen{}\left((-1)^2\right)\mathclose{}^{\frac{1}{2}} \\ &= 1^{\frac{1}{2}} \\ &= 1 \end{aligned} \\
 >
-> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 19](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
+> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 20](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
 
 > **NOTE:**
 >
@@ -234,11 +260,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 1** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 2** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 1*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
@@ -373,24 +399,24 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 2** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 3** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
-> *Solution 2*. Short answer: rarely (that’s all you need to know for this course).
+> *Solution 3*. Short answer: rarely (that’s all you need to know for this course).
 >
 > Long answer:
 >
 > Split on whether \\a \> 0\\ or \\a = 0\\, because the logarithm we use for \\a \> 0\\ is undefined at \\a = 0\\.
 >
-> **Case \\a \> 0\\.** By [Theorem 19](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 17](#thm-log-exp)):
+> **Case \\a \> 0\\.** By [Theorem 20](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 18](#thm-log-exp)):
 >
 > \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
-> 2.  \\bc = b^c\\ (see [Exercise 1](#exr-exp-vs-mult)).
+> 2.  \\bc = b^c\\ (see [Exercise 2](#exr-exp-vs-mult)).
 >
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\, \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
