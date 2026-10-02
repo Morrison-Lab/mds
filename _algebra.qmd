@@ -26,6 +26,30 @@
 
 {{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
 
+## Minimum, maximum, argmin and argmax {#sec-min-max}
+
+{{< include mds/_subfiles/algebra/_exr-min-and-argmin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-min-and-argmin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-minimum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-maximum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-argmin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-argmax.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}

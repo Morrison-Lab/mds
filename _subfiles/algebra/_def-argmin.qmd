@@ -1,0 +1,25 @@
+:::{#def-argmin}
+#### Argmin
+
+Let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+The **argmin** of $f$ over $A$
+is the set of inputs where $f$ takes its smallest value:
+
+$$\argmin_{x \in A} f(x) \eqdef \cb{x \in A : \all a \in A,\ f(x) \le f(a)}$$
+
+When this set has exactly one element $\hat{x}$,
+we write $\hat{x} = \argmin_{x \in A} f(x)$.
+
+:::
+
+::: notes
+The smallest value itself is $\min f(A)$,
+the minimum (@def-minimum)
+of the [image](sets-functions.qmd#def-image) of $f$,
+and the argmin is where that value is attained.
+In @exr-min-and-argmin,
+$\argmin_{x \in \reals} f(x) = 2$
+and $\argmin_{x \in \cb{0, 1, 3, 4}} g(x) = \cb{1, 3}$.
+The argmin is empty when $f$ has no smallest value,
+for example $f(x) = x$ on $(0, 1]$.
+:::
