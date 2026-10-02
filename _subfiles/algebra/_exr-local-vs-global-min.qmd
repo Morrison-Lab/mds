@@ -1,0 +1,13 @@
+:::{#exr-local-vs-global-min}
+#### A dip that is not the bottom
+
+Let $f(x) = x^3 - 3x$ for $x \in \reals$.
+
+1. Show that $f(x) - f(1) = (x - 1)^2 (x + 2)$.
+2. Use part 1 to show that $f(x) \ge f(1)$
+   for every $x$ in the interval $(0, 2)$.
+3. Compute $f(-3)$.
+   Is $f(1)$ the smallest value $f$ takes on all of $\reals$?
+4. Does $f$ take a smallest value anywhere on $\reals$?
+
+:::

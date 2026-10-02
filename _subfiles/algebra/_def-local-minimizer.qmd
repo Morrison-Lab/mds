@@ -1,0 +1,24 @@
+:::{#def-local-minimizer}
+#### Local minimizer
+
+Let $A \subseteq \reals^p$
+and let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+A point $x^* \in A$ is a **local minimizer** of $f$
+if there is a number $\delta > 0$
+such that $f(x^*) \le f(x)$
+for all $x \in A$ with
+$\norm{x - x^*} < \delta$,
+where $\norm{\cdot}$ is the
+[Euclidean norm](linear-algebra.qmd#def-euclidean-norm).
+
+:::
+
+::: notes
+For $p = 1$, $\norm{x - x^*} = \abs{x - x^*}$.
+Every global minimizer (@def-global-minimizer) is a local minimizer:
+take any $\delta > 0$.
+The converse fails.
+In @exr-local-vs-global-min,
+$x^* = 1$ is a local minimizer of $f$ (take $\delta = 1$),
+but not a global one.
+:::
