@@ -1,0 +1,11 @@
+:::{#exr-euclidean-distance}
+#### How far apart are two points?
+
+Let $\vx = (1, 2)$ and $\vy = (4, 6)$.
+
+1. Compute the vector $\vx - \vy$.
+2. Compute the length of $\vx - \vy$,
+   using the [Euclidean norm](#def-euclidean-norm).
+3. Is the result the same if you compute the length of $\vy - \vx$ instead?
+
+:::
