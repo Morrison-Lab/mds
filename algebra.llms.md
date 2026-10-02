@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-01 23:48:29 (PDT)
+Last modified: 2026-10-01 23:55:30 (PDT)
 
 ## 1 Equalities
 
@@ -235,11 +235,85 @@ The minimum in [Definition 8](#def-supremum) always exists: that is the complet
 
 Replacing \\b\\ by \\-b\\ gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors such as \\(y - \hat{y})^2\\ are expanded this way.
 
-## 10 Quotients
+## 10 Summation notation
 
 > **NOTE:**
 >
-> **Definition 9 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Exercise 4 (Expand a sum)** The expression \\\sum\_{i=1}^{4} i^2\\ is shorthand for a sum of four terms.
+>
+> 1.  Guess which four terms, and add them up.
+> 2.  Write \\\frac{1}{N} \sum\_{i=1}^{N} \left(y_i - \hat{y}\_i\right)^2\\ for \\N = 3\\ without the \\\sum\\ symbol.
+
+> **NOTE:**
+>
+> *Solution 4*.
+>
+> 1.  Replace \\i\\ by each of \\1, 2, 3, 4\\ in turn, and add the results:
+>
+>     \\ \begin{aligned} \sum\_{i=1}^{4} i^2 &= 1^2 + 2^2 + 3^2 + 4^2 \\ &= 1 + 4 + 9 + 16 \\ &= 30 \end{aligned} \\
+>
+> 2.  Replace \\i\\ by each of \\1, 2, 3\\ in turn inside the parentheses, add the three squares, and multiply the total by \\\frac{1}{3}\\:
+>
+>     \\ \frac{1}{3} \sum\_{i=1}^{3} \left(y_i - \hat{y}\_i\right)^2 = \frac{1}{3} \left\[ \left(y_1 - \hat{y}\_1\right)^2 + \left(y_2 - \hat{y}\_2\right)^2 + \left(y_3 - \hat{y}\_3\right)^2 \right\] \\
+
+> **NOTE:**
+>
+> **Definition 9 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
+>
+> \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
+>
+> The variable \\i\\ is the **index** of the sum; \\m\\ and \\n\\ are its **lower** and **upper limits**.
+
+The index is a placeholder: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. When the upper limit is less than the lower limit, the sum has no terms, and by convention it equals \\0\\.
+
+> **NOTE:**
+>
+> **Exercise 5 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 9](#def-summation) and the rules of algebra above, show that:
+>
+> 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
+> 2.  \\\sum\_{i=1}^{3} \left(a_i + b_i\right) = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
+>
+> Does either argument depend on there being exactly three terms?
+
+> **NOTE:**
+>
+> *Solution 5*. Each step below applies [Definition 9](#def-summation), the distributive law ([Theorem 14](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 8](#thm-sum-symmetric) and [Theorem 9](#thm-sum-assoc)).
+>
+> 1.  Expand the sum, then factor out \\c\\:
+>
+>     \\ \begin{aligned} \sum\_{i=1}^{3} c\\ a_i &= c\\ a_1 + c\\ a_2 + c\\ a_3 && \text{(expand the sum)} \\ &= c \left(a_1 + a_2 + a_3\right) && \text{(distributive law)} \\ &= c \sum\_{i=1}^{3} a_i && \text{(collect the sum)} \end{aligned} \\
+>
+> 2.  Expand the sum, then regroup the terms:
+>
+>     \\ \begin{aligned} \sum\_{i=1}^{3} \left(a_i + b_i\right) &= \left(a_1 + b_1\right) + \left(a_2 + b_2\right) + \left(a_3 + b_3\right) && \text{(expand the sum)} \\ &= \left(a_1 + a_2 + a_3\right) + \left(b_1 + b_2 + b_3\right) && \text{(commutative and associative laws)} \\ &= \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i && \text{(collect the sum)} \end{aligned} \\
+>
+> Neither argument uses the number of terms: the same steps work for any lower and upper limits.
+
+> **NOTE:**
+>
+> **Theorem 16 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
+>
+> \\ \sum\_{i=m}^{n} c\\ a_i = c \sum\_{i=m}^{n} a_i \\
+
+> **NOTE:**
+>
+> *Proof*. By [Solution 5](#sol-sum-rules), part 1.
+
+> **NOTE:**
+>
+> **Theorem 17 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
+>
+> \\ \sum\_{i=m}^{n} \left(a_i + b_i\right) = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
+
+> **NOTE:**
+>
+> *Proof*. By [Solution 5](#sol-sum-rules), part 2.
+
+## 11 Quotients
+
+> **NOTE:**
+>
+> **Definition 10 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
@@ -249,17 +323,17 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 9](#def-quotient) requires a nonzero denominator.
+> **Example 3 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 10](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 10 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 11 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Definition 11 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 12 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -267,24 +341,24 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 12 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 13 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 11 Exponentials and Logarithms
+## 12 Exponentials and Logarithms
 
 In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is the natural logarithm of \\x \> 0\\, the logarithm with base \\e \approx 2.718\\, and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} = e^x\\ is the exponential function. Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for base 10.
 
 > **NOTE:**
 >
-> **Theorem 16 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
+> **Theorem 18 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 
 > **NOTE:**
 >
-> **Theorem 17 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
+> **Theorem 19 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} \\
 
@@ -296,21 +370,21 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 17](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
+> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 19](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
 >
 > \\ \begin{aligned} \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} && \text{(logarithm of a product)} \end{aligned} \\
 >
-> The second step applies [Theorem 17](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
+> The second step applies [Theorem 19](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Theorem 18 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
+> **Theorem 20 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{} = b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} \\
 
 > **NOTE:**
 >
-> **Theorem 19 (exponential of a sum)**  
+> **Theorem 21 (exponential of a sum)**  
 >
 > The exponential of a sum is equal to the product of the exponentials of the addends:
 >
@@ -326,7 +400,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Theorem 20 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 22 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
 
@@ -340,7 +414,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} \mathopen{}\left(a^b\right)\mathclose{}^c &= \mathopen{}\left((-1)^2\right)\mathclose{}^{\frac{1}{2}} \\ &= 1^{\frac{1}{2}} \\ &= 1 \end{aligned} \\
 >
-> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 20](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
+> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 22](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
 
 > **NOTE:**
 >
@@ -348,11 +422,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 4** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 6** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 4*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 6*. We only count a pair \\(b, c)\\ when \\b^c\\ is a real number, so for \\b \< 0\\ we only consider integer \\c\\ (R agrees: `(-8)^(1/3)` is `NaN`). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
@@ -487,24 +561,24 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Exercise 5** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 7** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
-> *Solution 5*. Short answer: rarely (that’s all you need to know for this course).
+> *Solution 7*. Short answer: rarely (that’s all you need to know for this course).
 >
 > Long answer:
 >
 > Split on whether \\a \> 0\\ or \\a = 0\\, because the logarithm we use for \\a \> 0\\ is undefined at \\a = 0\\.
 >
-> **Case \\a \> 0\\.** By [Theorem 20](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 18](#thm-log-exp)):
+> **Case \\a \> 0\\.** By [Theorem 22](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 20](#thm-log-exp)):
 >
 > \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
-> 2.  \\bc = b^c\\ (see [Exercise 4](#exr-exp-vs-mult)).
+> 2.  \\bc = b^c\\ (see [Exercise 6](#exr-exp-vs-mult)).
 >
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\, \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
