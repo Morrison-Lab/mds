@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-02 01:58:32 (PDT)
+Last modified: 2026-10-02 05:27:04 (PDT)
 
 ## 1 Vectors
 
@@ -183,7 +183,7 @@ Orthogonality generalizes the geometric notion of perpendicularity to arbitrary 
 >
 > \\d(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left\lVert\tilde{x}- \tilde{y}\right\rVert\mathclose{} = \sqrt{\sum\_{i=1}^p(x_i - y_i)^2} \tag{3}\\
 
-In [Exercise 2](#exr-euclidean-distance), \\d\mathopen{}\left((1, 2), (4, 6)\right)\mathclose{} = \sqrt{(1 - 4)^2 + (2 - 6)^2} = 5\\. The distance from the origin to \\\tilde{x}\\ is \\d(\tilde{x}, \tilde{0}) = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\, the case Goodfellow et al. (2016, p. 39) describe.
+In [Exercise 2](#exr-euclidean-distance), \\d\mathopen{}\left((1, 2), (4, 6)\right)\mathclose{} = \sqrt{(1 - 4)^2 + (2 - 6)^2} = 5\\. The distance from the origin to \\\tilde{x}\\ is \\d(\tilde{x}, \tilde{0}) = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\, the case Goodfellow et al. ([2016, 39](#ref-goodfellow2016deep)) describe.
 
 > **NOTE:**
 >
@@ -1481,6 +1481,8 @@ Banerjee, Sudipto, and Anindya Roy. 2014. *Linear Algebra and Matrix Analysis fo
 Dobson, Annette J, and Adrian G Barnett. 2018. *An Introduction to Generalized Linear Models*. 4th ed. CRC press. <https://doi.org/10.1201/9781315182780>.
 
 Fieller, Nick. 2016. *Basics of Matrix Algebra for Statistics with R*. Chapman; Hall/CRC. <https://doi.org/10.1201/9781315370200>.
+
+Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. *Deep Learning*. MIT Press. <https://www.deeplearningbook.org/>.
 
 Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
 
