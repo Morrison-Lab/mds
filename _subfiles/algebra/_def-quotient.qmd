@@ -37,7 +37,8 @@ because @def-quotient requires a nonzero denominator.
 :::{#def-rate}
 #### Rate
 
-A **rate** is a quotient whose denominator measures time,
+A **rate** is a quotient of two quantities,
+usually with a denominator that measures time,
 such as weeks or person-years of follow-up.
 For example, $12$ new cases in $4$ weeks
 is a rate of $\frac{12}{4} = 3$ new cases per week,
