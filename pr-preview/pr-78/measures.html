@@ -61,7 +61,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -206,25 +225,35 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -256,36 +285,6 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-lem.callout {
   border-left-color: #1565C0;
 }
@@ -296,15 +295,35 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -605,7 +624,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-03 <mark class="preview-text-changed">01:32:44</mark> (PDT)</p>
+      <p class="date">Last modified: 2026-10-03 <mark class="preview-text-changed">01:42:02</mark> (PDT)</p>
     </div>
   </div>
   
@@ -654,8 +673,8 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Other sources call it a <strong><span class="math inline">\(\sigma\)</span>-field</strong> (see <a href="https://en.wikipedia.org/wiki/%CE%A3-algebra">Wikipedia: <span class="math inline">\(\sigma\)</span>-algebra</a>).</p>
+<div id="rem-sigma-field" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (<span class="math inline">\(\sigma\)</span>-field). </span>Other sources call a <span class="math inline">\(\sigma\)</span>-algebra a <strong><span class="math inline">\(\sigma\)</span>-field</strong> (see <a href="https://en.wikipedia.org/wiki/%CE%A3-algebra">Wikipedia: <span class="math inline">\(\sigma\)</span>-algebra</a>). For example, <span class="citation" data-cites="billingsley1995probability">Billingsley (<a href="#ref-billingsley1995probability" role="doc-biblioref">1995</a>)</span> uses “<span class="math inline">\(\sigma\)</span>-field”. The two names mean the same thing.</p>
 </div>
 </div>
 </div>
@@ -786,8 +805,8 @@ A_1 \cup \cdots \cup A_n
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>In probability, pairwise disjoint events are usually called <strong>mutually exclusive</strong>.</p>
+<div id="rem-mutually-exclusive" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Mutually exclusive events). </span>In probability, pairwise disjoint events are usually called <strong>mutually exclusive</strong>. For example, for one roll of a six-sided die, the events “the roll is even”, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, and “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, are mutually exclusive: no roll is both even and odd.</p>
 </div>
 </div>
 </div>
@@ -917,8 +936,8 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>By <a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>, the right-hand side of the equation in <a href="#def-countable-additivity" class="quarto-xref">Definition&nbsp;4</a> always has a value.</p>
+<div id="rem-countable-additivity-sum-exists" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (The sum in countable additivity always has a value). </span>By <a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>, the right-hand side of the equation in <a href="#def-countable-additivity" class="quarto-xref">Definition&nbsp;4</a>, <span class="math inline">\(\sum_{i=1}^{\infty} \mu(A_i)\)</span>, always has a value, because each <span class="math inline">\(\mu(A_i)\)</span> is in <span class="math inline">\([0, \infty]\)</span>. For example, if <span class="math inline">\(\mu(A_i) = 1/2^i\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = 1 - 1/2^n\)</span>, and the sum is <span class="math inline">\(1\)</span>; if <span class="math inline">\(\mu(A_i) = 1\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = n\)</span>, and the sum is <span class="math inline">\(\infty\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1020,8 +1039,8 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;5</a> and <a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;6</a> show that both values allowed by <a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
+<div id="rem-empty-set-requirement" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;5</a> and <a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;6</a> show that both values allowed by <a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
 </div>
 </div>
 </div>
@@ -1137,8 +1156,8 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> shows that the converse of <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function — An additive function which is not <span class="math inline">\(\sigma\)</span>-additive</a>).</p>
+<div id="rem-finite-not-countable-converse" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> shows that the converse of <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
 </div>
 </div>
 </div>
@@ -1240,8 +1259,8 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>A <a href="#def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;6</a>, or how long a set of real numbers is, as <a href="https://en.wikipedia.org/wiki/Lebesgue_measure">Lebesgue measure</a> does, assigning each interval <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. Both appear as reference measures in the <a href="./calculus.html#thm-fubini-tonelli">Fubini–Tonelli theorem</a>.</p>
+<div id="rem-measure-size" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (Measures generalize size). </span>A <a href="#def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;6</a>, or how long a set of real numbers is, as <a href="https://en.wikipedia.org/wiki/Lebesgue_measure">Lebesgue measure</a> does, assigning each interval <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both appear as reference measures in the <a href="./calculus.html#thm-fubini-tonelli">Fubini–Tonelli theorem</a>.</p>
 </div>
 </div>
 </div>
@@ -1471,9 +1490,14 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", alignEquationAnchorsWithDefault);
 </script>
 
+
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-billingsley1995probability" class="csl-entry" role="listitem">
+Billingsley, Patrick. 1995. <em>Probability and Measure</em>. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
