@@ -37,7 +37,7 @@ $$
 \mu(A_1 \cup \cdots \cup A_n)
 &= \infty
 && \text{(the union is infinite)} \\
-&= \mu(A_k) + \sum_{i \neq k} \mu(A_i)
+&= \mu(A_k) + \sum_{i \in \cb{1, \ldots, n} \setminus \cb{k}} \mu(A_i)
 && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\
 &= \sum_{i=1}^{n} \mu(A_i)
 && \text{(regroup the terms)}
