@@ -39,12 +39,13 @@ whose two rows differ.
 :::{#rem-invertible-inverse}
 #### Invertible matrices and inverses
 
-For an invertible $p \times p$ matrix $\matr{A}$,
-at most one $p \times p$ matrix $\matr{B}$ satisfies
-$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p$.
-If a $p \times p$ matrix $\matr{C}$ also satisfies
-$\matr{A}\matr{C} = \matr{C}\matr{A} = \matr{I}_p$,
-then
+Let $\matr{A}$ be a $p \times p$ matrix,
+and suppose that two $p \times p$ matrices $\matr{B}$ and $\matr{C}$
+satisfy
+$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p$
+and
+$\matr{A}\matr{C} = \matr{C}\matr{A} = \matr{I}_p$.
+Then
 
 $$
 \ba
@@ -67,7 +68,11 @@ $$
 $$
 
 The steps use @thm-matmul-assoc and @thm-identity.
-So $\matr{B}$ is the inverse $\matr{A}^{-1}$ of $\matr{A}$ (@def-matrix-inverse),
+So at most one matrix satisfies these equations,
+which is the uniqueness that @def-matrix-inverse asserts.
+When $\matr{A}$ is invertible,
+the matrix $\matr{B}$ in @def-invertible-matrix
+is therefore the inverse $\matr{A}^{-1}$ of $\matr{A}$,
 and $\matr{A}$ is invertible exactly when it has an inverse.
 For example,
 for $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
