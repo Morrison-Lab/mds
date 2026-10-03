@@ -66,6 +66,10 @@ of which the dot product is one example.
 For example, $2 \tp{(1, 0)} + 3 \tp{(0, 1)} = \tp{(2, 3)}$
 is the linear combination of the vectors $\tp{(1, 0)}$ and $\tp{(0, 1)}$
 with coefficients $2$ and $3$.
+Multiplying a matrix by a vector computes such a weighted sum of the matrix's columns:
+here, $\matr{I}_2 \tp{(2, 3)} = 2 \tp{(1, 0)} + 3 \tp{(0, 1)}$,
+where $\matr{I}_2$ is the $2 \times 2$ identity matrix,
+whose columns are $\tp{(1, 0)}$ and $\tp{(0, 1)}$.
 
 :::
 

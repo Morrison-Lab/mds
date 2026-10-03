@@ -3,7 +3,7 @@
 :::{#rem-chain-vec-order}
 #### The order of the factors matters
 
-This chain rule is like the univariate
+The vector chain rule (@thm-chain-vec) is like the univariate
 [chain rule](calculus.qmd#thm-chain-rule),
 but the order matters now:
 $\derivf{\vy}{\vx}$ is $p \times q$ and $\derivf{z}{\vy}$ is $q \times 1$,

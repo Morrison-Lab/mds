@@ -50,24 +50,11 @@ for probability measures, the $\sigma$-finiteness condition is automatic.
 The integrability conditions
 (nonnegativity or absolute integrability) still need to be verified
 in each application.
-For example, take $\mu_1$ and $\mu_2$ to be Lebesgue measure (ordinary length) on $[0, 1]$,
-which are probability measures,
-and let $f(x, y) = (x^2 - y^2) / (x^2 + y^2)^2$,
-with $f(0, 0) \eqdef 0$.
-Then $f$ is negative where $y > x$,
-so condition (a) fails,
-and $\int_{[0, 1]^2} \abs{f}\,d(\mu_1 \otimes \mu_2) = \infty$,
-so condition (b) fails too.
-The two iterated integrals differ:
-
-$$
-\int_0^1 \int_0^1 f(x, y)\,dy\,dx = \frac{\pi}{4},
-\qquad
-\int_0^1 \int_0^1 f(x, y)\,dx\,dy = -\frac{\pi}{4}
-$$
-
-(the inner integrals are $\int_0^1 f(x, y)\,dy = 1/(1 + x^2)$
-and $\int_0^1 f(x, y)\,dx = -1/(1 + y^2)$).
+For example, Lebesgue measure (ordinary length) on $[0, 1]$ is a probability measure,
+so the $\sigma$-finiteness condition holds on the unit square,
+yet the two iterated integrals of the function in @exm-fubini-fail
+are $\pi/4$ and $-\pi/4$.
+They can differ because that function satisfies neither integrability condition.
 
 :::
 

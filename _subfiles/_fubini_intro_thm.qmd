@@ -28,6 +28,7 @@ $$\iint_R f(x, y)\,dA \eqdef \lim_{\|\Delta\| \to 0} \sum_{i=1}^n f(x_i, y_i)\,\
 where $\|\Delta\|$ is the length of the longest diagonal among the $n$ rectangles,
 when that limit exists and has the same value
 for every choice of grids and of the points $(x_i, y_i)$.
+The symbol $dA$ stands for an element of area.
 
 [@larsonCalc11e, Section 14.2]
 
@@ -38,16 +39,20 @@ for every choice of grids and of the points $(x_i, y_i)$.
 :::{#def-iterated-integral}
 #### Iterated integral
 
-In @def-double-integral, the symbol $dA$ stands for an element of area.
 An **iterated integral** is an integral of an integral:
 
 $$
-\int_a^b \int_c^d f(x, y)\,dy\,dx \eqdef \int_a^b \paren{\int_c^d f(x, y)\,dy}\,dx
+\int_a^b \int_{g_1(x)}^{g_2(x)} f(x, y)\,dy\,dx
+\eqdef \int_a^b \paren{\int_{g_1(x)}^{g_2(x)} f(x, y)\,dy}\,dx
 $$
 
 That is, integrate over the inner variable ($y$) first,
 holding the outer variable ($x$) fixed,
 and then integrate the result over the outer variable.
+The inner limits $g_1(x)$ and $g_2(x)$ may depend on the outer variable,
+or be constants $c$ and $d$, as in $\int_a^b \int_c^d f(x, y)\,dy\,dx$.
+Iterated integrals in the other order, $\int \int \cdots \,dx\,dy$,
+are defined the same way with the roles of $x$ and $y$ swapped.
 For example:
 
 $$
