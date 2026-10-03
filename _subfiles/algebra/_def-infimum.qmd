@@ -15,9 +15,23 @@ we write $\inf A = -\infty$ by convention.
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-infimum-exists}
+#### Why the infimum exists
+
 The maximum in @def-infimum always exists:
 that is the completeness (greatest-lower-bound) property of the real numbers
 [@rudin1976principles, Definition 1.8, p. 4, and Theorem 1.19, p. 8].
+For example, for $A = (1, 2]$,
+the numbers $t$ with $t \le a$ for all $a \in A$
+are those with $t \le 1$,
+and the largest of them is $1$,
+so $\inf A = 1$.
+
 If the infimum belongs to $A$, it equals the minimum: $\inf A = \min A$.
+For example, $\inf [1, 2] = 1 = \min [1, 2]$.
+For $A = (1, 2]$, the infimum $1$ is not in $A$,
+and $A$ has no minimum.
+
 :::

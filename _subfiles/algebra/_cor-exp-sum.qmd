@@ -1,12 +1,21 @@
 :::{#cor-exp-sum}
 #### exponential of a difference
 
-::: notes
 The exponential of a difference
 is the exponential of the first term
 divided by the exponential of the second term:
-:::
 
 $$\exp{a-b} = \frac{\exp{a}}{\exp{b}}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-exp-difference}
+#### Exponential of a difference
+
+With $a = 5$ and $b = 2$,
+$\exp{5 - 2} = \exp{3} \approx 20.09$,
+and $\frac{\exp{5}}{\exp{2}} \approx \frac{148.41}{7.389} \approx 20.09$.
 
 :::

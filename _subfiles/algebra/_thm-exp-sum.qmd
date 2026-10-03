@@ -1,10 +1,19 @@
 :::{#thm-exp-sum}
 #### exponential of a sum
 
-::: notes
 The exponential of a sum is equal to the product of the exponentials of the addends:
-:::
 
 $$\exp{a+b} = \exp{a} \cd \exp{b}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-exp-sum}
+#### Exponential of a sum
+
+With $a = 2$ and $b = 3$,
+$\exp{2 + 3} = \exp{5} \approx 148.41$,
+and $\exp{2} \cd \exp{3} \approx 7.389 \cd 20.09 \approx 148.41$.
 
 :::
