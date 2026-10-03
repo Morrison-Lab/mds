@@ -41,7 +41,6 @@ jobs:
       contents: read
       pull-requests: write  # post review + inline comments
       issues: write
-      id-token: write        # required by claude-code-action for the App-token exchange
       actions: read          # lets the reviewer read CI status
       checks: read           # required by gha v3's reviewer job (gha#833); without it the call fails at startup
     uses: Morrison-Lab/gha/.github/workflows/claude-code-review.yml@v3
