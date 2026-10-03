@@ -13,9 +13,14 @@ that satisfies:
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
 
-Other sources call it a **$\sigma$-field**
+:::{#rem-sigma-field}
+#### $\sigma$-field
+
+Other sources call a $\sigma$-algebra a **$\sigma$-field**
 (see [Wikipedia: $\sigma$-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)).
+For example, @billingsley1995probability uses "$\sigma$-field".
+The two names mean the same thing.
 
 :::

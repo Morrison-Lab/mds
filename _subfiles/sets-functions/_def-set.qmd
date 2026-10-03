@@ -9,11 +9,17 @@ Two sets are equal when they have exactly the same elements.
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-naive-set}
+#### Naive and formal set theory
 
 @def-set is the informal ("naive") notion of a set,
 which is all these notes need.
 Formal set theory states axioms for sets instead
 (see [Wikipedia: Set (mathematics)](https://en.wikipedia.org/wiki/Set_(mathematics))).
+For example, the last sentence of @def-set,
+that two sets are equal when they have exactly the same elements,
+is one of those axioms, the *axiom of extensionality*.
 
 :::

@@ -19,13 +19,6 @@ Both $\deriv{\vb} \vy$ and $\deriv{\vb} \tp{\vy}$ denote this $p \times q$ matri
 
 :::
 
-::: notes
-Some sources use the transposed, *numerator layout*,
-in which the derivative is the $q \times p$ Jacobian matrix
-with $(j, i)$ entry $\deriv{\beta_i} y_j$.
-Check a source's layout before combining its formulas with these.
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-vector-valued-derivative}
@@ -46,5 +39,29 @@ $$
 0 & \beta_1 & 3
 }
 $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-numerator-layout}
+#### Numerator layout
+
+Some sources use the transposed, *numerator layout*,
+in which the derivative is the $q \times p$ Jacobian matrix
+with $(j, i)$ entry $\deriv{\beta_i} y_j$.
+For example, in numerator layout,
+the derivative in @exm-vector-valued-derivative is the $3 \times 2$ matrix
+
+$$
+\sbmat{
+2\beta_1 & 0 \\
+\beta_2 & \beta_1 \\
+0 & 3
+}
+$$
+
+the transpose of the $2 \times 3$ matrix found there.
+Check a source's layout before combining its formulas with these.
 
 :::
