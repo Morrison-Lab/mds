@@ -5,6 +5,24 @@ are global); Murphy (2012), section 7.3.3, p. 222 (convex functions
 have a unique global minimum when strictly convex).
 The proof is the standard argument from the chord inequality.
 -->
+:::{#exm-convex-local-global}
+#### A convex and a non-convex function
+
+$f(x) = (x - 2)^2$ is convex (@def-convex-function):
+by expanding the square,
+$f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0$.
+Its local minimizer $x^* = 2$ is also a global minimizer,
+since $f(x) = (x - 2)^2 \ge 0 = f(2)$ for every $x$.
+
+Without convexity, this can fail:
+$f(x) = x^3 - 3x$ is not convex (@exm-cubic-not-convex),
+and it has a local minimizer at $x^* = 1$
+that is not global (@exr-local-vs-global-min).
+
+:::
+
+{{< slidebreak >}}
+
 :::{#thm-convex-local-global}
 #### Local minimizers of convex functions are global
 
@@ -12,24 +30,5 @@ Let $f : \reals^p \to \reals$ be a
 [convex function](#def-convex-function).
 Every [local minimizer](#def-local-minimizer) of $f$
 is a [global minimizer](#def-global-minimizer) of $f$ over $\reals^p$.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-convex-local-global}
-#### A convex and a non-convex function
-
-$f(x) = (x - 2)^2$ is convex:
-by expanding the square,
-$f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0$.
-Also, $x^* = 2$ is a local minimizer of $f$.
-@thm-convex-local-global says $x^* = 2$ is a global minimizer,
-which is also visible directly:
-$f(x) = (x - 2)^2 \ge 0 = f(2)$ for every $x$.
-
-The theorem fails without convexity:
-$f(x) = x^3 - 3x$ has a local minimizer at $x^* = 1$
-that is not global (@exr-local-vs-global-min).
 
 :::

@@ -23,8 +23,8 @@ with $a_n \ne 0$.
 #### Constant and zero polynomials
 
 A constant function $f(x) = 7$ is a polynomial with $n = 0$ and $a_0 = 7$.
-The requirement $a_n \ne 0$ means this definition covers nonzero polynomials only,
-so that the degree is defined (@def-polynomial-degree);
-the zero function $f(x) = 0$ is excluded here.
+The requirement $a_n \ne 0$ means this definition covers nonzero polynomials only:
+the zero function $f(x) = 0$ is excluded here,
+because it has no nonzero coefficient to serve as $a_n$.
 
 :::

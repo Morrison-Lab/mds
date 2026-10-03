@@ -34,11 +34,11 @@ because @def-quotient requires a nonzero denominator.
 
 {{< slidebreak >}}
 
-:::{#rem-rate}
-#### Rates
+:::{#def-rate}
+#### Rate
 
 A quotient whose denominator measures time or population size
-is often called a *rate*;
+is often called a **rate**;
 in epidemiology, rates typically have such a denominator.
 For example, $12$ new cases in $4$ weeks
 is a rate of $\frac{12}{4} = 3$ new cases per week,
