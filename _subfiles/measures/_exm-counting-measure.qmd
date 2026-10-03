@@ -11,7 +11,10 @@ $\sum_{k=0}^{\infty} \mu(\set{2k}) = 1 + 1 + \cdots = \infty$.
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-measure-size}
+#### Measures generalize size
 
 A [measure](#def-measure) generalizes size:
 it can measure how many elements a set has,
@@ -19,6 +22,8 @@ as in @def-counting-measure,
 or how long a set of real numbers is,
 as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does,
 assigning each interval $[a, b]$ its length $b - a$.
+For example, the counting measure on $\set{0, 1, 2, \ldots}$ gives $\set{2, 3, 4, 5}$ the value $4$,
+while the Lebesgue measure of the interval $[2, 5]$ is $5 - 2 = 3$.
 Both appear as reference measures in the
 [Fubini--Tonelli theorem](calculus.qmd#thm-fubini-tonelli).
 

@@ -10,8 +10,16 @@ $$A_i \cap A_j = \emptyset \quad \text{for all } i \neq j$$
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-mutually-exclusive}
+#### Mutually exclusive events
 
 In probability, pairwise disjoint events are usually called **mutually exclusive**.
+For example, for one roll of a six-sided die,
+the events "the roll is even", $\set{2, 4, 6}$,
+and "the roll is odd", $\set{1, 3, 5}$,
+are mutually exclusive:
+no roll is both even and odd.
 
 :::

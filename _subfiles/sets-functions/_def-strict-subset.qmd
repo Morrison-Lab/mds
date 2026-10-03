@@ -8,13 +8,20 @@ and $A \neq B$.
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-subset-symbol}
+#### Proper subsets and the symbol $\subset$
 
 Other sources call a strict subset a **proper subset**.
 Sources disagree about the symbol $\subset$:
 some use it for "subset" ($\subseteq$),
 and others for "strict subset" ($\subsetneq$)
 (see [Wikipedia: Subset](https://en.wikipedia.org/wiki/Subset)).
+For example, $\set{1, 2} \subset \set{1, 2}$ is true in the first reading,
+because $\set{1, 2} \subseteq \set{1, 2}$,
+and false in the second,
+because the two sets are equal.
 These notes avoid $\subset$ and write $\subseteq$ or $\subsetneq$.
 
 :::

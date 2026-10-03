@@ -1,16 +1,80 @@
+{{< slidebreak >}}
+
+:::{#rem-chain-vec-order}
+#### The order of the factors matters
+
+The vector chain rule (@thm-chain-vec) is like the univariate
+[chain rule](calculus.qmd#thm-chain-rule),
+but the order matters now:
+$\derivf{\vy}{\vx}$ is $p \times q$ and $\derivf{z}{\vy}$ is $q \times 1$,
+so the product $\derivf{z}{\vy} \derivf{\vy}{\vx}$ in the other order
+is not even defined unless $p = 1$.
+
+The version presented here is for the
+[gradient](https://en.wikipedia.org/wiki/Gradient) (column vector);
+the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector)
+would be the
+[transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative),
+$\tp{\paren{\derivf{z}{\vx}}} = \tp{\paren{\derivf{z}{\vy}}} \tp{\paren{\derivf{\vy}{\vx}}}$,
+with the factors in the reverse order.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-chain-vec}
+#### Applying the vector chain rule
+
+Let $\vx = \tp{(x_1, x_2)}$,
+$\vy = \vec{g}(\vx) = \tp{(x_1 + x_2,\ x_1 x_2)}$,
+and $z = f(\vy) = y_1^2 + y_2$.
+Then
+
+$$
+\ba
+\underbrace{\derivf{z}{\vx}}_{2 \times 1}
+&= \underbrace{\derivf{\vy}{\vx}}_{2 \times 2}
+\underbrace{\derivf{z}{\vy}}_{2 \times 1}
+&& \text{(vector chain rule)}
+\\
+&= \sbmat{
+1 & x_2 \\
+1 & x_1
+}
+\sbmat{
+2y_1 \\
+1
+}
+&& \text{(differentiate } \vec{g} \text{ and } f \text{)}
+\\
+&= \sbmat{
+2(x_1 + x_2) + x_2 \\
+2(x_1 + x_2) + x_1
+}
+&& \text{(multiply, and substitute } y_1 = x_1 + x_2 \text{)}
+\\
+&= \sbmat{
+2x_1 + 3x_2 \\
+3x_1 + 2x_2
+}
+&& \text{(collect terms)}
+\ea
+$$
+
+This matches differentiating $z$ directly:
+$z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2$,
+so $\deriv{x_1} z = 2x_1 + 3x_2$ and $\deriv{x_2} z = 3x_1 + 2x_2$.
+The product in the other order,
+a $2 \times 1$ matrix times a $2 \times 2$ matrix,
+is not defined.
+The total derivative is the transpose,
+the row vector $(2x_1 + 3x_2,\ 3x_1 + 2x_2)$.
+
+:::
+
 ::: notes
 See <https://quickfem.com/finite-element-analysis/>,
 specifically <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>
 
 See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_derivative>
-
-This chain rule is like the univariate
-[chain rule](calculus.qmd#thm-chain-rule),
-but the order matters now.
-The version presented here is for the
-[gradient](https://en.wikipedia.org/wiki/Gradient) (column vector);
-the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector)
-would be the
-[transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative).
-
 :::
