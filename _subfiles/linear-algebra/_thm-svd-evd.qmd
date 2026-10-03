@@ -144,12 +144,6 @@ and $\vecf{v}_i \neq \vzero$ because it has norm $1$.
 
 :::
 
-::: notes
-@thm-svd-evd matches @banerjee2014linear [Chapter 12, pp. 372-373],
-which constructs an SVD from a spectral decomposition of $\tp{\matr{A}}\matr{A}$
-and sets $\sigma_i = \sqrt{\lambda_i}$.
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-svd-evd}
@@ -214,5 +208,22 @@ $$
 && \text{(factor out } 2 \text{)}
 \ea
 $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-svd-from-evd}
+#### Building an SVD from an eigendecomposition
+
+@thm-svd-evd matches @banerjee2014linear [Chapter 12, pp. 372-373],
+which works in the other direction:
+it constructs an SVD from a spectral decomposition of $\tp{\matr{A}}\matr{A}$
+and sets $\sigma_i = \sqrt{\lambda_i}$.
+
+For example, in @exm-svd-evd
+the eigenvalues of $\tp{\matr{A}}\matr{A}$ are $4$ and $2$,
+and $\sqrt{4} = 2$ and $\sqrt{2}$
+are the singular values $\sigma_1$ and $\sigma_2$ of $\matr{A}$ from @exm-svd.
 
 :::
