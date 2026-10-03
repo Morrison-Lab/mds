@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:20:48 (PDT)
+Last modified: 2026-10-03 12:41:44 (PDT)
 
 ## 1 Equalities
 
@@ -771,8 +771,15 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} a^{(b^c)} &= 0^{(b^0)} \\ &= 0^1 \\ &= 0 \end{aligned} \\
 
-Back to top
+## 15 Further reading
+
+- Abramson et al. ([2021](#ref-abramson2021algebra)) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, and logarithms, which overlap with the algebra on this page.
+- Rudin ([1976](#ref-rudin1976principles)) develops the real numbers, including the least upper bound property behind the infimum and supremum.
 
 ## References
 
+Abramson, Jay et al. 2021. *Algebra and Trigonometry*. 2nd ed. OpenStax. <https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface>.
+
 Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+
+Back to top

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:20:48 (PDT)
+Last modified: 2026-10-03 12:41:44 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -544,9 +544,11 @@ See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_
 >
 > A constant gradient is the easy case, and it is not the case we usually face. Most objectives are curved — the squared error of a linear model is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.
 
-## 2 Additional resources
+## 2 Further reading
 
-See also the [Linear Algebra and Vector Calculus references](linear-algebra.llms.md#sec-additional-resources).
+- Marsden and Tromba ([2013](#ref-marsden2013vector)) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
+
+See also the [Linear Algebra and Vector Calculus further reading](linear-algebra.llms.md#sec-additional-resources).
 
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
 
@@ -555,5 +557,7 @@ See also the [Linear Algebra and Vector Calculus references](linear-algebra.llms
 Fieller, Nick. 2016. *Basics of Matrix Algebra for Statistics with R*. Chapman; Hall/CRC. <https://doi.org/10.1201/9781315370200>.
 
 Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
+
+Marsden, Jerrold E., and Anthony Tromba. 2013. *Vector Calculus*. 6th ed. Macmillan Learning. <https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089>.
 
 Back to top
