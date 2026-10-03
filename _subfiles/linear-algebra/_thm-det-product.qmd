@@ -11,21 +11,6 @@ $$
 
 {{< slidebreak >}}
 
-:::{#rem-det-product-proof}
-#### Where to find the proof
-
-The proof of @thm-det-product needs properties of the determinant
-that these notes don't develop;
-see @banerjee2014linear.
-
-:::
-
-::: notes
-See also <https://en.wikipedia.org/wiki/Determinant>.
-:::
-
-{{< slidebreak >}}
-
 :::{#exm-det-product}
 #### Checking the product rule
 
@@ -43,4 +28,23 @@ $$
 
 with $\det(\matr{A}\matr{B}) = 5 \cd 1 - 1 \cd 3 = 2 = \det(\matr{A})\det(\matr{B})$.
 
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-det-product-proof}
+#### An example is not a proof
+
+@exm-det-product checks @thm-det-product
+for one pair of $2 \times 2$ matrices,
+which shows the theorem holds there
+but does not prove it for every pair.
+The proof needs properties of the determinant
+that these notes don't develop;
+see @banerjee2014linear.
+
+:::
+
+::: notes
+See also <https://en.wikipedia.org/wiki/Determinant>.
 :::

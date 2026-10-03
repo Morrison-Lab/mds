@@ -49,13 +49,26 @@ $$
 \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 && \text{(substitute)}
 \\
+&= \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(multiplying by the } 1 \times 1 \text{ identity changes nothing)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(move the scalar to the front)}
+\\
 &= \frac{1}{\sqrt{2}}
 \begin{bmatrix} \sqrt{2} \cd 1 + 0 \cd 1 & \sqrt{2} \cd 1 + 0 \cd (-1) \end{bmatrix}
-&& \text{(definition of matrix multiplication; } \matr{U} \text{ multiplies by } 1 \text{)}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} \sqrt{2} + 0 & \sqrt{2} + 0 \end{bmatrix}
+&& \text{(multiply)}
 \\
 &= \frac{1}{\sqrt{2}}
 \begin{bmatrix} \sqrt{2} & \sqrt{2} \end{bmatrix}
-&& \text{(multiply and add)}
+&& \text{(add)}
 \\
 &= \begin{bmatrix} 1 & 1 \end{bmatrix}
 && \text{(divide by } \sqrt{2} \text{)}

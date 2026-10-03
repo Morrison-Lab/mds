@@ -62,13 +62,13 @@ For example, $\vecf{u} = (1, 2, 3)$ and $\vecf{v} = (4, 5)$
 in @exm-outer-product have different lengths,
 so they have no dot product,
 but their outer product is a $3 \times 2$ matrix.
-For $\vecf{u} = (1, 2)$ and $\vecf{w} = (3, 4)$,
+For $\vecf{a} = (1, 2)$ and $\vecf{b} = (3, 4)$,
 which have the same length, both products exist:
 
 $$
-\tp{\vecf{u}}\vecf{w} = 1 \cd 3 + 2 \cd 4 = 11
+\tp{\vecf{a}}\vecf{b} = 1 \cd 3 + 2 \cd 4 = 11
 \qquad
-\vecf{u}\,\tp{\vecf{w}}
+\vecf{a}\,\tp{\vecf{b}}
 = \begin{bmatrix} 1 \cd 3 & 1 \cd 4 \\ 2 \cd 3 & 2 \cd 4 \end{bmatrix}
 = \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}
 $$

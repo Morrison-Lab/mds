@@ -56,6 +56,13 @@ and derive this expansion from it;
 the two definitions agree
 [@banerjee2014linear].
 
+Each ordering picks one entry from each row,
+from the column that the ordering assigns to that row,
+and multiplies them.
+Its sign is $+1$ if the ordering takes an even number of swaps of two columns
+to reach from $(1, 2, \ldots, p)$,
+and $-1$ if it takes an odd number.
+
 For $p = 2$, the columns have two orderings.
 The ordering $(1, 2)$ keeps each column in place,
 picks the entries $a_{11}$ and $a_{22}$,

@@ -236,14 +236,34 @@ With the same $\matr{D}$:
 $$
 \ba
 \matr{D}\tp{\matr{V}_1}
+&= \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\tp{\paren{\frac{1}{\sqrt{2}} \begin{bmatrix} -1 & 1 \\ -1 & -1 \end{bmatrix}}}
+&& \text{(substitute)}
+\\
+&= \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} -1 & -1 \\ 1 & -1 \end{bmatrix}
+&& \text{(definition of the transpose)}
+\\
 &= \frac{1}{\sqrt{2}}
 \begin{bmatrix} 2 & 0 \\ 0 & \sqrt{2} \\ 0 & 0 \end{bmatrix}
 \begin{bmatrix} -1 & -1 \\ 1 & -1 \end{bmatrix}
-&& \text{(definition of the transpose; move the scalar to the front)}
+&& \text{(move the scalar to the front)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix}
+2 \cd (-1) + 0 \cd 1 & 2 \cd (-1) + 0 \cd (-1) \\
+0 \cd (-1) + \sqrt{2} \cd 1 & 0 \cd (-1) + \sqrt{2} \cd (-1) \\
+0 \cd (-1) + 0 \cd 1 & 0 \cd (-1) + 0 \cd (-1)
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} -2 + 0 & -2 + 0 \\ 0 + \sqrt{2} & 0 - \sqrt{2} \\ 0 + 0 & 0 + 0 \end{bmatrix}
+&& \text{(multiply)}
 \\
 &= \frac{1}{\sqrt{2}}
 \begin{bmatrix} -2 & -2 \\ \sqrt{2} & -\sqrt{2} \\ 0 & 0 \end{bmatrix}
-&& \text{(definition of matrix multiplication)}
+&& \text{(add)}
 \\
 &= \begin{bmatrix} -\sqrt{2} & -\sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
 && \text{(divide by } \sqrt{2} \text{)}
@@ -256,14 +276,29 @@ $$
 \ba
 \matr{U}_1\matr{D}\tp{\matr{V}_1}
 &= \begin{bmatrix}
--\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd 1 & -\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd (-1) \\
-0 \cd \paren{-\sqrt{2}} + 1 \cd 1 & 0 \cd \paren{-\sqrt{2}} + 1 \cd (-1) \\
--\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd 1 & -\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd (-1)
+-\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\
+0 & 1 & 0 \\
+-\frac{1}{\sqrt{2}} & 0 & -\frac{1}{\sqrt{2}}
 \end{bmatrix}
-&& \text{(definition of matrix multiplication; the third row of } \matr{D}\tp{\matr{V}_1} \text{ is zero)}
+\begin{bmatrix} -\sqrt{2} & -\sqrt{2} \\ 1 & -1 \\ 0 & 0 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \begin{bmatrix}
+-\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd 1 + \frac{1}{\sqrt{2}} \cd 0 & -\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd (-1) + \frac{1}{\sqrt{2}} \cd 0 \\
+0 \cd \paren{-\sqrt{2}} + 1 \cd 1 + 0 \cd 0 & 0 \cd \paren{-\sqrt{2}} + 1 \cd (-1) + 0 \cd 0 \\
+-\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd 1 - \frac{1}{\sqrt{2}} \cd 0 & -\frac{1}{\sqrt{2}} \cd \paren{-\sqrt{2}} + 0 \cd (-1) - \frac{1}{\sqrt{2}} \cd 0
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix}
+1 + 0 + 0 & 1 + 0 + 0 \\
+0 + 1 + 0 & 0 - 1 + 0 \\
+1 + 0 - 0 & 1 + 0 - 0
+\end{bmatrix}
+&& \text{(multiply)}
 \\
 &= \begin{bmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}
-&& \text{(multiply and add)}
+&& \text{(add)}
 \ea
 $$
 

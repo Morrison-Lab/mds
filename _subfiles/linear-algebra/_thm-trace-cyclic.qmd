@@ -112,8 +112,13 @@ The products have different sizes, but their traces agree.
 :::{#rem-trace-cyclic-triple}
 #### Moving a factor of a triple product
 
-Applying @thm-trace-cyclic to the product $\matr{A}\matr{B}$ and the matrix $\matr{C}$
-moves the last factor of a triple product to the front
+Let $\matr{A}$ be $m \times n$, $\matr{B}$ be $n \times k$,
+and $\matr{C}$ be $k \times m$,
+so that $\matr{A}\matr{B}$ is $m \times k$
+and $\matr{A}\matr{B}\matr{C}$ is square.
+Applying @thm-trace-cyclic to the $m \times k$ matrix $\matr{A}\matr{B}$
+and the $k \times m$ matrix $\matr{C}$
+moves the last factor of the triple product to the front
 [@banerjee2014linear, Chapter 1, Theorem 1.5 and eq. 1.17, p. 19]:
 
 $$
@@ -123,7 +128,7 @@ $$
 && \text{(matrix multiplication is associative)}
 \\
 &= \operatorname{tr}\paren{\matr{C}\,(\matr{A}\matr{B})}
-&& \text{(the trace of a product does not depend on the order)}
+&& \text{(the theorem, applied to the two factors } \matr{A}\matr{B} \text{ and } \matr{C} \text{)}
 \\
 &= \operatorname{tr}(\matr{C}\matr{A}\matr{B})
 && \text{(matrix multiplication is associative)}

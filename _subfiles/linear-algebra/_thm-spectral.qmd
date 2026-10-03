@@ -47,13 +47,30 @@ $$
 && \text{(} \matr{Q} \text{ is orthogonal)}
 \\
 &= \matr{\Lambda}
-&& \text{(identity matrix)}
+&& \text{(multiplying by } \matr{I}_p \text{ changes nothing)}
 \ea
 $$
 
-and multiplying $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$
+Multiplying $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$
 by $\matr{Q}$ on the left and by $\tp{\matr{Q}}$ on the right
-gives back $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$ the same way.
+gives back the first form:
+
+$$
+\ba
+\matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+&= \matr{Q}\paren{\tp{\matr{Q}}\matr{A}\matr{Q}}\tp{\matr{Q}}
+&& \text{(substitute)}
+\\
+&= \paren{\matr{Q}\tp{\matr{Q}}}\matr{A}\paren{\matr{Q}\tp{\matr{Q}}}
+&& \text{(regroup; matrix multiplication is associative)}
+\\
+&= \matr{I}_p\matr{A}\matr{I}_p
+&& \text{(} \matr{Q}\tp{\matr{Q}} = \matr{I}_p \text{)}
+\\
+&= \matr{A}
+&& \text{(multiplying by } \matr{I}_p \text{ changes nothing)}
+\ea
+$$
 
 For example, let
 $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
@@ -65,16 +82,32 @@ Then
 $$
 \ba
 \tp{\matr{Q}}\matr{A}\matr{Q}
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \frac{1}{\sqrt{2}} \cd \frac{1}{\sqrt{2}}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(move the scalars to the front)}
+\\
 &= \frac{1}{2}
 \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
 \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-&& \text{(substitute; multiply the scalars)}
+&& \text{(multiply the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 \cd 2 + 1 \cd 1 & 1 \cd 1 + 1 \cd 2 \\ 1 \cd 2 + (-1) \cd 1 & 1 \cd 1 + (-1) \cd 2 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(definition of matrix multiplication, first two matrices)}
 \\
 &= \frac{1}{2}
 \begin{bmatrix} 2 + 1 & 1 + 2 \\ 2 - 1 & 1 - 2 \end{bmatrix}
 \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-&& \text{(definition of matrix multiplication, first two matrices)}
+&& \text{(multiply)}
 \\
 &= \frac{1}{2}
 \begin{bmatrix} 3 & 3 \\ 1 & -1 \end{bmatrix}
@@ -82,11 +115,19 @@ $$
 && \text{(add)}
 \\
 &= \frac{1}{2}
-\begin{bmatrix} 3 + 3 & 3 - 3 \\ 1 - 1 & 1 + 1 \end{bmatrix}
+\begin{bmatrix} 3 \cd 1 + 3 \cd 1 & 3 \cd 1 + 3 \cd (-1) \\ 1 \cd 1 + (-1) \cd 1 & 1 \cd 1 + (-1) \cd (-1) \end{bmatrix}
 && \text{(definition of matrix multiplication)}
 \\
+&= \frac{1}{2}
+\begin{bmatrix} 3 + 3 & 3 - 3 \\ 1 - 1 & 1 + 1 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 6 & 0 \\ 0 & 2 \end{bmatrix}
+&& \text{(add)}
+\\
 &= \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
-&& \text{(add; multiply by } \tfrac{1}{2} \text{)}
+&& \text{(multiply by } \tfrac{1}{2} \text{)}
 \ea
 $$
 

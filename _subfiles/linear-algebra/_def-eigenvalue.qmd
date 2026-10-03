@@ -85,8 +85,11 @@ $$
 &= \begin{bmatrix} 2 \cd 2 + 1 \cd 2 \\ 1 \cd 2 + 2 \cd 2 \end{bmatrix}
 && \text{(definition of matrix-vector multiplication)}
 \\
+&= \begin{bmatrix} 4 + 2 \\ 2 + 4 \end{bmatrix}
+&& \text{(multiply)}
+\\
 &= \begin{bmatrix} 6 \\ 6 \end{bmatrix}
-&& \text{(multiply and add)}
+&& \text{(add)}
 \\
 &= 3 \begin{bmatrix} 2 \\ 2 \end{bmatrix}
 && \text{(factor out } 3 \text{)}
