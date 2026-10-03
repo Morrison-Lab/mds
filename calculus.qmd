@@ -16,8 +16,10 @@ format:
 
 {{< include mds/_calc-derivatives.qmd >}}
 
+{{< slidebreak >}}
+
 ::: {.callout-tip title="Videos"}
-Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on limits and the rules of differentiation:
+Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on limits, the idea behind derivatives, and the rules of differentiation:
 
 - [Calculating Limits](https://www.youtube.com/watch?v=VUlOwf9P9Pc&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 - [Exercises on Limits](https://www.youtube.com/watch?v=_2S3V5_DqAc&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
@@ -39,6 +41,8 @@ Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on limit
 ## Integration {#sec-integration}
 
 {{< include mds/_calc-integrals.qmd >}}
+
+{{< slidebreak >}}
 
 ::: {.callout-tip title="Videos"}
 Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on integration:

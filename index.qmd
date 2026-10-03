@@ -81,7 +81,7 @@ These resources cover related material.
 - [Calculus for Machine Learning](https://www.youtube.com/playlist?list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
   is a YouTube playlist by Jon Krohn (56 videos as of October 2026),
   taken from his Machine Learning Foundations series.
-  It covers limits, derivative rules, partial derivatives, and integrals,
+  It includes limits, derivative rules, partial derivatives, and integrals,
   so it overlaps with our [calculus](calculus.qmd) and [vector calculus](vector-calculus.qmd) pages.
   Those pages link the individual videos in the sections they match.
 
