@@ -51,7 +51,7 @@ The integrability conditions
 (nonnegativity or absolute integrability) still need to be verified
 in each application.
 For example, Lebesgue measure (ordinary length) on $[0, 1]$ is a probability measure,
-so the $\sigma$-finiteness condition holds on the unit square,
+so the $\sigma$-finiteness condition holds for both factors $[0, 1]$,
 yet the two iterated integrals in @exm-fubini-fail
 are $\pi/4$ and $-\pi/4$.
 So $\sigma$-finiteness alone does not make the iterated integrals agree.

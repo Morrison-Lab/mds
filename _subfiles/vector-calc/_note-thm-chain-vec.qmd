@@ -61,7 +61,9 @@ $$
 \ea
 $$
 
-which matches differentiating $z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2$ directly.
+This matches differentiating $z$ directly:
+$z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2$,
+so $\deriv{x_1} z = 2x_1 + 3x_2$ and $\deriv{x_2} z = 3x_1 + 2x_2$.
 The product in the other order,
 a $2 \times 1$ matrix times a $2 \times 2$ matrix,
 is not defined.
