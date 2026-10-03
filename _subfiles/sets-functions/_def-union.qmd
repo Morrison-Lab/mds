@@ -7,8 +7,11 @@ is the set of elements that are in $A$, in $B$, or in both:
 
 $$A \cup B \eqdef \set{x : x \in A \text{ or } x \in B}$$
 
-More generally, the union of sets $A_1, A_2, \ldots$,
-written $\bigcup_{i} A_i$,
+More generally, let $I$ be a set of indices,
+such as $\cb{1, \ldots, n}$ or $\cb{1, 2, 3, \ldots}$,
+and let $A_i$ be a set for each $i \in I$.
+The union of the sets $A_i$,
+written $\bigcup_{i \in I} A_i$,
 is the set of elements that are in at least one $A_i$.
 
 :::

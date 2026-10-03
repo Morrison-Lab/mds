@@ -106,7 +106,9 @@ of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
 
 The **mesh** of a partition $\mathcal{P}$ (@def-partition) is its largest subinterval width,
 
-$$\|\mathcal{P}\| \eqdef \max_i \Delta x_i.$$
+$$\|\mathcal{P}\| \eqdef \max_{i \in \cb{1, \ldots, n}} \Delta x_i,$$
+
+where $n$ is the number of subintervals of $\mathcal{P}$.
 
 [@larsonCalc11e, Section 4.3]
 
