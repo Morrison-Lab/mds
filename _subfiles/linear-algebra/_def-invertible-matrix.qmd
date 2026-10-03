@@ -1,10 +1,54 @@
 :::{#def-invertible-matrix}
 #### Invertible matrix
 
-A square matrix $\matr{A}$ is **invertible**
+A $p \times p$ matrix $\matr{A}$ is **invertible**
 (or *non-singular*)
-if it has an inverse $\matr{A}^{-1}$ (@def-matrix-inverse).
-A square matrix with no inverse is *singular*.
+if some $p \times p$ matrix $\matr{B}$ satisfies
+
+$$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p,$$
+
+where $\matr{I}_p$ is the identity matrix (@def-identity-matrix).
+A square matrix that is not invertible is *singular*.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-invertible-inverse}
+#### Invertible matrices and inverses
+
+At most one matrix $\matr{B}$ satisfies these equations.
+If a $p \times p$ matrix $\matr{C}$ also satisfies them, then
+
+$$
+\ba
+\matr{B}
+&= \matr{B}\,\matr{I}_p
+&& \text{(identity matrix)}
+\\
+&= \matr{B}(\matr{A}\matr{C})
+&& \text{(} \matr{A}\matr{C} = \matr{I}_p \text{)}
+\\
+&= (\matr{B}\matr{A})\matr{C}
+&& \text{(matrix multiplication is associative)}
+\\
+&= \matr{I}_p\,\matr{C}
+&& \text{(} \matr{B}\matr{A} = \matr{I}_p \text{)}
+\\
+&= \matr{C}
+&& \text{(identity matrix)}
+\ea
+$$
+
+So $\matr{B}$ is the inverse $\matr{A}^{-1}$ of $\matr{A}$ (@def-matrix-inverse),
+and $\matr{A}$ is invertible exactly when it has an inverse.
+For example,
+$\matr{A} = \begin{bmatrix} 2 & 0 \\ 0 & 4 \end{bmatrix}$
+is invertible, with
+$\matr{B} = \matr{A}^{-1} = \begin{bmatrix} 0.5 & 0 \\ 0 & 0.25 \end{bmatrix}$:
+both products are
+$\begin{bmatrix} 2 \cdot 0.5 & 0 \\ 0 & 4 \cdot 0.25 \end{bmatrix}
+= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \matr{I}_2$.
 
 :::
 
