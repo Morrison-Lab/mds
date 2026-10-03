@@ -6,12 +6,18 @@ is the set that has no elements.
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
 
-Other sources write $\set{}$
+:::{#rem-empty-set-notation}
+#### Other notation for the empty set
+
+Other sources write $\set{}$ for $\emptyset$
 (see [Wikipedia: Empty set](https://en.wikipedia.org/wiki/Empty_set)).
 Some sources call it the **null set**,
 but in measure theory a "null set" usually means a set of measure zero,
 which need not be empty.
+For example, the set $\set{0}$ has length $0$,
+so it is a null set in that sense,
+but it is not empty, because $0 \in \set{0}$.
 
 :::

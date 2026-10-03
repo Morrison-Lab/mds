@@ -150,11 +150,20 @@ $$
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-iverson-indicator}
+#### The Iverson bracket is the predicate indicator
+
 The Iverson bracket $[P]$ is the predicate indicator $\indicp{P}$
 (@def-indicator-function) in different notation.
 Under this notation,
-set membership is written $[x \in A]$.
+set membership is written $[x \in A]$,
+so $[x \in A] = \indic{A}(x)$.
+For example, with $A = \cb{1, 2}$:
+$[1 \in A] = \indic{A}(1) = 1$
+and $[3 \in A] = \indic{A}(3) = 0$.
+
 :::
 
 {{< slidebreak >}}

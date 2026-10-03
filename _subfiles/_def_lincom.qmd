@@ -9,15 +9,7 @@ $$\vx \cdot \vy = \vx^\top \vy \eqdef \sumip x_i y_i$$ {#eq-inner-product}
 :::
 
 ::: notes
-
-::: callout-note
-The dot product $\vx \cdot \vy$ is a *linear combination*
-of the entries of $\vy$, with coefficients $x_1, \ldots, x_p$.
-It is also the standard *inner product* on $\reals^p$;
-"inner product" is the general notion,
-of which the dot product is one example.
-
-See also the definitions in 
+See also the definitions in:
 
 - @dobson4e, Section 1.3 (equation 1.1, page 7)
 
@@ -28,14 +20,8 @@ sessions, so the current URL is unverified; restore a deep link once found. -->
 
 - [wikipedia](https://en.wikipedia.org/wiki/Linear_combination)
 
-"Linear combination" can also refer to weighted sums of vectors,
-or in other words matrix-vector multiplication.
-
-The dot-product has a different generalization for two matrices;
+The dot product has a different generalization for two matrices;
 see [wikipedia](https://en.wikipedia.org/wiki/Dot_product#Dyadics_and_matrices) for more.
-
-:::
-
 :::
 
 {{< slidebreak >}}
@@ -58,6 +44,28 @@ $$
 && \text{(add)}
 \ea
 $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-dot-product-lincom}
+#### The dot product is a linear combination
+
+The dot product $\vx \cdot \vy$ is a *linear combination*
+of the entries of $\vy$, with coefficients $x_1, \ldots, x_p$.
+In @exm-dot-product, $\vx \cdot \vy = 1 \cd 4 + 2 \cd 5 + 3 \cd 6$
+is the linear combination of $4$, $5$, and $6$
+with coefficients $1$, $2$, and $3$.
+
+The dot product is also the standard *inner product* on $\reals^p$;
+"inner product" is the general notion,
+of which the dot product is one example.
+
+"Linear combination" can also mean a weighted sum of vectors.
+For example, $2 \tp{(1, 0)} + 3 \tp{(0, 1)} = \tp{(2, 3)}$
+is the linear combination of the vectors $\tp{(1, 0)}$ and $\tp{(0, 1)}$
+with coefficients $2$ and $3$.
 
 :::
 

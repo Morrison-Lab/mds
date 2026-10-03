@@ -33,12 +33,43 @@ for every choice of grids and of the points $(x_i, y_i)$.
 
 :::
 
-::: notes
-The symbol $dA$ stands for an element of area.
-An *iterated integral* such as $\int_a^b \int_c^d f(x, y)\,dy\,dx$
-means $\int_a^b \paren{\int_c^d f(x, y)\,dy}\,dx$:
-integrate over the inner variable ($y$) first,
-holding the outer variable ($x$) fixed.
+{{< slidebreak >}}
+
+:::{#def-iterated-integral}
+#### Iterated integral
+
+In @def-double-integral, the symbol $dA$ stands for an element of area.
+An **iterated integral** is an integral of an integral:
+
+$$
+\int_a^b \int_c^d f(x, y)\,dy\,dx \eqdef \int_a^b \paren{\int_c^d f(x, y)\,dy}\,dx
+$$
+
+That is, integrate over the inner variable ($y$) first,
+holding the outer variable ($x$) fixed,
+and then integrate the result over the outer variable.
+For example:
+
+$$
+\ba
+\int_0^1 \int_0^2 x y\,dy\,dx
+&= \int_0^1 \paren{\int_0^2 x y\,dy}\,dx
+&& \text{(definition of the iterated integral)}
+\\
+&= \int_0^1 x \sb{\frac{y^2}{2}}_{y=0}^{y=2}\,dx
+&& \text{(} x \text{ is constant in } y \text{)}
+\\
+&= \int_0^1 2x\,dx
+&& \text{(evaluate at the limits)}
+\\
+&= \sb{x^2}_{x=0}^{x=1}
+&& \text{(antiderivative of } 2x \text{)}
+\\
+&= 1
+&& \text{(evaluate at the limits)}
+\ea
+$$
+
 :::
 
 {{< slidebreak >}}

@@ -13,11 +13,19 @@ $$
 \underbrace{\tp{\matr{A}}}_{q \times m}
 $$
 
-:::: notes
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-deriv-matrix-vector-special-case}
+#### The derivative of a linear map as a special case
+
 This result generalizes @thm-deriv-linear-map,
 which is the special case $\vecf{v} = \vb$
-(so that $\deriv{\vb} \vb = \matr{I}$
-and $\deriv{\vb} (\matr{A}\vb) = \tp{\matr{A}}$).
-::::
+(so that $q = p$, $\deriv{\vb} \vb = \matr{I}_p$,
+and $\deriv{\vb} (\matr{A}\vb) = \matr{I}_p \tp{\matr{A}} = \tp{\matr{A}}$).
+For example, with $\matr{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ and $\vecf{v} = \vb = \tp{(\beta_1, \beta_2)}$,
+$\matr{A}\vb = 2\beta_1 + 3\beta_2$,
+and its vector derivative is $\tp{(2, 3)} = \tp{\matr{A}}$.
 
 :::

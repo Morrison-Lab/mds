@@ -33,16 +33,42 @@ $$
 
 <!-- repoint the joint-distribution link to pds expectation.qmd#cor-fubini-joint once pds#8 is published -->
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-fubini-tonelli-probability}
+#### Fubini--Tonelli for probability measures
+
 Applied courses rarely need the measure-theoretic generalization itself,
 but it is what justifies the
 [joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint)
 corollary in the probability
-chapter of *Regression Models for Epidemiology*: probability measures are finite (hence $\sigma$-finite), so the
-$\sigma$-finiteness condition is automatic.
+chapter of *Regression Models for Epidemiology*.
+A probability measure gives the whole space measure $1$,
+so it is finite, and hence $\sigma$-finite;
+for probability measures, the $\sigma$-finiteness condition is automatic.
+
 The integrability conditions
 (nonnegativity or absolute integrability) still need to be verified
 in each application.
+For example, take $\mu_1$ and $\mu_2$ to be Lebesgue measure (ordinary length) on $[0, 1]$,
+which are probability measures,
+and let $f(x, y) = (x^2 - y^2) / (x^2 + y^2)^2$,
+with $f(0, 0) \eqdef 0$.
+Then $f$ is negative where $y > x$,
+so condition (a) fails,
+and $\int_{[0, 1]^2} \abs{f}\,d(\mu_1 \otimes \mu_2) = \infty$,
+so condition (b) fails too.
+The two iterated integrals differ:
+
+$$
+\int_0^1 \int_0^1 f(x, y)\,dy\,dx = \frac{\pi}{4},
+\qquad
+\int_0^1 \int_0^1 f(x, y)\,dx\,dy = -\frac{\pi}{4}
+$$
+
+(the inner integrals are $\int_0^1 f(x, y)\,dy = 1/(1 + x^2)$
+and $\int_0^1 f(x, y)\,dx = -1/(1 + y^2)$).
+
 :::
 
 {{< slidebreak >}}
