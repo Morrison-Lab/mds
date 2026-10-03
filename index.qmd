@@ -59,9 +59,10 @@ These resources cover related material at a different level or with a different 
 
 - [Mathematical Methods in Data Science (MMiDS)](https://mmids-textbook.github.io/index.html)
   by Sebastien Roch (University of Wisconsin-Madison),
-  published by Cambridge University Press in 2025,
-  grew out of the author's MATH 535 course.
-  It is aimed at mathematically inclined students in data science, AI, and statistics.
+  is free online and also in print from Cambridge University Press.
+  It grew out of MATH 535, a one-semester advanced undergraduate and master's course at UW-Madison.
+  It is written as an invitation to data science and AI for math students,
+  and as a mathematical companion to machine learning, AI, and statistics courses.
   Its chapters treat least squares, optimization,
   the singular value decomposition, spectral graph theory,
   probabilistic models, random walks on graphs, and neural networks,
