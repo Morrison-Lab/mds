@@ -12,8 +12,15 @@ format:
 
 {{< include mds/_subfiles/_sec_linear_algebra.qmd >}}
 
-## Additional resources {#sec-additional-resources}
+## Further reading {#sec-additional-resources}
 
+- @strang2023linear
+  is a widely used first course in linear algebra.
+  It covers vectors, elimination, vector spaces, orthogonality, determinants,
+  eigenvalues, and the singular value decomposition.
+- @axler2024linear
+  is a proof-based treatment centered on vector spaces and linear maps.
+  A free electronic version is available from the publisher.
 - @fieller2018basics
 - @banerjee2014linear
 - @searle2017matrix

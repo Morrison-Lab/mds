@@ -11,3 +11,27 @@ format:
 ---
 
 {{< include mds/_sets-functions.qmd >}}
+
+## Further reading {#sec-further-reading}
+
+These books treat sets and the logic behind them in more depth.
+
+- @devlin1993joy
+  is an undergraduate introduction to axiomatic set theory.
+  It covers the axioms of set theory, ordinals, and cardinals,
+  which go well beyond the countable sets and functions on this page.
+- @halmos1974naive
+  is a short, informal treatment of the same axioms,
+  covering relations, functions, families of sets, and cardinal numbers.
+- @enderton2001logic
+  is a standard introduction to mathematical logic.
+  Its first chapter collects the facts about sets, relations, and functions
+  that the later chapters use.
+- @barkerplummer2011language
+  teaches propositional and first-order logic,
+  the language behind statements such as "for every set $A$ there exists...".
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

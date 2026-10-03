@@ -11,3 +11,18 @@ format:
 ---
 
 {{< include mds/_algebra.qmd >}}
+
+## Further reading {#sec-further-reading}
+
+- @abramson2021algebra
+  is a free online textbook on algebra and trigonometry.
+  It covers equations, inequalities, polynomials, exponentials, and logarithms,
+  which overlap with the algebra on this page.
+- @rudin1976principles
+  develops the real numbers, including the least upper bound property
+  behind the infimum and supremum.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

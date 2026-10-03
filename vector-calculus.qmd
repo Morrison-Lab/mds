@@ -14,10 +14,15 @@ format:
 
 {{< include mds/_subfiles/_sec_vector_calc.qmd >}}
 
-## Additional resources {#sec-additional-resources}
+## Further reading {#sec-additional-resources}
+
+- @marsden2013vector
+  is a standard textbook on multivariable and vector calculus.
+  It covers differentiation of functions of several variables, multiple integrals,
+  line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 
 See also the [Linear Algebra and Vector Calculus
-references](linear-algebra.qmd#sec-additional-resources).
+further reading](linear-algebra.qmd#sec-additional-resources).
 
 - [Hua Zhou](https://hua-zhou.github.io/)'s [lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
 

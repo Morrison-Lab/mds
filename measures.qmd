@@ -11,3 +11,20 @@ format:
 ---
 
 {{< include mds/_measures.qmd >}}
+
+## Further reading {#sec-further-reading}
+
+- @billingsley1995probability
+  develops measure theory and builds probability on it.
+  Its early chapters define $\sigma$-algebras, measures, and their basic properties.
+- @folland1999real
+  is a graduate text on measure and integration;
+  its first chapters treat $\sigma$-algebras and measures.
+- @gut2013
+  is a graduate course in probability
+  that opens with a chapter on introductory measure theory.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

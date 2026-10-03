@@ -48,7 +48,7 @@ format:
 
 {{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
 
-## Additional resources {#sec-additional-resources}
+## Further reading {#sec-additional-resources}
 
 - @mosaiccalc
 - @khuri2003advanced
