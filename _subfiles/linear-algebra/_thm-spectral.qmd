@@ -19,12 +19,78 @@ and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\lambda_i$.
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-spectral-equivalent-form}
+#### An equivalent form of the spectral theorem
+
 The proof, by induction on $p$, is outside the scope of these notes;
 see @banerjee2014linear [Chapter 11, Theorem 11.27, p. 349],
 which states the result in the equivalent form
 $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$.
-The two forms are equivalent because $\tp{\matr{Q}}\matr{Q} = \matr{Q}\tp{\matr{Q}} = \matr{I}_p$:
-multiply $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
-by $\tp{\matr{Q}}$ on the left and by $\matr{Q}$ on the right.
+The two forms are equivalent because
+$\tp{\matr{Q}}\matr{Q} = \matr{Q}\tp{\matr{Q}} = \matr{I}_p$
+(@rem-orthogonal-matrix-columns).
+Multiplying $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+by $\tp{\matr{Q}}$ on the left and by $\matr{Q}$ on the right gives
+
+$$
+\ba
+\tp{\matr{Q}}\matr{A}\matr{Q}
+&= \tp{\matr{Q}}\paren{\matr{Q}\matr{\Lambda}\tp{\matr{Q}}}\matr{Q}
+&& \text{(substitute)}
+\\
+&= \paren{\tp{\matr{Q}}\matr{Q}}\matr{\Lambda}\paren{\tp{\matr{Q}}\matr{Q}}
+&& \text{(regroup; matrix multiplication is associative)}
+\\
+&= \matr{I}_p\matr{\Lambda}\matr{I}_p
+&& \text{(} \matr{Q} \text{ is orthogonal)}
+\\
+&= \matr{\Lambda}
+&& \text{(identity matrix)}
+\ea
+$$
+
+and multiplying $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$
+by $\matr{Q}$ on the left and by $\tp{\matr{Q}}$ on the right
+gives back $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$ the same way.
+
+For example, let
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+and
+$\matr{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$,
+which is symmetric, so $\tp{\matr{Q}} = \matr{Q}$.
+Then
+
+$$
+\ba
+\tp{\matr{Q}}\matr{A}\matr{Q}
+&= \frac{1}{2}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute; multiply the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 2 + 1 & 1 + 2 \\ 2 - 1 & 1 - 2 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(definition of matrix multiplication, first two matrices)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 & 3 \\ 1 & -1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(add)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 + 3 & 3 - 3 \\ 1 - 1 & 1 + 1 \end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+&& \text{(add; multiply by } \tfrac{1}{2} \text{)}
+\ea
+$$
+
+a diagonal matrix with the eigenvalues $3$ and $1$ of $\matr{A}$
+from @exm-eigenvalue on its diagonal.
+
 :::

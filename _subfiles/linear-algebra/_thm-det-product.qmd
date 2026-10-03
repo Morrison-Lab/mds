@@ -9,13 +9,19 @@ $$
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
 
-The proof needs properties of the determinant
+:::{#rem-det-product-proof}
+#### Where to find the proof
+
+The proof of @thm-det-product needs properties of the determinant
 that these notes don't develop;
-see @banerjee2014linear
-and <https://en.wikipedia.org/wiki/Determinant>.
+see @banerjee2014linear.
 
+:::
+
+::: notes
+See also <https://en.wikipedia.org/wiki/Determinant>.
 :::
 
 {{< slidebreak >}}
