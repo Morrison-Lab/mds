@@ -1,6 +1,6 @@
 {{< include mds/_subfiles/vector-calc/_prose-vector-calc-attribution.qmd >}}
 
-{{< include mds/_subfiles/vector-calc/_note-vector-calc-intro.qmd >}}
+{{< include mds/_subfiles/vector-calc/_intro-vector-calc.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_prose-vector-calc-notation.qmd >}}
 
@@ -78,6 +78,8 @@
 
 {{< include mds/_subfiles/vector-calc/_exm-deriv-matrix-vector.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_rem-deriv-matrix-vector-special-case.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/_thm-deriv-matrix-product-vector.qmd >}}
@@ -92,13 +94,15 @@
 
 {{< include mds/_subfiles/vector-calc/_exm-deriv-lincom-tp.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_rem-deriv-lincom-tp-transpose.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_thm-quadratic-form.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_proof-thm-quadratic-form.qmd >}}
 
-{{< include mds/_subfiles/vector-calc/_note-thm-quadratic-form.qmd >}}
+{{< include mds/_subfiles/vector-calc/_rem-quadratic-form-scalar.qmd >}}
 
 {{< slidebreak >}}
 
@@ -110,7 +114,7 @@
 
 {{< include mds/_subfiles/vector-calc/_proof-cor-deriv-normsq.qmd >}}
 
-{{< include mds/_subfiles/vector-calc/_note-cor-deriv-normsq.qmd >}}
+{{< include mds/_subfiles/vector-calc/_rem-deriv-normsq-scalar.qmd >}}
 
 {{< slidebreak >}}
 
@@ -120,7 +124,7 @@
 
 {{< include mds/_subfiles/vector-calc/_thm-chain-vec.qmd >}}
 
-{{< include mds/_subfiles/vector-calc/_note-thm-chain-vec.qmd >}}
+{{< include mds/_subfiles/vector-calc/_rem-chain-vec.qmd >}}
 
 {{< slidebreak >}}
 
