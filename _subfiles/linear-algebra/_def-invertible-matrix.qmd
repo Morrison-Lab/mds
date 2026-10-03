@@ -25,11 +25,11 @@ multiplying out gives
 $\matr{A}\matr{A}^{-1} = \matr{A}^{-1}\matr{A} = \matr{I}_2$.
 
 The matrix
-$\matr{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
+$\matr{M} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
 is singular:
 for any $2 \times 2$ matrix $\matr{C}$,
-the two rows of $\matr{S}\matr{C}$ are equal,
-so $\matr{S}\matr{C}$ can never be $\matr{I}_2$,
+the two rows of $\matr{M}\matr{C}$ are equal,
+so $\matr{M}\matr{C}$ can never be $\matr{I}_2$,
 whose two rows differ.
 
 :::
@@ -68,7 +68,8 @@ $$
 $$
 
 The steps use @thm-matmul-assoc and @thm-identity.
-So at most one matrix satisfies these equations,
+Since $\matr{B} = \matr{C}$,
+at most one matrix satisfies these equations,
 which is the uniqueness that @def-matrix-inverse asserts.
 When $\matr{A}$ is invertible,
 the matrix $\matr{B}$ in @def-invertible-matrix

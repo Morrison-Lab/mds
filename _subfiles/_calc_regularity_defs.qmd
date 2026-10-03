@@ -164,12 +164,12 @@ for every choice of the partitions and of the sample points.
 :::{#rem-integrable-integral}
 #### Riemann integrable functions and Riemann integrals
 
-$f$ is Riemann integrable on $[a, b]$
+A bounded function $f$ is Riemann integrable on $[a, b]$
 exactly when its Riemann integral $\int_a^b f(x)\,dx$
 (@def-riemann-integral) exists;
 the integral is the common limit of the sums.
-For example, let $f(x) = 1$ when $x$ is rational
-and $f(x) = 0$ when $x$ is irrational,
+For example, let $g(x) = 1$ when $x$ is rational
+and $g(x) = 0$ when $x$ is irrational,
 on $[0, 1]$.
 Every subinterval contains both rational and irrational points.
 Choosing every sample point rational gives
@@ -179,8 +179,8 @@ because the widths $\Delta x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$,
 and choosing every sample point irrational gives
 $\sum_{i=1}^n 0 \cd \Delta x_i = 0$.
 The two limits differ,
-so $f$ is not Riemann integrable on $[0, 1]$,
-and $\int_0^1 f(x)\,dx$ does not exist.
+so $g$ is not Riemann integrable on $[0, 1]$,
+and $\int_0^1 g(x)\,dx$ does not exist.
 
 :::
 
