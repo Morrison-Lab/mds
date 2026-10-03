@@ -85,7 +85,7 @@ Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on integ
 
 {{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
 
-## Additional resources {#sec-additional-resources}
+## Further reading {#sec-additional-resources}
 
 - @mosaiccalc
 - @khuri2003advanced

@@ -23,10 +23,16 @@ jobs:
     uses: Morrison-Lab/gha/.github/workflows/check-bibliography-dois.yml@v2
     with:
       # Entries carrying no DOI (books, a 1907 paper, an op-ed, a web
-      # textbook). None has been searched for one yet; move a key out of
-      # this list when a DOI is found and verified by content negotiation.
+      # textbook). Of these, only the five books added for the further-reading
+      # sections (abramson2021algebra, barkerplummer2011language,
+      # folland1999real, marsden2013vector, strang2023linear) were searched
+      # on Crossref (2026-10-03, no DOI found). Move a key out of this list
+      # when a DOI is found and verified by content negotiation.
       exclude-keys: >-
-        banerjee2014linear billingsley1995probability calclifesaver
-        cheng2025math fubini1907 goodfellow2016deep larsonCalc11e mosaiccalc
+        abramson2021algebra banerjee2014linear barkerplummer2011language
+        billingsley1995probability calclifesaver
+        cheng2025math folland1999real fubini1907 goodfellow2016deep
+        larsonCalc11e marsden2013vector mosaiccalc
         problifesavercalc
         realanalysislifesaver rudin1976principles searle2017matrix
+        strang2023linear
