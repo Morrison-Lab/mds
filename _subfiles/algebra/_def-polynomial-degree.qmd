@@ -18,7 +18,4 @@ The integer $n$ is the **degree** of $f$.
   the degree is the highest power with a nonzero coefficient,
   not the power in the first term written.
 - A constant polynomial $f(x) = 7$ has degree $0$.
-- The zero function $f(x) = 0$ has no degree here,
-  because @def-polynomial excludes it.
-
 :::

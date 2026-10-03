@@ -16,6 +16,6 @@ $$\exp{a-b} = \frac{\exp{a}}{\exp{b}}$$
 
 With $a = 5$ and $b = 2$,
 $\exp{5 - 2} = \exp{3} \approx 20.09$,
-and $\frac{\exp{5}}{\exp{2}} \approx \frac{148.41}{7.389} \approx 20.09$.
+and $\frac{\exp{5}}{\exp{2}} \approx \frac{148.4132}{7.3891} \approx 20.09$.
 
 :::
