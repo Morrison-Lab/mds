@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:41:44 (PDT)
+Last modified: 2026-10-03 12:53:36 (PDT)
 
 > **NOTE:**
 >
@@ -240,7 +240,7 @@ Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. *Language, Proof a
 
 Devlin, Keith. 1993. *The Joy of Sets: Fundamentals of Contemporary Set Theory*. 2nd ed. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4612-0903-4>.
 
-Enderton, Herbert B. 2001. *A Mathematical Introduction to Logic*. 2nd ed. Academic Press. <https://shop.elsevier.com/books/a-mathematical-introduction-to-logic/enderton/978-0-08-049646-7>.
+Enderton, Herbert B. 2001. *A Mathematical Introduction to Logic*. 2nd ed. Academic Press. <https://doi.org/10.1016/C2009-0-22107-6>.
 
 Halmos, Paul R. 1974. *Naive Set Theory*. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4757-1645-0>.
 
