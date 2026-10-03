@@ -53,6 +53,30 @@ organized by topic:
 - [Proof Writing](proof-writing.qmd):
   showing and annotating every step of a derivation
 
+## Further reading {.unnumbered}
+
+These resources cover related material at a different level or with a different emphasis.
+
+- [Mathematical Methods in Data Science (MMiDS)](https://mmids-textbook.github.io/index.html)
+  by Sebastien Roch (University of Wisconsin-Madison),
+  published by Cambridge University Press in 2025,
+  grew out of the author's MATH 535 course.
+  It is aimed at mathematically inclined students in data science, AI, and statistics.
+  Its chapters treat least squares, optimization,
+  the singular value decomposition, spectral graph theory,
+  probabilistic models, random walks on graphs, and neural networks,
+  so they overlap with our linear algebra and vector calculus pages.
+- [UCLA Biostat 216, Mathematical Methods for Biostatistics](https://github.com/ucla-biostat-216)
+  is a course for first-year biostatistics MS and PhD students at UCLA, taught by Hua Zhou.
+  The most recent course site in the organization
+  is the [2024 Fall edition](https://ucla-biostat-216.github.io/2024fall/).
+  Its [schedule](https://ucla-biostat-216.github.io/2024fall/schedule/schedule.html)
+  links slides on vectors, matrices, vector spaces, rank, orthogonal projection,
+  matrix inverses, least squares, determinants, eigendecompositions,
+  positive (semi)definite matrices, the SVD, and multivariate calculus and optimization.
+  Those topics overlap with our [linear algebra](linear-algebra.qmd)
+  and [vector calculus](vector-calculus.qmd) pages.
+
 ## Using these notes in another site {.unnumbered}
 
 Course sites include these notes as a git submodule named `mds`
