@@ -14,10 +14,11 @@ $$\tp{\matr{P}} = \matr{P}
 {{< slidebreak >}}
 
 :::{#def-oblique-projection}
-#### Projection matrix and oblique projection
+#### Oblique projection
 
-In general, any idempotent square matrix is called a **projection matrix**.
-An idempotent matrix that is not symmetric is an **oblique projection**.
+A square matrix is an **oblique projection**
+if it is idempotent (@def-idempotent-matrix)
+but not symmetric (@def-symmetric-matrix).
 
 :::
 
@@ -52,6 +53,9 @@ not an orthogonal projection matrix.
 :::{#rem-projection-matrix-terminology}
 #### What "projection matrix" means in these notes
 
+Some texts call any idempotent matrix a projection matrix,
+so that both $\matr{P}$ and $\matr{Q}$ in @exm-projection-matrix
+would count as one.
 Regression texts often say "projection matrix"
 when they mean an orthogonal one.
 In these notes, "projection matrix" always means
