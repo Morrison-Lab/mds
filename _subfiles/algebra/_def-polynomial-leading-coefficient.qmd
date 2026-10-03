@@ -8,6 +8,14 @@ The constant $a_n$ is the **leading coefficient** of $f$.
 
 :::
 
-::: notes
-In @exr-polynomial-degree, $f(x) = 3x^4 - x + 7$ has leading coefficient $3$.
+{{< slidebreak >}}
+
+:::{#exm-leading-coefficient}
+#### Leading coefficients
+
+- $f(x) = 5 - 2x^2 + x^3$ has degree $3$,
+  so its leading coefficient is $a_3 = 1$,
+  not the $5$ written first.
+- $f(x) = 3 - x^2$ has leading coefficient $a_2 = -1$.
+
 :::

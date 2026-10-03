@@ -13,12 +13,23 @@ where $\norm{\cdot}$ is the
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-local-minimizer}
+#### Local and global minimizers
+
 For $p = 1$, $\norm{x - x^*} = \abs{x - x^*}$.
+For example, with $x^* = 1$ and $\delta = 1$,
+the condition $\abs{x - 1} < 1$ means $0 < x < 2$.
+
 Every global minimizer (@def-global-minimizer) is a local minimizer:
 take any $\delta > 0$.
+For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\reals$,
+so it is also a local minimizer.
+
 The converse fails.
 In @exr-local-vs-global-min,
-$x^* = 1$ is a local minimizer of $f$ (take $\delta = 1$),
+$x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta = 1$),
 but not a global one.
+
 :::

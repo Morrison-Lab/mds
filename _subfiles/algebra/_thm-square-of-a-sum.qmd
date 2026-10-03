@@ -13,7 +13,16 @@ $$
 By @sol-square-of-a-sum.
 :::
 
-::: notes
-Replacing $b$ by $-b$ gives $(a - b)^2 = a^2 - 2ab + b^2$.
+{{< slidebreak >}}
+
+:::{#rem-square-of-a-difference}
+#### Square of a difference
+
+Replacing $b$ by $-b$ in @thm-square-of-a-sum
+gives $(a - b)^2 = a^2 - 2ab + b^2$.
 Squared errors such as $(y - \hat{y})^2$ are expanded this way.
+For example, with $y = 5$ and $\hat{y} = 3$,
+$(5 - 3)^2 = 2^2 = 4$,
+and $5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4$.
+
 :::
