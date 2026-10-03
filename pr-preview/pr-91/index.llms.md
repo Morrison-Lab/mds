@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 01:03:27 (PDT)
+Last modified: 2026-10-03 01:11:37 (PDT)
 
 ## Welcome
 
@@ -25,7 +25,7 @@ These notes collect the mathematics that data science courses assume: mathematic
 
 ## Using these notes in another site
 
-Course sites include these notes as a git submodule named `mds` at the site’s root, and include fragments with paths that start with `mds/`, for example `{{< include mds/_notation.qmd >}}`. This site includes its own fragments the same way, through a `mds` symlink that points at the repository root.
+Course sites link to these pages by URL; they do not include this repository as a git submodule. A host site that keeps a copy of this repository at its root, named `mds`, can still include fragments with paths that start with `mds/`, for example `{{< include mds/_notation.qmd >}}`. This site includes its own fragments the same way, through a `mds` symlink that points at the repository root.
 
 Each page is a thin wrapper around one or more fragments:
 
