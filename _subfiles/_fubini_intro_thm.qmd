@@ -36,6 +36,19 @@ The symbol $dA$ stands for an element of area.
 
 {{< slidebreak >}}
 
+:::{#exm-double-integral-area}
+#### The double integral of $1$ is an area
+
+Let $f(x, y) = 1$ on the rectangle $R = [0, 2] \times [0, 3]$.
+Every sum in @def-double-integral
+adds up the areas of rectangles inside $R$,
+and those sums approach the area of $R$ as the grid gets finer,
+so $\iint_R 1\,dA = 2 \cd 3 = 6$.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#def-iterated-integral}
 #### Iterated integral
 
@@ -53,7 +66,15 @@ The inner limits $g_1(x)$ and $g_2(x)$ may depend on the outer variable,
 or be constants $c$ and $d$, as in $\int_a^b \int_c^d f(x, y)\,dy\,dx$.
 Iterated integrals in the other order, $\int \int \cdots \,dx\,dy$,
 are defined the same way with the roles of $x$ and $y$ swapped.
-For example:
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-iterated-integral}
+#### An iterated integral
+
+Integrating over $y$ first, then $x$:
 
 $$
 \ba
@@ -74,19 +95,6 @@ $$
 && \text{(evaluate at the limits)}
 \ea
 $$
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-double-integral-area}
-#### The double integral of $1$ is an area
-
-Let $f(x, y) = 1$ on the rectangle $R = [0, 2] \times [0, 3]$.
-Every sum in @def-double-integral
-adds up the areas of rectangles inside $R$,
-and those sums approach the area of $R$ as the grid gets finer,
-so $\iint_R 1\,dA = 2 \cd 3 = 6$.
 
 :::
 

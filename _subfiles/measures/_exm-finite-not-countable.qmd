@@ -82,9 +82,7 @@ $$
 even when $\mu(\emptyset) = 0$:
 a finitely additive function need not be countably additive.
 The function $\mu$ there has $\mu(\emptyset) = 0$,
-because $\emptyset$ is finite,
-and it is finitely additive,
-but it is not countably additive
+because $\emptyset$ is finite
 (see [Wikipedia: Sigma-additive set function, "An additive function which is not $\sigma$-additive"](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)).
 
 :::

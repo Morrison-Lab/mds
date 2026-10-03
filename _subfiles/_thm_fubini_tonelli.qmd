@@ -52,9 +52,9 @@ The integrability conditions
 in each application.
 For example, Lebesgue measure (ordinary length) on $[0, 1]$ is a probability measure,
 so the $\sigma$-finiteness condition holds on the unit square,
-yet the two iterated integrals of the function in @exm-fubini-fail
+yet the two iterated integrals in @exm-fubini-fail
 are $\pi/4$ and $-\pi/4$.
-They can differ because that function satisfies neither integrability condition.
+So $\sigma$-finiteness alone does not make the iterated integrals agree.
 
 :::
 
