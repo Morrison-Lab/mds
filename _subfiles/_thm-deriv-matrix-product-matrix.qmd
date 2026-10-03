@@ -46,14 +46,6 @@ $$
 \underbrace{\tp{\matr{B}}}_{r \times n}
 $$
 
-:::: notes
-The trace makes $\operatorname{tr}(\matr{A} \matr{X} \matr{B})$ a scalar,
-so its matrix derivative is again an $m \times n$ matrix.
-The derivative of the matrix product $\matr{A} \matr{X} \matr{B}$ itself
-(without the trace) is a fourth-order tensor,
-which is why this result is stated for the scalar $\operatorname{tr}(\matr{A} \matr{X} \matr{B})$.
-::::
-
 :::
 
 ::: proof
@@ -78,6 +70,29 @@ $$
 && \text{(definition of matrix multiplication)}
 \ea
 $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-matrix-product-tensor}
+#### Why the theorem uses the trace
+
+The trace makes $\operatorname{tr}(\matr{A} \matr{X} \matr{B})$ a scalar,
+so its matrix derivative (@def-matrix-derivative) is again an $m \times n$ matrix.
+The matrix product $\matr{A} \matr{X} \matr{B}$ itself
+(without the trace) is an $r \times r$ matrix,
+and each of its $r^2$ entries has a partial derivative
+with respect to each of the $m n$ entries of $\matr{X}$.
+Those $r^2 m n$ partial derivatives form a four-index array (a fourth-order tensor),
+not a matrix,
+which is why this result is stated for the scalar $\operatorname{tr}(\matr{A} \matr{X} \matr{B})$.
+
+For example, with $\matr{A} = \matr{B} = \matr{I}_2$,
+the product $\matr{A} \matr{X} \matr{B} = \matr{X}$ has $4$ entries,
+each with $4$ partial derivatives, $16$ in all,
+while its trace $X_{11} + X_{22}$ has the $4$ partial derivatives
+that form the $2 \times 2$ matrix $\matr{I}_2$ of @exm-matrix-derivative.
 
 :::
 

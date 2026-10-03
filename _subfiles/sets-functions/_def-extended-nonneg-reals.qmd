@@ -12,7 +12,10 @@ $x + \infty = \infty + x = \infty$ for every $x \in [0, \infty]$.
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-infinity-arithmetic}
+#### Arithmetic with $\infty$
 
 $\infty$ is not a real number,
 so some real-number arithmetic does not extend to it:

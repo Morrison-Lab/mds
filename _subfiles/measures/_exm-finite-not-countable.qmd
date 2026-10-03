@@ -73,11 +73,16 @@ $$
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-finite-not-countable-converse}
+#### Finite additivity does not imply countable additivity
 
 @exm-finite-not-countable shows that the converse of @thm-countable-implies-finite fails,
 even when $\mu(\emptyset) = 0$:
 a finitely additive function need not be countably additive
-(see [Wikipedia: Sigma-additive set function --- An additive function which is not $\sigma$-additive](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)).
+(see [Wikipedia: Sigma-additive set function, "An additive function which is not $\sigma$-additive"](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)).
+The function $\mu$ in @exm-finite-not-countable has $\mu(\emptyset) = 0$,
+because $\emptyset$ is finite.
 
 :::

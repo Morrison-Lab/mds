@@ -15,9 +15,23 @@ we write $\sup A = +\infty$ by convention.
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-supremum-exists}
+#### Existence of the supremum, and when it is a maximum
+
 The minimum in @def-supremum always exists:
 that is the completeness (least-upper-bound) property of the real numbers
 [@rudin1976principles, Definition 1.8, p. 4, and Theorem 1.19, p. 8].
+For example, for $A = [1, 2)$,
+the numbers $t$ with $a \le t$ for all $a \in A$
+are those with $t \ge 2$,
+and the smallest of them is $2$,
+so $\sup A = 2$.
+
 If the supremum belongs to $A$, it equals the maximum: $\sup A = \max A$.
+For example, $\sup [1, 2] = 2 = \max [1, 2]$.
+For $A = [1, 2)$, the supremum $2$ is not in $A$,
+and $A$ has no maximum.
+
 :::

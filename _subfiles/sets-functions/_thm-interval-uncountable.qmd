@@ -5,12 +5,23 @@ The interval $[0, 1]$ is not [countable](#def-countable-set).
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-cantor-diagonal}
+#### Cantor's diagonal argument
 
 The standard proof is Cantor's diagonal argument:
 given any sequence of numbers in $[0, 1]$,
 it builds a number in $[0, 1]$ whose decimal expansion differs from the $n$th number's in the $n$th digit,
 so the sequence misses it
 (see [Wikipedia: Cantor's diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)).
+One way to choose the $n$th digit is to use $5$,
+unless the $n$th number's $n$th digit is $5$, in which case use $4$.
+For example, if the sequence starts $0.1234\ldots$, $0.3579\ldots$, $0.2468\ldots$,
+the diagonal digits are $1$, $5$, and $6$,
+so the new number starts $0.545\ldots$,
+which differs from the first number in the first digit,
+from the second in the second digit,
+and from the third in the third digit.
 
 :::

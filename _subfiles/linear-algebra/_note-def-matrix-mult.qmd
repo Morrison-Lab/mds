@@ -1,7 +1,22 @@
-::: notes
-Matrix multiplication is only defined when the number of columns in
-$\matr{A}$ equals the number of rows in $\matr{B}$.
+{{< slidebreak >}}
 
-Matrix multiplication is **not** commutative in general:
-$\matr{A}\matr{B} \neq \matr{B}\matr{A}$.
+:::{#rem-matmul-not-commutative}
+#### Matrix multiplication is not commutative
+
+When $\matr{A}\matr{B}$ and $\matr{B}\matr{A}$ are both defined,
+they are usually different.
+For example, with
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix},
+$$
+
+$$
+\matr{A}\matr{B} = \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix}
+\neq
+\begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix} = \matr{B}\matr{A}.
+$$
+
 :::

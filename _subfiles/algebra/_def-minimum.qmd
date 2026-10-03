@@ -8,10 +8,14 @@ if $m \in A$ and $m \le a$ for all $a \in A$.
 
 :::
 
-::: notes
-Not every set has a minimum.
-The interval $(0, 1]$ has none:
+{{< slidebreak >}}
+
+:::{#rem-minimum-may-not-exist}
+#### Not every set has a minimum
+
+The set $\cb{3, 1, 4}$ has minimum $1$,
+and the interval $[0, 1]$ has minimum $0$.
+The interval $(0, 1]$ has no minimum:
 every element $a$ of it has a smaller element, $a/2$, also in it.
-In @exr-min-and-argmin,
-the smallest value of $g$ is $\min\cb{5, 2, 2, 5} = 2$.
+
 :::
