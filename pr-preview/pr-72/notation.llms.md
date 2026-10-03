@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 01:16:27 (PDT)
+Last modified: 2026-10-03 01:56:50 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -180,8 +180,6 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 >
 > \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
-The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 3](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\.
-
 > **NOTE:**
 >
 > **Example 3 (Evaluating Iverson brackets)**  
@@ -189,6 +187,10 @@ The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}
 > - \\\[3 \> 2\] = 1\\, because \\3 \> 2\\ is true.
 > - \\\[2 \> 3\] = 0\\, because \\2 \> 3\\ is false.
 > - \\\[4 \in \mathopen{}\left\\1, 2\right\\\mathclose{}\] = 0\\, because \\4\\ is not an element of \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> *Remark 1* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 3](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 2](#exm-indicator-numerical) become \\\[7.2 \> 5\] = \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\ and, with \\A = \[0, \infty)\\, \\\[-2.1 \in A\] = \mathbb{1}\_{A}(-2.1) = 0\\.
 
 > **NOTE:**
 >
