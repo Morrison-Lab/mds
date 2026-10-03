@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:24:40 (PDT)
+Last modified: 2026-10-03 12:49:42 (PDT)
 
 ## 1 Equalities
 
@@ -426,7 +426,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 11* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full.
+> *Remark 11* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
 
 ## 12 Quotients
 
