@@ -12,6 +12,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_note-video-partials.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_sec-gradient-shape.qmd >}}
 
 {{< slidebreak >}}
