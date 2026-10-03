@@ -1,18 +1,14 @@
 {{< slidebreak >}}
 
-:::{#rem-transpose-column-to-row}
+:::{#exm-transpose-column-vector}
 #### Transposing a column vector
 
-The transpose turns a column vector into a row vector
-with the same entries in the same order.
-For example,
+The transpose of the column vector with entries $2$, $-1$, $5$
+is the row vector with the same entries:
 
 $$
 \tp{\begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}}
 = [2,\; -1,\; 5].
 $$
-
-For a matrix, the transpose swaps the rows and the columns
-(@def-matrix-transpose).
 
 :::
