@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 01:37:01 (PDT)
+Last modified: 2026-10-03 01:44:55 (PDT)
 
 ## Welcome
 
@@ -22,6 +22,13 @@ These notes collect the mathematics that data science courses assume: mathematic
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Proof Writing](proof-writing.llms.md): showing and annotating every step of a derivation
+
+## Further reading
+
+These resources cover related material.
+
+- [Mathematical Methods in Data Science (MMiDS)](https://mmids-textbook.github.io/index.html) by Sebastien Roch (University of Wisconsin-Madison), is available online and in print from Cambridge University Press. It grew out of MATH 535, a one-semester advanced undergraduate and master’s course at the University of Wisconsin-Madison. It is written as an invitation to data science and AI for math students, and as a mathematical companion to machine learning, AI, and statistics courses. Its chapters treat least squares, optimization, the singular value decomposition, spectral graph theory, probabilistic models, random walks on graphs, and neural networks, so they overlap with our linear algebra and vector calculus pages.
+- [UCLA Biostat 216, Mathematical Methods for Biostatistics](https://github.com/ucla-biostat-216) is a course for first-year biostatistics MS and PhD students at UCLA. As of October 2026, the most recent course site in the organization is the [2024 Fall edition](https://ucla-biostat-216.github.io/2024fall/), taught by Hua Zhou. Its [schedule](https://ucla-biostat-216.github.io/2024fall/schedule/schedule.html) links slides on vectors, matrices, vector spaces, rank, orthogonal projection, matrix inverses, least squares, determinants, eigendecompositions, positive (semi)definite matrices, the SVD, and multivariate calculus and optimization. Those topics overlap with our [linear algebra](linear-algebra.llms.md) and [vector calculus](vector-calculus.llms.md) pages.
 
 ## Using these notes in another site
 
