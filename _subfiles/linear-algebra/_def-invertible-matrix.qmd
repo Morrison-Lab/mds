@@ -14,11 +14,37 @@ A square matrix that is not invertible is *singular*.
 
 {{< slidebreak >}}
 
+:::{#exm-invertible-matrix}
+#### An invertible matrix and a singular one
+
+The matrix
+$\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
+is invertible, with
+$\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$:
+multiplying out gives
+$\matr{A}\matr{A}^{-1} = \matr{A}^{-1}\matr{A} = \matr{I}_2$.
+
+The matrix
+$\matr{S} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
+is singular:
+for any $2 \times 2$ matrix $\matr{C}$,
+the two rows of $\matr{S}\matr{C}$ are equal,
+so $\matr{S}\matr{C}$ can never be $\matr{I}_2$,
+whose two rows differ.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#rem-invertible-inverse}
 #### Invertible matrices and inverses
 
-At most one matrix $\matr{B}$ satisfies these equations.
-If a $p \times p$ matrix $\matr{C}$ also satisfies them, then
+For an invertible $p \times p$ matrix $\matr{A}$,
+at most one $p \times p$ matrix $\matr{B}$ satisfies
+$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p$.
+If a $p \times p$ matrix $\matr{C}$ also satisfies
+$\matr{A}\matr{C} = \matr{C}\matr{A} = \matr{I}_p$,
+then
 
 $$
 \ba
@@ -40,36 +66,15 @@ $$
 \ea
 $$
 
+The steps use @thm-matmul-assoc and @thm-identity.
 So $\matr{B}$ is the inverse $\matr{A}^{-1}$ of $\matr{A}$ (@def-matrix-inverse),
 and $\matr{A}$ is invertible exactly when it has an inverse.
 For example,
-$\matr{A} = \begin{bmatrix} 2 & 0 \\ 0 & 4 \end{bmatrix}$
-is invertible, with
-$\matr{B} = \matr{A}^{-1} = \begin{bmatrix} 0.5 & 0 \\ 0 & 0.25 \end{bmatrix}$:
-both products are
-$\begin{bmatrix} 2 \cdot 0.5 & 0 \\ 0 & 4 \cdot 0.25 \end{bmatrix}
-= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \matr{I}_2$.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-invertible-matrix}
-#### An invertible matrix and a singular one
-
-The matrix
-$\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
-is invertible, with
-$\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$:
-multiplying out gives
-$\matr{A}\matr{A}^{-1} = \matr{A}^{-1}\matr{A} = \matr{I}_2$.
-
-The matrix
-$\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
-is singular:
-for any $2 \times 2$ matrix $\matr{C}$,
-the two rows of $\matr{B}\matr{C}$ are equal,
-so $\matr{B}\matr{C}$ can never be $\matr{I}_2$,
-whose two rows differ.
+for $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
+in @exm-invertible-matrix,
+$\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$
+is the only $2 \times 2$ matrix $\matr{B}$
+with $\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_2$,
+so it is $\matr{A}^{-1}$.
 
 :::
