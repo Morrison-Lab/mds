@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-03 02:20:36 (PDT)</p>
+  <p class="date">Last modified: 2026-10-03 02:36:14 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -949,12 +949,6 @@ x_{p}
 \underbrace{{\mathbf{A}}^{\top}}_{q \times m}
 \]</span></p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-deriv-matrix-vector-special-case" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (The derivative of a linear map as a special case). </span>This result generalizes <a href="#/thm-deriv-linear-map" class="quarto-xref">Theorem&nbsp;4</a>, which is the special case <span class="math inline">\(\tilde{v} = \tilde{\beta}\)</span> (so that <span class="math inline">\(q = p\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}_p\)</span>, and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}_p {\mathbf{A}}^{\top} = {\mathbf{A}}^{\top}\)</span>). For example, <a href="#/exm-deriv-linear-map" class="quarto-xref">Example&nbsp;6</a> is the case <span class="math inline">\(\mathbf{A} = \begin{pmatrix} 2 &amp; 3 \end{pmatrix}\)</span> and <span class="math inline">\(\tilde{v} = \tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\)</span>, where this result gives <span class="math inline">\(\mathbf{I}_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
-</div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For entry <span class="math inline">\((i,j)\)</span>, where row <span class="math inline">\(i\)</span> indexes the denominator <span class="math inline">\(\tilde{\beta}\)</span> and column <span class="math inline">\(j\)</span> indexes the numerator <span class="math inline">\(\mathbf{A}\tilde{v}\)</span> (see <a href="#/def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>):</p>
 <p><span class="math display">\[
@@ -981,6 +975,12 @@ x_{p}
 6\beta_2 \end{pmatrix}
 \end{aligned}
 \]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-deriv-matrix-vector-special-case" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (The derivative of a linear map as a special case). </span>This result generalizes <a href="#/thm-deriv-linear-map" class="quarto-xref">Theorem&nbsp;4</a>, which is the special case <span class="math inline">\(\tilde{v} = \tilde{\beta}\)</span> (so that <span class="math inline">\(q = p\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}_p\)</span>, and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}_p {\mathbf{A}}^{\top} = {\mathbf{A}}^{\top}\)</span>). For example, <a href="#/exm-deriv-linear-map" class="quarto-xref">Example&nbsp;6</a> is the case <span class="math inline">\(\mathbf{A} = \begin{pmatrix} 2 &amp; 3 \end{pmatrix}\)</span> and <span class="math inline">\(\tilde{v} = \tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\)</span>, where this result gives <span class="math inline">\(\mathbf{I}_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1034,12 +1034,6 @@ x_{p}
 \underbrace{\tilde{x}}_{p \times 1}
 \]</span></p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-deriv-lincom-tp-transpose" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (The coefficient gets transposed). </span>This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus <span class="math inline">\(\frac{\partial}{\partial x}(cx) = c\)</span>, but here the coefficient <span class="math inline">\({\tilde{x}}^{\top}\)</span> (a row vector) becomes <span class="math inline">\(\tilde{x}\)</span> (a column vector) in the result. For example, with <span class="math inline">\(\tilde{x}= {(2, -1)}^{\top}\)</span>, <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= 2\beta_1 - \beta_2\)</span>, whose vector derivative is the column vector <span class="math inline">\({(2, -1)}^{\top} = \tilde{x}\)</span>, not the row vector <span class="math inline">\({\tilde{x}}^{\top} = (2, -1)\)</span>.</p>
-</div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Using <a href="#/thm-deriv-lincom" class="quarto-xref">Theorem&nbsp;2</a>:</strong></p>
 <p>Since <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\)</span> (see <a href="./linear-algebra.html#def-dot-product">dot product</a>), and <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>:</p>
@@ -1070,6 +1064,12 @@ x_{p}
 = \begin{pmatrix} 3 \\
 5 \end{pmatrix}
 \]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-deriv-lincom-tp-transpose" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (The coefficient gets transposed). </span>This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus <span class="math inline">\(\frac{\partial}{\partial x}(cx) = c\)</span>, but here the coefficient <span class="math inline">\({\tilde{x}}^{\top}\)</span> (a row vector) becomes <span class="math inline">\(\tilde{x}\)</span> (a column vector) in the result. For example, with <span class="math inline">\(\tilde{x}= {(2, -1)}^{\top}\)</span>, <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= 2\beta_1 - \beta_2\)</span>, whose vector derivative is the column vector <span class="math inline">\({(2, -1)}^{\top} = \tilde{x}\)</span>, not the row vector <span class="math inline">\({\tilde{x}}^{\top} = (2, -1)\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
