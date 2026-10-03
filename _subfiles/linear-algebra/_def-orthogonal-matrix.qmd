@@ -9,17 +9,6 @@ $$
 
 :::
 
-::: notes
-Entry $(i, j)$ of $\tp{\matr{Q}}\matr{Q}$ is the dot product of
-column $i$ and column $j$ of $\matr{Q}$,
-so $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$ says that
-the columns of $\matr{Q}$ are orthonormal (@def-orthonormal-vectors).
-For a square matrix, $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$
-also implies $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
-so $\matr{Q}^{-1} = \tp{\matr{Q}}$ (@def-matrix-inverse)
-[@banerjee2014linear, Chapter 8, Theorem 8.1 and Definition 8.1, p. 209].
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-orthogonal-matrix}
@@ -54,5 +43,49 @@ $$
 && \text{(add)}
 \ea
 $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-orthogonal-matrix-columns}
+#### The columns of an orthogonal matrix are orthonormal
+
+Entry $(i, j)$ of $\tp{\matr{Q}}\matr{Q}$ is the dot product of
+column $i$ and column $j$ of $\matr{Q}$,
+so $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$ says that
+the columns of $\matr{Q}$ are orthonormal (@def-orthonormal-vectors).
+For a square matrix, $\tp{\matr{Q}}\matr{Q} = \matr{I}_p$
+also implies $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$,
+so $\matr{Q}^{-1} = \tp{\matr{Q}}$ (@def-matrix-inverse)
+[@banerjee2014linear, Chapter 8, Theorem 8.1 and Definition 8.1, p. 209].
+
+For example, the columns of $\matr{Q}$ in @exm-orthogonal-matrix
+are $(0.6, 0.8)$ and $(-0.8, 0.6)$.
+The diagonal entries $0.36 + 0.64 = 1$ of $\tp{\matr{Q}}\matr{Q}$
+are their squared norms,
+and the off-diagonal entries $-0.48 + 0.48 = 0$
+are their dot product.
+Multiplying in the other order also gives $\matr{I}_2$:
+
+$$
+\ba
+\matr{Q}\tp{\matr{Q}}
+&= \begin{bmatrix} 0.6 & -0.8 \\ 0.8 & 0.6 \end{bmatrix}
+\begin{bmatrix} 0.6 & 0.8 \\ -0.8 & 0.6 \end{bmatrix}
+&& \text{(definition of the transpose)}
+\\
+&= \begin{bmatrix}
+0.36 + 0.64 & 0.48 - 0.48 \\
+0.48 - 0.48 & 0.64 + 0.36
+\end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+&& \text{(add)}
+\ea
+$$
+
+So $\matr{Q}^{-1} = \tp{\matr{Q}}$.
 
 :::

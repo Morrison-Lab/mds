@@ -21,10 +21,61 @@ and every other entry $0$.
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-svd-any-matrix}
+#### The SVD applies to every real matrix
+
 The proof is outside the scope of these notes;
 see @banerjee2014linear [Chapter 12, Theorem 12.1, p. 373].
 Unlike the spectral theorem (@thm-spectral),
 @thm-svd applies to every real matrix,
 including one that is not square or not symmetric.
+
+For example, the $1 \times 2$ matrix
+$\matr{A} = \begin{bmatrix} 1 & 1 \end{bmatrix}$
+is not square, so @thm-spectral does not apply to it.
+It has rank $1$, and @thm-svd holds with
+$\matr{U} = \begin{bmatrix} 1 \end{bmatrix}$,
+$\matr{D} = \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}$,
+and $\matr{V}$ the orthogonal matrix $\matr{Q}$ from @exm-spectral,
+which is symmetric, so $\tp{\matr{V}} = \matr{V}$:
+
+$$
+\ba
+\matr{U}\matr{D}\tp{\matr{V}}
+&= \begin{bmatrix} 1 \end{bmatrix}
+\begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(substitute)}
+\\
+&= \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(multiplying by the } 1 \times 1 \text{ identity changes nothing)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} \sqrt{2} & 0 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(move the scalar to the front)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} \sqrt{2} \cd 1 + 0 \cd 1 & \sqrt{2} \cd 1 + 0 \cd (-1) \end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} \sqrt{2} + 0 & \sqrt{2} + 0 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{\sqrt{2}}
+\begin{bmatrix} \sqrt{2} & \sqrt{2} \end{bmatrix}
+&& \text{(add)}
+\\
+&= \begin{bmatrix} 1 & 1 \end{bmatrix}
+&& \text{(divide by } \sqrt{2} \text{)}
+\ea
+$$
+
+$\matr{U}$ is orthogonal because $\tp{\matr{U}}\matr{U} = \begin{bmatrix} 1 \end{bmatrix} = \matr{I}_1$,
+and the single singular value is $\sigma_1 = \sqrt{2}$.
+
 :::

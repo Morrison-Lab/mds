@@ -7,14 +7,6 @@ that are linearly independent (@def-linearly-independent).
 
 :::
 
-::: notes
-An $n \times p$ matrix whose rank is $p$,
-so that all of its columns are linearly independent,
-is said to have *full column rank*;
-that can only happen when $p \le n$,
-because more than $n$ vectors of length $n$ are never linearly independent.
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-rank}
@@ -33,5 +25,37 @@ has rank $1$:
 its second column is twice its first,
 so the two columns are not linearly independent,
 but the first column on its own is.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-full-column-rank}
+#### Full column rank
+
+An $n \times p$ matrix has **full column rank**
+if its rank (@def-rank) is $p$,
+so that all of its columns are linearly independent.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-full-column-rank-shape}
+#### Full column rank needs at least as many rows as columns
+
+In @exm-rank, the first matrix has full column rank:
+its rank is $2$, and it has $2$ columns.
+The second does not, because its rank is $1$.
+
+An $n \times p$ matrix can have full column rank only when $p \le n$,
+because more than $n$ vectors of length $n$ are never linearly independent.
+For example, the $2 \times 3$ matrix
+$\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}$
+has $3$ columns of length $2$,
+and $1 \cd (1, 0) + 1 \cd (0, 1) - 1 \cd (1, 1) = \vzero$,
+with coefficients that are not all zero.
+So its $3$ columns are not linearly independent,
+and its rank is less than $3$.
 
 :::

@@ -9,7 +9,7 @@
 `mds` collects the mathematics that data science courses assume:
 notation, algebra, calculus, linear algebra, vector calculus and proof
 writing, as [Quarto](https://quarto.org/) fragments. It renders on its
-own as a website, and course sites include it as a git submodule.
+own as a website, and course sites link to its pages by URL.
 
 ## Pages
 
@@ -33,12 +33,9 @@ include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 ## Using these notes in another site
 
-Add this repository as a git submodule named `mds` at the root of the
-host site, and include fragments with paths that start with `mds/`:
-
-``` sh
-git submodule add https://github.com/Morrison-Lab/mds.git mds
-```
+Link to the pages by URL. A host site that keeps a copy of this
+repository at its root, named `mds`, can also include fragments with
+paths that start with `mds/`.
 
 Quarto resolves `@id` cross-references only within one rendered page, so
 a host site that links to a result here uses an explicit link to the
