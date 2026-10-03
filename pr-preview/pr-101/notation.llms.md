@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:49:42 (PDT)
+Last modified: 2026-10-03 12:59:38 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -284,9 +284,9 @@ This fundamental identity connects probability theory directly to linear expecta
 >
 > **Definition 7 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
 
-For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/rme/chapters/probability.html) \\X\\ is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
+For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
-[Table 3](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\a\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](sets-functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+[Table 3](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](sets-functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
 
 | Shorthand | Full form | Part left out |
 |:---|:---|:---|
@@ -295,7 +295,7 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 | \\\sum x_i\\ | \\\sum\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
 | \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the lower and upper limits of the index |
 | \\\prod x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
-| \\\sum\_{i, j} a\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^{n} a\_{ij}\\ | the limits of both indices |
+| \\\sum\_{i, j} b\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^{n} b\_{ij}\\ | the limits of both indices |
 | \\\sum\_{i \neq k} a_i\\ | \\\sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} a_i\\ | the set \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ of indices that \\k\\ is removed from |
 | \\\int f(x)\\dx\\, used for a number | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits of integration |
 | \\\int f\\ | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits, the variable of integration, and the differential \\dx\\ |
