@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-03 12:42:49 (PDT)</p>
+  <p class="date">Last modified: 2026-10-03 13:02:29 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -629,11 +629,11 @@ Table&nbsp;1: Notation used in this book
 </ul>
 </div>
 <h3 id="strengths-and-limitations-of-the-iverson-bracket">Strengths and limitations of the Iverson bracket</h3>
-<p>The primary advantage of the Iverson bracket is algebraic conciseness: it converts domain restrictions in sums and integrals into unrestricted operations. For example:</p>
+<p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a finite set that contains <span class="math inline">\(A\)</span>, then:</p>
 <p><span class="math display">\[
-\sum_{x \in A} f(x) = \sum_{x} f(x) [x \in A]
+\sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
 \]</span></p>
-<p>With <span class="math inline">\(A = \mathopen{}\left\{2, 4\right\}\mathclose{}\)</span>, <span class="math inline">\(f(x) = x\)</span>, and <span class="math inline">\(x\)</span> running over <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}\)</span>, both sides equal <span class="math inline">\(2 + 4 = 6\)</span>.</p>
+<p>With <span class="math inline">\(A = \mathopen{}\left\{2, 4\right\}\mathclose{}\)</span>, <span class="math inline">\(f(x) = x\)</span>, and <span class="math inline">\(U = \mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}\)</span>, both sides equal <span class="math inline">\(2 + 4 = 6\)</span>.</p>
 <p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote closed intervals <span class="math inline">\([a, b]\)</span>, conditional expectations <span class="math inline">\(\operatorname{E}[Y \mid X]\)</span>, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
 <h3 id="summary-of-indicator-notations">Summary of indicator notations</h3>
 <p><a href="#/tbl-indicator-notations" class="quarto-xref">Table&nbsp;2</a> compares the major notations encountered across the literature.</p>
@@ -725,8 +725,144 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <!-- repoint the expectation link to pds expectation.qmd#def-expectation once pds#8 is published -->
 <p>This fundamental identity connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.</p>
 </section>
-<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="6">
-<h2><span class="header-section-number">6</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
+<section id="sec-notational-shorthands" class="slide level2" data-number="6">
+<h2><span class="header-section-number">6</span> Notational shorthands</h2>
+<div id="def-notational-shorthand" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>These notes write the full form</strong></p>
+</div>
+<div class="callout-content">
+<p>In these notes, we avoid notational shorthands in permanent writing and write the full form of each expression, even where a shorthand would be shorter. A reader who supplies the missing part of a shorthand from a different context than the writer intended reads a different expression than the one the writer meant. Handwritten board work is often less complete, but it should still write out ranges and limits where it can.</p>
+<p>We make one exception: writing two factors side by side means multiplying them, as in <span class="math inline">\(2x\)</span> for <span class="math inline">\(2 \cdot x\)</span> and <span class="math inline">\(ab\)</span> for <span class="math inline">\(a \cdot b\)</span>. We still write the multiplication sign when the side-by-side form could be misread:</p>
+<ul>
+<li><span class="math inline">\(2 \cdot 3\)</span>, not <span class="math inline">\(23\)</span>, which reads as twenty-three;</li>
+<li><span class="math inline">\(a \cdot(b + c)\)</span> when <span class="math inline">\(a\)</span> could be a function, since <span class="math inline">\(a(b + c)\)</span> could mean <span class="math inline">\(a\)</span> evaluated at <span class="math inline">\(b + c\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-range-of-variable" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
+</div>
+<p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> is a <a href="./sets-functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./sets-functions.html#rem-image-range">Image and range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
+</section>
+<section class="slide level2">
+
+<p><a href="#/tbl-notational-shorthands" class="quarto-xref">Table&nbsp;3</a> lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, <span class="math inline">\(x_1, \ldots, x_n\)</span> and <span class="math inline">\(a_1, \ldots, a_n\)</span> are <span class="math inline">\(n\)</span> numbers, <span class="math inline">\(b_{ij}\)</span> is the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of an <span class="math inline">\(m \times n\)</span> array, <span class="math inline">\(k\)</span> is an integer with <span class="math inline">\(1 \le k \le n\)</span>, <span class="math inline">\(f\)</span> is a <a href="./sets-functions.html#def-function">function</a> from <span class="math inline">\(\mathbb{R}\)</span> to <span class="math inline">\(\mathbb{R}\)</span>, and, in the first row, <span class="math inline">\(\mathcal{R}(x)\)</span> is a finite set.</p>
+<div id="tbl-notational-shorthands" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notational-shorthands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Common notational shorthands and their full forms
+</figcaption>
+<div aria-describedby="tbl-notational-shorthands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Shorthand</th>
+<th style="text-align: left;">Full form</th>
+<th style="text-align: left;">Part left out</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\sum_{x} f(x)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{x \in \mathcal{R}(x)} f(x)\)</span></td>
+<td style="text-align: left;">the set the sum runs over (<a href="./algebra.html#def-sum-over-set">sum over a finite set</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\sum_{i} x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^{n} x_i\)</span></td>
+<td style="text-align: left;">the lower and upper limits of the index (<a href="./algebra.html#def-summation">summation notation</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\sum x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^{n} x_i\)</span></td>
+<td style="text-align: left;">the index and its lower and upper limits</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\prod_{i} x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\prod_{i=1}^{n} x_i\)</span></td>
+<td style="text-align: left;">the lower and upper limits of the index</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\prod x_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\prod_{i=1}^{n} x_i\)</span></td>
+<td style="text-align: left;">the index and its lower and upper limits</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\sum_{i, j} b_{ij}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^{m} \sum_{j=1}^{n} b_{ij}\)</span></td>
+<td style="text-align: left;">the limits of both indices</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\sum_{i \neq k} a_i\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\sum_{i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{} \setminus \mathopen{}\left\{k\right\}\mathclose{}} a_i\)</span></td>
+<td style="text-align: left;">the set <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> of indices that <span class="math inline">\(k\)</span> is removed from</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\int f(x)\,dx\)</span>, used for a number</td>
+<td style="text-align: left;"><span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span></td>
+<td style="text-align: left;">the limits of integration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\int f\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span></td>
+<td style="text-align: left;">the limits, the variable of integration, and the differential <span class="math inline">\(dx\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(x_{1:n}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\((x_1, x_2, \ldots, x_n)\)</span></td>
+<td style="text-align: left;">the explicit list of entries</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">“the function <span class="math inline">\(x^2\)</span>”</td>
+<td style="text-align: left;">“the function <span class="math inline">\(f : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(f(x) = x^2\)</span>”</td>
+<td style="text-align: left;">the function’s name, domain, and codomain</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-indefinite-integral-not-shorthand" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-expand-index-shorthand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{3} x_i
+&amp;= x_1 + x_2 + x_3
+&amp;&amp; \text{(definition of summation notation)} \\
+&amp;= 2 + 5 + 1
+&amp;&amp; \text{(substitute the values)} \\
+&amp;= 8
+&amp;&amp; \text{(add)}
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="7">
+<h2><span class="header-section-number">7</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
 <p>In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.</p>
 <p>It’s worth noting that calculus was formalized in the <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation">1600s</a>, elementary algebra was formalized around <a href="https://en.wikipedia.org/wiki/Al-Jabr">820</a>, and arithmetic <a href="https://en.wikipedia.org/wiki/Arithmetic#History">even earlier</a>. And calculus still has <a href="https://en.wikipedia.org/wiki/Notation_for_differentiation">several competing notation systems</a>. In contrast, the field of statistics only emerged in the <a href="https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics">late 1800s and early 1900s</a>, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 <span class="citation" data-cites="nelder1972generalized">(<a href="#/references" role="doc-biblioref" onclick="">Nelder and Wedderburn 1972</a>)</span>, which is very recent in terms of the <a href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions">pace of scientific development</a>.</p>
 </section>
