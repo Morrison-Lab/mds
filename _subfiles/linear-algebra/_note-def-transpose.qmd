@@ -1,5 +1,14 @@
-::: notes
-The transpose operation converts a column vector to a row vector,
-or more generally, swaps the rows and columns of a matrix
-(@def-matrix-transpose).
+{{< slidebreak >}}
+
+:::{#exm-transpose-column-vector}
+#### Transposing a column vector
+
+The transpose of the column vector with entries $2$, $-1$, $5$
+is the row vector with the same entries:
+
+$$
+\tp{\begin{bmatrix} 2 \\ -1 \\ 5 \end{bmatrix}}
+= [2,\; -1,\; 5].
+$$
+
 :::
