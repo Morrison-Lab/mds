@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 13:02:29 (PDT)
+Last modified: 2026-10-03 14:54:29 (PDT)
 
 > **NOTE:**
 >
@@ -224,5 +224,24 @@ Last modified: 2026-10-03 13:02:29 (PDT)
 > **NOTE:**
 >
 > **Example 10 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+
+## 6 Further reading
+
+These books treat sets and the logic behind them in more depth.
+
+- Devlin ([1993](#ref-devlin1993joy)) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions on this page.
+- Halmos ([1974](#ref-halmos1974naive)) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.
+- Enderton ([2001](#ref-enderton2001logic)) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.
+- Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) teaches propositional and first-order logic, the language behind statements such as “for every set \\A\\ there exists…”.
+
+## References
+
+Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. *Language, Proof and Logic*. 2nd ed. CSLI Publications. <https://www.amazon.com/dp/1575866323>.
+
+Devlin, Keith. 1993. *The Joy of Sets: Fundamentals of Contemporary Set Theory*. 2nd ed. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4612-0903-4>.
+
+Enderton, Herbert B. 2001. *A Mathematical Introduction to Logic*. 2nd ed. Academic Press. <https://doi.org/10.1016/C2009-0-22107-6>.
+
+Halmos, Paul R. 1974. *Naive Set Theory*. Undergraduate Texts in Mathematics. Springer. <https://doi.org/10.1007/978-1-4757-1645-0>.
 
 Back to top

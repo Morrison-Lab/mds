@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 13:02:29 (PDT)
+Last modified: 2026-10-03 14:54:29 (PDT)
 
 > **NOTE:**
 >
@@ -231,8 +231,18 @@ Last modified: 2026-10-03 13:02:29 (PDT)
 >
 > *Remark 6* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 6](#def-counting-measure), or how long a set of real numbers is, as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does, assigning each interval \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both appear as reference measures in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
 
-Back to top
+## 5 Further reading
+
+- Billingsley ([1995](#ref-billingsley1995probability)) develops measure theory and builds probability on it. Its early chapters define \\\sigma\\-algebras, measures, and their basic properties.
+- Folland ([1999](#ref-folland1999real)) is a graduate text on measure and integration; its first chapters treat \\\sigma\\-algebras and measures.
+- Gut ([2013](#ref-gut2013)) is a graduate course in probability that opens with a chapter on introductory measure theory.
 
 ## References
 
 Billingsley, Patrick. 1995. *Probability and Measure*. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.
+
+Folland, Gerald B. 1999. *Real Analysis: Modern Techniques and Their Applications*. 2nd ed. Wiley. <https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166>.
+
+Gut, Allan. 2013. *Probability: A Graduate Course*. 2nd ed. Springer Texts in Statistics. Springer. <https://doi.org/10.1007/978-1-4614-4708-5>.
+
+Back to top

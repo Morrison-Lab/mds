@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 13:02:29 (PDT)
+Last modified: 2026-10-03 14:54:29 (PDT)
 
 This page collects general advice on how to write proofs and derivations. The goal of a proof is not just to convince yourself that a result is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
@@ -33,5 +33,16 @@ The [Linear Algebra](linear-algebra.llms.md#thm-hat-matrix) page uses this deriv
 In general, follow the golden rule: treat your readers the way you want to be treated as a reader.
 
 When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.
+
+## 4 Further reading
+
+- Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as direct proof, proof by contradiction, and induction.
+- Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) treats proofs as formal derivations in propositional and first-order logic.
+
+## References
+
+Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. *Language, Proof and Logic*. 2nd ed. CSLI Publications. <https://www.amazon.com/dp/1575866323>.
+
+Velleman, Daniel J. 2019. *How to Prove It: A Structured Approach*. 3rd ed. Cambridge University Press. <https://doi.org/10.1017/9781108539890>.
 
 Back to top

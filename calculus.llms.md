@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 13:02:29 (PDT)
+Last modified: 2026-10-03 14:54:29 (PDT)
 
 ## 1 Derivatives
 
@@ -1019,7 +1019,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > ([Wikipedia contributors 2024](#ref-wp:fubini))
 
-## 4 Additional resources
+## 4 Further reading
 
 - Kaplan ([2022](#ref-mosaiccalc))
 - Khuri ([2003](#ref-khuri2003advanced))

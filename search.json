@@ -17,15 +17,15 @@
     "objectID": "vector-calculus.html#sec-additional-resources",
     "href": "vector-calculus.html#sec-additional-resources",
     "title": "Vector Calculus",
-    "section": "2 Additional resources",
-    "text": "2 Additional resources\nSee also the Linear Algebra and Vector Calculus references.\n\nHua Zhou’s lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)"
+    "section": "2 Further reading",
+    "text": "2 Further reading\n\nMarsden and Tromba (2013) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.\n\nSee also the Linear Algebra and Vector Calculus further reading.\n\nHua Zhou’s lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)"
   },
   {
     "objectID": "vector-calculus.html#references",
     "href": "vector-calculus.html#references",
     "title": "Vector Calculus",
     "section": "References",
-    "text": "References\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/."
+    "text": "References\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nMarsden, Jerrold E., and Anthony Tromba. 2013. Vector Calculus. 6th ed. Macmillan Learning. https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089."
   },
   {
     "objectID": "vector-calculus-slides.html#sec-gradient-shape",
@@ -38,15 +38,15 @@
     "objectID": "vector-calculus-slides.html#sec-additional-resources",
     "href": "vector-calculus-slides.html#sec-additional-resources",
     "title": "Vector Calculus",
-    "section": "2 Additional resources",
-    "text": "2 Additional resources\nSee also the Linear Algebra and Vector Calculus references.\n\nHua Zhou’s lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)"
+    "section": "2 Further reading",
+    "text": "2 Further reading\n\nMarsden and Tromba (2013) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.\n\nSee also the Linear Algebra and Vector Calculus further reading.\n\nHua Zhou’s lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)"
   },
   {
     "objectID": "vector-calculus-slides.html#references",
     "href": "vector-calculus-slides.html#references",
     "title": "Vector Calculus",
     "section": "References",
-    "text": "References\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/."
+    "text": "References\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nMarsden, Jerrold E., and Anthony Tromba. 2013. Vector Calculus. 6th ed. Macmillan Learning. https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089."
   },
   {
     "objectID": "proof-writing.html",
@@ -77,6 +77,20 @@
     "text": "3 Follow the golden rule\nIn general, follow the golden rule: treat your readers the way you want to be treated as a reader.\nWhen you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard."
   },
   {
+    "objectID": "proof-writing.html#sec-further-reading",
+    "href": "proof-writing.html#sec-further-reading",
+    "title": "Proof Writing",
+    "section": "4 Further reading",
+    "text": "4 Further reading\n\nVelleman (2019) is a structured introduction to proof techniques such as direct proof, proof by contradiction, and induction.\nBarker-Plummer et al. (2011) treats proofs as formal derivations in propositional and first-order logic."
+  },
+  {
+    "objectID": "proof-writing.html#references",
+    "href": "proof-writing.html#references",
+    "title": "Proof Writing",
+    "section": "References",
+    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nVelleman, Daniel J. 2019. How to Prove It: A Structured Approach. 3rd ed. Cambridge University Press. https://doi.org/10.1017/9781108539890."
+  },
+  {
     "objectID": "proof-writing-slides.html#sec-dont-skip-steps",
     "href": "proof-writing-slides.html#sec-dont-skip-steps",
     "title": "Proof Writing",
@@ -96,6 +110,20 @@
     "title": "Proof Writing",
     "section": "3 Follow the golden rule",
     "text": "3 Follow the golden rule\nIn general, follow the golden rule: treat your readers the way you want to be treated as a reader.\nWhen you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard."
+  },
+  {
+    "objectID": "proof-writing-slides.html#sec-further-reading",
+    "href": "proof-writing-slides.html#sec-further-reading",
+    "title": "Proof Writing",
+    "section": "4 Further reading",
+    "text": "4 Further reading\n\nVelleman (2019) is a structured introduction to proof techniques such as direct proof, proof by contradiction, and induction.\nBarker-Plummer et al. (2011) treats proofs as formal derivations in propositional and first-order logic."
+  },
+  {
+    "objectID": "proof-writing-slides.html#references",
+    "href": "proof-writing-slides.html#references",
+    "title": "Proof Writing",
+    "section": "References",
+    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nVelleman, Daniel J. 2019. How to Prove It: A Structured Approach. 3rd ed. Cambridge University Press. https://doi.org/10.1017/9781108539890."
   },
   {
     "objectID": "measures.html",
@@ -133,6 +161,20 @@
     "text": "4 Measures\n\n\n\n\n\n\n\nDefinition 5 (Measure) A measure on a set \\(S\\) with a \\(\\sigma\\)-algebra \\(\\mathscr{S}\\) is a function \\(\\mu : \\mathscr{S} \\to [0, \\infty]\\) that satisfies:\n\n\\(\\mu(\\emptyset) = 0\\).\n\\(\\mu\\) is countably additive.\n\n\n\n\n\n\n\n\n\n\n\n\nExample 8 (Counting elements is a measure) The counting function \\(\\mu(A) \\stackrel{\\text{def}}{=}\\mathopen{}\\left|A\\right|\\mathclose{}\\) of Example 3, defined on the \\(\\sigma\\)-algebra of all subsets of \\(D\\) (Example 1), takes values in \\([0, \\infty]\\), is countably additive (Example 4), and gives \\(\\mu(\\emptyset) = 0\\), so it is a measure.\n\n\n\n\n\n\n\n\n\n\n\nCorollary 1 (Measures are finitely additive) Every measure is finitely additive.\n\n\n\n\n\n\n\n\n\n\nProofProof\n\n\n\n\n\n\nProof. A measure \\(\\mu\\) is countably additive and has \\(\\mu(\\emptyset) = 0\\) (Definition 5), so Theorem 3 applies to it.\n\n\n\n\n\n\n\n\n\n\n\nDefinition 6 (Counting measure) The counting measure on a set \\(S\\) is the measure on the \\(\\sigma\\)-algebra of all subsets of \\(S\\) that assigns each finite set its number of elements, and each infinite set the value \\(\\infty\\):\n\\[\n\\mu(A) \\stackrel{\\text{def}}{=}\\begin{cases}\n\\mathopen{}\\left|A\\right|\\mathclose{} & \\text{if } A \\text{ is finite} \\\\\n\\infty & \\text{if } A \\text{ is infinite}\n\\end{cases}\n\\]\n\n\n\n\n\n\n\n\n\n\n\nExample 9 (Counting measure on the non-negative integers) For the counting measure \\(\\mu\\) on \\(\\mathopen{}\\left\\{0, 1, 2, \\ldots\\right\\}\\mathclose{}\\), \\(\\mu(\\mathopen{}\\left\\{0, 1, 2\\right\\}\\mathclose{}) = 3\\), and the set of even numbers has \\(\\mu(\\mathopen{}\\left\\{0, 2, 4, \\ldots\\right\\}\\mathclose{}) = \\infty\\). The even numbers are the union of the pairwise disjoint sets \\(\\mathopen{}\\left\\{0\\right\\}\\mathclose{}, \\mathopen{}\\left\\{2\\right\\}\\mathclose{}, \\mathopen{}\\left\\{4\\right\\}\\mathclose{}, \\ldots\\), and countable additivity agrees: \\(\\sum_{k=0}^{\\infty} \\mu(\\mathopen{}\\left\\{2k\\right\\}\\mathclose{}) = 1 + 1 + \\cdots = \\infty\\).\n\n\n\n\n\n\n\n\n\n\n\nRemark 6 (Measures generalize size). A measure generalizes size: it can measure how many elements a set has, as in Definition 6, or how long a set of real numbers is, as Lebesgue measure does, assigning each interval \\([a, b]\\) its length \\(b - a\\). For example, the counting measure on \\(\\mathopen{}\\left\\{0, 1, 2, \\ldots\\right\\}\\mathclose{}\\) gives \\(\\mathopen{}\\left\\{2, 3, 4, 5\\right\\}\\mathclose{}\\) the value \\(4\\), while the Lebesgue measure of the interval \\([2, 5]\\) is \\(5 - 2 = 3\\). Both appear as reference measures in the Fubini–Tonelli theorem."
   },
   {
+    "objectID": "measures.html#sec-further-reading",
+    "href": "measures.html#sec-further-reading",
+    "title": "Measures",
+    "section": "5 Further reading",
+    "text": "5 Further reading\n\nBillingsley (1995) develops measure theory and builds probability on it. Its early chapters define \\(\\sigma\\)-algebras, measures, and their basic properties.\nFolland (1999) is a graduate text on measure and integration; its first chapters treat \\(\\sigma\\)-algebras and measures.\nGut (2013) is a graduate course in probability that opens with a chapter on introductory measure theory."
+  },
+  {
+    "objectID": "measures.html#references",
+    "href": "measures.html#references",
+    "title": "Measures",
+    "section": "References",
+    "text": "References\n\n\nBillingsley, Patrick. 1995. Probability and Measure. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.\n\n\nFolland, Gerald B. 1999. Real Analysis: Modern Techniques and Their Applications. 2nd ed. Wiley. https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166.\n\n\nGut, Allan. 2013. Probability: A Graduate Course. 2nd ed. Springer Texts in Statistics. Springer. https://doi.org/10.1007/978-1-4614-4708-5."
+  },
+  {
     "objectID": "measures-slides.html#sigma-algebras",
     "href": "measures-slides.html#sigma-algebras",
     "title": "Measures",
@@ -161,11 +203,18 @@
     "text": "4 Measures\n\nDefinition 5 (Measure) A measure on a set \\(S\\) with a \\(\\sigma\\)-algebra \\(\\mathscr{S}\\) is a function \\(\\mu : \\mathscr{S} \\to [0, \\infty]\\) that satisfies:\n\n\\(\\mu(\\emptyset) = 0\\).\n\\(\\mu\\) is countably additive."
   },
   {
+    "objectID": "measures-slides.html#sec-further-reading",
+    "href": "measures-slides.html#sec-further-reading",
+    "title": "Measures",
+    "section": "5 Further reading",
+    "text": "5 Further reading\n\nBillingsley (1995) develops measure theory and builds probability on it. Its early chapters define \\(\\sigma\\)-algebras, measures, and their basic properties.\nFolland (1999) is a graduate text on measure and integration; its first chapters treat \\(\\sigma\\)-algebras and measures.\nGut (2013) is a graduate course in probability that opens with a chapter on introductory measure theory."
+  },
+  {
     "objectID": "measures-slides.html#references",
     "href": "measures-slides.html#references",
     "title": "Measures",
-    "section": "",
-    "text": "Remark 6 (Measures generalize size). A measure generalizes size: it can measure how many elements a set has, as in Definition 6, or how long a set of real numbers is, as Lebesgue measure does, assigning each interval \\([a, b]\\) its length \\(b - a\\). For example, the counting measure on \\(\\mathopen{}\\left\\{0, 1, 2, \\ldots\\right\\}\\mathclose{}\\) gives \\(\\mathopen{}\\left\\{2, 3, 4, 5\\right\\}\\mathclose{}\\) the value \\(4\\), while the Lebesgue measure of the interval \\([2, 5]\\) is \\(5 - 2 = 3\\). Both appear as reference measures in the Fubini–Tonelli theorem.\n\n\n\n\n\n\n\n\n\nBillingsley, Patrick. 1995. Probability and Measure. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley."
+    "section": "References",
+    "text": "References\n\n\nBillingsley, Patrick. 1995. Probability and Measure. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.\n\n\nFolland, Gerald B. 1999. Real Analysis: Modern Techniques and Their Applications. 2nd ed. Wiley. https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166.\n\n\nGut, Allan. 2013. Probability: A Graduate Course. 2nd ed. Springer Texts in Statistics. Springer. https://doi.org/10.1007/978-1-4614-4708-5."
   },
   {
     "objectID": "index.html",
@@ -336,6 +385,20 @@
     "text": "14 Exponentials and Logarithms\nIn these notes, \\(\\operatorname{log}\\mathopen{}\\left\\{x\\right\\}\\mathclose{}\\) is the natural logarithm of \\(x &gt; 0\\), the logarithm with base \\(e \\approx 2.718\\), and \\(\\operatorname{exp}\\mathopen{}\\left\\{x\\right\\}\\mathclose{} = e^x\\) is the exponential function. Some sources write \\(\\ln x\\) for the natural logarithm and reserve \\(\\log x\\) for base 10.\n\n\n\n\n\n\n\nTheorem 19 (\\(\\operatorname{exp}\\mathopen{}\\left\\{\\right\\}\\mathclose{}\\) and \\(\\operatorname{log}\\mathopen{}\\left\\{\\right\\}\\mathclose{}\\) are mutual inverses)  \n\nFor every \\(a &gt; 0\\): \\(\\operatorname{exp}\\mathopen{}\\left\\{\\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}\\right\\}\\mathclose{} = a\\).\nFor every \\(a \\in \\mathbb{R}\\): \\(\\operatorname{log}\\mathopen{}\\left\\{\\operatorname{exp}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}\\right\\}\\mathclose{} = a\\).\n\n\n\n\n\n\n\n\n\n\n\n\nTheorem 20 (Logarithm of a product) If \\(a &gt; 0\\) and \\(b &gt; 0\\), then\n\\[\n\\operatorname{log}\\mathopen{}\\left\\{a \\cdot b\\right\\}\\mathclose{} = \\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} + \\operatorname{log}\\mathopen{}\\left\\{b\\right\\}\\mathclose{}\n\\]\n\n\n\n\n\n\n\n\n\n\n\nCorollary 1 (Logarithm of a quotient) If \\(a &gt; 0\\) and \\(b &gt; 0\\), then\n\\[\\operatorname{log}\\mathopen{}\\left\\{\\frac{a}{b}\\right\\}\\mathclose{} = \\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} - \\operatorname{log}\\mathopen{}\\left\\{b\\right\\}\\mathclose{}\\]\n\n\n\n\n\n\n\n\n\n\nProofProof\n\n\n\n\n\n\nProof. Since \\(a &gt; 0\\) and \\(b &gt; 0\\), the quotient \\(\\frac{a}{b}\\) is positive, so Theorem 20 applies to the product \\(\\frac{a}{b} \\cdot b\\):\n\\[\n\\begin{aligned}\n\\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}\n&= \\operatorname{log}\\mathopen{}\\left\\{\\frac{a}{b} \\cdot b\\right\\}\\mathclose{}\n&& \\text{(} a = \\tfrac{a}{b} \\cdot b \\text{)}\n\\\\\n&= \\operatorname{log}\\mathopen{}\\left\\{\\frac{a}{b}\\right\\}\\mathclose{} + \\operatorname{log}\\mathopen{}\\left\\{b\\right\\}\\mathclose{}\n&& \\text{(logarithm of a product)}\n\\end{aligned}\n\\]\nThe second step applies Theorem 20. Subtracting \\(\\operatorname{log}\\mathopen{}\\left\\{b\\right\\}\\mathclose{}\\) from both sides gives \\(\\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} - \\operatorname{log}\\mathopen{}\\left\\{b\\right\\}\\mathclose{} = \\operatorname{log}\\mathopen{}\\left\\{\\frac{a}{b}\\right\\}\\mathclose{}\\).\n\n\n\n\n\n\n\n\n\n\n\nTheorem 21 (Logarithm of a power) If \\(a &gt; 0\\) and \\(b \\in \\mathbb{R}\\), then\n\\[\n\\operatorname{log}\\mathopen{}\\left\\{a^b\\right\\}\\mathclose{} = b \\cdot\\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}\n\\]\n\n\n\n\n\n\n\n\n\n\n\nTheorem 22 (exponential of a sum) The exponential of a sum is equal to the product of the exponentials of the addends:\n\\[\\operatorname{exp}\\mathopen{}\\left\\{a+b\\right\\}\\mathclose{} = \\operatorname{exp}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} \\cdot\\operatorname{exp}\\mathopen{}\\left\\{b\\right\\}\\mathclose{}\\]\n\n\n\n\n\n\n\n\n\n\n\nExample 9 (Exponential of a sum) With \\(a = 2\\) and \\(b = 3\\), \\(\\operatorname{exp}\\mathopen{}\\left\\{2 + 3\\right\\}\\mathclose{} = \\operatorname{exp}\\mathopen{}\\left\\{5\\right\\}\\mathclose{} \\approx 148.41\\), and \\(\\operatorname{exp}\\mathopen{}\\left\\{2\\right\\}\\mathclose{} \\cdot\\operatorname{exp}\\mathopen{}\\left\\{3\\right\\}\\mathclose{} \\approx 7.3891 \\cdot 20.0855 \\approx 148.41\\).\n\n\n\n\n\n\n\n\n\n\n\nCorollary 2 (exponential of a difference) The exponential of a difference is the exponential of the first term divided by the exponential of the second term:\n\\[\\operatorname{exp}\\mathopen{}\\left\\{a-b\\right\\}\\mathclose{} = \\frac{\\operatorname{exp}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}}{\\operatorname{exp}\\mathopen{}\\left\\{b\\right\\}\\mathclose{}}\\]\n\n\n\n\n\n\n\n\n\n\n\nExample 10 (Exponential of a difference) With \\(a = 5\\) and \\(b = 2\\), \\(\\operatorname{exp}\\mathopen{}\\left\\{5 - 2\\right\\}\\mathclose{} = \\operatorname{exp}\\mathopen{}\\left\\{3\\right\\}\\mathclose{} \\approx 20.09\\), and \\(\\frac{\\operatorname{exp}\\mathopen{}\\left\\{5\\right\\}\\mathclose{}}{\\operatorname{exp}\\mathopen{}\\left\\{2\\right\\}\\mathclose{}} \\approx \\frac{148.4132}{7.3891} \\approx 20.09\\).\n\n\n\n\n\n\n\n\n\n\n\nTheorem 23 (Power of a power) If \\(a &gt; 0\\) and \\(b, c \\in \\mathbb{R}\\), then\n\\[a^{bc} = \\mathopen{}\\left(a^b\\right)\\mathclose{}^c = \\mathopen{}\\left(a^c\\right)\\mathclose{}^b\\]\n\n\n\n\n\n\n\n\n\n\n\nExample 11 (A negative base) With \\(a = -1\\), \\(b = 2\\), and \\(c = \\frac{1}{2}\\):\n\\[\n\\begin{aligned}\na^{bc}\n&= (-1)^{2 \\cdot\\frac{1}{2}}\n\\\\\n&= (-1)^{1}\n\\\\\n&= -1\n\\end{aligned}\n\\]\nbut\n\\[\n\\begin{aligned}\n\\mathopen{}\\left(a^b\\right)\\mathclose{}^c\n&= \\mathopen{}\\left((-1)^2\\right)\\mathclose{}^{\\frac{1}{2}}\n\\\\\n&= 1^{\\frac{1}{2}}\n\\\\\n&= 1\n\\end{aligned}\n\\]\nSo \\(a^{bc} \\neq \\mathopen{}\\left(a^b\\right)\\mathclose{}^c\\) here, which is why Theorem 23 requires \\(a &gt; 0\\). The third expression, \\(\\mathopen{}\\left(a^c\\right)\\mathclose{}^b = \\mathopen{}\\left((-1)^{\\frac{1}{2}}\\right)\\mathclose{}^2\\), is not even a real number.\n\n\n\n\n\n\n\n\n\n\n\nCorollary 3 (natural exponential of a product) \\[\\operatorname{exp}\\mathopen{}\\left\\{ab\\right\\}\\mathclose{} = (\\operatorname{exp}\\mathopen{}\\left\\{a\\right\\}\\mathclose{})^b = (\\operatorname{exp}\\mathopen{}\\left\\{b\\right\\}\\mathclose{})^a\\]\n\n\n\n\n\n\n\n\n\n\n\nExercise 9 For \\(b,c \\in \\mathbb{R}\\), when does \\(b^c = bc\\)?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 9. We only count a pair \\((b, c)\\) when \\(b^c\\) is a real number, so for \\(b &lt; 0\\) we only consider integer \\(c\\) (R agrees: (-8)^(1/3) is NaN). With that convention, \\(bc = b^c\\) in each of the following cases:\n\n\n\\(c = 1\\), for every \\(b\\).\n\n\\(b = 0\\) and \\(c &gt; 0\\), since then \\(b^c = 0 = bc\\). (\\(b = 0\\) and \\(c = 0\\) fails, since \\(0^0 = 1 \\neq 0\\).)\n\n\\(b &gt; 0\\), \\(c &gt; 0\\), \\(c \\neq 1\\), and \\(b = \\operatorname{exp}\\mathopen{}\\left\\{\\frac{\\operatorname{log}\\mathopen{}\\left\\{c\\right\\}\\mathclose{}}{c-1}\\right\\}\\mathclose{}\\). For \\(b &gt; 0\\), dividing both sides of \\(b^c = bc\\) by \\(b\\) gives \\(b^{c-1} = c\\), which needs \\(c &gt; 0\\) because \\(b^{c-1} &gt; 0\\); taking logarithms then gives \\((c-1)\\operatorname{log}\\mathopen{}\\left\\{b\\right\\}\\mathclose{} = \\operatorname{log}\\mathopen{}\\left\\{c\\right\\}\\mathclose{}\\). For example, \\(c = 2\\) gives \\(b = 2\\), and indeed \\(2^2 = 4 = 2 \\cdot 2\\).\n\n\\(b &lt; 0\\) and \\(c\\) is an odd integer with \\(c \\ge 3\\), with \\(b = -c^{1/(c-1)}\\); for example, \\(b = -\\sqrt{3}\\) and \\(c = 3\\) give \\(b^c = -3\\sqrt{3} = bc\\).\n\n\\(b &lt; 0\\) and \\(c\\) is an even integer with \\(c \\le -2\\), with \\(b = -(-c)^{1/(c-1)}\\); for example, \\(b = -2^{-1/3}\\) and \\(c = -2\\) give \\(b^c = 2^{2/3} = bc\\).\n\nFor \\(b &lt; 0\\), cases 4 and 5 come from \\(b^{c-1} = c\\) as well: when \\(c - 1\\) is even, \\(b^{c-1} &gt; 0\\), so \\(c\\) must be positive; when \\(c - 1\\) is odd, \\(b^{c-1} &lt; 0\\), so \\(c\\) must be negative.\nSee the red contours in Figure 2 for a visualization of the \\(b \\ge 0\\) cases.\nShow R codemult_f &lt;- function(b, c) b * c\npow_f &lt;- function(b, c) b^c\nvalues_b &lt;- seq(0, 5, by = .01)\nvalues_c &lt;- seq(-.5, 3, by = .01)\n\nmult_mat &lt;- outer(values_b, values_c, mult_f)\npow_mat &lt;- outer(values_b, values_c, pow_f)\npow_mat[is.infinite(pow_mat)] &lt;- NA\n\nopacity &lt;- .3\nz_min &lt;- min(mult_mat, pow_mat, na.rm = TRUE)\nz_max &lt;- 5\nplotly::plot_ly(\n  x = ~values_b,\n  y = ~values_c\n) |&gt;\n  plotly::add_surface(\n    z = ~ t(mult_mat),\n    contours = list(\n      z = list(\n        show = TRUE,\n        start = -1,\n        end = 1,\n        size = .1\n      )\n    ),\n    name = \"b*c\",\n    showscale = FALSE,\n    opacity = opacity,\n    colorscale = list(c(0, 1), c(\"green\", \"green\"))\n  ) |&gt;\n  plotly::add_surface(\n    opacity = opacity,\n    colorscale = list(c(0, 1), c(\"red\", \"red\")),\n    z = ~ t(pow_mat),\n    contours = list(\n      z = list(\n        show = TRUE,\n        start = z_min,\n        end = z_max,\n        size = .2\n      )\n    ),\n    showscale = FALSE,\n    name = \"b^c\"\n  ) |&gt;\n  plotly::layout(\n    scene = list(\n      xaxis = list(\n        # type = \"log\",\n        title = \"b\"\n      ),\n      yaxis = list(\n        # type = \"log\",\n        title = \"c\"\n      ),\n      zaxis = list(\n        # type = \"log\",\n        range = c(z_min, z_max),\n        title = \"outcome\"\n      ),\n      camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),\n      aspectratio = list(x = .9, y = .8, z = 0.7)\n    )\n  )\n\n\nFigure 1: Graph of \\(b*c\\) and \\(b^c\\)\n\n\n\n\n\n\n\n\n\n\nShow R codepow_minus_mult_f &lt;- function(b, c) pow_f(b, c) - mult_f(b, c)\n\nmat1 &lt;- outer(values_b, values_c, pow_minus_mult_f)\nmat1[is.infinite(mat1)] &lt;- NA\n\nopacity &lt;- .3\nplotly::plot_ly(\n  x = ~values_b,\n  y = ~values_c\n) |&gt;\n  plotly::add_surface(\n    z = ~ t(mat1),\n    contours = list(\n      z = list(\n        show = TRUE,\n        start = 0,\n        end = 1,\n        size = 1,\n        color = \"red\"\n      )\n    ),\n    name = \"b^c - b*c\",\n    showscale = TRUE,\n    opacity = opacity\n  ) |&gt;\n  plotly::layout(\n    scene = list(\n      xaxis = list(\n        # type = \"log\",\n        title = \"b\"\n      ),\n      yaxis = list(\n        # type = \"log\",\n        title = \"c\"\n      ),\n      zaxis = list(\n        title = \"outcome\"\n      ),\n      camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),\n      aspectratio = list(x = .9, y = .8, z = 0.7)\n    )\n  )\n\n\nFigure 2: Graph of \\(b^c - b*c\\). Red contour lines show where \\(b^c = b*c\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercise 10 For \\(a \\ge 0,~b,c \\in \\mathbb{R}\\), when does \\((a^b)^c = a^{(b^c)}\\)?\n\n\n\n\n\n\n\n\n\n\nSolutionSolution\n\n\n\n\n\n\nSolution 10. Short answer: rarely (that’s all you need to know for this course).\nLong answer:\nSplit on whether \\(a &gt; 0\\) or \\(a = 0\\), because the logarithm we use for \\(a &gt; 0\\) is undefined at \\(a = 0\\).\nCase \\(a &gt; 0\\). By Theorem 23, \\((a^b)^c = a^{bc}\\), so the question becomes when \\(a^{bc} = a^{(b^c)}\\) (for pairs \\((b, c)\\) where \\(b^c\\) is defined). Because \\(a &gt; 0\\), both sides are positive, and we can take logarithms (Theorem 21):\n\\[\n\\begin{aligned}\na^{bc} &= a^{(b^c)}\n\\\\\n\\operatorname{log}\\mathopen{}\\left\\{a^{bc}\\right\\}\\mathclose{} &= \\operatorname{log}\\mathopen{}\\left\\{a^{(b^c)}\\right\\}\\mathclose{}\n&& \\text{(take logarithms of both sides)}\n\\\\\nbc \\cdot \\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} &= b^c\\cdot \\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}\n&& \\text{(logarithm of a power)}\n\\end{aligned}\n\\tag{1}\\]\nThe last line of Equation 1 holds exactly when\n\n\n\\(a = 1\\) (so that \\(\\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} = 0\\)), or\n\n\\(bc = b^c\\) (see Exercise 9).\n\nCase \\(a = 0\\). Here we cannot take logarithms, so we work from the values of powers of \\(0\\): \\(0^s = 0\\) for \\(s &gt; 0\\), \\(0^0 = 1\\), and \\(0^s\\) is undefined for \\(s &lt; 0\\).\n\nIf \\(b &lt; 0\\), then \\(0^b\\) is undefined, so \\((a^b)^c\\) is undefined.\nIf \\(b &gt; 0\\), then \\((0^b)^c = 0^c\\) and \\(b^c &gt; 0\\), so \\(0^{(b^c)} = 0\\); the two sides agree exactly when \\(c &gt; 0\\).\nIf \\(b = 0\\), then \\((0^0)^c = 1^c = 1\\); for \\(c &gt; 0\\), \\(0^{(0^c)} = 0^0 = 1\\), so the two sides agree, and for \\(c \\le 0\\) they do not.\n\nSo for \\(a = 0\\), \\((a^b)^c = a^{(b^c)}\\) exactly when \\(b \\ge 0\\) and \\(c &gt; 0\\).\nIn particular, when \\(a = 0\\), \\(b \\ge 0\\), and \\(c = 0\\), the two sides differ:\n\\[\n\\begin{aligned}\n(a^b)^c\n&= (0^b)^0\n\\\\\n&= 1\n\\end{aligned}\n\\]\n\\[\n\\begin{aligned}\na^{(b^c)}\n&= 0^{(b^0)}\n\\\\\n&= 0^1\n\\\\\n&= 0\n\\end{aligned}\n\\]"
   },
   {
+    "objectID": "algebra.html#sec-further-reading",
+    "href": "algebra.html#sec-further-reading",
+    "title": "Algebra",
+    "section": "\n15 Further reading",
+    "text": "15 Further reading\n\n\nAbramson et al. (2021) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, and logarithms, which overlap with the algebra on this page.\n\nRudin (1976) develops the real numbers, including the least upper bound property behind the infimum and supremum."
+  },
+  {
+    "objectID": "algebra.html#references",
+    "href": "algebra.html#references",
+    "title": "Algebra",
+    "section": "References",
+    "text": "References\n\n\nAbramson, Jay et al. 2021. Algebra and Trigonometry. 2nd ed. OpenStax. https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill."
+  },
+  {
     "objectID": "algebra-slides.html#equalities",
     "href": "algebra-slides.html#equalities",
     "title": "Algebra",
@@ -434,11 +497,18 @@
     "text": "14 Exponentials and Logarithms\nIn these notes, \\(\\operatorname{log}\\mathopen{}\\left\\{x\\right\\}\\mathclose{}\\) is the natural logarithm of \\(x &gt; 0\\), the logarithm with base \\(e \\approx 2.718\\), and \\(\\operatorname{exp}\\mathopen{}\\left\\{x\\right\\}\\mathclose{} = e^x\\) is the exponential function. Some sources write \\(\\ln x\\) for the natural logarithm and reserve \\(\\log x\\) for base 10."
   },
   {
+    "objectID": "algebra-slides.html#sec-further-reading",
+    "href": "algebra-slides.html#sec-further-reading",
+    "title": "Algebra",
+    "section": "\n15 Further reading",
+    "text": "15 Further reading\n\n\nAbramson et al. (2021) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, and logarithms, which overlap with the algebra on this page.\n\nRudin (1976) develops the real numbers, including the least upper bound property behind the infimum and supremum."
+  },
+  {
     "objectID": "algebra-slides.html#references",
     "href": "algebra-slides.html#references",
     "title": "Algebra",
-    "section": "",
-    "text": "Solution 10. Short answer: rarely (that’s all you need to know for this course).\nLong answer:\nSplit on whether \\(a &gt; 0\\) or \\(a = 0\\), because the logarithm we use for \\(a &gt; 0\\) is undefined at \\(a = 0\\).\nCase \\(a &gt; 0\\). By Theorem 23, \\((a^b)^c = a^{bc}\\), so the question becomes when \\(a^{bc} = a^{(b^c)}\\) (for pairs \\((b, c)\\) where \\(b^c\\) is defined). Because \\(a &gt; 0\\), both sides are positive, and we can take logarithms (Theorem 21):\n\\[\n\\begin{aligned}\na^{bc} &= a^{(b^c)}\n\\\\\n\\operatorname{log}\\mathopen{}\\left\\{a^{bc}\\right\\}\\mathclose{} &= \\operatorname{log}\\mathopen{}\\left\\{a^{(b^c)}\\right\\}\\mathclose{}\n&& \\text{(take logarithms of both sides)}\n\\\\\nbc \\cdot \\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} &= b^c\\cdot \\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{}\n&& \\text{(logarithm of a power)}\n\\end{aligned}\n\\tag{1}\\]\nThe last line of Equation 1 holds exactly when\n\n\n\\(a = 1\\) (so that \\(\\operatorname{log}\\mathopen{}\\left\\{a\\right\\}\\mathclose{} = 0\\)), or\n\n\\(bc = b^c\\) (see Exercise 9).\n\nCase \\(a = 0\\). Here we cannot take logarithms, so we work from the values of powers of \\(0\\): \\(0^s = 0\\) for \\(s &gt; 0\\), \\(0^0 = 1\\), and \\(0^s\\) is undefined for \\(s &lt; 0\\).\n\nIf \\(b &lt; 0\\), then \\(0^b\\) is undefined, so \\((a^b)^c\\) is undefined.\nIf \\(b &gt; 0\\), then \\((0^b)^c = 0^c\\) and \\(b^c &gt; 0\\), so \\(0^{(b^c)} = 0\\); the two sides agree exactly when \\(c &gt; 0\\).\nIf \\(b = 0\\), then \\((0^0)^c = 1^c = 1\\); for \\(c &gt; 0\\), \\(0^{(0^c)} = 0^0 = 1\\), so the two sides agree, and for \\(c \\le 0\\) they do not.\n\nSo for \\(a = 0\\), \\((a^b)^c = a^{(b^c)}\\) exactly when \\(b \\ge 0\\) and \\(c &gt; 0\\).\nIn particular, when \\(a = 0\\), \\(b \\ge 0\\), and \\(c = 0\\), the two sides differ:\n\\[\n\\begin{aligned}\n(a^b)^c\n&= (0^b)^0\n\\\\\n&= 1\n\\end{aligned}\n\\]\n\\[\n\\begin{aligned}\na^{(b^c)}\n&= 0^{(b^0)}\n\\\\\n&= 0^1\n\\\\\n&= 0\n\\end{aligned}\n\\]\n\n\n\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill."
+    "section": "References",
+    "text": "References\n\n\nAbramson, Jay et al. 2021. Algebra and Trigonometry. 2nd ed. OpenStax. https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill."
   },
   {
     "objectID": "calculus-slides.html#sec-derivatives",
@@ -465,8 +535,8 @@
     "objectID": "calculus-slides.html#sec-additional-resources",
     "href": "calculus-slides.html#sec-additional-resources",
     "title": "Calculus",
-    "section": "\n4 Additional resources",
-    "text": "4 Additional resources\n\nKaplan (2022)\nKhuri (2003)\nBanner (2007)\nLarson and Edwards (2018)\n\nMiller (2016)\n\nhttp://www.youtube.com/watch?v=xYzQL0TUtBA\nhttp://www.youtube.com/watch?v=Ps2SBo_WjoE\n\n\n\nGrinberg (2017) (the rigorous foundations behind these results)"
+    "section": "\n4 Further reading",
+    "text": "4 Further reading\n\nKaplan (2022)\nKhuri (2003)\nBanner (2007)\nLarson and Edwards (2018)\n\nMiller (2016)\n\nhttp://www.youtube.com/watch?v=xYzQL0TUtBA\nhttp://www.youtube.com/watch?v=Ps2SBo_WjoE\n\n\n\nGrinberg (2017) (the rigorous foundations behind these results)"
   },
   {
     "objectID": "calculus-slides.html#references",
@@ -507,8 +577,8 @@
     "objectID": "calculus.html#sec-additional-resources",
     "href": "calculus.html#sec-additional-resources",
     "title": "Calculus",
-    "section": "\n4 Additional resources",
-    "text": "4 Additional resources\n\nKaplan (2022)\nKhuri (2003)\nBanner (2007)\nLarson and Edwards (2018)\n\nMiller (2016)\n\nhttp://www.youtube.com/watch?v=xYzQL0TUtBA\nhttp://www.youtube.com/watch?v=Ps2SBo_WjoE\n\n\n\nGrinberg (2017) (the rigorous foundations behind these results)"
+    "section": "\n4 Further reading",
+    "text": "4 Further reading\n\nKaplan (2022)\nKhuri (2003)\nBanner (2007)\nLarson and Edwards (2018)\n\nMiller (2016)\n\nhttp://www.youtube.com/watch?v=xYzQL0TUtBA\nhttp://www.youtube.com/watch?v=Ps2SBo_WjoE\n\n\n\nGrinberg (2017) (the rigorous foundations behind these results)"
   },
   {
     "objectID": "calculus.html#references",
@@ -584,15 +654,15 @@
     "objectID": "linear-algebra-slides.html#sec-additional-resources",
     "href": "linear-algebra-slides.html#sec-additional-resources",
     "title": "Linear Algebra",
-    "section": "\n10 Additional resources",
-    "text": "10 Additional resources\n\nFieller (2016)\nBanerjee and Roy (2014)\nSearle and Khuri (2017)"
+    "section": "\n10 Further reading",
+    "text": "10 Further reading\n\n\nStrang (2023) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.\n\nAxler (2024) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.\nFieller (2016)\nBanerjee and Roy (2014)\nSearle and Khuri (2017)"
   },
   {
     "objectID": "linear-algebra-slides.html#references",
     "href": "linear-algebra-slides.html#references",
     "title": "Linear Algebra",
     "section": "References",
-    "text": "References\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nDobson, Annette J, and Adrian G Barnett. 2018. An Introduction to Generalized Linear Models. 4th ed. CRC press. https://doi.org/10.1201/9781315182780.\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nGoodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. Deep Learning. MIT Press. https://www.deeplearningbook.org/.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nKaplan, Daniel. 2022. MOSAIC Calculus. Www.mosaic-web.org. www.mosaic-web.org.\n\n\nSearle, Shayle R, and Andre I Khuri. 2017. Matrix Algebra Useful for Statistics. John Wiley & Sons."
+    "text": "References\n\n\nAxler, Sheldon. 2024. Linear Algebra Done Right. 4th ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-3-031-41026-0.\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nDobson, Annette J, and Adrian G Barnett. 2018. An Introduction to Generalized Linear Models. 4th ed. CRC press. https://doi.org/10.1201/9781315182780.\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nGoodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. Deep Learning. MIT Press. https://www.deeplearningbook.org/.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nKaplan, Daniel. 2022. MOSAIC Calculus. Www.mosaic-web.org. www.mosaic-web.org.\n\n\nSearle, Shayle R, and Andre I Khuri. 2017. Matrix Algebra Useful for Statistics. John Wiley & Sons.\n\n\nStrang, Gilbert. 2023. Introduction to Linear Algebra. 6th ed. Wellesley-Cambridge Press. https://math.mit.edu/~gs/linearalgebra/."
   },
   {
     "objectID": "linear-algebra.html",
@@ -668,15 +738,15 @@
     "objectID": "linear-algebra.html#sec-additional-resources",
     "href": "linear-algebra.html#sec-additional-resources",
     "title": "Linear Algebra",
-    "section": "\n10 Additional resources",
-    "text": "10 Additional resources\n\nFieller (2016)\nBanerjee and Roy (2014)\nSearle and Khuri (2017)"
+    "section": "\n10 Further reading",
+    "text": "10 Further reading\n\n\nStrang (2023) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.\n\nAxler (2024) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.\nFieller (2016)\nBanerjee and Roy (2014)\nSearle and Khuri (2017)"
   },
   {
     "objectID": "linear-algebra.html#references",
     "href": "linear-algebra.html#references",
     "title": "Linear Algebra",
     "section": "References",
-    "text": "References\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nDobson, Annette J, and Adrian G Barnett. 2018. An Introduction to Generalized Linear Models. 4th ed. CRC press. https://doi.org/10.1201/9781315182780.\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nGoodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. Deep Learning. MIT Press. https://www.deeplearningbook.org/.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nKaplan, Daniel. 2022. MOSAIC Calculus. Www.mosaic-web.org. www.mosaic-web.org.\n\n\nSearle, Shayle R, and Andre I Khuri. 2017. Matrix Algebra Useful for Statistics. John Wiley & Sons."
+    "text": "References\n\n\nAxler, Sheldon. 2024. Linear Algebra Done Right. 4th ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-3-031-41026-0.\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nDobson, Annette J, and Adrian G Barnett. 2018. An Introduction to Generalized Linear Models. 4th ed. CRC press. https://doi.org/10.1201/9781315182780.\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nGoodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. Deep Learning. MIT Press. https://www.deeplearningbook.org/.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nKaplan, Daniel. 2022. MOSAIC Calculus. Www.mosaic-web.org. www.mosaic-web.org.\n\n\nSearle, Shayle R, and Andre I Khuri. 2017. Matrix Algebra Useful for Statistics. John Wiley & Sons.\n\n\nStrang, Gilbert. 2023. Introduction to Linear Algebra. 6th ed. Wellesley-Cambridge Press. https://math.mit.edu/~gs/linearalgebra/."
   },
   {
     "objectID": "notation-slides.html#sec-writing-math-quarto",
@@ -728,11 +798,18 @@
     "text": "7 Why is notation in probability and statistics so inconsistent and disorganized?\nIn grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.\nIt’s worth noting that calculus was formalized in the 1600s, elementary algebra was formalized around 820, and arithmetic even earlier. And calculus still has several competing notation systems. In contrast, the field of statistics only emerged in the late 1800s and early 1900s, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 (Nelder and Wedderburn 1972), which is very recent in terms of the pace of scientific development."
   },
   {
+    "objectID": "notation-slides.html#sec-further-reading",
+    "href": "notation-slides.html#sec-further-reading",
+    "title": "Notation",
+    "section": "8 Further reading",
+    "text": "8 Further reading\nFor the logical symbols and proof conventions used in these notes:\n\nVelleman (2019) explains how mathematical statements are built from logical connectives and quantifiers, and how to read and write them.\nBarker-Plummer et al. (2011) covers the same symbols as a formal language, with propositional and first-order logic.\n\nFor set and function notation, see the Sets and Functions page."
+  },
+  {
     "objectID": "notation-slides.html#references",
     "href": "notation-slides.html#references",
     "title": "Notation",
     "section": "References",
-    "text": "References\n\n\nNelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” Journal of the Royal Statistical Society Series A: Statistics in Society 135 (3): 370–84. https://doi.org/10.2307/2344614."
+    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nNelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” Journal of the Royal Statistical Society Series A: Statistics in Society 135 (3): 370–84. https://doi.org/10.2307/2344614.\n\n\nVelleman, Daniel J. 2019. How to Prove It: A Structured Approach. 3rd ed. Cambridge University Press. https://doi.org/10.1017/9781108539890."
   },
   {
     "objectID": "notation.html",
@@ -791,11 +868,18 @@
     "text": "7 Why is notation in probability and statistics so inconsistent and disorganized?\nIn grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.\nIt’s worth noting that calculus was formalized in the 1600s, elementary algebra was formalized around 820, and arithmetic even earlier. And calculus still has several competing notation systems. In contrast, the field of statistics only emerged in the late 1800s and early 1900s, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 (Nelder and Wedderburn 1972), which is very recent in terms of the pace of scientific development."
   },
   {
+    "objectID": "notation.html#sec-further-reading",
+    "href": "notation.html#sec-further-reading",
+    "title": "Notation",
+    "section": "8 Further reading",
+    "text": "8 Further reading\nFor the logical symbols and proof conventions used in these notes:\n\nVelleman (2019) explains how mathematical statements are built from logical connectives and quantifiers, and how to read and write them.\nBarker-Plummer et al. (2011) covers the same symbols as a formal language, with propositional and first-order logic.\n\nFor set and function notation, see the Sets and Functions page."
+  },
+  {
     "objectID": "notation.html#references",
     "href": "notation.html#references",
     "title": "Notation",
     "section": "References",
-    "text": "References\n\n\nNelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” Journal of the Royal Statistical Society Series A: Statistics in Society 135 (3): 370–84. https://doi.org/10.2307/2344614."
+    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nNelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” Journal of the Royal Statistical Society Series A: Statistics in Society 135 (3): 370–84. https://doi.org/10.2307/2344614.\n\n\nVelleman, Daniel J. 2019. How to Prove It: A Structured Approach. 3rd ed. Cambridge University Press. https://doi.org/10.1017/9781108539890."
   },
   {
     "objectID": "notation.html#footnotes",
@@ -840,6 +924,20 @@
     "text": "5 Extended non-negative real numbers\n\nDefinition 17 (Extended non-negative real numbers) The extended non-negative real numbers, written \\([0, \\infty]\\), are the non-negative real numbers together with an extra element \\(\\infty\\) that is greater than every real number:\n\\[[0, \\infty] \\stackrel{\\text{def}}{=}[0, \\infty) \\cup \\mathopen{}\\left\\{\\infty\\right\\}\\mathclose{}\\]\nAddition extends to \\([0, \\infty]\\) by setting \\(x + \\infty = \\infty + x = \\infty\\) for every \\(x \\in [0, \\infty]\\)."
   },
   {
+    "objectID": "sets-functions-slides.html#sec-further-reading",
+    "href": "sets-functions-slides.html#sec-further-reading",
+    "title": "Sets and Functions",
+    "section": "6 Further reading",
+    "text": "6 Further reading\nThese books treat sets and the logic behind them in more depth.\n\nDevlin (1993) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions on this page.\nHalmos (1974) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.\nEnderton (2001) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.\nBarker-Plummer et al. (2011) teaches propositional and first-order logic, the language behind statements such as “for every set \\(A\\) there exists…”."
+  },
+  {
+    "objectID": "sets-functions-slides.html#references",
+    "href": "sets-functions-slides.html#references",
+    "title": "Sets and Functions",
+    "section": "References",
+    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nDevlin, Keith. 1993. The Joy of Sets: Fundamentals of Contemporary Set Theory. 2nd ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-1-4612-0903-4.\n\n\nEnderton, Herbert B. 2001. A Mathematical Introduction to Logic. 2nd ed. Academic Press. https://doi.org/10.1016/C2009-0-22107-6.\n\n\nHalmos, Paul R. 1974. Naive Set Theory. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-1-4757-1645-0."
+  },
+  {
     "objectID": "sets-functions.html",
     "href": "sets-functions.html",
     "title": "Sets and Functions",
@@ -880,5 +978,19 @@
     "title": "Sets and Functions",
     "section": "5 Extended non-negative real numbers",
     "text": "5 Extended non-negative real numbers\n\n\n\n\n\n\n\nDefinition 17 (Extended non-negative real numbers) The extended non-negative real numbers, written \\([0, \\infty]\\), are the non-negative real numbers together with an extra element \\(\\infty\\) that is greater than every real number:\n\\[[0, \\infty] \\stackrel{\\text{def}}{=}[0, \\infty) \\cup \\mathopen{}\\left\\{\\infty\\right\\}\\mathclose{}\\]\nAddition extends to \\([0, \\infty]\\) by setting \\(x + \\infty = \\infty + x = \\infty\\) for every \\(x \\in [0, \\infty]\\).\n\n\n\n\n\n\n\n\n\n\n\nRemark 8 (Arithmetic with \\(\\infty\\)). \\(\\infty\\) is not a real number, so some real-number arithmetic does not extend to it: \\(\\infty - \\infty\\) is left undefined, and \\(\\infty + 1 = \\infty + 2\\) does not imply \\(1 = 2\\). Measure theory uses \\([0, \\infty]\\) because the size of a set, such as the length of the whole real line, can be infinite (see Wikipedia: Extended real number line).\n\n\n\n\n\n\n\n\n\n\n\nExample 10 (Adding with \\(\\infty\\)) In \\([0, \\infty]\\), \\(2 + 3 = 5\\) as usual, while \\(2 + \\infty = \\infty\\) and \\(\\infty + \\infty = \\infty\\)."
+  },
+  {
+    "objectID": "sets-functions.html#sec-further-reading",
+    "href": "sets-functions.html#sec-further-reading",
+    "title": "Sets and Functions",
+    "section": "6 Further reading",
+    "text": "6 Further reading\nThese books treat sets and the logic behind them in more depth.\n\nDevlin (1993) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions on this page.\nHalmos (1974) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.\nEnderton (2001) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.\nBarker-Plummer et al. (2011) teaches propositional and first-order logic, the language behind statements such as “for every set \\(A\\) there exists…”."
+  },
+  {
+    "objectID": "sets-functions.html#references",
+    "href": "sets-functions.html#references",
+    "title": "Sets and Functions",
+    "section": "References",
+    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nDevlin, Keith. 1993. The Joy of Sets: Fundamentals of Contemporary Set Theory. 2nd ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-1-4612-0903-4.\n\n\nEnderton, Herbert B. 2001. A Mathematical Introduction to Logic. 2nd ed. Academic Press. https://doi.org/10.1016/C2009-0-22107-6.\n\n\nHalmos, Paul R. 1974. Naive Set Theory. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-1-4757-1645-0."
   }
 ]
