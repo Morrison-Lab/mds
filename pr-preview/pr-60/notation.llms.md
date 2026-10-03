@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-01 13:19:58 (PDT)
+Last modified: 2026-10-03 00:02:45 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -16,7 +16,7 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\cup\\ | union, “or” | `\cup` |
 | \\\cap\\ | intersection, “and” | `\cap` |
 | \\\mid\\ | given, conditional on | `\mid`, `|` |
-| \\\sum\\ | sum | `\sum` |
+| \\\sum\\ | [sum](algebra.llms.md#sec-summation) | `\sum` |
 | \\\prod\\ | product | `\prod` |
 | \\\mu\\ | mean | `\mu` |
 | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation) | `\mathbb{E}` |
