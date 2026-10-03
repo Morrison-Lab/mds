@@ -1,4 +1,11 @@
-::: notes
-The zero vector is the additive identity for vector addition:
+{{< slidebreak >}}
+
+:::{#rem-zero-vector-identity}
+#### The zero vector is the additive identity
+
+Adding the zero vector to a vector leaves it unchanged
+(@def-vector-addition):
 $\vx + \vzero = \vx$ for any vector $\vx$ of the same length.
+For example, $(2, -1) + (0, 0) = (2 + 0, -1 + 0) = (2, -1)$.
+
 :::
