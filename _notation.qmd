@@ -114,6 +114,10 @@ Let's save $\rightarrow$ (`\rightarrow`) for convergence results.
 
 {{< include mds/_subfiles/notation/_sec-indicator-functions.qmd >}}
 
+## Notational shorthands {#sec-notational-shorthands}
+
+{{< include mds/_subfiles/notation/_sec-notational-shorthands.qmd >}}
+
 ## Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, 
