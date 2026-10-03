@@ -20,7 +20,7 @@ for all $x, y \in \reals^p$ and all $t \in [0, 1]$.
 {{< slidebreak >}}
 
 :::{#rem-convex-chord-above-graph}
-#### Chords lie above the graph
+#### Chords lie on or above the graph
 
 The point $t x + (1 - t) y$ lies on the line segment from $x$ to $y$,
 and the right-hand side is the height of the chord joining
@@ -45,7 +45,7 @@ Take $x = -2$, $y = 0$, $t = \tfrac{1}{2}$.
 The point is $\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1$,
 where the graph has height $f(-1) = -1 + 3 = 2$,
 but the chord has height
-$\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} \cdot (-2) + 0 = -1$,
+$\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 = -1$,
 and $2 \le -1$ is false.
 
 :::

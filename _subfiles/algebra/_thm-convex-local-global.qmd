@@ -1,10 +1,3 @@
-<!--
-Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
-section 4.3, p. 93 (states that all local minima of a convex function
-are global); Murphy (2012), section 7.3.3, p. 222 (convex functions
-have a unique global minimum when strictly convex).
-The proof is the standard argument from the chord inequality.
--->
 :::{#exm-convex-local-global}
 #### A convex and a non-convex function
 
@@ -14,7 +7,7 @@ $f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0$.
 Its local minimizer $x^* = 2$ is also a global minimizer,
 since $f(x) = (x - 2)^2 \ge 0 = f(2)$ for every $x$.
 
-Without convexity, this can fail:
+Without convexity, a local minimizer need not be global:
 $f(x) = x^3 - 3x$ is not convex (@exm-cubic-not-convex),
 and it has a local minimizer at $x^* = 1$
 that is not global (@exr-local-vs-global-min).
@@ -23,6 +16,13 @@ that is not global (@exr-local-vs-global-min).
 
 {{< slidebreak >}}
 
+<!--
+Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
+section 4.3, p. 93 (states that all local minima of a convex function
+are global); Murphy (2012), section 7.3.3, p. 222 (convex functions
+have a unique global minimum when strictly convex).
+The proof is the standard argument from the chord inequality.
+-->
 :::{#thm-convex-local-global}
 #### Local minimizers of convex functions are global
 

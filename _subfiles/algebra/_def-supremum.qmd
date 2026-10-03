@@ -18,7 +18,7 @@ we write $\sup A = +\infty$ by convention.
 {{< slidebreak >}}
 
 :::{#rem-supremum-exists}
-#### Why the supremum exists
+#### Existence of the supremum, and when it is a maximum
 
 The minimum in @def-supremum always exists:
 that is the completeness (least-upper-bound) property of the real numbers

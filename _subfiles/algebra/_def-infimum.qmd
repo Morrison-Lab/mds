@@ -18,7 +18,7 @@ we write $\inf A = -\infty$ by convention.
 {{< slidebreak >}}
 
 :::{#rem-infimum-exists}
-#### Why the infimum exists
+#### Existence of the infimum, and when it is a minimum
 
 The maximum in @def-infimum always exists:
 that is the completeness (greatest-lower-bound) property of the real numbers
