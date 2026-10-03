@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 02:36:14 (PDT)
+Last modified: 2026-10-03 02:55:01 (PDT)
 
 ## 1 Derivatives
 
@@ -343,9 +343,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 11 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if its Riemann integral ([Definition 10](#def-riemann-integral)) over \\\[a, b\]\\ exists and is finite.
+> **Definition 11 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if the sums \\\sum\_{i=1}^n f(x_i^\*)\\\Delta x_i\\, over partitions \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)) with a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\, approach a real-number limit as the mesh \\\\\mathcal{P}\\\\ ([Definition 9](#def-mesh)) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.
 >
 > ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e), p. 272)
+
+> **NOTE:**
+>
+> *Remark 1* (Riemann integrable functions and Riemann integrals). A bounded function \\f\\ is Riemann integrable on \\\[a, b\]\\ exactly when its Riemann integral \\\int_a^b f(x)\\dx\\ ([Definition 10](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let \\g(x) = 1\\ when \\x\\ is rational and \\g(x) = 0\\ when \\x\\ is irrational, on \\\[0, 1\]\\. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives \\\sum\_{i=1}^n 1 \cdot\Delta x_i = 1\\ for every partition, because the widths \\\Delta x_i\\ add up to the length \\1 - 0 = 1\\ of \\\[0, 1\]\\, and choosing every sample point irrational gives \\\sum\_{i=1}^n 0 \cdot\Delta x_i = 0\\. The two limits differ, so \\g\\ is not Riemann integrable on \\\[0, 1\]\\, and \\\int_0^1 g(x)\\dx\\ does not exist.
 
 > **NOTE:**
 >
@@ -948,7 +952,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> *Remark 1* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint) corollary in the probability chapter of *Regression Models for Epidemiology*. A probability measure gives the whole space measure \\1\\, so it is finite, and hence \\\sigma\\-finite; for probability measures, the \\\sigma\\-finiteness condition is automatic.
+> *Remark 2* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint) corollary in the probability chapter of *Regression Models for Epidemiology*. A probability measure gives the whole space measure \\1\\, so it is finite, and hence \\\sigma\\-finite; for probability measures, the \\\sigma\\-finiteness condition is automatic.
 >
 > The integrability conditions (nonnegativity or absolute integrability) still need to be verified in each application. For example, Lebesgue measure (ordinary length) on \\\[0, 1\]\\ is a probability measure, so the \\\sigma\\-finiteness condition holds for both factors \\\[0, 1\]\\, yet the two iterated integrals in [Example 17](#exm-fubini-fail) are \\\pi/4\\ and \\-\pi/4\\. So \\\sigma\\-finiteness alone does not make the iterated integrals agree.
 
