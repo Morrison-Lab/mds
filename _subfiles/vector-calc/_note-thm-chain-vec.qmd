@@ -10,7 +10,22 @@ $\derivf{\vy}{\vx}$ is $p \times q$ and $\derivf{z}{\vy}$ is $q \times 1$,
 so the product $\derivf{z}{\vy} \derivf{\vy}{\vx}$ in the other order
 is not even defined unless $p = 1$.
 
-For example, let $\vx = \tp{(x_1, x_2)}$,
+The version presented here is for the
+[gradient](https://en.wikipedia.org/wiki/Gradient) (column vector);
+the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector)
+would be the
+[transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative),
+$\tp{\paren{\derivf{z}{\vx}}} = \tp{\paren{\derivf{z}{\vy}}} \tp{\paren{\derivf{\vy}{\vx}}}$,
+with the factors in the reverse order.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-chain-vec}
+#### Applying the vector chain rule
+
+Let $\vx = \tp{(x_1, x_2)}$,
 $\vy = \vec{g}(\vx) = \tp{(x_1 + x_2,\ x_1 x_2)}$,
 and $z = f(\vy) = y_1^2 + y_2$.
 Then
@@ -47,15 +62,11 @@ $$
 $$
 
 which matches differentiating $z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2$ directly.
-
-The version presented here is for the
-[gradient](https://en.wikipedia.org/wiki/Gradient) (column vector);
-the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector)
-would be the
-[transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative),
-$\tp{\paren{\derivf{z}{\vx}}} = \tp{\paren{\derivf{z}{\vy}}} \tp{\paren{\derivf{\vy}{\vx}}}$,
-with the factors in the reverse order.
-In the example, the total derivative is the row vector $(2x_1 + 3x_2,\ 3x_1 + 2x_2)$.
+The product in the other order,
+a $2 \times 1$ matrix times a $2 \times 2$ matrix,
+is not defined.
+The total derivative is the transpose,
+the row vector $(2x_1 + 3x_2,\ 3x_1 + 2x_2)$.
 
 :::
 

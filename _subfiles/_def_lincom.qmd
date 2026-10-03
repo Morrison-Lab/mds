@@ -65,7 +65,10 @@ of which the dot product is one example.
 "Linear combination" can also mean a weighted sum of vectors.
 For example, $2 \tp{(1, 0)} + 3 \tp{(0, 1)} = \tp{(2, 3)}$
 is the linear combination of the vectors $\tp{(1, 0)}$ and $\tp{(0, 1)}$
-with coefficients $2$ and $3$.
+with coefficients $2$ and $3$;
+multiplying a vector by a number multiplies each entry,
+so $2 \tp{(1, 0)} = \tp{(2, 0)}$ and $3 \tp{(0, 1)} = \tp{(0, 3)}$,
+and their sum is $\tp{(2, 3)}$.
 
 :::
 

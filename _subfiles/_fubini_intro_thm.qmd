@@ -82,8 +82,11 @@ $$
 &= \int_0^1 \paren{\int_0^2 x y\,dy}\,dx
 && \text{(definition of the iterated integral)}
 \\
-&= \int_0^1 x \sb{\frac{y^2}{2}}_{y=0}^{y=2}\,dx
+&= \int_0^1 x \paren{\int_0^2 y\,dy}\,dx
 && \text{(} x \text{ is constant in } y \text{)}
+\\
+&= \int_0^1 x \sb{\frac{y^2}{2}}_{y=0}^{y=2}\,dx
+&& \text{(antiderivative of } y \text{)}
 \\
 &= \int_0^1 2x\,dx
 && \text{(evaluate at the limits)}

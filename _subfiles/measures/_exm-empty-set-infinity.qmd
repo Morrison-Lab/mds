@@ -42,10 +42,8 @@ and $\mu(\emptyset) = \infty$.
 #### $\mu(\emptyset) = 0$ is an extra requirement
 
 @exm-empty-set-zero and @exm-empty-set-infinity show that
-both values allowed by @lem-countable-additivity-empty occur:
-the counting function has $\mu(\emptyset) = 0$,
-and the constant function $\mu(A) = \infty$ has $\mu(\emptyset) = \infty$,
-yet both are countably additive.
+both values allowed by @lem-countable-additivity-empty occur
+for countably additive functions.
 So $\mu(\emptyset) = 0$ is an extra requirement, not a consequence of countable additivity.
 
 :::
