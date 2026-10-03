@@ -1,3 +1,22 @@
-::: notes
-The order of the factors reverses when transposing a product.
+{{< slidebreak >}}
+
+:::{#rem-transpose-product-order}
+#### The order of the factors reverses
+
+Transposing a product reverses the order of the factors.
+Keeping the original order usually gives the wrong shape.
+For example, with $\matr{A} = [1,\; 2]$ ($1 \times 2$)
+and $\matr{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$ ($2 \times 1$),
+$\matr{A}\matr{B} = 1 \cd 3 + 2 \cd 4 = 11$, so $\tp{(\matr{A}\matr{B})} = 11$, and
+
+$$
+\tp{\matr{B}}\,\tp{\matr{A}}
+= [3,\; 4] \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+= 11,
+\qquad
+\tp{\matr{A}}\,\tp{\matr{B}}
+= \begin{bmatrix} 1 \\ 2 \end{bmatrix} [3,\; 4]
+= \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}.
+$$
+
 :::

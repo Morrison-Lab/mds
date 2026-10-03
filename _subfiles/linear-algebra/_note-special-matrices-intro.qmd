@@ -1,3 +1,2 @@
-::: notes
-See also @def-zero-matrix for the zero matrix.
-:::
+The zero matrix (@def-zero-matrix), defined with matrix addition,
+is also a special matrix.

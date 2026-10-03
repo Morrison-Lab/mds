@@ -1,3 +1,20 @@
-::: notes
-Covariance matrices and information matrices are symmetric.
+{{< slidebreak >}}
+
+:::{#rem-symmetric-in-statistics}
+#### Symmetric matrices in statistics
+
+Covariance matrices are symmetric:
+entry $(i, j)$ of the covariance matrix of a random vector $\vecf{Y}$
+is $\Cov{Y_i, Y_j}$,
+and $\Cov{Y_i, Y_j} = \Cov{Y_j, Y_i}$.
+For example, if $\Var{Y_1} = 4$, $\Var{Y_2} = 9$, and $\Cov{Y_1, Y_2} = 1$,
+the covariance matrix of $(Y_1, Y_2)$ is
+
+$$
+\begin{bmatrix} 4 & 1 \\ 1 & 9 \end{bmatrix}.
+$$
+
+Fisher information matrices are symmetric for the same reason:
+the Fisher information is the covariance matrix of the score.
+
 :::

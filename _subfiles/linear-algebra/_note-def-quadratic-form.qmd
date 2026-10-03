@@ -1,6 +1,22 @@
-::: notes
-Quadratic forms are the matrix generalizations of the scalar expression $c x^2$.
-They occur frequently in statistics:
+{{< slidebreak >}}
+
+:::{#rem-quadratic-forms-in-statistics}
+#### Quadratic forms in statistics
+
+A quadratic form extends the scalar expression $c x^2$ to vectors:
+with $p = 1$ and $\matr{S} = [c]$, $\tp{\vx}\,\matr{S}\,\vx = c x^2$.
+With $p = 2$,
+
+$$
+\tp{\vx}
+\begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
+\vx
+= x_1^2 + 2 x_1 x_2 + 3 x_2^2,
+$$
+
+which is $1 + 4 + 12 = 17$ at $\vx = (1, 2)$.
+
+Quadratic forms occur often in statistics:
 
 - The residual sum of squares in linear regression
   (see [Vector Calculus](vector-calculus.qmd))
@@ -9,4 +25,5 @@ They occur frequently in statistics:
   (see [Inference about Gaussian Linear Regression Models](https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs))
   is a quadratic form:
   $\Var{\tp{\vx}\hat{\vb}} = \tp{\vx}\,\Var{\hat{\vb}}\,\vx$.
+
 :::
