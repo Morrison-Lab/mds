@@ -15,21 +15,21 @@ $$
 \end{bmatrix}
 $$
 
+For example, take the rank-$2$ matrix from @exm-rank as $\mX$,
+with $n = 3$ observations and $p = 2$ columns:
+an intercept column and one covariate.
+With $\vb = (1, 2)$,
+
+$$
+\mX\vb
+= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}
+\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+= \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix}.
+$$
+
 The matrix $\tp{\mX}\mX$ is $p \times p$ and symmetric,
 since $\tp{(\tp{\mX}\mX)} = \tp{\mX}\,\tp{(\tp{\mX})} = \tp{\mX}\mX$
 (@thm-transpose-product).
 It appears in the OLS estimator $\hat{\vb} = (\tp{\mX}\mX)^{-1}\tp{\mX}\vy$.
-
-For example, with $n = 3$ observations, an intercept, and one predictor,
-
-$$
-\mX = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix},
-\quad
-\vb = \begin{bmatrix} 1 \\ 2 \end{bmatrix}:
-\qquad
-\mX\vb = \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix},
-\qquad
-\tp{\mX}\mX = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}.
-$$
 
 :::

@@ -3,9 +3,7 @@
 :::{#rem-matmul-not-commutative}
 #### Matrix multiplication is not commutative
 
-The product $\matr{A}\matr{B}$ is defined only when
-the number of columns of $\matr{A}$ equals the number of rows of $\matr{B}$.
-Even when $\matr{A}\matr{B}$ and $\matr{B}\matr{A}$ are both defined,
+When $\matr{A}\matr{B}$ and $\matr{B}\matr{A}$ are both defined,
 they are usually different.
 For example, with
 

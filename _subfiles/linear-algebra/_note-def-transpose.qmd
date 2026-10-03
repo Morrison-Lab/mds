@@ -3,8 +3,8 @@
 :::{#rem-transpose-column-to-row}
 #### Transposing a column vector
 
-The transpose turns a column vector into a row vector,
-and transposing again turns it back: $\tp{(\tp{\vx})} = \vx$.
+The transpose turns a column vector into a row vector
+with the same entries in the same order.
 For example,
 
 $$

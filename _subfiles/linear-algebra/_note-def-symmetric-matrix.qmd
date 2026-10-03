@@ -4,7 +4,7 @@
 #### Symmetric matrices in statistics
 
 Covariance matrices are symmetric:
-entry $(i, j)$ of the covariance matrix of a random vector $\vecf{Y}$
+entry $(i, j)$ of the covariance matrix of a random vector $\vY$
 is $\Cov{Y_i, Y_j}$,
 and $\Cov{Y_i, Y_j} = \Cov{Y_j, Y_i}$.
 For example, if $\Var{Y_1} = 4$, $\Var{Y_2} = 9$, and $\Cov{Y_1, Y_2} = 1$,
