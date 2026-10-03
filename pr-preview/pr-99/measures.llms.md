@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:53:36 (PDT)
+Last modified: 2026-10-03 14:52:16 (PDT)
 
 > **NOTE:**
 >
@@ -182,7 +182,7 @@ Last modified: 2026-10-03 12:53:36 (PDT)
 >
 > If some \\A_k\\ is infinite, then the union, which contains \\A_k\\, is infinite too, and:
 >
-> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \infty && \text{(the union is infinite)} \\ &= \mu(A_k) + \sum\_{i \neq k} \mu(A_i) && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(regroup the terms)} \end{aligned} \\
+> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \infty && \text{(the union is infinite)} \\ &= \mu(A_k) + \sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} \mu(A_i) && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(regroup the terms)} \end{aligned} \\
 >
 > *\\\mu\\ is not countably additive.* The single-element sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \ldots\\ are pairwise disjoint, and their union is \\S\\, which is infinite. So:
 >

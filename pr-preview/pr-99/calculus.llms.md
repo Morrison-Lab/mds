@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:53:36 (PDT)
+Last modified: 2026-10-03 14:52:16 (PDT)
 
 ## 1 Derivatives
 
@@ -343,7 +343,9 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Definition 9 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 8](#def-partition)) is its largest subinterval width,
 >
-> \\\\\mathcal{P}\\ \stackrel{\text{def}}{=}\max_i \Delta x_i.\\
+> \\\\\mathcal{P}\\ \stackrel{\text{def}}{=}\max\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}} \Delta x_i,\\
+>
+> where \\n\\ is the number of subintervals of \\\mathcal{P}\\.
 >
 > ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e))
 

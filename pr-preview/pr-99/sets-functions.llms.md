@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:53:36 (PDT)
+Last modified: 2026-10-03 14:52:16 (PDT)
 
 > **NOTE:**
 >
@@ -116,7 +116,7 @@ Last modified: 2026-10-03 12:53:36 (PDT)
 >
 > \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
 >
-> More generally, the union of sets \\A_1, A_2, \ldots\\, written \\\bigcup\_{i} A_i\\, is the set of elements that are in at least one \\A_i\\.
+> More generally, let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The union of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\.
 
 > **NOTE:**
 >
@@ -124,7 +124,7 @@ Last modified: 2026-10-03 12:53:36 (PDT)
 >
 > \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
 >
-> More generally, the intersection of sets \\A_1, A_2, \ldots\\, written \\\bigcap\_{i} A_i\\, is the set of elements that are in every \\A_i\\.
+> More generally, let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The intersection of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\.
 
 > **NOTE:**
 >

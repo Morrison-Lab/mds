@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 12:53:36 (PDT)
+Last modified: 2026-10-03 14:52:16 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -211,11 +211,11 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 ### 5.3 Strengths and limitations of the Iverson bracket
 
-The primary advantage of the Iverson bracket is algebraic conciseness: it converts domain restrictions in sums and integrals into unrestricted operations. For example:
+The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if \\U\\ is a finite set that contains \\A\\, then:
 
-\\ \sum\_{x \in A} f(x) = \sum\_{x} f(x) \[x \in A\] \\
+\\ \sum\_{x \in A} f(x) = \sum\_{x \in U} f(x) \[x \in A\] \\
 
-With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\x\\ running over \\\mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
+With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U = \mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
 
 However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote closed intervals \\\[a, b\]\\, conditional expectations \\\operatorname{E}\[Y \mid X\]\\, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
@@ -265,13 +265,62 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with complement \\A^c \stackrel{\text
 
 This fundamental identity connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.
 
-## 6 Why is notation in probability and statistics so inconsistent and disorganized?
+## 6 Notational shorthands
+
+> **NOTE:**
+>
+> **Definition 6 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
+
+> **NOTE:**
+>
+> In these notes, we avoid notational shorthands in permanent writing and write the full form of each expression, even where a shorthand would be shorter. A reader who supplies the missing part of a shorthand from a different context than the writer intended reads a different expression than the one the writer meant. Handwritten board work is often less complete, but it should still write out ranges and limits where it can.
+>
+> We make one exception: writing two factors side by side means multiplying them, as in \\2x\\ for \\2 \cdot x\\ and \\ab\\ for \\a \cdot b\\. We still write the multiplication sign when the side-by-side form could be misread:
+>
+> - \\2 \cdot 3\\, not \\23\\, which reads as twenty-three;
+> - \\a \cdot(b + c)\\ when \\a\\ could be a function, since \\a(b + c)\\ could mean \\a\\ evaluated at \\b + c\\.
+
+> **NOTE:**
+>
+> **Definition 7 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
+
+For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
+
+[Table 3](#tbl-notational-shorthands) lists shorthands you may meet in other sources, the full form each one abbreviates, and the part each one leaves out. In the table, \\x_1, \ldots, x_n\\ and \\a_1, \ldots, a_n\\ are \\n\\ numbers, \\b\_{ij}\\ is the entry in row \\i\\ and column \\j\\ of an \\m \times n\\ array, \\k\\ is an integer with \\1 \le k \le n\\, \\f\\ is a [function](sets-functions.llms.md#def-function) from \\\mathbb{R}\\ to \\\mathbb{R}\\, and, in the first row, \\\mathcal{R}(x)\\ is a finite set.
+
+| Shorthand | Full form | Part left out |
+|:---|:---|:---|
+| \\\sum\_{x} f(x)\\ | \\\sum\_{x \in \mathcal{R}(x)} f(x)\\ | the set the sum runs over ([sum over a finite set](algebra.llms.md#def-sum-over-set)) |
+| \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^{n} x_i\\ | the lower and upper limits of the index ([summation notation](algebra.llms.md#def-summation)) |
+| \\\sum x_i\\ | \\\sum\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
+| \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the lower and upper limits of the index |
+| \\\prod x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
+| \\\sum\_{i, j} b\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^{n} b\_{ij}\\ | the limits of both indices |
+| \\\sum\_{i \neq k} a_i\\ | \\\sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} a_i\\ | the set \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ of indices that \\k\\ is removed from |
+| \\\int f(x)\\dx\\, used for a number | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits of integration |
+| \\\int f\\ | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits, the variable of integration, and the differential \\dx\\ |
+| \\x\_{1:n}\\ | \\(x_1, x_2, \ldots, x_n)\\ | the explicit list of entries |
+| “the function \\x^2\\” | “the function \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\” | the function’s name, domain, and codomain |
+
+Table 3: Common notational shorthands and their full forms
+
+> **NOTE:**
+>
+> *Remark 2* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
+
+> **NOTE:**
+>
+> **Example 5 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+>
+> \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
+
+## 7 Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
 It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 ([Nelder and Wedderburn 1972](#ref-nelder1972generalized)), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 
-## 7 Further reading
+## 8 Further reading
 
 For the logical symbols and proof conventions used in these notes:
 
