@@ -30,15 +30,6 @@ $$
 The matrix $\tp{\mX}\mX$ is $p \times p$ and symmetric,
 since $\tp{(\tp{\mX}\mX)} = \tp{\mX}\,\tp{(\tp{\mX})} = \tp{\mX}\mX$
 (@thm-transpose-product).
-For the $\mX$ above,
-
-$$
-\tp{\mX}\mX
-= \begin{bmatrix} 1 & 1 & 1 \\ 1 & 2 & 3 \end{bmatrix}
-\begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}
-= \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}.
-$$
-
 When $\tp{\mX}\mX$ is invertible,
 it appears in the OLS estimator $\hat{\vb} = (\tp{\mX}\mX)^{-1}\tp{\mX}\vy$.
 
