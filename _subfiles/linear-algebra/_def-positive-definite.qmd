@@ -11,24 +11,6 @@ if it satisfies both conditions:
 
 :::
 
-::: {.remark .notes}
-
-A positive definite matrix is positive semidefinite
-(@def-positive-semidefinite),
-because $\tp{\vzero}\matr{A}\vzero = 0$.
-Some sources drop the symmetry condition from both definitions.
-These notes keep it,
-because without it a matrix can pass the quadratic-form condition
-and still have no real eigenvalues:
-$\matr{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$
-has $\tp{\vx}\matr{C}\vx = x_1^2 + x_2^2$,
-which is positive for every $\vx \neq \vzero$,
-yet no real $\lambda$ solves $\matr{C}\vecf{v} = \lambda\vecf{v}$
-with $\vecf{v} \neq \vzero$
-(see also <https://en.wikipedia.org/wiki/Definite_matrix>).
-
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-positive-definite}
@@ -47,4 +29,54 @@ with $\vecf{v} \neq \vzero$
   at $\vx = (1, -1)$,
   $\tp{\vx}\matr{D}\vx = 1 - 2 - 2 + 1 = -2 < 0$.
 
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-positive-definite-symmetry}
+#### Why the definition requires symmetry
+
+A positive definite matrix is positive semidefinite
+(@def-positive-semidefinite):
+$\tp{\vx}\matr{A}\vx > 0$ for every $\vx \neq \vzero$,
+and $\tp{\vzero}\matr{A}\vzero = 0$.
+For example, $\matr{I}_p$ in @exm-positive-definite is both.
+
+Some sources drop the symmetry condition from both definitions.
+These notes keep it,
+because without it a matrix can pass the quadratic-form condition
+and still have no real eigenvalues (@def-eigenvalue).
+For example, $\matr{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}$
+is not symmetric, and for any $\vx = (x_1, x_2)$:
+
+$$
+\ba
+\tp{\vx}\matr{C}\vx
+&= x_1 (x_1 + x_2) + x_2 (-x_1 + x_2)
+&& \text{(multiply out the quadratic form)}
+\\
+&= x_1^2 + x_1 x_2 - x_2 x_1 + x_2^2
+&& \text{(distribute)}
+\\
+&= x_1^2 + x_2^2
+&& \text{(the middle terms cancel)}
+\ea
+$$
+
+which is positive for every $\vx \neq \vzero$.
+But suppose $\matr{C}\vecf{v} = \lambda\vecf{v}$ for a real number $\lambda$.
+Matching entries gives $v_1 + v_2 = \lambda v_1$
+and $-v_1 + v_2 = \lambda v_2$,
+so $v_2 = (\lambda - 1)\, v_1$ and $-v_1 = (\lambda - 1)\, v_2$.
+Substituting the first into the second gives
+$-v_1 = (\lambda - 1)^2 v_1$,
+so $\paren{1 + (\lambda - 1)^2} v_1 = 0$.
+Since $1 + (\lambda - 1)^2 > 0$, $v_1 = 0$,
+and then $v_2 = (\lambda - 1)\, v_1 = 0$.
+So no real $\lambda$ has an eigenvector $\vecf{v} \neq \vzero$.
+
+:::
+
+::: notes
+See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 :::

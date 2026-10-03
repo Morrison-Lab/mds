@@ -1,6 +1,13 @@
-::: notes
-The hat matrix appears in the formula for fitted values
-in linear regression:
+{{< slidebreak >}}
+
+:::{#rem-hat-matrix-name}
+#### Why it is called the hat matrix
+
+The hat matrix gives the fitted values in linear regression:
 $\hat{\vy} = \mX\hat{\vb} = \mX(\tp{\mX}\mX)^{-1}\tp{\mX}\vy = \matr{H}\vy$.
-It "puts a hat" on $\vy$ --- hence the name.
+Multiplying by $\matr{H}$ "puts a hat" on $\vy$,
+which is where the name comes from.
+In @exm-hat-matrix, $\matr{H}$ puts a hat on $\vy$
+by replacing each $y_i$ with the sample mean $\bar{y}$.
+
 :::

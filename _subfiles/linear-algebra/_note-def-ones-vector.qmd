@@ -1,4 +1,13 @@
-::: notes
-The dot product $\v1 \cdot \vx = \sum_{i=1}^p x_i$
-is the sum of all entries of $\vx$.
+{{< slidebreak >}}
+
+:::{#rem-ones-vector-sum}
+#### The ones vector sums the entries
+
+The dot product (@def-dot-product) of $\v1$ with $\vx$
+is the sum of the entries of $\vx$:
+$\v1 \cdot \vx = \sumip 1 \cd x_i = \sumip x_i$.
+For example, for $\vx = (2, -1, 5)$,
+$\v1 \cdot \vx = 2 + (-1) + 5 = 6$,
+and dividing by the length $p = 3$ gives the mean of the entries, $6 / 3 = 2$.
+
 :::

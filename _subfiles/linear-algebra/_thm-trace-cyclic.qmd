@@ -37,16 +37,6 @@ $$
 
 :::
 
-::: notes
-$\matr{A}\matr{B}$ and $\matr{B}\matr{A}$ need not have the same size,
-so @thm-trace-cyclic can equate the traces of an $m \times m$ matrix
-and an $n \times n$ matrix.
-Applying it to $\matr{A}$ and the product $\matr{B}\matr{C}$
-moves the last factor of a triple product to the front:
-$\operatorname{tr}(\matr{A}\matr{B}\matr{C}) = \operatorname{tr}(\matr{C}\matr{A}\matr{B})$
-[@banerjee2014linear, Chapter 1, Theorem 1.5 and eq. 1.17, p. 19].
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-trace-cyclic}
@@ -114,5 +104,73 @@ $$
 $$
 
 The products have different sizes, but their traces agree.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-trace-cyclic-triple}
+#### Moving a factor of a triple product
+
+Let $\matr{A}$ be $m \times n$, $\matr{B}$ be $n \times k$,
+and $\matr{C}$ be $k \times m$,
+so that $\matr{A}\matr{B}$ is $m \times k$
+and $\matr{A}\matr{B}\matr{C}$ is square.
+Applying @thm-trace-cyclic to the $m \times k$ matrix $\matr{A}\matr{B}$
+and the $k \times m$ matrix $\matr{C}$
+moves the last factor of the triple product to the front
+[@banerjee2014linear, Chapter 1, Theorem 1.5 and eq. 1.17, p. 19]:
+
+$$
+\ba
+\operatorname{tr}(\matr{A}\matr{B}\matr{C})
+&= \operatorname{tr}\paren{(\matr{A}\matr{B})\,\matr{C}}
+&& \text{(matrix multiplication is associative)}
+\\
+&= \operatorname{tr}\paren{\matr{C}\,(\matr{A}\matr{B})}
+&& \text{(the theorem, applied to the two factors } \matr{A}\matr{B} \text{ and } \matr{C} \text{)}
+\\
+&= \operatorname{tr}(\matr{C}\matr{A}\matr{B})
+&& \text{(matrix multiplication is associative)}
+\ea
+$$
+
+For example, let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}
+\qquad
+\matr{B} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \end{bmatrix}
+\qquad
+\matr{C} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
+$$
+
+Then
+
+$$
+\matr{A}\matr{B}
+= \begin{bmatrix} 1 \cd 1 + 2 \cd 1 & 1 \cd 0 + 2 \cd 1 \\ 0 \cd 1 + 1 \cd 1 & 0 \cd 0 + 1 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix}
+\qquad
+\matr{C}\matr{A}
+= \begin{bmatrix} 0 \cd 1 + 1 \cd 0 & 0 \cd 2 + 1 \cd 1 \\ 1 \cd 1 + 0 \cd 0 & 1 \cd 2 + 0 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 0 & 1 \\ 1 & 2 \end{bmatrix}
+$$
+
+so
+
+$$
+(\matr{A}\matr{B})\,\matr{C}
+= \begin{bmatrix} 3 \cd 0 + 2 \cd 1 & 3 \cd 1 + 2 \cd 0 \\ 1 \cd 0 + 1 \cd 1 & 1 \cd 1 + 1 \cd 0 \end{bmatrix}
+= \begin{bmatrix} 2 & 3 \\ 1 & 1 \end{bmatrix}
+\qquad
+(\matr{C}\matr{A})\,\matr{B}
+= \begin{bmatrix} 0 \cd 1 + 1 \cd 1 & 0 \cd 0 + 1 \cd 1 \\ 1 \cd 1 + 2 \cd 1 & 1 \cd 0 + 2 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 1 & 1 \\ 3 & 2 \end{bmatrix}
+$$
+
+and both traces are the same:
+$\operatorname{tr}(\matr{A}\matr{B}\matr{C}) = 2 + 1 = 3$
+and $\operatorname{tr}(\matr{C}\matr{A}\matr{B}) = 1 + 2 = 3$.
 
 :::
