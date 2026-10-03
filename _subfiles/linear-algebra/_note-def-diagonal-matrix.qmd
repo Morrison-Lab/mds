@@ -1,6 +1,6 @@
 {{< slidebreak >}}
 
-:::{#def-diag}
+:::{#rem-diag-notation}
 #### $\operatorname{diag}$ notation
 
 For numbers $d_1, \ldots, d_p$,

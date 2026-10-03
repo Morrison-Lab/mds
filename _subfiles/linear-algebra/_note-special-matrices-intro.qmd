@@ -1,3 +1,2 @@
-This section defines matrices with special structure.
-One such matrix, the zero matrix (@def-zero-matrix),
+One special matrix, the zero matrix (@def-zero-matrix),
 appeared earlier, in the section on matrix addition.

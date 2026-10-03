@@ -10,8 +10,8 @@ $c_1\vecf{e}_1 + c_2\vecf{e}_2 + c_3\vecf{e}_3$ of them,
 with weights equal to its entries;
 for example,
 $(2, -1, 5) = 2\vecf{e}_1 - 1\vecf{e}_2 + 5\vecf{e}_3$.
-The weights are unique, since they must be the entries.
-Because every vector is a weighted sum of them in exactly one way,
-the indicator vectors are also called the standard basis vectors.
+No other weights work:
+entry $j$ of $c_1\vecf{e}_1 + c_2\vecf{e}_2 + c_3\vecf{e}_3$ is $c_j$,
+so each weight $c_j$ must equal entry $j$ of the vector.
 
 :::

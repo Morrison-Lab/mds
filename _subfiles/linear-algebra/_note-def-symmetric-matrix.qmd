@@ -14,7 +14,4 @@ $$
 \begin{bmatrix} 4 & 1 \\ 1 & 9 \end{bmatrix}.
 $$
 
-Fisher information matrices are symmetric for the same reason:
-the Fisher information is the covariance matrix of the score.
-
 :::

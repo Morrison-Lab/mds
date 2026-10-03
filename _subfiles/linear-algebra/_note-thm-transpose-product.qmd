@@ -20,4 +20,9 @@ $$
 = \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}.
 $$
 
+If instead $\matr{A}$ is $2 \times 3$ and $\matr{B}$ is $3 \times 1$,
+then $\tp{\matr{B}}\,\tp{\matr{A}}$ is a $(1 \times 3)(3 \times 2)$ product,
+but $\tp{\matr{A}}\,\tp{\matr{B}}$ is a $(3 \times 2)(1 \times 3)$ product,
+which is undefined.
+
 :::
