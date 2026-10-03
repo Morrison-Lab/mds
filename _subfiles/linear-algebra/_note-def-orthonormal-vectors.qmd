@@ -1,4 +1,16 @@
-::: notes
+{{< slidebreak >}}
+
+:::{#exm-indicator-orthonormal}
+#### Indicator vectors are orthonormal
+
 The indicator vectors $\vecf{e}_1, \vecf{e}_2, \ldots, \vecf{e}_p$
 (@def-indicator-vector) form an orthonormal set.
+By @thm-indicator-selection,
+$\vecf{e}_i \cdot \vecf{e}_j$ is entry $i$ of $\vecf{e}_j$,
+which is $1$ if $i = j$ and $0$ if $i \neq j$.
+For $p = 2$:
+$\vecf{e}_1 \cdot \vecf{e}_1 = 1 \cd 1 + 0 \cd 0 = 1$,
+$\vecf{e}_2 \cdot \vecf{e}_2 = 0 \cd 0 + 1 \cd 1 = 1$,
+and $\vecf{e}_1 \cdot \vecf{e}_2 = 1 \cd 0 + 0 \cd 1 = 0$.
+
 :::

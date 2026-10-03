@@ -1,6 +1,25 @@
-::: notes
-The entry in row $i$ and column $j$ is denoted $a_{ij}$
+{{< slidebreak >}}
+
+:::{#rem-matrix-entries}
+#### Matrix entries, and vectors as matrices
+
+The entry in row $i$ and column $j$ of $\matr{A}$ is written $a_{ij}$
 or $(\matr{A})_{ij}$.
-A column vector of length $p$ is a special case: a $p \times 1$ matrix.
-A row vector of length $p$ is a $1 \times p$ matrix.
+For example, for the $2 \times 3$ matrix
+
+$$
+\matr{A} =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix},
+$$
+
+$a_{12} = 2$ and $a_{23} = 6$.
+
+A column vector of length $p$ is a $p \times 1$ matrix,
+and a row vector of length $p$ is a $1 \times p$ matrix.
+For example, the column vector $(7, 8)$ is a $2 \times 1$ matrix,
+and the row vector $[7,\; 8]$ is a $1 \times 2$ matrix.
+
 :::
