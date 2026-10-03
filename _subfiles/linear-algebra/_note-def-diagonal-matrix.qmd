@@ -1,4 +1,17 @@
-::: notes
-Diagonal matrices are denoted $\matr{D} = \text{diag}(d_1, d_2, \ldots, d_p)$,
-where $d_1, \ldots, d_p$ are the diagonal entries.
+{{< slidebreak >}}
+
+:::{#rem-diag-notation}
+#### $\operatorname{diag}$ notation
+
+For numbers $d_1, \ldots, d_p$,
+$\operatorname{diag}(d_1, \ldots, d_p)$ is the $p \times p$ diagonal matrix
+with diagonal entries $d_1, \ldots, d_p$.
+For example,
+
+$$
+\operatorname{diag}(2, 5) = \begin{bmatrix} 2 & 0 \\ 0 & 5 \end{bmatrix},
+$$
+
+and the $p \times p$ identity matrix is $\matr{I}_p = \operatorname{diag}(1, \ldots, 1)$.
+
 :::

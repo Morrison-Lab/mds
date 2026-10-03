@@ -33,12 +33,6 @@ $$
 
 :::
 
-::: notes
-@thm-matrix-inner-product-entries says that the matrix inner product
-is the dot product (@def-dot-product) of the two matrices'
-entries, each listed as one vector of length $np$.
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-matrix-inner-product}
@@ -98,5 +92,22 @@ $$
 && \text{(add)}
 \ea
 $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-matrix-inner-product-dot-product}
+#### The matrix inner product as a dot product
+
+@thm-matrix-inner-product-entries says that the matrix inner product
+is the dot product (@def-dot-product) of the two matrices'
+entries, each listed as one vector of length $np$,
+with both matrices' entries listed in the same order.
+
+For example, listing the entries of $\matr{A}$ and $\matr{B}$
+in @exm-matrix-inner-product row by row
+gives $(1, 2, 3, 4)$ and $(0, 1, -1, 2)$,
+and $(1, 2, 3, 4) \cdot (0, 1, -1, 2) = 7 = \iprod{\matr{A}}{\matr{B}}$.
 
 :::

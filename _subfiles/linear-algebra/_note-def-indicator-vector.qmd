@@ -1,3 +1,17 @@
-::: notes
-They are also called *unit vectors* or *standard basis vectors*.
+{{< slidebreak >}}
+
+:::{#rem-indicator-vector-weighted-sums}
+#### Indicator vectors build every vector
+
+For $p = 3$, the indicator vectors are
+$\vecf{e}_1 = (1, 0, 0)$, $\vecf{e}_2 = (0, 1, 0)$, and $\vecf{e}_3 = (0, 0, 1)$.
+Every vector of length $3$ is a weighted sum
+$c_1\vecf{e}_1 + c_2\vecf{e}_2 + c_3\vecf{e}_3$ of them,
+with weights equal to its entries;
+for example,
+$(2, -1, 5) = 2\vecf{e}_1 - 1\vecf{e}_2 + 5\vecf{e}_3$.
+No other weights work:
+entry $j$ of $c_1\vecf{e}_1 + c_2\vecf{e}_2 + c_3\vecf{e}_3$ is $c_j$,
+so each weight $c_j$ must equal entry $j$ of the vector.
+
 :::

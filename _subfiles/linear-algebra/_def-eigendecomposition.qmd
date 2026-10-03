@@ -15,13 +15,6 @@ and $\matr{\Lambda}$ a $p \times p$ diagonal matrix (@def-diagonal-matrix).
 
 :::
 
-::: notes
-An eigendecomposition is not unique.
-For example, reordering the eigenvalues on the diagonal of $\matr{\Lambda}$,
-and the columns of $\matr{Q}$ with them, gives another one,
-and so does multiplying a column of $\matr{Q}$ by $-1$.
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-spectral}
@@ -112,5 +105,154 @@ $$
 $$
 
 which is $\matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-eigendecomposition-not-unique}
+#### An eigendecomposition is not unique
+
+A symmetric matrix can have more than one eigendecomposition.
+Reordering the eigenvalues on the diagonal of $\matr{\Lambda}$,
+and the columns of $\matr{Q}$ with them, gives another one,
+and so does multiplying a column of $\matr{Q}$ by $-1$.
+
+For example, take $\matr{A}$ from @exm-spectral.
+Swapping the two eigenvalues and the two columns gives
+
+$$
+\matr{Q}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+\qquad
+\matr{\Lambda}_1 = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
+$$
+
+and multiplying the second column of $\matr{Q}$ by $-1$ gives
+
+$$
+\matr{Q}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+\qquad
+\matr{\Lambda}_2 = \matr{\Lambda} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+$$
+
+The columns of $\matr{Q}_1$ and $\matr{Q}_2$
+are the columns of $\matr{Q}$, reordered or multiplied by $-1$,
+so they are still orthonormal,
+and $\matr{Q}_1$ and $\matr{Q}_2$ are orthogonal.
+Both products give back $\matr{A}$:
+
+$$
+\ba
+\matr{Q}_1\matr{\Lambda}_1\tp{\matr{Q}_1}
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
+\tp{\paren{\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}}}
+&& \text{(substitute)}
+\\
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(definition of the transpose)}
+\\
+&= \frac{1}{\sqrt{2}} \cd \frac{1}{\sqrt{2}}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(move the scalars to the front)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(multiply the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 \cd 1 + 1 \cd 0 & 1 \cd 0 + 1 \cd 3 \\ -1 \cd 1 + 1 \cd 0 & -1 \cd 0 + 1 \cd 3 \end{bmatrix}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(definition of matrix multiplication, first two matrices)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 + 0 & 0 + 3 \\ -1 + 0 & 0 + 3 \end{bmatrix}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 & 3 \\ -1 & 3 \end{bmatrix}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+&& \text{(add)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 \cd 1 + 3 \cd 1 & 1 \cd (-1) + 3 \cd 1 \\ -1 \cd 1 + 3 \cd 1 & -1 \cd (-1) + 3 \cd 1 \end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 + 3 & -1 + 3 \\ -1 + 3 & 1 + 3 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 4 & 2 \\ 2 & 4 \end{bmatrix}
+&& \text{(add)}
+\\
+&= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+&& \text{(multiply by } \tfrac{1}{2} \text{)}
+\ea
+$$
+
+$$
+\ba
+\matr{Q}_2\matr{\Lambda}_2\tp{\matr{Q}_2}
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\tp{\paren{\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}}}
+&& \text{(substitute)}
+\\
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+&& \text{(definition of the transpose)}
+\\
+&= \frac{1}{\sqrt{2}} \cd \frac{1}{\sqrt{2}}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+&& \text{(move the scalars to the front)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+\begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+&& \text{(multiply the scalars)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 1 \cd 3 + (-1) \cd 0 & 1 \cd 0 + (-1) \cd 1 \\ 1 \cd 3 + 1 \cd 0 & 1 \cd 0 + 1 \cd 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+&& \text{(definition of matrix multiplication, first two matrices)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 + 0 & 0 - 1 \\ 3 + 0 & 0 + 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 & -1 \\ 3 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
+&& \text{(add)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 \cd 1 + (-1) \cd (-1) & 3 \cd 1 + (-1) \cd 1 \\ 3 \cd 1 + 1 \cd (-1) & 3 \cd 1 + 1 \cd 1 \end{bmatrix}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 3 + 1 & 3 - 1 \\ 3 - 1 & 3 + 1 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \frac{1}{2}
+\begin{bmatrix} 4 & 2 \\ 2 & 4 \end{bmatrix}
+&& \text{(add)}
+\\
+&= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+&& \text{(multiply by } \tfrac{1}{2} \text{)}
+\ea
+$$
 
 :::

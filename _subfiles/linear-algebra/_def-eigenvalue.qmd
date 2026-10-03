@@ -14,21 +14,6 @@ Any such $\vecf{v}$ is an **eigenvector** of $\matr{A}$ for $\lambda$.
 
 :::
 
-::: notes
-Multiplying by $\matr{A}$ rescales an eigenvector by $\lambda$
-and does not change the line it lies on.
-Any nonzero multiple $c\,\vecf{v}$ of an eigenvector
-is also an eigenvector for the same $\lambda$,
-because $\matr{A}(c\,\vecf{v}) = c\,\matr{A}\vecf{v} = c\,\lambda\vecf{v} = \lambda\,(c\,\vecf{v})$.
-
-These notes take $\lambda$ and $\vecf{v}$ to be real.
-@banerjee2014linear [Chapter 11, Definition 11.1, pp. 312-313]
-also allows complex eigenvalues and eigenvectors,
-because some real matrices, such as a rotation by $90$ degrees,
-have no real eigenvalues
-[@banerjee2014linear, Chapter 11, Example 11.2, p. 312].
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-eigenvalue}
@@ -68,6 +53,53 @@ $$
 
 {{< slidebreak >}}
 
+:::{#rem-eigenvector-multiples}
+#### Multiples of an eigenvector
+
+Multiplying by $\matr{A}$ rescales an eigenvector by $\lambda$
+and does not change the line it lies on.
+Any nonzero multiple $c\,\vecf{v}$ of an eigenvector
+is also an eigenvector for the same $\lambda$:
+
+$$
+\ba
+\matr{A}(c\,\vecf{v})
+&= c\,\matr{A}\vecf{v}
+&& \text{(move the scalar } c \text{ to the front)}
+\\
+&= c\,\lambda\vecf{v}
+&& \text{(} \vecf{v} \text{ is an eigenvector for } \lambda \text{)}
+\\
+&= \lambda\,(c\,\vecf{v})
+&& \text{(multiplication of numbers is commutative)}
+\ea
+$$
+
+For example, in @exm-eigenvalue,
+$2\,(1, 1) = (2, 2)$ is also an eigenvector for the eigenvalue $3$:
+
+$$
+\ba
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}
+\begin{bmatrix} 2 \\ 2 \end{bmatrix}
+&= \begin{bmatrix} 2 \cd 2 + 1 \cd 2 \\ 1 \cd 2 + 2 \cd 2 \end{bmatrix}
+&& \text{(definition of matrix-vector multiplication)}
+\\
+&= \begin{bmatrix} 4 + 2 \\ 2 + 4 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \begin{bmatrix} 6 \\ 6 \end{bmatrix}
+&& \text{(add)}
+\\
+&= 3 \begin{bmatrix} 2 \\ 2 \end{bmatrix}
+&& \text{(factor out } 3 \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
 :::{#exm-not-eigenvector}
 #### A vector that is not an eigenvector
 
@@ -82,5 +114,33 @@ $$
 
 and no number $\lambda$ gives $(2, 1) = \lambda\,(1, 0)$,
 because the second entries would need $1 = \lambda \cd 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-real-eigenvalues}
+#### Real and complex eigenvalues
+
+These notes take $\lambda$ and $\vecf{v}$ to be real.
+@banerjee2014linear [Chapter 11, Definition 11.1, pp. 312-313]
+also allows complex eigenvalues and eigenvectors,
+because some real matrices, such as a rotation by $90$ degrees,
+have no real eigenvalues
+[@banerjee2014linear, Chapter 11, Example 11.2, p. 312].
+
+For example,
+$\matr{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$
+rotates each vector in the plane counterclockwise by $90$ degrees:
+$\matr{R}\,(v_1, v_2) = (-v_2, v_1)$.
+Suppose $\matr{R}\vecf{v} = \lambda\vecf{v}$ for a real number $\lambda$.
+Matching entries gives $-v_2 = \lambda v_1$ and $v_1 = \lambda v_2$.
+Substituting the second equation into the first gives
+$-v_2 = \lambda^2 v_2$,
+so $(1 + \lambda^2)\, v_2 = 0$.
+Since $1 + \lambda^2 > 0$, $v_2 = 0$,
+and then $v_1 = \lambda v_2 = 0$.
+So the only solution is $\vecf{v} = \vzero$,
+and $\matr{R}$ has no real eigenvalue.
 
 :::
