@@ -19,7 +19,8 @@ Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-
 - `latex-macros/` --- git submodule for shortcode/macro definitions (see `.gitmodules`)
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
-- `styles.css` --- website styling; `styles-reveal.scss`, `qwt-reveal-toggle.html`, and the `revealjs-*.lua` filters drive the reveal.js slide output
+- `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (saved under `mln-theme`, shared with the slides and the other sites on this origin)
+- `styles.css` --- website styling; `styles-reveal.scss`, `qwt-reveal-toggle.html` (the same dropdown for slides), and the `revealjs-*.lua` filters drive the reveal.js slide output
 - `assets/`, `images/` --- static image and asset files (site pages, docs, CI/PR screenshots)
 - `.github/workflows/` --- CI workflow definitions
 - `.github/scripts/` --- helper scripts used by workflows
@@ -82,3 +83,16 @@ rme will drop those appendices and point readers here
 
 - Reformatting unrelated files.
 - Inventing URLs or citations --- only use sources actually present in `references.bib` or explicitly provided.
+
+<!-- ai-config:begin (managed by Morrison-Lab/ai-config scripts/wire-repo-config.py) -->
+## Cross-project agent rules (ai-config)
+
+This repository follows the maintainer's cross-project agent rules in
+[Morrison-Lab/ai-config](https://github.com/Morrison-Lab/ai-config).
+If your harness has not already loaded them (Claude Code loads them through
+the ai-config plugin), read
+[AGENTS.md](https://github.com/Morrison-Lab/ai-config/blob/main/AGENTS.md)
+before starting work, and follow it alongside this file.
+This file's own instructions add to those rules, and win only where they are
+more specific.
+<!-- ai-config:end -->

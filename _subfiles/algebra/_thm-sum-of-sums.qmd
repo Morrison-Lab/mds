@@ -1,0 +1,14 @@
+:::{#thm-sum-of-sums}
+#### A sum of sums splits
+
+For any numbers $a_m, \ldots, a_n$ and $b_m, \ldots, b_n$,
+
+$$
+\sum_{i=m}^{n} \left(a_i + b_i\right) = \sum_{i=m}^{n} a_i + \sum_{i=m}^{n} b_i
+$$
+
+:::
+
+::: proof
+By @sol-sum-rules, part 2.
+:::

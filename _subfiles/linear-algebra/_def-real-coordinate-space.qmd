@@ -1,0 +1,15 @@
+:::{#def-real-coordinate-space}
+#### The set $\reals^p$
+
+For a positive integer $p$,
+$\reals^p$ is the set of all
+[column vectors](#def-column-vector) of length $p$
+whose entries are real numbers.
+
+:::
+
+::: notes
+Writing $\vx \in \reals^p$ says, in one symbol,
+that $\vx$ is a column vector with $p$ real entries.
+In @exr-list-as-vector, $\vx \in \reals^3$.
+:::

@@ -1,0 +1,16 @@
+<!--
+Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
+section 2.5, p. 39: the L2 norm "is simply the Euclidean distance
+from the origin to the point identified by x".
+The distance between two arbitrary points, as the norm of their difference,
+is the standard extension of that statement and is not stated on that page.
+-->
+:::{#def-euclidean-distance}
+#### Euclidean distance
+
+The **Euclidean distance** between two vectors $\vx$ and $\vy$ of length $p$
+is the [Euclidean norm](#def-euclidean-norm) of their difference:
+
+$$d(\vx, \vy) \eqdef \norm{\vx - \vy} = \sqrt{\sumip (x_i - y_i)^2}$$ {#eq-euclidean-distance}
+
+:::

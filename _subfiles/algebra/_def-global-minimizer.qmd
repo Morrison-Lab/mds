@@ -1,0 +1,16 @@
+:::{#def-global-minimizer}
+#### Global minimizer
+
+Let $A \subseteq \reals^p$
+and let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+A point $x^* \in A$ is a **global minimizer** of $f$ over $A$
+if $f(x^*) \le f(x)$ for all $x \in A$.
+
+:::
+
+::: notes
+The global minimizers of $f$ are exactly the elements of
+$\argmin_{x \in A} f(x)$ (@def-argmin).
+In @exr-local-vs-global-min,
+$f$ has no global minimizer over $\reals$.
+:::

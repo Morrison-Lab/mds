@@ -1,0 +1,11 @@
+:::{#exr-min-and-argmin}
+#### Smallest value, and where it occurs
+
+1. Let $f(x) = (x - 2)^2 + 1$ for every $x \in \reals$.
+   What is the smallest value $f$ takes,
+   and at which $x$ does it take that value?
+2. Now let $g(x) = (x - 2)^2 + 1$ only for $x \in \cb{0, 1, 3, 4}$.
+   What is the smallest value $g$ takes,
+   and at which $x$ does it take that value?
+
+:::

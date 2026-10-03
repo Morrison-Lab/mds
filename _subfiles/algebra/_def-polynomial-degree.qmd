@@ -1,0 +1,14 @@
+<!-- Source: same as _def-polynomial.qmd (OpenStax Calculus Volume 1, section 1.2). -->
+:::{#def-polynomial-degree}
+#### Degree of a polynomial
+
+Let $f(x) = a_n x^n + \cdots + a_1 x + a_0$
+be a [polynomial](#def-polynomial) with $a_n \ne 0$.
+The integer $n$ is the **degree** of $f$.
+
+:::
+
+::: notes
+In @exr-polynomial-degree, $f(x) = 3x^4 - x + 7$ has degree $4$.
+A constant polynomial $f(x) = 7$ has degree $0$.
+:::

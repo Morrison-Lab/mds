@@ -1,0 +1,22 @@
+:::{#sol-list-as-vector}
+
+1. Stacking the three numbers in order gives
+
+   $$
+   \vx =
+   \begin{bmatrix}
+   120 \\
+   3 \\
+   15
+   \end{bmatrix},
+   $$
+
+   so $x_2 = 3$, the number of bedrooms.
+
+2. No.
+   The list $(3, 120, 15)$ would describe a house with
+   $3$ square meters of floor area and $120$ bedrooms.
+   An entry's position says what it measures,
+   so the order of the entries matters.
+
+:::

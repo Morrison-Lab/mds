@@ -26,6 +26,64 @@
 
 {{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
 
+## Minimum, maximum, argmin and argmax {#sec-min-max}
+
+{{< include mds/_subfiles/algebra/_exr-min-and-argmin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-min-and-argmin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-minimum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-maximum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-argmin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-argmax.qmd >}}
+
+## Global and local minimizers {#sec-minimizers}
+
+{{< include mds/_subfiles/algebra/_exr-local-vs-global-min.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-local-vs-global-min.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-global-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-local-minimizer.qmd >}}
+
+## Convex functions {#sec-convexity}
+
+{{< include mds/_subfiles/algebra/_exr-convex-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-convex-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-convex-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
+
+{{< include mds/_subfiles/algebra/_proof-thm-convex-local-global.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
@@ -78,6 +136,58 @@
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-square-of-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-square-of-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
+
+## Summation notation {#sec-summation}
+
+{{< include mds/_subfiles/algebra/_exr-expand-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-expand-a-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-summation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-sum-rules.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-rules.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-sum-constant-factor.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-sum-of-sums.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exr-sum-over-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-sum-over-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-sum-over-set.qmd >}}
+
 ## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
@@ -97,6 +207,26 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_prose-proportion-reference.qmd >}}
+
+## Polynomials {#sec-polynomials}
+
+{{< include mds/_subfiles/algebra/_exr-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_sol-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-degree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-polynomial-leading-coefficient.qmd >}}
 
 ## Exponentials and Logarithms
 
