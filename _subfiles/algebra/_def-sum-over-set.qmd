@@ -47,6 +47,7 @@ $\sum_{x \in \rangef{x}} f(x)$,
 where $\rangef{x}$ is the [range](notation.qmd#def-range-of-variable) of $x$.
 For example, if $x$ is the outcome of one roll of a six-sided die,
 $\sum_{x} f(x)$ means $\sum_{x \in \cb{1, 2, 3, 4, 5, 6}} f(x)$.
-In these notes, we write the set out in full.
+In these notes, we write the set out in full
+(see [Notational shorthands](notation.qmd#sec-notational-shorthands)).
 
 :::

@@ -210,9 +210,10 @@ and $\delta_{ij} = 0$ when $i \neq j$
 ### Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness:
-it converts domain restrictions in sums and integrals into unrestricted operations.
+it turns a sum or integral over a subset
+into a sum or integral over a larger, fixed set.
 For example,
-for any finite set $U$ that contains $A$:
+if $U$ is a finite set that contains $A$, then:
 
 $$
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
