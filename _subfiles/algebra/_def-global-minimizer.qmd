@@ -8,9 +8,18 @@ if $f(x^*) \le f(x)$ for all $x \in A$.
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-global-minimizer-argmin}
+#### Global minimizers form the argmin
+
 The global minimizers of $f$ are exactly the elements of
 $\argmin_{x \in A} f(x)$ (@def-argmin).
-In @exr-local-vs-global-min,
-$f$ has no global minimizer over $\reals$.
+A function can have more than one global minimizer.
+For example, $f(x) = (x^2 - 1)^2$ on $\reals$
+satisfies $f(x) \ge 0$ for every $x$,
+and $f(x) = 0$ exactly when $x = -1$ or $x = 1$,
+so its global minimizers are $-1$ and $1$,
+and $\argmin_{x \in \reals} f(x) = \cb{-1, 1}$.
+
 :::
