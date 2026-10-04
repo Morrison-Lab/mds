@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-03 18:36:22 (PDT)
+Last modified: 2026-10-04 12:21:01 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -19,10 +19,10 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\sum\\ | [sum](algebra.llms.md#sec-summation) | `\sum` |
 | \\\prod\\ | product | `\prod` |
 | \\\mu\\ | mean | `\mu` |
-| \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation) | `\mathbb{E}` |
+| \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
 | \\x^{\top}\\ | transpose of \\x\\ | `x^{\top}` |
 | \\'\\ | transpose or derivative[^1] | `'` |
-| \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/rme/chapters/probability.html#def-indpt) | `\perp\!\!\!\perp` |
+| \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
 | \\\therefore\\ | therefore, thus | `\therefore` |
 | \\\eta\\ | [linear component of a GLM](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") | `\eta` |
 | \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest integer less than or equal to \\x\\ | `\lfloor x \rfloor` |
@@ -125,7 +125,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 2 (Evaluating set and predicate indicators)** Consider the real line \\\Omega = \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/rme/chapters/probability.html) \\Y\\.
+> **Example 2 (Evaluating set and predicate indicators)** Consider the real line \\\Omega = \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\.
 >
 > 1.  **Set indicator** \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
@@ -259,7 +259,7 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with complement \\A^c \stackrel{\text
 
 - **Idempotence:** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
 
-- **Expectation gives probability:** For any event \\A\\, the [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation) of its indicator is the probability of the event:
+- **Expectation gives probability:** For any event \\A\\, the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) of its indicator is the probability of the event:
 
   \\ \operatorname{E}\[\mathbb{1}\_{A}\] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A) \\
 
