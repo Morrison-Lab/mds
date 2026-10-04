@@ -293,13 +293,11 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-03 14:54:29 (PDT)</p>
+  <p class="date">Last modified: 2026-10-03 18:50:04 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
 <p>Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.</p>
-<!-- repoint the expectation link to pds expectation.qmd#def-expectation once pds#8 is published -->
-<!-- repoint the independence link to pds independence.qmd#def-indpt once pds#8 is published -->
 <div id="tbl-notation-collected" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notation-collected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -362,7 +360,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\operatorname{E}\)</span></td>
-<td><a href="https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation">expectation</a></td>
+<td><a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">expectation</a></td>
 <td><code>\mathbb{E}</code></td>
 </tr>
 <tr class="odd">
@@ -377,7 +375,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\perp\!\!\!\perp\)</span></td>
-<td><a href="https://morrison-lab.github.io/rme/chapters/probability.html#def-indpt">independent</a></td>
+<td><a href="https://morrison-lab.github.io/pds/independence.html#def-indpt">independent</a></td>
 <td><code>\perp\!\!\!\perp</code></td>
 </tr>
 <tr class="even">
@@ -534,8 +532,7 @@ Table&nbsp;1: Notation used in this book
 <section class="slide level2 scrollable">
 
 <div id="exm-indicator-numerical" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Evaluating set and predicate indicators)</strong></span> Consider the real line <span class="math inline">\(\Omega = \mathbb{R}\)</span>, the set of nonnegative numbers <span class="math inline">\(A = [0, \infty)\)</span>, and a continuous <a href="https://morrison-lab.github.io/rme/chapters/probability.html">random variable</a> <span class="math inline">\(Y\)</span>.</p>
-<!-- repoint the random-variable link to pds random-variables.qmd#def-random-variable once pds#8 is published -->
+<p><span class="theorem-title"><strong>Example 2 (Evaluating set and predicate indicators)</strong></span> Consider the real line <span class="math inline">\(\Omega = \mathbb{R}\)</span>, the set of nonnegative numbers <span class="math inline">\(A = [0, \infty)\)</span>, and a continuous <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(Y\)</span>.</p>
 <ol type="1">
 <li><strong>Set indicator</strong> <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>:
 <ul>
@@ -717,12 +714,11 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <li><p><strong>Union (“or”):</strong> <span class="math inline">\(\mathbb{1}_{A \cup B}(x) = \mathbb{1}_{A}(x) + \mathbb{1}_{B}(x) - \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Complement (“not”):</strong> <span class="math inline">\(\mathbb{1}_{A^c}(x) = 1 - \mathbb{1}_{A}(x)\)</span></p></li>
 <li><p><strong>Idempotence:</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
-<li><p><strong>Expectation gives probability:</strong> For any event <span class="math inline">\(A\)</span>, the <a href="https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation">expectation</a> of its indicator is the probability of the event:</p>
+<li><p><strong>Expectation gives probability:</strong> For any event <span class="math inline">\(A\)</span>, the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">expectation</a> of its indicator is the probability of the event:</p>
 <p><span class="math display">\[
 \operatorname{E}[\mathbb{1}_{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
 \]</span></p></li>
 </ul>
-<!-- repoint the expectation link to pds expectation.qmd#def-expectation once pds#8 is published -->
 <p>This fundamental identity connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.</p>
 </section>
 <section id="sec-notational-shorthands" class="slide level2" data-number="6">
