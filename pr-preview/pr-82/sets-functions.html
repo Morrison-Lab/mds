@@ -61,7 +61,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -206,25 +225,55 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -246,26 +295,6 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -276,35 +305,25 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -586,6 +605,8 @@ window.Quarto = {
   <li><a href="#countable-sets" id="toc-countable-sets" class="nav-link" data-scroll-target="#countable-sets"><span class="header-section-number">3</span> Countable sets</a></li>
   <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">4</span> Functions</a></li>
   <li><a href="#extended-non-negative-real-numbers" id="toc-extended-non-negative-real-numbers" class="nav-link" data-scroll-target="#extended-non-negative-real-numbers"><span class="header-section-number">5</span> Extended non-negative real numbers</a></li>
+  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">6</span> Further reading</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/sets-functions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/sets-functions.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="sets-functions-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="sets-functions-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="sets-functions.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
@@ -606,7 +627,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-02 <mark class="preview-text-changed">16:47:34</mark> (PDT)</p>
+      <p class="date">Last modified: 2026-10-03 <mark class="preview-text-changed">18:36:22</mark> (PDT)</p>
     </div>
   </div>
   
@@ -650,8 +671,8 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span><a href="#def-set" class="quarto-xref">Definition&nbsp;1</a> is the informal (“naive”) notion of a set, which is all these notes need. Formal set theory states axioms for sets instead (see <a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia: Set (mathematics)</a>).</p>
+<div id="rem-naive-set" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Naive and formal set theory). </span><a href="#def-set" class="quarto-xref">Definition&nbsp;1</a> is the informal (“naive”) notion of a set, which is all these notes need. Formal set theory states axioms for sets instead (see <a href="https://en.wikipedia.org/wiki/Set_(mathematics)">Wikipedia: Set (mathematics)</a>). For example, the last sentence of <a href="#def-set" class="quarto-xref">Definition&nbsp;1</a>, that two sets are equal when they have exactly the same elements, is one of those axioms, the <em>axiom of extensionality</em>.</p>
 </div>
 </div>
 </div>
@@ -764,8 +785,8 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Other sources call a strict subset a <strong>proper subset</strong>. Sources disagree about the symbol <span class="math inline">\(\subset\)</span>: some use it for “subset” (<span class="math inline">\(\subseteq\)</span>), and others for “strict subset” (<span class="math inline">\(\subsetneq\)</span>) (see <a href="https://en.wikipedia.org/wiki/Subset">Wikipedia: Subset</a>). These notes avoid <span class="math inline">\(\subset\)</span> and write <span class="math inline">\(\subseteq\)</span> or <span class="math inline">\(\subsetneq\)</span>.</p>
+<div id="rem-subset-symbol" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Proper subsets and the symbol <span class="math inline">\(\subset\)</span>). </span>Other sources call a strict subset a <strong>proper subset</strong>. Sources disagree about the symbol <span class="math inline">\(\subset\)</span>: some use it for “subset” (<span class="math inline">\(\subseteq\)</span>), and others for “strict subset” (<span class="math inline">\(\subsetneq\)</span>) (see <a href="https://en.wikipedia.org/wiki/Subset">Wikipedia: Subset</a>). For example, <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{} \subset \mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> is true in the first reading, because <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{} \subseteq \mathopen{}\left\{1, 2\right\}\mathclose{}\)</span>, and false in the second, because the two sets are equal. These notes avoid <span class="math inline">\(\subset\)</span> and write <span class="math inline">\(\subseteq\)</span> or <span class="math inline">\(\subsetneq\)</span>.</p>
 </div>
 </div>
 </div>
@@ -777,7 +798,19 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-superset" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Superset)</strong></span> A set <span class="math inline">\(B\)</span> is a <strong>superset</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(B \supseteq A\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#def-subset">subset</a> of <span class="math inline">\(B\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Superset)</strong></span> A set <span class="math inline">\(B\)</span> is a <strong>superset</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(B \supseteq A\)</span>, if every element of <span class="math inline">\(A\)</span> is an element of <span class="math inline">\(B\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-superset-subset" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (Superset and subset). </span><span class="math inline">\(B \supseteq A\)</span> means the same thing as <span class="math inline">\(A \subseteq B\)</span> (<a href="#def-subset">subset</a>). For example, <span class="math inline">\(\mathopen{}\left\{1, 2, 3\right\}\mathclose{} \supseteq \mathopen{}\left\{1, 3\right\}\mathclose{}\)</span>, and <span class="math inline">\(\mathopen{}\left\{1, 3\right\}\mathclose{} \subseteq \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -789,7 +822,19 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-strict-superset" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Strict superset)</strong></span> A set <span class="math inline">\(B\)</span> is a <strong>strict superset</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(B \supsetneq A\)</span>, if <span class="math inline">\(A\)</span> is a <a href="#def-strict-subset">strict subset</a> of <span class="math inline">\(B\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Strict superset)</strong></span> A set <span class="math inline">\(B\)</span> is a <strong>strict superset</strong> of a set <span class="math inline">\(A\)</span>, written <span class="math inline">\(B \supsetneq A\)</span>, if <span class="math inline">\(B\)</span> is a <a href="#def-superset">superset</a> of <span class="math inline">\(A\)</span> and <span class="math inline">\(B \neq A\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-strict-superset-subset" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (Strict superset and strict subset). </span><span class="math inline">\(B \supsetneq A\)</span> means the same thing as <span class="math inline">\(A \subsetneq B\)</span> (<a href="#def-strict-subset">strict subset</a>). For example, <span class="math inline">\(\mathopen{}\left\{1, 2, 3\right\}\mathclose{} \supsetneq \mathopen{}\left\{1, 3\right\}\mathclose{}\)</span>, because <span class="math inline">\(\mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> contains <span class="math inline">\(2\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 3\right\}\mathclose{}\)</span> does not.</p>
 </div>
 </div>
 </div>
@@ -829,8 +874,8 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Other sources write <span class="math inline">\(\mathopen{}\left\{\right\}\mathclose{}\)</span> (see <a href="https://en.wikipedia.org/wiki/Empty_set">Wikipedia: Empty set</a>). Some sources call it the <strong>null set</strong>, but in measure theory a “null set” usually means a set of measure zero, which need not be empty.</p>
+<div id="rem-empty-set-notation" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (Other notation for the empty set). </span>Other sources write <span class="math inline">\(\mathopen{}\left\{\right\}\mathclose{}\)</span> for <span class="math inline">\(\emptyset\)</span> (see <a href="https://en.wikipedia.org/wiki/Empty_set">Wikipedia: Empty set</a>). Some sources call it the <strong>null set</strong>, but in measure theory a “null set” usually means a set of measure zero, which need not be empty. For example, the interval <span class="math inline">\([0, 0] = \mathopen{}\left\{0\right\}\mathclose{}\)</span> has length <span class="math inline">\(0 - 0 = 0\)</span>, so it is a null set in that sense, but it is not empty, because <span class="math inline">\(0 \in \mathopen{}\left\{0\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -919,7 +964,7 @@ window.Quarto = {
 <div id="def-union" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Union)</strong></span> The <strong>union</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of elements that are in <span class="math inline">\(A\)</span>, in <span class="math inline">\(B\)</span>, or in both:</p>
 <p><span class="math display">\[A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\{x : x \in A \text{ or } x \in B\right\}\mathclose{}\]</span></p>
-<p>More generally, the union of sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, written <span class="math inline">\(\bigcup_{i} A_i\)</span>, is the set of elements that are in at least one <span class="math inline">\(A_i\)</span>.</p>
+<p>More generally, let <span class="math inline">\(I\)</span> be a set of indices, such as <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> or <span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>, and let <span class="math inline">\(A_i\)</span> be a set for each <span class="math inline">\(i \in I\)</span>. The union of the sets <span class="math inline">\(A_i\)</span>, written <span class="math inline">\(\bigcup_{i \in I} A_i\)</span>, is the set of elements that are in at least one <span class="math inline">\(A_i\)</span>.</p>
 </div>
 </div>
 </div>
@@ -933,7 +978,7 @@ window.Quarto = {
 <div id="def-intersection" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Intersection)</strong></span> The <strong>intersection</strong> of sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of elements that are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\{x : x \in A \text{ and } x \in B\right\}\mathclose{}\]</span></p>
-<p>More generally, the intersection of sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, written <span class="math inline">\(\bigcap_{i} A_i\)</span>, is the set of elements that are in every <span class="math inline">\(A_i\)</span>.</p>
+<p>More generally, let <span class="math inline">\(I\)</span> be a nonempty set of indices, such as <span class="math inline">\(\mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> or <span class="math inline">\(\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\)</span>, and let <span class="math inline">\(A_i\)</span> be a set for each <span class="math inline">\(i \in I\)</span>. The intersection of the sets <span class="math inline">\(A_i\)</span>, written <span class="math inline">\(\bigcap_{i \in I} A_i\)</span>, is the set of elements that are in every <span class="math inline">\(A_i\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1031,8 +1076,8 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>The standard proof is Cantor’s diagonal argument: given any sequence of numbers in <span class="math inline">\([0, 1]\)</span>, it builds a number in <span class="math inline">\([0, 1]\)</span> whose decimal expansion differs from the <span class="math inline">\(n\)</span>th number’s in the <span class="math inline">\(n\)</span>th digit, so the sequence misses it (see <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Wikipedia: Cantor’s diagonal argument</a>).</p>
+<div id="rem-cantor-diagonal" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (Cantor’s diagonal argument). </span>The standard proof is Cantor’s diagonal argument: given any sequence of numbers in <span class="math inline">\([0, 1]\)</span>, it builds a number in <span class="math inline">\([0, 1]\)</span> whose decimal expansion differs from the <span class="math inline">\(n\)</span>th number’s in the <span class="math inline">\(n\)</span>th digit, so the sequence misses it (see <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Wikipedia: Cantor’s diagonal argument</a>). One way to choose the <span class="math inline">\(n\)</span>th digit is to use <span class="math inline">\(5\)</span>, unless the <span class="math inline">\(n\)</span>th number’s <span class="math inline">\(n\)</span>th digit is <span class="math inline">\(5\)</span>, in which case use <span class="math inline">\(4\)</span>. For example, if the sequence starts <span class="math inline">\(0.1234\ldots\)</span>, <span class="math inline">\(0.3579\ldots\)</span>, <span class="math inline">\(0.2468\ldots\)</span>, the diagonal digits are <span class="math inline">\(1\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span>, so the new number starts <span class="math inline">\(0.545\ldots\)</span>, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.</p>
 </div>
 </div>
 </div>
@@ -1107,8 +1152,9 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>Many sources call the image the <strong>range</strong>, but others use “range” for the codomain, so these notes avoid “range” for functions in general (see <a href="https://en.wikipedia.org/wiki/Range_of_a_function">Wikipedia: Range of a function</a>). The image is always a subset of the codomain, because every value <span class="math inline">\(f(a)\)</span> lies in <span class="math inline">\(B\)</span>.</p>
+<div id="rem-image-range" class="proof remark">
+<p><span class="proof-title"><em>Remark 7</em> (Image and range). </span>Many sources call the image the <strong>range</strong>, but others use “range” for the codomain, so these notes avoid “range” for functions in general (see <a href="https://en.wikipedia.org/wiki/Range_of_a_function">Wikipedia: Range of a function</a>). For example, for <span class="math inline">\(f : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = a^2\)</span>, “the range of <span class="math inline">\(f\)</span>” could mean the image <span class="math inline">\([0, \infty)\)</span> or the codomain <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>The image is always a subset of the codomain, because every value <span class="math inline">\(f(a)\)</span> lies in <span class="math inline">\(B\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1154,8 +1200,8 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div class="notes proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span><span class="math inline">\(\infty\)</span> is not a real number, so some real-number arithmetic does not extend to it: <span class="math inline">\(\infty - \infty\)</span> is left undefined, and <span class="math inline">\(\infty + 1 = \infty + 2\)</span> does not imply <span class="math inline">\(1 = 2\)</span>. Measure theory uses <span class="math inline">\([0, \infty]\)</span> because the size of a set, such as the length of the whole real line, can be infinite (see <a href="https://en.wikipedia.org/wiki/Extended_real_number_line">Wikipedia: Extended real number line</a>).</p>
+<div id="rem-infinity-arithmetic" class="proof remark">
+<p><span class="proof-title"><em>Remark 8</em> (Arithmetic with <span class="math inline">\(\infty\)</span>). </span><span class="math inline">\(\infty\)</span> is not a real number, so some real-number arithmetic does not extend to it: <span class="math inline">\(\infty - \infty\)</span> is left undefined, and <span class="math inline">\(\infty + 1 = \infty + 2\)</span> does not imply <span class="math inline">\(1 = 2\)</span>. Measure theory uses <span class="math inline">\([0, \infty]\)</span> because the size of a set, such as the length of the whole real line, can be infinite (see <a href="https://en.wikipedia.org/wiki/Extended_real_number_line">Wikipedia: Extended real number line</a>).</p>
 </div>
 </div>
 </div>
@@ -1170,6 +1216,33 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Example 10 (Adding with <span class="math inline">\(\infty\)</span>)</strong></span> In <span class="math inline">\([0, \infty]\)</span>, <span class="math inline">\(2 + 3 = 5\)</span> as usual, while <span class="math inline">\(2 + \infty = \infty\)</span> and <span class="math inline">\(\infty + \infty = \infty\)</span>.</p>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="sec-further-reading" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-further-reading"><span class="header-section-number">6</span> Further reading</h2>
+<p>These books treat sets and the logic behind them in more depth.</p>
+<ul>
+<li><span class="citation" data-cites="devlin1993joy">Devlin (<a href="#ref-devlin1993joy" role="doc-biblioref">1993</a>)</span> is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions on this page.</li>
+<li><span class="citation" data-cites="halmos1974naive">Halmos (<a href="#ref-halmos1974naive" role="doc-biblioref">1974</a>)</span> is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.</li>
+<li><span class="citation" data-cites="enderton2001logic">Enderton (<a href="#ref-enderton2001logic" role="doc-biblioref">2001</a>)</span> is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.</li>
+<li><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#ref-barkerplummer2011language" role="doc-biblioref">2011</a>)</span> teaches propositional and first-order logic, the language behind statements such as “for every set <span class="math inline">\(A\)</span> there exists…”.</li>
+</ul>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
+Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proof and Logic</em>. 2nd ed. CSLI Publications. <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>.
+</div>
+<div id="ref-devlin1993joy" class="csl-entry" role="listitem">
+Devlin, Keith. 1993. <em>The Joy of Sets: Fundamentals of Contemporary Set Theory</em>. 2nd ed. Undergraduate Texts in Mathematics. Springer. <a href="https://doi.org/10.1007/978-1-4612-0903-4">https://doi.org/10.1007/978-1-4612-0903-4</a>.
+</div>
+<div id="ref-enderton2001logic" class="csl-entry" role="listitem">
+Enderton, Herbert B. 2001. <em>A Mathematical Introduction to Logic</em>. 2nd ed. Academic Press. <a href="https://doi.org/10.1016/C2009-0-22107-6">https://doi.org/10.1016/C2009-0-22107-6</a>.
+</div>
+<div id="ref-halmos1974naive" class="csl-entry" role="listitem">
+Halmos, Paul R. 1974. <em>Naive Set Theory</em>. Undergraduate Texts in Mathematics. Springer. <a href="https://doi.org/10.1007/978-1-4757-1645-0">https://doi.org/10.1007/978-1-4757-1645-0</a>.
 </div>
 </div>
 
@@ -1878,7 +1951,31 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: sets-functions.docx</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">preview-changed:</span><span class="co"> true</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_sets-functions.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_sets-functions.qmd &gt;}}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-further-reading}</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>These books treat sets and the logic behind them in more depth.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@devlin1993joy</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  is an undergraduate introduction to axiomatic set theory.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  It covers the axioms of set theory, ordinals, and cardinals,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  which go well beyond the countable sets and functions on this page.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@halmos1974naive</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  is a short, informal treatment of the same axioms,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  covering relations, functions, families of sets, and cardinal numbers.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@enderton2001logic</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  is a standard introduction to mathematical logic.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  Its first chapter collects the facts about sets, relations, and functions</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  that the later chapters use.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@barkerplummer2011language</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  teaches propositional and first-order logic,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  the language behind statements such as "for every set $A$ there exists...".</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

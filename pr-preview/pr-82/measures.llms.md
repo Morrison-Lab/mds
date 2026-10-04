@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-02 16:47:34 (PDT)
+Last modified: 2026-10-03 18:36:22 (PDT)
 
 > **NOTE:**
 >
@@ -22,7 +22,7 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. Other sources call it a **\\\sigma\\-field** (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)).
+> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). For example, Billingsley ([1995](#ref-billingsley1995probability)) uses “\\\sigma\\-field”. The two names mean the same thing.
 
 > **NOTE:**
 >
@@ -78,7 +78,7 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. In probability, pairwise disjoint events are usually called **mutually exclusive**.
+> *Remark 2* (Mutually exclusive events). In probability, pairwise disjoint events are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is even”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
 
 > **NOTE:**
 >
@@ -124,7 +124,7 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. By [Lemma 1](#lem-nonneg-series), the right-hand side of the equation in [Definition 4](#def-countable-additivity) always has a value.
+> *Remark 3* (The sum in countable additivity always has a value). By [Lemma 1](#lem-nonneg-series), the right-hand side of the equation in [Definition 4](#def-countable-additivity), \\\sum\_{i=1}^{\infty} \mu(A_i)\\, always has a value, because each \\\mu(A_i)\\ is in \\\[0, \infty\]\\. For example, if \\\mu(A_i) = 1/2^i\\ for each \\i\\, the partial sums are \\s_n = 1 - 1/2^n\\, and the sum is \\1\\; if \\\mu(A_i) = 1\\ for each \\i\\, the partial sums are \\s_n = n\\, and the sum is \\\infty\\.
 
 > **NOTE:**
 >
@@ -158,7 +158,7 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. [Example 5](#exm-empty-set-zero) and [Example 6](#exm-empty-set-infinity) show that both values allowed by [Lemma 2](#lem-countable-additivity-empty) occur. So \\\mu(\emptyset) = 0\\ is an extra requirement, not a consequence of countable additivity.
+> *Remark 4* (\\\mu(\emptyset) = 0\\ is an extra requirement). [Example 5](#exm-empty-set-zero) and [Example 6](#exm-empty-set-infinity) show that both values allowed by [Lemma 2](#lem-countable-additivity-empty) occur for countably additive functions. So \\\mu(\emptyset) = 0\\ is an extra requirement, not a consequence of countable additivity.
 
 > **NOTE:**
 >
@@ -182,7 +182,7 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 >
 > If some \\A_k\\ is infinite, then the union, which contains \\A_k\\, is infinite too, and:
 >
-> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \infty && \text{(the union is infinite)} \\ &= \mu(A_k) + \sum\_{i \neq k} \mu(A_i) && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(regroup the terms)} \end{aligned} \\
+> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \infty && \text{(the union is infinite)} \\ &= \mu(A_k) + \sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} \mu(A_i) && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(regroup the terms)} \end{aligned} \\
 >
 > *\\\mu\\ is not countably additive.* The single-element sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \ldots\\ are pairwise disjoint, and their union is \\S\\, which is infinite. So:
 >
@@ -194,7 +194,7 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. [Example 7](#exm-finite-not-countable) shows that the converse of [Theorem 3](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function — An additive function which is not \\\sigma\\-additive](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)).
+> *Remark 5* (Finite additivity does not imply countable additivity). [Example 7](#exm-finite-not-countable) shows that the converse of [Theorem 3](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 7](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
 
 ## 4 Measures
 
@@ -229,6 +229,20 @@ Last modified: 2026-10-02 16:47:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 6](#def-counting-measure), or how long a set of real numbers is, as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does, assigning each interval \\\[a, b\]\\ its length \\b - a\\. Both appear as reference measures in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
+> *Remark 6* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 6](#def-counting-measure), or how long a set of real numbers is, as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does, assigning each interval \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both appear as reference measures in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
+
+## 5 Further reading
+
+- Billingsley ([1995](#ref-billingsley1995probability)) develops measure theory and builds probability on it. Its early chapters define \\\sigma\\-algebras, measures, and their basic properties.
+- Folland ([1999](#ref-folland1999real)) is a graduate text on measure and integration; its first chapters treat \\\sigma\\-algebras and measures.
+- Gut ([2013](#ref-gut2013)) is a graduate course in probability that opens with a chapter on introductory measure theory.
+
+## References
+
+Billingsley, Patrick. 1995. *Probability and Measure*. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.
+
+Folland, Gerald B. 1999. *Real Analysis: Modern Techniques and Their Applications*. 2nd ed. Wiley. <https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166>.
+
+Gut, Allan. 2013. *Probability: A Graduate Course*. 2nd ed. Springer Texts in Statistics. Springer. <https://doi.org/10.1007/978-1-4614-4708-5>.
 
 Back to top
