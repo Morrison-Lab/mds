@@ -195,3 +195,34 @@ body.qwt-dark .widget-panel select {
   color: #222;
   border-color: #dee2e6;
 }
+
+// Keep wide content reachable at the default text size. reveal.js clips
+// anything past the slide's right edge, and `scrollable: true` only scrolls
+// vertically, so a wide display equation or code block would lose its end.
+// Let those scroll sideways instead, and let long URLs wrap.
+// `contain: inline-size` stops their width from stretching a parent that
+// sizes to its content, such as reveal.js's inline-block lists. MathJax
+// puts an inline min-width on numbered equations, hence the !important.
+.reveal .slides section {
+  mjx-container[display="true"],
+  pre {
+    contain: inline-size;
+    min-width: 0 !important;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  // reveal.js makes lists inline-blocks that shrink to their text, which
+  // would cap an equation inside a list at the width of its bullet text.
+  // Only lists holding a display equation become blocks, so other lists
+  // keep reveal.js's layout.
+  ul:has(mjx-container[display="true"]),
+  ol:has(mjx-container[display="true"]) {
+    display: block;
+  }
+
+  a {
+    overflow-wrap: break-word;
+  }
+}
