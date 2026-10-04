@@ -13,7 +13,6 @@ and compute its
 [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
 $\E{g(X, Y)}$.
 
-
 Because the joint density equals $1$ on $[0, 1]^2$,
 this expectation is the double integral of $g$ over the unit square:
 

@@ -68,7 +68,6 @@ The probability notes derive the variance identity
 $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 [in the same annotated style](https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance).
 
-
 ## Follow the golden rule {#sec-golden-rule}
 
 In general,

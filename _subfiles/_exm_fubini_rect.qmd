@@ -17,7 +17,6 @@ and compute its
 [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
 $\E{g(X, Y)}$.
 
-
 Because the joint density equals $1$ on $R$,
 this expectation is the double integral of $g$ over $R$:
 

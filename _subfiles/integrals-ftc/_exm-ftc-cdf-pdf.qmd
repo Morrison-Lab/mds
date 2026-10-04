@@ -20,7 +20,6 @@ $F(t) = P(T \le t)$, from the PDF.
 Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\lambda$ to
 antidifferentiate the integrand:
 
-
 $$
 \ba
 F(t)

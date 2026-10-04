@@ -9,7 +9,6 @@ included to make the
 corollary in *Probability for Data Science*
 follow from a stated theorem rather than from an aside.
 
-
 {{< slidebreak >}}
 
 :::{#def-double-integral}
