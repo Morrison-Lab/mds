@@ -42,9 +42,12 @@ this sum is the same as $\sum_{i=m}^{n} f(i)$ from @def-summation.
 #### Leaving the set out
 
 Some authors leave the set out and write $\sum_{x} f(x)$.
-This shorthand means the sum over every value $x$ can take.
+This shorthand means the sum over every value $x$ can take,
+$\sum_{x \in \rangef{x}} f(x)$,
+where $\rangef{x}$ is the [range](notation.qmd#def-range-of-variable) of $x$.
 For example, if $x$ is the outcome of one roll of a six-sided die,
 $\sum_{x} f(x)$ means $\sum_{x \in \cb{1, 2, 3, 4, 5, 6}} f(x)$.
-In these notes, we write the set out in full.
+In these notes, we write the set out in full
+(see [Notational shorthands](notation.qmd#sec-notational-shorthands)).
 
 :::

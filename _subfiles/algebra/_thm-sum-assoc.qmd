@@ -1,10 +1,19 @@
 :::{#thm-sum-assoc}
 #### Sums are associative
 
-::: notes
-When summing three or more terms, the order in which you sum them does not matter:
-:::
+When adding three numbers,
+it does not matter which pair you add first:
 
 $$(a + b) + c = a + (b + c)$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sum-assoc}
+#### Grouping a sum two ways
+
+$(2 + 3) + 4 = 5 + 4 = 9$,
+and $2 + (3 + 4) = 2 + 7 = 9$.
 
 :::

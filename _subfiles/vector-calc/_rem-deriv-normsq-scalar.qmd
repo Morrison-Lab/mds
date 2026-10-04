@@ -1,0 +1,13 @@
+{{< slidebreak >}}
+
+:::{#rem-deriv-normsq-scalar}
+#### Like the derivative of $x^2$
+
+This vector derivative is like taking the derivative of $x^2$:
+in scalar calculus $\deriv{x} x^2 = 2x$,
+and @cor-deriv-normsq says $\deriv{\vb} (\tp{\vb}\vb) = 2\vb$.
+For example, with $p = 1$ and $\vb = (\beta_1)$,
+$\tp{\vb}\vb = \beta_1^2$,
+and its derivative is $2\beta_1 = 2\vb$.
+
+:::

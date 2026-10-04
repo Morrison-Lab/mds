@@ -13,11 +13,4 @@ $$
 \underbrace{\tp{\matr{A}}}_{q \times m}
 $$
 
-:::: notes
-This result generalizes @thm-deriv-linear-map,
-which is the special case $\vecf{v} = \vb$
-(so that $\deriv{\vb} \vb = \matr{I}$
-and $\deriv{\vb} (\matr{A}\vb) = \tp{\matr{A}}$).
-::::
-
 :::

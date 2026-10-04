@@ -10,14 +10,15 @@ $$\frac{a}{b}$$
 
 :::
 
-::: notes
-A quotient is also called a *fraction*;
-$a$ is its *numerator* and $b$ its *denominator*.
-A quotient whose denominator measures time or population size
-is often called a *rate*;
-in epidemiology, rates typically have such a denominator.
+{{< slidebreak >}}
 
-cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
+:::{#def-fraction}
+#### Fraction, numerator, and denominator
+
+A quotient $\frac{a}{b}$ (@def-quotient) is also called a **fraction**;
+$a$ is its **numerator** and $b$ its **denominator**.
+For example, the fraction $\frac{6}{4}$ has numerator $6$ and denominator $4$.
+
 :::
 
 {{< slidebreak >}}
@@ -29,4 +30,23 @@ The quotient of $6$ by $4$ is $\frac{6}{4} = 1.5$.
 The quotient of $6$ by $0$ is undefined,
 because @def-quotient requires a nonzero denominator.
 
+:::
+
+{{< slidebreak >}}
+
+:::{#def-rate}
+#### Rate
+
+A **rate** is a quotient of two quantities,
+usually with a denominator that measures time,
+such as weeks or person-years of follow-up.
+For example, $12$ new cases in $4$ weeks
+is a rate of $\frac{12}{4} = 3$ new cases per week,
+and $30$ cases over $10{,}000$ person-years of follow-up
+is a rate of $\frac{30}{10{,}000} = 0.003$ cases per person-year.
+
+:::
+
+::: notes
+cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 :::

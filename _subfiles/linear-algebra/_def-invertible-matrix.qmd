@@ -1,10 +1,14 @@
 :::{#def-invertible-matrix}
 #### Invertible matrix
 
-A square matrix $\matr{A}$ is **invertible**
+A $p \times p$ matrix $\matr{A}$ is **invertible**
 (or *non-singular*)
-if it has an inverse $\matr{A}^{-1}$ (@def-matrix-inverse).
-A square matrix with no inverse is *singular*.
+if some $p \times p$ matrix $\matr{B}$ satisfies
+
+$$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p,$$
+
+where $\matr{I}_p$ is the identity matrix (@def-identity-matrix).
+A square matrix that is not invertible is *singular*.
 
 :::
 
@@ -21,11 +25,62 @@ multiplying out gives
 $\matr{A}\matr{A}^{-1} = \matr{A}^{-1}\matr{A} = \matr{I}_2$.
 
 The matrix
-$\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
+$\matr{M} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
 is singular:
 for any $2 \times 2$ matrix $\matr{C}$,
-the two rows of $\matr{B}\matr{C}$ are equal,
-so $\matr{B}\matr{C}$ can never be $\matr{I}_2$,
+the two rows of $\matr{M}\matr{C}$ are equal,
+so $\matr{M}\matr{C}$ can never be $\matr{I}_2$,
 whose two rows differ.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-invertible-inverse}
+#### Invertible matrices and inverses
+
+Let $\matr{A}$ be a $p \times p$ matrix,
+and suppose that two $p \times p$ matrices $\matr{B}$ and $\matr{C}$
+satisfy
+$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p$
+and
+$\matr{A}\matr{C} = \matr{C}\matr{A} = \matr{I}_p$.
+Then
+
+$$
+\ba
+\matr{B}
+&= \matr{B}\,\matr{I}_p
+&& \text{(identity matrix)}
+\\
+&= \matr{B}(\matr{A}\matr{C})
+&& \text{(} \matr{A}\matr{C} = \matr{I}_p \text{)}
+\\
+&= (\matr{B}\matr{A})\matr{C}
+&& \text{(matrix multiplication is associative)}
+\\
+&= \matr{I}_p\,\matr{C}
+&& \text{(} \matr{B}\matr{A} = \matr{I}_p \text{)}
+\\
+&= \matr{C}
+&& \text{(identity matrix)}
+\ea
+$$
+
+The steps use @thm-matmul-assoc and @thm-identity.
+Since $\matr{B} = \matr{C}$,
+at most one matrix satisfies these equations,
+which is the uniqueness that @def-matrix-inverse asserts.
+When $\matr{A}$ is invertible,
+the matrix $\matr{B}$ in @def-invertible-matrix
+is therefore the inverse $\matr{A}^{-1}$ of $\matr{A}$,
+and $\matr{A}$ is invertible exactly when it has an inverse.
+For example,
+for $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
+in @exm-invertible-matrix,
+$\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$
+is the only $2 \times 2$ matrix $\matr{B}$
+with $\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_2$,
+so it is $\matr{A}^{-1}$.
 
 :::

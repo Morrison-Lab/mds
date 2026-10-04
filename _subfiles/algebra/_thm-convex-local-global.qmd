@@ -1,3 +1,21 @@
+:::{#exm-convex-local-global}
+#### A convex and a non-convex function
+
+$f(x) = (x - 2)^2$ is convex (@def-convex-function):
+by expanding the square,
+$f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0$.
+Its local minimizer $x^* = 2$ is also a global minimizer,
+since $f(x) = (x - 2)^2 \ge 0 = f(2)$ for every $x$.
+
+Without convexity, a local minimizer need not be global:
+$f(x) = x^3 - 3x$ is not convex (@exm-cubic-not-convex),
+and it has a local minimizer at $x^* = 1$
+that is not global (@exr-local-vs-global-min).
+
+:::
+
+{{< slidebreak >}}
+
 <!--
 Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
 section 4.3, p. 93 (states that all local minima of a convex function
@@ -13,16 +31,4 @@ Let $f : \reals^p \to \reals$ be a
 Every [local minimizer](#def-local-minimizer) of $f$
 is a [global minimizer](#def-global-minimizer) of $f$ over $\reals^p$.
 
-:::
-
-::: notes
-For example, $f(x) = (x - 2)^2$ is convex
-(by expanding the square, $f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0$),
-and $x^* = 2$ is a local minimizer of $f$.
-The theorem says $x^* = 2$ is a global minimizer,
-which is also visible directly:
-$f(x) = (x - 2)^2 \ge 0 = f(2)$ for every $x$.
-The theorem fails without convexity:
-$f(x) = x^3 - 3x$ has a local minimizer at $x^* = 1$
-that is not global (@exr-local-vs-global-min).
 :::

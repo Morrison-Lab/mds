@@ -8,8 +8,16 @@ whose entries are real numbers.
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-real-coordinate-space-notation}
+#### Reading $\vx \in \reals^p$
+
 Writing $\vx \in \reals^p$ says, in one symbol,
 that $\vx$ is a column vector with $p$ real entries.
+For example, $(1, -2, 0.5) \in \reals^3$.
+The vector $(1, 2)$ is not in $\reals^3$, because it has only $2$ entries;
+it is in $\reals^2$.
 In @exr-list-as-vector, $\vx \in \reals^3$.
+
 :::

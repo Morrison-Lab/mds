@@ -1,4 +1,20 @@
-::: notes
-Column vectors are the default convention in these notes and in most statistics textbooks.
-They are also called *$p \times 1$ matrices*.
+{{< slidebreak >}}
+
+:::{#rem-column-vector-convention}
+#### Vectors are columns by default
+
+In these notes, as in most statistics textbooks,
+a vector is a column vector unless stated otherwise.
+A vector written inline as a list in parentheses is still a column vector:
+for example, $\vx = (2, -1, 5)$ means
+
+$$
+\vx =
+\begin{bmatrix}
+2 \\
+-1 \\
+5
+\end{bmatrix}.
+$$
+
 :::

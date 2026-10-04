@@ -28,17 +28,10 @@ $$\iint_R f(x, y)\,dA \eqdef \lim_{\|\Delta\| \to 0} \sum_{i=1}^n f(x_i, y_i)\,\
 where $\|\Delta\|$ is the length of the longest diagonal among the $n$ rectangles,
 when that limit exists and has the same value
 for every choice of grids and of the points $(x_i, y_i)$.
+The symbol $dA$ stands for an element of area.
 
 [@larsonCalc11e, Section 14.2]
 
-:::
-
-::: notes
-The symbol $dA$ stands for an element of area.
-An *iterated integral* such as $\int_a^b \int_c^d f(x, y)\,dy\,dx$
-means $\int_a^b \paren{\int_c^d f(x, y)\,dy}\,dx$:
-integrate over the inner variable ($y$) first,
-holding the outer variable ($x$) fixed.
 :::
 
 {{< slidebreak >}}
@@ -51,6 +44,60 @@ Every sum in @def-double-integral
 adds up the areas of rectangles inside $R$,
 and those sums approach the area of $R$ as the grid gets finer,
 so $\iint_R 1\,dA = 2 \cd 3 = 6$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-iterated-integral}
+#### Iterated integral
+
+An **iterated integral** is an integral of an integral:
+
+$$
+\int_a^b \int_{g_1(x)}^{g_2(x)} f(x, y)\,dy\,dx
+\eqdef \int_a^b \paren{\int_{g_1(x)}^{g_2(x)} f(x, y)\,dy}\,dx
+$$
+
+That is, integrate over the inner variable ($y$) first,
+holding the outer variable ($x$) fixed,
+and then integrate the result over the outer variable.
+The inner limits $g_1(x)$ and $g_2(x)$ may depend on the outer variable,
+or be constants $c$ and $d$, as in $\int_a^b \int_c^d f(x, y)\,dy\,dx$.
+Iterated integrals in the other order, $\int \int \cdots \,dx\,dy$,
+are defined the same way with the roles of $x$ and $y$ swapped.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-iterated-integral}
+#### An iterated integral
+
+Integrating over $y$ first, then $x$:
+
+$$
+\ba
+\int_0^1 \int_0^2 x y\,dy\,dx
+&= \int_0^1 \paren{\int_0^2 x y\,dy}\,dx
+&& \text{(definition of the iterated integral)}
+\\
+&= \int_0^1 x \paren{\int_0^2 y\,dy}\,dx
+&& \text{(} x \text{ is constant in } y \text{)}
+\\
+&= \int_0^1 x \sb{\frac{y^2}{2}}_{y=0}^{y=2}\,dx
+&& \text{(antiderivative of } y \text{)}
+\\
+&= \int_0^1 2x\,dx
+&& \text{(evaluate at the limits)}
+\\
+&= \sb{x^2}_{x=0}^{x=1}
+&& \text{(antiderivative of } 2x \text{)}
+\\
+&= 1
+&& \text{(evaluate at the limits)}
+\ea
+$$
 
 :::
 

@@ -12,15 +12,6 @@ where $\iprod{\cdot}{\cdot}$ is the matrix inner product
 
 :::
 
-::: notes
-By @thm-matrix-inner-product-entries,
-$\norm{\matr{A}}_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{p} a_{ij}^2$,
-a sum of squares, so the square root is always defined.
-$\norm{\matr{A}}_F$ is the Euclidean norm (@def-euclidean-norm)
-of the entries of $\matr{A}$, listed as one vector of length $np$
-[@banerjee2014linear, Chapter 15, Definition 15.4, p. 492].
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-frobenius-norm}
@@ -46,5 +37,23 @@ $$
 $$
 
 The second step is @thm-matrix-inner-product-entries.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-frobenius-norm-entries}
+#### The Frobenius norm is the Euclidean norm of the entries
+
+By @thm-matrix-inner-product-entries,
+$\norm{\matr{A}}_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{p} a_{ij}^2$,
+a sum of squares, so the square root is always defined.
+$\norm{\matr{A}}_F$ is the Euclidean norm (@def-euclidean-norm)
+of the entries of $\matr{A}$, listed as one vector of length $np$
+[@banerjee2014linear, Chapter 15, Definition 15.4, p. 492].
+
+For example, listing the entries of $\matr{A}$ in @exm-frobenius-norm
+row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cd 2 = 4$,
+and $\norm{(1, 2, 3, 4)} = \sqrt{1 + 4 + 9 + 16} = \sqrt{30} = \norm{\matr{A}}_F$.
 
 :::

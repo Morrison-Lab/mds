@@ -150,13 +150,6 @@ $$
 
 :::
 
-::: notes
-The Iverson bracket $[P]$ is the predicate indicator $\indicp{P}$
-(@def-indicator-function) in different notation.
-Under this notation,
-set membership is written $[x \in A]$.
-:::
-
 {{< slidebreak >}}
 
 :::{#exm-iverson-bracket}
@@ -165,6 +158,23 @@ set membership is written $[x \in A]$.
 - $[3 > 2] = 1$, because $3 > 2$ is true.
 - $[2 > 3] = 0$, because $2 > 3$ is false.
 - $[4 \in \cb{1, 2}] = 0$, because $4$ is not an element of $\cb{1, 2}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-iverson-indicator}
+#### The Iverson bracket is the predicate indicator
+
+The Iverson bracket $[P]$ is the predicate indicator $\indicp{P}$
+(@def-indicator-function) in different notation.
+Under this notation,
+set membership is written $[x \in A]$,
+so $[x \in A] = \indic{A}(x)$.
+For example, the values in @exm-indicator-numerical become
+$[7.2 > 5] = \indicp{7.2 > 5} = 1$
+and, with $A = [0, \infty)$,
+$[-2.1 \in A] = \indic{A}(-2.1) = 0$.
 
 :::
 
@@ -200,14 +210,16 @@ and $\delta_{ij} = 0$ when $i \neq j$
 ### Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness:
-it converts domain restrictions in sums and integrals into unrestricted operations.
-For example:
+it turns a sum or integral over a subset
+into a sum or integral over a larger, fixed set.
+For example,
+if $U$ is a finite set that contains $A$, then:
 
 $$
-\sum_{x \in A} f(x) = \sum_{x} f(x) [x \in A]
+\sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
 $$
 
-With $A = \cb{2, 4}$, $f(x) = x$, and $x$ running over $\cb{1, 2, 3, 4, 5}$,
+With $A = \cb{2, 4}$, $f(x) = x$, and $U = \cb{1, 2, 3, 4, 5}$,
 both sides equal $2 + 4 = 6$.
 
 However,

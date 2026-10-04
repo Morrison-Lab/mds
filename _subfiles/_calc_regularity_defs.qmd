@@ -106,7 +106,9 @@ of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
 
 The **mesh** of a partition $\mathcal{P}$ (@def-partition) is its largest subinterval width,
 
-$$\|\mathcal{P}\| \eqdef \max_i \Delta x_i.$$
+$$\|\mathcal{P}\| \eqdef \max_{i \in \cb{1, \ldots, n}} \Delta x_i,$$
+
+where $n$ is the number of subintervals of $\mathcal{P}$.
 
 [@larsonCalc11e, Section 4.3]
 
@@ -148,10 +150,39 @@ for every choice of the partitions and of the sample points $x_i^*$.
 #### Riemann integrable
 
 A bounded function $f$ is **Riemann integrable on** $[a, b]$
-if its Riemann integral (@def-riemann-integral) over $[a, b]$
-exists and is finite.
+if the sums $\sum_{i=1}^n f(x_i^*)\,\Delta x_i$,
+over partitions $\mathcal{P}$ of $[a, b]$ (@def-partition)
+with a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$,
+approach a real-number limit as the mesh $\|\mathcal{P}\|$ (@def-mesh) shrinks to zero,
+and that limit is the same
+for every choice of the partitions and of the sample points.
 
 [@larsonCalc11e, Section 4.3, p. 272]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-integrable-integral}
+#### Riemann integrable functions and Riemann integrals
+
+A bounded function $f$ is Riemann integrable on $[a, b]$
+exactly when its Riemann integral $\int_a^b f(x)\,dx$
+(@def-riemann-integral) exists;
+the integral is the common limit of the sums.
+For example, let $g(x) = 1$ when $x$ is rational
+and $g(x) = 0$ when $x$ is irrational,
+on $[0, 1]$.
+Every subinterval contains both rational and irrational points.
+Choosing every sample point rational gives
+$\sum_{i=1}^n 1 \cd \Delta x_i = 1$
+for every partition,
+because the widths $\Delta x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$,
+and choosing every sample point irrational gives
+$\sum_{i=1}^n 0 \cd \Delta x_i = 0$.
+The two limits differ,
+so $g$ is not Riemann integrable on $[0, 1]$,
+and $\int_0^1 g(x)\,dx$ does not exist.
 
 :::
 

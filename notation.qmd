@@ -12,6 +12,19 @@ format:
 
 {{< include mds/_notation.qmd >}}
 
+## Further reading {#sec-further-reading}
+
+For the logical symbols and proof conventions used in these notes:
+
+- @velleman2019prove
+  explains how mathematical statements are built from logical connectives and quantifiers,
+  and how to read and write them.
+- @barkerplummer2011language
+  covers the same symbols as a formal language,
+  with propositional and first-order logic.
+
+For set and function notation, see the [Sets and Functions](sets-functions.qmd) page.
+
 ## References {.unnumbered}
 
 ::: {#refs}

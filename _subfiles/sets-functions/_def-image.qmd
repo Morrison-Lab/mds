@@ -8,12 +8,19 @@ $$f(A) \eqdef \set{f(a) : a \in A}$$
 
 :::
 
-::: {.remark .notes}
+{{< slidebreak >}}
+
+:::{#rem-image-range}
+#### Image and range
 
 Many sources call the image the **range**,
 but others use "range" for the codomain,
 so these notes avoid "range" for functions in general
 (see [Wikipedia: Range of a function](https://en.wikipedia.org/wiki/Range_of_a_function)).
+For example, for $f : \reals \to \reals$ with $f(a) = a^2$,
+"the range of $f$" could mean the image $[0, \infty)$
+or the codomain $\reals$.
+
 The image is always a subset of the codomain,
 because every value $f(a)$ lies in $B$.
 

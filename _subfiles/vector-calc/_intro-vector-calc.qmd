@@ -1,0 +1,4 @@
+This section covers derivatives of functions of vectors and matrices.
+Its linear algebra prerequisites,
+such as vectors, matrices, transposes, dot products, and quadratic forms,
+are covered in [Linear Algebra](linear-algebra.qmd).
