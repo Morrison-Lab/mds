@@ -215,8 +215,10 @@ body.qwt-dark .widget-panel select {
 
   // reveal.js makes lists inline-blocks that shrink to their text, which
   // would cap an equation inside a list at the width of its bullet text.
-  ul,
-  ol {
+  // Only lists holding a display equation become blocks, so other lists
+  // keep reveal.js's layout.
+  ul:has(mjx-container[display="true"]),
+  ol:has(mjx-container[display="true"]) {
     display: block;
   }
 
