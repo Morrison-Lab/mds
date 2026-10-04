@@ -77,3 +77,6 @@ renv/staging/
 # Lychee link checker
 .lycheecache/
 lychee-output/
+
+# Written by r-lib/actions/setup-r-dependencies in CI; not source
+.github/pkg.lock
