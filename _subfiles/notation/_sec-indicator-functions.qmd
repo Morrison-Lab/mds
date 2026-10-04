@@ -53,10 +53,9 @@ $$
 Consider the real line $\Omega = \reals$,
 the set of nonnegative numbers $A = [0, \infty)$,
 and a continuous
-[random variable](https://morrison-lab.github.io/rme/chapters/probability.html)
+[random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
 $Y$.
 
-<!-- repoint the random-variable link to pds random-variables.qmd#def-random-variable once pds#8 is published -->
 
 1. **Set indicator** $\indic{A}(x)$:
    - For $x = 3.5$: since $3.5 \in [0, \infty)$, $\indic{A}(3.5) = 1$.
@@ -281,14 +280,13 @@ and for every $x \in \Omega$:
   $(\indic{A}(x))^2 = \indic{A}(x)$
 - **Expectation gives probability:**
   For any event $A$,
-  the [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)
+  the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
   of its indicator is the probability of the event:
 
   $$
   \Expp[\indic{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
   $$
 
-<!-- repoint the expectation link to pds expectation.qmd#def-expectation once pds#8 is published -->
 
 This fundamental identity connects probability theory directly to linear expectation.
 It provides the mathematical foundation for empirical proportions,

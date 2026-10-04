@@ -66,9 +66,8 @@ The [Linear Algebra](linear-algebra.qmd#thm-hat-matrix) page
 uses this derivation to show that $\matr{H}$ is a projection matrix.
 The probability notes derive the variance identity
 $\Var{X} = \E{X^2} - \sqf{\E{X}}$
-[in the same annotated style](https://morrison-lab.github.io/rme/chapters/probability.html#thm-variance).
+[in the same annotated style](https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance).
 
-<!-- repoint the variance link to pds variance-covariance.qmd#thm-variance once pds#8 is published -->
 
 ## Follow the golden rule {#sec-golden-rule}
 

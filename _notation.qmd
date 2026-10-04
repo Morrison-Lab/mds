@@ -4,9 +4,6 @@ Mathematical notation is not standardized.
 This section states the conventions these notes use,
 and the alternatives you may meet in other sources.
 
-<!-- repoint the expectation link to pds expectation.qmd#def-expectation once pds#8 is published -->
-<!-- repoint the independence link to pds independence.qmd#def-indpt once pds#8 is published -->
-
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
 | $\neg$      | not                                              | `\neg`
@@ -18,10 +15,10 @@ and the alternatives you may meet in other sources.
 | $\sum$      | [sum](algebra.qmd#sec-summation)                 | `\sum`
 | $\prod$     | product                                          | `\prod`
 | $\mu$       | mean                                             | `\mu`
-| $\Expp$     | [expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)   | `\mathbb{E}`
+| $\Expp$     | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)   | `\mathbb{E}`
 | $x^{\top}$  | transpose of $x$                                 | `x^{\top}`
 | $'$         | transpose or derivative[^3]                      | `'`
-| $\ind$      | [independent](https://morrison-lab.github.io/rme/chapters/probability.html#def-indpt)         | `\perp\!\!\!\perp`
+| $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | therefore, thus                                  | `\therefore`
 | $\eta$      | [linear component of a GLM][eta]                 | `\eta`
 | $\floor{x}$ | floor of $x$: largest integer less than or equal to $x$ | `\lfloor x \rfloor`
