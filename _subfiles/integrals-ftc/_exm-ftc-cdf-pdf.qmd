@@ -6,21 +6,19 @@ as the antiderivative pair in @def-antiderivative, because the FTC will
 show $F$ is exactly an antiderivative of $f$.
 
 Let $T$ be a
-[random variable](https://morrison-lab.github.io/rme/chapters/probability.html)
+[random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
 with the exponential distribution with rate parameter $\lambda > 0$.
-Its [probability density function (PDF)](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf) is
+Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is
 [@kleinbaum2012survival, Section II, p. 295, "Survival and Hazard
 Functions for Selected Distributions"]:
 
 $$f(t) = \lambda \ef{-\lambda t}, \quad t \ge 0$$
 
 **FTC Part 2** gives the
-[cumulative distribution function (CDF)](https://morrison-lab.github.io/rme/chapters/probability.html#def-cdf),
+[cumulative distribution function (CDF)](https://morrison-lab.github.io/pds/random-variables.html#def-cdf),
 $F(t) = P(T \le t)$, from the PDF.
 Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\lambda$ to
 antidifferentiate the integrand:
-
-<!-- repoint the random-variable, PDF and CDF links to pds random-variables.qmd (#def-random-variable, #def-pdf, #def-cdf) once pds#8 is published -->
 
 $$
 \ba
