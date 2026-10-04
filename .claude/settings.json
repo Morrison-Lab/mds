@@ -42,7 +42,9 @@
       "Bash(gh issue view:*)",
       "Bash(gh issue list:*)",
       "Bash(gh run view:*)",
-      "Bash(gh run list:*)"
+      "Bash(gh run list:*)",
+      "Bash(gh pr merge:*)",
+      "mcp__github__merge_pull_request"
     ],
     "deny": [
       "Bash(git push --force:*)",
