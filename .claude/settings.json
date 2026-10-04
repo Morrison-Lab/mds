@@ -42,9 +42,7 @@
       "Bash(gh issue view:*)",
       "Bash(gh issue list:*)",
       "Bash(gh run view:*)",
-      "Bash(gh run list:*)",
-      "Bash(gh pr merge:*)",
-      "mcp__github__merge_pull_request"
+      "Bash(gh run list:*)"
     ],
     "deny": [
       "Bash(git push --force:*)",
@@ -55,6 +53,12 @@
       "Bash(git branch -D:*)",
       "Bash(git reset --hard:*)",
       "Bash(rm -rf:*)"
+    ]
+  },
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Merging a pull request in a Morrison-Lab repository, but only when the user has explicitly granted mwc (merge when confident) earlier in this session, the PR's CI is green and its automated review verdict on the current head commit is clean with no unresolved review threads, and the merge pins that head commit SHA."
     ]
   }
 }
