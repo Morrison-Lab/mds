@@ -213,7 +213,14 @@ body.qwt-dark .widget-panel select {
     overflow-y: hidden;
   }
 
+  // reveal.js makes lists inline-blocks that shrink to their text, which
+  // would cap an equation inside a list at the width of its bullet text.
+  ul,
+  ol {
+    display: block;
+  }
+
   a {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 }
