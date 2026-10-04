@@ -31,8 +31,6 @@ $$
 
 :::
 
-<!-- repoint the joint-distribution link to pds expectation.qmd#cor-fubini-joint once pds#8 is published -->
-
 {{< slidebreak >}}
 
 :::{#rem-fubini-tonelli-probability}
@@ -40,9 +38,8 @@ $$
 
 Applied courses rarely need the measure-theoretic generalization itself,
 but it is what justifies the
-[joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint)
-corollary in the probability
-chapter of *Regression Models for Epidemiology*.
+[joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint)
+corollary in *Probability for Data Science*.
 A probability measure gives the whole space measure $1$,
 so it is finite, and hence $\sigma$-finite;
 for probability measures, the $\sigma$-finiteness condition is automatic.
@@ -65,11 +62,9 @@ So $\sigma$-finiteness alone does not make the iterated integrals agree.
 #### Positive application of @thm-fubini-tonelli
 
 Let $X$ and $Y$ be independent $\operatorname{Exponential}(1)$
-[random variables](https://morrison-lab.github.io/rme/chapters/probability.html),
-with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf)
+[random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable),
+with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 $f(x, y) = e^{-(x+y)}$ for $x, y \ge 0$.
-
-<!-- repoint the random-variable and density links to pds random-variables.qmd#def-random-variable and pds random-variables.qmd#def-pdf once pds#8 is published -->
 
 The probability $P(X \le 1,\, Y \le 1)$
 is the integral of $f$ over $[0, 1]^2$

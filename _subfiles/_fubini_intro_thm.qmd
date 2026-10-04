@@ -5,11 +5,9 @@ the Riemann version (@thm-fubini) is what applied courses usually use
 for double integrals of continuous functions on simple regions;
 the $\sigma$-finite measure-theoretic version (@thm-fubini-tonelli) is
 included to make the
-[joint-distribution form](https://morrison-lab.github.io/rme/chapters/probability.html#cor-fubini-joint)
-corollary in the probability chapter of *Regression Models for Epidemiology*
+[joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint)
+corollary in *Probability for Data Science*
 follow from a stated theorem rather than from an aside.
-
-<!-- repoint the joint-distribution link to pds expectation.qmd#cor-fubini-joint once pds#8 is published -->
 
 {{< slidebreak >}}
 

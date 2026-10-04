@@ -5,15 +5,13 @@
 Adapted from [@larsonCalc11e, Section 14.2, Example 4, pp. 984--985].
 
 Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$
-[random variables](https://morrison-lab.github.io/rme/chapters/probability.html),
-with [joint density](https://morrison-lab.github.io/rme/chapters/probability.html#def-pdf)
+[random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable),
+with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 $f(x, y) = 1$ on the unit square $[0, 1]^2$.
 Define the function $g(x, y) = \ef{-x^2}\,\indicp{y \le x}$,
 and compute its
-[expectation](https://morrison-lab.github.io/rme/chapters/probability.html#def-expectation)
+[expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
 $\E{g(X, Y)}$.
-
-<!-- repoint the random-variable, density and expectation links to pds (random-variables.html#def-random-variable, random-variables.html#def-pdf, expectation.html#def-expectation) once pds#8 is published -->
 
 Because the joint density equals $1$ on $[0, 1]^2$,
 this expectation is the double integral of $g$ over the unit square:
