@@ -73,10 +73,12 @@ end
 
 return {
   -- Pass 1: number the targets in document order. At this stage Quarto
-  -- holds theorem-type divs as Theorem nodes, and an equation label is still
+  -- holds theorem-type divs as Theorem (or Proof) nodes, and an equation label is still
   -- the literal string "{#eq-...}" after its display math.
   {
     Theorem = function(el) note(el.identifier) end,
+    -- Remarks and solutions are Proof nodes, numbered like theorems.
+    Proof = function(el) note(el.identifier) end,
     Str = function(el)
       local id = el.text:match("^{#(eq%-[%w%-]*%w)}$")
       if id then note(id) end
