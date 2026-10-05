@@ -1,0 +1,42 @@
+:::{#cor-convex-stationary}
+#### Stationary points of a convex function are global minimizers
+
+If $f$ is as in @thm-convex-first-order and convex,
+then every stationary point $\vx^*$ of $f$ (@def-stationary-point)
+is a [global minimizer](algebra.qmd#def-global-minimizer).
+
+:::
+
+::: proof
+
+For every $\vx$,
+
+$$
+\ba
+f(\vx)
+&\ge f(\vx^*) + \tp{\paren{\deriv{\vx} f(\vx^*)}} (\vx - \vx^*)
+&& \text{(@eq-supporting-hyperplane with } \vy = \vx^* \text{)}
+\\
+&= f(\vx^*) + \tp{\vzero} (\vx - \vx^*)
+&& \text{(} \vx^* \text{ is stationary)}
+\\
+&= f(\vx^*).
+&& \text{(} \tp{\vzero} \vecf{v} = 0 \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convex-stationary}
+#### A convex function, and a non-convex one
+
+- $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ is convex
+  by @thm-convex-hessian, since its Hessian is $2 \matr{I}_2$ (@exm-second-order-condition),
+  so its stationary point $\tp{(1, 0)}$ (@exm-stationary-point) is a global minimizer,
+  as completing the square showed in @exm-first-order-condition.
+- Without convexity, a stationary point need not be a minimizer at all:
+  $x_1^2 - x_2^2$ has the stationary point $\vzero$, which is not one (@exm-first-order-condition).
+
+:::

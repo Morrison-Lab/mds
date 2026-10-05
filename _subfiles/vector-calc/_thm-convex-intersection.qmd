@@ -1,0 +1,31 @@
+:::{#thm-convex-intersection}
+#### An intersection of convex sets is convex
+
+If $K_1$ and $K_2$ are convex subsets of $\reals^p$ (@def-convex-set),
+then $K_1 \cap K_2$ is convex.
+
+:::
+
+::: proof
+
+Let $\vx, \vy \in K_1 \cap K_2$ and $t \in [0, 1]$.
+Then $\vx, \vy \in K_1$, so $t \vx + (1 - t) \vy \in K_1$, since $K_1$ is convex;
+in the same way $t \vx + (1 - t) \vy \in K_2$.
+So $t \vx + (1 - t) \vy \in K_1 \cap K_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convex-intersection}
+#### Intersecting a ball with a half-plane
+
+The closed unit ball in $\reals^2$ is convex (@exm-convex-set),
+and so is the half-plane $\cb{\vx : x_1 \ge 0}$:
+if $x_1 \ge 0$ and $y_1 \ge 0$, then $t x_1 + (1 - t) y_1 \ge 0$ for $t \in [0, 1]$.
+By @thm-convex-intersection, the closed half-disk $\cb{\vx : \norm{\vx} \le 1,\ x_1 \ge 0}$ is convex.
+A union need not be convex:
+$\cb{x \in \reals : x \le -1}$ and $\cb{x \in \reals : x \ge 1}$ are convex,
+but their union is the set of @exm-not-convex-set.
+
+:::

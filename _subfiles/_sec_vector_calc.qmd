@@ -198,3 +198,40 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_thm-second-order-condition.qmd >}}
+
+
+## Convexity in several variables {#sec-convexity-vector}
+
+{{< include mds/_subfiles/vector-calc/_prose-convexity-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-convex-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-convex-intersection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-strictly-convex.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-convex-max.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-epigraph.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-convex-first-order.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-convex-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_cor-convex-stationary.qmd >}}

@@ -1,0 +1,110 @@
+:::{#thm-convex-first-order}
+#### First-order characterization of convexity
+
+Let $f : \reals^p \to \reals$ have first partial derivatives
+that are continuous on $\reals^p$ (@def-continuous-several).
+Then $f$ is [convex](algebra.qmd#def-convex-function) if and only if
+
+$$
+f(\vx) \ge f(\vy) + \tp{\paren{\deriv{\vx} f(\vy)}} (\vx - \vy)
+\qquad \text{for all } \vx, \vy \in \reals^p:
+$$ {#eq-supporting-hyperplane}
+
+every tangent plane lies on or under the graph.
+If the inequality is strict whenever $\vx \ne \vy$, then $f$ is strictly convex (@def-strictly-convex).
+
+:::
+
+::: proof
+
+**Only if.**
+Let $\vx, \vy \in \reals^p$, let $\vecf{d} \eqdef \vx - \vy$,
+and let $g(t) \eqdef f(\vy + t \vecf{d})$.
+The inner function $t \mapsto \vy + t \vecf{d}$ has derivative $\tp{\vecf{d}}$ (@def-vector-valued-derivative),
+so the vector chain rule (@thm-chain-vec) gives
+
+$$
+\ba
+g'(0)
+&= \tp{\vecf{d}}\,\deriv{\vx} f(\vy)
+&& \text{(@thm-chain-vec)}
+\\
+&= \tp{\paren{\deriv{\vx} f(\vy)}} \vecf{d}.
+&& \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
+\ea
+$$
+
+For $t \in (0, 1]$, $\vy + t \vecf{d} = t \vx + (1 - t) \vy$, so
+
+$$
+\ba
+g(t) - g(0)
+&= f(t \vx + (1 - t) \vy) - f(\vy)
+&& \text{(definition of } g \text{)}
+\\
+&\le t f(\vx) + (1 - t) f(\vy) - f(\vy)
+&& \text{(} f \text{ is convex)}
+\\
+&= t\,(f(\vx) - f(\vy)),
+&& \text{(collect terms)}
+\ea
+$$
+
+and dividing by $t > 0$, $\dfrac{g(t) - g(0)}{t} \le f(\vx) - f(\vy)$.
+As $t \to 0$ from the right, the left side tends to $g'(0)$,
+and a limit of numbers that are all at most $f(\vx) - f(\vy)$ is at most $f(\vx) - f(\vy)$.
+So $\tp{\paren{\deriv{\vx} f(\vy)}} (\vx - \vy) \le f(\vx) - f(\vy)$, which rearranges to @eq-supporting-hyperplane.
+
+**If.**
+Let $\vx, \vy \in \reals^p$, $t \in [0, 1]$, $\vecf{z} \eqdef t \vx + (1 - t) \vy$,
+and $\vecf{g} \eqdef \deriv{\vx} f(\vecf{z})$.
+Applying @eq-supporting-hyperplane at the point $\vecf{z}$, once toward $\vx$ and once toward $\vy$,
+
+$$
+f(\vx) \ge f(\vecf{z}) + \tp{\vecf{g}} (\vx - \vecf{z}),
+\qquad
+f(\vy) \ge f(\vecf{z}) + \tp{\vecf{g}} (\vy - \vecf{z}).
+$$
+
+Multiply the first by $t \ge 0$ and the second by $1 - t \ge 0$ and add:
+
+$$
+\ba
+t f(\vx) + (1 - t) f(\vy)
+&\ge f(\vecf{z}) + \tp{\vecf{g}} \paren{t (\vx - \vecf{z}) + (1 - t) (\vy - \vecf{z})}
+&& \text{(add; } t + (1 - t) = 1 \text{; distribute } \tp{\vecf{g}} \text{)}
+\\
+&= f(\vecf{z}) + \tp{\vecf{g}} \paren{t \vx + (1 - t) \vy - \vecf{z}}
+&& \text{(collect terms)}
+\\
+&= f(\vecf{z}).
+&& \text{(definition of } \vecf{z} \text{)}
+\ea
+$$
+
+That inequality is the defining inequality of a [convex function](algebra.qmd#def-convex-function).
+If @eq-supporting-hyperplane is strict for distinct points, and $\vx \ne \vy$ and $t \in (0, 1)$,
+then $\vecf{z}$ differs from both $\vx$ and $\vy$
+(for instance $\vx - \vecf{z} = (1 - t)(\vx - \vy) \ne \vzero$),
+so both inequalities are strict, both multipliers are positive,
+and the sum is strict: $f$ is strictly convex.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convex-first-order}
+#### Tangent lines under a parabola
+
+For $f(x) = x^2$, the right side of @eq-supporting-hyperplane is
+$y^2 + 2y (x - y) = 2xy - y^2$, and
+
+$$
+f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
+$$
+
+with equality only at $x = y$, confirming that $x^2$ is strictly convex.
+For $g(x) = -x^2$ the inequality fails:
+at $y = 0$ the tangent line is $s = 0$, and $g(1) = -1 < 0$.
+
+:::

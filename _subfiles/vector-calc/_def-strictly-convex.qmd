@@ -1,0 +1,25 @@
+:::{#def-strictly-convex}
+#### Strictly convex and concave functions
+
+A function $f : \reals^p \to \reals$ is **strictly convex** if
+$f(t \vx + (1 - t) \vy) < t f(\vx) + (1 - t) f(\vy)$
+for all $\vx \ne \vy$ in $\reals^p$ and all $t \in (0, 1)$.
+It is **concave** if $-f$ is [convex](algebra.qmd#def-convex-function),
+and **strictly concave** if $-f$ is strictly convex.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-strictly-convex}
+#### Strictly convex, and convex but not strictly
+
+- $f(x) = x^2$ is strictly convex: expanding the squares,
+  $t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2 = t (1 - t) (x - y)^2$,
+  which is positive when $x \ne y$ and $t \in (0, 1)$.
+- $f(x) = 2x + 1$ is convex but not strictly convex:
+  $f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)$ for every $x, y, t$,
+  so the inequality holds, but never strictly.
+  It is also concave.
+
+:::

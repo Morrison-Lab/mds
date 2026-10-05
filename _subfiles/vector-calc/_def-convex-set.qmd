@@ -1,0 +1,50 @@
+:::{#def-convex-set}
+#### Convex set
+
+A set $K \subseteq \reals^p$ is **convex** if for all $\vx, \vy \in K$ and all $t \in [0, 1]$,
+the point $t \vx + (1 - t) \vy$ is in $K$:
+$K$ contains the whole line segment between any two of its points.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convex-set}
+#### Convex sets
+
+- $\reals^p$ is convex, and so is any set with at most one point.
+- The closed ball $B = \cb{\vx : \norm{\vx} \le r}$ is convex:
+  for $\vx, \vy \in B$ and $t \in [0, 1]$,
+
+  $$
+  \ba
+  \norm{t \vx + (1 - t) \vy}
+  &\le \norm{t \vx} + \norm{(1 - t) \vy}
+  && \text{(triangle inequality)}
+  \\
+  &= t\,\norm{\vx} + (1 - t)\,\norm{\vy}
+  && \text{(} t \ge 0 \text{ and } 1 - t \ge 0 \text{)}
+  \\
+  &\le t\,r + (1 - t)\,r
+  && \text{(} \vx, \vy \in B \text{)}
+  \\
+  &= r.
+  && \text{(arithmetic)}
+  \ea
+  $$
+
+  The first step is the [triangle inequality](linear-algebra.qmd#thm-triangle-inequality),
+  and the second uses [the norm of a multiple](linear-algebra.qmd#thm-norm-properties).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-convex-set}
+#### A set that is not convex
+
+$K = \cb{x \in \reals : \abs{x} \ge 1}$ is not convex:
+$-1$ and $1$ are in $K$,
+but with $t = \tfrac{1}{2}$ the point $\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0$ is not.
+
+:::
