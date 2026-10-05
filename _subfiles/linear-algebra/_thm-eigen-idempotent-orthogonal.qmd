@@ -1,0 +1,73 @@
+:::{#thm-eigen-idempotent-orthogonal}
+#### Eigenvalues of idempotent and orthogonal matrices
+
+1. Every eigenvalue of an idempotent matrix (@def-idempotent-matrix) is $0$ or $1$.
+2. Every eigenvalue of an orthogonal matrix (@def-orthogonal-matrix) is $1$ or $-1$.
+
+:::
+
+::: proof
+
+Let $\vecf{v} \ne \vzero$ with $\matr{A} \vecf{v} = \lambda \vecf{v}$.
+
+**Part 1.** If $\matr{A}^2 = \matr{A}$, then
+
+$$
+\ba
+\lambda \vecf{v}
+&= \matr{A} \vecf{v}
+&& \text{(eigenvector)}
+\\
+&= \matr{A}^2 \vecf{v}
+&& \text{(idempotent)}
+\\
+&= \lambda^2 \vecf{v},
+&& \text{(@thm-eigen-shift-power, part 2)}
+\ea
+$$
+
+and subtracting $\lambda \vecf{v}$ from both sides gives $(\lambda^2 - \lambda)\,\vecf{v} = \vzero$.
+Some entry of $\vecf{v}$ is nonzero, so $\lambda^2 - \lambda = \lambda\,(\lambda - 1) = 0$,
+and a product of two numbers is $0$ only when one of them is: $\lambda = 0$ or $\lambda = 1$.
+
+**Part 2.** If $\matr{A}$ is orthogonal, then
+
+$$
+\ba
+\norm{\vecf{v}}
+&= \norm{\matr{A} \vecf{v}}
+&& \text{(@thm-orthogonal-norm)}
+\\
+&= \norm{\lambda \vecf{v}}
+&& \text{(eigenvector)}
+\\
+&= \abs{\lambda}\,\norm{\vecf{v}},
+&& \text{(@thm-norm-properties, part 2)}
+\ea
+$$
+
+and $\norm{\vecf{v}} > 0$ (@thm-norm-properties, part 1),
+so dividing by $\norm{\vecf{v}}$ gives $\abs{\lambda} = 1$;
+since $\lambda$ is real (@def-eigenvalue), $\lambda = 1$ or $\lambda = -1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-eigen-idempotent-orthogonal}
+#### Projections and reflections
+
+- The idempotent matrix $\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}$ of @exm-hat-matrix-projection
+  sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(0, 0)$: eigenvalues $1$ and $0$.
+- The matrix $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, which swaps the two entries,
+  is orthogonal: its columns $(0, 1)$ and $(1, 0)$ are orthonormal (@rem-orthogonal-matrix-columns).
+  It sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(-1, 1)$:
+  eigenvalues $1$ and $-1$.
+- The rotation $\matr{Q}$ of @exm-orthogonal-matrix has no real eigenvalue.
+  By part 2 the only candidates are $\pm 1$.
+  $\matr{Q} \vecf{v} = \vecf{v}$ reads $-0.4\,v_1 - 0.8\,v_2 = 0$ and $0.8\,v_1 - 0.4\,v_2 = 0$,
+  so $v_1 = -2 v_2$ and $v_2 = 2 v_1 = -4 v_2$, forcing $\vecf{v} = \vzero$;
+  $\matr{Q} \vecf{v} = -\vecf{v}$ reads $1.6\,v_1 - 0.8\,v_2 = 0$ and $0.8\,v_1 + 1.6\,v_2 = 0$,
+  so $v_2 = 2 v_1$ and $0.8\,v_1 + 3.2\,v_1 = 0$, forcing $\vecf{v} = \vzero$ again.
+
+:::

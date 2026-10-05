@@ -1,0 +1,87 @@
+:::{#thm-invertible-rank}
+#### A square matrix is invertible exactly when it has full rank
+
+An $n \times n$ matrix $\matr{A}$ is invertible (@def-invertible-matrix)
+exactly when $\operatorname{rank}(\matr{A}) = n$,
+that is, exactly when $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$.
+
+:::
+
+::: proof
+
+**Invertible implies rank $n$.**
+If $\matr{A} \vecf{x} = \vzero_n$, then
+
+$$
+\ba
+\vecf{x}
+&= \matr{I}_n \vecf{x}
+&& \text{(@thm-identity)}
+\\
+&= (\matr{A}^{-1} \matr{A})\,\vecf{x}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A}^{-1}\,(\matr{A} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{A}^{-1}\,\vzero_n
+&& \text{(} \matr{A} \vecf{x} = \vzero_n \text{)}
+\\
+&= \vzero_n,
+&& \text{(@def-matvec-mult)}
+\ea
+$$
+
+so $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$, the nullity is $0$,
+and $\operatorname{rank}(\matr{A}) = n$ (@thm-rank-nullity).
+
+**Rank $n$ implies invertible.**
+Every system $\matr{A} \vecf{y} = \vecf{b}$ has exactly one solution
+(@cor-solution-unique, both parts, with $m = n$).
+Let $\vecf{y}_j$ solve $\matr{A} \vecf{y}_j = \vecf{e}_j$ (@def-indicator-vector),
+and let $\matr{B}$ have columns $\vecf{y}_1, \ldots, \vecf{y}_n$.
+Column $j$ of $\matr{A} \matr{B}$ is $\matr{A} \vecf{y}_j = \vecf{e}_j$ (@def-matrix-mult),
+so $\matr{A} \matr{B} = \matr{I}_n$.
+For the other order,
+
+$$
+\ba
+\matr{A}\,(\matr{B} \matr{A} - \matr{I}_n)
+&= \matr{A} \matr{B} \matr{A} - \matr{A} \matr{I}_n
+&& \text{(@thm-scalar-matmul, @thm-matmul-assoc)}
+\\
+&= \matr{I}_n \matr{A} - \matr{A} \matr{I}_n
+&& \text{(} \matr{A} \matr{B} = \matr{I}_n \text{)}
+\\
+&= \matr{A} - \matr{A}
+&& \text{(@thm-identity)}
+\\
+&= \matr{0}_{n \times n},
+&& \text{(arithmetic)}
+\ea
+$$
+
+so every column of $\matr{B} \matr{A} - \matr{I}_n$ is in $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$
+(@def-matrix-mult),
+and $\matr{B} \matr{A} = \matr{I}_n$.
+So $\matr{B}$ satisfies @def-invertible-matrix.
+The two conditions in the statement are equivalent by @thm-rank-nullity:
+the nullity is $0$ exactly when $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$,
+because a subspace of dimension $0$ has the empty list as a basis, whose span is $\cb{\vzero}$
+(@def-dimension, @def-span), and $\cb{\vzero}$ has dimension $0$ (@exm-dimension).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-invertible-rank}
+#### Rank decides invertibility
+
+- $\begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ of @exm-invertible-matrix has rank $2$:
+  $c_1 (2, 0) + c_2 (1, 1) = (2c_1 + c_2, c_2)$ is $\vzero$ only if $c_2 = 0$ and then $c_1 = 0$.
+  So it is invertible, as that example found by exhibiting the inverse.
+- $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has rank less than $2$:
+  $(1, -1)$ is a nonzero vector in its null space.
+  So it is singular, as @exm-invertible-matrix found.
+
+:::

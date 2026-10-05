@@ -1,0 +1,53 @@
+:::{#thm-eigenvectors-independent}
+#### Eigenvectors for distinct eigenvalues are linearly independent
+
+If $\vecf{v}_1, \ldots, \vecf{v}_k$ are eigenvectors of a $p \times p$ matrix $\matr{A}$
+for eigenvalues $\lambda_1, \ldots, \lambda_k$ that are all different,
+then $\vecf{v}_1, \ldots, \vecf{v}_k$ are linearly independent (@def-linearly-independent).
+
+:::
+
+::: proof
+
+By induction on $k$.
+For $k = 1$, $\vecf{v}_1 \ne \vzero$ is linearly independent on its own.
+Suppose the result holds for $k - 1$ eigenvectors, and
+$\sum_{i=1}^{k} c_i \vecf{v}_i = \vzero$. Then
+
+$$
+\ba
+\vzero
+&= (\matr{A} - \lambda_k \matr{I}_p) \sum_{i=1}^{k} c_i \vecf{v}_i
+&& \text{(multiply the supposed equation by } \matr{A} - \lambda_k \matr{I}_p \text{)}
+\\
+&= \sum_{i=1}^{k} c_i\,(\matr{A} - \lambda_k \matr{I}_p)\,\vecf{v}_i
+&& \text{(@thm-matvec-linear)}
+\\
+&= \sum_{i=1}^{k} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i
+&& \text{(@thm-eigen-shift-power, part 1, with } s = -\lambda_k \text{)}
+\\
+&= \sum_{i=1}^{k-1} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i.
+&& \text{(the } i = k \text{ term is } \vzero \text{)}
+\ea
+$$
+
+By the induction hypothesis $\vecf{v}_1, \ldots, \vecf{v}_{k-1}$ are linearly independent,
+so every $c_i\,(\lambda_i - \lambda_k) = 0$ for $i < k$,
+and since $\lambda_i \ne \lambda_k$, every $c_i = 0$ for $i < k$.
+The supposed equation then reads $c_k \vecf{v}_k = \vzero$ with $\vecf{v}_k \ne \vzero$,
+so $c_k = 0$ too.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-eigenvectors-independent}
+#### Independent eigenvectors
+
+The eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$ of @exm-eigenvalue
+are linearly independent, as @thm-eigenvectors-independent says they must be:
+$c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)$ is $\vzero$ only if $c_1 = c_2 = 0$.
+Two eigenvectors for the same eigenvalue need not be independent:
+$(1, 1)$ and $(2, 2)$ are both eigenvectors for $3$.
+
+:::

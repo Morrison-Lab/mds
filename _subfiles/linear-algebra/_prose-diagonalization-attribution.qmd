@@ -1,0 +1,19 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from @zhou2024eig,
+used under the MIT License
+(see the license text in @sec-subspaces).
+These notes take eigenvalues to be real numbers (@def-eigenvalue),
+so the source's complex eigenvalues are left out,
+and eigenvalues are characterized through null spaces
+rather than through the characteristic polynomial.
+Only the source's material on similarity, diagonalization and the basic eigenvalue properties is adapted;
+its characteristic polynomial and algebraic multiplicity,
+its trace and determinant identities,
+and its section on symmetric matrices (covered by @thm-spectral) are left out,
+and its result that eigenvalues of orthogonal matrices have modulus $1$ appears here in the real form $\pm 1$.
+The source's two-vector argument that eigenvectors for distinct eigenvalues are independent
+is extended here to any number of eigenvectors.
+
+:::

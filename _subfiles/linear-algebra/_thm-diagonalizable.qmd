@@ -1,0 +1,216 @@
+:::{#thm-diagonalizable}
+#### Diagonalizable means a basis of eigenvectors
+
+A $p \times p$ matrix $\matr{A}$ is diagonalizable (@def-diagonalizable)
+exactly when it has $p$ linearly independent eigenvectors.
+Then $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$
+with the eigenvectors as the columns of $\matr{X}$
+and their eigenvalues, in the same order, on the diagonal of $\matr{\Lambda}$.
+
+:::
+
+::: proof
+
+Let $\matr{X}$ have columns $\vecf{x}_1, \ldots, \vecf{x}_p$
+and $\matr{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)$.
+Column $j$ of $\matr{A} \matr{X}$ is $\matr{A} \vecf{x}_j$,
+and column $j$ of $\matr{X} \matr{\Lambda}$ is $\matr{X}$ times column $j$ of $\matr{\Lambda}$ (@def-matrix-mult),
+which is $\matr{X}\,(\lambda_j \vecf{e}_j) = \lambda_j\,(\matr{X} \vecf{e}_j) = \lambda_j \vecf{x}_j$
+(@thm-scalar-matmul, @thm-matvec-columns),
+so
+
+$$
+\matr{A} \matr{X} = \matr{X} \matr{\Lambda}
+\iff \matr{A} \vecf{x}_j = \lambda_j \vecf{x}_j \text{ for every } j.
+$$ {#eq-ax-xlambda}
+
+Also, $\matr{X}$ has rank $p$ exactly when its $p$ columns are linearly independent (@def-rank),
+which by @thm-invertible-rank is exactly when $\matr{X}$ is invertible.
+
+**Eigenvectors give a diagonalization.**
+If $\vecf{x}_1, \ldots, \vecf{x}_p$ are linearly independent eigenvectors,
+then $\matr{X}$ is invertible and @eq-ax-xlambda gives $\matr{A} \matr{X} = \matr{X} \matr{\Lambda}$, so
+
+$$
+\ba
+\matr{A}
+&= \matr{A}\,\matr{I}_p
+&& \text{(@thm-identity)}
+\\
+&= \matr{A}\,(\matr{X} \matr{X}^{-1})
+&& \text{(@def-matrix-inverse)}
+\\
+&= (\matr{A} \matr{X})\,\matr{X}^{-1}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{X} \matr{\Lambda} \matr{X}^{-1}.
+&& \text{(} \matr{A} \matr{X} = \matr{X} \matr{\Lambda} \text{)}
+\ea
+$$
+
+**A diagonalization gives eigenvectors.**
+If $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$, then
+
+$$
+\ba
+\matr{A} \matr{X}
+&= (\matr{X} \matr{\Lambda} \matr{X}^{-1})\,\matr{X}
+&& \text{(substitute } \matr{A} \text{)}
+\\
+&= \matr{X} \matr{\Lambda}\,(\matr{X}^{-1} \matr{X})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{X} \matr{\Lambda}\,\matr{I}_p
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{X} \matr{\Lambda},
+&& \text{(@thm-identity)}
+\ea
+$$
+
+so each column satisfies $\matr{A} \vecf{x}_j = \lambda_j \vecf{x}_j$ (@eq-ax-xlambda).
+$\matr{X}$ is invertible, so its columns are linearly independent,
+and in particular nonzero;
+they are $p$ linearly independent eigenvectors.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-thm-diagonalizable}
+#### Building the diagonalization from eigenvectors
+
+The eigenvectors $(1, 1)$ and $(1, -1)$ of $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+are linearly independent (@exm-eigenvectors-independent),
+so with $\matr{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\matr{\Lambda} = \operatorname{diag}(3, 1)$,
+$\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$;
+by @rem-similar-both-ways this is the similarity of @exm-similar, with $\matr{X} = \matr{P}$.
+Because $\matr{A}$ is symmetric, @thm-spectral even gives such a factorization with orthonormal eigenvectors
+(@def-eigendecomposition):
+dividing each column of $\matr{X}$ by its length $\sqrt{2}$ gives one.
+By contrast, every eigenvector of $\matr{J}$ in @exm-eigenspace has the form $(t, 0)$,
+so any two of them are multiples of each other,
+and $\matr{J}$ has no two linearly independent eigenvectors:
+another way to see that it is not diagonalizable.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-distinct-diagonalizable}
+#### Distinct eigenvalues make a matrix diagonalizable
+
+A $p \times p$ matrix with $p$ different eigenvalues is diagonalizable.
+
+:::
+
+::: proof
+
+Choose one eigenvector for each eigenvalue.
+These $p$ eigenvectors are linearly independent (@thm-eigenvectors-independent),
+so the matrix is diagonalizable (@thm-diagonalizable).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-distinct-diagonalizable}
+#### A triangular matrix with distinct diagonal entries
+
+$\matr{U}$ of @exm-eigen-triangular has the three different eigenvalues $2$, $\tfrac{1}{2}$ and $-1$
+(@thm-eigen-triangular), so it is diagonalizable,
+even though it is not symmetric, so @thm-spectral does not apply to it.
+The converse fails: $\matr{I}_2$ is diagonal, hence diagonalizable
+($\matr{I}_2 = \matr{I}_2\,\matr{I}_2\,\matr{I}_2^{-1}$),
+but has only the eigenvalue $1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-diagonalizable-powers}
+#### Powers of a diagonalizable matrix
+
+If $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$ (@def-diagonalizable)
+with $\matr{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)$,
+then for every positive integer $k$,
+$\matr{A}^k = \matr{X} \matr{\Lambda}^k \matr{X}^{-1}$
+and $\matr{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
+
+:::
+
+::: proof
+
+**Powers of $\matr{\Lambda}$.**
+If $\matr{D} = \operatorname{diag}(d_1, \ldots, d_p)$ and $\matr{E} = \operatorname{diag}(e_1, \ldots, e_p)$,
+with entries $d_{il}$ and $e_{lj}$ (so $d_{ii} = d_i$ and $e_{jj} = e_j$),
+entry $(i, j)$ of $\matr{D} \matr{E}$ is $\sum_l d_{il}\,e_{lj}$ (@def-matrix-mult),
+where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$.
+For $i \ne j$ no term survives, so the entry is $0$;
+for $i = j$ only $l = i$ survives, giving $d_i\,e_i$.
+So $\matr{D} \matr{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)$,
+and induction on $k$ gives $\matr{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
+
+**Powers of $\matr{A}$, by induction on $k$.**
+$k = 1$ is the assumption. If it holds for $k - 1$,
+
+$$
+\ba
+\matr{A}^k
+&= \matr{A}^{k-1} \matr{A}
+&& \text{(@def-matrix-power, @thm-matmul-assoc)}
+\\
+&= \matr{X} \matr{\Lambda}^{k-1} \matr{X}^{-1}\,\matr{A}
+&& \text{(induction hypothesis)}
+\\
+&= \matr{X} \matr{\Lambda}^{k-1} \matr{X}^{-1}\,\matr{X} \matr{\Lambda} \matr{X}^{-1}
+&& \text{(the assumption)}
+\\
+&= \matr{X} \matr{\Lambda}^{k-1}\,(\matr{X}^{-1} \matr{X})\,\matr{\Lambda} \matr{X}^{-1}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{X} \matr{\Lambda}^{k-1}\,\matr{I}_p\,\matr{\Lambda} \matr{X}^{-1}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{X} \matr{\Lambda}^{k-1} \matr{\Lambda} \matr{X}^{-1}
+&& \text{(@thm-identity)}
+\\
+&= \matr{X} \matr{\Lambda}^{k} \matr{X}^{-1}.
+&& \text{(@def-matrix-power)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-diagonalizable-powers}
+#### A closed form for the powers
+
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$,
+with $\matr{X}$ as in @exm-thm-diagonalizable and $\matr{X}^{-1} = \tfrac{1}{2}\,\matr{X}$ (@exm-similar),
+
+$$
+\ba
+\matr{A}^k
+&= \matr{X}\,\operatorname{diag}(3^k, 1)\,\matr{X}^{-1}
+&& \text{(@thm-diagonalizable-powers)}
+\\
+&= \matr{X}\,\operatorname{diag}(3^k, 1)\,(\tfrac{1}{2}\,\matr{X})
+&& \text{(substitute } \matr{X}^{-1} \text{)}
+\\
+&= \tfrac{1}{2}\,\matr{X}\,\operatorname{diag}(3^k, 1)\,\matr{X}
+&& \text{(@thm-scalar-matmul)}
+\\
+&= \tfrac{1}{2} \begin{bmatrix} 3^k & 1 \\ 3^k & -1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
+&& \text{(@def-matrix-mult, for } \matr{X}\,\operatorname{diag}(3^k, 1) \text{)}
+\\
+&= \tfrac{1}{2} \begin{bmatrix} 3^k + 1 & 3^k - 1 \\ 3^k - 1 & 3^k + 1 \end{bmatrix}.
+&& \text{(@def-matrix-mult)}
+\ea
+$$
+
+For $k = 2$ this gives $\tfrac{1}{2} \begin{bmatrix} 10 & 8 \\ 8 & 10 \end{bmatrix} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$,
+which matches $\matr{A}^2$ in @exm-eigen-shift-power.
+
+:::

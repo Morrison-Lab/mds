@@ -1,0 +1,32 @@
+:::{#def-diagonalizable}
+#### Diagonalizable matrix
+
+A $p \times p$ matrix $\matr{A}$ is **diagonalizable**
+if $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$
+for some invertible $p \times p$ matrix $\matr{X}$ and diagonal $p \times p$ matrix $\matr{\Lambda}$
+(@def-diagonal-matrix);
+by @rem-similar-both-ways, that is the same as
+$\matr{\Lambda} = \matr{X}^{-1} \matr{A} \matr{X}$,
+so a diagonalizable matrix is one similar to a diagonal matrix (@def-similar).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-diagonalizable}
+#### Diagonalizable and not
+
+- $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is diagonalizable:
+  with $\matr{P}$ as in @exm-similar, $\operatorname{diag}(3, 1) = \matr{P}^{-1} \matr{A} \matr{P}$.
+- $\matr{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ is not.
+  Suppose $\matr{J} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$,
+  so $\matr{\Lambda} = \matr{X}^{-1} \matr{J} \matr{X}$ (@rem-similar-both-ways).
+  The eigenvalues of $\matr{\Lambda}$ are its diagonal entries (@thm-eigen-triangular,
+  since a diagonal matrix is upper triangular)
+  and are the eigenvalues of $\matr{J}$ (@thm-similar-eigenvalues),
+  of which $0$ is the only one (@exm-eigenspace).
+  So $\matr{\Lambda} = \matr{0}_{2 \times 2}$,
+  and then $\matr{J} = \matr{X}\,\matr{0}_{2 \times 2}\,\matr{X}^{-1} = \matr{0}_{2 \times 2}$ (@def-matrix-mult),
+  which it is not.
+
+:::
