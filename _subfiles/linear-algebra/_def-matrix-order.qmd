@@ -5,3 +5,14 @@ The **order** of a square matrix (@def-square-matrix)
 is its number of rows, which equals its number of columns.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-matrix-order}
+#### Orders of square matrices
+
+$\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ has order $2$,
+and $[5]$ has order $1$.
+A $2 \times 3$ matrix has no order, since it is not square (@exm-square-matrix).
+
+:::

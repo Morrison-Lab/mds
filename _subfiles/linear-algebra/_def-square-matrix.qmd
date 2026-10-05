@@ -4,3 +4,13 @@
 A matrix is **square** if it has the same number of rows as columns.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-square-matrix}
+#### Square and not square
+
+$\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ is square ($2$ rows, $2$ columns);
+$\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}$ is not ($2$ rows, $3$ columns).
+
+:::

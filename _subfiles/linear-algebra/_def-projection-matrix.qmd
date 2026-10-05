@@ -48,6 +48,7 @@ not an orthogonal projection matrix.
 
 :::
 
+
 {{< slidebreak >}}
 
 :::{#rem-projection-matrix-terminology}
