@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-04 23:54:11 (PDT)
+Last modified: 2026-10-05 00:18:33 (PDT)
 
 ## 1 Vectors
 
@@ -708,17 +708,17 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 ### 2.9 Subspaces
 
-This section is adapted from Zhou ([2024c](#ref-zhou2024vecsp)), used under the MIT License.
-
 > **NOTE:**
 >
-> Copyright (c) 2024 ucla-biostat-216
+> This section is adapted from Zhou ([2024c](#ref-zhou2024vecsp)), used under the MIT License. The license text is:
 >
-> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
->
-> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
->
-> THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+> > Copyright (c) 2024 ucla-biostat-216
+> >
+> > Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+> >
+> > The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+> >
+> > THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 > **NOTE:**
 >
@@ -1139,7 +1139,9 @@ This section is adapted from Zhou ([2024c](#ref-zhou2024vecsp)), used under the 
 
 ### 2.11 Rank-nullity and rank factorization
 
-This section is adapted from Zhou ([2024b](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)).
+> **NOTE:**
+>
+> This section is adapted from Zhou ([2024b](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)).
 
 > **NOTE:**
 >
@@ -1299,7 +1301,9 @@ This section is adapted from Zhou ([2024b](#ref-zhou2024rank)), used under the M
 
 ### 2.12 Sums and direct sums
 
-This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#sec-fundamental-theorem) are adapted from Zhou ([2024a](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 27](#thm-rank-nullity)) instead.
+> **NOTE:**
+>
+> This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#sec-fundamental-theorem) are adapted from Zhou ([2024a](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 27](#thm-rank-nullity)) instead.
 
 > **NOTE:**
 >
@@ -1667,7 +1671,9 @@ This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#
 
 ### 2.15 Cauchy-Schwarz and the triangle inequality
 
-This section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof of the triangle inequality to class; it is written out here.
+> **NOTE:**
+>
+> This section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof of the triangle inequality to class; it is written out here.
 
 > **NOTE:**
 >
@@ -1785,7 +1791,9 @@ This section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the
 
 ### 2.16 Orthonormal bases and Gram-Schmidt
 
-Like [Section 2.15](#sec-cauchy-schwarz), this section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
+> **NOTE:**
+>
+> Like [Section 2.15](#sec-cauchy-schwarz), this section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
 
 > **NOTE:**
 >
@@ -2956,6 +2964,127 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **NOTE:**
 >
 > *Remark 37* (Why it is called the hat matrix). The hat matrix gives the fitted values in linear regression: \\\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\\. Multiplying by \\\mathbf{H}\\ “puts a hat” on \\\tilde{y}\\, which is where the name comes from. In [Example 101](#exm-hat-matrix), \\\mathbf{H}\\ puts a hat on \\\tilde{y}\\ by replacing each \\y_i\\ with the sample mean \\\bar{y}\\.
+
+### 9.1 Orthogonal projection onto a subspace
+
+> **NOTE:**
+>
+> This section is adapted from the second half of Zhou ([2024a](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 52](#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 38](#thm-orthogonal-direct-sum).
+
+> **NOTE:**
+>
+> **Definition 68 (Orthogonal projection onto a subspace)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ and \\\tilde{y} \in \mathbb{R}^p\\. By [Theorem 38](#thm-orthogonal-direct-sum), \\\tilde{y} = \tilde{u} + \tilde{v}\\ for exactly one \\\tilde{u} \in \mathcal{S}\\ and \\\tilde{v} \in \mathcal{S}^\perp\\. The vector \\\tilde{u}\\ is the **orthogonal projection** of \\\tilde{y}\\ onto \\\mathcal{S}\\.
+
+> **NOTE:**
+>
+> **Example 103 (Projecting onto a line in \\\mathbb{R}^3\\)** In [Example 55](#exm-orthogonal-direct-sum), \\\tilde{y} = (3, 1, 2)\\ splits as \\(2, 2, 0) + (1, -1, 2)\\, with \\(2, 2, 0) \in \mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ and \\(1, -1, 2) \in \mathcal{S}^\perp\\. So the orthogonal projection of \\(3, 1, 2)\\ onto \\\mathcal{S}\\ is \\(2, 2, 0)\\. A vector already in \\\mathcal{S}\\, such as \\(5, 5, 0)\\, is its own projection, since \\(5, 5, 0) = (5, 5, 0) + \tilde{0}\\ and \\\tilde{0}\in \mathcal{S}^\perp\\ ([Theorem 36](#thm-orthogonal-complement-subspace), [Theorem 11](#thm-subspace-zero)); a vector of \\\mathcal{S}^\perp\\, such as \\(1, -1, 2)\\, projects to \\\tilde{0}\\, since \\(1, -1, 2) = \tilde{0}+ (1, -1, 2)\\ and \\\tilde{0}\in \mathcal{S}\\ ([Theorem 11](#thm-subspace-zero)).
+
+> **NOTE:**
+>
+> **Example 104 (A split that is not the orthogonal one)** \\(3, 1, 2) = (3, 3, 0) + (0, -2, 2)\\ also writes \\(3, 1, 2)\\ as a vector of \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ plus a remainder, but \\(1, 1, 0) \cdot (0, -2, 2) = -2 \ne 0\\, so the remainder is not in \\\mathcal{S}^\perp\\, and \\(3, 3, 0)\\ is not the orthogonal projection of \\(3, 1, 2)\\ onto \\\mathcal{S}\\.
+
+> **NOTE:**
+>
+> **Theorem 69 (The orthogonal projection is the closest point)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\, let \\\tilde{y} \in \mathbb{R}^p\\, and let \\\tilde{u}\\ be the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\ ([Definition 68](#def-orthogonal-projection)). Then for every \\\tilde{w} \in \mathcal{S}\\,
+>
+> \\ \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{}, \\
+>
+> with equality only when \\\tilde{w} = \tilde{u}\\.
+
+> **NOTE:**
+>
+> *Proof*. By [Definition 68](#def-orthogonal-projection), \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\. Both \\\tilde{u}\\ and \\\tilde{w}\\ are in \\\mathcal{S}\\, so \\\tilde{u} - \tilde{w} = \tilde{u} + (-1)\\\tilde{w} \in \mathcal{S}\\ ([Definition 28](#def-subspace)), and therefore \\(\tilde{y} - \tilde{u}) \perp (\tilde{u} - \tilde{w})\\ ([Definition 38](#def-orthogonal-complement)). Then
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(\tilde{y} - \tilde{u}) + (\tilde{u} - \tilde{w})\right\rVert\mathclose{}^2 && \text{(add and subtract } \tilde{u} \text{)} \\ &= \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 && \text{(Pythagorean theorem, @thm-norm-sum-square)} \\ &\ge \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{}^2, && \text{(} \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 \ge 0 \text{, @thm-norm-properties)} \end{aligned} \\
+>
+> with equality exactly when \\\mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{} = 0\\, that is, when \\\tilde{w} = \tilde{u}\\ ([Theorem 41](#thm-norm-properties), part 1). Taking nonnegative square roots preserves the inequality.
+
+> **NOTE:**
+>
+> **Example 105 (No point of the line is closer)** In [Example 103](#exm-orthogonal-projection), \\\tilde{y} = (3, 1, 2)\\ has projection \\\tilde{u} = (2, 2, 0)\\ onto \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, at distance \\\mathopen{}\left\lVert(1, -1, 2)\right\rVert\mathclose{} = \sqrt{6}\\. Another point of \\\mathcal{S}\\, such as \\\tilde{w} = (3, 3, 0)\\, is farther: \\\mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{} = \mathopen{}\left\lVert(0, -2, 2)\right\rVert\mathclose{} = \sqrt{8} \> \sqrt{6}\\, and the difference of squares is \\\mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert(-1, -1, 0)\right\rVert\mathclose{}^2 = 2 = 8 - 6\\, by the Pythagorean theorem ([Theorem 42](#thm-norm-sum-square)), since \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\ and \\\tilde{u} - \tilde{w} \in \mathcal{S}\\.
+
+> **NOTE:**
+>
+> **Theorem 70 (Projecting with an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = r \ge 1\\, and let \\\mathbf{Q}\\ be the \\p \times r\\ matrix whose columns \\\tilde{q}\_1, \ldots, \tilde{q}\_r\\ are an orthonormal basis of \\\mathcal{S}\\ ([Definition 40](#def-orthonormal-basis), [Corollary 3](#cor-orthonormal-basis-exists)). Then for every \\\tilde{y} \in \mathbb{R}^p\\, \\\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\, and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is an orthogonal projection matrix ([Definition 52](#def-projection-matrix)).
+
+> **NOTE:**
+>
+> *Proof*. **\\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\.** Write \\q\_{ki}\\ for entry \\k\\ of \\\tilde{q}\_i\\, which is entry \\(k, i)\\ of \\\mathbf{Q}\\. Then
+>
+> \\ \begin{aligned} ({\mathbf{Q}}^{\top} \mathbf{Q})\_{ij} &= \sum\_{k=1}^{p} ({\mathbf{Q}}^{\top})\_{ik}\\ q\_{kj} && \text{(@def-matrix-mult)} \\ &= \sum\_{k=1}^{p} q\_{ki}\\ q\_{kj} && \text{(@def-matrix-transpose)} \\ &= \tilde{q}\_i \cdot \tilde{q}\_j, && \text{(@def-dot-product)} \end{aligned} \\
+>
+> which is \\1\\ if \\i = j\\ and \\0\\ otherwise ([Definition 13](#def-orthonormal-vectors)), so \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\ ([Definition 46](#def-identity-matrix)).
+>
+> **The split.** Let \\\tilde{u} = \mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ and \\\tilde{v} = \tilde{y} - \tilde{u}\\, so \\\tilde{y} = \tilde{u} + \tilde{v}\\. \\\tilde{u} = \mathbf{Q}\\({\mathbf{Q}}^{\top} \tilde{y})\\ ([Theorem 7](#thm-matmul-assoc)) is in \\\mathcal{C}(\mathbf{Q})\\ ([Definition 32](#def-column-space)), which is \\\operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_r\right\\\mathclose{} = \mathcal{S}\\ ([Theorem 22](#thm-column-space-span)). For \\\tilde{v}\\,
+>
+> \\ \begin{aligned} {\mathbf{Q}}^{\top} \tilde{v} &= {\mathbf{Q}}^{\top}\\(\tilde{y} - \mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}) && \text{(substitute)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - {\mathbf{Q}}^{\top}\\(\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}) && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - ({\mathbf{Q}}^{\top} \mathbf{Q})\\{\mathbf{Q}}^{\top} \tilde{y} && \text{(@thm-matmul-assoc)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - \mathbf{I}\_r\\{\mathbf{Q}}^{\top} \tilde{y} && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r \text{, from the first part of the proof)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - {\mathbf{Q}}^{\top} \tilde{y} && \text{(@thm-identity)} \\ &= \tilde{0}\_r, && \text{(arithmetic)} \end{aligned} \\
+>
+> so \\\tilde{v} \in \mathcal{N}({\mathbf{Q}}^{\top}) = \mathcal{C}(\mathbf{Q})^\perp = \mathcal{S}^\perp\\ ([Theorem 37](#thm-complement-null-space)). By the uniqueness in [Theorem 38](#thm-orthogonal-direct-sum), \\\tilde{u}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\.
+>
+> **\\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is symmetric and idempotent.**
+>
+> \\ \begin{aligned} {(\mathbf{Q} {\mathbf{Q}}^{\top})}^{\top} &= {({\mathbf{Q}}^{\top})}^{\top}\\{\mathbf{Q}}^{\top} && \text{(@thm-transpose-product)} \\ &= \mathbf{Q} {\mathbf{Q}}^{\top}, && \text{(transposing twice, @def-matrix-transpose)} \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} (\mathbf{Q} {\mathbf{Q}}^{\top})(\mathbf{Q} {\mathbf{Q}}^{\top}) &= \mathbf{Q}\\({\mathbf{Q}}^{\top} \mathbf{Q})\\{\mathbf{Q}}^{\top} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{Q}\\\mathbf{I}\_r\\{\mathbf{Q}}^{\top} && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r \text{, from the first part of the proof)} \\ &= \mathbf{Q} {\mathbf{Q}}^{\top}. && \text{(@thm-identity)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 106 (The projection matrix onto a line)** For \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, the single vector \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\ is an orthonormal basis: it spans \\\mathcal{S}\\, it is nonzero and so linearly independent, and \\\mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} = 1\\. With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
+>
+> \\ \mathbf{Q} {\mathbf{Q}}^{\top} = \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 1 & 0 \end{bmatrix} = \begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 \end{bmatrix}. \\
+>
+> Applied to \\\tilde{y} = (3, 1, 2)\\, it gives \\\mathopen{}\left(\tfrac{3 + 1}{2}, \tfrac{3 + 1}{2}, 0\right)\mathclose{} = (2, 2, 0)\\, the projection found in [Example 103](#exm-orthogonal-projection).
+
+> **NOTE:**
+>
+> **Theorem 71 (A projection matrix projects onto its column space, and is the only one that does)**  
+>
+> 1.  If \\\mathbf{P}\\ is a \\p \times p\\ orthogonal projection matrix ([Definition 52](#def-projection-matrix)), then for every \\\tilde{y} \in \mathbb{R}^p\\, \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\ ([Definition 68](#def-orthogonal-projection)).
+> 2.  If \\\mathbf{P}\_1\\ and \\\mathbf{P}\_2\\ are \\p \times p\\ matrices such that, for every \\\tilde{y}\\, both \\\mathbf{P}\_1 \tilde{y}\\ and \\\mathbf{P}\_2 \tilde{y}\\ are the orthogonal projection of \\\tilde{y}\\ onto the same subspace \\\mathcal{S}\\, then \\\mathbf{P}\_1 = \mathbf{P}\_2\\.
+
+> **NOTE:**
+>
+> *Proof*. **Part 1.** Write \\\tilde{y} = \mathbf{P} \tilde{y} + (\tilde{y} - \mathbf{P} \tilde{y})\\. The first term is in \\\mathcal{C}(\mathbf{P})\\ ([Definition 32](#def-column-space)). For the second,
+>
+> \\ \begin{aligned} \mathbf{P}\\(\tilde{y} - \mathbf{P} \tilde{y}) &= \mathbf{P} \tilde{y} - \mathbf{P}\\(\mathbf{P} \tilde{y}) && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{P} \tilde{y} - (\mathbf{P} \mathbf{P})\\\tilde{y} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{P} \tilde{y} - \mathbf{P}^2 \tilde{y} && \text{(@def-matrix-power)} \\ &= \mathbf{P} \tilde{y} - \mathbf{P} \tilde{y} && \text{(} \mathbf{P} \text{ is idempotent)} \\ &= \tilde{0}\_p, && \text{(arithmetic)} \end{aligned} \\
+>
+> so \\\tilde{y} - \mathbf{P} \tilde{y} \in \mathcal{N}(\mathbf{P})\\. Since \\\mathbf{P} = {\mathbf{P}}^{\top}\\, \\\mathcal{N}(\mathbf{P}) = \mathcal{N}({\mathbf{P}}^{\top}) = \mathcal{C}(\mathbf{P})^\perp\\ ([Theorem 37](#thm-complement-null-space)). By the uniqueness in [Theorem 38](#thm-orthogonal-direct-sum), \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\.
+>
+> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 68](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \tilde{e}\_j = \mathbf{P}\_2 \tilde{e}\_j\\ for each indicator vector \\\tilde{e}\_j\\ ([Definition 9](#def-indicator-vector)). \\\mathbf{P}\_1 \tilde{e}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 13](#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\tilde{e}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 9](#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
+
+> **NOTE:**
+>
+> **Example 107 (Two routes to the same projection matrix)** The matrix \\\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ of [Example 78](#exm-projection-matrix) is an orthogonal projection matrix, and its column space is \\\operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\, the horizontal axis. By part 1, \\\mathbf{P}(v_1, v_2) = (v_1, 0)\\ is the orthogonal projection onto that axis: the remainder \\(0, v_2)\\ is orthogonal to \\(1, 0)\\. The vector \\\tilde{q}\_1 = (1, 0)\\ has length \\1\\ and spans the axis, so it is an orthonormal basis of it, and with \\\mathbf{B} = \[\tilde{q}\_1\]\\, \\\mathbf{B} {\mathbf{B}}^{\top} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} = \mathbf{P}\\, as part 2 and [Theorem 70](#thm-projector-onb) require.
+>
+> The oblique projection \\\mathbf{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\ of [Example 78](#exm-projection-matrix) also maps every vector into the horizontal axis. It sends \\(0, 1)\\ to \\(1, 0)\\, but the remainder \\(0, 1) - (1, 0) = (-1, 1)\\ is not orthogonal to the axis, so \\(1, 0)\\ is not the orthogonal projection of \\(0, 1)\\ onto the axis, which is \\\mathbf{P}(0, 1) = (0, 0)\\.
+
+> **NOTE:**
+>
+> **Theorem 72 (The hat matrix projects onto the column space of the design matrix)** If \\\mathbf{X}\\ is an \\n \times p\\ design matrix with \\\operatorname{rank}(\mathbf{X}) = p\\, then for every \\\tilde{y}\in \mathbb{R}^n\\, \\\mathbf{H} \tilde{y}\\ ([Definition 67](#def-hat-matrix)) is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\. So \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\ for any \\n \times p\\ matrix \\\mathbf{Q}\\ whose columns are an orthonormal basis of \\\mathcal{C}(\mathbf{X})\\.
+
+> **NOTE:**
+>
+> *Proof*. \\\mathbf{H}\\ is an orthogonal projection matrix ([Theorem 68](#thm-hat-matrix)), so \\\mathbf{H} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{H})\\ ([Theorem 71](#thm-projection-matrix-projects), part 1). It remains to show \\\mathcal{C}(\mathbf{H}) = \mathcal{C}(\mathbf{X})\\.
+>
+> **\\\mathcal{C}(\mathbf{H}) \subseteq \mathcal{C}(\mathbf{X})\\.** \\\mathbf{H} \tilde{z} = \mathbf{X}\\\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \tilde{z}\right)\mathclose{}\\ ([Theorem 7](#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 32](#def-column-space)).
+>
+> **\\\mathcal{C}(\mathbf{X}) \subseteq \mathcal{C}(\mathbf{H})\\.** First,
+>
+> \\ \begin{aligned} \mathbf{H} \mathbf{X} &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1} {\mathbf{X}}^{\top} \mathbf{X} && \text{(@def-hat-matrix)} \\ &= \mathbf{X}\\\mathopen{}\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1} ({\mathbf{X}}^{\top}\mathbf{X})\right)\mathclose{} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{X}\\\mathbf{I}\_p && \text{(@def-matrix-inverse)} \\ &= \mathbf{X}. && \text{(@thm-identity)} \end{aligned} \\
+>
+> So for every \\\tilde{b} \in \mathbb{R}^p\\, \\\mathbf{X}\tilde{b} = (\mathbf{H} \mathbf{X})\\\tilde{b}\\, since \\\mathbf{H} \mathbf{X}= \mathbf{X}\\, and \\(\mathbf{H} \mathbf{X})\\\tilde{b} = \mathbf{H}\\(\mathbf{X}\tilde{b})\\ ([Theorem 7](#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{H})\\.
+>
+> \\\mathcal{C}(\mathbf{X})\\ has dimension \\p \ge 1\\ ([Theorem 26](#thm-rank-dim)), so an orthonormal basis of it has \\p\\ vectors ([Definition 31](#def-dimension)), and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ also gives the orthogonal projection onto \\\mathcal{C}(\mathbf{X})\\ ([Theorem 70](#thm-projector-onb), with \\n\\ in place of \\p\\ and \\r = p\\). By [Theorem 71](#thm-projection-matrix-projects), part 2, \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\.
+
+> **NOTE:**
+>
+> **Example 108 (The intercept-only hat matrix, from an orthonormal basis)** For the intercept-only design \\\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ of [Example 101](#exm-hat-matrix), \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, with orthonormal basis \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1)\\, since \\\mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} = 1\\. With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
+>
+> \\ \mathbf{Q} {\mathbf{Q}}^{\top} = \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}, \\
+>
+> the hat matrix found in [Example 101](#exm-hat-matrix). The fitted values \\(\bar{y}, \bar{y})\\ are the closest point to \\\tilde{y}\\ on the line of constant vectors ([Theorem 69](#thm-closest-point)), and the residuals \\(y_1 - \bar{y}, y_2 - \bar{y})\\ are orthogonal to \\(1, 1)\\: \\(1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) = y_1 + y_2 - 2\bar{y} = 0\\, since \\2\bar{y} = y_1 + y_2\\.
 
 ## 10 Further reading
 
