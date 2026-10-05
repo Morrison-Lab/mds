@@ -22,6 +22,20 @@ So the orthogonal projection of $(3, 1, 2)$ onto $\mathcal{S}$ is $(2, 2, 0)$.
 A vector already in $\mathcal{S}$, such as $(5, 5, 0)$,
 is its own projection, since $(5, 5, 0) = (5, 5, 0) + \vzero$;
 a vector of $\mathcal{S}^\perp$, such as $(1, -1, 2)$,
-projects to $\vzero$.
+projects to $\vzero$, since $(1, -1, 2) = \vzero + (1, -1, 2)$
+and $\vzero \in \mathcal{S}$ (@thm-subspace-zero).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-orthogonal-projection}
+#### A split that is not the orthogonal one
+
+$(3, 1, 2) = (3, 3, 0) + (0, -2, 2)$ also writes $\vecf{y}$
+as a vector of $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$ plus a remainder,
+but $(1, 1, 0) \cdot (0, -2, 2) = -2 \ne 0$,
+so the remainder is not in $\mathcal{S}^\perp$,
+and $(3, 3, 0)$ is not the orthogonal projection of $(3, 1, 2)$ onto $\mathcal{S}$.
 
 :::

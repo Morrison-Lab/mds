@@ -13,16 +13,30 @@ and $\matr{Q} \tp{\matr{Q}}$ is an orthogonal projection matrix (@def-projection
 
 ::: proof
 
-**Entries of $\tp{\matr{Q}} \matr{Q}$.**
-Entry $(i, j)$ of $\tp{\matr{Q}} \matr{Q}$ is $\vecf{q}_i \cdot \vecf{q}_j$
-(@def-matrix-mult, @def-matrix-transpose),
-which is $1$ if $i = j$ and $0$ otherwise,
-so $\tp{\matr{Q}} \matr{Q} = \matr{I}_r$.
+**$\tp{\matr{Q}} \matr{Q} = \matr{I}_r$.**
+Write $q_{ki}$ for entry $k$ of $\vecf{q}_i$, which is entry $(k, i)$ of $\matr{Q}$. Then
+
+$$
+\ba
+(\tp{\matr{Q}} \matr{Q})_{ij}
+&= \sum_{k=1}^{p} (\tp{\matr{Q}})_{ik}\, q_{kj}
+&& \text{(@def-matrix-mult)}
+\\
+&= \sum_{k=1}^{p} q_{ki}\, q_{kj}
+&& \text{(@def-matrix-transpose)}
+\\
+&= \vecf{q}_i \cdot \vecf{q}_j,
+&& \text{(@def-dot-product)}
+\ea
+$$
+
+which is $1$ if $i = j$ and $0$ otherwise (@def-orthonormal-vectors),
+so $\tp{\matr{Q}} \matr{Q} = \matr{I}_r$ (@def-identity-matrix).
 
 **The split.**
 Let $\vecf{u} = \matr{Q} \tp{\matr{Q}} \vecf{y}$ and $\vecf{v} = \vecf{y} - \vecf{u}$,
 so $\vecf{y} = \vecf{u} + \vecf{v}$.
-$\vecf{u} = \matr{Q}\,(\tp{\matr{Q}} \vecf{y})$ is in $\mathcal{C}(\matr{Q})$ (@def-column-space),
+$\vecf{u} = \matr{Q}\,(\tp{\matr{Q}} \vecf{y})$ (@thm-matmul-assoc) is in $\mathcal{C}(\matr{Q})$ (@def-column-space),
 which is $\operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_r} = \mathcal{S}$
 (@thm-column-space-span).
 For $\vecf{v}$,
@@ -33,14 +47,20 @@ $$
 &= \tp{\matr{Q}}\,(\vecf{y} - \matr{Q} \tp{\matr{Q}} \vecf{y})
 && \text{(substitute)}
 \\
+&= \tp{\matr{Q}} \vecf{y} - \tp{\matr{Q}}\,(\matr{Q} \tp{\matr{Q}} \vecf{y})
+&& \text{(@thm-matmul-distrib, with the second term scaled by } -1 \text{)}
+\\
 &= \tp{\matr{Q}} \vecf{y} - (\tp{\matr{Q}} \matr{Q})\,\tp{\matr{Q}} \vecf{y}
-&& \text{(@thm-matmul-distrib, @thm-matmul-assoc)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \tp{\matr{Q}} \vecf{y} - \matr{I}_r\,\tp{\matr{Q}} \vecf{y}
-&& \text{(previous step)}
+&& \text{(first step)}
+\\
+&= \tp{\matr{Q}} \vecf{y} - \tp{\matr{Q}} \vecf{y}
+&& \text{(@thm-identity)}
 \\
 &= \vzero_r,
-&& \text{(@thm-identity)}
+&& \text{(arithmetic)}
 \ea
 $$
 
@@ -50,8 +70,20 @@ By the uniqueness in @thm-orthogonal-direct-sum,
 $\vecf{u}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{S}$.
 
 **$\matr{Q} \tp{\matr{Q}}$ is symmetric and idempotent.**
-$\tp{(\matr{Q} \tp{\matr{Q}})} = \tp{(\tp{\matr{Q}})}\,\tp{\matr{Q}} = \matr{Q} \tp{\matr{Q}}$
-(@thm-transpose-product), and
+
+
+$$
+\ba
+\tp{(\matr{Q} \tp{\matr{Q}})}
+&= \tp{(\tp{\matr{Q}})}\,\tp{\matr{Q}}
+&& \text{(@thm-transpose-product)}
+\\
+&= \matr{Q} \tp{\matr{Q}},
+&& \text{(transposing twice, @def-matrix-transpose)}
+\ea
+$$
+
+and
 
 $$
 \ba
@@ -75,8 +107,10 @@ $$
 #### The projection matrix onto a line
 
 For $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$,
-the single vector $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$ is an orthonormal basis,
-and
+the single vector $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$ is an orthonormal basis:
+it spans $\mathcal{S}$, it is nonzero and so linearly independent,
+and $\norm{\vecf{q}_1} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} = 1$.
+With $\matr{Q} = [\vecf{q}_1]$,
 
 $$
 \matr{Q} \tp{\matr{Q}}
