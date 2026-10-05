@@ -44,6 +44,10 @@ exists and is finite.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/videos/_note-video-limits.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#def-differentiable-on}
 #### Differentiable on an interval
 
@@ -347,3 +351,7 @@ S_2
 $$
 
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-riemann-sums.qmd >}}

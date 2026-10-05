@@ -1,0 +1,6 @@
+::: {.callout-tip title="Videos"}
+Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on these rules:
+
+- [The Integral Calculus Rules](https://www.youtube.com/watch?v=d-pyobAQ0iI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+- [Indefinite Integral Exercises](https://www.youtube.com/watch?v=PoTWa8X_EpI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+:::

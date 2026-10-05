@@ -1,0 +1,6 @@
+::: {.callout-tip title="Videos"}
+Jon Krohn's "Calculus for Machine Learning" YouTube playlist introduces integral calculus:
+
+- [Intro to Integral Calculus](https://www.youtube.com/watch?v=PNdKPsiaPhU&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+- [What Integral Calculus Is](https://www.youtube.com/watch?v=O7TuAb_jHTs&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+:::

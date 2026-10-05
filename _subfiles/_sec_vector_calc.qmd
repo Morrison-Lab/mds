@@ -126,6 +126,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/videos/_note-video-gradient-mse.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-chain-vec.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_rem-chain-vec.qmd >}}
@@ -133,6 +137,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_cor-chain-qf.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-chain-partials.qmd >}}
 
 {{< slidebreak >}}
 
@@ -154,6 +162,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-higher-partials.qmd >}}
 
 {{< slidebreak >}}
 
