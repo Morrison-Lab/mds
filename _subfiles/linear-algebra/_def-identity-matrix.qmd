@@ -27,3 +27,16 @@ the entries of the identity matrix are given by the
 $(\matr{I}_p)_{ij} = \delta_{ij}$.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-identity-matrix}
+#### The $3 \times 3$ identity
+
+$$
+\matr{I}_3 = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix},
+$$
+
+so, for instance, $(\matr{I}_3)_{22} = 1$ and $(\matr{I}_3)_{23} = 0$.
+
+:::

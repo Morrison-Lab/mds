@@ -13,6 +13,37 @@ exists and is finite.
 
 {{< slidebreak >}}
 
+:::{#exm-differentiable}
+#### A differentiable function, and a limit that is not finite
+
+- $f(x) = x^2$ is differentiable at $c = 3$:
+
+  $$
+  \ba
+  \frac{f(3 + h) - f(3)}{h}
+  &= \frac{(3 + h)^2 - 3^2}{h}
+  && \text{(substitute } f(x) = x^2 \text{)}
+  \\
+  &= \frac{9 + 6h + h^2 - 9}{h}
+  && \text{(expand } (3 + h)^2 \text{)}
+  \\
+  &= \frac{6h + h^2}{h}
+  && \text{(cancel } 9 - 9 \text{)}
+  \\
+  &= 6 + h
+  && \text{(divide by } h \ne 0 \text{)}
+  \ea
+  $$
+
+  which tends to the finite limit $f'(3) = 6$ as $h \to 0$.
+- $g(x) = \sqrt[3]{x}$ is not differentiable at $c = 0$:
+  the quotient $\tfrac{g(h) - g(0)}{h} = \tfrac{\sqrt[3]{h}}{h} = \tfrac{1}{(\sqrt[3]{h})^2}$ grows without bound as $h \to 0$,
+  so the limit is not finite.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#def-differentiable-on}
 #### Differentiable on an interval
 
@@ -21,6 +52,21 @@ if it is differentiable (@def-differentiable) at every interior point of the int
 at a closed endpoint, the appropriate one-sided derivative is used.
 
 [@larsonCalc11e, Section 2.1, p. 100]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-differentiable-on}
+#### Differentiable on one interval but not another
+
+- $f(x) = x^2$ is differentiable on $[0, 1]$:
+  the computation of @exm-differentiable with $3$ replaced by any $c$
+  gives $\tfrac{f(c + h) - f(c)}{h} = 2c + h$, which tends to $2c$,
+  including the one-sided limits at the endpoints $0$ and $1$.
+- $g(x) = \sqrt[3]{x}$ is differentiable on $[1, 2]$,
+  but not on $[-1, 1]$: the point $0$ is interior to $[-1, 1]$,
+  and @exm-differentiable shows $g$ is not differentiable there.
 
 :::
 
@@ -36,6 +82,27 @@ A function $f$ is **continuous at** $x = c$ if all three conditions hold:
 3. $\lim_{x \to c} f(x) = f(c)$.
 
 [@larsonCalc11e, Section 1.4, p. 73]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-continuous}
+#### A continuous function, and one failure of each condition
+
+- $f(x) = x^2$ is continuous at $c = 1$:
+  $f(1) = 1$ is defined, and $\lim_{x \to 1} x^2 = 1 = f(1)$.
+- $g(x) = \tfrac{x^2 - 1}{x - 1}$ fails condition 1 at $c = 1$:
+  $g(1)$ is not defined (it would divide by zero),
+  even though $\lim_{x \to 1} g(x) = \lim_{x \to 1} (x + 1) = 2$ exists
+  ($x^2 - 1 = (x - 1)(x + 1)$, and the factor $x - 1$ cancels for $x \ne 1$).
+- The step function $H(x) = 1$ for $x \ge 0$ and $H(x) = 0$ for $x < 0$
+  fails condition 2 at $c = 0$:
+  values to the left are all $0$ and values to the right are all $1$,
+  so $\lim_{x \to 0} H(x)$ does not exist.
+- $k(x) = x^2$ for $x \ne 1$, with $k(1) = 5$,
+  fails condition 3 at $c = 1$:
+  $\lim_{x \to 1} k(x) = 1$ exists but differs from $k(1) = 5$.
 
 :::
 
@@ -73,6 +140,18 @@ so $f$ is continuous on $[0, 1]$ (@def-continuous-on).
 
 {{< slidebreak >}}
 
+:::{#exm-not-continuous-on}
+#### A function not continuous on $\lbrack 0, 1\rbrack$
+
+Let $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$.
+Conditions 1 and 2 of @def-continuous-on hold,
+but $\lim_{x \to 1^-} f(x) = 0 \ne 2 = f(1)$,
+so condition 3 fails and $f$ is not continuous on $[0, 1]$.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#def-partition}
 #### Partition of an interval
 
@@ -96,6 +175,16 @@ of widths $\Delta x_i \eqdef x_i - x_{i-1}$.
 The points $0 < 0.25 < 0.5 < 1$ form a partition of $[0, 1]$
 with $n = 3$ subintervals,
 of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-partition}
+#### Lists that are not partitions of $\lbrack 0, 1\rbrack$
+
+- $0, 0.5, 0.25, 1$ is not a partition: the points are not increasing, since $0.5 > 0.25$.
+- $0 < 0.5$ is not a partition of $[0, 1]$: its last point is $0.5$, not $b = 1$.
 
 :::
 
@@ -158,6 +247,37 @@ and that limit is the same
 for every choice of the partitions and of the sample points.
 
 [@larsonCalc11e, Section 4.3, p. 272]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-integrable-constant}
+#### A constant function is integrable
+
+Let $f(x) = 2$ on $[0, 3]$.
+For every partition and every choice of sample points,
+
+$$
+\ba
+\sum_{i=1}^n f(x_i^*)\,\Delta x_i
+&= \sum_{i=1}^n 2\,\Delta x_i
+&& \text{(} f \text{ is } 2 \text{ everywhere)}
+\\
+&= 2 \sum_{i=1}^n \Delta x_i
+&& \text{(factor out the constant)}
+\\
+&= 2 \cd (3 - 0)
+&& \text{(the widths add up to the length of } [0, 3] \text{)}
+\\
+&= 6,
+&& \text{(multiply)}
+\ea
+$$
+
+so the sums have the same limit, $6$, for every choice:
+$f$ is Riemann integrable on $[0, 3]$ (@def-integrable),
+and $\int_0^3 2\,dx = 6$ (@def-riemann-integral).
 
 :::
 
