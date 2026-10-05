@@ -101,9 +101,9 @@ $g(0) = 0$, and each unit step in $x$ lowers $g$ by $\tfrac{1}{2}$.
 {{< slidebreak >}}
 
 :::{#rem-linear-function-terminology}
-#### School algebra calls $m x + b$ "linear"
+#### Elementary algebra calls $m x + b$ "linear"
 
-School algebra usually calls $f(x) = m x + b$ a *linear function*,
+Elementary algebra usually calls $f(x) = m x + b$ a *linear function*,
 because its graph is a straight line.
 This site calls that an affine function
 and keeps "linear" for the case $b = 0$,

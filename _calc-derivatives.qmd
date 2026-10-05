@@ -169,7 +169,7 @@ With $w$ held fixed, the right side of @eq-linear-approx is a function of the st
 and it is an [affine function](algebra.qmd#def-affine-function) of $\epsilon$:
 its slope is $\dif{}{w}f(w)$ and its intercept is $f(w)$.
 It is [linear](algebra.qmd#def-linear-function) in $\epsilon$ only when $f(w) = 0$.
-The name "linear approximation" uses "linear" in the looser, school-algebra sense
+The name "linear approximation" uses "linear" in the looser sense of elementary algebra
 ([remark](algebra.qmd#rem-linear-function-terminology)).
 @boyd2018vmls, section 2.2, treats this first-order Taylor approximation
 as an affine function, for functions of several variables as well.
