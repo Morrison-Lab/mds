@@ -18,7 +18,7 @@ $$
 && \text{(@thm-quadratic-form)}
 \\
 &= \paren{\deriv{\vx} \vx}\,\tp{(2 \matr{S})}
-&& \text{(@thm-deriv-matrix-vector, with } \matr{A} = 2 \matr{S} \text{ and } \vecf{v} = \vx \text{; } \deriv{\vx} \tp{\vy} = \deriv{\vx} \vy \text{, @def-vector-valued-derivative)}
+&& \text{(@thm-deriv-matrix-vector, with } \matr{A} = 2 \matr{S} \text{ and } \vecf{v} = \vx \text{; } \deriv{\vx} \tp{(2 \matr{S} \vx)} = \deriv{\vx} (2 \matr{S} \vx) \text{, @def-vector-valued-derivative)}
 \\
 &= \matr{I}_p\,\tp{(2 \matr{S})}
 && \text{(} \deriv{\vx} \vx = \matr{I}_p \text{, @rem-deriv-matrix-vector-special-case)}

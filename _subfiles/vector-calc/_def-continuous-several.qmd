@@ -1,15 +1,25 @@
 :::{#def-continuous-several}
 #### Continuity in several variables
 
-A real-valued function $f$ of a $p \times 1$ vector is **continuous at** $\vx$
+A function $f$ from $\reals^p$ to $\reals^q$ is **continuous at** $\vx$
 if for every $\varepsilon > 0$ there is a $\delta > 0$ such that
-$\abs{f(\vy) - f(\vx)} < \varepsilon$ whenever $\norm{\vy - \vx} < \delta$.
+$\norm{f(\vy) - f(\vx)} < \varepsilon$ whenever $\norm{\vy - \vx} < \delta$.
 It is **continuous on** a set if it is continuous at every point of the set.
-For $p = 1$, $\norm{\vy - \vx} = \abs{y - x}$,
-and this is the usual [continuity](calculus.qmd#def-continuous).
-A composition of continuous functions is continuous:
-choose the $\delta$ for the outer function first,
-and use it as the $\varepsilon$ for the inner one.
+For $q = 1$, $\norm{f(\vy) - f(\vx)} = \abs{f(\vy) - f(\vx)}$.
+For $p = q = 1$, this definition is the usual [continuity](calculus.qmd#def-continuous),
+written out with the $\varepsilon$-$\delta$ definition of the limit $\lim_{y \to x} f(y) = f(x)$.
+
+Continuity survives the usual operations:
+
+- A composition of continuous functions is continuous:
+  choose the $\delta$ for the outer function first,
+  and use it as the $\varepsilon$ for the inner one.
+- A sum $f + g$ of continuous real-valued functions is continuous,
+  since $\abs{(f + g)(\vy) - (f + g)(\vx)} \le \abs{f(\vy) - f(\vx)} + \abs{g(\vy) - g(\vx)}$:
+  use $\varepsilon / 2$ for each.
+- A constant multiple $c f$ is continuous,
+  since $\abs{c f(\vy) - c f(\vx)} = \abs{c}\,\abs{f(\vy) - f(\vx)}$:
+  use $\varepsilon / (\abs{c} + 1)$ for $f$.
 
 :::
 
