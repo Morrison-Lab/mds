@@ -1,0 +1,52 @@
+:::{#thm-similar-eigenvalues}
+#### Similar matrices have the same eigenvalues
+
+If $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$ (@def-similar),
+then $\vecf{v}$ is an eigenvector of $\matr{A}$ for $\lambda$
+exactly when $\matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\lambda$.
+So $\matr{A}$ and $\matr{B}$ have the same eigenvalues.
+
+:::
+
+::: proof
+
+If $\matr{A} \vecf{v} = \lambda \vecf{v}$ with $\vecf{v} \ne \vzero$, let $\vecf{w} = \matr{P}^{-1} \vecf{v}$. Then
+
+$$
+\ba
+\matr{B} \vecf{w}
+&= (\matr{P}^{-1} \matr{A} \matr{P})\,(\matr{P}^{-1} \vecf{v})
+&& \text{(substitute } \matr{B} \text{ and } \vecf{w} \text{)}
+\\
+&= \matr{P}^{-1} \matr{A}\,(\matr{P} \matr{P}^{-1})\,\vecf{v}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{P}^{-1} \matr{A} \vecf{v}
+&& \text{(@def-matrix-inverse, @thm-identity)}
+\\
+&= \matr{P}^{-1}\,(\lambda \vecf{v})
+&& \text{(eigenvector)}
+\\
+&= \lambda\,\vecf{w},
+&& \text{(@thm-scalar-matmul)}
+\ea
+$$
+
+and $\vecf{w} \ne \vzero$, since $\matr{P}^{-1}$ is invertible and so has null space $\cb{\vzero}$
+(@thm-invertible-rank).
+For the converse, $\matr{A} = \matr{P} \matr{B} \matr{P}^{-1} = (\matr{P}^{-1})^{-1} \matr{B}\,\matr{P}^{-1}$,
+so the same argument with the roles of $\matr{A}$ and $\matr{B}$ exchanged
+sends an eigenvector $\vecf{w}$ of $\matr{B}$ to the eigenvector $\matr{P} \vecf{w}$ of $\matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-similar-eigenvalues}
+#### Eigenvectors carried across a similarity
+
+In @exm-similar, $\matr{B} = \operatorname{diag}(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$.
+$\matr{P}\,(1, 0) = (1, 1)$ and $\matr{P}\,(0, 1) = (1, -1)$
+are the eigenvectors of $\matr{A}$ for $3$ and $1$ found in @exm-eigenvalue.
+
+:::

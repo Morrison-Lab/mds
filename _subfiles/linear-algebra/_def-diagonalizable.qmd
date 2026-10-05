@@ -1,0 +1,25 @@
+:::{#def-diagonalizable}
+#### Diagonalizable matrix
+
+A $p \times p$ matrix $\matr{A}$ is **diagonalizable**
+if it is similar (@def-similar) to a diagonal matrix (@def-diagonal-matrix):
+$\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$
+for some invertible $\matr{X}$ and diagonal $\matr{\Lambda}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-diagonalizable}
+#### Diagonalizable and not
+
+- $\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is diagonalizable,
+  being similar to $\operatorname{diag}(3, 1)$ (@exm-similar).
+- $\matr{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ is not.
+  Its only eigenvalue is $0$ (@exm-eigenspace),
+  so a diagonal matrix similar to it would have only $0$ on its diagonal
+  (@thm-eigen-triangular, @thm-similar-eigenvalues),
+  that is, would be $\matr{0}_{2 \times 2}$;
+  but then $\matr{J} = \matr{X}\,\matr{0}_{2 \times 2}\,\matr{X}^{-1} = \matr{0}_{2 \times 2}$, which it is not.
+
+:::

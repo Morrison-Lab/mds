@@ -1,0 +1,38 @@
+:::{#def-similar}
+#### Similar matrices
+
+Two $p \times p$ matrices $\matr{A}$ and $\matr{B}$ are **similar**
+if $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$
+for some invertible $p \times p$ matrix $\matr{P}$ (@def-invertible-matrix).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-similar}
+#### A matrix similar to a diagonal one
+
+With $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+and $\matr{P} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$,
+whose inverse is $\matr{P}^{-1} = \tfrac{1}{2}\,\matr{P}$
+(since $\matr{P}^2 = 2\,\matr{I}_2$):
+
+$$
+\ba
+\matr{P}^{-1} \matr{A} \matr{P}
+&= \tfrac{1}{2} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix}
+&& \text{(@def-matrix-mult, for } \matr{A} \matr{P} \text{)}
+\\
+&= \tfrac{1}{2} \begin{bmatrix} 6 & 0 \\ 0 & 2 \end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix},
+&& \text{(@def-scalar-mult)}
+\ea
+$$
+
+so $\matr{A}$ is similar to $\operatorname{diag}(3, 1)$.
+The identity matrix is similar only to itself:
+$\matr{P}^{-1} \matr{I}_p \matr{P} = \matr{P}^{-1} \matr{P} = \matr{I}_p$ for every invertible $\matr{P}$.
+
+:::

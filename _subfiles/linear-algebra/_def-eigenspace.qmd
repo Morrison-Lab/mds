@@ -1,0 +1,28 @@
+:::{#def-eigenspace}
+#### Eigenspace and geometric multiplicity
+
+Let $\lambda$ be an eigenvalue of a $p \times p$ matrix $\matr{A}$ (@def-eigenvalue).
+The **eigenspace** of $\lambda$ is
+$\mathcal{E}_\lambda \eqdef \mathcal{N}(\matr{A} - \lambda\,\matr{I}_p)$.
+Its dimension is the **geometric multiplicity** of $\lambda$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-eigenspace}
+#### Eigenspaces of two matrices
+
+- For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ of @exm-eigenvalue,
+  $\matr{A} - 3\,\matr{I}_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$
+  sends $\vecf{v}$ to $(v_2 - v_1)\,(1, -1)$,
+  so $\mathcal{E}_3 = \operatorname{span}\cb{(1, 1)}$, with geometric multiplicity $1$.
+- For $\matr{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$,
+  $\matr{J} \vecf{v} = (v_2, 0)$.
+  If $\matr{J} \vecf{v} = \lambda \vecf{v}$ with $\lambda \ne 0$,
+  the second entry gives $\lambda v_2 = 0$, so $v_2 = 0$,
+  and then the first gives $\lambda v_1 = 0$, so $\vecf{v} = \vzero$.
+  So $0$ is the only eigenvalue,
+  and $\mathcal{E}_0 = \mathcal{N}(\matr{J}) = \cb{(t, 0) : t \in \reals}$, with geometric multiplicity $1$.
+
+:::
