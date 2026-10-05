@@ -198,6 +198,8 @@
 
 {{< include mds/_subfiles/linear-algebra/_cor-linear-scalar.qmd >}}
 
+{{< include mds/_subfiles/linear-algebra/_note-video-linear-maps.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
@@ -205,6 +207,8 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-affine-map-props.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-reading-linear-affine.qmd >}}
 
 {{< slidebreak >}}
 

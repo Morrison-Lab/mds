@@ -1,0 +1,20 @@
+::: {.callout-tip title="Further reading"}
+- @zhou2024matrix, sections 6 ("Linear functions and operators")
+  and 7 ("Affine functions"),
+  proves that every linear function is a matrix-vector product
+  by the same route as @thm-linear-map-matrix,
+  and that every affine function has the form $\matr{A}\vx + \vec{b}$.
+  It defines "affine" differently, by
+  $f(\alpha \vx + \beta \vy) = \alpha f(\vx) + \beta f(\vy)$
+  whenever $\alpha + \beta = 1$,
+  and shows that this condition holds exactly for the maps $\matr{A}\vx + \vec{b}$,
+  so the two definitions agree.
+- @boyd2018vmls, chapter 2 ("Linear functions"),
+  covers the vector-to-number case:
+  linear functions as inner products, affine functions,
+  first-order Taylor approximation as an affine function,
+  and the regression model.
+  Section 8.1 ("Linear and affine functions")
+  covers the vector-to-vector case.
+  A free PDF is on the book's website.
+:::
