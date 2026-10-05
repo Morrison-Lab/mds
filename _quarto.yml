@@ -23,6 +23,7 @@ filters:
   - code-language-labels
   - revealjs-level1-slide-breaks.lua
   - revealjs-html-links.lua
+  - math-xrefs.lua
 
 format:
   pdf:
