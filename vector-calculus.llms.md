@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 03:22:45 (PDT)
+Last modified: 2026-10-05 03:45:07 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -560,7 +560,263 @@ See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_
 >
 > A constant gradient is the easy case, and it is not the case we usually face. Most objectives are curved — the squared error of a linear model is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.
 
-## 2 Further reading
+## 2 Second derivatives and optimality conditions
+
+> **NOTE:**
+>
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without proof; here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus.llms.md#def-flat-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
+>
+> - its one-variable Taylor example and its plots
+> - matrix calculus
+> - convexity
+> - Lagrange multipliers
+> - Newton’s method and gradient descent
+
+A minimizer of a function of one variable has a flat tangent line ([flat point](calculus.llms.md#def-flat-point)), and, at a flat point, a positive second derivative guarantees a strict local minimum. This section extends both facts to a function \\f\\ of a \\p \times 1\\ vector \\\tilde{x}\\: the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([Definition 1](#def-vector-derivative)) takes the place of the first derivative, and a \\p \times p\\ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every \\p \ge 1\\. Throughout, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\ means the gradient evaluated at \\\tilde{x}= \tilde{z}\\.
+
+> **NOTE:**
+>
+> **Definition 6 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ and whose second partial derivatives exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 3](#def-vector-valued-derivative)) of the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([Definition 1](#def-vector-derivative)):
+>
+> \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \\
+>
+> By [Definition 3](#def-vector-valued-derivative), with \\y_j = \frac{\partial}{\partial x_j} f(\tilde{x})\\, its \\(i, j)\\ entry is
+>
+> \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. \\
+
+> **NOTE:**
+>
+> **Example 16 (A Hessian matrix)** Let \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
+>
+> \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \begin{bmatrix} 2 e^{u} - 1 \\ e^{u} \end{bmatrix}. \\
+>
+> Differentiating each entry again,
+>
+> \\ \mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} \frac{\partial}{\partial x_1} (2 e^{u} - 1) & \frac{\partial}{\partial x_1} e^{u} \\ \frac{\partial}{\partial x_2} (2 e^{u} - 1) & \frac{\partial}{\partial x_2} e^{u} \end{bmatrix} = \begin{bmatrix} 4 e^{u} & 2 e^{u} \\ 2 e^{u} & e^{u} \end{bmatrix}, \\
+>
+> and at \\\tilde{x}= \tilde{0}\\, where \\u = 0\\, \\\mathbf{H}\_f(\tilde{0}) = \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\.
+
+> **NOTE:**
+>
+> **Example 17 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\. For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the difference quotient is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
+
+> **NOTE:**
+>
+> **Definition 7 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon \> 0\\ there is a \\\delta \> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\. For \\p = q = 1\\, this definition is the usual [continuity](calculus.llms.md#def-continuous), written out with the \\\varepsilon\\-\\\delta\\ definition of the limit \\\lim\_{y \to x} f(y) = f(x)\\.
+>
+> Continuity survives the usual operations:
+>
+> - A composition of continuous functions is continuous: choose the \\\delta\\ for the outer function first, and use it as the \\\varepsilon\\ for the inner one.
+> - A sum \\f + g\\ of continuous real-valued functions is continuous, since \\\mathopen{}\left\|(f + g)(\tilde{y}) - (f + g)(\tilde{x})\right\|\mathclose{} \le \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} + \mathopen{}\left\|g(\tilde{y}) - g(\tilde{x})\right\|\mathclose{}\\: use \\\varepsilon / 2\\ for each.
+> - A constant multiple \\c f\\ is continuous, since \\\mathopen{}\left\|c f(\tilde{y}) - c f(\tilde{x})\right\|\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\: use \\\varepsilon / (\mathopen{}\left\|c\right\|\mathclose{} + 1)\\ for \\f\\.
+
+> **NOTE:**
+>
+> **Example 18 (A continuous function, and a discontinuous one)**  
+>
+> - \\f(\tilde{x}) = x_1 + x_2\\ is continuous at every \\\tilde{x}\\. Each \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, since the squared length is a sum of nonnegative squares, so
+>
+>   \\ \begin{aligned} \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} &= \mathopen{}\left\|(y_1 - x_1) + (y_2 - x_2)\right\|\mathclose{} && \text{(subtract)} \\ &\le \mathopen{}\left\|y_1 - x_1\right\|\mathclose{} + \mathopen{}\left\|y_2 - x_2\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le 2\\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}, && \text{(each term is at most } \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \text{)} \end{aligned} \\
+>
+>   which is less than \\\varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta = \varepsilon / 2\\.
+>
+> - \\f(\tilde{x}) = 1\\ if \\x_1 \> 0\\ and \\f(\tilde{x}) = 0\\ otherwise is not continuous at \\\tilde{0}\\: for \\\varepsilon = \tfrac{1}{2}\\ and any \\\delta \> 0\\, the point \\\tilde{y}= {(\delta / 2, 0)}^{\top}\\ has \\\mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} = \delta / 2 \< \delta\\ but \\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{0})\right\|\mathclose{} = 1 \> \tfrac{1}{2}\\.
+
+> **NOTE:**
+>
+> **Theorem 10 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 7](#def-continuous-several)) on an open ball \\\mathopen{}\left\\\tilde{y}: \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\ around \\\tilde{x}\\, for some \\r \> 0\\, then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 6](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra.llms.md#def-symmetric-matrix)).
+
+The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
+
+> **NOTE:**
+>
+> **Example 19 (Mixed partial derivatives agree)** In [Example 16](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\tilde{x})\\ are both \\2 e^{2x_1 + x_2}\\.
+
+> **NOTE:**
+>
+> **Example 20 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the [derivative](calculus.llms.md#def-differentiable) in \\x_1\\ at \\(0, x_2)\\ is
+>
+> \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} = -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
+>
+> and \\\frac{\partial}{\partial x_1} f(\tilde{0}) = \lim\_{h \to 0} (0 - 0)/h = 0\\, so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 6](#def-hessian))
+>
+> \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} = \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} = \frac{d }{d x_2} (-x_2) = -1, \qquad \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} = \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} = \frac{d }{d x_1} x_1 = 1: \\
+>
+> the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 10](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
+
+> **NOTE:**
+>
+> **Theorem 11 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{x}\\, then \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ has \\\mathbf{H}\_f(\tilde{x}) = 2 \mathbf{S}\\ for every \\\tilde{x}\\.
+
+> **NOTE:**
+>
+> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(@def-hessian)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(@thm-quadratic-form)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(@thm-deriv-matrix-vector, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, @def-vector-valued-derivative)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, @rem-deriv-matrix-vector-special-case)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 21 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 10](#exm-deriv-quadratic-form), [Theorem 11](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta_i\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 6](#def-hessian)) gives
+>
+> \\ \mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \\
+
+> **NOTE:**
+>
+> **Theorem 12 (A minimizer has derivative zero)** Let \\g\\ be a real-valued function on an open interval containing \\c\\, and let \\g\\ be [differentiable](calculus.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\.
+
+> **NOTE:**
+>
+> *Proof*. Take \\\delta \> 0\\ as in the definition of a local minimizer, shrunk if needed so that \\(c - \delta, c + \delta)\\ lies inside the interval; then \\g(c) \le g(c + h)\\ whenever \\\mathopen{}\left\|h\right\|\mathclose{} \< \delta\\. For \\0 \< h \< \delta\\, the difference quotient is
+>
+> \\ \frac{g(c + h) - g(c)}{h} \ge 0, \\
+>
+> because its numerator is at least \\0\\ and its denominator is positive. As \\h \to 0\\ from the right, these quotients tend to \\g'(c)\\ (the two-sided limit exists, so the one-sided limit equals it), and a limit of numbers that are all at least \\0\\ is at least \\0\\; so \\g'(c) \ge 0\\. For \\-\delta \< h \< 0\\, the numerator is still at least \\0\\ but the denominator is negative, so the quotient is at most \\0\\, and in the same way, with \\h \to 0\\ from the left, \\g'(c) \le 0\\. Together, \\g'(c) = 0\\.
+
+> **NOTE:**
+>
+> **Example 22 (Applying the test, and its limits)**  
+>
+> - \\g(x) = (x - 2)^2\\ has its minimizer at \\c = 2\\, and \\g'(2) = 2 (2 - 2) = 0\\.
+> - The converse fails: \\g(x) = x^3\\ has \\g'(0) = 3 \cdot 0^2 = 0\\, but \\0\\ is not a local minimizer, since \\g(-h) = -h^3 \< 0 = g(0)\\ for every \\h \> 0\\.
+> - Differentiability is needed: \\g(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ has its minimizer at \\0\\, but the difference quotient \\\mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\1\\ for \\h \> 0\\ and \\-1\\ for \\h \< 0\\, so it has no limit and \\g'(0)\\ does not exist.
+
+> **NOTE:**
+>
+> **Definition 8 (Stationary point)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\. A point \\\tilde{z}\\ at which the gradient exists and
+>
+> \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{z}) = \tilde{0}\_{p \times 1} \\
+>
+> is a **stationary point** of \\f\\. For \\p = 1\\, this is a [flat point](calculus.llms.md#def-flat-point).
+
+> **NOTE:**
+>
+> **Example 23 (A stationary point, and a point that is not one)** Let \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\. Its gradient is \\{(2 x_1 - 2,\\ 2 x_2)}^{\top}\\, which is \\\tilde{0}\_{2 \times 1}\\ exactly when \\x_1 = 1\\ and \\x_2 = 0\\. So \\{(1, 0)}^{\top}\\ is its only stationary point, and \\\tilde{0}\\ is not one: the gradient there is \\{(-2, 0)}^{\top}\\.
+
+> **NOTE:**
+>
+> **Theorem 13 (First-order necessary condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. If \\\tilde{x}^\*\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\f\\ and the gradient of \\f\\ exists at \\\tilde{x}^\*\\, then \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 8](#def-stationary-point)).
+
+> **NOTE:**
+>
+> *Proof*. Take \\\delta \> 0\\ as in the definition of a local minimizer. Fix \\i \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\, let \\\tilde{e}\_i\\ be the vector with \\1\\ in entry \\i\\ and \\0\\ elsewhere, and let \\g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^\* + t\\\tilde{e}\_i)\\ for \\t \in \mathbb{R}\\. For \\\mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, \\\mathopen{}\left\lVert(\tilde{x}^\* + t\\\tilde{e}\_i) - \tilde{x}^\*\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{e}\_i\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, so \\g_i(0) = f(\tilde{x}^\*) \le f(\tilde{x}^\* + t\\\tilde{e}\_i) = g_i(t)\\: \\0\\ is a local minimizer of \\g_i\\. Moving \\\tilde{x}\\ from \\\tilde{x}^\*\\ along \\\tilde{e}\_i\\ changes only \\x_i\\, so \\g_i'(0)\\ is the partial derivative \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*)\\, which exists because the gradient does. By [Theorem 12](#thm-fermat), \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*) = g_i'(0) = 0\\. The equation \\g_i'(0) = 0\\ holds for every \\i\\, so every entry of the gradient at \\\tilde{x}^\*\\ is \\0\\ ([Definition 1](#def-vector-derivative)).
+
+> **NOTE:**
+>
+> **Example 24 (Using the condition to locate, and to rule out, minimizers)**  
+>
+> - For \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ of [Example 23](#exm-stationary-point), any local minimizer must be the stationary point \\{(1, 0)}^{\top}\\. It is one: completing the square, \\f(\tilde{x}) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)\\.
+> - For \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ of [Example 16](#exm-hessian), the second entry of the gradient is \\e^{2x_1 + x_2} \> 0\\, so \\f\\ has no stationary point, and so no local minimizer.
+> - The converse fails: \\f(\tilde{x}) = x_1^2 - x_2^2\\ has gradient \\{(2 x_1,\\ -2 x_2)}^{\top}\\, so \\\tilde{0}\\ is a stationary point, but \\f(0, t) = -t^2 \< 0 = f(\tilde{0})\\ for every \\t \ne 0\\, so \\\tilde{0}\\ is not a local minimizer.
+
+> **NOTE:**
+>
+> **Theorem 14 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus.llms.md#def-continuous) on \\\[a, b\]\\ and whose second derivative \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau \in (a, b)\\ with
+>
+> \\ g(b) = g(a) + g'(a)\\(b - a) + \frac{1}{2}\\g''(\tau)\\(b - a)^2. \\
+
+This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), Theorem 5.15); its proof uses the mean value theorem, which these notes do not develop.
+
+> **NOTE:**
+>
+> **Example 25 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so \\g' = g'' = g\\. [Theorem 14](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau \in (0, 1)\\. Solving, \\e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\\, so \\\tau = \log 1.43656 \approx 0.362\\, which is in \\(0, 1)\\.
+
+> **NOTE:**
+>
+> **Theorem 15 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 7](#def-continuous-several)), and let \\\tilde{z}, \tilde{h} \in \mathbb{R}^p\\. Then there is a \\\tau \in (0, 1)\\ with
+>
+> \\ f(\tilde{z} + \tilde{h}) = f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h}. \\
+
+> **NOTE:**
+>
+> *Proof*. Let \\g(t) \stackrel{\text{def}}{=}f(\tilde{z} + t \tilde{h})\\ for \\t \in \mathbb{R}\\, the values of \\f\\ along the line through \\\tilde{z}\\ in the direction \\\tilde{h}\\. The inner function \\\tilde{y}(t) = \tilde{z} + t \tilde{h}\\ has entries \\y_j = z_j + t h_j\\, so \\\frac{\partial}{\partial t} y_j = h_j\\, and its derivative ([Definition 3](#def-vector-valued-derivative)) is the \\1 \times p\\ matrix \\{\tilde{h}}^{\top}\\. By the vector chain rule ([Theorem 8](#thm-chain-vec), with its input \\t\\ of length \\1\\, its inner function \\\tilde{y}(t) = \tilde{z} + t \tilde{h}\\, and its outer function \\f\\),
+>
+> \\ \begin{aligned} g'(t) &= {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h}) && \text{(@thm-chain-vec)} \\ &= \sum\_{j=1}^{p} h_j\\\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}). && \text{(matrix product)} \end{aligned} \\
+>
+> The second step writes out the [matrix product](linear-algebra.llms.md#def-matrix-mult). \\g'\\ is continuous ([Definition 7](#def-continuous-several)): \\t \mapsto \tilde{z} + t \tilde{h}\\ is continuous, since \\\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left\|s - t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\\, each \\\frac{\partial}{\partial x_j} f\\ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each \\\frac{\partial}{\partial x_j} f\\ has continuous partial derivatives, the second partial derivatives of \\f\\, so the same chain-rule computation applies to it: \\\frac{\partial}{\partial t} \mathopen{}\left\[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right\]\mathclose{} = \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\\. So
+>
+> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^{p} h_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(@def-hessian; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
+>
+> The last step is again the [matrix product](linear-algebra.llms.md#def-matrix-mult). Now apply [Theorem 14](#thm-taylor-1d) to \\g\\ on \\\[0, 1\]\\: there is a \\\tau \in (0, 1)\\ with
+>
+> \\ \begin{aligned} f(\tilde{z} + \tilde{h}) &= g(1) && \text{(definition of } g \text{)} \\ &= g(0) + g'(0)\\(1 - 0) + \frac{1}{2}\\g''(\tau)\\(1 - 0)^2 && \text{(@thm-taylor-1d, with } a = 0, b = 1 \text{)} \\ &= g(0) + g'(0) + \frac{1}{2}\\g''(\tau) && \text{(} 1 - 0 = 1 \text{)} \\ &= f(\tilde{z}) + {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z}) + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h} && \text{(substitute } g(0), g'(0), g''(\tau) \text{)} \\ &= f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h}. && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 26 (For a quadratic form the expansion is exact)** Let \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. Its gradient is \\2 \mathbf{S} \tilde{x}\\ ([Theorem 7](#thm-quadratic-form)) and its Hessian is \\2 \mathbf{S}\\ at every point ([Theorem 11](#thm-hessian-quadratic)), so whatever \\\tau\\ is, [Theorem 15](#thm-taylor-mv) reads
+>
+> \\ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h} = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}, \\
+>
+> using \\{(2 \mathbf{S} \tilde{z})}^{\top} = 2\\{\tilde{z}}^{\top}\\{\mathbf{S}}^{\top} = 2\\{\tilde{z}}^{\top} \mathbf{S}\\. Multiplying out directly gives the same:
+>
+> \\ \begin{aligned} {(\tilde{z} + \tilde{h})}^{\top} \mathbf{S} (\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{z} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h} && \text{(distribute)} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}. && \text{(} {\tilde{h}}^{\top} \mathbf{S} \tilde{z} = {({\tilde{h}}^{\top} \mathbf{S} \tilde{z})}^{\top} = {\tilde{z}}^{\top} \mathbf{S} \tilde{h} \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Definition 9 (Strict local minimizer)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A point \\\tilde{x}^\*\\ is a **strict local minimizer** of \\f\\ if there is a number \\\delta \> 0\\ such that \\f(\tilde{x}^\*) \< f(\tilde{x})\\ for every \\\tilde{x}\ne \tilde{x}^\*\\ with \\\mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\.
+
+> **NOTE:**
+>
+> **Example 27 (Strict and non-strict local minimizers)**  
+>
+> - \\f(x) = (x - 2)^2\\ has \\f(2) = 0 \< (x - 2)^2 = f(x)\\ for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta \> 0\\ works).
+> - A constant function \\f(\tilde{x}) = 0\\ has \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for all \\\tilde{x}^\*\\ and \\\tilde{x}\\, so every point is a [local minimizer](algebra.llms.md#def-local-minimizer), but no point is a strict one: \\f(\tilde{x}^\*) \< f(\tilde{x})\\ never holds.
+
+> **NOTE:**
+>
+> **Lemma 1 (A quadratic form is at least the smallest eigenvalue times the squared length)** Let \\\mathbf{A}\\ be a symmetric \\p \times p\\ matrix, and let \\\lambda\_{\min}\\ be the smallest of its eigenvalues ([eigendecomposition](linear-algebra.llms.md#def-eigendecomposition)). Then \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} \ge \lambda\_{\min}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2\\ for every \\\tilde{h} \in \mathbb{R}^p\\.
+
+> **NOTE:**
+>
+> *Proof*. Write \\\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}\\ with \\\mathbf{Q}\\ orthogonal and \\\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\\ ([spectral theorem](linear-algebra.llms.md#thm-spectral)), and let \\\tilde{y} \stackrel{\text{def}}{=}{\mathbf{Q}}^{\top} \tilde{h}\\. Then
+>
+> \\ \begin{aligned} {\tilde{h}}^{\top} \mathbf{A} \tilde{h} &= {\tilde{h}}^{\top} \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top} \tilde{h} && \text{(substitute the eigendecomposition)} \\ &= {\tilde{y}}^{\top} \mathbf{\Lambda} \tilde{y} && \text{(} {\tilde{h}}^{\top} \mathbf{Q} = {({\mathbf{Q}}^{\top} \tilde{h})}^{\top} \text{, transpose of a product)} \\ &= \sum\_{i=1}^{p} \lambda_i\\y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \\ &\ge \sum\_{i=1}^{p} \lambda\_{\min}\\y_i^2 && \text{(} \lambda_i \ge \lambda\_{\min} \text{ and } y_i^2 \ge 0 \text{)} \\ &= \lambda\_{\min}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(the squared length is the sum of squares)} \\ &= \lambda\_{\min}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(orthogonal matrices preserve length)} \end{aligned} \\
+>
+> The second step is the [transpose of a product](linear-algebra.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra.llms.md#thm-orthogonal-norm) to \\{\mathbf{Q}}^{\top}\\, which is orthogonal because \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ ([orthogonal matrix](linear-algebra.llms.md#def-orthogonal-matrix)).
+
+> **NOTE:**
+>
+> **Example 28 (Checking the bound)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([eigenvalue example](linear-algebra.llms.md#exm-eigenvalue)), so \\\lambda\_{\min} = 1\\. At \\\tilde{h} = {(1, 0)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\\. At \\\tilde{h} = {(1, -1)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\\: the bound holds with equality, since this \\\tilde{h}\\ is an eigenvector for \\\lambda\_{\min}\\.
+
+> **NOTE:**
+>
+> **Lemma 2 (A quadratic form with small entries is small)** Let \\\mathbf{E}\\ be a \\p \times p\\ matrix whose entries all satisfy \\\mathopen{}\left\|e\_{ij}\right\|\mathclose{} \le m\\. Then \\\mathopen{}\left\|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right\|\mathclose{} \le p\\m\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2\\ for every \\\tilde{h} \in \mathbb{R}^p\\.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\tilde{a} \stackrel{\text{def}}{=}{(\mathopen{}\left\|h_1\right\|\mathclose{}, \ldots, \mathopen{}\left\|h_p\right\|\mathclose{})}^{\top}\\ and \\\tilde{1} \stackrel{\text{def}}{=}{(1, \ldots, 1)}^{\top}\\, both in \\\mathbb{R}^p\\. Then
+>
+> \\ \begin{aligned} \mathopen{}\left\|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right\|\mathclose{} &= \mathopen{}\left\|\sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\e\_{ij}\\h_j\right\|\mathclose{} && \text{(matrix product)} \\ &\le \sum\_{i=1}^{p} \sum\_{j=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|e\_{ij}\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le m \sum\_{i=1}^{p} \sum\_{j=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(} \mathopen{}\left\|e\_{ij}\right\|\mathclose{} \le m \text{)} \\ &= m\\\mathopen{}\left(\sum\_{i=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\right)\mathclose{}^2 && \text{(the double sum factors)} \\ &= m\\(\tilde{1} \cdot \tilde{a})^2 && \text{(dot product)} \\ &\le m\\\mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 && \text{(Cauchy-Schwarz, squared)} \\ &= m\\p\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(} \mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2 = p \text{ and } \mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 = \textstyle\sum_i h_i^2 = \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 \text{)} \end{aligned} \\
+>
+> The steps use the [matrix product](linear-algebra.llms.md#def-matrix-mult), the [dot product](linear-algebra.llms.md#def-dot-product) and the [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
+
+> **NOTE:**
+>
+> **Example 29 (Checking the bound)** Let \\\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}\\, so \\m = 0.2\\ works, and \\\tilde{h} = {(1, 1)}^{\top}\\, so \\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\\. Then \\{\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\\, and \\\mathopen{}\left\|-0.2\right\|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\\.
+
+> **NOTE:**
+>
+> **Theorem 16 (Second-order sufficient condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 7](#def-continuous-several)). If \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 8](#def-stationary-point)) and \\\mathbf{H}\_f(\tilde{x}^\*)\\ is [positive definite](linear-algebra.llms.md#def-positive-definite), then \\\tilde{x}^\*\\ is a strict local minimizer of \\f\\ ([Definition 9](#def-strict-local-minimizer)).
+
+> **NOTE:**
+>
+> *Proof*. \\\mathbf{H}\_f(\tilde{x}^\*)\\ is positive definite, and so symmetric, so its smallest eigenvalue \\\lambda\\ is positive ([definiteness and eigenvalues](linear-algebra.llms.md#thm-definite-eigenvalues)). Each of the \\p^2\\ entries of \\\mathbf{H}\_f\\ is continuous at \\\tilde{x}^\*\\ ([Definition 7](#def-continuous-several)): for \\\varepsilon = \lambda / (2p)\\ there is a \\\delta\_{ij} \> 0\\ with \\\mathopen{}\left\|\mathopen{}\left\[\mathbf{H}\_f(\tilde{y})\right\]\mathclose{}\_{ij} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^\*)\right\]\mathclose{}\_{ij}\right\|\mathclose{} \< \lambda / (2p)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\_{ij}\\. Let \\\delta\\ be the smallest of these \\p^2\\ numbers.
+>
+> Now let \\0 \< \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\. By [Theorem 15](#thm-taylor-mv) there is a \\\tau \in (0, 1)\\ for which the first step of the next display holds; let \\\tilde{y}\stackrel{\text{def}}{=}\tilde{x}^\* + \tau \tilde{h}\\ and \\\mathbf{E} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{y}) - \mathbf{H}\_f(\tilde{x}^\*)\\. Since \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} = \tau\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\, every entry of \\\mathbf{E}\\ has absolute value less than \\\lambda / (2p)\\, so [Lemma 2](#lem-qf-entry-bound) applies with \\m = \lambda / (2p)\\:
+>
+> \\ \begin{aligned} f(\tilde{x}^\* + \tilde{h}) - f(\tilde{x}^\*) &= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{y})\\\tilde{h} && \text{(@thm-taylor-mv)} \\ &= \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{y})\\\tilde{h} && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x}^\*)\\\tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h} && \text{(} \mathbf{H}\_f(\tilde{y}) = \mathbf{H}\_f(\tilde{x}^\*) + \mathbf{E} \text{; distribute)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h} && \text{(@lem-qf-eigen-bound)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\\\mathopen{}\left\|{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h}\right\|\mathclose{} && \text{(a number is at least minus its absolute value)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\\p\\\frac{\lambda}{2p}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 && \text{(@lem-qf-entry-bound, } m = \lambda / (2p) \text{)} \\ &= \frac{\lambda}{4}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 && \text{(arithmetic)} \\ &\> 0. && \text{(} \lambda \> 0 \text{ and } \tilde{h} \ne \tilde{0}\text{)} \end{aligned} \\
+>
+> So \\f(\tilde{x}^\*) \< f(\tilde{x})\\ whenever \\0 \< \mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\ (take \\\tilde{h} = \tilde{x}- \tilde{x}^\*\\).
+
+> **NOTE:**
+>
+> **Example 30 (Classifying stationary points)**  
+>
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has the stationary point \\{(1, 0)}^{\top}\\ ([Example 23](#exm-stationary-point)), and its Hessian is \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = 2 \mathbf{I}\_2\\, which is positive definite, so \\{(1, 0)}^{\top}\\ is a strict local minimizer.
+> - \\f(\tilde{x}) = x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\ and Hessian \\\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}\\, which is not positive definite (\\{(0, 1)}^{\top}\\ gives \\-2\\), and indeed \\\tilde{0}\\ is not a local minimizer ([Example 24](#exm-first-order-condition)).
+
+> **NOTE:**
+>
+> **Example 31 (The condition is sufficient, not necessary)** \\f(\tilde{x}) = x_1^2 + x_2^4\\ and \\g(\tilde{x}) = x_1^2 - x_2^4\\ both have gradient \\\tilde{0}\\ at \\\tilde{0}\\ and the same Hessian there, \\\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\\, since \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\\ at \\x_2 = 0\\. That Hessian is not positive definite (\\{(0, 1)}^{\top}\\ gives \\0\\), so [Theorem 16](#thm-second-order-condition) says nothing about either function. In fact \\\tilde{0}\\ is a strict local minimizer of \\f\\, since \\f(\tilde{x}) \> 0 = f(\tilde{0})\\ for \\\tilde{x}\ne \tilde{0}\\, but not a local minimizer of \\g\\, since \\g(0, t) = -t^4 \< 0 = g(\tilde{0})\\ for \\t \ne 0\\.
+
+## 3 Further reading
 
 - Marsden and Tromba ([2013](#ref-marsden2013vector)) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 
@@ -575,5 +831,9 @@ Fieller, Nick. 2016. *Basics of Matrix Algebra for Statistics with R*. Chapman; 
 Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
 
 Marsden, Jerrold E., and Anthony Tromba. 2013. *Vector Calculus*. 6th ed. Macmillan Learning. <https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089>.
+
+Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+
+Zhou, Hua. 2024. *Optimization and Multivariate Calculus*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html>.
 
 Back to top
