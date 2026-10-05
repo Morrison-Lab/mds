@@ -1,0 +1,32 @@
+:::{#def-gradient-descent}
+#### Gradient descent
+
+Let $f : \reals^p \to \reals$ have first partial derivatives,
+let $\vx^{(0)}$ be a starting point,
+and let $s^{(0)}, s^{(1)}, \ldots$ be positive **step lengths**.
+**Gradient descent** computes, for $t = 0, 1, 2, \ldots$,
+
+$$
+\vx^{(t+1)} \eqdef \vx^{(t)} - s^{(t)}\,\deriv{\vx} f(\vx^{(t)}).
+$$
+
+It is Newton's method (@def-newton-method) with the Hessian replaced by $\tfrac{1}{s^{(t)}} \matr{I}_p$,
+so it needs no second derivatives.
+Choosing $s^{(t)}$ to minimize $f(\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}))$ over $s > 0$ is **exact line search**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gradient-descent}
+#### Fixed steps on a parabola
+
+For $f(x) = x^2$, $f'(x) = 2x$, so gradient descent with fixed step length $s$ is
+$x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}$, and $x^{(t)} = (1 - 2s)^t x^{(0)}$.
+
+- With $s = 0.25$, $x^{(t)} = 0.5^t x^{(0)}$, which tends to the minimizer $0$.
+- With $s = 0.5$, the first step lands on $0$, since $1 - 2s = 0$.
+- With $s = 1.5$, $x^{(t)} = (-2)^t x^{(0)}$, which moves away from $0$ for any $x^{(0)} \ne 0$:
+  too long a step can make gradient descent fail.
+
+:::

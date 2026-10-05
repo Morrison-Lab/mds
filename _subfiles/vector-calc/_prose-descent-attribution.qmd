@@ -1,0 +1,19 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from the Newton-Raphson and gradient descent parts of @zhou2024optim,
+used under the MIT License
+(see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
+The source motivates the Newton step by minimizing a quadratic approximation;
+here that step is proved to be the exact minimizer of the quadratic model.
+In the source's zigzag example the starting value of the objective is $\tfrac{1}{2}(b^2 + b)$,
+not $\tfrac{1}{2}(1 + b^2)$ as the source writes;
+the ratio of successive values is unaffected.
+These parts of the source are not part of this section:
+
+- the quadratic convergence theorem for Newton's method in general, and line search for Newton's method
+- the convergence-rate theorem for strongly convex functions
+- gradient descent with momentum, and its optimal parameters
+- its code and animations
+
+:::

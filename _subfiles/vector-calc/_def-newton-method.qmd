@@ -1,0 +1,47 @@
+:::{#def-newton-method}
+#### Newton's method for minimization
+
+Let $f : \reals^p \to \reals$ have first and second partial derivatives,
+and let $\vx^{(0)}$ be a starting point.
+**Newton's method** computes, for $t = 0, 1, 2, \ldots$, as long as $\matr{H}_f(\vx^{(t)})$ is invertible,
+
+$$
+\vx^{(t+1)} \eqdef \vx^{(t)} - \sb{\matr{H}_f(\vx^{(t)})}^{-1} \deriv{\vx} f(\vx^{(t)}).
+$$
+
+The vector $-\sb{\matr{H}_f(\vx^{(t)})}^{-1} \deriv{\vx} f(\vx^{(t)})$ is the **Newton step** at $\vx^{(t)}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-newton-method}
+#### Newton's method for a cubic
+
+Let $f(x) = \tfrac{1}{3} x^3 - 4x$, so $f'(x) = x^2 - 4$ and $f''(x) = 2x$.
+For $x^{(t)} \ne 0$, one Newton step gives
+
+$$
+\ba
+x^{(t+1)}
+&= x^{(t)} - \frac{(x^{(t)})^2 - 4}{2 x^{(t)}}
+&& \text{(Newton's method with } p = 1 \text{)}
+\\
+&= \frac{2 (x^{(t)})^2 - (x^{(t)})^2 + 4}{2 x^{(t)}}
+&& \text{(common denominator)}
+\\
+&= \frac{1}{2} \paren{x^{(t)} + \frac{4}{x^{(t)}}}.
+&& \text{(simplify)}
+\ea
+$$
+
+From $x^{(0)} = 2.5$:
+
+- $x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05$;
+- $x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610$ (to six decimals);
+- $x^{(3)} = 2.0000001$ (to seven decimals).
+
+The iterates approach $2$, the local minimizer of $f$
+(a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; @thm-second-order-condition).
+
+:::

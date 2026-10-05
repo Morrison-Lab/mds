@@ -1,0 +1,51 @@
+:::{#thm-descent-direction}
+#### A short enough step downhill decreases the function
+
+Let $f : \reals^p \to \reals$ have first partial derivatives
+that are continuous on $\reals^p$ (@def-continuous-several),
+and let $\vecf{g} \eqdef \deriv{\vx} f(\vx) \ne \vzero_{p \times 1}$.
+Then there is an $\bar{s} > 0$ with $f(\vx - s \vecf{g}) < f(\vx)$ for every $s \in (0, \bar{s})$.
+
+:::
+
+::: proof
+
+Let $h(s) \eqdef f(\vx - s \vecf{g})$.
+The inner function $s \mapsto \vx - s \vecf{g}$ has derivative $-\tp{\vecf{g}}$ (@def-vector-valued-derivative),
+so by the vector chain rule (@thm-chain-vec)
+
+$$
+\ba
+h'(0)
+&= -\tp{\vecf{g}}\,\deriv{\vx} f(\vx)
+&& \text{(chain rule)}
+\\
+&= -\tp{\vecf{g}} \vecf{g}
+&& \text{(definition of } \vecf{g} \text{)}
+\\
+&= -\norm{\vecf{g}}^2
+&& \text{(squared length)}
+\\
+&< 0.
+&& \text{(} \vecf{g} \ne \vzero_{p \times 1} \text{)}
+\ea
+$$
+
+Since $h'(0) = \lim_{s \to 0} (h(s) - h(0)) / s$ is negative,
+taking $\varepsilon = \abs{h'(0)}$ in the definition of the limit gives an $\bar{s} > 0$
+such that $(h(s) - h(0)) / s < h'(0) + \abs{h'(0)} = 0$ for $0 < s < \bar{s}$.
+Multiplying by $s > 0$, $h(s) < h(0)$, that is, $f(\vx - s \vecf{g}) < f(\vx)$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-descent-direction}
+#### How short is short enough
+
+In @exm-gradient-descent, $f(x) = x^2$ at $x \ne 0$ has $g = 2x$, and
+$f(x - 2 s x) = (1 - 2s)^2 x^2 < x^2$ exactly when $\abs{1 - 2s} < 1$, that is, when $0 < s < 1$.
+So @thm-descent-direction holds with $\bar{s} = 1$,
+and the step $s = 1.5$ of that example was too long.
+
+:::

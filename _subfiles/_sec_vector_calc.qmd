@@ -257,3 +257,35 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_cor-qp-sensitivity.qmd >}}
+
+## Newton's method and gradient descent {#sec-descent}
+
+{{< include mds/_subfiles/vector-calc/_prose-descent-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-newton-method.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-newton-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-newton-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-newton-convergence.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-gradient-descent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-descent-direction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-gd-zigzag.qmd >}}
