@@ -21,6 +21,7 @@ Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-
 - `references.bib` --- BibTeX bibliography
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (saved under `mln-theme`, shared with the slides and the other sites on this origin)
 - `styles.css` --- website styling; `styles-reveal.scss`, `qwt-reveal-toggle.html` (the same dropdown for slides), and the `revealjs-*.lua` filters drive the reveal.js slide output
+- `math-xrefs.lua` --- resolves `@id` cross-references written inside math (for example a `\text{(@thm-spectral)}` derivation annotation), which Quarto leaves as literal text; it numbers theorem-type divs and labelled equations the way Quarto does and writes the label ("Theorem 59"), linked in HTML
 - `assets/`, `images/` --- static image and asset files (site pages, docs, CI/PR screenshots)
 - `.github/workflows/` --- CI workflow definitions
 - `.github/scripts/` --- helper scripts used by workflows
