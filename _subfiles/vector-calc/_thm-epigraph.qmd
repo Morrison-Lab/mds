@@ -1,0 +1,58 @@
+:::{#thm-epigraph}
+#### Convexity through the epigraph
+
+$f : \reals^p \to \reals$ is [convex](algebra.qmd#def-convex-function)
+if and only if its epigraph (@def-epigraph) is convex (@def-convex-set).
+
+:::
+
+::: proof
+
+**If.**
+Let $\vx, \vy \in \reals^p$ and $t \in [0, 1]$.
+The points $(\vx, f(\vx))$ and $(\vy, f(\vy))$ are in $\operatorname{epi} f$,
+since $f(\vx) \le f(\vx)$ and $f(\vy) \le f(\vy)$.
+Since $\operatorname{epi} f$ is convex, it contains
+
+$$
+t\,(\vx, f(\vx)) + (1 - t)\,(\vy, f(\vy)) = \paren{t \vx + (1 - t) \vy,\ t f(\vx) + (1 - t) f(\vy)},
+$$
+
+and by @def-epigraph that membership means $f(t \vx + (1 - t) \vy) \le t f(\vx) + (1 - t) f(\vy)$.
+
+**Only if.**
+Let $(\vx, s)$ and $(\vy, u)$ be in $\operatorname{epi} f$, so $f(\vx) \le s$ and $f(\vy) \le u$,
+and let $t \in [0, 1]$. Then
+
+$$
+\ba
+f(t \vx + (1 - t) \vy)
+&\le t f(\vx) + (1 - t) f(\vy)
+&& \text{(} f \text{ is convex)}
+\\
+&\le t s + (1 - t) u,
+&& \text{(} f(\vx) \le s \text{, } f(\vy) \le u \text{, and } t, 1 - t \ge 0 \text{)}
+\ea
+$$
+
+so $t\,(\vx, s) + (1 - t)\,(\vy, u) = (t \vx + (1 - t) \vy,\ t s + (1 - t) u)$ is in $\operatorname{epi} f$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-epigraph}
+#### Two epigraphs
+
+- The epigraph of $f(x) = \abs{x}$ is $\cb{(x, s) : \abs{x} \le s}$, a wedge.
+  It is the intersection of the half-planes $\cb{(x, s) : s - x \ge 0}$ and $\cb{(x, s) : s + x \ge 0}$.
+  Each half-plane is convex: if $s_1 - x_1 \ge 0$ and $s_2 - x_2 \ge 0$, then
+  $(t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0$,
+  and the same with $+$ for the other.
+  So the wedge is convex (@thm-convex-intersection), and $\abs{x}$ is convex by @thm-epigraph.
+- The epigraph of $g(x) = -x^2$ is not convex:
+  $(-1, -1)$ and $(1, -1)$ are in it, since $g(\pm 1) = -1$,
+  but their midpoint $(0, -1)$ is not, since $g(0) = 0 > -1$.
+  So $-x^2$ is not convex.
+
+:::

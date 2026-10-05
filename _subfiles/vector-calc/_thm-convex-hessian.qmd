@@ -1,0 +1,95 @@
+:::{#thm-convex-hessian}
+#### Second-derivative test for convexity
+
+Let $f : \reals^p \to \reals$ have first and second partial derivatives
+that are continuous on $\reals^p$ (@def-continuous-several).
+
+1. If $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite) for every $\vx$,
+   then $f$ is [convex](algebra.qmd#def-convex-function).
+2. If $\matr{H}_f(\vx)$ is [positive definite](linear-algebra.qmd#def-positive-definite) for every $\vx$,
+   then $f$ is strictly convex (@def-strictly-convex).
+
+:::
+
+::: proof
+
+Let $\vx, \vy \in \reals^p$.
+By @thm-taylor-mv with $\vecf{z} = \vy$ and $\vecf{h} = \vx - \vy$,
+there is a $\tau \in (0, 1)$ such that, with $\vecf{w} \eqdef \vy + \tau (\vx - \vy)$,
+
+$$
+\ba
+f(\vx)
+&= f(\vy) + \tp{\paren{\deriv{\vx} f(\vy)}} (\vx - \vy) + \frac{1}{2}\,\tp{(\vx - \vy)}\,\matr{H}_f(\vecf{w})\,(\vx - \vy)
+&& \text{(@thm-taylor-mv)}
+\\
+&\ge f(\vy) + \tp{\paren{\deriv{\vx} f(\vy)}} (\vx - \vy).
+&& \text{(} \matr{H}_f(\vecf{w}) \text{ is positive semidefinite)}
+\ea
+$$
+
+This inequality is @eq-supporting-hyperplane, so $f$ is convex by @thm-convex-first-order.
+Under the hypothesis of part 2 and with $\vx \ne \vy$,
+the quadratic-form term is positive, so the inequality is strict,
+and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convex-hessian}
+#### Using the Hessian to show convexity
+
+- For a symmetric positive semidefinite $\matr{A}$, $f(\vx) = \tp{\vx} \matr{A} \vx$
+  has Hessian $2 \matr{A}$ (@thm-hessian-quadratic),
+  which is positive semidefinite because $\tp{\vecf{h}} (2 \matr{A}) \vecf{h} = 2\,\tp{\vecf{h}} \matr{A} \vecf{h} \ge 0$;
+  so $f$ is convex.
+- $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ has Hessian $2 \matr{I}_2$ (@exm-second-order-condition),
+  which is positive definite, so $f$ is strictly convex.
+- $f(\vx) = e^{2x_1 + x_2} - x_1$ has Hessian $e^{u} \sbmat{ 4 & 2 \\ 2 & 1 }$ with $u = 2x_1 + x_2$ (@exm-hessian), and
+
+  $$
+  \tp{\vecf{h}}\,\matr{H}_f(\vx)\,\vecf{h}
+  = e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2)
+  = e^{u} (2 h_1 + h_2)^2
+  \ge 0,
+  $$
+
+  so $f$ is convex.
+  The Hessian is not positive definite ($\vecf{h} = \tp{(1, -2)}$ gives $0$),
+  so part 2 does not apply,
+  and in fact $f$ is not strictly convex:
+  along $\vx = t\,\tp{(1, -2)}$, $u = 2t - 2t = 0$ and $f = 1 - t$ is linear in $t$,
+  so the convexity inequality holds with equality there.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convex-hessian-not-necessary}
+#### Strictly convex with a singular Hessian
+
+Part 2 is sufficient but not necessary.
+$f(x) = x^4$ has $f''(0) = 12 \cdot 0^2 = 0$, so $\matr{H}_f(0) = [0]$ is not positive definite.
+Yet $f$ is strictly convex, by the strict form of @eq-supporting-hyperplane: for $x \ne y$,
+
+$$
+\ba
+x^4 - y^4 - 4 y^3 (x - y)
+&= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y)
+&& \text{(factor } x^4 - y^4 \text{)}
+\\
+&= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3)
+&& \text{(collect the } y^3 \text{ terms)}
+\\
+&= (x - y)^2 (x^2 + 2 x y + 3 y^2)
+&& \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)}
+\\
+&= (x - y)^2 \paren{(x + y)^2 + 2 y^2},
+&& \text{(complete the square)}
+\ea
+$$
+
+which is positive: $(x - y)^2 > 0$, and $(x + y)^2 + 2 y^2 = 0$ would need $y = 0$ and then $x = 0 = y$.
+
+:::
