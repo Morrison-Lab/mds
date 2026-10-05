@@ -5,12 +5,40 @@ such as $f(\vb) = \tp{\vx}\vb$,
 then its **row-vector derivative** is:
 
 $$
-\deriv{ \vb\'} f(\vb) =
+\derivf{f(\vb)}{\tp{\vb}} =
 \sbmat{
 \deriv{\beta_1}f(\vb) &
 \deriv{\beta_2}f(\vb) &
 \cdots &
 \deriv{\beta_p}f(\vb)
 }
-$$
+$$ {#eq-row-vector-derivative}
+
+Some sources write the same row as $\deriv{\tp{\vb}} f(\vb)$,
+with the operator on the left,
+as shorthand for an operator acting on $f$ rather than a matrix product
+(see @rem-row-derivative-shape).
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-row-derivative-shape}
+#### Which side the operator goes on
+
+Read $\deriv{\vb}$ as a $p \times 1$ column of operators
+and $\deriv{\tp{\vb}}$ as a $1 \times p$ row,
+and multiply them with $f$ (a $1 \times 1$ matrix)
+under the shape rule of [matrix multiplication](linear-algebra.qmd#def-matrix-mult).
+The column works on the left:
+$\deriv{\vb} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column (@def-vector-derivative).
+The row does not:
+$\deriv{\tp{\vb}} f$ is $(1 \times p)(1 \times 1)$,
+whose inner dimensions $p$ and $1$ do not match when $p > 1$.
+For the shape rule to give the $1 \times p$ row,
+the operator has to go on the right of $f$, as in $(1 \times 1)(1 \times p)$.
+The fraction $\derivf{f}{\tp{\vb}}$ of @eq-row-vector-derivative
+avoids the question:
+the transpose in the denominator says the result is a row,
+without making the derivative a product.
+
 :::
