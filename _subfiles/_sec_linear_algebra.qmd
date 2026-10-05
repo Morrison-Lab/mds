@@ -56,6 +56,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-standard-basis-expansion.qmd >}}
+
 ### Orthogonality
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-vectors.qmd >}}
@@ -185,10 +189,6 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-linear-map-lincom.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-standard-basis-expansion.qmd >}}
 
 {{< slidebreak >}}
 
