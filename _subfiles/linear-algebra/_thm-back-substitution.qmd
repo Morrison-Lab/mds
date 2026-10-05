@@ -1,0 +1,78 @@
+:::{#thm-back-substitution}
+#### Solving a triangular system by substitution
+
+Let $\matr{U}$ be an $n \times n$ upper triangular matrix (@def-triangular-matrix)
+whose diagonal entries $u_{11}, \ldots, u_{nn}$ are all nonzero.
+For every $\vecf{b} \in \reals^n$, the system $\matr{U} \vecf{x} = \vecf{b}$
+has exactly one solution, given for $i = n, n - 1, \ldots, 1$ in turn by
+
+$$
+x_i = \frac{1}{u_{ii}} \paren{b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j}
+$$
+
+(**back substitution**).
+Likewise, if $\matr{L}$ is lower triangular with nonzero diagonal,
+$\matr{L} \vecf{y} = \vecf{b}$ has exactly one solution, given for $i = 1, \ldots, n$ by
+$y_i = \frac{1}{\ell_{ii}} \paren{b_i - \sum_{j=1}^{i-1} \ell_{ij}\,y_j}$
+(**forward substitution**).
+
+:::
+
+::: proof
+
+Row $i$ of $\matr{U} \vecf{x} = \vecf{b}$ reads
+
+$$
+\ba
+b_i
+&= \sum_{j=1}^{n} u_{ij}\,x_j
+&& \text{(@def-matvec-mult)}
+\\
+&= \sum_{j=i}^{n} u_{ij}\,x_j
+&& \text{(} u_{ij} = 0 \text{ for } j < i \text{)}
+\\
+&= u_{ii}\,x_i + \sum_{j=i+1}^{n} u_{ij}\,x_j.
+&& \text{(split off the } j = i \text{ term)}
+\ea
+$$
+
+This equation is equivalent to each of
+
+$$
+\ba
+u_{ii}\,x_i &= b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j
+&& \text{(subtract the sum from both sides)}
+\\
+x_i &= \frac{1}{u_{ii}} \paren{b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j}.
+&& \text{(divide by } u_{ii} \ne 0 \text{)}
+\ea
+$$
+
+Row $n$ involves only $x_n$, so it fixes $x_n$;
+once $x_{i+1}, \ldots, x_n$ are fixed, row $i$ fixes $x_i$.
+So the rows, taken from the last to the first, hold exactly when $\vecf{x}$ is the vector the formula builds:
+there is one solution, and only one.
+For $\matr{L}$, row $i$ reads $\sum_{j=1}^{i-1} \ell_{ij}\,y_j + \ell_{ii}\,y_i = b_i$,
+and the same argument runs from the first row to the last.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-back-substitution}
+#### Back substitution on a $3 \times 3$ system
+
+Solve
+$\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \vecf{x}
+= \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}$:
+
+1. $x_3 = \frac{1}{-1} \cd 1 = -1$;
+2. $x_2 = \frac{1}{1/2} \paren{1 - \tfrac{1}{2} \cd (-1)} = 2 \cd \tfrac{3}{2} = 3$;
+3. $x_1 = \frac{1}{2} \paren{8 - 1 \cd 3 - (-1)(-1)} = \frac{1}{2} \cd 4 = 2$.
+
+So $\vecf{x} = (2, 3, -1)$.
+Without a nonzero diagonal the method fails:
+$\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \vecf{x} = (1, 1)$ has no solution,
+since its second row reads $0 = 1$.
+
+:::

@@ -1,0 +1,32 @@
+:::{#def-least-squares}
+#### Least squares solution
+
+Let $\matr{A}$ be $m \times n$ and $\vecf{b} \in \reals^m$.
+A **least squares solution** of $\matr{A} \vecf{x} = \vecf{b}$
+is a vector $\hat{\vecf{x}} \in \reals^n$ such that
+
+$$
+\norm{\vecf{b} - \matr{A} \hat{\vecf{x}}} \le \norm{\vecf{b} - \matr{A} \vecf{x}}
+\quad \text{for every } \vecf{x} \in \reals^n.
+$$
+
+The equations $\tp{\matr{A}} \matr{A} \vecf{x} = \tp{\matr{A}} \vecf{b}$
+are the **normal equations**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-least-squares}
+#### Fitting a constant
+
+Let $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\vecf{b} = (1, 3)$.
+The system $x\,(1, 1) = (1, 3)$ is inconsistent (@def-consistent-system):
+its first entry needs $x = 1$ and its second needs $x = 3$.
+For any number $x$,
+$\norm{\vecf{b} - \matr{A} x}^2 = (1 - x)^2 + (3 - x)^2 = 2\,(x - 2)^2 + 2$,
+which is smallest at $x = 2$, so $\hat{x} = 2$ is the least squares solution.
+The value $x = 1$ is not one: it gives $0 + 4 = 4 > 2$.
+The normal equations read $2x = 4$, and their solution is $x = 2$ too.
+
+:::
