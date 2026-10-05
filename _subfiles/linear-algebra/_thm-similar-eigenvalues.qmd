@@ -25,8 +25,11 @@ $$
 &= \matr{P}^{-1} \matr{A}\,\matr{I}_p\,\vecf{v}
 && \text{(@def-matrix-inverse)}
 \\
+&= \matr{P}^{-1} \matr{A} \vecf{v}
+&& \text{(@thm-identity)}
+\\
 &= \matr{P}^{-1}\,(\matr{A} \vecf{v})
-&& \text{(@thm-identity, @thm-matmul-assoc)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \matr{P}^{-1}\,(\lambda \vecf{v})
 && \text{(eigenvector)}
@@ -38,7 +41,7 @@ $$
 
 And $\vecf{w} \ne \vzero$: if $\vecf{w} = \vzero$, then
 $\vecf{v} = \matr{I}_p \vecf{v} = \matr{P}\,(\matr{P}^{-1} \vecf{v}) = \matr{P}\,\vzero = \vzero$
-(@thm-identity, @def-matrix-inverse, @thm-matmul-assoc),
+(@thm-identity, @def-matrix-inverse, @thm-matmul-assoc, @def-matvec-mult),
 which is false.
 
 **From $\matr{B}$ to $\matr{A}$.**

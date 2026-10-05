@@ -53,20 +53,34 @@ and $\matr{P} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$.
 Then
 
 $$
+\ba
 \matr{P}^2
-= \begin{bmatrix} 1 \cd 1 + 1 \cd 1 & 1 \cd 1 + 1 \cd (-1) \\ 1 \cd 1 + (-1) \cd 1 & 1 \cd 1 + (-1)(-1) \end{bmatrix}
-= 2\,\matr{I}_2
+&= \begin{bmatrix} 1 \cd 1 + 1 \cd 1 & 1 \cd 1 + 1 \cd (-1) \\ 1 \cd 1 + (-1) \cd 1 & 1 \cd 1 + (-1)(-1) \end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}
+&& \text{(arithmetic)}
+\\
+&= 2\,\matr{I}_2,
+&& \text{(@def-scalar-mult, @def-identity-matrix)}
+\ea
 $$
 
-(@def-matrix-mult), so $\matr{P}\,(\tfrac{1}{2}\,\matr{P}) = \tfrac{1}{2}\,\matr{P}^2 = \matr{I}_2$
+so $\matr{P}\,(\tfrac{1}{2}\,\matr{P}) = \tfrac{1}{2}\,\matr{P}^2 = \matr{I}_2$
 and likewise $(\tfrac{1}{2}\,\matr{P})\,\matr{P} = \matr{I}_2$ (@thm-scalar-matmul):
 $\matr{P}^{-1} = \tfrac{1}{2}\,\matr{P}$ (@def-matrix-inverse). Then
 
 $$
 \ba
 \matr{P}^{-1} \matr{A} \matr{P}
+&= (\tfrac{1}{2}\,\matr{P})\,\matr{A} \matr{P}
+&& \text{(substitute } \matr{P}^{-1} \text{)}
+\\
+&= \tfrac{1}{2}\,(\matr{P} \matr{A} \matr{P})
+&& \text{(@thm-scalar-matmul)}
+\\
 &= \tfrac{1}{2}\,\matr{P}\,(\matr{A} \matr{P})
-&& \text{(substitute } \matr{P}^{-1} \text{, @thm-scalar-matmul, @thm-matmul-assoc)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \tfrac{1}{2} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix}
 && \text{(@def-matrix-mult, for } \matr{A} \matr{P} \text{)}
@@ -80,7 +94,7 @@ $$
 $$
 
 so $\matr{A}$ is similar to $\operatorname{diag}(3, 1)$.
-In the other direction, the identity matrix is similar only to itself:
+At the other extreme, the identity matrix is similar only to itself:
 $\matr{P}^{-1} \matr{I}_p \matr{P} = \matr{P}^{-1} \matr{P} = \matr{I}_p$ for every invertible $\matr{P}$
 (@thm-identity, @def-matrix-inverse).
 

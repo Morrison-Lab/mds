@@ -36,8 +36,11 @@ and its dimension (@def-dimension) is the **geometric multiplicity** of $\lambda
 
 For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ and $\lambda = 2$,
 $\matr{A} - 2\,\matr{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$
-sends $\vecf{v}$ to $(v_2, v_1)$, which is $\vzero$ only for $\vecf{v} = \vzero$.
-So $\mathcal{N}(\matr{A} - 2\,\matr{I}_2) = \cb{\vzero}$:
-$2$ is not an eigenvalue, and @def-eigenspace does not apply to it.
+sends $\vecf{v}$ to $(v_2, v_1)$, which is $\vzero$ only for $\vecf{v} = \vzero$,
+so $\mathcal{N}(\matr{A} - 2\,\matr{I}_2) = \cb{\vzero}$.
+And $2$ is not an eigenvalue (@def-eigenvalue):
+$\matr{A} \vecf{v} = 2\vecf{v}$ reads $(2v_1 + v_2, v_1 + 2v_2) = (2v_1, 2v_2)$,
+so $v_2 = 0$ and $v_1 = 0$.
+So @def-eigenspace does not apply to $2$.
 
 :::

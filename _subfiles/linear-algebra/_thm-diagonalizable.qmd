@@ -34,8 +34,11 @@ then $\matr{X}$ is invertible and @eq-ax-xlambda gives $\matr{A} \matr{X} = \mat
 $$
 \ba
 \matr{A}
+&= \matr{A}\,\matr{I}_p
+&& \text{(@thm-identity)}
+\\
 &= \matr{A}\,(\matr{X} \matr{X}^{-1})
-&& \text{(@def-matrix-inverse, @thm-identity)}
+&& \text{(@def-matrix-inverse)}
 \\
 &= (\matr{A} \matr{X})\,\matr{X}^{-1}
 && \text{(@thm-matmul-assoc)}
@@ -57,8 +60,11 @@ $$
 &= \matr{X} \matr{\Lambda}\,(\matr{X}^{-1} \matr{X})
 && \text{(@thm-matmul-assoc)}
 \\
+&= \matr{X} \matr{\Lambda}\,\matr{I}_p
+&& \text{(@def-matrix-inverse)}
+\\
 &= \matr{X} \matr{\Lambda},
-&& \text{(@def-matrix-inverse, @thm-identity)}
+&& \text{(@thm-identity)}
 \ea
 $$
 
@@ -137,6 +143,7 @@ and $\matr{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
 
 **Powers of $\matr{\Lambda}$.**
 If $\matr{D} = \operatorname{diag}(d_1, \ldots, d_p)$ and $\matr{E} = \operatorname{diag}(e_1, \ldots, e_p)$,
+with entries $d_{il}$ and $e_{lj}$ (so $d_{ii} = d_i$ and $e_{jj} = e_j$),
 entry $(i, j)$ of $\matr{D} \matr{E}$ is $\sum_l d_{il}\,e_{lj}$ (@def-matrix-mult),
 where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$.
 For $i \ne j$ no term survives, so the entry is $0$;
@@ -186,8 +193,14 @@ with $\matr{X}$ as in @exm-thm-diagonalizable and $\matr{X}^{-1} = \tfrac{1}{2}\
 $$
 \ba
 \matr{A}^k
+&= \matr{X}\,\operatorname{diag}(3^k, 1)\,\matr{X}^{-1}
+&& \text{(@thm-diagonalizable-powers)}
+\\
+&= \matr{X}\,\operatorname{diag}(3^k, 1)\,(\tfrac{1}{2}\,\matr{X})
+&& \text{(substitute } \matr{X}^{-1} \text{)}
+\\
 &= \tfrac{1}{2}\,\matr{X}\,\operatorname{diag}(3^k, 1)\,\matr{X}
-&& \text{(@thm-diagonalizable-powers, @thm-scalar-matmul)}
+&& \text{(@thm-scalar-matmul)}
 \\
 &= \tfrac{1}{2} \begin{bmatrix} 3^k & 1 \\ 3^k & -1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 && \text{(@def-matrix-mult, for } \matr{X}\,\operatorname{diag}(3^k, 1) \text{)}
