@@ -19,6 +19,7 @@ Authoritative style guide: [UCD-SERG Lab Manual](https://ucd-serg.github.io/lab-
 - `latex-macros/` --- git submodule for shortcode/macro definitions (see `.gitmodules`)
 - `R/`, `man/`, `DESCRIPTION`, `NAMESPACE` --- the project is also a small R package
 - `references.bib` --- BibTeX bibliography
+- `page-navigation.html` --- HTML include (`format.html.include-after-body`) that adds floating previous/next arrows in the page margins and highlights the navbar link for the current page; vendored from `Morrison-Lab/lbt` via [`Morrison-Lab/qwt`](https://github.com/Morrison-Lab/qwt). The previous/next order comes from `website.sidebar` in `_quarto-website.yml`, so add each new page to both the navbar and the sidebar, in the same position.
 - `offwhite.scss`, `theme-picker.html` --- the website's Light / Off-white / Parchment / Dark theme dropdown (saved under `mln-theme`, shared with the slides and the other sites on this origin)
 - `styles.css` --- website styling; `styles-reveal.scss`, `qwt-reveal-toggle.html` (the same dropdown for slides), and the `revealjs-*.lua` filters drive the reveal.js slide output
 - `math-xrefs.lua` --- resolves `@id` cross-references written inside math (for example a `\text{(@thm-spectral)}` derivation annotation), which Quarto leaves as literal text; it numbers theorem-type divs and labelled equations the way Quarto does and writes the label ("Theorem 59"), linked in HTML
