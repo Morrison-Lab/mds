@@ -1,0 +1,109 @@
+:::{#thm-taylor-mv}
+#### Second-order Taylor theorem in several variables
+
+Let $f : \reals^p \to \reals$ have continuous first and second partial derivatives,
+and let $\vecf{z}, \vecf{h} \in \reals^p$.
+Then there is a $\tau \in (0, 1)$ with
+
+$$
+f(\vecf{z} + \vecf{h})
+= f(\vecf{z})
++ \tp{\paren{\deriv{\vx} f(\vecf{z})}} \vecf{h}
++ \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}.
+$$
+
+:::
+
+::: proof
+
+Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
+the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
+The inner function $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
+so $\deriv{t} y_j = h_j$, and its derivative (@def-vector-valued-derivative) is the $1 \times p$ matrix $\tp{\vecf{h}}$.
+By the vector chain rule (@thm-chain-vec, with a $1 \times 1$ input $t$),
+
+$$
+\ba
+g'(t)
+&= \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z} + t \vecf{h})
+&& \text{(@thm-chain-vec)}
+\\
+&= \sum_{j=1}^{p} h_j\,\deriv{x_j} f(\vecf{z} + t \vecf{h}).
+&& \text{(matrix product)}
+\ea
+$$
+
+The second step writes out the [matrix product](linear-algebra.qmd#def-matrix-mult).
+$g'$ is continuous, because each $\deriv{x_j} f$ is.
+Each $\deriv{x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$,
+so the same chain-rule computation applies to it:
+$\deriv{t} \sb{\deriv{x_j} f(\vecf{z} + t \vecf{h})} = \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}$.
+So
+
+$$
+\ba
+g''(t)
+&= \sum_{j=1}^{p} h_j \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}
+&& \text{(differentiate each term of } g'(t) \text{)}
+\\
+&= \sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,\sb{\matr{H}_f(\vecf{z} + t \vecf{h})}_{ij}\,h_j
+&& \text{(@def-hessian; reorder the finite sums)}
+\\
+&= \tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + t \vecf{h})\,\vecf{h}.
+&& \text{(matrix product)}
+\ea
+$$
+
+The last step is again the [matrix product](linear-algebra.qmd#def-matrix-mult).
+Now apply @thm-taylor-1d to $g$ on $[0, 1]$:
+there is a $\tau \in (0, 1)$ with
+
+$$
+\ba
+f(\vecf{z} + \vecf{h})
+&= g(1)
+&& \text{(definition of } g \text{)}
+\\
+&= g(0) + g'(0) + \frac{1}{2}\,g''(\tau)
+&& \text{(@thm-taylor-1d, with } a = 0, b = 1 \text{)}
+\\
+&= f(\vecf{z}) + \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z}) + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}
+&& \text{(substitute } g(0), g'(0), g''(\tau) \text{)}
+\\
+&= f(\vecf{z}) + \tp{\paren{\deriv{\vx} f(\vecf{z})}} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}.
+&& \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-taylor-mv}
+#### For a quadratic form the expansion is exact
+
+Let $f(\vx) = \tp{\vx} \matr{S} \vx$ with $\matr{S}$ symmetric and constant.
+Its gradient is $2 \matr{S} \vx$ (@thm-quadratic-form)
+and its Hessian is $2 \matr{S}$ at every point (@thm-hessian-quadratic),
+so whatever $\tau$ is, @thm-taylor-mv reads
+
+$$
+f(\vecf{z} + \vecf{h}) = \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{(2 \matr{S} \vecf{z})} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}} (2 \matr{S}) \vecf{h}
+= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h},
+$$
+
+using $\tp{(2 \matr{S} \vecf{z})} = 2\,\tp{\vecf{z}}\,\tp{\matr{S}} = 2\,\tp{\vecf{z}} \matr{S}$.
+Multiplying out directly gives the same:
+
+$$
+\ba
+\tp{(\vecf{z} + \vecf{h})} \matr{S} (\vecf{z} + \vecf{h})
+&= \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{z} + \tp{\vecf{h}} \matr{S} \vecf{h}
+&& \text{(distribute)}
+\\
+&= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h}.
+&& \text{(} \tp{\vecf{h}} \matr{S} \vecf{z} = \tp{(\tp{\vecf{h}} \matr{S} \vecf{z})} = \tp{\vecf{z}} \matr{S} \vecf{h} \text{)}
+\ea
+$$
+
+:::

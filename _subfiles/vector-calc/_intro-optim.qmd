@@ -1,0 +1,7 @@
+A minimizer of a function of one variable has a flat tangent line
+([flat point](calculus.qmd#def-flat-point)),
+and the sign of the second derivative tells a minimum from a maximum.
+This section extends both facts to a function $f$ of a $p \times 1$ vector $\vx$:
+the gradient $\deriv{\vx} f(\vx)$ (@def-vector-derivative) takes the place of the first derivative,
+and a $p \times p$ matrix of second partial derivatives takes the place of the second.
+Throughout, $\deriv{\vx} f(\vecf{z})$ means the gradient evaluated at $\vx = \vecf{z}$.

@@ -1,0 +1,63 @@
+:::{#thm-hessian-symmetric}
+#### Symmetry of the Hessian
+
+If the second partial derivatives of $f$ are continuous near $\vx$,
+then $\deriv{x_i} \paren{\deriv{x_j} f(\vx)} = \deriv{x_j} \paren{\deriv{x_i} f(\vx)}$ for all $i, j$,
+so $\matr{H}_f(\vx)$ (@def-hessian) is symmetric
+([symmetric matrix](linear-algebra.qmd#def-symmetric-matrix)).
+
+:::
+
+The proof needs the mean value theorem in two variables,
+which these notes do not develop; see [@rudin1976principles, Theorem 9.41].
+
+{{< slidebreak >}}
+
+:::{#exm-hessian-symmetric}
+#### Mixed partial derivatives agree
+
+In @exm-hessian, the $(1, 2)$ and $(2, 1)$ entries of $\matr{H}_f(\vx)$
+are both $2 e^{2x_1 + x_2}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hessian-not-symmetric}
+#### Without continuity, the mixed partials can differ
+
+Let $f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}$ for $\vx \ne \vzero$, and $f(\vzero) = 0$.
+For $x_2 \ne 0$, the [derivative](calculus.qmd#def-differentiable) in $x_1$ at $(0, x_2)$ is
+
+$$
+\ba
+\deriv{x_1} f(0, x_2)
+&= \lim_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h}
+&& \text{(definition of the partial derivative)}
+\\
+&= \lim_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2}
+&& \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)}
+\\
+&= \frac{x_2 \cdot (-x_2^2)}{x_2^2}
+= -x_2,
+&& \text{(the quotient is continuous at } h = 0 \text{)}
+\ea
+$$
+
+and $\deriv{x_1} f(\vzero) = \lim_{h \to 0} (0 - 0)/h = 0 = -0$ as well.
+In the same way, with the roles of $x_1$ and $x_2$ swapped,
+$f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1$,
+so $\deriv{x_2} f(x_1, 0) = x_1$ for every $x_1$.
+So at $\vzero$
+
+$$
+\deriv{x_2} \paren{\deriv{x_1} f} = \dif{}{x_2} (-x_2) = -1,
+\qquad
+\deriv{x_1} \paren{\deriv{x_2} f} = \dif{}{x_1} x_1 = 1:
+$$
+
+the Hessian at $\vzero$ is not symmetric.
+By @thm-hessian-symmetric, then, the second partial derivatives of this $f$
+cannot all be continuous near $\vzero$.
+
+:::

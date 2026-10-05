@@ -1,0 +1,12 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from the multivariate calculus and optimality-condition parts of @zhou2024optim,
+used under the MIT License
+(see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
+The source states the second-order Taylor approximation and the optimality conditions without proof;
+here they are proved from the one-variable Taylor theorem.
+The source's material on matrix calculus, convexity, Lagrange multipliers,
+Newton's method and gradient descent is not part of this section.
+
+:::

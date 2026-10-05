@@ -1,0 +1,85 @@
+:::{#thm-second-order-condition}
+#### Second-order sufficient condition
+
+Let $f : \reals^p \to \reals$ have continuous first and second partial derivatives.
+If $\vx^*$ is a stationary point of $f$ (@def-stationary-point)
+and $\matr{H}_f(\vx^*)$ is [positive definite](linear-algebra.qmd#def-positive-definite),
+then $\vx^*$ is a strict local minimizer of $f$ (@def-strict-local-minimizer).
+
+:::
+
+::: proof
+
+$\matr{H}_f(\vx^*)$ is symmetric (@thm-hessian-symmetric) and positive definite,
+so its smallest eigenvalue $\lambda$ is positive
+([definiteness and eigenvalues](linear-algebra.qmd#thm-definite-eigenvalues)).
+Each of the $p^2$ entries of $\matr{H}_f$ is continuous at $\vx^*$:
+for $\varepsilon = \lambda / (2p)$ there is a $\delta_{ij} > 0$ with
+$\abs{\sb{\matr{H}_f(\vy)}_{ij} - \sb{\matr{H}_f(\vx^*)}_{ij}} < \lambda / (2p)$
+whenever $\norm{\vy - \vx^*} < \delta_{ij}$.
+Let $\delta$ be the smallest of these $p^2$ numbers.
+
+Now let $0 < \norm{\vecf{h}} < \delta$.
+By @thm-taylor-mv there is a $\tau \in (0, 1)$ such that,
+with $\vy \eqdef \vx^* + \tau \vecf{h}$ and $\matr{E} \eqdef \matr{H}_f(\vy) - \matr{H}_f(\vx^*)$,
+
+$$
+\ba
+f(\vx^* + \vecf{h}) - f(\vx^*)
+&= \tp{\paren{\deriv{\vx} f(\vx^*)}} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vy)\,\vecf{h}
+&& \text{(@thm-taylor-mv)}
+\\
+&= \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vy)\,\vecf{h}
+&& \text{(} \vx^* \text{ is stationary)}
+\\
+&= \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vx^*)\,\vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{E}\,\vecf{h}
+&& \text{(} \matr{H}_f(\vy) = \matr{H}_f(\vx^*) + \matr{E} \text{; distribute)}
+\\
+&\ge \frac{1}{2}\,\lambda\,\norm{\vecf{h}}^2 - \frac{1}{2}\,p\,\frac{\lambda}{2p}\,\norm{\vecf{h}}^2
+&& \text{(@lem-qf-eigen-bound; @lem-qf-entry-bound with } m = \lambda / (2p) \text{)}
+\\
+&= \frac{\lambda}{4}\,\norm{\vecf{h}}^2
+&& \text{(arithmetic)}
+\\
+&> 0.
+&& \text{(} \lambda > 0 \text{ and } \vecf{h} \ne \vzero \text{)}
+\ea
+$$
+
+@lem-qf-entry-bound applies because $\norm{\vy - \vx^*} = \tau\,\norm{\vecf{h}} < \delta$,
+so every entry of $\matr{E}$ has absolute value less than $\lambda / (2p)$.
+So $f(\vx^*) < f(\vx)$ whenever $0 < \norm{\vx - \vx^*} < \delta$ (take $\vecf{h} = \vx - \vx^*$).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-second-order-condition}
+#### Classifying stationary points
+
+- $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ has the stationary point $\tp{(1, 0)}$ (@exm-stationary-point),
+  and its Hessian is $\matr{H}_f(\vx) = \sbmat{ 2 & 0 \\ 0 & 2 } = 2 \matr{I}_2$,
+  which is positive definite, so $\tp{(1, 0)}$ is a strict local minimizer.
+- $f(\vx) = x_1^2 - x_2^2$ has the stationary point $\vzero$
+  and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$, which is not positive definite
+  ($\tp{(0, 1)}$ gives $-2$),
+  and indeed $\vzero$ is not a local minimizer (@exm-first-order-condition).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-second-order-inconclusive}
+#### The condition is sufficient, not necessary
+
+$f(\vx) = x_1^2 + x_2^4$ and $g(\vx) = x_1^2 - x_2^4$
+both have gradient $\vzero$ at $\vzero$
+and the same Hessian there, $\sbmat{ 2 & 0 \\ 0 & 0 }$,
+since $\deriv{x_2} \paren{\deriv{x_2} (\pm x_2^4)} = \pm 12 x_2^2 = 0$ at $x_2 = 0$.
+That Hessian is not positive definite ($\tp{(0, 1)}$ gives $0$),
+so @thm-second-order-condition says nothing about either function.
+In fact $\vzero$ is a strict local minimizer of $f$,
+since $f(\vx) > 0 = f(\vzero)$ for $\vx \ne \vzero$,
+but not a local minimizer of $g$, since $g(0, t) = -t^4 < 0 = g(\vzero)$ for $t \ne 0$.
+
+:::

@@ -1,0 +1,45 @@
+:::{#thm-hessian-quadratic}
+#### Hessian of a quadratic form
+
+If $\matr{S}$ is a symmetric $p \times p$ matrix that is constant with respect to $\vx$,
+then $f(\vx) = \tp{\vx} \matr{S} \vx$ has $\matr{H}_f(\vx) = 2 \matr{S}$ for every $\vx$.
+
+:::
+
+::: proof
+
+$$
+\ba
+\matr{H}_f(\vx)
+&= \deriv{\vx} \tp{\paren{\deriv{\vx} (\tp{\vx} \matr{S} \vx)}}
+&& \text{(@def-hessian)}
+\\
+&= \deriv{\vx} \tp{\paren{2 \matr{S} \vx}}
+&& \text{(@thm-quadratic-form)}
+\\
+&= \paren{\deriv{\vx} \vx}\,\tp{(2 \matr{S})}
+&& \text{(@thm-deriv-matrix-vector, with } \matr{A} = 2 \matr{S} \text{ and } \vecf{v} = \vx \text{)}
+\\
+&= \matr{I}_p\,\tp{(2 \matr{S})}
+&& \text{(} \deriv{\vx} \vx = \matr{I}_p \text{, @rem-deriv-matrix-vector-special-case)}
+\\
+&= 2 \matr{S}.
+&& \text{(} \matr{S} \text{ is symmetric)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hessian-quadratic}
+#### The Hessian of a $2 \times 2$ quadratic form
+
+For $\matr{S} = \sbmat{ 3 & 1 \\ 1 & 2 }$ as in @exm-deriv-quadratic-form,
+@thm-hessian-quadratic gives $\matr{H}_f(\vx) = \sbmat{ 6 & 2 \\ 2 & 4 }$.
+Directly, the gradient found there, with $\beta_i$ renamed $x_i$, is $\tp{(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}$,
+and differentiating its entries by $x_1$ and by $x_2$ gives
+$\deriv{x_1} (6 x_1 + 2 x_2) = 6$, $\deriv{x_2} (6 x_1 + 2 x_2) = 2$,
+$\deriv{x_1} (2 x_1 + 4 x_2) = 2$ and $\deriv{x_2} (2 x_1 + 4 x_2) = 4$.
+
+:::

@@ -143,3 +143,54 @@
 {{< include mds/_subfiles/vector-calc/_exr-gradient-of-linear.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_sol-gradient-of-linear.qmd >}}
+
+
+## Second derivatives and optimality conditions {#sec-optimality}
+
+{{< include mds/_subfiles/vector-calc/_prose-optim-attribution.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_intro-optim.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-hessian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-hessian-symmetric.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-hessian-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-fermat.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-stationary-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-first-order-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-taylor-1d.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-taylor-mv.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-strict-local-minimizer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_lem-qf-bounds.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-second-order-condition.qmd >}}

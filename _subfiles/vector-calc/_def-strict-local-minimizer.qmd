@@ -1,0 +1,22 @@
+:::{#def-strict-local-minimizer}
+#### Strict local minimizer
+
+Let $f : \reals^p \to \reals$.
+A point $\vx^*$ is a **strict local minimizer** of $f$
+if there is a number $\delta > 0$ such that $f(\vx^*) < f(\vx)$
+for every $\vx \ne \vx^*$ with $\norm{\vx - \vx^*} < \delta$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-strict-local-minimizer}
+#### Strict and non-strict local minimizers
+
+- $f(x) = (x - 2)^2$ has $f(2) = 0 < (x - 2)^2 = f(x)$ for every $x \ne 2$,
+  so $2$ is a strict local minimizer (any $\delta > 0$ works).
+- A constant function $f(\vx) = 0$ has $f(\vx^*) \le f(\vx)$ for all $\vx^*$ and $\vx$,
+  so every point is a [local minimizer](algebra.qmd#def-local-minimizer),
+  but no point is a strict one: $f(\vx^*) < f(\vx)$ never holds.
+
+:::
