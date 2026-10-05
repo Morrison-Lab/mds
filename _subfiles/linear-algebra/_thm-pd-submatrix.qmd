@@ -13,7 +13,8 @@ In particular, every diagonal entry of a positive definite matrix is positive.
 
 $\matr{X}_k$ is symmetric, because $\matr{X}$ is.
 For $\vecf{u} \in \reals^k$ with $\vecf{u} \ne \vzero$,
-let $\vx = (u_1, \ldots, u_k, 0, \ldots, 0) \in \reals^p$, which is nonzero. Then
+let $\vecf{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \reals^p$, which is nonzero,
+with entries $y_i = u_i$ for $i \le k$ and $y_i = 0$ for $i > k$. Then
 
 $$
 \ba
@@ -21,20 +22,35 @@ $$
 &= \sum_{i=1}^{k} \sum_{j=1}^{k} u_i\,x_{ij}\,u_j
 && \text{(@def-matvec-mult, @def-dot-product)}
 \\
-&= \sum_{i=1}^{p} \sum_{j=1}^{p} x_i\,x_{ij}\,x_j
-&& \text{(the added terms have a factor } x_i = 0 \text{ or } x_j = 0 \text{)}
+&= \sum_{i=1}^{k} \sum_{j=1}^{k} y_i\,x_{ij}\,y_j
+&& \text{(} y_i = u_i \text{ for } i \le k \text{)}
 \\
-&= \tp{\vx} \matr{X} \vx
+&= \sum_{i=1}^{p} \sum_{j=1}^{p} y_i\,x_{ij}\,y_j
+&& \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)}
+\\
+&= \tp{\vecf{y}} \matr{X} \vecf{y}
 && \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&> 0.
+&& \text{(} \matr{X} \text{ positive definite, } \vecf{y} \ne \vzero \text{)}
+\ea
+$$
+
+For the diagonal entry $x_{ii}$, take $\vecf{e}_i$ (@def-indicator-vector), which is nonzero:
+
+$$
+\ba
+\tp{\vecf{e}_i} \matr{X} \vecf{e}_i
+&= \sum_{r=1}^{p} \sum_{s=1}^{p} (\vecf{e}_i)_r\,x_{rs}\,(\vecf{e}_i)_s
+&& \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&= x_{ii}
+&& \text{(only the term } r = s = i \text{ is nonzero)}
 \\
 &> 0.
 && \text{(} \matr{X} \text{ positive definite)}
 \ea
 $$
-
-(Here $x_i$ denotes entry $i$ of $\vx$, and $x_{ij}$ an entry of $\matr{X}$.)
-For the diagonal entry $x_{ii}$, use $\vx = \vecf{e}_i$ (@def-indicator-vector):
-$\tp{\vecf{e}_i} \matr{X} \vecf{e}_i = x_{ii} > 0$.
 
 :::
 

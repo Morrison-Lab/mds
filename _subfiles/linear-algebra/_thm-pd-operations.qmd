@@ -37,8 +37,11 @@ For $\vx \ne \vzero$,
 $$
 \ba
 \tp{\vx}\,(\alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2)\,\vx
+&= \tp{\vx}\,(\alpha_1 \matr{A}_1)\,\vx + \tp{\vx}\,(\alpha_2 \matr{A}_2)\,\vx
+&& \text{(@thm-matmul-distrib, twice)}
+\\
 &= \alpha_1\,\tp{\vx} \matr{A}_1 \vx + \alpha_2\,\tp{\vx} \matr{A}_2 \vx
-&& \text{(@thm-matmul-distrib, @thm-scalar-matmul)}
+&& \text{(@thm-scalar-matmul)}
 \\
 &> 0.
 && \text{(each term is positive)}
@@ -54,8 +57,12 @@ $$
 
 - With $\matr{C} = \matr{I}_3$ and $\mX$ of @exm-pd-gram,
   part 1 gives again that $\tp{\mX} \mX$ is positive definite.
-- $\matr{I}_2 + \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
-  is positive semidefinite plus positive definite;
+- With $\alpha_1 = 2$, $\matr{A}_1 = \matr{I}_2$ (@exm-positive-definite), $\alpha_2 = 1$
+  and $\matr{A}_2 = \tp{\mX} \mX = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}$ (@exm-pd-gram),
+  part 2 gives that $2 \matr{I}_2 + \tp{\mX} \mX = \begin{bmatrix} 5 & 6 \\ 6 & 16 \end{bmatrix}$ is positive definite.
+- An aside beyond part 2:
+  $\matr{I}_2 + \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+  is positive definite plus positive semidefinite;
   its quadratic form is $x_1^2 + x_2^2 + (x_1 + x_2)^2 > 0$ for $\vx \ne \vzero$,
   so it is positive definite, in line with its eigenvalues $3$ and $1$ (@exm-eigenvalue).
 - Independence is needed in part 1:

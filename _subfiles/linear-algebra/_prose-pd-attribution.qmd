@@ -7,7 +7,11 @@ used under the MIT License
 The source's eigenvalue and quadratic-form characterizations of definiteness
 are already on this page (@thm-definite-eigenvalues);
 its covariance test, which needs probability,
-and its material on minimization are left out.
+its material on minimization,
+its positive semidefinite version of the Schur complement test,
+its pivot test,
+its Hadamard-product "Schur lemma",
+and its notes on the LU factorization and computational cost are left out.
 The source leaves the Schur complement test unproved;
 it is proved here from a block expansion of the quadratic form,
 and the Cholesky factorization is derived from it.
