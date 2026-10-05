@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 15:01:23 (PDT)
+Last modified: 2026-10-05 15:20:56 (PDT)
 
 ## 1 Derivatives
 
@@ -130,7 +130,7 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
 > **NOTE:**
 >
-> *Remark 1* (The “linear” approximation is affine). With \\w\\ held fixed, the right side of [Equation 1](#eq-linear-approx) is a function of the step \\\epsilon\\, and it is an [affine function](algebra.llms.md#def-affine-function) of \\\epsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\epsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser, school-algebra sense ([remark](algebra.llms.md#rem-linear-function-terminology)).
+> *Remark 1* (The “linear” approximation is affine). With \\w\\ held fixed, the right side of [Equation 1](#eq-linear-approx) is a function of the step \\\epsilon\\, and it is an [affine function](algebra.llms.md#def-affine-function) of \\\epsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\epsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser, school-algebra sense ([remark](algebra.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats this first-order Taylor approximation as an affine function, for functions of several variables as well.
 
 > **NOTE:**
 >
@@ -1141,6 +1141,8 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 Banner, Adrian D. 2007. *The Calculus Lifesaver : All the Tools You Need to Excel at Calculus*. A Princeton Lifesaver Study Guide. Princeton University Press. <https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver>.
 
 Billingsley, Patrick. 1995. *Probability and Measure*. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.
+
+Boyd, Stephen, and Lieven Vandenberghe. 2018. *Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares*. Cambridge University Press. <https://doi.org/10.1017/9781108583664>.
 
 Fubini, Guido. 1907. “Sugli Integrali Multipli.” *Rendiconti Della Reale Accademia Dei Lincei. Classe Di Scienze Fisiche, Matematiche e Naturali* 16: 608–14.
 
