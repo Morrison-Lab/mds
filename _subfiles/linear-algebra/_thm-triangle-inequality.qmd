@@ -1,0 +1,48 @@
+:::{#thm-triangle-inequality}
+#### Triangle inequality
+
+For any $\vecf{x}, \vecf{y} \in \reals^p$,
+
+$$
+\norm{\vecf{x} + \vecf{y}} \le \norm{\vecf{x}} + \norm{\vecf{y}}.
+$$
+
+:::
+
+::: proof
+
+$$
+\ba
+\norm{\vecf{x} + \vecf{y}}^2
+&= \norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2
+&& \text{(@thm-norm-sum-square)}
+\\
+&\le \norm{\vecf{x}}^2 + 2\,\abs{\vecf{x} \cdot \vecf{y}} + \norm{\vecf{y}}^2
+&& \text{(a number is at most its absolute value)}
+\\
+&\le \norm{\vecf{x}}^2 + 2\,\norm{\vecf{x}}\,\norm{\vecf{y}} + \norm{\vecf{y}}^2
+&& \text{(@thm-cauchy-schwarz)}
+\\
+&= \paren{\norm{\vecf{x}} + \norm{\vecf{y}}}^2.
+&& \text{(expand the square)}
+\ea
+$$
+
+Both $\norm{\vecf{x} + \vecf{y}}$ and $\norm{\vecf{x}} + \norm{\vecf{y}}$
+are nonnegative (@thm-norm-properties),
+and for nonnegative numbers $a^2 \le b^2$ implies $a \le b$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-triangle-inequality}
+#### A strict case and an equality case
+
+- For $\vecf{x} = (3, 0)$ and $\vecf{y} = (0, 4)$:
+  $\norm{\vecf{x} + \vecf{y}} = \norm{(3, 4)} = 5$,
+  while $\norm{\vecf{x}} + \norm{\vecf{y}} = 3 + 4 = 7$.
+- For $\vecf{x} = (1, 0)$ and $\vecf{y} = (2, 0)$, which point the same way:
+  $\norm{(3, 0)} = 3 = 1 + 2$, so equality holds.
+
+:::

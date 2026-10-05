@@ -1,0 +1,5 @@
+This section is adapted from @zhou2024vector,
+used under the MIT License
+(see the license text in @sec-subspaces).
+The source leaves the proof of the triangle inequality to class;
+it is written out here.

@@ -1,0 +1,64 @@
+:::{#cor-orthonormal-basis-exists}
+#### Every subspace has an orthonormal basis
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$.
+Every orthonormal list of vectors in $\mathcal{S}$
+extends to an orthonormal basis of $\mathcal{S}$ (@def-orthonormal-basis).
+Starting from the empty list shows that $\mathcal{S}$ has an orthonormal basis.
+
+:::
+
+::: proof
+
+Let $\vecf{u}_1, \ldots, \vecf{u}_r \in \mathcal{S}$ be orthonormal.
+They are linearly independent (@thm-orthonormal-independent),
+so they extend to a basis
+$\vecf{u}_1, \ldots, \vecf{u}_r, \vecf{a}_{r+1}, \ldots, \vecf{a}_d$ of $\mathcal{S}$
+(@thm-extend-basis).
+Run the Gram-Schmidt process on this basis.
+It is linearly independent, so the process completes,
+and the output is an orthonormal basis of its span, which is $\mathcal{S}$
+(@thm-gram-schmidt, part 3).
+
+The first $r$ outputs are $\vecf{u}_1, \ldots, \vecf{u}_r$ themselves,
+by induction on $i \le r$.
+Suppose the outputs before step $i$ are $\vecf{u}_1, \ldots, \vecf{u}_{i-1}$
+(for $i = 1$ there are none, and the sum below is empty). Then
+$\tilde{\vecf{q}}_i = \vecf{u}_i - \sum_{j<i} (\vecf{u}_j \cdot \vecf{u}_i)\,\vecf{u}_j = \vecf{u}_i$,
+because each $\vecf{u}_j \cdot \vecf{u}_i = 0$;
+$\tilde{\vecf{q}}_i = \vecf{u}_i \ne \vzero$, because $\norm{\vecf{u}_i} = 1$,
+so the process does not stop;
+and $\vecf{q}_i = \vecf{u}_i / \norm{\vecf{u}_i} = \vecf{u}_i$.
+So the orthonormal basis contains the starting list.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthonormal-basis-exists}
+#### Extending one unit vector to an orthonormal basis of $\reals^3$
+
+Start from the unit vector $\vecf{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
+Extend it to a basis of $\reals^3$ as in @exm-extend-basis,
+starting from the empty list:
+$\vecf{u}_1$ is not in the span of the empty list, $\cb{\vzero}$, because $\norm{\vecf{u}_1} = 1$;
+$(1, 0, 0)$ is not in $\operatorname{span}\cb{\vecf{u}_1}$,
+because every multiple of $\vecf{u}_1$ has equal first and second entries,
+and $(0, 0, 1)$ is not in $\operatorname{span}\cb{\vecf{u}_1, (1, 0, 0)}$,
+because every combination of those two vectors has third entry $0$.
+So $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$ are linearly independent (@thm-add-outside-span),
+and three linearly independent vectors in $\reals^3$ are a basis of it
+(they are a basis of their span, which has dimension $3$ (@def-dimension)
+and so is $\reals^3$ (@thm-subspace-equal-dim, @exm-dimension)).
+Gram-Schmidt on $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$:
+
+1. $\vecf{q}_1 = \vecf{u}_1$.
+2. $\vecf{q}_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}$, so
+   $\tilde{\vecf{q}}_2 = (1, 0, 0) - \tfrac{1}{2}\,(1, 1, 0) = \paren{\tfrac{1}{2}, -\tfrac{1}{2}, 0}$,
+   with norm $\tfrac{1}{\sqrt{2}}$, and $\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(1, -1, 0)$.
+3. $(0, 0, 1)$ is orthogonal to $\vecf{q}_1$ and $\vecf{q}_2$, so
+   $\tilde{\vecf{q}}_3 = (0, 0, 1)$, which already has norm $1$, and $\vecf{q}_3 = (0, 0, 1)$.
+
+The result is the orthonormal basis of @exm-orthonormal-basis, in a different order.
+
+:::

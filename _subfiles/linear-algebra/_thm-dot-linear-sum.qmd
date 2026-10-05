@@ -1,0 +1,54 @@
+:::{#thm-dot-linear-sum}
+#### The dot product of a vector with a linear combination
+
+For vectors $\vecf{x}, \vecf{u}_1, \ldots, \vecf{u}_k \in \reals^p$
+and numbers $c_1, \ldots, c_k$, with $k \ge 1$,
+
+$$
+\vecf{x} \cdot \paren{\sum_{j=1}^{k} c_j \vecf{u}_j}
+= \sum_{j=1}^{k} c_j\,(\vecf{x} \cdot \vecf{u}_j).
+$$
+
+:::
+
+::: proof
+
+Write $u_{ji}$ for entry $i$ of $\vecf{u}_j$. Then
+
+$$
+\ba
+\vecf{x} \cdot \paren{\sum_{j=1}^{k} c_j \vecf{u}_j}
+&= \sum_{i=1}^{p} x_i \sum_{j=1}^{k} c_j u_{ji}
+&& \text{(@def-dot-product, @def-linear-combination)}
+\\
+&= \sum_{i=1}^{p} \sum_{j=1}^{k} x_i c_j u_{ji}
+&& \text{(distribute each } x_i \text{ over the inner sum)}
+\\
+&= \sum_{j=1}^{k} \sum_{i=1}^{p} x_i c_j u_{ji}
+&& \text{(swap the order of the finite sums)}
+\\
+&= \sum_{j=1}^{k} \sum_{i=1}^{p} c_j x_i u_{ji}
+&& \text{(commute the factors in each product)}
+\\
+&= \sum_{j=1}^{k} c_j \sum_{i=1}^{p} x_i u_{ji}
+&& \text{(factor } c_j \text{ out of the inner sum)}
+\\
+&= \sum_{j=1}^{k} c_j\,(\vecf{x} \cdot \vecf{u}_j).
+&& \text{(@def-dot-product)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-dot-linear-sum}
+#### Dotting with a combination of three vectors
+
+Let $\vecf{x} = (1, 2, 3)$ and take the combination
+$2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)$.
+Directly, $\vecf{x} \cdot (2, -1, 4) = 2 - 2 + 12 = 12$.
+By @thm-dot-linear-sum,
+$2 \cd 1 - 1 \cd 2 + 4 \cd 3 = 12$, the same number.
+
+:::

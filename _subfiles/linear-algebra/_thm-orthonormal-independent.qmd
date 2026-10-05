@@ -1,0 +1,62 @@
+:::{#thm-orthonormal-independent}
+#### Orthonormal vectors are linearly independent
+
+If $\vecf{q}_1, \ldots, \vecf{q}_k$ are orthonormal (@def-orthonormal-vectors),
+then they are linearly independent (@def-linearly-independent).
+
+:::
+
+::: proof
+
+Suppose $\sum_{j=1}^{k} c_j \vecf{q}_j = \vzero$,
+and fix any $i$ between $1$ and $k$. Then
+
+$$
+\ba
+0
+&= \vecf{q}_i \cdot \vzero
+&& \text{(every term of the dot product is } 0 \text{)}
+\\
+&= \vecf{q}_i \cdot \paren{\sum_{j=1}^{k} c_j \vecf{q}_j}
+&& \text{(substitute the supposed equation)}
+\\
+&= \sum_{j=1}^{k} c_j\,(\vecf{q}_i \cdot \vecf{q}_j)
+&& \text{(@thm-dot-linear-sum)}
+\\
+&= c_i.
+&& \text{(} \vecf{q}_i \cdot \vecf{q}_j \text{ is } 1 \text{ if } j = i \text{ and } 0 \text{ otherwise)}
+\ea
+$$
+
+So every $c_i = 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthonormal-independent}
+#### Three orthonormal vectors in $\reals^3$
+
+Let
+
+$$
+\vecf{q}_1 = (0, 0, 1), \quad
+\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0), \quad
+\vecf{q}_3 = \tfrac{1}{\sqrt{2}}\,(1, -1, 0).
+$$
+
+Each has norm $1$:
+$\norm{\vecf{q}_2}^2 = \tfrac{1}{2}\,(1 + 1 + 0) = 1$, and likewise for the others.
+They are mutually orthogonal:
+$\vecf{q}_1 \cdot \vecf{q}_2 = 0$ and $\vecf{q}_1 \cdot \vecf{q}_3 = 0$,
+because $\vecf{q}_1$ has its only nonzero entry where the others have $0$,
+and $\vecf{q}_2 \cdot \vecf{q}_3 = \tfrac{1}{2}\,(1 - 1 + 0) = 0$.
+So by @thm-orthonormal-independent they are linearly independent,
+with no need to solve $c_1 \vecf{q}_1 + c_2 \vecf{q}_2 + c_3 \vecf{q}_3 = \vzero$.
+
+The converse fails:
+$(1, 0)$ and $(1, 1)$ are linearly independent,
+since $c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)$ is $\vzero$ only if $c_2 = 0$ and then $c_1 = 0$,
+but they are not orthonormal, since $(1, 0) \cdot (1, 1) = 1 \ne 0$.
+
+:::

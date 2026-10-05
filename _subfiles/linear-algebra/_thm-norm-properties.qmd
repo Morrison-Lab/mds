@@ -1,0 +1,59 @@
+:::{#thm-norm-properties}
+#### Basic properties of the Euclidean norm
+
+For any $\vecf{x} \in \reals^p$ and any number $c$:
+
+1. $\norm{\vecf{x}} \ge 0$, and $\norm{\vecf{x}} = 0$ if and only if $\vecf{x} = \vzero$;
+2. $\norm{c\,\vecf{x}} = \abs{c}\,\norm{\vecf{x}}$.
+
+:::
+
+::: proof
+
+**Part 1.**
+$\norm{\vecf{x}} = \sqrt{x_1^2 + \cdots + x_p^2}$ (@eq-l2-norm)
+is the square root of a sum of squares, so it is at least $0$.
+It is $0$ exactly when $x_1^2 + \cdots + x_p^2 = 0$,
+and a sum of squares is $0$ exactly when every term is $0$,
+that is, when every $x_i = 0$:
+if some $x_i \ne 0$, its square is positive and the sum is positive,
+and if every $x_i = 0$, the sum is $0$.
+
+**Part 2.**
+
+$$
+\ba
+\norm{c\,\vecf{x}}
+&= \sqrt{\sum_{i=1}^{p} (c\,x_i)^2}
+&& \text{(@eq-l2-norm, and @def-scalar-mult)}
+\\
+&= \sqrt{\sum_{i=1}^{p} c^2 x_i^2}
+&& \text{(} (c\,x_i)^2 = c^2 x_i^2 \text{)}
+\\
+&= \sqrt{c^2 \sum_{i=1}^{p} x_i^2}
+&& \text{(factor } c^2 \text{ out of the sum)}
+\\
+&= \sqrt{c^2}\,\sqrt{\sum_{i=1}^{p} x_i^2}
+&& \text{(the square root of a product of nonnegative numbers)}
+\\
+&= \abs{c}\,\norm{\vecf{x}}.
+&& \text{(} \sqrt{c^2} = \abs{c} \text{, and @eq-l2-norm)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-norm-properties}
+#### Scaling a vector scales its length
+
+For $\vecf{x} = (3, 4)$, $\norm{\vecf{x}} = 5$ (@exm-euclidean-norm).
+Then $-2\,\vecf{x} = (-6, -8)$ has norm
+$\sqrt{36 + 64} = 10 = \abs{-2} \cd 5$,
+as part 2 says.
+Dividing by the norm gives a vector of length $1$:
+$\norm{\tfrac{1}{5}\,\vecf{x}} = \tfrac{1}{5} \cd 5 = 1$,
+and $\tfrac{1}{5}\,\vecf{x} = (0.6, 0.8)$ is the unit vector in @exm-euclidean-norm.
+
+:::

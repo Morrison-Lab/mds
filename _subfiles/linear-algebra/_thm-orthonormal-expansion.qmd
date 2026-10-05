@@ -1,0 +1,66 @@
+:::{#thm-orthonormal-expansion}
+#### Coordinates in an orthonormal basis are dot products
+
+If $\vecf{q}_1, \ldots, \vecf{q}_k$ is an orthonormal basis of a subspace $\mathcal{S}$
+(@def-orthonormal-basis), then every $\vecf{x} \in \mathcal{S}$ satisfies
+
+$$
+\vecf{x} = \sum_{i=1}^{k} (\vecf{q}_i \cdot \vecf{x})\,\vecf{q}_i.
+$$
+
+:::
+
+::: proof
+
+The basis spans $\mathcal{S}$,
+so $\vecf{x} = \sum_{j=1}^{k} c_j \vecf{q}_j$ for some numbers $c_j$.
+For each $i$,
+
+$$
+\ba
+\vecf{q}_i \cdot \vecf{x}
+&= \vecf{q}_i \cdot \paren{\sum_{j=1}^{k} c_j \vecf{q}_j}
+&& \text{(substitute)}
+\\
+&= \sum_{j=1}^{k} c_j\,(\vecf{q}_i \cdot \vecf{q}_j)
+&& \text{(@thm-dot-linear-sum)}
+\\
+&= c_i,
+&& \text{(@def-orthonormal-vectors)}
+\ea
+$$
+
+so each coefficient $c_i$ is $\vecf{q}_i \cdot \vecf{x}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthonormal-expansion}
+#### Expanding a vector in an orthonormal basis
+
+With the orthonormal basis $\vecf{q}_1, \vecf{q}_2, \vecf{q}_3$ of $\reals^3$
+from @exm-orthonormal-basis and $\vecf{x} = (1, 2, 3)$:
+$\vecf{q}_1 \cdot \vecf{x} = 3$,
+$\vecf{q}_2 \cdot \vecf{x} = \tfrac{1}{\sqrt{2}}\,(1 + 2) = \tfrac{3}{\sqrt{2}}$
+and $\vecf{q}_3 \cdot \vecf{x} = \tfrac{1}{\sqrt{2}}\,(1 - 2) = -\tfrac{1}{\sqrt{2}}$.
+Then
+
+$$
+\ba
+\sum_{i=1}^{3} (\vecf{q}_i \cdot \vecf{x})\,\vecf{q}_i
+&= 3\,(0, 0, 1) + \tfrac{3}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, 1, 0)
+ - \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, -1, 0)
+&& \text{(substitute)}
+\\
+&= (0, 0, 3) + \paren{\tfrac{3}{2}, \tfrac{3}{2}, 0} + \paren{-\tfrac{1}{2}, \tfrac{1}{2}, 0}
+&& \text{(multiply out each term)}
+\\
+&= (1, 2, 3),
+&& \text{(add entrywise)}
+\ea
+$$
+
+which is $\vecf{x}$, as @thm-orthonormal-expansion says.
+
+:::

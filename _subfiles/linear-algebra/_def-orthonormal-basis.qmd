@@ -1,0 +1,37 @@
+:::{#def-orthonormal-basis}
+#### Orthonormal basis
+
+An **orthonormal basis** of a subspace $\mathcal{S}$ of $\reals^p$
+is a basis of $\mathcal{S}$ (@def-basis)
+whose vectors are orthonormal (@def-orthonormal-vectors).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthonormal-basis}
+#### Orthonormal bases of $\reals^3$
+
+- The indicator vectors $\vecf{e}_1, \vecf{e}_2, \vecf{e}_3$ are orthonormal
+  (@exm-indicator-orthonormal) and a basis of $\reals^3$ (@exm-dimension).
+- The vectors $\vecf{q}_1, \vecf{q}_2, \vecf{q}_3$ of @exm-orthonormal-independent
+  are orthonormal and linearly independent,
+  so they are a basis of their span (@def-basis),
+  which therefore has dimension $3$ (@def-dimension)
+  and is all of $\reals^3$ (@thm-subspace-equal-dim, @exm-dimension).
+  So they are an orthonormal basis of $\reals^3$ too.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-orthonormal-basis}
+#### Bases that are not orthonormal, and orthonormal lists that are not bases
+
+- $(1, 0), (1, 1)$ is a basis of $\reals^2$ (@exm-basis).
+  It is not an orthonormal basis, since $(1, 0) \cdot (1, 1) = 1$.
+- $(1, 0, 0), (0, 1, 0)$ is orthonormal but not a basis of $\reals^3$:
+  its span is the plane $z = 0$ (@exm-span),
+  which does not contain $(0, 0, 1)$.
+
+:::
