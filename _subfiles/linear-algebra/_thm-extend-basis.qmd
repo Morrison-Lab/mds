@@ -1,0 +1,55 @@
+:::{#thm-extend-basis}
+#### An independent list extends to a basis
+
+If $\mathcal{S}$ is a subspace of $\reals^p$ (@def-subspace)
+and $\vecf{v}_1, \ldots, \vecf{v}_k \in \mathcal{S}$
+are linearly independent (@def-linearly-independent),
+then adding vectors of $\mathcal{S}$ to the list
+gives a basis of $\mathcal{S}$ (@def-basis).
+Starting from the empty list shows that every subspace has a basis.
+
+:::
+
+::: proof
+
+Repeat the following step.
+If the current list spans $\mathcal{S}$, stop:
+it is linearly independent and spans $\mathcal{S}$, so it is a basis.
+Otherwise, some $\vecf{w} \in \mathcal{S}$ is not in the span of the current list;
+add $\vecf{w}$ to the list,
+which stays linearly independent by @thm-add-outside-span.
+
+Every list produced is a linearly independent list of vectors in $\reals^p$,
+so it has at most $p$ vectors (@thm-many-vectors-dependent).
+Each step adds one vector,
+so the process stops after at most $p - k$ steps,
+and when it stops the list is a basis of $\mathcal{S}$.
+
+For the empty list, which is linearly independent and spans $\cb{\vzero}$
+by the conventions in @def-span,
+the first step asks whether $\mathcal{S} = \cb{\vzero}$:
+if so, the empty list is already a basis;
+if not, the process adds vectors as described.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-extend-basis}
+#### Extending $(1, 1, 0)$ to a basis of $\reals^3$
+
+Start with the single vector $(1, 1, 0)$.
+
+1. $(1, 0, 0)$ is not in $\operatorname{span}\cb{(1, 1, 0)}$,
+   because every multiple $c\,(1, 1, 0)$ has equal first and second entries.
+   Add it.
+2. $(0, 0, 1)$ is not in $\operatorname{span}\cb{(1, 1, 0), (1, 0, 0)}$,
+   because every combination of those two vectors has third entry $0$.
+   Add it.
+3. The list $(1, 1, 0), (1, 0, 0), (0, 0, 1)$ spans $\reals^3$:
+   $(x, y, z) = y\,(1, 1, 0) + (x - y)\,(1, 0, 0) + z\,(0, 0, 1)$.
+   Stop.
+
+The result is a basis of $\reals^3$ that contains the starting vector.
+
+:::

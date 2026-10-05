@@ -13,6 +13,10 @@ $$
 The vectors $\vecf{v}_1, \ldots, \vecf{v}_k$ **span** a set $\mathcal{S}$
 if their span equals $\mathcal{S}$.
 
+By convention, the span of the empty list ($k = 0$) is $\cb{\vzero}$,
+and the empty list counts as linearly independent (@def-linearly-independent),
+since it has no coefficients that could fail to be zero.
+
 :::
 
 {{< slidebreak >}}

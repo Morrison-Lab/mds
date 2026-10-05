@@ -1,0 +1,70 @@
+:::{#thm-rank-product}
+#### Multiplying on the right cannot increase the rank
+
+If $\matr{A}$ is $m \times n$ and $\matr{B}$ is $n \times k$, then
+
+$$
+\operatorname{rank}(\matr{A} \matr{B}) \le \operatorname{rank}(\matr{A}).
+$$
+
+:::
+
+::: proof
+
+**$\mathcal{C}(\matr{A} \matr{B}) \subseteq \mathcal{C}(\matr{A})$.**
+Any vector in $\mathcal{C}(\matr{A} \matr{B})$ is $(\matr{A} \matr{B})\,\vecf{x}$
+for some $\vecf{x} \in \reals^k$ (@def-column-space), and
+
+$$
+\ba
+(\matr{A} \matr{B})\,\vecf{x}
+&= \matr{A}\,(\matr{B} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
+\ea
+$$
+
+is $\matr{A}$ times the vector $\matr{B} \vecf{x} \in \reals^n$,
+so it is in $\mathcal{C}(\matr{A})$.
+
+**Compare dimensions.**
+Both column spaces are subspaces (@thm-column-space-span), so
+
+$$
+\ba
+\operatorname{rank}(\matr{A} \matr{B})
+&= \dim\paren{\mathcal{C}(\matr{A} \matr{B})}
+&& \text{(@thm-rank-dim)}
+\\
+&\le \dim\paren{\mathcal{C}(\matr{A})}
+&& \text{(@thm-dim-bound, part 2)}
+\\
+&= \operatorname{rank}(\matr{A}).
+&& \text{(@thm-rank-dim)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-product}
+#### A product can lose rank
+
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},
+\qquad
+\matr{B} = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix},
+\qquad
+\matr{A} \matr{B}
+= \begin{bmatrix} 1 \cd 0 + 0 \cd 1 & 1 \cd 0 + 0 \cd 0 \\ 0 \cd 0 + 0 \cd 1 & 0 \cd 0 + 0 \cd 0 \end{bmatrix}
+= \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}.
+$$
+
+$\matr{A}$ has rank $1$, but $\matr{A} \matr{B}$ has rank $0$,
+so the inequality in @thm-rank-product can be strict.
+With the $2 \times 2$ identity in place of $\matr{B}$,
+$\matr{A} \matr{I} = \matr{A}$ keeps rank $1$, and the inequality is an equality.
+
+:::

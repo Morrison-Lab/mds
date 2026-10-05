@@ -244,6 +244,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-matvec-linear.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-many-vectors-dependent.qmd >}}
 
 {{< slidebreak >}}
@@ -257,6 +261,18 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-basis-size.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-add-outside-span.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-extend-basis.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-dim-bound.qmd >}}
 
 ### Column space and null space {#sec-column-null-space}
 
@@ -273,6 +289,30 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
+
+### Rank-nullity and rank factorization {#sec-rank-nullity}
+
+{{< include mds/_subfiles/linear-algebra/_prose-rank-nullity-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-rank-dim.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-rank-nullity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-rank-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-rank-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-rank-factorization.qmd >}}
 
 ### Outer product
 
