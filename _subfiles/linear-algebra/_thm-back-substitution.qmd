@@ -28,15 +28,24 @@ b_i
 &= \sum_{j=1}^{n} u_{ij}\,x_j
 && \text{(@def-matvec-mult)}
 \\
-&= u_{ii}\,x_i + \sum_{j=i+1}^{n} u_{ij}\,x_j,
+&= \sum_{j=i}^{n} u_{ij}\,x_j
 && \text{(} u_{ij} = 0 \text{ for } j < i \text{)}
+\\
+&= u_{ii}\,x_i + \sum_{j=i+1}^{n} u_{ij}\,x_j.
+&& \text{(split off the } j = i \text{ term)}
 \ea
 $$
 
-and since $u_{ii} \ne 0$ this equation holds exactly when
+This equation is equivalent to each of
 
 $$
-x_i = \frac{1}{u_{ii}} \paren{b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j}.
+\ba
+u_{ii}\,x_i &= b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j
+&& \text{(subtract the sum from both sides)}
+\\
+x_i &= \frac{1}{u_{ii}} \paren{b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j}.
+&& \text{(divide by } u_{ii} \ne 0 \text{)}
+\ea
 $$
 
 Row $n$ involves only $x_n$, so it fixes $x_n$;

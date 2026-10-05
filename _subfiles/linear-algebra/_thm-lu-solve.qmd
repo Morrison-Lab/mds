@@ -18,7 +18,8 @@ If $\vecf{y}$ and $\vecf{x}$ are those solutions, then
 $\matr{A} \vecf{x} = \matr{L}\,(\matr{U} \vecf{x}) = \matr{L} \vecf{y} = \vecf{b}$ (@thm-matmul-assoc),
 so $\vecf{x}$ is a solution.
 Conversely, if $\matr{A} \vecf{x} = \vecf{b}$, then $\vecf{y} \eqdef \matr{U} \vecf{x}$
-satisfies $\matr{L} \vecf{y} = \vecf{b}$,
+satisfies $\matr{L} \vecf{y} = \matr{L}\,(\matr{U} \vecf{x}) = (\matr{L} \matr{U})\,\vecf{x} = \matr{A} \vecf{x} = \vecf{b}$
+(@thm-matmul-assoc),
 so $\vecf{y}$ is the unique solution of that system,
 and $\vecf{x}$ is then the unique solution of $\matr{U} \vecf{x} = \vecf{y}$.
 

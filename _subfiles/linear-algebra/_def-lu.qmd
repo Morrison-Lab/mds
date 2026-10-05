@@ -10,17 +10,22 @@ with $\matr{L}$ unit lower triangular and $\matr{U}$ upper triangular (@def-tria
 {{< slidebreak >}}
 
 :::{#exm-lu}
-#### An LU factorization from Gaussian elimination
+#### An LU factorization of a $3 \times 3$ matrix
 
-Eliminating $x_1$ and then $x_2$ from the system with
-$\matr{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}$
-gives the upper triangular
-$\matr{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$,
-and the multiples of earlier rows that the elimination subtracted form
-$\matr{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}$.
-Multiplying out row by row confirms $\matr{L} \matr{U} = \matr{A}$:
+Let
+$\matr{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}$,
+$\matr{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}$
+(unit lower triangular) and
+$\matr{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$
+(upper triangular).
+By @def-matrix-mult, entry $(i, j)$ of $\matr{L} \matr{U}$ is $\sum_k \ell_{ik}\,u_{kj}$,
+so row $i$ of $\matr{L} \matr{U}$ is $\sum_k \ell_{ik}$ times row $k$ of $\matr{U}$.
+Row 1 is $1 \cd (2, 1, -1) = (2, 1, -1)$;
 row 2 is $-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)$,
 and row 3 is $-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)$.
+These are the rows of $\matr{A}$, so $\matr{L} \matr{U} = \matr{A}$ is an LU factorization.
+The entries of $\matr{L}$ are the negatives of the multiples of earlier rows
+that Gaussian elimination adds to reduce $\matr{A}$ to $\matr{U}$.
 
 :::
 
@@ -29,7 +34,8 @@ and row 3 is $-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-
 :::{#exm-not-lu}
 #### An invertible matrix with no LU factorization
 
-$\matr{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is invertible ($\matr{P}^2 = \matr{I}_2$),
+$\matr{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is invertible:
+$\matr{P}^2 = \matr{I}_2$, so $\matr{P}^{-1} = \matr{P}$ (@def-matrix-inverse);
 but it has no LU factorization.
 If $\matr{P} = \matr{L} \matr{U}$, the $(1, 1)$ entry gives $0 = 1 \cd u_{11}$, so $u_{11} = 0$,
 and then the $(2, 1)$ entry gives $1 = \ell_{21}\,u_{11} = 0$, which is impossible.

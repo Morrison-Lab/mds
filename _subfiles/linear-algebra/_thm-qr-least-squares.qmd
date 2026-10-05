@@ -25,23 +25,39 @@ Then
 $$
 \ba
 \tp{\matr{A}} \matr{A} \hat{\vecf{x}}
-&= \tp{\matr{R}}\,\tp{\matr{Q}} \matr{Q}\,\matr{R} \hat{\vecf{x}}
-&& \text{(substitute } \matr{A} = \matr{Q} \matr{R} \text{, @thm-transpose-product)}
+&= \tp{(\matr{Q} \matr{R})}\,(\matr{Q} \matr{R})\,\hat{\vecf{x}}
+&& \text{(substitute } \matr{A} = \matr{Q} \matr{R} \text{)}
 \\
-&= \tp{\matr{R}}\,\matr{R} \hat{\vecf{x}}
-&& \text{(} \tp{\matr{Q}} \matr{Q} = \matr{I}_n \text{, @thm-identity)}
+&= \tp{\matr{R}}\,\tp{\matr{Q}}\,(\matr{Q} \matr{R})\,\hat{\vecf{x}}
+&& \text{(@thm-transpose-product)}
 \\
-&= \tp{\matr{R}}\,\tp{\matr{Q}} \vecf{b}
+&= \tp{\matr{R}}\,(\tp{\matr{Q}} \matr{Q})\,(\matr{R} \hat{\vecf{x}})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{\matr{R}}\,\matr{I}_n\,(\matr{R} \hat{\vecf{x}})
+&& \text{(} \tp{\matr{Q}} \matr{Q} = \matr{I}_n \text{)}
+\\
+&= \tp{\matr{R}}\,(\matr{R} \hat{\vecf{x}})
+&& \text{(@thm-identity)}
+\\
+&= \tp{\matr{R}}\,(\tp{\matr{Q}} \vecf{b})
 && \text{(} \matr{R} \hat{\vecf{x}} = \tp{\matr{Q}} \vecf{b} \text{)}
 \\
-&= \tp{\matr{A}} \vecf{b},
+&= (\tp{\matr{R}}\,\tp{\matr{Q}})\,\vecf{b}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{Q} \matr{R})}\,\vecf{b}
 && \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{A}} \vecf{b},
+&& \text{(} \matr{A} = \matr{Q} \matr{R} \text{)}
 \ea
 $$
 
 so $\hat{\vecf{x}}$ solves the normal equations and is the least squares solution
 (@thm-normal-equations), which is unique because $\operatorname{rank}(\matr{A}) = n$.
-When $m = n$, $\matr{A} \vecf{x} = \vecf{b}$ is consistent for every $\vecf{b}$ (@cor-solution-unique),
+When $m = n$, $\operatorname{rank}(\matr{A}) = n = m$,
+so $\matr{A} \vecf{x} = \vecf{b}$ is consistent for every $\vecf{b}$ (@cor-solution-unique, part 1),
 so its solution leaves residual $\vzero$, is a least squares solution,
 and is therefore $\hat{\vecf{x}}$.
 

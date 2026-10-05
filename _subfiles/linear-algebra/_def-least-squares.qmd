@@ -21,7 +21,8 @@ are the **normal equations**.
 #### Fitting a constant
 
 Let $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\vecf{b} = (1, 3)$.
-The system $x\,(1, 1) = (1, 3)$ is inconsistent (@def-consistent-system).
+The system $x\,(1, 1) = (1, 3)$ is inconsistent (@def-consistent-system):
+its first entry needs $x = 1$ and its second needs $x = 3$.
 For any number $x$,
 $\norm{\vecf{b} - \matr{A} x}^2 = (1 - x)^2 + (3 - x)^2 = 2\,(x - 2)^2 + 2$,
 which is smallest at $x = 2$, so $\hat{x} = 2$ is the least squares solution.

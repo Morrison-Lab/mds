@@ -15,9 +15,10 @@ and $\matr{R}$ is upper triangular (@def-triangular-matrix) with positive diagon
 
 ::: proof
 
-The $n$ columns $\vecf{a}_1, \ldots, \vecf{a}_n$ of $\matr{A}$ are linearly independent (@def-rank),
+The $n$ columns $\vecf{a}_1, \ldots, \vecf{a}_n$ of $\matr{A}$ are linearly independent
+(@def-full-column-rank),
 so the Gram-Schmidt process (@def-gram-schmidt) runs all $n$ steps
-and gives orthonormal $\vecf{q}_1, \ldots, \vecf{q}_n$ (@thm-gram-schmidt);
+and gives orthonormal $\vecf{q}_1, \ldots, \vecf{q}_n$ (@thm-gram-schmidt, parts 1 and 3);
 let $\matr{Q}$ have these columns.
 At step $i$, $\tilde{\vecf{q}}_i \ne \vzero$, and rearranging the orthogonalize step,
 
@@ -37,8 +38,25 @@ $r_{ji} = \vecf{q}_j \cdot \vecf{a}_i$ for $j < i$,
 $r_{ii} = \norm{\tilde{\vecf{q}}_i} > 0$,
 and $r_{ji} = 0$ for $j > i$;
 it is upper triangular with positive diagonal.
-Column $i$ of $\matr{Q} \matr{R}$ is $\sum_{j} r_{ji}\,\vecf{q}_j$ (@thm-matvec-columns),
-which is $\vecf{a}_i$ by the display.
+Column $i$ of $\matr{Q} \matr{R}$ is $\matr{Q}$ times column $i$ of $\matr{R}$ (@def-matrix-mult), and
+
+$$
+\ba
+\matr{Q}\,(r_{1i}, \ldots, r_{ni})
+&= \sum_{j=1}^{n} r_{ji}\,\vecf{q}_j
+&& \text{(@thm-matvec-columns)}
+\\
+&= \sum_{j=1}^{i} r_{ji}\,\vecf{q}_j
+&& \text{(} r_{ji} = 0 \text{ for } j > i \text{)}
+\\
+&= r_{ii}\,\vecf{q}_i + \sum_{j=1}^{i-1} r_{ji}\,\vecf{q}_j
+&& \text{(split off the } j = i \text{ term)}
+\\
+&= \vecf{a}_i.
+&& \text{(the entries of } \matr{R} \text{, and the display)}
+\ea
+$$
+
 So $\matr{Q} \matr{R} = \matr{A}$.
 
 :::
