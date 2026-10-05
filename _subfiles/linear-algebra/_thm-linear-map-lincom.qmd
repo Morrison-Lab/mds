@@ -1,0 +1,35 @@
+:::{#thm-linear-map-lincom}
+#### A linear map preserves linear combinations
+
+If $f: \reals^p \to \reals^m$ is a linear map (@def-linear-map),
+then for any vectors $\vecf{v}_1, \ldots, \vecf{v}_k \in \reals^p$
+and any coefficients $c_1, \ldots, c_k \in \reals$:
+
+$$f\paren{\sum_{j=1}^{k} c_j \vecf{v}_j} = \sum_{j=1}^{k} c_j f(\vecf{v}_j)$$
+
+:::
+
+::: proof
+
+By induction on $k$.
+For $k = 1$, the claim $f(c_1 \vecf{v}_1) = c_1 f(\vecf{v}_1)$ is homogeneity.
+
+Suppose the claim holds for $k$ vectors. Then for $k + 1$:
+
+$$
+\ba
+f\paren{\sum_{j=1}^{k+1} c_j \vecf{v}_j}
+&= f\paren{\sum_{j=1}^{k} c_j \vecf{v}_j + c_{k+1} \vecf{v}_{k+1}}
+&& \text{(split off the last term)}
+\\&= f\paren{\sum_{j=1}^{k} c_j \vecf{v}_j} + f(c_{k+1} \vecf{v}_{k+1})
+&& \text{(additivity)}
+\\&= \sum_{j=1}^{k} c_j f(\vecf{v}_j) + f(c_{k+1} \vecf{v}_{k+1})
+&& \text{(induction hypothesis)}
+\\&= \sum_{j=1}^{k} c_j f(\vecf{v}_j) + c_{k+1} f(\vecf{v}_{k+1})
+&& \text{(homogeneity)}
+\\&= \sum_{j=1}^{k+1} c_j f(\vecf{v}_j)
+&& \text{(join the last term back on)}
+\ea
+$$
+
+:::

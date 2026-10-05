@@ -148,6 +148,18 @@
 
 {{< include mds/_subfiles/algebra/_thm-square-of-a-sum.qmd >}}
 
+## Affine and linear functions of one variable {#sec-affine-linear-functions}
+
+{{< include mds/_subfiles/algebra/_def-affine-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-linear-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-affine-function-props.qmd >}}
+
 ## Summation notation {#sec-summation}
 
 {{< include mds/_subfiles/algebra/_exr-expand-a-sum.qmd >}}

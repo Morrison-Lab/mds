@@ -1,17 +1,17 @@
 :::{#def-affine-map}
-#### Affine transformation
+#### Affine map
 
-An **affine transformation** is a function $f: \mathbb{R}^p \to \mathbb{R}^m$
-composed of a linear map followed by a translation:
+A function $f: \mathbb{R}^p \to \mathbb{R}^m$ is an **affine map**
+(also called an *affine transformation* or *affine function*)
+if it is a matrix product followed by a translation:
+there are an $m \times p$ matrix $\matr{A}$ and a vector $\vec{b} \in \mathbb{R}^m$ such that
 
-$$f(\vx) = \matr{A} \vx + \vec{b}, \qquad \matr{A} \in \mathbb{R}^{m \times p}, \quad \vec{b} \in \mathbb{R}^m$$
+$$f(\vx) = \matr{A} \vx + \vec{b} \quad \text{for all } \vx \in \mathbb{R}^p$$
 
-For a scalar-valued function ($m = 1$), this is an inner product plus an offset:
+For a scalar-valued function ($m = 1$),
+$\matr{A}$ is a single row, written $\vec{w}^\top$, and $\vec{b}$ is a single number $b$,
+so an affine function is an inner product plus an offset:
 
 $$f(\vx) = \vec{w}^\top \vx + b, \qquad \vec{w} \in \mathbb{R}^p, \quad b \in \mathbb{R}$$ {#eq-linear-scalar}
 
-When $\vec{b} \neq \vzero$ (or $b \neq 0$), an affine transformation does not send $\vzero$ to $\vzero$,
-so it is not strictly linear.
-In machine learning and statistics, functions of this form are commonly referred to as
-**linear models** or linear functions, with $\vec{b}$ (or $b$) called the **bias** or **intercept**.
 :::

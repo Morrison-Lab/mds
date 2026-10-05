@@ -1,0 +1,41 @@
+:::{#thm-linear-map-zero}
+#### A linear map sends zero to zero
+
+If $f: \reals^p \to \reals^m$ is a linear map (@def-linear-map),
+then $f(\vzero) = \vzero$.
+
+:::
+
+::: proof
+
+On the left, $\vzero$ is the zero vector of length $p$;
+on the right, it is the zero vector of length $m$.
+
+$$
+\ba
+f(\vzero)
+&= f(0 \cd \vzero)
+&& \text{(every entry of } 0 \cd \vzero \text{ is } 0 \cd 0 = 0 \text{; @def-scalar-mult)}
+\\&= 0 \cd f(\vzero)
+&& \text{(homogeneity, with } c = 0 \text{ and } \vx = \vzero \text{)}
+\\&= \vzero
+&& \text{(every entry of } 0 \cd f(\vzero) \text{ is } 0 \text{; @def-scalar-mult)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-linear-map-zero}
+#### Ruling out linearity at zero
+
+In @exm-linear-map, $g(x) = x + 1$ has $g(0) = 1 \neq 0$,
+so by @thm-linear-map-zero it is not linear,
+without checking additivity or homogeneity.
+
+Sending $\vzero$ to $\vzero$ is necessary but not sufficient:
+$h(x) = x^2$ in the same example has $h(0) = 0$
+and is still not linear.
+
+:::

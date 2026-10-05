@@ -1,18 +1,14 @@
 :::{#def-linear-map}
 #### Linear map
 
-A function $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map** (or linear transformation)
+A function $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map**
+(also called a *linear transformation* or *linear function*)
 if it preserves vector addition and scalar multiplication:
 for all $\vx, \vy \in \mathbb{R}^p$ and $c \in \mathbb{R}$,
 
-1. $f(\vx + \vy) = f(\vx) + f(\vy)$
-2. $f(c\vx) = c f(\vx)$
+1. $f(\vx + \vy) = f(\vx) + f(\vy)$ (*additivity*)
+2. $f(c\vx) = c f(\vx)$ (*homogeneity*)
 
-Every such function can be represented as multiplication by an $m \times p$ matrix $\matr{A}$:
-
-$$f(\vx) = \matr{A} \vx$$
-
-A linear map always maps the zero vector to the zero vector: $f(\vzero) = \vzero$.
 :::
 
 {{< slidebreak >}}
@@ -23,8 +19,7 @@ A linear map always maps the zero vector to the zero vector: $f(\vzero) = \vzero
 - $f(\vx) = (2 x_1,\ x_1 + x_2)$ on $\reals^2$ is linear. For $\vx, \vy \in \reals^2$ and $c \in \reals$:
   $f(\vx + \vy) = (2 (x_1 + y_1),\ (x_1 + y_1) + (x_2 + y_2)) = f(\vx) + f(\vy)$
   and $f(c \vx) = (2 c x_1,\ c x_1 + c x_2) = c f(\vx)$.
-  Its matrix is $\matr{A} = \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}$.
-- $g(x) = x + 1$ on $\reals$ is not linear: condition 1 fails,
+- $g(x) = x + 1$ on $\reals$ is not linear: additivity fails,
   since $g(0 + 0) = 1$ but $g(0) + g(0) = 2$.
 - $h(x) = x^2$ on $\reals$ is not linear:
   $h(2 \cd 1) = 4$ but $2\,h(1) = 2$, so $h(c x) \ne c\,h(x)$ for $c = 2$, $x = 1$.

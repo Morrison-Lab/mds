@@ -138,6 +138,20 @@ $$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{}{w}f(w)$$ {#eq-linear-approx}
 
 {{< slidebreak >}}
 
+:::{#rem-linear-approx-affine}
+#### The "linear" approximation is affine
+
+With $w$ held fixed, the right side of @eq-linear-approx is a function of the step $\epsilon$,
+and it is an [affine function](algebra.qmd#def-affine-function) of $\epsilon$:
+its slope is $\dif{}{w}f(w)$ and its intercept is $f(w)$.
+It is [linear](algebra.qmd#def-linear-function) in $\epsilon$ only when $f(w) = 0$.
+The name "linear approximation" uses "linear" in the looser, school-algebra sense
+([remark](algebra.qmd#rem-linear-function-terminology)).
+
+:::
+
+{{< slidebreak >}}
+
 :::{#def-flat-point}
 #### Flat point
 

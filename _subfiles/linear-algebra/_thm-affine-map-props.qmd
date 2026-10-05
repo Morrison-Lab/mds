@@ -1,0 +1,67 @@
+:::{#thm-affine-map-props}
+#### Linear maps and affine maps
+
+1. An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ (@def-affine-map)
+   sends $\vzero$ to its offset: $f(\vzero) = \vec{b}$.
+2. An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ is linear (@def-linear-map)
+   if and only if $\vec{b} = \vzero$.
+3. Every linear map is affine.
+
+:::
+
+::: proof
+
+**Part 1.** By @def-matvec-mult, entry $i$ of $\matr{A}\vzero$ is
+$\sum_{j=1}^{p} a_{ij} \cd 0$,
+a sum of $p$ zeros, which is $0$;
+so $\matr{A}\vzero = \vzero$. Then
+
+$$
+\ba
+f(\vzero)
+&= \matr{A}\vzero + \vec{b}
+&& \text{(@def-affine-map)}
+\\&= \vzero + \vec{b}
+&& (\matr{A}\vzero = \vzero)
+\\&= \vec{b}
+&& \text{(adding } \vzero \text{ changes no entry; @def-vector-addition)}
+\ea
+$$
+
+**Part 2.**
+If $\vec{b} = \vzero$, then $f(\vx) = \matr{A}\vx + \vzero = \matr{A}\vx$,
+which is linear by @thm-matrix-map-linear.
+Conversely, if $f$ is linear, then $f(\vzero) = \vzero$ by @thm-linear-map-zero,
+and $f(\vzero) = \vec{b}$ by part 1,
+so $\vec{b} = \vzero$.
+
+**Part 3.**
+If $f$ is linear, @thm-linear-map-matrix gives a matrix $\matr{A}$
+with $f(\vx) = \matr{A}\vx = \matr{A}\vx + \vzero$,
+which is @def-affine-map with $\vec{b} = \vzero$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-linear-affine-terminology}
+#### "Linear" in this site, and in machine learning and statistics
+
+This site uses "linear" only in the sense of @def-linear-map,
+so by @thm-affine-map-props a function with a nonzero offset is affine but not linear.
+For functions of one variable, this is the same split as
+[affine](algebra.qmd#def-affine-function) $mx + b$
+versus [linear](algebra.qmd#def-linear-function) $mx$
+on the algebra page.
+
+Machine learning and statistics often call any function of the form
+@eq-linear-scalar "linear",
+as in a *linear layer* of a neural network or a *linear model*,
+and call the offset $b$ the **bias** (machine learning)
+or the **intercept** (statistics).
+A model with an intercept is affine in $\vx$,
+but it is linear in its coefficients $(b, \vec{w})$:
+appending a constant $1$ to $\vx$ makes $b$ the coefficient on that entry,
+and that is the sense of "linear" in "linear model".
+
+:::

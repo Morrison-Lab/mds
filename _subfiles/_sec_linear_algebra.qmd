@@ -176,7 +176,31 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-linear-map-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-matrix-map-linear.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-linear-map-lincom.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-standard-basis-expansion.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-linear-map-matrix.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-affine-map-props.qmd >}}
 
 {{< slidebreak >}}
 
