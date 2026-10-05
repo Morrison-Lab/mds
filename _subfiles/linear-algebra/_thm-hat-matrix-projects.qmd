@@ -1,0 +1,80 @@
+:::{#thm-hat-matrix-projects}
+#### The hat matrix projects onto the column space of the design matrix
+
+If $\mX$ is an $n \times p$ design matrix with $\operatorname{rank}(\mX) = p$,
+then for every $\vy \in \reals^n$,
+$\matr{H} \vy$ (@def-hat-matrix) is the orthogonal projection of $\vy$ onto $\mathcal{C}(\mX)$.
+So $\matr{H} = \matr{Q} \tp{\matr{Q}}$
+for any $n \times p$ matrix $\matr{Q}$ whose columns are an orthonormal basis of $\mathcal{C}(\mX)$.
+
+:::
+
+::: proof
+
+$\matr{H}$ is an orthogonal projection matrix (@thm-hat-matrix),
+so $\matr{H} \vy$ is the orthogonal projection of $\vy$ onto $\mathcal{C}(\matr{H})$
+(@thm-projection-matrix-projects, part 1).
+It remains to show $\mathcal{C}(\matr{H}) = \mathcal{C}(\mX)$.
+
+**$\mathcal{C}(\matr{H}) \subseteq \mathcal{C}(\mX)$.**
+$\matr{H} \vecf{z} = \mX\,\paren{(\tp{\mX}\mX)^{-1} \tp{\mX} \vecf{z}}$ (@thm-matmul-assoc),
+which is in $\mathcal{C}(\mX)$ (@def-column-space).
+
+**$\mathcal{C}(\mX) \subseteq \mathcal{C}(\matr{H})$.**
+First,
+
+$$
+\ba
+\matr{H} \mX
+&= \mX (\tp{\mX}\mX)^{-1} \tp{\mX} \mX
+&& \text{(@def-hat-matrix)}
+\\
+&= \mX\,\paren{(\tp{\mX}\mX)^{-1} (\tp{\mX}\mX)}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \mX\,\matr{I}_p
+&& \text{(@def-matrix-inverse)}
+\\
+&= \mX.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+So for every $\vecf{b} \in \reals^p$,
+$\mX \vecf{b} = (\matr{H} \mX)\,\vecf{b}$, since $\matr{H} \mX = \mX$,
+and $(\matr{H} \mX)\,\vecf{b} = \matr{H}\,(\mX \vecf{b})$ (@thm-matmul-assoc),
+which is in $\mathcal{C}(\matr{H})$.
+
+$\mathcal{C}(\mX)$ has dimension $p \ge 1$ (@thm-rank-dim),
+so an orthonormal basis of it has $p$ vectors (@def-dimension),
+and $\matr{Q} \tp{\matr{Q}}$ also gives the orthogonal projection onto $\mathcal{C}(\mX)$
+(@thm-projector-onb, with $n$ in place of $p$ and $r = p$).
+By @thm-projection-matrix-projects, part 2, $\matr{H} = \matr{Q} \tp{\matr{Q}}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hat-matrix-projects}
+#### The intercept-only hat matrix, from an orthonormal basis
+
+For the intercept-only design $\mX = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ of @exm-hat-matrix,
+$\mathcal{C}(\mX) = \operatorname{span}\cb{(1, 1)}$,
+with orthonormal basis $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1)$,
+since $\norm{\vecf{q}_1} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} = 1$.
+With $\matr{Q} = [\vecf{q}_1]$,
+
+$$
+\matr{Q} \tp{\matr{Q}}
+= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix}
+= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix},
+$$
+
+the hat matrix found in @exm-hat-matrix.
+The fitted values $(\bar{y}, \bar{y})$ are the closest point to $\vy$ on the line of constant vectors
+(@thm-closest-point),
+and the residuals $(y_1 - \bar{y}, y_2 - \bar{y})$ are orthogonal to $(1, 1)$:
+$(1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) = y_1 + y_2 - 2\bar{y} = 0$,
+since $2\bar{y} = y_1 + y_2$.
+
+:::

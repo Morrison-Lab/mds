@@ -621,3 +621,27 @@
 {{< include mds/_subfiles/linear-algebra/_exm-hat-matrix-projection.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-thm-hat-matrix.qmd >}}
+
+### Orthogonal projection onto a subspace {#sec-orthogonal-projection}
+
+{{< include mds/_subfiles/linear-algebra/_prose-orthogonal-projection-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-orthogonal-projection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-closest-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-projector-onb.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-projection-matrix-projects.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-hat-matrix-projects.qmd >}}

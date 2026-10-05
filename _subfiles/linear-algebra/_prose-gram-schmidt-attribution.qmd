@@ -1,5 +1,10 @@
+::: {.callout-note collapse="true"}
+#### Source
+
 Like @sec-cauchy-schwarz, this section is adapted from @zhou2024vector,
 used under the MIT License
 (see the license text in @sec-subspaces).
 The source leaves the proof that orthonormal vectors are linearly independent to class;
 it is written out here.
+
+:::

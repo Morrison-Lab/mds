@@ -1,3 +1,6 @@
+::: {.callout-note collapse="true"}
+#### Source
+
 This section,
 @sec-orthogonal-complements
 and @sec-fundamental-theorem
@@ -7,3 +10,5 @@ used under the MIT License
 The source proves that a subspace and its orthogonal complement together make up $\reals^p$
 by extending an orthonormal basis;
 the proof here uses the rank-nullity theorem (@thm-rank-nullity) instead.
+
+:::
