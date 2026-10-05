@@ -222,6 +222,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-epigraph.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-epigraph.qmd >}}
 
 {{< slidebreak >}}

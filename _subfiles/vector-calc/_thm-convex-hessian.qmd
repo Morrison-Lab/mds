@@ -57,7 +57,10 @@ and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
 
   so $f$ is convex.
   The Hessian is not positive definite ($\vecf{h} = \tp{(1, -2)}$ gives $0$),
-  so part 2 does not apply.
+  so part 2 does not apply,
+  and in fact $f$ is not strictly convex:
+  along $\vx = t\,\tp{(1, -2)}$, $u = 2t - 2t = 0$ and $f = 1 - t$ is linear in $t$,
+  so the convexity inequality holds with equality there.
 
 :::
 
@@ -80,7 +83,7 @@ x^4 - y^4 - 4 y^3 (x - y)
 && \text{(collect the } y^3 \text{ terms)}
 \\
 &= (x - y)^2 (x^2 + 2 x y + 3 y^2)
-&& \text{(factor out } x - y \text{ again)}
+&& \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)}
 \\
 &= (x - y)^2 \paren{(x + y)^2 + 2 y^2},
 && \text{(complete the square)}

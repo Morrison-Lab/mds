@@ -37,6 +37,9 @@ $$
   so its stationary point $\tp{(1, 0)}$ (@exm-stationary-point) is a global minimizer,
   as completing the square showed in @exm-first-order-condition.
 - Without convexity, a stationary point need not be a minimizer at all:
-  $x_1^2 - x_2^2$ has the stationary point $\vzero$, which is not one (@exm-first-order-condition).
+  $x_1^2 - x_2^2$ has the stationary point $\vzero$, which is not a minimizer (@exm-first-order-condition).
+- The corollary says nothing about whether a minimizer exists:
+  $e^{2x_1 + x_2} - x_1$ is convex (@exm-convex-hessian)
+  but has no stationary point, and so no local minimizer (@exm-first-order-condition).
 
 :::

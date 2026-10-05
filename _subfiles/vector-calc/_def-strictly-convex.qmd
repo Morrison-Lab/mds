@@ -14,9 +14,24 @@ and **strictly concave** if $-f$ is strictly convex.
 :::{#exm-strictly-convex}
 #### Strictly convex, and convex but not strictly
 
-- $f(x) = x^2$ is strictly convex: expanding the squares,
-  $t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2 = t (1 - t) (x - y)^2$,
+- $f(x) = x^2$ is strictly convex:
+
+  $$
+  \ba
+  t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2
+  &= t x^2 + (1 - t) y^2 - t^2 x^2 - 2 t (1 - t) x y - (1 - t)^2 y^2
+  && \text{(expand the square)}
+  \\
+  &= t (1 - t) x^2 - 2 t (1 - t) x y + t (1 - t) y^2
+  && \text{(} t - t^2 = t (1 - t) \text{, } (1 - t) - (1 - t)^2 = t (1 - t) \text{)}
+  \\
+  &= t (1 - t) (x - y)^2,
+  && \text{(factor)}
+  \ea
+  $$
+
   which is positive when $x \ne y$ and $t \in (0, 1)$.
+  At $t \in \cb{0, 1}$ or $x = y$ it is $0$, so $x^2$ is also convex.
 - $f(x) = 2x + 1$ is convex but not strictly convex:
   $f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)$ for every $x, y, t$,
   so the inequality holds, but never strictly.

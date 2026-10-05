@@ -23,7 +23,7 @@ $K$ contains the whole line segment between any two of its points.
   && \text{(triangle inequality)}
   \\
   &= t\,\norm{\vx} + (1 - t)\,\norm{\vy}
-  && \text{(} t \ge 0 \text{ and } 1 - t \ge 0 \text{)}
+  && \text{(norm of a multiple; } t, 1 - t \ge 0 \text{)}
   \\
   &\le t\,r + (1 - t)\,r
   && \text{(} \vx, \vy \in B \text{)}

@@ -1,0 +1,25 @@
+:::{#def-epigraph}
+#### Epigraph
+
+The **epigraph** of $f : \reals^p \to \reals$ is the set of points on or over its graph,
+
+$$
+\operatorname{epi} f \eqdef \cb{(\vx, s) : \vx \in \reals^p,\ s \in \reals,\ f(\vx) \le s}.
+$$
+
+A pair $(\vx, s)$ is treated as the $(p + 1)$-vector with entries $x_1, \ldots, x_p, s$,
+so $\operatorname{epi} f \subseteq \reals^{p+1}$,
+and sums and multiples of pairs are taken entry by entry.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-def-epigraph}
+#### The epigraph of $x^2$
+
+For $f(x) = x^2$, $\operatorname{epi} f = \cb{(x, s) : x^2 \le s}$,
+the region on or inside the parabola.
+$(1, 2)$ is in it, since $1^2 \le 2$; $(2, 1)$ is not, since $2^2 > 1$.
+
+:::

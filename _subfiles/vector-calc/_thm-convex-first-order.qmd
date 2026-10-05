@@ -51,7 +51,8 @@ g(t) - g(0)
 $$
 
 and dividing by $t > 0$, $\dfrac{g(t) - g(0)}{t} \le f(\vx) - f(\vy)$.
-As $t \to 0$ from the right, the left side tends to $g'(0)$,
+As $t \to 0$ from the right, the left side tends to $g'(0)$
+($g$ is differentiable at $0$, so the one-sided limit equals the two-sided derivative),
 and a limit of numbers that are all at most $f(\vx) - f(\vy)$ is at most $f(\vx) - f(\vy)$.
 So $\tp{\paren{\deriv{\vx} f(\vy)}} (\vx - \vy) \le f(\vx) - f(\vy)$, which rearranges to @eq-supporting-hyperplane.
 
@@ -66,13 +67,22 @@ f(\vx) \ge f(\vecf{z}) + \tp{\vecf{g}} (\vx - \vecf{z}),
 f(\vy) \ge f(\vecf{z}) + \tp{\vecf{g}} (\vy - \vecf{z}).
 $$
 
-Multiply the first by $t \ge 0$ and the second by $1 - t \ge 0$ and add:
+Multiplying the first by $t \ge 0$ and the second by $1 - t \ge 0$ and adding,
 
 $$
 \ba
 t f(\vx) + (1 - t) f(\vy)
-&\ge f(\vecf{z}) + \tp{\vecf{g}} \paren{t (\vx - \vecf{z}) + (1 - t) (\vy - \vecf{z})}
-&& \text{(add; } t + (1 - t) = 1 \text{; distribute } \tp{\vecf{g}} \text{)}
+&\ge t \paren{f(\vecf{z}) + \tp{\vecf{g}} (\vx - \vecf{z})} + (1 - t) \paren{f(\vecf{z}) + \tp{\vecf{g}} (\vy - \vecf{z})}
+&& \text{(multiply by } t, 1 - t \ge 0 \text{ and add)}
+\\
+&= (t + (1 - t))\,f(\vecf{z}) + t\,\tp{\vecf{g}} (\vx - \vecf{z}) + (1 - t)\,\tp{\vecf{g}} (\vy - \vecf{z})
+&& \text{(distribute } t \text{ and } 1 - t \text{)}
+\\
+&= f(\vecf{z}) + t\,\tp{\vecf{g}} (\vx - \vecf{z}) + (1 - t)\,\tp{\vecf{g}} (\vy - \vecf{z})
+&& \text{(} t + (1 - t) = 1 \text{)}
+\\
+&= f(\vecf{z}) + \tp{\vecf{g}} \paren{t (\vx - \vecf{z}) + (1 - t) (\vy - \vecf{z})}
+&& \text{(factor out } \tp{\vecf{g}} \text{; matrix products distribute)}
 \\
 &= f(\vecf{z}) + \tp{\vecf{g}} \paren{t \vx + (1 - t) \vy - \vecf{z}}
 && \text{(collect terms)}
@@ -84,10 +94,13 @@ $$
 
 That inequality is the defining inequality of a [convex function](algebra.qmd#def-convex-function).
 If @eq-supporting-hyperplane is strict for distinct points, and $\vx \ne \vy$ and $t \in (0, 1)$,
-then $\vecf{z}$ differs from both $\vx$ and $\vy$
-(for instance $\vx - \vecf{z} = (1 - t)(\vx - \vy) \ne \vzero$),
-so both inequalities are strict, both multipliers are positive,
-and the sum is strict: $f$ is strictly convex.
+then:
+
+- $\vecf{z}$ differs from both $\vx$ and $\vy$,
+  since $\vx - \vecf{z} = (1 - t)(\vx - \vy) \ne \vzero$ and $\vy - \vecf{z} = t (\vy - \vx) \ne \vzero$;
+- so both inequalities at $\vecf{z}$ are strict;
+- both multipliers $t$ and $1 - t$ are positive, so the first step of the display is strict,
+  and $f$ is strictly convex.
 
 :::
 

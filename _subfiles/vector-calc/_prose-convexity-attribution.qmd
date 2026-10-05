@@ -4,12 +4,14 @@
 This section is adapted from the convexity part of @zhou2024optim,
 used under the MIT License
 (see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
-The source states the first-order and second-derivative tests for convexity without proof;
-here they are proved from the Taylor theorem of @sec-optimality.
+The source states the first-order test (in one direction) and the second-derivative test for convexity without proof;
+here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of @sec-optimality.
+The source calls $f$ strictly concave when $-f$ is strictly convex, and concave likewise;
+here concave and strictly concave are defined separately.
 These parts of the source are not part of this section:
 
-- its catalog of convex functions, including $-\log \det$ of a positive definite matrix
-- the convexity of a supremum of infinitely many convex functions
-- its exercises and figures
+- its catalogs of convex sets and convex functions, including the positive semidefinite matrices and $-\log \det$
+- intersections of infinitely many convex sets, and suprema of infinitely many convex functions
+- its examples, exercises and figures, including the multivariate normal maximum likelihood example
 
 :::

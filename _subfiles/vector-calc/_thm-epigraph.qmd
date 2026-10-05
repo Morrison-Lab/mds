@@ -1,9 +1,8 @@
 :::{#thm-epigraph}
 #### Convexity through the epigraph
 
-The **epigraph** of $f : \reals^p \to \reals$ is the set of points on or over its graph,
-$\operatorname{epi} f \eqdef \cb{(\vx, s) \in \reals^p \times \reals : f(\vx) \le s}$.
-$f$ is [convex](algebra.qmd#def-convex-function) if and only if $\operatorname{epi} f$ is convex (@def-convex-set).
+$f : \reals^p \to \reals$ is [convex](algebra.qmd#def-convex-function)
+if and only if its epigraph (@def-epigraph) is convex (@def-convex-set).
 
 :::
 
@@ -12,13 +11,13 @@ $f$ is [convex](algebra.qmd#def-convex-function) if and only if $\operatorname{e
 **If.**
 Let $\vx, \vy \in \reals^p$ and $t \in [0, 1]$.
 The points $(\vx, f(\vx))$ and $(\vy, f(\vy))$ are in $\operatorname{epi} f$,
-so, $\operatorname{epi} f$ being convex, so is
+since $\operatorname{epi} f$ is convex, it contains
 
 $$
 t\,(\vx, f(\vx)) + (1 - t)\,(\vy, f(\vy)) = \paren{t \vx + (1 - t) \vy,\ t f(\vx) + (1 - t) f(\vy)},
 $$
 
-which says $f(t \vx + (1 - t) \vy) \le t f(\vx) + (1 - t) f(\vy)$.
+and by @def-epigraph that membership means $f(t \vx + (1 - t) \vy) \le t f(\vx) + (1 - t) f(\vy)$.
 
 **Only if.**
 Let $(\vx, s)$ and $(\vy, u)$ be in $\operatorname{epi} f$, so $f(\vx) \le s$ and $f(\vy) \le u$,
