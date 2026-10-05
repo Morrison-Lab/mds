@@ -50,7 +50,8 @@ $\mathcal{C}(\matr{A}) = \cb{\vzero_m}$, and both sides are $0$.
 
 For $\matr{A}$ in @exm-column-space,
 $\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 3)}$ (@exm-column-space-span),
-which has dimension $1$.
+and $(1, 3)$ is linearly independent because it is nonzero,
+so it is a basis and $\mathcal{C}(\matr{A})$ has dimension $1$.
 So $\operatorname{rank}(\matr{A}) = 1$, by @thm-rank-dim.
 Directly: the first column $(1, 3)$ is linearly independent on its own,
 and any two columns are dependent,

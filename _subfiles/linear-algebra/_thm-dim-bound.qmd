@@ -14,7 +14,12 @@ Let $\mathcal{S}$ be a subspace of $\reals^p$ with $\dim(\mathcal{S}) = d$
 ::: proof
 
 **Part 1.**
-Let $\vecf{a}_1, \ldots, \vecf{a}_d$ be a basis of $\mathcal{S}$,
+If $d = 0$, then $\mathcal{S} = \cb{\vzero}$,
+so every vector in a nonempty list from $\mathcal{S}$ is $\vzero$,
+and $1 \cd \vzero = \vzero$ shows the list is not linearly independent;
+only the empty list, with $0 = d$ vectors, is.
+Now let $d \ge 1$, and
+let $\vecf{a}_1, \ldots, \vecf{a}_d$ be a basis of $\mathcal{S}$,
 and let $\vecf{u}_1, \ldots, \vecf{u}_k \in \mathcal{S}$
 be linearly independent.
 Each $\vecf{u}_j$ is in $\mathcal{S}$,
@@ -34,8 +39,14 @@ $$
 &= \sum_{j=1}^{k} x_j \sum_{i=1}^{d} c_{ij} \vecf{a}_i
 && \text{(substitute each } \vecf{u}_j \text{)}
 \\
+&= \sum_{j=1}^{k} \sum_{i=1}^{d} x_j c_{ij}\,\vecf{a}_i
+&& \text{(distribute each } x_j \text{ over the inner sum)}
+\\
+&= \sum_{i=1}^{d} \sum_{j=1}^{k} x_j c_{ij}\,\vecf{a}_i
+&& \text{(swap the order of the finite sums)}
+\\
 &= \sum_{i=1}^{d} \paren{\sum_{j=1}^{k} x_j c_{ij}}\,\vecf{a}_i
-&& \text{(distribute, and collect the multiples of each } \vecf{a}_i \text{)}
+&& \text{(factor } \vecf{a}_i \text{ out of the inner sum)}
 \\
 &= \sum_{i=1}^{d} 0 \cd \vecf{a}_i
 && \text{(entry } i \text{ of } \textstyle\sum_j x_j \vecf{c}_j = \vzero_d \text{)}

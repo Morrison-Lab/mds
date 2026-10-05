@@ -25,8 +25,11 @@ Each step adds one vector,
 so the process stops after at most $p - k$ steps,
 and when it stops the list is a basis of $\mathcal{S}$.
 
-For the empty list, the span is taken to be $\cb{\vzero}$,
-the subspace whose basis is the empty list (@def-dimension).
+For the empty list, which is linearly independent and spans $\cb{\vzero}$
+by the conventions in @def-span,
+the first step asks whether $\mathcal{S} = \cb{\vzero}$:
+if so, the empty list is already a basis;
+if not, the process adds vectors as described.
 
 :::
 

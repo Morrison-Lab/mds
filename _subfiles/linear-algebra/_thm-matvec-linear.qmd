@@ -1,0 +1,74 @@
+:::{#thm-matvec-linear}
+#### A matrix maps a combination to the same combination of images
+
+If $\matr{A}$ is an $m \times n$ matrix,
+$\vecf{z}_1, \ldots, \vecf{z}_k \in \reals^n$
+and $c_1, \ldots, c_k \in \reals$, then
+
+$$
+\matr{A}\,(c_1 \vecf{z}_1 + \cdots + c_k \vecf{z}_k)
+= c_1\,\matr{A} \vecf{z}_1 + \cdots + c_k\,\matr{A} \vecf{z}_k.
+$$
+
+:::
+
+::: proof
+
+Write $z_{ij}$ for entry $j$ of $\vecf{z}_i$,
+so entry $j$ of $\sum_i c_i \vecf{z}_i$ is $\sum_i c_i z_{ij}$.
+Compare entry $r$ of the two sides, for each $r = 1, \ldots, m$:
+
+$$
+\ba
+\paren{\matr{A} \sum_{i=1}^{k} c_i \vecf{z}_i}_r
+&= \sum_{j=1}^{n} a_{rj} \sum_{i=1}^{k} c_i z_{ij}
+&& \text{(@def-matvec-mult)}
+\\
+&= \sum_{j=1}^{n} \sum_{i=1}^{k} a_{rj}\,c_i z_{ij}
+&& \text{(distribute } a_{rj} \text{ over the inner sum)}
+\\
+&= \sum_{i=1}^{k} \sum_{j=1}^{n} a_{rj}\,c_i z_{ij}
+&& \text{(reorder the finite double sum)}
+\\
+&= \sum_{i=1}^{k} \sum_{j=1}^{n} c_i\,a_{rj} z_{ij}
+&& \text{(multiplication of numbers is commutative)}
+\\
+&= \sum_{i=1}^{k} c_i \sum_{j=1}^{n} a_{rj} z_{ij}
+&& \text{(factor } c_i \text{ out of the inner sum)}
+\\
+&= \sum_{i=1}^{k} c_i\,(\matr{A} \vecf{z}_i)_r
+&& \text{(@def-matvec-mult)}
+\ea
+$$
+
+which is entry $r$ of $\sum_i c_i\,\matr{A} \vecf{z}_i$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-matvec-linear}
+#### Applying a matrix to a combination
+
+Let $\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$,
+$\vecf{z}_1 = (1, 0)$ and $\vecf{z}_2 = (0, 1)$.
+Then $\matr{A} \vecf{z}_1 = (1, 3)$ and $\matr{A} \vecf{z}_2 = (2, 4)$,
+and for the combination $2 \vecf{z}_1 - \vecf{z}_2 = (2, -1)$:
+
+$$
+\ba
+\matr{A}\,(2, -1)
+&= (1 \cd 2 + 2 \cd (-1),\; 3 \cd 2 + 4 \cd (-1))
+&& \text{(@def-matvec-mult)}
+\\
+&= (0, 2)
+&& \text{(arithmetic)}
+\\
+&= 2\,(1, 3) - (2, 4),
+&& \text{(arithmetic)}
+\ea
+$$
+
+which is $2\,\matr{A} \vecf{z}_1 - \matr{A} \vecf{z}_2$, as @thm-matvec-linear says.
+
+:::

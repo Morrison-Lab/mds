@@ -48,18 +48,16 @@ Choose a basis $\vecf{x}_1, \ldots, \vecf{x}_\nu$ of $\mathcal{N}(\matr{A})$,
 and extend it to a basis
 $\vecf{x}_1, \ldots, \vecf{x}_\nu, \vecf{y}_1, \ldots, \vecf{y}_{n - \nu}$
 of $\reals^n$ (@thm-extend-basis);
-every basis of $\reals^n$ has $n$ vectors (@thm-basis-size).
+it has $n$ vectors,
+because every basis of $\reals^n$ has $\dim(\reals^n) = n$ vectors
+(@thm-basis-size, @exm-dimension).
 We show that $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n - \nu}$
-are a basis of $\mathcal{C}(\matr{A})$.
-Throughout, $\matr{A}$ applied to a linear combination
-is the same combination of the images,
-$\matr{A}\,(\sum_i c_i \vecf{z}_i) = \sum_i c_i\,\matr{A} \vecf{z}_i$,
-by @thm-matmul-distrib and the entrywise argument for scalars
-in the proof of @thm-null-space-subspace.
+are a basis of $\mathcal{C}(\matr{A})$,
+using @thm-matvec-linear to apply $\matr{A}$ to linear combinations.
 
 **They are linearly independent.**
 Suppose $\sum_{i=1}^{n-\nu} v_i\,\matr{A} \vecf{y}_i = \vzero_m$.
-Then $\matr{A}\,\paren{\sum_i v_i \vecf{y}_i} = \vzero_m$,
+Then $\matr{A}\,\paren{\sum_i v_i \vecf{y}_i} = \vzero_m$ (@thm-matvec-linear),
 so $\sum_i v_i \vecf{y}_i \in \mathcal{N}(\matr{A})$,
 and it equals $\sum_{j=1}^{\nu} u_j \vecf{x}_j$ for some numbers $u_j$,
 since the $\vecf{x}_j$ span $\mathcal{N}(\matr{A})$.
@@ -88,7 +86,7 @@ $$
 && \text{(substitute } \vecf{z} \text{)}
 \\
 &= \sum_{j=1}^{\nu} a_j\,\matr{A} \vecf{x}_j + \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i
-&& \text{(} \matr{A} \text{ applied to a combination)}
+&& \text{(@thm-matvec-linear)}
 \\
 &= \sum_{j=1}^{\nu} a_j\,\vzero_m + \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i
 && \text{(each } \vecf{x}_j \in \mathcal{N}(\matr{A}) \text{)}

@@ -95,6 +95,13 @@ so $\dim(\cb{\vzero}) = 0$.
 
 - $\dim(\cb{\vzero}) = 0$, by the convention in @def-dimension.
 - $\dim(\reals^2) = 2$, by @exm-basis.
+  More generally, $\dim(\reals^p) = p$:
+  the indicator vectors $\vecf{e}_1, \ldots, \vecf{e}_p$ (@def-indicator-vector)
+  are linearly independent,
+  since $c_1 \vecf{e}_1 + \cdots + c_p \vecf{e}_p = (c_1, \ldots, c_p)$,
+  which is $\vzero_p$ only if every $c_i = 0$;
+  and they span $\reals^p$,
+  since any $\vecf{x} = x_1 \vecf{e}_1 + \cdots + x_p \vecf{e}_p$.
 - The line in @exm-subspace has dimension $1$:
   the single vector $(1, 2)$ is linearly independent
   and spans the line.
