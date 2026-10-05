@@ -374,6 +374,22 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}
 
+### Inner products {#sec-inner-products}
+
+{{< include mds/_subfiles/linear-algebra/_def-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-dot-product-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-weighted-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-not-inner-product.qmd >}}
+
 ### Cauchy-Schwarz and the triangle inequality {#sec-cauchy-schwarz}
 
 {{< include mds/_subfiles/linear-algebra/_prose-cauchy-schwarz-attribution.qmd >}}
