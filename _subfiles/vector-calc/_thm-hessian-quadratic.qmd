@@ -11,11 +11,11 @@ then $f(\vx) = \tp{\vx} \matr{S} \vx$ has $\matr{H}_f(\vx) = 2 \matr{S}$ for eve
 $$
 \ba
 \matr{H}_f(\vx)
-&= \deriv{\vx} \paren{\derivf{(\tp{\vx} \matr{S} \vx)}{\tp{\vx}}}
+&= \deriv{\vx} \tp{\paren{\deriv{\vx} (\tp{\vx} \matr{S} \vx)}}
 && \text{(@def-hessian)}
 \\
 &= \deriv{\vx} \tp{\paren{2 \matr{S} \vx}}
-&& \text{(@thm-quadratic-form, @thm-row-deriv-tp-col-deriv)}
+&& \text{(@thm-quadratic-form)}
 \\
 &= \paren{\deriv{\vx} \vx}\,\tp{(2 \matr{S})}
 && \text{(@thm-deriv-matrix-vector, with } \matr{A} = 2 \matr{S} \text{ and } \vecf{v} = \vx \text{; } \deriv{\vx} \tp{(2 \matr{S} \vx)} = \deriv{\vx} (2 \matr{S} \vx) \text{, @def-vector-valued-derivative)}

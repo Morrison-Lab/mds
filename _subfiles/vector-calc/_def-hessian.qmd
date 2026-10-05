@@ -5,16 +5,24 @@ Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$
 whose first partial derivatives exist on an open ball around $\vx$
 and whose second partial derivatives exist at $\vx$.
 The **Hessian matrix** of $f$ at $\vx$ is the derivative (@def-vector-valued-derivative)
-of the row-vector derivative $\derivf{f(\vx)}{\tp{\vx}}$ (@def-row-vector-derivative):
+of the transposed gradient $\tp{\paren{\deriv{\vx} f(\vx)}}$ (@def-vector-derivative):
 
 $$
-\underbrace{\matr{H}_f(\vx)}_{p \times p} \eqdef \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}},
+\underbrace{\matr{H}_f(\vx)}_{p \times p} \eqdef \deriv{\vx} \tp{\paren{\deriv{\vx} f(\vx)}}.
 $$ {#eq-hessian}
 
-also written $\xderivf{f(\vx)}{\vx}{\tp{\vx}}$.
-The row $\derivf{f(\vx)}{\tp{\vx}}$ is $\tp{\vy}$ for the gradient $\vy = \derivf{f(\vx)}{\vx}$
-(@def-vector-derivative, @thm-row-deriv-tp-col-deriv),
-so by @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$, its $(i, j)$ entry is
+By @thm-row-deriv-tp-col-deriv, the transposed gradient is the row-vector derivative
+$\derivf{f(\vx)}{\tp{\vx}}$ (@def-row-vector-derivative),
+so the Hessian can also be written
+
+$$
+\matr{H}_f(\vx) = \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}} = \xderivf{f(\vx)}{\vx}{\tp{\vx}}.
+$$ {#eq-hessian-row}
+
+Both forms follow the shape rule of matrix multiplication (@rem-row-derivative-shape):
+the $p \times 1$ column operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row,
+giving a $p \times p$ matrix.
+By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$, its $(i, j)$ entry is
 
 $$
 \sb{\matr{H}_f(\vx)}_{ij} = \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
