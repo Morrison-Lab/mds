@@ -1,0 +1,24 @@
+:::{#def-triangular-matrix}
+#### Triangular matrix
+
+A square matrix $\matr{U}$ is **upper triangular** if every entry below the diagonal is $0$:
+$u_{ij} = 0$ whenever $i > j$.
+A square matrix $\matr{L}$ is **lower triangular** if every entry above the diagonal is $0$:
+$\ell_{ij} = 0$ whenever $i < j$.
+A lower triangular matrix whose diagonal entries are all $1$ is **unit lower triangular**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-triangular-matrix}
+#### Triangular and not
+
+- $\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$
+  is upper triangular: its entries below the diagonal, in positions $(2, 1)$, $(3, 1)$ and $(3, 2)$, are $0$.
+- $\begin{bmatrix} 1 & 0 \\ 4 & 1 \end{bmatrix}$ is unit lower triangular.
+- A diagonal matrix (@def-diagonal-matrix) is both upper and lower triangular.
+- $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is neither:
+  its $(2, 1)$ entry is not $0$, and neither is its $(1, 2)$ entry.
+
+:::

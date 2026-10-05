@@ -1,0 +1,13 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from @zhou2024matinv and @zhou2024ls,
+used under the MIT License
+(see the license text in @sec-subspaces).
+The first source states that every invertible matrix has an LU factorization;
+that is false without reordering rows, as an example at the end of this section shows,
+so this section states only how an LU factorization, when one exists, solves a system.
+The least squares results are proved here from the closest-point theorem (@thm-closest-point)
+rather than by differentiating, and the QR factorization is derived from Gram-Schmidt (@thm-gram-schmidt).
+
+:::

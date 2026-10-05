@@ -1,0 +1,96 @@
+:::{#thm-normal-equations}
+#### Least squares solutions solve the normal equations
+
+Let $\matr{A}$ be $m \times n$ and $\vecf{b} \in \reals^m$.
+
+1. $\hat{\vecf{x}}$ is a least squares solution (@def-least-squares)
+   exactly when it solves the normal equations
+   $\tp{\matr{A}} \matr{A} \hat{\vecf{x}} = \tp{\matr{A}} \vecf{b}$.
+2. The normal equations are consistent (@def-consistent-system).
+3. Every least squares solution gives the same fitted vector $\matr{A} \hat{\vecf{x}}$:
+   the orthogonal projection of $\vecf{b}$ onto $\mathcal{C}(\matr{A})$ (@def-orthogonal-projection).
+4. The least squares solution is unique exactly when $\operatorname{rank}(\matr{A}) = n$,
+   and then $\hat{\vecf{x}} = (\tp{\matr{A}} \matr{A})^{-1} \tp{\matr{A}} \vecf{b}$.
+
+:::
+
+::: proof
+
+Let $\vecf{u}$ be the orthogonal projection of $\vecf{b}$ onto $\mathcal{C}(\matr{A})$.
+The vectors $\matr{A} \vecf{x}$, as $\vecf{x}$ ranges over $\reals^n$,
+are exactly the points of $\mathcal{C}(\matr{A})$ (@def-column-space).
+By @thm-closest-point, $\vecf{u}$ is the one point of $\mathcal{C}(\matr{A})$
+closest to $\vecf{b}$, so:
+
+$$
+\hat{\vecf{x}} \text{ is a least squares solution}
+\iff \matr{A} \hat{\vecf{x}} = \vecf{u}.
+$$
+
+**Parts 1 and 3.**
+$\matr{A} \hat{\vecf{x}} = \vecf{u}$ holds exactly when
+$\vecf{b} - \matr{A} \hat{\vecf{x}} \in \mathcal{C}(\matr{A})^\perp$:
+if $\matr{A} \hat{\vecf{x}} = \vecf{u}$, then $\vecf{b} - \vecf{u} \in \mathcal{C}(\matr{A})^\perp$
+(@def-orthogonal-projection);
+conversely, if $\vecf{b} - \matr{A} \hat{\vecf{x}} \in \mathcal{C}(\matr{A})^\perp$,
+then $\vecf{b} = \matr{A} \hat{\vecf{x}} + (\vecf{b} - \matr{A} \hat{\vecf{x}})$
+is a split into $\mathcal{C}(\matr{A})$ and $\mathcal{C}(\matr{A})^\perp$,
+so $\matr{A} \hat{\vecf{x}} = \vecf{u}$ by the uniqueness in @thm-orthogonal-direct-sum.
+And $\mathcal{C}(\matr{A})^\perp = \mathcal{N}(\tp{\matr{A}})$ (@thm-complement-null-space), where
+
+$$
+\ba
+\tp{\matr{A}}\,(\vecf{b} - \matr{A} \hat{\vecf{x}})
+&= \tp{\matr{A}} \vecf{b} - \tp{\matr{A}}\,(\matr{A} \hat{\vecf{x}})
+&& \text{(@thm-scalar-matmul)}
+\\
+&= \tp{\matr{A}} \vecf{b} - \tp{\matr{A}} \matr{A} \hat{\vecf{x}},
+&& \text{(@thm-matmul-assoc)}
+\ea
+$$
+
+which is $\vzero_n$ exactly when the normal equations hold.
+
+**Part 2.**
+$\vecf{u} \in \mathcal{C}(\matr{A})$, so $\vecf{u} = \matr{A} \vecf{x}_0$ for some $\vecf{x}_0$
+(@def-column-space), and $\vecf{x}_0$ is a least squares solution,
+so it solves the normal equations by part 1.
+
+**Part 4.**
+The least squares solutions are exactly the solutions of $\matr{A} \vecf{x} = \vecf{u}$,
+a consistent system,
+so there is exactly one when $\operatorname{rank}(\matr{A}) = n$
+and more than one otherwise (@cor-solution-unique).
+When $\operatorname{rank}(\matr{A}) = n$, $\tp{\matr{A}} \matr{A}$ is invertible (@thm-gram-invertible),
+and multiplying the normal equations on the left by its inverse gives the formula
+(@def-matrix-inverse, @thm-identity).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-normal-equations}
+#### A least squares line
+
+Fit $y = x_1 + x_2\,t$ to the points $(t, y) = (1, 1), (2, 2), (3, 2)$:
+$\matr{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}$ (the $\mX$ of @exm-gram-invertible)
+and $\vecf{b} = (1, 2, 2)$.
+$\matr{A}$ has rank $2$, so the solution is unique.
+$\tp{\matr{A}} \matr{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}$ has inverse
+$\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}$ (@exm-gram-invertible),
+and $\tp{\matr{A}} \vecf{b} = (1 + 2 + 2,\; 1 + 4 + 6) = (5, 11)$, so
+
+$$
+\hat{\vecf{x}}
+= \frac{1}{6} \paren{14 \cd 5 - 6 \cd 11,\; -6 \cd 5 + 3 \cd 11}
+= \frac{1}{6}\,(4, 3)
+= \paren{\tfrac{2}{3}, \tfrac{1}{2}}.
+$$
+
+The fitted values are $\matr{A} \hat{\vecf{x}} = \paren{\tfrac{7}{6}, \tfrac{5}{3}, \tfrac{13}{6}}$,
+and the residuals $\vecf{b} - \matr{A} \hat{\vecf{x}} = \paren{-\tfrac{1}{6}, \tfrac{1}{3}, -\tfrac{1}{6}}$
+are orthogonal to both columns of $\matr{A}$:
+$-\tfrac{1}{6} + \tfrac{1}{3} - \tfrac{1}{6} = 0$
+and $-\tfrac{1}{6} + \tfrac{2}{3} - \tfrac{1}{2} = 0$.
+
+:::

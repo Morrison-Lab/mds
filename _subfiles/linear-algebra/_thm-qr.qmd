@@ -1,0 +1,73 @@
+:::{#thm-qr}
+#### QR factorization
+
+Let $\matr{A}$ be an $m \times n$ matrix with $\operatorname{rank}(\matr{A}) = n$.
+Then
+
+$$
+\underbrace{\matr{A}}_{m \times n} = \underbrace{\matr{Q}}_{m \times n}\,\underbrace{\matr{R}}_{n \times n},
+$$
+
+where the columns of $\matr{Q}$ are orthonormal (@def-orthonormal-vectors)
+and $\matr{R}$ is upper triangular (@def-triangular-matrix) with positive diagonal entries.
+
+:::
+
+::: proof
+
+The $n$ columns $\vecf{a}_1, \ldots, \vecf{a}_n$ of $\matr{A}$ are linearly independent (@def-rank),
+so the Gram-Schmidt process (@def-gram-schmidt) runs all $n$ steps
+and gives orthonormal $\vecf{q}_1, \ldots, \vecf{q}_n$ (@thm-gram-schmidt);
+let $\matr{Q}$ have these columns.
+At step $i$, $\tilde{\vecf{q}}_i \ne \vzero$, and rearranging the orthogonalize step,
+
+$$
+\ba
+\vecf{a}_i
+&= \tilde{\vecf{q}}_i + \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
+&& \text{(add the sum to both sides of the orthogonalize step)}
+\\
+&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j.
+&& \text{(normalize step: } \tilde{\vecf{q}}_i = \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i \text{)}
+\ea
+$$
+
+Let $\matr{R}$ be the $n \times n$ matrix with
+$r_{ji} = \vecf{q}_j \cdot \vecf{a}_i$ for $j < i$,
+$r_{ii} = \norm{\tilde{\vecf{q}}_i} > 0$,
+and $r_{ji} = 0$ for $j > i$;
+it is upper triangular with positive diagonal.
+Column $i$ of $\matr{Q} \matr{R}$ is $\sum_{j} r_{ji}\,\vecf{q}_j$ (@thm-matvec-columns),
+which is $\vecf{a}_i$ by the display.
+So $\matr{Q} \matr{R} = \matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qr}
+#### A QR factorization from Gram-Schmidt
+
+For $\matr{A}$ with columns $\vecf{a}_1 = (1, 1, 0)$, $\vecf{a}_2 = (1, 0, 1)$, $\vecf{a}_3 = (0, 1, 1)$,
+@exm-gram-schmidt and @exm-thm-gram-schmidt found
+$\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$,
+$\vecf{q}_2 = \tfrac{1}{\sqrt{6}}\,(1, -1, 2)$,
+$\vecf{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)$,
+with $\norm{\tilde{\vecf{q}}_1} = \sqrt{2}$, $\norm{\tilde{\vecf{q}}_2} = \sqrt{3/2}$,
+$\norm{\tilde{\vecf{q}}_3} = 2/\sqrt{3}$,
+$\vecf{q}_1 \cdot \vecf{a}_2 = \vecf{q}_1 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{2}}$
+and $\vecf{q}_2 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{6}}$. So
+
+$$
+\matr{R} = \begin{bmatrix}
+\sqrt{2} & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}} \\
+0 & \sqrt{3/2} & \tfrac{1}{\sqrt{6}} \\
+0 & 0 & \tfrac{2}{\sqrt{3}}
+\end{bmatrix}.
+$$
+
+As a check on the second column,
+$\tfrac{1}{\sqrt{2}}\,\vecf{q}_1 + \sqrt{3/2}\,\vecf{q}_2
+= \tfrac{1}{2}\,(1, 1, 0) + \tfrac{1}{2}\,(1, -1, 2) = (1, 0, 1) = \vecf{a}_2$.
+
+:::

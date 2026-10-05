@@ -1,0 +1,72 @@
+:::{#thm-qr-least-squares}
+#### Solving least squares by QR
+
+Let $\matr{A}$ be $m \times n$ with $\operatorname{rank}(\matr{A}) = n$,
+with QR factorization $\matr{A} = \matr{Q} \matr{R}$ (@thm-qr), and let $\vecf{b} \in \reals^m$.
+The least squares solution (@def-least-squares) is the unique solution of
+
+$$
+\underbrace{\matr{R}}_{n \times n}\,\hat{\vecf{x}} = \underbrace{\tp{\matr{Q}}}_{n \times m}\,\vecf{b},
+$$
+
+which back substitution computes (@thm-back-substitution).
+When $m = n$, it is the unique solution of $\matr{A} \vecf{x} = \vecf{b}$.
+
+:::
+
+::: proof
+
+$\matr{R}$ is upper triangular with positive diagonal,
+so $\matr{R} \vecf{x} = \tp{\matr{Q}} \vecf{b}$ has exactly one solution $\hat{\vecf{x}}$
+(@thm-back-substitution).
+$\tp{\matr{Q}} \matr{Q} = \matr{I}_n$, as in the proof of @thm-projector-onb.
+Then
+
+$$
+\ba
+\tp{\matr{A}} \matr{A} \hat{\vecf{x}}
+&= \tp{\matr{R}}\,\tp{\matr{Q}} \matr{Q}\,\matr{R} \hat{\vecf{x}}
+&& \text{(substitute } \matr{A} = \matr{Q} \matr{R} \text{, @thm-transpose-product)}
+\\
+&= \tp{\matr{R}}\,\matr{R} \hat{\vecf{x}}
+&& \text{(} \tp{\matr{Q}} \matr{Q} = \matr{I}_n \text{, @thm-identity)}
+\\
+&= \tp{\matr{R}}\,\tp{\matr{Q}} \vecf{b}
+&& \text{(} \matr{R} \hat{\vecf{x}} = \tp{\matr{Q}} \vecf{b} \text{)}
+\\
+&= \tp{\matr{A}} \vecf{b},
+&& \text{(@thm-transpose-product)}
+\ea
+$$
+
+so $\hat{\vecf{x}}$ solves the normal equations and is the least squares solution
+(@thm-normal-equations), which is unique because $\operatorname{rank}(\matr{A}) = n$.
+When $m = n$, $\matr{A} \vecf{x} = \vecf{b}$ is consistent for every $\vecf{b}$ (@cor-solution-unique),
+so its solution leaves residual $\vzero$, is a least squares solution,
+and is therefore $\hat{\vecf{x}}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qr-least-squares}
+#### The least squares line by QR
+
+For $\matr{A}$ and $\vecf{b}$ of @exm-normal-equations,
+Gram-Schmidt gives $\vecf{q}_1 = \tfrac{1}{\sqrt{3}}\,(1, 1, 1)$;
+then $\vecf{q}_1 \cdot (1, 2, 3) = \tfrac{6}{\sqrt{3}} = 2\sqrt{3}$,
+$\tilde{\vecf{q}}_2 = (1, 2, 3) - 2\,(1, 1, 1) = (-1, 0, 1)$ with norm $\sqrt{2}$,
+and $\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(-1, 0, 1)$. So
+
+$$
+\matr{R} = \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix},
+\qquad
+\tp{\matr{Q}} \vecf{b} = \paren{\tfrac{1 + 2 + 2}{\sqrt{3}},\; \tfrac{-1 + 0 + 2}{\sqrt{2}}}
+= \paren{\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}}.
+$$
+
+Back substitution gives $x_2 = \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} = \tfrac{1}{2}$
+and $x_1 = \tfrac{1}{\sqrt{3}} \paren{\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}} = \tfrac{5}{3} - 1 = \tfrac{2}{3}$,
+the solution found in @exm-normal-equations.
+
+:::

@@ -693,3 +693,39 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-projector-generalized-inverse.qmd >}}
+
+### Solving linear systems and least squares {#sec-solving-linear-systems}
+
+{{< include mds/_subfiles/linear-algebra/_prose-linear-systems-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-triangular-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-back-substitution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-qr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-least-squares.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-normal-equations.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-qr-least-squares.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-lu.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-lu-solve.qmd >}}

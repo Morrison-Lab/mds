@@ -1,0 +1,39 @@
+:::{#def-lu}
+#### LU factorization
+
+An **LU factorization** of an $n \times n$ matrix $\matr{A}$ is a product
+$\matr{A} = \matr{L} \matr{U}$
+with $\matr{L}$ unit lower triangular and $\matr{U}$ upper triangular (@def-triangular-matrix).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-lu}
+#### An LU factorization from Gaussian elimination
+
+Eliminating $x_1$ and then $x_2$ from the system with
+$\matr{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}$
+gives the upper triangular
+$\matr{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$,
+and the multiples of earlier rows that the elimination subtracted form
+$\matr{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}$.
+Multiplying out row by row confirms $\matr{L} \matr{U} = \matr{A}$:
+row 2 is $-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)$,
+and row 3 is $-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-lu}
+#### An invertible matrix with no LU factorization
+
+$\matr{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is invertible ($\matr{P}^2 = \matr{I}_2$),
+but it has no LU factorization.
+If $\matr{P} = \matr{L} \matr{U}$, the $(1, 1)$ entry gives $0 = 1 \cd u_{11}$, so $u_{11} = 0$,
+and then the $(2, 1)$ entry gives $1 = \ell_{21}\,u_{11} = 0$, which is impossible.
+Swapping the two rows first removes the obstacle:
+the swapped matrix is $\matr{I}_2 = \matr{I}_2\,\matr{I}_2$.
+
+:::
