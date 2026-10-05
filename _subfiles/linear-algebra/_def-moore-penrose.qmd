@@ -1,0 +1,32 @@
+:::{#def-moore-penrose}
+#### Moore-Penrose inverse
+
+A **Moore-Penrose inverse** of an $m \times n$ matrix $\matr{A}$
+is an $n \times m$ matrix $\matr{G}$ satisfying all four conditions
+
+1. $\matr{A} \matr{G} \matr{A} = \matr{A}$;
+2. $\matr{G} \matr{A} \matr{G} = \matr{G}$;
+3. $\tp{(\matr{A} \matr{G})} = \matr{A} \matr{G}$;
+4. $\tp{(\matr{G} \matr{A})} = \matr{G} \matr{A}$.
+
+Condition 1 says $\matr{G}$ is a generalized inverse (@def-generalized-inverse).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-moore-penrose}
+#### Checking the four conditions
+
+For $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$,
+the matrix $\matr{G} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ satisfies all four:
+$\matr{A} \matr{G} = \matr{G} \matr{A} = \matr{A}$ and $\matr{A}^2 = \matr{A}$,
+so conditions 1 and 2 read $\matr{A} = \matr{A}$,
+and conditions 3 and 4 hold because $\matr{A}$ is symmetric.
+
+The generalized inverse $\matr{G}' = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$ of $\matr{A}$
+(@exm-generalized-inverse) is not a Moore-Penrose inverse:
+$\matr{A} \matr{G}' = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$,
+which is not symmetric, so condition 3 fails.
+
+:::

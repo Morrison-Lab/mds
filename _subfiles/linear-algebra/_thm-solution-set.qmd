@@ -1,0 +1,112 @@
+:::{#thm-solution-set}
+#### All solutions of a linear system
+
+Let $\matr{A}$ be $m \times n$ with a generalized inverse $\matr{G}$ (@def-generalized-inverse).
+
+1. $\mathcal{N}(\matr{A}) = \mathcal{C}(\matr{I}_n - \matr{G} \matr{A})$:
+   $\vecf{x}$ solves $\matr{A} \vecf{x} = \vzero_m$
+   exactly when $\vecf{x} = (\matr{I}_n - \matr{G} \matr{A})\,\vecf{q}$ for some $\vecf{q} \in \reals^n$.
+2. If $\matr{A} \vecf{x} = \vecf{b}$ is consistent (@thm-consistency),
+   then $\vecf{x}$ is a solution exactly when
+   $$
+   \vecf{x} = \matr{G} \vecf{b} + (\matr{I}_n - \matr{G} \matr{A})\,\vecf{q}
+   \quad \text{for some } \vecf{q} \in \reals^n:
+   $$
+   one particular solution plus a vector of $\mathcal{N}(\matr{A})$.
+
+:::
+
+::: proof
+
+**Part 1.**
+First,
+
+$$
+\ba
+\matr{A}\,(\matr{I}_n - \matr{G} \matr{A})
+&= \matr{A} \matr{I}_n - \matr{A} \matr{G} \matr{A}
+&& \text{(@thm-matmul-distrib, and } \matr{A}\,(-\matr{M}) = -\matr{A} \matr{M} \text{ by @def-scalar-mult)}
+\\
+&= \matr{A} - \matr{A} \matr{G} \matr{A}
+&& \text{(@thm-identity)}
+\\
+&= \matr{A} - \matr{A}
+&& \text{(@def-generalized-inverse)}
+\\
+&= \matr{0}_{m \times n},
+&& \text{(arithmetic)}
+\ea
+$$
+
+so $\matr{A}\,(\matr{I}_n - \matr{G} \matr{A})\,\vecf{q} = \vzero_m$ for every $\vecf{q}$
+(@thm-matmul-assoc),
+and $\mathcal{C}(\matr{I}_n - \matr{G} \matr{A}) \subseteq \mathcal{N}(\matr{A})$.
+Conversely, if $\matr{A} \vecf{x} = \vzero_m$, then
+
+$$
+\ba
+(\matr{I}_n - \matr{G} \matr{A})\,\vecf{x}
+&= \matr{I}_n \vecf{x} - (\matr{G} \matr{A})\,\vecf{x}
+&& \text{(@thm-matmul-distrib, and @def-scalar-mult)}
+\\
+&= \vecf{x} - (\matr{G} \matr{A})\,\vecf{x}
+&& \text{(@thm-identity)}
+\\
+&= \vecf{x} - \matr{G}\,(\matr{A} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \vecf{x} - \matr{G}\,\vzero_m
+&& \text{(} \matr{A} \vecf{x} = \vzero_m \text{)}
+\\
+&= \vecf{x},
+&& \text{(} \matr{G}\,\vzero_m = \vzero_n \text{)}
+\ea
+$$
+
+so $\vecf{x}$ is in $\mathcal{C}(\matr{I}_n - \matr{G} \matr{A})$, with $\vecf{q} = \vecf{x}$.
+
+**Part 2.**
+$\matr{G} \vecf{b}$ is a solution (@thm-generalized-inverse-solves).
+For any $\vecf{x}$,
+
+$$
+\ba
+\matr{A}\,(\vecf{x} - \matr{G} \vecf{b})
+&= \matr{A} \vecf{x} - \matr{A}\,(\matr{G} \vecf{b})
+&& \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
+\\
+&= \matr{A} \vecf{x} - \matr{A} \matr{G} \vecf{b}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{A} \vecf{x} - \vecf{b},
+&& \text{(@thm-consistency, statement 3)}
+\ea
+$$
+
+so $\vecf{x}$ solves $\matr{A} \vecf{x} = \vecf{b}$
+exactly when $\vecf{x} - \matr{G} \vecf{b} \in \mathcal{N}(\matr{A})$,
+that is, by part 1, exactly when
+$\vecf{x} - \matr{G} \vecf{b} = (\matr{I}_n - \matr{G} \matr{A})\,\vecf{q}$ for some $\vecf{q}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-solution-set}
+#### All solutions of a consistent system
+
+For $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$,
+$\matr{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}$ and $\vecf{b} = (2, 0)$:
+$\matr{G} \vecf{b} = (2, 14)$, $\matr{G} \matr{A} = \begin{bmatrix} 1 & 0 \\ 7 & 0 \end{bmatrix}$,
+and $\matr{I}_2 - \matr{G} \matr{A} = \begin{bmatrix} 0 & 0 \\ -7 & 1 \end{bmatrix}$,
+so
+
+$$
+\vecf{x} = (2, 14) + (0, -7 q_1 + q_2), \qquad q_1, q_2 \in \reals.
+$$
+
+Since $-7 q_1 + q_2$ can be any number,
+the solutions are exactly the vectors $(2, t)$, $t \in \reals$,
+which is what $\matr{A}\,(x_1, x_2) = (x_1, 0) = (2, 0)$ says directly.
+
+:::

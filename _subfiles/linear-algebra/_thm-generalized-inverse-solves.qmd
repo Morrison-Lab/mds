@@ -1,0 +1,49 @@
+:::{#thm-generalized-inverse-solves}
+#### A generalized inverse solves every solvable system
+
+Let $\matr{A}$ be $m \times n$, let $\matr{G}$ be a generalized inverse of $\matr{A}$
+(@def-generalized-inverse), and let $\vecf{b} \in \reals^m$.
+If $\matr{A} \vecf{x} = \vecf{b}$ has a solution,
+then $\matr{G} \vecf{b}$ is a solution.
+
+:::
+
+::: proof
+
+Let $\vecf{x}_0$ be a solution, so $\matr{A} \vecf{x}_0 = \vecf{b}$. Then
+
+$$
+\ba
+\matr{A}\,(\matr{G} \vecf{b})
+&= \matr{A} \matr{G}\,(\matr{A} \vecf{x}_0)
+&& \text{(substitute } \vecf{b} = \matr{A} \vecf{x}_0 \text{)}
+\\
+&= (\matr{A} \matr{G} \matr{A})\,\vecf{x}_0
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{A} \vecf{x}_0
+&& \text{(@def-generalized-inverse)}
+\\
+&= \vecf{b}.
+&& \text{(} \vecf{x}_0 \text{ is a solution)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-generalized-inverse-solves}
+#### Solving with a generalized inverse
+
+With $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+and its generalized inverse
+$\matr{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}$ (@exm-generalized-inverse),
+the system $\matr{A} \vecf{x} = (2, 0)$ has the solution $(2, 0)$,
+and $\matr{G}\,(2, 0) = (2, 14)$ is a solution too:
+$\matr{A}\,(2, 14) = (2, 0)$.
+The system $\matr{A} \vecf{x} = (2, 1)$ has no solution,
+since the second entry of $\matr{A} \vecf{x}$ is always $0$;
+there $\matr{G}\,(2, 1) = (7, 14)$ gives $\matr{A}\,(7, 14) = (7, 0) \ne (2, 1)$.
+
+:::

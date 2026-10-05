@@ -1,0 +1,45 @@
+:::{#thm-consistency}
+#### When a linear system has a solution
+
+Let $\matr{A}$ be $m \times n$, let $\vecf{b} \in \reals^m$,
+and let $\matr{G}$ be any generalized inverse of $\matr{A}$ (@def-generalized-inverse).
+The following statements are equivalent:
+
+1. $\matr{A} \vecf{x} = \vecf{b}$ has a solution
+   (the system is **consistent**);
+2. $\vecf{b} \in \mathcal{C}(\matr{A})$ (@def-column-space);
+3. $\matr{A} \matr{G} \vecf{b} = \vecf{b}$.
+
+:::
+
+::: proof
+
+**1 and 2 are equivalent.**
+$\mathcal{C}(\matr{A})$ is the set of vectors $\matr{A} \vecf{x}$ (@def-column-space),
+so $\vecf{b}$ is in it exactly when $\vecf{b} = \matr{A} \vecf{x}$ for some $\vecf{x}$.
+
+**1 implies 3.**
+By @thm-generalized-inverse-solves, $\matr{G} \vecf{b}$ is a solution,
+so $\matr{A}\,(\matr{G} \vecf{b}) = \vecf{b}$,
+which is statement 3 (@thm-matmul-assoc).
+
+**3 implies 1.**
+If $\matr{A} \matr{G} \vecf{b} = \vecf{b}$,
+then $\vecf{x} = \matr{G} \vecf{b}$ is a solution.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-consistency}
+#### Testing consistency with a generalized inverse
+
+For $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+and the generalized inverse $\matr{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}$,
+$\matr{A} \matr{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}$.
+
+- $\vecf{b} = (2, 0)$: $\matr{A} \matr{G} \vecf{b} = (2, 0) = \vecf{b}$, so the system is consistent.
+- $\vecf{b} = (2, 1)$: $\matr{A} \matr{G} \vecf{b} = (7, 0) \ne \vecf{b}$, so it is not,
+  as @exm-generalized-inverse-solves found directly.
+
+:::

@@ -1,0 +1,104 @@
+:::{#thm-projector-generalized-inverse}
+#### The projection onto a column space, with any generalized inverse
+
+Let $\mX$ be an $n \times p$ matrix of any rank,
+and let $\matr{G}$ be any generalized inverse of $\tp{\mX} \mX$ (@def-generalized-inverse).
+Then for every $\vy \in \reals^n$,
+$\mX \matr{G} \tp{\mX} \vy$ is the orthogonal projection of $\vy$ onto $\mathcal{C}(\mX)$
+(@def-orthogonal-projection).
+So the matrix $\mX \matr{G} \tp{\mX}$ is the same for every choice of $\matr{G}$,
+and when $\operatorname{rank}(\mX) = p$ it is the hat matrix $\matr{H}$ (@def-hat-matrix).
+
+:::
+
+::: proof
+
+**$\tp{\mX} \vy$ is in $\mathcal{C}(\tp{\mX} \mX)$.**
+$\mathcal{C}(\tp{\mX} \mX) \subseteq \mathcal{C}(\tp{\mX})$,
+since $(\tp{\mX} \mX)\,\vecf{z} = \tp{\mX}\,(\mX \vecf{z})$ (@thm-matmul-assoc).
+Both are subspaces of $\reals^p$ (@thm-column-space-span) with the same dimension:
+$\operatorname{rank}(\tp{\mX} \mX) = \operatorname{rank}(\tp{\mX})$ (@thm-rank-transpose, @thm-rank-dim).
+So $\mathcal{C}(\tp{\mX} \mX) = \mathcal{C}(\tp{\mX})$ (@thm-subspace-equal-dim),
+and $\tp{\mX} \vy = \tp{\mX} \mX \vecf{z}$ for some $\vecf{z} \in \reals^p$.
+
+**The split.**
+Let $\vecf{u} = \mX \matr{G} \tp{\mX} \vy = \mX\,(\matr{G} \tp{\mX} \vy)$ (@thm-matmul-assoc),
+which is in $\mathcal{C}(\mX)$ (@def-column-space).
+For $\vy - \vecf{u}$,
+
+$$
+\ba
+\tp{\mX}\,(\vy - \vecf{u})
+&= \tp{\mX} \vy - \tp{\mX}\,\vecf{u}
+&& \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
+\\
+&= \tp{\mX} \vy - (\tp{\mX} \mX)\,\matr{G}\,(\tp{\mX} \vy)
+&& \text{(substitute } \vecf{u} \text{, and @thm-matmul-assoc)}
+\\
+&= \tp{\mX} \vy - (\tp{\mX} \mX)\,\matr{G}\,(\tp{\mX} \mX)\,\vecf{z}
+&& \text{(first step)}
+\\
+&= \tp{\mX} \vy - (\tp{\mX} \mX)\,\vecf{z}
+&& \text{(@def-generalized-inverse, and @thm-matmul-assoc)}
+\\
+&= \tp{\mX} \vy - \tp{\mX} \vy
+&& \text{(first step)}
+\\
+&= \vzero_p,
+&& \text{(arithmetic)}
+\ea
+$$
+
+so $\vy - \vecf{u} \in \mathcal{N}(\tp{\mX}) = \mathcal{C}(\mX)^\perp$
+(@thm-complement-null-space).
+By the uniqueness in @thm-orthogonal-direct-sum,
+$\vecf{u}$ is the orthogonal projection of $\vy$ onto $\mathcal{C}(\mX)$.
+
+**Same matrix.**
+Every choice of $\matr{G}$ gives a matrix that projects every $\vy$ onto $\mathcal{C}(\mX)$,
+so all choices give the same matrix (@thm-projection-matrix-projects, part 2).
+When $\operatorname{rank}(\mX) = p$,
+$(\tp{\mX} \mX)^{-1}$ is one choice (@thm-gram-invertible, @thm-generalized-inverse-invertible),
+and it gives $\matr{H}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-projector-generalized-inverse}
+#### A design matrix with a repeated column
+
+Let $\mX = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$,
+an intercept column entered twice, so $\operatorname{rank}(\mX) = 1 < 2$
+and $\tp{\mX} \mX = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$ is not invertible.
+The matrix $\matr{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}$
+is a generalized inverse of it:
+
+$$
+\ba
+(\tp{\mX} \mX)\,\matr{G}\,(\tp{\mX} \mX)
+&= \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}
+&& \text{(@def-matrix-mult, for the first product)}
+\\
+&= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}.
+&& \text{(@def-matrix-mult)}
+\ea
+$$
+
+Then
+
+$$
+\ba
+\mX \matr{G} \tp{\mX}
+&= \begin{bmatrix} \frac{1}{2} & 0 \\ \frac{1}{2} & 0 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}
+&& \text{(@def-matrix-mult, for } \mX \matr{G} \text{)}
+\\
+&= \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix},
+&& \text{(@def-matrix-mult)}
+\ea
+$$
+
+the hat matrix of the intercept-only model (@exm-hat-matrix):
+$\mathcal{C}(\mX) = \operatorname{span}\cb{(1, 1)}$, the same column space.
+
+:::

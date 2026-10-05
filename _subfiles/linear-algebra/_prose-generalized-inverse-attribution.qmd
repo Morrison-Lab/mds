@@ -1,0 +1,11 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from @zhou2024matinv,
+used under the MIT License
+(see the license text in @sec-subspaces).
+The source defers the existence of the Moore-Penrose inverse to the singular value decomposition;
+the proof here builds it from a rank factorization (@thm-rank-factorization) instead,
+and also proves the rank and projection results the source leaves to homework.
+
+:::

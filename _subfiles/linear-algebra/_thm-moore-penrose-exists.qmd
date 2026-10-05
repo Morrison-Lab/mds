@@ -1,0 +1,174 @@
+:::{#thm-moore-penrose-exists}
+#### Every matrix has a Moore-Penrose inverse
+
+Every $m \times n$ matrix $\matr{A}$ has a Moore-Penrose inverse (@def-moore-penrose),
+written $\matr{A}^+$; it is unique by @thm-moore-penrose-unique.
+
+- If $\matr{A} = \matr{0}_{m \times n}$, then $\matr{A}^+ = \matr{0}_{n \times m}$.
+- If $\operatorname{rank}(\matr{A}) = r \ge 1$ and $\matr{A} = \matr{C} \matr{R}$
+  is a rank factorization (@def-rank-factorization), then
+
+$$
+\underbrace{\matr{A}^+}_{n \times m}
+= \underbrace{\tp{\matr{R}}}_{n \times r}
+  \underbrace{(\matr{R} \tp{\matr{R}})^{-1}}_{r \times r}
+  \underbrace{(\tp{\matr{C}} \matr{C})^{-1}}_{r \times r}
+  \underbrace{\tp{\matr{C}}}_{r \times m}.
+$$
+
+:::
+
+::: proof
+
+**The zero matrix.**
+With $\matr{A} = \matr{0}$ and $\matr{G} = \matr{0}$,
+every product in conditions 1 to 4 is a zero matrix,
+and a zero matrix equals its own transpose,
+so all four conditions hold.
+
+**The two inverses exist.**
+A rank factorization exists (@thm-rank-factorization).
+$\matr{C}$ is $m \times r$ and $\matr{R}$ is $r \times n$.
+Both have rank $r$:
+
+$$
+\ba
+r
+&= \operatorname{rank}(\matr{C} \matr{R})
+&& \text{(} \matr{A} = \matr{C} \matr{R} \text{)}
+\\
+&\le \operatorname{rank}(\matr{C})
+&& \text{(@thm-rank-product)}
+\\
+&\le r,
+&& \text{(@cor-rank-bound, } \matr{C} \text{ has } r \text{ columns)}
+\ea
+$$
+
+and, using $\tp{(\matr{C} \matr{R})} = \tp{\matr{R}} \tp{\matr{C}}$ (@thm-transpose-product),
+
+$$
+\ba
+r
+&= \operatorname{rank}\paren{\tp{\matr{R}} \tp{\matr{C}}}
+&& \text{(@thm-rank-transpose)}
+\\
+&\le \operatorname{rank}(\tp{\matr{R}})
+&& \text{(@thm-rank-product)}
+\\
+&\le r.
+&& \text{(@cor-rank-bound, } \tp{\matr{R}} \text{ has } r \text{ columns)}
+\ea
+$$
+
+So $\matr{C}$ and $\tp{\matr{R}}$ have full column rank $r$,
+and $\tp{\matr{C}} \matr{C}$ and $\matr{R} \tp{\matr{R}} = \tp{(\tp{\matr{R}})}\,\tp{\matr{R}}$
+are invertible (@thm-gram-invertible).
+Write $\matr{S} \eqdef (\matr{R} \tp{\matr{R}})^{-1}$
+and $\matr{T} \eqdef (\tp{\matr{C}} \matr{C})^{-1}$,
+both symmetric as inverses of symmetric matrices (@thm-transpose-product, @cor-inverse-symmetric),
+so that $\matr{G} = \tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}$.
+
+**Two products.**
+
+$$
+\ba
+\matr{A} \matr{G}
+&= \matr{C}\,(\matr{R} \tp{\matr{R}})\,\matr{S}\,\matr{T} \tp{\matr{C}}
+&& \text{(substitute, and @thm-matmul-assoc)}
+\\
+&= \matr{C}\,\matr{I}_r\,\matr{T} \tp{\matr{C}}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{C} \matr{T} \tp{\matr{C}},
+&& \text{(@thm-identity)}
+\ea
+$$
+
+$$
+\ba
+\matr{G} \matr{A}
+&= \tp{\matr{R}} \matr{S}\,\matr{T}\,(\tp{\matr{C}} \matr{C})\,\matr{R}
+&& \text{(substitute, and @thm-matmul-assoc)}
+\\
+&= \tp{\matr{R}} \matr{S}\,\matr{I}_r\,\matr{R}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \tp{\matr{R}} \matr{S} \matr{R}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+**Conditions 3 and 4.**
+$\tp{(\matr{C} \matr{T} \tp{\matr{C}})} = \matr{C}\,\tp{\matr{T}}\,\tp{\matr{C}} = \matr{C} \matr{T} \tp{\matr{C}}$
+(@thm-transpose-product, twice, and $\matr{T}$ symmetric),
+and likewise
+$\tp{(\tp{\matr{R}} \matr{S} \matr{R})} = \tp{\matr{R}} \matr{S} \matr{R}$.
+
+**Condition 1.**
+
+$$
+\ba
+\matr{A} \matr{G} \matr{A}
+&= \matr{C} \matr{T} \tp{\matr{C}}\,\matr{C} \matr{R}
+&& \text{(first product)}
+\\
+&= \matr{C}\,\matr{T}\,(\tp{\matr{C}} \matr{C})\,\matr{R}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{C}\,\matr{I}_r\,\matr{R}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+**Condition 2.**
+
+$$
+\ba
+\matr{G} \matr{A} \matr{G}
+&= \tp{\matr{R}} \matr{S} \matr{R}\,\tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}
+&& \text{(second product)}
+\\
+&= \tp{\matr{R}}\,\matr{S}\,(\matr{R} \tp{\matr{R}})\,\matr{S}\,\matr{T} \tp{\matr{C}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{\matr{R}}\,\matr{I}_r\,\matr{S}\,\matr{T} \tp{\matr{C}}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{G}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-moore-penrose-exists}
+#### The Moore-Penrose inverse of a rank-one matrix
+
+For $\matr{A}$ in @exm-column-space, the rank factorization
+$\matr{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$,
+$\matr{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}$
+(@exm-rank-factorization) gives
+$\tp{\matr{C}} \matr{C} = 1 + 9 = 10$
+and $\matr{R} \tp{\matr{R}} = 1 + 4 + 4 = 9$, so
+
+$$
+\matr{A}^+
+= \frac{1}{9 \cd 10} \begin{bmatrix} 1 \\ -2 \\ -2 \end{bmatrix} \begin{bmatrix} 1 & 3 \end{bmatrix}
+= \frac{1}{90} \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}.
+$$
+
+As a check on condition 1,
+$\matr{A} \matr{A}^+ = \matr{C} \matr{T} \tp{\matr{C}}
+= \frac{1}{10} \begin{bmatrix} 1 & 3 \\ 3 & 9 \end{bmatrix}$,
+and its first row times $\matr{A}$ is
+$\frac{1}{10}\paren{1 \cd (1, -2, -2) + 3 \cd (3, -6, -6)} = (1, -2, -2)$,
+the first row of $\matr{A}$; the second row is $3$ times the first,
+like the second row of $\matr{A}$.
+
+:::
