@@ -24,6 +24,11 @@ format:
 - @fieller2018basics
 - @banerjee2014linear
 - @searle2017matrix
+- @petersen2012matrix
+  is a free desk reference that collects matrix identities:
+  it lists results on determinants, inverses, decompositions,
+  and derivatives of vectors and matrices,
+  so it is a quick place to look up a formula this page proves.
 
 ## References {.unnumbered}
 
