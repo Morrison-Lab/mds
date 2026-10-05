@@ -24,14 +24,20 @@ $$
 &= \tp{\vecf{x}}\,\vzero_n
 && \text{(every term of the inner product is } 0 \text{)}
 \\
-&= \tp{\vecf{x}} \tp{\matr{A}} \matr{A} \vecf{x}
+&= \tp{\vecf{x}}\,\paren{\tp{\matr{A}} \matr{A} \vecf{x}}
 && \text{(substitute } \vzero_n = \tp{\matr{A}} \matr{A} \vecf{x} \text{)}
+\\
+&= \paren{\tp{\vecf{x}} \tp{\matr{A}}}\,(\matr{A} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \tp{(\matr{A} \vecf{x})}\,(\matr{A} \vecf{x})
 && \text{(@thm-transpose-product)}
 \\
+&= (\matr{A} \vecf{x}) \cdot (\matr{A} \vecf{x})
+&& \text{(@exm-dot-product-matmul)}
+\\
 &= \norm{\matr{A} \vecf{x}}^2.
-&& \text{(@def-euclidean-norm)}
+&& \text{(square both sides of @eq-l2-norm)}
 \ea
 $$
 

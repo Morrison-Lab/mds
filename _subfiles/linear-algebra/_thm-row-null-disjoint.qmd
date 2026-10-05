@@ -12,7 +12,7 @@ $$
 ::: proof
 
 Both sets are subspaces,
-by @def-column-space and @thm-null-space-subspace,
+by @thm-column-space-span and @thm-null-space-subspace,
 so both contain $\vzero_n$ (@thm-subspace-zero).
 
 Now take any $\vecf{x}$ in both sets.
@@ -28,8 +28,14 @@ $$
 &= \tp{(\tp{\matr{A}} \vecf{u})}\,\vecf{x}
 && \text{(substitute } \vecf{x} = \tp{\matr{A}} \vecf{u} \text{ in the first factor)}
 \\
-&= \tp{\vecf{u}} \matr{A} \vecf{x}
-&& \text{(@thm-transpose-product, and } \tp{(\tp{\matr{A}})} = \matr{A} \text{)}
+&= \paren{\tp{\vecf{u}}\,\tp{(\tp{\matr{A}})}}\,\vecf{x}
+&& \text{(@thm-transpose-product)}
+\\
+&= \paren{\tp{\vecf{u}} \matr{A}}\,\vecf{x}
+&& \text{(transposing twice returns the original matrix)}
+\\
+&= \tp{\vecf{u}}\,(\matr{A} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \tp{\vecf{u}}\,\vzero_m
 && \text{(substitute } \matr{A} \vecf{x} = \vzero_m \text{)}

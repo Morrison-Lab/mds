@@ -19,25 +19,38 @@ $$
 &= \matr{A} \vecf{u} + \matr{A} \vecf{w}
 && \text{(@thm-matmul-distrib)}
 \\
-&= \vzero_m + \vzero_m = \vzero_m
+&= \vzero_m + \vzero_m
 && \text{(} \vecf{u} \text{ and } \vecf{w} \text{ are in the null space)}
+\\
+&= \vzero_m
+&& \text{(adding } \vzero_m \text{ changes nothing)}
 \ea
 $$
 
-and
+and, for each entry $i = 1, \ldots, m$,
 
 $$
 \ba
-\matr{A}\,(c \vecf{u})
-&= c\,(\matr{A} \vecf{u})
-&& \text{(a scalar factor moves out of a matrix product)}
+\paren{\matr{A}\,(c \vecf{u})}_i
+&= a_{i1} (c u_1) + \cdots + a_{in} (c u_n)
+&& \text{(@def-matvec-mult)}
 \\
-&= c\,\vzero_m = \vzero_m
+&= c\,(a_{i1} u_1 + \cdots + a_{in} u_n)
+&& \text{(factor } c \text{ out of each term)}
+\\
+&= c\,(\matr{A} \vecf{u})_i
+&& \text{(@def-matvec-mult)}
+\\
+&= c \cd 0
 && \text{(} \vecf{u} \text{ is in the null space)}
+\\
+&= 0,
+&& \text{(arithmetic)}
 \ea
 $$
 
-so $\vecf{u} + \vecf{w}$ and $c \vecf{u}$ are in $\mathcal{N}(\matr{A})$.
+so $\matr{A}\,(c \vecf{u}) = \vzero_m$.
+Therefore $\vecf{u} + \vecf{w}$ and $c \vecf{u}$ are in $\mathcal{N}(\matr{A})$.
 
 :::
 
