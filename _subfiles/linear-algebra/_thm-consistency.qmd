@@ -5,8 +5,7 @@ Let $\matr{A}$ be $m \times n$, let $\vecf{b} \in \reals^m$,
 and let $\matr{G}$ be any generalized inverse of $\matr{A}$ (@def-generalized-inverse).
 The following statements are equivalent:
 
-1. $\matr{A} \vecf{x} = \vecf{b}$ has a solution
-   (the system is **consistent**);
+1. $\matr{A} \vecf{x} = \vecf{b}$ is consistent (@def-consistent-system);
 2. $\vecf{b} \in \mathcal{C}(\matr{A})$ (@def-column-space);
 3. $\matr{A} \matr{G} \vecf{b} = \vecf{b}$.
 
@@ -15,6 +14,7 @@ The following statements are equivalent:
 ::: proof
 
 **1 and 2 are equivalent.**
+Statement 1 says $\vecf{b} = \matr{A} \vecf{x}$ for some $\vecf{x}$ (@def-consistent-system), and
 $\mathcal{C}(\matr{A})$ is the set of vectors $\matr{A} \vecf{x}$ (@def-column-space),
 so $\vecf{b}$ is in it exactly when $\vecf{b} = \matr{A} \vecf{x}$ for some $\vecf{x}$.
 

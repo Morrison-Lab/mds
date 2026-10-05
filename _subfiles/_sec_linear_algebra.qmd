@@ -676,6 +676,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-consistent-system.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-consistency.qmd >}}
 
 {{< slidebreak >}}

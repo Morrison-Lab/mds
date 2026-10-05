@@ -1,0 +1,23 @@
+:::{#def-consistent-system}
+#### Consistent linear system
+
+A linear system $\matr{A} \vecf{x} = \vecf{b}$,
+with $\matr{A}$ an $m \times n$ matrix and $\vecf{b} \in \reals^m$,
+is **consistent** if it has at least one solution $\vecf{x} \in \reals^n$,
+and **inconsistent** otherwise.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-consistent-system}
+#### A consistent system and an inconsistent one
+
+With $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$,
+$\matr{A}\,(x_1, x_2) = (x_1, 0)$ (@def-matvec-mult).
+
+- $\matr{A} \vecf{x} = (2, 0)$ is consistent: $\vecf{x} = (2, 0)$ is a solution.
+- $\matr{A} \vecf{x} = (2, 1)$ is inconsistent:
+  the second entry of $\matr{A} \vecf{x}$ is always $0$, never $1$.
+
+:::

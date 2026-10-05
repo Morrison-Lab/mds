@@ -6,7 +6,7 @@ Let $\matr{A}$ be $m \times n$ with a generalized inverse $\matr{G}$ (@def-gener
 1. $\mathcal{N}(\matr{A}) = \mathcal{C}(\matr{I}_n - \matr{G} \matr{A})$:
    $\vecf{x}$ solves $\matr{A} \vecf{x} = \vzero_m$
    exactly when $\vecf{x} = (\matr{I}_n - \matr{G} \matr{A})\,\vecf{q}$ for some $\vecf{q} \in \reals^n$.
-2. If $\matr{A} \vecf{x} = \vecf{b}$ is consistent (@thm-consistency),
+2. If $\matr{A} \vecf{x} = \vecf{b}$ is consistent (@def-consistent-system),
    then $\vecf{x}$ is a solution exactly when
    $$
    \vecf{x} = \matr{G} \vecf{b} + (\matr{I}_n - \matr{G} \matr{A})\,\vecf{q}
