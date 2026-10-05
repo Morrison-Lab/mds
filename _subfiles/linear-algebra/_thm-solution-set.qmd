@@ -24,8 +24,11 @@ First,
 $$
 \ba
 \matr{A}\,(\matr{I}_n - \matr{G} \matr{A})
+&= \matr{A} \matr{I}_n - \matr{A}\,(\matr{G} \matr{A})
+&& \text{(@thm-scalar-matmul)}
+\\
 &= \matr{A} \matr{I}_n - \matr{A} \matr{G} \matr{A}
-&& \text{(@thm-matmul-distrib, and } \matr{A}\,(-\matr{M}) = -\matr{A} \matr{M} \text{ by @def-scalar-mult)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \matr{A} - \matr{A} \matr{G} \matr{A}
 && \text{(@thm-identity)}
@@ -47,7 +50,7 @@ $$
 \ba
 (\matr{I}_n - \matr{G} \matr{A})\,\vecf{x}
 &= \matr{I}_n \vecf{x} - (\matr{G} \matr{A})\,\vecf{x}
-&& \text{(@thm-matmul-distrib, and @def-scalar-mult)}
+&& \text{(@thm-scalar-matmul, with } \vecf{x} \text{ as the last factor)}
 \\
 &= \vecf{x} - (\matr{G} \matr{A})\,\vecf{x}
 && \text{(@thm-identity)}

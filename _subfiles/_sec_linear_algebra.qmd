@@ -652,6 +652,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-scalar-matmul.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-generalized-inverse.qmd >}}
 
 {{< slidebreak >}}

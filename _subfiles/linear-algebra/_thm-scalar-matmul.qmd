@@ -1,0 +1,64 @@
+:::{#thm-scalar-matmul}
+#### A scalar factor passes through a matrix product
+
+For an $m \times k$ matrix $\matr{A}$, a $k \times n$ matrix $\matr{B}$ and a number $c$,
+
+$$
+\matr{A}\,(c\,\matr{B}) = c\,(\matr{A} \matr{B}) = (c\,\matr{A})\,\matr{B}.
+$$
+
+In particular, $\matr{A}\,(\matr{B} - \matr{C}) = \matr{A} \matr{B} - \matr{A} \matr{C}$
+and $(\matr{B} - \matr{C})\,\matr{D} = \matr{B} \matr{D} - \matr{C} \matr{D}$
+for matrices of compatible sizes,
+where $\matr{B} - \matr{C} \eqdef \matr{B} + (-1)\,\matr{C}$.
+
+:::
+
+::: proof
+
+For each entry $(i, j)$,
+
+$$
+\ba
+\paren{\matr{A}\,(c\,\matr{B})}_{ij}
+&= \sum_{l=1}^{k} a_{il}\,(c\,b_{lj})
+&& \text{(@def-matrix-mult, @def-scalar-mult)}
+\\
+&= c \sum_{l=1}^{k} a_{il}\,b_{lj}
+&& \text{(commute, and factor } c \text{ out of the sum)}
+\\
+&= \paren{c\,(\matr{A} \matr{B})}_{ij},
+&& \text{(@def-matrix-mult, @def-scalar-mult)}
+\ea
+$$
+
+and $\sum_l (c\,a_{il})\,b_{lj} = c \sum_l a_{il}\,b_{lj}$ in the same way.
+For the difference,
+
+$$
+\ba
+\matr{A}\,(\matr{B} - \matr{C})
+&= \matr{A} \matr{B} + \matr{A}\,((-1)\,\matr{C})
+&& \text{(@thm-matmul-distrib)}
+\\
+&= \matr{A} \matr{B} + (-1)\,(\matr{A} \matr{C}),
+&& \text{(first part)}
+\ea
+$$
+
+and $(\matr{B} - \matr{C})\,\matr{D}$ is handled the same way with the second law in @thm-matmul-distrib.
+A column vector is a matrix with one column,
+so all of this applies with $\matr{B}$, $\matr{C}$ or $\matr{D}$ a vector.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-scalar-matmul}
+#### Pulling a scalar out of a product
+
+With $\matr{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}$ and $\matr{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$:
+$\matr{A}\,(2\,\matr{B}) = \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 6 \\ 8 \end{bmatrix} = 22$,
+and $2\,(\matr{A} \matr{B}) = 2\,(3 + 8) = 22$.
+
+:::

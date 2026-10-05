@@ -19,7 +19,8 @@ since $(\tp{\mX} \mX)\,\vecf{z} = \tp{\mX}\,(\mX \vecf{z})$ (@thm-matmul-assoc).
 Both are subspaces of $\reals^p$ (@thm-column-space-span) with the same dimension:
 $\operatorname{rank}(\tp{\mX} \mX) = \operatorname{rank}(\tp{\mX})$ (@thm-rank-transpose, @thm-rank-dim).
 So $\mathcal{C}(\tp{\mX} \mX) = \mathcal{C}(\tp{\mX})$ (@thm-subspace-equal-dim),
-and $\tp{\mX} \vy = \tp{\mX} \mX \vecf{z}$ for some $\vecf{z} \in \reals^p$.
+and since $\tp{\mX} \vy \in \mathcal{C}(\tp{\mX})$ (@def-column-space),
+$\tp{\mX} \vy = \tp{\mX} \mX \vecf{z}$ for some $\vecf{z} \in \reals^p$.
 
 **The split.**
 Let $\vecf{u} = \mX \matr{G} \tp{\mX} \vy = \mX\,(\matr{G} \tp{\mX} \vy)$ (@thm-matmul-assoc),
@@ -32,14 +33,20 @@ $$
 &= \tp{\mX} \vy - \tp{\mX}\,\vecf{u}
 && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
 \\
+&= \tp{\mX} \vy - \tp{\mX}\,(\mX \matr{G} \tp{\mX} \vy)
+&& \text{(substitute } \vecf{u} \text{)}
+\\
 &= \tp{\mX} \vy - (\tp{\mX} \mX)\,\matr{G}\,(\tp{\mX} \vy)
-&& \text{(substitute } \vecf{u} \text{, and @thm-matmul-assoc)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \tp{\mX} \vy - (\tp{\mX} \mX)\,\matr{G}\,(\tp{\mX} \mX)\,\vecf{z}
 && \text{(first step)}
 \\
+&= \tp{\mX} \vy - \paren{(\tp{\mX} \mX)\,\matr{G}\,(\tp{\mX} \mX)}\,\vecf{z}
+&& \text{(@thm-matmul-assoc)}
+\\
 &= \tp{\mX} \vy - (\tp{\mX} \mX)\,\vecf{z}
-&& \text{(@def-generalized-inverse, and @thm-matmul-assoc)}
+&& \text{(@def-generalized-inverse)}
 \\
 &= \tp{\mX} \vy - \tp{\mX} \vy
 && \text{(first step)}
@@ -70,7 +77,9 @@ and it gives $\matr{H}$.
 
 Let $\mX = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$,
 an intercept column entered twice, so $\operatorname{rank}(\mX) = 1 < 2$
-and $\tp{\mX} \mX = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$ is not invertible.
+and $\tp{\mX} \mX = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$ is not invertible:
+its rank is $\operatorname{rank}(\mX) = 1 < 2$ (@thm-rank-transpose),
+while an invertible $2 \times 2$ matrix has rank $2$ (@exm-solution-unique).
 The matrix $\matr{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}$
 is a generalized inverse of it:
 
@@ -98,7 +107,14 @@ $$
 \ea
 $$
 
-the hat matrix of the intercept-only model (@exm-hat-matrix):
-$\mathcal{C}(\mX) = \operatorname{span}\cb{(1, 1)}$, the same column space.
+the hat matrix of the intercept-only model (@exm-hat-matrix).
+Another generalized inverse, $\matr{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}$,
+which is one because $(\tp{\mX} \mX)\,\matr{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}$
+and that times $\tp{\mX} \mX$ is again $\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$,
+gives $\mX \matr{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}$
+and the same $\mX \matr{G}' \tp{\mX} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}$,
+as @thm-projector-generalized-inverse says it must.
+Both project onto
+$\mathcal{C}(\mX) = \operatorname{span}\cb{(1, 1)}$, the column space of the intercept-only design.
 
 :::

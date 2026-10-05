@@ -25,7 +25,8 @@ which is statement 3 (@thm-matmul-assoc).
 
 **3 implies 1.**
 If $\matr{A} \matr{G} \vecf{b} = \vecf{b}$,
-then $\vecf{x} = \matr{G} \vecf{b}$ is a solution.
+then $\vecf{x} = \matr{G} \vecf{b}$ is a solution,
+since $\matr{A}\,(\matr{G} \vecf{b}) = (\matr{A} \matr{G})\,\vecf{b}$ (@thm-matmul-assoc).
 
 :::
 

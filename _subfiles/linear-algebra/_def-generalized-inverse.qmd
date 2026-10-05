@@ -91,7 +91,7 @@ For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
 of @exm-invertible-matrix,
 the only generalized inverse is
 $\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$.
-The singular matrix of @exm-generalized-inverse,
-by contrast, has infinitely many.
+The matrix of @exm-generalized-inverse, by contrast, has infinitely many,
+so by @thm-generalized-inverse-invertible it is singular.
 
 :::

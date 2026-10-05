@@ -20,13 +20,20 @@ $$
 
 ::: proof
 
+**The two cases cover every matrix.**
+If $\matr{A} \ne \matr{0}_{m \times n}$, it has a nonzero column,
+which is linearly independent on its own
+($c\,\vecf{v} = \vzero$ with $\vecf{v} \ne \vzero$ forces $c = 0$),
+so $\operatorname{rank}(\matr{A}) \ge 1$ (@def-rank).
+
 **The zero matrix.**
-With $\matr{A} = \matr{0}$ and $\matr{G} = \matr{0}$,
+With $\matr{A} = \matr{0}_{m \times n}$ and $\matr{G} = \matr{0}_{n \times m}$,
 every product in conditions 1 to 4 is a zero matrix,
 and a zero matrix equals its own transpose,
 so all four conditions hold.
 
 **The two inverses exist.**
+Now suppose $\operatorname{rank}(\matr{A}) = r \ge 1$.
 A rank factorization exists (@thm-rank-factorization).
 $\matr{C}$ is $m \times r$ and $\matr{R}$ is $r \times n$.
 Both have rank $r$:
@@ -64,18 +71,24 @@ $$
 So $\matr{C}$ and $\tp{\matr{R}}$ have full column rank $r$,
 and $\tp{\matr{C}} \matr{C}$ and $\matr{R} \tp{\matr{R}} = \tp{(\tp{\matr{R}})}\,\tp{\matr{R}}$
 are invertible (@thm-gram-invertible).
+They are symmetric:
+$\tp{(\tp{\matr{C}} \matr{C})} = \tp{\matr{C}}\,\tp{(\tp{\matr{C}})} = \tp{\matr{C}} \matr{C}$
+(@thm-transpose-product, @def-matrix-transpose), and likewise for $\matr{R} \tp{\matr{R}}$.
 Write $\matr{S} \eqdef (\matr{R} \tp{\matr{R}})^{-1}$
 and $\matr{T} \eqdef (\tp{\matr{C}} \matr{C})^{-1}$,
-both symmetric as inverses of symmetric matrices (@thm-transpose-product, @cor-inverse-symmetric),
-so that $\matr{G} = \tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}$.
+both symmetric (@cor-inverse-symmetric),
+and $\matr{G} \eqdef \tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}$.
 
 **Two products.**
 
 $$
 \ba
 \matr{A} \matr{G}
+&= \matr{C} \matr{R}\,\tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}
+&& \text{(substitute } \matr{A} \text{ and } \matr{G} \text{)}
+\\
 &= \matr{C}\,(\matr{R} \tp{\matr{R}})\,\matr{S}\,\matr{T} \tp{\matr{C}}
-&& \text{(substitute, and @thm-matmul-assoc)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \matr{C}\,\matr{I}_r\,\matr{T} \tp{\matr{C}}
 && \text{(@def-matrix-inverse)}
@@ -88,8 +101,11 @@ $$
 $$
 \ba
 \matr{G} \matr{A}
+&= \tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}\,\matr{C} \matr{R}
+&& \text{(substitute } \matr{G} \text{ and } \matr{A} \text{)}
+\\
 &= \tp{\matr{R}} \matr{S}\,\matr{T}\,(\tp{\matr{C}} \matr{C})\,\matr{R}
-&& \text{(substitute, and @thm-matmul-assoc)}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \tp{\matr{R}} \matr{S}\,\matr{I}_r\,\matr{R}
 && \text{(@def-matrix-inverse)}
@@ -100,10 +116,40 @@ $$
 $$
 
 **Conditions 3 and 4.**
-$\tp{(\matr{C} \matr{T} \tp{\matr{C}})} = \matr{C}\,\tp{\matr{T}}\,\tp{\matr{C}} = \matr{C} \matr{T} \tp{\matr{C}}$
-(@thm-transpose-product, twice, and $\matr{T}$ symmetric),
-and likewise
-$\tp{(\tp{\matr{R}} \matr{S} \matr{R})} = \tp{\matr{R}} \matr{S} \matr{R}$.
+
+$$
+\ba
+\tp{(\matr{A} \matr{G})}
+&= \tp{(\matr{C} \matr{T} \tp{\matr{C}})}
+&& \text{(first product)}
+\\
+&= \tp{(\tp{\matr{C}})}\,\tp{\matr{T}}\,\tp{\matr{C}}
+&& \text{(@thm-transpose-product, twice)}
+\\
+&= \matr{C}\,\tp{\matr{T}}\,\tp{\matr{C}}
+&& \text{(@def-matrix-transpose)}
+\\
+&= \matr{C} \matr{T} \tp{\matr{C}},
+&& \text{(} \matr{T} \text{ is symmetric)}
+\ea
+$$
+
+$$
+\ba
+\tp{(\matr{G} \matr{A})}
+&= \tp{(\tp{\matr{R}} \matr{S} \matr{R})}
+&& \text{(second product)}
+\\
+&= \tp{\matr{R}}\,\tp{\matr{S}}\,\tp{(\tp{\matr{R}})}
+&& \text{(@thm-transpose-product, twice)}
+\\
+&= \tp{\matr{R}}\,\tp{\matr{S}}\,\matr{R}
+&& \text{(@def-matrix-transpose)}
+\\
+&= \tp{\matr{R}} \matr{S} \matr{R}.
+&& \text{(} \matr{S} \text{ is symmetric)}
+\ea
+$$
 
 **Condition 1.**
 

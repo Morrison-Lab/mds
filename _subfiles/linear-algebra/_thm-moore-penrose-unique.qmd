@@ -26,8 +26,11 @@ $$
 &= \tp{\matr{G}_1}\,\tp{\matr{A}}\,\tp{\matr{G}_2}\,\tp{\matr{A}}
 && \text{(@thm-transpose-product, twice)}
 \\
+&= (\tp{\matr{G}_1}\,\tp{\matr{A}})\,(\tp{\matr{G}_2}\,\tp{\matr{A}})
+&& \text{(@thm-matmul-assoc)}
+\\
 &= \tp{(\matr{A} \matr{G}_1)}\,\tp{(\matr{A} \matr{G}_2)}
-&& \text{(@thm-transpose-product, twice, and @thm-matmul-assoc)}
+&& \text{(@thm-transpose-product, twice)}
 \\
 &= (\matr{A} \matr{G}_1)(\matr{A} \matr{G}_2)
 && \text{(condition 3 for } \matr{G}_1 \text{ and } \matr{G}_2 \text{)}
@@ -57,8 +60,11 @@ $$
 &= \tp{\matr{A}}\,\tp{\matr{G}_2}\,\tp{\matr{A}}\,\tp{\matr{G}_1}
 && \text{(@thm-transpose-product, twice)}
 \\
+&= (\tp{\matr{A}}\,\tp{\matr{G}_2})\,(\tp{\matr{A}}\,\tp{\matr{G}_1})
+&& \text{(@thm-matmul-assoc)}
+\\
 &= \tp{(\matr{G}_2 \matr{A})}\,\tp{(\matr{G}_1 \matr{A})}
-&& \text{(@thm-transpose-product, twice, and @thm-matmul-assoc)}
+&& \text{(@thm-transpose-product, twice)}
 \\
 &= (\matr{G}_2 \matr{A})(\matr{G}_1 \matr{A})
 && \text{(condition 4 for } \matr{G}_2 \text{ and } \matr{G}_1 \text{)}
@@ -79,8 +85,11 @@ $$
 &= \matr{G}_1 \matr{A} \matr{G}_1
 && \text{(condition 2 for } \matr{G}_1 \text{)}
 \\
+&= \matr{G}_1\,(\matr{A} \matr{G}_1)
+&& \text{(@thm-matmul-assoc)}
+\\
 &= \matr{G}_1\,(\matr{A} \matr{G}_2)
-&& \text{(@thm-matmul-assoc, and the first step)}
+&& \text{(the first step)}
 \\
 &= (\matr{G}_1 \matr{A})\,\matr{G}_2
 && \text{(@thm-matmul-assoc)}
@@ -88,8 +97,11 @@ $$
 &= (\matr{G}_2 \matr{A})\,\matr{G}_2
 && \text{(the second step)}
 \\
+&= \matr{G}_2 \matr{A} \matr{G}_2
+&& \text{(@thm-matmul-assoc)}
+\\
 &= \matr{G}_2.
-&& \text{(@thm-matmul-assoc, and condition 2 for } \matr{G}_2 \text{)}
+&& \text{(condition 2 for } \matr{G}_2 \text{)}
 \ea
 $$
 

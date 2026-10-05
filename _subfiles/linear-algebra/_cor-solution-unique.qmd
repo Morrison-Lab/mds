@@ -15,7 +15,7 @@ Let $\matr{A}$ be $m \times n$.
 **Part 1.**
 By @thm-consistency, the system is consistent for every $\vecf{b}$
 exactly when $\mathcal{C}(\matr{A}) = \reals^m$.
-$\mathcal{C}(\matr{A})$ is a subspace of $\reals^m$ with dimension $\operatorname{rank}(\matr{A})$
+$\mathcal{C}(\matr{A})$ is a subspace of $\reals^m$ (@thm-column-space-span) with dimension $\operatorname{rank}(\matr{A})$
 (@thm-rank-dim), and $\dim(\reals^m) = m$ (@exm-dimension).
 If the dimension is $m$, then $\mathcal{C}(\matr{A}) = \reals^m$ (@thm-subspace-equal-dim);
 if $\mathcal{C}(\matr{A}) = \reals^m$, the dimension is $m$.
@@ -49,7 +49,8 @@ By @thm-rank-nullity, that is when $\operatorname{rank}(\matr{A}) = n$.
 - An invertible $p \times p$ matrix $\matr{A}$ has rank $p$:
   if $\matr{A} \vecf{x} = \vzero$ then $\vecf{x} = \matr{A}^{-1} \matr{A} \vecf{x} = \vzero$,
   so its nullity is $0$ and its rank is $p$ (@thm-rank-nullity).
-  So every system with it has exactly one solution, $\matr{A}^{-1} \vecf{b}$
-  (@thm-generalized-inverse-invertible, @thm-generalized-inverse-solves).
+  So every system with it is consistent (part 1, with $p = m$)
+  and has exactly one solution (part 2, with $p = n$),
+  namely $\matr{A}^{-1} \vecf{b}$, since $\matr{A}\,(\matr{A}^{-1} \vecf{b}) = \vecf{b}$.
 
 :::
