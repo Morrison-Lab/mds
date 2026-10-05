@@ -6,6 +6,7 @@ Biostat
 biostatistics
 BMI
 checkable
+Cholesky
 CLI
 codomain
 codomains
@@ -24,7 +25,9 @@ Eigenspaces
 emplate
 equalities
 exponentials
+factorizations
 glitchy
+Hadamard
 Hua
 hyperplane
 hyperplanes
@@ -46,6 +49,7 @@ qwt
 RevealJS
 Roch
 rulesets
+Schur
 Sebastien
 semidefinite
 SERG

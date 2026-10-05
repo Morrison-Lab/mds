@@ -1,0 +1,75 @@
+:::{#thm-pd-operations}
+#### Operations that preserve definiteness
+
+1. If $\matr{C}$ is a $p \times p$ positive definite matrix (@def-positive-definite)
+   and $\matr{A}$ is a $p \times k$ matrix with $k$ linearly independent columns,
+   then the $k \times k$ matrix $\tp{\matr{A}} \matr{C} \matr{A}$ is positive definite.
+2. If $\matr{A}_1$ and $\matr{A}_2$ are positive definite $p \times p$ matrices
+   and $\alpha_1, \alpha_2 > 0$,
+   then $\alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2$ is positive definite.
+
+:::
+
+::: proof
+
+**Part 1.**
+$\tp{\matr{A}} \matr{C} \matr{A}$ is symmetric:
+$\tp{(\tp{\matr{A}} \matr{C} \matr{A})} = \tp{\matr{A}}\,\tp{\matr{C}}\,\tp{(\tp{\matr{A}})} = \tp{\matr{A}} \matr{C} \matr{A}$
+(@thm-transpose-product, twice; $\matr{C}$ symmetric; @def-matrix-transpose).
+For $\vx \ne \vzero_k$, $\matr{A} \vx \ne \vzero_p$,
+since the columns of $\matr{A}$ are independent (@thm-matvec-columns, @def-linearly-independent), and
+
+$$
+\ba
+\tp{\vx}\,(\tp{\matr{A}} \matr{C} \matr{A})\,\vx
+&= \tp{(\matr{A} \vx)}\,\matr{C}\,(\matr{A} \vx)
+&& \text{(@thm-transpose-product, @thm-matmul-assoc)}
+\\
+&> 0.
+&& \text{(} \matr{C} \text{ positive definite, } \matr{A} \vx \ne \vzero \text{)}
+\ea
+$$
+
+**Part 2.**
+$\alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2$ is symmetric:
+its transpose is $\alpha_1 \tp{\matr{A}_1} + \alpha_2 \tp{\matr{A}_2} = \alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2$
+(@thm-transpose-sum, @def-scalar-mult, @def-matrix-transpose).
+For $\vx \ne \vzero$,
+
+$$
+\ba
+\tp{\vx}\,(\alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2)\,\vx
+&= \tp{\vx}\,(\alpha_1 \matr{A}_1)\,\vx + \tp{\vx}\,(\alpha_2 \matr{A}_2)\,\vx
+&& \text{(@thm-matmul-distrib, twice)}
+\\
+&= \alpha_1\,\tp{\vx} \matr{A}_1 \vx + \alpha_2\,\tp{\vx} \matr{A}_2 \vx
+&& \text{(@thm-scalar-matmul)}
+\\
+&> 0.
+&& \text{(each term is positive)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-pd-operations}
+#### Building positive definite matrices
+
+- With $\matr{C} = \matr{I}_3$ and $\mX$ of @exm-pd-gram,
+  part 1 gives again that $\tp{\mX} \mX$ is positive definite.
+- With $\alpha_1 = 2$, $\matr{A}_1 = \matr{I}_2$ (@exm-positive-definite), $\alpha_2 = 1$
+  and $\matr{A}_2 = \tp{\mX} \mX = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}$ (@exm-pd-gram),
+  part 2 gives that $2 \matr{I}_2 + \tp{\mX} \mX = \begin{bmatrix} 5 & 6 \\ 6 & 16 \end{bmatrix}$ is positive definite.
+- An aside beyond part 2:
+  $\matr{I}_2 + \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+  is positive definite plus positive semidefinite;
+  its quadratic form is $x_1^2 + x_2^2 + (x_1 + x_2)^2 > 0$ for $\vx \ne \vzero$,
+  so it is positive definite, in line with its eigenvalues $3$ and $1$ (@exm-eigenvalue).
+- Independence is needed in part 1:
+  with $\matr{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, whose columns are equal,
+  $\tp{\matr{A}}\,\matr{I}_2\,\matr{A} = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}$,
+  and $(1, -1)$ gives quadratic form $0$.
+
+:::

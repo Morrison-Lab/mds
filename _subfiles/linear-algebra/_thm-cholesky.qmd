@@ -1,0 +1,136 @@
+:::{#thm-cholesky}
+#### Cholesky factorization
+
+A $p \times p$ matrix $\matr{A}$ is positive definite (@def-positive-definite)
+exactly when $\matr{A} = \matr{L} \tp{\matr{L}}$
+for some lower triangular $\matr{L}$ (@def-triangular-matrix) with positive diagonal entries.
+For a positive definite $\matr{A}$ that $\matr{L}$ is unique;
+it is the **Cholesky factor** of $\matr{A}$.
+
+:::
+
+::: proof
+
+**If.**
+$\tp{\matr{L}}$ is upper triangular with positive diagonal (@def-matrix-transpose),
+so $\tp{\matr{L}} \vx = \vzero$ only for $\vx = \vzero$ (@thm-back-substitution),
+and the columns of $\tp{\matr{L}}$ are linearly independent
+(@thm-matvec-columns, @def-linearly-independent).
+So $\matr{A} = \tp{(\tp{\matr{L}})}\,\tp{\matr{L}}$ (@def-matrix-transpose)
+is positive definite (@thm-pd-gram, part 2).
+
+**Only if, with uniqueness, by induction on $p$.**
+For $p = 1$, $\matr{A} = [a]$ with $a > 0$ (@thm-pd-submatrix),
+and $[\ell]\,[\ell] = [a]$ with $\ell > 0$ holds exactly for $\ell = \sqrt{a}$.
+For $p > 1$, assume every $(p - 1) \times (p - 1)$ positive definite matrix
+has exactly one such factor, and split off the first row and column.
+$\matr{A}$ is symmetric, so its first row is the transpose of its first column:
+
+$$
+\matr{A} = \begin{bmatrix} a_{11} & \tp{\vecf{b}} \\ \vecf{b} & \matr{A}_{22} \end{bmatrix},
+\qquad
+\matr{L} = \begin{bmatrix} \ell_{11} & \vzero_{1 \times (p-1)} \\ \vecf{g} & \matr{L}_{22} \end{bmatrix},
+\qquad
+\tp{\matr{L}} = \begin{bmatrix} \ell_{11} & \tp{\vecf{g}} \\ \vzero_{(p-1) \times 1} & \tp{\matr{L}_{22}} \end{bmatrix},
+$$
+
+with $\vecf{b}, \vecf{g} \in \reals^{p-1}$,
+where $b_i$ and $g_i$ are entries $(i + 1, 1)$ of $\matr{A}$ and $\matr{L}$,
+and $(\matr{A}_{22})_{ij}$ and $(\matr{L}_{22})_{ij}$ are their entries $(i + 1, j + 1)$;
+$\tp{\matr{L}}$ has this form by @def-matrix-transpose.
+A $p \times p$ matrix $\matr{L}$ is lower triangular with positive diagonal
+exactly when $\ell_{11} > 0$, its first row is otherwise zero,
+and $\matr{L}_{22}$ is lower triangular with positive diagonal;
+$\vecf{g}$ can be anything.
+So choosing $\matr{L}$ means choosing $\ell_{11} > 0$, $\vecf{g}$ and such an $\matr{L}_{22}$.
+
+Entry $(i, j)$ of $\matr{L} \tp{\matr{L}}$ is $\sum_{r=1}^{p} \ell_{ir}\,\ell_{jr}$,
+with $\ell_{ir}$ entry $(i, r)$ of $\matr{L}$ (@def-matrix-mult, @def-matrix-transpose).
+Row $1$ of $\matr{L}$ is $(\ell_{11}, 0, \ldots, 0)$, and row $i + 1$ is
+$(g_i, (\matr{L}_{22})_{i1}, \ldots, (\matr{L}_{22})_{i,p-1})$.
+So, for $i, j = 1, \ldots, p - 1$:
+
+$$
+\ba
+(\matr{L} \tp{\matr{L}})_{11}
+&= \ell_{11}\,\ell_{11} + \sum_{r=2}^{p} 0 \cd 0
+= \ell_{11}^2,
+&& \text{(rows 1 and 1)}
+\\
+(\matr{L} \tp{\matr{L}})_{i+1,1}
+&= g_i\,\ell_{11} + \sum_{r=2}^{p} (\matr{L}_{22})_{i,r-1} \cd 0
+= \ell_{11}\,g_i,
+&& \text{(rows } i + 1 \text{ and } 1 \text{)}
+\\
+(\matr{L} \tp{\matr{L}})_{i+1,j+1}
+&= g_i\,g_j + \sum_{r=2}^{p} (\matr{L}_{22})_{i,r-1}\,(\matr{L}_{22})_{j,r-1}
+&& \text{(rows } i + 1 \text{ and } j + 1 \text{)}
+\\
+&= (\vecf{g} \tp{\vecf{g}})_{ij} + (\matr{L}_{22} \tp{\matr{L}_{22}})_{ij}.
+&& \text{(@def-matrix-mult, with } s = r - 1 \text{)}
+\ea
+$$
+
+Entry $(1, j + 1)$ is $\ell_{11}\,g_j$ by the same computation with the roles swapped,
+the transpose of the $(2, 1)$ block;
+it matches $\tp{\vecf{b}}$ exactly when the $(2, 1)$ block matches $\vecf{b}$,
+which is where the symmetry of $\matr{A}$ is used.
+So $\matr{L} \tp{\matr{L}} = \matr{A}$ says exactly
+
+$$
+\ell_{11}^2 = a_{11}, \qquad
+\ell_{11}\,\vecf{g} = \vecf{b}, \qquad
+\vecf{g} \tp{\vecf{g}} + \matr{L}_{22} \tp{\matr{L}_{22}} = \matr{A}_{22}.
+$$
+
+$a_{11} > 0$ (@thm-pd-submatrix), so the first equation with $\ell_{11} > 0$ forces $\ell_{11} = \sqrt{a_{11}}$;
+the second then forces $\vecf{g} = \tfrac{1}{\ell_{11}}\,\vecf{b}$;
+and the third becomes
+
+$$
+\ba
+\matr{L}_{22} \tp{\matr{L}_{22}}
+&= \matr{A}_{22} - \vecf{g} \tp{\vecf{g}}
+&& \text{(subtract } \vecf{g} \tp{\vecf{g}} \text{)}
+\\
+&= \matr{A}_{22} - \paren{\tfrac{1}{\ell_{11}}\,\vecf{b}} \tp{\paren{\tfrac{1}{\ell_{11}}\,\vecf{b}}}
+&& \text{(substitute } \vecf{g} \text{)}
+\\
+&= \matr{A}_{22} - \tfrac{1}{\ell_{11}^2}\,\vecf{b} \tp{\vecf{b}}
+&& \text{(@def-matrix-transpose, @thm-scalar-matmul)}
+\\
+&= \matr{A}_{22} - \tfrac{1}{a_{11}}\,\vecf{b} \tp{\vecf{b}}.
+&& \text{(} \ell_{11}^2 = a_{11} \text{)}
+\ea
+$$
+
+Here $[a_{11}]$ is invertible with inverse $[1 / a_{11}]$,
+so with $\matr{B} = \tp{\vecf{b}}$ in @def-schur-complement,
+$\tp{\matr{B}}\,[a_{11}]^{-1} \matr{B} = \vecf{b}\,\tfrac{1}{a_{11}}\,\tp{\vecf{b}} = \tfrac{1}{a_{11}}\,\vecf{b} \tp{\vecf{b}}$
+(@thm-scalar-matmul),
+and the right side is the Schur complement of $[a_{11}]$ in $\matr{A}$.
+It is positive definite by @thm-schur-test (with $k = 1$; $\matr{A}_{22}$ is symmetric because $\matr{A}$ is).
+By the induction hypothesis it has exactly one factor $\matr{L}_{22}$ of the required kind.
+So $\matr{L}$ exists and is unique.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-cholesky}
+#### Two Cholesky factors
+
+- $\matr{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$:
+  $\ell_{11} = \sqrt{4} = 2$, $\ell_{21} = 2/2 = 1$,
+  and $\ell_{22}^2 = 5 - 1^2 = 4$, so $\ell_{22} = 2$:
+  $\matr{L} = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}$, and
+  $\matr{L} \tp{\matr{L}} = \begin{bmatrix} 2 \cd 2 & 2 \cd 1 \\ 1 \cd 2 & 1 \cd 1 + 2 \cd 2 \end{bmatrix} = \matr{A}$.
+- $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$:
+  $\ell_{11} = \sqrt{5}$, $\ell_{21} = 4/\sqrt{5}$,
+  and $\ell_{22}^2 = 5 - \tfrac{16}{5} = \tfrac{9}{5}$, the Schur complement of @exm-schur-complement,
+  so $\ell_{22} = \tfrac{3}{\sqrt{5}}$.
+- For $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ the method breaks down:
+  $\ell_{22}^2 = 1 - 4 = -3$ has no real solution,
+  matching the failure of the Schur complement test (@exm-schur-test).
+
+:::

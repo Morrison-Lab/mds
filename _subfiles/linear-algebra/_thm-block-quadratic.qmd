@@ -1,0 +1,148 @@
+:::{#thm-block-quadratic}
+#### The quadratic form of a block matrix
+
+Let $k, m \ge 1$, let $\matr{A}$ be a symmetric $k \times k$ matrix,
+$\matr{B}$ a $k \times m$ matrix and $\matr{C}$ a symmetric $m \times m$ matrix,
+and let $\matr{X}$ be the $(k + m) \times (k + m)$ matrix with blocks
+
+$$
+\matr{X} = \begin{bmatrix} \underbrace{\matr{A}}_{k \times k} & \underbrace{\matr{B}}_{k \times m} \\ \underbrace{\tp{\matr{B}}}_{m \times k} & \underbrace{\matr{C}}_{m \times m} \end{bmatrix},
+$$
+
+that is, $x_{ij} = a_{ij}$, $x_{i, k+j} = b_{ij}$, $x_{k+i, j} = b_{ji}$ and $x_{k+i, k+j} = c_{ij}$
+for indices in range.
+$\matr{X}$ is symmetric (@def-symmetric-matrix):
+$x_{k+i, j} = b_{ji} = x_{j, k+i}$, and $\matr{A}$ and $\matr{C}$ are symmetric.
+Split $\vecf{v} \in \reals^{k + m}$ as $\vecf{v} = (\vecf{u}, \vecf{w})$,
+with $\vecf{u} \in \reals^k$ its first $k$ entries and $\vecf{w} \in \reals^m$ the rest. Then
+
+$$
+\tp{\vecf{v}} \matr{X} \vecf{v}
+= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w},
+$$ {#eq-block-quadratic}
+
+and if $\matr{A}$ is invertible, with $\matr{S} \eqdef \matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B}$
+and $\vecf{z} \eqdef \vecf{u} + \matr{A}^{-1} \matr{B} \vecf{w}$,
+
+$$
+\tp{\vecf{v}} \matr{X} \vecf{v} = \tp{\vecf{z}} \matr{A} \vecf{z} + \tp{\vecf{w}} \matr{S} \vecf{w}.
+$$
+
+:::
+
+::: proof
+
+**$\matr{X} \vecf{v}$ in blocks.** For $i \le k$,
+
+$$
+\ba
+(\matr{X} \vecf{v})_i
+&= \sum_{j=1}^{k+m} x_{ij}\,v_j
+&& \text{(@def-matvec-mult)}
+\\
+&= \sum_{j=1}^{k} x_{ij}\,v_j + \sum_{j=1}^{m} x_{i, k+j}\,v_{k+j}
+&& \text{(split the sum at } j = k \text{)}
+\\
+&= \sum_{j=1}^{k} a_{ij}\,u_j + \sum_{j=1}^{m} b_{ij}\,w_j
+&& \text{(the blocks of } \matr{X} \text{ and of } \vecf{v} \text{)}
+\\
+&= (\matr{A} \vecf{u})_i + (\matr{B} \vecf{w})_i,
+&& \text{(@def-matvec-mult)}
+\ea
+$$
+
+and in the same way $(\matr{X} \vecf{v})_{k+i} = (\tp{\matr{B}} \vecf{u})_i + (\matr{C} \vecf{w})_i$ for $i \le m$.
+
+**The expansion.**
+
+$$
+\ba
+\tp{\vecf{v}} \matr{X} \vecf{v}
+&= \sum_{i=1}^{k} u_i\,(\matr{X} \vecf{v})_i + \sum_{i=1}^{m} w_i\,(\matr{X} \vecf{v})_{k+i}
+&& \text{(@def-dot-product, split the sum at } k \text{)}
+\\
+&= \vecf{u} \cdot (\matr{A} \vecf{u} + \matr{B} \vecf{w}) + \vecf{w} \cdot (\tp{\matr{B}} \vecf{u} + \matr{C} \vecf{w})
+&& \text{(the blocks of } \matr{X} \vecf{v} \text{)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} + \tp{\vecf{w}} \matr{C} \vecf{w}
+&& \text{(@thm-dot-linear)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}
+&& \text{(} \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} = \tp{\paren{\tp{\vecf{w}} \tp{\matr{B}} \vecf{u}}} = \tp{\vecf{u}} \matr{B} \vecf{w} \text{; } 1 \times 1 \text{, @def-matrix-transpose, @thm-transpose-product)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}.
+&& \text{(combine like terms)}
+\ea
+$$
+
+**Completing the square.**
+Write $\vecf{d} \eqdef \matr{A}^{-1} \matr{B} \vecf{w}$, so $\vecf{z} = \vecf{u} + \vecf{d}$ and $\matr{A} \vecf{d} = \matr{B} \vecf{w}$
+(@thm-matmul-assoc, @def-matrix-inverse, @thm-identity);
+$\matr{A}^{-1}$ is symmetric (@cor-inverse-symmetric). Then
+
+$$
+\ba
+\tp{\vecf{z}} \matr{A} \vecf{z}
+&= (\vecf{u} + \vecf{d}) \cdot \matr{A}\,(\vecf{u} + \vecf{d})
+&& \text{(substitute } \vecf{z} = \vecf{u} + \vecf{d} \text{)}
+\\
+&= (\vecf{u} + \vecf{d}) \cdot (\matr{A} \vecf{u} + \matr{A} \vecf{d})
+&& \text{(@thm-matmul-distrib)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{A} \vecf{d} + \tp{\vecf{d}} \matr{A} \vecf{u} + \tp{\vecf{d}} \matr{A} \vecf{d}
+&& \text{(@thm-dot-linear, both slots)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{A} \vecf{d} + \tp{\vecf{u}} \matr{A} \vecf{d} + \tp{\vecf{d}} \matr{A} \vecf{d}
+&& \text{(as in the expansion, with } \tp{\matr{A}} = \matr{A} \text{)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{A} \vecf{d} + \tp{\vecf{d}} \matr{A} \vecf{d}
+&& \text{(combine like terms)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{d}} \matr{B} \vecf{w}
+&& \text{(} \matr{A} \vecf{d} = \matr{B} \vecf{w} \text{, twice)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w},
+&& \text{(} \tp{\vecf{d}} = \tp{\vecf{w}} \tp{\matr{B}} \matr{A}^{-1} \text{, @thm-transpose-product, @cor-inverse-symmetric)}
+\ea
+$$
+
+and
+
+$$
+\ba
+\tp{\vecf{w}} \matr{S} \vecf{w}
+&= \tp{\vecf{w}}\,(\matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B})\,\vecf{w}
+&& \text{(substitute } \matr{S} \text{)}
+\\
+&= \tp{\vecf{w}}\,(\matr{C} \vecf{w} - \tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w})
+&& \text{(@thm-scalar-matmul, difference rule on the right)}
+\\
+&= \tp{\vecf{w}} \matr{C} \vecf{w} - \tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w}.
+&& \text{(@thm-scalar-matmul, difference rule on the left)}
+\ea
+$$
+
+Adding the two displays, the $\tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w}$ terms cancel, leaving
+$\tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}$,
+which is $\tp{\vecf{v}} \matr{X} \vecf{v}$ by @eq-block-quadratic.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-block-quadratic}
+#### The $2 \times 2$ case
+
+For $\matr{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}$ ($k = m = 1$) and $a \ne 0$,
+the theorem reads
+
+$$
+a u^2 + 2buw + cw^2 = a\,\paren{u + \tfrac{b}{a}\,w}^2 + \paren{c - \tfrac{b^2}{a}}\,w^2,
+$$
+
+with $\vecf{v} = (u, w)$: the familiar completing of the square.
+With $a = c = 5$ and $b = 4$:
+$5\,(u + 0.8\,w)^2 + 1.8\,w^2 = 5\,(u^2 + 1.6\,uw + 0.64\,w^2) + 1.8\,w^2
+= 5u^2 + 8uw + 3.2\,w^2 + 1.8\,w^2 = 5u^2 + 8uw + 5w^2$.
+
+:::

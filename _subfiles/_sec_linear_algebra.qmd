@@ -777,3 +777,35 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-diagonalizable.qmd >}}
+
+### Gram matrices, Schur complements and Cholesky {#sec-cholesky}
+
+{{< include mds/_subfiles/linear-algebra/_prose-pd-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-pd-gram.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-pd-operations.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-pd-submatrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-block-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-schur-complement.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-schur-test.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-cholesky.qmd >}}

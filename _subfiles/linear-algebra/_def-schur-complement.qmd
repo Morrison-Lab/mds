@@ -1,0 +1,24 @@
+:::{#def-schur-complement}
+#### Schur complement
+
+For a block matrix
+$\matr{X} = \begin{bmatrix} \matr{A} & \matr{B} \\ \tp{\matr{B}} & \matr{C} \end{bmatrix}$
+as in @thm-block-quadratic with $\matr{A}$ invertible,
+the **Schur complement** of $\matr{A}$ in $\matr{X}$ is the $m \times m$ matrix
+$\matr{S} = \matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B}$ defined in @thm-block-quadratic.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-schur-complement}
+#### Schur complements of $2 \times 2$ matrices
+
+- For $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ with $\matr{A} = [5]$:
+  $\matr{S} = 5 - 4 \cd \tfrac{1}{5} \cd 4 = \tfrac{25}{5} - \tfrac{16}{5} = \tfrac{9}{5}$, that is, $\matr{S} = [\tfrac{9}{5}]$.
+- For $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ with $\matr{A} = [1]$:
+  $\matr{S} = [1 - 2 \cd 1 \cd 2] = [-3]$.
+- For $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ the top-left block $[0]$ is not invertible,
+  so there is no Schur complement of it.
+
+:::

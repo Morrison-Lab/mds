@@ -1,0 +1,72 @@
+:::{#thm-pd-submatrix}
+#### Leading blocks of a positive definite matrix are positive definite
+
+Let $\matr{X}$ be a $p \times p$ positive definite matrix (@def-positive-definite),
+and for $1 \le k \le p$ let $\matr{X}_k$ be its top-left $k \times k$ block,
+with entries $x_{ij}$ for $i, j \le k$.
+Then $\matr{X}_k$ is positive definite.
+Also, every diagonal entry of a positive definite matrix is positive.
+
+:::
+
+::: proof
+
+$\matr{X}_k$ is symmetric, because $\matr{X}$ is.
+For $\vecf{u} \in \reals^k$ with $\vecf{u} \ne \vzero$,
+let $\vecf{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \reals^p$, which is nonzero,
+with entries $y_i = u_i$ for $i \le k$ and $y_i = 0$ for $i > k$. Then
+
+$$
+\ba
+\tp{\vecf{u}} \matr{X}_k \vecf{u}
+&= \sum_{i=1}^{k} \sum_{j=1}^{k} u_i\,x_{ij}\,u_j
+&& \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&= \sum_{i=1}^{k} \sum_{j=1}^{k} y_i\,x_{ij}\,y_j
+&& \text{(} y_i = u_i \text{ for } i \le k \text{)}
+\\
+&= \sum_{i=1}^{p} \sum_{j=1}^{p} y_i\,x_{ij}\,y_j
+&& \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)}
+\\
+&= \tp{\vecf{y}} \matr{X} \vecf{y}
+&& \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&> 0.
+&& \text{(} \matr{X} \text{ positive definite, } \vecf{y} \ne \vzero \text{)}
+\ea
+$$
+
+For the diagonal entry $x_{ii}$, take $\vecf{e}_i$ (@def-indicator-vector), which is nonzero:
+
+$$
+\ba
+\tp{\vecf{e}_i} \matr{X} \vecf{e}_i
+&= \sum_{r=1}^{p} \sum_{s=1}^{p} (\vecf{e}_i)_r\,x_{rs}\,(\vecf{e}_i)_s
+&& \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&= x_{ii}
+&& \text{(only the term } r = s = i \text{ is nonzero)}
+\\
+&> 0.
+&& \text{(} \matr{X} \text{ positive definite)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-pd-submatrix}
+#### A quick necessary test
+
+$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite (@exm-pd-operations),
+and its diagonal entries $2, 2$ and its $1 \times 1$ leading block $[2]$ are positive.
+The test can only rule matrices out:
+$-\matr{I}_2$ has negative diagonal entries, so it is not positive definite,
+even though $\det(-\matr{I}_2) = (-1)(-1) - 0 = 1 > 0$ (@def-determinant);
+a positive determinant alone does not make a matrix positive definite.
+And positive diagonal entries are not enough:
+$\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of @exm-positive-definite has them
+but is not positive definite.
+
+:::
