@@ -1,0 +1,23 @@
+:::{#exm-conj-product}
+#### Multiplying $3 + 4\,i$ by its conjugate
+
+$$
+\ba
+(3 + 4\,i)(3 - 4\,i)
+&= 9 - 12\,i + 12\,i - 16\,i^2
+&& \text{(distribute)}
+\\
+&= 9 - 16\,i^2
+&& \text{(cancel } 12\,i \text{)}
+\\
+&= 9 + 16
+&& \text{(@def-imaginary-unit)}
+\\
+&= 25
+&& \text{(add)}
+\ea
+$$
+
+which is $\abs{3 + 4\,i}^2 = 5^2$ from @exm-complex-modulus, as @thm-conj-product says.
+
+:::

@@ -1,0 +1,12 @@
+:::{#def-complex-conjugate}
+#### Complex conjugate
+
+The **complex conjugate** of a complex number $z = a + b\,i$ (@def-complex-number) is
+
+$$\overline{z} \eqdef a - b\,i.$$
+
+:::
+
+::: notes
+@axler2024linear [Definition 4.2, p. 120] gives the same definition, as $\overline{z} = \operatorname{Re} z - (\operatorname{Im} z)\,i$.
+:::

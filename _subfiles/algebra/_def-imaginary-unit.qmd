@@ -1,0 +1,27 @@
+:::{#def-imaginary-unit}
+#### Imaginary unit
+
+The **imaginary unit** $i$ is a number whose square is $-1$:
+
+$$i^2 \eqdef -1.$$
+
+Apart from that one rule,
+$i$ obeys the usual rules of arithmetic:
+
+- sums and products with $i$ are commutative;
+- sums and products with $i$ are associative;
+- multiplication distributes over addition.
+
+The number $-i$ also squares to $-1$, since $(-i)^2 = (-1)^2\,i^2 = -1$;
+$i$ names one of these two square roots, chosen once and for all.
+
+:::
+
+::: notes
+@axler2024linear [Definition 1.1, p. 2] makes this idea rigorous:
+it defines a complex number as an ordered pair $(a, b)$ of real numbers,
+written $a + bi$,
+defines addition and multiplication of such pairs,
+writes $0 + 1i$ as $i$,
+and leaves it to the reader to verify that $i^2 = -1$.
+:::
