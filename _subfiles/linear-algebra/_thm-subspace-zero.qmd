@@ -1,0 +1,37 @@
+:::{#thm-subspace-zero}
+#### Every subspace contains the zero vector
+
+If $\mathcal{S}$ is a subspace of $\reals^p$ (@def-subspace),
+then $\vzero \in \mathcal{S}$.
+
+:::
+
+::: proof
+
+A subspace is not empty, so it contains some vector $\vecf{u}$.
+Closure under scalar multiplication with $c = 0$
+puts $0 \cd \vecf{u}$ in $\mathcal{S}$,
+and $0 \cd \vecf{u} = \vzero$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-subspace-zero}
+#### Using the zero vector to rule out a subspace
+
+The plane $\cb{(x, y, z) : x + y + z = 1}$ in $\reals^3$
+does not contain $\vzero = (0, 0, 0)$,
+because $0 + 0 + 0 = 0 \neq 1$.
+So, by @thm-subspace-zero, it is not a subspace.
+The line $\mathcal{T}$ in @exm-not-subspace fails the same test:
+$(0, 0)$ is not in $\mathcal{T}$, because its second entry is not $1$.
+
+Containing $\vzero$ is necessary but not sufficient.
+The union of the two coordinate axes in $\reals^2$,
+$\cb{(x, 0) : x \in \reals} \cup \cb{(0, y) : y \in \reals}$,
+contains $\vzero$,
+but $(1, 0) + (0, 1) = (1, 1)$ lies on neither axis,
+so the union is not closed under addition and is not a subspace.
+
+:::

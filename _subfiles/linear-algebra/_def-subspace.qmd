@@ -1,0 +1,53 @@
+:::{#def-subspace}
+#### Subspace
+
+A set $\mathcal{S}$ of vectors in $\reals^p$ is a **subspace** of $\reals^p$
+if it is not empty
+and it is closed under vector addition and scalar multiplication:
+
+1. if $\vecf{u} \in \mathcal{S}$ and $\vecf{v} \in \mathcal{S}$,
+   then $\vecf{u} + \vecf{v} \in \mathcal{S}$;
+2. if $\vecf{u} \in \mathcal{S}$ and $c \in \reals$,
+   then $c \vecf{u} \in \mathcal{S}$.
+
+A subspace is also called a **linear subspace**,
+a **vector space**, or a **linear space**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-subspace}
+#### A line through the origin is a subspace
+
+Let $\mathcal{S} = \cb{c\,(1, 2) : c \in \reals}$,
+the line in $\reals^2$ through $(0, 0)$ and $(1, 2)$.
+
+- **Addition:**
+  $a\,(1, 2) + b\,(1, 2) = (a + b)\,(1, 2)$,
+  which is in $\mathcal{S}$.
+- **Scalar multiplication:**
+  $c\,\paren{a\,(1, 2)} = (ca)\,(1, 2)$,
+  which is in $\mathcal{S}$.
+
+So $\mathcal{S}$ is a subspace of $\reals^2$.
+Two other subspaces of $\reals^p$ are
+the set $\cb{\vzero}$ that holds only the zero vector,
+and $\reals^p$ itself.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-subspace}
+#### A line that misses the origin is not a subspace
+
+Let $\mathcal{T} = \cb{(x, 1) : x \in \reals}$,
+the horizontal line in $\reals^2$ at height $1$.
+The vectors $(0, 1)$ and $(2, 1)$ are in $\mathcal{T}$,
+but their sum $(2, 2)$ is not,
+because its second entry is $2$, not $1$.
+So $\mathcal{T}$ is not closed under addition,
+and it is not a subspace.
+
+:::

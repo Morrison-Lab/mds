@@ -1,0 +1,32 @@
+:::{#def-span}
+#### Span
+
+The **span** of vectors $\vecf{v}_1, \ldots, \vecf{v}_k \in \reals^p$
+is the set of all their linear combinations:
+
+$$
+\operatorname{span}\cb{\vecf{v}_1, \ldots, \vecf{v}_k}
+\eqdef
+\cb{c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k : c_1, \ldots, c_k \in \reals}.
+$$
+
+The vectors $\vecf{v}_1, \ldots, \vecf{v}_k$ **span** a set $\mathcal{S}$
+if their span equals $\mathcal{S}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-span}
+#### Two spans in $\reals^3$
+
+- $\operatorname{span}\cb{(1, 0, 0), (0, 1, 0)}$
+  is the set of vectors $(c_1, c_2, 0)$,
+  the plane $z = 0$ in $\reals^3$.
+- $\operatorname{span}\cb{(1, 2, 3), (2, 4, 6)}$
+  is only the line $\cb{c\,(1, 2, 3) : c \in \reals}$,
+  because $(2, 4, 6) = 2\,(1, 2, 3)$,
+  so $c_1 (1, 2, 3) + c_2 (2, 4, 6) = (c_1 + 2 c_2)\,(1, 2, 3)$.
+  Adding a vector to a list does not always enlarge its span.
+
+:::
