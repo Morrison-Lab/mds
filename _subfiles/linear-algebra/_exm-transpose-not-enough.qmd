@@ -1,0 +1,44 @@
+:::{#exm-transpose-not-enough}
+#### Why complex vectors use the conjugate transpose
+
+For a real vector $\vx$, $\tp{\vx}\vx = \sum_{j=1}^{p} x_j^2$ is $0$ only when $\vx$ is the zero vector.
+The same formula fails for complex vectors.
+Let $\vecf{z} = \tp{(1, i)}$. Then
+
+$$
+\ba
+\underbrace{\tp{\vecf{z}}}_{1 \times 2}\,\underbrace{\vecf{z}}_{2 \times 1}
+&= 1 \cd 1 + i \cd i
+&& \text{(multiply entry by entry and add)}
+\\
+&= 1 + i^2
+&& \text{(multiply)}
+\\
+&= 0
+&& \text{(} i^2 = -1 \text{)}
+\ea
+$$
+
+although $\vecf{z} \neq \vzero_{2 \times 1}$.
+Using the conjugate transpose instead,
+
+$$
+\ba
+\underbrace{\vecf{z}^{\mathsf{H}}}_{1 \times 2}\,\underbrace{\vecf{z}}_{2 \times 1}
+&= \overline{1} \cd 1 + \overline{i} \cd i
+&& \text{(@def-conjugate-transpose)}
+\\
+&= 1 + (-i) \cd i
+&& \text{(conjugate each entry)}
+\\
+&= 1 - i^2
+&& \text{(multiply)}
+\\
+&= 2
+&& \text{(} i^2 = -1 \text{)}
+\ea
+$$
+
+which is positive, as @thm-zhz-sum-squares guarantees.
+
+:::

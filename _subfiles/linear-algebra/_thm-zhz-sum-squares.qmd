@@ -1,0 +1,37 @@
+:::{#thm-zhz-sum-squares}
+#### $\vecf{z}^{\mathsf{H}}\vecf{z}$ is a sum of squared absolute values
+
+For every $\vecf{z} \in \mathbb{C}^p$,
+
+$$\underbrace{\vecf{z}^{\mathsf{H}}}_{1 \times p}\,\underbrace{\vecf{z}}_{p \times 1} = \sum_{j=1}^{p} \abs{z_j}^2,$$
+
+which is a nonnegative real number,
+and is $0$ only when $\vecf{z} = \vzero_{p \times 1}$.
+
+:::
+
+::: proof
+
+The last step uses the [identity for a complex number times its conjugate](algebra.qmd#thm-conj-product).
+
+$$
+\ba
+\vecf{z}^{\mathsf{H}}\vecf{z}
+&= \sum_{j=1}^{p} \overline{z_j}\,z_j
+&& \text{(@def-conjugate-transpose, and the row-times-column product)}
+\\
+&= \sum_{j=1}^{p} z_j\,\overline{z_j}
+&& \text{(complex multiplication is commutative)}
+\\
+&= \sum_{j=1}^{p} \abs{z_j}^2
+&& \text{(a number times its conjugate)}
+\ea
+$$
+
+By the definition of the [absolute value](algebra.qmd#def-complex-modulus),
+each $\abs{z_j}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2$ is a nonnegative real number,
+so their sum is too.
+A sum of nonnegative numbers is $0$ only when every term is $0$,
+and $\abs{z_j}^2 = 0$ only when $\operatorname{Re} z_j = \operatorname{Im} z_j = 0$, that is, when $z_j = 0$.
+
+:::

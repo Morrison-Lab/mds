@@ -1,0 +1,24 @@
+:::{#exm-not-hermitian}
+#### A symmetric complex matrix that is not Hermitian
+
+$$
+\underbrace{\matr{B}}_{2 \times 2} =
+\begin{bmatrix}
+0 & i \\
+i & 0
+\end{bmatrix}
+$$
+
+is symmetric, $\tp{\matr{B}} = \matr{B}$,
+but it is not Hermitian:
+
+$$
+\underbrace{\matr{B}^{\mathsf{H}}}_{2 \times 2} =
+\begin{bmatrix}
+0 & -i \\
+-i & 0
+\end{bmatrix}
+\neq \matr{B}.
+$$
+
+:::

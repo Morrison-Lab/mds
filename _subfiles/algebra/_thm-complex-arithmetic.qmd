@@ -1,0 +1,49 @@
+:::{#thm-complex-arithmetic}
+#### Adding and multiplying complex numbers
+
+For real numbers $a, b, c, d$:
+
+$$(a + b\,i) + (c + d\,i) = (a + c) + (b + d)\,i$$
+
+and
+
+$$(a + b\,i)(c + d\,i) = (ac - bd) + (ad + bc)\,i.$$
+
+:::
+
+::: proof
+
+**Sum.**
+
+$$
+\ba
+(a + b\,i) + (c + d\,i)
+&= a + c + b\,i + d\,i
+&& \text{(rearrange the terms)}
+\\
+&= (a + c) + (b + d)\,i
+&& \text{(factor out } i \text{)}
+\ea
+$$
+
+**Product.**
+
+$$
+\ba
+(a + b\,i)(c + d\,i)
+&= ac + ad\,i + bc\,i + bd\,i^2
+&& \text{(distribute)}
+\\
+&= ac + ad\,i + bc\,i - bd
+&& \text{(@def-imaginary-unit)}
+\\
+&= (ac - bd) + (ad + bc)\,i
+&& \text{(group the real terms and the terms with } i \text{)}
+\ea
+$$
+
+:::
+
+::: notes
+@axler2024linear [Definition 1.1, p. 2] takes these two formulas as the definitions of addition and multiplication.
+:::

@@ -284,3 +284,55 @@ and reserve $\log x$ for base 10.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exr-double-exponentials.qmd >}}
+
+## Complex numbers {#sec-complex-numbers}
+
+{{< include mds/_subfiles/algebra/_def-imaginary-unit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-imaginary-unit-powers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-no-real-imaginary-unit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-complex-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-complex-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-complex-arithmetic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-complex-arithmetic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-complex-conjugate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-complex-conjugate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-complex-modulus.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-complex-modulus.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-conj-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-conj-product.qmd >}}

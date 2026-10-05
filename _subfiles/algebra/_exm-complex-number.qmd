@@ -1,0 +1,15 @@
+:::{#exm-complex-number}
+#### Real and imaginary parts
+
+For $z = 2 - 5\,i$, the real part is $\operatorname{Re} z = 2$
+and the imaginary part is $\operatorname{Im} z = -5$:
+the imaginary part is the real number $-5$, not $-5\,i$.
+
+The numbers $1 + i$ and $1 - i$ have the same real part, $1$,
+but different imaginary parts, $1$ and $-1$,
+so they are different complex numbers.
+
+The real number $7$ is the complex number $7 + 0\,i$,
+with real part $7$ and imaginary part $0$.
+
+:::

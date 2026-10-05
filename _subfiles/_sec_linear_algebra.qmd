@@ -857,3 +857,43 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-cholesky.qmd >}}
+
+## Complex vectors and matrices {#sec-complex-vectors-matrices}
+
+{{< include mds/_subfiles/linear-algebra/_def-complex-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-complex-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-conjugate-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-conjugate-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-zhz-sum-squares.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-zhz-sum-squares.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-transpose-not-enough.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-hermitian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-hermitian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-not-hermitian.qmd >}}
