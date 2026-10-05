@@ -229,6 +229,46 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -238,6 +278,26 @@ div.callout-proof.callout-style-default .callout-header {
 div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -259,36 +319,6 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -298,36 +328,6 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -687,17 +687,6 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="preview-combined-banner">
-    <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~15% of content changed).
-        <br>
-        <strong>🎨 Highlighting Legend:</strong> 
-        <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
-        <mark class="preview-text-added" style="display: inline; padding: 1px 3px;">added text (green)</mark> shows new content, and 
-        <mark class="preview-element-added" style="display: inline; padding: 1px 3px;">new sections (blue)</mark> highlight entirely new paragraphs.
-    </p>
-</div>
-
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -713,7 +702,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-05 <mark class="preview-text-changed">13:29:35</mark> (PDT)</p>
+      <p class="date">Last modified: 2026-10-05 <mark class="preview-text-changed">13:57:31</mark> (PDT)</p>
     </div>
   </div>
   
@@ -756,16 +745,16 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="exm-vector-derivative" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">1</mark> <mark class="preview-text-changed">(A</mark> <mark class="preview-text-changed">vector</mark> <mark class="preview-text-changed">derivative)</mark></strong></span> Let <span class="math inline">\(\tilde{\beta}= {(\beta_1, <mark class="preview-text-changed">\beta_2)}^{\top}\)</mark></span> <mark class="preview-text-changed">and</mark> <span class="math inline"><mark class="preview-text-changed">\(f(\tilde{\beta})</mark> <mark class="preview-text-changed">= 3 \beta_1</mark> + <mark class="preview-text-added">5 </mark>\beta_2^2\)</span>. <mark class="preview-text-changed">Then</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 1 (A vector derivative)</strong></span> Let <span class="math inline">\(\tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\)</span> and <span class="math inline">\(f(\tilde{\beta}) = 3 \beta_1 + 5 \beta_2^2\)</span>. Then</p>
+<p><span class="math display">\[
 \underbrace{\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})}_{2 \times 1}
 = \begin{bmatrix}
 \frac{\partial}{\partial \beta_1} (3 \beta_1 + 5 \beta_2^2) \\
 \frac{\partial}{\partial \beta_2} (3 \beta_1 + 5 \beta_2^2)
 \end{bmatrix}
 = \begin{bmatrix} 3 \\ 10 \beta_2 \end{bmatrix},
-\]</span></mark></p>
-<p><mark class="preview-element-added">and at <span class="math inline">\(\tilde{\beta}= {(1, 2)}^{\top}\)</span> the vector derivative is <span class="math inline">\({(3, 20)}^{\top}\)</span>.</mark></p>
+\]</span></p>
+<p>and at <span class="math inline">\(\tilde{\beta}= {(1, 2)}^{\top}\)</span> the vector derivative is <span class="math inline">\({(3, 20)}^{\top}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1210,7 +1199,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 </div>
 <div class="callout-body-container">
 <div id="rem-numerator-layout" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Numerator layout). </span>Some sources use the transposed, <em>numerator layout</em>, in which the derivative is the <span class="math inline">\(q \times p\)</span> Jacobian matrix with <span class="math inline">\((j, i)\)</span> entry <span class="math inline">\(\frac{\partial}{\partial \beta_i} y_j\)</span>. For example, in numerator layout, the derivative in <a href="#exm-vector-valued-derivative" class="quarto-xref">Example&<mark class="preview-text-changed">n</mark>bsp;3</a> is the <span class="math inline">\(3 \times 2\)</span> matrix</p>
+<p><span class="proof-title"><em>Remark 1</em> (Numerator layout). </span>Some sources use the transposed, <em>numerator layout</em>, in which the derivative is the <span class="math inline">\(q \times p\)</span> Jacobian matrix with <span class="math inline">\((j, i)\)</span> entry <span class="math inline">\(\frac{\partial}{\partial \beta_i} y_j\)</span>. For example, in numerator layout, the derivative in <a href="#exm-vector-valued-derivative" class="quarto-xref">Example&nbsp;3</a> is the <span class="math inline">\(3 \times 2\)</span> matrix</p>
 <p><span class="math display">\[
 \begin{bmatrix}
 2\beta_1 &amp; 0 \\
@@ -1276,8 +1265,8 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 </div>
 <div class="callout-body-container">
 <div id="exm-not-constant-wrt-vector" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 5 (A vector that is not constant)</strong></span> With the same <span class="math inline">\(\tilde{\beta}\)</span>, let <span class="math inline">\(\tilde{x}= {(\beta_1, 3)}^{\top}\)</span>. Then</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 5 (A vector that is not constant)</strong></span> With the same <span class="math inline">\(\tilde{\beta}\)</span>, let <span class="math inline">\(\tilde{x}= {(\beta_1, 3)}^{\top}\)</span>. Then</p>
+<p><span class="math display">\[
 \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}_{2 \times 2}
 = \begin{bmatrix}
 \frac{\partial}{\partial \beta_1} \beta_1 &amp; \frac{\partial}{\partial \beta_1} 3 \\
@@ -1287,8 +1276,8 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 1 &amp; 0 \\
 0 &amp; 0
 \end{bmatrix},
-\]</span></mark></p>
-<p><mark class="preview-text-changed">which</mark> is <mark class="preview-text-changed">not</mark> <span class="math inline"><mark class="preview-text-changed">\(\underbrace{\mathbf{0}}_{2</mark> <mark class="preview-text-changed">\times</mark> <mark class="preview-text-changed">2}\)</mark></span><mark class="preview-text-changed">,</mark> so <mark class="preview-text-changed">this</mark> <span class="math inline">\(\tilde{x}\)</span> is<mark class="preview-text-added"> not</mark> constant with respect to <span class="math inline"><mark class="preview-text-changed">\(\tilde{\beta}\)</mark></span><mark class="preview-text-changed">:</mark> <mark class="preview-text-changed">its first entry changes when </mark><span class="math inline"><mark class="preview-text-changed">\(\beta_1\)</mark></span><mark class="preview-text-changed"> does.</mark></p>
+\]</span></p>
+<p>which is not <span class="math inline">\(\underbrace{\mathbf{0}}_{2 \times 2}\)</span>, so this <span class="math inline">\(\tilde{x}\)</span> is not constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>: its first entry changes when <span class="math inline">\(\beta_1\)</span> does.</p>
 </div>
 </div>
 </div>
@@ -1930,7 +1919,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-deriv-normsq" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">13</mark> (Derivative of a <mark class="preview-text-changed">sum</mark> <mark class="preview-text-changed">of squares)</mark></strong></span> Let <span class="math inline">\(\tilde{\beta}= {(\beta_1, <mark class="preview-text-changed">\beta_2)}^{\top}\)</mark></span><mark class="preview-text-changed">,</mark> <mark class="preview-text-changed">so</mark> <span class="math inline"><mark class="preview-text-changed">\({\tilde{\beta}}^{\top}\tilde{\beta}=</mark> <mark class="preview-text-changed">\beta_1^2</mark> + <mark class="preview-text-changed">\beta_2^2\)</mark></span><mark class="preview-text-changed">.</mark> <mark class="preview-text-changed">By</mark> <a href="#cor-deriv-normsq" class="quarto-xref">Corollary&<mark class="preview-text-changed">nb</mark>sp;2</a>:</p>
+<p><span class="theorem-title"><strong>Example 13 (Derivative of a sum of squares)</strong></span> Let <span class="math inline">\(\tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\)</span>, so <span class="math inline">\({\tilde{\beta}}^{\top}\tilde{\beta}= \beta_1^2 + \beta_2^2\)</span>. By <a href="#cor-deriv-normsq" class="quarto-xref">Corollary&nbsp;2</a>:</p>
 <p><span class="math display">\[
 \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\tilde{\beta})}_{2 \times 1}
 = 2\tilde{\beta}
@@ -2406,7 +2395,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-continuous-several" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">20</mark> (A continuous function, and a discontinuous one)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 20 (A continuous function, and a discontinuous one)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(f(\tilde{x}) = x_1 + x_2\)</span> is continuous at every <span class="math inline">\(\tilde{x}\)</span>. Each <span class="math inline">\(\mathopen{}\left|y_i - x_i\right|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\)</span>, since the squared length is a sum of nonnegative squares, so</p>
 <p><span class="math display">\[
@@ -2449,7 +2438,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-hessian-symmetric" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">21</mark> (Mixed partial derivatives agree)</strong></span> In <a href="#exm-hessian" class="quarto-xref">Example&<mark class="preview-text-changed">nbs</mark>p;18</a>, the <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((2, 1)\)</span> entries of <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> are both <span class="math inline">\(2 e^{2x_1 + x_2}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 21 (Mixed partial derivatives agree)</strong></span> In <a href="#exm-hessian" class="quarto-xref">Example&nbsp;18</a>, the <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((2, 1)\)</span> entries of <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> are both <span class="math inline">\(2 e^{2x_1 + x_2}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2515,17 +2504,17 @@ x_{p}
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
 \begin{aligned}
 \mathbf{H}_f(\tilde{x})
-&amp;= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top}<mark class="preview-text-changed">
-&amp;&amp; \text{(}\href{#def-hessian}{\text{Definition</mark>~6}}\text{)}
+&amp;= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(}\href{#def-hessian}{\text{Definition~6}}\text{)}
 \\
-&amp;= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclo<mark class="preview-text-changed">se{}}^{\top}
-&amp;&amp; \text{(}\href{#thm-quadratic-form}{\</mark>text{Theorem~7}}\text{)}
+&amp;= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(}\href{#thm-quadratic-form}{\text{Theorem~7}}\text{)}
 \\
-&amp;= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\<mark class="preview-text-changed">,{(2 \mathbf{S})}^{\top}
-&amp;&amp; \text{(}\href{#thm-deriv-mat</mark>rix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x<mark class="preview-text-changed">}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-deri</mark>vative}{\text{Definition~3}}\text{)}
+&amp;= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\,{(2 \mathbf{S})}^{\top}
+&amp;&amp; \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~3}}\text{)}
 \\
 &amp;= \mathbf{I}_p\,{(2 \mathbf{S})}^{\top}
-&amp;&amp; \text{(} \frac{\partial}{\par<mark class="preview-text-changed">tial \tilde{x}} \tilde{x}= \mathbf{I}_p \text{, }\href{#rem-deriv-matr</mark>ix-vector-special-case}{\text{Remark~2}}\text{)}
+&amp;&amp; \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~2}}\text{)}
 \\
 &amp;= 2 \mathbf{S}.
 &amp;&amp; \text{(} \mathbf{S} \text{ is symmetric)}
@@ -2594,7 +2583,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-fermat" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">24</mark> (Applying the test, and its limits)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 24 (Applying the test, and its limits)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(g(x) = (x - 2)^2\)</span> has its minimizer at <span class="math inline">\(c = 2\)</span>, and <span class="math inline">\(g'(2) = 2 (2 - 2) = 0\)</span>.</li>
 <li>The converse fails: <span class="math inline">\(g(x) = x^3\)</span> has <span class="math inline">\(g'(0) = 3 \cdot 0^2 = 0\)</span>, but <span class="math inline">\(0\)</span> is not a local minimizer, since <span class="math inline">\(g(-h) = -h^3 &lt; 0 = g(0)\)</span> for every <span class="math inline">\(h &gt; 0\)</span>.</li>
@@ -2669,7 +2658,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-first-order-condition" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">26</mark> (Using the condition to locate, and to rule out, minimizers)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 26 (Using the condition to locate, and to rule out, minimizers)</strong></span> &nbsp;</p>
 <ul>
 <li>For <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> of <a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;25</a>, any local minimizer must be the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span>. It is one: completing the square, <span class="math inline">\(f(\tilde{x}) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)\)</span>.</li>
 <li>For <span class="math inline">\(f(\tilde{x}) = e^{2x_1 + x_2} - x_1\)</span> of <a href="#exm-hessian" class="quarto-xref">Example&nbsp;18</a>, the second entry of the gradient is <span class="math inline">\(e^{2x_1 + x_2} &gt; 0\)</span>, so <span class="math inline">\(f\)</span> has no stationary point, and so no local minimizer.</li>
@@ -2742,8 +2731,8 @@ f(\tilde{z} + \tilde{h})
 <p><span class="math display">\[
 \begin{aligned}
 g'(t)
-&amp;= {\tilde{h}}^{\top}\,\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h})<mark class="preview-text-changed">
-&amp;&amp; \text{(}\href{#thm-chain-vec}{\text{Theorem</mark>~8}}\text{)}
+&amp;= {\tilde{h}}^{\top}\,\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h})
+&amp;&amp; \text{(}\href{#thm-chain-vec}{\text{Theorem~8}}\text{)}
 \\
 &amp;= \sum_{j=1}^{p} h_j\,\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}).
 &amp;&amp; \text{(matrix product)}
@@ -2756,8 +2745,8 @@ g''(t)
 &amp;= \sum_{j=1}^{p} h_j \sum_{i=1}^{p} h_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}
 &amp;&amp; \text{(differentiate each term of } g'(t) \text{)}
 \\
-&amp;= \sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,\mathopen{}\left[\mathbf{H}_f(\tilde{z} + t \tilde{h})\right]\mathclose<mark class="preview-text-changed">{}_{ij}\,h_j
-&amp;&amp; \text{(}\href{#def-hessian}{\te</mark>xt{Definition~6}}\text{; reorder the finite sums)}
+&amp;= \sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,\mathopen{}\left[\mathbf{H}_f(\tilde{z} + t \tilde{h})\right]\mathclose{}_{ij}\,h_j
+&amp;&amp; \text{(}\href{#def-hessian}{\text{Definition~6}}\text{; reorder the finite sums)}
 \\
 &amp;= {\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{z} + t \tilde{h})\,\tilde{h}.
 &amp;&amp; \text{(matrix product)}
@@ -2770,8 +2759,8 @@ f(\tilde{z} + \tilde{h})
 &amp;= g(1)
 &amp;&amp; \text{(definition of } g \text{)}
 \\
-&amp;= g(0) + g'(0)\,(1 - 0) + \frac{1}{2}\,g''(\tau<mark class="preview-text-changed">)\,(1 - 0)^2
-&amp;&amp; \text{(}\href{#thm-taylor-1d}{\</mark>text{Theorem~14}}\text{, with } a = 0, b = 1 \text{)}
+&amp;= g(0) + g'(0)\,(1 - 0) + \frac{1}{2}\,g''(\tau)\,(1 - 0)^2
+&amp;&amp; \text{(}\href{#thm-taylor-1d}{\text{Theorem~14}}\text{, with } a = 0, b = 1 \text{)}
 \\
 &amp;= g(0) + g'(0) + \frac{1}{2}\,g''(\tau)
 &amp;&amp; \text{(} 1 - 0 = 1 \text{)}
@@ -2833,7 +2822,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-body-container">
 <div id="exm-strict-local-minimizer" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">29</mark> (Strict and non-strict local minimizers)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 29 (Strict and non-strict local minimizers)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(f(x) = (x - 2)^2\)</span> has <span class="math inline">\(f(2) = 0 &lt; (x - 2)^2 = f(x)\)</span> for every <span class="math inline">\(x \ne 2\)</span>, so <span class="math inline">\(2\)</span> is a strict local minimizer (any <span class="math inline">\(\delta &gt; 0\)</span> works).</li>
 <li>A constant function <span class="math inline">\(f(\tilde{x}) = 0\)</span> has <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for all <span class="math inline">\(\tilde{x}^*\)</span> and <span class="math inline">\(\tilde{x}\)</span>, so every point is a <a href="./algebra.html#def-local-minimizer">local minimizer</a>, but no point is a strict one: <span class="math inline">\(f(\tilde{x}^*) &lt; f(\tilde{x})\)</span> never holds.</li>
@@ -3005,8 +2994,8 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 <p><span class="math display">\[
 \begin{aligned}
 f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
-&amp;= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^*)\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\,{\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{y})\,\tilde{h}<mark class="preview-text-changed">
-&amp;&amp; \text{(}\href{#thm-taylor-mv}{\text{Theorem~</mark>15}}\text{)}
+&amp;= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^*)\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\,{\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{y})\,\tilde{h}
+&amp;&amp; \text{(}\href{#thm-taylor-mv}{\text{Theorem~15}}\text{)}
 \\
 &amp;= \frac{1}{2}\,{\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{y})\,\tilde{h}
 &amp;&amp; \text{(} \tilde{x}^* \text{ is stationary)}
@@ -3014,13 +3003,13 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 &amp;= \frac{1}{2}\,{\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{x}^*)\,\tilde{h} + \frac{1}{2}\,{\tilde{h}}^{\top}\,\mathbf{E}\,\tilde{h}
 &amp;&amp; \text{(} \mathbf{H}_f(\tilde{y}) = \mathbf{H}_f(\tilde{x}^*) + \mathbf{E} \text{; distribute)}
 \\
-&amp;\ge \frac{1}{2}\,\lambda\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 + \frac{1}{2}\,{\til<mark class="preview-text-changed">de{h}}^{\top}\,\mathbf{E}\,\tilde{h}
-&amp;&amp; \text{(}\h</mark>ref{#lem-qf-eigen-bound}{\text{Lemma~1}}\text{)}
+&amp;\ge \frac{1}{2}\,\lambda\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 + \frac{1}{2}\,{\tilde{h}}^{\top}\,\mathbf{E}\,\tilde{h}
+&amp;&amp; \text{(}\href{#lem-qf-eigen-bound}{\text{Lemma~1}}\text{)}
 \\
 &amp;\ge \frac{1}{2}\,\lambda\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\,\mathopen{}\left|{\tilde{h}}^{\top}\,\mathbf{E}\,\tilde{h}\right|\mathclose{}
 &amp;&amp; \text{(a number is at least minus its absolute value)}
 \\
-&amp;\ge \frac{1}{2}\,\lambda\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\,p\,\frac{\lambda}{2p<mark class="preview-text-changed">}\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{</mark>}^2
+&amp;\ge \frac{1}{2}\,\lambda\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\,p\,\frac{\lambda}{2p}\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2
 &amp;&amp; \text{(}\href{#lem-qf-entry-bound}{\text{Lemma~2}}\text{, } m = \lambda / (2p) \text{)}
 \\
 &amp;= \frac{\lambda}{4}\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2
@@ -3042,7 +3031,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-second-order-condition" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">32</mark> (Classifying stationary points)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 32 (Classifying stationary points)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;25</a>), and its Hessian is <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{bmatrix} = 2 \mathbf{I}_2\)</span>, which is positive definite, so <span class="math inline">\({(1, 0)}^{\top}\)</span> is a strict local minimizer.</li>
 <li><span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span> and Hessian <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}\)</span>, which is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(-2\)</span>), and indeed <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;26</a>).</li>
@@ -3106,7 +3095,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">34</mark> (Convex sets)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 34 (Convex sets)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(\mathbb{R}^p\)</span> is convex, and so is any set with at most one point.</p></li>
 <li><p>The closed ball <span class="math inline">\(B = \mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span> is convex: for <span class="math inline">\(\tilde{x}, \tilde{y}\in B\)</span> and <span class="math inline">\(t \in [0, 1]\)</span>,</p>
@@ -3181,7 +3170,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-intersection" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">36</mark> (Intersecting a ball with a half-plane)</strong></span> The closed unit ball in <span class="math inline">\(\mathbb{R}^2\)</span> is convex (<a href="#exm-convex-set" class="quarto-xref">Example&<mark class="preview-text-changed">nbsp</mark>;34</a>), and so is the half-plane <span class="math inline">\(\mathopen{}\left\{\tilde{x}: x_1 \ge 0\right\}\mathclose{}\)</span>: if <span class="math inline">\(x_1 \ge 0\)</span> and <span class="math inline">\(y_1 \ge 0\)</span>, then <span class="math inline">\(t x_1 + (1 - t) y_1 \ge 0\)</span> for <span class="math inline">\(t \in [0, 1]\)</span>. By <a href="#thm-convex-intersection" class="quarto-xref">Theorem&nbsp;17</a>, the closed half-disk <span class="math inline">\(\mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}\)</span> is convex. A union need not be convex: <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}\)</span> are convex, but their union is the set o<mark class="preview-text-changed">f </mark><a href="#exm-not-convex-set" class="quarto-xref"><mark class="preview-text-changed">E</mark>xample&nbsp;35</a>.</p>
+<p><span class="theorem-title"><strong>Example 36 (Intersecting a ball with a half-plane)</strong></span> The closed unit ball in <span class="math inline">\(\mathbb{R}^2\)</span> is convex (<a href="#exm-convex-set" class="quarto-xref">Example&nbsp;34</a>), and so is the half-plane <span class="math inline">\(\mathopen{}\left\{\tilde{x}: x_1 \ge 0\right\}\mathclose{}\)</span>: if <span class="math inline">\(x_1 \ge 0\)</span> and <span class="math inline">\(y_1 \ge 0\)</span>, then <span class="math inline">\(t x_1 + (1 - t) y_1 \ge 0\)</span> for <span class="math inline">\(t \in [0, 1]\)</span>. By <a href="#thm-convex-intersection" class="quarto-xref">Theorem&nbsp;17</a>, the closed half-disk <span class="math inline">\(\mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}\)</span> is convex. A union need not be convex: <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}\)</span> are convex, but their union is the set of <a href="#exm-not-convex-set" class="quarto-xref">Example&nbsp;35</a>.</p>
 </div>
 </div>
 </div>
@@ -3205,7 +3194,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-strictly-convex" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">37</mark> (Strictly convex, and convex but not strictly)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 37 (Strictly convex, and convex but not strictly)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(f(x) = x^2\)</span> is strictly convex:</p>
 <p><span class="math display">\[
@@ -3276,7 +3265,7 @@ f_i(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-max" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">38</mark> (A maximum is convex; a minimum need not be)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 38 (A maximum is convex; a minimum need not be)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(f_1(x) = x\)</span> is convex, by the computation for <span class="math inline">\(2x + 1\)</span> in <a href="#exm-strictly-convex" class="quarto-xref">Example&nbsp;37</a> with <span class="math inline">\(2\)</span> and <span class="math inline">\(1\)</span> replaced by <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span>, and <span class="math inline">\(f_2(x) = x^2\)</span> is convex by the same example, so <span class="math inline">\(\max\mathopen{}\left\{x, x^2\right\}\mathclose{}\)</span> is convex by <a href="#thm-convex-max" class="quarto-xref">Theorem&nbsp;18</a>.</li>
 <li>The minimum of two convex functions need not be convex: <span class="math inline">\(g(x) = \min\mathopen{}\left\{x^2, (x - 2)^2\right\}\mathclose{}\)</span> has <span class="math inline">\(g(0) = g(2) = 0\)</span>, but at the midpoint <span class="math inline">\(g(1) = \min\mathopen{}\left\{1, 1\right\}\mathclose{} = 1 &gt; \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0\)</span>.</li>
@@ -3366,7 +3355,7 @@ f(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-epigraph" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">40</mark> (Two epigraphs)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 40 (Two epigraphs)</strong></span> &nbsp;</p>
 <ul>
 <li>The epigraph of <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> is <span class="math inline">\(\mathopen{}\left\{(x, s) : \mathopen{}\left|x\right|\mathclose{} \le s\right\}\mathclose{}\)</span>, a wedge. It is the intersection of the half-planes <span class="math inline">\(\mathopen{}\left\{(x, s) : s - x \ge 0\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{(x, s) : s + x \ge 0\right\}\mathclose{}\)</span>. Each half-plane is convex: if <span class="math inline">\(s_1 - x_1 \ge 0\)</span> and <span class="math inline">\(s_2 - x_2 \ge 0\)</span>, then <span class="math inline">\((t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0\)</span>, and the same with <span class="math inline">\(+\)</span> for the other. So the wedge is convex (<a href="#thm-convex-intersection" class="quarto-xref">Theorem&nbsp;17</a>), and <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span> is convex by <a href="#thm-epigraph" class="quarto-xref">Theorem&nbsp;19</a>.</li>
 <li>The epigraph of <span class="math inline">\(g(x) = -x^2\)</span> is not convex: <span class="math inline">\((-1, -1)\)</span> and <span class="math inline">\((1, -1)\)</span> are in it, since <span class="math inline">\(g(\pm 1) = -1\)</span>, but their midpoint <span class="math inline">\((0, -1)\)</span> is not, since <span class="math inline">\(g(0) = 0 &gt; -1\)</span>. So <span class="math inline">\(-x^2\)</span> is not convex.</li>
@@ -3409,8 +3398,8 @@ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tild
 <p><span class="math display">\[
 \begin{aligned}
 g'(0)
-&amp;= {\tilde{d}}^{\top}\,\frac{\partial}{\partial \tilde{x}} f(\tilde{y})<mark class="preview-text-changed">
-&amp;&amp; \text{(}\href{#thm-chain-vec}{\text{Theorem</mark>~8}}\text{)}
+&amp;= {\tilde{d}}^{\top}\,\frac{\partial}{\partial \tilde{x}} f(\tilde{y})
+&amp;&amp; \text{(}\href{#thm-chain-vec}{\text{Theorem~8}}\text{)}
 \\
 &amp;= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} \tilde{d}.
 &amp;&amp; \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
@@ -3477,7 +3466,7 @@ t f(\tilde{x}) + (1 - t) f(\tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-first-order" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">41</mark> (Tangent lines under a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, the right side of <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is <span class="math inline">\(y^2 + 2y (x - y) = 2xy - y^2\)</span>, and</p>
+<p><span class="theorem-title"><strong>Example 41 (Tangent lines under a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, the right side of <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is <span class="math inline">\(y^2 + 2y (x - y) = 2xy - y^2\)</span>, and</p>
 <p><span class="math display">\[
 f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
 \]</span></p>
@@ -3519,8 +3508,8 @@ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
 <p><span class="math display">\[
 \begin{aligned}
 f(\tilde{x})
-&amp;= f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) + \frac{1}{2}\,{(\tilde{x}- \tilde{y})}^{\top}\,\mathbf{H}_f(\tilde{w})\,(\tilde{x}- \tilde{y})<mark class="preview-text-changed">
-&amp;&amp; \text{(}\href{#thm-taylor-mv}{\text{Theorem~</mark>15}}\text{)}
+&amp;= f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) + \frac{1}{2}\,{(\tilde{x}- \tilde{y})}^{\top}\,\mathbf{H}_f(\tilde{w})\,(\tilde{x}- \tilde{y})
+&amp;&amp; \text{(}\href{#thm-taylor-mv}{\text{Theorem~15}}\text{)}
 \\
 &amp;\ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}).
 &amp;&amp; \text{(} \mathbf{H}_f(\tilde{w}) \text{ is positive semidefinite)}
@@ -3538,7 +3527,7 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-hessian" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">42</mark> (Using the Hessian to show convexity)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 42 (Using the Hessian to show convexity)</strong></span> &nbsp;</p>
 <ul>
 <li><p>For a symmetric positive semidefinite <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{A} \tilde{x}\)</span> has Hessian <span class="math inline">\(2 \mathbf{A}\)</span> (<a href="#thm-hessian-quadratic" class="quarto-xref">Theorem&nbsp;11</a>), which is positive semidefinite because <span class="math inline">\({\tilde{h}}^{\top} (2 \mathbf{A}) \tilde{h} = 2\,{\tilde{h}}^{\top} \mathbf{A} \tilde{h} \ge 0\)</span>; so <span class="math inline">\(f\)</span> is convex.</p></li>
 <li><p><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has Hessian <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Example&nbsp;32</a>), which is positive definite, so <span class="math inline">\(f\)</span> is strictly convex.</p></li>
@@ -3613,8 +3602,8 @@ x^4 - y^4 - 4 y^3 (x - y)
 <p><span class="math display">\[
 \begin{aligned}
 f(\tilde{x})
-&amp;\ge f(\tilde{x}^*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^*)<mark class="preview-text-changed">
-&amp;&amp; \text{(}\href{#eq-supporting-hyperplane}{\text{Equati</mark>on~1}}\text{ with } \tilde{y}= \tilde{x}^* \text{)}
+&amp;\ge f(\tilde{x}^*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^*)
+&amp;&amp; \text{(}\href{#eq-supporting-hyperplane}{\text{Equation~1}}\text{ with } \tilde{y}= \tilde{x}^* \text{)}
 \\
 &amp;= f(\tilde{x}^*) + {\tilde{0}}^{\top} (\tilde{x}- \tilde{x}^*)
 &amp;&amp; \text{(} \tilde{x}^* \text{ is stationary)}
@@ -3634,11 +3623,11 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-stationary" class="theorem example">
-<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">44</mark> (A convex function, and a non-convex one)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 44 (A convex function, and a non-convex one)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> is convex by <a href="#thm-convex-hessian" class="quarto-xref">Theorem&nbsp;21</a>, since its Hessian is <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Exa<mark class="preview-text-changed">mple</mark>&nbsp;32</a>), so its stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span><mark class="preview-text-changed"> (</mark><a href="#exm-stationary-point" class="quarto-xref"><mark class="preview-text-changed">E</mark>xample&nbsp;25</a>) is a global minimizer, as completing the square sho<mark class="preview-text-changed">wed</mark> in <a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;26</a>.</li>
+<li><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> is convex by <a href="#thm-convex-hessian" class="quarto-xref">Theorem&nbsp;21</a>, since its Hessian is <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Example&nbsp;32</a>), so its stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;25</a>) is a global minimizer, as completing the square showed in <a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;26</a>.</li>
 <li>Without convexity, a stationary point need not be a minimizer at all: <span class="math inline">\(x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span>, which is not a minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;26</a>).</li>
-<li>The corollary says nothing about whether a minimizer exists: <span class="math inline">\(e^{2x_1 + x_2} - x_1\)</span> is convex (<a href="#exm-convex-hessian" class="quarto-xref">Example&<mark class="preview-text-changed">nbs</mark>p;42</a>) but has no stationary point, and so no local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Exa<mark class="preview-text-changed">mple</mark>&nbsp;26</a>).</li>
+<li>The corollary says nothing about whether a minimizer exists: <span class="math inline">\(e^{2x_1 + x_2} - x_1\)</span> is convex (<a href="#exm-convex-hessian" class="quarto-xref">Example&nbsp;42</a>) but has no stationary point, and so no local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;26</a>).</li>
 </ul>
 </div>
 </div>
@@ -3646,7 +3635,7 @@ f(\tilde{x})
 </div>
 </section>
 <section id="sec-lagrange" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-lagrange"><mark class="preview-element-added"><span class="header-section-number">4</span> Minimizing a quadratic under linear constraints</mark></h2>
+<h2 data-number="4" class="anchored" data-anchor-id="sec-lagrange"><span class="header-section-number">4</span> Minimizing a quadratic under linear constraints</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -3659,16 +3648,16 @@ f(\tilde{x})
 </div>
 <div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added">This section is adapted from the Lagrange-multiplier part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that <span class="math inline">\(\mathbf{S}\)</span> is positive definite; the added hypothesis that the columns of <span class="math inline">\(\mathbf{A}\)</span> are linearly independent makes <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> invertible. The source’s example with general coefficients <span class="math inline">\(a_1, a_2, b\)</span> is specialized here to <span class="math inline">\(3, 4, 5\)</span>. These parts of the source are not part of this section:</mark></p>
+<p>This section is adapted from the Lagrange-multiplier part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that <span class="math inline">\(\mathbf{S}\)</span> is positive definite; the added hypothesis that the columns of <span class="math inline">\(\mathbf{A}\)</span> are linearly independent makes <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> invertible. The source’s example with general coefficients <span class="math inline">\(a_1, a_2, b\)</span> is specialized here to <span class="math inline">\(3, 4, 5\)</span>. These parts of the source are not part of this section:</p>
 <ul>
-<li><mark class="preview-text-changed">the</mark> <mark class="preview-text-changed">Lagrange</mark> <mark class="preview-text-changed">multiplier</mark> <mark class="preview-text-changed">method</mark> <mark class="preview-text-changed">for constraints that are not linear, or objectives that are not quadratic,</mark> including <mark class="preview-text-changed">its</mark> <mark class="preview-text-changed">multinomial</mark> maximum likelihood example</li>
-<li><mark class="preview-element-added">the eigenvalues of the block matrix of the stationarity equations, and the convexity of the Lagrangian in <span class="math inline">\(\tilde{x}\)</span> and its concavity in the multipliers</mark></li>
-<li>its <mark class="preview-text-changed">homework</mark> <mark class="preview-text-changed">examples</mark></li>
+<li>the Lagrange multiplier method for constraints that are not linear, or objectives that are not quadratic, including its multinomial maximum likelihood example</li>
+<li>the eigenvalues of the block matrix of the stationarity equations, and the convexity of the Lagrangian in <span class="math inline">\(\tilde{x}\)</span> and its concavity in the multipliers</li>
+<li>its homework examples</li>
 </ul>
 </div>
 </div>
 </div>
-<p><mark class="preview-element-added">Here the objective is a quadratic <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> positive definite, and the constraints are <span class="math inline">\(m\)</span> linear equations <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, where <span class="math inline">\(\mathbf{A}\)</span> is a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>. The only stationary point of the objective alone (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;8</a>) is <span class="math inline">\(\tilde{0}_{p \times 1}\)</span> (its gradient is <span class="math inline">\(\mathbf{S} \tilde{x}\)</span>, and <span class="math inline">\(\mathbf{S}\)</span> is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the constrained minimizer is then found among the stationary points of a new function of the extended set of unknowns.</mark></p>
+<p>Here the objective is a quadratic <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> positive definite, and the constraints are <span class="math inline">\(m\)</span> linear equations <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, where <span class="math inline">\(\mathbf{A}\)</span> is a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>. The only stationary point of the objective alone (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;8</a>) is <span class="math inline">\(\tilde{0}_{p \times 1}\)</span> (its gradient is <span class="math inline">\(\mathbf{S} \tilde{x}\)</span>, and <span class="math inline">\(\mathbf{S}\)</span> is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the constrained minimizer is then found among the stationary points of a new function of the extended set of unknowns.</p>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -3676,11 +3665,11 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="def-lagrangian" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 13 (Lagrangian)</strong></span> For the problem of minimizing <span class="math inline">\(f(\tilde{x})\)</span> over <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> subject to <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, with <span class="math inline">\(\mathbf{A}\)</span> a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>, the <strong>Lagrangian</strong> is the function of <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> and <span class="math inline">\(\tilde{\lambda} \in \mathbb{R}^m\)</span></mark></p>
+<p><span class="theorem-title"><strong>Definition 13 (Lagrangian)</strong></span> For the problem of minimizing <span class="math inline">\(f(\tilde{x})\)</span> over <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> subject to <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, with <span class="math inline">\(\mathbf{A}\)</span> a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>, the <strong>Lagrangian</strong> is the function of <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> and <span class="math inline">\(\tilde{\lambda} \in \mathbb{R}^m\)</span></p>
 <p><span class="math display">\[
-<mark class="preview-text-changed">L(\tilde{x},</mark> <mark class="preview-text-changed">\tilde{\lambda})</mark> <mark class="preview-text-changed">\stackrel{\text{def}}{=}f(\tilde{x})</mark> <mark class="preview-text-changed">+</mark> <mark class="preview-text-changed">{\tilde{\lambda}}^{\top}</mark> <mark class="preview-text-changed">\mathopen{}\left({\mathbf{A}}^{\top}</mark> <mark class="preview-text-changed">\tilde{x}-</mark> <mark class="preview-text-changed">\tilde{b}\right)\mathclose{},</mark>
+L(\tilde{x}, \tilde{\lambda}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{\lambda}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{},
 \]</span></p>
-<p><mark class="preview-element-added">and the entries of <span class="math inline">\(\tilde{\lambda}\)</span> are the <strong>Lagrange multipliers</strong>, one per constraint.</mark></p>
+<p>and the entries of <span class="math inline">\(\tilde{\lambda}\)</span> are the <strong>Lagrange multipliers</strong>, one per constraint.</p>
 </div>
 </div>
 </div>
@@ -3692,8 +3681,8 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-lagrangian" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 45 (The gradients of the Lagrangian of a quadratic)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> symmetric and constant. By the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, <span class="math inline">\({\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\)</span>, so</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 45 (The gradients of the Lagrangian of a quadratic)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> symmetric and constant. By the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, <span class="math inline">\({\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\)</span>, so</p>
+<p><span class="math display">\[
 \begin{aligned}
 L(\tilde{x}, \tilde{\lambda})
 &amp;= \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b}
@@ -3702,13 +3691,13 @@ L(\tilde{x}, \tilde{\lambda})
 &amp;= \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b},
 &amp;&amp; \text{(transpose of a product)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-text-changed">and,</mark> <mark class="preview-text-changed">since</mark> <span class="math inline"><mark class="preview-text-changed">\({\tilde{\lambda}}^{\top}</mark> <mark class="preview-text-changed">\mathopen{}\left({\mathbf{A}}^{\top}</mark> <mark class="preview-text-changed">\tilde{x}- \tilde{b}\right)\mathclose{}\)</mark></span><mark class="preview-text-changed"> is </mark><span class="math inline"><mark class="preview-text-changed">\(1 \times 1\)</mark></span><mark class="preview-text-changed"> and so equals its transpose,</mark></p>
-<p><span class="math display">\[
-<mark class="preview-text-changed">L(\tilde{x},</mark> <mark class="preview-text-changed">\tilde{\lambda})</mark> = <mark class="preview-text-changed">\tfrac{1}{2}\,{\tilde{x}}^{\top}</mark> <mark class="preview-text-changed">\mathbf{S}</mark> <mark class="preview-text-changed">\tilde{x}+</mark> <mark class="preview-text-changed">{\mathopen{}\left({\mathbf{A}}^{\top}</mark> <mark class="preview-text-changed">\tilde{x}-</mark> <mark class="preview-text-changed">\tilde{b}\right)\mathclose{}}^{\top}</mark> <mark class="preview-text-changed">\tilde{\lambda}.</mark>
 \]</span></p>
-<p><mark class="preview-element-added">The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> for the first term, <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> for the second (<span class="math inline">\(\mathbf{A} \tilde{\lambda}\)</span> is constant in <span class="math inline">\(\tilde{x}\)</span>), and <a href="#def-constant-wrt-vector" class="quarto-xref">Definition&nbsp;4</a> for the third,</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p>and, since <span class="math inline">\({\tilde{\lambda}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}\)</span> is <span class="math inline">\(1 \times 1\)</span> and so equals its transpose,</p>
+<p><span class="math display">\[
+L(\tilde{x}, \tilde{\lambda}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {\mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}}^{\top} \tilde{\lambda}.
+\]</span></p>
+<p>The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> for the first term, <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> for the second (<span class="math inline">\(\mathbf{A} \tilde{\lambda}\)</span> is constant in <span class="math inline">\(\tilde{x}\)</span>), and <a href="#def-constant-wrt-vector" class="quarto-xref">Definition&nbsp;4</a> for the third,</p>
+<p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{x}} L(\tilde{x}, \tilde{\lambda})
 &amp;= \tfrac{1}{2}\,\frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x}\right)\mathclose{} + \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}\right)\mathclose{} - \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{\lambda}}^{\top} \tilde{b}\right)\mathclose{}
@@ -3720,9 +3709,9 @@ L(\tilde{x}, \tilde{\lambda})
 &amp;= \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda}.
 &amp;&amp; \text{(simplify)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">Using the second form, in which <span class="math inline">\(f(\tilde{x})\)</span> and <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\)</span> are constant in <span class="math inline">\(\tilde{\lambda}\)</span>, and <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> again,</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>Using the second form, in which <span class="math inline">\(f(\tilde{x})\)</span> and <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\)</span> are constant in <span class="math inline">\(\tilde{\lambda}\)</span>, and <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> again,</p>
+<p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\lambda}} L(\tilde{x}, \tilde{\lambda})
 &amp;= \frac{\partial}{\partial \tilde{\lambda}} f(\tilde{x}) + \frac{\partial}{\partial \tilde{\lambda}} \mathopen{}\left({\mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}}^{\top} \tilde{\lambda}\right)\mathclose{}
@@ -3734,9 +3723,9 @@ L(\tilde{x}, \tilde{\lambda})
 &amp;= {\mathbf{A}}^{\top} \tilde{x}- \tilde{b}.
 &amp;&amp; \text{(simplify)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">So <span class="math inline">\((\tilde{x}, \tilde{\lambda})\)</span> makes the gradients equal <span class="math inline">\(\tilde{0}_{p \times 1}\)</span> and <span class="math inline">\(\tilde{0}_{m \times 1}\)</span> exactly when</mark></p>
-<p><mark class="preview-element-added"><span id="eq-kkt"><span class="math display">\[
+\]</span></p>
+<p>So <span class="math inline">\((\tilde{x}, \tilde{\lambda})\)</span> makes the gradients equal <span class="math inline">\(\tilde{0}_{p \times 1}\)</span> and <span class="math inline">\(\tilde{0}_{m \times 1}\)</span> exactly when</p>
+<p><span id="eq-kkt"><span class="math display">\[
 \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda} = \tilde{0}_{p \times 1}
 \quad \text{and} \quad
 {\mathbf{A}}^{\top} \tilde{x}= \tilde{b},
@@ -3744,8 +3733,8 @@ L(\tilde{x}, \tilde{\lambda})
 \underbrace{\begin{bmatrix} \mathbf{S} &amp; \mathbf{A} \\ {\mathbf{A}}^{\top} &amp; \tilde{0}_{m \times m} \end{bmatrix}}_{(p + m) \times (p + m)}
 \underbrace{\begin{bmatrix} \tilde{x}\\ \tilde{\lambda} \end{bmatrix}}_{(p + m) \times 1}
 = \underbrace{\begin{bmatrix} \tilde{0}_{p \times 1} \\ \tilde{b} \end{bmatrix}}_{(p + m) \times 1},
-\tag{2}\]</span></span></mark></p>
-<p><mark class="preview-element-added">the second equation being the constraint itself.</mark></p>
+\tag{2}\]</span></span></p>
+<p>the second equation being the constraint itself.</p>
 </div>
 </div>
 </div>
@@ -3757,11 +3746,11 @@ L(\tilde{x}, \tilde{\lambda})
 </div>
 <div class="callout-body-container">
 <div id="thm-qp-equality" class="theorem">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Theorem 22 (Minimizing a positive definite quadratic under linear constraints)</strong></span> Let <span class="math inline">\(\mathbf{S}\)</span> be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a> matrix, <span class="math inline">\(\mathbf{A}\)</span> a <span class="math inline">\(p \times m\)</span> matrix with <a href="./linear-algebra.html#def-linearly-independent">linearly independent</a> columns, and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>. Then the <span class="math inline">\(m \times m\)</span> matrix <span class="math inline">\(\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> is invertible, and <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> has exactly one minimizer over the <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> with <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, namely</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Theorem 22 (Minimizing a positive definite quadratic under linear constraints)</strong></span> Let <span class="math inline">\(\mathbf{S}\)</span> be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a> matrix, <span class="math inline">\(\mathbf{A}\)</span> a <span class="math inline">\(p \times m\)</span> matrix with <a href="./linear-algebra.html#def-linearly-independent">linearly independent</a> columns, and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>. Then the <span class="math inline">\(m \times m\)</span> matrix <span class="math inline">\(\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> is invertible, and <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> has exactly one minimizer over the <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> with <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, namely</p>
+<p><span class="math display">\[
 \tilde{x}^* = \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b}.
-\]</span></mark></p>
-<p><mark class="preview-element-added">With <span class="math inline">\(\tilde{\lambda}^* \stackrel{\text{def}}{=}-\mathbf{M}^{-1} \tilde{b}\)</span>, the pair <span class="math inline">\((\tilde{x}^*, \tilde{\lambda}^*)\)</span> solves <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>, and the minimum value is <span class="math inline">\(f(\tilde{x}^*) = \tfrac{1}{2}\,{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\)</span>.</mark></p>
+\]</span></p>
+<p>With <span class="math inline">\(\tilde{\lambda}^* \stackrel{\text{def}}{=}-\mathbf{M}^{-1} \tilde{b}\)</span>, the pair <span class="math inline">\((\tilde{x}^*, \tilde{\lambda}^*)\)</span> solves <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>, and the minimum value is <span class="math inline">\(f(\tilde{x}^*) = \tfrac{1}{2}\,{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3779,10 +3768,10 @@ L(\tilde{x}, \tilde{\lambda})
 <div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><mark class="preview-element-added"><span class="proof-title"><em>Proof</em>. </span>The steps marked “transpose of a product” use the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, and <span class="math inline">\(\mathbf{S}\)</span> is symmetric because it is <a href="./linear-algebra.html#def-positive-definite">positive definite</a>.</mark></p>
-<p><mark class="preview-element-added"><strong><span class="math inline">\(\mathbf{M}\)</span> is invertible.</strong> <span class="math inline">\(\mathbf{S}^{-1}\)</span> exists and is positive definite (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> is positive definite (<a href="./linear-algebra.html#thm-pd-operations">operations that preserve definiteness</a>, part 1), and so invertible (positive definite inverse again). <span class="math inline">\(\mathbf{S}^{-1}\)</span> and <span class="math inline">\(\mathbf{M}^{-1}\)</span> are symmetric (<a href="./linear-algebra.html#cor-inverse-symmetric">inverse of a symmetric matrix</a>), because <span class="math inline">\(\mathbf{S}\)</span> and <span class="math inline">\(\mathbf{M}\)</span> are.</mark></p>
-<p><mark class="preview-element-added"><strong><span class="math inline">\(\tilde{x}^*\)</span> satisfies the constraint, and the pair solves <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>.</strong></mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>The steps marked “transpose of a product” use the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, and <span class="math inline">\(\mathbf{S}\)</span> is symmetric because it is <a href="./linear-algebra.html#def-positive-definite">positive definite</a>.</p>
+<p><strong><span class="math inline">\(\mathbf{M}\)</span> is invertible.</strong> <span class="math inline">\(\mathbf{S}^{-1}\)</span> exists and is positive definite (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> is positive definite (<a href="./linear-algebra.html#thm-pd-operations">operations that preserve definiteness</a>, part 1), and so invertible (positive definite inverse again). <span class="math inline">\(\mathbf{S}^{-1}\)</span> and <span class="math inline">\(\mathbf{M}^{-1}\)</span> are symmetric (<a href="./linear-algebra.html#cor-inverse-symmetric">inverse of a symmetric matrix</a>), because <span class="math inline">\(\mathbf{S}\)</span> and <span class="math inline">\(\mathbf{M}\)</span> are.</p>
+<p><strong><span class="math inline">\(\tilde{x}^*\)</span> satisfies the constraint, and the pair solves <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>.</strong></p>
+<p><span class="math display">\[
 \begin{aligned}
 {\mathbf{A}}^{\top} \tilde{x}^*
 &amp;= {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b}
@@ -3804,9 +3793,9 @@ L(\tilde{x}, \tilde{\lambda})
 &amp;= \tilde{0}_{p \times 1}.
 &amp;&amp; \text{(subtract)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added"><strong><span class="math inline">\(\tilde{x}^*\)</span> is the unique minimizer.</strong> Let <span class="math inline">\(\tilde{x}\)</span> satisfy <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, and let <span class="math inline">\(\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{x}^*\)</span>, so <span class="math inline">\({\mathbf{A}}^{\top} \tilde{d} = {\mathbf{A}}^{\top} \tilde{x}- {\mathbf{A}}^{\top} \tilde{x}^* = \tilde{b} - \tilde{b} = \tilde{0}_{m \times 1}\)</span> (matrix products distribute; both points satisfy the constraint). First, the cross term vanishes:</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p><strong><span class="math inline">\(\tilde{x}^*\)</span> is the unique minimizer.</strong> Let <span class="math inline">\(\tilde{x}\)</span> satisfy <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, and let <span class="math inline">\(\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{x}^*\)</span>, so <span class="math inline">\({\mathbf{A}}^{\top} \tilde{d} = {\mathbf{A}}^{\top} \tilde{x}- {\mathbf{A}}^{\top} \tilde{x}^* = \tilde{b} - \tilde{b} = \tilde{0}_{m \times 1}\)</span> (matrix products distribute; both points satisfy the constraint). First, the cross term vanishes:</p>
+<p><span class="math display">\[
 \begin{aligned}
 {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^*
 &amp;= {\tilde{d}}^{\top} \mathbf{S} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b}
@@ -3824,27 +3813,27 @@ L(\tilde{x}, \tilde{\lambda})
 &amp;= 0.
 &amp;&amp; \text{(a product with a zero factor is zero)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">Then</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
 \begin{aligned}
 f(\tilde{x})
 &amp;= \tfrac{1}{2}\,{(\tilde{x}^* + \tilde{d})}^{\top} \mathbf{S} (\tilde{x}^* + \tilde{d})
 &amp;&amp; \text{(} \tilde{x}= \tilde{x}^* + \tilde{d} \text{)}
 \\
-&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*}^{\top} + {\tilde{d}}^{\top}\right)\mathclose{} \mathbf{S} (\tilde{x}^* + \tilde{d})
+&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*{}}^{\top} + {\tilde{d}}^{\top}\right)\mathclose{} \mathbf{S} (\tilde{x}^* + \tilde{d})
 &amp;&amp; \text{(the transpose of a sum is the sum of the transposes)}
 \\
-&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{x}^*}^{\top} \mathbf{S} \tilde{d} + {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{d}\right)\mathclose{}
+&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{d} + {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{d}\right)\mathclose{}
 &amp;&amp; \text{(distribute)}
 \\
-&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} {\mathbf{S}}^{\top} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{d}\right)\mathclose{}
-&amp;&amp; \text{(} 1 \times 1 \text{: } {\tilde{x}^*}^{\top} \mathbf{S} \tilde{d} = {({\tilde{x}^*}^{\top} \mathbf{S} \tilde{d})}^{\top} \text{; transpose of a product)}
+&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} {\mathbf{S}}^{\top} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{d}\right)\mathclose{}
+&amp;&amp; \text{(} 1 \times 1 \text{: } {\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{d} = {({\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{d})}^{\top} \text{; transpose of a product)}
 \\
-&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*}^{\top} \mathbf{S} \tilde{x}^* + 2\,{\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{d}\right)\mathclose{}
+&amp;= \tfrac{1}{2} \mathopen{}\left({\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{x}^* + 2\,{\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{d}\right)\mathclose{}
 &amp;&amp; \text{(} {\mathbf{S}}^{\top} = \mathbf{S} \text{; combine)}
 \\
-&amp;= \tfrac{1}{2}\,{\tilde{x}^*}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{S} \tilde{d}
+&amp;= \tfrac{1}{2}\,{\tilde{x}^*{}}^{\top} \mathbf{S} \tilde{x}^* + {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^* + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{S} \tilde{d}
 &amp;&amp; \text{(distribute } \tfrac{1}{2} \text{)}
 \\
 &amp;= f(\tilde{x}^*) + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{S} \tilde{d}
@@ -3853,10 +3842,10 @@ f(\tilde{x})
 &amp;\ge f(\tilde{x}^*),
 &amp;&amp; \text{(} \mathbf{S} \text{ is positive definite)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">with equality only when <span class="math inline">\(\tilde{d} = \tilde{0}_{p \times 1}\)</span>, that is, <span class="math inline">\(\tilde{x}= \tilde{x}^*\)</span>.</mark></p>
-<p><mark class="preview-element-added"><strong>The minimum value.</strong></mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>with equality only when <span class="math inline">\(\tilde{d} = \tilde{0}_{p \times 1}\)</span>, that is, <span class="math inline">\(\tilde{x}= \tilde{x}^*\)</span>.</p>
+<p><strong>The minimum value.</strong></p>
+<p><span class="math display">\[
 \begin{aligned}
 f(\tilde{x}^*)
 &amp;= \tfrac{1}{2}\,{(\mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b})}^{\top} \mathbf{S} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b}
@@ -3877,7 +3866,7 @@ f(\tilde{x}^*)
 &amp;= \tfrac{1}{2}\,{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}.
 &amp;&amp; \text{(} \mathbf{M}^{-1} \mathbf{M} = \mathbf{I}_m \text{)}
 \end{aligned}
-\]</span></mark></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -3889,8 +3878,8 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-qp-equality" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 46 (The closest point on a line to the origin)</strong></span> Minimize <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>. In the form of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a>, <span class="math inline">\(x_1^2 + x_2^2 = \tfrac{1}{2}\,{\tilde{x}}^{\top} (2 \mathbf{I}_2) \tilde{x}\)</span>, so <span class="math inline">\(\mathbf{S} = 2 \mathbf{I}_2\)</span>, <span class="math inline">\(\mathbf{A} = {(3, 4)}^{\top}\)</span> (<span class="math inline">\(p = 2\)</span>, <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(\tilde{b} = [5]\)</span>. The hypotheses hold: <span class="math inline">\(2 \mathbf{I}_2\)</span> is positive definite, and the single column <span class="math inline">\({(3, 4)}^{\top}\)</span> is nonzero, so it is linearly independent. Also <span class="math inline">\(\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}_2\)</span>. Then, from the formulas of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a>,</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 46 (The closest point on a line to the origin)</strong></span> Minimize <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>. In the form of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a>, <span class="math inline">\(x_1^2 + x_2^2 = \tfrac{1}{2}\,{\tilde{x}}^{\top} (2 \mathbf{I}_2) \tilde{x}\)</span>, so <span class="math inline">\(\mathbf{S} = 2 \mathbf{I}_2\)</span>, <span class="math inline">\(\mathbf{A} = {(3, 4)}^{\top}\)</span> (<span class="math inline">\(p = 2\)</span>, <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(\tilde{b} = [5]\)</span>. The hypotheses hold: <span class="math inline">\(2 \mathbf{I}_2\)</span> is positive definite, and the single column <span class="math inline">\({(3, 4)}^{\top}\)</span> is nonzero, so it is linearly independent. Also <span class="math inline">\(\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}_2\)</span>. Then, from the formulas of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a>,</p>
+<p><span class="math display">\[
 \begin{aligned}
 \mathbf{M}
 &amp;= {\mathbf{A}}^{\top}\,\tfrac{1}{2} \mathbf{I}_2\,\mathbf{A}
@@ -3908,14 +3897,14 @@ f(\tilde{x}^*)
 f(\tilde{x}^*)
 &amp;= \tfrac{1}{2} (5) \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = 1.
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">Checks:</mark></p>
+\]</span></p>
+<p>Checks:</p>
 <ul>
-<li><mark class="preview-element-added">the constraint: <span class="math inline">\(3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5\)</span>;</mark></li>
-<li><mark class="preview-element-added">the first block of <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>: <span class="math inline">\(\mathbf{S} \tilde{x}^* + \mathbf{A} \tilde{\lambda}^* = {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) = {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} = \tilde{0}_{2 \times 1}\)</span>;</mark></li>
-<li><mark class="preview-element-added">the value: <span class="math inline">\(0.6^2 + 0.8^2 = 0.36 + 0.64 = 1\)</span>.</mark></li>
+<li>the constraint: <span class="math inline">\(3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5\)</span>;</li>
+<li>the first block of <a href="#eq-kkt" class="quarto-xref">Equation&nbsp;2</a>: <span class="math inline">\(\mathbf{S} \tilde{x}^* + \mathbf{A} \tilde{\lambda}^* = {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) = {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} = \tilde{0}_{2 \times 1}\)</span>;</li>
+<li>the value: <span class="math inline">\(0.6^2 + 0.8^2 = 0.36 + 0.64 = 1\)</span>.</li>
 </ul>
-<p><mark class="preview-element-added">Geometrically, <span class="math inline">\(\tilde{x}^*\)</span> is the point of the line nearest the origin, at distance <span class="math inline">\(1\)</span>.</mark></p>
+<p>Geometrically, <span class="math inline">\(\tilde{x}^*\)</span> is the point of the line nearest the origin, at distance <span class="math inline">\(1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3927,10 +3916,10 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-qp-equality-fails" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 47 (The hypotheses are needed)</strong></span> &nbsp;</mark></p>
+<p><span class="theorem-title"><strong>Example 47 (The hypotheses are needed)</strong></span> &nbsp;</p>
 <ul>
-<li><mark class="preview-element-added">If <span class="math inline">\(\mathbf{S}\)</span> is not positive definite there may be no minimizer: with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\)</span> and the constraint <span class="math inline">\(x_1 = 1\)</span> (<span class="math inline">\(\mathbf{A} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\(\tilde{b} = [1]\)</span>), <span class="math inline">\(f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\)</span> decreases without bound as <span class="math inline">\(x_2\)</span> grows.</mark></li>
-<li><mark class="preview-element-added">If the columns of <span class="math inline">\(\mathbf{A}\)</span> are dependent, <span class="math inline">\(\mathbf{M}\)</span> is not invertible: with <span class="math inline">\(\mathbf{S} = \mathbf{I}_2\)</span> and <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not invertible (<a href="./linear-algebra.html#thm-invertible-rank">a square matrix is invertible exactly when its null space is zero</a>). The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists, <span class="math inline">\(x_1 = x_2 = b_1 / 2\)</span>, but the formula of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a> cannot produce it.</mark></li>
+<li>If <span class="math inline">\(\mathbf{S}\)</span> is not positive definite there may be no minimizer: with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\)</span> and the constraint <span class="math inline">\(x_1 = 1\)</span> (<span class="math inline">\(\mathbf{A} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\(\tilde{b} = [1]\)</span>), <span class="math inline">\(f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\)</span> decreases without bound as <span class="math inline">\(x_2\)</span> grows.</li>
+<li>If the columns of <span class="math inline">\(\mathbf{A}\)</span> are dependent, <span class="math inline">\(\mathbf{M}\)</span> is not invertible: with <span class="math inline">\(\mathbf{S} = \mathbf{I}_2\)</span> and <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not invertible (<a href="./linear-algebra.html#thm-invertible-rank">a square matrix is invertible exactly when its null space is zero</a>). The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists, <span class="math inline">\(x_1 = x_2 = b_1 / 2\)</span>, but the formula of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a> cannot produce it.</li>
 </ul>
 </div>
 </div>
@@ -3943,9 +3932,9 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="cor-qp-sensitivity" class="theorem corollary">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Corollary 5 (The multiplier is the sensitivity of the minimum value)</strong></span> In <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a>, write the minimum value as a function of <span class="math inline">\(\tilde{b}\)</span>, <span class="math inline">\(f^*(\tilde{b}) = \tfrac{1}{2}\,{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\)</span>. Then</mark></p>
+<p><span class="theorem-title"><strong>Corollary 5 (The multiplier is the sensitivity of the minimum value)</strong></span> In <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;22</a>, write the minimum value as a function of <span class="math inline">\(\tilde{b}\)</span>, <span class="math inline">\(f^*(\tilde{b}) = \tfrac{1}{2}\,{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\)</span>. Then</p>
 <p><span class="math display">\[
-\frac{\partial}{\partial <mark class="preview-text-changed">\tilde{b}}</mark> <mark class="preview-text-changed">f^*(\tilde{b})</mark> = <mark class="preview-text-changed">\mathbf{M}^{-1}</mark> <mark class="preview-text-changed">\tilde{b}</mark> <mark class="preview-text-changed">= -\tilde{\lambda}^*.</mark>
+\frac{\partial}{\partial \tilde{b}} f^*(\tilde{b}) = \mathbf{M}^{-1} \tilde{b} = -\tilde{\lambda}^*.
 \]</span></p>
 </div>
 </div>
@@ -3964,8 +3953,8 @@ f(\tilde{x}^*)
 <div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><mark class="preview-element-added"><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{M}^{-1}\)</span> is symmetric and does not depend on <span class="math inline">\(\tilde{b}\)</span>, so <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> applies with <span class="math inline">\(\mathbf{M}^{-1}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>:</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{M}^{-1}\)</span> is symmetric and does not depend on <span class="math inline">\(\tilde{b}\)</span>, so <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> applies with <span class="math inline">\(\mathbf{M}^{-1}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>:</p>
+<p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{b}} f^*(\tilde{b})
 &amp;= \tfrac{1}{2}\,\frac{\partial}{\partial \tilde{b}} \mathopen{}\left({\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\right)\mathclose{}
@@ -3980,7 +3969,7 @@ f(\tilde{x}^*)
 &amp;= -\tilde{\lambda}^*.
 &amp;&amp; \text{(definition of } \tilde{\lambda}^* \text{)}
 \end{aligned}
-\]</span></mark></p>
+\]</span></p>
 </div>
 </div>
 </div>
@@ -3992,14 +3981,14 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-qp-sensitivity" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 48 (Moving the line)</strong></span> In <a href="#exm-qp-equality" class="quarto-xref">Example&nbsp;46</a> with a general right side <span class="math inline">\(b\)</span> in place of <span class="math inline">\(5\)</span>, <span class="math inline">\(\mathbf{M}^{-1} = \tfrac{2}{25}\)</span> and <span class="math inline">\(f^*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 = \tfrac{b^2}{25}\)</span>, so <span class="math inline">\(\frac{d }{d b} f^*(b) = \tfrac{2b}{25}\)</span>. At <span class="math inline">\(b = 5\)</span> this derivative is <span class="math inline">\(\tfrac{10}{25} = 0.4 = -\lambda^*\)</span>: moving the line <span class="math inline">\(3 x_1 + 4 x_2 = b\)</span> outward by a small step <span class="math inline">\(\varepsilon\)</span> in <span class="math inline">\(b\)</span> raises the minimum value by about <span class="math inline">\(0.4\,\varepsilon\)</span>.</mark></p>
+<p><span class="theorem-title"><strong>Example 48 (Moving the line)</strong></span> In <a href="#exm-qp-equality" class="quarto-xref">Example&nbsp;46</a> with a general right side <span class="math inline">\(b\)</span> in place of <span class="math inline">\(5\)</span>, <span class="math inline">\(\mathbf{M}^{-1} = \tfrac{2}{25}\)</span> and <span class="math inline">\(f^*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 = \tfrac{b^2}{25}\)</span>, so <span class="math inline">\(\frac{d }{d b} f^*(b) = \tfrac{2b}{25}\)</span>. At <span class="math inline">\(b = 5\)</span> this derivative is <span class="math inline">\(\tfrac{10}{25} = 0.4 = -\lambda^*\)</span>: moving the line <span class="math inline">\(3 x_1 + 4 x_2 = b\)</span> outward by a small step <span class="math inline">\(\varepsilon\)</span> in <span class="math inline">\(b\)</span> raises the minimum value by about <span class="math inline">\(0.4\,\varepsilon\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <section id="sec-descent" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-descent"><span class="header-section-number"><mark class="preview-text-added">5</mark></span><mark class="preview-text-added"> </mark>Newton’s method and gradient descent</h2>
+<h2 data-number="5" class="anchored" data-anchor-id="sec-descent"><span class="header-section-number">5</span> Newton’s method and gradient descent</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -4012,14 +4001,14 @@ f(\tilde{x}^*)
 </div>
 <div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><mark class="preview-element-added">This section is adapted from the Newton-Raphson and gradient descent parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is <span class="math inline">\(\tfrac{1}{2}(b^2 + b)\)</span>, not <span class="math inline">\(\tfrac{1}{2}(1 + b^2)\)</span> as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for <span class="math inline">\(\tilde{x}^{(1)}\)</span> has <span class="math inline">\(\tilde{x}^{(1)}\)</span> on its right side where <span class="math inline">\(\tilde{x}^{(0)}\)</span> is meant. These parts of the source are not part of this section:</mark></p>
+<p>This section is adapted from the Newton-Raphson and gradient descent parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is <span class="math inline">\(\tfrac{1}{2}(b^2 + b)\)</span>, not <span class="math inline">\(\tfrac{1}{2}(1 + b^2)\)</span> as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for <span class="math inline">\(\tilde{x}^{(1)}\)</span> has <span class="math inline">\(\tilde{x}^{(1)}\)</span> on its right side where <span class="math inline">\(\tilde{x}^{(0)}\)</span> is meant. These parts of the source are not part of this section:</p>
 <ul>
-<li><mark class="preview-element-added">the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and line search)</mark></li>
-<li><mark class="preview-element-added">its remark that Hessians are expensive to compute</mark></li>
-<li><mark class="preview-element-added">the convergence-rate theorem for strongly convex functions</mark></li>
-<li><mark class="preview-element-added">gradient descent with momentum, and its optimal parameters</mark></li>
-<li><mark class="preview-element-added">Nesterov acceleration, and stochastic gradient descent</mark></li>
-<li><mark class="preview-text-changed">its</mark> <mark class="preview-text-changed">code</mark> and <mark class="preview-text-changed">animations</mark></li>
+<li>the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and line search)</li>
+<li>its remark that Hessians are expensive to compute</li>
+<li>the convergence-rate theorem for strongly convex functions</li>
+<li>gradient descent with momentum, and its optimal parameters</li>
+<li>Nesterov acceleration, and stochastic gradient descent</li>
+<li>its code and animations</li>
 </ul>
 </div>
 </div>
@@ -4031,11 +4020,11 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="def-newton-method" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 14 (Newton’s method for minimization)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives, and let <span class="math inline">\(\tilde{x}^{(0)}\)</span> be a starting point. <strong>Newton’s method</strong> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>, as long as <span class="math inline">\(\mathbf{H}_f(\tilde{x}^{(t)})\)</span> is invertible,</mark></p>
+<p><span class="theorem-title"><strong>Definition 14 (Newton’s method for minimization)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives, and let <span class="math inline">\(\tilde{x}^{(0)}\)</span> be a starting point. <strong>Newton’s method</strong> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>, as long as <span class="math inline">\(\mathbf{H}_f(\tilde{x}^{(t)})\)</span> is invertible,</p>
 <p><span class="math display">\[
-<mark class="preview-text-changed">\tilde{x}^{(t+1)}</mark> <mark class="preview-text-changed">\stackrel{\text{def}}{=}\tilde{x}^{(t)} - \mathopen{}\left[\mathbf{H}_f(\tilde{x}^{(t)})\right]\mathclose{}^{-1}</mark> \frac{\partial}{\partial <mark class="preview-text-changed">\tilde{x}}</mark> <mark class="preview-text-changed">f(\tilde{x}^{(t)}).</mark>
+\tilde{x}^{(t+1)} \stackrel{\text{def}}{=}\tilde{x}^{(t)} - \mathopen{}\left[\mathbf{H}_f(\tilde{x}^{(t)})\right]\mathclose{}^{-1} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}).
 \]</span></p>
-<p><mark class="preview-element-added">The vector <span class="math inline">\(-\mathopen{}\left[\mathbf{H}_f(\tilde{x}^{(t)})\right]\mathclose{}^{-1} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)})\)</span> is the <strong>Newton step</strong> at <span class="math inline">\(\tilde{x}^{(t)}\)</span>.</mark></p>
+<p>The vector <span class="math inline">\(-\mathopen{}\left[\mathbf{H}_f(\tilde{x}^{(t)})\right]\mathclose{}^{-1} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)})\)</span> is the <strong>Newton step</strong> at <span class="math inline">\(\tilde{x}^{(t)}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4047,8 +4036,8 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-method" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 49 (Newton’s method for a cubic)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span>, so <span class="math inline">\(f'(x) = x^2 - 4\)</span> and <span class="math inline">\(f''(x) = 2x\)</span>. For <span class="math inline">\(x^{(t)} \ne 0\)</span>, one Newton step gives</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 49 (Newton’s method for a cubic)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span>, so <span class="math inline">\(f'(x) = x^2 - 4\)</span> and <span class="math inline">\(f''(x) = 2x\)</span>. For <span class="math inline">\(x^{(t)} \ne 0\)</span>, one Newton step gives</p>
+<p><span class="math display">\[
 \begin{aligned}
 x^{(t+1)}
 &amp;= x^{(t)} - \frac{(x^{(t)})^2 - 4}{2 x^{(t)}}
@@ -4060,14 +4049,14 @@ x^{(t+1)}
 &amp;= \frac{1}{2} \mathopen{}\left(x^{(t)} + \frac{4}{x^{(t)}}\right)\mathclose{}.
 &amp;&amp; \text{(simplify)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">From <span class="math inline">\(x^{(0)} = 2.5\)</span>:</mark></p>
+\]</span></p>
+<p>From <span class="math inline">\(x^{(0)} = 2.5\)</span>:</p>
 <ul>
-<li><mark class="preview-element-added"><span class="math inline">\(x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05\)</span>;</mark></li>
-<li><mark class="preview-element-added"><span class="math inline">\(x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\)</span> (to six decimals);</mark></li>
-<li><mark class="preview-element-added"><span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</mark></li>
+<li><span class="math inline">\(x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05\)</span>;</li>
+<li><span class="math inline">\(x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\)</span> (to six decimals);</li>
+<li><span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</li>
 </ul>
-<p><mark class="preview-element-added">The iterates approach <span class="math inline">\(2\)</span>, the local minimizer of <span class="math inline">\(f\)</span> (a stationary point, since <span class="math inline">\(f'(2) = 0\)</span>, with <span class="math inline">\(f''(2) = 4 &gt; 0\)</span>; <a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;16</a>).</mark></p>
+<p>The iterates approach <span class="math inline">\(2\)</span>, the local minimizer of <span class="math inline">\(f\)</span> (a stationary point, since <span class="math inline">\(f'(2) = 0\)</span>, with <span class="math inline">\(f''(2) = 4 &gt; 0\)</span>; <a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;16</a>).</p>
 </div>
 </div>
 </div>
@@ -4079,11 +4068,11 @@ x^{(t+1)}
 </div>
 <div class="callout-body-container">
 <div id="def-quadratic-model" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 15 (Quadratic model)</strong></span> Let <span class="math inline">\(f\)</span> be as in <a href="#def-newton-method" class="quarto-xref">Definition&nbsp;14</a> and let <span class="math inline">\(\tilde{x}\)</span> be a point, with <span class="math inline">\(\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\)</span> and <span class="math inline">\(\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}_f(\tilde{x})\)</span>. The <strong>quadratic model</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> is the function of a step <span class="math inline">\(\tilde{\delta} \in \mathbb{R}^p\)</span></mark></p>
+<p><span class="theorem-title"><strong>Definition 15 (Quadratic model)</strong></span> Let <span class="math inline">\(f\)</span> be as in <a href="#def-newton-method" class="quarto-xref">Definition&nbsp;14</a> and let <span class="math inline">\(\tilde{x}\)</span> be a point, with <span class="math inline">\(\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\)</span> and <span class="math inline">\(\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}_f(\tilde{x})\)</span>. The <strong>quadratic model</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> is the function of a step <span class="math inline">\(\tilde{\delta} \in \mathbb{R}^p\)</span></p>
 <p><span class="math display">\[
-<mark class="preview-text-changed">q(\tilde{\delta})</mark> <mark class="preview-text-changed">\stackrel{\text{def}}{=}f(\tilde{x})</mark> + {\tilde{g}}^{\top} <mark class="preview-text-changed">\tilde{\delta}</mark> + <mark class="preview-text-changed">\tfrac{1}{2}\,{\tilde{\delta}}^{\top}</mark> <mark class="preview-text-changed">\mathbf{H}</mark> <mark class="preview-text-changed">\tilde{\delta},</mark>
+q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta} + \tfrac{1}{2}\,{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta},
 \]</span></p>
-<p><mark class="preview-element-added">the second-order Taylor polynomial of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span>: when the second partial derivatives of <span class="math inline">\(f\)</span> are continuous, <a href="#thm-taylor-mv" class="quarto-xref">Theorem&nbsp;15</a> says that <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> equals the same expression with the Hessian evaluated at a point between <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{x}+ \tilde{\delta}\)</span>.</mark></p>
+<p>the second-order Taylor polynomial of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span>: when the second partial derivatives of <span class="math inline">\(f\)</span> are continuous, <a href="#thm-taylor-mv" class="quarto-xref">Theorem&nbsp;15</a> says that <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> equals the same expression with the Hessian evaluated at a point between <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{x}+ \tilde{\delta}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4095,7 +4084,7 @@ x^{(t+1)}
 </div>
 <div class="callout-body-container">
 <div id="exm-quadratic-model" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 50 (The model at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> at <span class="math inline">\(x = 2.5\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;49</a>), <span class="math inline">\(g = 2.5^2 - 4 = 2.25\)</span> and <span class="math inline">\(H = [2 \cdot 2.5] = [5]\)</span>, so <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the model at any <span class="math inline">\(\tilde{x}\)</span> equals <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> exactly (<a href="#exm-taylor-mv" class="quarto-xref">Example&nbsp;28</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>).</mark></p>
+<p><span class="theorem-title"><strong>Example 50 (The model at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> at <span class="math inline">\(x = 2.5\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;49</a>), <span class="math inline">\(g = 2.5^2 - 4 = 2.25\)</span> and <span class="math inline">\(H = [2 \cdot 2.5] = [5]\)</span>, so <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the model at any <span class="math inline">\(\tilde{x}\)</span> equals <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> exactly (<a href="#exm-taylor-mv" class="quarto-xref">Example&nbsp;28</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>).</p>
 </div>
 </div>
 </div>
@@ -4107,7 +4096,7 @@ x^{(t+1)}
 </div>
 <div class="callout-body-container">
 <div id="thm-newton-model" class="theorem">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Theorem 23 (The Newton step minimizes the quadratic model)</strong></span> Let <span class="math inline">\(q\)</span> be the quadratic model of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-quadratic-model" class="quarto-xref">Definition&nbsp;15</a>), with <span class="math inline">\(\mathbf{H} = \mathbf{H}_f(\tilde{x})\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a>. Its unique minimizer is the Newton step <span class="math inline">\(\tilde{\delta}^* = -\mathbf{H}^{-1} \tilde{g}\)</span>.</mark></p>
+<p><span class="theorem-title"><strong>Theorem 23 (The Newton step minimizes the quadratic model)</strong></span> Let <span class="math inline">\(q\)</span> be the quadratic model of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-quadratic-model" class="quarto-xref">Definition&nbsp;15</a>), with <span class="math inline">\(\mathbf{H} = \mathbf{H}_f(\tilde{x})\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a>. Its unique minimizer is the Newton step <span class="math inline">\(\tilde{\delta}^* = -\mathbf{H}^{-1} \tilde{g}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4125,8 +4114,8 @@ x^{(t+1)}
 <div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><mark class="preview-element-added"><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}\)</span> is symmetric, by the definition of <a href="./linear-algebra.html#def-positive-definite">positive definite</a>, and invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\tilde{\delta}^*\)</span> exists and <span class="math inline">\(\mathbf{H} \tilde{\delta}^* = -\tilde{g}\)</span>. For any <span class="math inline">\(\tilde{d} \in \mathbb{R}^p\)</span>, first</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}\)</span> is symmetric, by the definition of <a href="./linear-algebra.html#def-positive-definite">positive definite</a>, and invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\tilde{\delta}^*\)</span> exists and <span class="math inline">\(\mathbf{H} \tilde{\delta}^* = -\tilde{g}\)</span>. For any <span class="math inline">\(\tilde{d} \in \mathbb{R}^p\)</span>, first</p>
+<p><span class="math display">\[
 \begin{aligned}
 {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^*
 &amp;= -{\tilde{d}}^{\top} \tilde{g}
@@ -4135,30 +4124,30 @@ x^{(t+1)}
 &amp;= -{\tilde{g}}^{\top} \tilde{d},
 &amp;&amp; \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">and <span class="math inline">\({\tilde{\delta}^*}^{\top} \mathbf{H} \tilde{d} = {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^*\)</span> in the same way, using <span class="math inline">\({\mathbf{H}}^{\top} = \mathbf{H}\)</span>. Then</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>and <span class="math inline">\({\tilde{\delta}^*{}}^{\top} \mathbf{H} \tilde{d} = {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^*\)</span> in the same way, using <span class="math inline">\({\mathbf{H}}^{\top} = \mathbf{H}\)</span>. Then</p>
+<p><span class="math display">\[
 \begin{aligned}
 q(\tilde{\delta}^* + \tilde{d})
 &amp;= f(\tilde{x}) + {\tilde{g}}^{\top} (\tilde{\delta}^* + \tilde{d}) + \tfrac{1}{2}\,{(\tilde{\delta}^* + \tilde{d})}^{\top} \mathbf{H} (\tilde{\delta}^* + \tilde{d})
 &amp;&amp; \text{(definition of } q \text{)}
 \\
 &amp;= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^* + {\tilde{g}}^{\top} \tilde{d}
-+ \tfrac{1}{2} \mathopen{}\left({\tilde{\delta}^*}^{\top} \mathbf{H} \tilde{\delta}^* + {\tilde{\delta}^*}^{\top} \mathbf{H} \tilde{d} + {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^* + {\tilde{d}}^{\top} \mathbf{H} \tilde{d}\right)\mathclose{}
++ \tfrac{1}{2} \mathopen{}\left({\tilde{\delta}^*{}}^{\top} \mathbf{H} \tilde{\delta}^* + {\tilde{\delta}^*{}}^{\top} \mathbf{H} \tilde{d} + {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^* + {\tilde{d}}^{\top} \mathbf{H} \tilde{d}\right)\mathclose{}
 &amp;&amp; \text{(distribute)}
 \\
 &amp;= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^* + {\tilde{g}}^{\top} \tilde{d}
-+ \tfrac{1}{2}\,{\tilde{\delta}^*}^{\top} \mathbf{H} \tilde{\delta}^* - {\tilde{g}}^{\top} \tilde{d} + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{H} \tilde{d}
++ \tfrac{1}{2}\,{\tilde{\delta}^*{}}^{\top} \mathbf{H} \tilde{\delta}^* - {\tilde{g}}^{\top} \tilde{d} + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{H} \tilde{d}
 &amp;&amp; \text{(both cross terms equal } -{\tilde{g}}^{\top} \tilde{d} \text{)}
 \\
-&amp;= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^* + \tfrac{1}{2}\,{\tilde{\delta}^*}^{\top} \mathbf{H} \tilde{\delta}^* + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{H} \tilde{d}
+&amp;= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^* + \tfrac{1}{2}\,{\tilde{\delta}^*{}}^{\top} \mathbf{H} \tilde{\delta}^* + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{H} \tilde{d}
 &amp;&amp; \text{(cancel } {\tilde{g}}^{\top} \tilde{d} \text{)}
 \\
 &amp;= q(\tilde{\delta}^*) + \tfrac{1}{2}\,{\tilde{d}}^{\top} \mathbf{H} \tilde{d},
 &amp;&amp; \text{(definition of } q \text{)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">which is greater than <span class="math inline">\(q(\tilde{\delta}^*)\)</span> for every <span class="math inline">\(\tilde{d} \ne \tilde{0}_{p \times 1}\)</span>, since <span class="math inline">\(\mathbf{H}\)</span> is positive definite.</mark></p>
+\]</span></p>
+<p>which is greater than <span class="math inline">\(q(\tilde{\delta}^*)\)</span> for every <span class="math inline">\(\tilde{d} \ne \tilde{0}_{p \times 1}\)</span>, since <span class="math inline">\(\mathbf{H}\)</span> is positive definite.</p>
 </div>
 </div>
 </div>
@@ -4170,7 +4159,7 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-model" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 51 (The Newton step at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For the model <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span> of <a href="#exm-quadratic-model" class="quarto-xref">Example&nbsp;50</a>, <span class="math inline">\(H = [5]\)</span> is positive definite, so by <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;23</a> its minimizer is <span class="math inline">\(\delta^* = -H^{-1} g = -2.25 / 5 = -0.45\)</span>. Setting the derivative <span class="math inline">\(2.25 + 5 \delta\)</span> to <span class="math inline">\(0\)</span> gives the same <span class="math inline">\(\delta^*\)</span>, and <span class="math inline">\(2.5 - 0.45 = 2.05 = x^{(1)}\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;49</a>).</mark></p>
+<p><span class="theorem-title"><strong>Example 51 (The Newton step at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For the model <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span> of <a href="#exm-quadratic-model" class="quarto-xref">Example&nbsp;50</a>, <span class="math inline">\(H = [5]\)</span> is positive definite, so by <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;23</a> its minimizer is <span class="math inline">\(\delta^* = -H^{-1} g = -2.25 / 5 = -0.45\)</span>. Setting the derivative <span class="math inline">\(2.25 + 5 \delta\)</span> to <span class="math inline">\(0\)</span> gives the same <span class="math inline">\(\delta^*\)</span>, and <span class="math inline">\(2.5 - 0.45 = 2.05 = x^{(1)}\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;49</a>).</p>
 </div>
 </div>
 </div>
@@ -4182,11 +4171,11 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="def-quadratic-convergence" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 16 (Quadratic convergence)</strong></span> A sequence <span class="math inline">\(\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> that converges to <span class="math inline">\(\tilde{x}^*\)</span> <strong>converges quadratically</strong> if there is a constant <span class="math inline">\(C\)</span> with</mark></p>
-<p><span class="math display"><mark class="preview-text-changed">\[
-\mathopen{}\left\lVert\tilde{x}^{(t+1)}</mark> <mark class="preview-text-changed">-</mark> \tilde{x}^*\right\rVert\mathclose{} <mark class="preview-text-changed">\le</mark> <mark class="preview-text-changed">C\,\mathopen{}\left\lVert\tilde{x}^{(t)}</mark> <mark class="preview-text-changed">-</mark> <mark class="preview-text-changed">\tilde{x}^*\right\rVert\mathclose{}^2
-\qquad</mark> <mark class="preview-text-changed">\text{for</mark> <mark class="preview-text-changed">every</mark> <mark class="preview-text-changed">} t.
-\]</mark></span></p>
+<p><span class="theorem-title"><strong>Definition 16 (Quadratic convergence)</strong></span> A sequence <span class="math inline">\(\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> that converges to <span class="math inline">\(\tilde{x}^*\)</span> <strong>converges quadratically</strong> if there is a constant <span class="math inline">\(C\)</span> with</p>
+<p><span class="math display">\[
+\mathopen{}\left\lVert\tilde{x}^{(t+1)} - \tilde{x}^*\right\rVert\mathclose{} \le C\,\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^*\right\rVert\mathclose{}^2
+\qquad \text{for every } t.
+\]</span></p>
 </div>
 </div>
 </div>
@@ -4198,7 +4187,7 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="exm-not-quadratic-convergence" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 52 (Halving the error is not quadratic convergence)</strong></span> <span class="math inline">\(x^{(t)} = 2^{-t}\)</span> converges to <span class="math inline">\(0\)</span>, but it does not converge quadratically: the bound would need <span class="math inline">\(2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}\)</span>, that is, <span class="math inline">\(2^{t - 1} \le C\)</span>, which fails once <span class="math inline">\(t &gt; 1 + \log_2 C\)</span>. Each step only halves the error.</mark></p>
+<p><span class="theorem-title"><strong>Example 52 (Halving the error is not quadratic convergence)</strong></span> <span class="math inline">\(x^{(t)} = 2^{-t}\)</span> converges to <span class="math inline">\(0\)</span>, but it does not converge quadratically: the bound would need <span class="math inline">\(2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}\)</span>, that is, <span class="math inline">\(2^{t - 1} \le C\)</span>, which fails once <span class="math inline">\(t &gt; 1 + \log_2 C\)</span>. Each step only halves the error.</p>
 </div>
 </div>
 </div>
@@ -4210,8 +4199,8 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-convergence" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 53 (The error squares at each step)</strong></span> For the iteration <span class="math inline">\(x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})\)</span> of <a href="#exm-newton-method" class="quarto-xref">Example&nbsp;49</a>,</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 53 (The error squares at each step)</strong></span> For the iteration <span class="math inline">\(x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})\)</span> of <a href="#exm-newton-method" class="quarto-xref">Example&nbsp;49</a>,</p>
+<p><span class="math display">\[
 \begin{aligned}
 x^{(t+1)} - 2
 &amp;= \frac{1}{2} \mathopen{}\left(x^{(t)} + \frac{4}{x^{(t)}}\right)\mathclose{} - 2
@@ -4223,8 +4212,8 @@ x^{(t+1)} - 2
 &amp;= \frac{(x^{(t)} - 2)^2}{2 x^{(t)}}.
 &amp;&amp; \text{(the numerator is a perfect square)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#def-quadratic-convergence" class="quarto-xref">Definition&nbsp;16</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span> states such a bound for Newton’s method in general; it holds near a minimizer where the Hessian is positive definite, for smooth enough <span class="math inline">\(f\)</span>, which these notes do not prove.</mark></p>
+\]</span></p>
+<p>So near <span class="math inline">\(2\)</span> the error is roughly squared and divided by <span class="math inline">\(4\)</span> at each step: the errors are <span class="math inline">\(0.05\)</span>, then <span class="math inline">\(0.00061\)</span>, then <span class="math inline">\(0.000000093\)</span>, and <span class="math inline">\(0.05^2 / (2 \cdot 2.05) \approx 0.00061\)</span>. The iterates converge quadratically (<a href="#def-quadratic-convergence" class="quarto-xref">Definition&nbsp;16</a>): <span class="math inline">\(C = \tfrac{1}{2}\)</span> works for every <span class="math inline">\(x^{(t)} \ge 1\)</span>, since then <span class="math inline">\(\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\)</span>, and every iterate from <span class="math inline">\(2.5\)</span> is at least <span class="math inline">\(2\)</span>, since the identity makes <span class="math inline">\(x^{(t+1)} - 2 \ge 0\)</span> whenever <span class="math inline">\(x^{(t)} &gt; 0\)</span>. <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span> states such a bound for Newton’s method in general; it holds near a minimizer where the Hessian is positive definite, for smooth enough <span class="math inline">\(f\)</span>, which these notes do not prove.</p>
 </div>
 </div>
 </div>
@@ -4236,7 +4225,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-maximum" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 54 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a stationary point of <span class="math inline">\(-f\)</span>, whose second derivative there is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;16</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian <span class="math inline">\(f''(x) = 2x\)</span> is negative along the way, so the quadratic model has no minimizer (with <span class="math inline">\(H &lt; 0\)</span>, <span class="math inline">\(q(\delta) = f + g\,\delta + \tfrac{1}{2} H \delta^2\)</span> decreases without bound) and <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;23</a> does not apply: the positive definite hypothesis there is needed.</mark></p>
+<p><span class="theorem-title"><strong>Example 54 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a stationary point of <span class="math inline">\(-f\)</span>, whose second derivative there is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;16</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian <span class="math inline">\(f''(x) = 2x\)</span> is negative along the way, so the quadratic model has no minimizer (with <span class="math inline">\(H &lt; 0\)</span>, <span class="math inline">\(q(\delta) = f + g\,\delta + \tfrac{1}{2} H \delta^2\)</span> decreases without bound) and <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;23</a> does not apply: the positive definite hypothesis there is needed.</p>
 </div>
 </div>
 </div>
@@ -4248,7 +4237,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="thm-newton-quadratic" class="theorem">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Theorem 24 (Newton’s method minimizes a quadratic in one step)</strong></span> Let <span class="math inline">\(\mathbf{S}\)</span> be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a> matrix, <span class="math inline">\(\tilde{c} \in \mathbb{R}^p\)</span>, and <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- {\tilde{c}}^{\top} \tilde{x}\)</span>. From any <span class="math inline">\(\tilde{x}^{(0)}\)</span>, Newton’s method (<a href="#def-newton-method" class="quarto-xref">Definition&nbsp;14</a>) gives <span class="math inline">\(\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\)</span>, the unique minimizer of <span class="math inline">\(f\)</span>.</mark></p>
+<p><span class="theorem-title"><strong>Theorem 24 (Newton’s method minimizes a quadratic in one step)</strong></span> Let <span class="math inline">\(\mathbf{S}\)</span> be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a> matrix, <span class="math inline">\(\tilde{c} \in \mathbb{R}^p\)</span>, and <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- {\tilde{c}}^{\top} \tilde{x}\)</span>. From any <span class="math inline">\(\tilde{x}^{(0)}\)</span>, Newton’s method (<a href="#def-newton-method" class="quarto-xref">Definition&nbsp;14</a>) gives <span class="math inline">\(\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\)</span>, the unique minimizer of <span class="math inline">\(f\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4266,8 +4255,8 @@ x^{(t+1)} - 2
 <div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><mark class="preview-element-added"><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> for <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> and <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> for <span class="math inline">\({\tilde{c}}^{\top} \tilde{x}\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\)</span>; by <a href="#thm-hessian-quadratic" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the gradient <span class="math inline">\(-\tilde{c}\)</span> of the linear term is constant (<a href="#def-constant-wrt-vector" class="quarto-xref">Definition&nbsp;4</a>), <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \mathbf{S}\)</span>, which is invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>). So</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> for <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> and <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> for <span class="math inline">\({\tilde{c}}^{\top} \tilde{x}\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\)</span>; by <a href="#thm-hessian-quadratic" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the gradient <span class="math inline">\(-\tilde{c}\)</span> of the linear term is constant (<a href="#def-constant-wrt-vector" class="quarto-xref">Definition&nbsp;4</a>), <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \mathbf{S}\)</span>, which is invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>). So</p>
+<p><span class="math display">\[
 \begin{aligned}
 \tilde{x}^{(1)}
 &amp;= \tilde{x}^{(0)} - \mathbf{S}^{-1} (\mathbf{S} \tilde{x}^{(0)} - \tilde{c})
@@ -4282,8 +4271,8 @@ x^{(t+1)} - 2
 &amp;= \mathbf{S}^{-1} \tilde{c}.
 &amp;&amp; \text{(cancel)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">The gradient at <span class="math inline">\(\mathbf{S}^{-1} \tilde{c}\)</span> is <span class="math inline">\(\mathbf{S} \mathbf{S}^{-1} \tilde{c} - \tilde{c} = \tilde{0}_{p \times 1}\)</span>, and <span class="math inline">\(f\)</span> is strictly convex (<a href="#thm-convex-hessian" class="quarto-xref">Theorem&nbsp;21</a>, part 2), so <span class="math inline">\(\mathbf{S}^{-1} \tilde{c}\)</span> is a global minimizer (<a href="#cor-convex-stationary" class="quarto-xref">Corollary&nbsp;4</a>). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value (<a href="#def-strictly-convex" class="quarto-xref">Definition&nbsp;11</a> with <span class="math inline">\(t = \tfrac{1}{2}\)</span>).</mark></p>
+\]</span></p>
+<p>The gradient at <span class="math inline">\(\mathbf{S}^{-1} \tilde{c}\)</span> is <span class="math inline">\(\mathbf{S} \mathbf{S}^{-1} \tilde{c} - \tilde{c} = \tilde{0}_{p \times 1}\)</span>, and <span class="math inline">\(f\)</span> is strictly convex (<a href="#thm-convex-hessian" class="quarto-xref">Theorem&nbsp;21</a>, part 2), so <span class="math inline">\(\mathbf{S}^{-1} \tilde{c}\)</span> is a global minimizer (<a href="#cor-convex-stationary" class="quarto-xref">Corollary&nbsp;4</a>). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value (<a href="#def-strictly-convex" class="quarto-xref">Definition&nbsp;11</a> with <span class="math inline">\(t = \tfrac{1}{2}\)</span>).</p>
 </div>
 </div>
 </div>
@@ -4295,7 +4284,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-quadratic" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 55 (One step to the minimizer)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, so <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\tilde{c} = \tilde{0}_{2 \times 1}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(3, 1)}^{\top}\)</span> the gradient is <span class="math inline">\(\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\)</span>, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1/3 \end{bmatrix}\)</span>, so the Newton step is <span class="math inline">\(-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, the minimizer.</mark></p>
+<p><span class="theorem-title"><strong>Example 55 (One step to the minimizer)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, so <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\tilde{c} = \tilde{0}_{2 \times 1}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(3, 1)}^{\top}\)</span> the gradient is <span class="math inline">\(\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\)</span>, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1/3 \end{bmatrix}\)</span>, so the Newton step is <span class="math inline">\(-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, the minimizer.</p>
 </div>
 </div>
 </div>
@@ -4307,11 +4296,11 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="def-gradient-descent" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 17 (Gradient descent)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\tilde{x}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(s^{(0)}, s^{(1)}, \ldots\)</span> be positive <strong>step lengths</strong>. <strong>Gradient descent</strong> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 17 (Gradient descent)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\tilde{x}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(s^{(0)}, s^{(1)}, \ldots\)</span> be positive <strong>step lengths</strong>. <strong>Gradient descent</strong> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
+<p><span class="math display">\[
 \tilde{x}^{(t+1)} \stackrel{\text{def}}{=}\tilde{x}^{(t)} - s^{(t)}\,\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}).
-\]</span></mark></p>
-<p><mark class="preview-element-added">It is Newton’s method (<a href="#def-newton-method" class="quarto-xref">Definition&nbsp;14</a>) with the Hessian replaced by <span class="math inline">\(\tfrac{1}{s^{(t)}} \mathbf{I}_p\)</span>, so it needs no second derivatives. Choosing <span class="math inline">\(s^{(t)}\)</span> to minimize <span class="math inline">\(f(\tilde{x}^{(t)} - s\,\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}))\)</span> over <span class="math inline">\(s &gt; 0\)</span> is <strong>exact line search</strong>.</mark></p>
+\]</span></p>
+<p>It is Newton’s method (<a href="#def-newton-method" class="quarto-xref">Definition&nbsp;14</a>) with the Hessian replaced by <span class="math inline">\(\tfrac{1}{s^{(t)}} \mathbf{I}_p\)</span>, so it needs no second derivatives. Choosing <span class="math inline">\(s^{(t)}\)</span> to minimize <span class="math inline">\(f(\tilde{x}^{(t)} - s\,\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}))\)</span> over <span class="math inline">\(s &gt; 0\)</span> is <strong>exact line search</strong>.</p>
 </div>
 </div>
 </div>
@@ -4323,11 +4312,11 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-gradient-descent" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 56 (Fixed steps on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(f'(x) = 2x\)</span>, so gradient descent with fixed step length <span class="math inline">\(s\)</span> is <span class="math inline">\(x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}\)</span>, and <span class="math inline">\(x^{(t)} = (1 - 2s)^t x^{(0)}\)</span>.</mark></p>
+<p><span class="theorem-title"><strong>Example 56 (Fixed steps on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(f'(x) = 2x\)</span>, so gradient descent with fixed step length <span class="math inline">\(s\)</span> is <span class="math inline">\(x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}\)</span>, and <span class="math inline">\(x^{(t)} = (1 - 2s)^t x^{(0)}\)</span>.</p>
 <ul>
-<li><mark class="preview-element-added">With <span class="math inline">\(s = 0.25\)</span>, <span class="math inline">\(x^{(t)} = 0.5^t x^{(0)}\)</span>, which tends to the minimizer <span class="math inline">\(0\)</span>.</mark></li>
-<li><mark class="preview-element-added">With <span class="math inline">\(s = 0.5\)</span>, the first step lands on <span class="math inline">\(0\)</span>, since <span class="math inline">\(1 - 2s = 0\)</span>.</mark></li>
-<li><mark class="preview-element-added">With <span class="math inline">\(s = 1.5\)</span>, <span class="math inline">\(x^{(t)} = (-2)^t x^{(0)}\)</span>, which moves away from <span class="math inline">\(0\)</span> for any <span class="math inline">\(x^{(0)} \ne 0\)</span>: too long a step can make gradient descent fail.</mark></li>
+<li>With <span class="math inline">\(s = 0.25\)</span>, <span class="math inline">\(x^{(t)} = 0.5^t x^{(0)}\)</span>, which tends to the minimizer <span class="math inline">\(0\)</span>.</li>
+<li>With <span class="math inline">\(s = 0.5\)</span>, the first step lands on <span class="math inline">\(0\)</span>, since <span class="math inline">\(1 - 2s = 0\)</span>.</li>
+<li>With <span class="math inline">\(s = 1.5\)</span>, <span class="math inline">\(x^{(t)} = (-2)^t x^{(0)}\)</span>, which moves away from <span class="math inline">\(0\)</span> for any <span class="math inline">\(x^{(0)} \ne 0\)</span>: too long a step can make gradient descent fail.</li>
 </ul>
 </div>
 </div>
@@ -4340,7 +4329,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="thm-descent-direction" class="theorem">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Theorem 25 (A short enough step downhill decreases the function)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;7</a>), and let <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> be a point with <span class="math inline">\(\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) \ne \tilde{0}_{p \times 1}\)</span>. Then there is an <span class="math inline">\(\bar{s} &gt; 0\)</span> with <span class="math inline">\(f(\tilde{x}- s \tilde{g}) &lt; f(\tilde{x})\)</span> for every <span class="math inline">\(s \in (0, \bar{s})\)</span>.</mark></p>
+<p><span class="theorem-title"><strong>Theorem 25 (A short enough step downhill decreases the function)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;7</a>), and let <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> be a point with <span class="math inline">\(\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) \ne \tilde{0}_{p \times 1}\)</span>. Then there is an <span class="math inline">\(\bar{s} &gt; 0\)</span> with <span class="math inline">\(f(\tilde{x}- s \tilde{g}) &lt; f(\tilde{x})\)</span> for every <span class="math inline">\(s \in (0, \bar{s})\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4358,8 +4347,8 @@ x^{(t+1)} - 2
 <div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><mark class="preview-element-added"><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(h(s) \stackrel{\text{def}}{=}f(\tilde{x}- s \tilde{g})\)</span>. The inner function <span class="math inline">\(s \mapsto \tilde{x}- s \tilde{g}\)</span> has derivative <span class="math inline">\(-{\tilde{g}}^{\top}\)</span> (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>), so by the vector chain rule (<a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a>)</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(h(s) \stackrel{\text{def}}{=}f(\tilde{x}- s \tilde{g})\)</span>. The inner function <span class="math inline">\(s \mapsto \tilde{x}- s \tilde{g}\)</span> has derivative <span class="math inline">\(-{\tilde{g}}^{\top}\)</span> (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>), so by the vector chain rule (<a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a>)</p>
+<p><span class="math display">\[
 \begin{aligned}
 h'(s)
 &amp;= -{\tilde{g}}^{\top}\,\frac{\partial}{\partial \tilde{x}} f(\tilde{x}- s \tilde{g}),
@@ -4378,8 +4367,8 @@ h'(0)
 &amp;&lt; 0.
 &amp;&amp; \text{(} \tilde{g} \ne \tilde{0}_{p \times 1} \text{)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">Since <span class="math inline">\(h'(0) = \lim_{s \to 0} (h(s) - h(0)) / s\)</span> is negative, taking <span class="math inline">\(\varepsilon = \mathopen{}\left|h'(0)\right|\mathclose{}\)</span> in the definition of the limit gives an <span class="math inline">\(\bar{s} &gt; 0\)</span> such that <span class="math inline">\((h(s) - h(0)) / s &lt; h'(0) + \mathopen{}\left|h'(0)\right|\mathclose{} = 0\)</span> for <span class="math inline">\(0 &lt; s &lt; \bar{s}\)</span>. Multiplying by <span class="math inline">\(s &gt; 0\)</span>, <span class="math inline">\(h(s) &lt; h(0)\)</span>, that is, <span class="math inline">\(f(\tilde{x}- s \tilde{g}) &lt; f(\tilde{x})\)</span>.</mark></p>
+\]</span></p>
+<p>Since <span class="math inline">\(h'(0) = \lim_{s \to 0} (h(s) - h(0)) / s\)</span> is negative, taking <span class="math inline">\(\varepsilon = \mathopen{}\left|h'(0)\right|\mathclose{}\)</span> in the definition of the limit gives an <span class="math inline">\(\bar{s} &gt; 0\)</span> such that <span class="math inline">\((h(s) - h(0)) / s &lt; h'(0) + \mathopen{}\left|h'(0)\right|\mathclose{} = 0\)</span> for <span class="math inline">\(0 &lt; s &lt; \bar{s}\)</span>. Multiplying by <span class="math inline">\(s &gt; 0\)</span>, <span class="math inline">\(h(s) &lt; h(0)\)</span>, that is, <span class="math inline">\(f(\tilde{x}- s \tilde{g}) &lt; f(\tilde{x})\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4391,7 +4380,7 @@ h'(0)
 </div>
 <div class="callout-body-container">
 <div id="exm-descent-direction" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 57 (How short is short enough)</strong></span> In <a href="#exm-gradient-descent" class="quarto-xref">Example&nbsp;56</a>, <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x \ne 0\)</span> has <span class="math inline">\(g = 2x\)</span>, and <span class="math inline">\(f(x - 2 s x) = (1 - 2s)^2 x^2 &lt; x^2\)</span> exactly when <span class="math inline">\(\mathopen{}\left|1 - 2s\right|\mathclose{} &lt; 1\)</span>, that is, when <span class="math inline">\(0 &lt; s &lt; 1\)</span>. So <a href="#thm-descent-direction" class="quarto-xref">Theorem&nbsp;25</a> holds with <span class="math inline">\(\bar{s} = 1\)</span>, and the step <span class="math inline">\(s = 1.5\)</span> of that example was too long.</mark></p>
+<p><span class="theorem-title"><strong>Example 57 (How short is short enough)</strong></span> In <a href="#exm-gradient-descent" class="quarto-xref">Example&nbsp;56</a>, <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x \ne 0\)</span> has <span class="math inline">\(g = 2x\)</span>, and <span class="math inline">\(f(x - 2 s x) = (1 - 2s)^2 x^2 &lt; x^2\)</span> exactly when <span class="math inline">\(\mathopen{}\left|1 - 2s\right|\mathclose{} &lt; 1\)</span>, that is, when <span class="math inline">\(0 &lt; s &lt; 1\)</span>. So <a href="#thm-descent-direction" class="quarto-xref">Theorem&nbsp;25</a> holds with <span class="math inline">\(\bar{s} = 1\)</span>, and the step <span class="math inline">\(s = 1.5\)</span> of that example was too long.</p>
 </div>
 </div>
 </div>
@@ -4403,8 +4392,8 @@ h'(0)
 </div>
 <div class="callout-body-container">
 <div id="exm-gd-zigzag" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 58 (Gradient descent zigzags)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)\)</span> with <span class="math inline">\(b &gt; 0\)</span>, so <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\ b x_2)}^{\top}\)</span> and one gradient step of length <span class="math inline">\(s\)</span> from <span class="math inline">\(\tilde{x}\)</span> gives <span class="math inline">\({((1 - s) x_1,\ (1 - b s) x_2)}^{\top}\)</span>. For exact line search, let <span class="math inline">\(\phi(s) \stackrel{\text{def}}{=}f\)</span> at that point:</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+<p><span class="theorem-title"><strong>Example 58 (Gradient descent zigzags)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)\)</span> with <span class="math inline">\(b &gt; 0\)</span>, so <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\ b x_2)}^{\top}\)</span> and one gradient step of length <span class="math inline">\(s\)</span> from <span class="math inline">\(\tilde{x}\)</span> gives <span class="math inline">\({((1 - s) x_1,\ (1 - b s) x_2)}^{\top}\)</span>. For exact line search, let <span class="math inline">\(\phi(s) \stackrel{\text{def}}{=}f\)</span> at that point:</p>
+<p><span class="math display">\[
 \begin{aligned}
 \phi(s)
 &amp;= \tfrac{1}{2} \mathopen{}\left((1 - s)^2 x_1^2 + b (1 - b s)^2 x_2^2\right)\mathclose{},
@@ -4420,9 +4409,9 @@ h'(0)
 &amp;= s\,(x_1^2 + b^3 x_2^2) - (x_1^2 + b^2 x_2^2).
 &amp;&amp; \text{(collect the terms in } s \text{)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">For <span class="math inline">\(\tilde{x}\ne \tilde{0}_{2 \times 1}\)</span>, <span class="math inline">\(x_1^2 + b^3 x_2^2 &gt; 0\)</span>, so <span class="math inline">\(\phi'\)</span> is increasing in <span class="math inline">\(s\)</span> with a single zero, and <span class="math inline">\(\phi\)</span> is minimized at <span class="math inline">\(s^* = \dfrac{x_1^2 + b^2 x_2^2}{x_1^2 + b^3 x_2^2}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(b, 1)}^{\top}\)</span>:</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>For <span class="math inline">\(\tilde{x}\ne \tilde{0}_{2 \times 1}\)</span>, <span class="math inline">\(x_1^2 + b^3 x_2^2 &gt; 0\)</span>, so <span class="math inline">\(\phi'\)</span> is increasing in <span class="math inline">\(s\)</span> with a single zero, and <span class="math inline">\(\phi\)</span> is minimized at <span class="math inline">\(s^* = \dfrac{x_1^2 + b^2 x_2^2}{x_1^2 + b^3 x_2^2}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(b, 1)}^{\top}\)</span>:</p>
+<p><span class="math display">\[
 \begin{aligned}
 s^{(0)}
 &amp;= \frac{b^2 + b^2}{b^2 + b^3}
@@ -4431,9 +4420,9 @@ s^{(0)}
 &amp;= \frac{2}{1 + b},
 &amp;&amp; \text{(cancel } b^2 \text{)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">and, with <span class="math inline">\(r \stackrel{\text{def}}{=}\tfrac{b - 1}{b + 1}\)</span>,</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>and, with <span class="math inline">\(r \stackrel{\text{def}}{=}\tfrac{b - 1}{b + 1}\)</span>,</p>
+<p><span class="math display">\[
 \begin{aligned}
 1 - s^{(0)}
 &amp;= \frac{1 + b - 2}{1 + b} = r,
@@ -4447,18 +4436,18 @@ s^{(0)}
 &amp;= {\mathopen{}\left(r\,b,\ -r \cdot 1\right)\mathclose{}}^{\top} = r\,{(b, -1)}^{\top}.
 &amp;&amp; \text{(the gradient step from } {(b, 1)}^{\top} \text{)}
 \end{aligned}
-\]</span></mark></p>
-<p><mark class="preview-element-added">For <span class="math inline">\(b \ne 1\)</span> the same holds at every step, by induction (when <span class="math inline">\(b = 1\)</span>, <span class="math inline">\(r = 0\)</span> and <span class="math inline">\(\tilde{x}^{(1)}\)</span> is already the minimizer): if <span class="math inline">\(\tilde{x}^{(t)} = {(c\,b,\ \pm c)}^{\top}\)</span> for a number <span class="math inline">\(c \ne 0\)</span>, then <span class="math inline">\(s^*\)</span>, which depends only on <span class="math inline">\(x_1^2 = c^2 b^2\)</span> and <span class="math inline">\(x_2^2 = c^2\)</span>, is again <span class="math inline">\(\tfrac{2}{1 + b}\)</span> (the factor <span class="math inline">\(c^2\)</span> cancels), and the step multiplies the first entry by <span class="math inline">\(r\)</span> and the second by <span class="math inline">\(-r\)</span>. So</mark></p>
-<p><mark class="preview-element-added"><span class="math display">\[
+\]</span></p>
+<p>For <span class="math inline">\(b \ne 1\)</span> the same holds at every step, by induction (when <span class="math inline">\(b = 1\)</span>, <span class="math inline">\(r = 0\)</span> and <span class="math inline">\(\tilde{x}^{(1)}\)</span> is already the minimizer): if <span class="math inline">\(\tilde{x}^{(t)} = {(c\,b,\ \pm c)}^{\top}\)</span> for a number <span class="math inline">\(c \ne 0\)</span>, then <span class="math inline">\(s^*\)</span>, which depends only on <span class="math inline">\(x_1^2 = c^2 b^2\)</span> and <span class="math inline">\(x_2^2 = c^2\)</span>, is again <span class="math inline">\(\tfrac{2}{1 + b}\)</span> (the factor <span class="math inline">\(c^2\)</span> cancels), and the step multiplies the first entry by <span class="math inline">\(r\)</span> and the second by <span class="math inline">\(-r\)</span>. So</p>
+<p><span class="math display">\[
 \tilde{x}^{(t)} = {\mathopen{}\left(b\,r^t,\ (-r)^t\right)\mathclose{}}^{\top},
 \qquad
 f(\tilde{x}^{(t)}) = \tfrac{1}{2} (b^2 + b)\,r^{2t} = r^{2t} f(\tilde{x}^{(0)}).
-\]</span></mark></p>
-<p><mark class="preview-element-added">For <span class="math inline">\(b \ne 1\)</span>, exactly one entry changes sign at every step: the second when <span class="math inline">\(b &gt; 1\)</span> (then <span class="math inline">\(r &gt; 0\)</span>), and the first when <span class="math inline">\(b &lt; 1\)</span> (then <span class="math inline">\(r &lt; 0\)</span>). So the iterates zigzag toward the minimizer <span class="math inline">\(\tilde{0}_{2 \times 1}\)</span>.</mark></p>
+\]</span></p>
+<p>For <span class="math inline">\(b \ne 1\)</span>, exactly one entry changes sign at every step: the second when <span class="math inline">\(b &gt; 1\)</span> (then <span class="math inline">\(r &gt; 0\)</span>), and the first when <span class="math inline">\(b &lt; 1\)</span> (then <span class="math inline">\(r &lt; 0\)</span>). So the iterates zigzag toward the minimizer <span class="math inline">\(\tilde{0}_{2 \times 1}\)</span>.</p>
 <ul>
-<li><mark class="preview-element-added">With <span class="math inline">\(b = 3\)</span>, <span class="math inline">\(r = \tfrac{1}{2}\)</span>: <span class="math inline">\(\tilde{x}^{(1)} = {(1.5, -0.5)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(2)} = {(0.75, 0.25)}^{\top}\)</span>, and <span class="math inline">\(f\)</span> falls from <span class="math inline">\(6\)</span> to <span class="math inline">\(1.5\)</span> to <span class="math inline">\(0.375\)</span>, a quarter at each step.</mark></li>
-<li><mark class="preview-element-added">With <span class="math inline">\(b = 1\)</span>, <span class="math inline">\(r = 0\)</span> and one step reaches the minimizer.</mark></li>
-<li><mark class="preview-element-added">With <span class="math inline">\(b = 0.01\)</span>, <span class="math inline">\(r^2 = (0.99 / 1.01)^2 \approx 0.96\)</span>, so <span class="math inline">\(f\)</span> shrinks by only about <span class="math inline">\(4\%\)</span> per step. Newton’s method reaches the minimizer of any such <span class="math inline">\(f\)</span> in one step (<a href="#thm-newton-quadratic" class="quarto-xref">Theorem&nbsp;24</a>).</mark></li>
+<li>With <span class="math inline">\(b = 3\)</span>, <span class="math inline">\(r = \tfrac{1}{2}\)</span>: <span class="math inline">\(\tilde{x}^{(1)} = {(1.5, -0.5)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(2)} = {(0.75, 0.25)}^{\top}\)</span>, and <span class="math inline">\(f\)</span> falls from <span class="math inline">\(6\)</span> to <span class="math inline">\(1.5\)</span> to <span class="math inline">\(0.375\)</span>, a quarter at each step.</li>
+<li>With <span class="math inline">\(b = 1\)</span>, <span class="math inline">\(r = 0\)</span> and one step reaches the minimizer.</li>
+<li>With <span class="math inline">\(b = 0.01\)</span>, <span class="math inline">\(r^2 = (0.99 / 1.01)^2 \approx 0.96\)</span>, so <span class="math inline">\(f\)</span> shrinks by only about <span class="math inline">\(4\%\)</span> per step. Newton’s method reaches the minimizer of any such <span class="math inline">\(f\)</span> in one step (<a href="#thm-newton-quadratic" class="quarto-xref">Theorem&nbsp;24</a>).</li>
 </ul>
 </div>
 </div>
@@ -4466,7 +4455,7 @@ f(\tilde{x}^{(t)}) = \tfrac{1}{2} (b^2 + b)\,r^{2t} = r^{2t} f(\tilde{x}^{(0)}).
 </div>
 </section>
 <section id="sec-additional-resources" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-additional-resources"><span class="header-section-number"><mark class="preview-text-changed">6</mark></span> Further reading</h2>
+<h2 data-number="6" class="anchored" data-anchor-id="sec-additional-resources"><span class="header-section-number">6</span> Further reading</h2>
 <ul>
 <li><span class="citation" data-cites="marsden2013vector">Marsden and Tromba (<a href="#ref-marsden2013vector" role="doc-biblioref">2013</a>)</span> is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.</li>
 </ul>
