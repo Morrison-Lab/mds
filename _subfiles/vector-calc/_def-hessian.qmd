@@ -1,0 +1,69 @@
+:::{#def-hessian}
+#### Hessian matrix
+
+Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$
+whose first partial derivatives exist on an open ball around $\vx$
+and whose second partial derivatives exist at $\vx$.
+The **Hessian matrix** of $f$ at $\vx$ is the derivative (@def-vector-valued-derivative)
+of the gradient $\deriv{\vx} f(\vx)$ (@def-vector-derivative):
+
+$$
+\underbrace{\matr{H}_f(\vx)}_{p \times p} \eqdef \deriv{\vx} \tp{\paren{\deriv{\vx} f(\vx)}}.
+$$
+
+By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$, its $(i, j)$ entry is
+
+$$
+\sb{\matr{H}_f(\vx)}_{ij} = \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hessian}
+#### A Hessian matrix
+
+Let $f(\vx) = e^{2x_1 + x_2} - x_1$ for $\vx = \tp{(x_1, x_2)}$,
+and write $u = 2x_1 + x_2$.
+By the [chain rule](calculus.qmd#thm-chain-rule),
+$\deriv{x_1} e^{u} = 2 e^{u}$ and $\deriv{x_2} e^{u} = e^{u}$, so
+
+$$
+\deriv{\vx} f(\vx) = \sbmat{ 2 e^{u} - 1 \\ e^{u} }.
+$$
+
+Differentiating each entry again,
+
+$$
+\matr{H}_f(\vx)
+= \sbmat{
+\deriv{x_1} (2 e^{u} - 1) & \deriv{x_1} e^{u} \\
+\deriv{x_2} (2 e^{u} - 1) & \deriv{x_2} e^{u}
+}
+= \sbmat{
+4 e^{u} & 2 e^{u} \\
+2 e^{u} & e^{u}
+},
+$$
+
+and at $\vx = \vzero$, where $u = 0$,
+$\matr{H}_f(\vzero) = \sbmat{ 4 & 2 \\ 2 & 1 }$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hessian-missing}
+#### A function with a gradient but no Hessian at a point
+
+Let $f(\vx) = x_1 \abs{x_1}$ for $\vx = \tp{(x_1, x_2)}$.
+For $x_1 > 0$, $f = x_1^2$ and $\deriv{x_1} f = 2 x_1$;
+for $x_1 < 0$, $f = -x_1^2$ and $\deriv{x_1} f = -2 x_1$;
+and at $x_1 = 0$ the difference quotient is $h \abs{h} / h = \abs{h} \to 0$.
+So the gradient exists everywhere: it is $\tp{(2 \abs{x_1},\ 0)}$.
+But $2 \abs{x_1}$ has no derivative in $x_1$ at $x_1 = 0$
+(its difference quotient $2 \abs{h} / h$ is $2$ for $h > 0$ and $-2$ for $h < 0$),
+so $\sb{\matr{H}_f(\vx)}_{11}$, and with it the Hessian, does not exist at any $\vx$ with $x_1 = 0$.
+
+:::

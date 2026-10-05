@@ -1,0 +1,21 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from the multivariate calculus and optimality-condition parts of @zhou2024optim,
+used under the MIT License
+(see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
+The source states the second-order Taylor approximation and the optimality conditions without proof;
+here they are proved from the one-variable Taylor theorem,
+and the approximation is made exact by evaluating the Hessian at a point between $\vecf{z}$ and $\vecf{z} + \vecf{h}$.
+The source calls points with zero gradient critical points;
+here they are stationary points,
+because the [calculus notes](calculus.qmd#def-flat-point) give "critical point" a wider meaning.
+These parts of the source are not part of this section:
+
+- its one-variable Taylor example and its plots
+- matrix calculus
+- convexity
+- Lagrange multipliers
+- Newton's method and gradient descent
+
+:::

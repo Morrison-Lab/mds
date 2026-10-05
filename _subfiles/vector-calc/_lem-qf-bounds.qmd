@@ -1,0 +1,117 @@
+:::{#lem-qf-eigen-bound}
+#### A quadratic form is at least the smallest eigenvalue times the squared length
+
+Let $\matr{A}$ be a symmetric $p \times p$ matrix,
+and let $\lambda_{\min}$ be the smallest of its eigenvalues
+([eigendecomposition](linear-algebra.qmd#def-eigendecomposition)).
+Then $\tp{\vecf{h}} \matr{A} \vecf{h} \ge \lambda_{\min}\,\norm{\vecf{h}}^2$ for every $\vecf{h} \in \reals^p$.
+
+:::
+
+::: proof
+
+Write $\matr{A} = \matr{Q} \matr{\Lambda} \tp{\matr{Q}}$ with $\matr{Q}$ orthogonal
+and $\matr{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)$
+([spectral theorem](linear-algebra.qmd#thm-spectral)),
+and let $\vecf{y} \eqdef \tp{\matr{Q}} \vecf{h}$. Then
+
+$$
+\ba
+\tp{\vecf{h}} \matr{A} \vecf{h}
+&= \tp{\vecf{h}} \matr{Q} \matr{\Lambda} \tp{\matr{Q}} \vecf{h}
+&& \text{(substitute the eigendecomposition)}
+\\
+&= \tp{\vecf{y}} \matr{\Lambda} \vecf{y}
+&& \text{(} \tp{\vecf{h}} \matr{Q} = \tp{(\tp{\matr{Q}} \vecf{h})} \text{, transpose of a product)}
+\\
+&= \sum_{i=1}^{p} \lambda_i\,y_i^2
+&& \text{(} \matr{\Lambda} \text{ is diagonal)}
+\\
+&\ge \sum_{i=1}^{p} \lambda_{\min}\,y_i^2
+&& \text{(} \lambda_i \ge \lambda_{\min} \text{ and } y_i^2 \ge 0 \text{)}
+\\
+&= \lambda_{\min}\,\norm{\vecf{y}}^2
+&& \text{(the squared length is the sum of squares)}
+\\
+&= \lambda_{\min}\,\norm{\vecf{h}}^2.
+&& \text{(orthogonal matrices preserve length)}
+\ea
+$$
+
+The second step is the [transpose of a product](linear-algebra.qmd#thm-transpose-product).
+The last step applies [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm) to $\tp{\matr{Q}}$,
+which is orthogonal because $\tp{\matr{Q}} \matr{Q} = \matr{Q} \tp{\matr{Q}} = \matr{I}_p$
+([orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix)).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qf-eigen-bound}
+#### Checking the bound
+
+$\matr{A} = \sbmat{ 2 & 1 \\ 1 & 2 }$ has eigenvalues $3$ and $1$
+([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)), so $\lambda_{\min} = 1$.
+At $\vecf{h} = \tp{(1, 0)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 \ge 1 \cdot 1$.
+At $\vecf{h} = \tp{(1, -1)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2$:
+the bound holds with equality, since this $\vecf{h}$ is an eigenvector for $\lambda_{\min}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#lem-qf-entry-bound}
+#### A quadratic form with small entries is small
+
+Let $\matr{E}$ be a $p \times p$ matrix whose entries all satisfy $\abs{e_{ij}} \le m$.
+Then $\abs{\tp{\vecf{h}} \matr{E} \vecf{h}} \le p\,m\,\norm{\vecf{h}}^2$ for every $\vecf{h} \in \reals^p$.
+
+:::
+
+::: proof
+
+Let $\vecf{a} \eqdef \tp{(\abs{h_1}, \ldots, \abs{h_p})}$ and $\vecf{1} \eqdef \tp{(1, \ldots, 1)}$, both in $\reals^p$. Then
+
+$$
+\ba
+\abs{\tp{\vecf{h}} \matr{E} \vecf{h}}
+&= \abs{\sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,e_{ij}\,h_j}
+&& \text{(matrix product)}
+\\
+&\le \sum_{i=1}^{p} \sum_{j=1}^{p} \abs{h_i}\,\abs{e_{ij}}\,\abs{h_j}
+&& \text{(triangle inequality for numbers)}
+\\
+&\le m \sum_{i=1}^{p} \sum_{j=1}^{p} \abs{h_i}\,\abs{h_j}
+&& \text{(} \abs{e_{ij}} \le m \text{)}
+\\
+&= m\,\paren{\sum_{i=1}^{p} \abs{h_i}}^2
+&& \text{(the double sum factors)}
+\\
+&= m\,(\vecf{1} \cdot \vecf{a})^2
+&& \text{(dot product)}
+\\
+&\le m\,\norm{\vecf{1}}^2\,\norm{\vecf{a}}^2
+&& \text{(Cauchy-Schwarz, squared)}
+\\
+&= m\,p\,\norm{\vecf{h}}^2.
+&& \text{(} \norm{\vecf{1}}^2 = p \text{ and } \norm{\vecf{a}}^2 = \textstyle\sum_i h_i^2 = \norm{\vecf{h}}^2 \text{)}
+\ea
+$$
+
+The steps use the [matrix product](linear-algebra.qmd#def-matrix-mult),
+the [dot product](linear-algebra.qmd#def-dot-product)
+and the [Cauchy-Schwarz inequality](linear-algebra.qmd#thm-cauchy-schwarz).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qf-entry-bound}
+#### Checking the bound
+
+Let $\matr{E} = \sbmat{ 0.1 & -0.2 \\ -0.2 & 0.1 }$, so $m = 0.2$ works,
+and $\vecf{h} = \tp{(1, 1)}$, so $\norm{\vecf{h}}^2 = 2$.
+Then $\tp{\vecf{h}} \matr{E} \vecf{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2$,
+and $\abs{-0.2} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8$.
+
+:::

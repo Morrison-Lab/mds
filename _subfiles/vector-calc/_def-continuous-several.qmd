@@ -1,0 +1,53 @@
+:::{#def-continuous-several}
+#### Continuity in several variables
+
+A function $f$ from $\reals^p$ to $\reals^q$ is **continuous at** $\vx$
+if for every $\varepsilon > 0$ there is a $\delta > 0$ such that
+$\norm{f(\vy) - f(\vx)} < \varepsilon$ whenever $\norm{\vy - \vx} < \delta$.
+It is **continuous on** a set if it is continuous at every point of the set.
+For $q = 1$, $\norm{f(\vy) - f(\vx)} = \abs{f(\vy) - f(\vx)}$.
+For $p = q = 1$, this definition is the usual [continuity](calculus.qmd#def-continuous),
+written out with the $\varepsilon$-$\delta$ definition of the limit $\lim_{y \to x} f(y) = f(x)$.
+
+Continuity survives the usual operations:
+
+- A composition of continuous functions is continuous:
+  choose the $\delta$ for the outer function first,
+  and use it as the $\varepsilon$ for the inner one.
+- A sum $f + g$ of continuous real-valued functions is continuous,
+  since $\abs{(f + g)(\vy) - (f + g)(\vx)} \le \abs{f(\vy) - f(\vx)} + \abs{g(\vy) - g(\vx)}$:
+  use $\varepsilon / 2$ for each.
+- A constant multiple $c f$ is continuous,
+  since $\abs{c f(\vy) - c f(\vx)} = \abs{c}\,\abs{f(\vy) - f(\vx)}$:
+  use $\varepsilon / (\abs{c} + 1)$ for $f$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-continuous-several}
+#### A continuous function, and a discontinuous one
+
+- $f(\vx) = x_1 + x_2$ is continuous at every $\vx$.
+  Each $\abs{y_i - x_i} \le \norm{\vy - \vx}$, since the squared length is a sum of nonnegative squares, so
+
+  $$
+  \ba
+  \abs{f(\vy) - f(\vx)}
+  &= \abs{(y_1 - x_1) + (y_2 - x_2)}
+  && \text{(subtract)}
+  \\
+  &\le \abs{y_1 - x_1} + \abs{y_2 - x_2}
+  && \text{(triangle inequality for numbers)}
+  \\
+  &\le 2\,\norm{\vy - \vx},
+  && \text{(each term is at most } \norm{\vy - \vx} \text{)}
+  \ea
+  $$
+
+  which is less than $\varepsilon$ whenever $\norm{\vy - \vx} < \delta = \varepsilon / 2$.
+- $f(\vx) = 1$ if $x_1 > 0$ and $f(\vx) = 0$ otherwise is not continuous at $\vzero$:
+  for $\varepsilon = \tfrac{1}{2}$ and any $\delta > 0$, the point $\vy = \tp{(\delta / 2, 0)}$
+  has $\norm{\vy - \vzero} = \delta / 2 < \delta$ but $\abs{f(\vy) - f(\vzero)} = 1 > \tfrac{1}{2}$.
+
+:::

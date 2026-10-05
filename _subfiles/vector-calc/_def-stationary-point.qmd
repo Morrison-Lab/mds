@@ -1,0 +1,27 @@
+:::{#def-stationary-point}
+#### Stationary point
+
+Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$.
+A point $\vecf{z}$ at which the gradient exists and
+
+$$
+\deriv{\vx} f(\vecf{z}) = \vzero_{p \times 1}
+$$
+
+is a **stationary point** of $f$.
+For $p = 1$, this is a [flat point](calculus.qmd#def-flat-point).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-stationary-point}
+#### A stationary point, and a point that is not one
+
+Let $f(\vx) = x_1^2 + x_2^2 - 2 x_1$.
+Its gradient is $\tp{(2 x_1 - 2,\ 2 x_2)}$,
+which is $\vzero_{2 \times 1}$ exactly when $x_1 = 1$ and $x_2 = 0$.
+So $\tp{(1, 0)}$ is its only stationary point,
+and $\vzero$ is not one: the gradient there is $\tp{(-2, 0)}$.
+
+:::

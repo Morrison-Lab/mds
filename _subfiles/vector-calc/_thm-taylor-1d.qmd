@@ -1,0 +1,28 @@
+:::{#thm-taylor-1d}
+#### Taylor's theorem with a second-order remainder
+
+Let $a < b$, and let $g$ be a real-valued function on $[a, b]$
+whose derivative $g'$ is [continuous](calculus.qmd#def-continuous) on $[a, b]$
+and whose second derivative $g''$ exists at every point of $(a, b)$.
+Then there is a $\tau \in (a, b)$ with
+
+$$
+g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\tau)\,(b - a)^2.
+$$
+
+:::
+
+This theorem is the case $n = 2$ of [@rudin1976principles, Theorem 5.15];
+its proof uses the mean value theorem, which these notes do not develop.
+
+{{< slidebreak >}}
+
+:::{#exm-taylor-1d}
+#### The remainder point for $e^x$
+
+Take $g(x) = e^x$ on $[0, 1]$, so $g' = g'' = g$.
+@thm-taylor-1d says $e = 1 + 1 + \tfrac{1}{2}\,e^{\tau}$ for some $\tau \in (0, 1)$.
+Solving, $e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656$,
+so $\tau = \log 1.43656 \approx 0.362$, which is in $(0, 1)$.
+
+:::
