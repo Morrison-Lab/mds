@@ -33,3 +33,42 @@ $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta = 1$),
 but not a global one.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-not-local-minimizer}
+#### A point that is not a local minimizer
+
+For $f(x) = x^3 - 3x$, the point $x = -1$ is not a local minimizer.
+For any $t$,
+
+$$
+\ba
+f(-1 + t)
+&= (-1 + t)^3 - 3(-1 + t)
+&& \text{(substitute)}
+\\
+&= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t)
+&& \text{(expand the cube)}
+\\
+&= -1 + 3t - 3t^2 + t^3 + 3 - 3t
+&& \text{(distribute)}
+\\
+&= 2 - 3t^2 + t^3
+&& \text{(collect terms)}
+\\
+&= 2 + t^2 (t - 3)
+&& \text{(factor out } t^2 \text{)}
+\\
+&= f(-1) + t^2 (t - 3),
+&& \text{(} f(-1) = (-1)^3 - 3(-1) = 2 \text{)}
+\ea
+$$
+
+and $t^2 (t - 3) < 0$ whenever $t \ne 0$ and $t < 3$.
+So whatever $\delta > 0$ is,
+the point $x = -1 + t$ with $t = \min\cb{\delta / 2, 1}$ satisfies $\abs{x - (-1)} < \delta$
+and $f(x) < f(-1)$.
+For example, $f(-0.9) = -0.729 + 2.7 = 1.971 < 2$.
+
+:::

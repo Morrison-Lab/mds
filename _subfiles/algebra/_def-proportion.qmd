@@ -13,3 +13,18 @@ See also <https://en.wikipedia.org/wiki/Proportion_(mathematics)> for other mean
 ::::
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-proportion}
+#### A proportion, and a ratio that is not one
+
+In a clinic with $120$ patients, $30$ of whom smoke:
+
+- the proportion of patients who smoke is $\tfrac{30}{120} = 0.25$:
+  the $30$ smokers are a subset of the $120$ patients;
+- the ratio of smokers to non-smokers is $\tfrac{30}{90} = \tfrac{1}{3}$.
+  Both counts are of patients, so this quotient is a ratio,
+  but it is not a proportion: the $30$ smokers are not part of the $90$ non-smokers.
+
+:::

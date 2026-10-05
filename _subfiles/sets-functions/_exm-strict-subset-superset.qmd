@@ -6,6 +6,7 @@ and the possible rolls $B = \set{1, 2, 3, 4, 5, 6}$:
 
 - $A \subsetneq B$, because $A \subseteq B$ (@exm-subset) and $1 \in B$ but $1 \notin A$, so $A \neq B$;
 - $B \supseteq A$ and $B \supsetneq A$, for the same reasons;
-- $B \subseteq B$, but $B$ is not a strict subset of itself, because $B = B$.
+- $B \subseteq B$, but $B$ is not a strict subset of itself, because $B = B$;
+  likewise $B \supseteq B$, but $B$ is not a strict superset of itself, because $B = B$.
 
 :::

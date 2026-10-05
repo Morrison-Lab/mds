@@ -14,3 +14,23 @@ $$
 }
 $$
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-vector-derivative}
+#### A vector derivative
+
+Let $\vb = \tp{(\beta_1, \beta_2)}$ and $f(\vb) = 3 \beta_1 + 5 \beta_2^2$. Then
+
+$$
+\underbrace{\deriv{\vb} f(\vb)}_{2 \times 1}
+= \sbmat{
+\deriv{\beta_1} (3 \beta_1 + 5 \beta_2^2) \\
+\deriv{\beta_2} (3 \beta_1 + 5 \beta_2^2)
+}
+= \sbmat{ 3 \\ 10 \beta_2 },
+$$
+
+and at $\vb = \tp{(1, 2)}$ the vector derivative is $\tp{(3, 20)}$.
+
+:::

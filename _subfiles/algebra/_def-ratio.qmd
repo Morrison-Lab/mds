@@ -8,3 +8,18 @@ cf. <https://en.wikipedia.org/wiki/Ratio>
 :::
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-ratio}
+#### A ratio, and a quotient that is not one
+
+- A board $150$ cm long and one $75$ cm long have length ratio
+  $\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2$:
+  both lengths are in centimeters, so the units cancel and the ratio has none.
+- A sample of mass $300$ g and volume $150$ cm$^3$ gives the quotient
+  $\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2$ g per cm$^3$, its density.
+  The numerator and denominator are in different units,
+  so this quotient is not a ratio.
+
+:::
