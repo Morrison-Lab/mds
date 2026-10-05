@@ -16,12 +16,16 @@ $$
 &= -(1 - s) x_1^2 - b^2 (1 - b s) x_2^2
 && \text{(chain rule, term by term)}
 \\
+&= -x_1^2 + s\,x_1^2 - b^2 x_2^2 + b^3 s\,x_2^2
+&& \text{(expand the products)}
+\\
 &= s\,(x_1^2 + b^3 x_2^2) - (x_1^2 + b^2 x_2^2).
 && \text{(collect the terms in } s \text{)}
 \ea
 $$
 
-$\phi'$ is increasing in $s$ with a single zero, so $\phi$ is minimized at
+For $\vx \ne \vzero_{2 \times 1}$, $x_1^2 + b^3 x_2^2 > 0$,
+so $\phi'$ is increasing in $s$ with a single zero, and $\phi$ is minimized at
 $s^* = \dfrac{x_1^2 + b^2 x_2^2}{x_1^2 + b^3 x_2^2}$.
 From $\vx^{(0)} = \tp{(b, 1)}$:
 
@@ -36,10 +40,28 @@ s^{(0)}
 \ea
 $$
 
-so $1 - s^{(0)} = \tfrac{b - 1}{b + 1}$ and $1 - b s^{(0)} = \tfrac{1 - b}{b + 1}$, and with $r \eqdef \tfrac{b - 1}{b + 1}$,
-$\vx^{(1)} = r\,\tp{(b, -1)}$.
-That point is $\tp{(b, 1)}$ scaled by $r$ with the sign of the second entry flipped,
-and $s^*$ depends only on $x_1^2$ and $x_2^2$, so the next step length is again $\tfrac{2}{1 + b}$, and so on:
+and, with $r \eqdef \tfrac{b - 1}{b + 1}$,
+
+$$
+\ba
+1 - s^{(0)}
+&= \frac{1 + b - 2}{1 + b} = r,
+&& \text{(common denominator)}
+\\
+1 - b\,s^{(0)}
+&= \frac{1 + b - 2b}{1 + b} = -r,
+&& \text{(common denominator)}
+\\
+\vx^{(1)}
+&= \tp{\paren{r\,b,\ -r \cdot 1}} = r\,\tp{(b, -1)}.
+&& \text{(the gradient step from } \tp{(b, 1)} \text{)}
+\ea
+$$
+
+The same holds at every step, by induction:
+if $\vx^{(t)} = \tp{(c\,b,\ \pm c)}$ for a number $c \ne 0$,
+then $s^*$, which depends only on $x_1^2 = c^2 b^2$ and $x_2^2 = c^2$, is again $\tfrac{2}{1 + b}$ (the factor $c^2$ cancels),
+and the step multiplies the first entry by $r$ and the second by $-r$. So
 
 $$
 \vx^{(t)} = \tp{\paren{b\,r^t,\ (-r)^t}},
@@ -47,7 +69,9 @@ $$
 f(\vx^{(t)}) = \tfrac{1}{2} (b^2 + b)\,r^{2t} = r^{2t} f(\vx^{(0)}).
 $$
 
-The second entry changes sign at every step: the iterates zigzag toward the minimizer $\vzero_{2 \times 1}$.
+For $b \ne 1$, exactly one entry changes sign at every step:
+the second when $b > 1$ (then $r > 0$), and the first when $b < 1$ (then $r < 0$).
+So the iterates zigzag toward the minimizer $\vzero_{2 \times 1}$.
 
 - With $b = 3$, $r = \tfrac{1}{2}$: $\vx^{(1)} = \tp{(1.5, -0.5)}$ and $\vx^{(2)} = \tp{(0.75, 0.25)}$,
   and $f$ falls from $6$ to $1.5$ to $0.375$, a quarter at each step.

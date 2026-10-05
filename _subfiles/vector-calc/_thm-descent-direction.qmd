@@ -3,7 +3,7 @@
 
 Let $f : \reals^p \to \reals$ have first partial derivatives
 that are continuous on $\reals^p$ (@def-continuous-several),
-and let $\vecf{g} \eqdef \deriv{\vx} f(\vx) \ne \vzero_{p \times 1}$.
+and let $\vx \in \reals^p$ be a point with $\vecf{g} \eqdef \deriv{\vx} f(\vx) \ne \vzero_{p \times 1}$.
 Then there is an $\bar{s} > 0$ with $f(\vx - s \vecf{g}) < f(\vx)$ for every $s \in (0, \bar{s})$.
 
 :::
@@ -16,9 +16,13 @@ so by the vector chain rule (@thm-chain-vec)
 
 $$
 \ba
+h'(s)
+&= -\tp{\vecf{g}}\,\deriv{\vx} f(\vx - s \vecf{g}),
+&& \text{(chain rule)}
+\\
 h'(0)
 &= -\tp{\vecf{g}}\,\deriv{\vx} f(\vx)
-&& \text{(chain rule)}
+&& \text{(set } s = 0 \text{)}
 \\
 &= -\tp{\vecf{g}} \vecf{g}
 && \text{(definition of } \vecf{g} \text{)}

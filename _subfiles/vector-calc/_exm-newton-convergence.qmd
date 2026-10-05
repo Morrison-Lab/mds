@@ -20,8 +20,11 @@ $$
 So near $2$ the error is roughly squared and divided by $4$ at each step:
 the errors are $0.05$, then $0.00061$, then $0.000000093$,
 and $0.05^2 / (2 \cdot 2.05) \approx 0.00061$.
-This behavior is called quadratic convergence;
-@zhou2024optim states that Newton's method converges quadratically in general near such a minimizer,
+Iterates converging to $x^*$ with $\abs{x^{(t+1)} - x^*} \le C \abs{x^{(t)} - x^*}^2$ for some constant $C$
+are said to **converge quadratically**;
+here $C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$.
+@zhou2024optim states that Newton's method converges quadratically in general
+near a minimizer where the Hessian is positive definite (for smooth enough $f$),
 which these notes do not prove.
 
 :::
@@ -32,11 +35,13 @@ which these notes do not prove.
 #### Newton's method can find a maximum
 
 From $x^{(0)} = -2.5$ the same iteration gives $-2.05$, $-2.000610$, $-2.0000001$, approaching $-2$.
-But $-2$ is a local maximizer of $f$, not a minimizer:
+But $-2$ is not a minimizer of $f$:
 it is a stationary point of $-f$, whose second derivative there is $-f''(-2) = 4 > 0$,
-so it is a strict local minimizer of $-f$ (@thm-second-order-condition).
+so it is a strict local minimizer of $-f$ (@thm-second-order-condition),
+that is, $f$ is strictly larger at $-2$ than at all nearby points.
 Newton's method looks only for a stationary point,
 and here the Hessian $f''(x) = 2x$ is negative along the way,
-so the quadratic model has no minimizer (@thm-newton-model does not apply).
+so the quadratic model has no minimizer and @thm-newton-model does not apply:
+the positive definite hypothesis there is needed.
 
 :::

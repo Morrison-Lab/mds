@@ -268,15 +268,19 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-quadratic-model.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-newton-model.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/vector-calc/_thm-newton-quadratic.qmd >}}
+{{< include mds/_subfiles/vector-calc/_exm-newton-convergence.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/vector-calc/_exm-newton-convergence.qmd >}}
+{{< include mds/_subfiles/vector-calc/_thm-newton-quadratic.qmd >}}
 
 {{< slidebreak >}}
 

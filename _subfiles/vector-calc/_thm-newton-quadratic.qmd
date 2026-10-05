@@ -11,8 +11,9 @@ the unique minimizer of $f$.
 
 ::: proof
 
-By @thm-quadratic-form and @cor-deriv-lincom-tp,
-$\deriv{\vx} f(\vx) = \matr{S} \vx - \vecf{c}$;
+Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives,
+so by @thm-quadratic-form for $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ and @cor-deriv-lincom-tp for $\tp{\vecf{c}} \vx$,
+$\deriv{\vx} f(\vx) = \tfrac{1}{2} (2 \matr{S} \vx) - \vecf{c} = \matr{S} \vx - \vecf{c}$;
 by @thm-hessian-quadratic with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
 and because the gradient $-\vecf{c}$ of the linear term is constant (@def-constant-wrt-vector),
 $\matr{H}_f(\vx) = \matr{S}$,
@@ -27,16 +28,20 @@ $$
 &= \vx^{(0)} - \matr{S}^{-1} \matr{S} \vx^{(0)} + \matr{S}^{-1} \vecf{c}
 && \text{(distribute)}
 \\
+&= \vx^{(0)} - \vx^{(0)} + \matr{S}^{-1} \vecf{c}
+&& \text{(} \matr{S}^{-1} \matr{S} = \matr{I}_p \text{)}
+\\
 &= \matr{S}^{-1} \vecf{c}.
-&& \text{(} \matr{S}^{-1} \matr{S} = \matr{I}_p \text{; cancel)}
+&& \text{(cancel)}
 \ea
 $$
 
 The gradient at $\matr{S}^{-1} \vecf{c}$ is $\matr{S} \matr{S}^{-1} \vecf{c} - \vecf{c} = \vzero_{p \times 1}$,
 and $f$ is strictly convex (@thm-convex-hessian, part 2),
 so $\matr{S}^{-1} \vecf{c}$ is a global minimizer (@cor-convex-stationary).
-It is the only one: a strictly convex function has at most one minimizer,
-since the midpoint of two minimizers would have a strictly smaller value (@def-strictly-convex).
+It is the only one: a strictly convex function has at most one global minimizer,
+since the midpoint of two distinct global minimizers, which have equal values,
+would have a strictly smaller value (@def-strictly-convex with $t = \tfrac{1}{2}$).
 
 :::
 
@@ -46,7 +51,9 @@ since the midpoint of two minimizers would have a strictly smaller value (@def-s
 #### One step to the minimizer
 
 Let $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, so $\matr{S} = \sbmat{ 1 & 0 \\ 0 & 3 }$ and $\vecf{c} = \vzero_{2 \times 1}$.
-From $\vx^{(0)} = \tp{(3, 1)}$ the gradient is $\tp{(3, 3)}$ and $\matr{S}^{-1} = \sbmat{ 1 & 0 \\ 0 & 1/3 }$, so
+From $\vx^{(0)} = \tp{(3, 1)}$ the gradient is $\matr{S} \vx^{(0)} = \tp{(3, 3)}$,
+and $\matr{S}^{-1} = \sbmat{ 1 & 0 \\ 0 & 1/3 }$, so the Newton step is
+$-\matr{S}^{-1} \tp{(3, 3)} = -\tp{(3, 1)}$ and
 $\vx^{(1)} = \tp{(3, 1)} - \tp{(3, 1)} = \vzero_{2 \times 1}$, the minimizer.
 
 :::

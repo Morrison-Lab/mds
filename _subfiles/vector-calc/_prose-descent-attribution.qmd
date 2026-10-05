@@ -9,11 +9,15 @@ here that step is proved to be the exact minimizer of the quadratic model.
 In the source's zigzag example the starting value of the objective is $\tfrac{1}{2}(b^2 + b)$,
 not $\tfrac{1}{2}(1 + b^2)$ as the source writes;
 the ratio of successive values is unaffected.
+In the same example the source's formula for $\vx^{(1)}$ has $\vx^{(1)}$ on its right side where $\vx^{(0)}$ is meant.
 These parts of the source are not part of this section:
 
-- the quadratic convergence theorem for Newton's method in general, and line search for Newton's method
+- the quadratic convergence theorem for Newton's method in general,
+  and its remedies for instability (a positive definite substitute for the Hessian, and line search)
+- its remark that Hessians are expensive to compute
 - the convergence-rate theorem for strongly convex functions
 - gradient descent with momentum, and its optimal parameters
+- Nesterov acceleration, and stochastic gradient descent
 - its code and animations
 
 :::
