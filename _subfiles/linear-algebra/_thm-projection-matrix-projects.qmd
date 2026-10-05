@@ -24,10 +24,13 @@ $$
 \ba
 \matr{P}\,(\vecf{y} - \matr{P} \vecf{y})
 &= \matr{P} \vecf{y} - \matr{P}\,(\matr{P} \vecf{y})
-&& \text{(@thm-matmul-distrib, with the second term scaled by } -1 \text{)}
+&& \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
+\\
+&= \matr{P} \vecf{y} - (\matr{P} \matr{P})\,\vecf{y}
+&& \text{(@thm-matmul-assoc)}
 \\
 &= \matr{P} \vecf{y} - \matr{P}^2 \vecf{y}
-&& \text{(@thm-matmul-assoc, @def-matrix-power)}
+&& \text{(@def-matrix-power)}
 \\
 &= \matr{P} \vecf{y} - \matr{P} \vecf{y}
 && \text{(} \matr{P} \text{ is idempotent)}

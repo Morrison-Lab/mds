@@ -41,7 +41,8 @@ $$
 $$
 
 So for every $\vecf{b} \in \reals^p$,
-$\mX \vecf{b} = (\matr{H} \mX)\,\vecf{b} = \matr{H}\,(\mX \vecf{b})$ (@thm-matmul-assoc),
+$\mX \vecf{b} = (\matr{H} \mX)\,\vecf{b}$, since $\matr{H} \mX = \mX$,
+and $(\matr{H} \mX)\,\vecf{b} = \matr{H}\,(\mX \vecf{b})$ (@thm-matmul-assoc),
 which is in $\mathcal{C}(\matr{H})$.
 
 $\mathcal{C}(\mX)$ has dimension $p \ge 1$ (@thm-rank-dim),

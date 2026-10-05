@@ -48,13 +48,13 @@ $$
 && \text{(substitute)}
 \\
 &= \tp{\matr{Q}} \vecf{y} - \tp{\matr{Q}}\,(\matr{Q} \tp{\matr{Q}} \vecf{y})
-&& \text{(@thm-matmul-distrib, with the second term scaled by } -1 \text{)}
+&& \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
 \\
 &= \tp{\matr{Q}} \vecf{y} - (\tp{\matr{Q}} \matr{Q})\,\tp{\matr{Q}} \vecf{y}
 && \text{(@thm-matmul-assoc)}
 \\
 &= \tp{\matr{Q}} \vecf{y} - \matr{I}_r\,\tp{\matr{Q}} \vecf{y}
-&& \text{(first step)}
+&& \text{(} \tp{\matr{Q}} \matr{Q} = \matr{I}_r \text{, from the first part of the proof)}
 \\
 &= \tp{\matr{Q}} \vecf{y} - \tp{\matr{Q}} \vecf{y}
 && \text{(@thm-identity)}
@@ -92,7 +92,7 @@ $$
 && \text{(@thm-matmul-assoc)}
 \\
 &= \matr{Q}\,\matr{I}_r\,\tp{\matr{Q}}
-&& \text{(first step)}
+&& \text{(} \tp{\matr{Q}} \matr{Q} = \matr{I}_r \text{, from the first part of the proof)}
 \\
 &= \matr{Q} \tp{\matr{Q}}.
 && \text{(@thm-identity)}
