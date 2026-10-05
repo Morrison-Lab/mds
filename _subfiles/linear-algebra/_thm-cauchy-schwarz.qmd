@@ -27,8 +27,11 @@ Let $t \eqdef (\vecf{x} \cdot \vecf{y}) / \norm{\vecf{y}}^2$. Then
 $$
 \ba
 \norm{\vecf{x} - t\,\vecf{y}}^2
+&= \norm{\vecf{x} + (-1)\,(t\,\vecf{y})}^2
+&& \text{(} \vecf{x} - \vecf{v} = \vecf{x} + (-1)\,\vecf{v} \text{)}
+\\
 &= \norm{\vecf{x} + (-t)\,\vecf{y}}^2
-&& \text{(subtraction is adding } -1 \text{ times)}
+&& \text{(} (-1)\,(t\,\vecf{y}) = (-t)\,\vecf{y} \text{, entrywise)}
 \\
 &= \norm{\vecf{x}}^2 + 2\,\paren{\vecf{x} \cdot ((-t)\,\vecf{y})} + \norm{(-t)\,\vecf{y}}^2
 && \text{(@thm-norm-sum-square)}
@@ -38,6 +41,9 @@ $$
 \\
 &= \norm{\vecf{x}}^2 + 2\,(-t)\,(\vecf{x} \cdot \vecf{y}) + \paren{\abs{-t}\,\norm{\vecf{y}}}^2
 && \text{(@thm-norm-properties, part 2)}
+\\
+&= \norm{\vecf{x}}^2 + 2\,(-t)\,(\vecf{x} \cdot \vecf{y}) + \abs{-t}^2\,\norm{\vecf{y}}^2
+&& \text{(} (ab)^2 = a^2 b^2 \text{)}
 \\
 &= \norm{\vecf{x}}^2 - 2t\,(\vecf{x} \cdot \vecf{y}) + t^2\,\norm{\vecf{y}}^2
 && \text{(} 2\,(-t) = -2t \text{ and } \abs{-t}^2 = t^2 \text{)}
@@ -115,8 +121,11 @@ that is, when $\vecf{x} = t\,\vecf{y}$.
   &= \paren{\abs{s}\,\norm{\vecf{y}}}\,\norm{\vecf{y}}
   && \text{(regroup)}
   \\
-  &= \norm{\vecf{x}}\,\norm{\vecf{y}},
+  &= \norm{s\,\vecf{y}}\,\norm{\vecf{y}}
   && \text{(@thm-norm-properties, part 2)}
+  \\
+  &= \norm{\vecf{x}}\,\norm{\vecf{y}},
+  && \text{(} s\,\vecf{y} = \vecf{x} \text{)}
   \ea
   $$
 
