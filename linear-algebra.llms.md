@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 02:00:13 (PDT)
+Last modified: 2026-10-05 02:18:43 (PDT)
 
 ## 1 Vectors
 
@@ -710,7 +710,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024d](#ref-zhou2024vecsp)), used under the MIT License. The license text is:
+> This section is adapted from Zhou ([2024e](#ref-zhou2024vecsp)), used under the MIT License. The license text is:
 >
 > > Copyright (c) 2024 ucla-biostat-216
 > >
@@ -1141,7 +1141,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024c](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)).
+> This section is adapted from Zhou ([2024d](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)).
 
 > **NOTE:**
 >
@@ -1303,7 +1303,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#sec-fundamental-theorem) are adapted from Zhou ([2024b](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 27](#thm-rank-nullity)) instead.
+> This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#sec-fundamental-theorem) are adapted from Zhou ([2024c](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 27](#thm-rank-nullity)) instead.
 
 > **NOTE:**
 >
@@ -1673,7 +1673,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024e](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof of the triangle inequality to class; it is written out here.
+> This section is adapted from Zhou ([2024f](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof of the triangle inequality to class; it is written out here.
 
 > **NOTE:**
 >
@@ -1793,7 +1793,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> Like [Section 2.15](#sec-cauchy-schwarz), this section is adapted from Zhou ([2024e](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
+> Like [Section 2.15](#sec-cauchy-schwarz), this section is adapted from Zhou ([2024f](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
 
 > **NOTE:**
 >
@@ -2969,7 +2969,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> This section is adapted from the second half of Zhou ([2024b](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 52](#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 38](#thm-orthogonal-direct-sum).
+> This section is adapted from the second half of Zhou ([2024c](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 52](#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 38](#thm-orthogonal-direct-sum).
 
 > **NOTE:**
 >
@@ -3090,7 +3090,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024a](#ref-zhou2024matinv)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 30](#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover.
+> This section is adapted from Zhou ([2024b](#ref-zhou2024matinv)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 30](#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover.
 
 > **NOTE:**
 >
@@ -3370,6 +3370,184 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > the hat matrix of the intercept-only model ([Example 101](#exm-hat-matrix)). Another generalized inverse, \\\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}\\, which is one because \\({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}\\ and that times \\{\mathbf{X}}^{\top} \mathbf{X}\\ is again \\\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, gives \\\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}\\ and the same \\\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}\\, as [Theorem 80](#thm-projector-generalized-inverse) says it must. Both project onto \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, the column space of the intercept-only design.
 
+### 9.3 Solving linear systems and least squares
+
+> **NOTE:**
+>
+> This section is adapted from Zhou ([2024b](#ref-zhou2024matinv)) and Zhou ([2024a](#ref-zhou2024ls)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The first source states that every invertible matrix has an LU factorization; that is false without reordering rows (the \\2 \times 2\\ row swap \\\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ has none), so this section states only how an LU factorization, when one exists, solves a system. The least squares results are proved here from the closest-point theorem ([Theorem 69](#thm-closest-point)) rather than by differentiating, and the QR factorization is derived from Gram-Schmidt ([Theorem 48](#thm-gram-schmidt)).
+
+> **NOTE:**
+>
+> **Definition 72 (Triangular matrix)** A square matrix \\\mathbf{U}\\ is **upper triangular** if every entry below the diagonal is \\0\\: \\u\_{ij} = 0\\ whenever \\i \> j\\. A square matrix \\\mathbf{L}\\ is **lower triangular** if every entry above the diagonal is \\0\\: \\\ell\_{ij} = 0\\ whenever \\i \< j\\. A lower triangular matrix whose diagonal entries are all \\1\\ is **unit lower triangular**.
+
+> **NOTE:**
+>
+> **Example 121 (Triangular and not)**  
+>
+> - \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ is upper triangular: its entries below the diagonal, in positions \\(2, 1)\\, \\(3, 1)\\ and \\(3, 2)\\, are \\0\\.
+> - \\\begin{bmatrix} 1 & 0 \\ 4 & 1 \end{bmatrix}\\ is unit lower triangular.
+> - A diagonal matrix ([Definition 48](#def-diagonal-matrix)) is both upper and lower triangular.
+> - \\\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ is neither: its \\(2, 1)\\ entry is not \\0\\, and neither is its \\(1, 2)\\ entry.
+
+> **NOTE:**
+>
+> **Theorem 81 (Solving a triangular system by substitution)** Let \\\mathbf{U}\\ be an \\n \times n\\ upper triangular matrix ([Definition 72](#def-triangular-matrix)) whose diagonal entries \\u\_{11}, \ldots, u\_{nn}\\ are all nonzero. For every \\\tilde{b} \in \mathbb{R}^n\\, the system \\\mathbf{U} \tilde{x} = \tilde{b}\\ has exactly one solution, given for \\i = n, n - 1, \ldots, 1\\ in turn by
+>
+> \\ x_i = \frac{1}{u\_{ii}} \mathopen{}\left(b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j\right)\mathclose{} \\
+>
+> (**back substitution**). Likewise, if \\\mathbf{L}\\ is lower triangular with nonzero diagonal, \\\mathbf{L} \tilde{y} = \tilde{b}\\ has exactly one solution, given for \\i = 1, \ldots, n\\ by \\y_i = \frac{1}{\ell\_{ii}} \mathopen{}\left(b_i - \sum\_{j=1}^{i-1} \ell\_{ij}\\y_j\right)\mathclose{}\\ (**forward substitution**).
+
+> **NOTE:**
+>
+> *Proof*. Row \\i\\ of \\\mathbf{U} \tilde{x} = \tilde{b}\\ reads
+>
+> \\ \begin{aligned} b_i &= \sum\_{j=1}^{n} u\_{ij}\\x_j && \text{(@def-matvec-mult)} \\ &= \sum\_{j=i}^{n} u\_{ij}\\x_j && \text{(} u\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= u\_{ii}\\x_i + \sum\_{j=i+1}^{n} u\_{ij}\\x_j. && \text{(split off the } j = i \text{ term)} \end{aligned} \\
+>
+> This equation is equivalent to each of
+>
+> \\ \begin{aligned} u\_{ii}\\x_i &= b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j && \text{(subtract the sum from both sides)} \\ x_i &= \frac{1}{u\_{ii}} \mathopen{}\left(b_i - \sum\_{j=i+1}^{n} u\_{ij}\\x_j\right)\mathclose{}. && \text{(divide by } u\_{ii} \ne 0 \text{)} \end{aligned} \\
+>
+> Row \\n\\ involves only \\x_n\\, so it fixes \\x_n\\; once \\x\_{i+1}, \ldots, x_n\\ are fixed, row \\i\\ fixes \\x_i\\. So the rows, taken from the last to the first, hold exactly when \\\tilde{x}\\ is the vector the formula builds: there is one solution, and only one. For \\\mathbf{L}\\, row \\i\\ reads \\\sum\_{j=1}^{i-1} \ell\_{ij}\\y_j + \ell\_{ii}\\y_i = b_i\\, and the same argument runs from the first row to the last.
+
+> **NOTE:**
+>
+> **Example 122 (Back substitution on a \\3 \times 3\\ system)** Solve \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \tilde{x} = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}\\:
+>
+> 1.  \\x_3 = \frac{1}{-1} \cdot 1 = -1\\;
+> 2.  \\x_2 = \frac{1}{1/2} \mathopen{}\left(1 - \tfrac{1}{2} \cdot(-1)\right)\mathclose{} = 2 \cdot\tfrac{3}{2} = 3\\;
+> 3.  \\x_1 = \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclose{} = \frac{1}{2} \cdot 4 = 2\\.
+>
+> So \\\tilde{x} = (2, 3, -1)\\. Without a nonzero diagonal the method fails: \\\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \tilde{x} = (1, 1)\\ has no solution, since its second row reads \\0 = 1\\.
+
+> **NOTE:**
+>
+> **Theorem 82 (QR factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = n\\. Then
+>
+> \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{Q}}\_{m \times n}\\\underbrace{\mathbf{R}}\_{n \times n}, \\
+>
+> where the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 13](#def-orthonormal-vectors)) and \\\mathbf{R}\\ is upper triangular ([Definition 72](#def-triangular-matrix)) with positive diagonal entries.
+
+> **NOTE:**
+>
+> *Proof*. The \\n\\ columns \\\tilde{a}\_1, \ldots, \tilde{a}\_n\\ of \\\mathbf{A}\\ are linearly independent ([Definition 27](#def-full-column-rank)), so the Gram-Schmidt process ([Definition 41](#def-gram-schmidt)) runs all \\n\\ steps and gives orthonormal \\\tilde{q}\_1, \ldots, \tilde{q}\_n\\ ([Theorem 48](#thm-gram-schmidt), parts 1 and 3); let \\\mathbf{Q}\\ have these columns. At step \\i\\, \\\tilde{\tilde{q}}\_i \ne \tilde{0}\\, and rearranging the orthogonalize step,
+>
+> \\ \begin{aligned} \tilde{a}\_i &= \tilde{\tilde{q}}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(add the sum to both sides of the orthogonalize step)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j. && \text{(normalize step: } \tilde{\tilde{q}}\_i = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i \text{)} \end{aligned} \\
+>
+> Let \\\mathbf{R}\\ be the \\n \times n\\ matrix with \\r\_{ji} = \tilde{q}\_j \cdot \tilde{a}\_i\\ for \\j \< i\\, \\r\_{ii} = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} \> 0\\, and \\r\_{ji} = 0\\ for \\j \> i\\; it is upper triangular with positive diagonal. Column \\i\\ of \\\mathbf{Q} \mathbf{R}\\ is \\\mathbf{Q}\\ times column \\i\\ of \\\mathbf{R}\\ ([Definition 20](#def-matrix-mult)), and
+>
+> \\ \begin{aligned} \mathbf{Q}\\(r\_{1i}, \ldots, r\_{ni}) &= \sum\_{j=1}^{n} r\_{ji}\\\tilde{q}\_j && \text{(@thm-matvec-columns)} \\ &= \sum\_{j=1}^{i} r\_{ji}\\\tilde{q}\_j && \text{(} r\_{ji} = 0 \text{ for } j \> i \text{)} \\ &= r\_{ii}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} r\_{ji}\\\tilde{q}\_j && \text{(split off the } j = i \text{ term)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(the entries of } \mathbf{R} \text{)} \\ &= \tilde{a}\_i. && \text{(the display)} \end{aligned} \\
+>
+> So \\\mathbf{Q} \mathbf{R} = \mathbf{A}\\.
+
+> **NOTE:**
+>
+> **Example 123 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\tilde{a}\_1 = (1, 1, 0)\\, \\\tilde{a}\_2 = (1, 0, 1)\\, \\\tilde{a}\_3 = (0, 1, 1)\\, [Example 69](#exm-gram-schmidt) and [Example 71](#exm-thm-gram-schmidt) found \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\tilde{q}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\, \\\tilde{q}\_1 \cdot \tilde{a}\_2 = \tilde{q}\_1 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{2}}\\ and \\\tilde{q}\_2 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{6}}\\. So
+>
+> \\ \mathbf{R} = \begin{bmatrix} \sqrt{2} & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}} \\ 0 & \sqrt{3/2} & \tfrac{1}{\sqrt{6}} \\ 0 & 0 & \tfrac{2}{\sqrt{3}} \end{bmatrix}. \\
+>
+> As a check on the second column, \\\tfrac{1}{\sqrt{2}}\\\tilde{q}\_1 + \sqrt{3/2}\\\tilde{q}\_2 = \tfrac{1}{2}\\(1, 1, 0) + \tfrac{1}{2}\\(1, -1, 2) = (1, 0, 1) = \tilde{a}\_2\\.
+
+> **NOTE:**
+>
+> **Definition 73 (Least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\tilde{b} \in \mathbb{R}^m\\. A **least squares solution** of \\\mathbf{A} \tilde{x} = \tilde{b}\\ is a vector \\\hat{\tilde{x}} \in \mathbb{R}^n\\ such that
+>
+> \\ \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\right\rVert\mathclose{} \quad \text{for every } \tilde{x} \in \mathbb{R}^n. \\
+>
+> The equations \\{\mathbf{A}}^{\top} \mathbf{A} \tilde{x} = {\mathbf{A}}^{\top} \tilde{b}\\ are the **normal equations**.
+
+> **NOTE:**
+>
+> **Example 124 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\tilde{b} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 71](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\, \\\mathopen{}\left\lVert\tilde{b} - \mathbf{A} x\right\rVert\mathclose{}^2 = (1 - x)^2 + (3 - x)^2 = 2\\(x - 2)^2 + 2\\, which is smallest at \\x = 2\\, so \\\hat{x} = 2\\ is the least squares solution. The value \\x = 1\\ is not one: it gives \\0 + 4 = 4 \> 2\\. The normal equations read \\2x = 4\\, and their solution is \\x = 2\\ too.
+
+> **NOTE:**
+>
+> **Theorem 83 (Least squares solutions solve the normal equations)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\tilde{b} \in \mathbb{R}^m\\.
+>
+> 1.  \\\hat{\tilde{x}}\\ is a least squares solution ([Definition 73](#def-least-squares)) exactly when it solves the normal equations \\{\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}} = {\mathbf{A}}^{\top} \tilde{b}\\.
+> 2.  The normal equations are consistent ([Definition 71](#def-consistent-system)).
+> 3.  Every least squares solution gives the same fitted vector \\\mathbf{A} \hat{\tilde{x}}\\: the orthogonal projection of \\\tilde{b}\\ onto \\\mathcal{C}(\mathbf{A})\\ ([Definition 68](#def-orthogonal-projection)).
+> 4.  The least squares solution is unique exactly when \\\operatorname{rank}(\mathbf{A}) = n\\, and then \\\hat{\tilde{x}} = ({\mathbf{A}}^{\top} \mathbf{A})^{-1} {\mathbf{A}}^{\top} \tilde{b}\\.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\tilde{u}\\ be the orthogonal projection of \\\tilde{b}\\ onto \\\mathcal{C}(\mathbf{A})\\. The vectors \\\mathbf{A} \tilde{x}\\, as \\\tilde{x}\\ ranges over \\\mathbb{R}^n\\, are exactly the points of \\\mathcal{C}(\mathbf{A})\\ ([Definition 32](#def-column-space)). **Least squares solutions are the solutions of \\\mathbf{A} \tilde{x} = \tilde{u}\\.** If \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\, then for every \\\tilde{x}\\, \\\mathbf{A} \tilde{x} \in \mathcal{C}(\mathbf{A})\\, so \\\mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{b} - \tilde{u}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\right\rVert\mathclose{}\\ ([Theorem 69](#thm-closest-point)), and \\\hat{\tilde{x}}\\ is a least squares solution. Conversely, let \\\hat{\tilde{x}}\\ be a least squares solution. \\\tilde{u} \in \mathcal{C}(\mathbf{A})\\, so \\\tilde{u} = \mathbf{A} \tilde{x}\_0\\ for some \\\tilde{x}\_0\\ ([Definition 32](#def-column-space)), and
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} &\le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\_0\right\rVert\mathclose{} && \text{(@def-least-squares)} \\ &= \mathopen{}\left\lVert\tilde{b} - \tilde{u}\right\rVert\mathclose{} && \text{(} \tilde{u} = \mathbf{A} \tilde{x}\_0 \text{)} \\ &\le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{}, && \text{(@thm-closest-point, with } \tilde{w} = \mathbf{A} \hat{\tilde{x}} \in \mathcal{C}(\mathbf{A}) \text{)} \end{aligned} \\
+>
+> so the last inequality is an equality, and the equality case of [Theorem 69](#thm-closest-point) gives \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\.
+>
+> **Parts 1 and 3.** \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\ holds exactly when \\\tilde{b} - \mathbf{A} \hat{\tilde{x}} \in \mathcal{C}(\mathbf{A})^\perp\\: if \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\, then \\\tilde{b} - \tilde{u} \in \mathcal{C}(\mathbf{A})^\perp\\ ([Definition 68](#def-orthogonal-projection)); conversely, if \\\tilde{b} - \mathbf{A} \hat{\tilde{x}} \in \mathcal{C}(\mathbf{A})^\perp\\, then \\\tilde{b} = \mathbf{A} \hat{\tilde{x}} + (\tilde{b} - \mathbf{A} \hat{\tilde{x}})\\ is a split into \\\mathcal{C}(\mathbf{A})\\ and \\\mathcal{C}(\mathbf{A})^\perp\\, so \\\mathbf{A} \hat{\tilde{x}} = \tilde{u}\\ by the uniqueness in [Theorem 38](#thm-orthogonal-direct-sum). And \\\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\\ ([Theorem 37](#thm-complement-null-space)), where
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top}\\(\tilde{b} - \mathbf{A} \hat{\tilde{x}}) &= {\mathbf{A}}^{\top} \tilde{b} - {\mathbf{A}}^{\top}\\(\mathbf{A} \hat{\tilde{x}}) && \text{(@thm-scalar-matmul)} \\ &= {\mathbf{A}}^{\top} \tilde{b} - {\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}}, && \text{(@thm-matmul-assoc)} \end{aligned} \\
+>
+> which is \\\tilde{0}\_n\\ exactly when the normal equations hold.
+>
+> **Part 2.** The vector \\\tilde{x}\_0\\ above satisfies \\\mathbf{A} \tilde{x}\_0 = \tilde{u}\\, so it is a least squares solution, and it solves the normal equations by part 1.
+>
+> **Part 4.** The least squares solutions are exactly the solutions of \\\mathbf{A} \tilde{x} = \tilde{u}\\, a consistent system, so there is exactly one when \\\operatorname{rank}(\mathbf{A}) = n\\ and more than one otherwise ([Corollary 6](#cor-solution-unique)). When \\\operatorname{rank}(\mathbf{A}) = n\\, \\{\mathbf{A}}^{\top} \mathbf{A}\\ is invertible ([Theorem 67](#thm-gram-invertible)), and with \\\mathbf{M} \stackrel{\text{def}}{=}{\mathbf{A}}^{\top} \mathbf{A}\\,
+>
+> \\ \begin{aligned} \hat{\tilde{x}} &= \mathbf{I}\_n\\\hat{\tilde{x}} && \text{(@thm-identity)} \\ &= (\mathbf{M}^{-1} \mathbf{M})\\\hat{\tilde{x}} && \text{(@def-matrix-inverse)} \\ &= \mathbf{M}^{-1}\\(\mathbf{M} \hat{\tilde{x}}) && \text{(@thm-matmul-assoc)} \\ &= \mathbf{M}^{-1}\\{\mathbf{A}}^{\top} \tilde{b}. && \text{(the normal equations)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 125 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 100](#exm-gram-invertible)) and \\\tilde{b} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 9](#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 100](#exm-gram-invertible)), and \\{\mathbf{A}}^{\top} \tilde{b} = (1 + 2 + 2,\\ 1 + 4 + 6) = (5, 11)\\, so
+>
+> \\ \hat{\tilde{x}} = \frac{1}{6} \mathopen{}\left(14 \cdot 5 - 6 \cdot 11,\\ -6 \cdot 5 + 3 \cdot 11\right)\mathclose{} = \frac{1}{6}\\(4, 3) = \mathopen{}\left(\tfrac{2}{3}, \tfrac{1}{2}\right)\mathclose{}. \\
+>
+> The fitted values are \\\mathbf{A} \hat{\tilde{x}} = \mathopen{}\left(\tfrac{7}{6}, \tfrac{5}{3}, \tfrac{13}{6}\right)\mathclose{}\\, and the residuals \\\tilde{b} - \mathbf{A} \hat{\tilde{x}} = \mathopen{}\left(-\tfrac{1}{6}, \tfrac{1}{3}, -\tfrac{1}{6}\right)\mathclose{}\\ are orthogonal to both columns of \\\mathbf{A}\\: \\-\tfrac{1}{6} + \tfrac{1}{3} - \tfrac{1}{6} = 0\\ and \\-\tfrac{1}{6} + \tfrac{2}{3} - \tfrac{1}{2} = 0\\.
+
+> **NOTE:**
+>
+> **Example 126 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 9](#exm-rank)) and \\\tilde{b} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \tilde{b} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector \\\mathbf{A} \hat{\tilde{x}} = (x_1 + 2 x_2)\\(1, 1, 1) = \tfrac{5}{3}\\(1, 1, 1)\\, as part 3 says.
+
+> **NOTE:**
+>
+> **Theorem 84 (Solving least squares by QR)** Let \\\mathbf{A}\\ be \\m \times n\\ with \\\operatorname{rank}(\mathbf{A}) = n\\, with QR factorization \\\mathbf{A} = \mathbf{Q} \mathbf{R}\\ ([Theorem 82](#thm-qr)), and let \\\tilde{b} \in \mathbb{R}^m\\. The least squares solution ([Definition 73](#def-least-squares)) is the unique solution of
+>
+> \\ \underbrace{\mathbf{R}}\_{n \times n}\\\hat{\tilde{x}} = \underbrace{{\mathbf{Q}}^{\top}}\_{n \times m}\\\tilde{b}, \\
+>
+> which back substitution computes ([Theorem 81](#thm-back-substitution)). When \\m = n\\, it is the unique solution of \\\mathbf{A} \tilde{x} = \tilde{b}\\.
+
+> **NOTE:**
+>
+> *Proof*. \\\mathbf{R}\\ is upper triangular with positive diagonal, so \\\mathbf{R} \tilde{x} = {\mathbf{Q}}^{\top} \tilde{b}\\ has exactly one solution \\\hat{\tilde{x}}\\ ([Theorem 81](#thm-back-substitution)). \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n\\, as in the proof of [Theorem 70](#thm-projector-onb). Then
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}} &= {(\mathbf{Q} \mathbf{R})}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\tilde{x}} && \text{(substitute } \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\tilde{x}} && \text{(@thm-transpose-product)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \mathbf{Q})\\(\mathbf{R} \hat{\tilde{x}}) && \text{(@thm-matmul-assoc)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{I}\_n\\(\mathbf{R} \hat{\tilde{x}}) && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n \text{)} \\ &= {\mathbf{R}}^{\top}\\(\mathbf{R} \hat{\tilde{x}}) && \text{(@thm-identity)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \tilde{b}) && \text{(} \mathbf{R} \hat{\tilde{x}} = {\mathbf{Q}}^{\top} \tilde{b} \text{)} \\ &= ({\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top})\\\tilde{b} && \text{(@thm-matmul-assoc)} \\ &= {(\mathbf{Q} \mathbf{R})}^{\top}\\\tilde{b} && \text{(@thm-transpose-product)} \\ &= {\mathbf{A}}^{\top} \tilde{b}, && \text{(} \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \end{aligned} \\
+>
+> so \\\hat{\tilde{x}}\\ solves the normal equations and is the least squares solution ([Theorem 83](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\, \\\operatorname{rank}(\mathbf{A}) = n = m\\, so \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent for every \\\tilde{b}\\ ([Corollary 6](#cor-solution-unique), part 1), so its solution leaves residual \\\tilde{0}\\, is a least squares solution, and is therefore \\\hat{\tilde{x}}\\.
+
+> **NOTE:**
+>
+> **Example 127 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\tilde{b}\\ of [Example 125](#exm-normal-equations), Gram-Schmidt gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then \\\tilde{q}\_1 \cdot (1, 2, 3) = \tfrac{6}{\sqrt{3}} = 2\sqrt{3}\\, \\\tilde{\tilde{q}}\_2 = (1, 2, 3) - 2\\(1, 1, 1) = (-1, 0, 1)\\ with norm \\\sqrt{2}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(-1, 0, 1)\\. So
+>
+> \\ \mathbf{R} = \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix}, \qquad {\mathbf{Q}}^{\top} \tilde{b} = \mathopen{}\left(\tfrac{1 + 2 + 2}{\sqrt{3}},\\ \tfrac{-1 + 0 + 2}{\sqrt{2}}\right)\mathclose{} = \mathopen{}\left(\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}\right)\mathclose{}. \\
+>
+> Back substitution gives \\x_2 = \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} = \tfrac{1}{2}\\ and \\x_1 = \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}\right)\mathclose{} = \tfrac{5}{3} - 1 = \tfrac{2}{3}\\, the solution found in [Example 125](#exm-normal-equations).
+
+> **NOTE:**
+>
+> **Definition 74 (LU factorization)** An **LU factorization** of an \\n \times n\\ matrix \\\mathbf{A}\\ is a product \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ with \\\mathbf{L}\\ unit lower triangular and \\\mathbf{U}\\ upper triangular ([Definition 72](#def-triangular-matrix)).
+
+> **NOTE:**
+>
+> **Example 128 (An LU factorization of a \\3 \times 3\\ matrix)** Let \\\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}\\, \\\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}\\ (unit lower triangular) and \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ (upper triangular). By [Definition 20](#def-matrix-mult), entry \\(i, j)\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\u\_{kj}\\, so row \\i\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\ times row \\k\\ of \\\mathbf{U}\\. Row 1 is \\1 \cdot(2, 1, -1) = (2, 1, -1)\\; row 2 is \\-\tfrac{3}{2}\\(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\\, and row 3 is \\-(2, 1, -1) + 4\\(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\\. These are the rows of \\\mathbf{A}\\, so \\\mathbf{L} \mathbf{U} = \mathbf{A}\\ is an LU factorization. The below-diagonal entries of \\\mathbf{L}\\ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce \\\mathbf{A}\\ to \\\mathbf{U}\\.
+
+> **NOTE:**
+>
+> **Example 129 (An invertible matrix with no LU factorization)** \\\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ is invertible: \\\mathbf{P}^2 = \mathbf{I}\_2\\, so \\\mathbf{P}^{-1} = \mathbf{P}\\ ([Definition 49](#def-matrix-inverse)); but it has no LU factorization. If \\\mathbf{P} = \mathbf{L} \mathbf{U}\\, the \\(1, 1)\\ entry gives \\0 = 1 \cdot u\_{11}\\, so \\u\_{11} = 0\\, and then the \\(2, 1)\\ entry gives \\1 = \ell\_{21}\\u\_{11} = 0\\, which is impossible. Swapping the two rows first removes the obstacle: the swapped matrix is \\\mathbf{I}\_2 = \mathbf{I}\_2\\\mathbf{I}\_2\\.
+
+> **NOTE:**
+>
+> **Theorem 85 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 74](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\tilde{b} \in \mathbb{R}^n\\ the system \\\mathbf{A} \tilde{x} = \tilde{b}\\ has exactly one solution: solve \\\mathbf{L} \tilde{y} = \tilde{b}\\ by forward substitution, then \\\mathbf{U} \tilde{x} = \tilde{y}\\ by back substitution ([Theorem 81](#thm-back-substitution)).
+
+> **NOTE:**
+>
+> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 81](#thm-back-substitution)). If \\\tilde{y}\\ and \\\tilde{x}\\ are those solutions, then \\\mathbf{A} \tilde{x} = \mathbf{L}\\(\mathbf{U} \tilde{x}) = \mathbf{L} \tilde{y} = \tilde{b}\\ ([Theorem 7](#thm-matmul-assoc)), so \\\tilde{x}\\ is a solution. Conversely, if \\\mathbf{A} \tilde{x} = \tilde{b}\\, then \\\tilde{y} \stackrel{\text{def}}{=}\mathbf{U} \tilde{x}\\ satisfies \\\mathbf{L} \tilde{y} = \mathbf{L}\\(\mathbf{U} \tilde{x}) = (\mathbf{L} \mathbf{U})\\\tilde{x} = \mathbf{A} \tilde{x} = \tilde{b}\\ ([Theorem 7](#thm-matmul-assoc)), so \\\tilde{y}\\ is the unique solution of that system, and \\\tilde{x}\\ is then the unique solution of \\\mathbf{U} \tilde{x} = \tilde{y}\\.
+
+> **NOTE:**
+>
+> **Example 130 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 128](#exm-lu), solve \\\mathbf{A} \tilde{x} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \tilde{y} = (8, -11, -3)\\ gives \\y_1 = 8\\, \\y_2 = -11 + \tfrac{3}{2} \cdot 8 = 1\\, \\y_3 = -3 + 8 - 4 \cdot 1 = 1\\. Back substitution on \\\mathbf{U} \tilde{x} = (8, 1, 1)\\ is [Example 122](#exm-back-substitution), which gives \\\tilde{x} = (2, 3, -1)\\. As a check, \\\mathbf{A}\\(2, 3, -1) = (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) = (8, -11, -3)\\.
+
 ## 10 Further reading
 
 - Strang ([2023](#ref-strang2023linear)) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.
@@ -3398,14 +3576,16 @@ Searle, Shayle R, and Andre I Khuri. 2017. *Matrix Algebra Useful for Statistics
 
 Strang, Gilbert. 2023. *Introduction to Linear Algebra*. 6th ed. Wellesley-Cambridge Press. <https://math.mit.edu/~gs/linearalgebra/>.
 
-Zhou, Hua. 2024a. *Linear Equations and Matrix Inverses*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/07-matinv/07-matinv.html>.
+Zhou, Hua. 2024a. *Least Squares*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/08-ls/08-ls.html>.
 
-Zhou, Hua. 2024b. *Orthogonal Projections*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>.
+Zhou, Hua. 2024b. *Linear Equations and Matrix Inverses*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/07-matinv/07-matinv.html>.
 
-Zhou, Hua. 2024c. *Rank and Nullity*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html>.
+Zhou, Hua. 2024c. *Orthogonal Projections*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>.
 
-Zhou, Hua. 2024d. *Vector Space*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html>.
+Zhou, Hua. 2024d. *Rank and Nullity*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html>.
 
-Zhou, Hua. 2024e. *Vectors*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html>.
+Zhou, Hua. 2024e. *Vector Space*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html>.
+
+Zhou, Hua. 2024f. *Vectors*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html>.
 
 Back to top
