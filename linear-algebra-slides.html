@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 02:50:19 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 03:22:45 (PDT)</p>
 </section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -1241,7 +1241,7 @@ Figure&nbsp;1: The graph of <span class="math inline">\(f(x_1, x_2) = w_1 x_1 + 
 <p><strong>Source and license</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024vecsp">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024f</a>)</span>, used under the MIT License. The license text is:</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024vecsp">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024g</a>)</span>, used under the MIT License. The license text is:</p>
 <blockquote>
 <p>Copyright (c) 2024 ucla-biostat-216</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
@@ -2637,7 +2637,7 @@ c\,\tilde{u}
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>This section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024g</a>)</span>, used under the MIT License (see the license text in <a href="#/sec-subspaces" class="quarto-xref">Section&nbsp;2.9</a>). The source leaves the proof of the triangle inequality to class; it is written out here.</p>
+<p>This section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024h</a>)</span>, used under the MIT License (see the license text in <a href="#/sec-subspaces" class="quarto-xref">Section&nbsp;2.9</a>). The source leaves the proof of the triangle inequality to class; it is written out here.</p>
 </div>
 </div>
 </div>
@@ -2881,7 +2881,7 @@ c\,\tilde{u}
 <p><strong>Source</strong></p>
 </div>
 <div class="callout-content">
-<p>Like <a href="#/sec-cauchy-schwarz" class="quarto-xref">Section&nbsp;2.15</a>, this section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024g</a>)</span>, used under the MIT License (see the license text in <a href="#/sec-subspaces" class="quarto-xref">Section&nbsp;2.9</a>). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.</p>
+<p>Like <a href="#/sec-cauchy-schwarz" class="quarto-xref">Section&nbsp;2.15</a>, this section is adapted from <span class="citation" data-cites="zhou2024vector">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024h</a>)</span>, used under the MIT License (see the license text in <a href="#/sec-subspaces" class="quarto-xref">Section&nbsp;2.9</a>). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.</p>
 </div>
 </div>
 </div>
@@ -6922,6 +6922,371 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 \]</span></p>
 <p>For <span class="math inline">\(k = 2\)</span> this gives <span class="math inline">\(\tfrac{1}{2} \begin{bmatrix} 10 &amp; 8 \\ 8 &amp; 10 \end{bmatrix} = \begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span>, which matches <span class="math inline">\(\mathbf{A}^2\)</span> in <a href="#/exm-eigen-shift-power" class="quarto-xref">Example&nbsp;135</a>.</p>
 </div>
+<h3 id="sec-cholesky">Gram matrices, Schur complements and Cholesky</h3>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Source</strong></p>
+</div>
+<div class="callout-content">
+<p>This section is adapted from <span class="citation" data-cites="zhou2024pd">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024f</a>)</span>, used under the MIT License (see the license text in <a href="#/sec-subspaces" class="quarto-xref">Section&nbsp;2.9</a>). The source’s eigenvalue and quadratic-form characterizations of definiteness are already on this page (<a href="#/thm-definite-eigenvalues" class="quarto-xref">Theorem&nbsp;62</a>). These parts of the source are left out:</p>
+<ul>
+<li>its covariance test, which needs probability</li>
+<li>its material on minimization</li>
+<li>its positive semidefinite version of the Schur complement test</li>
+<li>its pivot test</li>
+<li>its Hadamard-product “Schur lemma”</li>
+<li>its notes on the LU factorization and computational cost</li>
+</ul>
+<p>The source leaves the Schur complement test unproved; it is proved here from a block expansion of the quadratic form, and the Cholesky factorization is derived from it.</p>
+</div>
+</div>
+</div>
+</section><section class="slide level2 scrollable"><div id="thm-pd-gram" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 95 (Definite matrices are Gram matrices)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> matrix.</p>
+<ol type="1">
+<li>
+<span class="math inline">\(\mathbf{A}\)</span> is positive semidefinite (<a href="#/def-positive-semidefinite" class="quarto-xref">Definition&nbsp;63</a>) exactly when <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span> for some matrix <span class="math inline">\(\mathbf{B}\)</span> with <span class="math inline">\(p\)</span> columns.</li>
+<li>
+<span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="#/def-positive-definite" class="quarto-xref">Definition&nbsp;64</a>) exactly when <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span> for some matrix <span class="math inline">\(\mathbf{B}\)</span> with <span class="math inline">\(p\)</span> linearly independent columns.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span>.</strong> <span class="math inline">\(\mathbf{A}\)</span> is symmetric, since <span class="math inline">\({({\mathbf{B}}^{\top} \mathbf{B})}^{\top} = {\mathbf{B}}^{\top}\,{({\mathbf{B}}^{\top})}^{\top} = {\mathbf{B}}^{\top} \mathbf{B}\)</span> (<a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;10</a>, <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>). For any <span class="math inline">\(\tilde{x}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{x}}^{\top} \mathbf{A} \tilde{x}
+&amp;= {\tilde{x}}^{\top}\,{\mathbf{B}}^{\top}\,\mathbf{B} \tilde{x}
+&amp;&amp; \text{(substitute } \mathbf{A} \text{)}
+\\
+&amp;= {(\mathbf{B} \tilde{x})}^{\top}\,(\mathbf{B} \tilde{x})
+&amp;&amp; \text{(@thm-transpose-product, @thm-matmul-assoc)}
+\\
+&amp;= \mathopen{}\left\lVert\mathbf{B} \tilde{x}\right\rVert\mathclose{}^2
+&amp;&amp; \text{(@eq-l2-norm, squared)}
+\\
+&amp;\ge 0.
+&amp;&amp; \text{(@thm-norm-properties)}
+\end{aligned}
+\]</span></p>
+<p>If the columns of <span class="math inline">\(\mathbf{B}\)</span> are linearly independent, then <span class="math inline">\(\mathcal{N}(\mathbf{B}) = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<span class="math inline">\(\mathbf{B} \tilde{x}\)</span> is the combination of the columns with coefficients <span class="math inline">\(x_j\)</span>, <a href="#/thm-matvec-columns" class="quarto-xref">Theorem&nbsp;13</a>, and only the zero combination is <span class="math inline">\(\tilde{0}\)</span>, <a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;25</a>), so for <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>, <span class="math inline">\(\mathbf{B} \tilde{x}\ne \tilde{0}\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\mathbf{B} \tilde{x}\right\rVert\mathclose{}^2 &gt; 0\)</span> (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;41</a>, part 1).</p>
+<p><strong>Only if.</strong> Let <span class="math inline">\(\mathbf{A}\)</span> be positive semidefinite. It is symmetric, so <span class="math inline">\(\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}\)</span> (<a href="#/thm-spectral" class="quarto-xref">Theorem&nbsp;59</a>), and every <span class="math inline">\(\lambda_i \ge 0\)</span> (<a href="#/thm-definite-eigenvalues" class="quarto-xref">Theorem&nbsp;62</a>). Let <span class="math inline">\(\mathbf{\Lambda}^{1/2} \stackrel{\text{def}}{=}\operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})\)</span>, which is symmetric, with <span class="math inline">\(\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda}\)</span> (the product of diagonal matrices multiplies their diagonals, as in the proof of <a href="#/thm-diagonalizable-powers" class="quarto-xref">Theorem&nbsp;94</a>), and let <span class="math inline">\(\mathbf{B} \stackrel{\text{def}}{=}\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{B}}^{\top} \mathbf{B}
+&amp;= {({\mathbf{Q}}^{\top})}^{\top}\,{(\mathbf{\Lambda}^{1/2})}^{\top}\,\mathbf{\Lambda}^{1/2} {\mathbf{Q}}^{\top}
+&amp;&amp; \text{(@thm-transpose-product)}
+\\
+&amp;= \mathbf{Q}\,\mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2}\,{\mathbf{Q}}^{\top}
+&amp;&amp; \text{(@def-matrix-transpose; } \mathbf{\Lambda}^{1/2} \text{ is symmetric)}
+\\
+&amp;= \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}
+&amp;&amp; \text{(} \mathbf{\Lambda}^{1/2} \mathbf{\Lambda}^{1/2} = \mathbf{\Lambda} \text{)}
+\\
+&amp;= \mathbf{A}.
+&amp;&amp; \text{(@thm-spectral)}
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\mathbf{A}\)</span> is positive definite, it is positive semidefinite (<a href="#/rem-positive-definite-symmetry" class="quarto-xref">Remark&nbsp;33</a>), so the same <span class="math inline">\(\mathbf{B}\)</span> gives <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span>; and every <span class="math inline">\(\lambda_i &gt; 0\)</span> (<a href="#/thm-definite-eigenvalues" class="quarto-xref">Theorem&nbsp;62</a>), so <span class="math inline">\(\mathbf{\Lambda}^{1/2}\)</span> is diagonal with nonzero diagonal, and invertible (its inverse is <span class="math inline">\(\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})\)</span>); <span class="math inline">\({\mathbf{Q}}^{\top}\)</span> is invertible with inverse <span class="math inline">\(\mathbf{Q}\)</span> (<a href="#/rem-orthogonal-matrix-columns" class="quarto-xref">Remark&nbsp;20</a>). So <span class="math inline">\(\mathbf{B}\)</span> is invertible (<a href="#/thm-inverse-product" class="quarto-xref">Theorem&nbsp;51</a>), and its <span class="math inline">\(p\)</span> columns are linearly independent (<a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;86</a>, <a href="#/def-rank" class="quarto-xref">Definition&nbsp;26</a>).</p>
+</div>
+</section><section class="slide level2"><div id="exm-pd-gram" class="theorem example">
+<p><span class="theorem-title"><strong>Example 145 (Gram factorizations)</strong></span> &nbsp;</p>
+<ul>
+<li>With <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 1 &amp; 1 \end{bmatrix}\)</span> (<span class="math inline">\(1 \times 2\)</span>), <span class="math inline">\({\mathbf{R}}^{\top} \mathbf{R} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, the positive semidefinite matrix of <a href="#/exm-positive-semidefinite" class="quarto-xref">Example&nbsp;92</a>; the two columns of <span class="math inline">\(\mathbf{R}\)</span>, <span class="math inline">\(1\)</span> and <span class="math inline">\(1\)</span>, are dependent, so part 2 does not apply to <span class="math inline">\(\mathbf{R}\)</span>; <span class="math inline">\({\mathbf{R}}^{\top} \mathbf{R}\)</span> is in fact not positive definite (<a href="#/exm-positive-definite" class="quarto-xref">Example&nbsp;93</a>).</li>
+<li>With <span class="math inline">\(\mathbf{X}= \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span>, whose columns are independent (<a href="#/exm-rank" class="quarto-xref">Example&nbsp;9</a>), <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 3 &amp; 6 \\ 6 &amp; 14 \end{bmatrix}\)</span> (<a href="#/exm-gram-invertible" class="quarto-xref">Example&nbsp;100</a>) is positive definite.</li>
+<li>
+<span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="#/exm-positive-definite" class="quarto-xref">Example&nbsp;93</a> is symmetric but not positive semidefinite, so by part 1 it is not <span class="math inline">\({\mathbf{B}}^{\top} \mathbf{B}\)</span> for any <span class="math inline">\(\mathbf{B}\)</span>.</li>
+</ul>
+</div>
+</section><section class="slide level2 scrollable"><div id="thm-pd-operations" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 96 (Operations that preserve definiteness)</strong></span> &nbsp;</p>
+<ol type="1">
+<li>If <span class="math inline">\(\mathbf{C}\)</span> is a <span class="math inline">\(p \times p\)</span> positive definite matrix (<a href="#/def-positive-definite" class="quarto-xref">Definition&nbsp;64</a>) and <span class="math inline">\(\mathbf{A}\)</span> is a <span class="math inline">\(p \times k\)</span> matrix with <span class="math inline">\(k\)</span> linearly independent columns, then the <span class="math inline">\(k \times k\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\)</span> is positive definite.</li>
+<li>If <span class="math inline">\(\mathbf{A}_1\)</span> and <span class="math inline">\(\mathbf{A}_2\)</span> are positive definite <span class="math inline">\(p \times p\)</span> matrices and <span class="math inline">\(\alpha_1, \alpha_2 &gt; 0\)</span>, then <span class="math inline">\(\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> is positive definite.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\)</span> is symmetric: <span class="math inline">\({({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A})}^{\top} = {\mathbf{A}}^{\top}\,{\mathbf{C}}^{\top}\,{({\mathbf{A}}^{\top})}^{\top} = {\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\)</span> (<a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;10</a>, twice; <span class="math inline">\(\mathbf{C}\)</span> symmetric; <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>). For <span class="math inline">\(\tilde{x}\ne \tilde{0}_k\)</span>, <span class="math inline">\(\mathbf{A} \tilde{x}\ne \tilde{0}_p\)</span>, since the columns of <span class="math inline">\(\mathbf{A}\)</span> are independent (<a href="#/thm-matvec-columns" class="quarto-xref">Theorem&nbsp;13</a>, <a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;25</a>), and</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{x}}^{\top}\,({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A})\,\tilde{x}
+&amp;= {(\mathbf{A} \tilde{x})}^{\top}\,\mathbf{C}\,(\mathbf{A} \tilde{x})
+&amp;&amp; \text{(@thm-transpose-product, @thm-matmul-assoc)}
+\\
+&amp;&gt; 0.
+&amp;&amp; \text{(} \mathbf{C} \text{ positive definite, } \mathbf{A} \tilde{x}\ne \tilde{0}\text{)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 2.</strong> <span class="math inline">\(\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> is symmetric: its transpose is <span class="math inline">\(\alpha_1 {\mathbf{A}_1}^{\top} + \alpha_2 {\mathbf{A}_2}^{\top} = \alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2\)</span> (<a href="#/thm-transpose-sum" class="quarto-xref">Theorem&nbsp;9</a>, <a href="#/def-scalar-mult" class="quarto-xref">Definition&nbsp;19</a>, <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>). For <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{x}}^{\top}\,(\alpha_1 \mathbf{A}_1 + \alpha_2 \mathbf{A}_2)\,\tilde{x}
+&amp;= {\tilde{x}}^{\top}\,(\alpha_1 \mathbf{A}_1)\,\tilde{x}+ {\tilde{x}}^{\top}\,(\alpha_2 \mathbf{A}_2)\,\tilde{x}
+&amp;&amp; \text{(@thm-matmul-distrib, twice)}
+\\
+&amp;= \alpha_1\,{\tilde{x}}^{\top} \mathbf{A}_1 \tilde{x}+ \alpha_2\,{\tilde{x}}^{\top} \mathbf{A}_2 \tilde{x}
+&amp;&amp; \text{(@thm-scalar-matmul)}
+\\
+&amp;&gt; 0.
+&amp;&amp; \text{(each term is positive)}
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exm-pd-operations" class="theorem example">
+<p><span class="theorem-title"><strong>Example 146 (Building positive definite matrices)</strong></span> &nbsp;</p>
+<ul>
+<li>With <span class="math inline">\(\mathbf{C} = \mathbf{I}_3\)</span> and <span class="math inline">\(\mathbf{X}\)</span> of <a href="#/exm-pd-gram" class="quarto-xref">Example&nbsp;145</a>, part 1 gives again that <span class="math inline">\({\mathbf{X}}^{\top} \mathbf{X}\)</span> is positive definite.</li>
+<li>With <span class="math inline">\(\alpha_1 = 2\)</span>, <span class="math inline">\(\mathbf{A}_1 = \mathbf{I}_2\)</span> (<a href="#/exm-positive-definite" class="quarto-xref">Example&nbsp;93</a>), <span class="math inline">\(\alpha_2 = 1\)</span> and <span class="math inline">\(\mathbf{A}_2 = {\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 3 &amp; 6 \\ 6 &amp; 14 \end{bmatrix}\)</span> (<a href="#/exm-pd-gram" class="quarto-xref">Example&nbsp;145</a>), part 2 gives that <span class="math inline">\(2 \mathbf{I}_2 + {\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 5 &amp; 6 \\ 6 &amp; 16 \end{bmatrix}\)</span> is positive definite.</li>
+<li>An aside beyond part 2: <span class="math inline">\(\mathbf{I}_2 + \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> is positive definite plus positive semidefinite; its quadratic form is <span class="math inline">\(x_1^2 + x_2^2 + (x_1 + x_2)^2 &gt; 0\)</span> for <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>, so it is positive definite, in line with its eigenvalues <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span> (<a href="#/exm-eigenvalue" class="quarto-xref">Example&nbsp;87</a>).</li>
+<li>Independence is needed in part 1: with <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, whose columns are equal, <span class="math inline">\({\mathbf{A}}^{\top}\,\mathbf{I}_2\,\mathbf{A} = \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, and <span class="math inline">\((1, -1)\)</span> gives quadratic form <span class="math inline">\(0\)</span>.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="thm-pd-submatrix" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 97 (Leading blocks of a positive definite matrix are positive definite)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(p \times p\)</span> positive definite matrix (<a href="#/def-positive-definite" class="quarto-xref">Definition&nbsp;64</a>), and for <span class="math inline">\(1 \le k \le p\)</span> let <span class="math inline">\(\mathbf{X}_k\)</span> be its top-left <span class="math inline">\(k \times k\)</span> block, with entries <span class="math inline">\(x_{ij}\)</span> for <span class="math inline">\(i, j \le k\)</span>. Then <span class="math inline">\(\mathbf{X}_k\)</span> is positive definite. Also, every diagonal entry of a positive definite matrix is positive.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{X}_k\)</span> is symmetric, because <span class="math inline">\(\mathbf{X}\)</span> is. For <span class="math inline">\(\tilde{u} \in \mathbb{R}^k\)</span> with <span class="math inline">\(\tilde{u} \ne \tilde{0}\)</span>, let <span class="math inline">\(\tilde{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \mathbb{R}^p\)</span>, which is nonzero, with entries <span class="math inline">\(y_i = u_i\)</span> for <span class="math inline">\(i \le k\)</span> and <span class="math inline">\(y_i = 0\)</span> for <span class="math inline">\(i &gt; k\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{u}}^{\top} \mathbf{X}_k \tilde{u}
+&amp;= \sum_{i=1}^{k} \sum_{j=1}^{k} u_i\,x_{ij}\,u_j
+&amp;&amp; \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&amp;= \sum_{i=1}^{k} \sum_{j=1}^{k} y_i\,x_{ij}\,y_j
+&amp;&amp; \text{(} y_i = u_i \text{ for } i \le k \text{)}
+\\
+&amp;= \sum_{i=1}^{p} \sum_{j=1}^{p} y_i\,x_{ij}\,y_j
+&amp;&amp; \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)}
+\\
+&amp;= {\tilde{y}}^{\top} \mathbf{X} \tilde{y}
+&amp;&amp; \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&amp;&gt; 0.
+&amp;&amp; \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)}
+\end{aligned}
+\]</span></p>
+<p>For the diagonal entry <span class="math inline">\(x_{ii}\)</span>, take <span class="math inline">\(\tilde{e}_i\)</span> (<a href="#/def-indicator-vector" class="quarto-xref">Definition&nbsp;9</a>), which is nonzero:</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{e}_i}^{\top} \mathbf{X} \tilde{e}_i
+&amp;= \sum_{r=1}^{p} \sum_{s=1}^{p} (\tilde{e}_i)_r\,x_{rs}\,(\tilde{e}_i)_s
+&amp;&amp; \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&amp;= x_{ii}
+&amp;&amp; \text{(only the term } r = s = i \text{ is nonzero)}
+\\
+&amp;&gt; 0.
+&amp;&amp; \text{(} \mathbf{X} \text{ positive definite)}
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="exm-pd-submatrix" class="theorem example">
+<p><span class="theorem-title"><strong>Example 147 (A quick necessary test)</strong></span> <span class="math inline">\(\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> is positive definite (<a href="#/exm-pd-operations" class="quarto-xref">Example&nbsp;146</a>), and its diagonal entries <span class="math inline">\(2, 2\)</span> and its <span class="math inline">\(1 \times 1\)</span> leading block <span class="math inline">\([2]\)</span> are positive. The test can only rule matrices out: <span class="math inline">\(-\mathbf{I}_2\)</span> has negative diagonal entries, so it is not positive definite, even though <span class="math inline">\(\det(-\mathbf{I}_2) = (-1)(-1) - 0 = 1 &gt; 0\)</span> (<a href="#/def-determinant" class="quarto-xref">Definition&nbsp;65</a>); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> of <a href="#/exm-positive-definite" class="quarto-xref">Example&nbsp;93</a> has them but is not positive definite.</p>
+</div>
+</section><section class="slide level2"><div id="thm-block-quadratic" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 98 (The quadratic form of a block matrix)</strong></span> Let <span class="math inline">\(k, m \ge 1\)</span>, let <span class="math inline">\(\mathbf{A}\)</span> be a symmetric <span class="math inline">\(k \times k\)</span> matrix, <span class="math inline">\(\mathbf{B}\)</span> a <span class="math inline">\(k \times m\)</span> matrix and <span class="math inline">\(\mathbf{C}\)</span> a symmetric <span class="math inline">\(m \times m\)</span> matrix, and let <span class="math inline">\(\mathbf{X}\)</span> be the <span class="math inline">\((k + m) \times (k + m)\)</span> matrix with blocks</p>
+<p><span class="math display">\[
+\mathbf{X} = \begin{bmatrix} \underbrace{\mathbf{A}}_{k \times k} &amp; \underbrace{\mathbf{B}}_{k \times m} \\ \underbrace{{\mathbf{B}}^{\top}}_{m \times k} &amp; \underbrace{\mathbf{C}}_{m \times m} \end{bmatrix},
+\]</span></p>
+<p>that is, <span class="math inline">\(x_{ij} = a_{ij}\)</span>, <span class="math inline">\(x_{i, k+j} = b_{ij}\)</span>, <span class="math inline">\(x_{k+i, j} = b_{ji}\)</span> and <span class="math inline">\(x_{k+i, k+j} = c_{ij}\)</span> for indices in range. <span class="math inline">\(\mathbf{X}\)</span> is symmetric (<a href="#/def-symmetric-matrix" class="quarto-xref">Definition&nbsp;47</a>): <span class="math inline">\(x_{k+i, j} = b_{ji} = x_{j, k+i}\)</span>, and <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{C}\)</span> are symmetric. Split <span class="math inline">\(\tilde{v} \in \mathbb{R}^{k + m}\)</span> as <span class="math inline">\(\tilde{v} = (\tilde{u}, \tilde{w})\)</span>, with <span class="math inline">\(\tilde{u} \in \mathbb{R}^k\)</span> its first <span class="math inline">\(k\)</span> entries and <span class="math inline">\(\tilde{w} \in \mathbb{R}^m\)</span> the rest. Then</p>
+<p><span id="eq-block-quadratic"><span class="math display">\[
+{\tilde{v}}^{\top} \mathbf{X} \tilde{v}
+= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\,{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w},
+\tag{7}\]</span></span></p>
+<p>and if <span class="math inline">\(\mathbf{A}\)</span> is invertible, with <span class="math inline">\(\mathbf{S} \stackrel{\text{def}}{=}\mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> and <span class="math inline">\(\tilde{z} \stackrel{\text{def}}{=}\tilde{u} + \mathbf{A}^{-1} \mathbf{B} \tilde{w}\)</span>,</p>
+<p><span class="math display">\[
+{\tilde{v}}^{\top} \mathbf{X} \tilde{v} = {\tilde{z}}^{\top} \mathbf{A} \tilde{z} + {\tilde{w}}^{\top} \mathbf{S} \tilde{w}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathbf{X} \tilde{v}\)</span> in blocks.</strong> For <span class="math inline">\(i \le k\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathbf{X} \tilde{v})_i
+&amp;= \sum_{j=1}^{k+m} x_{ij}\,v_j
+&amp;&amp; \text{(@def-matvec-mult)}
+\\
+&amp;= \sum_{j=1}^{k} x_{ij}\,v_j + \sum_{j=1}^{m} x_{i, k+j}\,v_{k+j}
+&amp;&amp; \text{(split the sum at } j = k \text{)}
+\\
+&amp;= \sum_{j=1}^{k} a_{ij}\,u_j + \sum_{j=1}^{m} b_{ij}\,w_j
+&amp;&amp; \text{(the blocks of } \mathbf{X} \text{ and of } \tilde{v} \text{)}
+\\
+&amp;= (\mathbf{A} \tilde{u})_i + (\mathbf{B} \tilde{w})_i,
+&amp;&amp; \text{(@def-matvec-mult)}
+\end{aligned}
+\]</span></p>
+<p>and in the same way <span class="math inline">\((\mathbf{X} \tilde{v})_{k+i} = ({\mathbf{B}}^{\top} \tilde{u})_i + (\mathbf{C} \tilde{w})_i\)</span> for <span class="math inline">\(i \le m\)</span>.</p>
+<p><strong>The expansion.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{v}}^{\top} \mathbf{X} \tilde{v}
+&amp;= \sum_{i=1}^{k} u_i\,(\mathbf{X} \tilde{v})_i + \sum_{i=1}^{m} w_i\,(\mathbf{X} \tilde{v})_{k+i}
+&amp;&amp; \text{(@def-dot-product, split the sum at } k \text{)}
+\\
+&amp;= \tilde{u} \cdot (\mathbf{A} \tilde{u} + \mathbf{B} \tilde{w}) + \tilde{w} \cdot ({\mathbf{B}}^{\top} \tilde{u} + \mathbf{C} \tilde{w})
+&amp;&amp; \text{(the blocks of } \mathbf{X} \tilde{v} \text{)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}
+&amp;&amp; \text{(@thm-dot-linear)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}
+&amp;&amp; \text{(} {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} = {\mathopen{}\left({\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u}\right)\mathclose{}}^{\top} = {\tilde{u}}^{\top} \mathbf{B} \tilde{w} \text{; } 1 \times 1 \text{, @def-matrix-transpose, @thm-transpose-product)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\,{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}.
+&amp;&amp; \text{(combine like terms)}
+\end{aligned}
+\]</span></p>
+<p><strong>Completing the square.</strong> Write <span class="math inline">\(\tilde{d} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \tilde{w}\)</span>, so <span class="math inline">\(\tilde{z} = \tilde{u} + \tilde{d}\)</span> and <span class="math inline">\(\mathbf{A} \tilde{d} = \mathbf{B} \tilde{w}\)</span> (<a href="#/thm-matmul-assoc" class="quarto-xref">Theorem&nbsp;7</a>, <a href="#/def-matrix-inverse" class="quarto-xref">Definition&nbsp;49</a>, <a href="#/thm-identity" class="quarto-xref">Theorem&nbsp;50</a>); <span class="math inline">\(\mathbf{A}^{-1}\)</span> is symmetric (<a href="#/cor-inverse-symmetric" class="quarto-xref">Corollary&nbsp;4</a>). Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{z}}^{\top} \mathbf{A} \tilde{z}
+&amp;= (\tilde{u} + \tilde{d}) \cdot \mathbf{A}\,(\tilde{u} + \tilde{d})
+&amp;&amp; \text{(substitute } \tilde{z} = \tilde{u} + \tilde{d} \text{)}
+\\
+&amp;= (\tilde{u} + \tilde{d}) \cdot (\mathbf{A} \tilde{u} + \mathbf{A} \tilde{d})
+&amp;&amp; \text{(@thm-matmul-distrib)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{u} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d}
+&amp;&amp; \text{(@thm-dot-linear, both slots)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d}
+&amp;&amp; \text{(as in the expansion, with } {\mathbf{A}}^{\top} = \mathbf{A} \text{)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\,{\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d}
+&amp;&amp; \text{(combine like terms)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\,{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{d}}^{\top} \mathbf{B} \tilde{w}
+&amp;&amp; \text{(} \mathbf{A} \tilde{d} = \mathbf{B} \tilde{w} \text{, twice)}
+\\
+&amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\,{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top}\,{\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \tilde{w},
+&amp;&amp; \text{(} {\tilde{d}}^{\top} = {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \mathbf{A}^{-1} \text{, @thm-transpose-product, @cor-inverse-symmetric)}
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{w}}^{\top} \mathbf{S} \tilde{w}
+&amp;= {\tilde{w}}^{\top}\,(\mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})\,\tilde{w}
+&amp;&amp; \text{(substitute } \mathbf{S} \text{)}
+\\
+&amp;= {\tilde{w}}^{\top}\,(\mathbf{C} \tilde{w} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \tilde{w})
+&amp;&amp; \text{(@thm-scalar-matmul, difference rule on the right)}
+\\
+&amp;= {\tilde{w}}^{\top} \mathbf{C} \tilde{w} - {\tilde{w}}^{\top}\,{\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \tilde{w}.
+&amp;&amp; \text{(@thm-scalar-matmul, difference rule on the left)}
+\end{aligned}
+\]</span></p>
+<p>Adding the two displays, the <span class="math inline">\({\tilde{w}}^{\top}\,{\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \tilde{w}\)</span> terms cancel, leaving <span class="math inline">\({\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\,{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}\)</span>, which is <span class="math inline">\({\tilde{v}}^{\top} \mathbf{X} \tilde{v}\)</span> by <a href="#/eq-block-quadratic" class="quarto-xref">Equation&nbsp;7</a>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-block-quadratic" class="theorem example">
+<p><span class="theorem-title"><strong>Example 148 (The <span class="math inline">\(2 \times 2\)</span> case)</strong></span> For <span class="math inline">\(\mathbf{X} = \begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> (<span class="math inline">\(k = m = 1\)</span>) and <span class="math inline">\(a \ne 0\)</span>, the theorem reads</p>
+<p><span class="math display">\[
+a u^2 + 2buw + cw^2 = a\,\mathopen{}\left(u + \tfrac{b}{a}\,w\right)\mathclose{}^2 + \mathopen{}\left(c - \tfrac{b^2}{a}\right)\mathclose{}\,w^2,
+\]</span></p>
+<p>with <span class="math inline">\(\tilde{v} = (u, w)\)</span>: the familiar completing of the square. With <span class="math inline">\(a = c = 5\)</span> and <span class="math inline">\(b = 4\)</span>: <span class="math inline">\(5\,(u + 0.8\,w)^2 + 1.8\,w^2 = 5\,(u^2 + 1.6\,uw + 0.64\,w^2) + 1.8\,w^2
+= 5u^2 + 8uw + 3.2\,w^2 + 1.8\,w^2 = 5u^2 + 8uw + 5w^2\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-schur-complement" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 78 (Schur complement)</strong></span> For a block matrix <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> as in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;98</a> with <span class="math inline">\(\mathbf{A}\)</span> invertible, the <strong>Schur complement</strong> of <span class="math inline">\(\mathbf{A}\)</span> in <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(m \times m\)</span> matrix <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> defined in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;98</a>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-schur-complement" class="theorem example">
+<p><span class="theorem-title"><strong>Example 149 (Schur complements of <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> &nbsp;</p>
+<ul>
+<li>For <span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span> with <span class="math inline">\(\mathbf{A} = [5]\)</span>: <span class="math inline">\(\mathbf{S} = 5 - 4 \cdot\tfrac{1}{5} \cdot 4 = \tfrac{25}{5} - \tfrac{16}{5} = \tfrac{9}{5}\)</span>, that is, <span class="math inline">\(\mathbf{S} = [\tfrac{9}{5}]\)</span>.</li>
+<li>For <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> with <span class="math inline">\(\mathbf{A} = [1]\)</span>: <span class="math inline">\(\mathbf{S} = [1 - 2 \cdot 1 \cdot 2] = [-3]\)</span>.</li>
+<li>For <span class="math inline">\(\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> the top-left block <span class="math inline">\([0]\)</span> is not invertible, so there is no Schur complement of it.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="thm-schur-test" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 99 (Schur complement test)</strong></span> Let <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> be as in <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;98</a>. Then <span class="math inline">\(\mathbf{X}\)</span> is positive definite (<a href="#/def-positive-definite" class="quarto-xref">Definition&nbsp;64</a>) exactly when <span class="math inline">\(\mathbf{A}\)</span> is positive definite and its Schur complement <span class="math inline">\(\mathbf{S}\)</span> (<a href="#/def-schur-complement" class="quarto-xref">Definition&nbsp;78</a>) is positive definite.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\(\mathbf{A}\)</span> is positive definite, so invertible (<a href="#/thm-pd-inverse" class="quarto-xref">Theorem&nbsp;63</a>), and <span class="math inline">\(\mathbf{S}\)</span> is defined. <span class="math inline">\(\mathbf{X}\)</span> is symmetric. Let <span class="math inline">\(\tilde{v} = (\tilde{u}, \tilde{w}) \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{z} = \tilde{u} + \mathbf{A}^{-1} \mathbf{B} \tilde{w}\)</span>. By <a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;98</a>, <span class="math inline">\({\tilde{v}}^{\top} \mathbf{X} \tilde{v} = {\tilde{z}}^{\top} \mathbf{A} \tilde{z} + {\tilde{w}}^{\top} \mathbf{S} \tilde{w}\)</span>, and both terms are at least <span class="math inline">\(0\)</span>. If <span class="math inline">\(\tilde{w} \ne \tilde{0}\)</span>, the second term is positive. If <span class="math inline">\(\tilde{w} = \tilde{0}\)</span>, then <span class="math inline">\(\tilde{u} \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{z} = \tilde{u}\)</span>, so the first term is positive. Either way <span class="math inline">\({\tilde{v}}^{\top} \mathbf{X} \tilde{v} &gt; 0\)</span>.</p>
+<p><strong>Only if.</strong> <span class="math inline">\(\mathbf{A}\)</span> is the top-left <span class="math inline">\(k \times k\)</span> block of <span class="math inline">\(\mathbf{X}\)</span>, so it is positive definite (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;97</a>), and invertible (<a href="#/thm-pd-inverse" class="quarto-xref">Theorem&nbsp;63</a>). <span class="math inline">\(\mathbf{S}\)</span> is symmetric: <span class="math inline">\({({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} = {\mathbf{B}}^{\top}\,{(\mathbf{A}^{-1})}^{\top}\,\mathbf{B} = {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> (<a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;10</a>, <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a> for <span class="math inline">\({({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\)</span>, <a href="#/cor-inverse-symmetric" class="quarto-xref">Corollary&nbsp;4</a>), and <span class="math inline">\(\mathbf{C}\)</span> is symmetric, so <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>). For <span class="math inline">\(\tilde{w} \ne \tilde{0}\)</span>, take <span class="math inline">\(\tilde{u} = -\mathbf{A}^{-1} \mathbf{B} \tilde{w}\)</span>, so <span class="math inline">\(\tilde{z} = \tilde{0}\)</span> and <span class="math inline">\(\tilde{v} = (\tilde{u}, \tilde{w}) \ne \tilde{0}\)</span>; then <span class="math inline">\({\tilde{w}}^{\top} \mathbf{S} \tilde{w} = {\tilde{v}}^{\top} \mathbf{X} \tilde{v} &gt; 0\)</span> (<a href="#/thm-block-quadratic" class="quarto-xref">Theorem&nbsp;98</a>).</p>
+</div>
+</section><section class="slide level2"><div id="exm-schur-test" class="theorem example">
+<p><span class="theorem-title"><strong>Example 150 (Testing <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A symmetric <span class="math inline">\(\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> is positive definite exactly when <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(c - \tfrac{b^2}{a} &gt; 0\)</span>, that is, <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(ac &gt; b^2\)</span> (a <span class="math inline">\(1 \times 1\)</span> matrix <span class="math inline">\([s]\)</span> is positive definite exactly when <span class="math inline">\(s &gt; 0\)</span>, since <span class="math inline">\({x}^{\top} s x = s x^2\)</span>).</p>
+<ul>
+<li>
+<span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span>: <span class="math inline">\(5 &gt; 0\)</span> and <span class="math inline">\(\tfrac{9}{5} &gt; 0\)</span> (<a href="#/exm-schur-complement" class="quarto-xref">Example&nbsp;149</a>), so it is positive definite.</li>
+<li>
+<span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span>: <span class="math inline">\(1 &gt; 0\)</span> but <span class="math inline">\(\mathbf{S} = -3\)</span>, so it is not, as <a href="#/exm-positive-definite" class="quarto-xref">Example&nbsp;93</a> found directly.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="thm-cholesky" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 100 (Cholesky factorization)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="#/def-positive-definite" class="quarto-xref">Definition&nbsp;64</a>) exactly when <span class="math inline">\(\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\)</span> for some lower triangular <span class="math inline">\(\mathbf{L}\)</span> (<a href="#/def-triangular-matrix" class="quarto-xref">Definition&nbsp;72</a>) with positive diagonal entries. For a positive definite <span class="math inline">\(\mathbf{A}\)</span> that <span class="math inline">\(\mathbf{L}\)</span> is unique; it is the <strong>Cholesky factor</strong> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \tilde{x}= \tilde{0}\)</span> only for <span class="math inline">\(\tilde{x}= \tilde{0}\)</span> (<a href="#/thm-back-substitution" class="quarto-xref">Theorem&nbsp;81</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="#/thm-matvec-columns" class="quarto-xref">Theorem&nbsp;13</a>, <a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;25</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>) is positive definite (<a href="#/thm-pd-gram" class="quarto-xref">Theorem&nbsp;95</a>, part 2).</p>
+<p><strong>Only if, with uniqueness, by induction on <span class="math inline">\(p\)</span>.</strong> For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathbf{A} = [a]\)</span> with <span class="math inline">\(a &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;97</a>), and <span class="math inline">\([\ell]\,[\ell] = [a]\)</span> with <span class="math inline">\(\ell &gt; 0\)</span> holds exactly for <span class="math inline">\(\ell = \sqrt{a}\)</span>. For <span class="math inline">\(p &gt; 1\)</span>, assume every <span class="math inline">\((p - 1) \times (p - 1)\)</span> positive definite matrix has exactly one such factor, and split off the first row and column. <span class="math inline">\(\mathbf{A}\)</span> is symmetric, so its first row is the transpose of its first column:</p>
+<p><span class="math display">\[
+\mathbf{A} = \begin{bmatrix} a_{11} &amp; {\tilde{b}}^{\top} \\ \tilde{b} &amp; \mathbf{A}_{22} \end{bmatrix},
+\qquad
+\mathbf{L} = \begin{bmatrix} \ell_{11} &amp; \tilde{0}_{1 \times (p-1)} \\ \tilde{g} &amp; \mathbf{L}_{22} \end{bmatrix},
+\qquad
+{\mathbf{L}}^{\top} = \begin{bmatrix} \ell_{11} &amp; {\tilde{g}}^{\top} \\ \tilde{0}_{(p-1) \times 1} &amp; {\mathbf{L}_{22}}^{\top} \end{bmatrix},
+\]</span></p>
+<p>with <span class="math inline">\(\tilde{b}, \tilde{g} \in \mathbb{R}^{p-1}\)</span>, where <span class="math inline">\(b_i\)</span> and <span class="math inline">\(g_i\)</span> are entries <span class="math inline">\((i + 1, 1)\)</span> of <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{L}\)</span>, and <span class="math inline">\((\mathbf{A}_{22})_{ij}\)</span> and <span class="math inline">\((\mathbf{L}_{22})_{ij}\)</span> are their entries <span class="math inline">\((i + 1, j + 1)\)</span>; <span class="math inline">\({\mathbf{L}}^{\top}\)</span> has this form by <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>. A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{L}\)</span> is lower triangular with positive diagonal exactly when <span class="math inline">\(\ell_{11} &gt; 0\)</span>, its first row is otherwise zero, and <span class="math inline">\(\mathbf{L}_{22}\)</span> is lower triangular with positive diagonal; <span class="math inline">\(\tilde{g}\)</span> can be anything. So choosing <span class="math inline">\(\mathbf{L}\)</span> means choosing <span class="math inline">\(\ell_{11} &gt; 0\)</span>, <span class="math inline">\(\tilde{g}\)</span> and such an <span class="math inline">\(\mathbf{L}_{22}\)</span>.</p>
+<p>Entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{L} {\mathbf{L}}^{\top}\)</span> is <span class="math inline">\(\sum_{r=1}^{p} \ell_{ir}\,\ell_{jr}\)</span>, with <span class="math inline">\(\ell_{ir}\)</span> entry <span class="math inline">\((i, r)\)</span> of <span class="math inline">\(\mathbf{L}\)</span> (<a href="#/def-matrix-mult" class="quarto-xref">Definition&nbsp;20</a>, <a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;16</a>). Row <span class="math inline">\(1\)</span> of <span class="math inline">\(\mathbf{L}\)</span> is <span class="math inline">\((\ell_{11}, 0, \ldots, 0)\)</span>, and row <span class="math inline">\(i + 1\)</span> is <span class="math inline">\((g_i, (\mathbf{L}_{22})_{i1}, \ldots, (\mathbf{L}_{22})_{i,p-1})\)</span>. So, for <span class="math inline">\(i, j = 1, \ldots, p - 1\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathbf{L} {\mathbf{L}}^{\top})_{11}
+&amp;= \ell_{11}\,\ell_{11} + \sum_{r=2}^{p} 0 \cdot 0
+= \ell_{11}^2,
+&amp;&amp; \text{(rows 1 and 1)}
+\\
+(\mathbf{L} {\mathbf{L}}^{\top})_{i+1,1}
+&amp;= g_i\,\ell_{11} + \sum_{r=2}^{p} (\mathbf{L}_{22})_{i,r-1} \cdot 0
+= \ell_{11}\,g_i,
+&amp;&amp; \text{(rows } i + 1 \text{ and } 1 \text{)}
+\\
+(\mathbf{L} {\mathbf{L}}^{\top})_{i+1,j+1}
+&amp;= g_i\,g_j + \sum_{r=2}^{p} (\mathbf{L}_{22})_{i,r-1}\,(\mathbf{L}_{22})_{j,r-1}
+&amp;&amp; \text{(rows } i + 1 \text{ and } j + 1 \text{)}
+\\
+&amp;= (\tilde{g} {\tilde{g}}^{\top})_{ij} + (\mathbf{L}_{22} {\mathbf{L}_{22}}^{\top})_{ij}.
+&amp;&amp; \text{(@def-matrix-mult, with } s = r - 1 \text{)}
+\end{aligned}
+\]</span></p>
+<p>Entry <span class="math inline">\((1, j + 1)\)</span> is <span class="math inline">\(\ell_{11}\,g_j\)</span> by the same computation with the roles swapped, the transpose of the <span class="math inline">\((2, 1)\)</span> block; it matches <span class="math inline">\({\tilde{b}}^{\top}\)</span> exactly when the <span class="math inline">\((2, 1)\)</span> block matches <span class="math inline">\(\tilde{b}\)</span>, which is where the symmetry of <span class="math inline">\(\mathbf{A}\)</span> is used. So <span class="math inline">\(\mathbf{L} {\mathbf{L}}^{\top} = \mathbf{A}\)</span> says exactly</p>
+<p><span class="math display">\[
+\ell_{11}^2 = a_{11}, \qquad
+\ell_{11}\,\tilde{g} = \tilde{b}, \qquad
+\tilde{g} {\tilde{g}}^{\top} + \mathbf{L}_{22} {\mathbf{L}_{22}}^{\top} = \mathbf{A}_{22}.
+\]</span></p>
+<p><span class="math inline">\(a_{11} &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;97</a>), so the first equation with <span class="math inline">\(\ell_{11} &gt; 0\)</span> forces <span class="math inline">\(\ell_{11} = \sqrt{a_{11}}\)</span>; the second then forces <span class="math inline">\(\tilde{g} = \tfrac{1}{\ell_{11}}\,\tilde{b}\)</span>; and the third becomes</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{L}_{22} {\mathbf{L}_{22}}^{\top}
+&amp;= \mathbf{A}_{22} - \tilde{g} {\tilde{g}}^{\top}
+&amp;&amp; \text{(subtract } \tilde{g} {\tilde{g}}^{\top} \text{)}
+\\
+&amp;= \mathbf{A}_{22} - \mathopen{}\left(\tfrac{1}{\ell_{11}}\,\tilde{b}\right)\mathclose{} {\mathopen{}\left(\tfrac{1}{\ell_{11}}\,\tilde{b}\right)\mathclose{}}^{\top}
+&amp;&amp; \text{(substitute } \tilde{g} \text{)}
+\\
+&amp;= \mathbf{A}_{22} - \tfrac{1}{\ell_{11}^2}\,\tilde{b} {\tilde{b}}^{\top}
+&amp;&amp; \text{(@def-matrix-transpose, @thm-scalar-matmul)}
+\\
+&amp;= \mathbf{A}_{22} - \tfrac{1}{a_{11}}\,\tilde{b} {\tilde{b}}^{\top}.
+&amp;&amp; \text{(} \ell_{11}^2 = a_{11} \text{)}
+\end{aligned}
+\]</span></p>
+<p>Here <span class="math inline">\([a_{11}]\)</span> is invertible with inverse <span class="math inline">\([1 / a_{11}]\)</span>, so with <span class="math inline">\(\mathbf{B} = {\tilde{b}}^{\top}\)</span> in <a href="#/def-schur-complement" class="quarto-xref">Definition&nbsp;78</a>, <span class="math inline">\({\mathbf{B}}^{\top}\,[a_{11}]^{-1} \mathbf{B} = \tilde{b}\,\tfrac{1}{a_{11}}\,{\tilde{b}}^{\top} = \tfrac{1}{a_{11}}\,\tilde{b} {\tilde{b}}^{\top}\)</span> (<a href="#/thm-scalar-matmul" class="quarto-xref">Theorem&nbsp;73</a>), and the right side is the Schur complement of <span class="math inline">\([a_{11}]\)</span> in <span class="math inline">\(\mathbf{A}\)</span>. It is positive definite by <a href="#/thm-schur-test" class="quarto-xref">Theorem&nbsp;99</a> (with <span class="math inline">\(k = 1\)</span>; <span class="math inline">\(\mathbf{A}_{22}\)</span> is symmetric because <span class="math inline">\(\mathbf{A}\)</span> is). By the induction hypothesis it has exactly one factor <span class="math inline">\(\mathbf{L}_{22}\)</span> of the required kind. So <span class="math inline">\(\mathbf{L}\)</span> exists and is unique.</p>
+</div>
+</section><section class="slide level2"><div id="exm-cholesky" class="theorem example">
+<p><span class="theorem-title"><strong>Example 151 (Two Cholesky factors)</strong></span> &nbsp;</p>
+<ul>
+<li>
+<span class="math inline">\(\mathbf{A} = \begin{bmatrix} 4 &amp; 2 \\ 2 &amp; 5 \end{bmatrix}\)</span>: <span class="math inline">\(\ell_{11} = \sqrt{4} = 2\)</span>, <span class="math inline">\(\ell_{21} = 2/2 = 1\)</span>, and <span class="math inline">\(\ell_{22}^2 = 5 - 1^2 = 4\)</span>, so <span class="math inline">\(\ell_{22} = 2\)</span>: <span class="math inline">\(\mathbf{L} = \begin{bmatrix} 2 &amp; 0 \\ 1 &amp; 2 \end{bmatrix}\)</span>, and <span class="math inline">\(\mathbf{L} {\mathbf{L}}^{\top} = \begin{bmatrix} 2 \cdot 2 &amp; 2 \cdot 1 \\ 1 \cdot 2 &amp; 1 \cdot 1 + 2 \cdot 2 \end{bmatrix} = \mathbf{A}\)</span>.</li>
+<li>
+<span class="math inline">\(\begin{bmatrix} 5 &amp; 4 \\ 4 &amp; 5 \end{bmatrix}\)</span>: <span class="math inline">\(\ell_{11} = \sqrt{5}\)</span>, <span class="math inline">\(\ell_{21} = 4/\sqrt{5}\)</span>, and <span class="math inline">\(\ell_{22}^2 = 5 - \tfrac{16}{5} = \tfrac{9}{5}\)</span>, the Schur complement of <a href="#/exm-schur-complement" class="quarto-xref">Example&nbsp;149</a>, so <span class="math inline">\(\ell_{22} = \tfrac{3}{\sqrt{5}}\)</span>.</li>
+<li>For <span class="math inline">\(\mathbf{D} = \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> the method breaks down: <span class="math inline">\(\ell_{22}^2 = 1 - 4 = -3\)</span> has no real solution, matching the failure of the Schur complement test (<a href="#/exm-schur-test" class="quarto-xref">Example&nbsp;150</a>).</li>
+</ul>
+</div>
 </section><section id="sec-additional-resources" class="slide level2" data-number="10"><h2>
 <span class="header-section-number">10</span> Further reading</h2>
 <ul>
@@ -6976,11 +7341,14 @@ Zhou, Hua. 2024d. <em>Orthogonal Projections</em>. Lecture notes for Biostat 216
 <div id="ref-zhou2024rank" class="csl-entry" role="listitem">
 Zhou, Hua. 2024e. <em>Rank and Nullity</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html">https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html</a>.
 </div>
+<div id="ref-zhou2024pd" class="csl-entry" role="listitem">
+Zhou, Hua. 2024f. <em>Symmetric Positive Definite Matrices</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/11-pd/11-pd.html">https://ucla-biostat-216.github.io/2024fall/slides/11-pd/11-pd.html</a>.
+</div>
 <div id="ref-zhou2024vecsp" class="csl-entry" role="listitem">
-Zhou, Hua. 2024f. <em>Vector Space</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html">https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html</a>.
+Zhou, Hua. 2024g. <em>Vector Space</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html">https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html</a>.
 </div>
 <div id="ref-zhou2024vector" class="csl-entry" role="listitem">
-Zhou, Hua. 2024g. <em>Vectors</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html">https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html</a>.
+Zhou, Hua. 2024h. <em>Vectors</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html">https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html</a>.
 </div>
 </div>
 
