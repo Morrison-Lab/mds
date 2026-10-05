@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 15:20:56 (PDT)
+Last modified: 2026-10-05 16:13:26 (PDT)
 
 ## 1 Equalities
 
@@ -383,7 +383,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 9* (School algebra calls \\m x + b\\ “linear”). School algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra.llms.md#thm-linear-map-zero)).
+> *Remark 9* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra.llms.md#thm-linear-map-zero)).
 
 ## 12 Summation notation
 

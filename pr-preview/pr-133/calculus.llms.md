@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 15:20:56 (PDT)
+Last modified: 2026-10-05 16:13:26 (PDT)
 
 ## 1 Derivatives
 
@@ -130,7 +130,7 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
 > **NOTE:**
 >
-> *Remark 1* (The “linear” approximation is affine). With \\w\\ held fixed, the right side of [Equation 1](#eq-linear-approx) is a function of the step \\\epsilon\\, and it is an [affine function](algebra.llms.md#def-affine-function) of \\\epsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\epsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser, school-algebra sense ([remark](algebra.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats this first-order Taylor approximation as an affine function, for functions of several variables as well.
+> *Remark 1* (The “linear” approximation is affine). With \\w\\ held fixed, the right side of [Equation 1](#eq-linear-approx) is a function of the step \\\epsilon\\, and it is an [affine function](algebra.llms.md#def-affine-function) of \\\epsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\epsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats this first-order Taylor approximation as an affine function, for functions of several variables as well.
 
 > **NOTE:**
 >
