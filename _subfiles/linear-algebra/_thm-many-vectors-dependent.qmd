@@ -41,10 +41,12 @@ $$
 
 The last entry of $\vecf{w}_i$ is
 $v_{i,p} - \frac{v_{i,p}}{v_{k,p}}\,v_{k,p} = 0$.
-So, as in Case 1,
-the $k - 1 > p - 1$ vectors $\vecf{w}_1, \ldots, \vecf{w}_{k-1}$
-have numbers $c_1, \ldots, c_{k-1}$, not all zero,
-with $c_1 \vecf{w}_1 + \cdots + c_{k-1} \vecf{w}_{k-1} = \vzero_p$.
+Deleting that zero last entry gives $k - 1 > p - 1$ vectors in $\reals^{p-1}$,
+so by the inductive hypothesis
+there are numbers $c_1, \ldots, c_{k-1}$, not all zero,
+whose combination of the shortened vectors is $\vzero_{p-1}$.
+Putting the zero last entries back gives
+$c_1 \vecf{w}_1 + \cdots + c_{k-1} \vecf{w}_{k-1} = \vzero_p$.
 Then
 
 $$
@@ -56,9 +58,13 @@ $$
 &= \sum_{i=1}^{k-1} c_i \paren{\vecf{v}_i - \frac{v_{i,p}}{v_{k,p}}\,\vecf{v}_k}
 && \text{(definition of } \vecf{w}_i \text{)}
 \\
+&= \sum_{i=1}^{k-1} c_i \vecf{v}_i
+ - \sum_{i=1}^{k-1} \frac{c_i v_{i,p}}{v_{k,p}}\,\vecf{v}_k
+&& \text{(distribute each } c_i \text{, and split the sum)}
+\\
 &= c_1 \vecf{v}_1 + \cdots + c_{k-1} \vecf{v}_{k-1}
  - \paren{\sum_{i=1}^{k-1} \frac{c_i v_{i,p}}{v_{k,p}}}\,\vecf{v}_k,
-&& \text{(distribute, and collect the multiples of } \vecf{v}_k \text{)}
+&& \text{(factor } \vecf{v}_k \text{ out of the second sum)}
 \ea
 $$
 
