@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 14:50:04 (PDT)
+Last modified: 2026-10-05 15:00:02 (PDT)
 
 ## 1 Vectors
 
@@ -4189,6 +4189,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 - Fieller ([2016](#ref-fieller2018basics))
 - Banerjee and Roy ([2014](#ref-banerjee2014linear))
 - Searle and Khuri ([2017](#ref-searle2017matrix))
+- Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and derivatives of vectors and matrices, so it is a quick place to look up a formula this page proves.
 
 ## References
 
@@ -4205,6 +4206,8 @@ Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. *Deep Learning*. MIT 
 Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
 
 Kaplan, Daniel. 2022. *MOSAIC Calculus*. Www.mosaic-web.org. [www.mosaic-web.org](https://www.mosaic-web.org).
+
+Petersen, Kaare Brandt, and Michael Syskind Pedersen. 2012. *The Matrix Cookbook*. Technical University of Denmark. <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>.
 
 Searle, Shayle R, and Andre I Khuri. 2017. *Matrix Algebra Useful for Statistics*. John Wiley & Sons.
 
