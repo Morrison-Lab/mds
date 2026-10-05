@@ -19,7 +19,7 @@ and sums and multiples of pairs are taken entry by entry.
 #### The epigraph of $x^2$
 
 For $f(x) = x^2$, $\operatorname{epi} f = \cb{(x, s) : x^2 \le s}$,
-the region on or inside the parabola.
+the points $(x, s)$ on the parabola $s = x^2$ or on the side of it where $s$ is larger.
 $(1, 2)$ is in it, since $1^2 \le 2$; $(2, 1)$ is not, since $2^2 > 1$.
 
 :::

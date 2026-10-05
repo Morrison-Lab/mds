@@ -11,7 +11,8 @@ if and only if its epigraph (@def-epigraph) is convex (@def-convex-set).
 **If.**
 Let $\vx, \vy \in \reals^p$ and $t \in [0, 1]$.
 The points $(\vx, f(\vx))$ and $(\vy, f(\vy))$ are in $\operatorname{epi} f$,
-since $\operatorname{epi} f$ is convex, it contains
+since $f(\vx) \le f(\vx)$ and $f(\vy) \le f(\vy)$.
+Since $\operatorname{epi} f$ is convex, it contains
 
 $$
 t\,(\vx, f(\vx)) + (1 - t)\,(\vy, f(\vy)) = \paren{t \vx + (1 - t) \vy,\ t f(\vx) + (1 - t) f(\vy)},
