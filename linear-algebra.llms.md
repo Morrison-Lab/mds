@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 00:18:33 (PDT)
+Last modified: 2026-10-05 02:00:13 (PDT)
 
 ## 1 Vectors
 
@@ -710,7 +710,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024c](#ref-zhou2024vecsp)), used under the MIT License. The license text is:
+> This section is adapted from Zhou ([2024d](#ref-zhou2024vecsp)), used under the MIT License. The license text is:
 >
 > > Copyright (c) 2024 ucla-biostat-216
 > >
@@ -1141,7 +1141,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024b](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)).
+> This section is adapted from Zhou ([2024c](#ref-zhou2024rank)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)).
 
 > **NOTE:**
 >
@@ -1303,7 +1303,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#sec-fundamental-theorem) are adapted from Zhou ([2024a](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 27](#thm-rank-nullity)) instead.
+> This section, [Section 2.13](#sec-orthogonal-complements) and [Section 2.14](#sec-fundamental-theorem) are adapted from Zhou ([2024b](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source proves that a subspace and its orthogonal complement together make up \\\mathbb{R}^p\\ by extending an orthonormal basis; the proof here uses the rank-nullity theorem ([Theorem 27](#thm-rank-nullity)) instead.
 
 > **NOTE:**
 >
@@ -1673,7 +1673,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof of the triangle inequality to class; it is written out here.
+> This section is adapted from Zhou ([2024e](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof of the triangle inequality to class; it is written out here.
 
 > **NOTE:**
 >
@@ -1793,7 +1793,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> Like [Section 2.15](#sec-cauchy-schwarz), this section is adapted from Zhou ([2024d](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
+> Like [Section 2.15](#sec-cauchy-schwarz), this section is adapted from Zhou ([2024e](#ref-zhou2024vector)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here.
 
 > **NOTE:**
 >
@@ -2969,7 +2969,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> This section is adapted from the second half of Zhou ([2024a](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 52](#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 38](#thm-orthogonal-direct-sum).
+> This section is adapted from the second half of Zhou ([2024b](#ref-zhou2024orthproj)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). It connects the orthogonal projection matrices of [Definition 52](#def-projection-matrix), defined by an algebraic property, to the geometric decomposition of [Theorem 38](#thm-orthogonal-direct-sum).
 
 > **NOTE:**
 >
@@ -3086,6 +3086,290 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > the hat matrix found in [Example 101](#exm-hat-matrix). The fitted values \\(\bar{y}, \bar{y})\\ are the closest point to \\\tilde{y}\\ on the line of constant vectors ([Theorem 69](#thm-closest-point)), and the residuals \\(y_1 - \bar{y}, y_2 - \bar{y})\\ are orthogonal to \\(1, 1)\\: \\(1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) = y_1 + y_2 - 2\bar{y} = 0\\, since \\2\bar{y} = y_1 + y_2\\.
 
+### 9.2 Generalized inverses and linear systems
+
+> **NOTE:**
+>
+> This section is adapted from Zhou ([2024a](#ref-zhou2024matinv)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 30](#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover.
+
+> **NOTE:**
+>
+> **Theorem 73 (A scalar factor passes through a matrix product)** For an \\m \times k\\ matrix \\\mathbf{A}\\, a \\k \times n\\ matrix \\\mathbf{B}\\ and a number \\c\\,
+>
+> \\ \mathbf{A}\\(c\\\mathbf{B}) = c\\(\mathbf{A} \mathbf{B}) = (c\\\mathbf{A})\\\mathbf{B}. \\
+>
+> In particular, \\\mathbf{A}\\(\mathbf{B} - \mathbf{C}) = \mathbf{A} \mathbf{B} - \mathbf{A} \mathbf{C}\\ and \\(\mathbf{B} - \mathbf{C})\\\mathbf{D} = \mathbf{B} \mathbf{D} - \mathbf{C} \mathbf{D}\\ for matrices of compatible sizes, where \\\mathbf{B} - \mathbf{C} = \mathbf{B} + (-1)\\\mathbf{C}\\ ([Theorem 6](#thm-matadd-inverse), [Definition 19](#def-scalar-mult)).
+
+> **NOTE:**
+>
+> *Proof*. **\\\mathbf{A}\\(c\\\mathbf{B}) = c\\(\mathbf{A} \mathbf{B})\\.** For each entry \\(i, j)\\,
+>
+> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}\\(c\\\mathbf{B})\right)\mathclose{}\_{ij} &= \sum\_{l=1}^{k} a\_{il}\\(c\\\mathbf{B})\_{lj} && \text{(@def-matrix-mult)} \\ &= \sum\_{l=1}^{k} a\_{il}\\(c\\b\_{lj}) && \text{(@def-scalar-mult)} \\ &= \sum\_{l=1}^{k} c\\(a\_{il}\\b\_{lj}) && \text{(reorder the product of numbers)} \\ &= c \sum\_{l=1}^{k} a\_{il}\\b\_{lj} && \text{(factor } c \text{ out of the sum)} \\ &= c\\(\mathbf{A} \mathbf{B})\_{ij} && \text{(@def-matrix-mult)} \\ &= \mathopen{}\left(c\\(\mathbf{A} \mathbf{B})\right)\mathclose{}\_{ij}. && \text{(@def-scalar-mult)} \end{aligned} \\
+>
+> **\\(c\\\mathbf{A})\\\mathbf{B} = c\\(\mathbf{A} \mathbf{B})\\.** For each entry \\(i, j)\\,
+>
+> \\ \begin{aligned} \mathopen{}\left((c\\\mathbf{A})\\\mathbf{B}\right)\mathclose{}\_{ij} &= \sum\_{l=1}^{k} (c\\a\_{il})\\b\_{lj} && \text{(@def-matrix-mult, @def-scalar-mult)} \\ &= c \sum\_{l=1}^{k} a\_{il}\\b\_{lj} && \text{(factor } c \text{ out of the sum)} \\ &= \mathopen{}\left(c\\(\mathbf{A} \mathbf{B})\right)\mathclose{}\_{ij}. && \text{(@def-matrix-mult, @def-scalar-mult)} \end{aligned} \\
+>
+> **Differences.**
+>
+> \\ \begin{aligned} \mathbf{A}\\(\mathbf{B} - \mathbf{C}) &= \mathbf{A}\\(\mathbf{B} + (-1)\\\mathbf{C}) && \text{(the difference as a sum)} \\ &= \mathbf{A} \mathbf{B} + \mathbf{A}\\((-1)\\\mathbf{C}) && \text{(@thm-matmul-distrib)} \\ &= \mathbf{A} \mathbf{B} + (-1)\\(\mathbf{A} \mathbf{C}) && \text{(first part)} \\ &= \mathbf{A} \mathbf{B} - \mathbf{A} \mathbf{C}, && \text{(the difference as a sum)} \end{aligned} \\
+>
+> and \\(\mathbf{B} - \mathbf{C})\\\mathbf{D} = \mathbf{B} \mathbf{D} - \mathbf{C} \mathbf{D}\\ the same way, using the second law in [Theorem 8](#thm-matmul-distrib) and the second part. A column vector is a matrix with one column, so all of this applies with \\\mathbf{B}\\, \\\mathbf{C}\\ or \\\mathbf{D}\\ a vector.
+
+> **NOTE:**
+>
+> **Example 109 (Pulling a scalar out of a product)** With \\\mathbf{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\: \\\mathbf{A}\\(2\\\mathbf{B}) = \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 6 \\ 8 \end{bmatrix} = 22\\, and \\2\\(\mathbf{A} \mathbf{B}) = 2\\(3 + 8) = 22\\.
+
+> **NOTE:**
+>
+> **Definition 69 (Generalized inverse)** A **generalized inverse** of an \\m \times n\\ matrix \\\mathbf{A}\\ is an \\n \times m\\ matrix \\\mathbf{G}\\ such that
+>
+> \\ \underbrace{\mathbf{A}}\_{m \times n}\\ \underbrace{\mathbf{G}}\_{n \times m}\\ \underbrace{\mathbf{A}}\_{m \times n} = \mathbf{A}. \\
+
+> **NOTE:**
+>
+> **Example 110 (A matrix with many generalized inverses)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and \\\mathbf{G} = \begin{bmatrix} g\_{11} & g\_{12} \\ g\_{21} & g\_{22} \end{bmatrix}\\. Then
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{G} \mathbf{A} &= \begin{bmatrix} g\_{11} & g\_{12} \\ 0 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} && \text{(@def-matrix-mult, for } \mathbf{A} \mathbf{G} \text{)} \\ &= \begin{bmatrix} g\_{11} & 0 \\ 0 & 0 \end{bmatrix}, && \text{(@def-matrix-mult)} \end{aligned} \\
+>
+> which equals \\\mathbf{A}\\ exactly when \\g\_{11} = 1\\. So every matrix \\\begin{bmatrix} 1 & g\_{12} \\ g\_{21} & g\_{22} \end{bmatrix}\\ is a generalized inverse of \\\mathbf{A}\\: a generalized inverse need not be unique. The zero matrix is not one, since its \\(1, 1)\\ entry is \\0\\.
+
+> **NOTE:**
+>
+> **Theorem 74 (An invertible matrix has only one generalized inverse)** If \\\mathbf{A}\\ is an invertible \\p \times p\\ matrix ([Definition 50](#def-invertible-matrix)), its only generalized inverse is \\\mathbf{A}^{-1}\\.
+
+> **NOTE:**
+>
+> *Proof*. \\\mathbf{A} \mathbf{A}^{-1} \mathbf{A} = \mathbf{I}\_p \mathbf{A} = \mathbf{A}\\ ([Definition 49](#def-matrix-inverse), [Theorem 50](#thm-identity)), so \\\mathbf{A}^{-1}\\ is a generalized inverse. If \\\mathbf{G}\\ is any generalized inverse, then
+>
+> \\ \begin{aligned} \mathbf{G} &= \mathbf{I}\_p\\\mathbf{G}\\\mathbf{I}\_p && \text{(@thm-identity)} \\ &= (\mathbf{A}^{-1} \mathbf{A})\\\mathbf{G}\\(\mathbf{A} \mathbf{A}^{-1}) && \text{(@def-matrix-inverse)} \\ &= \mathbf{A}^{-1}\\(\mathbf{A} \mathbf{G} \mathbf{A})\\\mathbf{A}^{-1} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{A}^{-1} \mathbf{A} \mathbf{A}^{-1} && \text{(@def-generalized-inverse)} \\ &= \mathbf{I}\_p\\\mathbf{A}^{-1} && \text{(@def-matrix-inverse)} \\ &= \mathbf{A}^{-1}. && \text{(@thm-identity)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 111 (The generalized inverse of an invertible matrix)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ of [Example 75](#exm-invertible-matrix), the only generalized inverse is \\\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}\\. The matrix of [Example 110](#exm-generalized-inverse), by contrast, has infinitely many, so by [Theorem 74](#thm-generalized-inverse-invertible) it is singular.
+
+> **NOTE:**
+>
+> **Theorem 75 (A generalized inverse solves every solvable system)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\mathbf{G}\\ be a generalized inverse of \\\mathbf{A}\\ ([Definition 69](#def-generalized-inverse)), and let \\\tilde{b} \in \mathbb{R}^m\\. If \\\mathbf{A} \tilde{x} = \tilde{b}\\ has a solution, then \\\mathbf{G} \tilde{b}\\ is a solution.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\tilde{x}\_0\\ be a solution, so \\\mathbf{A} \tilde{x}\_0 = \tilde{b}\\. Then
+>
+> \\ \begin{aligned} \mathbf{A}\\(\mathbf{G} \tilde{b}) &= \mathbf{A} \mathbf{G}\\(\mathbf{A} \tilde{x}\_0) && \text{(substitute } \tilde{b} = \mathbf{A} \tilde{x}\_0 \text{)} \\ &= (\mathbf{A} \mathbf{G} \mathbf{A})\\\tilde{x}\_0 && \text{(@thm-matmul-assoc)} \\ &= \mathbf{A} \tilde{x}\_0 && \text{(@def-generalized-inverse)} \\ &= \tilde{b}. && \text{(} \tilde{x}\_0 \text{ is a solution)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 112 (Solving with a generalized inverse)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and its generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ ([Example 110](#exm-generalized-inverse)), the system \\\mathbf{A} \tilde{x} = (2, 0)\\ has the solution \\(2, 0)\\, and \\\mathbf{G}\\(2, 0) = (2, 14)\\ is a solution too: \\\mathbf{A}\\(2, 14) = (2, 0)\\. The system \\\mathbf{A} \tilde{x} = (2, 1)\\ has no solution, since the second entry of \\\mathbf{A} \tilde{x}\\ is always \\0\\; there \\\mathbf{G}\\(2, 1) = (7, 14)\\ gives \\\mathbf{A}\\(7, 14) = (7, 0) \ne (2, 1)\\.
+
+> **NOTE:**
+>
+> **Definition 70 (Moore-Penrose inverse)** A **Moore-Penrose inverse** of an \\m \times n\\ matrix \\\mathbf{A}\\ is an \\n \times m\\ matrix \\\mathbf{G}\\ satisfying all four conditions
+>
+> 1.  \\\mathbf{A} \mathbf{G} \mathbf{A} = \mathbf{A}\\;
+> 2.  \\\mathbf{G} \mathbf{A} \mathbf{G} = \mathbf{G}\\;
+> 3.  \\{(\mathbf{A} \mathbf{G})}^{\top} = \mathbf{A} \mathbf{G}\\;
+> 4.  \\{(\mathbf{G} \mathbf{A})}^{\top} = \mathbf{G} \mathbf{A}\\.
+>
+> Condition 1 says \\\mathbf{G}\\ is a generalized inverse ([Definition 69](#def-generalized-inverse)).
+
+> **NOTE:**
+>
+> **Example 113 (Checking the four conditions)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, the matrix \\\mathbf{G} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ satisfies all four: \\\mathbf{A} \mathbf{G} = \mathbf{G} \mathbf{A} = \mathbf{A}\\ and \\\mathbf{A}^2 = \mathbf{A}\\, so conditions 1 and 2 read \\\mathbf{A} = \mathbf{A}\\, and conditions 3 and 4 hold because \\\mathbf{A}\\ is symmetric.
+>
+> The generalized inverse \\\mathbf{G}' = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\ of \\\mathbf{A}\\ ([Example 110](#exm-generalized-inverse)) is not a Moore-Penrose inverse: \\\mathbf{A} \mathbf{G}' = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\, which is not symmetric, so condition 3 fails.
+
+> **NOTE:**
+>
+> **Theorem 76 (A matrix has at most one Moore-Penrose inverse)** If \\\mathbf{G}\_1\\ and \\\mathbf{G}\_2\\ are both Moore-Penrose inverses of an \\m \times n\\ matrix \\\mathbf{A}\\ ([Definition 70](#def-moore-penrose)), then \\\mathbf{G}\_1 = \mathbf{G}\_2\\.
+
+> **NOTE:**
+>
+> *Proof*. **\\\mathbf{A} \mathbf{G}\_1 = \mathbf{A} \mathbf{G}\_2\\.**
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{G}\_1 &= {(\mathbf{A} \mathbf{G}\_1)}^{\top} && \text{(condition 3 for } \mathbf{G}\_1 \text{)} \\ &= {\mathbf{G}\_1}^{\top}\\{\mathbf{A}}^{\top} && \text{(@thm-transpose-product)} \\ &= {\mathbf{G}\_1}^{\top}\\{(\mathbf{A} \mathbf{G}\_2 \mathbf{A})}^{\top} && \text{(condition 1 for } \mathbf{G}\_2 \text{)} \\ &= {\mathbf{G}\_1}^{\top}\\{\mathbf{A}}^{\top}\\{\mathbf{G}\_2}^{\top}\\{\mathbf{A}}^{\top} && \text{(@thm-transpose-product, twice)} \\ &= ({\mathbf{G}\_1}^{\top}\\{\mathbf{A}}^{\top})\\({\mathbf{G}\_2}^{\top}\\{\mathbf{A}}^{\top}) && \text{(@thm-matmul-assoc)} \\ &= {(\mathbf{A} \mathbf{G}\_1)}^{\top}\\{(\mathbf{A} \mathbf{G}\_2)}^{\top} && \text{(@thm-transpose-product, twice)} \\ &= (\mathbf{A} \mathbf{G}\_1)(\mathbf{A} \mathbf{G}\_2) && \text{(condition 3 for } \mathbf{G}\_1 \text{ and } \mathbf{G}\_2 \text{)} \\ &= (\mathbf{A} \mathbf{G}\_1 \mathbf{A})\\\mathbf{G}\_2 && \text{(@thm-matmul-assoc)} \\ &= \mathbf{A} \mathbf{G}\_2. && \text{(condition 1 for } \mathbf{G}\_1 \text{)} \end{aligned} \\
+>
+> **\\\mathbf{G}\_1 \mathbf{A} = \mathbf{G}\_2 \mathbf{A}\\.**
+>
+> \\ \begin{aligned} \mathbf{G}\_1 \mathbf{A} &= {(\mathbf{G}\_1 \mathbf{A})}^{\top} && \text{(condition 4 for } \mathbf{G}\_1 \text{)} \\ &= {\mathbf{A}}^{\top}\\{\mathbf{G}\_1}^{\top} && \text{(@thm-transpose-product)} \\ &= {(\mathbf{A} \mathbf{G}\_2 \mathbf{A})}^{\top}\\{\mathbf{G}\_1}^{\top} && \text{(condition 1 for } \mathbf{G}\_2 \text{)} \\ &= {\mathbf{A}}^{\top}\\{\mathbf{G}\_2}^{\top}\\{\mathbf{A}}^{\top}\\{\mathbf{G}\_1}^{\top} && \text{(@thm-transpose-product, twice)} \\ &= ({\mathbf{A}}^{\top}\\{\mathbf{G}\_2}^{\top})\\({\mathbf{A}}^{\top}\\{\mathbf{G}\_1}^{\top}) && \text{(@thm-matmul-assoc)} \\ &= {(\mathbf{G}\_2 \mathbf{A})}^{\top}\\{(\mathbf{G}\_1 \mathbf{A})}^{\top} && \text{(@thm-transpose-product, twice)} \\ &= (\mathbf{G}\_2 \mathbf{A})(\mathbf{G}\_1 \mathbf{A}) && \text{(condition 4 for } \mathbf{G}\_2 \text{ and } \mathbf{G}\_1 \text{)} \\ &= \mathbf{G}\_2\\(\mathbf{A} \mathbf{G}\_1 \mathbf{A}) && \text{(@thm-matmul-assoc)} \\ &= \mathbf{G}\_2 \mathbf{A}. && \text{(condition 1 for } \mathbf{G}\_1 \text{)} \end{aligned} \\
+>
+> **Conclusion.**
+>
+> \\ \begin{aligned} \mathbf{G}\_1 &= \mathbf{G}\_1 \mathbf{A} \mathbf{G}\_1 && \text{(condition 2 for } \mathbf{G}\_1 \text{)} \\ &= \mathbf{G}\_1\\(\mathbf{A} \mathbf{G}\_1) && \text{(@thm-matmul-assoc)} \\ &= \mathbf{G}\_1\\(\mathbf{A} \mathbf{G}\_2) && \text{(the first step)} \\ &= (\mathbf{G}\_1 \mathbf{A})\\\mathbf{G}\_2 && \text{(@thm-matmul-assoc)} \\ &= (\mathbf{G}\_2 \mathbf{A})\\\mathbf{G}\_2 && \text{(the second step)} \\ &= \mathbf{G}\_2 \mathbf{A} \mathbf{G}\_2 && \text{(@thm-matmul-assoc)} \\ &= \mathbf{G}\_2. && \text{(condition 2 for } \mathbf{G}\_2 \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 114 (Only one of the many generalized inverses qualifies)** The matrix \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ has infinitely many generalized inverses \\\begin{bmatrix} 1 & g\_{12} \\ g\_{21} & g\_{22} \end{bmatrix}\\ ([Example 110](#exm-generalized-inverse)), and \\\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ is a Moore-Penrose inverse ([Example 113](#exm-moore-penrose)). By [Theorem 76](#thm-moore-penrose-unique) it is the only one, so every other choice of \\g\_{12}, g\_{21}, g\_{22}\\ breaks condition 2, 3 or 4. For instance, \\g\_{21} = 1\\ (the rest \\0\\) gives \\\mathbf{G} \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}\\, which is not symmetric.
+
+> **NOTE:**
+>
+> **Theorem 77 (Every matrix has a Moore-Penrose inverse)** Every \\m \times n\\ matrix \\\mathbf{A}\\ has a Moore-Penrose inverse ([Definition 70](#def-moore-penrose)), written \\\mathbf{A}^+\\; it is unique by [Theorem 76](#thm-moore-penrose-unique).
+>
+> - If \\\mathbf{A} = \mathbf{0}\_{m \times n}\\, then \\\mathbf{A}^+ = \mathbf{0}\_{n \times m}\\.
+> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 35](#def-rank-factorization)), then
+>
+> \\ \underbrace{\mathbf{A}^+}\_{n \times m} = \underbrace{{\mathbf{R}}^{\top}}\_{n \times r} \underbrace{(\mathbf{R} {\mathbf{R}}^{\top})^{-1}}\_{r \times r} \underbrace{({\mathbf{C}}^{\top} \mathbf{C})^{-1}}\_{r \times r} \underbrace{{\mathbf{C}}^{\top}}\_{r \times m}. \\
+
+> **NOTE:**
+>
+> *Proof*. **The two cases cover every matrix.** If \\\mathbf{A} \ne \mathbf{0}\_{m \times n}\\, it has a nonzero column, which is linearly independent on its own (\\c\\\tilde{v} = \tilde{0}\\ with \\\tilde{v} \ne \tilde{0}\\ forces \\c = 0\\), so \\\operatorname{rank}(\mathbf{A}) \ge 1\\ ([Definition 26](#def-rank)).
+>
+> **The zero matrix.** With \\\mathbf{A} = \mathbf{0}\_{m \times n}\\ and \\\mathbf{G} = \mathbf{0}\_{n \times m}\\, every product in conditions 1 to 4 is a zero matrix, and a zero matrix equals its own transpose, so all four conditions hold.
+>
+> **The two inverses exist.** Now suppose \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A rank factorization exists ([Theorem 30](#thm-rank-factorization)). \\\mathbf{C}\\ is \\m \times r\\ and \\\mathbf{R}\\ is \\r \times n\\. Both have rank \\r\\:
+>
+> \\ \begin{aligned} r &= \operatorname{rank}(\mathbf{C} \mathbf{R}) && \text{(} \mathbf{A} = \mathbf{C} \mathbf{R} \text{)} \\ &\le \operatorname{rank}(\mathbf{C}) && \text{(@thm-rank-product)} \\ &\le r, && \text{(@cor-rank-bound, } \mathbf{C} \text{ has } r \text{ columns)} \end{aligned} \\
+>
+> and, using \\{(\mathbf{C} \mathbf{R})}^{\top} = {\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\\ ([Theorem 10](#thm-transpose-product)),
+>
+> \\ \begin{aligned} r &= \operatorname{rank}\mathopen{}\left({\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\right)\mathclose{} && \text{(@thm-rank-transpose)} \\ &\le \operatorname{rank}({\mathbf{R}}^{\top}) && \text{(@thm-rank-product)} \\ &\le r. && \text{(@cor-rank-bound, } {\mathbf{R}}^{\top} \text{ has } r \text{ columns)} \end{aligned} \\
+>
+> So \\\mathbf{C}\\ and \\{\mathbf{R}}^{\top}\\ have full column rank \\r\\, and \\{\mathbf{C}}^{\top} \mathbf{C}\\ and \\\mathbf{R} {\mathbf{R}}^{\top} = {({\mathbf{R}}^{\top})}^{\top}\\{\mathbf{R}}^{\top}\\ are invertible ([Theorem 67](#thm-gram-invertible)). They are symmetric: \\{({\mathbf{C}}^{\top} \mathbf{C})}^{\top} = {\mathbf{C}}^{\top}\\{({\mathbf{C}}^{\top})}^{\top} = {\mathbf{C}}^{\top} \mathbf{C}\\ ([Theorem 10](#thm-transpose-product), [Definition 16](#def-matrix-transpose)), and likewise for \\\mathbf{R} {\mathbf{R}}^{\top}\\. Write \\\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}\\ and \\\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}\\, both symmetric ([Corollary 4](#cor-inverse-symmetric)), and \\\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}\\.
+>
+> **Two products.**
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{G} &= \mathbf{C} \mathbf{R}\\{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top} && \text{(substitute } \mathbf{A} \text{ and } \mathbf{G} \text{)} \\ &= \mathbf{C}\\(\mathbf{R} {\mathbf{R}}^{\top})\\\mathbf{S}\\\mathbf{T} {\mathbf{C}}^{\top} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{C}\\\mathbf{I}\_r\\\mathbf{T} {\mathbf{C}}^{\top} && \text{(@def-matrix-inverse)} \\ &= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top}, && \text{(@thm-identity)} \end{aligned} \\
+>
+> \\ \begin{aligned} \mathbf{G} \mathbf{A} &= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}\\\mathbf{C} \mathbf{R} && \text{(substitute } \mathbf{G} \text{ and } \mathbf{A} \text{)} \\ &= {\mathbf{R}}^{\top} \mathbf{S}\\\mathbf{T}\\({\mathbf{C}}^{\top} \mathbf{C})\\\mathbf{R} && \text{(@thm-matmul-assoc)} \\ &= {\mathbf{R}}^{\top} \mathbf{S}\\\mathbf{I}\_r\\\mathbf{R} && \text{(@def-matrix-inverse)} \\ &= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{R}. && \text{(@thm-identity)} \end{aligned} \\
+>
+> **Conditions 3 and 4.**
+>
+> \\ \begin{aligned} {(\mathbf{A} \mathbf{G})}^{\top} &= {(\mathbf{C} \mathbf{T} {\mathbf{C}}^{\top})}^{\top} && \text{(first product)} \\ &= {\mathopen{}\left(\mathbf{C}\\(\mathbf{T} {\mathbf{C}}^{\top})\right)\mathclose{}}^{\top} && \text{(@thm-matmul-assoc)} \\ &= {(\mathbf{T} {\mathbf{C}}^{\top})}^{\top}\\{\mathbf{C}}^{\top} && \text{(@thm-transpose-product)} \\ &= {({\mathbf{C}}^{\top})}^{\top}\\{\mathbf{T}}^{\top}\\{\mathbf{C}}^{\top} && \text{(@thm-transpose-product)} \\ &= \mathbf{C}\\{\mathbf{T}}^{\top}\\{\mathbf{C}}^{\top} && \text{(@def-matrix-transpose)} \\ &= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top}, && \text{(} \mathbf{T} \text{ is symmetric)} \end{aligned} \\
+>
+> \\ \begin{aligned} {(\mathbf{G} \mathbf{A})}^{\top} &= {({\mathbf{R}}^{\top} \mathbf{S} \mathbf{R})}^{\top} && \text{(second product)} \\ &= {\mathopen{}\left({\mathbf{R}}^{\top}\\(\mathbf{S} \mathbf{R})\right)\mathclose{}}^{\top} && \text{(@thm-matmul-assoc)} \\ &= {(\mathbf{S} \mathbf{R})}^{\top}\\{({\mathbf{R}}^{\top})}^{\top} && \text{(@thm-transpose-product)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{S}}^{\top}\\{({\mathbf{R}}^{\top})}^{\top} && \text{(@thm-transpose-product)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{S}}^{\top}\\\mathbf{R} && \text{(@def-matrix-transpose)} \\ &= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{R}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+>
+> **Condition 1.**
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{G} \mathbf{A} &= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top}\\\mathbf{C} \mathbf{R} && \text{(first product)} \\ &= \mathbf{C}\\\mathbf{T}\\({\mathbf{C}}^{\top} \mathbf{C})\\\mathbf{R} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{C}\\\mathbf{I}\_r\\\mathbf{R} && \text{(@def-matrix-inverse)} \\ &= \mathbf{A}. && \text{(@thm-identity)} \end{aligned} \\
+>
+> **Condition 2.**
+>
+> \\ \begin{aligned} \mathbf{G} \mathbf{A} \mathbf{G} &= {\mathbf{R}}^{\top} \mathbf{S} \mathbf{R}\\{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top} && \text{(second product)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{S}\\(\mathbf{R} {\mathbf{R}}^{\top})\\\mathbf{S}\\\mathbf{T} {\mathbf{C}}^{\top} && \text{(@thm-matmul-assoc)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{I}\_r\\\mathbf{S}\\\mathbf{T} {\mathbf{C}}^{\top} && \text{(@def-matrix-inverse)} \\ &= \mathbf{G}. && \text{(@thm-identity)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 115 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 28](#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 40](#exm-rank-factorization)) gives \\{\mathbf{C}}^{\top} \mathbf{C} = 1 + 9 = 10\\ and \\\mathbf{R} {\mathbf{R}}^{\top} = 1 + 4 + 4 = 9\\, so
+>
+> \\ \mathbf{A}^+ = \frac{1}{9 \cdot 10} \begin{bmatrix} 1 \\ -2 \\ -2 \end{bmatrix} \begin{bmatrix} 1 & 3 \end{bmatrix} = \frac{1}{90} \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}. \\
+>
+> As a check on condition 1, \\\mathbf{A} \mathbf{A}^+ = \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top} = \frac{1}{10} \begin{bmatrix} 1 & 3 \\ 3 & 9 \end{bmatrix}\\, and its first row times \\\mathbf{A}\\ is \\\frac{1}{10}\mathopen{}\left(1 \cdot(1, -2, -2) + 3 \cdot(3, -6, -6)\right)\mathclose{} = (1, -2, -2)\\, the first row of \\\mathbf{A}\\; the second row is \\3\\ times the first, like the second row of \\\mathbf{A}\\.
+
+> **NOTE:**
+>
+> **Definition 71 (Consistent linear system)** A linear system \\\mathbf{A} \tilde{x} = \tilde{b}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, is **consistent** if it has at least one solution \\\tilde{x} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
+
+> **NOTE:**
+>
+> **Example 116 (A consistent system and an inconsistent one)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{A}\\(x_1, x_2) = (x_1, 0)\\ ([Definition 21](#def-matvec-mult)).
+>
+> - \\\mathbf{A} \tilde{x} = (2, 0)\\ is consistent: \\\tilde{x} = (2, 0)\\ is a solution.
+> - \\\mathbf{A} \tilde{x} = (2, 1)\\ is inconsistent: the second entry of \\\mathbf{A} \tilde{x}\\ is always \\0\\, never \\1\\.
+
+> **NOTE:**
+>
+> **Theorem 78 (When a linear system has a solution)** Let \\\mathbf{A}\\ be \\m \times n\\, let \\\tilde{b} \in \mathbb{R}^m\\, and let \\\mathbf{G}\\ be any generalized inverse of \\\mathbf{A}\\ ([Definition 69](#def-generalized-inverse)). The following statements are equivalent:
+>
+> 1.  \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent ([Definition 71](#def-consistent-system));
+> 2.  \\\tilde{b} \in \mathcal{C}(\mathbf{A})\\ ([Definition 32](#def-column-space));
+> 3.  \\\mathbf{A} \mathbf{G} \tilde{b} = \tilde{b}\\.
+
+> **NOTE:**
+>
+> *Proof*. **1 and 2 are equivalent.** Statement 1 says \\\tilde{b} = \mathbf{A} \tilde{x}\\ for some \\\tilde{x}\\ ([Definition 71](#def-consistent-system)), and \\\mathcal{C}(\mathbf{A})\\ is the set of vectors \\\mathbf{A} \tilde{x}\\ ([Definition 32](#def-column-space)), so \\\tilde{b}\\ is in it exactly when \\\tilde{b} = \mathbf{A} \tilde{x}\\ for some \\\tilde{x}\\.
+>
+> **1 implies 3.** By [Theorem 75](#thm-generalized-inverse-solves), \\\mathbf{G} \tilde{b}\\ is a solution, so \\\mathbf{A}\\(\mathbf{G} \tilde{b}) = \tilde{b}\\, which is statement 3 ([Theorem 7](#thm-matmul-assoc)).
+>
+> **3 implies 1.** If \\\mathbf{A} \mathbf{G} \tilde{b} = \tilde{b}\\, then \\\tilde{x} = \mathbf{G} \tilde{b}\\ is a solution, since \\\mathbf{A}\\(\mathbf{G} \tilde{b}) = (\mathbf{A} \mathbf{G})\\\tilde{b}\\ ([Theorem 7](#thm-matmul-assoc)).
+
+> **NOTE:**
+>
+> **Example 117 (Testing consistency with a generalized inverse)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and the generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\, \\\mathbf{A} \mathbf{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}\\.
+>
+> - \\\tilde{b} = (2, 0)\\: \\\mathbf{A} \mathbf{G} \tilde{b} = (2, 0) = \tilde{b}\\, so the system is consistent.
+> - \\\tilde{b} = (2, 1)\\: \\\mathbf{A} \mathbf{G} \tilde{b} = (7, 0) \ne \tilde{b}\\, so it is not, as [Example 112](#exm-generalized-inverse-solves) found directly.
+
+> **NOTE:**
+>
+> **Theorem 79 (All solutions of a linear system)** Let \\\mathbf{A}\\ be \\m \times n\\ with a generalized inverse \\\mathbf{G}\\ ([Definition 69](#def-generalized-inverse)).
+>
+> 1.  \\\mathcal{N}(\mathbf{A}) = \mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\: \\\tilde{x}\\ solves \\\mathbf{A} \tilde{x} = \tilde{0}\_m\\ exactly when \\\tilde{x} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q}\\ for some \\\tilde{q} \in \mathbb{R}^n\\.
+> 2.  If \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent ([Definition 71](#def-consistent-system)), then \\\tilde{x}\\ is a solution exactly when \\ \tilde{x} = \mathbf{G} \tilde{b} + (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q} \quad \text{for some } \tilde{q} \in \mathbb{R}^n: \\ one particular solution plus a vector of \\\mathcal{N}(\mathbf{A})\\.
+
+> **NOTE:**
+>
+> *Proof*. **Part 1.** First,
+>
+> \\ \begin{aligned} \mathbf{A}\\(\mathbf{I}\_n - \mathbf{G} \mathbf{A}) &= \mathbf{A} \mathbf{I}\_n - \mathbf{A}\\(\mathbf{G} \mathbf{A}) && \text{(@thm-scalar-matmul)} \\ &= \mathbf{A} \mathbf{I}\_n - \mathbf{A} \mathbf{G} \mathbf{A} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{A} - \mathbf{A} \mathbf{G} \mathbf{A} && \text{(@thm-identity)} \\ &= \mathbf{A} - \mathbf{A} && \text{(@def-generalized-inverse)} \\ &= \mathbf{0}\_{m \times n}, && \text{(arithmetic)} \end{aligned} \\
+>
+> so \\\mathbf{A}\\(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q} = \tilde{0}\_m\\ for every \\\tilde{q}\\ ([Theorem 7](#thm-matmul-assoc)), and \\\mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A}) \subseteq \mathcal{N}(\mathbf{A})\\. Conversely, if \\\mathbf{A} \tilde{x} = \tilde{0}\_m\\, then
+>
+> \\ \begin{aligned} (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{x} &= \mathbf{I}\_n \tilde{x} - (\mathbf{G} \mathbf{A})\\\tilde{x} && \text{(@thm-scalar-matmul, with } \tilde{x} \text{ as the last factor)} \\ &= \tilde{x} - (\mathbf{G} \mathbf{A})\\\tilde{x} && \text{(@thm-identity)} \\ &= \tilde{x} - \mathbf{G}\\(\mathbf{A} \tilde{x}) && \text{(@thm-matmul-assoc)} \\ &= \tilde{x} - \mathbf{G}\\\tilde{0}\_m && \text{(} \mathbf{A} \tilde{x} = \tilde{0}\_m \text{)} \\ &= \tilde{x}, && \text{(} \mathbf{G}\\\tilde{0}\_m = \tilde{0}\_n \text{)} \end{aligned} \\
+>
+> so \\\tilde{x}\\ is in \\\mathcal{C}(\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\, with \\\tilde{q} = \tilde{x}\\.
+>
+> **Part 2.** \\\mathbf{G} \tilde{b}\\ is a solution ([Theorem 75](#thm-generalized-inverse-solves)). For any \\\tilde{x}\\,
+>
+> \\ \begin{aligned} \mathbf{A}\\(\tilde{x} - \mathbf{G} \tilde{b}) &= \mathbf{A} \tilde{x} - \mathbf{A}\\(\mathbf{G} \tilde{b}) && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{A} \tilde{x} - \mathbf{A} \mathbf{G} \tilde{b} && \text{(@thm-matmul-assoc)} \\ &= \mathbf{A} \tilde{x} - \tilde{b}, && \text{(@thm-consistency, statement 3)} \end{aligned} \\
+>
+> so \\\tilde{x}\\ solves \\\mathbf{A} \tilde{x} = \tilde{b}\\ exactly when \\\tilde{x} - \mathbf{G} \tilde{b} \in \mathcal{N}(\mathbf{A})\\, that is, by part 1, exactly when \\\tilde{x} - \mathbf{G} \tilde{b} = (\mathbf{I}\_n - \mathbf{G} \mathbf{A})\\\tilde{q}\\ for some \\\tilde{q}\\.
+
+> **NOTE:**
+>
+> **Example 118 (All solutions of a consistent system)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\ and \\\tilde{b} = (2, 0)\\: \\\mathbf{G} \tilde{b} = (2, 14)\\, \\\mathbf{G} \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 7 & 0 \end{bmatrix}\\, and \\\mathbf{I}\_2 - \mathbf{G} \mathbf{A} = \begin{bmatrix} 0 & 0 \\ -7 & 1 \end{bmatrix}\\, so
+>
+> \\ \tilde{x} = (2, 14) + (0, -7 q_1 + q_2), \qquad q_1, q_2 \in \mathbb{R}. \\
+>
+> Since \\-7 q_1 + q_2\\ can be any number, the solutions are exactly the vectors \\(2, t)\\, \\t \in \mathbb{R}\\, which is what \\\mathbf{A}\\(x_1, x_2) = (x_1, 0) = (2, 0)\\ says directly.
+
+> **NOTE:**
+>
+> **Corollary 6 (Solvable for every right-hand side, and solvable uniquely)** Let \\\mathbf{A}\\ be \\m \times n\\.
+>
+> 1.  \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent for every \\\tilde{b} \in \mathbb{R}^m\\ exactly when \\\operatorname{rank}(\mathbf{A}) = m\\.
+> 2.  A consistent system \\\mathbf{A} \tilde{x} = \tilde{b}\\ has exactly one solution exactly when \\\operatorname{rank}(\mathbf{A}) = n\\.
+
+> **NOTE:**
+>
+> *Proof*. **Part 1.** By [Theorem 78](#thm-consistency), the system is consistent for every \\\tilde{b}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 22](#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 26](#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 22](#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 21](#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
+>
+> **Part 2.** By [Theorem 79](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, by [Definition 31](#def-dimension) and [Definition 29](#def-span); and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 22](#exm-dimension)). By [Theorem 27](#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
+
+> **NOTE:**
+>
+> **Example 119 (Three systems)**  
+>
+> - The \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Example 39](#exm-rank-bound) has rank \\2 = m\\, so every system with it is consistent, but \\2 \< 3 = n\\, so the solutions are never unique.
+> - The \\3 \times 2\\ matrix \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ of [Example 100](#exm-gram-invertible) has rank \\2 = n\\, so a consistent system has one solution, but \\2 \< 3 = m\\, so some systems are inconsistent: \\(1, 0, 0) \notin \mathcal{C}(\mathbf{X})\\, because \\a\\(1, 1, 1) + b\\(1, 2, 3)\\ has equal differences between consecutive entries, and \\(1, 0, 0)\\ does not.
+> - An invertible \\p \times p\\ matrix \\\mathbf{A}\\ has rank \\p\\: if \\\mathbf{A} \tilde{x} = \tilde{0}\\ then \\\tilde{x} = \mathbf{A}^{-1} \mathbf{A} \tilde{x} = \tilde{0}\\, so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 27](#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \tilde{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \tilde{b}) = \tilde{b}\\.
+
+> **NOTE:**
+>
+> **Theorem 80 (The projection onto a column space, with any generalized inverse)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix of any rank, and let \\\mathbf{G}\\ be any generalized inverse of \\{\mathbf{X}}^{\top} \mathbf{X}\\ ([Definition 69](#def-generalized-inverse)). Then for every \\\tilde{y}\in \mathbb{R}^n\\, \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\ ([Definition 68](#def-orthogonal-projection)). So the matrix \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ is the same for every choice of \\\mathbf{G}\\, and when \\\operatorname{rank}(\mathbf{X}) = p\\ it is the hat matrix \\\mathbf{H}\\ ([Definition 67](#def-hat-matrix)).
+
+> **NOTE:**
+>
+> *Proof*. **\\{\mathbf{X}}^{\top} \tilde{y}\\ is in \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\\.** \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\\, since \\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} = {\mathbf{X}}^{\top}\\(\mathbf{X}\tilde{z})\\ ([Theorem 7](#thm-matmul-assoc)). Both are subspaces of \\\mathbb{R}^p\\ ([Theorem 22](#thm-column-space-span)) with the same dimension: \\\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\\ ([Theorem 29](#thm-rank-transpose), [Theorem 26](#thm-rank-dim)). So \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\\ ([Theorem 21](#thm-subspace-equal-dim)), and since \\{\mathbf{X}}^{\top} \tilde{y}\in \mathcal{C}({\mathbf{X}}^{\top})\\ ([Definition 32](#def-column-space)), \\{\mathbf{X}}^{\top} \tilde{y}= {\mathbf{X}}^{\top} \mathbf{X}\tilde{z}\\ for some \\\tilde{z} \in \mathbb{R}^p\\.
+>
+> **The split.** Let \\\tilde{u} = \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}= \mathbf{X}\\(\mathbf{G} {\mathbf{X}}^{\top} \tilde{y})\\ ([Theorem 7](#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 32](#def-column-space)). For \\\tilde{y}- \tilde{u}\\,
+>
+> \\ \begin{aligned} {\mathbf{X}}^{\top}\\(\tilde{y}- \tilde{u}) &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top}\\\tilde{u} && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top}\\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}) && \text{(substitute } \tilde{u} \text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \tilde{y}) && \text{(@thm-matmul-assoc)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} && \text{(first step)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- \mathopen{}\left(({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\right)\mathclose{}\\\tilde{z} && \text{(@thm-matmul-assoc)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} && \text{(@def-generalized-inverse)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top} \tilde{y} && \text{(first step)} \\ &= \tilde{0}\_p, && \text{(arithmetic)} \end{aligned} \\
+>
+> so \\\tilde{y}- \tilde{u} \in \mathcal{N}({\mathbf{X}}^{\top}) = \mathcal{C}(\mathbf{X})^\perp\\ ([Theorem 37](#thm-complement-null-space)). By the uniqueness in [Theorem 38](#thm-orthogonal-direct-sum), \\\tilde{u}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\.
+>
+> **Same matrix.** Every choice of \\\mathbf{G}\\ gives a matrix that projects every \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{X})\\, so all choices give the same matrix ([Theorem 71](#thm-projection-matrix-projects), part 2). When \\\operatorname{rank}(\mathbf{X}) = p\\, \\({\mathbf{X}}^{\top} \mathbf{X})^{-1}\\ is one choice ([Theorem 67](#thm-gram-invertible), [Theorem 74](#thm-generalized-inverse-invertible)), and it gives \\\mathbf{H}\\.
+
+> **NOTE:**
+>
+> **Example 120 (A design matrix with a repeated column)** Let \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, an intercept column entered twice, so \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ and \\{\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\ is not invertible: its rank is \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ ([Theorem 29](#thm-rank-transpose)), while an invertible \\2 \times 2\\ matrix has rank \\2\\ ([Example 119](#exm-solution-unique)). The matrix \\\mathbf{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}\\ is a generalized inverse of it:
+>
+> \\ \begin{aligned} ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X}) &= \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix} && \text{(@def-matrix-mult, for the first product)} \\ &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}. && \text{(@def-matrix-mult)} \end{aligned} \\
+>
+> Then
+>
+> \\ \begin{aligned} \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} &= \begin{bmatrix} \frac{1}{2} & 0 \\ \frac{1}{2} & 0 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} && \text{(@def-matrix-mult, for } \mathbf{X}\mathbf{G} \text{)} \\ &= \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}, && \text{(@def-matrix-mult)} \end{aligned} \\
+>
+> the hat matrix of the intercept-only model ([Example 101](#exm-hat-matrix)). Another generalized inverse, \\\mathbf{G}' = \begin{bmatrix} 0 & 0 \\ 0 & \frac{1}{2} \end{bmatrix}\\, which is one because \\({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}' = \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix}\\ and that times \\{\mathbf{X}}^{\top} \mathbf{X}\\ is again \\\begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, gives \\\mathbf{X}\mathbf{G}' = \begin{bmatrix} 0 & \frac{1}{2} \\ 0 & \frac{1}{2} \end{bmatrix}\\ and the same \\\mathbf{X}\mathbf{G}' {\mathbf{X}}^{\top} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} \end{bmatrix}\\, as [Theorem 80](#thm-projector-generalized-inverse) says it must. Both project onto \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, the column space of the intercept-only design.
+
 ## 10 Further reading
 
 - Strang ([2023](#ref-strang2023linear)) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.
@@ -3114,12 +3398,14 @@ Searle, Shayle R, and Andre I Khuri. 2017. *Matrix Algebra Useful for Statistics
 
 Strang, Gilbert. 2023. *Introduction to Linear Algebra*. 6th ed. Wellesley-Cambridge Press. <https://math.mit.edu/~gs/linearalgebra/>.
 
-Zhou, Hua. 2024a. *Orthogonal Projections*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>.
+Zhou, Hua. 2024a. *Linear Equations and Matrix Inverses*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/07-matinv/07-matinv.html>.
 
-Zhou, Hua. 2024b. *Rank and Nullity*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html>.
+Zhou, Hua. 2024b. *Orthogonal Projections*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html>.
 
-Zhou, Hua. 2024c. *Vector Space*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html>.
+Zhou, Hua. 2024c. *Rank and Nullity*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html>.
 
-Zhou, Hua. 2024d. *Vectors*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html>.
+Zhou, Hua. 2024d. *Vector Space*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html>.
+
+Zhou, Hua. 2024e. *Vectors*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html>.
 
 Back to top
