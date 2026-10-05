@@ -1,0 +1,10 @@
+:::{#exm-complex-conjugate}
+#### Complex conjugates
+
+- $\overline{3 + 4\,i} = 3 - 4\,i$.
+- $\overline{-2\,i} = \overline{0 + (-2)\,i} = 0 - (-2)\,i = 2\,i$.
+- $\overline{5} = \overline{5 + 0\,i} = 5 - 0\,i = 5$:
+  a real number is its own complex conjugate.
+  A complex number with a nonzero imaginary part, such as $3 + 4\,i$, is not.
+
+:::

@@ -1,0 +1,8 @@
+:::{#def-hermitian-matrix}
+#### Hermitian matrix
+
+A square complex matrix $\matr{A}$ is **Hermitian** if it equals its conjugate transpose (@def-conjugate-transpose):
+
+$$\matr{A}^{\mathsf{H}} = \matr{A}.$$
+
+:::

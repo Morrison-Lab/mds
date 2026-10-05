@@ -1,0 +1,40 @@
+:::{#thm-conj-product}
+#### A complex number times its conjugate
+
+For every complex number $z$,
+
+$$z\,\overline{z} = \abs{z}^2.$$
+
+In particular, $z\,\overline{z}$ is a nonnegative real number.
+
+:::
+
+::: proof
+
+Write $z = a + b\,i$ with $a, b$ real. Then
+
+$$
+\ba
+z\,\overline{z}
+&= (a + b\,i)(a - b\,i)
+&& \text{(@def-complex-conjugate)}
+\\
+&= a^2 - ab\,i + ab\,i - b^2\,i^2
+&& \text{(distribute)}
+\\
+&= a^2 - b^2\,i^2
+&& \text{(cancel } ab\,i \text{)}
+\\
+&= a^2 + b^2
+&& \text{(@def-imaginary-unit)}
+\\
+&= \abs{z}^2
+&& \text{(@def-complex-modulus)}
+\ea
+$$
+
+:::
+
+::: notes
+@axler2024linear [result 4.4, p. 121] lists this identity among the properties of complex numbers.
+:::

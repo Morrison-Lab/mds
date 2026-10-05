@@ -1,0 +1,44 @@
+:::{#exm-zhz-sum-squares}
+#### Computing $\vecf{z}^{\mathsf{H}}\vecf{z}$
+
+Let $\vecf{z} = \tp{(1 + i, 2)}$.
+By @thm-zhz-sum-squares,
+
+$$
+\ba
+\underbrace{\vecf{z}^{\mathsf{H}}}_{1 \times 2}\,\underbrace{\vecf{z}}_{2 \times 1}
+&= \abs{1 + i}^2 + \abs{2}^2
+&& \text{(@thm-zhz-sum-squares)}
+\\
+&= (1^2 + 1^2) + (2^2 + 0^2)
+&& \text{(definition of the absolute value, squared)}
+\\
+&= 2 + 4
+&& \text{(add inside each group)}
+\\
+&= 6
+&& \text{(add)}
+\ea
+$$
+
+Multiplying out directly gives the same number:
+$\overline{2} \cd 2 = 4$, and
+
+$$
+\ba
+\overline{(1 + i)}\,(1 + i)
+&= (1 - i)(1 + i)
+&& \text{(conjugate)}
+\\
+&= 1 + i - i - i^2
+&& \text{(distribute)}
+\\
+&= 1 - i^2
+&& \text{(cancel } i \text{)}
+\\
+&= 2
+&& \text{(} i^2 = -1 \text{)}
+\ea
+$$
+
+:::

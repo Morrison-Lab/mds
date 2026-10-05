@@ -1,0 +1,15 @@
+:::{#exm-complex-vector}
+#### A complex vector and its conjugate
+
+$$
+\underbrace{\vecf{z}}_{3 \times 1} = \begin{bmatrix} 1 + i \\ 2 \\ -3\,i \end{bmatrix} \in \mathbb{C}^3,
+\qquad
+\underbrace{\overline{\vecf{z}}}_{3 \times 1} = \begin{bmatrix} 1 - i \\ 2 \\ 3\,i \end{bmatrix}.
+$$
+
+The real entry $2$ is its own conjugate.
+Every real vector is also a complex vector,
+since each real number $a$ is the complex number $a + 0\,i$,
+so $\reals^p$ is a subset of $\mathbb{C}^p$.
+
+:::
