@@ -10,7 +10,9 @@ $$
 $$
 
 that is, $x_{ij} = a_{ij}$, $x_{i, k+j} = b_{ij}$, $x_{k+i, j} = b_{ji}$ and $x_{k+i, k+j} = c_{ij}$
-for indices in range; $\matr{X}$ is symmetric.
+for indices in range.
+$\matr{X}$ is symmetric (@def-symmetric-matrix):
+$x_{k+i, j} = b_{ji} = x_{j, k+i}$, and $\matr{A}$ and $\matr{C}$ are symmetric.
 Split $\vecf{v} \in \reals^{k + m}$ as $\vecf{v} = (\vecf{u}, \vecf{w})$,
 with $\vecf{u} \in \reals^k$ its first $k$ entries and $\vecf{w} \in \reals^m$ the rest. Then
 
@@ -66,16 +68,12 @@ $$
 && \text{(@thm-dot-linear)}
 \\
 &= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}
-&& \text{(see below)}
+&& \text{(} \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} = \tp{\paren{\tp{\vecf{w}} \tp{\matr{B}} \vecf{u}}} = \tp{\vecf{u}} \matr{B} \vecf{w} \text{; } 1 \times 1 \text{, @def-matrix-transpose, @thm-transpose-product)}
 \\
 &= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}.
 && \text{(combine like terms)}
 \ea
 $$
-
-For the fourth line: $\tp{\vecf{w}} \tp{\matr{B}} \vecf{u}$ is a $1 \times 1$ matrix, so it equals its transpose (@def-matrix-transpose),
-which is $\tp{\vecf{u}}\,\tp{(\tp{\matr{B}})}\,\vecf{w} = \tp{\vecf{u}} \matr{B} \vecf{w}$
-(@thm-transpose-product, @def-matrix-transpose).
 
 **Completing the square.**
 Write $\vecf{d} \eqdef \matr{A}^{-1} \matr{B} \vecf{w}$, so $\vecf{z} = \vecf{u} + \vecf{d}$ and $\matr{A} \vecf{d} = \matr{B} \vecf{w}$
@@ -104,7 +102,7 @@ $$
 && \text{(} \matr{A} \vecf{d} = \matr{B} \vecf{w} \text{, twice)}
 \\
 &= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w},
-&& \text{(} \tp{\vecf{d}} = \tp{\vecf{w}} \tp{\matr{B}} \matr{A}^{-1} \text{, @thm-transpose-product)}
+&& \text{(} \tp{\vecf{d}} = \tp{\vecf{w}} \tp{\matr{B}} \matr{A}^{-1} \text{, @thm-transpose-product, @cor-inverse-symmetric)}
 \ea
 $$
 
@@ -113,11 +111,14 @@ and
 $$
 \ba
 \tp{\vecf{w}} \matr{S} \vecf{w}
+&= \tp{\vecf{w}}\,(\matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B})\,\vecf{w}
+&& \text{(substitute } \matr{S} \text{)}
+\\
 &= \tp{\vecf{w}}\,(\matr{C} \vecf{w} - \tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w})
-&& \text{(@thm-scalar-matmul, difference rule)}
+&& \text{(@thm-scalar-matmul, difference rule on the right)}
 \\
 &= \tp{\vecf{w}} \matr{C} \vecf{w} - \tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w}.
-&& \text{(@thm-scalar-matmul, difference rule)}
+&& \text{(@thm-scalar-matmul, difference rule on the left)}
 \ea
 $$
 
@@ -136,12 +137,12 @@ For $\matr{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}$ ($k = m = 1$) and 
 the theorem reads
 
 $$
-a x^2 + 2bxy + cy^2 = a\,\paren{x + \tfrac{b}{a}\,y}^2 + \paren{c - \tfrac{b^2}{a}}\,y^2,
+a u^2 + 2buw + cw^2 = a\,\paren{u + \tfrac{b}{a}\,w}^2 + \paren{c - \tfrac{b^2}{a}}\,w^2,
 $$
 
-the familiar completing of the square.
+with $\vecf{v} = (u, w)$: the familiar completing of the square.
 With $a = c = 5$ and $b = 4$:
-$5\,(x + 0.8\,y)^2 + 1.8\,y^2 = 5\,(x^2 + 1.6\,xy + 0.64\,y^2) + 1.8\,y^2
-= 5x^2 + 8xy + 3.2\,y^2 + 1.8\,y^2 = 5x^2 + 8xy + 5y^2$.
+$5\,(u + 0.8\,w)^2 + 1.8\,w^2 = 5\,(u^2 + 1.6\,uw + 0.64\,w^2) + 1.8\,w^2
+= 5u^2 + 8uw + 3.2\,w^2 + 1.8\,w^2 = 5u^2 + 8uw + 5w^2$.
 
 :::

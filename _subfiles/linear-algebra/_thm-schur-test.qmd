@@ -14,12 +14,12 @@ and its Schur complement $\matr{S}$ (@def-schur-complement) is positive definite
 **If.**
 $\matr{A}$ is positive definite, so invertible (@thm-pd-inverse), and $\matr{S}$ is defined.
 $\matr{X}$ is symmetric.
-Let $\vx = (\vecf{u}, \vecf{w}) \ne \vzero$ and $\vecf{z} = \vecf{u} + \matr{A}^{-1} \matr{B} \vecf{w}$.
-By @thm-block-quadratic, $\tp{\vx} \matr{X} \vx = \tp{\vecf{z}} \matr{A} \vecf{z} + \tp{\vecf{w}} \matr{S} \vecf{w}$,
+Let $\vecf{v} = (\vecf{u}, \vecf{w}) \ne \vzero$ and $\vecf{z} = \vecf{u} + \matr{A}^{-1} \matr{B} \vecf{w}$.
+By @thm-block-quadratic, $\tp{\vecf{v}} \matr{X} \vecf{v} = \tp{\vecf{z}} \matr{A} \vecf{z} + \tp{\vecf{w}} \matr{S} \vecf{w}$,
 and both terms are at least $0$.
 If $\vecf{w} \ne \vzero$, the second term is positive.
 If $\vecf{w} = \vzero$, then $\vecf{u} \ne \vzero$ and $\vecf{z} = \vecf{u}$, so the first term is positive.
-Either way $\tp{\vx} \matr{X} \vx > 0$.
+Either way $\tp{\vecf{v}} \matr{X} \vecf{v} > 0$.
 
 **Only if.**
 $\matr{A}$ is the top-left $k \times k$ block of $\matr{X}$, so it is positive definite (@thm-pd-submatrix),
@@ -31,8 +31,8 @@ and $\matr{C}$ is symmetric,
 so $\matr{S} = \matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B}$ is symmetric
 (the transpose of a difference is the difference of the transposes, entry by entry, @def-matrix-transpose).
 For $\vecf{w} \ne \vzero$, take $\vecf{u} = -\matr{A}^{-1} \matr{B} \vecf{w}$, so $\vecf{z} = \vzero$
-and $\vx = (\vecf{u}, \vecf{w}) \ne \vzero$; then
-$\tp{\vecf{w}} \matr{S} \vecf{w} = \tp{\vx} \matr{X} \vx > 0$ (@thm-block-quadratic).
+and $\vecf{v} = (\vecf{u}, \vecf{w}) \ne \vzero$; then
+$\tp{\vecf{w}} \matr{S} \vecf{w} = \tp{\vecf{v}} \matr{X} \vecf{v} > 0$ (@thm-block-quadratic).
 
 :::
 

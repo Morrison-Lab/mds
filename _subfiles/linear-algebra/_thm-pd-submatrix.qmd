@@ -5,7 +5,7 @@ Let $\matr{X}$ be a $p \times p$ positive definite matrix (@def-positive-definit
 and for $1 \le k \le p$ let $\matr{X}_k$ be its top-left $k \times k$ block,
 with entries $x_{ij}$ for $i, j \le k$.
 Then $\matr{X}_k$ is positive definite.
-In particular, every diagonal entry of a positive definite matrix is positive.
+Also, every diagonal entry of a positive definite matrix is positive.
 
 :::
 

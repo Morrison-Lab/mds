@@ -31,7 +31,9 @@ $$
 $$
 
 **Part 2.**
-$\alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2$ is symmetric, entry by entry.
+$\alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2$ is symmetric:
+its transpose is $\alpha_1 \tp{\matr{A}_1} + \alpha_2 \tp{\matr{A}_2} = \alpha_1 \matr{A}_1 + \alpha_2 \matr{A}_2$
+(@thm-transpose-sum, @def-scalar-mult, @def-matrix-transpose).
 For $\vx \ne \vzero$,
 
 $$
