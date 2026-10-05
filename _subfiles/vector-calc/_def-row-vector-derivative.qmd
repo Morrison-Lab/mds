@@ -41,4 +41,22 @@ avoids the question:
 the transpose in the denominator says the result is a row,
 without making the derivative a product.
 
+Treating the operators as vectors is sound for checking shapes,
+but "multiplying" an operator by a function means applying the operator to it,
+so two rules of ordinary matrix algebra do not carry over:
+scalars commute with matrices, and products can be regrouped.
+
+- **Scalars do not commute with operators.**
+  $\deriv{\beta_i} f$ is a function,
+  but $f \deriv{\beta_i}$, as written, is still an operator, waiting for something to act on.
+  Putting the row operator on the right of $f$ gives the row derivative
+  only under the convention that it acts on the factor to its left.
+- **Products cannot be regrouped.**
+  An operator acts on the whole product to its right,
+  so by the [product rule](calculus.qmd#thm-product-rule),
+  $\deriv{\beta_i} (f g) \ne \paren{\deriv{\beta_i} f} g$ in general.
+  For example, with $f(\vb) = \beta_1$,
+  $\deriv{\beta_1} (f f) = 2 \beta_1$
+  but $\paren{\deriv{\beta_1} f} f = \beta_1$.
+
 :::
