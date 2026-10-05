@@ -24,7 +24,7 @@ Row 1 is $1 \cd (2, 1, -1) = (2, 1, -1)$;
 row 2 is $-\tfrac{3}{2}\,(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)$,
 and row 3 is $-(2, 1, -1) + 4\,(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)$.
 These are the rows of $\matr{A}$, so $\matr{L} \matr{U} = \matr{A}$ is an LU factorization.
-The entries of $\matr{L}$ are the negatives of the multiples of earlier rows
+The below-diagonal entries of $\matr{L}$ are the negatives of the multiples of earlier rows
 that Gaussian elimination adds to reduce $\matr{A}$ to $\matr{U}$.
 
 :::

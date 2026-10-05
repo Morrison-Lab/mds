@@ -52,8 +52,11 @@ $$
 &= r_{ii}\,\vecf{q}_i + \sum_{j=1}^{i-1} r_{ji}\,\vecf{q}_j
 && \text{(split off the } j = i \text{ term)}
 \\
+&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
+&& \text{(the entries of } \matr{R} \text{)}
+\\
 &= \vecf{a}_i.
-&& \text{(the entries of } \matr{R} \text{, and the display)}
+&& \text{(the display)}
 \ea
 $$
 
