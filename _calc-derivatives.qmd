@@ -144,6 +144,7 @@ $$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{}{w}f(w)$$ {#eq-linear-approx}
 A derivative of zero marks a **flat point** (also called a *stationary point*).
 A point where the derivative is zero or does not exist is a *critical point*.
 :::
+
 {{< slidebreak >}}
 
 :::{#exm-flat-point}
@@ -154,7 +155,7 @@ A point where the derivative is zero or does not exist is a *critical point*.
 - $g(w) = \abs{w}$ has no derivative at $w = 0$:
   the difference quotient $\tfrac{\abs{h} - 0}{h}$ is $1$ for $h > 0$ and $-1$ for $h < 0$, so it has no limit.
   So $0$ is a critical point but not a flat point.
-- $f(w) = w^2 - 4w + 7$ has $f'(1) = 2 - 4 = -2 \ne 0$, so $1$ is not a flat point.
+- $h(w) = w^2$ has $h'(1) = 2 \ne 0$, so $1$ is not a flat point.
 
 :::
 

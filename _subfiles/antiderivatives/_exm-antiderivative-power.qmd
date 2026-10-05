@@ -7,8 +7,8 @@ since $\deriv{x}\frac{x^3}{3} = x^2 = f(x)$.
 Adding any constant $C$ gives another antiderivative;
 for example, with $C = 7$, $F(x) = \frac{x^3}{3} + 7$ also satisfies
 $F'(x) = x^2$, since adding a constant does not change the derivative.
-$F(x) = x^3$ is not an antiderivative of $x^2$:
-$\deriv{x} x^3 = 3x^2 \ne x^2$ for $x \ne 0$.
+$G(x) = x^3$ is not an antiderivative of $x^2$:
+$G'(x) = 3x^2 \ne x^2$ for $x \ne 0$.
 
 See @fig-antiderivatives.
 
