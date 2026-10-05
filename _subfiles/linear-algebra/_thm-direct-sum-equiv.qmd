@@ -1,0 +1,86 @@
+:::{#thm-direct-sum-equiv}
+#### Three ways to recognize a direct sum
+
+Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be subspaces of $\reals^p$,
+and let $\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2$.
+The following statements are equivalent:
+
+1. $\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2$ (@def-direct-sum).
+2. $\dim(\mathcal{V}) = \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2)$.
+3. Every $\vecf{x} \in \mathcal{V}$ can be written as
+   $\vecf{x} = \vecf{x}_1 + \vecf{x}_2$
+   with $\vecf{x}_1 \in \mathcal{S}_1$ and $\vecf{x}_2 \in \mathcal{S}_2$
+   in only one way.
+
+:::
+
+::: proof
+
+Since $\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2$ is given,
+statement 1 says exactly that $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+
+**1 and 2 are equivalent.**
+By @cor-dim-subadditive,
+$\dim(\mathcal{S}_1 + \mathcal{S}_2) = \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2)$
+exactly when $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+
+**1 implies 3.**
+Every $\vecf{x} \in \mathcal{V}$ has at least one such expression,
+because $\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2$.
+Suppose $\vecf{x} = \vecf{u}_1 + \vecf{u}_2 = \vecf{v}_1 + \vecf{v}_2$,
+with $\vecf{u}_1, \vecf{v}_1 \in \mathcal{S}_1$
+and $\vecf{u}_2, \vecf{v}_2 \in \mathcal{S}_2$.
+Then
+
+$$
+\ba
+\vecf{u}_1 - \vecf{v}_1
+&= (\vecf{u}_1 + \vecf{u}_2) - \vecf{u}_2 - \vecf{v}_1
+&& \text{(add and subtract } \vecf{u}_2 \text{)}
+\\
+&= (\vecf{v}_1 + \vecf{v}_2) - \vecf{u}_2 - \vecf{v}_1
+&& \text{(substitute } \vecf{u}_1 + \vecf{u}_2 = \vecf{v}_1 + \vecf{v}_2 \text{)}
+\\
+&= \vecf{v}_2 - \vecf{u}_2.
+&& \text{(cancel } \vecf{v}_1 \text{)}
+\ea
+$$
+
+The left side is in $\mathcal{S}_1$
+and the right side is in $\mathcal{S}_2$,
+because each subspace is closed under addition and scalar multiplication
+(the difference is $\vecf{u}_1 + (-1)\,\vecf{v}_1$).
+So both sides are in $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$,
+which gives $\vecf{u}_1 = \vecf{v}_1$ and $\vecf{u}_2 = \vecf{v}_2$.
+
+**3 implies 1.**
+Take any $\vecf{x} \in \mathcal{S}_1 \cap \mathcal{S}_2$.
+Then $\vecf{x} = \vecf{x} + \vzero$, with $\vecf{x} \in \mathcal{S}_1$ and $\vzero \in \mathcal{S}_2$,
+and $\vecf{x} = \vzero + \vecf{x}$, with $\vzero \in \mathcal{S}_1$ and $\vecf{x} \in \mathcal{S}_2$
+(@thm-subspace-zero).
+By statement 3 these two expressions are the same,
+so $\vecf{x} = \vzero$,
+and $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-direct-sum-equiv}
+#### Checking the three statements
+
+For the plane $z = 0$ and the $z$-axis in @exm-direct-sum:
+
+- the dimensions add up: $2 + 1 = 3 = \dim(\reals^3)$,
+  since the plane has dimension $2$ (@exm-dimension),
+  the $z$-axis has the single nonzero vector $(0, 0, 1)$ as a basis,
+  and $\dim(\reals^3) = 3$ (@exm-dimension);
+- the split is unique: if $(x, y, z) = (a, b, 0) + (0, 0, c) = (a, b, c)$,
+  then $a = x$, $b = y$ and $c = z$.
+
+For the planes $z = 0$ and $x = 0$ in @exm-not-direct-sum,
+both statements fail:
+$2 + 2 = 4 \ne 3 = \dim(\mathcal{S}_1 + \mathcal{S}_2)$ (@exm-dim-sum),
+and $(0, 1, 0)$ splits in two ways.
+
+:::

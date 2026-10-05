@@ -1,0 +1,76 @@
+:::{#thm-orthogonal-complement-subspace}
+#### An orthogonal complement is a subspace
+
+For any set $\mathcal{X}$ of vectors in $\reals^p$,
+$\mathcal{X}^\perp$ (@def-orthogonal-complement)
+is a subspace of $\reals^p$ (@def-subspace).
+
+:::
+
+::: proof
+
+$\mathcal{X}^\perp$ is not empty:
+$\vecf{x} \cdot \vzero = \sum_i x_i \cd 0 = 0$ for every $\vecf{x}$,
+so $\vzero \in \mathcal{X}^\perp$.
+Let $\vecf{u}, \vecf{w} \in \mathcal{X}^\perp$, let $c \in \reals$,
+and let $\vecf{x} \in \mathcal{X}$.
+
+**Addition.**
+
+$$
+\ba
+\vecf{x} \cdot (\vecf{u} + \vecf{w})
+&= \vecf{x} \cdot \vecf{u} + \vecf{x} \cdot \vecf{w}
+&& \text{(@thm-dot-linear, special case } a = b = 1 \text{)}
+\\
+&= 0 + 0
+&& \text{(} \vecf{u}, \vecf{w} \in \mathcal{X}^\perp \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
+$$
+
+**Scalar multiplication.**
+
+$$
+\ba
+\vecf{x} \cdot (c\,\vecf{u})
+&= c\,(\vecf{x} \cdot \vecf{u})
+&& \text{(@thm-dot-linear, special case } b = 0 \text{)}
+\\
+&= c \cd 0
+&& \text{(} \vecf{u} \in \mathcal{X}^\perp \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
+$$
+
+These two equations hold for every $\vecf{x} \in \mathcal{X}$,
+so $\vecf{u} + \vecf{w}$ and $c\,\vecf{u}$ are in $\mathcal{X}^\perp$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthogonal-complement-subspace}
+#### The complement of a single vector is a line
+
+The one-element set $\mathcal{X} = \cb{(1, 2)}$ in $\reals^2$ is not a subspace:
+$2\,(1, 2) = (2, 4)$ is not in it.
+Its orthogonal complement is
+
+$$
+\mathcal{X}^\perp
+= \cb{\vecf{u} \in \reals^2 : u_1 + 2 u_2 = 0}
+= \cb{c\,(-2, 1) : c \in \reals},
+$$
+
+since $u_1 + 2u_2 = 0$ means $\vecf{u} = (-2u_2, u_2) = u_2\,(-2, 1)$.
+That set is $\operatorname{span}\cb{(-2, 1)}$,
+a subspace by @thm-span-subspace,
+as @thm-orthogonal-complement-subspace says it must be.
+It contains $(-2, 1)$, the vector @rem-orthogonal-perpendicular found perpendicular to $(1, 2)$.
+
+:::

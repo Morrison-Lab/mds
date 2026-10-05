@@ -1,0 +1,172 @@
+:::{#thm-dim-sum}
+#### The dimension of a sum of subspaces
+
+If $\mathcal{S}_1$ and $\mathcal{S}_2$ are subspaces of $\reals^p$, then
+
+$$
+\dim(\mathcal{S}_1 + \mathcal{S}_2)
+= \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2) - \dim(\mathcal{S}_1 \cap \mathcal{S}_2).
+$$
+
+:::
+
+::: proof
+
+All three sets in the formula are subspaces
+(@thm-sum-intersection-subspace),
+so each has a dimension (@def-dimension).
+Let $k = \dim(\mathcal{S}_1 \cap \mathcal{S}_2)$,
+$d_1 = \dim(\mathcal{S}_1)$ and $d_2 = \dim(\mathcal{S}_2)$.
+
+**Build a list.**
+Choose a basis $\vecf{z}_1, \ldots, \vecf{z}_k$ of $\mathcal{S}_1 \cap \mathcal{S}_2$
+(@thm-extend-basis).
+These vectors are linearly independent and lie in $\mathcal{S}_1$,
+so @thm-extend-basis extends them to a basis
+$\vecf{z}_1, \ldots, \vecf{z}_k, \vecf{x}_1, \ldots, \vecf{x}_{d_1 - k}$
+of $\mathcal{S}_1$,
+which has $d_1$ vectors (@thm-basis-size).
+In the same way, extend them to a basis
+$\vecf{z}_1, \ldots, \vecf{z}_k, \vecf{y}_1, \ldots, \vecf{y}_{d_2 - k}$
+of $\mathcal{S}_2$.
+We show that the $\vecf{z}$'s, $\vecf{x}$'s and $\vecf{y}$'s together,
+$k + (d_1 - k) + (d_2 - k) = d_1 + d_2 - k$ vectors,
+are a basis of $\mathcal{S}_1 + \mathcal{S}_2$ (@def-basis).
+
+**They span $\mathcal{S}_1 + \mathcal{S}_2$.**
+Any $\vecf{v} \in \mathcal{S}_1 + \mathcal{S}_2$ is $\vecf{v}_1 + \vecf{v}_2$
+with $\vecf{v}_1 \in \mathcal{S}_1$ and $\vecf{v}_2 \in \mathcal{S}_2$.
+$\vecf{v}_1$ is a linear combination of the $\vecf{z}$'s and $\vecf{x}$'s,
+and $\vecf{v}_2$ is a linear combination of the $\vecf{z}$'s and $\vecf{y}$'s,
+so their sum is a linear combination of all three groups.
+Conversely, each vector in the list is in $\mathcal{S}_1 + \mathcal{S}_2$
+(for example, $\vecf{x}_1 = \vecf{x}_1 + \vzero$),
+and $\mathcal{S}_1 + \mathcal{S}_2$ is a subspace,
+so it contains every linear combination of them.
+
+**They are linearly independent.**
+Suppose
+
+$$
+\sum_{i=1}^{k} a_i \vecf{z}_i
++ \sum_{j=1}^{d_1 - k} b_j \vecf{x}_j
++ \sum_{l=1}^{d_2 - k} c_l \vecf{y}_l
+= \vzero.
+$$
+
+Let $\vecf{w} \eqdef \sum_{l} c_l \vecf{y}_l$.
+Then $\vecf{w} \in \mathcal{S}_2$,
+because it is a linear combination of vectors of $\mathcal{S}_2$.
+Subtracting $\sum_{i} a_i \vecf{z}_i + \sum_{j} b_j \vecf{x}_j$
+from both sides of the supposed equation gives
+
+$$
+\vecf{w} = \sum_{i=1}^{k} (-a_i)\,\vecf{z}_i + \sum_{j=1}^{d_1 - k} (-b_j)\,\vecf{x}_j,
+$$
+
+a linear combination of vectors of $\mathcal{S}_1$,
+so $\vecf{w} \in \mathcal{S}_1$ too.
+So $\vecf{w} \in \mathcal{S}_1 \cap \mathcal{S}_2$,
+and $\vecf{w} = \sum_{i} e_i \vecf{z}_i$ for some numbers $e_i$,
+since the $\vecf{z}$'s span the intersection.
+Then
+
+$$
+\ba
+\vzero
+&= \vecf{w} - \vecf{w}
+&& \text{(a vector minus itself)}
+\\
+&= \sum_{i=1}^{k} e_i \vecf{z}_i - \sum_{l=1}^{d_2 - k} c_l \vecf{y}_l
+&& \text{(substitute the two expressions for } \vecf{w} \text{)}
+\\
+&= \sum_{i=1}^{k} e_i \vecf{z}_i + \sum_{l=1}^{d_2 - k} (-c_l)\,\vecf{y}_l,
+&& \text{(write each subtraction as adding } -1 \text{ times)}
+\ea
+$$
+
+and because the $\vecf{z}$'s and $\vecf{y}$'s are a basis of $\mathcal{S}_2$,
+every $c_l = 0$.
+The supposed equation then reads
+$\sum_{i} a_i \vecf{z}_i + \sum_{j} b_j \vecf{x}_j = \vzero$,
+and because the $\vecf{z}$'s and $\vecf{x}$'s are a basis of $\mathcal{S}_1$,
+every $a_i$ and $b_j$ is $0$.
+
+So $\dim(\mathcal{S}_1 + \mathcal{S}_2) = d_1 + d_2 - k$.
+When some of the groups are empty
+(for example $k = 0$, or $\mathcal{S}_1 = \mathcal{S}_1 \cap \mathcal{S}_2$),
+the sums over them are $\vzero$
+and the argument goes through unchanged.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-dim-sum}
+#### Two planes in $\reals^3$, by dimension
+
+For the planes $z = 0$ and $x = 0$ in @exm-sum-intersection-subspace,
+each has dimension $2$:
+the plane $z = 0$ has basis $(1, 0, 0), (0, 1, 0)$ (@exm-dimension),
+and the plane $x = 0$ has basis $(0, 1, 0), (0, 0, 1)$ by the same argument.
+Their intersection, the $y$-axis $\operatorname{span}\cb{(0, 1, 0)}$,
+has dimension $1$,
+because the single nonzero vector $(0, 1, 0)$ is linearly independent
+($c\,(0, 1, 0) = (0, c, 0)$ is $\vzero$ only if $c = 0$)
+and so is a basis of it.
+@thm-dim-sum gives
+
+$$
+\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 + 2 - 1 = 3,
+$$
+
+which agrees with $\mathcal{S}_1 + \mathcal{S}_2 = \reals^3$
+(@exm-sum-intersection-subspace)
+and $\dim(\reals^3) = 3$ (@exm-dimension).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-dim-subadditive}
+#### The dimension of a sum is at most the sum of the dimensions
+
+If $\mathcal{S}_1$ and $\mathcal{S}_2$ are subspaces of $\reals^p$, then
+
+$$
+\dim(\mathcal{S}_1 + \mathcal{S}_2) \le \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2),
+$$
+
+with equality exactly when $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+
+:::
+
+::: proof
+
+By @thm-dim-sum, the two sides differ by $\dim(\mathcal{S}_1 \cap \mathcal{S}_2) \ge 0$.
+That dimension is $0$ exactly when a basis of the intersection is the empty list,
+that is, when the intersection is the span of the empty list,
+$\cb{\vzero}$ (@def-span, @exm-dimension).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-dim-subadditive}
+#### Equality and strict inequality
+
+- For the lines $\mathcal{S}_1 = \operatorname{span}\cb{(1, 0, 0)}$
+  and $\mathcal{S}_2 = \operatorname{span}\cb{(0, 1, 0)}$ in @exm-subspace-sum,
+  a common vector satisfies $a\,(1, 0, 0) = b\,(0, 1, 0)$,
+  so $(a, -b, 0) = \vzero$ and $a = b = 0$.
+  The intersection is $\cb{\vzero}$,
+  and indeed $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 = 1 + 1$:
+  the sum is the plane $z = 0$ (@exm-subspace-sum),
+  which has dimension $2$ (@exm-dimension),
+  and each line has dimension $1$, with its spanning vector as a basis.
+- For $\mathcal{S}_1 = \mathcal{S}_2 = \operatorname{span}\cb{(1, 0, 0)}$,
+  the sum is the same line,
+  because $a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)$,
+  so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$.
+
+:::

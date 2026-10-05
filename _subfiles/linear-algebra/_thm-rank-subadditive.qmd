@@ -1,0 +1,73 @@
+:::{#thm-rank-subadditive}
+#### Rank is subadditive
+
+For $m \times n$ matrices $\matr{A}$ and $\matr{B}$,
+
+$$
+\operatorname{rank}(\matr{A} + \matr{B})
+\le \operatorname{rank}(\matr{A}) + \operatorname{rank}(\matr{B}).
+$$
+
+:::
+
+::: proof
+
+**$\mathcal{C}(\matr{A} + \matr{B}) \subseteq \mathcal{C}(\matr{A}) + \mathcal{C}(\matr{B})$.**
+Any vector of $\mathcal{C}(\matr{A} + \matr{B})$ is
+$(\matr{A} + \matr{B})\,\vecf{x}$ for some $\vecf{x} \in \reals^n$
+(@def-column-space), and
+$(\matr{A} + \matr{B})\,\vecf{x} = \matr{A} \vecf{x} + \matr{B} \vecf{x}$
+(@thm-matmul-distrib, with $\vecf{x}$ as an $n \times 1$ matrix),
+a vector of $\mathcal{C}(\matr{A})$ plus a vector of $\mathcal{C}(\matr{B})$.
+
+**Compare dimensions.**
+All the sets involved are subspaces of $\reals^m$
+(@thm-column-space-span, @thm-sum-intersection-subspace), so
+
+$$
+\ba
+\operatorname{rank}(\matr{A} + \matr{B})
+&= \dim\paren{\mathcal{C}(\matr{A} + \matr{B})}
+&& \text{(@thm-rank-dim)}
+\\
+&\le \dim\paren{\mathcal{C}(\matr{A}) + \mathcal{C}(\matr{B})}
+&& \text{(the containment, and part 2 of @thm-dim-bound)}
+\\
+&\le \dim\paren{\mathcal{C}(\matr{A})} + \dim\paren{\mathcal{C}(\matr{B})}
+&& \text{(@cor-dim-subadditive)}
+\\
+&= \operatorname{rank}(\matr{A}) + \operatorname{rank}(\matr{B}).
+&& \text{(@thm-rank-dim)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-subadditive}
+#### Subadditivity with equality and without
+
+Let
+$\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+and
+$\matr{B} = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}$.
+Each has one nonzero column and one zero column.
+The nonzero column on its own is linearly independent
+($c\,\vecf{v} = \vzero_2$ with $\vecf{v} \ne \vzero_2$ forces $c = 0$),
+and the two columns together are not,
+since $1$ times the zero column is $\vzero_2$;
+so each matrix has rank $1$ (@def-rank).
+By the same argument, $-\matr{A}$ has rank $1$.
+
+- $\matr{A} + \matr{B}$ is the $2 \times 2$ identity matrix, which has rank $2$
+  (@exm-rank-nullity),
+  so the bound $2 \le 1 + 1$ holds with equality.
+- $\matr{A} + (-\matr{A})$ is the $2 \times 2$ zero matrix,
+  which has rank $0$:
+  any nonempty list of its columns contains $\vzero_2$,
+  and $1 \cd \vzero_2 = \vzero_2$.
+  So the bound $0 \le \operatorname{rank}(\matr{A}) + \operatorname{rank}(-\matr{A}) = 1 + 1$
+  is strict.
+
+:::

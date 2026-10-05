@@ -1,0 +1,46 @@
+:::{#def-subspace-sum}
+#### Sum of subspaces
+
+The **sum** of two subspaces $\mathcal{S}_1$ and $\mathcal{S}_2$ of $\reals^p$
+(@def-subspace)
+is the set of all sums of a vector from $\mathcal{S}_1$ and a vector from $\mathcal{S}_2$:
+
+$$
+\mathcal{S}_1 + \mathcal{S}_2
+\eqdef
+\cb{\vecf{x}_1 + \vecf{x}_2 : \vecf{x}_1 \in \mathcal{S}_1,\ \vecf{x}_2 \in \mathcal{S}_2}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-subspace-sum}
+#### Two lines sum to a plane
+
+Let $\mathcal{S}_1 = \operatorname{span}\cb{(1, 0, 0)}$
+and $\mathcal{S}_2 = \operatorname{span}\cb{(0, 1, 0)}$,
+two lines in $\reals^3$.
+A vector of $\mathcal{S}_1 + \mathcal{S}_2$ has the form
+$a\,(1, 0, 0) + b\,(0, 1, 0) = (a, b, 0)$,
+and $a$ and $b$ can be any numbers,
+so $\mathcal{S}_1 + \mathcal{S}_2 = \cb{(a, b, 0) : a, b \in \reals}$,
+the plane $z = 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sum-not-union}
+#### The sum is not the union
+
+For the two lines in @exm-subspace-sum,
+the union $\mathcal{S}_1 \cup \mathcal{S}_2$
+contains $(1, 0, 0)$ and $(0, 1, 0)$
+but not their sum $(1, 1, 0)$:
+every multiple of $(1, 0, 0)$ has second entry $0$,
+and every multiple of $(0, 1, 0)$ has first entry $0$.
+So the union is not closed under addition and is not a subspace,
+while the sum, the whole plane $z = 0$, is.
+
+:::

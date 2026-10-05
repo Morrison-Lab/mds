@@ -1,0 +1,106 @@
+:::{#thm-complement-null-space}
+#### The orthogonal complement of a column space is a null space
+
+For any $m \times n$ matrix $\matr{A}$,
+
+$$
+\mathcal{C}(\matr{A})^\perp = \mathcal{N}(\tp{\matr{A}}).
+$$
+
+:::
+
+::: proof
+
+Let $\vecf{a}_1, \ldots, \vecf{a}_n$ be the columns of $\matr{A}$,
+so $\vecf{a}_j = (a_{1j}, \ldots, a_{mj})$.
+For $\vecf{x} \in \reals^m$, entry $j$ of $\tp{\matr{A}} \vecf{x}$ is
+
+$$
+\ba
+(\tp{\matr{A}} \vecf{x})_j
+&= \sum_{i=1}^{m} (\tp{\matr{A}})_{ji}\, x_i
+&& \text{(@def-matvec-mult)}
+\\
+&= \sum_{i=1}^{m} a_{ij}\, x_i
+&& \text{(@def-matrix-transpose)}
+\\
+&= \vecf{a}_j \cdot \vecf{x}.
+&& \text{(@def-dot-product)}
+\ea
+$$
+
+So $\vecf{x} \in \mathcal{N}(\tp{\matr{A}})$ (@def-null-space)
+exactly when $\vecf{a}_j \cdot \vecf{x} = 0$ for every column $\vecf{a}_j$.
+
+**$\mathcal{C}(\matr{A})^\perp \subseteq \mathcal{N}(\tp{\matr{A}})$.**
+Each column $\vecf{a}_j$ is in $\mathcal{C}(\matr{A})$ (@thm-column-space-span),
+so a vector orthogonal to all of $\mathcal{C}(\matr{A})$
+is orthogonal to every column.
+
+**$\mathcal{N}(\tp{\matr{A}}) \subseteq \mathcal{C}(\matr{A})^\perp$.**
+Suppose $\vecf{a}_j \cdot \vecf{x} = 0$ for every $j$,
+and take any $\vecf{y} \in \mathcal{C}(\matr{A})$,
+so $\vecf{y} = \matr{A} \vecf{z}$ for some $\vecf{z} \in \reals^n$
+(@def-column-space).
+Then
+
+$$
+\ba
+\vecf{y} \cdot \vecf{x}
+&= \sum_{i=1}^{m} (\matr{A} \vecf{z})_i\, x_i
+&& \text{(@def-dot-product)}
+\\
+&= \sum_{i=1}^{m} \paren{\sum_{j=1}^{n} a_{ij} z_j}\, x_i
+&& \text{(@def-matvec-mult)}
+\\
+&= \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}\, z_j\, x_i
+&& \text{(distribute each } x_i \text{ over the inner sum)}
+\\
+&= \sum_{j=1}^{n} \sum_{i=1}^{m} a_{ij}\, z_j\, x_i
+&& \text{(swap the order of the finite sums)}
+\\
+&= \sum_{j=1}^{n} z_j \sum_{i=1}^{m} a_{ij}\, x_i
+&& \text{(commute, then factor } z_j \text{ out of the inner sum)}
+\\
+&= \sum_{j=1}^{n} z_j\, (\vecf{a}_j \cdot \vecf{x})
+&& \text{(@def-dot-product)}
+\\
+&= \sum_{j=1}^{n} z_j \cd 0
+&& \text{(each } \vecf{a}_j \cdot \vecf{x} = 0 \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
+$$
+
+So $\vecf{x}$ is orthogonal to every vector of $\mathcal{C}(\matr{A})$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-complement-null-space}
+#### The complement of the column space in @exm-column-space
+
+For $\matr{A}$ in @exm-column-space,
+$\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 3)}$ (@exm-column-space-span).
+@exm-null-space found
+$\mathcal{N}(\tp{\matr{A}}) = \operatorname{span}\cb{(-3, 1)}$,
+so by @thm-complement-null-space this line is $\mathcal{C}(\matr{A})^\perp$.
+Directly, for any $c$,
+
+$$
+\ba
+\paren{c\,(1, 3)} \cdot (-3, 1)
+&= c\,\paren{(1, 3) \cdot (-3, 1)}
+&& \text{(@thm-dot-linear, special case } b = 0 \text{, first slot)}
+\\
+&= c\,(-3 + 3)
+&& \text{(@def-dot-product)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
+$$
+
+:::
