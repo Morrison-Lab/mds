@@ -1,0 +1,34 @@
+:::{#exm-dot-product-inner-product}
+#### The dot product is an inner product
+
+The dot product (@def-dot-product) is an inner product on $\reals^p$,
+called the **Euclidean** or **standard** inner product.
+Each of the four properties in @def-inner-product holds:
+
+- **positivity**: $\vx \cdot \vx = \sumip x_i^2$
+  is a sum of squares, so it is at least $0$;
+- **definiteness**: a sum of squares is $0$ exactly when every term is $0$,
+  so $\vx \cdot \vx = 0$ exactly when every $x_i = 0$,
+  that is, when $\vx = \vzero_{p \times 1}$;
+- **linearity in the first slot**: this property is the first-slot half of @thm-dot-linear;
+- **symmetry**: this property is @thm-lincom-symmetric.
+
+For instance, with $\vx = (1, -2, 2)$,
+
+$$
+\ba
+\vx \cdot \vx
+&= 1 \cd 1 + (-2) \cd (-2) + 2 \cd 2
+&& \text{(definition of the dot product)}
+\\
+&= 1 + 4 + 4
+&& \text{(multiply)}
+\\
+&= 9
+&& \text{(add)}
+\ea
+$$
+
+which is positive, as positivity and definiteness require of a nonzero vector.
+
+:::
