@@ -1,0 +1,58 @@
+:::{#thm-add-outside-span}
+#### Adding a vector outside the span keeps a list independent
+
+If $\vecf{v}_1, \ldots, \vecf{v}_k$ are linearly independent
+(@def-linearly-independent)
+and $\vecf{w}$ is not in $\operatorname{span}\cb{\vecf{v}_1, \ldots, \vecf{v}_k}$
+(@def-span),
+then $\vecf{v}_1, \ldots, \vecf{v}_k, \vecf{w}$ are linearly independent.
+
+:::
+
+::: proof
+
+Suppose $c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k + d\,\vecf{w} = \vzero$.
+
+**The coefficient $d$ is $0$.**
+If $d \neq 0$, then
+
+$$
+\ba
+\vecf{w}
+&= \frac{1}{d}\,\paren{d\,\vecf{w}}
+&& \text{(} d \neq 0 \text{)}
+\\
+&= \frac{1}{d}\,\paren{-c_1 \vecf{v}_1 - \cdots - c_k \vecf{v}_k}
+&& \text{(solve the supposed equation for } d\,\vecf{w} \text{)}
+\\
+&= \paren{-\frac{c_1}{d}}\,\vecf{v}_1 + \cdots + \paren{-\frac{c_k}{d}}\,\vecf{v}_k,
+&& \text{(distribute } \tfrac{1}{d} \text{)}
+\ea
+$$
+
+which puts $\vecf{w}$ in $\operatorname{span}\cb{\vecf{v}_1, \ldots, \vecf{v}_k}$,
+contrary to the assumption.
+
+**The other coefficients are $0$.**
+With $d = 0$, the equation reads
+$c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k = \vzero$,
+so every $c_i = 0$,
+because $\vecf{v}_1, \ldots, \vecf{v}_k$ are linearly independent.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-add-outside-span}
+#### Adding $(0, 0, 1)$ to two independent vectors in $\reals^3$
+
+The vectors $(1, 0, 0)$ and $(0, 1, 0)$ are linearly independent,
+and their span is the plane $z = 0$ (@exm-span).
+The vector $(0, 0, 1)$ has third entry $1$, so it is not in that plane,
+and by @thm-add-outside-span
+the three vectors $(1, 0, 0)$, $(0, 1, 0)$, $(0, 0, 1)$ are linearly independent.
+Adding $(1, 1, 0)$ instead would not work:
+$(1, 1, 0)$ is in the span,
+and $(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \vzero$.
+
+:::

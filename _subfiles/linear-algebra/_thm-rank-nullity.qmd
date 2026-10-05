@@ -1,0 +1,122 @@
+:::{#def-nullity}
+#### Nullity
+
+The **nullity** of a matrix $\matr{A}$ is
+the dimension of its null space (@def-null-space):
+
+$$
+\operatorname{nullity}(\matr{A}) \eqdef \dim\paren{\mathcal{N}(\matr{A})}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-nullity}
+#### The nullity of the matrix in @exm-column-space
+
+For $\matr{A}$ in @exm-column-space,
+$\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(2, 1, 0), (2, 0, 1)}$
+(@exm-null-space).
+Those two vectors are linearly independent:
+$c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)$,
+which is $\vzero_3$ only if $c_1 = c_2 = 0$.
+So they are a basis of $\mathcal{N}(\matr{A})$,
+and $\operatorname{nullity}(\matr{A}) = 2$.
+The $2 \times 2$ identity matrix has nullity $0$,
+because $\matr{I} \vecf{x} = \vecf{x}$ is $\vzero_2$ only when $\vecf{x} = \vzero_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-rank-nullity}
+#### Rank-nullity theorem
+
+For any $m \times n$ matrix $\matr{A}$,
+
+$$
+\operatorname{rank}(\matr{A}) + \operatorname{nullity}(\matr{A}) = n.
+$$
+
+:::
+
+::: proof
+
+Let $\nu = \operatorname{nullity}(\matr{A})$.
+Choose a basis $\vecf{x}_1, \ldots, \vecf{x}_\nu$ of $\mathcal{N}(\matr{A})$,
+and extend it to a basis
+$\vecf{x}_1, \ldots, \vecf{x}_\nu, \vecf{y}_1, \ldots, \vecf{y}_{n - \nu}$
+of $\reals^n$ (@thm-extend-basis);
+every basis of $\reals^n$ has $n$ vectors (@thm-basis-size).
+We show that $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n - \nu}$
+are a basis of $\mathcal{C}(\matr{A})$.
+Throughout, $\matr{A}$ applied to a linear combination
+is the same combination of the images,
+$\matr{A}\,(\sum_i c_i \vecf{z}_i) = \sum_i c_i\,\matr{A} \vecf{z}_i$,
+by @thm-matmul-distrib and the entrywise argument for scalars
+in the proof of @thm-null-space-subspace.
+
+**They are linearly independent.**
+Suppose $\sum_{i=1}^{n-\nu} v_i\,\matr{A} \vecf{y}_i = \vzero_m$.
+Then $\matr{A}\,\paren{\sum_i v_i \vecf{y}_i} = \vzero_m$,
+so $\sum_i v_i \vecf{y}_i \in \mathcal{N}(\matr{A})$,
+and it equals $\sum_{j=1}^{\nu} u_j \vecf{x}_j$ for some numbers $u_j$,
+since the $\vecf{x}_j$ span $\mathcal{N}(\matr{A})$.
+Moving everything to one side,
+
+$$
+\sum_{j=1}^{\nu} (-u_j)\,\vecf{x}_j + \sum_{i=1}^{n-\nu} v_i \vecf{y}_i = \vzero_n,
+$$
+
+and because the $\vecf{x}$'s and $\vecf{y}$'s together form a basis of $\reals^n$,
+which is linearly independent,
+every coefficient is $0$; in particular every $v_i = 0$.
+
+**They span $\mathcal{C}(\matr{A})$.**
+Take any $\vecf{w} \in \mathcal{C}(\matr{A})$,
+so $\vecf{w} = \matr{A} \vecf{z}$ for some $\vecf{z} \in \reals^n$
+(@def-column-space).
+Write $\vecf{z} = \sum_j a_j \vecf{x}_j + \sum_i b_i \vecf{y}_i$
+in the basis of $\reals^n$.
+Then
+
+$$
+\ba
+\vecf{w}
+&= \matr{A}\,\paren{\sum_{j=1}^{\nu} a_j \vecf{x}_j + \sum_{i=1}^{n-\nu} b_i \vecf{y}_i}
+&& \text{(substitute } \vecf{z} \text{)}
+\\
+&= \sum_{j=1}^{\nu} a_j\,\matr{A} \vecf{x}_j + \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i
+&& \text{(} \matr{A} \text{ applied to a combination)}
+\\
+&= \sum_{j=1}^{\nu} a_j\,\vzero_m + \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i
+&& \text{(each } \vecf{x}_j \in \mathcal{N}(\matr{A}) \text{)}
+\\
+&= \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i,
+&& \text{(drop the zero terms)}
+\ea
+$$
+
+a linear combination of $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n-\nu}$.
+These vectors are in $\mathcal{C}(\matr{A})$,
+so their span is exactly $\mathcal{C}(\matr{A})$.
+
+So $\dim\paren{\mathcal{C}(\matr{A})} = n - \nu$,
+and $\operatorname{rank}(\matr{A}) = n - \nu$ by @thm-rank-dim.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-nullity}
+#### Checking rank-nullity on the matrix in @exm-column-space
+
+The matrix $\matr{A}$ in @exm-column-space has $n = 3$ columns,
+rank $1$ (@exm-rank-dim)
+and nullity $2$ (@exm-nullity),
+and $1 + 2 = 3$.
+The $2 \times 2$ identity matrix has rank $2$ and nullity $0$ (@exm-nullity),
+and $2 + 0 = 2$.
+
+:::

@@ -1,0 +1,127 @@
+:::{#thm-rank-transpose}
+#### Fundamental theorem of ranks
+
+For any $m \times n$ matrix $\matr{A}$,
+
+$$
+\operatorname{rank}(\matr{A})
+= \operatorname{rank}(\tp{\matr{A}})
+= \operatorname{rank}(\tp{\matr{A}} \matr{A})
+= \operatorname{rank}(\matr{A} \tp{\matr{A}}).
+$$
+
+In particular, the largest number of linearly independent rows of $\matr{A}$
+equals the largest number of linearly independent columns.
+
+:::
+
+::: proof
+
+**$\operatorname{rank}(\tp{\matr{A}} \matr{A}) = \operatorname{rank}(\matr{A})$.**
+Both matrices have $n$ columns,
+and $\mathcal{N}(\tp{\matr{A}} \matr{A}) = \mathcal{N}(\matr{A})$ (@thm-null-gram),
+so they have the same nullity (@def-nullity).
+Then
+
+$$
+\ba
+\operatorname{rank}(\tp{\matr{A}} \matr{A})
+&= n - \operatorname{nullity}(\tp{\matr{A}} \matr{A})
+&& \text{(@thm-rank-nullity)}
+\\
+&= n - \operatorname{nullity}(\matr{A})
+&& \text{(equal null spaces)}
+\\
+&= \operatorname{rank}(\matr{A}).
+&& \text{(@thm-rank-nullity)}
+\ea
+$$
+
+**$\operatorname{rank}(\matr{A} \tp{\matr{A}}) = \operatorname{rank}(\tp{\matr{A}})$.**
+Apply the previous step to the $n \times m$ matrix $\tp{\matr{A}}$,
+using $\tp{(\tp{\matr{A}})} = \matr{A}$.
+
+**Chain the inequalities.**
+
+$$
+\ba
+\operatorname{rank}(\matr{A})
+&= \operatorname{rank}(\tp{\matr{A}} \matr{A})
+&& \text{(first step)}
+\\
+&\le \operatorname{rank}(\tp{\matr{A}})
+&& \text{(@thm-rank-product, with } \tp{\matr{A}} \text{ on the left)}
+\\
+&= \operatorname{rank}(\matr{A} \tp{\matr{A}})
+&& \text{(second step)}
+\\
+&\le \operatorname{rank}(\matr{A}).
+&& \text{(@thm-rank-product, with } \matr{A} \text{ on the left)}
+\ea
+$$
+
+The chain starts and ends at $\operatorname{rank}(\matr{A})$,
+so every quantity in it equals $\operatorname{rank}(\matr{A})$.
+The columns of $\tp{\matr{A}}$ are the rows of $\matr{A}$,
+which gives the statement about rows.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-transpose}
+#### Four equal ranks
+
+For $\matr{A}$ in @exm-column-space, $\operatorname{rank}(\matr{A}) = 1$ (@exm-rank-dim).
+Its transpose
+$\tp{\matr{A}} = \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}$
+has second column $3$ times its first, so its rank is $1$.
+$\tp{\matr{A}} \matr{A}$ in @exm-null-gram has every row a multiple of $(1, -2, -2)$,
+so its rank is $1$ too, and
+
+$$
+\matr{A} \tp{\matr{A}}
+= \begin{bmatrix} 1 \cd 1 + (-2)(-2) + (-2)(-2) & 1 \cd 3 + (-2)(-6) + (-2)(-6) \\
+3 \cd 1 + (-6)(-2) + (-6)(-2) & 3 \cd 3 + (-6)(-6) + (-6)(-6) \end{bmatrix}
+= \begin{bmatrix} 9 & 27 \\ 27 & 81 \end{bmatrix},
+$$
+
+whose second column is $3$ times its first, so its rank is $1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-rank-bound}
+#### The rank is at most the smaller dimension
+
+For any $m \times n$ matrix $\matr{A}$,
+$\operatorname{rank}(\matr{A}) \le \min\cb{m, n}$.
+
+:::
+
+::: proof
+
+$\matr{A}$ has $n$ columns,
+so at most $n$ of them are linearly independent,
+and $\operatorname{rank}(\matr{A}) \le n$ (@def-rank).
+Likewise $\tp{\matr{A}}$ has $m$ columns,
+so $\operatorname{rank}(\matr{A}) = \operatorname{rank}(\tp{\matr{A}}) \le m$
+(@thm-rank-transpose).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-bound}
+#### A $2 \times 3$ matrix has rank at most $2$
+
+By @cor-rank-bound, every $2 \times 3$ matrix has rank at most $\min\cb{2, 3} = 2$,
+even though it has $3$ columns.
+The matrix
+$\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}$
+of @rem-full-column-rank-shape reaches that bound:
+its first two columns $(1, 0)$ and $(0, 1)$ are linearly independent,
+so its rank is $2$.
+
+:::

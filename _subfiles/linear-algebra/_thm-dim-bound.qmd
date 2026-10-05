@@ -1,0 +1,73 @@
+:::{#thm-dim-bound}
+#### An independent list in a subspace has at most $\dim$ vectors
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$ with $\dim(\mathcal{S}) = d$
+(@def-dimension).
+
+1. Any linearly independent list of vectors in $\mathcal{S}$
+   has at most $d$ vectors.
+2. If $\mathcal{T}$ is a subspace with $\mathcal{T} \subseteq \mathcal{S}$,
+   then $\dim(\mathcal{T}) \le \dim(\mathcal{S})$.
+
+:::
+
+::: proof
+
+**Part 1.**
+Let $\vecf{a}_1, \ldots, \vecf{a}_d$ be a basis of $\mathcal{S}$,
+and let $\vecf{u}_1, \ldots, \vecf{u}_k \in \mathcal{S}$
+be linearly independent.
+Each $\vecf{u}_j$ is in $\mathcal{S}$,
+so $\vecf{u}_j = c_{1j} \vecf{a}_1 + \cdots + c_{dj} \vecf{a}_d$
+for some coordinate vector $\vecf{c}_j = (c_{1j}, \ldots, c_{dj}) \in \reals^d$.
+Suppose $k > d$.
+Then $\vecf{c}_1, \ldots, \vecf{c}_k$ are $k > d$ vectors in $\reals^d$,
+so some $x_1, \ldots, x_k$, not all zero,
+satisfy $x_1 \vecf{c}_1 + \cdots + x_k \vecf{c}_k = \vzero_d$
+(@thm-many-vectors-dependent);
+entry $i$ of that equation says $\sum_{j=1}^{k} x_j c_{ij} = 0$.
+Then
+
+$$
+\ba
+\sum_{j=1}^{k} x_j \vecf{u}_j
+&= \sum_{j=1}^{k} x_j \sum_{i=1}^{d} c_{ij} \vecf{a}_i
+&& \text{(substitute each } \vecf{u}_j \text{)}
+\\
+&= \sum_{i=1}^{d} \paren{\sum_{j=1}^{k} x_j c_{ij}}\,\vecf{a}_i
+&& \text{(distribute, and collect the multiples of each } \vecf{a}_i \text{)}
+\\
+&= \sum_{i=1}^{d} 0 \cd \vecf{a}_i
+&& \text{(entry } i \text{ of } \textstyle\sum_j x_j \vecf{c}_j = \vzero_d \text{)}
+\\
+&= \vzero_p,
+&& \text{(a zero multiple of a vector is } \vzero \text{)}
+\ea
+$$
+
+a combination of $\vecf{u}_1, \ldots, \vecf{u}_k$
+with coefficients not all zero that equals $\vzero_p$.
+That contradicts their linear independence, so $k \le d$.
+
+**Part 2.**
+$\mathcal{T}$ has a basis (@thm-extend-basis)
+with $\dim(\mathcal{T})$ vectors.
+Those vectors are linearly independent and lie in $\mathcal{S}$,
+so by Part 1 there are at most $\dim(\mathcal{S})$ of them.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-dim-bound}
+#### Subspaces of a plane have dimension at most two
+
+The plane $\mathcal{S} = \cb{(x, y, 0) : x, y \in \reals}$ in $\reals^3$
+has dimension $2$ (@exm-dimension).
+By @thm-dim-bound,
+no three vectors with third entry $0$ are linearly independent;
+for instance, $(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \vzero$.
+The line $\mathcal{T} = \operatorname{span}\cb{(1, 1, 0)}$ lies in $\mathcal{S}$,
+and $\dim(\mathcal{T}) = 1 \le 2 = \dim(\mathcal{S})$.
+
+:::

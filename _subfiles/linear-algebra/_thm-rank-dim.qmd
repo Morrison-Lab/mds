@@ -1,0 +1,59 @@
+:::{#thm-rank-dim}
+#### The rank is the dimension of the column space
+
+For any $m \times n$ matrix $\matr{A}$,
+
+$$
+\operatorname{rank}(\matr{A}) = \dim\paren{\mathcal{C}(\matr{A})}.
+$$
+
+:::
+
+::: proof
+
+Let $r = \operatorname{rank}(\matr{A})$ (@def-rank),
+and choose $r$ linearly independent columns of $\matr{A}$;
+by @def-rank, no larger set of columns is linearly independent.
+We show the chosen columns are a basis of $\mathcal{C}(\matr{A})$ (@def-basis).
+
+**Every column is in the span of the chosen columns.**
+A chosen column is in that span trivially.
+If some unchosen column $\vecf{a}_j$ were not in the span,
+then adding it to the chosen columns would give $r + 1$ linearly independent columns
+(@thm-add-outside-span),
+more than $r$.
+So every column of $\matr{A}$ is in the span of the chosen columns.
+
+**The chosen columns span $\mathcal{C}(\matr{A})$.**
+The span of the chosen columns is a subspace (@thm-span-subspace),
+so it is closed under addition and scalar multiplication,
+and it contains every linear combination of the columns of $\matr{A}$.
+By @thm-column-space-span,
+those combinations make up $\mathcal{C}(\matr{A})$,
+so $\mathcal{C}(\matr{A})$ is contained in the span of the chosen columns.
+The chosen columns are themselves columns of $\matr{A}$,
+so their span is contained in $\mathcal{C}(\matr{A})$,
+and the two sets are equal.
+
+The chosen columns are linearly independent and span $\mathcal{C}(\matr{A})$,
+so they are a basis of it,
+and $\dim\paren{\mathcal{C}(\matr{A})} = r$ (@def-dimension).
+If $r = 0$, every column is $\vzero_m$,
+$\mathcal{C}(\matr{A}) = \cb{\vzero_m}$, and both sides are $0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-dim}
+#### The rank of the matrix in @exm-column-space
+
+For $\matr{A}$ in @exm-column-space,
+$\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 3)}$ (@exm-column-space-span),
+which has dimension $1$.
+So $\operatorname{rank}(\matr{A}) = 1$, by @thm-rank-dim.
+Directly: the first column $(1, 3)$ is linearly independent on its own,
+and any two columns are dependent,
+because each column is a multiple of $(1, 3)$.
+
+:::

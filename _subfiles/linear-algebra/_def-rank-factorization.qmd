@@ -1,0 +1,96 @@
+:::{#def-rank-factorization}
+#### Rank factorization
+
+Let $\matr{A}$ be an $m \times n$ matrix with $\operatorname{rank}(\matr{A}) = r \ge 1$.
+A **rank factorization** of $\matr{A}$ is a product
+
+$$
+\underbrace{\matr{A}}_{m \times n}
+= \underbrace{\matr{C}}_{m \times r}\,\underbrace{\matr{R}}_{r \times n}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-factorization}
+#### A rank factorization of a rank-one matrix
+
+The matrix $\matr{A}$ in @exm-column-space has rank $1$ (@exm-rank-dim), and
+
+$$
+\begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\begin{bmatrix} 1 & -2 & -2 \end{bmatrix}
+= \begin{bmatrix} 1 \cd 1 & 1 \cd (-2) & 1 \cd (-2) \\ 3 \cd 1 & 3 \cd (-2) & 3 \cd (-2) \end{bmatrix}
+= \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix},
+$$
+
+so $\matr{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$ ($2 \times 1$)
+and $\matr{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}$ ($1 \times 3$)
+are a rank factorization.
+It is not unique:
+$\matr{C} = \begin{bmatrix} 2 \\ 6 \end{bmatrix}$
+and $\matr{R} = \begin{bmatrix} \frac{1}{2} & -1 & -1 \end{bmatrix}$
+give the same product.
+A product $\matr{C} \matr{R}$ with $\matr{C}$ of size $2 \times 2$
+is not a rank factorization of this $\matr{A}$,
+because the inner dimension must equal $\operatorname{rank}(\matr{A}) = 1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-rank-factorization}
+#### Every nonzero matrix has a rank factorization
+
+Every $m \times n$ matrix $\matr{A}$ with $\operatorname{rank}(\matr{A}) = r \ge 1$
+has a rank factorization (@def-rank-factorization).
+One is given by taking the columns of $\matr{C}$
+to be any basis of $\mathcal{C}(\matr{A})$.
+
+:::
+
+::: proof
+
+$\mathcal{C}(\matr{A})$ has dimension $r$ (@thm-rank-dim),
+so it has a basis $\vecf{c}_1, \ldots, \vecf{c}_r$ (@thm-extend-basis);
+let $\matr{C}$ be the $m \times r$ matrix with these columns.
+Each column $\vecf{a}_j$ of $\matr{A}$ is in $\mathcal{C}(\matr{A})$,
+so $\vecf{a}_j = r_{1j} \vecf{c}_1 + \cdots + r_{rj} \vecf{c}_r$ for some numbers $r_{ij}$,
+because the basis spans $\mathcal{C}(\matr{A})$.
+Let $\matr{R}$ be the $r \times n$ matrix with entries $r_{ij}$,
+whose column $j$ is $\vecf{r}_j = (r_{1j}, \ldots, r_{rj})$.
+Then column $j$ of $\matr{C} \matr{R}$ is
+
+$$
+\ba
+\matr{C} \vecf{r}_j
+&= r_{1j} \vecf{c}_1 + \cdots + r_{rj} \vecf{c}_r
+&& \text{(@thm-matvec-columns)}
+\\
+&= \vecf{a}_j,
+&& \text{(choice of the } r_{ij} \text{)}
+\ea
+$$
+
+so $\matr{C} \matr{R} = \matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-rank-factorization-construct}
+#### Building a rank factorization from a basis
+
+For $\matr{A}$ in @exm-column-space,
+$(1, 3)$ is a basis of $\mathcal{C}(\matr{A})$ (@exm-column-space-span).
+The columns of $\matr{A}$ are
+$(1, 3) = 1 \cd (1, 3)$,
+$(-2, -6) = -2 \cd (1, 3)$ and
+$(-2, -6) = -2 \cd (1, 3)$,
+so the construction in @thm-rank-factorization gives
+$\matr{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$
+and $\matr{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}$,
+the factorization in @exm-rank-factorization.
+
+:::
