@@ -1,0 +1,97 @@
+:::{#def-generalized-inverse}
+#### Generalized inverse
+
+A **generalized inverse** of an $m \times n$ matrix $\matr{A}$
+is an $n \times m$ matrix $\matr{G}$ such that
+
+$$
+\underbrace{\matr{A}}_{m \times n}\,
+\underbrace{\matr{G}}_{n \times m}\,
+\underbrace{\matr{A}}_{m \times n}
+= \matr{A}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-generalized-inverse}
+#### A matrix with many generalized inverses
+
+Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+and $\matr{G} = \begin{bmatrix} g_{11} & g_{12} \\ g_{21} & g_{22} \end{bmatrix}$. Then
+
+$$
+\ba
+\matr{A} \matr{G} \matr{A}
+&= \begin{bmatrix} g_{11} & g_{12} \\ 0 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}
+&& \text{(@def-matrix-mult, for } \matr{A} \matr{G} \text{)}
+\\
+&= \begin{bmatrix} g_{11} & 0 \\ 0 & 0 \end{bmatrix},
+&& \text{(@def-matrix-mult)}
+\ea
+$$
+
+which equals $\matr{A}$ exactly when $g_{11} = 1$.
+So every matrix $\begin{bmatrix} 1 & g_{12} \\ g_{21} & g_{22} \end{bmatrix}$
+is a generalized inverse of $\matr{A}$:
+a generalized inverse need not be unique.
+The zero matrix is not one, since its $(1, 1)$ entry is $0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-generalized-inverse-invertible}
+#### An invertible matrix has only one generalized inverse
+
+If $\matr{A}$ is an invertible $p \times p$ matrix (@def-invertible-matrix),
+its only generalized inverse is $\matr{A}^{-1}$.
+
+:::
+
+::: proof
+
+$\matr{A} \matr{A}^{-1} \matr{A} = \matr{I}_p \matr{A} = \matr{A}$
+(@def-matrix-inverse, @thm-identity),
+so $\matr{A}^{-1}$ is a generalized inverse.
+If $\matr{G}$ is any generalized inverse, then
+
+$$
+\ba
+\matr{G}
+&= \matr{I}_p\,\matr{G}\,\matr{I}_p
+&& \text{(@thm-identity)}
+\\
+&= (\matr{A}^{-1} \matr{A})\,\matr{G}\,(\matr{A} \matr{A}^{-1})
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A}^{-1}\,(\matr{A} \matr{G} \matr{A})\,\matr{A}^{-1}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{A}^{-1} \matr{A} \matr{A}^{-1}
+&& \text{(@def-generalized-inverse)}
+\\
+&= \matr{I}_p\,\matr{A}^{-1}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A}^{-1}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-generalized-inverse-invertible}
+#### The generalized inverse of an invertible matrix
+
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
+of @exm-invertible-matrix,
+the only generalized inverse is
+$\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$.
+The matrix of @exm-generalized-inverse, by contrast, has infinitely many,
+so by @thm-generalized-inverse-invertible it is singular.
+
+:::

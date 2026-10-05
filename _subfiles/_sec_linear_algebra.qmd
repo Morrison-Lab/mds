@@ -645,3 +645,51 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-hat-matrix-projects.qmd >}}
+
+### Generalized inverses and linear systems {#sec-generalized-inverse}
+
+{{< include mds/_subfiles/linear-algebra/_prose-generalized-inverse-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-scalar-matmul.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-generalized-inverse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-generalized-inverse-solves.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-moore-penrose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-moore-penrose-unique.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-moore-penrose-exists.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-consistent-system.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-consistency.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-solution-set.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-solution-unique.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-projector-generalized-inverse.qmd >}}

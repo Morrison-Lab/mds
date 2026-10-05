@@ -1,0 +1,56 @@
+:::{#cor-solution-unique}
+#### Solvable for every right-hand side, and solvable uniquely
+
+Let $\matr{A}$ be $m \times n$.
+
+1. $\matr{A} \vecf{x} = \vecf{b}$ is consistent for every $\vecf{b} \in \reals^m$
+   exactly when $\operatorname{rank}(\matr{A}) = m$.
+2. A consistent system $\matr{A} \vecf{x} = \vecf{b}$ has exactly one solution
+   exactly when $\operatorname{rank}(\matr{A}) = n$.
+
+:::
+
+::: proof
+
+**Part 1.**
+By @thm-consistency, the system is consistent for every $\vecf{b}$
+exactly when $\mathcal{C}(\matr{A}) = \reals^m$.
+$\mathcal{C}(\matr{A})$ is a subspace of $\reals^m$ (@thm-column-space-span) with dimension $\operatorname{rank}(\matr{A})$
+(@thm-rank-dim), and $\dim(\reals^m) = m$ (@exm-dimension).
+If the dimension is $m$, then $\mathcal{C}(\matr{A}) = \reals^m$ (@thm-subspace-equal-dim);
+if $\mathcal{C}(\matr{A}) = \reals^m$, the dimension is $m$.
+
+**Part 2.**
+By @thm-solution-set, the solutions are a particular solution
+plus the vectors of $\mathcal{N}(\matr{A})$,
+so there is exactly one solution exactly when $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$,
+that is, when $\operatorname{nullity}(\matr{A}) = 0$
+(a subspace of dimension $0$ has the empty list as a basis, whose span is $\cb{\vzero}$,
+by @def-dimension and @def-span;
+and $\cb{\vzero}$ has dimension $0$, by @exm-dimension).
+By @thm-rank-nullity, that is when $\operatorname{rank}(\matr{A}) = n$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-solution-unique}
+#### Three systems
+
+- The $2 \times 3$ matrix $\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}$ of @exm-rank-bound
+  has rank $2 = m$, so every system with it is consistent,
+  but $2 < 3 = n$, so the solutions are never unique.
+- The $3 \times 2$ matrix $\mX = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}$ of @exm-gram-invertible
+  has rank $2 = n$, so a consistent system has one solution,
+  but $2 < 3 = m$, so some systems are inconsistent:
+  $(1, 0, 0) \notin \mathcal{C}(\mX)$, because $a\,(1, 1, 1) + b\,(1, 2, 3)$
+  has equal differences between consecutive entries,
+  and $(1, 0, 0)$ does not.
+- An invertible $p \times p$ matrix $\matr{A}$ has rank $p$:
+  if $\matr{A} \vecf{x} = \vzero$ then $\vecf{x} = \matr{A}^{-1} \matr{A} \vecf{x} = \vzero$,
+  so its nullity is $0$ and its rank is $p$ (@thm-rank-nullity).
+  So every system with it is consistent (part 1, with $p = m$)
+  and has exactly one solution (part 2, with $p = n$),
+  namely $\matr{A}^{-1} \vecf{b}$, since $\matr{A}\,(\matr{A}^{-1} \vecf{b}) = \vecf{b}$.
+
+:::

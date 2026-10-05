@@ -1,0 +1,124 @@
+:::{#thm-moore-penrose-unique}
+#### A matrix has at most one Moore-Penrose inverse
+
+If $\matr{G}_1$ and $\matr{G}_2$ are both Moore-Penrose inverses
+of an $m \times n$ matrix $\matr{A}$ (@def-moore-penrose),
+then $\matr{G}_1 = \matr{G}_2$.
+
+:::
+
+::: proof
+
+**$\matr{A} \matr{G}_1 = \matr{A} \matr{G}_2$.**
+
+$$
+\ba
+\matr{A} \matr{G}_1
+&= \tp{(\matr{A} \matr{G}_1)}
+&& \text{(condition 3 for } \matr{G}_1 \text{)}
+\\
+&= \tp{\matr{G}_1}\,\tp{\matr{A}}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{G}_1}\,\tp{(\matr{A} \matr{G}_2 \matr{A})}
+&& \text{(condition 1 for } \matr{G}_2 \text{)}
+\\
+&= \tp{\matr{G}_1}\,\tp{\matr{A}}\,\tp{\matr{G}_2}\,\tp{\matr{A}}
+&& \text{(@thm-transpose-product, twice)}
+\\
+&= (\tp{\matr{G}_1}\,\tp{\matr{A}})\,(\tp{\matr{G}_2}\,\tp{\matr{A}})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{A} \matr{G}_1)}\,\tp{(\matr{A} \matr{G}_2)}
+&& \text{(@thm-transpose-product, twice)}
+\\
+&= (\matr{A} \matr{G}_1)(\matr{A} \matr{G}_2)
+&& \text{(condition 3 for } \matr{G}_1 \text{ and } \matr{G}_2 \text{)}
+\\
+&= (\matr{A} \matr{G}_1 \matr{A})\,\matr{G}_2
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{A} \matr{G}_2.
+&& \text{(condition 1 for } \matr{G}_1 \text{)}
+\ea
+$$
+
+**$\matr{G}_1 \matr{A} = \matr{G}_2 \matr{A}$.**
+
+$$
+\ba
+\matr{G}_1 \matr{A}
+&= \tp{(\matr{G}_1 \matr{A})}
+&& \text{(condition 4 for } \matr{G}_1 \text{)}
+\\
+&= \tp{\matr{A}}\,\tp{\matr{G}_1}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{(\matr{A} \matr{G}_2 \matr{A})}\,\tp{\matr{G}_1}
+&& \text{(condition 1 for } \matr{G}_2 \text{)}
+\\
+&= \tp{\matr{A}}\,\tp{\matr{G}_2}\,\tp{\matr{A}}\,\tp{\matr{G}_1}
+&& \text{(@thm-transpose-product, twice)}
+\\
+&= (\tp{\matr{A}}\,\tp{\matr{G}_2})\,(\tp{\matr{A}}\,\tp{\matr{G}_1})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{G}_2 \matr{A})}\,\tp{(\matr{G}_1 \matr{A})}
+&& \text{(@thm-transpose-product, twice)}
+\\
+&= (\matr{G}_2 \matr{A})(\matr{G}_1 \matr{A})
+&& \text{(condition 4 for } \matr{G}_2 \text{ and } \matr{G}_1 \text{)}
+\\
+&= \matr{G}_2\,(\matr{A} \matr{G}_1 \matr{A})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{G}_2 \matr{A}.
+&& \text{(condition 1 for } \matr{G}_1 \text{)}
+\ea
+$$
+
+**Conclusion.**
+
+$$
+\ba
+\matr{G}_1
+&= \matr{G}_1 \matr{A} \matr{G}_1
+&& \text{(condition 2 for } \matr{G}_1 \text{)}
+\\
+&= \matr{G}_1\,(\matr{A} \matr{G}_1)
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{G}_1\,(\matr{A} \matr{G}_2)
+&& \text{(the first step)}
+\\
+&= (\matr{G}_1 \matr{A})\,\matr{G}_2
+&& \text{(@thm-matmul-assoc)}
+\\
+&= (\matr{G}_2 \matr{A})\,\matr{G}_2
+&& \text{(the second step)}
+\\
+&= \matr{G}_2 \matr{A} \matr{G}_2
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{G}_2.
+&& \text{(condition 2 for } \matr{G}_2 \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-moore-penrose-unique}
+#### Only one of the many generalized inverses qualifies
+
+The matrix $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+has infinitely many generalized inverses
+$\begin{bmatrix} 1 & g_{12} \\ g_{21} & g_{22} \end{bmatrix}$ (@exm-generalized-inverse),
+and $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$ is a Moore-Penrose inverse (@exm-moore-penrose).
+By @thm-moore-penrose-unique it is the only one,
+so every other choice of $g_{12}, g_{21}, g_{22}$ breaks condition 2, 3 or 4.
+For instance, $g_{21} = 1$ (the rest $0$) gives
+$\matr{G} \matr{A} = \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix}$, which is not symmetric.
+
+:::

@@ -1,0 +1,232 @@
+:::{#thm-moore-penrose-exists}
+#### Every matrix has a Moore-Penrose inverse
+
+Every $m \times n$ matrix $\matr{A}$ has a Moore-Penrose inverse (@def-moore-penrose),
+written $\matr{A}^+$; it is unique by @thm-moore-penrose-unique.
+
+- If $\matr{A} = \matr{0}_{m \times n}$, then $\matr{A}^+ = \matr{0}_{n \times m}$.
+- If $\operatorname{rank}(\matr{A}) = r \ge 1$ and $\matr{A} = \matr{C} \matr{R}$
+  is a rank factorization (@def-rank-factorization), then
+
+$$
+\underbrace{\matr{A}^+}_{n \times m}
+= \underbrace{\tp{\matr{R}}}_{n \times r}
+  \underbrace{(\matr{R} \tp{\matr{R}})^{-1}}_{r \times r}
+  \underbrace{(\tp{\matr{C}} \matr{C})^{-1}}_{r \times r}
+  \underbrace{\tp{\matr{C}}}_{r \times m}.
+$$
+
+:::
+
+::: proof
+
+**The two cases cover every matrix.**
+If $\matr{A} \ne \matr{0}_{m \times n}$, it has a nonzero column,
+which is linearly independent on its own
+($c\,\vecf{v} = \vzero$ with $\vecf{v} \ne \vzero$ forces $c = 0$),
+so $\operatorname{rank}(\matr{A}) \ge 1$ (@def-rank).
+
+**The zero matrix.**
+With $\matr{A} = \matr{0}_{m \times n}$ and $\matr{G} = \matr{0}_{n \times m}$,
+every product in conditions 1 to 4 is a zero matrix,
+and a zero matrix equals its own transpose,
+so all four conditions hold.
+
+**The two inverses exist.**
+Now suppose $\operatorname{rank}(\matr{A}) = r \ge 1$.
+A rank factorization exists (@thm-rank-factorization).
+$\matr{C}$ is $m \times r$ and $\matr{R}$ is $r \times n$.
+Both have rank $r$:
+
+$$
+\ba
+r
+&= \operatorname{rank}(\matr{C} \matr{R})
+&& \text{(} \matr{A} = \matr{C} \matr{R} \text{)}
+\\
+&\le \operatorname{rank}(\matr{C})
+&& \text{(@thm-rank-product)}
+\\
+&\le r,
+&& \text{(@cor-rank-bound, } \matr{C} \text{ has } r \text{ columns)}
+\ea
+$$
+
+and, using $\tp{(\matr{C} \matr{R})} = \tp{\matr{R}} \tp{\matr{C}}$ (@thm-transpose-product),
+
+$$
+\ba
+r
+&= \operatorname{rank}\paren{\tp{\matr{R}} \tp{\matr{C}}}
+&& \text{(@thm-rank-transpose)}
+\\
+&\le \operatorname{rank}(\tp{\matr{R}})
+&& \text{(@thm-rank-product)}
+\\
+&\le r.
+&& \text{(@cor-rank-bound, } \tp{\matr{R}} \text{ has } r \text{ columns)}
+\ea
+$$
+
+So $\matr{C}$ and $\tp{\matr{R}}$ have full column rank $r$,
+and $\tp{\matr{C}} \matr{C}$ and $\matr{R} \tp{\matr{R}} = \tp{(\tp{\matr{R}})}\,\tp{\matr{R}}$
+are invertible (@thm-gram-invertible).
+They are symmetric:
+$\tp{(\tp{\matr{C}} \matr{C})} = \tp{\matr{C}}\,\tp{(\tp{\matr{C}})} = \tp{\matr{C}} \matr{C}$
+(@thm-transpose-product, @def-matrix-transpose), and likewise for $\matr{R} \tp{\matr{R}}$.
+Write $\matr{S} \eqdef (\matr{R} \tp{\matr{R}})^{-1}$
+and $\matr{T} \eqdef (\tp{\matr{C}} \matr{C})^{-1}$,
+both symmetric (@cor-inverse-symmetric),
+and $\matr{G} \eqdef \tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}$.
+
+**Two products.**
+
+$$
+\ba
+\matr{A} \matr{G}
+&= \matr{C} \matr{R}\,\tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}
+&& \text{(substitute } \matr{A} \text{ and } \matr{G} \text{)}
+\\
+&= \matr{C}\,(\matr{R} \tp{\matr{R}})\,\matr{S}\,\matr{T} \tp{\matr{C}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{C}\,\matr{I}_r\,\matr{T} \tp{\matr{C}}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{C} \matr{T} \tp{\matr{C}},
+&& \text{(@thm-identity)}
+\ea
+$$
+
+$$
+\ba
+\matr{G} \matr{A}
+&= \tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}\,\matr{C} \matr{R}
+&& \text{(substitute } \matr{G} \text{ and } \matr{A} \text{)}
+\\
+&= \tp{\matr{R}} \matr{S}\,\matr{T}\,(\tp{\matr{C}} \matr{C})\,\matr{R}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{\matr{R}} \matr{S}\,\matr{I}_r\,\matr{R}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \tp{\matr{R}} \matr{S} \matr{R}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+**Conditions 3 and 4.**
+
+$$
+\ba
+\tp{(\matr{A} \matr{G})}
+&= \tp{(\matr{C} \matr{T} \tp{\matr{C}})}
+&& \text{(first product)}
+\\
+&= \tp{\paren{\matr{C}\,(\matr{T} \tp{\matr{C}})}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{T} \tp{\matr{C}})}\,\tp{\matr{C}}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{(\tp{\matr{C}})}\,\tp{\matr{T}}\,\tp{\matr{C}}
+&& \text{(@thm-transpose-product)}
+\\
+&= \matr{C}\,\tp{\matr{T}}\,\tp{\matr{C}}
+&& \text{(@def-matrix-transpose)}
+\\
+&= \matr{C} \matr{T} \tp{\matr{C}},
+&& \text{(} \matr{T} \text{ is symmetric)}
+\ea
+$$
+
+$$
+\ba
+\tp{(\matr{G} \matr{A})}
+&= \tp{(\tp{\matr{R}} \matr{S} \matr{R})}
+&& \text{(second product)}
+\\
+&= \tp{\paren{\tp{\matr{R}}\,(\matr{S} \matr{R})}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{S} \matr{R})}\,\tp{(\tp{\matr{R}})}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{R}}\,\tp{\matr{S}}\,\tp{(\tp{\matr{R}})}
+&& \text{(@thm-transpose-product)}
+\\
+&= \tp{\matr{R}}\,\tp{\matr{S}}\,\matr{R}
+&& \text{(@def-matrix-transpose)}
+\\
+&= \tp{\matr{R}} \matr{S} \matr{R}.
+&& \text{(} \matr{S} \text{ is symmetric)}
+\ea
+$$
+
+**Condition 1.**
+
+$$
+\ba
+\matr{A} \matr{G} \matr{A}
+&= \matr{C} \matr{T} \tp{\matr{C}}\,\matr{C} \matr{R}
+&& \text{(first product)}
+\\
+&= \matr{C}\,\matr{T}\,(\tp{\matr{C}} \matr{C})\,\matr{R}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{C}\,\matr{I}_r\,\matr{R}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+**Condition 2.**
+
+$$
+\ba
+\matr{G} \matr{A} \matr{G}
+&= \tp{\matr{R}} \matr{S} \matr{R}\,\tp{\matr{R}} \matr{S} \matr{T} \tp{\matr{C}}
+&& \text{(second product)}
+\\
+&= \tp{\matr{R}}\,\matr{S}\,(\matr{R} \tp{\matr{R}})\,\matr{S}\,\matr{T} \tp{\matr{C}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{\matr{R}}\,\matr{I}_r\,\matr{S}\,\matr{T} \tp{\matr{C}}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{G}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-moore-penrose-exists}
+#### The Moore-Penrose inverse of a rank-one matrix
+
+For $\matr{A}$ in @exm-column-space, the rank factorization
+$\matr{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$,
+$\matr{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}$
+(@exm-rank-factorization) gives
+$\tp{\matr{C}} \matr{C} = 1 + 9 = 10$
+and $\matr{R} \tp{\matr{R}} = 1 + 4 + 4 = 9$, so
+
+$$
+\matr{A}^+
+= \frac{1}{9 \cd 10} \begin{bmatrix} 1 \\ -2 \\ -2 \end{bmatrix} \begin{bmatrix} 1 & 3 \end{bmatrix}
+= \frac{1}{90} \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}.
+$$
+
+As a check on condition 1,
+$\matr{A} \matr{A}^+ = \matr{C} \matr{T} \tp{\matr{C}}
+= \frac{1}{10} \begin{bmatrix} 1 & 3 \\ 3 & 9 \end{bmatrix}$,
+and its first row times $\matr{A}$ is
+$\frac{1}{10}\paren{1 \cd (1, -2, -2) + 3 \cd (3, -6, -6)} = (1, -2, -2)$,
+the first row of $\matr{A}$; the second row is $3$ times the first,
+like the second row of $\matr{A}$.
+
+:::
