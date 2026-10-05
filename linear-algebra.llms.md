@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 15:00:02 (PDT)
+Last modified: 2026-10-05 15:14:37 (PDT)
 
 ## 1 Vectors
 
@@ -4182,7 +4182,103 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > - \\\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\: \\\ell\_{11} = \sqrt{5}\\, \\\ell\_{21} = 4/\sqrt{5}\\, and \\\ell\_{22}^2 = 5 - \tfrac{16}{5} = \tfrac{9}{5}\\, the Schur complement of [Example 169](#exm-schur-complement), so \\\ell\_{22} = \tfrac{3}{\sqrt{5}}\\.
 > - For \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ the method breaks down: \\\ell\_{22}^2 = 1 - 4 = -3\\ has no real solution, matching the failure of the Schur complement test ([Example 170](#exm-schur-test)).
 
-## 10 Further reading
+## 10 Complex vectors and matrices
+
+> **NOTE:**
+>
+> **Definition 80 (Complex vectors and matrices)** A **complex vector** of length \\p\\ is a column vector whose entries are [complex numbers](algebra.llms.md#def-complex-number); the set of all of them is denoted \\\mathbb{C}^p\\. A **complex matrix** of size \\m \times n\\ is a matrix with complex entries; the set of all of them is denoted \\\mathbb{C}^{m \times n}\\.
+>
+> The **complex conjugate** of a complex vector or matrix takes the [complex conjugate](algebra.llms.md#def-complex-conjugate) of each entry: \\(\overline{\mathbf{A}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{jk}}\\.
+
+> **NOTE:**
+>
+> **Example 172 (A complex vector and its conjugate)** \\ \underbrace{\tilde{z}}\_{3 \times 1} = \begin{bmatrix} 1 + i \\ 2 \\ -3\\i \end{bmatrix} \in \mathbb{C}^3, \qquad \underbrace{\overline{\tilde{z}}}\_{3 \times 1} = \begin{bmatrix} 1 - i \\ 2 \\ 3\\i \end{bmatrix}. \\
+>
+> The real entry \\2\\ is its own conjugate. Every real vector is also a complex vector, since each real number \\a\\ is the complex number \\a + 0\\i\\, so \\\mathbb{R}^p\\ is a subset of \\\mathbb{C}^p\\.
+
+> **NOTE:**
+>
+> **Definition 81 (Conjugate transpose)** The **conjugate transpose** of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+>
+> \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
+>
+> The conjugate transpose of a column vector \\\tilde{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\tilde{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
+
+Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231) gives the same definition, writing \\\mathbf{A}^\*\\ for the conjugate transpose. These notes write \\\mathbf{A}^{\mathsf{H}}\\ instead, because \\^\*\\ also marks optimizers, as in \\\tilde{x}^\*\\.
+
+> **NOTE:**
+>
+> **Example 173 (The conjugate transpose of a \\2 \times 3\\ matrix)** For
+>
+> \\ \underbrace{\mathbf{A}}\_{2 \times 3} = \begin{bmatrix} 1 + i & 2 & 0 \\ -i & 3 - 2\\i & 4 \end{bmatrix}, \\
+>
+> transposing gives a \\3 \times 2\\ matrix, and conjugating each of its entries gives
+>
+> \\ \underbrace{\mathbf{A}^{\mathsf{H}}}\_{3 \times 2} = \begin{bmatrix} 1 - i & i \\ 2 & 3 + 2\\i \\ 0 & 4 \end{bmatrix}. \\
+>
+> For instance, \\(\mathbf{A}^{\mathsf{H}})\_{12} = \overline{a\_{21}} = \overline{-i} = i\\. The transpose alone would have \\-i\\ in that position, so for a matrix with an entry that is not real, \\\mathbf{A}^{\mathsf{H}}\\ and \\{\mathbf{A}}^{\top}\\ differ. For a real matrix, conjugating changes nothing, so \\\mathbf{A}^{\mathsf{H}} = {\mathbf{A}}^{\top}\\.
+
+> **NOTE:**
+>
+> **Theorem 101 (\\\tilde{z}^{\mathsf{H}}\tilde{z}\\ is a sum of squared absolute values)** For every \\\tilde{z} \in \mathbb{C}^p\\,
+>
+> \\\underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times p}\\\underbrace{\tilde{z}}\_{p \times 1} = \sum\_{j=1}^{p} \mathopen{}\left\|z_j\right\|\mathclose{}^2,\\
+>
+> which is a nonnegative real number, and is \\0\\ only when \\\tilde{z} = \tilde{0}\_{p \times 1}\\.
+
+> **NOTE:**
+>
+> *Proof*. The last step uses the [identity for a complex number times its conjugate](algebra.llms.md#thm-conj-product).
+>
+> \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^{p} \overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~81}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^{p} z_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^{p} \mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
+>
+> By the definition of the [absolute value](algebra.llms.md#def-complex-modulus), each \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2\\ is a nonnegative real number, so their sum is too. A sum of nonnegative numbers is \\0\\ only when every term is \\0\\, and \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = 0\\ only when \\\operatorname{Re} z_j = \operatorname{Im} z_j = 0\\, that is, when \\z_j = 0\\.
+
+> **NOTE:**
+>
+> **Example 174 (Computing \\\tilde{z}^{\mathsf{H}}\tilde{z}\\)** Let \\\tilde{z} = {(1 + i, 2)}^{\top}\\. By [Theorem 101](#thm-zhz-sum-squares),
+>
+> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \mathopen{}\left\|1 + i\right\|\mathclose{}^2 + \mathopen{}\left\|2\right\|\mathclose{}^2 && \text{(}\href{#thm-zhz-sum-squares}{\text{Theorem~101}}\text{)} \\ &= (1^2 + 1^2) + (2^2 + 0^2) && \text{(definition of the absolute value, squared)} \\ &= 2 + 4 && \text{(add inside each group)} \\ &= 6 && \text{(add)} \end{aligned} \\
+>
+> Multiplying out directly gives the same number: \\\overline{2} \cdot 2 = 4\\, and
+>
+> \\ \begin{aligned} \overline{(1 + i)}\\(1 + i) &= (1 - i)(1 + i) && \text{(conjugate)} \\ &= 1 + i - i - i^2 && \text{(distribute)} \\ &= 1 - i^2 && \text{(cancel } i \text{)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 175 (Why complex vectors use the conjugate transpose)** For a real vector \\\tilde{x}\\, \\{\tilde{x}}^{\top}\tilde{x}= \sum\_{j=1}^{p} x_j^2\\ is \\0\\ only when \\\tilde{x}\\ is the zero vector. The same formula fails for complex vectors. Let \\\tilde{z} = {(1, i)}^{\top}\\. Then
+>
+> \\ \begin{aligned} \underbrace{{\tilde{z}}^{\top}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= 1 \cdot 1 + i \cdot i && \text{(multiply entry by entry and add)} \\ &= 1 + i^2 && \text{(multiply)} \\ &= 0 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
+>
+> although \\\tilde{z} \neq \tilde{0}\_{2 \times 1}\\. Using the conjugate transpose instead,
+>
+> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \overline{1} \cdot 1 + \overline{i} \cdot i && \text{(}\href{#def-conjugate-transpose}{\text{Definition~81}}\text{)} \\ &= 1 + (-i) \cdot i && \text{(conjugate each entry)} \\ &= 1 - i^2 && \text{(multiply)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
+>
+> which is positive, as [Theorem 101](#thm-zhz-sum-squares) guarantees.
+
+> **NOTE:**
+>
+> **Definition 82 (Hermitian matrix)** A square complex matrix \\\mathbf{A}\\ is **Hermitian** if it equals its conjugate transpose ([Definition 81](#def-conjugate-transpose)):
+>
+> \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
+
+> **NOTE:**
+>
+> **Example 176 (A Hermitian matrix)** \\ \underbrace{\mathbf{A}}\_{2 \times 2} = \begin{bmatrix} 2 & 1 - i \\ 1 + i & 3 \end{bmatrix} \\
+>
+> is Hermitian: transposing swaps the off-diagonal entries, and conjugating turns \\1 + i\\ back into \\1 - i\\ and \\1 - i\\ back into \\1 + i\\, so \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}\\. The diagonal entries of a Hermitian matrix must be real, because \\a\_{jj} = \overline{a\_{jj}}\\, and only a real number is its own conjugate: if \\a + b\\i = a - b\\i\\, then the imaginary parts give \\b = -b\\, so \\b = 0\\.
+>
+> Every real symmetric matrix is Hermitian, because for a real matrix \\\mathbf{A}^{\mathsf{H}} = {\mathbf{A}}^{\top}\\.
+
+> **NOTE:**
+>
+> **Example 177 (A symmetric complex matrix that is not Hermitian)** \\ \underbrace{\mathbf{B}}\_{2 \times 2} = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} \\
+>
+> is symmetric, \\{\mathbf{B}}^{\top} = \mathbf{B}\\, but it is not Hermitian:
+>
+> \\ \underbrace{\mathbf{B}^{\mathsf{H}}}\_{2 \times 2} = \begin{bmatrix} 0 & -i \\ -i & 0 \end{bmatrix} \neq \mathbf{B}. \\
+
+## 11 Further reading
 
 - Strang ([2023](#ref-strang2023linear)) is a widely used first course in linear algebra. It covers vectors, elimination, vector spaces, orthogonality, determinants, eigenvalues, and the singular value decomposition.
 - Axler ([2024](#ref-axler2024linear)) is a proof-based treatment centered on vector spaces and linear maps. A free electronic version is available from the publisher.
