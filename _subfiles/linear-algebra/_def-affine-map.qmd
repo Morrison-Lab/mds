@@ -10,7 +10,8 @@ $$f(\vx) = \matr{A} \vx + \vec{b} \quad \text{for all } \vx \in \mathbb{R}^p$$
 
 For a scalar-valued function ($m = 1$),
 $\matr{A}$ is a single row, written $\vec{w}^\top$, and $\vec{b}$ is a single number $b$,
-so an affine function is an inner product plus an offset:
+so an affine function is a linear function $\vec{w}^\top \vx$ (@cor-linear-scalar)
+plus an offset:
 
 $$f(\vx) = \vec{w}^\top \vx + b, \qquad \vec{w} \in \mathbb{R}^p, \quad b \in \mathbb{R}$$ {#eq-linear-scalar}
 
