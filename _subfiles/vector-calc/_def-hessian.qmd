@@ -22,7 +22,9 @@ $$ {#eq-hessian-row}
 Both forms follow the shape rule of matrix multiplication (@rem-row-derivative-shape):
 the $p \times 1$ column operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row,
 giving a $p \times p$ matrix.
-By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$, its $(i, j)$ entry is
+
+By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$,
+the $(i, j)$ entry of the Hessian is
 
 $$
 \sb{\matr{H}_f(\vx)}_{ij} = \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
