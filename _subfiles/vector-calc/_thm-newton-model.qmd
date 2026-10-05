@@ -25,7 +25,7 @@ $$
 \ea
 $$
 
-and $\tp{\vecf{\delta}^*} \matr{H} \vecf{d} = \tp{\vecf{d}} \matr{H} \vecf{\delta}^*$ in the same way, using $\tp{\matr{H}} = \matr{H}$. Then
+and $\tp{\vecf{\delta}^*{}} \matr{H} \vecf{d} = \tp{\vecf{d}} \matr{H} \vecf{\delta}^*$ in the same way, using $\tp{\matr{H}} = \matr{H}$. Then
 
 $$
 \ba
@@ -34,14 +34,14 @@ q(\vecf{\delta}^* + \vecf{d})
 && \text{(definition of } q \text{)}
 \\
 &= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tp{\vecf{g}} \vecf{d}
-+ \tfrac{1}{2} \paren{\tp{\vecf{\delta}^*} \matr{H} \vecf{\delta}^* + \tp{\vecf{\delta}^*} \matr{H} \vecf{d} + \tp{\vecf{d}} \matr{H} \vecf{\delta}^* + \tp{\vecf{d}} \matr{H} \vecf{d}}
++ \tfrac{1}{2} \paren{\tp{\vecf{\delta}^*{}} \matr{H} \vecf{\delta}^* + \tp{\vecf{\delta}^*{}} \matr{H} \vecf{d} + \tp{\vecf{d}} \matr{H} \vecf{\delta}^* + \tp{\vecf{d}} \matr{H} \vecf{d}}
 && \text{(distribute)}
 \\
 &= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tp{\vecf{g}} \vecf{d}
-+ \tfrac{1}{2}\,\tp{\vecf{\delta}^*} \matr{H} \vecf{\delta}^* - \tp{\vecf{g}} \vecf{d} + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
++ \tfrac{1}{2}\,\tp{\vecf{\delta}^*{}} \matr{H} \vecf{\delta}^* - \tp{\vecf{g}} \vecf{d} + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
 && \text{(both cross terms equal } -\tp{\vecf{g}} \vecf{d} \text{)}
 \\
-&= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tfrac{1}{2}\,\tp{\vecf{\delta}^*} \matr{H} \vecf{\delta}^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
+&= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tfrac{1}{2}\,\tp{\vecf{\delta}^*{}} \matr{H} \vecf{\delta}^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
 && \text{(cancel } \tp{\vecf{g}} \vecf{d} \text{)}
 \\
 &= q(\vecf{\delta}^*) + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d},
