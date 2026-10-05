@@ -400,6 +400,10 @@
 
 ### Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
 
+{{< include mds/_subfiles/linear-algebra/_prose-gram-schmidt-attribution.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-dot-linear-sum.qmd >}}
 
 {{< slidebreak >}}

@@ -15,39 +15,64 @@ with equality exactly when $\vecf{x}$ and $\vecf{y}$ are linearly dependent
 ::: proof
 
 **If $\vecf{y} = \vzero$.**
-Both sides are $0$, so equality holds,
+Then $\vecf{x} \cdot \vzero = \sum_i x_i \cd 0 = 0$ (@def-dot-product)
+and $\norm{\vzero} = 0$ (@thm-norm-properties, part 1),
+so both sides are $0$ and equality holds;
 and $\vecf{x}, \vecf{y}$ are linearly dependent, because $0\,\vecf{x} + 1\,\vecf{y} = \vzero$.
 
 **If $\vecf{y} \ne \vzero$.**
-Then $\norm{\vecf{y}} > 0$ (@thm-norm-properties).
+Then $\norm{\vecf{y}} > 0$ (@thm-norm-properties, part 1).
 Let $t \eqdef (\vecf{x} \cdot \vecf{y}) / \norm{\vecf{y}}^2$. Then
 
 $$
 \ba
-0
-&\le \norm{\vecf{x} - t\,\vecf{y}}^2
-&& \text{(@thm-norm-properties, part 1)}
+\norm{\vecf{x} - t\,\vecf{y}}^2
+&= \norm{\vecf{x} + (-t)\,\vecf{y}}^2
+&& \text{(subtraction is adding } -1 \text{ times)}
 \\
-&= \norm{\vecf{x}}^2 + 2\,\paren{\vecf{x} \cdot (-t\,\vecf{y})} + \norm{-t\,\vecf{y}}^2
+&= \norm{\vecf{x}}^2 + 2\,\paren{\vecf{x} \cdot ((-t)\,\vecf{y})} + \norm{(-t)\,\vecf{y}}^2
 && \text{(@thm-norm-sum-square)}
 \\
-&= \norm{\vecf{x}}^2 - 2t\,(\vecf{x} \cdot \vecf{y}) + \norm{-t\,\vecf{y}}^2
+&= \norm{\vecf{x}}^2 + 2\,(-t)\,(\vecf{x} \cdot \vecf{y}) + \norm{(-t)\,\vecf{y}}^2
 && \text{(@thm-dot-linear, special case } b = 0 \text{)}
 \\
+&= \norm{\vecf{x}}^2 + 2\,(-t)\,(\vecf{x} \cdot \vecf{y}) + \paren{\abs{-t}\,\norm{\vecf{y}}}^2
+&& \text{(@thm-norm-properties, part 2)}
+\\
 &= \norm{\vecf{x}}^2 - 2t\,(\vecf{x} \cdot \vecf{y}) + t^2\,\norm{\vecf{y}}^2
-&& \text{(@thm-norm-properties, part 2, squared)}
+&& \text{(} 2\,(-t) = -2t \text{ and } \abs{-t}^2 = t^2 \text{)}
+\\
+&= \norm{\vecf{x}}^2 - 2\,\frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^2}
+ + \frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^4}\,\norm{\vecf{y}}^2
+&& \text{(substitute } t \text{)}
 \\
 &= \norm{\vecf{x}}^2 - 2\,\frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^2}
  + \frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^2}
-&& \text{(substitute } t \text{)}
+&& \text{(cancel one factor } \norm{\vecf{y}}^2 \text{)}
 \\
 &= \norm{\vecf{x}}^2 - \frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^2}.
 && \text{(combine the last two terms)}
 \ea
+$$ {#eq-cauchy-schwarz-chain}
+
+The left side is at least $0$ (@thm-norm-properties, part 1), so
+
+$$
+\ba
+0
+&\le \norm{\vecf{x}}^2 - \frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^2}
+&& \text{(@eq-cauchy-schwarz-chain)}
+\\
+\frac{(\vecf{x} \cdot \vecf{y})^2}{\norm{\vecf{y}}^2}
+&\le \norm{\vecf{x}}^2
+&& \text{(add } (\vecf{x} \cdot \vecf{y})^2 / \norm{\vecf{y}}^2 \text{ to both sides)}
+\\
+(\vecf{x} \cdot \vecf{y})^2
+&\le \norm{\vecf{x}}^2\,\norm{\vecf{y}}^2,
+&& \text{(multiply both sides by } \norm{\vecf{y}}^2 > 0 \text{)}
+\ea
 $$
 
-Multiplying by $\norm{\vecf{y}}^2 > 0$ gives
-$(\vecf{x} \cdot \vecf{y})^2 \le \norm{\vecf{x}}^2\,\norm{\vecf{y}}^2$,
 and taking nonnegative square roots of both sides,
 which preserves the inequality,
 gives $\abs{\vecf{x} \cdot \vecf{y}} \le \norm{\vecf{x}}\,\norm{\vecf{y}}$.
@@ -56,33 +81,46 @@ gives $\abs{\vecf{x} \cdot \vecf{y}} \le \norm{\vecf{x}}\,\norm{\vecf{y}}$.
 Both sides of the inequality are nonnegative,
 so equality holds exactly when
 $(\vecf{x} \cdot \vecf{y})^2 = \norm{\vecf{x}}^2\,\norm{\vecf{y}}^2$,
-that is, when $\norm{\vecf{x}}^2 - (\vecf{x} \cdot \vecf{y})^2 / \norm{\vecf{y}}^2 = 0$.
-By the chain of equalities, that quantity is $\norm{\vecf{x} - t\,\vecf{y}}^2$,
-so equality holds exactly when $\norm{\vecf{x} - t\,\vecf{y}} = 0$,
-that is, when $\vecf{x} = t\,\vecf{y}$ (@thm-norm-properties, part 1).
-If $\vecf{x} = t\,\vecf{y}$, then $1\,\vecf{x} + (-t)\,\vecf{y} = \vzero$,
-so the two vectors are linearly dependent.
-Conversely, if $a\,\vecf{x} + b\,\vecf{y} = \vzero$ with $a, b$ not both $0$,
-then $a \ne 0$
-(otherwise $b\,\vecf{y} = \vzero$ with $\vecf{y} \ne \vzero$ would force $b = 0$),
-so $\vecf{x} = s\,\vecf{y}$ with $s = -b/a$, and
+that is (dividing by $\norm{\vecf{y}}^2 > 0$ and rearranging),
+when $\norm{\vecf{x}}^2 - (\vecf{x} \cdot \vecf{y})^2 / \norm{\vecf{y}}^2 = 0$.
+By @eq-cauchy-schwarz-chain, that quantity is $\norm{\vecf{x} - t\,\vecf{y}}^2$,
+so equality holds exactly when $\vecf{x} - t\,\vecf{y} = \vzero$
+(@thm-norm-properties, part 1),
+that is, when $\vecf{x} = t\,\vecf{y}$.
 
-$$
-\ba
-\abs{\vecf{x} \cdot \vecf{y}}
-&= \abs{s\,(\vecf{y} \cdot \vecf{y})}
-&& \text{(substitute } \vecf{x} = s\,\vecf{y} \text{, and @thm-dot-linear)}
-\\
-&= \abs{s}\,\norm{\vecf{y}}^2
-&& \text{(@eq-l2-norm, squared)}
-\\
-&= \paren{\abs{s}\,\norm{\vecf{y}}}\,\norm{\vecf{y}}
-&& \text{(regroup)}
-\\
-&= \norm{\vecf{x}}\,\norm{\vecf{y}}.
-&& \text{(@thm-norm-properties, part 2)}
-\ea
-$$
+- If $\vecf{x} = t\,\vecf{y}$, then $1\,\vecf{x} + (-t)\,\vecf{y} = \vzero$,
+  so the two vectors are linearly dependent.
+- Conversely, suppose $a\,\vecf{x} + b\,\vecf{y} = \vzero$ with $a, b$ not both $0$.
+  Then $a \ne 0$:
+  otherwise $b \ne 0$ and $b\,\vecf{y} = \vzero$,
+  so $\vecf{y} = \tfrac{1}{b}\,(b\,\vecf{y}) = \vzero$, contrary to assumption.
+  Subtracting $b\,\vecf{y}$ from both sides gives $a\,\vecf{x} = -b\,\vecf{y}$,
+  and multiplying by $\tfrac{1}{a}$ gives $\vecf{x} = s\,\vecf{y}$ with $s = -b/a$. Then
+
+  $$
+  \ba
+  \abs{\vecf{x} \cdot \vecf{y}}
+  &= \abs{(s\,\vecf{y}) \cdot \vecf{y}}
+  && \text{(substitute } \vecf{x} = s\,\vecf{y} \text{)}
+  \\
+  &= \abs{s\,(\vecf{y} \cdot \vecf{y})}
+  && \text{(@thm-dot-linear, special case } b = 0 \text{, first slot)}
+  \\
+  &= \abs{s}\,\abs{\vecf{y} \cdot \vecf{y}}
+  && \text{(} \abs{ab} = \abs{a}\,\abs{b} \text{)}
+  \\
+  &= \abs{s}\,\norm{\vecf{y}}^2
+  && \text{(} \vecf{y} \cdot \vecf{y} = \norm{\vecf{y}}^2 \ge 0 \text{, @eq-l2-norm)}
+  \\
+  &= \paren{\abs{s}\,\norm{\vecf{y}}}\,\norm{\vecf{y}}
+  && \text{(regroup)}
+  \\
+  &= \norm{\vecf{x}}\,\norm{\vecf{y}},
+  && \text{(@thm-norm-properties, part 2)}
+  \ea
+  $$
+
+  so equality holds.
 
 :::
 

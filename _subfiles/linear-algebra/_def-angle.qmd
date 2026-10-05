@@ -2,10 +2,10 @@
 #### Angle between two vectors
 
 The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
-is the number $\theta \in [0, \pi]$ with
+is the unique number $\theta \in [0, \pi]$ such that
 
 $$
-\cos\theta \eqdef \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.
+\cos\theta = \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.
 $$
 
 :::

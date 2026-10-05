@@ -1,6 +1,5 @@
-This section and @sec-gram-schmidt are adapted from @zhou2024vector,
+This section is adapted from @zhou2024vector,
 used under the MIT License
 (see the license text in @sec-subspaces).
-The source leaves the proofs of the triangle inequality
-and of the linear independence of orthonormal vectors to class;
-they are written out here.
+The source leaves the proof of the triangle inequality to class;
+it is written out here.

@@ -20,12 +20,15 @@ It is linearly independent, so the process completes,
 and the output is an orthonormal basis of its span, which is $\mathcal{S}$
 (@thm-gram-schmidt, part 3).
 
-The first $r$ outputs are $\vecf{u}_1, \ldots, \vecf{u}_r$ themselves.
-At step $i \le r$, if the earlier outputs are $\vecf{u}_1, \ldots, \vecf{u}_{i-1}$, then
+The first $r$ outputs are $\vecf{u}_1, \ldots, \vecf{u}_r$ themselves,
+by induction on $i \le r$.
+Suppose the outputs before step $i$ are $\vecf{u}_1, \ldots, \vecf{u}_{i-1}$
+(for $i = 1$ there are none, and the sum below is empty). Then
 $\tilde{\vecf{q}}_i = \vecf{u}_i - \sum_{j<i} (\vecf{u}_j \cdot \vecf{u}_i)\,\vecf{u}_j = \vecf{u}_i$,
-because each $\vecf{u}_j \cdot \vecf{u}_i = 0$,
-and $\vecf{q}_i = \vecf{u}_i / \norm{\vecf{u}_i} = \vecf{u}_i$,
-because $\norm{\vecf{u}_i} = 1$.
+because each $\vecf{u}_j \cdot \vecf{u}_i = 0$;
+$\tilde{\vecf{q}}_i = \vecf{u}_i \ne \vzero$, because $\norm{\vecf{u}_i} = 1$,
+so the process does not stop;
+and $\vecf{q}_i = \vecf{u}_i / \norm{\vecf{u}_i} = \vecf{u}_i$.
 So the orthonormal basis contains the starting list.
 
 :::
@@ -36,12 +39,15 @@ So the orthonormal basis contains the starting list.
 #### Extending one unit vector to an orthonormal basis of $\reals^3$
 
 Start from the unit vector $\vecf{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
-As in @exm-extend-basis,
-adding $(1, 0, 0)$ and then $(0, 0, 1)$ gives a basis of $\reals^3$
-starting from $(1, 1, 0)$;
-$\vecf{u}_1$ is a nonzero multiple of $(1, 1, 0)$,
-so the same two vectors extend it to a basis too
-(a combination of $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$ is a combination of $(1, 1, 0), (1, 0, 0), (0, 0, 1)$ with the first coefficient divided by $\sqrt{2}$).
+Extend it to a basis of $\reals^3$ as in @exm-extend-basis:
+$(1, 0, 0)$ is not in $\operatorname{span}\cb{\vecf{u}_1}$,
+because every multiple of $\vecf{u}_1$ has equal first and second entries,
+and $(0, 0, 1)$ is not in $\operatorname{span}\cb{\vecf{u}_1, (1, 0, 0)}$,
+because every combination of those two vectors has third entry $0$.
+So $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$ are linearly independent (@thm-add-outside-span),
+and three linearly independent vectors in $\reals^3$ are a basis of it
+(they are a basis of their span, which has dimension $3$ and so is $\reals^3$
+by @thm-subspace-equal-dim).
 Gram-Schmidt on $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$:
 
 1. $\vecf{q}_1 = \vecf{u}_1$.

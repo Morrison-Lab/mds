@@ -10,6 +10,9 @@ and, for $i = 1, 2, \ldots, k$ in turn:
 2. **Test:** if $\tilde{\vecf{q}}_i = \vzero$, stop;
 3. **Normalize:** $\vecf{q}_i \eqdef \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i}$.
 
+The output is the list $\vecf{q}_1, \vecf{q}_2, \ldots$ produced before the process stops,
+or all $k$ of them if it never stops.
+
 :::
 
 {{< slidebreak >}}

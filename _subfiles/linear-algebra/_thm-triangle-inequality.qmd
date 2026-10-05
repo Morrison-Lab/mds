@@ -37,7 +37,7 @@ and for nonnegative numbers $a^2 \le b^2$ implies $a \le b$.
 {{< slidebreak >}}
 
 :::{#exm-triangle-inequality}
-#### Two sides of a triangle are longer than the third
+#### A strict case and an equality case
 
 - For $\vecf{x} = (3, 0)$ and $\vecf{y} = (0, 4)$:
   $\norm{\vecf{x} + \vecf{y}} = \norm{(3, 4)} = 5$,

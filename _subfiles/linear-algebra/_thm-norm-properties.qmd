@@ -3,7 +3,7 @@
 
 For any $\vecf{x} \in \reals^p$ and any number $c$:
 
-1. $\norm{\vecf{x}} \ge 0$, and $\norm{\vecf{x}} = 0$ only when $\vecf{x} = \vzero$;
+1. $\norm{\vecf{x}} \ge 0$, and $\norm{\vecf{x}} = 0$ if and only if $\vecf{x} = \vzero$;
 2. $\norm{c\,\vecf{x}} = \abs{c}\,\norm{\vecf{x}}$.
 
 :::
@@ -13,9 +13,11 @@ For any $\vecf{x} \in \reals^p$ and any number $c$:
 **Part 1.**
 $\norm{\vecf{x}} = \sqrt{x_1^2 + \cdots + x_p^2}$ (@eq-l2-norm)
 is the square root of a sum of squares, so it is at least $0$.
-It is $0$ only when $x_1^2 + \cdots + x_p^2 = 0$,
-and a sum of squares is $0$ only when every term is $0$,
-that is, when every $x_i = 0$.
+It is $0$ exactly when $x_1^2 + \cdots + x_p^2 = 0$,
+and a sum of squares is $0$ exactly when every term is $0$,
+that is, when every $x_i = 0$:
+if some $x_i \ne 0$, its square is positive and the sum is positive,
+and if every $x_i = 0$, the sum is $0$.
 
 **Part 2.**
 
