@@ -16,3 +16,18 @@ $$
 $$
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-zero-matrix}
+#### Zero matrices of two shapes
+
+$$
+\matr{0}_{2 \times 3} = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix},
+\qquad
+\matr{0}_{3 \times 2} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}.
+$$
+
+They have the same entries but different dimensions, so they are different matrices.
+
+:::

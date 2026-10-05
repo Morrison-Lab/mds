@@ -50,6 +50,24 @@ not an orthogonal projection matrix.
 
 {{< slidebreak >}}
 
+:::{#exm-not-idempotent}
+#### A matrix that is not idempotent
+
+For $\matr{A} = \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}$,
+
+$$
+\matr{A}^2
+= \begin{bmatrix} 2 \cd 2 + 0 \cd 0 & 2 \cd 0 + 0 \cd 0 \\ 0 \cd 2 + 0 \cd 0 & 0 \cd 0 + 0 \cd 0 \end{bmatrix}
+= \begin{bmatrix} 4 & 0 \\ 0 & 0 \end{bmatrix}
+\ne \matr{A},
+$$
+
+so $\matr{A}$ is not idempotent (@def-idempotent-matrix).
+
+:::
+
+{{< slidebreak >}}
+
 :::{#rem-projection-matrix-terminology}
 #### What "projection matrix" means in these notes
 

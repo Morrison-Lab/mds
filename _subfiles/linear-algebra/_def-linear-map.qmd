@@ -14,3 +14,17 @@ $$f(\vx) = \matr{A} \vx$$
 
 A linear map always maps the zero vector to the zero vector: $f(\vzero) = \vzero$.
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-linear-map}
+#### A linear map, and two functions that are not
+
+- $f(\vx) = (2 x_1,\ x_1 + x_2)$ on $\reals^2$ is linear: it is $\matr{A} \vx$ with
+  $\matr{A} = \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}$,
+  and matrix-vector products preserve sums and scalar multiples.
+- $g(x) = x + 1$ on $\reals$ is not linear: $g(0) = 1 \ne 0$.
+- $h(x) = x^2$ on $\reals$ is not linear:
+  $h(2 \cd 1) = 4$ but $2\,h(1) = 2$, so $h(c x) \ne c\,h(x)$ for $c = 2$, $x = 1$.
+
+:::

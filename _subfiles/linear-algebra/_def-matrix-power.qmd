@@ -10,3 +10,30 @@ $$\matr{A}^k = \underbrace{\matr{A}\,\matr{A}\cdots\matr{A}}_{k \text{ copies}}$
 In particular, $\matr{A}^2 = \matr{A}\matr{A}$.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-matrix-power}
+#### Powers of a $2 \times 2$ matrix
+
+Let $\matr{A} = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$. Then
+
+$$
+\ba
+\matr{A}^2
+&= \begin{bmatrix} 1 \cd 1 + 1 \cd 0 & 1 \cd 1 + 1 \cd 1 \\ 0 \cd 1 + 1 \cd 0 & 0 \cd 1 + 1 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix},
+&& \text{(matrix product)}
+\\
+\matr{A}^3 = \matr{A}^2 \matr{A}
+&= \begin{bmatrix} 1 \cd 1 + 2 \cd 0 & 1 \cd 1 + 2 \cd 1 \\ 0 \cd 1 + 1 \cd 0 & 0 \cd 1 + 1 \cd 1 \end{bmatrix}
+= \begin{bmatrix} 1 & 3 \\ 0 & 1 \end{bmatrix}.
+&& \text{(matrix product)}
+\ea
+$$
+
+A $2 \times 3$ matrix $\matr{B}$ has no square:
+$\matr{B} \matr{B}$ would multiply a matrix with $3$ columns by one with $2$ rows,
+which @def-matrix-mult does not allow.
+
+:::

@@ -27,3 +27,16 @@ the entries of the identity matrix are given by the
 $(\matr{I}_p)_{ij} = \delta_{ij}$.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-identity-matrix}
+#### Multiplying by the identity
+
+$$
+\matr{I}_2 \begin{bmatrix} 3 & 1 \\ 2 & 5 \end{bmatrix}
+= \begin{bmatrix} 1 \cd 3 + 0 \cd 2 & 1 \cd 1 + 0 \cd 5 \\ 0 \cd 3 + 1 \cd 2 & 0 \cd 1 + 1 \cd 5 \end{bmatrix}
+= \begin{bmatrix} 3 & 1 \\ 2 & 5 \end{bmatrix}.
+$$
+
+:::
