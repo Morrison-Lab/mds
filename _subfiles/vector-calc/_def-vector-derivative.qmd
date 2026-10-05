@@ -23,7 +23,7 @@ $$
 Let $\vb = \tp{(\beta_1, \beta_2)}$ and $f(\vb) = 3 \beta_1 + 5 \beta_2^2$. Then
 
 $$
-\deriv{\vb} f(\vb)
+\underbrace{\deriv{\vb} f(\vb)}_{2 \times 1}
 = \sbmat{
 \deriv{\beta_1} (3 \beta_1 + 5 \beta_2^2) \\
 \deriv{\beta_2} (3 \beta_1 + 5 \beta_2^2)
