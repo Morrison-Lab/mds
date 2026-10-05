@@ -1,0 +1,74 @@
+:::{#thm-projection-matrix-projects}
+#### A projection matrix projects onto its column space, and is the only one that does
+
+1. If $\matr{P}$ is a $p \times p$ orthogonal projection matrix (@def-projection-matrix),
+   then for every $\vecf{y} \in \reals^p$,
+   $\matr{P} \vecf{y}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{C}(\matr{P})$
+   (@def-orthogonal-projection).
+2. If $\matr{P}_1$ and $\matr{P}_2$ are $p \times p$ matrices
+   such that, for every $\vecf{y}$,
+   both $\matr{P}_1 \vecf{y}$ and $\matr{P}_2 \vecf{y}$
+   are the orthogonal projection of $\vecf{y}$ onto the same subspace $\mathcal{S}$,
+   then $\matr{P}_1 = \matr{P}_2$.
+
+:::
+
+::: proof
+
+**Part 1.**
+Write $\vecf{y} = \matr{P} \vecf{y} + (\vecf{y} - \matr{P} \vecf{y})$.
+The first term is in $\mathcal{C}(\matr{P})$ (@def-column-space).
+For the second,
+
+$$
+\ba
+\matr{P}\,(\vecf{y} - \matr{P} \vecf{y})
+&= \matr{P} \vecf{y} - \matr{P}^2 \vecf{y}
+&& \text{(@thm-matmul-distrib, @thm-matmul-assoc)}
+\\
+&= \matr{P} \vecf{y} - \matr{P} \vecf{y}
+&& \text{(} \matr{P} \text{ is idempotent)}
+\\
+&= \vzero_p,
+&& \text{(arithmetic)}
+\ea
+$$
+
+so $\vecf{y} - \matr{P} \vecf{y} \in \mathcal{N}(\matr{P})$.
+Since $\matr{P} = \tp{\matr{P}}$,
+$\mathcal{N}(\matr{P}) = \mathcal{N}(\tp{\matr{P}}) = \mathcal{C}(\matr{P})^\perp$
+(@thm-complement-null-space).
+By the uniqueness in @thm-orthogonal-direct-sum,
+$\matr{P} \vecf{y}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{C}(\matr{P})$.
+
+**Part 2.**
+The orthogonal projection of a vector onto $\mathcal{S}$ is unique (@def-orthogonal-projection),
+so $\matr{P}_1 \vecf{e}_j = \matr{P}_2 \vecf{e}_j$
+for each indicator vector $\vecf{e}_j$ (@def-indicator-vector).
+$\matr{P}_1 \vecf{e}_j$ is column $j$ of $\matr{P}_1$ (@thm-matvec-columns),
+and likewise for $\matr{P}_2$,
+so the two matrices have the same columns.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-projection-matrix-projects}
+#### Two routes to the same projection matrix
+
+The matrix $\matr{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
+of @exm-projection-matrix is an orthogonal projection matrix,
+and its column space is $\operatorname{span}\cb{(1, 0)}$, the horizontal axis.
+By part 1, $\matr{P}(v_1, v_2) = (v_1, 0)$ is the orthogonal projection onto that axis:
+the remainder $(0, v_2)$ is orthogonal to $(1, 0)$.
+The orthonormal basis $\vecf{q}_1 = (1, 0)$ of the axis
+gives $\matr{Q} \tp{\matr{Q}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} = \matr{P}$,
+as part 2 and @thm-projector-onb require.
+
+The oblique projection $\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$
+of @exm-projection-matrix also maps every vector into the horizontal axis,
+sending $(0, 1)$ to $(1, 0)$,
+but the remainder $(0, 1) - (1, 0) = (-1, 1)$ is not orthogonal to the axis,
+so it is not the orthogonal projection.
+
+:::

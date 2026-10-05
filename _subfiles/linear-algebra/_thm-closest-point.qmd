@@ -1,0 +1,59 @@
+:::{#thm-closest-point}
+#### The orthogonal projection is the closest point
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$, let $\vecf{y} \in \reals^p$,
+and let $\vecf{u}$ be the orthogonal projection of $\vecf{y}$ onto $\mathcal{S}$
+(@def-orthogonal-projection).
+Then for every $\vecf{w} \in \mathcal{S}$,
+
+$$
+\norm{\vecf{y} - \vecf{u}} \le \norm{\vecf{y} - \vecf{w}},
+$$
+
+with equality only when $\vecf{w} = \vecf{u}$.
+
+:::
+
+::: proof
+
+By @def-orthogonal-projection, $\vecf{y} - \vecf{u} \in \mathcal{S}^\perp$.
+Both $\vecf{u}$ and $\vecf{w}$ are in $\mathcal{S}$,
+so $\vecf{u} - \vecf{w} = \vecf{u} + (-1)\,\vecf{w} \in \mathcal{S}$ (@def-subspace),
+and therefore $(\vecf{y} - \vecf{u}) \perp (\vecf{u} - \vecf{w})$
+(@def-orthogonal-complement). Then
+
+$$
+\ba
+\norm{\vecf{y} - \vecf{w}}^2
+&= \norm{(\vecf{y} - \vecf{u}) + (\vecf{u} - \vecf{w})}^2
+&& \text{(add and subtract } \vecf{u} \text{)}
+\\
+&= \norm{\vecf{y} - \vecf{u}}^2 + \norm{\vecf{u} - \vecf{w}}^2
+&& \text{(Pythagorean theorem, @thm-norm-sum-square)}
+\\
+&\ge \norm{\vecf{y} - \vecf{u}}^2,
+&& \text{(} \norm{\vecf{u} - \vecf{w}}^2 \ge 0 \text{, @thm-norm-properties)}
+\ea
+$$
+
+with equality exactly when $\norm{\vecf{u} - \vecf{w}} = 0$,
+that is, when $\vecf{w} = \vecf{u}$ (@thm-norm-properties, part 1).
+Taking nonnegative square roots preserves the inequality.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-closest-point}
+#### No point of the line is closer
+
+In @exm-orthogonal-projection,
+$\vecf{y} = (3, 1, 2)$ has projection $\vecf{u} = (2, 2, 0)$
+onto $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$,
+at distance $\norm{(1, -1, 2)} = \sqrt{6}$.
+Another point of $\mathcal{S}$, such as $\vecf{w} = (3, 3, 0)$,
+is farther: $\norm{\vecf{y} - \vecf{w}} = \norm{(0, -2, 2)} = \sqrt{8} > \sqrt{6}$,
+and by @thm-closest-point the difference of squares is
+$\norm{\vecf{u} - \vecf{w}}^2 = \norm{(-1, -1, 0)}^2 = 2 = 8 - 6$.
+
+:::

@@ -1,0 +1,27 @@
+:::{#def-orthogonal-projection}
+#### Orthogonal projection onto a subspace
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$ and $\vecf{y} \in \reals^p$.
+By @thm-orthogonal-direct-sum,
+$\vecf{y} = \vecf{u} + \vecf{v}$
+for exactly one $\vecf{u} \in \mathcal{S}$ and $\vecf{v} \in \mathcal{S}^\perp$.
+The vector $\vecf{u}$ is the **orthogonal projection** of $\vecf{y}$ onto $\mathcal{S}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthogonal-projection}
+#### Projecting onto a line in $\reals^3$
+
+In @exm-orthogonal-direct-sum,
+$\vecf{y} = (3, 1, 2)$ splits as $(2, 2, 0) + (1, -1, 2)$,
+with $(2, 2, 0) \in \mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$
+and $(1, -1, 2) \in \mathcal{S}^\perp$.
+So the orthogonal projection of $(3, 1, 2)$ onto $\mathcal{S}$ is $(2, 2, 0)$.
+A vector already in $\mathcal{S}$, such as $(5, 5, 0)$,
+is its own projection, since $(5, 5, 0) = (5, 5, 0) + \vzero$;
+a vector of $\mathcal{S}^\perp$, such as $(1, -1, 2)$,
+projects to $\vzero$.
+
+:::

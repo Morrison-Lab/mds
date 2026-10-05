@@ -1,0 +1,91 @@
+:::{#thm-projector-onb}
+#### Projecting with an orthonormal basis
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$ with $\dim(\mathcal{S}) = r \ge 1$,
+and let $\matr{Q}$ be the $p \times r$ matrix whose columns
+$\vecf{q}_1, \ldots, \vecf{q}_r$ are an orthonormal basis of $\mathcal{S}$
+(@def-orthonormal-basis, @cor-orthonormal-basis-exists).
+Then for every $\vecf{y} \in \reals^p$,
+$\matr{Q} \tp{\matr{Q}} \vecf{y}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{S}$,
+and $\matr{Q} \tp{\matr{Q}}$ is an orthogonal projection matrix (@def-projection-matrix).
+
+:::
+
+::: proof
+
+**Entries of $\tp{\matr{Q}} \matr{Q}$.**
+Entry $(i, j)$ of $\tp{\matr{Q}} \matr{Q}$ is $\vecf{q}_i \cdot \vecf{q}_j$
+(@def-matrix-mult, @def-matrix-transpose),
+which is $1$ if $i = j$ and $0$ otherwise,
+so $\tp{\matr{Q}} \matr{Q} = \matr{I}_r$.
+
+**The split.**
+Let $\vecf{u} = \matr{Q} \tp{\matr{Q}} \vecf{y}$ and $\vecf{v} = \vecf{y} - \vecf{u}$,
+so $\vecf{y} = \vecf{u} + \vecf{v}$.
+$\vecf{u} = \matr{Q}\,(\tp{\matr{Q}} \vecf{y})$ is in $\mathcal{C}(\matr{Q})$ (@def-column-space),
+which is $\operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_r} = \mathcal{S}$
+(@thm-column-space-span).
+For $\vecf{v}$,
+
+$$
+\ba
+\tp{\matr{Q}} \vecf{v}
+&= \tp{\matr{Q}}\,(\vecf{y} - \matr{Q} \tp{\matr{Q}} \vecf{y})
+&& \text{(substitute)}
+\\
+&= \tp{\matr{Q}} \vecf{y} - (\tp{\matr{Q}} \matr{Q})\,\tp{\matr{Q}} \vecf{y}
+&& \text{(@thm-matmul-distrib, @thm-matmul-assoc)}
+\\
+&= \tp{\matr{Q}} \vecf{y} - \matr{I}_r\,\tp{\matr{Q}} \vecf{y}
+&& \text{(previous step)}
+\\
+&= \vzero_r,
+&& \text{(@thm-identity)}
+\ea
+$$
+
+so $\vecf{v} \in \mathcal{N}(\tp{\matr{Q}}) = \mathcal{C}(\matr{Q})^\perp = \mathcal{S}^\perp$
+(@thm-complement-null-space).
+By the uniqueness in @thm-orthogonal-direct-sum,
+$\vecf{u}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{S}$.
+
+**$\matr{Q} \tp{\matr{Q}}$ is symmetric and idempotent.**
+$\tp{(\matr{Q} \tp{\matr{Q}})} = \tp{(\tp{\matr{Q}})}\,\tp{\matr{Q}} = \matr{Q} \tp{\matr{Q}}$
+(@thm-transpose-product), and
+
+$$
+\ba
+(\matr{Q} \tp{\matr{Q}})(\matr{Q} \tp{\matr{Q}})
+&= \matr{Q}\,(\tp{\matr{Q}} \matr{Q})\,\tp{\matr{Q}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{Q}\,\matr{I}_r\,\tp{\matr{Q}}
+&& \text{(first step)}
+\\
+&= \matr{Q} \tp{\matr{Q}}.
+&& \text{(@thm-identity)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-projector-onb}
+#### The projection matrix onto a line
+
+For $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$,
+the single vector $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$ is an orthonormal basis,
+and
+
+$$
+\matr{Q} \tp{\matr{Q}}
+= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 1 & 0 \end{bmatrix}
+= \begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 \end{bmatrix}.
+$$
+
+Applied to $\vecf{y} = (3, 1, 2)$, it gives
+$\paren{\tfrac{3 + 1}{2}, \tfrac{3 + 1}{2}, 0} = (2, 2, 0)$,
+the projection found in @exm-orthogonal-projection.
+
+:::
