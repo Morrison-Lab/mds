@@ -20,6 +20,10 @@ format:
   is a standard textbook on multivariable and vector calculus.
   It covers differentiation of functions of several variables, multiple integrals,
   line and surface integrals, and the theorems of Green, Gauss, and Stokes.
+- @petersen2012matrix
+  is a free desk reference that collects matrix identities.
+  Its chapter on derivatives lists derivatives of vector and matrix expressions,
+  such as the linear and quadratic forms on this page.
 
 See also the [Linear Algebra and Vector Calculus
 further reading](linear-algebra.qmd#sec-additional-resources).
