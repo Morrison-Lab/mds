@@ -1,0 +1,79 @@
+:::{#thm-row-null-disjoint}
+#### The row space and null space share only the zero vector
+
+For any $m \times n$ matrix $\matr{A}$,
+
+$$
+\mathcal{C}(\tp{\matr{A}}) \cap \mathcal{N}(\matr{A}) = \cb{\vzero_n}.
+$$
+
+:::
+
+::: proof
+
+Both sets are subspaces,
+by @thm-column-space-span and @thm-null-space-subspace,
+so both contain $\vzero_n$ (@thm-subspace-zero).
+
+Now take any $\vecf{x}$ in both sets.
+Being in the row space means $\vecf{x} = \tp{\matr{A}} \vecf{u}$
+for some $\vecf{u} \in \reals^m$ (@def-column-space),
+and being in the null space means $\matr{A} \vecf{x} = \vzero_m$
+(@def-null-space).
+Then
+
+$$
+\ba
+\tp{\vecf{x}} \vecf{x}
+&= \tp{(\tp{\matr{A}} \vecf{u})}\,\vecf{x}
+&& \text{(substitute } \vecf{x} = \tp{\matr{A}} \vecf{u} \text{ in the first factor)}
+\\
+&= \paren{\tp{\vecf{u}}\,\tp{(\tp{\matr{A}})}}\,\vecf{x}
+&& \text{(@thm-transpose-product)}
+\\
+&= \paren{\tp{\vecf{u}} \matr{A}}\,\vecf{x}
+&& \text{(transposing twice returns the original matrix)}
+\\
+&= \tp{\vecf{u}}\,(\matr{A} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{\vecf{u}}\,\vzero_m
+&& \text{(substitute } \matr{A} \vecf{x} = \vzero_m \text{)}
+\\
+&= 0.
+&& \text{(every term of the inner product is } 0 \text{)}
+\ea
+$$
+
+But $\tp{\vecf{x}} \vecf{x} = x_1^2 + \cdots + x_n^2$,
+which is $0$ only when every $x_i = 0$.
+So $\vecf{x} = \vzero_n$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-row-null-disjoint}
+#### The row space and null space in @exm-null-space
+
+For $\matr{A}$ in @exm-column-space,
+the row space is $\operatorname{span}\cb{(1, -2, -2)}$
+and the null space is $\operatorname{span}\cb{(2, 1, 0), (2, 0, 1)}$
+(@exm-null-space).
+A vector $c\,(1, -2, -2)$ of the row space is in the null space only if
+
+$$
+\ba
+\matr{A}\,\paren{c\,(1, -2, -2)}
+&= c\,\paren{1 - 2 \cd (-2) - 2 \cd (-2),\; 3\,(1 - 2 \cd (-2) - 2 \cd (-2))}
+&& \text{(@exm-null-space's formula for } \matr{A} \vecf{x} \text{)}
+\\
+&= c\,(9, 27)
+&& \text{(arithmetic)}
+\ea
+$$
+
+is $\vzero_2$, that is, only if $c = 0$.
+So the two subspaces share only $\vzero_3$.
+
+:::

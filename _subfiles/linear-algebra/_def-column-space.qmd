@@ -1,0 +1,130 @@
+:::{#def-column-space}
+#### Column space
+
+The **column space** of an $m \times n$ matrix $\matr{A}$ is
+
+$$
+\mathcal{C}(\matr{A})
+\eqdef
+\cb{\matr{A} \vecf{x} : \vecf{x} \in \reals^n},
+$$
+
+the set of all vectors $\matr{A} \vecf{x}$ in $\reals^m$.
+It is also called the **range** or **image** of $\matr{A}$.
+The **row space** of $\matr{A}$ is $\mathcal{C}(\tp{\matr{A}})$,
+a set of vectors in $\reals^n$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-column-space}
+#### The column space of a rank-one matrix
+
+Let
+
+$$
+\matr{A} = \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix}.
+$$
+
+For any $\vecf{x} \in \reals^3$,
+$\matr{A} \vecf{x} = (x_1 - 2x_2 - 2x_3,\; 3\,(x_1 - 2x_2 - 2x_3))
+= (x_1 - 2x_2 - 2x_3)\,(1, 3)$ (@def-matvec-mult).
+The number $x_1 - 2x_2 - 2x_3$ can be any real number
+(take $x_2 = x_3 = 0$),
+so $\mathcal{C}(\matr{A}) = \cb{c\,(1, 3) : c \in \reals}$,
+a line in $\reals^2$.
+The vector $(1, 0)$ is not in $\mathcal{C}(\matr{A})$:
+$c\,(1, 3)$ has second entry $3c$,
+which is $0$ only if $c = 0$, and then the first entry is $0$, not $1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-column-space-span}
+#### The column space is the span of the columns
+
+If $\matr{A}$ is an $m \times n$ matrix
+with columns $\vecf{a}_1, \ldots, \vecf{a}_n$, then
+
+$$
+\mathcal{C}(\matr{A}) = \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_n},
+$$
+
+so $\mathcal{C}(\matr{A})$ is a subspace of $\reals^m$,
+and the row space $\mathcal{C}(\tp{\matr{A}})$ is a subspace of $\reals^n$.
+
+:::
+
+::: proof
+
+By @thm-matvec-columns,
+$\matr{A} \vecf{x} = x_1 \vecf{a}_1 + \cdots + x_n \vecf{a}_n$,
+and as $\vecf{x}$ ranges over $\reals^n$,
+the coefficients $x_1, \ldots, x_n$ range over all lists of $n$ numbers.
+So the set of all $\matr{A} \vecf{x}$ (@def-column-space)
+is the set of all linear combinations of the columns,
+which is their span (@def-span).
+A span is a subspace (@thm-span-subspace).
+Applying the same argument to $\tp{\matr{A}}$,
+whose columns are the rows of $\matr{A}$,
+shows the row space is a subspace of $\reals^n$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-column-space-span}
+#### Reading off the column space and row space from the columns and rows
+
+For $\matr{A}$ in @exm-column-space,
+the columns are $(1, 3)$, $(-2, -6) = -2\,(1, 3)$ and $(-2, -6) = -2\,(1, 3)$,
+so by @thm-column-space-span
+$\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 3)}$,
+the same line found in @exm-column-space.
+The rows are $(1, -2, -2)$ and $(3, -6, -6) = 3\,(1, -2, -2)$,
+so the row space is $\operatorname{span}\cb{(1, -2, -2)}$,
+a line in $\reals^3$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-null-space}
+#### Null space
+
+The **null space** of an $m \times n$ matrix $\matr{A}$ is
+
+$$
+\mathcal{N}(\matr{A})
+\eqdef
+\cb{\vecf{x} \in \reals^n : \matr{A} \vecf{x} = \vzero_m},
+$$
+
+the set of solutions of $\matr{A} \vecf{x} = \vzero_m$.
+It is also called the **kernel** of $\matr{A}$.
+The **left null space** of $\matr{A}$ is $\mathcal{N}(\tp{\matr{A}})$,
+a set of vectors in $\reals^m$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-null-space}
+#### The null space and left null space of a rank-one matrix
+
+For $\matr{A}$ in @exm-column-space,
+$\matr{A} \vecf{x} = (x_1 - 2x_2 - 2x_3,\; 3\,(x_1 - 2x_2 - 2x_3))$,
+so $\matr{A} \vecf{x} = \vzero_2$ exactly when $x_1 = 2x_2 + 2x_3$.
+Writing $\vecf{x} = (2x_2 + 2x_3, x_2, x_3) = x_2\,(2, 1, 0) + x_3\,(2, 0, 1)$
+shows $\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(2, 1, 0), (2, 0, 1)}$,
+a plane in $\reals^3$.
+
+For the left null space,
+$\tp{\matr{A}} \vecf{y} = (y_1 + 3y_2,\; -2\,(y_1 + 3y_2),\; -2\,(y_1 + 3y_2))$,
+which is $\vzero_3$ exactly when $y_1 = -3y_2$,
+so $\mathcal{N}(\tp{\matr{A}}) = \operatorname{span}\cb{(-3, 1)}$,
+a line in $\reals^2$.
+
+:::

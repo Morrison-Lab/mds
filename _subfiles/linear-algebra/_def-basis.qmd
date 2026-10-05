@@ -1,0 +1,42 @@
+:::{#def-basis}
+#### Basis
+
+A **basis** of a subspace $\mathcal{S}$ (@def-subspace)
+is a list of vectors that are linearly independent (@def-linearly-independent)
+and span $\mathcal{S}$ (@def-span).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-basis}
+#### Two bases of $\reals^2$
+
+- $(1, 0)$ and $(0, 1)$ form a basis of $\reals^2$:
+  they are linearly independent,
+  and any $(x, y) \in \reals^2$ equals $x\,(1, 0) + y\,(0, 1)$.
+- $(1, 0)$ and $(1, 1)$ also form a basis of $\reals^2$:
+  @exm-linearly-independent shows they are linearly independent,
+  and any $(x, y)$ equals $(x - y)\,(1, 0) + y\,(1, 1)$,
+  because $(x - y) + y = x$ in the first entry
+  and $0 + y = y$ in the second.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-basis}
+#### Lists that are not bases of $\reals^2$
+
+- $(1, 0)$ and $(2, 0)$ are not a basis of $\reals^2$.
+  They are not linearly independent,
+  since $2\,(1, 0) - (2, 0) = \vzero$,
+  and they do not span $\reals^2$:
+  every combination $c_1 (1, 0) + c_2 (2, 0)$ has second entry $0$,
+  so $(0, 1)$ is not in their span.
+- $(1, 0)$, $(0, 1)$ and $(1, 1)$ span $\reals^2$,
+  but they are not a basis:
+  $(1, 0) + (0, 1) - (1, 1) = \vzero$,
+  so they are not linearly independent.
+
+:::

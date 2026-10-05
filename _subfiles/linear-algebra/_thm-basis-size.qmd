@@ -1,0 +1,104 @@
+:::{#thm-basis-size}
+#### All bases of a subspace have the same number of vectors
+
+If $\vecf{a}_1, \ldots, \vecf{a}_k$ and $\vecf{b}_1, \ldots, \vecf{b}_l$
+are both bases of a subspace $\mathcal{S}$ of $\reals^p$ (@def-basis),
+then $k = l$.
+
+:::
+
+::: proof
+
+Let $\matr{A}$ be the $p \times k$ matrix with columns $\vecf{a}_1, \ldots, \vecf{a}_k$,
+and $\matr{B}$ the $p \times l$ matrix with columns $\vecf{b}_1, \ldots, \vecf{b}_l$.
+
+**Write $\matr{A}$ in terms of $\matr{B}$.**
+Each $\vecf{a}_j$ is in $\mathcal{S}$,
+and the $\vecf{b}$'s span $\mathcal{S}$ (@def-span),
+so $\vecf{a}_j = \matr{B} \vecf{c}_j$ for some $\vecf{c}_j \in \reals^l$
+(@def-matvec-mult).
+Let $\matr{C}$ be the $l \times k$ matrix with columns $\vecf{c}_1, \ldots, \vecf{c}_k$.
+Then $\underbrace{\matr{A}}_{p \times k}
+= \underbrace{\matr{B}}_{p \times l}\,\underbrace{\matr{C}}_{l \times k}$,
+because column $j$ of $\matr{B} \matr{C}$ is $\matr{B} \vecf{c}_j$.
+
+**The columns of $\matr{C}$ are linearly independent.**
+Suppose $\matr{C} \vecf{x} = \vzero$ for some $\vecf{x} \in \reals^k$.
+Then
+
+$$
+\ba
+\matr{A} \vecf{x}
+&= (\matr{B} \matr{C})\,\vecf{x}
+&& \text{(substitute } \matr{A} = \matr{B} \matr{C} \text{)}
+\\
+&= \matr{B}\,(\matr{C} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{B}\,\vzero
+&& \text{(substitute } \matr{C} \vecf{x} = \vzero \text{)}
+\\
+&= \vzero
+&& \text{(a matrix times the zero vector is } \vzero \text{)}
+\ea
+$$
+
+$\matr{A} \vecf{x}$ is the combination
+$x_1 \vecf{a}_1 + \cdots + x_k \vecf{a}_k$ (@thm-matvec-columns),
+and the $\vecf{a}$'s are linearly independent (@def-linearly-independent),
+so $\vecf{x} = \vzero$.
+So the only combination of the columns of $\matr{C}$ that equals $\vzero$
+has all coefficients $0$.
+
+**Count.**
+$\matr{C}$ has $k$ linearly independent columns of length $l$.
+More than $l$ vectors in $\reals^l$ are never linearly independent
+(@thm-many-vectors-dependent),
+so $k \le l$.
+Exchanging the roles of the two bases gives $l \le k$,
+so $k = l$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-basis-size}
+#### Both bases of $\reals^2$ in @exm-basis have two vectors
+
+The bases $(1, 0), (0, 1)$ and $(1, 0), (1, 1)$ of $\reals^2$ in @exm-basis
+both have $2$ vectors, as @thm-basis-size requires.
+So no list of $3$ vectors is a basis of $\reals^2$,
+which agrees with @exm-not-basis:
+the list $(1, 0), (0, 1), (1, 1)$ spans $\reals^2$
+but is not linearly independent.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-dimension}
+#### Dimension
+
+The **dimension** of a subspace $\mathcal{S}$,
+written $\dim(\mathcal{S})$,
+is the number of vectors in any basis of $\mathcal{S}$ (@def-basis).
+@thm-basis-size makes this number well defined.
+By convention, the empty list is the basis of $\cb{\vzero}$,
+so $\dim(\cb{\vzero}) = 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-dimension}
+#### The dimensions of some subspaces
+
+- $\dim(\cb{\vzero}) = 0$, by the convention in @def-dimension.
+- $\dim(\reals^2) = 2$, by @exm-basis.
+- The line in @exm-subspace has dimension $1$:
+  the single vector $(1, 2)$ is linearly independent
+  and spans the line.
+- The plane $z = 0$ in @exm-span has dimension $2$,
+  with basis $(1, 0, 0), (0, 1, 0)$.
+
+:::

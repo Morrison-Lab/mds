@@ -218,6 +218,62 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-rank.qmd >}}
 
+### Subspaces {#sec-subspaces}
+
+{{< include mds/_subfiles/linear-algebra/_prose-subspaces-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-subspace-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-span.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-span-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-matvec-columns.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-many-vectors-dependent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-basis.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-basis-unique.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-basis-size.qmd >}}
+
+### Column space and null space {#sec-column-null-space}
+
+{{< include mds/_subfiles/linear-algebra/_def-column-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-null-space-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-row-null-disjoint.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
+
 ### Outer product
 
 {{< include mds/_subfiles/linear-algebra/_def-outer-product.qmd >}}

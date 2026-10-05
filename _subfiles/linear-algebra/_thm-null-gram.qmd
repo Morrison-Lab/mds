@@ -1,0 +1,68 @@
+:::{#thm-null-gram}
+#### $\tp{\matr{A}} \matr{A}$ has the same null space as $\matr{A}$
+
+For any $m \times n$ matrix $\matr{A}$,
+
+$$
+\mathcal{N}(\tp{\matr{A}} \matr{A}) = \mathcal{N}(\matr{A}).
+$$
+
+:::
+
+::: proof
+
+**$\mathcal{N}(\matr{A}) \subseteq \mathcal{N}(\tp{\matr{A}} \matr{A})$.**
+If $\matr{A} \vecf{x} = \vzero_m$,
+then $\tp{\matr{A}} \matr{A} \vecf{x} = \tp{\matr{A}}\,\vzero_m = \vzero_n$.
+
+**$\mathcal{N}(\tp{\matr{A}} \matr{A}) \subseteq \mathcal{N}(\matr{A})$.**
+If $\tp{\matr{A}} \matr{A} \vecf{x} = \vzero_n$, then
+
+$$
+\ba
+0
+&= \tp{\vecf{x}}\,\vzero_n
+&& \text{(every term of the inner product is } 0 \text{)}
+\\
+&= \tp{\vecf{x}}\,\paren{\tp{\matr{A}} \matr{A} \vecf{x}}
+&& \text{(substitute } \vzero_n = \tp{\matr{A}} \matr{A} \vecf{x} \text{)}
+\\
+&= \paren{\tp{\vecf{x}} \tp{\matr{A}}}\,(\matr{A} \vecf{x})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{A} \vecf{x})}\,(\matr{A} \vecf{x})
+&& \text{(@thm-transpose-product)}
+\\
+&= (\matr{A} \vecf{x}) \cdot (\matr{A} \vecf{x})
+&& \text{(@exm-dot-product-matmul)}
+\\
+&= \norm{\matr{A} \vecf{x}}^2.
+&& \text{(square both sides of @eq-l2-norm)}
+\ea
+$$
+
+A vector whose Euclidean norm is $0$ has every entry $0$,
+so $\matr{A} \vecf{x} = \vzero_m$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-null-gram}
+#### The null space of a Gram matrix
+
+For $\matr{A}$ in @exm-column-space,
+
+$$
+\tp{\matr{A}} \matr{A}
+= \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}
+  \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix}
+= \begin{bmatrix} 10 & -20 & -20 \\ -20 & 40 & 40 \\ -20 & 40 & 40 \end{bmatrix}.
+$$
+
+Every row is a multiple of $(1, -2, -2)$,
+so $\tp{\matr{A}} \matr{A} \vecf{x} = \vzero_3$
+exactly when $x_1 - 2x_2 - 2x_3 = 0$,
+the same condition as for $\mathcal{N}(\matr{A})$ in @exm-null-space.
+
+:::

@@ -1,0 +1,71 @@
+:::{#thm-null-space-subspace}
+#### A null space is a subspace
+
+For any $m \times n$ matrix $\matr{A}$,
+$\mathcal{N}(\matr{A})$ (@def-null-space)
+is a subspace of $\reals^n$ (@def-subspace).
+
+:::
+
+::: proof
+
+$\matr{A} \vzero_n = \vzero_m$, so $\vzero_n \in \mathcal{N}(\matr{A})$,
+and the null space is not empty.
+If $\vecf{u}, \vecf{w} \in \mathcal{N}(\matr{A})$ and $c \in \reals$, then
+
+$$
+\ba
+\matr{A}\,(\vecf{u} + \vecf{w})
+&= \matr{A} \vecf{u} + \matr{A} \vecf{w}
+&& \text{(@thm-matmul-distrib)}
+\\
+&= \vzero_m + \vzero_m
+&& \text{(} \vecf{u} \text{ and } \vecf{w} \text{ are in the null space)}
+\\
+&= \vzero_m
+&& \text{(adding } \vzero_m \text{ changes nothing)}
+\ea
+$$
+
+and, for each entry $i = 1, \ldots, m$,
+
+$$
+\ba
+\paren{\matr{A}\,(c \vecf{u})}_i
+&= a_{i1} (c u_1) + \cdots + a_{in} (c u_n)
+&& \text{(@def-matvec-mult)}
+\\
+&= c\,(a_{i1} u_1 + \cdots + a_{in} u_n)
+&& \text{(factor } c \text{ out of each term)}
+\\
+&= c\,(\matr{A} \vecf{u})_i
+&& \text{(@def-matvec-mult)}
+\\
+&= c \cd 0
+&& \text{(} \vecf{u} \text{ is in the null space)}
+\\
+&= 0,
+&& \text{(arithmetic)}
+\ea
+$$
+
+so $\matr{A}\,(c \vecf{u}) = \vzero_m$.
+Therefore $\vecf{u} + \vecf{w}$ and $c \vecf{u}$ are in $\mathcal{N}(\matr{A})$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-null-space-subspace}
+#### The solutions of $\matr{A} \vecf{x} = \vecf{b}$ with $\vecf{b} \neq \vzero$ are not a subspace
+
+In @exm-null-space, $(2, 1, 0)$ and $(2, 0, 1)$ are in $\mathcal{N}(\matr{A})$,
+and so is their sum $(4, 1, 1)$,
+since $4 - 2 \cd 1 - 2 \cd 1 = 0$.
+By contrast, the solutions of
+$\matr{A} \vecf{x} = (1, 3)$ for the same $\matr{A}$
+are the vectors with $x_1 - 2x_2 - 2x_3 = 1$.
+That set does not contain $\vzero_3$,
+so by @thm-subspace-zero it is not a subspace.
+
+:::

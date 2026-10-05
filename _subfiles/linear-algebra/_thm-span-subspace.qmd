@@ -1,0 +1,65 @@
+:::{#thm-span-subspace}
+#### A span is a subspace
+
+For any vectors $\vecf{v}_1, \ldots, \vecf{v}_k \in \reals^p$,
+$\operatorname{span}\cb{\vecf{v}_1, \ldots, \vecf{v}_k}$ (@def-span)
+is a subspace of $\reals^p$ (@def-subspace).
+
+:::
+
+::: proof
+
+The span is not empty:
+it contains $0 \cd \vecf{v}_1 + \cdots + 0 \cd \vecf{v}_k = \vzero$.
+
+**Addition.**
+Take two vectors in the span,
+$\vecf{u} = a_1 \vecf{v}_1 + \cdots + a_k \vecf{v}_k$
+and $\vecf{w} = b_1 \vecf{v}_1 + \cdots + b_k \vecf{v}_k$.
+Then
+
+$$
+\ba
+\vecf{u} + \vecf{w}
+&= (a_1 \vecf{v}_1 + \cdots + a_k \vecf{v}_k)
+ + (b_1 \vecf{v}_1 + \cdots + b_k \vecf{v}_k)
+&& \text{(substitute the two combinations)}
+\\
+&= (a_1 + b_1)\,\vecf{v}_1 + \cdots + (a_k + b_k)\,\vecf{v}_k
+&& \text{(regroup, and distribute each } \vecf{v}_i \text{)}
+\ea
+$$
+
+which is a linear combination of $\vecf{v}_1, \ldots, \vecf{v}_k$,
+so it is in the span.
+
+**Scalar multiplication.**
+For $c \in \reals$,
+
+$$
+\ba
+c\,\vecf{u}
+&= c\,(a_1 \vecf{v}_1 + \cdots + a_k \vecf{v}_k)
+&& \text{(substitute the combination)}
+\\
+&= (c a_1)\,\vecf{v}_1 + \cdots + (c a_k)\,\vecf{v}_k
+&& \text{(distribute } c \text{ over the sum)}
+\ea
+$$
+
+which is again in the span.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-span-subspace}
+#### The line in @exm-subspace is a span
+
+The line $\mathcal{S} = \cb{c\,(1, 2) : c \in \reals}$ in @exm-subspace
+is $\operatorname{span}\cb{(1, 2)}$,
+so @thm-span-subspace gives a second proof that it is a subspace.
+Likewise, the plane $z = 0$ in @exm-span is a subspace of $\reals^3$,
+because it is $\operatorname{span}\cb{(1, 0, 0), (0, 1, 0)}$.
+
+:::
