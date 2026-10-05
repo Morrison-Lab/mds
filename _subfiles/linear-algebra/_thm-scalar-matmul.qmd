@@ -10,43 +10,75 @@ $$
 In particular, $\matr{A}\,(\matr{B} - \matr{C}) = \matr{A} \matr{B} - \matr{A} \matr{C}$
 and $(\matr{B} - \matr{C})\,\matr{D} = \matr{B} \matr{D} - \matr{C} \matr{D}$
 for matrices of compatible sizes,
-where $\matr{B} - \matr{C} \eqdef \matr{B} + (-1)\,\matr{C}$.
+where $\matr{B} - \matr{C} = \matr{B} + (-1)\,\matr{C}$
+(@thm-matadd-inverse, @def-scalar-mult).
 
 :::
 
 ::: proof
 
-For each entry $(i, j)$,
+**$\matr{A}\,(c\,\matr{B}) = c\,(\matr{A} \matr{B})$.** For each entry $(i, j)$,
 
 $$
 \ba
 \paren{\matr{A}\,(c\,\matr{B})}_{ij}
+&= \sum_{l=1}^{k} a_{il}\,(c\,\matr{B})_{lj}
+&& \text{(@def-matrix-mult)}
+\\
 &= \sum_{l=1}^{k} a_{il}\,(c\,b_{lj})
+&& \text{(@def-scalar-mult)}
+\\
+&= \sum_{l=1}^{k} c\,(a_{il}\,b_{lj})
+&& \text{(reorder the product of numbers)}
+\\
+&= c \sum_{l=1}^{k} a_{il}\,b_{lj}
+&& \text{(factor } c \text{ out of the sum)}
+\\
+&= c\,(\matr{A} \matr{B})_{ij}
+&& \text{(@def-matrix-mult)}
+\\
+&= \paren{c\,(\matr{A} \matr{B})}_{ij}.
+&& \text{(@def-scalar-mult)}
+\ea
+$$
+
+**$(c\,\matr{A})\,\matr{B} = c\,(\matr{A} \matr{B})$.** For each entry $(i, j)$,
+
+$$
+\ba
+\paren{(c\,\matr{A})\,\matr{B}}_{ij}
+&= \sum_{l=1}^{k} (c\,a_{il})\,b_{lj}
 && \text{(@def-matrix-mult, @def-scalar-mult)}
 \\
 &= c \sum_{l=1}^{k} a_{il}\,b_{lj}
-&& \text{(commute, and factor } c \text{ out of the sum)}
+&& \text{(factor } c \text{ out of the sum)}
 \\
-&= \paren{c\,(\matr{A} \matr{B})}_{ij},
+&= \paren{c\,(\matr{A} \matr{B})}_{ij}.
 && \text{(@def-matrix-mult, @def-scalar-mult)}
 \ea
 $$
 
-and $\sum_l (c\,a_{il})\,b_{lj} = c \sum_l a_{il}\,b_{lj}$ in the same way.
-For the difference,
+**Differences.**
 
 $$
 \ba
 \matr{A}\,(\matr{B} - \matr{C})
+&= \matr{A}\,(\matr{B} + (-1)\,\matr{C})
+&& \text{(the difference as a sum)}
+\\
 &= \matr{A} \matr{B} + \matr{A}\,((-1)\,\matr{C})
 && \text{(@thm-matmul-distrib)}
 \\
-&= \matr{A} \matr{B} + (-1)\,(\matr{A} \matr{C}),
+&= \matr{A} \matr{B} + (-1)\,(\matr{A} \matr{C})
 && \text{(first part)}
+\\
+&= \matr{A} \matr{B} - \matr{A} \matr{C},
+&& \text{(the difference as a sum)}
 \ea
 $$
 
-and $(\matr{B} - \matr{C})\,\matr{D}$ is handled the same way with the second law in @thm-matmul-distrib.
+and $(\matr{B} - \matr{C})\,\matr{D} = \matr{B} \matr{D} - \matr{C} \matr{D}$
+the same way, using the second law in @thm-matmul-distrib and the second part.
 A column vector is a matrix with one column,
 so all of this applies with $\matr{B}$, $\matr{C}$ or $\matr{D}$ a vector.
 

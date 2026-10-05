@@ -123,8 +123,14 @@ $$
 &= \tp{(\matr{C} \matr{T} \tp{\matr{C}})}
 && \text{(first product)}
 \\
+&= \tp{\paren{\matr{C}\,(\matr{T} \tp{\matr{C}})}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{T} \tp{\matr{C}})}\,\tp{\matr{C}}
+&& \text{(@thm-transpose-product)}
+\\
 &= \tp{(\tp{\matr{C}})}\,\tp{\matr{T}}\,\tp{\matr{C}}
-&& \text{(@thm-transpose-product, twice)}
+&& \text{(@thm-transpose-product)}
 \\
 &= \matr{C}\,\tp{\matr{T}}\,\tp{\matr{C}}
 && \text{(@def-matrix-transpose)}
@@ -140,8 +146,14 @@ $$
 &= \tp{(\tp{\matr{R}} \matr{S} \matr{R})}
 && \text{(second product)}
 \\
+&= \tp{\paren{\tp{\matr{R}}\,(\matr{S} \matr{R})}}
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \tp{(\matr{S} \matr{R})}\,\tp{(\tp{\matr{R}})}
+&& \text{(@thm-transpose-product)}
+\\
 &= \tp{\matr{R}}\,\tp{\matr{S}}\,\tp{(\tp{\matr{R}})}
-&& \text{(@thm-transpose-product, twice)}
+&& \text{(@thm-transpose-product)}
 \\
 &= \tp{\matr{R}}\,\tp{\matr{S}}\,\matr{R}
 && \text{(@def-matrix-transpose)}
