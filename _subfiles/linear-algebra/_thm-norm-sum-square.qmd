@@ -1,0 +1,56 @@
+:::{#thm-norm-sum-square}
+#### The squared norm of a sum
+
+For any $\vecf{x}, \vecf{y} \in \reals^p$,
+
+$$
+\norm{\vecf{x} + \vecf{y}}^2
+= \norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2.
+$$
+
+In particular, if $\vecf{x} \perp \vecf{y}$ (@def-orthogonal-vectors), then
+$\norm{\vecf{x} + \vecf{y}}^2 = \norm{\vecf{x}}^2 + \norm{\vecf{y}}^2$
+(the **Pythagorean theorem**).
+
+:::
+
+::: proof
+
+$$
+\ba
+\norm{\vecf{x} + \vecf{y}}^2
+&= (\vecf{x} + \vecf{y}) \cdot (\vecf{x} + \vecf{y})
+&& \text{(square both sides of @eq-l2-norm)}
+\\
+&= \vecf{x} \cdot (\vecf{x} + \vecf{y}) + \vecf{y} \cdot (\vecf{x} + \vecf{y})
+&& \text{(@thm-dot-linear, first slot, } a = b = 1 \text{)}
+\\
+&= \vecf{x} \cdot \vecf{x} + \vecf{x} \cdot \vecf{y} + \vecf{y} \cdot \vecf{x} + \vecf{y} \cdot \vecf{y}
+&& \text{(@thm-dot-linear, second slot, } a = b = 1 \text{, twice)}
+\\
+&= \vecf{x} \cdot \vecf{x} + 2\,(\vecf{x} \cdot \vecf{y}) + \vecf{y} \cdot \vecf{y}
+&& \text{(@thm-lincom-symmetric)}
+\\
+&= \norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2.
+&& \text{(@eq-l2-norm, squared)}
+\ea
+$$
+
+If $\vecf{x} \perp \vecf{y}$, then $\vecf{x} \cdot \vecf{y} = 0$,
+and the middle term drops out.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-norm-sum-square}
+#### Checking the expansion
+
+For $\vecf{x} = (3, 0)$ and $\vecf{y} = (1, 4)$:
+$\vecf{x} + \vecf{y} = (4, 4)$, so $\norm{\vecf{x} + \vecf{y}}^2 = 16 + 16 = 32$,
+and $\norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2
+= 9 + 2 \cd 3 + 17 = 32$.
+For the orthogonal vectors $(3, 0)$ and $(0, 4)$,
+$\norm{(3, 4)}^2 = 25 = 9 + 16$, the $3$-$4$-$5$ right triangle.
+
+:::

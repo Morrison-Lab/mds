@@ -1,0 +1,131 @@
+:::{#thm-gram-schmidt}
+#### What Gram-Schmidt produces
+
+Run the Gram-Schmidt process (@def-gram-schmidt) on $\vecf{a}_1, \ldots, \vecf{a}_k \in \reals^p$.
+
+1. If it has produced $\vecf{q}_1, \ldots, \vecf{q}_i$ without stopping,
+   then $\vecf{q}_1, \ldots, \vecf{q}_i$ are orthonormal
+   and $\operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_i}
+   = \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_i}$.
+2. It stops at step $i$
+   exactly when $\vecf{a}_i \in \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_{i-1}}$.
+3. It completes all $k$ steps
+   exactly when $\vecf{a}_1, \ldots, \vecf{a}_k$ are linearly independent;
+   then $\vecf{q}_1, \ldots, \vecf{q}_k$ is an orthonormal basis
+   of $\operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_k}$ (@def-orthonormal-basis).
+
+:::
+
+::: proof
+
+**Parts 1 and 2, by induction on $i$.**
+Before step $1$, the list of $\vecf{q}$'s is empty,
+which is orthonormal, and both spans are $\cb{\vzero}$ (@def-span).
+Suppose part 1 holds after step $i - 1$,
+and write $\mathcal{S}_{i-1} = \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_{i-1}}
+= \operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_{i-1}}$.
+The orthonormal vectors $\vecf{q}_1, \ldots, \vecf{q}_{i-1}$ are linearly independent
+(@thm-orthonormal-independent) and span $\mathcal{S}_{i-1}$,
+so they are an orthonormal basis of it.
+
+*$\tilde{\vecf{q}}_i$ is orthogonal to the earlier $\vecf{q}$'s.*
+For each $l < i$,
+
+$$
+\ba
+\vecf{q}_l \cdot \tilde{\vecf{q}}_i
+&= \vecf{q}_l \cdot \paren{1\,\vecf{a}_i + \sum_{j=1}^{i-1} \paren{-\vecf{q}_j \cdot \vecf{a}_i}\,\vecf{q}_j}
+&& \text{(@def-gram-schmidt, as a linear combination)}
+\\
+&= \vecf{q}_l \cdot \vecf{a}_i - \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,(\vecf{q}_l \cdot \vecf{q}_j)
+&& \text{(@thm-dot-linear-sum)}
+\\
+&= \vecf{q}_l \cdot \vecf{a}_i - \vecf{q}_l \cdot \vecf{a}_i
+&& \text{(only the } j = l \text{ term survives, @def-orthonormal-vectors)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
+$$
+
+*Part 2 at step $i$.*
+If $\tilde{\vecf{q}}_i = \vzero$, then
+$\vecf{a}_i = \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j \in \mathcal{S}_{i-1}$.
+Conversely, if $\vecf{a}_i \in \mathcal{S}_{i-1}$, then
+$\vecf{a}_i = \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
+(@thm-orthonormal-expansion), so $\tilde{\vecf{q}}_i = \vzero$.
+
+*Part 1 at step $i$, if the process does not stop.*
+Then $\tilde{\vecf{q}}_i \ne \vzero$, so $\norm{\tilde{\vecf{q}}_i} > 0$,
+and $\vecf{q}_i = \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i}$ has
+norm $\norm{\tilde{\vecf{q}}_i} / \norm{\tilde{\vecf{q}}_i} = 1$ (@thm-norm-properties)
+and $\vecf{q}_l \cdot \vecf{q}_i = \vecf{q}_l \cdot \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i} = 0$
+for $l < i$ (@thm-dot-linear).
+So $\vecf{q}_1, \ldots, \vecf{q}_i$ are orthonormal.
+For the spans:
+
+- $\vecf{a}_i = \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
+  is in $\operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_i}$,
+  and so is each of $\vecf{a}_1, \ldots, \vecf{a}_{i-1}$, which lie in $\mathcal{S}_{i-1}$.
+- $\vecf{q}_i = \paren{\vecf{a}_i - \sum_{j<i} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j} / \norm{\tilde{\vecf{q}}_i}$
+  is in $\operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_i}$,
+  because each $\vecf{q}_j$ with $j < i$ lies in $\mathcal{S}_{i-1}$;
+  and so is each of $\vecf{q}_1, \ldots, \vecf{q}_{i-1}$.
+
+A span is a subspace (@thm-span-subspace),
+so it contains every linear combination of vectors in it;
+each span therefore contains the other, and they are equal.
+
+**Part 3.**
+If the process completes, then $\vecf{a}_1 \notin \operatorname{span}$ of the empty list,
+and for each $i \ge 2$, $\vecf{a}_i \notin \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_{i-1}}$
+(part 2).
+Applying @thm-add-outside-span $k$ times, starting from the empty list,
+shows that $\vecf{a}_1, \ldots, \vecf{a}_k$ are linearly independent.
+Conversely, if they are linearly independent,
+no $\vecf{a}_i$ is a linear combination $\sum_{j<i} c_j \vecf{a}_j$ of the earlier ones,
+because then $\sum_{j<i} c_j \vecf{a}_j - \vecf{a}_i = \vzero$
+would be a combination with a nonzero coefficient;
+so by part 2 the process never stops.
+When it completes, $\vecf{q}_1, \ldots, \vecf{q}_k$ are orthonormal, hence linearly independent
+(@thm-orthonormal-independent),
+and span $\operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_k}$ (part 1),
+so they are an orthonormal basis of it.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-thm-gram-schmidt}
+#### Finishing an orthonormal basis of $\reals^3$
+
+Continue @exm-gram-schmidt with $\vecf{a}_3 = (0, 1, 1)$.
+$\vecf{q}_1 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{2}}$ and
+$\vecf{q}_2 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) = \tfrac{1}{\sqrt{6}}$, so
+
+$$
+\ba
+\tilde{\vecf{q}}_3
+&= (0, 1, 1) - \tfrac{1}{2}\,(1, 1, 0) - \tfrac{1}{6}\,(1, -1, 2)
+&& \text{(orthogonalize, and multiply the scalars)}
+\\
+&= \paren{0 - \tfrac{1}{2} - \tfrac{1}{6},\; 1 - \tfrac{1}{2} + \tfrac{1}{6},\; 1 - 0 - \tfrac{2}{6}}
+&& \text{(subtract entrywise)}
+\\
+&= \paren{-\tfrac{2}{3}, \tfrac{2}{3}, \tfrac{2}{3}},
+&& \text{(arithmetic)}
+\ea
+$$
+
+with norm $\sqrt{3 \cd \tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}$,
+so $\vecf{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)$.
+The process did not stop,
+so by @thm-gram-schmidt
+$\vecf{a}_1, \vecf{a}_2, \vecf{a}_3$ are linearly independent
+and $\vecf{q}_1, \vecf{q}_2, \vecf{q}_3$ is an orthonormal basis of their span,
+which has dimension $3$ and so is $\reals^3$ (@thm-subspace-equal-dim, @exm-dimension).
+As a check,
+$\vecf{q}_1 \cdot \vecf{q}_3 = \tfrac{1}{\sqrt{6}}\,(-1 + 1 + 0) = 0$
+and $\vecf{q}_2 \cdot \vecf{q}_3 = \tfrac{1}{\sqrt{18}}\,(-1 - 1 + 2) = 0$.
+
+:::

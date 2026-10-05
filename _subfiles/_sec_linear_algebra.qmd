@@ -374,6 +374,58 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}
 
+### Cauchy-Schwarz and the triangle inequality {#sec-cauchy-schwarz}
+
+{{< include mds/_subfiles/linear-algebra/_prose-cauchy-schwarz-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-norm-properties.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-norm-sum-square.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-cauchy-schwarz.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-triangle-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
+
+### Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
+
+{{< include mds/_subfiles/linear-algebra/_thm-dot-linear-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-orthonormal-independent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-orthonormal-basis.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-orthonormal-expansion.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-gram-schmidt.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-gram-schmidt.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-orthonormal-basis-exists.qmd >}}
+
 ### Outer product
 
 {{< include mds/_subfiles/linear-algebra/_def-outer-product.qmd >}}

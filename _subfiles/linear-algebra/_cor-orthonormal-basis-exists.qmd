@@ -1,0 +1,56 @@
+:::{#cor-orthonormal-basis-exists}
+#### Every subspace has an orthonormal basis
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$.
+Every orthonormal list of vectors in $\mathcal{S}$
+extends to an orthonormal basis of $\mathcal{S}$ (@def-orthonormal-basis).
+Starting from the empty list shows that $\mathcal{S}$ has an orthonormal basis.
+
+:::
+
+::: proof
+
+Let $\vecf{u}_1, \ldots, \vecf{u}_r \in \mathcal{S}$ be orthonormal.
+They are linearly independent (@thm-orthonormal-independent),
+so they extend to a basis
+$\vecf{u}_1, \ldots, \vecf{u}_r, \vecf{a}_{r+1}, \ldots, \vecf{a}_d$ of $\mathcal{S}$
+(@thm-extend-basis).
+Run the Gram-Schmidt process on this basis.
+It is linearly independent, so the process completes,
+and the output is an orthonormal basis of its span, which is $\mathcal{S}$
+(@thm-gram-schmidt, part 3).
+
+The first $r$ outputs are $\vecf{u}_1, \ldots, \vecf{u}_r$ themselves.
+At step $i \le r$, if the earlier outputs are $\vecf{u}_1, \ldots, \vecf{u}_{i-1}$, then
+$\tilde{\vecf{q}}_i = \vecf{u}_i - \sum_{j<i} (\vecf{u}_j \cdot \vecf{u}_i)\,\vecf{u}_j = \vecf{u}_i$,
+because each $\vecf{u}_j \cdot \vecf{u}_i = 0$,
+and $\vecf{q}_i = \vecf{u}_i / \norm{\vecf{u}_i} = \vecf{u}_i$,
+because $\norm{\vecf{u}_i} = 1$.
+So the orthonormal basis contains the starting list.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthonormal-basis-exists}
+#### Extending one unit vector to an orthonormal basis of $\reals^3$
+
+Start from the unit vector $\vecf{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
+As in @exm-extend-basis,
+adding $(1, 0, 0)$ and then $(0, 0, 1)$ gives a basis of $\reals^3$
+starting from $(1, 1, 0)$;
+$\vecf{u}_1$ is a nonzero multiple of $(1, 1, 0)$,
+so the same two vectors extend it to a basis too
+(a combination of $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$ is a combination of $(1, 1, 0), (1, 0, 0), (0, 0, 1)$ with the first coefficient divided by $\sqrt{2}$).
+Gram-Schmidt on $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$:
+
+1. $\vecf{q}_1 = \vecf{u}_1$.
+2. $\vecf{q}_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}$, so
+   $\tilde{\vecf{q}}_2 = (1, 0, 0) - \tfrac{1}{2}\,(1, 1, 0) = \paren{\tfrac{1}{2}, -\tfrac{1}{2}, 0}$,
+   with norm $\tfrac{1}{\sqrt{2}}$, and $\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(1, -1, 0)$.
+3. $(0, 0, 1)$ is orthogonal to $\vecf{q}_1$ and $\vecf{q}_2$, so
+   $\tilde{\vecf{q}}_3 = (0, 0, 1)$, which already has norm $1$, and $\vecf{q}_3 = (0, 0, 1)$.
+
+The result is the orthonormal basis of @exm-orthonormal-basis, in a different order.
+
+:::

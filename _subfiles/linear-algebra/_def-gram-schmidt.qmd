@@ -1,0 +1,68 @@
+:::{#def-gram-schmidt}
+#### Gram-Schmidt process
+
+The **Gram-Schmidt process** takes vectors $\vecf{a}_1, \ldots, \vecf{a}_k \in \reals^p$
+and, for $i = 1, 2, \ldots, k$ in turn:
+
+1. **Orthogonalize:**
+   $\tilde{\vecf{q}}_i \eqdef \vecf{a}_i - \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
+   (for $i = 1$ the sum is empty, so $\tilde{\vecf{q}}_1 = \vecf{a}_1$);
+2. **Test:** if $\tilde{\vecf{q}}_i = \vzero$, stop;
+3. **Normalize:** $\vecf{q}_i \eqdef \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gram-schmidt}
+#### Two steps of Gram-Schmidt in $\reals^3$
+
+Let $\vecf{a}_1 = (1, 1, 0)$ and $\vecf{a}_2 = (1, 0, 1)$.
+
+- **Step 1.**
+  $\tilde{\vecf{q}}_1 = (1, 1, 0)$, with norm $\sqrt{2}$,
+  so $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
+- **Step 2.**
+  $\vecf{q}_1 \cdot \vecf{a}_2 = \tfrac{1}{\sqrt{2}}\,(1 + 0 + 0) = \tfrac{1}{\sqrt{2}}$, so
+
+  $$
+  \ba
+  \tilde{\vecf{q}}_2
+  &= (1, 0, 1) - \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, 1, 0)
+  && \text{(orthogonalize)}
+  \\
+  &= (1, 0, 1) - \paren{\tfrac{1}{2}, \tfrac{1}{2}, 0}
+  && \text{(multiply out)}
+  \\
+  &= \paren{\tfrac{1}{2}, -\tfrac{1}{2}, 1},
+  && \text{(subtract entrywise)}
+  \ea
+  $$
+
+  with norm $\sqrt{\tfrac{1}{4} + \tfrac{1}{4} + 1} = \sqrt{\tfrac{3}{2}}$,
+  so $\vecf{q}_2 = \sqrt{\tfrac{2}{3}}\,\paren{\tfrac{1}{2}, -\tfrac{1}{2}, 1}
+  = \tfrac{1}{\sqrt{6}}\,(1, -1, 2)$.
+
+As a check, $\vecf{q}_1 \cdot \vecf{q}_2 = \tfrac{1}{\sqrt{12}}\,(1 - 1 + 0) = 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gram-schmidt-stops}
+#### Gram-Schmidt stops on dependent vectors
+
+Let $\vecf{a}_1 = (1, 2)$ and $\vecf{a}_2 = (2, 4)$.
+Step 1 gives $\vecf{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)$.
+In step 2, $\vecf{q}_1 \cdot \vecf{a}_2 = \tfrac{1}{\sqrt{5}}\,(2 + 8) = \tfrac{10}{\sqrt{5}}$, and
+
+$$
+\tilde{\vecf{q}}_2
+= (2, 4) - \tfrac{10}{\sqrt{5}} \cd \tfrac{1}{\sqrt{5}}\,(1, 2)
+= (2, 4) - 2\,(1, 2)
+= \vzero,
+$$
+
+so the process stops: $\vecf{a}_2$ is a multiple of $\vecf{a}_1$.
+
+:::

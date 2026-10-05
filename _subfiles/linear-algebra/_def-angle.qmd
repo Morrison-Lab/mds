@@ -1,0 +1,42 @@
+:::{#def-angle}
+#### Angle between two vectors
+
+The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
+is the number $\theta \in [0, \pi]$ with
+
+$$
+\cos\theta \eqdef \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-angle-well-defined}
+#### Why the angle is well defined
+
+The denominator is positive, because both vectors are nonzero (@thm-norm-properties),
+and by @thm-cauchy-schwarz the ratio lies between $-1$ and $1$.
+On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$
+and takes each value in $[-1, 1]$ exactly once,
+so there is exactly one such $\theta$.
+The angle is $\pi/2$ exactly when $\vecf{x} \cdot \vecf{y} = 0$,
+so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right angle.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-angle}
+#### Some angles in the plane
+
+- $(1, 0)$ and $(1, 1)$:
+  $\cos\theta = \frac{1}{1 \cd \sqrt{2}}$, so $\theta = \pi/4$.
+- $(1, 2)$ and $(-2, 1)$:
+  $\cos\theta = \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = 0$, so $\theta = \pi/2$.
+- $(1, 0)$ and $(-3, 0)$:
+  $\cos\theta = \frac{-3}{1 \cd 3} = -1$, so $\theta = \pi$.
+- $(1, 0)$ and $\vzero$: there is no angle,
+  because the ratio would divide by $\norm{\vzero} = 0$.
+
+:::
