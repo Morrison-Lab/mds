@@ -22,8 +22,8 @@ and $\vecf{e}_1 \cdot \vecf{e}_2 = 1 \cd 0 + 0 \cd 1 = 0$.
 
 - $(1, 1)$ and $(1, -1)$ are orthogonal, since $1 \cd 1 + 1 \cd (-1) = 0$,
   but not orthonormal: $(1, 1) \cdot (1, 1) = 2 \ne 1$.
-- $(1, 0)$ and $(0.6, 0.8)$ both have norm $1$,
-  since $0.6^2 + 0.8^2 = 0.36 + 0.64 = 1$,
+- $(1, 0)$ and $(0.6, 0.8)$ both have unit length,
+  since $(1, 0) \cdot (1, 0) = 1$ and $(0.6, 0.8) \cdot (0.6, 0.8) = 0.36 + 0.64 = 1$,
   but they are not orthonormal: $(1, 0) \cdot (0.6, 0.8) = 0.6 \ne 0$.
 
 :::

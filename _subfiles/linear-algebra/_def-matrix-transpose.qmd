@@ -14,8 +14,10 @@ $$(\tp{\matr{A}})_{ij} = a_{ji}$$
 :::{#exm-matrix-transpose}
 #### Transposing a $2 \times 3$ matrix
 
+For $\matr{A} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}$,
+
 $$
-\tp{\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}}
+\tp{\matr{A}}
 = \begin{bmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{bmatrix},
 $$
 

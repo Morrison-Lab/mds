@@ -28,6 +28,6 @@ $$
 \matr{0}_{3 \times 2} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{bmatrix}.
 $$
 
-They have the same entries but different dimensions, so they are different matrices.
+Both have all entries $0$, but one is $2 \times 3$ and the other $3 \times 2$, so they are different matrices.
 
 :::

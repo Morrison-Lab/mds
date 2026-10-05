@@ -21,6 +21,6 @@ and the $p \times p$ identity matrix is $\matr{I}_p = \operatorname{diag}(1, \ld
 :::{#exm-not-diagonal}
 #### A matrix that is not diagonal
 
-$\begin{bmatrix} 2 & 1 \\ 0 & 5 \end{bmatrix}$ is not diagonal: its off-diagonal entry $d_{12} = 1 \ne 0$.
+$\matr{D} = \begin{bmatrix} 2 & 1 \\ 0 & 5 \end{bmatrix}$ is not diagonal: its off-diagonal entry $d_{12} = 1 \ne 0$.
 
 :::

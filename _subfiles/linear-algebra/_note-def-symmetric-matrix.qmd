@@ -21,6 +21,6 @@ $$
 :::{#exm-not-symmetric}
 #### A matrix that is not symmetric
 
-$\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ is not symmetric: $a_{12} = 2 \ne 3 = a_{21}$.
+$\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ is not symmetric: $a_{12} = 2 \ne 3 = a_{21}$.
 
 :::
