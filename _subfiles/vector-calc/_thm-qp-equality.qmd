@@ -1,0 +1,210 @@
+:::{#thm-qp-equality}
+#### Minimizing a positive definite quadratic under linear constraints
+
+Let $\matr{S}$ be a $p \times p$ [positive definite](linear-algebra.qmd#def-positive-definite) matrix,
+$\matr{A}$ a $p \times m$ matrix with [linearly independent](linear-algebra.qmd#def-linearly-independent) columns,
+and $\vecf{b} \in \reals^m$.
+Then the $m \times m$ matrix $\matr{M} \eqdef \tp{\matr{A}} \matr{S}^{-1} \matr{A}$ is invertible, and
+$f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ has exactly one minimizer
+over the $\vx \in \reals^p$ with $\tp{\matr{A}} \vx = \vecf{b}$, namely
+
+$$
+\vx^* = \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}.
+$$
+
+With $\vecf{\lambda}^* \eqdef -\matr{M}^{-1} \vecf{b}$,
+the pair $(\vx^*, \vecf{\lambda}^*)$ solves @eq-kkt,
+and the minimum value is $f(\vx^*) = \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \vecf{b}$.
+
+:::
+
+::: proof
+
+The steps marked "transpose of a product" use the [transpose of a product](linear-algebra.qmd#thm-transpose-product),
+and $\matr{S}$ is symmetric because it is [positive definite](linear-algebra.qmd#def-positive-definite).
+
+**$\matr{M}$ is invertible.**
+$\matr{S}^{-1}$ exists and is positive definite
+([positive definite inverse](linear-algebra.qmd#thm-pd-inverse)),
+so $\matr{M} = \tp{\matr{A}} \matr{S}^{-1} \matr{A}$ is positive definite
+([operations that preserve definiteness](linear-algebra.qmd#thm-pd-operations), part 1),
+and so invertible (positive definite inverse again).
+$\matr{S}^{-1}$ and $\matr{M}^{-1}$ are symmetric
+([inverse of a symmetric matrix](linear-algebra.qmd#cor-inverse-symmetric)),
+because $\matr{S}$ and $\matr{M}$ are.
+
+**$\vx^*$ satisfies the constraint, and the pair solves @eq-kkt.**
+
+$$
+\ba
+\tp{\matr{A}} \vx^*
+&= \tp{\matr{A}} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(substitute } \vx^* \text{)}
+\\
+&= \matr{M} \matr{M}^{-1} \vecf{b}
+&& \text{(definition of } \matr{M} \text{)}
+\\
+&= \vecf{b},
+&& \text{(} \matr{M} \matr{M}^{-1} = \matr{I}_m \text{)}
+\\
+\matr{S} \vx^* + \matr{A} \vecf{\lambda}^*
+&= \matr{S} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b} - \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(substitute } \vx^* \text{ and } \vecf{\lambda}^* \text{)}
+\\
+&= \matr{A} \matr{M}^{-1} \vecf{b} - \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(} \matr{S} \matr{S}^{-1} = \matr{I}_p \text{)}
+\\
+&= \vzero_{p \times 1}.
+&& \text{(subtract)}
+\ea
+$$
+
+**$\vx^*$ is the unique minimizer.**
+Let $\vx$ satisfy $\tp{\matr{A}} \vx = \vecf{b}$, and let $\vecf{d} \eqdef \vx - \vx^*$,
+so $\tp{\matr{A}} \vecf{d} = \tp{\matr{A}} \vx - \tp{\matr{A}} \vx^* = \vecf{b} - \vecf{b} = \vzero_{m \times 1}$
+(matrix products distribute; both points satisfy the constraint).
+First, the cross term vanishes:
+
+$$
+\ba
+\tp{\vecf{d}} \matr{S} \vx^*
+&= \tp{\vecf{d}} \matr{S} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(substitute } \vx^* \text{)}
+\\
+&= \tp{\vecf{d}} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(} \matr{S} \matr{S}^{-1} = \matr{I}_p \text{)}
+\\
+&= \tp{(\tp{\matr{A}} \vecf{d})} \matr{M}^{-1} \vecf{b}
+&& \text{(transpose of a product; } \tp{(\tp{\matr{A}})} = \matr{A} \text{)}
+\\
+&= \tp{\vzero_{m \times 1}} \matr{M}^{-1} \vecf{b}
+&& \text{(} \tp{\matr{A}} \vecf{d} = \vzero_{m \times 1} \text{)}
+\\
+&= 0.
+&& \text{(a product with a zero factor is zero)}
+\ea
+$$
+
+Then
+
+$$
+\ba
+f(\vx)
+&= \tfrac{1}{2}\,\tp{(\vx^* + \vecf{d})} \matr{S} (\vx^* + \vecf{d})
+&& \text{(} \vx = \vx^* + \vecf{d} \text{)}
+\\
+&= \tfrac{1}{2} \paren{\tp{\vx^*} + \tp{\vecf{d}}} \matr{S} (\vx^* + \vecf{d})
+&& \text{(the transpose of a sum is the sum of the transposes)}
+\\
+&= \tfrac{1}{2} \paren{\tp{\vx^*} \matr{S} \vx^* + \tp{\vx^*} \matr{S} \vecf{d} + \tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
+&& \text{(distribute)}
+\\
+&= \tfrac{1}{2} \paren{\tp{\vx^*} \matr{S} \vx^* + \tp{\vecf{d}} \tp{\matr{S}} \vx^* + \tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
+&& \text{(} 1 \times 1 \text{: } \tp{\vx^*} \matr{S} \vecf{d} = \tp{(\tp{\vx^*} \matr{S} \vecf{d})} \text{; transpose of a product)}
+\\
+&= \tfrac{1}{2} \paren{\tp{\vx^*} \matr{S} \vx^* + 2\,\tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
+&& \text{(} \tp{\matr{S}} = \matr{S} \text{; combine)}
+\\
+&= \tfrac{1}{2}\,\tp{\vx^*} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vx^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{S} \vecf{d}
+&& \text{(distribute } \tfrac{1}{2} \text{)}
+\\
+&= f(\vx^*) + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{S} \vecf{d}
+&& \text{(the cross term is } 0 \text{)}
+\\
+&\ge f(\vx^*),
+&& \text{(} \matr{S} \text{ is positive definite)}
+\ea
+$$
+
+with equality only when $\vecf{d} = \vzero_{p \times 1}$, that is, $\vx = \vx^*$.
+
+**The minimum value.**
+
+$$
+\ba
+f(\vx^*)
+&= \tfrac{1}{2}\,\tp{(\matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b})} \matr{S} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(substitute } \vx^* \text{)}
+\\
+&= \tfrac{1}{2}\,\tp{\vecf{b}}\,\tp{(\matr{M}^{-1})}\,\tp{\matr{A}}\,\tp{(\matr{S}^{-1})}\,\matr{S} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(transpose of a product, applied repeatedly)}
+\\
+&= \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \tp{\matr{A}} \matr{S}^{-1} \matr{S} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(} \matr{S}^{-1} \text{ and } \matr{M}^{-1} \text{ are symmetric)}
+\\
+&= \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \tp{\matr{A}} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}
+&& \text{(} \matr{S}^{-1} \matr{S} = \matr{I}_p \text{)}
+\\
+&= \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \matr{M} \matr{M}^{-1} \vecf{b}
+&& \text{(definition of } \matr{M} \text{)}
+\\
+&= \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \vecf{b}.
+&& \text{(} \matr{M}^{-1} \matr{M} = \matr{I}_m \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qp-equality}
+#### The closest point on a line to the origin
+
+Minimize $x_1^2 + x_2^2$ subject to $3 x_1 + 4 x_2 = 5$.
+In the form of @thm-qp-equality, $x_1^2 + x_2^2 = \tfrac{1}{2}\,\tp{\vx} (2 \matr{I}_2) \vx$,
+so $\matr{S} = 2 \matr{I}_2$, $\matr{A} = \tp{(3, 4)}$ ($p = 2$, $m = 1$) and $\vecf{b} = [5]$.
+The hypotheses hold: $2 \matr{I}_2$ is positive definite,
+and the single column $\tp{(3, 4)}$ is nonzero, so it is linearly independent.
+Also $\matr{S}^{-1} = \tfrac{1}{2} \matr{I}_2$. Then, from the formulas of @thm-qp-equality,
+
+$$
+\ba
+\matr{M}
+&= \tp{\matr{A}}\,\tfrac{1}{2} \matr{I}_2\,\matr{A}
+= \tfrac{1}{2}\,(3^2 + 4^2)
+= \tfrac{25}{2},
+\\
+\vx^*
+&= \tfrac{1}{2} \matr{I}_2 \sbmat{ 3 \\ 4 } \paren{\tfrac{2}{25}} (5)
+= \tfrac{5}{25} \sbmat{ 3 \\ 4 }
+= \sbmat{ 0.6 \\ 0.8 },
+\\
+\vecf{\lambda}^*
+&= -\paren{\tfrac{2}{25}} (5) = -0.4,
+\\
+f(\vx^*)
+&= \tfrac{1}{2} (5) \paren{\tfrac{2}{25}} (5) = 1.
+\ea
+$$
+
+Checks:
+
+- the constraint: $3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5$;
+- the first block of @eq-kkt: $\matr{S} \vx^* + \matr{A} \vecf{\lambda}^* = \tp{(1.2, 1.6)} + \tp{(3, 4)} (-0.4) = \tp{(1.2, 1.6)} - \tp{(1.2, 1.6)} = \vzero_{2 \times 1}$;
+- the value: $0.6^2 + 0.8^2 = 0.36 + 0.64 = 1$.
+
+Geometrically, $\vx^*$ is the point of the line nearest the origin, at distance $1$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qp-equality-fails}
+#### The hypotheses are needed
+
+- If $\matr{S}$ is not positive definite there may be no minimizer:
+  with $\matr{S} = \sbmat{ 1 & 0 \\ 0 & -1 }$ and the constraint $x_1 = 1$
+  ($\matr{A} = \tp{(1, 0)}$, $\vecf{b} = [1]$),
+  $f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)$ decreases without bound as $x_2$ grows.
+- If the columns of $\matr{A}$ are dependent, $\matr{M}$ is not invertible:
+  with $\matr{S} = \matr{I}_2$ and $\matr{A} = \sbmat{ 1 & 1 \\ 1 & 1 }$,
+  $\matr{M} = \tp{\matr{A}} \matr{A} = \sbmat{ 2 & 2 \\ 2 & 2 }$,
+  whose columns are equal.
+  So $\matr{M} \tp{(1, -1)} = \vzero_{2 \times 1}$, and $\matr{M}$ is not invertible
+  ([a square matrix is invertible exactly when its null space is zero](linear-algebra.qmd#thm-invertible-rank)).
+  The two constraints both read $x_1 + x_2 = b_i$,
+  so they have no solution at all when $b_1 \ne b_2$.
+  When $b_1 = b_2$ a unique minimizer still exists, $x_1 = x_2 = b_1 / 2$,
+  but the formula of @thm-qp-equality cannot produce it.
+
+:::
