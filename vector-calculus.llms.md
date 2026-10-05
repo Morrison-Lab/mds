@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 03:45:07 (PDT)
+Last modified: 2026-10-05 04:02:15 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -816,7 +816,218 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Example 31 (The condition is sufficient, not necessary)** \\f(\tilde{x}) = x_1^2 + x_2^4\\ and \\g(\tilde{x}) = x_1^2 - x_2^4\\ both have gradient \\\tilde{0}\\ at \\\tilde{0}\\ and the same Hessian there, \\\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\\, since \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\\ at \\x_2 = 0\\. That Hessian is not positive definite (\\{(0, 1)}^{\top}\\ gives \\0\\), so [Theorem 16](#thm-second-order-condition) says nothing about either function. In fact \\\tilde{0}\\ is a strict local minimizer of \\f\\, since \\f(\tilde{x}) \> 0 = f(\tilde{0})\\ for \\\tilde{x}\ne \tilde{0}\\, but not a local minimizer of \\g\\, since \\g(0, t) = -t^4 \< 0 = g(\tilde{0})\\ for \\t \ne 0\\.
 
-## 3 Further reading
+## 3 Convexity in several variables
+
+> **NOTE:**
+>
+> This section is adapted from the convexity part of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra.llms.md#sec-subspaces)). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of [Section 2](#sec-optimality). The source defines both concave and strictly concave as “\\-f\\ is strictly convex”; here \\f\\ is concave when \\-f\\ is convex. These parts of the source are not part of this section:
+>
+> - its catalogs of convex sets and convex functions, including the positive semidefinite matrices and \\-\log \det\\
+> - intersections of infinitely many convex sets, and suprema of infinitely many convex functions
+> - its examples, exercises and figures, including the multivariate normal maximum likelihood example
+
+> **NOTE:**
+>
+> **Definition 10 (Convex set)** A set \\K \subseteq \mathbb{R}^p\\ is **convex** if for all \\\tilde{x}, \tilde{y}\in K\\ and all \\t \in \[0, 1\]\\, the point \\t \tilde{x}+ (1 - t) \tilde{y}\\ is in \\K\\: \\K\\ contains the whole line segment between any two of its points.
+
+> **NOTE:**
+>
+> **Example 32 (Convex sets)**  
+>
+> - \\\mathbb{R}^p\\ is convex, and so is any set with at most one point.
+>
+> - The closed ball \\B = \mathopen{}\left\\\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\ is convex: for \\\tilde{x}, \tilde{y}\in B\\ and \\t \in \[0, 1\]\\,
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert t \tilde{x}+ (1 - t) \tilde{y}\right\rVert\mathclose{} &\le \mathopen{}\left\lVert t \tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert(1 - t) \tilde{y}\right\rVert\mathclose{} && \text{(triangle inequality)} \\ &= t\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + (1 - t)\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} && \text{(norm of a multiple; } t, 1 - t \ge 0 \text{)} \\ &\le t\\r + (1 - t)\\r && \text{(} \tilde{x}, \tilde{y}\in B \text{)} \\ &= r. && \text{(arithmetic)} \end{aligned} \\
+>
+>   The first step is the [triangle inequality](linear-algebra.llms.md#thm-triangle-inequality), and the second uses [the norm of a multiple](linear-algebra.llms.md#thm-norm-properties).
+
+> **NOTE:**
+>
+> **Example 33 (A set that is not convex)** \\K = \mathopen{}\left\\x \in \mathbb{R}: \mathopen{}\left\|x\right\|\mathclose{} \ge 1\right\\\mathclose{}\\ is not convex: \\-1\\ and \\1\\ are in \\K\\, but with \\t = \tfrac{1}{2}\\ the point \\\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0\\ is not.
+
+> **NOTE:**
+>
+> **Theorem 17 (An intersection of convex sets is convex)** If \\K_1\\ and \\K_2\\ are convex subsets of \\\mathbb{R}^p\\ ([Definition 10](#def-convex-set)), then \\K_1 \cap K_2\\ is convex.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\tilde{x}, \tilde{y}\in K_1 \cap K_2\\ and \\t \in \[0, 1\]\\. Then \\\tilde{x}, \tilde{y}\in K_1\\, so \\t \tilde{x}+ (1 - t) \tilde{y}\in K_1\\, since \\K_1\\ is convex; in the same way \\t \tilde{x}+ (1 - t) \tilde{y}\in K_2\\. So \\t \tilde{x}+ (1 - t) \tilde{y}\in K_1 \cap K_2\\.
+
+> **NOTE:**
+>
+> **Example 34 (Intersecting a ball with a half-plane)** The closed unit ball in \\\mathbb{R}^2\\ is convex ([Example 32](#exm-convex-set)), and so is the half-plane \\\mathopen{}\left\\\tilde{x}: x_1 \ge 0\right\\\mathclose{}\\: if \\x_1 \ge 0\\ and \\y_1 \ge 0\\, then \\t x_1 + (1 - t) y_1 \ge 0\\ for \\t \in \[0, 1\]\\. By [Theorem 17](#thm-convex-intersection), the closed half-disk \\\mathopen{}\left\\\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\\ x_1 \ge 0\right\\\mathclose{}\\ is convex. A union need not be convex: \\\mathopen{}\left\\x \in \mathbb{R}: x \le -1\right\\\mathclose{}\\ and \\\mathopen{}\left\\x \in \mathbb{R}: x \ge 1\right\\\mathclose{}\\ are convex, but their union is the set of [Example 33](#exm-not-convex-set).
+
+> **NOTE:**
+>
+> **Definition 11 (Strictly convex and concave functions)** A function \\f : \mathbb{R}^p \to \mathbb{R}\\ is **strictly convex** if \\f(t \tilde{x}+ (1 - t) \tilde{y}) \< t f(\tilde{x}) + (1 - t) f(\tilde{y})\\ for all \\\tilde{x}\ne \tilde{y}\\ in \\\mathbb{R}^p\\ and all \\t \in (0, 1)\\. It is **concave** if \\-f\\ is [convex](algebra.llms.md#def-convex-function), and **strictly concave** if \\-f\\ is strictly convex.
+
+> **NOTE:**
+>
+> **Example 35 (Strictly convex, and convex but not strictly)**  
+>
+> - \\f(x) = x^2\\ is strictly convex:
+>
+>   \\ \begin{aligned} t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2 &= t x^2 + (1 - t) y^2 - t^2 x^2 - 2 t (1 - t) x y - (1 - t)^2 y^2 && \text{(expand the square)} \\ &= t (1 - t) x^2 - 2 t (1 - t) x y + t (1 - t) y^2 && \text{(} t - t^2 = t (1 - t) \text{, } (1 - t) - (1 - t)^2 = t (1 - t) \text{)} \\ &= t (1 - t) (x - y)^2, && \text{(factor)} \end{aligned} \\
+>
+>   which is positive when \\x \ne y\\ and \\t \in (0, 1)\\. At \\t \in \mathopen{}\left\\0, 1\right\\\mathclose{}\\ or \\x = y\\ it is \\0\\, so \\x^2\\ is also convex.
+>
+> - \\f(x) = 2x + 1\\ is convex but not strictly convex: \\f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)\\ for every \\x, y, t\\, so the inequality holds, but never strictly. It is also concave.
+
+> **NOTE:**
+>
+> **Theorem 18 (The maximum of convex functions is convex)** If \\f_1\\ and \\f_2\\ are [convex](algebra.llms.md#def-convex-function) functions on \\\mathbb{R}^p\\, then \\f(\tilde{x}) \stackrel{\text{def}}{=}\max\mathopen{}\left\\f_1(\tilde{x}), f_2(\tilde{x})\right\\\mathclose{}\\ is convex.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\t \in \[0, 1\]\\. For \\i = 1, 2\\,
+>
+> \\ \begin{aligned} f_i(t \tilde{x}+ (1 - t) \tilde{y}) &\le t f_i(\tilde{x}) + (1 - t) f_i(\tilde{y}) && \text{(} f_i \text{ is convex)} \\ &\le t f(\tilde{x}) + (1 - t) f(\tilde{y}). && \text{(} f_i \le f \text{, and } t, 1 - t \ge 0 \text{)} \end{aligned} \\
+>
+> Both \\f_1\\ and \\f_2\\ at \\t \tilde{x}+ (1 - t) \tilde{y}\\ are at most \\t f(\tilde{x}) + (1 - t) f(\tilde{y})\\, so their maximum \\f(t \tilde{x}+ (1 - t) \tilde{y})\\ is too.
+
+> **NOTE:**
+>
+> **Example 36 (A maximum is convex; a minimum need not be)**  
+>
+> - \\f_1(x) = x\\ is convex, by the computation for \\2x + 1\\ in [Example 35](#exm-strictly-convex) with \\2\\ and \\1\\ replaced by \\1\\ and \\0\\, and \\f_2(x) = x^2\\ is convex by the same example, so \\\max\mathopen{}\left\\x, x^2\right\\\mathclose{}\\ is convex by [Theorem 18](#thm-convex-max).
+> - The minimum of two convex functions need not be convex: \\g(x) = \min\mathopen{}\left\\x^2, (x - 2)^2\right\\\mathclose{}\\ has \\g(0) = g(2) = 0\\, but at the midpoint \\g(1) = \min\mathopen{}\left\\1, 1\right\\\mathclose{} = 1 \> \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0\\.
+
+> **NOTE:**
+>
+> **Definition 12 (Epigraph)** The **epigraph** of \\f : \mathbb{R}^p \to \mathbb{R}\\ is the set of points on or over its graph,
+>
+> \\ \operatorname{epi} f \stackrel{\text{def}}{=}\mathopen{}\left\\(\tilde{x}, s) : \tilde{x}\in \mathbb{R}^p,\\ s \in \mathbb{R},\\ f(\tilde{x}) \le s\right\\\mathclose{}. \\
+>
+> A pair \\(\tilde{x}, s)\\ is treated as the \\(p + 1)\\-vector with entries \\x_1, \ldots, x_p, s\\, so \\\operatorname{epi} f \subseteq \mathbb{R}^{p+1}\\, and sums and multiples of pairs are taken entry by entry.
+
+> **NOTE:**
+>
+> **Example 37 (The epigraph of \\x^2\\)** For \\f(x) = x^2\\, \\\operatorname{epi} f = \mathopen{}\left\\(x, s) : x^2 \le s\right\\\mathclose{}\\, the points \\(x, s)\\ on the parabola \\s = x^2\\ or on the side of it where \\s\\ is larger. \\(1, 2)\\ is in it, since \\1^2 \le 2\\; \\(2, 1)\\ is not, since \\2^2 \> 1\\.
+
+> **NOTE:**
+>
+> **Theorem 19 (Convexity through the epigraph)** \\f : \mathbb{R}^p \to \mathbb{R}\\ is [convex](algebra.llms.md#def-convex-function) if and only if its epigraph ([Definition 12](#def-epigraph)) is convex ([Definition 10](#def-convex-set)).
+
+> **NOTE:**
+>
+> *Proof*. **If.** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\t \in \[0, 1\]\\. The points \\(\tilde{x}, f(\tilde{x}))\\ and \\(\tilde{y}, f(\tilde{y}))\\ are in \\\operatorname{epi} f\\, since \\f(\tilde{x}) \le f(\tilde{x})\\ and \\f(\tilde{y}) \le f(\tilde{y})\\. Since \\\operatorname{epi} f\\ is convex, it contains
+>
+> \\ t\\(\tilde{x}, f(\tilde{x})) + (1 - t)\\(\tilde{y}, f(\tilde{y})) = \mathopen{}\left(t \tilde{x}+ (1 - t) \tilde{y},\\ t f(\tilde{x}) + (1 - t) f(\tilde{y})\right)\mathclose{}, \\
+>
+> and by [Definition 12](#def-epigraph) that membership means \\f(t \tilde{x}+ (1 - t) \tilde{y}) \le t f(\tilde{x}) + (1 - t) f(\tilde{y})\\.
+>
+> **Only if.** Let \\(\tilde{x}, s)\\ and \\(\tilde{y}, u)\\ be in \\\operatorname{epi} f\\, so \\f(\tilde{x}) \le s\\ and \\f(\tilde{y}) \le u\\, and let \\t \in \[0, 1\]\\. Then
+>
+> \\ \begin{aligned} f(t \tilde{x}+ (1 - t) \tilde{y}) &\le t f(\tilde{x}) + (1 - t) f(\tilde{y}) && \text{(} f \text{ is convex)} \\ &\le t s + (1 - t) u, && \text{(} f(\tilde{x}) \le s \text{, } f(\tilde{y}) \le u \text{, and } t, 1 - t \ge 0 \text{)} \end{aligned} \\
+>
+> so \\t\\(\tilde{x}, s) + (1 - t)\\(\tilde{y}, u) = (t \tilde{x}+ (1 - t) \tilde{y},\\ t s + (1 - t) u)\\ is in \\\operatorname{epi} f\\.
+
+> **NOTE:**
+>
+> **Example 38 (Two epigraphs)**  
+>
+> - The epigraph of \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is \\\mathopen{}\left\\(x, s) : \mathopen{}\left\|x\right\|\mathclose{} \le s\right\\\mathclose{}\\, a wedge. It is the intersection of the half-planes \\\mathopen{}\left\\(x, s) : s - x \ge 0\right\\\mathclose{}\\ and \\\mathopen{}\left\\(x, s) : s + x \ge 0\right\\\mathclose{}\\. Each half-plane is convex: if \\s_1 - x_1 \ge 0\\ and \\s_2 - x_2 \ge 0\\, then \\(t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0\\, and the same with \\+\\ for the other. So the wedge is convex ([Theorem 17](#thm-convex-intersection)), and \\\mathopen{}\left\|x\right\|\mathclose{}\\ is convex by [Theorem 19](#thm-epigraph).
+> - The epigraph of \\g(x) = -x^2\\ is not convex: \\(-1, -1)\\ and \\(1, -1)\\ are in it, since \\g(\pm 1) = -1\\, but their midpoint \\(0, -1)\\ is not, since \\g(0) = 0 \> -1\\. So \\-x^2\\ is not convex.
+
+> **NOTE:**
+>
+> **Theorem 20 (First-order characterization of convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 7](#def-continuous-several)). Then \\f\\ is [convex](algebra.llms.md#def-convex-function) if and only if
+>
+> \\ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \qquad \text{for all } \tilde{x}, \tilde{y}\in \mathbb{R}^p: \tag{1}\\
+>
+> every tangent plane lies on or under the graph. If the inequality is strict whenever \\\tilde{x}\ne \tilde{y}\\, then \\f\\ is strictly convex ([Definition 11](#def-strictly-convex)).
+
+> **NOTE:**
+>
+> *Proof*. **Only if.** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, let \\\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{y}\\, and let \\g(t) \stackrel{\text{def}}{=}f(\tilde{y}+ t \tilde{d})\\. The inner function \\t \mapsto \tilde{y}+ t \tilde{d}\\ has derivative \\{\tilde{d}}^{\top}\\ ([Definition 3](#def-vector-valued-derivative)), so the vector chain rule ([Theorem 8](#thm-chain-vec)) gives
+>
+> \\ \begin{aligned} g'(0) &= {\tilde{d}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{y}) && \text{(@thm-chain-vec)} \\ &= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} \tilde{d}. && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
+>
+> For \\t \in (0, 1\]\\, \\\tilde{y}+ t \tilde{d} = t \tilde{x}+ (1 - t) \tilde{y}\\, so
+>
+> \\ \begin{aligned} g(t) - g(0) &= f(t \tilde{x}+ (1 - t) \tilde{y}) - f(\tilde{y}) && \text{(definition of } g \text{)} \\ &\le t f(\tilde{x}) + (1 - t) f(\tilde{y}) - f(\tilde{y}) && \text{(} f \text{ is convex)} \\ &= t\\(f(\tilde{x}) - f(\tilde{y})), && \text{(collect terms)} \end{aligned} \\
+>
+> and dividing by \\t \> 0\\, \\\dfrac{g(t) - g(0)}{t} \le f(\tilde{x}) - f(\tilde{y})\\. As \\t \to 0\\ from the right, the left side tends to \\g'(0)\\ (\\g\\ is differentiable at \\0\\, so the one-sided limit equals the two-sided derivative), and a limit of numbers that are all at most \\f(\tilde{x}) - f(\tilde{y})\\ is at most \\f(\tilde{x}) - f(\tilde{y})\\. So \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \le f(\tilde{x}) - f(\tilde{y})\\, which rearranges to [Equation 1](#eq-supporting-hyperplane).
+>
+> **If.** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, \\t \in \[0, 1\]\\, \\\tilde{z} \stackrel{\text{def}}{=}t \tilde{x}+ (1 - t) \tilde{y}\\, and \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\. Applying [Equation 1](#eq-supporting-hyperplane) at the point \\\tilde{z}\\, once toward \\\tilde{x}\\ and once toward \\\tilde{y}\\,
+>
+> \\ f(\tilde{x}) \ge f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{x}- \tilde{z}), \qquad f(\tilde{y}) \ge f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{y}- \tilde{z}). \\
+>
+> Multiplying the first by \\t \ge 0\\ and the second by \\1 - t \ge 0\\ and adding,
+>
+> \\ \begin{aligned} t f(\tilde{x}) + (1 - t) f(\tilde{y}) &\ge t \mathopen{}\left(f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{x}- \tilde{z})\right)\mathclose{} + (1 - t) \mathopen{}\left(f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{y}- \tilde{z})\right)\mathclose{} && \text{(multiply by } t, 1 - t \ge 0 \text{ and add)} \\ &= (t + (1 - t))\\f(\tilde{z}) + t\\{\tilde{g}}^{\top} (\tilde{x}- \tilde{z}) + (1 - t)\\{\tilde{g}}^{\top} (\tilde{y}- \tilde{z}) && \text{(distribute } t \text{ and } 1 - t \text{)} \\ &= f(\tilde{z}) + t\\{\tilde{g}}^{\top} (\tilde{x}- \tilde{z}) + (1 - t)\\{\tilde{g}}^{\top} (\tilde{y}- \tilde{z}) && \text{(} t + (1 - t) = 1 \text{)} \\ &= f(\tilde{z}) + {\tilde{g}}^{\top} \mathopen{}\left(t (\tilde{x}- \tilde{z}) + (1 - t) (\tilde{y}- \tilde{z})\right)\mathclose{} && \text{(factor out } {\tilde{g}}^{\top} \text{; matrix products distribute)} \\ &= f(\tilde{z}) + {\tilde{g}}^{\top} \mathopen{}\left(t \tilde{x}+ (1 - t) \tilde{y}- \tilde{z}\right)\mathclose{} && \text{(collect terms)} \\ &= f(\tilde{z}). && \text{(definition of } \tilde{z} \text{)} \end{aligned} \\
+>
+> That inequality is the defining inequality of a [convex function](algebra.llms.md#def-convex-function). If [Equation 1](#eq-supporting-hyperplane) is strict for distinct points, and \\\tilde{x}\ne \tilde{y}\\ and \\t \in (0, 1)\\, then:
+>
+> - \\\tilde{z}\\ differs from both \\\tilde{x}\\ and \\\tilde{y}\\, since \\\tilde{x}- \tilde{z} = (1 - t)(\tilde{x}- \tilde{y}) \ne \tilde{0}\\ and \\\tilde{y}- \tilde{z} = t (\tilde{y}- \tilde{x}) \ne \tilde{0}\\;
+> - so both inequalities at \\\tilde{z}\\ are strict;
+> - both multipliers \\t\\ and \\1 - t\\ are positive, so the first step of the display is strict, and \\f\\ is strictly convex.
+
+> **NOTE:**
+>
+> **Example 39 (Tangent lines under a parabola)** For \\f(x) = x^2\\, the right side of [Equation 1](#eq-supporting-hyperplane) is \\y^2 + 2y (x - y) = 2xy - y^2\\, and
+>
+> \\ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0, \\
+>
+> with equality only at \\x = y\\, confirming that \\x^2\\ is strictly convex. For \\g(x) = -x^2\\ the inequality fails: at \\y = 0\\ the tangent line is \\s = 0\\, and \\g(1) = -1 \< 0\\.
+
+> **NOTE:**
+>
+> **Theorem 21 (Second-derivative test for convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 7](#def-continuous-several)).
+>
+> 1.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive semidefinite](linear-algebra.llms.md#def-positive-semidefinite) for every \\\tilde{x}\\, then \\f\\ is [convex](algebra.llms.md#def-convex-function).
+> 2.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive definite](linear-algebra.llms.md#def-positive-definite) for every \\\tilde{x}\\, then \\f\\ is strictly convex ([Definition 11](#def-strictly-convex)).
+
+> **NOTE:**
+>
+> *Proof*. Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\. By [Theorem 15](#thm-taylor-mv) with \\\tilde{z} = \tilde{y}\\ and \\\tilde{h} = \tilde{x}- \tilde{y}\\, there is a \\\tau \in (0, 1)\\ such that, with \\\tilde{w} \stackrel{\text{def}}{=}\tilde{y}+ \tau (\tilde{x}- \tilde{y})\\,
+>
+> \\ \begin{aligned} f(\tilde{x}) &= f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) + \frac{1}{2}\\{(\tilde{x}- \tilde{y})}^{\top}\\\mathbf{H}\_f(\tilde{w})\\(\tilde{x}- \tilde{y}) && \text{(@thm-taylor-mv)} \\ &\ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}). && \text{(} \mathbf{H}\_f(\tilde{w}) \text{ is positive semidefinite)} \end{aligned} \\
+>
+> This inequality is [Equation 1](#eq-supporting-hyperplane), so \\f\\ is convex by [Theorem 20](#thm-convex-first-order). Under the hypothesis of part 2 and with \\\tilde{x}\ne \tilde{y}\\, the quadratic-form term is positive, so the inequality is strict, and \\f\\ is strictly convex by the last sentence of [Theorem 20](#thm-convex-first-order).
+
+> **NOTE:**
+>
+> **Example 40 (Using the Hessian to show convexity)**  
+>
+> - For a symmetric positive semidefinite \\\mathbf{A}\\, \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{A} \tilde{x}\\ has Hessian \\2 \mathbf{A}\\ ([Theorem 11](#thm-hessian-quadratic)), which is positive semidefinite because \\{\tilde{h}}^{\top} (2 \mathbf{A}) \tilde{h} = 2\\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} \ge 0\\; so \\f\\ is convex.
+>
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has Hessian \\2 \mathbf{I}\_2\\ ([Example 30](#exm-second-order-condition)), which is positive definite, so \\f\\ is strictly convex.
+>
+> - \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ has Hessian \\e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\ with \\u = 2x_1 + x_2\\ ([Example 16](#exm-hessian)), and
+>
+>   \\ {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x})\\\tilde{h} = e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) = e^{u} (2 h_1 + h_2)^2 \ge 0, \\
+>
+>   so \\f\\ is convex. The Hessian is not positive definite (\\\tilde{h} = {(1, -2)}^{\top}\\ gives \\0\\), so part 2 does not apply, and in fact \\f\\ is not strictly convex: along \\\tilde{x}= t\\{(1, -2)}^{\top}\\, \\u = 2t - 2t = 0\\ and \\f = 1 - t\\ is linear in \\t\\, so the convexity inequality holds with equality there.
+
+> **NOTE:**
+>
+> **Example 41 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has \\f''(0) = 12 \cdot 0^2 = 0\\, so \\\mathbf{H}\_f(0) = \[0\]\\ is not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 1](#eq-supporting-hyperplane): for \\x \ne y\\,
+>
+> \\ \begin{aligned} x^4 - y^4 - 4 y^3 (x - y) &= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y) && \text{(factor } x^4 - y^4 \text{)} \\ &= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3) && \text{(collect the } y^3 \text{ terms)} \\ &= (x - y)^2 (x^2 + 2 x y + 3 y^2) && \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)} \\ &= (x - y)^2 \mathopen{}\left((x + y)^2 + 2 y^2\right)\mathclose{}, && \text{(complete the square)} \end{aligned} \\
+>
+> which is positive: \\(x - y)^2 \> 0\\, and \\(x + y)^2 + 2 y^2 = 0\\ would need \\y = 0\\ and then \\x = 0 = y\\.
+
+> **NOTE:**
+>
+> **Corollary 4 (Stationary points of a convex function are global minimizers)** If \\f\\ is as in [Theorem 20](#thm-convex-first-order) and convex, then every stationary point \\\tilde{x}^\*\\ of \\f\\ ([Definition 8](#def-stationary-point)) is a [global minimizer](algebra.llms.md#def-global-minimizer).
+
+> **NOTE:**
+>
+> *Proof*. For every \\\tilde{x}\\,
+>
+> \\ \begin{aligned} f(\tilde{x}) &\ge f(\tilde{x}^\*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(@eq-supporting-hyperplane with } \tilde{y}= \tilde{x}^\* \text{)} \\ &= f(\tilde{x}^\*) + {\tilde{0}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= f(\tilde{x}^\*). && \text{(} {\tilde{0}}^{\top} \tilde{v} = 0 \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 42 (A convex function, and a non-convex one)**  
+>
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ is convex by [Theorem 21](#thm-convex-hessian), since its Hessian is \\2 \mathbf{I}\_2\\ ([Example 30](#exm-second-order-condition)), so its stationary point \\{(1, 0)}^{\top}\\ ([Example 23](#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 24](#exm-first-order-condition).
+> - Without convexity, a stationary point need not be a minimizer at all: \\x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\, which is not a minimizer ([Example 24](#exm-first-order-condition)).
+> - The corollary says nothing about whether a minimizer exists: \\e^{2x_1 + x_2} - x_1\\ is convex ([Example 40](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 24](#exm-first-order-condition)).
+
+## 4 Further reading
 
 - Marsden and Tromba ([2013](#ref-marsden2013vector)) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 

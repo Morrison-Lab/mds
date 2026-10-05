@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 03:45:07 (PDT)
+Last modified: 2026-10-05 04:02:15 (PDT)
 
 ## 1 Derivatives
 
