@@ -11,7 +11,8 @@ then $g'(c) = 0$.
 ::: proof
 
 Take $\delta > 0$ as in the definition of a local minimizer,
-so that $g(c) \le g(c + h)$ whenever $\abs{h} < \delta$.
+shrunk if needed so that $(c - \delta, c + \delta)$ lies inside the interval;
+then $g(c) \le g(c + h)$ whenever $\abs{h} < \delta$.
 For $0 < h < \delta$, the difference quotient is
 
 $$
@@ -19,11 +20,11 @@ $$
 $$
 
 because its numerator is at least $0$ and its denominator is positive.
-As $h \to 0$ from above, these quotients tend to $g'(c)$
+As $h \to 0$ from the right, these quotients tend to $g'(c)$
 (the two-sided limit exists, so the one-sided limit equals it),
 and a limit of numbers that are all at least $0$ is at least $0$; so $g'(c) \ge 0$.
 For $-\delta < h < 0$, the numerator is still at least $0$ but the denominator is negative,
-so the quotient is at most $0$, and in the same way $g'(c) \le 0$.
+so the quotient is at most $0$, and in the same way, with $h \to 0$ from the left, $g'(c) \le 0$.
 Together, $g'(c) = 0$.
 
 :::

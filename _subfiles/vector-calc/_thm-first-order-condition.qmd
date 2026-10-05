@@ -21,7 +21,7 @@ Moving $\vx$ from $\vx^*$ along $\vecf{e}_i$ changes only $x_i$,
 so $g_i'(0)$ is the partial derivative $\deriv{x_i} f(\vx^*)$,
 which exists because the gradient does.
 By @thm-fermat, $\deriv{x_i} f(\vx^*) = g_i'(0) = 0$.
-This holds for every $i$, so every entry of the gradient at $\vx^*$ is $0$ (@def-vector-derivative).
+The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the gradient at $\vx^*$ is $0$ (@def-vector-derivative).
 
 :::
 

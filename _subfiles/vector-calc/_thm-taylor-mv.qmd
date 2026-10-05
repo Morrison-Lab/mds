@@ -1,7 +1,8 @@
 :::{#thm-taylor-mv}
 #### Second-order Taylor theorem in several variables
 
-Let $f : \reals^p \to \reals$ have continuous first and second partial derivatives,
+Let $f : \reals^p \to \reals$ have first and second partial derivatives
+that are continuous on $\reals^p$ (@def-continuous-several),
 and let $\vecf{z}, \vecf{h} \in \reals^p$.
 Then there is a $\tau \in (0, 1)$ with
 
@@ -20,7 +21,8 @@ Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
 the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
 The inner function $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
 so $\deriv{t} y_j = h_j$, and its derivative (@def-vector-valued-derivative) is the $1 \times p$ matrix $\tp{\vecf{h}}$.
-By the vector chain rule (@thm-chain-vec, with a $1 \times 1$ input $t$),
+By the vector chain rule (@thm-chain-vec, with its input $t$ of length $1$,
+its inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and its outer function $f$),
 
 $$
 \ba
@@ -34,7 +36,10 @@ g'(t)
 $$
 
 The second step writes out the [matrix product](linear-algebra.qmd#def-matrix-mult).
-$g'$ is continuous, because each $\deriv{x_j} f$ is.
+$g'$ is continuous (@def-continuous-several):
+$t \mapsto \vecf{z} + t \vecf{h}$ is continuous, since $\norm{(\vecf{z} + s \vecf{h}) - (\vecf{z} + t \vecf{h})} = \abs{s - t}\,\norm{\vecf{h}}$,
+each $\deriv{x_j} f$ is continuous by assumption,
+and compositions, sums and constant multiples of continuous functions are continuous.
 Each $\deriv{x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$,
 so the same chain-rule computation applies to it:
 $\deriv{t} \sb{\deriv{x_j} f(\vecf{z} + t \vecf{h})} = \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}$.
@@ -64,8 +69,11 @@ f(\vecf{z} + \vecf{h})
 &= g(1)
 && \text{(definition of } g \text{)}
 \\
-&= g(0) + g'(0) + \frac{1}{2}\,g''(\tau)
+&= g(0) + g'(0)\,(1 - 0) + \frac{1}{2}\,g''(\tau)\,(1 - 0)^2
 && \text{(@thm-taylor-1d, with } a = 0, b = 1 \text{)}
+\\
+&= g(0) + g'(0) + \frac{1}{2}\,g''(\tau)
+&& \text{(} 1 - 0 = 1 \text{)}
 \\
 &= f(\vecf{z}) + \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z}) + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}
 && \text{(substitute } g(0), g'(0), g''(\tau) \text{)}
