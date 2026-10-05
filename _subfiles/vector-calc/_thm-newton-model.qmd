@@ -1,0 +1,67 @@
+:::{#thm-newton-model}
+#### The Newton step minimizes the quadratic model
+
+Let $q$ be the quadratic model of $f$ at $\vx$ (@def-quadratic-model),
+with $\matr{H} = \matr{H}_f(\vx)$ [positive definite](linear-algebra.qmd#def-positive-definite).
+Its unique minimizer is the Newton step $\vecf{\delta}^* = -\matr{H}^{-1} \vecf{g}$.
+
+:::
+
+::: proof
+
+$\matr{H}$ is symmetric, by the definition of [positive definite](linear-algebra.qmd#def-positive-definite),
+and invertible ([positive definite inverse](linear-algebra.qmd#thm-pd-inverse)),
+so $\vecf{\delta}^*$ exists and $\matr{H} \vecf{\delta}^* = -\vecf{g}$.
+For any $\vecf{d} \in \reals^p$, first
+
+$$
+\ba
+\tp{\vecf{d}} \matr{H} \vecf{\delta}^*
+&= -\tp{\vecf{d}} \vecf{g}
+&& \text{(} \matr{H} \vecf{\delta}^* = -\vecf{g} \text{)}
+\\
+&= -\tp{\vecf{g}} \vecf{d},
+&& \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
+\ea
+$$
+
+and $\tp{\vecf{\delta}^*} \matr{H} \vecf{d} = \tp{\vecf{d}} \matr{H} \vecf{\delta}^*$ in the same way, using $\tp{\matr{H}} = \matr{H}$. Then
+
+$$
+\ba
+q(\vecf{\delta}^* + \vecf{d})
+&= f(\vx) + \tp{\vecf{g}} (\vecf{\delta}^* + \vecf{d}) + \tfrac{1}{2}\,\tp{(\vecf{\delta}^* + \vecf{d})} \matr{H} (\vecf{\delta}^* + \vecf{d})
+&& \text{(definition of } q \text{)}
+\\
+&= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tp{\vecf{g}} \vecf{d}
++ \tfrac{1}{2} \paren{\tp{\vecf{\delta}^*} \matr{H} \vecf{\delta}^* + \tp{\vecf{\delta}^*} \matr{H} \vecf{d} + \tp{\vecf{d}} \matr{H} \vecf{\delta}^* + \tp{\vecf{d}} \matr{H} \vecf{d}}
+&& \text{(distribute)}
+\\
+&= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tp{\vecf{g}} \vecf{d}
++ \tfrac{1}{2}\,\tp{\vecf{\delta}^*} \matr{H} \vecf{\delta}^* - \tp{\vecf{g}} \vecf{d} + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
+&& \text{(both cross terms equal } -\tp{\vecf{g}} \vecf{d} \text{)}
+\\
+&= f(\vx) + \tp{\vecf{g}} \vecf{\delta}^* + \tfrac{1}{2}\,\tp{\vecf{\delta}^*} \matr{H} \vecf{\delta}^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d}
+&& \text{(cancel } \tp{\vecf{g}} \vecf{d} \text{)}
+\\
+&= q(\vecf{\delta}^*) + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{H} \vecf{d},
+&& \text{(definition of } q \text{)}
+\ea
+$$
+
+which is greater than $q(\vecf{\delta}^*)$ for every $\vecf{d} \ne \vzero_{p \times 1}$, since $\matr{H}$ is positive definite.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-newton-model}
+#### The Newton step at $x = 2.5$
+
+For the model $q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2$ of @exm-quadratic-model,
+$H = [5]$ is positive definite, so by @thm-newton-model its minimizer is
+$\delta^* = -H^{-1} g = -2.25 / 5 = -0.45$.
+Setting the derivative $2.25 + 5 \delta$ to $0$ gives the same $\delta^*$,
+and $2.5 - 0.45 = 2.05 = x^{(1)}$ (@exm-newton-method).
+
+:::

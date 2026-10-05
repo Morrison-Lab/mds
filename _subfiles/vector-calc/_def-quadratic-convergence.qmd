@@ -1,0 +1,24 @@
+:::{#def-quadratic-convergence}
+#### Quadratic convergence
+
+A sequence $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$ that converges to $\vx^*$ **converges quadratically**
+if there is a constant $C$ with
+
+$$
+\norm{\vx^{(t+1)} - \vx^*} \le C\,\norm{\vx^{(t)} - \vx^*}^2
+\qquad \text{for every } t.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-quadratic-convergence}
+#### Halving the error is not quadratic convergence
+
+$x^{(t)} = 2^{-t}$ converges to $0$, but it does not converge quadratically:
+the bound would need $2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}$, that is, $2^{t - 1} \le C$,
+which fails once $t > 1 + \log_2 C$.
+Each step only halves the error.
+
+:::

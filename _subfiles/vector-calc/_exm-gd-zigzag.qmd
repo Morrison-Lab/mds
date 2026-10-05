@@ -1,0 +1,83 @@
+:::{#exm-gd-zigzag}
+#### Gradient descent zigzags
+
+Let $f(\vx) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)$ with $b > 0$,
+so $\deriv{\vx} f(\vx) = \tp{(x_1,\ b x_2)}$
+and one gradient step of length $s$ from $\vx$ gives $\tp{((1 - s) x_1,\ (1 - b s) x_2)}$.
+For exact line search, let $\phi(s) \eqdef f$ at that point:
+
+$$
+\ba
+\phi(s)
+&= \tfrac{1}{2} \paren{(1 - s)^2 x_1^2 + b (1 - b s)^2 x_2^2},
+&& \text{(definition of } f \text{)}
+\\
+\phi'(s)
+&= -(1 - s) x_1^2 - b^2 (1 - b s) x_2^2
+&& \text{(chain rule, term by term)}
+\\
+&= -x_1^2 + s\,x_1^2 - b^2 x_2^2 + b^3 s\,x_2^2
+&& \text{(expand the products)}
+\\
+&= s\,(x_1^2 + b^3 x_2^2) - (x_1^2 + b^2 x_2^2).
+&& \text{(collect the terms in } s \text{)}
+\ea
+$$
+
+For $\vx \ne \vzero_{2 \times 1}$, $x_1^2 + b^3 x_2^2 > 0$,
+so $\phi'$ is increasing in $s$ with a single zero, and $\phi$ is minimized at
+$s^* = \dfrac{x_1^2 + b^2 x_2^2}{x_1^2 + b^3 x_2^2}$.
+From $\vx^{(0)} = \tp{(b, 1)}$:
+
+$$
+\ba
+s^{(0)}
+&= \frac{b^2 + b^2}{b^2 + b^3}
+&& \text{(substitute } x_1 = b, x_2 = 1 \text{)}
+\\
+&= \frac{2}{1 + b},
+&& \text{(cancel } b^2 \text{)}
+\ea
+$$
+
+and, with $r \eqdef \tfrac{b - 1}{b + 1}$,
+
+$$
+\ba
+1 - s^{(0)}
+&= \frac{1 + b - 2}{1 + b} = r,
+&& \text{(common denominator)}
+\\
+1 - b\,s^{(0)}
+&= \frac{1 + b - 2b}{1 + b} = -r,
+&& \text{(common denominator)}
+\\
+\vx^{(1)}
+&= \tp{\paren{r\,b,\ -r \cdot 1}} = r\,\tp{(b, -1)}.
+&& \text{(the gradient step from } \tp{(b, 1)} \text{)}
+\ea
+$$
+
+For $b \ne 1$ the same holds at every step, by induction
+(when $b = 1$, $r = 0$ and $\vx^{(1)}$ is already the minimizer):
+if $\vx^{(t)} = \tp{(c\,b,\ \pm c)}$ for a number $c \ne 0$,
+then $s^*$, which depends only on $x_1^2 = c^2 b^2$ and $x_2^2 = c^2$, is again $\tfrac{2}{1 + b}$ (the factor $c^2$ cancels),
+and the step multiplies the first entry by $r$ and the second by $-r$. So
+
+$$
+\vx^{(t)} = \tp{\paren{b\,r^t,\ (-r)^t}},
+\qquad
+f(\vx^{(t)}) = \tfrac{1}{2} (b^2 + b)\,r^{2t} = r^{2t} f(\vx^{(0)}).
+$$
+
+For $b \ne 1$, exactly one entry changes sign at every step:
+the second when $b > 1$ (then $r > 0$), and the first when $b < 1$ (then $r < 0$).
+So the iterates zigzag toward the minimizer $\vzero_{2 \times 1}$.
+
+- With $b = 3$, $r = \tfrac{1}{2}$: $\vx^{(1)} = \tp{(1.5, -0.5)}$ and $\vx^{(2)} = \tp{(0.75, 0.25)}$,
+  and $f$ falls from $6$ to $1.5$ to $0.375$, a quarter at each step.
+- With $b = 1$, $r = 0$ and one step reaches the minimizer.
+- With $b = 0.01$, $r^2 = (0.99 / 1.01)^2 \approx 0.96$, so $f$ shrinks by only about $4\%$ per step.
+  Newton's method reaches the minimizer of any such $f$ in one step (@thm-newton-quadratic).
+
+:::
