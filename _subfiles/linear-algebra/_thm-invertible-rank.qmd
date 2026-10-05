@@ -80,8 +80,8 @@ because a subspace of dimension $0$ has the empty list as a basis, whose span is
 - $\begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$ of @exm-invertible-matrix has rank $2$:
   $c_1 (2, 0) + c_2 (1, 1) = (2c_1 + c_2, c_2)$ is $\vzero$ only if $c_2 = 0$ and then $c_1 = 0$.
   So it is invertible, as that example found by exhibiting the inverse.
-- $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has rank $1$:
-  $(1, -1)$ is in its null space.
+- $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has rank less than $2$:
+  $(1, -1)$ is a nonzero vector in its null space.
   So it is singular, as @exm-invertible-matrix found.
 
 :::

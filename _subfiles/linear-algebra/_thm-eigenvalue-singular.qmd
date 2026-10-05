@@ -17,8 +17,11 @@ For any $\vecf{v} \in \reals^p$,
 $$
 \ba
 (\matr{A} - \lambda\,\matr{I}_p)\,\vecf{v}
+&= \matr{A} \vecf{v} - (\lambda\,\matr{I}_p)\,\vecf{v}
+&& \text{(@thm-scalar-matmul, the difference law)}
+\\
 &= \matr{A} \vecf{v} - \lambda\,(\matr{I}_p \vecf{v})
-&& \text{(@thm-scalar-matmul)}
+&& \text{(@thm-scalar-matmul, the scalar factor)}
 \\
 &= \matr{A} \vecf{v} - \lambda \vecf{v},
 && \text{(@thm-identity)}
@@ -43,7 +46,9 @@ For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$,
 $\matr{A} - 3\,\matr{I}_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}$ is singular
 (its columns are negatives of each other, so its rank is $1$),
 matching the eigenvalue $3$ of @exm-eigenvalue.
-$\matr{A}$ itself has rank $2$, so it is invertible (@thm-invertible-rank),
+$\matr{A}$ itself has rank $2$, since $c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)$
+is $\vzero$ only if $c_1 = c_2 = 0$ (subtract twice the second entry from the first: $-3c_2 = 0$);
+so it is invertible (@thm-invertible-rank),
 and $0$ is not an eigenvalue.
 The singular matrix $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$ has eigenvalue $0$,
 with eigenvector $(1, -1)$.

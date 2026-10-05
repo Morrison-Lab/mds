@@ -23,8 +23,11 @@ $$
 &= \matr{A} \vecf{v} + s\,(\matr{I}_p \vecf{v})
 && \text{(@thm-scalar-matmul)}
 \\
+&= \lambda \vecf{v} + s\,(\matr{I}_p \vecf{v})
+&& \text{(eigenvector)}
+\\
 &= \lambda \vecf{v} + s \vecf{v}
-&& \text{(eigenvector, and @thm-identity)}
+&& \text{(@thm-identity)}
 \\
 &= (\lambda + s)\,\vecf{v}.
 && \text{(add entrywise)}
@@ -67,6 +70,7 @@ In both parts $\vecf{v} \ne \vzero$, so $\vecf{v}$ is an eigenvector.
 For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ with eigenvector $(1, 1)$ for $3$ (@exm-eigenvalue):
 
 - $\matr{A} - 2\,\matr{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ sends $(1, 1)$ to $(1, 1) = (3 - 2)\,(1, 1)$;
-- $\matr{A}^2 = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ sends $(1, 1)$ to $(9, 9) = 3^2\,(1, 1)$.
+- $\matr{A}^2 = \begin{bmatrix} 2 \cd 2 + 1 \cd 1 & 2 \cd 1 + 1 \cd 2 \\ 1 \cd 2 + 2 \cd 1 & 1 \cd 1 + 2 \cd 2 \end{bmatrix}
+  = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$ (@def-matrix-mult) sends $(1, 1)$ to $(9, 9) = 3^2\,(1, 1)$.
 
 :::

@@ -1,5 +1,5 @@
 :::{#thm-eigen-triangular}
-#### The eigenvalues of a triangular matrix are its diagonal entries
+#### The eigenvalues of an upper triangular matrix are its diagonal entries
 
 The eigenvalues (@def-eigenvalue) of an upper triangular $p \times p$ matrix $\matr{U}$
 (@def-triangular-matrix) are exactly its diagonal entries $u_{11}, \ldots, u_{pp}$.
@@ -20,9 +20,22 @@ and $\lambda$ is not an eigenvalue (@thm-eigenvalue-singular).
 let $k$ be the smallest index with $u_{kk} = \lambda$,
 and write $\matr{M} = \matr{U} - \lambda\,\matr{I}_p$, so $m_{kk} = 0$ and $m_{ii} \ne 0$ for $i < k$.
 Look for $\vecf{v}$ with $v_k = 1$ and $v_j = 0$ for $j > k$.
-Row $i$ of $\matr{M} \vecf{v}$ is $\sum_{j=i}^{k} m_{ij}\,v_j$:
+Entry $i$ of $\matr{M} \vecf{v}$ is
 
-- for $i > k$ it is $0$, since every term has $j \le k < i$, where $m_{ij} = 0$;
+$$
+\ba
+\sum_{j=1}^{p} m_{ij}\,v_j
+&= \sum_{j=i}^{p} m_{ij}\,v_j
+&& \text{(} m_{ij} = 0 \text{ for } j < i \text{)}
+\\
+&= \sum_{j=i}^{k} m_{ij}\,v_j,
+&& \text{(} v_j = 0 \text{ for } j > k \text{)}
+\ea
+$$
+
+where the last sum is empty, and so $0$, when $i > k$. So:
+
+- for $i > k$ entry $i$ is $0$;
 - for $i = k$ it is $m_{kk}\,v_k = 0$;
 - for $i < k$ it is $0$ exactly when
   $v_i = -\frac{1}{m_{ii}} \sum_{j=i+1}^{k} m_{ij}\,v_j$,

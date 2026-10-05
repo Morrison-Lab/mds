@@ -10,7 +10,8 @@ So $\matr{A}$ and $\matr{B}$ have the same eigenvalues.
 
 ::: proof
 
-If $\matr{A} \vecf{v} = \lambda \vecf{v}$ with $\vecf{v} \ne \vzero$, let $\vecf{w} = \matr{P}^{-1} \vecf{v}$. Then
+**From $\matr{A}$ to $\matr{B}$.**
+Let $\matr{A} \vecf{v} = \lambda \vecf{v}$ with $\vecf{v} \ne \vzero$, and $\vecf{w} = \matr{P}^{-1} \vecf{v}$. Then
 
 $$
 \ba
@@ -21,22 +22,32 @@ $$
 &= \matr{P}^{-1} \matr{A}\,(\matr{P} \matr{P}^{-1})\,\vecf{v}
 && \text{(@thm-matmul-assoc)}
 \\
-&= \matr{P}^{-1} \matr{A} \vecf{v}
-&& \text{(@def-matrix-inverse, @thm-identity)}
+&= \matr{P}^{-1} \matr{A}\,\matr{I}_p\,\vecf{v}
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{P}^{-1}\,(\matr{A} \vecf{v})
+&& \text{(@thm-identity, @thm-matmul-assoc)}
 \\
 &= \matr{P}^{-1}\,(\lambda \vecf{v})
 && \text{(eigenvector)}
 \\
-&= \lambda\,\vecf{w},
+&= \lambda\,\vecf{w}.
 && \text{(@thm-scalar-matmul)}
 \ea
 $$
 
-and $\vecf{w} \ne \vzero$, since $\matr{P}^{-1}$ is invertible and so has null space $\cb{\vzero}$
-(@thm-invertible-rank).
-For the converse, $\matr{A} = \matr{P} \matr{B} \matr{P}^{-1} = (\matr{P}^{-1})^{-1} \matr{B}\,\matr{P}^{-1}$,
-so the same argument with the roles of $\matr{A}$ and $\matr{B}$ exchanged
-sends an eigenvector $\vecf{w}$ of $\matr{B}$ to the eigenvector $\matr{P} \vecf{w}$ of $\matr{A}$.
+And $\vecf{w} \ne \vzero$: if $\vecf{w} = \vzero$, then
+$\vecf{v} = \matr{I}_p \vecf{v} = \matr{P}\,(\matr{P}^{-1} \vecf{v}) = \matr{P}\,\vzero = \vzero$
+(@thm-identity, @def-matrix-inverse, @thm-matmul-assoc),
+which is false.
+
+**From $\matr{B}$ to $\matr{A}$.**
+By @rem-similar-both-ways, $\matr{A} = \matr{P} \matr{B} \matr{P}^{-1} = (\matr{P}^{-1})^{-1} \matr{B}\,\matr{P}^{-1}$,
+so the first part, with $\matr{P}^{-1}$ in place of $\matr{P}$ and the roles of $\matr{A}$ and $\matr{B}$ exchanged,
+shows that if $\vecf{w} = \matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\lambda$,
+then $\matr{P} \vecf{w}$ is an eigenvector of $\matr{A}$ for $\lambda$;
+and $\matr{P} \vecf{w} = \matr{P} \matr{P}^{-1} \vecf{v} = \vecf{v}$
+(@thm-matmul-assoc, @def-matrix-inverse, @thm-identity).
 
 :::
 
@@ -45,7 +56,8 @@ sends an eigenvector $\vecf{w}$ of $\matr{B}$ to the eigenvector $\matr{P} \vecf
 :::{#exm-similar-eigenvalues}
 #### Eigenvectors carried across a similarity
 
-In @exm-similar, $\matr{B} = \operatorname{diag}(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$.
+In @exm-similar, $\matr{B} = \operatorname{diag}(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$:
+$\operatorname{diag}(3, 1)\,(1, 0) = (3, 0)$ and $\operatorname{diag}(3, 1)\,(0, 1) = (0, 1)$.
 $\matr{P}\,(1, 0) = (1, 1)$ and $\matr{P}\,(0, 1) = (1, -1)$
 are the eigenvectors of $\matr{A}$ for $3$ and $1$ found in @exm-eigenvalue.
 

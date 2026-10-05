@@ -26,8 +26,9 @@ $$
 \ea
 $$
 
-so $(\lambda^2 - \lambda)\,\vecf{v} = \vzero$ with $\vecf{v} \ne \vzero$,
-which forces $\lambda^2 - \lambda = \lambda\,(\lambda - 1) = 0$.
+and subtracting $\lambda \vecf{v}$ from both sides gives $(\lambda^2 - \lambda)\,\vecf{v} = \vzero$.
+Some entry of $\vecf{v}$ is nonzero, so $\lambda^2 - \lambda = \lambda\,(\lambda - 1) = 0$,
+and a product of two numbers is $0$ only when one of them is: $\lambda = 0$ or $\lambda = 1$.
 
 **Part 2.** If $\matr{A}$ is orthogonal, then
 
@@ -45,7 +46,9 @@ $$
 \ea
 $$
 
-and $\norm{\vecf{v}} > 0$ (@thm-norm-properties, part 1), so $\abs{\lambda} = 1$.
+and $\norm{\vecf{v}} > 0$ (@thm-norm-properties, part 1),
+so dividing by $\norm{\vecf{v}}$ gives $\abs{\lambda} = 1$;
+since $\lambda$ is real (@def-eigenvalue), $\lambda = 1$ or $\lambda = -1$.
 
 :::
 
@@ -54,10 +57,11 @@ and $\norm{\vecf{v}} > 0$ (@thm-norm-properties, part 1), so $\abs{\lambda} = 1$
 :::{#exm-eigen-idempotent-orthogonal}
 #### Projections and reflections
 
-- The projection matrix $\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}$ of @exm-hat-matrix
+- The idempotent matrix $\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}$ of @exm-hat-matrix-projection
   sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(0, 0)$: eigenvalues $1$ and $0$.
-- The orthogonal matrix $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$,
-  which swaps the two entries, sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(-1, 1)$:
+- The matrix $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, which swaps the two entries,
+  is orthogonal: its columns $(0, 1)$ and $(1, 0)$ are orthonormal (@rem-orthogonal-matrix-columns).
+  It sends $(1, 1)$ to $(1, 1)$ and $(1, -1)$ to $(-1, 1)$:
   eigenvalues $1$ and $-1$.
 - The rotation $\matr{Q}$ of @exm-orthogonal-matrix has no real eigenvalue.
   By part 2 the only candidates are $\pm 1$.

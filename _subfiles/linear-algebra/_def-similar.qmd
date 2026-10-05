@@ -9,17 +9,65 @@ for some invertible $p \times p$ matrix $\matr{P}$ (@def-invertible-matrix).
 
 {{< slidebreak >}}
 
+:::{#rem-similar-both-ways}
+#### Similarity read both ways
+
+If $\matr{P}$ is invertible, then $\matr{P}^{-1}$ is invertible with inverse $\matr{P}$:
+$\matr{P}^{-1} \matr{P} = \matr{P} \matr{P}^{-1} = \matr{I}_p$ (@def-matrix-inverse)
+is the condition of @def-invertible-matrix for $\matr{P}^{-1}$ with $\matr{P}$ as the other factor,
+and that factor is unique (@rem-invertible-inverse).
+If $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$, then
+
+$$
+\ba
+\matr{P} \matr{B} \matr{P}^{-1}
+&= \matr{P}\,(\matr{P}^{-1} \matr{A} \matr{P})\,\matr{P}^{-1}
+&& \text{(substitute } \matr{B} \text{)}
+\\
+&= (\matr{P} \matr{P}^{-1})\,\matr{A}\,(\matr{P} \matr{P}^{-1})
+&& \text{(@thm-matmul-assoc)}
+\\
+&= \matr{I}_p\,\matr{A}\,\matr{I}_p
+&& \text{(@def-matrix-inverse)}
+\\
+&= \matr{A},
+&& \text{(@thm-identity)}
+\ea
+$$
+
+and the same steps with $\matr{P}$ and $\matr{P}^{-1}$ exchanged turn
+$\matr{A} = \matr{P} \matr{B} \matr{P}^{-1}$ back into $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$.
+So $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$ exactly when $\matr{A} = \matr{P} \matr{B} \matr{P}^{-1}$,
+and similarity goes both ways:
+$\matr{A}$ is similar to $\matr{B}$ through $\matr{P}^{-1}$, whose inverse is $\matr{P}$.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#exm-similar}
 #### A matrix similar to a diagonal one
 
-With $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
-and $\matr{P} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$,
-whose inverse is $\matr{P}^{-1} = \tfrac{1}{2}\,\matr{P}$
-(since $\matr{P}^2 = 2\,\matr{I}_2$):
+Let $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
+and $\matr{P} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$.
+Then
+
+$$
+\matr{P}^2
+= \begin{bmatrix} 1 \cd 1 + 1 \cd 1 & 1 \cd 1 + 1 \cd (-1) \\ 1 \cd 1 + (-1) \cd 1 & 1 \cd 1 + (-1)(-1) \end{bmatrix}
+= 2\,\matr{I}_2
+$$
+
+(@def-matrix-mult), so $\matr{P}\,(\tfrac{1}{2}\,\matr{P}) = \tfrac{1}{2}\,\matr{P}^2 = \matr{I}_2$
+and likewise $(\tfrac{1}{2}\,\matr{P})\,\matr{P} = \matr{I}_2$ (@thm-scalar-matmul):
+$\matr{P}^{-1} = \tfrac{1}{2}\,\matr{P}$ (@def-matrix-inverse). Then
 
 $$
 \ba
 \matr{P}^{-1} \matr{A} \matr{P}
+&= \tfrac{1}{2}\,\matr{P}\,(\matr{A} \matr{P})
+&& \text{(substitute } \matr{P}^{-1} \text{, @thm-scalar-matmul, @thm-matmul-assoc)}
+\\
 &= \tfrac{1}{2} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix}
 && \text{(@def-matrix-mult, for } \matr{A} \matr{P} \text{)}
 \\
@@ -32,7 +80,8 @@ $$
 $$
 
 so $\matr{A}$ is similar to $\operatorname{diag}(3, 1)$.
-The identity matrix is similar only to itself:
-$\matr{P}^{-1} \matr{I}_p \matr{P} = \matr{P}^{-1} \matr{P} = \matr{I}_p$ for every invertible $\matr{P}$.
+In the other direction, the identity matrix is similar only to itself:
+$\matr{P}^{-1} \matr{I}_p \matr{P} = \matr{P}^{-1} \matr{P} = \matr{I}_p$ for every invertible $\matr{P}$
+(@thm-identity, @def-matrix-inverse).
 
 :::
