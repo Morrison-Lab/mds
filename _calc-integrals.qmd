@@ -6,7 +6,11 @@ totals, and probabilities. We begin with antiderivatives, then state
 basic integration rules, and conclude with the Fundamental Theorem of
 Calculus and a worked example from probability.
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-intro-integration.qmd >}}
+
+{{< slidebreak >}}
 
 ### Antiderivatives
 
