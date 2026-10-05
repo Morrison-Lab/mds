@@ -90,6 +90,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./calculus.html" rel="next">
+<link href="./algebra.html" rel="prev">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -103,9 +105,9 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0908243dd1236665f8a6a84d2ce8d983.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-90b0ccabdf50233fb893b00cd6e33405.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-0908243dd1236665f8a6a84d2ce8d983.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -225,15 +227,15 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -245,25 +247,25 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -275,15 +277,15 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -295,15 +297,15 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -315,15 +317,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -360,7 +362,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -540,7 +542,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./notation.html"> 
+    <a class="nav-link active" href="./notation.html" aria-current="page"> 
 <span class="menu-text">Notation</span></a>
   </li>  
   <li class="nav-item">
@@ -552,7 +554,7 @@ window.Quarto = {
 <span class="menu-text">Algebra</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./measures.html" aria-current="page"> 
+    <a class="nav-link" href="./measures.html"> 
 <span class="menu-text">Measures</span></a>
   </li>  
   <li class="nav-item">
@@ -590,10 +592,81 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./measures.html">Measures</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sets-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets and Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algebra</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measures.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Measures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Algebra</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vector Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proof-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -626,7 +699,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-05 04:02:15 (PDT)</p>
+      <p class="date">Last modified: 2026-10-05 13:41:05 (PDT)</p>
     </div>
   </div>
   
@@ -691,6 +764,18 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
 <p><span class="math display">\[\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\]</span></p>
 <p>which contains <span class="math inline">\(D\)</span>, the complement of each of its sets, and every union of its sets: for example, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \cup \mathopen{}\left\{1, 3, 5\right\}\mathclose{} = D\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-not-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (A collection that is not a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The collection <span class="math inline">\(\mathopen{}\left\{\emptyset, \mathopen{}\left\{1\right\}\mathclose{}, D\right\}\mathclose{}\)</span> is not a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>: it contains <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> but not its complement <span class="math inline">\(D \setminus \mathopen{}\left\{1\right\}\mathclose{} = \mathopen{}\left\{2, 3, 4, 5, 6\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -820,7 +905,7 @@ A_1 \cup \cdots \cup A_n
 </div>
 <div class="callout-body-container">
 <div id="exm-pairwise-disjoint" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+<p><span class="theorem-title"><strong>Example 3 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
 </div>
 </div>
 </div>
@@ -848,7 +933,7 @@ A_1 \cup \cdots \cup A_n
 </div>
 <div class="callout-body-container">
 <div id="exm-finite-additivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span>, for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;2</a>), and:</p>
+<p><span class="theorem-title"><strong>Example 4 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span>, for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;3</a>), and:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu(\mathopen{}\left\{1, 2\right\}\mathclose{} \cup \mathopen{}\left\{5, 6\right\}\mathclose{})
@@ -863,6 +948,31 @@ A_1 \cup \cdots \cup A_n
 \end{aligned}
 \]</span></p>
 <p>The same holds for any pairwise disjoint sets, because the sizes of disjoint sets add, so <span class="math inline">\(\mu\)</span> is finitely additive.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-not-finitely-additive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Squaring the count is not finitely additive)</strong></span> On the same <span class="math inline">\(\sigma\)</span>-algebra, let <span class="math inline">\(\nu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}^2\)</span>. The sets <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{2\right\}\mathclose{}\)</span> are pairwise disjoint, but</p>
+<p><span class="math display">\[
+\begin{aligned}
+\nu(\mathopen{}\left\{1\right\}\mathclose{} \cup \mathopen{}\left\{2\right\}\mathclose{})
+&amp;= \nu(\mathopen{}\left\{1, 2\right\}\mathclose{})
+&amp;&amp; \text{(take the union)} \\
+&amp;= 2^2 = 4,
+&amp;&amp; \text{(count, then square)} \\
+\nu(\mathopen{}\left\{1\right\}\mathclose{}) + \nu(\mathopen{}\left\{2\right\}\mathclose{})
+&amp;= 1^2 + 1^2 = 2,
+&amp;&amp; \text{(count each set, then square)}
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(4 \ne 2\)</span>, so <span class="math inline">\(\nu\)</span> is not finitely additive.</p>
 </div>
 </div>
 </div>
@@ -887,7 +997,7 @@ A_1 \cup \cdots \cup A_n
 </div>
 <div class="callout-body-container">
 <div id="exm-countable-additivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
+<p><span class="theorem-title"><strong>Example 6 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;4</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;4</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
 </div>
 </div>
 </div>
@@ -991,7 +1101,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-empty-set-zero" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;4</a> is countably additive, and:</p>
+<p><span class="theorem-title"><strong>Example 7 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;6</a> is countably additive, and:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu(\emptyset)
@@ -1012,7 +1122,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-empty-set-infinity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
+<p><span class="theorem-title"><strong>Example 8 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
@@ -1042,7 +1152,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="rem-empty-set-requirement" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;5</a> and <a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;6</a> show that both values allowed by <a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
+<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;7</a> and <a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;8</a> show that both values allowed by <a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
 </div>
 </div>
 </div>
@@ -1097,7 +1207,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-finite-not-countable" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
+<p><span class="theorem-title"><strong>Example 9 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
 <p><span class="math display">\[
 \mu(A) \stackrel{\text{def}}{=}\begin{cases}
 0 &amp; \text{if } A \text{ is finite} \\
@@ -1159,7 +1269,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="rem-finite-not-countable-converse" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> shows that the converse of <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
+<p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;9</a> shows that the converse of <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;9</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
 </div>
 </div>
 </div>
@@ -1190,7 +1300,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;4</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
+<p><span class="theorem-title"><strong>Example 10 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;4</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;6</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
 </div>
 </div>
 </div>
@@ -1250,7 +1360,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-counting-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees: <span class="math inline">\(\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{2k\right\}\mathclose{}) = 1 + 1 + \cdots = \infty\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 11 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees: <span class="math inline">\(\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{2k\right\}\mathclose{}) = 1 + 1 + \cdots = \infty\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1517,6 +1627,154 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<!--
+Page-navigation helpers for the HTML format, included after the body of every
+page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
+
+1. Navbar highlighting.
+Quarto marks as active the first top-level navbar link whose target also
+appears in the sidebar. Every navbar link is in the sidebar, so "Notation"
+would be highlighted on every page. The script below instead highlights the navbar
+link (or the dropdown holding the link) for the current page.
+
+2. Floating previous/next arrows in the page margins.
+Quarto has no built-in option for these, so this script copies the
+previous/next links that `page-navigation: true` puts at the foot of each
+page into two fixed-position tabs. The links follow the sidebar order.
+Each tab sits in empty space so that it never covers, or takes clicks from,
+the text, the sidebar, or the table of contents:
+
+- previous: in the gutter between the docked sidebar and the page text;
+- next: in the right margin when the window is wide enough, otherwise in the
+  gutter between the page text and the table of contents.
+
+Both are hidden below Bootstrap's large breakpoint, where the sidebar
+collapses and there is no gutter to put them in.
+-->
+<style>
+.page-nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Narrow enough to fit the ~25px gutters beside the page text; px, not
+     rem, because the theme's rem is about 17px. */
+  width: 20px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  /* Muted but fully opaque when idle: opacity would also fade the border and
+     icon below the 3:1 contrast that controls need (WCAG 1.4.11). */
+  color: var(--bs-secondary-color, var(--bs-body-color));
+  background-color: var(--bs-body-bg);
+  /* currentColor, because darkly does not redefine --bs-border-color. */
+  border: 1px solid currentColor;
+  transition: color 0.15s ease-in-out;
+}
+.page-nav-arrow:hover,
+.page-nav-arrow:focus-visible {
+  color: var(--bs-link-color);
+}
+@media (max-width: 991.98px) {
+  .page-nav-arrow { display: none; }
+}
+@media print {
+  .page-nav-arrow { display: none; }
+}
+</style>
+<script>
+// This file is included at the end of <body>, so the navbar already exists.
+// Run straight away rather than on DOMContentLoaded, so that the wrong
+// highlight is never painted and then faded out by Bootstrap's transition.
+(function () {
+  // GitHub Pages serves /x, /x.html, / and /index.html, so compare paths
+  // without the "index.html" or ".html" ending.
+  // Links to other sites (e.g. a GitHub icon) never match the current page.
+  const norm = function (u) {
+    const url = new URL(u, location.href);
+    if (url.origin !== location.origin) return null;
+    return url.pathname
+      .replace(/index\.html$/, "")
+      .replace(/\.html$/, "");
+  };
+  document.querySelectorAll("#quarto-header .navbar-nav > .nav-item").forEach(
+    function (item) {
+      const toggle = item.querySelector(":scope > a.nav-link");
+      if (!toggle) return;
+      const targets = [toggle, ...item.querySelectorAll("a.dropdown-item")];
+      const match = targets.find(function (a) {
+        return a.getAttribute("href") && !a.classList.contains("dropdown-toggle") &&
+          norm(a.href) === norm(location.href);
+      });
+      // The top-level item is highlighted, but aria-current goes on the link
+      // for this page itself, not on a dropdown toggle that only holds it.
+      toggle.classList.toggle("active", Boolean(match));
+      targets.forEach(function (a) {
+        if (a === match) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+    }
+  );
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav.page-navigation");
+  if (!nav) return;
+
+  const make = function (dir, icon) {
+    const link = nav.querySelector(".nav-page-" + dir + " a.pagination-link");
+    if (!link) return null;
+    const title = link.querySelector(".nav-page-text")?.textContent.trim() || dir;
+    const arrow = document.createElement("a");
+    arrow.href = link.getAttribute("href");
+    arrow.className = "page-nav-arrow page-nav-arrow-" + dir;
+    arrow.title = (dir === "previous" ? "Previous: " : "Next: ") + title;
+    arrow.setAttribute("aria-label", arrow.title);
+    arrow.innerHTML = '<i class="bi ' + icon + '" aria-hidden="true"></i>';
+    document.body.appendChild(arrow);
+    return arrow;
+  };
+  const prev = make("previous", "bi-chevron-left");
+  const next = make("next", "bi-chevron-right");
+
+  const box = function (selector) {
+    const el = document.querySelector(selector);
+    if (!el || el.offsetWidth === 0) return null;
+    return el.getBoundingClientRect();
+  };
+  // Left edge that centres an arrow between x = from and x = to.
+  const centre = function (arrow, from, to) {
+    return (from + to - arrow.offsetWidth) / 2 + "px";
+  };
+
+  function place() {
+    const main = box("main.content");
+    if (!main) return;
+    if (prev) {
+      const sidebar = box("#quarto-sidebar");
+      prev.style.left = centre(prev, sidebar ? sidebar.right : 0, main.left);
+    }
+    if (next) {
+      const margin = box("#quarto-margin-sidebar");
+      const viewport = document.documentElement.clientWidth;
+      if (!margin) {
+        next.style.left = centre(next, main.right, viewport);
+      } else if (viewport - margin.right >= next.offsetWidth + 16) {
+        next.style.left = centre(next, margin.right, viewport);
+      } else {
+        next.style.left = centre(next, main.right, margin.left);
+      }
+    }
+  }
+  place();
+  window.addEventListener("resize", place);
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1982,7 +2240,19 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./algebra.html" class="pagination-link" aria-label="Algebra">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Algebra</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./calculus.html" class="pagination-link" aria-label="Calculus">
+        <span class="nav-page-text">Calculus</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Measures"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>

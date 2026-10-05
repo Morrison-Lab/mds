@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 04:02:15 (PDT)
+Last modified: 2026-10-05 13:41:05 (PDT)
 
 > **NOTE:**
 >
@@ -62,7 +62,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Superset and subset). \\B \supseteq A\\ means the same thing as \\A \subseteq B\\ ([subset](#def-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supseteq \mathopen{}\left\\1, 3\right\\\mathclose{}\\, and \\\mathopen{}\left\\1, 3\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\.
+> *Remark 3* (Superset and subset). \\B \supseteq A\\ means the same thing as \\A \subseteq B\\ ([subset](#def-subset)). For example, \\\mathopen{}\left\\1, 2, 3\right\\\mathclose{} \supseteq \mathopen{}\left\\1, 3\right\\\mathclose{}\\, and \\\mathopen{}\left\\1, 3\right\\\mathclose{} \subseteq \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\. But \\\mathopen{}\left\\1, 3\right\\\mathclose{}\\ is not a superset of \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\, because \\2 \in \mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\2 \notin \mathopen{}\left\\1, 3\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -78,7 +78,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 >
 > - \\A \subsetneq B\\, because \\A \subseteq B\\ ([Example 3](#exm-subset)) and \\1 \in B\\ but \\1 \notin A\\, so \\A \neq B\\;
 > - \\B \supseteq A\\ and \\B \supsetneq A\\, for the same reasons;
-> - \\B \subseteq B\\, but \\B\\ is not a strict subset of itself, because \\B = B\\.
+> - \\B \subseteq B\\, but \\B\\ is not a strict subset of itself, because \\B = B\\; likewise \\B \supseteq B\\, but \\B\\ is not a strict superset of itself, because \\B = B\\.
 
 > **NOTE:**
 >

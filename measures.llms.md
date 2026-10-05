@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 04:02:15 (PDT)
+Last modified: 2026-10-05 13:41:05 (PDT)
 
 > **NOTE:**
 >
@@ -31,6 +31,10 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 > \\\mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\
 >
 > which contains \\D\\, the complement of each of its sets, and every union of its sets: for example, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \cup \mathopen{}\left\\1, 3, 5\right\\\mathclose{} = D\\.
+
+> **NOTE:**
+>
+> **Example 2 (A collection that is not a \\\sigma\\-algebra)** The collection \\\mathopen{}\left\\\emptyset, \mathopen{}\left\\1\right\\\mathclose{}, D\right\\\mathclose{}\\ is not a \\\sigma\\-algebra on \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\: it contains \\\mathopen{}\left\\1\right\\\mathclose{}\\ but not its complement \\D \setminus \mathopen{}\left\\1\right\\\mathclose{} = \mathopen{}\left\\2, 3, 4, 5, 6\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -82,7 +86,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (Low and high die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), the sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint: no roll is in both. The sets \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are not, because \\2\\ is in both.
+> **Example 3 (Low and high die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), the sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint: no roll is in both. The sets \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ are not, because \\2\\ is in both.
 
 ## 3 Additivity
 
@@ -94,11 +98,19 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 3 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\, for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 2](#exm-pairwise-disjoint)), and:
+> **Example 4 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\, for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 3](#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu(\mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\5, 6\right\\\mathclose{}) &= \mu(\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu(\mathopen{}\left\\1, 2\right\\\mathclose{}) + \mu(\mathopen{}\left\\5, 6\right\\\mathclose{}) && \text{(count each set's elements)} \end{aligned} \\
 >
 > The same holds for any pairwise disjoint sets, because the sizes of disjoint sets add, so \\\mu\\ is finitely additive.
+
+> **NOTE:**
+>
+> **Example 5 (Squaring the count is not finitely additive)** On the same \\\sigma\\-algebra, let \\\nu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}^2\\. The sets \\\mathopen{}\left\\1\right\\\mathclose{}\\ and \\\mathopen{}\left\\2\right\\\mathclose{}\\ are pairwise disjoint, but
+>
+> \\ \begin{aligned} \nu(\mathopen{}\left\\1\right\\\mathclose{} \cup \mathopen{}\left\\2\right\\\mathclose{}) &= \nu(\mathopen{}\left\\1, 2\right\\\mathclose{}) && \text{(take the union)} \\ &= 2^2 = 4, && \text{(count, then square)} \\ \nu(\mathopen{}\left\\1\right\\\mathclose{}) + \nu(\mathopen{}\left\\2\right\\\mathclose{}) &= 1^2 + 1^2 = 2, && \text{(count each set, then square)} \end{aligned} \\
+>
+> and \\4 \ne 2\\, so \\\nu\\ is not finitely additive.
 
 > **NOTE:**
 >
@@ -108,7 +120,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 4 (Counting elements is countably additive)** For the counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 3](#exm-finite-additivity), take any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\. No two of them share an element, and \\D\\ has only six elements, so at most six of the \\A_i\\ contain any elements; the rest are \\\emptyset\\, with \\\mu(\emptyset) = 0\\. The infinite sum therefore has at most six nonzero terms, and finite additivity ([Example 3](#exm-finite-additivity)) shows that those terms add up to \\\mu\\ of the union. So \\\mu\\ is countably additive.
+> **Example 6 (Counting elements is countably additive)** For the counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 4](#exm-finite-additivity), take any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\. No two of them share an element, and \\D\\ has only six elements, so at most six of the \\A_i\\ contain any elements; the rest are \\\emptyset\\, with \\\mu(\emptyset) = 0\\. The infinite sum therefore has at most six nonzero terms, and finite additivity ([Example 4](#exm-finite-additivity)) shows that those terms add up to \\\mu\\ of the union. So \\\mu\\ is countably additive.
 
 > **NOTE:**
 >
@@ -140,13 +152,13 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 5 (A countably additive function with \\\mu(\emptyset) = 0\\)** The counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 4](#exm-countable-additivity) is countably additive, and:
+> **Example 7 (A countably additive function with \\\mu(\emptyset) = 0\\)** The counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 6](#exm-countable-additivity) is countably additive, and:
 >
 > \\ \begin{aligned} \mu(\emptyset) &= \mathopen{}\left\|\emptyset\right\|\mathclose{} && \text{(definition of } \mu \text{)} \\ &= 0 && \text{(} \emptyset \text{ has no elements)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 6 (A countably additive function with \\\mu(\emptyset) = \infty\\)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\infty\\ for every set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), including \\A = \emptyset\\. For any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\, the left-hand side of the countable additivity equation is:
+> **Example 8 (A countably additive function with \\\mu(\emptyset) = \infty\\)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\infty\\ for every set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), including \\A = \emptyset\\. For any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\, the left-hand side of the countable additivity equation is:
 >
 > \\ \begin{aligned} \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) &= \infty && \text{(definition of } \mu \text{)} \end{aligned} \\
 >
@@ -158,7 +170,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (\\\mu(\emptyset) = 0\\ is an extra requirement). [Example 5](#exm-empty-set-zero) and [Example 6](#exm-empty-set-infinity) show that both values allowed by [Lemma 2](#lem-countable-additivity-empty) occur for countably additive functions. So \\\mu(\emptyset) = 0\\ is an extra requirement, not a consequence of countable additivity.
+> *Remark 4* (\\\mu(\emptyset) = 0\\ is an extra requirement). [Example 7](#exm-empty-set-zero) and [Example 8](#exm-empty-set-infinity) show that both values allowed by [Lemma 2](#lem-countable-additivity-empty) occur for countably additive functions. So \\\mu(\emptyset) = 0\\ is an extra requirement, not a consequence of countable additivity.
 
 > **NOTE:**
 >
@@ -172,7 +184,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (Finitely additive but not countably additive)** Let \\S = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, with the \\\sigma\\-algebra of all subsets of \\S\\ ([Theorem 2](#thm-power-set-sigma-algebra)), and define:
+> **Example 9 (Finitely additive but not countably additive)** Let \\S = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, with the \\\sigma\\-algebra of all subsets of \\S\\ ([Theorem 2](#thm-power-set-sigma-algebra)), and define:
 >
 > \\ \mu(A) \stackrel{\text{def}}{=}\begin{cases} 0 & \text{if } A \text{ is finite} \\ \infty & \text{if } A \text{ is infinite} \end{cases} \\
 >
@@ -194,7 +206,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Finite additivity does not imply countable additivity). [Example 7](#exm-finite-not-countable) shows that the converse of [Theorem 3](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 7](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
+> *Remark 5* (Finite additivity does not imply countable additivity). [Example 9](#exm-finite-not-countable) shows that the converse of [Theorem 3](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 9](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
 
 ## 4 Measures
 
@@ -207,7 +219,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 8 (Counting elements is a measure)** The counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 3](#exm-finite-additivity), defined on the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), takes values in \\\[0, \infty\]\\, is countably additive ([Example 4](#exm-countable-additivity)), and gives \\\mu(\emptyset) = 0\\, so it is a measure.
+> **Example 10 (Counting elements is a measure)** The counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 4](#exm-finite-additivity), defined on the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), takes values in \\\[0, \infty\]\\, is countably additive ([Example 6](#exm-countable-additivity)), and gives \\\mu(\emptyset) = 0\\, so it is a measure.
 
 > **NOTE:**
 >
@@ -225,7 +237,7 @@ Last modified: 2026-10-05 04:02:15 (PDT)
 
 > **NOTE:**
 >
-> **Example 9 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees: \\\sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) = 1 + 1 + \cdots = \infty\\.
+> **Example 11 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees: \\\sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) = 1 + 1 + \cdots = \infty\\.
 
 > **NOTE:**
 >

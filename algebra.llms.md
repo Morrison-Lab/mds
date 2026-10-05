@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 04:02:15 (PDT)
+Last modified: 2026-10-05 13:41:05 (PDT)
 
 ## 1 Equalities
 
@@ -73,6 +73,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
+> **Example 1 (A maximum, and a set without one)**  
+>
+> - \\\max \mathopen{}\left\\-2, 5, 0\right\\\mathclose{} = 5\\: \\5\\ is in the set, and \\-2 \le 5\\, \\5 \le 5\\, \\0 \le 5\\.
+> - The interval \\\[0, 1)\\ has no maximum. For any \\a \in \[0, 1)\\, the number \\\tfrac{a + 1}{2}\\ is also in \\\[0, 1)\\, and it is larger than \\a\\, since \\\tfrac{a + 1}{2} \> a\\ exactly when \\a \< 1\\. So no element of \\\[0, 1)\\ is at least as large as every element.
+
+> **NOTE:**
+>
 > **Definition 3 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
 >
 > \\\arg \min\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(x) \le f(a)\right\\\mathclose{}\\
@@ -92,6 +99,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > \\\arg \max\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(a) \le f(x)\right\\\mathclose{}\\
 >
 > When this set has exactly one element \\\hat{x}\\, we write \\\hat{x} = \arg \max\_{x \in A} f(x)\\.
+
+> **NOTE:**
+>
+> **Example 2 (An argmax with two points, and an empty one)**  
+>
+> - Let \\g(x) = x^2\\ on \\A = \mathopen{}\left\\-2, 0, 1, 2\right\\\mathclose{}\\. The values are \\g(-2) = 4\\, \\g(0) = 0\\, \\g(1) = 1\\ and \\g(2) = 4\\, so the largest value is \\4\\ and \\\arg \max\_{x \in A} g(x) = \mathopen{}\left\\-2, 2\right\\\mathclose{}\\. This argmax has two elements, so it is not written as a single \\\hat{x}\\.
+> - Let \\f(x) = x\\ on \\\[0, 1)\\. As in [Example 1](#exm-maximum), for every input \\x\\ the input \\\tfrac{x + 1}{2}\\ has a larger value, so no input attains a largest value, and \\\arg \max\_{x \in \[0, 1)} f(x)\\ is the [empty set](sets-functions.llms.md#def-empty-set).
 
 ## 4 Global and local minimizers
 
@@ -138,6 +152,14 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > The converse fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta = 1\\), but not a global one.
 
+> **NOTE:**
+>
+> **Example 3 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
+>
+> \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(distribute)} \\ &= 2 - 3t^2 + t^3 && \text{(collect terms)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) = 2 \text{)} \end{aligned} \\
+>
+> and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta \> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta / 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example, \\f(-0.9) = -0.729 + 2.7 = 1.971 \< 2\\.
+
 ## 5 Convex functions
 
 > **NOTE:**
@@ -170,13 +192,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 1 (A function that is not convex)** The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\\, where the graph has height \\f(-1) = -1 + 3 = 2\\, but the chord has height \\\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 = -1\\, and \\2 \le -1\\ is false.
+> **Example 4 (A function that is not convex)** The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\\, where the graph has height \\f(-1) = -1 + 3 = 2\\, but the chord has height \\\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 = -1\\, and \\2 \le -1\\ is false.
 
 > **NOTE:**
 >
-> **Example 2 (A convex and a non-convex function)** \\f(x) = (x - 2)^2\\ is convex ([Definition 7](#def-convex-function)): by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\. Its local minimizer \\x^\* = 2\\ is also a global minimizer, since \\f(x) = (x - 2)^2 \ge 0 = f(2)\\ for every \\x\\.
+> **Example 5 (A convex and a non-convex function)** \\f(x) = (x - 2)^2\\ is convex ([Definition 7](#def-convex-function)): by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\. Its local minimizer \\x^\* = 2\\ is also a global minimizer, since \\f(x) = (x - 2)^2 \ge 0 = f(2)\\ for every \\x\\.
 >
-> Without convexity, a local minimizer need not be global: \\f(x) = x^3 - 3x\\ is not convex ([Example 1](#exm-cubic-not-convex)), and it has a local minimizer at \\x^\* = 1\\ that is not global ([Exercise 2](#exr-local-vs-global-min)).
+> Without convexity, a local minimizer need not be global: \\f(x) = x^3 - 3x\\ is not convex ([Example 4](#exm-cubic-not-convex)), and it has a local minimizer at \\x^\* = 1\\ that is not global ([Exercise 2](#exr-local-vs-global-min)).
 
 > **NOTE:**
 >
@@ -208,7 +230,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 3 (Numerical examples of infimum)**  
+> **Example 6 (Numerical examples of infimum)**  
 >
 > - \\\inf\\1, 2, 3\\ = 1\\, since \\1\\ is the smallest element.
 > - \\\inf(0.5, 1\] = 0.5 = \min\[0.5, 1\]\\: for intervals open below, the infimum equals the minimum of the corresponding closed-below interval, even though \\0.5 \notin (0.5, 1\]\\. More generally, \\\inf(c, b\] = \min\[c, b\] = c\\ for any \\c \< b\\.
@@ -231,7 +253,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 4 (Numerical examples of supremum)**  
+> **Example 7 (Numerical examples of supremum)**  
 >
 > - \\\sup\\1, 2, 3\\ = 3\\, since \\3\\ is the largest element.
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
@@ -255,7 +277,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 5 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
+> **Example 8 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
 
 ## 8 Products
 
@@ -442,7 +464,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 6 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 13](#def-quotient) requires a nonzero denominator.
+> **Example 9 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 13](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
@@ -458,6 +480,13 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
+> **Example 10 (A ratio, and a quotient that is not one)**  
+>
+> - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
+> - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
+
+> **NOTE:**
+>
 > **Definition 17 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
@@ -466,7 +495,21 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
+> **Example 11 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+>
+> - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
+> - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
+
+> **NOTE:**
+>
 > **Definition 18 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+
+> **NOTE:**
+>
+> **Example 12 (Proportional and non-proportional functions)**  
+>
+> - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{6x^2}{2x^2} = 3\\, which does not depend on \\x\\.
+> - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{x + 1}{x} = \tfrac{x}{x} + \tfrac{1}{x} = 1 + \tfrac{1}{x}\\, which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
@@ -501,7 +544,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 7 (Degrees of some polynomials)**  
+> **Example 13 (Degrees of some polynomials)**  
 >
 > - \\f(x) = 4x\\ has degree \\1\\.
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\: the degree is the highest power with a nonzero coefficient, not the power in the first term written.
@@ -513,7 +556,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 8 (Leading coefficients)**  
+> **Example 14 (Leading coefficients)**  
 >
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\, so its leading coefficient is \\a_3 = 1\\, not the \\5\\ written first.
 > - \\f(x) = 3 - x^2\\ has leading coefficient \\a_2 = -1\\.
@@ -563,7 +606,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 9 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 15 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
@@ -573,7 +616,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 10 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 16 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
@@ -583,7 +626,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 11 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 17 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >

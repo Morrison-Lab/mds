@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 04:02:15 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 13:41:05 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -324,6 +324,12 @@
 <p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
 <p><span class="math display">\[\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\]</span></p>
 <p>which contains <span class="math inline">\(D\)</span>, the complement of each of its sets, and every union of its sets: for example, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \cup \mathopen{}\left\{1, 3, 5\right\}\mathclose{} = D\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-not-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (A collection that is not a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The collection <span class="math inline">\(\mathopen{}\left\{\emptyset, \mathopen{}\left\{1\right\}\mathclose{}, D\right\}\mathclose{}\)</span> is not a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>: it contains <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> but not its complement <span class="math inline">\(D \setminus \mathopen{}\left\{1\right\}\mathclose{} = \mathopen{}\left\{2, 3, 4, 5, 6\right\}\mathclose{}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -390,7 +396,7 @@ A_1 \cup \cdots \cup A_n
 <section class="slide level2">
 
 <div id="exm-pairwise-disjoint" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+<p><span class="theorem-title"><strong>Example 3 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
 </div>
 </section>
 <section id="additivity" class="slide level2" data-number="3">
@@ -403,7 +409,7 @@ A_1 \cup \cdots \cup A_n
 <section class="slide level2">
 
 <div id="exm-finite-additivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span>, for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#/exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;2</a>), and:</p>
+<p><span class="theorem-title"><strong>Example 4 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span>, for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#/exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;3</a>), and:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu(\mathopen{}\left\{1, 2\right\}\mathclose{} \cup \mathopen{}\left\{5, 6\right\}\mathclose{})
@@ -422,6 +428,25 @@ A_1 \cup \cdots \cup A_n
 </section>
 <section class="slide level2">
 
+<div id="exm-not-finitely-additive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Squaring the count is not finitely additive)</strong></span> On the same <span class="math inline">\(\sigma\)</span>-algebra, let <span class="math inline">\(\nu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}^2\)</span>. The sets <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{2\right\}\mathclose{}\)</span> are pairwise disjoint, but</p>
+<p><span class="math display">\[
+\begin{aligned}
+\nu(\mathopen{}\left\{1\right\}\mathclose{} \cup \mathopen{}\left\{2\right\}\mathclose{})
+&amp;= \nu(\mathopen{}\left\{1, 2\right\}\mathclose{})
+&amp;&amp; \text{(take the union)} \\
+&amp;= 2^2 = 4,
+&amp;&amp; \text{(count, then square)} \\
+\nu(\mathopen{}\left\{1\right\}\mathclose{}) + \nu(\mathopen{}\left\{2\right\}\mathclose{})
+&amp;= 1^2 + 1^2 = 2,
+&amp;&amp; \text{(count each set, then square)}
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(4 \ne 2\)</span>, so <span class="math inline">\(\nu\)</span> is not finitely additive.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-countable-additivity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Countable additivity)</strong></span> Let <span class="math inline">\(\mathscr{S}\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#/def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, the value of their union is the sum of their values:</p>
 <p><span class="math display">\[\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)\]</span></p>
@@ -430,7 +455,7 @@ A_1 \cup \cdots \cup A_n
 <section class="slide level2">
 
 <div id="exm-countable-additivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
+<p><span class="theorem-title"><strong>Example 6 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;4</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;4</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -480,7 +505,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="exm-empty-set-zero" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-countable-additivity" class="quarto-xref">Example&nbsp;4</a> is countably additive, and:</p>
+<p><span class="theorem-title"><strong>Example 7 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-countable-additivity" class="quarto-xref">Example&nbsp;6</a> is countably additive, and:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu(\emptyset)
@@ -495,7 +520,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="exm-empty-set-infinity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
+<p><span class="theorem-title"><strong>Example 8 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
@@ -519,7 +544,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="rem-empty-set-requirement" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#/exm-empty-set-zero" class="quarto-xref">Example&nbsp;5</a> and <a href="#/exm-empty-set-infinity" class="quarto-xref">Example&nbsp;6</a> show that both values allowed by <a href="#/lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
+<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#/exm-empty-set-zero" class="quarto-xref">Example&nbsp;7</a> and <a href="#/exm-empty-set-infinity" class="quarto-xref">Example&nbsp;8</a> show that both values allowed by <a href="#/lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -547,7 +572,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="exm-finite-not-countable" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#/thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
+<p><span class="theorem-title"><strong>Example 9 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#/thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
 <p><span class="math display">\[
 \mu(A) \stackrel{\text{def}}{=}\begin{cases}
 0 &amp; \text{if } A \text{ is finite} \\
@@ -603,7 +628,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="rem-finite-not-countable-converse" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#/exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> shows that the converse of <a href="#/thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#/exm-finite-not-countable" class="quarto-xref">Example&nbsp;7</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
+<p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#/exm-finite-not-countable" class="quarto-xref">Example&nbsp;9</a> shows that the converse of <a href="#/thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;3</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#/exm-finite-not-countable" class="quarto-xref">Example&nbsp;9</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
 </div>
 </section>
 <section id="measures" class="slide level2" data-number="4">
@@ -619,7 +644,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="exm-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;3</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#/exm-countable-additivity" class="quarto-xref">Example&nbsp;4</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
+<p><span class="theorem-title"><strong>Example 10 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#/exm-finite-additivity" class="quarto-xref">Example&nbsp;4</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#/exm-countable-additivity" class="quarto-xref">Example&nbsp;6</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -646,7 +671,7 @@ s_{n+1}
 <section class="slide level2">
 
 <div id="exm-counting-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees: <span class="math inline">\(\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{2k\right\}\mathclose{}) = 1 + 1 + \cdots = \infty\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 11 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees: <span class="math inline">\(\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{2k\right\}\mathclose{}) = 1 + 1 + \cdots = \infty\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
