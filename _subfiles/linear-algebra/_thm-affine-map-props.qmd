@@ -6,15 +6,29 @@
 2. An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ is linear (@def-linear-map)
    if and only if $\vec{b} = \vzero$.
 3. Every linear map is affine.
+4. An affine map determines its matrix and offset:
+   if also $f(\vx) = \matr{A}'\vx + \vec{b}'$ for all $\vx$,
+   then $\matr{A}' = \matr{A}$ and $\vec{b}' = \vec{b}$.
 
 :::
 
 ::: proof
 
-**Part 1.** By @def-matvec-mult, entry $i$ of $\matr{A}\vzero$ is
-$\sum_{j=1}^{p} a_{ij} \cd 0$,
-a sum of $p$ zeros, which is $0$;
-so $\matr{A}\vzero = \vzero$. Then
+**Part 1.** First, $\matr{A}\vzero = \vzero$: for each $i$,
+
+$$
+\ba
+(\matr{A}\vzero)_i
+&= \sum_{j=1}^{p} a_{ij} \cd 0
+&& \text{(@def-matvec-mult)}
+\\&= \sum_{j=1}^{p} 0
+&& \text{(any number times } 0 \text{ is } 0 \text{)}
+\\&= 0
+&& \text{(a sum of zeros is } 0 \text{)}
+\ea
+$$
+
+Then
 
 $$
 \ba
@@ -40,6 +54,13 @@ If $f$ is linear, @thm-linear-map-matrix gives a matrix $\matr{A}$
 with $f(\vx) = \matr{A}\vx = \matr{A}\vx + \vzero$,
 which is @def-affine-map with $\vec{b} = \vzero$.
 
+**Part 4.**
+By part 1, applied to each formula, $\vec{b} = f(\vzero) = \vec{b}'$.
+Then $\matr{A}\vx = f(\vx) - \vec{b} = \matr{A}'\vx$ for all $\vx$,
+so $\matr{A}$ and $\matr{A}'$ are both matrices of the linear map
+$\vx \mapsto f(\vx) - \vec{b}$ (linear by @thm-matrix-map-linear),
+and the uniqueness in @thm-linear-map-matrix gives $\matr{A}' = \matr{A}$.
+
 :::
 
 {{< slidebreak >}}
@@ -50,18 +71,23 @@ which is @def-affine-map with $\vec{b} = \vzero$.
 This site uses "linear" only in the sense of @def-linear-map,
 so by @thm-affine-map-props a function with a nonzero offset is affine but not linear.
 For functions of one variable, this is the same split as
-[affine](algebra.qmd#def-affine-function) $mx + b$
-versus [linear](algebra.qmd#def-linear-function) $mx$
+[affine](algebra.qmd#def-affine-function) $a x + b$
+versus [linear](algebra.qmd#def-linear-function) $a x$
 on the algebra page.
+(The algebra page writes these as $m x + b$ and $m x$;
+here $m$ already names the number of outputs.)
 
 Machine learning and statistics often call any function of the form
 @eq-linear-scalar "linear",
 as in a *linear layer* of a neural network or a *linear model*,
 and call the offset $b$ the **bias** (machine learning)
 or the **intercept** (statistics).
-A model with an intercept is affine in $\vx$,
-but it is linear in its coefficients $(b, \vec{w})$:
-appending a constant $1$ to $\vx$ makes $b$ the coefficient on that entry,
-and that is the sense of "linear" in "linear model".
+A model with an intercept is affine in $\vx$
+but linear in its coefficients $(b, \vec{w})$,
+and that is the sense of "linear" in "linear model":
+it stays linear in the coefficients even when the inputs are transformed,
+as in polynomial regression.
+Appending a constant $1$ to $\vx$ also makes the model linear in the augmented input,
+with $b$ as the coefficient on that entry.
 
 :::

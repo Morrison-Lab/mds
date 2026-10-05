@@ -6,7 +6,7 @@ is **affine** if there are numbers $m$ and $b$ such that
 
 $$f(x) = m x + b \quad \text{for all } x \in \reals$$
 
-The number $m$ is the **slope** of $f$,
-and the number $b$ is its **intercept**.
+In this formula, $m$ is called the **slope** of $f$
+and $b$ its **intercept**.
 
 :::

@@ -56,8 +56,12 @@ $$
 && \text{(assumption on } \matr{B} \text{)}
 \\&= \sum_{k=1}^{p} b_{ik} (\vecf{e}_j)_k
 && \text{(@def-matvec-mult)}
+\\&= b_{ij} \cd 1 + \sum_{k \neq j} b_{ik} \cd 0
+&& \text{(@def-indicator-vector, splitting off the } k = j \text{ term)}
+\\&= b_{ij} + 0
+&& \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)}
 \\&= b_{ij}
-&& \text{(only the } k = j \text{ term is nonzero; @def-indicator-vector)}
+&& \text{(adding } 0 \text{ changes nothing)}
 \ea
 $$
 

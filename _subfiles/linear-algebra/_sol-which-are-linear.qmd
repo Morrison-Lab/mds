@@ -16,7 +16,7 @@
     as a function of the single variable $\vec w$ it is quadratic.
 5.  **Affine, not linear.** It is @eq-linear-scalar with coefficient vector
     $\vec a = (x_1, 0, \dots, 0)^\top$ and $b = 3$;
-    at $\vec w = \vzero$ it equals $3 \ne 0$, so it is not linear (@thm-affine-map-props).
+    at $\vec w = \vzero$ it equals $3 \ne 0$, so it is not linear (@thm-linear-map-zero).
     The data $\vec x$ is untouched --- $\vec a$ is a new vector built from
     its first entry.
 

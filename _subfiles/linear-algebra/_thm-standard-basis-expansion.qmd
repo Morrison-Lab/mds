@@ -25,8 +25,12 @@ $$
    x_j \cd 0 & \text{if } j \neq i
    \end{cases}
 && \text{(@def-indicator-vector)}
+\\&= x_i \cd 1 + \sum_{j \neq i} x_j \cd 0
+&& \text{(split off the } j = i \text{ term)}
+\\&= x_i + 0
+&& \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)}
 \\&= x_i
-&& \text{(only the } j = i \text{ term is nonzero)}
+&& \text{(adding } 0 \text{ changes nothing)}
 \ea
 $$
 

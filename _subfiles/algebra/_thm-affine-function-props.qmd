@@ -7,6 +7,8 @@ Let $f(x) = m x + b$ be an affine function (@def-affine-function).
 2. The slope is the change in $f$ per unit change in $x$:
    for any $x_1 \neq x_2$,
    $$\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m$$
+3. So $f$ determines its slope and intercept:
+   if also $f(x) = m' x + b'$ for all $x$, then $m' = m$ and $b' = b$.
 
 :::
 
@@ -36,15 +38,21 @@ f(x_2) - f(x_1)
 &= (m x_2 + b) - (m x_1 + b)
 && \text{(@def-affine-function)}
 \\&= m x_2 + b - m x_1 - b
-&& \text{(remove the parentheses)}
-\\&= m x_2 - m x_1 + (b - b)
-&& \text{(reorder and group the terms)}
-\\&= m x_2 - m x_1 + 0
+&& \text{(subtracting a sum subtracts each term)}
+\\&= m x_2 - m x_1 + b - b
+&& \text{(@thm-sum-symmetric, swapping } b \text{ and } {-m x_1} \text{)}
+\\&= (m x_2 - m x_1) + (b - b)
+&& \text{(@thm-sum-assoc)}
+\\&= (m x_2 - m x_1) + 0
 && (b - b = 0)
 \\&= m x_2 - m x_1
 && \text{(@thm-add-ident)}
+\\&= m x_2 + m (-x_1)
+&& (-(m x_1) = m (-x_1) \text{, by @thm-negative-one and @thm-prod-assoc)}
+\\&= m (x_2 + (-x_1))
+&& \text{(@thm-mult-distr, read right to left)}
 \\&= m (x_2 - x_1)
-&& \text{(@thm-mult-distr)}
+&& \text{(adding a negative is subtracting)}
 \ea
 $$
 
@@ -67,6 +75,10 @@ $$
 && \text{(@thm-mult-one)}
 \ea
 $$
+
+**Part 3.** Part 1, applied to each formula, gives $b = f(0) = b'$.
+Part 2 with $x_1 = 0$ and $x_2 = 1$, applied to each formula,
+gives $m = f(1) - f(0) = m'$.
 
 :::
 
@@ -96,6 +108,7 @@ because its graph is a straight line.
 This site calls that an affine function
 and keeps "linear" for the case $b = 0$,
 because that is the sense used in linear algebra,
-where a linear map must send $0$ to $0$.
+where a [linear map](linear-algebra.qmd#def-linear-map) must send $0$ to $0$
+([theorem](linear-algebra.qmd#thm-linear-map-zero)).
 
 :::
