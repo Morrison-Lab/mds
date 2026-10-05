@@ -19,42 +19,61 @@ and the entries of $\vecf{\lambda}$ are the **Lagrange multipliers**, one per co
 #### The gradients of the Lagrangian of a quadratic
 
 Let $f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ symmetric and constant.
-The constraint term is a dot product in two ways:
+By the [transpose of a product](linear-algebra.qmd#thm-transpose-product),
+$\tp{\vecf{\lambda}} \tp{\matr{A}} = \tp{(\matr{A} \vecf{\lambda})}$,
+and a $1 \times 1$ matrix equals its transpose, so
 
 $$
 \ba
-\tp{\vecf{\lambda}} \paren{\tp{\matr{A}} \vx - \vecf{b}}
-&= \tp{\vecf{\lambda}} \tp{\matr{A}} \vx - \tp{\vecf{\lambda}} \vecf{b}
+L(\vx, \vecf{\lambda})
+&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\vecf{\lambda}} \tp{\matr{A}} \vx - \tp{\vecf{\lambda}} \vecf{b}
 && \text{(distribute)}
 \\
-&= (\matr{A} \vecf{\lambda}) \cdot \vx - \tp{\vecf{\lambda}} \vecf{b},
-&& \text{(transpose of a product; dot product)}
+&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{(\matr{A} \vecf{\lambda})} \vx - \tp{\vecf{\lambda}} \vecf{b}
+&& \text{(transpose of a product)}
+\\
+&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\paren{\tp{\matr{A}} \vx - \vecf{b}}} \vecf{\lambda}.
+&& \text{(the last term is } 1 \times 1 \text{, so equals its transpose)}
 \ea
 $$
 
-and it equals $\paren{\tp{\matr{A}} \vx - \vecf{b}} \cdot \vecf{\lambda}$ directly.
-The [transpose of a product](linear-algebra.qmd#thm-transpose-product) gives $\tp{\vecf{\lambda}} \tp{\matr{A}} = \tp{(\matr{A} \vecf{\lambda})}$.
-Differentiating each term, with partial derivatives adding term by term,
+The partial derivatives of a sum are the sums of the partial derivatives, entry by entry.
+Using the second form, @thm-quadratic-form for the first term,
+@cor-deriv-lincom-tp for the second ($\matr{A} \vecf{\lambda}$ is constant in $\vx$),
+and @def-constant-wrt-vector for the third,
 
 $$
 \ba
 \deriv{\vx} L(\vx, \vecf{\lambda})
-&= \tfrac{1}{2} \cdot 2 \matr{S} \vx + \matr{A} \vecf{\lambda} - \vzero_{p \times 1}
-&& \text{(@thm-quadratic-form; @thm-deriv-lincom; } \tp{\vecf{\lambda}} \vecf{b} \text{ is constant in } \vx \text{)}
+&= \tfrac{1}{2}\,\deriv{\vx} \paren{\tp{\vx} \matr{S} \vx} + \deriv{\vx} \paren{\tp{(\matr{A} \vecf{\lambda})} \vx} - \deriv{\vx} \paren{\tp{\vecf{\lambda}} \vecf{b}}
+&& \text{(sum and constant multiple)}
 \\
-&= \matr{S} \vx + \matr{A} \vecf{\lambda},
+&= \tfrac{1}{2} \paren{2 \matr{S} \vx} + \matr{A} \vecf{\lambda} - \vzero_{p \times 1}
+&& \text{(the three derivatives)}
+\\
+&= \matr{S} \vx + \matr{A} \vecf{\lambda}.
 && \text{(simplify)}
-\\
+\ea
+$$
+
+Using the third form, in which $f(\vx)$ and $\tp{\matr{A}} \vx - \vecf{b}$ are constant in $\vecf{\lambda}$,
+and @cor-deriv-lincom-tp again,
+
+$$
+\ba
 \deriv{\vecf{\lambda}} L(\vx, \vecf{\lambda})
+&= \deriv{\vecf{\lambda}} f(\vx) + \deriv{\vecf{\lambda}} \paren{\tp{\paren{\tp{\matr{A}} \vx - \vecf{b}}} \vecf{\lambda}}
+&& \text{(sum)}
+\\
 &= \vzero_{m \times 1} + \paren{\tp{\matr{A}} \vx - \vecf{b}}
-&& \text{(} f(\vx) \text{ is constant in } \vecf{\lambda} \text{; @thm-deriv-lincom)}
+&& \text{(the two derivatives)}
 \\
 &= \tp{\matr{A}} \vx - \vecf{b}.
 && \text{(simplify)}
 \ea
 $$
 
-So $(\vx, \vecf{\lambda})$ makes both gradients $\vzero$ exactly when
+So $(\vx, \vecf{\lambda})$ makes the gradients equal $\vzero_{p \times 1}$ and $\vzero_{m \times 1}$ exactly when
 
 $$
 \matr{S} \vx + \matr{A} \vecf{\lambda} = \vzero_{p \times 1}
@@ -67,6 +86,5 @@ $$
 $$ {#eq-kkt}
 
 the second equation being the constraint itself.
-The block matrix is the **saddle point matrix** (or KKT matrix) of the problem.
 
 :::

@@ -7,11 +7,15 @@ used under the MIT License
 The source solves the stationarity equations of the Lagrangian and reports the solution;
 here the solution is also proved to be the unique minimizer,
 directly from the positive definiteness of the matrices involved.
+The source assumes only that $\matr{S}$ is positive definite;
+the added hypothesis that the columns of $\matr{A}$ are linearly independent makes $\tp{\matr{A}} \matr{S}^{-1} \matr{A}$ invertible.
+The source's example with general coefficients $a_1, a_2, b$ is specialized here to $3, 4, 5$.
 These parts of the source are not part of this section:
 
 - the Lagrange multiplier method for constraints that are not linear, or objectives that are not quadratic,
   including its multinomial maximum likelihood example
-- the eigenvalues of the saddle point matrix
+- the eigenvalues of the block matrix of the stationarity equations,
+  and the convexity of the Lagrangian in $\vx$ and its concavity in the multipliers
 - its homework examples
 
 :::
