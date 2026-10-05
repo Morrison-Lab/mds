@@ -1,0 +1,97 @@
+:::{#thm-block-quadratic}
+#### The quadratic form of a block matrix
+
+Let $\matr{X}$ be the symmetric $(k + m) \times (k + m)$ matrix with blocks
+
+$$
+\matr{X} = \begin{bmatrix} \underbrace{\matr{A}}_{k \times k} & \underbrace{\matr{B}}_{k \times m} \\ \underbrace{\tp{\matr{B}}}_{m \times k} & \underbrace{\matr{C}}_{m \times m} \end{bmatrix},
+$$
+
+with $\matr{A}$ and $\matr{C}$ symmetric,
+and split $\vx \in \reals^{k + m}$ as $\vx = (\vecf{u}, \vecf{w})$
+with $\vecf{u} \in \reals^k$ its first $k$ entries and $\vecf{w} \in \reals^m$ the rest.
+Then
+
+$$
+\tp{\vx} \matr{X} \vx
+= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w},
+$$
+
+and if $\matr{A}$ is invertible, with $\matr{S} \eqdef \matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B}$
+and $\vecf{z} \eqdef \vecf{u} + \matr{A}^{-1} \matr{B} \vecf{w}$,
+
+$$
+\tp{\vx} \matr{X} \vx = \tp{\vecf{z}} \matr{A} \vecf{z} + \tp{\vecf{w}} \matr{S} \vecf{w}.
+$$
+
+:::
+
+::: proof
+
+**The expansion.**
+By @def-matvec-mult, entry $i \le k$ of $\matr{X} \vx$ is
+$\sum_{j \le k} a_{ij} u_j + \sum_{j} b_{ij} w_j$,
+and entry $k + i$ is $\sum_{j} (\tp{\matr{B}})_{ij} u_j + \sum_{j} c_{ij} w_j$,
+so $\matr{X} \vx = (\matr{A} \vecf{u} + \matr{B} \vecf{w},\; \tp{\matr{B}} \vecf{u} + \matr{C} \vecf{w})$.
+The dot product of $\vx = (\vecf{u}, \vecf{w})$ with it splits into the first $k$ and last $m$ terms:
+
+$$
+\ba
+\tp{\vx} \matr{X} \vx
+&= \vecf{u} \cdot (\matr{A} \vecf{u} + \matr{B} \vecf{w}) + \vecf{w} \cdot (\tp{\matr{B}} \vecf{u} + \matr{C} \vecf{w})
+&& \text{(@def-dot-product, split the sum)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} + \tp{\vecf{w}} \matr{C} \vecf{w}
+&& \text{(@thm-dot-linear)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}.
+&& \text{(} \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} = \tp{(\tp{\vecf{u}} \matr{B} \vecf{w})} \text{, a } 1 \times 1 \text{ matrix)}
+\ea
+$$
+
+**Completing the square.**
+Write $\vecf{d} \eqdef \matr{A}^{-1} \matr{B} \vecf{w}$, so $\vecf{z} = \vecf{u} + \vecf{d}$ and $\matr{A} \vecf{d} = \matr{B} \vecf{w}$.
+$\matr{A}^{-1}$ is symmetric (@cor-inverse-symmetric). Then
+
+$$
+\ba
+\tp{\vecf{z}} \matr{A} \vecf{z}
+&= (\vecf{u} + \vecf{d}) \cdot (\matr{A} \vecf{u} + \matr{A} \vecf{d})
+&& \text{(@thm-matmul-distrib)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{A} \vecf{d} + \tp{\vecf{d}} \matr{A} \vecf{u} + \tp{\vecf{d}} \matr{A} \vecf{d}
+&& \text{(@thm-dot-linear, both slots)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{A} \vecf{d} + \tp{\vecf{d}} \matr{A} \vecf{d}
+&& \text{(} \tp{\vecf{d}} \matr{A} \vecf{u} = \tp{(\tp{\vecf{u}} \tp{\matr{A}} \vecf{d})} = \tp{\vecf{u}} \matr{A} \vecf{d} \text{, } \matr{A} \text{ symmetric)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{d}} \matr{B} \vecf{w}
+&& \text{(} \matr{A} \vecf{d} = \matr{B} \vecf{w} \text{, twice)}
+\\
+&= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w},
+&& \text{(} \tp{\vecf{d}} = \tp{\vecf{w}} \tp{\matr{B}} \matr{A}^{-1} \text{, @thm-transpose-product)}
+\ea
+$$
+
+and adding $\tp{\vecf{w}} \matr{S} \vecf{w} = \tp{\vecf{w}} \matr{C} \vecf{w} - \tp{\vecf{w}}\,\tp{\matr{B}} \matr{A}^{-1} \matr{B} \vecf{w}$
+(@thm-scalar-matmul) gives the expansion of $\tp{\vx} \matr{X} \vx$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-block-quadratic}
+#### The $2 \times 2$ case
+
+For $\matr{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}$ ($k = m = 1$) and $a \ne 0$,
+the theorem reads
+
+$$
+a x^2 + 2bxy + cy^2 = a\,\paren{x + \tfrac{b}{a}\,y}^2 + \paren{c - \tfrac{b^2}{a}}\,y^2,
+$$
+
+the familiar completing of the square.
+With $a = c = 5$ and $b = 4$:
+$5\,(x + 0.8\,y)^2 + 1.8\,y^2 = 5x^2 + 8xy + 3.2\,y^2 + 1.8\,y^2 = 5x^2 + 8xy + 5y^2$.
+
+:::

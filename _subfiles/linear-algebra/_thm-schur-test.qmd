@@ -1,0 +1,50 @@
+:::{#thm-schur-test}
+#### Schur complement test
+
+Let $\matr{X} = \begin{bmatrix} \matr{A} & \matr{B} \\ \tp{\matr{B}} & \matr{C} \end{bmatrix}$
+be as in @thm-block-quadratic.
+Then $\matr{X}$ is positive definite (@def-positive-definite)
+exactly when $\matr{A}$ is positive definite
+and its Schur complement $\matr{S}$ (@def-schur-complement) is positive definite.
+
+:::
+
+::: proof
+
+**If.**
+$\matr{A}$ is positive definite, so invertible (@thm-pd-inverse), and $\matr{S}$ is defined.
+$\matr{X}$ is symmetric.
+Let $\vx = (\vecf{u}, \vecf{w}) \ne \vzero$ and $\vecf{z} = \vecf{u} + \matr{A}^{-1} \matr{B} \vecf{w}$.
+By @thm-block-quadratic, $\tp{\vx} \matr{X} \vx = \tp{\vecf{z}} \matr{A} \vecf{z} + \tp{\vecf{w}} \matr{S} \vecf{w}$,
+and both terms are at least $0$.
+If $\vecf{w} \ne \vzero$, the second term is positive.
+If $\vecf{w} = \vzero$, then $\vecf{u} \ne \vzero$ and $\vecf{z} = \vecf{u}$, so the first term is positive.
+Either way $\tp{\vx} \matr{X} \vx > 0$.
+
+**Only if.**
+$\matr{A}$ is the top-left $k \times k$ block of $\matr{X}$, so it is positive definite (@thm-pd-submatrix),
+and invertible (@thm-pd-inverse).
+$\matr{S}$ is symmetric:
+$\tp{(\tp{\matr{B}} \matr{A}^{-1} \matr{B})} = \tp{\matr{B}}\,\tp{(\matr{A}^{-1})}\,\matr{B} = \tp{\matr{B}} \matr{A}^{-1} \matr{B}$
+(@thm-transpose-product, @cor-inverse-symmetric), and $\matr{C}$ is symmetric.
+For $\vecf{w} \ne \vzero$, take $\vecf{u} = -\matr{A}^{-1} \matr{B} \vecf{w}$, so $\vecf{z} = \vzero$
+and $\vx = (\vecf{u}, \vecf{w}) \ne \vzero$; then
+$\tp{\vecf{w}} \matr{S} \vecf{w} = \tp{\vx} \matr{X} \vx > 0$ (@thm-block-quadratic).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-schur-test}
+#### Testing $2 \times 2$ matrices
+
+A symmetric $\begin{bmatrix} a & b \\ b & c \end{bmatrix}$ is positive definite
+exactly when $a > 0$ and $c - \tfrac{b^2}{a} > 0$, that is, $a > 0$ and $ac > b^2$
+(a $1 \times 1$ matrix $[s]$ is positive definite exactly when $s > 0$, since $\tp{x} s x = s x^2$).
+
+- $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$: $5 > 0$ and $\tfrac{9}{5} > 0$ (@exm-schur-complement),
+  so it is positive definite.
+- $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$: $1 > 0$ but $\matr{S} = -3$,
+  so it is not, as @exm-positive-definite found directly.
+
+:::

@@ -1,0 +1,56 @@
+:::{#thm-pd-submatrix}
+#### Leading blocks of a positive definite matrix are positive definite
+
+Let $\matr{X}$ be a $p \times p$ positive definite matrix (@def-positive-definite),
+and for $1 \le k \le p$ let $\matr{X}_k$ be its top-left $k \times k$ block,
+with entries $x_{ij}$ for $i, j \le k$.
+Then $\matr{X}_k$ is positive definite.
+In particular, every diagonal entry of a positive definite matrix is positive.
+
+:::
+
+::: proof
+
+$\matr{X}_k$ is symmetric, because $\matr{X}$ is.
+For $\vecf{u} \in \reals^k$ with $\vecf{u} \ne \vzero$,
+let $\vx = (u_1, \ldots, u_k, 0, \ldots, 0) \in \reals^p$, which is nonzero. Then
+
+$$
+\ba
+\tp{\vecf{u}} \matr{X}_k \vecf{u}
+&= \sum_{i=1}^{k} \sum_{j=1}^{k} u_i\,x_{ij}\,u_j
+&& \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&= \sum_{i=1}^{p} \sum_{j=1}^{p} x_i\,x_{ij}\,x_j
+&& \text{(the added terms have a factor } x_i = 0 \text{ or } x_j = 0 \text{)}
+\\
+&= \tp{\vx} \matr{X} \vx
+&& \text{(@def-matvec-mult, @def-dot-product)}
+\\
+&> 0.
+&& \text{(} \matr{X} \text{ positive definite)}
+\ea
+$$
+
+(Here $x_i$ denotes entry $i$ of $\vx$, and $x_{ij}$ an entry of $\matr{X}$.)
+For the diagonal entry $x_{ii}$, use $\vx = \vecf{e}_i$ (@def-indicator-vector):
+$\tp{\vecf{e}_i} \matr{X} \vecf{e}_i = x_{ii} > 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-pd-submatrix}
+#### A quick necessary test
+
+$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite (@exm-pd-operations),
+and its diagonal entries $2, 2$ and its $1 \times 1$ leading block $[2]$ are positive.
+The test can only rule matrices out:
+$-\matr{I}_2$ has negative diagonal entries, so it is not positive definite,
+even though $\det(-\matr{I}_2) = (-1)(-1) - 0 = 1 > 0$ (@def-determinant);
+a positive determinant alone does not make a matrix positive definite.
+And positive diagonal entries are not enough:
+$\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of @exm-positive-definite has them
+but is not positive definite.
+
+:::

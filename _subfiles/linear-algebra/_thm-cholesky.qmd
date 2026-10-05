@@ -1,0 +1,80 @@
+:::{#thm-cholesky}
+#### Cholesky factorization
+
+A $p \times p$ matrix $\matr{A}$ is positive definite (@def-positive-definite)
+exactly when $\matr{A} = \matr{L} \tp{\matr{L}}$
+for some lower triangular $\matr{L}$ (@def-triangular-matrix) with positive diagonal entries.
+For a positive definite $\matr{A}$ that $\matr{L}$ is unique;
+it is the **Cholesky factor** of $\matr{A}$.
+
+:::
+
+::: proof
+
+**If.**
+$\tp{\matr{L}}$ is upper triangular with positive diagonal, so $\tp{\matr{L}} \vx = \vzero$ only for $\vx = \vzero$
+(@thm-back-substitution): the columns of $\tp{\matr{L}}$ are linearly independent
+(@thm-matvec-columns).
+So $\matr{A} = \tp{(\tp{\matr{L}})}\,\tp{\matr{L}}$ is positive definite (@thm-pd-gram, part 2).
+
+**Only if, with uniqueness, by induction on $p$.**
+For $p = 1$, $\matr{A} = [a]$ with $a > 0$ (@thm-pd-submatrix),
+and $[\ell]\,[\ell] = [a]$ with $\ell > 0$ holds exactly for $\ell = \sqrt{a}$.
+For $p > 1$, split off the first row and column:
+
+$$
+\matr{A} = \begin{bmatrix} a_{11} & \tp{\vecf{a}} \\ \vecf{a} & \matr{A}_{22} \end{bmatrix},
+\qquad
+\matr{L} = \begin{bmatrix} \ell_{11} & \tp{\vzero} \\ \boldsymbol{\ell} & \matr{L}_{22} \end{bmatrix},
+$$
+
+with $\vecf{a}, \boldsymbol{\ell} \in \reals^{p-1}$ and $\matr{L}_{22}$ lower triangular.
+Multiplying out entry by entry (@def-matrix-mult), $\matr{L} \tp{\matr{L}} = \matr{A}$ says exactly
+
+$$
+\ell_{11}^2 = a_{11}, \qquad
+\ell_{11}\,\boldsymbol{\ell} = \vecf{a}, \qquad
+\boldsymbol{\ell} \tp{\boldsymbol{\ell}} + \matr{L}_{22} \tp{\matr{L}_{22}} = \matr{A}_{22}.
+$$
+
+$a_{11} > 0$ (@thm-pd-submatrix), so the first equation with $\ell_{11} > 0$ forces $\ell_{11} = \sqrt{a_{11}}$;
+the second then forces $\boldsymbol{\ell} = \vecf{a} / \ell_{11}$;
+and the third becomes
+
+$$
+\ba
+\matr{L}_{22} \tp{\matr{L}_{22}}
+&= \matr{A}_{22} - \boldsymbol{\ell} \tp{\boldsymbol{\ell}}
+&& \text{(subtract } \boldsymbol{\ell} \tp{\boldsymbol{\ell}} \text{)}
+\\
+&= \matr{A}_{22} - \frac{1}{a_{11}}\,\vecf{a} \tp{\vecf{a}},
+&& \text{(substitute } \boldsymbol{\ell} \text{ and } \ell_{11}^2 = a_{11} \text{)}
+\ea
+$$
+
+which is the Schur complement of $[a_{11}]$ in $\matr{A}$ (@def-schur-complement),
+positive definite by @thm-schur-test.
+By the induction hypothesis it has exactly one factor $\matr{L}_{22}$ of the required kind.
+So $\matr{L}$ exists and is unique.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-cholesky}
+#### Two Cholesky factors
+
+- $\matr{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$:
+  $\ell_{11} = \sqrt{4} = 2$, $\ell_{21} = 2/2 = 1$,
+  and $\ell_{22}^2 = 5 - 1^2 = 4$, so $\ell_{22} = 2$:
+  $\matr{L} = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}$, and
+  $\matr{L} \tp{\matr{L}} = \begin{bmatrix} 2 \cd 2 & 2 \cd 1 \\ 1 \cd 2 & 1 \cd 1 + 2 \cd 2 \end{bmatrix} = \matr{A}$.
+- $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$:
+  $\ell_{11} = \sqrt{5}$, $\ell_{21} = 4/\sqrt{5}$,
+  and $\ell_{22}^2 = 5 - \tfrac{16}{5} = \tfrac{9}{5}$, the Schur complement of @exm-schur-complement,
+  so $\ell_{22} = \tfrac{3}{\sqrt{5}}$.
+- For $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ the method breaks down:
+  $\ell_{22}^2 = 1 - 4 = -3$ has no real solution,
+  matching the failure of the Schur complement test (@exm-schur-test).
+
+:::
