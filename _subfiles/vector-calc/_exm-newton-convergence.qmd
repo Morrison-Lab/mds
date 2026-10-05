@@ -20,9 +20,8 @@ $$
 So near $2$ the error is roughly squared and divided by $4$ at each step:
 the errors are $0.05$, then $0.00061$, then $0.000000093$,
 and $0.05^2 / (2 \cdot 2.05) \approx 0.00061$.
-Iterates converging to $x^*$ with $\abs{x^{(t+1)} - x^*} \le C \abs{x^{(t)} - x^*}^2$ for every $t$ and some constant $C$
-are said to **converge quadratically**;
-here $C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$,
+The iterates converge quadratically (@def-quadratic-convergence):
+$C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$,
 and every iterate from $2.5$ is at least $2$, since the identity makes $x^{(t+1)} - 2 \ge 0$ whenever $x^{(t)} > 0$.
 @zhou2024optim states such a bound for Newton's method in general;
 it holds near a minimizer where the Hessian is positive definite, for smooth enough $f$,

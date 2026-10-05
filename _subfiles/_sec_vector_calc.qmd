@@ -276,6 +276,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-quadratic-convergence.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_exm-newton-convergence.qmd >}}
 
 {{< slidebreak >}}
