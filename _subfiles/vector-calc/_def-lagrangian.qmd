@@ -20,8 +20,7 @@ and the entries of $\vecf{\lambda}$ are the **Lagrange multipliers**, one per co
 
 Let $f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ symmetric and constant.
 By the [transpose of a product](linear-algebra.qmd#thm-transpose-product),
-$\tp{\vecf{\lambda}} \tp{\matr{A}} = \tp{(\matr{A} \vecf{\lambda})}$,
-and a $1 \times 1$ matrix equals its transpose, so
+$\tp{\vecf{\lambda}} \tp{\matr{A}} = \tp{(\matr{A} \vecf{\lambda})}$, so
 
 $$
 \ba
@@ -29,16 +28,19 @@ L(\vx, \vecf{\lambda})
 &= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\vecf{\lambda}} \tp{\matr{A}} \vx - \tp{\vecf{\lambda}} \vecf{b}
 && \text{(distribute)}
 \\
-&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{(\matr{A} \vecf{\lambda})} \vx - \tp{\vecf{\lambda}} \vecf{b}
+&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{(\matr{A} \vecf{\lambda})} \vx - \tp{\vecf{\lambda}} \vecf{b},
 && \text{(transpose of a product)}
-\\
-&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\paren{\tp{\matr{A}} \vx - \vecf{b}}} \vecf{\lambda}.
-&& \text{(the last term is } 1 \times 1 \text{, so equals its transpose)}
 \ea
 $$
 
+and, since $\tp{\vecf{\lambda}} \paren{\tp{\matr{A}} \vx - \vecf{b}}$ is $1 \times 1$ and so equals its transpose,
+
+$$
+L(\vx, \vecf{\lambda}) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\paren{\tp{\matr{A}} \vx - \vecf{b}}} \vecf{\lambda}.
+$$
+
 The partial derivatives of a sum are the sums of the partial derivatives, entry by entry.
-Using the second form, @thm-quadratic-form for the first term,
+Using the first of these forms, @thm-quadratic-form for the first term,
 @cor-deriv-lincom-tp for the second ($\matr{A} \vecf{\lambda}$ is constant in $\vx$),
 and @def-constant-wrt-vector for the third,
 
@@ -56,7 +58,7 @@ $$
 \ea
 $$
 
-Using the third form, in which $f(\vx)$ and $\tp{\matr{A}} \vx - \vecf{b}$ are constant in $\vecf{\lambda}$,
+Using the second form, in which $f(\vx)$ and $\tp{\matr{A}} \vx - \vecf{b}$ are constant in $\vecf{\lambda}$,
 and @cor-deriv-lincom-tp again,
 
 $$
