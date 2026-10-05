@@ -1,0 +1,24 @@
+:::{#rem-tarski-identities}
+#### Tarski's high school identities
+
+Restricted to positive integers,
+the following results are
+[Tarski's eleven "high school" identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
+
+- sums are symmetric and associative (@thm-sum-symmetric, @thm-sum-assoc);
+- multiplying by 1 changes nothing (@thm-mult-one);
+- products are symmetric and associative (@thm-prod-symmetric, @thm-prod-assoc);
+- multiplication is distributive (@thm-mult-distr);
+- $1^b = 1$ and $a^1 = a$ (@thm-power-one);
+- the power of a sum, of a product, and of a power
+  (@thm-power-sum, @thm-power-product, @thm-double-exp).
+
+Tarski asked whether every identity in $+$, $\times$, exponentiation and 1
+that is true for all positive integers
+can be derived from these eleven.
+It cannot:
+Wilkie found an identity that is true for all positive integers
+but does not follow from them.
+So this list is a useful core, not a complete rulebook.
+
+:::
