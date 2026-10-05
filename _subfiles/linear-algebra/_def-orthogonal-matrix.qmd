@@ -48,6 +48,24 @@ $$
 
 {{< slidebreak >}}
 
+:::{#exm-not-orthogonal-matrix}
+#### Orthogonal columns are not enough
+
+$\matr{Q} = 2 \matr{I}_2$ has orthogonal columns $(2, 0)$ and $(0, 2)$, but
+
+$$
+\tp{\matr{Q}} \matr{Q}
+= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}
+= \begin{bmatrix} 4 & 0 \\ 0 & 4 \end{bmatrix}
+\ne \matr{I}_2,
+$$
+
+so $\matr{Q}$ is not an orthogonal matrix: its columns have norm $2$, not $1$.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#rem-orthogonal-matrix-columns}
 #### The columns of an orthogonal matrix are orthonormal
 

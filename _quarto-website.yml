@@ -25,6 +25,10 @@ website:
   page-footer:
     center: "Built with [Quarto](https://quarto.org/)"
   back-to-top-navigation: true
+  # Previous/next links at the foot of each page (and the floating margin
+  # arrows added by page-navigation.html) follow the sidebar's order, so
+  # page-navigation does nothing without the sidebar below.
+  # https://quarto.org/docs/websites/website-navigation.html#page-navigation
   page-navigation: true
   reader-mode: true
   repo-url: https://github.com/Morrison-Lab/mds
@@ -51,6 +55,26 @@ website:
       - icon: github
         href: https://github.com/Morrison-Lab/mds
         aria-label: GitHub
+
+  # Keep the sidebar in the same order as the navbar: it sets the reading
+  # order for the previous/next links. Add each new page to both.
+  # Every navbar link is also in the sidebar, which on its own makes Quarto
+  # highlight the first navbar link ("Notation") on every page;
+  # page-navigation.html (included under format.html) corrects that.
+  sidebar:
+    style: docked
+    search: false # the navbar already has search
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - notation.qmd
+      - sets-functions.qmd
+      - algebra.qmd
+      - measures.qmd
+      - calculus.qmd
+      - linear-algebra.qmd
+      - vector-calculus.qmd
+      - proof-writing.qmd
 
 callouty-theorem:
   thm:
@@ -153,6 +177,10 @@ format:
       dark: darkly
     # Replaces Quarto's two-way toggle with a Light / Off-white / Parchment / Dark dropdown.
     include-in-header: theme-picker.html
+    # Floating previous/next arrows in the page margins, and navbar
+    # highlighting for the current page (needed because every navbar link is
+    # also in the sidebar).
+    include-after-body: page-navigation.html
     css: styles.css
     toc: true
     anchor-sections: true
