@@ -11,3 +11,18 @@ When this set has exactly one element $\hat{x}$,
 we write $\hat{x} = \argmax_{x \in A} f(x)$.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-argmax}
+#### An argmax with two points, and an empty one
+
+- Let $g(x) = -(x - 2)^2$ on $A = \cb{0, 1, 3, 4}$.
+  The values are $g(0) = -4$, $g(1) = -1$, $g(3) = -1$ and $g(4) = -4$,
+  so the largest value is $-1$ and $\argmax_{x \in A} g(x) = \cb{1, 3}$.
+  This argmax has two elements, so it is not written as a single $\hat{x}$.
+- Let $f(x) = x$ on $[0, 1)$.
+  As in @exm-maximum, every input $x$ has a larger value $f\paren{\tfrac{x + 1}{2}}$,
+  so no input attains a largest value, and $\argmax_{x \in [0, 1)} f(x) = \emptyset$.
+
+:::

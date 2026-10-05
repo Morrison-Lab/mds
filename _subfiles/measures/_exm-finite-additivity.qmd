@@ -27,3 +27,20 @@ because the sizes of disjoint sets add,
 so $\mu$ is finitely additive.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-not-finitely-additive}
+#### Squaring the count is not finitely additive
+
+On the same $\sigma$-algebra, let $\nu(A) \eqdef \abs{A}^2$.
+The sets $\set{1}$ and $\set{2}$ are pairwise disjoint, but
+
+$$
+\nu(\set{1} \cup \set{2}) = \nu(\set{1, 2}) = 2^2 = 4
+\ne 2 = 1^2 + 1^2 = \nu(\set{1}) + \nu(\set{2}),
+$$
+
+so $\nu$ is not finitely additive.
+
+:::

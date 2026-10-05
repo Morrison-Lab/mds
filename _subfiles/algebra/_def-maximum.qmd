@@ -7,3 +7,17 @@ written $\max A$,
 if $M \in A$ and $a \le M$ for all $a \in A$.
 
 :::
+
+{{< slidebreak >}}
+
+:::{#exm-maximum}
+#### A maximum, and a set without one
+
+- $\max \cb{3, 1, 4} = 4$: $4$ is in the set, and $3 \le 4$, $1 \le 4$, $4 \le 4$.
+- $\max\, [0, 1] = 1$: $1 \in [0, 1]$, and every $a \in [0, 1]$ has $a \le 1$.
+- The interval $[0, 1)$ has no maximum.
+  For any $a \in [0, 1)$, the number $\tfrac{a + 1}{2}$ is also in $[0, 1)$,
+  and it is larger than $a$, since $\tfrac{a + 1}{2} > a$ exactly when $a < 1$.
+  So no element of $[0, 1)$ is at least as large as every element.
+
+:::
