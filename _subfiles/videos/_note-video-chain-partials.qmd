@@ -1,0 +1,6 @@
+::: {.callout-tip title="Videos"}
+Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on the chain rule for partial derivatives:
+
+- [The Chain Rule for Partial Derivatives](https://www.youtube.com/watch?v=_XeqwcVLf-s&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+- [Exercises on the Multivariate Chain Rule](https://www.youtube.com/watch?v=zjLUIkF4H6M&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+:::

@@ -9,6 +9,10 @@ $$\deriv{x}c = 0$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/videos/_note-video-deriv-const.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-deriv-const-factor}
 #### Constant multiple rule
 
@@ -17,6 +21,10 @@ and $y$ is a differentiable function of $x$, then:
 $$\deriv{x}ay = a \derivf{y}{x}$$
 
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-deriv-const-factor.qmd >}}
 
 {{< slidebreak >}}
 
@@ -31,6 +39,10 @@ When $q$ is a positive integer,
 the same formula holds for every real $x$.
 
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-power-rule.qmd >}}
 
 {{< slidebreak >}}
 
@@ -65,6 +77,10 @@ $$(ab)' = ab' + ba'$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/videos/_note-video-product-rule.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-quotient-rule}
 #### Quotient rule
 
@@ -73,6 +89,10 @@ and $b \neq 0$, then
 
 $$(a/b)' = a'/b - (a/b^2)b'$$
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-quotient-rule.qmd >}}
 
 {{< slidebreak >}}
 
@@ -129,6 +149,10 @@ $$
 \ea
 $$
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-chain-rule.qmd >}}
 
 ### Linear approximation
 

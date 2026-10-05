@@ -11,3 +11,7 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/integrals-ftc/_exm-ftc-cdf-pdf.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-definite-integrals.qmd >}}

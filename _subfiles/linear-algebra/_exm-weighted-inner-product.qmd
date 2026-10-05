@@ -1,0 +1,79 @@
+:::{#exm-weighted-inner-product}
+#### A weighted inner product
+
+Let $\vecf{c} = (c_1, \ldots, c_p)$ be a vector of positive numbers, and define
+
+$$\iprod{\vx}{\vy}_{\vecf{c}} \eqdef \sumip c_i\,x_i y_i.$$
+
+This function is also an inner product on $\reals^p$
+[@axler2024linear, Example 6.3(b), p. 184]:
+
+- **positivity**: $\iprod{\vx}{\vx}_{\vecf{c}} = \sumip c_i\,x_i^2$,
+  and each term $c_i\,x_i^2$ is a positive number times a square, so the sum is at least $0$;
+- **definiteness**: a sum of nonnegative terms is $0$ exactly when every term is $0$,
+  and $c_i\,x_i^2 = 0$ exactly when $x_i = 0$, because $c_i > 0$;
+  so $\iprod{\vx}{\vx}_{\vecf{c}} = 0$ exactly when $\vx = \vzero_{p \times 1}$;
+- **linearity in the first slot**: see the derivation after this list;
+- **symmetry**: $c_i\,x_i y_i = c_i\,y_i x_i$ for each $i$,
+  so $\iprod{\vx}{\vy}_{\vecf{c}} = \iprod{\vy}{\vx}_{\vecf{c}}$.
+
+For linearity in the first slot,
+take $\vx, \vy, \vecf{z} \in \reals^p$ and real numbers $a, b$:
+
+$$
+\ba
+\iprod{a\,\vx + b\,\vy}{\vecf{z}}_{\vecf{c}}
+&= \sumip c_i\,(a\,\vx + b\,\vy)_i\,z_i
+&& \text{(definition of } \iprod{\cdot}{\cdot}_{\vecf{c}} \text{)}
+\\
+&= \sumip c_i\,(a x_i + b y_i)\,z_i
+&& \text{(@def-scalar-mult, @def-vector-addition)}
+\\
+&= \sumip \paren{a\,c_i x_i z_i + b\,c_i y_i z_i}
+&& \text{(distribute, and commute the factors in each product)}
+\\
+&= \sumip a\,c_i x_i z_i + \sumip b\,c_i y_i z_i
+&& \text{(split the finite sum)}
+\\
+&= a \sumip c_i x_i z_i + b \sumip c_i y_i z_i
+&& \text{(factor } a \text{ and } b \text{ out of the sums)}
+\\
+&= a\,\iprod{\vx}{\vecf{z}}_{\vecf{c}} + b\,\iprod{\vy}{\vecf{z}}_{\vecf{c}}
+&& \text{(definition of } \iprod{\cdot}{\cdot}_{\vecf{c}} \text{)}
+\ea
+$$
+
+Different inner products can give different numbers for the same pair of vectors.
+With $p = 2$, $\vecf{c} = (2, 1)$, $\vx = (1, 3)$ and $\vy = (4, -1)$:
+
+$$
+\ba
+\iprod{\vx}{\vy}_{\vecf{c}}
+&= 2 \cd 1 \cd 4 + 1 \cd 3 \cd (-1)
+&& \text{(definition of } \iprod{\cdot}{\cdot}_{\vecf{c}} \text{)}
+\\
+&= 8 - 3
+&& \text{(multiply)}
+\\
+&= 5
+&& \text{(subtract)}
+\ea
+$$
+
+while the dot product of the same vectors is
+
+$$
+\ba
+\vx \cdot \vy
+&= 1 \cd 4 + 3 \cd (-1)
+&& \text{(definition of the dot product)}
+\\
+&= 4 - 3
+&& \text{(multiply)}
+\\
+&= 1
+&& \text{(subtract)}
+\ea
+$$
+
+:::
