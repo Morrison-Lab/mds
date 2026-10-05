@@ -93,19 +93,19 @@ f(\vx)
 &= \tfrac{1}{2}\,\tp{(\vx^* + \vecf{d})} \matr{S} (\vx^* + \vecf{d})
 && \text{(} \vx = \vx^* + \vecf{d} \text{)}
 \\
-&= \tfrac{1}{2} \paren{\tp{\vx^*} + \tp{\vecf{d}}} \matr{S} (\vx^* + \vecf{d})
+&= \tfrac{1}{2} \paren{\tp{\vx^*{}} + \tp{\vecf{d}}} \matr{S} (\vx^* + \vecf{d})
 && \text{(the transpose of a sum is the sum of the transposes)}
 \\
-&= \tfrac{1}{2} \paren{\tp{\vx^*} \matr{S} \vx^* + \tp{\vx^*} \matr{S} \vecf{d} + \tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
+&= \tfrac{1}{2} \paren{\tp{\vx^*{}} \matr{S} \vx^* + \tp{\vx^*{}} \matr{S} \vecf{d} + \tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
 && \text{(distribute)}
 \\
-&= \tfrac{1}{2} \paren{\tp{\vx^*} \matr{S} \vx^* + \tp{\vecf{d}} \tp{\matr{S}} \vx^* + \tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
-&& \text{(} 1 \times 1 \text{: } \tp{\vx^*} \matr{S} \vecf{d} = \tp{(\tp{\vx^*} \matr{S} \vecf{d})} \text{; transpose of a product)}
+&= \tfrac{1}{2} \paren{\tp{\vx^*{}} \matr{S} \vx^* + \tp{\vecf{d}} \tp{\matr{S}} \vx^* + \tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
+&& \text{(} 1 \times 1 \text{: } \tp{\vx^*{}} \matr{S} \vecf{d} = \tp{(\tp{\vx^*{}} \matr{S} \vecf{d})} \text{; transpose of a product)}
 \\
-&= \tfrac{1}{2} \paren{\tp{\vx^*} \matr{S} \vx^* + 2\,\tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
+&= \tfrac{1}{2} \paren{\tp{\vx^*{}} \matr{S} \vx^* + 2\,\tp{\vecf{d}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vecf{d}}
 && \text{(} \tp{\matr{S}} = \matr{S} \text{; combine)}
 \\
-&= \tfrac{1}{2}\,\tp{\vx^*} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vx^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{S} \vecf{d}
+&= \tfrac{1}{2}\,\tp{\vx^*{}} \matr{S} \vx^* + \tp{\vecf{d}} \matr{S} \vx^* + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{S} \vecf{d}
 && \text{(distribute } \tfrac{1}{2} \text{)}
 \\
 &= f(\vx^*) + \tfrac{1}{2}\,\tp{\vecf{d}} \matr{S} \vecf{d}
