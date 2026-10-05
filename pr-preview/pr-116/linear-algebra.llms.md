@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 03:10:42 (PDT)
+Last modified: 2026-10-05 03:20:24 (PDT)
 
 ## 1 Vectors
 
@@ -3824,7 +3824,16 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024f](#ref-zhou2024pd)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are already on this page ([Theorem 62](#thm-definite-eigenvalues)); its covariance test, which needs probability, its material on minimization, its positive semidefinite version of the Schur complement test, its pivot test, its Hadamard-product “Schur lemma”, and its notes on the LU factorization and computational cost are left out. The source leaves the Schur complement test unproved; it is proved here from a block expansion of the quadratic form, and the Cholesky factorization is derived from it.
+> This section is adapted from Zhou ([2024f](#ref-zhou2024pd)), used under the MIT License (see the license text in [Section 2.9](#sec-subspaces)). The source’s eigenvalue and quadratic-form characterizations of definiteness are already on this page ([Theorem 62](#thm-definite-eigenvalues)). These parts of the source are left out:
+>
+> - its covariance test, which needs probability
+> - its material on minimization
+> - its positive semidefinite version of the Schur complement test
+> - its pivot test
+> - its Hadamard-product “Schur lemma”
+> - its notes on the LU factorization and computational cost
+>
+> The source leaves the Schur complement test unproved; it is proved here from a block expansion of the quadratic form, and the Cholesky factorization is derived from it.
 
 > **NOTE:**
 >
