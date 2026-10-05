@@ -1,0 +1,5 @@
+Here the objective is a quadratic $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ positive definite,
+and the constraints are $m$ linear equations $\tp{\matr{A}} \vx = \vecf{b}$,
+where $\matr{A}$ is a $p \times m$ matrix and $\vecf{b} \in \reals^m$.
+A stationary point of the objective alone (@def-stationary-point) is $\vzero$, which may not satisfy the constraints;
+a Lagrange multiplier adds one unknown per constraint, so that the constrained minimizer becomes a stationary point.

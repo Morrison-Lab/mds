@@ -1,0 +1,17 @@
+::: {.callout-note collapse="true"}
+#### Source
+
+This section is adapted from the Lagrange-multiplier part of @zhou2024optim,
+used under the MIT License
+(see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
+The source solves the stationarity equations of the Lagrangian and reports the solution;
+here the solution is also proved to be the unique minimizer,
+directly from the positive definiteness of the matrices involved.
+These parts of the source are not part of this section:
+
+- the Lagrange multiplier method for constraints that are not linear, or objectives that are not quadratic,
+  including its multinomial maximum likelihood example
+- the eigenvalues of the saddle point matrix
+- its homework examples
+
+:::

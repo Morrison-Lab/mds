@@ -1,0 +1,45 @@
+:::{#cor-qp-sensitivity}
+#### The multiplier is the sensitivity of the minimum value
+
+In @thm-qp-equality, write the minimum value as a function of $\vecf{b}$,
+$f^*(\vecf{b}) = \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \vecf{b}$. Then
+
+$$
+\deriv{\vecf{b}} f^*(\vecf{b}) = \matr{M}^{-1} \vecf{b} = -\vecf{\lambda}^*.
+$$
+
+:::
+
+::: proof
+
+$\matr{M}^{-1}$ is symmetric and does not depend on $\vecf{b}$, so
+
+$$
+\ba
+\deriv{\vecf{b}} f^*(\vecf{b})
+&= \tfrac{1}{2} \cdot 2 \matr{M}^{-1} \vecf{b}
+&& \text{(@thm-quadratic-form, with } \matr{M}^{-1} \text{ in place of } \matr{S} \text{)}
+\\
+&= \matr{M}^{-1} \vecf{b}
+&& \text{(simplify)}
+\\
+&= -\vecf{\lambda}^*.
+&& \text{(definition of } \vecf{\lambda}^* \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-qp-sensitivity}
+#### Moving the line
+
+In @exm-qp-equality with a general right side $b$ in place of $5$,
+$\matr{M}^{-1} = \tfrac{2}{25}$ and $f^*(b) = \tfrac{1}{2} \cdot \tfrac{2}{25}\,b^2 = \tfrac{b^2}{25}$,
+so $\dif{}{b} f^*(b) = \tfrac{2b}{25}$.
+At $b = 5$ this is $\tfrac{10}{25} = 0.4 = -\lambda^*$:
+moving the line $3 x_1 + 4 x_2 = b$ outward by a small step $\varepsilon$ in $b$
+raises the minimum value by about $0.4\,\varepsilon$.
+
+:::

@@ -239,3 +239,21 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_cor-convex-stationary.qmd >}}
+
+## Minimizing a quadratic under linear constraints {#sec-lagrange}
+
+{{< include mds/_subfiles/vector-calc/_prose-lagrange-attribution.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_intro-lagrange.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-lagrangian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-qp-equality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_cor-qp-sensitivity.qmd >}}
