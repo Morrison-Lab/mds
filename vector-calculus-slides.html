@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 13:41:05 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 14:38:19 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -426,19 +426,13 @@
 <p><strong>Videos</strong></p>
 </div>
 <div class="callout-content">
-<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on partial derivatives, the multivariate chain rule, and gradients:</p>
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on partial derivatives:</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=lRq7xtPxOGk&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">What Partial Derivatives Are (Hands-on Introduction)</a></li>
 <li><a href="https://www.youtube.com/watch?v=8bHZJOBizwE&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Partial Derivative Exercises</a></li>
 <li><a href="https://www.youtube.com/watch?v=0YzXHf-u5zU&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Advanced Partial Derivatives</a></li>
 <li><a href="https://www.youtube.com/watch?v=WFmUDiABfUI&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Advanced Partial-Derivative Exercises</a></li>
 <li><a href="https://www.youtube.com/watch?v=kIKVHguEpvA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Partial Derivative Notation</a></li>
-<li><a href="https://www.youtube.com/watch?v=_XeqwcVLf-s&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Chain Rule for Partial Derivatives</a></li>
-<li><a href="https://www.youtube.com/watch?v=zjLUIkF4H6M&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercises on the Multivariate Chain Rule</a></li>
-<li><a href="https://www.youtube.com/watch?v=rhn7ie7JBdA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Quadratic Cost</a></li>
-<li><a href="https://www.youtube.com/watch?v=KLXP2RL0-Vg&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Mean Squared Error</a></li>
-<li><a href="https://www.youtube.com/watch?v=3HAOTYo39A8&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Higher-Order Partial Derivatives</a></li>
-<li><a href="https://www.youtube.com/watch?v=E7ZN4y2tW0I&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercise on Higher-Order Partial Derivatives</a></li>
 </ul>
 </div>
 </div>
@@ -1228,6 +1222,28 @@ x_{p}
 </section>
 <section class="slide level2">
 
+<div title="Videos">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Videos</strong></p>
+</div>
+<div class="callout-content">
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on gradients of squared-error costs:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rhn7ie7JBdA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Quadratic Cost</a></li>
+<li><a href="https://www.youtube.com/watch?v=KLXP2RL0-Vg&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Mean Squared Error</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="thm-chain-vec" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Vector chain rule)</strong></span> Let <span class="math inline">\(\tilde{x}\)</span> be a <span class="math inline">\(p \times 1\)</span> vector, let <span class="math inline">\(\tilde{y}= \tilde{g}(\tilde{x})\)</span> be a <span class="math inline">\(q \times 1\)</span> vector-valued function of <span class="math inline">\(\tilde{x}\)</span>, and let <span class="math inline">\(z = f(\tilde{y})\)</span> be a scalar-valued function of <span class="math inline">\(\tilde{y}\)</span>, where <span class="math inline">\(\tilde{g}\)</span> and <span class="math inline">\(f\)</span> have continuous partial derivatives. Then <span class="math inline">\(z = f(\tilde{g}(\tilde{x}))\)</span>, as a function of <span class="math inline">\(\tilde{x}\)</span>, satisfies</p>
 <p><span class="math display">\[
@@ -1336,6 +1352,28 @@ x_{p}
 \end{aligned}
 \]</span></p>
 <p>Setting this <span class="math inline">\(p \times 1\)</span> vector to <span class="math inline">\(\tilde{0}\)</span> gives the normal equations <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\tilde{\beta}= {\mathbf{X}}^{\top}\tilde{y}\)</span> of least squares.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div title="Videos">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Videos</strong></p>
+</div>
+<div class="callout-content">
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on the chain rule for partial derivatives:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_XeqwcVLf-s&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Chain Rule for Partial Derivatives</a></li>
+<li><a href="https://www.youtube.com/watch?v=zjLUIkF4H6M&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercises on the Multivariate Chain Rule</a></li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">
@@ -1491,6 +1529,28 @@ x_{p}
 
 <div id="exm-hessian-missing" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (A function with a gradient but no Hessian at a point)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = x_1 \mathopen{}\left|x_1\right|\mathclose{}\)</span> for <span class="math inline">\(\tilde{x}= {(x_1, x_2)}^{\top}\)</span>. For <span class="math inline">\(x_1 &gt; 0\)</span>, <span class="math inline">\(f = x_1^2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_1} f = 2 x_1\)</span>; for <span class="math inline">\(x_1 &lt; 0\)</span>, <span class="math inline">\(f = -x_1^2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_1} f = -2 x_1\)</span>; and at <span class="math inline">\(x_1 = 0\)</span> the difference quotient is <span class="math inline">\(h \mathopen{}\left|h\right|\mathclose{} / h = \mathopen{}\left|h\right|\mathclose{} \to 0\)</span>. So the gradient exists everywhere: it is <span class="math inline">\({(2 \mathopen{}\left|x_1\right|\mathclose{},\ 0)}^{\top}\)</span>. But <span class="math inline">\(2 \mathopen{}\left|x_1\right|\mathclose{}\)</span> has no derivative in <span class="math inline">\(x_1\)</span> at <span class="math inline">\(x_1 = 0\)</span> (its difference quotient <span class="math inline">\(2 \mathopen{}\left|h\right|\mathclose{} / h\)</span> is <span class="math inline">\(2\)</span> for <span class="math inline">\(h &gt; 0\)</span> and <span class="math inline">\(-2\)</span> for <span class="math inline">\(h &lt; 0\)</span>), so <span class="math inline">\(\mathopen{}\left[\mathbf{H}_f(\tilde{x})\right]\mathclose{}_{11}\)</span>, and with it the Hessian, does not exist at any <span class="math inline">\(\tilde{x}\)</span> with <span class="math inline">\(x_1 = 0\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div title="Videos">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Videos</strong></p>
+</div>
+<div class="callout-content">
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on second and higher partial derivatives:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3HAOTYo39A8&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Higher-Order Partial Derivatives</a></li>
+<li><a href="https://www.youtube.com/watch?v=E7ZN4y2tW0I&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercise on Higher-Order Partial Derivatives</a></li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section class="slide level2">

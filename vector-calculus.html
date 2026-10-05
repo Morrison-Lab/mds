@@ -229,65 +229,15 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -299,16 +249,6 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -319,15 +259,75 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -702,7 +702,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-05 13:41:05 (PDT)</p>
+      <p class="date">Last modified: 2026-10-05 14:38:19 (PDT)</p>
     </div>
   </div>
   
@@ -782,19 +782,13 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on partial derivatives, the multivariate chain rule, and gradients:</p>
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on partial derivatives:</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=lRq7xtPxOGk&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">What Partial Derivatives Are (Hands-on Introduction)</a></li>
 <li><a href="https://www.youtube.com/watch?v=8bHZJOBizwE&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Partial Derivative Exercises</a></li>
 <li><a href="https://www.youtube.com/watch?v=0YzXHf-u5zU&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Advanced Partial Derivatives</a></li>
 <li><a href="https://www.youtube.com/watch?v=WFmUDiABfUI&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Advanced Partial-Derivative Exercises</a></li>
 <li><a href="https://www.youtube.com/watch?v=kIKVHguEpvA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Partial Derivative Notation</a></li>
-<li><a href="https://www.youtube.com/watch?v=_XeqwcVLf-s&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Chain Rule for Partial Derivatives</a></li>
-<li><a href="https://www.youtube.com/watch?v=zjLUIkF4H6M&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercises on the Multivariate Chain Rule</a></li>
-<li><a href="https://www.youtube.com/watch?v=rhn7ie7JBdA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Quadratic Cost</a></li>
-<li><a href="https://www.youtube.com/watch?v=KLXP2RL0-Vg&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Mean Squared Error</a></li>
-<li><a href="https://www.youtube.com/watch?v=3HAOTYo39A8&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Higher-Order Partial Derivatives</a></li>
-<li><a href="https://www.youtube.com/watch?v=E7ZN4y2tW0I&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercise on Higher-Order Partial Derivatives</a></li>
 </ul>
 </div>
 </div>
@@ -1936,6 +1930,23 @@ x_{p}
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Videos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Videos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on gradients of squared-error costs:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rhn7ie7JBdA&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Quadratic Cost</a></li>
+<li><a href="https://www.youtube.com/watch?v=KLXP2RL0-Vg&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Gradient of Mean Squared Error</a></li>
+</ul>
+</div>
+</div>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -2032,7 +2043,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2041,7 +2052,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a> with <span class="math inline">\(\tilde{x}= \tilde{\beta}\)</span>, <span class="math inline">\(\tilde{y}= \tilde{\varepsilon}\)</span>, <span class="math inline">\(q = n\)</span>, and <span class="math inline">\(z = f(\tilde{\varepsilon}) = \tilde{\varepsilon}\cdot \tilde{\varepsilon}= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\)</span>:</p>
@@ -2081,6 +2092,23 @@ x_{p}
 <p>Setting this <span class="math inline">\(p \times 1\)</span> vector to <span class="math inline">\(\tilde{0}\)</span> gives the normal equations <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\tilde{\beta}= {\mathbf{X}}^{\top}\tilde{y}\)</span> of least squares.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Videos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Videos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on the chain rule for partial derivatives:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_XeqwcVLf-s&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">The Chain Rule for Partial Derivatives</a></li>
+<li><a href="https://www.youtube.com/watch?v=zjLUIkF4H6M&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercises on the Multivariate Chain Rule</a></li>
+</ul>
 </div>
 </div>
 <div class="callout callout-style-simple callout-def no-icon">
@@ -2131,7 +2159,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2140,7 +2168,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Write <span class="math inline">\(A_{kl}\)</span>, <span class="math inline">\(X_{kl}\)</span>, and <span class="math inline">\(B_{kl}\)</span> for the entries of <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathbf{X}\)</span>, and <span class="math inline">\(\mathbf{B}\)</span>. For entry <span class="math inline">\((i,j)\)</span>:</p>
@@ -2215,7 +2243,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -2224,7 +2252,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-gradient-of-linear" class="proof solution">
 <p><span class="proof-title"><em>Solution 2</em>. </span>Written out over the six positions,</p>
@@ -2243,7 +2271,7 @@ x_{p}
 <section id="sec-optimality" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="sec-optimality"><span class="header-section-number">2</span> Second derivatives and optimality conditions</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2252,7 +2280,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section is adapted from the multivariate calculus and optimality-condition parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source states the second-order Taylor approximation and the optimality conditions without proof; here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between <span class="math inline">\(\tilde{z}\)</span> and <span class="math inline">\(\tilde{z} + \tilde{h}\)</span>. The source calls points with zero gradient critical points; here they are stationary points, because the <a href="./calculus.html#def-flat-point">calculus notes</a> give “critical point” a wider meaning. These parts of the source are not part of this section:</p>
 <ul>
@@ -2323,6 +2351,23 @@ x_{p}
 <p><span class="theorem-title"><strong>Example 19 (A function with a gradient but no Hessian at a point)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = x_1 \mathopen{}\left|x_1\right|\mathclose{}\)</span> for <span class="math inline">\(\tilde{x}= {(x_1, x_2)}^{\top}\)</span>. For <span class="math inline">\(x_1 &gt; 0\)</span>, <span class="math inline">\(f = x_1^2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_1} f = 2 x_1\)</span>; for <span class="math inline">\(x_1 &lt; 0\)</span>, <span class="math inline">\(f = -x_1^2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_1} f = -2 x_1\)</span>; and at <span class="math inline">\(x_1 = 0\)</span> the difference quotient is <span class="math inline">\(h \mathopen{}\left|h\right|\mathclose{} / h = \mathopen{}\left|h\right|\mathclose{} \to 0\)</span>. So the gradient exists everywhere: it is <span class="math inline">\({(2 \mathopen{}\left|x_1\right|\mathclose{},\ 0)}^{\top}\)</span>. But <span class="math inline">\(2 \mathopen{}\left|x_1\right|\mathclose{}\)</span> has no derivative in <span class="math inline">\(x_1\)</span> at <span class="math inline">\(x_1 = 0\)</span> (its difference quotient <span class="math inline">\(2 \mathopen{}\left|h\right|\mathclose{} / h\)</span> is <span class="math inline">\(2\)</span> for <span class="math inline">\(h &gt; 0\)</span> and <span class="math inline">\(-2\)</span> for <span class="math inline">\(h &lt; 0\)</span>), so <span class="math inline">\(\mathopen{}\left[\mathbf{H}_f(\tilde{x})\right]\mathclose{}_{11}\)</span>, and with it the Hessian, does not exist at any <span class="math inline">\(\tilde{x}\)</span> with <span class="math inline">\(x_1 = 0\)</span>.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Videos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Videos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on second and higher partial derivatives:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3HAOTYo39A8&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Higher-Order Partial Derivatives</a></li>
+<li><a href="https://www.youtube.com/watch?v=E7ZN4y2tW0I&amp;list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx">Exercise on Higher-Order Partial Derivatives</a></li>
+</ul>
 </div>
 </div>
 <div class="callout callout-style-simple callout-def no-icon">
@@ -2444,7 +2489,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2453,7 +2498,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
@@ -2510,7 +2555,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2519,7 +2564,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Take <span class="math inline">\(\delta &gt; 0\)</span> as in the definition of a local minimizer, shrunk if needed so that <span class="math inline">\((c - \delta, c + \delta)\)</span> lies inside the interval; then <span class="math inline">\(g(c) \le g(c + h)\)</span> whenever <span class="math inline">\(\mathopen{}\left|h\right|\mathclose{} &lt; \delta\)</span>. For <span class="math inline">\(0 &lt; h &lt; \delta\)</span>, the difference quotient is</p>
@@ -2589,7 +2634,7 @@ x_{p}
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2598,7 +2643,7 @@ x_{p}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Take <span class="math inline">\(\delta &gt; 0\)</span> as in the definition of a local minimizer. Fix <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, p\right\}\mathclose{}\)</span>, let <span class="math inline">\(\tilde{e}_i\)</span> be the vector with <span class="math inline">\(1\)</span> in entry <span class="math inline">\(i\)</span> and <span class="math inline">\(0\)</span> elsewhere, and let <span class="math inline">\(g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^* + t\,\tilde{e}_i)\)</span> for <span class="math inline">\(t \in \mathbb{R}\)</span>. For <span class="math inline">\(\mathopen{}\left|t\right|\mathclose{} &lt; \delta\)</span>, <span class="math inline">\(\mathopen{}\left\lVert(\tilde{x}^* + t\,\tilde{e}_i) - \tilde{x}^*\right\rVert\mathclose{} = \mathopen{}\left|t\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{e}_i\right\rVert\mathclose{} = \mathopen{}\left|t\right|\mathclose{} &lt; \delta\)</span>, so <span class="math inline">\(g_i(0) = f(\tilde{x}^*) \le f(\tilde{x}^* + t\,\tilde{e}_i) = g_i(t)\)</span>: <span class="math inline">\(0\)</span> is a local minimizer of <span class="math inline">\(g_i\)</span>. Moving <span class="math inline">\(\tilde{x}\)</span> from <span class="math inline">\(\tilde{x}^*\)</span> along <span class="math inline">\(\tilde{e}_i\)</span> changes only <span class="math inline">\(x_i\)</span>, so <span class="math inline">\(g_i'(0)\)</span> is the partial derivative <span class="math inline">\(\frac{\partial}{\partial x_i} f(\tilde{x}^*)\)</span>, which exists because the gradient does. By <a href="#thm-fermat" class="quarto-xref">Theorem&nbsp;12</a>, <span class="math inline">\(\frac{\partial}{\partial x_i} f(\tilde{x}^*) = g_i'(0) = 0\)</span>. The equation <span class="math inline">\(g_i'(0) = 0\)</span> holds for every <span class="math inline">\(i\)</span>, so every entry of the gradient at <span class="math inline">\(\tilde{x}^*\)</span> is <span class="math inline">\(0\)</span> (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;1</a>).</p>
@@ -2670,7 +2715,7 @@ f(\tilde{z} + \tilde{h})
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2679,7 +2724,7 @@ f(\tilde{z} + \tilde{h})
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(g(t) \stackrel{\text{def}}{=}f(\tilde{z} + t \tilde{h})\)</span> for <span class="math inline">\(t \in \mathbb{R}\)</span>, the values of <span class="math inline">\(f\)</span> along the line through <span class="math inline">\(\tilde{z}\)</span> in the direction <span class="math inline">\(\tilde{h}\)</span>. The inner function <span class="math inline">\(\tilde{y}(t) = \tilde{z} + t \tilde{h}\)</span> has entries <span class="math inline">\(y_j = z_j + t h_j\)</span>, so <span class="math inline">\(\frac{\partial}{\partial t} y_j = h_j\)</span>, and its derivative (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>) is the <span class="math inline">\(1 \times p\)</span> matrix <span class="math inline">\({\tilde{h}}^{\top}\)</span>. By the vector chain rule (<a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a>, with its input <span class="math inline">\(t\)</span> of length <span class="math inline">\(1\)</span>, its inner function <span class="math inline">\(\tilde{y}(t) = \tilde{z} + t \tilde{h}\)</span>, and its outer function <span class="math inline">\(f\)</span>),</p>
@@ -2799,7 +2844,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2808,7 +2853,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Write <span class="math inline">\(\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top}\)</span> with <span class="math inline">\(\mathbf{Q}\)</span> orthogonal and <span class="math inline">\(\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\)</span> (<a href="./linear-algebra.html#thm-spectral">spectral theorem</a>), and let <span class="math inline">\(\tilde{y} \stackrel{\text{def}}{=}{\mathbf{Q}}^{\top} \tilde{h}\)</span>. Then</p>
@@ -2864,7 +2909,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2873,7 +2918,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{a} \stackrel{\text{def}}{=}{(\mathopen{}\left|h_1\right|\mathclose{}, \ldots, \mathopen{}\left|h_p\right|\mathclose{})}^{\top}\)</span> and <span class="math inline">\(\tilde{1} \stackrel{\text{def}}{=}{(1, \ldots, 1)}^{\top}\)</span>, both in <span class="math inline">\(\mathbb{R}^p\)</span>. Then</p>
@@ -2932,7 +2977,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2941,7 +2986,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}_f(\tilde{x}^*)\)</span> is positive definite, and so symmetric, so its smallest eigenvalue <span class="math inline">\(\lambda\)</span> is positive (<a href="./linear-algebra.html#thm-definite-eigenvalues">definiteness and eigenvalues</a>). Each of the <span class="math inline">\(p^2\)</span> entries of <span class="math inline">\(\mathbf{H}_f\)</span> is continuous at <span class="math inline">\(\tilde{x}^*\)</span> (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;7</a>): for <span class="math inline">\(\varepsilon = \lambda / (2p)\)</span> there is a <span class="math inline">\(\delta_{ij} &gt; 0\)</span> with <span class="math inline">\(\mathopen{}\left|\mathopen{}\left[\mathbf{H}_f(\tilde{y})\right]\mathclose{}_{ij} - \mathopen{}\left[\mathbf{H}_f(\tilde{x}^*)\right]\mathclose{}_{ij}\right|\mathclose{} &lt; \lambda / (2p)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}^*\right\rVert\mathclose{} &lt; \delta_{ij}\)</span>. Let <span class="math inline">\(\delta\)</span> be the smallest of these <span class="math inline">\(p^2\)</span> numbers.</p>
@@ -3011,7 +3056,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 <section id="sec-convexity-vector" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="sec-convexity-vector"><span class="header-section-number">3</span> Convexity in several variables</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3020,7 +3065,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section is adapted from the convexity part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of <a href="#sec-optimality" class="quarto-xref">Section&nbsp;2</a>. The source defines both concave and strictly concave as “<span class="math inline">\(-f\)</span> is strictly convex”; here <span class="math inline">\(f\)</span> is concave when <span class="math inline">\(-f\)</span> is convex. These parts of the source are not part of this section:</p>
 <ul>
@@ -3101,7 +3146,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3110,7 +3155,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{x}, \tilde{y}\in K_1 \cap K_2\)</span> and <span class="math inline">\(t \in [0, 1]\)</span>. Then <span class="math inline">\(\tilde{x}, \tilde{y}\in K_1\)</span>, so <span class="math inline">\(t \tilde{x}+ (1 - t) \tilde{y}\in K_1\)</span>, since <span class="math inline">\(K_1\)</span> is convex; in the same way <span class="math inline">\(t \tilde{x}+ (1 - t) \tilde{y}\in K_2\)</span>. So <span class="math inline">\(t \tilde{x}+ (1 - t) \tilde{y}\in K_1 \cap K_2\)</span>.</p>
@@ -3185,7 +3230,7 @@ t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3194,7 +3239,7 @@ t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> and <span class="math inline">\(t \in [0, 1]\)</span>. For <span class="math inline">\(i = 1, 2\)</span>,</p>
@@ -3270,7 +3315,7 @@ f_i(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3279,7 +3324,7 @@ f_i(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> and <span class="math inline">\(t \in [0, 1]\)</span>. The points <span class="math inline">\((\tilde{x}, f(\tilde{x}))\)</span> and <span class="math inline">\((\tilde{y}, f(\tilde{y}))\)</span> are in <span class="math inline">\(\operatorname{epi} f\)</span>, since <span class="math inline">\(f(\tilde{x}) \le f(\tilde{x})\)</span> and <span class="math inline">\(f(\tilde{y}) \le f(\tilde{y})\)</span>. Since <span class="math inline">\(\operatorname{epi} f\)</span> is convex, it contains</p>
@@ -3337,7 +3382,7 @@ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tild
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3346,7 +3391,7 @@ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tild
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Only if.</strong> Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span>, let <span class="math inline">\(\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{y}\)</span>, and let <span class="math inline">\(g(t) \stackrel{\text{def}}{=}f(\tilde{y}+ t \tilde{d})\)</span>. The inner function <span class="math inline">\(t \mapsto \tilde{y}+ t \tilde{d}\)</span> has derivative <span class="math inline">\({\tilde{d}}^{\top}\)</span> (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>), so the vector chain rule (<a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a>) gives</p>
@@ -3447,7 +3492,7 @@ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3456,7 +3501,7 @@ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span>. By <a href="#thm-taylor-mv" class="quarto-xref">Theorem&nbsp;15</a> with <span class="math inline">\(\tilde{z} = \tilde{y}\)</span> and <span class="math inline">\(\tilde{h} = \tilde{x}- \tilde{y}\)</span>, there is a <span class="math inline">\(\tau \in (0, 1)\)</span> such that, with <span class="math inline">\(\tilde{w} \stackrel{\text{def}}{=}\tilde{y}+ \tau (\tilde{x}- \tilde{y})\)</span>,</p>
@@ -3541,7 +3586,7 @@ x^4 - y^4 - 4 y^3 (x - y)
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3550,7 +3595,7 @@ x^4 - y^4 - 4 y^3 (x - y)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For every <span class="math inline">\(\tilde{x}\)</span>,</p>
@@ -3592,7 +3637,7 @@ f(\tilde{x})
 <section id="sec-lagrange" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="sec-lagrange"><span class="header-section-number">4</span> Minimizing a quadratic under linear constraints</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3601,7 +3646,7 @@ f(\tilde{x})
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section is adapted from the Lagrange-multiplier part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that <span class="math inline">\(\mathbf{S}\)</span> is positive definite; the added hypothesis that the columns of <span class="math inline">\(\mathbf{A}\)</span> are linearly independent makes <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\)</span> invertible. The source’s example with general coefficients <span class="math inline">\(a_1, a_2, b\)</span> is specialized here to <span class="math inline">\(3, 4, 5\)</span>. These parts of the source are not part of this section:</p>
 <ul>
@@ -3711,7 +3756,7 @@ L(\tilde{x}, \tilde{\lambda}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \til
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3720,7 +3765,7 @@ L(\tilde{x}, \tilde{\lambda}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \til
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The steps marked “transpose of a product” use the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, and <span class="math inline">\(\mathbf{S}\)</span> is symmetric because it is <a href="./linear-algebra.html#def-positive-definite">positive definite</a>.</p>
@@ -3896,7 +3941,7 @@ f(\tilde{x}^*)
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3905,7 +3950,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{M}^{-1}\)</span> is symmetric and does not depend on <span class="math inline">\(\tilde{b}\)</span>, so <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> applies with <span class="math inline">\(\mathbf{M}^{-1}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>:</p>
@@ -3945,7 +3990,7 @@ f(\tilde{x}^*)
 <section id="sec-descent" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="sec-descent"><span class="header-section-number">5</span> Newton’s method and gradient descent</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -3954,7 +3999,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section is adapted from the Newton-Raphson and gradient descent parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is <span class="math inline">\(\tfrac{1}{2}(b^2 + b)\)</span>, not <span class="math inline">\(\tfrac{1}{2}(1 + b^2)\)</span> as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for <span class="math inline">\(\tilde{x}^{(1)}\)</span> has <span class="math inline">\(\tilde{x}^{(1)}\)</span> on its right side where <span class="math inline">\(\tilde{x}^{(0)}\)</span> is meant. These parts of the source are not part of this section:</p>
 <ul>
@@ -4057,7 +4102,7 @@ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \til
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4066,7 +4111,7 @@ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \til
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{H}\)</span> is symmetric, by the definition of <a href="./linear-algebra.html#def-positive-definite">positive definite</a>, and invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>), so <span class="math inline">\(\tilde{\delta}^*\)</span> exists and <span class="math inline">\(\mathbf{H} \tilde{\delta}^* = -\tilde{g}\)</span>. For any <span class="math inline">\(\tilde{d} \in \mathbb{R}^p\)</span>, first</p>
@@ -4198,7 +4243,7 @@ x^{(t+1)} - 2
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4207,7 +4252,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by <a href="#thm-quadratic-form" class="quarto-xref">Theorem&nbsp;7</a> for <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> and <a href="#cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a> for <span class="math inline">\({\tilde{c}}^{\top} \tilde{x}\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\)</span>; by <a href="#thm-hessian-quadratic" class="quarto-xref">Theorem&nbsp;11</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the gradient <span class="math inline">\(-\tilde{c}\)</span> of the linear term is constant (<a href="#def-constant-wrt-vector" class="quarto-xref">Definition&nbsp;4</a>), <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \mathbf{S}\)</span>, which is invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>). So</p>
@@ -4290,7 +4335,7 @@ x^{(t+1)} - 2
 </div>
 </div>
 <div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -4299,7 +4344,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(h(s) \stackrel{\text{def}}{=}f(\tilde{x}- s \tilde{g})\)</span>. The inner function <span class="math inline">\(s \mapsto \tilde{x}- s \tilde{g}\)</span> has derivative <span class="math inline">\(-{\tilde{g}}^{\top}\)</span> (<a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;3</a>), so by the vector chain rule (<a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a>)</p>
