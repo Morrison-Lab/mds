@@ -1,0 +1,87 @@
+:::{#thm-sum-intersection-subspace}
+#### Sums and intersections of subspaces are subspaces
+
+If $\mathcal{S}_1$ and $\mathcal{S}_2$ are subspaces of $\reals^p$ (@def-subspace),
+then $\mathcal{S}_1 + \mathcal{S}_2$ (@def-subspace-sum)
+and $\mathcal{S}_1 \cap \mathcal{S}_2$
+are subspaces of $\reals^p$.
+
+:::
+
+::: proof
+
+Both $\mathcal{S}_1$ and $\mathcal{S}_2$ contain $\vzero$ (@thm-subspace-zero).
+
+**The sum.**
+It is not empty: it contains $\vzero + \vzero = \vzero$.
+Take two of its vectors,
+$\vecf{u} = \vecf{u}_1 + \vecf{u}_2$
+and $\vecf{w} = \vecf{w}_1 + \vecf{w}_2$,
+with $\vecf{u}_1, \vecf{w}_1 \in \mathcal{S}_1$
+and $\vecf{u}_2, \vecf{w}_2 \in \mathcal{S}_2$,
+and a number $c$.
+Then
+
+$$
+\ba
+\vecf{u} + \vecf{w}
+&= (\vecf{u}_1 + \vecf{u}_2) + (\vecf{w}_1 + \vecf{w}_2)
+&& \text{(substitute)}
+\\
+&= (\vecf{u}_1 + \vecf{w}_1) + (\vecf{u}_2 + \vecf{w}_2),
+&& \text{(regroup; vector addition is entrywise)}
+\ea
+$$
+
+where $\vecf{u}_1 + \vecf{w}_1 \in \mathcal{S}_1$
+and $\vecf{u}_2 + \vecf{w}_2 \in \mathcal{S}_2$,
+because each subspace is closed under addition.
+Likewise
+
+$$
+\ba
+c\,\vecf{u}
+&= c\,(\vecf{u}_1 + \vecf{u}_2)
+&& \text{(substitute)}
+\\
+&= c\,\vecf{u}_1 + c\,\vecf{u}_2,
+&& \text{(distribute } c \text{ entrywise)}
+\ea
+$$
+
+where $c\,\vecf{u}_1 \in \mathcal{S}_1$
+and $c\,\vecf{u}_2 \in \mathcal{S}_2$,
+because each subspace is closed under scalar multiplication.
+So $\vecf{u} + \vecf{w}$ and $c\,\vecf{u}$ are in $\mathcal{S}_1 + \mathcal{S}_2$.
+
+**The intersection.**
+It is not empty: it contains $\vzero$.
+If $\vecf{u}$ and $\vecf{w}$ are in both $\mathcal{S}_1$ and $\mathcal{S}_2$,
+then $\vecf{u} + \vecf{w}$ and $c\,\vecf{u}$ are in $\mathcal{S}_1$,
+because $\mathcal{S}_1$ is a subspace,
+and in $\mathcal{S}_2$ for the same reason,
+so they are in $\mathcal{S}_1 \cap \mathcal{S}_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sum-intersection-subspace}
+#### Two planes in $\reals^3$
+
+Let $\mathcal{S}_1 = \cb{(a, b, 0) : a, b \in \reals}$,
+the plane $z = 0$,
+and $\mathcal{S}_2 = \cb{(0, b, c) : b, c \in \reals}$,
+the plane $x = 0$.
+
+- **Intersection:**
+  a vector in both has third entry $0$ and first entry $0$,
+  so $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{(0, b, 0) : b \in \reals}$,
+  the $y$-axis, which is a line through the origin.
+- **Sum:**
+  $(a, b, 0) + (0, b', c) = (a, b + b', c)$,
+  and any $(x, y, z)$ arises this way,
+  with $a = x$, $b = y$, $b' = 0$ and $c = z$.
+  So $\mathcal{S}_1 + \mathcal{S}_2 = \reals^3$.
+
+:::

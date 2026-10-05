@@ -1,0 +1,52 @@
+:::{#def-direct-sum}
+#### Direct sum
+
+Let $\mathcal{S}_1$, $\mathcal{S}_2$ and $\mathcal{V}$ be subspaces of $\reals^p$.
+$\mathcal{S}_1$ and $\mathcal{S}_2$ are **complementary** in $\mathcal{V}$ if
+
+$$
+\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2
+\quad \text{and} \quad
+\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}
+$$
+
+(@def-subspace-sum).
+Then $\mathcal{V}$ is the **direct sum** of $\mathcal{S}_1$ and $\mathcal{S}_2$,
+written $\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-direct-sum}
+#### $\reals^3$ is a plane plus a line
+
+Let $\mathcal{S}_1 = \cb{(a, b, 0) : a, b \in \reals}$, the plane $z = 0$,
+and $\mathcal{S}_2 = \cb{(0, 0, c) : c \in \reals}$, the $z$-axis.
+
+- **Sum:** any $(x, y, z) \in \reals^3$ is $(x, y, 0) + (0, 0, z)$,
+  so $\mathcal{S}_1 + \mathcal{S}_2 = \reals^3$.
+- **Intersection:** a vector in both has third entry $0$
+  and first and second entries $0$,
+  so $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
+
+So $\reals^3 = \mathcal{S}_1 \oplus \mathcal{S}_2$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-not-direct-sum}
+#### Two planes that sum to $\reals^3$ but not directly
+
+The planes $z = 0$ and $x = 0$ sum to $\reals^3$
+(@exm-sum-intersection-subspace),
+but they share the $y$-axis,
+so they are not complementary,
+and $\reals^3$ is not their direct sum.
+The shared line shows up as more than one way to split a vector:
+$(0, 1, 0) = (0, 1, 0) + \vzero = \vzero + (0, 1, 0)$,
+with the first term in the plane $z = 0$ and the second in the plane $x = 0$
+both times.
+
+:::

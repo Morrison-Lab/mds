@@ -1,0 +1,115 @@
+:::{#thm-orthogonal-direct-sum}
+#### A subspace and its orthogonal complement make up the whole space
+
+Let $\mathcal{S}$ be a subspace of $\reals^p$. Then
+
+1. $\mathcal{S} \cap \mathcal{S}^\perp = \cb{\vzero}$;
+2. $\dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) = p$;
+3. $\reals^p = \mathcal{S} \oplus \mathcal{S}^\perp$ (@def-direct-sum).
+
+So every $\vecf{y} \in \reals^p$ can be written as
+$\vecf{y} = \vecf{u} + \vecf{v}$
+with $\vecf{u} \in \mathcal{S}$ and $\vecf{v} \in \mathcal{S}^\perp$
+in only one way (@thm-direct-sum-equiv).
+
+:::
+
+::: proof
+
+$\mathcal{S}^\perp$ is a subspace (@thm-orthogonal-complement-subspace),
+so it has a dimension (@def-dimension).
+
+**Part 1.**
+Both $\mathcal{S}$ and $\mathcal{S}^\perp$ contain $\vzero$ (@thm-subspace-zero).
+If $\vecf{x}$ is in both,
+then $\vecf{x}$ is orthogonal to every vector of $\mathcal{S}$,
+$\vecf{x}$ itself included,
+so $\vecf{x} \cdot \vecf{x} = x_1^2 + \cdots + x_p^2 = 0$,
+which forces every $x_i = 0$.
+
+**Part 2.**
+Let $d = \dim(\mathcal{S})$.
+If $d = 0$, then $\mathcal{S} = \cb{\vzero}$,
+$\mathcal{S}^\perp = \reals^p$
+(every $\vecf{u}$ satisfies $\vzero \cdot \vecf{u} = 0$),
+and $0 + p = p$ (@exm-dimension).
+If $d \ge 1$, choose a basis $\vecf{a}_1, \ldots, \vecf{a}_d$ of $\mathcal{S}$
+(@thm-extend-basis),
+and let $\matr{A}$ be the $p \times d$ matrix with these columns.
+The basis spans $\mathcal{S}$,
+so $\mathcal{S} = \mathcal{C}(\matr{A})$ (@thm-column-space-span),
+and $\mathcal{S}^\perp = \mathcal{N}(\tp{\matr{A}})$ (@thm-complement-null-space).
+$\tp{\matr{A}}$ is $d \times p$, so
+
+$$
+\ba
+\dim(\mathcal{S}^\perp)
+&= \operatorname{nullity}(\tp{\matr{A}})
+&& \text{(@def-nullity)}
+\\
+&= p - \operatorname{rank}(\tp{\matr{A}})
+&& \text{(@thm-rank-nullity, for the } p \text{ columns of } \tp{\matr{A}} \text{)}
+\\
+&= p - \operatorname{rank}(\matr{A})
+&& \text{(@thm-rank-transpose)}
+\\
+&= p - \dim\paren{\mathcal{C}(\matr{A})}
+&& \text{(@thm-rank-dim)}
+\\
+&= p - d.
+&& \text{(} \mathcal{C}(\matr{A}) = \mathcal{S} \text{)}
+\ea
+$$
+
+**Part 3.**
+$\mathcal{S} + \mathcal{S}^\perp$ is a subspace of $\reals^p$
+(@thm-sum-intersection-subspace), and
+
+$$
+\ba
+\dim(\mathcal{S} + \mathcal{S}^\perp)
+&= \dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) - \dim(\mathcal{S} \cap \mathcal{S}^\perp)
+&& \text{(@thm-dim-sum)}
+\\
+&= p - \dim(\mathcal{S} \cap \mathcal{S}^\perp)
+&& \text{(part 2)}
+\\
+&= p - 0
+&& \text{(part 1, and } \dim(\cb{\vzero}) = 0 \text{ by @exm-dimension)}
+\\
+&= p.
+&& \text{(arithmetic)}
+\ea
+$$
+
+Since $\mathcal{S} + \mathcal{S}^\perp \subseteq \reals^p$
+and $\dim(\reals^p) = p$ (@exm-dimension),
+@thm-subspace-equal-dim gives $\mathcal{S} + \mathcal{S}^\perp = \reals^p$.
+Together with part 1, $\reals^p = \mathcal{S} \oplus \mathcal{S}^\perp$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthogonal-direct-sum}
+#### Splitting a vector of $\reals^3$ along a line and its complement
+
+Let $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$ in $\reals^3$, so $\dim(\mathcal{S}) = 1$.
+A vector $\vecf{u}$ is in $\mathcal{S}^\perp$ exactly when $u_1 + u_2 = 0$:
+that condition says $(1, 1, 0) \cdot \vecf{u} = 0$,
+and then $c\,(1, 1, 0) \cdot \vecf{u} = c\,(u_1 + u_2) = 0$ for every $c$.
+So $\mathcal{S}^\perp = \cb{(a, -a, c) : a, c \in \reals}
+= \operatorname{span}\cb{(1, -1, 0), (0, 0, 1)}$.
+Those two vectors are linearly independent,
+because $a\,(1, -1, 0) + c\,(0, 0, 1) = (a, -a, c)$ is $\vzero$ only if $a = c = 0$,
+so $\dim(\mathcal{S}^\perp) = 2$, and $1 + 2 = 3$, as part 2 says.
+
+To split $\vecf{y} = (3, 1, 2)$,
+look for $\vecf{u} = t\,(1, 1, 0)$
+with $\vecf{v} = \vecf{y} - \vecf{u} = (3 - t, 1 - t, 2)$ in $\mathcal{S}^\perp$:
+that needs $(3 - t) + (1 - t) = 0$, so $t = 2$.
+Then $\vecf{u} = (2, 2, 0)$ and $\vecf{v} = (1, -1, 2)$,
+with $\vecf{u} + \vecf{v} = (3, 1, 2)$
+and $(1, 1, 0) \cdot (1, -1, 2) = 1 - 1 + 0 = 0$.
+
+:::

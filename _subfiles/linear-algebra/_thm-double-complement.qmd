@@ -1,0 +1,75 @@
+:::{#thm-double-complement}
+#### The orthogonal complement of the orthogonal complement
+
+For any subspace $\mathcal{S}$ of $\reals^p$,
+
+$$
+(\mathcal{S}^\perp)^\perp = \mathcal{S}.
+$$
+
+:::
+
+::: proof
+
+**$\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp$.**
+Take $\vecf{s} \in \mathcal{S}$ and any $\vecf{v} \in \mathcal{S}^\perp$.
+By @def-orthogonal-complement, $\vecf{s} \cdot \vecf{v} = 0$,
+so $\vecf{v} \cdot \vecf{s} = 0$ too, since the dot product is symmetric.
+So $\vecf{s}$ is orthogonal to every vector of $\mathcal{S}^\perp$,
+that is, $\vecf{s} \in (\mathcal{S}^\perp)^\perp$.
+
+**Equal dimensions.**
+$\mathcal{S}^\perp$ is a subspace (@thm-orthogonal-complement-subspace),
+so part 2 of @thm-orthogonal-direct-sum applies to it as well as to $\mathcal{S}$:
+
+$$
+\ba
+\dim\paren{(\mathcal{S}^\perp)^\perp}
+&= p - \dim(\mathcal{S}^\perp)
+&& \text{(@thm-orthogonal-direct-sum, applied to } \mathcal{S}^\perp \text{)}
+\\
+&= p - \paren{p - \dim(\mathcal{S})}
+&& \text{(@thm-orthogonal-direct-sum, applied to } \mathcal{S} \text{)}
+\\
+&= \dim(\mathcal{S}).
+&& \text{(arithmetic)}
+\ea
+$$
+
+$(\mathcal{S}^\perp)^\perp$ is a subspace (@thm-orthogonal-complement-subspace)
+that contains $\mathcal{S}$ and has the same dimension,
+so it equals $\mathcal{S}$ (@thm-subspace-equal-dim).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-double-complement}
+#### Back to the line
+
+In @exm-orthogonal-direct-sum,
+$\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$
+and $\mathcal{S}^\perp = \operatorname{span}\cb{(1, -1, 0), (0, 0, 1)}$.
+Put those two spanning vectors in the columns of a matrix $\matr{B}$,
+so $\mathcal{S}^\perp = \mathcal{C}(\matr{B})$ (@thm-column-space-span).
+By @thm-complement-null-space,
+$\vecf{w} \in (\mathcal{S}^\perp)^\perp$
+exactly when $\vecf{w}$ is orthogonal to both columns:
+$w_1 - w_2 = 0$ and $w_3 = 0$.
+So $(\mathcal{S}^\perp)^\perp = \cb{(a, a, 0) : a \in \reals} = \mathcal{S}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-double-complement-fails}
+#### A set that is not a subspace does not come back
+
+The one-element set $\mathcal{X} = \cb{(1, 1, 0)}$ is not a subspace.
+Its orthogonal complement is the same as that of $\mathcal{S}$ in @exm-double-complement,
+since both are defined by the single condition $u_1 + u_2 = 0$,
+so $(\mathcal{X}^\perp)^\perp = \operatorname{span}\cb{(1, 1, 0)}$,
+which contains $(2, 2, 0) \notin \mathcal{X}$.
+@thm-double-complement needs $\mathcal{S}$ to be a subspace.
+
+:::

@@ -1,0 +1,111 @@
+:::{#thm-fundamental-subspaces}
+#### Fundamental theorem of linear algebra
+
+Let $\matr{A}$ be an $m \times n$ matrix with $\operatorname{rank}(\matr{A}) = r$. Then
+
+1. $\mathcal{C}(\matr{A})^\perp = \mathcal{N}(\tp{\matr{A}})$,
+   and $\reals^m = \mathcal{C}(\matr{A}) \oplus \mathcal{N}(\tp{\matr{A}})$;
+2. $\mathcal{C}(\matr{A}) = \mathcal{N}(\tp{\matr{A}})^\perp$;
+3. $\mathcal{N}(\matr{A})^\perp = \mathcal{C}(\tp{\matr{A}})$,
+   and $\reals^n = \mathcal{C}(\tp{\matr{A}}) \oplus \mathcal{N}(\matr{A})$;
+4. $\dim\paren{\mathcal{C}(\matr{A})} = \dim\paren{\mathcal{C}(\tp{\matr{A}})} = r$,
+   $\dim\paren{\mathcal{N}(\matr{A})} = n - r$,
+   and $\dim\paren{\mathcal{N}(\tp{\matr{A}})} = m - r$.
+
+:::
+
+::: proof
+
+**Part 1.**
+The first equation is @thm-complement-null-space.
+$\mathcal{C}(\matr{A})$ is a subspace of $\reals^m$ (@thm-column-space-span), so
+
+$$
+\ba
+\reals^m
+&= \mathcal{C}(\matr{A}) \oplus \mathcal{C}(\matr{A})^\perp
+&& \text{(@thm-orthogonal-direct-sum)}
+\\
+&= \mathcal{C}(\matr{A}) \oplus \mathcal{N}(\tp{\matr{A}}).
+&& \text{(first equation)}
+\ea
+$$
+
+**Part 2.**
+
+$$
+\ba
+\mathcal{C}(\matr{A})
+&= \paren{\mathcal{C}(\matr{A})^\perp}^\perp
+&& \text{(@thm-double-complement)}
+\\
+&= \mathcal{N}(\tp{\matr{A}})^\perp.
+&& \text{(part 1)}
+\ea
+$$
+
+**Part 3.**
+Apply parts 2 and 1 to the $n \times m$ matrix $\tp{\matr{A}}$,
+using $\tp{(\tp{\matr{A}})} = \matr{A}$:
+part 2 gives $\mathcal{C}(\tp{\matr{A}}) = \mathcal{N}(\matr{A})^\perp$,
+and part 1 gives $\reals^n = \mathcal{C}(\tp{\matr{A}}) \oplus \mathcal{N}(\matr{A})$.
+
+**Part 4.**
+$\dim\paren{\mathcal{C}(\matr{A})} = r$ by @thm-rank-dim.
+$\dim\paren{\mathcal{C}(\tp{\matr{A}})} = \operatorname{rank}(\tp{\matr{A}})$ by @thm-rank-dim,
+and that is $r$ by @thm-rank-transpose.
+$\matr{A}$ has $n$ columns,
+so $\dim\paren{\mathcal{N}(\matr{A})} = n - r$ (@def-nullity, @thm-rank-nullity).
+$\tp{\matr{A}}$ has $m$ columns and rank $r$,
+so $\dim\paren{\mathcal{N}(\tp{\matr{A}})} = m - r$ in the same way.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-fundamental-subspaces}
+#### The four subspaces of the matrix in @exm-column-space
+
+For $\matr{A}$ in @exm-column-space, $m = 2$, $n = 3$ and $r = 1$ (@exm-rank-dim).
+
+- **In $\reals^3$:**
+  the row space $\mathcal{C}(\tp{\matr{A}}) = \operatorname{span}\cb{(1, -2, -2)}$
+  (@exm-column-space-span)
+  has dimension $1 = r$,
+  and $\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(2, 1, 0), (2, 0, 1)}$
+  has dimension $2 = n - r$ (@exm-nullity).
+  The spanning vectors are orthogonal:
+  $(1, -2, -2) \cdot (2, 1, 0) = 2 - 2 + 0 = 0$
+  and $(1, -2, -2) \cdot (2, 0, 1) = 2 + 0 - 2 = 0$.
+- **In $\reals^2$:**
+  $\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 3)}$
+  has dimension $1 = r$,
+  and $\mathcal{N}(\tp{\matr{A}}) = \operatorname{span}\cb{(-3, 1)}$
+  has dimension $1 = m - r$ (@exm-complement-null-space).
+
+By part 3, $\vecf{y} = (1, 0, 0)$ splits uniquely
+into a row-space part $t\,(1, -2, -2)$ and a null-space part.
+The null-space part $\vecf{y} - t\,(1, -2, -2)$
+must be orthogonal to $(1, -2, -2)$:
+
+$$
+\ba
+0
+&= (1, -2, -2) \cdot \paren{(1, 0, 0) - t\,(1, -2, -2)}
+&& \text{(orthogonality)}
+\\
+&= (1, -2, -2) \cdot (1, 0, 0) - t\,(1, -2, -2) \cdot (1, -2, -2)
+&& \text{(the two rules in the proof of @thm-orthogonal-complement-subspace)}
+\\
+&= 1 - 9t,
+&& \text{(@def-dot-product)}
+\ea
+$$
+
+so $t = \frac{1}{9}$.
+The row-space part is $\paren{\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}}$
+and the null-space part is $\paren{\frac{8}{9}, \frac{2}{9}, \frac{2}{9}}$;
+as a check, $\frac{8}{9} - 2 \cd \frac{2}{9} - 2 \cd \frac{2}{9} = 0$,
+so $\matr{A}$ sends the null-space part to $\vzero_2$.
+
+:::

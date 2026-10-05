@@ -1,0 +1,64 @@
+:::{#thm-subspace-equal-dim}
+#### A subspace inside another of the same dimension equals it
+
+If $\mathcal{T}$ and $\mathcal{S}$ are subspaces of $\reals^p$
+with $\mathcal{T} \subseteq \mathcal{S}$
+and $\dim(\mathcal{T}) = \dim(\mathcal{S})$ (@def-dimension),
+then $\mathcal{T} = \mathcal{S}$.
+
+:::
+
+::: proof
+
+Let $d = \dim(\mathcal{S})$,
+and let $\vecf{t}_1, \ldots, \vecf{t}_d$ be a basis of $\mathcal{T}$
+(@thm-extend-basis);
+it has $d$ vectors because $\dim(\mathcal{T}) = d$.
+(When $d = 0$ it is the empty list,
+whose span is $\cb{\vzero}$ by the convention in @def-span,
+and the argument is unchanged.)
+Suppose some $\vecf{s} \in \mathcal{S}$
+is not in $\operatorname{span}\cb{\vecf{t}_1, \ldots, \vecf{t}_d} = \mathcal{T}$.
+Then $\vecf{t}_1, \ldots, \vecf{t}_d, \vecf{s}$ are linearly independent
+(@thm-add-outside-span),
+and they are $d + 1$ vectors of $\mathcal{S}$,
+which contradicts part 1 of @thm-dim-bound.
+So every vector of $\mathcal{S}$ is in $\mathcal{T}$,
+that is, $\mathcal{S} \subseteq \mathcal{T}$.
+Together with $\mathcal{T} \subseteq \mathcal{S}$,
+this gives $\mathcal{T} = \mathcal{S}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-subspace-equal-dim}
+#### Two independent vectors in a plane span it
+
+Let $\mathcal{S} = \cb{(x, y, 0) : x, y \in \reals}$,
+the plane $z = 0$, which has dimension $2$ (@exm-dimension),
+and let $\mathcal{T} = \operatorname{span}\cb{(1, 0, 0), (1, 1, 0)}$.
+Both vectors have third entry $0$, so $\mathcal{T} \subseteq \mathcal{S}$.
+They are linearly independent:
+$c_1 (1, 0, 0) + c_2 (1, 1, 0) = (c_1 + c_2, c_2, 0)$,
+which is $\vzero$ only if $c_2 = 0$ and then $c_1 = 0$.
+So $\dim(\mathcal{T}) = 2$,
+and @thm-subspace-equal-dim gives $\mathcal{T} = \mathcal{S}$
+without solving for any coefficients.
+As a check, $(x, y, 0) = (x - y)\,(1, 0, 0) + y\,(1, 1, 0)$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-subspace-equal-dim-fails}
+#### Equal dimensions without containment
+
+The lines $\operatorname{span}\cb{(1, 0, 0)}$ and $\operatorname{span}\cb{(0, 1, 0)}$
+in $\reals^3$ both have dimension $1$,
+but they are not equal:
+$(1, 0, 0)$ is in the first and not the second.
+@thm-subspace-equal-dim does not apply,
+because neither line contains the other.
+
+:::
