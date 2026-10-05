@@ -1,0 +1,88 @@
+:::{#thm-dot-linear}
+#### The dot product is linear in each slot
+
+For vectors $\vecf{x}, \vecf{u}, \vecf{w} \in \reals^p$ and numbers $a, b$,
+
+$$
+\vecf{x} \cdot (a\,\vecf{u} + b\,\vecf{w})
+= a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w})
+$$
+
+and
+
+$$
+(a\,\vecf{u} + b\,\vecf{w}) \cdot \vecf{x}
+= a\,(\vecf{u} \cdot \vecf{x}) + b\,(\vecf{w} \cdot \vecf{x}).
+$$
+
+:::
+
+::: proof
+
+**Second slot.**
+
+$$
+\ba
+\vecf{x} \cdot (a\,\vecf{u} + b\,\vecf{w})
+&= \sum_{i=1}^{p} x_i\,(a\,\vecf{u} + b\,\vecf{w})_i
+&& \text{(@def-dot-product)}
+\\
+&= \sum_{i=1}^{p} x_i\,(a u_i + b w_i)
+&& \text{(@def-scalar-mult, @def-vector-addition)}
+\\
+&= \sum_{i=1}^{p} \paren{x_i a u_i + x_i b w_i}
+&& \text{(distribute each } x_i \text{)}
+\\
+&= \sum_{i=1}^{p} \paren{a\,x_i u_i + b\,x_i w_i}
+&& \text{(commute the factors in each product)}
+\\
+&= \sum_{i=1}^{p} a\,x_i u_i + \sum_{i=1}^{p} b\,x_i w_i
+&& \text{(split the finite sum)}
+\\
+&= a \sum_{i=1}^{p} x_i u_i + b \sum_{i=1}^{p} x_i w_i
+&& \text{(factor } a \text{ and } b \text{ out of the sums)}
+\\
+&= a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w}).
+&& \text{(@def-dot-product)}
+\ea
+$$
+
+**First slot.**
+
+$$
+\ba
+(a\,\vecf{u} + b\,\vecf{w}) \cdot \vecf{x}
+&= \vecf{x} \cdot (a\,\vecf{u} + b\,\vecf{w})
+&& \text{(@thm-lincom-symmetric)}
+\\
+&= a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w})
+&& \text{(second slot)}
+\\
+&= a\,(\vecf{u} \cdot \vecf{x}) + b\,(\vecf{w} \cdot \vecf{x}).
+&& \text{(@thm-lincom-symmetric, twice)}
+\ea
+$$
+
+Two special cases are used often.
+With $a = b = 1$, and $1\,\vecf{u} = \vecf{u}$,
+the theorem gives $\vecf{x} \cdot (\vecf{u} + \vecf{w}) = \vecf{x} \cdot \vecf{u} + \vecf{x} \cdot \vecf{w}$.
+With $\vecf{w} = \vecf{u}$ and $b = 0$, and $0\,\vecf{u} = \vzero$,
+it gives $\vecf{x} \cdot (a\,\vecf{u}) = a\,(\vecf{x} \cdot \vecf{u})$,
+and likewise in the first slot.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-dot-linear}
+#### Splitting a dot product
+
+Let $\vecf{x} = (1, 2)$, $\vecf{u} = (3, 0)$, $\vecf{w} = (0, 1)$, $a = 2$ and $b = -1$.
+Directly,
+$a\,\vecf{u} + b\,\vecf{w} = (6, -1)$
+and $\vecf{x} \cdot (6, -1) = 6 - 2 = 4$.
+By @thm-dot-linear,
+$a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w}) = 2 \cd 3 + (-1) \cd 2 = 4$,
+the same number.
+
+:::

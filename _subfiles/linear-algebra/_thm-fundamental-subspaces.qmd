@@ -86,7 +86,10 @@ For $\matr{A}$ in @exm-column-space, $m = 2$, $n = 3$ and $r = 1$ (@exm-rank-dim
 By part 3, $\vecf{y} = (1, 0, 0)$ splits uniquely
 into a row-space part $t\,(1, -2, -2)$ and a null-space part.
 The null-space part $\vecf{y} - t\,(1, -2, -2)$
-must be orthogonal to $(1, -2, -2)$:
+lies in $\mathcal{N}(\matr{A})$ (part 3),
+and $\mathcal{N}(\matr{A}) = \mathcal{C}(\tp{\matr{A}})^\perp$
+(@thm-complement-null-space applied to $\tp{\matr{A}}$, with $\tp{(\tp{\matr{A}})} = \matr{A}$),
+so it must be orthogonal to $(1, -2, -2)$:
 
 $$
 \ba
@@ -94,18 +97,26 @@ $$
 &= (1, -2, -2) \cdot \paren{(1, 0, 0) - t\,(1, -2, -2)}
 && \text{(orthogonality)}
 \\
-&= (1, -2, -2) \cdot (1, 0, 0) - t\,(1, -2, -2) \cdot (1, -2, -2)
-&& \text{(the two rules in the proof of @thm-orthogonal-complement-subspace)}
+&= (1, -2, -2) \cdot \paren{1 \cd (1, 0, 0) + (-t)\,(1, -2, -2)}
+&& \text{(write the difference as a linear combination)}
+\\
+&= 1 \cd \paren{(1, -2, -2) \cdot (1, 0, 0)} + (-t)\,\paren{(1, -2, -2) \cdot (1, -2, -2)}
+&& \text{(@thm-dot-linear)}
+\\
+&= 1 \cd 1 + (-t) \cd 9
+&& \text{(@def-dot-product)}
 \\
 &= 1 - 9t,
-&& \text{(@def-dot-product)}
+&& \text{(arithmetic)}
 \ea
 $$
 
 so $t = \frac{1}{9}$.
 The row-space part is $\paren{\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}}$
 and the null-space part is $\paren{\frac{8}{9}, \frac{2}{9}, \frac{2}{9}}$;
-as a check, $\frac{8}{9} - 2 \cd \frac{2}{9} - 2 \cd \frac{2}{9} = 0$,
+as a check, row 1 of $\matr{A}$ gives
+$\frac{8}{9} - 2 \cd \frac{2}{9} - 2 \cd \frac{2}{9} = 0$,
+and row 2 is $3$ times row 1,
 so $\matr{A}$ sends the null-space part to $\vzero_2$.
 
 :::

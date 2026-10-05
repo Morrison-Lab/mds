@@ -53,15 +53,21 @@ $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
 and
 $\matr{B} = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}$.
 Each has one nonzero column and one zero column.
-The nonzero column on its own is linearly independent,
+The nonzero column on its own is linearly independent
+($c\,\vecf{v} = \vzero_2$ with $\vecf{v} \ne \vzero_2$ forces $c = 0$),
 and the two columns together are not,
 since $1$ times the zero column is $\vzero_2$;
 so each matrix has rank $1$ (@def-rank).
+By the same argument, $-\matr{A}$ has rank $1$.
 
 - $\matr{A} + \matr{B}$ is the $2 \times 2$ identity matrix, which has rank $2$
   (@exm-rank-nullity),
   so the bound $2 \le 1 + 1$ holds with equality.
-- $\matr{A} + (-\matr{A})$ is the $2 \times 2$ zero matrix, which has rank $0$,
-  so the bound $0 \le 1 + 1$ is strict.
+- $\matr{A} + (-\matr{A})$ is the $2 \times 2$ zero matrix,
+  which has rank $0$:
+  any nonempty list of its columns contains $\vzero_2$,
+  and $1 \cd \vzero_2 = \vzero_2$.
+  So the bound $0 \le \operatorname{rank}(\matr{A}) + \operatorname{rank}(-\matr{A}) = 1 + 1$
+  is strict.
 
 :::

@@ -42,23 +42,34 @@ Suppose $\vecf{a}_j \cdot \vecf{x} = 0$ for every $j$,
 and take any $\vecf{y} \in \mathcal{C}(\matr{A})$,
 so $\vecf{y} = \matr{A} \vecf{z}$ for some $\vecf{z} \in \reals^n$
 (@def-column-space).
-The dot product is symmetric, $\vecf{u} \cdot \vecf{v} = \sum_i u_i v_i = \vecf{v} \cdot \vecf{u}$,
-so the addition and scalar-multiplication rules
-proved for the second slot in @thm-orthogonal-complement-subspace
-hold for the first slot too.
 Then
 
 $$
 \ba
 \vecf{y} \cdot \vecf{x}
-&= \paren{z_1 \vecf{a}_1 + \cdots + z_n \vecf{a}_n} \cdot \vecf{x}
-&& \text{(@thm-matvec-columns)}
+&= \sum_{i=1}^{m} (\matr{A} \vecf{z})_i\, x_i
+&& \text{(@def-dot-product)}
 \\
-&= z_1\,(\vecf{a}_1 \cdot \vecf{x}) + \cdots + z_n\,(\vecf{a}_n \cdot \vecf{x})
-&& \text{(those two rules, in the first slot)}
+&= \sum_{i=1}^{m} \paren{\sum_{j=1}^{n} a_{ij} z_j}\, x_i
+&& \text{(@def-matvec-mult)}
 \\
-&= z_1 \cd 0 + \cdots + z_n \cd 0 = 0.
+&= \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}\, z_j\, x_i
+&& \text{(distribute each } x_i \text{ over the inner sum)}
+\\
+&= \sum_{j=1}^{n} \sum_{i=1}^{m} a_{ij}\, z_j\, x_i
+&& \text{(swap the order of the finite sums)}
+\\
+&= \sum_{j=1}^{n} z_j \sum_{i=1}^{m} a_{ij}\, x_i
+&& \text{(commute, then factor } z_j \text{ out of the inner sum)}
+\\
+&= \sum_{j=1}^{n} z_j\, (\vecf{a}_j \cdot \vecf{x})
+&& \text{(@def-dot-product)}
+\\
+&= \sum_{j=1}^{n} z_j \cd 0
 && \text{(each } \vecf{a}_j \cdot \vecf{x} = 0 \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
 \ea
 $$
 
@@ -73,19 +84,23 @@ So $\vecf{x}$ is orthogonal to every vector of $\mathcal{C}(\matr{A})$.
 
 For $\matr{A}$ in @exm-column-space,
 $\mathcal{C}(\matr{A}) = \operatorname{span}\cb{(1, 3)}$ (@exm-column-space-span).
-Its transpose
-$\tp{\matr{A}} = \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}$
-gives
+@exm-null-space found
+$\mathcal{N}(\tp{\matr{A}}) = \operatorname{span}\cb{(-3, 1)}$,
+so by @thm-complement-null-space this line is $\mathcal{C}(\matr{A})^\perp$.
+Directly, for any $c$,
 
 $$
-\tp{\matr{A}} \vecf{x}
-= \paren{x_1 + 3x_2,\; -2\,(x_1 + 3x_2),\; -2\,(x_1 + 3x_2)},
+\ba
+\paren{c\,(1, 3)} \cdot (-3, 1)
+&= c\,\paren{(1, 3) \cdot (-3, 1)}
+&& \text{(@thm-dot-linear, special case } b = 0 \text{, first slot)}
+\\
+&= c\,(-3 + 3)
+&& \text{(@def-dot-product)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
 $$
-
-which is $\vzero_3$ exactly when $x_1 + 3x_2 = 0$,
-that is, when $\vecf{x} = (-3x_2, x_2) = x_2\,(-3, 1)$.
-So $\mathcal{N}(\tp{\matr{A}}) = \operatorname{span}\cb{(-3, 1)}$,
-and by @thm-complement-null-space this line is $\mathcal{C}(\matr{A})^\perp$.
-Directly: $c\,(1, 3) \cdot (-3, 1) = c\,(-3 + 3) = 0$.
 
 :::

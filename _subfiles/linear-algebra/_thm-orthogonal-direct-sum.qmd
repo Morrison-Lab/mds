@@ -29,7 +29,10 @@ which forces every $x_i = 0$.
 
 **Part 2.**
 Let $d = \dim(\mathcal{S})$.
-If $d = 0$, then $\mathcal{S} = \cb{\vzero}$,
+If $d = 0$, then $\mathcal{S}$ has a basis (@thm-extend-basis)
+with $0$ vectors (@def-dimension), the empty list,
+whose span is $\cb{\vzero}$ (@def-span);
+so $\mathcal{S} = \cb{\vzero}$,
 $\mathcal{S}^\perp = \reals^p$
 (every $\vecf{u}$ satisfies $\vzero \cdot \vecf{u} = 0$),
 and $0 + p = p$ (@exm-dimension).
@@ -44,6 +47,9 @@ $\tp{\matr{A}}$ is $d \times p$, so
 $$
 \ba
 \dim(\mathcal{S}^\perp)
+&= \dim\paren{\mathcal{N}(\tp{\matr{A}})}
+&& \text{(@thm-complement-null-space)}
+\\
 &= \operatorname{nullity}(\tp{\matr{A}})
 && \text{(@def-nullity)}
 \\
@@ -82,10 +88,13 @@ $$
 \ea
 $$
 
-Since $\mathcal{S} + \mathcal{S}^\perp \subseteq \reals^p$
+Since $\mathcal{S} + \mathcal{S}^\perp \subseteq \reals^p$,
+$\reals^p$ is a subspace (@exm-subspace)
 and $\dim(\reals^p) = p$ (@exm-dimension),
 @thm-subspace-equal-dim gives $\mathcal{S} + \mathcal{S}^\perp = \reals^p$.
 Together with part 1, $\reals^p = \mathcal{S} \oplus \mathcal{S}^\perp$.
+The uniqueness of the split then follows from @thm-direct-sum-equiv
+(statement 1 implies statement 3).
 
 :::
 
@@ -94,7 +103,10 @@ Together with part 1, $\reals^p = \mathcal{S} \oplus \mathcal{S}^\perp$.
 :::{#exm-orthogonal-direct-sum}
 #### Splitting a vector of $\reals^3$ along a line and its complement
 
-Let $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$ in $\reals^3$, so $\dim(\mathcal{S}) = 1$.
+Let $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$ in $\reals^3$.
+A single nonzero vector is linearly independent
+($c\,\vecf{v} = \vzero$ with $\vecf{v} \ne \vzero$ forces $c = 0$),
+so $(1, 1, 0)$ is a basis of $\mathcal{S}$ and $\dim(\mathcal{S}) = 1$.
 A vector $\vecf{u}$ is in $\mathcal{S}^\perp$ exactly when $u_1 + u_2 = 0$:
 that condition says $(1, 1, 0) \cdot \vecf{u} = 0$,
 and then $c\,(1, 1, 0) \cdot \vecf{u} = c\,(u_1 + u_2) = 0$ for every $c$.
@@ -107,7 +119,7 @@ so $\dim(\mathcal{S}^\perp) = 2$, and $1 + 2 = 3$, as part 2 says.
 To split $\vecf{y} = (3, 1, 2)$,
 look for $\vecf{u} = t\,(1, 1, 0)$
 with $\vecf{v} = \vecf{y} - \vecf{u} = (3 - t, 1 - t, 2)$ in $\mathcal{S}^\perp$:
-that needs $(3 - t) + (1 - t) = 0$, so $t = 2$.
+that membership needs $(3 - t) + (1 - t) = 0$, so $t = 2$.
 Then $\vecf{u} = (2, 2, 0)$ and $\vecf{v} = (1, -1, 2)$,
 with $\vecf{u} + \vecf{v} = (3, 1, 2)$
 and $(1, 1, 0) \cdot (1, -1, 2) = 1 - 1 + 0 = 0$.

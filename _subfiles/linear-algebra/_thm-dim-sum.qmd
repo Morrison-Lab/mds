@@ -57,17 +57,32 @@ $$
 Let $\vecf{w} \eqdef \sum_{l} c_l \vecf{y}_l$.
 Then $\vecf{w} \in \mathcal{S}_2$,
 because it is a linear combination of vectors of $\mathcal{S}_2$.
-Moving the other two sums to the right-hand side,
-$\vecf{w} = -\sum_{i} a_i \vecf{z}_i - \sum_{j} b_j \vecf{x}_j$,
+Subtracting $\sum_{i} a_i \vecf{z}_i + \sum_{j} b_j \vecf{x}_j$
+from both sides of the supposed equation gives
+
+$$
+\vecf{w} = \sum_{i=1}^{k} (-a_i)\,\vecf{z}_i + \sum_{j=1}^{d_1 - k} (-b_j)\,\vecf{x}_j,
+$$
+
 a linear combination of vectors of $\mathcal{S}_1$,
 so $\vecf{w} \in \mathcal{S}_1$ too.
 So $\vecf{w} \in \mathcal{S}_1 \cap \mathcal{S}_2$,
 and $\vecf{w} = \sum_{i} e_i \vecf{z}_i$ for some numbers $e_i$,
 since the $\vecf{z}$'s span the intersection.
-Subtracting this from the definition of $\vecf{w}$,
+Then
 
 $$
-\sum_{i=1}^{k} e_i \vecf{z}_i - \sum_{l=1}^{d_2 - k} c_l \vecf{y}_l = \vzero,
+\ba
+\vzero
+&= \vecf{w} - \vecf{w}
+&& \text{(a vector minus itself)}
+\\
+&= \sum_{i=1}^{k} e_i \vecf{z}_i - \sum_{l=1}^{d_2 - k} c_l \vecf{y}_l
+&& \text{(substitute the two expressions for } \vecf{w} \text{)}
+\\
+&= \sum_{i=1}^{k} e_i \vecf{z}_i + \sum_{l=1}^{d_2 - k} (-c_l)\,\vecf{y}_l,
+&& \text{(write each subtraction as adding } -1 \text{ times)}
+\ea
 $$
 
 and because the $\vecf{z}$'s and $\vecf{y}$'s are a basis of $\mathcal{S}_2$,
@@ -95,7 +110,10 @@ each has dimension $2$:
 the plane $z = 0$ has basis $(1, 0, 0), (0, 1, 0)$ (@exm-dimension),
 and the plane $x = 0$ has basis $(0, 1, 0), (0, 0, 1)$ by the same argument.
 Their intersection, the $y$-axis $\operatorname{span}\cb{(0, 1, 0)}$,
-has dimension $1$.
+has dimension $1$,
+because the single nonzero vector $(0, 1, 0)$ is linearly independent
+($c\,(0, 1, 0) = (0, c, 0)$ is $\vzero$ only if $c = 0$)
+and so is a basis of it.
 @thm-dim-sum gives
 
 $$
@@ -142,8 +160,13 @@ $\cb{\vzero}$ (@def-span, @exm-dimension).
   a common vector satisfies $a\,(1, 0, 0) = b\,(0, 1, 0)$,
   so $(a, -b, 0) = \vzero$ and $a = b = 0$.
   The intersection is $\cb{\vzero}$,
-  and indeed $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 = 1 + 1$.
+  and indeed $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 = 1 + 1$:
+  the sum is the plane $z = 0$ (@exm-subspace-sum),
+  which has dimension $2$ (@exm-dimension),
+  and each line has dimension $1$, with its spanning vector as a basis.
 - For $\mathcal{S}_1 = \mathcal{S}_2 = \operatorname{span}\cb{(1, 0, 0)}$,
-  the sum is the same line, so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$.
+  the sum is the same line,
+  because $a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)$,
+  so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$.
 
 :::

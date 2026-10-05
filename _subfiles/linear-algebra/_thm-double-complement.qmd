@@ -14,7 +14,7 @@ $$
 **$\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp$.**
 Take $\vecf{s} \in \mathcal{S}$ and any $\vecf{v} \in \mathcal{S}^\perp$.
 By @def-orthogonal-complement, $\vecf{s} \cdot \vecf{v} = 0$,
-so $\vecf{v} \cdot \vecf{s} = 0$ too, since the dot product is symmetric.
+so $\vecf{v} \cdot \vecf{s} = 0$ too (@thm-lincom-symmetric).
 So $\vecf{s}$ is orthogonal to every vector of $\mathcal{S}^\perp$,
 that is, $\vecf{s} \in (\mathcal{S}^\perp)^\perp$.
 
@@ -50,12 +50,13 @@ so it equals $\mathcal{S}$ (@thm-subspace-equal-dim).
 In @exm-orthogonal-direct-sum,
 $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$
 and $\mathcal{S}^\perp = \operatorname{span}\cb{(1, -1, 0), (0, 0, 1)}$.
-Put those two spanning vectors in the columns of a matrix $\matr{B}$,
-so $\mathcal{S}^\perp = \mathcal{C}(\matr{B})$ (@thm-column-space-span).
-By @thm-complement-null-space,
+Put those two spanning vectors in the columns of the $3 \times 2$ matrix
+$\matr{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}$,
+so $\mathcal{S}^\perp = \mathcal{C}(\matr{B})$ (@thm-column-space-span)
+and $(\mathcal{S}^\perp)^\perp = \mathcal{N}(\tp{\matr{B}})$ (@thm-complement-null-space).
+Since $\tp{\matr{B}} \vecf{w} = (w_1 - w_2,\ w_3)$ (@def-matvec-mult),
 $\vecf{w} \in (\mathcal{S}^\perp)^\perp$
-exactly when $\vecf{w}$ is orthogonal to both columns:
-$w_1 - w_2 = 0$ and $w_3 = 0$.
+exactly when $w_1 - w_2 = 0$ and $w_3 = 0$.
 So $(\mathcal{S}^\perp)^\perp = \cb{(a, a, 0) : a \in \reals} = \mathcal{S}$.
 
 :::

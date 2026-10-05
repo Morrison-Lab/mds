@@ -20,17 +20,14 @@ and let $\vecf{x} \in \mathcal{X}$.
 $$
 \ba
 \vecf{x} \cdot (\vecf{u} + \vecf{w})
-&= \sum_{i=1}^{p} x_i (u_i + w_i)
-&& \text{(@def-dot-product, @def-vector-addition)}
-\\
-&= \sum_{i=1}^{p} x_i u_i + \sum_{i=1}^{p} x_i w_i
-&& \text{(distribute each } x_i \text{, and split the sum)}
-\\
 &= \vecf{x} \cdot \vecf{u} + \vecf{x} \cdot \vecf{w}
-&& \text{(@def-dot-product)}
+&& \text{(@thm-dot-linear, special case } a = b = 1 \text{)}
 \\
-&= 0 + 0 = 0.
+&= 0 + 0
 && \text{(} \vecf{u}, \vecf{w} \in \mathcal{X}^\perp \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
 \ea
 $$
 
@@ -39,21 +36,18 @@ $$
 $$
 \ba
 \vecf{x} \cdot (c\,\vecf{u})
-&= \sum_{i=1}^{p} x_i (c\,u_i)
-&& \text{(@def-dot-product)}
-\\
-&= c \sum_{i=1}^{p} x_i u_i
-&& \text{(factor } c \text{ out of the sum)}
-\\
 &= c\,(\vecf{x} \cdot \vecf{u})
-&& \text{(@def-dot-product)}
+&& \text{(@thm-dot-linear, special case } b = 0 \text{)}
 \\
-&= c \cd 0 = 0.
+&= c \cd 0
 && \text{(} \vecf{u} \in \mathcal{X}^\perp \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
 \ea
 $$
 
-These hold for every $\vecf{x} \in \mathcal{X}$,
+These two equations hold for every $\vecf{x} \in \mathcal{X}$,
 so $\vecf{u} + \vecf{w}$ and $c\,\vecf{u}$ are in $\mathcal{X}^\perp$.
 
 :::
@@ -74,7 +68,8 @@ $$
 $$
 
 since $u_1 + 2u_2 = 0$ means $\vecf{u} = (-2u_2, u_2) = u_2\,(-2, 1)$.
-That set is a line through the origin, which is a subspace (@exm-subspace),
+That set is $\operatorname{span}\cb{(-2, 1)}$,
+a subspace by @thm-span-subspace,
 as @thm-orthogonal-complement-subspace says it must be.
 It contains $(-2, 1)$, the vector @rem-orthogonal-perpendicular found perpendicular to $(1, 2)$.
 

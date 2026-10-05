@@ -274,6 +274,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-dim-bound.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-subspace-equal-dim.qmd >}}
+
 ### Column space and null space {#sec-column-null-space}
 
 {{< include mds/_subfiles/linear-algebra/_def-column-space.qmd >}}
@@ -328,10 +332,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_thm-subspace-equal-dim.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_thm-dim-sum.qmd >}}
 
 {{< slidebreak >}}
@@ -347,6 +347,10 @@
 {{< include mds/_subfiles/linear-algebra/_thm-direct-sum-equiv.qmd >}}
 
 ### Orthogonal complements {#sec-orthogonal-complements}
+
+{{< include mds/_subfiles/linear-algebra/_thm-dot-linear.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-complement.qmd >}}
 

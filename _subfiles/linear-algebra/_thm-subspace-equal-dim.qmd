@@ -26,7 +26,7 @@ which contradicts part 1 of @thm-dim-bound.
 So every vector of $\mathcal{S}$ is in $\mathcal{T}$,
 that is, $\mathcal{S} \subseteq \mathcal{T}$.
 Together with $\mathcal{T} \subseteq \mathcal{S}$,
-this gives $\mathcal{T} = \mathcal{S}$.
+this inclusion gives $\mathcal{T} = \mathcal{S}$.
 
 :::
 

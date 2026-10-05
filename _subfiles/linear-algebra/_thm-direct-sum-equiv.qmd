@@ -30,11 +30,20 @@ because $\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2$.
 Suppose $\vecf{x} = \vecf{u}_1 + \vecf{u}_2 = \vecf{v}_1 + \vecf{v}_2$,
 with $\vecf{u}_1, \vecf{v}_1 \in \mathcal{S}_1$
 and $\vecf{u}_2, \vecf{v}_2 \in \mathcal{S}_2$.
-Subtracting $\vecf{v}_1 + \vecf{u}_2$ from both sides of
-$\vecf{u}_1 + \vecf{u}_2 = \vecf{v}_1 + \vecf{v}_2$ gives
+Then
 
 $$
-\vecf{u}_1 - \vecf{v}_1 = \vecf{v}_2 - \vecf{u}_2.
+\ba
+\vecf{u}_1 - \vecf{v}_1
+&= (\vecf{u}_1 + \vecf{u}_2) - \vecf{u}_2 - \vecf{v}_1
+&& \text{(add and subtract } \vecf{u}_2 \text{)}
+\\
+&= (\vecf{v}_1 + \vecf{v}_2) - \vecf{u}_2 - \vecf{v}_1
+&& \text{(substitute } \vecf{u}_1 + \vecf{u}_2 = \vecf{v}_1 + \vecf{v}_2 \text{)}
+\\
+&= \vecf{v}_2 - \vecf{u}_2.
+&& \text{(cancel } \vecf{v}_1 \text{)}
+\ea
 $$
 
 The left side is in $\mathcal{S}_1$
@@ -62,13 +71,16 @@ and $\mathcal{S}_1 \cap \mathcal{S}_2 = \cb{\vzero}$.
 
 For the plane $z = 0$ and the $z$-axis in @exm-direct-sum:
 
-- the dimensions add up: $2 + 1 = 3 = \dim(\reals^3)$ (@exm-dimension);
+- the dimensions add up: $2 + 1 = 3 = \dim(\reals^3)$,
+  since the plane has dimension $2$ (@exm-dimension),
+  the $z$-axis has the single nonzero vector $(0, 0, 1)$ as a basis,
+  and $\dim(\reals^3) = 3$ (@exm-dimension);
 - the split is unique: if $(x, y, z) = (a, b, 0) + (0, 0, c) = (a, b, c)$,
   then $a = x$, $b = y$ and $c = z$.
 
 For the planes $z = 0$ and $x = 0$ in @exm-not-direct-sum,
 both statements fail:
-$2 + 2 = 4 \ne 3$,
+$2 + 2 = 4 \ne 3 = \dim(\mathcal{S}_1 + \mathcal{S}_2)$ (@exm-dim-sum),
 and $(0, 1, 0)$ splits in two ways.
 
 :::
