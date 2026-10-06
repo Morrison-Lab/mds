@@ -17,11 +17,13 @@ format:
 For the logical symbols and proof conventions used in these notes:
 
 - @velleman2019prove
-  explains how mathematical statements are built from logical connectives and quantifiers,
+  explains how mathematical statements are built from
+  logical connectives (@def-logical-connective) and quantifiers (@def-quantifier),
   and how to read and write them.
 - @barkerplummer2011language
   covers the same symbols as a formal language,
-  with propositional and first-order logic.
+  with propositional logic (the logic of connectives)
+  and first-order logic (which adds quantifiers).
 
 For set and function notation, see the [Sets and Functions](sets-functions.qmd) page.
 

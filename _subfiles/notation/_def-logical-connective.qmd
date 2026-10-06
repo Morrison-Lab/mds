@@ -1,0 +1,22 @@
+:::{#def-logical-connective}
+#### Logical connective
+
+A **logical connective** builds a new proposition (@def-proposition)
+from one or two propositions $P$ and $Q$,
+with a truth value that depends only on the truth values of $P$ and $Q$.
+These notes use five:
+
+- **not**: $\neg P$ ("not $P$") is true when $P$ is false,
+  and false when $P$ is true.
+- **and**: $P \land Q$ ("$P$ and $Q$") is true when $P$ and $Q$ are both true,
+  and false otherwise.
+- **or**: $P \lor Q$ ("$P$ or $Q$") is true when at least one of $P$ and $Q$ is true,
+  and false when both are false.
+- **implies**: $P \Rightarrow Q$ ("if $P$, then $Q$", or "$P$ implies $Q$")
+  is false when $P$ is true and $Q$ is false,
+  and true otherwise.
+- **if and only if**: $P \Leftrightarrow Q$ ("$P$ if and only if $Q$")
+  is true when $P$ and $Q$ have the same truth value,
+  and false otherwise.
+
+:::

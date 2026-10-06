@@ -1,0 +1,13 @@
+:::{#def-percent}
+#### Percent
+
+For a real number $x$,
+"$x$ **percent**", written $x\%$, means $x / 100$:
+
+$$
+x\% \eqdef \frac{x}{100}
+$$
+
+The percent sign "%" is a shorthand for "$/100$".
+
+:::
