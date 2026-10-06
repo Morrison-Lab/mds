@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Measures – Math for Data Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./calculus.html" rel="next">
+<link href="./algebra.html" rel="prev">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<script>
+// Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
+// handles light/dark and remembers it; the two tinted palettes are a
+// data-palette attribute on <html>. The choice is kept under "mln-theme".
+// Off-white is the default for a first visit.
+(function () {
+  var KEY = "mln-theme";
+  var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+  function stored() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function isDark() { return document.body.classList.contains("quarto-dark"); }
+  function apply(choice, remember) {
+    if (choice === "offwhite" || choice === "parchment") {
+      document.documentElement.setAttribute("data-palette", choice);
+    } else {
+      document.documentElement.removeAttribute("data-palette");
+    }
+    if ((choice === "dark") !== isDark() && window.quartoToggleColorScheme) {
+      window.quartoToggleColorScheme();
+    }
+    if (remember) { try { localStorage.setItem(KEY, choice); } catch (e) {} }
+    mark(choice);
+  }
+  function mark(choice) {
+    document.querySelectorAll(".theme-picker [data-theme-choice]").forEach(function (b) {
+      var on = b.getAttribute("data-theme-choice") === choice;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-checked", on ? "true" : "false");
+    });
+  }
+  // Set the palette before first paint to avoid a flash.
+  var early = stored();
+  if (early !== "light" && early !== "dark" && early !== "parchment") early = "offwhite";
+  if (early === "offwhite" || early === "parchment") {
+    document.documentElement.setAttribute("data-palette", early);
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+    if (!toggles.length) return;
+    var tools = toggles[0];
+    var wrap = document.createElement("div");
+    wrap.className = "theme-picker dropdown";
+    wrap.innerHTML =
+      '<button type="button" class="nav-link dropdown-toggle px-1 border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Colour theme"><i class="bi bi-palette"></i></button>' +
+      '<ul class="dropdown-menu dropdown-menu-end" role="menu">' +
+      OPTIONS.map(function (o) {
+        return '<li role="none"><button type="button" class="dropdown-item" role="menuitemradio" aria-checked="false" data-theme-choice="' + o[0] + '">' + o[1] + "</button></li>";
+      }).join("") + "</ul>";
+    tools.parentNode.insertBefore(wrap, tools);
+    toggles.forEach(function (t) { t.style.display = "none"; });
+    wrap.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-theme-choice]");
+      if (b) apply(b.getAttribute("data-theme-choice"), true);
+    });
+    var choice = stored();
+    if (OPTIONS.every(function (o) { return o[0] !== choice; })) {
+      choice = isDark() ? "dark" : "offwhite";
+    }
+    apply(choice, false);
+  });
+})();
+</script>
+<style>
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Math for Data Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./notation.html" aria-current="page"> 
+<span class="menu-text">Notation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sets-functions.html"> 
+<span class="menu-text">Sets and Functions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./algebra.html"> 
+<span class="menu-text">Algebra</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./measures.html"> 
+<span class="menu-text">Measures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./calculus.html"> 
+<span class="menu-text">Calculus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./linear-algebra.html"> 
+<span class="menu-text">Linear Algebra</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./vector-calculus.html"> 
+<span class="menu-text">Vector Calculus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proof-writing.html"> 
+<span class="menu-text">Proof Writing</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Morrison-Lab/mds"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./measures.html">Measures</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notation.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sets-functions.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
+ <span class="menu-text">Sets and Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
+ <span class="menu-text">Algebra</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measures.html" class="sidebar-item-text sidebar-link active" preview-toc-changed>
+ <span class="menu-text">Measures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculus.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
+ <span class="menu-text">Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link" preview-toc-changed preview-toc-changed>
+ <span class="menu-text">Linear Algebra</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link" preview-toc-changed preview-toc-changed>
+ <span class="menu-text">Vector Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proof-writing.html" class="sidebar-item-text sidebar-link" preview-toc-changed>
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sigma-algebras" id="toc-sigma-algebras" class="nav-link active" data-scroll-target="#sigma-algebras"><span class="header-section-number">1</span> <span class="math inline">\(\sigma\)</span>-algebras</a></li>
+  <li><a href="#pairwise-disjoint-sets" id="toc-pairwise-disjoint-sets" class="nav-link" data-scroll-target="#pairwise-disjoint-sets"><span class="header-section-number">2</span> Pairwise disjoint sets</a></li>
+  <li><a href="#infinite-sums" id="toc-infinite-sums" class="nav-link" data-scroll-target="#infinite-sums"><span class="header-section-number">3</span> Infinite sums</a></li>
+  <li><a href="#additivity" id="toc-additivity" class="nav-link" data-scroll-target="#additivity"><span class="header-section-number">4</span> Additivity</a></li>
+  <li><a href="#measures" id="toc-measures" class="nav-link" data-scroll-target="#measures"><span class="header-section-number">5</span> Measures</a></li>
+  <li><a href="#probability-measures" id="toc-probability-measures" class="nav-link" data-scroll-target="#probability-measures"><span class="header-section-number">6</span> Probability measures</a></li>
+  <li><a href="#measurable-functions-and-integrals" id="toc-measurable-functions-and-integrals" class="nav-link" data-scroll-target="#measurable-functions-and-integrals"><span class="header-section-number">7</span> Measurable functions and integrals</a></li>
+  <li><a href="#product-measures" id="toc-product-measures" class="nav-link" data-scroll-target="#product-measures"><span class="header-section-number">8</span> Product measures</a></li>
+  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">9</span> Further reading</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/measures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/measures.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="measures-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="measures-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="measures.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Measures</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Last modified: 2026-10-06 <mark class="preview-text-changed">14:35:48</mark> (PDT)</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div class="proof remark">
+<p><span class="proof-title"><em>Remark</em>. </span>A measure assigns a size to each set in a <a href="./sets-functions.html#def-collection">collection of sets</a>: how many elements it has, how long it is, or how likely it is. This page builds measures from <span class="math inline">\(\sigma\)</span>-algebras and additivity, using the <a href="./sets-functions.html">sets and functions</a> page’s definitions. One kind of measure, the probability measure (<a href="#def-probability-measure" class="quarto-xref">Definition&nbsp;19</a>), is the starting point of the Morrison Lab’s probability notes (<a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability measure</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<section id="sigma-algebras" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sigma-algebras"><span class="header-section-number">1</span> <span class="math inline">\(\sigma\)</span>-algebras</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-sigma-algebra" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\sigma\)</span>-algebra)</strong></span> A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> on a set <span class="math inline">\(S\)</span> is a <a href="./sets-functions.html#def-collection">collection</a> <span class="math inline">\(\mathscr{S}\)</span> of <a href="./sets-functions.html#def-subset">subsets</a> of <span class="math inline">\(S\)</span> that satisfies:</p>
+<ul>
+<li><span class="math inline">\(\mathscr{S}\)</span> contains <span class="math inline">\(S\)</span> itself.</li>
+<li>For each set <span class="math inline">\(A\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, <span class="math inline">\(\mathscr{S}\)</span> contains its <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(S \setminus A\)</span>.</li>
+<li>For each <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathscr{S}\)</span>, <span class="math inline">\(\mathscr{S}\)</span> contains their union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-sigma-field" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (<span class="math inline">\(\sigma\)</span>-field). </span>Other sources call a <span class="math inline">\(\sigma\)</span>-algebra a <strong><span class="math inline">\(\sigma\)</span>-field</strong> (see <a href="https://en.wikipedia.org/wiki/%CE%A3-algebra">Wikipedia: <span class="math inline">\(\sigma\)</span>-algebra</a>). For example, <span class="citation" data-cites="billingsley1995probability">Billingsley (<a href="#ref-billingsley1995probability" role="doc-biblioref">1995</a>)</span> uses “<span class="math inline">\(\sigma\)</span>-field”. The two names mean the same thing.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
+<p><span class="math display">\[\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\]</span></p>
+<p>which contains <span class="math inline">\(D\)</span>, the complement of each of its sets, and every union of its sets: for example, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \cup \mathopen{}\left\{1, 3, 5\right\}\mathclose{} = D\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-not-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (A collection that is not a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The collection <span class="math inline">\(\mathopen{}\left\{\emptyset, \mathopen{}\left\{1\right\}\mathclose{}, D\right\}\mathclose{}\)</span> is not a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>: it contains <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> but not its complement <span class="math inline">\(D \setminus \mathopen{}\left\{1\right\}\mathclose{} = \mathopen{}\left\{2, 3, 4, 5, 6\right\}\mathclose{}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-closed-under" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Closed under an operation)</strong></span> A set <span class="math inline">\(A\)</span> is <strong>closed under</strong> an operation, such as addition of numbers or union of sets, if applying the operation to elements of <span class="math inline">\(A\)</span> always gives an element of <span class="math inline">\(A\)</span>. This property is called <strong>closure</strong> under the operation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-closed-under" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Closed and not closed)</strong></span> &nbsp;</p>
+<ul>
+<li>The <a href="./notation.html#def-even-odd">even</a> integers are closed under addition: for example, <span class="math inline">\(2 + 4 = 6\)</span> is even, and <span class="math inline">\(2m + 2n = 2(m + n)\)</span> is even for all integers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>.</li>
+<li>The odd integers are not closed under addition: <span class="math inline">\(1\)</span> and <span class="math inline">\(3\)</span> are odd, but <span class="math inline">\(1 + 3 = 4\)</span> is even.</li>
+<li>A <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span> on a set <span class="math inline">\(S\)</span> is closed under complements in <span class="math inline">\(S\)</span> and under unions of sequences of its sets, because <a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> requires both. The collection in <a href="#exm-not-sigma-algebra" class="quarto-xref">Example&nbsp;2</a> is not closed under complements.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-sigma-algebra-closure" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Closure properties of a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> If <span class="math inline">\(\mathscr{S}\)</span> is a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>, then <span class="math inline">\(\mathscr{S}\)</span> contains:</p>
+<ul>
+<li>the <a href="./sets-functions.html#def-empty-set">empty set</a> <span class="math inline">\(\emptyset\)</span>;</li>
+<li>the union <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span> of any <a href="./sets-functions.html#def-finite-set">finitely many</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathscr{S}\)</span>;</li>
+<li>the intersection <span class="math inline">\(\bigcap_{i=1}^{\infty} A_i\)</span> of any sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathscr{S}\)</span>.</li>
+</ul>
+<p>So <span class="math inline">\(\mathscr{S}\)</span> is <a href="#def-closed-under">closed under</a> finite unions and under intersections of sequences of its sets.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><em>Empty set.</em> <span class="math inline">\(\mathscr{S}\)</span> contains <span class="math inline">\(S\)</span>, so it contains the complement of <span class="math inline">\(S\)</span>, which is <span class="math inline">\(S \setminus S = \emptyset\)</span>.</p>
+<p><em>Finite unions.</em> Extend <span class="math inline">\(A_1, \ldots, A_n\)</span> to a sequence by setting <span class="math inline">\(A_{n+1} = A_{n+2} = \cdots = \emptyset\)</span>; each of these sets is in <span class="math inline">\(\mathscr{S}\)</span>, by the first part. Then:</p>
+<p><span class="math display">\[
+\begin{aligned}
+A_1 \cup \cdots \cup A_n
+&amp;= A_1 \cup \cdots \cup A_n \cup \emptyset \cup \emptyset \cup \cdots
+&amp;&amp; \text{(a union with } \emptyset \text{ adds no elements)} \\
+&amp;= \bigcup_{i=1}^{\infty} A_i
+&amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)}
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(\mathscr{S}\)</span> contains <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> by the union rule of <a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a>.</p>
+<p><em>Countable intersections.</em> Each <span class="math inline">\(A_i\)</span> is a subset of <span class="math inline">\(S\)</span>, so an element of <span class="math inline">\(S\)</span> is outside <span class="math inline">\(S \setminus A_i\)</span> exactly when it is in <span class="math inline">\(A_i\)</span>; that is, <span class="math inline">\(S \setminus (S \setminus A_i) = A_i\)</span>. So, by <a href="./sets-functions.html#thm-de-morgan">De Morgan’s laws</a>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
+&amp;= \bigcap_{i=1}^{\infty} \mathopen{}\left(S \setminus (S \setminus A_i)\right)\mathclose{}
+&amp;&amp; \text{(De Morgan's laws)} \\
+&amp;= \bigcap_{i=1}^{\infty} A_i
+&amp;&amp; \text{(} S \setminus (S \setminus A_i) = A_i \text{)}
+\end{aligned}
+\]</span></p>
+<p>Each <span class="math inline">\(S \setminus A_i\)</span> is in <span class="math inline">\(\mathscr{S}\)</span> by the complement rule, so their union is in <span class="math inline">\(\mathscr{S}\)</span> by the union rule, and the complement of that union is in <span class="math inline">\(\mathscr{S}\)</span> by the complement rule again.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-power-set-sigma-algebra" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (All subsets form a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> For any set <span class="math inline">\(S\)</span>, the collection of all subsets of <span class="math inline">\(S\)</span> is a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on <span class="math inline">\(S\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Each condition of <a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> holds:</p>
+<ul>
+<li><span class="math inline">\(S\)</span> is a subset of itself.</li>
+<li>For each subset <span class="math inline">\(A\)</span> of <span class="math inline">\(S\)</span>, the complement <span class="math inline">\(S \setminus A\)</span> contains only elements of <span class="math inline">\(S\)</span>, so it is a subset of <span class="math inline">\(S\)</span>.</li>
+<li>For each sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of subsets of <span class="math inline">\(S\)</span>, every element of <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> is in some <span class="math inline">\(A_i\)</span> and so in <span class="math inline">\(S\)</span>; the union is a subset of <span class="math inline">\(S\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-sigma-algebra-intersection" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (An intersection of <span class="math inline">\(\sigma\)</span>-algebras is a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\(\mathscr{S}_j\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span> for each <span class="math inline">\(j\)</span> in a nonempty set of indices <span class="math inline">\(J\)</span>. Then their <a href="./sets-functions.html#def-intersection">intersection</a> <span class="math inline">\(\bigcap_{j \in J} \mathscr{S}_j\)</span>, the collection of subsets of <span class="math inline">\(S\)</span> that are in every <span class="math inline">\(\mathscr{S}_j\)</span>, is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Each condition of <a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> holds:</p>
+<ul>
+<li><span class="math inline">\(S\)</span> is in every <span class="math inline">\(\mathscr{S}_j\)</span>, so it is in the intersection.</li>
+<li>If <span class="math inline">\(A\)</span> is in the intersection, then <span class="math inline">\(A\)</span> is in every <span class="math inline">\(\mathscr{S}_j\)</span>, so its complement <span class="math inline">\(S \setminus A\)</span> is in every <span class="math inline">\(\mathscr{S}_j\)</span>, and so it is in the intersection.</li>
+<li>If <span class="math inline">\(A_1, A_2, \ldots\)</span> are in the intersection, then they are in every <span class="math inline">\(\mathscr{S}_j\)</span>, so their union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> is in every <span class="math inline">\(\mathscr{S}_j\)</span>, and so it is in the intersection.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-generated-sigma-algebra" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (<span class="math inline">\(\sigma\)</span>-algebra generated by a collection)</strong></span> Let <span class="math inline">\(\mathscr{C}\)</span> be a <a href="./sets-functions.html#def-collection">collection</a> of subsets of a set <span class="math inline">\(S\)</span>. The <strong><span class="math inline">\(\sigma\)</span>-algebra generated by</strong> <span class="math inline">\(\mathscr{C}\)</span>, written <span class="math inline">\(\sigma(\mathscr{C})\)</span>, is the intersection of all the <span class="math inline">\(\sigma\)</span>-algebras on <span class="math inline">\(S\)</span> that contain every set in <span class="math inline">\(\mathscr{C}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-generated-sigma-algebra-smallest" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (The smallest <span class="math inline">\(\sigma\)</span>-algebra containing <span class="math inline">\(\mathscr{C}\)</span>). </span><span class="math inline">\(\sigma(\mathscr{C})\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra by <a href="#thm-sigma-algebra-intersection" class="quarto-xref">Theorem&nbsp;3</a> (the collection of all subsets of <span class="math inline">\(S\)</span> is one of the <span class="math inline">\(\sigma\)</span>-algebras intersected, by <a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>, so there is at least one). It contains every set in <span class="math inline">\(\mathscr{C}\)</span>, and it is contained in every other <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span> that does, so it is the smallest <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span> that contains <span class="math inline">\(\mathscr{C}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-generated-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (The <span class="math inline">\(\sigma\)</span>-algebra generated by the even rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, let <span class="math inline">\(\mathscr{C} = \mathopen{}\left\{\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\right\}\mathclose{}\)</span>. Every <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span> that contains <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> must also contain <span class="math inline">\(D\)</span>, the complement <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, and <span class="math inline">\(\emptyset\)</span> (<a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> and <a href="#thm-sigma-algebra-closure" class="quarto-xref">Theorem&nbsp;1</a>). The collection <span class="math inline">\(\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\)</span> is already a <span class="math inline">\(\sigma\)</span>-algebra (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), so it is <span class="math inline">\(\sigma(\mathscr{C})\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-borel-sigma-algebra" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Borel <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The <strong>Borel <span class="math inline">\(\sigma\)</span>-algebra</strong> on <span class="math inline">\(\mathbb{R}\)</span>, written <span class="math inline">\(\mathscr{B}\)</span>, is the <span class="math inline">\(\sigma\)</span>-algebra generated by (<a href="#def-generated-sigma-algebra" class="quarto-xref">Definition&nbsp;3</a>) the collection of all <a href="./sets-functions.html#def-interval">intervals</a>. Its sets are called <strong>Borel sets</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-borel-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Some Borel sets)</strong></span> &nbsp;</p>
+<ul>
+<li>Every interval, such as <span class="math inline">\([0, 1]\)</span>, <span class="math inline">\((2, 5)\)</span>, or <span class="math inline">\([0, \infty)\)</span>, is a Borel set.</li>
+<li>A single point <span class="math inline">\(\mathopen{}\left\{a\right\}\mathclose{} = [a, a]\)</span> is an interval, so it is a Borel set.</li>
+<li>The <a href="./notation.html#def-integers">integers</a> are a Borel set: they are the union of the sequence of single points <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{-1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{-2\right\}\mathclose{}, \ldots\)</span> (<a href="./sets-functions.html#exm-countable-set">countable and uncountable sets</a> lists them this way), and <span class="math inline">\(\mathscr{B}\)</span> contains that union by <a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a>.</li>
+<li>The complement <span class="math inline">\(\mathbb{R}\setminus [0, 1]\)</span> is a Borel set, because <span class="math inline">\(\mathscr{B}\)</span> contains the complement of each of its sets.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="pairwise-disjoint-sets" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="pairwise-disjoint-sets"><span class="header-section-number">2</span> Pairwise disjoint sets</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-pairwise-disjoint" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Pairwise disjoint sets)</strong></span> Finitely or countably many sets <span class="math inline">\(A_1, A_2, \ldots\)</span> are <strong>pairwise disjoint</strong> (also called <strong>disjoint</strong> or <strong>mutually disjoint</strong>) when no two of them share an element:</p>
+<p><span class="math display">\[A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-pairwise-disjoint" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="infinite-sums" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="infinite-sums"><span class="header-section-number">3</span> Infinite sums</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-non-decreasing" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Non-decreasing sequence)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(a_1, a_2, \ldots\)</span> of real numbers or of <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a> is <strong>non-decreasing</strong> if each term is at least as large as the one before it:</p>
+<p><span class="math display">\[a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-non-decreasing" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Non-decreasing and not)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(1, 2, 2, 3, 3, 3, \ldots\)</span> is non-decreasing: a term may equal the one before it.</li>
+<li><span class="math inline">\(1, 2, \infty, \infty, \ldots\)</span> is non-decreasing, because <span class="math inline">\(\infty\)</span> is greater than every real number.</li>
+<li><span class="math inline">\(1, \frac{1}{2}, \frac{1}{3}, \ldots\)</span> is not non-decreasing, because <span class="math inline">\(a_2 = \frac{1}{2} &lt; 1 = a_1\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-partial-sum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Partial sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a <a href="./sets-functions.html#def-sequence">sequence</a> of real numbers or of <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>. For each <span class="math inline">\(n \in \mathbb{N}\)</span>, its <span class="math inline">\(n\)</span>th <strong>partial sum</strong> is the <a href="./algebra.html#def-summation">sum</a> of its first <span class="math inline">\(n\)</span> terms:</p>
+<p><span class="math display">\[s_n \stackrel{\text{def}}{=}\sum_{i=1}^{n} a_i = a_1 + \cdots + a_n\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-partial-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Partial sums of halves)</strong></span> For <span class="math inline">\(a_i = 1/2^i\)</span>, the sequence <span class="math inline">\(\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots\)</span>, the first three partial sums are <span class="math inline">\(s_1 = \frac{1}{2}\)</span>, <span class="math inline">\(s_2 = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\)</span>, and <span class="math inline">\(s_3 = \frac{3}{4} + \frac{1}{8} = \frac{7}{8}\)</span>. In general, <span class="math inline">\(s_n = 1 - 1/2^n\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-infinite-sum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Infinite sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a sequence in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> (<a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;7</a>). The <strong>infinite sum</strong> (also called a <strong>series</strong>) <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> is the limit of the partial sums:</p>
+<p><span class="math display">\[\sum_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim_{n \to \infty} s_n\]</span></p>
+<p>Here the limit is a real number when the partial sums are real numbers that <a href="./algebra.html#def-sequence-limit">converge</a> to it, and it is <span class="math inline">\(\infty\)</span> when the partial sums <a href="./algebra.html#def-sequence-limit">diverge to <span class="math inline">\(\infty\)</span></a> or some partial sum is <span class="math inline">\(\infty\)</span>; <a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>, next, shows that one of these always happens. Sums with other index ranges, such as <span class="math inline">\(\sum_{k=0}^{\infty} a_k\)</span>, are defined the same way.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-infinite-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (A finite and an infinite sum)</strong></span> &nbsp;</p>
+<ul>
+<li>For <span class="math inline">\(a_i = 1/2^i\)</span>, the partial sums <span class="math inline">\(s_n = 1 - 1/2^n\)</span> (<a href="#exm-partial-sum" class="quarto-xref">Example&nbsp;8</a>) converge to <span class="math inline">\(1\)</span>, because <span class="math inline">\(1/2^n \to 0\)</span>. So <span class="math inline">\(\sum_{i=1}^{\infty} 1/2^i = 1\)</span>.</li>
+<li>For <span class="math inline">\(a_i = 1\)</span>, the partial sums are <span class="math inline">\(s_n = n\)</span>, which diverge to <span class="math inline">\(\infty\)</span>. So <span class="math inline">\(\sum_{i=1}^{\infty} 1 = \infty\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="lem-nonneg-series" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 1 (Sums of non-negative terms)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be values in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> (<a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;7</a>), where <span class="math inline">\(x + \infty = \infty\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\([0, \infty]\)</span>. Then the partial sums are <a href="#def-non-decreasing">non-decreasing</a>, <span class="math inline">\(s_1 \le s_2 \le \cdots\)</span>, so their <a href="./algebra.html#def-sequence-limit">limit</a>, the infinite sum <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> (<a href="#def-infinite-sum" class="quarto-xref">Definition&nbsp;8</a>), always exists, and it is either a finite number or <span class="math inline">\(\infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For each <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+s_{n+1}
+&amp;= s_n + a_{n+1}
+&amp;&amp; \text{(definition of } s_{n+1} \text{)} \\
+&amp;\ge s_n
+&amp;&amp; \text{(} a_{n+1} \ge 0 \text{)}
+\end{aligned}
+\]</span></p>
+<p>If some partial sum <span class="math inline">\(s_N\)</span> is <span class="math inline">\(\infty\)</span>, then <span class="math inline">\(s_n = \infty\)</span> for every <span class="math inline">\(n \ge N\)</span>, so the limit is <span class="math inline">\(\infty\)</span>. Otherwise, the partial sums form a non-decreasing sequence of <a href="./notation.html#def-real-numbers">real numbers</a>. If that sequence is <a href="./algebra.html#def-bounded">bounded above</a>, it <a href="./algebra.html#def-sequence-limit">converges</a> to a finite number (see <a href="https://en.wikipedia.org/wiki/Monotone_convergence_theorem">Wikipedia: Monotone convergence theorem</a>). If it is not bounded above, then for every number <span class="math inline">\(M\)</span> some <span class="math inline">\(s_N\)</span> exceeds <span class="math inline">\(M\)</span>, and so does every later <span class="math inline">\(s_n \ge s_N\)</span>; the limit is <span class="math inline">\(\infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="additivity" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="additivity"><span class="header-section-number">4</span> Additivity</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-finite-additivity" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathscr{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span>, with values in the <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="math display">\[\mu(A_1 \cup \cdots \cup A_n) = \sum_{i=1}^{n} \mu(A_i)\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-finite-additivity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span> (<a href="./sets-functions.html#def-finite-set">cardinality</a>), for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;6</a>), and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(\mathopen{}\left\{1, 2\right\}\mathclose{} \cup \mathopen{}\left\{5, 6\right\}\mathclose{})
+&amp;= \mu(\mathopen{}\left\{1, 2, 5, 6\right\}\mathclose{})
+&amp;&amp; \text{(take the union)} \\
+&amp;= 4
+&amp;&amp; \text{(count the elements)} \\
+&amp;= 2 + 2
+&amp;&amp; \text{(write 4 as a sum)} \\
+&amp;= \mu(\mathopen{}\left\{1, 2\right\}\mathclose{}) + \mu(\mathopen{}\left\{5, 6\right\}\mathclose{})
+&amp;&amp; \text{(count each set's elements)}
+\end{aligned}
+\]</span></p>
+<p>The same holds for any pairwise disjoint sets, because the sizes of disjoint sets add, so <span class="math inline">\(\mu\)</span> is finitely additive.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-not-finitely-additive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (Squaring the count is not finitely additive)</strong></span> On the same <span class="math inline">\(\sigma\)</span>-algebra, let <span class="math inline">\(\nu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}^2\)</span>. The sets <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{2\right\}\mathclose{}\)</span> are pairwise disjoint, but</p>
+<p><span class="math display">\[
+\begin{aligned}
+\nu(\mathopen{}\left\{1\right\}\mathclose{} \cup \mathopen{}\left\{2\right\}\mathclose{})
+&amp;= \nu(\mathopen{}\left\{1, 2\right\}\mathclose{})
+&amp;&amp; \text{(take the union)} \\
+&amp;= 2^2 = 4,
+&amp;&amp; \text{(count, then square)} \\
+\nu(\mathopen{}\left\{1\right\}\mathclose{}) + \nu(\mathopen{}\left\{2\right\}\mathclose{})
+&amp;= 1^2 + 1^2 = 2,
+&amp;&amp; \text{(count each set, then square)}
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(4 \ne 2\)</span>, so <span class="math inline">\(\nu\)</span> is not finitely additive.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-countable-additivity" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Countable additivity)</strong></span> Let <span class="math inline">\(\mathscr{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="math display">\[\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-countable-additivity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-countable-additivity-sum-exists" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (The sum in countable additivity always has a value). </span>By <a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>, the right-hand side of the equation in <a href="#def-countable-additivity" class="quarto-xref">Definition&nbsp;10</a>, <span class="math inline">\(\sum_{i=1}^{\infty} \mu(A_i)\)</span>, always has a value, because each <span class="math inline">\(\mu(A_i)\)</span> is in <span class="math inline">\([0, \infty]\)</span>. For example, if <span class="math inline">\(\mu(A_i) = 1/2^i\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = 1 - 1/2^n\)</span>, and the sum is <span class="math inline">\(1\)</span>; if <span class="math inline">\(\mu(A_i) = 1\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = n\)</span>, and the sum is <span class="math inline">\(\infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="lem-countable-additivity-empty" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 2 (Countable additivity and the empty set)</strong></span> If <span class="math inline">\(\mu\)</span> is a <a href="#def-countable-additivity">countably additive</a> function on a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span>, then <span class="math inline">\(\mu(\emptyset) = 0\)</span> or <span class="math inline">\(\mu(\emptyset) = \infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The set <span class="math inline">\(\emptyset = S \setminus S\)</span> is in <span class="math inline">\(\mathscr{S}\)</span>, as the complement of <span class="math inline">\(S\)</span>, and the sequence <span class="math inline">\(\emptyset, \emptyset, \ldots\)</span> is pairwise disjoint with union <span class="math inline">\(\emptyset\)</span>, so:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(\emptyset)
+&amp;= \mu\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
+&amp;&amp; \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\
+&amp;= \sum_{i=1}^{\infty} \mu(\emptyset)
+&amp;&amp; \text{(countable additivity)}
+\end{aligned}
+\]</span></p>
+<p>If <span class="math inline">\(\mu(\emptyset) = c\)</span> for a finite <span class="math inline">\(c &gt; 0\)</span>, the right-hand side is <span class="math inline">\(c + c + \cdots = \infty \neq c\)</span>, a <a href="./notation.html#def-proof-by-contradiction">contradiction</a>. So <span class="math inline">\(\mu(\emptyset)\)</span> is 0 or <span class="math inline">\(\infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-empty-set-zero" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> is countably additive, and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(\emptyset)
+&amp;= \mathopen{}\left|\emptyset\right|\mathclose{}
+&amp;&amp; \text{(definition of } \mu \text{)} \\
+&amp;= 0
+&amp;&amp; \text{(} \emptyset \text{ has no elements)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-empty-set-infinity" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&amp;= \infty
+&amp;&amp; \text{(definition of } \mu \text{)}
+\end{aligned}
+\]</span></p>
+<p>and the right-hand side, the limit of its partial sums (<a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>), is:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{\infty} \mu(A_i)
+&amp;= \infty + \infty + \cdots
+&amp;&amp; \text{(definition of } \mu \text{)} \\
+&amp;= \infty
+&amp;&amp; \text{(every partial sum is } \infty \text{)}
+\end{aligned}
+\]</span></p>
+<p>The two sides agree, so <span class="math inline">\(\mu\)</span> is countably additive, and <span class="math inline">\(\mu(\emptyset) = \infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-empty-set-requirement" class="proof remark">
+<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;13</a> and <a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;14</a> show that both values allowed by <a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-countable-implies-finite" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (Countable additivity implies finite additivity)</strong></span> If <span class="math inline">\(\mu\)</span> is a <a href="#def-countable-additivity">countably additive</a> function on a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span>, and <span class="math inline">\(\mu(\emptyset) = 0\)</span>, then <span class="math inline">\(\mu\)</span> is <a href="#def-finite-additivity">finitely additive</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(A_1, \ldots, A_n\)</span> be pairwise disjoint sets in <span class="math inline">\(\mathscr{S}\)</span>, and extend them to a sequence by setting <span class="math inline">\(A_{n+1} = A_{n+2} = \cdots = \emptyset\)</span>. The extended sequence is still pairwise disjoint, since <span class="math inline">\(\emptyset\)</span> shares no element with any set, and its union is <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span>. So:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(A_1 \cup \cdots \cup A_n)
+&amp;= \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)} \\
+&amp;= \sum_{i=1}^{\infty} \mu(A_i)
+&amp;&amp; \text{(countable additivity)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
+&amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i)
+&amp;&amp; \text{(} \mu(\emptyset) = 0 \text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-finite-not-countable" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
+<p><span class="math display">\[
+\mu(A) \stackrel{\text{def}}{=}\begin{cases}
+0 &amp; \text{if } A \text{ is finite} \\
+\infty &amp; \text{if } A \text{ is infinite}
+\end{cases}
+\]</span></p>
+<p><em><span class="math inline">\(\mu\)</span> is finitely additive.</em> Let <span class="math inline">\(A_1, \ldots, A_n\)</span> be pairwise disjoint subsets of <span class="math inline">\(S\)</span>. If every <span class="math inline">\(A_i\)</span> is finite, then so is their union, and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(A_1 \cup \cdots \cup A_n)
+&amp;= 0
+&amp;&amp; \text{(a finite union of finite sets is finite)} \\
+&amp;= \sum_{i=1}^{n} 0
+&amp;&amp; \text{(a sum of zeros is 0)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i)
+&amp;&amp; \text{(each } A_i \text{ is finite)}
+\end{aligned}
+\]</span></p>
+<p>If some <span class="math inline">\(A_k\)</span> is infinite, then the union, which contains <span class="math inline">\(A_k\)</span>, is infinite too, and:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu(A_1 \cup \cdots \cup A_n)
+&amp;= \infty
+&amp;&amp; \text{(the union is infinite)} \\
+&amp;= \mu(A_k) + \sum_{i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{} \setminus \mathopen{}\left\{k\right\}\mathclose{}} \mu(A_i)
+&amp;&amp; \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\
+&amp;= \sum_{i=1}^{n} \mu(A_i)
+&amp;&amp; \text{(regroup the terms)}
+\end{aligned}
+\]</span></p>
+<p><em><span class="math inline">\(\mu\)</span> is not countably additive.</em> The single-element sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \ldots\)</span> are pairwise disjoint, and their union is <span class="math inline">\(S\)</span>, which is infinite. So:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu\!\left(\bigcup_{k=0}^{\infty} \mathopen{}\left\{k\right\}\mathclose{}\right)
+&amp;= \mu(S)
+&amp;&amp; \text{(the union is } S \text{)} \\
+&amp;= \infty
+&amp;&amp; \text{(} S \text{ is infinite)}
+\end{aligned}
+\]</span></p>
+<p>but:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{k\right\}\mathclose{})
+&amp;= 0 + 0 + \cdots
+&amp;&amp; \text{(each } \mathopen{}\left\{k\right\}\mathclose{} \text{ is finite)} \\
+&amp;= 0
+&amp;&amp; \text{(every partial sum is 0)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-finite-not-countable-converse" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;15</a> shows that the <a href="./notation.html#def-converse">converse</a> of <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;4</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;15</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="measures" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="measures"><span class="header-section-number">5</span> Measures</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Measure)</strong></span> A <strong>measure</strong> on a set <span class="math inline">\(S\)</span> with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span> is a function <span class="math inline">\(\mu : \mathscr{S} \to [0, \infty]\)</span> that satisfies:</p>
+<ul>
+<li><span class="math inline">\(\mu(\emptyset) = 0\)</span>.</li>
+<li><span class="math inline">\(\mu\)</span> is <a href="#def-countable-additivity">countably additive</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-cor no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="cor-measure-finitely-additive" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (Measures are finitely additive)</strong></span> Every <a href="#def-measure">measure</a> is <a href="#def-finite-additivity">finitely additive</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>A measure <span class="math inline">\(\mu\)</span> is countably additive and has <span class="math inline">\(\mu(\emptyset) = 0\)</span> (<a href="#def-measure" class="quarto-xref">Definition&nbsp;11</a>), so <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;4</a> applies to it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-counting-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Counting measure)</strong></span> The <strong>counting measure</strong> on a set <span class="math inline">\(S\)</span> is the <a href="#def-measure">measure</a> on the <a href="#thm-power-set-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span></a> that assigns each finite set its number of elements, and each infinite set the value <span class="math inline">\(\infty\)</span>:</p>
+<p><span class="math display">\[
+\mu(A) \stackrel{\text{def}}{=}\begin{cases}
+\mathopen{}\left|A\right|\mathclose{} &amp; \text{if } A \text{ is finite} \\
+\infty &amp; \text{if } A \text{ is infinite}
+\end{cases}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-counting-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the <a href="./notation.html#def-nonnegative-integers">non-negative integers</a> <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees: <span class="math inline">\(\sum_{k=0}^{\infty} \mu(\mathopen{}\left\{2k\right\}\mathclose{}) = 1 + 1 + \cdots = \infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-measurable-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Measurable space)</strong></span> A <strong>measurable space</strong> <span class="math inline">\((S, \mathscr{S})\)</span> is a set <span class="math inline">\(S\)</span> together with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span> on <span class="math inline">\(S\)</span>; the sets in <span class="math inline">\(\mathscr{S}\)</span> are its <strong>measurable sets</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-measurable-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 <mark class="preview-text-changed">(Measurable</mark> spaces of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>:</p>
+<ul>
+<li><span class="math inline">\((D, \mathscr{S})\)</span>, with <span class="math inline">\(\mathscr{S}\)</span> the collection of all subsets of <span class="math inline">\(D\)</span>, is a measurable space (<a href="#exm-sigma-algebra" class="quarto-xref">Example&<mark class="preview-text-changed">nbs</mark>p;1</a>).</li>
+<li><span class="math inline">\((D, \mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{})\)</span> is also a measurable space. Its measurable sets are only those four; for example, <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> is not one of them.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-measure-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed">14</mark> <mark class="preview-text-changed">(Measure</mark> <mark class="preview-text-changed">space)</mark></strong></span> A <strong>measure <mark class="preview-text-changed">space</mark></strong> <span class="math inline"><mark class="preview-text-changed">\((S, \mathscr{S}, \mu)\)</mark></span><mark class="preview-text-changed"> is</mark> a <a href="#def-measurable-space">measurable space</a> <mark class="preview-text-changed">together</mark> <mark class="preview-text-changed">with</mark> a <a href="#def-measure">measure</a> <span class="math inline"><mark class="preview-text-changed">\(\mu\)</mark></span> on <span class="math inline"><mark class="preview-text-changed">\(\mathscr{S}\)</mark></span><mark class="preview-text-changed">.</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-measure-space" class="theorem example">
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 19 (Measure space of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, adding the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> to the <a href="#def-measurable-space">measurable space</a> <span class="math inline">\((D, \mathscr{S})\)</span> of <a href="#exm-measurable-space" class="quarto-xref">Example&nbsp;18</a> makes <span class="math inline">\((D, \mathscr{S}, \mu)\)</span> a measure space.</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-lebesgue-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{B}\)</span> that assigns each <a href="./sets-functions.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
+<p><span class="math display">\[\lambda([a, b]) = \lambda((a, b)) = \lambda([a, b)) = \lambda((a, b]) \stackrel{\text{def}}{=}b - a,\]</span></p>
+<p>and <span class="math inline">\(\lambda(I) \stackrel{\text{def}}{=}\infty\)</span> for each unbounded interval <span class="math inline">\(I\)</span>.</p>
+<p><strong>Lebesgue measure on an interval</strong> <span class="math inline">\(I\)</span>, such as <span class="math inline">\([0, 1]\)</span>, is <span class="math inline">\(\lambda\)</span> applied only to the Borel sets that are subsets of <span class="math inline">\(I\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-lebesgue-measure-exists" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (Lebesgue measure exists). </span>Exactly one measure on <span class="math inline">\(\mathscr{B}\)</span> assigns every interval its length; constructing it takes more measure theory than these notes cover (see <a href="https://en.wikipedia.org/wiki/Lebesgue_measure">Wikipedia: Lebesgue measure</a>, which also extends <span class="math inline">\(\lambda\)</span> to a larger <span class="math inline">\(\sigma\)</span>-algebra, the Lebesgue-measurable sets, with the same values on Borel sets).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-lebesgue-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">20</mark> (Lengths of some Borel sets)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(\lambda([2, 5]) = 5 - 2 = 3\)</span>.</li>
+<li>A single point has length zero: <span class="math inline">\(\lambda(\mathopen{}\left\{a\right\}\mathclose{}) = \lambda([a, a]) = a - a = 0\)</span>.</li>
+<li>The integers are the union of the pairwise disjoint single points <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{-1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{-2\right\}\mathclose{}, \ldots\)</span> (<a href="#exm-borel-sigma-algebra" class="quarto-xref">Example&nbsp;5</a>), so countable additivity gives <span class="math inline">\(\lambda(\mathbb{Z}) = 0 + 0 + \cdots = 0\)</span>.</li>
+<li><span class="math inline">\(\lambda([0, \infty)) = \infty\)</span>, because <span class="math inline">\([0, \infty)\)</span> is unbounded.</li>
+<li>Lebesgue measure on <span class="math inline">\([0, 1]\)</span> gives the whole interval <span class="math inline">\([0, 1]\)</span> the value <span class="math inline">\(\lambda([0, 1]) = 1 - 0 = 1\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-measure-size" class="proof remark">
+<p><span class="proof-title"><em>Remark 7</em> (Measures generalize size). </span>A <a href="#def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;12</a>, or how long a set of real numbers is, as Lebesgue measure (<a href="#def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a>) does, assigning each <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both can serve as the measures <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> in the <a href="./calculus.html#thm-fubini-tonelli">Fubini–Tonelli theorem</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-measure-zero" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 16 (Measure zero)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A set <span class="math inline">\(A \in \mathscr{S}\)</span> has <strong>measure zero</strong> (also called a <strong>null set</strong> for <span class="math inline">\(\mu\)</span>) if <span class="math inline">\(\mu(A) = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-measure-zero" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">21</mark> (Sets of measure zero)</strong></span> &nbsp;</p>
+<ul>
+<li>For a <a href="#def-counting-measure">counting measure</a>, only <span class="math inline">\(\emptyset\)</span> has measure zero: a nonempty set has at least one element, so its counting measure is at least <span class="math inline">\(1\)</span>.</li>
+<li>For Lebesgue measure, every single point <span class="math inline">\(\mathopen{}\left\{a\right\}\mathclose{}\)</span> and the integers <span class="math inline">\(\mathbb{Z}\)</span> have measure zero (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&<mark class="preview-text-changed">nbsp</mark>;20</a>), although neither set is empty.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-almost-everywhere" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 17 (Almost everywhere)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A statement about the elements of <span class="math inline">\(S\)</span> holds <strong><span class="math inline">\(\mu\)</span>-almost everywhere</strong> (written <strong><span class="math inline">\(\mu\)</span>-a.e.</strong>, or <strong>almost everywhere</strong> when <span class="math inline">\(\mu\)</span> is clear from context) if the set of elements for which it fails is a <a href="./sets-functions.html#def-subset">subset</a> of a set of <a href="#def-measure-zero">measure zero</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-almost-everywhere" class="theorem example">
+<p><span class="theorem-title"><strong>Example 22 (Non-negative except on the integers)</strong></span> Let <span class="math inline">\(g : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(g(x) = -1\)</span> when <span class="math inline">\(x\)</span> is an integer and <span class="math inline">\(g(x) = x^2\)</span> otherwise. The statement “<span class="math inline">\(g(x) \ge 0\)</span>” fails exactly for <span class="math inline">\(x \in \mathbb{Z}\)</span>, and <span class="math inline">\(\lambda(\mathbb{Z}) = 0\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a>), so <span class="math inline">\(g \ge 0\)</span> holds <span class="math inline">\(\lambda\)</span>-almost everywhere, though not everywhere.</p>
+<p>For a counting measure, only <span class="math inline">\(\emptyset\)</span> has measure zero (<a href="#exm-measure-zero" class="quarto-xref">Example&nbsp;21</a>), so a statement holds almost everywhere only if it holds everywhere.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-sigma-finite" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. The measure <span class="math inline">\(\mu\)</span> is <strong>finite</strong> if <span class="math inline">\(\mu(S) &lt; \infty\)</span>. It is <strong><span class="math inline">\(\sigma\)</span>-finite</strong> if <span class="math inline">\(S\)</span> is the union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> of a sequence of sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathscr{S}\)</span> with <span class="math inline">\(\mu(A_i) &lt; \infty\)</span> for every <span class="math inline">\(i\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-sigma-finite" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">23</mark> (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> &nbsp;</p>
+<ul>
+<li>Every finite measure is <span class="math inline">\(\sigma\)</span>-finite: take <span class="math inline">\(A_1 = S\)</span> and <span class="math inline">\(A_2 = A_3 = \cdots = \emptyset\)</span>, with <span class="math inline">\(\mu(A_1) = \mu(S) &lt; \infty\)</span> and <span class="math inline">\(\mu(\emptyset) = 0\)</span>.</li>
+<li>The counting measure on the die rolls <span class="math inline">\(D\)</span> is finite, with <span class="math inline">\(\mu(D) = 6\)</span>.</li>
+<li>The counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> is not finite, but it is <span class="math inline">\(\sigma\)</span>-finite: it is the union of the sets <span class="math inline">\(A_i = \mathopen{}\left\{0, 1, \ldots, i\right\}\mathclose{}\)</span>, each with <span class="math inline">\(\mu(A_i) = i + 1 &lt; \infty\)</span>.</li>
+<li>Lebesgue measure on <span class="math inline">\(\mathbb{R}\)</span> is not finite, since <span class="math inline">\(\lambda(\mathbb{R}) = \infty\)</span>, but it is <span class="math inline">\(\sigma\)</span>-finite: <span class="math inline">\(\mathbb{R}\)</span> is the union of the intervals <span class="math inline">\(A_i = [-i, i]\)</span>, each with <span class="math inline">\(\lambda(A_i) = 2i &lt; \infty\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="probability-measures" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="probability-measures"><span class="header-section-number">6</span> Probability measures</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-probability-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed">19</mark> <mark class="preview-text-changed">(Probability</mark> measure)</strong></span> <mark class="preview-text-changed">A </mark><strong><mark class="preview-text-changed">probability</mark> measure</strong> on <mark class="preview-text-changed">a </mark><a href="#def-measurable-space"><mark class="preview-text-changed">measurable space</mark></a> <span class="math inline"><mark class="preview-text-changed">\((\Omega, \mathscr{F})\)</mark></span> is <mark class="preview-text-changed">a</mark> <a href="#def-measure">measure</a> <span class="math inline"><mark class="preview-text-changed">\(P\)</mark></span> on <span class="math inline"><mark class="preview-text-changed">\(\mathscr{F}\)</mark></span> that <mark class="preview-text-changed">gives</mark> <mark class="preview-text-changed">the</mark> <mark class="preview-text-changed">whole</mark> <mark class="preview-text-changed">set</mark> <span class="math inline"><mark class="preview-text-changed">\(\Omega\)</mark></span> <mark class="preview-text-changed">the</mark> <mark class="preview-text-changed">value</mark> <span class="math inline"><mark class="preview-text-changed">\(1\)</mark></span><mark class="preview-text-changed">:</mark></p>
+<p><span class="math display">\[P(\Omega) = 1\]</span></p>
+<p>Then <span class="math inline">\((\Omega, \mathscr{F}, P)\)</span> is a <strong>probability space</strong>, <span class="math inline">\(\Omega\)</span> is its <strong>sample space</strong>, the elements of <span class="math inline">\(\Omega\)</span> are <strong>outcomes</strong>, and the sets in <span class="math inline">\(\mathscr{F}\)</span> are <strong>events</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-probability-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">24</mark> (A fair die, and the unit interval)</strong></span> &nbsp;</p>
+<ul>
+<li>For one roll of a fair die, the sample space is <span class="math inline">\(\Omega = D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, the events are all subsets of <span class="math inline">\(D\)</span>, and <span class="math inline">\(P(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{} / 6\)</span>. <span class="math inline">\(P\)</span> is the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> divided by <span class="math inline">\(6\)</span>. So <span class="math inline">\(P(\emptyset) = 0\)</span>, and <span class="math inline">\(P\)</span> is countably additive, because each sum in <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> has at most six nonzero terms, and dividing a finite sum by <span class="math inline">\(6\)</span> divides each term by <span class="math inline">\(6\)</span>. It is a probability measure, since <span class="math inline">\(P(D) = 6/6 = 1\)</span>. The outcome <span class="math inline">\(3\)</span> is in the event “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, which has <span class="math inline">\(P(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}) = 3/6 = 1/2\)</span>.</li>
+<li>Lebesgue measure on <span class="math inline">\([0, 1]\)</span> is a probability measure, because <span class="math inline">\(\lambda([0, 1]) = 1\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&<mark class="preview-text-changed">nbsp</mark>;20</a>).</li>
+<li>The counting measure on <span class="math inline">\(D\)</span> is not a probability measure, because it gives <span class="math inline">\(D\)</span> the value <span class="math inline">\(6\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-mutually-exclusive" class="proof remark">
+<p><span class="proof-title"><em>Remark 8</em> (Mutually exclusive events). </span>In probability, <a href="#def-pairwise-disjoint">pairwise disjoint</a> <a href="#def-probability-measure">events</a> are usually called <strong>mutually exclusive</strong>. For example, for one roll of a six-sided die, the events “the roll is <a href="./notation.html#def-even-odd">even</a>”, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, and “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, are mutually exclusive: no roll is both even and odd.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="measurable-functions-and-integrals" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="measurable-functions-and-integrals"><span class="header-section-number">7</span> Measurable functions and integrals</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-measurable-function" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 20 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathscr{S})\)</span> be a <a href="#def-measurable-space">measurable space</a>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathscr{S}\)</span>) if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
+<p><span class="math display">\[\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathscr{S}\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-measurable-function-general" class="proof remark">
+<p><span class="proof-title"><em>Remark 9</em> (Measurable functions in general). </span>Other sources define a function <span class="math inline">\(f : S \to T\)</span> between measurable spaces <span class="math inline">\((S, \mathscr{S})\)</span> and <span class="math inline">\((T, \mathscr{T})\)</span> to be measurable when <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \in B\right\}\mathclose{} \in \mathscr{S}\)</span> for every <span class="math inline">\(B \in \mathscr{T}\)</span>. For <span class="math inline">\(T = \mathbb{R}\)</span> with the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a>, that definition is equivalent to <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a> (see <a href="https://en.wikipedia.org/wiki/Measurable_function">Wikipedia: Measurable function</a>). For example, with <span class="math inline">\(B = (-\infty, c]\)</span>, the general definition requires <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathscr{S}\)</span>, which is the condition in <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-measurable-function" class="theorem example">
+<p><span class="theorem-title"><strong>Example 25 (Measurable and not measurable)</strong></span> On the die rolls <span class="math inline">\(D\)</span>, take the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathscr{S} = \mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\)</span> of <a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>.</p>
+<ul>
+<li>Let <span class="math inline">\(f(x) = 1\)</span> for even <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x) = 0\)</span> for odd <span class="math inline">\(x\)</span>. The set <span class="math inline">\(\mathopen{}\left\{x \in D : f(x) \le c\right\}\mathclose{}\)</span> is <span class="math inline">\(\emptyset\)</span> when <span class="math inline">\(c &lt; 0\)</span>, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span> when <span class="math inline">\(0 \le c &lt; 1\)</span>, and <span class="math inline">\(D\)</span> when <span class="math inline">\(c \ge 1\)</span>. All three are in <span class="math inline">\(\mathscr{S}\)</span>, so <span class="math inline">\(f\)</span> is measurable.</li>
+<li>Let <span class="math inline">\(g(x) = x\)</span>. Then <span class="math inline">\(\mathopen{}\left\{x \in D : g(x) \le 1\right\}\mathclose{} = \mathopen{}\left\{1\right\}\mathclose{}\)</span>, which is not in <span class="math inline">\(\mathscr{S}\)</span>, so <span class="math inline">\(g\)</span> is not measurable.</li>
+</ul>
+<p>With the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> instead, every set <span class="math inline">\(\mathopen{}\left\{x \in D : g(x) \le c\right\}\mathclose{}\)</span> is a subset of <span class="math inline">\(D\)</span>, so every function <span class="math inline">\(D \to \mathbb{R}\)</span>, including <span class="math inline">\(g\)</span>, is measurable.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-integral-nonneg" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 21 (Integral of a non-negative function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to [0, \infty)\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
+<p><span class="math display">\[
+\int_S f \, d\mu \stackrel{\text{def}}{=}
+\sup \mathopen{}\left\{\sum_{i=1}^{n} \mathopen{}\left(\inf_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\}\mathclose{}
+\]</span></p>
+<p>where the <a href="./algebra.html#def-supremum">supremum</a> is over all ways of writing <span class="math inline">\(S\)</span> as the union of finitely many nonempty <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathscr{S}\)</span>, and each <span class="math inline">\(\inf_{s \in A_i} f(s)\)</span> is the <a href="./algebra.html#def-infimum">infimum</a> of the values of <span class="math inline">\(f\)</span> on <span class="math inline">\(A_i\)</span>. In the sums, <span class="math inline">\(0 \cdot \infty \stackrel{\text{def}}{=}0\)</span>, and <span class="math inline">\(x \cdot \infty \stackrel{\text{def}}{=}\infty\)</span> for <span class="math inline">\(x &gt; 0\)</span>; the supremum is <span class="math inline">\(\infty\)</span> if some sum is <span class="math inline">\(\infty\)</span>. The integral is also written <span class="math inline">\(\int_S f(s) \, d\mu(s)\)</span>.</p>
+<p><span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995, sec. 15</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-integral-nonneg-lower-sums" class="proof remark">
+<p><span class="proof-title"><em>Remark 10</em> (Each sum is a lower estimate). </span>Each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> splits <span class="math inline">\(S\)</span> into pieces and weights each piece <span class="math inline">\(A_i\)</span> by the smallest value <span class="math inline">\(f\)</span> approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval <span class="math inline">\([a, b]\)</span> and a function <span class="math inline">\(f \ge 0\)</span> that has a <a href="./calculus.html#def-riemann-integral">Riemann integral</a> on <span class="math inline">\([a, b]\)</span>, the two integrals agree: <span class="math inline">\(\int_{[a, b]} f \, d\lambda = \int_a^b f(x) \, dx\)</span> (see <a href="https://en.wikipedia.org/wiki/Lebesgue_integral">Wikipedia: Lebesgue integral</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-integral-nonneg" class="theorem example">
+<p><span class="theorem-title"><strong>Example 26 (Integrals with respect to counting measure)</strong></span> Let <span class="math inline">\(\mu\)</span> be the counting measure on the die rolls <span class="math inline">\(D\)</span>, and let <span class="math inline">\(g : D \to [0, \infty)\)</span>. Every function on <span class="math inline">\(D\)</span> is measurable (<a href="#exm-measurable-function" class="quarto-xref">Example&nbsp;25</a>).</p>
+<p><em>The integral is the sum of the values.</em> For any split of <span class="math inline">\(D\)</span> into nonempty pairwise disjoint sets <span class="math inline">\(A_1, \ldots, A_n\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{n} \mathopen{}\left(\inf_{x \in A_i} g(x)\right)\mathclose{} \mu(A_i)
+&amp;= \sum_{i=1}^{n} \sum_{x \in A_i} \inf_{y \in A_i} g(y)
+&amp;&amp; \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\
+&amp;\le \sum_{i=1}^{n} \sum_{x \in A_i} g(x)
+&amp;&amp; \text{(an infimum is at most each value)} \\
+&amp;= \sum_{x \in D} g(x)
+&amp;&amp; \text{(each } x \in D \text{ is in exactly one } A_i \text{)}
+\end{aligned}
+\]</span></p>
+<p>The split into the six single points <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}, \ldots, \mathopen{}\left\{6\right\}\mathclose{}\)</span> gives exactly <span class="math inline">\(\sum_{x \in D} g(x)\)</span>, so the supremum is <span class="math inline">\(\int_D g \, d\mu = \sum_{x \in D} g(x)\)</span>. For example, with <span class="math inline">\(g(x) = x\)</span>, <span class="math inline">\(\int_D g \, d\mu = 1 + 2 + \cdots + 6 = 21\)</span>.</p>
+<p><em>An infinite integral.</em> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathbb{N}\)</span> and the constant function <span class="math inline">\(h(n) = 1\)</span>, the split with one set, <span class="math inline">\(A_1 = \mathbb{N}\)</span>, gives the sum <span class="math inline">\(1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty\)</span>, so <span class="math inline">\(\int_{\mathbb{N}} h \, d\mu = \infty\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-integral" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 22 (Integral of a real-valued function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to \mathbb{R}\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>positive part</strong> and <strong>negative part</strong> of <span class="math inline">\(f\)</span> are the non-negative functions</p>
+<p><span class="math display">\[
+\begin{aligned}
+f^{+}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{} \\
+f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mathclose{}
+\end{aligned}
+\]</span></p>
+<p>so that <span class="math inline">\(f = f^{+} - f^{-}\)</span> and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}\)</span>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
+<p><span class="math display">\[\int_S f \, d\mu \stackrel{\text{def}}{=}\int_S f^{+} \, d\mu - \int_S f^{-} \, d\mu,\]</span></p>
+<p>using <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> for each term, when at least one of the two terms is finite; otherwise, the integral of <span class="math inline">\(f\)</span> is undefined. (<span class="math inline">\(f^{+}\)</span>, <span class="math inline">\(f^{-}\)</span>, and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span> are measurable when <span class="math inline">\(f\)</span> is <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 13.3)</span>.)</p>
+<p><span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995, sec. 15</a>)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-integral" class="theorem example">
+<p><span class="theorem-title"><strong>Example 27 (An integral with positive and negative parts)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, let <span class="math inline">\(f(x) = x - 3\)</span>. Its values at <span class="math inline">\(1, \ldots, 6\)</span> are <span class="math inline">\(-2, -1, 0, 1, 2, 3\)</span>, so:</p>
+<ul>
+<li><span class="math inline">\(f^{+}\)</span> has values <span class="math inline">\(0, 0, 0, 1, 2, 3\)</span>, and <span class="math inline">\(\int_D f^{+} \, d\mu = 6\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&<mark class="preview-text-changed">nbs</mark>p;26</a>;</li>
+<li><span class="math inline">\(f^{-}\)</span> has values <span class="math inline">\(2, 1, 0, 0, 0, 0\)</span>, and <span class="math inline">\(\int_D f^{-} \, d\mu = 3\)</span>;</li>
+<li><span class="math inline">\(\int_D f \, d\mu = 6 - 3 = 3\)</span>, which is also <span class="math inline">\(\sum_{x \in D} (x - 3) = 21 - 18 = 3\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-absolutely-integrable" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 23 (Absolutely integrable function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A <a href="#def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra.html#def-absolute-value">absolute value</a> is finite:</p>
+<p><span class="math display">\[\int_S \mathopen{}\left|f\right|\mathclose{} \, d\mu &lt; \infty\]</span></p>
+<p>The property itself is called <strong>absolute integrability</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-absolutely-integrable-integral" class="proof remark">
+<p><span class="proof-title"><em>Remark 11</em> (An absolutely integrable function has a finite integral). </span>If <span class="math inline">\(f\)</span> is absolutely integrable, then <span class="math inline">\(\int_S f^{+} \, d\mu\)</span> and <span class="math inline">\(\int_S f^{-} \, d\mu\)</span> are both finite, because <span class="math inline">\(f^{+} \le \mathopen{}\left|f\right|\mathclose{}\)</span> and <span class="math inline">\(f^{-} \le \mathopen{}\left|f\right|\mathclose{}\)</span>, so each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&<mark class="preview-text-changed">nb</mark>sp;21</a> for <span class="math inline">\(f^{+}\)</span> or <span class="math inline">\(f^{-}\)</span> is at most the matching sum for <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span>. So <span class="math inline">\(\int_S f \, d\mu\)</span> (<a href="#def-integral" class="quarto-xref">Defini<mark class="preview-text-changed">tio</mark>n&nbsp;22</a>) is a real number.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-absolutely-integrable" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">28</mark> (Absolutely integrable and not)</strong></span> &nbsp;</p>
+<ul>
+<li>For the counting measure on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\(f(x) = x - 3\)</span> (<a href="#exm-integral" class="quarto-xref">Example&nbsp;27</a>) is absolutely integrable: <span class="math inline">\(\int_D \mathopen{}\left|f\right|\mathclose{} \, d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 &lt; \infty\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>.</li>
+<li>For the counting measure on <span class="math inline">\(\mathbb{N}\)</span>, the constant function <span class="math inline">\(h(n) = 1\)</span> is not absolutely integrable, because <span class="math inline">\(\int_{\mathbb{N}} \mathopen{}\left|h\right|\mathclose{} \, d\mu = \int_{\mathbb{N}} h \, d\mu = \infty\)</span> (<a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="product-measures" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="product-measures"><span class="header-section-number">8</span> Product measures</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-product-sigma-algebra" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 24 (Product <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\((S, \mathscr{S})\)</span> and <span class="math inline">\((T, \mathscr{T})\)</span> be <a href="#def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathscr{S}\)</span> and <span class="math inline">\(B \in \mathscr{T}\)</span>. The <strong>product <span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathscr{S} \otimes \mathscr{T}\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S \times T\)</span> <a href="#def-generated-sigma-algebra">generated by</a> the measurable rectangles.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-product-sigma-algebra" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">29</mark> (Product <span class="math inline">\(\sigma\)</span>-algebras)</strong></span> &nbsp;</p>
+<ul>
+<li>Give the die rolls <span class="math inline">\(D\)</span> the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathscr{S}\)</span> of all its subsets. Each single pair <span class="math inline">\(\mathopen{}\left\{(a, b)\right\}\mathclose{} = \mathopen{}\left\{a\right\}\mathclose{} \times \mathopen{}\left\{b\right\}\mathclose{}\)</span> in <span class="math inline">\(D \times D\)</span> is a measurable rectangle. Every subset of <span class="math inline">\(D \times D\)</span> is a union of finitely many single pairs, and <span class="math inline">\(\mathscr{S} \otimes \mathscr{S}\)</span> contains finite unions of its sets (<a href="#thm-sigma-algebra-closure" class="quarto-xref">Theorem&nbsp;1</a>), as well as <span class="math inline">\(\emptyset\)</span>, so <span class="math inline">\(\mathscr{S} \otimes \mathscr{S}\)</span> is the collection of all subsets of <span class="math inline">\(D \times D\)</span>.</li>
+<li>The rectangle <span class="math inline">\([0, 2] \times [0, 3]\)</span> is a measurable rectangle for the Borel <span class="math inline">\(\sigma\)</span>-algebras, so it is in <span class="math inline">\(\mathscr{B} \otimes \mathscr{B}\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-product-measure" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 25 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> and <span class="math inline">\((T, \mathscr{T}, \nu)\)</span> be measure spaces with <a href="#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu \otimes \nu\)</span> is the measure on the <a href="#def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S} \otimes \mathscr{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
+<p><span class="math display">\[(\mu \otimes \nu)(A \times B) = \mu(A) \, \nu(B)
+\quad \text{for all } A \in \mathscr{S} \text{ and } B \in \mathscr{T},\]</span></p>
+<p>with <span class="math inline">\(0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\)</span> and <span class="math inline">\(x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\)</span> for <span class="math inline">\(x &gt; 0\)</span>. Exactly one measure has these values <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 18.2)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-product-measure" class="theorem example">
+<p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">30</mark> (Product measures)</strong></span> &nbsp;</p>
+<ul>
+<li>For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\((\mu \otimes \mu)(A \times B) = \mathopen{}\left|A\right|\mathclose{} \mathopen{}\left|B\right|\mathclose{}\)</span>, the number of pairs in <span class="math inline">\(A \times B\)</span>. For example, the set of pairs in which both rolls are even is <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, with <span class="math inline">\((\mu \otimes \mu)(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}) = 3 \cdot 3 = 9\)</span> pairs.</li>
+<li>For Lebesgue measure <span class="math inline">\(\lambda\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\((\lambda \otimes \lambda)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6\)</span>, the area of the rectangle.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-further-reading" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="sec-further-reading"><span class="header-section-number">9</span> Further reading</h2>
+<ul>
+<li><span class="citation" data-cites="billingsley1995probability">Billingsley (<a href="#ref-billingsley1995probability" role="doc-biblioref">1995</a>)</span> develops measure theory and builds probability on it. Its early chapters define <span class="math inline">\(\sigma\)</span>-algebras, measures, and their basic properties.</li>
+<li><span class="citation" data-cites="folland1999real">Folland (<a href="#ref-folland1999real" role="doc-biblioref">1999</a>)</span> is a graduate text on measure and integration; its first chapters treat <span class="math inline">\(\sigma\)</span>-algebras and measures.</li>
+<li><span class="citation" data-cites="gut2013">Gut (<a href="#ref-gut2013" role="doc-biblioref">2013</a>)</span> is a graduate course in probability that opens with a chapter on introductory measure theory.</li>
+</ul>
+</section>
+<section id="references" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-billingsley1995probability" class="csl-entry" role="listitem">
+Billingsley, Patrick. 1995. <em>Probability and Measure</em>. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.
+</div>
+<div id="ref-folland1999real" class="csl-entry" role="listitem">
+Folland, Gerald B. 1999. <em>Real Analysis: Modern Techniques and Their Applications</em>. 2nd ed. Wiley. <a href="https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166">https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166</a>.
+</div>
+<div id="ref-gut2013" class="csl-entry" role="listitem">
+Gut, Allan. 2013. <em>Probability: A Graduate Course</em>. 2nd ed. Springer Texts in Statistics. Springer. <a href="https://doi.org/10.1007/978-1-4614-4708-5">https://doi.org/10.1007/978-1-4614-4708-5</a>.
+</div>
+</div>
+
+
+<!-- -->
+
+<script>
+const theoremLikeClasses = new Set([
+  "thm",
+  "theorem",
+  "lem",
+  "lemma",
+  "cor",
+  "corollary",
+  "prp",
+  "proposition",
+  "cnj",
+  "conjecture",
+  "def",
+  "definition",
+  "exm",
+  "example",
+  "exr",
+  "exercise",
+  "proof",
+  "remark",
+  "solution"
+]);
+const inlineAnchorSeparator = "\u00A0";
+const maxAnchorRetryAttempts = 5;
+const anchorRetryDelayMs = 50;
+
+const isTheoremLikeDiv = (div) =>
+  Array.from(div.classList).some((className) => theoremLikeClasses.has(className));
+
+const addTheoremLikeDivAnchors = () => {
+  for (const theoremDiv of window.document.querySelectorAll("div[id]")) {
+    if (!isTheoremLikeDiv(theoremDiv)) {
+      continue;
+    }
+
+    if (!theoremDiv.classList.contains("anchored")) {
+      theoremDiv.classList.add("anchored");
+    }
+
+    if (!theoremDiv.dataset.anchorId) {
+      theoremDiv.dataset.anchorId = theoremDiv.id;
+    }
+  }
+};
+
+const ensureSectionHeadingAnchorAttributes = () => {
+  for (const sectionHeading of window.document.querySelectorAll(
+    "section[id] > h1, section[id] > h2, section[id] > h3, section[id] > h4, section[id] > h5, section[id] > h6"
+  )) {
+    if (!sectionHeading.classList.contains("anchored")) {
+      sectionHeading.classList.add("anchored");
+    }
+
+    if (!sectionHeading.dataset.anchorId) {
+      sectionHeading.dataset.anchorId = sectionHeading.parentElement.id;
+    }
+  }
+};
+
+const normalizeInternalAnchorLinkIcons = () => {
+  for (const link of window.document.querySelectorAll(
+    "a.anchorjs-link, a.quarto-xref"
+  )) {
+    if (link.classList.contains("quarto-xref")) {
+      link.classList.add("no-external");
+      link.classList.remove("external");
+      continue;
+    }
+
+    const href = link.getAttribute("href") || "";
+    if (!href.startsWith("#")) {
+      continue;
+    }
+
+    link.classList.add("no-external");
+    link.classList.remove("external");
+  }
+};
+
+const moveTheoremDivAnchorsInline = () => {
+  let hasPendingAnchors = false;
+
+  for (const theoremDiv of window.document.querySelectorAll("div[id]")) {
+    if (!isTheoremLikeDiv(theoremDiv)) {
+      continue;
+    }
+
+    const theoremTitle = theoremDiv.querySelector(".theorem-title");
+    if (!theoremTitle) {
+      continue;
+    }
+
+    const anchorLink = Array.from(
+      theoremDiv.querySelectorAll("a.anchorjs-link")
+    ).find((link) => {
+      const href = link.getAttribute("href") || "";
+      return href === `#${theoremDiv.id}` || href.endsWith(`#${theoremDiv.id}`);
+    });
+
+    if (anchorLink && anchorLink.parentElement === theoremTitle) {
+      continue;
+    }
+
+    if (!anchorLink) {
+      hasPendingAnchors = true;
+      continue;
+    }
+
+    anchorLink.classList.remove("external");
+    theoremTitle.append(inlineAnchorSeparator);
+    theoremTitle.append(anchorLink);
+  }
+
+  return hasPendingAnchors;
+};
+
+const moveTheoremDivAnchorsInlineWithRetry = (
+  attemptsRemaining = maxAnchorRetryAttempts
+) => {
+  const hasPendingAnchors = moveTheoremDivAnchorsInline();
+  if (hasPendingAnchors && attemptsRemaining > 0) {
+    window.setTimeout(() => {
+      moveTheoremDivAnchorsInlineWithRetry(attemptsRemaining - 1);
+    }, anchorRetryDelayMs);
+  }
+};
+
+if (window.document.readyState === "loading") {
+  window.document.addEventListener("DOMContentLoaded", () => {
+    addTheoremLikeDivAnchors();
+    ensureSectionHeadingAnchorAttributes();
+    normalizeInternalAnchorLinkIcons();
+    moveTheoremDivAnchorsInlineWithRetry();
+  });
+} else {
+  addTheoremLikeDivAnchors();
+  ensureSectionHeadingAnchorAttributes();
+  normalizeInternalAnchorLinkIcons();
+  moveTheoremDivAnchorsInlineWithRetry();
+}
+
+window.addEventListener("load", () => {
+  normalizeInternalAnchorLinkIcons();
+  moveTheoremDivAnchorsInlineWithRetry();
+});
+</script>
+
+<script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script>
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<!--
+Page-navigation helpers for the HTML format, included after the body of every
+page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
+
+1. Navbar highlighting.
+Quarto marks as active the first top-level navbar link whose target also
+appears in the sidebar. Every navbar link is in the sidebar, so "Notation"
+would be highlighted on every page. The script below instead highlights the navbar
+link (or the dropdown holding the link) for the current page.
+
+2. Floating previous/next arrows in the page margins.
+Quarto has no built-in option for these, so this script copies the
+previous/next links that `page-navigation: true` puts at the foot of each
+page into two fixed-position tabs. The links follow the sidebar order.
+Each tab sits in empty space so that it never covers, or takes clicks from,
+the text, the sidebar, or the table of contents:
+
+- previous: in the gutter between the docked sidebar and the page text;
+- next: in the right margin when the window is wide enough, otherwise in the
+  gutter between the page text and the table of contents.
+
+Both are hidden below Bootstrap's large breakpoint, where the sidebar
+collapses and there is no gutter to put them in.
+-->
+<style>
+.page-nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Narrow enough to fit the ~25px gutters beside the page text; px, not
+     rem, because the theme's rem is about 17px. */
+  width: 20px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  /* Muted but fully opaque when idle: opacity would also fade the border and
+     icon below the 3:1 contrast that controls need (WCAG 1.4.11). */
+  color: var(--bs-secondary-color, var(--bs-body-color));
+  background-color: var(--bs-body-bg);
+  /* currentColor, because darkly does not redefine --bs-border-color. */
+  border: 1px solid currentColor;
+  transition: color 0.15s ease-in-out;
+}
+.page-nav-arrow:hover,
+.page-nav-arrow:focus-visible {
+  color: var(--bs-link-color);
+}
+@media (max-width: 991.98px) {
+  .page-nav-arrow { display: none; }
+}
+@media print {
+  .page-nav-arrow { display: none; }
+}
+</style>
+<script>
+// This file is included at the end of <body>, so the navbar already exists.
+// Run straight away rather than on DOMContentLoaded, so that the wrong
+// highlight is never painted and then faded out by Bootstrap's transition.
+(function () {
+  // GitHub Pages serves /x, /x.html, / and /index.html, so compare paths
+  // without the "index.html" or ".html" ending.
+  // Links to other sites (e.g. a GitHub icon) never match the current page.
+  const norm = function (u) {
+    const url = new URL(u, location.href);
+    if (url.origin !== location.origin) return null;
+    return url.pathname
+      .replace(/index\.html$/, "")
+      .replace(/\.html$/, "");
+  };
+  document.querySelectorAll("#quarto-header .navbar-nav > .nav-item").forEach(
+    function (item) {
+      const toggle = item.querySelector(":scope > a.nav-link");
+      if (!toggle) return;
+      const targets = [toggle, ...item.querySelectorAll("a.dropdown-item")];
+      const match = targets.find(function (a) {
+        return a.getAttribute("href") && !a.classList.contains("dropdown-toggle") &&
+          norm(a.href) === norm(location.href);
+      });
+      // The top-level item is highlighted, but aria-current goes on the link
+      // for this page itself, not on a dropdown toggle that only holds it.
+      toggle.classList.toggle("active", Boolean(match));
+      targets.forEach(function (a) {
+        if (a === match) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+    }
+  );
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav.page-navigation");
+  if (!nav) return;
+
+  const make = function (dir, icon) {
+    const link = nav.querySelector(".nav-page-" + dir + " a.pagination-link");
+    if (!link) return null;
+    const title = link.querySelector(".nav-page-text")?.textContent.trim() || dir;
+    const arrow = document.createElement("a");
+    arrow.href = link.getAttribute("href");
+    arrow.className = "page-nav-arrow page-nav-arrow-" + dir;
+    arrow.title = (dir === "previous" ? "Previous: " : "Next: ") + title;
+    arrow.setAttribute("aria-label", arrow.title);
+    arrow.innerHTML = '<i class="bi ' + icon + '" aria-hidden="true"></i>';
+    document.body.appendChild(arrow);
+    return arrow;
+  };
+  const prev = make("previous", "bi-chevron-left");
+  const next = make("next", "bi-chevron-right");
+
+  const box = function (selector) {
+    const el = document.querySelector(selector);
+    if (!el || el.offsetWidth === 0) return null;
+    return el.getBoundingClientRect();
+  };
+  // Left edge that centres an arrow between x = from and x = to.
+  const centre = function (arrow, from, to) {
+    return (from + to - arrow.offsetWidth) / 2 + "px";
+  };
+
+  function place() {
+    const main = box("main.content");
+    if (!main) return;
+    if (prev) {
+      const sidebar = box("#quarto-sidebar");
+      prev.style.left = centre(prev, sidebar ? sidebar.right : 0, main.left);
+    }
+    if (next) {
+      const margin = box("#quarto-margin-sidebar");
+      const viewport = document.documentElement.clientWidth;
+      if (!margin) {
+        next.style.left = centre(next, main.right, viewport);
+      } else if (viewport - margin.right >= next.offsetWidth + 16) {
+        next.style.left = centre(next, margin.right, viewport);
+      } else {
+        next.style.left = centre(next, main.right, margin.left);
+      }
+    }
+  }
+  place();
+  window.addEventListener("resize", place);
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mds\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./algebra.html" class="pagination-link" preview-toc-changed aria-label="Algebra">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Algebra</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./calculus.html" class="pagination-link" preview-toc-changed aria-label="Calculus">
+        <span class="nav-page-text">Calculus</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Measures"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: measures-slides.html</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: measures-handout.pdf</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: measures.docx</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="an">preview-changed:</span><span class="co"> true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_measures.qmd &gt;}}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-further-reading}</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@billingsley1995probability</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  develops measure theory and builds probability on it.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  Its early chapters define $\sigma$-algebras, measures, and their basic properties.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@folland1999real</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  is a graduate text on measure and integration;</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  its first chapters treat $\sigma$-algebras and measures.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@gut2013</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  is a graduate course in probability</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  that opens with a chapter on introductory measure theory.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/measures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/measures.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
