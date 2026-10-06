@@ -2,8 +2,7 @@
 #### Infimum (greatest lower bound)
 
 Let $A \subseteq \reals$ be nonempty
-and bounded below,
-meaning that some $t \in \reals$ satisfies $t \le a$ for all $a \in A$.
+and bounded below (@def-bounded).
 The **infimum** of $A$,
 written $\inf A$,
 is the greatest real number $t$ satisfying $t \le a$ for all $a \in A$:

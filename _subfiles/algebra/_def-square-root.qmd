@@ -1,0 +1,8 @@
+:::{#def-square-root}
+#### Square root
+
+For a real number $a \ge 0$,
+the **square root** of $a$, written $\sqrt{a}$,
+is the non-negative real number whose square (@def-power) is $a$.
+
+:::

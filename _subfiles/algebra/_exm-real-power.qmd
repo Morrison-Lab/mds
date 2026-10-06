@@ -1,0 +1,26 @@
+:::{#exm-real-power}
+#### Real powers, and $e^x$
+
+- $2^3 = \expf{3 \cd \logf{2}} \approx \expf{3 \cd 0.69315} \approx \expf{2.07944} \approx 8$,
+  which agrees with $2^3 = 2 \cd 2 \cd 2 = 8$ from @def-power.
+- $2^{1/2} = \expf{\frac{1}{2} \cd \logf{2}} \approx \expf{0.34657} \approx 1.41421$,
+  which is $\sqrt{2}$ (@def-square-root).
+- For every real $x$, with base $e$ (@def-euler-number):
+
+  $$
+  \ba
+  e^x
+  &= \expf{x \cd \logf{e}}
+  && \text{(@def-real-power, with } a = e \text{ and } b = x \text{)}
+  \\
+  &= \expf{x \cd 1}
+  && \text{(}\logf{e} = 1 \text{, by @exm-natural-log)}
+  \\
+  &= \expf{x}
+  && \text{(@thm-mult-one)}
+  \ea
+  $$
+
+  So $e^x$ and $\expf{x}$ are two names for the same number.
+
+:::

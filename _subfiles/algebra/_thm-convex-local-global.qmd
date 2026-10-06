@@ -21,7 +21,7 @@ Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
 section 4.3, p. 93 (states that all local minima of a convex function
 are global); Murphy (2012), section 7.3.3, p. 222 (convex functions
 have a unique global minimum when strictly convex).
-The proof is the standard argument from the chord inequality.
+The [proof](notation.qmd#def-proof) is the standard argument from the chord inequality.
 -->
 :::{#thm-convex-local-global}
 #### Local minimizers of convex functions are global

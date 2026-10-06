@@ -1,0 +1,8 @@
+:::{#def-euler-number}
+#### Euler's number
+
+**Euler's number** is
+
+$$e \eqdef \expf{1} = 2.71828\ldots$$
+
+:::

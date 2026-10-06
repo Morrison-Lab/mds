@@ -10,7 +10,23 @@
 
 {{< include mds/_subfiles/algebra/_thm-substitution.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-identity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-identity.qmd >}}
+
 ## Inequalities
+
+{{< include mds/_subfiles/algebra/_def-strict-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-strict-inequality.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-add-ineq.qmd >}}
 
@@ -25,6 +41,30 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-negative-one.qmd >}}
+
+## Powers, square roots, and absolute values {#sec-powers-roots-abs}
+
+{{< include mds/_subfiles/algebra/_def-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-square-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-square-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-absolute-value.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-absolute-value.qmd >}}
 
 ## Minimum, maximum, argmin and argmax {#sec-min-max}
 
@@ -86,6 +126,14 @@
 
 ## Infimum and supremum
 
+{{< include mds/_subfiles/algebra/_def-bounded.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-bounded.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
 
 {{< slidebreak >}}
@@ -101,6 +149,30 @@
 {{< include mds/_subfiles/algebra/_exm-supremum.qmd >}}
 
 ## Sums
+
+{{< include mds/_subfiles/algebra/_def-identity-element.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-identity-element.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-commutative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-commutative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-associative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-associative.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-add-ident.qmd >}}
 
@@ -133,6 +205,14 @@
 ## Sums and products together
 
 <!-- heading shares the slide; do not re-flag -->
+
+{{< include mds/_subfiles/algebra/_def-distributive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-distributive.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
 
@@ -230,12 +310,35 @@
 
 ## Exponentials and Logarithms
 
-In these notes,
-$\logf{x}$ is the natural logarithm of $x > 0$,
-the logarithm with base $e \approx 2.718$,
-and $\expf{x} = e^x$ is the exponential function.
-Some sources write $\ln x$ for the natural logarithm
-and reserve $\log x$ for base 10.
+{{< include mds/_subfiles/algebra/_def-exponential-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-exponential-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-euler-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-euler-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-natural-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-natural-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-real-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-real-power.qmd >}}
 
 {{< slidebreak >}}
 

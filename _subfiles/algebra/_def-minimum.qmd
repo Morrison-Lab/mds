@@ -14,7 +14,7 @@ if $m \in A$ and $m \le a$ for all $a \in A$.
 #### Not every set has a minimum
 
 The set $\cb{3, 1, 4}$ has minimum $1$,
-and the interval $[0, 1]$ has minimum $0$.
+and the [interval](sets-functions.qmd#def-interval) $[0, 1]$ has minimum $0$.
 The interval $(0, 1]$ has no minimum:
 every element $a$ of it has a smaller element, $a/2$, also in it.
 
