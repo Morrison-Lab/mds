@@ -9,6 +9,7 @@ Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$
 with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 $f(x, y) = 1$ on the unit square $[0, 1]^2$.
 Define the function $g(x, y) = \ef{-x^2}\,\indicp{y \le x}$,
+where $e$ is [Euler's number](algebra.qmd#def-euler-number),
 and compute its
 [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
 $\E{g(X, Y)}$.

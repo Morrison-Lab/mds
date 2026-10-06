@@ -1,0 +1,13 @@
+:::{#def-differentiable}
+#### Differentiable function
+
+A function $f$ is **differentiable at** $x = c$ if the limit (@def-limit)
+
+$$f'(c) \eqdef \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}$$
+
+exists and is finite.
+The number $f'(c)$ is the derivative of $f$ at $c$ (@def-derivative).
+
+[@larsonCalc11e, Section 2.1, p. 100]
+
+:::

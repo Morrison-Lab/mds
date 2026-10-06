@@ -1,0 +1,33 @@
+:::{#exm-limit}
+#### The limit of $3x + 1$ at $2$
+
+$\lim_{x \to 2} (3x + 1) = 7$.
+Given $\epsilon > 0$, take $\delta = \epsilon / 3$.
+For every $x$ with $0 < \abs{x - 2} < \delta$,
+using the [distributive law](algebra.qmd#def-distributive) in the second line,
+
+$$
+\ba
+\abs{(3x + 1) - 7}
+&= \abs{3x - 6}
+&& \text{(subtract)}
+\\
+&= \abs{3(x - 2)}
+&& \text{(distributive law)}
+\\
+&= 3 \abs{x - 2}
+&& \text{(} \abs{3y} = 3 \abs{y} \text{, since } 3 > 0 \text{)}
+\\
+&< 3 \cd \frac{\epsilon}{3}
+&& \text{(} \abs{x - 2} < \delta = \epsilon / 3 \text{)}
+\\
+&= \epsilon
+&& \text{(multiply)}
+\ea
+$$
+
+For example, with $\epsilon = 0.3$ and $\delta = 0.1$,
+the point $x = 2.05$ satisfies $0 < \abs{2.05 - 2} < 0.1$,
+and $\abs{(3 \cd 2.05 + 1) - 7} = \abs{7.15 - 7} = 0.15 < 0.3$.
+
+:::

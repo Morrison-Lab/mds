@@ -1,0 +1,19 @@
+:::{#def-limit}
+#### Limit of a function at a point
+
+Let $f$ be a [function](sets-functions.qmd#def-function)
+defined at every point of an [open interval](sets-functions.qmd#def-interval) around $c$,
+except possibly at $c$ itself,
+and let $L$ be a [real number](notation.qmd#def-real-numbers).
+The **limit** of $f(x)$ as $x$ approaches $c$ is $L$,
+written $\lim_{x \to c} f(x) = L$,
+if for every $\epsilon > 0$ there is a $\delta > 0$ such that
+
+$$\abs{f(x) - L} < \epsilon \quad \text{for every } x \text{ with } 0 < \abs{x - c} < \delta.$$
+
+Here $\abs{\cdot}$ is the [absolute value](algebra.qmd#def-absolute-value).
+When such a real number $L$ exists, the limit **exists**;
+otherwise, the limit does not exist.
+The value $f(c)$, if it is defined, plays no role.
+
+:::

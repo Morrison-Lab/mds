@@ -1,0 +1,12 @@
+:::{#exm-one-sided-limit}
+#### One-sided limits of a step function
+
+Let $H(x) = 1$ for $x \ge 0$ and $H(x) = 0$ for $x < 0$.
+
+- $\lim_{x \to 0^+} H(x) = 1$, because $H(x) = 1$ for every $x > 0$.
+- $\lim_{x \to 0^-} H(x) = 0$, because $H(x) = 0$ for every $x < 0$.
+
+The one-sided limits differ, since $1 \ne 0$,
+so $\lim_{x \to 0} H(x)$ does not exist.
+
+:::

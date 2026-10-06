@@ -1,0 +1,10 @@
+:::{#exm-derivative}
+#### The derivative of $x^2$
+
+For $f(x) = x^2$,
+the computation in @exm-differentiable, with $3$ replaced by any real number $c$,
+gives $\frac{f(c + h) - f(c)}{h} = 2c + h$, which tends to $2c$ as $h \to 0$.
+So the derivative of $f$ is $f'(x) = 2x$.
+For example, $f'(3) = 6$ and $f'(-1) = -2$.
+
+:::
