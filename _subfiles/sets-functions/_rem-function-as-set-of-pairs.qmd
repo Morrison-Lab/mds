@@ -1,0 +1,22 @@
+:::{#rem-function-as-set-of-pairs}
+#### What a function is fundamentally
+
+@def-function defines what a function *does*: it assigns an output to each input.
+In formal set theory, what a function *is* is a set of [ordered pairs](#def-cartesian-product):
+a subset $f \subseteq A \times B$ containing exactly one pair $(a, b)$
+for each $a \in A$, where $b = f(a)$ [@halmos1974naive, Section 8, p. 30].
+The statement $f(a) = b$ is notation for $(a, b) \in f$.
+For example, the die-doubling function in @exm-function is the set of six ordered pairs
+$\set{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)}$.
+
+This distinction clarifies what a function is and is not:
+
+- **Not an algebraic formula:** A function is not fundamentally an equation or algebraic expression. While many functions are specified by a formula (such as $f(x) = x^2$), many others cannot be written in closed form (such as empirical measurements or a lookup table), yet every function is a well-defined set of input-output pairs.
+- **Not a curve:** A curve or plot is a geometric visualization of a function whose domain and codomain are subsets of $\reals$, but functions can map between arbitrary sets (such as sets of words, matrices, or probability distributions).
+- **Sets of pairs with unique first entries:** Any subset of $A \times B$ in which no two distinct pairs share the same first element defines a function from the set of those first elements to $B$.
+
+In computer science, viewing a function as a set of key-value pairs corresponds directly to a **dictionary**, **lookup table**, or **hash map**.
+Evaluating an expression computes outputs on demand;
+storing precomputed pairs $(a, f(a))$ in a table to avoid repeated computation is known as **memoization**.
+
+:::
