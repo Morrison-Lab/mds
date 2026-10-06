@@ -1,7 +1,5 @@
 Some special matrices appeared earlier:
 
 - the zero matrix (@def-zero-matrix), in the section on matrix addition
-- square matrices (@def-square-matrix)
-- the identity matrix (@def-identity-matrix)
-
-The last two are in the section on square and identity matrices.
+- square matrices (@def-square-matrix), in the section on square and identity matrices
+- the identity matrix (@def-identity-matrix), in that same section

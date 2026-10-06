@@ -53,7 +53,7 @@ $$
 \ba
 \vec{w}^\top \vx^* + b
 &= -\frac{b}{\vec{w} \cdot \vec{w}}\,(\vec{w}^\top \vec{w}) + b
-&& \text{(@thm-scalar-matmul)}
+&& \text{(homogeneity of } \vx \mapsto \vec{w}^\top \vx \text{, @thm-matrix-map-linear)}
 \\
 &= -b + b
 && \text{(} \vec{w}^\top \vec{w} = \vec{w} \cdot \vec{w} \text{)}
