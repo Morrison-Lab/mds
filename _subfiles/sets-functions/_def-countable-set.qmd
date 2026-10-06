@@ -2,8 +2,8 @@
 #### Countable set
 
 A set is **countable**
-if it is finite,
-or if its elements can be listed as a sequence $a_1, a_2, a_3, \ldots$
+if it is finite (@def-finite-set),
+or if its elements can be listed as a sequence (@def-sequence) $a_1, a_2, a_3, \ldots$
 in which every element appears.
 
 :::

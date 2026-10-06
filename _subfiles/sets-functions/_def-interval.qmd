@@ -1,0 +1,25 @@
+:::{#def-interval}
+#### Interval
+
+For [real numbers](notation.qmd#def-real-numbers) $a \le b$,
+the **intervals** with **endpoints** $a$ and $b$ are:
+
+- the **closed interval** $[a, b] \eqdef \set{x \in \reals : a \le x \le b}$;
+- the **open interval** $(a, b) \eqdef \set{x \in \reals : a < x < b}$;
+- the **half-open intervals** $[a, b) \eqdef \set{x \in \reals : a \le x < b}$
+  and $(a, b] \eqdef \set{x \in \reals : a < x \le b}$.
+
+The **unbounded intervals** have at most one endpoint:
+
+- $[a, \infty) \eqdef \set{x \in \reals : x \ge a}$
+  and $(a, \infty) \eqdef \set{x \in \reals : x > a}$;
+- $(-\infty, b] \eqdef \set{x \in \reals : x \le b}$
+  and $(-\infty, b) \eqdef \set{x \in \reals : x < b}$;
+- $(-\infty, \infty) \eqdef \reals$.
+
+A square bracket means the endpoint belongs to the interval,
+and a parenthesis means it does not.
+The symbols $\infty$ and $-\infty$ are not real numbers,
+so they always get a parenthesis.
+
+:::
