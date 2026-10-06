@@ -1,0 +1,6 @@
+:::{#def-binary-variable}
+#### Binary variable
+
+A **binary variable** is a variable that takes only the values $0$ and $1$.
+
+:::

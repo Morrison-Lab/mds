@@ -1,0 +1,11 @@
+:::{#exm-set-predicate-notation}
+#### One indicator in both notations
+
+Let $A = [0, \infty)$, the nonnegative real numbers.
+The indicator of $A$ is $\indic{A}(x)$ in set notation,
+and $\indicp{x \in A}$ or $\indicp{x \ge 0}$ in predicate notation
+(@def-set-predicate-notation).
+At $x = 3.5$, all three equal $1$;
+at $x = -2.1$, all three equal $0$.
+
+:::

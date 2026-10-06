@@ -5,6 +5,8 @@
   so we write $i \in \cb{1, \ldots, n}$ with $n \in \mathbb{N}$.
 - A count outcome, such as the number of hospital visits in a year,
   can be $0$,
-  so its support is $\mathbb{N}_0$, not $\mathbb{N}$.
+  so its support,
+  the set of values it takes with positive probability,
+  is $\mathbb{N}_0$, not $\mathbb{N}$.
 
 :::
