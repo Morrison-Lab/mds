@@ -1,0 +1,10 @@
+:::{#def-real-power}
+#### Power with a real exponent
+
+For a real number $a > 0$ and a real number $b$,
+
+$$a^b \eqdef \expf{b \cd \logf{a}}.$$
+
+When $b$ is an integer, this agrees with @def-power.
+
+:::

@@ -1,0 +1,15 @@
+:::{#def-distributive}
+#### Distributive law
+
+An operation $\star$ on a set $S$ **distributes over** an operation $\diamond$ on $S$
+(@def-identity-element)
+if
+
+$$a \star (b \diamond c) = (a \star b) \diamond (a \star c)$$
+
+for all $a, b, c \in S$.
+The **distributive law** is the statement that multiplication distributes over addition,
+$a \times (b + c) = (a \times b) + (a \times c)$ (@thm-mult-distr);
+we then say multiplication is **distributive**.
+
+:::

@@ -1,0 +1,10 @@
+:::{#def-counterexample}
+#### Counterexample
+
+A **counterexample** to a proposition of the form
+"for every $x$ in $A$, $P(x)$",
+where $P(x)$ is a predicate (@def-predicate),
+is an element $x$ of $A$ for which $P(x)$ is false.
+A single counterexample shows that the proposition is false.
+
+:::

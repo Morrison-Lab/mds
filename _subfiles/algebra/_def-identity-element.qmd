@@ -1,0 +1,11 @@
+:::{#def-identity-element}
+#### Identity element
+
+Let $S$ be a set, such as the real numbers $\reals$,
+and let $\star$ be an operation that combines two elements $a$ and $b$ of $S$
+into an element $a \star b$ of $S$,
+such as addition ($a + b$) or multiplication ($a \times b$) of real numbers.
+An element $u$ of $S$ is an **identity element** for $\star$
+if $a \star u = a$ and $u \star a = a$ for every $a \in S$.
+
+:::

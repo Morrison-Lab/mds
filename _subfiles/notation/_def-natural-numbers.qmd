@@ -1,7 +1,7 @@
 :::{#def-natural-numbers}
 #### Natural numbers (our convention)
 
-In these notes, the **natural numbers** are the positive integers:
+In these notes, the **natural numbers** are the positive integers (@def-integers):
 
 $$\mathbb{N} \eqdef \cb{1, 2, 3, \ldots}$$
 

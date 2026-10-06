@@ -5,6 +5,8 @@ The **Euclidean norm** (or *length*, also called the $L_2$ norm and written $\lV
 
 $$\norm{\vx} \eqdef \sqrt{\vx \cdot \vx} = \sqrt{\sumip x_i^2}$$ {#eq-l2-norm}
 
+where $\sqrt{\cdot}$ is the [square root](algebra.qmd#def-square-root).
+
 :::
 
 {{< slidebreak >}}

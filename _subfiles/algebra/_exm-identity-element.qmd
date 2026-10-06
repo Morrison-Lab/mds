@@ -1,0 +1,11 @@
+:::{#exm-identity-element}
+#### Identity elements for addition and multiplication
+
+- $0$ is the identity element for addition:
+  for example, $5 + 0 = 5$ and $0 + 5 = 5$ (@thm-add-ident).
+- $1$ is the identity element for multiplication:
+  for example, $5 \times 1 = 5$ and $1 \times 5 = 5$ (@thm-mult-one).
+- $0$ is not an identity element for subtraction:
+  $5 - 0 = 5$, but $0 - 5 = -5 \ne 5$.
+
+:::

@@ -1,0 +1,18 @@
+:::{#def-sequence-limit}
+#### Limit of a sequence
+
+A [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers
+**converges** to a real number $L$,
+written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$,
+if for every $\epsilon > 0$ there is a natural number $N$ such that
+
+$$\abs{a_n - L} < \epsilon \quad \text{for every } n \ge N.$$
+
+Then $L$ is the **limit** of the sequence.
+A sequence that converges to some real number is **convergent**,
+and a sequence that does not converge to any real number **diverges**.
+A sequence **diverges to $\infty$**, written $\lim_{n \to \infty} a_n = \infty$,
+if for every real number $M$ there is a natural number $N$
+such that $a_n > M$ for every $n \ge N$.
+
+:::

@@ -1,53 +1,3 @@
-:::{#def-differentiable}
-#### Differentiable function
-
-A function $f$ is **differentiable at** $x = c$ if the limit
-
-$$f'(c) \eqdef \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}$$
-
-exists and is finite.
-
-[@larsonCalc11e, Section 2.1, p. 100]
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-differentiable}
-#### A differentiable function, and a limit that is not finite
-
-- $f(x) = x^2$ is differentiable at $c = 3$:
-
-  $$
-  \ba
-  \frac{f(3 + h) - f(3)}{h}
-  &= \frac{(3 + h)^2 - 3^2}{h}
-  && \text{(substitute } f(x) = x^2 \text{)}
-  \\
-  &= \frac{9 + 6h + h^2 - 9}{h}
-  && \text{(expand } (3 + h)^2 \text{)}
-  \\
-  &= \frac{6h + h^2}{h}
-  && \text{(cancel } 9 - 9 \text{)}
-  \\
-  &= 6 + h
-  && \text{(divide by } h \ne 0 \text{)}
-  \ea
-  $$
-
-  which tends to the finite limit $f'(3) = 6$ as $h \to 0$.
-- $g(x) = \sqrt[3]{x}$ is not differentiable at $c = 0$:
-  the quotient $\tfrac{g(h) - g(0)}{h} = \tfrac{\sqrt[3]{h}}{h} = \tfrac{1}{(\sqrt[3]{h})^2}$ grows without bound as $h \to 0$,
-  so the limit is not finite.
-
-:::
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/videos/_note-video-limits.qmd >}}
-
-{{< slidebreak >}}
-
 :::{#def-differentiable-on}
 #### Differentiable on an interval
 
@@ -131,7 +81,7 @@ if all three conditions hold:
 :::{#exm-continuous-on-sqrt}
 #### Continuity on $\lbrack 0, 1\rbrack$ uses one-sided limits at the endpoints
 
-Let $f(x) = \sqrt{x}$, defined for $x \ge 0$.
+Let $f(x) = \sqrt{x}$, the [square root](algebra.qmd#def-square-root), defined for $x \ge 0$.
 Because $f$ is undefined for $x < 0$,
 only the right-hand limit of $f$ at $0$ makes sense,
 and @def-continuous-on asks only for that one-sided limit at the endpoint $0$.
@@ -223,7 +173,7 @@ the mesh is the largest of these widths, $\|\mathcal{P}\| = 0.5$.
 :::{#def-riemann-integral}
 #### Riemann integral
 
-Let $f$ be a bounded function on $[a, b]$.
+Let $f$ be a [bounded](algebra.qmd#def-bounded) function on $[a, b]$.
 For each partition $\mathcal{P}$ of $[a, b]$ (@def-partition),
 choose a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$.
 The **Riemann integral** of $f$ over $[a, b]$ is the limit as the mesh (@def-mesh) shrinks to zero:
@@ -294,8 +244,8 @@ A bounded function $f$ is Riemann integrable on $[a, b]$
 exactly when its Riemann integral $\int_a^b f(x)\,dx$
 (@def-riemann-integral) exists;
 the integral is the common limit of the sums.
-For example, let $g(x) = 1$ when $x$ is rational
-and $g(x) = 0$ when $x$ is irrational,
+For example, let $g(x) = 1$ when $x$ is [rational](notation.qmd#def-rational-numbers)
+and $g(x) = 0$ when $x$ is [irrational](notation.qmd#def-irrational-numbers),
 on $[0, 1]$.
 Every subinterval contains both rational and irrational points.
 Choosing every sample point rational gives

@@ -1,0 +1,13 @@
+:::{#def-strict-inequality}
+#### Strict and non-strict inequalities
+
+For [real numbers](notation.qmd#def-real-numbers) $a$ and $b$,
+$a < b$ ("$a$ is less than $b$")
+and $a > b$ ("$a$ is greater than $b$")
+are **strict inequalities**.
+The **non-strict inequalities** also allow equality:
+
+- $a \le b$ means $a < b$ or $a = b$;
+- $a \ge b$ means $a > b$ or $a = b$.
+
+:::

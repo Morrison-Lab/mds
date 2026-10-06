@@ -1,10 +1,10 @@
 :::{#def-real-coordinate-space}
 #### The set $\reals^p$
 
-For a positive integer $p$,
+For a positive [integer](notation.qmd#def-integers) $p$,
 $\reals^p$ is the set of all
 [column vectors](#def-column-vector) of length $p$
-whose entries are real numbers.
+whose entries are [real numbers](notation.qmd#def-real-numbers).
 
 :::
 

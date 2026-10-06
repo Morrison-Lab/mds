@@ -1,0 +1,25 @@
+:::{#def-natural-log}
+#### Natural logarithm
+
+For a real number $a > 0$,
+the **natural logarithm** of $a$, written $\logf{a}$,
+is the real number $y$ with $\expf{y} = a$.
+The exponential function takes each positive value at exactly one input,
+so there is exactly one such $y$,
+and $\log : (0, \infty) \to \reals$ is the
+[inverse function](sets-functions.qmd#def-inverse-function)
+of $\exp$ (@def-exponential-function).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-log-notation}
+#### Other notations for the natural logarithm
+
+In these notes, $\logf{x}$ is always the natural logarithm,
+the logarithm with base $e$ (@def-euler-number).
+Some sources write $\ln x$ for the natural logarithm
+and reserve $\log x$ for the logarithm with base 10.
+
+:::

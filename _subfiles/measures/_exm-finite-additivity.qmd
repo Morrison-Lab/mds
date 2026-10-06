@@ -2,7 +2,8 @@
 #### Counting elements is finitely additive
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets-functions.qmd#exm-set)),
-let $\mu(A) \eqdef \abs{A}$, the number of elements of $A$,
+let $\mu(A) \eqdef \abs{A}$, the number of elements of $A$
+([cardinality](sets-functions.qmd#def-finite-set)),
 for each set $A$ in the $\sigma$-algebra of all subsets of $D$
 (@exm-sigma-algebra).
 The sets $\set{1, 2}$ and $\set{5, 6}$ are pairwise disjoint

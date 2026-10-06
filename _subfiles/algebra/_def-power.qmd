@@ -1,0 +1,19 @@
+:::{#def-power}
+#### Power, base, and exponent
+
+Let $a$ be a real number and $n$ a
+[natural number](notation.qmd#def-natural-numbers).
+The $n$th **power** of $a$ is the product of $n$ copies of $a$:
+
+$$a^n \eqdef \underbrace{a \cd a \cd \cdots \cd a}_{n \text{ factors}}$$
+
+In $a^n$, $a$ is the **base** and $n$ is the **exponent**.
+The second power $a^2$ is the **square** of $a$.
+For the exponent $0$ and negative [integer](notation.qmd#def-integers) exponents:
+
+- $a^0 \eqdef 1$, including $0^0 = 1$ by convention;
+- $a^{-n} \eqdef \frac{1}{a^n}$, when $a \ne 0$.
+
+@def-real-power extends powers to real exponents when the base is positive.
+
+:::

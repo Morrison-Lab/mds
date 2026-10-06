@@ -1,7 +1,8 @@
 :::{#thm-matadd-assoc}
 #### Matrix addition is associative
 
-For $m \times n$ matrices $\matr{A}$, $\matr{B}$, and $\matr{C}$:
+For $m \times n$ matrices $\matr{A}$, $\matr{B}$, and $\matr{C}$,
+matrix addition is [associative](algebra.qmd#def-associative):
 
 $$(\matr{A} + \matr{B}) + \matr{C} = \matr{A} + (\matr{B} + \matr{C})$$
 

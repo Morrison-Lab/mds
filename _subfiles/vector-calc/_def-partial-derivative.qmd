@@ -1,0 +1,17 @@
+:::{#def-partial-derivative}
+#### Partial derivative
+
+Let $f : \reals^p \to \reals$ and $\vx = \tp{(x_1, \ldots, x_p)} \in \reals^p$.
+The **partial derivative** of $f$ with respect to $x_j$ at $\vx$ is
+
+$$
+\deriv{x_j} f(\vx) \eqdef
+\lim_{h \to 0} \frac{f(x_1, \ldots, x_j + h, \ldots, x_p) - f(x_1, \ldots, x_p)}{h},
+$$
+
+when this [limit](calculus.qmd#def-limit) exists.
+It is the [derivative](calculus.qmd#def-derivative) at $x_j$
+of the one-variable function $t \mapsto f(x_1, \ldots, t, \ldots, x_p)$,
+which varies the $j$th coordinate and holds the other coordinates fixed.
+
+:::

@@ -31,13 +31,13 @@ are both $2 e^{2x_1 + x_2}$.
 #### Without continuity, the mixed partials can differ
 
 Let $f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}$ for $\vx \ne \vzero$, and $f(\vzero) = 0$.
-For $x_2 \ne 0$, the [derivative](calculus.qmd#def-differentiable) in $x_1$ at $(0, x_2)$ is
+For $x_2 \ne 0$, the partial derivative (@def-partial-derivative) in $x_1$ at $(0, x_2)$ is
 
 $$
 \ba
 \deriv{x_1} f(0, x_2)
 &= \lim_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h}
-&& \text{(definition of the partial derivative)}
+&& \text{(definition of the partial derivative, @def-partial-derivative)}
 \\
 &= \lim_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2}
 && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)}

@@ -1,0 +1,13 @@
+:::{#exm-square-root}
+#### Square roots
+
+- $\sqrt{9} = 3$.
+  Although $(-3)^2 = 9$ too, $-3$ is negative,
+  so $\sqrt{9}$ is not $-3$.
+- $\sqrt{0} = 0$.
+- $\sqrt{2} \approx 1.41421$.
+- $\sqrt{-4}$ is not a real number,
+  because no real number squares to $-4$
+  (see @sec-complex-numbers).
+
+:::

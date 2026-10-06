@@ -5,7 +5,8 @@
 
 Adding the zero vector to a vector leaves it unchanged
 (@def-vector-addition):
-$\vx + \vzero = \vx$ for any vector $\vx$ of the same length.
+$\vx + \vzero = \vx$ for any vector $\vx$ of the same length,
+so $\vzero$ is the [identity element](algebra.qmd#def-identity-element) for vector addition.
 For example, $(2, -1) + (0, 0) = (2 + 0, -1 + 0) = (2, -1)$.
 
 :::

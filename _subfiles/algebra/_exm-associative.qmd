@@ -1,0 +1,11 @@
+:::{#exm-associative}
+#### An associative operation, and one that is not
+
+- Multiplication is associative:
+  for example, $(2 \times 3) \times 4 = 6 \times 4 = 24$
+  and $2 \times (3 \times 4) = 2 \times 12 = 24$.
+- Subtraction is not associative:
+  $(8 - 4) - 2 = 4 - 2 = 2$,
+  but $8 - (4 - 2) = 8 - 2 = 6$.
+
+:::

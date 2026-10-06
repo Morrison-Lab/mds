@@ -2,8 +2,7 @@
 #### Supremum (least upper bound)
 
 Let $A \subseteq \reals$ be nonempty
-and bounded above,
-meaning that some $t \in \reals$ satisfies $a \le t$ for all $a \in A$.
+and bounded above (@def-bounded).
 The **supremum** of $A$,
 written $\sup A$,
 is the smallest real number $t$ satisfying $a \le t$ for all $a \in A$:

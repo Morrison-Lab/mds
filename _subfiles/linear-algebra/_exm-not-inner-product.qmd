@@ -16,7 +16,8 @@ Each of these functions on $\reals^2$ has some of the properties in @def-inner-p
   It fails definiteness:
   for $\vx = (0, 1)$,
   $g(\vx, \vx) = 0 \cd 0 = 0$ although $\vx \neq \vzero_{2 \times 1}$.
-- $h(\vx, \vy) \eqdef \abs{x_1 y_1} + \abs{x_2 y_2}$ is symmetric, because $\abs{x_i y_i} = \abs{y_i x_i}$,
+- $h(\vx, \vy) \eqdef \abs{x_1 y_1} + \abs{x_2 y_2}$,
+  where $\abs{\cdot}$ is the [absolute value](algebra.qmd#def-absolute-value), is symmetric, because $\abs{x_i y_i} = \abs{y_i x_i}$,
   and has positivity and definiteness, because $h(\vx, \vx) = x_1^2 + x_2^2$ is a sum of squares.
   It is not linear in the first slot:
   take $\vx = \vy = (1, 0)$, $a = -1$ and $b = 0$;

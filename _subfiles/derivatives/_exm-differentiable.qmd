@@ -1,0 +1,28 @@
+:::{#exm-differentiable}
+#### A differentiable function, and a limit that is not finite
+
+- $f(x) = x^2$ is differentiable at $c = 3$:
+
+  $$
+  \ba
+  \frac{f(3 + h) - f(3)}{h}
+  &= \frac{(3 + h)^2 - 3^2}{h}
+  && \text{(substitute } f(x) = x^2 \text{)}
+  \\
+  &= \frac{9 + 6h + h^2 - 9}{h}
+  && \text{(expand } (3 + h)^2 \text{)}
+  \\
+  &= \frac{6h + h^2}{h}
+  && \text{(cancel } 9 - 9 \text{)}
+  \\
+  &= 6 + h
+  && \text{(divide by } h \ne 0 \text{)}
+  \ea
+  $$
+
+  which tends to the finite limit $f'(3) = 6$ as $h \to 0$.
+- $g(x) = \sqrt[3]{x}$ is not differentiable at $c = 0$:
+  the quotient $\tfrac{g(h) - g(0)}{h} = \tfrac{\sqrt[3]{h}}{h} = \tfrac{1}{(\sqrt[3]{h})^2}$ grows without bound as $h \to 0$,
+  so the limit is not finite.
+
+:::

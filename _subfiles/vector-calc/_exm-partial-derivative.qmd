@@ -1,0 +1,39 @@
+:::{#exm-partial-derivative}
+#### Partial derivatives of $x_1^2 x_2 + 3 x_2$
+
+Let $f(x_1, x_2) = x_1^2 x_2 + 3 x_2$.
+At $\vx = \tp{(1, 2)}$, $f(1, 2) = 1 \cd 2 + 6 = 8$, and for $h \ne 0$
+
+$$
+\ba
+\frac{f(1 + h, 2) - f(1, 2)}{h}
+&= \frac{(1 + h)^2 \cd 2 + 6 - 8}{h}
+&& \text{(substitute into } f \text{)}
+\\
+&= \frac{(1 + h)^2 \cd 2 - 2}{h}
+&& \text{(} 6 - 8 = -2 \text{)}
+\\
+&= \frac{(1 + 2h + h^2) \cd 2 - 2}{h}
+&& \text{(expand } (1 + h)^2 \text{)}
+\\
+&= \frac{2 + 4h + 2h^2 - 2}{h}
+&& \text{(distributive law)}
+\\
+&= \frac{4h + 2h^2 + 2 - 2}{h}
+&& \text{(reorder the terms)}
+\\
+&= \frac{4h + 2h^2}{h}
+&& \text{(} 2 - 2 = 0 \text{)}
+\\
+&= 4 + 2h,
+&& \text{(divide by } h \ne 0 \text{)}
+\ea
+$$
+
+which tends to $4$ as $h \to 0$, so $\deriv{x_1} f(1, 2) = 4$.
+Holding $x_2$ fixed and differentiating in $x_1$ gives the same answer:
+$\deriv{x_1} f(\vx) = 2 x_1 x_2$, which is $2 \cd 1 \cd 2 = 4$ at $\tp{(1, 2)}$.
+Holding $x_1$ fixed instead gives $\deriv{x_2} f(\vx) = x_1^2 + 3$,
+which is $1 + 3 = 4$ at $\tp{(1, 2)}$.
+
+:::
