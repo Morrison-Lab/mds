@@ -227,15 +227,25 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -257,35 +267,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -297,16 +287,6 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -317,15 +297,35 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -698,7 +698,7 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 <div class="preview-combined-banner">
     <p style="margin: 0;">
-        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~39% of content changed).
+        <strong>📝 Preview Changes:</strong> This page has been modified in this pull request (~40% of content changed).
         <br>
         <strong>🎨 Highlighting Legend:</strong> 
         <mark class="preview-text-changed" style="display: inline; padding: 1px 3px;">Modified text (yellow)</mark> shows changed words/phrases with tooltips of original text, 
@@ -722,7 +722,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-05 <mark class="preview-text-changed">20:22:35</mark> (PDT)</p>
+      <p class="date">Last modified: 2026-10-05 <mark class="preview-text-changed">20:40:53</mark> (PDT)</p>
     </div>
   </div>
   
@@ -985,7 +985,7 @@ Table&nbsp;1: Notation used in this book
 <p><span class="theorem-title"><strong>Example <mark class="preview-text-changed">3</mark> (Natural numbers in a data analysis)</strong></span> &nbsp;</p>
 <ul>
 <li>Observation indices start at <span class="math inline">\(1\)</span>, so we write <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
-<li>A count outcome, such as the number of hospital visits in a year, can be <span class="math inline">\(0\)</span>, so its <mark class="preview-text-changed">support, the set of values it takes with positive probability,</mark> is <span class="math inline">\(\mathbb{N}_0\)</span>, not <span class="math inline">\(\mathbb{N}\)</span>.</li>
+<li>A count outcome, such as the number of hospital visits in a year, can be <span class="math inline">\(0\)</span>, so <mark class="preview-text-changed">the</mark> <mark class="preview-text-changed">set of values it can take</mark> is <span class="math inline">\(\mathbb{N}_0\)</span>, not <span class="math inline">\(\mathbb{N}\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -1753,7 +1753,35 @@ j - k &amp;= \tfrac{1}{2}
 <p><span class="math display">\[
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
 \]</span></p>
-<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a <mark class="preview-text-changed">distribution, the set of values where its probability or density is positive,</mark> or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-support" class="theorem definition">
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 25 (Support of a distribution)</strong></span> The <strong>support</strong> of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-support" class="theorem example">
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 24 (Supports of two count distributions)</strong></span> &nbsp;</mark></p>
+<ul>
+<li><mark class="preview-element-added">A fair six-sided die gives each of <span class="math inline">\(1, 2, \ldots, 6\)</span> probability <span class="math inline">\(\tfrac{1}{6} &gt; 0\)</span> and every other value probability <span class="math inline">\(0\)</span>, so its support is <span class="math inline">\(\mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>.</mark></li>
+<li><mark class="preview-element-added">A count that can be <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and so on, each with positive probability, such as the number of hospital visits in a year, has support <span class="math inline">\(\mathbb{N}_0 = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>.</mark></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution<mark class="preview-text-added"> (</mark><a href="#def-support" class="quarto-xref"><mark class="preview-text-added">Definition&nbsp</mark>;25</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
 </section>
 </section>
 <section id="iverson-bracket-notation" class="level3" data-number="6.2">
@@ -1766,7 +1794,7 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 <div class="callout-body-container">
 <div id="def-iverson-bracket" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed">25</mark> (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed">26</mark> (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
 <p><span class="math display">\[
 <mark class="preview-text-changed">[P]</mark> \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
@@ -1784,7 +1812,7 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 <div class="callout-body-container">
 <div id="exm-iverson-bracket" class="theorem example">
-<p><span class="theorem-title"><strong><mark class="preview-text-changed">Example</mark> <mark class="preview-text-changed">24</mark> <mark class="preview-text-changed">(Evaluating</mark> Iverson <mark class="preview-text-changed">brackets)</mark></strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong><mark class="preview-text-changed">Example</mark> <mark class="preview-text-changed">25</mark> <mark class="preview-text-changed">(Evaluating</mark> Iverson <mark class="preview-text-changed">brackets)</mark></strong></span> &nbsp;</p>
 <ul>
 <li><mark class="preview-element-added"><span class="math inline">\([3 &gt; 2] = 1\)</span>, because <span class="math inline">\(3 &gt; 2\)</span> is true.</mark></li>
 <li><mark class="preview-element-added"><span class="math inline">\([2 &gt; 3] = 0\)</span>, because <span class="math inline">\(2 &gt; 3\)</span> is false.</mark></li>
@@ -1813,9 +1841,9 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 <div class="callout-body-container">
 <div id="def-kronecker-delta" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed">26</mark> (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
+<p><span class="theorem-title"><strong>Definition <mark class="preview-text-changed">27</mark> (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
 <p><mark class="preview-element-added"><span class="math display">\[\delta_{ij} \stackrel{\text{def}}{=}[i = j]\]</span></mark></p>
-<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#def-iverson-bracket" class="quarto-xref">Definition&<mark class="preview-text-changed">nbsp</mark>;25</a>).</p>
+<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#def-iverson-bracket" class="quarto-xref">Definition&<mark class="preview-text-changed">nbsp</mark>;26</a>).</p>
 </div>
 </div>
 </div>
@@ -1827,7 +1855,7 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 <div class="callout-body-container">
 <div id="exm-kronecker-delta" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 25 (Evaluating the Kronecker delta)</strong></span> &nbsp;</mark></p>
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 26 (Evaluating the Kronecker delta)</strong></span> &nbsp;</mark></p>
 <ul>
 <li><span class="math inline">\(\delta_{11} = [1 = 1] = 1\)</span>.</li>
 <li><span class="math inline">\(\delta_{12} = [1 = 2] = 0\)</span>.</li>
@@ -1928,6 +1956,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </section>
 <section id="key-algebraic-properties" class="level3" data-number="6.6">
 <h3 data-number="6.6" class="anchored" data-anchor-id="key-algebraic-properties"><span class="header-section-number"><mark class="preview-text-changed">6.6</mark></span> Key algebraic properties</h3>
+<p>Indicator functions translate <mark class="preview-text-added">the </mark>logical <mark class="preview-text-changed">connectives</mark> <mark class="preview-text-changed">(</mark><a href="#def-logical-connective" class="quarto-xref"><mark class="preview-text-changed">Definition&nbs</mark>p<mark class="preview-text-changed">;11</mark></a><mark class="preview-text-changed">) “and”, “or”, and “not”, applied to set member</mark>ship, into ordinary arithmetic on <mark class="preview-text-changed">real numbers. One of the identities below uses idempot</mark>ence:</p>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1935,7 +1964,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="def-idempotent" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 27 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./sets-functions.html#def-domain">domain</a>.</mark></p>
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 28 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./sets-functions.html#def-domain">domain</a>.</mark></p>
 </div>
 </div>
 </div>
@@ -1947,7 +1976,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="exm-idempotent-indicator" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 26 (Idempotent numbers and indicators)</strong></span> &nbsp;</mark></p>
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 27 (Idempotent numbers and indicators)</strong></span> &nbsp;</mark></p>
 <ul>
 <li><mark class="preview-element-added"><span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> are idempotent: <span class="math inline">\(0 \cdot 0 = 0\)</span> and <span class="math inline">\(1 \cdot 1 = 1\)</span>.</mark></li>
 <li><mark class="preview-element-added"><span class="math inline">\(2\)</span> is not idempotent: <span class="math inline">\(2 \cdot 2 = 4 \neq 2\)</span>.</mark></li>
@@ -1958,12 +1987,12 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 </div>
 </div>
-<p><mark class="preview-text-added">Indicator functions translate the logical connectives (</mark><a href="#def-logical-connective" class="quarto-xref"><mark class="preview-text-added">Definition&nbsp;11</mark></a><mark class="preview-text-added">) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numb</mark>ers. For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega \setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
+<p>For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega \setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
 <ul>
 <li><p><strong>Intersection (“and”):</strong> <span class="math inline">\(\mathbb{1}_{A \cap B}(x) = \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Union (“or”):</strong> <span class="math inline">\(\mathbb{1}_{A \cup B}(x) = \mathbb{1}_{A}(x) + \mathbb{1}_{B}(x) - \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Complement (“not”):</strong> <span class="math inline">\(\mathbb{1}_{A^c}(x) = 1 - \mathbb{1}_{A}(x)\)</span></p></li>
-<li><p><strong><mark class="preview-text-changed">Idempotence (</mark><a href="#def-idempotent" class="quarto-xref"><mark class="preview-text-changed">Definition&nbsp</mark>;27</a>):</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
+<li><p><strong><mark class="preview-text-changed">Idempotence (</mark><a href="#def-idempotent" class="quarto-xref"><mark class="preview-text-changed">Definition&nbsp</mark>;28</a>):</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
 <li><p><strong>Expectation gives probability:</strong> <mark class="preview-text-changed">When</mark> <span class="math inline"><mark class="preview-text-changed">\(\Omega\)</mark></span> <mark class="preview-text-changed">is</mark> <mark class="preview-text-changed">a </mark><a href="https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space"><mark class="preview-text-changed">sample space</mark></a><mark class="preview-text-changed"> and </mark><span class="math inline"><mark class="preview-text-changed">\(A\)</mark></span><mark class="preview-text-changed"> is an </mark><a href="https://morrison-lab.github.io/pds/probability-basics.html#def-event"><mark class="preview-text-changed">event</mark></a><mark class="preview-text-changed">,</mark> the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">expectation</a> of its indicator is the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability</a> of the <mark class="preview-text-changed">event (all four terms are defined in the Morrison Lab’s probability notes):</mark></p>
 <p><span class="math display">\[
 \operatorname{E}[\mathbb{1}_{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
@@ -1986,7 +2015,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="def-lower-upper-limits" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 28 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</mark></p>
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 29 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</mark></p>
 </div>
 </div>
 </div>
@@ -1998,7 +2027,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="exm-lower-upper-limits" class="theorem example">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 27 (Reading off limits)</strong></span> &nbsp;</mark></p>
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Example 28 (Reading off limits)</strong></span> &nbsp;</mark></p>
 <ul>
 <li><mark class="preview-element-added">In <span class="math inline">\(\sum_{i=2}^{5} i^2\)</span>, the lower limit is <span class="math inline">\(2\)</span> and the upper limit is <span class="math inline">\(5\)</span>, so the sum is <span class="math inline">\(2^2 + 3^2 + 4^2 + 5^2 = 54\)</span>.</mark></li>
 <li><mark class="preview-element-added">In <span class="math inline">\(\int_0^3 x\,dx\)</span>, the lower limit is <span class="math inline">\(0\)</span> and the upper limit is <span class="math inline">\(3\)</span>.</mark></li>
@@ -2014,7 +2043,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="rem-limits-two-meanings" class="proof remark">
-<p><mark class="preview-element-added"><span class="proof-title"><em>Remark 4</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;28</a>) are not limits in the calculus sense, such as the <a href="./calculus.html#def-limit">limit of a function</a> or the <a href="./algebra.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</mark></p>
+<p><mark class="preview-element-added"><span class="proof-title"><em>Remark 4</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#def-lower-upper-limits" class="quarto-xref">Definition&nbsp;29</a>) are not limits in the calculus sense, such as the <a href="./calculus.html#def-limit">limit of a function</a> or the <a href="./algebra.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</mark></p>
 </div>
 </div>
 </div>
@@ -2026,7 +2055,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="def-notational-shorthand" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 29 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 30 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
 </div>
 </div>
 </div>
@@ -2056,7 +2085,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </div>
 <div class="callout-body-container">
 <div id="def-range-of-variable" class="theorem definition">
-<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 30 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</mark></p>
+<p><mark class="preview-element-added"><span class="theorem-title"><strong>Definition 31 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</mark></p>
 </div>
 </div>
 </div>
@@ -2157,7 +2186,7 @@ Table&nbsp;3: Common notational shorthands and their full forms
 </div>
 <div class="callout-body-container">
 <div id="exm-expand-index-shorthand" class="theorem example">
-<p><span class="theorem-title"><strong>Example 28 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 29 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
 <p><mark class="preview-element-added"><span class="math display">\[
 \begin{aligned}
 \sum_{i=1}^{3} x_i

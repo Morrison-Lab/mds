@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:22:35 (PDT)
+Last modified: 2026-10-05 20:40:53 (PDT)
 
-This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and derivations. The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
+This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and [derivations](notation.llms.md#def-derivation). The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
 ## 1 Don’t skip steps
 

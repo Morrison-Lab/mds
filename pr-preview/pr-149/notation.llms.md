@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:22:35 (PDT)
+Last modified: 2026-10-05 20:40:53 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -99,7 +99,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 > **Example 3 (Natural numbers in a data analysis)**  
 >
 > - Observation indices start at \\1\\, so we write \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ with \\n \in \mathbb{N}\\.
-> - A count outcome, such as the number of hospital visits in a year, can be \\0\\, so its support, the set of values it takes with positive probability, is \\\mathbb{N}\_0\\, not \\\mathbb{N}\\.
+> - A count outcome, such as the number of hospital visits in a year, can be \\0\\, so the set of values it can take is \\\mathbb{N}\_0\\, not \\\mathbb{N}\\.
 
 > **NOTE:**
 >
@@ -462,7 +462,18 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 \\ \mathbf{1}\_A(x) = \mathbb{I}(x \in A) \\
 
-Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution, the set of values where its probability or density is positive, or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
+> **NOTE:**
+>
+> **Definition 25 (Support of a distribution)** The **support** of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
+
+> **NOTE:**
+>
+> **Example 24 (Supports of two count distributions)**  
+>
+> - A fair six-sided die gives each of \\1, 2, \ldots, 6\\ probability \\\tfrac{1}{6} \> 0\\ and every other value probability \\0\\, so its support is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
+> - A count that can be \\0\\, \\1\\, \\2\\, and so on, each with positive probability, such as the number of hospital visits in a year, has support \\\mathbb{N}\_0 = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\.
+
+Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 25](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
 
 ### 6.2 Iverson bracket notation
 
@@ -470,13 +481,13 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Definition 25 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
+> **Definition 26 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
 >
 > \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
 > **NOTE:**
 >
-> **Example 24 (Evaluating Iverson brackets)**  
+> **Example 25 (Evaluating Iverson brackets)**  
 >
 > - \\\[3 \> 2\] = 1\\, because \\3 \> 2\\ is true.
 > - \\\[2 \> 3\] = 0\\, because \\2 \> 3\\ is false.
@@ -488,15 +499,15 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Definition 26 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
+> **Definition 27 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
 >
 > \\\delta\_{ij} \stackrel{\text{def}}{=}\[i = j\]\\
 >
-> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 25](#def-iverson-bracket)).
+> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 26](#def-iverson-bracket)).
 
 > **NOTE:**
 >
-> **Example 25 (Evaluating the Kronecker delta)**  
+> **Example 26 (Evaluating the Kronecker delta)**  
 >
 > - \\\delta\_{11} = \[1 = 1\] = 1\\.
 > - \\\delta\_{12} = \[1 = 2\] = 0\\.
@@ -541,13 +552,15 @@ Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisi
 
 ### 6.6 Key algebraic properties
 
-> **NOTE:**
->
-> **Definition 27 (Idempotent)** A number \\a\\ is **idempotent** if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](sets-functions.llms.md#def-domain).
+Indicator functions translate the logical connectives ([Definition 11](#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
 
 > **NOTE:**
 >
-> **Example 26 (Idempotent numbers and indicators)**  
+> **Definition 28 (Idempotent)** A number \\a\\ is **idempotent** if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](sets-functions.llms.md#def-domain).
+
+> **NOTE:**
+>
+> **Example 27 (Idempotent numbers and indicators)**  
 >
 > - \\0\\ and \\1\\ are idempotent: \\0 \cdot 0 = 0\\ and \\1 \cdot 1 = 1\\.
 > - \\2\\ is not idempotent: \\2 \cdot 2 = 4 \neq 2\\.
@@ -555,7 +568,7 @@ Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisi
 >
 > The [idempotent matrices](linear-algebra.llms.md#def-idempotent-matrix) of linear algebra satisfy the same equation with matrix multiplication: \\\mathbf{M}^2 = \mathbf{M}\\ for a square matrix \\\mathbf{M}\\.
 
-Indicator functions translate the logical connectives ([Definition 11](#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms.md#def-complement) \\A^c \stackrel{\text{def}}{=}\Omega \setminus A\\, and for every \\x \in \Omega\\:
+For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms.md#def-complement) \\A^c \stackrel{\text{def}}{=}\Omega \setminus A\\, and for every \\x \in \Omega\\:
 
 - **Intersection (“and”):** \\\mathbb{1}\_{A \cap B}(x) = \mathbb{1}\_{A}(x) \cdot \mathbb{1}\_{B}(x)\\
 
@@ -563,7 +576,7 @@ Indicator functions translate the logical connectives ([Definition 11](#def-log
 
 - **Complement (“not”):** \\\mathbb{1}\_{A^c}(x) = 1 - \mathbb{1}\_{A}(x)\\
 
-- **Idempotence ([Definition 27](#def-idempotent)):** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
+- **Idempotence ([Definition 28](#def-idempotent)):** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
 
 - **Expectation gives probability:** When \\\Omega\\ is a [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space) and \\A\\ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event), the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) of its indicator is the [probability](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) of the event (all four terms are defined in the Morrison Lab’s probability notes):
 
@@ -579,22 +592,22 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> **Definition 28 (Lower and upper limits of a sum or integral)** In a [sum](algebra.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
+> **Definition 29 (Lower and upper limits of a sum or integral)** In a [sum](algebra.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
 
 > **NOTE:**
 >
-> **Example 27 (Reading off limits)**  
+> **Example 28 (Reading off limits)**  
 >
 > - In \\\sum\_{i=2}^{5} i^2\\, the lower limit is \\2\\ and the upper limit is \\5\\, so the sum is \\2^2 + 3^2 + 4^2 + 5^2 = 54\\.
 > - In \\\int_0^3 x\\dx\\, the lower limit is \\0\\ and the upper limit is \\3\\.
 
 > **NOTE:**
 >
-> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 28](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus.llms.md#def-limit) or the [limit of a sequence](algebra.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
+> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 29](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus.llms.md#def-limit) or the [limit of a sequence](algebra.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
 
 > **NOTE:**
 >
-> **Definition 29 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
+> **Definition 30 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
 
 > **NOTE:**
 >
@@ -607,7 +620,7 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> **Definition 30 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
+> **Definition 31 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
@@ -635,7 +648,7 @@ Table 3: Common notational shorthands and their full forms
 
 > **NOTE:**
 >
-> **Example 28 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+> **Example 29 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 

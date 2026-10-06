@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:22:35 (PDT)
+Last modified: 2026-10-05 20:40:53 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -214,23 +214,39 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Definition 3 (Row-vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **row-vector derivative** is:
 >
-> \\ \frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) & \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) & \cdots & \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \\
+> \\ \frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) & \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) & \cdots & \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \tag{1}\\
+>
+> Some sources write the same row as \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f(\tilde{\beta})\\, with the operator on the left, read as each operator \\\frac{\partial}{\partial \beta_i}\\ applied to \\f\\ rather than as a matrix product (see [Remark 1](#rem-row-derivative-shape)).
 
 > **NOTE:**
 >
-> **Theorem 1 (Row and column derivatives are transposes)** \\\frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta}) = \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})\right)\mathclose{}^{\top}\\
+> *Remark 1* (Which side the operator goes on). Read \\\frac{\partial}{\partial \tilde{\beta}}\\ as a \\p \times 1\\ column of operators with entries \\\frac{\partial}{\partial \beta_1}, \ldots, \frac{\partial}{\partial \beta_p}\\, and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\\ as the \\1 \times p\\ row with the same entries. Writing either one next to \\f\\ can be read in two ways:
 >
-> \\\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta})\right)\mathclose{}^{\top}\\
+> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra.llms.md#def-matrix-mult). The column operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column ([Definition 2](#def-vector-derivative)). The row operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
+> - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \tilde{x}\\ is read in [scalar multiplication](linear-algebra.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \tilde{\beta}} f\\ and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ work with the operator on the left.
+>
+> The fraction \\\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row, without making the derivative a product.
+>
+> Treating the operators as vectors is sound for checking shapes, but “multiplying” an operator by a function means applying the operator to it, so two rules of ordinary matrix algebra do not carry over: scalars commute with matrices, and products can be regrouped.
+>
+> - **Scalars do not commute with operators.** \\\frac{\partial}{\partial \beta_i} f\\ is a function, but \\f \frac{\partial}{\partial \beta_i}\\ is still an unapplied operator, waiting for something to act on. So, unlike \\c \tilde{x}= \tilde{x}c\\, the operator cannot move to the other side of \\f\\ without changing the meaning. Putting the row operator on the right of \\f\\ gives the row derivative only under the convention that it acts on the factor to its left.
+> - **Products cannot be regrouped.** An operator acts on the whole product to its right, so by the [product rule](calculus.llms.md#thm-product-rule), \\\frac{\partial}{\partial \beta_i} (f g) \ne \mathopen{}\left(\frac{\partial}{\partial \beta_i} f\right)\mathclose{} g\\ in general. For example, with \\f(\tilde{\beta}) = \beta_1\\, \\\frac{\partial}{\partial \beta_1} (f f) = 2 \beta_1\\ but \\\mathopen{}\left(\frac{\partial}{\partial \beta_1} f\right)\mathclose{} f = \beta_1\\.
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 2](#def-vector-derivative) and [Definition 3](#def-row-vector-derivative), entry \\j\\ of both \\\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})\\ and \\\frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta})\\ is \\\frac{\partial}{\partial \beta_j} f(\tilde{\beta})\\; the first is a \\p \times 1\\ column and the second a \\1 \times p\\ row with the same entries in the same order, so each is the transpose of the other.
+> **Theorem 1 (Row and column derivatives are transposes)** \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\right)\mathclose{}}^{\top} \tag{2}\\
+>
+> \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\right)\mathclose{}}^{\top} \tag{3}\\
+
+> **NOTE:**
+>
+> *Proof*. By [Definition 2](#def-vector-derivative) and [Definition 3](#def-row-vector-derivative), entry \\j\\ of both \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\\ and \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\\ is \\\frac{\partial}{\partial \beta_j} f(\tilde{\beta})\\; the first is a \\p \times 1\\ column and the second a \\1 \times p\\ row with the same entries in the same order, so each is the transpose of the other.
 
 > **NOTE:**
 >
 > **Example 3 (Row and column derivatives of a linear function)** For \\f(\tilde{\beta}) = 3\beta_1 + 5\beta_2\\:
 >
-> \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix}3 \\ 5\end{bmatrix}, \qquad \frac{\partial}{\partial \tilde{\beta}^{\top}} f(\tilde{\beta}) = \begin{bmatrix}3 & 5\end{bmatrix}, \\
+> \\ \frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}} = \begin{bmatrix}3 \\ 5\end{bmatrix}, \qquad \frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = \begin{bmatrix}3 & 5\end{bmatrix}, \\
 >
 > and each is the transpose of the other.
 
@@ -250,7 +266,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 1* (Numerator layout). Some sources use the transposed, *numerator layout*, in which the derivative is the \\q \times p\\ Jacobian matrix with \\(j, i)\\ entry \\\frac{\partial}{\partial \beta_i} y_j\\. For example, in numerator layout, the derivative in [Example 4](#exm-vector-valued-derivative) is the \\3 \times 2\\ matrix
+> *Remark 2* (Numerator layout). Some sources use the transposed, *numerator layout*, in which the derivative is the \\q \times p\\ Jacobian matrix with \\(j, i)\\ entry \\\frac{\partial}{\partial \beta_i} y_j\\. For example, in numerator layout, the derivative in [Example 4](#exm-vector-valued-derivative) is the \\3 \times 2\\ matrix
 >
 > \\ \begin{bmatrix} 2\beta_1 & 0 \\ \beta_2 & \beta_1 \\ 0 & 3 \end{bmatrix} \\
 >
@@ -366,7 +382,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 2* (The derivative of a linear map as a special case). This result generalizes [Theorem 4](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top} = {\mathbf{A}}^{\top}\\). For example, [Example 9](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and \\\tilde{v} = \tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\\, where this result gives \\\mathbf{I}\_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\\.
+> *Remark 3* (The derivative of a linear map as a special case). This result generalizes [Theorem 4](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top} = {\mathbf{A}}^{\top}\\). For example, [Example 9](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and \\\tilde{v} = \tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\\, where this result gives \\\mathbf{I}\_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\\.
 
 > **NOTE:**
 >
@@ -418,7 +434,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 3* (The coefficient gets transposed). This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus \\\frac{\partial}{\partial x}(cx) = c\\, but here the coefficient \\{\tilde{x}}^{\top}\\ (a row vector) becomes \\\tilde{x}\\ (a column vector) in the result. For example, with \\\tilde{x}= {(2, -1)}^{\top}\\, \\{\tilde{x}}^{\top}\tilde{\beta}= 2\beta_1 - \beta_2\\, whose vector derivative is the column vector \\{(2, -1)}^{\top} = \tilde{x}\\, not the row vector \\{\tilde{x}}^{\top} = (2, -1)\\.
+> *Remark 4* (The coefficient gets transposed). This vector derivative formula looks a lot like non-vector calculus, except that you have to transpose the coefficient: in scalar calculus \\\frac{\partial}{\partial x}(cx) = c\\, but here the coefficient \\{\tilde{x}}^{\top}\\ (a row vector) becomes \\\tilde{x}\\ (a column vector) in the result. For example, with \\\tilde{x}= {(2, -1)}^{\top}\\, \\{\tilde{x}}^{\top}\tilde{\beta}= 2\beta_1 - \beta_2\\, whose vector derivative is the column vector \\{(2, -1)}^{\top} = \tilde{x}\\, not the row vector \\{\tilde{x}}^{\top} = (2, -1)\\.
 
 > **NOTE:**
 >
@@ -436,7 +452,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 4* (Like the derivative of \\cx^2\\). This operation is like taking the derivative of \\cx^2\\ with respect to \\x\\ in non-vector calculus: \\\frac{\partial}{\partial x} (cx^2) = 2cx\\, and [Theorem 7](#thm-quadratic-form) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2 \mathbf{S} \tilde{\beta}\\. For example, with \\p = 1\\, \\\mathbf{S} = (3)\\, and \\\tilde{\beta}= (\beta_1)\\, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= 3\beta_1^2\\, and its derivative is \\6\beta_1 = 2 \mathbf{S} \tilde{\beta}\\.
+> *Remark 5* (Like the derivative of \\cx^2\\). This operation is like taking the derivative of \\cx^2\\ with respect to \\x\\ in non-vector calculus: \\\frac{\partial}{\partial x} (cx^2) = 2cx\\, and [Theorem 7](#thm-quadratic-form) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2 \mathbf{S} \tilde{\beta}\\. For example, with \\p = 1\\, \\\mathbf{S} = (3)\\, and \\\tilde{\beta}= (\beta_1)\\, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= 3\beta_1^2\\, and its derivative is \\6\beta_1 = 2 \mathbf{S} \tilde{\beta}\\.
 
 > **NOTE:**
 >
@@ -462,7 +478,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 5* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 2](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top}\tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta_1)\\, \\{\tilde{\beta}}^{\top}\tilde{\beta}= \beta_1^2\\, and its derivative is \\2\beta_1 = 2\tilde{\beta}\\.
+> *Remark 6* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 2](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top}\tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta_1)\\, \\{\tilde{\beta}}^{\top}\tilde{\beta}= \beta_1^2\\, and its derivative is \\2\beta_1 = 2\tilde{\beta}\\.
 
 > **NOTE:**
 >
@@ -489,7 +505,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 6* (The order of the factors matters). The vector chain rule ([Theorem 8](#thm-chain-vec)) is like the univariate [chain rule](calculus.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
+> *Remark 7* (The order of the factors matters). The vector chain rule ([Theorem 8](#thm-chain-vec)) is like the univariate [chain rule](calculus.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
 >
 > The version presented here is for the [gradient](https://en.wikipedia.org/wiki/Gradient) (column vector); the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector) would be the [transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative), \\{\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\, with the factors in the reverse order.
 
@@ -560,7 +576,7 @@ See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_
 
 > **NOTE:**
 >
-> *Remark 7* (Why the theorem uses the trace). The trace makes \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\ a scalar, so its matrix derivative ([Definition 6](#def-matrix-derivative)) is again an \\m \times n\\ matrix. The matrix product \\\mathbf{A} \mathbf{X} \mathbf{B}\\ itself (without the trace) is an \\r \times r\\ matrix, and each of its \\r^2\\ entries has a partial derivative with respect to each of the \\m n\\ entries of \\\mathbf{X}\\. Those \\r^2 m n\\ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\.
+> *Remark 8* (Why the theorem uses the trace). The trace makes \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\ a scalar, so its matrix derivative ([Definition 6](#def-matrix-derivative)) is again an \\m \times n\\ matrix. The matrix product \\\mathbf{A} \mathbf{X} \mathbf{B}\\ itself (without the trace) is an \\r \times r\\ matrix, and each of its \\r^2\\ entries has a partial derivative with respect to each of the \\m n\\ entries of \\\mathbf{X}\\. Those \\r^2 m n\\ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\.
 >
 > For example, with \\\mathbf{A} = \mathbf{B} = \mathbf{I}\_2\\, the product \\\mathbf{A} \mathbf{X} \mathbf{B} = \mathbf{X}\\ has \\4\\ entries, each with \\4\\ partial derivatives, \\16\\ in all, while its trace \\X\_{11} + X\_{22}\\ has the \\4\\ partial derivatives that form the \\2 \times 2\\ matrix \\\mathbf{I}\_2\\ of [Example 17](#exm-matrix-derivative).
 
@@ -616,11 +632,17 @@ A minimizer of a function of one variable has a flat tangent line ([flat point](
 
 > **NOTE:**
 >
-> **Definition 7 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ and whose second partial derivatives exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 4](#def-vector-valued-derivative)) of the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([Definition 2](#def-vector-derivative)):
+> **Definition 7 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ and whose second partial derivatives exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 4](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
 >
-> \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \\
+> \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \tag{4}\\
 >
-> By [Definition 4](#def-vector-valued-derivative), with \\y_j = \frac{\partial}{\partial x_j} f(\tilde{x})\\, its \\(i, j)\\ entry is
+> By [Theorem 1](#thm-row-deriv-tp-col-deriv), the transposed gradient is the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\ ([Definition 3](#def-row-vector-derivative)), so the Hessian can also be written
+>
+> \\ \mathbf{H}\_f(\tilde{x}) = \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} = \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \tag{5}\\
+>
+> Both forms follow the shape rule of matrix multiplication ([Remark 1](#rem-row-derivative-shape)): the \\p \times 1\\ column operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row, giving a \\p \times p\\ matrix.
+>
+> By [Definition 4](#def-vector-valued-derivative), with \\y_j = \frac{\partial}{\partial x_j} f(\tilde{x})\\, the \\(i, j)\\ entry of the Hessian is
 >
 > \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. \\
 
@@ -697,7 +719,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~7}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#thm-quadratic-form}{\text{Theorem~7}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~4}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~2}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~7}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#thm-quadratic-form}{\text{Theorem~7}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~4}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~3}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -981,7 +1003,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Theorem 20 (First-order characterization of convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 8](#def-continuous-several)). Then \\f\\ is [convex](algebra.llms.md#def-convex-function) if and only if
 >
-> \\ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \qquad \text{for all } \tilde{x}, \tilde{y}\in \mathbb{R}^p: \tag{1}\\
+> \\ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \qquad \text{for all } \tilde{x}, \tilde{y}\in \mathbb{R}^p: \tag{6}\\
 >
 > every tangent plane lies on or under the graph. If the inequality is strict whenever \\\tilde{x}\ne \tilde{y}\\, then \\f\\ is strictly convex ([Definition 12](#def-strictly-convex)).
 
@@ -995,9 +1017,9 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} g(t) - g(0) &= f(t \tilde{x}+ (1 - t) \tilde{y}) - f(\tilde{y}) && \text{(definition of } g \text{)} \\ &\le t f(\tilde{x}) + (1 - t) f(\tilde{y}) - f(\tilde{y}) && \text{(} f \text{ is convex)} \\ &= t\\(f(\tilde{x}) - f(\tilde{y})), && \text{(collect terms)} \end{aligned} \\
 >
-> and dividing by \\t \> 0\\, \\\dfrac{g(t) - g(0)}{t} \le f(\tilde{x}) - f(\tilde{y})\\. As \\t \to 0\\ from the right, the left side tends to \\g'(0)\\ (\\g\\ is differentiable at \\0\\, so the one-sided limit equals the two-sided derivative), and a limit of numbers that are all at most \\f(\tilde{x}) - f(\tilde{y})\\ is at most \\f(\tilde{x}) - f(\tilde{y})\\. So \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \le f(\tilde{x}) - f(\tilde{y})\\, which rearranges to [Equation 1](#eq-supporting-hyperplane).
+> and dividing by \\t \> 0\\, \\\dfrac{g(t) - g(0)}{t} \le f(\tilde{x}) - f(\tilde{y})\\. As \\t \to 0\\ from the right, the left side tends to \\g'(0)\\ (\\g\\ is differentiable at \\0\\, so the one-sided limit equals the two-sided derivative), and a limit of numbers that are all at most \\f(\tilde{x}) - f(\tilde{y})\\ is at most \\f(\tilde{x}) - f(\tilde{y})\\. So \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \le f(\tilde{x}) - f(\tilde{y})\\, which rearranges to [Equation 6](#eq-supporting-hyperplane).
 >
-> **If.** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, \\t \in \[0, 1\]\\, \\\tilde{z} \stackrel{\text{def}}{=}t \tilde{x}+ (1 - t) \tilde{y}\\, and \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\. Applying [Equation 1](#eq-supporting-hyperplane) at the point \\\tilde{z}\\, once toward \\\tilde{x}\\ and once toward \\\tilde{y}\\,
+> **If.** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, \\t \in \[0, 1\]\\, \\\tilde{z} \stackrel{\text{def}}{=}t \tilde{x}+ (1 - t) \tilde{y}\\, and \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\. Applying [Equation 6](#eq-supporting-hyperplane) at the point \\\tilde{z}\\, once toward \\\tilde{x}\\ and once toward \\\tilde{y}\\,
 >
 > \\ f(\tilde{x}) \ge f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{x}- \tilde{z}), \qquad f(\tilde{y}) \ge f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{y}- \tilde{z}). \\
 >
@@ -1005,7 +1027,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} t f(\tilde{x}) + (1 - t) f(\tilde{y}) &\ge t \mathopen{}\left(f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{x}- \tilde{z})\right)\mathclose{} + (1 - t) \mathopen{}\left(f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{y}- \tilde{z})\right)\mathclose{} && \text{(multiply by } t, 1 - t \ge 0 \text{ and add)} \\ &= (t + (1 - t))\\f(\tilde{z}) + t\\{\tilde{g}}^{\top} (\tilde{x}- \tilde{z}) + (1 - t)\\{\tilde{g}}^{\top} (\tilde{y}- \tilde{z}) && \text{(distribute } t \text{ and } 1 - t \text{)} \\ &= f(\tilde{z}) + t\\{\tilde{g}}^{\top} (\tilde{x}- \tilde{z}) + (1 - t)\\{\tilde{g}}^{\top} (\tilde{y}- \tilde{z}) && \text{(} t + (1 - t) = 1 \text{)} \\ &= f(\tilde{z}) + {\tilde{g}}^{\top} \mathopen{}\left(t (\tilde{x}- \tilde{z}) + (1 - t) (\tilde{y}- \tilde{z})\right)\mathclose{} && \text{(factor out } {\tilde{g}}^{\top} \text{; matrix products distribute)} \\ &= f(\tilde{z}) + {\tilde{g}}^{\top} \mathopen{}\left(t \tilde{x}+ (1 - t) \tilde{y}- \tilde{z}\right)\mathclose{} && \text{(collect terms)} \\ &= f(\tilde{z}). && \text{(definition of } \tilde{z} \text{)} \end{aligned} \\
 >
-> That inequality is the defining inequality of a [convex function](algebra.llms.md#def-convex-function). If [Equation 1](#eq-supporting-hyperplane) is strict for distinct points, and \\\tilde{x}\ne \tilde{y}\\ and \\t \in (0, 1)\\, then:
+> That inequality is the defining inequality of a [convex function](algebra.llms.md#def-convex-function). If [Equation 6](#eq-supporting-hyperplane) is strict for distinct points, and \\\tilde{x}\ne \tilde{y}\\ and \\t \in (0, 1)\\, then:
 >
 > - \\\tilde{z}\\ differs from both \\\tilde{x}\\ and \\\tilde{y}\\, since \\\tilde{x}- \tilde{z} = (1 - t)(\tilde{x}- \tilde{y}) \ne \tilde{0}\\ and \\\tilde{y}- \tilde{z} = t (\tilde{y}- \tilde{x}) \ne \tilde{0}\\;
 > - so both inequalities at \\\tilde{z}\\ are strict;
@@ -1013,7 +1035,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 42 (Tangent lines under a parabola)** For \\f(x) = x^2\\, the right side of [Equation 1](#eq-supporting-hyperplane) is \\y^2 + 2y (x - y) = 2xy - y^2\\, and
+> **Example 42 (Tangent lines under a parabola)** For \\f(x) = x^2\\, the right side of [Equation 6](#eq-supporting-hyperplane) is \\y^2 + 2y (x - y) = 2xy - y^2\\, and
 >
 > \\ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0, \\
 >
@@ -1032,7 +1054,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} f(\tilde{x}) &= f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) + \frac{1}{2}\\{(\tilde{x}- \tilde{y})}^{\top}\\\mathbf{H}\_f(\tilde{w})\\(\tilde{x}- \tilde{y}) && \text{(}\href{#thm-taylor-mv}{\text{Theorem~15}}\text{)} \\ &\ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}). && \text{(} \mathbf{H}\_f(\tilde{w}) \text{ is positive semidefinite)} \end{aligned} \\
 >
-> This inequality is [Equation 1](#eq-supporting-hyperplane), so \\f\\ is convex by [Theorem 20](#thm-convex-first-order). Under the hypothesis of part 2 and with \\\tilde{x}\ne \tilde{y}\\, the quadratic-form term is positive, so the inequality is strict, and \\f\\ is strictly convex by the last sentence of [Theorem 20](#thm-convex-first-order).
+> This inequality is [Equation 6](#eq-supporting-hyperplane), so \\f\\ is convex by [Theorem 20](#thm-convex-first-order). Under the hypothesis of part 2 and with \\\tilde{x}\ne \tilde{y}\\, the quadratic-form term is positive, so the inequality is strict, and \\f\\ is strictly convex by the last sentence of [Theorem 20](#thm-convex-first-order).
 
 > **NOTE:**
 >
@@ -1050,7 +1072,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 44 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has \\f''(0) = 12 \cdot 0^2 = 0\\, so \\\mathbf{H}\_f(0) = \[0\]\\ is not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 1](#eq-supporting-hyperplane): for \\x \ne y\\,
+> **Example 44 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has \\f''(0) = 12 \cdot 0^2 = 0\\, so \\\mathbf{H}\_f(0) = \[0\]\\ is not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 6](#eq-supporting-hyperplane): for \\x \ne y\\,
 >
 > \\ \begin{aligned} x^4 - y^4 - 4 y^3 (x - y) &= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y) && \text{(factor } x^4 - y^4 \text{)} \\ &= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3) && \text{(collect the } y^3 \text{ terms)} \\ &= (x - y)^2 (x^2 + 2 x y + 3 y^2) && \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)} \\ &= (x - y)^2 \mathopen{}\left((x + y)^2 + 2 y^2\right)\mathclose{}, && \text{(complete the square)} \end{aligned} \\
 >
@@ -1064,7 +1086,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. For every \\\tilde{x}\\,
 >
-> \\ \begin{aligned} f(\tilde{x}) &\ge f(\tilde{x}^\*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(}\href{#eq-supporting-hyperplane}{\text{Equation~1}}\text{ with } \tilde{y}= \tilde{x}^\* \text{)} \\ &= f(\tilde{x}^\*) + {\tilde{0}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= f(\tilde{x}^\*). && \text{(} {\tilde{0}}^{\top} \tilde{v} = 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{x}) &\ge f(\tilde{x}^\*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(}\href{#eq-supporting-hyperplane}{\text{Equation~6}}\text{ with } \tilde{y}= \tilde{x}^\* \text{)} \\ &= f(\tilde{x}^\*) + {\tilde{0}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= f(\tilde{x}^\*). && \text{(} {\tilde{0}}^{\top} \tilde{v} = 0 \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1114,7 +1136,7 @@ Here the objective is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} 
 >
 > So \\(\tilde{x}, \tilde{\lambda})\\ makes the gradients equal \\\tilde{0}\_{p \times 1}\\ and \\\tilde{0}\_{m \times 1}\\ exactly when
 >
-> \\ \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda} = \tilde{0}\_{p \times 1} \quad \text{and} \quad {\mathbf{A}}^{\top} \tilde{x}= \tilde{b}, \qquad\text{that is,}\qquad \underbrace{\begin{bmatrix} \mathbf{S} & \mathbf{A} \\ {\mathbf{A}}^{\top} & \tilde{0}\_{m \times m} \end{bmatrix}}\_{(p + m) \times (p + m)} \underbrace{\begin{bmatrix} \tilde{x}\\ \tilde{\lambda} \end{bmatrix}}\_{(p + m) \times 1} = \underbrace{\begin{bmatrix} \tilde{0}\_{p \times 1} \\ \tilde{b} \end{bmatrix}}\_{(p + m) \times 1}, \tag{2}\\
+> \\ \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda} = \tilde{0}\_{p \times 1} \quad \text{and} \quad {\mathbf{A}}^{\top} \tilde{x}= \tilde{b}, \qquad\text{that is,}\qquad \underbrace{\begin{bmatrix} \mathbf{S} & \mathbf{A} \\ {\mathbf{A}}^{\top} & \tilde{0}\_{m \times m} \end{bmatrix}}\_{(p + m) \times (p + m)} \underbrace{\begin{bmatrix} \tilde{x}\\ \tilde{\lambda} \end{bmatrix}}\_{(p + m) \times 1} = \underbrace{\begin{bmatrix} \tilde{0}\_{p \times 1} \\ \tilde{b} \end{bmatrix}}\_{(p + m) \times 1}, \tag{7}\\
 >
 > the second equation being the constraint itself.
 
@@ -1124,7 +1146,7 @@ Here the objective is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} 
 >
 > \\ \tilde{x}^\* = \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b}. \\
 >
-> With \\\tilde{\lambda}^\* \stackrel{\text{def}}{=}-\mathbf{M}^{-1} \tilde{b}\\, the pair \\(\tilde{x}^\*, \tilde{\lambda}^\*)\\ solves [Equation 2](#eq-kkt), and the minimum value is \\f(\tilde{x}^\*) = \tfrac{1}{2}\\{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\\.
+> With \\\tilde{\lambda}^\* \stackrel{\text{def}}{=}-\mathbf{M}^{-1} \tilde{b}\\, the pair \\(\tilde{x}^\*, \tilde{\lambda}^\*)\\ solves [Equation 7](#eq-kkt), and the minimum value is \\f(\tilde{x}^\*) = \tfrac{1}{2}\\{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\\.
 
 > **NOTE:**
 >
@@ -1132,7 +1154,7 @@ Here the objective is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} 
 >
 > **\\\mathbf{M}\\ is invertible.** \\\mathbf{S}^{-1}\\ exists and is positive definite ([positive definite inverse](linear-algebra.llms.md#thm-pd-inverse)), so \\\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A}\\ is positive definite ([operations that preserve definiteness](linear-algebra.llms.md#thm-pd-operations), part 1), and so invertible (positive definite inverse again). \\\mathbf{S}^{-1}\\ and \\\mathbf{M}^{-1}\\ are symmetric ([inverse of a symmetric matrix](linear-algebra.llms.md#cor-inverse-symmetric)), because \\\mathbf{S}\\ and \\\mathbf{M}\\ are.
 >
-> **\\\tilde{x}^\*\\ satisfies the constraint, and the pair solves [Equation 2](#eq-kkt).**
+> **\\\tilde{x}^\*\\ satisfies the constraint, and the pair solves [Equation 7](#eq-kkt).**
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \tilde{x}^\* &= {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(substitute } \tilde{x}^\* \text{)} \\ &= \mathbf{M} \mathbf{M}^{-1} \tilde{b} && \text{(definition of } \mathbf{M} \text{)} \\ &= \tilde{b}, && \text{(} \mathbf{M} \mathbf{M}^{-1} = \mathbf{I}\_m \text{)} \\ \mathbf{S} \tilde{x}^\* + \mathbf{A} \tilde{\lambda}^\* &= \mathbf{S} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b} - \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(substitute } \tilde{x}^\* \text{ and } \tilde{\lambda}^\* \text{)} \\ &= \mathbf{A} \mathbf{M}^{-1} \tilde{b} - \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(} \mathbf{S} \mathbf{S}^{-1} = \mathbf{I}\_p \text{)} \\ &= \tilde{0}\_{p \times 1}. && \text{(subtract)} \end{aligned} \\
 >
@@ -1159,7 +1181,7 @@ Here the objective is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} 
 > Checks:
 >
 > - the constraint: \\3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5\\;
-> - the first block of [Equation 2](#eq-kkt): \\\mathbf{S} \tilde{x}^\* + \mathbf{A} \tilde{\lambda}^\* = {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) = {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} = \tilde{0}\_{2 \times 1}\\;
+> - the first block of [Equation 7](#eq-kkt): \\\mathbf{S} \tilde{x}^\* + \mathbf{A} \tilde{\lambda}^\* = {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) = {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} = \tilde{0}\_{2 \times 1}\\;
 > - the value: \\0.6^2 + 0.8^2 = 0.36 + 0.64 = 1\\.
 >
 > Geometrically, \\\tilde{x}^\*\\ is the point of the line nearest the origin, at distance \\1\\.
