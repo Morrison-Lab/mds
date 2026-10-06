@@ -189,14 +189,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/vector-calc/_def-difference-quotient.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_def-second-derivative.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/vector-calc/_def-ball.qmd >}}
 
 {{< slidebreak >}}

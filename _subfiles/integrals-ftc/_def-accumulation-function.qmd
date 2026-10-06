@@ -1,0 +1,13 @@
+:::{#def-accumulation-function}
+#### Accumulation function
+
+Let $f$ be Riemann integrable on $[a, b]$ (@def-integrable).
+The **accumulation function** of $f$ from $a$ is the function $F$ on $[a, b]$ with $F(a) \eqdef 0$ and
+
+$$F(x) \eqdef \int_a^x f(t)\,dt \quad \text{for } a < x \le b.$$
+
+So $F(x)$ is the integral of $f$ accumulated from $a$ up to $x$.
+The letter $t$ inside the integral is a placeholder,
+renamed from $x$ so that $x$ can serve as the [upper limit](notation.qmd#def-lower-upper-limits).
+
+:::

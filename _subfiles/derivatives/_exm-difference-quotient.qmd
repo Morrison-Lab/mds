@@ -1,0 +1,27 @@
+:::{#exm-difference-quotient}
+#### The difference quotient of $x^2$ at $1$
+
+For $f(x) = x^2$, $c = 1$, and $h \ne 0$,
+
+$$
+\ba
+\frac{f(1 + h) - f(1)}{h}
+&= \frac{(1 + h)^2 - 1}{h}
+&& \text{(substitute into } f \text{)}
+\\
+&= \frac{1 + 2h + h^2 - 1}{h}
+&& \text{(expand } (1 + h)^2 \text{)}
+\\
+&= \frac{2h + h^2}{h}
+&& \text{(} 1 - 1 = 0 \text{)}
+\\
+&= 2 + h,
+&& \text{(divide by } h \ne 0 \text{)}
+\ea
+$$
+
+which tends to $2$ as $h \to 0$ (@def-limit).
+With $h = 0.1$ the difference quotient is $2 + 0.1 = 2.1$:
+the line through $(1, 1)$ and $(1.1, 1.21)$ has slope $\tfrac{1.21 - 1}{0.1} = \tfrac{0.21}{0.1} = 2.1$.
+
+:::

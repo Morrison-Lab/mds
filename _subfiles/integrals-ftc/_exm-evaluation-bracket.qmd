@@ -1,0 +1,23 @@
+:::{#exm-evaluation-bracket}
+#### Evaluating $\int_1^3 2t\,dt$ with a bracket
+
+$F(t) = t^2$ is an antiderivative of $f(t) = 2t$, since $\deriv{t} t^2 = 2t$, so
+
+$$
+\ba
+\int_1^3 2t\,dt
+&= \sb{t^2}_{t=1}^{t=3}
+&& \text{(FTC Part 2)}
+\\
+&= 3^2 - 1^2
+&& \text{(definition of the evaluation bracket)}
+\\
+&= 9 - 1
+&& \text{(square)}
+\\
+&= 8
+&& \text{(subtract)}
+\ea
+$$
+
+:::

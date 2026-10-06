@@ -1,0 +1,8 @@
+:::{#exm-second-derivative}
+#### The second derivative of $x^3$
+
+For $f(x) = x^3$, the power rule (@thm-deriv-polynomial) gives $f'(x) = 3x^2$ at every $x$,
+and differentiating again, with the constant multiple rule (@thm-deriv-const-factor), gives $f''(x) = 3 \cd 2x = 6x$.
+So $f''(2) = 12$, $f''(0) = 0$, and $f''(-1) = -6$.
+
+:::

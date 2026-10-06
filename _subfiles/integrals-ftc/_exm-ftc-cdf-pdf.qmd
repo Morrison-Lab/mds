@@ -7,7 +7,8 @@ show $F$ is exactly an antiderivative of $f$.
 
 Let $T$ be a
 [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
-with the exponential distribution with rate parameter $\lambda > 0$.
+with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential)
+with rate $\lambda > 0$.
 Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is
 [@kleinbaum2012survival, Section II, p. 295, "Survival and Hazard
 Functions for Selected Distributions"]:
@@ -74,7 +75,7 @@ $$
 \ea
 $$
 
-For a concrete instance: with $\lambda = 1$ (standard exponential),
+For a concrete instance: with $\lambda = 1$,
 the probability that $T \le 2$ is:
 
 $$

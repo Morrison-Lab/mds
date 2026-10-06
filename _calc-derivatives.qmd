@@ -20,6 +20,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_def-difference-quotient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-difference-quotient.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_def-differentiable.qmd >}}
 
 {{< slidebreak >}}
@@ -33,6 +41,22 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/derivatives/_exm-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-one-sided-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-one-sided-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-second-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-second-derivative.qmd >}}
 
 ### Derivative rules {#sec-derivative-rules}
 
@@ -152,7 +176,7 @@ $$\ba
 \ea
 $$
 
-or in [Lagrange's notation](https://en.wikipedia.org/wiki/Notation_for_differentiation#Lagrange's_notation),
+or in Lagrange's notation (@def-derivative),
 if $g$ is differentiable at $x$
 and $f$ is differentiable at $g(x)$,
 then for the [composition](sets-functions.qmd#def-composition) $f \circ g$,
@@ -240,23 +264,37 @@ as an affine function for functions of several variables as well.
 :::{#def-flat-point}
 #### Flat point
 
-A derivative of zero marks a **flat point** (also called a *stationary point*).
-A point where the derivative is zero or does not exist is a *critical point*.
+Let $f$ be differentiable at $c$ (@def-differentiable).
+If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary point*).
 :::
 
 {{< slidebreak >}}
 
 :::{#exm-flat-point}
-#### Flat points and critical points
+#### Flat points, and a point that is not one
 
 - $f(w) = w^3$ has $f'(w) = 3w^2$, which is $0$ at $w = 0$, so $0$ is a flat point.
-  It is neither a minimum nor a maximum: $f(w) < 0$ for $w < 0$ and $f(w) > 0$ for $w > 0$.
-- $g(w) = \abs{w}$ has no derivative at $w = 0$:
-  the difference quotient $\tfrac{\abs{h} - 0}{h}$ is $1$ for $h > 0$ and $-1$ for $h < 0$, so it has no limit.
-  So $0$ is a critical point but not a flat point.
+  Yet $f(0) = 0$ is neither the [minimum](algebra.qmd#def-minimum) nor the [maximum](algebra.qmd#def-maximum)
+  of the values $f$ takes on any open interval around $0$: $f(w) < 0$ for $w < 0$ and $f(w) > 0$ for $w > 0$.
 - $h(w) = w^2$ has $h'(1) = 2 \ne 0$, so $1$ is not a flat point.
 
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-critical-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-critical-point.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-tangent-line.qmd >}}
 
 {{< slidebreak >}}
 
@@ -267,4 +305,3 @@ A point where the derivative is zero or does not exist is a *critical point*.
 {{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_sol-flat-point.qmd >}}
-

@@ -1,0 +1,15 @@
+:::{#def-one-sided-derivative}
+#### One-sided derivatives
+
+Let $f$ be a function defined at $c$.
+
+- The **right-hand derivative** of $f$ at $c$ is the right-hand limit (@def-one-sided-limit)
+  $\lim_{h \to 0^+} \frac{f(c + h) - f(c)}{h}$ of the difference quotient (@def-difference-quotient),
+  when that limit exists and is finite.
+- The **left-hand derivative** of $f$ at $c$ is the left-hand limit
+  $\lim_{h \to 0^-} \frac{f(c + h) - f(c)}{h}$,
+  when that limit exists and is finite.
+
+These are the **one-sided derivatives** of $f$ at $c$.
+
+:::

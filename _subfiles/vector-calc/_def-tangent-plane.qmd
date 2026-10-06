@@ -10,7 +10,7 @@ $$
 $$
 
 which takes the value $f(\vy)$ at $\vx = \vy$ and has the same gradient as $f$ there.
-For $p = 1$ it is the **tangent line** $s = f(y) + f'(y)\,(x - y)$,
+For $p = 1$ it is the [tangent line](calculus.qmd#def-tangent-line) $s = f(y) + f'(y)\,(x - y)$,
 the line through $(y, f(y))$ with slope $f'(y)$.
 
 :::
