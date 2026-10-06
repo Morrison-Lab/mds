@@ -22,7 +22,7 @@ and the alternatives you may meet in other sources.
 | $\tf$       | [therefore](#def-logical-entailment), thus       | `\therefore`
 | $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
 | $\floor{x}$ | floor of $x$: largest [integer](#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
-| $\ceil{x}$  | ceiling of $x$: smallest integer greater than or equal to $x$ | `\lceil x \rceil`
+| $\ceil{x}$  | ceiling of $x$: smallest [integer](#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
 | $\indic{A}(x)$, $\indicp{P}$ | indicator function (@sec-indicator-functions): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 : Notation used in this book {#tbl-notation-collected}
