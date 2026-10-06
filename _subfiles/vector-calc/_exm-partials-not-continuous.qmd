@@ -1,0 +1,56 @@
+:::{#exm-partials-not-continuous}
+#### Partial derivatives can exist where a function is not continuous
+
+Let $f : \reals^2 \to \reals$ be
+
+$$
+f(\vx) =
+\begin{cases}
+\dfrac{x_1 x_2}{x_1^2 + x_2^2} & \text{if } \vx \ne \vzero, \\
+0 & \text{if } \vx = \vzero.
+\end{cases}
+$$
+
+**Both partial derivatives exist at $\vzero$.**
+For $h \ne 0$, $f(h, 0) = \frac{h \cd 0}{h^2 + 0} = 0$, so
+
+$$
+\ba
+\frac{f(0 + h, 0) - f(0, 0)}{h}
+&= \frac{0 - 0}{h}
+&& \text{(} f(h, 0) = 0 \text{ and } f(0, 0) = 0 \text{)}
+\\
+&= 0,
+&& \text{(} 0 / h = 0 \text{ for } h \ne 0 \text{)}
+\ea
+$$
+
+and the limit as $h \to 0$ is $0$: $\deriv{x_1} f(\vzero) = 0$ (@def-partial-derivative).
+The same steps with $f(0, h) = 0$ give $\deriv{x_2} f(\vzero) = 0$.
+
+**But $f$ is not continuous at $\vzero$** (@def-continuous-several).
+Take $\varepsilon = \tfrac{1}{4}$ and any $\delta > 0$,
+and let $t = \delta / 2$ and $\vy = \tp{(t, t)}$.
+Then $\norm{\vy - \vzero} = \sqrt{t^2 + t^2} = t \sqrt{2} = \delta / \sqrt{2} < \delta$, but
+
+$$
+\ba
+\abs{f(\vy) - f(\vzero)}
+&= \abs{\frac{t \cd t}{t^2 + t^2} - 0}
+&& \text{(} \vy \ne \vzero \text{, since } t > 0 \text{)}
+\\
+&= \frac{t^2}{2 t^2}
+&& \text{(} t^2 + t^2 = 2 t^2 \text{)}
+\\
+&= \tfrac{1}{2},
+&& \text{(cancel } t^2 > 0 \text{)}
+\ea
+$$
+
+which is more than $\varepsilon = \tfrac{1}{4}$.
+
+The partial derivatives only look along the two coordinate axes, where $f$ is $0$;
+along the line $x_1 = x_2$, $f$ is $\tfrac{1}{2}$ everywhere except at $\vzero$.
+So partial derivatives existing at a point says little about how $f$ behaves near it.
+
+:::
