@@ -87,7 +87,7 @@ rme will drop those appendices and point readers here
 - Inventing URLs or citations --- only use sources actually present in `references.bib` or explicitly provided.
 - Asking a person to check a citation you can check yourself.
   The lab's reference books (for example Billingsley, *Probability and Measure*, 3rd ed.) are PDFs in
-  [`Morrison-Lab/mlr`](https://github.com/Morrison-Lab/mlr) under `books/`;
+  the private `Morrison-Lab/mlr` repository under `books/`;
   verify section, theorem, and page numbers against them before citing or reporting a citation as unchecked.
 
 <!-- ai-config:begin (managed by Morrison-Lab/ai-config scripts/wire-repo-config.py) -->
