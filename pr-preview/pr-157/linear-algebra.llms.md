@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:05:46 (PDT)
+Last modified: 2026-10-05 23:33:39 (PDT)
 
 ## 1 Vectors
 
@@ -1113,7 +1113,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Proof*. Induction on \\p\\.
+> *Proof*. [Induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\.
 >
 > **Base case, \\p = 1\\.** Each \\\tilde{v}\_i\\ is a single number \\v_i\\, and \\k \ge 2\\. If \\v_1 = 0\\, take \\c_1 = 1\\ and every other \\c_i = 0\\. Otherwise take \\c_1 = v_2\\, \\c_2 = -v_1\\ and every other \\c_i = 0\\; then \\c_2 \neq 0\\, and \\v_2 v_1 - v_1 v_2 = 0\\.
 >
@@ -2247,7 +2247,7 @@ Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same de
 
 > **NOTE:**
 >
-> *Proof*. **Parts 1 and 2, by induction on \\i\\.** Before step \\1\\, the list of \\\tilde{q}\\’s is empty, which is orthonormal, and both spans are \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 34](#def-span)). Suppose part 1 holds after step \\i - 1\\, and write \\\mathcal{S}\_{i-1} = \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\right\\\mathclose{}\\. The orthonormal vectors \\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\\ are linearly independent ([Theorem 54](#thm-orthonormal-independent)) and span \\\mathcal{S}\_{i-1}\\, so they are an orthonormal basis of it.
+> *Proof*. **Parts 1 and 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i\\.** Before step \\1\\, the list of \\\tilde{q}\\’s is empty, which is orthonormal, and both spans are \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 34](#def-span)). Suppose part 1 holds after step \\i - 1\\, and write \\\mathcal{S}\_{i-1} = \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\right\\\mathclose{}\\. The orthonormal vectors \\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\\ are linearly independent ([Theorem 54](#thm-orthonormal-independent)) and span \\\mathcal{S}\_{i-1}\\, so they are an orthonormal basis of it.
 >
 > *\\\tilde{\tilde{q}}\_i\\ is orthogonal to the earlier \\\tilde{q}\\’s.* For each \\l \< i\\,
 >
@@ -2284,7 +2284,7 @@ Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same de
 >
 > *Proof*. Let \\\tilde{u}\_1, \ldots, \tilde{u}\_r \in \mathcal{S}\\ be orthonormal. They are linearly independent ([Theorem 54](#thm-orthonormal-independent)), so they extend to a basis \\\tilde{u}\_1, \ldots, \tilde{u}\_r, \tilde{a}\_{r+1}, \ldots, \tilde{a}\_d\\ of \\\mathcal{S}\\ ([Theorem 27](#thm-extend-basis)). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is \\\mathcal{S}\\ ([Theorem 56](#thm-gram-schmidt), part 3).
 >
-> The first \\r\\ outputs are \\\tilde{u}\_1, \ldots, \tilde{u}\_r\\ themselves, by induction on \\i \le r\\. Suppose the outputs before step \\i\\ are \\\tilde{u}\_1, \ldots, \tilde{u}\_{i-1}\\ (for \\i = 1\\ there are none, and the sum below is empty). Then \\\tilde{\tilde{q}}\_i = \tilde{u}\_i - \sum\_{j\<i} (\tilde{u}\_j \cdot \tilde{u}\_i)\\\tilde{u}\_j = \tilde{u}\_i\\, because each \\\tilde{u}\_j \cdot \tilde{u}\_i = 0\\; \\\tilde{\tilde{q}}\_i = \tilde{u}\_i \ne \tilde{0}\\, because \\\mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = 1\\, so the process does not stop; and \\\tilde{q}\_i = \tilde{u}\_i / \mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = \tilde{u}\_i\\. So the orthonormal basis contains the starting list.
+> The first \\r\\ outputs are \\\tilde{u}\_1, \ldots, \tilde{u}\_r\\ themselves, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i \le r\\. Suppose the outputs before step \\i\\ are \\\tilde{u}\_1, \ldots, \tilde{u}\_{i-1}\\ (for \\i = 1\\ there are none, and the sum below is empty). Then \\\tilde{\tilde{q}}\_i = \tilde{u}\_i - \sum\_{j\<i} (\tilde{u}\_j \cdot \tilde{u}\_i)\\\tilde{u}\_j = \tilde{u}\_i\\, because each \\\tilde{u}\_j \cdot \tilde{u}\_i = 0\\; \\\tilde{\tilde{q}}\_i = \tilde{u}\_i \ne \tilde{0}\\, because \\\mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = 1\\, so the process does not stop; and \\\tilde{q}\_i = \tilde{u}\_i / \mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = \tilde{u}\_i\\. So the orthonormal basis contains the starting list.
 
 > **NOTE:**
 >
@@ -2885,7 +2885,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 28* (An equivalent form of the spectral theorem). The proof, by induction on \\p\\, is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Theorem 11.27, p. 349), which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ ([Remark 21](#rem-orthogonal-matrix-columns)). Multiplying \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ by \\{\mathbf{Q}}^{\top}\\ on the left and by \\\mathbf{Q}\\ on the right gives
+> *Remark 28* (An equivalent form of the spectral theorem). The proof, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\, is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Theorem 11.27, p. 349), which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ ([Remark 21](#rem-orthogonal-matrix-columns)). Multiplying \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ by \\{\mathbf{Q}}^{\top}\\ on the left and by \\\mathbf{Q}\\ on the right gives
 >
 > \\ \begin{aligned} {\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} &= {\mathbf{Q}}^{\top}\mathopen{}\left(\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\right)\mathclose{}\mathbf{Q} && \text{(substitute)} \\ &= \mathopen{}\left({\mathbf{Q}}^{\top}\mathbf{Q}\right)\mathclose{}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\mathbf{Q}\right)\mathclose{} && \text{(regroup; matrix multiplication is associative)} \\ &= \mathbf{I}\_p\mathbf{\Lambda}\mathbf{I}\_p && \text{(} \mathbf{Q} \text{ is orthogonal)} \\ &= \mathbf{\Lambda} && \text{(multiplying by } \mathbf{I}\_p \text{ changes nothing)} \end{aligned} \\
 >
@@ -3210,7 +3210,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. By induction on \\p\\. For \\p = 1\\, the matrix is \\\begin{bmatrix} d_1 \end{bmatrix}\\, and its determinant is \\d_1\\ by definition.
+> *Proof*. By [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\. For \\p = 1\\, the matrix is \\\begin{bmatrix} d_1 \end{bmatrix}\\, and its determinant is \\d_1\\ by definition.
 >
 > For \\p \ge 2\\, suppose the result holds for \\(p-1) \times (p-1)\\ diagonal matrices, and let \\\mathbf{D}\\ be \\p \times p\\ and diagonal. Row 1 of \\\mathbf{D}\\ is \\(d_1, 0, \ldots, 0)\\, so only the \\j = 1\\ term of the definition can be nonzero, and deleting row 1 and column 1 of \\\mathbf{D}\\ leaves the diagonal matrix with diagonal entries \\d_2, \ldots, d_p\\:
 >
@@ -4008,7 +4008,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} (\mathbf{A} + s\\\mathbf{I}\_p)\\\tilde{v} &= \mathbf{A} \tilde{v} + (s\\\mathbf{I}\_p)\\\tilde{v} && \text{(}\href{#thm-matmul-distrib}{\text{Theorem~9}}\text{)} \\ &= \mathbf{A} \tilde{v} + s\\(\mathbf{I}\_p \tilde{v}) && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~81}}\text{)} \\ &= \lambda \tilde{v} + s\\(\mathbf{I}\_p \tilde{v}) && \text{(eigenvector)} \\ &= \lambda \tilde{v} + s \tilde{v} && \text{(}\href{#thm-identity}{\text{Theorem~58}}\text{)} \\ &= (\lambda + s)\\\tilde{v}. && \text{(add entrywise)} \end{aligned} \\
 >
-> **Part 2, by induction on \\k\\.** For \\k = 1\\ it is the assumption. If \\\mathbf{A}^{k-1} \tilde{v} = \lambda^{k-1} \tilde{v}\\, then
+> **Part 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\k\\.** For \\k = 1\\ it is the assumption. If \\\mathbf{A}^{k-1} \tilde{v} = \lambda^{k-1} \tilde{v}\\, then
 >
 > \\ \begin{aligned} \mathbf{A}^k \tilde{v} &= \mathbf{A}\\(\mathbf{A}^{k-1} \tilde{v}) && \text{(}\href{#def-matrix-power}{\text{Definition~51}}\text{, }\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{A}\\(\lambda^{k-1} \tilde{v}) && \text{(induction hypothesis)} \\ &= \lambda^{k-1}\\(\mathbf{A} \tilde{v}) && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~81}}\text{)} \\ &= \lambda^{k-1}\\(\lambda \tilde{v}) && \text{(eigenvector)} \\ &= \lambda^k \tilde{v}. && \text{(multiply the numbers)} \end{aligned} \\
 >
@@ -4126,7 +4126,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. By induction on \\k\\. For \\k = 1\\, \\\tilde{v}\_1 \ne \tilde{0}\\ is linearly independent on its own. Suppose the result holds for \\k - 1\\ eigenvectors, and \\\sum\_{i=1}^{k} c_i \tilde{v}\_i = \tilde{0}\\. Then
+> *Proof*. By [induction](proof-writing.llms.md#def-proof-by-induction) on \\k\\. For \\k = 1\\, \\\tilde{v}\_1 \ne \tilde{0}\\ is linearly independent on its own. Suppose the result holds for \\k - 1\\ eigenvectors, and \\\sum\_{i=1}^{k} c_i \tilde{v}\_i = \tilde{0}\\. Then
 >
 > \\ \begin{aligned} \tilde{0} &= (\mathbf{A} - \lambda_k \mathbf{I}\_p) \sum\_{i=1}^{k} c_i \tilde{v}\_i && \text{(multiply the supposed equation by } \mathbf{A} - \lambda_k \mathbf{I}\_p \text{)} \\ &= \sum\_{i=1}^{k} c_i\\(\mathbf{A} - \lambda_k \mathbf{I}\_p)\\\tilde{v}\_i && \text{(}\href{#thm-matvec-linear}{\text{Theorem~22}}\text{)} \\ &= \sum\_{i=1}^{k} c_i\\(\lambda_i - \lambda_k)\\\tilde{v}\_i && \text{(}\href{#thm-eigen-shift-power}{\text{Theorem~96}}\text{, part 1, with } s = -\lambda_k \text{)} \\ &= \sum\_{i=1}^{k-1} c_i\\(\lambda_i - \lambda_k)\\\tilde{v}\_i. && \text{(the } i = k \text{ term is } \tilde{0}\text{)} \end{aligned} \\
 >
@@ -4191,7 +4191,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. **Powers of \\\mathbf{\Lambda}\\.** If \\\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)\\ and \\\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)\\, with entries \\d\_{il}\\ and \\e\_{lj}\\ (so \\d\_{ii} = d_i\\ and \\e\_{jj} = e_j\\), entry \\(i, j)\\ of \\\mathbf{D} \mathbf{E}\\ is \\\sum_l d\_{il}\\e\_{lj}\\ ([Definition 21](#def-matrix-mult)), where \\d\_{il} = 0\\ unless \\l = i\\ and \\e\_{lj} = 0\\ unless \\l = j\\. For \\i \ne j\\ no term survives, so the entry is \\0\\; for \\i = j\\ only \\l = i\\ survives, giving \\d_i\\e_i\\. So \\\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)\\, and induction on \\k\\ gives \\\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\\.
+> *Proof*. **Powers of \\\mathbf{\Lambda}\\.** If \\\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)\\ and \\\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)\\, with entries \\d\_{il}\\ and \\e\_{lj}\\ (so \\d\_{ii} = d_i\\ and \\e\_{jj} = e_j\\), entry \\(i, j)\\ of \\\mathbf{D} \mathbf{E}\\ is \\\sum_l d\_{il}\\e\_{lj}\\ ([Definition 21](#def-matrix-mult)), where \\d\_{il} = 0\\ unless \\l = i\\ and \\e\_{lj} = 0\\ unless \\l = j\\. For \\i \ne j\\ no term survives, so the entry is \\0\\; for \\i = j\\ only \\l = i\\ survives, giving \\d_i\\e_i\\. So \\\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)\\, and [induction](proof-writing.llms.md#def-proof-by-induction) on \\k\\ gives \\\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\\.
 >
 > **Powers of \\\mathbf{A}\\, by induction on \\k\\.** \\k = 1\\ is the assumption. If it holds for \\k - 1\\,
 >
@@ -4374,7 +4374,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. **If.** \\{\mathbf{L}}^{\top}\\ is upper triangular with positive diagonal ([Definition 17](#def-matrix-transpose)), so \\{\mathbf{L}}^{\top} \tilde{x}= \tilde{0}\\ only for \\\tilde{x}= \tilde{0}\\ ([Theorem 89](#thm-back-substitution)), and the columns of \\{\mathbf{L}}^{\top}\\ are linearly independent ([Theorem 21](#thm-matvec-columns), [Definition 30](#def-linearly-independent)). So \\\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\\{\mathbf{L}}^{\top}\\ ([Definition 17](#def-matrix-transpose)) is positive definite ([Theorem 103](#thm-pd-gram), part 2).
 >
-> **Only if, with uniqueness, by induction on \\p\\.** For \\p = 1\\, \\\mathbf{A} = \[a\]\\ with \\a \> 0\\ ([Theorem 105](#thm-pd-submatrix)), and \\\[\ell\]\\\[\ell\] = \[a\]\\ with \\\ell \> 0\\ holds exactly for \\\ell = \sqrt{a}\\. For \\p \> 1\\, assume every \\(p - 1) \times (p - 1)\\ positive definite matrix has exactly one such factor, and split off the first row and column. \\\mathbf{A}\\ is symmetric, so its first row is the transpose of its first column:
+> **Only if, with uniqueness, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\.** For \\p = 1\\, \\\mathbf{A} = \[a\]\\ with \\a \> 0\\ ([Theorem 105](#thm-pd-submatrix)), and \\\[\ell\]\\\[\ell\] = \[a\]\\ with \\\ell \> 0\\ holds exactly for \\\ell = \sqrt{a}\\. For \\p \> 1\\, assume every \\(p - 1) \times (p - 1)\\ positive definite matrix has exactly one such factor, and split off the first row and column. \\\mathbf{A}\\ is symmetric, so its first row is the transpose of its first column:
 >
 > \\ \mathbf{A} = \begin{bmatrix} a\_{11} & {\tilde{b}}^{\top} \\ \tilde{b} & \mathbf{A}\_{22} \end{bmatrix}, \qquad \mathbf{L} = \begin{bmatrix} \ell\_{11} & \tilde{0}\_{1 \times (p-1)} \\ \tilde{g} & \mathbf{L}\_{22} \end{bmatrix}, \qquad {\mathbf{L}}^{\top} = \begin{bmatrix} \ell\_{11} & {\tilde{g}}^{\top} \\ \tilde{0}\_{(p-1) \times 1} & {\mathbf{L}\_{22}}^{\top} \end{bmatrix}, \\
 >
