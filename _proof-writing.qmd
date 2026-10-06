@@ -114,67 +114,6 @@ So $m + n = 2 \cd (\text{an integer})$, which is the definition of even.
 
 :::
 
-## Proof by induction {#sec-induction}
-
-:::{#def-proof-by-induction}
-#### Proof by induction
-
-To prove that a [predicate](notation.qmd#def-predicate) $P(n)$
-holds for every [integer](notation.qmd#def-integers) $n \ge n_0$,
-a **proof by induction** on $n$ proves two things:
-
-1. the **base case**: $P(n_0)$ holds;
-2. the **inductive step**: for every $n \ge n_0$,
-   if $P(n)$ holds, then $P(n + 1)$ holds.
-   The assumption that $P(n)$ holds
-   is called the **induction hypothesis**.
-
-Together these give $P(n)$ for every $n \ge n_0$:
-the base case gives $P(n_0)$,
-the inductive step then gives $P(n_0 + 1)$,
-then $P(n_0 + 2)$, and so on.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-proof-by-induction}
-#### The sum of the first $n$ positive integers
-
-Claim: for every integer $n \ge 1$,
-
-$$\sum_{i=1}^{n} i = \frac{n (n + 1)}{2}$$
-
-**Base case** ($n = 1$): the left side is $1$,
-and the right side is $\frac{1 \cdot 2}{2} = 1$.
-
-**Inductive step**: assume the claim holds for $n$.
-Then
-
-$$
-\ba
-\sum_{i=1}^{n+1} i
-&= \sum_{i=1}^{n} i + (n + 1)
-&& \text{(split off the last term)}
-\\&= \frac{n (n + 1)}{2} + (n + 1)
-&& \text{(induction hypothesis)}
-\\&= \frac{n (n + 1)}{2} + \frac{2 (n + 1)}{2}
-&& \text{(write } n + 1 \text{ over the denominator } 2 \text{)}
-\\&= \frac{n (n + 1) + 2 (n + 1)}{2}
-&& \text{(add fractions with the same denominator)}
-\\&= \frac{(n + 2)(n + 1)}{2}
-&& \text{(factor out } n + 1 \text{)}
-\\&= \frac{(n + 1)(n + 2)}{2}
-&& \text{(reorder the factors)}
-\\&= \frac{(n + 1)\,((n + 1) + 1)}{2}
-&& \text{(write } n + 2 \text{ as } (n + 1) + 1 \text{)}
-\ea
-$$
-
-which is the claim for $n + 1$.
-
-:::
-
 ## Follow the golden rule {#sec-golden-rule}
 
 In general,
@@ -186,6 +125,26 @@ you want to be able to follow every step without guessing,
 to know which result is being used at each line,
 and to never be left wondering where a quantity came from.
 Write your own proofs to meet that same standard.
+
+## Proof by induction {#sec-proof-by-induction}
+
+Many proofs in these notes show that a statement holds
+for every [natural number](notation.qmd#def-natural-numbers) $n$,
+or for every integer $n$ from some starting value on.
+Checking the statement one $n$ at a time would never finish;
+induction proves it for all of them with two arguments.
+
+{{< include mds/_subfiles/proof-writing/_def-proof-by-induction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_rem-induction-why.qmd >}}
+
+{{< slidebreak >}}
+
+The following example uses [summation notation](algebra.qmd#def-summation).
+
+{{< include mds/_subfiles/proof-writing/_exm-induction-sum.qmd >}}
 
 ## Formal logic {#sec-formal-logic}
 
@@ -225,10 +184,13 @@ so $P$ and $P \Rightarrow Q$ logically entail $Q$.
 #### First-order logic
 
 **First-order logic** extends propositional logic (@def-propositional-logic)
-by also allowing [predicates](notation.qmd#def-predicate) $P(x)$
-about elements $x$ of a set,
+by also allowing variables $x, y, \ldots$ that stand for elements of a set,
+[predicates](notation.qmd#def-predicate) of one or more of those variables,
+such as $P(x)$ or $x < y$,
+[functions](sets-functions.qmd#def-function) of them, such as $x + y$,
+equality between them,
 and [quantifiers](notation.qmd#def-quantifier)
-$\forall$ and $\exists$ over those elements.
+$\forall$ and $\exists$ over them.
 
 :::
 

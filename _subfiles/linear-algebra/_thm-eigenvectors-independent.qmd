@@ -9,7 +9,7 @@ then $\vecf{v}_1, \ldots, \vecf{v}_k$ are linearly independent (@def-linearly-in
 
 ::: proof
 
-By induction on $k$.
+By [induction](proof-writing.qmd#def-proof-by-induction) on $k$.
 For $k = 1$, $\vecf{v}_1 \ne \vzero$ is linearly independent on its own.
 Suppose the result holds for $k - 1$ eigenvectors, and
 $\sum_{i=1}^{k} c_i \vecf{v}_i = \vzero$. Then
