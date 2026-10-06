@@ -370,6 +370,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-line-search.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-descent-direction.qmd >}}
 
 {{< slidebreak >}}

@@ -12,9 +12,6 @@ $$
 
 It is Newton's method (@def-newton-method) with the Hessian replaced by $\tfrac{1}{s^{(t)}} \matr{I}_p$,
 so it needs no second derivatives.
-A rule that chooses $s^{(t)}$ by examining the values of $f$ along the line
-$\cb{\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}) : s > 0}$ is a **line search**;
-choosing $s^{(t)}$ to minimize $f(\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}))$ over $s > 0$ is **exact line search**.
 
 :::
 

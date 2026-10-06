@@ -1,15 +1,38 @@
-:::{#def-minimization-problem}
-#### Objective, feasible set, and constraints
+:::{#def-feasible-set}
+#### Feasible set and constraints
 
-Let $f : \reals^p \to \reals$ and $F \subseteq \reals^p$.
+In a problem that looks for a best point among some allowed points of $\reals^p$,
+the set $F \subseteq \reals^p$ of allowed points is the **feasible set**,
+and its points are **feasible**.
+When $F$ is the set of points that satisfy some equations or inequalities,
+those equations or inequalities are the **constraints**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-feasible-set}
+#### A line as a feasible set
+
+With the single constraint $3 x_1 + 4 x_2 = 5$,
+the feasible set is the line $\cb{\vx \in \reals^2 : 3 x_1 + 4 x_2 = 5}$.
+$\tp{(1, 0.5)}$ is feasible, since $3 \cd 1 + 4 \cd 0.5 = 3 + 2 = 5$;
+$\vzero$ is not feasible, since $3 \cd 0 + 4 \cd 0 = 0 \ne 5$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-minimization-problem}
+#### Objective function and minimization problem
+
+Let $f : \reals^p \to \reals$ and let $F \subseteq \reals^p$ be a feasible set (@def-feasible-set).
 In the problem of minimizing $f$ over $F$,
-$f$ is the **objective function** (or *objective*) and $F$ is the **feasible set**;
-the points of $F$ are **feasible**.
+$f$ is the **objective function** (or *objective*).
 A **minimizer of $f$ over $F$** is a feasible $\vx^*$ with $f(\vx^*) \le f(\vx)$ for every feasible $\vx$:
 a [global minimizer](algebra.qmd#def-global-minimizer) of $f$ with its domain restricted to $F$.
-When $F$ is the set of points that satisfy some equations or inequalities,
-those are the **constraints**,
-and the problem is to minimize $f$ **subject to** them.
+When $F$ is given by constraints,
+the problem is to minimize $f$ **subject to** them.
 
 :::
 
@@ -20,10 +43,9 @@ and the problem is to minimize $f$ **subject to** them.
 
 In the problem of minimizing $x_1^2 + x_2^2$ subject to $3 x_1 + 4 x_2 = 5$,
 the objective function is $f(\vx) = x_1^2 + x_2^2$,
-the constraint is the single equation $3 x_1 + 4 x_2 = 5$,
-and the feasible set is the line $\cb{\vx \in \reals^2 : 3 x_1 + 4 x_2 = 5}$.
-$\tp{(1, 0.5)}$ is feasible, since $3 + 2 = 5$, with $f(1, 0.5) = 1.25$;
-$\vzero$ is not feasible, since $0 \ne 5$,
-even though it minimizes $f$ over all of $\reals^2$.
+and the feasible set is the line of @exm-feasible-set.
+The feasible point $\tp{(1, 0.5)}$ has $f(1, 0.5) = 1 + 0.25 = 1.25$.
+$\vzero$ minimizes $f$ over all of $\reals^2$, with $f(\vzero) = 0$,
+but it is not a minimizer over the feasible set, because it is not feasible.
 
 :::

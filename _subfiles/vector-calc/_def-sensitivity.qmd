@@ -18,7 +18,7 @@ of the resulting change in the minimum value divided by the change in $b_i$.
 #### The sensitivity of a one-point problem
 
 Minimize $x^2$ subject to $x = b$, for a number $b$.
-The feasible set is $\cb{b}$, so the minimum value is $f^*(b) = b^2$,
+The feasible set (@def-feasible-set) is $\cb{b}$, so the minimum value is $f^*(b) = b^2$,
 and its sensitivity to $b$ is $\dif{}{b} f^*(b) = 2b$.
 At $b = 3$ the sensitivity is $6$:
 moving $b$ from $3$ to $3.1$ raises the minimum value from $9$ to $9.61$,

@@ -1,5 +1,5 @@
 :::{#def-second-partial-derivative}
-#### Second partial derivative
+#### Second partial derivative and mixed partial derivative
 
 Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$,
 and let $i, j \in \cb{1, \ldots, p}$.
