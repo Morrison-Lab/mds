@@ -18,9 +18,11 @@ format:
 
 - @velleman2019prove
   is a structured introduction to proof techniques
-  such as direct proof, [proof by contradiction](notation.qmd#def-proof-by-contradiction), and induction.
+  such as [direct proof](#def-direct-proof), [proof by contradiction](notation.qmd#def-proof-by-contradiction), and induction.
 - @barkerplummer2011language
-  treats proofs as formal derivations in propositional and first-order logic.
+  treats proofs as [formal proofs](#def-formal-proof)
+  in [propositional logic](#def-propositional-logic)
+  and [first-order logic](#def-first-order-logic).
 
 ## References {.unnumbered}
 
