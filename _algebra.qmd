@@ -275,11 +275,27 @@ and reserve $\log x$ for base 10.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-power-one.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-power-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-power-product.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-double-exp.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_cor-exp-ab.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-tarski-identities.qmd >}}
 
 {{< slidebreak >}}
 
