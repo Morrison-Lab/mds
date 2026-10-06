@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:33:39 (PDT)
+Last modified: 2026-10-05 23:54:26 (PDT)
 
 This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and [derivations](notation.llms.md#def-derivation). The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](notation.llms.md#def-logical-entailment) are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
@@ -36,13 +36,15 @@ The [Linear Algebra](linear-algebra.llms.md#thm-hat-matrix) page uses this deriv
 
 > **NOTE:**
 >
-> **Example 1 (The sum of two even integers is even)** Claim: if \\m\\ and \\n\\ are [even](notation.llms.md#def-even-odd) integers, then \\m + n\\ is even.
+> **Example 1 (The square of an odd integer is odd)** Claim: if \\n\\ is an [odd](notation.llms.md#def-even-odd) integer, then \\n^2\\ is odd.
 >
-> Since \\m\\ and \\n\\ are even, there are integers \\j\\ and \\k\\ with \\m = 2j\\ and \\n = 2k\\. Then
+> Since \\n\\ is odd, there is an integer \\k\\ with \\n = 2k + 1\\. Then
 >
-> \\ \begin{aligned} m + n &= 2j + 2k && \text{(substitute } m = 2j \text{ and } n = 2k \text{)} \\&= 2(j + k) && \text{(distributive law, read from right to left)} \end{aligned} \\
+> \\ \begin{aligned} n^2 &= (2k + 1)^2 && \text{(substitute } n = 2k + 1 \text{)} \\&= (2k)^2 + 2 \cdot 2k \cdot 1 + 1^2 && \text{(square of a sum)} \\&= 4k^2 + 4k + 1 && \text{(arithmetic)} \\&= 2(2k^2 + 2k) + 1 && \text{(distributive law, read from right to left)} \end{aligned} \\
 >
-> and \\j + k\\ is an integer, because a sum of integers is an integer. So \\m + n = 2 \cdot(\text{an integer})\\, which is the definition of even.
+> and \\2k^2 + 2k\\ is an integer, because sums and products of integers are integers. So \\n^2 = 2 \cdot(\text{an integer}) + 1\\, which is the definition of odd. For example, \\n = 7 = 2 \cdot 3 + 1\\ gives \\n^2 = 49 = 2 \cdot 24 + 1\\, and \\2 \cdot 3^2 + 2 \cdot 3 = 24\\.
+>
+> The notation page’s proof that [the sum of two even integers is even](notation.llms.md#exm-proof) is also a direct proof.
 
 ## 4 Follow the golden rule
 
@@ -111,7 +113,13 @@ The following example uses [summation notation](algebra.llms.md#def-summation).
 
 > **NOTE:**
 >
-> **Definition 4 (First-order logic)** **First-order logic** extends propositional logic ([Definition 3](#def-propositional-logic)) by also allowing variables \\x, y, \ldots\\ that stand for elements of a set, [predicates](notation.llms.md#def-predicate) of one or more of those variables, such as \\P(x)\\ or \\x \< y\\, [functions](sets-functions.llms.md#def-function) of them, such as \\x + y\\, equality between them, and [quantifiers](notation.llms.md#def-quantifier) \\\forall\\ and \\\exists\\ over them.
+> **Definition 4 (First-order logic)** **First-order logic** extends propositional logic ([Definition 3](#def-propositional-logic)) by also allowing:
+>
+> - variables \\x, y, \ldots\\ that stand for elements of a set;
+> - [predicates](notation.llms.md#def-predicate) of one or more of those variables, such as \\P(x)\\ or \\x \< y\\;
+> - [functions](sets-functions.llms.md#def-function) of them, such as \\x + y\\;
+> - equality between them;
+> - [quantifiers](notation.llms.md#def-quantifier) \\\forall\\ and \\\exists\\ over them.
 
 > **NOTE:**
 >
