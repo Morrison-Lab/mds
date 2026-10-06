@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 17:16:59 (PDT)
+Last modified: 2026-10-05 17:37:11 (PDT)
 
 > **NOTE:**
 >
@@ -171,7 +171,7 @@ Last modified: 2026-10-05 17:16:59 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\, called the value of \\f\\ at \\a\\.
+> **Definition 13 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\, called the value of \\f\\ at \\a\\. A function is also called a **map** (or *mapping*) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
 > **NOTE:**
 >
