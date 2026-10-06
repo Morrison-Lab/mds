@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 16:13:26 (PDT)
+Last modified: 2026-10-05 16:58:47 (PDT)
 
 ## 1 Equalities
 
@@ -335,57 +335,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 8* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 16](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors such as \\(y - \hat{y})^2\\ are expanded this way. For example, with \\y = 5\\ and \\\hat{y} = 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
 
-## 11 Affine and linear functions of one variable
-
-> **NOTE:**
->
-> **Definition 10 (Affine function of one variable)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** if there are numbers \\m\\ and \\b\\ such that
->
-> \\f(x) = m x + b \quad \text{for all } x \in \mathbb{R}\\
->
-> In this formula, \\m\\ is called the **slope** of \\f\\ and \\b\\ its **intercept**.
-
-> **NOTE:**
->
-> **Definition 11 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** if it is affine ([Definition 10](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
->
-> \\f(x) = m x \quad \text{for all } x \in \mathbb{R}\\
-
-> **NOTE:**
->
-> **Theorem 17 (Intercept and slope of an affine function)** Let \\f(x) = m x + b\\ be an affine function ([Definition 10](#def-affine-function)).
->
-> 1.  The intercept is the value at zero: \\f(0) = b\\.
-> 2.  The slope is the change in \\f\\ per unit change in \\x\\: for any \\x_1 \neq x_2\\, \\\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m\\
-> 3.  So \\f\\ determines its slope and intercept: if also \\f(x) = m' x + b'\\ for all \\x\\, then \\m' = m\\ and \\b' = b\\.
-
-> **NOTE:**
->
-> *Proof*. **Part 1.**
->
-> \\ \begin{aligned} f(0) &= m \cdot 0 + b && \text{(}\href{#def-affine-function}{\text{Definition~10}}\text{)} \\&= 0 + b && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= b + 0 && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~9}}\text{)} \\&= b && \text{(}\href{#thm-add-ident}{\text{Theorem~8}}\text{)} \end{aligned} \\
->
-> **Part 2.** First the numerator:
->
-> \\ \begin{aligned} f(x_2) - f(x_1) &= (m x_2 + b) - (m x_1 + b) && \text{(}\href{#def-affine-function}{\text{Definition~10}}\text{)} \\&= m x_2 + b - m x_1 - b && \text{(subtracting a sum subtracts each term)} \\&= m x_2 - m x_1 + b - b && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~9}}\text{, swapping } b \text{ and } {-m x_1} \text{)} \\&= (m x_2 - m x_1) + (b - b) && \text{(}\href{#thm-sum-assoc}{\text{Theorem~10}}\text{)} \\&= (m x_2 - m x_1) + 0 && (b - b = 0) \\&= m x_2 - m x_1 && \text{(}\href{#thm-add-ident}{\text{Theorem~8}}\text{)} \\&= m x_2 + m (-x_1) && (-(m x_1) = m (-x_1) \text{, by }\href{#thm-negative-one}{\text{Theorem~6}}\text{ and }\href{#thm-prod-assoc}{\text{Theorem~13}}\text{)} \\&= m (x_2 + (-x_1)) && \text{(}\href{#thm-mult-distr}{\text{Theorem~15}}\text{, read right to left)} \\&= m (x_2 - x_1) && \text{(adding a negative is subtracting)} \end{aligned} \\
->
-> Then, writing \\d = x_2 - x_1\\, which is not \\0\\ because \\x_1 \neq x_2\\,
->
-> \\ \begin{aligned} \frac{f(x_2) - f(x_1)}{x_2 - x_1} &= \frac{m d}{d} && \text{(the numerator above)} \\&= (m d) \cdot\frac{1}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~14}}\text{)} \\&= m \cdot\mathopen{}\left(d \cdot\frac{1}{d}\right)\mathclose{} && \text{(}\href{#thm-prod-assoc}{\text{Theorem~13}}\text{)} \\&= m \cdot\frac{d}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~14}}\text{)} \\&= m \cdot 1 && \text{(a nonzero number divided by itself is } 1 \text{)} \\&= m && \text{(}\href{#thm-mult-one}{\text{Theorem~11}}\text{)} \end{aligned} \\
->
-> **Part 3.** Part 1, applied to each formula, gives \\b = f(0) = b'\\. Part 2 with \\x_1 = 0\\ and \\x_2 = 1\\, applied to each formula, gives \\m = f(1) - f(0) = m'\\.
-
-> **NOTE:**
->
-> **Example 9 (An affine function, and a linear one)** \\f(x) = 2x + 3\\ is affine with slope \\2\\ and intercept \\3\\. By [Theorem 17](#thm-affine-function-props), \\f(0) = 3\\, and each unit step in \\x\\ raises \\f\\ by \\2\\: for example, \\f(1) = 5\\ and \\f(2) = 7\\. Its intercept is not \\0\\, so it is not linear.
->
-> \\g(x) = -\tfrac{1}{2} x\\ is affine with intercept \\0\\, so it is linear: \\g(0) = 0\\, and each unit step in \\x\\ lowers \\g\\ by \\\tfrac{1}{2}\\.
-
-> **NOTE:**
->
-> *Remark 9* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra.llms.md#thm-linear-map-zero)).
-
-## 12 Summation notation
+## 11 Summation notation
 
 > **NOTE:**
 >
@@ -408,7 +358,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 12 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
+> **Definition 10 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
@@ -416,15 +366,15 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
+> *Remark 9* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
 
 > **NOTE:**
 >
-> **Definition 13 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
+> **Definition 11 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
 
 > **NOTE:**
 >
-> **Exercise 6 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 12](#def-summation) and the rules of algebra above, show that:
+> **Exercise 6 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 10](#def-summation) and the rules of algebra above, show that:
 >
 > 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
 > 2.  \\\sum\_{i=1}^{3} \left(a_i + b_i\right) = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
@@ -433,7 +383,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Solution 6*. Each step below applies [Definition 12](#def-summation), the distributive law ([Theorem 15](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 9](#thm-sum-symmetric) and [Theorem 10](#thm-sum-assoc)).
+> *Solution 6*. Each step below applies [Definition 10](#def-summation), the distributive law ([Theorem 15](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 9](#thm-sum-symmetric) and [Theorem 10](#thm-sum-assoc)).
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
@@ -447,7 +397,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 18 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
+> **Theorem 17 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
 >
 > \\ \sum\_{i=m}^{n} c\\ a_i = c \sum\_{i=m}^{n} a_i \\
 
@@ -457,7 +407,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 19 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
+> **Theorem 18 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
 >
 > \\ \sum\_{i=m}^{n} \left(a_i + b_i\right) = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
 
@@ -484,7 +434,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 14 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a finite [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
+> **Definition 12 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a finite [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
 >
 > \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
 >
@@ -492,52 +442,52 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 11* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 7](#exr-sum-over-set), part 2, shows another example.
+> *Remark 10* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 7](#exr-sum-over-set), part 2, shows another example.
 >
-> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 12](#def-summation).
+> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 10](#def-summation).
 
 > **NOTE:**
 >
-> *Remark 12* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
+> *Remark 11* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
 
-## 13 Quotients
+## 12 Quotients
 
 > **NOTE:**
 >
-> **Definition 15 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Definition 13 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
 > **NOTE:**
 >
-> **Definition 16 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 15](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
+> **Definition 14 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 13](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
 
 > **NOTE:**
 >
-> **Example 10 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 15](#def-quotient) requires a nonzero denominator.
+> **Example 9 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 13](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 17 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up. For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
+> **Definition 15 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up. For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
 
 cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 18 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 16 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Example 11 (A ratio, and a quotient that is not one)**  
+> **Example 10 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
 
 > **NOTE:**
 >
-> **Definition 19 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 17 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -545,25 +495,25 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 12 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 11 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
 
 > **NOTE:**
 >
-> **Definition 20 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 18 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 > **NOTE:**
 >
-> **Example 13 (Proportional and non-proportional functions)**  
+> **Example 12 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{6x^2}{2x^2} = 3\\, which does not depend on \\x\\.
 > - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{x + 1}{x} = \tfrac{x}{x} + \tfrac{1}{x} = 1 + \tfrac{1}{x}\\, which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 14 Polynomials
+## 13 Polynomials
 
 > **NOTE:**
 >
@@ -582,19 +532,19 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 21 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
+> **Definition 19 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
 
 > **NOTE:**
 >
-> *Remark 13* (Constant and zero polynomials). A constant function \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only: the zero function \\f(x) = 0\\ is excluded here, because it has no nonzero coefficient to serve as \\a_n\\.
+> *Remark 12* (Constant and zero polynomials). A constant function \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only: the zero function \\f(x) = 0\\ is excluded here, because it has no nonzero coefficient to serve as \\a_n\\.
 
 > **NOTE:**
 >
-> **Definition 22 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
+> **Definition 20 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
 
 > **NOTE:**
 >
-> **Example 14 (Degrees of some polynomials)**  
+> **Example 13 (Degrees of some polynomials)**  
 >
 > - \\f(x) = 4x\\ has degree \\1\\.
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\: the degree is the highest power with a nonzero coefficient, not the power in the first term written.
@@ -602,14 +552,64 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 23 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+> **Definition 21 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
 
 > **NOTE:**
 >
-> **Example 15 (Leading coefficients)**  
+> **Example 14 (Leading coefficients)**  
 >
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\, so its leading coefficient is \\a_3 = 1\\, not the \\5\\ written first.
 > - \\f(x) = 3 - x^2\\ has leading coefficient \\a_2 = -1\\.
+
+## 14 Affine and linear functions of one variable
+
+> **NOTE:**
+>
+> **Definition 22 (Affine function of one variable)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** if there are numbers \\m\\ and \\b\\ such that
+>
+> \\f(x) = m x + b \quad \text{for all } x \in \mathbb{R}\\
+>
+> In this formula, \\m\\ is called the **slope** of \\f\\ and \\b\\ its **intercept**.
+
+> **NOTE:**
+>
+> **Definition 23 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** if it is affine ([Definition 22](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
+>
+> \\f(x) = m x \quad \text{for all } x \in \mathbb{R}\\
+
+> **NOTE:**
+>
+> **Theorem 19 (Intercept and slope of an affine function)** Let \\f(x) = m x + b\\ be an affine function ([Definition 22](#def-affine-function)).
+>
+> 1.  The intercept is the value at zero: \\f(0) = b\\.
+> 2.  The slope is the change in \\f\\ per unit change in \\x\\: for any \\x_1 \neq x_2\\, \\\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m\\
+> 3.  So \\f\\ determines its slope and intercept: if also \\f(x) = m' x + b'\\ for all \\x\\, then \\m' = m\\ and \\b' = b\\.
+
+> **NOTE:**
+>
+> *Proof*. **Part 1.**
+>
+> \\ \begin{aligned} f(0) &= m \cdot 0 + b && \text{(}\href{#def-affine-function}{\text{Definition~22}}\text{)} \\&= 0 + b && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= b + 0 && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~9}}\text{)} \\&= b && \text{(}\href{#thm-add-ident}{\text{Theorem~8}}\text{)} \end{aligned} \\
+>
+> **Part 2.** First the numerator:
+>
+> \\ \begin{aligned} f(x_2) - f(x_1) &= (m x_2 + b) - (m x_1 + b) && \text{(}\href{#def-affine-function}{\text{Definition~22}}\text{)} \\&= m x_2 + b - m x_1 - b && \text{(subtracting a sum subtracts each term)} \\&= m x_2 - m x_1 + b - b && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~9}}\text{, swapping } b \text{ and } {-m x_1} \text{)} \\&= (m x_2 - m x_1) + (b - b) && \text{(}\href{#thm-sum-assoc}{\text{Theorem~10}}\text{)} \\&= (m x_2 - m x_1) + 0 && (b - b = 0) \\&= m x_2 - m x_1 && \text{(}\href{#thm-add-ident}{\text{Theorem~8}}\text{)} \\&= m x_2 + m (-x_1) && (-(m x_1) = m (-x_1) \text{, by }\href{#thm-negative-one}{\text{Theorem~6}}\text{ and }\href{#thm-prod-assoc}{\text{Theorem~13}}\text{)} \\&= m (x_2 + (-x_1)) && \text{(}\href{#thm-mult-distr}{\text{Theorem~15}}\text{, read right to left)} \\&= m (x_2 - x_1) && \text{(adding a negative is subtracting)} \end{aligned} \\
+>
+> Then, writing \\d = x_2 - x_1\\, which is not \\0\\ because \\x_1 \neq x_2\\,
+>
+> \\ \begin{aligned} \frac{f(x_2) - f(x_1)}{x_2 - x_1} &= \frac{m d}{d} && \text{(the numerator above)} \\&= (m d) \cdot\frac{1}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~14}}\text{)} \\&= m \cdot\mathopen{}\left(d \cdot\frac{1}{d}\right)\mathclose{} && \text{(}\href{#thm-prod-assoc}{\text{Theorem~13}}\text{)} \\&= m \cdot\frac{d}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~14}}\text{)} \\&= m \cdot 1 && \text{(a nonzero number divided by itself is } 1 \text{)} \\&= m && \text{(}\href{#thm-mult-one}{\text{Theorem~11}}\text{)} \end{aligned} \\
+>
+> **Part 3.** Part 1, applied to each formula, gives \\b = f(0) = b'\\. Part 2 with \\x_1 = 0\\ and \\x_2 = 1\\, applied to each formula, gives \\m = f(1) - f(0) = m'\\.
+
+> **NOTE:**
+>
+> **Example 15 (An affine function, and a linear one)** \\f(x) = 2x + 3\\ is affine with slope \\2\\ and intercept \\3\\. By [Theorem 19](#thm-affine-function-props), \\f(0) = 3\\, and each unit step in \\x\\ raises \\f\\ by \\2\\: for example, \\f(1) = 5\\ and \\f(2) = 7\\. Its intercept is not \\0\\, so it is not linear.
+>
+> \\g(x) = -\tfrac{1}{2} x\\ is affine with intercept \\0\\, so it is linear: \\g(0) = 0\\, and each unit step in \\x\\ lowers \\g\\ by \\\tfrac{1}{2}\\.
+
+> **NOTE:**
+>
+> *Remark 13* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra.llms.md#thm-linear-map-zero)).
 
 ## 15 Exponentials and Logarithms
 
