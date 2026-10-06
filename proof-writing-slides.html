@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 21:42:33 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 22:39:57 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -337,13 +337,53 @@
 \]</span></p>
 <p>The <a href="./linear-algebra.html#thm-hat-matrix">Linear Algebra</a> page uses this derivation to show that <span class="math inline">\(\mathbf{H}\)</span> is a projection matrix. The probability notes derive the variance identity <span class="math inline">\(\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left[X^2\right]\mathclose{} - \mathopen{}\left(\operatorname{E}\mathopen{}\left[X\right]\mathclose{}\right)^2\mathclose{}\)</span> <a href="https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance">in the same annotated style</a>.</p>
 </section>
-<section id="sec-golden-rule" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Follow the golden rule</h2>
+<section id="sec-induction" class="slide level2 scrollable" data-number="3">
+<h2><span class="header-section-number">3</span> Proof by induction</h2>
+<div id="def-proof-by-induction" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Proof by induction)</strong></span> To prove that a statement <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span>, a <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> proves two things:</p>
+<ol type="1">
+<li>the <strong>base case</strong>: <span class="math inline">\(P(n_0)\)</span> holds;</li>
+<li>the <strong>inductive step</strong>: for every <span class="math inline">\(n \ge n_0\)</span>, if <span class="math inline">\(P(n)\)</span> holds, then <span class="math inline">\(P(n + 1)\)</span> holds. The assumption that <span class="math inline">\(P(n)\)</span> holds is called the <strong>induction hypothesis</strong>.</li>
+</ol>
+<p>Together these give <span class="math inline">\(P(n)\)</span> for every <span class="math inline">\(n \ge n_0\)</span>: the base case gives <span class="math inline">\(P(n_0)\)</span>, the inductive step then gives <span class="math inline">\(P(n_0 + 1)\)</span>, then <span class="math inline">\(P(n_0 + 2)\)</span>, and so on.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-proof-by-induction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (The sum of the first <span class="math inline">\(n\)</span> positive integers)</strong></span> Claim: for every integer <span class="math inline">\(n \ge 1\)</span>,</p>
+<p><span class="math display">\[\sum_{i=1}^{n} i = \frac{n (n + 1)}{2}\]</span></p>
+<p><strong>Base case</strong> (<span class="math inline">\(n = 1\)</span>): the left side is <span class="math inline">\(1\)</span>, and the right side is <span class="math inline">\(\frac{1 \cdot 2}{2} = 1\)</span>.</p>
+<p><strong>Inductive step</strong>: assume the claim holds for <span class="math inline">\(n\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^{n+1} i
+&amp;= \sum_{i=1}^{n} i + (n + 1)
+&amp;&amp; \text{(split off the last term)}
+\\&amp;= \frac{n (n + 1)}{2} + (n + 1)
+&amp;&amp; \text{(induction hypothesis)}
+\\&amp;= \frac{n (n + 1)}{2} + \frac{2 (n + 1)}{2}
+&amp;&amp; \text{(write } n + 1 \text{ over the denominator } 2 \text{)}
+\\&amp;= \frac{n (n + 1) + 2 (n + 1)}{2}
+&amp;&amp; \text{(add fractions with the same denominator)}
+\\&amp;= \frac{(n + 2)(n + 1)}{2}
+&amp;&amp; \text{(factor out } n + 1 \text{)}
+\\&amp;= \frac{(n + 1)(n + 2)}{2}
+&amp;&amp; \text{(reorder the factors)}
+\\&amp;= \frac{(n + 1)\,((n + 1) + 1)}{2}
+&amp;&amp; \text{(write } n + 2 \text{ as } (n + 1) + 1 \text{)}
+\end{aligned}
+\]</span></p>
+<p>which is the claim for <span class="math inline">\(n + 1\)</span>.</p>
+</div>
+</section>
+<section id="sec-golden-rule" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Follow the golden rule</h2>
 <p>In general, follow the golden rule: treat your readers the way you want to be treated as a reader.</p>
 <p>When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.</p>
 </section>
-<section id="sec-further-reading" class="slide level2" data-number="4">
-<h2><span class="header-section-number">4</span> Further reading</h2>
+<section id="sec-further-reading" class="slide level2" data-number="5">
+<h2><span class="header-section-number">5</span> Further reading</h2>
 <ul>
 <li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> is a structured introduction to proof techniques such as direct proof, <a href="./notation.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</li>
 <li><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> treats proofs as formal derivations in propositional and first-order logic.</li>

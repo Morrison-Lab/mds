@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 21:42:33 (PDT)
+Last modified: 2026-10-05 22:39:57 (PDT)
 
 > **NOTE:**
 >
@@ -254,7 +254,7 @@ Last modified: 2026-10-05 21:42:33 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\, called the value of \\f\\ at \\a\\.
+> **Definition 16 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\, called the value of \\f\\ at \\a\\. A function is also called a **map** (or *mapping*) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
 > **NOTE:**
 >
@@ -281,6 +281,8 @@ Last modified: 2026-10-05 21:42:33 (PDT)
 > **Definition 20 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
+>
+> For a single element \\a \in A\\, the value \\f(a)\\ is also called the **image of** \\a\\ under \\f\\.
 
 > **NOTE:**
 >
