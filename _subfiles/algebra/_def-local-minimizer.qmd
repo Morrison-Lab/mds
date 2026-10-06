@@ -52,7 +52,7 @@ f(-1 + t)
 && \text{(expand the cube)}
 \\
 &= -1 + 3t - 3t^2 + t^3 + 3 - 3t
-&& \text{(distribute)}
+&& \text{(multiply } -3 \text{ into the parentheses)}
 \\
 &= 2 - 3t^2 + t^3
 && \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)}
