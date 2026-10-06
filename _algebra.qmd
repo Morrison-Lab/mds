@@ -308,6 +308,14 @@
 
 {{< include mds/_subfiles/algebra/_def-polynomial-leading-coefficient.qmd >}}
 
+## Limits of sequences {#sec-sequence-limits}
+
+{{< include mds/_subfiles/algebra/_def-sequence-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-sequence-limit.qmd >}}
+
 ## Exponentials and Logarithms
 
 {{< include mds/_subfiles/algebra/_def-exponential-function.qmd >}}

@@ -145,7 +145,7 @@ We can use any of:
 
 to denote logical entailments (deductive consequences).
 
-Let's save $\rightarrow$ (`\rightarrow`) for [convergence](calculus.qmd#def-sequence-limit) results.
+Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
 
 {{< slidebreak >}}
 

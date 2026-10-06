@@ -6,7 +6,7 @@ with partial sums $s_n \eqdef \sum_{i=1}^{n} a_i$,
 where $x + \infty = \infty$ for every $x$ in $[0, \infty]$.
 Then the partial sums are non-decreasing,
 $s_1 \le s_2 \le \cdots$,
-so their [limit](calculus.qmd#def-sequence-limit),
+so their [limit](algebra.qmd#def-sequence-limit),
 the sum $\sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} s_n$,
 always exists,
 and it is either a finite number or $\infty$.
@@ -32,7 +32,7 @@ then $s_n = \infty$ for every $n \ge N$,
 so the limit is $\infty$.
 Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.qmd#def-real-numbers).
 If that sequence is [bounded above](algebra.qmd#def-bounded),
-it [converges](calculus.qmd#def-sequence-limit) to a finite number
+it [converges](algebra.qmd#def-sequence-limit) to a finite number
 (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)).
 If it is not bounded above,
 then for every number $M$ some $s_N$ exceeds $M$,

@@ -16,14 +16,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/derivatives/_def-sequence-limit.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_exm-sequence-limit.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/videos/_note-video-limits.qmd >}}
 
 {{< slidebreak >}}
