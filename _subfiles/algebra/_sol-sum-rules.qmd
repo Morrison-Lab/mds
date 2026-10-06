@@ -19,6 +19,8 @@ or the commutative and associative laws of addition
     \ea
     $$
 
+{{< slidebreak >}}
+
 2.  Expand the sum, then regroup the terms:
 
     $$

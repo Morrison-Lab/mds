@@ -1,5 +1,9 @@
 {{< include mds/_subfiles/algebra/sol-exp-vs-mult/_prose-exp-vs-mult-cases.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/sol-exp-vs-mult/_fig-double-exponential.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/sol-exp-vs-mult/_fig-double-exponential2.qmd >}}

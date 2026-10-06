@@ -17,6 +17,8 @@
    By part 1, $f(x) - f(1) \ge 0$,
    that is, $f(x) \ge f(1)$.
 
+{{< slidebreak >}}
+
 3. $f(-3) = -27 + 9 = -18$.
    Since $-18 < -2 = f(1)$,
    $f(1)$ is not the smallest value of $f$ on $\reals$.

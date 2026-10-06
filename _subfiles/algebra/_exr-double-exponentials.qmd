@@ -1,6 +1,7 @@
 {{< include latex-macros/macros.qmd >}}
 
 :::{#exr-exp-vs-mult}
+#### Exponentiation versus multiplication
 
 For $b,c \in \reals$, when does $b^c = bc$?
 
@@ -17,6 +18,7 @@ For $b,c \in \reals$, when does $b^c = bc$?
 {{< slidebreak >}}
 
 :::{#exr-double-exponential}
+#### Repeated exponentiation
 
 For $a \ge 0,~b,c \in \reals$,
 when does $(a^b)^c = a^{(b^c)}$?

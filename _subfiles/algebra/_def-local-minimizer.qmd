@@ -52,16 +52,23 @@ f(-1 + t)
 && \text{(expand the cube)}
 \\
 &= -1 + 3t - 3t^2 + t^3 + 3 - 3t
-&& \text{(multiply } -3 \text{ into the parentheses)}
-\\
+&& \text{(distribute } -3 \text{)}
+\ea
+$$
+
+{{< slidebreak >}}
+
+$$
+\ba
+f(-1 + t)
 &= 2 - 3t^2 + t^3
-&& \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)}
+&& \text{(combine like terms)}
 \\
 &= 2 + t^2 (t - 3)
 && \text{(factor out } t^2 \text{)}
 \\
 &= f(-1) + t^2 (t - 3),
-&& \text{(} f(-1) = (-1)^3 - 3(-1) = 2 \text{)}
+&& \text{(} f(-1) = 2 \text{)}
 \ea
 $$
 

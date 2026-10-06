@@ -1,6 +1,6 @@
 :::{#thm-exp-log-inverse}
 
-#### $\expf{}$ and $\logf{}$ are mutual inverses
+#### $\expt$ and $\logt$ are mutual inverses
 
 1. For every $a > 0$: $\expf{\logf{a}} = a$.
 2. For every $a \in \reals$: $\logf{\expf{a}} = a$.

@@ -27,6 +27,8 @@ The last line of @eq-double-exp-log-scale holds exactly when
 1. $a = 1$ (so that $\logf{a} = 0$), or
 2. $bc = b^c$ (see @exr-exp-vs-mult).
 
+{{< slidebreak >}}
+
 **Case $a = 0$.**
 Here we cannot take logarithms, so we work from the values of powers of $0$:
 $0^s = 0$ for $s > 0$ (@def-power-nonpositive-base),
@@ -41,6 +43,8 @@ and $0^s$ is undefined for $s < 0$.
   and for $c \le 0$ they do not.
 
 So for $a = 0$, $(a^b)^c = a^{(b^c)}$ exactly when $b \ge 0$ and $c > 0$.
+
+{{< slidebreak >}}
 
 In particular, when $a = 0$, $b \ge 0$, and $c = 0$,
 the two sides differ:

@@ -12,6 +12,8 @@
     \ea
     $$
 
+{{< slidebreak >}}
+
 2.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
     Their total is $25 + 1 + 4 = 30$.
     The total is the same,

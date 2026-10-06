@@ -25,6 +25,8 @@ a^{bc}
 \ea
 $$
 
+{{< slidebreak >}}
+
 but
 
 $$

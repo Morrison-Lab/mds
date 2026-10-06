@@ -11,6 +11,8 @@
     \ea
     $$
 
+{{< slidebreak >}}
+
 2.  Replace $i$ by each of $1, 2, 3$ in turn inside the parentheses,
     add the three squares,
     and multiply the total by $\frac{1}{3}$:

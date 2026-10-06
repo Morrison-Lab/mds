@@ -11,6 +11,8 @@ $$(a + b\,i)(c + d\,i) = (ac - bd) + (ad + bc)\,i.$$
 
 :::
 
+{{< slidebreak >}}
+
 ::: proof
 
 **Sum.**
@@ -25,6 +27,8 @@ $$
 && \text{(factor out } i \text{)}
 \ea
 $$
+
+{{< slidebreak >}}
 
 **Product.**
 

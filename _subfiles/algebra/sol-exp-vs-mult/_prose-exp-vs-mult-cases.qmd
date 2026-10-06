@@ -12,6 +12,9 @@ With that convention, $bc = b^c$ in each of the following cases:
    which needs $c > 0$ because $b^{c-1} > 0$;
    taking logarithms then gives $(c-1)\logf{b} = \logf{c}$.
    For example, $c = 2$ gives $b = 2$, and indeed $2^2 = 4 = 2 \cd 2$.
+
+{{< slidebreak >}}
+
 4. $b < 0$ and $c$ is an odd integer with $c \ge 3$,
    with $b = -c^{1/(c-1)}$;
    for example, $b = -\sqrt{3}$ and $c = 3$ give
