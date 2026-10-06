@@ -33,9 +33,9 @@ Writing either one next to $f$ can be read in two ways:
 - **As a matrix product,**
   with $f$ a $1 \times 1$ matrix,
   under the shape rule of [matrix multiplication](linear-algebra.qmd#def-matrix-mult).
-  The column works on the left:
+  The column operator works on the left:
   $\deriv{\vb} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column (@def-vector-derivative).
-  The row does not:
+  The row operator does not:
   $\deriv{\tp{\vb}} f$ is $(1 \times p)(1 \times 1)$,
   whose inner dimensions $p$ and $1$ do not match when $p > 1$.
   For the shape rule to give the $1 \times p$ row,
