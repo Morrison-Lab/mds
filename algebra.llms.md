@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 14:39:34 (PDT)
+Last modified: 2026-10-06 16:45:05 (PDT)
 
 ## 1 Equalities
 
@@ -63,7 +63,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 4 (negating both sides of an inequality)** If \\a \< b\\, then: \\-a \> -b\\
+> **Theorem 4 (Negating both sides of an inequality)** If \\a \< b\\, then: \\-a \> -b\\
 
 > **NOTE:**
 >
@@ -447,7 +447,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 9 (adding zero changes nothing)** \\a+0=a\\
+> **Theorem 9 (Adding zero changes nothing)** \\a+0=a\\
 
 > **NOTE:**
 >
@@ -965,7 +965,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 21 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
+> **Theorem 21 (\\\operatorname{exp}\\ and \\\operatorname{log}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
@@ -998,7 +998,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 24 (exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
+> **Theorem 24 (Exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
 >
 > \\\operatorname{exp}\mathopen{}\left\\a+b\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}\\
 
@@ -1008,7 +1008,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Corollary 2 (exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
+> **Corollary 2 (Exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
 >
 > \\\operatorname{exp}\mathopen{}\left\\a-b\right\\\mathclose{} = \frac{\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}}\\
 
@@ -1068,7 +1068,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Corollary 3 (natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
+> **Corollary 3 (Natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
 
 > **NOTE:**
 >
@@ -1096,7 +1096,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Exercise 9** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 9 (Exponentiation versus multiplication)** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
@@ -1111,131 +1111,131 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > For \\b \< 0\\, cases 4 and 5 come from \\b^{c-1} = c\\ as well: when \\c - 1\\ is even, \\b^{c-1} \> 0\\, so \\c\\ must be positive; when \\c - 1\\ is odd, \\b^{c-1} \< 0\\, so \\c\\ must be negative.
 >
 > See the red contours in [Figure 2](#fig-double-exponential2) for a visualization of the \\b \ge 0\\ cases.
->
-> Show R code
->
-> ``` downlit
-> mult_f <- function(b, c) b * c
-> pow_f <- function(b, c) b^c
-> values_b <- seq(0, 5, by = .01)
-> values_c <- seq(-.5, 3, by = .01)
->
-> mult_mat <- outer(values_b, values_c, mult_f)
-> pow_mat <- outer(values_b, values_c, pow_f)
-> pow_mat[is.infinite(pow_mat)] <- NA
->
-> opacity <- .3
-> z_min <- min(mult_mat, pow_mat, na.rm = TRUE)
-> z_max <- 5
-> plotly::plot_ly(
->   x = ~values_b,
->   y = ~values_c
-> ) |>
->   plotly::add_surface(
->     z = ~ t(mult_mat),
->     contours = list(
->       z = list(
->         show = TRUE,
->         start = -1,
->         end = 1,
->         size = .1
->       )
->     ),
->     name = "b*c",
->     showscale = FALSE,
->     opacity = opacity,
->     colorscale = list(c(0, 1), c("green", "green"))
->   ) |>
->   plotly::add_surface(
->     opacity = opacity,
->     colorscale = list(c(0, 1), c("red", "red")),
->     z = ~ t(pow_mat),
->     contours = list(
->       z = list(
->         show = TRUE,
->         start = z_min,
->         end = z_max,
->         size = .2
->       )
->     ),
->     showscale = FALSE,
->     name = "b^c"
->   ) |>
->   plotly::layout(
->     scene = list(
->       xaxis = list(
->         # type = "log",
->         title = "b"
->       ),
->       yaxis = list(
->         # type = "log",
->         title = "c"
->       ),
->       zaxis = list(
->         # type = "log",
->         range = c(z_min, z_max),
->         title = "outcome"
->       ),
->       camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
->       aspectratio = list(x = .9, y = .8, z = 0.7)
->     )
->   )
-> ```
->
-> Figure 1: Graph of \\b\*c\\ and \\b^c\\
->
-> Show R code
->
-> ``` downlit
-> pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
->
-> mat1 <- outer(values_b, values_c, pow_minus_mult_f)
-> mat1[is.infinite(mat1)] <- NA
->
-> opacity <- .3
-> plotly::plot_ly(
->   x = ~values_b,
->   y = ~values_c
-> ) |>
->   plotly::add_surface(
->     z = ~ t(mat1),
->     contours = list(
->       z = list(
->         show = TRUE,
->         start = 0,
->         end = 1,
->         size = 1,
->         color = "red"
->       )
->     ),
->     name = "b^c - b*c",
->     showscale = TRUE,
->     opacity = opacity
->   ) |>
->   plotly::layout(
->     scene = list(
->       xaxis = list(
->         # type = "log",
->         title = "b"
->       ),
->       yaxis = list(
->         # type = "log",
->         title = "c"
->       ),
->       zaxis = list(
->         title = "outcome"
->       ),
->       camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
->       aspectratio = list(x = .9, y = .8, z = 0.7)
->     )
->   )
-> ```
->
-> Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
+
+Show R code
+
+``` downlit
+mult_f <- function(b, c) b * c
+pow_f <- function(b, c) b^c
+values_b <- seq(0, 5, by = .01)
+values_c <- seq(-.5, 3, by = .01)
+
+mult_mat <- outer(values_b, values_c, mult_f)
+pow_mat <- outer(values_b, values_c, pow_f)
+pow_mat[is.infinite(pow_mat)] <- NA
+
+opacity <- .3
+z_min <- min(mult_mat, pow_mat, na.rm = TRUE)
+z_max <- 5
+plotly::plot_ly(
+  x = ~values_b,
+  y = ~values_c
+) |>
+  plotly::add_surface(
+    z = ~ t(mult_mat),
+    contours = list(
+      z = list(
+        show = TRUE,
+        start = -1,
+        end = 1,
+        size = .1
+      )
+    ),
+    name = "b*c",
+    showscale = FALSE,
+    opacity = opacity,
+    colorscale = list(c(0, 1), c("green", "green"))
+  ) |>
+  plotly::add_surface(
+    opacity = opacity,
+    colorscale = list(c(0, 1), c("red", "red")),
+    z = ~ t(pow_mat),
+    contours = list(
+      z = list(
+        show = TRUE,
+        start = z_min,
+        end = z_max,
+        size = .2
+      )
+    ),
+    showscale = FALSE,
+    name = "b^c"
+  ) |>
+  plotly::layout(
+    scene = list(
+      xaxis = list(
+        # type = "log",
+        title = "b"
+      ),
+      yaxis = list(
+        # type = "log",
+        title = "c"
+      ),
+      zaxis = list(
+        # type = "log",
+        range = c(z_min, z_max),
+        title = "outcome"
+      ),
+      camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
+      aspectratio = list(x = .9, y = .8, z = 0.7)
+    )
+  )
+```
+
+Figure 1: Graph of \\b\*c\\ and \\b^c\\
+
+Show R code
+
+``` downlit
+pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
+
+mat1 <- outer(values_b, values_c, pow_minus_mult_f)
+mat1[is.infinite(mat1)] <- NA
+
+opacity <- .3
+plotly::plot_ly(
+  x = ~values_b,
+  y = ~values_c
+) |>
+  plotly::add_surface(
+    z = ~ t(mat1),
+    contours = list(
+      z = list(
+        show = TRUE,
+        start = 0,
+        end = 1,
+        size = 1,
+        color = "red"
+      )
+    ),
+    name = "b^c - b*c",
+    showscale = TRUE,
+    opacity = opacity
+  ) |>
+  plotly::layout(
+    scene = list(
+      xaxis = list(
+        # type = "log",
+        title = "b"
+      ),
+      yaxis = list(
+        # type = "log",
+        title = "c"
+      ),
+      zaxis = list(
+        title = "outcome"
+      ),
+      camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
+      aspectratio = list(x = .9, y = .8, z = 0.7)
+    )
+  )
+```
+
+Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
 
 > **NOTE:**
 >
-> **Exercise 10** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 10 (Repeated exponentiation)** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
@@ -1419,7 +1419,7 @@ Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity am
 
 > **NOTE:**
 >
-> **Example 54 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 54 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
 > which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 53](#exm-complex-modulus), as [Theorem 30](#thm-conj-product) says.
 
