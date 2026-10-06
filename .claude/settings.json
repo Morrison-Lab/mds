@@ -58,7 +58,7 @@
   "autoMode": {
     "allow": [
       "$defaults",
-      "Merging a pull request in a Morrison-Lab repository, but only when the user has explicitly granted mwc (merge when confident) earlier in this session, the PR's CI is green and its automated review verdict on the current head commit is clean with no unresolved review threads, and the merge pins that head commit SHA."
+      "Merging a pull request in a Morrison-Lab repository with `gh pr merge`, when all of these hold: (1) earlier in this session the user granted merge-when-confident, which they may do with the bare word `mwc`, `/mwc`, `maw`, \"merge when confident\" or \"merge at will\"; (2) in this session, `check-pr-fully-clean.py` reported that PR FULLY CLEAN on its current head commit, meaning CI green, the automated review verdict clean and no unresolved review threads; (3) the merge command pins that same head SHA with `--match-head-commit`. Block it if any of these is missing, or if anything after the clean check (a new push, a new review finding) suggests the PR may no longer be clean."
     ]
   }
 }
