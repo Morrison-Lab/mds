@@ -1,0 +1,9 @@
+:::{#exm-like-terms}
+#### Like and unlike terms
+
+- $3ab$ and $-5ab$ are like terms;
+  collecting them gives $3ab + (-5ab) = (3 - 5) ab = -2ab$.
+- $2x$ and $2x^2$ are not like terms:
+  $x$ appears to different powers.
+
+:::

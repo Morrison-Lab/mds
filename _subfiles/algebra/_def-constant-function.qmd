@@ -1,0 +1,7 @@
+:::{#def-constant-function}
+#### Constant function
+
+A [function](sets-functions.qmd#def-function) $f : A \to B$ is **constant**
+if there is some $c \in B$ with $f(x) = c$ for all $x \in A$.
+
+:::

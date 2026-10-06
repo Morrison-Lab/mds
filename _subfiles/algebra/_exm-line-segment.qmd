@@ -1,0 +1,9 @@
+:::{#exm-line-segment}
+#### A line segment in $\reals$
+
+For $p = 1$, $x = 0$ and $y = 4$,
+the line segment from $x$ to $y$ is the [interval](sets-functions.qmd#def-interval) $[0, 4]$.
+The value $t = \tfrac{1}{4}$ gives the point
+$\tfrac{1}{4} \cdot 0 + \tfrac{3}{4} \cdot 4 = 3$.
+
+:::

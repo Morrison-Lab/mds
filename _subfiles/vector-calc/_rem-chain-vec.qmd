@@ -10,13 +10,13 @@ $\derivf{\vy}{\vx}$ is $p \times q$ and $\derivf{z}{\vy}$ is $q \times 1$,
 so the product $\derivf{z}{\vy} \derivf{\vy}{\vx}$ in the other order
 is not even defined unless $p = 1$.
 
-The version presented here is for the
-[gradient](https://en.wikipedia.org/wiki/Gradient) (column vector);
-the [total derivative](https://en.wikipedia.org/wiki/Total_derivative) (row vector)
-would be the
-[transpose of the gradient](https://en.wikipedia.org/wiki/Gradient#Relationship_with_total_derivative),
+The version presented here is for the gradient (@def-vector-derivative), a column vector.
+The total derivative (@def-row-vector-derivative), a row vector,
+is the transpose of the gradient (@thm-row-deriv-tp-col-deriv),
+and transposing both sides gives
 $\tp{\paren{\derivf{z}{\vx}}} = \tp{\paren{\derivf{z}{\vy}}} \tp{\paren{\derivf{\vy}{\vx}}}$,
-with the factors in the reverse order.
+with the factors in the reverse order;
+there $\tp{\paren{\derivf{\vy}{\vx}}}$ is the Jacobian matrix of $\vy$ as a function of $\vx$ (@def-jacobian-matrix).
 
 :::
 

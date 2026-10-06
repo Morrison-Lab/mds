@@ -1,0 +1,35 @@
+:::{#def-line-search}
+#### Line search and exact line search
+
+In gradient descent (@def-gradient-descent),
+a **line search** is a rule that chooses the step length $s^{(t)}$
+by examining the values of $f$ along the line
+$\cb{\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}) : s > 0}$.
+**Exact line search** is the line search that chooses $s^{(t)}$
+to minimize $f(\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}))$ over $s > 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-line-search}
+#### Exact line search on a parabola
+
+For $f(x) = x^2$ and $x^{(t)} = 2$, the derivative is $f'(2) = 4$,
+so the line is $\cb{2 - 4s : s > 0}$ and the values along it are
+
+$$
+\ba
+\phi(s)
+&= f(2 - 4s)
+&& \text{(the value at step length } s \text{)}
+\\&= (2 - 4s)^2
+&& (f(x) = x^2)
+\ea
+$$
+
+$\phi(s) \ge 0$ for every $s$, and $\phi(0.5) = (2 - 2)^2 = 0$,
+so exact line search chooses $s^{(t)} = 0.5$,
+which lands on the minimizer $x^{(t+1)} = 0$ in one step.
+
+:::

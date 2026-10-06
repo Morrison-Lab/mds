@@ -1,0 +1,9 @@
+:::{#def-quadratic-cubic}
+#### Quadratic and cubic polynomials
+
+A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) $2$,
+$f(x) = a_2 x^2 + a_1 x + a_0$ with $a_2 \ne 0$,
+is a **quadratic** polynomial.
+A polynomial of degree $3$ is a **cubic** polynomial.
+
+:::

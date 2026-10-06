@@ -1,0 +1,40 @@
+:::{#def-jacobian-matrix}
+#### Jacobian matrix
+
+Let $\vy = \vy(\vb) = \tp{(y_1, \ldots, y_q)}$ be a $q \times 1$ vector-valued function
+of the $p \times 1$ vector $\vb$.
+The **Jacobian matrix** of $\vy$ is the $q \times p$ matrix
+whose $(j, i)$ entry is $\deriv{\beta_i} y_j$,
+for $j = 1, \ldots, q$ and $i = 1, \ldots, p$.
+It is the transpose of the derivative $\deriv{\vb} \tp{\vy}$ of @def-vector-valued-derivative.
+Writing derivatives this way,
+with rows indexing the entries of $\vy$ (the numerator)
+and columns indexing the entries of $\vb$ (the denominator),
+is the **numerator layout**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-jacobian-matrix}
+#### The Jacobian matrix of a $3 \times 1$ function of a $2 \times 1$ vector
+
+For $\vy(\vb) = \tp{(\beta_1^2,\ \beta_1\beta_2,\ 3\beta_2)}$ of @exm-vector-valued-derivative,
+the Jacobian matrix is the $3 \times 2$ matrix
+
+$$
+\sbmat{
+\deriv{\beta_1} \beta_1^2 & \deriv{\beta_2} \beta_1^2 \\
+\deriv{\beta_1} \beta_1\beta_2 & \deriv{\beta_2} \beta_1\beta_2 \\
+\deriv{\beta_1} 3\beta_2 & \deriv{\beta_2} 3\beta_2
+}
+= \sbmat{
+2\beta_1 & 0 \\
+\beta_2 & \beta_1 \\
+0 & 3
+},
+$$
+
+the transpose of the $2 \times 3$ matrix found there.
+
+:::

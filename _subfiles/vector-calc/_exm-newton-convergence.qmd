@@ -24,7 +24,8 @@ The iterates converge quadratically (@def-quadratic-convergence):
 $C = \tfrac{1}{2}$ works for every $x^{(t)} \ge 1$, since then $\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}$,
 and every iterate from $2.5$ is at least $2$, since the identity makes $x^{(t+1)} - 2 \ge 0$ whenever $x^{(t)} > 0$.
 @zhou2024optim states such a bound for Newton's method in general;
-it holds near a minimizer where the Hessian is positive definite, for smooth enough $f$,
+it holds from starting points close enough to a minimizer where the Hessian is positive definite,
+when near that minimizer the Hessian changes by at most a constant times the distance moved,
 which these notes do not prove.
 
 :::
