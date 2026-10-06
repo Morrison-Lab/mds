@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 17:37:11 (PDT)
+Last modified: 2026-10-05 18:01:47 (PDT)
 
 > **NOTE:**
 >
@@ -190,6 +190,8 @@ Last modified: 2026-10-05 17:37:11 (PDT)
 > **Definition 16 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
+>
+> For a single element \\a \in A\\, the value \\f(a)\\ is also called the **image of** \\a\\ under \\f\\.
 
 > **NOTE:**
 >
