@@ -1,0 +1,13 @@
+:::{#def-tangent-line}
+#### Tangent line
+
+Let $f$ be differentiable at $c$ (@def-differentiable).
+The **tangent line** to the [graph](sets-functions.qmd#def-graph) of $f$ at $c$
+is the graph of the [affine function](algebra.qmd#def-affine-function)
+
+$$x \mapsto f(c) + f'(c)\,(x - c),$$
+
+the line through the point $(c, f(c))$ with [slope](algebra.qmd#def-affine-function) $f'(c)$.
+The slope $f'(c)$ is also called the **tangent slope** of $f$ at $c$.
+
+:::

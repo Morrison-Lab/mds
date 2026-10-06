@@ -4,7 +4,8 @@
 
 Adapted from [@larsonCalc11e, Section 14.2, Example 4, pp. 984--985].
 
-Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$
+Let $X$ and $Y$ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)
+[$\operatorname{Uniform}(0, 1)$](https://morrison-lab.github.io/pds/random-variables.html#def-uniform)
 [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable),
 with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 $f(x, y) = 1$ on the unit square $[0, 1]^2$.
@@ -19,7 +20,7 @@ this expectation is the double integral of $g$ over the unit square:
 
 $$\E{g(X, Y)} = \iint_{[0, 1]^2} g(x, y)\,dA.$$
 
-The indicator factor $\indicp{y \le x}$ equals $1$ on the triangular
+The [indicator](notation.qmd#def-indicator-function) factor $\indicp{y \le x}$ equals $1$ on the triangular
 region where $y \le x$ and $0$ elsewhere,
 so only that region,
 namely $D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}$
@@ -70,7 +71,10 @@ $D = \{(x, y) : y \in [0, 1],\; x \in [y, 1]\}$, the inner integral is
 
 $$\int_y^1 \ef{-x^2}\,dx,$$
 
-which has no elementary antiderivative.
+which cannot be computed with FTC Part 2:
+no antiderivative of $\ef{-x^2}$ can be written as a finite formula
+built from powers, exponentials, logarithms, and trigonometric functions
+(an **elementary** antiderivative).
 
 **Order $dy\,dx$ works.** Applying @thm-fubini Part 1
 ($\ef{-x^2}$ is continuous and $D$ is the vertically simple region

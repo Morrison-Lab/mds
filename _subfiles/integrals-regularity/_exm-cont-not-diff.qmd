@@ -4,7 +4,8 @@
 The absolute-value function $f(x) = \abs{x}$ is continuous at $x = 0$
 ($\lim_{x \to 0}\abs{x} = 0 = \abs{0}$),
 but it is not differentiable at $x = 0$:
-the left-derivative is $-1$ and the right-derivative is $+1$.
+its left-hand derivative there is $-1$ and its right-hand derivative is $+1$
+(@exm-one-sided-derivative).
 
 This [counterexample](notation.qmd#def-counterexample) shows that the [converse](notation.qmd#def-converse) of @thm-diff-implies-cont fails:
 continuity does not imply differentiability.

@@ -58,7 +58,7 @@ $$
 \ea
 $$
 
-For $b \ne 1$ the same holds at every step, by induction
+For $b \ne 1$ the same holds at every step, by [induction](proof-writing.qmd#def-proof-by-induction)
 (when $b = 1$, $r = 0$ and $\vx^{(1)}$ is already the minimizer):
 if $\vx^{(t)} = \tp{(c\,b,\ \pm c)}$ for a number $c \ne 0$,
 then $s^*$, which depends only on $x_1^2 = c^2 b^2$ and $x_2^2 = c^2$, is again $\tfrac{2}{1 + b}$ (the factor $c^2$ cancels),

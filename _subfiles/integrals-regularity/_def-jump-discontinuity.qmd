@@ -1,0 +1,11 @@
+:::{#def-jump-discontinuity}
+#### Jump discontinuity
+
+A function $f$ has a **jump discontinuity** at $c$
+if both one-sided limits (@def-one-sided-limit)
+$\lim_{x \to c^-} f(x)$ and $\lim_{x \to c^+} f(x)$ exist
+but are not equal.
+Then $\lim_{x \to c} f(x)$ does not exist,
+so $f$ is discontinuous at $c$ (@def-continuous).
+
+:::
