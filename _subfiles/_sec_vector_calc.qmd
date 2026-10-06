@@ -6,6 +6,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-partial-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-partial-derivative.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-vector-derivative.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_note-video-gradients.qmd >}}
