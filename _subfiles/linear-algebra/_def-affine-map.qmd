@@ -2,7 +2,8 @@
 #### Affine transformation
 
 An **affine transformation** is a function $f: \mathbb{R}^p \to \mathbb{R}^m$
-composed of a linear map followed by a translation:
+composed of a linear map followed by a translation
+(a [composition](sets-functions.qmd#def-composition), with the linear map as the inner function):
 
 $$f(\vx) = \matr{A} \vx + \vec{b}, \qquad \matr{A} \in \mathbb{R}^{m \times p}, \quad \vec{b} \in \mathbb{R}^m$$
 

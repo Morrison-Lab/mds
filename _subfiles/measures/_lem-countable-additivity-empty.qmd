@@ -25,7 +25,7 @@ $$
 
 If $\mu(\emptyset) = c$ for a finite $c > 0$,
 the right-hand side is $c + c + \cdots = \infty \neq c$,
-a contradiction.
+a [contradiction](notation.qmd#def-proof-by-contradiction).
 So $\mu(\emptyset)$ is 0 or $\infty$.
 
 :::

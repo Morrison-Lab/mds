@@ -1,5 +1,5 @@
-This page collects general advice on how to write proofs and derivations.
-The goal of a proof is not just to convince yourself that a result is true;
+This page collects general advice on how to write [proofs](notation.qmd#def-proof) and derivations.
+The goal of a proof is not just to convince yourself that a [result](notation.qmd#def-theorem) is true;
 it is to convince a *reader*,
 and to show them *why* it is true.
 Each principle on this page serves that goal.
@@ -27,7 +27,7 @@ show the step instead.
 ## Annotate each step {#sec-annotate-each-step}
 
 For each step,
-note the definition, theorem, or algebraic rule that justifies it.
+note the definition, [theorem](notation.qmd#def-theorem), or algebraic rule that justifies it.
 A brief annotation to the right of the line is usually enough.
 Annotations make the proof checkable,
 and they teach the reader which tool to reach for in similar situations.

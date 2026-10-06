@@ -1,7 +1,8 @@
 :::{#thm-matadd-commutative}
 #### Matrix addition is commutative
 
-For $m \times n$ matrices $\matr{A}$ and $\matr{B}$:
+For $m \times n$ matrices $\matr{A}$ and $\matr{B}$,
+matrix addition is [commutative](algebra.qmd#def-commutative):
 
 $$\matr{A} + \matr{B} = \matr{B} + \matr{A}$$
 

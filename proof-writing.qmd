@@ -18,7 +18,7 @@ format:
 
 - @velleman2019prove
   is a structured introduction to proof techniques
-  such as direct proof, proof by contradiction, and induction.
+  such as direct proof, [proof by contradiction](notation.qmd#def-proof-by-contradiction), and induction.
 - @barkerplummer2011language
   treats proofs as formal derivations in propositional and first-order logic.
 
