@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 19:41:39 (PDT)
+Last modified: 2026-10-05 19:46:41 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -206,7 +206,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Remark 1* (Which side the operator goes on). Read \\\frac{\partial}{\partial \tilde{\beta}}\\ as a \\p \times 1\\ column of operators with entries \\\frac{\partial}{\partial \beta_1}, \ldots, \frac{\partial}{\partial \beta_p}\\, and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\\ as the \\1 \times p\\ row with the same entries. Writing either one next to \\f\\ can be read in two ways:
 >
-> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra.llms.md#def-matrix-mult). The column works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column ([Definition 1](#def-vector-derivative)). The row does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
+> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra.llms.md#def-matrix-mult). The column operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column ([Definition 1](#def-vector-derivative)). The row operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
 > - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \tilde{x}\\ is read in [scalar multiplication](linear-algebra.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \tilde{\beta}} f\\ and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ work with the operator on the left.
 >
 > The fraction \\\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row, without making the derivative a product.
