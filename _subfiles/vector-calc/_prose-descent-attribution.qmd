@@ -13,7 +13,8 @@ In the same example the source's formula for $\vx^{(1)}$ has $\vx^{(1)}$ on its 
 These parts of the source are not part of this section:
 
 - the quadratic convergence theorem for Newton's method in general,
-  and its remedies for instability (a positive definite substitute for the Hessian, and line search)
+  and its remedies for instability (a positive definite substitute for the Hessian,
+  and shortening the Newton step by a search along its direction)
 - its remark that Hessians are expensive to compute
 - the convergence-rate theorem for strongly convex functions
 - gradient descent with momentum, and its optimal parameters
