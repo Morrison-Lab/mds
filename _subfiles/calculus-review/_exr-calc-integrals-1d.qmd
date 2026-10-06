@@ -1,0 +1,308 @@
+::: {.callout-note collapse="true"}
+#### Source and attribution
+
+The exercises and solutions in this section are adapted from @problifesavercalc
+(Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
+:::
+
+::: {#exr-miller-int-polynomial}
+#### Definite integral of a polynomial
+
+Evaluate the integral:
+
+$$\int_0^1 (x^4 + x^2 + 1)\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Integrate term by term using the power rule for integration:
+
+$$\ba
+\int_0^1 (x^4 + x^2 + 1)\,dx &= \bracket{\frac{x^5}{5} + \frac{x^3}{3} + x}_0^1
+\\
+&= \paren{\frac{1}{5} + \frac{1}{3} + 1} - 0 = \frac{3 + 5 + 15}{15} = \frac{23}{15}
+\ea$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-quadratic-complete}
+#### Integral of a perfect square
+
+Evaluate the integral:
+
+$$\int_0^1 (x^2 + 2x + 1)\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Notice that the integrand is a perfect square: $x^2 + 2x + 1 = (x + 1)^2$.
+
+With substitution $u = x + 1$ (where $du = dx$):
+
+$$\int_0^1 (x + 1)^2\,dx = \bracket{\frac{(x + 1)^3}{3}}_0^1 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{8 - 1}{3} = \frac{7}{3}$$
+
+*Alternative (term by term):*
+
+$$\bracket{\frac{x^3}{3} + x^2 + x}_0^1 = \frac{1}{3} + 1 + 1 = \frac{7}{3}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-composite-power}
+#### Integral of a composite power
+
+Evaluate the integral:
+
+$$\int_0^1 (x^2 + 2x + 1)^2\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Recognize that $x^2 + 2x + 1 = (x + 1)^2$, so the integrand is:
+
+$$(x^2 + 2x + 1)^2 = \bracket{(x + 1)^2}^2 = (x + 1)^4$$
+
+Using the substitution $u = x + 1$ with $du = dx$:
+
+$$\int_0^1 (x + 1)^4\,dx = \bracket{\frac{(x + 1)^5}{5}}_0^1 = \frac{2^5 - 1^5}{5} = \frac{32 - 1}{5} = \frac{31}{5}$$
+
+*Remark:* Do not mistakenly write $\int (x^2 + 2x + 1)^2\,dx = \frac{(x^2 + 2x + 1)^3}{3}$; that formula requires the derivative of the inside function ($2x + 2$) to be present as a factor in the integrand.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-trig-symmetry}
+#### Integral of odd trigonometric functions
+
+Evaluate the integral:
+
+$$\int_{-\pi/2}^{\pi/2} (\sin^3 x \cos x + \sin x \cos x)\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Because $\sin(-x) = -\sin x$ and $\cos(-x) = \cos x$:
+
+$$\sin^3(-x)\cos(-x) + \sin(-x)\cos(-x) = -\sin^3 x \cos x - \sin x \cos x$$
+
+The integrand is an odd function. The integral of any continuous odd function over a symmetric interval $[-a, a]$ is zero:
+
+$$\int_{-\pi/2}^{\pi/2} (\sin^3 x \cos x + \sin x \cos x)\,dx = 0$$
+
+*Alternative (by substitution):* Set $u = \sin x$, so $du = \cos x\,dx$. As $x$ ranges from $-\pi/2$ to $\pi/2$, $u$ ranges from $-1$ to $1$:
+
+$$\int_{-1}^1 (u^3 + u)\,du = \bracket{\frac{u^4}{4} + \frac{u^2}{2}}_{-1}^1 = \paren{\frac{1}{4} + \frac{1}{2}} - \paren{\frac{1}{4} + \frac{1}{2}} = 0$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-polynomial-symmetry}
+#### Separating even and odd parts of a polynomial
+
+Evaluate the integral:
+
+$$\int_{-4}^4 (x^3 + 6x^2 - 2x - 3)\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Split the integrand into its odd part $x^3 - 2x$ and its even part $6x^2 - 3$:
+
+$$\int_{-4}^4 (x^3 - 2x)\,dx = 0$$
+
+The even part doubles over the half-interval $[0, 4]$:
+
+$$\int_{-4}^4 (6x^2 - 3)\,dx = 2\int_0^4 (6x^2 - 3)\,dx = 2\bracket{2x^3 - 3x}_0^4 = 2\bracket{2(64) - 3(4)} = 2(128 - 12) = 232$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-log-substitution}
+#### Substitution leading to a natural logarithm
+
+Evaluate the integral:
+
+$$\int_0^1 \frac{x}{1 + x^2}\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Let $u = 1 + x^2$. Then $du = 2x\,dx$, so $x\,dx = \frac{1}{2}du$.
+
+Transform the limits of integration:
+
+- When $x = 0$: $u = 1 + 0^2 = 1$.
+- When $x = 1$: $u = 1 + 1^2 = 2$.
+
+Applying the substitution:
+
+$$\int_0^1 \frac{x}{1 + x^2}\,dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\bracket{\log u}_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}$$
+
+*Remark:* When using $u$-substitution with definite integrals, the transformation $x \mapsto u(x)$ must be one-to-one on the domain of integration.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-power-substitution}
+#### Substitution with a polynomial power
+
+Evaluate the integral:
+
+$$\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Let $u = x^3 + 3x$. Then:
+
+$$du = (3x^2 + 3)\,dx = 3(x^2 + 1)\,dx \implies (x^2 + 1)\,dx = \frac{du}{3}$$
+
+Limits:
+
+- When $x = 0$: $u = 0$.
+- When $x = 3$: $u = 3^3 + 3(3) = 27 + 9 = 36$.
+
+Substitute:
+
+$$\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\,dx = \frac{1}{3}\int_0^{36} u^8\,du = \frac{1}{3}\bracket{\frac{u^9}{9}}_0^{36} = \frac{36^9}{27}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-trig-substitution}
+#### Substitution with a trigonometric integrand
+
+Evaluate the integral:
+
+$$\int_0^2 x\cos(3x^2)\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Let $u = 3x^2$. Then $du = 6x\,dx$, meaning $x\,dx = \frac{du}{6}$.
+
+Limits:
+
+- When $x = 0$: $u = 0$.
+- When $x = 2$: $u = 3(2^2) = 12$.
+
+Substitute:
+
+$$\int_0^2 x\cos(3x^2)\,dx = \frac{1}{6}\int_0^{12} \cos u\,du = \frac{1}{6}\bracket{\sin u}_0^{12} = \frac{\sin 12}{6}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-rayleigh-normal-kernel}
+#### Improper Gaussian-kernel integral
+
+Evaluate the improper integral:
+
+$$\int_0^\infty x\exp\paren{-\frac{x^2}{4}}\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Let $u = x^2/4$. Then $du = \frac{x}{2}\,dx$, so $x\,dx = 2\,du$.
+
+Limits:
+
+- As $x \to 0$: $u \to 0$.
+- As $x \to \infty$: $u \to \infty$.
+
+Substitute:
+
+$$\int_0^\infty x\exp\paren{-\frac{x^2}{4}}\,dx = 2\int_0^\infty e^{-u}\,du = 2\bracket{-e^{-u}}_0^\infty = 2\paren{0 - (-1)} = 2$$
+
+*Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-by-parts-gaussian}
+#### Integration by parts with an exponential factor
+
+Evaluate the integral:
+
+$$\int_a^b x^3 \exp\paren{-\frac{x^2}{2}}\,dx$$
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+Factor the integrand as $x^2 \cd \paren{x \exp(-x^2/2)}$. Set:
+
+$$u = x^2, \qquad dv = x\exp\paren{-\frac{x^2}{2}}\,dx$$
+
+Then $du = 2x\,dx$ and $v = -\exp(-x^2/2)$.
+
+Using integration by parts ($\int u\,dv = uv - \int v\,du$):
+
+$$\ba
+\int_a^b x^3 \exp\paren{-\frac{x^2}{2}}\,dx &= \bracket{-x^2 \exp\paren{-\frac{x^2}{2}}}_a^b - \int_a^b \bracket{-\exp\paren{-\frac{x^2}{2}}}(2x\,dx)
+\\
+&= \bracket{-x^2 \exp\paren{-\frac{x^2}{2}}}_a^b + 2\int_a^b x\exp\paren{-\frac{x^2}{2}}\,dx
+\\
+&= \bracket{-x^2 \exp\paren{-\frac{x^2}{2}}}_a^b + 2\bracket{-\exp\paren{-\frac{x^2}{2}}}_a^b
+\\
+&= \bracket{-(x^2 + 2)\exp\paren{-\frac{x^2}{2}}}_a^b
+\\
+&= (a^2 + 2)\exp\paren{-\frac{a^2}{2}} - (b^2 + 2)\exp\paren{-\frac{b^2}{2}}
+\ea$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-int-uniform-convolution}
+#### Convolution of two uniform densities
+
+Let $f(x) = \mathbf{1}_{[0, 1]}(x)$ be the indicator of the unit interval:
+
+$$f(x) = \begin{cases} 1 & \text{if } x \in [0, 1] \\ 0 & \text{otherwise} \end{cases}$$
+
+Evaluate the convolution:
+
+$$(f * f)(x) = \int_{-\infty}^\infty f(t)f(x - t)\,dt$$
+
+for all $x \in \mathbb{R}$.
+
+(adapted from @problifesavercalc)
+:::
+
+::: {.solution}
+The integrand $f(t)f(x - t)$ equals $1$ when both $t \in [0, 1]$ and $x - t \in [0, 1]$, and equals $0$ otherwise.
+
+The condition $0 \le x - t \le 1$ rearranges to:
+
+$$x - 1 \le t \le x$$
+
+For this interval to overlap with $t \in [0, 1]$, we must have $x \ge 0$ and $x - 1 \le 1$, meaning $0 \le x \le 2$. Outside $[0, 2]$, $(f * f)(x) = 0$.
+
+For $x \in [0, 2]$, we distinguish two cases:
+
+- **Case 1: $0 \le x \le 1$.**
+  The overlapping bounds for $t$ are $[0, x]$:
+
+  $$(f * f)(x) = \int_0^x 1\,dt = x$$
+
+- **Case 2: $1 \le x \le 2$.**
+  The overlapping bounds for $t$ are $[x - 1, 1]$:
+
+  $$(f * f)(x) = \int_{x-1}^1 1\,dt = 1 - (x - 1) = 2 - x$$
+
+Combining the cases:
+
+$$(f * f)(x) = \begin{cases} x & \text{if } 0 \le x \le 1 \\ 2 - x & \text{if } 1 < x \le 2 \\ 0 & \text{otherwise} \end{cases}$$
+
+*Remark:* In probability theory, if $X_1, X_2 \sim \text{Uniform}(0, 1)$ independently, the probability density function of their sum $S = X_1 + X_2$ is the convolution of their individual densities, producing this symmetric triangular distribution on $[0, 2]$.
+:::

@@ -24,6 +24,12 @@
 
 {{< slidebreak >}}
 
+### Exercises: Partial derivatives {#sec-exercises-partial-derivatives}
+
+{{< include mds/_subfiles/calculus-review/_exr-calc-derivatives-mv.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_sec-gradient-shape.qmd >}}
 
 {{< slidebreak >}}

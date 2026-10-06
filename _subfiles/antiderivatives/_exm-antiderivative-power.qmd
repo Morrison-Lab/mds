@@ -60,7 +60,7 @@ ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
 Family of antiderivatives $F(x) = x^3/3 + C$.
 :::
 
-The function $f(x) = x^2$ and five antiderivatives $F(x) = x^3/3 + C$ for $C \in \{`r paste(C_vals, collapse = ", ")`\}$.
+The function $f(x) = x^2$ and five antiderivatives $F(x) = x^3/3 + C$ for $C \in \{-2, -1, 0, 1, 2\}$.
 Each antiderivative has the same derivative $f$; they differ only by a vertical shift.
 
 :::
