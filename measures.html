@@ -227,6 +227,26 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-remark.callout {
   border-left-color: #AD1457;
 }
@@ -247,25 +267,15 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -276,16 +286,6 @@ div.callout-exr.callout-style-default .callout-header {
 div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -307,25 +307,25 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -703,7 +703,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-06 11:54:10 (PDT)</p>
+      <p class="date">Last modified: 2026-10-06 14:39:34 (PDT)</p>
     </div>
   </div>
   
@@ -722,7 +722,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div class="proof remark">
-<p><span class="proof-title"><em>Remark</em>. </span>A measure assigns a size to each set in a <a href="./sets-functions.html#def-collection">collection of sets</a>: how many elements it has, how long it is, or how likely it is. This page builds measures from <span class="math inline">\(\sigma\)</span>-algebras and additivity, using the <a href="./sets-functions.html">sets and functions</a> page’s definitions. One kind of measure, the probability measure (<a href="#def-probability-measure" class="quarto-xref">Definition&nbsp;18</a>), is the starting point of the Morrison Lab’s probability notes (<a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability measure</a>).</p>
+<p><span class="proof-title"><em>Remark</em>. </span>A measure assigns a size to each set in a <a href="./sets-functions.html#def-collection">collection of sets</a>: how many elements it has, how long it is, or how likely it is. This page builds measures from <span class="math inline">\(\sigma\)</span>-algebras and additivity, using the <a href="./sets-functions.html">sets and functions</a> page’s definitions. One kind of measure, the probability measure (<a href="#def-probability-measure" class="quarto-xref">Definition&nbsp;19</a>), is the starting point of the Morrison Lab’s probability notes (<a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability measure</a>).</p>
 </div>
 </div>
 </div>
@@ -1584,8 +1584,8 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="def-measure-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Measurable space and measure space)</strong></span> A <strong>measurable space</strong> <span class="math inline">\((S, \mathscr{S})\)</span> is a set <span class="math inline">\(S\)</span> together with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span> on <span class="math inline">\(S\)</span>; the sets in <span class="math inline">\(\mathscr{S}\)</span> are its <strong>measurable sets</strong>. A <strong>measure space</strong> <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> is a measurable space together with a <a href="#def-measure">measure</a> <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathscr{S}\)</span>.</p>
+<div id="def-measurable-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Measurable space)</strong></span> A <strong>measurable space</strong> <span class="math inline">\((S, \mathscr{S})\)</span> is a set <span class="math inline">\(S\)</span> together with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S}\)</span> on <span class="math inline">\(S\)</span>; the sets in <span class="math inline">\(\mathscr{S}\)</span> are its <strong>measurable sets</strong>.</p>
 </div>
 </div>
 </div>
@@ -1596,10 +1596,10 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<div id="exm-measure-space" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Measure spaces of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>:</p>
+<div id="exm-measurable-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (Measurable spaces of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>:</p>
 <ul>
-<li><span class="math inline">\((D, \mathscr{S})\)</span>, with <span class="math inline">\(\mathscr{S}\)</span> the collection of all subsets of <span class="math inline">\(D\)</span>, is a measurable space (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), and adding the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> makes <span class="math inline">\((D, \mathscr{S}, \mu)\)</span> a measure space.</li>
+<li><span class="math inline">\((D, \mathscr{S})\)</span>, with <span class="math inline">\(\mathscr{S}\)</span> the collection of all subsets of <span class="math inline">\(D\)</span>, is a measurable space (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>).</li>
 <li><span class="math inline">\((D, \mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{})\)</span> is also a measurable space. Its measurable sets are only those four; for example, <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> is not one of them.</li>
 </ul>
 </div>
@@ -1612,8 +1612,32 @@ s_{n+1}
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
+<div id="def-measure-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Measure space)</strong></span> A <strong>measure space</strong> <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> is a <a href="#def-measurable-space">measurable space</a> together with a <a href="#def-measure">measure</a> <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathscr{S}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-measure-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (Measure space of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, adding the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> to the <a href="#def-measurable-space">measurable space</a> <span class="math inline">\((D, \mathscr{S})\)</span> of <a href="#exm-measurable-space" class="quarto-xref">Example&nbsp;18</a> makes <span class="math inline">\((D, \mathscr{S}, \mu)\)</span> a measure space.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <div id="def-lebesgue-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{B}\)</span> that assigns each <a href="./sets-functions.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
+<p><span class="theorem-title"><strong>Definition 15 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{B}\)</span> that assigns each <a href="./sets-functions.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
 <p><span class="math display">\[\lambda([a, b]) = \lambda((a, b)) = \lambda([a, b)) = \lambda((a, b]) \stackrel{\text{def}}{=}b - a,\]</span></p>
 <p>and <span class="math inline">\(\lambda(I) \stackrel{\text{def}}{=}\infty\)</span> for each unbounded interval <span class="math inline">\(I\)</span>.</p>
 <p><strong>Lebesgue measure on an interval</strong> <span class="math inline">\(I\)</span>, such as <span class="math inline">\([0, 1]\)</span>, is <span class="math inline">\(\lambda\)</span> applied only to the Borel sets that are subsets of <span class="math inline">\(I\)</span>.</p>
@@ -1640,7 +1664,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-lebesgue-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (Lengths of some Borel sets)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 20 (Lengths of some Borel sets)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(\lambda([2, 5]) = 5 - 2 = 3\)</span>.</li>
 <li>A single point has length zero: <span class="math inline">\(\lambda(\mathopen{}\left\{a\right\}\mathclose{}) = \lambda([a, a]) = a - a = 0\)</span>.</li>
@@ -1659,7 +1683,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="rem-measure-size" class="proof remark">
-<p><span class="proof-title"><em>Remark 7</em> (Measures generalize size). </span>A <a href="#def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;12</a>, or how long a set of real numbers is, as Lebesgue measure (<a href="#def-lebesgue-measure" class="quarto-xref">Definition&nbsp;14</a>) does, assigning each <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both can serve as the measures <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> in the <a href="./calculus.html#thm-fubini-tonelli">Fubini–Tonelli theorem</a>.</p>
+<p><span class="proof-title"><em>Remark 7</em> (Measures generalize size). </span>A <a href="#def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;12</a>, or how long a set of real numbers is, as Lebesgue measure (<a href="#def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a>) does, assigning each <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both can serve as the measures <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> in the <a href="./calculus.html#thm-fubini-tonelli">Fubini–Tonelli theorem</a>.</p>
 </div>
 </div>
 </div>
@@ -1671,7 +1695,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-measure-zero" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Measure zero)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A set <span class="math inline">\(A \in \mathscr{S}\)</span> has <strong>measure zero</strong> (also called a <strong>null set</strong> for <span class="math inline">\(\mu\)</span>) if <span class="math inline">\(\mu(A) = 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Measure zero)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A set <span class="math inline">\(A \in \mathscr{S}\)</span> has <strong>measure zero</strong> (also called a <strong>null set</strong> for <span class="math inline">\(\mu\)</span>) if <span class="math inline">\(\mu(A) = 0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1683,10 +1707,10 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-measure-zero" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Sets of measure zero)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 21 (Sets of measure zero)</strong></span> &nbsp;</p>
 <ul>
 <li>For a <a href="#def-counting-measure">counting measure</a>, only <span class="math inline">\(\emptyset\)</span> has measure zero: a nonempty set has at least one element, so its counting measure is at least <span class="math inline">\(1\)</span>.</li>
-<li>For Lebesgue measure, every single point <span class="math inline">\(\mathopen{}\left\{a\right\}\mathclose{}\)</span> and the integers <span class="math inline">\(\mathbb{Z}\)</span> have measure zero (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;19</a>), although neither set is empty.</li>
+<li>For Lebesgue measure, every single point <span class="math inline">\(\mathopen{}\left\{a\right\}\mathclose{}\)</span> and the integers <span class="math inline">\(\mathbb{Z}\)</span> have measure zero (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a>), although neither set is empty.</li>
 </ul>
 </div>
 </div>
@@ -1699,7 +1723,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-almost-everywhere" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Almost everywhere)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A statement about the elements of <span class="math inline">\(S\)</span> holds <strong><span class="math inline">\(\mu\)</span>-almost everywhere</strong> (written <strong><span class="math inline">\(\mu\)</span>-a.e.</strong>, or <strong>almost everywhere</strong> when <span class="math inline">\(\mu\)</span> is clear from context) if the set of elements for which it fails is a <a href="./sets-functions.html#def-subset">subset</a> of a set of <a href="#def-measure-zero">measure zero</a>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Almost everywhere)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A statement about the elements of <span class="math inline">\(S\)</span> holds <strong><span class="math inline">\(\mu\)</span>-almost everywhere</strong> (written <strong><span class="math inline">\(\mu\)</span>-a.e.</strong>, or <strong>almost everywhere</strong> when <span class="math inline">\(\mu\)</span> is clear from context) if the set of elements for which it fails is a <a href="./sets-functions.html#def-subset">subset</a> of a set of <a href="#def-measure-zero">measure zero</a>.</p>
 </div>
 </div>
 </div>
@@ -1711,8 +1735,8 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-almost-everywhere" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Non-negative except on the integers)</strong></span> Let <span class="math inline">\(g : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(g(x) = -1\)</span> when <span class="math inline">\(x\)</span> is an integer and <span class="math inline">\(g(x) = x^2\)</span> otherwise. The statement “<span class="math inline">\(g(x) \ge 0\)</span>” fails exactly for <span class="math inline">\(x \in \mathbb{Z}\)</span>, and <span class="math inline">\(\lambda(\mathbb{Z}) = 0\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;19</a>), so <span class="math inline">\(g \ge 0\)</span> holds <span class="math inline">\(\lambda\)</span>-almost everywhere, though not everywhere.</p>
-<p>For a counting measure, only <span class="math inline">\(\emptyset\)</span> has measure zero (<a href="#exm-measure-zero" class="quarto-xref">Example&nbsp;20</a>), so a statement holds almost everywhere only if it holds everywhere.</p>
+<p><span class="theorem-title"><strong>Example 22 (Non-negative except on the integers)</strong></span> Let <span class="math inline">\(g : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(g(x) = -1\)</span> when <span class="math inline">\(x\)</span> is an integer and <span class="math inline">\(g(x) = x^2\)</span> otherwise. The statement “<span class="math inline">\(g(x) \ge 0\)</span>” fails exactly for <span class="math inline">\(x \in \mathbb{Z}\)</span>, and <span class="math inline">\(\lambda(\mathbb{Z}) = 0\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a>), so <span class="math inline">\(g \ge 0\)</span> holds <span class="math inline">\(\lambda\)</span>-almost everywhere, though not everywhere.</p>
+<p>For a counting measure, only <span class="math inline">\(\emptyset\)</span> has measure zero (<a href="#exm-measure-zero" class="quarto-xref">Example&nbsp;21</a>), so a statement holds almost everywhere only if it holds everywhere.</p>
 </div>
 </div>
 </div>
@@ -1724,7 +1748,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-sigma-finite" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. The measure <span class="math inline">\(\mu\)</span> is <strong>finite</strong> if <span class="math inline">\(\mu(S) &lt; \infty\)</span>. It is <strong><span class="math inline">\(\sigma\)</span>-finite</strong> if <span class="math inline">\(S\)</span> is the union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> of a sequence of sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathscr{S}\)</span> with <span class="math inline">\(\mu(A_i) &lt; \infty\)</span> for every <span class="math inline">\(i\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. The measure <span class="math inline">\(\mu\)</span> is <strong>finite</strong> if <span class="math inline">\(\mu(S) &lt; \infty\)</span>. It is <strong><span class="math inline">\(\sigma\)</span>-finite</strong> if <span class="math inline">\(S\)</span> is the union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> of a sequence of sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathscr{S}\)</span> with <span class="math inline">\(\mu(A_i) &lt; \infty\)</span> for every <span class="math inline">\(i\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1736,7 +1760,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-sigma-finite" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 23 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> &nbsp;</p>
 <ul>
 <li>Every finite measure is <span class="math inline">\(\sigma\)</span>-finite: take <span class="math inline">\(A_1 = S\)</span> and <span class="math inline">\(A_2 = A_3 = \cdots = \emptyset\)</span>, with <span class="math inline">\(\mu(A_1) = \mu(S) &lt; \infty\)</span> and <span class="math inline">\(\mu(\emptyset) = 0\)</span>.</li>
 <li>The counting measure on the die rolls <span class="math inline">\(D\)</span> is finite, with <span class="math inline">\(\mu(D) = 6\)</span>.</li>
@@ -1757,7 +1781,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-probability-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Probability measure)</strong></span> A <strong>probability measure</strong> on a <a href="#def-measure-space">measurable space</a> <span class="math inline">\((\Omega, \mathscr{F})\)</span> is a <a href="#def-measure">measure</a> <span class="math inline">\(P\)</span> on <span class="math inline">\(\mathscr{F}\)</span> that gives the whole set <span class="math inline">\(\Omega\)</span> the value <span class="math inline">\(1\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 19 (Probability measure)</strong></span> A <strong>probability measure</strong> on a <a href="#def-measurable-space">measurable space</a> <span class="math inline">\((\Omega, \mathscr{F})\)</span> is a <a href="#def-measure">measure</a> <span class="math inline">\(P\)</span> on <span class="math inline">\(\mathscr{F}\)</span> that gives the whole set <span class="math inline">\(\Omega\)</span> the value <span class="math inline">\(1\)</span>:</p>
 <p><span class="math display">\[P(\Omega) = 1\]</span></p>
 <p>Then <span class="math inline">\((\Omega, \mathscr{F}, P)\)</span> is a <strong>probability space</strong>, <span class="math inline">\(\Omega\)</span> is its <strong>sample space</strong>, the elements of <span class="math inline">\(\Omega\)</span> are <strong>outcomes</strong>, and the sets in <span class="math inline">\(\mathscr{F}\)</span> are <strong>events</strong>.</p>
 </div>
@@ -1771,10 +1795,10 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-probability-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (A fair die, and the unit interval)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 24 (A fair die, and the unit interval)</strong></span> &nbsp;</p>
 <ul>
 <li>For one roll of a fair die, the sample space is <span class="math inline">\(\Omega = D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, the events are all subsets of <span class="math inline">\(D\)</span>, and <span class="math inline">\(P(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{} / 6\)</span>. <span class="math inline">\(P\)</span> is the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> divided by <span class="math inline">\(6\)</span>. So <span class="math inline">\(P(\emptyset) = 0\)</span>, and <span class="math inline">\(P\)</span> is countably additive, because each sum in <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> has at most six nonzero terms, and dividing a finite sum by <span class="math inline">\(6\)</span> divides each term by <span class="math inline">\(6\)</span>. It is a probability measure, since <span class="math inline">\(P(D) = 6/6 = 1\)</span>. The outcome <span class="math inline">\(3\)</span> is in the event “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, which has <span class="math inline">\(P(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}) = 3/6 = 1/2\)</span>.</li>
-<li>Lebesgue measure on <span class="math inline">\([0, 1]\)</span> is a probability measure, because <span class="math inline">\(\lambda([0, 1]) = 1\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;19</a>).</li>
+<li>Lebesgue measure on <span class="math inline">\([0, 1]\)</span> is a probability measure, because <span class="math inline">\(\lambda([0, 1]) = 1\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a>).</li>
 <li>The counting measure on <span class="math inline">\(D\)</span> is not a probability measure, because it gives <span class="math inline">\(D\)</span> the value <span class="math inline">\(6\)</span>.</li>
 </ul>
 </div>
@@ -1803,7 +1827,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-measurable-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathscr{S})\)</span> be a <a href="#def-measure-space">measurable space</a>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathscr{S}\)</span>) if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
+<p><span class="theorem-title"><strong>Definition 20 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathscr{S})\)</span> be a <a href="#def-measurable-space">measurable space</a>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathscr{S}\)</span>) if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
 <p><span class="math display">\[\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathscr{S}\]</span></p>
 </div>
 </div>
@@ -1816,7 +1840,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="rem-measurable-function-general" class="proof remark">
-<p><span class="proof-title"><em>Remark 9</em> (Measurable functions in general). </span>Other sources define a function <span class="math inline">\(f : S \to T\)</span> between measurable spaces <span class="math inline">\((S, \mathscr{S})\)</span> and <span class="math inline">\((T, \mathscr{T})\)</span> to be measurable when <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \in B\right\}\mathclose{} \in \mathscr{S}\)</span> for every <span class="math inline">\(B \in \mathscr{T}\)</span>. For <span class="math inline">\(T = \mathbb{R}\)</span> with the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a>, that definition is equivalent to <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;19</a> (see <a href="https://en.wikipedia.org/wiki/Measurable_function">Wikipedia: Measurable function</a>). For example, with <span class="math inline">\(B = (-\infty, c]\)</span>, the general definition requires <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathscr{S}\)</span>, which is the condition in <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;19</a>.</p>
+<p><span class="proof-title"><em>Remark 9</em> (Measurable functions in general). </span>Other sources define a function <span class="math inline">\(f : S \to T\)</span> between measurable spaces <span class="math inline">\((S, \mathscr{S})\)</span> and <span class="math inline">\((T, \mathscr{T})\)</span> to be measurable when <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \in B\right\}\mathclose{} \in \mathscr{S}\)</span> for every <span class="math inline">\(B \in \mathscr{T}\)</span>. For <span class="math inline">\(T = \mathbb{R}\)</span> with the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a>, that definition is equivalent to <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a> (see <a href="https://en.wikipedia.org/wiki/Measurable_function">Wikipedia: Measurable function</a>). For example, with <span class="math inline">\(B = (-\infty, c]\)</span>, the general definition requires <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathscr{S}\)</span>, which is the condition in <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a>.</p>
 </div>
 </div>
 </div>
@@ -1828,7 +1852,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-measurable-function" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (Measurable and not measurable)</strong></span> On the die rolls <span class="math inline">\(D\)</span>, take the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathscr{S} = \mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\)</span> of <a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>.</p>
+<p><span class="theorem-title"><strong>Example 25 (Measurable and not measurable)</strong></span> On the die rolls <span class="math inline">\(D\)</span>, take the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathscr{S} = \mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\)</span> of <a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>.</p>
 <ul>
 <li>Let <span class="math inline">\(f(x) = 1\)</span> for even <span class="math inline">\(x\)</span> and <span class="math inline">\(f(x) = 0\)</span> for odd <span class="math inline">\(x\)</span>. The set <span class="math inline">\(\mathopen{}\left\{x \in D : f(x) \le c\right\}\mathclose{}\)</span> is <span class="math inline">\(\emptyset\)</span> when <span class="math inline">\(c &lt; 0\)</span>, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span> when <span class="math inline">\(0 \le c &lt; 1\)</span>, and <span class="math inline">\(D\)</span> when <span class="math inline">\(c \ge 1\)</span>. All three are in <span class="math inline">\(\mathscr{S}\)</span>, so <span class="math inline">\(f\)</span> is measurable.</li>
 <li>Let <span class="math inline">\(g(x) = x\)</span>. Then <span class="math inline">\(\mathopen{}\left\{x \in D : g(x) \le 1\right\}\mathclose{} = \mathopen{}\left\{1\right\}\mathclose{}\)</span>, which is not in <span class="math inline">\(\mathscr{S}\)</span>, so <span class="math inline">\(g\)</span> is not measurable.</li>
@@ -1845,7 +1869,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-integral-nonneg" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Integral of a non-negative function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to [0, \infty)\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 21 (Integral of a non-negative function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to [0, \infty)\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
 <p><span class="math display">\[
 \int_S f \, d\mu \stackrel{\text{def}}{=}
 \sup \mathopen{}\left\{\sum_{i=1}^{n} \mathopen{}\left(\inf_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\}\mathclose{}
@@ -1863,7 +1887,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="rem-integral-nonneg-lower-sums" class="proof remark">
-<p><span class="proof-title"><em>Remark 10</em> (Each sum is a lower estimate). </span>Each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;20</a> splits <span class="math inline">\(S\)</span> into pieces and weights each piece <span class="math inline">\(A_i\)</span> by the smallest value <span class="math inline">\(f\)</span> approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval <span class="math inline">\([a, b]\)</span> and a function <span class="math inline">\(f \ge 0\)</span> that has a <a href="./calculus.html#def-riemann-integral">Riemann integral</a> on <span class="math inline">\([a, b]\)</span>, the two integrals agree: <span class="math inline">\(\int_{[a, b]} f \, d\lambda = \int_a^b f(x) \, dx\)</span> (see <a href="https://en.wikipedia.org/wiki/Lebesgue_integral">Wikipedia: Lebesgue integral</a>).</p>
+<p><span class="proof-title"><em>Remark 10</em> (Each sum is a lower estimate). </span>Each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> splits <span class="math inline">\(S\)</span> into pieces and weights each piece <span class="math inline">\(A_i\)</span> by the smallest value <span class="math inline">\(f\)</span> approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval <span class="math inline">\([a, b]\)</span> and a function <span class="math inline">\(f \ge 0\)</span> that has a <a href="./calculus.html#def-riemann-integral">Riemann integral</a> on <span class="math inline">\([a, b]\)</span>, the two integrals agree: <span class="math inline">\(\int_{[a, b]} f \, d\lambda = \int_a^b f(x) \, dx\)</span> (see <a href="https://en.wikipedia.org/wiki/Lebesgue_integral">Wikipedia: Lebesgue integral</a>).</p>
 </div>
 </div>
 </div>
@@ -1875,7 +1899,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="exm-integral-nonneg" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (Integrals with respect to counting measure)</strong></span> Let <span class="math inline">\(\mu\)</span> be the counting measure on the die rolls <span class="math inline">\(D\)</span>, and let <span class="math inline">\(g : D \to [0, \infty)\)</span>. Every function on <span class="math inline">\(D\)</span> is measurable (<a href="#exm-measurable-function" class="quarto-xref">Example&nbsp;24</a>).</p>
+<p><span class="theorem-title"><strong>Example 26 (Integrals with respect to counting measure)</strong></span> Let <span class="math inline">\(\mu\)</span> be the counting measure on the die rolls <span class="math inline">\(D\)</span>, and let <span class="math inline">\(g : D \to [0, \infty)\)</span>. Every function on <span class="math inline">\(D\)</span> is measurable (<a href="#exm-measurable-function" class="quarto-xref">Example&nbsp;25</a>).</p>
 <p><em>The integral is the sum of the values.</em> For any split of <span class="math inline">\(D\)</span> into nonempty pairwise disjoint sets <span class="math inline">\(A_1, \ldots, A_n\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1901,7 +1925,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-integral" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Integral of a real-valued function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to \mathbb{R}\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>positive part</strong> and <strong>negative part</strong> of <span class="math inline">\(f\)</span> are the non-negative functions</p>
+<p><span class="theorem-title"><strong>Definition 22 (Integral of a real-valued function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to \mathbb{R}\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>positive part</strong> and <strong>negative part</strong> of <span class="math inline">\(f\)</span> are the non-negative functions</p>
 <p><span class="math display">\[
 \begin{aligned}
 f^{+}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{f(s), 0\right\}\mathclose{} \\
@@ -1910,7 +1934,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 \]</span></p>
 <p>so that <span class="math inline">\(f = f^{+} - f^{-}\)</span> and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}\)</span>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
 <p><span class="math display">\[\int_S f \, d\mu \stackrel{\text{def}}{=}\int_S f^{+} \, d\mu - \int_S f^{-} \, d\mu,\]</span></p>
-<p>using <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;20</a> for each term, when at least one of the two terms is finite; otherwise, the integral of <span class="math inline">\(f\)</span> is undefined. (<span class="math inline">\(f^{+}\)</span>, <span class="math inline">\(f^{-}\)</span>, and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span> are measurable when <span class="math inline">\(f\)</span> is <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 13.3)</span>.)</p>
+<p>using <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> for each term, when at least one of the two terms is finite; otherwise, the integral of <span class="math inline">\(f\)</span> is undefined. (<span class="math inline">\(f^{+}\)</span>, <span class="math inline">\(f^{-}\)</span>, and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span> are measurable when <span class="math inline">\(f\)</span> is <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 13.3)</span>.)</p>
 <p><span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995, sec. 15</a>)</span></p>
 </div>
 </div>
@@ -1923,9 +1947,9 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="exm-integral" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (An integral with positive and negative parts)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, let <span class="math inline">\(f(x) = x - 3\)</span>. Its values at <span class="math inline">\(1, \ldots, 6\)</span> are <span class="math inline">\(-2, -1, 0, 1, 2, 3\)</span>, so:</p>
+<p><span class="theorem-title"><strong>Example 27 (An integral with positive and negative parts)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, let <span class="math inline">\(f(x) = x - 3\)</span>. Its values at <span class="math inline">\(1, \ldots, 6\)</span> are <span class="math inline">\(-2, -1, 0, 1, 2, 3\)</span>, so:</p>
 <ul>
-<li><span class="math inline">\(f^{+}\)</span> has values <span class="math inline">\(0, 0, 0, 1, 2, 3\)</span>, and <span class="math inline">\(\int_D f^{+} \, d\mu = 6\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;25</a>;</li>
+<li><span class="math inline">\(f^{+}\)</span> has values <span class="math inline">\(0, 0, 0, 1, 2, 3\)</span>, and <span class="math inline">\(\int_D f^{+} \, d\mu = 6\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>;</li>
 <li><span class="math inline">\(f^{-}\)</span> has values <span class="math inline">\(2, 1, 0, 0, 0, 0\)</span>, and <span class="math inline">\(\int_D f^{-} \, d\mu = 3\)</span>;</li>
 <li><span class="math inline">\(\int_D f \, d\mu = 6 - 3 = 3\)</span>, which is also <span class="math inline">\(\sum_{x \in D} (x - 3) = 21 - 18 = 3\)</span>.</li>
 </ul>
@@ -1940,7 +1964,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="def-absolutely-integrable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Absolutely integrable function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A <a href="#def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra.html#def-absolute-value">absolute value</a> is finite:</p>
+<p><span class="theorem-title"><strong>Definition 23 (Absolutely integrable function)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A <a href="#def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra.html#def-absolute-value">absolute value</a> is finite:</p>
 <p><span class="math display">\[\int_S \mathopen{}\left|f\right|\mathclose{} \, d\mu &lt; \infty\]</span></p>
 <p>The property itself is called <strong>absolute integrability</strong>.</p>
 </div>
@@ -1954,7 +1978,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="rem-absolutely-integrable-integral" class="proof remark">
-<p><span class="proof-title"><em>Remark 11</em> (An absolutely integrable function has a finite integral). </span>If <span class="math inline">\(f\)</span> is absolutely integrable, then <span class="math inline">\(\int_S f^{+} \, d\mu\)</span> and <span class="math inline">\(\int_S f^{-} \, d\mu\)</span> are both finite, because <span class="math inline">\(f^{+} \le \mathopen{}\left|f\right|\mathclose{}\)</span> and <span class="math inline">\(f^{-} \le \mathopen{}\left|f\right|\mathclose{}\)</span>, so each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;20</a> for <span class="math inline">\(f^{+}\)</span> or <span class="math inline">\(f^{-}\)</span> is at most the matching sum for <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span>. So <span class="math inline">\(\int_S f \, d\mu\)</span> (<a href="#def-integral" class="quarto-xref">Definition&nbsp;21</a>) is a real number.</p>
+<p><span class="proof-title"><em>Remark 11</em> (An absolutely integrable function has a finite integral). </span>If <span class="math inline">\(f\)</span> is absolutely integrable, then <span class="math inline">\(\int_S f^{+} \, d\mu\)</span> and <span class="math inline">\(\int_S f^{-} \, d\mu\)</span> are both finite, because <span class="math inline">\(f^{+} \le \mathopen{}\left|f\right|\mathclose{}\)</span> and <span class="math inline">\(f^{-} \le \mathopen{}\left|f\right|\mathclose{}\)</span>, so each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> for <span class="math inline">\(f^{+}\)</span> or <span class="math inline">\(f^{-}\)</span> is at most the matching sum for <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span>. So <span class="math inline">\(\int_S f \, d\mu\)</span> (<a href="#def-integral" class="quarto-xref">Definition&nbsp;22</a>) is a real number.</p>
 </div>
 </div>
 </div>
@@ -1966,10 +1990,10 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="exm-absolutely-integrable" class="theorem example">
-<p><span class="theorem-title"><strong>Example 27 (Absolutely integrable and not)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 28 (Absolutely integrable and not)</strong></span> &nbsp;</p>
 <ul>
-<li>For the counting measure on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\(f(x) = x - 3\)</span> (<a href="#exm-integral" class="quarto-xref">Example&nbsp;26</a>) is absolutely integrable: <span class="math inline">\(\int_D \mathopen{}\left|f\right|\mathclose{} \, d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 &lt; \infty\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;25</a>.</li>
-<li>For the counting measure on <span class="math inline">\(\mathbb{N}\)</span>, the constant function <span class="math inline">\(h(n) = 1\)</span> is not absolutely integrable, because <span class="math inline">\(\int_{\mathbb{N}} \mathopen{}\left|h\right|\mathclose{} \, d\mu = \int_{\mathbb{N}} h \, d\mu = \infty\)</span> (<a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;25</a>).</li>
+<li>For the counting measure on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\(f(x) = x - 3\)</span> (<a href="#exm-integral" class="quarto-xref">Example&nbsp;27</a>) is absolutely integrable: <span class="math inline">\(\int_D \mathopen{}\left|f\right|\mathclose{} \, d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 &lt; \infty\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>.</li>
+<li>For the counting measure on <span class="math inline">\(\mathbb{N}\)</span>, the constant function <span class="math inline">\(h(n) = 1\)</span> is not absolutely integrable, because <span class="math inline">\(\int_{\mathbb{N}} \mathopen{}\left|h\right|\mathclose{} \, d\mu = \int_{\mathbb{N}} h \, d\mu = \infty\)</span> (<a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>).</li>
 </ul>
 </div>
 </div>
@@ -1985,7 +2009,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="def-product-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Product <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\((S, \mathscr{S})\)</span> and <span class="math inline">\((T, \mathscr{T})\)</span> be <a href="#def-measure-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathscr{S}\)</span> and <span class="math inline">\(B \in \mathscr{T}\)</span>. The <strong>product <span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathscr{S} \otimes \mathscr{T}\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S \times T\)</span> <a href="#def-generated-sigma-algebra">generated by</a> the measurable rectangles.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Product <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\((S, \mathscr{S})\)</span> and <span class="math inline">\((T, \mathscr{T})\)</span> be <a href="#def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathscr{S}\)</span> and <span class="math inline">\(B \in \mathscr{T}\)</span>. The <strong>product <span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathscr{S} \otimes \mathscr{T}\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S \times T\)</span> <a href="#def-generated-sigma-algebra">generated by</a> the measurable rectangles.</p>
 </div>
 </div>
 </div>
@@ -1997,7 +2021,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="exm-product-sigma-algebra" class="theorem example">
-<p><span class="theorem-title"><strong>Example 28 (Product <span class="math inline">\(\sigma\)</span>-algebras)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 29 (Product <span class="math inline">\(\sigma\)</span>-algebras)</strong></span> &nbsp;</p>
 <ul>
 <li>Give the die rolls <span class="math inline">\(D\)</span> the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathscr{S}\)</span> of all its subsets. Each single pair <span class="math inline">\(\mathopen{}\left\{(a, b)\right\}\mathclose{} = \mathopen{}\left\{a\right\}\mathclose{} \times \mathopen{}\left\{b\right\}\mathclose{}\)</span> in <span class="math inline">\(D \times D\)</span> is a measurable rectangle. Every subset of <span class="math inline">\(D \times D\)</span> is a union of finitely many single pairs, and <span class="math inline">\(\mathscr{S} \otimes \mathscr{S}\)</span> contains finite unions of its sets (<a href="#thm-sigma-algebra-closure" class="quarto-xref">Theorem&nbsp;1</a>), as well as <span class="math inline">\(\emptyset\)</span>, so <span class="math inline">\(\mathscr{S} \otimes \mathscr{S}\)</span> is the collection of all subsets of <span class="math inline">\(D \times D\)</span>.</li>
 <li>The rectangle <span class="math inline">\([0, 2] \times [0, 3]\)</span> is a measurable rectangle for the Borel <span class="math inline">\(\sigma\)</span>-algebras, so it is in <span class="math inline">\(\mathscr{B} \otimes \mathscr{B}\)</span>.</li>
@@ -2013,7 +2037,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="def-product-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> and <span class="math inline">\((T, \mathscr{T}, \nu)\)</span> be measure spaces with <a href="#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu \otimes \nu\)</span> is the measure on the <a href="#def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S} \otimes \mathscr{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
+<p><span class="theorem-title"><strong>Definition 25 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathscr{S}, \mu)\)</span> and <span class="math inline">\((T, \mathscr{T}, \nu)\)</span> be measure spaces with <a href="#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu \otimes \nu\)</span> is the measure on the <a href="#def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathscr{S} \otimes \mathscr{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
 <p><span class="math display">\[(\mu \otimes \nu)(A \times B) = \mu(A) \, \nu(B)
 \quad \text{for all } A \in \mathscr{S} \text{ and } B \in \mathscr{T},\]</span></p>
 <p>with <span class="math inline">\(0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\)</span> and <span class="math inline">\(x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\)</span> for <span class="math inline">\(x &gt; 0\)</span>. Exactly one measure has these values <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 18.2)</span>.</p>
@@ -2028,7 +2052,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="exm-product-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 29 (Product measures)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 30 (Product measures)</strong></span> &nbsp;</p>
 <ul>
 <li>For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\((\mu \otimes \mu)(A \times B) = \mathopen{}\left|A\right|\mathclose{} \mathopen{}\left|B\right|\mathclose{}\)</span>, the number of pairs in <span class="math inline">\(A \times B\)</span>. For example, the set of pairs in which both rolls are even is <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, with <span class="math inline">\((\mu \otimes \mu)(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}) = 3 \cdot 3 = 9\)</span> pairs.</li>
 <li>For Lebesgue measure <span class="math inline">\(\lambda\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\((\lambda \otimes \lambda)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6\)</span>, the area of the rectangle.</li>

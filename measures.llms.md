@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-06 11:54:10 (PDT)
+Last modified: 2026-10-06 14:39:34 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. A measure assigns a size to each set in a [collection of sets](sets-functions.llms.md#def-collection): how many elements it has, how long it is, or how likely it is. This page builds measures from \\\sigma\\-algebras and additivity, using the [sets and functions](sets-functions.llms.md) page’s definitions. One kind of measure, the probability measure ([Definition 18](#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
+> *Remark*. A measure assigns a size to each set in a [collection of sets](sets-functions.llms.md#def-collection): how many elements it has, how long it is, or how likely it is. This page builds measures from \\\sigma\\-algebras and additivity, using the [sets and functions](sets-functions.llms.md) page’s definitions. One kind of measure, the probability measure ([Definition 19](#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
 
 ## 1 \\\sigma\\-algebras
 
@@ -329,18 +329,26 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Measurable space and measure space)** A **measurable space** \\(S, \mathscr{S})\\ is a set \\S\\ together with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\ on \\S\\; the sets in \\\mathscr{S}\\ are its **measurable sets**. A **measure space** \\(S, \mathscr{S}, \mu)\\ is a measurable space together with a [measure](#def-measure) \\\mu\\ on \\\mathscr{S}\\.
+> **Definition 13 (Measurable space)** A **measurable space** \\(S, \mathscr{S})\\ is a set \\S\\ together with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\ on \\S\\; the sets in \\\mathscr{S}\\ are its **measurable sets**.
 
 > **NOTE:**
 >
-> **Example 18 (Measure spaces of die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
+> **Example 18 (Measurable spaces of die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
 >
-> - \\(D, \mathscr{S})\\, with \\\mathscr{S}\\ the collection of all subsets of \\D\\, is a measurable space ([Example 1](#exm-sigma-algebra)), and adding the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) makes \\(D, \mathscr{S}, \mu)\\ a measure space.
+> - \\(D, \mathscr{S})\\, with \\\mathscr{S}\\ the collection of all subsets of \\D\\, is a measurable space ([Example 1](#exm-sigma-algebra)).
 > - \\(D, \mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{})\\ is also a measurable space. Its measurable sets are only those four; for example, \\\mathopen{}\left\\1\right\\\mathclose{}\\ is not one of them.
 
 > **NOTE:**
 >
-> **Definition 14 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathscr{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
+> **Definition 14 (Measure space)** A **measure space** \\(S, \mathscr{S}, \mu)\\ is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) \\\mu\\ on \\\mathscr{S}\\.
+
+> **NOTE:**
+>
+> **Example 19 (Measure space of die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, adding the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) to the [measurable space](#def-measurable-space) \\(D, \mathscr{S})\\ of [Example 18](#exm-measurable-space) makes \\(D, \mathscr{S}, \mu)\\ a measure space.
+
+> **NOTE:**
+>
+> **Definition 15 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathscr{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
 >
 > \\\lambda(\[a, b\]) = \lambda((a, b)) = \lambda(\[a, b)) = \lambda((a, b\]) \stackrel{\text{def}}{=}b - a,\\
 >
@@ -354,7 +362,7 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Example 19 (Lengths of some Borel sets)**  
+> **Example 20 (Lengths of some Borel sets)**  
 >
 > - \\\lambda(\[2, 5\]) = 5 - 2 = 3\\.
 > - A single point has length zero: \\\lambda(\mathopen{}\left\\a\right\\\mathclose{}) = \lambda(\[a, a\]) = a - a = 0\\.
@@ -364,36 +372,36 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 14](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
+> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 15](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
 
 > **NOTE:**
 >
-> **Definition 15 (Measure zero)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathscr{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
+> **Definition 16 (Measure zero)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathscr{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
 
 > **NOTE:**
 >
-> **Example 20 (Sets of measure zero)**  
+> **Example 21 (Sets of measure zero)**  
 >
 > - For a [counting measure](#def-counting-measure), only \\\emptyset\\ has measure zero: a nonempty set has at least one element, so its counting measure is at least \\1\\.
-> - For Lebesgue measure, every single point \\\mathopen{}\left\\a\right\\\mathclose{}\\ and the integers \\\mathbb{Z}\\ have measure zero ([Example 19](#exm-lebesgue-measure)), although neither set is empty.
+> - For Lebesgue measure, every single point \\\mathopen{}\left\\a\right\\\mathclose{}\\ and the integers \\\mathbb{Z}\\ have measure zero ([Example 20](#exm-lebesgue-measure)), although neither set is empty.
 
 > **NOTE:**
 >
-> **Definition 16 (Almost everywhere)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
+> **Definition 17 (Almost everywhere)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
 
 > **NOTE:**
 >
-> **Example 21 (Non-negative except on the integers)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = -1\\ when \\x\\ is an integer and \\g(x) = x^2\\ otherwise. The statement “\\g(x) \ge 0\\” fails exactly for \\x \in \mathbb{Z}\\, and \\\lambda(\mathbb{Z}) = 0\\ ([Example 19](#exm-lebesgue-measure)), so \\g \ge 0\\ holds \\\lambda\\-almost everywhere, though not everywhere.
+> **Example 22 (Non-negative except on the integers)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = -1\\ when \\x\\ is an integer and \\g(x) = x^2\\ otherwise. The statement “\\g(x) \ge 0\\” fails exactly for \\x \in \mathbb{Z}\\, and \\\lambda(\mathbb{Z}) = 0\\ ([Example 20](#exm-lebesgue-measure)), so \\g \ge 0\\ holds \\\lambda\\-almost everywhere, though not everywhere.
 >
-> For a counting measure, only \\\emptyset\\ has measure zero ([Example 20](#exm-measure-zero)), so a statement holds almost everywhere only if it holds everywhere.
+> For a counting measure, only \\\emptyset\\ has measure zero ([Example 21](#exm-measure-zero)), so a statement holds almost everywhere only if it holds everywhere.
 
 > **NOTE:**
 >
-> **Definition 17 (Finite and \\\sigma\\-finite measures)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **finite** if \\\mu(S) \< \infty\\. It is **\\\sigma\\-finite** if \\S\\ is the union \\\bigcup\_{i=1}^{\infty} A_i\\ of a sequence of sets \\A_1, A_2, \ldots\\ in \\\mathscr{S}\\ with \\\mu(A_i) \< \infty\\ for every \\i\\.
+> **Definition 18 (Finite and \\\sigma\\-finite measures)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **finite** if \\\mu(S) \< \infty\\. It is **\\\sigma\\-finite** if \\S\\ is the union \\\bigcup\_{i=1}^{\infty} A_i\\ of a sequence of sets \\A_1, A_2, \ldots\\ in \\\mathscr{S}\\ with \\\mu(A_i) \< \infty\\ for every \\i\\.
 
 > **NOTE:**
 >
-> **Example 22 (Finite and \\\sigma\\-finite measures)**  
+> **Example 23 (Finite and \\\sigma\\-finite measures)**  
 >
 > - Every finite measure is \\\sigma\\-finite: take \\A_1 = S\\ and \\A_2 = A_3 = \cdots = \emptyset\\, with \\\mu(A_1) = \mu(S) \< \infty\\ and \\\mu(\emptyset) = 0\\.
 > - The counting measure on the die rolls \\D\\ is finite, with \\\mu(D) = 6\\.
@@ -404,7 +412,7 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Probability measure)** A **probability measure** on a [measurable space](#def-measure-space) \\(\Omega, \mathscr{F})\\ is a [measure](#def-measure) \\P\\ on \\\mathscr{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
+> **Definition 19 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathscr{F})\\ is a [measure](#def-measure) \\P\\ on \\\mathscr{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
 >
 > \\P(\Omega) = 1\\
 >
@@ -412,10 +420,10 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Example 23 (A fair die, and the unit interval)**  
+> **Example 24 (A fair die, and the unit interval)**  
 >
 > - For one roll of a fair die, the sample space is \\\Omega = D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the events are all subsets of \\D\\, and \\P(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\P\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\P(\emptyset) = 0\\, and \\P\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since \\P(D) = 6/6 = 1\\. The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has \\P(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}) = 3/6 = 1/2\\.
-> - Lebesgue measure on \\\[0, 1\]\\ is a probability measure, because \\\lambda(\[0, 1\]) = 1\\ ([Example 19](#exm-lebesgue-measure)).
+> - Lebesgue measure on \\\[0, 1\]\\ is a probability measure, because \\\lambda(\[0, 1\]) = 1\\ ([Example 20](#exm-lebesgue-measure)).
 > - The counting measure on \\D\\ is not a probability measure, because it gives \\D\\ the value \\6\\.
 
 > **NOTE:**
@@ -426,17 +434,17 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Measurable function)** Let \\(S, \mathscr{S})\\ be a [measurable space](#def-measure-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathscr{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
+> **Definition 20 (Measurable function)** Let \\(S, \mathscr{S})\\ be a [measurable space](#def-measurable-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathscr{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
 >
 > \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathscr{S}\\
 
 > **NOTE:**
 >
-> *Remark 9* (Measurable functions in general). Other sources define a function \\f : S \to T\\ between measurable spaces \\(S, \mathscr{S})\\ and \\(T, \mathscr{T})\\ to be measurable when \\\mathopen{}\left\\s \in S : f(s) \in B\right\\\mathclose{} \in \mathscr{S}\\ for every \\B \in \mathscr{T}\\. For \\T = \mathbb{R}\\ with the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra), that definition is equivalent to [Definition 19](#def-measurable-function) (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)). For example, with \\B = (-\infty, c\]\\, the general definition requires \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathscr{S}\\, which is the condition in [Definition 19](#def-measurable-function).
+> *Remark 9* (Measurable functions in general). Other sources define a function \\f : S \to T\\ between measurable spaces \\(S, \mathscr{S})\\ and \\(T, \mathscr{T})\\ to be measurable when \\\mathopen{}\left\\s \in S : f(s) \in B\right\\\mathclose{} \in \mathscr{S}\\ for every \\B \in \mathscr{T}\\. For \\T = \mathbb{R}\\ with the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra), that definition is equivalent to [Definition 20](#def-measurable-function) (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)). For example, with \\B = (-\infty, c\]\\, the general definition requires \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathscr{S}\\, which is the condition in [Definition 20](#def-measurable-function).
 
 > **NOTE:**
 >
-> **Example 24 (Measurable and not measurable)** On the die rolls \\D\\, take the \\\sigma\\-algebra \\\mathscr{S} = \mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\ of [Example 1](#exm-sigma-algebra).
+> **Example 25 (Measurable and not measurable)** On the die rolls \\D\\, take the \\\sigma\\-algebra \\\mathscr{S} = \mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\ of [Example 1](#exm-sigma-algebra).
 >
 > - Let \\f(x) = 1\\ for even \\x\\ and \\f(x) = 0\\ for odd \\x\\. The set \\\mathopen{}\left\\x \in D : f(x) \le c\right\\\mathclose{}\\ is \\\emptyset\\ when \\c \< 0\\, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ when \\0 \le c \< 1\\, and \\D\\ when \\c \ge 1\\. All three are in \\\mathscr{S}\\, so \\f\\ is measurable.
 > - Let \\g(x) = x\\. Then \\\mathopen{}\left\\x \in D : g(x) \le 1\right\\\mathclose{} = \mathopen{}\left\\1\right\\\mathclose{}\\, which is not in \\\mathscr{S}\\, so \\g\\ is not measurable.
@@ -445,7 +453,7 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Integral of a non-negative function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
+> **Definition 21 (Integral of a non-negative function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
 >
 > \\ \int_S f \\ d\mu \stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^{n} \mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
 >
@@ -455,11 +463,11 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 20](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda = \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
+> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 21](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda = \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
 
 > **NOTE:**
 >
-> **Example 25 (Integrals with respect to counting measure)** Let \\\mu\\ be the counting measure on the die rolls \\D\\, and let \\g : D \to \[0, \infty)\\. Every function on \\D\\ is measurable ([Example 24](#exm-measurable-function)).
+> **Example 26 (Integrals with respect to counting measure)** Let \\\mu\\ be the counting measure on the die rolls \\D\\, and let \\g : D \to \[0, \infty)\\. Every function on \\D\\ is measurable ([Example 25](#exm-measurable-function)).
 >
 > *The integral is the sum of the values.* For any split of \\D\\ into nonempty pairwise disjoint sets \\A_1, \ldots, A_n\\:
 >
@@ -471,7 +479,7 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Integral of a real-valued function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** and **negative part** of \\f\\ are the non-negative functions
+> **Definition 22 (Integral of a real-valued function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** and **negative part** of \\f\\ are the non-negative functions
 >
 > \\ \begin{aligned} f^{+}(s) &\stackrel{\text{def}}{=}\max\mathopen{}\left\\f(s), 0\right\\\mathclose{} \\ f^{-}(s) &\stackrel{\text{def}}{=}\max\mathopen{}\left\\-f(s), 0\right\\\mathclose{} \end{aligned} \\
 >
@@ -479,21 +487,21 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 >
 > \\\int_S f \\ d\mu \stackrel{\text{def}}{=}\int_S f^{+} \\ d\mu - \int_S f^{-} \\ d\mu,\\
 >
-> using [Definition 20](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995](#ref-billingsley1995probability), Theorem 13.3).)
+> using [Definition 21](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995](#ref-billingsley1995probability), Theorem 13.3).)
 >
 > ([Billingsley 1995, sec. 15](#ref-billingsley1995probability))
 
 > **NOTE:**
 >
-> **Example 26 (An integral with positive and negative parts)** For the counting measure \\\mu\\ on the die rolls \\D\\, let \\f(x) = x - 3\\. Its values at \\1, \ldots, 6\\ are \\-2, -1, 0, 1, 2, 3\\, so:
+> **Example 27 (An integral with positive and negative parts)** For the counting measure \\\mu\\ on the die rolls \\D\\, let \\f(x) = x - 3\\. Its values at \\1, \ldots, 6\\ are \\-2, -1, 0, 1, 2, 3\\, so:
 >
-> - \\f^{+}\\ has values \\0, 0, 0, 1, 2, 3\\, and \\\int_D f^{+} \\ d\mu = 6\\ by [Example 25](#exm-integral-nonneg);
+> - \\f^{+}\\ has values \\0, 0, 0, 1, 2, 3\\, and \\\int_D f^{+} \\ d\mu = 6\\ by [Example 26](#exm-integral-nonneg);
 > - \\f^{-}\\ has values \\2, 1, 0, 0, 0, 0\\, and \\\int_D f^{-} \\ d\mu = 3\\;
 > - \\\int_D f \\ d\mu = 6 - 3 = 3\\, which is also \\\sum\_{x \in D} (x - 3) = 21 - 18 = 3\\.
 
 > **NOTE:**
 >
-> **Definition 22 (Absolutely integrable function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
+> **Definition 23 (Absolutely integrable function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu \< \infty\\
 >
@@ -501,31 +509,31 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> *Remark 11* (An absolutely integrable function has a finite integral). If \\f\\ is absolutely integrable, then \\\int_S f^{+} \\ d\mu\\ and \\\int_S f^{-} \\ d\mu\\ are both finite, because \\f^{+} \le \mathopen{}\left\|f\right\|\mathclose{}\\ and \\f^{-} \le \mathopen{}\left\|f\right\|\mathclose{}\\, so each sum in [Definition 20](#def-integral-nonneg) for \\f^{+}\\ or \\f^{-}\\ is at most the matching sum for \\\mathopen{}\left\|f\right\|\mathclose{}\\. So \\\int_S f \\ d\mu\\ ([Definition 21](#def-integral)) is a real number.
+> *Remark 11* (An absolutely integrable function has a finite integral). If \\f\\ is absolutely integrable, then \\\int_S f^{+} \\ d\mu\\ and \\\int_S f^{-} \\ d\mu\\ are both finite, because \\f^{+} \le \mathopen{}\left\|f\right\|\mathclose{}\\ and \\f^{-} \le \mathopen{}\left\|f\right\|\mathclose{}\\, so each sum in [Definition 21](#def-integral-nonneg) for \\f^{+}\\ or \\f^{-}\\ is at most the matching sum for \\\mathopen{}\left\|f\right\|\mathclose{}\\. So \\\int_S f \\ d\mu\\ ([Definition 22](#def-integral)) is a real number.
 
 > **NOTE:**
 >
-> **Example 27 (Absolutely integrable and not)**  
+> **Example 28 (Absolutely integrable and not)**  
 >
-> - For the counting measure on the die rolls \\D\\, \\f(x) = x - 3\\ ([Example 26](#exm-integral)) is absolutely integrable: \\\int_D \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 \< \infty\\ by [Example 25](#exm-integral-nonneg).
-> - For the counting measure on \\\mathbb{N}\\, the constant function \\h(n) = 1\\ is not absolutely integrable, because \\\int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu = \int\_{\mathbb{N}} h \\ d\mu = \infty\\ ([Example 25](#exm-integral-nonneg)).
+> - For the counting measure on the die rolls \\D\\, \\f(x) = x - 3\\ ([Example 27](#exm-integral)) is absolutely integrable: \\\int_D \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 \< \infty\\ by [Example 26](#exm-integral-nonneg).
+> - For the counting measure on \\\mathbb{N}\\, the constant function \\h(n) = 1\\ is not absolutely integrable, because \\\int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu = \int\_{\mathbb{N}} h \\ d\mu = \infty\\ ([Example 26](#exm-integral-nonneg)).
 
 ## 8 Product measures
 
 > **NOTE:**
 >
-> **Definition 23 (Product \\\sigma\\-algebra)** Let \\(S, \mathscr{S})\\ and \\(T, \mathscr{T})\\ be [measurable spaces](#def-measure-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathscr{S}\\ and \\B \in \mathscr{T}\\. The **product \\\sigma\\-algebra** \\\mathscr{S} \otimes \mathscr{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
+> **Definition 24 (Product \\\sigma\\-algebra)** Let \\(S, \mathscr{S})\\ and \\(T, \mathscr{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathscr{S}\\ and \\B \in \mathscr{T}\\. The **product \\\sigma\\-algebra** \\\mathscr{S} \otimes \mathscr{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
 
 > **NOTE:**
 >
-> **Example 28 (Product \\\sigma\\-algebras)**  
+> **Example 29 (Product \\\sigma\\-algebras)**  
 >
 > - Give the die rolls \\D\\ the \\\sigma\\-algebra \\\mathscr{S}\\ of all its subsets. Each single pair \\\mathopen{}\left\\(a, b)\right\\\mathclose{} = \mathopen{}\left\\a\right\\\mathclose{} \times \mathopen{}\left\\b\right\\\mathclose{}\\ in \\D \times D\\ is a measurable rectangle. Every subset of \\D \times D\\ is a union of finitely many single pairs, and \\\mathscr{S} \otimes \mathscr{S}\\ contains finite unions of its sets ([Theorem 1](#thm-sigma-algebra-closure)), as well as \\\emptyset\\, so \\\mathscr{S} \otimes \mathscr{S}\\ is the collection of all subsets of \\D \times D\\.
 > - The rectangle \\\[0, 2\] \times \[0, 3\]\\ is a measurable rectangle for the Borel \\\sigma\\-algebras, so it is in \\\mathscr{B} \otimes \mathscr{B}\\.
 
 > **NOTE:**
 >
-> **Definition 24 (Product measure)** Let \\(S, \mathscr{S}, \mu)\\ and \\(T, \mathscr{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu \otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathscr{S} \otimes \mathscr{T}\\ that gives each measurable rectangle the product of the measures of its sides:
+> **Definition 25 (Product measure)** Let \\(S, \mathscr{S}, \mu)\\ and \\(T, \mathscr{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu \otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathscr{S} \otimes \mathscr{T}\\ that gives each measurable rectangle the product of the measures of its sides:
 >
 > \\(\mu \otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathscr{S} \text{ and } B \in \mathscr{T},\\
 >
@@ -533,7 +541,7 @@ Last modified: 2026-10-06 11:54:10 (PDT)
 
 > **NOTE:**
 >
-> **Example 29 (Product measures)**  
+> **Example 30 (Product measures)**  
 >
 > - For the counting measure \\\mu\\ on the die rolls \\D\\, \\(\mu \otimes \mu)(A \times B) = \mathopen{}\left\|A\right\|\mathclose{} \mathopen{}\left\|B\right\|\mathclose{}\\, the number of pairs in \\A \times B\\. For example, the set of pairs in which both rolls are even is \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, with \\(\mu \otimes \mu)(\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}) = 3 \cdot 3 = 9\\ pairs.
 > - For Lebesgue measure \\\lambda\\ on \\\mathbb{R}\\, \\(\lambda \otimes \lambda)(\[0, 2\] \times \[0, 3\]) = 2 \cdot 3 = 6\\, the area of the rectangle.
