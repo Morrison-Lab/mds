@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:47:28 (PDT)
+Last modified: 2026-10-05 21:18:02 (PDT)
 
 > **NOTE:**
 >
@@ -193,15 +193,23 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+> **Definition 14 (Relation)** A **relation** \\\sim\\ on a set \\S\\ is a rule that, for each ordered pair of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
 
 > **NOTE:**
 >
-> **Definition 15 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+> **Example 10 (Relations on the real numbers)** \\=\\, \\\<\\ and \\\le\\ are relations on \\\mathbb{R}\\. For \\\<\\, the pair \\(2, 5)\\ is related, since \\2 \< 5\\, but the pair \\(5, 2)\\ is not, since \\5 \< 2\\ is false: the order of the pair matters.
 
 > **NOTE:**
 >
-> **Definition 16 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
+> **Definition 15 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+
+> **NOTE:**
+>
+> **Definition 16 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+
+> **NOTE:**
+>
+> **Definition 17 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
 
@@ -213,7 +221,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Example 10 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 9](#exm-function):
+> **Example 11 (Domain, codomain, and image of the doubled die roll)** For the function \\f : \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = 2a\\ from [Example 9](#exm-function):
 >
 > - the domain is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\;
 > - the codomain is \\\mathbb{R}\\;
@@ -223,7 +231,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Graph of a function)** The **graph** of a [function](#def-function) \\f : A \to B\\ is the set of ordered pairs \\(a, f(a))\\, one for each element \\a\\ of its domain:
+> **Definition 18 (Graph of a function)** The **graph** of a [function](#def-function) \\f : A \to B\\ is the set of ordered pairs \\(a, f(a))\\, one for each element \\a\\ of its domain:
 >
 > \\\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}\\
 >
@@ -231,11 +239,11 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Example 11 (The graph of a function on three points)** Let \\f : \mathopen{}\left\\-1, 0, 2\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = a^2\\. Then \\f(-1) = 1\\, \\f(0) = 0\\, and \\f(2) = 4\\, so the graph of \\f\\ is \\\mathopen{}\left\\(-1, 1), (0, 0), (2, 4)\right\\\mathclose{}\\. The pair \\(1, 1)\\ is not in the graph, because \\1\\ is not in the domain of \\f\\.
+> **Example 12 (The graph of a function on three points)** Let \\f : \mathopen{}\left\\-1, 0, 2\right\\\mathclose{} \to \mathbb{R}\\ with \\f(a) = a^2\\. Then \\f(-1) = 1\\, \\f(0) = 0\\, and \\f(2) = 4\\, so the graph of \\f\\ is \\\mathopen{}\left\\(-1, 1), (0, 0), (2, 4)\right\\\mathclose{}\\. The pair \\(1, 1)\\ is not in the graph, because \\1\\ is not in the domain of \\f\\.
 
 > **NOTE:**
 >
-> **Definition 18 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
+> **Definition 19 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
 >
 > \\(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\\
 >
@@ -243,7 +251,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Example 12 (The order of composition matters)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = x + 1\\, and \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\.
+> **Example 13 (The order of composition matters)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = x + 1\\, and \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\.
 >
 > - \\(f \circ g)(2) = f(g(2)) = f(3) = 9\\: \\g\\ is the inner function, and \\f\\ is the outer function.
 > - \\(g \circ f)(2) = g(f(2)) = g(4) = 5\\: now \\f\\ is the inner function, and \\g\\ is the outer function.
@@ -252,7 +260,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** of \\f\\, written \\f^{-1}\\, if both
+> **Definition 20 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** of \\f\\, written \\f^{-1}\\, if both
 >
 > - \\g(f(a)) = a\\ for every \\a \in A\\, and
 > - \\f(g(b)) = b\\ for every \\b \in B\\.
@@ -265,20 +273,20 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Example 13 (An invertible function, and one that is not)**  
+> **Example 14 (An invertible function, and one that is not)**  
 >
 > - Let \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = 2x + 1\\. Its inverse function is \\f^{-1}(y) = \frac{y - 1}{2}\\. For example, \\f(3) = 7\\ and \\f^{-1}(7) = \frac{7 - 1}{2} = 3\\.
 > - Let \\h : \mathbb{R}\to \mathbb{R}\\ with \\h(x) = x^2\\. Then \\h(-2) = 4\\ and \\h(2) = 4\\, so an inverse function would need \\h^{-1}(4)\\ to equal both \\-2\\ and \\2\\. So \\h\\ is not invertible.
 
 > **NOTE:**
 >
-> **Definition 20 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N} \to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 21 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N} \to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
 >
 > A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 > **NOTE:**
 >
-> **Example 14 (Sequences)**  
+> **Example 15 (Sequences)**  
 >
 > - \\a_n = \frac{1}{n}\\ is the sequence \\1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots\\; its third term is \\a_3 = \frac{1}{3}\\.
 > - \\b_n = (-1)^n\\ is the sequence \\-1, 1, -1, 1, \ldots\\: a sequence can repeat values.
@@ -288,7 +296,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Finite set, infinite set, and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 20](#def-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 22 (Finite set, infinite set, and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 21](#def-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 >
 > A set that is not finite is **infinite**.
 
@@ -298,7 +306,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Example 15 (Finite and infinite sets)**  
+> **Example 16 (Finite and infinite sets)**  
 >
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
@@ -307,15 +315,15 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Countable set)** A set is **countable** if it is finite ([Definition 21](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 20](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 23 (Countable set)** A set is **countable** if it is finite ([Definition 22](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 21](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 23 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 24 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 16 (Countable and uncountable sets)**  
+> **Example 17 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
@@ -333,7 +341,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 25 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -345,7 +353,7 @@ Last modified: 2026-10-05 20:47:28 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 18 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 6 Further reading
 
