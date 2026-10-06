@@ -1,5 +1,5 @@
 ::: {.callout-tip title="Further reading"}
-- @zhou2024matrix, sections 6 ("Linear functions and operators")
+- @zhou2024matrix, sections 6 ("Linear functions and operators"; see @def-linear-operator)
   and 7 ("Affine functions"),
   proves that every linear function is a matrix-vector product
   by the same route as @thm-linear-map-matrix,

@@ -184,6 +184,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-linear-operator.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-linear-map-zero.qmd >}}
 
 {{< slidebreak >}}

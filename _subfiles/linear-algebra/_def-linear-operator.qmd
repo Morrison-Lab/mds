@@ -1,0 +1,23 @@
+:::{#def-linear-operator}
+#### Linear operator
+
+A **linear operator** on $\reals^p$
+is a linear map (@def-linear-map) from $\reals^p$ to itself,
+that is, a linear map $f : \reals^p \to \reals^p$
+whose input and output have the same length.
+Some authors use "operator" more loosely, for any linear map.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-linear-operator}
+#### A linear operator, and a linear map that is not one
+
+The map $f(\vx) = (2 x_1,\ x_1 + x_2)$ from @exm-linear-map
+sends $\reals^2$ to $\reals^2$, so it is a linear operator on $\reals^2$.
+The linear map $g(\vx) = x_1 + x_2$ sends $\reals^2$ to $\reals$,
+so it is linear but not an operator:
+its outputs have length $1$, not $2$.
+
+:::
