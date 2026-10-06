@@ -5,20 +5,31 @@ The exercises and solutions in this section are adapted from @problifesavercalc
 (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
 :::
 
-:::{#def-taylor-polynomial}
+::: {#def-taylor-polynomial}
 #### Taylor polynomial and Taylor series
 
-Let $f$ be a real-valued function that is $n$ times differentiable at a point $x_0$.
+Let $f$ be a function that has at least $n$ derivatives at a point $x_0$.
 The **Taylor polynomial** of degree $n$ for $f$ centered at $x_0$ is:
 
-$$P_n(x) \eqdef \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n$$ {#eq-taylor-poly-def}
+$$P_n(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n$$ {#eq-taylor-poly-def}
 
-When $x_0 = 0$, $P_n(x)$ is called the **Maclaurin polynomial** of degree $n$.
-If $f$ is infinitely differentiable at $x_0$, the infinite power series
+When $x_0 = 0$, $P_n(x)$ is called the **Maclaurin polynomial**.
+When $f$ is infinitely differentiable and the series converges to $f(x)$ on an open interval containing $x_0$, the infinite sum $\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$ is the **Taylor series** of $f$ centered at $x_0$.
+:::
 
-$$T(x) \eqdef \sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$$
+{{< slidebreak >}}
 
-is the **Taylor series** of $f$ centered at $x_0$ (or the **Maclaurin series** when $x_0 = 0$).
+::: {#exm-taylor-polynomial-exponential}
+#### Taylor series of the exponential function
+
+For $f(x) = e^x$ centered at $x_0 = 0$, every derivative is $f^{(k)}(0) = e^0 = 1$.
+The degree-$n$ Maclaurin polynomial is:
+
+$$P_n(x) = 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} = \sum_{k=0}^n \frac{x^k}{k!}$$
+
+Because the remainder $R_n(x) \to 0$ as $n \to \infty$ for all $x \in \reals$, the Taylor series converges everywhere to $e^x$:
+
+$$e^x = \sum_{k=0}^\infty \frac{x^k}{k!}$$
 :::
 
 {{< slidebreak >}}
