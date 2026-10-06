@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 10:22:24 (PDT)
+Last modified: 2026-10-06 11:54:10 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -40,7 +40,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Definition 2 (Vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **vector derivative** is the column of its partial derivatives ([Definition 1](#def-partial-derivative)):
+> **Definition 2 (Vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
 > \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) \\ \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \\
 >
@@ -238,26 +238,26 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Definition 5 (Row-vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **row-vector derivative** is the row of its partial derivatives ([Definition 1](#def-partial-derivative)):
+> **Definition 5 (Row-vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **row-vector derivative** is the row vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
 > \\ \frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) & \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) & \cdots & \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \tag{1}\\
 >
-> Some sources write the same row as \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f(\tilde{\beta})\\, with the operator on the left, read as each operator \\\frac{\partial}{\partial \beta_i}\\ applied to \\f\\ rather than as a matrix product (see [Remark 1](#rem-row-derivative-shape)).
+> Some sources write the same row vector as \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f(\tilde{\beta})\\, with the operator on the left, read as each operator \\\frac{\partial}{\partial \beta_i}\\ applied to \\f\\ rather than as a matrix product (see [Remark 1](#rem-row-derivative-shape)).
 >
-> The row-vector derivative is also called the **total derivative** of \\f\\, the name used when the derivative of a scalar-valued function is written as a row.
+> The row-vector derivative is also called the **total derivative** of \\f\\, the name used when the derivative of a scalar-valued function is written as a row vector.
 
 > **NOTE:**
 >
-> *Remark 1* (Which side the operator goes on). Read \\\frac{\partial}{\partial \tilde{\beta}}\\ as a \\p \times 1\\ column of operators with entries \\\frac{\partial}{\partial \beta_1}, \ldots, \frac{\partial}{\partial \beta_p}\\, and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\\ as the \\1 \times p\\ row with the same entries. Writing either one next to \\f\\ can be read in two ways:
+> *Remark 1* (Which side the operator goes on). Read \\\frac{\partial}{\partial \tilde{\beta}}\\ as a \\p \times 1\\ column vector of operators with entries \\\frac{\partial}{\partial \beta_1}, \ldots, \frac{\partial}{\partial \beta_p}\\, and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\\ as the \\1 \times p\\ row vector of operators with the same entries. Writing either one next to \\f\\ can be read in two ways:
 >
-> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra.llms.md#def-matrix-mult). The column operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column ([Definition 2](#def-vector-derivative)). The row operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
+> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra.llms.md#def-matrix-mult). The column-vector operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column vector ([Definition 2](#def-vector-derivative)). The row-vector operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row vector, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
 > - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \tilde{x}\\ is read in [scalar multiplication](linear-algebra.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \tilde{\beta}} f\\ and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ work with the operator on the left.
 >
-> The fraction \\\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row, without making the derivative a product.
+> The fraction \\\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row vector, without making the derivative a product.
 >
 > Treating the operators as vectors is sound for checking shapes, but “multiplying” an operator by a function means applying the operator to it, so two rules of ordinary matrix algebra do not carry over: scalars commute with matrices, and products can be regrouped.
 >
-> - **Scalars do not commute with operators.** \\\frac{\partial}{\partial \beta_i} f\\ is a function, but \\f \frac{\partial}{\partial \beta_i}\\ is still an unapplied operator, waiting for something to act on. So, unlike \\c \tilde{x}= \tilde{x}c\\, the operator cannot move to the other side of \\f\\ without changing the meaning. Putting the row operator on the right of \\f\\ gives the row derivative only under the convention that it acts on the factor to its left.
+> - **Scalars do not commute with operators.** \\\frac{\partial}{\partial \beta_i} f\\ is a function, but \\f \frac{\partial}{\partial \beta_i}\\ is still an unapplied operator, waiting for something to act on. So, unlike \\c \tilde{x}= \tilde{x}c\\, the operator cannot move to the other side of \\f\\ without changing the meaning. Putting the row-vector operator on the right of \\f\\ gives the row-vector derivative only under the convention that it acts on the factor to its left.
 > - **Products cannot be regrouped.** An operator acts on the whole product to its right, so by the [product rule](calculus.llms.md#thm-product-rule), \\\frac{\partial}{\partial \beta_i} (f g) \ne \mathopen{}\left(\frac{\partial}{\partial \beta_i} f\right)\mathclose{} g\\ in general. For example, with \\f(\tilde{\beta}) = \beta_1\\, \\\frac{\partial}{\partial \beta_1} (f f) = 2 \beta_1\\ but \\\mathopen{}\left(\frac{\partial}{\partial \beta_1} f\right)\mathclose{} f = \beta_1\\.
 
 > **NOTE:**
@@ -268,7 +268,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 2](#def-vector-derivative) and [Definition 5](#def-row-vector-derivative), entry \\j\\ of both \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\\ and \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\\ is \\\frac{\partial}{\partial \beta_j} f(\tilde{\beta})\\; the first is a \\p \times 1\\ column and the second a \\1 \times p\\ row with the same entries in the same order, so each is the transpose of the other.
+> *Proof*. By [Definition 2](#def-vector-derivative) and [Definition 5](#def-row-vector-derivative), entry \\j\\ of both \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\\ and \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\\ is \\\frac{\partial}{\partial \beta_j} f(\tilde{\beta})\\; the first is a \\p \times 1\\ column vector and the second a \\1 \times p\\ row vector with the same entries in the same order, so each is the transpose of the other.
 
 > **NOTE:**
 >
@@ -306,7 +306,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 2* (Numerator layout). Some sources use the numerator layout ([Definition 7](#def-jacobian-matrix)) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row: the row-vector derivative ([Definition 5](#def-row-vector-derivative)). Check a source’s layout before combining its formulas with these.
+> *Remark 2* (Numerator layout). Some sources use the numerator layout ([Definition 7](#def-jacobian-matrix)) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative ([Definition 5](#def-row-vector-derivative)). Check a source’s layout before combining its formulas with these.
 
 > **NOTE:**
 >
@@ -723,7 +723,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 > \\ \mathbf{H}\_f(\tilde{x}) = \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} = \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \tag{5}\\
 >
-> Both forms follow the shape rule of matrix multiplication ([Remark 1](#rem-row-derivative-shape)): the \\p \times 1\\ column operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row, giving a \\p \times p\\ matrix.
+> Both forms follow the shape rule of matrix multiplication ([Remark 1](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
 >
 > By [Definition 6](#def-vector-valued-derivative), with \\y_j = \frac{\partial}{\partial x_j} f(\tilde{x})\\, the \\(i, j)\\ entry of the Hessian is
 >
