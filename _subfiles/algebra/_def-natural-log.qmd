@@ -8,7 +8,7 @@ The exponential function takes each positive value at exactly one input,
 so there is exactly one such $y$,
 and $\log : (0, \infty) \to \reals$ is the
 [inverse function](sets-functions.qmd#def-inverse-function)
-of $\exp$ (@def-exponential-function).
+of $\expt$ (@def-exponential-function).
 
 :::
 

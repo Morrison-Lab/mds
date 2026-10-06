@@ -1,7 +1,7 @@
 :::{#def-exponential-function}
 #### Exponential function
 
-The **exponential function** $\exp : \reals \to (0, \infty)$ is
+The **exponential function** $\expt : \reals \to (0, \infty)$ is
 
 $$\expf{x} \eqdef \lim_{n \to \infty} \paren{1 + \frac{x}{n}}^n,$$
 
