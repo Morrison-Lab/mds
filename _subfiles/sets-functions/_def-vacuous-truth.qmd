@@ -1,0 +1,9 @@
+:::{#def-vacuous-truth}
+#### Vacuous truth
+
+A statement of the form "every element of $A$ has property $P$"
+is **vacuously true** when $A$ is the [empty set](#def-empty-set):
+$A$ has no elements,
+so no element of $A$ fails to have property $P$.
+
+:::

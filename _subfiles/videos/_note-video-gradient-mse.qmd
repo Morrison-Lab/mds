@@ -1,5 +1,5 @@
 ::: {.callout-tip title="Videos"}
-Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on gradients of squared-error costs:
+Jon Krohn's "Calculus for Machine Learning" YouTube playlist has videos on gradients of sums and means of squared errors (@def-residual):
 
 - [The Gradient of Quadratic Cost](https://www.youtube.com/watch?v=rhn7ie7JBdA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 - [The Gradient of Mean Squared Error](https://www.youtube.com/watch?v=KLXP2RL0-Vg&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)

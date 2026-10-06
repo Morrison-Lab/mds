@@ -1,7 +1,7 @@
-Here the objective is a quadratic $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ positive definite,
-and the constraints are $m$ linear equations $\tp{\matr{A}} \vx = \vecf{b}$,
+Here the objective (@def-minimization-problem) is a quadratic $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ positive definite,
+and the constraints (@def-feasible-set) are $m$ linear equations $\tp{\matr{A}} \vx = \vecf{b}$,
 where $\matr{A}$ is a $p \times m$ matrix and $\vecf{b} \in \reals^m$.
 The only stationary point of the objective alone (@def-stationary-point) is $\vzero_{p \times 1}$
 (its gradient is $\matr{S} \vx$, and $\matr{S}$ is invertible), which may not satisfy the constraints.
 A Lagrange multiplier adds one unknown per constraint,
-and the constrained minimizer is then found among the stationary points of a new function of the extended set of unknowns.
+and the minimizer over the feasible set (@def-feasible-set) is then found among the stationary points of a new function of the extended set of unknowns.

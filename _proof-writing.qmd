@@ -1,4 +1,4 @@
-This page collects general advice on how to write [proofs](notation.qmd#def-proof) and derivations.
+This page collects general advice on how to write [proofs](notation.qmd#def-proof) and [derivations](notation.qmd#def-derivation).
 The goal of a proof is not just to convince yourself that a [result](notation.qmd#def-theorem) is true;
 it is to convince a *reader*,
 and to show them *why* it is true.

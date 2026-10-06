@@ -1,0 +1,15 @@
+:::{#exm-idempotent-indicator}
+#### Idempotent numbers and indicators
+
+- $0$ and $1$ are idempotent: $0 \cd 0 = 0$ and $1 \cd 1 = 1$.
+- $2$ is not idempotent: $2 \cd 2 = 4 \neq 2$.
+- Every indicator function $\indic{A}$ is idempotent,
+  because each of its values is $0$ or $1$.
+  For example, with $A = [0, \infty)$,
+  $\indic{A}(3.5) \cd \indic{A}(3.5) = 1 \cd 1 = 1 = \indic{A}(3.5)$.
+
+The [idempotent matrices](linear-algebra.qmd#def-idempotent-matrix)
+of linear algebra satisfy the same equation with matrix multiplication:
+$\matr{M}^2 = \matr{M}$ for a square matrix $\matr{M}$.
+
+:::

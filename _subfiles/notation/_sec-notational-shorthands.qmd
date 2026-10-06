@@ -1,3 +1,15 @@
+{{< include mds/_subfiles/notation/_def-lower-upper-limits.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-lower-upper-limits.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_rem-limits-two-meanings.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#def-notational-shorthand}
 #### Notational shorthand
 
@@ -50,6 +62,7 @@ For example,
 if $x$ is the number of heads in two tosses of a coin,
 then $\rangef{x} = \cb{0, 1, 2}$.
 A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$
+(defined in the Morrison Lab's probability notes)
 is a [function](sets-functions.qmd#def-function),
 and the set of values $X$ can take, $\rangef{X}$,
 is the [image](sets-functions.qmd#def-image) of $X$.

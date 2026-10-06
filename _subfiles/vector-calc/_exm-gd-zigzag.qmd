@@ -4,7 +4,7 @@
 Let $f(\vx) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)$ with $b > 0$,
 so $\deriv{\vx} f(\vx) = \tp{(x_1,\ b x_2)}$
 and one gradient step of length $s$ from $\vx$ gives $\tp{((1 - s) x_1,\ (1 - b s) x_2)}$.
-For exact line search, let $\phi(s) \eqdef f$ at that point:
+For exact line search (@def-line-search), let $\phi(s) \eqdef f$ at that point:
 
 $$
 \ba

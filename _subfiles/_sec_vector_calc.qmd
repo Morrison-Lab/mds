@@ -28,6 +28,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-direction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-level-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_fig-gradient-explorer.qmd >}}
 
 {{< slidebreak >}}
@@ -47,6 +55,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-vector-valued-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-jacobian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-numerator-layout.qmd >}}
 
 {{< slidebreak >}}
 
@@ -134,6 +150,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-residual.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-gradient-mse.qmd >}}
 
 {{< slidebreak >}}
@@ -166,6 +186,22 @@
 {{< include mds/_subfiles/vector-calc/_prose-optim-attribution.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_intro-optim.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-difference-quotient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-second-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-ball.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-second-partial-derivative.qmd >}}
 
 {{< slidebreak >}}
 
@@ -230,6 +266,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-half-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-convex-intersection.qmd >}}
 
 {{< slidebreak >}}
@@ -250,6 +290,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-tangent-plane.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-convex-first-order.qmd >}}
 
 {{< slidebreak >}}
@@ -264,6 +308,12 @@
 
 {{< include mds/_subfiles/vector-calc/_prose-lagrange-attribution.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-minimization-problem.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_intro-lagrange.qmd >}}
 
 {{< slidebreak >}}
@@ -276,11 +326,19 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-sensitivity.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_cor-qp-sensitivity.qmd >}}
 
 ## Newton's method and gradient descent {#sec-descent}
 
 {{< include mds/_subfiles/vector-calc/_prose-descent-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-vector-sequence-limit.qmd >}}
 
 {{< slidebreak >}}
 
@@ -309,6 +367,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-gradient-descent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-line-search.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-descent-direction.qmd >}}
 
 {{< slidebreak >}}
 

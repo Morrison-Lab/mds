@@ -1,0 +1,15 @@
+:::{#exm-product-sigma-algebra}
+#### Product $\sigma$-algebras
+
+- Give the die rolls $D$ the $\sigma$-algebra $\mathscr{S}$ of all its subsets.
+  Each single pair $\set{(a, b)} = \set{a} \times \set{b}$ in $D \times D$
+  is a measurable rectangle.
+  Every subset of $D \times D$ is a union of finitely many single pairs,
+  and $\mathscr{S} \otimes \mathscr{S}$ contains finite unions of its sets
+  (@thm-sigma-algebra-closure), as well as $\emptyset$,
+  so $\mathscr{S} \otimes \mathscr{S}$ is the collection of all subsets of $D \times D$.
+- The rectangle $[0, 2] \times [0, 3]$
+  is a measurable rectangle for the Borel $\sigma$-algebras,
+  so it is in $\mathscr{B} \otimes \mathscr{B}$.
+
+:::

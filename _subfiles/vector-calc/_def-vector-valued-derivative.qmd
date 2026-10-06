@@ -11,7 +11,8 @@ $$
 \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q.
 $$
 
-These notes use this *denominator layout* throughout:
+Writing derivatives this way is the **denominator layout**,
+which these notes use throughout:
 rows index the entries of $\vb$ (the denominator)
 and columns index the entries of $\vy$ (the numerator),
 so column $j$ is the vector derivative $\deriv{\vb} y_j$ (@def-vector-derivative).
@@ -39,29 +40,5 @@ $$
 0 & \beta_1 & 3
 }
 $$
-
-:::
-
-{{< slidebreak >}}
-
-:::{#rem-numerator-layout}
-#### Numerator layout
-
-Some sources use the transposed, *numerator layout*,
-in which the derivative is the $q \times p$ Jacobian matrix
-with $(j, i)$ entry $\deriv{\beta_i} y_j$.
-For example, in numerator layout,
-the derivative in @exm-vector-valued-derivative is the $3 \times 2$ matrix
-
-$$
-\sbmat{
-2\beta_1 & 0 \\
-\beta_2 & \beta_1 \\
-0 & 3
-}
-$$
-
-the transpose of the $2 \times 3$ matrix found there.
-Check a source's layout before combining its formulas with these.
 
 :::

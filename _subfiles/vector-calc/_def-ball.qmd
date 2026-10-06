@@ -1,0 +1,28 @@
+:::{#def-ball}
+#### Open and closed balls
+
+Let $\vx \in \reals^p$ and $r > 0$.
+The **open ball** of radius $r$ around $\vx$ is the set
+$\cb{\vy \in \reals^p : \norm{\vy - \vx} < r}$,
+of points whose distance from $\vx$
+(the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) of the difference)
+is less than $r$.
+The **closed ball** of radius $r$ around $\vx$ is
+$\cb{\vy \in \reals^p : \norm{\vy - \vx} \le r}$.
+The open and closed balls of radius $1$ around $\vzero$
+are the open and closed **unit balls**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-ball}
+#### Points in the unit balls of $\reals^2$
+
+- $\tp{(0.5, 0.5)}$ has $\norm{\tp{(0.5, 0.5)}}^2 = 0.25 + 0.25 = 0.5 < 1$,
+  so it is in both the open and the closed unit ball.
+- $\tp{(0.6, 0.8)}$ has $\norm{\tp{(0.6, 0.8)}}^2 = 0.36 + 0.64 = 1$,
+  so it is in the closed unit ball but not the open one.
+- For $p = 1$, the open ball of radius $r$ around $c$ is the open interval $(c - r, c + r)$.
+
+:::

@@ -1,0 +1,12 @@
+:::{#exm-measure-zero}
+#### Sets of measure zero
+
+- For a [counting measure](#def-counting-measure),
+  only $\emptyset$ has measure zero:
+  a nonempty set has at least one element, so its counting measure is at least $1$.
+- For Lebesgue measure,
+  every single point $\set{a}$ and the integers $\mathbb{Z}$ have measure zero
+  (@exm-lebesgue-measure),
+  although neither set is empty.
+
+:::

@@ -1,0 +1,22 @@
+:::{#def-half-space}
+#### Half-space
+
+Let $\vecf{a} \in \reals^p$ be a nonzero vector and $c$ a real number.
+The set $\cb{\vx \in \reals^p : \tp{\vecf{a}} \vx \ge c}$ is a (closed) **half-space**:
+the points on one side of the boundary $\cb{\vx : \tp{\vecf{a}} \vx = c}$, together with the boundary.
+In $\reals^2$, a half-space is called a **half-plane**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-half-space}
+#### The right half-plane
+
+With $\vecf{a} = \tp{(1, 0)}$ and $c = 0$,
+the half-plane $\cb{\vx \in \reals^2 : x_1 \ge 0}$ is the set of points on or to the right of the $x_2$-axis.
+$\tp{(1, 5)}$ is in it, since $1 \ge 0$;
+$\tp{(0, -3)}$ is in it, on the boundary;
+and $\tp{(-1, 0)}$ is not, since $-1 < 0$.
+
+:::

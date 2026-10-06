@@ -1,0 +1,13 @@
+:::{#rem-limits-two-meanings}
+#### Two meanings of "limit"
+
+The lower and upper limits of a sum or integral (@def-lower-upper-limits)
+are not limits in the calculus sense,
+such as the [limit of a function](calculus.qmd#def-limit)
+or the [limit of a sequence](algebra.qmd#def-sequence-limit).
+They are the ends of the values the index or variable runs over.
+The two meanings meet in an integral such as $\int_0^{\infty} f(x)\,dx$,
+which means $\lim_{b \to \infty} \int_0^b f(x)\,dx$:
+the upper limit $b$ is sent to infinity by a calculus limit.
+
+:::

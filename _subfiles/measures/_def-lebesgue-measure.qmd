@@ -1,0 +1,30 @@
+:::{#def-lebesgue-measure}
+#### Lebesgue measure
+
+**Lebesgue measure** on $\reals$
+is the [measure](#def-measure) $\lambda$
+on the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\mathscr{B}$
+that assigns each [interval](sets-functions.qmd#def-interval) its length:
+for real numbers $a \le b$,
+
+$$\lambda([a, b]) = \lambda((a, b)) = \lambda([a, b)) = \lambda((a, b]) \eqdef b - a,$$
+
+and $\lambda(I) \eqdef \infty$ for each unbounded interval $I$.
+
+**Lebesgue measure on an interval** $I$, such as $[0, 1]$,
+is $\lambda$ applied only to the Borel sets that are subsets of $I$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-lebesgue-measure-exists}
+#### Lebesgue measure exists
+
+Exactly one measure on $\mathscr{B}$ assigns every interval its length;
+constructing it takes more measure theory than these notes cover
+(see [Wikipedia: Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure),
+which also extends $\lambda$ to a larger $\sigma$-algebra,
+the Lebesgue-measurable sets, with the same values on Borel sets).
+
+:::

@@ -1,0 +1,25 @@
+:::{#def-direction}
+#### Direction
+
+A **direction** in $\reals^p$ is given by a nonzero vector $\vecf{d} \in \reals^p$:
+moving from a point $\vx$ in the direction $\vecf{d}$
+means moving to the points $\vx + t \vecf{d}$ with $t > 0$.
+For any $c > 0$, $c \vecf{d}$ reaches the same points (with $t / c$ in place of $t$),
+so $\vecf{d}$ and $c \vecf{d}$ give the same direction.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-direction}
+#### Moving from $\tp{(2, -1)}$ in the direction $\tp{(1, 1)}$
+
+From $\vx = \tp{(2, -1)}$, moving in the direction $\vecf{d} = \tp{(1, 1)}$
+reaches the points $\vx + t \vecf{d} = \tp{(2 + t,\ -1 + t)}$ for $t > 0$,
+such as $\tp{(3, 0)}$ at $t = 1$.
+The vector $\tp{(2, 2)}$ gives the same direction:
+it reaches $\tp{(3, 0)}$ at $t = \tfrac{1}{2}$.
+The vector $\tp{(-1, -1)}$ gives the opposite direction,
+reaching points such as $\tp{(1, -2)}$.
+
+:::

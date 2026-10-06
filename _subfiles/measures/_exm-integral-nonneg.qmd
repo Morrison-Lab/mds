@@ -1,0 +1,34 @@
+:::{#exm-integral-nonneg}
+#### Integrals with respect to counting measure
+
+Let $\mu$ be the counting measure on the die rolls $D$,
+and let $g : D \to [0, \infty)$.
+Every function on $D$ is measurable (@exm-measurable-function).
+
+*The integral is the sum of the values.*
+For any split of $D$ into nonempty pairwise disjoint sets $A_1, \ldots, A_n$:
+
+$$
+\ba
+\sum_{i=1}^{n} \paren{\inf_{x \in A_i} g(x)} \mu(A_i)
+&= \sum_{i=1}^{n} \sum_{x \in A_i} \inf_{y \in A_i} g(y)
+&& \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\
+&\le \sum_{i=1}^{n} \sum_{x \in A_i} g(x)
+&& \text{(an infimum is at most each value)} \\
+&= \sum_{x \in D} g(x)
+&& \text{(each } x \in D \text{ is in exactly one } A_i \text{)}
+\ea
+$$
+
+The split into the six single points $\set{1}, \ldots, \set{6}$
+gives exactly $\sum_{x \in D} g(x)$,
+so the supremum is $\int_D g \, d\mu = \sum_{x \in D} g(x)$.
+For example, with $g(x) = x$, $\int_D g \, d\mu = 1 + 2 + \cdots + 6 = 21$.
+
+*An infinite integral.*
+For the counting measure $\mu$ on $\mathbb{N}$ and the constant function $h(n) = 1$,
+the split with one set, $A_1 = \mathbb{N}$, gives the sum
+$1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty$,
+so $\int_{\mathbb{N}} h \, d\mu = \infty$.
+
+:::

@@ -1,0 +1,29 @@
+:::{#def-measurable-function}
+#### Measurable function
+
+Let $(S, \mathscr{S})$ be a [measurable space](#def-measure-space).
+A [function](sets-functions.qmd#def-function) $f : S \to \reals$
+is **measurable** (with respect to $\mathscr{S}$)
+if, for every real number $c$,
+the set of elements where $f$ is at most $c$ is measurable:
+
+$$\set{s \in S : f(s) \le c} \in \mathscr{S}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-measurable-function-general}
+#### Measurable functions in general
+
+Other sources define a function $f : S \to T$
+between measurable spaces $(S, \mathscr{S})$ and $(T, \mathscr{T})$ to be measurable
+when $\set{s \in S : f(s) \in B} \in \mathscr{S}$ for every $B \in \mathscr{T}$.
+For $T = \reals$ with the [Borel $\sigma$-algebra](#def-borel-sigma-algebra),
+that definition is equivalent to @def-measurable-function
+(see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)).
+For example, with $B = (-\infty, c]$,
+the general definition requires $\set{s \in S : f(s) \le c} \in \mathscr{S}$,
+which is the condition in @def-measurable-function.
+
+:::

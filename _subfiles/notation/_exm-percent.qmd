@@ -1,0 +1,17 @@
+:::{#exm-percent}
+#### Ten percent is one tenth
+
+Contrary to what you may have learned previously,
+the equality $10\% = 0.1$ is true and correct,
+just as $10 \text{kg} = 10,000 \text{g}$ is true and correct:
+
+$$
+\ba
+10\% &= \frac{10}{100}
+&& \text{(definition of percent)}
+\\ &= 0.1
+&& \text{(divide)}
+\ea
+$$
+
+:::

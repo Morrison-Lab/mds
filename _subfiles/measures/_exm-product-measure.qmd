@@ -1,0 +1,14 @@
+:::{#exm-product-measure}
+#### Product measures
+
+- For the counting measure $\mu$ on the die rolls $D$,
+  $(\mu \otimes \mu)(A \times B) = \abs{A} \abs{B}$,
+  the number of pairs in $A \times B$.
+  For example, the set of pairs in which both rolls are even is
+  $\set{2, 4, 6} \times \set{2, 4, 6}$,
+  with $(\mu \otimes \mu)(\set{2, 4, 6} \times \set{2, 4, 6}) = 3 \cdot 3 = 9$ pairs.
+- For Lebesgue measure $\lambda$ on $\reals$,
+  $(\lambda \otimes \lambda)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6$,
+  the area of the rectangle.
+
+:::
