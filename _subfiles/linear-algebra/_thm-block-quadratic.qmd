@@ -3,7 +3,7 @@
 
 Let $k, m \ge 1$, let $\matr{A}$ be a symmetric $k \times k$ matrix,
 $\matr{B}$ a $k \times m$ matrix and $\matr{C}$ a symmetric $m \times m$ matrix,
-and let $\matr{X}$ be the $(k + m) \times (k + m)$ matrix with blocks
+and let $\matr{X}$ be the $(k + m) \times (k + m)$ block matrix (@def-block-matrix)
 
 $$
 \matr{X} = \begin{bmatrix} \underbrace{\matr{A}}_{k \times k} & \underbrace{\matr{B}}_{k \times m} \\ \underbrace{\tp{\matr{B}}}_{m \times k} & \underbrace{\matr{C}}_{m \times m} \end{bmatrix},

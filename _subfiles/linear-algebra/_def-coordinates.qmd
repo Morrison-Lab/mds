@@ -1,0 +1,35 @@
+:::{#def-coordinates}
+#### Coordinates in a basis
+
+Let $\vecf{a}_1, \ldots, \vecf{a}_k$ be a basis of a subspace $\mathcal{S}$ (@def-basis),
+and let $\vecf{x} \in \mathcal{S}$.
+The **coordinates** of $\vecf{x}$ in this basis
+are the numbers $c_1, \ldots, c_k$ with
+$\vecf{x} = c_1 \vecf{a}_1 + \cdots + c_k \vecf{a}_k$,
+and $(c_1, \ldots, c_k) \in \reals^k$ is the **coordinate vector** of $\vecf{x}$.
+By @thm-basis-unique there is exactly one such list of numbers.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-coordinates}
+#### Coordinates of $(4, 1)$ in two bases of $\reals^2$
+
+In the basis $(1, 0), (1, 1)$ of @exm-basis,
+the coordinates of $(4, 1)$ are $3$ and $1$:
+
+$$
+\ba
+3\,(1, 0) + 1\,(1, 1)
+&= (3 + 1,\; 0 + 1)
+&& \text{(@def-linear-combination, entry by entry)}
+\\
+&= (4, 1).
+&& \text{(add)}
+\ea
+$$
+
+In the basis $(1, 0), (0, 1)$, its coordinates are its entries, $4$ and $1$.
+
+:::

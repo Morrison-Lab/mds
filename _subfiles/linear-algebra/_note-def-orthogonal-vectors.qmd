@@ -7,7 +7,7 @@ Orthogonality extends the geometric idea of perpendicular lines
 to vectors with any number of entries.
 In the plane, $(1, 2)$ and $(-2, 1)$ are perpendicular,
 and their dot product is $1 \cd (-2) + 2 \cd 1 = 0$.
-The same test works in three dimensions, where pictures are harder to draw:
+The same test works in $\reals^3$, where pictures are harder to draw:
 $(1, 1, 0) \cdot (1, -1, 5) = 1 - 1 + 0 = 0$,
 so $(1, 1, 0) \perp (1, -1, 5)$.
 

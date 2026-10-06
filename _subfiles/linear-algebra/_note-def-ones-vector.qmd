@@ -8,6 +8,6 @@ is the sum of the entries of $\vx$:
 $\v1 \cdot \vx = \sumip 1 \cd x_i = \sumip x_i$.
 For example, for $\vx = (2, -1, 5)$,
 $\v1 \cdot \vx = 2 + (-1) + 5 = 6$,
-and dividing by the length $p = 3$ gives the mean of the entries, $6 / 3 = 2$.
+and dividing by the length $p = 3$ gives the [mean](#def-mean) of the entries, $6 / 3 = 2$.
 
 :::

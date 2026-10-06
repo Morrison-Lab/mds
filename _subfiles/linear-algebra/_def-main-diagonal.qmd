@@ -1,0 +1,25 @@
+:::{#def-main-diagonal}
+#### Main diagonal
+
+The **main diagonal** of an $m \times n$ matrix $\matr{A}$
+is the list of its entries $a_{11}, a_{22}, \ldots, a_{kk}$,
+where $k$ is the smaller of $m$ and $n$.
+These are the **diagonal entries** of $\matr{A}$;
+every entry $a_{ij}$ with $i \ne j$ is an **off-diagonal entry**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-main-diagonal}
+#### Diagonal entries of a square and a non-square matrix
+
+- For $\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$,
+  the diagonal entries are $a_{11} = 1$ and $a_{22} = 4$,
+  and the off-diagonal entries are $a_{12} = 2$ and $a_{21} = 3$.
+- For $\matr{B} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}$,
+  $m = 2$ and $n = 3$, so $k = 2$,
+  and the diagonal entries are $b_{11} = 1$ and $b_{22} = 5$;
+  the other four entries, $2$, $3$, $4$ and $6$, are off-diagonal.
+
+:::

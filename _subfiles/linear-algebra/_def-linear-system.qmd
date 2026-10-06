@@ -1,0 +1,44 @@
+:::{#def-linear-system}
+#### Linear system
+
+A **linear system** (or *system of linear equations*)
+with $m$ equations in $n$ unknowns is an equation
+$\matr{A} \vx = \vecf{b}$
+in which the $m \times n$ matrix $\matr{A}$ and the vector $\vecf{b} \in \reals^m$ are given.
+A **solution** of the system is a vector $\vx \in \reals^n$
+for which $\matr{A} \vx = \vecf{b}$ holds.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-linear-system}
+#### Two equations in two unknowns
+
+By @def-matvec-mult, row $i$ of $\matr{A} \vx = \vecf{b}$ is the equation
+$a_{i1} x_1 + \cdots + a_{in} x_n = b_i$.
+So the two equations $x_1 + 2 x_2 = 5$ and $3 x_1 + 4 x_2 = 6$
+form the linear system
+$\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \vx = \begin{bmatrix} 5 \\ 6 \end{bmatrix}$.
+The vector $\vx = (-4, 4.5)$ is a solution:
+
+$$
+\ba
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+\begin{bmatrix} -4 \\ 4.5 \end{bmatrix}
+&= \begin{bmatrix} 1 \cd (-4) + 2 \cd 4.5 \\ 3 \cd (-4) + 4 \cd 4.5 \end{bmatrix}
+&& \text{(@def-matvec-mult)}
+\\
+&= \begin{bmatrix} -4 + 9 \\ -12 + 18 \end{bmatrix}
+&& \text{(multiply)}
+\\
+&= \begin{bmatrix} 5 \\ 6 \end{bmatrix}
+&& \text{(add)}
+\ea
+$$
+
+The vector $(1, 2)$ is not a solution:
+its first equation holds, since $1 + 2 \cd 2 = 5$,
+but its second gives $3 \cd 1 + 4 \cd 2 = 11 \ne 6$.
+
+:::
