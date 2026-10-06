@@ -8,9 +8,9 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+  <meta name="generator" content="quarto-1.10.19">
 
   <title>Math for Data Science – Sets and Functions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-06 01:38:24 (PDT)</p>
+  <p class="date">Last modified: 2026-10-06 10:22:24 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -630,7 +630,12 @@ x \in S \setminus \bigcap_{i \in I} A_i
 <section id="functions" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Functions</h2>
 <div id="def-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Function)</strong></span> A <strong>function</strong> <span class="math inline">\(f\)</span> from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(f : A \to B\)</span>, assigns to each element <span class="math inline">\(a \in A\)</span> exactly one element <span class="math inline">\(f(a) \in B\)</span>, called the value of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>. A function is also called a <strong>map</strong> (or <em>mapping</em>) or a <strong>transformation</strong>; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Function)</strong></span> A <strong>function</strong> <span class="math inline">\(f\)</span> from a set <span class="math inline">\(A\)</span> to a set <span class="math inline">\(B\)</span>, written <span class="math inline">\(f : A \to B\)</span>, assigns to each element <span class="math inline">\(a \in A\)</span> exactly one element <span class="math inline">\(f(a) \in B\)</span>.</p>
+<ul>
+<li>The element <span class="math inline">\(a \in A\)</span> is called the <strong>argument</strong> (or <strong>input</strong>) to <span class="math inline">\(f\)</span>.</li>
+<li>The assigned element <span class="math inline">\(f(a) \in B\)</span> is called the <strong>value</strong> (or <strong>output</strong>) of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>.</li>
+</ul>
+<p>A function is also called a <strong>map</strong> (or <em>mapping</em>) or a <strong>transformation</strong>; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -704,6 +709,24 @@ x \in S \setminus \bigcap_{i \in I} A_i
 <p><span class="theorem-title"><strong>Example 17 (The graph of a function on three points)</strong></span> Let <span class="math inline">\(f : \mathopen{}\left\{-1, 0, 2\right\}\mathclose{} \to \mathbb{R}\)</span> with <span class="math inline">\(f(a) = a^2\)</span>. Then <span class="math inline">\(f(-1) = 1\)</span>, <span class="math inline">\(f(0) = 0\)</span>, and <span class="math inline">\(f(2) = 4\)</span>, so the graph of <span class="math inline">\(f\)</span> is <span class="math inline">\(\mathopen{}\left\{(-1, 1), (0, 0), (2, 4)\right\}\mathclose{}\)</span>. The pair <span class="math inline">\((1, 1)\)</span> is not in the graph, because <span class="math inline">\(1\)</span> is not in the domain of <span class="math inline">\(f\)</span>.</p>
 </div>
 </section>
+<section class="slide level2 scrollable">
+
+<div id="rem-function-as-set-of-pairs" class="proof remark">
+<p><span class="proof-title"><em>Remark 7</em> (What a function is fundamentally). </span><a href="#/def-function" class="quarto-xref">Definition&nbsp;16</a> defines what a function <em>does</em>: it assigns an output to each input. In formal set theory, what a function <em>is</em> is described in terms of <a href="#/def-cartesian-product">ordered pairs</a> and its graph (<a href="#/def-graph" class="quarto-xref">Definition&nbsp;21</a>): the set of pairs <span class="math inline">\(G = \mathopen{}\left\{(a, f(a)) : a \in A\right\}\mathclose{} \subseteq A \times B\)</span>. Authors define a function formally in one of two ways:</p>
+<ol type="1">
+<li><strong>As its graph</strong> <span class="citation" data-cites="halmos1974naive">(<a href="#/references" role="doc-biblioref" onclick="">Halmos 1974, sec. 8</a>, p.&nbsp;30)</span>: a function is a subset of <span class="math inline">\(A \times B\)</span> containing exactly one pair <span class="math inline">\((a, b)\)</span> for each <span class="math inline">\(a \in A\)</span>, where <span class="math inline">\(b = f(a)\)</span>, and the statement <span class="math inline">\(f(a) = b\)</span> is notation for <span class="math inline">\((a, b) \in f\)</span>. Under this convention, the codomain <span class="math inline">\(B\)</span> is specified alongside the graph in the declaration <span class="math inline">\(f : A \to B\)</span>.</li>
+<li><strong>As a triple <span class="math inline">\((A, B, G)\)</span></strong>: the function consists of the domain <span class="math inline">\(A\)</span>, the codomain <span class="math inline">\(B\)</span>, and the graph <span class="math inline">\(G \subseteq A \times B\)</span>. This explicit packaging retains the codomain <span class="math inline">\(B\)</span> as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into <span class="math inline">\(\mathbb{R}\)</span> versus into integers).</li>
+</ol>
+<p>For example, the die-doubling function in <a href="#/exm-function" class="quarto-xref">Example&nbsp;14</a> has the graph of six ordered pairs <span class="math inline">\(\mathopen{}\left\{(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 12)\right\}\mathclose{}\)</span>.</p>
+<p>This distinction clarifies what a function is and is not:</p>
+<ul>
+<li><strong>Not an algebraic formula:</strong> A function is not fundamentally an equation or algebraic expression. While many functions are specified by a formula (such as <span class="math inline">\(f(x) = x^2\)</span>), many others cannot be written in closed form (such as empirical measurements or a lookup table), yet every function has a well-defined set of input-output pairs.</li>
+<li><strong>Not a curve:</strong> A curve or plot is a geometric visualization of a function whose domain and codomain are subsets of <span class="math inline">\(\mathbb{R}\)</span>, but functions can map between arbitrary sets (such as sets of words, matrices, or probability distributions).</li>
+<li><strong>Sets of pairs with unique first entries:</strong> Any subset of <span class="math inline">\(A \times B\)</span> in which no two distinct pairs share the same first element defines a function from the set of those first elements to <span class="math inline">\(B\)</span>.</li>
+</ul>
+<p>In computer science, viewing a function as a set of key-value pairs corresponds directly to a <strong>dictionary</strong>, <strong>lookup table</strong>, or <strong>hash map</strong>. Evaluating an expression computes outputs on demand; caching computed outputs <span class="math inline">\((a, f(a))\)</span> on demand to return on future calls without recomputing is known as <strong>memoization</strong>.</p>
+</div>
+</section>
 <section class="slide level2">
 
 <div id="def-composition" class="theorem definition">
@@ -737,7 +760,7 @@ x \in S \setminus \bigcap_{i \in I} A_i
 <section class="slide level2">
 
 <div id="rem-inverse-not-reciprocal" class="proof remark">
-<p><span class="proof-title"><em>Remark 7</em> (<span class="math inline">\(f^{-1}\)</span> is not <span class="math inline">\(1/f\)</span>). </span>The <span class="math inline">\(-1\)</span> in <span class="math inline">\(f^{-1}\)</span> does not mean a reciprocal: <span class="math inline">\(f^{-1}(b)\)</span> is the input that <span class="math inline">\(f\)</span> maps to <span class="math inline">\(b\)</span>, not <span class="math inline">\(\frac{1}{f(b)}\)</span>. For example, with <span class="math inline">\(f(x) = 2x\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(f^{-1}(4) = 2\)</span>, but <span class="math inline">\(\frac{1}{f(4)} = \frac{1}{8}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 8</em> (<span class="math inline">\(f^{-1}\)</span> is not <span class="math inline">\(1/f\)</span>). </span>The <span class="math inline">\(-1\)</span> in <span class="math inline">\(f^{-1}\)</span> does not mean a reciprocal: <span class="math inline">\(f^{-1}(b)\)</span> is the input that <span class="math inline">\(f\)</span> maps to <span class="math inline">\(b\)</span>, not <span class="math inline">\(\frac{1}{f(b)}\)</span>. For example, with <span class="math inline">\(f(x) = 2x\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\(f^{-1}(4) = 2\)</span>, but <span class="math inline">\(\frac{1}{f(4)} = \frac{1}{8}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -778,7 +801,7 @@ x \in S \setminus \bigcap_{i \in I} A_i
 <section class="slide level2">
 
 <div id="rem-cardinality-bars" class="proof remark">
-<p><span class="proof-title"><em>Remark 8</em> (Two meanings of <span class="math inline">\(\mathopen{}\left|\cdot\right|\mathclose{}\)</span>). </span>Applied to a set, the bars <span class="math inline">\(\mathopen{}\left|A\right|\mathclose{}\)</span> mean the cardinality of <span class="math inline">\(A\)</span>. Applied to a number, <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span> means its <a href="./algebra.html#def-absolute-value">absolute value</a>, or its <a href="./algebra.html#def-complex-modulus">modulus</a> when <span class="math inline">\(x\)</span> is complex. For example, <span class="math inline">\(\mathopen{}\left|\mathopen{}\left\{-3\right\}\mathclose{}\right|\mathclose{} = 1\)</span>, but <span class="math inline">\(\mathopen{}\left|-3\right|\mathclose{} = 3\)</span>.</p>
+<p><span class="proof-title"><em>Remark 9</em> (Two meanings of <span class="math inline">\(\mathopen{}\left|\cdot\right|\mathclose{}\)</span>). </span>Applied to a set, the bars <span class="math inline">\(\mathopen{}\left|A\right|\mathclose{}\)</span> mean the cardinality of <span class="math inline">\(A\)</span>. Applied to a number, <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span> means its <a href="./algebra.html#def-absolute-value">absolute value</a>, or its <a href="./algebra.html#def-complex-modulus">modulus</a> when <span class="math inline">\(x\)</span> is complex. For example, <span class="math inline">\(\mathopen{}\left|\mathopen{}\left\{-3\right\}\mathclose{}\right|\mathclose{} = 1\)</span>, but <span class="math inline">\(\mathopen{}\left|-3\right|\mathclose{} = 3\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -825,7 +848,7 @@ x \in S \setminus \bigcap_{i \in I} A_i
 <section class="slide level2">
 
 <div id="rem-cantor-diagonal" class="proof remark">
-<p><span class="proof-title"><em>Remark 9</em> (Cantor’s diagonal argument). </span>The standard <a href="./notation.html#def-proof">proof</a> is Cantor’s diagonal argument: given any sequence of numbers in <span class="math inline">\([0, 1]\)</span>, it builds a number in <span class="math inline">\([0, 1]\)</span> whose <a href="./notation.html#def-real-numbers">decimal expansion</a> differs from the <span class="math inline">\(n\)</span>th number’s in the <span class="math inline">\(n\)</span>th digit (its <span class="math inline">\(n\)</span>th decimal place, one of <span class="math inline">\(0, 1, \ldots, 9\)</span>), so the sequence misses it (see <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Wikipedia: Cantor’s diagonal argument</a>). One way to choose the <span class="math inline">\(n\)</span>th digit is to use <span class="math inline">\(5\)</span>, unless the <span class="math inline">\(n\)</span>th number’s <span class="math inline">\(n\)</span>th digit is <span class="math inline">\(5\)</span>, in which case use <span class="math inline">\(4\)</span>. For example, if the sequence starts <span class="math inline">\(0.1234\ldots\)</span>, <span class="math inline">\(0.3579\ldots\)</span>, <span class="math inline">\(0.2468\ldots\)</span>, the diagonal digits are <span class="math inline">\(1\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span>, so the new number starts <span class="math inline">\(0.545\ldots\)</span>, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.</p>
+<p><span class="proof-title"><em>Remark 10</em> (Cantor’s diagonal argument). </span>The standard <a href="./notation.html#def-proof">proof</a> is Cantor’s diagonal argument: given any sequence of numbers in <span class="math inline">\([0, 1]\)</span>, it builds a number in <span class="math inline">\([0, 1]\)</span> whose <a href="./notation.html#def-real-numbers">decimal expansion</a> differs from the <span class="math inline">\(n\)</span>th number’s in the <span class="math inline">\(n\)</span>th digit (its <span class="math inline">\(n\)</span>th decimal place, one of <span class="math inline">\(0, 1, \ldots, 9\)</span>), so the sequence misses it (see <a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Wikipedia: Cantor’s diagonal argument</a>). One way to choose the <span class="math inline">\(n\)</span>th digit is to use <span class="math inline">\(5\)</span>, unless the <span class="math inline">\(n\)</span>th number’s <span class="math inline">\(n\)</span>th digit is <span class="math inline">\(5\)</span>, in which case use <span class="math inline">\(4\)</span>. For example, if the sequence starts <span class="math inline">\(0.1234\ldots\)</span>, <span class="math inline">\(0.3579\ldots\)</span>, <span class="math inline">\(0.2468\ldots\)</span>, the diagonal digits are <span class="math inline">\(1\)</span>, <span class="math inline">\(5\)</span>, and <span class="math inline">\(6\)</span>, so the new number starts <span class="math inline">\(0.545\ldots\)</span>, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.</p>
 </div>
 </section>
 <section id="extended-non-negative-real-numbers" class="slide level2" data-number="5">
@@ -839,7 +862,7 @@ x \in S \setminus \bigcap_{i \in I} A_i
 <section class="slide level2">
 
 <div id="rem-infinity-arithmetic" class="proof remark">
-<p><span class="proof-title"><em>Remark 10</em> (Arithmetic with <span class="math inline">\(\infty\)</span>). </span><span class="math inline">\(\infty\)</span> is not a real number, so some real-number arithmetic does not extend to it: <span class="math inline">\(\infty - \infty\)</span> is left undefined, and <span class="math inline">\(\infty + 1 = \infty + 2\)</span> does not imply <span class="math inline">\(1 = 2\)</span>. Measure theory uses <span class="math inline">\([0, \infty]\)</span> because the size of a set, such as the length of the whole real line, can be infinite (see <a href="https://en.wikipedia.org/wiki/Extended_real_number_line">Wikipedia: Extended real number line</a>).</p>
+<p><span class="proof-title"><em>Remark 11</em> (Arithmetic with <span class="math inline">\(\infty\)</span>). </span><span class="math inline">\(\infty\)</span> is not a real number, so some real-number arithmetic does not extend to it: <span class="math inline">\(\infty - \infty\)</span> is left undefined, and <span class="math inline">\(\infty + 1 = \infty + 2\)</span> does not imply <span class="math inline">\(1 = 2\)</span>. Measure theory uses <span class="math inline">\([0, \infty]\)</span> because the size of a set, such as the length of the whole real line, can be infinite (see <a href="https://en.wikipedia.org/wiki/Extended_real_number_line">Wikipedia: Extended real number line</a>).</p>
 </div>
 </section>
 <section class="slide level2">
