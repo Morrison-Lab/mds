@@ -19,7 +19,7 @@ Run the Gram-Schmidt process (@def-gram-schmidt) on $\vecf{a}_1, \ldots, \vecf{a
 
 ::: proof
 
-**Parts 1 and 2, by induction on $i$.**
+**Parts 1 and 2, by [induction](proof-writing.qmd#def-proof-by-induction) on $i$.**
 Before step $1$, the list of $\vecf{q}$'s is empty,
 which is orthonormal, and both spans are $\cb{\vzero}$ (@def-span).
 Suppose part 1 holds after step $i - 1$,
