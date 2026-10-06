@@ -4,8 +4,11 @@
 A **function** $f$ from a set $A$ to a set $B$,
 written $f : A \to B$,
 assigns to each element $a \in A$
-exactly one element $f(a) \in B$,
-called the value of $f$ at $a$.
+exactly one element $f(a) \in B$.
+
+- The element $a \in A$ is called the **argument** (or **input**) to $f$.
+- The assigned element $f(a) \in B$ is called the **value** (or **output**) of $f$ at $a$.
+
 A function is also called a **map** (or *mapping*)
 or a **transformation**;
 on this site the three words mean the same thing,
