@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:13:20 (PDT)
+Last modified: 2026-10-05 23:24:49 (PDT)
 
 ## 1 Vectors
 
@@ -1686,7 +1686,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Part 2.** \\\tilde{w} \cdot \tilde{w} = w_1^2 + \cdots + w_p^2 \> 0\\, because some \\w_j \ne 0\\. So \\\tilde{x}^\* \stackrel{\text{def}}{=}-\frac{b}{\tilde{w} \cdot \tilde{w}}\\\tilde{w}\\ is defined, and
 >
-> \\ \begin{aligned} \tilde{w}^\top \tilde{x}^\* + b &= -\frac{b}{\tilde{w} \cdot \tilde{w}}\\(\tilde{w}^\top \tilde{w}) + b && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~82}}\text{)} \\ &= -b + b && \text{(} \tilde{w}^\top \tilde{w} = \tilde{w} \cdot \tilde{w} \text{)} \\ &= 0, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w}^\top \tilde{x}^\* + b &= -\frac{b}{\tilde{w} \cdot \tilde{w}}\\(\tilde{w}^\top \tilde{w}) + b && \text{(homogeneity of } \tilde{x}\mapsto \tilde{w}^\top \tilde{x}\text{, }\href{#thm-matrix-map-linear}{\text{Theorem~12}}\text{)} \\ &= -b + b && \text{(} \tilde{w}^\top \tilde{w} = \tilde{w} \cdot \tilde{w} \text{)} \\ &= 0, && \text{(arithmetic)} \end{aligned} \\
 >
 > so \\\tilde{x}^\* \in \mathcal{H}\\, and \\\mathcal{H}\\ is not empty. Now take any \\\tilde{x}\_0 \in \mathcal{H}\\, so \\\tilde{w}^\top \tilde{x}\_0 = -b\\. For any \\\tilde{x}\in \mathbb{R}^p\\,
 >
@@ -2526,10 +2526,8 @@ Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same de
 Some special matrices appeared earlier:
 
 - the zero matrix ([Definition 21](#def-zero-matrix)), in the section on matrix addition
-- square matrices ([Definition 25](#def-square-matrix))
-- the identity matrix ([Definition 27](#def-identity-matrix))
-
-The last two are in the section on square and identity matrices.
+- square matrices ([Definition 25](#def-square-matrix)), in the section on square and identity matrices
+- the identity matrix ([Definition 27](#def-identity-matrix)), in that same section
 
 > **NOTE:**
 >
