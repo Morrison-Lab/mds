@@ -6,7 +6,7 @@
 2. An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ is linear (@def-linear-map)
    if and only if $\vec{b} = \vzero$.
 3. Every linear map is affine.
-4. An affine map determines its matrix and offset:
+4. An affine map determines $\matr{A}$ and its offset $\vec{b}$:
    if also $f(\vx) = \matr{A}'\vx + \vec{b}'$ for all $\vx$,
    then $\matr{A}' = \matr{A}$ and $\vec{b}' = \vec{b}$.
 
@@ -57,7 +57,7 @@ which is @def-affine-map with $\vec{b} = \vzero$.
 **Part 4.**
 By part 1, applied to each formula, $\vec{b} = f(\vzero) = \vec{b}'$.
 Then $\matr{A}\vx = f(\vx) - \vec{b} = \matr{A}'\vx$ for all $\vx$,
-so $\matr{A}$ and $\matr{A}'$ are both matrices of the linear map
+so $\matr{A}$ and $\matr{A}'$ are both matrices (@def-matrix-of-linear-map) of the linear map
 $\vx \mapsto f(\vx) - \vec{b}$ (linear by @thm-matrix-map-linear),
 and the uniqueness in @thm-linear-map-matrix gives $\matr{A}' = \matr{A}$.
 
@@ -79,15 +79,18 @@ here $m$ already names the number of outputs.)
 
 Machine learning and statistics often call any function of the form
 @eq-linear-scalar "linear",
-as in a *linear layer* of a neural network or a *linear model*,
+as in a *linear model* in statistics or a *linear layer* in a neural network,
 and call the offset $b$ the **bias** (machine learning)
 or the **intercept** (statistics).
 A model with an intercept is affine in $\vx$
 but linear in its coefficients $(b, \vec{w})$,
 and that is the sense of "linear" in "linear model":
-it stays linear in the coefficients even when the inputs are transformed,
-as in polynomial regression.
-Appending a constant $1$ to $\vx$ also makes the model linear in the augmented input,
-with $b$ as the coefficient on that entry.
+it stays linear in the coefficients even when the inputs are transformed:
+$w_1 x + w_2 x^2 + b$ is not affine in $x$,
+but it is linear in $(b, w_1, w_2)$.
+Separately, appending a constant entry $1$ to $\vx$
+turns the affine function $\vec{w}^\top \vx + b$
+into a linear function of the longer vector $(1, \vx)$,
+with $b$ as the coefficient on the new entry.
 
 :::
