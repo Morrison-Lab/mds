@@ -14,34 +14,12 @@ $$
 
 ::: proof
 
-Write $z_{ij}$ for entry $j$ of $\vecf{z}_i$,
-so entry $j$ of $\sum_i c_i \vecf{z}_i$ is $\sum_i c_i z_{ij}$.
-Compare entry $r$ of the two sides, for each $r = 1, \ldots, m$:
-
-$$
-\ba
-\paren{\matr{A} \sum_{i=1}^{k} c_i \vecf{z}_i}_r
-&= \sum_{j=1}^{n} a_{rj} \sum_{i=1}^{k} c_i z_{ij}
-&& \text{(@def-matvec-mult)}
-\\
-&= \sum_{j=1}^{n} \sum_{i=1}^{k} a_{rj}\,c_i z_{ij}
-&& \text{(distribute } a_{rj} \text{ over the inner sum)}
-\\
-&= \sum_{i=1}^{k} \sum_{j=1}^{n} a_{rj}\,c_i z_{ij}
-&& \text{(reorder the finite double sum)}
-\\
-&= \sum_{i=1}^{k} \sum_{j=1}^{n} c_i\,a_{rj} z_{ij}
-&& \text{(multiplication of numbers is commutative)}
-\\
-&= \sum_{i=1}^{k} c_i \sum_{j=1}^{n} a_{rj} z_{ij}
-&& \text{(factor } c_i \text{ out of the inner sum)}
-\\
-&= \sum_{i=1}^{k} c_i\,(\matr{A} \vecf{z}_i)_r
-&& \text{(@def-matvec-mult)}
-\ea
-$$
-
-which is entry $r$ of $\sum_i c_i\,\matr{A} \vecf{z}_i$.
+The function $\vx \mapsto \matr{A}\vx$ is a linear map
+by @thm-matrix-map-linear,
+and a linear map preserves linear combinations
+by @thm-linear-map-lincom.
+Applying that theorem with $f(\vx) = \matr{A}\vx$
+and $\vecf{v}_i = \vecf{z}_i$ gives the identity.
 
 :::
 
