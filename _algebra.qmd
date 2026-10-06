@@ -478,6 +478,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-contour-line.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_exr-double-exponentials.qmd >}}
 
 ## Complex numbers {#sec-complex-numbers}

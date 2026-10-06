@@ -1,9 +1,7 @@
 :::{#def-transitive}
 #### Transitive relation
 
-A relation $\sim$ on a set $S$ is a rule that,
-for each pair $a, b \in S$, says whether $a \sim b$ holds;
-for example, $=$, $<$ and $\le$ are relations on $\reals$.
+Let $\sim$ be a [relation](sets-functions.qmd#def-relation) on a set $S$.
 The relation $\sim$ is **transitive** if,
 for all $a, b, c \in S$,
 $a \sim b$ and $b \sim c$ together imply $a \sim c$.

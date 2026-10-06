@@ -62,8 +62,7 @@ cat(
 ```
 
 **Graph of $b^c - b*c$**.
-A contour line is a curve along which the surface has a constant height.
-The red contour lines are at heights $0$ and $1$;
+The red [contour lines](#def-contour-line) are at heights $0$ and $1$;
 the ones at height $0$ show where $b^c = b*c$.
 
 :::

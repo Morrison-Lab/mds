@@ -1,0 +1,28 @@
+:::{#def-contour-line}
+#### Contour line
+
+For a function $g$ of two real variables $b$ and $c$
+and a number $k$,
+the **contour line** of $g$ at height $k$
+is the set of points where $g$ equals $k$:
+
+$$\cb{(b, c) : g(b, c) = k}$$
+
+On a plot of the surface $z = g(b, c)$,
+it is the curve along which the surface has height $k$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-contour-line}
+#### Contour lines of a bowl
+
+For $g(b, c) = b^2 + c^2$,
+the contour line at height $k = 4$ is $\cb{(b, c) : b^2 + c^2 = 4}$,
+the circle of radius $2$ around $(0, 0)$:
+for example, $g(2, 0) = 4 + 0 = 4$ and $g(0, -2) = 0 + 4 = 4$.
+The contour line at height $k = -1$ is empty,
+because $b^2 + c^2 \ge 0$ for all $b$ and $c$.
+
+:::
