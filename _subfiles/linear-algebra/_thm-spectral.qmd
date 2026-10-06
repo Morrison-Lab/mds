@@ -24,7 +24,7 @@ and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\lambda_i$.
 :::{#rem-spectral-equivalent-form}
 #### An equivalent form of the spectral theorem
 
-The proof, by induction on $p$, is outside the scope of these notes;
+The proof, by [induction](proof-writing.qmd#def-proof-by-induction) on $p$, is outside the scope of these notes;
 see @banerjee2014linear [Chapter 11, Theorem 11.27, p. 349],
 which states the result in the equivalent form
 $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$.

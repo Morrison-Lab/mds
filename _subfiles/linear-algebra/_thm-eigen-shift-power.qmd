@@ -34,7 +34,7 @@ $$
 \ea
 $$
 
-**Part 2, by induction on $k$.**
+**Part 2, by [induction](proof-writing.qmd#def-proof-by-induction) on $k$.**
 For $k = 1$ it is the assumption.
 If $\matr{A}^{k-1} \vecf{v} = \lambda^{k-1} \vecf{v}$, then
 
