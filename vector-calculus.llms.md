@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:48:06 (PDT)
+Last modified: 2026-10-05 23:57:28 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -1352,7 +1352,7 @@ Here the objective ([Definition 23](#def-minimization-problem)) is a quadratic 
 >
 > This section is adapted from the Newton-Raphson and gradient descent parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra.llms.md#sec-subspaces)). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is \\\tfrac{1}{2}(b^2 + b)\\, not \\\tfrac{1}{2}(1 + b^2)\\ as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for \\\tilde{x}^{(1)}\\ has \\\tilde{x}^{(1)}\\ on its right side where \\\tilde{x}^{(0)}\\ is meant. These parts of the source are not part of this section:
 >
-> - the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and line search)
+> - the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and shortening the Newton step by a search along its direction)
 > - its remark that Hessians are expensive to compute
 > - the convergence-rate theorem for strongly convex functions
 > - gradient descent with momentum, and its optimal parameters

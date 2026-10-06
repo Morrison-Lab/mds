@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 23:48:06 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 23:57:28 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -2915,7 +2915,7 @@ f(\tilde{x}^*)
 <div class="callout-content">
 <p>This section is adapted from the Newton-Raphson and gradient descent parts of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is <span class="math inline">\(\tfrac{1}{2}(b^2 + b)\)</span>, not <span class="math inline">\(\tfrac{1}{2}(1 + b^2)\)</span> as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for <span class="math inline">\(\tilde{x}^{(1)}\)</span> has <span class="math inline">\(\tilde{x}^{(1)}\)</span> on its right side where <span class="math inline">\(\tilde{x}^{(0)}\)</span> is meant. These parts of the source are not part of this section:</p>
 <ul>
-<li>the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and line search)</li>
+<li>the quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and shortening the Newton step by a search along its direction)</li>
 <li>its remark that Hessians are expensive to compute</li>
 <li>the convergence-rate theorem for strongly convex functions</li>
 <li>gradient descent with momentum, and its optimal parameters</li>
