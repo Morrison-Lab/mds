@@ -30,7 +30,7 @@ $$\derivf{f}{y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)$$
 
 Let
 
-$$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\paren{-\frac{(x - \mu)^2}{2\sigma^2}}$$
+$$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x - \mu)^2}{2\sigma^2}}$$
 
 Find $\derivf{f}{\mu}$ and $\derivf{f}{\sigma}$.
 
@@ -42,18 +42,18 @@ Find $\derivf{f}{\mu}$ and $\derivf{f}{\sigma}$.
 Treat $\sigma$ as constant. Differentiating the exponential factor via the chain rule:
 
 $$\ba
-\derivf{f}{\mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\exp\paren{-\frac{(x - \mu)^2}{2\sigma^2}} \cd \bracket{-\frac{2(x - \mu)(-1)}{2\sigma^2}}
+\derivf{f}{\mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x - \mu)^2}{2\sigma^2}} \cd \sb{-\frac{2(x - \mu)(-1)}{2\sigma^2}}
 \\
 &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma)
 \ea$$
 
 **2. Derivative with respect to $\sigma$:**
-Write $f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\exp\paren{-\frac{(x - \mu)^2}{2\sigma^2}}$ and apply the product rule:
+Write $f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\exp{-\frac{(x - \mu)^2}{2\sigma^2}}$ and apply the product rule:
 
 $$\ba
-\derivf{f}{\sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\exp\paren{-\frac{(x - \mu)^2}{2\sigma^2}} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\exp\paren{-\frac{(x - \mu)^2}{2\sigma^2}} \cd \bracket{\frac{(x - \mu)^2}{\sigma^3}}
+\derivf{f}{\sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\exp{-\frac{(x - \mu)^2}{2\sigma^2}} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\exp{-\frac{(x - \mu)^2}{2\sigma^2}} \cd \sb{\frac{(x - \mu)^2}{\sigma^3}}
 \\
-&= \bracket{-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}} f(x; \mu, \sigma)
+&= \sb{-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}} f(x; \mu, \sigma)
 \ea$$
 
 *Remark:* Setting $\derivf{f}{\mu} = 0$ and $\derivf{f}{\sigma} = 0$ for a sample of independent observations leads directly to the maximum likelihood estimators $\hat{\mu} = \bar{x}$ and $\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2$.
@@ -66,7 +66,7 @@ $$\ba
 
 Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
-$$f(x, y) = x\exp(x^2 + y^2)$$
+$$f(x, y) = x\exp{x^2 + y^2}$$
 
 (adapted from @problifesavercalc)
 :::
@@ -74,11 +74,11 @@ $$f(x, y) = x\exp(x^2 + y^2)$$
 ::: {.solution}
 With respect to $x$, apply the product rule:
 
-$$\derivf{f}{x} = (1)\exp(x^2 + y^2) + x \cd \bracket{2x\exp(x^2 + y^2)} = (1 + 2x^2)\exp(x^2 + y^2)$$
+$$\derivf{f}{x} = (1)\exp{x^2 + y^2} + x \cd \sb{2x\exp{x^2 + y^2}} = (1 + 2x^2)\exp{x^2 + y^2}$$
 
 With respect to $y$, treat $x$ as constant:
 
-$$\derivf{f}{y} = x \cd \bracket{2y\exp(x^2 + y^2)} = 2xy\exp(x^2 + y^2)$$
+$$\derivf{f}{y} = x \cd \sb{2y\exp{x^2 + y^2}} = 2xy\exp{x^2 + y^2}$$
 :::
 
 {{< slidebreak >}}

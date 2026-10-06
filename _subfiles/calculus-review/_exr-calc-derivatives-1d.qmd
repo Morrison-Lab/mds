@@ -116,15 +116,15 @@ $$f'(x) = 0$$
 
 Find the derivative of
 
-$$f(x) = \exp\paren{-\frac{x^2}{2}}$$
+$$f(x) = \exp{-\frac{x^2}{2}}$$
 
 (adapted from @problifesavercalc)
 :::
 
 ::: {.solution}
-Apply the chain rule (@thm-chain-rule) with outer function $\exp(u)$ and inner function $u(x) = -x^2/2$. Since $\dif{}{u}\exp(u) = \exp(u)$ (@thm-deriv-exp) and $u'(x) = -x$:
+Apply the chain rule (@thm-chain-rule) with outer function $\exp{u}$ and inner function $u(x) = -x^2/2$. Since $\dif{}{u}\exp{u} = \exp{u}$ (@thm-deriv-exp) and $u'(x) = -x$:
 
-$$f'(x) = u'(x)\exp(u(x)) = -x\exp\paren{-\frac{x^2}{2}}$$
+$$f'(x) = u'(x)\exp{u(x)} = -x\exp{-\frac{x^2}{2}}$$
 :::
 
 {{< slidebreak >}}
@@ -134,18 +134,18 @@ $$f'(x) = u'(x)\exp(u(x)) = -x\exp\paren{-\frac{x^2}{2}}$$
 
 Find the second derivative of
 
-$$f(x) = \exp\paren{-\frac{x^2}{2}}$$
+$$f(x) = \exp{-\frac{x^2}{2}}$$
 
 (adapted from @problifesavercalc)
 :::
 
 ::: {.solution}
-From @exr-miller-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp(-x^2/2)$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp(-x^2/2)$:
+From @exr-miller-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp{-x^2/2}$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp{-x^2/2}$:
 
 $$\ba
 u'(x) &= -1
 \\
-v'(x) &= -x\exp\paren{-\frac{x^2}{2}}
+v'(x) &= -x\exp{-\frac{x^2}{2}}
 \ea$$
 
 Therefore:
@@ -153,9 +153,9 @@ Therefore:
 $$\ba
 f''(x) &= u'(x)v(x) + u(x)v'(x)
 \\
-&= (-1)\exp\paren{-\frac{x^2}{2}} + (-x)\bracket{-x\exp\paren{-\frac{x^2}{2}}}
+&= (-1)\exp{-\frac{x^2}{2}} + (-x)\sb{-x\exp{-\frac{x^2}{2}}}
 \\
-&= (x^2 - 1)\exp\paren{-\frac{x^2}{2}}
+&= (x^2 - 1)\exp{-\frac{x^2}{2}}
 \ea$$
 :::
 
@@ -166,20 +166,20 @@ f''(x) &= u'(x)v(x) + u(x)v'(x)
 
 Find the derivative of
 
-$$f(x) = \exp(x^8)\cos(3x^4)$$
+$$f(x) = \exp{x^8}\cos(3x^4)$$
 
 (adapted from @problifesavercalc)
 :::
 
 ::: {.solution}
-Apply the product rule (@thm-product-rule) to $u(x) = \exp(x^8)$ and $v(x) = \cos(3x^4)$:
+Apply the product rule (@thm-product-rule) to $u(x) = \exp{x^8}$ and $v(x) = \cos(3x^4)$:
 
 $$f'(x) = u'(x)v(x) + u(x)v'(x)$$
 
 Compute $u'(x)$ and $v'(x)$ via the chain rule (@thm-chain-rule):
 
 $$\ba
-u'(x) &= 8x^7 \exp(x^8)
+u'(x) &= 8x^7 \exp{x^8}
 \\
 v'(x) &= -12x^3 \sin(3x^4)
 \ea$$
@@ -187,9 +187,9 @@ v'(x) &= -12x^3 \sin(3x^4)
 Substitute both derivatives into the product rule:
 
 $$\ba
-f'(x) &= 8x^7 \exp(x^8)\cos(3x^4) - 12x^3 \exp(x^8)\sin(3x^4)
+f'(x) &= 8x^7 \exp{x^8}\cos(3x^4) - 12x^3 \exp{x^8}\sin(3x^4)
 \\
-&= 4x^3 \exp(x^8)\bracket{2x^4 \cos(3x^4) - 3\sin(3x^4)}
+&= 4x^3 \exp{x^8}\sb{2x^4 \cos(3x^4) - 3\sin(3x^4)}
 \ea$$
 :::
 
@@ -242,7 +242,7 @@ The approximation error is $|4.171593 - 4.171543| \approx 0.00005$, on the order
 
 Find the second derivative of
 
-$$f(x) = \ln x + \sqrt{162}$$
+$$f(x) = \log x + \sqrt{162}$$
 
 for $x > 0$.
 
@@ -429,15 +429,15 @@ $$f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x$$
 Differentiate each term via the product rule:
 
 $$\ba
-\dif{}{x}\bracket{(4x^3 + 6x)\cos x} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x
+\dif{}{x}\sb{(4x^3 + 6x)\cos x} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x
 \\
-\dif{}{x}\bracket{-(x^4 + 3x^2 + 8)\sin x} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x
+\dif{}{x}\sb{-(x^4 + 3x^2 + 8)\sin x} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x
 \ea$$
 
 Combining and grouping like trigonometric terms:
 
 $$\ba
-f''(x) &= \bracket{(12x^2 + 6) - (x^4 + 3x^2 + 8)}\cos x - 2(4x^3 + 6x)\sin x
+f''(x) &= \sb{(12x^2 + 6) - (x^4 + 3x^2 + 8)}\cos x - 2(4x^3 + 6x)\sin x
 \\
 &= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x
 \ea$$

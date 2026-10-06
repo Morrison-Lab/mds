@@ -19,7 +19,7 @@ $$\int_0^1 (x^4 + x^2 + 1)\,dx$$
 Integrate term by term using the power rule for integration:
 
 $$\ba
-\int_0^1 (x^4 + x^2 + 1)\,dx &= \bracket{\frac{x^5}{5} + \frac{x^3}{3} + x}_0^1
+\int_0^1 (x^4 + x^2 + 1)\,dx &= \sb{\frac{x^5}{5} + \frac{x^3}{3} + x}_0^1
 \\
 &= \paren{\frac{1}{5} + \frac{1}{3} + 1} - 0 = \frac{3 + 5 + 15}{15} = \frac{23}{15}
 \ea$$
@@ -42,11 +42,11 @@ Notice that the integrand is a perfect square: $x^2 + 2x + 1 = (x + 1)^2$.
 
 With substitution $u = x + 1$ (where $du = dx$):
 
-$$\int_0^1 (x + 1)^2\,dx = \bracket{\frac{(x + 1)^3}{3}}_0^1 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{8 - 1}{3} = \frac{7}{3}$$
+$$\int_0^1 (x + 1)^2\,dx = \sb{\frac{(x + 1)^3}{3}}_0^1 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{8 - 1}{3} = \frac{7}{3}$$
 
 *Alternative (term by term):*
 
-$$\bracket{\frac{x^3}{3} + x^2 + x}_0^1 = \frac{1}{3} + 1 + 1 = \frac{7}{3}$$
+$$\sb{\frac{x^3}{3} + x^2 + x}_0^1 = \frac{1}{3} + 1 + 1 = \frac{7}{3}$$
 :::
 
 {{< slidebreak >}}
@@ -64,11 +64,11 @@ $$\int_0^1 (x^2 + 2x + 1)^2\,dx$$
 ::: {.solution}
 Recognize that $x^2 + 2x + 1 = (x + 1)^2$, so the integrand is:
 
-$$(x^2 + 2x + 1)^2 = \bracket{(x + 1)^2}^2 = (x + 1)^4$$
+$$(x^2 + 2x + 1)^2 = \sb{(x + 1)^2}^2 = (x + 1)^4$$
 
 Using the substitution $u = x + 1$ with $du = dx$:
 
-$$\int_0^1 (x + 1)^4\,dx = \bracket{\frac{(x + 1)^5}{5}}_0^1 = \frac{2^5 - 1^5}{5} = \frac{32 - 1}{5} = \frac{31}{5}$$
+$$\int_0^1 (x + 1)^4\,dx = \sb{\frac{(x + 1)^5}{5}}_0^1 = \frac{2^5 - 1^5}{5} = \frac{32 - 1}{5} = \frac{31}{5}$$
 
 *Remark:* Do not mistakenly write $\int (x^2 + 2x + 1)^2\,dx = \frac{(x^2 + 2x + 1)^3}{3}$; that formula requires the derivative of the inside function ($2x + 2$) to be present as a factor in the integrand.
 :::
@@ -96,7 +96,7 @@ $$\int_{-\pi/2}^{\pi/2} (\sin^3 x \cos x + \sin x \cos x)\,dx = 0$$
 
 *Alternative (by substitution):* Set $u = \sin x$, so $du = \cos x\,dx$. As $x$ ranges from $-\pi/2$ to $\pi/2$, $u$ ranges from $-1$ to $1$:
 
-$$\int_{-1}^1 (u^3 + u)\,du = \bracket{\frac{u^4}{4} + \frac{u^2}{2}}_{-1}^1 = \paren{\frac{1}{4} + \frac{1}{2}} - \paren{\frac{1}{4} + \frac{1}{2}} = 0$$
+$$\int_{-1}^1 (u^3 + u)\,du = \sb{\frac{u^4}{4} + \frac{u^2}{2}}_{-1}^1 = \paren{\frac{1}{4} + \frac{1}{2}} - \paren{\frac{1}{4} + \frac{1}{2}} = 0$$
 :::
 
 {{< slidebreak >}}
@@ -118,7 +118,7 @@ $$\int_{-4}^4 (x^3 - 2x)\,dx = 0$$
 
 The even part doubles over the half-interval $[0, 4]$:
 
-$$\int_{-4}^4 (6x^2 - 3)\,dx = 2\int_0^4 (6x^2 - 3)\,dx = 2\bracket{2x^3 - 3x}_0^4 = 2\bracket{2(64) - 3(4)} = 2(128 - 12) = 232$$
+$$\int_{-4}^4 (6x^2 - 3)\,dx = 2\int_0^4 (6x^2 - 3)\,dx = 2\sb{2x^3 - 3x}_0^4 = 2\sb{2(64) - 3(4)} = 2(128 - 12) = 232$$
 :::
 
 {{< slidebreak >}}
@@ -143,7 +143,7 @@ Transform the limits of integration:
 
 Applying the substitution:
 
-$$\int_0^1 \frac{x}{1 + x^2}\,dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\bracket{\log u}_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}$$
+$$\int_0^1 \frac{x}{1 + x^2}\,dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\sb{\log u}_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}$$
 
 *Remark:* When using $u$-substitution with definite integrals, the transformation $x \mapsto u(x)$ must be one-to-one on the domain of integration.
 :::
@@ -172,7 +172,7 @@ Limits:
 
 Substitute:
 
-$$\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\,dx = \frac{1}{3}\int_0^{36} u^8\,du = \frac{1}{3}\bracket{\frac{u^9}{9}}_0^{36} = \frac{36^9}{27}$$
+$$\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\,dx = \frac{1}{3}\int_0^{36} u^8\,du = \frac{1}{3}\sb{\frac{u^9}{9}}_0^{36} = \frac{36^9}{27}$$
 :::
 
 {{< slidebreak >}}
@@ -197,7 +197,7 @@ Limits:
 
 Substitute:
 
-$$\int_0^2 x\cos(3x^2)\,dx = \frac{1}{6}\int_0^{12} \cos u\,du = \frac{1}{6}\bracket{\sin u}_0^{12} = \frac{\sin 12}{6}$$
+$$\int_0^2 x\cos(3x^2)\,dx = \frac{1}{6}\int_0^{12} \cos u\,du = \frac{1}{6}\sb{\sin u}_0^{12} = \frac{\sin 12}{6}$$
 :::
 
 {{< slidebreak >}}
@@ -207,7 +207,7 @@ $$\int_0^2 x\cos(3x^2)\,dx = \frac{1}{6}\int_0^{12} \cos u\,du = \frac{1}{6}\bra
 
 Evaluate the improper integral:
 
-$$\int_0^\infty x\exp\paren{-\frac{x^2}{4}}\,dx$$
+$$\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx$$
 
 (adapted from @problifesavercalc)
 :::
@@ -222,7 +222,7 @@ Limits:
 
 Substitute:
 
-$$\int_0^\infty x\exp\paren{-\frac{x^2}{4}}\,dx = 2\int_0^\infty e^{-u}\,du = 2\bracket{-e^{-u}}_0^\infty = 2\paren{0 - (-1)} = 2$$
+$$\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx = 2\int_0^\infty e^{-u}\,du = 2\sb{-e^{-u}}_0^\infty = 2\paren{0 - (-1)} = 2$$
 
 *Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
 :::
@@ -234,30 +234,30 @@ $$\int_0^\infty x\exp\paren{-\frac{x^2}{4}}\,dx = 2\int_0^\infty e^{-u}\,du = 2\
 
 Evaluate the integral:
 
-$$\int_a^b x^3 \exp\paren{-\frac{x^2}{2}}\,dx$$
+$$\int_a^b x^3 \exp{-\frac{x^2}{2}}\,dx$$
 
 (adapted from @problifesavercalc)
 :::
 
 ::: {.solution}
-Factor the integrand as $x^2 \cd \paren{x \exp(-x^2/2)}$. Set:
+Factor the integrand as $x^2 \cd \paren{x \exp{-x^2/2}}$. Set:
 
-$$u = x^2, \qquad dv = x\exp\paren{-\frac{x^2}{2}}\,dx$$
+$$u = x^2, \qquad dv = x\exp{-\frac{x^2}{2}}\,dx$$
 
-Then $du = 2x\,dx$ and $v = -\exp(-x^2/2)$.
+Then $du = 2x\,dx$ and $v = -\exp{-x^2/2}$.
 
 Using integration by parts ($\int u\,dv = uv - \int v\,du$):
 
 $$\ba
-\int_a^b x^3 \exp\paren{-\frac{x^2}{2}}\,dx &= \bracket{-x^2 \exp\paren{-\frac{x^2}{2}}}_a^b - \int_a^b \bracket{-\exp\paren{-\frac{x^2}{2}}}(2x\,dx)
+\int_a^b x^3 \exp{-\frac{x^2}{2}}\,dx &= \sb{-x^2 \exp{-\frac{x^2}{2}}}_a^b - \int_a^b \sb{-\exp{-\frac{x^2}{2}}}(2x\,dx)
 \\
-&= \bracket{-x^2 \exp\paren{-\frac{x^2}{2}}}_a^b + 2\int_a^b x\exp\paren{-\frac{x^2}{2}}\,dx
+&= \sb{-x^2 \exp{-\frac{x^2}{2}}}_a^b + 2\int_a^b x\exp{-\frac{x^2}{2}}\,dx
 \\
-&= \bracket{-x^2 \exp\paren{-\frac{x^2}{2}}}_a^b + 2\bracket{-\exp\paren{-\frac{x^2}{2}}}_a^b
+&= \sb{-x^2 \exp{-\frac{x^2}{2}}}_a^b + 2\sb{-\exp{-\frac{x^2}{2}}}_a^b
 \\
-&= \bracket{-(x^2 + 2)\exp\paren{-\frac{x^2}{2}}}_a^b
+&= \sb{-(x^2 + 2)\exp{-\frac{x^2}{2}}}_a^b
 \\
-&= (a^2 + 2)\exp\paren{-\frac{a^2}{2}} - (b^2 + 2)\exp\paren{-\frac{b^2}{2}}
+&= (a^2 + 2)\exp{-\frac{a^2}{2}} - (b^2 + 2)\exp{-\frac{b^2}{2}}
 \ea$$
 :::
 

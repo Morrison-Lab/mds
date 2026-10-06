@@ -19,7 +19,7 @@ $$\int_0^2 \int_0^3 5(x^2 y + xy^2 + 2)\,dy\,dx$$
 Integrate with respect to $y$ first:
 
 $$\ba
-\int_0^3 (x^2 y + xy^2 + 2)\,dy &= \bracket{\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y}_{y=0}^3
+\int_0^3 (x^2 y + xy^2 + 2)\,dy &= \sb{\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y}_{y=0}^3
 \\
 &= \frac{9}{2}x^2 + 9x + 6
 \ea$$
@@ -27,11 +27,11 @@ $$\ba
 Now integrate with respect to $x$:
 
 $$\ba
-5\int_0^2 \paren{\frac{9}{2}x^2 + 9x + 6}\,dx &= 5\bracket{\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x}_0^2
+5\int_0^2 \paren{\frac{9}{2}x^2 + 9x + 6}\,dx &= 5\sb{\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x}_0^2
 \\
-&= 5\bracket{\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)}
+&= 5\sb{\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)}
 \\
-&= 5\bracket{12 + 18 + 12} = 5(42) = 210
+&= 5\sb{12 + 18 + 12} = 5(42) = 210
 \ea$$
 
 *(Note: The source text carried an arithmetic slip in the inner coefficient resulting in $190$; the exact value is $210$.)*
@@ -52,12 +52,12 @@ $$\int_0^6 \int_0^5 x e^{-xy}\,dy\,dx$$
 ::: {.solution}
 Integrating with respect to $x$ first requires integration by parts. Integrating with respect to $y$ first is much simpler because the factor of $x$ is already present:
 
-$$\int_0^5 x e^{-xy}\,dy = \bracket{-e^{-xy}}_{y=0}^5 = 1 - e^{-5x}$$
+$$\int_0^5 x e^{-xy}\,dy = \sb{-e^{-xy}}_{y=0}^5 = 1 - e^{-5x}$$
 
 Now integrate with respect to $x$:
 
 $$\ba
-\int_0^6 (1 - e^{-5x})\,dx &= \bracket{x + \frac{1}{5}e^{-5x}}_0^6
+\int_0^6 (1 - e^{-5x})\,dx &= \sb{x + \frac{1}{5}e^{-5x}}_0^6
 \\
 &= \paren{6 + \frac{1}{5}e^{-30}} - \paren{0 + \frac{1}{5}}
 \\
@@ -110,16 +110,16 @@ and confirm the result by reversing the order of integration.
 ::: {.solution}
 **1. Given order ($y$ then $x$):**
 
-$$\int_0^x xy\,dy = x\bracket{\frac{y^2}{2}}_0^x = \frac{x^3}{2}$$
+$$\int_0^x xy\,dy = x\sb{\frac{y^2}{2}}_0^x = \frac{x^3}{2}$$
 
-$$\int_0^1 \frac{x^3}{2}\,dx = \bracket{\frac{x^4}{8}}_0^1 = \frac{1}{8}$$
+$$\int_0^1 \frac{x^3}{2}\,dx = \sb{\frac{x^4}{8}}_0^1 = \frac{1}{8}$$
 
 **2. Reversed order ($x$ then $y$):**
 The triangular region $T = \{(x, y) : 0 \le x \le 1, 0 \le y \le x\}$ is equivalently described by $T = \{(x, y) : 0 \le y \le 1, y \le x \le 1\}$:
 
-$$\int_0^1 \int_y^1 xy\,dx\,dy = \int_0^1 y\bracket{\frac{x^2}{2}}_{x=y}^1\,dy = \int_0^1 \frac{y(1 - y^2)}{2}\,dy$$
+$$\int_0^1 \int_y^1 xy\,dx\,dy = \int_0^1 y\sb{\frac{x^2}{2}}_{x=y}^1\,dy = \int_0^1 \frac{y(1 - y^2)}{2}\,dy$$
 
-$$\int_0^1 \paren{\frac{y}{2} - \frac{y^3}{2}}\,dy = \bracket{\frac{y^2}{4} - \frac{y^4}{8}}_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}$$
+$$\int_0^1 \paren{\frac{y}{2} - \frac{y^3}{2}}\,dy = \sb{\frac{y^2}{4} - \frac{y^4}{8}}_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}$$
 
 Both orders yield $1/8$.
 :::
@@ -147,11 +147,11 @@ $$\int_0^1 \int_y^1 y e^{-xy}\,dx\,dy$$
 
 Now the inner integral has the factor $y$ in place for direct integration with respect to $x$:
 
-$$\int_y^1 y e^{-xy}\,dx = \bracket{-e^{-xy}}_{x=y}^1 = e^{-y^2} - e^{-y}$$
+$$\int_y^1 y e^{-xy}\,dx = \sb{-e^{-xy}}_{x=y}^1 = e^{-y^2} - e^{-y}$$
 
 The double integral becomes:
 
-$$\int_0^1 (e^{-y^2} - e^{-y})\,dy = \int_0^1 e^{-y^2}\,dy - \bracket{-e^{-y}}_0^1 = \int_0^1 e^{-y^2}\,dy - (1 - e^{-1})$$
+$$\int_0^1 (e^{-y^2} - e^{-y})\,dy = \int_0^1 e^{-y^2}\,dy - \sb{-e^{-y}}_0^1 = \int_0^1 e^{-y^2}\,dy - (1 - e^{-1})$$
 
 The term $\int_0^1 e^{-y^2}\,dy$ has no elementary antiderivative; it can be written using the error function $\operatorname{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\,dt$ as $\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) \approx 0.7468$. The overall value is:
 
@@ -173,14 +173,14 @@ $$\int_0^1 \int_0^1 (x^2 + 2xy + y\sqrt{x})\,dy\,dx$$
 ::: {.solution}
 Integrate with respect to $y$ first:
 
-$$\int_0^1 (x^2 + 2xy + y\sqrt{x})\,dy = \bracket{x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}}_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}$$
+$$\int_0^1 (x^2 + 2xy + y\sqrt{x})\,dy = \sb{x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}}_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}$$
 
 Now integrate with respect to $x$:
 
 $$\ba
-\int_0^1 \paren{x^2 + x + \frac{1}{2}x^{1/2}}\,dx &= \bracket{\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{2}\cd\frac{x^{3/2}}{3/2}}_0^1
+\int_0^1 \paren{x^2 + x + \frac{1}{2}x^{1/2}}\,dx &= \sb{\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{2}\cd\frac{x^{3/2}}{3/2}}_0^1
 \\
-&= \bracket{\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{3}x^{3/2}}_0^1
+&= \sb{\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{3}x^{3/2}}_0^1
 \\
 &= \frac{1}{3} + \frac{1}{2} + \frac{1}{3} = \frac{2}{3} + \frac{1}{2} = \frac{7}{6}
 \ea$$
@@ -226,7 +226,7 @@ $$\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy = \sum_{k=1}^n \frac{1}{k} = 1 + \fr
 **Method 1 (integration then geometric series):**
 Integrate with respect to $x$ first:
 
-$$\int_0^1 n(1 - xy)^{n-1}\,dx = \bracket{-\frac{(1 - xy)^n}{y}}_{x=0}^1 = \frac{1 - (1 - y)^n}{y}$$
+$$\int_0^1 n(1 - xy)^{n-1}\,dx = \sb{-\frac{(1 - xy)^n}{y}}_{x=0}^1 = \frac{1 - (1 - y)^n}{y}$$
 
 Use the finite geometric series identity $\sum_{k=0}^{n-1} r^k = \frac{1 - r^n}{1 - r}$ with $r = 1 - y$:
 
@@ -234,7 +234,7 @@ $$\frac{1 - (1 - y)^n}{y} = \sum_{k=0}^{n-1} (1 - y)^k$$
 
 Now integrate each term with respect to $y$ from $0$ to $1$:
 
-$$\int_0^1 (1 - y)^k\,dy = \bracket{-\frac{(1 - y)^{k+1}}{k+1}}_0^1 = \frac{1}{k+1}$$
+$$\int_0^1 (1 - y)^k\,dy = \sb{-\frac{(1 - y)^{k+1}}{k+1}}_0^1 = \frac{1}{k+1}$$
 
 Summing over $k = 0, 1, \dots, n-1$:
 
