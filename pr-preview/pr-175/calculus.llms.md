@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 16:36:56 (PDT)
+Last modified: 2026-10-06 16:45:19 (PDT)
 
 ## 1 Derivatives
 
@@ -469,55 +469,55 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **Exercise 6 (Derivative of the standard Gaussian kernel)** Find the derivative of
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
 >
 > (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the chain rule ([Theorem 8](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}u)\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}u) = \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}u)\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
+> *Solution*. Apply the chain rule ([Theorem 8](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
 >
-> \\f'(x) = u'(x)\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}u(x)) = -x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\
+> \\f'(x) = u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
 
 > **NOTE:**
 >
 > **Exercise 7 (Second derivative of the Gaussian kernel)** Find the second derivative of
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
 >
 > (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. From [Exercise 6](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}-x^2/2)\\. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}-x^2/2)\\:
+> *Solution*. From [Exercise 6](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
 >
-> \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}} \end{aligned}\\
+> \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
 >
 > Therefore:
 >
-> \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1)\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}} + (-x)\bracket{-x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}} \\ &= (x^2 - 1)\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}} \end{aligned}\\
+> \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} + (-x)\mathopen{}\left\[-x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{} \\ &= (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
 
 > **NOTE:**
 >
 > **Exercise 8 (Combining product and chain rules)** Find the derivative of
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8)\cos(3x^4)\\
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4)\\
 >
 > (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8)\\ and \\v(x) = \cos(3x^4)\\:
+> *Solution*. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\ and \\v(x) = \cos(3x^4)\\:
 >
 > \\f'(x) = u'(x)v(x) + u(x)v'(x)\\
 >
 > Compute \\u'(x)\\ and \\v'(x)\\ via the chain rule ([Theorem 8](#thm-chain-rule)):
 >
-> \\\begin{aligned} u'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8) \\ v'(x) &= -12x^3 \sin(3x^4) \end{aligned}\\
+> \\\begin{aligned} u'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} \\ v'(x) &= -12x^3 \sin(3x^4) \end{aligned}\\
 >
 > Substitute both derivatives into the product rule:
 >
-> \\\begin{aligned} f'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8)\cos(3x^4) - 12x^3 \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8)\sin(3x^4) \\ &= 4x^3 \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8)\bracket{2x^4 \cos(3x^4) - 3\sin(3x^4)} \end{aligned}\\
+> \\\begin{aligned} f'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4) - 12x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\sin(3x^4) \\ &= 4x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\mathopen{}\left\[2x^4 \cos(3x^4) - 3\sin(3x^4)\right\]\mathclose{} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -557,7 +557,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **Exercise 10 (Second derivative with an added constant)** Find the second derivative of
 >
-> \\f(x) = \ln x + \sqrt{162}\\
+> \\f(x) = \log x + \sqrt{162}\\
 >
 > for \\x \> 0\\.
 >
@@ -710,11 +710,11 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > Differentiate each term via the product rule:
 >
-> \\\begin{aligned} \frac{d }{d x}\bracket{(4x^3 + 6x)\cos x} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x \\ \frac{d }{d x}\bracket{-(x^4 + 3x^2 + 8)\sin x} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x \end{aligned}\\
+> \\\begin{aligned} \frac{d }{d x}\mathopen{}\left\[(4x^3 + 6x)\cos x\right\]\mathclose{} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x \\ \frac{d }{d x}\mathopen{}\left\[-(x^4 + 3x^2 + 8)\sin x\right\]\mathclose{} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x \end{aligned}\\
 >
 > Combining and grouping like trigonometric terms:
 >
-> \\\begin{aligned} f''(x) &= \bracket{(12x^2 + 6) - (x^4 + 3x^2 + 8)}\cos x - 2(4x^3 + 6x)\sin x \\ &= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x \end{aligned}\\
+> \\\begin{aligned} f''(x) &= \mathopen{}\left\[(12x^2 + 6) - (x^4 + 3x^2 + 8)\right\]\mathclose{}\cos x - 2(4x^3 + 6x)\sin x \\ &= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x \end{aligned}\\
 
 ### 1.5 Taylor series
 
@@ -834,7 +834,7 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 >
 > **Exercise 22 (Taylor series of a composite exponential)** Find the first six terms (up to degree 5) of the Taylor series for
 >
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8)\\
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\
 >
 > at \\x_0 = 0\\.
 >
@@ -844,7 +844,7 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 >
 > *Solution*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
 >
-> \\\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^8) = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
+> \\\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
 >
 > Because the lowest-order variable term is \\x^8\\, all coefficients for powers \\x^1, x^2, x^3, x^4, x^5\\ are zero:
 >
@@ -854,7 +854,7 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 >
 > **Exercise 23 (Taylor expansion of the normal density)** Find the terms up to degree 3 of the Taylor series for the standard normal density
 >
-> \\\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\
+> \\\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
 >
 > at \\x_0 = 0\\.
 >
@@ -864,7 +864,7 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 >
 > *Solution*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
 >
-> \\\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}} = 1 - \frac{x^2}{2} + O(x^4)\\
+> \\\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} = 1 - \frac{x^2}{2} + O(x^4)\\
 >
 > Multiplying by the normalization constant \\1/\sqrt{2\pi}\\:
 >
@@ -1662,7 +1662,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Solution*. Integrate term by term using the power rule for integration:
 >
-> \\\begin{aligned} \int_0^1 (x^4 + x^2 + 1)\\dx &= \bracket{\frac{x^5}{5} + \frac{x^3}{3} + x}\_0^1 \\ &= \mathopen{}\left(\frac{1}{5} + \frac{1}{3} + 1\right)\mathclose{} - 0 = \frac{3 + 5 + 15}{15} = \frac{23}{15} \end{aligned}\\
+> \\\begin{aligned} \int_0^1 (x^4 + x^2 + 1)\\dx &= \mathopen{}\left\[\frac{x^5}{5} + \frac{x^3}{3} + x\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left(\frac{1}{5} + \frac{1}{3} + 1\right)\mathclose{} - 0 = \frac{3 + 5 + 15}{15} = \frac{23}{15} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -1678,11 +1678,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > With substitution \\u = x + 1\\ (where \\du = dx\\):
 >
-> \\\int_0^1 (x + 1)^2\\dx = \bracket{\frac{(x + 1)^3}{3}}\_0^1 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{8 - 1}{3} = \frac{7}{3}\\
+> \\\int_0^1 (x + 1)^2\\dx = \mathopen{}\left\[\frac{(x + 1)^3}{3}\right\]\mathclose{}\_0^1 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{8 - 1}{3} = \frac{7}{3}\\
 >
 > *Alternative (term by term):*
 >
-> \\\bracket{\frac{x^3}{3} + x^2 + x}\_0^1 = \frac{1}{3} + 1 + 1 = \frac{7}{3}\\
+> \\\mathopen{}\left\[\frac{x^3}{3} + x^2 + x\right\]\mathclose{}\_0^1 = \frac{1}{3} + 1 + 1 = \frac{7}{3}\\
 
 > **NOTE:**
 >
@@ -1696,11 +1696,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Solution*. Recognize that \\x^2 + 2x + 1 = (x + 1)^2\\, so the integrand is:
 >
-> \\(x^2 + 2x + 1)^2 = \bracket{(x + 1)^2}^2 = (x + 1)^4\\
+> \\(x^2 + 2x + 1)^2 = \mathopen{}\left\[(x + 1)^2\right\]\mathclose{}^2 = (x + 1)^4\\
 >
 > Using the substitution \\u = x + 1\\ with \\du = dx\\:
 >
-> \\\int_0^1 (x + 1)^4\\dx = \bracket{\frac{(x + 1)^5}{5}}\_0^1 = \frac{2^5 - 1^5}{5} = \frac{32 - 1}{5} = \frac{31}{5}\\
+> \\\int_0^1 (x + 1)^4\\dx = \mathopen{}\left\[\frac{(x + 1)^5}{5}\right\]\mathclose{}\_0^1 = \frac{2^5 - 1^5}{5} = \frac{32 - 1}{5} = \frac{31}{5}\\
 >
 > *Remark:* Do not mistakenly write \\\int (x^2 + 2x + 1)^2\\dx = \frac{(x^2 + 2x + 1)^3}{3}\\; that formula requires the derivative of the inside function (\\2x + 2\\) to be present as a factor in the integrand.
 
@@ -1724,7 +1724,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Alternative (by substitution):* Set \\u = \sin x\\, so \\du = \cos x\\dx\\. As \\x\\ ranges from \\-\pi/2\\ to \\\pi/2\\, \\u\\ ranges from \\-1\\ to \\1\\:
 >
-> \\\int\_{-1}^1 (u^3 + u)\\du = \bracket{\frac{u^4}{4} + \frac{u^2}{2}}\_{-1}^1 = \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} - \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} = 0\\
+> \\\int\_{-1}^1 (u^3 + u)\\du = \mathopen{}\left\[\frac{u^4}{4} + \frac{u^2}{2}\right\]\mathclose{}\_{-1}^1 = \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} - \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} = 0\\
 
 > **NOTE:**
 >
@@ -1742,7 +1742,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > The even part doubles over the half-interval \\\[0, 4\]\\:
 >
-> \\\int\_{-4}^4 (6x^2 - 3)\\dx = 2\int_0^4 (6x^2 - 3)\\dx = 2\bracket{2x^3 - 3x}\_0^4 = 2\bracket{2(64) - 3(4)} = 2(128 - 12) = 232\\
+> \\\int\_{-4}^4 (6x^2 - 3)\\dx = 2\int_0^4 (6x^2 - 3)\\dx = 2\mathopen{}\left\[2x^3 - 3x\right\]\mathclose{}\_0^4 = 2\mathopen{}\left\[2(64) - 3(4)\right\]\mathclose{} = 2(128 - 12) = 232\\
 
 > **NOTE:**
 >
@@ -1763,7 +1763,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Applying the substitution:
 >
-> \\\int_0^1 \frac{x}{1 + x^2}\\dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\bracket{\log u}\_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}\\
+> \\\int_0^1 \frac{x}{1 + x^2}\\dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\mathopen{}\left\[\log u\right\]\mathclose{}\_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}\\
 >
 > *Remark:* When using \\u\\-substitution with definite integrals, the transformation \\x \mapsto u(x)\\ must be one-to-one on the domain of integration.
 
@@ -1788,7 +1788,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\\dx = \frac{1}{3}\int_0^{36} u^8\\du = \frac{1}{3}\bracket{\frac{u^9}{9}}\_0^{36} = \frac{36^9}{27}\\
+> \\\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\\dx = \frac{1}{3}\int_0^{36} u^8\\du = \frac{1}{3}\mathopen{}\left\[\frac{u^9}{9}\right\]\mathclose{}\_0^{36} = \frac{36^9}{27}\\
 
 > **NOTE:**
 >
@@ -1809,13 +1809,13 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\\int_0^2 x\cos(3x^2)\\dx = \frac{1}{6}\int_0^{12} \cos u\\du = \frac{1}{6}\bracket{\sin u}\_0^{12} = \frac{\sin 12}{6}\\
+> \\\int_0^2 x\cos(3x^2)\\dx = \frac{1}{6}\int_0^{12} \cos u\\du = \frac{1}{6}\mathopen{}\left\[\sin u\right\]\mathclose{}\_0^{12} = \frac{\sin 12}{6}\\
 
 > **NOTE:**
 >
 > **Exercise 40 (Improper Gaussian-kernel integral)** Evaluate the improper integral:
 >
-> \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{4}}\\dx\\
+> \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx\\
 >
 > (adapted from Miller ([2016](#ref-problifesavercalc)))
 
@@ -1830,7 +1830,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{4}}\\dx = 2\int_0^\infty e^{-u}\\du = 2\bracket{-e^{-u}}\_0^\infty = 2\mathopen{}\left(0 - (-1)\right)\mathclose{} = 2\\
+> \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx = 2\int_0^\infty e^{-u}\\du = 2\mathopen{}\left\[-e^{-u}\right\]\mathclose{}\_0^\infty = 2\mathopen{}\left(0 - (-1)\right)\mathclose{} = 2\\
 >
 > *Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
 
@@ -1838,21 +1838,21 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > **Exercise 41 (Integration by parts with an exponential factor)** Evaluate the integral:
 >
-> \\\int_a^b x^3 \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\dx\\
+> \\\int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
 >
 > (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}-x^2/2)\right)\mathclose{}\\. Set:
+> *Solution*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\right)\mathclose{}\\. Set:
 >
-> \\u = x^2, \qquad dv = x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\dx\\
+> \\u = x^2, \qquad dv = x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
 >
-> Then \\du = 2x\\dx\\ and \\v = -\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}-x^2/2)\\.
+> Then \\du = 2x\\dx\\ and \\v = -\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\.
 >
 > Using integration by parts (\\\int u\\dv = uv - \int v\\du\\):
 >
-> \\\begin{aligned} \int_a^b x^3 \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\dx &= \bracket{-x^2 \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}}\_a^b - \int_a^b \bracket{-\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}}(2x\\dx) \\ &= \bracket{-x^2 \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}}\_a^b + 2\int_a^b x\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}\\dx \\ &= \bracket{-x^2 \operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}}\_a^b + 2\bracket{-\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}}\_a^b \\ &= \bracket{-(x^2 + 2)\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{x^2}{2}}}\_a^b \\ &= (a^2 + 2)\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{a^2}{2}} - (b^2 + 2)\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{b^2}{2}} \end{aligned}\\
+> \\\begin{aligned} \int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b - \int_a^b \mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}(2x\\dx) \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\int_a^b x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= \mathopen{}\left\[-(x^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= (a^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{a^2}{2}\right\\\mathclose{} - (b^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{b^2}{2}\right\\\mathclose{} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -2239,11 +2239,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution*. Integrate with respect to \\y\\ first:
 >
-> \\\begin{aligned} \int_0^3 (x^2 y + xy^2 + 2)\\dy &= \bracket{\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y}\_{y=0}^3 \\ &= \frac{9}{2}x^2 + 9x + 6 \end{aligned}\\
+> \\\begin{aligned} \int_0^3 (x^2 y + xy^2 + 2)\\dy &= \mathopen{}\left\[\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y\right\]\mathclose{}\_{y=0}^3 \\ &= \frac{9}{2}x^2 + 9x + 6 \end{aligned}\\
 >
 > Now integrate with respect to \\x\\:
 >
-> \\\begin{aligned} 5\int_0^2 \mathopen{}\left(\frac{9}{2}x^2 + 9x + 6\right)\mathclose{}\\dx &= 5\bracket{\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x}\_0^2 \\ &= 5\bracket{\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)} \\ &= 5\bracket{12 + 18 + 12} = 5(42) = 210 \end{aligned}\\
+> \\\begin{aligned} 5\int_0^2 \mathopen{}\left(\frac{9}{2}x^2 + 9x + 6\right)\mathclose{}\\dx &= 5\mathopen{}\left\[\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x\right\]\mathclose{}\_0^2 \\ &= 5\mathopen{}\left\[\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)\right\]\mathclose{} \\ &= 5\mathopen{}\left\[12 + 18 + 12\right\]\mathclose{} = 5(42) = 210 \end{aligned}\\
 >
 > *(Note: The source text carried an arithmetic slip in the inner coefficient resulting in \\190\\; the exact value is \\210\\.)*
 
@@ -2259,11 +2259,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution*. Integrating with respect to \\x\\ first requires integration by parts. Integrating with respect to \\y\\ first is much simpler because the factor of \\x\\ is already present:
 >
-> \\\int_0^5 x e^{-xy}\\dy = \bracket{-e^{-xy}}\_{y=0}^5 = 1 - e^{-5x}\\
+> \\\int_0^5 x e^{-xy}\\dy = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{y=0}^5 = 1 - e^{-5x}\\
 >
 > Now integrate with respect to \\x\\:
 >
-> \\\begin{aligned} \int_0^6 (1 - e^{-5x})\\dx &= \bracket{x + \frac{1}{5}e^{-5x}}\_0^6 \\ &= \mathopen{}\left(6 + \frac{1}{5}e^{-30}\right)\mathclose{} - \mathopen{}\left(0 + \frac{1}{5}\right)\mathclose{} \\ &= \frac{29}{5} + \frac{e^{-30}}{5} \end{aligned}\\
+> \\\begin{aligned} \int_0^6 (1 - e^{-5x})\\dx &= \mathopen{}\left\[x + \frac{1}{5}e^{-5x}\right\]\mathclose{}\_0^6 \\ &= \mathopen{}\left(6 + \frac{1}{5}e^{-30}\right)\mathclose{} - \mathopen{}\left(0 + \frac{1}{5}\right)\mathclose{} \\ &= \frac{29}{5} + \frac{e^{-30}}{5} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -2303,15 +2303,15 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution*. **1. Given order (\\y\\ then \\x\\):**
 >
-> \\\int_0^x xy\\dy = x\bracket{\frac{y^2}{2}}\_0^x = \frac{x^3}{2}\\
+> \\\int_0^x xy\\dy = x\mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_0^x = \frac{x^3}{2}\\
 >
-> \\\int_0^1 \frac{x^3}{2}\\dx = \bracket{\frac{x^4}{8}}\_0^1 = \frac{1}{8}\\
+> \\\int_0^1 \frac{x^3}{2}\\dx = \mathopen{}\left\[\frac{x^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{8}\\
 >
 > **2. Reversed order (\\x\\ then \\y\\):** The triangular region \\T = \\(x, y) : 0 \le x \le 1, 0 \le y \le x\\\\ is equivalently described by \\T = \\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
 >
-> \\\int_0^1 \int_y^1 xy\\dx\\dy = \int_0^1 y\bracket{\frac{x^2}{2}}\_{x=y}^1\\dy = \int_0^1 \frac{y(1 - y^2)}{2}\\dy\\
+> \\\int_0^1 \int_y^1 xy\\dx\\dy = \int_0^1 y\mathopen{}\left\[\frac{x^2}{2}\right\]\mathclose{}\_{x=y}^1\\dy = \int_0^1 \frac{y(1 - y^2)}{2}\\dy\\
 >
-> \\\int_0^1 \mathopen{}\left(\frac{y}{2} - \frac{y^3}{2}\right)\mathclose{}\\dy = \bracket{\frac{y^2}{4} - \frac{y^4}{8}}\_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}\\
+> \\\int_0^1 \mathopen{}\left(\frac{y}{2} - \frac{y^3}{2}\right)\mathclose{}\\dy = \mathopen{}\left\[\frac{y^2}{4} - \frac{y^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}\\
 >
 > Both orders yield \\1/8\\.
 
@@ -2335,11 +2335,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Now the inner integral has the factor \\y\\ in place for direct integration with respect to \\x\\:
 >
-> \\\int_y^1 y e^{-xy}\\dx = \bracket{-e^{-xy}}\_{x=y}^1 = e^{-y^2} - e^{-y}\\
+> \\\int_y^1 y e^{-xy}\\dx = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{x=y}^1 = e^{-y^2} - e^{-y}\\
 >
 > The double integral becomes:
 >
-> \\\int_0^1 (e^{-y^2} - e^{-y})\\dy = \int_0^1 e^{-y^2}\\dy - \bracket{-e^{-y}}\_0^1 = \int_0^1 e^{-y^2}\\dy - (1 - e^{-1})\\
+> \\\int_0^1 (e^{-y^2} - e^{-y})\\dy = \int_0^1 e^{-y^2}\\dy - \mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_0^1 = \int_0^1 e^{-y^2}\\dy - (1 - e^{-1})\\
 >
 > The term \\\int_0^1 e^{-y^2}\\dy\\ has no elementary antiderivative; it can be written using the error function \\\operatorname{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\\dt\\ as \\\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) \approx 0.7468\\. The overall value is:
 >
@@ -2357,11 +2357,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution*. Integrate with respect to \\y\\ first:
 >
-> \\\int_0^1 (x^2 + 2xy + y\sqrt{x})\\dy = \bracket{x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}}\_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}\\
+> \\\int_0^1 (x^2 + 2xy + y\sqrt{x})\\dy = \mathopen{}\left\[x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}\right\]\mathclose{}\_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}\\
 >
 > Now integrate with respect to \\x\\:
 >
-> \\\begin{aligned} \int_0^1 \mathopen{}\left(x^2 + x + \frac{1}{2}x^{1/2}\right)\mathclose{}\\dx &= \bracket{\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{2}\cdot\frac{x^{3/2}}{3/2}}\_0^1 \\ &= \bracket{\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{3}x^{3/2}}\_0^1 \\ &= \frac{1}{3} + \frac{1}{2} + \frac{1}{3} = \frac{2}{3} + \frac{1}{2} = \frac{7}{6} \end{aligned}\\
+> \\\begin{aligned} \int_0^1 \mathopen{}\left(x^2 + x + \frac{1}{2}x^{1/2}\right)\mathclose{}\\dx &= \mathopen{}\left\[\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{2}\cdot\frac{x^{3/2}}{3/2}\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left\[\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{3}x^{3/2}\right\]\mathclose{}\_0^1 \\ &= \frac{1}{3} + \frac{1}{2} + \frac{1}{3} = \frac{2}{3} + \frac{1}{2} = \frac{7}{6} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -2389,7 +2389,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution*. **Method 1 (integration then geometric series):** Integrate with respect to \\x\\ first:
 >
-> \\\int_0^1 n(1 - xy)^{n-1}\\dx = \bracket{-\frac{(1 - xy)^n}{y}}\_{x=0}^1 = \frac{1 - (1 - y)^n}{y}\\
+> \\\int_0^1 n(1 - xy)^{n-1}\\dx = \mathopen{}\left\[-\frac{(1 - xy)^n}{y}\right\]\mathclose{}\_{x=0}^1 = \frac{1 - (1 - y)^n}{y}\\
 >
 > Use the finite geometric series identity \\\sum\_{k=0}^{n-1} r^k = \frac{1 - r^n}{1 - r}\\ with \\r = 1 - y\\:
 >
@@ -2397,7 +2397,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Now integrate each term with respect to \\y\\ from \\0\\ to \\1\\:
 >
-> \\\int_0^1 (1 - y)^k\\dy = \bracket{-\frac{(1 - y)^{k+1}}{k+1}}\_0^1 = \frac{1}{k+1}\\
+> \\\int_0^1 (1 - y)^k\\dy = \mathopen{}\left\[-\frac{(1 - y)^{k+1}}{k+1}\right\]\mathclose{}\_0^1 = \frac{1}{k+1}\\
 >
 > Summing over \\k = 0, 1, \dots, n-1\\:
 >

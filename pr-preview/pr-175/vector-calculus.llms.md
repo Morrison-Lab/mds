@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 16:36:56 (PDT)
+Last modified: 2026-10-06 16:45:19 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -94,7 +94,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Let
 >
-> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{(x - \mu)^2}{2\sigma^2}}\\
+> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
 >
 > Find \\\frac{\partial f}{\partial \mu}\\ and \\\frac{\partial f}{\partial \sigma}\\.
 >
@@ -104,11 +104,11 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > *Solution*. **1. Derivative with respect to \\\mu\\:** Treat \\\sigma\\ as constant. Differentiating the exponential factor via the chain rule:
 >
-> \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{(x - \mu)^2}{2\sigma^2}} \cdot\bracket{-\frac{2(x - \mu)(-1)}{2\sigma^2}} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
+> \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
 >
-> **2. Derivative with respect to \\\sigma\\:** Write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{(x - \mu)^2}{2\sigma^2}}\\ and apply the product rule:
+> **2. Derivative with respect to \\\sigma\\:** Write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\ and apply the product rule:
 >
-> \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{(x - \mu)^2}{2\sigma^2}} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\\mathopen{}\left(\right\right)\mathclose{}\\\mathclose{}{-\frac{(x - \mu)^2}{2\sigma^2}} \cdot\bracket{\frac{(x - \mu)^2}{\sigma^3}} \\ &= \bracket{-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}} f(x; \mu, \sigma) \end{aligned}\\
+> \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
 >
 > *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the maximum likelihood estimators \\\hat{\mu} = \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n (x_i - \bar{x})^2\\.
 
@@ -116,7 +116,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > **Exercise 3 (Partial derivatives with exponential of quadratic form)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
-> \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^2 + y^2)\\
+> \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
 >
 > (adapted from Miller ([2016](#ref-problifesavercalc)))
 
@@ -124,11 +124,11 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > *Solution*. With respect to \\x\\, apply the product rule:
 >
-> \\\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^2 + y^2) + x \cdot\bracket{2x\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^2 + y^2)} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^2 + y^2)\\
+> \\\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
 >
 > With respect to \\y\\, treat \\x\\ as constant:
 >
-> \\\frac{\partial f}{\partial y} = x \cdot\bracket{2y\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^2 + y^2)} = 2xy\operatorname{exp}\mathopen{}\left\\(\right\\\mathclose{}x^2 + y^2)\\
+> \\\frac{\partial f}{\partial y} = x \cdot\mathopen{}\left\[2y\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = 2xy\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
 
 > **NOTE:**
 >
