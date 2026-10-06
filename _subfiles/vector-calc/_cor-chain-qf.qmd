@@ -39,7 +39,7 @@ applied to the $n \times 1$ vector $\vec\eps$ in place of $\vb$.
 #### Derivative of the residual sum of squares
 
 Let $\vy$ ($n \times 1$) and $\mX$ ($n \times p$) be constant with respect to $\vb$,
-and let $\vec\eps(\vb) = \vy - \mX\vb$ be the vector of residuals.
+and let $\vec\eps(\vb) = \vy - \mX\vb$ be the residual vector (@def-residual).
 By @thm-deriv-linear-map, $\deriv{\vb}(\mX\vb) = \tp{\mX}$,
 and $\deriv{\vb}\vy = \matr{0}_{p \times n}$ because $\vy$ is constant,
 so $\deriv{\vb}\vec\eps = -\tp{\mX}$ ($p \times n$).

@@ -18,6 +18,9 @@ Some sources write the same row as $\deriv{\tp{\vb}} f(\vb)$,
 with the operator on the left,
 read as each operator $\deriv{\beta_i}$ applied to $f$ rather than as a matrix product
 (see @rem-row-derivative-shape).
+
+The row-vector derivative is also called the **total derivative** of $f$,
+the name used when the derivative of a scalar-valued function is written as a row.
 :::
 
 {{< slidebreak >}}

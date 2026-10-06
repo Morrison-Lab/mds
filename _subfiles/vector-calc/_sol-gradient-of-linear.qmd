@@ -23,7 +23,7 @@ for the same reason the derivative of $f(w) = cw$ is $c$ no matter where it
 is evaluated.
 
 A constant gradient is the easy case, and it is not the case we usually face.
-Most objectives are curved --- the squared error of a linear model is the standard example ---
+Most functions we minimize are curved --- the residual sum of squares of a linear model (@def-residual) is the standard example ---
 so their gradient changes from point to point
 and the downhill direction has to be worked out afresh at every step.
 
