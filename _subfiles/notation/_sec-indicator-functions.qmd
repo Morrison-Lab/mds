@@ -146,9 +146,12 @@ $$
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
 $$
 
+{{< include mds/_subfiles/notation/_def-support.qmd >}}
+
+{{< slidebreak >}}
+
 Set notation is more natural when the underlying set $A$ has a standard name
-(such as the support of a distribution,
-the set of values where its probability or density is positive,
+(such as the support of a distribution (@def-support),
 or a geometric region).
 Predicate notation is more natural when the condition involves compound inequalities,
 such as $\indicp{0 \le t \le u}$.
@@ -293,6 +296,11 @@ and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
 ### Key algebraic properties
 
+Indicator functions translate the logical connectives (@def-logical-connective)
+"and", "or", and "not", applied to set membership,
+into ordinary arithmetic on real numbers.
+One of the identities below uses idempotence:
+
 {{< include mds/_subfiles/notation/_def-idempotent.qmd >}}
 
 {{< slidebreak >}}
@@ -301,9 +309,6 @@ and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
 {{< slidebreak >}}
 
-Indicator functions translate the logical connectives (@def-logical-connective)
-"and", "or", and "not", applied to set membership,
-into ordinary arithmetic on real numbers.
 For subsets $A$ and $B$ of $\Omega$,
 with [complement](sets-functions.qmd#def-complement) $A^c \eqdef \Omega \setminus A$,
 and for every $x \in \Omega$:
