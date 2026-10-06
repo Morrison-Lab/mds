@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 15:14:37 (PDT)
+Last modified: 2026-10-05 17:21:55 (PDT)
 
 ## 1 Equalities
 
@@ -620,13 +620,45 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Theorem 23 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 23 (Powers of 1 and first powers)** For every \\b \in \mathbb{R}\\,
+>
+> \\1^b = 1,\\
+>
+> and for every \\a \in \mathbb{R}\\,
+>
+> \\a^1 = a.\\
+
+> **NOTE:**
+>
+> **Theorem 24 (Power of a sum)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+>
+> \\a^{b+c} = a^b \cdot a^c\\
+
+> **NOTE:**
+>
+> **Example 17 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
+
+> **NOTE:**
+>
+> **Theorem 25 (Power of a product)** If \\a, b \> 0\\ and \\c \in \mathbb{R}\\, then
+>
+> \\(ab)^c = a^c \cdot b^c\\
+>
+> When \\c\\ is a positive integer, the same identity holds for all \\a, b \in \mathbb{R}\\, because both sides are products of \\c\\ copies of \\a\\ and \\c\\ copies of \\b\\, which can be regrouped by [Theorem 12](#thm-prod-symmetric) and [Theorem 13](#thm-prod-assoc).
+
+> **NOTE:**
+>
+> **Example 18 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
+
+> **NOTE:**
+>
+> **Theorem 26 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
 
 > **NOTE:**
 >
-> **Example 17 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 19 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >
@@ -634,11 +666,23 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} \mathopen{}\left(a^b\right)\mathclose{}^c &= \mathopen{}\left((-1)^2\right)\mathclose{}^{\frac{1}{2}} \\ &= 1^{\frac{1}{2}} \\ &= 1 \end{aligned} \\
 >
-> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 23](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
+> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 26](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
 
 > **NOTE:**
 >
 > **Corollary 3 (natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
+
+> **NOTE:**
+>
+> *Remark 13* (Tarski’s high school identities). Restricted to positive integers, the following results are [Tarski’s eleven “high school” identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
+>
+> - sums are symmetric and associative ([Theorem 9](#thm-sum-symmetric), [Theorem 10](#thm-sum-assoc));
+> - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 11](#thm-mult-one), [Theorem 12](#thm-prod-symmetric), [Theorem 13](#thm-prod-assoc), [Theorem 15](#thm-mult-distr));
+> - \\1^b = 1\\, \\a^1 = a\\, and the power of a sum, of a product, and of a power ([Theorem 23](#thm-power-one), [Theorem 24](#thm-power-sum), [Theorem 25](#thm-power-product), [Theorem 26](#thm-double-exp)).
+
+> **NOTE:**
+>
+> *Remark 14* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 13](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
@@ -791,7 +835,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > Split on whether \\a \> 0\\ or \\a = 0\\, because the logarithm we use for \\a \> 0\\ is undefined at \\a = 0\\.
 >
-> **Case \\a \> 0\\.** By [Theorem 23](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 21](#thm-log-exp)):
+> **Case \\a \> 0\\.** By [Theorem 26](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 21](#thm-log-exp)):
 >
 > \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
@@ -834,7 +878,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 18 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
+> **Example 20 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
 >
 > \\ \begin{aligned} i^3 &= i^2 \cdot i && \text{(split off one factor of } i \text{)} \\ &= (-1) \cdot i && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= -i && \text{(multiply)} \end{aligned} \\
 >
@@ -850,7 +894,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 19 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
+> **Example 21 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
 >
 > - if \\x \ge 0\\, then \\x^2 = x \cdot x\\ is a product of two nonnegative numbers, so \\x^2 \ge 0\\;
 > - if \\x \< 0\\, then \\x^2 = x \cdot x\\ is a product of two negative numbers, so \\x^2 \> 0\\.
@@ -875,7 +919,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Example 20 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
+> **Example 22 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
 >
 > The numbers \\1 + i\\ and \\1 - i\\ have the same real part, \\1\\, but different imaginary parts, \\1\\ and \\-1\\, so they are different complex numbers.
 >
@@ -883,7 +927,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Theorem 24 (Adding and multiplying complex numbers)** For real numbers \\a, b, c, d\\:
+> **Theorem 27 (Adding and multiplying complex numbers)** For real numbers \\a, b, c, d\\:
 >
 > \\(a + b\\i) + (c + d\\i) = (a + c) + (b + d)\\i\\
 >
@@ -905,15 +949,15 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two form
 
 > **NOTE:**
 >
-> **Example 21 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
+> **Example 23 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
 >
-> \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~24}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~27}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
 >
 > and their product, multiplying out directly, is
 >
 > \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
 >
-> The product formula in [Theorem 24](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
+> The product formula in [Theorem 27](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
 
 > **NOTE:**
 >
@@ -925,7 +969,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 22 (Complex conjugates)**  
+> **Example 24 (Complex conjugates)**  
 >
 > - \\\overline{3 + 4\\i} = 3 - 4\\i\\.
 > - \\\overline{-2\\i} = \overline{0 + (-2)\\i} = 0 - (-2)\\i = 2\\i\\.
@@ -941,7 +985,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 23 (Absolute values of complex numbers)**  
+> **Example 25 (Absolute values of complex numbers)**  
 >
 > - \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5\\.
 > - \\\mathopen{}\left\|-2\\i\right\|\mathclose{} = \sqrt{0^2 + (-2)^2} = \sqrt{4} = 2\\.
@@ -949,7 +993,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Theorem 25 (A complex number times its conjugate)** For every complex number \\z\\,
+> **Theorem 28 (A complex number times its conjugate)** For every complex number \\z\\,
 >
 > \\z\\\overline{z} = \mathopen{}\left\|z\right\|\mathclose{}^2.\\
 >
@@ -965,9 +1009,9 @@ Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity am
 
 > **NOTE:**
 >
-> **Example 24 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 26 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
-> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 23](#exm-complex-modulus), as [Theorem 25](#thm-conj-product) says.
+> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 25](#exm-complex-modulus), as [Theorem 28](#thm-conj-product) says.
 
 ## 16 Further reading
 
