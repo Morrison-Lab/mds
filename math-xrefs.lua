@@ -49,9 +49,18 @@ local function rewrite(tex)
       i = i + 1
     elseif c == "@" then
       local id = tex:match("^@(%a+%-[%w%-]*%w)", i)
-      local label = id and resolved[id]
-      if label then
-        local shown = "\\text{" .. label .. "}"
+      local prefix = id and id:match("^(%a+)%-")
+      local is_latex = quarto.doc.is_format("pdf") or quarto.doc.is_format("latex")
+      if is_latex and prefix and labels[prefix] then
+        local shown = "\\text{" .. labels[prefix] .. "~\\ref{" .. id .. "}}"
+        if text_depths[depth] then
+          table.insert(out, "}" .. shown .. "\\text{")
+        else
+          table.insert(out, shown)
+        end
+        i = i + 1 + #id
+      elseif id and resolved[id] then
+        local shown = "\\text{" .. resolved[id] .. "}"
         if html then shown = "\\href{#" .. id .. "}{" .. shown .. "}" end
         if text_depths[depth] then
           table.insert(out, "}" .. shown .. "\\text{")

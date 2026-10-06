@@ -1,3 +1,5 @@
+::: {.content-hidden when-format="revealjs"}
+
 :::{#sol-sum-over-set}
 
 1.  Replace $x$ by each element of $A$ in turn, and add the results:
@@ -16,5 +18,38 @@
     Their total is $25 + 1 + 4 = 30$.
     The total is the same,
     because addition does not depend on the order of the terms.
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+:::{#sol-sum-over-set}
+
+1.  Replace $x$ by each element of $A$ in turn, and add the results:
+
+    $$
+    \ba
+    \sum_{x \in A} f(x)
+    &= f(-1) + f(2) + f(5)
+    \\ &= (-1)^2 + 2^2 + 5^2
+    \\ &= 1 + 4 + 25
+    \\ &= 30
+    \ea
+    $$
+
+:::
+
+{{< slidebreak >}}
+
+:::{.solution}
+
+2.  In the order $5, -1, 2$, the terms are $25$, $1$ and $4$.
+    Their total is $25 + 1 + 4 = 30$.
+    The total is the same,
+    because addition does not depend on the order of the terms.
+
+:::
 
 :::

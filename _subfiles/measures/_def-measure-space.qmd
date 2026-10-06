@@ -1,10 +1,7 @@
 :::{#def-measure-space}
-#### Measurable space and measure space
+#### Measure space
 
-A **measurable space** $(S, \mathscr{S})$
-is a set $S$ together with a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$ on $S$;
-the sets in $\mathscr{S}$ are its **measurable sets**.
 A **measure space** $(S, \mathscr{S}, \mu)$
-is a measurable space together with a [measure](#def-measure) $\mu$ on $\mathscr{S}$.
+is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) $\mu$ on $\mathscr{S}$.
 
 :::

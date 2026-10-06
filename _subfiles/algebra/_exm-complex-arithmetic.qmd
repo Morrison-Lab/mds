@@ -1,3 +1,5 @@
+::: {.content-hidden when-format="revealjs"}
+
 :::{#exm-complex-arithmetic}
 #### Adding and multiplying two complex numbers
 
@@ -41,5 +43,63 @@ The product formula in @thm-complex-arithmetic gives the same answer:
 with $a = 1$, $b = 2$, $c = 3$ and $d = -1$,
 $ac - bd = 3 - (-2) = 5$
 and $ad + bc = -1 + 6 = 5$.
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+:::{#exm-complex-arithmetic}
+#### Adding and multiplying two complex numbers
+
+Let $w = 1 + 2\,i$ and $z = 3 - i$.
+Their sum is
+
+$$
+\ba
+w + z
+&= (1 + 3) + (2 + (-1))\,i
+&& \text{(@thm-complex-arithmetic, sum)}
+\\
+&= 4 + i
+&& \text{(add)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{.theorem .example}
+
+and their product, multiplying out directly, is
+
+$$
+\ba
+w z
+&= 1 \cd 3 + 1 \cd (-i) + 2\,i \cd 3 + 2\,i \cd (-i)
+&& \text{(distribute)}
+\\
+&= 3 - i + 6\,i - 2\,i^2
+&& \text{(multiply)}
+\\
+&= 3 - i + 6\,i + 2
+&& \text{(@def-imaginary-unit)}
+\\
+&= (3 + 2) + (-1 + 6)\,i
+&& \text{(group the real terms and the terms with } i \text{)}
+\\
+&= 5 + 5\,i
+&& \text{(add)}
+\ea
+$$
+
+The product formula in @thm-complex-arithmetic gives the same answer:
+with $a = 1$, $b = 2$, $c = 3$ and $d = -1$,
+$ac - bd = 3 - (-2) = 5$
+and $ad + bc = -1 + 6 = 5$.
+
+:::
 
 :::

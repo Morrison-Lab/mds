@@ -146,6 +146,8 @@
 
 {{< include mds/_subfiles/algebra/_thm-convex-local-global.qmd >}}
 
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_proof-thm-convex-local-global.qmd >}}
 
 ## Infimum and supremum
@@ -497,6 +499,8 @@
 {{< include mds/_subfiles/algebra/_exr-double-exponentials.qmd >}}
 
 ## Complex numbers {#sec-complex-numbers}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-imaginary-unit.qmd >}}
 
