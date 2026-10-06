@@ -155,6 +155,14 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_def-measurable-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-measurable-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_def-measure-space.qmd >}}
 
 {{< slidebreak >}}
