@@ -9,7 +9,11 @@
    So the smallest value of $f$ is $1$,
    and $x = 2$ is the only input where $f$ takes it.
 
+:::
+
 {{< slidebreak >}}
+
+:::{.solution}
 
 2. Evaluate $g$ at each of its four inputs:
 

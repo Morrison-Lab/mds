@@ -1,5 +1,11 @@
 {{< include latex-macros/macros.qmd >}}
 
+:::{#sol-double-exponential}
+
+Short answer: rarely (that's all you need to know for this course).
+
+Long answer: 
+
 Split on whether $a > 0$ or $a = 0$,
 because the logarithm we use for $a > 0$ is undefined at $a = 0$.
 
@@ -27,7 +33,11 @@ The last line of @eq-double-exp-log-scale holds exactly when
 1. $a = 1$ (so that $\logf{a} = 0$), or
 2. $bc = b^c$ (see @exr-exp-vs-mult).
 
+:::
+
 {{< slidebreak >}}
+
+:::{.solution}
 
 **Case $a = 0$.**
 Here we cannot take logarithms, so we work from the values of powers of $0$:
@@ -44,7 +54,11 @@ and $0^s$ is undefined for $s < 0$.
 
 So for $a = 0$, $(a^b)^c = a^{(b^c)}$ exactly when $b \ge 0$ and $c > 0$.
 
+:::
+
 {{< slidebreak >}}
+
+:::{.solution}
 
 In particular, when $a = 0$, $b \ge 0$, and $c = 0$,
 the two sides differ:
@@ -68,3 +82,5 @@ a^{(b^c)}
 &= 0
 \ea
 $$
+
+:::

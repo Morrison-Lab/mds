@@ -18,8 +18,11 @@ or the commutative and associative laws of addition
     && \text{(collect the sum)}
     \ea
     $$
+:::
 
 {{< slidebreak >}}
+
+:::{.solution}
 
 2.  Expand the sum, then regroup the terms:
 

@@ -9,11 +9,7 @@ For $b,c \in \reals$, when does $b^c = bc$?
 
 {{< slidebreak >}}
 
-:::{#sol-exp-vs-mult}
-
 {{< include mds/_subfiles/algebra/_sol-exp-vs-mult.qmd >}}
-
-:::
 
 {{< slidebreak >}}
 
@@ -27,12 +23,4 @@ when does $(a^b)^c = a^{(b^c)}$?
 
 {{< slidebreak >}}
 
-:::{#sol-double-exponential}
-
-Short answer: rarely (that's all you need to know for this course).
-
-Long answer: 
-
 {{< include mds/_subfiles/algebra/_sol-double-exponential.qmd >}}
-
-:::

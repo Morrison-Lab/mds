@@ -6,8 +6,11 @@ The difference, $49 - 25 = 24$, is $2 \cdot 3 \cdot 4$.
 To see where that extra term comes from,
 write the square as a product
 and apply the distributive law (@thm-mult-distr) twice:
+:::
 
 {{< slidebreak >}}
+
+:::{.solution}
 
 $$
 \ba

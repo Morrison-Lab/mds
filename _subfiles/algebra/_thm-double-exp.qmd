@@ -25,7 +25,11 @@ a^{bc}
 \ea
 $$
 
+:::
+
 {{< slidebreak >}}
+
+:::{.example}
 
 but
 

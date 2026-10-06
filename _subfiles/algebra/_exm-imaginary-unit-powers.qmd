@@ -32,9 +32,11 @@ i^4
 && \text{(multiply)}
 \ea
 $$
+:::
 
 {{< slidebreak >}}
 
+:::{.example}
 so the cycle starts again:
 
 $$

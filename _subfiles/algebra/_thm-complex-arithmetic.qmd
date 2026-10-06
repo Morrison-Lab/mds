@@ -28,7 +28,11 @@ $$
 \ea
 $$
 
+:::
+
 {{< slidebreak >}}
+
+::: proof
 
 **Product.**
 

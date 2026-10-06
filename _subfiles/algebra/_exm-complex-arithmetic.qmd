@@ -14,9 +14,11 @@ w + z
 && \text{(add)}
 \ea
 $$
+:::
 
 {{< slidebreak >}}
 
+:::{.example}
 and their product, multiplying out directly, is
 
 $$

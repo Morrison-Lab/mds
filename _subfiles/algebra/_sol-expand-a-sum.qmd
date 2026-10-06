@@ -10,8 +10,11 @@
     \\ &= 30
     \ea
     $$
+:::
 
 {{< slidebreak >}}
+
+:::{.solution}
 
 2.  Replace $i$ by each of $1, 2, 3$ in turn inside the parentheses,
     add the three squares,

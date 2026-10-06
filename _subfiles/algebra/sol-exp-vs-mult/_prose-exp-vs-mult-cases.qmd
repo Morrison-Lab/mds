@@ -1,3 +1,5 @@
+:::{#sol-exp-vs-mult}
+
 We only count a pair $(b, c)$ when $b^c$ is defined,
 so for $b < 0$ we only consider integer $c$
 (@def-power-nonpositive-base).
@@ -13,7 +15,11 @@ With that convention, $bc = b^c$ in each of the following cases:
    taking logarithms then gives $(c-1)\logf{b} = \logf{c}$.
    For example, $c = 2$ gives $b = 2$, and indeed $2^2 = 4 = 2 \cd 2$.
 
+:::
+
 {{< slidebreak >}}
+
+:::{.solution}
 
 4. $b < 0$ and $c$ is an odd integer with $c \ge 3$,
    with $b = -c^{1/(c-1)}$;
@@ -30,3 +36,5 @@ when $c - 1$ is odd, $b^{c-1} < 0$, so $c$ must be negative.
 
 See the red contours in @fig-double-exponential2
 for a visualization of the $b \ge 0$ cases.
+
+:::

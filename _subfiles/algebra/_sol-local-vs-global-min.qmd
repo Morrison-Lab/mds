@@ -16,8 +16,11 @@
    so their product is at least $0$.
    By part 1, $f(x) - f(1) \ge 0$,
    that is, $f(x) \ge f(1)$.
+:::
 
 {{< slidebreak >}}
+
+:::{.solution}
 
 3. $f(-3) = -27 + 9 = -18$.
    Since $-18 < -2 = f(1)$,
