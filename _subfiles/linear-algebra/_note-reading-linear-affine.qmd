@@ -12,7 +12,7 @@
 - @boyd2018vmls, chapter 2 ("Linear functions"),
   covers the vector-to-number case:
   linear functions as inner products, affine functions,
-  the [linear approximation](calculus.qmd#eq-linear-approx) as an affine function,
+  the [first-order Taylor approximation](calculus.qmd#def-linear-approximation) as an affine function,
   and the regression model.
   Section 8.1 ("Linear and affine functions")
   covers the vector-to-vector case.

@@ -80,17 +80,16 @@ here $m$ already names the number of outputs.)
 Machine learning and statistics often call any function of the form
 @eq-linear-scalar "linear",
 as in a *linear model* in statistics or a *linear layer* in a neural network,
-and call the offset $b$ the **bias** (machine learning)
-or the **intercept** (statistics).
+and call the offset $b$ the bias (machine learning)
+or the intercept (statistics), as @def-affine-map notes.
 A model with an intercept is affine in $\vx$
 but linear in its coefficients $(b, \vec{w})$,
 and that is the sense of "linear" in "linear model":
 it stays linear in the coefficients even when the inputs are transformed:
 $w_1 x + w_2 x^2 + b$ is not affine in $x$,
 but it is linear in $(b, w_1, w_2)$.
-Separately, appending a constant entry $1$ to $\vx$
-turns the affine function $\vec{w}^\top \vx + b$
-into a linear function of the longer vector $(1, \vx)$,
-with $b$ as the coefficient on the new entry.
+Separately, the affine function $\vec{w}^\top \vx + b$
+is a linear function of the augmented vector $\tilde{\vx}$ (@def-augmented-vector),
+with $b$ as the coefficient on its first entry.
 
 :::

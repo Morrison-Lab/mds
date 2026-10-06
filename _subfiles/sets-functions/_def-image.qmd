@@ -6,6 +6,9 @@ is the set of values that $f$ actually takes:
 
 $$f(A) \eqdef \set{f(a) : a \in A}$$
 
+For a single element $a \in A$,
+the value $f(a)$ is also called the **image of** $a$ under $f$.
+
 :::
 
 {{< slidebreak >}}

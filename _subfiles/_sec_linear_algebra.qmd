@@ -20,6 +20,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-real-vector-valued.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-transpose.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}
@@ -202,7 +206,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-translation.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-augmented-vector.qmd >}}
 
 {{< slidebreak >}}
 

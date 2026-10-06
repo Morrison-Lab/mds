@@ -1,0 +1,28 @@
+:::{#def-augmented-vector}
+#### Augmented vector
+
+The **augmented vector** of $\vx \in \reals^p$
+is the vector $\tilde{\vx} \in \reals^{p+1}$
+formed by placing a $1$ above the entries of $\vx$:
+
+$$\tilde{\vx} = \sbmat{1 \\ \vx} = \tp{(1, x_1, \ldots, x_p)}$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-augmented-vector}
+#### An affine function as a dot product with an augmented vector
+
+For $\vx = \tp{(2, 5)}$, the augmented vector is $\tilde{\vx} = \tp{(1, 2, 5)}$.
+With $\vec{w} = \tp{(3, -1)}$ and $b = 4$,
+the affine function $\vec{w}^\top \vx + b$ (@eq-linear-scalar) equals
+the dot product of $\tp{(b, w_1, w_2)} = \tp{(4, 3, -1)}$ with $\tilde{\vx}$:
+
+$$
+\vec{w}^\top \vx + b = 3 \cd 2 + (-1) \cd 5 + 4 = 5,
+\qquad
+\tp{(4, 3, -1)} \cdot \tilde{\vx} = 4 \cd 1 + 3 \cd 2 + (-1) \cd 5 = 5
+$$
+
+:::
