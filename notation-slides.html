@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 19:53:51 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 21:01:53 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -370,7 +370,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="even">
 <td><span class="math inline">\('\)</span></td>
-<td>transpose or derivative<sup>1</sup></td>
+<td>transpose or <a href="./calculus.html#def-derivative">derivative</a><sup>1</sup></td>
 <td><code>'</code></td>
 </tr>
 <tr class="odd">
@@ -390,7 +390,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span></td>
-<td>floor of <span class="math inline">\(x\)</span>: largest integer less than or equal to <span class="math inline">\(x\)</span></td>
+<td>floor of <span class="math inline">\(x\)</span>: largest <a href="#/def-integers">integer</a> less than or equal to <span class="math inline">\(x\)</span></td>
 <td><code>\lfloor x \rfloor</code></td>
 </tr>
 <tr class="odd">
@@ -400,7 +400,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="even">
 <td><span class="math inline">\(\mathbb{1}_{A}(x)\)</span>, <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span></td>
-<td>indicator function (<a href="#/sec-indicator-functions" class="quarto-xref">Section&nbsp;5</a>): <span class="math inline">\(1\)</span> if condition holds, <span class="math inline">\(0\)</span> otherwise</td>
+<td>indicator function (<a href="#/sec-indicator-functions" class="quarto-xref">Section&nbsp;6</a>): <span class="math inline">\(1\)</span> if condition holds, <span class="math inline">\(0\)</span> otherwise</td>
 <td><code>\indic{A}(x)</code>, <code>\indicp{P}</code></td>
 </tr>
 </tbody>
@@ -432,22 +432,60 @@ Table&nbsp;1: Notation used in this book
 </section>
 <section class="slide level2">
 
+<div id="def-integers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Integers)</strong></span> The <strong>integers</strong> are the whole numbers, together with their negatives and <span class="math inline">\(0\)</span>:</p>
+<p><span class="math display">\[\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
+<p>An <strong>integer</strong> is an element of <span class="math inline">\(\mathbb{Z}\)</span>. The integers greater than <span class="math inline">\(0\)</span> are the <strong>positive integers</strong>, and the integers less than <span class="math inline">\(0\)</span> are the <strong>negative integers</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-integers" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Integers and non-integers)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(-7\)</span>, <span class="math inline">\(0\)</span>, and <span class="math inline">\(12\)</span> are integers.</li>
+<li><span class="math inline">\(\frac{1}{2}\)</span> and <span class="math inline">\(-2.5\)</span> are not integers.</li>
+<li><span class="math inline">\(\frac{6}{3}\)</span> is an integer, because <span class="math inline">\(\frac{6}{3} = 2\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-even-odd" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Even and odd integers)</strong></span> An integer (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) <span class="math inline">\(n\)</span> is <strong>even</strong> if <span class="math inline">\(n = 2k\)</span> for some integer <span class="math inline">\(k\)</span>, and <strong>odd</strong> if <span class="math inline">\(n = 2k + 1\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-even-odd" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Even and odd integers)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(6\)</span> is even, because <span class="math inline">\(6 = 2 \cdot 3\)</span>.</li>
+<li><span class="math inline">\(0\)</span> is even, because <span class="math inline">\(0 = 2 \cdot 0\)</span>.</li>
+<li><span class="math inline">\(-3\)</span> is odd, because <span class="math inline">\(-3 = 2 \cdot(-2) + 1\)</span>.</li>
+<li><span class="math inline">\(7\)</span> is odd, because <span class="math inline">\(7 = 2 \cdot 3 + 1\)</span>.</li>
+<li><span class="math inline">\(2.5\)</span> is neither even nor odd, because it is not an integer.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-natural-numbers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> are the positive integers:</p>
+<p><span class="theorem-title"><strong>Definition 3 (Natural numbers (our convention))</strong></span> In these notes, the <strong>natural numbers</strong> are the positive integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>):</p>
 <p><span class="math display">\[\mathbb{N} \stackrel{\text{def}}{=}\mathopen{}\left\{1, 2, 3, \ldots\right\}\mathclose{}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-nonnegative-integers" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Non-negative integers)</strong></span> The <strong>non-negative integers</strong> are the natural numbers (<a href="#/def-natural-numbers" class="quarto-xref">Definition&nbsp;1</a>) together with <span class="math inline">\(0\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Non-negative integers)</strong></span> The <strong>non-negative integers</strong> are the natural numbers (<a href="#/def-natural-numbers" class="quarto-xref">Definition&nbsp;3</a>) together with <span class="math inline">\(0\)</span>:</p>
 <p><span class="math display">\[\mathbb{N}_0 \stackrel{\text{def}}{=}\mathopen{}\left\{0, 1, 2, 3, \ldots\right\}\mathclose{} = \mathbb{N} \cup \mathopen{}\left\{0\right\}\mathclose{}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-natural-numbers" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Natural numbers in a data analysis)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 3 (Natural numbers in a data analysis)</strong></span> &nbsp;</p>
 <ul>
 <li>Observation indices start at <span class="math inline">\(1\)</span>, so we write <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span> with <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
 <li>A count outcome, such as the number of hospital visits in a year, can be <span class="math inline">\(0\)</span>, so its support is <span class="math inline">\(\mathbb{N}_0\)</span>, not <span class="math inline">\(\mathbb{N}\)</span>.</li>
@@ -479,8 +517,67 @@ Table&nbsp;1: Notation used in this book
 </div>
 </div>
 </section>
-<section id="percent-sign" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Percent sign (“%”)</h2>
+<section id="sec-notation-reals" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Rational, real, and irrational numbers</h2>
+<div id="def-rational-numbers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Rational numbers)</strong></span> A <strong>rational number</strong> is a number that can be written as a fraction <span class="math inline">\(\frac{a}{b}\)</span>, where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers (<a href="#/def-integers" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(b \ne 0\)</span>. The set of rational numbers is written <span class="math inline">\(\mathbb{Q}\)</span>:</p>
+<p><span class="math display">\[\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\{\frac{a}{b} : a \in \mathbb{Z},\ b \in \mathbb{Z},\ b \ne 0\right\}\mathclose{}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-rational-numbers" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Rational numbers)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(\frac{3}{4}\)</span> is rational, with <span class="math inline">\(a = 3\)</span> and <span class="math inline">\(b = 4\)</span>.</li>
+<li><span class="math inline">\(0.75\)</span> is rational, because <span class="math inline">\(0.75 = \frac{3}{4}\)</span>.</li>
+<li>Every integer is rational: for example, <span class="math inline">\(-5 = \frac{-5}{1}\)</span>.</li>
+<li><span class="math inline">\(0.333\ldots\)</span>, with the <span class="math inline">\(3\)</span>s repeating forever, is rational, because <span class="math inline">\(0.333\ldots = \frac{1}{3}\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-real-numbers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Real numbers)</strong></span> A <strong>real number</strong> is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written <span class="math inline">\(\mathbb{R}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-real-numbers-working-definition" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (A working definition). </span><a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;6</a> is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. <span class="citation" data-cites="rudin1976principles">Rudin (<a href="#/references" role="doc-biblioref" onclick="">1976</a>, Appendix to Chapter 1)</span> constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, <span class="math inline">\(0.999\ldots\)</span> and <span class="math inline">\(1.000\ldots\)</span> are the same real number, <span class="math inline">\(1\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-real-numbers" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Real numbers)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(3\)</span>, <span class="math inline">\(-0.5\)</span>, and <span class="math inline">\(\frac{1}{3} = 0.333\ldots\)</span> are real numbers.</li>
+<li><span class="math inline">\(\pi = 3.14159\ldots\)</span> is a real number.</li>
+<li>Every rational number (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;5</a>) is a real number, so <span class="math inline">\(\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-irrational-numbers" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Irrational numbers)</strong></span> An <strong>irrational number</strong> is a real number (<a href="#/def-real-numbers" class="quarto-xref">Definition&nbsp;6</a>) that is not rational (<a href="#/def-rational-numbers" class="quarto-xref">Definition&nbsp;5</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-irrational-numbers" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Irrational numbers)</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> (see <a href="https://en.wikipedia.org/wiki/Square_root_of_2">Wikipedia: Square root of 2</a>).</li>
+<li><span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational (see <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">Wikipedia: Proof that <span class="math inline">\(\pi\)</span> is irrational</a>).</li>
+<li><span class="math inline">\(1.5\)</span> is not irrational, because <span class="math inline">\(1.5 = \frac{3}{2}\)</span> is rational.</li>
+</ul>
+</div>
+</section>
+<section id="percent-sign" class="slide level2" data-number="4">
+<h2><span class="header-section-number">4</span> Percent sign (“%”)</h2>
 <p>The percent sign “%” is just a shorthand for “<span class="math inline">\(/100\)</span>”. The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Percentage" class="uri">https://en.wikipedia.org/wiki/Percentage</a>)</p>
 <p>So, contrary to what you may have learned previously, <span class="math inline">\(10\% = 0.1\)</span> is a true and correct equality, just as <span class="math inline">\(10 \text{kg} = 10,000 \text{g}\)</span> is true and correct.</p>
 <div class="proof">
@@ -494,8 +591,8 @@ Table&nbsp;1: Notation used in this book
 </div>
 <p>You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.</p>
 </section>
-<section id="proofs" class="slide level2" data-number="4">
-<h2><span class="header-section-number">4</span> Proofs</h2>
+<section id="proofs" class="slide level2" data-number="5">
+<h2><span class="header-section-number">5</span> Proofs</h2>
 <p>We can use any of:</p>
 <ul>
 <li><span class="math inline">\(\therefore\)</span> (<code>\therefore</code> in LaTeX),</li>
@@ -503,17 +600,176 @@ Table&nbsp;1: Notation used in this book
 <li><span class="math inline">\(\models\)</span> (<code>\models</code>)</li>
 </ul>
 <p>to denote logical entailments (deductive consequences).</p>
-<p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for convergence results.</p>
+<p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra.html#def-sequence-limit">convergence</a> results.</p>
 </section>
-<section id="sec-indicator-functions" class="slide level2" data-number="5">
-<h2><span class="header-section-number">5</span> Indicator functions</h2>
+<section class="slide level2">
+
+<div id="def-proposition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Proposition)</strong></span> A <strong>proposition</strong>, or <strong>statement</strong>, is a sentence that is either true or false.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-proposition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (Propositions, and a sentence that is not one)</strong></span> &nbsp;</p>
+<ul>
+<li>“<span class="math inline">\(2 + 3 = 5\)</span>” is a proposition, and it is true.</li>
+<li>“<span class="math inline">\(7\)</span> is <a href="#/def-even-odd">even</a>” is a proposition, and it is false.</li>
+<li>“<span class="math inline">\(x &gt; 2\)</span>” is not a proposition on its own: it is true when <span class="math inline">\(x = 3\)</span> and false when <span class="math inline">\(x = 1\)</span>, so it has no truth value until <span class="math inline">\(x\)</span> is given a value.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-predicate" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Predicate)</strong></span> A <strong>predicate</strong> <span class="math inline">\(P(x)\)</span> is a sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;8</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-predicate" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (A predicate)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for real numbers <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li><span class="math inline">\(P(3)\)</span> is the proposition “<span class="math inline">\(3 &gt; 2\)</span>”, which is true.</li>
+<li><span class="math inline">\(P(1)\)</span> is the proposition “<span class="math inline">\(1 &gt; 2\)</span>”, which is false.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-proof" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Proof)</strong></span> A <strong>proof</strong> of a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;8</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
+<ul>
+<li>an assumption,</li>
+<li>a definition,</li>
+<li>a previously proved result, or</li>
+<li>a consequence of earlier statements in the list, by one rule of logic or algebra.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-proof" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (The sum of two even integers is even)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be even integers (<a href="#/def-even-odd" class="quarto-xref">Definition&nbsp;2</a>). Then <span class="math inline">\(a = 2j\)</span> and <span class="math inline">\(b = 2k\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+a + b
+&amp;= 2j + 2k
+&amp;&amp; \text{(substitute } a = 2j \text{ and } b = 2k \text{)}
+\\
+&amp;= 2(j + k)
+&amp;&amp; \text{(distributive law)}
+\end{aligned}
+\]</span></p>
+<p>The second line uses the <a href="./algebra.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an integer, <span class="math inline">\(a + b\)</span> is even (<a href="#/def-even-odd" class="quarto-xref">Definition&nbsp;2</a>). For example, <span class="math inline">\(4 + 10 = 2 \cdot 2 + 2 \cdot 5 = 2 \cdot 7 = 14\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-theorem" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Result, theorem, lemma, and corollary)</strong></span> A <strong>result</strong> is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;8</a>) that has a proof (<a href="#/def-proof" class="quarto-xref">Definition&nbsp;10</a>). These notes label each result by its role:</p>
+<ul>
+<li>a <strong>theorem</strong> is a result of interest in its own right;</li>
+<li>a <strong>lemma</strong> is a result proved mainly as a step in the proof of another result;</li>
+<li>a <strong>corollary</strong> is a result that follows from a theorem with little extra work.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-proposition-as-result" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (“Proposition” as a kind of result). </span>Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;8</a>), whether or not it has been proved.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-theorem" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (A corollary of a result)</strong></span> <a href="#/exm-proof" class="quarto-xref">Example&nbsp;9</a> proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> is even, because <span class="math inline">\(a + b + c = (a + b) + c\)</span>, <span class="math inline">\(a + b\)</span> is even by that result, and applying the result again to the even integers <span class="math inline">\(a + b\)</span> and <span class="math inline">\(c\)</span> shows that <span class="math inline">\((a + b) + c\)</span> is even. For example, <span class="math inline">\(2 + 4 + 6 = (2 + 4) + 6 = 6 + 6 = 12\)</span>, which is even.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-counterexample" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Counterexample)</strong></span> A <strong>counterexample</strong> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;9</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-counterexample" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (A counterexample)</strong></span> The proposition “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n + n &gt; n\)</span>” is false. The integer <span class="math inline">\(n = 0\)</span> is a counterexample: <span class="math inline">\(0 + 0 = 0\)</span>, and <span class="math inline">\(0 &gt; 0\)</span> is false. The proposition is true for some integers, such as <span class="math inline">\(n = 3\)</span>, since <span class="math inline">\(3 + 3 = 6 &gt; 3\)</span>, but one counterexample is enough to make it false.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-converse" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Converse)</strong></span> The <strong>converse</strong> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-converse" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (A true proposition with a false converse)</strong></span> For an integer <span class="math inline">\(n\)</span>, call <span class="math inline">\(n\)</span> a multiple of <span class="math inline">\(4\)</span> if <span class="math inline">\(n = 4k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<ul>
+<li>“If <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true: <span class="math inline">\(n = 4k = 2 \cdot(2k)\)</span>, and <span class="math inline">\(2k\)</span> is an integer.</li>
+<li>Its converse, “if <span class="math inline">\(n\)</span> is even, then <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>”, is false. The integer <span class="math inline">\(n = 2\)</span> is a counterexample (<a href="#/def-counterexample" class="quarto-xref">Definition&nbsp;12</a>): <span class="math inline">\(2\)</span> is even, but <span class="math inline">\(2 = 4k\)</span> only for <span class="math inline">\(k = \frac{1}{2}\)</span>, which is not an integer.</li>
+</ul>
+<p>So a proposition can be true while its converse is false.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-necessary-sufficient" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Necessary and sufficient conditions)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> for <span class="math inline">\(Q\)</span>, and <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> for <span class="math inline">\(P\)</span>. When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#/def-converse" class="quarto-xref">Definition&nbsp;13</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> for <span class="math inline">\(Q\)</span>, written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-necessary-sufficient" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (Necessary but not sufficient)</strong></span> In <a href="#/exm-converse" class="quarto-xref">Example&nbsp;12</a>, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true, so:</p>
+<ul>
+<li>being a multiple of <span class="math inline">\(4\)</span> is a sufficient condition for <span class="math inline">\(n\)</span> to be even;</li>
+<li>being even is a necessary condition for <span class="math inline">\(n\)</span> to be a multiple of <span class="math inline">\(4\)</span>.</li>
+</ul>
+<p>Being even is not a sufficient condition for being a multiple of <span class="math inline">\(4\)</span>: <span class="math inline">\(n = 2\)</span> is even, but not a multiple of <span class="math inline">\(4\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-proof-by-contradiction" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false. Since a true assumption cannot lead to a false proposition, the assumption that <span class="math inline">\(P\)</span> is false must itself be false, so <span class="math inline">\(P\)</span> is true.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-proof-by-contradiction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (No integer is both even and odd)</strong></span> Suppose, for contradiction, that some integer <span class="math inline">\(n\)</span> is both even and odd (<a href="#/def-even-odd" class="quarto-xref">Definition&nbsp;2</a>). Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+2j &amp;= 2k + 1
+&amp;&amp; \text{(both equal } n \text{)}
+\\
+2j - 2k &amp;= 1
+&amp;&amp; \text{(subtract } 2k \text{ from both sides)}
+\\
+2(j - k) &amp;= 1
+&amp;&amp; \text{(distributive law)}
+\\
+j - k &amp;= \tfrac{1}{2}
+&amp;&amp; \text{(divide both sides by } 2 \text{)}
+\end{aligned}
+\]</span></p>
+<p>The third line uses the <a href="./algebra.html#def-distributive">distributive law</a>. But <span class="math inline">\(j - k\)</span> is an integer, and <span class="math inline">\(\frac{1}{2}\)</span> is not, so the last line is false. So no integer is both even and odd. For example, <span class="math inline">\(6 = 2 \cdot 3\)</span> is even, and <span class="math inline">\(6 = 2k + 1\)</span> would need <span class="math inline">\(k = 2.5\)</span>, which is not an integer.</p>
+</div>
+</section>
+<section id="sec-indicator-functions" class="slide level2" data-number="6">
+<h2><span class="header-section-number">6</span> Indicator functions</h2>
 <p>An <strong>indicator function</strong> is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous: they represent binary variables, censor and event indicators in survival analysis, membership in subpopulations, and domain restrictions in integrals and sums.</p>
 <p>Despite their conceptual simplicity, notation for indicator functions varies substantially across textbooks, research papers, and subfields. This section summarizes the principal notational conventions.</p>
 </section>
 <section class="slide level2">
 
 <div id="def-indicator-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Indicator function)</strong></span> For any subset <span class="math inline">\(A \subseteq \Omega\)</span> of a universal set <span class="math inline">\(\Omega\)</span>, the <strong>indicator function</strong> of <span class="math inline">\(A\)</span> is the function <span class="math inline">\(\mathbb{1}_{A} : \Omega \to \{0, 1\}\)</span> defined by:</p>
+<p><span class="theorem-title"><strong>Definition 16 (Indicator function)</strong></span> For any subset <span class="math inline">\(A \subseteq \Omega\)</span> of a universal set <span class="math inline">\(\Omega\)</span>, the <strong>indicator function</strong> of <span class="math inline">\(A\)</span> is the function <span class="math inline">\(\mathbb{1}_{A} : \Omega \to \{0, 1\}\)</span> defined by:</p>
 <p><span class="math display">\[
 \mathbb{1}_{A}(x) \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; x \in A \\
@@ -532,7 +788,7 @@ Table&nbsp;1: Notation used in this book
 <section class="slide level2 scrollable">
 
 <div id="exm-indicator-numerical" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Evaluating set and predicate indicators)</strong></span> Consider the real line <span class="math inline">\(\Omega = \mathbb{R}\)</span>, the set of nonnegative numbers <span class="math inline">\(A = [0, \infty)\)</span>, and a continuous <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(Y\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 15 (Evaluating set and predicate indicators)</strong></span> Consider the real line <span class="math inline">\(\Omega = \mathbb{R}\)</span>, the set of nonnegative numbers <span class="math inline">\(A = [0, \infty)\)</span>, and a continuous <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(Y\)</span>.</p>
 <ol type="1">
 <li><strong>Set indicator</strong> <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>:
 <ul>
@@ -580,7 +836,7 @@ Table&nbsp;1: Notation used in this book
 <section class="slide level2">
 
 <div id="def-iverson-bracket" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 17 (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
 <p><span class="math display">\[
 [P] \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
@@ -592,7 +848,7 @@ Table&nbsp;1: Notation used in this book
 <section class="slide level2">
 
 <div id="exm-iverson-bracket" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (Evaluating Iverson brackets)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 16 (Evaluating Iverson brackets)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\([3 &gt; 2] = 1\)</span>, because <span class="math inline">\(3 &gt; 2\)</span> is true.</li>
 <li><span class="math inline">\([2 &gt; 3] = 0\)</span>, because <span class="math inline">\(2 &gt; 3\)</span> is false.</li>
@@ -603,21 +859,21 @@ Table&nbsp;1: Notation used in this book
 <section class="slide level2">
 
 <div id="rem-iverson-indicator" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The Iverson bracket is the predicate indicator). </span>The Iverson bracket <span class="math inline">\([P]\)</span> is the predicate indicator <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;3</a>) in different notation. Under this notation, set membership is written <span class="math inline">\([x \in A]\)</span>, so <span class="math inline">\([x \in A] = \mathbb{1}_{A}(x)\)</span>. For example, the values in <a href="#/exm-indicator-numerical" class="quarto-xref">Example&nbsp;2</a> become <span class="math inline">\([7.2 &gt; 5] = \mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{} = 1\)</span> and, with <span class="math inline">\(A = [0, \infty)\)</span>, <span class="math inline">\([-2.1 \in A] = \mathbb{1}_{A}(-2.1) = 0\)</span>.</p>
+<p><span class="proof-title"><em>Remark 3</em> (The Iverson bracket is the predicate indicator). </span>The Iverson bracket <span class="math inline">\([P]\)</span> is the predicate indicator <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;16</a>) in different notation. Under this notation, set membership is written <span class="math inline">\([x \in A]\)</span>, so <span class="math inline">\([x \in A] = \mathbb{1}_{A}(x)\)</span>. For example, the values in <a href="#/exm-indicator-numerical" class="quarto-xref">Example&nbsp;15</a> become <span class="math inline">\([7.2 &gt; 5] = \mathbb{1}\mathopen{}\left(7.2 &gt; 5\right)\mathclose{} = 1\)</span> and, with <span class="math inline">\(A = [0, \infty)\)</span>, <span class="math inline">\([-2.1 \in A] = \mathbb{1}_{A}(-2.1) = 0\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-kronecker-delta" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
+<p><span class="theorem-title"><strong>Definition 18 (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
 <p><span class="math display">\[\delta_{ij} \stackrel{\text{def}}{=}[i = j]\]</span></p>
-<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#/def-iverson-bracket" class="quarto-xref">Definition&nbsp;4</a>).</p>
+<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#/def-iverson-bracket" class="quarto-xref">Definition&nbsp;17</a>).</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-kronecker-delta" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (Evaluating the Kronecker delta)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 17 (Evaluating the Kronecker delta)</strong></span> &nbsp;</p>
 <ul>
 <li><span class="math inline">\(\delta_{11} = [1 = 1] = 1\)</span>.</li>
 <li><span class="math inline">\(\delta_{12} = [1 = 2] = 0\)</span>.</li>
@@ -626,12 +882,12 @@ Table&nbsp;1: Notation used in this book
 </ul>
 </div>
 <h3 id="strengths-and-limitations-of-the-iverson-bracket">Strengths and limitations of the Iverson bracket</h3>
-<p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a finite set that contains <span class="math inline">\(A\)</span>, then:</p>
+<p>The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if <span class="math inline">\(U\)</span> is a <a href="./sets-functions.html#def-finite-set">finite set</a> that contains <span class="math inline">\(A\)</span>, then:</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
 \]</span></p>
 <p>With <span class="math inline">\(A = \mathopen{}\left\{2, 4\right\}\mathclose{}\)</span>, <span class="math inline">\(f(x) = x\)</span>, and <span class="math inline">\(U = \mathopen{}\left\{1, 2, 3, 4, 5\right\}\mathclose{}\)</span>, both sides equal <span class="math inline">\(2 + 4 = 6\)</span>.</p>
-<p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote closed intervals <span class="math inline">\([a, b]\)</span>, conditional expectations <span class="math inline">\(\operatorname{E}[Y \mid X]\)</span>, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
+<p>However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote <a href="./sets-functions.html#def-interval">closed intervals</a> <span class="math inline">\([a, b]\)</span>, conditional expectations <span class="math inline">\(\operatorname{E}[Y \mid X]\)</span>, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses <span class="math inline">\(\mathbb{1}\)</span> or <span class="math inline">\(I\)</span> rather than the bare Iverson bracket.</p>
 <h3 id="summary-of-indicator-notations">Summary of indicator notations</h3>
 <p><a href="#/tbl-indicator-notations" class="quarto-xref">Table&nbsp;2</a> compares the major notations encountered across the literature.</p>
 <div id="tbl-indicator-notations" class="quarto-float quarto-figure quarto-figure-center">
@@ -708,7 +964,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <p>Blackboard bold <span class="math inline">\(\mathbb{1}\)</span> is preferred because it avoids all common collisions: it is visually distinct from the scalar <span class="math inline">\(1\)</span>, the identity matrix <span class="math inline">\(I\)</span>, and the information matrices (<span class="math inline">\(I\)</span>, <span class="math inline">\(\mathcal{I}\)</span>).</p>
 <h3 id="key-algebraic-properties">Key algebraic properties</h3>
 <p>Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:</p>
-<p>For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with complement <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega \setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
+<p>For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega \setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
 <ul>
 <li><p><strong>Intersection (“and”):</strong> <span class="math inline">\(\mathbb{1}_{A \cap B}(x) = \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Union (“or”):</strong> <span class="math inline">\(\mathbb{1}_{A \cup B}(x) = \mathbb{1}_{A}(x) + \mathbb{1}_{B}(x) - \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
@@ -719,12 +975,12 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 \operatorname{E}[\mathbb{1}_{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
 \]</span></p></li>
 </ul>
-<p>This fundamental identity connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.</p>
+<p>This fundamental <a href="./algebra.html#def-identity">identity</a> connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.</p>
 </section>
-<section id="sec-notational-shorthands" class="slide level2" data-number="6">
-<h2><span class="header-section-number">6</span> Notational shorthands</h2>
+<section id="sec-notational-shorthands" class="slide level2" data-number="7">
+<h2><span class="header-section-number">7</span> Notational shorthands</h2>
 <div id="def-notational-shorthand" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -751,7 +1007,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <section class="slide level2">
 
 <div id="def-range-of-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
 </div>
 <p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> is a <a href="./sets-functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./sets-functions.html#rem-image-range">Image and range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
 </section>
@@ -837,13 +1093,13 @@ Table&nbsp;3: Common notational shorthands and their full forms
 <section class="slide level2">
 
 <div id="rem-indefinite-integral-not-shorthand" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
+<p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-expand-index-shorthand" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 18 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sum_{i=1}^{3} x_i
@@ -857,13 +1113,13 @@ Table&nbsp;3: Common notational shorthands and their full forms
 \]</span></p>
 </div>
 </section>
-<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="7">
-<h2><span class="header-section-number">7</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
+<section id="why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized" class="slide level2" data-number="8">
+<h2><span class="header-section-number">8</span> Why is notation in probability and statistics so inconsistent and disorganized?</h2>
 <p>In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.</p>
 <p>It’s worth noting that calculus was formalized in the <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation">1600s</a>, elementary algebra was formalized around <a href="https://en.wikipedia.org/wiki/Al-Jabr">820</a>, and arithmetic <a href="https://en.wikipedia.org/wiki/Arithmetic#History">even earlier</a>. And calculus still has <a href="https://en.wikipedia.org/wiki/Notation_for_differentiation">several competing notation systems</a>. In contrast, the field of statistics only emerged in the <a href="https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics">late 1800s and early 1900s</a>, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 <span class="citation" data-cites="nelder1972generalized">(<a href="#/references" role="doc-biblioref" onclick="">Nelder and Wedderburn 1972</a>)</span>, which is very recent in terms of the <a href="https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions">pace of scientific development</a>.</p>
 </section>
-<section id="sec-further-reading" class="slide level2" data-number="8">
-<h2><span class="header-section-number">8</span> Further reading</h2>
+<section id="sec-further-reading" class="slide level2" data-number="9">
+<h2><span class="header-section-number">9</span> Further reading</h2>
 <p>For the logical symbols and proof conventions used in these notes:</p>
 <ul>
 <li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> explains how mathematical statements are built from logical connectives and quantifiers, and how to read and write them.</li>
@@ -879,6 +1135,9 @@ Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proo
 </div>
 <div id="ref-nelder1972generalized" class="csl-entry" role="listitem">
 Nelder, John Ashworth, and Robert WM Wedderburn. 1972. <span>“Generalized Linear Models.”</span> <em>Journal of the Royal Statistical Society Series A: Statistics in Society</em> 135 (3): 370–84. <a href="https://doi.org/10.2307/2344614">https://doi.org/10.2307/2344614</a>.
+</div>
+<div id="ref-rudin1976principles" class="csl-entry" role="listitem">
+Rudin, Walter. 1976. <em>Principles of Mathematical Analysis</em>. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
 </div>
 <div id="ref-velleman2019prove" class="csl-entry" role="listitem">
 Velleman, Daniel J. 2019. <em>How to Prove It: A Structured Approach</em>. 3rd ed. Cambridge University Press. <a href="https://doi.org/10.1017/9781108539890">https://doi.org/10.1017/9781108539890</a>.

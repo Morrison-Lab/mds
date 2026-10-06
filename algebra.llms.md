@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 19:53:51 (PDT)
+Last modified: 2026-10-05 21:01:53 (PDT)
 
 ## 1 Equalities
 
@@ -18,7 +18,33 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 2 (Substituting equivalent expressions)** If \\a = b\\, then for any function \\f(x)\\, \\f(a) = f(b)\\
 
+> **NOTE:**
+>
+> **Definition 1 (Identity)** An **identity** is an equation between two expressions that holds for every value of its variables in a stated set, such as the [real numbers](notation.llms.md#def-real-numbers).
+
+> **NOTE:**
+>
+> **Example 1 (An identity, and an equation that is not one)**  
+>
+> - \\2(x + 1) = 2x + 2\\ is an identity: it holds for every real \\x\\. For example, at \\x = 3\\, both sides equal \\8\\.
+> - \\x + 1 = 3\\ is not an identity: it holds at \\x = 2\\, but at \\x = 0\\ the left side is \\1\\ and the right side is \\3\\.
+
 ## 2 Inequalities
+
+> **NOTE:**
+>
+> **Definition 2 (Strict and non-strict inequalities)** For [real numbers](notation.llms.md#def-real-numbers) \\a\\ and \\b\\, \\a \< b\\ (“\\a\\ is less than \\b\\”) and \\a \> b\\ (“\\a\\ is greater than \\b\\”) are **strict inequalities**. The **non-strict inequalities** also allow equality:
+>
+> - \\a \le b\\ means \\a \< b\\ or \\a = b\\;
+> - \\a \ge b\\ means \\a \> b\\ or \\a = b\\.
+
+> **NOTE:**
+>
+> **Example 2 (Strict and non-strict inequalities)**  
+>
+> - \\3 \le 3\\ is true, because \\3 = 3\\, but \\3 \< 3\\ is false.
+> - \\2 \< 3\\ and \\2 \le 3\\ are both true.
+> - \\4 \ge 5\\ is false, because \\4 \> 5\\ and \\4 = 5\\ are both false.
 
 > **NOTE:**
 >
@@ -36,7 +62,62 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 6 (Negation is multiplication by \\-1\\)** \\-a = (-1)\*a\\
 
-## 3 Minimum, maximum, argmin and argmax
+## 3 Powers, square roots, and absolute values
+
+> **NOTE:**
+>
+> **Definition 3 (Power, base, and exponent)** Let \\a\\ be a real number and \\n\\ a [natural number](notation.llms.md#def-natural-numbers). The \\n\\th **power** of \\a\\ is the product of \\n\\ copies of \\a\\:
+>
+> \\a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}\_{n \text{ factors}}\\
+>
+> In \\a^n\\, \\a\\ is the **base** and \\n\\ is the **exponent**. The second power \\a^2\\ is the **square** of \\a\\. For the exponent \\0\\ and negative [integer](notation.llms.md#def-integers) exponents:
+>
+> - \\a^0 \stackrel{\text{def}}{=}1\\, including \\0^0 = 1\\ by convention;
+> - \\a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\\, when \\a \ne 0\\.
+>
+> [Definition 36](#def-real-power) extends powers to real exponents when the base is positive.
+
+> **NOTE:**
+>
+> **Example 3 (Powers)**  
+>
+> - \\2^3 = 2 \cdot 2 \cdot 2 = 8\\, with base \\2\\ and exponent \\3\\.
+> - \\(-3)^2 = (-3) \cdot(-3) = 9\\, but \\-3^2 = -(3^2) = -9\\: the exponent applies only to the \\3\\.
+> - \\5^0 = 1\\.
+> - \\2^{-2} = \frac{1}{2^2} = \frac{1}{4}\\.
+
+> **NOTE:**
+>
+> **Definition 4 (Square root)** For a real number \\a \ge 0\\, the **square root** of \\a\\, written \\\sqrt{a}\\, is the non-negative real number whose square ([Definition 3](#def-power)) is \\a\\.
+
+> **NOTE:**
+>
+> **Example 4 (Square roots)**  
+>
+> - \\\sqrt{9} = 3\\. Although \\(-3)^2 = 9\\ too, \\-3\\ is negative, so \\\sqrt{9}\\ is not \\-3\\.
+> - \\\sqrt{0} = 0\\.
+> - \\\sqrt{2} \approx 1.41421\\.
+> - \\\sqrt{-4}\\ is not a real number, because no real number squares to \\-4\\ (see [Section 17](#sec-complex-numbers)).
+
+> **NOTE:**
+>
+> **Definition 5 (Absolute value of a real number)** The **absolute value** of a real number \\a\\ is
+>
+> \\ \mathopen{}\left\|a\right\|\mathclose{} \stackrel{\text{def}}{=}\begin{cases} a, & a \ge 0 \\ -a, & a \< 0 \end{cases} \\
+>
+> For real numbers \\a\\ and \\b\\, \\\mathopen{}\left\|a - b\right\|\mathclose{}\\ is the distance between \\a\\ and \\b\\ on the number line.
+
+> **NOTE:**
+>
+> **Example 5 (Absolute values)**  
+>
+> - \\\mathopen{}\left\|2.5\right\|\mathclose{} = 2.5\\, because \\2.5 \ge 0\\.
+> - \\\mathopen{}\left\|-3\right\|\mathclose{} = -(-3) = 3\\, because \\-3 \< 0\\.
+> - \\\mathopen{}\left\|0\right\|\mathclose{} = 0\\.
+> - \\\mathopen{}\left\|-3\right\|\mathclose{} = 3 = \sqrt{9} = \sqrt{(-3)^2}\\: for every real \\a\\, \\\mathopen{}\left\|a\right\|\mathclose{} = \sqrt{a^2}\\ ([Definition 4](#def-square-root)).
+> - \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ says that \\x\\ is less than \\1\\ away from \\1\\, that is, \\0 \< x \< 2\\.
+
+## 4 Minimum, maximum, argmin and argmax
 
 > **NOTE:**
 >
@@ -61,26 +142,26 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\, written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
+> **Definition 6 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\, written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
-> *Remark 1* (Not every set has a minimum). The set \\\mathopen{}\left\\3, 1, 4\right\\\mathclose{}\\ has minimum \\1\\, and the interval \\\[0, 1\]\\ has minimum \\0\\. The interval \\(0, 1\]\\ has no minimum: every element \\a\\ of it has a smaller element, \\a/2\\, also in it.
+> *Remark 1* (Not every set has a minimum). The set \\\mathopen{}\left\\3, 1, 4\right\\\mathclose{}\\ has minimum \\1\\, and the [interval](sets-functions.llms.md#def-interval) \\\[0, 1\]\\ has minimum \\0\\. The interval \\(0, 1\]\\ has no minimum: every element \\a\\ of it has a smaller element, \\a/2\\, also in it.
 
 > **NOTE:**
 >
-> **Definition 2 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\, written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
+> **Definition 7 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\, written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
-> **Example 1 (A maximum, and a set without one)**  
+> **Example 6 (A maximum, and a set without one)**  
 >
 > - \\\max \mathopen{}\left\\-2, 5, 0\right\\\mathclose{} = 5\\: \\5\\ is in the set, and \\-2 \le 5\\, \\5 \le 5\\, \\0 \le 5\\.
 > - The interval \\\[0, 1)\\ has no maximum. For any \\a \in \[0, 1)\\, the number \\\tfrac{a + 1}{2}\\ is also in \\\[0, 1)\\, and it is larger than \\a\\, since \\\tfrac{a + 1}{2} \> a\\ exactly when \\a \< 1\\. So no element of \\\[0, 1)\\ is at least as large as every element.
 
 > **NOTE:**
 >
-> **Definition 3 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
+> **Definition 8 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
 >
 > \\\arg \min\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(x) \le f(a)\right\\\mathclose{}\\
 >
@@ -88,13 +169,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 2* (Smallest value versus where it occurs). The smallest value itself is \\\min f(A)\\, the minimum ([Definition 1](#def-minimum)) of the [image](sets-functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. For example, let \\f(x) = x^2\\ on \\A = \mathopen{}\left\\-1, 0, 2\right\\\mathclose{}\\. The image is \\f(A) = \mathopen{}\left\\1, 0, 4\right\\\mathclose{}\\, so the smallest value is \\\min f(A) = 0\\, and \\\arg \min\_{x \in A} f(x) = \mathopen{}\left\\0\right\\\mathclose{}\\.
+> *Remark 2* (Smallest value versus where it occurs). The smallest value itself is \\\min f(A)\\, the minimum ([Definition 6](#def-minimum)) of the [image](sets-functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. For example, let \\f(x) = x^2\\ on \\A = \mathopen{}\left\\-1, 0, 2\right\\\mathclose{}\\. The image is \\f(A) = \mathopen{}\left\\1, 0, 4\right\\\mathclose{}\\, so the smallest value is \\\min f(A) = 0\\, and \\\arg \min\_{x \in A} f(x) = \mathopen{}\left\\0\right\\\mathclose{}\\.
 >
 > The argmin is empty when \\f\\ has no smallest value, for example \\f(x) = x\\ on \\(0, 1\]\\.
 
 > **NOTE:**
 >
-> **Definition 4 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
+> **Definition 9 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
 >
 > \\\arg \max\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(a) \le f(x)\right\\\mathclose{}\\
 >
@@ -102,12 +183,12 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 2 (An argmax with two points, and an empty one)**  
+> **Example 7 (An argmax with two points, and an empty one)**  
 >
 > - Let \\g(x) = x^2\\ on \\A = \mathopen{}\left\\-2, 0, 1, 2\right\\\mathclose{}\\. The values are \\g(-2) = 4\\, \\g(0) = 0\\, \\g(1) = 1\\ and \\g(2) = 4\\, so the largest value is \\4\\ and \\\arg \max\_{x \in A} g(x) = \mathopen{}\left\\-2, 2\right\\\mathclose{}\\. This argmax has two elements, so it is not written as a single \\\hat{x}\\.
-> - Let \\f(x) = x\\ on \\\[0, 1)\\. As in [Example 1](#exm-maximum), for every input \\x\\ the input \\\tfrac{x + 1}{2}\\ has a larger value, so no input attains a largest value, and \\\arg \max\_{x \in \[0, 1)} f(x)\\ is the [empty set](sets-functions.llms.md#def-empty-set).
+> - Let \\f(x) = x\\ on \\\[0, 1)\\. As in [Example 6](#exm-maximum), for every input \\x\\ the input \\\tfrac{x + 1}{2}\\ has a larger value, so no input attains a largest value, and \\\arg \max\_{x \in \[0, 1)} f(x)\\ is the [empty set](sets-functions.llms.md#def-empty-set).
 
-## 4 Global and local minimizers
+## 5 Global and local minimizers
 
 > **NOTE:**
 >
@@ -134,33 +215,33 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 5 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
+> **Definition 10 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
 
 > **NOTE:**
 >
-> *Remark 3* (Global minimizers form the argmin). The global minimizers of \\f\\ are exactly the elements of \\\arg \min\_{x \in A} f(x)\\ ([Definition 3](#def-argmin)). A function can have more than one global minimizer. For example, \\f(x) = (x^2 - 1)^2\\ on \\\mathbb{R}\\ satisfies \\f(x) \ge 0\\ for every \\x\\, and \\f(x) = 0\\ exactly when \\x = -1\\ or \\x = 1\\, so its global minimizers are \\-1\\ and \\1\\, and \\\arg \min\_{x \in \mathbb{R}} f(x) = \mathopen{}\left\\-1, 1\right\\\mathclose{}\\.
+> *Remark 3* (Global minimizers form the argmin). The global minimizers of \\f\\ are exactly the elements of \\\arg \min\_{x \in A} f(x)\\ ([Definition 8](#def-argmin)). A function can have more than one global minimizer. For example, \\f(x) = (x^2 - 1)^2\\ on \\\mathbb{R}\\ satisfies \\f(x) \ge 0\\ for every \\x\\, and \\f(x) = 0\\ exactly when \\x = -1\\ or \\x = 1\\, so its global minimizers are \\-1\\ and \\1\\, and \\\arg \min\_{x \in \mathbb{R}} f(x) = \mathopen{}\left\\-1, 1\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Definition 6 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta \> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra.llms.md#def-euclidean-norm).
+> **Definition 11 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta \> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >
 > *Remark 4* (Local and global minimizers). For \\p = 1\\, \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x - x^\*\right\|\mathclose{}\\. For example, with \\x^\* = 1\\ and \\\delta = 1\\, the condition \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ means \\0 \< x \< 2\\.
 >
-> Every global minimizer ([Definition 5](#def-global-minimizer)) is a local minimizer: take any \\\delta \> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
+> Every global minimizer ([Definition 10](#def-global-minimizer)) is a local minimizer: take any \\\delta \> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
 >
-> The converse fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta = 1\\), but not a global one.
+> The [converse](notation.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta = 1\\), but not a global one.
 
 > **NOTE:**
 >
-> **Example 3 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
+> **Example 8 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
 >
 > \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(distribute)} \\ &= 2 - 3t^2 + t^3 && \text{(collect terms)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) = 2 \text{)} \end{aligned} \\
 >
 > and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta \> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta / 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example, \\f(-0.9) = -0.729 + 2.7 = 1.971 \< 2\\.
 
-## 5 Convex functions
+## 6 Convex functions
 
 > **NOTE:**
 >
@@ -182,23 +263,23 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 7 (Convex function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). \\f\\ is **convex** if \\ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y) \\ for all \\x, y \in \mathbb{R}^p\\ and all \\t \in \[0, 1\]\\.
+> **Definition 12 (Convex function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). \\f\\ is **convex** if \\ f(t x + (1 - t) y) \le t f(x) + (1 - t) f(y) \\ for all \\x, y \in \mathbb{R}^p\\ and all \\t \in \[0, 1\]\\.
 
 > **NOTE:**
 >
-> *Remark 5* (Chords lie on or above the graph). The point \\t x + (1 - t) y\\ lies on the line segment from \\x\\ to \\y\\, and the right-hand side is the height of the chord joining \\(x, f(x))\\ and \\(y, f(y))\\ above that point. So \\f\\ is convex when every chord lies on or above the graph.
+> *Remark 5* (Chords lie on or above the graph). The point \\t x + (1 - t) y\\ lies on the line segment from \\x\\ to \\y\\, and the right-hand side is the height of the chord joining \\(x, f(x))\\ and \\(y, f(y))\\ above that point. So \\f\\ is convex when every chord lies on or above the [graph](sets-functions.llms.md#def-graph).
 >
 > For example, take \\f(x) = x^2\\, \\x = -1\\, \\y = 3\\, and \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3 = 1\\, where the graph has height \\f(1) = 1\\ and the chord has height \\\tfrac{1}{2} f(-1) + \tfrac{1}{2} f(3) = \tfrac{1}{2} \cdot 1 + \tfrac{1}{2} \cdot 9 = 5\\. The chord is above the graph: \\1 \le 5\\.
 
 > **NOTE:**
 >
-> **Example 4 (A function that is not convex)** The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\\, where the graph has height \\f(-1) = -1 + 3 = 2\\, but the chord has height \\\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 = -1\\, and \\2 \le -1\\ is false.
+> **Example 9 (A function that is not convex)** The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\\, where the graph has height \\f(-1) = -1 + 3 = 2\\, but the chord has height \\\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 = -1\\, and \\2 \le -1\\ is false.
 
 > **NOTE:**
 >
-> **Example 5 (A convex and a non-convex function)** \\f(x) = (x - 2)^2\\ is convex ([Definition 7](#def-convex-function)): by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\. Its local minimizer \\x^\* = 2\\ is also a global minimizer, since \\f(x) = (x - 2)^2 \ge 0 = f(2)\\ for every \\x\\.
+> **Example 10 (A convex and a non-convex function)** \\f(x) = (x - 2)^2\\ is convex ([Definition 12](#def-convex-function)): by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\. Its local minimizer \\x^\* = 2\\ is also a global minimizer, since \\f(x) = (x - 2)^2 \ge 0 = f(2)\\ for every \\x\\.
 >
-> Without convexity, a local minimizer need not be global: \\f(x) = x^3 - 3x\\ is not convex ([Example 4](#exm-cubic-not-convex)), and it has a local minimizer at \\x^\* = 1\\ that is not global ([Exercise 2](#exr-local-vs-global-min)).
+> Without convexity, a local minimizer need not be global: \\f(x) = x^3 - 3x\\ is not convex ([Example 9](#exm-cubic-not-convex)), and it has a local minimizer at \\x^\* = 1\\ that is not global ([Exercise 2](#exr-local-vs-global-min)).
 
 > **NOTE:**
 >
@@ -206,17 +287,33 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta \> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 6](#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 5](#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
+> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta \> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 11](#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 10](#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
 > Let \\t = \min\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta / 2 \< \delta\\.
 >
 > By convexity, \\ f(z) \le t f(y) + (1 - t) f(x^\*) \< t f(x^\*) + (1 - t) f(x^\*) = f(x^\*), \\ where the strict inequality uses \\t \> 0\\ and \\f(y) \< f(x^\*)\\. So \\f(z) \< f(x^\*)\\ with \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} \< \delta\\, which contradicts \\x^\*\\ being a local minimizer. Hence \\x^\*\\ is a global minimizer.
 
-## 6 Infimum and supremum
+## 7 Infimum and supremum
 
 > **NOTE:**
 >
-> **Definition 8 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below, meaning that some \\t \in \mathbb{R}\\ satisfies \\t \le a\\ for all \\a \in A\\. The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
+> **Definition 13 (Upper and lower bounds)** Let \\A \subseteq \mathbb{R}\\.
+>
+> - A real number \\u\\ is an **upper bound** for \\A\\ if \\a \le u\\ for all \\a \in A\\.
+> - A real number \\\ell\\ is a **lower bound** for \\A\\ if \\\ell \le a\\ for all \\a \in A\\.
+>
+> \\A\\ is **bounded above** if it has an upper bound, **bounded below** if it has a lower bound, and **bounded** if it is both bounded above and bounded below. A real-valued [function](sets-functions.llms.md#def-function) is bounded above, bounded below, or bounded if its [image](sets-functions.llms.md#def-image) is.
+
+> **NOTE:**
+>
+> **Example 11 (Bounded and unbounded sets)**  
+>
+> - For \\A = (0, 1\]\\, \\1\\, \\2\\, and \\100\\ are upper bounds, and \\0\\ and \\-5\\ are lower bounds, so \\A\\ is bounded. \\0.5\\ is not an upper bound, because \\0.6 \in A\\ and \\0.6 \> 0.5\\.
+> - The natural numbers \\\mathbb{N} = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are bounded below, by \\1\\, but not bounded above: for any real number \\u\\, some natural number \\n\\ satisfies \\n \> u\\.
+
+> **NOTE:**
+>
+> **Definition 14 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 13](#def-bounded)). The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
 >
 > \\\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ t \le a\right\\\mathclose{}\\
 >
@@ -224,13 +321,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 6* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 8](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
+> *Remark 6* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 14](#def-infimum) always exists: that is the completeness (greatest-lower-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
 >
 > If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\. For example, \\\inf \[1, 2\] = 1 = \min \[1, 2\]\\. For \\A = (1, 2\]\\, the infimum \\1\\ is not in \\A\\, and \\A\\ has no minimum.
 
 > **NOTE:**
 >
-> **Example 6 (Numerical examples of infimum)**  
+> **Example 12 (Numerical examples of infimum)**  
 >
 > - \\\inf\\1, 2, 3\\ = 1\\, since \\1\\ is the smallest element.
 > - \\\inf(0.5, 1\] = 0.5 = \min\[0.5, 1\]\\: for intervals open below, the infimum equals the minimum of the corresponding closed-below interval, even though \\0.5 \notin (0.5, 1\]\\. More generally, \\\inf(c, b\] = \min\[c, b\] = c\\ for any \\c \< b\\.
@@ -239,7 +336,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 9 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above, meaning that some \\t \in \mathbb{R}\\ satisfies \\a \le t\\ for all \\a \in A\\. The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
+> **Definition 15 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 13](#def-bounded)). The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
 >
 > \\\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ a \le t\right\\\mathclose{}\\
 >
@@ -247,19 +344,53 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 7* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 9](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
+> *Remark 7* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 15](#def-supremum) always exists: that is the completeness (least-upper-bound) property of the real numbers ([Rudin 1976](#ref-rudin1976principles), Definition 1.8, p. 4, and Theorem 1.19, p. 8). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
 >
 > If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\. For example, \\\sup \[1, 2\] = 2 = \max \[1, 2\]\\. For \\A = \[1, 2)\\, the supremum \\2\\ is not in \\A\\, and \\A\\ has no maximum.
 
 > **NOTE:**
 >
-> **Example 7 (Numerical examples of supremum)**  
+> **Example 13 (Numerical examples of supremum)**  
 >
 > - \\\sup\\1, 2, 3\\ = 3\\, since \\3\\ is the largest element.
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
 > - \\\sup\\1, 2, 3, \ldots\\ = +\infty\\, because no real number is greater than or equal to every element of that set.
 
-## 7 Sums
+## 8 Sums
+
+> **NOTE:**
+>
+> **Definition 16 (Identity element)** Let \\S\\ be a set, such as the real numbers \\\mathbb{R}\\, and let \\\star\\ be an operation that combines two elements \\a\\ and \\b\\ of \\S\\ into an element \\a \star b\\ of \\S\\, such as addition (\\a + b\\) or multiplication (\\a \times b\\) of real numbers. An element \\u\\ of \\S\\ is an **identity element** for \\\star\\ if \\a \star u = a\\ and \\u \star a = a\\ for every \\a \in S\\.
+
+> **NOTE:**
+>
+> **Example 14 (Identity elements for addition and multiplication)**  
+>
+> - \\0\\ is the identity element for addition: for example, \\5 + 0 = 5\\ and \\0 + 5 = 5\\ ([Theorem 8](#thm-add-ident)).
+> - \\1\\ is the identity element for multiplication: for example, \\5 \times 1 = 5\\ and \\1 \times 5 = 5\\ ([Theorem 11](#thm-mult-one)).
+> - \\0\\ is not an identity element for subtraction: \\5 - 0 = 5\\, but \\0 - 5 = -5 \ne 5\\.
+
+> **NOTE:**
+>
+> **Definition 17 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 16](#def-identity-element)) is **commutative** if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 9](#thm-sum-symmetric) and [Theorem 12](#thm-prod-symmetric), call a commutative operation **symmetric**.
+
+> **NOTE:**
+>
+> **Example 15 (A commutative operation, and one that is not)**  
+>
+> - Addition is commutative: for example, \\2 + 5 = 7 = 5 + 2\\.
+> - Subtraction is not commutative: \\5 - 3 = 2\\, but \\3 - 5 = -2\\.
+
+> **NOTE:**
+>
+> **Definition 18 (Associative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 16](#def-identity-element)) is **associative** if \\(a \star b) \star c = a \star (b \star c)\\ for all \\a, b, c \in S\\: which pair is combined first does not matter.
+
+> **NOTE:**
+>
+> **Example 16 (An associative operation, and one that is not)**  
+>
+> - Multiplication is associative: for example, \\(2 \times 3) \times 4 = 6 \times 4 = 24\\ and \\2 \times (3 \times 4) = 2 \times 12 = 24\\.
+> - Subtraction is not associative: \\(8 - 4) - 2 = 4 - 2 = 2\\, but \\8 - (4 - 2) = 8 - 2 = 6\\.
 
 > **NOTE:**
 >
@@ -277,9 +408,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 8 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
+> **Example 17 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
 
-## 8 Products
+## 9 Products
 
 > **NOTE:**
 >
@@ -293,7 +424,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 13 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
 
-## 9 Division
+## 10 Division
 
 > **NOTE:**
 >
@@ -301,7 +432,22 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > \\\frac {a}{b} = a \times \frac{1}{b}\\
 
-## 10 Sums and products together
+## 11 Sums and products together
+
+> **NOTE:**
+>
+> **Definition 19 (Distributive law)** An operation \\\star\\ on a set \\S\\ **distributes over** an operation \\\diamond\\ on \\S\\ ([Definition 16](#def-identity-element)) if
+>
+> \\a \star (b \diamond c) = (a \star b) \diamond (a \star c)\\
+>
+> for all \\a, b, c \in S\\. The **distributive law** is the statement that multiplication distributes over addition, \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 15](#thm-mult-distr)); we then say multiplication is **distributive**.
+
+> **NOTE:**
+>
+> **Example 18 (Multiplication distributes over addition, but not the reverse)**  
+>
+> - \\3 \times (4 + 5) = 3 \times 9 = 27\\, and \\(3 \times 4) + (3 \times 5) = 12 + 15 = 27\\.
+> - Addition does not distribute over multiplication: \\2 + (3 \times 4) = 2 + 12 = 14\\, but \\(2 + 3) \times (2 + 4) = 5 \times 6 = 30\\.
 
 > **NOTE:**
 >
@@ -335,7 +481,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 8* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 16](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. Squared errors such as \\(y - \hat{y})^2\\ are expanded this way. For example, with \\y = 5\\ and \\\hat{y} = 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
 
-## 11 Summation notation
+## 12 Summation notation
 
 > **NOTE:**
 >
@@ -358,7 +504,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 10 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
+> **Definition 20 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
@@ -370,11 +516,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 11 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
+> **Definition 21 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
 
 > **NOTE:**
 >
-> **Exercise 6 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 10](#def-summation) and the rules of algebra above, show that:
+> **Exercise 6 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 20](#def-summation) and the rules of algebra above, show that:
 >
 > 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
 > 2.  \\\sum\_{i=1}^{3} \left(a_i + b_i\right) = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
@@ -383,7 +529,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Solution 6*. Each step below applies [Definition 10](#def-summation), the distributive law ([Theorem 15](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 9](#thm-sum-symmetric) and [Theorem 10](#thm-sum-assoc)).
+> *Solution 6*. Each step below applies [Definition 20](#def-summation), the distributive law ([Theorem 15](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 9](#thm-sum-symmetric) and [Theorem 10](#thm-sum-assoc)).
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
@@ -434,7 +580,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 12 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a finite [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
+> **Definition 22 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](sets-functions.llms.md#def-finite-set) [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
 >
 > \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
 >
@@ -444,50 +590,50 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 10* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 7](#exr-sum-over-set), part 2, shows another example.
 >
-> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 10](#def-summation).
+> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 20](#def-summation).
 
 > **NOTE:**
 >
 > *Remark 11* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
 
-## 12 Quotients
+## 13 Quotients
 
 > **NOTE:**
 >
-> **Definition 13 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Definition 23 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
 > **NOTE:**
 >
-> **Definition 14 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 13](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
+> **Definition 24 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 23](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
 
 > **NOTE:**
 >
-> **Example 9 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 13](#def-quotient) requires a nonzero denominator.
+> **Example 19 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 23](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 15 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up. For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
+> **Definition 25 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up. For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
 
 cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 16 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 26 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Example 10 (A ratio, and a quotient that is not one)**  
+> **Example 20 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
 
 > **NOTE:**
 >
-> **Definition 17 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 27 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -495,25 +641,25 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 11 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 21 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
 
 > **NOTE:**
 >
-> **Definition 18 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 28 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 > **NOTE:**
 >
-> **Example 12 (Proportional and non-proportional functions)**  
+> **Example 22 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{6x^2}{2x^2} = 3\\, which does not depend on \\x\\.
 > - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{x + 1}{x} = \tfrac{x}{x} + \tfrac{1}{x} = 1 + \tfrac{1}{x}\\, which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
-## 13 Polynomials
+## 14 Polynomials
 
 > **NOTE:**
 >
@@ -532,7 +678,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 19 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
+> **Definition 29 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\.
 
 > **NOTE:**
 >
@@ -540,11 +686,11 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 20 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
+> **Definition 30 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
 
 > **NOTE:**
 >
-> **Example 13 (Degrees of some polynomials)**  
+> **Example 23 (Degrees of some polynomials)**  
 >
 > - \\f(x) = 4x\\ has degree \\1\\.
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\: the degree is the highest power with a nonzero coefficient, not the power in the first term written.
@@ -552,18 +698,102 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 21 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+> **Definition 31 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
 
 > **NOTE:**
 >
-> **Example 14 (Leading coefficients)**  
+> **Example 24 (Leading coefficients)**  
 >
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\, so its leading coefficient is \\a_3 = 1\\, not the \\5\\ written first.
 > - \\f(x) = 3 - x^2\\ has leading coefficient \\a_2 = -1\\.
 
-## 14 Exponentials and Logarithms
+## 15 Limits of sequences
 
-In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is the natural logarithm of \\x \> 0\\, the logarithm with base \\e \approx 2.718\\, and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} = e^x\\ is the exponential function. Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for base 10.
+> **NOTE:**
+>
+> **Definition 32 (Limit of a sequence)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **converges** to a real number \\L\\, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\epsilon \> 0\\ there is a natural number \\N\\ such that
+>
+> \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \epsilon \quad \text{for every } n \ge N.\\
+>
+> Then \\L\\ is the **limit** of the sequence. A sequence that converges to some real number is **convergent**, and a sequence that does not converge to any real number **diverges**. A sequence **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
+
+> **NOTE:**
+>
+> **Example 25 (A convergent sequence and a divergent one)**  
+>
+> - \\a_n = \frac{1}{n}\\ converges to \\0\\. Given \\\epsilon \> 0\\, take \\N\\ to be any natural number larger than \\\frac{1}{\epsilon}\\. For every \\n \ge N\\, \\\mathopen{}\left\|\frac{1}{n} - 0\right\|\mathclose{} = \frac{1}{n} \le \frac{1}{N} \< \epsilon\\. For example, with \\\epsilon = 0.01\\, take \\N = 101\\: every \\n \ge 101\\ has \\\frac{1}{n} \le \frac{1}{101} \< 0.01\\.
+> - \\c_n = n\\ diverges. For any real number \\L\\ and \\\epsilon = 1\\, every \\n \> L + 1\\ has \\\mathopen{}\left\|n - L\right\|\mathclose{} \> 1\\, so no \\N\\ works. For example, with \\L = 5\\, every \\n \ge 7\\ has \\\mathopen{}\left\|n - 5\right\|\mathclose{} \ge 2\\. It diverges to \\\infty\\: for every real number \\M\\, every \\n \ge N\\ has \\c_n = n \> M\\ when \\N\\ is a natural number larger than \\M\\.
+
+## 16 Exponentials and Logarithms
+
+> **NOTE:**
+>
+> **Definition 33 (Exponential function)** The **exponential function** \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+>
+> \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
+>
+> the [limit](#def-sequence-limit) of the [sequence](sets-functions.llms.md#def-sequence) \\\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots\\. That limit exists for every real number \\x\\, and it is positive.
+
+> **NOTE:**
+>
+> **Example 26 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
+>
+> |    \\n\\ | \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ |
+> |---------:|:----------------------------------------------------------|
+> |    \\1\\ | \\2\\                                                     |
+> |   \\10\\ | \\2.59374\ldots\\                                         |
+> |  \\100\\ | \\2.70481\ldots\\                                         |
+> | \\1000\\ | \\2.71692\ldots\\                                         |
+>
+> They approach \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\. For \\x = 0\\, every term is \\\mathopen{}\left(1 + 0\right)\mathclose{}^n = 1\\, so \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\.
+
+> **NOTE:**
+>
+> **Definition 34 (Euler’s number)** **Euler’s number** is
+>
+> \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
+
+> **NOTE:**
+>
+> **Example 27 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+
+> **NOTE:**
+>
+> **Definition 35 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 33](#def-exponential-function)).
+
+> **NOTE:**
+>
+> *Remark 13* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 34](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+
+> **NOTE:**
+>
+> **Example 28 (Natural logarithms)**  
+>
+> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 26](#exm-exponential-function)).
+> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 34](#def-euler-number)).
+> - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
+
+> **NOTE:**
+>
+> **Definition 36 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
+>
+> \\a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{}.\\
+>
+> When \\b\\ is an integer, this agrees with [Definition 3](#def-power).
+
+> **NOTE:**
+>
+> **Example 29 (Real powers, and \\e^x\\)**  
+>
+> - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with \\2^3 = 2 \cdot 2 \cdot 2 = 8\\ from [Definition 3](#def-power).
+>
+> - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 4](#def-square-root)).
+>
+> - For every real \\x\\, with base \\e\\ ([Definition 34](#def-euler-number)):
+>
+>   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~36}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~28}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{#thm-mult-one}{\text{Theorem~11}}\text{)} \end{aligned} \\
+>
+>   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
 
 > **NOTE:**
 >
@@ -606,7 +836,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 15 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 30 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
@@ -616,7 +846,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 16 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 31 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
@@ -636,7 +866,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 17 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
+> **Example 32 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
 
 > **NOTE:**
 >
@@ -648,7 +878,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 18 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
+> **Example 33 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
 
 > **NOTE:**
 >
@@ -658,7 +888,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> **Example 19 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 34 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >
@@ -674,7 +904,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> *Remark 13* (Tarski’s high school identities). Restricted to positive integers, the following results are [Tarski’s eleven “high school” identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
+> *Remark 14* (Tarski’s high school identities). Restricted to positive integers, the following results are [Tarski’s eleven “high school” identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 9](#thm-sum-symmetric), [Theorem 10](#thm-sum-assoc));
 > - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 11](#thm-mult-one), [Theorem 12](#thm-prod-symmetric), [Theorem 13](#thm-prod-assoc), [Theorem 15](#thm-mult-distr));
@@ -682,7 +912,7 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 
 > **NOTE:**
 >
-> *Remark 14* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 13](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
+> *Remark 15* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 14](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
@@ -858,11 +1088,11 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 >
 > \\ \begin{aligned} a^{(b^c)} &= 0^{(b^0)} \\ &= 0^1 \\ &= 0 \end{aligned} \\
 
-## 15 Complex numbers
+## 17 Complex numbers
 
 > **NOTE:**
 >
-> **Definition 22 (Imaginary unit)** The **imaginary unit** \\i\\ is a number whose square is \\-1\\:
+> **Definition 37 (Imaginary unit)** The **imaginary unit** \\i\\ is a number whose square is \\-1\\:
 >
 > \\i^2 \stackrel{\text{def}}{=}-1.\\
 >
@@ -878,13 +1108,13 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 20 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
+> **Example 35 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
 >
-> \\ \begin{aligned} i^3 &= i^2 \cdot i && \text{(split off one factor of } i \text{)} \\ &= (-1) \cdot i && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= -i && \text{(multiply)} \end{aligned} \\
+> \\ \begin{aligned} i^3 &= i^2 \cdot i && \text{(split off one factor of } i \text{)} \\ &= (-1) \cdot i && \text{(}\href{#def-imaginary-unit}{\text{Definition~37}}\text{)} \\ &= -i && \text{(multiply)} \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} i^4 &= i^2 \cdot i^2 && \text{(split the power into two squares)} \\ &= (-1) \cdot(-1) && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{, twice)} \\ &= 1 && \text{(multiply)} \end{aligned} \\
+> \\ \begin{aligned} i^4 &= i^2 \cdot i^2 && \text{(split the power into two squares)} \\ &= (-1) \cdot(-1) && \text{(}\href{#def-imaginary-unit}{\text{Definition~37}}\text{, twice)} \\ &= 1 && \text{(multiply)} \end{aligned} \\
 >
 > so the cycle starts again:
 >
@@ -894,20 +1124,20 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 21 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
+> **Example 36 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
 >
 > - if \\x \ge 0\\, then \\x^2 = x \cdot x\\ is a product of two nonnegative numbers, so \\x^2 \ge 0\\;
 > - if \\x \< 0\\, then \\x^2 = x \cdot x\\ is a product of two negative numbers, so \\x^2 \> 0\\.
 >
-> For instance, \\3^2 = 9\\ and \\(-3)^2 = 9\\; neither is \\-1\\. So the equation \\x^2 = -1\\ has no real solution, and [Definition 22](#def-imaginary-unit) introduces a new number to solve it.
+> For instance, \\3^2 = 9\\ and \\(-3)^2 = 9\\; neither is \\-1\\. So the equation \\x^2 = -1\\ has no real solution, and [Definition 37](#def-imaginary-unit) introduces a new number to solve it.
 
 > **NOTE:**
 >
-> **Definition 23 (Complex number)** A **complex number** is a number of the form
+> **Definition 38 (Complex number)** A **complex number** is a number of the form
 >
 > \\z = a + b\\i,\\
 >
-> where \\a\\ and \\b\\ are real numbers and \\i\\ is the imaginary unit ([Definition 22](#def-imaginary-unit)).
+> where \\a\\ and \\b\\ are real numbers and \\i\\ is the imaginary unit ([Definition 37](#def-imaginary-unit)).
 >
 > - The **real part** of \\z\\ is \\\operatorname{Re} z \stackrel{\text{def}}{=}a\\.
 > - The **imaginary part** of \\z\\ is \\\operatorname{Im} z \stackrel{\text{def}}{=}b\\.
@@ -919,7 +1149,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Example 22 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
+> **Example 37 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
 >
 > The numbers \\1 + i\\ and \\1 - i\\ have the same real part, \\1\\, but different imaginary parts, \\1\\ and \\-1\\, so they are different complex numbers.
 >
@@ -943,25 +1173,25 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 >
 > **Product.**
 >
-> \\ \begin{aligned} (a + b\\i)(c + d\\i) &= ac + ad\\i + bc\\i + bd\\i^2 && \text{(distribute)} \\ &= ac + ad\\i + bc\\i - bd && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= (ac - bd) + (ad + bc)\\i && \text{(group the real terms and the terms with } i \text{)} \end{aligned} \\
+> \\ \begin{aligned} (a + b\\i)(c + d\\i) &= ac + ad\\i + bc\\i + bd\\i^2 && \text{(distribute)} \\ &= ac + ad\\i + bc\\i - bd && \text{(}\href{#def-imaginary-unit}{\text{Definition~37}}\text{)} \\ &= (ac - bd) + (ad + bc)\\i && \text{(group the real terms and the terms with } i \text{)} \end{aligned} \\
 
 Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two formulas as the definitions of addition and multiplication.
 
 > **NOTE:**
 >
-> **Example 23 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
+> **Example 38 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
 >
 > \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~27}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
 >
 > and their product, multiplying out directly, is
 >
-> \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~37}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
 >
 > The product formula in [Theorem 27](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
 
 > **NOTE:**
 >
-> **Definition 24 (Complex conjugate)** The **complex conjugate** of a complex number \\z = a + b\\i\\ ([Definition 23](#def-complex-number)) is
+> **Definition 39 (Complex conjugate)** The **complex conjugate** of a complex number \\z = a + b\\i\\ ([Definition 38](#def-complex-number)) is
 >
 > \\\overline{z} \stackrel{\text{def}}{=}a - b\\i.\\
 
@@ -969,7 +1199,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 24 (Complex conjugates)**  
+> **Example 39 (Complex conjugates)**  
 >
 > - \\\overline{3 + 4\\i} = 3 - 4\\i\\.
 > - \\\overline{-2\\i} = \overline{0 + (-2)\\i} = 0 - (-2)\\i = 2\\i\\.
@@ -977,7 +1207,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Definition 25 (Absolute value of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 23](#def-complex-number)) is
+> **Definition 40 (Absolute value of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 38](#def-complex-number)) is
 >
 > \\\mathopen{}\left\|z\right\|\mathclose{} \stackrel{\text{def}}{=}\sqrt{a^2 + b^2}.\\
 
@@ -985,7 +1215,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 25 (Absolute values of complex numbers)**  
+> **Example 40 (Absolute values of complex numbers)**  
 >
 > - \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5\\.
 > - \\\mathopen{}\left\|-2\\i\right\|\mathclose{} = \sqrt{0^2 + (-2)^2} = \sqrt{4} = 2\\.
@@ -1003,17 +1233,17 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 >
 > *Proof*. Write \\z = a + b\\i\\ with \\a, b\\ real. Then
 >
-> \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~24}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~25}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~39}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~37}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~40}}\text{)} \end{aligned} \\
 
 Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity among the properties of complex numbers.
 
 > **NOTE:**
 >
-> **Example 26 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~22}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 41 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~37}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
-> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 25](#exm-complex-modulus), as [Theorem 28](#thm-conj-product) says.
+> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 40](#exm-complex-modulus), as [Theorem 28](#thm-conj-product) says.
 
-## 16 Further reading
+## 18 Further reading
 
 - Abramson et al. ([2021](#ref-abramson2021algebra)) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, and logarithms, which overlap with the algebra on this page.
 - Rudin ([1976](#ref-rudin1976principles)) develops the real numbers, including the least upper bound property behind the infimum and supremum.
