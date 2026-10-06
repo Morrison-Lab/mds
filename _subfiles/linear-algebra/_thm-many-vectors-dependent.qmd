@@ -10,7 +10,7 @@ $c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k = \vzero_p$.
 
 ::: proof
 
-Induction on $p$.
+[Induction](proof-writing.qmd#def-proof-by-induction) on $p$.
 
 **Base case, $p = 1$.**
 Each $\vecf{v}_i$ is a single number $v_i$, and $k \ge 2$.

@@ -149,7 +149,7 @@ where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$.
 For $i \ne j$ no term survives, so the entry is $0$;
 for $i = j$ only $l = i$ survives, giving $d_i\,e_i$.
 So $\matr{D} \matr{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)$,
-and induction on $k$ gives $\matr{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
+and [induction](proof-writing.qmd#def-proof-by-induction) on $k$ gives $\matr{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)$.
 
 **Powers of $\matr{A}$, by induction on $k$.**
 $k = 1$ is the assumption. If it holds for $k - 1$,

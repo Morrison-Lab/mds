@@ -19,7 +19,7 @@ $$
 
 ::: proof
 
-By induction on $p$.
+By [induction](proof-writing.qmd#def-proof-by-induction) on $p$.
 For $p = 1$, the matrix is $\begin{bmatrix} d_1 \end{bmatrix}$,
 and its determinant is $d_1$ by definition.
 
