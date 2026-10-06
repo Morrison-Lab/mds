@@ -14,6 +14,6 @@ $$(\mu \otimes \nu)(A \times B) = \mu(A) \, \nu(B)
 with $0 \cdot \infty = \infty \cdot 0 \eqdef 0$
 and $x \cdot \infty = \infty \cdot x \eqdef \infty$ for $x > 0$.
 Exactly one measure has these values
-[@billingsley1995probability, Section 18].
+[@billingsley1995probability, Theorem 18.2].
 
 :::
