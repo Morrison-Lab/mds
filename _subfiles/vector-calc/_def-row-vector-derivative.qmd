@@ -2,7 +2,7 @@
 #### Row-vector derivative
 If $f(\vb)$ is a scalar-valued function of a $p \times 1$ vector $\vb$,
 such as $f(\vb) = \tp{\vx}\vb$,
-then its **row-vector derivative** is the row of its
+then its **row-vector derivative** is the row vector of its
 partial derivatives (@def-partial-derivative):
 
 $$
@@ -15,13 +15,13 @@ $$
 }
 $$ {#eq-row-vector-derivative}
 
-Some sources write the same row as $\deriv{\tp{\vb}} f(\vb)$,
+Some sources write the same row vector as $\deriv{\tp{\vb}} f(\vb)$,
 with the operator on the left,
 read as each operator $\deriv{\beta_i}$ applied to $f$ rather than as a matrix product
 (see @rem-row-derivative-shape).
 
 The row-vector derivative is also called the **total derivative** of $f$,
-the name used when the derivative of a scalar-valued function is written as a row.
+the name used when the derivative of a scalar-valued function is written as a row vector.
 :::
 
 {{< slidebreak >}}
@@ -29,20 +29,20 @@ the name used when the derivative of a scalar-valued function is written as a ro
 :::{#rem-row-derivative-shape}
 #### Which side the operator goes on
 
-Read $\deriv{\vb}$ as a $p \times 1$ column of operators
+Read $\deriv{\vb}$ as a $p \times 1$ column vector of operators
 with entries $\deriv{\beta_1}, \ldots, \deriv{\beta_p}$,
-and $\deriv{\tp{\vb}}$ as the $1 \times p$ row with the same entries.
+and $\deriv{\tp{\vb}}$ as the $1 \times p$ row vector of operators with the same entries.
 Writing either one next to $f$ can be read in two ways:
 
 - **As a matrix product,**
   with $f$ a $1 \times 1$ matrix,
   under the shape rule of [matrix multiplication](linear-algebra.qmd#def-matrix-mult).
-  The column operator works on the left:
-  $\deriv{\vb} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column (@def-vector-derivative).
-  The row operator does not:
+  The column-vector operator works on the left:
+  $\deriv{\vb} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column vector (@def-vector-derivative).
+  The row-vector operator does not:
   $\deriv{\tp{\vb}} f$ is $(1 \times p)(1 \times 1)$,
   whose inner dimensions $p$ and $1$ do not match when $p > 1$.
-  For the shape rule to give the $1 \times p$ row,
+  For the shape rule to give the $1 \times p$ row vector,
   the operator would have to go on the right of $f$, as in $(1 \times 1)(1 \times p)$,
   which changes its meaning (see below).
 - **As a scalar multiple,**
@@ -54,7 +54,7 @@ Writing either one next to $f$ can be read in two ways:
 
 The fraction $\derivf{f}{\tp{\vb}}$ of @eq-row-vector-derivative
 means the same thing under both readings:
-the transpose in the denominator says the result is a row,
+the transpose in the denominator says the result is a row vector,
 without making the derivative a product.
 
 Treating the operators as vectors is sound for checking shapes,
@@ -67,7 +67,7 @@ scalars commute with matrices, and products can be regrouped.
   but $f \deriv{\beta_i}$ is still an unapplied operator, waiting for something to act on.
   So, unlike $c \vx = \vx c$, the operator cannot move to the other side of $f$
   without changing the meaning.
-  Putting the row operator on the right of $f$ gives the row derivative
+  Putting the row-vector operator on the right of $f$ gives the row-vector derivative
   only under the convention that it acts on the factor to its left.
 - **Products cannot be regrouped.**
   An operator acts on the whole product to its right,

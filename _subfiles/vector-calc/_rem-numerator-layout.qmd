@@ -4,7 +4,7 @@
 Some sources use the numerator layout (@def-jacobian-matrix) throughout,
 so that their derivative of a vector-valued function is the Jacobian matrix,
 the transpose of the derivative used in these notes.
-In numerator layout, the derivative of a scalar-valued function is a row:
+In numerator layout, the derivative of a scalar-valued function is a row vector:
 the row-vector derivative (@def-row-vector-derivative).
 Check a source's layout before combining its formulas with these.
 
