@@ -11,11 +11,9 @@ The exercises and solutions in this section are adapted from @problifesavercalc
 Find the derivative of
 
 $$f(x) = 4x^5 + 3x^2 + x^{1/3}$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-polynomial-root}
 Differentiate term by term using the constant multiple rule (@thm-deriv-const-factor) and the power rule (@thm-deriv-polynomial):
 
 $$\ba
@@ -39,11 +37,9 @@ $$f'(x) = 20x^4 + 6x + \frac{1}{3}x^{-2/3}$$
 Find the derivative of
 
 $$f(x) = (x^4 + 3x^2 + 8)\cos x$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-product-poly-cos}
 Apply the product rule (@thm-product-rule) with:
 
 $$u(x) = x^4 + 3x^2 + 8, \qquad v(x) = \cos x$$
@@ -71,11 +67,9 @@ Find the derivative of
 $$f(x) = \log(1 - x^2)$$
 
 for $x \in (-1, 1)$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-chain-log}
 Apply the chain rule for logarithms (@cor-deriv-log-chain): if $g(x) = 1 - x^2$, then $g'(x) = -2x$, and
 
 $$f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}$$
@@ -93,11 +87,9 @@ Find the derivative of
 $$f(x) = \log(4x) - \log(2x)$$
 
 for $x > 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-log-simplify}
 Simplify before differentiating using the quotient property of logarithms:
 
 $$f(x) = \log(4x) - \log(2x) = \log\paren{\frac{4x}{2x}} = \log 2$$
@@ -117,11 +109,9 @@ $$f'(x) = 0$$
 Find the derivative of
 
 $$f(x) = \exp{-\frac{x^2}{2}}$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-gaussian-kernel}
 Apply the chain rule (@thm-chain-rule) with outer function $\exp{u}$ and inner function $u(x) = -x^2/2$. Since $\dif{}{u}\exp{u} = \exp{u}$ (@thm-deriv-exp) and $u'(x) = -x$:
 
 $$f'(x) = u'(x)\exp{u(x)} = -x\exp{-\frac{x^2}{2}}$$
@@ -135,11 +125,9 @@ $$f'(x) = u'(x)\exp{u(x)} = -x\exp{-\frac{x^2}{2}}$$
 Find the second derivative of
 
 $$f(x) = \exp{-\frac{x^2}{2}}$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-second-gaussian-kernel}
 From @exr-miller-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp{-x^2/2}$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp{-x^2/2}$:
 
 $$\ba
@@ -167,11 +155,9 @@ f''(x) &= u'(x)v(x) + u(x)v'(x)
 Find the derivative of
 
 $$f(x) = \exp{x^8}\cos(3x^4)$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-product-chain-composite}
 Apply the product rule (@thm-product-rule) to $u(x) = \exp{x^8}$ and $v(x) = \cos(3x^4)$:
 
 $$f'(x) = u'(x)v(x) + u(x)v'(x)$$
@@ -203,11 +189,9 @@ Let $f(x) = 4x + \sqrt{2}\cos x$.
 1. Compute $f'(x)$.
 2. Find the equation of the tangent line to the curve $y = f(x)$ at $x = \pi/4$.
 3. Use the tangent line to approximate $f(\pi/4 + 0.01)$, and compare that approximation with the exact value.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-tangent-line-approx}
 **1.** Differentiate term by term:
 
 $$f'(x) = 4 - \sqrt{2}\sin x$$
@@ -245,11 +229,9 @@ Find the second derivative of
 $$f(x) = \log x + \sqrt{162}$$
 
 for $x > 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-second-log-constant}
 Because $\sqrt{162}$ is constant with respect to $x$, its derivative is zero (@thm-deriv-const):
 
 $$f'(x) = \frac{1}{x} = x^{-1}$$
@@ -269,11 +251,9 @@ Find the maximum value of
 $$f(x) = x^4 e^{-x}$$
 
 on the interval $[0, \infty)$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-opt-gamma-kernel}
 Differentiate using the product rule:
 
 $$f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)$$
@@ -299,11 +279,9 @@ Find the critical points of
 $$f(x) = 4x^3 - 3x^2$$
 
 and decide whether each is a local maximum, a local minimum, or an inflection point.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-classify-critical-points}
 Compute the first derivative:
 
 $$f'(x) = 12x^2 - 6x = 6x(2x - 1)$$
@@ -332,11 +310,9 @@ Find the derivative of
 $$f(x) = \frac{x^2 - 1}{x - 1}$$
 
 for $x \ne 1$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-quotient-or-factor}
 Factor the numerator before differentiating:
 
 $$f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)$$
@@ -360,11 +336,9 @@ Find the derivative of
 $$f(x) = \sqrt[3]{(5x - 2)^2} = (5x - 2)^{2/3}$$
 
 for $x \ne 2/5$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-generalized-power-rule}
 Apply the generalized power rule $\dif{}{x}[g(x)]^r = r[g(x)]^{r-1}g'(x)$ with $g(x) = 5x - 2$ and $r = 2/3$:
 
 $$f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cd 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}$$
@@ -382,11 +356,9 @@ Let $f(x) = \frac{1}{3}x^3 + x^2 - x - 1$. Find all points on the graph of $f$ w
 1. $-1$
 2. $2$
 3. $0$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-find-slopes}
 The slope is given by the derivative:
 
 $$f'(x) = x^2 + 2x - 1$$
@@ -417,11 +389,9 @@ $$x = \frac{-2 \pm \sqrt{4 - 4(1)(-1)}}{2} = \frac{-2 \pm \sqrt{8}}{2} = -1 \pm 
 Find the second derivative of
 
 $$f(x) = (x^4 + 3x^2 + 8)\cos x$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-deriv-second-product}
 From @exr-miller-deriv-product-poly-cos, the first derivative is:
 
 $$f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x$$

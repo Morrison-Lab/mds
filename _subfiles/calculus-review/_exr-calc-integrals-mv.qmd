@@ -11,11 +11,9 @@ The exercises and solutions in this section are adapted from @problifesavercalc
 Evaluate the double integral:
 
 $$\int_0^2 \int_0^3 5(x^2 y + xy^2 + 2)\,dy\,dx$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-polynomial-rectangle}
 Integrate with respect to $y$ first:
 
 $$\ba
@@ -45,11 +43,9 @@ $$\ba
 Evaluate the double integral:
 
 $$\int_0^6 \int_0^5 x e^{-xy}\,dy\,dx$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-order-of-integration}
 Integrating with respect to $x$ first requires integration by parts. Integrating with respect to $y$ first is much simpler because the factor of $x$ is already present:
 
 $$\int_0^5 x e^{-xy}\,dy = \sb{-e^{-xy}}_{y=0}^5 = 1 - e^{-5x}$$
@@ -73,11 +69,9 @@ $$\ba
 Let $m, n > 0$. Evaluate:
 
 $$\int_0^1 \int_0^1 x^m y^n\,dy\,dx$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-separable}
 Because the region of integration is a rectangle $[0, 1] \times [0, 1]$ and the integrand factors as $g(x)h(y) = x^m \cd y^n$, the double integral splits into the product of two single-variable integrals:
 
 $$\int_0^1 \int_0^1 x^m y^n\,dy\,dx = \paren{\int_0^1 x^m\,dx}\paren{\int_0^1 y^n\,dy}$$
@@ -103,11 +97,9 @@ Evaluate the integral:
 $$\int_0^1 \int_0^x xy\,dy\,dx$$
 
 and confirm the result by reversing the order of integration.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-triangular-region}
 **1. Given order ($y$ then $x$):**
 
 $$\int_0^x xy\,dy = x\sb{\frac{y^2}{2}}_0^x = \frac{x^3}{2}$$
@@ -134,11 +126,9 @@ Express the integral:
 $$\int_0^1 \int_0^x y e^{-xy}\,dy\,dx$$
 
 by reversing the order of integration.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-switch-order}
 In the given order, the inner integral $\int_0^x y e^{-xy}\,dy$ requires integration by parts with respect to $y$.
 
 Switching the order over the triangular domain $\{(x, y) : 0 \le y \le 1, y \le x \le 1\}$:
@@ -166,11 +156,9 @@ $$\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) + e^{-1} - 1 \approx 0.1147$$
 Evaluate the double integral:
 
 $$\int_0^1 \int_0^1 (x^2 + 2xy + y\sqrt{x})\,dy\,dx$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-square-root-term}
 Integrate with respect to $y$ first:
 
 $$\int_0^1 (x^2 + 2xy + y\sqrt{x})\,dy = \sb{x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}}_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}$$
@@ -194,11 +182,9 @@ $$\ba
 Let $a, b, c$ be constants. Evaluate:
 
 $$\int_0^1 \int_0^1 (ax + by + c)\,dy\,dx$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-linear-plane}
 By linearity of the integral:
 
 $$\ba
@@ -218,11 +204,9 @@ $$\ba
 Prove that for every positive integer $n$:
 
 $$\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy = \sum_{k=1}^n \frac{1}{k} = 1 + \frac{1}{2} + \dots + \frac{1}{n}$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-dint-harmonic-identity}
 **Method 1 (integration then geometric series):**
 Integrate with respect to $x$ first:
 
