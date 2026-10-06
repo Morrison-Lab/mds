@@ -2,7 +2,7 @@
 #### Relation
 
 A **relation** $\sim$ on a set $S$ is a rule that,
-for each ordered pair of elements $a, b \in S$,
+for each [ordered pair](#def-cartesian-product) of elements $a, b \in S$,
 says whether $a \sim b$ holds ("$a$ is related to $b$").
 
 :::
