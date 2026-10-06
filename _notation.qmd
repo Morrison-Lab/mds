@@ -6,30 +6,42 @@ and the alternatives you may meet in other sources.
 
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
-| $\neg$      | not                                              | `\neg`
-| $\forall$   | all                                              | `\forall`
-| $\exists$   | some                                             | `\exists`
+| $\neg$      | [not](#def-logical-connective)                   | `\neg`
+| $\forall$   | [for all](#def-quantifier)                       | `\forall`
+| $\exists$   | [there exists](#def-quantifier)                  | `\exists`
 | $\cup$      | union, "or"                                      | `\cup`
 | $\cap$      | intersection, "and"                              | `\cap`
-| $\mid$      | given, conditional on                            | `\mid`, `|`
+| $\mid$      | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|`
 | $\sum$      | [sum](algebra.qmd#sec-summation)                 | `\sum`
 | $\prod$     | product                                          | `\prod`
-| $\mu$       | mean                                             | `\mu`
+| $\mu$       | mean, $\Expp[X]$, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ | `\mu`
 | $\Expp$     | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)   | `\mathbb{E}`
 | $x^{\top}$  | transpose of $x$                                 | `x^{\top}`
 | $'$         | transpose or [derivative](calculus.qmd#def-derivative)[^3] | `'`
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
-| $\tf$       | therefore, thus                                  | `\therefore`
-| $\eta$      | [linear component of a GLM][eta]                 | `\eta`
+| $\tf$       | [therefore](#def-logical-entailment), thus       | `\therefore`
+| $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
 | $\floor{x}$ | floor of $x$: largest [integer](#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
-| $\ceil{x}$  | ceiling of $x$: smallest integer greater than or equal to $x$ | `\lceil x \rceil`
+| $\ceil{x}$  | ceiling of $x$: smallest [integer](#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
 | $\indic{A}(x)$, $\indicp{P}$ | indicator function (@sec-indicator-functions): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 : Notation used in this book {#tbl-notation-collected}
 
+The links for conditioning, random variables, expectation, and independence
+go to the Morrison Lab's probability notes,
+which define those terms.
+
 [eta]: https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation"
 
 [^3]: depending on whether it is applied to a matrix or a function
+
+[^4]: A generalized linear model (GLM) is a regression model
+    in which a chosen function $g$, the link function,
+    of the mean $\mu$ of the outcome
+    equals the linear predictor $\eta = x^{\top} \beta$,
+    a [linear combination](linear-algebra.qmd#def-linear-combination)
+    of the predictor values $x$ with coefficients $\beta$:
+    $g(\mu) = \eta$.
 
 ## Writing math in Quarto {#sec-writing-math-quarto}
 
@@ -110,44 +122,23 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 ## Percent sign ("%")
 
-The percent sign "%" is just a shorthand for "$/100$". 
-The word "percent" comes from the Latin "per centum"; 
-"centum" is Latin for 100, 
-so "percent" means "per hundred" 
-(cf. <https://en.wikipedia.org/wiki/Percentage>)
+The word "percent" comes from the Latin "per centum";
+"centum" is Latin for 100,
+so "percent" means "per hundred"
+(cf. <https://en.wikipedia.org/wiki/Percentage>).
 
-So, contrary to what you may have learned previously, 
-$10\% = 0.1$ is a true and correct equality,
-just as $10 \text{kg} = 10,000 \text{g}$ is true and correct.
+{{< slidebreak >}}
 
-:::{.proof}
+{{< include mds/_subfiles/notation/_def-percent.qmd >}}
 
-$$
-\ba
-10\% &= 10 / 100
-\\ &= \frac{10}{100}
-\\ &= 0.1
-\ea
-$$
+{{< slidebreak >}}
 
-:::
+{{< include mds/_subfiles/notation/_exm-percent.qmd >}}
 
-You are welcome to switch between decimal and percent notation freely; 
+You are welcome to switch between decimal and percent notation freely;
 just make sure you execute it correctly.
 
 ## Proofs
-
-We can use any of:
-
-- $\therefore$ (`\therefore` in LaTeX), 
-- $\Rightarrow$ (`\Rightarrow`), 
-- $\models$ (`\models`) 
-
-to denote logical entailments (deductive consequences).
-
-Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
-
-{{< slidebreak >}}
 
 {{< include mds/_subfiles/notation/_def-proposition.qmd >}}
 
@@ -165,11 +156,64 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-seque
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/notation/_def-logical-connective.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-logical-connective.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-logical-entailment.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-logical-entailment.qmd >}}
+
+We can use any of:
+
+- $\therefore$ (`\therefore` in LaTeX),
+- $\Rightarrow$ (`\Rightarrow`),
+- $\models$ (`\models`)
+
+to denote logical entailment (@def-logical-entailment).
+$\Rightarrow$ also writes the connective "implies" (@def-logical-connective);
+$P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
+for every choice of values for the variables in $P$ and $Q$.
+
+Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/notation/_def-proof.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/notation/_exm-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-derivation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-derivation.qmd >}}
 
 {{< slidebreak >}}
 

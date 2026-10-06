@@ -61,6 +61,8 @@ cat(
 )
 ```
 
-**Graph of $b^c - b*c$**. Red contour lines show where $b^c = b*c$.
+**Graph of $b^c - b*c$**.
+The red [contour lines](#def-contour-line) are at heights $0$ and $1$;
+the ones at height $0$ show where $b^c = b*c$.
 
 :::

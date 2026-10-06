@@ -1,0 +1,12 @@
+:::{#def-line-segment}
+#### Line segment
+
+Let $x, y \in \reals^p$.
+The **line segment** from $x$ to $y$ is the set of points
+$$
+\cb{t x + (1 - t) y : t \in [0, 1]}.
+$$
+The value $t = 1$ gives $x$, the value $t = 0$ gives $y$,
+and $t = \tfrac{1}{2}$ gives the midpoint $\tfrac{1}{2}(x + y)$.
+
+:::

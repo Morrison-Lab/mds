@@ -3,11 +3,17 @@ An **indicator function** is a mathematical function that signals
 whether an element belongs to a specified set,
 or whether a given logical condition is satisfied.
 In statistics and epidemiology,
-indicator functions are ubiquitous:
-they represent binary variables,
-censor and event indicators in survival analysis,
-membership in subpopulations,
-and domain restrictions in integrals and sums.
+indicator functions are ubiquitous.
+They represent:
+
+- binary variables, which take only the values $0$ and $1$
+  (@def-binary-variable);
+- event and censoring indicators in survival analysis,
+  the study of the time until an event such as death,
+  where an observation is censored
+  when follow-up ends before its event is seen;
+- membership in subpopulations;
+- domain restrictions in integrals and sums.
 
 Despite their conceptual simplicity,
 notation for indicator functions varies substantially across textbooks,
@@ -21,7 +27,9 @@ This section summarizes the principal notational conventions.
 #### Indicator function
 
 For any subset $A \subseteq \Omega$ of a universal set $\Omega$,
-the **indicator function** of $A$ is the function
+the **indicator function** of $A$,
+or **set indicator**,
+is the function
 $\indic{A} : \Omega \to \{0, 1\}$ defined by:
 
 $$
@@ -33,7 +41,9 @@ $$
 
 More generally,
 for any logical proposition or predicate $P$,
-the **indicator** of $P$ takes the value $1$ when $P$ is true
+the **indicator** of $P$,
+or **predicate indicator**,
+takes the value $1$ when $P$ is true
 and $0$ when $P$ is false:
 
 $$
@@ -54,13 +64,13 @@ Consider the real line $\Omega = \reals$,
 the set of nonnegative numbers $A = [0, \infty)$,
 and a continuous
 [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
-$Y$.
+$Y$ (defined in the Morrison Lab's probability notes).
 
-1. **Set indicator** $\indic{A}(x)$:
+1. Set indicator $\indic{A}(x)$:
    - For $x = 3.5$: since $3.5 \in [0, \infty)$, $\indic{A}(3.5) = 1$.
    - For $x = -2.1$: since $-2.1 \notin [0, \infty)$, $\indic{A}(-2.1) = 0$.
 
-2. **Predicate indicator** $\indicp{Y > 5}$:
+2. Predicate indicator $\indicp{Y > 5}$:
    - If an observation yields $Y = 7.2$,
      the predicate $7.2 > 5$ is true,
      so $\indicp{7.2 > 5} = 1$.
@@ -70,14 +80,30 @@ $Y$.
 
 :::
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-binary-variable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-binary-variable.qmd >}}
+
 ### Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families:
-**set notation** or **predicate notation**.
+set notation or predicate notation.
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-set-predicate-notation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-set-predicate-notation.qmd >}}
 
 #### Set notation
 
-In **set notation**,
+In set notation,
 the indicator is tied to a set $A$,
 which appears as a subscript:
 
@@ -88,13 +114,14 @@ which appears as a subscript:
 - $\chi_A(x)$ (Greek letter chi, historically termed the *characteristic function*)
 
 When the function is viewed as a mathematical object in its own right
-(for instance, as an element of an $L^p$ function space),
+(for instance, as an element of an $L^p$ function space,
+the set of functions $f$ for which $\int \abs{f(x)}^p \, dx$ is finite),
 authors often omit the argument $x$,
 writing simply $\mathbf{1}_A$, $\mathbb{1}_A$, or $I_A$.
 
 #### Predicate notation
 
-In **predicate notation**,
+In predicate notation,
 the indicator takes a logical condition,
 relation,
 or proposition $P$ directly as its argument or subscript:
@@ -106,7 +133,7 @@ or proposition $P$ directly as its argument or subscript:
 - $I(x \in A)$ or $I(P)$
 
 Predicate notation is especially common in applied statistics and survival analysis,
-where indicators frequently depend on inequalities involving random variables,
+where indicators frequently depend on inequalities (@def-inequality) involving random variables,
 such as $\indicp{T_i \le t}$ (an event occurring before time $t$)
 or $\indicp{Y_i = 1}$ (a binary outcome).
 
@@ -119,8 +146,13 @@ $$
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
 $$
 
+{{< include mds/_subfiles/notation/_def-support.qmd >}}
+
+{{< slidebreak >}}
+
 Set notation is more natural when the underlying set $A$ has a standard name
-(such as the support of a distribution or a geometric region).
+(such as the support of a distribution (@def-support),
+or a geometric region).
 Predicate notation is more natural when the condition involves compound inequalities,
 such as $\indicp{0 \le t \le u}$.
 
@@ -224,7 +256,8 @@ However,
 in statistics and epidemiology,
 square brackets are already heavily overloaded:
 they denote [closed intervals](sets-functions.qmd#def-interval) $[a, b]$,
-conditional expectations $\Expp[Y \mid X]$,
+[conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation)
+$\Expp[Y \mid X]$ (defined in the probability notes),
 and matrix delimiters.
 To prevent visual confusion with expectation brackets or intervals,
 statistical literature predominantly uses $\mathbb{1}$ or $I$
@@ -239,9 +272,9 @@ rather than the bare Iverson bracket.
 | **Blackboard bold 1** | $\mathbb{1}_A(x)$, $\mathbb{1}(P)$ | Modern probability, mathematical statistics | Unambiguous; distinct from matrices and scalars; standard in this book. |
 | **Bold numeral 1** | $\mathbf{1}_A(x)$, $\mathbf{1}(P)$ | Probability theory, measure theory | Can be confused with a vector of ones $\mathbf{1} = (1, \dots, 1)^{\top}$. |
 | **Blackboard bold I** | $\mathbb{I}(x \in A)$, $\mathbb{I}(P)$ | Econometrics, machine learning, statistics | Clear predicate notation; avoids confusion with numerals. |
-| **Letter $I$** | $I_A(x)$, $I(P)$ | Classical statistics, epidemiology | Can be confused with the identity matrix $I$ or Fisher information $\mathcal{I}$. |
+| **Letter $I$** | $I_A(x)$, $I(P)$ | Classical statistics, epidemiology | Can be confused with the identity matrix $I$ or the Fisher information $\mathcal{I}$, which measures how much a sample tells about a parameter. |
 | **Iverson bracket** | $[P]$, $[x \in A]$ | Computer science, discrete mathematics | Very compact, but square brackets collide with intervals and expectation brackets. |
-| **Greek letter $\chi$** | $\chi_A(x)$ | Real analysis, measure theory | Often termed "characteristic function"; collides with the Fourier transform in probability. |
+| **Greek letter $\chi$** | $\chi_A(x)$ | Real analysis, measure theory | Often termed "characteristic function"; in probability, that name instead means $t \mapsto \Expp[e^{itX}]$ for a random variable $X$. |
 
 : Notations for indicator functions across mathematical and statistical literature {#tbl-indicator-notations}
 
@@ -259,11 +292,22 @@ via the macros defined in `latex-macros/macros.qmd`:
 Blackboard bold $\mathbb{1}$ is preferred because it avoids all common collisions:
 it is visually distinct from the scalar $1$,
 the identity matrix $I$,
-and the information matrices ($\oinf$, $\einf$).
+and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
 ### Key algebraic properties
 
-Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:
+Indicator functions translate the logical connectives (@def-logical-connective)
+"and", "or", and "not", applied to set membership,
+into ordinary arithmetic on real numbers.
+One of the identities below uses idempotence:
+
+{{< include mds/_subfiles/notation/_def-idempotent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-idempotent-indicator.qmd >}}
+
+{{< slidebreak >}}
 
 For subsets $A$ and $B$ of $\Omega$,
 with [complement](sets-functions.qmd#def-complement) $A^c \eqdef \Omega \setminus A$,
@@ -275,18 +319,25 @@ and for every $x \in \Omega$:
   $\indic{A \cup B}(x) = \indic{A}(x) + \indic{B}(x) - \indic{A}(x) \cdot \indic{B}(x)$
 - **Complement ("not"):**
   $\indic{A^c}(x) = 1 - \indic{A}(x)$
-- **Idempotence:**
+- **Idempotence (@def-idempotent):**
   $(\indic{A}(x))^2 = \indic{A}(x)$
 - **Expectation gives probability:**
-  For any event $A$,
+  When $\Omega$ is a
+  [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space)
+  and $A$ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event),
   the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)
-  of its indicator is the probability of the event:
+  of its indicator is the [probability](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)
+  of the event
+  (all four terms are defined in the Morrison Lab's probability notes):
 
   $$
   \Expp[\indic{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
   $$
 
-This fundamental [identity](algebra.qmd#def-identity) connects probability theory directly to linear expectation.
-It provides the mathematical foundation for empirical proportions,
-survival curve estimators,
-and regression models for binary outcomes.
+This [identity](algebra.qmd#def-identity) turns probabilities into expectations.
+It is the mathematical foundation for:
+
+- empirical proportions;
+- estimators of survival curves,
+  the probability of no event by each time;
+- regression models for binary outcomes.

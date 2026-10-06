@@ -14,6 +14,9 @@ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 $$
 for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \reals$
 with $a_n \ne 0$.
+The constants $a_0, a_1, \ldots, a_n$ are the **coefficients** of $f$,
+with $a_k$ the coefficient of $x^k$,
+and the [terms](#def-term) of $f$ are $a_n x^n, \ldots, a_1 x, a_0$.
 
 :::
 
@@ -22,7 +25,7 @@ with $a_n \ne 0$.
 :::{#rem-polynomial-nonzero}
 #### Constant and zero polynomials
 
-A constant function $f(x) = 7$ is a polynomial with $n = 0$ and $a_0 = 7$.
+A [constant function](#def-constant-function) $f(x) = 7$ is a polynomial with $n = 0$ and $a_0 = 7$.
 The requirement $a_n \ne 0$ means this definition covers nonzero polynomials only:
 the zero function $f(x) = 0$ is excluded here,
 because it has no nonzero coefficient to serve as $a_n$.

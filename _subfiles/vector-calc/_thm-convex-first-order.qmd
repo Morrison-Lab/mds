@@ -10,7 +10,7 @@ f(\vx) \ge f(\vy) + \tp{\paren{\deriv{\vx} f(\vy)}} (\vx - \vy)
 \qquad \text{for all } \vx, \vy \in \reals^p:
 $$ {#eq-supporting-hyperplane}
 
-every tangent plane lies on or under the graph.
+every tangent plane (@def-tangent-plane) lies on or under the graph.
 If the inequality is strict whenever $\vx \ne \vy$, then $f$ is strictly convex (@def-strictly-convex).
 
 :::

@@ -1,0 +1,8 @@
+:::{#def-idempotent}
+#### Idempotent
+
+A number $a$ is **idempotent** if $a \cd a = a$.
+A function $f$ with real values is **idempotent** if $f(x) \cd f(x) = f(x)$
+for every $x$ in its [domain](sets-functions.qmd#def-domain).
+
+:::

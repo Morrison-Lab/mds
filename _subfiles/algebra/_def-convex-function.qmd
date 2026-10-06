@@ -22,9 +22,10 @@ for all $x, y \in \reals^p$ and all $t \in [0, 1]$.
 :::{#rem-convex-chord-above-graph}
 #### Chords lie on or above the graph
 
-The point $t x + (1 - t) y$ lies on the line segment from $x$ to $y$,
-and the right-hand side is the height of the chord joining
-$(x, f(x))$ and $(y, f(y))$ above that point.
+The point $t x + (1 - t) y$ lies on the
+[line segment](#def-line-segment) from $x$ to $y$,
+and the right-hand side is the height above that point
+of the [chord](#def-chord) of $f$ from $x$ to $y$.
 So $f$ is convex when every chord lies on or above the [graph](sets-functions.qmd#def-graph).
 
 For example, take $f(x) = x^2$, $x = -1$, $y = 3$, and $t = \tfrac{1}{2}$.

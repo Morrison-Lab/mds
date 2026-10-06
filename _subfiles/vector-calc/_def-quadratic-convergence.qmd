@@ -1,7 +1,7 @@
 :::{#def-quadratic-convergence}
 #### Quadratic convergence
 
-A [sequence](sets-functions.qmd#def-sequence) $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$ that [converges](algebra.qmd#def-sequence-limit) to $\vx^*$ **converges quadratically**
+A [sequence](sets-functions.qmd#def-sequence) $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$ that converges (@def-vector-sequence-limit) to $\vx^*$ **converges quadratically**
 if there is a constant $C$ with
 
 $$

@@ -1,6 +1,7 @@
 :::{#thm-equal-trans}
 #### Equalities are transitive
 
-If $a=b$ and $b=c$, then $a=c$
+If $a=b$ and $b=c$, then $a=c$.
+That is, $=$ is a [transitive](#def-transitive) relation.
 
 :::

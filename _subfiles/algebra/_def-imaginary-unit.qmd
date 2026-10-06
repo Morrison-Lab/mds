@@ -8,9 +8,9 @@ $$i^2 \eqdef -1.$$
 Apart from that one rule,
 $i$ obeys the usual rules of arithmetic:
 
-- sums and products with $i$ are commutative;
-- sums and products with $i$ are associative;
-- multiplication distributes over addition.
+- sums and products with $i$ are [commutative](#def-commutative);
+- sums and products with $i$ are [associative](#def-associative);
+- multiplication [distributes](#def-distributive) over addition.
 
 The number $-i$ also squares to $-1$, since $(-i)^2 = (-1)^2\,i^2 = -1$;
 $i$ names one of these two square roots, chosen once and for all.

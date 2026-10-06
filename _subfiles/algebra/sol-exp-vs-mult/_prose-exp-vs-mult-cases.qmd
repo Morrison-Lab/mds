@@ -1,6 +1,6 @@
-We only count a pair $(b, c)$ when $b^c$ is a real number,
+We only count a pair $(b, c)$ when $b^c$ is defined,
 so for $b < 0$ we only consider integer $c$
-(R agrees: `(-8)^(1/3)` is `NaN`).
+(@def-power-nonpositive-base).
 With that convention, $bc = b^c$ in each of the following cases:
 
 1. $c = 1$, for every $b$.

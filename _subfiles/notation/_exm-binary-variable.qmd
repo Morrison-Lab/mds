@@ -1,0 +1,18 @@
+:::{#exm-binary-variable}
+#### A binary variable is an indicator
+
+In a study of $n$ people,
+let $s_i = 1$ if person $i$ smokes and $s_i = 0$ otherwise,
+for $i \in \cb{1, \ldots, n}$.
+Then $s_i$ is a binary variable (@def-binary-variable).
+It is also the predicate indicator (@def-indicator-function)
+of the proposition "person $i$ smokes":
+$s_i = \indicp{\text{person } i \text{ smokes}}$.
+
+In the same way,
+every indicator is a binary variable,
+and every binary variable $X$ is the indicator of its own value being $1$:
+$X = \indicp{X = 1}$,
+since both sides are $1$ when $X = 1$ and $0$ when $X = 0$.
+
+:::

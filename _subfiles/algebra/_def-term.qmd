@@ -1,0 +1,8 @@
+:::{#def-term}
+#### Term of a sum
+
+In a sum $a_1 + a_2 + \cdots + a_n$,
+each of the numbers or expressions $a_1, a_2, \ldots, a_n$ being added
+is a **term** of the sum.
+
+:::
