@@ -7,10 +7,8 @@ A measure assigns a size to each set in a
 how many elements it has, how long it is, or how likely it is.
 This page builds measures from $\sigma$-algebras and additivity,
 using the [sets and functions](sets-functions.qmd) page's definitions.
-A probability measure is a measure $P$ on a set $\Omega$
-whose value on $\Omega$ itself is $P(\Omega) = 1$,
-so that the probability that some outcome in $\Omega$ occurs is 1;
-the Morrison Lab's probability notes build on that definition
+One kind of measure, the probability measure (@def-probability-measure),
+is the starting point of the Morrison Lab's probability notes
 ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
 
 :::
