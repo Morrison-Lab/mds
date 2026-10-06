@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:57:28 (PDT)
+Last modified: 2026-10-06 00:34:40 (PDT)
 
 > **NOTE:**
 >
@@ -479,7 +479,7 @@ Last modified: 2026-10-05 23:57:28 (PDT)
 >
 > \\\int_S f \\ d\mu \stackrel{\text{def}}{=}\int_S f^{+} \\ d\mu - \int_S f^{-} \\ d\mu,\\
 >
-> using [Definition 20](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995, sec. 13](#ref-billingsley1995probability)).)
+> using [Definition 20](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995](#ref-billingsley1995probability), Theorem 13.3).)
 >
 > ([Billingsley 1995, sec. 15](#ref-billingsley1995probability))
 
@@ -529,7 +529,7 @@ Last modified: 2026-10-05 23:57:28 (PDT)
 >
 > \\(\mu \otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathscr{S} \text{ and } B \in \mathscr{T},\\
 >
-> with \\0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\\ and \\x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\. Exactly one measure has these values ([Billingsley 1995, sec. 18](#ref-billingsley1995probability)).
+> with \\0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\\ and \\x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\. Exactly one measure has these values ([Billingsley 1995](#ref-billingsley1995probability), Theorem 18.2).
 
 > **NOTE:**
 >

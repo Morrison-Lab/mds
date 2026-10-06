@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:57:28 (PDT)
+Last modified: 2026-10-06 00:34:40 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -569,9 +569,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > This matches differentiating \\z\\ directly: \\z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2\\, so \\\frac{\partial}{\partial x_1} z = 2x_1 + 3x_2\\ and \\\frac{\partial}{\partial x_2} z = 3x_1 + 2x_2\\. The product in the other order, a \\2 \times 1\\ matrix times a \\2 \times 2\\ matrix, is not defined. The total derivative is the transpose, the row vector \\(2x_1 + 3x_2,\\ 3x_1 + 2x_2)\\.
 
-See <https://quickfem.com/finite-element-analysis/>, specifically <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>
-
-See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_derivative>
+See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contributors ([n.d.](#ref-wp:gradient)), section “Relationship with Frechet derivative”.
 
 > **NOTE:**
 >
@@ -1556,6 +1554,8 @@ See also the [Linear Algebra and Vector Calculus further reading](linear-algebra
 
 ## References
 
+Felippa, Carlos A. n.d. *Matrix Calculus*. Appendix F of Introduction to Finite Element Methods, course notes, University of Colorado Boulder. Accessed October 6, 2026. <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>.
+
 Fieller, Nick. 2016. *Basics of Matrix Algebra for Statistics with R*. Chapman; Hall/CRC. <https://doi.org/10.1201/9781315370200>.
 
 Hutchinson, Brian. n.d. *DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures*. Western Washington University. Accessed September 28, 2026. <https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/>.
@@ -1565,6 +1565,8 @@ Marsden, Jerrold E., and Anthony Tromba. 2013. *Vector Calculus*. 6th ed. Macmil
 Petersen, Kaare Brandt, and Michael Syskind Pedersen. 2012. *The Matrix Cookbook*. Technical University of Denmark. <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>.
 
 Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
+
+Wikipedia contributors. n.d. *Gradient — Wikipedia, the Free Encyclopedia*. <https://en.wikipedia.org/wiki/Gradient>.
 
 Zhou, Hua. 2024. *Optimization and Multivariate Calculus*. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html>.
 
