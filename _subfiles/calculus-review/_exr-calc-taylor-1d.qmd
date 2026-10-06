@@ -5,11 +5,21 @@ The exercises and solutions in this section are adapted from @problifesavercalc
 (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
 :::
 
-The Taylor polynomial of degree $n$ for a function $f$ with $n$ derivatives at $x_0$ is:
+:::{#def-taylor-polynomial}
+#### Taylor polynomial and Taylor series
 
-$$P_n(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n$$ {#eq-taylor-poly-def}
+Let $f$ be a real-valued function that is $n$ times differentiable at a point $x_0$.
+The **Taylor polynomial** of degree $n$ for $f$ centered at $x_0$ is:
 
-When $x_0 = 0$, this is often called the Maclaurin polynomial. When the series converges to $f(x)$ on an interval, the infinite sum is the Taylor series.
+$$P_n(x) \eqdef \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n$$ {#eq-taylor-poly-def}
+
+When $x_0 = 0$, $P_n(x)$ is called the **Maclaurin polynomial** of degree $n$.
+If $f$ is infinitely differentiable at $x_0$, the infinite power series
+
+$$T(x) \eqdef \sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$$
+
+is the **Taylor series** of $f$ centered at $x_0$ (or the **Maclaurin series** when $x_0 = 0$).
+:::
 
 {{< slidebreak >}}
 
@@ -21,11 +31,9 @@ Find the first five terms (up to degree 4) of the Taylor series for
 $$f(x) = x^8 + x^4 + 3$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-poly-zero}
 Evaluate $f$ and its first four derivatives at $x = 0$:
 
 $$\ba
@@ -57,11 +65,9 @@ Find the first three terms (up to degree 2) of the Taylor series for
 $$f(x) = x^8 + x^4 + 3$$
 
 at $x_0 = 1$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-poly-nonzero}
 Evaluate $f$ and its first two derivatives at $x_0 = 1$:
 
 $$\ba
@@ -87,11 +93,9 @@ Find the terms up to degree 4 in the Taylor series for
 $$f(x) = \cos(5x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-cos-scaled}
 Recall the standard Maclaurin series for cosine:
 
 $$\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots$$
@@ -113,11 +117,9 @@ Find the terms up to degree 4 in the Taylor series for
 $$f(x) = \cos^3(5x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-cos-cubed}
 From @exr-miller-taylor-cos-scaled, the expansion of $\cos(5x)$ up to order $x^4$ is:
 
 $$\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)$$
@@ -143,11 +145,9 @@ Find the first two terms (degree 1) of the Taylor series for
 $$f(x) = e^x$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-exp-base}
 Since $f(0) = e^0 = 1$ and $f'(0) = e^0 = 1$:
 
 $$P_1(x) = f(0) + f'(0)x = 1 + x$$
@@ -165,11 +165,9 @@ Find the first six terms (up to degree 5) of the Taylor series for
 $$f(x) = \exp{x^8}$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-exp-power}
 Substitute $u = x^8$ into $e^u = 1 + u + \frac{u^2}{2!} + \dots$:
 
 $$\exp{x^8} = 1 + x^8 + \frac{x^{16}}{2} + \dots$$
@@ -189,11 +187,9 @@ Find the terms up to degree 3 of the Taylor series for the standard normal densi
 $$\phi(x) = \frac{1}{\sqrt{2\pi}}\exp{-\frac{x^2}{2}}$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-normal-density}
 Using $e^u = 1 + u + O(u^2)$ with $u = -x^2/2$:
 
 $$\exp{-\frac{x^2}{2}} = 1 - \frac{x^2}{2} + O(x^4)$$
@@ -217,11 +213,9 @@ Find the first three terms (up to degree 2) of the Taylor series for
 $$f(x) = \sqrt{x}$$
 
 at $x_0 = 1/3$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-sqrt}
 Compute the values at $x_0 = 1/3$:
 
 $$\ba
@@ -247,11 +241,9 @@ Find the first three terms of the Taylor series for
 $$f(x) = (1 + x)^{1/3}$$
 
 at $x_0 = 1/2$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-cube-root}
 At $x_0 = 1/2$, $1 + x_0 = 3/2$:
 
 $$\ba
@@ -277,11 +269,9 @@ Find the first three terms (up to degree 2) of the Taylor series for
 $$f(x) = x\log x$$
 
 at $x_0 = 1$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-x-log-x}
 Evaluate derivatives at $x_0 = 1$:
 
 $$\ba
@@ -307,11 +297,9 @@ Find the first three terms of the Taylor series for
 $$f(x) = \log(1 + x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-log-one-plus-x}
 Differentiating repeatedly at $x_0 = 0$:
 
 $$\ba
@@ -339,11 +327,9 @@ Find the terms up to degree 3 of the Taylor series for
 $$f(x) = \log(1 - x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-log-one-minus-x}
 Substitute $u = -x$ into the expansion for $\log(1 + u)$ from @exr-miller-taylor-log-one-plus-x:
 
 $$\log(1 - x) = (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots = -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots$$
@@ -359,11 +345,9 @@ Find the first two non-zero terms of the Taylor series for
 $$f(x) = \log((1 - x)e^x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-log-product-exp}
 Expand using logarithm properties:
 
 $$f(x) = \log(1 - x) + \log(e^x) = \log(1 - x) + x$$
@@ -387,11 +371,9 @@ Find the terms up to degree 2 of the Taylor series for
 $$f(x) = \cos(x)\log(1 + x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-product-cos-log}
 Multiply the known Maclaurin expansions:
 
 $$\ba
@@ -415,11 +397,9 @@ Find the first two non-zero terms of the Taylor series for
 $$f(x) = \log(1 + 2x)$$
 
 at $x_0 = 0$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-taylor-log-scaled}
 Substitute $u = 2x$ into the Maclaurin series $\log(1 + u) = u - \frac{u^2}{2} + \dots$:
 
 $$\log(1 + 2x) = (2x) - \frac{(2x)^2}{2} + \dots = 2x - 2x^2 + \dots$$

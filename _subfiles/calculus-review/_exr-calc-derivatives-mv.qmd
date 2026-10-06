@@ -9,11 +9,9 @@ The exercises and solutions in this section are adapted from @problifesavercalc
 #### First-order partial derivatives
 
 Let $f(x, y) = x^2 y + e^x + \sin(xy)$. Find $\derivf{f}{x}$ and $\derivf{f}{y}$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-pderiv-basic}
 To compute $\derivf{f}{x}$, treat $y$ as a constant:
 
 $$\derivf{f}{x} = 2xy + e^x + y\cos(xy)$$
@@ -33,11 +31,9 @@ Let
 $$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x - \mu)^2}{2\sigma^2}}$$
 
 Find $\derivf{f}{\mu}$ and $\derivf{f}{\sigma}$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-pderiv-normal-parameters}
 **1. Derivative with respect to $\mu$:**
 Treat $\sigma$ as constant. Differentiating the exponential factor via the chain rule:
 
@@ -67,11 +63,9 @@ $$\ba
 Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
 $$f(x, y) = x\exp{x^2 + y^2}$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-pderiv-exp-quadratic}
 With respect to $x$, apply the product rule:
 
 $$\derivf{f}{x} = (1)\exp{x^2 + y^2} + x \cd \sb{2x\exp{x^2 + y^2}} = (1 + 2x^2)\exp{x^2 + y^2}$$
@@ -91,11 +85,9 @@ Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 $$f(x, y) = e^{xy} - \log(x^2 + y^2)$$
 
 on $\mathbb{R}^2 \setminus \{(0, 0)\}$.
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-pderiv-symmetric}
 Holding $y$ constant, differentiate with respect to $x$:
 
 $$\derivf{f}{x} = ye^{xy} - \frac{2x}{x^2 + y^2}$$
@@ -115,11 +107,9 @@ $$\derivf{f}{y} = xe^{xy} - \frac{2y}{x^2 + y^2}$$
 Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
 $$f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)$$
-
-(adapted from @problifesavercalc)
 :::
 
-::: {.solution}
+::: {#sol-miller-pderiv-independent-variable}
 Although the function is declared as a function of three variables $(x, y, t)$, its expression depends solely on $t$.
 
 Because neither $x$ nor $y$ appears in the formula, $f$ is constant with respect to both $x$ and $y$:
