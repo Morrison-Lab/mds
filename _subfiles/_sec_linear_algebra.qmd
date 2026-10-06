@@ -218,7 +218,23 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_thm-affine-map-props.qmd >}}
+{{< include mds/_subfiles/linear-algebra/_thm-affine-map-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-affine-linear-iff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-linear-is-affine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-affine-map-unique.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-linear-affine-terminology.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-reading-linear-affine.qmd >}}
 
