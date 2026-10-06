@@ -2,12 +2,15 @@
 
 ::: remark
 
-A measure assigns a size to each set in a collection of sets:
+A measure assigns a size to each set in a
+[collection of sets](sets-functions.qmd#def-collection):
 how many elements it has, how long it is, or how likely it is.
 This page builds measures from $\sigma$-algebras and additivity,
 using the [sets and functions](sets-functions.qmd) page's definitions.
-The Morrison Lab's probability notes define a probability measure as a measure
-that gives the whole space size 1
+A probability measure is a measure $P$ on a set $\Omega$
+whose value on $\Omega$ itself is $P(\Omega) = 1$,
+so that the probability that some outcome in $\Omega$ occurs is 1;
+the Morrison Lab's probability notes build on that definition
 ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
 
 :::
@@ -22,11 +25,39 @@ that gives the whole space size 1
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_def-closed-under.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-closed-under.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_thm-sigma-algebra-closure.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_thm-power-set-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-sigma-algebra-intersection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-generated-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-generated-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-borel-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-borel-sigma-algebra.qmd >}}
 
 ## Pairwise disjoint sets
 
@@ -35,6 +66,34 @@ that gives the whole space size 1
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-pairwise-disjoint.qmd >}}
+
+## Infinite sums
+
+{{< include mds/_subfiles/measures/_def-non-decreasing.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-non-decreasing.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-partial-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-partial-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-infinite-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-infinite-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_lem-nonneg-series.qmd >}}
 
 ## Additivity
 
@@ -54,7 +113,7 @@ that gives the whole space size 1
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/measures/_lem-nonneg-series.qmd >}}
+{{< include mds/_subfiles/measures/_rem-countable-additivity-sum-exists.qmd >}}
 
 {{< slidebreak >}}
 
@@ -95,3 +154,107 @@ that gives the whole space size 1
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/measures/_exm-counting-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-measure-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-measure-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-lebesgue-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-lebesgue-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_rem-measure-size.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-measure-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-measure-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-almost-everywhere.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-almost-everywhere.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-sigma-finite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-sigma-finite.qmd >}}
+
+## Probability measures
+
+{{< include mds/_subfiles/measures/_def-probability-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-probability-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_rem-mutually-exclusive.qmd >}}
+
+## Measurable functions and integrals
+
+{{< include mds/_subfiles/measures/_def-measurable-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-measurable-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-integral-nonneg.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-integral-nonneg.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-integral.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-absolutely-integrable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-absolutely-integrable.qmd >}}
+
+## Product measures
+
+{{< include mds/_subfiles/measures/_def-product-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-product-sigma-algebra.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-product-measure.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_exm-product-measure.qmd >}}

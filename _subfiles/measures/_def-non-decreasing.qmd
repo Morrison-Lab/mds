@@ -1,0 +1,11 @@
+:::{#def-non-decreasing}
+#### Non-decreasing sequence
+
+A [sequence](sets-functions.qmd#def-sequence) $a_1, a_2, \ldots$
+of real numbers or of [extended non-negative reals](sets-functions.qmd#def-extended-nonneg-reals)
+is **non-decreasing**
+if each term is at least as large as the one before it:
+
+$$a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}$$
+
+:::

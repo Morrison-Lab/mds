@@ -1,0 +1,13 @@
+:::{#exm-borel-sigma-algebra}
+#### Some Borel sets
+
+- Every interval, such as $[0, 1]$, $(2, 5)$, or $[0, \infty)$, is a Borel set.
+- A single point $\set{a} = [a, a]$ is an interval, so it is a Borel set.
+- The [integers](notation.qmd#def-integers) are a Borel set:
+  they are the union of the sequence of single points $\set{0}, \set{1}, \set{-1}, \set{2}, \set{-2}, \ldots$
+  ([countable and uncountable sets](sets-functions.qmd#exm-countable-set) lists them this way),
+  and $\mathscr{B}$ contains that union by @def-sigma-algebra.
+- The complement $\reals \setminus [0, 1]$ is a Borel set,
+  because $\mathscr{B}$ contains the complement of each of its sets.
+
+:::

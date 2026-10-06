@@ -3,7 +3,7 @@ of integration in a double integral can be exchanged.
 We state two versions:
 the Riemann version (@thm-fubini) is what applied courses usually use
 for double integrals of continuous functions on simple regions;
-the $\sigma$-finite measure-theoretic version (@thm-fubini-tonelli) is
+the [$\sigma$-finite](measures.qmd#def-sigma-finite) measure-theoretic version (@thm-fubini-tonelli) is
 included to make the
 [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint)
 corollary in *Probability for Data Science*
