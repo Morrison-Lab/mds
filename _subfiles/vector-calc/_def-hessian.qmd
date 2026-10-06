@@ -20,7 +20,7 @@ $$
 $$ {#eq-hessian-row}
 
 Both forms follow the shape rule of matrix multiplication (@rem-row-derivative-shape):
-the $p \times 1$ column operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row,
+the $p \times 1$ column-vector operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row vector,
 giving a $p \times p$ matrix.
 
 By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$,

@@ -10,7 +10,7 @@ $$\derivf{f(\vb)}{\vb} = \tp{\paren{\derivf{f(\vb)}{\tp{\vb}}}}$$ {#eq-col-deriv
 By @def-vector-derivative and @def-row-vector-derivative,
 entry $j$ of both $\derivf{f(\vb)}{\vb}$ and $\derivf{f(\vb)}{\tp{\vb}}$
 is $\deriv{\beta_j} f(\vb)$;
-the first is a $p \times 1$ column and the second a $1 \times p$ row
+the first is a $p \times 1$ column vector and the second a $1 \times p$ row vector
 with the same entries in the same order,
 so each is the transpose of the other.
 :::
