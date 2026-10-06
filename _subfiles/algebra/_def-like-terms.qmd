@@ -1,0 +1,13 @@
+:::{#def-like-terms}
+#### Like terms
+
+Two [terms](#def-term) of a sum are **like terms**
+if they are the same product of variables, each to the same power,
+possibly multiplied by different constants:
+$c_1 m$ and $c_2 m$,
+where $c_1$ and $c_2$ are constants and $m$ is that product.
+To **collect** like terms is to replace their sum by one term,
+using the distributive law (@thm-mult-distr):
+$c_1 m + c_2 m = (c_1 + c_2) m$.
+
+:::

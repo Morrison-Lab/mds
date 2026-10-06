@@ -19,7 +19,7 @@ $$
 \\ &= a^2 + ab + ab + b^2
 && \text{(commutative and associative laws)}
 \\ &= a^2 + 2ab + b^2
-&& \text{(collect like terms)}
+&& \text{(collect like terms, @def-like-terms)}
 \ea
 $$
 

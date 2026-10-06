@@ -1,0 +1,9 @@
+:::{#exm-quadratic-cubic}
+#### Quadratic and cubic polynomials
+
+- $f(x) = (x - 2)^2 = x^2 - 4x + 4$ is quadratic,
+  by @rem-square-of-a-difference with $a = x$ and $b = 2$.
+- $f(x) = x^3 - 3x$ is cubic.
+- $f(x) = 4x + 1$ is neither: it has degree $1$.
+
+:::

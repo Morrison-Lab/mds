@@ -1,0 +1,13 @@
+:::{#def-power-nonpositive-base}
+#### Real powers of zero and of negative numbers
+
+@def-power and @def-real-power leave some powers $b^c$ with $b \le 0$ unassigned.
+We complete them as follows.
+
+- For a real number $c > 0$, $0^c \eqdef 0$.
+  For a natural number $c$, this agrees with @def-power.
+- For $b < 0$, $b^c$ is defined only when $c$ is an [integer](notation.qmd#def-integers),
+  by @def-power;
+  for $b < 0$ and a non-integer $c$, $b^c$ is undefined.
+
+:::
