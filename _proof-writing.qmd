@@ -68,66 +68,6 @@ The probability notes derive the variance identity
 $\Var{X} = \E{X^2} - \sqf{\E{X}}$
 [in the same annotated style](https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance).
 
-## Proof by induction {#sec-induction}
-
-:::{#def-proof-by-induction}
-#### Proof by induction
-
-To prove that a statement $P(n)$ holds for every integer $n \ge n_0$,
-a **proof by induction** on $n$ proves two things:
-
-1. the **base case**: $P(n_0)$ holds;
-2. the **inductive step**: for every $n \ge n_0$,
-   if $P(n)$ holds, then $P(n + 1)$ holds.
-   The assumption that $P(n)$ holds
-   is called the **induction hypothesis**.
-
-Together these give $P(n)$ for every $n \ge n_0$:
-the base case gives $P(n_0)$,
-the inductive step then gives $P(n_0 + 1)$,
-then $P(n_0 + 2)$, and so on.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#exm-proof-by-induction}
-#### The sum of the first $n$ positive integers
-
-Claim: for every integer $n \ge 1$,
-
-$$\sum_{i=1}^{n} i = \frac{n (n + 1)}{2}$$
-
-**Base case** ($n = 1$): the left side is $1$,
-and the right side is $\frac{1 \cdot 2}{2} = 1$.
-
-**Inductive step**: assume the claim holds for $n$.
-Then
-
-$$
-\ba
-\sum_{i=1}^{n+1} i
-&= \sum_{i=1}^{n} i + (n + 1)
-&& \text{(split off the last term)}
-\\&= \frac{n (n + 1)}{2} + (n + 1)
-&& \text{(induction hypothesis)}
-\\&= \frac{n (n + 1)}{2} + \frac{2 (n + 1)}{2}
-&& \text{(write } n + 1 \text{ over the denominator } 2 \text{)}
-\\&= \frac{n (n + 1) + 2 (n + 1)}{2}
-&& \text{(add fractions with the same denominator)}
-\\&= \frac{(n + 2)(n + 1)}{2}
-&& \text{(factor out } n + 1 \text{)}
-\\&= \frac{(n + 1)(n + 2)}{2}
-&& \text{(reorder the factors)}
-\\&= \frac{(n + 1)\,((n + 1) + 1)}{2}
-&& \text{(write } n + 2 \text{ as } (n + 1) + 1 \text{)}
-\ea
-$$
-
-which is the claim for $n + 1$.
-
-:::
-
 ## Follow the golden rule {#sec-golden-rule}
 
 In general,
