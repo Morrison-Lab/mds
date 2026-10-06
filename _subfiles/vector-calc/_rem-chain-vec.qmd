@@ -73,8 +73,6 @@ the row vector $(2x_1 + 3x_2,\ 3x_1 + 2x_2)$.
 :::
 
 ::: notes
-See <https://quickfem.com/finite-element-analysis/>,
-specifically <https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf>
-
-See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_derivative>
+See @felippa_ifem_matrix_calculus,
+and @wp:gradient, section "Relationship with Frechet derivative".
 :::

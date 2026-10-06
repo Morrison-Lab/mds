@@ -21,7 +21,7 @@ using @def-integral-nonneg for each term,
 when at least one of the two terms is finite;
 otherwise, the integral of $f$ is undefined.
 ($f^{+}$, $f^{-}$, and $\abs{f}$ are measurable when $f$ is
-[@billingsley1995probability, Section 13].)
+[@billingsley1995probability, Theorem 13.3].)
 
 [@billingsley1995probability, Section 15]
 
