@@ -1,0 +1,24 @@
+:::{#thm-power-product}
+#### Power of a product
+
+If $a, b > 0$ and $c \in \reals$, then
+
+$$(ab)^c = a^c \cd b^c$$
+
+When $c$ is a positive integer,
+the same identity holds for all $a, b \in \reals$,
+because both sides are products of $c$ copies of $a$ and $c$ copies of $b$,
+which can be regrouped by @thm-prod-symmetric and @thm-prod-assoc.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-power-product}
+#### Power of a product
+
+With $a = 2$, $b = 3$, and $c = 2$,
+$(2 \cd 3)^2 = 6^2 = 36$,
+and $2^2 \cd 3^2 = 4 \cd 9 = 36$.
+
+:::

@@ -1,0 +1,12 @@
+:::{#thm-power-one}
+#### Powers of 1 and first powers
+
+For every $b \in \reals$,
+
+$$1^b = 1,$$
+
+and for every $a \in \reals$,
+
+$$a^1 = a.$$
+
+:::
