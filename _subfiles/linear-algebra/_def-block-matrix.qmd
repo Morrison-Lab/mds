@@ -1,0 +1,51 @@
+:::{#def-block-matrix}
+#### Block matrix
+
+Split the rows of an $m \times n$ matrix $\matr{X}$ into the first $k$ and the last $m - k$,
+and its columns into the first $l$ and the last $n - l$,
+with $1 \le k < m$ and $1 \le l < n$.
+This cuts $\matr{X}$ into four smaller matrices, its **blocks**:
+
+$$
+\matr{X} = \begin{bmatrix} \matr{A} & \matr{B} \\ \matr{C} & \matr{D} \end{bmatrix},
+$$
+
+where $\matr{A}$ ($k \times l$) holds the entries $x_{ij}$ with $i \le k$ and $j \le l$,
+$\matr{B}$ ($k \times (n - l)$) those with $i \le k$ and $j > l$,
+$\matr{C}$ ($(m - k) \times l$) those with $i > k$ and $j \le l$,
+and $\matr{D}$ ($(m - k) \times (n - l)$) those with $i > k$ and $j > l$,
+each in its original order.
+A matrix written this way is a **block matrix**.
+When $\matr{X}$ is $n \times n$ and $1 \le k \le n$,
+the $k \times k$ matrix of the entries $x_{ij}$ with $i, j \le k$
+is the **leading** (or top-left) $k \times k$ **block** of $\matr{X}$;
+for $k < n$ it is the block $\matr{A}$ above with $l = k$,
+and for $k = n$ it is $\matr{X}$ itself.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-block-matrix}
+#### Cutting a $3 \times 3$ matrix into blocks
+
+With $k = l = 1$,
+
+$$
+\matr{X} = \begin{bmatrix} 4 & 2 & 1 \\ 2 & 5 & 3 \\ 1 & 3 & 6 \end{bmatrix}
+= \begin{bmatrix} \matr{A} & \matr{B} \\ \matr{C} & \matr{D} \end{bmatrix},
+\qquad
+\matr{A} = \begin{bmatrix} 4 \end{bmatrix},
+\quad
+\matr{B} = \begin{bmatrix} 2 & 1 \end{bmatrix},
+\quad
+\matr{C} = \begin{bmatrix} 2 \\ 1 \end{bmatrix},
+\quad
+\matr{D} = \begin{bmatrix} 5 & 3 \\ 3 & 6 \end{bmatrix}.
+$$
+
+For instance, entry $(1, 2)$ of $\matr{D}$ is $x_{1 + 1, 2 + 1} = x_{23} = 3$.
+With $k = l = 2$ instead, the leading $2 \times 2$ block is
+$\begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$.
+
+:::

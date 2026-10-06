@@ -1,0 +1,37 @@
+:::{#def-unit-vector}
+#### Unit vector
+
+A **unit vector** is a vector whose Euclidean norm (@def-euclidean-norm) is $1$.
+A unit vector is said to have *unit length*.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-unit-vector}
+#### A unit vector and a vector that is not one
+
+For $\vx = (0.6, 0.8)$:
+
+$$
+\ba
+\norm{\vx}
+&= \sqrt{0.6^2 + 0.8^2}
+&& \text{(definition of the norm)}
+\\
+&= \sqrt{0.36 + 0.64}
+&& \text{(square)}
+\\
+&= \sqrt{1}
+&& \text{(add)}
+\\
+&= 1
+&& \text{(take the square root)}
+\ea
+$$
+
+so $(0.6, 0.8)$ is a unit vector.
+The vector $(1, 1)$ is not:
+$\norm{(1, 1)} = \sqrt{1^2 + 1^2} = \sqrt{2} \ne 1$.
+
+:::

@@ -90,7 +90,7 @@ $$
 $$
 
 Then $\matr{H}\vy = (\bar{y}, \bar{y})$, where $\bar{y} = (y_1 + y_2)/2$:
-the fitted values of an intercept-only model are the sample mean.
+the fitted values of an intercept-only model are the [sample mean](#def-mean).
 
 :::
 

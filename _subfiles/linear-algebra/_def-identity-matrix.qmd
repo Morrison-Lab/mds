@@ -3,7 +3,7 @@
 
 The $p \times p$ **identity matrix** $\matr{I}_p$
 (or $\matr{I}$ when the size is clear from context)
-has ones on the main diagonal and zeros elsewhere:
+has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
 
 $$
 (\matr{I}_p)_{ij} =
