@@ -6,7 +6,7 @@ Let $f : \mathbb{R}^2 \to \mathbb{R}$ be
 
 $$f(\vec w) = 3 w_1 w_2 + w_2^3 - 5 w_1$$
 
-1.  Compute $\partial f / \partial w_1$, treating $w_2$ as a constant.
+1.  Compute $\partial f / \partial w_1$ (@def-partial-derivative), treating $w_2$ as a constant.
 2.  Compute $\partial f / \partial w_2$, treating $w_1$ as a constant.
 3.  Assemble $\nabla_{\vec w} f$ and evaluate it at
     $\vec w = \begin{bmatrix} 2 & -1 \end{bmatrix}^\top$.

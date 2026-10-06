@@ -209,6 +209,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exm-partials-not-continuous.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-hessian-symmetric.qmd >}}
 
 {{< slidebreak >}}

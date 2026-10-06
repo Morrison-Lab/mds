@@ -2,7 +2,8 @@
 #### Row-vector derivative
 If $f(\vb)$ is a scalar-valued function of a $p \times 1$ vector $\vb$,
 such as $f(\vb) = \tp{\vx}\vb$,
-then its **row-vector derivative** is:
+then its **row-vector derivative** is the row of its
+partial derivatives (@def-partial-derivative):
 
 $$
 \derivf{f(\vb)}{\tp{\vb}} =
