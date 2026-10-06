@@ -35,13 +35,16 @@ organized by topic:
   functions with their domains, codomains, and images,
   and the extended non-negative real numbers
 - [Algebra](algebra.qmd):
-  equalities and inequalities, infimum and supremum,
+  equalities and [inequalities](notation.qmd#def-inequality), infimum and supremum,
   sums, products, quotients, exponentials and logarithms
 - [Measures](measures.qmd):
   $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
   measures, and the counting measure
 - [Calculus](calculus.qmd):
-  derivative rules, antiderivatives, regularity conditions,
+  derivative rules, antiderivatives,
+  regularity conditions (the [continuity](calculus.qmd#def-continuous),
+  [differentiability](calculus.qmd#def-differentiable),
+  and [integrability](calculus.qmd#def-integrable) that results assume),
   the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.qmd):
   vectors, matrices and their operations, special matrices,
@@ -51,7 +54,7 @@ organized by topic:
   derivatives with respect to vectors and matrices,
   quadratic forms, and the vector chain rule
 - [Proof Writing](proof-writing.qmd):
-  showing and annotating every step of a derivation
+  showing and annotating every step of a [derivation](notation.qmd#def-derivation)
 
 ## Further reading {.unnumbered}
 
@@ -63,7 +66,8 @@ These resources cover related material.
   It grew out of MATH 535, a one-semester advanced undergraduate and master's course at the University of Wisconsin-Madison.
   It is written as an invitation to data science and AI for math students,
   and as a mathematical companion to machine learning, AI, and statistics courses.
-  Its chapters treat least squares, optimization,
+  Its chapters treat least squares,
+  optimization (finding where a function is smallest or largest),
   the singular value decomposition, spectral graph theory,
   probabilistic models, random walks on graphs, and neural networks,
   so they overlap with our linear algebra and vector calculus pages.
