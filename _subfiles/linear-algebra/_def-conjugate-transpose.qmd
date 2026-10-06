@@ -1,0 +1,21 @@
+:::{#def-conjugate-transpose}
+#### Conjugate transpose
+
+The **conjugate transpose** of an $m \times n$ complex matrix $\matr{A}$
+is the $n \times m$ matrix $\matr{A}^{\mathsf{H}}$
+obtained by transposing $\matr{A}$ and then taking the complex conjugate of each entry:
+
+$$(\matr{A}^{\mathsf{H}})_{jk} \eqdef \overline{a_{kj}}
+\quad \text{for } j \in \{1, \ldots, n\},\ k \in \{1, \ldots, m\}.$$
+
+The conjugate transpose of a column vector $\vecf{z} \in \mathbb{C}^p$
+is the $1 \times p$ row vector $\vecf{z}^{\mathsf{H}} = [\overline{z_1},\; \ldots,\; \overline{z_p}]$.
+
+:::
+
+::: notes
+@axler2024linear [Definition 7.7, p. 231] gives the same definition,
+writing $\matr{A}^*$ for the conjugate transpose.
+These notes write $\matr{A}^{\mathsf{H}}$ instead,
+because $^*$ also marks optimizers, as in $\vx^*$.
+:::

@@ -374,6 +374,22 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}
 
+### Inner products {#sec-inner-products}
+
+{{< include mds/_subfiles/linear-algebra/_def-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-dot-product-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-weighted-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-not-inner-product.qmd >}}
+
 ### Cauchy-Schwarz and the triangle inequality {#sec-cauchy-schwarz}
 
 {{< include mds/_subfiles/linear-algebra/_prose-cauchy-schwarz-attribution.qmd >}}
@@ -809,3 +825,43 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-cholesky.qmd >}}
+
+## Complex vectors and matrices {#sec-complex-vectors-matrices}
+
+{{< include mds/_subfiles/linear-algebra/_def-complex-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-complex-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-conjugate-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-conjugate-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-zhz-sum-squares.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-zhz-sum-squares.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-transpose-not-enough.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-hermitian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-hermitian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-not-hermitian.qmd >}}

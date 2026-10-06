@@ -15,3 +15,7 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/antiderivatives/_exm-integral-rules-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-integral-rules.qmd >}}

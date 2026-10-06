@@ -1,0 +1,5 @@
+::: {.callout-tip title="Video"}
+Jon Krohn's "Calculus for Machine Learning" YouTube playlist has a video on this rule:
+
+- [The Constant Multiple Rule for Derivatives](https://www.youtube.com/watch?v=zgNEiW0JHQA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+:::

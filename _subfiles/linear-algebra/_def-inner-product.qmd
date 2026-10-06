@@ -1,0 +1,26 @@
+:::{#def-inner-product}
+#### Inner product
+
+An **inner product** on $\reals^p$ is a function
+that assigns to each ordered pair of vectors $\vx, \vy \in \reals^p$
+a real number $\iprod{\vx}{\vy}$,
+and that has the following four properties
+for all $\vx, \vy, \vecf{z} \in \reals^p$ and all real numbers $a, b$:
+
+- **positivity**: $\iprod{\vx}{\vx} \ge 0$;
+- **definiteness**: $\iprod{\vx}{\vx} = 0$ if and only if $\vx = \vzero_{p \times 1}$;
+- **linearity in the first slot**:
+  $\iprod{a\,\vx + b\,\vy}{\vecf{z}} = a\,\iprod{\vx}{\vecf{z}} + b\,\iprod{\vy}{\vecf{z}}$;
+- **symmetry**: $\iprod{\vx}{\vy} = \iprod{\vy}{\vx}$.
+
+:::
+
+::: notes
+@axler2024linear [Definition 6.2, p. 183] states the same definition
+for any vector space over the real or complex numbers.
+Axler splits linearity in the first slot into additivity and homogeneity,
+and his last property is *conjugate* symmetry,
+$\iprod{\vecf{u}}{\vecf{v}} = \overline{\iprod{\vecf{v}}{\vecf{u}}}$,
+which for real numbers is the same as symmetry.
+Symmetry and linearity in the first slot together give linearity in the second slot.
+:::

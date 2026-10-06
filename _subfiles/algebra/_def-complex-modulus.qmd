@@ -1,0 +1,12 @@
+:::{#def-complex-modulus}
+#### Absolute value of a complex number
+
+The **absolute value**, or **modulus**, of a complex number $z = a + b\,i$ (@def-complex-number) is
+
+$$\abs{z} \eqdef \sqrt{a^2 + b^2}.$$
+
+:::
+
+::: notes
+@axler2024linear [Definition 4.2, p. 120] gives the same definition.
+:::
