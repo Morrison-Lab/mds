@@ -12,6 +12,10 @@ $$
 \left[\deriv{\matr{X}} f\right]_{ij} = \deriv{X_{ij}} f
 $$
 
+Like the vector derivative (@def-vector-derivative),
+the matrix derivative is also called the **gradient** of $f$ with respect to $\matr{X}$,
+written $\nabla_{\matr{X}} f$.
+
 :::
 
 {{< slidebreak >}}

@@ -1,0 +1,36 @@
+:::{#def-second-partial-derivative}
+#### Second partial derivative
+
+Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$,
+and let $i, j \in \cb{1, \ldots, p}$.
+Suppose the partial derivative $\deriv{x_j} f$ (@def-partial-derivative)
+exists at every point of an open ball around $\vx$ (@def-ball).
+The **second partial derivative** of $f$ at $\vx$,
+first with respect to $x_j$ and then with respect to $x_i$, is
+
+$$
+\deriv{x_i} \paren{\deriv{x_j} f(\vx)},
+$$
+
+the partial derivative with respect to $x_i$ of the function $\deriv{x_j} f$, when it exists.
+When $i \ne j$, it is a **mixed partial derivative**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-second-partial-derivative}
+#### Second partial derivatives of $x_1^2 x_2 + 3 x_2$
+
+For $f(\vx) = x_1^2 x_2 + 3 x_2$ of @exm-partial-derivative,
+$\deriv{x_1} f(\vx) = 2 x_1 x_2$ and $\deriv{x_2} f(\vx) = x_1^2 + 3$.
+Differentiating each of these again:
+
+- $\deriv{x_1} \paren{\deriv{x_1} f(\vx)} = \deriv{x_1} (2 x_1 x_2) = 2 x_2$;
+- $\deriv{x_2} \paren{\deriv{x_1} f(\vx)} = \deriv{x_2} (2 x_1 x_2) = 2 x_1$;
+- $\deriv{x_1} \paren{\deriv{x_2} f(\vx)} = \deriv{x_1} (x_1^2 + 3) = 2 x_1$;
+- $\deriv{x_2} \paren{\deriv{x_2} f(\vx)} = \deriv{x_2} (x_1^2 + 3) = 0$.
+
+The two mixed partial derivatives are both $2 x_1$.
+
+:::

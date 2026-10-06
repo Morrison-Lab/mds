@@ -1,0 +1,30 @@
+:::{#def-level-set}
+#### Level set
+
+Let $f : \reals^p \to \reals$ and let $c$ be a real number.
+The **level set** of $f$ at $c$ is
+
+$$
+\cb{\vx \in \reals^p : f(\vx) = c},
+$$
+
+the set of points where $f$ takes the value $c$.
+For $p = 2$, a level set is often a curve in the plane,
+called a **level curve** (or *contour*) of $f$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-level-set}
+#### Level sets of $x_1^2 + x_2^2$
+
+Let $f(\vx) = x_1^2 + x_2^2$ for $\vx = \tp{(x_1, x_2)}$.
+
+- The level set at $1$ is the circle of radius $1$ around $\vzero$.
+  For example, $\tp{(0.6, 0.8)}$ is on it, since $0.36 + 0.64 = 1$,
+  and $\tp{(1, 1)}$ is not, since $1 + 1 = 2$.
+- The level set at $0$ is the single point $\vzero$.
+- The level set at $-1$ is empty, since $x_1^2 + x_2^2 \ge 0$.
+
+:::

@@ -19,7 +19,7 @@ $$
 
 Let $g(t) \eqdef f(\vecf{z} + t \vecf{h})$ for $t \in \reals$,
 the values of $f$ along the line through $\vecf{z}$ in the direction $\vecf{h}$.
-The inner function $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
+The [inner function](sets-functions.qmd#def-composition) $\vy(t) = \vecf{z} + t \vecf{h}$ has entries $y_j = z_j + t h_j$,
 so $\deriv{t} y_j = h_j$, and its derivative (@def-vector-valued-derivative) is the $1 \times p$ matrix $\tp{\vecf{h}}$.
 By the vector chain rule (@thm-chain-vec, with its input $t$ of length $1$,
 its inner function $\vy(t) = \vecf{z} + t \vecf{h}$, and its outer function $f$),

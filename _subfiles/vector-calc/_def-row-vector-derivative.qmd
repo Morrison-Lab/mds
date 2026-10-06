@@ -13,4 +13,7 @@ $$
 \deriv{\beta_p}f(\vb)
 }
 $$
+
+The row-vector derivative is also called the **total derivative** of $f$,
+the name used when the derivative of a scalar-valued function is written as a row.
 :::

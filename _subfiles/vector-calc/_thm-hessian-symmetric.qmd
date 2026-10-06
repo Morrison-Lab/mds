@@ -2,7 +2,7 @@
 #### Symmetry of the Hessian
 
 If the second partial derivatives of $f$ exist and are continuous (@def-continuous-several)
-on an open ball $\cb{\vy : \norm{\vy - \vx} < r}$ around $\vx$, for some $r > 0$,
+on an open ball around $\vx$ (@def-ball),
 then $\deriv{x_i} \paren{\deriv{x_j} f(\vx)} = \deriv{x_j} \paren{\deriv{x_i} f(\vx)}$ for all $i, j$,
 so $\matr{H}_f(\vx)$ (@def-hessian) is symmetric
 ([symmetric matrix](linear-algebra.qmd#def-symmetric-matrix)).

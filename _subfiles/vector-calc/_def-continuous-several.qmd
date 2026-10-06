@@ -12,7 +12,7 @@ written out with the $\varepsilon$-$\delta$ definition of the limit $\lim_{y \to
 Continuity survives the usual operations:
 
 - A [composition](sets-functions.qmd#def-composition) of continuous functions is continuous:
-  choose the $\delta$ for the outer function first,
+  choose the $\delta$ for the [outer function](sets-functions.qmd#def-composition) first,
   and use it as the $\varepsilon$ for the inner one.
 - A sum $f + g$ of continuous real-valued functions is continuous,
   since $\abs{(f + g)(\vy) - (f + g)(\vx)} \le \abs{f(\vy) - f(\vx)} + \abs{g(\vy) - g(\vx)}$:

@@ -9,7 +9,7 @@ $$
 q(\vecf{\delta}) \eqdef f(\vx) + \tp{\vecf{g}} \vecf{\delta} + \tfrac{1}{2}\,\tp{\vecf{\delta}} \matr{H} \vecf{\delta},
 $$
 
-the second-order Taylor polynomial of $f$ at $\vx$:
+also called the **second-order Taylor polynomial** of $f$ at $\vx$:
 when the second partial derivatives of $f$ are continuous,
 @thm-taylor-mv says that $f(\vx + \vecf{\delta})$ equals the same expression
 with the Hessian evaluated at a point between $\vx$ and $\vx + \vecf{\delta}$.

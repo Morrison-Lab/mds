@@ -26,7 +26,7 @@ gradRate = (deg) => gradG[0] * Math.cos(deg * Math.PI / 180) + gradG[1] * Math.s
 
 Turn the blue arrow in @fig-gradient-explorer and watch the rate:
 it is largest along the red arrow,
-zero along the black level curve,
+zero along the black level curve (@def-level-set),
 and most negative pointing straight back.
 Then look for a point where the red arrow shrinks to nothing.
 
@@ -122,7 +122,7 @@ Plot.plot({
 
 A gradient explorer:
 the red arrow points along the gradient at the chosen point,
-and the blue arrow along the chosen step direction.
+and the blue arrow along the chosen step direction (@def-direction).
 
 :::
 

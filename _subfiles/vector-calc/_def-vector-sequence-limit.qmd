@@ -1,0 +1,42 @@
+:::{#def-vector-sequence-limit}
+#### Iterates and convergence of a sequence of vectors
+
+A [sequence](sets-functions.qmd#def-sequence) $\vx^{(0)}, \vx^{(1)}, \ldots$ in $\reals^p$
+**converges** to $\vx^* \in \reals^p$
+if the sequence of distances $\norm{\vx^{(t)} - \vx^*}$
+[converges](algebra.qmd#def-sequence-limit) to $0$.
+For $p = 1$, $\norm{x^{(t)} - x^*} = \abs{x^{(t)} - x^*}$,
+and this is the convergence of a sequence of numbers to $x^*$.
+
+An **iterative method** starts from a point $\vx^{(0)}$
+and computes $\vx^{(t+1)}$ from $\vx^{(t)}$ by a fixed rule, for $t = 0, 1, 2, \ldots$;
+the points $\vx^{(t)}$ are its **iterates**.
+For a point $\vx^*$ that the method is meant to reach,
+$\norm{\vx^{(t)} - \vx^*}$ is the **error** of the iterate $\vx^{(t)}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-vector-sequence-limit}
+#### Halving a vector
+
+The iterative method $\vx^{(t+1)} = \tfrac{1}{2}\,\vx^{(t)}$ from $\vx^{(0)} = \tp{(4, 2)}$
+has iterates $\tp{(4, 2)}, \tp{(2, 1)}, \tp{(1, 0.5)}, \ldots$,
+that is, $\vx^{(t)} = 2^{-t}\,\tp{(4, 2)}$.
+With $\vx^* = \vzero$, the error of $\vx^{(t)}$ is
+
+$$
+\ba
+\norm{2^{-t}\,\tp{(4, 2)} - \vzero}
+&= 2^{-t}\,\norm{\tp{(4, 2)}}
+&& \text{(norm of a multiple)}
+\\
+&= 2^{-t} \sqrt{20},
+&& \text{(} 4^2 + 2^2 = 20 \text{)}
+\ea
+$$
+
+which converges to $0$, so the iterates converge to $\vzero$.
+
+:::

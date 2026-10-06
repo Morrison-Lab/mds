@@ -13,6 +13,9 @@ $$
 \deriv{\beta_p}f(\vb)
 }
 $$
+
+The vector derivative is also called the **gradient** of $f$ with respect to $\vb$,
+written $\nabla_{\vb} f(\vb)$.
 :::
 
 {{< slidebreak >}}

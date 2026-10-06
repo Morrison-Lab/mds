@@ -1,0 +1,23 @@
+:::{#def-descent-direction}
+#### Descent direction
+
+Let $f : \reals^p \to \reals$ have a gradient $\vecf{g} \eqdef \deriv{\vx} f(\vx)$ at $\vx$.
+A direction $\vecf{d}$ (@def-direction) is a **descent direction** for $f$ at $\vx$
+if $\tp{\vecf{g}} \vecf{d} < 0$.
+When $\vecf{g} \ne \vzero_{p \times 1}$, $-\vecf{g}$ is a descent direction,
+since $\tp{\vecf{g}} (-\vecf{g}) = -\norm{\vecf{g}}^2 < 0$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-descent-directions}
+#### Descent directions for $x_1^2 + x_2^2$ at $\tp{(1, 0)}$
+
+Let $f(\vx) = x_1^2 + x_2^2$ and $\vx = \tp{(1, 0)}$, so $\vecf{g} = \tp{(2 x_1,\ 2 x_2)} = \tp{(2, 0)}$.
+
+- $\vecf{d} = \tp{(-1, 1)}$ is a descent direction: $\tp{\vecf{g}} \vecf{d} = -2 + 0 = -2 < 0$.
+- $\vecf{d} = \tp{(0, 1)}$ is not: $\tp{\vecf{g}} \vecf{d} = 0$.
+- $-\vecf{g} = \tp{(-2, 0)}$ is: $\tp{\vecf{g}} (-\vecf{g}) = -4 < 0$.
+
+:::

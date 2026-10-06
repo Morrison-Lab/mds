@@ -1,5 +1,5 @@
-A minimizer of a function of one variable has a flat tangent line
-([flat point](calculus.qmd#def-flat-point)),
+A local minimizer of a differentiable function on an open interval
+is a [flat point](calculus.qmd#def-flat-point),
 and, at a flat point, a positive second derivative guarantees a strict local minimum.
 This section extends both facts to a function $f$ of a $p \times 1$ vector $\vx$:
 the gradient $\deriv{\vx} f(\vx)$ (@def-vector-derivative) takes the place of the first derivative,

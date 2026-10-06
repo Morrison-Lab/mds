@@ -13,7 +13,7 @@ $K$ contains the whole line segment between any two of its points.
 #### Convex sets
 
 - $\reals^p$ is convex, and so is any set with at most one point.
-- The closed ball $B = \cb{\vx : \norm{\vx} \le r}$ is convex:
+- The closed ball (@def-ball) $B = \cb{\vx : \norm{\vx} \le r}$ is convex:
   for $\vx, \vy \in B$ and $t \in [0, 1]$,
 
   $$

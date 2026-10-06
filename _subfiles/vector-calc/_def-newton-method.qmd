@@ -41,7 +41,7 @@ From $x^{(0)} = 2.5$:
 - $x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610$ (to six decimals);
 - $x^{(3)} = 2.0000001$ (to seven decimals).
 
-The iterates approach $2$, the local minimizer of $f$
+The iterates (@def-vector-sequence-limit) approach $2$, the local minimizer of $f$
 (a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; @thm-second-order-condition).
 
 :::
