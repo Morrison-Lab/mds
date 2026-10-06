@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 23:24:49 (PDT)
+Last modified: 2026-10-05 23:44:19 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -674,7 +674,7 @@ See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_
 
 > **NOTE:**
 >
-> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](notation.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus.llms.md#def-flat-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](notation.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
 >
 > - its one-variable Taylor example and its plots
 > - matrix calculus
@@ -682,39 +682,15 @@ See also <https://en.wikipedia.org/wiki/Gradient#Relationship_with_Fr%C3%A9chet_
 > - Lagrange multipliers
 > - Newton’s method and gradient descent
 
-A local minimizer of a differentiable function on an open interval is a [flat point](calculus.llms.md#def-flat-point), and, at a flat point, a positive second derivative guarantees a strict local minimum. This section extends both facts to a function \\f\\ of a \\p \times 1\\ vector \\\tilde{x}\\: the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([Definition 2](#def-vector-derivative)) takes the place of the first derivative, and a \\p \times p\\ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every \\p \ge 1\\. Throughout, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\ means the gradient evaluated at \\\tilde{x}= \tilde{z}\\.
+A local minimizer of a differentiable function on an open interval is a [flat point](calculus.llms.md#def-flat-point), and, at a flat point, a positive [second derivative](calculus.llms.md#def-second-derivative) guarantees a strict local minimum. This section extends both facts to a function \\f\\ of a \\p \times 1\\ vector \\\tilde{x}\\: the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([Definition 2](#def-vector-derivative)) takes the place of the first derivative, and a \\p \times p\\ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every \\p \ge 1\\. Throughout, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\ means the gradient evaluated at \\\tilde{x}= \tilde{z}\\.
 
 > **NOTE:**
 >
-> **Definition 11 (Difference quotient)** Let \\f\\ be a real-valued function of one variable, defined at \\c\\ and at \\c + h\\, with \\h \ne 0\\. The **difference quotient** of \\f\\ at \\c\\ with increment \\h\\ is
->
-> \\ \frac{f(c + h) - f(c)}{h}, \\
->
-> the slope of the line through the points \\(c, f(c))\\ and \\(c + h, f(c + h))\\. By the definition of a [differentiable](calculus.llms.md#def-differentiable) function, \\f\\ is differentiable at \\c\\ exactly when the difference quotient has a finite limit as \\h \to 0\\, and that limit is \\f'(c)\\.
+> **Definition 11 (Open and closed balls)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra.llms.md#def-euclidean-norm) of the difference) is less than \\r\\. The **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\. The open and closed balls of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
 
 > **NOTE:**
 >
-> **Example 23 (The difference quotient of \\x^2\\ at \\1\\)** For \\f(x) = x^2\\, \\c = 1\\, and \\h \ne 0\\,
->
-> \\ \begin{aligned} \frac{f(1 + h) - f(1)}{h} &= \frac{(1 + h)^2 - 1}{h} && \text{(substitute into } f \text{)} \\ &= \frac{1 + 2h + h^2 - 1}{h} && \text{(expand } (1 + h)^2 \text{)} \\ &= \frac{2h + h^2}{h} && \text{(} 1 - 1 = 0 \text{)} \\ &= 2 + h, && \text{(divide by } h \ne 0 \text{)} \end{aligned} \\
->
-> which tends to \\2\\ as \\h \to 0\\, so \\f'(1) = 2\\. With \\h = 0.1\\ the difference quotient is \\2.1\\.
-
-> **NOTE:**
->
-> **Definition 12 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose [derivative](calculus.llms.md#def-derivative) \\f'\\ exists at every point of an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. If \\f'\\ is [differentiable](calculus.llms.md#def-differentiable) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\.
-
-> **NOTE:**
->
-> **Example 24 (The second derivative of \\x^3\\)** For \\f(x) = x^3\\, \\f'(x) = 3x^2\\ at every \\x\\, and differentiating again gives \\f''(x) = 6x\\. So \\f''(2) = 12\\, \\f''(0) = 0\\, and \\f''(-1) = -6\\.
-
-> **NOTE:**
->
-> **Definition 13 (Open and closed balls)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra.llms.md#def-euclidean-norm) of the difference) is less than \\r\\. The **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\. The open and closed balls of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
-
-> **NOTE:**
->
-> **Example 25 (Points in the unit balls of \\\mathbb{R}^2\\)**  
+> **Example 23 (Points in the unit balls of \\\mathbb{R}^2\\)**  
 >
 > - \\{(0.5, 0.5)}^{\top}\\ has \\\mathopen{}\left\lVert{(0.5, 0.5)}^{\top}\right\rVert\mathclose{}^2 = 0.25 + 0.25 = 0.5 \< 1\\, so it is in both the open and the closed unit ball.
 > - \\{(0.6, 0.8)}^{\top}\\ has \\\mathopen{}\left\lVert{(0.6, 0.8)}^{\top}\right\rVert\mathclose{}^2 = 0.36 + 0.64 = 1\\, so it is in the closed unit ball but not the open one.
@@ -722,7 +698,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Definition 14 (Second partial derivative and mixed partial derivative)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\, and let \\i, j \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\. Suppose the partial derivative \\\frac{\partial}{\partial x_j} f\\ ([Definition 1](#def-partial-derivative)) exists at every point of an open ball around \\\tilde{x}\\ ([Definition 13](#def-ball)). The **second partial derivative** of \\f\\ at \\\tilde{x}\\, first with respect to \\x_j\\ and then with respect to \\x_i\\, is
+> **Definition 12 (Second partial derivative and mixed partial derivative)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\, and let \\i, j \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\. Suppose the partial derivative \\\frac{\partial}{\partial x_j} f\\ ([Definition 1](#def-partial-derivative)) exists at every point of an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)). The **second partial derivative** of \\f\\ at \\\tilde{x}\\, first with respect to \\x_j\\ and then with respect to \\x_i\\, is
 >
 > \\ \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}, \\
 >
@@ -730,7 +706,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Example 26 (Second partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** For \\f(\tilde{x}) = x_1^2 x_2 + 3 x_2\\ of [Example 1](#exm-partial-derivative), \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\ and \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\. Differentiating each of these again:
+> **Example 24 (Second partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** For \\f(\tilde{x}) = x_1^2 x_2 + 3 x_2\\ of [Example 1](#exm-partial-derivative), \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\ and \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\. Differentiating each of these again:
 >
 > - \\\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_1} (2 x_1 x_2) = 2 x_2\\;
 > - \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_2} (2 x_1 x_2) = 2 x_1\\;
@@ -741,7 +717,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Definition 15 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ ([Definition 13](#def-ball)) and whose second partial derivatives ([Definition 14](#def-second-partial-derivative)) exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
+> **Definition 13 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)) and whose second partial derivatives ([Definition 12](#def-second-partial-derivative)) exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
 >
 > \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \tag{4}\\
 >
@@ -757,7 +733,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Example 27 (A Hessian matrix)** Let \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\e\\ is [Euler’s number](algebra.llms.md#def-euler-number), and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
+> **Example 25 (A Hessian matrix)** Let \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\e\\ is [Euler’s number](algebra.llms.md#def-euler-number), and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
 >
 > \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \begin{bmatrix} 2 e^{u} - 1 \\ e^{u} \end{bmatrix}. \\
 >
@@ -769,7 +745,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Example 28 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the difference quotient ([Definition 11](#def-difference-quotient)) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
+> **Example 26 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the [difference quotient](calculus.llms.md#def-difference-quotient) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
 
 > **TIP:**
 >
@@ -780,7 +756,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Definition 16 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon \> 0\\ there is a \\\delta \> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\. For \\p = q = 1\\, this definition is the usual [continuity](calculus.llms.md#def-continuous), written out with the \\\varepsilon\\-\\\delta\\ definition of the limit \\\lim\_{y \to x} f(y) = f(x)\\.
+> **Definition 14 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon \> 0\\ there is a \\\delta \> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\. For \\p = q = 1\\, this definition is the usual [continuity](calculus.llms.md#def-continuous), written out with the \\\varepsilon\\-\\\delta\\ definition of the limit \\\lim\_{y \to x} f(y) = f(x)\\.
 >
 > Continuity survives the usual operations:
 >
@@ -790,7 +766,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Example 29 (A continuous function, and a discontinuous one)**  
+> **Example 27 (A continuous function, and a discontinuous one)**  
 >
 > - \\f(\tilde{x}) = x_1 + x_2\\ is continuous at every \\\tilde{x}\\. Each \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, since the squared length is a sum of nonnegative squares, so
 >
@@ -802,21 +778,21 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Theorem 10 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 16](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 13](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 15](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra.llms.md#def-symmetric-matrix)).
+> **Theorem 10 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 14](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 13](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra.llms.md#def-symmetric-matrix)).
 
 The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
 
 > **NOTE:**
 >
-> **Example 30 (Mixed partial derivatives agree)** In [Example 27](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\tilde{x})\\ are both \\2 e^{2x_1 + x_2}\\.
+> **Example 28 (Mixed partial derivatives agree)** In [Example 25](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\tilde{x})\\ are both \\2 e^{2x_1 + x_2}\\.
 
 > **NOTE:**
 >
-> **Example 31 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
+> **Example 29 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
 >
 > \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative, }\href{#def-partial-derivative}{\text{Definition~1}}\text{)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} = -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
 >
-> and \\\frac{\partial}{\partial x_1} f(\tilde{0}) = \lim\_{h \to 0} (0 - 0)/h = 0\\, so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 15](#def-hessian))
+> and \\\frac{\partial}{\partial x_1} f(\tilde{0}) = \lim\_{h \to 0} (0 - 0)/h = 0\\, so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 13](#def-hessian))
 >
 > \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} = \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} = \frac{d }{d x_2} (-x_2) = -1, \qquad \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} = \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} = \frac{d }{d x_1} x_1 = 1: \\
 >
@@ -828,11 +804,11 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~15}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#thm-quadratic-form}{\text{Theorem~7}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~3}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~13}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#thm-quadratic-form}{\text{Theorem~7}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~3}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 32 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 11](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta_i\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 15](#def-hessian)) gives
+> **Example 30 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 11](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta_i\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 13](#def-hessian)) gives
 >
 > \\ \mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \\
 
@@ -850,7 +826,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> **Example 33 (Applying the test, and its limits)**  
+> **Example 31 (Applying the test, and its limits)**  
 >
 > - \\g(x) = (x - 2)^2\\ has its minimizer at \\c = 2\\, and \\g'(2) = 2 (2 - 2) = 0\\.
 > - The [converse](notation.llms.md#def-converse) fails: \\g(x) = x^3\\ has \\g'(0) = 3 \cdot 0^2 = 0\\, but \\0\\ is not a local minimizer, since \\g(-h) = -h^3 \< 0 = g(0)\\ for every \\h \> 0\\.
@@ -858,7 +834,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> **Definition 17 (Stationary point)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\. A point \\\tilde{z}\\ at which the gradient exists and
+> **Definition 15 (Stationary point)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\. A point \\\tilde{z}\\ at which the gradient exists and
 >
 > \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{z}) = \tilde{0}\_{p \times 1} \\
 >
@@ -866,11 +842,11 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> **Example 34 (A stationary point, and a point that is not one)** Let \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\. Its gradient is \\{(2 x_1 - 2,\\ 2 x_2)}^{\top}\\, which is \\\tilde{0}\_{2 \times 1}\\ exactly when \\x_1 = 1\\ and \\x_2 = 0\\. So \\{(1, 0)}^{\top}\\ is its only stationary point, and \\\tilde{0}\\ is not one: the gradient there is \\{(-2, 0)}^{\top}\\.
+> **Example 32 (A stationary point, and a point that is not one)** Let \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\. Its gradient is \\{(2 x_1 - 2,\\ 2 x_2)}^{\top}\\, which is \\\tilde{0}\_{2 \times 1}\\ exactly when \\x_1 = 1\\ and \\x_2 = 0\\. So \\{(1, 0)}^{\top}\\ is its only stationary point, and \\\tilde{0}\\ is not one: the gradient there is \\{(-2, 0)}^{\top}\\.
 
 > **NOTE:**
 >
-> **Theorem 13 (First-order necessary condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. If \\\tilde{x}^\*\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\f\\ and the gradient of \\f\\ exists at \\\tilde{x}^\*\\, then \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 17](#def-stationary-point)).
+> **Theorem 13 (First-order necessary condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. If \\\tilde{x}^\*\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\f\\ and the gradient of \\f\\ exists at \\\tilde{x}^\*\\, then \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 15](#def-stationary-point)).
 
 > **NOTE:**
 >
@@ -878,15 +854,15 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> **Example 35 (Using the condition to locate, and to rule out, minimizers)**  
+> **Example 33 (Using the condition to locate, and to rule out, minimizers)**  
 >
-> - For \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ of [Example 34](#exm-stationary-point), any local minimizer must be the stationary point \\{(1, 0)}^{\top}\\. It is one: completing the square, \\f(\tilde{x}) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)\\.
-> - For \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ of [Example 27](#exm-hessian), the second entry of the gradient is \\e^{2x_1 + x_2} \> 0\\, so \\f\\ has no stationary point, and so no local minimizer.
+> - For \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ of [Example 32](#exm-stationary-point), any local minimizer must be the stationary point \\{(1, 0)}^{\top}\\. It is one: completing the square, \\f(\tilde{x}) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)\\.
+> - For \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ of [Example 25](#exm-hessian), the second entry of the gradient is \\e^{2x_1 + x_2} \> 0\\, so \\f\\ has no stationary point, and so no local minimizer.
 > - The converse fails: \\f(\tilde{x}) = x_1^2 - x_2^2\\ has gradient \\{(2 x_1,\\ -2 x_2)}^{\top}\\, so \\\tilde{0}\\ is a stationary point, but \\f(0, t) = -t^2 \< 0 = f(\tilde{0})\\ for every \\t \ne 0\\, so \\\tilde{0}\\ is not a local minimizer.
 
 > **NOTE:**
 >
-> **Theorem 14 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus.llms.md#def-continuous) on \\\[a, b\]\\ and whose second derivative \\g''\\ ([Definition 12](#def-second-derivative)) exists at every point of \\(a, b)\\. Then there is a \\\tau \in (a, b)\\ with
+> **Theorem 14 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau \in (a, b)\\ with
 >
 > \\ g(b) = g(a) + g'(a)\\(b - a) + \frac{1}{2}\\g''(\tau)\\(b - a)^2. \\
 
@@ -894,11 +870,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 36 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so \\g' = g'' = g\\. [Theorem 14](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau \in (0, 1)\\. Solving, \\e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\\, so \\\tau = \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
+> **Example 34 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so \\g' = g'' = g\\. [Theorem 14](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau \in (0, 1)\\. Solving, \\e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\\, so \\\tau = \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
 
 > **NOTE:**
 >
-> **Theorem 15 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 16](#def-continuous-several)), and let \\\tilde{z}, \tilde{h} \in \mathbb{R}^p\\. Then there is a \\\tau \in (0, 1)\\ with
+> **Theorem 15 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 14](#def-continuous-several)), and let \\\tilde{z}, \tilde{h} \in \mathbb{R}^p\\. Then there is a \\\tau \in (0, 1)\\ with
 >
 > \\ f(\tilde{z} + \tilde{h}) = f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h}. \\
 
@@ -908,9 +884,9 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} g'(t) &= {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h}) && \text{(}\href{#thm-chain-vec}{\text{Theorem~8}}\text{)} \\ &= \sum\_{j=1}^{p} h_j\\\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}). && \text{(matrix product)} \end{aligned} \\
 >
-> The second step writes out the [matrix product](linear-algebra.llms.md#def-matrix-mult). \\g'\\ is continuous ([Definition 16](#def-continuous-several)): \\t \mapsto \tilde{z} + t \tilde{h}\\ is continuous, since \\\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left\|s - t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\\, each \\\frac{\partial}{\partial x_j} f\\ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each \\\frac{\partial}{\partial x_j} f\\ has continuous partial derivatives, the second partial derivatives of \\f\\, so the same chain-rule computation applies to it: \\\frac{\partial}{\partial t} \mathopen{}\left\[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right\]\mathclose{} = \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\\. So
+> The second step writes out the [matrix product](linear-algebra.llms.md#def-matrix-mult). \\g'\\ is continuous ([Definition 14](#def-continuous-several)): \\t \mapsto \tilde{z} + t \tilde{h}\\ is continuous, since \\\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left\|s - t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\\, each \\\frac{\partial}{\partial x_j} f\\ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each \\\frac{\partial}{\partial x_j} f\\ has continuous partial derivatives, the second partial derivatives of \\f\\, so the same chain-rule computation applies to it: \\\frac{\partial}{\partial t} \mathopen{}\left\[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right\]\mathclose{} = \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\\. So
 >
-> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^{p} h_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(}\href{#def-hessian}{\text{Definition~15}}\text{; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
+> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^{p} h_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(}\href{#def-hessian}{\text{Definition~13}}\text{; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
 >
 > The last step is again the [matrix product](linear-algebra.llms.md#def-matrix-mult). Now apply [Theorem 14](#thm-taylor-1d) to \\g\\ on \\\[0, 1\]\\: there is a \\\tau \in (0, 1)\\ with
 >
@@ -918,7 +894,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 37 (For a quadratic form the expansion is exact)** Let \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. Its gradient is \\2 \mathbf{S} \tilde{x}\\ ([Theorem 7](#thm-quadratic-form)) and its Hessian is \\2 \mathbf{S}\\ at every point ([Theorem 11](#thm-hessian-quadratic)), so whatever \\\tau\\ is, [Theorem 15](#thm-taylor-mv) reads
+> **Example 35 (For a quadratic form the expansion is exact)** Let \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. Its gradient is \\2 \mathbf{S} \tilde{x}\\ ([Theorem 7](#thm-quadratic-form)) and its Hessian is \\2 \mathbf{S}\\ at every point ([Theorem 11](#thm-hessian-quadratic)), so whatever \\\tau\\ is, [Theorem 15](#thm-taylor-mv) reads
 >
 > \\ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h} = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}, \\
 >
@@ -928,11 +904,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 18 (Strict local minimizer)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A point \\\tilde{x}^\*\\ is a **strict local minimizer** of \\f\\ if there is a number \\\delta \> 0\\ such that \\f(\tilde{x}^\*) \< f(\tilde{x})\\ for every \\\tilde{x}\ne \tilde{x}^\*\\ with \\\mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\.
+> **Definition 16 (Strict local minimizer)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A point \\\tilde{x}^\*\\ is a **strict local minimizer** of \\f\\ if there is a number \\\delta \> 0\\ such that \\f(\tilde{x}^\*) \< f(\tilde{x})\\ for every \\\tilde{x}\ne \tilde{x}^\*\\ with \\\mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\.
 
 > **NOTE:**
 >
-> **Example 38 (Strict and non-strict local minimizers)**  
+> **Example 36 (Strict and non-strict local minimizers)**  
 >
 > - \\f(x) = (x - 2)^2\\ has \\f(2) = 0 \< (x - 2)^2 = f(x)\\ for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta \> 0\\ works).
 > - A constant function \\f(\tilde{x}) = 0\\ has \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for all \\\tilde{x}^\*\\ and \\\tilde{x}\\, so every point is a [local minimizer](algebra.llms.md#def-local-minimizer), but no point is a strict one: \\f(\tilde{x}^\*) \< f(\tilde{x})\\ never holds.
@@ -951,7 +927,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 39 (Checking the bound)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([eigenvalue example](linear-algebra.llms.md#exm-eigenvalue)), so \\\lambda\_{\min} = 1\\. At \\\tilde{h} = {(1, 0)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\\. At \\\tilde{h} = {(1, -1)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\\: the bound holds with equality, since this \\\tilde{h}\\ is an eigenvector for \\\lambda\_{\min}\\.
+> **Example 37 (Checking the bound)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([eigenvalue example](linear-algebra.llms.md#exm-eigenvalue)), so \\\lambda\_{\min} = 1\\. At \\\tilde{h} = {(1, 0)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\\. At \\\tilde{h} = {(1, -1)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\\: the bound holds with equality, since this \\\tilde{h}\\ is an eigenvector for \\\lambda\_{\min}\\.
 
 > **NOTE:**
 >
@@ -967,15 +943,15 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 40 (Checking the bound)** Let \\\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}\\, so \\m = 0.2\\ works, and \\\tilde{h} = {(1, 1)}^{\top}\\, so \\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\\. Then \\{\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\\, and \\\mathopen{}\left\|-0.2\right\|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\\.
+> **Example 38 (Checking the bound)** Let \\\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}\\, so \\m = 0.2\\ works, and \\\tilde{h} = {(1, 1)}^{\top}\\, so \\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\\. Then \\{\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\\, and \\\mathopen{}\left\|-0.2\right\|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\\.
 
 > **NOTE:**
 >
-> **Theorem 16 (Second-order sufficient condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 16](#def-continuous-several)). If \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 17](#def-stationary-point)) and \\\mathbf{H}\_f(\tilde{x}^\*)\\ is [positive definite](linear-algebra.llms.md#def-positive-definite), then \\\tilde{x}^\*\\ is a strict local minimizer of \\f\\ ([Definition 18](#def-strict-local-minimizer)).
+> **Theorem 16 (Second-order sufficient condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 14](#def-continuous-several)). If \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 15](#def-stationary-point)) and \\\mathbf{H}\_f(\tilde{x}^\*)\\ is [positive definite](linear-algebra.llms.md#def-positive-definite), then \\\tilde{x}^\*\\ is a strict local minimizer of \\f\\ ([Definition 16](#def-strict-local-minimizer)).
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{H}\_f(\tilde{x}^\*)\\ is positive definite, and so symmetric, so its smallest eigenvalue \\\lambda\\ is positive ([definiteness and eigenvalues](linear-algebra.llms.md#thm-definite-eigenvalues)). Each of the \\p^2\\ entries of \\\mathbf{H}\_f\\ is continuous at \\\tilde{x}^\*\\ ([Definition 16](#def-continuous-several)): for \\\varepsilon = \lambda / (2p)\\ there is a \\\delta\_{ij} \> 0\\ with \\\mathopen{}\left\|\mathopen{}\left\[\mathbf{H}\_f(\tilde{y})\right\]\mathclose{}\_{ij} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^\*)\right\]\mathclose{}\_{ij}\right\|\mathclose{} \< \lambda / (2p)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\_{ij}\\. Let \\\delta\\ be the smallest of these \\p^2\\ numbers.
+> *Proof*. \\\mathbf{H}\_f(\tilde{x}^\*)\\ is positive definite, and so symmetric, so its smallest eigenvalue \\\lambda\\ is positive ([definiteness and eigenvalues](linear-algebra.llms.md#thm-definite-eigenvalues)). Each of the \\p^2\\ entries of \\\mathbf{H}\_f\\ is continuous at \\\tilde{x}^\*\\ ([Definition 14](#def-continuous-several)): for \\\varepsilon = \lambda / (2p)\\ there is a \\\delta\_{ij} \> 0\\ with \\\mathopen{}\left\|\mathopen{}\left\[\mathbf{H}\_f(\tilde{y})\right\]\mathclose{}\_{ij} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^\*)\right\]\mathclose{}\_{ij}\right\|\mathclose{} \< \lambda / (2p)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\_{ij}\\. Let \\\delta\\ be the smallest of these \\p^2\\ numbers.
 >
 > Now let \\0 \< \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\. By [Theorem 15](#thm-taylor-mv) there is a \\\tau \in (0, 1)\\ for which the first step of the next display holds; let \\\tilde{y}\stackrel{\text{def}}{=}\tilde{x}^\* + \tau \tilde{h}\\ and \\\mathbf{E} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{y}) - \mathbf{H}\_f(\tilde{x}^\*)\\. Since \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} = \tau\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\, every entry of \\\mathbf{E}\\ has absolute value less than \\\lambda / (2p)\\, so [Lemma 2](#lem-qf-entry-bound) applies with \\m = \lambda / (2p)\\:
 >
@@ -985,14 +961,14 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 41 (Classifying stationary points)**  
+> **Example 39 (Classifying stationary points)**  
 >
-> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has the stationary point \\{(1, 0)}^{\top}\\ ([Example 34](#exm-stationary-point)), and its Hessian is \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = 2 \mathbf{I}\_2\\, which is positive definite, so \\{(1, 0)}^{\top}\\ is a strict local minimizer.
-> - \\f(\tilde{x}) = x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\ and Hessian \\\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}\\, which is not positive definite (\\{(0, 1)}^{\top}\\ gives \\-2\\), and indeed \\\tilde{0}\\ is not a local minimizer ([Example 35](#exm-first-order-condition)).
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has the stationary point \\{(1, 0)}^{\top}\\ ([Example 32](#exm-stationary-point)), and its Hessian is \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = 2 \mathbf{I}\_2\\, which is positive definite, so \\{(1, 0)}^{\top}\\ is a strict local minimizer.
+> - \\f(\tilde{x}) = x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\ and Hessian \\\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}\\, which is not positive definite (\\{(0, 1)}^{\top}\\ gives \\-2\\), and indeed \\\tilde{0}\\ is not a local minimizer ([Example 33](#exm-first-order-condition)).
 
 > **NOTE:**
 >
-> **Example 42 (The condition is sufficient, not necessary)** \\f(\tilde{x}) = x_1^2 + x_2^4\\ and \\g(\tilde{x}) = x_1^2 - x_2^4\\ both have gradient \\\tilde{0}\\ at \\\tilde{0}\\ and the same Hessian there, \\\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\\, since \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\\ at \\x_2 = 0\\. That Hessian is not positive definite (\\{(0, 1)}^{\top}\\ gives \\0\\), so [Theorem 16](#thm-second-order-condition) says nothing about either function. In fact \\\tilde{0}\\ is a strict local minimizer of \\f\\, since \\f(\tilde{x}) \> 0 = f(\tilde{0})\\ for \\\tilde{x}\ne \tilde{0}\\, but not a local minimizer of \\g\\, since \\g(0, t) = -t^4 \< 0 = g(\tilde{0})\\ for \\t \ne 0\\.
+> **Example 40 (The condition is sufficient, not necessary)** \\f(\tilde{x}) = x_1^2 + x_2^4\\ and \\g(\tilde{x}) = x_1^2 - x_2^4\\ both have gradient \\\tilde{0}\\ at \\\tilde{0}\\ and the same Hessian there, \\\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\\, since \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\\ at \\x_2 = 0\\. That Hessian is not positive definite (\\{(0, 1)}^{\top}\\ gives \\0\\), so [Theorem 16](#thm-second-order-condition) says nothing about either function. In fact \\\tilde{0}\\ is a strict local minimizer of \\f\\, since \\f(\tilde{x}) \> 0 = f(\tilde{0})\\ for \\\tilde{x}\ne \tilde{0}\\, but not a local minimizer of \\g\\, since \\g(0, t) = -t^4 \< 0 = g(\tilde{0})\\ for \\t \ne 0\\.
 
 ## 3 Convexity in several variables
 
@@ -1006,15 +982,15 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 19 (Convex set)** A set \\K \subseteq \mathbb{R}^p\\ is **convex** if for all \\\tilde{x}, \tilde{y}\in K\\ and all \\t \in \[0, 1\]\\, the point \\t \tilde{x}+ (1 - t) \tilde{y}\\ is in \\K\\: \\K\\ contains the whole line segment between any two of its points.
+> **Definition 17 (Convex set)** A set \\K \subseteq \mathbb{R}^p\\ is **convex** if for all \\\tilde{x}, \tilde{y}\in K\\ and all \\t \in \[0, 1\]\\, the point \\t \tilde{x}+ (1 - t) \tilde{y}\\ is in \\K\\: \\K\\ contains the whole line segment between any two of its points.
 
 > **NOTE:**
 >
-> **Example 43 (Convex sets)**  
+> **Example 41 (Convex sets)**  
 >
 > - \\\mathbb{R}^p\\ is convex, and so is any set with at most one point.
 >
-> - The closed ball ([Definition 13](#def-ball)) \\B = \mathopen{}\left\\\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\ is convex: for \\\tilde{x}, \tilde{y}\in B\\ and \\t \in \[0, 1\]\\,
+> - The closed ball ([Definition 11](#def-ball)) \\B = \mathopen{}\left\\\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\ is convex: for \\\tilde{x}, \tilde{y}\in B\\ and \\t \in \[0, 1\]\\,
 >
 >   \\ \begin{aligned} \mathopen{}\left\lVert t \tilde{x}+ (1 - t) \tilde{y}\right\rVert\mathclose{} &\le \mathopen{}\left\lVert t \tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert(1 - t) \tilde{y}\right\rVert\mathclose{} && \text{(triangle inequality)} \\ &= t\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + (1 - t)\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} && \text{(norm of a multiple; } t, 1 - t \ge 0 \text{)} \\ &\le t\\r + (1 - t)\\r && \text{(} \tilde{x}, \tilde{y}\in B \text{)} \\ &= r. && \text{(arithmetic)} \end{aligned} \\
 >
@@ -1022,19 +998,19 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 44 (A set that is not convex)** \\K = \mathopen{}\left\\x \in \mathbb{R}: \mathopen{}\left\|x\right\|\mathclose{} \ge 1\right\\\mathclose{}\\ is not convex: \\-1\\ and \\1\\ are in \\K\\, but with \\t = \tfrac{1}{2}\\ the point \\\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0\\ is not.
+> **Example 42 (A set that is not convex)** \\K = \mathopen{}\left\\x \in \mathbb{R}: \mathopen{}\left\|x\right\|\mathclose{} \ge 1\right\\\mathclose{}\\ is not convex: \\-1\\ and \\1\\ are in \\K\\, but with \\t = \tfrac{1}{2}\\ the point \\\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0\\ is not.
 
 > **NOTE:**
 >
-> **Definition 20 (Half-space)** Let \\\tilde{a} \in \mathbb{R}^p\\ be a nonzero vector and \\c\\ a real number. The set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : {\tilde{a}}^{\top} \tilde{x}\ge c\right\\\mathclose{}\\ is a (closed) **half-space**: the points on one side of the boundary \\\mathopen{}\left\\\tilde{x}: {\tilde{a}}^{\top} \tilde{x}= c\right\\\mathclose{}\\, together with the boundary. In \\\mathbb{R}^2\\, a half-space is called a **half-plane**.
+> **Definition 18 (Half-space)** Let \\\tilde{a} \in \mathbb{R}^p\\ be a nonzero vector and \\c\\ a real number. The set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : {\tilde{a}}^{\top} \tilde{x}\ge c\right\\\mathclose{}\\ is a (closed) **half-space**: the points on one side of the boundary \\\mathopen{}\left\\\tilde{x}: {\tilde{a}}^{\top} \tilde{x}= c\right\\\mathclose{}\\, together with the boundary. In \\\mathbb{R}^2\\, a half-space is called a **half-plane**.
 
 > **NOTE:**
 >
-> **Example 45 (The right half-plane)** With \\\tilde{a} = {(1, 0)}^{\top}\\ and \\c = 0\\, the half-plane \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : x_1 \ge 0\right\\\mathclose{}\\ is the set of points on or to the right of the \\x_2\\-axis. \\{(1, 5)}^{\top}\\ is in it, since \\1 \ge 0\\; \\{(0, -3)}^{\top}\\ is in it, on the boundary; and \\{(-1, 0)}^{\top}\\ is not, since \\-1 \< 0\\.
+> **Example 43 (The right half-plane)** With \\\tilde{a} = {(1, 0)}^{\top}\\ and \\c = 0\\, the half-plane \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : x_1 \ge 0\right\\\mathclose{}\\ is the set of points on or to the right of the \\x_2\\-axis. \\{(1, 5)}^{\top}\\ is in it, since \\1 \ge 0\\; \\{(0, -3)}^{\top}\\ is in it, on the boundary; and \\{(-1, 0)}^{\top}\\ is not, since \\-1 \< 0\\.
 
 > **NOTE:**
 >
-> **Theorem 17 (An intersection of convex sets is convex)** If \\K_1\\ and \\K_2\\ are convex subsets of \\\mathbb{R}^p\\ ([Definition 19](#def-convex-set)), then \\K_1 \cap K_2\\ is convex.
+> **Theorem 17 (An intersection of convex sets is convex)** If \\K_1\\ and \\K_2\\ are convex subsets of \\\mathbb{R}^p\\ ([Definition 17](#def-convex-set)), then \\K_1 \cap K_2\\ is convex.
 
 > **NOTE:**
 >
@@ -1042,15 +1018,15 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 46 (Intersecting a ball with a half-plane)** The closed unit ball ([Definition 13](#def-ball)) in \\\mathbb{R}^2\\ is convex ([Example 43](#exm-convex-set)), and so is the half-plane ([Definition 20](#def-half-space)) \\\mathopen{}\left\\\tilde{x}: x_1 \ge 0\right\\\mathclose{}\\: if \\x_1 \ge 0\\ and \\y_1 \ge 0\\, then \\t x_1 + (1 - t) y_1 \ge 0\\ for \\t \in \[0, 1\]\\. By [Theorem 17](#thm-convex-intersection), the closed half-disk \\\mathopen{}\left\\\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\\ x_1 \ge 0\right\\\mathclose{}\\ is convex. A union need not be convex: \\\mathopen{}\left\\x \in \mathbb{R}: x \le -1\right\\\mathclose{}\\ and \\\mathopen{}\left\\x \in \mathbb{R}: x \ge 1\right\\\mathclose{}\\ are convex, but their union is the set of [Example 44](#exm-not-convex-set).
+> **Example 44 (Intersecting a ball with a half-plane)** The closed unit ball ([Definition 11](#def-ball)) in \\\mathbb{R}^2\\ is convex ([Example 41](#exm-convex-set)), and so is the half-plane ([Definition 18](#def-half-space)) \\\mathopen{}\left\\\tilde{x}: x_1 \ge 0\right\\\mathclose{}\\: if \\x_1 \ge 0\\ and \\y_1 \ge 0\\, then \\t x_1 + (1 - t) y_1 \ge 0\\ for \\t \in \[0, 1\]\\. By [Theorem 17](#thm-convex-intersection), the closed half-disk \\\mathopen{}\left\\\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\\ x_1 \ge 0\right\\\mathclose{}\\ is convex. A union need not be convex: \\\mathopen{}\left\\x \in \mathbb{R}: x \le -1\right\\\mathclose{}\\ and \\\mathopen{}\left\\x \in \mathbb{R}: x \ge 1\right\\\mathclose{}\\ are convex, but their union is the set of [Example 42](#exm-not-convex-set).
 
 > **NOTE:**
 >
-> **Definition 21 (Strictly convex and concave functions)** A function \\f : \mathbb{R}^p \to \mathbb{R}\\ is **strictly convex** if \\f(t \tilde{x}+ (1 - t) \tilde{y}) \< t f(\tilde{x}) + (1 - t) f(\tilde{y})\\ for all \\\tilde{x}\ne \tilde{y}\\ in \\\mathbb{R}^p\\ and all \\t \in (0, 1)\\. It is **concave** if \\-f\\ is [convex](algebra.llms.md#def-convex-function), and **strictly concave** if \\-f\\ is strictly convex.
+> **Definition 19 (Strictly convex and concave functions)** A function \\f : \mathbb{R}^p \to \mathbb{R}\\ is **strictly convex** if \\f(t \tilde{x}+ (1 - t) \tilde{y}) \< t f(\tilde{x}) + (1 - t) f(\tilde{y})\\ for all \\\tilde{x}\ne \tilde{y}\\ in \\\mathbb{R}^p\\ and all \\t \in (0, 1)\\. It is **concave** if \\-f\\ is [convex](algebra.llms.md#def-convex-function), and **strictly concave** if \\-f\\ is strictly convex.
 
 > **NOTE:**
 >
-> **Example 47 (Strictly convex, and convex but not strictly)**  
+> **Example 45 (Strictly convex, and convex but not strictly)**  
 >
 > - \\f(x) = x^2\\ is strictly convex:
 >
@@ -1074,14 +1050,14 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 48 (A maximum is convex; a minimum need not be)**  
+> **Example 46 (A maximum is convex; a minimum need not be)**  
 >
-> - \\f_1(x) = x\\ is convex, by the computation for \\2x + 1\\ in [Example 47](#exm-strictly-convex) with \\2\\ and \\1\\ replaced by \\1\\ and \\0\\, and \\f_2(x) = x^2\\ is convex by the same example, so \\\max\mathopen{}\left\\x, x^2\right\\\mathclose{}\\ is convex by [Theorem 18](#thm-convex-max).
+> - \\f_1(x) = x\\ is convex, by the computation for \\2x + 1\\ in [Example 45](#exm-strictly-convex) with \\2\\ and \\1\\ replaced by \\1\\ and \\0\\, and \\f_2(x) = x^2\\ is convex by the same example, so \\\max\mathopen{}\left\\x, x^2\right\\\mathclose{}\\ is convex by [Theorem 18](#thm-convex-max).
 > - The minimum of two convex functions need not be convex: \\g(x) = \min\mathopen{}\left\\x^2, (x - 2)^2\right\\\mathclose{}\\ has \\g(0) = g(2) = 0\\, but at the midpoint \\g(1) = \min\mathopen{}\left\\1, 1\right\\\mathclose{} = 1 \> \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0\\.
 
 > **NOTE:**
 >
-> **Definition 22 (Epigraph)** The **epigraph** of \\f : \mathbb{R}^p \to \mathbb{R}\\ is the set of points on or over its [graph](sets-functions.llms.md#def-graph),
+> **Definition 20 (Epigraph)** The **epigraph** of \\f : \mathbb{R}^p \to \mathbb{R}\\ is the set of points on or over its [graph](sets-functions.llms.md#def-graph),
 >
 > \\ \operatorname{epi} f \stackrel{\text{def}}{=}\mathopen{}\left\\(\tilde{x}, s) : \tilde{x}\in \mathbb{R}^p,\\ s \in \mathbb{R},\\ f(\tilde{x}) \le s\right\\\mathclose{}. \\
 >
@@ -1089,11 +1065,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 49 (The epigraph of \\x^2\\)** For \\f(x) = x^2\\, \\\operatorname{epi} f = \mathopen{}\left\\(x, s) : x^2 \le s\right\\\mathclose{}\\, the points \\(x, s)\\ on the parabola \\s = x^2\\ or on the side of it where \\s\\ is larger. \\(1, 2)\\ is in it, since \\1^2 \le 2\\; \\(2, 1)\\ is not, since \\2^2 \> 1\\.
+> **Example 47 (The epigraph of \\x^2\\)** For \\f(x) = x^2\\, \\\operatorname{epi} f = \mathopen{}\left\\(x, s) : x^2 \le s\right\\\mathclose{}\\, the points \\(x, s)\\ on the parabola \\s = x^2\\ or on the side of it where \\s\\ is larger. \\(1, 2)\\ is in it, since \\1^2 \le 2\\; \\(2, 1)\\ is not, since \\2^2 \> 1\\.
 
 > **NOTE:**
 >
-> **Theorem 19 (Convexity through the epigraph)** \\f : \mathbb{R}^p \to \mathbb{R}\\ is [convex](algebra.llms.md#def-convex-function) if and only if its epigraph ([Definition 22](#def-epigraph)) is convex ([Definition 19](#def-convex-set)).
+> **Theorem 19 (Convexity through the epigraph)** \\f : \mathbb{R}^p \to \mathbb{R}\\ is [convex](algebra.llms.md#def-convex-function) if and only if its epigraph ([Definition 20](#def-epigraph)) is convex ([Definition 17](#def-convex-set)).
 
 > **NOTE:**
 >
@@ -1101,7 +1077,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ t\\(\tilde{x}, f(\tilde{x})) + (1 - t)\\(\tilde{y}, f(\tilde{y})) = \mathopen{}\left(t \tilde{x}+ (1 - t) \tilde{y},\\ t f(\tilde{x}) + (1 - t) f(\tilde{y})\right)\mathclose{}, \\
 >
-> and by [Definition 22](#def-epigraph) that membership means \\f(t \tilde{x}+ (1 - t) \tilde{y}) \le t f(\tilde{x}) + (1 - t) f(\tilde{y})\\.
+> and by [Definition 20](#def-epigraph) that membership means \\f(t \tilde{x}+ (1 - t) \tilde{y}) \le t f(\tilde{x}) + (1 - t) f(\tilde{y})\\.
 >
 > **Only if.** Let \\(\tilde{x}, s)\\ and \\(\tilde{y}, u)\\ be in \\\operatorname{epi} f\\, so \\f(\tilde{x}) \le s\\ and \\f(\tilde{y}) \le u\\, and let \\t \in \[0, 1\]\\. Then
 >
@@ -1111,22 +1087,22 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 50 (Two epigraphs)**  
+> **Example 48 (Two epigraphs)**  
 >
 > - The epigraph of \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is \\\mathopen{}\left\\(x, s) : \mathopen{}\left\|x\right\|\mathclose{} \le s\right\\\mathclose{}\\, a wedge. It is the intersection of the half-planes \\\mathopen{}\left\\(x, s) : s - x \ge 0\right\\\mathclose{}\\ and \\\mathopen{}\left\\(x, s) : s + x \ge 0\right\\\mathclose{}\\. Each half-plane is convex: if \\s_1 - x_1 \ge 0\\ and \\s_2 - x_2 \ge 0\\, then \\(t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0\\, and the same with \\+\\ for the other. So the wedge is convex ([Theorem 17](#thm-convex-intersection)), and \\\mathopen{}\left\|x\right\|\mathclose{}\\ is convex by [Theorem 19](#thm-epigraph).
 > - The epigraph of \\g(x) = -x^2\\ is not convex: \\(-1, -1)\\ and \\(1, -1)\\ are in it, since \\g(\pm 1) = -1\\, but their midpoint \\(0, -1)\\ is not, since \\g(0) = 0 \> -1\\. So \\-x^2\\ is not convex.
 
 > **NOTE:**
 >
-> **Definition 23 (Tangent plane)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient at \\\tilde{y}\\ ([Definition 2](#def-vector-derivative)). The **tangent plane** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\\tilde{y}\\ is the graph of the function
+> **Definition 21 (Tangent plane)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient at \\\tilde{y}\\ ([Definition 2](#def-vector-derivative)). The **tangent plane** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\\tilde{y}\\ is the graph of the function
 >
 > \\ \tilde{x}\mapsto f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}), \\
 >
-> which takes the value \\f(\tilde{y})\\ at \\\tilde{x}= \tilde{y}\\ and has the same gradient as \\f\\ there. For \\p = 1\\ it is the **tangent line** \\s = f(y) + f'(y)\\(x - y)\\, the line through \\(y, f(y))\\ with slope \\f'(y)\\.
+> which takes the value \\f(\tilde{y})\\ at \\\tilde{x}= \tilde{y}\\ and has the same gradient as \\f\\ there. For \\p = 1\\ it is the [tangent line](calculus.llms.md#def-tangent-line) \\s = f(y) + f'(y)\\(x - y)\\, the line through \\(y, f(y))\\ with slope \\f'(y)\\.
 
 > **NOTE:**
 >
-> **Example 51 (A tangent line and a tangent plane)**  
+> **Example 49 (A tangent line and a tangent plane)**  
 >
 > - For \\f(x) = x^2\\ at \\y = 1\\, \\f(1) = 1\\ and \\f'(1) = 2\\, so the tangent line is
 >
@@ -1138,11 +1114,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Theorem 20 (First-order characterization of convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 16](#def-continuous-several)). Then \\f\\ is [convex](algebra.llms.md#def-convex-function) if and only if
+> **Theorem 20 (First-order characterization of convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 14](#def-continuous-several)). Then \\f\\ is [convex](algebra.llms.md#def-convex-function) if and only if
 >
 > \\ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \qquad \text{for all } \tilde{x}, \tilde{y}\in \mathbb{R}^p: \tag{6}\\
 >
-> every tangent plane ([Definition 23](#def-tangent-plane)) lies on or under the graph. If the inequality is strict whenever \\\tilde{x}\ne \tilde{y}\\, then \\f\\ is strictly convex ([Definition 21](#def-strictly-convex)).
+> every tangent plane ([Definition 21](#def-tangent-plane)) lies on or under the graph. If the inequality is strict whenever \\\tilde{x}\ne \tilde{y}\\, then \\f\\ is strictly convex ([Definition 19](#def-strictly-convex)).
 
 > **NOTE:**
 >
@@ -1172,7 +1148,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 52 (Tangent lines under a parabola)** For \\f(x) = x^2\\, the right side of [Equation 6](#eq-supporting-hyperplane) is \\y^2 + 2y (x - y) = 2xy - y^2\\, and
+> **Example 50 (Tangent lines under a parabola)** For \\f(x) = x^2\\, the right side of [Equation 6](#eq-supporting-hyperplane) is \\y^2 + 2y (x - y) = 2xy - y^2\\, and
 >
 > \\ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0, \\
 >
@@ -1180,10 +1156,10 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Theorem 21 (Second-derivative test for convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 16](#def-continuous-several)).
+> **Theorem 21 (Second-derivative test for convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 14](#def-continuous-several)).
 >
 > 1.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive semidefinite](linear-algebra.llms.md#def-positive-semidefinite) for every \\\tilde{x}\\, then \\f\\ is [convex](algebra.llms.md#def-convex-function).
-> 2.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive definite](linear-algebra.llms.md#def-positive-definite) for every \\\tilde{x}\\, then \\f\\ is strictly convex ([Definition 21](#def-strictly-convex)).
+> 2.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive definite](linear-algebra.llms.md#def-positive-definite) for every \\\tilde{x}\\, then \\f\\ is strictly convex ([Definition 19](#def-strictly-convex)).
 
 > **NOTE:**
 >
@@ -1195,13 +1171,13 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 53 (Using the Hessian to show convexity)**  
+> **Example 51 (Using the Hessian to show convexity)**  
 >
 > - For a symmetric positive semidefinite \\\mathbf{A}\\, \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{A} \tilde{x}\\ has Hessian \\2 \mathbf{A}\\ ([Theorem 11](#thm-hessian-quadratic)), which is positive semidefinite because \\{\tilde{h}}^{\top} (2 \mathbf{A}) \tilde{h} = 2\\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} \ge 0\\; so \\f\\ is convex.
 >
-> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has Hessian \\2 \mathbf{I}\_2\\ ([Example 41](#exm-second-order-condition)), which is positive definite, so \\f\\ is strictly convex.
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has Hessian \\2 \mathbf{I}\_2\\ ([Example 39](#exm-second-order-condition)), which is positive definite, so \\f\\ is strictly convex.
 >
-> - \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ has Hessian \\e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\ with \\u = 2x_1 + x_2\\ ([Example 27](#exm-hessian)), and
+> - \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ has Hessian \\e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\ with \\u = 2x_1 + x_2\\ ([Example 25](#exm-hessian)), and
 >
 >   \\ {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x})\\\tilde{h} = e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) = e^{u} (2 h_1 + h_2)^2 \ge 0, \\
 >
@@ -1209,7 +1185,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 54 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has \\f''(0) = 12 \cdot 0^2 = 0\\, so \\\mathbf{H}\_f(0) = \[0\]\\ is [singular](linear-algebra.llms.md#def-invertible-matrix) and not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 6](#eq-supporting-hyperplane): for \\x \ne y\\,
+> **Example 52 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has \\f''(0) = 12 \cdot 0^2 = 0\\, so \\\mathbf{H}\_f(0) = \[0\]\\ is [singular](linear-algebra.llms.md#def-invertible-matrix) and not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 6](#eq-supporting-hyperplane): for \\x \ne y\\,
 >
 > \\ \begin{aligned} x^4 - y^4 - 4 y^3 (x - y) &= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y) && \text{(factor } x^4 - y^4 \text{)} \\ &= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3) && \text{(collect the } y^3 \text{ terms)} \\ &= (x - y)^2 (x^2 + 2 x y + 3 y^2) && \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)} \\ &= (x - y)^2 \mathopen{}\left((x + y)^2 + 2 y^2\right)\mathclose{}, && \text{(complete the square)} \end{aligned} \\
 >
@@ -1217,7 +1193,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Corollary 4 (Stationary points of a convex function are global minimizers)** If \\f\\ is as in [Theorem 20](#thm-convex-first-order) and convex, then every stationary point \\\tilde{x}^\*\\ of \\f\\ ([Definition 17](#def-stationary-point)) is a [global minimizer](algebra.llms.md#def-global-minimizer).
+> **Corollary 4 (Stationary points of a convex function are global minimizers)** If \\f\\ is as in [Theorem 20](#thm-convex-first-order) and convex, then every stationary point \\\tilde{x}^\*\\ of \\f\\ ([Definition 15](#def-stationary-point)) is a [global minimizer](algebra.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >
@@ -1227,11 +1203,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 55 (A convex function, and a non-convex one)**  
+> **Example 53 (A convex function, and a non-convex one)**  
 >
-> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ is convex by [Theorem 21](#thm-convex-hessian), since its Hessian is \\2 \mathbf{I}\_2\\ ([Example 41](#exm-second-order-condition)), so its stationary point \\{(1, 0)}^{\top}\\ ([Example 34](#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 35](#exm-first-order-condition).
-> - Without convexity, a stationary point need not be a minimizer at all: \\x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\, which is not a minimizer ([Example 35](#exm-first-order-condition)).
-> - The corollary says nothing about whether a minimizer exists: \\e^{2x_1 + x_2} - x_1\\ is convex ([Example 53](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 35](#exm-first-order-condition)).
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ is convex by [Theorem 21](#thm-convex-hessian), since its Hessian is \\2 \mathbf{I}\_2\\ ([Example 39](#exm-second-order-condition)), so its stationary point \\{(1, 0)}^{\top}\\ ([Example 32](#exm-stationary-point)) is a global minimizer, as completing the square showed in [Example 33](#exm-first-order-condition).
+> - Without convexity, a stationary point need not be a minimizer at all: \\x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\, which is not a minimizer ([Example 33](#exm-first-order-condition)).
+> - The corollary says nothing about whether a minimizer exists: \\e^{2x_1 + x_2} - x_1\\ is convex ([Example 51](#exm-convex-hessian)) but has no stationary point, and so no local minimizer ([Example 33](#exm-first-order-condition)).
 
 ## 4 Minimizing a quadratic under linear constraints
 
@@ -1245,25 +1221,25 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 24 (Feasible set and constraints)** In a problem that looks for a best point among some allowed points of \\\mathbb{R}^p\\, the set \\F \subseteq \mathbb{R}^p\\ of allowed points is the **feasible set**, and its points are **feasible**. When \\F\\ is the set of points that satisfy some equations or inequalities, those equations or inequalities are the **constraints**.
+> **Definition 22 (Feasible set and constraints)** In a problem that looks for a best point among some allowed points of \\\mathbb{R}^p\\, the set \\F \subseteq \mathbb{R}^p\\ of allowed points is the **feasible set**, and its points are **feasible**. When \\F\\ is the set of points that satisfy some equations or inequalities, those equations or inequalities are the **constraints**.
 
 > **NOTE:**
 >
-> **Example 56 (A line as a feasible set)** With the single constraint \\3 x_1 + 4 x_2 = 5\\, the feasible set is the line \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\\\mathclose{}\\. \\{(1, 0.5)}^{\top}\\ is feasible, since \\3 \cdot 1 + 4 \cdot 0.5 = 3 + 2 = 5\\; \\\tilde{0}\\ is not feasible, since \\3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\\.
+> **Example 54 (A line as a feasible set)** With the single constraint \\3 x_1 + 4 x_2 = 5\\, the feasible set is the line \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\\\mathclose{}\\. \\{(1, 0.5)}^{\top}\\ is feasible, since \\3 \cdot 1 + 4 \cdot 0.5 = 3 + 2 = 5\\; \\\tilde{0}\\ is not feasible, since \\3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\\.
 
 > **NOTE:**
 >
-> **Definition 25 (Objective function and minimization problem)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\F \subseteq \mathbb{R}^p\\ be a feasible set ([Definition 24](#def-feasible-set)). In the problem of minimizing \\f\\ over \\F\\, \\f\\ is the **objective function** (or *objective*). A **minimizer of \\f\\ over \\F\\** is a feasible \\\tilde{x}^\*\\ with \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for every feasible \\\tilde{x}\\: a [global minimizer](algebra.llms.md#def-global-minimizer) of \\f\\ with its domain restricted to \\F\\. When \\F\\ is given by constraints, the problem is to minimize \\f\\ **subject to** them.
+> **Definition 23 (Objective function and minimization problem)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\F \subseteq \mathbb{R}^p\\ be a feasible set ([Definition 22](#def-feasible-set)). In the problem of minimizing \\f\\ over \\F\\, \\f\\ is the **objective function** (or *objective*). A **minimizer of \\f\\ over \\F\\** is a feasible \\\tilde{x}^\*\\ with \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for every feasible \\\tilde{x}\\: a [global minimizer](algebra.llms.md#def-global-minimizer) of \\f\\ with its domain restricted to \\F\\. When \\F\\ is given by constraints, the problem is to minimize \\f\\ **subject to** them.
 
 > **NOTE:**
 >
-> **Example 57 (Minimizing over a line)** In the problem of minimizing \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\, the objective function is \\f(\tilde{x}) = x_1^2 + x_2^2\\, and the feasible set is the line of [Example 56](#exm-feasible-set). The feasible point \\{(1, 0.5)}^{\top}\\ has \\f(1, 0.5) = 1 + 0.25 = 1.25\\. \\\tilde{0}\\ minimizes \\f\\ over all of \\\mathbb{R}^2\\, with \\f(\tilde{0}) = 0\\, but it is not a minimizer over the feasible set, because it is not feasible.
+> **Example 55 (Minimizing over a line)** In the problem of minimizing \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\, the objective function is \\f(\tilde{x}) = x_1^2 + x_2^2\\, and the feasible set is the line of [Example 54](#exm-feasible-set). The feasible point \\{(1, 0.5)}^{\top}\\ has \\f(1, 0.5) = 1 + 0.25 = 1.25\\. \\\tilde{0}\\ minimizes \\f\\ over all of \\\mathbb{R}^2\\, with \\f(\tilde{0}) = 0\\, but it is not a minimizer over the feasible set, because it is not feasible.
 
-Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ positive definite, and the constraints ([Definition 24](#def-feasible-set)) are \\m\\ linear equations \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, where \\\mathbf{A}\\ is a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\. The only stationary point of the objective alone ([Definition 17](#def-stationary-point)) is \\\tilde{0}\_{p \times 1}\\ (its gradient is \\\mathbf{S} \tilde{x}\\, and \\\mathbf{S}\\ is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 24](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
+Here the objective ([Definition 23](#def-minimization-problem)) is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ positive definite, and the constraints ([Definition 22](#def-feasible-set)) are \\m\\ linear equations \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, where \\\mathbf{A}\\ is a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\. The only stationary point of the objective alone ([Definition 15](#def-stationary-point)) is \\\tilde{0}\_{p \times 1}\\ (its gradient is \\\mathbf{S} \tilde{x}\\, and \\\mathbf{S}\\ is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 22](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
 
 > **NOTE:**
 >
-> **Definition 26 (Lagrangian)** For the problem of minimizing \\f(\tilde{x})\\ over \\\tilde{x}\in \mathbb{R}^p\\ subject to \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, with \\\mathbf{A}\\ a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, the **Lagrangian** is the function of \\\tilde{x}\in \mathbb{R}^p\\ and \\\tilde{\lambda} \in \mathbb{R}^m\\
+> **Definition 24 (Lagrangian)** For the problem of minimizing \\f(\tilde{x})\\ over \\\tilde{x}\in \mathbb{R}^p\\ subject to \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, with \\\mathbf{A}\\ a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, the **Lagrangian** is the function of \\\tilde{x}\in \mathbb{R}^p\\ and \\\tilde{\lambda} \in \mathbb{R}^m\\
 >
 > \\ L(\tilde{x}, \tilde{\lambda}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{\lambda}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}, \\
 >
@@ -1271,7 +1247,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 58 (The gradients of the Lagrangian of a quadratic)** Let \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. By the [transpose of a product](linear-algebra.llms.md#thm-transpose-product), \\{\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\\, so
+> **Example 56 (The gradients of the Lagrangian of a quadratic)** Let \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. By the [transpose of a product](linear-algebra.llms.md#thm-transpose-product), \\{\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\\, so
 >
 > \\ \begin{aligned} L(\tilde{x}, \tilde{\lambda}) &= \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b} && \text{(distribute)} \\ &= \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b}, && \text{(transpose of a product)} \end{aligned} \\
 >
@@ -1327,7 +1303,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 59 (The closest point on a line to the origin)** Minimize \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\. In the form of [Theorem 22](#thm-qp-equality), \\x_1^2 + x_2^2 = \tfrac{1}{2}\\{\tilde{x}}^{\top} (2 \mathbf{I}\_2) \tilde{x}\\, so \\\mathbf{S} = 2 \mathbf{I}\_2\\, \\\mathbf{A} = {(3, 4)}^{\top}\\ (\\p = 2\\, \\m = 1\\) and \\\tilde{b} = \[5\]\\. The hypotheses hold: \\2 \mathbf{I}\_2\\ is positive definite, and the single column \\{(3, 4)}^{\top}\\ is nonzero, so it is linearly independent. Also \\\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}\_2\\. Then, from the formulas of [Theorem 22](#thm-qp-equality),
+> **Example 57 (The closest point on a line to the origin)** Minimize \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\. In the form of [Theorem 22](#thm-qp-equality), \\x_1^2 + x_2^2 = \tfrac{1}{2}\\{\tilde{x}}^{\top} (2 \mathbf{I}\_2) \tilde{x}\\, so \\\mathbf{S} = 2 \mathbf{I}\_2\\, \\\mathbf{A} = {(3, 4)}^{\top}\\ (\\p = 2\\, \\m = 1\\) and \\\tilde{b} = \[5\]\\. The hypotheses hold: \\2 \mathbf{I}\_2\\ is positive definite, and the single column \\{(3, 4)}^{\top}\\ is nonzero, so it is linearly independent. Also \\\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}\_2\\. Then, from the formulas of [Theorem 22](#thm-qp-equality),
 >
 > \\ \begin{aligned} \mathbf{M} &= {\mathbf{A}}^{\top}\\\tfrac{1}{2} \mathbf{I}\_2\\\mathbf{A} = \tfrac{1}{2}\\(3^2 + 4^2) = \tfrac{25}{2}, \\ \tilde{x}^\* &= \tfrac{1}{2} \mathbf{I}\_2 \begin{bmatrix} 3 \\ 4 \end{bmatrix} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = \tfrac{5}{25} \begin{bmatrix} 3 \\ 4 \end{bmatrix} = \begin{bmatrix} 0.6 \\ 0.8 \end{bmatrix}, \\ \tilde{\lambda}^\* &= -\mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = -0.4, \\ f(\tilde{x}^\*) &= \tfrac{1}{2} (5) \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = 1. \end{aligned} \\
 >
@@ -1341,22 +1317,22 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 60 (The hypotheses are needed)**  
+> **Example 58 (The hypotheses are needed)**  
 >
 > - If \\\mathbf{S}\\ is not positive definite there may be no minimizer: with \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}\\ and the constraint \\x_1 = 1\\ (\\\mathbf{A} = {(1, 0)}^{\top}\\, \\\tilde{b} = \[1\]\\), \\f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\\ decreases without bound as \\x_2\\ grows.
 > - If the columns of \\\mathbf{A}\\ are dependent, \\\mathbf{M}\\ is not invertible: with \\\mathbf{S} = \mathbf{I}\_2\\ and \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, \\\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, whose columns are equal. So \\\mathbf{M} {(1, -1)}^{\top} = \tilde{0}\_{2 \times 1}\\, and \\\mathbf{M}\\ is not invertible ([a square matrix is invertible exactly when its null space is zero](linear-algebra.llms.md#thm-invertible-rank)). The two constraints both read \\x_1 + x_2 = b_i\\, so they have no solution at all when \\b_1 \ne b_2\\. When \\b_1 = b_2\\ a unique minimizer still exists, \\x_1 = x_2 = b_1 / 2\\, but the formula of [Theorem 22](#thm-qp-equality) cannot produce it.
 
 > **NOTE:**
 >
-> **Definition 27 (Sensitivity)** Suppose a minimization problem ([Definition 25](#def-minimization-problem)) depends on a vector \\\tilde{b} \in \mathbb{R}^m\\, and let \\f^\*(\tilde{b})\\ be its minimum value, as a function of \\\tilde{b}\\. When the gradient \\\frac{\partial}{\partial \tilde{b}} f^\*(\tilde{b})\\ exists ([Definition 2](#def-vector-derivative)), it is the **sensitivity** of the minimum value to \\\tilde{b}\\: by [Definition 1](#def-partial-derivative), its entry \\i\\ is the limit, as a change in \\b_i\\ alone shrinks to \\0\\, of the resulting change in the minimum value divided by the change in \\b_i\\.
+> **Definition 25 (Sensitivity)** Suppose a minimization problem ([Definition 23](#def-minimization-problem)) depends on a vector \\\tilde{b} \in \mathbb{R}^m\\, and let \\f^\*(\tilde{b})\\ be its minimum value, as a function of \\\tilde{b}\\. When the gradient \\\frac{\partial}{\partial \tilde{b}} f^\*(\tilde{b})\\ exists ([Definition 2](#def-vector-derivative)), it is the **sensitivity** of the minimum value to \\\tilde{b}\\: by [Definition 1](#def-partial-derivative), its entry \\i\\ is the limit, as a change in \\b_i\\ alone shrinks to \\0\\, of the resulting change in the minimum value divided by the change in \\b_i\\.
 
 > **NOTE:**
 >
-> **Example 61 (The sensitivity of a one-point problem)** Minimize \\x^2\\ subject to \\x = b\\, for a number \\b\\. The feasible set ([Definition 24](#def-feasible-set)) is \\\mathopen{}\left\\b\right\\\mathclose{}\\, so the minimum value is \\f^\*(b) = b^2\\, and its sensitivity to \\b\\ is \\\frac{d }{d b} f^\*(b) = 2b\\. At \\b = 3\\ the sensitivity is \\6\\: moving \\b\\ from \\3\\ to \\3.1\\ raises the minimum value from \\9\\ to \\9.61\\, an increase of \\0.61\\, close to \\6 \times 0.1 = 0.6\\.
+> **Example 59 (The sensitivity of a one-point problem)** Minimize \\x^2\\ subject to \\x = b\\, for a number \\b\\. The feasible set ([Definition 22](#def-feasible-set)) is \\\mathopen{}\left\\b\right\\\mathclose{}\\, so the minimum value is \\f^\*(b) = b^2\\, and its sensitivity to \\b\\ is \\\frac{d }{d b} f^\*(b) = 2b\\. At \\b = 3\\ the sensitivity is \\6\\: moving \\b\\ from \\3\\ to \\3.1\\ raises the minimum value from \\9\\ to \\9.61\\, an increase of \\0.61\\, close to \\6 \times 0.1 = 0.6\\.
 
 > **NOTE:**
 >
-> **Corollary 5 (The multiplier is the sensitivity of the minimum value)** In [Theorem 22](#thm-qp-equality), write the minimum value as a function of \\\tilde{b}\\, \\f^\*(\tilde{b}) = \tfrac{1}{2}\\{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\\. Its sensitivity to \\\tilde{b}\\ ([Definition 27](#def-sensitivity)) is
+> **Corollary 5 (The multiplier is the sensitivity of the minimum value)** In [Theorem 22](#thm-qp-equality), write the minimum value as a function of \\\tilde{b}\\, \\f^\*(\tilde{b}) = \tfrac{1}{2}\\{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\\. Its sensitivity to \\\tilde{b}\\ ([Definition 25](#def-sensitivity)) is
 >
 > \\ \frac{\partial}{\partial \tilde{b}} f^\*(\tilde{b}) = \mathbf{M}^{-1} \tilde{b} = -\tilde{\lambda}^\*. \\
 
@@ -1368,7 +1344,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 62 (Moving the line)** In [Example 59](#exm-qp-equality) with a general right side \\b\\ in place of \\5\\, \\\mathbf{M}^{-1} = \tfrac{2}{25}\\ and \\f^\*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\\b^2 = \tfrac{b^2}{25}\\, so \\\frac{d }{d b} f^\*(b) = \tfrac{2b}{25}\\. At \\b = 5\\ this derivative is \\\tfrac{10}{25} = 0.4 = -\lambda^\*\\: moving the line \\3 x_1 + 4 x_2 = b\\ outward by a small step \\\varepsilon\\ in \\b\\ raises the minimum value by about \\0.4\\\varepsilon\\.
+> **Example 60 (Moving the line)** In [Example 57](#exm-qp-equality) with a general right side \\b\\ in place of \\5\\, \\\mathbf{M}^{-1} = \tfrac{2}{25}\\ and \\f^\*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\\b^2 = \tfrac{b^2}{25}\\, so \\\frac{d }{d b} f^\*(b) = \tfrac{2b}{25}\\. At \\b = 5\\ this derivative is \\\tfrac{10}{25} = 0.4 = -\lambda^\*\\: moving the line \\3 x_1 + 4 x_2 = b\\ outward by a small step \\\varepsilon\\ in \\b\\ raises the minimum value by about \\0.4\\\varepsilon\\.
 
 ## 5 Newton’s method and gradient descent
 
@@ -1385,13 +1361,13 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Definition 28 (Iterates and convergence of a sequence of vectors)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ **converges** to \\\tilde{x}^\* \in \mathbb{R}^p\\ if the sequence of distances \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ [converges](algebra.llms.md#def-sequence-limit) to \\0\\. For \\p = 1\\, \\\mathopen{}\left\lVert x^{(t)} - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x^{(t)} - x^\*\right\|\mathclose{}\\, and this is the convergence of a sequence of numbers to \\x^\*\\.
+> **Definition 26 (Iterates and convergence of a sequence of vectors)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ **converges** to \\\tilde{x}^\* \in \mathbb{R}^p\\ if the sequence of distances \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ [converges](algebra.llms.md#def-sequence-limit) to \\0\\. For \\p = 1\\, \\\mathopen{}\left\lVert x^{(t)} - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x^{(t)} - x^\*\right\|\mathclose{}\\, and this is the convergence of a sequence of numbers to \\x^\*\\.
 >
 > An **iterative method** starts from a point \\\tilde{x}^{(0)}\\ and computes \\\tilde{x}^{(t+1)}\\ from \\\tilde{x}^{(t)}\\ by a fixed rule, for \\t = 0, 1, 2, \ldots\\; the points \\\tilde{x}^{(t)}\\ are its **iterates**. For a point \\\tilde{x}^\*\\ that the method is meant to reach, \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ is the **error** of the iterate \\\tilde{x}^{(t)}\\.
 
 > **NOTE:**
 >
-> **Example 63 (Halving a vector)** The iterative method \\\tilde{x}^{(t+1)} = \tfrac{1}{2}\\\tilde{x}^{(t)}\\ from \\\tilde{x}^{(0)} = {(4, 2)}^{\top}\\ has iterates \\{(4, 2)}^{\top}, {(2, 1)}^{\top}, {(1, 0.5)}^{\top}, \ldots\\, that is, \\\tilde{x}^{(t)} = 2^{-t}\\{(4, 2)}^{\top}\\. With \\\tilde{x}^\* = \tilde{0}\\, the error of \\\tilde{x}^{(t)}\\ is
+> **Example 61 (Halving a vector)** The iterative method \\\tilde{x}^{(t+1)} = \tfrac{1}{2}\\\tilde{x}^{(t)}\\ from \\\tilde{x}^{(0)} = {(4, 2)}^{\top}\\ has iterates \\{(4, 2)}^{\top}, {(2, 1)}^{\top}, {(1, 0.5)}^{\top}, \ldots\\, that is, \\\tilde{x}^{(t)} = 2^{-t}\\{(4, 2)}^{\top}\\. With \\\tilde{x}^\* = \tilde{0}\\, the error of \\\tilde{x}^{(t)}\\ is
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert 2^{-t}\\{(4, 2)}^{\top} - \tilde{0}\right\rVert\mathclose{} &= 2^{-t}\\\mathopen{}\left\lVert{(4, 2)}^{\top}\right\rVert\mathclose{} && \text{(norm of a multiple)} \\ &= 2^{-t} \sqrt{20}, && \text{(} 4^2 + 2^2 = 20 \text{)} \end{aligned} \\
 >
@@ -1399,7 +1375,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Definition 29 (Newton’s method for minimization)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives, and let \\\tilde{x}^{(0)}\\ be a starting point. **Newton’s method** computes, for \\t = 0, 1, 2, \ldots\\, as long as \\\mathbf{H}\_f(\tilde{x}^{(t)})\\ is invertible,
+> **Definition 27 (Newton’s method for minimization)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives, and let \\\tilde{x}^{(0)}\\ be a starting point. **Newton’s method** computes, for \\t = 0, 1, 2, \ldots\\, as long as \\\mathbf{H}\_f(\tilde{x}^{(t)})\\ is invertible,
 >
 > \\ \tilde{x}^{(t+1)} \stackrel{\text{def}}{=}\tilde{x}^{(t)} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^{(t)})\right\]\mathclose{}^{-1} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}). \\
 >
@@ -1407,7 +1383,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 64 (Newton’s method for a cubic)** Let \\f(x) = \tfrac{1}{3} x^3 - 4x\\, so \\f'(x) = x^2 - 4\\ and \\f''(x) = 2x\\. For \\x^{(t)} \ne 0\\, one Newton step gives
+> **Example 62 (Newton’s method for a cubic)** Let \\f(x) = \tfrac{1}{3} x^3 - 4x\\, so \\f'(x) = x^2 - 4\\ and \\f''(x) = 2x\\. For \\x^{(t)} \ne 0\\, one Newton step gives
 >
 > \\ \begin{aligned} x^{(t+1)} &= x^{(t)} - \frac{(x^{(t)})^2 - 4}{2 x^{(t)}} && \text{(Newton's method with } p = 1 \text{)} \\ &= \frac{2 (x^{(t)})^2 - (x^{(t)})^2 + 4}{2 x^{(t)}} && \text{(common denominator)} \\ &= \frac{1}{2} \mathopen{}\left(x^{(t)} + \frac{4}{x^{(t)}}\right)\mathclose{}. && \text{(simplify)} \end{aligned} \\
 >
@@ -1417,11 +1393,11 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 > - \\x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\\ (to six decimals);
 > - \\x^{(3)} = 2.0000001\\ (to seven decimals).
 >
-> The iterates ([Definition 28](#def-vector-sequence-limit)) approach \\2\\, the local minimizer of \\f\\ (a stationary point, since \\f'(2) = 0\\, with \\f''(2) = 4 \> 0\\; [Theorem 16](#thm-second-order-condition)).
+> The iterates ([Definition 26](#def-vector-sequence-limit)) approach \\2\\, the local minimizer of \\f\\ (a stationary point, since \\f'(2) = 0\\, with \\f''(2) = 4 \> 0\\; [Theorem 16](#thm-second-order-condition)).
 
 > **NOTE:**
 >
-> **Definition 30 (Quadratic model)** Let \\f\\ be as in [Definition 29](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta} \in \mathbb{R}^p\\
+> **Definition 28 (Quadratic model)** Let \\f\\ be as in [Definition 27](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta} \in \mathbb{R}^p\\
 >
 > \\ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta} + \tfrac{1}{2}\\{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta}, \\
 >
@@ -1429,11 +1405,11 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 65 (The model at \\x = 2.5\\)** For \\f(x) = \tfrac{1}{3} x^3 - 4x\\ at \\x = 2.5\\ ([Example 64](#exm-newton-method)), \\g = 2.5^2 - 4 = 2.25\\ and \\H = \[2 \cdot 2.5\] = \[5\]\\, so \\q(\delta) = f(2.5) + 2.25\\\delta + 2.5\\\delta^2\\. For \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, whose Hessian is \\\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ at every point, the model at any \\\tilde{x}\\ equals \\f(\tilde{x}+ \tilde{\delta})\\ exactly ([Example 37](#exm-taylor-mv) with \\\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}\\).
+> **Example 63 (The model at \\x = 2.5\\)** For \\f(x) = \tfrac{1}{3} x^3 - 4x\\ at \\x = 2.5\\ ([Example 62](#exm-newton-method)), \\g = 2.5^2 - 4 = 2.25\\ and \\H = \[2 \cdot 2.5\] = \[5\]\\, so \\q(\delta) = f(2.5) + 2.25\\\delta + 2.5\\\delta^2\\. For \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, whose Hessian is \\\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ at every point, the model at any \\\tilde{x}\\ equals \\f(\tilde{x}+ \tilde{\delta})\\ exactly ([Example 35](#exm-taylor-mv) with \\\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}\\).
 
 > **NOTE:**
 >
-> **Theorem 23 (The Newton step minimizes the quadratic model)** Let \\q\\ be the quadratic model of \\f\\ at \\\tilde{x}\\ ([Definition 30](#def-quadratic-model)), with \\\mathbf{H} = \mathbf{H}\_f(\tilde{x})\\ [positive definite](linear-algebra.llms.md#def-positive-definite). Its unique minimizer is the Newton step \\\tilde{\delta}^\* = -\mathbf{H}^{-1} \tilde{g}\\.
+> **Theorem 23 (The Newton step minimizes the quadratic model)** Let \\q\\ be the quadratic model of \\f\\ at \\\tilde{x}\\ ([Definition 28](#def-quadratic-model)), with \\\mathbf{H} = \mathbf{H}\_f(\tilde{x})\\ [positive definite](linear-algebra.llms.md#def-positive-definite). Its unique minimizer is the Newton step \\\tilde{\delta}^\* = -\mathbf{H}^{-1} \tilde{g}\\.
 
 > **NOTE:**
 >
@@ -1449,33 +1425,33 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 66 (The Newton step at \\x = 2.5\\)** For the model \\q(\delta) = f(2.5) + 2.25\\\delta + 2.5\\\delta^2\\ of [Example 65](#exm-quadratic-model), \\H = \[5\]\\ is positive definite, so by [Theorem 23](#thm-newton-model) its minimizer is \\\delta^\* = -H^{-1} g = -2.25 / 5 = -0.45\\. Setting the derivative \\2.25 + 5 \delta\\ to \\0\\ gives the same \\\delta^\*\\, and \\2.5 - 0.45 = 2.05 = x^{(1)}\\ ([Example 64](#exm-newton-method)).
+> **Example 64 (The Newton step at \\x = 2.5\\)** For the model \\q(\delta) = f(2.5) + 2.25\\\delta + 2.5\\\delta^2\\ of [Example 63](#exm-quadratic-model), \\H = \[5\]\\ is positive definite, so by [Theorem 23](#thm-newton-model) its minimizer is \\\delta^\* = -H^{-1} g = -2.25 / 5 = -0.45\\. Setting the derivative \\2.25 + 5 \delta\\ to \\0\\ gives the same \\\delta^\*\\, and \\2.5 - 0.45 = 2.05 = x^{(1)}\\ ([Example 62](#exm-newton-method)).
 
 > **NOTE:**
 >
-> **Definition 31 (Quadratic convergence)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ that converges ([Definition 28](#def-vector-sequence-limit)) to \\\tilde{x}^\*\\ **converges quadratically** if there is a constant \\C\\ with
+> **Definition 29 (Quadratic convergence)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ that converges ([Definition 26](#def-vector-sequence-limit)) to \\\tilde{x}^\*\\ **converges quadratically** if there is a constant \\C\\ with
 >
 > \\ \mathopen{}\left\lVert\tilde{x}^{(t+1)} - \tilde{x}^\*\right\rVert\mathclose{} \le C\\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}^2 \qquad \text{for every } t. \\
 
 > **NOTE:**
 >
-> **Example 67 (Halving the error is not quadratic convergence)** \\x^{(t)} = 2^{-t}\\ converges to \\0\\, but it does not converge quadratically: the bound would need \\2^{-(t+1)} \le C\\(2^{-t})^2 = C\\2^{-2t}\\, that is, \\2^{t - 1} \le C\\, which fails once \\t \> 1 + \log_2 C\\. Each step only halves the error.
+> **Example 65 (Halving the error is not quadratic convergence)** \\x^{(t)} = 2^{-t}\\ converges to \\0\\, but it does not converge quadratically: the bound would need \\2^{-(t+1)} \le C\\(2^{-t})^2 = C\\2^{-2t}\\, that is, \\2^{t - 1} \le C\\, which fails once \\t \> 1 + \log_2 C\\. Each step only halves the error.
 
 > **NOTE:**
 >
-> **Example 68 (The error squares at each step)** For the iteration \\x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})\\ of [Example 64](#exm-newton-method),
+> **Example 66 (The error squares at each step)** For the iteration \\x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})\\ of [Example 62](#exm-newton-method),
 >
 > \\ \begin{aligned} x^{(t+1)} - 2 &= \frac{1}{2} \mathopen{}\left(x^{(t)} + \frac{4}{x^{(t)}}\right)\mathclose{} - 2 && \text{(the iteration)} \\ &= \frac{(x^{(t)})^2 + 4 - 4 x^{(t)}}{2 x^{(t)}} && \text{(common denominator)} \\ &= \frac{(x^{(t)} - 2)^2}{2 x^{(t)}}. && \text{(the numerator is a perfect square)} \end{aligned} \\
 >
-> So near \\2\\ the error is roughly squared and divided by \\4\\ at each step: the errors are \\0.05\\, then \\0.00061\\, then \\0.000000093\\, and \\0.05^2 / (2 \cdot 2.05) \approx 0.00061\\. The iterates converge quadratically ([Definition 31](#def-quadratic-convergence)): \\C = \tfrac{1}{2}\\ works for every \\x^{(t)} \ge 1\\, since then \\\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\\, and every iterate from \\2.5\\ is at least \\2\\, since the identity makes \\x^{(t+1)} - 2 \ge 0\\ whenever \\x^{(t)} \> 0\\. Zhou ([2024](#ref-zhou2024optim)) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
+> So near \\2\\ the error is roughly squared and divided by \\4\\ at each step: the errors are \\0.05\\, then \\0.00061\\, then \\0.000000093\\, and \\0.05^2 / (2 \cdot 2.05) \approx 0.00061\\. The iterates converge quadratically ([Definition 29](#def-quadratic-convergence)): \\C = \tfrac{1}{2}\\ works for every \\x^{(t)} \ge 1\\, since then \\\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\\, and every iterate from \\2.5\\ is at least \\2\\, since the identity makes \\x^{(t+1)} - 2 \ge 0\\ whenever \\x^{(t)} \> 0\\. Zhou ([2024](#ref-zhou2024optim)) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
 
 > **NOTE:**
 >
-> **Example 69 (Newton’s method can find a maximum)** From \\x^{(0)} = -2.5\\ the same iteration gives \\-2.05\\, \\-2.000610\\, \\-2.0000001\\, approaching \\-2\\. But \\-2\\ is not a minimizer of \\f\\: it is a stationary point of \\-f\\, whose second derivative there is \\-f''(-2) = 4 \> 0\\, so it is a strict local minimizer of \\-f\\ ([Theorem 16](#thm-second-order-condition)), that is, \\f\\ is strictly larger at \\-2\\ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian \\f''(x) = 2x\\ is negative along the way, so the quadratic model has no minimizer (with \\H \< 0\\, \\q(\delta) = f + g\\\delta + \tfrac{1}{2} H \delta^2\\ decreases without bound) and [Theorem 23](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
+> **Example 67 (Newton’s method can find a maximum)** From \\x^{(0)} = -2.5\\ the same iteration gives \\-2.05\\, \\-2.000610\\, \\-2.0000001\\, approaching \\-2\\. But \\-2\\ is not a minimizer of \\f\\: it is a stationary point of \\-f\\, whose second derivative there is \\-f''(-2) = 4 \> 0\\, so it is a strict local minimizer of \\-f\\ ([Theorem 16](#thm-second-order-condition)), that is, \\f\\ is strictly larger at \\-2\\ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian \\f''(x) = 2x\\ is negative along the way, so the quadratic model has no minimizer (with \\H \< 0\\, \\q(\delta) = f + g\\\delta + \tfrac{1}{2} H \delta^2\\ decreases without bound) and [Theorem 23](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
 
 > **NOTE:**
 >
-> **Theorem 24 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- {\tilde{c}}^{\top} \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 29](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
+> **Theorem 24 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- {\tilde{c}}^{\top} \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 27](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
 
 > **NOTE:**
 >
@@ -1483,23 +1459,23 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 >
 > \\ \begin{aligned} \tilde{x}^{(1)} &= \tilde{x}^{(0)} - \mathbf{S}^{-1} (\mathbf{S} \tilde{x}^{(0)} - \tilde{c}) && \text{(definition of Newton's method)} \\ &= \tilde{x}^{(0)} - \mathbf{S}^{-1} \mathbf{S} \tilde{x}^{(0)} + \mathbf{S}^{-1} \tilde{c} && \text{(distribute)} \\ &= \tilde{x}^{(0)} - \tilde{x}^{(0)} + \mathbf{S}^{-1} \tilde{c} && \text{(} \mathbf{S}^{-1} \mathbf{S} = \mathbf{I}\_p \text{)} \\ &= \mathbf{S}^{-1} \tilde{c}. && \text{(cancel)} \end{aligned} \\
 >
-> The gradient at \\\mathbf{S}^{-1} \tilde{c}\\ is \\\mathbf{S} \mathbf{S}^{-1} \tilde{c} - \tilde{c} = \tilde{0}\_{p \times 1}\\, and \\f\\ is strictly convex ([Theorem 21](#thm-convex-hessian), part 2), so \\\mathbf{S}^{-1} \tilde{c}\\ is a global minimizer ([Corollary 4](#cor-convex-stationary)). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value ([Definition 21](#def-strictly-convex) with \\t = \tfrac{1}{2}\\).
+> The gradient at \\\mathbf{S}^{-1} \tilde{c}\\ is \\\mathbf{S} \mathbf{S}^{-1} \tilde{c} - \tilde{c} = \tilde{0}\_{p \times 1}\\, and \\f\\ is strictly convex ([Theorem 21](#thm-convex-hessian), part 2), so \\\mathbf{S}^{-1} \tilde{c}\\ is a global minimizer ([Corollary 4](#cor-convex-stationary)). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value ([Definition 19](#def-strictly-convex) with \\t = \tfrac{1}{2}\\).
 
 > **NOTE:**
 >
-> **Example 70 (One step to the minimizer)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, so \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ and \\\tilde{c} = \tilde{0}\_{2 \times 1}\\. From \\\tilde{x}^{(0)} = {(3, 1)}^{\top}\\ the gradient is \\\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\\, and \\\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}\\, so the Newton step is \\-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\\ and \\\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}\_{2 \times 1}\\, the minimizer.
+> **Example 68 (One step to the minimizer)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, so \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ and \\\tilde{c} = \tilde{0}\_{2 \times 1}\\. From \\\tilde{x}^{(0)} = {(3, 1)}^{\top}\\ the gradient is \\\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\\, and \\\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}\\, so the Newton step is \\-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\\ and \\\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}\_{2 \times 1}\\, the minimizer.
 
 > **NOTE:**
 >
-> **Definition 32 (Gradient descent)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\tilde{x}^{(0)}\\ be a starting point, and let \\s^{(0)}, s^{(1)}, \ldots\\ be positive **step lengths**. **Gradient descent** computes, for \\t = 0, 1, 2, \ldots\\,
+> **Definition 30 (Gradient descent)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\tilde{x}^{(0)}\\ be a starting point, and let \\s^{(0)}, s^{(1)}, \ldots\\ be positive **step lengths**. **Gradient descent** computes, for \\t = 0, 1, 2, \ldots\\,
 >
 > \\ \tilde{x}^{(t+1)} \stackrel{\text{def}}{=}\tilde{x}^{(t)} - s^{(t)}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}). \\
 >
-> It is Newton’s method ([Definition 29](#def-newton-method)) with the Hessian replaced by \\\tfrac{1}{s^{(t)}} \mathbf{I}\_p\\, so it needs no second derivatives.
+> It is Newton’s method ([Definition 27](#def-newton-method)) with the Hessian replaced by \\\tfrac{1}{s^{(t)}} \mathbf{I}\_p\\, so it needs no second derivatives.
 
 > **NOTE:**
 >
-> **Example 71 (Fixed steps on a parabola)** For \\f(x) = x^2\\, \\f'(x) = 2x\\, so gradient descent with fixed step length \\s\\ is \\x^{(t+1)} = x^{(t)} - 2 s\\x^{(t)} = (1 - 2s)\\x^{(t)}\\, and \\x^{(t)} = (1 - 2s)^t x^{(0)}\\.
+> **Example 69 (Fixed steps on a parabola)** For \\f(x) = x^2\\, \\f'(x) = 2x\\, so gradient descent with fixed step length \\s\\ is \\x^{(t+1)} = x^{(t)} - 2 s\\x^{(t)} = (1 - 2s)\\x^{(t)}\\, and \\x^{(t)} = (1 - 2s)^t x^{(0)}\\.
 >
 > - With \\s = 0.25\\, \\x^{(t)} = 0.5^t x^{(0)}\\, which tends to the minimizer \\0\\.
 > - With \\s = 0.5\\, the first step lands on \\0\\, since \\1 - 2s = 0\\.
@@ -1507,11 +1483,11 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Definition 33 (Line search and exact line search)** In gradient descent ([Definition 32](#def-gradient-descent)), a **line search** is a rule that chooses the step length \\s^{(t)}\\ by examining the values of \\f\\ along the line \\\mathopen{}\left\\\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}) : s \> 0\right\\\mathclose{}\\. **Exact line search** is the line search that chooses \\s^{(t)}\\ to minimize \\f(\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}))\\ over \\s \> 0\\.
+> **Definition 31 (Line search and exact line search)** In gradient descent ([Definition 30](#def-gradient-descent)), a **line search** is a rule that chooses the step length \\s^{(t)}\\ by examining the values of \\f\\ along the line \\\mathopen{}\left\\\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}) : s \> 0\right\\\mathclose{}\\. **Exact line search** is the line search that chooses \\s^{(t)}\\ to minimize \\f(\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}))\\ over \\s \> 0\\.
 
 > **NOTE:**
 >
-> **Example 72 (Exact line search on a parabola)** For \\f(x) = x^2\\ and \\x^{(t)} = 2\\, the derivative is \\f'(2) = 4\\, so the line is \\\mathopen{}\left\\2 - 4s : s \> 0\right\\\mathclose{}\\ and the values along it are
+> **Example 70 (Exact line search on a parabola)** For \\f(x) = x^2\\ and \\x^{(t)} = 2\\, the derivative is \\f'(2) = 4\\, so the line is \\\mathopen{}\left\\2 - 4s : s \> 0\right\\\mathclose{}\\ and the values along it are
 >
 > \\ \begin{aligned} \phi(s) &= f(2 - 4s) && \text{(the value at step length } s \text{)} \\&= (2 - 4s)^2 && (f(x) = x^2) \end{aligned} \\
 >
@@ -1519,11 +1495,11 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Definition 34 (Descent direction)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ at \\\tilde{x}\\. A direction \\\tilde{d}\\ ([Definition 3](#def-direction)) is a **descent direction** for \\f\\ at \\\tilde{x}\\ if \\{\tilde{g}}^{\top} \tilde{d} \< 0\\. When \\\tilde{g} \ne \tilde{0}\_{p \times 1}\\, \\-\tilde{g}\\ is a descent direction, since \\{\tilde{g}}^{\top} (-\tilde{g}) = -\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 \< 0\\.
+> **Definition 32 (Descent direction)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ at \\\tilde{x}\\. A direction \\\tilde{d}\\ ([Definition 3](#def-direction)) is a **descent direction** for \\f\\ at \\\tilde{x}\\ if \\{\tilde{g}}^{\top} \tilde{d} \< 0\\. When \\\tilde{g} \ne \tilde{0}\_{p \times 1}\\, \\-\tilde{g}\\ is a descent direction, since \\{\tilde{g}}^{\top} (-\tilde{g}) = -\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 \< 0\\.
 
 > **NOTE:**
 >
-> **Example 73 (Descent directions for \\x_1^2 + x_2^2\\ at \\{(1, 0)}^{\top}\\)** Let \\f(\tilde{x}) = x_1^2 + x_2^2\\ and \\\tilde{x}= {(1, 0)}^{\top}\\, so \\\tilde{g} = {(2 x_1,\\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\\.
+> **Example 71 (Descent directions for \\x_1^2 + x_2^2\\ at \\{(1, 0)}^{\top}\\)** Let \\f(\tilde{x}) = x_1^2 + x_2^2\\ and \\\tilde{x}= {(1, 0)}^{\top}\\, so \\\tilde{g} = {(2 x_1,\\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\\.
 >
 > - \\\tilde{d} = {(-1, 1)}^{\top}\\ is a descent direction: \\{\tilde{g}}^{\top} \tilde{d} = -2 + 0 = -2 \< 0\\.
 > - \\\tilde{d} = {(0, 1)}^{\top}\\ is not: \\{\tilde{g}}^{\top} \tilde{d} = 0\\.
@@ -1531,7 +1507,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Theorem 25 (A short enough step downhill decreases the function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 16](#def-continuous-several)), and let \\\tilde{x}\in \mathbb{R}^p\\ be a point with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) \ne \tilde{0}\_{p \times 1}\\. Then there is an \\\bar{s} \> 0\\ with \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\ for every \\s \in (0, \bar{s})\\: a short enough step in the descent direction \\-\tilde{g}\\ ([Definition 34](#def-descent-direction)) decreases \\f\\.
+> **Theorem 25 (A short enough step downhill decreases the function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([Definition 14](#def-continuous-several)), and let \\\tilde{x}\in \mathbb{R}^p\\ be a point with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) \ne \tilde{0}\_{p \times 1}\\. Then there is an \\\bar{s} \> 0\\ with \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\ for every \\s \in (0, \bar{s})\\: a short enough step in the descent direction \\-\tilde{g}\\ ([Definition 32](#def-descent-direction)) decreases \\f\\.
 
 > **NOTE:**
 >
@@ -1543,11 +1519,11 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 
 > **NOTE:**
 >
-> **Example 74 (How short is short enough)** In [Example 71](#exm-gradient-descent), \\f(x) = x^2\\ at \\x \ne 0\\ has \\g = 2x\\, and \\f(x - 2 s x) = (1 - 2s)^2 x^2 \< x^2\\ exactly when \\\mathopen{}\left\|1 - 2s\right\|\mathclose{} \< 1\\, that is, when \\0 \< s \< 1\\. So [Theorem 25](#thm-descent-direction) holds with \\\bar{s} = 1\\, and the step \\s = 1.5\\ of that example was too long.
+> **Example 72 (How short is short enough)** In [Example 69](#exm-gradient-descent), \\f(x) = x^2\\ at \\x \ne 0\\ has \\g = 2x\\, and \\f(x - 2 s x) = (1 - 2s)^2 x^2 \< x^2\\ exactly when \\\mathopen{}\left\|1 - 2s\right\|\mathclose{} \< 1\\, that is, when \\0 \< s \< 1\\. So [Theorem 25](#thm-descent-direction) holds with \\\bar{s} = 1\\, and the step \\s = 1.5\\ of that example was too long.
 
 > **NOTE:**
 >
-> **Example 75 (Gradient descent zigzags)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\\x_2^2)\\ with \\b \> 0\\, so \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\\ b x_2)}^{\top}\\ and one gradient step of length \\s\\ from \\\tilde{x}\\ gives \\{((1 - s) x_1,\\ (1 - b s) x_2)}^{\top}\\. For exact line search ([Definition 33](#def-line-search)), let \\\phi(s) \stackrel{\text{def}}{=}f\\ at that point:
+> **Example 73 (Gradient descent zigzags)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\\x_2^2)\\ with \\b \> 0\\, so \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\\ b x_2)}^{\top}\\ and one gradient step of length \\s\\ from \\\tilde{x}\\ gives \\{((1 - s) x_1,\\ (1 - b s) x_2)}^{\top}\\. For exact line search ([Definition 31](#def-line-search)), let \\\phi(s) \stackrel{\text{def}}{=}f\\ at that point:
 >
 > \\ \begin{aligned} \phi(s) &= \tfrac{1}{2} \mathopen{}\left((1 - s)^2 x_1^2 + b (1 - b s)^2 x_2^2\right)\mathclose{}, && \text{(definition of } f \text{)} \\ \phi'(s) &= -(1 - s) x_1^2 - b^2 (1 - b s) x_2^2 && \text{(chain rule, term by term)} \\ &= -x_1^2 + s\\x_1^2 - b^2 x_2^2 + b^3 s\\x_2^2 && \text{(expand the products)} \\ &= s\\(x_1^2 + b^3 x_2^2) - (x_1^2 + b^2 x_2^2). && \text{(collect the terms in } s \text{)} \end{aligned} \\
 >
