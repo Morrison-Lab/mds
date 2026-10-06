@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:48:37 (PDT)
+Last modified: 2026-10-05 21:07:41 (PDT)
 
 ## 1 Equalities
 
@@ -831,7 +831,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 42 (Exponential function)** The **exponential function** \\\operatorname{exp}\mathopen{}\left\\:\right\\\mathclose{} \mathbb{R}\to (0, \infty)\\ is
+> **Definition 42 (Exponential function)** The **exponential function** \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -862,7 +862,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 44 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\exp\\ ([Definition 42](#def-exponential-function)).
+> **Definition 44 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 42](#def-exponential-function)).
 
 > **NOTE:**
 >
