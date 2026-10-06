@@ -65,8 +65,8 @@ theorem does not apply.
 
 [@wp:fubini]
 
-The surface, and the origin, where $f$ is undefined and unbounded,
-responsible for the failure, are shown in @fig-fubini-fail.
+@fig-fubini-fail shows the surface.
+The failure comes from the origin, where $f$ is undefined and unbounded.
 
 :::{#fig-fubini-fail}
 
