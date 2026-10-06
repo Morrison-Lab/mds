@@ -1,0 +1,24 @@
+:::{#def-support}
+#### Support of a distribution
+
+The **support** of a discrete distribution
+is the set of values it gives positive probability.
+The support of a continuous distribution
+is the set of values where its density is positive.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-support}
+#### Supports of two count distributions
+
+- A fair six-sided die gives each of $1, 2, \ldots, 6$ probability $\tfrac{1}{6} > 0$
+  and every other value probability $0$,
+  so its support is $\cb{1, 2, 3, 4, 5, 6}$.
+- A count that can be $0$, $1$, $2$, and so on,
+  each with positive probability,
+  such as the number of hospital visits in a year,
+  has support $\mathbb{N}_0 = \cb{0, 1, 2, \ldots}$.
+
+:::
