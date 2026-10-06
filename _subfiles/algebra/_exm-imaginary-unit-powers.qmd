@@ -1,3 +1,5 @@
+::: {.content-hidden when-format="revealjs"}
+
 :::{#exm-imaginary-unit-powers}
 #### Powers of the imaginary unit
 
@@ -32,11 +34,7 @@ i^4
 && \text{(multiply)}
 \ea
 $$
-:::
 
-{{< slidebreak >}}
-
-:::{.example}
 so the cycle starts again:
 
 $$
@@ -54,5 +52,72 @@ i^5
 $$
 
 and the powers run $i, -1, -i, 1, i, \ldots$.
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+:::{#exm-imaginary-unit-powers}
+#### Powers of the imaginary unit
+
+The powers of $i$ repeat in a cycle of four:
+
+$$
+\ba
+i^3
+&= i^2 \cd i
+&& \text{(split off one factor of } i \text{)}
+\\
+&= (-1) \cd i
+&& \text{(@def-imaginary-unit)}
+\\
+&= -i
+&& \text{(multiply)}
+\ea
+$$
+
+and
+
+$$
+\ba
+i^4
+&= i^2 \cd i^2
+&& \text{(split the power into two squares)}
+\\
+&= (-1) \cd (-1)
+&& \text{(@def-imaginary-unit, twice)}
+\\
+&= 1
+&& \text{(multiply)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{.theorem .example}
+
+so the cycle starts again:
+
+$$
+\ba
+i^5
+&= i^4 \cd i
+&& \text{(split off one factor of } i \text{)}
+\\
+&= 1 \cd i
+&& \text{(} i^4 = 1 \text{)}
+\\
+&= i
+&& \text{(multiply)}
+\ea
+$$
+
+and the powers run $i, -1, -i, 1, i, \ldots$.
+
+:::
 
 :::

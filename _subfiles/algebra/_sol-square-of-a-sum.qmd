@@ -1,3 +1,5 @@
+::: {.content-hidden when-format="revealjs"}
+
 :::{#sol-square-of-a-sum}
 
 No: $(3 + 4)^2 = 7^2 = 49$, while $3^2 + 4^2 = 9 + 16 = 25$.
@@ -6,6 +8,42 @@ The difference, $49 - 25 = 24$, is $2 \cdot 3 \cdot 4$.
 To see where that extra term comes from,
 write the square as a product
 and apply the distributive law (@thm-mult-distr) twice:
+
+$$
+\ba
+(a + b)^2
+&= (a + b)(a + b)
+&& \text{(definition of a square)}
+\\ &= (a + b)\,a + (a + b)\,b
+&& \text{(distributive law)}
+\\ &= (a^2 + ba) + (ab + b^2)
+&& \text{(distributive law, twice)}
+\\ &= a^2 + ab + ab + b^2
+&& \text{(commutative and associative laws)}
+\\ &= a^2 + 2ab + b^2
+&& \text{(collect like terms, @def-like-terms)}
+\ea
+$$
+
+The step "commutative and associative laws" uses @thm-prod-symmetric
+to write $ba$ as $ab$,
+and @thm-sum-assoc to drop the parentheses.
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+:::{#sol-square-of-a-sum}
+
+No: $(3 + 4)^2 = 7^2 = 49$, while $3^2 + 4^2 = 9 + 16 = 25$.
+The difference, $49 - 25 = 24$, is $2 \cdot 3 \cdot 4$.
+
+To see where that extra term comes from,
+write the square as a product
+and apply the distributive law (@thm-mult-distr) twice:
+
 :::
 
 {{< slidebreak >}}
@@ -31,5 +69,7 @@ $$
 The step "commutative and associative laws" uses @thm-prod-symmetric
 to write $ba$ as $ab$,
 and @thm-sum-assoc to drop the parentheses.
+
+:::
 
 :::
