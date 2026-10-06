@@ -4,9 +4,9 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:11:23 (PDT)
+Last modified: 2026-10-05 20:52:58 (PDT)
 
-This page collects general advice on how to write proofs and derivations. The goal of a proof is not just to convince yourself that a result is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
+This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and derivations. The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
 ## 1 Don’t skip steps
 
@@ -20,7 +20,7 @@ When you skip steps, you force the reader to reconstruct your reasoning, which i
 
 ## 2 Annotate each step
 
-For each step, note the definition, theorem, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.
+For each step, note the definition, [theorem](notation.llms.md#def-theorem), or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.
 
 For example, here is a derivation that the [hat matrix](linear-algebra.llms.md#def-hat-matrix) \\\mathbf{H} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\\ is idempotent, \\\mathbf{H}^2 = \mathbf{H}\\, with each step annotated:
 
@@ -61,7 +61,7 @@ When you read someone else’s proof, you want to be able to follow every step w
 
 ## 5 Further reading
 
-- Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as direct proof, proof by contradiction, and induction.
+- Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as direct proof, [proof by contradiction](notation.llms.md#def-proof-by-contradiction), and induction.
 - Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) treats proofs as formal derivations in propositional and first-order logic.
 
 ## References

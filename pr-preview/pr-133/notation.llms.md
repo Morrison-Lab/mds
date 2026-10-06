@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:11:23 (PDT)
+Last modified: 2026-10-05 20:52:58 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -21,13 +21,13 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\mu\\ | mean | `\mu` |
 | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
 | \\x^{\top}\\ | transpose of \\x\\ | `x^{\top}` |
-| \\'\\ | transpose or derivative[^1] | `'` |
+| \\'\\ | transpose or [derivative](calculus.llms.md#def-derivative)[^1] | `'` |
 | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
 | \\\therefore\\ | therefore, thus | `\therefore` |
 | \\\eta\\ | [linear component of a GLM](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") | `\eta` |
-| \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest integer less than or equal to \\x\\ | `\lfloor x \rfloor` |
+| \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest [integer](#def-integers) less than or equal to \\x\\ | `\lfloor x \rfloor` |
 | \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest integer greater than or equal to \\x\\ | `\lceil x \rceil` |
-| \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 5](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
+| \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 6](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 Table 1: Notation used in this book
 
@@ -52,19 +52,49 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> **Definition 1 (Natural numbers (our convention))** In these notes, the **natural numbers** are the positive integers:
+> **Definition 1 (Integers)** The **integers** are the whole numbers, together with their negatives and \\0\\:
+>
+> \\\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\\\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\\\mathclose{}\\
+>
+> An **integer** is an element of \\\mathbb{Z}\\. The integers greater than \\0\\ are the **positive integers**, and the integers less than \\0\\ are the **negative integers**.
+
+> **NOTE:**
+>
+> **Example 1 (Integers and non-integers)**  
+>
+> - \\-7\\, \\0\\, and \\12\\ are integers.
+> - \\\frac{1}{2}\\ and \\-2.5\\ are not integers.
+> - \\\frac{6}{3}\\ is an integer, because \\\frac{6}{3} = 2\\.
+
+> **NOTE:**
+>
+> **Definition 2 (Even and odd integers)** An integer ([Definition 1](#def-integers)) \\n\\ is **even** if \\n = 2k\\ for some integer \\k\\, and **odd** if \\n = 2k + 1\\ for some integer \\k\\.
+
+> **NOTE:**
+>
+> **Example 2 (Even and odd integers)**  
+>
+> - \\6\\ is even, because \\6 = 2 \cdot 3\\.
+> - \\0\\ is even, because \\0 = 2 \cdot 0\\.
+> - \\-3\\ is odd, because \\-3 = 2 \cdot(-2) + 1\\.
+> - \\7\\ is odd, because \\7 = 2 \cdot 3 + 1\\.
+> - \\2.5\\ is neither even nor odd, because it is not an integer.
+
+> **NOTE:**
+>
+> **Definition 3 (Natural numbers (our convention))** In these notes, the **natural numbers** are the positive integers ([Definition 1](#def-integers)):
 >
 > \\\mathbb{N} \stackrel{\text{def}}{=}\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 2 (Non-negative integers)** The **non-negative integers** are the natural numbers ([Definition 1](#def-natural-numbers)) together with \\0\\:
+> **Definition 4 (Non-negative integers)** The **non-negative integers** are the natural numbers ([Definition 3](#def-natural-numbers)) together with \\0\\:
 >
 > \\\mathbb{N}\_0 \stackrel{\text{def}}{=}\mathopen{}\left\\0, 1, 2, 3, \ldots\right\\\mathclose{} = \mathbb{N} \cup \mathopen{}\left\\0\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 1 (Natural numbers in a data analysis)**  
+> **Example 3 (Natural numbers in a data analysis)**  
 >
 > - Observation indices start at \\1\\, so we write \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ with \\n \in \mathbb{N}\\.
 > - A count outcome, such as the number of hospital visits in a year, can be \\0\\, so its support is \\\mathbb{N}\_0\\, not \\\mathbb{N}\\.
@@ -83,7 +113,52 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > Source: [Wikipedia, “Natural number”, “Terminology and notation” and “Zero as natural number”](https://en.wikipedia.org/w/index.php?title=Natural_number&oldid=1375965996), which cites ISO 80000-2:2019 and the textbooks using each notation.
 
-## 3 Percent sign (“%”)
+## 3 Rational, real, and irrational numbers
+
+> **NOTE:**
+>
+> **Definition 5 (Rational numbers)** A **rational number** is a number that can be written as a fraction \\\frac{a}{b}\\, where \\a\\ and \\b\\ are integers ([Definition 1](#def-integers)) and \\b \ne 0\\. The set of rational numbers is written \\\mathbb{Q}\\:
+>
+> \\\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\\\frac{a}{b} : a \in \mathbb{Z},\\ b \in \mathbb{Z},\\ b \ne 0\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> **Example 4 (Rational numbers)**  
+>
+> - \\\frac{3}{4}\\ is rational, with \\a = 3\\ and \\b = 4\\.
+> - \\0.75\\ is rational, because \\0.75 = \frac{3}{4}\\.
+> - Every integer is rational: for example, \\-5 = \frac{-5}{1}\\.
+> - \\0.333\ldots\\, with the \\3\\s repeating forever, is rational, because \\0.333\ldots = \frac{1}{3}\\.
+
+> **NOTE:**
+>
+> **Definition 6 (Real numbers)** A **real number** is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written \\\mathbb{R}\\.
+
+> **NOTE:**
+>
+> *Remark 1* (A working definition). [Definition 6](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin ([1976](#ref-rudin1976principles), Appendix to Chapter 1) constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, \\0.999\ldots\\ and \\1.000\ldots\\ are the same real number, \\1\\.
+
+> **NOTE:**
+>
+> **Example 5 (Real numbers)**  
+>
+> - \\3\\, \\-0.5\\, and \\\frac{1}{3} = 0.333\ldots\\ are real numbers.
+> - \\\pi = 3.14159\ldots\\ is a real number.
+> - Every rational number ([Definition 5](#def-rational-numbers)) is a real number, so \\\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\\.
+
+> **NOTE:**
+>
+> **Definition 7 (Irrational numbers)** An **irrational number** is a real number ([Definition 6](#def-real-numbers)) that is not rational ([Definition 5](#def-rational-numbers)).
+
+> **NOTE:**
+>
+> **Example 6 (Irrational numbers)**  
+>
+> - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ (see [Wikipedia: Square root of 2](https://en.wikipedia.org/wiki/Square_root_of_2)).
+> - \\\pi = 3.14159\ldots\\ is irrational (see [Wikipedia: Proof that \\\pi\\ is irrational](https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational)).
+> - \\1.5\\ is not irrational, because \\1.5 = \frac{3}{2}\\ is rational.
+
+## 4 Percent sign (“%”)
 
 The percent sign “%” is just a shorthand for “\\/100\\”. The word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (cf. <https://en.wikipedia.org/wiki/Percentage>)
 
@@ -95,7 +170,7 @@ So, contrary to what you may have learned previously, \\10\\ = 0.1\\ is a true a
 
 You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.
 
-## 4 Proofs
+## 5 Proofs
 
 We can use any of:
 
@@ -105,9 +180,111 @@ We can use any of:
 
 to denote logical entailments (deductive consequences).
 
-Let’s save \\\rightarrow\\ (`\rightarrow`) for convergence results.
+Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#def-sequence-limit) results.
 
-## 5 Indicator functions
+> **NOTE:**
+>
+> **Definition 8 (Proposition)** A **proposition**, or **statement**, is a sentence that is either true or false.
+
+> **NOTE:**
+>
+> **Example 7 (Propositions, and a sentence that is not one)**  
+>
+> - “\\2 + 3 = 5\\” is a proposition, and it is true.
+> - “\\7\\ is [even](#def-even-odd)” is a proposition, and it is false.
+> - “\\x \> 2\\” is not a proposition on its own: it is true when \\x = 3\\ and false when \\x = 1\\, so it has no truth value until \\x\\ is given a value.
+
+> **NOTE:**
+>
+> **Definition 9 (Predicate)** A **predicate** \\P(x)\\ is a sentence about a variable \\x\\ that becomes a proposition ([Definition 8](#def-proposition)) whenever a value is substituted for \\x\\.
+
+> **NOTE:**
+>
+> **Example 8 (A predicate)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for real numbers \\x\\.
+>
+> - \\P(3)\\ is the proposition “\\3 \> 2\\”, which is true.
+> - \\P(1)\\ is the proposition “\\1 \> 2\\”, which is false.
+
+> **NOTE:**
+>
+> **Definition 10 (Proof)** A **proof** of a proposition ([Definition 8](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
+>
+> - an assumption,
+> - a definition,
+> - a previously proved result, or
+> - a consequence of earlier statements in the list, by one rule of logic or algebra.
+
+> **NOTE:**
+>
+> **Example 9 (The sum of two even integers is even)** Let \\a\\ and \\b\\ be even integers ([Definition 2](#def-even-odd)). Then \\a = 2j\\ and \\b = 2k\\ for some integers \\j\\ and \\k\\, and
+>
+> \\ \begin{aligned} a + b &= 2j + 2k && \text{(substitute } a = 2j \text{ and } b = 2k \text{)} \\ &= 2(j + k) && \text{(distributive law)} \end{aligned} \\
+>
+> The second line uses the [distributive law](algebra.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([Definition 2](#def-even-odd)). For example, \\4 + 10 = 2 \cdot 2 + 2 \cdot 5 = 2 \cdot 7 = 14\\.
+
+> **NOTE:**
+>
+> **Definition 11 (Result, theorem, lemma, and corollary)** A **result** is a proposition ([Definition 8](#def-proposition)) that has a proof ([Definition 10](#def-proof)). These notes label each result by its role:
+>
+> - a **theorem** is a result of interest in its own right;
+> - a **lemma** is a result proved mainly as a step in the proof of another result;
+> - a **corollary** is a result that follows from a theorem with little extra work.
+
+> **NOTE:**
+>
+> *Remark 2* (“Proposition” as a kind of result). Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false ([Definition 8](#def-proposition)), whether or not it has been proved.
+
+> **NOTE:**
+>
+> **Example 10 (A corollary of a result)** [Example 9](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example, \\2 + 4 + 6 = (2 + 4) + 6 = 6 + 6 = 12\\, which is even.
+
+> **NOTE:**
+>
+> **Definition 12 (Counterexample)** A **counterexample** to a proposition of the form “for every \\x\\ in \\A\\, \\P(x)\\”, where \\P(x)\\ is a predicate ([Definition 9](#def-predicate)), is an element \\x\\ of \\A\\ for which \\P(x)\\ is false. A single counterexample shows that the proposition is false.
+
+> **NOTE:**
+>
+> **Example 11 (A counterexample)** The proposition “for every integer \\n\\, \\n + n \> n\\” is false. The integer \\n = 0\\ is a counterexample: \\0 + 0 = 0\\, and \\0 \> 0\\ is false. The proposition is true for some integers, such as \\n = 3\\, since \\3 + 3 = 6 \> 3\\, but one counterexample is enough to make it false.
+
+> **NOTE:**
+>
+> **Definition 13 (Converse)** The **converse** of the proposition “if \\P\\, then \\Q\\” is the proposition “if \\Q\\, then \\P\\”.
+
+> **NOTE:**
+>
+> **Example 12 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
+>
+> - “If \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true: \\n = 4k = 2 \cdot(2k)\\, and \\2k\\ is an integer.
+> - Its converse, “if \\n\\ is even, then \\n\\ is a multiple of \\4\\”, is false. The integer \\n = 2\\ is a counterexample ([Definition 12](#def-counterexample)): \\2\\ is even, but \\2 = 4k\\ only for \\k = \frac{1}{2}\\, which is not an integer.
+>
+> So a proposition can be true while its converse is false.
+
+> **NOTE:**
+>
+> **Definition 14 (Necessary and sufficient conditions)** When the proposition “if \\P\\, then \\Q\\” is true, \\P\\ is a **sufficient condition** for \\Q\\, and \\Q\\ is a **necessary condition** for \\P\\. When both “if \\P\\, then \\Q\\” and its converse ([Definition 13](#def-converse)) are true, \\P\\ is a **necessary and sufficient condition** for \\Q\\, written “\\P\\ if and only if \\Q\\”.
+
+> **NOTE:**
+>
+> **Example 13 (Necessary but not sufficient)** In [Example 12](#exm-converse), “if \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true, so:
+>
+> - being a multiple of \\4\\ is a sufficient condition for \\n\\ to be even;
+> - being even is a necessary condition for \\n\\ to be a multiple of \\4\\.
+>
+> Being even is not a sufficient condition for being a multiple of \\4\\: \\n = 2\\ is even, but not a multiple of \\4\\.
+
+> **NOTE:**
+>
+> **Definition 15 (Proof by contradiction)** A **proof by contradiction** of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false. Since a true assumption cannot lead to a false proposition, the assumption that \\P\\ is false must itself be false, so \\P\\ is true.
+
+> **NOTE:**
+>
+> **Example 14 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([Definition 2](#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
+>
+> \\ \begin{aligned} 2j &= 2k + 1 && \text{(both equal } n \text{)} \\ 2j - 2k &= 1 && \text{(subtract } 2k \text{ from both sides)} \\ 2(j - k) &= 1 && \text{(distributive law)} \\ j - k &= \tfrac{1}{2} && \text{(divide both sides by } 2 \text{)} \end{aligned} \\
+>
+> The third line uses the [distributive law](algebra.llms.md#def-distributive). But \\j - k\\ is an integer, and \\\frac{1}{2}\\ is not, so the last line is false. So no integer is both even and odd. For example, \\6 = 2 \cdot 3\\ is even, and \\6 = 2k + 1\\ would need \\k = 2.5\\, which is not an integer.
+
+## 6 Indicator functions
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous: they represent binary variables, censor and event indicators in survival analysis, membership in subpopulations, and domain restrictions in integrals and sums.
 
@@ -115,7 +292,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 3 (Indicator function)** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\ is the function \\\mathbb{1}\_{A} : \Omega \to \\0, 1\\\\ defined by:
+> **Definition 16 (Indicator function)** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\ is the function \\\mathbb{1}\_{A} : \Omega \to \\0, 1\\\\ defined by:
 >
 > \\ \mathbb{1}\_{A}(x) \stackrel{\text{def}}{=}\begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases} \\
 >
@@ -125,7 +302,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 2 (Evaluating set and predicate indicators)** Consider the real line \\\Omega = \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\.
+> **Example 15 (Evaluating set and predicate indicators)** Consider the real line \\\Omega = \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\.
 >
 > 1.  **Set indicator** \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
@@ -134,7 +311,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 >     - If an observation yields \\Y = 7.2\\, the predicate \\7.2 \> 5\\ is true, so \\\mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\.
 >     - If an observation yields \\Y = 4.1\\, the predicate \\4.1 \> 5\\ is false, so \\\mathbb{1}\mathopen{}\left(4.1 \> 5\right)\mathclose{} = 0\\.
 
-### 5.1 Two primary notational paradigms: set vs. predicate notation
+### 6.1 Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families: **set notation** or **predicate notation**.
 
@@ -170,19 +347,19 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
 
-### 5.2 Iverson bracket notation
+### 6.2 Iverson bracket notation
 
 In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the [Iverson bracket](https://en.wikipedia.org/wiki/Iverson_bracket).
 
 > **NOTE:**
 >
-> **Definition 4 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
+> **Definition 17 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
 >
 > \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
 > **NOTE:**
 >
-> **Example 3 (Evaluating Iverson brackets)**  
+> **Example 16 (Evaluating Iverson brackets)**  
 >
 > - \\\[3 \> 2\] = 1\\, because \\3 \> 2\\ is true.
 > - \\\[2 \> 3\] = 0\\, because \\2 \> 3\\ is false.
@@ -190,36 +367,36 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 1* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 3](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 2](#exm-indicator-numerical) become \\\[7.2 \> 5\] = \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\ and, with \\A = \[0, \infty)\\, \\\[-2.1 \in A\] = \mathbb{1}\_{A}(-2.1) = 0\\.
+> *Remark 3* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 16](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 15](#exm-indicator-numerical) become \\\[7.2 \> 5\] = \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\ and, with \\A = \[0, \infty)\\, \\\[-2.1 \in A\] = \mathbb{1}\_{A}(-2.1) = 0\\.
 
 > **NOTE:**
 >
-> **Definition 5 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
+> **Definition 18 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
 >
 > \\\delta\_{ij} \stackrel{\text{def}}{=}\[i = j\]\\
 >
-> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 4](#def-iverson-bracket)).
+> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 17](#def-iverson-bracket)).
 
 > **NOTE:**
 >
-> **Example 4 (Evaluating the Kronecker delta)**  
+> **Example 17 (Evaluating the Kronecker delta)**  
 >
 > - \\\delta\_{11} = \[1 = 1\] = 1\\.
 > - \\\delta\_{12} = \[1 = 2\] = 0\\.
 > - \\\delta\_{22} = \[2 = 2\] = 1\\.
 > - \\\delta\_{23} = \[2 = 3\] = 0\\.
 
-### 5.3 Strengths and limitations of the Iverson bracket
+### 6.3 Strengths and limitations of the Iverson bracket
 
-The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if \\U\\ is a finite set that contains \\A\\, then:
+The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if \\U\\ is a [finite set](sets-functions.llms.md#def-finite-set) that contains \\A\\, then:
 
 \\ \sum\_{x \in A} f(x) = \sum\_{x \in U} f(x) \[x \in A\] \\
 
 With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U = \mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
 
-However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote closed intervals \\\[a, b\]\\, conditional expectations \\\operatorname{E}\[Y \mid X\]\\, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
+However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets-functions.llms.md#def-interval) \\\[a, b\]\\, conditional expectations \\\operatorname{E}\[Y \mid X\]\\, and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
-### 5.4 Summary of indicator notations
+### 6.4 Summary of indicator notations
 
 [Table 2](#tbl-indicator-notations) compares the major notations encountered across the literature.
 
@@ -234,7 +411,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 
 Table 2: Notations for indicator functions across mathematical and statistical literature
 
-### 5.5 Conventions in this book
+### 6.5 Conventions in this book
 
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
@@ -245,11 +422,11 @@ In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros 
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the information matrices (\\I\\, \\\mathcal{I}\\).
 
-### 5.6 Key algebraic properties
+### 6.6 Key algebraic properties
 
 Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:
 
-For subsets \\A\\ and \\B\\ of \\\Omega\\, with complement \\A^c \stackrel{\text{def}}{=}\Omega \setminus A\\, and for every \\x \in \Omega\\:
+For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms.md#def-complement) \\A^c \stackrel{\text{def}}{=}\Omega \setminus A\\, and for every \\x \in \Omega\\:
 
 - **Intersection (“and”):** \\\mathbb{1}\_{A \cap B}(x) = \mathbb{1}\_{A}(x) \cdot \mathbb{1}\_{B}(x)\\
 
@@ -263,13 +440,13 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with complement \\A^c \stackrel{\text
 
   \\ \operatorname{E}\[\mathbb{1}\_{A}\] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A) \\
 
-This fundamental identity connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.
+This fundamental [identity](algebra.llms.md#def-identity) connects probability theory directly to linear expectation. It provides the mathematical foundation for empirical proportions, survival curve estimators, and regression models for binary outcomes.
 
-## 6 Notational shorthands
+## 7 Notational shorthands
 
 > **NOTE:**
 >
-> **Definition 6 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
+> **Definition 19 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
 
 > **NOTE:**
 >
@@ -282,7 +459,7 @@ This fundamental identity connects probability theory directly to linear expecta
 
 > **NOTE:**
 >
-> **Definition 7 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
+> **Definition 20 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
@@ -306,21 +483,21 @@ Table 3: Common notational shorthands and their full forms
 
 > **NOTE:**
 >
-> *Remark 2* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
+> *Remark 4* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
 
 > **NOTE:**
 >
-> **Example 5 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+> **Example 18 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 
-## 7 Why is notation in probability and statistics so inconsistent and disorganized?
+## 8 Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
 It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 ([Nelder and Wedderburn 1972](#ref-nelder1972generalized)), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 
-## 8 Further reading
+## 9 Further reading
 
 For the logical symbols and proof conventions used in these notes:
 
@@ -334,6 +511,8 @@ For set and function notation, see the [Sets and Functions](sets-functions.llms.
 Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. *Language, Proof and Logic*. 2nd ed. CSLI Publications. <https://www.amazon.com/dp/1575866323>.
 
 Nelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” *Journal of the Royal Statistical Society Series A: Statistics in Society* 135 (3): 370–84. <https://doi.org/10.2307/2344614>.
+
+Rudin, Walter. 1976. *Principles of Mathematical Analysis*. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.
 
 Velleman, Daniel J. 2019. *How to Prove It: A Structured Approach*. 3rd ed. Cambridge University Press. <https://doi.org/10.1017/9781108539890>.
 

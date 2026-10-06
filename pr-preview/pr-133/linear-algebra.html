@@ -216,6 +216,26 @@ cookieconsent.run({
 </script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cor.callout {
   border-left-color: #00838F;
 }
@@ -236,45 +256,15 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -286,35 +276,45 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-proof.callout {
-  border-left-color: #37474F;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -720,7 +720,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-05 20:11:23 (PDT)</p>
+      <p class="date">Last modified: 2026-10-05 20:52:58 (PDT)</p>
     </div>
   </div>
   
@@ -828,7 +828,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="def-real-coordinate-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a positive integer <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are real numbers.</p>
+<p><span class="theorem-title"><strong>Definition 2 (The set <span class="math inline">\(\mathbb{R}^p\)</span>)</strong></span> For a positive <a href="./notation.html#def-integers">integer</a> <span class="math inline">\(p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is the set of all <a href="#def-column-vector">column vectors</a> of length <span class="math inline">\(p\)</span> whose entries are <a href="./notation.html#def-real-numbers">real numbers</a>.</p>
 </div>
 </div>
 </div>
@@ -881,7 +881,7 @@ g\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclose{} = \begin
 </div>
 <div class="callout-body-container">
 <div id="def-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\tilde{x}\)</span> is the row vector with the same sequence of entries, written horizontally:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Transpose)</strong></span> The <strong>transpose</strong> of a column vector <span class="math inline">\(\tilde{x}\)</span> is the row vector with the same <a href="./sets-functions.html#def-sequence">sequence</a> of entries, written horizontally:</p>
 <p><span class="math display">\[
 {\tilde{x}}^{\top} \equiv \tilde{x}' \equiv [x_1,\; x_2,\; \ldots,\; x_p]
 \]</span></p>
@@ -1087,7 +1087,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 </div>
 <div class="callout-body-container">
 <div id="rem-zero-vector-identity" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (The zero vector is the additive identity). </span>Adding the zero vector to a vector leaves it unchanged (<a href="#def-vector-addition" class="quarto-xref">Definition&nbsp;5</a>): <span class="math inline">\(\tilde{x}+ \tilde{0}= \tilde{x}\)</span> for any vector <span class="math inline">\(\tilde{x}\)</span> of the same length. For example, <span class="math inline">\((2, -1) + (0, 0) = (2 + 0, -1 + 0) = (2, -1)\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (The zero vector is the additive identity). </span>Adding the zero vector to a vector leaves it unchanged (<a href="#def-vector-addition" class="quarto-xref">Definition&nbsp;5</a>): <span class="math inline">\(\tilde{x}+ \tilde{0}= \tilde{x}\)</span> for any vector <span class="math inline">\(\tilde{x}\)</span> of the same length, so <span class="math inline">\(\tilde{0}\)</span> is the <a href="./algebra.html#def-identity-element">identity element</a> for vector addition. For example, <span class="math inline">\((2, -1) + (0, 0) = (2 + 0, -1 + 0) = (2, -1)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1328,6 +1328,7 @@ sessions, so the current URL is unverified; restore a deep link once found. --><
 <div id="def-euclidean-norm" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Euclidean norm)</strong></span> The <strong>Euclidean norm</strong> (or <em>length</em>, also called the <span class="math inline">\(L_2\)</span> norm and written <span class="math inline">\(\lVert \tilde{x}\rVert_2\)</span>) of a vector <span class="math inline">\(\tilde{x}\)</span> of length <span class="math inline">\(p\)</span> is</p>
 <p><span id="eq-l2-norm"><span class="math display">\[\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum_{i=1}^px_i^2} \tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(\sqrt{\cdot}\)</span> is the <a href="./algebra.html#def-square-root">square root</a>.</p>
 </div>
 </div>
 </div>
@@ -1739,7 +1740,7 @@ not taken from that page.
 </div>
 <div class="callout-body-container">
 <div id="thm-matadd-commutative" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Matrix addition is commutative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 4 (Matrix addition is commutative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>, matrix addition is <a href="./algebra.html#def-commutative">commutative</a>:</p>
 <p><span class="math display">\[\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}\]</span></p>
 </div>
 </div>
@@ -1752,7 +1753,7 @@ not taken from that page.
 </div>
 <div class="callout-body-container">
 <div id="thm-matadd-assoc" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 5 (Matrix addition is associative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathbf{B}\)</span>, and <span class="math inline">\(\mathbf{C}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 5 (Matrix addition is associative)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathbf{B}\)</span>, and <span class="math inline">\(\mathbf{C}\)</span>, matrix addition is <a href="./algebra.html#def-associative">associative</a>:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})\]</span></p>
 </div>
 </div>
@@ -1939,7 +1940,7 @@ x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
 </div>
 <div class="callout-body-container">
 <div id="thm-matmul-distrib" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Matrix multiplication is distributive over addition)</strong></span> For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(k \times n\)</span> matrices <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{C}\)</span>:</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Matrix multiplication is distributive over addition)</strong></span> Matrix multiplication <a href="./algebra.html#def-distributive">distributes</a> over addition from the left and from the right. For an <span class="math inline">\(m \times k\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(k \times n\)</span> matrices <span class="math inline">\(\mathbf{B}\)</span> and <span class="math inline">\(\mathbf{C}\)</span>:</p>
 <p><span class="math display">\[\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\]</span></p>
 <p>For <span class="math inline">\(m \times k\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> and a <span class="math inline">\(k \times n\)</span> matrix <span class="math inline">\(\mathbf{C}\)</span>:</p>
 <p><span class="math display">\[(\mathbf{A} + \mathbf{B})\mathbf{C} = \mathbf{A}\mathbf{C} + \mathbf{B}\mathbf{C}\]</span></p>
@@ -2479,7 +2480,7 @@ t_{\tilde{b}}\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclos
 </div>
 <div class="callout-body-container">
 <div id="def-affine-map" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 27 (Affine map)</strong></span> A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <em>affine transformation</em> or <em>affine function</em>) if it is a matrix product followed by a translation (<a href="#def-translation" class="quarto-xref">Definition&nbsp;26</a>): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span> such that</p>
+<p><span class="theorem-title"><strong>Definition 27 (Affine map)</strong></span> A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <em>affine transformation</em> or <em>affine function</em>) if it is a matrix product followed by a translation (<a href="#def-translation" class="quarto-xref">Definition&nbsp;26</a>) (a <a href="./sets-functions.html#def-composition">composition</a>, with the matrix product as the inner function): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span> such that</p>
 <p><span class="math display">\[f(\tilde{x}) = t_{\tilde{b}}(\mathbf{A} \tilde{x}) = \mathbf{A} \tilde{x}+ \tilde{b} \quad \text{for all } \tilde{x}\in \mathbb{R}^p\]</span></p>
 <p>The vector <span class="math inline">\(\tilde{b}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span> (statistics also calls it the <em>intercept</em>, and machine learning the <em>bias</em>).</p>
 <p>For a real-valued function (<a href="#def-real-vector-valued" class="quarto-xref">Definition&nbsp;3</a>, <span class="math inline">\(m = 1\)</span>), <span class="math inline">\(\mathbf{A}\)</span> is a single row, written <span class="math inline">\(\tilde{w}^\top\)</span>, and <span class="math inline">\(\tilde{b}\)</span> is a single number <span class="math inline">\(b\)</span>, so an affine function is a linear function <span class="math inline">\(\tilde{w}^\top \tilde{x}\)</span> (<a href="#cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>) plus an offset:</p>
@@ -2822,7 +2823,7 @@ f(\tilde{0})
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-tilt-a-plane" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-tilt-a-plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The graph of <span class="math inline">\(f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\)</span>, in three dimensions and from above.
+Figure&nbsp;1: The <a href="./sets-functions.html#def-graph">graph</a> of <span class="math inline">\(f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\)</span>, in three dimensions and from above.
 </figcaption><div aria-describedby="fig-tilt-a-plane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="columns widget-panel" style="display:flex; gap:1rem; align-items:flex-start; background-color:#fbfbfb; color:#222; color-scheme:light; padding:0.5rem; border-radius:6px; font-size:min(1em, 18px)">
 <div class="column" style="width:30%;">
@@ -3422,7 +3423,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-body-container">
 <div id="exm-span-subspace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 31 (The line in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;27</a> is a span)</strong></span> The line <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}\)</span> in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;27</a> is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, so <a href="#thm-span-subspace" class="quarto-xref">Theorem&nbsp;20</a> gives a second proof that it is a subspace. Likewise, the plane <span class="math inline">\(z = 0\)</span> in <a href="#exm-span" class="quarto-xref">Example&nbsp;30</a> is a subspace of <span class="math inline">\(\mathbb{R}^3\)</span>, because it is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 31 (The line in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;27</a> is a span)</strong></span> The line <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}\)</span> in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;27</a> is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, so <a href="#thm-span-subspace" class="quarto-xref">Theorem&nbsp;20</a> gives a second <a href="./notation.html#def-proof">proof</a> that it is a subspace. Likewise, the plane <span class="math inline">\(z = 0\)</span> in <a href="#exm-span" class="quarto-xref">Example&nbsp;30</a> is a subspace of <span class="math inline">\(\mathbb{R}^3\)</span>, because it is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3584,7 +3585,7 @@ c\,\tilde{u}
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Induction on <span class="math inline">\(p\)</span>.</p>
 <p><strong>Base case, <span class="math inline">\(p = 1\)</span>.</strong> Each <span class="math inline">\(\tilde{v}_i\)</span> is a single number <span class="math inline">\(v_i\)</span>, and <span class="math inline">\(k \ge 2\)</span>. If <span class="math inline">\(v_1 = 0\)</span>, take <span class="math inline">\(c_1 = 1\)</span> and every other <span class="math inline">\(c_i = 0\)</span>. Otherwise take <span class="math inline">\(c_1 = v_2\)</span>, <span class="math inline">\(c_2 = -v_1\)</span> and every other <span class="math inline">\(c_i = 0\)</span>; then <span class="math inline">\(c_2 \neq 0\)</span>, and <span class="math inline">\(v_2 v_1 - v_1 v_2 = 0\)</span>.</p>
-<p><strong>Inductive step.</strong> Let <span class="math inline">\(p \ge 2\)</span>, assume the theorem holds for vectors in <span class="math inline">\(\mathbb{R}^{p-1}\)</span>, and take <span class="math inline">\(k &gt; p\)</span> vectors in <span class="math inline">\(\mathbb{R}^p\)</span>. Write <span class="math inline">\(v_{i,p}\)</span> for the last entry of <span class="math inline">\(\tilde{v}_i\)</span>.</p>
+<p><strong>Inductive step.</strong> Let <span class="math inline">\(p \ge 2\)</span>, assume the <a href="./notation.html#def-theorem">theorem</a> holds for vectors in <span class="math inline">\(\mathbb{R}^{p-1}\)</span>, and take <span class="math inline">\(k &gt; p\)</span> vectors in <span class="math inline">\(\mathbb{R}^p\)</span>. Write <span class="math inline">\(v_{i,p}\)</span> for the last entry of <span class="math inline">\(\tilde{v}_i\)</span>.</p>
 <p><em>Case 1: every <span class="math inline">\(v_{i,p} = 0\)</span>.</em> Deleting the last entry gives <span class="math inline">\(k &gt; p - 1\)</span> vectors in <span class="math inline">\(\mathbb{R}^{p-1}\)</span>, which by the inductive hypothesis have a combination with coefficients not all zero that equals <span class="math inline">\(\tilde{0}_{p-1}\)</span>. The same coefficients combine the original vectors to <span class="math inline">\(\tilde{0}_p\)</span>, since every last entry is <span class="math inline">\(0\)</span>.</p>
 <p><em>Case 2: some <span class="math inline">\(v_{i,p} \neq 0\)</span>.</em> Renumber the vectors so that <span class="math inline">\(v_{k,p} \neq 0\)</span>, and for <span class="math inline">\(i = 1, \ldots, k-1\)</span> let</p>
 <p><span class="math display">\[
@@ -5123,7 +5124,7 @@ c\,\tilde{u}
 <p><span class="theorem-title"><strong>Example 63 (Equality and strict inequality)</strong></span> &nbsp;</p>
 <ul>
 <li>For the lines <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span> in <a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;59</a>, a common vector satisfies <span class="math inline">\(a\,(1, 0, 0) = b\,(0, 1, 0)\)</span>, so <span class="math inline">\((a, -b, 0) = \tilde{0}\)</span> and <span class="math inline">\(a = b = 0\)</span>. The intersection is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, and indeed <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 = 1 + 1\)</span>: the sum is the plane <span class="math inline">\(z = 0\)</span> (<a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;59</a>), which has dimension <span class="math inline">\(2\)</span> (<a href="#exm-dimension" class="quarto-xref">Example&nbsp;39</a>), and each line has dimension <span class="math inline">\(1\)</span>, with its spanning vector as a basis.</li>
-<li>For <span class="math inline">\(\mathcal{S}_1 = \mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span>, the sum is the same line, because <span class="math inline">\(a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)\)</span>, so <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 &lt; 1 + 1\)</span>.</li>
+<li>For <span class="math inline">\(\mathcal{S}_1 = \mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span>, the sum is the same line, because <span class="math inline">\(a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)\)</span>, so <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 &lt; 1 + 1\)</span>, a <a href="./algebra.html#def-strict-inequality">strict inequality</a>.</li>
 </ul>
 </div>
 </div>
@@ -6057,7 +6058,7 @@ c\,\tilde{u}
 <li>
 <span class="math inline">\(g(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1\)</span> is symmetric and linear in the first slot, for the same reasons as <span class="math inline">\(f\)</span>, and has positivity, because <span class="math inline">\(g(\tilde{x}, \tilde{x}) = x_1^2 \ge 0\)</span>. It fails definiteness: for <span class="math inline">\(\tilde{x}= (0, 1)\)</span>, <span class="math inline">\(g(\tilde{x}, \tilde{x}) = 0 \cdot 0 = 0\)</span> although <span class="math inline">\(\tilde{x}\neq \tilde{0}_{2 \times 1}\)</span>.</li>
 <li>
-<span class="math inline">\(h(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left|x_1 y_1\right|\mathclose{} + \mathopen{}\left|x_2 y_2\right|\mathclose{}\)</span> is symmetric, because <span class="math inline">\(\mathopen{}\left|x_i y_i\right|\mathclose{} = \mathopen{}\left|y_i x_i\right|\mathclose{}\)</span>, and has positivity and definiteness, because <span class="math inline">\(h(\tilde{x}, \tilde{x}) = x_1^2 + x_2^2\)</span> is a sum of squares. It is not linear in the first slot: take <span class="math inline">\(\tilde{x}= \tilde{y}= (1, 0)\)</span>, <span class="math inline">\(a = -1\)</span> and <span class="math inline">\(b = 0\)</span>; then <span class="math inline">\(h(a\,\tilde{x}, \tilde{y}) = \mathopen{}\left|(-1) \cdot 1\right|\mathclose{} + \mathopen{}\left|0 \cdot 0\right|\mathclose{} = 1\)</span>, while <span class="math inline">\(a\,h(\tilde{x}, \tilde{y}) = (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\mathclose{} + \mathopen{}\left|0 \cdot 0\right|\mathclose{}) = -1\)</span>.</li>
+<span class="math inline">\(h(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left|x_1 y_1\right|\mathclose{} + \mathopen{}\left|x_2 y_2\right|\mathclose{}\)</span>, where <span class="math inline">\(\mathopen{}\left|\cdot\right|\mathclose{}\)</span> is the <a href="./algebra.html#def-absolute-value">absolute value</a>, is symmetric, because <span class="math inline">\(\mathopen{}\left|x_i y_i\right|\mathclose{} = \mathopen{}\left|y_i x_i\right|\mathclose{}\)</span>, and has positivity and definiteness, because <span class="math inline">\(h(\tilde{x}, \tilde{x}) = x_1^2 + x_2^2\)</span> is a sum of squares. It is not linear in the first slot: take <span class="math inline">\(\tilde{x}= \tilde{y}= (1, 0)\)</span>, <span class="math inline">\(a = -1\)</span> and <span class="math inline">\(b = 0\)</span>; then <span class="math inline">\(h(a\,\tilde{x}, \tilde{y}) = \mathopen{}\left|(-1) \cdot 1\right|\mathclose{} + \mathopen{}\left|0 \cdot 0\right|\mathclose{} = 1\)</span>, while <span class="math inline">\(a\,h(\tilde{x}, \tilde{y}) = (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\mathclose{} + \mathopen{}\left|0 \cdot 0\right|\mathclose{}) = -1\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -14080,7 +14081,7 @@ i &amp; 0
 <li><span class="citation" data-cites="banerjee2014linear">Banerjee and Roy (<a href="#ref-banerjee2014linear" role="doc-biblioref">2014</a>)</span></li>
 <li><span class="citation" data-cites="searle2017matrix">Searle and Khuri (<a href="#ref-searle2017matrix" role="doc-biblioref">2017</a>)</span></li>
 <li>
-<span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen (<a href="#ref-petersen2012matrix" role="doc-biblioref">2012</a>)</span> is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and derivatives of vectors and matrices, so it is a quick place to look up a formula this page proves.</li>
+<span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen (<a href="#ref-petersen2012matrix" role="doc-biblioref">2012</a>)</span> is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and <a href="./calculus.html#def-derivative">derivatives</a> of vectors and matrices, so it is a quick place to look up a formula this page proves.</li>
 </ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-axler2024linear" class="csl-entry" role="listitem">
@@ -15025,7 +15026,7 @@ window._ojs.runtime.interpretFromScriptTags();
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@petersen2012matrix</span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  is a free desk reference that collects matrix identities:</span>
 <span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  it lists results on determinants, inverses, decompositions,</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  and derivatives of vectors and matrices,</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  and <span class="co">[</span><span class="ot">derivatives</span><span class="co">](calculus.qmd#def-derivative)</span> of vectors and matrices,</span>
 <span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  so it is a quick place to look up a formula this page proves.</span>
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>

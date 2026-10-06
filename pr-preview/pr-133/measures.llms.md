@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:11:23 (PDT)
+Last modified: 2026-10-05 20:52:58 (PDT)
 
 > **NOTE:**
 >
@@ -17,8 +17,8 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 > **Definition 1 (\\\sigma\\-algebra)** A **\\\sigma\\-algebra** on a set \\S\\ is a collection \\\mathscr{S}\\ of [subsets](sets-functions.llms.md#def-subset) of \\S\\ that satisfies:
 >
 > - \\\mathscr{S}\\ contains \\S\\ itself.
-> - For each set \\A\\ in \\\mathscr{S}\\, \\\mathscr{S}\\ contains its complement \\S \setminus A\\.
-> - For each sequence \\A_1, A_2, \ldots\\ of sets in \\\mathscr{S}\\, \\\mathscr{S}\\ contains their union \\\bigcup\_{i=1}^{\infty} A_i\\.
+> - For each set \\A\\ in \\\mathscr{S}\\, \\\mathscr{S}\\ contains its [complement](sets-functions.llms.md#def-complement) \\S \setminus A\\.
+> - For each [sequence](sets-functions.llms.md#def-sequence) \\A_1, A_2, \ldots\\ of sets in \\\mathscr{S}\\, \\\mathscr{S}\\ contains their union \\\bigcup\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
@@ -41,7 +41,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 > **Theorem 1 (Closure properties of a \\\sigma\\-algebra)** If \\\mathscr{S}\\ is a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\, then \\\mathscr{S}\\ contains:
 >
 > - the [empty set](sets-functions.llms.md#def-empty-set) \\\emptyset\\;
-> - the union \\A_1 \cup \cdots \cup A_n\\ of any finitely many sets \\A_1, \ldots, A_n\\ in \\\mathscr{S}\\;
+> - the union \\A_1 \cup \cdots \cup A_n\\ of any [finitely many](sets-functions.llms.md#def-finite-set) sets \\A_1, \ldots, A_n\\ in \\\mathscr{S}\\;
 > - the intersection \\\bigcap\_{i=1}^{\infty} A_i\\ of any sequence \\A_1, A_2, \ldots\\ of sets in \\\mathscr{S}\\.
 
 > **NOTE:**
@@ -82,7 +82,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Mutually exclusive events). In probability, pairwise disjoint events are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is even”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
+> *Remark 2* (Mutually exclusive events). In probability, pairwise disjoint events are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](notation.llms.md#def-even-odd)”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
 
 > **NOTE:**
 >
@@ -98,7 +98,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 
 > **NOTE:**
 >
-> **Example 4 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\, for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 3](#exm-pairwise-disjoint)), and:
+> **Example 4 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](sets-functions.llms.md#def-finite-set)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 3](#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu(\mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\5, 6\right\\\mathclose{}) &= \mu(\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu(\mathopen{}\left\\1, 2\right\\\mathclose{}) + \mu(\mathopen{}\left\\5, 6\right\\\mathclose{}) && \text{(count each set's elements)} \end{aligned} \\
 >
@@ -124,7 +124,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 
 > **NOTE:**
 >
-> **Lemma 1 (Sums of non-negative terms)** Let \\a_1, a_2, \ldots\\ be values in \\\[0, \infty\]\\, with partial sums \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^{n} a_i\\, where \\x + \infty = \infty\\ for every \\x\\ in \\\[0, \infty\]\\. Then the partial sums are non-decreasing, \\s_1 \le s_2 \le \cdots\\, so their limit, the sum \\\sum\_{i=1}^{\infty} a_i = \lim\_{n \to \infty} s_n\\, always exists, and it is either a finite number or \\\infty\\.
+> **Lemma 1 (Sums of non-negative terms)** Let \\a_1, a_2, \ldots\\ be values in \\\[0, \infty\]\\, with partial sums \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^{n} a_i\\, where \\x + \infty = \infty\\ for every \\x\\ in \\\[0, \infty\]\\. Then the partial sums are non-decreasing, \\s_1 \le s_2 \le \cdots\\, so their [limit](algebra.llms.md#def-sequence-limit), the sum \\\sum\_{i=1}^{\infty} a_i = \lim\_{n \to \infty} s_n\\, always exists, and it is either a finite number or \\\infty\\.
 
 > **NOTE:**
 >
@@ -132,7 +132,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 >
 > \\ \begin{aligned} s\_{n+1} &= s_n + a\_{n+1} && \text{(definition of } s\_{n+1} \text{)} \\ &\ge s_n && \text{(} a\_{n+1} \ge 0 \text{)} \end{aligned} \\
 >
-> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of real numbers. If that sequence is bounded above, it converges to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
+> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra.llms.md#def-bounded), it [converges](algebra.llms.md#def-sequence-limit) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
 
 > **NOTE:**
 >
@@ -148,7 +148,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 >
 > \\ \begin{aligned} \mu(\emptyset) &= \mu\\\left(\bigcup\_{i=1}^{\infty} \emptyset\right) && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(\emptyset) && \text{(countable additivity)} \end{aligned} \\
 >
-> If \\\mu(\emptyset) = c\\ for a finite \\c \> 0\\, the right-hand side is \\c + c + \cdots = \infty \neq c\\, a contradiction. So \\\mu(\emptyset)\\ is 0 or \\\infty\\.
+> If \\\mu(\emptyset) = c\\ for a finite \\c \> 0\\, the right-hand side is \\c + c + \cdots = \infty \neq c\\, a [contradiction](notation.llms.md#def-proof-by-contradiction). So \\\mu(\emptyset)\\ is 0 or \\\infty\\.
 
 > **NOTE:**
 >
@@ -206,7 +206,7 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Finite additivity does not imply countable additivity). [Example 9](#exm-finite-not-countable) shows that the converse of [Theorem 3](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 9](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
+> *Remark 5* (Finite additivity does not imply countable additivity). [Example 9](#exm-finite-not-countable) shows that the [converse](notation.llms.md#def-converse) of [Theorem 3](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 9](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
 
 ## 4 Measures
 
@@ -237,11 +237,11 @@ Last modified: 2026-10-05 20:11:23 (PDT)
 
 > **NOTE:**
 >
-> **Example 11 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees: \\\sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) = 1 + 1 + \cdots = \infty\\.
+> **Example 11 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees: \\\sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) = 1 + 1 + \cdots = \infty\\.
 
 > **NOTE:**
 >
-> *Remark 6* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 6](#def-counting-measure), or how long a set of real numbers is, as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does, assigning each interval \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both appear as reference measures in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
+> *Remark 6* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 6](#def-counting-measure), or how long a set of real numbers is, as [Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both appear as reference measures in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
 
 ## 5 Further reading
 
