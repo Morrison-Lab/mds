@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-05 23:02:44 (PDT)</p>
+  <p class="date">Last modified: 2026-10-05 23:27:13 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -337,56 +337,16 @@
 \]</span></p>
 <p>The <a href="./linear-algebra.html#thm-hat-matrix">Linear Algebra</a> page uses this derivation to show that <span class="math inline">\(\mathbf{H}\)</span> is a projection matrix. The probability notes derive the variance identity <span class="math inline">\(\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left[X^2\right]\mathclose{} - \mathopen{}\left(\operatorname{E}\mathopen{}\left[X\right]\mathclose{}\right)^2\mathclose{}\)</span> <a href="https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance">in the same annotated style</a>.</p>
 </section>
-<section id="sec-induction" class="slide level2 scrollable" data-number="3">
-<h2><span class="header-section-number">3</span> Proof by induction</h2>
-<div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Proof by induction)</strong></span> To prove that a statement <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span>, a <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> proves two things:</p>
-<ol type="1">
-<li>the <strong>base case</strong>: <span class="math inline">\(P(n_0)\)</span> holds;</li>
-<li>the <strong>inductive step</strong>: for every <span class="math inline">\(n \ge n_0\)</span>, if <span class="math inline">\(P(n)\)</span> holds, then <span class="math inline">\(P(n + 1)\)</span> holds. The assumption that <span class="math inline">\(P(n)\)</span> holds is called the <strong>induction hypothesis</strong>.</li>
-</ol>
-<p>Together these give <span class="math inline">\(P(n)\)</span> for every <span class="math inline">\(n \ge n_0\)</span>: the base case gives <span class="math inline">\(P(n_0)\)</span>, the inductive step then gives <span class="math inline">\(P(n_0 + 1)\)</span>, then <span class="math inline">\(P(n_0 + 2)\)</span>, and so on.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exm-proof-by-induction" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (The sum of the first <span class="math inline">\(n\)</span> positive integers)</strong></span> Claim: for every integer <span class="math inline">\(n \ge 1\)</span>,</p>
-<p><span class="math display">\[\sum_{i=1}^{n} i = \frac{n (n + 1)}{2}\]</span></p>
-<p><strong>Base case</strong> (<span class="math inline">\(n = 1\)</span>): the left side is <span class="math inline">\(1\)</span>, and the right side is <span class="math inline">\(\frac{1 \cdot 2}{2} = 1\)</span>.</p>
-<p><strong>Inductive step</strong>: assume the claim holds for <span class="math inline">\(n\)</span>. Then</p>
-<p><span class="math display">\[
-\begin{aligned}
-\sum_{i=1}^{n+1} i
-&amp;= \sum_{i=1}^{n} i + (n + 1)
-&amp;&amp; \text{(split off the last term)}
-\\&amp;= \frac{n (n + 1)}{2} + (n + 1)
-&amp;&amp; \text{(induction hypothesis)}
-\\&amp;= \frac{n (n + 1)}{2} + \frac{2 (n + 1)}{2}
-&amp;&amp; \text{(write } n + 1 \text{ over the denominator } 2 \text{)}
-\\&amp;= \frac{n (n + 1) + 2 (n + 1)}{2}
-&amp;&amp; \text{(add fractions with the same denominator)}
-\\&amp;= \frac{(n + 2)(n + 1)}{2}
-&amp;&amp; \text{(factor out } n + 1 \text{)}
-\\&amp;= \frac{(n + 1)(n + 2)}{2}
-&amp;&amp; \text{(reorder the factors)}
-\\&amp;= \frac{(n + 1)\,((n + 1) + 1)}{2}
-&amp;&amp; \text{(write } n + 2 \text{ as } (n + 1) + 1 \text{)}
-\end{aligned}
-\]</span></p>
-<p>which is the claim for <span class="math inline">\(n + 1\)</span>.</p>
-</div>
-</section>
-<section id="sec-golden-rule" class="slide level2" data-number="4">
-<h2><span class="header-section-number">4</span> Follow the golden rule</h2>
+<section id="sec-golden-rule" class="slide level2" data-number="3">
+<h2><span class="header-section-number">3</span> Follow the golden rule</h2>
 <p>In general, follow the golden rule: treat your readers the way you want to be treated as a reader.</p>
 <p>When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.</p>
 </section>
-<section id="sec-proof-by-induction" class="slide level2 scrollable" data-number="5">
-<h2><span class="header-section-number">5</span> Proof by induction</h2>
+<section id="sec-proof-by-induction" class="slide level2 scrollable" data-number="4">
+<h2><span class="header-section-number">4</span> Proof by induction</h2>
 <p>Many proofs in these notes show that a statement holds for every <a href="./notation.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
 <div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an integer, and for each integer <span class="math inline">\(n \ge n_0\)</span> let <span class="math inline">\(P(n)\)</span> be a statement about <span class="math inline">\(n\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an integer, and for each integer <span class="math inline">\(n \ge n_0\)</span> let <span class="math inline">\(P(n)\)</span> be a statement about <span class="math inline">\(n\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
 <li><strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
 <li><strong>Inductive step:</strong> for every integer <span class="math inline">\(n &gt; n_0\)</span>, if <span class="math inline">\(P(n - 1)\)</span> holds, then <span class="math inline">\(P(n)\)</span> holds.</li>
@@ -405,11 +365,11 @@
 
 <p>The following example uses <a href="./algebra.html#def-summation">summation notation</a>.</p>
 <div id="exm-induction-sum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 1 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
 <p><span class="math display">\[
 \sum_{i=1}^{n} i = \frac{n(n+1)}{2}.
 \]</span></p>
-<p>For example, with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\(1 + 2 + 3 = 6\)</span> and <span class="math inline">\(\frac{3 \cdot 4}{2} = 6\)</span>. To prove the equation for every <span class="math inline">\(n\)</span>, let <span class="math inline">\(P(n)\)</span> be the equation and use <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;2</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
+<p>For example, with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\(1 + 2 + 3 = 6\)</span> and <span class="math inline">\(\frac{3 \cdot 4}{2} = 6\)</span>. To prove the equation for every <span class="math inline">\(n\)</span>, let <span class="math inline">\(P(n)\)</span> be the equation and use <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;1</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
 <p><strong>Base case, <span class="math inline">\(n = 1\)</span>.</strong> The sum has one term:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -472,11 +432,11 @@
 &amp;&amp; \text{(commutative law)}
 \end{aligned}
 \]</span></p>
-<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;2</a>, the equation holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;1</a>, the equation holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div>
 </section>
-<section id="sec-further-reading" class="slide level2" data-number="6">
-<h2><span class="header-section-number">6</span> Further reading</h2>
+<section id="sec-further-reading" class="slide level2" data-number="5">
+<h2><span class="header-section-number">5</span> Further reading</h2>
 <ul>
 <li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> is a structured introduction to proof techniques such as direct proof, <a href="./notation.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</li>
 <li><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> treats proofs as formal derivations in propositional and first-order logic.</li>
