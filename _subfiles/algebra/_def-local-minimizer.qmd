@@ -55,7 +55,7 @@ f(-1 + t)
 && \text{(distribute)}
 \\
 &= 2 - 3t^2 + t^3
-&& \text{(collect terms)}
+&& \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)}
 \\
 &= 2 + t^2 (t - 3)
 && \text{(factor out } t^2 \text{)}

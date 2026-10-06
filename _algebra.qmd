@@ -4,6 +4,14 @@
 
 {{< include mds/_subfiles/algebra/_note-elementary-algebra-prereq.qmd >}}
 
+{{< include mds/_subfiles/algebra/_def-transitive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-transitive.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_thm-equal-trans.qmd >}}
 
 {{< slidebreak >}}
@@ -116,6 +124,22 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-line-segment.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-line-segment.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-chord.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-chord.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-convex-function.qmd >}}
 
 {{< slidebreak >}}
@@ -134,6 +158,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-completeness.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-completeness.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-infimum.qmd >}}
 
 {{< slidebreak >}}
@@ -149,6 +181,14 @@
 {{< include mds/_subfiles/algebra/_exm-supremum.qmd >}}
 
 ## Sums
+
+{{< include mds/_subfiles/algebra/_def-term.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-term.qmd >}}
+
+{{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-identity-element.qmd >}}
 
@@ -215,6 +255,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_thm-mult-distr.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-like-terms.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-like-terms.qmd >}}
 
 {{< slidebreak >}}
 
@@ -298,6 +346,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-constant-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-constant-function.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-polynomial.qmd >}}
 
 {{< slidebreak >}}
@@ -307,6 +363,22 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-polynomial-leading-coefficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-quadratic-cubic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-quadratic-cubic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-parabola.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-parabola.qmd >}}
 
 ## Limits of sequences {#sec-sequence-limits}
 
@@ -347,6 +419,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exm-real-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-power-nonpositive-base.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-power-nonpositive-base.qmd >}}
 
 {{< slidebreak >}}
 

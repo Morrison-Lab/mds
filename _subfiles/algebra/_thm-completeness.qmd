@@ -1,0 +1,22 @@
+:::{#thm-completeness}
+#### Completeness of the real numbers
+
+Let $A \subseteq \reals$ be nonempty.
+
+- If $A$ is [bounded above](#def-bounded),
+  the set of upper bounds of $A$ has a [minimum](#def-minimum).
+- If $A$ is bounded below,
+  the set of lower bounds of $A$ has a [maximum](#def-maximum).
+
+:::
+
+::: proof
+The first statement is the least-upper-bound property of $\reals$
+[@rudin1976principles, Definition 1.8, p. 4, and Theorem 1.19, p. 8].
+For the second, let $-A = \cb{-a : a \in A}$.
+Negating both sides of an inequality reverses it (@thm-neg-ineq),
+so $\ell$ is a lower bound of $A$ exactly when $-\ell$ is an upper bound of $-A$.
+The set $-A$ is nonempty and bounded above,
+so by the first statement its upper bounds have a minimum $u$,
+and then $-u$ is the largest lower bound of $A$.
+:::

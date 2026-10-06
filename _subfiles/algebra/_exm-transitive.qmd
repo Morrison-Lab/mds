@@ -1,0 +1,8 @@
+:::{#exm-transitive}
+#### A transitive relation and one that is not
+
+- $\le$ is transitive: for example, $1 \le 2$ and $2 \le 5$, and indeed $1 \le 5$.
+- $\ne$ is not transitive:
+  $1 \ne 2$ and $2 \ne 1$, but $1 \ne 1$ is false.
+
+:::

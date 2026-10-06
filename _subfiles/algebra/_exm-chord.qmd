@@ -1,0 +1,10 @@
+:::{#exm-chord}
+#### A chord of $x^2$
+
+For $f(x) = x^2$, $x = -1$ and $y = 3$,
+the chord runs from $(-1, f(-1)) = (-1, 1)$ to $(3, f(3)) = (3, 9)$.
+With $t = \tfrac{1}{2}$, it passes through
+$\paren{\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3,\ \tfrac{1}{2} \cdot 1 + \tfrac{1}{2} \cdot 9} = (1, 5)$,
+so above the point $1$ it has height $5$.
+
+:::

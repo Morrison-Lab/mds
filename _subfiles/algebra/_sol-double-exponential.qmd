@@ -29,7 +29,7 @@ The last line of @eq-double-exp-log-scale holds exactly when
 
 **Case $a = 0$.**
 Here we cannot take logarithms, so we work from the values of powers of $0$:
-$0^s = 0$ for $s > 0$,
+$0^s = 0$ for $s > 0$ (@def-power-nonpositive-base),
 $0^0 = 1$,
 and $0^s$ is undefined for $s < 0$.
 

@@ -61,6 +61,8 @@ cat(
 )
 ```
 
-**Graph of $b^c - b*c$**. Red contour lines show where $b^c = b*c$.
+**Graph of $b^c - b*c$**.
+A contour line is a curve along which the surface has a constant height.
+The red contour lines show where $b^c = b*c$.
 
 :::
