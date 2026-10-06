@@ -1,7 +1,7 @@
 :::{#def-linear-map}
 #### Linear map
 
-A function $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map**
+A [function](sets-functions.qmd#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is a **linear map**
 (also called a *linear transformation* or *linear function*)
 if it preserves vector addition and scalar multiplication:
 for all $\vx, \vy \in \mathbb{R}^p$ and $c \in \mathbb{R}$,
