@@ -1,0 +1,28 @@
+:::{#rem-linear-affine-terminology}
+#### "Linear" in this site, and in machine learning and statistics
+
+This site uses "linear" only in the sense of @def-linear-map,
+so by @thm-affine-linear-iff a function with a nonzero offset is affine but not linear.
+For functions of one variable, this is the same split as
+[affine](algebra.qmd#def-affine-function) $a x + b$
+versus [linear](algebra.qmd#def-linear-function) $a x$
+on the algebra page.
+(The algebra page writes these as $m x + b$ and $m x$;
+here $m$ already names the number of outputs.)
+
+Machine learning and statistics often call any function of the form
+@eq-linear-scalar "linear",
+as in a *linear model* in statistics or a *linear layer* in a neural network,
+and call the offset $b$ the bias (machine learning)
+or the intercept (statistics), as @def-affine-map notes.
+A model with an intercept is affine in $\vx$
+but linear in its coefficients $(b, \vec{w})$,
+and that is the sense of "linear" in "linear model":
+it stays linear in the coefficients even when the inputs are transformed:
+$w_1 x + w_2 x^2 + b$ is not affine in $x$,
+but it is linear in $(b, w_1, w_2)$.
+Separately, the affine function $\vec{w}^\top \vx + b$
+is a linear function of the augmented vector $\tilde{\vx}$ (@def-augmented-vector),
+with $b$ as the coefficient on its first entry.
+
+:::

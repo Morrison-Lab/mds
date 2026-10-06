@@ -1,11 +1,11 @@
 ::: {#sol-which-are-linear}
 
 1.  **Affine, and linear.** It is @eq-linear-scalar with $b = 0$,
-    which is a linear map: the matrix $\tp{\vec x}$ times $\vec w$.
+    which is a linear map by @thm-matrix-map-linear: the matrix $\tp{\vec x}$ times $\vec w$.
 2.  **Affine.** Still an inner product plus an offset; here the offset is
     $b = -y$, which is a constant because $y$ is held fixed.
     It is linear only when $y = 0$: otherwise $\vec w = \vzero$ gives $-y \ne 0$,
-    and a linear map sends $\vzero$ to $0$.
+    and a linear map sends $\vzero$ to $0$ (@thm-linear-map-zero).
 3.  **Not affine.** Squaring is not an inner product plus an offset.
     This expression is the squared error of one observation, and its
     curvature in $\vec w$ is exactly why fitting a model is an optimization
@@ -16,7 +16,7 @@
     as a function of the single variable $\vec w$ it is quadratic.
 5.  **Affine, not linear.** It is @eq-linear-scalar with coefficient vector
     $\vec a = (x_1, 0, \dots, 0)^\top$ and $b = 3$;
-    at $\vec w = \vzero$ it equals $3 \ne 0$, so it is not linear.
+    at $\vec w = \vzero$ it equals $3 \ne 0$, so it is not linear (@thm-linear-map-zero).
     The data $\vec x$ is untouched --- $\vec a$ is a new vector built from
     its first entry.
 

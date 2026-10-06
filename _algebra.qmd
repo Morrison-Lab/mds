@@ -380,6 +380,18 @@
 
 {{< include mds/_subfiles/algebra/_exm-parabola.qmd >}}
 
+## Affine and linear functions of one variable {#sec-affine-linear-functions}
+
+{{< include mds/_subfiles/algebra/_def-affine-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_def-linear-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-affine-function-props.qmd >}}
+
 ## Limits of sequences {#sec-sequence-limits}
 
 {{< include mds/_subfiles/algebra/_def-sequence-limit.qmd >}}

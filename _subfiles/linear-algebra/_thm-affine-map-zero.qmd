@@ -1,0 +1,39 @@
+:::{#thm-affine-map-zero}
+#### An affine map sends zero to its offset
+
+An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ (@def-affine-map)
+satisfies $f(\vzero) = \vec{b}$.
+
+:::
+
+::: proof
+
+First, $\matr{A}\vzero = \vzero$: for each $i$,
+
+$$
+\ba
+(\matr{A}\vzero)_i
+&= \sum_{j=1}^{p} a_{ij} \cd 0
+&& \text{(@def-matvec-mult)}
+\\&= \sum_{j=1}^{p} 0
+&& \text{(any number times } 0 \text{ is } 0 \text{)}
+\\&= 0
+&& \text{(a sum of zeros is } 0 \text{)}
+\ea
+$$
+
+Then
+
+$$
+\ba
+f(\vzero)
+&= \matr{A}\vzero + \vec{b}
+&& \text{(@def-affine-map)}
+\\&= \vzero + \vec{b}
+&& (\matr{A}\vzero = \vzero)
+\\&= \vec{b}
+&& \text{(adding } \vzero \text{ changes no entry; @def-vector-addition)}
+\ea
+$$
+
+:::

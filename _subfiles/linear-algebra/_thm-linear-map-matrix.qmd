@@ -1,0 +1,101 @@
+:::{#thm-linear-map-matrix}
+#### Every linear map is multiplication by a matrix
+
+If $f: \reals^p \to \reals^m$ is a linear map (@def-linear-map),
+then there is exactly one $m \times p$ matrix $\matr{A}$ such that
+
+$$f(\vx) = \matr{A}\vx \quad \text{for all } \vx \in \reals^p$$
+
+Column $j$ of $\matr{A}$ is $f(\vecf{e}_j)$,
+the value of $f$ at the $j$th indicator vector (@def-indicator-vector);
+that is, $a_{ij} = \paren{f(\vecf{e}_j)}_i$.
+
+:::
+
+::: proof
+
+**Existence.** Let $\matr{A}$ be the $m \times p$ matrix with
+$a_{ij} = \paren{f(\vecf{e}_j)}_i$.
+For any $\vx \in \reals^p$,
+
+$$
+\ba
+f(\vx)
+&= f\paren{\sum_{j=1}^{p} x_j \vecf{e}_j}
+&& \text{(@thm-standard-basis-expansion)}
+\\&= \sum_{j=1}^{p} x_j f(\vecf{e}_j)
+&& \text{(@thm-linear-map-lincom)}
+\ea
+$$
+
+and entry $i$ of that sum is
+
+$$
+\ba
+\paren{\sum_{j=1}^{p} x_j f(\vecf{e}_j)}_i
+&= \sum_{j=1}^{p} x_j \paren{f(\vecf{e}_j)}_i
+&& \text{(@def-linear-combination, entry by entry)}
+\\&= \sum_{j=1}^{p} x_j a_{ij}
+&& \text{(definition of } \matr{A} \text{)}
+\\&= \sum_{j=1}^{p} a_{ij} x_j
+&& \text{(products are symmetric)}
+\\&= (\matr{A}\vx)_i
+&& \text{(@def-matvec-mult)}
+\ea
+$$
+
+**Uniqueness.** Suppose $\matr{B}$ is any $m \times p$ matrix
+with $f(\vx) = \matr{B}\vx$ for all $\vx$.
+Taking $\vx = \vecf{e}_j$, for each $i$:
+
+$$
+\ba
+\paren{f(\vecf{e}_j)}_i
+&= (\matr{B}\vecf{e}_j)_i
+&& \text{(assumption on } \matr{B} \text{)}
+\\&= \sum_{k=1}^{p} b_{ik} (\vecf{e}_j)_k
+&& \text{(@def-matvec-mult)}
+\\&= b_{ij} \cd 1 + \sum_{k \neq j} b_{ik} \cd 0
+&& \text{(@def-indicator-vector, splitting off the } k = j \text{ term)}
+\\&= b_{ij} + 0
+&& \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)}
+\\&= b_{ij}
+&& \text{(adding } 0 \text{ changes nothing)}
+\ea
+$$
+
+So $b_{ij} = \paren{f(\vecf{e}_j)}_i = a_{ij}$ for every $i$ and $j$,
+and $\matr{B} = \matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-matrix-of-linear-map}
+#### Matrix of a linear map
+
+The **matrix of** a linear map $f: \reals^p \to \reals^m$
+is the unique $m \times p$ matrix $\matr{A}$ with $f(\vx) = \matr{A}\vx$ for all $\vx$
+(@thm-linear-map-matrix).
+Its column $j$ is $f(\vecf{e}_j)$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-linear-map-matrix}
+#### Finding the matrix of a linear map
+
+For $f(\vx) = (2 x_1,\ x_1 + x_2)$ from @exm-linear-map,
+the values of $f$ at the indicator vectors are
+
+$$
+f(\vecf{e}_1) = f\paren{\sbmat{1 \\ 0}} = \sbmat{2 \cd 1 \\ 1 + 0} = \sbmat{2 \\ 1},
+\qquad
+f(\vecf{e}_2) = f\paren{\sbmat{0 \\ 1}} = \sbmat{2 \cd 0 \\ 0 + 1} = \sbmat{0 \\ 1}
+$$
+
+and these are the columns of the matrix of $f$ (@def-matrix-of-linear-map):
+$\matr{A} = \sbmat{2 & 0 \\ 1 & 1}$.
+
+:::

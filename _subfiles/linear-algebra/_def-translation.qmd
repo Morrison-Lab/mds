@@ -1,0 +1,29 @@
+:::{#def-translation}
+#### Translation
+
+For a fixed vector $\vec{b} \in \reals^m$,
+the **translation** by $\vec{b}$ is the function
+$t_{\vec{b}} : \reals^m \to \reals^m$ defined by
+
+$$t_{\vec{b}}(\vy) = \vy + \vec{b}$$
+
+It moves every point by the same vector $\vec{b}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-translation}
+#### Translating two points
+
+The translation by $\vec{b} = \tp{(1, -2)}$ sends
+
+$$
+t_{\vec{b}}\paren{\sbmat{0 \\ 0}} = \sbmat{0 + 1 \\ 0 + (-2)} = \sbmat{1 \\ -2},
+\qquad
+t_{\vec{b}}\paren{\sbmat{3 \\ 4}} = \sbmat{3 + 1 \\ 4 + (-2)} = \sbmat{4 \\ 2}
+$$
+
+Both points move one unit right and two units down.
+
+:::

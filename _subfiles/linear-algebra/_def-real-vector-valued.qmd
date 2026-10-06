@@ -1,0 +1,27 @@
+:::{#def-real-vector-valued}
+#### Real-valued and vector-valued functions
+
+A [function](sets-functions.qmd#def-function) $f : A \to \reals$,
+whose values are numbers,
+is **real-valued** (also called *scalar-valued*).
+A function $f : A \to \reals^m$,
+whose values are vectors (@def-real-coordinate-space),
+is **vector-valued**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-real-vector-valued}
+#### A real-valued and a vector-valued function
+
+On $\reals^2$, $f(\vx) = x_1 + x_2$ is real-valued
+and $g(\vx) = \sbmat{x_1 + x_2 \\ x_1 - x_2}$ is vector-valued:
+
+$$
+f\paren{\sbmat{3 \\ 4}} = 3 + 4 = 7,
+\qquad
+g\paren{\sbmat{3 \\ 4}} = \sbmat{3 + 4 \\ 3 - 4} = \sbmat{7 \\ -1}
+$$
+
+:::

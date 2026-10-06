@@ -1,0 +1,114 @@
+:::{#thm-affine-function-props}
+#### Intercept and slope of an affine function
+
+Let $f(x) = m x + b$ be an affine function (@def-affine-function).
+
+1. The intercept is the value at zero: $f(0) = b$.
+2. The slope is the change in $f$ per unit change in $x$:
+   for any $x_1 \neq x_2$,
+   $$\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m$$
+3. So $f$ determines its slope and intercept:
+   if also $f(x) = m' x + b'$ for all $x$, then $m' = m$ and $b' = b$.
+
+:::
+
+::: proof
+
+**Part 1.**
+
+$$
+\ba
+f(0)
+&= m \cd 0 + b
+&& \text{(@def-affine-function)}
+\\&= 0 + b
+&& \text{(any number times } 0 \text{ is } 0 \text{)}
+\\&= b + 0
+&& \text{(@thm-sum-symmetric)}
+\\&= b
+&& \text{(@thm-add-ident)}
+\ea
+$$
+
+**Part 2.** First the numerator:
+
+$$
+\ba
+f(x_2) - f(x_1)
+&= (m x_2 + b) - (m x_1 + b)
+&& \text{(@def-affine-function)}
+\\&= m x_2 + b - m x_1 - b
+&& \text{(subtracting a sum subtracts each term)}
+\\&= m x_2 - m x_1 + b - b
+&& \text{(@thm-sum-symmetric, swapping } b \text{ and } {-m x_1} \text{)}
+\\&= (m x_2 - m x_1) + (b - b)
+&& \text{(@thm-sum-assoc)}
+\\&= (m x_2 - m x_1) + 0
+&& (b - b = 0)
+\\&= m x_2 - m x_1
+&& \text{(@thm-add-ident)}
+\\&= m x_2 + m (-x_1)
+&& (-(m x_1) = m (-x_1) \text{, by @thm-negative-one and @thm-prod-assoc)}
+\\&= m (x_2 + (-x_1))
+&& \text{(@thm-mult-distr, read right to left)}
+\\&= m (x_2 - x_1)
+&& \text{(adding a negative is subtracting)}
+\ea
+$$
+
+Then, writing $d = x_2 - x_1$, which is not $0$ because $x_1 \neq x_2$,
+
+$$
+\ba
+\frac{f(x_2) - f(x_1)}{x_2 - x_1}
+&= \frac{m d}{d}
+&& \text{(the numerator above)}
+\\&= (m d) \cd \frac{1}{d}
+&& \text{(@thm-prod-div)}
+\\&= m \cd \paren{d \cd \frac{1}{d}}
+&& \text{(@thm-prod-assoc)}
+\\&= m \cd \frac{d}{d}
+&& \text{(@thm-prod-div)}
+\\&= m \cd 1
+&& \text{(a nonzero number divided by itself is } 1 \text{)}
+\\&= m
+&& \text{(@thm-mult-one)}
+\ea
+$$
+
+**Part 3.** Part 1, applied to each formula, gives $b = f(0) = b'$.
+Part 2 with $x_1 = 0$ and $x_2 = 1$, applied to each formula,
+gives $m = f(1) - f(0) = m'$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-affine-function}
+#### An affine function, and a linear one
+
+$f(x) = 2x + 3$ is affine with slope $2$ and intercept $3$.
+By @thm-affine-function-props, $f(0) = 3$,
+and each unit step in $x$ raises $f$ by $2$:
+for example, $f(1) = 5$ and $f(2) = 7$.
+Its intercept is not $0$, so it is not linear.
+
+$g(x) = -\tfrac{1}{2} x$ is affine with intercept $0$, so it is linear:
+$g(0) = 0$, and each unit step in $x$ lowers $g$ by $\tfrac{1}{2}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-linear-function-terminology}
+#### Elementary algebra calls $m x + b$ "linear"
+
+Elementary algebra usually calls $f(x) = m x + b$ a *linear function*,
+because its graph is a straight line.
+This site calls that an affine function
+and keeps "linear" for the case $b = 0$,
+because that is the sense used in linear algebra,
+where a [linear map](linear-algebra.qmd#def-linear-map) must send $0$ to $0$
+([theorem](linear-algebra.qmd#thm-linear-map-zero)).
+
+:::

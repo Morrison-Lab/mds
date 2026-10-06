@@ -20,6 +20,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-real-vector-valued.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-transpose.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-transpose.qmd >}}
@@ -55,6 +59,10 @@
 {{< include mds/_subfiles/linear-algebra/_thm-indicator-selection.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_proof-thm-indicator-selection.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-standard-basis-expansion.qmd >}}
 
 ### Orthogonality
 
@@ -176,7 +184,63 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-linear-operator.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-linear-map-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-matrix-map-linear.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-linear-map-lincom.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-linear-map-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-linear-scalar.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-video-linear-maps.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-translation.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-augmented-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-affine-map-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-affine-linear-iff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-linear-is-affine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-affine-map-unique.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-linear-affine-terminology.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-reading-linear-affine.qmd >}}
 
 {{< slidebreak >}}
 

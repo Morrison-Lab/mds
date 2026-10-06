@@ -1,0 +1,11 @@
+::: {.callout-tip title="Videos"}
+Two chapters of the *Essence of linear algebra* series by 3Blue1Brown
+show the results above geometrically:
+
+- [Linear transformations and matrices](https://www.youtube.com/watch?v=kYB8IZa5AuE) (Chapter 3)
+  shows why a linear map is fixed by where it sends the indicator vectors,
+  which become the columns of its matrix (@def-matrix-of-linear-map).
+- [Dot products and duality](https://www.youtube.com/watch?v=LyGKycYT2v0) (Chapter 9)
+  shows why every linear map from $\reals^p$ to $\reals$ is a dot product
+  with a fixed vector (@cor-linear-scalar).
+:::

@@ -1,0 +1,59 @@
+:::{#thm-matrix-map-linear}
+#### Multiplying by a matrix is a linear map
+
+For any $m \times p$ matrix $\matr{A}$,
+the function $f: \reals^p \to \reals^m$ defined by $f(\vx) = \matr{A}\vx$
+is a linear map (@def-linear-map).
+
+:::
+
+::: proof
+
+Both conditions are checked one entry at a time.
+For each $i \in \{1, \ldots, m\}$, additivity:
+
+$$
+\ba
+\paren{\matr{A}(\vx + \vy)}_i
+&= \sum_{j=1}^{p} a_{ij} (\vx + \vy)_j
+&& \text{(@def-matvec-mult)}
+\\&= \sum_{j=1}^{p} a_{ij} (x_j + y_j)
+&& \text{(@def-vector-addition)}
+\\&= \sum_{j=1}^{p} (a_{ij} x_j + a_{ij} y_j)
+&& \text{(multiplication distributes over addition)}
+\\&= \sum_{j=1}^{p} a_{ij} x_j + \sum_{j=1}^{p} a_{ij} y_j
+&& \text{(a sum of sums splits)}
+\\&= (\matr{A}\vx)_i + (\matr{A}\vy)_i
+&& \text{(@def-matvec-mult)}
+\\&= (\matr{A}\vx + \matr{A}\vy)_i
+&& \text{(@def-vector-addition)}
+\ea
+$$
+
+and homogeneity:
+
+$$
+\ba
+\paren{\matr{A}(c\vx)}_i
+&= \sum_{j=1}^{p} a_{ij} (c\vx)_j
+&& \text{(@def-matvec-mult)}
+\\&= \sum_{j=1}^{p} a_{ij}\, c\, x_j
+&& \text{(@def-scalar-mult)}
+\\&= \sum_{j=1}^{p} c\, a_{ij} x_j
+&& \text{(products are symmetric)}
+\\&= c \sum_{j=1}^{p} a_{ij} x_j
+&& \text{(a constant factor comes out of a sum)}
+\\&= c\, (\matr{A}\vx)_i
+&& \text{(@def-matvec-mult)}
+\\&= (c\, \matr{A}\vx)_i
+&& \text{(@def-scalar-mult)}
+\ea
+$$
+
+The four algebra rules cited here are on the [algebra page](algebra.qmd):
+[distributivity](algebra.qmd#thm-mult-distr),
+[a sum of sums](algebra.qmd#thm-sum-of-sums),
+[symmetry of products](algebra.qmd#thm-prod-symmetric),
+and [a constant factor](algebra.qmd#thm-sum-constant-factor).
+
+:::

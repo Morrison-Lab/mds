@@ -1,0 +1,30 @@
+:::{#thm-affine-linear-iff}
+#### An affine map is linear exactly when its offset is zero
+
+An affine map $f(\vx) = \matr{A}\vx + \vec{b}$ (@def-affine-map)
+is linear (@def-linear-map) if and only if $\vec{b} = \vzero$.
+
+:::
+
+::: proof
+
+If $\vec{b} = \vzero$, then $f(\vx) = \matr{A}\vx + \vzero = \matr{A}\vx$,
+which is linear by @thm-matrix-map-linear.
+Conversely, if $f$ is linear, then $f(\vzero) = \vzero$ by @thm-linear-map-zero,
+and $f(\vzero) = \vec{b}$ by @thm-affine-map-zero,
+so $\vec{b} = \vzero$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-affine-linear-iff}
+#### Two affine maps with the same matrix
+
+Let $\matr{A} = \sbmat{2 & 0 \\ 1 & 1}$, the matrix of the linear map in @exm-linear-map.
+$f(\vx) = \matr{A}\vx$ has offset $\vzero$, so it is linear.
+$g(\vx) = \matr{A}\vx + \sbmat{1 \\ 0}$ has offset $\sbmat{1 \\ 0} \neq \vzero$,
+so by @thm-affine-linear-iff it is not linear:
+indeed $g(\vzero) = \sbmat{1 \\ 0}$, not $\vzero$.
+
+:::

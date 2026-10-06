@@ -1,0 +1,10 @@
+:::{#def-linear-function}
+#### Linear function of one variable
+
+A function $f: \reals \to \reals$ is **linear**
+if it is affine (@def-affine-function) with intercept $0$;
+that is, if there is a number $m$ such that
+
+$$f(x) = m x \quad \text{for all } x \in \reals$$
+
+:::
