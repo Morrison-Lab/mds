@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 14:49:55 (PDT)
+Last modified: 2026-10-06 15:10:39 (PDT)
 
 ## 1 Equalities
 
@@ -63,7 +63,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 4 (negating both sides of an inequality)** If \\a \< b\\, then: \\-a \> -b\\
+> **Theorem 4 (Negating both sides of an inequality)** If \\a \< b\\, then: \\-a \> -b\\
 
 > **NOTE:**
 >
@@ -143,6 +143,8 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > 1.  The square of a real number is never negative, so \\(x - 2)^2 \ge 0\\ for every \\x\\, and therefore \\f(x) \ge 0 + 1 = 1\\. The square is \\0\\ only when \\x - 2 = 0\\, that is, when \\x = 2\\, and there \\f(2) = 1\\. So the smallest value of \\f\\ is \\1\\, and \\x = 2\\ is the only input where \\f\\ takes it.
 >
+> &nbsp;
+>
 > 2.  Evaluate \\g\\ at each of its four inputs:
 >
 >     | \\x\\    | \\0\\ | \\1\\ | \\3\\ | \\4\\ |
@@ -220,6 +222,8 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > 2.  For \\x \in (0, 2)\\, \\(x - 1)^2 \ge 0\\ and \\x + 2 \> 0\\, so their product is at least \\0\\. By part 1, \\f(x) - f(1) \ge 0\\, that is, \\f(x) \ge f(1)\\.
 >
+> &nbsp;
+>
 > 3.  \\f(-3) = -27 + 9 = -18\\. Since \\-18 \< -2 = f(1)\\, \\f(1)\\ is not the smallest value of \\f\\ on \\\mathbb{R}\\.
 >
 > 4.  No. For each \\n \ge 2\\, \\f(-n) = -n^3 + 3n = -n(n^2 - 3) \le -n\\, so no value of \\f\\ is smaller than all the others: for any \\x\\, picking \\n \ge 2\\ with \\-n \< f(x)\\ gives \\f(-n) \< f(x)\\.
@@ -248,7 +252,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 9 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
 >
-> \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(multiply } -3 \text{ into the parentheses)} \\ &= 2 - 3t^2 + t^3 && \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) = 2 \text{)} \end{aligned} \\
+> \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(distribute } -3 \text{)} \end{aligned} \\
+>
+> \\ \begin{aligned} f(-1 + t) &= 2 - 3t^2 + t^3 && \text{(combine like terms)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = 2 \text{)} \end{aligned} \\
 >
 > and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta \> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta / 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example, \\f(-0.9) = -0.729 + 2.7 = 1.971 \< 2\\.
 
@@ -447,7 +453,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 9 (adding zero changes nothing)** \\a+0=a\\
+> **Theorem 9 (Adding zero changes nothing)** \\a+0=a\\
 
 > **NOTE:**
 >
@@ -562,6 +568,8 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 >     \\ \begin{aligned} \sum\_{i=1}^{4} i^2 &= 1^2 + 2^2 + 3^2 + 4^2 \\ &= 1 + 4 + 9 + 16 \\ &= 30 \end{aligned} \\
 >
+> &nbsp;
+>
 > 2.  Replace \\i\\ by each of \\1, 2, 3\\ in turn inside the parentheses, add the three squares, and multiply the total by \\\frac{1}{3}\\:
 >
 >     \\ \frac{1}{3} \sum\_{i=1}^{3} \left(y_i - \hat{y}\_i\right)^2 = \frac{1}{3} \left\[ \left(y_1 - \hat{y}\_1\right)^2 + \left(y_2 - \hat{y}\_2\right)^2 + \left(y_3 - \hat{y}\_3\right)^2 \right\] \\
@@ -598,6 +606,8 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > 1.  Expand the sum, then factor out \\c\\:
 >
 >     \\ \begin{aligned} \sum\_{i=1}^{3} c\\ a_i &= c\\ a_1 + c\\ a_2 + c\\ a_3 && \text{(expand the sum)} \\ &= c \left(a_1 + a_2 + a_3\right) && \text{(distributive law)} \\ &= c \sum\_{i=1}^{3} a_i && \text{(collect the sum)} \end{aligned} \\
+>
+> &nbsp;
 >
 > 2.  Expand the sum, then regroup the terms:
 >
@@ -639,6 +649,8 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > 1.  Replace \\x\\ by each element of \\A\\ in turn, and add the results:
 >
 >     \\ \begin{aligned} \sum\_{x \in A} f(x) &= f(-1) + f(2) + f(5) \\ &= (-1)^2 + 2^2 + 5^2 \\ &= 1 + 4 + 25 \\ &= 30 \end{aligned} \\
+>
+> &nbsp;
 >
 > 2.  In the order \\5, -1, 2\\, the terms are \\25\\, \\1\\ and \\4\\. Their total is \\25 + 1 + 4 = 30\\. The total is the same, because addition does not depend on the order of the terms.
 
@@ -965,7 +977,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 21 (\\\operatorname{exp}\mathopen{}\left\\\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\\right\\\mathclose{}\\ are mutual inverses)**  
+> **Theorem 21 (\\\operatorname{exp}\\ and \\\operatorname{log}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
@@ -998,7 +1010,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 24 (exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
+> **Theorem 24 (Exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
 >
 > \\\operatorname{exp}\mathopen{}\left\\a+b\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}\\
 
@@ -1008,7 +1020,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Corollary 2 (exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
+> **Corollary 2 (Exponential of a difference)** The exponential of a difference is the exponential of the first term divided by the exponential of the second term:
 >
 > \\\operatorname{exp}\mathopen{}\left\\a-b\right\\\mathclose{} = \frac{\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}}\\
 
@@ -1068,7 +1080,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Corollary 3 (natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
+> **Corollary 3 (Natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
 
 > **NOTE:**
 >
@@ -1096,7 +1108,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Exercise 9** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
+> **Exercise 9 (Exponentiation versus multiplication)** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
@@ -1105,6 +1117,9 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
 > 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = \operatorname{exp}\mathopen{}\left\\\frac{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}{c-1}\right\\\mathclose{}\\. For \\b \> 0\\, dividing both sides of \\b^c = bc\\ by \\b\\ gives \\b^{c-1} = c\\, which needs \\c \> 0\\ because \\b^{c-1} \> 0\\; taking logarithms then gives \\(c-1)\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}\\. For example, \\c = 2\\ gives \\b = 2\\, and indeed \\2^2 = 4 = 2 \cdot 2\\.
+>
+> &nbsp;
+>
 > 4.  \\b \< 0\\ and \\c\\ is an odd integer with \\c \ge 3\\, with \\b = -c^{1/(c-1)}\\; for example, \\b = -\sqrt{3}\\ and \\c = 3\\ give \\b^c = -3\sqrt{3} = bc\\.
 > 5.  \\b \< 0\\ and \\c\\ is an even integer with \\c \le -2\\, with \\b = -(-c)^{1/(c-1)}\\; for example, \\b = -2^{-1/3}\\ and \\c = -2\\ give \\b^c = 2^{2/3} = bc\\.
 >
@@ -1235,7 +1250,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Exercise 10** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
+> **Exercise 10 (Repeated exponentiation)** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
 >
@@ -1419,7 +1434,7 @@ Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity am
 
 > **NOTE:**
 >
-> **Example 54 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 54 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
 > which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 53](#exm-complex-modulus), as [Theorem 30](#thm-conj-product) says.
 
