@@ -1,0 +1,16 @@
+:::{#def-cartesian-product}
+#### Ordered pair and Cartesian product
+
+An **ordered pair** $(a, b)$ is a pair of objects listed in order,
+with $a$ first and $b$ second;
+two ordered pairs are equal, $(a, b) = (c, d)$,
+when $a = c$ and $b = d$.
+
+The **Cartesian product** of sets $A$ and $B$,
+written $A \times B$,
+is the set of ordered pairs whose first entry is in $A$
+and whose second entry is in $B$:
+
+$$A \times B \eqdef \set{(a, b) : a \in A \text{ and } b \in B}$$
+
+:::
