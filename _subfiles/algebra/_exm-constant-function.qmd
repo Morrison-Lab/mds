@@ -1,0 +1,7 @@
+:::{#exm-constant-function}
+#### Constant and non-constant functions
+
+- $f(x) = 7$ on $\reals$ is constant, with $c = 7$.
+- $f(x) = x^2$ on $\reals$ is not constant: $f(0) = 0$ but $f(1) = 1$.
+
+:::

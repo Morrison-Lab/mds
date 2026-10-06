@@ -1,7 +1,7 @@
 :::{#thm-exp-sum}
 #### exponential of a sum
 
-The exponential of a sum is equal to the product of the exponentials of the addends:
+The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
 
 $$\exp{a+b} = \exp{a} \cd \exp{b}$$
 

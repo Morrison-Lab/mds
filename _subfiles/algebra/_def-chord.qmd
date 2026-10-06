@@ -1,0 +1,16 @@
+:::{#def-chord}
+#### Chord
+
+Let $f : \reals^p \to \reals$ be a [function](sets-functions.qmd#def-function),
+and let $x, y \in \reals^p$.
+The **chord** of $f$ from $x$ to $y$
+is the line segment (@def-line-segment) in $\reals^{p+1}$
+from the point $(x, f(x))$ to the point $(y, f(y))$
+of the [graph](sets-functions.qmd#def-graph) of $f$:
+$$
+\cb{\paren{t x + (1 - t) y,\ t f(x) + (1 - t) f(y)} : t \in [0, 1]}.
+$$
+Above the point $t x + (1 - t) y$,
+the chord has height $t f(x) + (1 - t) f(y)$.
+
+:::

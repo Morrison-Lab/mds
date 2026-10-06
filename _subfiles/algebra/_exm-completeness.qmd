@@ -1,0 +1,10 @@
+:::{#exm-completeness}
+#### Completeness for an interval
+
+For $A = (1, 2]$,
+the lower bounds of $A$ are the numbers $\ell \le 1$,
+and the largest of them is $1$.
+The upper bounds of $A$ are the numbers $u \ge 2$,
+and the smallest of them is $2$.
+
+:::

@@ -1,0 +1,9 @@
+:::{#exm-term}
+#### Terms of a sum
+
+- The sum $3 + 5 + 9$ has three terms: $3$, $5$ and $9$.
+- The sum $x^2 - 3x + 7 = x^2 + (-3x) + 7$ has three terms:
+  $x^2$, $-3x$ and $7$.
+  A subtracted expression counts as a term with a minus sign.
+
+:::
