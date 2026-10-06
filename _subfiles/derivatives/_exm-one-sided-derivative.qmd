@@ -1,0 +1,14 @@
+:::{#exm-one-sided-derivative}
+#### One-sided derivatives of $\abs{x}$ at $0$
+
+Let $f(x) = \abs{x}$, the [absolute value](algebra.qmd#def-absolute-value), and $c = 0$.
+
+- For $h > 0$, $\abs{h} = h$, so $\frac{f(0 + h) - f(0)}{h} = \frac{h - 0}{h} = 1$.
+  The right-hand derivative of $f$ at $0$ is $1$.
+- For $h < 0$, $\abs{h} = -h$, so $\frac{f(0 + h) - f(0)}{h} = \frac{-h - 0}{h} = -1$.
+  The left-hand derivative of $f$ at $0$ is $-1$.
+
+For example, $h = 0.5$ gives $\tfrac{0.5}{0.5} = 1$, and $h = -0.5$ gives $\tfrac{0.5}{-0.5} = -1$.
+The one-sided derivatives differ, since $1 \ne -1$.
+
+:::

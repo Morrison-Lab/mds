@@ -14,8 +14,17 @@ the denominator vanishes at the origin, so $f$ is undefined there
 
 **Integrating $y$ first, then $x$:**
 
-Using $\displaystyle\frac{\partial}{\partial y}\frac{y}{x^2 + y^2}
-= \frac{x^2 - y^2}{(x^2 + y^2)^2}$:
+Holding $x$ fixed and differentiating in $y$
+(by the quotient rule, @thm-quotient-rule),
+$\displaystyle\dif{}{y}\frac{y}{x^2 + y^2}
+= \frac{(x^2 + y^2) - y \cd 2y}{(x^2 + y^2)^2}
+= \frac{x^2 - y^2}{(x^2 + y^2)^2}$.
+(A derivative in one variable with the others held fixed is a
+[partial derivative](vector-calculus.qmd#def-partial-derivative),
+defined on the vector calculus page.)
+The arctangent $\arctan$ is the inverse of the tangent function from trigonometry;
+all this example needs is that $\dif{}{x}\arctan(x) = \frac{1}{1 + x^2}$,
+$\arctan(0) = 0$, and $\arctan(1) = \frac{\pi}{4}$.
 
 $$
 \ba
@@ -29,7 +38,9 @@ $$
 
 **Integrating $x$ first, then $y$:**
 
-Using $\displaystyle\frac{\partial}{\partial x}\paren{-\frac{x}{x^2 + y^2}}
+Holding $y$ fixed and differentiating in $x$,
+$\displaystyle\dif{}{x}\paren{-\frac{x}{x^2 + y^2}}
+= -\frac{(x^2 + y^2) - x \cd 2x}{(x^2 + y^2)^2}
 = \frac{x^2 - y^2}{(x^2 + y^2)^2}$:
 
 $$
@@ -54,8 +65,8 @@ theorem does not apply.
 
 [@wp:fubini]
 
-The surface, and the singularity at the origin responsible for the
-failure, are shown in @fig-fubini-fail.
+@fig-fubini-fail shows the surface.
+The failure comes from the origin, where $f$ is undefined and unbounded.
 
 :::{#fig-fubini-fail}
 
@@ -105,9 +116,9 @@ cat(
 
 Surface $f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2$ on $[0, 1]^2$,
 sampled away from the origin and clipped to $[-50, 50]$ for display.
-The function diverges to $+\infty$ along the $x$-axis (red ridge,
-$f > 0$ when $|x| > |y|$) and to $-\infty$ along the $y$-axis (blue
-ridge, $f < 0$ when $|y| > |x|$). The singularity at $(0, 0)$ is why
+Approaching the origin, the function grows without bound along the $x$-axis (red ridge,
+$f > 0$ when $|x| > |y|$) and falls without bound along the $y$-axis (blue
+ridge, $f < 0$ when $|y| > |x|$). Because $f$ is undefined at $(0, 0)$,
 $f$ is not continuous on $R$ and @thm-fubini does not apply.
 
 :::

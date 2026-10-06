@@ -75,7 +75,7 @@ Let $f(\vx) = x_1 \abs{x_1}$ for $\vx = \tp{(x_1, x_2)}$,
 where $\abs{\cdot}$ is the [absolute value](algebra.qmd#def-absolute-value).
 For $x_1 > 0$, $f = x_1^2$ and $\deriv{x_1} f = 2 x_1$;
 for $x_1 < 0$, $f = -x_1^2$ and $\deriv{x_1} f = -2 x_1$;
-and at $x_1 = 0$ the difference quotient (@def-difference-quotient) is $h \abs{h} / h = \abs{h} \to 0$.
+and at $x_1 = 0$ the [difference quotient](calculus.qmd#def-difference-quotient) is $h \abs{h} / h = \abs{h} \to 0$.
 So the gradient exists everywhere: it is $\tp{(2 \abs{x_1},\ 0)}$.
 But $2 \abs{x_1}$ has no derivative in $x_1$ at $x_1 = 0$
 (its difference quotient $2 \abs{h} / h$ is $2$ for $h > 0$ and $-2$ for $h < 0$),

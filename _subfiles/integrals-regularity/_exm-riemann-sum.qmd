@@ -1,0 +1,27 @@
+:::{#exm-riemann-sum}
+#### A Riemann sum for $x^2$ on $\lbrack 0, 1\rbrack$
+
+Let $f(x) = x^2$, take the partition $0 < 0.25 < 0.5 < 1$ of @exm-partition,
+with widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
+and take each sample point at the right end of its subinterval:
+$x_1^* = 0.25$, $x_2^* = 0.5$, and $x_3^* = 1$.
+Then
+
+$$
+\ba
+\sum_{i=1}^3 f(x_i^*)\,\Delta x_i
+&= f(0.25) \cd 0.25 + f(0.5) \cd 0.25 + f(1) \cd 0.5
+&& \text{(write out the three terms)}
+\\
+&= 0.0625 \cd 0.25 + 0.25 \cd 0.25 + 1 \cd 0.5
+&& \text{(evaluate } f(x) = x^2 \text{)}
+\\
+&= 0.015625 + 0.0625 + 0.5
+&& \text{(multiply)}
+\\
+&= 0.578125
+&& \text{(add)}
+\ea
+$$
+
+:::

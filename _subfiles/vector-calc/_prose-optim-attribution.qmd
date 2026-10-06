@@ -9,7 +9,7 @@ here they are proved from the one-variable Taylor theorem,
 and the approximation is made exact by evaluating the Hessian at a point between $\vecf{z}$ and $\vecf{z} + \vecf{h}$.
 The source calls points with zero gradient critical points;
 here they are stationary points,
-because the [calculus notes](calculus.qmd#def-flat-point) give "critical point" a wider meaning.
+because the [calculus notes](calculus.qmd#def-critical-point) give "critical point" a wider meaning.
 These parts of the source are not part of this section:
 
 - its one-variable Taylor example and its plots

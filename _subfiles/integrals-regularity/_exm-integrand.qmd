@@ -1,0 +1,9 @@
+:::{#exm-integrand}
+#### Integrands
+
+- In $\int_0^3 2\,dx = 6$ (@exm-integrable-constant), the integrand is the [constant function](algebra.qmd#def-constant-function) $f(x) = 2$,
+  and the [limits of integration](notation.qmd#def-lower-upper-limits) are $0$ and $3$.
+- In $\int \paren{3x^2 - 1}\,dx = x^3 - x + C$ (@exm-integral-rules-quadratic),
+  the integrand is $f(x) = 3x^2 - 1$; its value at $x = 2$ is $3 \cd 4 - 1 = 11$.
+
+:::

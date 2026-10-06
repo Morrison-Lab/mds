@@ -1,0 +1,11 @@
+:::{#def-second-derivative}
+#### Second derivative
+
+Let $f$ be a real-valued function of one variable
+whose derivative $f'$ (@def-derivative) exists
+at every point of an [open interval](sets-functions.qmd#def-interval) containing $c$.
+If $f'$ is differentiable (@def-differentiable) at $c$,
+its derivative there, written $f''(c)$ or $\dif{^2 f}{x^2}$,
+is the **second derivative** of $f$ at $c$.
+
+:::

@@ -1,7 +1,7 @@
 :::{#exm-cont-implies-int}
 #### Continuous, hence integrable: polynomials
 
-Every polynomial is continuous on $\mathbb{R}$,
+Every [polynomial](algebra.qmd#def-polynomial) is continuous on $\mathbb{R}$,
 so by @thm-cont-implies-int every polynomial is integrable on every
 closed interval $[a, b]$.
 
