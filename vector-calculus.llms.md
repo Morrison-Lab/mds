@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 22:39:57 (PDT)
+Last modified: 2026-10-05 23:02:44 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -1559,7 +1559,7 @@ Here the objective ([Definition 25](#def-minimization-problem)) is a quadratic 
 >
 > \\ \begin{aligned} 1 - s^{(0)} &= \frac{1 + b - 2}{1 + b} = r, && \text{(common denominator)} \\ 1 - b\\s^{(0)} &= \frac{1 + b - 2b}{1 + b} = -r, && \text{(common denominator)} \\ \tilde{x}^{(1)} &= {\mathopen{}\left(r\\b,\\ -r \cdot 1\right)\mathclose{}}^{\top} = r\\{(b, -1)}^{\top}. && \text{(the gradient step from } {(b, 1)}^{\top} \text{)} \end{aligned} \\
 >
-> For \\b \ne 1\\ the same holds at every step, by induction (when \\b = 1\\, \\r = 0\\ and \\\tilde{x}^{(1)}\\ is already the minimizer): if \\\tilde{x}^{(t)} = {(c\\b,\\ \pm c)}^{\top}\\ for a number \\c \ne 0\\, then \\s^\*\\, which depends only on \\x_1^2 = c^2 b^2\\ and \\x_2^2 = c^2\\, is again \\\tfrac{2}{1 + b}\\ (the factor \\c^2\\ cancels), and the step multiplies the first entry by \\r\\ and the second by \\-r\\. So
+> For \\b \ne 1\\ the same holds at every step, by [induction](proof-writing.llms.md#def-proof-by-induction) (when \\b = 1\\, \\r = 0\\ and \\\tilde{x}^{(1)}\\ is already the minimizer): if \\\tilde{x}^{(t)} = {(c\\b,\\ \pm c)}^{\top}\\ for a number \\c \ne 0\\, then \\s^\*\\, which depends only on \\x_1^2 = c^2 b^2\\ and \\x_2^2 = c^2\\, is again \\\tfrac{2}{1 + b}\\ (the factor \\c^2\\ cancels), and the step multiplies the first entry by \\r\\ and the second by \\-r\\. So
 >
 > \\ \tilde{x}^{(t)} = {\mathopen{}\left(b\\r^t,\\ (-r)^t\right)\mathclose{}}^{\top}, \qquad f(\tilde{x}^{(t)}) = \tfrac{1}{2} (b^2 + b)\\r^{2t} = r^{2t} f(\tilde{x}^{(0)}). \\
 >

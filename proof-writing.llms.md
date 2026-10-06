@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 22:39:57 (PDT)
+Last modified: 2026-10-05 23:02:44 (PDT)
 
 This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and [derivations](notation.llms.md#def-derivation). The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for logical entailment are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
@@ -59,7 +59,56 @@ In general, follow the golden rule: treat your readers the way you want to be tr
 
 When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.
 
-## 5 Further reading
+## 5 Proof by induction
+
+Many proofs in these notes show that a statement holds for every [natural number](notation.llms.md#def-natural-numbers) \\n\\, or for every integer \\n\\ from some starting value on. Checking the statement one \\n\\ at a time would never finish; induction proves it for all of them with two arguments.
+
+> **NOTE:**
+>
+> **Definition 2 (Proof by induction)** Let \\n_0\\ be an integer, and for each integer \\n \ge n_0\\ let \\P(n)\\ be a statement about \\n\\. A **proof by induction** on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
+>
+> 1.  **Base case:** \\P(n_0)\\ holds.
+> 2.  **Inductive step:** for every integer \\n \> n_0\\, if \\P(n - 1)\\ holds, then \\P(n)\\ holds.
+>
+> In the inductive step, the assumption that \\P(n - 1)\\ holds is called the **induction hypothesis**.
+
+> **NOTE:**
+>
+> *Remark 1* (Why the two steps suffice). The base case gives \\P(n_0)\\. The inductive step with \\n = n_0 + 1\\ then gives \\P(n_0 + 1)\\, with \\n = n_0 + 2\\ it gives \\P(n_0 + 2)\\, and so on: each integer \\n \ge n_0\\ is reached after \\n - n_0\\ uses of the inductive step.
+>
+> When \\P(n)\\ is needed only for \\n_0 \le n \le r\\, it is enough to show the inductive step for \\n_0 \< n \le r\\; the same chain then stops at \\P(r)\\.
+
+The following example uses [summation notation](algebra.llms.md#def-summation).
+
+> **NOTE:**
+>
+> **Example 2 (Sum of the first \\n\\ natural numbers)** For every \\n \in \mathbb{N}\\,
+>
+> \\ \sum\_{i=1}^{n} i = \frac{n(n+1)}{2}. \\
+>
+> For example, with \\n = 3\\, \\1 + 2 + 3 = 6\\ and \\\frac{3 \cdot 4}{2} = 6\\. To prove the equation for every \\n\\, let \\P(n)\\ be the equation and use [Definition 2](#def-proof-by-induction) with \\n_0 = 1\\.
+>
+> **Base case, \\n = 1\\.** The sum has one term:
+>
+> \\ \begin{aligned} \sum\_{i=1}^{1} i &= 1 && \text{(definition of a sum)} \end{aligned} \\
+>
+> and the right side is
+>
+> \\ \begin{aligned} \frac{1\\(1+1)}{2} &= \frac{1 \cdot 2}{2} && \text{(} 1 + 1 = 2 \text{)} \\ &= \frac{2}{2} && \text{(} 1 \cdot 2 = 2 \text{)} \\ &= 1. && \text{(} \tfrac{2}{2} = 1 \text{)} \end{aligned} \\
+>
+> So \\P(1)\\ holds.
+>
+> **Inductive step.** Let \\n \ge 2\\, and suppose \\P(n - 1)\\ holds:
+>
+> \\ \sum\_{i=1}^{n-1} i = \frac{(n-1)\\\mathopen{}\left((n-1)+1\right)\mathclose{}}{2}. \\
+>
+> Then
+>
+> \\ \begin{aligned} \sum\_{i=1}^{n} i &= 1 + 2 + \cdots + (n-1) + n && \text{(definition of a sum)} \\ &= \mathopen{}\left(1 + 2 + \cdots + (n-1)\right)\mathclose{} + n && \text{(associative law)} \\ &= \sum\_{i=1}^{n-1} i + n && \text{(definition of a sum)} \\ &= \frac{(n-1)\\\mathopen{}\left((n-1)+1\right)\mathclose{}}{2} + n && \text{(induction hypothesis)} \\ &= \frac{(n-1)\\n}{2} + n && \text{(} (n-1) + 1 = n \text{)} \\ &= \frac{(n-1)\\n}{2} + \frac{2n}{2} && \text{(} n = \tfrac{2n}{2} \text{)} \\ &= \frac{(n-1)\\n + 2n}{2} && \text{(common denominator)} \\ &= \frac{\mathopen{}\left((n-1) + 2\right)\mathclose{}\\n}{2} && \text{(distributive law)} \\ &= \frac{(n+1)\\n}{2} && \text{(} (n-1) + 2 = n + 1 \text{)} \\ &= \frac{n(n+1)}{2}, && \text{(commutative law)} \end{aligned} \\
+>
+> which is \\P(n)\\. By [Definition 2](#def-proof-by-induction), the equation holds for every \\n \in \mathbb{N}\\.
+
+## 6 Further reading
 
 - Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as direct proof, [proof by contradiction](notation.llms.md#def-proof-by-contradiction), and induction.
 - Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) treats proofs as formal derivations in propositional and first-order logic.
