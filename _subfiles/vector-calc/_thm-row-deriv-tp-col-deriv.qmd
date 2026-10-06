@@ -1,14 +1,14 @@
 :::{#thm-row-deriv-tp-col-deriv}
 #### Row and column derivatives are transposes
-$$\deriv{ \vb\'} f(\vb) = \pt{\deriv{ \vb} f(\vb)}$$
+$$\derivf{f(\vb)}{\tp{\vb}} = \tp{\paren{\derivf{f(\vb)}{\vb}}}$$ {#eq-row-deriv-tp-col-deriv}
 
-$$\deriv{ \vb} f(\vb) = \pt{\deriv{ \vb\'} f(\vb)}$$
+$$\derivf{f(\vb)}{\vb} = \tp{\paren{\derivf{f(\vb)}{\tp{\vb}}}}$$ {#eq-col-deriv-tp-row-deriv}
 
 :::
 
 ::: proof
 By @def-vector-derivative and @def-row-vector-derivative,
-entry $j$ of both $\deriv{\vb} f(\vb)$ and $\deriv{\vb\'} f(\vb)$
+entry $j$ of both $\derivf{f(\vb)}{\vb}$ and $\derivf{f(\vb)}{\tp{\vb}}$
 is $\deriv{\beta_j} f(\vb)$;
 the first is a $p \times 1$ column and the second a $1 \times p$ row
 with the same entries in the same order,
@@ -23,9 +23,9 @@ so each is the transpose of the other.
 For $f(\vb) = 3\beta_1 + 5\beta_2$:
 
 $$
-\deriv{\vb} f(\vb) = \sbmat{3 \\ 5},
+\derivf{f(\vb)}{\vb} = \sbmat{3 \\ 5},
 \qquad
-\deriv{\vb\'} f(\vb) = \sbmat{3 & 5},
+\derivf{f(\vb)}{\tp{\vb}} = \sbmat{3 & 5},
 $$
 
 and each is the transpose of the other.
