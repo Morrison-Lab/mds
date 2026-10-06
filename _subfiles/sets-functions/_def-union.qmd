@@ -13,5 +13,7 @@ and let $A_i$ be a set for each $i \in I$.
 The union of the sets $A_i$,
 written $\bigcup_{i \in I} A_i$,
 is the set of elements that are in at least one $A_i$.
+For $I = \cb{1, \ldots, n}$, it is also written $\bigcup_{i=1}^{n} A_i$ or $A_1 \cup \cdots \cup A_n$,
+and for $I = \cb{1, 2, 3, \ldots}$, it is written $\bigcup_{i=1}^{\infty} A_i$.
 
 :::

@@ -2,7 +2,7 @@
 #### $\sigma$-algebra
 
 A **$\sigma$-algebra** on a set $S$
-is a collection $\mathscr{S}$ of [subsets](sets-functions.qmd#def-subset) of $S$
+is a [collection](sets-functions.qmd#def-collection) $\mathscr{S}$ of [subsets](sets-functions.qmd#def-subset) of $S$
 that satisfies:
 
 - $\mathscr{S}$ contains $S$ itself.

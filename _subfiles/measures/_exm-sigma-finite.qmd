@@ -1,0 +1,18 @@
+:::{#exm-sigma-finite}
+#### Finite and $\sigma$-finite measures
+
+- Every finite measure is $\sigma$-finite:
+  take $A_1 = S$ and $A_2 = A_3 = \cdots = \emptyset$,
+  with $\mu(A_1) = \mu(S) < \infty$ and $\mu(\emptyset) = 0$.
+- The counting measure on the die rolls $D$ is finite, with $\mu(D) = 6$.
+- The counting measure on $\set{0, 1, 2, \ldots}$ is not finite,
+  but it is $\sigma$-finite:
+  it is the union of the sets $A_i = \set{0, 1, \ldots, i}$,
+  each with $\mu(A_i) = i + 1 < \infty$.
+- Lebesgue measure on $\reals$ is not finite,
+  since $\lambda(\reals) = \infty$,
+  but it is $\sigma$-finite:
+  $\reals$ is the union of the intervals $A_i = [-i, i]$,
+  each with $\lambda(A_i) = 2i < \infty$.
+
+:::

@@ -1,0 +1,14 @@
+:::{#exm-almost-everywhere}
+#### Non-negative except on the integers
+
+Let $g : \reals \to \reals$ with $g(x) = -1$ when $x$ is an integer
+and $g(x) = x^2$ otherwise.
+The statement "$g(x) \ge 0$" fails exactly for $x \in \mathbb{Z}$,
+and $\lambda(\mathbb{Z}) = 0$ (@exm-lebesgue-measure),
+so $g \ge 0$ holds $\lambda$-almost everywhere,
+though not everywhere.
+
+For a counting measure, only $\emptyset$ has measure zero (@exm-measure-zero),
+so a statement holds almost everywhere only if it holds everywhere.
+
+:::

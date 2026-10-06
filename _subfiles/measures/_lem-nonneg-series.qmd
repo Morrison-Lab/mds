@@ -2,12 +2,12 @@
 #### Sums of non-negative terms
 
 Let $a_1, a_2, \ldots$ be values in $[0, \infty]$,
-with partial sums $s_n \eqdef \sum_{i=1}^{n} a_i$,
+with partial sums $s_n$ (@def-partial-sum),
 where $x + \infty = \infty$ for every $x$ in $[0, \infty]$.
-Then the partial sums are non-decreasing,
+Then the partial sums are [non-decreasing](#def-non-decreasing),
 $s_1 \le s_2 \le \cdots$,
 so their [limit](algebra.qmd#def-sequence-limit),
-the sum $\sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} s_n$,
+the infinite sum $\sum_{i=1}^{\infty} a_i$ (@def-infinite-sum),
 always exists,
 and it is either a finite number or $\infty$.
 
@@ -38,22 +38,5 @@ If it is not bounded above,
 then for every number $M$ some $s_N$ exceeds $M$,
 and so does every later $s_n \ge s_N$;
 the limit is $\infty$.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#rem-countable-additivity-sum-exists}
-#### The sum in countable additivity always has a value
-
-By @lem-nonneg-series,
-the right-hand side of the equation in @def-countable-additivity,
-$\sum_{i=1}^{\infty} \mu(A_i)$,
-always has a value,
-because each $\mu(A_i)$ is in $[0, \infty]$.
-For example, if $\mu(A_i) = 1/2^i$ for each $i$,
-the partial sums are $s_n = 1 - 1/2^n$, and the sum is $1$;
-if $\mu(A_i) = 1$ for each $i$,
-the partial sums are $s_n = n$, and the sum is $\infty$.
 
 :::

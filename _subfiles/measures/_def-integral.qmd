@@ -1,0 +1,28 @@
+:::{#def-integral}
+#### Integral of a real-valued function
+
+Let $(S, \mathscr{S}, \mu)$ be a [measure space](#def-measure-space),
+and let $f : S \to \reals$ be [measurable](#def-measurable-function).
+The **positive part** and **negative part** of $f$ are the non-negative functions
+
+$$
+\ba
+f^{+}(s) &\eqdef \max\cb{f(s), 0} \\
+f^{-}(s) &\eqdef \max\cb{-f(s), 0}
+\ea
+$$
+
+so that $f = f^{+} - f^{-}$ and $\abs{f} = f^{+} + f^{-}$.
+The **integral** of $f$ with respect to $\mu$ is
+
+$$\int_S f \, d\mu \eqdef \int_S f^{+} \, d\mu - \int_S f^{-} \, d\mu,$$
+
+using @def-integral-nonneg for each term,
+when at least one of the two terms is finite;
+otherwise, the integral of $f$ is undefined.
+($f^{+}$, $f^{-}$, and $\abs{f}$ are measurable when $f$ is
+[@billingsley1995probability, Section 13].)
+
+[@billingsley1995probability, Section 15]
+
+:::

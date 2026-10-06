@@ -1,0 +1,10 @@
+:::{#def-sigma-finite}
+#### Finite and $\sigma$-finite measures
+
+Let $(S, \mathscr{S}, \mu)$ be a [measure space](#def-measure-space).
+The measure $\mu$ is **finite** if $\mu(S) < \infty$.
+It is **$\sigma$-finite** if $S$ is the union $\bigcup_{i=1}^{\infty} A_i$
+of a sequence of sets $A_1, A_2, \ldots$ in $\mathscr{S}$
+with $\mu(A_i) < \infty$ for every $i$.
+
+:::
