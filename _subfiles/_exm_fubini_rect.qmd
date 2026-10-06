@@ -6,7 +6,8 @@ Structure adapted from [@larsonCalc11e, Section 14.2, Example 2, pp. 982--983];
 the integrand $x^2 + y^2$ is original, chosen so the integral equals
 $\E{g(X, Y)}$ for $g(x, y) = x^2 + y^2$.
 
-Let $X$ and $Y$ be independent $\operatorname{Uniform}(0, 1)$
+Let $X$ and $Y$ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)
+[$\operatorname{Uniform}(0, 1)$](https://morrison-lab.github.io/pds/random-variables.html#def-uniform)
 [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable),
 with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 $f(x, y) = 1$ on the unit square

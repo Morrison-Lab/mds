@@ -1,0 +1,13 @@
+:::{#exm-jump-discontinuity}
+#### A jump discontinuity, and a discontinuity that is not a jump
+
+- The step function $H$ of @exm-one-sided-limit has a jump discontinuity at $0$:
+  $\lim_{x \to 0^-} H(x) = 0$ and $\lim_{x \to 0^+} H(x) = 1$ both exist, and $0 \ne 1$.
+  The size of the jump is $1 - 0 = 1$.
+- $g(x) = \tfrac{x^2 - 1}{x - 1}$ of @exm-continuous is discontinuous at $1$,
+  because $g(1)$ is not defined,
+  but it does not have a jump discontinuity there:
+  for $x \ne 1$, $g(x) = x + 1$,
+  so both one-sided limits at $1$ equal $1 + 1 = 2$.
+
+:::

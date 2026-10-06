@@ -65,7 +65,8 @@ So $\sigma$-finiteness alone does not make the iterated integrals agree.
 
 #### Positive application of @thm-fubini-tonelli
 
-Let $X$ and $Y$ be independent $\operatorname{Exponential}(1)$
+Let $X$ and $Y$ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)
+[$\operatorname{Exponential}(1)$](https://morrison-lab.github.io/pds/random-variables.html#def-exponential)
 [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable),
 with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf)
 $f(x, y) = e^{-(x+y)}$ for $x, y \ge 0$.

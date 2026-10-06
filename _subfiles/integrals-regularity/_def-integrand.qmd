@@ -1,0 +1,8 @@
+:::{#def-integrand}
+#### Integrand
+
+In an integral such as $\int_a^b f(x)\,dx$ (@def-riemann-integral)
+or $\int f(x)\,dx$ (@def-indefinite-integral),
+the function $f$ being integrated is the **integrand**.
+
+:::

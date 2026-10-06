@@ -1,0 +1,25 @@
+:::{#exm-accumulation-function}
+#### The accumulation function of a constant
+
+Let $f(t) = 2$ on $[0, 3]$, which is Riemann integrable (@exm-integrable-constant).
+For $0 < x \le 3$, the computation of @exm-integrable-constant,
+with the interval $[0, 3]$ replaced by $[0, x]$, gives
+
+$$
+\ba
+F(x)
+&= \int_0^x 2\,dt
+&& \text{(definition of the accumulation function)}
+\\
+&= 2 \cd (x - 0)
+&& \text{(every Riemann sum is } 2 \text{ times the total width } x - 0 \text{)}
+\\
+&= 2x
+&& \text{(subtract)}
+\ea
+$$
+
+and $F(0) = 0 = 2 \cd 0$ too.
+For example, $F(1.5) = 2 \cd 1.5 = 3$, the area of a rectangle of height $2$ and width $1.5$.
+
+:::

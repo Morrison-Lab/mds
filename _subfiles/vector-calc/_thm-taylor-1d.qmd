@@ -3,7 +3,7 @@
 
 Let $a < b$, and let $g$ be a real-valued function on $[a, b]$
 whose derivative $g'$ is [continuous](calculus.qmd#def-continuous) on $[a, b]$
-and whose second derivative $g''$ (@def-second-derivative) exists at every point of $(a, b)$.
+and whose [second derivative](calculus.qmd#def-second-derivative) $g''$ exists at every point of $(a, b)$.
 Then there is a $\tau \in (a, b)$ with
 
 $$

@@ -1,0 +1,21 @@
+:::{#exm-tangent-line}
+#### The tangent line to $x^2$ at $1$
+
+For $f(x) = x^2$ at $c = 1$, $f(1) = 1$ and $f'(1) = 2$ (@exm-derivative), so the tangent line is the graph of
+
+$$
+\ba
+x
+&\mapsto 1 + 2\,(x - 1)
+&& \text{(substitute } f(1) = 1 \text{ and } f'(1) = 2 \text{)}
+\\
+&= 2x - 1
+&& \text{(distribute, and } 1 - 2 = -1 \text{)}
+\ea
+$$
+
+At $x = 1.1$ the tangent line has height $2(1.1) - 1 = 1.2$,
+close to the curve's height $f(1.1) = 1.21$;
+the gap, $1.21 - 1.2 = 0.01$, is $(1.1 - 1)^2$.
+
+:::

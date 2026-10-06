@@ -1,0 +1,13 @@
+:::{#def-difference-quotient}
+#### Difference quotient
+
+Let $f$ be a real-valued function of one variable, defined at $c$ and at $c + h$, with $h \ne 0$.
+The **difference quotient** of $f$ at $c$ with increment $h$ is
+
+$$
+\frac{f(c + h) - f(c)}{h},
+$$
+
+the [slope](algebra.qmd#def-affine-function) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
+
+:::

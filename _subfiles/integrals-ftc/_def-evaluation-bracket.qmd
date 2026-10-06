@@ -1,0 +1,15 @@
+:::{#def-evaluation-bracket}
+#### Evaluation bracket
+
+For a function $F$ and numbers $a$ and $b$ where $F$ is defined,
+the **evaluation bracket** is the difference
+
+$$\sb{F(t)}_{t=a}^{t=b} \eqdef F(b) - F(a).$$
+
+When the variable is clear from the context, it is written $\sb{F(t)}_a^b$.
+With FTC Part 2 (@thm-ftc), $\int_a^b f(t)\,dt = \sb{F(t)}_{t=a}^{t=b}$
+for any antiderivative $F$ of a continuous $f$,
+and computing $F(b) - F(a)$ from the bracket is called **evaluating at the limits**
+(the [limits of integration](notation.qmd#def-lower-upper-limits) $a$ and $b$).
+
+:::
