@@ -1,7 +1,7 @@
 :::{#def-epigraph}
 #### Epigraph
 
-The **epigraph** of $f : \reals^p \to \reals$ is the set of points on or over its graph,
+The **epigraph** of $f : \reals^p \to \reals$ is the set of points on or over its [graph](sets-functions.qmd#def-graph),
 
 $$
 \operatorname{epi} f \eqdef \cb{(\vx, s) : \vx \in \reals^p,\ s \in \reals,\ f(\vx) \le s}.

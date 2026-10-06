@@ -1,0 +1,18 @@
+:::{#exm-sequence-limit}
+#### A convergent sequence and a divergent one
+
+- $a_n = \frac{1}{n}$ converges to $0$.
+  Given $\epsilon > 0$, take $N$ to be any natural number larger than $\frac{1}{\epsilon}$.
+  For every $n \ge N$, $\abs{\frac{1}{n} - 0} = \frac{1}{n} \le \frac{1}{N} < \epsilon$.
+  For example, with $\epsilon = 0.01$, take $N = 101$:
+  every $n \ge 101$ has $\frac{1}{n} \le \frac{1}{101} < 0.01$.
+- $c_n = n$ diverges.
+  For any real number $L$ and $\epsilon = 1$,
+  every $n > L + 1$ has $\abs{n - L} > 1$,
+  so no $N$ works.
+  For example, with $L = 5$, every $n \ge 7$ has $\abs{n - 5} \ge 2$.
+  It diverges to $\infty$:
+  for every real number $M$, every $n \ge N$ has $c_n = n > M$
+  when $N$ is a natural number larger than $M$.
+
+:::

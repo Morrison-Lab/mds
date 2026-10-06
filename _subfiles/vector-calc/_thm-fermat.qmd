@@ -1,7 +1,7 @@
 :::{#thm-fermat}
 #### A minimizer has derivative zero
 
-Let $g$ be a real-valued function on an open interval containing $c$,
+Let $g$ be a [real](notation.qmd#def-real-numbers)-valued function on an [open interval](sets-functions.qmd#def-interval) containing $c$,
 and let $g$ be [differentiable](calculus.qmd#def-differentiable) at $c$.
 If $c$ is a [local minimizer](algebra.qmd#def-local-minimizer) of $g$,
 then $g'(c) = 0$.
@@ -21,7 +21,7 @@ $$
 
 because its numerator is at least $0$ and its denominator is positive.
 As $h \to 0$ from the right, these quotients tend to $g'(c)$
-(the two-sided limit exists, so the one-sided limit equals it),
+(the two-sided limit exists, so the [one-sided limit](calculus.qmd#def-one-sided-limit) equals it),
 and a limit of numbers that are all at least $0$ is at least $0$; so $g'(c) \ge 0$.
 For $-\delta < h < 0$, the numerator is still at least $0$ but the denominator is negative,
 so the quotient is at most $0$, and in the same way, with $h \to 0$ from the left, $g'(c) \le 0$.
@@ -35,7 +35,7 @@ Together, $g'(c) = 0$.
 #### Applying the test, and its limits
 
 - $g(x) = (x - 2)^2$ has its minimizer at $c = 2$, and $g'(2) = 2 (2 - 2) = 0$.
-- The converse fails: $g(x) = x^3$ has $g'(0) = 3 \cdot 0^2 = 0$,
+- The [converse](notation.qmd#def-converse) fails: $g(x) = x^3$ has $g'(0) = 3 \cdot 0^2 = 0$,
   but $0$ is not a local minimizer, since $g(-h) = -h^3 < 0 = g(0)$ for every $h > 0$.
 - Differentiability is needed: $g(x) = \abs{x}$ has its minimizer at $0$,
   but the difference quotient $\abs{h} / h$ is $1$ for $h > 0$ and $-1$ for $h < 0$,

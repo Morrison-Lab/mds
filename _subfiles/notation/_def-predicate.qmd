@@ -1,0 +1,8 @@
+:::{#def-predicate}
+#### Predicate
+
+A **predicate** $P(x)$ is a sentence about a variable $x$
+that becomes a proposition (@def-proposition)
+whenever a value is substituted for $x$.
+
+:::

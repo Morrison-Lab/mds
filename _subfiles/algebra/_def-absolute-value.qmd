@@ -1,0 +1,16 @@
+:::{#def-absolute-value}
+#### Absolute value of a real number
+
+The **absolute value** of a real number $a$ is
+
+$$
+\abs{a} \eqdef \begin{cases}
+a, & a \ge 0 \\
+-a, & a < 0
+\end{cases}
+$$
+
+For real numbers $a$ and $b$,
+$\abs{a - b}$ is the distance between $a$ and $b$ on the number line.
+
+:::

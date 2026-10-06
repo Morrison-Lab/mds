@@ -1,0 +1,10 @@
+:::{#def-associative}
+#### Associative operation
+
+An operation $\star$ on a set $S$ (@def-identity-element)
+is **associative**
+if $(a \star b) \star c = a \star (b \star c)$
+for all $a, b, c \in S$:
+which pair is combined first does not matter.
+
+:::

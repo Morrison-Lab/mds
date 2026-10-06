@@ -1,0 +1,12 @@
+:::{#def-exponential-function}
+#### Exponential function
+
+The **exponential function** $\exp : \reals \to (0, \infty)$ is
+
+$$\expf{x} \eqdef \lim_{n \to \infty} \paren{1 + \frac{x}{n}}^n,$$
+
+the [limit](#def-sequence-limit) of the [sequence](sets-functions.qmd#def-sequence)
+$\paren{1 + \frac{x}{1}}^1, \paren{1 + \frac{x}{2}}^2, \paren{1 + \frac{x}{3}}^3, \ldots$.
+That limit exists for every real number $x$, and it is positive.
+
+:::

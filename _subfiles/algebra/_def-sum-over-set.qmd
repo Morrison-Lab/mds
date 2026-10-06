@@ -1,7 +1,7 @@
 :::{#def-sum-over-set}
 #### Sum over a finite set
 
-Let $A = \cb{x_1, x_2, \ldots, x_k}$ be a finite [set](sets-functions.qmd#def-set)
+Let $A = \cb{x_1, x_2, \ldots, x_k}$ be a [finite](sets-functions.qmd#def-finite-set) [set](sets-functions.qmd#def-set)
 with $k \ge 1$ different elements.
 Let $f$ be a [function](sets-functions.qmd#def-function)
 that gives a number $f(x)$ for each element $x$ of $A$.

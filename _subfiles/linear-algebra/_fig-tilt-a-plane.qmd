@@ -118,7 +118,7 @@ Plot.plot({
 
 :::
 
-The graph of $f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b$, in three dimensions and from above.
+The [graph](sets-functions.qmd#def-graph) of $f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b$, in three dimensions and from above.
 
 :::
 

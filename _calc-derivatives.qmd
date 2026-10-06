@@ -1,3 +1,41 @@
+### Limits and derivatives {#sec-limits-derivatives}
+
+{{< include mds/_subfiles/derivatives/_def-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-one-sided-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-one-sided-limit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-limits.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-differentiable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-differentiable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-derivative.qmd >}}
+
+### Derivative rules {#sec-derivative-rules}
+
 :::{#thm-deriv-const}
 #### Constant rule
 
@@ -31,11 +69,12 @@ $$\deriv{x}ay = a \derivf{y}{x}$$
 :::{#thm-deriv-polynomial}
 #### Power rule
 
-For every real number $q$ and every $x > 0$:
+For every real number $q$ and every $x > 0$,
+the derivative of the [power](algebra.qmd#def-real-power) $x^q$ is:
 
 $$\deriv{x}x^q = qx^{q-1}$$
 
-When $q$ is a positive integer,
+When $q$ is a positive [integer](notation.qmd#def-integers),
 the same formula holds for every real $x$.
 
 :::
@@ -50,7 +89,8 @@ the same formula holds for every real $x$.
 
 #### Derivative of natural logarithm
 
-For every $x > 0$:
+For every $x > 0$,
+the derivative of the [natural logarithm](algebra.qmd#def-natural-log) is:
 
 $$\dlogf{x} = \frac{1}{x} = x^{-1}$$
 :::
@@ -60,7 +100,8 @@ $$\dlogf{x} = \frac{1}{x} = x^{-1}$$
 :::{#thm-deriv-exp}
 #### derivative of exponential
 
-For every real $x$:
+For every real $x$,
+the derivative of the [exponential function](algebra.qmd#def-exponential-function) is:
 
 $$\dexpf{x} = \expf{x}$$
 :::
@@ -113,7 +154,9 @@ $$
 
 or in [Lagrange's notation](https://en.wikipedia.org/wiki/Notation_for_differentiation#Lagrange's_notation),
 if $g$ is differentiable at $x$
-and $f$ is differentiable at $g(x)$:
+and $f$ is differentiable at $g(x)$,
+then for the [composition](sets-functions.qmd#def-composition) $f \circ g$,
+with inner function $g$ and outer function $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::

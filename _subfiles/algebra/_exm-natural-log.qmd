@@ -1,0 +1,9 @@
+:::{#exm-natural-log}
+#### Natural logarithms
+
+- $\logf{1} = 0$, because $\expf{0} = 1$ (@exm-exponential-function).
+- $\logf{e} = 1$, because $\expf{1} = e$ (@def-euler-number).
+- $\logf{0}$ and $\logf{-2}$ are not defined,
+  because $\expf{y} > 0$ for every real $y$.
+
+:::

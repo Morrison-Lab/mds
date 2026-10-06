@@ -1,0 +1,11 @@
+:::{#exm-euler-number}
+#### Euler's number is irrational
+
+$e = 2.71828\ldots$ is an
+[irrational number](notation.qmd#def-irrational-numbers),
+so no fraction equals it exactly.
+The fraction $\frac{19}{7} = 2.714\ldots$ is close,
+but $\frac{19}{7} \ne e$
+(see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+
+:::

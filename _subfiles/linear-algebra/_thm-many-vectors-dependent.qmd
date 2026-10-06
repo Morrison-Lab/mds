@@ -20,7 +20,7 @@ then $c_2 \neq 0$, and $v_2 v_1 - v_1 v_2 = 0$.
 
 **Inductive step.**
 Let $p \ge 2$,
-assume the theorem holds for vectors in $\reals^{p-1}$,
+assume the [theorem](notation.qmd#def-theorem) holds for vectors in $\reals^{p-1}$,
 and take $k > p$ vectors in $\reals^p$.
 Write $v_{i,p}$ for the last entry of $\vecf{v}_i$.
 

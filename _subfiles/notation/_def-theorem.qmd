@@ -1,0 +1,24 @@
+:::{#def-theorem}
+#### Result, theorem, lemma, and corollary
+
+A **result** is a proposition (@def-proposition)
+that has a proof (@def-proof).
+These notes label each result by its role:
+
+- a **theorem** is a result of interest in its own right;
+- a **lemma** is a result proved mainly as a step in the proof of another result;
+- a **corollary** is a result that follows from a theorem
+  with little extra work.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-proposition-as-result}
+#### "Proposition" as a kind of result
+
+Some sources also call a result of moderate importance a "proposition".
+In these notes, "proposition" always means a sentence that is true or false
+(@def-proposition), whether or not it has been proved.
+
+:::

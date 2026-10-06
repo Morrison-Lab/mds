@@ -167,6 +167,7 @@ $\cb{\vzero}$ (@def-span, @exm-dimension).
 - For $\mathcal{S}_1 = \mathcal{S}_2 = \operatorname{span}\cb{(1, 0, 0)}$,
   the sum is the same line,
   because $a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)$,
-  so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$.
+  so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$,
+  a [strict inequality](algebra.qmd#def-strict-inequality).
 
 :::

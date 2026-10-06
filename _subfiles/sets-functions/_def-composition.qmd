@@ -1,0 +1,13 @@
+:::{#def-composition}
+#### Composition
+
+Let $g : A \to B$ and $f : B \to C$ be [functions](#def-function).
+The **composition** of $f$ and $g$
+is the function $f \circ g : A \to C$ defined by
+
+$$(f \circ g)(a) \eqdef f(g(a)) \quad \text{for each } a \in A.$$
+
+In $f \circ g$, $g$ is the **inner function**, applied first,
+and $f$ is the **outer function**, applied to the result.
+
+:::

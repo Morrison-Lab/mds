@@ -6,7 +6,7 @@ The absolute-value function $f(x) = \abs{x}$ is continuous at $x = 0$
 but it is not differentiable at $x = 0$:
 the left-derivative is $-1$ and the right-derivative is $+1$.
 
-This counterexample shows that the converse of @thm-diff-implies-cont fails:
+This [counterexample](notation.qmd#def-counterexample) shows that the [converse](notation.qmd#def-converse) of @thm-diff-implies-cont fails:
 continuity does not imply differentiability.
 See @fig-abs-value.
 

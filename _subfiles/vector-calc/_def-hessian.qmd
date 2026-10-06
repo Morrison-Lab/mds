@@ -5,13 +5,26 @@ Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$
 whose first partial derivatives exist on an open ball around $\vx$
 and whose second partial derivatives exist at $\vx$.
 The **Hessian matrix** of $f$ at $\vx$ is the derivative (@def-vector-valued-derivative)
-of the gradient $\deriv{\vx} f(\vx)$ (@def-vector-derivative):
+of the transposed gradient $\tp{\paren{\deriv{\vx} f(\vx)}}$ (@def-vector-derivative):
 
 $$
 \underbrace{\matr{H}_f(\vx)}_{p \times p} \eqdef \deriv{\vx} \tp{\paren{\deriv{\vx} f(\vx)}}.
-$$
+$$ {#eq-hessian}
 
-By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$, its $(i, j)$ entry is
+By @thm-row-deriv-tp-col-deriv, the transposed gradient is the row-vector derivative
+$\derivf{f(\vx)}{\tp{\vx}}$ (@def-row-vector-derivative),
+so the Hessian can also be written
+
+$$
+\matr{H}_f(\vx) = \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}} = \xderivf{f(\vx)}{\vx}{\tp{\vx}}.
+$$ {#eq-hessian-row}
+
+Both forms follow the shape rule of matrix multiplication (@rem-row-derivative-shape):
+the $p \times 1$ column operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row,
+giving a $p \times p$ matrix.
+
+By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$,
+the $(i, j)$ entry of the Hessian is
 
 $$
 \sb{\matr{H}_f(\vx)}_{ij} = \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
@@ -25,6 +38,7 @@ $$
 #### A Hessian matrix
 
 Let $f(\vx) = e^{2x_1 + x_2} - x_1$ for $\vx = \tp{(x_1, x_2)}$,
+where $e$ is [Euler's number](algebra.qmd#def-euler-number),
 and write $u = 2x_1 + x_2$.
 By the [chain rule](calculus.qmd#thm-chain-rule),
 $\deriv{x_1} e^{u} = 2 e^{u}$ and $\deriv{x_2} e^{u} = e^{u}$, so
@@ -57,7 +71,8 @@ $\matr{H}_f(\vzero) = \sbmat{ 4 & 2 \\ 2 & 1 }$.
 :::{#exm-hessian-missing}
 #### A function with a gradient but no Hessian at a point
 
-Let $f(\vx) = x_1 \abs{x_1}$ for $\vx = \tp{(x_1, x_2)}$.
+Let $f(\vx) = x_1 \abs{x_1}$ for $\vx = \tp{(x_1, x_2)}$,
+where $\abs{\cdot}$ is the [absolute value](algebra.qmd#def-absolute-value).
 For $x_1 > 0$, $f = x_1^2$ and $\deriv{x_1} f = 2 x_1$;
 for $x_1 < 0$, $f = -x_1^2$ and $\deriv{x_1} f = -2 x_1$;
 and at $x_1 = 0$ the difference quotient is $h \abs{h} / h = \abs{h} \to 0$.

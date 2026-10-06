@@ -4,7 +4,7 @@
 This section is adapted from the multivariate calculus and optimality-condition parts of @zhou2024optim,
 used under the MIT License
 (see the license text in [Linear Algebra](linear-algebra.qmd#sec-subspaces)).
-The source states the second-order Taylor approximation and the optimality conditions without proof;
+The source states the second-order Taylor approximation and the optimality conditions without [proof](notation.qmd#def-proof);
 here they are proved from the one-variable Taylor theorem,
 and the approximation is made exact by evaluating the Hessian at a point between $\vecf{z}$ and $\vecf{z} + \vecf{h}$.
 The source calls points with zero gradient critical points;

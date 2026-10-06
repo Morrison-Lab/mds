@@ -1,0 +1,16 @@
+:::{#exm-exponential-function}
+#### Approximating $\expf{1}$
+
+For $x = 1$, the terms $\paren{1 + \frac{1}{n}}^n$ are:
+
+| $n$ | $\paren{1 + \frac{1}{n}}^n$ |
+|----:|:----------------------------|
+| $1$ | $2$ |
+| $10$ | $2.59374\ldots$ |
+| $100$ | $2.70481\ldots$ |
+| $1000$ | $2.71692\ldots$ |
+
+They approach $\expf{1} = 2.71828\ldots$.
+For $x = 0$, every term is $\paren{1 + 0}^n = 1$, so $\expf{0} = 1$.
+
+:::
