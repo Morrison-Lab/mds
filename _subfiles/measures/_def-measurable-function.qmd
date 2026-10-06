@@ -1,7 +1,7 @@
 :::{#def-measurable-function}
 #### Measurable function
 
-Let $(S, \mathscr{S})$ be a [measurable space](#def-measure-space).
+Let $(S, \mathscr{S})$ be a [measurable space](#def-measurable-space).
 A [function](sets-functions.qmd#def-function) $f : S \to \reals$
 is **measurable** (with respect to $\mathscr{S}$)
 if, for every real number $c$,

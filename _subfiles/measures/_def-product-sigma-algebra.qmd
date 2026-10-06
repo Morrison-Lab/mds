@@ -1,7 +1,7 @@
 :::{#def-product-sigma-algebra}
 #### Product $\sigma$-algebra
 
-Let $(S, \mathscr{S})$ and $(T, \mathscr{T})$ be [measurable spaces](#def-measure-space).
+Let $(S, \mathscr{S})$ and $(T, \mathscr{T})$ be [measurable spaces](#def-measurable-space).
 A **measurable rectangle** is a [Cartesian product](sets-functions.qmd#def-cartesian-product)
 $A \times B$ with $A \in \mathscr{S}$ and $B \in \mathscr{T}$.
 The **product $\sigma$-algebra** $\mathscr{S} \otimes \mathscr{T}$
