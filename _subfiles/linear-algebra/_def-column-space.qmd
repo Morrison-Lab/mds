@@ -102,7 +102,7 @@ $$
 \cb{\vecf{x} \in \reals^n : \matr{A} \vecf{x} = \vzero_m},
 $$
 
-the set of solutions of $\matr{A} \vecf{x} = \vzero_m$.
+the set of [solutions](#def-linear-system) of the linear system $\matr{A} \vecf{x} = \vzero_m$.
 It is also called the **kernel** of $\matr{A}$.
 The **left null space** of $\matr{A}$ is $\mathcal{N}(\tp{\matr{A}})$,
 a set of vectors in $\reals^m$.

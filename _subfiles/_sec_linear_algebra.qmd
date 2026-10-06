@@ -20,6 +20,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-scalar.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-real-vector-valued.qmd >}}
 
 {{< slidebreak >}}
@@ -41,6 +45,10 @@
 {{< include mds/_subfiles/linear-algebra/_def-zero-vector.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-zero-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-mean.qmd >}}
 
 {{< slidebreak >}}
 
@@ -73,6 +81,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-euclidean-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-unit-vector.qmd >}}
 
 {{< slidebreak >}}
 
@@ -172,11 +184,29 @@
 
 {{< include mds/_subfiles/linear-algebra/_sol-shape-rule.qmd >}}
 
+### Square and identity matrices
+
+{{< include mds/_subfiles/linear-algebra/_def-square-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-main-diagonal.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-identity-matrix.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
+
 ### Matrix-vector multiplication
 
 {{< include mds/_subfiles/linear-algebra/_def-matvec-mult.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-matvec-mult.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-linear-system.qmd >}}
 
 ### Linear and affine maps
 
@@ -324,6 +354,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-coordinates.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-basis-size.qmd >}}
 
 {{< slidebreak >}}
@@ -356,6 +390,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-gram-matrix.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
 
 ### Rank-nullity and rank factorization {#sec-rank-nullity}
@@ -377,6 +415,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-rank-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-affine-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-hyperplane-subspace.qmd >}}
 
 {{< slidebreak >}}
 
@@ -476,6 +522,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-cosine-sine.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
 
 ### Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
@@ -522,21 +572,11 @@
 
 {{< include mds/_subfiles/linear-algebra/_note-special-matrices-intro.qmd >}}
 
-{{< include mds/_subfiles/linear-algebra/_def-square-matrix.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_def-matrix-order.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-matrix-power.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/linear-algebra/_def-identity-matrix.qmd >}}
-
-{{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
 
 {{< slidebreak >}}
 
@@ -869,6 +909,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-pd-operations.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-block-matrix.qmd >}}
 
 {{< slidebreak >}}
 

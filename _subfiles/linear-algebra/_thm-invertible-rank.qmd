@@ -1,8 +1,9 @@
 :::{#thm-invertible-rank}
-#### A square matrix is invertible exactly when it has full rank
+#### A square matrix is invertible exactly when it has full column rank
 
 An $n \times n$ matrix $\matr{A}$ is invertible (@def-invertible-matrix)
-exactly when $\operatorname{rank}(\matr{A}) = n$,
+exactly when $\operatorname{rank}(\matr{A}) = n$
+(full column rank, @def-full-column-rank),
 that is, exactly when $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$.
 
 :::

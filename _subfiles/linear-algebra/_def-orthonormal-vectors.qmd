@@ -3,7 +3,7 @@
 
 A set of vectors $\{\vx_1, \vx_2, \ldots, \vx_k\}$ is **orthonormal** if
 the vectors are mutually orthogonal (@def-orthogonal-vectors)
-and each has norm $1$ (@def-euclidean-norm), that is, unit length:
+and each has norm $1$ (@def-euclidean-norm), that is, [unit length](#def-unit-vector):
 
 $$\vx_i \cdot \vx_j =
 \begin{cases}

@@ -1,0 +1,39 @@
+:::{#def-gram-matrix}
+#### Gram matrix
+
+The **Gram matrix** of an $m \times n$ matrix $\matr{A}$
+is the $n \times n$ matrix $\tp{\matr{A}} \matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gram-matrix}
+#### A Gram matrix and its entries
+
+Let $\matr{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}$,
+with columns $\vecf{a}_1 = (1, 1, 0)$ and $\vecf{a}_2 = (0, 1, 1)$. Then
+
+$$
+\ba
+\tp{\matr{A}} \matr{A}
+&= \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix}
+\begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}
+&& \text{(@def-matrix-transpose)}
+\\
+&= \begin{bmatrix}
+1 \cd 1 + 1 \cd 1 + 0 \cd 0 & 1 \cd 0 + 1 \cd 1 + 0 \cd 1 \\
+0 \cd 1 + 1 \cd 1 + 1 \cd 0 & 0 \cd 0 + 1 \cd 1 + 1 \cd 1
+\end{bmatrix}
+&& \text{(@def-matrix-mult)}
+\\
+&= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.
+&& \text{(multiply and add)}
+\ea
+$$
+
+Row $i$ of $\tp{\matr{A}}$ is column $i$ of $\matr{A}$,
+so entry $(i, j)$ of the Gram matrix is the dot product $\vecf{a}_i \cdot \vecf{a}_j$:
+for instance, $\vecf{a}_1 \cdot \vecf{a}_2 = 0 + 1 + 0 = 1$ is entry $(1, 2)$.
+
+:::

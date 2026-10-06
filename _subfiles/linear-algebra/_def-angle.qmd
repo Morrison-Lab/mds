@@ -2,7 +2,7 @@
 #### Angle between two vectors
 
 The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
-is the unique number $\theta \in [0, \pi]$ such that
+is the unique number $\theta \in [0, \pi]$ whose cosine (@def-cosine-sine) satisfies
 
 $$
 \cos\theta = \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.

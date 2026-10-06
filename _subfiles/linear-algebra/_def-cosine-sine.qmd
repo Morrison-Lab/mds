@@ -1,0 +1,33 @@
+:::{#def-cosine-sine}
+#### Cosine and sine
+
+The *unit circle* is the set of points $(x_1, x_2)$ in the plane with $x_1^2 + x_2^2 = 1$,
+and $\pi \approx 3.14159$ is half of its circumference.
+For a real number $\theta$, start at the point $(1, 0)$
+and move a distance $\abs{\theta}$ along the unit circle,
+counterclockwise if $\theta \ge 0$ and clockwise if $\theta < 0$.
+The point reached is $(\cos\theta, \sin\theta)$:
+its first coordinate is the **cosine** of $\theta$,
+and its second coordinate is the **sine** of $\theta$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-cosine-sine}
+#### Cosines and sines of some angles
+
+- $\theta = 0$ stays at $(1, 0)$, so $\cos 0 = 1$ and $\sin 0 = 0$.
+- $\theta = \pi$ goes half way around the circle, to $(-1, 0)$,
+  so $\cos\pi = -1$ and $\sin\pi = 0$.
+- $\theta = \pi/2$ goes a quarter of the way round, to $(0, 1)$,
+  so $\cos(\pi/2) = 0$ and $\sin(\pi/2) = 1$.
+- $\theta = \pi/4$ goes an eighth of the way round,
+  to the point of the circle with $x_1 = x_2 > 0$.
+  There $x_1^2 + x_1^2 = 1$, so $x_1^2 = \tfrac{1}{2}$ and $x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071$:
+  $\cos(\pi/4) = \sin(\pi/4) = \tfrac{1}{\sqrt{2}}$.
+
+Angles are also measured in *degrees*, with a full turn of $2\pi$ equal to $360$ degrees,
+so $\pi/2$ is $90$ degrees and $\pi/4$ is $45$ degrees.
+
+:::

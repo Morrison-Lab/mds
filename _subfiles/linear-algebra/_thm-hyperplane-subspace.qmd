@@ -1,0 +1,127 @@
+:::{#thm-hyperplane-subspace}
+#### A hyperplane is a translated subspace of dimension $p - 1$
+
+Let $\vec{w} \in \reals^p$ be nonzero, let $b \in \reals$,
+let $\mathcal{H} = \cb{\vx \in \reals^p : \vec{w}^\top \vx + b = 0}$ be the hyperplane
+with normal vector $\vec{w}$ and offset $b$ (@def-hyperplane),
+and let $\mathcal{H}_0 = \cb{\vx \in \reals^p : \vec{w}^\top \vx = 0}$
+be the hyperplane with the same normal vector and offset $0$.
+
+1. $\mathcal{H}_0$ is a subspace of $\reals^p$ (@def-subspace) of dimension $p - 1$ (@def-dimension).
+2. $\mathcal{H}$ is not empty, and for any $\vx_0 \in \mathcal{H}$,
+   $\mathcal{H} = \cb{\vx_0 + \vecf{s} : \vecf{s} \in \mathcal{H}_0}$,
+   so $\mathcal{H}$ is an affine subspace (@def-affine-subspace).
+3. For any $\vx, \vy \in \mathcal{H}$,
+   the normal vector is orthogonal to their difference: $\vec{w} \perp (\vx - \vy)$
+   (@def-orthogonal-vectors).
+
+:::
+
+::: proof
+
+Here $\vec{w}^\top$ is a $1 \times p$ matrix, and $\vec{w}^\top \vx = \vec{w} \cdot \vx$ (@exm-dot-product-matmul).
+
+**Part 1.**
+$\mathcal{H}_0$ is the null space $\mathcal{N}(\vec{w}^\top)$ (@def-null-space),
+so it is a subspace (@thm-null-space-subspace).
+The $p$ columns of $\vec{w}^\top$ are the numbers $w_1, \ldots, w_p$.
+Some $w_j \ne 0$, because $\vec{w} \ne \vzero$,
+and that column on its own is linearly independent ($c\,w_j = 0$ forces $c = 0$),
+so $\operatorname{rank}(\vec{w}^\top) \ge 1$ (@def-rank);
+and $\operatorname{rank}(\vec{w}^\top) \le \min\cb{1, p} = 1$ (@cor-rank-bound).
+So
+
+$$
+\ba
+\dim(\mathcal{H}_0)
+&= \operatorname{nullity}(\vec{w}^\top)
+&& \text{(@def-nullity)}
+\\
+&= p - \operatorname{rank}(\vec{w}^\top)
+&& \text{(@thm-rank-nullity, for the } p \text{ columns of } \vec{w}^\top \text{)}
+\\
+&= p - 1.
+&& \text{(the rank is } 1 \text{)}
+\ea
+$$
+
+**Part 2.**
+$\vec{w} \cdot \vec{w} = w_1^2 + \cdots + w_p^2 > 0$, because some $w_j \ne 0$.
+So $\vx^* \eqdef -\frac{b}{\vec{w} \cdot \vec{w}}\,\vec{w}$ is defined, and
+
+$$
+\ba
+\vec{w}^\top \vx^* + b
+&= -\frac{b}{\vec{w} \cdot \vec{w}}\,(\vec{w}^\top \vec{w}) + b
+&& \text{(@thm-scalar-matmul)}
+\\
+&= -b + b
+&& \text{(} \vec{w}^\top \vec{w} = \vec{w} \cdot \vec{w} \text{)}
+\\
+&= 0,
+&& \text{(arithmetic)}
+\ea
+$$
+
+so $\vx^* \in \mathcal{H}$, and $\mathcal{H}$ is not empty.
+Now take any $\vx_0 \in \mathcal{H}$, so $\vec{w}^\top \vx_0 = -b$.
+For any $\vx \in \reals^p$,
+
+$$
+\ba
+\vec{w}^\top (\vx - \vx_0)
+&= \vec{w}^\top \vx - \vec{w}^\top \vx_0
+&& \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
+\\
+&= \vec{w}^\top \vx - (-b)
+&& \text{(} \vx_0 \in \mathcal{H} \text{)}
+\\
+&= \vec{w}^\top \vx + b,
+&& \text{(arithmetic)}
+\ea
+$$
+
+so $\vx \in \mathcal{H}$ exactly when $\vx - \vx_0 \in \mathcal{H}_0$,
+that is, exactly when $\vx = \vx_0 + \vecf{s}$ with $\vecf{s} = \vx - \vx_0 \in \mathcal{H}_0$.
+$\mathcal{H}_0$ is a subspace (part 1),
+so $\mathcal{H}$ has the form in @def-affine-subspace.
+
+**Part 3.**
+For $\vx, \vy \in \mathcal{H}$, both $\vec{w}^\top \vx$ and $\vec{w}^\top \vy$ equal $-b$, so
+
+$$
+\ba
+\vec{w} \cdot (\vx - \vy)
+&= \vec{w}^\top \vx - \vec{w}^\top \vy
+&& \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
+\\
+&= (-b) - (-b)
+&& \text{(} \vx, \vy \in \mathcal{H} \text{)}
+\\
+&= 0.
+&& \text{(arithmetic)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-hyperplane-subspace}
+#### The plane $x_1 + x_2 + x_3 = 1$ in $\reals^3$
+
+Take $\vec{w} = (1, 1, 1)$ and $b = -1$,
+so $\mathcal{H} = \cb{\vx : x_1 + x_2 + x_3 - 1 = 0}$,
+the plane that @exm-subspace-zero showed is not a subspace.
+By part 1, $\mathcal{H}_0 = \cb{\vx : x_1 + x_2 + x_3 = 0}$ is a subspace of dimension $3 - 1 = 2$.
+
+- $\vx_0 = (1, 0, 0)$ is in $\mathcal{H}$, since $1 + 0 + 0 - 1 = 0$,
+  and so is $\vy = (0, 1, 0)$.
+- Their difference $\vy - \vx_0 = (-1, 1, 0)$ has entries summing to $-1 + 1 + 0 = 0$,
+  so it is in $\mathcal{H}_0$, and $\vy = \vx_0 + (-1, 1, 0)$, as part 2 says.
+- $\vec{w} \cdot (-1, 1, 0) = -1 + 1 + 0 = 0$, as part 3 says.
+- The point built in the proof is
+  $\vx^* = -\frac{-1}{3}\,(1, 1, 1) = \paren{\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3}}$,
+  and $\tfrac{1}{3} + \tfrac{1}{3} + \tfrac{1}{3} - 1 = 0$.
+
+:::
