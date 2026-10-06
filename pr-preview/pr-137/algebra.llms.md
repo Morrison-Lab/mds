@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 16:19:24 (PDT)
+Last modified: 2026-10-05 17:19:28 (PDT)
 
 ## 1 Equalities
 
@@ -677,13 +677,12 @@ In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is
 > *Remark 13* (Tarski’s high school identities). Restricted to positive integers, the following results are [Tarski’s eleven “high school” identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
 >
 > - sums are symmetric and associative ([Theorem 9](#thm-sum-symmetric), [Theorem 10](#thm-sum-assoc));
-> - multiplying by 1 changes nothing ([Theorem 11](#thm-mult-one));
-> - products are symmetric and associative ([Theorem 12](#thm-prod-symmetric), [Theorem 13](#thm-prod-assoc));
-> - multiplication is distributive ([Theorem 15](#thm-mult-distr));
-> - \\1^b = 1\\ and \\a^1 = a\\ ([Theorem 23](#thm-power-one));
-> - the power of a sum, of a product, and of a power ([Theorem 24](#thm-power-sum), [Theorem 25](#thm-power-product), [Theorem 26](#thm-double-exp)).
+> - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 11](#thm-mult-one), [Theorem 12](#thm-prod-symmetric), [Theorem 13](#thm-prod-assoc), [Theorem 15](#thm-mult-distr));
+> - \\1^b = 1\\, \\a^1 = a\\, and the power of a sum, of a product, and of a power ([Theorem 23](#thm-power-one), [Theorem 24](#thm-power-sum), [Theorem 25](#thm-power-product), [Theorem 26](#thm-double-exp)).
+
+> **NOTE:**
 >
-> Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from these eleven. It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
+> *Remark 14* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 13](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
