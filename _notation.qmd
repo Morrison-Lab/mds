@@ -17,11 +17,11 @@ and the alternatives you may meet in other sources.
 | $\mu$       | mean                                             | `\mu`
 | $\Expp$     | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)   | `\mathbb{E}`
 | $x^{\top}$  | transpose of $x$                                 | `x^{\top}`
-| $'$         | transpose or derivative[^3]                      | `'`
+| $'$         | transpose or [derivative](calculus.qmd#def-derivative)[^3] | `'`
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | therefore, thus                                  | `\therefore`
 | $\eta$      | [linear component of a GLM][eta]                 | `\eta`
-| $\floor{x}$ | floor of $x$: largest integer less than or equal to $x$ | `\lfloor x \rfloor`
+| $\floor{x}$ | floor of $x$: largest [integer](#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
 | $\ceil{x}$  | ceiling of $x$: smallest integer greater than or equal to $x$ | `\lceil x \rceil`
 | $\indic{A}(x)$, $\indicp{P}$ | indicator function (@sec-indicator-functions): $1$ if condition holds, $0$ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
@@ -54,6 +54,22 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/notation/_def-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/notation/_def-natural-numbers.qmd >}}
 
 {{< slidebreak >}}
@@ -67,6 +83,30 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/notation/_note-natural-numbers-other-conventions.qmd >}}
+
+## Rational, real, and irrational numbers {#sec-notation-reals}
+
+{{< include mds/_subfiles/notation/_def-rational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-rational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-real-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-real-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-irrational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-irrational-numbers.qmd >}}
 
 ## Percent sign ("%")
 
@@ -105,7 +145,71 @@ We can use any of:
 
 to denote logical entailments (deductive consequences).
 
-Let's save $\rightarrow$ (`\rightarrow`) for convergence results.
+Let's save $\rightarrow$ (`\rightarrow`) for [convergence](calculus.qmd#def-sequence-limit) results.
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-proposition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-proposition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-predicate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-predicate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-theorem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-theorem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-counterexample.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-counterexample.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-converse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-converse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-necessary-sufficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-necessary-sufficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_def-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-proof-by-contradiction.qmd >}}
 
 ## Indicator functions {#sec-indicator-functions}
 

@@ -1,0 +1,7 @@
+:::{#def-irrational-numbers}
+#### Irrational numbers
+
+An **irrational number** is a real number (@def-real-numbers)
+that is not rational (@def-rational-numbers).
+
+:::

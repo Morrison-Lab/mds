@@ -211,7 +211,7 @@ The primary advantage of the Iverson bracket is algebraic conciseness:
 it turns a sum or integral over a subset
 into a sum or integral over a larger, fixed set.
 For example,
-if $U$ is a finite set that contains $A$, then:
+if $U$ is a [finite set](sets-functions.qmd#def-finite-set) that contains $A$, then:
 
 $$
 \sum_{x \in A} f(x) = \sum_{x \in U} f(x) [x \in A]
@@ -223,7 +223,7 @@ both sides equal $2 + 4 = 6$.
 However,
 in statistics and epidemiology,
 square brackets are already heavily overloaded:
-they denote closed intervals $[a, b]$,
+they denote [closed intervals](sets-functions.qmd#def-interval) $[a, b]$,
 conditional expectations $\Expp[Y \mid X]$,
 and matrix delimiters.
 To prevent visual confusion with expectation brackets or intervals,
@@ -266,7 +266,7 @@ and the information matrices ($\oinf$, $\einf$).
 Indicator functions translate logical operations on events into ordinary arithmetic on real numbers:
 
 For subsets $A$ and $B$ of $\Omega$,
-with complement $A^c \eqdef \Omega \setminus A$,
+with [complement](sets-functions.qmd#def-complement) $A^c \eqdef \Omega \setminus A$,
 and for every $x \in \Omega$:
 
 - **Intersection ("and"):**
@@ -286,7 +286,7 @@ and for every $x \in \Omega$:
   \Expp[\indic{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
   $$
 
-This fundamental identity connects probability theory directly to linear expectation.
+This fundamental [identity](algebra.qmd#def-identity) connects probability theory directly to linear expectation.
 It provides the mathematical foundation for empirical proportions,
 survival curve estimators,
 and regression models for binary outcomes.

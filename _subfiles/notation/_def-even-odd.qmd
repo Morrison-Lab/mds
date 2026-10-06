@@ -1,0 +1,9 @@
+:::{#def-even-odd}
+#### Even and odd integers
+
+An integer (@def-integers) $n$ is **even**
+if $n = 2k$ for some integer $k$,
+and **odd**
+if $n = 2k + 1$ for some integer $k$.
+
+:::

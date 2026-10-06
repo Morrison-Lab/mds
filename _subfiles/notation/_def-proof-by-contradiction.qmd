@@ -1,0 +1,11 @@
+:::{#def-proof-by-contradiction}
+#### Proof by contradiction
+
+A **proof by contradiction** of a proposition $P$
+assumes that $P$ is false,
+and derives from that assumption a proposition that is known to be false.
+Since a true assumption cannot lead to a false proposition,
+the assumption that $P$ is false must itself be false,
+so $P$ is true.
+
+:::
