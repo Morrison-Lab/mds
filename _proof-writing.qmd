@@ -105,7 +105,7 @@ and the right side is $\frac{1 \cdot 2}{2} = 1$.
 Then
 
 $$
-\begin{aligned}
+\ba
 \sum_{i=1}^{n+1} i
 &= \sum_{i=1}^{n} i + (n + 1)
 && \text{(split off the last term)}
@@ -121,7 +121,7 @@ $$
 && \text{(reorder the factors)}
 \\&= \frac{(n + 1)\,((n + 1) + 1)}{2}
 && \text{(write } n + 2 \text{ as } (n + 1) + 1 \text{)}
-\end{aligned}
+\ea
 $$
 
 which is the claim for $n + 1$.
