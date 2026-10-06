@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:16:07 (PDT)
+Last modified: 2026-10-05 20:30:02 (PDT)
 
 ## 1 Equalities
 
@@ -12,7 +12,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 1 (Transitive relation)** A relation \\\sim\\ on a set \\S\\ is a rule that, for each pair \\a, b \in S\\, says whether \\a \sim b\\ holds; for example, \\=\\, \\\<\\ and \\\le\\ are relations on \\\mathbb{R}\\. The relation \\\sim\\ is **transitive** if, for all \\a, b, c \in S\\, \\a \sim b\\ and \\b \sim c\\ together imply \\a \sim c\\.
+> **Definition 1 (Transitive relation)** Let \\\sim\\ be a [relation](sets-functions.llms.md#def-relation) on a set \\S\\. The relation \\\sim\\ is **transitive** if, for all \\a, b, c \in S\\, \\a \sim b\\ and \\b \sim c\\ together imply \\a \sim c\\.
 
 > **NOTE:**
 >
@@ -86,7 +86,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > - \\a^0 \stackrel{\text{def}}{=}1\\, including \\0^0 = 1\\ by convention;
 > - \\a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\\, when \\a \ne 0\\.
 >
-> [Definition 44](#def-real-power) extends powers to real exponents when the base is positive.
+> [Definition 45](#def-real-power) extends powers to real exponents when the base is positive.
 
 > **NOTE:**
 >
@@ -678,26 +678,34 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 30 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up. Follow-up is the time during which a study observes its participants, and person-years add up that time over all participants: \\10\\ people followed for \\2\\ years each give \\20\\ person-years. For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
+> **Definition 30 (Follow-up and person-years)** In a study that observes participants over time, a participant’s **follow-up** is the length of time the study observes that participant, and the study’s **person-years** are the sum of the follow-up times of all participants, measured in years.
+
+> **NOTE:**
+>
+> **Example 26 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+
+> **NOTE:**
+>
+> **Definition 31 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up ([Definition 30](#def-person-years)). For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
 
 cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 31 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 32 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Example 26 (A ratio, and a quotient that is not one)**  
+> **Example 27 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
 
 > **NOTE:**
 >
-> **Definition 32 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 33 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -705,18 +713,18 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 27 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 28 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
 
 > **NOTE:**
 >
-> **Definition 33 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 34 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 > **NOTE:**
 >
-> **Example 28 (Proportional and non-proportional functions)**  
+> **Example 29 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{6x^2}{2x^2} = 3\\, which does not depend on \\x\\.
 > - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{x + 1}{x} = \tfrac{x}{x} + \tfrac{1}{x} = 1 + \tfrac{1}{x}\\, which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
@@ -742,18 +750,18 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 34 (Constant function)** A [function](sets-functions.llms.md#def-function) \\f : A \to B\\ is **constant** if there is some \\c \in B\\ with \\f(x) = c\\ for all \\x \in A\\.
+> **Definition 35 (Constant function)** A [function](sets-functions.llms.md#def-function) \\f : A \to B\\ is **constant** if there is some \\c \in B\\ with \\f(x) = c\\ for all \\x \in A\\.
 
 > **NOTE:**
 >
-> **Example 29 (Constant and non-constant functions)**  
+> **Example 30 (Constant and non-constant functions)**  
 >
 > - \\f(x) = 7\\ on \\\mathbb{R}\\ is constant, with \\c = 7\\.
 > - \\f(x) = x^2\\ on \\\mathbb{R}\\ is not constant: \\f(0) = 0\\ but \\f(1) = 1\\.
 
 > **NOTE:**
 >
-> **Definition 35 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The constants \\a_0, a_1, \ldots, a_n\\ are the **coefficients** of \\f\\, with \\a_k\\ the coefficient of \\x^k\\, and the [terms](#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
+> **Definition 36 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The constants \\a_0, a_1, \ldots, a_n\\ are the **coefficients** of \\f\\, with \\a_k\\ the coefficient of \\x^k\\, and the [terms](#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
 
 > **NOTE:**
 >
@@ -761,11 +769,11 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 36 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
+> **Definition 37 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
 
 > **NOTE:**
 >
-> **Example 30 (Degrees of some polynomials)**  
+> **Example 31 (Degrees of some polynomials)**  
 >
 > - \\f(x) = 4x\\ has degree \\1\\.
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\: the degree is the highest power with a nonzero coefficient, not the power in the first term written.
@@ -773,22 +781,22 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 37 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+> **Definition 38 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
 
 > **NOTE:**
 >
-> **Example 31 (Leading coefficients)**  
+> **Example 32 (Leading coefficients)**  
 >
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\, so its leading coefficient is \\a_3 = 1\\, not the \\5\\ written first.
 > - \\f(x) = 3 - x^2\\ has leading coefficient \\a_2 = -1\\.
 
 > **NOTE:**
 >
-> **Definition 38 (Quadratic and cubic polynomials)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\2\\, \\f(x) = a_2 x^2 + a_1 x + a_0\\ with \\a_2 \ne 0\\, is a **quadratic** polynomial. A polynomial of degree \\3\\ is a **cubic** polynomial.
+> **Definition 39 (Quadratic and cubic polynomials)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\2\\, \\f(x) = a_2 x^2 + a_1 x + a_0\\ with \\a_2 \ne 0\\, is a **quadratic** polynomial. A polynomial of degree \\3\\ is a **cubic** polynomial.
 
 > **NOTE:**
 >
-> **Example 32 (Quadratic and cubic polynomials)**  
+> **Example 33 (Quadratic and cubic polynomials)**  
 >
 > - \\f(x) = (x - 2)^2 = x^2 - 4x + 4\\ is quadratic, by [Remark 8](#rem-square-of-a-difference) with \\a = x\\ and \\b = 2\\.
 > - \\f(x) = x^3 - 3x\\ is cubic.
@@ -796,17 +804,17 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 39 (Parabola)** A **parabola** is the [graph](sets-functions.llms.md#def-graph) of a quadratic polynomial ([Definition 38](#def-quadratic-cubic)).
+> **Definition 40 (Parabola)** A **parabola** is the [graph](sets-functions.llms.md#def-graph) of a quadratic polynomial ([Definition 39](#def-quadratic-cubic)).
 
 > **NOTE:**
 >
-> **Example 33 (The parabola \\y = x^2\\)** The graph of \\f(x) = x^2\\ is a parabola. It contains the points \\(-1, 1)\\, \\(0, 0)\\ and \\(2, 4)\\, and its lowest point is \\(0, 0)\\, since \\x^2 \ge 0\\ for every \\x\\.
+> **Example 34 (The parabola \\y = x^2\\)** The graph of \\f(x) = x^2\\ is a parabola. It contains the points \\(-1, 1)\\, \\(0, 0)\\ and \\(2, 4)\\, and its lowest point is \\(0, 0)\\, since \\x^2 \ge 0\\ for every \\x\\.
 
 ## 15 Limits of sequences
 
 > **NOTE:**
 >
-> **Definition 40 (Limit of a sequence)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **converges** to a real number \\L\\, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\epsilon \> 0\\ there is a natural number \\N\\ such that
+> **Definition 41 (Limit of a sequence)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **converges** to a real number \\L\\, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\epsilon \> 0\\ there is a natural number \\N\\ such that
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \epsilon \quad \text{for every } n \ge N.\\
 >
@@ -814,7 +822,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 34 (A convergent sequence and a divergent one)**  
+> **Example 35 (A convergent sequence and a divergent one)**  
 >
 > - \\a_n = \frac{1}{n}\\ converges to \\0\\. Given \\\epsilon \> 0\\, take \\N\\ to be any natural number larger than \\\frac{1}{\epsilon}\\. For every \\n \ge N\\, \\\mathopen{}\left\|\frac{1}{n} - 0\right\|\mathclose{} = \frac{1}{n} \le \frac{1}{N} \< \epsilon\\. For example, with \\\epsilon = 0.01\\, take \\N = 101\\: every \\n \ge 101\\ has \\\frac{1}{n} \le \frac{1}{101} \< 0.01\\.
 > - \\c_n = n\\ diverges. For any real number \\L\\ and \\\epsilon = 1\\, every \\n \> L + 1\\ has \\\mathopen{}\left\|n - L\right\|\mathclose{} \> 1\\, so no \\N\\ works. For example, with \\L = 5\\, every \\n \ge 7\\ has \\\mathopen{}\left\|n - 5\right\|\mathclose{} \ge 2\\. It diverges to \\\infty\\: for every real number \\M\\, every \\n \ge N\\ has \\c_n = n \> M\\ when \\N\\ is a natural number larger than \\M\\.
@@ -823,7 +831,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 41 (Exponential function)** The **exponential function** \\\operatorname{exp}\mathopen{}\left\\:\right\\\mathclose{} \mathbb{R}\to (0, \infty)\\ is
+> **Definition 42 (Exponential function)** The **exponential function** \\\operatorname{exp}\mathopen{}\left\\:\right\\\mathclose{} \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -831,7 +839,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 35 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
+> **Example 36 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
 >
 > |    \\n\\ | \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ |
 > |---------:|:----------------------------------------------------------|
@@ -844,33 +852,33 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 42 (Euler’s number)** **Euler’s number** is
+> **Definition 43 (Euler’s number)** **Euler’s number** is
 >
 > \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
 
 > **NOTE:**
 >
-> **Example 36 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+> **Example 37 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
 
 > **NOTE:**
 >
-> **Definition 43 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\exp\\ ([Definition 41](#def-exponential-function)).
+> **Definition 44 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\exp\\ ([Definition 42](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 13* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 42](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 13* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 43](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
-> **Example 37 (Natural logarithms)**  
+> **Example 38 (Natural logarithms)**  
 >
-> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 35](#exm-exponential-function)).
-> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 42](#def-euler-number)).
+> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 36](#exm-exponential-function)).
+> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 43](#def-euler-number)).
 > - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
 
 > **NOTE:**
 >
-> **Definition 44 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
+> **Definition 45 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
 >
 > \\a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{}.\\
 >
@@ -878,28 +886,28 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 38 (Real powers, and \\e^x\\)**  
+> **Example 39 (Real powers, and \\e^x\\)**  
 >
 > - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with \\2^3 = 2 \cdot 2 \cdot 2 = 8\\ from [Definition 4](#def-power).
 >
 > - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 5](#def-square-root)).
 >
-> - For every real \\x\\, with base \\e\\ ([Definition 42](#def-euler-number)):
+> - For every real \\x\\, with base \\e\\ ([Definition 43](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~44}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~37}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{#thm-mult-one}{\text{Theorem~12}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~45}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~38}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{#thm-mult-one}{\text{Theorem~12}}\text{)} \end{aligned} \\
 >
 >   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
 
 > **NOTE:**
 >
-> **Definition 45 (Real powers of zero and of negative numbers)** [Definition 4](#def-power) and [Definition 44](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
+> **Definition 46 (Real powers of zero and of negative numbers)** [Definition 4](#def-power) and [Definition 45](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
 >
 > - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 4](#def-power).
 > - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](notation.llms.md#def-integers), by [Definition 4](#def-power); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
 
 > **NOTE:**
 >
-> **Example 39 (Powers of zero and of negative numbers)**  
+> **Example 40 (Powers of zero and of negative numbers)**  
 >
 > - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 5](#def-square-root)).
 > - \\(-8)^2 = 64\\ and \\(-8)^{-1} = -\tfrac{1}{8}\\ are defined, since the exponents are integers.
@@ -946,7 +954,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 40 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 41 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
@@ -956,7 +964,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 41 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 42 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
@@ -976,7 +984,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 42 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
+> **Example 43 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
 
 > **NOTE:**
 >
@@ -988,7 +996,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 43 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
+> **Example 44 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
 
 > **NOTE:**
 >
@@ -998,7 +1006,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 44 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 45 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >
@@ -1026,11 +1034,23 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
+> **Definition 47 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+>
+> \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
+>
+> On a plot of the surface \\z = g(b, c)\\, it is the curve along which the surface has height \\k\\.
+
+> **NOTE:**
+>
+> **Example 46 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example, \\g(2, 0) = 4 + 0 = 4\\ and \\g(0, -2) = 0 + 4 = 4\\. The contour line at height \\k = -1\\ is empty, because \\b^2 + c^2 \ge 0\\ for all \\b\\ and \\c\\.
+
+> **NOTE:**
+>
 > **Exercise 9** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 9*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 45](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 9*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 46](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 > 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
@@ -1161,7 +1181,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >   )
 > ```
 >
-> Figure 2: **Graph of \\b^c - b\*c\\**. A contour line is a curve along which the surface has a constant height. The red contour lines are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
+> Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
 
 > **NOTE:**
 >
@@ -1184,7 +1204,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
 > 2.  \\bc = b^c\\ (see [Exercise 9](#exr-exp-vs-mult)).
 >
-> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 45](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
+> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 46](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
 > - If \\b \< 0\\, then \\0^b\\ is undefined, so \\(a^b)^c\\ is undefined.
 > - If \\b \> 0\\, then \\(0^b)^c = 0^c\\ and \\b^c \> 0\\, so \\0^{(b^c)} = 0\\; the two sides agree exactly when \\c \> 0\\.
@@ -1202,7 +1222,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Definition 46 (Imaginary unit)** The **imaginary unit** \\i\\ is a number whose square is \\-1\\:
+> **Definition 48 (Imaginary unit)** The **imaginary unit** \\i\\ is a number whose square is \\-1\\:
 >
 > \\i^2 \stackrel{\text{def}}{=}-1.\\
 >
@@ -1218,13 +1238,13 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 45 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
+> **Example 47 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
 >
-> \\ \begin{aligned} i^3 &= i^2 \cdot i && \text{(split off one factor of } i \text{)} \\ &= (-1) \cdot i && \text{(}\href{#def-imaginary-unit}{\text{Definition~46}}\text{)} \\ &= -i && \text{(multiply)} \end{aligned} \\
+> \\ \begin{aligned} i^3 &= i^2 \cdot i && \text{(split off one factor of } i \text{)} \\ &= (-1) \cdot i && \text{(}\href{#def-imaginary-unit}{\text{Definition~48}}\text{)} \\ &= -i && \text{(multiply)} \end{aligned} \\
 >
 > and
 >
-> \\ \begin{aligned} i^4 &= i^2 \cdot i^2 && \text{(split the power into two squares)} \\ &= (-1) \cdot(-1) && \text{(}\href{#def-imaginary-unit}{\text{Definition~46}}\text{, twice)} \\ &= 1 && \text{(multiply)} \end{aligned} \\
+> \\ \begin{aligned} i^4 &= i^2 \cdot i^2 && \text{(split the power into two squares)} \\ &= (-1) \cdot(-1) && \text{(}\href{#def-imaginary-unit}{\text{Definition~48}}\text{, twice)} \\ &= 1 && \text{(multiply)} \end{aligned} \\
 >
 > so the cycle starts again:
 >
@@ -1234,20 +1254,20 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 46 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
+> **Example 48 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
 >
 > - if \\x \ge 0\\, then \\x^2 = x \cdot x\\ is a product of two nonnegative numbers, so \\x^2 \ge 0\\;
 > - if \\x \< 0\\, then \\x^2 = x \cdot x\\ is a product of two negative numbers, so \\x^2 \> 0\\.
 >
-> For instance, \\3^2 = 9\\ and \\(-3)^2 = 9\\; neither is \\-1\\. So the equation \\x^2 = -1\\ has no real solution, and [Definition 46](#def-imaginary-unit) introduces a new number to solve it.
+> For instance, \\3^2 = 9\\ and \\(-3)^2 = 9\\; neither is \\-1\\. So the equation \\x^2 = -1\\ has no real solution, and [Definition 48](#def-imaginary-unit) introduces a new number to solve it.
 
 > **NOTE:**
 >
-> **Definition 47 (Complex number)** A **complex number** is a number of the form
+> **Definition 49 (Complex number)** A **complex number** is a number of the form
 >
 > \\z = a + b\\i,\\
 >
-> where \\a\\ and \\b\\ are real numbers and \\i\\ is the imaginary unit ([Definition 46](#def-imaginary-unit)).
+> where \\a\\ and \\b\\ are real numbers and \\i\\ is the imaginary unit ([Definition 48](#def-imaginary-unit)).
 >
 > - The **real part** of \\z\\ is \\\operatorname{Re} z \stackrel{\text{def}}{=}a\\.
 > - The **imaginary part** of \\z\\ is \\\operatorname{Im} z \stackrel{\text{def}}{=}b\\.
@@ -1259,7 +1279,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Example 47 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
+> **Example 49 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
 >
 > The numbers \\1 + i\\ and \\1 - i\\ have the same real part, \\1\\, but different imaginary parts, \\1\\ and \\-1\\, so they are different complex numbers.
 >
@@ -1283,25 +1303,25 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 >
 > **Product.**
 >
-> \\ \begin{aligned} (a + b\\i)(c + d\\i) &= ac + ad\\i + bc\\i + bd\\i^2 && \text{(distribute)} \\ &= ac + ad\\i + bc\\i - bd && \text{(}\href{#def-imaginary-unit}{\text{Definition~46}}\text{)} \\ &= (ac - bd) + (ad + bc)\\i && \text{(group the real terms and the terms with } i \text{)} \end{aligned} \\
+> \\ \begin{aligned} (a + b\\i)(c + d\\i) &= ac + ad\\i + bc\\i + bd\\i^2 && \text{(distribute)} \\ &= ac + ad\\i + bc\\i - bd && \text{(}\href{#def-imaginary-unit}{\text{Definition~48}}\text{)} \\ &= (ac - bd) + (ad + bc)\\i && \text{(group the real terms and the terms with } i \text{)} \end{aligned} \\
 
 Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two formulas as the definitions of addition and multiplication.
 
 > **NOTE:**
 >
-> **Example 48 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
+> **Example 50 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
 >
 > \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~28}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
 >
 > and their product, multiplying out directly, is
 >
-> \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~46}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~48}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
 >
 > The product formula in [Theorem 28](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
 
 > **NOTE:**
 >
-> **Definition 48 (Complex conjugate)** The **complex conjugate** of a complex number \\z = a + b\\i\\ ([Definition 47](#def-complex-number)) is
+> **Definition 50 (Complex conjugate)** The **complex conjugate** of a complex number \\z = a + b\\i\\ ([Definition 49](#def-complex-number)) is
 >
 > \\\overline{z} \stackrel{\text{def}}{=}a - b\\i.\\
 
@@ -1309,7 +1329,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 49 (Complex conjugates)**  
+> **Example 51 (Complex conjugates)**  
 >
 > - \\\overline{3 + 4\\i} = 3 - 4\\i\\.
 > - \\\overline{-2\\i} = \overline{0 + (-2)\\i} = 0 - (-2)\\i = 2\\i\\.
@@ -1317,7 +1337,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Definition 49 (Absolute value of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 47](#def-complex-number)) is
+> **Definition 51 (Absolute value of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 49](#def-complex-number)) is
 >
 > \\\mathopen{}\left\|z\right\|\mathclose{} \stackrel{\text{def}}{=}\sqrt{a^2 + b^2}.\\
 
@@ -1325,7 +1345,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 50 (Absolute values of complex numbers)**  
+> **Example 52 (Absolute values of complex numbers)**  
 >
 > - \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5\\.
 > - \\\mathopen{}\left\|-2\\i\right\|\mathclose{} = \sqrt{0^2 + (-2)^2} = \sqrt{4} = 2\\.
@@ -1343,15 +1363,15 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 >
 > *Proof*. Write \\z = a + b\\i\\ with \\a, b\\ real. Then
 >
-> \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~48}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~46}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~49}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~50}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~48}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~51}}\text{)} \end{aligned} \\
 
 Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity among the properties of complex numbers.
 
 > **NOTE:**
 >
-> **Example 51 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~46}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 53 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} (3 + 4\\i)(3 - 4\\i) &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~48}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
-> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 50](#exm-complex-modulus), as [Theorem 29](#thm-conj-product) says.
+> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 52](#exm-complex-modulus), as [Theorem 29](#thm-conj-product) says.
 
 ## 18 Further reading
 
