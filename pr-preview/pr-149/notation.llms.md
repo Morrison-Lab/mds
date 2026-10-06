@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 20:40:53 (PDT)
+Last modified: 2026-10-05 20:57:44 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -26,7 +26,7 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\therefore\\ | [therefore](#def-logical-entailment), thus | `\therefore` |
 | \\\eta\\ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
 | \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest [integer](#def-integers) less than or equal to \\x\\ | `\lfloor x \rfloor` |
-| \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest integer greater than or equal to \\x\\ | `\lceil x \rceil` |
+| \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest [integer](#def-integers) greater than or equal to \\x\\ | `\lceil x \rceil` |
 | \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 6](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 Table 1: Notation used in this book
