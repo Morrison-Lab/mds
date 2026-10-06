@@ -1,3 +1,5 @@
+::: {.content-hidden when-format="revealjs"}
+
 :::{#def-complex-number}
 #### Complex number
 
@@ -14,6 +16,37 @@ where $a$ and $b$ are real numbers and $i$ is the imaginary unit (@def-imaginary
 Two complex numbers are equal exactly when their real parts are equal and their imaginary parts are equal.
 A real number $a$ is the complex number $a + 0\,i$,
 so $\reals$ is a subset of $\mathbb{C}$.
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+:::{#def-complex-number}
+#### Complex number
+
+A **complex number** is a number of the form
+
+$$z = a + b\,i,$$
+
+where $a$ and $b$ are real numbers and $i$ is the imaginary unit (@def-imaginary-unit).
+
+- The **real part** of $z$ is $\operatorname{Re} z \eqdef a$.
+- The **imaginary part** of $z$ is $\operatorname{Im} z \eqdef b$.
+- The set of all complex numbers is $\mathbb{C} \eqdef \{a + b\,i : a, b \in \reals\}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{.theorem .definition}
+
+Two complex numbers are equal exactly when their real parts are equal and their imaginary parts are equal.
+A real number $a$ is the complex number $a + 0\,i$,
+so $\reals$ is a subset of $\mathbb{C}$.
+
+:::
 
 :::
 

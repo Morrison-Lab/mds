@@ -1,5 +1,5 @@
 :::{#cor-exp-sum}
-#### exponential of a difference
+#### Exponential of a difference
 
 The exponential of a difference
 is the exponential of the first term

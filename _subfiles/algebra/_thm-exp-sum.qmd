@@ -1,5 +1,5 @@
 :::{#thm-exp-sum}
-#### exponential of a sum
+#### Exponential of a sum
 
 The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
 

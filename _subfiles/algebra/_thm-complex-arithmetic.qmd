@@ -11,6 +11,10 @@ $$(a + b\,i)(c + d\,i) = (ac - bd) + (ad + bc)\,i.$$
 
 :::
 
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
 ::: proof
 
 **Sum.**
@@ -41,6 +45,51 @@ $$
 && \text{(group the real terms and the terms with } i \text{)}
 \ea
 $$
+
+:::
+
+:::
+
+::: {.content-visible when-format="revealjs"}
+
+::: proof
+
+**Sum.**
+
+$$
+\ba
+(a + b\,i) + (c + d\,i)
+&= a + c + b\,i + d\,i
+&& \text{(rearrange the terms)}
+\\
+&= (a + c) + (b + d)\,i
+&& \text{(factor out } i \text{)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+::: proof
+
+**Product.**
+
+$$
+\ba
+(a + b\,i)(c + d\,i)
+&= ac + ad\,i + bc\,i + bd\,i^2
+&& \text{(distribute)}
+\\
+&= ac + ad\,i + bc\,i - bd
+&& \text{(@def-imaginary-unit)}
+\\
+&= (ac - bd) + (ad + bc)\,i
+&& \text{(group the real terms and the terms with } i \text{)}
+\ea
+$$
+
+:::
 
 :::
 
