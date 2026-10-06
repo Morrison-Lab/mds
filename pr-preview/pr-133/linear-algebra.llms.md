@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-05 16:58:47 (PDT)
+Last modified: 2026-10-05 17:16:59 (PDT)
 
 ## 1 Vectors
 
@@ -1026,11 +1026,7 @@ Figure 1: The graph of \\f(x_1, x_2) = w_1 x_1 + w_2 x_2 + b\\, in three dimens
 
 > **NOTE:**
 >
-> *Proof*. Write \\z\_{ij}\\ for entry \\j\\ of \\\tilde{z}\_i\\, so entry \\j\\ of \\\sum_i c_i \tilde{z}\_i\\ is \\\sum_i c_i z\_{ij}\\. Compare entry \\r\\ of the two sides, for each \\r = 1, \ldots, m\\:
->
-> \\ \begin{aligned} \mathopen{}\left(\mathbf{A} \sum\_{i=1}^{k} c_i \tilde{z}\_i\right)\mathclose{}\_r &= \sum\_{j=1}^{n} a\_{rj} \sum\_{i=1}^{k} c_i z\_{ij} && \text{(}\href{#def-matvec-mult}{\text{Definition~21}}\text{)} \\ &= \sum\_{j=1}^{n} \sum\_{i=1}^{k} a\_{rj}\\c_i z\_{ij} && \text{(distribute } a\_{rj} \text{ over the inner sum)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{n} a\_{rj}\\c_i z\_{ij} && \text{(reorder the finite double sum)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{n} c_i\\a\_{rj} z\_{ij} && \text{(multiplication of numbers is commutative)} \\ &= \sum\_{i=1}^{k} c_i \sum\_{j=1}^{n} a\_{rj} z\_{ij} && \text{(factor } c_i \text{ out of the inner sum)} \\ &= \sum\_{i=1}^{k} c_i\\(\mathbf{A} \tilde{z}\_i)\_r && \text{(}\href{#def-matvec-mult}{\text{Definition~21}}\text{)} \end{aligned} \\
->
-> which is entry \\r\\ of \\\sum_i c_i\\\mathbf{A} \tilde{z}\_i\\.
+> *Proof*. The function \\\tilde{x}\mapsto \mathbf{A}\tilde{x}\\ is a linear map by [Theorem 11](#thm-matrix-map-linear), and a linear map preserves linear combinations by [Theorem 12](#thm-linear-map-lincom). Applying that theorem with \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ and \\\tilde{v}\_i = \tilde{z}\_i\\ gives the identity.
 
 > **NOTE:**
 >
