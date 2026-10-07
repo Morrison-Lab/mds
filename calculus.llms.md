@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 10:52:53 (PDT)
+Last modified: 2026-10-07 12:36:56 (PDT)
 
 ## 1 Derivatives
 
@@ -512,7 +512,7 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
 > **NOTE:**
 >
-> **Definition 9 (Linear approximation)** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\epsilon\\
+> **Definition 9 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\epsilon\\
 >
 > \\\hat{f}\_w(\epsilon) = f(w) + \epsilon\\\frac{d }{d w}f(w)\\
 >
@@ -618,7 +618,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Definition 10 (Flat point)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a *stationary point*).
+> **Definition 10 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**).
 
 > **NOTE:**
 >
@@ -1289,7 +1289,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 22 (Riemann integral)** Let \\f\\ be a [bounded](algebra.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 19](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 21](#def-riemann-sum)) as the mesh ([Definition 20](#def-mesh)) shrinks to zero:
+> **Definition 22 (Riemann integral (definite integral))** Let \\f\\ be a [bounded](algebra.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 19](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 21](#def-riemann-sum)) as the mesh ([Definition 20](#def-mesh)) shrinks to zero:
 >
 > \\\int_a^b f(x)\\dx \stackrel{\text{def}}{=}\lim\_{\\\mathcal{P}\\ \to 0} \sum\_{i=1}^n f(x_i^\*)\\\Delta x_i,\\
 >
