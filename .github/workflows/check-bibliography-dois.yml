@@ -30,9 +30,9 @@ jobs:
       # when a DOI is found and verified by content negotiation.
       exclude-keys: >-
         abramson2021algebra banerjee2014linear barkerplummer2011language
-        billingsley1995probability boyd2018vmls calclifesaver
+        billingsley1995probability calclifesaver
         cheng2025math folland1999real fubini1907 goodfellow2016deep
         larsonCalc11e marsden2013vector mosaiccalc
         problifesavercalc
         realanalysislifesaver rudin1976principles searle2017matrix
-        strang2023linear velleman2019prove
+        strang2023linear
