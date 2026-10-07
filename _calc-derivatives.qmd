@@ -291,7 +291,17 @@ $$
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-log-constant.qmd >}}
 
-### Linear approximation
+### Tangent lines {#sec-tangent-lines}
+
+{{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-tangent-line.qmd >}}
+
+{{< slidebreak >}}
+
+### Linear approximation {#sec-linear-approximation}
 
 For a differentiable function $f$ and a small step $\epsilon$,
 
@@ -310,6 +320,7 @@ is the function of the step $\epsilon$
 $$\hat{f}_w(\epsilon) = f(w) + \epsilon\,\dif{}{w}f(w)$$
 
 so @eq-linear-approx says $f(w + \epsilon) \approx \hat{f}_w(\epsilon)$ for small $\epsilon$.
+@fig-linear-approx illustrates this approximation interactively for a quadratic function.
 
 :::
 
@@ -330,6 +341,16 @@ as an affine function for functions of several variables as well.
 :::
 
 {{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_fig-linear-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
+
+{{< slidebreak >}}
+
+### Critical points and optimization {#sec-critical-points}
 
 :::{#def-flat-point}
 #### Flat point
@@ -352,6 +373,12 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
+
+{{< include mds/_subfiles/vector-calc/_sol-flat-point.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_def-critical-point.qmd >}}
 
 {{< slidebreak >}}
@@ -365,28 +392,6 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-classify-critical-points.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/derivatives/_exm-tangent-line.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_fig-linear-approx.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
-
-{{< include mds/_subfiles/vector-calc/_sol-flat-point.qmd >}}
 
 {{< slidebreak >}}
 
