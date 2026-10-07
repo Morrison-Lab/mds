@@ -85,6 +85,7 @@ rme will drop those appendices and point readers here
 
 - Reformatting unrelated files.
 - Inventing URLs or citations --- only use sources actually present in `references.bib` or explicitly provided.
+- Showing readers source information when content comes from our own lab (e.g. "Source: new for Fall 2026", "written for Midterm 1", "from our lab"). Only external reference sources (textbooks, papers, external software) should be cited; internal lab provenance is unnecessary clutter for readers.
 - Asking a person to check a citation you can check yourself.
   The lab's reference books (for example Billingsley, *Probability and Measure*, 3rd ed.) are PDFs in
   the private `Morrison-Lab/mlr` repository under `books/`;
