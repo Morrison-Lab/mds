@@ -1,5 +1,5 @@
 :::{#def-level-set}
-#### Level set
+#### Level set (level curve, contour)
 
 Let $f : \reals^p \to \reals$ and let $c$ be a real number.
 The **level set** of $f$ at $c$ is
@@ -10,7 +10,7 @@ $$
 
 the set of points where $f$ takes the value $c$.
 For $p = 2$, a level set is often a curve in the plane,
-called a **level curve** (or *contour*) of $f$.
+called a **level curve** (or **contour**) of $f$.
 
 :::
 

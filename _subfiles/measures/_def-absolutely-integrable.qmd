@@ -1,5 +1,5 @@
 :::{#def-absolutely-integrable}
-#### Absolutely integrable function
+#### Absolutely integrable function (integrable function, absolute integrability)
 
 Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
 A [measurable](#def-measurable-function) function $f : S \to \reals$

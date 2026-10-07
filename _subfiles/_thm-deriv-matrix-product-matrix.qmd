@@ -1,6 +1,6 @@
 :::{#def-matrix-derivative}
 
-#### Matrix derivative
+#### Matrix derivative (gradient)
 
 For a scalar-valued function $f(\matr{X})$
 of an $m \times n$ matrix $\matr{X}$,

@@ -1,9 +1,9 @@
 :::{#def-real-vector-valued}
-#### Real-valued and vector-valued functions
+#### Real-valued (scalar-valued) and vector-valued functions
 
 A [function](sets-functions.qmd#def-function) $f : A \to \reals$,
 whose values are numbers,
-is **real-valued** (also called *scalar-valued*, since its values are [scalars](#def-scalar)).
+is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)).
 A function $f : A \to \reals^m$,
 whose values are vectors (@def-real-coordinate-space),
 is **vector-valued**.

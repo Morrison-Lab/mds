@@ -1,8 +1,8 @@
 :::{#def-affine-map}
-#### Affine map
+#### Affine map (affine transformation, affine function)
 
 A [function](sets-functions.qmd#def-function) $f: \mathbb{R}^p \to \mathbb{R}^m$ is an **affine map**
-(also called an *affine transformation* or *affine function*)
+(also called an **affine transformation** or **affine function**)
 if it is a matrix product followed by a translation (@def-translation)
 (a [composition](sets-functions.qmd#def-composition), with the matrix product as the inner function):
 there are an $m \times p$ matrix $\matr{A}$ and a vector $\vec{b} \in \mathbb{R}^m$ such that
@@ -10,7 +10,7 @@ there are an $m \times p$ matrix $\matr{A}$ and a vector $\vec{b} \in \mathbb{R}
 $$f(\vx) = t_{\vec{b}}(\matr{A} \vx) = \matr{A} \vx + \vec{b} \quad \text{for all } \vx \in \mathbb{R}^p$$
 
 The vector $\vec{b}$ is called the **offset** of $f$
-(statistics also calls it the *intercept*, and machine learning the *bias*).
+(statistics also calls it the **intercept**, and machine learning the **bias**).
 
 For a real-valued function (@def-real-vector-valued, $m = 1$),
 $\matr{A}$ is a single row, written $\vec{w}^\top$, and $\vec{b}$ is a single number $b$,

@@ -1,5 +1,5 @@
 :::{#def-measure-zero}
-#### Measure zero
+#### Measure zero (null set)
 
 Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
 A set $A \in \salg$ has **measure zero**

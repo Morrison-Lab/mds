@@ -1,5 +1,5 @@
 :::{#def-infinite-sum}
-#### Infinite sum
+#### Infinite sum (series)
 
 Let $a_1, a_2, \ldots$ be a sequence in $[0, \infty]$,
 with partial sums $s_n$ (@def-partial-sum).

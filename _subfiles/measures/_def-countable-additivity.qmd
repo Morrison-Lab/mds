@@ -1,5 +1,5 @@
 :::{#def-countable-additivity}
-#### Countable additivity
+#### Countable additivity ($\sigma$-additivity)
 
 Let $\salg$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$.
 A function $\mu : \salg \to [0, \infty]$

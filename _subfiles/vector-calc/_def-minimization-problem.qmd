@@ -24,11 +24,11 @@ $\vzero$ is not feasible, since $3 \cd 0 + 4 \cd 0 = 0 \ne 5$.
 {{< slidebreak >}}
 
 :::{#def-minimization-problem}
-#### Objective function and minimization problem
+#### Objective function (objective) and minimization problem
 
 Let $f : \reals^p \to \reals$ and let $F \subseteq \reals^p$ be a feasible set (@def-feasible-set).
 In the problem of minimizing $f$ over $F$,
-$f$ is the **objective function** (or *objective*).
+$f$ is the **objective function** (or **objective**).
 A **minimizer of $f$ over $F$** is a feasible $\vx^*$ with $f(\vx^*) \le f(\vx)$ for every feasible $\vx$:
 a [global minimizer](algebra.qmd#def-global-minimizer) of $f$ with its domain restricted to $F$.
 When $F$ is given by constraints,

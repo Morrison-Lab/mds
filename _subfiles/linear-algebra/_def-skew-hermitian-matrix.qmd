@@ -1,5 +1,5 @@
 :::{#def-skew-hermitian-matrix}
-#### Skew-Hermitian matrix
+#### Skew-Hermitian matrix (anti-Hermitian matrix)
 
 A square complex matrix $\matr{A} \in \mathbb{C}^{n \times n}$ is **skew-Hermitian**
 (or **anti-Hermitian**)
