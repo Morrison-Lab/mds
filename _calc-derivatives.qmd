@@ -338,11 +338,23 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-opt-gamma-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-classify-critical-points.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/derivatives/_exm-tangent-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
 
 {{< slidebreak >}}
 
@@ -356,12 +368,70 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 {{< slidebreak >}}
 
-### Exercises: Derivatives {#sec-exercises-derivatives-1d}
+### Taylor series {#sec-taylor-series}
 
-{{< include mds/_subfiles/calculus-review/_exr-calc-derivatives-1d.qmd >}}
+{{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}
 
 {{< slidebreak >}}
 
-### Taylor series {#sec-taylor-series}
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-exponential.qmd >}}
 
-{{< include mds/_subfiles/calculus-review/_exr-calc-taylor-1d.qmd >}}
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-nonzero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cos-scaled.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cos-cubed.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-exp-base.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-exp-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-normal-density.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-sqrt.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cube-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-x-log-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-plus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-minus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-product-exp.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-product-cos-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-scaled.qmd >}}

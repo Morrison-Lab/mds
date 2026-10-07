@@ -22,11 +22,55 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-quadratic-complete.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-composite-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-trig-symmetry.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-polynomial-symmetry.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-log-substitution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-power-substitution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-trig-substitution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-by-parts-gaussian.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/integrals-ftc/_exm-ftc-part1-accumulation.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/integrals-ftc/_exm-ftc-cdf-pdf.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-rayleigh-normal-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-int-uniform-convolution.qmd >}}
 
 {{< slidebreak >}}
 
