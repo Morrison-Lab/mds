@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 12:05:44 (PDT)
+Last modified: 2026-10-07 12:25:06 (PDT)
 
 > **NOTE:**
 >
@@ -38,7 +38,7 @@ Last modified: 2026-10-07 12:05:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Closed under an operation)** A set \\A\\ is **closed under** an operation, such as addition of numbers or union of sets, if applying the operation to elements of \\A\\ always gives an element of \\A\\. This property is called **closure** under the operation.
+> **Definition 2 (Closed under an operation (closure))** A set \\A\\ is **closed under** an operation, such as addition of numbers or union of sets, if applying the operation to elements of \\A\\ always gives an element of \\A\\. This property is called **closure** under the operation.
 
 > **NOTE:**
 >
@@ -387,7 +387,7 @@ Last modified: 2026-10-07 12:05:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Almost everywhere)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
+> **Definition 17 (Almost everywhere (\\\mu\\-almost everywhere, \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
 
 > **NOTE:**
 >
@@ -501,7 +501,7 @@ Last modified: 2026-10-07 12:05:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Absolutely integrable function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
+> **Definition 23 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu \< \infty\\
 >

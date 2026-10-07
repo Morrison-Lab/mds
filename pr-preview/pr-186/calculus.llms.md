@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 12:05:44 (PDT)
+Last modified: 2026-10-07 12:25:06 (PDT)
 
 ## 1 Derivatives
 
@@ -490,7 +490,7 @@ Last modified: 2026-10-07 12:05:44 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Tangent line and tangent slope)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra.llms.md#def-affine-function)
+> **Definition 8 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
 >
