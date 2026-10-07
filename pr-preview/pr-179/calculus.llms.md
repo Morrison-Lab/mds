@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 17:51:02 (PDT)
+Last modified: 2026-10-06 23:48:16 (PDT)
 
 ## 1 Derivatives
 
@@ -688,12 +688,6 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 ### 1.5 Taylor series
 
-> **TIP:**
->
-> Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
->
-> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 12](#def-taylor-polynomial)).
-
 > **NOTE:**
 >
 > The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
@@ -715,6 +709,12 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > Because the remainder \\R_n(x) \to 0\\ as \\n \to \infty\\ for all \\x \in \mathbb{R}\\, the Taylor series converges everywhere to \\e^x\\:
 >
 > \\e^x = \sum\_{k=0}^\infty \frac{x^k}{k!}\\
+
+> **TIP:**
+>
+> Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
+>
+> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 12](#def-taylor-polynomial)).
 
 > **NOTE:**
 >
