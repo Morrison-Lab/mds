@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 22:35:18 (PDT)
+Last modified: 2026-10-07 00:03:58 (PDT)
 
 ## 1 Derivatives
 
@@ -699,6 +699,12 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > Because the remainder \\R_n(x) \to 0\\ as \\n \to \infty\\ for all \\x \in \mathbb{R}\\, the Taylor series converges everywhere to \\e^x\\:
 >
 > \\e^x = \sum\_{k=0}^\infty \frac{x^k}{k!}\\
+
+> **TIP:**
+>
+> Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
+>
+> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 12](#def-taylor-polynomial)).
 
 > **NOTE:**
 >
@@ -2315,6 +2321,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
   - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
   - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - Grinberg ([2017](#ref-realanalysislifesaver)) (the rigorous foundations behind these results)
+- [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) is a 12-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops geometric and visual intuition for limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series.
 
 ## References
 
