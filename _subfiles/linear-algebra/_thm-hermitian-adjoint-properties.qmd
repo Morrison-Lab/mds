@@ -20,6 +20,8 @@ $$(\matr{A}^{\mathsf{H}})^{-1} = (\matr{A}^{-1})^{\mathsf{H}}.$$
 
 :::
 
+{{< slidebreak >}}
+
 ::: proof
 
 Properties 1-3 follow directly from entrywise conjugation and transposition:

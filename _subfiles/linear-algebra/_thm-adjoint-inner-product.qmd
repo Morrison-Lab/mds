@@ -9,6 +9,8 @@ $$\iprod{\matr{A}\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{\matr{A}^{\mathsf{H}}\ve
 
 :::
 
+{{< slidebreak >}}
+
 ::: proof
 
 By the definition of the standard complex inner product and the product rule for the Hermitian adjoint (@thm-hermitian-adjoint-properties):
