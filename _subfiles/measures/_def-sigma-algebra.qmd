@@ -2,14 +2,14 @@
 #### $\sigma$-algebra
 
 A **$\sigma$-algebra** on a set $S$
-is a [collection](sets-functions.qmd#def-collection) $\mathscr{S}$ of [subsets](sets-functions.qmd#def-subset) of $S$
+is a [collection](sets-functions.qmd#def-collection) $\salg$ of [subsets](sets-functions.qmd#def-subset) of $S$
 that satisfies:
 
-- $\mathscr{S}$ contains $S$ itself.
-- For each set $A$ in $\mathscr{S}$,
-  $\mathscr{S}$ contains its [complement](sets-functions.qmd#def-complement) $S \setminus A$.
-- For each [sequence](sets-functions.qmd#def-sequence) $A_1, A_2, \ldots$ of sets in $\mathscr{S}$,
-  $\mathscr{S}$ contains their union $\bigcup_{i=1}^{\infty} A_i$.
+- $\salg$ contains $S$ itself.
+- For each set $A$ in $\salg$,
+  $\salg$ contains its [complement](sets-functions.qmd#def-complement) $S \setminus A$.
+- For each [sequence](sets-functions.qmd#def-sequence) $A_1, A_2, \ldots$ of sets in $\salg$,
+  $\salg$ contains their union $\bigcup_{i=1}^{\infty} A_i$.
 
 :::
 

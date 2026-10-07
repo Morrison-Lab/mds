@@ -1,12 +1,12 @@
 :::{#def-countable-additivity}
 #### Countable additivity
 
-Let $\mathscr{S}$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$.
-A function $\mu : \mathscr{S} \to [0, \infty]$
+Let $\salg$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$.
+A function $\mu : \salg \to [0, \infty]$
 is **countably additive**
 (also called **$\sigma$-additive**)
 if, for every sequence of
-[pairwise disjoint](#def-pairwise-disjoint) sets $A_1, A_2, \ldots$ in $\mathscr{S}$,
+[pairwise disjoint](#def-pairwise-disjoint) sets $A_1, A_2, \ldots$ in $\salg$,
 the value of their union is the sum of their values:
 
 $$\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)$$

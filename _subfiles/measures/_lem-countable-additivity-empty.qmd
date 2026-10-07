@@ -2,14 +2,14 @@
 #### Countable additivity and the empty set
 
 If $\mu$ is a [countably additive](#def-countable-additivity) function
-on a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$,
+on a [$\sigma$-algebra](#def-sigma-algebra) $\salg$,
 then $\mu(\emptyset) = 0$ or $\mu(\emptyset) = \infty$.
 
 :::
 
 ::: proof
 
-The set $\emptyset = S \setminus S$ is in $\mathscr{S}$,
+The set $\emptyset = S \setminus S$ is in $\salg$,
 as the complement of $S$,
 and the sequence $\emptyset, \emptyset, \ldots$ is pairwise disjoint with union $\emptyset$, so:
 

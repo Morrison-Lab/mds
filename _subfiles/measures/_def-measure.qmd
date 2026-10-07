@@ -1,8 +1,8 @@
 :::{#def-measure}
 #### Measure
 
-A **measure** on a set $S$ with a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$
-is a function $\mu : \mathscr{S} \to [0, \infty]$
+A **measure** on a set $S$ with a [$\sigma$-algebra](#def-sigma-algebra) $\salg$
+is a function $\mu : \salg \to [0, \infty]$
 that satisfies:
 
 - $\mu(\emptyset) = 0$.

@@ -3,7 +3,7 @@
 
 **Lebesgue measure** on $\reals$
 is the [measure](#def-measure) $\lambda$
-on the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\mathscr{B}$
+on the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\borel$
 that assigns each [interval](sets-functions.qmd#def-interval) its length:
 for real numbers $a \le b$,
 
@@ -21,7 +21,7 @@ is $\lambda$ applied only to the Borel sets that are subsets of $I$.
 :::{#rem-lebesgue-measure-exists}
 #### Lebesgue measure exists
 
-Exactly one measure on $\mathscr{B}$ assigns every interval its length;
+Exactly one measure on $\borel$ assigns every interval its length;
 constructing it takes more measure theory than these notes cover
 (see [Wikipedia: Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure),
 which also extends $\lambda$ to a larger $\sigma$-algebra,

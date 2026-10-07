@@ -5,7 +5,7 @@
   for example, $2 + 4 = 6$ is even, and $2m + 2n = 2(m + n)$ is even for all integers $m$ and $n$.
 - The odd integers are not closed under addition:
   $1$ and $3$ are odd, but $1 + 3 = 4$ is even.
-- A [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$ on a set $S$
+- A [$\sigma$-algebra](#def-sigma-algebra) $\salg$ on a set $S$
   is closed under complements in $S$
   and under unions of sequences of its sets,
   because @def-sigma-algebra requires both.

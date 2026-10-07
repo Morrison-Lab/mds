@@ -1,8 +1,8 @@
 :::{#def-measurable-space}
 #### Measurable space
 
-A **measurable space** $(S, \mathscr{S})$
-is a set $S$ together with a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$ on $S$;
-the sets in $\mathscr{S}$ are its **measurable sets**.
+A **measurable space** $(S, \salg)$
+is a set $S$ together with a [$\sigma$-algebra](#def-sigma-algebra) $\salg$ on $S$;
+the sets in $\salg$ are its **measurable sets**.
 
 :::

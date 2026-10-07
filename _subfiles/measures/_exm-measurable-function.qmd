@@ -2,7 +2,7 @@
 #### Measurable and not measurable
 
 On the die rolls $D$, take the $\sigma$-algebra
-$\mathscr{S} = \set{\emptyset, \set{2, 4, 6}, \set{1, 3, 5}, D}$
+$\salg = \set{\emptyset, \set{2, 4, 6}, \set{1, 3, 5}, D}$
 of @exm-sigma-algebra.
 
 - Let $f(x) = 1$ for even $x$ and $f(x) = 0$ for odd $x$.
@@ -10,10 +10,10 @@ of @exm-sigma-algebra.
   $\emptyset$ when $c < 0$,
   $\set{1, 3, 5}$ when $0 \le c < 1$,
   and $D$ when $c \ge 1$.
-  All three are in $\mathscr{S}$, so $f$ is measurable.
+  All three are in $\salg$, so $f$ is measurable.
 - Let $g(x) = x$.
   Then $\set{x \in D : g(x) \le 1} = \set{1}$,
-  which is not in $\mathscr{S}$, so $g$ is not measurable.
+  which is not in $\salg$, so $g$ is not measurable.
 
 With the $\sigma$-algebra of all subsets of $D$ instead,
 every set $\set{x \in D : g(x) \le c}$ is a subset of $D$,

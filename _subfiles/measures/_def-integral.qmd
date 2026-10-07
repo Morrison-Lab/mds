@@ -1,7 +1,7 @@
 :::{#def-integral}
 #### Integral of a real-valued function
 
-Let $(S, \mathscr{S}, \mu)$ be a [measure space](#def-measure-space),
+Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space),
 and let $f : S \to \reals$ be [measurable](#def-measurable-function).
 The **positive part** and **negative part** of $f$ are the non-negative functions
 

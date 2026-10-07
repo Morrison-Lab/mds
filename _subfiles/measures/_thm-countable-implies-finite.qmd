@@ -2,7 +2,7 @@
 #### Countable additivity implies finite additivity
 
 If $\mu$ is a [countably additive](#def-countable-additivity) function
-on a [$\sigma$-algebra](#def-sigma-algebra) $\mathscr{S}$,
+on a [$\sigma$-algebra](#def-sigma-algebra) $\salg$,
 and $\mu(\emptyset) = 0$,
 then $\mu$ is [finitely additive](#def-finite-additivity).
 
@@ -10,7 +10,7 @@ then $\mu$ is [finitely additive](#def-finite-additivity).
 
 ::: proof
 
-Let $A_1, \ldots, A_n$ be pairwise disjoint sets in $\mathscr{S}$,
+Let $A_1, \ldots, A_n$ be pairwise disjoint sets in $\salg$,
 and extend them to a sequence by setting $A_{n+1} = A_{n+2} = \cdots = \emptyset$.
 The extended sequence is still pairwise disjoint,
 since $\emptyset$ shares no element with any set,
