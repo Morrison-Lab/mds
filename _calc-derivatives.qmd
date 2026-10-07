@@ -316,8 +316,4 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 ### Taylor series {#sec-taylor-series}
 
-{{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/calculus-review/_exr-calc-taylor-1d.qmd >}}
