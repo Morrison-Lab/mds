@@ -301,10 +301,6 @@ $$
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
-
-{{< slidebreak >}}
-
 ### Linear approximation {#sec-linear-approximation}
 
 For a differentiable function $f$ and a small step $\epsilon$,
@@ -347,6 +343,10 @@ as an affine function for functions of several variables as well.
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_fig-linear-approx.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
 
 {{< slidebreak >}}
 
