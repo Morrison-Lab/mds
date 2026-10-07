@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 16:45:19 (PDT)
+Last modified: 2026-10-06 17:04:57 (PDT)
 
 ## 1 Derivatives
 
@@ -390,12 +390,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 2 (Derivative of polynomial and power functions)** Find the derivative of
 >
 > \\f(x) = 4x^5 + 3x^2 + x^{1/3}\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Differentiate term by term using the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)) and the power rule ([Theorem 3](#thm-deriv-polynomial)):
+> *Solution 2*. Differentiate term by term using the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)) and the power rule ([Theorem 3](#thm-deriv-polynomial)):
 >
 > \\\begin{aligned} \frac{d }{d x}(4x^5) &= 4 \cdot(5x^4) = 20x^4 \\ \frac{d }{d x}(3x^2) &= 3 \cdot(2x) = 6x \\ \frac{d }{d x}(x^{1/3}) &= \frac{1}{3}x^{1/3 - 1} = \frac{1}{3}x^{-2/3} \end{aligned}\\
 >
@@ -408,12 +406,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 3 (Derivative of a product)** Find the derivative of
 >
 > \\f(x) = (x^4 + 3x^2 + 8)\cos x\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the product rule ([Theorem 6](#thm-product-rule)) with:
+> *Solution 3*. Apply the product rule ([Theorem 6](#thm-product-rule)) with:
 >
 > \\u(x) = x^4 + 3x^2 + 8, \qquad v(x) = \cos x\\
 >
@@ -432,12 +428,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = \log(1 - x^2)\\
 >
 > for \\x \in (-1, 1)\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the chain rule for logarithms ([Corollary 1](#cor-deriv-log-chain)): if \\g(x) = 1 - x^2\\, then \\g'(x) = -2x\\, and
+> *Solution 4*. Apply the chain rule for logarithms ([Corollary 1](#cor-deriv-log-chain)): if \\g(x) = 1 - x^2\\, then \\g'(x) = -2x\\, and
 >
 > \\f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}\\
 >
@@ -450,12 +444,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = \log(4x) - \log(2x)\\
 >
 > for \\x \> 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Simplify before differentiating using the quotient property of logarithms:
+> *Solution 5*. Simplify before differentiating using the quotient property of logarithms:
 >
 > \\f(x) = \log(4x) - \log(2x) = \log\mathopen{}\left(\frac{4x}{2x}\right)\mathclose{} = \log 2\\
 >
@@ -470,12 +462,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 6 (Derivative of the standard Gaussian kernel)** Find the derivative of
 >
 > \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the chain rule ([Theorem 8](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
+> *Solution 6*. Apply the chain rule ([Theorem 8](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
 >
 > \\f'(x) = u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
 
@@ -484,12 +474,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 7 (Second derivative of the Gaussian kernel)** Find the second derivative of
 >
 > \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. From [Exercise 6](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
+> *Solution 7*. From [Exercise 6](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
 >
 > \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
 >
@@ -502,12 +490,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 8 (Combining product and chain rules)** Find the derivative of
 >
 > \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4)\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\ and \\v(x) = \cos(3x^4)\\:
+> *Solution 8*. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\ and \\v(x) = \cos(3x^4)\\:
 >
 > \\f'(x) = u'(x)v(x) + u(x)v'(x)\\
 >
@@ -526,12 +512,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > 1.  Compute \\f'(x)\\.
 > 2.  Find the equation of the tangent line to the curve \\y = f(x)\\ at \\x = \pi/4\\.
 > 3.  Use the tangent line to approximate \\f(\pi/4 + 0.01)\\, and compare that approximation with the exact value.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. **1.** Differentiate term by term:
+> *Solution 9*. **1.** Differentiate term by term:
 >
 > \\f'(x) = 4 - \sqrt{2}\sin x\\
 >
@@ -560,12 +544,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = \log x + \sqrt{162}\\
 >
 > for \\x \> 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Because \\\sqrt{162}\\ is constant with respect to \\x\\, its derivative is zero ([Theorem 1](#thm-deriv-const)):
+> *Solution 10*. Because \\\sqrt{162}\\ is constant with respect to \\x\\, its derivative is zero ([Theorem 1](#thm-deriv-const)):
 >
 > \\f'(x) = \frac{1}{x} = x^{-1}\\
 >
@@ -580,12 +562,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = x^4 e^{-x}\\
 >
 > on the interval \\\[0, \infty)\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Differentiate using the product rule:
+> *Solution 11*. Differentiate using the product rule:
 >
 > \\f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)\\
 >
@@ -606,12 +586,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = 4x^3 - 3x^2\\
 >
 > and decide whether each is a local maximum, a local minimum, or an inflection point.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Compute the first derivative:
+> *Solution 12*. Compute the first derivative:
 >
 > \\f'(x) = 12x^2 - 6x = 6x(2x - 1)\\
 >
@@ -635,12 +613,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = \frac{x^2 - 1}{x - 1}\\
 >
 > for \\x \ne 1\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Factor the numerator before differentiating:
+> *Solution 13*. Factor the numerator before differentiating:
 >
 > \\f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)\\
 >
@@ -659,12 +635,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > \\f(x) = \sqrt\[3\]{(5x - 2)^2} = (5x - 2)^{2/3}\\
 >
 > for \\x \ne 2/5\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Apply the generalized power rule \\\frac{d }{d x}\[g(x)\]^r = r\[g(x)\]^{r-1}g'(x)\\ with \\g(x) = 5x - 2\\ and \\r = 2/3\\:
+> *Solution 14*. Apply the generalized power rule \\\frac{d }{d x}\[g(x)\]^r = r\[g(x)\]^{r-1}g'(x)\\ with \\g(x) = 5x - 2\\ and \\r = 2/3\\:
 >
 > \\f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cdot 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}\\
 >
@@ -677,12 +651,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > 1.  \\-1\\
 > 2.  \\2\\
 > 3.  \\0\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. The slope is given by the derivative:
+> *Solution 15*. The slope is given by the derivative:
 >
 > \\f'(x) = x^2 + 2x - 1\\
 >
@@ -699,12 +671,10 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 16 (Second derivative of a product)** Find the second derivative of
 >
 > \\f(x) = (x^4 + 3x^2 + 8)\cos x\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. From [Exercise 3](#exr-miller-deriv-product-poly-cos), the first derivative is:
+> *Solution 16*. From [Exercise 3](#exr-miller-deriv-product-poly-cos), the first derivative is:
 >
 > \\f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x\\
 >
@@ -722,11 +692,23 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
 
-The Taylor polynomial of degree \\n\\ for a function \\f\\ with \\n\\ derivatives at \\x_0\\ is:
+> **NOTE:**
+>
+> **Definition 12 (Taylor polynomial and Taylor series)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
+>
+> \\P_n(x) = \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \tag{2}\\
+>
+> When \\x_0 = 0\\, \\P_n(x)\\ is called the **Maclaurin polynomial**. When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
 
-\\P_n(x) = \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \tag{2}\\
-
-When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series converges to \\f(x)\\ on an interval, the infinite sum is the Taylor series.
+> **NOTE:**
+>
+> **Example 11 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is \\f^{(k)}(0) = e^0 = 1\\. The degree-\\n\\ Maclaurin polynomial is:
+>
+> \\P_n(x) = 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} = \sum\_{k=0}^n \frac{x^k}{k!}\\
+>
+> Because the remainder \\R_n(x) \to 0\\ as \\n \to \infty\\ for all \\x \in \mathbb{R}\\, the Taylor series converges everywhere to \\e^x\\:
+>
+> \\e^x = \sum\_{k=0}^\infty \frac{x^k}{k!}\\
 
 > **NOTE:**
 >
@@ -735,12 +717,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = x^8 + x^4 + 3\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Evaluate \\f\\ and its first four derivatives at \\x = 0\\:
+> *Solution 17*. Evaluate \\f\\ and its first four derivatives at \\x = 0\\:
 >
 > \\\begin{aligned} f(x) &= x^8 + x^4 + 3 &\implies f(0) &= 3 \\ f'(x) &= 8x^7 + 4x^3 &\implies f'(0) &= 0 \\ f''(x) &= 56x^6 + 12x^2 &\implies f''(0) &= 0 \\ f'''(x) &= 336x^5 + 24x &\implies f'''(0) &= 0 \\ f^{(4)}(x) &= 1680x^4 + 24 &\implies f^{(4)}(0) &= 24 \end{aligned}\\
 >
@@ -757,12 +737,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = x^8 + x^4 + 3\\
 >
 > at \\x_0 = 1\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
+> *Solution 18*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
 >
 > \\\begin{aligned} f(1) &= 1^8 + 1^4 + 3 = 5 \\ f'(1) &= 8(1)^7 + 4(1)^3 = 12 \\ f''(1) &= 56(1)^6 + 12(1)^2 = 68 \end{aligned}\\
 >
@@ -777,12 +755,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \cos(5x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Recall the standard Maclaurin series for cosine:
+> *Solution 19*. Recall the standard Maclaurin series for cosine:
 >
 > \\\cos u = 1 - \frac{u^2}{2!} + \frac{u^4}{4!} - \dots\\
 >
@@ -799,12 +775,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \cos^3(5x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. From [Exercise 19](#exr-miller-taylor-cos-scaled), the expansion of \\\cos(5x)\\ up to order \\x^4\\ is:
+> *Solution 20*. From [Exercise 19](#exr-miller-taylor-cos-scaled), the expansion of \\\cos(5x)\\ up to order \\x^4\\ is:
 >
 > \\\cos(5x) = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 + O(x^6)\\
 >
@@ -819,12 +793,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = e^x\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Since \\f(0) = e^0 = 1\\ and \\f'(0) = e^0 = 1\\:
+> *Solution 21*. Since \\f(0) = e^0 = 1\\ and \\f'(0) = e^0 = 1\\:
 >
 > \\P_1(x) = f(0) + f'(0)x = 1 + x\\
 >
@@ -837,12 +809,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
+> *Solution 22*. Substitute \\u = x^8\\ into \\e^u = 1 + u + \frac{u^2}{2!} + \dots\\:
 >
 > \\\operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} = 1 + x^8 + \frac{x^{16}}{2} + \dots\\
 >
@@ -857,12 +827,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
+> *Solution 23*. Using \\e^u = 1 + u + O(u^2)\\ with \\u = -x^2/2\\:
 >
 > \\\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} = 1 - \frac{x^2}{2} + O(x^4)\\
 >
@@ -881,12 +849,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \sqrt{x}\\
 >
 > at \\x_0 = 1/3\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Compute the values at \\x_0 = 1/3\\:
+> *Solution 24*. Compute the values at \\x_0 = 1/3\\:
 >
 > \\\begin{aligned} f(1/3) &= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3} \\ f'(x) &= \frac{1}{2}x^{-1/2} \implies f'(1/3) = \frac{1}{2}\sqrt{3} = \frac{\sqrt{3}}{2} \\ f''(x) &= -\frac{1}{4}x^{-3/2} \implies f''(1/3) = -\frac{1}{4} \cdot 3\sqrt{3} = -\frac{3\sqrt{3}}{4} \end{aligned}\\
 >
@@ -901,12 +867,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = (1 + x)^{1/3}\\
 >
 > at \\x_0 = 1/2\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
+> *Solution 25*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
 >
 > \\\begin{aligned} f(1/2) &= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} \\ f'(x) &= \frac{1}{3}(1 + x)^{-2/3} \implies f'(1/2) = \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3} = \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3} \\ f''(x) &= -\frac{2}{9}(1 + x)^{-5/3} \implies f''(1/2) = -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3} = -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3} \end{aligned}\\
 >
@@ -921,12 +885,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = x\log x\\
 >
 > at \\x_0 = 1\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Evaluate derivatives at \\x_0 = 1\\:
+> *Solution 26*. Evaluate derivatives at \\x_0 = 1\\:
 >
 > \\\begin{aligned} f(1) &= 1 \log 1 = 0 \\ f'(x) &= \log x + 1 \implies f'(1) = 0 + 1 = 1 \\ f''(x) &= \frac{1}{x} \implies f''(1) = 1 \end{aligned}\\
 >
@@ -941,12 +903,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \log(1 + x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Differentiating repeatedly at \\x_0 = 0\\:
+> *Solution 27*. Differentiating repeatedly at \\x_0 = 0\\:
 >
 > \\\begin{aligned} f(0) &= \log 1 = 0 \\ f'(x) &= (1 + x)^{-1} \implies f'(0) = 1 \\ f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1 \\ f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2 \end{aligned}\\
 >
@@ -961,12 +921,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \log(1 - x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Exercise 27](#exr-miller-taylor-log-one-plus-x):
+> *Solution 28*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Exercise 27](#exr-miller-taylor-log-one-plus-x):
 >
 > \\\log(1 - x) = (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots = -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\\
 
@@ -977,12 +935,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \log((1 - x)e^x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Expand using logarithm properties:
+> *Solution 29*. Expand using logarithm properties:
 >
 > \\f(x) = \log(1 - x) + \log(e^x) = \log(1 - x) + x\\
 >
@@ -1001,12 +957,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \cos(x)\log(1 + x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Multiply the known Maclaurin expansions:
+> *Solution 30*. Multiply the known Maclaurin expansions:
 >
 > \\\begin{aligned} \cos x &= 1 - \frac{x^2}{2} + O(x^4) \\ \log(1 + x) &= x - \frac{x^2}{2} + O(x^3) \end{aligned}\\
 >
@@ -1021,12 +975,10 @@ When \\x_0 = 0\\, this is often called the Maclaurin polynomial. When the series
 > \\f(x) = \log(1 + 2x)\\
 >
 > at \\x_0 = 0\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
+> *Solution 31*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
 >
 > \\\log(1 + 2x) = (2x) - \frac{(2x)^2}{2} + \dots = 2x - 2x^2 + \dots\\
 
@@ -1045,7 +997,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 12 (Antiderivative)** A function \\F\\ is an **antiderivative** of \\f\\ on an interval \\I\\ if:
+> **Definition 13 (Antiderivative)** A function \\F\\ is an **antiderivative** of \\f\\ on an interval \\I\\ if:
 >
 > \\\frac{\partial}{\partial x} F(x) = f(x), \quad \forall x \in I\\
 >
@@ -1055,7 +1007,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 13 (Indefinite integral)** The **indefinite integral** of \\f\\ is the family of all antiderivatives ([Definition 12](#def-antiderivative)) of \\f\\:
+> **Definition 14 (Indefinite integral)** The **indefinite integral** of \\f\\ is the family of all antiderivatives ([Definition 13](#def-antiderivative)) of \\f\\:
 >
 > \\\int f(x)\\dx = F(x) + C\\
 >
@@ -1065,7 +1017,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 11 (Antiderivative of \\x^2\\)** For \\f(x) = x^2\\, an antiderivative is \\F(x) = \frac{x^3}{3}\\, since \\\frac{\partial}{\partial x}\frac{x^3}{3} = x^2 = f(x)\\.
+> **Example 12 (Antiderivative of \\x^2\\)** For \\f(x) = x^2\\, an antiderivative is \\F(x) = \frac{x^3}{3}\\, since \\\frac{\partial}{\partial x}\frac{x^3}{3} = x^2 = f(x)\\.
 >
 > Adding any constant \\C\\ gives another antiderivative; for example, with \\C = 7\\, \\F(x) = \frac{x^3}{3} + 7\\ also satisfies \\F'(x) = x^2\\, since adding a constant does not change the derivative. \\G(x) = x^3\\ is not an antiderivative of \\x^2\\: \\G'(x) = 3x^2 \ne x^2\\ for \\x \ne 0\\.
 >
@@ -1110,7 +1062,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Theorem 9 (Basic integration rules)** Each antiderivative in the table is defined only up to an arbitrary constant \\C\\ (see [Definition 12](#def-antiderivative)); the table omits \\+ C\\ from every row for brevity.
+> **Theorem 9 (Basic integration rules)** Each antiderivative in the table is defined only up to an arbitrary constant \\C\\ (see [Definition 13](#def-antiderivative)); the table omits \\+ C\\ from every row for brevity.
 >
 > | Function \\f(x)\\ | Antiderivative \\F(x)\\ | Condition |
 > |:--:|:--:|:---|
@@ -1126,7 +1078,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 12 (Antiderivative of \\3x^2 - 1\\)** By the power rule (\\n = 2\\) and linearity from [Theorem 9](#thm-integral-rules):
+> **Example 13 (Antiderivative of \\3x^2 - 1\\)** By the power rule (\\n = 2\\) and linearity from [Theorem 9](#thm-integral-rules):
 >
 > \\ \int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx = 3 \cdot\frac{x^3}{3} - x + C = x^3 - x + C. \\
 >
@@ -1143,20 +1095,20 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 14 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 4](#def-differentiable)) at every point of the interval other than its [endpoints](sets-functions.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 6](#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
+> **Definition 15 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 4](#def-differentiable)) at every point of the interval other than its [endpoints](sets-functions.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 6](#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
 >
 > ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
 
 > **NOTE:**
 >
-> **Example 13 (Differentiable on one interval but not another)**  
+> **Example 14 (Differentiable on one interval but not another)**  
 >
 > - \\f(x) = x^2\\ is differentiable on \\\[0, 1\]\\: the computation of [Example 4](#exm-differentiable) with \\3\\ replaced by any \\c\\ gives \\\tfrac{f(c + h) - f(c)}{h} = 2c + h\\, which tends to \\2c\\, including the one-sided limits at the endpoints \\0\\ and \\1\\.
 > - \\g(x) = \sqrt\[3\]{x}\\ is differentiable on \\\[1, 2\]\\, but not on \\\[-1, 1\]\\: the point \\0\\ is in \\\[-1, 1\]\\ and is not an endpoint, and [Example 4](#exm-differentiable) shows \\g\\ is not differentiable there.
 
 > **NOTE:**
 >
-> **Definition 15 (Continuous function)** A function \\f\\ is **continuous at** \\x = c\\ if all three conditions hold:
+> **Definition 16 (Continuous function)** A function \\f\\ is **continuous at** \\x = c\\ if all three conditions hold:
 >
 > 1.  \\f(c)\\ is defined,
 > 2.  \\\lim\_{x \to c} f(x)\\ exists, and
@@ -1168,7 +1120,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 14 (A continuous function, and one failure of each condition)**  
+> **Example 15 (A continuous function, and one failure of each condition)**  
 >
 > - \\f(x) = x^2\\ is continuous at \\c = 1\\: \\f(1) = 1\\ is defined, and \\\lim\_{x \to 1} x^2 = 1 = f(1)\\.
 > - \\g(x) = \tfrac{x^2 - 1}{x - 1}\\ fails condition 1 at \\c = 1\\: \\g(1)\\ is not defined (it would divide by zero), even though \\\lim\_{x \to 1} g(x) = \lim\_{x \to 1} (x + 1) = 2\\ exists (\\x^2 - 1 = (x - 1)(x + 1)\\, and the factor \\x - 1\\ cancels for \\x \ne 1\\).
@@ -1177,20 +1129,20 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 16 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ if both one-sided limits ([Definition 2](#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 15](#def-continuous)).
+> **Definition 17 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ if both one-sided limits ([Definition 2](#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 16](#def-continuous)).
 
 > **NOTE:**
 >
-> **Example 15 (A jump discontinuity, and a discontinuity that is not a jump)**  
+> **Example 16 (A jump discontinuity, and a discontinuity that is not a jump)**  
 >
 > - The step function \\H\\ of [Example 2](#exm-one-sided-limit) has a jump discontinuity at \\0\\: \\\lim\_{x \to 0^-} H(x) = 0\\ and \\\lim\_{x \to 0^+} H(x) = 1\\ both exist, and \\0 \ne 1\\. The size of the jump is \\1 - 0 = 1\\.
-> - \\g(x) = \tfrac{x^2 - 1}{x - 1}\\ of [Example 14](#exm-continuous) is discontinuous at \\1\\, because \\g(1)\\ is not defined, but it does not have a jump discontinuity there: for \\x \ne 1\\, \\g(x) = x + 1\\, so both one-sided limits at \\1\\ equal \\1 + 1 = 2\\.
+> - \\g(x) = \tfrac{x^2 - 1}{x - 1}\\ of [Example 15](#exm-continuous) is discontinuous at \\1\\, because \\g(1)\\ is not defined, but it does not have a jump discontinuity there: for \\x \ne 1\\, \\g(x) = x + 1\\, so both one-sided limits at \\1\\ equal \\1 + 1 = 2\\.
 
 > **NOTE:**
 >
-> **Definition 17 (Continuous on a closed interval)** A function \\f\\ is **continuous on** a closed interval \\\[a, b\]\\ if all three conditions hold:
+> **Definition 18 (Continuous on a closed interval)** A function \\f\\ is **continuous on** a closed interval \\\[a, b\]\\ if all three conditions hold:
 >
-> 1.  \\f\\ is continuous ([Definition 15](#def-continuous)) at every point of the open interval \\(a, b)\\,
+> 1.  \\f\\ is continuous ([Definition 16](#def-continuous)) at every point of the open interval \\(a, b)\\,
 > 2.  \\\lim\_{x \to a^+} f(x) = f(a)\\, and
 > 3.  \\\lim\_{x \to b^-} f(x) = f(b)\\.
 >
@@ -1198,15 +1150,15 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 16 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, the [square root](algebra.llms.md#def-square-root), defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 17](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\, \\\lim\_{x \to 0^+} \sqrt{x} = 0 = f(0)\\, and \\\lim\_{x \to 1^-} \sqrt{x} = 1 = f(1)\\, so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 17](#def-continuous-on)).
+> **Example 17 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, the [square root](algebra.llms.md#def-square-root), defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 18](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\, \\\lim\_{x \to 0^+} \sqrt{x} = 0 = f(0)\\, and \\\lim\_{x \to 1^-} \sqrt{x} = 1 = f(1)\\, so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 18](#def-continuous-on)).
 
 > **NOTE:**
 >
-> **Example 17 (A function not continuous on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = 0\\ for \\0 \le x \< 1\\ and \\f(1) = 2\\. Conditions 1 and 2 of [Definition 17](#def-continuous-on) hold, but \\\lim\_{x \to 1^-} f(x) = 0 \ne 2 = f(1)\\, so condition 3 fails and \\f\\ is not continuous on \\\[0, 1\]\\.
+> **Example 18 (A function not continuous on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = 0\\ for \\0 \le x \< 1\\ and \\f(1) = 2\\. Conditions 1 and 2 of [Definition 18](#def-continuous-on) hold, but \\\lim\_{x \to 1^-} f(x) = 0 \ne 2 = f(1)\\, so condition 3 fails and \\f\\ is not continuous on \\\[0, 1\]\\.
 
 > **NOTE:**
 >
-> **Definition 18 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
+> **Definition 19 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
 >
 > \\a = x_0 \< x_1 \< \cdots \< x_n = b.\\
 >
@@ -1216,18 +1168,18 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 18 (A partition of \\\lbrack 0, 1\rbrack\\)** The points \\0 \< 0.25 \< 0.5 \< 1\\ form a partition of \\\[0, 1\]\\ with \\n = 3\\ subintervals, of widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\.
+> **Example 19 (A partition of \\\lbrack 0, 1\rbrack\\)** The points \\0 \< 0.25 \< 0.5 \< 1\\ form a partition of \\\[0, 1\]\\ with \\n = 3\\ subintervals, of widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\.
 
 > **NOTE:**
 >
-> **Example 19 (Lists that are not partitions of \\\lbrack 0, 1\rbrack\\)**  
+> **Example 20 (Lists that are not partitions of \\\lbrack 0, 1\rbrack\\)**  
 >
 > - \\0, 0.5, 0.25, 1\\ is not a partition: the points are not increasing, since \\0.5 \> 0.25\\.
 > - \\0 \< 0.5\\ is not a partition of \\\[0, 1\]\\: its last point is \\0.5\\, not \\b = 1\\.
 
 > **NOTE:**
 >
-> **Definition 19 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 18](#def-partition)) is its largest subinterval width,
+> **Definition 20 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 19](#def-partition)) is its largest subinterval width,
 >
 > \\\\\mathcal{P}\\ \stackrel{\text{def}}{=}\max\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}} \Delta x_i,\\
 >
@@ -1237,11 +1189,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 20 (The mesh of a partition of \\\lbrack 0, 1\rbrack\\)** For the partition of \\\[0, 1\]\\ in [Example 18](#exm-partition), with widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\, the mesh is the largest of these widths, \\\\\mathcal{P}\\ = 0.5\\.
+> **Example 21 (The mesh of a partition of \\\lbrack 0, 1\rbrack\\)** For the partition of \\\[0, 1\]\\ in [Example 19](#exm-partition), with widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\, the mesh is the largest of these widths, \\\\\mathcal{P}\\ = 0.5\\.
 
 > **NOTE:**
 >
-> **Definition 20 (Riemann sum)** Let \\f\\ be a function on \\\[a, b\]\\, let \\\mathcal{P}\\ be a partition \\a = x_0 \< x_1 \< \cdots \< x_n = b\\ of \\\[a, b\]\\ ([Definition 18](#def-partition)), and choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ and these sample points is
+> **Definition 21 (Riemann sum)** Let \\f\\ be a function on \\\[a, b\]\\, let \\\mathcal{P}\\ be a partition \\a = x_0 \< x_1 \< \cdots \< x_n = b\\ of \\\[a, b\]\\ ([Definition 19](#def-partition)), and choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ and these sample points is
 >
 > \\\sum\_{i=1}^n f(x_i^\*)\\\Delta x_i,\\
 >
@@ -1251,13 +1203,13 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 21 (A Riemann sum for \\x^2\\ on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = x^2\\, take the partition \\0 \< 0.25 \< 0.5 \< 1\\ of [Example 18](#exm-partition), with widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\, and take each sample point at the right end of its subinterval: \\x_1^\* = 0.25\\, \\x_2^\* = 0.5\\, and \\x_3^\* = 1\\. Then
+> **Example 22 (A Riemann sum for \\x^2\\ on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = x^2\\, take the partition \\0 \< 0.25 \< 0.5 \< 1\\ of [Example 19](#exm-partition), with widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\, and take each sample point at the right end of its subinterval: \\x_1^\* = 0.25\\, \\x_2^\* = 0.5\\, and \\x_3^\* = 1\\. Then
 >
 > \\ \begin{aligned} \sum\_{i=1}^3 f(x_i^\*)\\\Delta x_i &= f(0.25) \cdot 0.25 + f(0.5) \cdot 0.25 + f(1) \cdot 0.5 && \text{(write out the three terms)} \\ &= 0.0625 \cdot 0.25 + 0.25 \cdot 0.25 + 1 \cdot 0.5 && \text{(evaluate } f(x) = x^2 \text{)} \\ &= 0.015625 + 0.0625 + 0.5 && \text{(multiply)} \\ &= 0.578125 && \text{(add)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Definition 21 (Riemann integral)** Let \\f\\ be a [bounded](algebra.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 18](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 20](#def-riemann-sum)) as the mesh ([Definition 19](#def-mesh)) shrinks to zero:
+> **Definition 22 (Riemann integral)** Let \\f\\ be a [bounded](algebra.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 19](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 21](#def-riemann-sum)) as the mesh ([Definition 20](#def-mesh)) shrinks to zero:
 >
 > \\\int_a^b f(x)\\dx \stackrel{\text{def}}{=}\lim\_{\\\mathcal{P}\\ \to 0} \sum\_{i=1}^n f(x_i^\*)\\\Delta x_i,\\
 >
@@ -1267,42 +1219,42 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 22 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if the Riemann sums ([Definition 20](#def-riemann-sum)) \\\sum\_{i=1}^n f(x_i^\*)\\\Delta x_i\\, over partitions \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 18](#def-partition)) with a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\, approach a real-number limit as the mesh \\\\\mathcal{P}\\\\ ([Definition 19](#def-mesh)) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.
+> **Definition 23 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if the Riemann sums ([Definition 21](#def-riemann-sum)) \\\sum\_{i=1}^n f(x_i^\*)\\\Delta x_i\\, over partitions \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 19](#def-partition)) with a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\, approach a real-number limit as the mesh \\\\\mathcal{P}\\\\ ([Definition 20](#def-mesh)) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.
 >
 > ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e), p. 272)
 
 > **NOTE:**
 >
-> **Example 22 (A constant function is integrable)** Let \\f(x) = 2\\ on \\\[0, 3\]\\. For every partition and every choice of sample points,
+> **Example 23 (A constant function is integrable)** Let \\f(x) = 2\\ on \\\[0, 3\]\\. For every partition and every choice of sample points,
 >
 > \\ \begin{aligned} \sum\_{i=1}^n f(x_i^\*)\\\Delta x_i &= \sum\_{i=1}^n 2\\\Delta x_i && \text{(} f \text{ is } 2 \text{ everywhere)} \\ &= 2 \sum\_{i=1}^n \Delta x_i && \text{(factor out the constant)} \\ &= 2 \cdot(3 - 0) && \text{(the widths add up to the length of } \[0, 3\] \text{)} \\ &= 6, && \text{(multiply)} \end{aligned} \\
 >
-> so the sums have the same limit, \\6\\, for every choice: \\f\\ is Riemann integrable on \\\[0, 3\]\\ ([Definition 22](#def-integrable)), and \\\int_0^3 2\\dx = 6\\ ([Definition 21](#def-riemann-integral)).
+> so the sums have the same limit, \\6\\, for every choice: \\f\\ is Riemann integrable on \\\[0, 3\]\\ ([Definition 23](#def-integrable)), and \\\int_0^3 2\\dx = 6\\ ([Definition 22](#def-riemann-integral)).
 
 > **NOTE:**
 >
-> **Definition 23 (Integrand)** In an integral such as \\\int_a^b f(x)\\dx\\ ([Definition 21](#def-riemann-integral)) or \\\int f(x)\\dx\\ ([Definition 13](#def-indefinite-integral)), the function \\f\\ being integrated is the **integrand**.
+> **Definition 24 (Integrand)** In an integral such as \\\int_a^b f(x)\\dx\\ ([Definition 22](#def-riemann-integral)) or \\\int f(x)\\dx\\ ([Definition 14](#def-indefinite-integral)), the function \\f\\ being integrated is the **integrand**.
 
 > **NOTE:**
 >
-> **Example 23 (Integrands)**  
+> **Example 24 (Integrands)**  
 >
-> - In \\\int_0^3 2\\dx = 6\\ ([Example 22](#exm-integrable-constant)), the integrand is the [constant function](algebra.llms.md#def-constant-function) \\f(x) = 2\\, and the [limits of integration](notation.llms.md#def-lower-upper-limits) are \\0\\ and \\3\\.
-> - In \\\int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx = x^3 - x + C\\ ([Example 12](#exm-integral-rules-quadratic)), the integrand is \\f(x) = 3x^2 - 1\\; its value at \\x = 2\\ is \\3 \cdot 4 - 1 = 11\\.
+> - In \\\int_0^3 2\\dx = 6\\ ([Example 23](#exm-integrable-constant)), the integrand is the [constant function](algebra.llms.md#def-constant-function) \\f(x) = 2\\, and the [limits of integration](notation.llms.md#def-lower-upper-limits) are \\0\\ and \\3\\.
+> - In \\\int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx = x^3 - x + C\\ ([Example 13](#exm-integral-rules-quadratic)), the integrand is \\f(x) = 3x^2 - 1\\; its value at \\x = 2\\ is \\3 \cdot 4 - 1 = 11\\.
 
 > **NOTE:**
 >
-> *Remark 2* (Riemann integrable functions and Riemann integrals). A bounded function \\f\\ is Riemann integrable on \\\[a, b\]\\ exactly when its Riemann integral \\\int_a^b f(x)\\dx\\ ([Definition 21](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let \\g(x) = 1\\ when \\x\\ is [rational](notation.llms.md#def-rational-numbers) and \\g(x) = 0\\ when \\x\\ is [irrational](notation.llms.md#def-irrational-numbers), on \\\[0, 1\]\\. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives \\\sum\_{i=1}^n 1 \cdot\Delta x_i = 1\\ for every partition, because the widths \\\Delta x_i\\ add up to the length \\1 - 0 = 1\\ of \\\[0, 1\]\\, and choosing every sample point irrational gives \\\sum\_{i=1}^n 0 \cdot\Delta x_i = 0\\. The two limits differ, so \\g\\ is not Riemann integrable on \\\[0, 1\]\\, and \\\int_0^1 g(x)\\dx\\ does not exist.
+> *Remark 2* (Riemann integrable functions and Riemann integrals). A bounded function \\f\\ is Riemann integrable on \\\[a, b\]\\ exactly when its Riemann integral \\\int_a^b f(x)\\dx\\ ([Definition 22](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let \\g(x) = 1\\ when \\x\\ is [rational](notation.llms.md#def-rational-numbers) and \\g(x) = 0\\ when \\x\\ is [irrational](notation.llms.md#def-irrational-numbers), on \\\[0, 1\]\\. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives \\\sum\_{i=1}^n 1 \cdot\Delta x_i = 1\\ for every partition, because the widths \\\Delta x_i\\ add up to the length \\1 - 0 = 1\\ of \\\[0, 1\]\\, and choosing every sample point irrational gives \\\sum\_{i=1}^n 0 \cdot\Delta x_i = 0\\. The two limits differ, so \\g\\ is not Riemann integrable on \\\[0, 1\]\\, and \\\int_0^1 g(x)\\dx\\ does not exist.
 
 > **NOTE:**
 >
-> **Definition 24 (Equal-width Riemann sum)** For a bounded function \\f\\ on \\\[a, b\]\\ and a positive integer \\n\\, split \\\[a, b\]\\ into \\n\\ subintervals of equal width \\\Delta x \stackrel{\text{def}}{=}(b - a)/n\\, and let \\x_i^\*\\ be any point in the \\i\\-th subinterval. The **equal-width Riemann sum** is
+> **Definition 25 (Equal-width Riemann sum)** For a bounded function \\f\\ on \\\[a, b\]\\ and a positive integer \\n\\, split \\\[a, b\]\\ into \\n\\ subintervals of equal width \\\Delta x \stackrel{\text{def}}{=}(b - a)/n\\, and let \\x_i^\*\\ be any point in the \\i\\-th subinterval. The **equal-width Riemann sum** is
 >
 > \\S_n \stackrel{\text{def}}{=}\sum\_{i=1}^n f(x_i^\*)\\\Delta x.\\
 
 > **NOTE:**
 >
-> **Example 24 (An equal-width Riemann sum)** Let \\f(x) = x^2\\ on \\\[0, 1\]\\, with \\n = 2\\, so \\\Delta x = 1/2\\, and take each sample point at the right end of its subinterval: \\x_1^\* = \frac{1}{2}\\ and \\x_2^\* = 1\\. Then
+> **Example 25 (An equal-width Riemann sum)** Let \\f(x) = x^2\\ on \\\[0, 1\]\\, with \\n = 2\\, so \\\Delta x = 1/2\\, and take each sample point at the right end of its subinterval: \\x_1^\* = \frac{1}{2}\\ and \\x_2^\* = 1\\. Then
 >
 > \\ \begin{aligned} S_2 &= f\mathopen{}\left(\tfrac{1}{2}\right)\mathclose{} \cdot\tfrac{1}{2} + f(1) \cdot\tfrac{1}{2} && \text{(equal-width Riemann sum with } n = 2 \text{)} \\ &= \tfrac{1}{4} \cdot\tfrac{1}{2} + 1 \cdot\tfrac{1}{2} && \text{(evaluate } f(x) = x^2 \text{)} \\ &= \tfrac{5}{8} && \text{(add)} \end{aligned} \\
 
@@ -1327,15 +1279,15 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > \\ \begin{aligned} \lim\_{h \to 0} \mathopen{}\left(f(c + h) - f(c)\right)\mathclose{} &= \lim\_{h \to 0} \mathopen{}\left(\frac{f(c + h) - f(c)}{h} \cdot h\right)\mathclose{} && \text{(multiply and divide by } h \neq 0 \text{)} \\ &= \mathopen{}\left(\lim\_{h \to 0} \frac{f(c + h) - f(c)}{h}\right)\mathclose{} \cdot\mathopen{}\left(\lim\_{h \to 0} h\right)\mathclose{} && \text{(limit of a product, both limits exist)} \\ &= f'(c) \cdot 0 && \text{(definition of } f'(c) \text{)} \\ &= 0 && \text{(multiply)} \end{aligned} \\
 >
-> So \\\lim\_{h \to 0} f(c + h) = f(c)\\, which is \\\lim\_{x \to c} f(x) = f(c)\\ with \\x = c + h\\; all three conditions of [Definition 15](#def-continuous) hold.
+> So \\\lim\_{h \to 0} f(c + h) = f(c)\\, which is \\\lim\_{x \to c} f(x) = f(c)\\ with \\x = c + h\\; all three conditions of [Definition 16](#def-continuous) hold.
 
 > **NOTE:**
 >
-> **Example 25 (Differentiable, hence continuous: \\x^3 - x\\)** \\f(x) = x^3 - x\\ is differentiable everywhere (with derivative \\f'(x) = 3x^2 - 1\\), so by [Theorem 10](#thm-diff-implies-cont) it is continuous everywhere.
+> **Example 26 (Differentiable, hence continuous: \\x^3 - x\\)** \\f(x) = x^3 - x\\ is differentiable everywhere (with derivative \\f'(x) = 3x^2 - 1\\), so by [Theorem 10](#thm-diff-implies-cont) it is continuous everywhere.
 
 > **NOTE:**
 >
-> **Example 26 (Continuous but not differentiable: \\\mathopen{}\left\|x\right\|\mathclose{}\\)** The absolute-value function \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is continuous at \\x = 0\\ (\\\lim\_{x \to 0}\mathopen{}\left\|x\right\|\mathclose{} = 0 = \mathopen{}\left\|0\right\|\mathclose{}\\), but it is not differentiable at \\x = 0\\: its left-hand derivative there is \\-1\\ and its right-hand derivative is \\+1\\ ([Example 6](#exm-one-sided-derivative)).
+> **Example 27 (Continuous but not differentiable: \\\mathopen{}\left\|x\right\|\mathclose{}\\)** The absolute-value function \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is continuous at \\x = 0\\ (\\\lim\_{x \to 0}\mathopen{}\left\|x\right\|\mathclose{} = 0 = \mathopen{}\left\|0\right\|\mathclose{}\\), but it is not differentiable at \\x = 0\\: its left-hand derivative there is \\-1\\ and its right-hand derivative is \\+1\\ ([Example 6](#exm-one-sided-derivative)).
 >
 > This [counterexample](notation.llms.md#def-counterexample) shows that the [converse](notation.llms.md#def-converse) of [Theorem 10](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 3](#fig-abs-value).
 >
@@ -1361,11 +1313,11 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 
 > **NOTE:**
 >
-> **Example 27 (Continuous, hence integrable: polynomials)** Every [polynomial](algebra.llms.md#def-polynomial) is continuous on \\\mathbb{R}\\, so by [Theorem 11](#thm-cont-implies-int) every polynomial is integrable on every closed interval \\\[a, b\]\\.
+> **Example 28 (Continuous, hence integrable: polynomials)** Every [polynomial](algebra.llms.md#def-polynomial) is continuous on \\\mathbb{R}\\, so by [Theorem 11](#thm-cont-implies-int) every polynomial is integrable on every closed interval \\\[a, b\]\\.
 
 > **NOTE:**
 >
-> **Example 28 (Integrable but not continuous: a step function)** Let \\f(x) = 0\\ for \\x \< \tfrac{1}{2}\\ and \\f(x) = 1\\ for \\x \ge \tfrac{1}{2}\\. Then \\f\\ has a jump discontinuity ([Definition 16](#def-jump-discontinuity)) at \\x = \tfrac{1}{2}\\, but it is integrable on \\\[0, 1\]\\:
+> **Example 29 (Integrable but not continuous: a step function)** Let \\f(x) = 0\\ for \\x \< \tfrac{1}{2}\\ and \\f(x) = 1\\ for \\x \ge \tfrac{1}{2}\\. Then \\f\\ has a jump discontinuity ([Definition 17](#def-jump-discontinuity)) at \\x = \tfrac{1}{2}\\, but it is integrable on \\\[0, 1\]\\:
 >
 > \\ \int_0^1 f(x)\\dx = \int_0^{1/2} 0\\dx + \int\_{1/2}^1 1\\dx = 0 + \tfrac{1}{2} = \tfrac{1}{2}. \\
 >
@@ -1401,29 +1353,29 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >   ggplot2::theme_minimal()
 > ```
 >
-> [![](calculus_files/figure-html/step-code-1.png)](calculus_files/figure-html/step-code-1.png "Figure 4: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 28.")
+> [![](calculus_files/figure-html/step-code-1.png)](calculus_files/figure-html/step-code-1.png "Figure 4: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 29.")
 >
-> Figure 4: Step function: \\f(x) = 0\\ on \\\[0, \tfrac{1}{2})\\ (open circle at the jump) and \\f(x) = 1\\ on \\\[\tfrac{1}{2}, 1\]\\ (filled circle). The shaded rectangle has area \\\tfrac{1}{2}\\, matching the integral computed in [Example 28](#exm-int-not-cont).
+> Figure 4: Step function: \\f(x) = 0\\ on \\\[0, \tfrac{1}{2})\\ (open circle at the jump) and \\f(x) = 1\\ on \\\[\tfrac{1}{2}, 1\]\\ (filled circle). The shaded rectangle has area \\\tfrac{1}{2}\\, matching the integral computed in [Example 29](#exm-int-not-cont).
 
 Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-implies-int) establish the chain:
 
 \\\text{differentiable on } \[a, b\] \\\Rightarrow\\ \text{continuous on } \[a, b\] \\\Rightarrow\\ \text{integrable on } \[a, b\]\\
 
-[Example 26](#exm-cont-not-diff) and [Example 28](#exm-int-not-cont) show that neither implication reverses in general.
+[Example 27](#exm-cont-not-diff) and [Example 29](#exm-int-not-cont) show that neither implication reverses in general.
 
 > **NOTE:**
 >
-> **Theorem 12 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 22](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 24](#def-riemann-sum-equal-width)) converge to the integral:
+> **Theorem 12 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 23](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 25](#def-riemann-sum-equal-width)) converge to the integral:
 >
 > \\\lim\_{n \to \infty} S_n = \int_a^b f(x)\\dx.\\
 
 > **NOTE:**
 >
-> *Proof*. The \\n\\ equal-width subintervals form a partition of \\\[a, b\]\\ whose mesh ([Definition 19](#def-mesh)) is \\(b - a)/n\\, which goes to \\0\\ as \\n \to \infty\\. So \\S_n\\ is one of the sums in the limit that defines the integral ([Definition 21](#def-riemann-integral)), along a sequence of partitions whose mesh goes to \\0\\, and a limit that has the same value for every choice of partitions has that value along this sequence too.
+> *Proof*. The \\n\\ equal-width subintervals form a partition of \\\[a, b\]\\ whose mesh ([Definition 20](#def-mesh)) is \\(b - a)/n\\, which goes to \\0\\ as \\n \to \infty\\. So \\S_n\\ is one of the sums in the limit that defines the integral ([Definition 22](#def-riemann-integral)), along a sequence of partitions whose mesh goes to \\0\\, and a limit that has the same value for every choice of partitions has that value along this sequence too.
 
 > **NOTE:**
 >
-> **Example 29 (Equal-width sums for \\\int_0^1 x\\dx\\)** Let \\f(x) = x\\ on \\\[0, 1\]\\, which is continuous and so Riemann integrable ([Theorem 11](#thm-cont-implies-int)), and take each sample point at the right end of its subinterval, \\x_i^\* = i/n\\. With \\\Delta x = 1/n\\:
+> **Example 30 (Equal-width sums for \\\int_0^1 x\\dx\\)** Let \\f(x) = x\\ on \\\[0, 1\]\\, which is continuous and so Riemann integrable ([Theorem 11](#thm-cont-implies-int)), and take each sample point at the right end of its subinterval, \\x_i^\* = i/n\\. With \\\Delta x = 1/n\\:
 >
 > \\ \begin{aligned} S_n &= \sum\_{i=1}^n \frac{i}{n} \cdot\frac{1}{n} && \text{(equal-width Riemann sum with } x_i^\* = i/n \text{)} \\ &= \frac{1}{n^2} \sum\_{i=1}^n i && \text{(factor out } 1/n^2 \text{)} \\ &= \frac{1}{n^2} \cdot\frac{n(n+1)}{2} && \text{(sum of the first } n \text{ integers)} \\ &= \frac{n+1}{2n} && \text{(cancel one factor of } n \text{)} \end{aligned} \\
 >
@@ -1433,7 +1385,7 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 
 > **NOTE:**
 >
-> **Definition 25 (Accumulation function)** Let \\f\\ be Riemann integrable on \\\[a, b\]\\ ([Definition 22](#def-integrable)). The **accumulation function** of \\f\\ from \\a\\ is the function \\F\\ on \\\[a, b\]\\ with \\F(a) \stackrel{\text{def}}{=}0\\ and
+> **Definition 26 (Accumulation function)** Let \\f\\ be Riemann integrable on \\\[a, b\]\\ ([Definition 23](#def-integrable)). The **accumulation function** of \\f\\ from \\a\\ is the function \\F\\ on \\\[a, b\]\\ with \\F(a) \stackrel{\text{def}}{=}0\\ and
 >
 > \\F(x) \stackrel{\text{def}}{=}\int_a^x f(t)\\dt \quad \text{for } a \< x \le b.\\
 >
@@ -1441,7 +1393,7 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 
 > **NOTE:**
 >
-> **Example 30 (The accumulation function of a constant)** Let \\f(t) = 2\\ on \\\[0, 3\]\\, which is Riemann integrable ([Example 22](#exm-integrable-constant)). For \\0 \< x \le 3\\, the computation of [Example 22](#exm-integrable-constant), with the interval \\\[0, 3\]\\ replaced by \\\[0, x\]\\, gives
+> **Example 31 (The accumulation function of a constant)** Let \\f(t) = 2\\ on \\\[0, 3\]\\, which is Riemann integrable ([Example 23](#exm-integrable-constant)). For \\0 \< x \le 3\\, the computation of [Example 23](#exm-integrable-constant), with the interval \\\[0, 3\]\\ replaced by \\\[0, x\]\\, gives
 >
 > \\ \begin{aligned} F(x) &= \int_0^x 2\\dt && \text{(definition of the accumulation function)} \\ &= 2 \cdot(x - 0) && \text{(every Riemann sum is } 2 \text{ times the total width } x - 0 \text{)} \\ &= 2x && \text{(subtract)} \end{aligned} \\
 >
@@ -1451,13 +1403,13 @@ Together, [Theorem 10](#thm-diff-implies-cont) and [Theorem 11](#thm-cont-impl
 >
 > **Theorem 13 (Fundamental Theorem of Calculus)** Let \\f\\ be a continuous function on a closed interval \\\[a, b\]\\.
 >
-> **Part 1 (Derivative of an integral).** Let \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\ be the accumulation function of \\f\\ from \\a\\ ([Definition 25](#def-accumulation-function)). Then \\F\\ is differentiable and:
+> **Part 1 (Derivative of an integral).** Let \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\ be the accumulation function of \\f\\ from \\a\\ ([Definition 26](#def-accumulation-function)). Then \\F\\ is differentiable and:
 >
 > \\\frac{\partial}{\partial x}\int_a^x f(t)\\dt = f(x) \tag{3}\\
 >
 > > **NOTE:**
 > >
-> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 22](#def-integrable)) and continuous at \\x\\ (see [Definition 15](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 16](#def-jump-discontinuity)) elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
+> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 23](#def-integrable)) and continuous at \\x\\ (see [Definition 16](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 17](#def-jump-discontinuity)) elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
 >
 > ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.11, p. 288)
 >
@@ -1484,7 +1436,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Definition 26 (Evaluation bracket)** For a function \\F\\ and numbers \\a\\ and \\b\\ where \\F\\ is defined, the **evaluation bracket** is the difference
+> **Definition 27 (Evaluation bracket)** For a function \\F\\ and numbers \\a\\ and \\b\\ where \\F\\ is defined, the **evaluation bracket** is the difference
 >
 > \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_{t=a}^{t=b} \stackrel{\text{def}}{=}F(b) - F(a).\\
 >
@@ -1492,13 +1444,13 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Example 31 (Evaluating \\\int_1^3 2t\\dt\\ with a bracket)** \\F(t) = t^2\\ is an antiderivative of \\f(t) = 2t\\, since \\\frac{\partial}{\partial t} t^2 = 2t\\, so
+> **Example 32 (Evaluating \\\int_1^3 2t\\dt\\ with a bracket)** \\F(t) = t^2\\ is an antiderivative of \\f(t) = 2t\\, since \\\frac{\partial}{\partial t} t^2 = 2t\\, so
 >
 > \\ \begin{aligned} \int_1^3 2t\\dt &= \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=1}^{t=3} && \text{(FTC Part 2)} \\ &= 3^2 - 1^2 && \text{(definition of the evaluation bracket)} \\ &= 9 - 1 && \text{(square)} \\ &= 8 && \text{(subtract)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 32 (FTC Part 1 visualized: accumulation function for \\f(t) = 2t\\)** Take \\f(t) = 2t\\ on \\\[0, 2\]\\. The accumulation function from \\0\\ is
+> **Example 33 (FTC Part 1 visualized: accumulation function for \\f(t) = 2t\\)** Take \\f(t) = 2t\\ on \\\[0, 2\]\\. The accumulation function from \\0\\ is
 >
 > \\F(x) \\\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\=\\ x^2 - 0^2 \\=\\ x^2,\\
 >
@@ -1566,7 +1518,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Example 33 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 12](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
+> **Example 34 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 13](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
 >
 > Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\\lambda \> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is ([Kleinbaum and Klein 2012, sec. II](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”):
 >
@@ -1655,12 +1607,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 32 (Definite integral of a polynomial)** Evaluate the integral:
 >
 > \\\int_0^1 (x^4 + x^2 + 1)\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Integrate term by term using the power rule for integration:
+> *Solution 32*. Integrate term by term using the power rule for integration:
 >
 > \\\begin{aligned} \int_0^1 (x^4 + x^2 + 1)\\dx &= \mathopen{}\left\[\frac{x^5}{5} + \frac{x^3}{3} + x\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left(\frac{1}{5} + \frac{1}{3} + 1\right)\mathclose{} - 0 = \frac{3 + 5 + 15}{15} = \frac{23}{15} \end{aligned}\\
 
@@ -1669,12 +1619,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 33 (Integral of a perfect square)** Evaluate the integral:
 >
 > \\\int_0^1 (x^2 + 2x + 1)\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Notice that the integrand is a perfect square: \\x^2 + 2x + 1 = (x + 1)^2\\.
+> *Solution 33*. Notice that the integrand is a perfect square: \\x^2 + 2x + 1 = (x + 1)^2\\.
 >
 > With substitution \\u = x + 1\\ (where \\du = dx\\):
 >
@@ -1689,12 +1637,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 34 (Integral of a composite power)** Evaluate the integral:
 >
 > \\\int_0^1 (x^2 + 2x + 1)^2\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Recognize that \\x^2 + 2x + 1 = (x + 1)^2\\, so the integrand is:
+> *Solution 34*. Recognize that \\x^2 + 2x + 1 = (x + 1)^2\\, so the integrand is:
 >
 > \\(x^2 + 2x + 1)^2 = \mathopen{}\left\[(x + 1)^2\right\]\mathclose{}^2 = (x + 1)^4\\
 >
@@ -1709,12 +1655,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 35 (Integral of odd trigonometric functions)** Evaluate the integral:
 >
 > \\\int\_{-\pi/2}^{\pi/2} (\sin^3 x \cos x + \sin x \cos x)\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Because \\\sin(-x) = -\sin x\\ and \\\cos(-x) = \cos x\\:
+> *Solution 35*. Because \\\sin(-x) = -\sin x\\ and \\\cos(-x) = \cos x\\:
 >
 > \\\sin^3(-x)\cos(-x) + \sin(-x)\cos(-x) = -\sin^3 x \cos x - \sin x \cos x\\
 >
@@ -1731,12 +1675,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 36 (Separating even and odd parts of a polynomial)** Evaluate the integral:
 >
 > \\\int\_{-4}^4 (x^3 + 6x^2 - 2x - 3)\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Split the integrand into its odd part \\x^3 - 2x\\ and its even part \\6x^2 - 3\\:
+> *Solution 36*. Split the integrand into its odd part \\x^3 - 2x\\ and its even part \\6x^2 - 3\\:
 >
 > \\\int\_{-4}^4 (x^3 - 2x)\\dx = 0\\
 >
@@ -1749,12 +1691,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 37 (Substitution leading to a natural logarithm)** Evaluate the integral:
 >
 > \\\int_0^1 \frac{x}{1 + x^2}\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Let \\u = 1 + x^2\\. Then \\du = 2x\\dx\\, so \\x\\dx = \frac{1}{2}du\\.
+> *Solution 37*. Let \\u = 1 + x^2\\. Then \\du = 2x\\dx\\, so \\x\\dx = \frac{1}{2}du\\.
 >
 > Transform the limits of integration:
 >
@@ -1772,12 +1712,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 38 (Substitution with a polynomial power)** Evaluate the integral:
 >
 > \\\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Let \\u = x^3 + 3x\\. Then:
+> *Solution 38*. Let \\u = x^3 + 3x\\. Then:
 >
 > \\du = (3x^2 + 3)\\dx = 3(x^2 + 1)\\dx \implies (x^2 + 1)\\dx = \frac{du}{3}\\
 >
@@ -1795,12 +1733,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 39 (Substitution with a trigonometric integrand)** Evaluate the integral:
 >
 > \\\int_0^2 x\cos(3x^2)\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Let \\u = 3x^2\\. Then \\du = 6x\\dx\\, meaning \\x\\dx = \frac{du}{6}\\.
+> *Solution 39*. Let \\u = 3x^2\\. Then \\du = 6x\\dx\\, meaning \\x\\dx = \frac{du}{6}\\.
 >
 > Limits:
 >
@@ -1816,12 +1752,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 40 (Improper Gaussian-kernel integral)** Evaluate the improper integral:
 >
 > \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Let \\u = x^2/4\\. Then \\du = \frac{x}{2}\\dx\\, so \\x\\dx = 2\\du\\.
+> *Solution 40*. Let \\u = x^2/4\\. Then \\du = \frac{x}{2}\\dx\\, so \\x\\dx = 2\\du\\.
 >
 > Limits:
 >
@@ -1839,12 +1773,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > **Exercise 41 (Integration by parts with an exponential factor)** Evaluate the integral:
 >
 > \\\int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\right)\mathclose{}\\. Set:
+> *Solution 41*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\right)\mathclose{}\\. Set:
 >
 > \\u = x^2, \qquad dv = x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
 >
@@ -1865,12 +1797,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > \\(f \* f)(x) = \int\_{-\infty}^\infty f(t)f(x - t)\\dt\\
 >
 > for all \\x \in \mathbb{R}\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. The integrand \\f(t)f(x - t)\\ equals \\1\\ when both \\t \in \[0, 1\]\\ and \\x - t \in \[0, 1\]\\, and equals \\0\\ otherwise.
+> *Solution 42*. The integrand \\f(t)f(x - t)\\ equals \\1\\ when both \\t \in \[0, 1\]\\ and \\x - t \in \[0, 1\]\\, and equals \\0\\ otherwise.
 >
 > The condition \\0 \le x - t \le 1\\ rearranges to:
 >
@@ -1900,7 +1830,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Definition 27 (Double integral)** Let \\f\\ be a bounded function on a closed, bounded plane region \\R \subseteq \mathbb{R}^2\\. Cover \\R\\ with a grid of rectangles, keep the \\n\\ rectangles that lie entirely inside \\R\\, with areas \\\Delta A_1, \ldots, \Delta A_n\\, and choose a point \\(x_i, y_i)\\ in the \\i\\-th rectangle. The **double integral** of \\f\\ over \\R\\ is
+> **Definition 28 (Double integral)** Let \\f\\ be a bounded function on a closed, bounded plane region \\R \subseteq \mathbb{R}^2\\. Cover \\R\\ with a grid of rectangles, keep the \\n\\ rectangles that lie entirely inside \\R\\, with areas \\\Delta A_1, \ldots, \Delta A_n\\, and choose a point \\(x_i, y_i)\\ in the \\i\\-th rectangle. The **double integral** of \\f\\ over \\R\\ is
 >
 > \\\iint_R f(x, y)\\dA \stackrel{\text{def}}{=}\lim\_{\\\Delta\\ \to 0} \sum\_{i=1}^n f(x_i, y_i)\\\Delta A_i,\\
 >
@@ -1910,11 +1840,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 34 (The double integral of \\1\\ is an area)** Let \\f(x, y) = 1\\ on the rectangle \\R = \[0, 2\] \times \[0, 3\]\\. Every sum in [Definition 27](#def-double-integral) adds up the areas of rectangles inside \\R\\, and those sums approach the area of \\R\\ as the grid gets finer, so \\\iint_R 1\\dA = 2 \cdot 3 = 6\\.
+> **Example 35 (The double integral of \\1\\ is an area)** Let \\f(x, y) = 1\\ on the rectangle \\R = \[0, 2\] \times \[0, 3\]\\. Every sum in [Definition 28](#def-double-integral) adds up the areas of rectangles inside \\R\\, and those sums approach the area of \\R\\ as the grid gets finer, so \\\iint_R 1\\dA = 2 \cdot 3 = 6\\.
 
 > **NOTE:**
 >
-> **Definition 28 (Iterated integral)** An **iterated integral** is an integral of an integral:
+> **Definition 29 (Iterated integral)** An **iterated integral** is an integral of an integral:
 >
 > \\ \int_a^b \int\_{g_1(x)}^{g_2(x)} f(x, y)\\dy\\dx \stackrel{\text{def}}{=}\int_a^b \mathopen{}\left(\int\_{g_1(x)}^{g_2(x)} f(x, y)\\dy\right)\mathclose{}\\dx \\
 >
@@ -1922,7 +1852,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 35 (An iterated integral)** Integrating over \\y\\ first, then \\x\\:
+> **Example 36 (An iterated integral)** Integrating over \\y\\ first, then \\x\\:
 >
 > \\ \begin{aligned} \int_0^1 \int_0^2 x y\\dy\\dx &= \int_0^1 \mathopen{}\left(\int_0^2 x y\\dy\right)\mathclose{}\\dx && \text{(definition of the iterated integral)} \\ &= \int_0^1 x \mathopen{}\left(\int_0^2 y\\dy\right)\mathclose{}\\dx && \text{(} x \text{ is constant in } y \text{)} \\ &= \int_0^1 x \mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_{y=0}^{y=2}\\dx && \text{(antiderivative of } y \text{)} \\ &= \int_0^1 2x\\dx && \text{(evaluate at the limits)} \\ &= \mathopen{}\left\[x^2\right\]\mathclose{}\_{x=0}^{x=1} && \text{(antiderivative of } 2x \text{)} \\ &= 1 && \text{(evaluate at the limits)} \end{aligned} \\
 
@@ -1944,7 +1874,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 36 (Changing the order of integration for a non-rectangular region)** Adapted from ([Larson and Edwards 2018, sec. 14.2](#ref-larsonCalc11e), Example 4, pp. 984–985).
+> **Example 37 (Changing the order of integration for a non-rectangular region)** Adapted from ([Larson and Edwards 2018, sec. 14.2](#ref-larsonCalc11e), Example 4, pp. 984–985).
 >
 > Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\\[0, 1\]^2\\. Define the function \\g(x, y) = \text{e}^{-x^2}\\\mathbb{1}\mathopen{}\left(y \le x\right)\mathclose{}\\, where \\e\\ is [Euler’s number](algebra.llms.md#def-euler-number), and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
 >
@@ -2036,7 +1966,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 37 (When conditions fail: a counterexample)** The conditions in [Theorem 14](#thm-fubini) are not merely technical — when they fail, iterated integrals can exist yet disagree.
+> **Example 38 (When conditions fail: a counterexample)** The conditions in [Theorem 14](#thm-fubini) are not merely technical — when they fail, iterated integrals can exist yet disagree.
 >
 > Let \\f(x, y) = \frac{x^2 - y^2}{(x^2 + y^2)^2}\\ on the unit square \\R = \[0, 1\] \times \[0, 1\]\\. Strictly, \\f\\ is defined on \\R \setminus \\(0, 0)\\\\: the denominator vanishes at the origin, so \\f\\ is undefined there (we return to this point in the condition check).
 >
@@ -2106,7 +2036,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 38 (Evaluating a double integral on a rectangle)** Structure adapted from ([Larson and Edwards 2018, sec. 14.2](#ref-larsonCalc11e), Example 2, pp. 982–983); the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\ for \\g(x, y) = x^2 + y^2\\.
+> **Example 39 (Evaluating a double integral on a rectangle)** Structure adapted from ([Larson and Edwards 2018, sec. 14.2](#ref-larsonCalc11e), Example 2, pp. 982–983); the integrand \\x^2 + y^2\\ is original, chosen so the integral equals \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\ for \\g(x, y) = x^2 + y^2\\.
 >
 > Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Uniform}(0, 1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-uniform) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = 1\\ on the unit square \\R = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, 1\]\\\\ ([Figure 10](#fig-fubini-rect-region)). Define the function \\g(x, y) = x^2 + y^2\\, and compute its [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{}\\.
 >
@@ -2191,11 +2121,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Remark 3* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science*. A [probability measure](measures.llms.md#def-probability-measure) \\P\\ on \\\Omega\\ has \\P(\Omega) = 1 \< \infty\\, so it is [finite](measures.llms.md#def-sigma-finite), and hence \\\sigma\\-finite ([finite and \\\sigma\\-finite measures](measures.llms.md#exm-sigma-finite)); for probability measures, the \\\sigma\\-finiteness condition is automatic.
 >
-> The integrability conditions (nonnegativity or [absolute integrability](measures.llms.md#def-absolutely-integrable)) still need to be verified in each application. For example, [Lebesgue measure](measures.llms.md#def-lebesgue-measure) (ordinary length) on \\\[0, 1\]\\ is a probability measure, so the \\\sigma\\-finiteness condition holds for both factors \\\[0, 1\]\\, yet the two iterated integrals in [Example 37](#exm-fubini-fail) are \\\pi/4\\ and \\-\pi/4\\. So \\\sigma\\-finiteness alone does not make the iterated integrals agree.
+> The integrability conditions (nonnegativity or [absolute integrability](measures.llms.md#def-absolutely-integrable)) still need to be verified in each application. For example, [Lebesgue measure](measures.llms.md#def-lebesgue-measure) (ordinary length) on \\\[0, 1\]\\ is a probability measure, so the \\\sigma\\-finiteness condition holds for both factors \\\[0, 1\]\\, yet the two iterated integrals in [Example 38](#exm-fubini-fail) are \\\pi/4\\ and \\-\pi/4\\. So \\\sigma\\-finiteness alone does not make the iterated integrals agree.
 
 > **NOTE:**
 >
-> **Example 39 (Positive application of [Theorem 15](#thm-fubini-tonelli))** Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Exponential}(1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = e^{-(x+y)}\\ for \\x, y \ge 0\\.
+> **Example 40 (Positive application of [Theorem 15](#thm-fubini-tonelli))** Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Exponential}(1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = e^{-(x+y)}\\ for \\x, y \ge 0\\.
 >
 > The probability \\P(X \le 1,\\ Y \le 1)\\ is the integral of \\f\\ over \\\[0, 1\]^2\\ with respect to Lebesgue measure (ordinary length) in each coordinate. Lebesgue measure on \\\[0, \infty)\\ is \\\sigma\\-finite, because \\\[0, \infty)\\ is the union of the intervals \\\[0, n\]\\, \\n \in \mathbb{N}\\, each of finite length \\n\\; so the \\\sigma\\-finiteness condition of [Theorem 15](#thm-fubini-tonelli) holds. Since \\f(x,y) = e^{-(x+y)} \ge 0\\, condition (a) (Tonelli’s theorem, nonnegativity) is also satisfied.
 >
@@ -2211,13 +2141,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 40 (When neither Fubini–Tonelli condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 37](#exm-fubini-fail) illustrates a case where neither condition of [Theorem 15](#thm-fubini-tonelli) is satisfied.
+> **Example 41 (When neither Fubini–Tonelli condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 38](#exm-fubini-fail) illustrates a case where neither condition of [Theorem 15](#thm-fubini-tonelli) is satisfied.
 >
 > **Why [Theorem 15](#thm-fubini-tonelli)’s conditions fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates condition (b). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies \\\|f(x, y)\| = \mathopen{}\left\|x^2 - y^2\right\|\mathclose{}/(x^2 + y^2)^2 = \mathopen{}\left\|\cos 2\theta\right\|\mathclose{}/r^2\\, so
 >
 > \\ \begin{aligned} \iint_R \|f\|\\dA &\ge \int_0^{\pi/2}\\\int_0^{\epsilon} \frac{\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}}{r^2}\\ r\\dr\\d\theta\\ &= \mathopen{}\left(\int_0^{\pi/2}\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}\\d\theta\right)\mathclose{} \int_0^{\epsilon} \frac{dr}{r}\\ &= +\infty, \end{aligned} \\
 >
-> since \\\int_0^{\epsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and condition (b) of [Theorem 15](#thm-fubini-tonelli) is not satisfied. (Condition (a) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 37](#exm-fubini-fail) are thus consistent with [Theorem 15](#thm-fubini-tonelli): the theorem simply does not apply.
+> since \\\int_0^{\epsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and condition (b) of [Theorem 15](#thm-fubini-tonelli) is not satisfied. (Condition (a) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 38](#exm-fubini-fail) are thus consistent with [Theorem 15](#thm-fubini-tonelli): the theorem simply does not apply.
 >
 > ([Wikipedia contributors 2024](#ref-wp:fubini))
 
@@ -2232,12 +2162,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > **Exercise 43 (Double integral of a polynomial over a rectangle)** Evaluate the double integral:
 >
 > \\\int_0^2 \int_0^3 5(x^2 y + xy^2 + 2)\\dy\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Integrate with respect to \\y\\ first:
+> *Solution 43*. Integrate with respect to \\y\\ first:
 >
 > \\\begin{aligned} \int_0^3 (x^2 y + xy^2 + 2)\\dy &= \mathopen{}\left\[\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y\right\]\mathclose{}\_{y=0}^3 \\ &= \frac{9}{2}x^2 + 9x + 6 \end{aligned}\\
 >
@@ -2252,12 +2180,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > **Exercise 44 (Choosing the order of integration)** Evaluate the double integral:
 >
 > \\\int_0^6 \int_0^5 x e^{-xy}\\dy\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Integrating with respect to \\x\\ first requires integration by parts. Integrating with respect to \\y\\ first is much simpler because the factor of \\x\\ is already present:
+> *Solution 44*. Integrating with respect to \\x\\ first requires integration by parts. Integrating with respect to \\y\\ first is much simpler because the factor of \\x\\ is already present:
 >
 > \\\int_0^5 x e^{-xy}\\dy = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{y=0}^5 = 1 - e^{-5x}\\
 >
@@ -2270,12 +2196,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > **Exercise 45 (Product of single integrals for separable functions)** Let \\m, n \> 0\\. Evaluate:
 >
 > \\\int_0^1 \int_0^1 x^m y^n\\dy\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Because the region of integration is a rectangle \\\[0, 1\] \times \[0, 1\]\\ and the integrand factors as \\g(x)h(y) = x^m \cdot y^n\\, the double integral splits into the product of two single-variable integrals:
+> *Solution 45*. Because the region of integration is a rectangle \\\[0, 1\] \times \[0, 1\]\\ and the integrand factors as \\g(x)h(y) = x^m \cdot y^n\\, the double integral splits into the product of two single-variable integrals:
 >
 > \\\int_0^1 \int_0^1 x^m y^n\\dy\\dx = \mathopen{}\left(\int_0^1 x^m\\dx\right)\mathclose{}\mathopen{}\left(\int_0^1 y^n\\dy\right)\mathclose{}\\
 >
@@ -2296,12 +2220,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > \\\int_0^1 \int_0^x xy\\dy\\dx\\
 >
 > and confirm the result by reversing the order of integration.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. **1. Given order (\\y\\ then \\x\\):**
+> *Solution 46*. **1. Given order (\\y\\ then \\x\\):**
 >
 > \\\int_0^x xy\\dy = x\mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_0^x = \frac{x^3}{2}\\
 >
@@ -2322,12 +2244,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > \\\int_0^1 \int_0^x y e^{-xy}\\dy\\dx\\
 >
 > by reversing the order of integration.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. In the given order, the inner integral \\\int_0^x y e^{-xy}\\dy\\ requires integration by parts with respect to \\y\\.
+> *Solution 47*. In the given order, the inner integral \\\int_0^x y e^{-xy}\\dy\\ requires integration by parts with respect to \\y\\.
 >
 > Switching the order over the triangular domain \\\\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
 >
@@ -2350,12 +2270,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > **Exercise 48 (Double integral with polynomial and radical terms)** Evaluate the double integral:
 >
 > \\\int_0^1 \int_0^1 (x^2 + 2xy + y\sqrt{x})\\dy\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Integrate with respect to \\y\\ first:
+> *Solution 48*. Integrate with respect to \\y\\ first:
 >
 > \\\int_0^1 (x^2 + 2xy + y\sqrt{x})\\dy = \mathopen{}\left\[x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}\right\]\mathclose{}\_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}\\
 >
@@ -2368,12 +2286,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > **Exercise 49 (Double integral of an affine function)** Let \\a, b, c\\ be constants. Evaluate:
 >
 > \\\int_0^1 \int_0^1 (ax + by + c)\\dy\\dx\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. By linearity of the integral:
+> *Solution 49*. By linearity of the integral:
 >
 > \\\begin{aligned} \int_0^1 \int_0^1 (ax + by + c)\\dy\\dx &= a\int_0^1 x\\dx \int_0^1 1\\dy + b\int_0^1 1\\dx \int_0^1 y\\dy + c\int_0^1 1\\dx \int_0^1 1\\dy \\ &= a\mathopen{}\left(\frac{1}{2}\right)\mathclose{}(1) + b(1)\mathopen{}\left(\frac{1}{2}\right)\mathclose{} + c(1)(1) \\ &= \frac{a}{2} + \frac{b}{2} + c \end{aligned}\\
 
@@ -2382,12 +2298,10 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > **Exercise 50 (Harmonic numbers via double integrals)** Prove that for every positive integer \\n\\:
 >
 > \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=1}^n \frac{1}{k} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. **Method 1 (integration then geometric series):** Integrate with respect to \\x\\ first:
+> *Solution 50*. **Method 1 (integration then geometric series):** Integrate with respect to \\x\\ first:
 >
 > \\\int_0^1 n(1 - xy)^{n-1}\\dx = \mathopen{}\left\[-\frac{(1 - xy)^n}{y}\right\]\mathclose{}\_{x=0}^1 = \frac{1 - (1 - y)^n}{y}\\
 >

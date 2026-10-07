@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 16:45:19 (PDT)
+Last modified: 2026-10-06 17:04:57 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -77,12 +77,10 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > **NOTE:**
 >
 > **Exercise 1 (First-order partial derivatives)** Let \\f(x, y) = x^2 y + e^x + \sin(xy)\\. Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. To compute \\\frac{\partial f}{\partial x}\\, treat \\y\\ as a constant:
+> *Solution 1*. To compute \\\frac{\partial f}{\partial x}\\, treat \\y\\ as a constant:
 >
 > \\\frac{\partial f}{\partial x} = 2xy + e^x + y\cos(xy)\\
 >
@@ -97,12 +95,10 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
 >
 > Find \\\frac{\partial f}{\partial \mu}\\ and \\\frac{\partial f}{\partial \sigma}\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. **1. Derivative with respect to \\\mu\\:** Treat \\\sigma\\ as constant. Differentiating the exponential factor via the chain rule:
+> *Solution 2*. **1. Derivative with respect to \\\mu\\:** Treat \\\sigma\\ as constant. Differentiating the exponential factor via the chain rule:
 >
 > \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
 >
@@ -117,12 +113,10 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > **Exercise 3 (Partial derivatives with exponential of quadratic form)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
 > \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. With respect to \\x\\, apply the product rule:
+> *Solution 3*. With respect to \\x\\, apply the product rule:
 >
 > \\\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
 >
@@ -137,12 +131,10 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > \\f(x, y) = e^{xy} - \log(x^2 + y^2)\\
 >
 > on \\\mathbb{R}^2 \setminus \\(0, 0)\\\\.
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Holding \\y\\ constant, differentiate with respect to \\x\\:
+> *Solution 4*. Holding \\y\\ constant, differentiate with respect to \\x\\:
 >
 > \\\frac{\partial f}{\partial x} = ye^{xy} - \frac{2x}{x^2 + y^2}\\
 >
@@ -157,12 +149,10 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > **Exercise 5 (Partial derivative with respect to an unreferenced variable)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
 > \\f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\\
->
-> (adapted from Miller ([2016](#ref-problifesavercalc)))
 
 > **NOTE:**
 >
-> *Solution*. Although the function is declared as a function of three variables \\(x, y, t)\\, its expression depends solely on \\t\\.
+> *Solution 5*. Although the function is declared as a function of three variables \\(x, y, t)\\, its expression depends solely on \\t\\.
 >
 > Because neither \\x\\ nor \\y\\ appears in the formula, \\f\\ is constant with respect to both \\x\\ and \\y\\:
 >
@@ -320,7 +310,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Solution 1*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
+> *Solution 6*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
 >
 > \\\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\\
 >
@@ -754,7 +744,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Solution 2*. Written out over the six positions,
+> *Solution 7*. Written out over the six positions,
 >
 > \\g(W) = 2W\_{11} - W\_{12} + 0\\W\_{13} + 4W\_{21} + 3W\_{22} - 2W\_{23}\\
 >
