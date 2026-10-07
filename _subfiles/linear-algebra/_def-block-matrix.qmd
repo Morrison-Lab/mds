@@ -18,7 +18,7 @@ each in its original order.
 A matrix written this way is a **block matrix**.
 When $\matr{X}$ is $n \times n$ and $1 \le k \le n$,
 the $k \times k$ matrix of the entries $x_{ij}$ with $i, j \le k$
-is the **leading** (or top-left) $k \times k$ **block** of $\matr{X}$;
+is the **leading** (or **top-left**) $k \times k$ **block** of $\matr{X}$;
 for $k < n$ it is the block $\matr{A}$ above with $l = k$,
 and for $k = n$ it is $\matr{X}$ itself.
 

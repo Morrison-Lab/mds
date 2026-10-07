@@ -1,7 +1,7 @@
 :::{#def-linear-system}
-#### Linear system
+#### Linear system (system of linear equations)
 
-A **linear system** (or *system of linear equations*)
+A **linear system** (or **system of linear equations**)
 with $m$ equations in $n$ unknowns is an equation
 $\matr{A} \vx = \vecf{b}$
 in which the $m \times n$ matrix $\matr{A}$ and the vector $\vecf{b} \in \reals^m$ are given.

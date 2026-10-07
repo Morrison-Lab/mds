@@ -1,5 +1,5 @@
 :::{#def-tangent-line}
-#### Tangent line
+#### Tangent line and tangent slope
 
 Let $f$ be differentiable at $c$ (@def-differentiable).
 The **tangent line** to the [graph](sets-functions.qmd#def-graph) of $f$ at $c$

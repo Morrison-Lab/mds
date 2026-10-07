@@ -310,7 +310,7 @@ $$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{}{w}f(w)$$ {#eq-linear-approx}
 {{< slidebreak >}}
 
 :::{#def-linear-approximation}
-#### Linear approximation
+#### Linear approximation (first-order Taylor approximation)
 
 For a function $f$ that is differentiable at $w$,
 the **linear approximation** of $f$ at $w$
@@ -353,10 +353,10 @@ as an affine function for functions of several variables as well.
 ### Critical points and optimization {#sec-critical-points}
 
 :::{#def-flat-point}
-#### Flat point
+#### Flat point (stationary point)
 
 Let $f$ be differentiable at $c$ (@def-differentiable).
-If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary point*).
+If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary point**).
 :::
 
 {{< slidebreak >}}

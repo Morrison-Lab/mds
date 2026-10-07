@@ -1,5 +1,5 @@
 :::{#def-subspace}
-#### Subspace
+#### Subspace (linear subspace, vector space, linear space)
 
 A set $\mathcal{S}$ of vectors in $\reals^p$ is a **subspace** of $\reals^p$
 if it is not empty

@@ -1,5 +1,5 @@
 :::{#def-pairwise-disjoint}
-#### Pairwise disjoint sets
+#### Pairwise disjoint sets (disjoint, mutually disjoint)
 
 Finitely or countably many sets $A_1, A_2, \ldots$
 are **pairwise disjoint**

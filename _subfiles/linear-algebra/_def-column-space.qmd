@@ -1,5 +1,5 @@
 :::{#def-column-space}
-#### Column space
+#### Column space (range, image)
 
 The **column space** of an $m \times n$ matrix $\matr{A}$ is
 
@@ -92,7 +92,7 @@ a line in $\reals^3$.
 {{< slidebreak >}}
 
 :::{#def-null-space}
-#### Null space
+#### Null space (kernel)
 
 The **null space** of an $m \times n$ matrix $\matr{A}$ is
 
