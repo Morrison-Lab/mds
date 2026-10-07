@@ -1,5 +1,5 @@
 ::: {.callout-tip title="Videos"}
-Two chapters of the *Essence of linear algebra* series by 3Blue1Brown
+Two chapters of the [*Essence of linear algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) series by 3Blue1Brown
 show the results above geometrically:
 
 - [Linear transformations and matrices](https://www.youtube.com/watch?v=kYB8IZa5AuE) (Chapter 3)

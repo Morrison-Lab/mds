@@ -29,6 +29,10 @@ See also the [Linear Algebra and Vector Calculus
 further reading](linear-algebra.qmd#sec-additional-resources).
 
 - [Hua Zhou](https://hua-zhou.github.io/)'s [lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
+- [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+  is a YouTube playlist by Grant Sanderson (3Blue1Brown);
+  its chapters on gradient descent and backpropagation calculus visually illustrate
+  how gradients of multivariate cost functions are computed and used for optimization.
 
 ## References {.unnumbered}
 

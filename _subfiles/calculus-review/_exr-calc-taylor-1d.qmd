@@ -34,6 +34,10 @@ $$e^x = \sum_{k=0}^\infty \frac{x^k}{k!}$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
 ::: {#exr-miller-taylor-poly-zero}
 #### Taylor polynomial of a polynomial at the origin
 
