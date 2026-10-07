@@ -28,6 +28,10 @@ jobs:
       # folland1999real, marsden2013vector, strang2023linear) were searched
       # on Crossref (2026-10-03, no DOI found). Move a key out of this list
       # when a DOI is found and verified by content negotiation.
+      # velleman2019prove is the exception: its DOI is registered (Crossref
+      # returns 200) but Cambridge's landing page returned 404 to the checker
+      # on 2026-10-07. Remove it once https://doi.org/10.1017/9781108539890
+      # resolves again.
       exclude-keys: >-
         abramson2021algebra banerjee2014linear barkerplummer2011language
         billingsley1995probability calclifesaver
@@ -35,4 +39,4 @@ jobs:
         larsonCalc11e marsden2013vector mosaiccalc
         problifesavercalc
         realanalysislifesaver rudin1976principles searle2017matrix
-        strang2023linear
+        strang2023linear velleman2019prove
