@@ -1,0 +1,21 @@
+::: {#exr-miller-deriv-second-log-constant}
+#### Second derivative with an added constant
+
+Adapted from @problifesavercalc, Question 1.1.9.
+
+Find the second derivative of
+
+$$f(x) = \log x + \sqrt{162}$$
+
+for $x > 0$.
+:::
+
+::: {#sol-miller-deriv-second-log-constant}
+Because $\sqrt{162}$ is constant with respect to $x$, its derivative is zero (@thm-deriv-const):
+
+$$f'(x) = \frac{1}{x} = x^{-1}$$
+
+Differentiating again via the power rule (@thm-deriv-polynomial):
+
+$$f''(x) = -x^{-2} = -\frac{1}{x^2}$$
+:::

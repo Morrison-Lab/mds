@@ -1,0 +1,15 @@
+::: {#exr-miller-deriv-gaussian-kernel}
+#### Derivative of the standard Gaussian kernel
+
+Adapted from @problifesavercalc, Question 1.1.5.
+
+Find the derivative of
+
+$$f(x) = \exp{-\frac{x^2}{2}}$$
+:::
+
+::: {#sol-miller-deriv-gaussian-kernel}
+Apply the chain rule (@thm-chain-rule) with outer function $\exp{u}$ and inner function $u(x) = -x^2/2$. Since $\dif{}{u}\exp{u} = \exp{u}$ (@thm-deriv-exp) and $u'(x) = -x$:
+
+$$f'(x) = u'(x)\exp{u(x)} = -x\exp{-\frac{x^2}{2}}$$
+:::

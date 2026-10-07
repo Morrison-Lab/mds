@@ -12,10 +12,12 @@ the table omits $+ C$ from every row for brevity.
 | $\dfrac{1}{x}$ | $\logf{\abs{x}}$ | $x \ne 0$ |
 | $\ef{x}$ | $\ef{x}$ | (self-antiderivative) |
 | $\ef{cx}$ | $\dfrac{1}{c}\ef{cx}$ | $c \ne 0$ |
+| $\sin x$ | $-\cos x$ | --- |
+| $\cos x$ | $\sin x$ | --- |
 | $c \cd f(x)$ | $c \cd F(x)$ | --- |
 | $f(x) + g(x)$ | $F(x) + G(x)$ | --- |
 
-The first two rows and the bottom two rows (linearity) are from
+The first two rows, the trigonometric rows ($\sin x$, $\cos x$), and the bottom two rows (linearity) are from
 [@larsonCalc11e, Section 4.1, p. 250 "Basic Integration Rules"];
 $1/x$ is from [@larsonCalc11e, Section 5.2, Theorem 5.5, p. 324];
 $\ef{x}$ and $\ef{cx}$ are from

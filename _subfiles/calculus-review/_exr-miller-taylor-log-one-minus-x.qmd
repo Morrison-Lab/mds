@@ -1,0 +1,17 @@
+::: {#exr-miller-taylor-log-one-minus-x}
+#### Maclaurin series of $\log(1 - x)$
+
+Adapted from @problifesavercalc, Question 1.1.27.
+
+Find the terms up to degree 3 of the Taylor series for
+
+$$f(x) = \log(1 - x)$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-log-one-minus-x}
+Substitute $u = -x$ into the expansion for $\log(1 + u)$ from @exr-miller-taylor-log-one-plus-x:
+
+$$\log(1 - x) = (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots = -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots$$
+:::

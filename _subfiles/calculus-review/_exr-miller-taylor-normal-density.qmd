@@ -1,0 +1,25 @@
+::: {#exr-miller-taylor-normal-density}
+#### Taylor expansion of the normal density
+
+Adapted from @problifesavercalc, Question 1.1.22.
+
+Find the terms up to degree 3 of the Taylor series for the standard normal density
+
+$$\phi(x) = \frac{1}{\sqrt{2\pi}}\exp{-\frac{x^2}{2}}$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-normal-density}
+Using $e^u = 1 + u + O(u^2)$ with $u = -x^2/2$:
+
+$$\exp{-\frac{x^2}{2}} = 1 - \frac{x^2}{2} + O(x^4)$$
+
+Multiplying by the normalization constant $1/\sqrt{2\pi}$:
+
+$$\phi(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}} + O(x^4)$$
+
+Up to degree 3, the odd powers vanish by symmetry, so:
+
+$$P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}$$
+:::

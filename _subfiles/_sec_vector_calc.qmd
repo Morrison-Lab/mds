@@ -14,6 +14,22 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-basic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-normal-parameters.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-exp-quadratic.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-symmetric.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-vector-derivative.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_note-video-gradients.qmd >}}
@@ -21,12 +37,6 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_note-video-partials.qmd >}}
-
-{{< slidebreak >}}
-
-### Exercises: Partial derivatives {#sec-exercises-partial-derivatives}
-
-{{< include mds/_subfiles/calculus-review/_exr-calc-derivatives-mv.qmd >}}
 
 {{< slidebreak >}}
 
@@ -75,6 +85,10 @@
 {{< include mds/_subfiles/vector-calc/_def-constant-wrt-vector.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_exm-constant-wrt-vector.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-independent-variable.qmd >}}
 
 {{< slidebreak >}}
 

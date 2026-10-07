@@ -1,0 +1,17 @@
+::: {#exr-miller-pderiv-basic}
+#### First-order partial derivatives
+
+Adapted from @problifesavercalc, Question 1.1.42.
+
+Let $f(x, y) = x^2 y + e^x + \sin(xy)$. Find $\derivf{f}{x}$ and $\derivf{f}{y}$.
+:::
+
+::: {#sol-miller-pderiv-basic}
+To compute $\derivf{f}{x}$, treat $y$ as a constant:
+
+$$\derivf{f}{x} = 2xy + e^x + y\cos(xy)$$
+
+To compute $\derivf{f}{y}$, treat $x$ as a constant:
+
+$$\derivf{f}{y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)$$
+:::

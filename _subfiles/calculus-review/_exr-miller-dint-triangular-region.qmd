@@ -1,0 +1,28 @@
+::: {#exr-miller-dint-triangular-region}
+#### Double integral over a triangular region
+
+Adapted from @problifesavercalc, Question 1.1.50.
+
+Evaluate the integral:
+
+$$\int_0^1 \int_0^x xy\,dy\,dx$$
+
+and confirm the result by reversing the order of integration.
+:::
+
+::: {#sol-miller-dint-triangular-region}
+**1. Given order ($y$ then $x$):**
+
+$$\int_0^x xy\,dy = x\sb{\frac{y^2}{2}}_0^x = \frac{x^3}{2}$$
+
+$$\int_0^1 \frac{x^3}{2}\,dx = \sb{\frac{x^4}{8}}_0^1 = \frac{1}{8}$$
+
+**2. Reversed order ($x$ then $y$):**
+The triangular region $T = \{(x, y) : 0 \le x \le 1, 0 \le y \le x\}$ is equivalently described by $T = \{(x, y) : 0 \le y \le 1, y \le x \le 1\}$:
+
+$$\int_0^1 \int_y^1 xy\,dx\,dy = \int_0^1 y\sb{\frac{x^2}{2}}_{x=y}^1\,dy = \int_0^1 \frac{y(1 - y^2)}{2}\,dy$$
+
+$$\int_0^1 \paren{\frac{y}{2} - \frac{y^3}{2}}\,dy = \sb{\frac{y^2}{4} - \frac{y^4}{8}}_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}$$
+
+Both orders yield $1/8$.
+:::

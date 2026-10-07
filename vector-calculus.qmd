@@ -24,6 +24,8 @@ format:
   is a free desk reference that collects matrix identities.
   Its chapter on derivatives lists derivatives of vector and matrix expressions,
   such as the linear and quadratic forms on this page.
+- @problifesavercalc
+  The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
 See also the [Linear Algebra and Vector Calculus
 further reading](linear-algebra.qmd#sec-additional-resources).

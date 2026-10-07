@@ -1,0 +1,31 @@
+::: {#exr-miller-int-by-parts-gaussian}
+#### Integration by parts with an exponential factor
+
+Adapted from @problifesavercalc, Question 1.1.40.
+
+Evaluate the integral:
+
+$$\int_a^b x^3 \exp{-\frac{x^2}{2}}\,dx$$
+:::
+
+::: {#sol-miller-int-by-parts-gaussian}
+Factor the integrand as $x^2 \cd \paren{x \exp{-x^2/2}}$. Set:
+
+$$u = x^2, \qquad dv = x\exp{-\frac{x^2}{2}}\,dx$$
+
+Then $du = 2x\,dx$ and $v = -\exp{-x^2/2}$.
+
+Using integration by parts ($\int u\,dv = uv - \int v\,du$):
+
+$$\ba
+\int_a^b x^3 \exp{-\frac{x^2}{2}}\,dx &= \sb{-x^2 \exp{-\frac{x^2}{2}}}_a^b - \int_a^b \sb{-\exp{-\frac{x^2}{2}}}(2x\,dx)
+\\
+&= \sb{-x^2 \exp{-\frac{x^2}{2}}}_a^b + 2\int_a^b x\exp{-\frac{x^2}{2}}\,dx
+\\
+&= \sb{-x^2 \exp{-\frac{x^2}{2}}}_a^b + 2\sb{-\exp{-\frac{x^2}{2}}}_a^b
+\\
+&= \sb{-(x^2 + 2)\exp{-\frac{x^2}{2}}}_a^b
+\\
+&= (a^2 + 2)\exp{-\frac{a^2}{2}} - (b^2 + 2)\exp{-\frac{b^2}{2}}
+\ea$$
+:::

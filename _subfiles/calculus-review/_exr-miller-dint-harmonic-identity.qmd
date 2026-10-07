@@ -1,0 +1,39 @@
+::: {#exr-miller-dint-harmonic-identity}
+#### Harmonic numbers via double integrals
+
+Adapted from @problifesavercalc, Question 1.1.54.
+
+Prove that for every positive integer $n$:
+
+$$\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy = \sum_{k=1}^n \frac{1}{k} = 1 + \frac{1}{2} + \dots + \frac{1}{n}$$
+:::
+
+::: {#sol-miller-dint-harmonic-identity}
+**Method 1 (integration then geometric series):**
+Integrate with respect to $x$ first:
+
+$$\int_0^1 n(1 - xy)^{n-1}\,dx = \sb{-\frac{(1 - xy)^n}{y}}_{x=0}^1 = \frac{1 - (1 - y)^n}{y}$$
+
+Use the finite geometric series identity $\sum_{k=0}^{n-1} r^k = \frac{1 - r^n}{1 - r}$ with $r = 1 - y$:
+
+$$\frac{1 - (1 - y)^n}{y} = \sum_{k=0}^{n-1} (1 - y)^k$$
+
+Now integrate each term with respect to $y$ from $0$ to $1$:
+
+$$\int_0^1 (1 - y)^k\,dy = \sb{-\frac{(1 - y)^{k+1}}{k+1}}_0^1 = \frac{1}{k+1}$$
+
+Summing over $k = 0, 1, \dots, n-1$:
+
+$$\sum_{k=0}^{n-1} \frac{1}{k+1} = \sum_{j=1}^n \frac{1}{j} = 1 + \frac{1}{2} + \dots + \frac{1}{n}$$
+
+**Method 2 (binomial expansion):**
+Expand $(1 - xy)^{n-1} = \sum_{k=0}^{n-1} \binom{n-1}{k}(-1)^k (xy)^k$. Integrating over $[0, 1]^2$:
+
+$$\int_0^1 \int_0^1 (xy)^k\,dx\,dy = \paren{\frac{1}{k+1}}^2$$
+
+Multiplying by $n$ and using the identity $\frac{n}{k+1}\binom{n-1}{k} = \binom{n}{k+1}$:
+
+$$\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy = \sum_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} = \sum_{j=1}^n \frac{1}{j}$$
+
+*Remark:* This integral identity connects multivariable integration with harmonic numbers $H_n = \sum_{k=1}^n \frac{1}{k} \approx \log n + \gamma$, where $\gamma \approx 0.5772$ is the Euler-Mascheroni constant.
+:::

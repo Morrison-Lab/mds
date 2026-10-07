@@ -1,0 +1,24 @@
+::: {#exr-miller-int-log-substitution}
+#### Substitution leading to a natural logarithm
+
+Adapted from @problifesavercalc, Question 1.1.36.
+
+Evaluate the integral:
+
+$$\int_0^1 \frac{x}{1 + x^2}\,dx$$
+:::
+
+::: {#sol-miller-int-log-substitution}
+Let $u = 1 + x^2$. Then $du = 2x\,dx$, so $x\,dx = \frac{1}{2}du$.
+
+Transform the limits of integration:
+
+- When $x = 0$: $u = 1 + 0^2 = 1$.
+- When $x = 1$: $u = 1 + 1^2 = 2$.
+
+Applying the substitution:
+
+$$\int_0^1 \frac{x}{1 + x^2}\,dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\sb{\log u}_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}$$
+
+*Remark:* When using $u$-substitution with definite integrals, the transformation $x \mapsto u(x)$ must be one-to-one on the domain of integration.
+:::

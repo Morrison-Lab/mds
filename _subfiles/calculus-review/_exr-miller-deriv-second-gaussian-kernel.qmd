@@ -1,0 +1,29 @@
+::: {#exr-miller-deriv-second-gaussian-kernel}
+#### Second derivative of the Gaussian kernel
+
+Adapted from @problifesavercalc, Question 1.1.6.
+
+Find the second derivative of
+
+$$f(x) = \exp{-\frac{x^2}{2}}$$
+:::
+
+::: {#sol-miller-deriv-second-gaussian-kernel}
+From @exr-miller-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp{-x^2/2}$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp{-x^2/2}$:
+
+$$\ba
+u'(x) &= -1
+\\
+v'(x) &= -x\exp{-\frac{x^2}{2}}
+\ea$$
+
+Therefore:
+
+$$\ba
+f''(x) &= u'(x)v(x) + u(x)v'(x)
+\\
+&= (-1)\exp{-\frac{x^2}{2}} + (-x)\sb{-x\exp{-\frac{x^2}{2}}}
+\\
+&= (x^2 - 1)\exp{-\frac{x^2}{2}}
+\ea$$
+:::

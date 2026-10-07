@@ -109,6 +109,14 @@ the same formula holds for every real $x$.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-polynomial-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-find-slopes.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-deriv-log}
 
 #### Derivative of natural logarithm
@@ -121,6 +129,10 @@ $$\dlogf{x} = \frac{1}{x} = x^{-1}$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-log-simplify.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-deriv-exp}
 #### derivative of exponential
 
@@ -128,6 +140,28 @@ For every real $x$,
 the derivative of the [exponential function](algebra.qmd#def-exponential-function) is:
 
 $$\dexpf{x} = \expf{x}$$
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-deriv-sin}
+#### Derivative of sine
+
+For every real $x$,
+the derivative of the sine function is:
+
+$$\deriv{x}\sin x = \cos x$$
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-deriv-cos}
+#### Derivative of cosine
+
+For every real $x$,
+the derivative of the cosine function is:
+
+$$\deriv{x}\cos x = -\sin x$$
 :::
 
 {{< slidebreak >}}
@@ -146,6 +180,14 @@ $$(ab)' = ab' + ba'$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-product-poly-cos.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-product.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-quotient-rule}
 #### Quotient rule
 
@@ -158,6 +200,10 @@ $$(a/b)' = a'/b - (a/b^2)b'$$
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/videos/_note-video-quotient-rule.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-quotient-or-factor.qmd >}}
 
 {{< slidebreak >}}
 
@@ -184,6 +230,22 @@ with inner function $g$ and outer function $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-gaussian-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-gaussian-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-product-chain-composite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-generalized-power-rule.qmd >}}
 
 {{< slidebreak >}}
 
@@ -220,6 +282,14 @@ $$
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/videos/_note-video-chain-rule.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-chain-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-log-constant.qmd >}}
 
 ### Linear approximation
 
@@ -290,11 +360,23 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-opt-gamma-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-classify-critical-points.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/derivatives/_exm-tangent-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-tangent-line-approx.qmd >}}
 
 {{< slidebreak >}}
 
@@ -308,12 +390,82 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 {{< slidebreak >}}
 
-### Exercises: Derivatives {#sec-exercises-derivatives-1d}
+### Taylor series {#sec-taylor-series}
 
-{{< include mds/_subfiles/calculus-review/_exr-calc-derivatives-1d.qmd >}}
+{{< include mds/_subfiles/derivatives/_def-taylor-polynomial.qmd >}}
 
 {{< slidebreak >}}
 
-### Taylor series {#sec-taylor-series}
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-exponential.qmd >}}
 
-{{< include mds/_subfiles/calculus-review/_exr-calc-taylor-1d.qmd >}}
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-zero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-nonzero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-cosine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-sine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cos-scaled.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cos-cubed.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-exp-base.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-exp-power.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-normal-density.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-sqrt.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-cube-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-x-log-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-plus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-minus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-product-exp.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-product-cos-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-scaled.qmd >}}

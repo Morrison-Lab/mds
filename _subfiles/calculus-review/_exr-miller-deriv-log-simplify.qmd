@@ -1,0 +1,23 @@
+::: {#exr-miller-deriv-log-simplify}
+#### Derivative after logarithmic simplification
+
+Adapted from @problifesavercalc, Question 1.1.4.
+
+Find the derivative of
+
+$$f(x) = \log(4x) - \log(2x)$$
+
+for $x > 0$.
+:::
+
+::: {#sol-miller-deriv-log-simplify}
+Simplify before differentiating using the quotient property of logarithms:
+
+$$f(x) = \log(4x) - \log(2x) = \log\paren{\frac{4x}{2x}} = \log 2$$
+
+Because $\log 2$ is constant with respect to $x$, the constant rule (@thm-deriv-const) gives:
+
+$$f'(x) = 0$$
+
+*Remark:* While one could apply the chain rule separately to each term ($\frac{4}{4x} - \frac{2}{2x} = \frac{1}{x} - \frac{1}{x} = 0$), simplifying algebraically first is faster and prevents arithmetic errors.
+:::

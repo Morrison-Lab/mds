@@ -1,0 +1,19 @@
+::: {#exr-miller-deriv-generalized-power-rule}
+#### Generalized power rule
+
+Adapted from @problifesavercalc, Question 1.1.13.
+
+Find the derivative of
+
+$$f(x) = \sqrt[3]{(5x - 2)^2} = (5x - 2)^{2/3}$$
+
+for $x \ne 2/5$.
+:::
+
+::: {#sol-miller-deriv-generalized-power-rule}
+Apply the generalized power rule $\dif{}{x}[g(x)]^r = r[g(x)]^{r-1}g'(x)$ with $g(x) = 5x - 2$ and $r = 2/3$:
+
+$$f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cd 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}$$
+
+*Remark:* Omitting the inner derivative $g'(x) = 5$ is a frequent mistake when applying the generalized power rule.
+:::

@@ -1,0 +1,30 @@
+::: {#exr-miller-deriv-classify-critical-points}
+#### Classifying critical points with the second derivative test
+
+Adapted from @problifesavercalc, Question 1.1.11.
+
+Find the critical points of
+
+$$f(x) = 4x^3 - 3x^2$$
+
+and decide whether each is a local maximum, a local minimum, or an inflection point.
+:::
+
+::: {#sol-miller-deriv-classify-critical-points}
+Compute the first derivative:
+
+$$f'(x) = 12x^2 - 6x = 6x(2x - 1)$$
+
+Setting $f'(x) = 0$ gives critical points at $x = 0$ and $x = 1/2$.
+
+Compute the second derivative:
+
+$$f''(x) = 24x - 6$$
+
+Apply the second derivative test at each critical point:
+
+- At $x = 0$: $f''(0) = -6 < 0$, so $x = 0$ is a strict local maximum.
+- At $x = 1/2$: $f''(1/2) = 24(1/2) - 6 = 6 > 0$, so $x = 1/2$ is a strict local minimum.
+
+Inflection points occur where the second derivative changes sign ($f''(x) = 0$ at $x = 1/4$). Because $f''$ is non-zero at both critical points, neither is an inflection point.
+:::

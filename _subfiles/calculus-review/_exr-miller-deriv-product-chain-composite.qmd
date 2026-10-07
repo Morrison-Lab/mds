@@ -1,0 +1,31 @@
+::: {#exr-miller-deriv-product-chain-composite}
+#### Combining product and chain rules
+
+Adapted from @problifesavercalc, Question 1.1.7.
+
+Find the derivative of
+
+$$f(x) = \exp{x^8}\cos(3x^4)$$
+:::
+
+::: {#sol-miller-deriv-product-chain-composite}
+Apply the product rule (@thm-product-rule) to $u(x) = \exp{x^8}$ and $v(x) = \cos(3x^4)$:
+
+$$f'(x) = u'(x)v(x) + u(x)v'(x)$$
+
+Compute $u'(x)$ and $v'(x)$ via the chain rule (@thm-chain-rule):
+
+$$\ba
+u'(x) &= 8x^7 \exp{x^8}
+\\
+v'(x) &= -12x^3 \sin(3x^4)
+\ea$$
+
+Substitute both derivatives into the product rule:
+
+$$\ba
+f'(x) &= 8x^7 \exp{x^8}\cos(3x^4) - 12x^3 \exp{x^8}\sin(3x^4)
+\\
+&= 4x^3 \exp{x^8}\sb{2x^4 \cos(3x^4) - 3\sin(3x^4)}
+\ea$$
+:::

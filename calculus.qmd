@@ -30,6 +30,14 @@ format:
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-triangular-region.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-switch-order.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/_exm_fubini_fail.qmd >}}
 
 {{< slidebreak >}}
@@ -42,17 +50,35 @@ format:
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-polynomial-rectangle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-order-of-integration.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-separable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-square-root-term.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-linear-plane.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-harmonic-identity.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/_thm_fubini_tonelli.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
-
-{{< slidebreak >}}
-
-### Exercises: Double integrals {#sec-exercises-double-integrals}
-
-{{< include mds/_subfiles/calculus-review/_exr-calc-integrals-mv.qmd >}}
 
 ## Further reading {#sec-additional-resources}
 
@@ -61,7 +87,7 @@ format:
 - @calclifesaver
 - @larsonCalc11e
 - @problifesavercalc
-  The calculus review exercises and worked solutions across this page and in [Vector Calculus](vector-calculus.qmd#sec-exercises-partial-derivatives) are adapted from this supplemental review chapter.
+  The calculus review exercises and worked solutions across this page and in [Vector Calculus](vector-calculus.qmd#def-partial-derivative) are adapted from this supplemental review chapter.
    - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
    - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - @realanalysislifesaver (the rigorous foundations behind these results)
