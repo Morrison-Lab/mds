@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 00:49:43 (PDT)
+Last modified: 2026-10-07 01:28:46 (PDT)
 
 > **NOTE:**
 >
@@ -14,11 +14,11 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (\\\sigma\\-algebra)** A **\\\sigma\\-algebra** on a set \\S\\ is a [collection](sets-functions.llms.md#def-collection) \\\mathscr{S}\\ of [subsets](sets-functions.llms.md#def-subset) of \\S\\ that satisfies:
+> **Definition 1 (\\\sigma\\-algebra)** A **\\\sigma\\-algebra** on a set \\S\\ is a [collection](sets-functions.llms.md#def-collection) \\\mathcal{S}\\ of [subsets](sets-functions.llms.md#def-subset) of \\S\\ that satisfies:
 >
-> - \\\mathscr{S}\\ contains \\S\\ itself.
-> - For each set \\A\\ in \\\mathscr{S}\\, \\\mathscr{S}\\ contains its [complement](sets-functions.llms.md#def-complement) \\S \setminus A\\.
-> - For each [sequence](sets-functions.llms.md#def-sequence) \\A_1, A_2, \ldots\\ of sets in \\\mathscr{S}\\, \\\mathscr{S}\\ contains their union \\\bigcup\_{i=1}^{\infty} A_i\\.
+> - \\\mathcal{S}\\ contains \\S\\ itself.
+> - For each set \\A\\ in \\\mathcal{S}\\, \\\mathcal{S}\\ contains its [complement](sets-functions.llms.md#def-complement) \\S \setminus A\\.
+> - For each [sequence](sets-functions.llms.md#def-sequence) \\A_1, A_2, \ldots\\ of sets in \\\mathcal{S}\\, \\\mathcal{S}\\ contains their union \\\bigcup\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
@@ -46,33 +46,33 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 >
 > - The [even](notation.llms.md#def-even-odd) integers are closed under addition: for example, \\2 + 4 = 6\\ is even, and \\2m + 2n = 2(m + n)\\ is even for all integers \\m\\ and \\n\\.
 > - The odd integers are not closed under addition: \\1\\ and \\3\\ are odd, but \\1 + 3 = 4\\ is even.
-> - A [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\ on a set \\S\\ is closed under complements in \\S\\ and under unions of sequences of its sets, because [Definition 1](#def-sigma-algebra) requires both. The collection in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
+> - A [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ on a set \\S\\ is closed under complements in \\S\\ and under unions of sequences of its sets, because [Definition 1](#def-sigma-algebra) requires both. The collection in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
 
 > **NOTE:**
 >
-> **Theorem 1 (Closure properties of a \\\sigma\\-algebra)** If \\\mathscr{S}\\ is a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\, then \\\mathscr{S}\\ contains:
+> **Theorem 1 (Closure properties of a \\\sigma\\-algebra)** If \\\mathcal{S}\\ is a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\, then \\\mathcal{S}\\ contains:
 >
 > - the [empty set](sets-functions.llms.md#def-empty-set) \\\emptyset\\;
-> - the union \\A_1 \cup \cdots \cup A_n\\ of any [finitely many](sets-functions.llms.md#def-finite-set) sets \\A_1, \ldots, A_n\\ in \\\mathscr{S}\\;
-> - the intersection \\\bigcap\_{i=1}^{\infty} A_i\\ of any sequence \\A_1, A_2, \ldots\\ of sets in \\\mathscr{S}\\.
+> - the union \\A_1 \cup \cdots \cup A_n\\ of any [finitely many](sets-functions.llms.md#def-finite-set) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\;
+> - the intersection \\\bigcap\_{i=1}^{\infty} A_i\\ of any sequence \\A_1, A_2, \ldots\\ of sets in \\\mathcal{S}\\.
 >
-> So \\\mathscr{S}\\ is [closed under](#def-closed-under) finite unions and under intersections of sequences of its sets.
+> So \\\mathcal{S}\\ is [closed under](#def-closed-under) finite unions and under intersections of sequences of its sets.
 
 > **NOTE:**
 >
-> *Proof*. *Empty set.* \\\mathscr{S}\\ contains \\S\\, so it contains the complement of \\S\\, which is \\S \setminus S = \emptyset\\.
+> *Proof*. *Empty set.* \\\mathcal{S}\\ contains \\S\\, so it contains the complement of \\S\\, which is \\S \setminus S = \emptyset\\.
 >
-> *Finite unions.* Extend \\A_1, \ldots, A_n\\ to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\; each of these sets is in \\\mathscr{S}\\, by the first part. Then:
+> *Finite unions.* Extend \\A_1, \ldots, A_n\\ to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\; each of these sets is in \\\mathcal{S}\\, by the first part. Then:
 >
 > \\ \begin{aligned} A_1 \cup \cdots \cup A_n &= A_1 \cup \cdots \cup A_n \cup \emptyset \cup \emptyset \cup \cdots && \text{(a union with } \emptyset \text{ adds no elements)} \\ &= \bigcup\_{i=1}^{\infty} A_i && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \end{aligned} \\
 >
-> and \\\mathscr{S}\\ contains \\\bigcup\_{i=1}^{\infty} A_i\\ by the union rule of [Definition 1](#def-sigma-algebra).
+> and \\\mathcal{S}\\ contains \\\bigcup\_{i=1}^{\infty} A_i\\ by the union rule of [Definition 1](#def-sigma-algebra).
 >
 > *Countable intersections.* Each \\A_i\\ is a subset of \\S\\, so an element of \\S\\ is outside \\S \setminus A_i\\ exactly when it is in \\A_i\\; that is, \\S \setminus (S \setminus A_i) = A_i\\. So, by [De Morgan’s laws](sets-functions.llms.md#thm-de-morgan):
 >
 > \\ \begin{aligned} S \setminus \bigcup\_{i=1}^{\infty} (S \setminus A_i) &= \bigcap\_{i=1}^{\infty} \mathopen{}\left(S \setminus (S \setminus A_i)\right)\mathclose{} && \text{(De Morgan's laws)} \\ &= \bigcap\_{i=1}^{\infty} A_i && \text{(} S \setminus (S \setminus A_i) = A_i \text{)} \end{aligned} \\
 >
-> Each \\S \setminus A_i\\ is in \\\mathscr{S}\\ by the complement rule, so their union is in \\\mathscr{S}\\ by the union rule, and the complement of that union is in \\\mathscr{S}\\ by the complement rule again.
+> Each \\S \setminus A_i\\ is in \\\mathcal{S}\\ by the complement rule, so their union is in \\\mathcal{S}\\ by the union rule, and the complement of that union is in \\\mathcal{S}\\ by the complement rule again.
 
 > **NOTE:**
 >
@@ -88,31 +88,31 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (An intersection of \\\sigma\\-algebras is a \\\sigma\\-algebra)** Let \\\mathscr{S}\_j\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\ for each \\j\\ in a nonempty set of indices \\J\\. Then their [intersection](sets-functions.llms.md#def-intersection) \\\bigcap\_{j \in J} \mathscr{S}\_j\\, the collection of subsets of \\S\\ that are in every \\\mathscr{S}\_j\\, is a \\\sigma\\-algebra on \\S\\.
+> **Theorem 3 (An intersection of \\\sigma\\-algebras is a \\\sigma\\-algebra)** Let \\\mathcal{S}\_j\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\ for each \\j\\ in a nonempty set of indices \\J\\. Then their [intersection](sets-functions.llms.md#def-intersection) \\\bigcap\_{j \in J} \mathcal{S}\_j\\, the collection of subsets of \\S\\ that are in every \\\mathcal{S}\_j\\, is a \\\sigma\\-algebra on \\S\\.
 
 > **NOTE:**
 >
 > *Proof*. Each condition of [Definition 1](#def-sigma-algebra) holds:
 >
-> - \\S\\ is in every \\\mathscr{S}\_j\\, so it is in the intersection.
-> - If \\A\\ is in the intersection, then \\A\\ is in every \\\mathscr{S}\_j\\, so its complement \\S \setminus A\\ is in every \\\mathscr{S}\_j\\, and so it is in the intersection.
-> - If \\A_1, A_2, \ldots\\ are in the intersection, then they are in every \\\mathscr{S}\_j\\, so their union \\\bigcup\_{i=1}^{\infty} A_i\\ is in every \\\mathscr{S}\_j\\, and so it is in the intersection.
+> - \\S\\ is in every \\\mathcal{S}\_j\\, so it is in the intersection.
+> - If \\A\\ is in the intersection, then \\A\\ is in every \\\mathcal{S}\_j\\, so its complement \\S \setminus A\\ is in every \\\mathcal{S}\_j\\, and so it is in the intersection.
+> - If \\A_1, A_2, \ldots\\ are in the intersection, then they are in every \\\mathcal{S}\_j\\, so their union \\\bigcup\_{i=1}^{\infty} A_i\\ is in every \\\mathcal{S}\_j\\, and so it is in the intersection.
 
 > **NOTE:**
 >
-> **Definition 3 (\\\sigma\\-algebra generated by a collection)** Let \\\mathscr{C}\\ be a [collection](sets-functions.llms.md#def-collection) of subsets of a set \\S\\. The **\\\sigma\\-algebra generated by** \\\mathscr{C}\\, written \\\sigma(\mathscr{C})\\, is the intersection of all the \\\sigma\\-algebras on \\S\\ that contain every set in \\\mathscr{C}\\.
+> **Definition 3 (\\\sigma\\-algebra generated by a collection)** Let \\\mathcal{C}\\ be a [collection](sets-functions.llms.md#def-collection) of subsets of a set \\S\\. The **\\\sigma\\-algebra generated by** \\\mathcal{C}\\, written \\\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\\, is the intersection of all the \\\sigma\\-algebras on \\S\\ that contain every set in \\\mathcal{C}\\.
 
 > **NOTE:**
 >
-> *Remark 2* (The smallest \\\sigma\\-algebra containing \\\mathscr{C}\\). \\\sigma(\mathscr{C})\\ is a \\\sigma\\-algebra by [Theorem 3](#thm-sigma-algebra-intersection) (the collection of all subsets of \\S\\ is one of the \\\sigma\\-algebras intersected, by [Theorem 2](#thm-power-set-sigma-algebra), so there is at least one). It contains every set in \\\mathscr{C}\\, and it is contained in every other \\\sigma\\-algebra on \\S\\ that does, so it is the smallest \\\sigma\\-algebra on \\S\\ that contains \\\mathscr{C}\\.
+> *Remark 2* (The smallest \\\sigma\\-algebra containing \\\mathcal{C}\\). \\\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\\ is a \\\sigma\\-algebra by [Theorem 3](#thm-sigma-algebra-intersection) (the collection of all subsets of \\S\\ is one of the \\\sigma\\-algebras intersected, by [Theorem 2](#thm-power-set-sigma-algebra), so there is at least one). It contains every set in \\\mathcal{C}\\, and it is contained in every other \\\sigma\\-algebra on \\S\\ that does, so it is the smallest \\\sigma\\-algebra on \\S\\ that contains \\\mathcal{C}\\.
 
 > **NOTE:**
 >
-> **Example 4 (The \\\sigma\\-algebra generated by the even rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, let \\\mathscr{C} = \mathopen{}\left\\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\\\mathclose{}\\. Every \\\sigma\\-algebra on \\D\\ that contains \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ must also contain \\D\\, the complement \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, and \\\emptyset\\ ([Definition 1](#def-sigma-algebra) and [Theorem 1](#thm-sigma-algebra-closure)). The collection \\\mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\ is already a \\\sigma\\-algebra ([Example 1](#exm-sigma-algebra)), so it is \\\sigma(\mathscr{C})\\.
+> **Example 4 (The \\\sigma\\-algebra generated by the even rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, let \\\mathcal{C}= \mathopen{}\left\\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\\\mathclose{}\\. Every \\\sigma\\-algebra on \\D\\ that contains \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ must also contain \\D\\, the complement \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, and \\\emptyset\\ ([Definition 1](#def-sigma-algebra) and [Theorem 1](#thm-sigma-algebra-closure)). The collection \\\mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\ is already a \\\sigma\\-algebra ([Example 1](#exm-sigma-algebra)), so it is \\\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Definition 4 (Borel \\\sigma\\-algebra)** The **Borel \\\sigma\\-algebra** on \\\mathbb{R}\\, written \\\mathscr{B}\\, is the \\\sigma\\-algebra generated by ([Definition 3](#def-generated-sigma-algebra)) the collection of all [intervals](sets-functions.llms.md#def-interval). Its sets are called **Borel sets**.
+> **Definition 4 (Borel \\\sigma\\-algebra)** The **Borel \\\sigma\\-algebra** on \\\mathbb{R}\\, written \\\mathcal{B}\\, is the \\\sigma\\-algebra generated by ([Definition 3](#def-generated-sigma-algebra)) the collection of all [intervals](sets-functions.llms.md#def-interval). Its sets are called **Borel sets**.
 
 > **NOTE:**
 >
@@ -120,8 +120,8 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 >
 > - Every interval, such as \\\[0, 1\]\\, \\(2, 5)\\, or \\\[0, \infty)\\, is a Borel set.
 > - A single point \\\mathopen{}\left\\a\right\\\mathclose{} = \[a, a\]\\ is an interval, so it is a Borel set.
-> - The [integers](notation.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathscr{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
-> - The complement \\\mathbb{R}\setminus \[0, 1\]\\ is a Borel set, because \\\mathscr{B}\\ contains the complement of each of its sets.
+> - The [integers](notation.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
+> - The complement \\\mathbb{R}\setminus \[0, 1\]\\ is a Borel set, because \\\mathcal{B}\\ contains the complement of each of its sets.
 
 ## 2 Pairwise disjoint sets
 
@@ -192,7 +192,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Finite additivity)** Let \\\mathscr{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](sets-functions.llms.md#def-function) \\\mu : \mathscr{S} \to \[0, \infty\]\\, with values in the [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathscr{S}\\, the value of their union is the sum of their values:
+> **Definition 9 (Finite additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](sets-functions.llms.md#def-function) \\\mu : \mathcal{S}\to \[0, \infty\]\\, with values in the [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
 > \\\mu(A_1 \cup \cdots \cup A_n) = \sum\_{i=1}^{n} \mu(A_i)\\
 
@@ -214,7 +214,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Countable additivity)** Let \\\mathscr{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu : \mathscr{S} \to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathscr{S}\\, the value of their union is the sum of their values:
+> **Definition 10 (Countable additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu : \mathcal{S}\to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
 > \\\mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) = \sum\_{i=1}^{\infty} \mu(A_i)\\
 
@@ -228,11 +228,11 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Lemma 2 (Countable additivity and the empty set)** If \\\mu\\ is a [countably additive](#def-countable-additivity) function on a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\, then \\\mu(\emptyset) = 0\\ or \\\mu(\emptyset) = \infty\\.
+> **Lemma 2 (Countable additivity and the empty set)** If \\\mu\\ is a [countably additive](#def-countable-additivity) function on a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\, then \\\mu(\emptyset) = 0\\ or \\\mu(\emptyset) = \infty\\.
 
 > **NOTE:**
 >
-> *Proof*. The set \\\emptyset = S \setminus S\\ is in \\\mathscr{S}\\, as the complement of \\S\\, and the sequence \\\emptyset, \emptyset, \ldots\\ is pairwise disjoint with union \\\emptyset\\, so:
+> *Proof*. The set \\\emptyset = S \setminus S\\ is in \\\mathcal{S}\\, as the complement of \\S\\, and the sequence \\\emptyset, \emptyset, \ldots\\ is pairwise disjoint with union \\\emptyset\\, so:
 >
 > \\ \begin{aligned} \mu(\emptyset) &= \mu\\\left(\bigcup\_{i=1}^{\infty} \emptyset\right) && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(\emptyset) && \text{(countable additivity)} \end{aligned} \\
 >
@@ -262,11 +262,11 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (Countable additivity implies finite additivity)** If \\\mu\\ is a [countably additive](#def-countable-additivity) function on a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\, and \\\mu(\emptyset) = 0\\, then \\\mu\\ is [finitely additive](#def-finite-additivity).
+> **Theorem 4 (Countable additivity implies finite additivity)** If \\\mu\\ is a [countably additive](#def-countable-additivity) function on a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\, and \\\mu(\emptyset) = 0\\, then \\\mu\\ is [finitely additive](#def-finite-additivity).
 
 > **NOTE:**
 >
-> *Proof*. Let \\A_1, \ldots, A_n\\ be pairwise disjoint sets in \\\mathscr{S}\\, and extend them to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\. The extended sequence is still pairwise disjoint, since \\\emptyset\\ shares no element with any set, and its union is \\A_1 \cup \cdots \cup A_n\\. So:
+> *Proof*. Let \\A_1, \ldots, A_n\\ be pairwise disjoint sets in \\\mathcal{S}\\, and extend them to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\. The extended sequence is still pairwise disjoint, since \\\emptyset\\ shares no element with any set, and its union is \\A_1 \cup \cdots \cup A_n\\. So:
 >
 > \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(A_i) && \text{(countable additivity)} \\ &= \sum\_{i=1}^{n} \mu(A_i) + \sum\_{i=n+1}^{\infty} \mu(\emptyset) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(} \mu(\emptyset) = 0 \text{)} \end{aligned} \\
 
@@ -300,7 +300,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Measure)** A **measure** on a set \\S\\ with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\ is a function \\\mu : \mathscr{S} \to \[0, \infty\]\\ that satisfies:
+> **Definition 11 (Measure)** A **measure** on a set \\S\\ with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ is a function \\\mu : \mathcal{S}\to \[0, \infty\]\\ that satisfies:
 >
 > - \\\mu(\emptyset) = 0\\.
 > - \\\mu\\ is [countably additive](#def-countable-additivity).
@@ -329,26 +329,26 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Measurable space)** A **measurable space** \\(S, \mathscr{S})\\ is a set \\S\\ together with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathscr{S}\\ on \\S\\; the sets in \\\mathscr{S}\\ are its **measurable sets**.
+> **Definition 13 (Measurable space)** A **measurable space** \\(S, \mathcal{S})\\ is a set \\S\\ together with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ on \\S\\; the sets in \\\mathcal{S}\\ are its **measurable sets**.
 
 > **NOTE:**
 >
 > **Example 18 (Measurable spaces of die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\:
 >
-> - \\(D, \mathscr{S})\\, with \\\mathscr{S}\\ the collection of all subsets of \\D\\, is a measurable space ([Example 1](#exm-sigma-algebra)).
+> - \\(D, \mathcal{S})\\, with \\\mathcal{S}\\ the collection of all subsets of \\D\\, is a measurable space ([Example 1](#exm-sigma-algebra)).
 > - \\(D, \mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{})\\ is also a measurable space. Its measurable sets are only those four; for example, \\\mathopen{}\left\\1\right\\\mathclose{}\\ is not one of them.
 
 > **NOTE:**
 >
-> **Definition 14 (Measure space)** A **measure space** \\(S, \mathscr{S}, \mu)\\ is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) \\\mu\\ on \\\mathscr{S}\\.
+> **Definition 14 (Measure space)** A **measure space** \\(S, \mathcal{S}, \mu)\\ is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) \\\mu\\ on \\\mathcal{S}\\.
 
 > **NOTE:**
 >
-> **Example 19 (Measure space of die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, adding the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) to the [measurable space](#def-measurable-space) \\(D, \mathscr{S})\\ of [Example 18](#exm-measurable-space) makes \\(D, \mathscr{S}, \mu)\\ a measure space.
+> **Example 19 (Measure space of die rolls)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, adding the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) to the [measurable space](#def-measurable-space) \\(D, \mathcal{S})\\ of [Example 18](#exm-measurable-space) makes \\(D, \mathcal{S}, \mu)\\ a measure space.
 
 > **NOTE:**
 >
-> **Definition 15 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathscr{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
+> **Definition 15 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathcal{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
 >
 > \\\lambda(\[a, b\]) = \lambda((a, b)) = \lambda(\[a, b)) = \lambda((a, b\]) \stackrel{\text{def}}{=}b - a,\\
 >
@@ -358,7 +358,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> *Remark 6* (Lebesgue measure exists). Exactly one measure on \\\mathscr{B}\\ assigns every interval its length; constructing it takes more measure theory than these notes cover (see [Wikipedia: Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure), which also extends \\\lambda\\ to a larger \\\sigma\\-algebra, the Lebesgue-measurable sets, with the same values on Borel sets).
+> *Remark 6* (Lebesgue measure exists). Exactly one measure on \\\mathcal{B}\\ assigns every interval its length; constructing it takes more measure theory than these notes cover (see [Wikipedia: Lebesgue measure](https://en.wikipedia.org/wiki/Lebesgue_measure), which also extends \\\lambda\\ to a larger \\\sigma\\-algebra, the Lebesgue-measurable sets, with the same values on Borel sets).
 
 > **NOTE:**
 >
@@ -376,7 +376,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Measure zero)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathscr{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
+> **Definition 16 (Measure zero)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
 
 > **NOTE:**
 >
@@ -387,7 +387,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Almost everywhere)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
+> **Definition 17 (Almost everywhere)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
 
 > **NOTE:**
 >
@@ -397,7 +397,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Finite and \\\sigma\\-finite measures)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **finite** if \\\mu(S) \< \infty\\. It is **\\\sigma\\-finite** if \\S\\ is the union \\\bigcup\_{i=1}^{\infty} A_i\\ of a sequence of sets \\A_1, A_2, \ldots\\ in \\\mathscr{S}\\ with \\\mu(A_i) \< \infty\\ for every \\i\\.
+> **Definition 18 (Finite and \\\sigma\\-finite measures)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **finite** if \\\mu(S) \< \infty\\. It is **\\\sigma\\-finite** if \\S\\ is the union \\\bigcup\_{i=1}^{\infty} A_i\\ of a sequence of sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\ with \\\mu(A_i) \< \infty\\ for every \\i\\.
 
 > **NOTE:**
 >
@@ -412,11 +412,11 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathscr{F})\\ is a [measure](#def-measure) \\P\\ on \\\mathscr{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
+> **Definition 19 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\ is a [measure](#def-measure) \\P\\ on \\\mathcal{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
 >
 > \\P(\Omega) = 1\\
 >
-> Then \\(\Omega, \mathscr{F}, P)\\ is a **probability space**, \\\Omega\\ is its **sample space**, the elements of \\\Omega\\ are **outcomes**, and the sets in \\\mathscr{F}\\ are **events**.
+> Then \\(\Omega, \mathcal{F}, P)\\ is a **probability space**, \\\Omega\\ is its **sample space**, the elements of \\\Omega\\ are **outcomes**, and the sets in \\\mathcal{F}\\ are **events**.
 
 > **NOTE:**
 >
@@ -434,30 +434,30 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Measurable function)** Let \\(S, \mathscr{S})\\ be a [measurable space](#def-measurable-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathscr{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
+> **Definition 20 (Measurable function)** Let \\(S, \mathcal{S})\\ be a [measurable space](#def-measurable-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathcal{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
 >
-> \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathscr{S}\\
+> \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathcal{S}\\
 
 > **NOTE:**
 >
-> *Remark 9* (Measurable functions in general). Other sources define a function \\f : S \to T\\ between measurable spaces \\(S, \mathscr{S})\\ and \\(T, \mathscr{T})\\ to be measurable when \\\mathopen{}\left\\s \in S : f(s) \in B\right\\\mathclose{} \in \mathscr{S}\\ for every \\B \in \mathscr{T}\\. For \\T = \mathbb{R}\\ with the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra), that definition is equivalent to [Definition 20](#def-measurable-function) (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)). For example, with \\B = (-\infty, c\]\\, the general definition requires \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathscr{S}\\, which is the condition in [Definition 20](#def-measurable-function).
+> *Remark 9* (Measurable functions in general). Other sources define a function \\f : S \to T\\ between measurable spaces \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ to be measurable when \\\mathopen{}\left\\s \in S : f(s) \in B\right\\\mathclose{} \in \mathcal{S}\\ for every \\B \in \mathcal{T}\\. For \\T = \mathbb{R}\\ with the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra), that definition is equivalent to [Definition 20](#def-measurable-function) (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)). For example, with \\B = (-\infty, c\]\\, the general definition requires \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathcal{S}\\, which is the condition in [Definition 20](#def-measurable-function).
 
 > **NOTE:**
 >
-> **Example 25 (Measurable and not measurable)** On the die rolls \\D\\, take the \\\sigma\\-algebra \\\mathscr{S} = \mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\ of [Example 1](#exm-sigma-algebra).
+> **Example 25 (Measurable and not measurable)** On the die rolls \\D\\, take the \\\sigma\\-algebra \\\mathcal{S}= \mathopen{}\left\\\emptyset, \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, D\right\\\mathclose{}\\ of [Example 1](#exm-sigma-algebra).
 >
-> - Let \\f(x) = 1\\ for even \\x\\ and \\f(x) = 0\\ for odd \\x\\. The set \\\mathopen{}\left\\x \in D : f(x) \le c\right\\\mathclose{}\\ is \\\emptyset\\ when \\c \< 0\\, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ when \\0 \le c \< 1\\, and \\D\\ when \\c \ge 1\\. All three are in \\\mathscr{S}\\, so \\f\\ is measurable.
-> - Let \\g(x) = x\\. Then \\\mathopen{}\left\\x \in D : g(x) \le 1\right\\\mathclose{} = \mathopen{}\left\\1\right\\\mathclose{}\\, which is not in \\\mathscr{S}\\, so \\g\\ is not measurable.
+> - Let \\f(x) = 1\\ for even \\x\\ and \\f(x) = 0\\ for odd \\x\\. The set \\\mathopen{}\left\\x \in D : f(x) \le c\right\\\mathclose{}\\ is \\\emptyset\\ when \\c \< 0\\, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ when \\0 \le c \< 1\\, and \\D\\ when \\c \ge 1\\. All three are in \\\mathcal{S}\\, so \\f\\ is measurable.
+> - Let \\g(x) = x\\. Then \\\mathopen{}\left\\x \in D : g(x) \le 1\right\\\mathclose{} = \mathopen{}\left\\1\right\\\mathclose{}\\, which is not in \\\mathcal{S}\\, so \\g\\ is not measurable.
 >
 > With the \\\sigma\\-algebra of all subsets of \\D\\ instead, every set \\\mathopen{}\left\\x \in D : g(x) \le c\right\\\mathclose{}\\ is a subset of \\D\\, so every function \\D \to \mathbb{R}\\, including \\g\\, is measurable.
 
 > **NOTE:**
 >
-> **Definition 21 (Integral of a non-negative function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
+> **Definition 21 (Integral of a non-negative function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
 >
 > \\ \int_S f \\ d\mu \stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^{n} \mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
 >
-> where the [supremum](algebra.llms.md#def-supremum) is over all ways of writing \\S\\ as the union of finitely many nonempty [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathscr{S}\\, and each \\\inf\_{s \in A_i} f(s)\\ is the [infimum](algebra.llms.md#def-infimum) of the values of \\f\\ on \\A_i\\. In the sums, \\0 \cdot \infty \stackrel{\text{def}}{=}0\\, and \\x \cdot \infty \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\; the supremum is \\\infty\\ if some sum is \\\infty\\. The integral is also written \\\int_S f(s) \\ d\mu(s)\\.
+> where the [supremum](algebra.llms.md#def-supremum) is over all ways of writing \\S\\ as the union of finitely many nonempty [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, and each \\\inf\_{s \in A_i} f(s)\\ is the [infimum](algebra.llms.md#def-infimum) of the values of \\f\\ on \\A_i\\. In the sums, \\0 \cdot \infty \stackrel{\text{def}}{=}0\\, and \\x \cdot \infty \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\; the supremum is \\\infty\\ if some sum is \\\infty\\. The integral is also written \\\int_S f(s) \\ d\mu(s)\\.
 >
 > ([Billingsley 1995, sec. 15](#ref-billingsley1995probability))
 
@@ -479,7 +479,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Integral of a real-valued function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** and **negative part** of \\f\\ are the non-negative functions
+> **Definition 22 (Integral of a real-valued function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** and **negative part** of \\f\\ are the non-negative functions
 >
 > \\ \begin{aligned} f^{+}(s) &\stackrel{\text{def}}{=}\max\mathopen{}\left\\f(s), 0\right\\\mathclose{} \\ f^{-}(s) &\stackrel{\text{def}}{=}\max\mathopen{}\left\\-f(s), 0\right\\\mathclose{} \end{aligned} \\
 >
@@ -501,7 +501,7 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Absolutely integrable function)** Let \\(S, \mathscr{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
+> **Definition 23 (Absolutely integrable function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu \< \infty\\
 >
@@ -522,20 +522,20 @@ Last modified: 2026-10-07 00:49:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Product \\\sigma\\-algebra)** Let \\(S, \mathscr{S})\\ and \\(T, \mathscr{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathscr{S}\\ and \\B \in \mathscr{T}\\. The **product \\\sigma\\-algebra** \\\mathscr{S} \otimes \mathscr{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
+> **Definition 24 (Product \\\sigma\\-algebra)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\. The **product \\\sigma\\-algebra** \\\mathcal{S}\otimes \mathcal{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
 
 > **NOTE:**
 >
 > **Example 29 (Product \\\sigma\\-algebras)**  
 >
-> - Give the die rolls \\D\\ the \\\sigma\\-algebra \\\mathscr{S}\\ of all its subsets. Each single pair \\\mathopen{}\left\\(a, b)\right\\\mathclose{} = \mathopen{}\left\\a\right\\\mathclose{} \times \mathopen{}\left\\b\right\\\mathclose{}\\ in \\D \times D\\ is a measurable rectangle. Every subset of \\D \times D\\ is a union of finitely many single pairs, and \\\mathscr{S} \otimes \mathscr{S}\\ contains finite unions of its sets ([Theorem 1](#thm-sigma-algebra-closure)), as well as \\\emptyset\\, so \\\mathscr{S} \otimes \mathscr{S}\\ is the collection of all subsets of \\D \times D\\.
-> - The rectangle \\\[0, 2\] \times \[0, 3\]\\ is a measurable rectangle for the Borel \\\sigma\\-algebras, so it is in \\\mathscr{B} \otimes \mathscr{B}\\.
+> - Give the die rolls \\D\\ the \\\sigma\\-algebra \\\mathcal{S}\\ of all its subsets. Each single pair \\\mathopen{}\left\\(a, b)\right\\\mathclose{} = \mathopen{}\left\\a\right\\\mathclose{} \times \mathopen{}\left\\b\right\\\mathclose{}\\ in \\D \times D\\ is a measurable rectangle. Every subset of \\D \times D\\ is a union of finitely many single pairs, and \\\mathcal{S}\otimes \mathcal{S}\\ contains finite unions of its sets ([Theorem 1](#thm-sigma-algebra-closure)), as well as \\\emptyset\\, so \\\mathcal{S}\otimes \mathcal{S}\\ is the collection of all subsets of \\D \times D\\.
+> - The rectangle \\\[0, 2\] \times \[0, 3\]\\ is a measurable rectangle for the Borel \\\sigma\\-algebras, so it is in \\\mathcal{B}\otimes \mathcal{B}\\.
 
 > **NOTE:**
 >
-> **Definition 25 (Product measure)** Let \\(S, \mathscr{S}, \mu)\\ and \\(T, \mathscr{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu \otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathscr{S} \otimes \mathscr{T}\\ that gives each measurable rectangle the product of the measures of its sides:
+> **Definition 25 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu \otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
 >
-> \\(\mu \otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathscr{S} \text{ and } B \in \mathscr{T},\\
+> \\(\mu \otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\\
 >
 > with \\0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\\ and \\x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\. Exactly one measure has these values ([Billingsley 1995](#ref-billingsley1995probability), Theorem 18.2).
 
