@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 11:27:37 (PDT)
+Last modified: 2026-10-07 12:05:44 (PDT)
 
 > **NOTE:**
 >
@@ -127,7 +127,7 @@ Last modified: 2026-10-07 11:27:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Pairwise disjoint sets)** Finitely or countably many sets \\A_1, A_2, \ldots\\ are **pairwise disjoint** (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
+> **Definition 5 (Pairwise disjoint sets (disjoint, mutually disjoint))** Finitely or countably many sets \\A_1, A_2, \ldots\\ are **pairwise disjoint** (also called **disjoint** or **mutually disjoint**) when no two of them share an element:
 >
 > \\A_i \cap A_j = \emptyset \quad \text{for all } i \neq j\\
 
@@ -163,7 +163,7 @@ Last modified: 2026-10-07 11:27:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Infinite sum)** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 7](#def-partial-sum)). The **infinite sum** (also called a **series**) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
+> **Definition 8 (Infinite sum (series))** Let \\a_1, a_2, \ldots\\ be a sequence in \\\[0, \infty\]\\, with partial sums \\s_n\\ ([Definition 7](#def-partial-sum)). The **infinite sum** (also called a **series**) \\\sum\_{i=1}^{\infty} a_i\\ is the limit of the partial sums:
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
@@ -214,7 +214,7 @@ Last modified: 2026-10-07 11:27:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Countable additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu : \mathcal{S}\to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
+> **Definition 10 (Countable additivity (\\\sigma\\-additivity))** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu : \mathcal{S}\to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
 > \\\mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) = \sum\_{i=1}^{\infty} \mu(A_i)\\
 
@@ -376,7 +376,7 @@ Last modified: 2026-10-07 11:27:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Measure zero)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
+> **Definition 16 (Measure zero (null set))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
 
 > **NOTE:**
 >
