@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 12:42:32 (PDT)
+Last modified: 2026-10-07 13:47:18 (PDT)
 
 > **NOTE:**
 >
@@ -143,7 +143,7 @@ Last modified: 2026-10-07 12:42:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Collection of sets)** A **collection of sets** (also called a **family of sets**) is a set whose elements are themselves sets.
+> **Definition 10 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
@@ -254,12 +254,12 @@ Last modified: 2026-10-07 12:42:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Function)** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
+> **Definition 16 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
 >
 > - The element \\a \in A\\ is called the **argument** (or **input**) to \\f\\.
 > - The assigned element \\f(a) \in B\\ is called the **value** (or **output**) of \\f\\ at \\a\\.
 >
-> A function is also called a **map** (or *mapping*) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
+> A function is also called a **map** (or **mapping**) or a **transformation**; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself.
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 12:42:32 (PDT)
+Last modified: 2026-10-07 13:47:18 (PDT)
 
 ## 1 Equalities
 
@@ -1387,7 +1387,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Definition 53 (Absolute value of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 51](#def-complex-number)) is
+> **Definition 53 (Absolute value (modulus) of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 51](#def-complex-number)) is
 >
 > \\\mathopen{}\left\|z\right\|\mathclose{} \stackrel{\text{def}}{=}\sqrt{a^2 + b^2}.\\
 

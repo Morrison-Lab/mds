@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 12:42:32 (PDT)
+Last modified: 2026-10-07 13:47:18 (PDT)
 
 ## 1 Vectors
 
@@ -57,7 +57,7 @@ Last modified: 2026-10-07 12:42:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Real-valued and vector-valued functions)** A [function](sets-functions.llms.md#def-function) \\f : A \to \mathbb{R}\\, whose values are numbers, is **real-valued** (also called *scalar-valued*, since its values are [scalars](#def-scalar)). A function \\f : A \to \mathbb{R}^m\\, whose values are vectors ([Definition 2](#def-real-coordinate-space)), is **vector-valued**.
+> **Definition 4 (Real-valued (scalar-valued) and vector-valued functions)** A [function](sets-functions.llms.md#def-function) \\f : A \to \mathbb{R}\\, whose values are numbers, is **real-valued** (also called **scalar-valued**, since its values are [scalars](#def-scalar)). A function \\f : A \to \mathbb{R}^m\\, whose values are vectors ([Definition 2](#def-real-coordinate-space)), is **vector-valued**.
 
 > **NOTE:**
 >
@@ -147,11 +147,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 10 (Mean)** The **mean** (or *average*) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra.llms.md#def-summation) divided by how many there are:
+> **Definition 10 (Mean (average, sample mean))** The **mean** (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra.llms.md#def-summation) divided by how many there are:
 >
 > \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n} \sum\_{i=1}^{n} y_i\\
 >
-> When the numbers are observed data values, \\\bar{y}\\ is also called the *sample mean*.
+> When the numbers are observed data values, \\\bar{y}\\ is also called the **sample mean**.
 
 > **NOTE:**
 >
@@ -171,7 +171,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 12 (Indicator vector / standard basis vector)** The \\j\\-th **indicator vector** (or *standard basis vector*) \\\tilde{e}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
+> **Definition 12 (Indicator vector (standard basis vector))** The \\j\\-th **indicator vector** (or **standard basis vector**) \\\tilde{e}\_j\\ of length \\p\\ has a \\1\\ in position \\j\\ and \\0\\s elsewhere:
 >
 > \\ (\tilde{e}\_j)\_i = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \tilde{e}\_j = \begin{bmatrix} 0 \\ \vdots \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} \leftarrow \text{position } j \\
 
@@ -225,7 +225,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 14 (Euclidean norm)** The **Euclidean norm** (or *length*, also called the \\L_2\\ norm and written \\\lVert \tilde{x}\rVert_2\\) of a vector \\\tilde{x}\\ of length \\p\\ is
+> **Definition 14 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** (or **length**, also called the **\\L_2\\ norm** and written \\\lVert \tilde{x}\rVert_2\\) of a vector \\\tilde{x}\\ of length \\p\\ is
 >
 > \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum\_{i=1}^px_i^2} \tag{2}\\
 >
@@ -576,7 +576,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 29 (Linear system)** A **linear system** (or *system of linear equations*) with \\m\\ equations in \\n\\ unknowns is an equation \\\mathbf{A} \tilde{x}= \tilde{b}\\ in which the \\m \times n\\ matrix \\\mathbf{A}\\ and the vector \\\tilde{b} \in \mathbb{R}^m\\ are given. A **solution** of the system is a vector \\\tilde{x}\in \mathbb{R}^n\\ for which \\\mathbf{A} \tilde{x}= \tilde{b}\\ holds.
+> **Definition 29 (Linear system (system of linear equations))** A **linear system** (or **system of linear equations**) with \\m\\ equations in \\n\\ unknowns is an equation \\\mathbf{A} \tilde{x}= \tilde{b}\\ in which the \\m \times n\\ matrix \\\mathbf{A}\\ and the vector \\\tilde{b} \in \mathbb{R}^m\\ are given. A **solution** of the system is a vector \\\tilde{x}\in \mathbb{R}^n\\ for which \\\mathbf{A} \tilde{x}= \tilde{b}\\ holds.
 
 > **NOTE:**
 >
@@ -590,7 +590,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 30 (Linear map)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (also called a *linear transformation* or *linear function*) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
+> **Definition 30 (Linear map (linear transformation, linear function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
 >
 > 1.  \\f(\tilde{x}+ \tilde{y}) = f(\tilde{x}) + f(\tilde{y})\\ (*additivity*)
 > 2.  \\f(c\tilde{x}) = c f(\tilde{x})\\ (*homogeneity*)
@@ -742,11 +742,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 34 (Affine map)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an *affine transformation* or *affine function*) if it is a matrix product followed by a translation ([Definition 33](#def-translation)) (a [composition](sets-functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
+> **Definition 34 (Affine map (affine transformation, affine function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 33](#def-translation)) (a [composition](sets-functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
 >
 > \\f(\tilde{x}) = t\_{\tilde{b}}(\mathbf{A} \tilde{x}) = \mathbf{A} \tilde{x}+ \tilde{b} \quad \text{for all } \tilde{x}\in \mathbb{R}^p\\
 >
-> The vector \\\tilde{b}\\ is called the **offset** of \\f\\ (statistics also calls it the *intercept*, and machine learning the *bias*).
+> The vector \\\tilde{b}\\ is called the **offset** of \\f\\ (statistics also calls it the **intercept**, and machine learning the **bias**).
 >
 > For a real-valued function ([Definition 4](#def-real-vector-valued), \\m = 1\\), \\\mathbf{A}\\ is a single row, written \\\tilde{w}^\top\\, and \\\tilde{b}\\ is a single number \\b\\, so an affine function is a linear function \\\tilde{w}^\top \tilde{x}\\ ([Corollary 1](#cor-linear-scalar)) plus an offset:
 >
@@ -1085,7 +1085,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Definition 40 (Subspace)** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
+> **Definition 40 (Subspace (linear subspace, vector space, linear space))** A set \\\mathcal{S}\\ of vectors in \\\mathbb{R}^p\\ is a **subspace** of \\\mathbb{R}^p\\ if it is not empty and it is closed under vector addition and scalar multiplication:
 >
 > 1.  if \\\tilde{u} \in \mathcal{S}\\ and \\\tilde{v} \in \mathcal{S}\\, then \\\tilde{u} + \tilde{v} \in \mathcal{S}\\;
 > 2.  if \\\tilde{u} \in \mathcal{S}\\ and \\c \in \mathbb{R}\\, then \\c \tilde{u} \in \mathcal{S}\\.
@@ -1396,7 +1396,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Definition 45 (Column space)** The **column space** of an \\m \times n\\ matrix \\\mathbf{A}\\ is
+> **Definition 45 (Column space (range, image))** The **column space** of an \\m \times n\\ matrix \\\mathbf{A}\\ is
 >
 > \\ \mathcal{C}(\mathbf{A}) \stackrel{\text{def}}{=} \mathopen{}\left\\\mathbf{A} \tilde{x} : \tilde{x} \in \mathbb{R}^n\right\\\mathclose{}, \\
 >
@@ -1428,7 +1428,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Definition 46 (Null space)** The **null space** of an \\m \times n\\ matrix \\\mathbf{A}\\ is
+> **Definition 46 (Null space (kernel))** The **null space** of an \\m \times n\\ matrix \\\mathbf{A}\\ is
 >
 > \\ \mathcal{N}(\mathbf{A}) \stackrel{\text{def}}{=} \mathopen{}\left\\\tilde{x} \in \mathbb{R}^n : \mathbf{A} \tilde{x} = \tilde{0}\_m\right\\\mathclose{}, \\
 >
@@ -2593,11 +2593,11 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Definition 65 (Invertible matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **invertible** (or *non-singular*) if some \\p \times p\\ matrix \\\mathbf{B}\\ satisfies
+> **Definition 65 (Invertible matrix (non-singular matrix))** A \\p \times p\\ matrix \\\mathbf{A}\\ is **invertible** (or **non-singular**) if some \\p \times p\\ matrix \\\mathbf{B}\\ satisfies
 >
 > \\\mathbf{A}\mathbf{B} = \mathbf{B}\mathbf{A} = \mathbf{I}\_p,\\
 >
-> where \\\mathbf{I}\_p\\ is the identity matrix ([Definition 27](#def-identity-matrix)). A square matrix that is not invertible is *singular*.
+> where \\\mathbf{I}\_p\\ is the identity matrix ([Definition 27](#def-identity-matrix)). A square matrix that is not invertible is **singular**.
 
 > **NOTE:**
 >
@@ -3064,7 +3064,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 76 (Eigendecomposition)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition**, or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
+> **Definition 76 (Eigendecomposition (spectral decomposition))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition**, or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
 >
 > \\ \mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top} \\
 >
@@ -3443,7 +3443,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Definition 81 (Design matrix)** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** (or *model matrix*) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\tilde{x}\_i}^{\top}\\ for observation \\i\\:
+> **Definition 81 (Design matrix (model matrix))** In a regression model with \\n\\ observations and \\p\\ predictors, the **design matrix** (or **model matrix**) \\\mathbf{X}\\ is the \\n \times p\\ matrix whose \\i\\-th row is the covariate vector \\{\tilde{x}\_i}^{\top}\\ for observation \\i\\:
 >
 > \\ \mathbf{X}= \begin{bmatrix} {\tilde{x}\_1}^{\top} \\ {\tilde{x}\_2}^{\top} \\ \vdots \\ {\tilde{x}\_n}^{\top} \end{bmatrix} = \begin{bmatrix} x\_{11} & x\_{12} & \cdots & x\_{1p} \\ x\_{21} & x\_{22} & \cdots & x\_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ x\_{n1} & x\_{n2} & \cdots & x\_{np} \end{bmatrix} \\
 
@@ -4450,7 +4450,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}, \\
 >
-> where \\\mathbf{A}\\ (\\k \times l\\) holds the entries \\x\_{ij}\\ with \\i \le k\\ and \\j \le l\\, \\\mathbf{B}\\ (\\k \times (n - l)\\) those with \\i \le k\\ and \\j \> l\\, \\\mathbf{C}\\ (\\(m - k) \times l\\) those with \\i \> k\\ and \\j \le l\\, and \\\mathbf{D}\\ (\\(m - k) \times (n - l)\\) those with \\i \> k\\ and \\j \> l\\, each in its original order. A matrix written this way is a **block matrix**. When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or top-left) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ above with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
+> where \\\mathbf{A}\\ (\\k \times l\\) holds the entries \\x\_{ij}\\ with \\i \le k\\ and \\j \le l\\, \\\mathbf{B}\\ (\\k \times (n - l)\\) those with \\i \le k\\ and \\j \> l\\, \\\mathbf{C}\\ (\\(m - k) \times l\\) those with \\i \> k\\ and \\j \le l\\, and \\\mathbf{D}\\ (\\(m - k) \times (n - l)\\) those with \\i \> k\\ and \\j \> l\\, each in its original order. A matrix written this way is a **block matrix**. When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ above with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
 
 > **NOTE:**
 >
@@ -4603,7 +4603,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Definition 96 (Conjugate transpose)** The **conjugate transpose** (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+> **Definition 96 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
 >
 > \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
 >
@@ -4710,7 +4710,7 @@ This identity is the origin of the name **adjoint**: in functional analysis and 
 
 > **NOTE:**
 >
-> **Definition 97 (Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** (or **self-adjoint**) if it equals its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
+> **Definition 97 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** (or **self-adjoint**) if it equals its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
 
@@ -4734,7 +4734,7 @@ The term *self-adjoint* comes directly from [Theorem 111](#thm-adjoint-inner-pr
 
 > **NOTE:**
 >
-> **Definition 98 (Skew-Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
+> **Definition 98 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\\
 
