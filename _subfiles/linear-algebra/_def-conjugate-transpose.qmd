@@ -1,7 +1,9 @@
 :::{#def-conjugate-transpose}
 #### Conjugate transpose
 
-The **conjugate transpose** of an $m \times n$ complex matrix $\matr{A}$
+The **conjugate transpose**
+(also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**)
+of an $m \times n$ complex matrix $\matr{A}$
 is the $n \times m$ matrix $\matr{A}^{\mathsf{H}}$
 obtained by transposing $\matr{A}$ and then taking the complex conjugate of each entry:
 
@@ -14,8 +16,14 @@ is the $1 \times p$ row vector $\vecf{z}^{\mathsf{H}} = [\overline{z_1},\; \ldot
 :::
 
 ::: notes
-@axler2024linear [Definition 7.7, p. 231] gives the same definition,
-writing $\matr{A}^*$ for the conjugate transpose.
-These notes write $\matr{A}^{\mathsf{H}}$ instead,
-because $^*$ also marks optimizers, as in $\vx^*$.
+The operation is denoted variously across mathematics and physics:
+$\matr{A}^*$ in pure mathematics (@axler2024linear [Definition 7.7, p. 231]),
+$\matr{A}^{\dagger}$ ("$A$-dagger") in physics and quantum mechanics,
+and $\matr{A}^{\mathsf{H}}$ in engineering, numerical linear algebra, and statistics.
+These notes write $\matr{A}^{\mathsf{H}}$ because $^*$ is reserved for optimal points (as in $\vx^*$)
+and $^{\dagger}$ frequently denotes the Moore-Penrose pseudoinverse (@def-moore-penrose).
+
+The Hermitian adjoint matrix should not be confused with the classical *adjugate matrix*
+(the transpose of the matrix of cofactors),
+which older texts occasionally referred to as the "adjoint."
 :::

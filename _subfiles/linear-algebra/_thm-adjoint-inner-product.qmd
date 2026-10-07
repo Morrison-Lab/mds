@@ -1,0 +1,42 @@
+:::{#thm-adjoint-inner-product}
+#### The adjoint property for inner products
+
+Let $\matr{A}$ be an $m \times n$ complex matrix.
+Under the standard inner product on complex Euclidean space, $\iprod{\vecf{u}}{\vecf{v}} \eqdef \vecf{u}^{\mathsf{H}}\vecf{v}$,
+
+$$\iprod{\matr{A}\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{\matr{A}^{\mathsf{H}}\vecf{v}}
+\quad \text{for all } \vecf{u} \in \mathbb{C}^n \text{ and } \vecf{v} \in \mathbb{C}^m.$$
+
+:::
+
+::: proof
+
+By the definition of the standard complex inner product and the product rule for the Hermitian adjoint (@thm-hermitian-adjoint-properties):
+
+$$
+\ba
+\iprod{\matr{A}\vecf{u}}{\vecf{v}}
+&= (\matr{A}\vecf{u})^{\mathsf{H}}\vecf{v}
+&& \text{(definition of standard inner product)}
+\\
+&= (\vecf{u}^{\mathsf{H}}\matr{A}^{\mathsf{H}})\vecf{v}
+&& \text{(@thm-hermitian-adjoint-properties, reversal of products)}
+\\
+&= \vecf{u}^{\mathsf{H}}(\matr{A}^{\mathsf{H}}\vecf{v})
+&& \text{(associativity of matrix multiplication)}
+\\
+&= \iprod{\vecf{u}}{\matr{A}^{\mathsf{H}}\vecf{v}}
+&& \text{(definition of standard inner product)}.
+\ea
+$$
+
+:::
+
+::: notes
+This identity is the origin of the name **adjoint**:
+in functional analysis and operator theory,
+the *adjoint* of a linear map $T: V \to W$ between inner product spaces is defined as the unique operator $T^*: W \to V$ satisfying
+$\iprod{T\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{T^*\vecf{v}}$ (@axler2024linear [Definition 7.1, p. 226]).
+When $V$ and $W$ are finite-dimensional spaces equipped with their standard orthonormal bases,
+the matrix representing the adjoint operator $T^*$ is precisely the Hermitian adjoint matrix $\matr{A}^{\mathsf{H}}$ (@axler2024linear [Proposition 7.9, p. 231]).
+:::
