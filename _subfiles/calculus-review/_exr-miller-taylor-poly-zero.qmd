@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-poly-zero}
 #### Taylor polynomial of a polynomial at the origin
 
+Adapted from @problifesavercalc, Question 1.1.16.
+
 Find the first five terms (up to degree 4) of the Taylor series for
 
 $$f(x) = x^8 + x^4 + 3$$

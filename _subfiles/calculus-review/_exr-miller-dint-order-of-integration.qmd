@@ -1,6 +1,8 @@
 ::: {#exr-miller-dint-order-of-integration}
 #### Choosing the order of integration
 
+Adapted from @problifesavercalc, Question 1.1.48.
+
 Evaluate the double integral:
 
 $$\int_0^6 \int_0^5 x e^{-xy}\,dy\,dx$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-generalized-power-rule}
 #### Generalized power rule
 
+Adapted from @problifesavercalc, Question 1.1.13.
+
 Find the derivative of
 
 $$f(x) = \sqrt[3]{(5x - 2)^2} = (5x - 2)^{2/3}$$

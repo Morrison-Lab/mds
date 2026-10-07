@@ -1,6 +1,8 @@
 ::: {#exr-miller-int-rayleigh-normal-kernel}
 #### Improper Gaussian-kernel integral
 
+Adapted from @problifesavercalc, Question 1.1.39.
+
 Evaluate the improper integral:
 
 $$\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx$$

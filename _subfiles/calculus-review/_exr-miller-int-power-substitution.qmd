@@ -1,6 +1,8 @@
 ::: {#exr-miller-int-power-substitution}
 #### Substitution with a polynomial power
 
+Adapted from @problifesavercalc, Question 1.1.37.
+
 Evaluate the integral:
 
 $$\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\,dx$$

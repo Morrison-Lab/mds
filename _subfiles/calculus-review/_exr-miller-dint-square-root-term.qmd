@@ -1,6 +1,8 @@
 ::: {#exr-miller-dint-square-root-term}
 #### Double integral with polynomial and radical terms
 
+Adapted from @problifesavercalc, Question 1.1.52.
+
 Evaluate the double integral:
 
 $$\int_0^1 \int_0^1 (x^2 + 2xy + y\sqrt{x})\,dy\,dx$$

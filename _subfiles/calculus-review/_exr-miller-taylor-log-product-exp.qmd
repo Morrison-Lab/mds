@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-log-product-exp}
 #### Taylor series of $\log((1 - x)e^x)$
 
+Adapted from @problifesavercalc, Question 1.1.28.
+
 Find the first two non-zero terms of the Taylor series for
 
 $$f(x) = \log((1 - x)e^x)$$

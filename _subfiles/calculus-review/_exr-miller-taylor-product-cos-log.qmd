@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-product-cos-log}
 #### Taylor series of a product of known expansions
 
+Adapted from @problifesavercalc, Question 1.1.29.
+
 Find the terms up to degree 2 of the Taylor series for
 
 $$f(x) = \cos(x)\log(1 + x)$$

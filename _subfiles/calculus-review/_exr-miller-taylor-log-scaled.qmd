@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-log-scaled}
 #### Taylor series of $\log(1 + 2x)$
 
+Adapted from @problifesavercalc, Question 1.1.30.
+
 Find the first two non-zero terms of the Taylor series for
 
 $$f(x) = \log(1 + 2x)$$

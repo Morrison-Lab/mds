@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-x-log-x}
 #### Taylor expansion of $x \log x$
 
+Adapted from @problifesavercalc, Question 1.1.25.
+
 Find the first three terms (up to degree 2) of the Taylor series for
 
 $$f(x) = x\log x$$

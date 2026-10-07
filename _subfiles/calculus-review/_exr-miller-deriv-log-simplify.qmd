@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-log-simplify}
 #### Derivative after logarithmic simplification
 
+Adapted from @problifesavercalc, Question 1.1.4.
+
 Find the derivative of
 
 $$f(x) = \log(4x) - \log(2x)$$

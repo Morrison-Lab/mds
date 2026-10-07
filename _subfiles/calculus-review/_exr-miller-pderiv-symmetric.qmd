@@ -1,6 +1,8 @@
 ::: {#exr-miller-pderiv-symmetric}
 #### Using symmetry to compute partial derivatives
 
+Adapted from @problifesavercalc, Question 1.1.45.
+
 Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
 $$f(x, y) = e^{xy} - \log(x^2 + y^2)$$

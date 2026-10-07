@@ -1,6 +1,8 @@
 ::: {#exr-miller-dint-triangular-region}
 #### Double integral over a triangular region
 
+Adapted from @problifesavercalc, Question 1.1.50.
+
 Evaluate the integral:
 
 $$\int_0^1 \int_0^x xy\,dy\,dx$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-dint-separable}
 #### Product of single integrals for separable functions
 
+Adapted from @problifesavercalc, Question 1.1.49.
+
 Let $m, n > 0$. Evaluate:
 
 $$\int_0^1 \int_0^1 x^m y^n\,dy\,dx$$

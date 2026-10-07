@@ -1,6 +1,8 @@
 ::: {#exr-miller-pderiv-normal-parameters}
 #### Partial derivatives of the normal density with respect to parameters
 
+Adapted from @problifesavercalc, Question 1.1.43.
+
 Let
 
 $$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x - \mu)^2}{2\sigma^2}}$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-second-log-constant}
 #### Second derivative with an added constant
 
+Adapted from @problifesavercalc, Question 1.1.9.
+
 Find the second derivative of
 
 $$f(x) = \log x + \sqrt{162}$$

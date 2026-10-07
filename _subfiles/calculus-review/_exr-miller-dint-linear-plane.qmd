@@ -1,6 +1,8 @@
 ::: {#exr-miller-dint-linear-plane}
 #### Double integral of an affine function
 
+Adapted from @problifesavercalc, Question 1.1.53.
+
 Let $a, b, c$ be constants. Evaluate:
 
 $$\int_0^1 \int_0^1 (ax + by + c)\,dy\,dx$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-int-by-parts-gaussian}
 #### Integration by parts with an exponential factor
 
+Adapted from @problifesavercalc, Question 1.1.40.
+
 Evaluate the integral:
 
 $$\int_a^b x^3 \exp{-\frac{x^2}{2}}\,dx$$

@@ -144,6 +144,28 @@ $$\dexpf{x} = \expf{x}$$
 
 {{< slidebreak >}}
 
+:::{#thm-deriv-sin}
+#### Derivative of sine
+
+For every real $x$,
+the derivative of the sine function is:
+
+$$\deriv{x}\sin x = \cos x$$
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-deriv-cos}
+#### Derivative of cosine
+
+For every real $x$,
+the derivative of the cosine function is:
+
+$$\deriv{x}\cos x = -\sin x$$
+:::
+
+{{< slidebreak >}}
+
 :::{#thm-product-rule}
 #### Product rule
 
@@ -387,6 +409,10 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-nonzero.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-cosine.qmd >}}
 
 {{< slidebreak >}}
 

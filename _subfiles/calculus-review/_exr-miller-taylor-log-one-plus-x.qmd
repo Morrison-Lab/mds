@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-log-one-plus-x}
 #### Maclaurin series of $\log(1 + x)$
 
+Adapted from @problifesavercalc, Question 1.1.26.
+
 Find the first three terms of the Taylor series for
 
 $$f(x) = \log(1 + x)$$

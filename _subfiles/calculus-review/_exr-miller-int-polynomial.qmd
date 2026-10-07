@@ -1,6 +1,8 @@
 ::: {#exr-miller-int-polynomial}
 #### Definite integral of a polynomial
 
+Adapted from @problifesavercalc, Question 1.1.31.
+
 Evaluate the integral:
 
 $$\int_0^1 (x^4 + x^2 + 1)\,dx$$

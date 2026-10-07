@@ -1,6 +1,8 @@
 ::: {#exr-miller-pderiv-independent-variable}
 #### Partial derivative with respect to an unreferenced variable
 
+Adapted from @problifesavercalc, Question 1.1.46.
+
 Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
 $$f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)$$

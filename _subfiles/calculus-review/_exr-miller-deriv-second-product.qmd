@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-second-product}
 #### Second derivative of a product
 
+Adapted from @problifesavercalc, Question 1.1.15.
+
 Find the second derivative of
 
 $$f(x) = (x^4 + 3x^2 + 8)\cos x$$

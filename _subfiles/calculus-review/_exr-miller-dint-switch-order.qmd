@@ -1,6 +1,8 @@
 ::: {#exr-miller-dint-switch-order}
 #### Switching order of integration on a non-rectangular region
 
+Adapted from @problifesavercalc, Question 1.1.51.
+
 Express the integral:
 
 $$\int_0^1 \int_0^x y e^{-xy}\,dy\,dx$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-exp-base}
 #### Linear Taylor polynomial of the exponential
 
+Adapted from @problifesavercalc, Question 1.1.20.
+
 Find the first two terms (degree 1) of the Taylor series for
 
 $$f(x) = e^x$$

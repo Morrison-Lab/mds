@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-chain-log}
 #### Chain rule with logarithm
 
+Adapted from @problifesavercalc, Question 1.1.3.
+
 Find the derivative of
 
 $$f(x) = \log(1 - x^2)$$

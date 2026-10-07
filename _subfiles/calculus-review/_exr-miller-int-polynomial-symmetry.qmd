@@ -1,6 +1,8 @@
 ::: {#exr-miller-int-polynomial-symmetry}
 #### Separating even and odd parts of a polynomial
 
+Adapted from @problifesavercalc, Question 1.1.35.
+
 Evaluate the integral:
 
 $$\int_{-4}^4 (x^3 + 6x^2 - 2x - 3)\,dx$$

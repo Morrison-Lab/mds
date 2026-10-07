@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-sqrt}
 #### Taylor expansion of the square root
 
+Adapted from @problifesavercalc, Question 1.1.23.
+
 Find the first three terms (up to degree 2) of the Taylor series for
 
 $$f(x) = \sqrt{x}$$

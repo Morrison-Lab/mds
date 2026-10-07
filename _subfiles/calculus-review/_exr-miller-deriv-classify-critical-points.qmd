@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-classify-critical-points}
 #### Classifying critical points with the second derivative test
 
+Adapted from @problifesavercalc, Question 1.1.11.
+
 Find the critical points of
 
 $$f(x) = 4x^3 - 3x^2$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-exp-power}
 #### Taylor series of a composite exponential
 
+Adapted from @problifesavercalc, Question 1.1.21.
+
 Find the first six terms (up to degree 5) of the Taylor series for
 
 $$f(x) = \exp{x^8}$$

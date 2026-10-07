@@ -1,6 +1,8 @@
 ::: {#exr-miller-pderiv-exp-quadratic}
 #### Partial derivatives with exponential of quadratic form
 
+Adapted from @problifesavercalc, Question 1.1.44.
+
 Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
 $$f(x, y) = x\exp{x^2 + y^2}$$

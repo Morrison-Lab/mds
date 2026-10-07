@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-find-slopes}
 #### Finding points with a prescribed slope
 
+Adapted from @problifesavercalc, Question 1.1.14.
+
 Let $f(x) = \frac{1}{3}x^3 + x^2 - x - 1$. Find all points on the graph of $f$ where the slope is:
 
 1. $-1$

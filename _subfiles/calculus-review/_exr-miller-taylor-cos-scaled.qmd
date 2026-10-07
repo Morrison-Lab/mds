@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-cos-scaled}
 #### Taylor expansion of a scaled cosine
 
+Adapted from @problifesavercalc, Question 1.1.18.
+
 Find the terms up to degree 4 in the Taylor series for
 
 $$f(x) = \cos(5x)$$

@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-product-poly-cos}
 #### Derivative of a product
 
+Adapted from @problifesavercalc, Question 1.1.2.
+
 Find the derivative of
 
 $$f(x) = (x^4 + 3x^2 + 8)\cos x$$

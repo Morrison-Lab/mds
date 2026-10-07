@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-cube-root}
 #### Taylor expansion of a fractional power
 
+Adapted from @problifesavercalc, Question 1.1.24.
+
 Find the first three terms of the Taylor series for
 
 $$f(x) = (1 + x)^{1/3}$$

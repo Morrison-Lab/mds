@@ -1,6 +1,8 @@
 ::: {#exr-miller-pderiv-basic}
 #### First-order partial derivatives
 
+Adapted from @problifesavercalc, Question 1.1.42.
+
 Let $f(x, y) = x^2 y + e^x + \sin(xy)$. Find $\derivf{f}{x}$ and $\derivf{f}{y}$.
 :::
 

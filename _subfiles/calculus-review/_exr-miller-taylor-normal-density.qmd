@@ -1,6 +1,8 @@
 ::: {#exr-miller-taylor-normal-density}
 #### Taylor expansion of the normal density
 
+Adapted from @problifesavercalc, Question 1.1.22.
+
 Find the terms up to degree 3 of the Taylor series for the standard normal density
 
 $$\phi(x) = \frac{1}{\sqrt{2\pi}}\exp{-\frac{x^2}{2}}$$

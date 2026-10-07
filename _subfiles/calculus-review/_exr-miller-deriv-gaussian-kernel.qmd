@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-gaussian-kernel}
 #### Derivative of the standard Gaussian kernel
 
+Adapted from @problifesavercalc, Question 1.1.5.
+
 Find the derivative of
 
 $$f(x) = \exp{-\frac{x^2}{2}}$$

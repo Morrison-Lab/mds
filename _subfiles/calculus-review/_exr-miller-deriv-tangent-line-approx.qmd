@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-tangent-line-approx}
 #### Tangent line approximation
 
+Adapted from @problifesavercalc, Question 1.1.8.
+
 Let $f(x) = 4x + \sqrt{2}\cos x$.
 
 1. Compute $f'(x)$.

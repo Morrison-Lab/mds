@@ -1,6 +1,8 @@
 ::: {#exr-miller-deriv-product-chain-composite}
 #### Combining product and chain rules
 
+Adapted from @problifesavercalc, Question 1.1.7.
+
 Find the derivative of
 
 $$f(x) = \exp{x^8}\cos(3x^4)$$

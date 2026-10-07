@@ -1,6 +1,8 @@
 ::: {#exr-miller-int-log-substitution}
 #### Substitution leading to a natural logarithm
 
+Adapted from @problifesavercalc, Question 1.1.36.
+
 Evaluate the integral:
 
 $$\int_0^1 \frac{x}{1 + x^2}\,dx$$
