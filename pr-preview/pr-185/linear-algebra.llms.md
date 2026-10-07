@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 10:10:55 (PDT)
+Last modified: 2026-10-07 10:42:34 (PDT)
 
 ## 1 Vectors
 
@@ -4609,7 +4609,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > The conjugate transpose of a column vector \\\tilde{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\tilde{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
 
-The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231)), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\tilde{x}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse ([Definition 85](#def-moore-penrose)).
+The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231)), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\tilde{x}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse in the broader literature.
 
 The Hermitian adjoint matrix should not be confused with the classical *adjugate matrix* (the transpose of the matrix of cofactors), which older texts occasionally referred to as the “adjoint.”
 
@@ -4713,14 +4713,8 @@ This identity is the origin of the name **adjoint**: in functional analysis and 
 > **Definition 97 (Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** (or **self-adjoint**) if it equals its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
->
-> A square complex matrix \\\mathbf{A}\\ is **skew-Hermitian** (or **anti-Hermitian**) if \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}\\.
 
 The term *self-adjoint* comes directly from [Theorem 111](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}\tilde{v} \right\rangle\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
-
-Every real symmetric matrix is Hermitian, because for real matrices \\\mathbf{A}^{\mathsf{H}} = {\mathbf{A}}^{\top}\\. Just as any real square matrix can be uniquely split into a symmetric part and a skew-symmetric part, every complex square matrix \\\mathbf{A}\\ can be uniquely written as the sum of a Hermitian matrix and a skew-Hermitian matrix:
-
-\\\mathbf{A} = \underbrace{\frac{\mathbf{A} + \mathbf{A}^{\mathsf{H}}}{2}}\_{\text{Hermitian}} + \underbrace{\frac{\mathbf{A} - \mathbf{A}^{\mathsf{H}}}{2}}\_{\text{skew-Hermitian}}.\\
 
 > **NOTE:**
 >
@@ -4737,6 +4731,54 @@ Every real symmetric matrix is Hermitian, because for real matrices \\\mathbf{A}
 > is symmetric, \\{\mathbf{B}}^{\top} = \mathbf{B}\\, but it is not Hermitian:
 >
 > \\ \underbrace{\mathbf{B}^{\mathsf{H}}}\_{2 \times 2} = \begin{bmatrix} 0 & -i \\ -i & 0 \end{bmatrix} \neq \mathbf{B}. \\
+
+> **NOTE:**
+>
+> **Definition 98 (Skew-Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
+>
+> \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\\
+
+Every entry of a skew-Hermitian matrix satisfies \\a\_{jk} = -\overline{a\_{kj}}\\. In particular, its diagonal entries satisfy \\a\_{jj} = -\overline{a\_{jj}}\\, which means \\a\_{jj} + \overline{a\_{jj}} = 2\operatorname{Re}(a\_{jj}) = 0\\. Therefore, every diagonal entry of a skew-Hermitian matrix must be strictly imaginary (or zero).
+
+> **NOTE:**
+>
+> **Example 198 (A skew-Hermitian matrix)** The matrix
+>
+> \\ \mathbf{A} = \begin{bmatrix} 2\\i & 1 + i \\ -1 + i & 0 \end{bmatrix} \\
+>
+> is skew-Hermitian: transposing and conjugating gives
+>
+> \\ \mathbf{A}^{\mathsf{H}} = \begin{bmatrix} \overline{2\\i} & \overline{-1 + i} \\ \overline{1 + i} & \overline{0} \end{bmatrix} = \begin{bmatrix} -2\\i & -1 - i \\ 1 - i & 0 \end{bmatrix} = -\mathbf{A}. \\
+>
+> Its diagonal entries \\2\\i\\ and \\0\\ are purely imaginary.
+
+> **NOTE:**
+>
+> **Theorem 113 (Hermitian and skew-Hermitian decomposition)** Every square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ can be uniquely expressed as the sum of a Hermitian matrix \\\mathbf{H}\\ ([Definition 97](#def-hermitian-matrix)) and a skew-Hermitian matrix \\\mathbf{S}\\ ([Definition 98](#def-skew-hermitian-matrix)):
+>
+> \\\mathbf{A} = \mathbf{H} + \mathbf{S},\\
+>
+> where
+>
+> \\\mathbf{H} = \frac{\mathbf{A} + \mathbf{A}^{\mathsf{H}}}{2} \quad \text{and} \quad \mathbf{S} = \frac{\mathbf{A} - \mathbf{A}^{\mathsf{H}}}{2}.\\
+
+> **NOTE:**
+>
+> *Proof*. **Existence**: Define \\\mathbf{H} = \frac{1}{2}(\mathbf{A} + \mathbf{A}^{\mathsf{H}})\\ and \\\mathbf{S} = \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}})\\. Their sum is:
+>
+> \\\mathbf{H} + \mathbf{S} = \frac{\mathbf{A} + \mathbf{A}^{\mathsf{H}}}{2} + \frac{\mathbf{A} - \mathbf{A}^{\mathsf{H}}}{2} = \frac{2\mathbf{A}}{2} = \mathbf{A}.\\
+>
+> Applying the properties of the Hermitian adjoint ([Theorem 110](#thm-hermitian-adjoint-properties)):
+>
+> \\ \begin{aligned} \mathbf{H}^{\mathsf{H}} &= \mathopen{}\left(\frac{\mathbf{A} + \mathbf{A}^{\mathsf{H}}}{2}\right)\mathclose{}^{\mathsf{H}} = \frac{\mathbf{A}^{\mathsf{H}} + (\mathbf{A}^{\mathsf{H}})^{\mathsf{H}}}{2} = \frac{\mathbf{A}^{\mathsf{H}} + \mathbf{A}}{2} = \mathbf{H}, \\ \mathbf{S}^{\mathsf{H}} &= \mathopen{}\left(\frac{\mathbf{A} - \mathbf{A}^{\mathsf{H}}}{2}\right)\mathclose{}^{\mathsf{H}} = \frac{\mathbf{A}^{\mathsf{H}} - (\mathbf{A}^{\mathsf{H}})^{\mathsf{H}}}{2} = \frac{\mathbf{A}^{\mathsf{H}} - \mathbf{A}}{2} = -\mathbf{S}. \end{aligned} \\
+>
+> Thus \\\mathbf{H}\\ is Hermitian and \\\mathbf{S}\\ is skew-Hermitian.
+>
+> **Uniqueness**: Suppose \\\mathbf{A} = \mathbf{H}' + \mathbf{S}'\\ with \\(\mathbf{H}')^{\mathsf{H}} = \mathbf{H}'\\ and \\(\mathbf{S}')^{\mathsf{H}} = -\mathbf{S}'\\. Taking the Hermitian adjoint of both sides yields:
+>
+> \\\mathbf{A}^{\mathsf{H}} = (\mathbf{H}' + \mathbf{S}')^{\mathsf{H}} = (\mathbf{H}')^{\mathsf{H}} + (\mathbf{S}')^{\mathsf{H}} = \mathbf{H}' - \mathbf{S}'.\\
+>
+> Adding \\\mathbf{A} = \mathbf{H}' + \mathbf{S}'\\ and \\\mathbf{A}^{\mathsf{H}} = \mathbf{H}' - \mathbf{S}'\\ gives \\\mathbf{A} + \mathbf{A}^{\mathsf{H}} = 2\mathbf{H}'\\, so \\\mathbf{H}' = \frac{1}{2}(\mathbf{A} + \mathbf{A}^{\mathsf{H}}) = \mathbf{H}\\. Subtracting the two equations gives \\\mathbf{A} - \mathbf{A}^{\mathsf{H}} = 2\mathbf{S}'\\, so \\\mathbf{S}' = \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}}) = \mathbf{S}\\.
 
 ## 11 Further reading
 
