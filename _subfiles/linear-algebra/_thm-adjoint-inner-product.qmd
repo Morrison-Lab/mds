@@ -34,11 +34,16 @@ $$
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-adjoint-name}
+#### Where the name "adjoint" comes from
+
 This identity is the origin of the name **adjoint**:
 in functional analysis and operator theory,
 the *adjoint* of a linear map $T: V \to W$ between inner product spaces is defined as the unique operator $T^*: W \to V$ satisfying
 $\iprod{T\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{T^*\vecf{v}}$ (@axler2024linear [Definition 7.1, p. 226]).
 When $V$ and $W$ are finite-dimensional spaces equipped with their standard orthonormal bases,
 the matrix representing the adjoint operator $T^*$ is precisely the Hermitian adjoint matrix $\matr{A}^{\mathsf{H}}$ (@axler2024linear [Proposition 7.9, p. 231]).
+
 :::

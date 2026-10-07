@@ -15,7 +15,11 @@ is the $1 \times p$ row vector $\vecf{z}^{\mathsf{H}} = [\overline{z_1},\; \ldot
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-conjugate-transpose-notation}
+#### Notation for the conjugate transpose
+
 The operation is denoted variously across mathematics and physics:
 $\matr{A}^*$ in pure mathematics (@axler2024linear [Definition 7.7, p. 231]),
 $\matr{A}^{\dagger}$ ("$A$-dagger") in physics and quantum mechanics,
@@ -26,4 +30,5 @@ and $^{\dagger}$ frequently denotes the Moore-Penrose pseudoinverse in the broad
 The Hermitian adjoint matrix should not be confused with the classical *adjugate matrix*
 (the transpose of the matrix of cofactors),
 which older texts occasionally referred to as the "adjoint."
+
 :::
