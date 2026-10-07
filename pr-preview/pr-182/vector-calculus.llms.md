@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 17:51:26 (PDT)
+Last modified: 2026-10-06 22:35:18 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -37,42 +37,6 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > \\ \begin{aligned} \frac{f(1 + h, 2) - f(1, 2)}{h} &= \frac{(1 + h)^2 \cdot 2 + 6 - 8}{h} && \text{(substitute into } f \text{)} \\ &= \frac{(1 + h)^2 \cdot 2 - 2}{h} && \text{(} 6 - 8 = -2 \text{)} \\ &= \frac{(1 + 2h + h^2) \cdot 2 - 2}{h} && \text{(expand } (1 + h)^2 \text{)} \\ &= \frac{2 + 4h + 2h^2 - 2}{h} && \text{(distributive law)} \\ &= \frac{4h + 2h^2 + 2 - 2}{h} && \text{(reorder the terms)} \\ &= \frac{4h + 2h^2}{h} && \text{(} 2 - 2 = 0 \text{)} \\ &= 4 + 2h, && \text{(divide by } h \ne 0 \text{)} \end{aligned} \\
 >
 > which tends to \\4\\ as \\h \to 0\\, so \\\frac{\partial}{\partial x_1} f(1, 2) = 4\\. Holding \\x_2\\ fixed and differentiating in \\x_1\\ gives the same answer: \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\, which is \\2 \cdot 1 \cdot 2 = 4\\ at \\{(1, 2)}^{\top}\\. Holding \\x_1\\ fixed instead gives \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\, which is \\1 + 3 = 4\\ at \\{(1, 2)}^{\top}\\.
-
-> **NOTE:**
->
-> **Definition 2 (Vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
->
-> \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) \\ \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \\
->
-> The vector derivative is also called the **gradient** of \\f\\ with respect to \\\tilde{\beta}\\, written \\\nabla\_{\tilde{\beta}} f(\tilde{\beta})\\.
-
-> **NOTE:**
->
-> **Example 2 (A vector derivative)** Let \\\tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\\ and \\f(\tilde{\beta}) = 3 \beta_1 + 5 \beta_2^2\\. Then
->
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})}\_{2 \times 1} = \begin{bmatrix} \frac{\partial}{\partial \beta_1} (3 \beta_1 + 5 \beta_2^2) \\ \frac{\partial}{\partial \beta_2} (3 \beta_1 + 5 \beta_2^2) \end{bmatrix} = \begin{bmatrix} 3 \\ 10 \beta_2 \end{bmatrix}, \\
->
-> and at \\\tilde{\beta}= {(1, 2)}^{\top}\\ the vector derivative is \\{(3, 20)}^{\top}\\.
-
-> **TIP:**
->
-> Hutchinson’s [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min) covers gradients and partial derivatives, the ideas behind this section ([Hutchinson, n.d.](#ref-hutchinson_wwu_ml_videos)). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
-
-> **TIP:**
->
-> Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on partial derivatives:
->
-> - [What Partial Derivatives Are (Hands-on Introduction)](https://www.youtube.com/watch?v=lRq7xtPxOGk&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-> - [Partial Derivative Exercises](https://www.youtube.com/watch?v=8bHZJOBizwE&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-> - [Advanced Partial Derivatives](https://www.youtube.com/watch?v=0YzXHf-u5zU&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-> - [Advanced Partial-Derivative Exercises](https://www.youtube.com/watch?v=WFmUDiABfUI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-> - [Partial Derivative Notation](https://www.youtube.com/watch?v=kIKVHguEpvA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-
-### 0.1 Exercises: Partial derivatives
-
-> **NOTE:**
->
-> The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
 
 > **NOTE:**
 >
@@ -146,19 +110,33 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Exercise 5 (Partial derivative with respect to an unreferenced variable)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+> **Definition 2 (Vector derivative)** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
-> \\f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\\
+> \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta_1}f(\tilde{\beta}) \\ \frac{\partial}{\partial \beta_2}f(\tilde{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta_p}f(\tilde{\beta}) \end{bmatrix} \\
+>
+> The vector derivative is also called the **gradient** of \\f\\ with respect to \\\tilde{\beta}\\, written \\\nabla\_{\tilde{\beta}} f(\tilde{\beta})\\.
 
 > **NOTE:**
 >
-> *Solution 5*. Although the function is declared as a function of three variables \\(x, y, t)\\, its expression depends solely on \\t\\.
+> **Example 2 (A vector derivative)** Let \\\tilde{\beta}= {(\beta_1, \beta_2)}^{\top}\\ and \\f(\tilde{\beta}) = 3 \beta_1 + 5 \beta_2^2\\. Then
 >
-> Because neither \\x\\ nor \\y\\ appears in the formula, \\f\\ is constant with respect to both \\x\\ and \\y\\:
+> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})}\_{2 \times 1} = \begin{bmatrix} \frac{\partial}{\partial \beta_1} (3 \beta_1 + 5 \beta_2^2) \\ \frac{\partial}{\partial \beta_2} (3 \beta_1 + 5 \beta_2^2) \end{bmatrix} = \begin{bmatrix} 3 \\ 10 \beta_2 \end{bmatrix}, \\
 >
-> \\\frac{\partial f}{\partial x} = 0, \qquad \frac{\partial f}{\partial y} = 0\\
+> and at \\\tilde{\beta}= {(1, 2)}^{\top}\\ the vector derivative is \\{(3, 20)}^{\top}\\.
+
+> **TIP:**
 >
-> *Remark:* Always verify which variables actually appear in a formula before performing lengthy algebraic differentiation.
+> Hutchinson’s [Gradients Refresher](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#gradients) (17 min) covers gradients and partial derivatives, the ideas behind this section ([Hutchinson, n.d.](#ref-hutchinson_wwu_ml_videos)). The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).
+
+> **TIP:**
+>
+> Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on partial derivatives:
+>
+> - [What Partial Derivatives Are (Hands-on Introduction)](https://www.youtube.com/watch?v=lRq7xtPxOGk&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+> - [Partial Derivative Exercises](https://www.youtube.com/watch?v=8bHZJOBizwE&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+> - [Advanced Partial Derivatives](https://www.youtube.com/watch?v=0YzXHf-u5zU&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+> - [Advanced Partial-Derivative Exercises](https://www.youtube.com/watch?v=WFmUDiABfUI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+> - [Partial Derivative Notation](https://www.youtube.com/watch?v=kIKVHguEpvA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
 ## 1 Checking a gradient by its shape
 
@@ -299,7 +277,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Exercise 6 (Take a gradient by hand)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
+> **Exercise 5 (Take a gradient by hand)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
 >
 > \\f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\\
 >
@@ -310,7 +288,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Solution 6*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
+> *Solution 5*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
 >
 > \\\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\\
 >
@@ -421,6 +399,22 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} = \begin{bmatrix} \frac{\partial}{\partial \beta_1} \beta_1 & \frac{\partial}{\partial \beta_1} 3 \\ \frac{\partial}{\partial \beta_2} \beta_1 & \frac{\partial}{\partial \beta_2} 3 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \\
 >
 > which is not \\\underbrace{\mathbf{0}}\_{2 \times 2}\\, so this \\\tilde{x}\\ is not constant with respect to \\\tilde{\beta}\\: its first entry changes when \\\beta_1\\ does.
+
+> **NOTE:**
+>
+> **Exercise 6 (Partial derivative with respect to an unreferenced variable)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+>
+> \\f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\\
+
+> **NOTE:**
+>
+> *Solution 6*. Although the function is declared as a function of three variables \\(x, y, t)\\, its expression depends solely on \\t\\.
+>
+> Because neither \\x\\ nor \\y\\ appears in the formula, \\f\\ is constant with respect to both \\x\\ and \\y\\:
+>
+> \\\frac{\partial f}{\partial x} = 0, \qquad \frac{\partial f}{\partial y} = 0\\
+>
+> *Remark:* Always verify which variables actually appear in a formula before performing lengthy algebraic differentiation.
 
 > **NOTE:**
 >
@@ -1659,6 +1653,7 @@ Here the objective ([Definition 23](#def-minimization-problem)) is a quadratic 
 
 - Marsden and Tromba ([2013](#ref-marsden2013vector)) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 - Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.
+- Miller ([2016](#ref-problifesavercalc)) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
 See also the [Linear Algebra and Vector Calculus further reading](linear-algebra.llms.md#sec-additional-resources).
 

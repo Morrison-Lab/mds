@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 17:51:26 (PDT)
+Last modified: 2026-10-06 22:35:18 (PDT)
 
 ## 1 Derivatives
 
@@ -178,9 +178,67 @@ Last modified: 2026-10-06 17:51:26 (PDT)
 
 > **NOTE:**
 >
+> **Exercise 1 (Derivative of polynomial and power functions)** Find the derivative of
+>
+> \\f(x) = 4x^5 + 3x^2 + x^{1/3}\\
+
+> **NOTE:**
+>
+> *Solution 1*. Differentiate term by term using the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)) and the power rule ([Theorem 3](#thm-deriv-polynomial)):
+>
+> \\\begin{aligned} \frac{d }{d x}(4x^5) &= 4 \cdot(5x^4) = 20x^4 \\ \frac{d }{d x}(3x^2) &= 3 \cdot(2x) = 6x \\ \frac{d }{d x}(x^{1/3}) &= \frac{1}{3}x^{1/3 - 1} = \frac{1}{3}x^{-2/3} \end{aligned}\\
+>
+> Combining the three terms yields:
+>
+> \\f'(x) = 20x^4 + 6x + \frac{1}{3}x^{-2/3}\\
+
+> **NOTE:**
+>
+> **Exercise 2 (Finding points with a prescribed slope)** Let \\f(x) = \frac{1}{3}x^3 + x^2 - x - 1\\. Find all points on the graph of \\f\\ where the slope is:
+>
+> 1.  \\-1\\
+> 2.  \\2\\
+> 3.  \\0\\
+
+> **NOTE:**
+>
+> *Solution 2*. The slope is given by the derivative:
+>
+> \\f'(x) = x^2 + 2x - 1\\
+>
+> **1. Slope \\-1\\:** Solve \\x^2 + 2x - 1 = -1 \iff x^2 + 2x = 0 \iff x(x + 2) = 0\\. The roots are \\x = 0\\ and \\x = -2\\. Evaluating \\f\\: \\f(0) = -1\\ and \\f(-2) = -\frac{8}{3} + 4 + 2 - 1 = \frac{7}{3}\\. The points are \\(0, -1)\\ and \\(-2, 7/3)\\.
+>
+> **2. Slope \\2\\:** Solve \\x^2 + 2x - 1 = 2 \iff x^2 + 2x - 3 = 0 \iff (x + 3)(x - 1) = 0\\. The roots are \\x = -3\\ and \\x = 1\\. Evaluating \\f\\: \\f(-3) = -9 + 9 + 3 - 1 = 2\\ and \\f(1) = \frac{1}{3} + 1 - 1 - 1 = -\frac{2}{3}\\. The points are \\(-3, 2)\\ and \\(1, -2/3)\\.
+>
+> **3. Slope \\0\\:** Solve \\x^2 + 2x - 1 = 0\\. By the quadratic formula:
+>
+> \\x = \frac{-2 \pm \sqrt{4 - 4(1)(-1)}}{2} = \frac{-2 \pm \sqrt{8}}{2} = -1 \pm \sqrt{2}\\
+
+> **NOTE:**
+>
 > **Theorem 4 (Derivative of natural logarithm)** For every \\x \> 0\\, the derivative of the [natural logarithm](algebra.llms.md#def-natural-log) is:
 >
 > \\\operatorname{log}'\mathopen{}\left\\x\right\\\mathclose{} = \frac{1}{x} = x^{-1}\\
+
+> **NOTE:**
+>
+> **Exercise 3 (Derivative after logarithmic simplification)** Find the derivative of
+>
+> \\f(x) = \log(4x) - \log(2x)\\
+>
+> for \\x \> 0\\.
+
+> **NOTE:**
+>
+> *Solution 3*. Simplify before differentiating using the quotient property of logarithms:
+>
+> \\f(x) = \log(4x) - \log(2x) = \log\mathopen{}\left(\frac{4x}{2x}\right)\mathclose{} = \log 2\\
+>
+> Because \\\log 2\\ is constant with respect to \\x\\, the constant rule ([Theorem 1](#thm-deriv-const)) gives:
+>
+> \\f'(x) = 0\\
+>
+> *Remark:* While one could apply the chain rule separately to each term (\\\frac{4}{4x} - \frac{2}{2x} = \frac{1}{x} - \frac{1}{x} = 0\\), simplifying algebraically first is faster and prevents arithmetic errors.
 
 > **NOTE:**
 >
@@ -202,6 +260,46 @@ Last modified: 2026-10-06 17:51:26 (PDT)
 
 > **NOTE:**
 >
+> **Exercise 4 (Derivative of a product)** Find the derivative of
+>
+> \\f(x) = (x^4 + 3x^2 + 8)\cos x\\
+
+> **NOTE:**
+>
+> *Solution 4*. Apply the product rule ([Theorem 6](#thm-product-rule)) with:
+>
+> \\u(x) = x^4 + 3x^2 + 8, \qquad v(x) = \cos x\\
+>
+> Their derivatives are:
+>
+> \\u'(x) = 4x^3 + 6x, \qquad v'(x) = -\sin x\\
+>
+> By the product rule:
+>
+> \\\begin{aligned} f'(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x \end{aligned}\\
+
+> **NOTE:**
+>
+> **Exercise 5 (Second derivative of a product)** Find the second derivative of
+>
+> \\f(x) = (x^4 + 3x^2 + 8)\cos x\\
+
+> **NOTE:**
+>
+> *Solution 5*. From [Exercise 4](#exr-miller-deriv-product-poly-cos), the first derivative is:
+>
+> \\f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x\\
+>
+> Differentiate each term via the product rule:
+>
+> \\\begin{aligned} \frac{d }{d x}\mathopen{}\left\[(4x^3 + 6x)\cos x\right\]\mathclose{} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x \\ \frac{d }{d x}\mathopen{}\left\[-(x^4 + 3x^2 + 8)\sin x\right\]\mathclose{} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x \end{aligned}\\
+>
+> Combining and grouping like trigonometric terms:
+>
+> \\\begin{aligned} f''(x) &= \mathopen{}\left\[(12x^2 + 6) - (x^4 + 3x^2 + 8)\right\]\mathclose{}\cos x - 2(4x^3 + 6x)\sin x \\ &= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x \end{aligned}\\
+
+> **NOTE:**
+>
 > **Theorem 7 (Quotient rule)** If \\a\\ and \\b\\ are differentiable functions of \\x\\ and \\b \neq 0\\, then
 >
 > \\(a/b)' = a'/b - (a/b^2)b'\\
@@ -214,6 +312,28 @@ Last modified: 2026-10-06 17:51:26 (PDT)
 
 > **NOTE:**
 >
+> **Exercise 6 (Derivative of a rational function)** Find the derivative of
+>
+> \\f(x) = \frac{x^2 - 1}{x - 1}\\
+>
+> for \\x \ne 1\\.
+
+> **NOTE:**
+>
+> *Solution 6*. Factor the numerator before differentiating:
+>
+> \\f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)\\
+>
+> Differentiating directly gives \\f'(x) = 1\\.
+>
+> *Alternative (quotient rule):* Using [Theorem 7](#thm-quotient-rule) with \\u(x) = x^2 - 1\\ and \\v(x) = x - 1\\:
+>
+> \\f'(x) = \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} = \frac{x^2 - 2x + 1}{(x - 1)^2} = \frac{(x - 1)^2}{(x - 1)^2} = 1\\
+>
+> Both methods yield \\1\\, but factoring first eliminates tedious algebraic simplification.
+
+> **NOTE:**
+>
 > **Theorem 8 (Chain rule)** If \\a\\ is a differentiable function of \\b\\, and \\b\\ is a differentiable function of \\c\\, then \\a\\ is a differentiable function of \\c\\, and
 >
 > \\\begin{aligned} \frac{d a}{d c} &= \frac{d a}{d b} \frac{d b}{d c} \\ &= \frac{d b}{d c} \frac{d a}{d b} \end{aligned} \\
@@ -221,6 +341,70 @@ Last modified: 2026-10-06 17:51:26 (PDT)
 > or in Lagrange’s notation ([Definition 5](#def-derivative)), if \\g\\ is differentiable at \\x\\ and \\f\\ is differentiable at \\g(x)\\, then for the [composition](sets-functions.llms.md#def-composition) \\f \circ g\\, with inner function \\g\\ and outer function \\f\\:
 >
 > \\(f(g(x)))' = g'(x) f'(g(x))\\
+
+> **NOTE:**
+>
+> **Exercise 7 (Derivative of the standard Gaussian kernel)** Find the derivative of
+>
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> *Solution 7*. Apply the chain rule ([Theorem 8](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
+>
+> \\f'(x) = u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> **Exercise 8 (Second derivative of the Gaussian kernel)** Find the second derivative of
+>
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> *Solution 8*. From [Exercise 7](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
+>
+> \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
+>
+> Therefore:
+>
+> \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} + (-x)\mathopen{}\left\[-x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{} \\ &= (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
+
+> **NOTE:**
+>
+> **Exercise 9 (Combining product and chain rules)** Find the derivative of
+>
+> \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4)\\
+
+> **NOTE:**
+>
+> *Solution 9*. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\ and \\v(x) = \cos(3x^4)\\:
+>
+> \\f'(x) = u'(x)v(x) + u(x)v'(x)\\
+>
+> Compute \\u'(x)\\ and \\v'(x)\\ via the chain rule ([Theorem 8](#thm-chain-rule)):
+>
+> \\\begin{aligned} u'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} \\ v'(x) &= -12x^3 \sin(3x^4) \end{aligned}\\
+>
+> Substitute both derivatives into the product rule:
+>
+> \\\begin{aligned} f'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4) - 12x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\sin(3x^4) \\ &= 4x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\mathopen{}\left\[2x^4 \cos(3x^4) - 3\sin(3x^4)\right\]\mathclose{} \end{aligned}\\
+
+> **NOTE:**
+>
+> **Exercise 10 (Generalized power rule)** Find the derivative of
+>
+> \\f(x) = \sqrt\[3\]{(5x - 2)^2} = (5x - 2)^{2/3}\\
+>
+> for \\x \ne 2/5\\.
+
+> **NOTE:**
+>
+> *Solution 10*. Apply the generalized power rule \\\frac{d }{d x}\[g(x)\]^r = r\[g(x)\]^{r-1}g'(x)\\ with \\g(x) = 5x - 2\\ and \\r = 2/3\\:
+>
+> \\f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cdot 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}\\
+>
+> *Remark:* Omitting the inner derivative \\g'(x) = 5\\ is a frequent mistake when applying the generalized power rule.
 
 > **NOTE:**
 >
@@ -241,6 +425,40 @@ Last modified: 2026-10-06 17:51:26 (PDT)
 > - [The Chain Rule for Derivatives](https://www.youtube.com/watch?v=zFOD3NR5I4Q&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [The Power Rule on a Function Chain](https://www.youtube.com/watch?v=JXG4g196cG0&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Advanced Exercises on Derivative Rules](https://www.youtube.com/watch?v=Qkyq95jYj9w&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+
+> **NOTE:**
+>
+> **Exercise 11 (Chain rule with logarithm)** Find the derivative of
+>
+> \\f(x) = \log(1 - x^2)\\
+>
+> for \\x \in (-1, 1)\\.
+
+> **NOTE:**
+>
+> *Solution 11*. Apply the chain rule for logarithms ([Corollary 1](#cor-deriv-log-chain)): if \\g(x) = 1 - x^2\\, then \\g'(x) = -2x\\, and
+>
+> \\f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}\\
+>
+> *Remark:* A common pitfall in chain rule problems is evaluating the outer derivative at \\x\\ rather than at the inner value \\g(x)\\. The denominator is \\g(x) = 1 - x^2\\, not \\x\\.
+
+> **NOTE:**
+>
+> **Exercise 12 (Second derivative with an added constant)** Find the second derivative of
+>
+> \\f(x) = \log x + \sqrt{162}\\
+>
+> for \\x \> 0\\.
+
+> **NOTE:**
+>
+> *Solution 12*. Because \\\sqrt{162}\\ is constant with respect to \\x\\, its derivative is zero ([Theorem 1](#thm-deriv-const)):
+>
+> \\f'(x) = \frac{1}{x} = x^{-1}\\
+>
+> Differentiating again via the power rule ([Theorem 3](#thm-deriv-polynomial)):
+>
+> \\f''(x) = -x^{-2} = -\frac{1}{x^2}\\
 
 ### 1.3 Linear approximation
 
@@ -285,6 +503,57 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
 > **NOTE:**
 >
+> **Exercise 13 (Maximizing a gamma-family kernel)** Find the maximum value of
+>
+> \\f(x) = x^4 e^{-x}\\
+>
+> on the interval \\\[0, \infty)\\.
+
+> **NOTE:**
+>
+> *Solution 13*. Differentiate using the product rule:
+>
+> \\f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)\\
+>
+> On \\\[0, \infty)\\, \\e^{-x} \> 0\\, so \\f'(x) = 0\\ only at \\x = 0\\ and \\x = 4\\.
+>
+> Evaluate \\f\\ at the boundary and critical points:
+>
+> - At \\x = 0\\: \\f(0) = 0\\.
+> - At \\x = 4\\: \\f(4) = 4^4 e^{-4} = 256 e^{-4} \approx 4.6888\\.
+> - As \\x \to \infty\\: exponential decay dominates polynomial growth, so \\\lim\_{x \to \infty} x^4 e^{-x} = 0\\.
+>
+> Since \\f(x) \ge 0\\ for all \\x \ge 0\\ and \\f(4) \> 0\\, the global maximum occurs at \\x = 4\\, with maximum value \\256/e^4\\.
+
+> **NOTE:**
+>
+> **Exercise 14 (Classifying critical points with the second derivative test)** Find the critical points of
+>
+> \\f(x) = 4x^3 - 3x^2\\
+>
+> and decide whether each is a local maximum, a local minimum, or an inflection point.
+
+> **NOTE:**
+>
+> *Solution 14*. Compute the first derivative:
+>
+> \\f'(x) = 12x^2 - 6x = 6x(2x - 1)\\
+>
+> Setting \\f'(x) = 0\\ gives critical points at \\x = 0\\ and \\x = 1/2\\.
+>
+> Compute the second derivative:
+>
+> \\f''(x) = 24x - 6\\
+>
+> Apply the second derivative test at each critical point:
+>
+> - At \\x = 0\\: \\f''(0) = -6 \< 0\\, so \\x = 0\\ is a strict local maximum.
+> - At \\x = 1/2\\: \\f''(1/2) = 24(1/2) - 6 = 6 \> 0\\, so \\x = 1/2\\ is a strict local minimum.
+>
+> Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
+
+> **NOTE:**
+>
 > **Definition 11 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
@@ -298,6 +567,38 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 > \\ \begin{aligned} x &\mapsto 1 + 2\\(x - 1) && \text{(substitute } f(1) = 1 \text{ and } f'(1) = 2 \text{)} \\ &= 2x - 1 && \text{(distribute, and } 1 - 2 = -1 \text{)} \end{aligned} \\
 >
 > At \\x = 1.1\\ the tangent line has height \\2(1.1) - 1 = 1.2\\, close to the curve’s height \\f(1.1) = 1.21\\; the gap, \\1.21 - 1.2 = 0.01\\, is \\(1.1 - 1)^2\\.
+
+> **NOTE:**
+>
+> **Exercise 15 (Tangent line approximation)** Let \\f(x) = 4x + \sqrt{2}\cos x\\.
+>
+> 1.  Compute \\f'(x)\\.
+> 2.  Find the equation of the tangent line to the curve \\y = f(x)\\ at \\x = \pi/4\\.
+> 3.  Use the tangent line to approximate \\f(\pi/4 + 0.01)\\, and compare that approximation with the exact value.
+
+> **NOTE:**
+>
+> *Solution 15*. **1.** Differentiate term by term:
+>
+> \\f'(x) = 4 - \sqrt{2}\sin x\\
+>
+> **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
+>
+> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = 4 - 1 = 3 \end{aligned}\\
+>
+> Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
+>
+> \\y - (\pi + 1) = 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{} \implies y = \pi + 1 + 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{}\\
+>
+> **3.** At \\x = \pi/4 + 0.01\\, the linear approximation ([Equation 1](#eq-linear-approx)) gives:
+>
+> \\f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\\
+>
+> The exact value is:
+>
+> \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} \approx 4.171543\\
+>
+> The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
 
 Show R code
 
@@ -359,7 +660,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Exercise 1 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
+> **Exercise 16 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
 >
 > 1.  Differentiate \\f\\.
 > 2.  Find the flat point \\w\\ of \\f\\, and say whether \\f(w)\\ is the [minimum](algebra.llms.md#def-minimum) or the [maximum](algebra.llms.md#def-maximum) of the values of \\f\\.
@@ -367,7 +668,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> *Solution 1*. **1.** Term by term:
+> *Solution 16*. **1.** Term by term:
 >
 > \\\frac{df}{dw} = 2w - 4\\
 >
@@ -379,318 +680,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\epsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](vector-calculus.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the vector calculus page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
 
-### 1.4 Exercises: Derivatives
-
-> **NOTE:**
->
-> The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
-
-> **NOTE:**
->
-> **Exercise 2 (Derivative of polynomial and power functions)** Find the derivative of
->
-> \\f(x) = 4x^5 + 3x^2 + x^{1/3}\\
-
-> **NOTE:**
->
-> *Solution 2*. Differentiate term by term using the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)) and the power rule ([Theorem 3](#thm-deriv-polynomial)):
->
-> \\\begin{aligned} \frac{d }{d x}(4x^5) &= 4 \cdot(5x^4) = 20x^4 \\ \frac{d }{d x}(3x^2) &= 3 \cdot(2x) = 6x \\ \frac{d }{d x}(x^{1/3}) &= \frac{1}{3}x^{1/3 - 1} = \frac{1}{3}x^{-2/3} \end{aligned}\\
->
-> Combining the three terms yields:
->
-> \\f'(x) = 20x^4 + 6x + \frac{1}{3}x^{-2/3}\\
-
-> **NOTE:**
->
-> **Exercise 3 (Derivative of a product)** Find the derivative of
->
-> \\f(x) = (x^4 + 3x^2 + 8)\cos x\\
-
-> **NOTE:**
->
-> *Solution 3*. Apply the product rule ([Theorem 6](#thm-product-rule)) with:
->
-> \\u(x) = x^4 + 3x^2 + 8, \qquad v(x) = \cos x\\
->
-> Their derivatives are:
->
-> \\u'(x) = 4x^3 + 6x, \qquad v'(x) = -\sin x\\
->
-> By the product rule:
->
-> \\\begin{aligned} f'(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x \end{aligned}\\
-
-> **NOTE:**
->
-> **Exercise 4 (Chain rule with logarithm)** Find the derivative of
->
-> \\f(x) = \log(1 - x^2)\\
->
-> for \\x \in (-1, 1)\\.
-
-> **NOTE:**
->
-> *Solution 4*. Apply the chain rule for logarithms ([Corollary 1](#cor-deriv-log-chain)): if \\g(x) = 1 - x^2\\, then \\g'(x) = -2x\\, and
->
-> \\f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}\\
->
-> *Remark:* A common pitfall in chain rule problems is evaluating the outer derivative at \\x\\ rather than at the inner value \\g(x)\\. The denominator is \\g(x) = 1 - x^2\\, not \\x\\.
-
-> **NOTE:**
->
-> **Exercise 5 (Derivative after logarithmic simplification)** Find the derivative of
->
-> \\f(x) = \log(4x) - \log(2x)\\
->
-> for \\x \> 0\\.
-
-> **NOTE:**
->
-> *Solution 5*. Simplify before differentiating using the quotient property of logarithms:
->
-> \\f(x) = \log(4x) - \log(2x) = \log\mathopen{}\left(\frac{4x}{2x}\right)\mathclose{} = \log 2\\
->
-> Because \\\log 2\\ is constant with respect to \\x\\, the constant rule ([Theorem 1](#thm-deriv-const)) gives:
->
-> \\f'(x) = 0\\
->
-> *Remark:* While one could apply the chain rule separately to each term (\\\frac{4}{4x} - \frac{2}{2x} = \frac{1}{x} - \frac{1}{x} = 0\\), simplifying algebraically first is faster and prevents arithmetic errors.
-
-> **NOTE:**
->
-> **Exercise 6 (Derivative of the standard Gaussian kernel)** Find the derivative of
->
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
-
-> **NOTE:**
->
-> *Solution 6*. Apply the chain rule ([Theorem 8](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
->
-> \\f'(x) = u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
-
-> **NOTE:**
->
-> **Exercise 7 (Second derivative of the Gaussian kernel)** Find the second derivative of
->
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
-
-> **NOTE:**
->
-> *Solution 7*. From [Exercise 6](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
->
-> \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
->
-> Therefore:
->
-> \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} + (-x)\mathopen{}\left\[-x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{} \\ &= (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
-
-> **NOTE:**
->
-> **Exercise 8 (Combining product and chain rules)** Find the derivative of
->
-> \\f(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4)\\
-
-> **NOTE:**
->
-> *Solution 8*. Apply the product rule ([Theorem 6](#thm-product-rule)) to \\u(x) = \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\\ and \\v(x) = \cos(3x^4)\\:
->
-> \\f'(x) = u'(x)v(x) + u(x)v'(x)\\
->
-> Compute \\u'(x)\\ and \\v'(x)\\ via the chain rule ([Theorem 8](#thm-chain-rule)):
->
-> \\\begin{aligned} u'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{} \\ v'(x) &= -12x^3 \sin(3x^4) \end{aligned}\\
->
-> Substitute both derivatives into the product rule:
->
-> \\\begin{aligned} f'(x) &= 8x^7 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\cos(3x^4) - 12x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\sin(3x^4) \\ &= 4x^3 \operatorname{exp}\mathopen{}\left\\x^8\right\\\mathclose{}\mathopen{}\left\[2x^4 \cos(3x^4) - 3\sin(3x^4)\right\]\mathclose{} \end{aligned}\\
-
-> **NOTE:**
->
-> **Exercise 9 (Tangent line approximation)** Let \\f(x) = 4x + \sqrt{2}\cos x\\.
->
-> 1.  Compute \\f'(x)\\.
-> 2.  Find the equation of the tangent line to the curve \\y = f(x)\\ at \\x = \pi/4\\.
-> 3.  Use the tangent line to approximate \\f(\pi/4 + 0.01)\\, and compare that approximation with the exact value.
-
-> **NOTE:**
->
-> *Solution 9*. **1.** Differentiate term by term:
->
-> \\f'(x) = 4 - \sqrt{2}\sin x\\
->
-> **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
->
-> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = 4 - 1 = 3 \end{aligned}\\
->
-> Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
->
-> \\y - (\pi + 1) = 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{} \implies y = \pi + 1 + 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{}\\
->
-> **3.** At \\x = \pi/4 + 0.01\\, the linear approximation ([Equation 1](#eq-linear-approx)) gives:
->
-> \\f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\\
->
-> The exact value is:
->
-> \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} \approx 4.171543\\
->
-> The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
-
-> **NOTE:**
->
-> **Exercise 10 (Second derivative with an added constant)** Find the second derivative of
->
-> \\f(x) = \log x + \sqrt{162}\\
->
-> for \\x \> 0\\.
-
-> **NOTE:**
->
-> *Solution 10*. Because \\\sqrt{162}\\ is constant with respect to \\x\\, its derivative is zero ([Theorem 1](#thm-deriv-const)):
->
-> \\f'(x) = \frac{1}{x} = x^{-1}\\
->
-> Differentiating again via the power rule ([Theorem 3](#thm-deriv-polynomial)):
->
-> \\f''(x) = -x^{-2} = -\frac{1}{x^2}\\
-
-> **NOTE:**
->
-> **Exercise 11 (Maximizing a gamma-family kernel)** Find the maximum value of
->
-> \\f(x) = x^4 e^{-x}\\
->
-> on the interval \\\[0, \infty)\\.
-
-> **NOTE:**
->
-> *Solution 11*. Differentiate using the product rule:
->
-> \\f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)\\
->
-> On \\\[0, \infty)\\, \\e^{-x} \> 0\\, so \\f'(x) = 0\\ only at \\x = 0\\ and \\x = 4\\.
->
-> Evaluate \\f\\ at the boundary and critical points:
->
-> - At \\x = 0\\: \\f(0) = 0\\.
-> - At \\x = 4\\: \\f(4) = 4^4 e^{-4} = 256 e^{-4} \approx 4.6888\\.
-> - As \\x \to \infty\\: exponential decay dominates polynomial growth, so \\\lim\_{x \to \infty} x^4 e^{-x} = 0\\.
->
-> Since \\f(x) \ge 0\\ for all \\x \ge 0\\ and \\f(4) \> 0\\, the global maximum occurs at \\x = 4\\, with maximum value \\256/e^4\\.
-
-> **NOTE:**
->
-> **Exercise 12 (Classifying critical points with the second derivative test)** Find the critical points of
->
-> \\f(x) = 4x^3 - 3x^2\\
->
-> and decide whether each is a local maximum, a local minimum, or an inflection point.
-
-> **NOTE:**
->
-> *Solution 12*. Compute the first derivative:
->
-> \\f'(x) = 12x^2 - 6x = 6x(2x - 1)\\
->
-> Setting \\f'(x) = 0\\ gives critical points at \\x = 0\\ and \\x = 1/2\\.
->
-> Compute the second derivative:
->
-> \\f''(x) = 24x - 6\\
->
-> Apply the second derivative test at each critical point:
->
-> - At \\x = 0\\: \\f''(0) = -6 \< 0\\, so \\x = 0\\ is a strict local maximum.
-> - At \\x = 1/2\\: \\f''(1/2) = 24(1/2) - 6 = 6 \> 0\\, so \\x = 1/2\\ is a strict local minimum.
->
-> Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
-
-> **NOTE:**
->
-> **Exercise 13 (Derivative of a rational function)** Find the derivative of
->
-> \\f(x) = \frac{x^2 - 1}{x - 1}\\
->
-> for \\x \ne 1\\.
-
-> **NOTE:**
->
-> *Solution 13*. Factor the numerator before differentiating:
->
-> \\f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)\\
->
-> Differentiating directly gives \\f'(x) = 1\\.
->
-> *Alternative (quotient rule):* Using [Theorem 7](#thm-quotient-rule) with \\u(x) = x^2 - 1\\ and \\v(x) = x - 1\\:
->
-> \\f'(x) = \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} = \frac{x^2 - 2x + 1}{(x - 1)^2} = \frac{(x - 1)^2}{(x - 1)^2} = 1\\
->
-> Both methods yield \\1\\, but factoring first eliminates tedious algebraic simplification.
-
-> **NOTE:**
->
-> **Exercise 14 (Generalized power rule)** Find the derivative of
->
-> \\f(x) = \sqrt\[3\]{(5x - 2)^2} = (5x - 2)^{2/3}\\
->
-> for \\x \ne 2/5\\.
-
-> **NOTE:**
->
-> *Solution 14*. Apply the generalized power rule \\\frac{d }{d x}\[g(x)\]^r = r\[g(x)\]^{r-1}g'(x)\\ with \\g(x) = 5x - 2\\ and \\r = 2/3\\:
->
-> \\f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cdot 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}\\
->
-> *Remark:* Omitting the inner derivative \\g'(x) = 5\\ is a frequent mistake when applying the generalized power rule.
-
-> **NOTE:**
->
-> **Exercise 15 (Finding points with a prescribed slope)** Let \\f(x) = \frac{1}{3}x^3 + x^2 - x - 1\\. Find all points on the graph of \\f\\ where the slope is:
->
-> 1.  \\-1\\
-> 2.  \\2\\
-> 3.  \\0\\
-
-> **NOTE:**
->
-> *Solution 15*. The slope is given by the derivative:
->
-> \\f'(x) = x^2 + 2x - 1\\
->
-> **1. Slope \\-1\\:** Solve \\x^2 + 2x - 1 = -1 \iff x^2 + 2x = 0 \iff x(x + 2) = 0\\. The roots are \\x = 0\\ and \\x = -2\\. Evaluating \\f\\: \\f(0) = -1\\ and \\f(-2) = -\frac{8}{3} + 4 + 2 - 1 = \frac{7}{3}\\. The points are \\(0, -1)\\ and \\(-2, 7/3)\\.
->
-> **2. Slope \\2\\:** Solve \\x^2 + 2x - 1 = 2 \iff x^2 + 2x - 3 = 0 \iff (x + 3)(x - 1) = 0\\. The roots are \\x = -3\\ and \\x = 1\\. Evaluating \\f\\: \\f(-3) = -9 + 9 + 3 - 1 = 2\\ and \\f(1) = \frac{1}{3} + 1 - 1 - 1 = -\frac{2}{3}\\. The points are \\(-3, 2)\\ and \\(1, -2/3)\\.
->
-> **3. Slope \\0\\:** Solve \\x^2 + 2x - 1 = 0\\. By the quadratic formula:
->
-> \\x = \frac{-2 \pm \sqrt{4 - 4(1)(-1)}}{2} = \frac{-2 \pm \sqrt{8}}{2} = -1 \pm \sqrt{2}\\
-
-> **NOTE:**
->
-> **Exercise 16 (Second derivative of a product)** Find the second derivative of
->
-> \\f(x) = (x^4 + 3x^2 + 8)\cos x\\
-
-> **NOTE:**
->
-> *Solution 16*. From [Exercise 3](#exr-miller-deriv-product-poly-cos), the first derivative is:
->
-> \\f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x\\
->
-> Differentiate each term via the product rule:
->
-> \\\begin{aligned} \frac{d }{d x}\mathopen{}\left\[(4x^3 + 6x)\cos x\right\]\mathclose{} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x \\ \frac{d }{d x}\mathopen{}\left\[-(x^4 + 3x^2 + 8)\sin x\right\]\mathclose{} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x \end{aligned}\\
->
-> Combining and grouping like trigonometric terms:
->
-> \\\begin{aligned} f''(x) &= \mathopen{}\left\[(12x^2 + 6) - (x^4 + 3x^2 + 8)\right\]\mathclose{}\cos x - 2(4x^3 + 6x)\sin x \\ &= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x \end{aligned}\\
-
-### 1.5 Taylor series
-
-> **NOTE:**
->
-> The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
+### 1.4 Taylor series
 
 > **NOTE:**
 >
@@ -1450,160 +1440,6 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Example 33 (FTC Part 1 visualized: accumulation function for \\f(t) = 2t\\)** Take \\f(t) = 2t\\ on \\\[0, 2\]\\. The accumulation function from \\0\\ is
->
-> \\F(x) \\\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\=\\ x^2 - 0^2 \\=\\ x^2,\\
->
-> so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 13](#thm-ftc) Part 1 predicts. [Figure 5](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
->
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_area(
->     data = data.frame(t = seq(0, x_focus, length.out = 200)),
->     ggplot2::aes(x = t, y = 2 * t),
->     fill = "steelblue", alpha = 0.4
->   ) +
->   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
->   ggplot2::geom_vline(
->     data = data.frame(x = x_marks),
->     ggplot2::aes(xintercept = x, color = factor(x)),
->     linetype = "dashed", linewidth = 0.6
->   ) +
->   ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
->   ggplot2::theme_minimal() +
->   ggplot2::theme(legend.position = "bottom")
-> ```
->
-> [![](calculus_files/figure-html/ftc-part1-left-code-1.png)](calculus_files/figure-html/ftc-part1-left-code-1.png "Figure 5 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
->
-> \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
->
-> Show R code
->
-> ``` downlit
-> slope_df <- data.frame(
->   x = x_marks,
->   Fx = x_marks^2,
->   slope = 2 * x_marks
-> )
->
-> ggplot2::ggplot() +
->   ggplot2::geom_function(fun = \(x) x^2, xlim = c(0, 2.2), linewidth = 1) +
->   ggplot2::geom_point(
->     data = slope_df,
->     ggplot2::aes(x = x, y = Fx, color = factor(x)),
->     size = 3
->   ) +
->   ggplot2::geom_segment(
->     data = slope_df,
->     ggplot2::aes(
->       x = x - 0.3, xend = x + 0.3,
->       y = Fx - 0.3 * slope, yend = Fx + 0.3 * slope,
->       color = factor(x)
->     ),
->     linewidth = 0.8
->   ) +
->   ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
->   ggplot2::theme_minimal() +
->   ggplot2::theme(legend.position = "bottom")
-> ```
->
-> [![](calculus_files/figure-html/ftc-part1-right-code-1.png)](calculus_files/figure-html/ftc-part1-right-code-1.png "Figure 5 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
->
-> \(b\) \\F(x) = x^2\\; tangent slope at each marked \\x\\ equals \\f(x) = 2x\\.
->
-> Figure 5: Left: \\f(t) = 2t\\; the shaded area \\\int_0^{1.5} 2t\\dt = F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
-
-> **NOTE:**
->
-> **Example 34 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 13](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
->
-> Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\\lambda \> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is ([Kleinbaum and Klein 2012, sec. II](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”):
->
-> \\f(t) = \lambda \text{e}^{-\lambda t}, \quad t \ge 0\\
->
-> **FTC Part 2** gives the [cumulative distribution function (CDF)](https://morrison-lab.github.io/pds/random-variables.html#def-cdf), \\F(t) = P(T \le t)\\, from the PDF. Apply the \\\text{e}^{cx}\\ rule from [Theorem 9](#thm-integral-rules) with \\c = -\lambda\\ to antidifferentiate the integrand:
->
-> \\ \begin{aligned} F(t) &= \int_0^t \lambda \text{e}^{-\lambda u}\\du && \text{(the CDF integrates the PDF)} \\ &= \mathopen{}\left\[\lambda \cdot\frac{1}{-\lambda}\text{e}^{-\lambda u}\right\]\mathclose{}\_{u=0}^{u=t} && \text{(FTC Part 2, with the } \text{e}^{cx} \text{ rule)} \\ &= \mathopen{}\left\[(-1)\text{e}^{-\lambda u}\right\]\mathclose{}\_{u=0}^{u=t} && \text{(} \lambda / (-\lambda) = -1 \text{)} \\ &= \mathopen{}\left\[-\text{e}^{-\lambda u}\right\]\mathclose{}\_{u=0}^{u=t} && \text{(multiply by } -1 \text{)} \\ &= -\text{e}^{-\lambda t} - \mathopen{}\left(-\text{e}^{0}\right)\mathclose{} && \text{(evaluate at the limits)} \\ &= -\text{e}^{-\lambda t} - (-1) && \text{(} \text{e}^{0} = 1 \text{)} \\ &= 1 - \text{e}^{-\lambda t} && \text{(rearrange)} \end{aligned} \\
->
-> **FTC Part 1** recovers the PDF from the CDF:
->
-> \\ \begin{aligned} \frac{\partial}{\partial t} F(t) &= \frac{\partial}{\partial t}\mathopen{}\left(1 - \text{e}^{-\lambda t}\right)\mathclose{} && \text{(substitute } F \text{)} \\ &= \frac{\partial}{\partial t} 1 - \frac{\partial}{\partial t} \text{e}^{-\lambda t} && \text{(derivative of a difference)} \\ &= 0 - \frac{\partial}{\partial t} \text{e}^{-\lambda t} && \text{(constant rule)} \\ &= 0 - \text{e}^{-\lambda t} \cdot\frac{\partial}{\partial t}(-\lambda t) && \text{(chain rule, with inner function } -\lambda t \text{)} \\ &= 0 - \text{e}^{-\lambda t} \cdot(-\lambda) && \text{(constant multiple rule)} \\ &= \lambda\text{e}^{-\lambda t} && \text{(simplify)} \\ &= f(t) && \text{(definition of } f \text{)} \end{aligned} \\
->
-> For a concrete instance: with \\\lambda = 1\\, the probability that \\T \le 2\\ is:
->
-> \\ F(2) = 1 - \text{e}^{-1 \cdot 2} = 1 - \text{e}^{-2} \approx 1 - 0.135 = 0.865 \\
->
-> See [Figure 6](#fig-exp-pdf-cdf).
->
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_area(
->     data = data.frame(t = seq(0, t_focus, length.out = 300)),
->     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
->     fill = "steelblue", alpha = 0.4
->   ) +
->   ggplot2::geom_function(
->     fun = \(t) lambda * exp(-lambda * t),
->     xlim = c(0, t_max), linewidth = 1
->   ) +
->   ggplot2::labs(x = "t", y = "f(t)") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 6 (a): PDF with \lambda = 1; shaded area equals F(2) \approx 0.865.")
->
-> \(a\) PDF with \\\lambda = 1\\; shaded area equals \\F(2) \approx 0.865\\.
->
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_function(
->     fun = \(t) 1 - exp(-lambda * t),
->     xlim = c(0, t_max), linewidth = 1
->   ) +
->   ggplot2::geom_point(
->     ggplot2::aes(x = t_focus, y = F_at_focus),
->     size = 3, color = "steelblue"
->   ) +
->   ggplot2::geom_segment(
->     ggplot2::aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
->     linetype = "dashed", color = "steelblue"
->   ) +
->   ggplot2::geom_segment(
->     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
->     linetype = "dashed", color = "steelblue"
->   ) +
->   ggplot2::labs(x = "t", y = "F(t)") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 6 (b): CDF with \lambda = 1; point marks F(2) \approx 0.865.")
->
-> \(b\) CDF with \\\lambda = 1\\; point marks \\F(2) \approx 0.865\\.
->
-> Figure 6: Exponential distribution with \\\lambda = 1\\. Left: the PDF \\f(t) = \lambda \text{e}^{-\lambda t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-\lambda t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
-
-> **TIP:**
->
-> Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on evaluating definite integrals:
->
-> - [Definite Integrals](https://www.youtube.com/watch?v=lhtoBu51N7k&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-> - [Definite Integral Exercise](https://www.youtube.com/watch?v=kSZWX3j2u2U&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-
-### 2.4 Exercises: Integration
-
-> **NOTE:**
->
-> The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
-
-> **NOTE:**
->
 > **Exercise 32 (Definite integral of a polynomial)** Evaluate the integral:
 >
 > \\\int_0^1 (x^4 + x^2 + 1)\\dx\\
@@ -1749,13 +1585,172 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Exercise 40 (Improper Gaussian-kernel integral)** Evaluate the improper integral:
+> **Exercise 40 (Integration by parts with an exponential factor)** Evaluate the integral:
+>
+> \\\int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
+
+> **NOTE:**
+>
+> *Solution 40*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\right)\mathclose{}\\. Set:
+>
+> \\u = x^2, \qquad dv = x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
+>
+> Then \\du = 2x\\dx\\ and \\v = -\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\.
+>
+> Using integration by parts (\\\int u\\dv = uv - \int v\\du\\):
+>
+> \\\begin{aligned} \int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b - \int_a^b \mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}(2x\\dx) \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\int_a^b x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= \mathopen{}\left\[-(x^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= (a^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{a^2}{2}\right\\\mathclose{} - (b^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{b^2}{2}\right\\\mathclose{} \end{aligned}\\
+
+> **NOTE:**
+>
+> **Example 33 (FTC Part 1 visualized: accumulation function for \\f(t) = 2t\\)** Take \\f(t) = 2t\\ on \\\[0, 2\]\\. The accumulation function from \\0\\ is
+>
+> \\F(x) \\\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\=\\ x^2 - 0^2 \\=\\ x^2,\\
+>
+> so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 13](#thm-ftc) Part 1 predicts. [Figure 5](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
+>
+> Show R code
+>
+> ``` downlit
+> ggplot2::ggplot() +
+>   ggplot2::geom_area(
+>     data = data.frame(t = seq(0, x_focus, length.out = 200)),
+>     ggplot2::aes(x = t, y = 2 * t),
+>     fill = "steelblue", alpha = 0.4
+>   ) +
+>   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
+>   ggplot2::geom_vline(
+>     data = data.frame(x = x_marks),
+>     ggplot2::aes(xintercept = x, color = factor(x)),
+>     linetype = "dashed", linewidth = 0.6
+>   ) +
+>   ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
+> ```
+>
+> [![](calculus_files/figure-html/ftc-part1-left-code-1.png)](calculus_files/figure-html/ftc-part1-left-code-1.png "Figure 5 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
+>
+> \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
+>
+> Show R code
+>
+> ``` downlit
+> slope_df <- data.frame(
+>   x = x_marks,
+>   Fx = x_marks^2,
+>   slope = 2 * x_marks
+> )
+>
+> ggplot2::ggplot() +
+>   ggplot2::geom_function(fun = \(x) x^2, xlim = c(0, 2.2), linewidth = 1) +
+>   ggplot2::geom_point(
+>     data = slope_df,
+>     ggplot2::aes(x = x, y = Fx, color = factor(x)),
+>     size = 3
+>   ) +
+>   ggplot2::geom_segment(
+>     data = slope_df,
+>     ggplot2::aes(
+>       x = x - 0.3, xend = x + 0.3,
+>       y = Fx - 0.3 * slope, yend = Fx + 0.3 * slope,
+>       color = factor(x)
+>     ),
+>     linewidth = 0.8
+>   ) +
+>   ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
+>   ggplot2::theme_minimal() +
+>   ggplot2::theme(legend.position = "bottom")
+> ```
+>
+> [![](calculus_files/figure-html/ftc-part1-right-code-1.png)](calculus_files/figure-html/ftc-part1-right-code-1.png "Figure 5 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
+>
+> \(b\) \\F(x) = x^2\\; tangent slope at each marked \\x\\ equals \\f(x) = 2x\\.
+>
+> Figure 5: Left: \\f(t) = 2t\\; the shaded area \\\int_0^{1.5} 2t\\dt = F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
+
+> **NOTE:**
+>
+> **Example 34 (CDF and PDF of the exponential distribution)** In what follows, \\f\\ denotes the PDF and \\F\\ the CDF — the same letters as the antiderivative pair in [Definition 13](#def-antiderivative), because the FTC will show \\F\\ is exactly an antiderivative of \\f\\.
+>
+> Let \\T\\ be a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) with rate \\\lambda \> 0\\. Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is ([Kleinbaum and Klein 2012, sec. II](#ref-kleinbaum2012survival), p. 295, “Survival and Hazard Functions for Selected Distributions”):
+>
+> \\f(t) = \lambda \text{e}^{-\lambda t}, \quad t \ge 0\\
+>
+> **FTC Part 2** gives the [cumulative distribution function (CDF)](https://morrison-lab.github.io/pds/random-variables.html#def-cdf), \\F(t) = P(T \le t)\\, from the PDF. Apply the \\\text{e}^{cx}\\ rule from [Theorem 9](#thm-integral-rules) with \\c = -\lambda\\ to antidifferentiate the integrand:
+>
+> \\ \begin{aligned} F(t) &= \int_0^t \lambda \text{e}^{-\lambda u}\\du && \text{(the CDF integrates the PDF)} \\ &= \mathopen{}\left\[\lambda \cdot\frac{1}{-\lambda}\text{e}^{-\lambda u}\right\]\mathclose{}\_{u=0}^{u=t} && \text{(FTC Part 2, with the } \text{e}^{cx} \text{ rule)} \\ &= \mathopen{}\left\[(-1)\text{e}^{-\lambda u}\right\]\mathclose{}\_{u=0}^{u=t} && \text{(} \lambda / (-\lambda) = -1 \text{)} \\ &= \mathopen{}\left\[-\text{e}^{-\lambda u}\right\]\mathclose{}\_{u=0}^{u=t} && \text{(multiply by } -1 \text{)} \\ &= -\text{e}^{-\lambda t} - \mathopen{}\left(-\text{e}^{0}\right)\mathclose{} && \text{(evaluate at the limits)} \\ &= -\text{e}^{-\lambda t} - (-1) && \text{(} \text{e}^{0} = 1 \text{)} \\ &= 1 - \text{e}^{-\lambda t} && \text{(rearrange)} \end{aligned} \\
+>
+> **FTC Part 1** recovers the PDF from the CDF:
+>
+> \\ \begin{aligned} \frac{\partial}{\partial t} F(t) &= \frac{\partial}{\partial t}\mathopen{}\left(1 - \text{e}^{-\lambda t}\right)\mathclose{} && \text{(substitute } F \text{)} \\ &= \frac{\partial}{\partial t} 1 - \frac{\partial}{\partial t} \text{e}^{-\lambda t} && \text{(derivative of a difference)} \\ &= 0 - \frac{\partial}{\partial t} \text{e}^{-\lambda t} && \text{(constant rule)} \\ &= 0 - \text{e}^{-\lambda t} \cdot\frac{\partial}{\partial t}(-\lambda t) && \text{(chain rule, with inner function } -\lambda t \text{)} \\ &= 0 - \text{e}^{-\lambda t} \cdot(-\lambda) && \text{(constant multiple rule)} \\ &= \lambda\text{e}^{-\lambda t} && \text{(simplify)} \\ &= f(t) && \text{(definition of } f \text{)} \end{aligned} \\
+>
+> For a concrete instance: with \\\lambda = 1\\, the probability that \\T \le 2\\ is:
+>
+> \\ F(2) = 1 - \text{e}^{-1 \cdot 2} = 1 - \text{e}^{-2} \approx 1 - 0.135 = 0.865 \\
+>
+> See [Figure 6](#fig-exp-pdf-cdf).
+>
+> Show R code
+>
+> ``` downlit
+> ggplot2::ggplot() +
+>   ggplot2::geom_area(
+>     data = data.frame(t = seq(0, t_focus, length.out = 300)),
+>     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
+>     fill = "steelblue", alpha = 0.4
+>   ) +
+>   ggplot2::geom_function(
+>     fun = \(t) lambda * exp(-lambda * t),
+>     xlim = c(0, t_max), linewidth = 1
+>   ) +
+>   ggplot2::labs(x = "t", y = "f(t)") +
+>   ggplot2::theme_minimal()
+> ```
+>
+> [![](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 6 (a): PDF with \lambda = 1; shaded area equals F(2) \approx 0.865.")
+>
+> \(a\) PDF with \\\lambda = 1\\; shaded area equals \\F(2) \approx 0.865\\.
+>
+> Show R code
+>
+> ``` downlit
+> ggplot2::ggplot() +
+>   ggplot2::geom_function(
+>     fun = \(t) 1 - exp(-lambda * t),
+>     xlim = c(0, t_max), linewidth = 1
+>   ) +
+>   ggplot2::geom_point(
+>     ggplot2::aes(x = t_focus, y = F_at_focus),
+>     size = 3, color = "steelblue"
+>   ) +
+>   ggplot2::geom_segment(
+>     ggplot2::aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
+>     linetype = "dashed", color = "steelblue"
+>   ) +
+>   ggplot2::geom_segment(
+>     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
+>     linetype = "dashed", color = "steelblue"
+>   ) +
+>   ggplot2::labs(x = "t", y = "F(t)") +
+>   ggplot2::theme_minimal()
+> ```
+>
+> [![](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 6 (b): CDF with \lambda = 1; point marks F(2) \approx 0.865.")
+>
+> \(b\) CDF with \\\lambda = 1\\; point marks \\F(2) \approx 0.865\\.
+>
+> Figure 6: Exponential distribution with \\\lambda = 1\\. Left: the PDF \\f(t) = \lambda \text{e}^{-\lambda t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-\lambda t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
+
+> **NOTE:**
+>
+> **Exercise 41 (Improper Gaussian-kernel integral)** Evaluate the improper integral:
 >
 > \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx\\
 
 > **NOTE:**
 >
-> *Solution 40*. Let \\u = x^2/4\\. Then \\du = \frac{x}{2}\\dx\\, so \\x\\dx = 2\\du\\.
+> *Solution 41*. Let \\u = x^2/4\\. Then \\du = \frac{x}{2}\\dx\\, so \\x\\dx = 2\\du\\.
 >
 > Limits:
 >
@@ -1767,24 +1762,6 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx = 2\int_0^\infty e^{-u}\\du = 2\mathopen{}\left\[-e^{-u}\right\]\mathclose{}\_0^\infty = 2\mathopen{}\left(0 - (-1)\right)\mathclose{} = 2\\
 >
 > *Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
-
-> **NOTE:**
->
-> **Exercise 41 (Integration by parts with an exponential factor)** Evaluate the integral:
->
-> \\\int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
-
-> **NOTE:**
->
-> *Solution 41*. Factor the integrand as \\x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\right)\mathclose{}\\. Set:
->
-> \\u = x^2, \qquad dv = x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx\\
->
-> Then \\du = 2x\\dx\\ and \\v = -\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\.
->
-> Using integration by parts (\\\int u\\dv = uv - \int v\\du\\):
->
-> \\\begin{aligned} \int_a^b x^3 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b - \int_a^b \mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}(2x\\dx) \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\int_a^b x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\dx \\ &= \mathopen{}\left\[-x^2 \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b + 2\mathopen{}\left\[-\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= \mathopen{}\left\[-(x^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{}\_a^b \\ &= (a^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{a^2}{2}\right\\\mathclose{} - (b^2 + 2)\operatorname{exp}\mathopen{}\left\\-\frac{b^2}{2}\right\\\mathclose{} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -1823,6 +1800,13 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > \\(f \* f)(x) = \begin{cases} x & \text{if } 0 \le x \le 1 \\ 2 - x & \text{if } 1 \< x \le 2 \\ 0 & \text{otherwise} \end{cases}\\
 >
 > *Remark:* In probability theory, if \\X_1, X_2 \sim \text{Uniform}(0, 1)\\ independently, the probability density function of their sum \\S = X_1 + X_2\\ is the convolution of their individual densities, producing this symmetric triangular distribution on \\\[0, 2\]\\.
+
+> **TIP:**
+>
+> Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on evaluating definite integrals:
+>
+> - [Definite Integrals](https://www.youtube.com/watch?v=lhtoBu51N7k&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
+> - [Definite Integral Exercise](https://www.youtube.com/watch?v=kSZWX3j2u2U&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
 ## 3 Double Integrals
 
@@ -1966,6 +1950,58 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
+> **Exercise 43 (Double integral over a triangular region)** Evaluate the integral:
+>
+> \\\int_0^1 \int_0^x xy\\dy\\dx\\
+>
+> and confirm the result by reversing the order of integration.
+
+> **NOTE:**
+>
+> *Solution 43*. **1. Given order (\\y\\ then \\x\\):**
+>
+> \\\int_0^x xy\\dy = x\mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_0^x = \frac{x^3}{2}\\
+>
+> \\\int_0^1 \frac{x^3}{2}\\dx = \mathopen{}\left\[\frac{x^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{8}\\
+>
+> **2. Reversed order (\\x\\ then \\y\\):** The triangular region \\T = \\(x, y) : 0 \le x \le 1, 0 \le y \le x\\\\ is equivalently described by \\T = \\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
+>
+> \\\int_0^1 \int_y^1 xy\\dx\\dy = \int_0^1 y\mathopen{}\left\[\frac{x^2}{2}\right\]\mathclose{}\_{x=y}^1\\dy = \int_0^1 \frac{y(1 - y^2)}{2}\\dy\\
+>
+> \\\int_0^1 \mathopen{}\left(\frac{y}{2} - \frac{y^3}{2}\right)\mathclose{}\\dy = \mathopen{}\left\[\frac{y^2}{4} - \frac{y^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}\\
+>
+> Both orders yield \\1/8\\.
+
+> **NOTE:**
+>
+> **Exercise 44 (Switching order of integration on a non-rectangular region)** Express the integral:
+>
+> \\\int_0^1 \int_0^x y e^{-xy}\\dy\\dx\\
+>
+> by reversing the order of integration.
+
+> **NOTE:**
+>
+> *Solution 44*. In the given order, the inner integral \\\int_0^x y e^{-xy}\\dy\\ requires integration by parts with respect to \\y\\.
+>
+> Switching the order over the triangular domain \\\\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
+>
+> \\\int_0^1 \int_y^1 y e^{-xy}\\dx\\dy\\
+>
+> Now the inner integral has the factor \\y\\ in place for direct integration with respect to \\x\\:
+>
+> \\\int_y^1 y e^{-xy}\\dx = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{x=y}^1 = e^{-y^2} - e^{-y}\\
+>
+> The double integral becomes:
+>
+> \\\int_0^1 (e^{-y^2} - e^{-y})\\dy = \int_0^1 e^{-y^2}\\dy - \mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_0^1 = \int_0^1 e^{-y^2}\\dy - (1 - e^{-1})\\
+>
+> The term \\\int_0^1 e^{-y^2}\\dy\\ has no elementary antiderivative; it can be written using the error function \\\operatorname{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\\dt\\ as \\\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) \approx 0.7468\\. The overall value is:
+>
+> \\\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) + e^{-1} - 1 \approx 0.1147\\
+
+> **NOTE:**
+>
 > **Example 38 (When conditions fail: a counterexample)** The conditions in [Theorem 14](#thm-fubini) are not merely technical — when they fail, iterated integrals can exist yet disagree.
 >
 > Let \\f(x, y) = \frac{x^2 - y^2}{(x^2 + y^2)^2}\\ on the unit square \\R = \[0, 1\] \times \[0, 1\]\\. Strictly, \\f\\ is defined on \\R \setminus \\(0, 0)\\\\: the denominator vanishes at the origin, so \\f\\ is undefined there (we return to this point in the condition check).
@@ -2105,67 +2141,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Theorem 15 (Fubini–Tonelli theorem (measure-theoretic form))** Let \\(\Omega_1, \mathcal F_1, \mu_1)\\ and \\(\Omega_2, \mathcal F_2, \mu_2)\\ be [measure spaces](measures.llms.md#def-measure-space) with [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measures, and let \\f : \Omega_1 \times \Omega_2 \to \mathbb{R}\\ be [measurable](measures.llms.md#def-measurable-function) with respect to the [product \\\sigma\\-algebra](measures.llms.md#def-product-sigma-algebra) \\\mathcal F_1 \otimes \mathcal F_2\\. If either
->
-> 1.  \\f \ge 0\\ [almost everywhere](measures.llms.md#def-almost-everywhere) with respect to the [product measure](measures.llms.md#def-product-measure) \\\mu_1 \otimes \mu_2\\ (**Tonelli’s theorem**), or
->
-> 2.  \\\int\_{\Omega_1 \times \Omega_2} \mathopen{}\left\|f\right\|\mathclose{}\\d(\mu_1 \otimes \mu_2) \< \infty\\, that is, \\f\\ is [absolutely integrable](measures.llms.md#def-absolutely-integrable) (**Fubini’s theorem**),
->
-> then both iterated [integrals](measures.llms.md#def-integral) exist, agree with the double integral, and equal each other:
->
-> \\ \begin{aligned} \int\_{\Omega_1 \times \Omega_2} f\\d(\mu_1 \otimes \mu_2) &= \int\_{\Omega_1} \mathopen{}\left(\int\_{\Omega_2} f(\omega_1, \omega_2)\\d\mu_2(\omega_2)\right)\mathclose{}\\d\mu_1(\omega_1)\\ &= \int\_{\Omega_2} \mathopen{}\left(\int\_{\Omega_1} f(\omega_1, \omega_2)\\d\mu_1(\omega_1)\right)\mathclose{}\\d\mu_2(\omega_2). \end{aligned} \\
->
-> ([Billingsley 1995](#ref-billingsley1995probability), Theorem 18.3; [Gut 2013](#ref-gut2013), Theorem 9.1, p. 65; [Fubini 1907](#ref-fubini1907); [Wikipedia contributors 2024](#ref-wp:fubini))
-
-> **NOTE:**
->
-> *Remark 3* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science*. A [probability measure](measures.llms.md#def-probability-measure) \\P\\ on \\\Omega\\ has \\P(\Omega) = 1 \< \infty\\, so it is [finite](measures.llms.md#def-sigma-finite), and hence \\\sigma\\-finite ([finite and \\\sigma\\-finite measures](measures.llms.md#exm-sigma-finite)); for probability measures, the \\\sigma\\-finiteness condition is automatic.
->
-> The integrability conditions (nonnegativity or [absolute integrability](measures.llms.md#def-absolutely-integrable)) still need to be verified in each application. For example, [Lebesgue measure](measures.llms.md#def-lebesgue-measure) (ordinary length) on \\\[0, 1\]\\ is a probability measure, so the \\\sigma\\-finiteness condition holds for both factors \\\[0, 1\]\\, yet the two iterated integrals in [Example 38](#exm-fubini-fail) are \\\pi/4\\ and \\-\pi/4\\. So \\\sigma\\-finiteness alone does not make the iterated integrals agree.
-
-> **NOTE:**
->
-> **Example 40 (Positive application of [Theorem 15](#thm-fubini-tonelli))** Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Exponential}(1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = e^{-(x+y)}\\ for \\x, y \ge 0\\.
->
-> The probability \\P(X \le 1,\\ Y \le 1)\\ is the integral of \\f\\ over \\\[0, 1\]^2\\ with respect to Lebesgue measure (ordinary length) in each coordinate. Lebesgue measure on \\\[0, \infty)\\ is \\\sigma\\-finite, because \\\[0, \infty)\\ is the union of the intervals \\\[0, n\]\\, \\n \in \mathbb{N}\\, each of finite length \\n\\; so the \\\sigma\\-finiteness condition of [Theorem 15](#thm-fubini-tonelli) holds. Since \\f(x,y) = e^{-(x+y)} \ge 0\\, condition (a) (Tonelli’s theorem, nonnegativity) is also satisfied.
->
-> By [Theorem 15](#thm-fubini-tonelli), both iterated integrals exist and agree. Integrating \\y\\ first, then \\x\\:
->
-> \\ \begin{aligned} P(X \le 1,\\ Y \le 1) &= \int_0^1\\\int_0^1 e^{-(x+y)}\\dy\\dx \\&= \int_0^1\\\int_0^1 e^{-x} e^{-y}\\dy\\dx && \text{(exponential of a sum)} \\&= \int_0^1 e^{-x}\mathopen{}\left(\int_0^1 e^{-y}\\dy\right)\mathclose{}\\dx && \text{(} e^{-x} \text{ is constant in } y \text{)} \\&= \int_0^1 e^{-x}\mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_{y=0}^{y=1}\\dx && \text{(antiderivative of } e^{-y} \text{)} \\&= \int_0^1 e^{-x}(1 - e^{-1})\\dx && \text{(evaluate at the limits)} \\&= (1 - e^{-1})\int_0^1 e^{-x}\\dx && \text{(} 1 - e^{-1} \text{ is constant in } x \text{)} \\&= (1 - e^{-1})\mathopen{}\left\[-e^{-x}\right\]\mathclose{}\_{x=0}^{x=1} && \text{(antiderivative of } e^{-x} \text{)} \\&= (1 - e^{-1})^2 && \text{(evaluate at the limits)} \end{aligned} \\
->
-> Integrating \\x\\ first, then \\y\\:
->
-> \\ \begin{aligned} P(X \le 1,\\ Y \le 1) &= \int_0^1\\\int_0^1 e^{-(x+y)}\\dx\\dy \\&= \int_0^1\\\int_0^1 e^{-y} e^{-x}\\dx\\dy && \text{(exponential of a sum)} \\&= \int_0^1 e^{-y}\mathopen{}\left(\int_0^1 e^{-x}\\dx\right)\mathclose{}\\dy && \text{(} e^{-y} \text{ is constant in } x \text{)} \\&= \int_0^1 e^{-y}\mathopen{}\left\[-e^{-x}\right\]\mathclose{}\_{x=0}^{x=1}\\dy && \text{(antiderivative of } e^{-x} \text{)} \\&= \int_0^1 e^{-y}(1 - e^{-1})\\dy && \text{(evaluate at the limits)} \\&= (1 - e^{-1})\int_0^1 e^{-y}\\dy && \text{(} 1 - e^{-1} \text{ is constant in } y \text{)} \\&= (1 - e^{-1})\mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_{y=0}^{y=1} && \text{(antiderivative of } e^{-y} \text{)} \\&= (1 - e^{-1})^2 && \text{(evaluate at the limits)} \end{aligned} \\
->
-> Both iterated integrals equal \\(1 - e^{-1})^2 \approx 0.400\\, as [Theorem 15](#thm-fubini-tonelli) guarantees when condition (a) holds.
-
-> **NOTE:**
->
-> **Example 41 (When neither Fubini–Tonelli condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 38](#exm-fubini-fail) illustrates a case where neither condition of [Theorem 15](#thm-fubini-tonelli) is satisfied.
->
-> **Why [Theorem 15](#thm-fubini-tonelli)’s conditions fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates condition (b). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies \\\|f(x, y)\| = \mathopen{}\left\|x^2 - y^2\right\|\mathclose{}/(x^2 + y^2)^2 = \mathopen{}\left\|\cos 2\theta\right\|\mathclose{}/r^2\\, so
->
-> \\ \begin{aligned} \iint_R \|f\|\\dA &\ge \int_0^{\pi/2}\\\int_0^{\epsilon} \frac{\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}}{r^2}\\ r\\dr\\d\theta\\ &= \mathopen{}\left(\int_0^{\pi/2}\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}\\d\theta\right)\mathclose{} \int_0^{\epsilon} \frac{dr}{r}\\ &= +\infty, \end{aligned} \\
->
-> since \\\int_0^{\epsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and condition (b) of [Theorem 15](#thm-fubini-tonelli) is not satisfied. (Condition (a) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 38](#exm-fubini-fail) are thus consistent with [Theorem 15](#thm-fubini-tonelli): the theorem simply does not apply.
->
-> ([Wikipedia contributors 2024](#ref-wp:fubini))
-
-### 3.1 Exercises: Double integrals
-
-> **NOTE:**
->
-> The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
-
-> **NOTE:**
->
-> **Exercise 43 (Double integral of a polynomial over a rectangle)** Evaluate the double integral:
+> **Exercise 45 (Double integral of a polynomial over a rectangle)** Evaluate the double integral:
 >
 > \\\int_0^2 \int_0^3 5(x^2 y + xy^2 + 2)\\dy\\dx\\
 
 > **NOTE:**
 >
-> *Solution 43*. Integrate with respect to \\y\\ first:
+> *Solution 45*. Integrate with respect to \\y\\ first:
 >
 > \\\begin{aligned} \int_0^3 (x^2 y + xy^2 + 2)\\dy &= \mathopen{}\left\[\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y\right\]\mathclose{}\_{y=0}^3 \\ &= \frac{9}{2}x^2 + 9x + 6 \end{aligned}\\
 >
@@ -2177,13 +2159,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 44 (Choosing the order of integration)** Evaluate the double integral:
+> **Exercise 46 (Choosing the order of integration)** Evaluate the double integral:
 >
 > \\\int_0^6 \int_0^5 x e^{-xy}\\dy\\dx\\
 
 > **NOTE:**
 >
-> *Solution 44*. Integrating with respect to \\x\\ first requires integration by parts. Integrating with respect to \\y\\ first is much simpler because the factor of \\x\\ is already present:
+> *Solution 46*. Integrating with respect to \\x\\ first requires integration by parts. Integrating with respect to \\y\\ first is much simpler because the factor of \\x\\ is already present:
 >
 > \\\int_0^5 x e^{-xy}\\dy = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{y=0}^5 = 1 - e^{-5x}\\
 >
@@ -2193,13 +2175,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 45 (Product of single integrals for separable functions)** Let \\m, n \> 0\\. Evaluate:
+> **Exercise 47 (Product of single integrals for separable functions)** Let \\m, n \> 0\\. Evaluate:
 >
 > \\\int_0^1 \int_0^1 x^m y^n\\dy\\dx\\
 
 > **NOTE:**
 >
-> *Solution 45*. Because the region of integration is a rectangle \\\[0, 1\] \times \[0, 1\]\\ and the integrand factors as \\g(x)h(y) = x^m \cdot y^n\\, the double integral splits into the product of two single-variable integrals:
+> *Solution 47*. Because the region of integration is a rectangle \\\[0, 1\] \times \[0, 1\]\\ and the integrand factors as \\g(x)h(y) = x^m \cdot y^n\\, the double integral splits into the product of two single-variable integrals:
 >
 > \\\int_0^1 \int_0^1 x^m y^n\\dy\\dx = \mathopen{}\left(\int_0^1 x^m\\dx\right)\mathclose{}\mathopen{}\left(\int_0^1 y^n\\dy\right)\mathclose{}\\
 >
@@ -2212,58 +2194,6 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > \\\int_0^1 \int_0^1 x^m y^n\\dy\\dx = \frac{1}{(m + 1)(n + 1)}\\
 >
 > *Remark:* When joint random variables \\X\\ and \\Y\\ are independent, their joint density factors as \\f\_{X, Y}(x, y) = f_X(x)f_Y(y)\\, and joint probabilities over product sets factor in exactly this way.
-
-> **NOTE:**
->
-> **Exercise 46 (Double integral over a triangular region)** Evaluate the integral:
->
-> \\\int_0^1 \int_0^x xy\\dy\\dx\\
->
-> and confirm the result by reversing the order of integration.
-
-> **NOTE:**
->
-> *Solution 46*. **1. Given order (\\y\\ then \\x\\):**
->
-> \\\int_0^x xy\\dy = x\mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_0^x = \frac{x^3}{2}\\
->
-> \\\int_0^1 \frac{x^3}{2}\\dx = \mathopen{}\left\[\frac{x^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{8}\\
->
-> **2. Reversed order (\\x\\ then \\y\\):** The triangular region \\T = \\(x, y) : 0 \le x \le 1, 0 \le y \le x\\\\ is equivalently described by \\T = \\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
->
-> \\\int_0^1 \int_y^1 xy\\dx\\dy = \int_0^1 y\mathopen{}\left\[\frac{x^2}{2}\right\]\mathclose{}\_{x=y}^1\\dy = \int_0^1 \frac{y(1 - y^2)}{2}\\dy\\
->
-> \\\int_0^1 \mathopen{}\left(\frac{y}{2} - \frac{y^3}{2}\right)\mathclose{}\\dy = \mathopen{}\left\[\frac{y^2}{4} - \frac{y^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}\\
->
-> Both orders yield \\1/8\\.
-
-> **NOTE:**
->
-> **Exercise 47 (Switching order of integration on a non-rectangular region)** Express the integral:
->
-> \\\int_0^1 \int_0^x y e^{-xy}\\dy\\dx\\
->
-> by reversing the order of integration.
-
-> **NOTE:**
->
-> *Solution 47*. In the given order, the inner integral \\\int_0^x y e^{-xy}\\dy\\ requires integration by parts with respect to \\y\\.
->
-> Switching the order over the triangular domain \\\\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
->
-> \\\int_0^1 \int_y^1 y e^{-xy}\\dx\\dy\\
->
-> Now the inner integral has the factor \\y\\ in place for direct integration with respect to \\x\\:
->
-> \\\int_y^1 y e^{-xy}\\dx = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{x=y}^1 = e^{-y^2} - e^{-y}\\
->
-> The double integral becomes:
->
-> \\\int_0^1 (e^{-y^2} - e^{-y})\\dy = \int_0^1 e^{-y^2}\\dy - \mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_0^1 = \int_0^1 e^{-y^2}\\dy - (1 - e^{-1})\\
->
-> The term \\\int_0^1 e^{-y^2}\\dy\\ has no elementary antiderivative; it can be written using the error function \\\operatorname{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\\dt\\ as \\\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) \approx 0.7468\\. The overall value is:
->
-> \\\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) + e^{-1} - 1 \approx 0.1147\\
 
 > **NOTE:**
 >
@@ -2327,13 +2257,61 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Remark:* This integral identity connects multivariable integration with harmonic numbers \\H_n = \sum\_{k=1}^n \frac{1}{k} \approx \log n + \gamma\\, where \\\gamma \approx 0.5772\\ is the Euler-Mascheroni constant.
 
+> **NOTE:**
+>
+> **Theorem 15 (Fubini–Tonelli theorem (measure-theoretic form))** Let \\(\Omega_1, \mathcal F_1, \mu_1)\\ and \\(\Omega_2, \mathcal F_2, \mu_2)\\ be [measure spaces](measures.llms.md#def-measure-space) with [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measures, and let \\f : \Omega_1 \times \Omega_2 \to \mathbb{R}\\ be [measurable](measures.llms.md#def-measurable-function) with respect to the [product \\\sigma\\-algebra](measures.llms.md#def-product-sigma-algebra) \\\mathcal F_1 \otimes \mathcal F_2\\. If either
+>
+> 1.  \\f \ge 0\\ [almost everywhere](measures.llms.md#def-almost-everywhere) with respect to the [product measure](measures.llms.md#def-product-measure) \\\mu_1 \otimes \mu_2\\ (**Tonelli’s theorem**), or
+>
+> 2.  \\\int\_{\Omega_1 \times \Omega_2} \mathopen{}\left\|f\right\|\mathclose{}\\d(\mu_1 \otimes \mu_2) \< \infty\\, that is, \\f\\ is [absolutely integrable](measures.llms.md#def-absolutely-integrable) (**Fubini’s theorem**),
+>
+> then both iterated [integrals](measures.llms.md#def-integral) exist, agree with the double integral, and equal each other:
+>
+> \\ \begin{aligned} \int\_{\Omega_1 \times \Omega_2} f\\d(\mu_1 \otimes \mu_2) &= \int\_{\Omega_1} \mathopen{}\left(\int\_{\Omega_2} f(\omega_1, \omega_2)\\d\mu_2(\omega_2)\right)\mathclose{}\\d\mu_1(\omega_1)\\ &= \int\_{\Omega_2} \mathopen{}\left(\int\_{\Omega_1} f(\omega_1, \omega_2)\\d\mu_1(\omega_1)\right)\mathclose{}\\d\mu_2(\omega_2). \end{aligned} \\
+>
+> ([Billingsley 1995](#ref-billingsley1995probability), Theorem 18.3; [Gut 2013](#ref-gut2013), Theorem 9.1, p. 65; [Fubini 1907](#ref-fubini1907); [Wikipedia contributors 2024](#ref-wp:fubini))
+
+> **NOTE:**
+>
+> *Remark 3* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science*. A [probability measure](measures.llms.md#def-probability-measure) \\P\\ on \\\Omega\\ has \\P(\Omega) = 1 \< \infty\\, so it is [finite](measures.llms.md#def-sigma-finite), and hence \\\sigma\\-finite ([finite and \\\sigma\\-finite measures](measures.llms.md#exm-sigma-finite)); for probability measures, the \\\sigma\\-finiteness condition is automatic.
+>
+> The integrability conditions (nonnegativity or [absolute integrability](measures.llms.md#def-absolutely-integrable)) still need to be verified in each application. For example, [Lebesgue measure](measures.llms.md#def-lebesgue-measure) (ordinary length) on \\\[0, 1\]\\ is a probability measure, so the \\\sigma\\-finiteness condition holds for both factors \\\[0, 1\]\\, yet the two iterated integrals in [Example 38](#exm-fubini-fail) are \\\pi/4\\ and \\-\pi/4\\. So \\\sigma\\-finiteness alone does not make the iterated integrals agree.
+
+> **NOTE:**
+>
+> **Example 40 (Positive application of [Theorem 15](#thm-fubini-tonelli))** Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Exponential}(1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = e^{-(x+y)}\\ for \\x, y \ge 0\\.
+>
+> The probability \\P(X \le 1,\\ Y \le 1)\\ is the integral of \\f\\ over \\\[0, 1\]^2\\ with respect to Lebesgue measure (ordinary length) in each coordinate. Lebesgue measure on \\\[0, \infty)\\ is \\\sigma\\-finite, because \\\[0, \infty)\\ is the union of the intervals \\\[0, n\]\\, \\n \in \mathbb{N}\\, each of finite length \\n\\; so the \\\sigma\\-finiteness condition of [Theorem 15](#thm-fubini-tonelli) holds. Since \\f(x,y) = e^{-(x+y)} \ge 0\\, condition (a) (Tonelli’s theorem, nonnegativity) is also satisfied.
+>
+> By [Theorem 15](#thm-fubini-tonelli), both iterated integrals exist and agree. Integrating \\y\\ first, then \\x\\:
+>
+> \\ \begin{aligned} P(X \le 1,\\ Y \le 1) &= \int_0^1\\\int_0^1 e^{-(x+y)}\\dy\\dx \\&= \int_0^1\\\int_0^1 e^{-x} e^{-y}\\dy\\dx && \text{(exponential of a sum)} \\&= \int_0^1 e^{-x}\mathopen{}\left(\int_0^1 e^{-y}\\dy\right)\mathclose{}\\dx && \text{(} e^{-x} \text{ is constant in } y \text{)} \\&= \int_0^1 e^{-x}\mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_{y=0}^{y=1}\\dx && \text{(antiderivative of } e^{-y} \text{)} \\&= \int_0^1 e^{-x}(1 - e^{-1})\\dx && \text{(evaluate at the limits)} \\&= (1 - e^{-1})\int_0^1 e^{-x}\\dx && \text{(} 1 - e^{-1} \text{ is constant in } x \text{)} \\&= (1 - e^{-1})\mathopen{}\left\[-e^{-x}\right\]\mathclose{}\_{x=0}^{x=1} && \text{(antiderivative of } e^{-x} \text{)} \\&= (1 - e^{-1})^2 && \text{(evaluate at the limits)} \end{aligned} \\
+>
+> Integrating \\x\\ first, then \\y\\:
+>
+> \\ \begin{aligned} P(X \le 1,\\ Y \le 1) &= \int_0^1\\\int_0^1 e^{-(x+y)}\\dx\\dy \\&= \int_0^1\\\int_0^1 e^{-y} e^{-x}\\dx\\dy && \text{(exponential of a sum)} \\&= \int_0^1 e^{-y}\mathopen{}\left(\int_0^1 e^{-x}\\dx\right)\mathclose{}\\dy && \text{(} e^{-y} \text{ is constant in } x \text{)} \\&= \int_0^1 e^{-y}\mathopen{}\left\[-e^{-x}\right\]\mathclose{}\_{x=0}^{x=1}\\dy && \text{(antiderivative of } e^{-x} \text{)} \\&= \int_0^1 e^{-y}(1 - e^{-1})\\dy && \text{(evaluate at the limits)} \\&= (1 - e^{-1})\int_0^1 e^{-y}\\dy && \text{(} 1 - e^{-1} \text{ is constant in } y \text{)} \\&= (1 - e^{-1})\mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_{y=0}^{y=1} && \text{(antiderivative of } e^{-y} \text{)} \\&= (1 - e^{-1})^2 && \text{(evaluate at the limits)} \end{aligned} \\
+>
+> Both iterated integrals equal \\(1 - e^{-1})^2 \approx 0.400\\, as [Theorem 15](#thm-fubini-tonelli) guarantees when condition (a) holds.
+
+> **NOTE:**
+>
+> **Example 41 (When neither Fubini–Tonelli condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 38](#exm-fubini-fail) illustrates a case where neither condition of [Theorem 15](#thm-fubini-tonelli) is satisfied.
+>
+> **Why [Theorem 15](#thm-fubini-tonelli)’s conditions fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates condition (b). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies \\\|f(x, y)\| = \mathopen{}\left\|x^2 - y^2\right\|\mathclose{}/(x^2 + y^2)^2 = \mathopen{}\left\|\cos 2\theta\right\|\mathclose{}/r^2\\, so
+>
+> \\ \begin{aligned} \iint_R \|f\|\\dA &\ge \int_0^{\pi/2}\\\int_0^{\epsilon} \frac{\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}}{r^2}\\ r\\dr\\d\theta\\ &= \mathopen{}\left(\int_0^{\pi/2}\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}\\d\theta\right)\mathclose{} \int_0^{\epsilon} \frac{dr}{r}\\ &= +\infty, \end{aligned} \\
+>
+> since \\\int_0^{\epsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and condition (b) of [Theorem 15](#thm-fubini-tonelli) is not satisfied. (Condition (a) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 38](#exm-fubini-fail) are thus consistent with [Theorem 15](#thm-fubini-tonelli): the theorem simply does not apply.
+>
+> ([Wikipedia contributors 2024](#ref-wp:fubini))
+
 ## 4 Further reading
 
 - Kaplan ([2022](#ref-mosaiccalc))
 - Khuri ([2003](#ref-khuri2003advanced))
 - Banner ([2007](#ref-calclifesaver))
 - Larson and Edwards ([2018](#ref-larsonCalc11e))
-- Miller ([2016](#ref-problifesavercalc)) The calculus review exercises and worked solutions across this page and in [Vector Calculus](vector-calculus.llms.md#sec-exercises-partial-derivatives) are adapted from this supplemental review chapter.
+- Miller ([2016](#ref-problifesavercalc)) The calculus review exercises and worked solutions across this page and in [Vector Calculus](vector-calculus.llms.md#def-partial-derivative) are adapted from this supplemental review chapter.
   - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
   - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - Grinberg ([2017](#ref-realanalysislifesaver)) (the rigorous foundations behind these results)
