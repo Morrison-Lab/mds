@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 01:37:07 (PDT)
+Last modified: 2026-10-07 10:10:55 (PDT)
 
 ## 1 Vectors
 
@@ -4603,13 +4603,15 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Definition 96 (Conjugate transpose)** The **conjugate transpose** of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+> **Definition 96 (Conjugate transpose)** The **conjugate transpose** (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
 >
 > \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
 >
 > The conjugate transpose of a column vector \\\tilde{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\tilde{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
 
-Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231) gives the same definition, writing \\\mathbf{A}^\*\\ for the conjugate transpose. These notes write \\\mathbf{A}^{\mathsf{H}}\\ instead, because \\^\*\\ also marks optimizers, as in \\\tilde{x}^\*\\.
+The operation is denoted variously across mathematics and physics: \\\mathbf{A}^\*\\ in pure mathematics (Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231)), \\\mathbf{A}^{\dagger}\\ (“\\A\\-dagger”) in physics and quantum mechanics, and \\\mathbf{A}^{\mathsf{H}}\\ in engineering, numerical linear algebra, and statistics. These notes write \\\mathbf{A}^{\mathsf{H}}\\ because \\^\*\\ is reserved for optimal points (as in \\\tilde{x}^\*\\) and \\^{\dagger}\\ frequently denotes the Moore-Penrose pseudoinverse ([Definition 85](#def-moore-penrose)).
+
+The Hermitian adjoint matrix should not be confused with the classical *adjugate matrix* (the transpose of the matrix of cofactors), which older texts occasionally referred to as the “adjoint.”
 
 > **NOTE:**
 >
@@ -4625,7 +4627,52 @@ Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231) gives the same def
 
 > **NOTE:**
 >
-> **Theorem 110 (\\\tilde{z}^{\mathsf{H}}\tilde{z}\\ is a sum of squared absolute values)** For every \\\tilde{z} \in \mathbb{C}^p\\,
+> **Theorem 110 (Properties of the Hermitian adjoint)** Let \\\mathbf{A}\\ and \\\mathbf{B}\\ be complex matrices of compatible dimensions, and let \\c \in \mathbb{C}\\ be a scalar. The Hermitian adjoint ([Definition 96](#def-conjugate-transpose)) satisfies:
+>
+> 1.  **Involution**: \\(\mathbf{A}^{\mathsf{H}})^{\mathsf{H}} = \mathbf{A}\\
+> 2.  **Additivity**: \\(\mathbf{A} + \mathbf{B})^{\mathsf{H}} = \mathbf{A}^{\mathsf{H}} + \mathbf{B}^{\mathsf{H}}\\
+> 3.  **Conjugate-homogeneity**: \\(c\\\mathbf{A})^{\mathsf{H}} = \overline{c}\\\mathbf{A}^{\mathsf{H}}\\
+> 4.  **Reversal of products**: \\(\mathbf{A}\mathbf{B})^{\mathsf{H}} = \mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}}\\
+>
+> If \\\mathbf{A}\\ is invertible, then \\\mathbf{A}^{\mathsf{H}}\\ is also invertible, and
+>
+> \\(\mathbf{A}^{\mathsf{H}})^{-1} = (\mathbf{A}^{-1})^{\mathsf{H}}.\\
+
+> **NOTE:**
+>
+> *Proof*. Properties 1-3 follow directly from entrywise conjugation and transposition:
+>
+> - For involution: \\\[(\mathbf{A}^{\mathsf{H}})^{\mathsf{H}}\]\_{jk} = \overline{(\mathbf{A}^{\mathsf{H}})\_{kj}} = \overline{\overline{a\_{jk}}} = a\_{jk}\\.
+> - For additivity: \\\[(\mathbf{A} + \mathbf{B})^{\mathsf{H}}\]\_{jk} = \overline{(\mathbf{A} + \mathbf{B})\_{kj}} = \overline{a\_{kj} + b\_{kj}} = \overline{a\_{kj}} + \overline{b\_{kj}} = (\mathbf{A}^{\mathsf{H}})\_{jk} + (\mathbf{B}^{\mathsf{H}})\_{jk}\\.
+> - For conjugate-homogeneity: \\\[(c\\\mathbf{A})^{\mathsf{H}}\]\_{jk} = \overline{(c\\\mathbf{A})\_{kj}} = \overline{c\\a\_{kj}} = \overline{c}\\\overline{a\_{kj}} = \overline{c}\\(\mathbf{A}^{\mathsf{H}})\_{jk}\\. Unlike the real transpose where \\{(c\\\mathbf{A})}^{\top} = c\\{\mathbf{A}}^{\top}\\, scaling conjugates the scalar.
+>
+> For property 4 (reversal of products), let \\\mathbf{A}\\ be an \\m \times k\\ matrix and \\\mathbf{B}\\ a \\k \times n\\ matrix. Entry \\(i, j)\\ of the product’s Hermitian adjoint (for \\i \in \\1, \ldots, n\\\\ and \\j \in \\1, \ldots, m\\\\) is:
+>
+> \\ \begin{aligned} \[(\mathbf{A}\mathbf{B})^{\mathsf{H}}\]\_{ij} &= \overline{(\mathbf{A}\mathbf{B})\_{ji}} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~96}}\text{)} \\ &= \overline{\sum\_{s=1}^k a\_{js}\\b\_{si}} && \text{(definition of matrix multiplication)} \\ &= \sum\_{s=1}^k \overline{a\_{js}}\\\overline{b\_{si}} && \text{(conjugate of sums and products)} \\ &= \sum\_{s=1}^k \overline{b\_{si}}\\\overline{a\_{js}} && \text{(complex multiplication is commutative)} \\ &= \sum\_{s=1}^k (\mathbf{B}^{\mathsf{H}})\_{is}\\(\mathbf{A}^{\mathsf{H}})\_{sj} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~96}}\text{)} \\ &= (\mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\_{ij} && \text{(definition of matrix multiplication)}. \end{aligned} \\
+>
+> For the inverse, applying property 4 to \\\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}\\ gives:
+>
+> \\(\mathbf{A}^{-1})^{\mathsf{H}}\mathbf{A}^{\mathsf{H}} = (\mathbf{A}\mathbf{A}^{-1})^{\mathsf{H}} = \mathbf{I}^{\mathsf{H}} = \mathbf{I},\\
+>
+> so \\(\mathbf{A}^{\mathsf{H}})^{-1} = (\mathbf{A}^{-1})^{\mathsf{H}}\\.
+
+> **NOTE:**
+>
+> **Theorem 111 (The adjoint property for inner products)** Let \\\mathbf{A}\\ be an \\m \times n\\ complex matrix. Under the standard inner product on complex Euclidean space, \\\left\langle \tilde{u}, \tilde{v} \right\rangle \stackrel{\text{def}}{=}\tilde{u}^{\mathsf{H}}\tilde{v}\\,
+>
+> \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v} \right\rangle \quad \text{for all } \tilde{u} \in \mathbb{C}^n \text{ and } \tilde{v} \in \mathbb{C}^m.\\
+
+> **NOTE:**
+>
+> *Proof*. By the definition of the standard complex inner product and the product rule for the Hermitian adjoint ([Theorem 110](#thm-hermitian-adjoint-properties)):
+>
+> \\ \begin{aligned} \left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle &= (\mathbf{A}\tilde{u})^{\mathsf{H}}\tilde{v} && \text{(definition of standard inner product)} \\ &= (\tilde{u}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\tilde{v} && \text{(}\href{#thm-hermitian-adjoint-properties}{\text{Theorem~110}}\text{, reversal of products)} \\ &= \tilde{u}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\tilde{v}) && \text{(associativity of matrix multiplication)} \\ &= \left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v} \right\rangle && \text{(definition of standard inner product)}. \end{aligned} \\
+
+This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\left\langle T\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, T^\*\tilde{v} \right\rangle\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
+
+> **NOTE:**
+>
+> **Theorem 112 (\\\tilde{z}^{\mathsf{H}}\tilde{z}\\ is a sum of squared absolute values)** For every \\\tilde{z} \in \mathbb{C}^p\\,
 >
 > \\\underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times p}\\\underbrace{\tilde{z}}\_{p \times 1} = \sum\_{j=1}^{p} \mathopen{}\left\|z_j\right\|\mathclose{}^2,\\
 >
@@ -4641,9 +4688,9 @@ Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231) gives the same def
 
 > **NOTE:**
 >
-> **Example 194 (Computing \\\tilde{z}^{\mathsf{H}}\tilde{z}\\)** Let \\\tilde{z} = {(1 + i, 2)}^{\top}\\. By [Theorem 110](#thm-zhz-sum-squares),
+> **Example 194 (Computing \\\tilde{z}^{\mathsf{H}}\tilde{z}\\)** Let \\\tilde{z} = {(1 + i, 2)}^{\top}\\. By [Theorem 112](#thm-zhz-sum-squares),
 >
-> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \mathopen{}\left\|1 + i\right\|\mathclose{}^2 + \mathopen{}\left\|2\right\|\mathclose{}^2 && \text{(}\href{#thm-zhz-sum-squares}{\text{Theorem~110}}\text{)} \\ &= (1^2 + 1^2) + (2^2 + 0^2) && \text{(definition of the absolute value, squared)} \\ &= 2 + 4 && \text{(add inside each group)} \\ &= 6 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \mathopen{}\left\|1 + i\right\|\mathclose{}^2 + \mathopen{}\left\|2\right\|\mathclose{}^2 && \text{(}\href{#thm-zhz-sum-squares}{\text{Theorem~112}}\text{)} \\ &= (1^2 + 1^2) + (2^2 + 0^2) && \text{(definition of the absolute value, squared)} \\ &= 2 + 4 && \text{(add inside each group)} \\ &= 6 && \text{(add)} \end{aligned} \\
 >
 > Multiplying out directly gives the same number: \\\overline{2} \cdot 2 = 4\\, and
 >
@@ -4659,13 +4706,21 @@ Axler ([2024](#ref-axler2024linear), Definition 7.7, p. 231) gives the same def
 >
 > \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \overline{1} \cdot 1 + \overline{i} \cdot i && \text{(}\href{#def-conjugate-transpose}{\text{Definition~96}}\text{)} \\ &= 1 + (-i) \cdot i && \text{(conjugate each entry)} \\ &= 1 - i^2 && \text{(multiply)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
 >
-> which is positive, as [Theorem 110](#thm-zhz-sum-squares) guarantees.
+> which is positive, as [Theorem 112](#thm-zhz-sum-squares) guarantees.
 
 > **NOTE:**
 >
-> **Definition 97 (Hermitian matrix)** A square complex matrix \\\mathbf{A}\\ is **Hermitian** if it equals its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
+> **Definition 97 (Hermitian matrix)** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** (or **self-adjoint**) if it equals its conjugate transpose ([Definition 96](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
+>
+> A square complex matrix \\\mathbf{A}\\ is **skew-Hermitian** (or **anti-Hermitian**) if \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}\\.
+
+The term *self-adjoint* comes directly from [Theorem 111](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}\tilde{v} \right\rangle\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
+
+Every real symmetric matrix is Hermitian, because for real matrices \\\mathbf{A}^{\mathsf{H}} = {\mathbf{A}}^{\top}\\. Just as any real square matrix can be uniquely split into a symmetric part and a skew-symmetric part, every complex square matrix \\\mathbf{A}\\ can be uniquely written as the sum of a Hermitian matrix and a skew-Hermitian matrix:
+
+\\\mathbf{A} = \underbrace{\frac{\mathbf{A} + \mathbf{A}^{\mathsf{H}}}{2}}\_{\text{Hermitian}} + \underbrace{\frac{\mathbf{A} - \mathbf{A}^{\mathsf{H}}}{2}}\_{\text{skew-Hermitian}}.\\
 
 > **NOTE:**
 >
