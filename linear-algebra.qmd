@@ -29,6 +29,8 @@ format:
   it lists results on determinants, inverses, decompositions,
   and [derivatives](calculus.qmd#def-derivative) of vectors and matrices,
   so it is a quick place to look up a formula this page proves.
+- [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+  is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.
 
 ## References {.unnumbered}
 
