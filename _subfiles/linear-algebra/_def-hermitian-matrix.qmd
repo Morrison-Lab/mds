@@ -1,8 +1,16 @@
 :::{#def-hermitian-matrix}
 #### Hermitian matrix
 
-A square complex matrix $\matr{A}$ is **Hermitian** if it equals its conjugate transpose (@def-conjugate-transpose):
+A square complex matrix $\matr{A} \in \mathbb{C}^{n \times n}$ is **Hermitian**
+(or **self-adjoint**)
+if it equals its conjugate transpose (@def-conjugate-transpose):
 
 $$\matr{A}^{\mathsf{H}} = \matr{A}.$$
 
+:::
+
+::: notes
+The term *self-adjoint* comes directly from @thm-adjoint-inner-product:
+when $\matr{A}$ is Hermitian, $\iprod{\matr{A}\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{\matr{A}\vecf{v}}$ for all $\vecf{u}, \vecf{v} \in \mathbb{C}^n$.
+The linear operator moves across the inner product without change.
 :::

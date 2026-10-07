@@ -1,0 +1,65 @@
+:::{#thm-hermitian-adjoint-properties}
+#### Properties of the Hermitian adjoint
+
+Let $\matr{A}$ and $\matr{B}$ be complex matrices of compatible dimensions,
+and let $c \in \mathbb{C}$ be a scalar.
+The Hermitian adjoint (@def-conjugate-transpose) satisfies:
+
+1. **Involution**:
+   $$(\matr{A}^{\mathsf{H}})^{\mathsf{H}} = \matr{A}$$
+2. **Additivity**:
+   $$(\matr{A} + \matr{B})^{\mathsf{H}} = \matr{A}^{\mathsf{H}} + \matr{B}^{\mathsf{H}}$$
+3. **Conjugate-homogeneity**:
+   $$(c\,\matr{A})^{\mathsf{H}} = \overline{c}\,\matr{A}^{\mathsf{H}}$$
+4. **Reversal of products**:
+   $$(\matr{A}\matr{B})^{\mathsf{H}} = \matr{B}^{\mathsf{H}}\matr{A}^{\mathsf{H}}$$
+
+If $\matr{A}$ is invertible, then $\matr{A}^{\mathsf{H}}$ is also invertible, and
+
+$$(\matr{A}^{\mathsf{H}})^{-1} = (\matr{A}^{-1})^{\mathsf{H}}.$$
+
+:::
+
+{{< slidebreak >}}
+
+::: proof
+
+Properties 1-3 follow directly from entrywise conjugation and transposition:
+
+- For involution: $[(\matr{A}^{\mathsf{H}})^{\mathsf{H}}]_{jk} = \overline{(\matr{A}^{\mathsf{H}})_{kj}} = \overline{\overline{a_{jk}}} = a_{jk}$.
+- For additivity: $[(\matr{A} + \matr{B})^{\mathsf{H}}]_{jk} = \overline{(\matr{A} + \matr{B})_{kj}} = \overline{a_{kj} + b_{kj}} = \overline{a_{kj}} + \overline{b_{kj}} = (\matr{A}^{\mathsf{H}})_{jk} + (\matr{B}^{\mathsf{H}})_{jk}$.
+- For conjugate-homogeneity: $[(c\,\matr{A})^{\mathsf{H}}]_{jk} = \overline{(c\,\matr{A})_{kj}} = \overline{c\,a_{kj}} = \overline{c}\,\overline{a_{kj}} = \overline{c}\,(\matr{A}^{\mathsf{H}})_{jk}$. Unlike the real transpose where $\tp{(c\,\matr{A})} = c\,\tp{\matr{A}}$, scaling conjugates the scalar.
+
+For property 4 (reversal of products), let $\matr{A}$ be an $m \times k$ matrix and $\matr{B}$ a $k \times n$ matrix.
+Entry $(i, j)$ of the product's Hermitian adjoint (for $i \in \{1, \ldots, n\}$ and $j \in \{1, \ldots, m\}$) is:
+
+$$
+\ba
+[(\matr{A}\matr{B})^{\mathsf{H}}]_{ij}
+&= \overline{(\matr{A}\matr{B})_{ji}}
+&& \text{(@def-conjugate-transpose)}
+\\
+&= \overline{\sum_{s=1}^k a_{js}\,b_{si}}
+&& \text{(definition of matrix multiplication)}
+\\
+&= \sum_{s=1}^k \overline{a_{js}}\,\overline{b_{si}}
+&& \text{(conjugate of sums and products)}
+\\
+&= \sum_{s=1}^k \overline{b_{si}}\,\overline{a_{js}}
+&& \text{(complex multiplication is commutative)}
+\\
+&= \sum_{s=1}^k (\matr{B}^{\mathsf{H}})_{is}\,(\matr{A}^{\mathsf{H}})_{sj}
+&& \text{(@def-conjugate-transpose)}
+\\
+&= (\matr{B}^{\mathsf{H}}\matr{A}^{\mathsf{H}})_{ij}
+&& \text{(definition of matrix multiplication)}.
+\ea
+$$
+
+For the inverse, applying property 4 to $\matr{A}\matr{A}^{-1} = \matr{I}$ gives:
+
+$$(\matr{A}^{-1})^{\mathsf{H}}\matr{A}^{\mathsf{H}} = (\matr{A}\matr{A}^{-1})^{\mathsf{H}} = \matr{I}^{\mathsf{H}} = \matr{I},$$
+
+so $(\matr{A}^{\mathsf{H}})^{-1} = (\matr{A}^{-1})^{\mathsf{H}}$.
+
+:::
