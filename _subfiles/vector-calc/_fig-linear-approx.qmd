@@ -1,3 +1,5 @@
+::: {#fig-linear-approx}
+
 ::: {.content-visible when-format="html"}
 
 ```{ojs}
@@ -8,8 +10,6 @@ tanDf = (w) => 2 * w - 4
 tanPred = tanF(tanW) + tanEps * tanDf(tanW)
 tanExact = tanF(tanW + tanEps)
 ```
-
-::: {#fig-linear-approx}
 
 ::: {.columns .widget-panel style="display:flex;
 gap:1rem;
@@ -73,12 +73,12 @@ the red segment is the error of the prediction.
 
 :::
 
+:::
+
+::: {.content-visible unless-format="html"}
+*(This plot is interactive; see the HTML or slide version of this page to view it.)*
+:::
+
 The linear approximation @eq-linear-approx for $f(w) = w^2 - 4w + 7$, at any $w$ and step $\epsilon$.
 
-:::
-
-:::
-
-::: {.content-visible when-format="pdf"}
-The course website's version of this page has an interactive plot here.
 :::
