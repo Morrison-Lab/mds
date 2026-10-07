@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-06 23:53:02 (PDT)</p>
+  <p class="date">Last modified: 2026-10-07 00:16:16 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -410,6 +410,73 @@
 \end{aligned}
 \]</span></p>
 <p>which tends to <span class="math inline">\(4\)</span> as <span class="math inline">\(h \to 0\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_1} f(1, 2) = 4\)</span>. Holding <span class="math inline">\(x_2\)</span> fixed and differentiating in <span class="math inline">\(x_1\)</span> gives the same answer: <span class="math inline">\(\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\)</span>, which is <span class="math inline">\(2 \cdot 1 \cdot 2 = 4\)</span> at <span class="math inline">\({(1, 2)}^{\top}\)</span>. Holding <span class="math inline">\(x_1\)</span> fixed instead gives <span class="math inline">\(\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\)</span>, which is <span class="math inline">\(1 + 3 = 4\)</span> at <span class="math inline">\({(1, 2)}^{\top}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-miller-pderiv-basic" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 (First-order partial derivatives)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.42.</p>
+<p>Let <span class="math inline">\(f(x, y) = x^2 y + e^x + \sin(xy)\)</span>. Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>.</p>
+</div>
+<div id="sol-miller-pderiv-basic" class="proof solution">
+<p><span class="proof-title"><em>Solution 1</em>. </span>To compute <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>, treat <span class="math inline">\(y\)</span> as a constant:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial x} = 2xy + e^x + y\cos(xy)\]</span></p>
+<p>To compute <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>, treat <span class="math inline">\(x\)</span> as a constant:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-miller-pderiv-normal-parameters" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 (Partial derivatives of the normal density with respect to parameters)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.43.</p>
+<p>Let</p>
+<p><span class="math display">\[f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{}\]</span></p>
+<p>Find <span class="math inline">\(\frac{\partial f}{\partial \mu}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma}\)</span>.</p>
+</div>
+<div id="sol-miller-pderiv-normal-parameters" class="proof solution">
+<p><span class="proof-title"><em>Solution 2</em>. </span><strong>1. Derivative with respect to <span class="math inline">\(\mu\)</span>:</strong> Treat <span class="math inline">\(\sigma\)</span> as constant. Differentiating the exponential factor via the chain rule:</p>
+<p><span class="math display">\[\begin{aligned}
+\frac{\partial f}{\partial \mu} &amp;= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{} \cdot\mathopen{}\left[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right]\mathclose{}
+\\
+&amp;= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma)
+\end{aligned}\]</span></p>
+<p><strong>2. Derivative with respect to <span class="math inline">\(\sigma\)</span>:</strong> Write <span class="math inline">\(f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{}\)</span> and apply the product rule:</p>
+<p><span class="math display">\[\begin{aligned}
+\frac{\partial f}{\partial \sigma} &amp;= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{} \cdot\mathopen{}\left[\frac{(x - \mu)^2}{\sigma^3}\right]\mathclose{}
+\\
+&amp;= \mathopen{}\left[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right]\mathclose{} f(x; \mu, \sigma)
+\end{aligned}\]</span></p>
+<p><em>Remark:</em> Setting <span class="math inline">\(\frac{\partial f}{\partial \mu} = 0\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma} = 0\)</span> for a sample of independent observations leads directly to the maximum likelihood estimators <span class="math inline">\(\hat{\mu} = \bar{x}\)</span> and <span class="math inline">\(\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-miller-pderiv-exp-quadratic" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3 (Partial derivatives with exponential of quadratic form)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.44.</p>
+<p>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
+<p><span class="math display">\[f(x, y) = x\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
+</div>
+<div id="sol-miller-pderiv-exp-quadratic" class="proof solution">
+<p><span class="proof-title"><em>Solution 3</em>. </span>With respect to <span class="math inline">\(x\)</span>, apply the product rule:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{} + x \cdot\mathopen{}\left[2x\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\right]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
+<p>With respect to <span class="math inline">\(y\)</span>, treat <span class="math inline">\(x\)</span> as constant:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial y} = x \cdot\mathopen{}\left[2y\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\right]\mathclose{} = 2xy\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-miller-pderiv-symmetric" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4 (Using symmetry to compute partial derivatives)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.45.</p>
+<p>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
+<p><span class="math display">\[f(x, y) = e^{xy} - \log(x^2 + y^2)\]</span></p>
+<p>on <span class="math inline">\(\mathbb{R}^2 \setminus \{(0, 0)\}\)</span>.</p>
+</div>
+<div id="sol-miller-pderiv-symmetric" class="proof solution">
+<p><span class="proof-title"><em>Solution 4</em>. </span>Holding <span class="math inline">\(y\)</span> constant, differentiate with respect to <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial x} = ye^{xy} - \frac{2x}{x^2 + y^2}\]</span></p>
+<p>Notice that the function is symmetric in <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math inline">\(f(x, y) = f(y, x)\)</span>. Interchanging <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> gives <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> immediately:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial y} = xe^{xy} - \frac{2y}{x^2 + y^2}\]</span></p>
+<p><em>Remark:</em> Recognizing symmetry in multi-variable functions eliminates redundant calculations.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -481,96 +548,6 @@
 </div>
 </div>
 </div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="sec-exercises-partial-derivatives">Exercises: Partial derivatives</h3>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Source and attribution</strong></p>
-</div>
-<div class="callout-content">
-<p>The exercises and solutions in this section are adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span> (Steven J. Miller, <em>The Probability Lifesaver: Calculus Review Problems</em>, 2016).</p>
-</div>
-</div>
-</div>
-<div id="exr-miller-pderiv-basic" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (First-order partial derivatives)</strong></span> Let <span class="math inline">\(f(x, y) = x^2 y + e^x + \sin(xy)\)</span>. Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>.</p>
-</div>
-<div id="sol-miller-pderiv-basic" class="proof solution">
-<p><span class="proof-title"><em>Solution 1</em>. </span>To compute <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>, treat <span class="math inline">\(y\)</span> as a constant:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial x} = 2xy + e^x + y\cos(xy)\]</span></p>
-<p>To compute <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>, treat <span class="math inline">\(x\)</span> as a constant:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)\]</span></p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-miller-pderiv-normal-parameters" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (Partial derivatives of the normal density with respect to parameters)</strong></span> Let</p>
-<p><span class="math display">\[f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{}\]</span></p>
-<p>Find <span class="math inline">\(\frac{\partial f}{\partial \mu}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma}\)</span>.</p>
-</div>
-<div id="sol-miller-pderiv-normal-parameters" class="proof solution">
-<p><span class="proof-title"><em>Solution 2</em>. </span><strong>1. Derivative with respect to <span class="math inline">\(\mu\)</span>:</strong> Treat <span class="math inline">\(\sigma\)</span> as constant. Differentiating the exponential factor via the chain rule:</p>
-<p><span class="math display">\[\begin{aligned}
-\frac{\partial f}{\partial \mu} &amp;= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{} \cdot\mathopen{}\left[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right]\mathclose{}
-\\
-&amp;= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma)
-\end{aligned}\]</span></p>
-<p><strong>2. Derivative with respect to <span class="math inline">\(\sigma\)</span>:</strong> Write <span class="math inline">\(f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{}\)</span> and apply the product rule:</p>
-<p><span class="math display">\[\begin{aligned}
-\frac{\partial f}{\partial \sigma} &amp;= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\{-\frac{(x - \mu)^2}{2\sigma^2}\right\}\mathclose{} \cdot\mathopen{}\left[\frac{(x - \mu)^2}{\sigma^3}\right]\mathclose{}
-\\
-&amp;= \mathopen{}\left[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right]\mathclose{} f(x; \mu, \sigma)
-\end{aligned}\]</span></p>
-<p><em>Remark:</em> Setting <span class="math inline">\(\frac{\partial f}{\partial \mu} = 0\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma} = 0\)</span> for a sample of independent observations leads directly to the maximum likelihood estimators <span class="math inline">\(\hat{\mu} = \bar{x}\)</span> and <span class="math inline">\(\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2\)</span>.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-miller-pderiv-exp-quadratic" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Partial derivatives with exponential of quadratic form)</strong></span> Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
-<p><span class="math display">\[f(x, y) = x\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
-</div>
-<div id="sol-miller-pderiv-exp-quadratic" class="proof solution">
-<p><span class="proof-title"><em>Solution 3</em>. </span>With respect to <span class="math inline">\(x\)</span>, apply the product rule:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{} + x \cdot\mathopen{}\left[2x\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\right]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
-<p>With respect to <span class="math inline">\(y\)</span>, treat <span class="math inline">\(x\)</span> as constant:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial y} = x \cdot\mathopen{}\left[2y\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\right]\mathclose{} = 2xy\operatorname{exp}\mathopen{}\left\{x^2 + y^2\right\}\mathclose{}\]</span></p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-miller-pderiv-symmetric" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Using symmetry to compute partial derivatives)</strong></span> Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
-<p><span class="math display">\[f(x, y) = e^{xy} - \log(x^2 + y^2)\]</span></p>
-<p>on <span class="math inline">\(\mathbb{R}^2 \setminus \{(0, 0)\}\)</span>.</p>
-</div>
-<div id="sol-miller-pderiv-symmetric" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span>Holding <span class="math inline">\(y\)</span> constant, differentiate with respect to <span class="math inline">\(x\)</span>:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial x} = ye^{xy} - \frac{2x}{x^2 + y^2}\]</span></p>
-<p>Notice that the function is symmetric in <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math inline">\(f(x, y) = f(y, x)\)</span>. Interchanging <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> gives <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> immediately:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial y} = xe^{xy} - \frac{2y}{x^2 + y^2}\]</span></p>
-<p><em>Remark:</em> Recognizing symmetry in multi-variable functions eliminates redundant calculations.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="exr-miller-pderiv-independent-variable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5 (Partial derivative with respect to an unreferenced variable)</strong></span> Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
-<p><span class="math display">\[f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\]</span></p>
-</div>
-<div id="sol-miller-pderiv-independent-variable" class="proof solution">
-<p><span class="proof-title"><em>Solution 5</em>. </span>Although the function is declared as a function of three variables <span class="math inline">\((x, y, t)\)</span>, its expression depends solely on <span class="math inline">\(t\)</span>.</p>
-<p>Because neither <span class="math inline">\(x\)</span> nor <span class="math inline">\(y\)</span> appears in the formula, <span class="math inline">\(f\)</span> is constant with respect to both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
-<p><span class="math display">\[\frac{\partial f}{\partial x} = 0, \qquad \frac{\partial f}{\partial y} = 0\]</span></p>
-<p><em>Remark:</em> Always verify which variables actually appear in a formula before performing lengthy algebraic differentiation.</p>
 </div>
 </section>
 <section id="sec-gradient-shape" class="slide level2" data-number="1">
@@ -855,7 +832,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <section class="slide level2 scrollable">
 
 <div id="exr-partials-by-hand" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 6 (Take a gradient by hand)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span> be</p>
+<p><span class="theorem-title"><strong>Exercise 5 (Take a gradient by hand)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^2 \to \mathbb{R}\)</span> be</p>
 <p><span class="math display">\[f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\]</span></p>
 <ol type="1">
 <li>Compute <span class="math inline">\(\partial f / \partial w_1\)</span> (<a href="#/def-partial-derivative" class="quarto-xref">Definition&nbsp;1</a>), treating <span class="math inline">\(w_2\)</span> as a constant.</li>
@@ -865,7 +842,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 </ol>
 </div>
 <div id="sol-partials-by-hand" class="proof solution">
-<p><span class="proof-title"><em>Solution 6</em>. </span><strong>1.</strong> Differentiate with respect to <span class="math inline">\(w_1\)</span>, holding <span class="math inline">\(w_2\)</span> fixed. The first term is the constant <span class="math inline">\(3w_2\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(3w_2\)</span>. The second term has no <span class="math inline">\(w_1\)</span> in it, so it contributes <span class="math inline">\(0\)</span>. The third term is <span class="math inline">\(-5\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(-5\)</span>:</p>
+<p><span class="proof-title"><em>Solution 5</em>. </span><strong>1.</strong> Differentiate with respect to <span class="math inline">\(w_1\)</span>, holding <span class="math inline">\(w_2\)</span> fixed. The first term is the constant <span class="math inline">\(3w_2\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(3w_2\)</span>. The second term has no <span class="math inline">\(w_1\)</span> in it, so it contributes <span class="math inline">\(0\)</span>. The third term is <span class="math inline">\(-5\)</span> times <span class="math inline">\(w_1\)</span>, so it contributes <span class="math inline">\(-5\)</span>:</p>
 <p><span class="math display">\[\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\]</span></p>
 <p><strong>2.</strong> Now with respect to <span class="math inline">\(w_2\)</span>, holding <span class="math inline">\(w_1\)</span> fixed. The first term is the constant <span class="math inline">\(3w_1\)</span> times <span class="math inline">\(w_2\)</span>, contributing <span class="math inline">\(3w_1\)</span>. The second term contributes <span class="math inline">\(3w_2^2\)</span>. The third has no <span class="math inline">\(w_2\)</span> in it, contributing <span class="math inline">\(0\)</span>:</p>
 <p><span class="math display">\[\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2\]</span></p>
@@ -1039,6 +1016,20 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 \end{bmatrix},
 \]</span></p>
 <p>which is not <span class="math inline">\(\underbrace{\mathbf{0}}_{2 \times 2}\)</span>, so this <span class="math inline">\(\tilde{x}\)</span> is not constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>: its first entry changes when <span class="math inline">\(\beta_1\)</span> does.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exr-miller-pderiv-independent-variable" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6 (Partial derivative with respect to an unreferenced variable)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.46.</p>
+<p>Find <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> for</p>
+<p><span class="math display">\[f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\]</span></p>
+</div>
+<div id="sol-miller-pderiv-independent-variable" class="proof solution">
+<p><span class="proof-title"><em>Solution 6</em>. </span>Although the function is declared as a function of three variables <span class="math inline">\((x, y, t)\)</span>, its expression depends solely on <span class="math inline">\(t\)</span>.</p>
+<p>Because neither <span class="math inline">\(x\)</span> nor <span class="math inline">\(y\)</span> appears in the formula, <span class="math inline">\(f\)</span> is constant with respect to both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[\frac{\partial f}{\partial x} = 0, \qquad \frac{\partial f}{\partial y} = 0\]</span></p>
+<p><em>Remark:</em> Always verify which variables actually appear in a formula before performing lengthy algebraic differentiation.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -3417,6 +3408,7 @@ f(\tilde{x}^{(t)}) = \tfrac{1}{2} (b^2 + b)\,r^{2t} = r^{2t} f(\tilde{x}^{(0)}).
 <ul>
 <li><span class="citation" data-cites="marsden2013vector">Marsden and Tromba (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.</li>
 <li><span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span> is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.</li>
+<li><span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span> The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.</li>
 </ul>
 <p>See also the <a href="./linear-algebra.html#sec-additional-resources">Linear Algebra and Vector Calculus further reading</a>.</p>
 <ul>

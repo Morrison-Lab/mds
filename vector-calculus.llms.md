@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 23:53:02 (PDT)
+Last modified: 2026-10-07 00:16:16 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -37,6 +37,84 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > \\ \begin{aligned} \frac{f(1 + h, 2) - f(1, 2)}{h} &= \frac{(1 + h)^2 \cdot 2 + 6 - 8}{h} && \text{(substitute into } f \text{)} \\ &= \frac{(1 + h)^2 \cdot 2 - 2}{h} && \text{(} 6 - 8 = -2 \text{)} \\ &= \frac{(1 + 2h + h^2) \cdot 2 - 2}{h} && \text{(expand } (1 + h)^2 \text{)} \\ &= \frac{2 + 4h + 2h^2 - 2}{h} && \text{(distributive law)} \\ &= \frac{4h + 2h^2 + 2 - 2}{h} && \text{(reorder the terms)} \\ &= \frac{4h + 2h^2}{h} && \text{(} 2 - 2 = 0 \text{)} \\ &= 4 + 2h, && \text{(divide by } h \ne 0 \text{)} \end{aligned} \\
 >
 > which tends to \\4\\ as \\h \to 0\\, so \\\frac{\partial}{\partial x_1} f(1, 2) = 4\\. Holding \\x_2\\ fixed and differentiating in \\x_1\\ gives the same answer: \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\, which is \\2 \cdot 1 \cdot 2 = 4\\ at \\{(1, 2)}^{\top}\\. Holding \\x_1\\ fixed instead gives \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\, which is \\1 + 3 = 4\\ at \\{(1, 2)}^{\top}\\.
+
+> **NOTE:**
+>
+> **Exercise 1 (First-order partial derivatives)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.42.
+>
+> Let \\f(x, y) = x^2 y + e^x + \sin(xy)\\. Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\.
+
+> **NOTE:**
+>
+> *Solution 1*. To compute \\\frac{\partial f}{\partial x}\\, treat \\y\\ as a constant:
+>
+> \\\frac{\partial f}{\partial x} = 2xy + e^x + y\cos(xy)\\
+>
+> To compute \\\frac{\partial f}{\partial y}\\, treat \\x\\ as a constant:
+>
+> \\\frac{\partial f}{\partial y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)\\
+
+> **NOTE:**
+>
+> **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.43.
+>
+> Let
+>
+> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
+>
+> Find \\\frac{\partial f}{\partial \mu}\\ and \\\frac{\partial f}{\partial \sigma}\\.
+
+> **NOTE:**
+>
+> *Solution 2*. **1. Derivative with respect to \\\mu\\:** Treat \\\sigma\\ as constant. Differentiating the exponential factor via the chain rule:
+>
+> \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
+>
+> **2. Derivative with respect to \\\sigma\\:** Write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\ and apply the product rule:
+>
+> \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
+>
+> *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the maximum likelihood estimators \\\hat{\mu} = \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n (x_i - \bar{x})^2\\.
+
+> **NOTE:**
+>
+> **Exercise 3 (Partial derivatives with exponential of quadratic form)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.44.
+>
+> Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+>
+> \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> *Solution 3*. With respect to \\x\\, apply the product rule:
+>
+> \\\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
+>
+> With respect to \\y\\, treat \\x\\ as constant:
+>
+> \\\frac{\partial f}{\partial y} = x \cdot\mathopen{}\left\[2y\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = 2xy\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> **Exercise 4 (Using symmetry to compute partial derivatives)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.45.
+>
+> Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+>
+> \\f(x, y) = e^{xy} - \log(x^2 + y^2)\\
+>
+> on \\\mathbb{R}^2 \setminus \\(0, 0)\\\\.
+
+> **NOTE:**
+>
+> *Solution 4*. Holding \\y\\ constant, differentiate with respect to \\x\\:
+>
+> \\\frac{\partial f}{\partial x} = ye^{xy} - \frac{2x}{x^2 + y^2}\\
+>
+> Notice that the function is symmetric in \\x\\ and \\y\\: \\f(x, y) = f(y, x)\\. Interchanging \\x\\ and \\y\\ gives \\\frac{\partial f}{\partial y}\\ immediately:
+>
+> \\\frac{\partial f}{\partial y} = xe^{xy} - \frac{2y}{x^2 + y^2}\\
+>
+> *Remark:* Recognizing symmetry in multi-variable functions eliminates redundant calculations.
 
 > **NOTE:**
 >
@@ -67,98 +145,6 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > - [Advanced Partial Derivatives](https://www.youtube.com/watch?v=0YzXHf-u5zU&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Advanced Partial-Derivative Exercises](https://www.youtube.com/watch?v=WFmUDiABfUI&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Partial Derivative Notation](https://www.youtube.com/watch?v=kIKVHguEpvA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
-
-### 0.1 Exercises: Partial derivatives
-
-> **NOTE:**
->
-> The exercises and solutions in this section are adapted from Miller ([2016](#ref-problifesavercalc)) (Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
-
-> **NOTE:**
->
-> **Exercise 1 (First-order partial derivatives)** Let \\f(x, y) = x^2 y + e^x + \sin(xy)\\. Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\.
-
-> **NOTE:**
->
-> *Solution 1*. To compute \\\frac{\partial f}{\partial x}\\, treat \\y\\ as a constant:
->
-> \\\frac{\partial f}{\partial x} = 2xy + e^x + y\cos(xy)\\
->
-> To compute \\\frac{\partial f}{\partial y}\\, treat \\x\\ as a constant:
->
-> \\\frac{\partial f}{\partial y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)\\
-
-> **NOTE:**
->
-> **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Let
->
-> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
->
-> Find \\\frac{\partial f}{\partial \mu}\\ and \\\frac{\partial f}{\partial \sigma}\\.
-
-> **NOTE:**
->
-> *Solution 2*. **1. Derivative with respect to \\\mu\\:** Treat \\\sigma\\ as constant. Differentiating the exponential factor via the chain rule:
->
-> \\\begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} \\ &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \end{aligned}\\
->
-> **2. Derivative with respect to \\\sigma\\:** Write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\ and apply the product rule:
->
-> \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
->
-> *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the maximum likelihood estimators \\\hat{\mu} = \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n (x_i - \bar{x})^2\\.
-
-> **NOTE:**
->
-> **Exercise 3 (Partial derivatives with exponential of quadratic form)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
->
-> \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
-
-> **NOTE:**
->
-> *Solution 3*. With respect to \\x\\, apply the product rule:
->
-> \\\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
->
-> With respect to \\y\\, treat \\x\\ as constant:
->
-> \\\frac{\partial f}{\partial y} = x \cdot\mathopen{}\left\[2y\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = 2xy\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
-
-> **NOTE:**
->
-> **Exercise 4 (Using symmetry to compute partial derivatives)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
->
-> \\f(x, y) = e^{xy} - \log(x^2 + y^2)\\
->
-> on \\\mathbb{R}^2 \setminus \\(0, 0)\\\\.
-
-> **NOTE:**
->
-> *Solution 4*. Holding \\y\\ constant, differentiate with respect to \\x\\:
->
-> \\\frac{\partial f}{\partial x} = ye^{xy} - \frac{2x}{x^2 + y^2}\\
->
-> Notice that the function is symmetric in \\x\\ and \\y\\: \\f(x, y) = f(y, x)\\. Interchanging \\x\\ and \\y\\ gives \\\frac{\partial f}{\partial y}\\ immediately:
->
-> \\\frac{\partial f}{\partial y} = xe^{xy} - \frac{2y}{x^2 + y^2}\\
->
-> *Remark:* Recognizing symmetry in multi-variable functions eliminates redundant calculations.
-
-> **NOTE:**
->
-> **Exercise 5 (Partial derivative with respect to an unreferenced variable)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
->
-> \\f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\\
-
-> **NOTE:**
->
-> *Solution 5*. Although the function is declared as a function of three variables \\(x, y, t)\\, its expression depends solely on \\t\\.
->
-> Because neither \\x\\ nor \\y\\ appears in the formula, \\f\\ is constant with respect to both \\x\\ and \\y\\:
->
-> \\\frac{\partial f}{\partial x} = 0, \qquad \frac{\partial f}{\partial y} = 0\\
->
-> *Remark:* Always verify which variables actually appear in a formula before performing lengthy algebraic differentiation.
 
 ## 1 Checking a gradient by its shape
 
@@ -299,7 +285,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Exercise 6 (Take a gradient by hand)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
+> **Exercise 5 (Take a gradient by hand)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
 >
 > \\f(\tilde{w}) = 3 w_1 w_2 + w_2^3 - 5 w_1\\
 >
@@ -310,7 +296,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Solution 6*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
+> *Solution 5*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
 >
 > \\\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\\
 >
@@ -421,6 +407,24 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} = \begin{bmatrix} \frac{\partial}{\partial \beta_1} \beta_1 & \frac{\partial}{\partial \beta_1} 3 \\ \frac{\partial}{\partial \beta_2} \beta_1 & \frac{\partial}{\partial \beta_2} 3 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \\
 >
 > which is not \\\underbrace{\mathbf{0}}\_{2 \times 2}\\, so this \\\tilde{x}\\ is not constant with respect to \\\tilde{\beta}\\: its first entry changes when \\\beta_1\\ does.
+
+> **NOTE:**
+>
+> **Exercise 6 (Partial derivative with respect to an unreferenced variable)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.46.
+>
+> Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+>
+> \\f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\\
+
+> **NOTE:**
+>
+> *Solution 6*. Although the function is declared as a function of three variables \\(x, y, t)\\, its expression depends solely on \\t\\.
+>
+> Because neither \\x\\ nor \\y\\ appears in the formula, \\f\\ is constant with respect to both \\x\\ and \\y\\:
+>
+> \\\frac{\partial f}{\partial x} = 0, \qquad \frac{\partial f}{\partial y} = 0\\
+>
+> *Remark:* Always verify which variables actually appear in a formula before performing lengthy algebraic differentiation.
 
 > **NOTE:**
 >
@@ -1659,6 +1663,7 @@ Here the objective ([Definition 23](#def-minimization-problem)) is a quadratic 
 
 - Marsden and Tromba ([2013](#ref-marsden2013vector)) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.
 - Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.
+- Miller ([2016](#ref-problifesavercalc)) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
 See also the [Linear Algebra and Vector Calculus further reading](linear-algebra.llms.md#sec-additional-resources).
 
