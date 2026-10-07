@@ -3,7 +3,7 @@
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$:
 
-- $(D, \mathscr{S})$, with $\mathscr{S}$ the collection of all subsets of $D$,
+- $(D, \salg)$, with $\salg$ the collection of all subsets of $D$,
   is a measurable space (@exm-sigma-algebra).
 - $(D, \set{\emptyset, \set{2, 4, 6}, \set{1, 3, 5}, D})$ is also a measurable space.
   Its measurable sets are only those four;

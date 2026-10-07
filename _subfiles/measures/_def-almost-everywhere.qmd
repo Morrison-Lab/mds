@@ -1,7 +1,7 @@
 :::{#def-almost-everywhere}
 #### Almost everywhere
 
-Let $(S, \mathscr{S}, \mu)$ be a [measure space](#def-measure-space).
+Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
 A statement about the elements of $S$ holds
 **$\mu$-almost everywhere**
 (written **$\mu$-a.e.**,

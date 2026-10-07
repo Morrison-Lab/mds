@@ -14,12 +14,14 @@ Biostat
 biostatistics
 BMI
 Borel
+borel
 checkable
 Cholesky
 CLI
 codomain
 codomains
 cofactor
+coll
 definiteness
 Diagonalizable
 diagonalizable
@@ -38,6 +40,7 @@ equalities
 erf
 exponentials
 factorizations
+gensalg
 glitchy
 Hadamard
 Hua
@@ -70,6 +73,8 @@ Rayleigh
 RevealJS
 Roch
 rulesets
+salg
+salgT
 Sanderson
 Schur
 Schwarz

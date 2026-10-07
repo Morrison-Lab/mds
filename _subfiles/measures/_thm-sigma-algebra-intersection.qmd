@@ -1,11 +1,11 @@
 :::{#thm-sigma-algebra-intersection}
 #### An intersection of $\sigma$-algebras is a $\sigma$-algebra
 
-Let $\mathscr{S}_j$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$
+Let $\salg_j$ be a [$\sigma$-algebra](#def-sigma-algebra) on a set $S$
 for each $j$ in a nonempty set of indices $J$.
 Then their [intersection](sets-functions.qmd#def-intersection)
-$\bigcap_{j \in J} \mathscr{S}_j$,
-the collection of subsets of $S$ that are in every $\mathscr{S}_j$,
+$\bigcap_{j \in J} \salg_j$,
+the collection of subsets of $S$ that are in every $\salg_j$,
 is a $\sigma$-algebra on $S$.
 
 :::
@@ -14,12 +14,12 @@ is a $\sigma$-algebra on $S$.
 
 Each condition of @def-sigma-algebra holds:
 
-- $S$ is in every $\mathscr{S}_j$, so it is in the intersection.
-- If $A$ is in the intersection, then $A$ is in every $\mathscr{S}_j$,
-  so its complement $S \setminus A$ is in every $\mathscr{S}_j$,
+- $S$ is in every $\salg_j$, so it is in the intersection.
+- If $A$ is in the intersection, then $A$ is in every $\salg_j$,
+  so its complement $S \setminus A$ is in every $\salg_j$,
   and so it is in the intersection.
-- If $A_1, A_2, \ldots$ are in the intersection, then they are in every $\mathscr{S}_j$,
-  so their union $\bigcup_{i=1}^{\infty} A_i$ is in every $\mathscr{S}_j$,
+- If $A_1, A_2, \ldots$ are in the intersection, then they are in every $\salg_j$,
+  so their union $\bigcup_{i=1}^{\infty} A_i$ is in every $\salg_j$,
   and so it is in the intersection.
 
 :::

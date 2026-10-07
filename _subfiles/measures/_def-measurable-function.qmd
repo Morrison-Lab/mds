@@ -1,13 +1,13 @@
 :::{#def-measurable-function}
 #### Measurable function
 
-Let $(S, \mathscr{S})$ be a [measurable space](#def-measurable-space).
+Let $(S, \salg)$ be a [measurable space](#def-measurable-space).
 A [function](sets-functions.qmd#def-function) $f : S \to \reals$
-is **measurable** (with respect to $\mathscr{S}$)
+is **measurable** (with respect to $\salg$)
 if, for every real number $c$,
 the set of elements where $f$ is at most $c$ is measurable:
 
-$$\set{s \in S : f(s) \le c} \in \mathscr{S}$$
+$$\set{s \in S : f(s) \le c} \in \salg$$
 
 :::
 
@@ -17,13 +17,13 @@ $$\set{s \in S : f(s) \le c} \in \mathscr{S}$$
 #### Measurable functions in general
 
 Other sources define a function $f : S \to T$
-between measurable spaces $(S, \mathscr{S})$ and $(T, \mathscr{T})$ to be measurable
-when $\set{s \in S : f(s) \in B} \in \mathscr{S}$ for every $B \in \mathscr{T}$.
+between measurable spaces $(S, \salg)$ and $(T, \salgT)$ to be measurable
+when $\set{s \in S : f(s) \in B} \in \salg$ for every $B \in \salgT$.
 For $T = \reals$ with the [Borel $\sigma$-algebra](#def-borel-sigma-algebra),
 that definition is equivalent to @def-measurable-function
 (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)).
 For example, with $B = (-\infty, c]$,
-the general definition requires $\set{s \in S : f(s) \le c} \in \mathscr{S}$,
+the general definition requires $\set{s \in S : f(s) \le c} \in \salg$,
 which is the condition in @def-measurable-function.
 
 :::
