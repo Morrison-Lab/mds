@@ -2,19 +2,9 @@
 
 Code
 
-- [Show All Code](javascript:void(0))
-
-- [Hide All Code](javascript:void(0))
-
-- 
-
-  ------------------------------------------------------------------------
-
-- [View Source](javascript:void(0))
-
 Published
 
-Last modified: 2026-10-07 00:16:16 (PDT)
+Last modified: 2026-10-07 00:49:43 (PDT)
 
 ## 1 Derivatives
 
@@ -496,105 +486,11 @@ Last modified: 2026-10-07 00:16:16 (PDT)
 >
 > \\f''(x) = -x^{-2} = -\frac{1}{x^2}\\
 
-### 1.3 Linear approximation
-
-For a differentiable function \\f\\ and a small step \\\epsilon\\,
-
-\\f(w + \epsilon) \approx f(w) + \epsilon\\\frac{d }{d w}f(w) \tag{1}\\
+### 1.3 Tangent lines
 
 > **NOTE:**
 >
-> **Definition 8 (Linear approximation)** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\epsilon\\
->
-> \\\hat{f}\_w(\epsilon) = f(w) + \epsilon\\\frac{d }{d w}f(w)\\
->
-> so [Equation 1](#eq-linear-approx) says \\f(w + \epsilon) \approx \hat{f}\_w(\epsilon)\\ for small \\\epsilon\\.
-
-> **NOTE:**
->
-> *Remark 1* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 8](#def-linear-approximation)) is an [affine function](algebra.llms.md#def-affine-function) of the step \\\epsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\epsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
-
-> **NOTE:**
->
-> **Definition 9 (Flat point)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a *stationary point*).
-
-> **NOTE:**
->
-> **Example 8 (Flat points, and a point that is not one)**  
->
-> - \\f(w) = w^3\\ has \\f'(w) = 3w^2\\, which is \\0\\ at \\w = 0\\, so \\0\\ is a flat point. Yet \\f(0) = 0\\ is neither the [minimum](algebra.llms.md#def-minimum) nor the [maximum](algebra.llms.md#def-maximum) of the values \\f\\ takes on any open interval around \\0\\: \\f(w) \< 0\\ for \\w \< 0\\ and \\f(w) \> 0\\ for \\w \> 0\\.
-> - \\h(w) = w^2\\ has \\h'(1) = 2 \ne 0\\, so \\1\\ is not a flat point.
-
-> **NOTE:**
->
-> **Definition 10 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 4](#def-differentiable)). So every flat point ([Definition 9](#def-flat-point)) is a critical point.
-
-> **NOTE:**
->
-> **Example 9 (Critical points that are and are not flat points)**  
->
-> - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 2](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
-> - \\f(w) = w^3\\ has \\f'(0) = 3 \cdot 0^2 = 0\\, so \\0\\ is a flat point of \\f\\, and hence a critical point.
-> - \\h(w) = w^2\\ is differentiable everywhere, with \\h'(w) = 2w\\, which is \\0\\ only at \\w = 0\\. So \\0\\ is the only critical point of \\h\\; for example, \\h'(1) = 2 \ne 0\\, so \\1\\ is not one.
-
-> **NOTE:**
->
-> **Exercise 13 (Maximizing a gamma-family kernel)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.10.
->
-> Find the maximum value of
->
-> \\f(x) = x^4 e^{-x}\\
->
-> on the interval \\\[0, \infty)\\.
-
-> **NOTE:**
->
-> *Solution 13*. Differentiate using the product rule:
->
-> \\f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)\\
->
-> On \\\[0, \infty)\\, \\e^{-x} \> 0\\, so \\f'(x) = 0\\ only at \\x = 0\\ and \\x = 4\\.
->
-> Evaluate \\f\\ at the boundary and critical points:
->
-> - At \\x = 0\\: \\f(0) = 0\\.
-> - At \\x = 4\\: \\f(4) = 4^4 e^{-4} = 256 e^{-4} \approx 4.6888\\.
-> - As \\x \to \infty\\: exponential decay dominates polynomial growth, so \\\lim\_{x \to \infty} x^4 e^{-x} = 0\\.
->
-> Since \\f(x) \ge 0\\ for all \\x \ge 0\\ and \\f(4) \> 0\\, the global maximum occurs at \\x = 4\\, with maximum value \\256/e^4\\.
-
-> **NOTE:**
->
-> **Exercise 14 (Classifying critical points with the second derivative test)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.11.
->
-> Find the critical points of
->
-> \\f(x) = 4x^3 - 3x^2\\
->
-> and decide whether each is a local maximum, a local minimum, or an inflection point.
-
-> **NOTE:**
->
-> *Solution 14*. Compute the first derivative:
->
-> \\f'(x) = 12x^2 - 6x = 6x(2x - 1)\\
->
-> Setting \\f'(x) = 0\\ gives critical points at \\x = 0\\ and \\x = 1/2\\.
->
-> Compute the second derivative:
->
-> \\f''(x) = 24x - 6\\
->
-> Apply the second derivative test at each critical point:
->
-> - At \\x = 0\\: \\f''(0) = -6 \< 0\\, so \\x = 0\\ is a strict local maximum.
-> - At \\x = 1/2\\: \\f''(1/2) = 24(1/2) - 6 = 6 \> 0\\, so \\x = 1/2\\ is a strict local minimum.
->
-> Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
-
-> **NOTE:**
->
-> **Definition 11 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra.llms.md#def-affine-function)
+> **Definition 8 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
 >
@@ -602,45 +498,29 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
 > **NOTE:**
 >
-> **Example 10 (The tangent line to \\x^2\\ at \\1\\)** For \\f(x) = x^2\\ at \\c = 1\\, \\f(1) = 1\\ and \\f'(1) = 2\\ ([Example 5](#exm-derivative)), so the tangent line is the graph of
+> **Example 8 (The tangent line to \\x^2\\ at \\1\\)** For \\f(x) = x^2\\ at \\c = 1\\, \\f(1) = 1\\ and \\f'(1) = 2\\ ([Example 5](#exm-derivative)), so the tangent line is the graph of
 >
 > \\ \begin{aligned} x &\mapsto 1 + 2\\(x - 1) && \text{(substitute } f(1) = 1 \text{ and } f'(1) = 2 \text{)} \\ &= 2x - 1 && \text{(distribute, and } 1 - 2 = -1 \text{)} \end{aligned} \\
 >
 > At \\x = 1.1\\ the tangent line has height \\2(1.1) - 1 = 1.2\\, close to the curve’s height \\f(1.1) = 1.21\\; the gap, \\1.21 - 1.2 = 0.01\\, is \\(1.1 - 1)^2\\.
 
-> **NOTE:**
->
-> **Exercise 15 (Tangent line approximation)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.8.
->
-> Let \\f(x) = 4x + \sqrt{2}\cos x\\.
->
-> 1.  Compute \\f'(x)\\.
-> 2.  Find the equation of the tangent line to the curve \\y = f(x)\\ at \\x = \pi/4\\.
-> 3.  Use the tangent line to approximate \\f(\pi/4 + 0.01)\\, and compare that approximation with the exact value.
+### 1.4 Linear approximation
+
+For a differentiable function \\f\\ and a small step \\\epsilon\\,
+
+\\f(w + \epsilon) \approx f(w) + \epsilon\\\frac{d }{d w}f(w) \tag{1}\\
 
 > **NOTE:**
 >
-> *Solution 15*. **1.** Differentiate term by term:
+> **Definition 9 (Linear approximation)** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\epsilon\\
 >
-> \\f'(x) = 4 - \sqrt{2}\sin x\\
+> \\\hat{f}\_w(\epsilon) = f(w) + \epsilon\\\frac{d }{d w}f(w)\\
 >
-> **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
+> so [Equation 1](#eq-linear-approx) says \\f(w + \epsilon) \approx \hat{f}\_w(\epsilon)\\ for small \\\epsilon\\. [Figure 1](#fig-linear-approx) illustrates this approximation interactively for a quadratic function.
+
+> **NOTE:**
 >
-> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = 4 - 1 = 3 \end{aligned}\\
->
-> Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
->
-> \\y - (\pi + 1) = 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{} \implies y = \pi + 1 + 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{}\\
->
-> **3.** At \\x = \pi/4 + 0.01\\, the linear approximation ([Equation 1](#eq-linear-approx)) gives:
->
-> \\f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\\
->
-> The exact value is:
->
-> \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} \approx 4.171543\\
->
-> The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
+> *Remark 1* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 9](#def-linear-approximation)) is an [affine function](algebra.llms.md#def-affine-function) of the step \\\epsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\epsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
 
 Show R code
 
@@ -696,13 +576,60 @@ Plot.plot({
 })
 ```
 
-The dashed blue line is the tangent line ([Definition 11](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
+The dashed blue line is the tangent line ([Definition 8](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
 
 Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\epsilon\\.
 
 > **NOTE:**
 >
-> **Exercise 16 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
+> **Exercise 13 (Tangent line approximation)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.8.
+>
+> Let \\f(x) = 4x + \sqrt{2}\cos x\\.
+>
+> 1.  Compute \\f'(x)\\.
+> 2.  Find the equation of the tangent line to the curve \\y = f(x)\\ at \\x = \pi/4\\.
+> 3.  Use the tangent line to approximate \\f(\pi/4 + 0.01)\\, and compare that approximation with the exact value.
+
+> **NOTE:**
+>
+> *Solution 13*. **1.** Differentiate term by term:
+>
+> \\f'(x) = 4 - \sqrt{2}\sin x\\
+>
+> **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
+>
+> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = 4 - 1 = 3 \end{aligned}\\
+>
+> Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
+>
+> \\y - (\pi + 1) = 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{} \implies y = \pi + 1 + 3\mathopen{}\left(x - \frac{\pi}{4}\right)\mathclose{}\\
+>
+> **3.** At \\x = \pi/4 + 0.01\\, the linear approximation ([Equation 1](#eq-linear-approx)) gives:
+>
+> \\f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593\\
+>
+> The exact value is:
+>
+> \\f(\pi/4 + 0.01) = 4\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4} + 0.01\right)\mathclose{} \approx 4.171543\\
+>
+> The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
+
+### 1.5 Critical points and optimization
+
+> **NOTE:**
+>
+> **Definition 10 (Flat point)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a *stationary point*).
+
+> **NOTE:**
+>
+> **Example 9 (Flat points, and a point that is not one)**  
+>
+> - \\f(w) = w^3\\ has \\f'(w) = 3w^2\\, which is \\0\\ at \\w = 0\\, so \\0\\ is a flat point. Yet \\f(0) = 0\\ is neither the [minimum](algebra.llms.md#def-minimum) nor the [maximum](algebra.llms.md#def-maximum) of the values \\f\\ takes on any open interval around \\0\\: \\f(w) \< 0\\ for \\w \< 0\\ and \\f(w) \> 0\\ for \\w \> 0\\.
+> - \\h(w) = w^2\\ has \\h'(1) = 2 \ne 0\\, so \\1\\ is not a flat point.
+
+> **NOTE:**
+>
+> **Exercise 14 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
 >
 > 1.  Differentiate \\f\\.
 > 2.  Find the flat point \\w\\ of \\f\\, and say whether \\f(w)\\ is the [minimum](algebra.llms.md#def-minimum) or the [maximum](algebra.llms.md#def-maximum) of the values of \\f\\.
@@ -710,7 +637,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> *Solution 16*. **1.** Term by term:
+> *Solution 14*. **1.** Term by term:
 >
 > \\\frac{df}{dw} = 2w - 4\\
 >
@@ -722,7 +649,74 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\epsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](vector-calculus.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the vector calculus page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
 
-### 1.4 Taylor series
+> **NOTE:**
+>
+> **Definition 11 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 4](#def-differentiable)). So every flat point ([Definition 10](#def-flat-point)) is a critical point.
+
+> **NOTE:**
+>
+> **Example 10 (Critical points that are and are not flat points)**  
+>
+> - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 2](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
+> - \\f(w) = w^3\\ has \\f'(0) = 3 \cdot 0^2 = 0\\, so \\0\\ is a flat point of \\f\\, and hence a critical point.
+> - \\h(w) = w^2\\ is differentiable everywhere, with \\h'(w) = 2w\\, which is \\0\\ only at \\w = 0\\. So \\0\\ is the only critical point of \\h\\; for example, \\h'(1) = 2 \ne 0\\, so \\1\\ is not one.
+
+> **NOTE:**
+>
+> **Exercise 15 (Maximizing a gamma-family kernel)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.10.
+>
+> Find the maximum value of
+>
+> \\f(x) = x^4 e^{-x}\\
+>
+> on the interval \\\[0, \infty)\\.
+
+> **NOTE:**
+>
+> *Solution 15*. Differentiate using the product rule:
+>
+> \\f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)\\
+>
+> On \\\[0, \infty)\\, \\e^{-x} \> 0\\, so \\f'(x) = 0\\ only at \\x = 0\\ and \\x = 4\\.
+>
+> Evaluate \\f\\ at the boundary and critical points:
+>
+> - At \\x = 0\\: \\f(0) = 0\\.
+> - At \\x = 4\\: \\f(4) = 4^4 e^{-4} = 256 e^{-4} \approx 4.6888\\.
+> - As \\x \to \infty\\: exponential decay dominates polynomial growth, so \\\lim\_{x \to \infty} x^4 e^{-x} = 0\\.
+>
+> Since \\f(x) \ge 0\\ for all \\x \ge 0\\ and \\f(4) \> 0\\, the global maximum occurs at \\x = 4\\, with maximum value \\256/e^4\\.
+
+> **NOTE:**
+>
+> **Exercise 16 (Classifying critical points with the second derivative test)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.11.
+>
+> Find the critical points of
+>
+> \\f(x) = 4x^3 - 3x^2\\
+>
+> and decide whether each is a local maximum, a local minimum, or an inflection point.
+
+> **NOTE:**
+>
+> *Solution 16*. Compute the first derivative:
+>
+> \\f'(x) = 12x^2 - 6x = 6x(2x - 1)\\
+>
+> Setting \\f'(x) = 0\\ gives critical points at \\x = 0\\ and \\x = 1/2\\.
+>
+> Compute the second derivative:
+>
+> \\f''(x) = 24x - 6\\
+>
+> Apply the second derivative test at each critical point:
+>
+> - At \\x = 0\\: \\f''(0) = -6 \< 0\\, so \\x = 0\\ is a strict local maximum.
+> - At \\x = 1/2\\: \\f''(1/2) = 24(1/2) - 6 = 6 \> 0\\, so \\x = 1/2\\ is a strict local minimum.
+>
+> Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
+
+### 1.6 Taylor series
 
 > **NOTE:**
 >
