@@ -20,6 +20,7 @@ description: "Use when editing Quarto pages, chapters, slides, handouts, or narr
   `Rscript -e 'lintr::lint("path/to/file.qmd")'` before finishing.
 - Do not hard-code computed values in narrative text. Compute them in a chunk
   and reference them with inline R.
+- Do not show readers information about the source when content comes from our own lab (e.g. "Source: new for Fall 2026", "written for Midterm 1", "from our lab"). Only external reference sources should be cited; internal lab provenance is unnecessary clutter for readers.
 - Treat files under `_extensions/` as vendored third-party code: read them for
   context if needed, but do not reformat or edit them as part of a content
   change.
