@@ -193,7 +193,7 @@ the mesh is the largest of these widths, $\|\mathcal{P}\| = 0.5$.
 {{< slidebreak >}}
 
 :::{#def-riemann-integral}
-#### Riemann integral
+#### Riemann integral (definite integral)
 
 Let $f$ be a [bounded](algebra.qmd#def-bounded) function on $[a, b]$.
 For each partition $\mathcal{P}$ of $[a, b]$ (@def-partition),

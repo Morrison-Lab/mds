@@ -1,5 +1,5 @@
 ::: {#def-row-vector-derivative}
-#### Row-vector derivative
+#### Row-vector derivative (total derivative)
 If $f(\vb)$ is a scalar-valued function of a $p \times 1$ vector $\vb$,
 such as $f(\vb) = \tp{\vx}\vb$,
 then its **row-vector derivative** is the row vector of its

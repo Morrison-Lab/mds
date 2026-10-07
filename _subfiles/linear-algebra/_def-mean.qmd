@@ -1,13 +1,13 @@
 :::{#def-mean}
-#### Mean
+#### Mean (average, sample mean)
 
-The **mean** (or *average*) of $n$ numbers $y_1, \ldots, y_n$ is
+The **mean** (or **average**) of $n$ numbers $y_1, \ldots, y_n$ is
 their [sum](algebra.qmd#def-summation) divided by how many there are:
 
 $$\bar{y} \eqdef \frac{1}{n} \sum_{i=1}^{n} y_i$$
 
 When the numbers are observed data values,
-$\bar{y}$ is also called the *sample mean*.
+$\bar{y}$ is also called the **sample mean**.
 
 :::
 

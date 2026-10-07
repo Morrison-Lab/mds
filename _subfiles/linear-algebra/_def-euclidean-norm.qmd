@@ -1,7 +1,7 @@
 :::{#def-euclidean-norm}
-#### Euclidean norm
+#### Euclidean norm (length, $L_2$ norm)
 
-The **Euclidean norm** (or *length*, also called the $L_2$ norm and written $\lVert \vx \rVert_2$) of a vector $\vx$ of length $p$ is
+The **Euclidean norm** (or **length**, also called the **$L_2$ norm** and written $\lVert \vx \rVert_2$) of a vector $\vx$ of length $p$ is
 
 $$\norm{\vx} \eqdef \sqrt{\vx \cdot \vx} = \sqrt{\sumip x_i^2}$$ {#eq-l2-norm}
 

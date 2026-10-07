@@ -1,14 +1,14 @@
 :::{#def-invertible-matrix}
-#### Invertible matrix
+#### Invertible matrix (non-singular matrix)
 
 A $p \times p$ matrix $\matr{A}$ is **invertible**
-(or *non-singular*)
+(or **non-singular**)
 if some $p \times p$ matrix $\matr{B}$ satisfies
 
 $$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p,$$
 
 where $\matr{I}_p$ is the identity matrix (@def-identity-matrix).
-A square matrix that is not invertible is *singular*.
+A square matrix that is not invertible is **singular**.
 
 :::
 

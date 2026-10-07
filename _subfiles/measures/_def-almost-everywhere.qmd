@@ -1,5 +1,5 @@
 :::{#def-almost-everywhere}
-#### Almost everywhere
+#### Almost everywhere ($\mu$-almost everywhere, $\mu$-a.e.)
 
 Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
 A statement about the elements of $S$ holds

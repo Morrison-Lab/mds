@@ -24,7 +24,7 @@ This section summarizes the principal notational conventions.
 {{< slidebreak >}}
 
 :::{#def-indicator-function}
-#### Indicator function
+#### Indicator function (set indicator, predicate indicator)
 
 For any subset $A \subseteq \Omega$ of a universal set $\Omega$,
 the **indicator function** of $A$,

@@ -1,5 +1,5 @@
 :::{#def-eigendecomposition}
-#### Eigendecomposition
+#### Eigendecomposition (spectral decomposition)
 
 Let $\matr{A}$ be a $p \times p$ symmetric matrix with real entries.
 An **eigendecomposition**, or **spectral decomposition**, of $\matr{A}$

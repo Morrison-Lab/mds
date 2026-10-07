@@ -1,5 +1,5 @@
 :::{#def-proposition}
-#### Proposition
+#### Proposition (statement)
 
 A **proposition**, or **statement**,
 is a sentence that is either true or false.

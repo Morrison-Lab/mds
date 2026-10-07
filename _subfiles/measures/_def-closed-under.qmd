@@ -1,5 +1,5 @@
 :::{#def-closed-under}
-#### Closed under an operation
+#### Closed under an operation (closure)
 
 A set $A$ is **closed under** an operation,
 such as addition of numbers or union of sets,

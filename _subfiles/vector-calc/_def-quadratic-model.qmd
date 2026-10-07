@@ -1,5 +1,5 @@
 :::{#def-quadratic-model}
-#### Quadratic model
+#### Quadratic model (second-order Taylor polynomial)
 
 Let $f$ be as in @def-newton-method and let $\vx$ be a point,
 with $\vecf{g} \eqdef \deriv{\vx} f(\vx)$ and $\matr{H} \eqdef \matr{H}_f(\vx)$.
