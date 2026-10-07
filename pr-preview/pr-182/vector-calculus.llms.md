@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 00:03:58 (PDT)
+Last modified: 2026-10-07 00:13:00 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -40,7 +40,9 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Exercise 1 (First-order partial derivatives)** Let \\f(x, y) = x^2 y + e^x + \sin(xy)\\. Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\.
+> **Exercise 1 (First-order partial derivatives)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.42.
+>
+> Let \\f(x, y) = x^2 y + e^x + \sin(xy)\\. Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\.
 
 > **NOTE:**
 >
@@ -54,7 +56,9 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Let
+> **Exercise 2 (Partial derivatives of the normal density with respect to parameters)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.43.
+>
+> Let
 >
 > \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
 >
@@ -74,7 +78,9 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Exercise 3 (Partial derivatives with exponential of quadratic form)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+> **Exercise 3 (Partial derivatives with exponential of quadratic form)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.44.
+>
+> Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
 > \\f(x, y) = x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
 
@@ -90,7 +96,9 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Exercise 4 (Using symmetry to compute partial derivatives)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+> **Exercise 4 (Using symmetry to compute partial derivatives)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.45.
+>
+> Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
 > \\f(x, y) = e^{xy} - \log(x^2 + y^2)\\
 >
@@ -402,7 +410,9 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Exercise 6 (Partial derivative with respect to an unreferenced variable)** Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
+> **Exercise 6 (Partial derivative with respect to an unreferenced variable)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.46.
+>
+> Find \\\frac{\partial f}{\partial x}\\ and \\\frac{\partial f}{\partial y}\\ for
 >
 > \\f(x, y, t) = 5t^4 - 4t^5 \cos(t\sin t)\\
 
