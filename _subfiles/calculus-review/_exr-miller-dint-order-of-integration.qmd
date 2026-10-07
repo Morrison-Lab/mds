@@ -1,0 +1,23 @@
+::: {#exr-miller-dint-order-of-integration}
+#### Choosing the order of integration
+
+Evaluate the double integral:
+
+$$\int_0^6 \int_0^5 x e^{-xy}\,dy\,dx$$
+:::
+
+::: {#sol-miller-dint-order-of-integration}
+Integrating with respect to $x$ first requires integration by parts. Integrating with respect to $y$ first is much simpler because the factor of $x$ is already present:
+
+$$\int_0^5 x e^{-xy}\,dy = \sb{-e^{-xy}}_{y=0}^5 = 1 - e^{-5x}$$
+
+Now integrate with respect to $x$:
+
+$$\ba
+\int_0^6 (1 - e^{-5x})\,dx &= \sb{x + \frac{1}{5}e^{-5x}}_0^6
+\\
+&= \paren{6 + \frac{1}{5}e^{-30}} - \paren{0 + \frac{1}{5}}
+\\
+&= \frac{29}{5} + \frac{e^{-30}}{5}
+\ea$$
+:::

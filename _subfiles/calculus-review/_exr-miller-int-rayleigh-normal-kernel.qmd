@@ -1,0 +1,22 @@
+::: {#exr-miller-int-rayleigh-normal-kernel}
+#### Improper Gaussian-kernel integral
+
+Evaluate the improper integral:
+
+$$\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx$$
+:::
+
+::: {#sol-miller-int-rayleigh-normal-kernel}
+Let $u = x^2/4$. Then $du = \frac{x}{2}\,dx$, so $x\,dx = 2\,du$.
+
+Limits:
+
+- As $x \to 0$: $u \to 0$.
+- As $x \to \infty$: $u \to \infty$.
+
+Substitute:
+
+$$\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx = 2\int_0^\infty e^{-u}\,du = 2\sb{-e^{-u}}_0^\infty = 2\paren{0 - (-1)} = 2$$
+
+*Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
+:::

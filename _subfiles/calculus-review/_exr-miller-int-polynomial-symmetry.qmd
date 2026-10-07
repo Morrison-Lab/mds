@@ -1,0 +1,17 @@
+::: {#exr-miller-int-polynomial-symmetry}
+#### Separating even and odd parts of a polynomial
+
+Evaluate the integral:
+
+$$\int_{-4}^4 (x^3 + 6x^2 - 2x - 3)\,dx$$
+:::
+
+::: {#sol-miller-int-polynomial-symmetry}
+Split the integrand into its odd part $x^3 - 2x$ and its even part $6x^2 - 3$:
+
+$$\int_{-4}^4 (x^3 - 2x)\,dx = 0$$
+
+The even part doubles over the half-interval $[0, 4]$:
+
+$$\int_{-4}^4 (6x^2 - 3)\,dx = 2\int_0^4 (6x^2 - 3)\,dx = 2\sb{2x^3 - 3x}_0^4 = 2\sb{2(64) - 3(4)} = 2(128 - 12) = 232$$
+:::

@@ -1,0 +1,29 @@
+::: {#exr-miller-deriv-second-product}
+#### Second derivative of a product
+
+Find the second derivative of
+
+$$f(x) = (x^4 + 3x^2 + 8)\cos x$$
+:::
+
+::: {#sol-miller-deriv-second-product}
+From @exr-miller-deriv-product-poly-cos, the first derivative is:
+
+$$f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x$$
+
+Differentiate each term via the product rule:
+
+$$\ba
+\dif{}{x}\sb{(4x^3 + 6x)\cos x} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x
+\\
+\dif{}{x}\sb{-(x^4 + 3x^2 + 8)\sin x} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x
+\ea$$
+
+Combining and grouping like trigonometric terms:
+
+$$\ba
+f''(x) &= \sb{(12x^2 + 6) - (x^4 + 3x^2 + 8)}\cos x - 2(4x^3 + 6x)\sin x
+\\
+&= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x
+\ea$$
+:::

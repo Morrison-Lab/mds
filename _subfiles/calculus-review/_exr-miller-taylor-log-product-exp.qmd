@@ -1,0 +1,23 @@
+::: {#exr-miller-taylor-log-product-exp}
+#### Taylor series of $\log((1 - x)e^x)$
+
+Find the first two non-zero terms of the Taylor series for
+
+$$f(x) = \log((1 - x)e^x)$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-log-product-exp}
+Expand using logarithm properties:
+
+$$f(x) = \log(1 - x) + \log(e^x) = \log(1 - x) + x$$
+
+Substitute the series for $\log(1 - x)$ from @exr-miller-taylor-log-one-minus-x:
+
+$$f(x) = \paren{-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots} + x = -\frac{x^2}{2} - \frac{x^3}{3} - \dots$$
+
+The constant and linear terms vanish ($f(0) = 0$, $f'(0) = 0$). The first two non-zero terms are:
+
+$$-\frac{x^2}{2} - \frac{x^3}{3}$$
+:::

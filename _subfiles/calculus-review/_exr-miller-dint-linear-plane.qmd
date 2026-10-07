@@ -1,0 +1,19 @@
+::: {#exr-miller-dint-linear-plane}
+#### Double integral of an affine function
+
+Let $a, b, c$ be constants. Evaluate:
+
+$$\int_0^1 \int_0^1 (ax + by + c)\,dy\,dx$$
+:::
+
+::: {#sol-miller-dint-linear-plane}
+By linearity of the integral:
+
+$$\ba
+\int_0^1 \int_0^1 (ax + by + c)\,dy\,dx &= a\int_0^1 x\,dx \int_0^1 1\,dy + b\int_0^1 1\,dx \int_0^1 y\,dy + c\int_0^1 1\,dx \int_0^1 1\,dy
+\\
+&= a\paren{\frac{1}{2}}(1) + b(1)\paren{\frac{1}{2}} + c(1)(1)
+\\
+&= \frac{a}{2} + \frac{b}{2} + c
+\ea$$
+:::

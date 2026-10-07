@@ -109,6 +109,14 @@ the same formula holds for every real $x$.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-polynomial-root.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-find-slopes.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-deriv-log}
 
 #### Derivative of natural logarithm
@@ -118,6 +126,10 @@ the derivative of the [natural logarithm](algebra.qmd#def-natural-log) is:
 
 $$\dlogf{x} = \frac{1}{x} = x^{-1}$$
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-log-simplify.qmd >}}
 
 {{< slidebreak >}}
 
@@ -146,6 +158,14 @@ $$(ab)' = ab' + ba'$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-product-poly-cos.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-product.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#thm-quotient-rule}
 #### Quotient rule
 
@@ -158,6 +178,10 @@ $$(a/b)' = a'/b - (a/b^2)b'$$
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/videos/_note-video-quotient-rule.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-quotient-or-factor.qmd >}}
 
 {{< slidebreak >}}
 
@@ -184,6 +208,22 @@ with inner function $g$ and outer function $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$
 :::
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-gaussian-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-gaussian-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-product-chain-composite.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-generalized-power-rule.qmd >}}
 
 {{< slidebreak >}}
 
@@ -220,6 +260,14 @@ $$
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/videos/_note-video-chain-rule.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-chain-log.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-log-constant.qmd >}}
 
 ### Linear approximation
 

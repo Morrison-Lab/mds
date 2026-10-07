@@ -1,0 +1,23 @@
+::: {#exr-miller-taylor-product-cos-log}
+#### Taylor series of a product of known expansions
+
+Find the terms up to degree 2 of the Taylor series for
+
+$$f(x) = \cos(x)\log(1 + x)$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-product-cos-log}
+Multiply the known Maclaurin expansions:
+
+$$\ba
+\cos x &= 1 - \frac{x^2}{2} + O(x^4)
+\\
+\log(1 + x) &= x - \frac{x^2}{2} + O(x^3)
+\ea$$
+
+Multiplying and dropping terms of order $x^3$ and higher:
+
+$$f(x) = \paren{1 - \frac{x^2}{2} + \dots}\paren{x - \frac{x^2}{2} + \dots} = x - \frac{x^2}{2} + O(x^3)$$
+:::

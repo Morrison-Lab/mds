@@ -1,0 +1,29 @@
+::: {#exr-miller-dint-polynomial-rectangle}
+#### Double integral of a polynomial over a rectangle
+
+Evaluate the double integral:
+
+$$\int_0^2 \int_0^3 5(x^2 y + xy^2 + 2)\,dy\,dx$$
+:::
+
+::: {#sol-miller-dint-polynomial-rectangle}
+Integrate with respect to $y$ first:
+
+$$\ba
+\int_0^3 (x^2 y + xy^2 + 2)\,dy &= \sb{\frac{x^2 y^2}{2} + \frac{x y^3}{3} + 2y}_{y=0}^3
+\\
+&= \frac{9}{2}x^2 + 9x + 6
+\ea$$
+
+Now integrate with respect to $x$:
+
+$$\ba
+5\int_0^2 \paren{\frac{9}{2}x^2 + 9x + 6}\,dx &= 5\sb{\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x}_0^2
+\\
+&= 5\sb{\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)}
+\\
+&= 5\sb{12 + 18 + 12} = 5(42) = 210
+\ea$$
+
+*(Note: The source text carried an arithmetic slip in the inner coefficient resulting in $190$; the exact value is $210$.)*
+:::

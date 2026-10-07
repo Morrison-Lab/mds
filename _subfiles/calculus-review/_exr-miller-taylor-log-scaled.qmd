@@ -1,0 +1,15 @@
+::: {#exr-miller-taylor-log-scaled}
+#### Taylor series of $\log(1 + 2x)$
+
+Find the first two non-zero terms of the Taylor series for
+
+$$f(x) = \log(1 + 2x)$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-log-scaled}
+Substitute $u = 2x$ into the Maclaurin series $\log(1 + u) = u - \frac{u^2}{2} + \dots$:
+
+$$\log(1 + 2x) = (2x) - \frac{(2x)^2}{2} + \dots = 2x - 2x^2 + \dots$$
+:::

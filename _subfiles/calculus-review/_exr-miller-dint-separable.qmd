@@ -1,0 +1,23 @@
+::: {#exr-miller-dint-separable}
+#### Product of single integrals for separable functions
+
+Let $m, n > 0$. Evaluate:
+
+$$\int_0^1 \int_0^1 x^m y^n\,dy\,dx$$
+:::
+
+::: {#sol-miller-dint-separable}
+Because the region of integration is a rectangle $[0, 1] \times [0, 1]$ and the integrand factors as $g(x)h(y) = x^m \cd y^n$, the double integral splits into the product of two single-variable integrals:
+
+$$\int_0^1 \int_0^1 x^m y^n\,dy\,dx = \paren{\int_0^1 x^m\,dx}\paren{\int_0^1 y^n\,dy}$$
+
+Evaluating each factor:
+
+$$\int_0^1 x^m\,dx = \frac{1}{m + 1}, \qquad \int_0^1 y^n\,dy = \frac{1}{n + 1}$$
+
+Therefore:
+
+$$\int_0^1 \int_0^1 x^m y^n\,dy\,dx = \frac{1}{(m + 1)(n + 1)}$$
+
+*Remark:* When joint random variables $X$ and $Y$ are independent, their joint density factors as $f_{X, Y}(x, y) = f_X(x)f_Y(y)$, and joint probabilities over product sets factor in exactly this way.
+:::

@@ -1,0 +1,31 @@
+::: {#exr-miller-taylor-poly-zero}
+#### Taylor polynomial of a polynomial at the origin
+
+Find the first five terms (up to degree 4) of the Taylor series for
+
+$$f(x) = x^8 + x^4 + 3$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-poly-zero}
+Evaluate $f$ and its first four derivatives at $x = 0$:
+
+$$\ba
+f(x) &= x^8 + x^4 + 3 &\implies f(0) &= 3
+\\
+f'(x) &= 8x^7 + 4x^3 &\implies f'(0) &= 0
+\\
+f''(x) &= 56x^6 + 12x^2 &\implies f''(0) &= 0
+\\
+f'''(x) &= 336x^5 + 24x &\implies f'''(0) &= 0
+\\
+f^{(4)}(x) &= 1680x^4 + 24 &\implies f^{(4)}(0) &= 24
+\ea$$
+
+By @eq-taylor-poly-def:
+
+$$P_4(x) = 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 = 3 + x^4$$
+
+Because $f$ is already a polynomial centered at $0$, its Taylor polynomial of degree 4 simply collects its terms of degree at most 4.
+:::

@@ -1,0 +1,20 @@
+::: {#exr-miller-int-trig-substitution}
+#### Substitution with a trigonometric integrand
+
+Evaluate the integral:
+
+$$\int_0^2 x\cos(3x^2)\,dx$$
+:::
+
+::: {#sol-miller-int-trig-substitution}
+Let $u = 3x^2$. Then $du = 6x\,dx$, meaning $x\,dx = \frac{du}{6}$.
+
+Limits:
+
+- When $x = 0$: $u = 0$.
+- When $x = 2$: $u = 3(2^2) = 12$.
+
+Substitute:
+
+$$\int_0^2 x\cos(3x^2)\,dx = \frac{1}{6}\int_0^{12} \cos u\,du = \frac{1}{6}\sb{\sin u}_0^{12} = \frac{\sin 12}{6}$$
+:::

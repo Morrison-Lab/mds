@@ -1,0 +1,25 @@
+::: {#exr-miller-taylor-x-log-x}
+#### Taylor expansion of $x \log x$
+
+Find the first three terms (up to degree 2) of the Taylor series for
+
+$$f(x) = x\log x$$
+
+at $x_0 = 1$.
+:::
+
+::: {#sol-miller-taylor-x-log-x}
+Evaluate derivatives at $x_0 = 1$:
+
+$$\ba
+f(1) &= 1 \log 1 = 0
+\\
+f'(x) &= \log x + 1 \implies f'(1) = 0 + 1 = 1
+\\
+f''(x) &= \frac{1}{x} \implies f''(1) = 1
+\ea$$
+
+Therefore:
+
+$$P_2(x) = f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 = (x - 1) + \frac{1}{2}(x - 1)^2$$
+:::

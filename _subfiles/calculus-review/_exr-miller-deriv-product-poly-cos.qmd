@@ -1,0 +1,25 @@
+::: {#exr-miller-deriv-product-poly-cos}
+#### Derivative of a product
+
+Find the derivative of
+
+$$f(x) = (x^4 + 3x^2 + 8)\cos x$$
+:::
+
+::: {#sol-miller-deriv-product-poly-cos}
+Apply the product rule (@thm-product-rule) with:
+
+$$u(x) = x^4 + 3x^2 + 8, \qquad v(x) = \cos x$$
+
+Their derivatives are:
+
+$$u'(x) = 4x^3 + 6x, \qquad v'(x) = -\sin x$$
+
+By the product rule:
+
+$$\ba
+f'(x) &= u'(x)v(x) + u(x)v'(x)
+\\
+&= (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x
+\ea$$
+:::

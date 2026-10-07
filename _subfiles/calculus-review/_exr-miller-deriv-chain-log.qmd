@@ -1,0 +1,17 @@
+::: {#exr-miller-deriv-chain-log}
+#### Chain rule with logarithm
+
+Find the derivative of
+
+$$f(x) = \log(1 - x^2)$$
+
+for $x \in (-1, 1)$.
+:::
+
+::: {#sol-miller-deriv-chain-log}
+Apply the chain rule for logarithms (@cor-deriv-log-chain): if $g(x) = 1 - x^2$, then $g'(x) = -2x$, and
+
+$$f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}$$
+
+*Remark:* A common pitfall in chain rule problems is evaluating the outer derivative at $x$ rather than at the inner value $g(x)$. The denominator is $g(x) = 1 - x^2$, not $x$.
+:::

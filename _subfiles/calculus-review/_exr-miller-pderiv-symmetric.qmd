@@ -1,0 +1,21 @@
+::: {#exr-miller-pderiv-symmetric}
+#### Using symmetry to compute partial derivatives
+
+Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
+
+$$f(x, y) = e^{xy} - \log(x^2 + y^2)$$
+
+on $\mathbb{R}^2 \setminus \{(0, 0)\}$.
+:::
+
+::: {#sol-miller-pderiv-symmetric}
+Holding $y$ constant, differentiate with respect to $x$:
+
+$$\derivf{f}{x} = ye^{xy} - \frac{2x}{x^2 + y^2}$$
+
+Notice that the function is symmetric in $x$ and $y$: $f(x, y) = f(y, x)$. Interchanging $x$ and $y$ gives $\derivf{f}{y}$ immediately:
+
+$$\derivf{f}{y} = xe^{xy} - \frac{2y}{x^2 + y^2}$$
+
+*Remark:* Recognizing symmetry in multi-variable functions eliminates redundant calculations.
+:::

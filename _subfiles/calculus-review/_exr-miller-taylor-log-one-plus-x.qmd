@@ -1,0 +1,27 @@
+::: {#exr-miller-taylor-log-one-plus-x}
+#### Maclaurin series of $\log(1 + x)$
+
+Find the first three terms of the Taylor series for
+
+$$f(x) = \log(1 + x)$$
+
+at $x_0 = 0$.
+:::
+
+::: {#sol-miller-taylor-log-one-plus-x}
+Differentiating repeatedly at $x_0 = 0$:
+
+$$\ba
+f(0) &= \log 1 = 0
+\\
+f'(x) &= (1 + x)^{-1} \implies f'(0) = 1
+\\
+f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1
+\\
+f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2
+\ea$$
+
+The Taylor polynomial of degree 3 is:
+
+$$P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}$$
+:::

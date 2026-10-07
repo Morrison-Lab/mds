@@ -1,0 +1,31 @@
+::: {#exr-miller-pderiv-normal-parameters}
+#### Partial derivatives of the normal density with respect to parameters
+
+Let
+
+$$f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x - \mu)^2}{2\sigma^2}}$$
+
+Find $\derivf{f}{\mu}$ and $\derivf{f}{\sigma}$.
+:::
+
+::: {#sol-miller-pderiv-normal-parameters}
+**1. Derivative with respect to $\mu$:**
+Treat $\sigma$ as constant. Differentiating the exponential factor via the chain rule:
+
+$$\ba
+\derivf{f}{\mu} &= \frac{1}{\sqrt{2\pi\sigma^2}}\exp{-\frac{(x - \mu)^2}{2\sigma^2}} \cd \sb{-\frac{2(x - \mu)(-1)}{2\sigma^2}}
+\\
+&= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma)
+\ea$$
+
+**2. Derivative with respect to $\sigma$:**
+Write $f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\exp{-\frac{(x - \mu)^2}{2\sigma^2}}$ and apply the product rule:
+
+$$\ba
+\derivf{f}{\sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\exp{-\frac{(x - \mu)^2}{2\sigma^2}} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\exp{-\frac{(x - \mu)^2}{2\sigma^2}} \cd \sb{\frac{(x - \mu)^2}{\sigma^3}}
+\\
+&= \sb{-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}} f(x; \mu, \sigma)
+\ea$$
+
+*Remark:* Setting $\derivf{f}{\mu} = 0$ and $\derivf{f}{\sigma} = 0$ for a sample of independent observations leads directly to the maximum likelihood estimators $\hat{\mu} = \bar{x}$ and $\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2$.
+:::

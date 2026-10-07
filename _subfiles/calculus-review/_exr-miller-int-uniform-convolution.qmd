@@ -1,0 +1,41 @@
+::: {#exr-miller-int-uniform-convolution}
+#### Convolution of two uniform densities
+
+Let $f(x) = \mathbf{1}_{[0, 1]}(x)$ be the indicator of the unit interval:
+
+$$f(x) = \begin{cases} 1 & \text{if } x \in [0, 1] \\ 0 & \text{otherwise} \end{cases}$$
+
+Evaluate the convolution:
+
+$$(f * f)(x) = \int_{-\infty}^\infty f(t)f(x - t)\,dt$$
+
+for all $x \in \mathbb{R}$.
+:::
+
+::: {#sol-miller-int-uniform-convolution}
+The integrand $f(t)f(x - t)$ equals $1$ when both $t \in [0, 1]$ and $x - t \in [0, 1]$, and equals $0$ otherwise.
+
+The condition $0 \le x - t \le 1$ rearranges to:
+
+$$x - 1 \le t \le x$$
+
+For this interval to overlap with $t \in [0, 1]$, we must have $x \ge 0$ and $x - 1 \le 1$, meaning $0 \le x \le 2$. Outside $[0, 2]$, $(f * f)(x) = 0$.
+
+For $x \in [0, 2]$, we distinguish two cases:
+
+- **Case 1: $0 \le x \le 1$.**
+  The overlapping bounds for $t$ are $[0, x]$:
+
+  $$(f * f)(x) = \int_0^x 1\,dt = x$$
+
+- **Case 2: $1 \le x \le 2$.**
+  The overlapping bounds for $t$ are $[x - 1, 1]$:
+
+  $$(f * f)(x) = \int_{x-1}^1 1\,dt = 1 - (x - 1) = 2 - x$$
+
+Combining the cases:
+
+$$(f * f)(x) = \begin{cases} x & \text{if } 0 \le x \le 1 \\ 2 - x & \text{if } 1 < x \le 2 \\ 0 & \text{otherwise} \end{cases}$$
+
+*Remark:* In probability theory, if $X_1, X_2 \sim \text{Uniform}(0, 1)$ independently, the probability density function of their sum $S = X_1 + X_2$ is the convolution of their individual densities, producing this symmetric triangular distribution on $[0, 2]$.
+:::
