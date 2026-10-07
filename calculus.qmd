@@ -48,6 +48,12 @@ format:
 
 {{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
 
+{{< slidebreak >}}
+
+### Exercises: Double integrals {#sec-exercises-double-integrals}
+
+{{< include mds/_subfiles/calculus-review/_exr-calc-integrals-mv.qmd >}}
+
 ## Further reading {#sec-additional-resources}
 
 - @mosaiccalc
@@ -55,6 +61,7 @@ format:
 - @calclifesaver
 - @larsonCalc11e
 - @problifesavercalc
+  The calculus review exercises and worked solutions across this page and in [Vector Calculus](vector-calculus.qmd#sec-exercises-partial-derivatives) are adapted from this supplemental review chapter.
    - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
    - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - @realanalysislifesaver (the rigorous foundations behind these results)

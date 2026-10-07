@@ -23,3 +23,9 @@ Calculus and a worked example from probability.
 ### Fundamental Theorem of Calculus
 
 {{< include mds/_subfiles/_calc_integrals_ftc.qmd >}}
+
+{{< slidebreak >}}
+
+### Exercises: Integration {#sec-exercises-integrals-1d}
+
+{{< include mds/_subfiles/calculus-review/_exr-calc-integrals-1d.qmd >}}

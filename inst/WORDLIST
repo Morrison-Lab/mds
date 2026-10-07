@@ -34,6 +34,7 @@ eigenspace
 Eigenspaces
 emplate
 equalities
+erf
 exponentials
 factorizations
 glitchy
@@ -49,6 +50,8 @@ Invertible
 invertible
 Krohn
 lintr
+Maclaurin
+Mascheroni
 memoization
 minimizer
 minimizers
@@ -61,6 +64,7 @@ positivity
 precalculus
 quadratically
 qwt
+Rayleigh
 RevealJS
 Roch
 rulesets

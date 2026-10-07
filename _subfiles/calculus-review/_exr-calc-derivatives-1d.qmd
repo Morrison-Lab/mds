@@ -1,0 +1,414 @@
+::: {.callout-note collapse="true"}
+#### Source and attribution
+
+The exercises and solutions in this section are adapted from @problifesavercalc
+(Steven J. Miller, *The Probability Lifesaver: Calculus Review Problems*, 2016).
+:::
+
+::: {#exr-miller-deriv-polynomial-root}
+#### Derivative of polynomial and power functions
+
+Find the derivative of
+
+$$f(x) = 4x^5 + 3x^2 + x^{1/3}$$
+:::
+
+::: {#sol-miller-deriv-polynomial-root}
+Differentiate term by term using the constant multiple rule (@thm-deriv-const-factor) and the power rule (@thm-deriv-polynomial):
+
+$$\ba
+\dif{}{x}(4x^5) &= 4 \cd (5x^4) = 20x^4
+\\
+\dif{}{x}(3x^2) &= 3 \cd (2x) = 6x
+\\
+\dif{}{x}(x^{1/3}) &= \frac{1}{3}x^{1/3 - 1} = \frac{1}{3}x^{-2/3}
+\ea$$
+
+Combining the three terms yields:
+
+$$f'(x) = 20x^4 + 6x + \frac{1}{3}x^{-2/3}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-product-poly-cos}
+#### Derivative of a product
+
+Find the derivative of
+
+$$f(x) = (x^4 + 3x^2 + 8)\cos x$$
+:::
+
+::: {#sol-miller-deriv-product-poly-cos}
+Apply the product rule (@thm-product-rule) with:
+
+$$u(x) = x^4 + 3x^2 + 8, \qquad v(x) = \cos x$$
+
+Their derivatives are:
+
+$$u'(x) = 4x^3 + 6x, \qquad v'(x) = -\sin x$$
+
+By the product rule:
+
+$$\ba
+f'(x) &= u'(x)v(x) + u(x)v'(x)
+\\
+&= (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x
+\ea$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-chain-log}
+#### Chain rule with logarithm
+
+Find the derivative of
+
+$$f(x) = \log(1 - x^2)$$
+
+for $x \in (-1, 1)$.
+:::
+
+::: {#sol-miller-deriv-chain-log}
+Apply the chain rule for logarithms (@cor-deriv-log-chain): if $g(x) = 1 - x^2$, then $g'(x) = -2x$, and
+
+$$f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}$$
+
+*Remark:* A common pitfall in chain rule problems is evaluating the outer derivative at $x$ rather than at the inner value $g(x)$. The denominator is $g(x) = 1 - x^2$, not $x$.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-log-simplify}
+#### Derivative after logarithmic simplification
+
+Find the derivative of
+
+$$f(x) = \log(4x) - \log(2x)$$
+
+for $x > 0$.
+:::
+
+::: {#sol-miller-deriv-log-simplify}
+Simplify before differentiating using the quotient property of logarithms:
+
+$$f(x) = \log(4x) - \log(2x) = \log\paren{\frac{4x}{2x}} = \log 2$$
+
+Because $\log 2$ is constant with respect to $x$, the constant rule (@thm-deriv-const) gives:
+
+$$f'(x) = 0$$
+
+*Remark:* While one could apply the chain rule separately to each term ($\frac{4}{4x} - \frac{2}{2x} = \frac{1}{x} - \frac{1}{x} = 0$), simplifying algebraically first is faster and prevents arithmetic errors.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-gaussian-kernel}
+#### Derivative of the standard Gaussian kernel
+
+Find the derivative of
+
+$$f(x) = \exp{-\frac{x^2}{2}}$$
+:::
+
+::: {#sol-miller-deriv-gaussian-kernel}
+Apply the chain rule (@thm-chain-rule) with outer function $\exp{u}$ and inner function $u(x) = -x^2/2$. Since $\dif{}{u}\exp{u} = \exp{u}$ (@thm-deriv-exp) and $u'(x) = -x$:
+
+$$f'(x) = u'(x)\exp{u(x)} = -x\exp{-\frac{x^2}{2}}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-second-gaussian-kernel}
+#### Second derivative of the Gaussian kernel
+
+Find the second derivative of
+
+$$f(x) = \exp{-\frac{x^2}{2}}$$
+:::
+
+::: {#sol-miller-deriv-second-gaussian-kernel}
+From @exr-miller-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp{-x^2/2}$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp{-x^2/2}$:
+
+$$\ba
+u'(x) &= -1
+\\
+v'(x) &= -x\exp{-\frac{x^2}{2}}
+\ea$$
+
+Therefore:
+
+$$\ba
+f''(x) &= u'(x)v(x) + u(x)v'(x)
+\\
+&= (-1)\exp{-\frac{x^2}{2}} + (-x)\sb{-x\exp{-\frac{x^2}{2}}}
+\\
+&= (x^2 - 1)\exp{-\frac{x^2}{2}}
+\ea$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-product-chain-composite}
+#### Combining product and chain rules
+
+Find the derivative of
+
+$$f(x) = \exp{x^8}\cos(3x^4)$$
+:::
+
+::: {#sol-miller-deriv-product-chain-composite}
+Apply the product rule (@thm-product-rule) to $u(x) = \exp{x^8}$ and $v(x) = \cos(3x^4)$:
+
+$$f'(x) = u'(x)v(x) + u(x)v'(x)$$
+
+Compute $u'(x)$ and $v'(x)$ via the chain rule (@thm-chain-rule):
+
+$$\ba
+u'(x) &= 8x^7 \exp{x^8}
+\\
+v'(x) &= -12x^3 \sin(3x^4)
+\ea$$
+
+Substitute both derivatives into the product rule:
+
+$$\ba
+f'(x) &= 8x^7 \exp{x^8}\cos(3x^4) - 12x^3 \exp{x^8}\sin(3x^4)
+\\
+&= 4x^3 \exp{x^8}\sb{2x^4 \cos(3x^4) - 3\sin(3x^4)}
+\ea$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-tangent-line-approx}
+#### Tangent line approximation
+
+Let $f(x) = 4x + \sqrt{2}\cos x$.
+
+1. Compute $f'(x)$.
+2. Find the equation of the tangent line to the curve $y = f(x)$ at $x = \pi/4$.
+3. Use the tangent line to approximate $f(\pi/4 + 0.01)$, and compare that approximation with the exact value.
+:::
+
+::: {#sol-miller-deriv-tangent-line-approx}
+**1.** Differentiate term by term:
+
+$$f'(x) = 4 - \sqrt{2}\sin x$$
+
+**2.** Evaluate $f$ and $f'$ at $x_0 = \pi/4$:
+
+$$\ba
+f(\pi/4) &= 4\paren{\frac{\pi}{4}} + \sqrt{2}\cos\paren{\frac{\pi}{4}} = \pi + \sqrt{2}\paren{\frac{\sqrt{2}}{2}} = \pi + 1
+\\
+f'(\pi/4) &= 4 - \sqrt{2}\sin\paren{\frac{\pi}{4}} = 4 - \sqrt{2}\paren{\frac{\sqrt{2}}{2}} = 4 - 1 = 3
+\ea$$
+
+Using the point-slope formula, the tangent line at $(\pi/4, \pi + 1)$ is:
+
+$$y - (\pi + 1) = 3\paren{x - \frac{\pi}{4}} \implies y = \pi + 1 + 3\paren{x - \frac{\pi}{4}}$$
+
+**3.** At $x = \pi/4 + 0.01$, the linear approximation (@eq-linear-approx) gives:
+
+$$f(\pi/4 + 0.01) \approx (\pi + 1) + 3(0.01) = \pi + 1.03 \approx 4.171593$$
+
+The exact value is:
+
+$$f(\pi/4 + 0.01) = 4\paren{\frac{\pi}{4} + 0.01} + \sqrt{2}\cos\paren{\frac{\pi}{4} + 0.01} \approx 4.171543$$
+
+The approximation error is $|4.171593 - 4.171543| \approx 0.00005$, on the order of $(0.01)^2 = 10^{-4}$.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-second-log-constant}
+#### Second derivative with an added constant
+
+Find the second derivative of
+
+$$f(x) = \log x + \sqrt{162}$$
+
+for $x > 0$.
+:::
+
+::: {#sol-miller-deriv-second-log-constant}
+Because $\sqrt{162}$ is constant with respect to $x$, its derivative is zero (@thm-deriv-const):
+
+$$f'(x) = \frac{1}{x} = x^{-1}$$
+
+Differentiating again via the power rule (@thm-deriv-polynomial):
+
+$$f''(x) = -x^{-2} = -\frac{1}{x^2}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-opt-gamma-kernel}
+#### Maximizing a gamma-family kernel
+
+Find the maximum value of
+
+$$f(x) = x^4 e^{-x}$$
+
+on the interval $[0, \infty)$.
+:::
+
+::: {#sol-miller-deriv-opt-gamma-kernel}
+Differentiate using the product rule:
+
+$$f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)$$
+
+On $[0, \infty)$, $e^{-x} > 0$, so $f'(x) = 0$ only at $x = 0$ and $x = 4$.
+
+Evaluate $f$ at the boundary and critical points:
+
+- At $x = 0$: $f(0) = 0$.
+- At $x = 4$: $f(4) = 4^4 e^{-4} = 256 e^{-4} \approx 4.6888$.
+- As $x \to \infty$: exponential decay dominates polynomial growth, so $\lim_{x \to \infty} x^4 e^{-x} = 0$.
+
+Since $f(x) \ge 0$ for all $x \ge 0$ and $f(4) > 0$, the global maximum occurs at $x = 4$, with maximum value $256/e^4$.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-classify-critical-points}
+#### Classifying critical points with the second derivative test
+
+Find the critical points of
+
+$$f(x) = 4x^3 - 3x^2$$
+
+and decide whether each is a local maximum, a local minimum, or an inflection point.
+:::
+
+::: {#sol-miller-deriv-classify-critical-points}
+Compute the first derivative:
+
+$$f'(x) = 12x^2 - 6x = 6x(2x - 1)$$
+
+Setting $f'(x) = 0$ gives critical points at $x = 0$ and $x = 1/2$.
+
+Compute the second derivative:
+
+$$f''(x) = 24x - 6$$
+
+Apply the second derivative test at each critical point:
+
+- At $x = 0$: $f''(0) = -6 < 0$, so $x = 0$ is a strict local maximum.
+- At $x = 1/2$: $f''(1/2) = 24(1/2) - 6 = 6 > 0$, so $x = 1/2$ is a strict local minimum.
+
+Inflection points occur where the second derivative changes sign ($f''(x) = 0$ at $x = 1/4$). Because $f''$ is non-zero at both critical points, neither is an inflection point.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-quotient-or-factor}
+#### Derivative of a rational function
+
+Find the derivative of
+
+$$f(x) = \frac{x^2 - 1}{x - 1}$$
+
+for $x \ne 1$.
+:::
+
+::: {#sol-miller-deriv-quotient-or-factor}
+Factor the numerator before differentiating:
+
+$$f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)$$
+
+Differentiating directly gives $f'(x) = 1$.
+
+*Alternative (quotient rule):* Using @thm-quotient-rule with $u(x) = x^2 - 1$ and $v(x) = x - 1$:
+
+$$f'(x) = \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} = \frac{x^2 - 2x + 1}{(x - 1)^2} = \frac{(x - 1)^2}{(x - 1)^2} = 1$$
+
+Both methods yield $1$, but factoring first eliminates tedious algebraic simplification.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-generalized-power-rule}
+#### Generalized power rule
+
+Find the derivative of
+
+$$f(x) = \sqrt[3]{(5x - 2)^2} = (5x - 2)^{2/3}$$
+
+for $x \ne 2/5$.
+:::
+
+::: {#sol-miller-deriv-generalized-power-rule}
+Apply the generalized power rule $\dif{}{x}[g(x)]^r = r[g(x)]^{r-1}g'(x)$ with $g(x) = 5x - 2$ and $r = 2/3$:
+
+$$f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cd 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}$$
+
+*Remark:* Omitting the inner derivative $g'(x) = 5$ is a frequent mistake when applying the generalized power rule.
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-find-slopes}
+#### Finding points with a prescribed slope
+
+Let $f(x) = \frac{1}{3}x^3 + x^2 - x - 1$. Find all points on the graph of $f$ where the slope is:
+
+1. $-1$
+2. $2$
+3. $0$
+:::
+
+::: {#sol-miller-deriv-find-slopes}
+The slope is given by the derivative:
+
+$$f'(x) = x^2 + 2x - 1$$
+
+**1. Slope $-1$:** Solve $x^2 + 2x - 1 = -1 \iff x^2 + 2x = 0 \iff x(x + 2) = 0$.
+The roots are $x = 0$ and $x = -2$.
+Evaluating $f$:
+$f(0) = -1$ and $f(-2) = -\frac{8}{3} + 4 + 2 - 1 = \frac{7}{3}$.
+The points are $(0, -1)$ and $(-2, 7/3)$.
+
+**2. Slope $2$:** Solve $x^2 + 2x - 1 = 2 \iff x^2 + 2x - 3 = 0 \iff (x + 3)(x - 1) = 0$.
+The roots are $x = -3$ and $x = 1$.
+Evaluating $f$:
+$f(-3) = -9 + 9 + 3 - 1 = 2$ and $f(1) = \frac{1}{3} + 1 - 1 - 1 = -\frac{2}{3}$.
+The points are $(-3, 2)$ and $(1, -2/3)$.
+
+**3. Slope $0$:** Solve $x^2 + 2x - 1 = 0$.
+By the quadratic formula:
+
+$$x = \frac{-2 \pm \sqrt{4 - 4(1)(-1)}}{2} = \frac{-2 \pm \sqrt{8}}{2} = -1 \pm \sqrt{2}$$
+:::
+
+{{< slidebreak >}}
+
+::: {#exr-miller-deriv-second-product}
+#### Second derivative of a product
+
+Find the second derivative of
+
+$$f(x) = (x^4 + 3x^2 + 8)\cos x$$
+:::
+
+::: {#sol-miller-deriv-second-product}
+From @exr-miller-deriv-product-poly-cos, the first derivative is:
+
+$$f'(x) = (4x^3 + 6x)\cos x - (x^4 + 3x^2 + 8)\sin x$$
+
+Differentiate each term via the product rule:
+
+$$\ba
+\dif{}{x}\sb{(4x^3 + 6x)\cos x} &= (12x^2 + 6)\cos x - (4x^3 + 6x)\sin x
+\\
+\dif{}{x}\sb{-(x^4 + 3x^2 + 8)\sin x} &= -(4x^3 + 6x)\sin x - (x^4 + 3x^2 + 8)\cos x
+\ea$$
+
+Combining and grouping like trigonometric terms:
+
+$$\ba
+f''(x) &= \sb{(12x^2 + 6) - (x^4 + 3x^2 + 8)}\cos x - 2(4x^3 + 6x)\sin x
+\\
+&= (-x^4 + 9x^2 - 2)\cos x - (8x^3 + 12x)\sin x
+\ea$$
+:::

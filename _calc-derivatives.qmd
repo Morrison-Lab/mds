@@ -305,3 +305,15 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 {{< include mds/_subfiles/vector-calc/_exr-flat-point.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_sol-flat-point.qmd >}}
+
+{{< slidebreak >}}
+
+### Exercises: Derivatives {#sec-exercises-derivatives-1d}
+
+{{< include mds/_subfiles/calculus-review/_exr-calc-derivatives-1d.qmd >}}
+
+{{< slidebreak >}}
+
+### Taylor series {#sec-taylor-series}
+
+{{< include mds/_subfiles/calculus-review/_exr-calc-taylor-1d.qmd >}}
