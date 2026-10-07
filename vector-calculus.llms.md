@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 17:25:57 (PDT)
+Last modified: 2026-10-06 23:50:53 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -1663,6 +1663,7 @@ Here the objective ([Definition 23](#def-minimization-problem)) is a quadratic 
 See also the [Linear Algebra and Vector Calculus further reading](linear-algebra.llms.md#sec-additional-resources).
 
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
+- [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
 
 ## References
 

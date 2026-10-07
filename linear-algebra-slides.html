@@ -353,7 +353,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-06 17:25:57 (PDT)</p>
+  <p class="date">Last modified: 2026-10-06 23:50:53 (PDT)</p>
 </section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -1314,7 +1314,7 @@ f(\tilde{x})
 <p><strong>Videos</strong></p>
 </div>
 <div class="callout-content">
-<p>Two chapters of the <em>Essence of linear algebra</em> series by 3Blue1Brown show the results above geometrically:</p>
+<p>Two chapters of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"><em>Essence of linear algebra</em></a> series by 3Blue1Brown show the results above geometrically:</p>
 <ul>
 <li>
 <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE">Linear transformations and matrices</a> (Chapter 3) shows why a linear map is fixed by where it sends the indicator vectors, which become the columns of its matrix (<a href="#/def-matrix-of-linear-map" class="quarto-xref">Definition&nbsp;32</a>).</li>
@@ -4891,6 +4891,25 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <p><span class="proof-title"><em>Remark 27</em> (Real and complex eigenvalues). </span>These notes take <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\tilde{v}\)</span> to be real. <span class="citation" data-cites="banerjee2014linear">Banerjee and Roy (<a href="#/references" role="doc-biblioref" onclick="">2014, chap. 11</a>, Definition 11.1, pp.&nbsp;312-313)</span> also allows <a href="./algebra.html#def-complex-number">complex</a> eigenvalues and eigenvectors, because some real matrices, such as a rotation by <span class="math inline">\(90\)</span> degrees, have no real eigenvalues <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 11</a>, Example 11.2, p.&nbsp;312)</span>.</p>
 <p>For example, <span class="math inline">\(\mathbf{R} = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}\)</span> rotates each vector in the plane counterclockwise by <span class="math inline">\(90\)</span> degrees: <span class="math inline">\(\mathbf{R}\,(v_1, v_2) = (-v_2, v_1)\)</span>. Suppose <span class="math inline">\(\mathbf{R}\tilde{v} = \lambda\tilde{v}\)</span> for a real number <span class="math inline">\(\lambda\)</span>. Matching entries gives <span class="math inline">\(-v_2 = \lambda v_1\)</span> and <span class="math inline">\(v_1 = \lambda v_2\)</span>. Substituting the second equation into the first gives <span class="math inline">\(-v_2 = \lambda^2 v_2\)</span>, so <span class="math inline">\((1 + \lambda^2)\, v_2 = 0\)</span>. Since <span class="math inline">\(1 + \lambda^2 &gt; 0\)</span>, <span class="math inline">\(v_2 = 0\)</span>, and then <span class="math inline">\(v_1 = \lambda v_2 = 0\)</span>. So the only solution is <span class="math inline">\(\tilde{v} = \tilde{0}\)</span>, and <span class="math inline">\(\mathbf{R}\)</span> has no real eigenvalue.</p>
 </div>
+</section><section class="slide level2"><div title="Video">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Video</strong></p>
+</div>
+<div class="callout-content">
+<p>Chapter 14 of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"><em>Essence of linear algebra</em></a> series by 3Blue1Brown shows the geometric meaning of eigenvectors and eigenvalues:</p>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=PFDu9oVAE-g">Eigenvectors and eigenvalues</a> shows how certain vectors maintain their direction during a linear transformation and are merely stretched or squished by an eigenvalue factor (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;75</a>).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section><section class="slide level2"><div id="thm-spectral" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 68 (Spectral theorem for symmetric matrices)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is a <span class="math inline">\(p \times p\)</span> symmetric matrix (<a href="#/def-symmetric-matrix" class="quarto-xref">Definition&nbsp;62</a>) with real entries, then there are a <span class="math inline">\(p \times p\)</span> orthogonal matrix <span class="math inline">\(\mathbf{Q}\)</span> (<a href="#/def-orthogonal-matrix" class="quarto-xref">Definition&nbsp;69</a>) and a <span class="math inline">\(p \times p\)</span> diagonal matrix <span class="math inline">\(\mathbf{\Lambda}\)</span> (<a href="#/def-diagonal-matrix" class="quarto-xref">Definition&nbsp;63</a>) with real diagonal entries <span class="math inline">\(\lambda_1, \ldots, \lambda_p\)</span> such that</p>
 <p><span class="math display">\[
@@ -5888,7 +5907,26 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
           width: 1px!important;
           overflow: hidden!important;
           display:block!important;
-      }</style></aside></section><section class="slide level2"><div id="thm-det-diagonal" class="theorem">
+      }</style></aside></section><section class="slide level2"><div title="Video">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Video</strong></p>
+</div>
+<div class="callout-content">
+<p>Chapter 6 of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"><em>Essence of linear algebra</em></a> series by 3Blue1Brown shows the geometric meaning of the determinant:</p>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=Ip3X9LOh2dk">The determinant</a> shows how the determinant measures the factor by which a linear transformation scales areas and volumes, and why a zero determinant corresponds to compressing space into a lower dimension.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><div id="thm-det-diagonal" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 73 (Determinant of a diagonal matrix)</strong></span> The determinant (<a href="#/def-determinant" class="quarto-xref">Definition&nbsp;80</a>) of a <span class="math inline">\(p \times p\)</span> diagonal matrix (<a href="#/def-diagonal-matrix" class="quarto-xref">Definition&nbsp;63</a>) is the product of its diagonal entries:</p>
 <p><span class="math display">\[
 \det\mathopen{}\left(
@@ -8332,6 +8370,8 @@ i &amp; 0
 <li><span class="citation" data-cites="searle2017matrix">Searle and Khuri (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></li>
 <li>
 <span class="citation" data-cites="petersen2012matrix">Petersen and Pedersen (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span> is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and <a href="./calculus.html#def-derivative">derivatives</a> of vectors and matrices, so it is a quick place to look up a formula this page proves.</li>
+<li>
+<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a> is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.</li>
 </ul></section><section id="references" class="slide level2 unnumbered smaller scrollable"><h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-axler2024linear" class="csl-entry" role="listitem">

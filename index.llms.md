@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-06 17:25:57 (PDT)
+Last modified: 2026-10-06 23:50:53 (PDT)
 
 ## Welcome
 
@@ -28,8 +28,16 @@ These notes collect the mathematics that data science courses assume: mathematic
 These resources cover related material.
 
 - [Mathematical Methods in Data Science (MMiDS)](https://mmids-textbook.github.io/index.html) by Sebastien Roch (University of Wisconsin-Madison), is available online and in print from Cambridge University Press. It grew out of MATH 535, a one-semester advanced undergraduate and master’s course at the University of Wisconsin-Madison. It is written as an invitation to data science and AI for math students, and as a mathematical companion to machine learning, AI, and statistics courses. Its chapters treat least squares, optimization (finding where a function is smallest or largest), the singular value decomposition, spectral graph theory, probabilistic models, random walks on graphs, and neural networks, so they overlap with our linear algebra and vector calculus pages.
+
 - [UCLA Biostat 216, Mathematical Methods for Biostatistics](https://github.com/ucla-biostat-216) is a course for first-year biostatistics MS and PhD students at UCLA. As of October 2026, the most recent course site in the organization is the [2024 Fall edition](https://ucla-biostat-216.github.io/2024fall/), taught by Hua Zhou. Its [schedule](https://ucla-biostat-216.github.io/2024fall/schedule/schedule.html) links slides on vectors, matrices, vector spaces, rank, orthogonal projection, matrix inverses, least squares, determinants, eigendecompositions, positive (semi)definite matrices, the SVD, and multivariate calculus and optimization. Those topics overlap with our [linear algebra](linear-algebra.llms.md) and [vector calculus](vector-calculus.llms.md) pages.
+
 - [Calculus for Machine Learning](https://www.youtube.com/playlist?list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx) is a YouTube playlist by Jon Krohn (56 videos as of October 2026), taken from his Machine Learning Foundations series. It includes limits, derivative rules, partial derivatives, and integrals, so it overlaps with our [calculus](calculus.llms.md) and [vector calculus](vector-calculus.llms.md) pages. Those pages link the individual videos in the sections they match.
+
+- [3Blue1Brown playlists](https://www.youtube.com/@3blue1brown/playlists) by Grant Sanderson produce animated visual explanations of core mathematical concepts. Recommended playlists include:
+
+  - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) covers vectors, linear combinations, linear transformations, matrix multiplication, determinants, inverse matrices, dot and cross products, change of basis, and eigenvectors and eigenvalues, overlapping with our [linear algebra](linear-algebra.llms.md) page.
+  - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our [calculus](calculus.llms.md) page.
+  - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.llms.md) page.
 
 ## Using these notes in another site
 
