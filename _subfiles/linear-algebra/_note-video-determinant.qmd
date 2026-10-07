@@ -1,0 +1,7 @@
+::: {.callout-tip title="Video"}
+Chapter 6 of the [*Essence of linear algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) series by 3Blue1Brown
+shows the geometric meaning of the determinant:
+
+- [The determinant](https://www.youtube.com/watch?v=Ip3X9LOh2dk)
+  shows how the determinant measures the factor by which a linear transformation scales areas and volumes, and why a zero determinant corresponds to compressing space into a lower dimension.
+:::

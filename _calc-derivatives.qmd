@@ -378,6 +378,10 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a *stationary p
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-taylor-poly-zero.qmd >}}
 
 {{< slidebreak >}}

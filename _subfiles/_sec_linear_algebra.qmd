@@ -674,6 +674,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_note-video-eigenvalues.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-spectral.qmd >}}
 
 {{< slidebreak >}}
@@ -711,6 +715,10 @@
 ## Determinants
 
 {{< include mds/_subfiles/linear-algebra/_def-determinant.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_note-video-determinant.qmd >}}
 
 {{< slidebreak >}}
 

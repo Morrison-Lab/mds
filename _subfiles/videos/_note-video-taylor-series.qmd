@@ -1,0 +1,7 @@
+::: {.callout-tip title="Video"}
+Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown
+develops the geometric and polynomial intuition behind Taylor approximations:
+
+- [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4)
+  shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (@def-taylor-polynomial).
+:::

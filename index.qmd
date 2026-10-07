@@ -88,6 +88,16 @@ These resources cover related material.
   It includes limits, derivative rules, partial derivatives, and integrals,
   so it overlaps with our [calculus](calculus.qmd) and [vector calculus](vector-calculus.qmd) pages.
   Those pages link the individual videos in the sections they match.
+- [3Blue1Brown playlists](https://www.youtube.com/@3blue1brown/playlists)
+  by Grant Sanderson produce animated visual explanations of core mathematical concepts.
+  Recommended playlists include:
+
+  - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+    covers vectors, linear combinations, linear transformations, matrix multiplication, determinants, inverse matrices, dot and cross products, change of basis, and eigenvectors and eigenvalues, overlapping with our [linear algebra](linear-algebra.qmd) page.
+  - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
+    covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our [calculus](calculus.qmd) page.
+  - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+    covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.qmd) page.
 
 ## Using these notes in another site {.unnumbered}
 
