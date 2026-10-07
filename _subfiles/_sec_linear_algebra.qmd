@@ -989,3 +989,16 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-not-hermitian.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-skew-hermitian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-skew-hermitian-matrix.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-hermitian-skew-hermitian-decomposition.qmd >}}
+

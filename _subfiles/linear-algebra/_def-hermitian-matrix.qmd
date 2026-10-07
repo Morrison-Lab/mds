@@ -7,19 +7,10 @@ if it equals its conjugate transpose (@def-conjugate-transpose):
 
 $$\matr{A}^{\mathsf{H}} = \matr{A}.$$
 
-A square complex matrix $\matr{A}$ is **skew-Hermitian** (or **anti-Hermitian**)
-if $\matr{A}^{\mathsf{H}} = -\matr{A}$.
-
 :::
 
 ::: notes
 The term *self-adjoint* comes directly from @thm-adjoint-inner-product:
 when $\matr{A}$ is Hermitian, $\iprod{\matr{A}\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{\matr{A}\vecf{v}}$ for all $\vecf{u}, \vecf{v} \in \mathbb{C}^n$.
 The linear operator moves across the inner product without change.
-
-Every real symmetric matrix is Hermitian, because for real matrices $\matr{A}^{\mathsf{H}} = \tp{\matr{A}}$.
-Just as any real square matrix can be uniquely split into a symmetric part and a skew-symmetric part,
-every complex square matrix $\matr{A}$ can be uniquely written as the sum of a Hermitian matrix and a skew-Hermitian matrix:
-
-$$\matr{A} = \underbrace{\frac{\matr{A} + \matr{A}^{\mathsf{H}}}{2}}_{\text{Hermitian}} + \underbrace{\frac{\matr{A} - \matr{A}^{\mathsf{H}}}{2}}_{\text{skew-Hermitian}}.$$
 :::

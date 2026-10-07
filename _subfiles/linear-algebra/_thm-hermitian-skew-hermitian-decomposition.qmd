@@ -1,0 +1,55 @@
+:::{#thm-hermitian-skew-hermitian-decomposition}
+#### Hermitian and skew-Hermitian decomposition
+
+Every square complex matrix $\matr{A} \in \mathbb{C}^{n \times n}$
+can be uniquely expressed as the sum of a Hermitian matrix $\matr{H}$ (@def-hermitian-matrix)
+and a skew-Hermitian matrix $\matr{S}$ (@def-skew-hermitian-matrix):
+
+$$\matr{A} = \matr{H} + \matr{S},$$
+
+where
+
+$$\matr{H} = \frac{\matr{A} + \matr{A}^{\mathsf{H}}}{2}
+\quad \text{and} \quad
+\matr{S} = \frac{\matr{A} - \matr{A}^{\mathsf{H}}}{2}.$$
+
+:::
+
+::: proof
+
+**Existence**:
+Define $\matr{H} = \frac{1}{2}(\matr{A} + \matr{A}^{\mathsf{H}})$ and $\matr{S} = \frac{1}{2}(\matr{A} - \matr{A}^{\mathsf{H}})$.
+Their sum is:
+
+$$\matr{H} + \matr{S} = \frac{\matr{A} + \matr{A}^{\mathsf{H}}}{2} + \frac{\matr{A} - \matr{A}^{\mathsf{H}}}{2} = \frac{2\matr{A}}{2} = \matr{A}.$$
+
+Applying the properties of the Hermitian adjoint (@thm-hermitian-adjoint-properties):
+
+$$
+\ba
+\matr{H}^{\mathsf{H}}
+&= \paren{\frac{\matr{A} + \matr{A}^{\mathsf{H}}}{2}}^{\mathsf{H}}
+= \frac{\matr{A}^{\mathsf{H}} + (\matr{A}^{\mathsf{H}})^{\mathsf{H}}}{2}
+= \frac{\matr{A}^{\mathsf{H}} + \matr{A}}{2}
+= \matr{H},
+\\
+\matr{S}^{\mathsf{H}}
+&= \paren{\frac{\matr{A} - \matr{A}^{\mathsf{H}}}{2}}^{\mathsf{H}}
+= \frac{\matr{A}^{\mathsf{H}} - (\matr{A}^{\mathsf{H}})^{\mathsf{H}}}{2}
+= \frac{\matr{A}^{\mathsf{H}} - \matr{A}}{2}
+= -\matr{S}.
+\ea
+$$
+
+Thus $\matr{H}$ is Hermitian and $\matr{S}$ is skew-Hermitian.
+
+**Uniqueness**:
+Suppose $\matr{A} = \matr{H}' + \matr{S}'$ with $(\matr{H}')^{\mathsf{H}} = \matr{H}'$ and $(\matr{S}')^{\mathsf{H}} = -\matr{S}'$.
+Taking the Hermitian adjoint of both sides yields:
+
+$$\matr{A}^{\mathsf{H}} = (\matr{H}' + \matr{S}')^{\mathsf{H}} = (\matr{H}')^{\mathsf{H}} + (\matr{S}')^{\mathsf{H}} = \matr{H}' - \matr{S}'.$$
+
+Adding $\matr{A} = \matr{H}' + \matr{S}'$ and $\matr{A}^{\mathsf{H}} = \matr{H}' - \matr{S}'$ gives $\matr{A} + \matr{A}^{\mathsf{H}} = 2\matr{H}'$, so $\matr{H}' = \frac{1}{2}(\matr{A} + \matr{A}^{\mathsf{H}}) = \matr{H}$.
+Subtracting the two equations gives $\matr{A} - \matr{A}^{\mathsf{H}} = 2\matr{S}'$, so $\matr{S}' = \frac{1}{2}(\matr{A} - \matr{A}^{\mathsf{H}}) = \matr{S}$.
+
+:::

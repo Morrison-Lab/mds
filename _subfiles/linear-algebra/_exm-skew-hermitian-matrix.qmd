@@ -1,0 +1,30 @@
+:::{#exm-skew-hermitian-matrix}
+#### A skew-Hermitian matrix
+
+The matrix
+
+$$
+\matr{A} =
+\begin{bmatrix}
+2\,i & 1 + i \\
+-1 + i & 0
+\end{bmatrix}
+$$
+
+is skew-Hermitian:
+transposing and conjugating gives
+
+$$
+\matr{A}^{\mathsf{H}} =
+\begin{bmatrix}
+\overline{2\,i} & \overline{-1 + i} \\
+\overline{1 + i} & \overline{0}
+\end{bmatrix} =
+\begin{bmatrix}
+-2\,i & -1 - i \\
+1 - i & 0
+\end{bmatrix} = -\matr{A}.
+$$
+
+Its diagonal entries $2\,i$ and $0$ are purely imaginary.
+:::
