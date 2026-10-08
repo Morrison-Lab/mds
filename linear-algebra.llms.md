@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 15:39:12 (PDT)
+Last modified: 2026-10-08 23:13:21 (UTC)
 
 ## 1 Vectors
 
