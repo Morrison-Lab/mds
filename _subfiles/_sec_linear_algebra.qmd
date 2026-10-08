@@ -426,6 +426,28 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-half-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-half-space-plane.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-half-space-dimension.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-half-space-iris.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exr-half-space-sides.qmd >}}
+
+{{< include mds/_subfiles/linear-algebra/_sol-half-space-sides.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-rank-factorization.qmd >}}
 
 ### Sums and direct sums {#sec-direct-sums}

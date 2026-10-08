@@ -1,0 +1,15 @@
+:::{#exm-half-space-plane}
+#### Half-spaces of a line in the plane
+
+Let $\mathcal{H}$ be the line in $\reals^2$ with $\vec{w} = (1, 2)$ and $b = -2$ (@def-hyperplane),
+so $\mathcal{H} = \cb{\vx : x_1 + 2 x_2 - 2 = 0}$.
+Evaluate $\vec{w}^\top \vx + b$ at three points (@def-half-space):
+
+- At $(0, 0)$ it equals $0 + 0 - 2 = -2 < 0$, so $(0, 0) \in \mathcal{H}^-$.
+- At $(2, 0)$ it equals $2 + 0 - 2 = 0$, so $(2, 0) \in \mathcal{H}$.
+- At $(2, 1)$ it equals $2 + 2 - 2 = 2 > 0$, so $(2, 1) \in \mathcal{H}^+$.
+
+Moving from $(2, 0)$ in the direction $\vec{w} = (1, 2)$ gives $(3, 2)$,
+where the value is $3 + 4 - 2 = 5 > 0$.
+So the direction $\vec{w}$ leads into $\mathcal{H}^+$.
+:::

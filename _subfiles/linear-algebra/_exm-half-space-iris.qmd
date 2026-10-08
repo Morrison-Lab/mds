@@ -1,0 +1,54 @@
+:::{#exm-half-space-iris}
+#### Two iris species on either side of a line
+
+The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises.
+Take the 100 flowers of the species versicolor and virginica,
+and let $\vx = (x_1, x_2)$ be the petal length and petal width of one flower.
+A logistic regression of the species on $\vx$ gives a coefficient vector $\vec{w}$ and an intercept $b$.
+The line $\vec{w}^\top \vx + b = 0$ is a hyperplane in $\reals^2$ (@def-hyperplane),
+and the two species mostly fall in its two open half-spaces (@def-half-space).
+@fig-half-space-iris shows the line and the flowers.
+
+```{r}
+#| label: fig-half-space-iris
+#| fig-cap: >-
+#|   Petal length and width of versicolor and virginica irises,
+#|   with the line where a logistic regression is indifferent
+#|   between the two species
+#| fig-alt: >-
+#|   Scatter plot of petal width against petal length for 100 irises.
+#|   Versicolor points, in one color, are mostly to the lower left.
+#|   Virginica points, in another color, are mostly to the upper right.
+#|   A straight line runs between the two groups and separates most of them.
+two_species <- droplevels(subset(iris, Species != "setosa"))
+fit <- glm(
+  Species ~ Petal.Length + Petal.Width,
+  family = binomial,
+  data = two_species
+)
+w <- coef(fit)[c("Petal.Length", "Petal.Width")]
+b <- coef(fit)[["(Intercept)"]]
+two_species$score <- as.vector(
+  as.matrix(two_species[c("Petal.Length", "Petal.Width")]) %*% w + b
+)
+two_species$side <- ifelse(two_species$score > 0, "positive", "negative")
+ggplot2::ggplot(two_species) +
+  ggplot2::aes(x = Petal.Length, y = Petal.Width, colour = Species) +
+  ggplot2::geom_point() +
+  ggplot2::geom_abline(intercept = -b / w[[2]], slope = -w[[1]] / w[[2]]) +
+  ggplot2::labs(x = "Petal length (cm)", y = "Petal width (cm)")
+```
+
+```{r}
+#| label: half-space-iris-table
+#| code-fold: false
+table(two_species$Species, two_species$side)
+```
+
+The vector $\vec{w}$ points toward the virginica side,
+so the positive half-space $\mathcal{H}^+$ holds
+`r sum(two_species$side == "positive")` of the 100 flowers,
+and `r sum(two_species$Species == "virginica" & two_species$side == "positive")` of them are virginica.
+The line is a set of dimension $p - 1 = 1$,
+and each side is a region of the plane of dimension $p = 2$ (@thm-half-space-dimension).
+:::
