@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 10:36:07 (PDT)
+Last modified: 2026-10-08 10:46:00 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -100,7 +100,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >     index=["solution", "zero vector"],
 > )
 > #>                                                   beta                                        gradient
-> #> solution     [39.935861021170574, -0.1578447333536545]  [1.071498445526231e-11, 1.673470251262188e-10]
+> #> solution     [39.93586102117057, -0.15784473335365445]  [9.471534667682135e-12, 6.662048690486699e-11]
 > #> zero vector                                 [0.0, 0.0]               [-18381.600000000006, -1737437.6]
 > ```
 >
@@ -126,7 +126,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 1.071498e-11 1.673470e-10
+> #> [1] 9.471535e-12 6.662049e-11
 > #> 
 > #> 
 > #> $zero_vector
@@ -137,7 +137,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #> [1]   -18381.6 -1737437.6
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The same coefficients come from R’s `lm(mpg ~ horsepower, data = auto)`.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The same coefficients come from R’s `lm(mpg ~ horsepower, data = auto)`.
 
 > **NOTE:**
 >
