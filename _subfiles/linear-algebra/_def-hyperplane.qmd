@@ -13,7 +13,7 @@ Geometrically:
 
 - In $\mathbb{R}^2$ ($p = 2$), a hyperplane is a line: $w_1 x_1 + w_2 x_2 + b = 0$.
 - In $\mathbb{R}^3$ ($p = 3$), a hyperplane is a plane.
-- A hyperplane divides the space $\mathbb{R}^p$ into two **half-spaces**: $\{\vx : \vec{w}^\top \vx + b > 0\}$ and $\{\vx : \vec{w}^\top \vx + b < 0\}$.
+- A hyperplane divides the space $\mathbb{R}^p$ into two half-spaces, one on each side of it (@def-half-space).
 :::
 
 {{< slidebreak >}}

@@ -1,4 +1,4 @@
-:::{#exr-half-space-sides}
+::: {#exr-half-space-sides}
 #### Which side of the plane?
 
 Let $\mathcal{H}$ be the plane in $\reals^3$ with $\vec{w} = (1, 1, 1)$ and $b = -1$ (@exm-hyperplane-subspace).
