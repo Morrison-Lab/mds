@@ -1,0 +1,54 @@
+:::{#thm-holder-inequality}
+#### Holder's inequality
+
+Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space),
+and let $p, q \in [1, \infty]$ be conjugate exponents satisfying $\frac{1}{p} + \frac{1}{q} = 1$
+(with the convention that $q = \infty$ when $p = 1$, and $q = 1$ when $p = \infty$).
+If $f \in L^p(\mu)$ and $g \in L^q(\mu)$ (@def-lp-space),
+then their product $f g$ is [absolutely integrable](#def-absolutely-integrable) ($f g \in L^1(\mu)$) and satisfies:
+
+$$
+\norm{f g}_1 = \int_S \abs{f g} \, d\mu \le \norm{f}_p\,\norm{g}_q.
+$$
+
+When $p = q = 2$, this inequality is the Cauchy-Schwarz inequality for integrals.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-minkowski-inequality}
+#### Minkowski's inequality ($L^p$ triangle inequality)
+
+Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space) and let $1 \le p \le \infty$.
+For any functions $f, g \in L^p(\mu)$ (@def-lp-space), their sum $f + g$ is in $L^p(\mu)$ and satisfies:
+
+$$
+\norm{f + g}_p \le \norm{f}_p + \norm{g}_p.
+$$
+
+Together with absolute homogeneity $\norm{c f}_p = \abs{c}\,\norm{f}_p$ and definiteness,
+Minkowski's inequality establishes that $L^p(\mu)$ satisfies all axioms of a [normed vector space](linear-algebra.qmd#def-norm).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-holder-inequality}
+#### Applying Holder's inequality to finite sums and expectations
+
+1. **Finite vectors (Cauchy-Schwarz and taxicab bounds)**:
+   Equipping a finite set with the [counting measure](#def-counting-measure),
+   Holder's inequality for conjugate exponents $p, q$ gives:
+   $$
+   \sum_{i=1}^n \abs{x_i y_i} \le \paren{\sum_{i=1}^n \abs{x_i}^p}^{1/p} \paren{\sum_{i=1}^n \abs{y_i}^q}^{1/q}.
+   $$
+   Setting $p = 1, q = \infty$ gives $\sum_{i=1}^n \abs{x_i y_i} \le \norm{\vx}_1\,\norm{\vy}_\infty$.
+   Setting $p = q = 2$ gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.qmd#thm-cauchy-schwarz).
+
+2. **Covariance bound for random variables**:
+   On a probability space with measure $\Prob$ (@def-probability-measure),
+   taking $p = q = 2$ gives $\E[\abs{X Y}] \le \sqrt{\E[X^2]}\,\sqrt{\E[Y^2]}$,
+   guaranteeing that the covariance between any two square-integrable random variables is finite.
+
+:::

@@ -1,0 +1,52 @@
+:::{#def-lp-space}
+#### $L^p$ space and $L^p$ norm ($L^p(\mu)$, $\mathcal{L}^p$)
+
+Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
+For any real number $p \ge 1$, the **$L^p$ norm** of a [measurable function](#def-measurable-function) $f : S \to \reals$ is:
+
+$$
+\norm{f}_p \eqdef \paren{\int_S \abs{f}^p \, d\mu}^{1/p}.
+$$
+
+The space $\mathcal{L}^p(S, \salg, \mu)$ consists of all measurable functions $f : S \to \reals$ for which $\norm{f}_p < \infty$.
+To satisfy the definiteness axiom of a [norm](linear-algebra.qmd#def-norm) ($\norm{f}_p = 0$ if and only if $f = 0$),
+functions that are equal [almost everywhere](#def-almost-everywhere) ($\mu$-a.e.) are identified into equivalence classes.
+The resulting normed vector space is the **$L^p$ space**, denoted $L^p(S, \salg, \mu)$ (or simply $L^p(\mu)$).
+
+For $p = \infty$, the **essential supremum norm** (or **$L^\infty$ norm**) is:
+
+$$
+\norm{f}_\infty \eqdef \inf \cb{ C \ge 0 : \mu(\cb{s \in S : \abs{f(s)} > C}) = 0 }.
+$$
+
+The space $L^\infty(S, \salg, \mu)$ consists of equivalence classes of essentially bounded measurable functions.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-lp-space}
+#### An $L^1$ function not in $L^2$
+
+Consider the interval $(0, 1)$ equipped with the Borel $\sigma$-algebra (@def-borel-sigma-algebra)
+and Lebesgue measure $\mu$ (@def-lebesgue-measure).
+Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
+
+1. For $p = 1$:
+   $$
+   \norm{f}_1 = \int_0^1 x^{-1/2} \, dx = \sb{2 x^{1/2}}_0^1 = 2 < \infty,
+   $$
+   so $f \in L^1((0, 1), \mu)$.
+2. For $p = 2$:
+   $$
+   \abs{f(x)}^2 = \paren{x^{-1/2}}^2 = \frac{1}{x}.
+   $$
+   The integral is:
+   $$
+   \int_0^1 \frac{1}{x} \, dx = \lim_{\epsilon \to 0^+} \sb{\ln x}_\epsilon^1 = \lim_{\epsilon \to 0^+} (-\ln \epsilon) = \infty.
+   $$
+   Therefore, $\norm{f}_2 = \infty$, so $f \notin L^2((0, 1), \mu)$.
+
+This shows that $L^2 \subset L^1$ on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.
+
+:::
