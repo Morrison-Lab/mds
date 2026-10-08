@@ -1,7 +1,8 @@
 :::{#def-matrix-induced-inner-product}
 #### Matrix-induced inner product ($\matr{A}$-inner product)
 
-Let $\matr{A}$ be a $p \times p$ [symmetric positive definite matrix](#def-positive-definite).
+Let $\matr{A}$ be a $p \times p$ [symmetric positive definite matrix](#def-positive-definite)
+($\matr{A} = \tp{\matr{A}}$ and $\tp{\vx}\matr{A}\vx > 0$ for all nonzero $\vx \in \reals^p$).
 The **matrix-induced inner product** (or **$\matr{A}$-inner product**)
 on $\reals^p$ is defined for all $\vx, \vy \in \reals^p$ by
 
@@ -21,8 +22,19 @@ is an [inner product space](#def-inner-product).
 
 For every $p \times p$ symmetric positive definite matrix $\matr{A}$,
 the function $\iprod{\vx}{\vy}_{\matr{A}} = \tp{\vx} \matr{A} \vy$ satisfies the four inner product axioms (@def-inner-product):
+positivity, definiteness, linearity in the first slot, and symmetry.
+Thus $(\reals^p, \iprod{\cdot}{\cdot}_{\matr{A}})$ is an inner product space.
 
-- **positivity**: $\iprod{\vx}{\vx}_{\matr{A}} = \tp{\vx}\matr{A}\vx \ge 0$ for all $\vx \in \reals^p$;
+Conversely, every inner product on $\reals^p$ has this form for a unique symmetric positive definite matrix $\matr{A}$, whose $(i, j)$ entry is $A_{ij} = \iprod{\vecf{e}_i}{\vecf{e}_j}$, where $\vecf{e}_1, \ldots, \vecf{e}_p$ are the standard basis vectors (@def-indicator-vector).
+
+:::
+
+{{< slidebreak >}}
+
+::: proof
+
+- **positivity**: $\iprod{\vx}{\vx}_{\matr{A}} = \tp{\vx}\matr{A}\vx \ge 0$ for all $\vx \in \reals^p$,
+  because $\matr{A}$ is positive definite (@def-positive-definite);
 - **definiteness**: $\iprod{\vx}{\vx}_{\matr{A}} = 0$ if and only if $\vx = \vzero_{p \times 1}$,
   by definition of a positive definite matrix (@def-positive-definite);
 - **linearity in the first slot**: for all $\vx, \vy, \vecf{z} \in \reals^p$ and real numbers $a, b$,
@@ -62,7 +74,5 @@ the function $\iprod{\vx}{\vy}_{\matr{A}} = \tp{\vx} \matr{A} \vy$ satisfies the
   && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
   \ea
   $$
-
-Conversely, every inner product on $\reals^p$ has this form for a unique symmetric positive definite matrix $\matr{A}$, whose $(i, j)$ entry is $A_{ij} = \iprod{\ve_i}{\ve_j}$, where $\ve_1, \ldots, \ve_p$ are the standard basis vectors.
 
 :::
