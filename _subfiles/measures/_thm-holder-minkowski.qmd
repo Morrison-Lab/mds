@@ -47,7 +47,7 @@ Minkowski's inequality establishes that $L^p(\mu)$ satisfies all axioms of a [no
    Setting $p = q = 2$ gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.qmd#thm-cauchy-schwarz).
 
 2. **Covariance bound for random variables**:
-   On a probability space with measure $\Prob$ (@def-probability-measure),
+   On a probability space with measure $P$ (@def-probability-measure),
    taking $p = q = 2$ gives $\E{\abs{X Y}} \le \sqrt{\E{X^2}}\,\sqrt{\E{Y^2}}$,
    guaranteeing that the covariance between any two square-integrable random variables is finite.
 
