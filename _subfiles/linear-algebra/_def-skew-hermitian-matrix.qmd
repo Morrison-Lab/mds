@@ -9,9 +9,16 @@ $$\matr{A}^{\mathsf{H}} = -\matr{A}.$$
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-skew-hermitian-diagonal}
+#### The diagonal of a skew-Hermitian matrix
+
 Every entry of a skew-Hermitian matrix satisfies $a_{jk} = -\overline{a_{kj}}$.
 In particular, its diagonal entries satisfy $a_{jj} = -\overline{a_{jj}}$,
 which means $a_{jj} + \overline{a_{jj}} = 2\operatorname{Re}(a_{jj}) = 0$.
-Therefore, every diagonal entry of a skew-Hermitian matrix must be strictly imaginary (or zero).
+Therefore, every diagonal entry of a skew-Hermitian matrix must be purely imaginary (or zero).
+For example, $a_{jj} = 3\,i$ works, since $-\overline{3\,i} = -(-3\,i) = 3\,i$,
+but $a_{jj} = 3$ does not, since $-\overline{3} = -3$.
+
 :::

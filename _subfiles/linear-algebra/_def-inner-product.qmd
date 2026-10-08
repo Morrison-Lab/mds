@@ -15,7 +15,11 @@ for all $\vx, \vy, \vecf{z} \in \reals^p$ and all real numbers $a, b$:
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-inner-product-other-sources}
+#### The definition in other sources
+
 @axler2024linear [Definition 6.2, p. 183] states the same definition
 for any vector space over the real or complex numbers.
 Axler splits linearity in the first slot into additivity and homogeneity,
@@ -23,4 +27,5 @@ and his last property is *conjugate* symmetry,
 $\iprod{\vecf{u}}{\vecf{v}} = \overline{\iprod{\vecf{v}}{\vecf{u}}}$,
 which for real numbers is the same as symmetry.
 Symmetry and linearity in the first slot together give linearity in the second slot.
+
 :::

@@ -9,8 +9,13 @@ $$\matr{A}^{\mathsf{H}} = \matr{A}.$$
 
 :::
 
-::: notes
+{{< slidebreak >}}
+
+:::{#rem-hermitian-self-adjoint}
+#### Why "self-adjoint"
+
 The term *self-adjoint* comes directly from @thm-adjoint-inner-product:
 when $\matr{A}$ is Hermitian, $\iprod{\matr{A}\vecf{u}}{\vecf{v}} = \iprod{\vecf{u}}{\matr{A}\vecf{v}}$ for all $\vecf{u}, \vecf{v} \in \mathbb{C}^n$.
 The linear operator moves across the inner product without change.
+
 :::
