@@ -8,9 +8,16 @@ format:
     output-file: optimization-handout.pdf
   docx:
     output-file: optimization.docx
+resources:
+  - data/auto.csv
 ---
 
 {{< include latex-macros/macros.qmd >}}
+
+```{r}
+#| include: false
+reticulate::py_require(c("numpy", "pandas"))
+```
 
 {{< include mds/_subfiles/_sec_optimization.qmd >}}
 

@@ -1,0 +1,108 @@
+{{< slidebreak >}}
+
+:::{#exm-stationary-least-squares}
+#### A stationary point of the sum of squared errors, on real data
+
+The Auto data record the horsepower and fuel economy (miles per gallon)
+of `{r} nrow(read.csv("data/auto.csv"))` car models
+sold between 1970 and 1982.
+They come from the StatLib library at Carnegie Mellon University
+and ship with the book *An Introduction to Statistical Learning*,
+in the Python package [`ISLP`](https://islp.readthedocs.io/)
+(`ISLP.load_data("Auto")`)
+and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2)
+(`ISLR2::Auto`).
+This repository holds a copy at `data/auto.csv`,
+and both code tabs below read that file.
+
+Let $y_i$ be the miles per gallon and $x_i$ the horsepower of car $i$.
+To predict miles per gallon from horsepower with a line,
+write $\vbeta = \tp{(\beta_0, \beta_1)}$ and let $\mX$ be the matrix
+whose row $i$ is $(1, x_i)$.
+The sum of squared errors is
+
+$$
+f(\vbeta) = \norm{\vy - \mX\vbeta}^2,
+$$
+
+a scalar-valued function of the $2 \times 1$ vector $\vbeta$.
+Its gradient is $-2\,\tp{\mX}(\vy - \mX\vbeta)$.
+By @thm-first-order-condition, a minimizer of $f$ must make this gradient
+$\vzero$, which is the equation $\tp{\mX}\mX\vbeta = \tp{\mX}\vy$.
+The code below solves that equation and evaluates the gradient at
+the solution and at $\vbeta = \vzero$.
+
+::: {.panel-tabset}
+
+#### Python
+
+```{python}
+#| code-fold: false
+import numpy as np
+import pandas as pd
+
+auto = pd.read_csv("data/auto.csv")
+y = auto["mpg"].to_numpy(dtype=float)
+X = np.column_stack([np.ones(len(auto)), auto["horsepower"].to_numpy(dtype=float)])
+
+def grad(beta):
+    return -2 * X.T @ (y - X @ beta)
+
+beta_hat = np.linalg.solve(X.T @ X, X.T @ y)
+grad_hat = grad(beta_hat)
+grad_zero = grad(np.zeros(2))
+
+pd.DataFrame(
+    {"beta": [beta_hat, np.zeros(2)], "gradient": [grad_hat, grad_zero]},
+    index=["solution", "zero vector"],
+)
+```
+
+#### R
+
+```{r}
+#| label: stationary-least-squares-r
+#| code-fold: false
+auto <- read.csv("data/auto.csv")
+y <- auto$mpg
+X <- cbind(1, auto$horsepower)
+
+grad <- function(beta) -2 * t(X) %*% (y - X %*% beta)
+
+beta_hat <- solve(t(X) %*% X, t(X) %*% y)
+grad_hat <- grad(beta_hat)
+grad_zero <- grad(c(0, 0))
+
+list(
+  solution = list(beta = c(beta_hat), gradient = c(grad_hat)),
+  zero_vector = list(beta = c(0, 0), gradient = c(grad_zero))
+)
+```
+
+:::
+
+```{r}
+#| include: false
+# The claims the prose makes: both languages agree, the gradient vanishes
+# (relative to its size at the zero vector) at the solution, and the solution
+# matches R's lm().
+stopifnot(
+  max(abs(c(beta_hat) - reticulate::py$beta_hat)) < 1e-6,
+  max(abs(grad_hat)) < 1e-6 * max(abs(grad_zero)),
+  max(abs(c(beta_hat) - coef(lm(mpg ~ horsepower, data = auto)))) < 1e-8
+)
+```
+
+The solution is an intercept of `{r} sprintf("%.1f", beta_hat[1])`
+miles per gallon and a slope of `{r} sprintf("%.3f", beta_hat[2])`
+miles per gallon per unit of horsepower.
+The largest entry of the gradient there is
+`{r} format(max(abs(grad_hat)), digits = 2)`,
+zero up to rounding error,
+against `{r} format(max(abs(grad_zero)), digits = 2, big.mark = ",")`
+at the zero vector.
+So the solution is a stationary point (@def-stationary-point),
+and the zero vector is not.
+The same coefficients come from R's `lm(mpg ~ horsepower, data = auto)`.
+
+:::
