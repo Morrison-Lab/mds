@@ -1,0 +1,18 @@
+<!--
+Source: Boyd and Vandenberghe (2004), Convex Optimization,
+section 3.1.8 (Jensen's inequality and extensions).
+The [proof](notation.qmd#def-proof) is the standard induction on the number of points.
+-->
+:::{#thm-jensen}
+#### Jensen's inequality for a weighted average
+
+Let $f : \reals^p \to \reals$ be a
+[convex function](#def-convex-function).
+Let $x_1, \ldots, x_n \in \reals^p$,
+and let $w_1, \ldots, w_n \ge 0$ be weights with $\sum_{i=1}^{n} w_i = 1$.
+Then
+$$
+f\left(\sum_{i=1}^{n} w_i x_i\right) \le \sum_{i=1}^{n} w_i f(x_i).
+$$
+
+:::

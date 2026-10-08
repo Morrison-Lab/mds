@@ -150,6 +150,18 @@
 
 {{< include mds/_subfiles/algebra/_proof-thm-convex-local-global.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-jensen.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_proof-thm-jensen.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-jensen.qmd >}}
+
 ## Infimum and supremum
 
 {{< include mds/_subfiles/algebra/_def-bounded.qmd >}}
