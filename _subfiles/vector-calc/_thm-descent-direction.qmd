@@ -2,7 +2,7 @@
 #### A short enough step downhill decreases the function
 
 Let $f : \reals^p \to \reals$ have first partial derivatives
-that are continuous on $\reals^p$ (@def-continuous-several),
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)),
 and let $\vx \in \reals^p$ be a point with $\vecf{g} \eqdef \deriv{\vx} f(\vx) \ne \vzero_{p \times 1}$.
 Then there is an $\bar{s} > 0$ with $f(\vx - s \vecf{g}) < f(\vx)$ for every $s \in (0, \bar{s})$:
 a short enough step in the descent direction $-\vecf{g}$ (@def-descent-direction) decreases $f$.
@@ -12,8 +12,8 @@ a short enough step in the descent direction $-\vecf{g}$ (@def-descent-direction
 ::: proof
 
 Let $h(s) \eqdef f(\vx - s \vecf{g})$.
-The inner function $s \mapsto \vx - s \vecf{g}$ has derivative $-\tp{\vecf{g}}$ (@def-vector-valued-derivative),
-so by the vector chain rule (@thm-chain-vec)
+The inner function $s \mapsto \vx - s \vecf{g}$ has derivative $-\tp{\vecf{g}}$ ([vector-valued derivative](vector-calculus.qmd#def-vector-valued-derivative)),
+so by the vector chain rule ([vector chain rule](vector-calculus.qmd#thm-chain-vec))
 
 $$
 \ba

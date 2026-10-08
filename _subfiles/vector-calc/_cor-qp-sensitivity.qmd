@@ -14,7 +14,7 @@ $$
 ::: proof
 
 $\matr{M}^{-1}$ is symmetric and does not depend on $\vecf{b}$,
-so @thm-quadratic-form applies with $\matr{M}^{-1}$ in place of $\matr{S}$:
+so [derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form) applies with $\matr{M}^{-1}$ in place of $\matr{S}$:
 
 $$
 \ba

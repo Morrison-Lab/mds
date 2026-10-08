@@ -12,12 +12,13 @@ the unique minimizer of $f$.
 ::: proof
 
 Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives,
-so by @thm-quadratic-form for $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ and @cor-deriv-lincom-tp for $\tp{\vecf{c}} \vx$,
+so by [derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form) for $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ and [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) for $\tp{\vecf{c}} \vx$,
 $\deriv{\vx} f(\vx) = \tfrac{1}{2} (2 \matr{S} \vx) - \vecf{c} = \matr{S} \vx - \vecf{c}$;
-by @thm-hessian-quadratic with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
-and because the gradient $-\vecf{c}$ of the linear term is constant (@def-constant-wrt-vector),
+by [Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
+and because the gradient $-\vecf{c}$ of the linear term is constant ([constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vector)),
 $\matr{H}_f(\vx) = \matr{S}$,
-which is invertible ([positive definite inverse](linear-algebra.qmd#thm-pd-inverse)). So
+which is invertible ([positive definite inverse](linear-algebra.qmd#thm-pd-inverse)).
+So
 
 $$
 \ba

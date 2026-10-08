@@ -1,0 +1,32 @@
+---
+title: "Optimization"
+format:
+  html: default
+  revealjs:
+    output-file: optimization-slides.html
+  pdf:
+    output-file: optimization-handout.pdf
+  docx:
+    output-file: optimization.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_optimization.qmd >}}
+
+## Further reading {#sec-additional-resources}
+
+- @boyd2004convex
+  is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
+- @nocedal2006numerical
+  is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
+- [Hua Zhou](https://hua-zhou.github.io/)'s [lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/08-optim/08-optim.html)
+- [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+  is a YouTube playlist by Grant Sanderson (3Blue1Brown);
+  its chapters on gradient descent and backpropagation calculus visually illustrate
+  how gradients of multivariate cost functions are computed and used for optimization.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

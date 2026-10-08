@@ -22,7 +22,7 @@ to organize our thoughts and back up our assertions.
 These notes collect the mathematics that data science courses assume:
 mathematical notation, algebra
 (including exponentials and logarithms),
-univariate calculus, linear algebra, vector calculus, and proof writing.
+univariate calculus, linear algebra, vector calculus, optimization, and proof writing.
 Some key results are listed here,
 organized by topic:
 
@@ -53,6 +53,9 @@ organized by topic:
 - [Vector Calculus](vector-calculus.qmd):
   derivatives with respect to vectors and matrices,
   quadratic forms, and the vector chain rule
+- [Optimization](optimization.qmd):
+  optimality conditions, Taylor approximations, convexity in several variables,
+  Lagrange multipliers, Newton's method, and gradient descent
 - [Proof Writing](proof-writing.qmd):
   showing and annotating every step of a [derivation](notation.qmd#def-derivation)
 
@@ -97,7 +100,7 @@ These resources cover related material.
   - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
     covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our [calculus](calculus.qmd) page.
   - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-    covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.qmd) page.
+    covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.qmd) and [optimization](optimization.qmd) pages.
 
 ## Using these notes in another site {.unnumbered}
 
@@ -120,6 +123,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.qmd) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd` |
+| [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
 `_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;

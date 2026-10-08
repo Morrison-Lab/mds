@@ -2,7 +2,7 @@
 #### First-order characterization of convexity
 
 Let $f : \reals^p \to \reals$ have first partial derivatives
-that are continuous on $\reals^p$ (@def-continuous-several).
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)).
 Then $f$ is [convex](algebra.qmd#def-convex-function) if and only if
 
 $$
@@ -20,14 +20,14 @@ If the inequality is strict whenever $\vx \ne \vy$, then $f$ is strictly convex 
 **Only if.**
 Let $\vx, \vy \in \reals^p$, let $\vecf{d} \eqdef \vx - \vy$,
 and let $g(t) \eqdef f(\vy + t \vecf{d})$.
-The inner function $t \mapsto \vy + t \vecf{d}$ has derivative $\tp{\vecf{d}}$ (@def-vector-valued-derivative),
-so the vector chain rule (@thm-chain-vec) gives
+The inner function $t \mapsto \vy + t \vecf{d}$ has derivative $\tp{\vecf{d}}$ ([vector-valued derivative](vector-calculus.qmd#def-vector-valued-derivative)),
+so the vector chain rule ([vector chain rule](vector-calculus.qmd#thm-chain-vec)) gives
 
 $$
 \ba
 g'(0)
 &= \tp{\vecf{d}}\,\deriv{\vx} f(\vy)
-&& \text{(@thm-chain-vec)}
+&& \text{(vector chain rule, [Theorem](vector-calculus.qmd#thm-chain-vec))}
 \\
 &= \tp{\paren{\deriv{\vx} f(\vy)}} \vecf{d}.
 && \text{(a } 1 \times 1 \text{ matrix equals its transpose)}

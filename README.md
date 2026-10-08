@@ -7,9 +7,10 @@
 <!-- badges: end -->
 
 `mds` collects the mathematics that data science courses assume:
-notation, algebra, calculus, linear algebra, vector calculus and proof
-writing, as [Quarto](https://quarto.org/) fragments. It renders on its
-own as a website, and course sites link to its pages by URL.
+notation, algebra, calculus, linear algebra, vector calculus,
+optimization, and proof writing, as [Quarto](https://quarto.org/)
+fragments. It renders on its own as a website, and course sites link to
+its pages by URL.
 
 ## Pages
 
@@ -25,6 +26,7 @@ or more fragments, which are what a host site includes:
 | [Calculus](calculus.qmd)               | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.qmd)   | `mds/_subfiles/_sec_linear_algebra.qmd`                                                                                |
 | [Vector Calculus](vector-calculus.qmd) | `mds/_subfiles/_sec_vector_calc.qmd`                                                                                   |
+| [Optimization](optimization.qmd)       | `mds/_subfiles/_sec_optimization.qmd`                                                                                  |
 | [Proof Writing](proof-writing.qmd)     | `mds/_proof-writing.qmd`                                                                                               |
 
 `_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, and `_measures.qmd` include
