@@ -79,7 +79,7 @@ $\rangef{x}$ is a set, not that difference.
 the full form each one abbreviates,
 and the part each one leaves out.
 In the table,
-$x_1, \ldots, x_n$ and $a_1, \ldots, a_n$ are $n$ numbers,
+$\dsn{x}$ and $\dsn{a}$ are $n$ numbers,
 $b_{ij}$ is the entry in row $i$ and column $j$ of an $m \times n$ array,
 $k$ is an integer with $1 \le k \le n$,
 $f$ is a [function](sets-functions.qmd#def-function)
@@ -91,9 +91,9 @@ and, in the first row, $\rangef{x}$ is a finite set.
 | $\sum_{x} f(x)$ | $\sum_{x \in \rangef{x}} f(x)$ | the set the sum runs over ([sum over a finite set](algebra.qmd#def-sum-over-set)) |
 | $\sum_{i} x_i$ | $\sumin x_i$ | the lower and upper limits of the index ([summation notation](algebra.qmd#def-summation)) |
 | $\sum x_i$ | $\sumin x_i$ | the index and its lower and upper limits |
-| $\prod_{i} x_i$ | $\prod_{i=1}^{n} x_i$ | the lower and upper limits of the index |
-| $\prod x_i$ | $\prod_{i=1}^{n} x_i$ | the index and its lower and upper limits |
-| $\sum_{i, j} b_{ij}$ | $\sum_{i=1}^{m} \sum_{j=1}^{n} b_{ij}$ | the limits of both indices |
+| $\prod_{i} x_i$ | $\prodin x_i$ | the lower and upper limits of the index |
+| $\prod x_i$ | $\prodin x_i$ | the index and its lower and upper limits |
+| $\sum_{i, j} b_{ij}$ | $\sumto{i}{m} \sumjn b_{ij}$ | the limits of both indices |
 | $\sum_{i \neq k} a_i$ | $\sum_{i \in \cb{1, \ldots, n} \setminus \cb{k}} a_i$ | the set $\cb{1, \ldots, n}$ of indices that $k$ is removed from |
 | $\int f(x)\,dx$, used for a number | $\int_{-\infty}^{\infty} f(x)\,dx$ | the limits of integration |
 | $\int f$ | $\int_{-\infty}^{\infty} f(x)\,dx$ | the limits, the variable of integration, and the differential $dx$ |
@@ -123,11 +123,11 @@ Writing the limits out tells the reader which of the two is meant.
 #### Writing out an index shorthand
 
 Let $n = 3$ and $(x_1, x_2, x_3) = (2, 5, 1)$.
-A source that writes $\sum_{i} x_i$ means $\sum_{i=1}^{3} x_i$:
+A source that writes $\sum_{i} x_i$ means $\sumto{i}{3} x_i$:
 
 $$
 \ba
-\sum_{i=1}^{3} x_i
+\sumto{i}{3} x_i
 &= x_1 + x_2 + x_3
 && \text{(definition of summation notation)} \\
 &= 2 + 5 + 1

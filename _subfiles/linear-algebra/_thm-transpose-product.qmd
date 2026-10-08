@@ -20,10 +20,10 @@ $$
 &= (\matr{A}\matr{B})_{ji}
 && \text{(definition of the transpose)}
 \\
-&= \sum_{s=1}^{k} a_{js}\, b_{si}
+&= \sumto{s}{k} a_{js}\, b_{si}
 && \text{(definition of matrix multiplication)}
 \\
-&= \sum_{s=1}^{k} (\tp{\matr{B}})_{is}\, (\tp{\matr{A}})_{sj}
+&= \sumto{s}{k} (\tp{\matr{B}})_{is}\, (\tp{\matr{A}})_{sj}
 && \text{(definition of the transpose; reorder each product)}
 \\
 &= \sb{\tp{\matr{B}}\,\tp{\matr{A}}}_{ij}

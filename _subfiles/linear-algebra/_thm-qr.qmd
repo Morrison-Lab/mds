@@ -25,10 +25,10 @@ At step $i$, $\tilde{\vecf{q}}_i \ne \vzero$, and rearranging the orthogonalize 
 $$
 \ba
 \vecf{a}_i
-&= \tilde{\vecf{q}}_i + \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
+&= \tilde{\vecf{q}}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
 && \text{(add the sum to both sides of the orthogonalize step)}
 \\
-&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j.
+&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j.
 && \text{(normalize step: } \tilde{\vecf{q}}_i = \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i \text{)}
 \ea
 $$
@@ -43,16 +43,16 @@ Column $i$ of $\matr{Q} \matr{R}$ is $\matr{Q}$ times column $i$ of $\matr{R}$ (
 $$
 \ba
 \matr{Q}\,(r_{1i}, \ldots, r_{ni})
-&= \sum_{j=1}^{n} r_{ji}\,\vecf{q}_j
+&= \sumjn r_{ji}\,\vecf{q}_j
 && \text{(@thm-matvec-columns)}
 \\
-&= \sum_{j=1}^{i} r_{ji}\,\vecf{q}_j
+&= \sumto{j}{i} r_{ji}\,\vecf{q}_j
 && \text{(} r_{ji} = 0 \text{ for } j > i \text{)}
 \\
-&= r_{ii}\,\vecf{q}_i + \sum_{j=1}^{i-1} r_{ji}\,\vecf{q}_j
+&= r_{ii}\,\vecf{q}_i + \sumto{j}{i-1} r_{ji}\,\vecf{q}_j
 && \text{(split off the } j = i \text{ term)}
 \\
-&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
+&= \norm{\tilde{\vecf{q}}_i}\,\vecf{q}_i + \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j
 && \text{(the entries of } \matr{R} \text{)}
 \\
 &= \vecf{a}_i.

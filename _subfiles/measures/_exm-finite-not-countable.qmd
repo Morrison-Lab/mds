@@ -14,7 +14,7 @@ $$
 $$
 
 *$\mu$ is finitely additive.*
-Let $A_1, \ldots, A_n$ be pairwise disjoint subsets of $S$.
+Let $\dsn{A}$ be pairwise disjoint subsets of $S$.
 If every $A_i$ is finite, then so is their union, and:
 
 $$

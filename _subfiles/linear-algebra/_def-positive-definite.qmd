@@ -17,7 +17,7 @@ if it satisfies both conditions:
 #### Positive definite, semidefinite, and neither
 
 - The identity matrix $\matr{I}_p$ (@def-identity-matrix) is positive definite:
-  $\tp{\vx}\matr{I}_p\vx = \sum_{i=1}^p x_i^2$,
+  $\tp{\vx}\matr{I}_p\vx = \sumip x_i^2$,
   which is positive unless every $x_i$ is $0$.
 - $\matr{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
   from @exm-positive-semidefinite is positive semidefinite

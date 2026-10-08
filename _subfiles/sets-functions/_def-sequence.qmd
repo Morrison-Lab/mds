@@ -7,6 +7,6 @@ Its value $a(n)$ is written $a_n$ and called its $n$th **term**,
 and the sequence is written $(a_n)$ or $a_1, a_2, a_3, \ldots$.
 
 A **finite sequence** of length $n$ is a function from $\set{1, \ldots, n}$ to $S$,
-written $a_1, \ldots, a_n$.
+written $\dsn{a}$.
 
 :::

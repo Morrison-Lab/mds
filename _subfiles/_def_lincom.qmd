@@ -56,11 +56,11 @@ A **linear combination** of the numbers $a_1, \ldots, a_k$
 with **coefficients** $c_1, \ldots, c_k$
 is the weighted sum
 
-$$c_1 a_1 + \cdots + c_k a_k = \sum_{i=1}^k c_i a_i$$
+$$c_1 a_1 + \cdots + c_k a_k = \sumto{i}{k} c_i a_i$$
 
 A linear combination of vectors $\vecf{v}_1, \ldots, \vecf{v}_k$ of the same length
 is defined entry by entry:
-entry $j$ of $\sum_{i=1}^k c_i \vecf{v}_i$ is the linear combination
+entry $j$ of $\sumto{i}{k} c_i \vecf{v}_i$ is the linear combination
 of the $j$th entries of $\vecf{v}_1, \ldots, \vecf{v}_k$
 with the same coefficients.
 For example, the linear combination of $\tp{(1, 0)}$ and $\tp{(0, 1)}$

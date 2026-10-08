@@ -7,7 +7,7 @@ where $x + \infty = \infty$ for every $x$ in $[0, \infty]$.
 Then the partial sums are [non-decreasing](#def-non-decreasing),
 $s_1 \le s_2 \le \cdots$,
 so their [limit](algebra.qmd#def-sequence-limit),
-the infinite sum $\sum_{i=1}^{\infty} a_i$ (@def-infinite-sum),
+the infinite sum $\sumto{i}{\infty} a_i$ (@def-infinite-sum),
 always exists,
 and it is either a finite number or $\infty$.
 

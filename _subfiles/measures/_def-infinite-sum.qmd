@@ -4,9 +4,9 @@
 Let $a_1, a_2, \ldots$ be a sequence in $[0, \infty]$,
 with partial sums $s_n$ (@def-partial-sum).
 The **infinite sum** (also called a **series**)
-$\sum_{i=1}^{\infty} a_i$ is the limit of the partial sums:
+$\sumto{i}{\infty} a_i$ is the limit of the partial sums:
 
-$$\sum_{i=1}^{\infty} a_i \eqdef \lim_{n \to \infty} s_n$$
+$$\sumto{i}{\infty} a_i \eqdef \lim_{n \to \infty} s_n$$
 
 Here the limit is a real number
 when the partial sums are real numbers that [converge](algebra.qmd#def-sequence-limit) to it,

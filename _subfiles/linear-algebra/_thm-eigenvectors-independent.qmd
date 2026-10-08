@@ -12,21 +12,21 @@ then $\vecf{v}_1, \ldots, \vecf{v}_k$ are linearly independent (@def-linearly-in
 By [induction](proof-writing.qmd#def-proof-by-induction) on $k$.
 For $k = 1$, $\vecf{v}_1 \ne \vzero$ is linearly independent on its own.
 Suppose the result holds for $k - 1$ eigenvectors, and
-$\sum_{i=1}^{k} c_i \vecf{v}_i = \vzero$. Then
+$\sumto{i}{k} c_i \vecf{v}_i = \vzero$. Then
 
 $$
 \ba
 \vzero
-&= (\matr{A} - \lambda_k \matr{I}_p) \sum_{i=1}^{k} c_i \vecf{v}_i
+&= (\matr{A} - \lambda_k \matr{I}_p) \sumto{i}{k} c_i \vecf{v}_i
 && \text{(multiply the supposed equation by } \matr{A} - \lambda_k \matr{I}_p \text{)}
 \\
-&= \sum_{i=1}^{k} c_i\,(\matr{A} - \lambda_k \matr{I}_p)\,\vecf{v}_i
+&= \sumto{i}{k} c_i\,(\matr{A} - \lambda_k \matr{I}_p)\,\vecf{v}_i
 && \text{(@thm-matvec-linear)}
 \\
-&= \sum_{i=1}^{k} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i
+&= \sumto{i}{k} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i
 && \text{(@thm-eigen-shift-power, part 1, with } s = -\lambda_k \text{)}
 \\
-&= \sum_{i=1}^{k-1} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i.
+&= \sumto{i}{k-1} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i.
 && \text{(the } i = k \text{ term is } \vzero \text{)}
 \ea
 $$

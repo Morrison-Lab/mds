@@ -5,7 +5,7 @@ The **Gram-Schmidt process** takes vectors $\vecf{a}_1, \ldots, \vecf{a}_k \in \
 and, for $i = 1, 2, \ldots, k$ in turn:
 
 1. **Orthogonalize:**
-   $\tilde{\vecf{q}}_i \eqdef \vecf{a}_i - \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
+   $\tilde{\vecf{q}}_i \eqdef \vecf{a}_i - \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,\vecf{q}_j$
    (for $i = 1$ the sum is empty, so $\tilde{\vecf{q}}_1 = \vecf{a}_1$);
 2. **Test:** if $\tilde{\vecf{q}}_i = \vzero$, stop;
 3. **Normalize:** $\vecf{q}_i \eqdef \tilde{\vecf{q}}_i / \norm{\tilde{\vecf{q}}_i}$.

@@ -44,7 +44,7 @@ and $\matr{L}_{22}$ is lower triangular with positive diagonal;
 $\vecf{g}$ can be anything.
 So choosing $\matr{L}$ means choosing $\ell_{11} > 0$, $\vecf{g}$ and such an $\matr{L}_{22}$.
 
-Entry $(i, j)$ of $\matr{L} \tp{\matr{L}}$ is $\sum_{r=1}^{p} \ell_{ir}\,\ell_{jr}$,
+Entry $(i, j)$ of $\matr{L} \tp{\matr{L}}$ is $\sumto{r}{p} \ell_{ir}\,\ell_{jr}$,
 with $\ell_{ir}$ entry $(i, r)$ of $\matr{L}$ (@def-matrix-mult, @def-matrix-transpose).
 Row $1$ of $\matr{L}$ is $(\ell_{11}, 0, \ldots, 0)$, and row $i + 1$ is
 $(g_i, (\matr{L}_{22})_{i1}, \ldots, (\matr{L}_{22})_{i,p-1})$.

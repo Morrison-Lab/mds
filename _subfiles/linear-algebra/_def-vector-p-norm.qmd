@@ -5,18 +5,18 @@ For a vector $\vx = (x_1, \ldots, x_p) \in \reals^p$ and any real number $k \ge 
 the **vector $p$-norm** (or **$\ell_p$ norm**, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
 
 $$
-\norm{\vx}_k \eqdef \paren{\sum_{i=1}^p \abs{x_i}^k}^{1/k}.
+\norm{\vx}_k \eqdef \paren{\sumip \abs{x_i}^k}^{1/k}.
 $$
 
 Three special cases are widely used:
 
 1. **$\ell_1$ norm** ($k = 1$, also called the **taxicab norm** or **Manhattan norm**):
    $$
-   \norm{\vx}_1 \eqdef \sum_{i=1}^p \abs{x_i}.
+   \norm{\vx}_1 \eqdef \sumip \abs{x_i}.
    $$
 2. **$\ell_2$ norm** ($k = 2$):
    the standard Euclidean norm (@def-euclidean-norm),
-   $\norm{\vx}_2 = \sqrt{\sum_{i=1}^p x_i^2}$.
+   $\norm{\vx}_2 = \sqrt{\sumip x_i^2}$.
 3. **infinity norm** ($k = \infty$, also called the **$\ell_\infty$ norm**, **maximum norm**, or **Chebyshev norm**):
    $$
    \norm{\vx}_\infty \eqdef \max_{1 \le i \le p} \abs{x_i} = \lim_{k \to \infty} \norm{\vx}_k.

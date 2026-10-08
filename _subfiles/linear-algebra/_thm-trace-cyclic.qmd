@@ -15,19 +15,19 @@ $$
 $$
 \ba
 \tr(\matr{A}\matr{B})
-&= \sum_{i=1}^{m} (\matr{A}\matr{B})_{ii}
+&= \sumto{i}{m} (\matr{A}\matr{B})_{ii}
 && \text{(definition of the trace)}
 \\
-&= \sum_{i=1}^{m} \sum_{s=1}^{n} a_{is}\, b_{si}
+&= \sumto{i}{m} \sumto{s}{n} a_{is}\, b_{si}
 && \text{(definition of matrix multiplication)}
 \\
-&= \sum_{s=1}^{n} \sum_{i=1}^{m} a_{is}\, b_{si}
+&= \sumto{s}{n} \sumto{i}{m} a_{is}\, b_{si}
 && \text{(swap the order of two finite sums)}
 \\
-&= \sum_{s=1}^{n} \sum_{i=1}^{m} b_{si}\, a_{is}
+&= \sumto{s}{n} \sumto{i}{m} b_{si}\, a_{is}
 && \text{(multiplication of numbers is commutative)}
 \\
-&= \sum_{s=1}^{n} (\matr{B}\matr{A})_{ss}
+&= \sumto{s}{n} (\matr{B}\matr{A})_{ss}
 && \text{(definition of matrix multiplication)}
 \\
 &= \tr(\matr{B}\matr{A})

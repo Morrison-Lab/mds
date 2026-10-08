@@ -18,10 +18,10 @@ For $\vecf{x} \in \reals^m$, entry $j$ of $\tp{\matr{A}} \vecf{x}$ is
 $$
 \ba
 (\tp{\matr{A}} \vecf{x})_j
-&= \sum_{i=1}^{m} (\tp{\matr{A}})_{ji}\, x_i
+&= \sumto{i}{m} (\tp{\matr{A}})_{ji}\, x_i
 && \text{(@def-matvec-mult)}
 \\
-&= \sum_{i=1}^{m} a_{ij}\, x_i
+&= \sumto{i}{m} a_{ij}\, x_i
 && \text{(@def-matrix-transpose)}
 \\
 &= \vecf{a}_j \cdot \vecf{x}.
@@ -47,25 +47,25 @@ Then
 $$
 \ba
 \vecf{y} \cdot \vecf{x}
-&= \sum_{i=1}^{m} (\matr{A} \vecf{z})_i\, x_i
+&= \sumto{i}{m} (\matr{A} \vecf{z})_i\, x_i
 && \text{(@def-dot-product)}
 \\
-&= \sum_{i=1}^{m} \paren{\sum_{j=1}^{n} a_{ij} z_j}\, x_i
+&= \sumto{i}{m} \paren{\sumjn a_{ij} z_j}\, x_i
 && \text{(@def-matvec-mult)}
 \\
-&= \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}\, z_j\, x_i
+&= \sumto{i}{m} \sumjn a_{ij}\, z_j\, x_i
 && \text{(distribute each } x_i \text{ over the inner sum)}
 \\
-&= \sum_{j=1}^{n} \sum_{i=1}^{m} a_{ij}\, z_j\, x_i
+&= \sumjn \sumto{i}{m} a_{ij}\, z_j\, x_i
 && \text{(swap the order of the finite sums)}
 \\
-&= \sum_{j=1}^{n} z_j \sum_{i=1}^{m} a_{ij}\, x_i
+&= \sumjn z_j \sumto{i}{m} a_{ij}\, x_i
 && \text{(commute, then factor } z_j \text{ out of the inner sum)}
 \\
-&= \sum_{j=1}^{n} z_j\, (\vecf{a}_j \cdot \vecf{x})
+&= \sumjn z_j\, (\vecf{a}_j \cdot \vecf{x})
 && \text{(@def-dot-product)}
 \\
-&= \sum_{j=1}^{n} z_j \cd 0
+&= \sumjn z_j \cd 0
 && \text{(each } \vecf{a}_j \cdot \vecf{x} = 0 \text{)}
 \\
 &= 0.

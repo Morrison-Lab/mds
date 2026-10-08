@@ -62,7 +62,7 @@ and the row space $\mathcal{C}(\tp{\matr{A}})$ is a subspace of $\reals^n$.
 By @thm-matvec-columns,
 $\matr{A} \vecf{x} = x_1 \vecf{a}_1 + \cdots + x_n \vecf{a}_n$,
 and as $\vecf{x}$ ranges over $\reals^n$,
-the coefficients $x_1, \ldots, x_n$ range over all lists of $n$ numbers.
+the coefficients $\dsn{x}$ range over all lists of $n$ numbers.
 So the set of all $\matr{A} \vecf{x}$ (@def-column-space)
 is the set of all linear combinations of the columns,
 which is their span (@def-span).

@@ -12,9 +12,9 @@ that can be written as
 $$
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 $$
-for some integer $n \ge 0$ and constants $a_0, a_1, \ldots, a_n \in \reals$
+for some integer $n \ge 0$ and constants $a_0, \dsn{a} \in \reals$
 with $a_n \ne 0$.
-The constants $a_0, a_1, \ldots, a_n$ are the **coefficients** of $f$,
+The constants $a_0, \dsn{a}$ are the **coefficients** of $f$,
 with $a_k$ the coefficient of $x^k$,
 and the [terms](#def-term) of $f$ are $a_n x^n, \ldots, a_1 x, a_0$.
 

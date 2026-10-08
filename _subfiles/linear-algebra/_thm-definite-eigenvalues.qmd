@@ -32,7 +32,7 @@ $$
 &= \tp{\vecf{y}}\matr{\Lambda}\vecf{y}
 && \text{(definition of } \vecf{y} \text{)}
 \\
-&= \sum_{i=1}^p \lambda_i y_i^2
+&= \sumip \lambda_i y_i^2
 && \text{(} \matr{\Lambda} \text{ is diagonal)}
 \ea
 $$

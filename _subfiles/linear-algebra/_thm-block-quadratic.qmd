@@ -37,13 +37,13 @@ $$
 $$
 \ba
 (\matr{X} \vecf{v})_i
-&= \sum_{j=1}^{k+m} x_{ij}\,v_j
+&= \sumto{j}{k+m} x_{ij}\,v_j
 && \text{(@def-matvec-mult)}
 \\
-&= \sum_{j=1}^{k} x_{ij}\,v_j + \sum_{j=1}^{m} x_{i, k+j}\,v_{k+j}
+&= \sumto{j}{k} x_{ij}\,v_j + \sumto{j}{m} x_{i, k+j}\,v_{k+j}
 && \text{(split the sum at } j = k \text{)}
 \\
-&= \sum_{j=1}^{k} a_{ij}\,u_j + \sum_{j=1}^{m} b_{ij}\,w_j
+&= \sumto{j}{k} a_{ij}\,u_j + \sumto{j}{m} b_{ij}\,w_j
 && \text{(the blocks of } \matr{X} \text{ and of } \vecf{v} \text{)}
 \\
 &= (\matr{A} \vecf{u})_i + (\matr{B} \vecf{w})_i,
@@ -58,7 +58,7 @@ and in the same way $(\matr{X} \vecf{v})_{k+i} = (\tp{\matr{B}} \vecf{u})_i + (\
 $$
 \ba
 \tp{\vecf{v}} \matr{X} \vecf{v}
-&= \sum_{i=1}^{k} u_i\,(\matr{X} \vecf{v})_i + \sum_{i=1}^{m} w_i\,(\matr{X} \vecf{v})_{k+i}
+&= \sumto{i}{k} u_i\,(\matr{X} \vecf{v})_i + \sumto{i}{m} w_i\,(\matr{X} \vecf{v})_{k+i}
 && \text{(@def-dot-product, split the sum at } k \text{)}
 \\
 &= \vecf{u} \cdot (\matr{A} \vecf{u} + \matr{B} \vecf{w}) + \vecf{w} \cdot (\tp{\matr{B}} \vecf{u} + \matr{C} \vecf{w})
