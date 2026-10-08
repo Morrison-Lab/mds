@@ -1,6 +1,6 @@
 <!--
 Source: Boyd and Vandenberghe (2004), Convex Optimization,
-section 3.1.8 (Jensen's inequality and extensions), p. 75,
+section 3.1.8 (Jensen's inequality and extensions), p. 77,
 checked against the author-hosted PDF at web.stanford.edu/~boyd/cvxbook.
 The [proof](notation.qmd#def-proof) is the standard induction on the number of points.
 -->
