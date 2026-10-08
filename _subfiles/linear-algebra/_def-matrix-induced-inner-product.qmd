@@ -1,0 +1,68 @@
+:::{#def-matrix-induced-inner-product}
+#### Matrix-induced inner product ($\matr{A}$-inner product)
+
+Let $\matr{A}$ be a $p \times p$ [symmetric positive definite matrix](#def-positive-definite).
+The **matrix-induced inner product** (or **$\matr{A}$-inner product**)
+on $\reals^p$ is defined for all $\vx, \vy \in \reals^p$ by
+
+$$
+\iprod{\vx}{\vy}_{\matr{A}} \eqdef \tp{\vx} \matr{A} \vy.
+$$
+
+The space $\reals^p$ equipped with $\iprod{\cdot}{\cdot}_{\matr{A}}$
+is an [inner product space](#def-inner-product).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-matrix-induced-inner-product}
+#### Properties of the matrix-induced inner product
+
+For every $p \times p$ symmetric positive definite matrix $\matr{A}$,
+the function $\iprod{\vx}{\vy}_{\matr{A}} = \tp{\vx} \matr{A} \vy$ satisfies the four inner product axioms (@def-inner-product):
+
+- **positivity**: $\iprod{\vx}{\vx}_{\matr{A}} = \tp{\vx}\matr{A}\vx \ge 0$ for all $\vx \in \reals^p$;
+- **definiteness**: $\iprod{\vx}{\vx}_{\matr{A}} = 0$ if and only if $\vx = \vzero_{p \times 1}$,
+  by definition of a positive definite matrix (@def-positive-definite);
+- **linearity in the first slot**: for all $\vx, \vy, \vecf{z} \in \reals^p$ and real numbers $a, b$,
+  $$
+  \ba
+  \iprod{a\,\vx + b\,\vy}{\vecf{z}}_{\matr{A}}
+  &= \tp{(a\,\vx + b\,\vy)}\,\matr{A}\vecf{z}
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \\
+  &= (a\,\tp{\vx} + b\,\tp{\vy})\,\matr{A}\vecf{z}
+  && \text{(@thm-transpose-sum)}
+  \\
+  &= a\,\tp{\vx}\matr{A}\vecf{z} + b\,\tp{\vy}\matr{A}\vecf{z}
+  && \text{(@thm-matmul-distrib)}
+  \\
+  &= a\,\iprod{\vx}{\vecf{z}}_{\matr{A}} + b\,\iprod{\vy}{\vecf{z}}_{\matr{A}}
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \ea
+  $$
+- **symmetry**: because $\tp{\vy}\matr{A}\vx$ is a $1 \times 1$ scalar (equal to its own transpose) and $\matr{A}$ is symmetric ($\tp{\matr{A}} = \matr{A}$),
+  $$
+  \ba
+  \iprod{\vy}{\vx}_{\matr{A}}
+  &= \tp{\vy}\matr{A}\vx
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \\
+  &= \tp{\paren{\tp{\vy}\matr{A}\vx}}
+  && \text{(a scalar equals its transpose)}
+  \\
+  &= \tp{\vx}\tp{\matr{A}}\vy
+  && \text{(@thm-transpose-product)}
+  \\
+  &= \tp{\vx}\matr{A}\vy
+  && \text{($\matr{A}$ is symmetric)}
+  \\
+  &= \iprod{\vx}{\vy}_{\matr{A}}
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \ea
+  $$
+
+Conversely, every inner product on $\reals^p$ has this form for a unique symmetric positive definite matrix $\matr{A}$, whose $(i, j)$ entry is $A_{ij} = \iprod{\ve_i}{\ve_j}$, where $\ve_1, \ldots, \ve_p$ are the standard basis vectors.
+
+:::

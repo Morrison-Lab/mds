@@ -1,5 +1,5 @@
 :::{#def-inner-product}
-#### Inner product
+#### Inner product and inner product space
 
 An **inner product** on $\reals^p$ is a function
 that assigns to each ordered pair of vectors $\vx, \vy \in \reals^p$
@@ -12,6 +12,8 @@ for all $\vx, \vy, \vecf{z} \in \reals^p$ and all real numbers $a, b$:
 - **linearity in the first slot**:
   $\iprod{a\,\vx + b\,\vy}{\vecf{z}} = a\,\iprod{\vx}{\vecf{z}} + b\,\iprod{\vy}{\vecf{z}}$;
 - **symmetry**: $\iprod{\vx}{\vy} = \iprod{\vy}{\vx}$.
+
+A vector space equipped with an inner product is called an **inner product space**.
 
 :::
 

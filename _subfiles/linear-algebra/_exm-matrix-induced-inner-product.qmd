@@ -1,0 +1,62 @@
+:::{#exm-matrix-induced-inner-product}
+#### A matrix-induced inner product calculation
+
+Consider the symmetric matrix
+
+$$
+\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.
+$$
+
+For any nonzero vector $\vx = (x_1, x_2) \in \reals^2$:
+
+$$
+\ba
+\tp{\vx}\matr{A}\vx
+&= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2
+&& \text{(expand the quadratic form)}
+\\
+&= (x_1 + x_2)^2 + x_1^2 + x_2^2
+&& \text{(complete the square)}
+\ea
+$$
+
+which is strictly positive because $x_1^2 + x_2^2 > 0$ when $\vx \neq \vzero$.
+Thus $\matr{A}$ is positive definite (@def-positive-definite).
+
+For vectors $\vx = (1, 2)$ and $\vy = (3, -1)$,
+their inner product induced by $\matr{A}$ is:
+
+$$
+\ba
+\iprod{\vx}{\vy}_{\matr{A}}
+&= \tp{\vx} \matr{A} \vy
+&& \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+\\
+&= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix}
+&& \text{(substitute vectors and matrix)}
+\\
+&= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cd 3 + 1 \cd (-1) \\ 1 \cd 3 + 2 \cd (-1) \end{bmatrix}
+&& \text{(@def-matvec-mult)}
+\\
+&= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix}
+&& \text{(multiply and add)}
+\\
+&= 1 \cd 5 + 2 \cd 1
+&& \text{(@def-matvec-mult)}
+\\
+&= 7.
+&& \text{(multiply and add)}
+\ea
+$$
+
+In contrast, the standard dot product yields:
+
+$$
+\vx \cdot \vy = 1 \cd 3 + 2 \cd (-1) = 1.
+$$
+
+The off-diagonal entries $A_{12} = A_{21} = 1$ couple the coordinate directions,
+altering lengths and angles from their Euclidean values.
+When $\matr{A} = \matr{I}_p$, the matrix-induced inner product recovers the standard dot product $\iprod{\vx}{\vy}_{\matr{I}_p} = \vx \cdot \vy$.
+
+:::
