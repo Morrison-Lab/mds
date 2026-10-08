@@ -249,6 +249,18 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< include mds/_subfiles/measures/_exm-absolutely-integrable.qmd >}}
 
+## $L^p$ spaces
+
+{{< include mds/_subfiles/measures/_def-lp-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_thm-holder-minkowski.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_rem-lp-spaces-machine-learning.qmd >}}
+
 ## Product measures
 
 {{< include mds/_subfiles/measures/_def-product-sigma-algebra.qmd >}}

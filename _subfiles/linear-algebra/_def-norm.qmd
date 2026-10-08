@@ -1,0 +1,34 @@
+:::{#def-norm}
+#### Norm (normed vector space)
+
+A **norm** on a real vector space $V$ is a function $\norm{\cdot} : V \to [0, \infty)$
+that assigns to each vector $\vx \in V$ a nonnegative real number $\norm{\vx}$,
+and satisfies the following three axioms for all $\vx, \vy \in V$ and all scalars $c \in \reals$:
+
+1. **Positivity and definiteness**:
+   $\norm{\vx} \ge 0$, and $\norm{\vx} = 0$ if and only if $\vx = \vzero$;
+2. **Absolute homogeneity**:
+   $\norm{c\,\vx} = \abs{c}\,\norm{\vx}$;
+3. **Subadditivity (triangle inequality)**:
+   $\norm{\vx + \vy} \le \norm{\vx} + \norm{\vy}$.
+
+A vector space equipped with a norm is called a **normed vector space** (or **normed space**).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-norm-euclidean}
+#### Euclidean space as a normed vector space
+
+The Euclidean space $\reals^p$ equipped with the Euclidean norm (@def-euclidean-norm)
+is a normed vector space:
+
+- Positivity and absolute homogeneity hold by @thm-norm-properties.
+- The triangle inequality holds by @thm-triangle-inequality.
+
+Every inner product space $(\reals^p, \iprod{\cdot}{\cdot})$ (@def-inner-product-space)
+naturally defines an induced norm $\norm{\vx} \eqdef \sqrt{\iprod{\vx}{\vx}}$,
+which satisfies all three norm axioms.
+
+:::

@@ -1,0 +1,66 @@
+:::{#def-vector-p-norm}
+#### Vector $p$-norm ($\ell_p$ norm, $\ell_1$ norm, $\ell_2$ norm, infinity norm)
+
+For a vector $\vx = (x_1, \ldots, x_p) \in \reals^p$ and any real number $k \ge 1$,
+the **vector $p$-norm** (or **$\ell_p$ norm**, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
+
+$$
+\norm{\vx}_k \eqdef \paren{\sum_{i=1}^p \abs{x_i}^k}^{1/k}.
+$$
+
+Three special cases are widely used:
+
+1. **$\ell_1$ norm** ($k = 1$, also called the **taxicab norm** or **Manhattan norm**):
+   $$
+   \norm{\vx}_1 \eqdef \sum_{i=1}^p \abs{x_i}.
+   $$
+2. **$\ell_2$ norm** ($k = 2$):
+   the standard Euclidean norm (@def-euclidean-norm),
+   $\norm{\vx}_2 = \sqrt{\sum_{i=1}^p x_i^2}$.
+3. **infinity norm** ($k = \infty$, also called the **$\ell_\infty$ norm**, **maximum norm**, or **Chebyshev norm**):
+   $$
+   \norm{\vx}_\infty \eqdef \max_{1 \le i \le p} \abs{x_i} = \lim_{k \to \infty} \norm{\vx}_k.
+   $$
+
+Each vector $p$-norm satisfies the norm axioms (@def-norm) on $\reals^p$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-vector-p-norm}
+#### Calculating $\ell_1$, $\ell_2$, and $\ell_\infty$ norms
+
+For $\vx = (3, -4) \in \reals^2$:
+
+- $\ell_1$ norm:
+  $\norm{\vx}_1 = \abs{3} + \abs{-4} = 3 + 4 = 7$.
+- $\ell_2$ norm:
+  $\norm{\vx}_2 = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5$.
+- $\ell_\infty$ norm:
+  $\norm{\vx}_\infty = \max(\abs{3}, \abs{-4}) = 4$.
+
+Notice that $4 \le 5 \le 7$. For any vector $\vx \in \reals^p$, the norms satisfy the chain of inequalities:
+
+$$
+\norm{\vx}_\infty \le \norm{\vx}_2 \le \norm{\vx}_1 \le \sqrt{p}\,\norm{\vx}_2 \le p\,\norm{\vx}_\infty.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-vector-norms-sparsity}
+#### Unit balls and regularization in machine learning
+
+The unit ball in $\reals^2$ under the $\ell_p$ norm is the set $\cb{\vx \in \reals^2 : \norm{\vx}_k \le 1}$:
+
+- For $k = 1$, the unit ball is a diamond (cross-polytope) with sharp vertices along the coordinate axes $(\pm 1, 0)$ and $(0, \pm 1)$.
+- For $k = 2$, the unit ball is the smooth round Euclidean unit disk.
+- For $k = \infty$, the unit ball is an axis-aligned square with vertices $(\pm 1, \pm 1)$.
+
+In regression and machine learning, adding an $\ell_1$ penalty (Lasso regularization) to an objective function encourages sparse solutions:
+the level curves of the loss function tend to make contact with the sharp corners of the $\ell_1$ unit ball on the coordinate axes, setting irrelevant feature weights exactly to zero.
+In contrast, the smooth spherical $\ell_2$ penalty (Ridge regularization) shrinks all weights toward zero without setting them exactly to zero.
+
+:::
