@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.19">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Optimization – Math for Data Science</title>
 <style>
 /* Default styles provided by pandoc.
@@ -82,7 +79,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -108,8 +104,7 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -135,18 +130,13 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
-
-<script type="text/plain" cookie-consent="tracking">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
-</script>
-
-<script type="text/javascript" charset="UTF-8">
+</script><script type="text/javascript" charset="UTF-8">
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
@@ -161,9 +151,7 @@ cookieconsent.run({
 "language":"en"
   });
 });
-</script> 
-  
-<script>
+</script><script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
 // data-palette attribute on <html>. The choice is kept under "mln-theme".
@@ -225,67 +213,17 @@ cookieconsent.run({
     apply(choice, false);
   });
 })();
-</script>
-<style>
-div.callout-proof.callout {
-  border-left-color: #37474F;
+</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -297,15 +235,25 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -317,6 +265,36 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-remark.callout {
   border-left-color: #AD1457;
 }
@@ -327,12 +305,18 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 </style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -357,11 +341,8 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script>
-
-<link rel="stylesheet" href="styles.css">
+</script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -527,9 +508,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Math for Data Science</span>
@@ -541,7 +520,7 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link active" href="./notation.html" aria-current="page"> 
 <span class="menu-text">Notation</span></a>
   </li>  
@@ -578,14 +557,14 @@ window.Quarto = {
 <span class="menu-text">Proof Writing</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Morrison-Lab/mds"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -595,9 +574,7 @@ window.Quarto = {
 </a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -605,15 +582,11 @@ window.Quarto = {
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
@@ -674,30 +647,23 @@ window.Quarto = {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-optimality-vector" id="toc-sec-optimality-vector" class="nav-link active" data-scroll-target="#sec-optimality-vector"><span class="header-section-number">1</span> Optimality conditions in several variables</a></li>
+<li><a href="#sec-optimality-vector" id="toc-sec-optimality-vector" class="nav-link active" data-scroll-target="#sec-optimality-vector"><span class="header-section-number">1</span> Optimality conditions in several variables</a></li>
   <li><a href="#sec-convexity-vector" id="toc-sec-convexity-vector" class="nav-link" data-scroll-target="#sec-convexity-vector"><span class="header-section-number">2</span> Convexity in several variables</a></li>
   <li><a href="#sec-lagrange" id="toc-sec-lagrange" class="nav-link" data-scroll-target="#sec-lagrange"><span class="header-section-number">3</span> Minimizing a quadratic under linear constraints</a></li>
   <li><a href="#sec-descent" id="toc-sec-descent" class="nav-link" data-scroll-target="#sec-descent"><span class="header-section-number">4</span> Newton’s method and gradient descent</a></li>
   <li><a href="#sec-additional-resources" id="toc-sec-additional-resources" class="nav-link" data-scroll-target="#sec-additional-resources"><span class="header-section-number">5</span> Further reading</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/optimization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/optimization.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="optimization-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="optimization.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/optimization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/optimization.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="optimization-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="optimization-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="optimization.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Optimization</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -709,7 +675,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-07 18:59:31 (PDT)</p>
+      <p class="date">Last modified: 2026-10-08 13:29:17 (PDT)</p>
     </div>
   </div>
   
@@ -718,11 +684,8 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<section id="sec-optimality-vector" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-optimality-vector"><span class="header-section-number">1</span> Optimality conditions in several variables</h2>
+</header><section id="sec-optimality-vector" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="sec-optimality-vector">
+<span class="header-section-number">1</span> Optimality conditions in several variables</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -790,7 +753,8 @@ window.Quarto = {
 <div id="exm-fermat" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Applying the test, and its limits)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(g(x) = (x - 2)^2\)</span> has its minimizer at <span class="math inline">\(c = 2\)</span>, and <span class="math inline">\(g'(2) = 2 (2 - 2) = 0\)</span>.</li>
+<li>
+<span class="math inline">\(g(x) = (x - 2)^2\)</span> has its minimizer at <span class="math inline">\(c = 2\)</span>, and <span class="math inline">\(g'(2) = 2 (2 - 2) = 0\)</span>.</li>
 <li>The <a href="./notation.html#def-converse">converse</a> fails: <span class="math inline">\(g(x) = x^3\)</span> has <span class="math inline">\(g'(0) = 3 \cdot 0^2 = 0\)</span>, but <span class="math inline">\(0\)</span> is not a local minimizer, since <span class="math inline">\(g(-h) = -h^3 &lt; 0 = g(0)\)</span> for every <span class="math inline">\(h &gt; 0\)</span>.</li>
 <li>Differentiability is needed: <span class="math inline">\(g(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has its minimizer at <span class="math inline">\(0\)</span>, but the difference quotient <span class="math inline">\(\mathopen{}\left|h\right|\mathclose{} / h\)</span> is <span class="math inline">\(1\)</span> for <span class="math inline">\(h &gt; 0\)</span> and <span class="math inline">\(-1\)</span> for <span class="math inline">\(h &lt; 0\)</span>, so it has no limit and <span class="math inline">\(g'(0)\)</span> does not exist.</li>
 </ul>
@@ -873,6 +837,104 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-stationary-least-squares" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (A stationary point of the sum of squared errors, on real data)</strong></span> The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book <em>An Introduction to Statistical Learning</em>, in the Python package <a href="https://islp.readthedocs.io/"><code>ISLP</code></a> (<code>ISLP.load_data("Auto")</code>) and the R package <a href="https://cran.r-project.org/package=ISLR2"><code>ISLR2</code></a> (<code>ISLR2::Auto</code>). This repository holds a copy at <code>data/auto.csv</code>, and both code tabs below read that file.</p>
+<p>Let <span class="math inline">\(y_i\)</span> be the miles per gallon and <span class="math inline">\(x_i\)</span> the horsepower of car <span class="math inline">\(i\)</span>. To predict miles per gallon from horsepower with a line, write <span class="math inline">\(\tilde{\beta}= {(\beta_0, \beta_1)}^{\top}\)</span> and let <span class="math inline">\(\mathbf{X}\)</span> be the matrix whose row <span class="math inline">\(i\)</span> is <span class="math inline">\((1, x_i)\)</span>. The sum of squared errors is</p>
+<p><span class="math display">\[
+f(\tilde{\beta}) = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2,
+\]</span></p>
+<p>a scalar-valued function of the <span class="math inline">\(2 \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span>. Its gradient is <span class="math inline">\(-2\,{\mathbf{X}}^{\top}(\tilde{y}- \mathbf{X}\tilde{\beta})\)</span>. By <a href="#thm-first-order-condition" class="quarto-xref">Theorem&nbsp;2</a>, a minimizer of <span class="math inline">\(f\)</span> must make this gradient <span class="math inline">\(\tilde{0}\)</span>, which is the equation <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\tilde{\beta}= {\mathbf{X}}^{\top}\tilde{y}\)</span>. The code below solves that equation and evaluates the gradient at the solution and at <span class="math inline">\(\tilde{\beta}= \tilde{0}\)</span>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>auto <span class="op">=</span> pd.read_csv(<span class="st">"data/auto.csv"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> auto[<span class="st">"mpg"</span>].to_numpy(dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.column_stack([np.ones(<span class="bu">len</span>(auto)), auto[<span class="st">"horsepower"</span>].to_numpy(dtype<span class="op">=</span><span class="bu">float</span>)])</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grad(beta):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> X.T <span class="op">@</span> (y <span class="op">-</span> X <span class="op">@</span> beta)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>beta_hat <span class="op">=</span> np.linalg.solve(X.T <span class="op">@</span> X, X.T <span class="op">@</span> y)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>grad_hat <span class="op">=</span> grad(beta_hat)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>grad_zero <span class="op">=</span> grad(np.zeros(<span class="dv">2</span>))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    {<span class="st">"beta"</span>: [beta_hat, np.zeros(<span class="dv">2</span>)], <span class="st">"gradient"</span>: [grad_hat, grad_zero]},</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>[<span class="st">"solution"</span>, <span class="st">"zero vector"</span>],</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;                                                   beta                                        gradient</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; solution     [39.93586102117057, -0.15784473335365445]  [9.471534667682135e-12, 6.662048690486699e-11]</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; zero vector                                 [0.0, 0.0]               [-18381.600000000006, -1737437.6]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>A library fit gives the same coefficients:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># np.polyfit returns the slope first, so reverse to (intercept, slope).</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>beta_polyfit <span class="op">=</span> np.polyfit(auto[<span class="st">"horsepower"</span>], auto[<span class="st">"mpg"</span>], deg<span class="op">=</span><span class="dv">1</span>)[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>beta_polyfit</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; array([39.93586102, -0.15784473])</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">auto</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/auto.csv"</span><span class="op">)</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">auto</span><span class="op">$</span><span class="va">mpg</span></span>
+<span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="fl">1</span>, <span class="va">auto</span><span class="op">$</span><span class="va">horsepower</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">grad</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">beta</span><span class="op">)</span> <span class="op">-</span><span class="fl">2</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="op">(</span><span class="va">y</span> <span class="op">-</span> <span class="va">X</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="va">beta</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">beta_hat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/solve.html">solve</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="va">X</span>, <span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="va">grad_hat</span> <span class="op">&lt;-</span> <span class="fu">grad</span><span class="op">(</span><span class="va">beta_hat</span><span class="op">)</span></span>
+<span><span class="va">grad_zero</span> <span class="op">&lt;-</span> <span class="fu">grad</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  solution <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>beta <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">beta_hat</span><span class="op">)</span>, gradient <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">grad_hat</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  zero_vector <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>beta <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span>, gradient <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">grad_zero</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; $solution</span></span>
+<span><span class="co">#&gt; $solution$beta</span></span>
+<span><span class="co">#&gt; [1] 39.9358610 -0.1578447</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $solution$gradient</span></span>
+<span><span class="co">#&gt; [1] 9.471535e-12 6.662049e-11</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $zero_vector</span></span>
+<span><span class="co">#&gt; $zero_vector$beta</span></span>
+<span><span class="co">#&gt; [1] 0 0</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $zero_vector$gradient</span></span>
+<span><span class="co">#&gt; [1]   -18381.6 -1737437.6</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>A library fit gives the same coefficients:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">horsepower</span>, data <span class="op">=</span> <span class="va">auto</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; (Intercept)  horsepower </span></span>
+<span><span class="co">#&gt;  39.9358610  -0.1578447</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>), and the zero vector is not. The library fits above agree with the solution of that equation.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-lem no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -896,7 +958,7 @@ g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\tau)\,(b - a)^2.
 </div>
 <div class="callout-body-container">
 <div id="exm-taylor-1d" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (The remainder point for <span class="math inline">\(e^x\)</span>)</strong></span> Take <span class="math inline">\(g(x) = e^x\)</span> on <span class="math inline">\([0, 1]\)</span>, so <span class="math inline">\(g' = g'' = g\)</span>. <a href="#thm-taylor-1d" class="quarto-xref">Theorem&nbsp;3</a> says <span class="math inline">\(e = 1 + 1 + \tfrac{1}{2}\,e^{\tau}\)</span> for some <span class="math inline">\(\tau \in (0, 1)\)</span>. Solving, <span class="math inline">\(e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\)</span>, so <span class="math inline">\(\tau = \log 1.43656 \approx 0.362\)</span> (<a href="./algebra.html#def-natural-log">natural logarithm</a>), which is in <span class="math inline">\((0, 1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 5 (The remainder point for <span class="math inline">\(e^x\)</span>)</strong></span> Take <span class="math inline">\(g(x) = e^x\)</span> on <span class="math inline">\([0, 1]\)</span>, so <span class="math inline">\(g' = g'' = g\)</span>. <a href="#thm-taylor-1d" class="quarto-xref">Theorem&nbsp;3</a> says <span class="math inline">\(e = 1 + 1 + \tfrac{1}{2}\,e^{\tau}\)</span> for some <span class="math inline">\(\tau \in (0, 1)\)</span>. Solving, <span class="math inline">\(e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\)</span>, so <span class="math inline">\(\tau = \log 1.43656 \approx 0.362\)</span> (<a href="./algebra.html#def-natural-log">natural logarithm</a>), which is in <span class="math inline">\((0, 1)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -988,7 +1050,7 @@ f(\tilde{z} + \tilde{h})
 </div>
 <div class="callout-body-container">
 <div id="exm-taylor-mv" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (For a quadratic form the expansion is exact)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> symmetric and constant. Its gradient is <span class="math inline">\(2 \mathbf{S} \tilde{x}\)</span> (<a href="./vector-calculus.html#thm-quadratic-form">derivative of a quadratic form</a>) and its Hessian is <span class="math inline">\(2 \mathbf{S}\)</span> at every point (<a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a>), so whatever <span class="math inline">\(\tau\)</span> is, <a href="#thm-taylor-mv" class="quarto-xref">Theorem&nbsp;4</a> reads</p>
+<p><span class="theorem-title"><strong>Example 6 (For a quadratic form the expansion is exact)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> symmetric and constant. Its gradient is <span class="math inline">\(2 \mathbf{S} \tilde{x}\)</span> (<a href="./vector-calculus.html#thm-quadratic-form">derivative of a quadratic form</a>) and its Hessian is <span class="math inline">\(2 \mathbf{S}\)</span> at every point (<a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a>), so whatever <span class="math inline">\(\tau\)</span> is, <a href="#thm-taylor-mv" class="quarto-xref">Theorem&nbsp;4</a> reads</p>
 <p><span class="math display">\[
 f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\,{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h}
 = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\,{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h},
@@ -1027,9 +1089,10 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-body-container">
 <div id="exm-strict-local-minimizer" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6 (Strict and non-strict local minimizers)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 7 (Strict and non-strict local minimizers)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(f(x) = (x - 2)^2\)</span> has <span class="math inline">\(f(2) = 0 &lt; (x - 2)^2 = f(x)\)</span> for every <span class="math inline">\(x \ne 2\)</span>, so <span class="math inline">\(2\)</span> is a strict local minimizer (any <span class="math inline">\(\delta &gt; 0\)</span> works).</li>
+<li>
+<span class="math inline">\(f(x) = (x - 2)^2\)</span> has <span class="math inline">\(f(2) = 0 &lt; (x - 2)^2 = f(x)\)</span> for every <span class="math inline">\(x \ne 2\)</span>, so <span class="math inline">\(2\)</span> is a strict local minimizer (any <span class="math inline">\(\delta &gt; 0\)</span> works).</li>
 <li>A constant function <span class="math inline">\(f(\tilde{x}) = 0\)</span> has <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for all <span class="math inline">\(\tilde{x}^*\)</span> and <span class="math inline">\(\tilde{x}\)</span>, so every point is a <a href="./algebra.html#def-local-minimizer">local minimizer</a>, but no point is a strict one: <span class="math inline">\(f(\tilde{x}^*) &lt; f(\tilde{x})\)</span> never holds.</li>
 </ul>
 </div>
@@ -1096,7 +1159,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-body-container">
 <div id="exm-qf-eigen-bound" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (Checking the bound)</strong></span> <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> has eigenvalues <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span> (<a href="./linear-algebra.html#exm-eigenvalue">eigenvalue example</a>), so <span class="math inline">\(\lambda_{\min} = 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, -1)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\)</span>: the bound holds with equality, since this <span class="math inline">\(\tilde{h}\)</span> is an eigenvector for <span class="math inline">\(\lambda_{\min}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 8 (Checking the bound)</strong></span> <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> has eigenvalues <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span> (<a href="./linear-algebra.html#exm-eigenvalue">eigenvalue example</a>), so <span class="math inline">\(\lambda_{\min} = 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, -1)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\)</span>: the bound holds with equality, since this <span class="math inline">\(\tilde{h}\)</span> is an eigenvector for <span class="math inline">\(\lambda_{\min}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1164,7 +1227,7 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 </div>
 <div class="callout-body-container">
 <div id="exm-qf-entry-bound" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Checking the bound)</strong></span> Let <span class="math inline">\(\mathbf{E} = \begin{bmatrix} 0.1 &amp; -0.2 \\ -0.2 &amp; 0.1 \end{bmatrix}\)</span>, so <span class="math inline">\(m = 0.2\)</span> works, and <span class="math inline">\(\tilde{h} = {(1, 1)}^{\top}\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\)</span>. Then <span class="math inline">\({\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\)</span>, and <span class="math inline">\(\mathopen{}\left|-0.2\right|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 9 (Checking the bound)</strong></span> Let <span class="math inline">\(\mathbf{E} = \begin{bmatrix} 0.1 &amp; -0.2 \\ -0.2 &amp; 0.1 \end{bmatrix}\)</span>, so <span class="math inline">\(m = 0.2\)</span> works, and <span class="math inline">\(\tilde{h} = {(1, 1)}^{\top}\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\)</span>. Then <span class="math inline">\({\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\)</span>, and <span class="math inline">\(\mathopen{}\left|-0.2\right|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1236,10 +1299,12 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-second-order-condition" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Classifying stationary points)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 10 (Classifying stationary points)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>), and its Hessian is <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{bmatrix} = 2 \mathbf{I}_2\)</span>, which is positive definite, so <span class="math inline">\({(1, 0)}^{\top}\)</span> is a strict local minimizer.</li>
-<li><span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span> and Hessian <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}\)</span>, which is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(-2\)</span>), and indeed <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</li>
+<li>
+<span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>), and its Hessian is <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{bmatrix} = 2 \mathbf{I}_2\)</span>, which is positive definite, so <span class="math inline">\({(1, 0)}^{\top}\)</span> is a strict local minimizer.</li>
+<li>
+<span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span> and Hessian <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}\)</span>, which is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(-2\)</span>), and indeed <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</li>
 </ul>
 </div>
 </div>
@@ -1252,14 +1317,13 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-second-order-inconclusive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (The condition is sufficient, not necessary)</strong></span> <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^4\)</span> and <span class="math inline">\(g(\tilde{x}) = x_1^2 - x_2^4\)</span> both have gradient <span class="math inline">\(\tilde{0}\)</span> at <span class="math inline">\(\tilde{0}\)</span> and the same Hessian there, <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, since <span class="math inline">\(\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\)</span> at <span class="math inline">\(x_2 = 0\)</span>. That Hessian is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so <a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a> says nothing about either function. In fact <span class="math inline">\(\tilde{0}\)</span> is a strict local minimizer of <span class="math inline">\(f\)</span>, since <span class="math inline">\(f(\tilde{x}) &gt; 0 = f(\tilde{0})\)</span> for <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>, but not a local minimizer of <span class="math inline">\(g\)</span>, since <span class="math inline">\(g(0, t) = -t^4 &lt; 0 = g(\tilde{0})\)</span> for <span class="math inline">\(t \ne 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 11 (The condition is sufficient, not necessary)</strong></span> <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^4\)</span> and <span class="math inline">\(g(\tilde{x}) = x_1^2 - x_2^4\)</span> both have gradient <span class="math inline">\(\tilde{0}\)</span> at <span class="math inline">\(\tilde{0}\)</span> and the same Hessian there, <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, since <span class="math inline">\(\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\)</span> at <span class="math inline">\(x_2 = 0\)</span>. That Hessian is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so <a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a> says nothing about either function. In fact <span class="math inline">\(\tilde{0}\)</span> is a strict local minimizer of <span class="math inline">\(f\)</span>, since <span class="math inline">\(f(\tilde{x}) &gt; 0 = f(\tilde{0})\)</span> for <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>, but not a local minimizer of <span class="math inline">\(g\)</span>, since <span class="math inline">\(g(0, t) = -t^4 &lt; 0 = g(\tilde{0})\)</span> for <span class="math inline">\(t \ne 0\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sec-convexity-vector" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-convexity-vector"><span class="header-section-number">2</span> Convexity in several variables</h2>
+</section><section id="sec-convexity-vector" class="level2" data-number="2"><h2 data-number="2" class="anchored" data-anchor-id="sec-convexity-vector">
+<span class="header-section-number">2</span> Convexity in several variables</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1274,7 +1338,8 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 <div class="callout-body-container callout-body">
 <p>This section is adapted from the convexity part of <span class="citation" data-cites="zhou2024optim">Zhou (<a href="#ref-zhou2024optim" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra.html#sec-subspaces">Linear Algebra</a>). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of <a href="#sec-optimality-vector" class="quarto-xref">Section&nbsp;1</a>. The source defines both concave and strictly concave as “<span class="math inline">\(-f\)</span> is strictly convex”; here <span class="math inline">\(f\)</span> is concave when <span class="math inline">\(-f\)</span> is convex. These parts of the source are not part of this section:</p>
 <ul>
-<li>its catalogs of convex sets and convex functions, including the positive semidefinite matrices and <span class="math inline">\(-\log \det\)</span></li>
+<li>its catalogs of convex sets and convex functions, including the positive semidefinite matrices and <span class="math inline">\(-\log \det\)</span>
+</li>
 <li>intersections of infinitely many convex sets, and suprema of infinitely many convex functions</li>
 <li>its examples, exercises and figures, including the multivariate normal maximum likelihood example</li>
 </ul>
@@ -1300,10 +1365,11 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (Convex sets)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 12 (Convex sets)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(\mathbb{R}^p\)</span> is convex, and so is any set with at most one point.</p></li>
-<li><p>The closed ball (<a href="./vector-calculus.html#def-ball">ball</a>) <span class="math inline">\(B = \mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span> is convex: for <span class="math inline">\(\tilde{x}, \tilde{y}\in B\)</span> and <span class="math inline">\(t \in [0, 1]\)</span>,</p>
+<li>
+<p>The closed ball (<a href="./vector-calculus.html#def-ball">ball</a>) <span class="math inline">\(B = \mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span> is convex: for <span class="math inline">\(\tilde{x}, \tilde{y}\in B\)</span> and <span class="math inline">\(t \in [0, 1]\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert t \tilde{x}+ (1 - t) \tilde{y}\right\rVert\mathclose{}
@@ -1320,7 +1386,8 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p>The first step is the <a href="./linear-algebra.html#thm-triangle-inequality">triangle inequality</a>, and the second uses <a href="./linear-algebra.html#thm-norm-properties">the norm of a multiple</a>.</p></li>
+<p>The first step is the <a href="./linear-algebra.html#thm-triangle-inequality">triangle inequality</a>, and the second uses <a href="./linear-algebra.html#thm-norm-properties">the norm of a multiple</a>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -1333,7 +1400,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-not-convex-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (A set that is not convex)</strong></span> <span class="math inline">\(K = \mathopen{}\left\{x \in \mathbb{R}: \mathopen{}\left|x\right|\mathclose{} \ge 1\right\}\mathclose{}\)</span> is not convex: <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> are in <span class="math inline">\(K\)</span>, but with <span class="math inline">\(t = \tfrac{1}{2}\)</span> the point <span class="math inline">\(\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0\)</span> is not.</p>
+<p><span class="theorem-title"><strong>Example 13 (A set that is not convex)</strong></span> <span class="math inline">\(K = \mathopen{}\left\{x \in \mathbb{R}: \mathopen{}\left|x\right|\mathclose{} \ge 1\right\}\mathclose{}\)</span> is not convex: <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span> are in <span class="math inline">\(K\)</span>, but with <span class="math inline">\(t = \tfrac{1}{2}\)</span> the point <span class="math inline">\(\tfrac{1}{2}(-1) + \tfrac{1}{2}(1) = 0\)</span> is not.</p>
 </div>
 </div>
 </div>
@@ -1357,7 +1424,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-half-space" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (The right half-plane)</strong></span> With <span class="math inline">\(\tilde{a} = {(1, 0)}^{\top}\)</span> and <span class="math inline">\(c = 0\)</span>, the half-plane <span class="math inline">\(\mathopen{}\left\{\tilde{x}\in \mathbb{R}^2 : x_1 \ge 0\right\}\mathclose{}\)</span> is the set of points on or to the right of the <span class="math inline">\(x_2\)</span>-axis. <span class="math inline">\({(1, 5)}^{\top}\)</span> is in it, since <span class="math inline">\(1 \ge 0\)</span>; <span class="math inline">\({(0, -3)}^{\top}\)</span> is in it, on the boundary; and <span class="math inline">\({(-1, 0)}^{\top}\)</span> is not, since <span class="math inline">\(-1 &lt; 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 14 (The right half-plane)</strong></span> With <span class="math inline">\(\tilde{a} = {(1, 0)}^{\top}\)</span> and <span class="math inline">\(c = 0\)</span>, the half-plane <span class="math inline">\(\mathopen{}\left\{\tilde{x}\in \mathbb{R}^2 : x_1 \ge 0\right\}\mathclose{}\)</span> is the set of points on or to the right of the <span class="math inline">\(x_2\)</span>-axis. <span class="math inline">\({(1, 5)}^{\top}\)</span> is in it, since <span class="math inline">\(1 \ge 0\)</span>; <span class="math inline">\({(0, -3)}^{\top}\)</span> is in it, on the boundary; and <span class="math inline">\({(-1, 0)}^{\top}\)</span> is not, since <span class="math inline">\(-1 &lt; 0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1399,7 +1466,7 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-intersection" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Intersecting a ball with a half-plane)</strong></span> The closed unit ball (<a href="./vector-calculus.html#def-ball">ball</a>) in <span class="math inline">\(\mathbb{R}^2\)</span> is convex (<a href="#exm-convex-set" class="quarto-xref">Example&nbsp;11</a>), and so is the half-plane (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;4</a>) <span class="math inline">\(\mathopen{}\left\{\tilde{x}: x_1 \ge 0\right\}\mathclose{}\)</span>: if <span class="math inline">\(x_1 \ge 0\)</span> and <span class="math inline">\(y_1 \ge 0\)</span>, then <span class="math inline">\(t x_1 + (1 - t) y_1 \ge 0\)</span> for <span class="math inline">\(t \in [0, 1]\)</span>. By <a href="#thm-convex-intersection" class="quarto-xref">Theorem&nbsp;6</a>, the closed half-disk <span class="math inline">\(\mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}\)</span> is convex. A union need not be convex: <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}\)</span> are convex, but their union is the set of <a href="#exm-not-convex-set" class="quarto-xref">Example&nbsp;12</a>.</p>
+<p><span class="theorem-title"><strong>Example 15 (Intersecting a ball with a half-plane)</strong></span> The closed unit ball (<a href="./vector-calculus.html#def-ball">ball</a>) in <span class="math inline">\(\mathbb{R}^2\)</span> is convex (<a href="#exm-convex-set" class="quarto-xref">Example&nbsp;12</a>), and so is the half-plane (<a href="#def-half-space" class="quarto-xref">Definition&nbsp;4</a>) <span class="math inline">\(\mathopen{}\left\{\tilde{x}: x_1 \ge 0\right\}\mathclose{}\)</span>: if <span class="math inline">\(x_1 \ge 0\)</span> and <span class="math inline">\(y_1 \ge 0\)</span>, then <span class="math inline">\(t x_1 + (1 - t) y_1 \ge 0\)</span> for <span class="math inline">\(t \in [0, 1]\)</span>. By <a href="#thm-convex-intersection" class="quarto-xref">Theorem&nbsp;6</a>, the closed half-disk <span class="math inline">\(\mathopen{}\left\{\tilde{x}: \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \le 1,\ x_1 \ge 0\right\}\mathclose{}\)</span> is convex. A union need not be convex: <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \le -1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{x \in \mathbb{R}: x \ge 1\right\}\mathclose{}\)</span> are convex, but their union is the set of <a href="#exm-not-convex-set" class="quarto-xref">Example&nbsp;13</a>.</p>
 </div>
 </div>
 </div>
@@ -1423,9 +1490,10 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-strictly-convex" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Strictly convex, and convex but not strictly)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 16 (Strictly convex, and convex but not strictly)</strong></span> &nbsp;</p>
 <ul>
-<li><p><span class="math inline">\(f(x) = x^2\)</span> is strictly convex:</p>
+<li>
+<p><span class="math inline">\(f(x) = x^2\)</span> is strictly convex:</p>
 <p><span class="math display">\[
 \begin{aligned}
 t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2
@@ -1439,7 +1507,8 @@ t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2
 &amp;&amp; \text{(factor)}
 \end{aligned}
 \]</span></p>
-<p>which is positive when <span class="math inline">\(x \ne y\)</span> and <span class="math inline">\(t \in (0, 1)\)</span>. At <span class="math inline">\(t \in \mathopen{}\left\{0, 1\right\}\mathclose{}\)</span> or <span class="math inline">\(x = y\)</span> it is <span class="math inline">\(0\)</span>, so <span class="math inline">\(x^2\)</span> is also convex.</p></li>
+<p>which is positive when <span class="math inline">\(x \ne y\)</span> and <span class="math inline">\(t \in (0, 1)\)</span>. At <span class="math inline">\(t \in \mathopen{}\left\{0, 1\right\}\mathclose{}\)</span> or <span class="math inline">\(x = y\)</span> it is <span class="math inline">\(0\)</span>, so <span class="math inline">\(x^2\)</span> is also convex.</p>
+</li>
 <li><p><span class="math inline">\(f(x) = 2x + 1\)</span> is convex but not strictly convex: <span class="math inline">\(f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)\)</span> for every <span class="math inline">\(x, y, t\)</span>, so the inequality holds, but never strictly. It is also concave.</p></li>
 </ul>
 </div>
@@ -1494,9 +1563,10 @@ f_i(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-max" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (A maximum is convex; a minimum need not be)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 17 (A maximum is convex; a minimum need not be)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(f_1(x) = x\)</span> is convex, by the computation for <span class="math inline">\(2x + 1\)</span> in <a href="#exm-strictly-convex" class="quarto-xref">Example&nbsp;15</a> with <span class="math inline">\(2\)</span> and <span class="math inline">\(1\)</span> replaced by <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span>, and <span class="math inline">\(f_2(x) = x^2\)</span> is convex by the same example, so <span class="math inline">\(\max\mathopen{}\left\{x, x^2\right\}\mathclose{}\)</span> is convex by <a href="#thm-convex-max" class="quarto-xref">Theorem&nbsp;7</a>.</li>
+<li>
+<span class="math inline">\(f_1(x) = x\)</span> is convex, by the computation for <span class="math inline">\(2x + 1\)</span> in <a href="#exm-strictly-convex" class="quarto-xref">Example&nbsp;16</a> with <span class="math inline">\(2\)</span> and <span class="math inline">\(1\)</span> replaced by <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span>, and <span class="math inline">\(f_2(x) = x^2\)</span> is convex by the same example, so <span class="math inline">\(\max\mathopen{}\left\{x, x^2\right\}\mathclose{}\)</span> is convex by <a href="#thm-convex-max" class="quarto-xref">Theorem&nbsp;7</a>.</li>
 <li>The minimum of two convex functions need not be convex: <span class="math inline">\(g(x) = \min\mathopen{}\left\{x^2, (x - 2)^2\right\}\mathclose{}\)</span> has <span class="math inline">\(g(0) = g(2) = 0\)</span>, but at the midpoint <span class="math inline">\(g(1) = \min\mathopen{}\left\{1, 1\right\}\mathclose{} = 1 &gt; \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0\)</span>.</li>
 </ul>
 </div>
@@ -1526,7 +1596,7 @@ f_i(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-def-epigraph" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (The epigraph of <span class="math inline">\(x^2\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(\operatorname{epi} f = \mathopen{}\left\{(x, s) : x^2 \le s\right\}\mathclose{}\)</span>, the points <span class="math inline">\((x, s)\)</span> on the parabola <span class="math inline">\(s = x^2\)</span> or on the side of it where <span class="math inline">\(s\)</span> is larger. <span class="math inline">\((1, 2)\)</span> is in it, since <span class="math inline">\(1^2 \le 2\)</span>; <span class="math inline">\((2, 1)\)</span> is not, since <span class="math inline">\(2^2 &gt; 1\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 18 (The epigraph of <span class="math inline">\(x^2\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(\operatorname{epi} f = \mathopen{}\left\{(x, s) : x^2 \le s\right\}\mathclose{}\)</span>, the points <span class="math inline">\((x, s)\)</span> on the parabola <span class="math inline">\(s = x^2\)</span> or on the side of it where <span class="math inline">\(s\)</span> is larger. <span class="math inline">\((1, 2)\)</span> is in it, since <span class="math inline">\(1^2 \le 2\)</span>; <span class="math inline">\((2, 1)\)</span> is not, since <span class="math inline">\(2^2 &gt; 1\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1584,7 +1654,7 @@ f(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-epigraph" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Two epigraphs)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 19 (Two epigraphs)</strong></span> &nbsp;</p>
 <ul>
 <li>The epigraph of <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> is <span class="math inline">\(\mathopen{}\left\{(x, s) : \mathopen{}\left|x\right|\mathclose{} \le s\right\}\mathclose{}\)</span>, a wedge. It is the intersection of the half-planes <span class="math inline">\(\mathopen{}\left\{(x, s) : s - x \ge 0\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{(x, s) : s + x \ge 0\right\}\mathclose{}\)</span>. Each half-plane is convex: if <span class="math inline">\(s_1 - x_1 \ge 0\)</span> and <span class="math inline">\(s_2 - x_2 \ge 0\)</span>, then <span class="math inline">\((t s_1 + (1 - t) s_2) - (t x_1 + (1 - t) x_2) = t (s_1 - x_1) + (1 - t)(s_2 - x_2) \ge 0\)</span>, and the same with <span class="math inline">\(+\)</span> for the other. So the wedge is convex (<a href="#thm-convex-intersection" class="quarto-xref">Theorem&nbsp;6</a>), and <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span> is convex by <a href="#thm-epigraph" class="quarto-xref">Theorem&nbsp;8</a>.</li>
 <li>The epigraph of <span class="math inline">\(g(x) = -x^2\)</span> is not convex: <span class="math inline">\((-1, -1)\)</span> and <span class="math inline">\((1, -1)\)</span> are in it, since <span class="math inline">\(g(\pm 1) = -1\)</span>, but their midpoint <span class="math inline">\((0, -1)\)</span> is not, since <span class="math inline">\(g(0) = 0 &gt; -1\)</span>. So <span class="math inline">\(-x^2\)</span> is not convex.</li>
@@ -1616,9 +1686,10 @@ f(t \tilde{x}+ (1 - t) \tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-tangent-plane" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (A tangent line and a tangent plane)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 20 (A tangent line and a tangent plane)</strong></span> &nbsp;</p>
 <ul>
-<li><p>For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(y = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span>, so the tangent line is</p>
+<li>
+<p>For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(y = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span>, so the tangent line is</p>
 <p><span class="math display">\[
 \begin{aligned}
 s
@@ -1631,8 +1702,10 @@ s
 &amp;= 2x - 1.
 &amp;&amp; \text{(} 1 - 2 = -1 \text{)}
 \end{aligned}
-\]</span></p></li>
-<li><p>For <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span> at <span class="math inline">\(\tilde{y}= {(1, 1)}^{\top}\)</span>, <span class="math inline">\(f(\tilde{y}) = 2\)</span> and the gradient is <span class="math inline">\({(2 y_1,\ 2 y_2)}^{\top} = {(2, 2)}^{\top}\)</span>, so the tangent plane is</p>
+\]</span></p>
+</li>
+<li>
+<p>For <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span> at <span class="math inline">\(\tilde{y}= {(1, 1)}^{\top}\)</span>, <span class="math inline">\(f(\tilde{y}) = 2\)</span> and the gradient is <span class="math inline">\({(2 y_1,\ 2 y_2)}^{\top} = {(2, 2)}^{\top}\)</span>, so the tangent plane is</p>
 <p><span class="math display">\[
 \begin{aligned}
 s
@@ -1645,7 +1718,8 @@ s
 &amp;= 2 x_1 + 2 x_2 - 2.
 &amp;&amp; \text{(} 2 - 2 - 2 = -2 \text{)}
 \end{aligned}
-\]</span></p></li>
+\]</span></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1738,7 +1812,8 @@ t f(\tilde{x}) + (1 - t) f(\tilde{y})
 \]</span></p>
 <p>That inequality is the defining inequality of a <a href="./algebra.html#def-convex-function">convex function</a>. If <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is strict for distinct points, and <span class="math inline">\(\tilde{x}\ne \tilde{y}\)</span> and <span class="math inline">\(t \in (0, 1)\)</span>, then:</p>
 <ul>
-<li><span class="math inline">\(\tilde{z}\)</span> differs from both <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span>, since <span class="math inline">\(\tilde{x}- \tilde{z} = (1 - t)(\tilde{x}- \tilde{y}) \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{y}- \tilde{z} = t (\tilde{y}- \tilde{x}) \ne \tilde{0}\)</span>;</li>
+<li>
+<span class="math inline">\(\tilde{z}\)</span> differs from both <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span>, since <span class="math inline">\(\tilde{x}- \tilde{z} = (1 - t)(\tilde{x}- \tilde{y}) \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{y}- \tilde{z} = t (\tilde{y}- \tilde{x}) \ne \tilde{0}\)</span>;</li>
 <li>so both inequalities at <span class="math inline">\(\tilde{z}\)</span> are strict;</li>
 <li>both multipliers <span class="math inline">\(t\)</span> and <span class="math inline">\(1 - t\)</span> are positive, so the first step of the display is strict, and <span class="math inline">\(f\)</span> is strictly convex.</li>
 </ul>
@@ -1753,7 +1828,7 @@ t f(\tilde{x}) + (1 - t) f(\tilde{y})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-first-order" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Tangent lines under a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, the right side of <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is <span class="math inline">\(y^2 + 2y (x - y) = 2xy - y^2\)</span>, and</p>
+<p><span class="theorem-title"><strong>Example 21 (Tangent lines under a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, the right side of <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is <span class="math inline">\(y^2 + 2y (x - y) = 2xy - y^2\)</span>, and</p>
 <p><span class="math display">\[
 f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
 \]</span></p>
@@ -1814,18 +1889,20 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-hessian" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Using the Hessian to show convexity)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 22 (Using the Hessian to show convexity)</strong></span> &nbsp;</p>
 <ul>
 <li><p>For a symmetric positive semidefinite <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{A} \tilde{x}\)</span> has Hessian <span class="math inline">\(2 \mathbf{A}\)</span> (<a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a>), which is positive semidefinite because <span class="math inline">\({\tilde{h}}^{\top} (2 \mathbf{A}) \tilde{h} = 2\,{\tilde{h}}^{\top} \mathbf{A} \tilde{h} \ge 0\)</span>; so <span class="math inline">\(f\)</span> is convex.</p></li>
-<li><p><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has Hessian <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Example&nbsp;9</a>), which is positive definite, so <span class="math inline">\(f\)</span> is strictly convex.</p></li>
-<li><p><span class="math inline">\(f(\tilde{x}) = e^{2x_1 + x_2} - x_1\)</span> has Hessian <span class="math inline">\(e^{u} \begin{bmatrix} 4 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> with <span class="math inline">\(u = 2x_1 + x_2\)</span> (<a href="./vector-calculus.html#exm-hessian">Example</a>), and</p>
+<li><p><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has Hessian <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Example&nbsp;10</a>), which is positive definite, so <span class="math inline">\(f\)</span> is strictly convex.</p></li>
+<li>
+<p><span class="math inline">\(f(\tilde{x}) = e^{2x_1 + x_2} - x_1\)</span> has Hessian <span class="math inline">\(e^{u} \begin{bmatrix} 4 &amp; 2 \\ 2 &amp; 1 \end{bmatrix}\)</span> with <span class="math inline">\(u = 2x_1 + x_2\)</span> (<a href="./vector-calculus.html#exm-hessian">Example</a>), and</p>
 <p><span class="math display">\[
 {\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{x})\,\tilde{h}
 = e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2)
 = e^{u} (2 h_1 + h_2)^2
 \ge 0,
 \]</span></p>
-<p>so <span class="math inline">\(f\)</span> is convex. The Hessian is not positive definite (<span class="math inline">\(\tilde{h} = {(1, -2)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so part 2 does not apply, and in fact <span class="math inline">\(f\)</span> is not strictly convex: along <span class="math inline">\(\tilde{x}= t\,{(1, -2)}^{\top}\)</span>, <span class="math inline">\(u = 2t - 2t = 0\)</span> and <span class="math inline">\(f = 1 - t\)</span> is linear in <span class="math inline">\(t\)</span>, so the convexity inequality holds with equality there.</p></li>
+<p>so <span class="math inline">\(f\)</span> is convex. The Hessian is not positive definite (<span class="math inline">\(\tilde{h} = {(1, -2)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so part 2 does not apply, and in fact <span class="math inline">\(f\)</span> is not strictly convex: along <span class="math inline">\(\tilde{x}= t\,{(1, -2)}^{\top}\)</span>, <span class="math inline">\(u = 2t - 2t = 0\)</span> and <span class="math inline">\(f = 1 - t\)</span> is linear in <span class="math inline">\(t\)</span>, so the convexity inequality holds with equality there.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -1838,7 +1915,7 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-hessian-not-necessary" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (Strictly convex with a singular Hessian)</strong></span> Part 2 is sufficient but not necessary. <span class="math inline">\(f(x) = x^4\)</span> has <span class="math inline">\(f''(0) = 12 \cdot 0^2 = 0\)</span>, so <span class="math inline">\(\mathbf{H}_f(0) = [0]\)</span> is <a href="./linear-algebra.html#def-invertible-matrix">singular</a> and not positive definite. Yet <span class="math inline">\(f\)</span> is strictly convex, by the strict form of <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a>: for <span class="math inline">\(x \ne y\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 23 (Strictly convex with a singular Hessian)</strong></span> Part 2 is sufficient but not necessary. <span class="math inline">\(f(x) = x^4\)</span> has <span class="math inline">\(f''(0) = 12 \cdot 0^2 = 0\)</span>, so <span class="math inline">\(\mathbf{H}_f(0) = [0]\)</span> is <a href="./linear-algebra.html#def-invertible-matrix">singular</a> and not positive definite. Yet <span class="math inline">\(f\)</span> is strictly convex, by the strict form of <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a>: for <span class="math inline">\(x \ne y\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 x^4 - y^4 - 4 y^3 (x - y)
@@ -1910,19 +1987,19 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-convex-stationary" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (A convex function, and a non-convex one)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 24 (A convex function, and a non-convex one)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> is convex by <a href="#thm-convex-hessian" class="quarto-xref">Theorem&nbsp;10</a>, since its Hessian is <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Example&nbsp;9</a>), so its stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>) is a global minimizer, as completing the square showed in <a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>.</li>
+<li>
+<span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> is convex by <a href="#thm-convex-hessian" class="quarto-xref">Theorem&nbsp;10</a>, since its Hessian is <span class="math inline">\(2 \mathbf{I}_2\)</span> (<a href="#exm-second-order-condition" class="quarto-xref">Example&nbsp;10</a>), so its stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>) is a global minimizer, as completing the square showed in <a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>.</li>
 <li>Without convexity, a stationary point need not be a minimizer at all: <span class="math inline">\(x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span>, which is not a minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</li>
-<li>The corollary says nothing about whether a minimizer exists: <span class="math inline">\(e^{2x_1 + x_2} - x_1\)</span> is convex (<a href="#exm-convex-hessian" class="quarto-xref">Example&nbsp;21</a>) but has no stationary point, and so no local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</li>
+<li>The corollary says nothing about whether a minimizer exists: <span class="math inline">\(e^{2x_1 + x_2} - x_1\)</span> is convex (<a href="#exm-convex-hessian" class="quarto-xref">Example&nbsp;22</a>) but has no stationary point, and so no local minimizer (<a href="#exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sec-lagrange" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-lagrange"><span class="header-section-number">3</span> Minimizing a quadratic under linear constraints</h2>
+</section><section id="sec-lagrange" class="level2" data-number="3"><h2 data-number="3" class="anchored" data-anchor-id="sec-lagrange">
+<span class="header-section-number">3</span> Minimizing a quadratic under linear constraints</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1963,7 +2040,7 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-feasible-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (A line as a feasible set)</strong></span> With the single constraint <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the feasible set is the line <span class="math inline">\(\mathopen{}\left\{\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\}\mathclose{}\)</span>. <span class="math inline">\({(1, 0.5)}^{\top}\)</span> is feasible, since <span class="math inline">\(3 \cdot 1 + 4 \cdot 0.5 = 3 + 2 = 5\)</span>; <span class="math inline">\(\tilde{0}\)</span> is not feasible, since <span class="math inline">\(3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 25 (A line as a feasible set)</strong></span> With the single constraint <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the feasible set is the line <span class="math inline">\(\mathopen{}\left\{\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\}\mathclose{}\)</span>. <span class="math inline">\({(1, 0.5)}^{\top}\)</span> is feasible, since <span class="math inline">\(3 \cdot 1 + 4 \cdot 0.5 = 3 + 2 = 5\)</span>; <span class="math inline">\(\tilde{0}\)</span> is not feasible, since <span class="math inline">\(3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1987,7 +2064,7 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="exm-minimization-problem" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (Minimizing over a line)</strong></span> In the problem of minimizing <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the objective function is <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span>, and the feasible set is the line of <a href="#exm-feasible-set" class="quarto-xref">Example&nbsp;24</a>. The feasible point <span class="math inline">\({(1, 0.5)}^{\top}\)</span> has <span class="math inline">\(f(1, 0.5) = 1 + 0.25 = 1.25\)</span>. <span class="math inline">\(\tilde{0}\)</span> minimizes <span class="math inline">\(f\)</span> over all of <span class="math inline">\(\mathbb{R}^2\)</span>, with <span class="math inline">\(f(\tilde{0}) = 0\)</span>, but it is not a minimizer over the feasible set, because it is not feasible.</p>
+<p><span class="theorem-title"><strong>Example 26 (Minimizing over a line)</strong></span> In the problem of minimizing <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the objective function is <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span>, and the feasible set is the line of <a href="#exm-feasible-set" class="quarto-xref">Example&nbsp;25</a>. The feasible point <span class="math inline">\({(1, 0.5)}^{\top}\)</span> has <span class="math inline">\(f(1, 0.5) = 1 + 0.25 = 1.25\)</span>. <span class="math inline">\(\tilde{0}\)</span> minimizes <span class="math inline">\(f\)</span> over all of <span class="math inline">\(\mathbb{R}^2\)</span>, with <span class="math inline">\(f(\tilde{0}) = 0\)</span>, but it is not a minimizer over the feasible set, because it is not feasible.</p>
 </div>
 </div>
 </div>
@@ -2016,7 +2093,7 @@ L(\tilde{x}, \tilde{\lambda}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{\la
 </div>
 <div class="callout-body-container">
 <div id="exm-lagrangian" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (The gradients of the Lagrangian of a quadratic)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> symmetric and constant. By the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, <span class="math inline">\({\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\)</span>, so</p>
+<p><span class="theorem-title"><strong>Example 27 (The gradients of the Lagrangian of a quadratic)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> symmetric and constant. By the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>, <span class="math inline">\({\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\)</span>, so</p>
 <p><span class="math display">\[
 \begin{aligned}
 L(\tilde{x}, \tilde{\lambda})
@@ -2213,7 +2290,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-qp-equality" class="theorem example">
-<p><span class="theorem-title"><strong>Example 27 (The closest point on a line to the origin)</strong></span> Minimize <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>. In the form of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a>, <span class="math inline">\(x_1^2 + x_2^2 = \tfrac{1}{2}\,{\tilde{x}}^{\top} (2 \mathbf{I}_2) \tilde{x}\)</span>, so <span class="math inline">\(\mathbf{S} = 2 \mathbf{I}_2\)</span>, <span class="math inline">\(\mathbf{A} = {(3, 4)}^{\top}\)</span> (<span class="math inline">\(p = 2\)</span>, <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(\tilde{b} = [5]\)</span>. The hypotheses hold: <span class="math inline">\(2 \mathbf{I}_2\)</span> is positive definite, and the single column <span class="math inline">\({(3, 4)}^{\top}\)</span> is nonzero, so it is linearly independent. Also <span class="math inline">\(\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}_2\)</span>. Then, from the formulas of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a>,</p>
+<p><span class="theorem-title"><strong>Example 28 (The closest point on a line to the origin)</strong></span> Minimize <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>. In the form of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a>, <span class="math inline">\(x_1^2 + x_2^2 = \tfrac{1}{2}\,{\tilde{x}}^{\top} (2 \mathbf{I}_2) \tilde{x}\)</span>, so <span class="math inline">\(\mathbf{S} = 2 \mathbf{I}_2\)</span>, <span class="math inline">\(\mathbf{A} = {(3, 4)}^{\top}\)</span> (<span class="math inline">\(p = 2\)</span>, <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(\tilde{b} = [5]\)</span>. The hypotheses hold: <span class="math inline">\(2 \mathbf{I}_2\)</span> is positive definite, and the single column <span class="math inline">\({(3, 4)}^{\top}\)</span> is nonzero, so it is linearly independent. Also <span class="math inline">\(\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}_2\)</span>. Then, from the formulas of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{M}
@@ -2251,7 +2328,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-qp-equality-fails" class="theorem example">
-<p><span class="theorem-title"><strong>Example 28 (The hypotheses are needed)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 29 (The hypotheses are needed)</strong></span> &nbsp;</p>
 <ul>
 <li>If <span class="math inline">\(\mathbf{S}\)</span> is not positive definite there may be no minimizer: with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\)</span> and the constraint <span class="math inline">\(x_1 = 1\)</span> (<span class="math inline">\(\mathbf{A} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\(\tilde{b} = [1]\)</span>), <span class="math inline">\(f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\)</span> decreases without bound as <span class="math inline">\(x_2\)</span> grows.</li>
 <li>If the columns of <span class="math inline">\(\mathbf{A}\)</span> are dependent, <span class="math inline">\(\mathbf{M}\)</span> is not invertible: with <span class="math inline">\(\mathbf{S} = \mathbf{I}_2\)</span> and <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not invertible (<a href="./linear-algebra.html#thm-invertible-rank">a square matrix is invertible exactly when its null space is zero</a>). The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists, <span class="math inline">\(x_1 = x_2 = b_1 / 2\)</span>, but the formula of <a href="#thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a> cannot produce it.</li>
@@ -2279,7 +2356,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-sensitivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 29 (The sensitivity of a one-point problem)</strong></span> Minimize <span class="math inline">\(x^2\)</span> subject to <span class="math inline">\(x = b\)</span>, for a number <span class="math inline">\(b\)</span>. The feasible set (<a href="#def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>) is <span class="math inline">\(\mathopen{}\left\{b\right\}\mathclose{}\)</span>, so the minimum value is <span class="math inline">\(f^*(b) = b^2\)</span>, and its sensitivity to <span class="math inline">\(b\)</span> is <span class="math inline">\(\frac{d }{d b} f^*(b) = 2b\)</span>. At <span class="math inline">\(b = 3\)</span> the sensitivity is <span class="math inline">\(6\)</span>: moving <span class="math inline">\(b\)</span> from <span class="math inline">\(3\)</span> to <span class="math inline">\(3.1\)</span> raises the minimum value from <span class="math inline">\(9\)</span> to <span class="math inline">\(9.61\)</span>, an increase of <span class="math inline">\(0.61\)</span>, close to <span class="math inline">\(6 \times 0.1 = 0.6\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 30 (The sensitivity of a one-point problem)</strong></span> Minimize <span class="math inline">\(x^2\)</span> subject to <span class="math inline">\(x = b\)</span>, for a number <span class="math inline">\(b\)</span>. The feasible set (<a href="#def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>) is <span class="math inline">\(\mathopen{}\left\{b\right\}\mathclose{}\)</span>, so the minimum value is <span class="math inline">\(f^*(b) = b^2\)</span>, and its sensitivity to <span class="math inline">\(b\)</span> is <span class="math inline">\(\frac{d }{d b} f^*(b) = 2b\)</span>. At <span class="math inline">\(b = 3\)</span> the sensitivity is <span class="math inline">\(6\)</span>: moving <span class="math inline">\(b\)</span> from <span class="math inline">\(3\)</span> to <span class="math inline">\(3.1\)</span> raises the minimum value from <span class="math inline">\(9\)</span> to <span class="math inline">\(9.61\)</span>, an increase of <span class="math inline">\(0.61\)</span>, close to <span class="math inline">\(6 \times 0.1 = 0.6\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2340,14 +2417,13 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-qp-sensitivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 30 (Moving the line)</strong></span> In <a href="#exm-qp-equality" class="quarto-xref">Example&nbsp;27</a> with a general right side <span class="math inline">\(b\)</span> in place of <span class="math inline">\(5\)</span>, <span class="math inline">\(\mathbf{M}^{-1} = \tfrac{2}{25}\)</span> and <span class="math inline">\(f^*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 = \tfrac{b^2}{25}\)</span>, so <span class="math inline">\(\frac{d }{d b} f^*(b) = \tfrac{2b}{25}\)</span>. At <span class="math inline">\(b = 5\)</span> this derivative is <span class="math inline">\(\tfrac{10}{25} = 0.4 = -\lambda^*\)</span>: moving the line <span class="math inline">\(3 x_1 + 4 x_2 = b\)</span> outward by a small step <span class="math inline">\(\varepsilon\)</span> in <span class="math inline">\(b\)</span> raises the minimum value by about <span class="math inline">\(0.4\,\varepsilon\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 31 (Moving the line)</strong></span> In <a href="#exm-qp-equality" class="quarto-xref">Example&nbsp;28</a> with a general right side <span class="math inline">\(b\)</span> in place of <span class="math inline">\(5\)</span>, <span class="math inline">\(\mathbf{M}^{-1} = \tfrac{2}{25}\)</span> and <span class="math inline">\(f^*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 = \tfrac{b^2}{25}\)</span>, so <span class="math inline">\(\frac{d }{d b} f^*(b) = \tfrac{2b}{25}\)</span>. At <span class="math inline">\(b = 5\)</span> this derivative is <span class="math inline">\(\tfrac{10}{25} = 0.4 = -\lambda^*\)</span>: moving the line <span class="math inline">\(3 x_1 + 4 x_2 = b\)</span> outward by a small step <span class="math inline">\(\varepsilon\)</span> in <span class="math inline">\(b\)</span> raises the minimum value by about <span class="math inline">\(0.4\,\varepsilon\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sec-descent" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-descent"><span class="header-section-number">4</span> Newton’s method and gradient descent</h2>
+</section><section id="sec-descent" class="level2" data-number="4"><h2 data-number="4" class="anchored" data-anchor-id="sec-descent">
+<span class="header-section-number">4</span> Newton’s method and gradient descent</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2392,7 +2468,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-vector-sequence-limit" class="theorem example">
-<p><span class="theorem-title"><strong>Example 31 (Halving a vector)</strong></span> The iterative method <span class="math inline">\(\tilde{x}^{(t+1)} = \tfrac{1}{2}\,\tilde{x}^{(t)}\)</span> from <span class="math inline">\(\tilde{x}^{(0)} = {(4, 2)}^{\top}\)</span> has iterates <span class="math inline">\({(4, 2)}^{\top}, {(2, 1)}^{\top}, {(1, 0.5)}^{\top}, \ldots\)</span>, that is, <span class="math inline">\(\tilde{x}^{(t)} = 2^{-t}\,{(4, 2)}^{\top}\)</span>. With <span class="math inline">\(\tilde{x}^* = \tilde{0}\)</span>, the error of <span class="math inline">\(\tilde{x}^{(t)}\)</span> is</p>
+<p><span class="theorem-title"><strong>Example 32 (Halving a vector)</strong></span> The iterative method <span class="math inline">\(\tilde{x}^{(t+1)} = \tfrac{1}{2}\,\tilde{x}^{(t)}\)</span> from <span class="math inline">\(\tilde{x}^{(0)} = {(4, 2)}^{\top}\)</span> has iterates <span class="math inline">\({(4, 2)}^{\top}, {(2, 1)}^{\top}, {(1, 0.5)}^{\top}, \ldots\)</span>, that is, <span class="math inline">\(\tilde{x}^{(t)} = 2^{-t}\,{(4, 2)}^{\top}\)</span>. With <span class="math inline">\(\tilde{x}^* = \tilde{0}\)</span>, the error of <span class="math inline">\(\tilde{x}^{(t)}\)</span> is</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left\lVert 2^{-t}\,{(4, 2)}^{\top} - \tilde{0}\right\rVert\mathclose{}
@@ -2431,7 +2507,7 @@ f(\tilde{x}^*)
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-method" class="theorem example">
-<p><span class="theorem-title"><strong>Example 32 (Newton’s method for a cubic)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span>, so <span class="math inline">\(f'(x) = x^2 - 4\)</span> and <span class="math inline">\(f''(x) = 2x\)</span>. For <span class="math inline">\(x^{(t)} \ne 0\)</span>, one Newton step gives</p>
+<p><span class="theorem-title"><strong>Example 33 (Newton’s method for a cubic)</strong></span> Let <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span>, so <span class="math inline">\(f'(x) = x^2 - 4\)</span> and <span class="math inline">\(f''(x) = 2x\)</span>. For <span class="math inline">\(x^{(t)} \ne 0\)</span>, one Newton step gives</p>
 <p><span class="math display">\[
 \begin{aligned}
 x^{(t+1)}
@@ -2447,9 +2523,12 @@ x^{(t+1)}
 \]</span></p>
 <p>From <span class="math inline">\(x^{(0)} = 2.5\)</span>:</p>
 <ul>
-<li><span class="math inline">\(x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05\)</span>;</li>
-<li><span class="math inline">\(x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\)</span> (to six decimals);</li>
-<li><span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</li>
+<li>
+<span class="math inline">\(x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05\)</span>;</li>
+<li>
+<span class="math inline">\(x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\)</span> (to six decimals);</li>
+<li>
+<span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</li>
 </ul>
 <p>The iterates (<a href="#def-vector-sequence-limit" class="quarto-xref">Definition&nbsp;12</a>) approach <span class="math inline">\(2\)</span>, the local minimizer of <span class="math inline">\(f\)</span> (a stationary point, since <span class="math inline">\(f'(2) = 0\)</span>, with <span class="math inline">\(f''(2) = 4 &gt; 0\)</span>; <a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a>).</p>
 </div>
@@ -2479,7 +2558,7 @@ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \til
 </div>
 <div class="callout-body-container">
 <div id="exm-quadratic-model" class="theorem example">
-<p><span class="theorem-title"><strong>Example 33 (The model at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> at <span class="math inline">\(x = 2.5\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;32</a>), <span class="math inline">\(g = 2.5^2 - 4 = 2.25\)</span> and <span class="math inline">\(H = [2 \cdot 2.5] = [5]\)</span>, so <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the model at any <span class="math inline">\(\tilde{x}\)</span> equals <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> exactly (<a href="#exm-taylor-mv" class="quarto-xref">Example&nbsp;5</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>).</p>
+<p><span class="theorem-title"><strong>Example 34 (The model at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> at <span class="math inline">\(x = 2.5\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;33</a>), <span class="math inline">\(g = 2.5^2 - 4 = 2.25\)</span> and <span class="math inline">\(H = [2 \cdot 2.5] = [5]\)</span>, so <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the model at any <span class="math inline">\(\tilde{x}\)</span> equals <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> exactly (<a href="#exm-taylor-mv" class="quarto-xref">Example&nbsp;6</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>).</p>
 </div>
 </div>
 </div>
@@ -2554,7 +2633,7 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-model" class="theorem example">
-<p><span class="theorem-title"><strong>Example 34 (The Newton step at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For the model <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span> of <a href="#exm-quadratic-model" class="quarto-xref">Example&nbsp;33</a>, <span class="math inline">\(H = [5]\)</span> is positive definite, so by <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;12</a> its minimizer is <span class="math inline">\(\delta^* = -H^{-1} g = -2.25 / 5 = -0.45\)</span>. Setting the derivative <span class="math inline">\(2.25 + 5 \delta\)</span> to <span class="math inline">\(0\)</span> gives the same <span class="math inline">\(\delta^*\)</span>, and <span class="math inline">\(2.5 - 0.45 = 2.05 = x^{(1)}\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;32</a>).</p>
+<p><span class="theorem-title"><strong>Example 35 (The Newton step at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For the model <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2\)</span> of <a href="#exm-quadratic-model" class="quarto-xref">Example&nbsp;34</a>, <span class="math inline">\(H = [5]\)</span> is positive definite, so by <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;12</a> its minimizer is <span class="math inline">\(\delta^* = -H^{-1} g = -2.25 / 5 = -0.45\)</span>. Setting the derivative <span class="math inline">\(2.25 + 5 \delta\)</span> to <span class="math inline">\(0\)</span> gives the same <span class="math inline">\(\delta^*\)</span>, and <span class="math inline">\(2.5 - 0.45 = 2.05 = x^{(1)}\)</span> (<a href="#exm-newton-method" class="quarto-xref">Example&nbsp;33</a>).</p>
 </div>
 </div>
 </div>
@@ -2582,7 +2661,7 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="exm-not-quadratic-convergence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 35 (Halving the error is not quadratic convergence)</strong></span> <span class="math inline">\(x^{(t)} = 2^{-t}\)</span> converges to <span class="math inline">\(0\)</span>, but it does not converge quadratically: the bound would need <span class="math inline">\(2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}\)</span>, that is, <span class="math inline">\(2^{t - 1} \le C\)</span>, which fails once <span class="math inline">\(t &gt; 1 + \log_2 C\)</span>. Each step only halves the error.</p>
+<p><span class="theorem-title"><strong>Example 36 (Halving the error is not quadratic convergence)</strong></span> <span class="math inline">\(x^{(t)} = 2^{-t}\)</span> converges to <span class="math inline">\(0\)</span>, but it does not converge quadratically: the bound would need <span class="math inline">\(2^{-(t+1)} \le C\,(2^{-t})^2 = C\,2^{-2t}\)</span>, that is, <span class="math inline">\(2^{t - 1} \le C\)</span>, which fails once <span class="math inline">\(t &gt; 1 + \log_2 C\)</span>. Each step only halves the error.</p>
 </div>
 </div>
 </div>
@@ -2594,7 +2673,7 @@ q(\tilde{\delta}^* + \tilde{d})
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-convergence" class="theorem example">
-<p><span class="theorem-title"><strong>Example 36 (The error squares at each step)</strong></span> For the iteration <span class="math inline">\(x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})\)</span> of <a href="#exm-newton-method" class="quarto-xref">Example&nbsp;32</a>,</p>
+<p><span class="theorem-title"><strong>Example 37 (The error squares at each step)</strong></span> For the iteration <span class="math inline">\(x^{(t+1)} = \tfrac{1}{2} (x^{(t)} + 4 / x^{(t)})\)</span> of <a href="#exm-newton-method" class="quarto-xref">Example&nbsp;33</a>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 x^{(t+1)} - 2
@@ -2620,7 +2699,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-maximum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 37 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a stationary point of <span class="math inline">\(-f\)</span>, whose second derivative there is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian <span class="math inline">\(f''(x) = 2x\)</span> is negative along the way, so the quadratic model has no minimizer (with <span class="math inline">\(H &lt; 0\)</span>, <span class="math inline">\(q(\delta) = f + g\,\delta + \tfrac{1}{2} H \delta^2\)</span> decreases without bound) and <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;12</a> does not apply: the positive definite hypothesis there is needed.</p>
+<p><span class="theorem-title"><strong>Example 38 (Newton’s method can find a maximum)</strong></span> From <span class="math inline">\(x^{(0)} = -2.5\)</span> the same iteration gives <span class="math inline">\(-2.05\)</span>, <span class="math inline">\(-2.000610\)</span>, <span class="math inline">\(-2.0000001\)</span>, approaching <span class="math inline">\(-2\)</span>. But <span class="math inline">\(-2\)</span> is not a minimizer of <span class="math inline">\(f\)</span>: it is a stationary point of <span class="math inline">\(-f\)</span>, whose second derivative there is <span class="math inline">\(-f''(-2) = 4 &gt; 0\)</span>, so it is a strict local minimizer of <span class="math inline">\(-f\)</span> (<a href="#thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a>), that is, <span class="math inline">\(f\)</span> is strictly larger at <span class="math inline">\(-2\)</span> than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian <span class="math inline">\(f''(x) = 2x\)</span> is negative along the way, so the quadratic model has no minimizer (with <span class="math inline">\(H &lt; 0\)</span>, <span class="math inline">\(q(\delta) = f + g\,\delta + \tfrac{1}{2} H \delta^2\)</span> decreases without bound) and <a href="#thm-newton-model" class="quarto-xref">Theorem&nbsp;12</a> does not apply: the positive definite hypothesis there is needed.</p>
 </div>
 </div>
 </div>
@@ -2679,7 +2758,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-newton-quadratic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 38 (One step to the minimizer)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, so <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\tilde{c} = \tilde{0}_{2 \times 1}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(3, 1)}^{\top}\)</span> the gradient is <span class="math inline">\(\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\)</span>, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1/3 \end{bmatrix}\)</span>, so the Newton step is <span class="math inline">\(-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, the minimizer.</p>
+<p><span class="theorem-title"><strong>Example 39 (One step to the minimizer)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, so <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\tilde{c} = \tilde{0}_{2 \times 1}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(3, 1)}^{\top}\)</span> the gradient is <span class="math inline">\(\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\)</span>, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1/3 \end{bmatrix}\)</span>, so the Newton step is <span class="math inline">\(-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, the minimizer.</p>
 </div>
 </div>
 </div>
@@ -2707,7 +2786,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-gradient-descent" class="theorem example">
-<p><span class="theorem-title"><strong>Example 39 (Fixed steps on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(f'(x) = 2x\)</span>, so gradient descent with fixed step length <span class="math inline">\(s\)</span> is <span class="math inline">\(x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}\)</span>, and <span class="math inline">\(x^{(t)} = (1 - 2s)^t x^{(0)}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 40 (Fixed steps on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(f'(x) = 2x\)</span>, so gradient descent with fixed step length <span class="math inline">\(s\)</span> is <span class="math inline">\(x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}\)</span>, and <span class="math inline">\(x^{(t)} = (1 - 2s)^t x^{(0)}\)</span>.</p>
 <ul>
 <li>With <span class="math inline">\(s = 0.25\)</span>, <span class="math inline">\(x^{(t)} = 0.5^t x^{(0)}\)</span>, which tends to the minimizer <span class="math inline">\(0\)</span>.</li>
 <li>With <span class="math inline">\(s = 0.5\)</span>, the first step lands on <span class="math inline">\(0\)</span>, since <span class="math inline">\(1 - 2s = 0\)</span>.</li>
@@ -2736,7 +2815,7 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-line-search" class="theorem example">
-<p><span class="theorem-title"><strong>Example 40 (Exact line search on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(x^{(t)} = 2\)</span>, the derivative is <span class="math inline">\(f'(2) = 4\)</span>, so the line is <span class="math inline">\(\mathopen{}\left\{2 - 4s : s &gt; 0\right\}\mathclose{}\)</span> and the values along it are</p>
+<p><span class="theorem-title"><strong>Example 41 (Exact line search on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> and <span class="math inline">\(x^{(t)} = 2\)</span>, the derivative is <span class="math inline">\(f'(2) = 4\)</span>, so the line is <span class="math inline">\(\mathopen{}\left\{2 - 4s : s &gt; 0\right\}\mathclose{}\)</span> and the values along it are</p>
 <p><span class="math display">\[
 \begin{aligned}
 \phi(s)
@@ -2770,11 +2849,14 @@ x^{(t+1)} - 2
 </div>
 <div class="callout-body-container">
 <div id="exm-descent-directions" class="theorem example">
-<p><span class="theorem-title"><strong>Example 41 (Descent directions for <span class="math inline">\(x_1^2 + x_2^2\)</span> at <span class="math inline">\({(1, 0)}^{\top}\)</span>)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span> and <span class="math inline">\(\tilde{x}= {(1, 0)}^{\top}\)</span>, so <span class="math inline">\(\tilde{g} = {(2 x_1,\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 42 (Descent directions for <span class="math inline">\(x_1^2 + x_2^2\)</span> at <span class="math inline">\({(1, 0)}^{\top}\)</span>)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span> and <span class="math inline">\(\tilde{x}= {(1, 0)}^{\top}\)</span>, so <span class="math inline">\(\tilde{g} = {(2 x_1,\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\)</span>.</p>
 <ul>
-<li><span class="math inline">\(\tilde{d} = {(-1, 1)}^{\top}\)</span> is a descent direction: <span class="math inline">\({\tilde{g}}^{\top} \tilde{d} = -2 + 0 = -2 &lt; 0\)</span>.</li>
-<li><span class="math inline">\(\tilde{d} = {(0, 1)}^{\top}\)</span> is not: <span class="math inline">\({\tilde{g}}^{\top} \tilde{d} = 0\)</span>.</li>
-<li><span class="math inline">\(-\tilde{g} = {(-2, 0)}^{\top}\)</span> is: <span class="math inline">\({\tilde{g}}^{\top} (-\tilde{g}) = -4 &lt; 0\)</span>.</li>
+<li>
+<span class="math inline">\(\tilde{d} = {(-1, 1)}^{\top}\)</span> is a descent direction: <span class="math inline">\({\tilde{g}}^{\top} \tilde{d} = -2 + 0 = -2 &lt; 0\)</span>.</li>
+<li>
+<span class="math inline">\(\tilde{d} = {(0, 1)}^{\top}\)</span> is not: <span class="math inline">\({\tilde{g}}^{\top} \tilde{d} = 0\)</span>.</li>
+<li>
+<span class="math inline">\(-\tilde{g} = {(-2, 0)}^{\top}\)</span> is: <span class="math inline">\({\tilde{g}}^{\top} (-\tilde{g}) = -4 &lt; 0\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -2838,7 +2920,7 @@ h'(0)
 </div>
 <div class="callout-body-container">
 <div id="exm-descent-direction" class="theorem example">
-<p><span class="theorem-title"><strong>Example 42 (How short is short enough)</strong></span> In <a href="#exm-gradient-descent" class="quarto-xref">Example&nbsp;39</a>, <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x \ne 0\)</span> has <span class="math inline">\(g = 2x\)</span>, and <span class="math inline">\(f(x - 2 s x) = (1 - 2s)^2 x^2 &lt; x^2\)</span> exactly when <span class="math inline">\(\mathopen{}\left|1 - 2s\right|\mathclose{} &lt; 1\)</span>, that is, when <span class="math inline">\(0 &lt; s &lt; 1\)</span>. So <a href="#thm-descent-direction" class="quarto-xref">Theorem&nbsp;14</a> holds with <span class="math inline">\(\bar{s} = 1\)</span>, and the step <span class="math inline">\(s = 1.5\)</span> of that example was too long.</p>
+<p><span class="theorem-title"><strong>Example 43 (How short is short enough)</strong></span> In <a href="#exm-gradient-descent" class="quarto-xref">Example&nbsp;40</a>, <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(x \ne 0\)</span> has <span class="math inline">\(g = 2x\)</span>, and <span class="math inline">\(f(x - 2 s x) = (1 - 2s)^2 x^2 &lt; x^2\)</span> exactly when <span class="math inline">\(\mathopen{}\left|1 - 2s\right|\mathclose{} &lt; 1\)</span>, that is, when <span class="math inline">\(0 &lt; s &lt; 1\)</span>. So <a href="#thm-descent-direction" class="quarto-xref">Theorem&nbsp;14</a> holds with <span class="math inline">\(\bar{s} = 1\)</span>, and the step <span class="math inline">\(s = 1.5\)</span> of that example was too long.</p>
 </div>
 </div>
 </div>
@@ -2850,7 +2932,7 @@ h'(0)
 </div>
 <div class="callout-body-container">
 <div id="exm-gd-zigzag" class="theorem example">
-<p><span class="theorem-title"><strong>Example 43 (Gradient descent zigzags)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)\)</span> with <span class="math inline">\(b &gt; 0\)</span>, so <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\ b x_2)}^{\top}\)</span> and one gradient step of length <span class="math inline">\(s\)</span> from <span class="math inline">\(\tilde{x}\)</span> gives <span class="math inline">\({((1 - s) x_1,\ (1 - b s) x_2)}^{\top}\)</span>. For exact line search (<a href="#def-line-search" class="quarto-xref">Definition&nbsp;17</a>), let <span class="math inline">\(\phi(s) \stackrel{\text{def}}{=}f\)</span> at that point:</p>
+<p><span class="theorem-title"><strong>Example 44 (Gradient descent zigzags)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)\)</span> with <span class="math inline">\(b &gt; 0\)</span>, so <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\ b x_2)}^{\top}\)</span> and one gradient step of length <span class="math inline">\(s\)</span> from <span class="math inline">\(\tilde{x}\)</span> gives <span class="math inline">\({((1 - s) x_1,\ (1 - b s) x_2)}^{\top}\)</span>. For exact line search (<a href="#def-line-search" class="quarto-xref">Definition&nbsp;17</a>), let <span class="math inline">\(\phi(s) \stackrel{\text{def}}{=}f\)</span> at that point:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \phi(s)
@@ -2911,18 +2993,19 @@ f(\tilde{x}^{(t)}) = \tfrac{1}{2} (b^2 + b)\,r^{2t} = r^{2t} f(\tilde{x}^{(0)}).
 </div>
 </div>
 </div>
-</section>
-<section id="sec-additional-resources" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-additional-resources"><span class="header-section-number">5</span> Further reading</h2>
+</section><section id="sec-additional-resources" class="level2" data-number="5"><h2 data-number="5" class="anchored" data-anchor-id="sec-additional-resources">
+<span class="header-section-number">5</span> Further reading</h2>
 <ul>
-<li><span class="citation" data-cites="boyd2004convex">Boyd and Vandenberghe (<a href="#ref-boyd2004convex" role="doc-biblioref">2004</a>)</span> is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</li>
-<li><span class="citation" data-cites="nocedal2006numerical">Nocedal and Wright (<a href="#ref-nocedal2006numerical" role="doc-biblioref">2006</a>)</span> is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</li>
-<li><a href="https://hua-zhou.github.io/">Hua Zhou</a>’s <a href="https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html">lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">Neural Networks</a> is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.</li>
-</ul>
-</section>
-<section id="references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<li>
+<span class="citation" data-cites="boyd2004convex">Boyd and Vandenberghe (<a href="#ref-boyd2004convex" role="doc-biblioref">2004</a>)</span> is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</li>
+<li>
+<span class="citation" data-cites="nocedal2006numerical">Nocedal and Wright (<a href="#ref-nocedal2006numerical" role="doc-biblioref">2006</a>)</span> is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</li>
+<li>
+<a href="https://hua-zhou.github.io/">Hua Zhou</a>’s <a href="https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html">lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)</a>
+</li>
+<li>
+<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">Neural Networks</a> is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.</li>
+</ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-boyd2004convex" class="csl-entry" role="listitem">
 Boyd, Stephen, and Lieven Vandenberghe. 2004. <em>Convex Optimization</em>. Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511804441">https://doi.org/10.1017/CBO9780511804441</a>.
@@ -3117,9 +3200,7 @@ window.addEventListener("load", () => {
   normalizeInternalAnchorLinkIcons();
   moveTheoremDivAnchorsInlineWithRetry();
 });
-</script>
-
-<script>
+</script><script>
 const defaultAnchorIconFallback = "#";
 
 function getDefaultAnchorTemplate() {
@@ -3191,12 +3272,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
-</script>
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<!--
+</script></section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><!--
 Page-navigation helpers for the HTML format, included after the body of every
 page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
 
@@ -3219,8 +3295,7 @@ the text, the sidebar, or the table of contents:
 
 Both are hidden below Bootstrap's large breakpoint, where the sidebar
 collapses and there is no gutter to put them in.
--->
-<style>
+--><style>
 .page-nav-arrow {
   position: fixed;
   top: 50%;
@@ -3343,8 +3418,7 @@ document.addEventListener("DOMContentLoaded", function () {
   place();
   window.addEventListener("resize", place);
 });
-</script>
-<script id="quarto-html-after-body" type="application/javascript">
+</script><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -3809,9 +3883,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./vector-calculus.html" class="pagination-link" aria-label="Vector Calculus">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vector Calculus</span>
       </a>          
@@ -3822,42 +3894,49 @@ document.addEventListener("DOMContentLoaded", function () {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Optimization"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-slides.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-handout.pdf</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization.docx</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_optimization.qmd &gt;}}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-additional-resources}</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@boyd2004convex</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@nocedal2006numerical</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hua Zhou</span><span class="co">](https://hua-zhou.github.io/)</span>'s <span class="co">[</span><span class="ot">lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2024 Fall)</span><span class="co">](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Neural Networks</span><span class="co">](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  is a YouTube playlist by Grant Sanderson (3Blue1Brown);</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  its chapters on gradient descent and backpropagation calculus visually illustrate</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  how gradients of multivariate cost functions are computed and used for optimization.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Optimization"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-slides.html</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization-handout.pdf</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: optimization.docx</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="an">resources:</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - data/auto.csv</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>reticulate<span class="sc">::</span><span class="fu">py_require</span>(<span class="fu">c</span>(<span class="st">"numpy"</span>, <span class="st">"pandas"</span>))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_optimization.qmd &gt;}}</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-additional-resources}</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@boyd2004convex</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@nocedal2006numerical</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hua Zhou</span><span class="co">](https://hua-zhou.github.io/)</span>'s <span class="co">[</span><span class="ot">lecture notes for "UCLA Biostat 216 - Mathematical Methods for Biostatistics" (2024 Fall)</span><span class="co">](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Neural Networks</span><span class="co">](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  is a YouTube playlist by Grant Sanderson (3Blue1Brown);</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  its chapters on gradient descent and backpropagation calculus visually illustrate</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  how gradients of multivariate cost functions are computed and used for optimization.</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>:::</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -3869,8 +3948,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

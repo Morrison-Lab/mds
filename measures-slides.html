@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-07 18:59:31 (PDT)</p>
+  <p class="date">Last modified: 2026-10-08 13:29:17 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1034,16 +1034,98 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </ul>
 </div>
 </section>
-<section id="product-measures" class="slide level2" data-number="8">
-<h2><span class="header-section-number">8</span> Product measures</h2>
+<section id="lp-spaces" class="slide level2" data-number="8">
+<h2><span class="header-section-number">8</span> <span class="math inline">\(L^p\)</span> spaces</h2>
+<div id="def-lp-space" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 24 (<span class="math inline">\(L^p\)</span> space and <span class="math inline">\(L^p\)</span> norm (<span class="math inline">\(L^p(\mu)\)</span>, <span class="math inline">\(\mathcal{L}^p\)</span>))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>. For any real number <span class="math inline">\(p \ge 1\)</span>, the <strong><span class="math inline">\(L^p\)</span> norm</strong> of a <a href="#/def-measurable-function">measurable function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is:</p>
+<p><span class="math display">\[
+\mathopen{}\left\lVert f\right\rVert\mathclose{}_p \stackrel{\text{def}}{=}\mathopen{}\left(\int_S \mathopen{}\left|f\right|\mathclose{}^p \, d\mu\right)\mathclose{}^{1/p}.
+\]</span></p>
+<p>The space <span class="math inline">\(\mathcal{L}^p(S, \mathcal{S}, \mu)\)</span> consists of all measurable functions <span class="math inline">\(f : S \to \mathbb{R}\)</span> for which <span class="math inline">\(\mathopen{}\left\lVert f\right\rVert\mathclose{}_p &lt; \infty\)</span>. To satisfy the definiteness axiom of a <a href="./linear-algebra.html#def-norm">norm</a> (<span class="math inline">\(\mathopen{}\left\lVert f\right\rVert\mathclose{}_p = 0\)</span> if and only if <span class="math inline">\(f = 0\)</span>), functions that are equal <a href="#/def-almost-everywhere">almost everywhere</a> (<span class="math inline">\(\mu\)</span>-a.e.) are identified into equivalence classes. The resulting normed vector space is the <strong><span class="math inline">\(L^p\)</span> space</strong>, denoted <span class="math inline">\(L^p(S, \mathcal{S}, \mu)\)</span> (or simply <span class="math inline">\(L^p(\mu)\)</span>).</p>
+<p>For <span class="math inline">\(p = \infty\)</span>, the <strong>essential supremum norm</strong> (or <strong><span class="math inline">\(L^\infty\)</span> norm</strong>) is:</p>
+<p><span class="math display">\[
+\mathopen{}\left\lVert f\right\rVert\mathclose{}_\infty \stackrel{\text{def}}{=}\inf \mathopen{}\left\{ C \ge 0 : \mu(\mathopen{}\left\{s \in S : \mathopen{}\left|f(s)\right|\mathclose{} &gt; C\right\}\mathclose{}) = 0 \right\}\mathclose{}.
+\]</span></p>
+<p>The space <span class="math inline">\(L^\infty(S, \mathcal{S}, \mu)\)</span> consists of equivalence classes of essentially bounded measurable functions.</p>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="exm-lp-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 29 (An <span class="math inline">\(L^1\)</span> function not in <span class="math inline">\(L^2\)</span>)</strong></span> Consider the interval <span class="math inline">\((0, 1)\)</span> equipped with the Borel <span class="math inline">\(\sigma\)</span>-algebra (<a href="#/def-borel-sigma-algebra" class="quarto-xref">Definition&nbsp;4</a>) and Lebesgue measure <span class="math inline">\(\mu\)</span> (<a href="#/def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a>). Define <span class="math inline">\(f : (0, 1) \to \mathbb{R}\)</span> by <span class="math inline">\(f(x) = x^{-1/2}\)</span>.</p>
+<ol type="1">
+<li>For <span class="math inline">\(p = 1\)</span>: <span class="math display">\[
+\mathopen{}\left\lVert f\right\rVert\mathclose{}_1 = \int_0^1 x^{-1/2} \, dx = \mathopen{}\left[2 x^{1/2}\right]\mathclose{}_0^1 = 2 &lt; \infty,
+\]</span> so <span class="math inline">\(f \in L^1((0, 1), \mu)\)</span>.</li>
+<li>For <span class="math inline">\(p = 2\)</span>: <span class="math display">\[
+\mathopen{}\left|f(x)\right|\mathclose{}^2 = \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 = \frac{1}{x}.
+\]</span> The integral is: <span class="math display">\[
+\int_0^1 \frac{1}{x} \, dx = \lim_{\epsilon \to 0^+} \mathopen{}\left[\ln x\right]\mathclose{}_\epsilon^1 = \lim_{\epsilon \to 0^+} (-\ln \epsilon) = \infty.
+\]</span> Therefore, <span class="math inline">\(\mathopen{}\left\lVert f\right\rVert\mathclose{}_2 = \infty\)</span>, so <span class="math inline">\(f \notin L^2((0, 1), \mu)\)</span>.</li>
+</ol>
+<p>This shows that <span class="math inline">\(L^2 \subset L^1\)</span> on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-holder-inequality" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 (Holder’s inequality)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a>, and let <span class="math inline">\(p, q \in [1, \infty]\)</span> be conjugate exponents satisfying <span class="math inline">\(\frac{1}{p} + \frac{1}{q} = 1\)</span> (with the convention that <span class="math inline">\(q = \infty\)</span> when <span class="math inline">\(p = 1\)</span>, and <span class="math inline">\(q = 1\)</span> when <span class="math inline">\(p = \infty\)</span>). If <span class="math inline">\(f \in L^p(\mu)\)</span> and <span class="math inline">\(g \in L^q(\mu)\)</span> (<a href="#/def-lp-space" class="quarto-xref">Definition&nbsp;24</a>), then their product <span class="math inline">\(f g\)</span> is <a href="#/def-absolutely-integrable">absolutely integrable</a> (<span class="math inline">\(f g \in L^1(\mu)\)</span>) and satisfies:</p>
+<p><span class="math display">\[
+\mathopen{}\left\lVert f g\right\rVert\mathclose{}_1 = \int_S \mathopen{}\left|f g\right|\mathclose{} \, d\mu \le \mathopen{}\left\lVert f\right\rVert\mathclose{}_p\,\mathopen{}\left\lVert g\right\rVert\mathclose{}_q.
+\]</span></p>
+<p>When <span class="math inline">\(p = q = 2\)</span>, this inequality is the Cauchy-Schwarz inequality for integrals.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="thm-minkowski-inequality" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (Minkowski’s inequality (<span class="math inline">\(L^p\)</span> triangle inequality))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#/def-measure-space">measure space</a> and let <span class="math inline">\(1 \le p \le \infty\)</span>. For any functions <span class="math inline">\(f, g \in L^p(\mu)\)</span> (<a href="#/def-lp-space" class="quarto-xref">Definition&nbsp;24</a>), their sum <span class="math inline">\(f + g\)</span> is in <span class="math inline">\(L^p(\mu)\)</span> and satisfies:</p>
+<p><span class="math display">\[
+\mathopen{}\left\lVert f + g\right\rVert\mathclose{}_p \le \mathopen{}\left\lVert f\right\rVert\mathclose{}_p + \mathopen{}\left\lVert g\right\rVert\mathclose{}_p.
+\]</span></p>
+<p>Together with absolute homogeneity <span class="math inline">\(\mathopen{}\left\lVert c f\right\rVert\mathclose{}_p = \mathopen{}\left|c\right|\mathclose{}\,\mathopen{}\left\lVert f\right\rVert\mathclose{}_p\)</span> and definiteness, Minkowski’s inequality establishes that <span class="math inline">\(L^p(\mu)\)</span> satisfies all axioms of a <a href="./linear-algebra.html#def-norm">normed vector space</a>.</p>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="exm-holder-inequality" class="theorem example">
+<p><span class="theorem-title"><strong>Example 30 (Applying Holder’s inequality to finite sums and expectations)</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p><strong>Finite vectors (Cauchy-Schwarz and taxicab bounds)</strong>: Equipping a finite set with the <a href="#/def-counting-measure">counting measure</a>, Holder’s inequality for conjugate exponents <span class="math inline">\(p, q\)</span> gives: <span class="math display">\[
+\sum_{i=1}^n \mathopen{}\left|x_i y_i\right|\mathclose{} \le \mathopen{}\left(\sum_{i=1}^n \mathopen{}\left|x_i\right|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum_{i=1}^n \mathopen{}\left|y_i\right|\mathclose{}^q\right)\mathclose{}^{1/q}.
+\]</span> Setting <span class="math inline">\(p = 1, q = \infty\)</span> gives <span class="math inline">\(\sum_{i=1}^n \mathopen{}\left|x_i y_i\right|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}_1\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}_\infty\)</span>. Setting <span class="math inline">\(p = q = 2\)</span> gives the standard vector <a href="./linear-algebra.html#thm-cauchy-schwarz">Cauchy-Schwarz inequality</a>.</p></li>
+<li><p><strong>Covariance bound for random variables</strong>: On a probability space with measure <span class="math inline">\(P\)</span> (<a href="#/def-probability-measure" class="quarto-xref">Definition&nbsp;19</a>), taking <span class="math inline">\(p = q = 2\)</span> gives <span class="math inline">\(\operatorname{E}\mathopen{}\left[\mathopen{}\left|X Y\right|\mathclose{}\right]\mathclose{} \le \sqrt{\operatorname{E}\mathopen{}\left[X^2\right]\mathclose{}}\,\sqrt{\operatorname{E}\mathopen{}\left[Y^2\right]\mathclose{}}\)</span>, guaranteeing that the covariance between any two square-integrable random variables is finite.</p></li>
+</ol>
+</div>
+</section>
+<section class="slide level2 scrollable">
+
+<div id="rem-lp-spaces-machine-learning" class="proof remark">
+<p><span class="proof-title"><em>Remark 12</em> (<span class="math inline">\(L^p\)</span> spaces and norms in probability and machine learning). </span>In probability, statistics, and machine learning, <span class="math inline">\(L^p\)</span> spaces structure the geometry of random variables, estimators, and loss functions:</p>
+<ol type="1">
+<li><p><strong>Random variables, moments, and inclusion of <span class="math inline">\(L^p\)</span> spaces</strong>: When <span class="math inline">\(\mu = P\)</span> is a probability measure (<a href="#/def-probability-measure" class="quarto-xref">Definition&nbsp;19</a>) with total measure <span class="math inline">\(P(S) = 1\)</span>, an <span class="math inline">\(L^p\)</span> function is a random variable <span class="math inline">\(X\)</span> with finite <span class="math inline">\(p\)</span>-th moment: <span class="math display">\[
+\mathopen{}\left\lVert X\right\rVert\mathclose{}_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left[\mathopen{}\left|X\right|\mathclose{}^p\right]\mathclose{}\right)\mathclose{}^{1/p}.
+\]</span> By <a href="./algebra.html#thm-jensen">Jensen’s inequality</a>, if <span class="math inline">\(1 \le p \le q \le \infty\)</span>, then <span class="math inline">\(\mathopen{}\left\lVert X\right\rVert\mathclose{}_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}_q\)</span>, so <span class="math inline">\(L^q(P) \subseteq L^p(P)\)</span>. For instance, every random variable with finite variance (<span class="math inline">\(X \in L^2\)</span>) has finite expectation (<span class="math inline">\(X \in L^1\)</span>).</p></li>
+<li><p><strong>The unique Hilbert space <span class="math inline">\(L^2\)</span> and conditional expectation</strong>: Among all <span class="math inline">\(L^p\)</span> spaces, only <span class="math inline">\(L^2(\mu)\)</span> is an <a href="./linear-algebra.html#def-inner-product-space">inner product space</a>, equipped with the inner product <span class="math inline">\(\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \, d\mu\)</span> (all other <span class="math inline">\(L^p\)</span> spaces fail the parallelogram law). The completeness of <span class="math inline">\(L^2\)</span> makes it a Hilbert space. In regression, the conditional expectation <span class="math inline">\(\operatorname{E}\mathopen{}\left[Y \mid X\right]\mathclose{}\)</span> is the orthogonal projection of <span class="math inline">\(Y \in L^2\)</span> onto the closed subspace of <span class="math inline">\(L^2\)</span> functions measurable with respect to <span class="math inline">\(X\)</span>, minimizing the expected mean squared error <span class="math inline">\(\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}_2^2\)</span>.</p></li>
+<li><p><strong>Loss functions, estimation, and robustness</strong>: The choice of <span class="math inline">\(p\)</span> in <span class="math inline">\(L^p\)</span> norms defines loss functions for optimization and regression:</p>
+<ul>
+<li><strong><span class="math inline">\(L^2\)</span> loss (mean squared error)</strong>: penalizes large errors quadratically, yielding the conditional mean; sensitive to outliers.</li>
+<li><strong><span class="math inline">\(L^1\)</span> loss (mean absolute error)</strong>: penalizes errors linearly, yielding the conditional median; robust to heavy tails and outliers.</li>
+<li><strong><span class="math inline">\(L^\infty\)</span> loss (Chebyshev criterion)</strong>: minimizes the worst-case maximum error across all instances.</li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="product-measures" class="slide level2" data-number="9">
+<h2><span class="header-section-number">9</span> Product measures</h2>
 <div id="def-product-sigma-algebra" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 24 (Product <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> and <span class="math inline">\((T, \mathcal{T})\)</span> be <a href="#/def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathcal{S}\)</span> and <span class="math inline">\(B \in \mathcal{T}\)</span>. The <strong>product <span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S \times T\)</span> <a href="#/def-generated-sigma-algebra">generated by</a> the measurable rectangles.</p>
+<p><span class="theorem-title"><strong>Definition 25 (Product <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> and <span class="math inline">\((T, \mathcal{T})\)</span> be <a href="#/def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathcal{S}\)</span> and <span class="math inline">\(B \in \mathcal{T}\)</span>. The <strong>product <span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S \times T\)</span> <a href="#/def-generated-sigma-algebra">generated by</a> the measurable rectangles.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-product-sigma-algebra" class="theorem example">
-<p><span class="theorem-title"><strong>Example 29 (Product <span class="math inline">\(\sigma\)</span>-algebras)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 31 (Product <span class="math inline">\(\sigma\)</span>-algebras)</strong></span> &nbsp;</p>
 <ul>
 <li>Give the die rolls <span class="math inline">\(D\)</span> the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{S}\)</span> of all its subsets. Each single pair <span class="math inline">\(\mathopen{}\left\{(a, b)\right\}\mathclose{} = \mathopen{}\left\{a\right\}\mathclose{} \times \mathopen{}\left\{b\right\}\mathclose{}\)</span> in <span class="math inline">\(D \times D\)</span> is a measurable rectangle. Every subset of <span class="math inline">\(D \times D\)</span> is a union of finitely many single pairs, and <span class="math inline">\(\mathcal{S}\otimes \mathcal{S}\)</span> contains finite unions of its sets (<a href="#/thm-sigma-algebra-closure" class="quarto-xref">Theorem&nbsp;1</a>), as well as <span class="math inline">\(\emptyset\)</span>, so <span class="math inline">\(\mathcal{S}\otimes \mathcal{S}\)</span> is the collection of all subsets of <span class="math inline">\(D \times D\)</span>.</li>
 <li>The rectangle <span class="math inline">\([0, 2] \times [0, 3]\)</span> is a measurable rectangle for the Borel <span class="math inline">\(\sigma\)</span>-algebras, so it is in <span class="math inline">\(\mathcal{B}\otimes \mathcal{B}\)</span>.</li>
@@ -1053,7 +1135,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <section class="slide level2">
 
 <div id="def-product-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 25 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> and <span class="math inline">\((T, \mathcal{T}, \nu)\)</span> be measure spaces with <a href="#/def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu \otimes \nu\)</span> is the measure on the <a href="#/def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
+<p><span class="theorem-title"><strong>Definition 26 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> and <span class="math inline">\((T, \mathcal{T}, \nu)\)</span> be measure spaces with <a href="#/def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu \otimes \nu\)</span> is the measure on the <a href="#/def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
 <p><span class="math display">\[(\mu \otimes \nu)(A \times B) = \mu(A) \, \nu(B)
 \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\]</span></p>
 <p>with <span class="math inline">\(0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\)</span> and <span class="math inline">\(x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\)</span> for <span class="math inline">\(x &gt; 0\)</span>. Exactly one measure has these values <span class="citation" data-cites="billingsley1995probability">(<a href="#/references" role="doc-biblioref" onclick="">Billingsley 1995</a>, Theorem 18.2)</span>.</p>
@@ -1062,15 +1144,15 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <section class="slide level2">
 
 <div id="exm-product-measure" class="theorem example">
-<p><span class="theorem-title"><strong>Example 30 (Product measures)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 32 (Product measures)</strong></span> &nbsp;</p>
 <ul>
 <li>For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\((\mu \otimes \mu)(A \times B) = \mathopen{}\left|A\right|\mathclose{} \mathopen{}\left|B\right|\mathclose{}\)</span>, the number of pairs in <span class="math inline">\(A \times B\)</span>. For example, the set of pairs in which both rolls are even is <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, with <span class="math inline">\((\mu \otimes \mu)(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}) = 3 \cdot 3 = 9\)</span> pairs.</li>
 <li>For Lebesgue measure <span class="math inline">\(\lambda\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\((\lambda \otimes \lambda)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6\)</span>, the area of the rectangle.</li>
 </ul>
 </div>
 </section>
-<section id="sec-further-reading" class="slide level2" data-number="9">
-<h2><span class="header-section-number">9</span> Further reading</h2>
+<section id="sec-further-reading" class="slide level2" data-number="10">
+<h2><span class="header-section-number">10</span> Further reading</h2>
 <ul>
 <li><span class="citation" data-cites="billingsley1995probability">Billingsley (<a href="#/references" role="doc-biblioref" onclick="">1995</a>)</span> develops measure theory and builds probability on it. Its early chapters define <span class="math inline">\(\sigma\)</span>-algebras, measures, and their basic properties.</li>
 <li><span class="citation" data-cites="folland1999real">Folland (<a href="#/references" role="doc-biblioref" onclick="">1999</a>)</span> is a graduate text on measure and integration; its first chapters treat <span class="math inline">\(\sigma\)</span>-algebras and measures.</li>
