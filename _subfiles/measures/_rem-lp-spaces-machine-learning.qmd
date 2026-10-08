@@ -7,7 +7,7 @@ In probability, statistics, and machine learning, $L^p$ spaces structure the geo
    When $\mu = \Prob$ is a probability measure (@def-probability-measure) with total measure $\Prob(S) = 1$,
    an $L^p$ function is a random variable $X$ with finite $p$-th moment:
    $$
-   \norm{X}_p = \paren{\E[\abs{X}^p]}^{1/p}.
+   \norm{X}_p = \paren{\E{\abs{X}^p}}^{1/p}.
    $$
    By [Jensen's inequality](algebra.qmd#thm-jensen), if $1 \le p \le q \le \infty$,
    then $\norm{X}_p \le \norm{X}_q$, so $L^q(\Prob) \subseteq L^p(\Prob)$.
@@ -18,12 +18,13 @@ In probability, statistics, and machine learning, $L^p$ spaces structure the geo
    equipped with the inner product $\iprod{f}{g} \eqdef \int_S f g \, d\mu$
    (all other $L^p$ spaces fail the parallelogram law).
    The completeness of $L^2$ makes it a Hilbert space.
-   In regression, the conditional expectation $\E[Y \mid X]$ is the orthogonal projection of $Y \in L^2$
+   In regression, the conditional expectation $\E{Y \mid X}$ is the orthogonal projection of $Y \in L^2$
    onto the closed subspace of $L^2$ functions measurable with respect to $X$,
    minimizing the expected mean squared error $\norm{Y - g(X)}_2^2$.
 
 3. **Loss functions, estimation, and robustness**:
    The choice of $p$ in $L^p$ norms defines loss functions for optimization and regression:
+
    - **$L^2$ loss (mean squared error)**:
      penalizes large errors quadratically, yielding the conditional mean; sensitive to outliers.
    - **$L^1$ loss (mean absolute error)**:

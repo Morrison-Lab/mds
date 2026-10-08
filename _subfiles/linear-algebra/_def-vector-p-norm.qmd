@@ -2,7 +2,7 @@
 #### Vector $p$-norm ($\ell_p$ norm, $\ell_1$ norm, $\ell_2$ norm, infinity norm)
 
 For a vector $\vx = (x_1, \ldots, x_p) \in \reals^p$ and any real number $k \ge 1$,
-the **vector $p$-norm** (or **$\ell_p$ norm**, with parameter $k$) is:
+the **vector $p$-norm** (or **$\ell_p$ norm**, traditionally named with parameter $p$ but denoted here with exponent $k$ to avoid clashing with the ambient vector dimension $p$) is:
 
 $$
 \norm{\vx}_k \eqdef \paren{\sum_{i=1}^p \abs{x_i}^k}^{1/k}.
