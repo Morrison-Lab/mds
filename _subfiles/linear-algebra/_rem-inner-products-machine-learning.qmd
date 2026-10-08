@@ -36,7 +36,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
    Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\tp{\vecf{q}}\vecf{k} / \sqrt{d_k}$.
 
 4. **Weighted and generalized least squares**:
-   In linear regression $\vy \approx \matr{X}\vecf{\beta}$ (@def-least-squares), when observation errors have unequal variances or known correlations with positive definite covariance matrix $\matr{\Omega}$,
+   In linear regression $\vy \approx \matr{X}\vecf{\beta}$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\matr{\Omega}$,
    ordinary least squares is inefficient.
    Generalized least squares minimizes the residual norm in the inner product space induced by $\matr{W} = \matr{\Omega}^{-1}$:
    $$

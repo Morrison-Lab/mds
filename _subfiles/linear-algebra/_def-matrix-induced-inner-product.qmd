@@ -1,7 +1,7 @@
 :::{#def-matrix-induced-inner-product}
 #### Matrix-induced inner product ($\matr{A}$-inner product)
 
-Let $\matr{A}$ be a $p \times p$ [symmetric positive definite matrix](#def-positive-definite)
+Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix (@def-positive-definite)
 ($\matr{A} = \tp{\matr{A}}$ and $\tp{\vx}\matr{A}\vx > 0$ for all nonzero $\vx \in \reals^p$).
 The **matrix-induced inner product** (or **$\matr{A}$-inner product**)
 on $\reals^p$ is defined for all $\vx, \vy \in \reals^p$ by
@@ -11,7 +11,7 @@ $$
 $$
 
 The space $\reals^p$ equipped with $\iprod{\cdot}{\cdot}_{\matr{A}}$
-is an [inner product space](#def-inner-product-space).
+is an inner product space (@def-inner-product-space).
 
 :::
 

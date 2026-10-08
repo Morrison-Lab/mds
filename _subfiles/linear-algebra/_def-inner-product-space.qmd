@@ -1,7 +1,7 @@
 :::{#def-inner-product-space}
 #### Inner product space
 
-An **inner product space** is a vector space equipped with an [inner product](#def-inner-product).
+An **inner product space** is a vector space equipped with an inner product (@def-inner-product).
 For vectors in $\reals^p$ (@def-real-coordinate-space),
 the pair $(\reals^p, \iprod{\cdot}{\cdot})$ is a real inner product space.
 
@@ -17,8 +17,7 @@ is an inner product space, because the dot product satisfies the four inner prod
 For $p = 2$, any vector $\vx = (x_1, x_2) \in \reals^2$ has squared norm $\iprod{\vx}{\vx} = x_1^2 + x_2^2 \ge 0$,
 which is zero if and only if $x_1 = x_2 = 0$.
 
-Equipping the same vector space $\reals^p$ with a weighted inner product (@exm-weighted-inner-product)
-or a matrix-induced inner product (@def-matrix-induced-inner-product)
-yields a different inner product space with different geometric notions of angle and distance on the same set of vectors.
+Equipping the same vector space $\reals^p$ with different inner products
+yields different inner product spaces with different geometric notions of angle and distance on the same set of vectors.
 
 :::
