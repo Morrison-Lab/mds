@@ -1,11 +1,11 @@
 :::{#def-constant-wrt-vector}
 #### Constant
 
-A $q \times 1$ vector $\vx$ is **constant with respect to** the $p \times 1$ vector $\vb$ if
+A $q \times 1$ vector $\vx$ is **constant with respect to** the $p \times 1$ vector $\vcoef$ if
 its derivative (@def-vector-valued-derivative) is zero:
 
 $$
-\underbrace{\deriv{\vb} \tp{\vx}}_{p \times q}
+\underbrace{\deriv{\vcoef} \tp{\vx}}_{p \times q}
 = \underbrace{\matr{0}}_{p \times q}
 $$
 

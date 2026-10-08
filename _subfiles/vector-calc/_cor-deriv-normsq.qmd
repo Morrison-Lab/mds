@@ -3,7 +3,7 @@
 #### Derivative of a simple quadratic form
 
 $$
-\underbrace{\deriv{\vb} (\tp{\vb}\vb)}_{p \times 1} = \underbrace{2\vb}_{p \times 1}
+\underbrace{\deriv{\vcoef} (\tp{\vcoef}\vcoef)}_{p \times 1} = \underbrace{2\vcoef}_{p \times 1}
 $$
 
 :::

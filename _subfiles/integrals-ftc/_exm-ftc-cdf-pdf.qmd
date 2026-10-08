@@ -8,41 +8,41 @@ show $F$ is exactly an antiderivative of $f$.
 Let $T$ be a
 [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
 with the [exponential distribution](https://morrison-lab.github.io/pds/random-variables.html#def-exponential)
-with rate $\lambda > 0$.
+with rate $\rate > 0$.
 Its [probability density function (PDF)](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) is
 [@kleinbaum2012survival, Section II, p. 295, "Survival and Hazard
 Functions for Selected Distributions"]:
 
-$$f(t) = \lambda \ef{-\lambda t}, \quad t \ge 0$$
+$$f(t) = \rate \ef{-\rate t}, \quad t \ge 0$$
 
 **FTC Part 2** gives the
 [cumulative distribution function (CDF)](https://morrison-lab.github.io/pds/random-variables.html#def-cdf),
 $F(t) = P(T \le t)$, from the PDF.
-Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\lambda$ to
+Apply the $\ef{cx}$ rule from @thm-integral-rules with $c = -\rate$ to
 antidifferentiate the integrand:
 
 $$
 \ba
 F(t)
-&= \int_0^t \lambda \ef{-\lambda u}\,du
+&= \int_0^t \rate \ef{-\rate u}\,du
 && \text{(the CDF integrates the PDF)}
 \\
-&= \sb{\lambda \cd \frac{1}{-\lambda}\ef{-\lambda u}}_{u=0}^{u=t}
+&= \sb{\rate \cd \frac{1}{-\rate}\ef{-\rate u}}_{u=0}^{u=t}
 && \text{(FTC Part 2, with the } \ef{cx} \text{ rule)}
 \\
-&= \sb{(-1)\ef{-\lambda u}}_{u=0}^{u=t}
-&& \text{(} \lambda / (-\lambda) = -1 \text{)}
+&= \sb{(-1)\ef{-\rate u}}_{u=0}^{u=t}
+&& \text{(} \rate / (-\rate) = -1 \text{)}
 \\
-&= \sb{-\ef{-\lambda u}}_{u=0}^{u=t}
+&= \sb{-\ef{-\rate u}}_{u=0}^{u=t}
 && \text{(multiply by } -1 \text{)}
 \\
-&= -\ef{-\lambda t} - \paren{-\ef{0}}
+&= -\ef{-\rate t} - \paren{-\ef{0}}
 && \text{(evaluate at the limits)}
 \\
-&= -\ef{-\lambda t} - (-1)
+&= -\ef{-\rate t} - (-1)
 && \text{(} \ef{0} = 1 \text{)}
 \\
-&= 1 - \ef{-\lambda t}
+&= 1 - \ef{-\rate t}
 && \text{(rearrange)}
 \ea
 $$
@@ -52,22 +52,22 @@ $$
 $$
 \ba
 \deriv{t} F(t)
-&= \deriv{t}\paren{1 - \ef{-\lambda t}}
+&= \deriv{t}\paren{1 - \ef{-\rate t}}
 && \text{(substitute } F \text{)}
 \\
-&= \deriv{t} 1 - \deriv{t} \ef{-\lambda t}
+&= \deriv{t} 1 - \deriv{t} \ef{-\rate t}
 && \text{(derivative of a difference)}
 \\
-&= 0 - \deriv{t} \ef{-\lambda t}
+&= 0 - \deriv{t} \ef{-\rate t}
 && \text{(constant rule)}
 \\
-&= 0 - \ef{-\lambda t} \cd \deriv{t}(-\lambda t)
-&& \text{(chain rule, with inner function } -\lambda t \text{)}
+&= 0 - \ef{-\rate t} \cd \deriv{t}(-\rate t)
+&& \text{(chain rule, with inner function } -\rate t \text{)}
 \\
-&= 0 - \ef{-\lambda t} \cd (-\lambda)
+&= 0 - \ef{-\rate t} \cd (-\rate)
 && \text{(constant multiple rule)}
 \\
-&= \lambda\ef{-\lambda t}
+&= \rate\ef{-\rate t}
 && \text{(simplify)}
 \\
 &= f(t)
@@ -75,7 +75,7 @@ $$
 \ea
 $$
 
-For a concrete instance: with $\lambda = 1$,
+For a concrete instance: with $\rate = 1$,
 the probability that $T \le 2$ is:
 
 $$
@@ -116,7 +116,7 @@ ggplot2::ggplot() +
   ggplot2::theme_minimal()
 ```
 
-PDF with $\lambda = `r lambda`$; shaded area equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
+PDF with $\rate = `r lambda`$; shaded area equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
 :::
 
 :::{#fig-exp-pdf-cdf-cdf}
@@ -145,12 +145,12 @@ ggplot2::ggplot() +
   ggplot2::theme_minimal()
 ```
 
-CDF with $\lambda = `r lambda`$; point marks $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
+CDF with $\rate = `r lambda`$; point marks $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
 :::
 
-Exponential distribution with $\lambda = `r lambda`$.
-Left: the PDF $f(t) = \lambda \ef{-\lambda t}$; the shaded area under the curve from $0$ to $`r t_focus`$ equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
-Right: the CDF $F(t) = 1 - \ef{-\lambda t}$; the dashed lines mark the value $F(`r t_focus`)$ computed via FTC Part 2.
+Exponential distribution with $\rate = `r lambda`$.
+Left: the PDF $f(t) = \rate \ef{-\rate t}$; the shaded area under the curve from $0$ to $`r t_focus`$ equals $F(`r t_focus`) \approx `r round(F_at_focus, 3)`$.
+Right: the CDF $F(t) = 1 - \ef{-\rate t}$; the dashed lines mark the value $F(`r t_focus`)$ computed via FTC Part 2.
 
 :::
 

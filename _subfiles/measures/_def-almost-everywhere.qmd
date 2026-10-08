@@ -1,11 +1,11 @@
 :::{#def-almost-everywhere}
-#### Almost everywhere ($\mu$-almost everywhere, $\mu$-a.e.)
+#### Almost everywhere ($\measure$-almost everywhere, $\measure$-a.e.)
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 A statement about the elements of $S$ holds
-**$\mu$-almost everywhere**
-(written **$\mu$-a.e.**,
-or **almost everywhere** when $\mu$ is clear from context)
+**$\measure$-almost everywhere**
+(written **$\measure$-a.e.**,
+or **almost everywhere** when $\measure$ is clear from context)
 if the set of elements for which it fails
 is a [subset](sets-functions.qmd#def-subset) of a set of [measure zero](#def-measure-zero).
 

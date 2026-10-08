@@ -37,7 +37,7 @@ $$
 
 For $\matr{S} = \sbmat{ 3 & 1 \\ 1 & 2 }$ as in @exm-deriv-quadratic-form,
 @thm-hessian-quadratic gives $\matr{H}_f(\vx) = \sbmat{ 6 & 2 \\ 2 & 4 }$.
-Directly, the gradient found there, with $\beta_i$ renamed $x_i$, is $\tp{(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}$,
+Directly, the gradient found there, with $\coef{i}$ renamed $x_i$, is $\tp{(6 x_1 + 2 x_2,\ 2 x_1 + 4 x_2)}$,
 and differentiating its entries by $x_1$ and by $x_2$ (@def-hessian) gives
 
 $$

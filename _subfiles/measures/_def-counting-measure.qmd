@@ -8,7 +8,7 @@ that assigns each finite set its number of elements,
 and each infinite set the value $\infty$:
 
 $$
-\mu(A) \eqdef \begin{cases}
+\measure(A) \eqdef \begin{cases}
 \abs{A} & \text{if } A \text{ is finite} \\
 \infty & \text{if } A \text{ is infinite}
 \end{cases}

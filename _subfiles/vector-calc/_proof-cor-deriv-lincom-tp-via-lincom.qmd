@@ -2,13 +2,13 @@
 
 **Using @thm-deriv-lincom:**
 
-Since $\tp{\vx}\vb = \vx \cdot \vb$
+Since $\tp{\vx}\vcoef = \vx \cdot \vcoef$
 (see [dot product](linear-algebra.qmd#def-dot-product)),
-and $\vx$ is constant with respect to $\vb$:
+and $\vx$ is constant with respect to $\vcoef$:
 
 $$
-\deriv{\vb}(\tp{\vx}\vb)
-= \deriv{\vb}(\vx \cdot \vb)
+\deriv{\vcoef}(\tp{\vx}\vcoef)
+= \deriv{\vcoef}(\vx \cdot \vcoef)
 = \vx
 $$
 

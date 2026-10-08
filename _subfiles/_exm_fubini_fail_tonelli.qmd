@@ -8,23 +8,23 @@ The same function $f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2$ from
 
 **Why @thm-fubini-tonelli's conditions fail:**
 $\iint_R |f|\,dA = \infty$, which violates condition (b).
-Switching to polar coordinates $(r, \theta)$ near the origin, the
+Switching to polar coordinates $(r, \angpar)$ near the origin, the
 integrand satisfies
-$|f(x, y)| = \abs{x^2 - y^2}/(x^2 + y^2)^2 = \abs{\cos 2\theta}/r^2$,
+$|f(x, y)| = \abs{x^2 - y^2}/(x^2 + y^2)^2 = \abs{\cos 2\angpar}/r^2$,
 so
 
 $$
 \ba
 \iint_R |f|\,dA
-&\ge \int_0^{\pi/2}\!\int_0^{\epsilon}
-   \frac{\abs{\cos 2\theta}}{r^2}\, r\,dr\,d\theta\\
-&= \paren{\int_0^{\pi/2}\abs{\cos 2\theta}\,d\theta}
-       \int_0^{\epsilon} \frac{dr}{r}\\
+&\ge \int_0^{\pi/2}\!\int_0^{\smallconst}
+   \frac{\abs{\cos 2\angpar}}{r^2}\, r\,dr\,d\angpar\\
+&= \paren{\int_0^{\pi/2}\abs{\cos 2\angpar}\,d\angpar}
+       \int_0^{\smallconst} \frac{dr}{r}\\
 &= +\infty,
 \ea
 $$
 
-since $\int_0^{\epsilon} dr/r$ diverges.
+since $\int_0^{\smallconst} dr/r$ diverges.
 Therefore $\iint_R |f|\,dA = \infty$,
 and condition (b) of @thm-fubini-tonelli is not satisfied.
 (Condition (a) also fails: $f$ takes both positive and negative values,

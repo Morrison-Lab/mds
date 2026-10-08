@@ -17,13 +17,13 @@ follow from a stated theorem rather than from an aside.
 Let $f$ be a bounded function on a closed, bounded plane region $R \subseteq \reals^2$.
 Cover $R$ with a grid of rectangles,
 keep the $n$ rectangles that lie entirely inside $R$,
-with areas $\Delta A_1, \ldots, \Delta A_n$,
+with areas $\change A_1, \ldots, \change A_n$,
 and choose a point $(x_i, y_i)$ in the $i$-th rectangle.
 The **double integral** of $f$ over $R$ is
 
-$$\iint_R f(x, y)\,dA \eqdef \lim_{\norm{\Delta} \to 0} \sumin f(x_i, y_i)\,\Delta A_i,$$
+$$\iint_R f(x, y)\,dA \eqdef \lim_{\norm{\change} \to 0} \sumin f(x_i, y_i)\,\change A_i,$$
 
-where $\norm{\Delta}$ is the length of the longest diagonal among the $n$ rectangles,
+where $\norm{\subdiv}$ is the length of the longest diagonal among the $n$ rectangles,
 when that limit exists and has the same value
 for every choice of grids and of the points $(x_i, y_i)$.
 The symbol $dA$ stands for an element of area.

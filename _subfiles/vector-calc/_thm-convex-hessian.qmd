@@ -15,7 +15,7 @@ that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuo
 
 Let $\vx, \vy \in \reals^p$.
 By @thm-taylor-mv with $\vecf{z} = \vy$ and $\vecf{h} = \vx - \vy$,
-there is a $\tau \in (0, 1)$ such that, with $\vecf{w} \eqdef \vy + \tau (\vx - \vy)$,
+there is a $\midpt \in (0, 1)$ such that, with $\vecf{w} \eqdef \vy + \midpt (\vx - \vy)$,
 
 $$
 \ba

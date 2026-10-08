@@ -4,10 +4,10 @@
 Let $A \subseteq \reals^p$
 and let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
 A point $x^* \in A$ is a **local minimizer** of $f$
-if there is a number $\delta > 0$
+if there is a number $\tolin > 0$
 such that $f(x^*) \le f(x)$
 for all $x \in A$ with
-$\norm{x - x^*} < \delta$,
+$\norm{x - x^*} < \tolin$,
 where $\norm{\cdot}$ is the
 [Euclidean norm](linear-algebra.qmd#def-euclidean-norm).
 
@@ -19,17 +19,17 @@ where $\norm{\cdot}$ is the
 #### Local and global minimizers
 
 For $p = 1$, $\norm{x - x^*} = \abs{x - x^*}$.
-For example, with $x^* = 1$ and $\delta = 1$,
+For example, with $x^* = 1$ and $\tolin = 1$,
 the condition $\abs{x - 1} < 1$ means $0 < x < 2$.
 
 Every global minimizer (@def-global-minimizer) is a local minimizer:
-take any $\delta > 0$.
+take any $\tolin > 0$.
 For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\reals$,
 so it is also a local minimizer.
 
 The [converse](notation.qmd#def-converse) fails.
 In @exr-local-vs-global-min,
-$x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\delta = 1$),
+$x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\tolin = 1$),
 but not a global one.
 
 :::
@@ -68,8 +68,8 @@ f(-1 + t)
 $$
 
 and $t^2 (t - 3) < 0$ whenever $t \ne 0$ and $t < 3$.
-So whatever $\delta > 0$ is,
-the point $x = -1 + t$ with $t = \min\cb{\delta / 2, 1}$ satisfies $\abs{x - (-1)} < \delta$
+So whatever $\tolin > 0$ is,
+the point $x = -1 + t$ with $t = \min\cb{\tolin / 2, 1}$ satisfies $\abs{x - (-1)} < \tolin$
 and $f(x) < f(-1)$.
 For example, $f(-0.9) = -0.729 + 2.7 = 1.971 < 2$.
 
@@ -120,8 +120,8 @@ f(-1 + t)
 $$
 
 and $t^2 (t - 3) < 0$ whenever $t \ne 0$ and $t < 3$.
-So whatever $\delta > 0$ is,
-the point $x = -1 + t$ with $t = \min\cb{\delta / 2, 1}$ satisfies $\abs{x - (-1)} < \delta$
+So whatever $\tolin > 0$ is,
+the point $x = -1 + t$ with $t = \min\cb{\tolin / 2, 1}$ satisfies $\abs{x - (-1)} < \tolin$
 and $f(x) < f(-1)$.
 For example, $f(-0.9) = -0.729 + 2.7 = 1.971 < 2$.
 

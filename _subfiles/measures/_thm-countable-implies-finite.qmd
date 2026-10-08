@@ -1,10 +1,10 @@
 :::{#thm-countable-implies-finite}
 #### Countable additivity implies finite additivity
 
-If $\mu$ is a [countably additive](#def-countable-additivity) function
+If $\measure$ is a [countably additive](#def-countable-additivity) function
 on a [$\sigma$-algebra](#def-sigma-algebra) $\salg$,
-and $\mu(\emptyset) = 0$,
-then $\mu$ is [finitely additive](#def-finite-additivity).
+and $\measure(\emptyset) = 0$,
+then $\measure$ is [finitely additive](#def-finite-additivity).
 
 :::
 
@@ -18,15 +18,15 @@ and its union is $A_1 \cup \cdots \cup A_n$. So:
 
 $$
 \ba
-\mu(A_1 \cup \cdots \cup A_n)
-&= \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+\measure(A_1 \cup \cdots \cup A_n)
+&= \measure\!\left(\bigcup_{i=1}^{\infty} A_i\right)
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
-&= \sumto{i}{\infty} \mu(A_i)
+&= \sumto{i}{\infty} \measure(A_i)
 && \text{(countable additivity)} \\
-&= \sumin \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
+&= \sumin \measure(A_i) + \sum_{i=n+1}^{\infty} \measure(\emptyset)
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
-&= \sumin \mu(A_i)
-&& \text{(} \mu(\emptyset) = 0 \text{)}
+&= \sumin \measure(A_i)
+&& \text{(} \measure(\emptyset) = 0 \text{)}
 \ea
 $$
 

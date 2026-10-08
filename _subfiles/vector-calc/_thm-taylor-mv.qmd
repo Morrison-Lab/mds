@@ -4,13 +4,13 @@
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
 that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)),
 and let $\vecf{z}, \vecf{h} \in \reals^p$.
-Then there is a $\tau \in (0, 1)$ with
+Then there is a $\midpt \in (0, 1)$ with
 
 $$
 f(\vecf{z} + \vecf{h})
 = f(\vecf{z})
 + \tp{\paren{\deriv{\vx} f(\vecf{z})}} \vecf{h}
-+ \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}.
++ \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \midpt \vecf{h})\,\vecf{h}.
 $$
 
 :::
@@ -61,7 +61,7 @@ $$
 
 The last step is again the [matrix product](linear-algebra.qmd#def-matrix-mult).
 Now apply @thm-taylor-1d to $g$ on $[0, 1]$:
-there is a $\tau \in (0, 1)$ with
+there is a $\midpt \in (0, 1)$ with
 
 $$
 \ba
@@ -69,16 +69,16 @@ f(\vecf{z} + \vecf{h})
 &= g(1)
 && \text{(definition of } g \text{)}
 \\
-&= g(0) + g'(0)\,(1 - 0) + \frac{1}{2}\,g''(\tau)\,(1 - 0)^2
+&= g(0) + g'(0)\,(1 - 0) + \frac{1}{2}\,g''(\midpt)\,(1 - 0)^2
 && \text{(@thm-taylor-1d, with } a = 0, b = 1 \text{)}
 \\
-&= g(0) + g'(0) + \frac{1}{2}\,g''(\tau)
+&= g(0) + g'(0) + \frac{1}{2}\,g''(\midpt)
 && \text{(} 1 - 0 = 1 \text{)}
 \\
-&= f(\vecf{z}) + \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z}) + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}
-&& \text{(substitute } g(0), g'(0), g''(\tau) \text{)}
+&= f(\vecf{z}) + \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z}) + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \midpt \vecf{h})\,\vecf{h}
+&& \text{(substitute } g(0), g'(0), g''(\midpt) \text{)}
 \\
-&= f(\vecf{z}) + \tp{\paren{\deriv{\vx} f(\vecf{z})}} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \tau \vecf{h})\,\vecf{h}.
+&= f(\vecf{z}) + \tp{\paren{\deriv{\vx} f(\vecf{z})}} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + \midpt \vecf{h})\,\vecf{h}.
 && \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
 \ea
 $$
@@ -93,7 +93,7 @@ $$
 Let $f(\vx) = \tp{\vx} \matr{S} \vx$ with $\matr{S}$ symmetric and constant.
 Its gradient is $2 \matr{S} \vx$ ([derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form))
 and its Hessian is $2 \matr{S}$ at every point ([Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic)),
-so whatever $\tau$ is, @thm-taylor-mv reads
+so whatever $\midpt$ is, @thm-taylor-mv reads
 
 $$
 f(\vecf{z} + \vecf{h}) = \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{(2 \matr{S} \vecf{z})} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}} (2 \matr{S}) \vecf{h}

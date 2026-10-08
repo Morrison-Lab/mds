@@ -6,7 +6,7 @@ and $\operatorname{rank}(\matr{A}) = r$ (@def-rank).
 Then there are
 an $n \times n$ orthogonal matrix $\matr{U}$,
 a $p \times p$ orthogonal matrix $\matr{V}$ (@def-orthogonal-matrix),
-and numbers $\sigma_1 \ge \sigma_2 \ge \cdots \ge \sigma_r > 0$
+and numbers $\singval_1 \ge \singval_2 \ge \cdots \ge \singval_r > 0$
 such that
 
 $$
@@ -16,7 +16,7 @@ $$
 \underbrace{\tp{\matr{V}}}_{p \times p}
 $$
 
-where $\matr{D}$ has entries $d_{ii} = \sigma_i$ for $i = 1, \ldots, r$
+where $\matr{D}$ has entries $d_{ii} = \singval_i$ for $i = 1, \ldots, r$
 and every other entry $0$.
 
 :::
@@ -76,6 +76,6 @@ $$
 $$
 
 $\matr{U}$ is orthogonal because $\tp{\matr{U}}\matr{U} = \begin{bmatrix} 1 \end{bmatrix} = \matr{I}_1$,
-and the single singular value is $\sigma_1 = \sqrt{2}$.
+and the single singular value is $\singval_1 = \sqrt{2}$.
 
 :::

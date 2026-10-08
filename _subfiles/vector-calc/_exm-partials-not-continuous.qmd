@@ -29,9 +29,9 @@ and the limit as $h \to 0$ is $0$: $\deriv{x_1} f(\vzero) = 0$ (@def-partial-der
 The same steps with $f(0, h) = 0$ give $\deriv{x_2} f(\vzero) = 0$.
 
 **But $f$ is not continuous at $\vzero$** (@def-continuous-several).
-Take $\varepsilon = \tfrac{1}{4}$ and any $\delta > 0$,
-and let $t = \delta / 2$ and $\vy = \tp{(t, t)}$.
-Then $\norm{\vy - \vzero} = \sqrt{t^2 + t^2} = t \sqrt{2} = \delta / \sqrt{2} < \delta$, but
+Take $\tolout = \tfrac{1}{4}$ and any $\tolin > 0$,
+and let $t = \tolin / 2$ and $\vy = \tp{(t, t)}$.
+Then $\norm{\vy - \vzero} = \sqrt{t^2 + t^2} = t \sqrt{2} = \tolin / \sqrt{2} < \tolin$, but
 
 $$
 \ba
@@ -47,7 +47,7 @@ $$
 \ea
 $$
 
-which is more than $\varepsilon = \tfrac{1}{4}$.
+which is more than $\tolout = \tfrac{1}{4}$.
 
 The partial derivatives only look along the two coordinate axes, where $f$ is $0$;
 along the line $x_1 = x_2$, $f$ is $\tfrac{1}{2}$ everywhere except at $\vzero$.

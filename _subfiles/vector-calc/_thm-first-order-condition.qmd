@@ -10,11 +10,11 @@ then $\vx^*$ is a stationary point of $f$ (@def-stationary-point).
 
 ::: proof
 
-Take $\delta > 0$ as in the definition of a local minimizer.
+Take $\tolin > 0$ as in the definition of a local minimizer.
 Fix $i \in \cb{1, \ldots, p}$,
 let $\vecf{e}_i$ be the vector with $1$ in entry $i$ and $0$ elsewhere,
 and let $g_i(t) \eqdef f(\vx^* + t\,\vecf{e}_i)$ for $t \in \reals$.
-For $\abs{t} < \delta$, $\norm{(\vx^* + t\,\vecf{e}_i) - \vx^*} = \abs{t}\,\norm{\vecf{e}_i} = \abs{t} < \delta$,
+For $\abs{t} < \tolin$, $\norm{(\vx^* + t\,\vecf{e}_i) - \vx^*} = \abs{t}\,\norm{\vecf{e}_i} = \abs{t} < \tolin$,
 so $g_i(0) = f(\vx^*) \le f(\vx^* + t\,\vecf{e}_i) = g_i(t)$:
 $0$ is a local minimizer of $g_i$.
 Moving $\vx$ from $\vx^*$ along $\vecf{e}_i$ changes only $x_i$,

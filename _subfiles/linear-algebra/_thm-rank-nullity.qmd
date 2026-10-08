@@ -43,28 +43,28 @@ $$
 
 ::: proof
 
-Let $\nu = \operatorname{nullity}(\matr{A})$.
-Choose a basis $\vecf{x}_1, \ldots, \vecf{x}_\nu$ of $\mathcal{N}(\matr{A})$,
+Let $\nullity = \operatorname{nullity}(\matr{A})$.
+Choose a basis $\vecf{x}_1, \ldots, \vecf{x}_\nullity$ of $\mathcal{N}(\matr{A})$,
 and extend it to a basis
-$\vecf{x}_1, \ldots, \vecf{x}_\nu, \vecf{y}_1, \ldots, \vecf{y}_{n - \nu}$
+$\vecf{x}_1, \ldots, \vecf{x}_\nullity, \vecf{y}_1, \ldots, \vecf{y}_{n - \nullity}$
 of $\reals^n$ (@thm-extend-basis);
 it has $n$ vectors,
 because every basis of $\reals^n$ has $\dim(\reals^n) = n$ vectors
 (@thm-basis-size, @exm-dimension).
-We show that $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n - \nu}$
+We show that $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n - \nullity}$
 are a basis of $\mathcal{C}(\matr{A})$,
 using @thm-matvec-linear to apply $\matr{A}$ to linear combinations.
 
 **They are linearly independent.**
-Suppose $\sumto{i}{n-\nu} v_i\,\matr{A} \vecf{y}_i = \vzero_m$.
+Suppose $\sumto{i}{n-\nullity} v_i\,\matr{A} \vecf{y}_i = \vzero_m$.
 Then $\matr{A}\,\paren{\sum_i v_i \vecf{y}_i} = \vzero_m$ (@thm-matvec-linear),
 so $\sum_i v_i \vecf{y}_i \in \mathcal{N}(\matr{A})$,
-and it equals $\sumto{j}{\nu} u_j \vecf{x}_j$ for some numbers $u_j$,
+and it equals $\sumto{j}{\nullity} u_j \vecf{x}_j$ for some numbers $u_j$,
 since the $\vecf{x}_j$ span $\mathcal{N}(\matr{A})$.
 Moving everything to one side,
 
 $$
-\sumto{j}{\nu} (-u_j)\,\vecf{x}_j + \sumto{i}{n-\nu} v_i \vecf{y}_i = \vzero_n,
+\sumto{j}{\nullity} (-u_j)\,\vecf{x}_j + \sumto{i}{n-\nullity} v_i \vecf{y}_i = \vzero_n,
 $$
 
 and because the $\vecf{x}$'s and $\vecf{y}$'s together form a basis of $\reals^n$,
@@ -82,26 +82,26 @@ Then
 $$
 \ba
 \vecf{w}
-&= \matr{A}\,\paren{\sumto{j}{\nu} a_j \vecf{x}_j + \sumto{i}{n-\nu} b_i \vecf{y}_i}
+&= \matr{A}\,\paren{\sumto{j}{\nullity} a_j \vecf{x}_j + \sumto{i}{n-\nullity} b_i \vecf{y}_i}
 && \text{(substitute } \vecf{z} \text{)}
 \\
-&= \sumto{j}{\nu} a_j\,\matr{A} \vecf{x}_j + \sumto{i}{n-\nu} b_i\,\matr{A} \vecf{y}_i
+&= \sumto{j}{\nullity} a_j\,\matr{A} \vecf{x}_j + \sumto{i}{n-\nullity} b_i\,\matr{A} \vecf{y}_i
 && \text{(@thm-matvec-linear)}
 \\
-&= \sumto{j}{\nu} a_j\,\vzero_m + \sumto{i}{n-\nu} b_i\,\matr{A} \vecf{y}_i
+&= \sumto{j}{\nullity} a_j\,\vzero_m + \sumto{i}{n-\nullity} b_i\,\matr{A} \vecf{y}_i
 && \text{(each } \vecf{x}_j \in \mathcal{N}(\matr{A}) \text{)}
 \\
-&= \sumto{i}{n-\nu} b_i\,\matr{A} \vecf{y}_i,
+&= \sumto{i}{n-\nullity} b_i\,\matr{A} \vecf{y}_i,
 && \text{(drop the zero terms)}
 \ea
 $$
 
-a linear combination of $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n-\nu}$.
+a linear combination of $\matr{A} \vecf{y}_1, \ldots, \matr{A} \vecf{y}_{n-\nullity}$.
 These vectors are in $\mathcal{C}(\matr{A})$,
 so their span is exactly $\mathcal{C}(\matr{A})$.
 
-So $\dim\paren{\mathcal{C}(\matr{A})} = n - \nu$,
-and $\operatorname{rank}(\matr{A}) = n - \nu$ by @thm-rank-dim.
+So $\dim\paren{\mathcal{C}(\matr{A})} = n - \nullity$,
+and $\operatorname{rank}(\matr{A}) = n - \nullity$ by @thm-rank-dim.
 
 :::
 

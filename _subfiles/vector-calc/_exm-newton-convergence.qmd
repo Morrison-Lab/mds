@@ -43,7 +43,7 @@ that is, $f$ is strictly larger at $-2$ than at all nearby points.
 Newton's method looks only for a stationary point,
 and here the Hessian $f''(x) = 2x$ is negative along the way,
 so the quadratic model has no minimizer
-(with $H < 0$, $q(\delta) = f + g\,\delta + \tfrac{1}{2} H \delta^2$ decreases without bound)
+(with $H < 0$, $q(\step) = f + g\,\step + \tfrac{1}{2} H \step^2$ decreases without bound)
 and @thm-newton-model does not apply:
 the positive definite hypothesis there is needed.
 

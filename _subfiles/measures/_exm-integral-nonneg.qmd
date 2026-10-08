@@ -1,7 +1,7 @@
 :::{#exm-integral-nonneg}
 #### Integrals with respect to counting measure
 
-Let $\mu$ be the counting measure on the die rolls $D$,
+Let $\measure$ be the counting measure on the die rolls $D$,
 and let $g : D \to [0, \infty)$.
 Every function on $D$ is measurable (@exm-measurable-function).
 
@@ -10,9 +10,9 @@ For any split of $D$ into nonempty pairwise disjoint sets $\dsn{A}$:
 
 $$
 \ba
-\sumin \paren{\inf_{x \in A_i} g(x)} \mu(A_i)
+\sumin \paren{\inf_{x \in A_i} g(x)} \measure(A_i)
 &= \sumin \sum_{x \in A_i} \inf_{y \in A_i} g(y)
-&& \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\
+&& \text{(} \measure(A_i) \text{ counts the elements of } A_i \text{)} \\
 &\le \sumin \sum_{x \in A_i} g(x)
 && \text{(an infimum is at most each value)} \\
 &= \sum_{x \in D} g(x)
@@ -22,13 +22,13 @@ $$
 
 The split into the six single points $\set{1}, \ldots, \set{6}$
 gives exactly $\sum_{x \in D} g(x)$,
-so the supremum is $\int_D g \, d\mu = \sum_{x \in D} g(x)$.
-For example, with $g(x) = x$, $\int_D g \, d\mu = 1 + 2 + \cdots + 6 = 21$.
+so the supremum is $\int_D g \, d\measure = \sum_{x \in D} g(x)$.
+For example, with $g(x) = x$, $\int_D g \, d\measure = 1 + 2 + \cdots + 6 = 21$.
 
 *An infinite integral.*
-For the counting measure $\mu$ on $\mathbb{N}$ and the constant function $h(n) = 1$,
+For the counting measure $\measure$ on $\mathbb{N}$ and the constant function $h(n) = 1$,
 the split with one set, $A_1 = \mathbb{N}$, gives the sum
-$1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty$,
-so $\int_{\mathbb{N}} h \, d\mu = \infty$.
+$1 \cdot \measure(\mathbb{N}) = 1 \cdot \infty = \infty$,
+so $\int_{\mathbb{N}} h \, d\measure = \infty$.
 
 :::

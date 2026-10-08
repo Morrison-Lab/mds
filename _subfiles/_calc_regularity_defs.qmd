@@ -129,7 +129,7 @@ is a finite list of points
 $$a = x_0 < x_1 < \cdots < x_n = b.$$
 
 It splits $[a, b]$ into the $n$ subintervals $[x_{i-1}, x_i]$,
-of widths $\Delta x_i \eqdef x_i - x_{i-1}$.
+of widths $\change x_i \eqdef x_i - x_{i-1}$.
 
 [@larsonCalc11e, Section 4.3]
 
@@ -142,7 +142,7 @@ of widths $\Delta x_i \eqdef x_i - x_{i-1}$.
 
 The points $0 < 0.25 < 0.5 < 1$ form a partition of $[0, 1]$
 with $n = 3$ subintervals,
-of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
+of widths $\change x_1 = 0.25$, $\change x_2 = 0.25$, and $\change x_3 = 0.5$.
 
 :::
 
@@ -163,7 +163,7 @@ of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
 
 The **mesh** of a partition $\mathcal{P}$ (@def-partition) is its largest subinterval width,
 
-$$\norm{\mathcal{P}} \eqdef \max_{i \in \cb{1, \ldots, n}} \Delta x_i,$$
+$$\norm{\mathcal{P}} \eqdef \max_{i \in \cb{1, \ldots, n}} \change x_i,$$
 
 where $n$ is the number of subintervals of $\mathcal{P}$.
 
@@ -177,7 +177,7 @@ where $n$ is the number of subintervals of $\mathcal{P}$.
 #### The mesh of a partition of $\lbrack 0, 1\rbrack$
 
 For the partition of $[0, 1]$ in @exm-partition,
-with widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
+with widths $\change x_1 = 0.25$, $\change x_2 = 0.25$, and $\change x_3 = 0.5$,
 the mesh is the largest of these widths, $\norm{\mathcal{P}} = 0.5$.
 
 :::
@@ -202,7 +202,7 @@ The **Riemann integral** of $f$ over $[a, b]$
 (also called the **definite integral** of $f$ from $a$ to $b$)
 is the limit of the Riemann sums (@def-riemann-sum) as the mesh (@def-mesh) shrinks to zero:
 
-$$\int_a^b f(x)\,dx \eqdef \lim_{\norm{\mathcal{P}} \to 0} \sumin f(x_i^*)\,\Delta x_i,$$
+$$\int_a^b f(x)\,dx \eqdef \lim_{\norm{\mathcal{P}} \to 0} \sumin f(x_i^*)\,\change x_i,$$
 
 when that limit exists and has the same value
 for every choice of the partitions and of the sample points $x_i^*$.
@@ -217,7 +217,7 @@ for every choice of the partitions and of the sample points $x_i^*$.
 #### Riemann integrable
 
 A bounded function $f$ is **Riemann integrable on** $[a, b]$
-if the Riemann sums (@def-riemann-sum) $\sumin f(x_i^*)\,\Delta x_i$,
+if the Riemann sums (@def-riemann-sum) $\sumin f(x_i^*)\,\change x_i$,
 over partitions $\mathcal{P}$ of $[a, b]$ (@def-partition)
 with a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$,
 approach a real-number limit as the mesh $\norm{\mathcal{P}}$ (@def-mesh) shrinks to zero,
@@ -238,11 +238,11 @@ For every partition and every choice of sample points,
 
 $$
 \ba
-\sumin f(x_i^*)\,\Delta x_i
-&= \sumin 2\,\Delta x_i
+\sumin f(x_i^*)\,\change x_i
+&= \sumin 2\,\change x_i
 && \text{(} f \text{ is } 2 \text{ everywhere)}
 \\
-&= 2 \sumin \Delta x_i
+&= 2 \sumin \change x_i
 && \text{(factor out the constant)}
 \\
 &= 2 \cd (3 - 0)
@@ -281,11 +281,11 @@ and $g(x) = 0$ when $x$ is [irrational](notation.qmd#def-irrational-numbers),
 on $[0, 1]$.
 Every subinterval contains both rational and irrational points.
 Choosing every sample point rational gives
-$\sumin 1 \cd \Delta x_i = 1$
+$\sumin 1 \cd \change x_i = 1$
 for every partition,
-because the widths $\Delta x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$,
+because the widths $\change x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$,
 and choosing every sample point irrational gives
-$\sumin 0 \cd \Delta x_i = 0$.
+$\sumin 0 \cd \change x_i = 0$.
 The two limits differ,
 so $g$ is not Riemann integrable on $[0, 1]$,
 and $\int_0^1 g(x)\,dx$ does not exist.
@@ -299,11 +299,11 @@ and $\int_0^1 g(x)\,dx$ does not exist.
 
 For a bounded function $f$ on $[a, b]$ and a positive integer $n$,
 split $[a, b]$ into $n$ subintervals of equal width
-$\Delta x \eqdef (b - a)/n$,
+$\change x \eqdef (b - a)/n$,
 and let $x_i^*$ be any point in the $i$-th subinterval.
 The **equal-width Riemann sum** is
 
-$$S_n \eqdef \sumin f(x_i^*)\,\Delta x.$$
+$$S_n \eqdef \sumin f(x_i^*)\,\change x.$$
 
 :::
 
@@ -313,7 +313,7 @@ $$S_n \eqdef \sumin f(x_i^*)\,\Delta x.$$
 #### An equal-width Riemann sum
 
 Let $f(x) = x^2$ on $[0, 1]$, with $n = 2$,
-so $\Delta x = 1/2$,
+so $\change x = 1/2$,
 and take each sample point at the right end of its subinterval:
 $x_1^* = \frac{1}{2}$ and $x_2^* = 1$.
 Then

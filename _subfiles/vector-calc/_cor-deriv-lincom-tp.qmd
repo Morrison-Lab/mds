@@ -2,10 +2,10 @@
 
 #### Derivative of a dot product, transpose-product form
 
-If $\vx$ is constant with respect to $\vb$, then:
+If $\vx$ is constant with respect to $\vcoef$, then:
 
 $$
-\underbrace{\deriv{\vb} (\underbrace{\tp{\vx}}_{1 \times p} \underbrace{\vb}_{p \times 1})}_{p \times 1} =
+\underbrace{\deriv{\vcoef} (\underbrace{\tp{\vx}}_{1 \times p} \underbrace{\vcoef}_{p \times 1})}_{p \times 1} =
 \underbrace{\vx}_{p \times 1}
 $$
 

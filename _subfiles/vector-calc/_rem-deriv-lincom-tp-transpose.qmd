@@ -9,7 +9,7 @@ in scalar calculus $\deriv{x}(cx) = c$,
 but here the coefficient $\tp{\vx}$ (a row vector)
 becomes $\vx$ (a column vector) in the result.
 For example, with $\vx = \tp{(2, -1)}$,
-$\tp{\vx}\vb = 2\beta_1 - \beta_2$,
+$\tp{\vx}\vcoef = 2\coef{1} - \coef{2}$,
 whose vector derivative is the column vector $\tp{(2, -1)} = \vx$,
 not the row vector $\tp{\vx} = (2, -1)$.
 

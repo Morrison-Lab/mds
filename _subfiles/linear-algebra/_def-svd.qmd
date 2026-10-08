@@ -6,7 +6,7 @@ and $\operatorname{rank}(\matr{A}) = r$.
 A **singular value decomposition** (SVD) of $\matr{A}$
 is a factorization $\matr{A} = \matr{U}\matr{D}\tp{\matr{V}}$
 with $\matr{U}$, $\matr{D}$ and $\matr{V}$ as in @thm-svd.
-The numbers $\sigma_1 \ge \cdots \ge \sigma_r > 0$ on the diagonal of $\matr{D}$
+The numbers $\singval_1 \ge \cdots \ge \singval_r > 0$ on the diagonal of $\matr{D}$
 are the **singular values** of $\matr{A}$.
 
 :::
@@ -198,7 +198,7 @@ $$
 
 which is $\matr{A}$.
 $\matr{A}$ has rank $2$, because its two columns are linearly independent,
-and its singular values are $\sigma_1 = 2$ and $\sigma_2 = \sqrt{2}$.
+and its singular values are $\singval_1 = 2$ and $\singval_2 = \sqrt{2}$.
 
 :::
 
@@ -303,7 +303,7 @@ $$
 $$
 
 which is $\matr{A}$ again.
-Both SVDs have the singular values $\sigma_1 = 2$ and $\sigma_2 = \sqrt{2}$.
+Both SVDs have the singular values $\singval_1 = 2$ and $\singval_2 = \sqrt{2}$.
 
 :::
 
@@ -320,7 +320,7 @@ For example, $\matr{B} = \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}$
 has rank $r = 1$.
 Taking $\matr{U} = \matr{V} = \matr{I}_2$ and $\matr{D} = \matr{B}$
 gives an SVD $\matr{B} = \matr{I}_2 \matr{B} \tp{\matr{I}_2}$,
-so by @def-svd, $\matr{B}$ has one singular value, $\sigma_1 = 3$.
+so by @def-svd, $\matr{B}$ has one singular value, $\singval_1 = 3$.
 R's `svd()` reports $\min(2, 2) = 2$ singular values for $\matr{B}$:
 $3$ and $0$.
 

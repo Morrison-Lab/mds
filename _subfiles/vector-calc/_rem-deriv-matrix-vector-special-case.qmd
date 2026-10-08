@@ -4,11 +4,11 @@
 #### The derivative of a linear map as a special case
 
 This result generalizes @thm-deriv-linear-map,
-which is the special case $\vecf{v} = \vb$
-(so that $q = p$, $\deriv{\vb} \vb = \matr{I}_p$,
-and $\deriv{\vb} (\matr{A}\vb) = \matr{I}_p \tp{\matr{A}} = \tp{\matr{A}}$).
+which is the special case $\vecf{v} = \vcoef$
+(so that $q = p$, $\deriv{\vcoef} \vcoef = \matr{I}_p$,
+and $\deriv{\vcoef} (\matr{A}\vcoef) = \matr{I}_p \tp{\matr{A}} = \tp{\matr{A}}$).
 For example, @exm-deriv-linear-map is the case
-$\matr{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ and $\vecf{v} = \vb = \tp{(\beta_1, \beta_2)}$,
+$\matr{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}$ and $\vecf{v} = \vcoef = \tp{(\coef{1}, \coef{2})}$,
 where this result gives $\matr{I}_2 \tp{\matr{A}} = \tp{(2, 3)}$.
 
 :::

@@ -1,23 +1,23 @@
 ::: {#def-row-vector-derivative}
 #### Row-vector derivative (total derivative)
-If $f(\vb)$ is a scalar-valued function of a $p \times 1$ vector $\vb$,
-such as $f(\vb) = \tp{\vx}\vb$,
+If $f(\vcoef)$ is a scalar-valued function of a $p \times 1$ vector $\vcoef$,
+such as $f(\vcoef) = \tp{\vx}\vcoef$,
 then its **row-vector derivative** is the row vector of its
 partial derivatives (@def-partial-derivative):
 
 $$
-\derivf{f(\vb)}{\tp{\vb}} =
+\derivf{f(\vcoef)}{\tp{\vcoef}} =
 \sbmat{
-\deriv{\beta_1}f(\vb) &
-\deriv{\beta_2}f(\vb) &
+\deriv{\coef{1}}f(\vcoef) &
+\deriv{\coef{2}}f(\vcoef) &
 \cdots &
-\deriv{\beta_p}f(\vb)
+\deriv{\coef{p}}f(\vcoef)
 }
 $$ {#eq-row-vector-derivative}
 
-Some sources write the same row vector as $\deriv{\tp{\vb}} f(\vb)$,
+Some sources write the same row vector as $\deriv{\tp{\vcoef}} f(\vcoef)$,
 with the operator on the left,
-read as each operator $\deriv{\beta_i}$ applied to $f$ rather than as a matrix product
+read as each operator $\deriv{\coef{i}}$ applied to $f$ rather than as a matrix product
 (see @rem-row-derivative-shape).
 
 The row-vector derivative is also called the **total derivative** of $f$,
@@ -29,18 +29,18 @@ the name used when the derivative of a scalar-valued function is written as a ro
 :::{#rem-row-derivative-shape}
 #### Which side the operator goes on
 
-Read $\deriv{\vb}$ as a $p \times 1$ column vector of operators
-with entries $\deriv{\beta_1}, \ldots, \deriv{\beta_p}$,
-and $\deriv{\tp{\vb}}$ as the $1 \times p$ row vector of operators with the same entries.
+Read $\deriv{\vcoef}$ as a $p \times 1$ column vector of operators
+with entries $\deriv{\coef{1}}, \ldots, \deriv{\coef{p}}$,
+and $\deriv{\tp{\vcoef}}$ as the $1 \times p$ row vector of operators with the same entries.
 Writing either one next to $f$ can be read in two ways:
 
 - **As a matrix product,**
   with $f$ a $1 \times 1$ matrix,
   under the shape rule of [matrix multiplication](linear-algebra.qmd#def-matrix-mult).
   The column-vector operator works on the left:
-  $\deriv{\vb} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column vector (@def-vector-derivative).
+  $\deriv{\vcoef} f$ is $(p \times 1)(1 \times 1)$, a $p \times 1$ column vector (@def-vector-derivative).
   The row-vector operator does not:
-  $\deriv{\tp{\vb}} f$ is $(1 \times p)(1 \times 1)$,
+  $\deriv{\tp{\vcoef}} f$ is $(1 \times p)(1 \times 1)$,
   whose inner dimensions $p$ and $1$ do not match when $p > 1$.
   For the shape rule to give the $1 \times p$ row vector,
   the operator would have to go on the right of $f$, as in $(1 \times 1)(1 \times p)$,
@@ -50,9 +50,9 @@ Writing either one next to $f$ can be read in two ways:
   the way $c \vx$ is read in [scalar multiplication](linear-algebra.qmd#def-scalar-mult),
   which has no shape rule:
   each entry of the operator vector is applied to $f$.
-  Then both $\deriv{\vb} f$ and $\deriv{\tp{\vb}} f$ work with the operator on the left.
+  Then both $\deriv{\vcoef} f$ and $\deriv{\tp{\vcoef}} f$ work with the operator on the left.
 
-The fraction $\derivf{f}{\tp{\vb}}$ of @eq-row-vector-derivative
+The fraction $\derivf{f}{\tp{\vcoef}}$ of @eq-row-vector-derivative
 means the same thing under both readings:
 the transpose in the denominator says the result is a row vector,
 without making the derivative a product.
@@ -63,8 +63,8 @@ so two rules of ordinary matrix algebra do not carry over:
 scalars commute with matrices, and products can be regrouped.
 
 - **Scalars do not commute with operators.**
-  $\deriv{\beta_i} f$ is a function,
-  but $f \deriv{\beta_i}$ is still an unapplied operator, waiting for something to act on.
+  $\deriv{\coef{i}} f$ is a function,
+  but $f \deriv{\coef{i}}$ is still an unapplied operator, waiting for something to act on.
   So, unlike $c \vx = \vx c$, the operator cannot move to the other side of $f$
   without changing the meaning.
   Putting the row-vector operator on the right of $f$ gives the row-vector derivative
@@ -72,9 +72,9 @@ scalars commute with matrices, and products can be regrouped.
 - **Products cannot be regrouped.**
   An operator acts on the whole product to its right,
   so by the [product rule](calculus.qmd#thm-product-rule),
-  $\deriv{\beta_i} (f g) \ne \paren{\deriv{\beta_i} f} g$ in general.
-  For example, with $f(\vb) = \beta_1$,
-  $\deriv{\beta_1} (f f) = 2 \beta_1$
-  but $\paren{\deriv{\beta_1} f} f = \beta_1$.
+  $\deriv{\coef{i}} (f g) \ne \paren{\deriv{\coef{i}} f} g$ in general.
+  For example, with $f(\vcoef) = \coef{1}$,
+  $\deriv{\coef{1}} (f f) = 2 \coef{1}$
+  but $\paren{\deriv{\coef{1}} f} f = \coef{1}$.
 
 :::

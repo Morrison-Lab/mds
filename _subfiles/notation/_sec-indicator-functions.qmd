@@ -26,11 +26,11 @@ This section summarizes the principal notational conventions.
 :::{#def-indicator-function}
 #### Indicator function (set indicator, predicate indicator)
 
-For any subset $A \subseteq \Omega$ of a universal set $\Omega$,
+For any subset $A \subseteq \universe$ of a universal set $\universe$,
 the **indicator function** of $A$,
 or **set indicator**,
 is the function
-$\indic{A} : \Omega \to \{0, 1\}$ defined by:
+$\indic{A} : \universe \to \{0, 1\}$ defined by:
 
 $$
 \indic{A}(x) \eqdef \begin{cases}
@@ -60,7 +60,7 @@ $$
 :::{#exm-indicator-numerical}
 #### Evaluating set and predicate indicators
 
-Consider the real line $\Omega = \reals$,
+Consider the real line $\universe = \reals$,
 the set of nonnegative numbers $A = [0, \infty)$,
 and a continuous
 [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable)
@@ -216,11 +216,11 @@ $[-2.1 \in A] = \indic{A}(-2.1) = 0$.
 For integers $i$ and $j$,
 the **Kronecker delta** is
 
-$$\delta_{ij} \eqdef [i = j]$$
+$$\kron_{ij} \eqdef [i = j]$$
 
 that is,
-$\delta_{ij} = 1$ when $i = j$
-and $\delta_{ij} = 0$ when $i \neq j$
+$\kron_{ij} = 1$ when $i = j$
+and $\kron_{ij} = 0$ when $i \neq j$
 (@def-iverson-bracket).
 
 :::
@@ -230,10 +230,10 @@ and $\delta_{ij} = 0$ when $i \neq j$
 :::{#exm-kronecker-delta}
 #### Evaluating the Kronecker delta
 
-- $\delta_{11} = [1 = 1] = 1$.
-- $\delta_{12} = [1 = 2] = 0$.
-- $\delta_{22} = [2 = 2] = 1$.
-- $\delta_{23} = [2 = 3] = 0$.
+- $\kron_{11} = [1 = 1] = 1$.
+- $\kron_{12} = [1 = 2] = 0$.
+- $\kron_{22} = [2 = 2] = 1$.
+- $\kron_{23} = [2 = 3] = 0$.
 
 :::
 
@@ -309,9 +309,9 @@ One of the identities below uses idempotence:
 
 {{< slidebreak >}}
 
-For subsets $A$ and $B$ of $\Omega$,
-with [complement](sets-functions.qmd#def-complement) $A^c \eqdef \Omega \setminus A$,
-and for every $x \in \Omega$:
+For subsets $A$ and $B$ of $\universe$,
+with [complement](sets-functions.qmd#def-complement) $A^c \eqdef \universe \setminus A$,
+and for every $x \in \universe$:
 
 - **Intersection ("and"):**
   $\indic{A \cap B}(x) = \indic{A}(x) \cdot \indic{B}(x)$
@@ -322,7 +322,7 @@ and for every $x \in \Omega$:
 - **Idempotence (@def-idempotent):**
   $(\indic{A}(x))^2 = \indic{A}(x)$
 - **Expectation gives probability:**
-  When $\Omega$ is a
+  When $\universe$ is a
   [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space)
   and $A$ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event),
   the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)

@@ -2,7 +2,7 @@
 #### Eigenvectors for distinct eigenvalues are linearly independent
 
 If $\vecf{v}_1, \ldots, \vecf{v}_k$ are eigenvectors of a $p \times p$ matrix $\matr{A}$
-for eigenvalues $\lambda_1, \ldots, \lambda_k$ that are all different,
+for eigenvalues $\eigval_1, \ldots, \eigval_k$ that are all different,
 then $\vecf{v}_1, \ldots, \vecf{v}_k$ are linearly independent (@def-linearly-independent).
 
 :::
@@ -17,23 +17,23 @@ $\sumto{i}{k} c_i \vecf{v}_i = \vzero$. Then
 $$
 \ba
 \vzero
-&= (\matr{A} - \lambda_k \matr{I}_p) \sumto{i}{k} c_i \vecf{v}_i
-&& \text{(multiply the supposed equation by } \matr{A} - \lambda_k \matr{I}_p \text{)}
+&= (\matr{A} - \eigval_k \matr{I}_p) \sumto{i}{k} c_i \vecf{v}_i
+&& \text{(multiply the supposed equation by } \matr{A} - \eigval_k \matr{I}_p \text{)}
 \\
-&= \sumto{i}{k} c_i\,(\matr{A} - \lambda_k \matr{I}_p)\,\vecf{v}_i
+&= \sumto{i}{k} c_i\,(\matr{A} - \eigval_k \matr{I}_p)\,\vecf{v}_i
 && \text{(@thm-matvec-linear)}
 \\
-&= \sumto{i}{k} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i
-&& \text{(@thm-eigen-shift-power, part 1, with } s = -\lambda_k \text{)}
+&= \sumto{i}{k} c_i\,(\eigval_i - \eigval_k)\,\vecf{v}_i
+&& \text{(@thm-eigen-shift-power, part 1, with } s = -\eigval_k \text{)}
 \\
-&= \sumto{i}{k-1} c_i\,(\lambda_i - \lambda_k)\,\vecf{v}_i.
+&= \sumto{i}{k-1} c_i\,(\eigval_i - \eigval_k)\,\vecf{v}_i.
 && \text{(the } i = k \text{ term is } \vzero \text{)}
 \ea
 $$
 
 By the induction hypothesis $\vecf{v}_1, \ldots, \vecf{v}_{k-1}$ are linearly independent,
-so every $c_i\,(\lambda_i - \lambda_k) = 0$ for $i < k$,
-and since $\lambda_i \ne \lambda_k$, every $c_i = 0$ for $i < k$.
+so every $c_i\,(\eigval_i - \eigval_k) = 0$ for $i < k$,
+and since $\eigval_i \ne \eigval_k$, every $c_i = 0$ for $i < k$.
 The supposed equation then reads $c_k \vecf{v}_k = \vzero$ with $\vecf{v}_k \ne \vzero$,
 so $c_k = 0$ too.
 

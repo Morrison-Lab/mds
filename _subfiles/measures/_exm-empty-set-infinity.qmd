@@ -1,8 +1,8 @@
 :::{#exm-empty-set-infinity}
-#### A countably additive function with $\mu(\emptyset) = \infty$
+#### A countably additive function with $\measure(\emptyset) = \infty$
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets-functions.qmd#exm-set)),
-let $\mu(A) \eqdef \infty$
+let $\measure(A) \eqdef \infty$
 for every set $A$ in the $\sigma$-algebra of all subsets of $D$
 (@exm-sigma-algebra),
 including $A = \emptyset$.
@@ -11,9 +11,9 @@ the left-hand side of the countable additivity equation is:
 
 $$
 \ba
-\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+\measure\!\left(\bigcup_{i=1}^{\infty} A_i\right)
 &= \infty
-&& \text{(definition of } \mu \text{)}
+&& \text{(definition of } \measure \text{)}
 \ea
 $$
 
@@ -22,28 +22,28 @@ the limit of its partial sums (@lem-nonneg-series), is:
 
 $$
 \ba
-\sumto{i}{\infty} \mu(A_i)
+\sumto{i}{\infty} \measure(A_i)
 &= \infty + \infty + \cdots
-&& \text{(definition of } \mu \text{)} \\
+&& \text{(definition of } \measure \text{)} \\
 &= \infty
 && \text{(every partial sum is } \infty \text{)}
 \ea
 $$
 
 The two sides agree,
-so $\mu$ is countably additive,
-and $\mu(\emptyset) = \infty$.
+so $\measure$ is countably additive,
+and $\measure(\emptyset) = \infty$.
 
 :::
 
 {{< slidebreak >}}
 
 :::{#rem-empty-set-requirement}
-#### $\mu(\emptyset) = 0$ is an extra requirement
+#### $\measure(\emptyset) = 0$ is an extra requirement
 
 @exm-empty-set-zero and @exm-empty-set-infinity show that
 both values allowed by @lem-countable-additivity-empty occur
 for countably additive functions.
-So $\mu(\emptyset) = 0$ is an extra requirement, not a consequence of countable additivity.
+So $\measure(\emptyset) = 0$ is an extra requirement, not a consequence of countable additivity.
 
 :::

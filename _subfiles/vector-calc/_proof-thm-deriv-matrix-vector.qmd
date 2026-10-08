@@ -1,17 +1,17 @@
 ::: proof
 
-For entry $(i,j)$, where row $i$ indexes the denominator $\vb$
+For entry $(i,j)$, where row $i$ indexes the denominator $\vcoef$
 and column $j$ indexes the numerator $\matr{A}\vecf{v}$
 (see @def-vector-valued-derivative):
 
 $$
 \ba
-\left[\deriv{\vb} (\matr{A}\vecf{v})\right]_{ij}
-&= \deriv{\beta_i} (\matr{A}\vecf{v})_j \\
-&= \deriv{\beta_i} \sumto{k}{q} a_{jk} v_k \\
-&= \sumto{k}{q} a_{jk} \deriv{\beta_i} v_k \\
-&= \sumto{k}{q} \left[\deriv{\vb} \vecf{v}\right]_{ik} \left[\tp{\matr{A}}\right]_{kj} \\
-&= \left[\paren{\deriv{\vb} \vecf{v}} \tp{\matr{A}}\right]_{ij}
+\left[\deriv{\vcoef} (\matr{A}\vecf{v})\right]_{ij}
+&= \deriv{\coef{i}} (\matr{A}\vecf{v})_j \\
+&= \deriv{\coef{i}} \sumto{k}{q} a_{jk} v_k \\
+&= \sumto{k}{q} a_{jk} \deriv{\coef{i}} v_k \\
+&= \sumto{k}{q} \left[\deriv{\vcoef} \vecf{v}\right]_{ik} \left[\tp{\matr{A}}\right]_{kj} \\
+&= \left[\paren{\deriv{\vcoef} \vecf{v}} \tp{\matr{A}}\right]_{ij}
 \ea
 $$
 

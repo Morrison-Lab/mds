@@ -1,15 +1,15 @@
 :::{#exm-integral}
 #### An integral with positive and negative parts
 
-For the counting measure $\mu$ on the die rolls $D$,
+For the counting measure $\measure$ on the die rolls $D$,
 let $f(x) = x - 3$.
 Its values at $1, \ldots, 6$ are $-2, -1, 0, 1, 2, 3$, so:
 
 - $f^{+}$ has values $0, 0, 0, 1, 2, 3$,
-  and $\int_D f^{+} \, d\mu = 6$ by @exm-integral-nonneg;
+  and $\int_D f^{+} \, d\measure = 6$ by @exm-integral-nonneg;
 - $f^{-}$ has values $2, 1, 0, 0, 0, 0$,
-  and $\int_D f^{-} \, d\mu = 3$;
-- $\int_D f \, d\mu = 6 - 3 = 3$,
+  and $\int_D f^{-} \, d\measure = 3$;
+- $\int_D f \, d\measure = 6 - 3 = 3$,
   which is also $\sum_{x \in D} (x - 3) = 21 - 18 = 3$.
 
 :::

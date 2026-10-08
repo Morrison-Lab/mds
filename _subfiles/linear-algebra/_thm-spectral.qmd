@@ -4,18 +4,18 @@
 If $\matr{A}$ is a $p \times p$ symmetric matrix (@def-symmetric-matrix)
 with real entries,
 then there are a $p \times p$ orthogonal matrix $\matr{Q}$ (@def-orthogonal-matrix)
-and a $p \times p$ diagonal matrix $\matr{\Lambda}$ (@def-diagonal-matrix)
-with real diagonal entries $\lambda_1, \ldots, \lambda_p$ such that
+and a $p \times p$ diagonal matrix $\matr{\Eigvals}$ (@def-diagonal-matrix)
+with real diagonal entries $\eigval_1, \ldots, \eigval_p$ such that
 
 $$
 \underbrace{\matr{A}}_{p \times p}
 = \underbrace{\matr{Q}}_{p \times p}\,
-\underbrace{\matr{\Lambda}}_{p \times p}\,
+\underbrace{\matr{\Eigvals}}_{p \times p}\,
 \underbrace{\tp{\matr{Q}}}_{p \times p}
 $$
 
-Each $\lambda_i$ is an eigenvalue of $\matr{A}$ (@def-eigenvalue),
-and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\lambda_i$.
+Each $\eigval_i$ is an eigenvalue of $\matr{A}$ (@def-eigenvalue),
+and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\eigval_i$.
 
 :::
 
@@ -27,37 +27,37 @@ and column $i$ of $\matr{Q}$ is an eigenvector of $\matr{A}$ for $\lambda_i$.
 The proof, by [induction](proof-writing.qmd#def-proof-by-induction) on $p$, is outside the scope of these notes;
 see @banerjee2014linear [Chapter 11, Theorem 11.27, p. 349],
 which states the result in the equivalent form
-$\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$.
+$\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Eigvals}$.
 The two forms are equivalent because
 $\tp{\matr{Q}}\matr{Q} = \matr{Q}\tp{\matr{Q}} = \matr{I}_p$
 (@rem-orthogonal-matrix-columns).
-Multiplying $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+Multiplying $\matr{A} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
 by $\tp{\matr{Q}}$ on the left and by $\matr{Q}$ on the right gives
 
 $$
 \ba
 \tp{\matr{Q}}\matr{A}\matr{Q}
-&= \tp{\matr{Q}}\paren{\matr{Q}\matr{\Lambda}\tp{\matr{Q}}}\matr{Q}
+&= \tp{\matr{Q}}\paren{\matr{Q}\matr{\Eigvals}\tp{\matr{Q}}}\matr{Q}
 && \text{(substitute)}
 \\
-&= \paren{\tp{\matr{Q}}\matr{Q}}\matr{\Lambda}\paren{\tp{\matr{Q}}\matr{Q}}
+&= \paren{\tp{\matr{Q}}\matr{Q}}\matr{\Eigvals}\paren{\tp{\matr{Q}}\matr{Q}}
 && \text{(regroup; matrix multiplication is associative)}
 \\
-&= \matr{I}_p\matr{\Lambda}\matr{I}_p
+&= \matr{I}_p\matr{\Eigvals}\matr{I}_p
 && \text{(} \matr{Q} \text{ is orthogonal)}
 \\
-&= \matr{\Lambda}
+&= \matr{\Eigvals}
 && \text{(multiplying by } \matr{I}_p \text{ changes nothing)}
 \ea
 $$
 
-Multiplying $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Lambda}$
+Multiplying $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Eigvals}$
 by $\matr{Q}$ on the left and by $\tp{\matr{Q}}$ on the right
 gives back the first form:
 
 $$
 \ba
-\matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+\matr{Q}\matr{\Eigvals}\tp{\matr{Q}}
 &= \matr{Q}\paren{\tp{\matr{Q}}\matr{A}\matr{Q}}\tp{\matr{Q}}
 && \text{(substitute)}
 \\

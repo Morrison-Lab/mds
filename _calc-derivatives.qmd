@@ -303,9 +303,9 @@ $$
 
 ### Linear approximation {#sec-linear-approximation}
 
-For a differentiable function $f$ and a small step $\epsilon$,
+For a differentiable function $f$ and a small step $\smallconst$,
 
-$$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{}{w}f(w)$$ {#eq-linear-approx}
+$$f(w + \smallconst) \approx f(w) + \smallconst\,\dif{}{w}f(w)$$ {#eq-linear-approx}
 
 {{< slidebreak >}}
 
@@ -315,11 +315,11 @@ $$f(w + \epsilon) \approx f(w) + \epsilon\,\dif{}{w}f(w)$$ {#eq-linear-approx}
 For a function $f$ that is differentiable at $w$,
 the **linear approximation** of $f$ at $w$
 (also called the **first-order Taylor approximation**)
-is the function of the step $\epsilon$
+is the function of the step $\smallconst$
 
-$$\hat{f}_w(\epsilon) = f(w) + \epsilon\,\dif{}{w}f(w)$$
+$$\hat{f}_w(\smallconst) = f(w) + \smallconst\,\dif{}{w}f(w)$$
 
-so @eq-linear-approx says $f(w + \epsilon) \approx \hat{f}_w(\epsilon)$ for small $\epsilon$.
+so @eq-linear-approx says $f(w + \smallconst) \approx \hat{f}_w(\smallconst)$ for small $\smallconst$.
 @fig-linear-approx illustrates this approximation interactively for a quadratic function.
 
 :::
@@ -330,9 +330,9 @@ so @eq-linear-approx says $f(w + \epsilon) \approx \hat{f}_w(\epsilon)$ for smal
 #### The "linear" approximation is affine
 
 The linear approximation $\hat{f}_w$ (@def-linear-approximation)
-is an [affine function](algebra.qmd#def-affine-function) of the step $\epsilon$:
+is an [affine function](algebra.qmd#def-affine-function) of the step $\smallconst$:
 its slope is $\dif{}{w}f(w)$ and its intercept is $f(w)$.
-It is [linear](algebra.qmd#def-linear-function) in $\epsilon$ only when $f(w) = 0$.
+It is [linear](algebra.qmd#def-linear-function) in $\smallconst$ only when $f(w) = 0$.
 The name "linear approximation" uses "linear" in the looser sense of elementary algebra
 ([remark](algebra.qmd#rem-linear-function-terminology)).
 @boyd2018vmls, section 2.2, treats the first-order Taylor approximation

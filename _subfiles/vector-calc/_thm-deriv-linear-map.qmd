@@ -3,11 +3,11 @@
 #### Derivative of a linear map
 
 If $\matr{A}$ is an $m \times p$ matrix
-that is constant with respect to $\vb$,
+that is constant with respect to $\vcoef$,
 then:
 
 $$
-\underbrace{\deriv{\vb} (\matr{A}\vb)}_{p \times m} =
+\underbrace{\deriv{\vcoef} (\matr{A}\vcoef)}_{p \times m} =
 \underbrace{\tp{\matr{A}}}_{p \times m}
 $$
 

@@ -37,7 +37,7 @@ h'(0)
 $$
 
 Since $h'(0) = \lim_{s \to 0} (h(s) - h(0)) / s$ is negative,
-taking $\varepsilon = \abs{h'(0)}$ in the definition of the limit gives an $\bar{s} > 0$
+taking $\tolout = \abs{h'(0)}$ in the definition of the limit gives an $\bar{s} > 0$
 such that $(h(s) - h(0)) / s < h'(0) + \abs{h'(0)} = 0$ for $0 < s < \bar{s}$.
 Multiplying by $s > 0$, $h(s) < h(0)$, that is, $f(\vx - s \vecf{g}) < f(\vx)$.
 

@@ -1,14 +1,14 @@
 :::{#exm-lebesgue-measure}
 #### Lengths of some Borel sets
 
-- $\lambda([2, 5]) = 5 - 2 = 3$.
-- A single point has length zero: $\lambda(\set{a}) = \lambda([a, a]) = a - a = 0$.
+- $\lebesgue([2, 5]) = 5 - 2 = 3$.
+- A single point has length zero: $\lebesgue(\set{a}) = \lebesgue([a, a]) = a - a = 0$.
 - The integers are the union of the pairwise disjoint single points
   $\set{0}, \set{1}, \set{-1}, \set{2}, \set{-2}, \ldots$
   (@exm-borel-sigma-algebra), so countable additivity gives
-  $\lambda(\mathbb{Z}) = 0 + 0 + \cdots = 0$.
-- $\lambda([0, \infty)) = \infty$, because $[0, \infty)$ is unbounded.
+  $\lebesgue(\mathbb{Z}) = 0 + 0 + \cdots = 0$.
+- $\lebesgue([0, \infty)) = \infty$, because $[0, \infty)$ is unbounded.
 - Lebesgue measure on $[0, 1]$ gives the whole interval $[0, 1]$
-  the value $\lambda([0, 1]) = 1 - 0 = 1$.
+  the value $\lebesgue([0, 1]) = 1 - 0 = 1$.
 
 :::

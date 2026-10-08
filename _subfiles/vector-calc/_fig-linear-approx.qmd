@@ -79,6 +79,6 @@ the red segment is the error of the prediction.
 *(This plot is interactive; see the HTML or slide version of this page to view it.)*
 :::
 
-The linear approximation @eq-linear-approx for $f(w) = w^2 - 4w + 7$, at any $w$ and step $\epsilon$.
+The linear approximation @eq-linear-approx for $f(w) = w^2 - 4w + 7$, at any $w$ and step $\smallconst$.
 
 :::

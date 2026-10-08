@@ -2,35 +2,35 @@
 
 #### Vector chain rule for quadratic forms
 
-If $\vec\eps = \vec\eps\sparen{\vb}$ is an $n \times 1$ vector-valued function
-of the $p \times 1$ vector $\vb$,
+If $\vlsresid = \vlsresid\sparen{\vcoef}$ is an $n \times 1$ vector-valued function
+of the $p \times 1$ vector $\vcoef$,
 with continuous partial derivatives, then
 
 $$
-\underbrace{\deriv{\vb}{\paren{\vec\eps\sparen{\vb}\cdot \vec\eps\sparen{\vb}}}}_{p \times 1}
-= \underbrace{\paren{\deriv{\vb}\vec{\eps}\sparen{\vb}}}_{p \times n}
-\underbrace{\paren{2 \vec\eps\sparen{\vb}}}_{n \times 1}
+\underbrace{\deriv{\vcoef}{\paren{\vlsresid\sparen{\vcoef}\cdot \vlsresid\sparen{\vcoef}}}}_{p \times 1}
+= \underbrace{\paren{\deriv{\vcoef}\vlsresid\sparen{\vcoef}}}_{p \times n}
+\underbrace{\paren{2 \vlsresid\sparen{\vcoef}}}_{n \times 1}
 $$
 
 :::
 
 ::: proof
-Apply @thm-chain-vec with $\vx = \vb$, $\vy = \vec\eps$, $q = n$,
-and $z = f(\vec\eps) = \vec\eps \cdot \vec\eps = \tp{\vec\eps}\vec\eps$:
+Apply @thm-chain-vec with $\vx = \vcoef$, $\vy = \vlsresid$, $q = n$,
+and $z = f(\vlsresid) = \vlsresid \cdot \vlsresid = \tp{\vlsresid}\vlsresid$:
 
 $$
 \ba
-\deriv{\vb}\paren{\vec\eps \cdot \vec\eps}
-&= \paren{\deriv{\vb}\vec\eps} \deriv{\vec\eps}\paren{\tp{\vec\eps}\vec\eps}
+\deriv{\vcoef}\paren{\vlsresid \cdot \vlsresid}
+&= \paren{\deriv{\vcoef}\vlsresid} \deriv{\vlsresid}\paren{\tp{\vlsresid}\vlsresid}
 && \text{(vector chain rule)}
 \\
-&= \paren{\deriv{\vb}\vec\eps} \paren{2\vec\eps}
-&& \text{(derivative of a simple quadratic form, in } \vec\eps \text{)}
+&= \paren{\deriv{\vcoef}\vlsresid} \paren{2\vlsresid}
+&& \text{(derivative of a simple quadratic form, in } \vlsresid \text{)}
 \ea
 $$
 
 The second step is @cor-deriv-normsq,
-applied to the $n \times 1$ vector $\vec\eps$ in place of $\vb$.
+applied to the $n \times 1$ vector $\vlsresid$ in place of $\vcoef$.
 :::
 
 {{< slidebreak >}}
@@ -38,25 +38,25 @@ applied to the $n \times 1$ vector $\vec\eps$ in place of $\vb$.
 :::{#exm-chain-qf-residuals}
 #### Derivative of the residual sum of squares
 
-Let $\vy$ ($n \times 1$) and $\mX$ ($n \times p$) be constant with respect to $\vb$,
-and let $\vec\eps(\vb) = \vy - \mX\vb$ be the residual vector (@def-residual).
-By @thm-deriv-linear-map, $\deriv{\vb}(\mX\vb) = \tp{\mX}$,
-and $\deriv{\vb}\vy = \matr{0}_{p \times n}$ because $\vy$ is constant,
-so $\deriv{\vb}\vec\eps = -\tp{\mX}$ ($p \times n$).
+Let $\vy$ ($n \times 1$) and $\mX$ ($n \times p$) be constant with respect to $\vcoef$,
+and let $\vlsresid(\vcoef) = \vy - \mX\vcoef$ be the residual vector (@def-residual).
+By @thm-deriv-linear-map, $\deriv{\vcoef}(\mX\vcoef) = \tp{\mX}$,
+and $\deriv{\vcoef}\vy = \matr{0}_{p \times n}$ because $\vy$ is constant,
+so $\deriv{\vcoef}\vlsresid = -\tp{\mX}$ ($p \times n$).
 By @cor-chain-qf:
 
 $$
 \ba
-\deriv{\vb}\paren{\vec\eps \cdot \vec\eps}
-&= \paren{-\tp{\mX}} \paren{2\vec\eps}
+\deriv{\vcoef}\paren{\vlsresid \cdot \vlsresid}
+&= \paren{-\tp{\mX}} \paren{2\vlsresid}
 && \text{(vector chain rule for quadratic forms)}
 \\
-&= -2\,\tp{\mX}\paren{\vy - \mX\vb}
-&& \text{(substitute } \vec\eps = \vy - \mX\vb \text{)}
+&= -2\,\tp{\mX}\paren{\vy - \mX\vcoef}
+&& \text{(substitute } \vlsresid = \vy - \mX\vcoef \text{)}
 \ea
 $$
 
 Setting this $p \times 1$ vector to $\vzero$ gives the normal equations
-$\tp{\mX}\mX\vb = \tp{\mX}\vy$ of least squares.
+$\tp{\mX}\mX\vcoef = \tp{\mX}\vy$ of least squares.
 
 :::

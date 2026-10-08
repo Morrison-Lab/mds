@@ -2,14 +2,14 @@
 #### The determinant of a symmetric matrix is the product of its eigenvalues
 
 Let $\matr{A}$ be a $p \times p$ symmetric matrix with real entries,
-with eigendecomposition $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+with eigendecomposition $\matr{A} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
 (@def-eigendecomposition)
-and eigenvalues $\lambda_1, \ldots, \lambda_p$
-on the diagonal of $\matr{\Lambda}$.
+and eigenvalues $\eigval_1, \ldots, \eigval_p$
+on the diagonal of $\matr{\Eigvals}$.
 Then
 
 $$
-\det(\matr{A}) = \prod_{i=1}^p \lambda_i.
+\det(\matr{A}) = \prod_{i=1}^p \eigval_i.
 $$
 
 :::
@@ -37,19 +37,19 @@ Then:
 $$
 \ba
 \det(\matr{A})
-&= \det(\matr{Q}\matr{\Lambda}\tp{\matr{Q}})
+&= \det(\matr{Q}\matr{\Eigvals}\tp{\matr{Q}})
 && \text{(substitute the eigendecomposition)}
 \\
-&= \det(\matr{Q}) \det(\matr{\Lambda}) \det(\tp{\matr{Q}})
+&= \det(\matr{Q}) \det(\matr{\Eigvals}) \det(\tp{\matr{Q}})
 && \text{(determinant of a product, twice)}
 \\
-&= \det(\matr{\Lambda}) \cd \det(\tp{\matr{Q}})\det(\matr{Q})
+&= \det(\matr{\Eigvals}) \cd \det(\tp{\matr{Q}})\det(\matr{Q})
 && \text{(reorder the three numbers)}
 \\
-&= \det(\matr{\Lambda})
+&= \det(\matr{\Eigvals})
 && \text{(the first display)}
 \\
-&= \prod_{i=1}^p \lambda_i
+&= \prod_{i=1}^p \eigval_i
 && \text{(determinant of a diagonal matrix)}
 \ea
 $$

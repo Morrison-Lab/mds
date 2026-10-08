@@ -24,6 +24,6 @@ Quadratic forms occur often in statistics:
 - The variance of a linear combination of estimates
   (see [Inference about Gaussian Linear Regression Models](https://morrison-lab.github.io/rme/chapters/Linear-models-overview.html#sec-infer-LMs))
   is a quadratic form:
-  $\Var{\tp{\vx}\hat{\vb}} = \tp{\vx}\,\Var{\hat{\vb}}\,\vx$.
+  $\Var{\tp{\vx}\hvcoef} = \tp{\vx}\,\Var{\hvcoef}\,\vx$.
 
 :::

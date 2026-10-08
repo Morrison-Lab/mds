@@ -1,23 +1,23 @@
 :::{#exm-dot-product-matmul}
 #### Dot product as matrix multiplication
 
-The dot product of two column vectors $\vx$ and $\vb$
+The dot product of two column vectors $\vx$ and $\vcoef$
 can be written as a matrix product of the row vector $\tp{\vx}$
-with the column vector $\vb$:
+with the column vector $\vcoef$:
 
 $$
 \begin{aligned}
-\vx \cdot \vb
-&= \tp{\vx}\, \vb
+\vx \cdot \vcoef
+&= \tp{\vx}\, \vcoef
 \\ &= [x_1,\; x_2,\; \ldots,\; x_p]
 \begin{bmatrix}
-\beta_{1} \\
-\beta_{2} \\
+\coef{1} \\
+\coef{2} \\
 \vdots \\
-\beta_{p}
+\coef{p}
 \end{bmatrix}
 \\ &=
-x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
+x_1\coef{1} + x_2\coef{2} + \cdots + x_p \coef{p}
 \end{aligned}
 $$
 

@@ -1,51 +1,51 @@
 :::{#exm-deriv-dot-product}
 #### Example of the dot-product rule
 
-Apply @thm-deriv-dot-product with the vector $\vb = \tp{(\beta_1, \beta_2)}$
+Apply @thm-deriv-dot-product with the vector $\vcoef = \tp{(\coef{1}, \coef{2})}$
 in the role of $\vx$.
-Let $\vecf{a}(\vb) = \tp{(\beta_1, \beta_1\beta_2)}$
-and $\vecf{b}(\vb) = \tp{(\beta_2, \beta_1)}$.
+Let $\vecf{a}(\vcoef) = \tp{(\coef{1}, \coef{1}\coef{2})}$
+and $\vecf{b}(\vcoef) = \tp{(\coef{2}, \coef{1})}$.
 Then:
 
 $$
 \vecf{a} \cdot \vecf{b}
-= \beta_1 \cdot \beta_2 + \beta_1\beta_2 \cdot \beta_1
-= \beta_1\beta_2 + \beta_1^2\beta_2
+= \coef{1} \cdot \coef{2} + \coef{1}\coef{2} \cdot \coef{1}
+= \coef{1}\coef{2} + \coef{1}^2\coef{2}
 $$
 
 By direct calculation:
 
 $$
-\underbrace{\deriv{\vb}(\vecf{a} \cdot \vecf{b})}_{2 \times 1}
-= \deriv{\vb}(\beta_1\beta_2 + \beta_1^2\beta_2)
-= \begin{pmatrix} \beta_2 + 2\beta_1\beta_2 \\ \beta_1 + \beta_1^2 \end{pmatrix}
+\underbrace{\deriv{\vcoef}(\vecf{a} \cdot \vecf{b})}_{2 \times 1}
+= \deriv{\vcoef}(\coef{1}\coef{2} + \coef{1}^2\coef{2})
+= \begin{pmatrix} \coef{2} + 2\coef{1}\coef{2} \\ \coef{1} + \coef{1}^2 \end{pmatrix}
 $$
 
 By the product rule (@thm-deriv-dot-product),
 using
-$\underbrace{\deriv{\vb}\tp{\vecf{a}}}_{2 \times 2}
-= \begin{pmatrix}1 & \beta_2 \\ 0 & \beta_1\end{pmatrix}$
+$\underbrace{\deriv{\vcoef}\tp{\vecf{a}}}_{2 \times 2}
+= \begin{pmatrix}1 & \coef{2} \\ 0 & \coef{1}\end{pmatrix}$
 and
-$\underbrace{\deriv{\vb}\tp{\vecf{b}}}_{2 \times 2}
+$\underbrace{\deriv{\vcoef}\tp{\vecf{b}}}_{2 \times 2}
 = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$:
 
 $$
 \ba
-\underbrace{\deriv{\vb}(\vecf{a} \cdot \vecf{b})}_{2 \times 1}
+\underbrace{\deriv{\vcoef}(\vecf{a} \cdot \vecf{b})}_{2 \times 1}
 &=
-\underbrace{\begin{pmatrix}1 & \beta_2 \\ 0 & \beta_1\end{pmatrix}}_{2 \times 2}
-\underbrace{\begin{pmatrix}\beta_2 \\ \beta_1\end{pmatrix}}_{2 \times 1}
+\underbrace{\begin{pmatrix}1 & \coef{2} \\ 0 & \coef{1}\end{pmatrix}}_{2 \times 2}
+\underbrace{\begin{pmatrix}\coef{2} \\ \coef{1}\end{pmatrix}}_{2 \times 1}
 +
 \underbrace{\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}}_{2 \times 2}
-\underbrace{\begin{pmatrix}\beta_1 \\ \beta_1\beta_2\end{pmatrix}}_{2 \times 1}
+\underbrace{\begin{pmatrix}\coef{1} \\ \coef{1}\coef{2}\end{pmatrix}}_{2 \times 1}
 \\
 &=
-\begin{pmatrix}\beta_2 + \beta_1\beta_2 \\ \beta_1^2\end{pmatrix}
+\begin{pmatrix}\coef{2} + \coef{1}\coef{2} \\ \coef{1}^2\end{pmatrix}
 +
-\begin{pmatrix}\beta_1\beta_2 \\ \beta_1\end{pmatrix}
+\begin{pmatrix}\coef{1}\coef{2} \\ \coef{1}\end{pmatrix}
 \\
 &=
-\begin{pmatrix}\beta_2 + 2\beta_1\beta_2 \\ \beta_1^2 + \beta_1\end{pmatrix}
+\begin{pmatrix}\coef{2} + 2\coef{1}\coef{2} \\ \coef{1}^2 + \coef{1}\end{pmatrix}
 \ea
 $$
 

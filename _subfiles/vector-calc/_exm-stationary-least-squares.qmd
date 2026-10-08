@@ -17,20 +17,20 @@ and both code tabs below read that file.
 
 Let $y_i$ be the miles per gallon and $x_i$ the horsepower of car $i$.
 To predict miles per gallon from horsepower with a line,
-write $\vbeta = \tp{(\beta_0, \beta_1)}$ and let $\mX$ be the matrix
+write $\vcoef = \tp{(\coef{0}, \coef{1})}$ and let $\mX$ be the matrix
 whose row $i$ is $(1, x_i)$.
 The sum of squared errors is
 
 $$
-f(\vbeta) = \norm{\vy - \mX\vbeta}^2,
+f(\vcoef) = \norm{\vy - \mX\vcoef}^2,
 $$
 
-a scalar-valued function of the $2 \times 1$ vector $\vbeta$.
-Its gradient is $-2\,\tp{\mX}(\vy - \mX\vbeta)$.
+a scalar-valued function of the $2 \times 1$ vector $\vcoef$.
+Its gradient is $-2\,\tp{\mX}(\vy - \mX\vcoef)$.
 By @thm-first-order-condition, a minimizer of $f$ must make this gradient
-$\vzero$, which is the equation $\tp{\mX}\mX\vbeta = \tp{\mX}\vy$.
+$\vzero$, which is the equation $\tp{\mX}\mX\vcoef = \tp{\mX}\vy$.
 The code below solves that equation and evaluates the gradient at
-the solution and at $\vbeta = \vzero$.
+the solution and at $\vcoef = \vzero$.
 
 ::: {.panel-tabset}
 

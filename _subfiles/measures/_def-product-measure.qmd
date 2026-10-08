@@ -1,14 +1,14 @@
 :::{#def-product-measure}
 #### Product measure
 
-Let $(S, \salg, \mu)$ and $(T, \salgT, \nu)$ be measure spaces
-with [$\sigma$-finite](#def-sigma-finite) measures $\mu$ and $\nu$.
-The **product measure** $\mu \otimes \nu$
+Let $(S, \salg, \measure)$ and $(T, \salgT, \measureb)$ be measure spaces
+with [$\sigma$-finite](#def-sigma-finite) measures $\measure$ and $\measureb$.
+The **product measure** $\measure \otimes \measureb$
 is the measure on the [product $\sigma$-algebra](#def-product-sigma-algebra)
 $\salg \otimes \salgT$
 that gives each measurable rectangle the product of the measures of its sides:
 
-$$(\mu \otimes \nu)(A \times B) = \mu(A) \, \nu(B)
+$$(\measure \otimes \measureb)(A \times B) = \measure(A) \, \measureb(B)
 \quad \text{for all } A \in \salg \text{ and } B \in \salgT,$$
 
 with $0 \cdot \infty = \infty \cdot 0 \eqdef 0$
