@@ -3,7 +3,7 @@
 
 For every $\vecf{z} \in \mathbb{C}^p$,
 
-$$\underbrace{\vecf{z}^{\mathsf{H}}}_{1 \times p}\,\underbrace{\vecf{z}}_{p \times 1} = \sum_{j=1}^{p} \abs{z_j}^2,$$
+$$\underbrace{\vecf{z}^{\mathsf{H}}}_{1 \times p}\,\underbrace{\vecf{z}}_{p \times 1} = \sumjp \abs{z_j}^2,$$
 
 which is a nonnegative real number,
 and is $0$ only when $\vecf{z} = \vzero_{p \times 1}$.
@@ -17,13 +17,13 @@ The last step uses the [identity for a complex number times its conjugate](algeb
 $$
 \ba
 \vecf{z}^{\mathsf{H}}\vecf{z}
-&= \sum_{j=1}^{p} \overline{z_j}\,z_j
+&= \sumjp \overline{z_j}\,z_j
 && \text{(@def-conjugate-transpose, and the row-times-column product)}
 \\
-&= \sum_{j=1}^{p} z_j\,\overline{z_j}
+&= \sumjp z_j\,\overline{z_j}
 && \text{(complex multiplication is commutative)}
 \\
-&= \sum_{j=1}^{p} \abs{z_j}^2
+&= \sumjp \abs{z_j}^2
 && \text{(a number times its conjugate)}
 \ea
 $$

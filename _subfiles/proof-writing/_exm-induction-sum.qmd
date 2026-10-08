@@ -4,7 +4,7 @@
 For every $n \in \mathbb{N}$,
 
 $$
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}.
+\sumin i = \frac{n(n+1)}{2}.
 $$
 
 For example, with $n = 3$,
@@ -45,21 +45,21 @@ So $P(1)$ holds.
 Let $n \ge 2$, and suppose $P(n - 1)$ holds:
 
 $$
-\sum_{i=1}^{n-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
+\sumin-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
 $$
 
 Then
 
 $$
 \ba
-\sum_{i=1}^{n} i
+\sumin i
 &= 1 + 2 + \cdots + (n-1) + n
 && \text{(definition of a sum)}
 \\
 &= \paren{1 + 2 + \cdots + (n-1)} + n
 && \text{(associative law)}
 \\
-&= \sum_{i=1}^{n-1} i + n
+&= \sumin-1} i + n
 && \text{(definition of a sum)}
 \\
 &= \frac{(n-1)\,\paren{(n-1)+1}}{2} + n

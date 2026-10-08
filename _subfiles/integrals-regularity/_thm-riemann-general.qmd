@@ -34,10 +34,10 @@ With $\Delta x = 1/n$:
 $$
 \ba
 S_n
-&= \sum_{i=1}^n \frac{i}{n} \cd \frac{1}{n}
+&= \sumin \frac{i}{n} \cd \frac{1}{n}
 && \text{(equal-width Riemann sum with } x_i^* = i/n \text{)}
 \\
-&= \frac{1}{n^2} \sum_{i=1}^n i
+&= \frac{1}{n^2} \sumin i
 && \text{(factor out } 1/n^2 \text{)}
 \\
 &= \frac{1}{n^2} \cd \frac{n(n+1)}{2}

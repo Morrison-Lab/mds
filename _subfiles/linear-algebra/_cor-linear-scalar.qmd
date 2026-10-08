@@ -4,7 +4,7 @@
 A function $f: \reals^p \to \reals$ is linear (@def-linear-map)
 if and only if there is a vector $\vec{w} \in \reals^p$ such that
 
-$$f(\vx) = \vec{w}^\top \vx \quad \text{for all } \vx \in \reals^p$$
+$$f(\vx) = \vec{w}\' \vx \quad \text{for all } \vx \in \reals^p$$
 
 and then $w_j = f(\vecf{e}_j)$ for each $j$.
 
@@ -15,7 +15,7 @@ and then $w_j = f(\vecf{e}_j)$ for each $j$.
 **If $f$ is linear.** @thm-linear-map-matrix with $m = 1$
 gives a $1 \times p$ matrix $\matr{A}$ with $f(\vx) = \matr{A}\vx$
 and $a_{1j} = f(\vecf{e}_j)$.
-Let $\vec{w}$ be the vector with $w_j = a_{1j}$, so that $\matr{A} = \vec{w}^\top$.
+Let $\vec{w}$ be the vector with $w_j = a_{1j}$, so that $\matr{A} = \vec{w}\'$.
 Then
 
 $$
@@ -23,14 +23,14 @@ $$
 f(\vx)
 &= \matr{A}\vx
 && \text{(@thm-linear-map-matrix)}
-\\&= \vec{w}^\top \vx
-&& (\matr{A} = \vec{w}^\top)
+\\&= \vec{w}\' \vx
+&& (\matr{A} = \vec{w}\')
 \ea
 $$
 
 and $w_j = a_{1j} = f(\vecf{e}_j)$.
 
-**If $f(\vx) = \vec{w}^\top \vx$.** Here $\vec{w}^\top$ is a $1 \times p$ matrix,
+**If $f(\vx) = \vec{w}\' \vx$.** Here $\vec{w}\'$ is a $1 \times p$ matrix,
 so $f$ is linear by @thm-matrix-map-linear.
 
 :::
@@ -40,7 +40,7 @@ so $f$ is linear by @thm-matrix-map-linear.
 :::{#exm-linear-scalar}
 #### A linear function from $\reals^2$ to $\reals$
 
-$f(\vx) = 3 x_1 + 5 x_2$ is $\vec{w}^\top \vx$ with $\vec{w} = \tp{(3, 5)}$,
+$f(\vx) = 3 x_1 + 5 x_2$ is $\vec{w}\' \vx$ with $\vec{w} = \tp{(3, 5)}$,
 so it is linear by @cor-linear-scalar.
 The entries of $\vec{w}$ are the values at the indicator vectors:
 $f(\vecf{e}_1) = 3 \cd 1 + 5 \cd 0 = 3$

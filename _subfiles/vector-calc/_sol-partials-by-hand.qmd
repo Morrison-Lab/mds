@@ -19,13 +19,13 @@ $$\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2$$
 $$\nabla_{\vec w} f(\vec w) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}$$
 
 The gradient is a vector-valued *function* of $\vec w$, not a single vector.
-At $\vec w = \begin{bmatrix} 2 & -1 \end{bmatrix}^\top$,
+At $\vec w = \begin{bmatrix} 2 & -1 \end{bmatrix}\'$,
 
 $$\nabla_{\vec w} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix}
 = \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix}
 = \begin{bmatrix} -8 \\ 9 \end{bmatrix}$$
 
-**4.** The input was a vector in $\mathbb{R}^2$ and so is the answer,
+**4.** The input was a vector in $\reals^2$ and so is the answer,
 as @tbl-gradient-shape requires.
 Note the signs: from this point, increasing $w_1$ *decreases* $f$ while
 increasing $w_2$ increases it, so the uphill direction is neither axis.

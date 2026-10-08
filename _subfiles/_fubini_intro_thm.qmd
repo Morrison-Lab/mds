@@ -14,16 +14,16 @@ follow from a stated theorem rather than from an aside.
 :::{#def-double-integral}
 #### Double integral
 
-Let $f$ be a bounded function on a closed, bounded plane region $R \subseteq \mathbb{R}^2$.
+Let $f$ be a bounded function on a closed, bounded plane region $R \subseteq \reals^2$.
 Cover $R$ with a grid of rectangles,
 keep the $n$ rectangles that lie entirely inside $R$,
 with areas $\Delta A_1, \ldots, \Delta A_n$,
 and choose a point $(x_i, y_i)$ in the $i$-th rectangle.
 The **double integral** of $f$ over $R$ is
 
-$$\iint_R f(x, y)\,dA \eqdef \lim_{\|\Delta\| \to 0} \sum_{i=1}^n f(x_i, y_i)\,\Delta A_i,$$
+$$\iint_R f(x, y)\,dA \eqdef \lim_{\norm{\Delta} \to 0} \sumin f(x_i, y_i)\,\Delta A_i,$$
 
-where $\|\Delta\|$ is the length of the longest diagonal among the $n$ rectangles,
+where $\norm{\Delta}$ is the length of the longest diagonal among the $n$ rectangles,
 when that limit exists and has the same value
 for every choice of grids and of the points $(x_i, y_i)$.
 The symbol $dA$ stands for an element of area.
@@ -105,7 +105,7 @@ $$
 
 #### Fubini's theorem (Riemann version)
 
-Let $f$ be **continuous** on a plane region $R \subseteq \mathbb{R}^2$.
+Let $f$ be **continuous** on a plane region $R \subseteq \reals^2$.
 
 1. **Vertically simple region.**
    If $R$ is defined by $a \le x \le b$ and $g_1(x) \le y \le g_2(x)$,

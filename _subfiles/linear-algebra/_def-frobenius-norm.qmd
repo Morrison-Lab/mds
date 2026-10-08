@@ -46,7 +46,7 @@ The second step is @thm-matrix-inner-product-entries.
 #### The Frobenius norm is the Euclidean norm of the entries
 
 By @thm-matrix-inner-product-entries,
-$\norm{\matr{A}}_F^2 = \sum_{i=1}^{n} \sum_{j=1}^{p} a_{ij}^2$,
+$\norm{\matr{A}}_F^2 = \sumin \sumjp a_{ij}^2$,
 a sum of squares, so the square root is always defined.
 $\norm{\matr{A}}_F$ is the Euclidean norm (@def-euclidean-norm)
 of the entries of $\matr{A}$, listed as one vector of length $np$

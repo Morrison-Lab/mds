@@ -13,9 +13,9 @@ First, $\matr{A}\vzero = \vzero$: for each $i$,
 $$
 \ba
 (\matr{A}\vzero)_i
-&= \sum_{j=1}^{p} a_{ij} \cd 0
+&= \sumjp a_{ij} \cd 0
 && \text{(@def-matvec-mult)}
-\\&= \sum_{j=1}^{p} 0
+\\&= \sumjp 0
 && \text{(any number times } 0 \text{ is } 0 \text{)}
 \\&= 0
 && \text{(a sum of zeros is } 0 \text{)}

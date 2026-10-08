@@ -59,8 +59,8 @@ and $\matr{P} \vecf{w} = \matr{P} \matr{P}^{-1} \vecf{v} = \vecf{v}$
 :::{#exm-similar-eigenvalues}
 #### Eigenvectors carried across a similarity
 
-In @exm-similar, $\matr{B} = \operatorname{diag}(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$:
-$\operatorname{diag}(3, 1)\,(1, 0) = (3, 0)$ and $\operatorname{diag}(3, 1)\,(0, 1) = (0, 1)$.
+In @exm-similar, $\matr{B} = \diag(3, 1)$ has eigenvectors $(1, 0)$ for $3$ and $(0, 1)$ for $1$:
+$\diag(3, 1)\,(1, 0) = (3, 0)$ and $\diag(3, 1)\,(0, 1) = (0, 1)$.
 $\matr{P}\,(1, 0) = (1, 1)$ and $\matr{P}\,(0, 1) = (1, -1)$
 are the eigenvectors of $\matr{A}$ for $3$ and $1$ found in @exm-eigenvalue.
 

@@ -7,7 +7,7 @@ and its entries $\eps_i = y_i - (\mX\vb)_i$ are the **residuals**.
 The square $\eps_i^2$ is the $i$th **squared error**, and their sum
 
 $$
-\vec\eps \cdot \vec\eps = \sum_{i=1}^n \eps_i^2 = \norm{\vy - \mX\vb}^2
+\vec\eps \cdot \vec\eps = \sumin \eps_i^2 = \norm{\vy - \mX\vb}^2
 $$
 
 is the **residual sum of squares**.

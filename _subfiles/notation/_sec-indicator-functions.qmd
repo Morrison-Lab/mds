@@ -270,7 +270,7 @@ rather than the bare Iverson bracket.
 | Notation style | Typical syntax | Primary fields | Notes and potential ambiguities |
 |:---------------|:---------------|:---------------|:--------------------------------|
 | **Blackboard bold 1** | $\mathbb{1}_A(x)$, $\mathbb{1}(P)$ | Modern probability, mathematical statistics | Unambiguous; distinct from matrices and scalars; standard in this book. |
-| **Bold numeral 1** | $\mathbf{1}_A(x)$, $\mathbf{1}(P)$ | Probability theory, measure theory | Can be confused with a vector of ones $\mathbf{1} = (1, \dots, 1)^{\top}$. |
+| **Bold numeral 1** | $\mathbf{1}_A(x)$, $\mathbf{1}(P)$ | Probability theory, measure theory | Can be confused with a vector of ones $\mathbf{1} = (1, \dots, 1)\'$. |
 | **Blackboard bold I** | $\mathbb{I}(x \in A)$, $\mathbb{I}(P)$ | Econometrics, machine learning, statistics | Clear predicate notation; avoids confusion with numerals. |
 | **Letter $I$** | $I_A(x)$, $I(P)$ | Classical statistics, epidemiology | Can be confused with the identity matrix $I$ or the Fisher information $\mathcal{I}$, which measures how much a sample tells about a parameter. |
 | **Iverson bracket** | $[P]$, $[x \in A]$ | Computer science, discrete mathematics | Very compact, but square brackets collide with intervals and expectation brackets. |

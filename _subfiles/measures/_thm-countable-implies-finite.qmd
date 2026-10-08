@@ -23,9 +23,9 @@ $$
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
 &= \sum_{i=1}^{\infty} \mu(A_i)
 && \text{(countable additivity)} \\
-&= \sum_{i=1}^{n} \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
+&= \sumin \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
-&= \sum_{i=1}^{n} \mu(A_i)
+&= \sumin \mu(A_i)
 && \text{(} \mu(\emptyset) = 0 \text{)}
 \ea
 $$

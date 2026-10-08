@@ -6,7 +6,7 @@ Every vector $\vx \in \reals^p$ is the linear combination
 $\vecf{e}_1, \ldots, \vecf{e}_p$ (@def-indicator-vector)
 with coefficients $x_1, \ldots, x_p$:
 
-$$\vx = \sum_{j=1}^{p} x_j \vecf{e}_j$$
+$$\vx = \sumjp x_j \vecf{e}_j$$
 
 :::
 
@@ -16,10 +16,10 @@ Compare the two sides entry by entry. For each $i \in \{1, \ldots, p\}$:
 
 $$
 \ba
-\paren{\sum_{j=1}^{p} x_j \vecf{e}_j}_i
-&= \sum_{j=1}^{p} x_j (\vecf{e}_j)_i
+\paren{\sumjp x_j \vecf{e}_j}_i
+&= \sumjp x_j (\vecf{e}_j)_i
 && \text{(@def-linear-combination, entry by entry)}
-\\&= \sum_{j=1}^{p}
+\\&= \sumjp
    \begin{cases}
    x_j \cd 1 & \text{if } j = i \\
    x_j \cd 0 & \text{if } j \neq i

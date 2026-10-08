@@ -7,7 +7,7 @@ The **integral** of $f$ with respect to $\mu$ is
 
 $$
 \int_S f \, d\mu \eqdef
-\sup \set{\sum_{i=1}^{n} \paren{\inf_{s \in A_i} f(s)} \mu(A_i)}
+\sup \set{\sumin \paren{\inf_{s \in A_i} f(s)} \mu(A_i)}
 $$
 
 where the [supremum](algebra.qmd#def-supremum) is over all ways

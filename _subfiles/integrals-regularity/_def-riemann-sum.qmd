@@ -6,7 +6,7 @@ let $\mathcal{P}$ be a partition $a = x_0 < x_1 < \cdots < x_n = b$ of $[a, b]$ 
 and choose a **sample point** $x_i^*$ in each subinterval $[x_{i-1}, x_i]$.
 The **Riemann sum** of $f$ for $\mathcal{P}$ and these sample points is
 
-$$\sum_{i=1}^n f(x_i^*)\,\Delta x_i,$$
+$$\sumin f(x_i^*)\,\Delta x_i,$$
 
 where $\Delta x_i = x_i - x_{i-1}$.
 

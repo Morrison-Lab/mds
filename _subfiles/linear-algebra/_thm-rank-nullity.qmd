@@ -56,7 +56,7 @@ are a basis of $\mathcal{C}(\matr{A})$,
 using @thm-matvec-linear to apply $\matr{A}$ to linear combinations.
 
 **They are linearly independent.**
-Suppose $\sum_{i=1}^{n-\nu} v_i\,\matr{A} \vecf{y}_i = \vzero_m$.
+Suppose $\sumin-\nu} v_i\,\matr{A} \vecf{y}_i = \vzero_m$.
 Then $\matr{A}\,\paren{\sum_i v_i \vecf{y}_i} = \vzero_m$ (@thm-matvec-linear),
 so $\sum_i v_i \vecf{y}_i \in \mathcal{N}(\matr{A})$,
 and it equals $\sum_{j=1}^{\nu} u_j \vecf{x}_j$ for some numbers $u_j$,
@@ -64,7 +64,7 @@ since the $\vecf{x}_j$ span $\mathcal{N}(\matr{A})$.
 Moving everything to one side,
 
 $$
-\sum_{j=1}^{\nu} (-u_j)\,\vecf{x}_j + \sum_{i=1}^{n-\nu} v_i \vecf{y}_i = \vzero_n,
+\sum_{j=1}^{\nu} (-u_j)\,\vecf{x}_j + \sumin-\nu} v_i \vecf{y}_i = \vzero_n,
 $$
 
 and because the $\vecf{x}$'s and $\vecf{y}$'s together form a basis of $\reals^n$,
@@ -82,16 +82,16 @@ Then
 $$
 \ba
 \vecf{w}
-&= \matr{A}\,\paren{\sum_{j=1}^{\nu} a_j \vecf{x}_j + \sum_{i=1}^{n-\nu} b_i \vecf{y}_i}
+&= \matr{A}\,\paren{\sum_{j=1}^{\nu} a_j \vecf{x}_j + \sumin-\nu} b_i \vecf{y}_i}
 && \text{(substitute } \vecf{z} \text{)}
 \\
-&= \sum_{j=1}^{\nu} a_j\,\matr{A} \vecf{x}_j + \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i
+&= \sum_{j=1}^{\nu} a_j\,\matr{A} \vecf{x}_j + \sumin-\nu} b_i\,\matr{A} \vecf{y}_i
 && \text{(@thm-matvec-linear)}
 \\
-&= \sum_{j=1}^{\nu} a_j\,\vzero_m + \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i
+&= \sum_{j=1}^{\nu} a_j\,\vzero_m + \sumin-\nu} b_i\,\matr{A} \vecf{y}_i
 && \text{(each } \vecf{x}_j \in \mathcal{N}(\matr{A}) \text{)}
 \\
-&= \sum_{i=1}^{n-\nu} b_i\,\matr{A} \vecf{y}_i,
+&= \sumin-\nu} b_i\,\matr{A} \vecf{y}_i,
 && \text{(drop the zero terms)}
 \ea
 $$

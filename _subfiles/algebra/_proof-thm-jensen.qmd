@@ -7,26 +7,26 @@ and both sides equal $f(x_1)$.
 Now let $n \ge 2$, and assume the inequality holds for $n - 1$ points.
 If $w_n = 1$, the other weights are all $0$,
 and both sides equal $f(x_n)$.
-Otherwise let $s = 1 - w_n = \sum_{i=1}^{n-1} w_i > 0$ and
+Otherwise let $s = 1 - w_n = \sumin-1} w_i > 0$ and
 $$
-y = \sum_{i=1}^{n-1} \frac{w_i}{s} x_i.
+y = \sumin-1} \frac{w_i}{s} x_i.
 $$
 The weights $w_i / s$ are non-negative and sum to $1$,
 so the induction assumption gives
 $$
-f(y) \le \sum_{i=1}^{n-1} \frac{w_i}{s} f(x_i).
+f(y) \le \sumin-1} \frac{w_i}{s} f(x_i).
 $$
-Since $\sum_{i=1}^{n} w_i x_i = s y + (1 - s) x_n$ and $s \in (0, 1]$,
+Since $\sumin w_i x_i = s y + (1 - s) x_n$ and $s \in (0, 1]$,
 the definition of a convex function (@def-convex-function) gives
 $$
-f\left(\sum_{i=1}^{n} w_i x_i\right)
+f\left(\sumin w_i x_i\right)
 = f(s y + (1 - s) x_n)
 \le s f(y) + (1 - s) f(x_n).
 $$
 Substituting the bound on $f(y)$, and using $1 - s = w_n$,
 $$
 s f(y) + (1 - s) f(x_n)
-\le \sum_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n)
-= \sum_{i=1}^{n} w_i f(x_i).
+\le \sumin-1} w_i f(x_i) + w_n f(x_n)
+= \sumin w_i f(x_i).
 $$
 :::

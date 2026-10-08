@@ -4,10 +4,10 @@
 
 Let
 
-$$\vec a = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
+$$\va = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix},
 \qquad
 \vec b = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}$$
 
-Compute $\vec a^\top \vec b$ and $\lVert \vec a \rVert_2$.
+Compute $\va\' \vec b$ and $\norm{\va}_2$.
 
 :::

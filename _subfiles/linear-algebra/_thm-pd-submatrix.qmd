@@ -25,7 +25,7 @@ $$
 &= \sum_{i=1}^{k} \sum_{j=1}^{k} y_i\,x_{ij}\,y_j
 && \text{(} y_i = u_i \text{ for } i \le k \text{)}
 \\
-&= \sum_{i=1}^{p} \sum_{j=1}^{p} y_i\,x_{ij}\,y_j
+&= \sum_{i=1}^{p} \sumjp y_i\,x_{ij}\,y_j
 && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)}
 \\
 &= \tp{\vecf{y}} \matr{X} \vecf{y}

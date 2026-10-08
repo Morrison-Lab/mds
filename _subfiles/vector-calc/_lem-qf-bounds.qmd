@@ -11,7 +11,7 @@ Then $\tp{\vecf{h}} \matr{A} \vecf{h} \ge \lambda_{\min}\,\norm{\vecf{h}}^2$ for
 ::: proof
 
 Write $\matr{A} = \matr{Q} \matr{\Lambda} \tp{\matr{Q}}$ with $\matr{Q}$ orthogonal
-and $\matr{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)$
+and $\matr{\Lambda} = \diag(\lambda_1, \ldots, \lambda_p)$
 ([spectral theorem](linear-algebra.qmd#thm-spectral)),
 and let $\vecf{y} \eqdef \tp{\matr{Q}} \vecf{h}$. Then
 
@@ -75,13 +75,13 @@ Let $\vecf{a} \eqdef \tp{(\abs{h_1}, \ldots, \abs{h_p})}$ and $\vecf{1} \eqdef \
 $$
 \ba
 \abs{\tp{\vecf{h}} \matr{E} \vecf{h}}
-&= \abs{\sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,e_{ij}\,h_j}
+&= \abs{\sum_{i=1}^{p} \sumjp h_i\,e_{ij}\,h_j}
 && \text{(matrix product)}
 \\
-&\le \sum_{i=1}^{p} \sum_{j=1}^{p} \abs{h_i}\,\abs{e_{ij}}\,\abs{h_j}
+&\le \sum_{i=1}^{p} \sumjp \abs{h_i}\,\abs{e_{ij}}\,\abs{h_j}
 && \text{(triangle inequality for numbers)}
 \\
-&\le m \sum_{i=1}^{p} \sum_{j=1}^{p} \abs{h_i}\,\abs{h_j}
+&\le m \sum_{i=1}^{p} \sumjp \abs{h_i}\,\abs{h_j}
 && \text{(} \abs{e_{ij}} \le m \text{)}
 \\
 &= m\,\paren{\sum_{i=1}^{p} \abs{h_i}}^2
