@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-08 14:38:49 (PDT)</p>
+  <p class="date">Last modified: 2026-10-08 15:39:12 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-optimality-vector" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Optimality conditions in several variables</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -539,14 +539,14 @@ g'(t)
 &amp;&amp; \text{(matrix product)}
 \end{aligned}
 \]</span></p>
-<p>The second step writes out the <a href="./linear-algebra.html#def-matrix-mult">matrix product</a>. <span class="math inline">\(g'\)</span> is continuous (<a href="./vector-calculus.html#def-continuous-several">continuity</a>): <span class="math inline">\(t \mapsto \tilde{z} + t \tilde{h}\)</span> is continuous, since <span class="math inline">\(\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left|s - t\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\)</span>, each <span class="math inline">\(\frac{\partial}{\partial x_j} f\)</span> is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each <span class="math inline">\(\frac{\partial}{\partial x_j} f\)</span> has continuous partial derivatives, the second partial derivatives of <span class="math inline">\(f\)</span>, so the same chain-rule computation applies to it: <span class="math inline">\(\frac{\partial}{\partial t} \mathopen{}\left[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right]\mathclose{} = \sum_{i=1}^{p} h_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\)</span>. So</p>
+<p>The second step writes out the <a href="./linear-algebra.html#def-matrix-mult">matrix product</a>. <span class="math inline">\(g'\)</span> is continuous (<a href="./vector-calculus.html#def-continuous-several">continuity</a>): <span class="math inline">\(t \mapsto \tilde{z} + t \tilde{h}\)</span> is continuous, since <span class="math inline">\(\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left|s - t\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\)</span>, each <span class="math inline">\(\frac{\partial}{\partial x_j} f\)</span> is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each <span class="math inline">\(\frac{\partial}{\partial x_j} f\)</span> has continuous partial derivatives, the second partial derivatives of <span class="math inline">\(f\)</span>, so the same chain-rule computation applies to it: <span class="math inline">\(\frac{\partial}{\partial t} \mathopen{}\left[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right]\mathclose{} = \sum_{i=1}^ph_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\)</span>. So</p>
 <p><span class="math display">\[
 \begin{aligned}
 g''(t)
-&amp;= \sum_{j=1}^ph_j \sum_{i=1}^{p} h_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}
+&amp;= \sum_{j=1}^ph_j \sum_{i=1}^ph_i\,\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}
 &amp;&amp; \text{(differentiate each term of } g'(t) \text{)}
 \\
-&amp;= \sum_{i=1}^{p} \sum_{j=1}^ph_i\,\mathopen{}\left[\mathbf{H}_f(\tilde{z} + t \tilde{h})\right]\mathclose{}_{ij}\,h_j
+&amp;= \sum_{i=1}^p\sum_{j=1}^ph_i\,\mathopen{}\left[\mathbf{H}_f(\tilde{z} + t \tilde{h})\right]\mathclose{}_{ij}\,h_j
 &amp;&amp; \text{(definition of the Hessian; reorder the finite sums)}
 \\
 &amp;= {\tilde{h}}^{\top}\,\mathbf{H}_f(\tilde{z} + t \tilde{h})\,\tilde{h}.
@@ -617,10 +617,10 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 &amp;= {\tilde{y}}^{\top} \mathbf{\Lambda} \tilde{y}
 &amp;&amp; \text{(} {\tilde{h}}^{\top} \mathbf{Q} = {({\mathbf{Q}}^{\top} \tilde{h})}^{\top} \text{, transpose of a product)}
 \\
-&amp;= \sum_{i=1}^{p} \lambda_i\,y_i^2
+&amp;= \sum_{i=1}^p\lambda_i\,y_i^2
 &amp;&amp; \text{(} \mathbf{\Lambda} \text{ is diagonal)}
 \\
-&amp;\ge \sum_{i=1}^{p} \lambda_{\min}\,y_i^2
+&amp;\ge \sum_{i=1}^p\lambda_{\min}\,y_i^2
 &amp;&amp; \text{(} \lambda_i \ge \lambda_{\min} \text{ and } y_i^2 \ge 0 \text{)}
 \\
 &amp;= \lambda_{\min}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2
@@ -643,16 +643,16 @@ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right|\mathclose{}
-&amp;= \mathopen{}\left|\sum_{i=1}^{p} \sum_{j=1}^ph_i\,e_{ij}\,h_j\right|\mathclose{}
+&amp;= \mathopen{}\left|\sum_{i=1}^p\sum_{j=1}^ph_i\,e_{ij}\,h_j\right|\mathclose{}
 &amp;&amp; \text{(matrix product)}
 \\
-&amp;\le \sum_{i=1}^{p} \sum_{j=1}^p\mathopen{}\left|h_i\right|\mathclose{}\,\mathopen{}\left|e_{ij}\right|\mathclose{}\,\mathopen{}\left|h_j\right|\mathclose{}
+&amp;\le \sum_{i=1}^p\sum_{j=1}^p\mathopen{}\left|h_i\right|\mathclose{}\,\mathopen{}\left|e_{ij}\right|\mathclose{}\,\mathopen{}\left|h_j\right|\mathclose{}
 &amp;&amp; \text{(triangle inequality for numbers)}
 \\
-&amp;\le m \sum_{i=1}^{p} \sum_{j=1}^p\mathopen{}\left|h_i\right|\mathclose{}\,\mathopen{}\left|h_j\right|\mathclose{}
+&amp;\le m \sum_{i=1}^p\sum_{j=1}^p\mathopen{}\left|h_i\right|\mathclose{}\,\mathopen{}\left|h_j\right|\mathclose{}
 &amp;&amp; \text{(} \mathopen{}\left|e_{ij}\right|\mathclose{} \le m \text{)}
 \\
-&amp;= m\,\mathopen{}\left(\sum_{i=1}^{p} \mathopen{}\left|h_i\right|\mathclose{}\right)\mathclose{}^2
+&amp;= m\,\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|h_i\right|\mathclose{}\right)\mathclose{}^2
 &amp;&amp; \text{(the double sum factors)}
 \\
 &amp;= m\,(\tilde{1} \cdot \tilde{a})^2

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 14:38:49 (PDT)
+Last modified: 2026-10-08 15:39:12 (PDT)
 
 ## 1 Derivatives
 
@@ -1285,7 +1285,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Example 24 (A Riemann sum for \\x^2\\ on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = x^2\\, take the partition \\0 \< 0.25 \< 0.5 \< 1\\ of [Example 21](#exm-partition), with widths \\\Delta x_1 = 0.25\\, \\\Delta x_2 = 0.25\\, and \\\Delta x_3 = 0.5\\, and take each sample point at the right end of its subinterval: \\x_1^\* = 0.25\\, \\x_2^\* = 0.5\\, and \\x_3^\* = 1\\. Then
 >
-> \\ \begin{aligned} \sum\_{i=1}^3 f(x_i^\*)\\\Delta x_i &= f(0.25) \cdot 0.25 + f(0.5) \cdot 0.25 + f(1) \cdot 0.5 && \text{(write out the three terms)} \\ &= 0.0625 \cdot 0.25 + 0.25 \cdot 0.25 + 1 \cdot 0.5 && \text{(evaluate } f(x) = x^2 \text{)} \\ &= 0.015625 + 0.0625 + 0.5 && \text{(multiply)} \\ &= 0.578125 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \sum\_{i=1}^{3} f(x_i^\*)\\\Delta x_i &= f(0.25) \cdot 0.25 + f(0.5) \cdot 0.25 + f(1) \cdot 0.5 && \text{(write out the three terms)} \\ &= 0.0625 \cdot 0.25 + 0.25 \cdot 0.25 + 1 \cdot 0.5 && \text{(evaluate } f(x) = x^2 \text{)} \\ &= 0.015625 + 0.0625 + 0.5 && \text{(multiply)} \\ &= 0.578125 && \text{(add)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2355,7 +2355,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Prove that for every positive integer \\n\\:
 >
-> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=1}^n \frac{1}{k} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
+> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=1}^{n} \frac{1}{k} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
 
 > **NOTE:**
 >
@@ -2373,7 +2373,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Summing over \\k = 0, 1, \dots, n-1\\:
 >
-> \\\sum\_{k=0}^{n-1} \frac{1}{k+1} = \sum\_{j=1}^n \frac{1}{j} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
+> \\\sum\_{k=0}^{n-1} \frac{1}{k+1} = \sum\_{j=1}^n\frac{1}{j} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
 >
 > **Method 2 (binomial expansion):** Expand \\(1 - xy)^{n-1} = \sum\_{k=0}^{n-1} \binom{n-1}{k}(-1)^k (xy)^k\\. Integrating over \\\[0, 1\]^2\\:
 >
@@ -2381,9 +2381,9 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Multiplying by \\n\\ and using the identity \\\frac{n}{k+1}\binom{n-1}{k} = \binom{n}{k+1}\\:
 >
-> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} = \sum\_{j=1}^n \frac{1}{j}\\
+> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} = \sum\_{j=1}^n\frac{1}{j}\\
 >
-> *Remark:* This integral identity connects multivariable integration with harmonic numbers \\H_n = \sum\_{k=1}^n \frac{1}{k} \approx \log n + \gamma\\, where \\\gamma \approx 0.5772\\ is the Euler-Mascheroni constant.
+> *Remark:* This integral identity connects multivariable integration with harmonic numbers \\H_n = \sum\_{k=1}^{n} \frac{1}{k} \approx \log n + \gamma\\, where \\\gamma \approx 0.5772\\ is the Euler-Mascheroni constant.
 
 > **NOTE:**
 >

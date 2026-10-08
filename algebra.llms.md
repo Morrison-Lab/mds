@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 14:38:49 (PDT)
+Last modified: 2026-10-08 15:39:12 (PDT)
 
 ## 1 Equalities
 
@@ -565,7 +565,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 9* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 18](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat{y})^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat{y}\\ of it expands this way. With \\y = 5\\ and \\\hat{y} = 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
+> *Remark 9* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 18](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat y)^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat y\\ of it expands this way. With \\y = 5\\ and \\\hat y= 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
 
 ## 12 Summation notation
 
@@ -574,7 +574,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > **Exercise 5 (Expand a sum)** The expression \\\sum\_{i=1}^{4} i^2\\ is shorthand for a sum of four terms.
 >
 > 1.  Guess which four terms, and add them up.
-> 2.  Write \\\frac{1}{N} \sum\_{i=1}^{N} \left(y_i - \hat{y}\_i\right)^2\\ for \\N = 3\\ without the \\\sum\\ symbol.
+> 2.  Write \\\frac{1}{N}\sum\_{i=1}^N\left(y_i - \hat y_i\right)^2\\ for \\N = 3\\ without the \\\sum\\ symbol.
 
 > **NOTE:**
 >
@@ -586,7 +586,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > 2.  Replace \\i\\ by each of \\1, 2, 3\\ in turn inside the parentheses, add the three squares, and multiply the total by \\\frac{1}{3}\\:
 >
->     \\ \frac{1}{3} \sum\_{i=1}^{3} \left(y_i - \hat{y}\_i\right)^2 = \frac{1}{3} \left\[ \left(y_1 - \hat{y}\_1\right)^2 + \left(y_2 - \hat{y}\_2\right)^2 + \left(y_3 - \hat{y}\_3\right)^2 \right\] \\
+>     \\ \frac{1}{3} \sum\_{i=1}^{3} \left(y_i - \hat y_i\right)^2 = \frac{1}{3} \left\[ \left(y_1 - \hat y_1\right)^2 + \left(y_2 - \hat y_2\right)^2 + \left(y_3 - \hat y_3\right)^2 \right\] \\
 
 > **NOTE:**
 >
@@ -598,7 +598,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^na_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
+> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^na_i\\ and \\\sum\_{j=1}^na_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
 
 > **NOTE:**
 >

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 14:38:49 (PDT)
+Last modified: 2026-10-08 15:39:12 (PDT)
 
 ## 1 Vectors
 
@@ -123,9 +123,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Definition 8 (Linear combination)** A **linear combination** of the numbers \\a_1, \ldots, a_k\\ with **coefficients** \\c_1, \ldots, c_k\\ is the weighted sum
 >
-> \\c_1 a_1 + \cdots + c_k a_k = \sum\_{i=1}^k c_i a_i\\
+> \\c_1 a_1 + \cdots + c_k a_k = \sum\_{i=1}^{k} c_i a_i\\
 >
-> A linear combination of vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ of the same length is defined entry by entry: entry \\j\\ of \\\sum\_{i=1}^k c_i \tilde{v}\_i\\ is the linear combination of the \\j\\th entries of \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ with the same coefficients. For example, the linear combination of \\{(1, 0)}^{\top}\\ and \\{(0, 1)}^{\top}\\ with coefficients \\2\\ and \\3\\ is \\{(2 \cdot 1 + 3 \cdot 0,\\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\\.
+> A linear combination of vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ of the same length is defined entry by entry: entry \\j\\ of \\\sum\_{i=1}^{k} c_i \tilde{v}\_i\\ is the linear combination of the \\j\\th entries of \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ with the same coefficients. For example, the linear combination of \\{(1, 0)}^{\top}\\ and \\{(0, 1)}^{\top}\\ with coefficients \\2\\ and \\3\\ is \\{(2 \cdot 1 + 3 \cdot 0,\\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\\.
 
 > **NOTE:**
 >
@@ -159,7 +159,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Definition 10 (Mean (average, sample mean))** The **mean** (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra.llms.md#def-summation) divided by how many there are:
 >
-> \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n} \sum\_{i=1}^ny_i\\
+> \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum\_{i=1}^ny_i\\
 >
 > When the numbers are observed data values, \\\bar{y}\\ is also called the **sample mean**.
 
@@ -199,7 +199,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. Writing the dot product componentwise:
 >
-> \\ \begin{aligned} \tilde{e}\_j \cdot \tilde{x} &= \sum\_{i=1}^{p} (\tilde{e}\_j)\_i\\ x_i && \text{(definition of the dot product)} \\&= \sum\_{i=1}^{p} \begin{cases} 1 \cdot x_i & \text{if } i = j \\ 0 \cdot x_i & \text{if } i \neq j \end{cases} && \text{(definition of } \tilde{e}\_j \text{)} \\&= x_j && \text{(only the } i = j \text{ term is nonzero)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{e}\_j \cdot \tilde{x} &= \sum\_{i=1}^p(\tilde{e}\_j)\_i\\ x_i && \text{(definition of the dot product)} \\&= \sum\_{i=1}^p \begin{cases} 1 \cdot x_i & \text{if } i = j \\ 0 \cdot x_i & \text{if } i \neq j \end{cases} && \text{(definition of } \tilde{e}\_j \text{)} \\&= x_j && \text{(only the } i = j \text{ term is nonzero)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2049,7 +2049,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > *Proof*. **Second slot.**
 >
-> \\ \begin{aligned} \tilde{x} \cdot (a\\\tilde{u} + b\\\tilde{w}) &= \sum\_{i=1}^{p} x_i\\(a\\\tilde{u} + b\\\tilde{w})\_i && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{p} x_i\\(a u_i + b w_i) && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{, }\href{#def-vector-addition}{\text{Definition~6}}\text{)} \\ &= \sum\_{i=1}^{p} \mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{} && \text{(distribute each } x_i \text{)} \\ &= \sum\_{i=1}^{p} \mathopen{}\left(a\\x_i u_i + b\\x_i w_i\right)\mathclose{} && \text{(commute the factors in each product)} \\ &= \sum\_{i=1}^{p} a\\x_i u_i + \sum\_{i=1}^{p} b\\x_i w_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^{p} x_i u_i + b \sum\_{i=1}^{p} x_i w_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\(\tilde{x} \cdot \tilde{u}) + b\\(\tilde{x} \cdot \tilde{w}). && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{x} \cdot (a\\\tilde{u} + b\\\tilde{w}) &= \sum\_{i=1}^px_i\\(a\\\tilde{u} + b\\\tilde{w})\_i && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^px_i\\(a u_i + b w_i) && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{, }\href{#def-vector-addition}{\text{Definition~6}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{} && \text{(distribute each } x_i \text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\x_i u_i + b\\x_i w_i\right)\mathclose{} && \text{(commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\x_i u_i + \sum\_{i=1}^pb\\x_i w_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^px_i u_i + b \sum\_{i=1}^px_i w_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\(\tilde{x} \cdot \tilde{u}) + b\\(\tilde{x} \cdot \tilde{w}). && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \end{aligned} \\
 >
 > **First slot.**
 >
@@ -2121,7 +2121,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **\\\mathcal{N}({\mathbf{A}}^{\top}) \subseteq \mathcal{C}(\mathbf{A})^\perp\\.** Suppose \\\tilde{a}\_j \cdot \tilde{x} = 0\\ for every \\j\\, and take any \\\tilde{y} \in \mathcal{C}(\mathbf{A})\\, so \\\tilde{y} = \mathbf{A} \tilde{z}\\ for some \\\tilde{z} \in \mathbb{R}^n\\ ([Definition 45](#def-column-space)). Then
 >
-> \\ \begin{aligned} \tilde{y} \cdot \tilde{x} &= \sum\_{i=1}^{m} (\mathbf{A} \tilde{z})\_i\\ x_i && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{m} \mathopen{}\left(\sum\_{j=1}^{n} a\_{ij} z_j\right)\mathclose{}\\ x_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\ &= \sum\_{i=1}^{m} \sum\_{j=1}^{n} a\_{ij}\\ z_j\\ x_i && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{n} \sum\_{i=1}^{m} a\_{ij}\\ z_j\\ x_i && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{n} z_j \sum\_{i=1}^{m} a\_{ij}\\ x_i && \text{(commute, then factor } z_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{n} z_j\\ (\tilde{a}\_j \cdot \tilde{x}) && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{j=1}^{n} z_j \cdot 0 && \text{(each } \tilde{a}\_j \cdot \tilde{x} = 0 \text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{y} \cdot \tilde{x} &= \sum\_{i=1}^{m} (\mathbf{A} \tilde{z})\_i\\ x_i && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{m} \mathopen{}\left(\sum\_{j=1}^na\_{ij} z_j\right)\mathclose{}\\ x_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\ &= \sum\_{i=1}^{m} \sum\_{j=1}^na\_{ij}\\ z_j\\ x_i && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^n\sum\_{i=1}^{m} a\_{ij}\\ z_j\\ x_i && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^nz_j \sum\_{i=1}^{m} a\_{ij}\\ x_i && \text{(commute, then factor } z_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^nz_j\\ (\tilde{a}\_j \cdot \tilde{x}) && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{j=1}^nz_j \cdot 0 && \text{(each } \tilde{a}\_j \cdot \tilde{x} = 0 \text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
 >
 > So \\\tilde{x}\\ is orthogonal to every vector of \\\mathcal{C}(\mathbf{A})\\.
 
@@ -2318,7 +2318,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Part 2.**
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert c\\\tilde{x}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^{p} (c\\x_i)^2} && \text{(}\href{#eq-l2-norm}{\text{Equation~2}}\text{, and }\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \\ &= \sqrt{\sum\_{i=1}^{p} c^2 x_i^2} && \text{(} (c\\x_i)^2 = c^2 x_i^2 \text{)} \\ &= \sqrt{c^2 \sum\_{i=1}^{p} x_i^2} && \text{(factor } c^2 \text{ out of the sum)} \\ &= \sqrt{c^2}\\\sqrt{\sum\_{i=1}^{p} x_i^2} && \text{(the square root of a product of nonnegative numbers)} \\ &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}. && \text{(} \sqrt{c^2} = \mathopen{}\left\|c\right\|\mathclose{} \text{, and }\href{#eq-l2-norm}{\text{Equation~2}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert c\\\tilde{x}\right\rVert\mathclose{} &= \sqrt{\sum\_{i=1}^p(c\\x_i)^2} && \text{(}\href{#eq-l2-norm}{\text{Equation~2}}\text{, and }\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \\ &= \sqrt{\sum\_{i=1}^pc^2 x_i^2} && \text{(} (c\\x_i)^2 = c^2 x_i^2 \text{)} \\ &= \sqrt{c^2 \sum\_{i=1}^px_i^2} && \text{(factor } c^2 \text{ out of the sum)} \\ &= \sqrt{c^2}\\\sqrt{\sum\_{i=1}^px_i^2} && \text{(the square root of a product of nonnegative numbers)} \\ &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}. && \text{(} \sqrt{c^2} = \mathopen{}\left\|c\right\|\mathclose{} \text{, and }\href{#eq-l2-norm}{\text{Equation~2}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2423,12 +2423,12 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Definition 58 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** (or **\\\ell_p\\ norm**, traditionally named with parameter \\p\\ but denoted here with exponent \\k\\ to avoid clashing with the ambient vector dimension \\p\\) is:
 >
-> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p \mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
+> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
 >
 > Three special cases are widely used:
 >
-> 1.  **\\\ell_1\\ norm** (\\k = 1\\, also called the **taxicab norm** or **Manhattan norm**): \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 \stackrel{\text{def}}{=}\sum\_{i=1}^p \mathopen{}\left\|x_i\right\|\mathclose{}. \\
-> 2.  **\\\ell_2\\ norm** (\\k = 2\\): the standard Euclidean norm ([Definition 14](#def-euclidean-norm)), \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 = \sqrt{\sum\_{i=1}^p x_i^2}\\.
+> 1.  **\\\ell_1\\ norm** (\\k = 1\\, also called the **taxicab norm** or **Manhattan norm**): \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 \stackrel{\text{def}}{=}\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}. \\
+> 2.  **\\\ell_2\\ norm** (\\k = 2\\): the standard Euclidean norm ([Definition 14](#def-euclidean-norm)), \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 = \sqrt{\sum\_{i=1}^px_i^2}\\.
 > 3.  **infinity norm** (\\k = \infty\\, also called the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**): \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\max\_{1 \le i \le p} \mathopen{}\left\|x_i\right\|\mathclose{} = \lim\_{k \to \infty} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k. \\
 >
 > Each vector \\p\\-norm satisfies the norm axioms ([Definition 57](#def-norm)) on \\\mathbb{R}^p\\.
@@ -2525,7 +2525,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > *Proof*. Write \\u\_{ji}\\ for entry \\i\\ of \\\tilde{u}\_j\\. Then
 >
-> \\ \begin{aligned} \tilde{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{u}\_j\right)\mathclose{} &= \sum\_{i=1}^{p} x_i \sum\_{j=1}^{k} c_j u\_{ji} && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{, }\href{#def-linear-combination}{\text{Definition~8}}\text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{k} x_i c_j u\_{ji} && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^{p} x_i c_j u\_{ji} && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^{p} c_j x_i u\_{ji} && \text{(commute the factors in each product)} \\ &= \sum\_{j=1}^{k} c_j \sum\_{i=1}^{p} x_i u\_{ji} && \text{(factor } c_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{x} \cdot \tilde{u}\_j). && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{u}\_j\right)\mathclose{} &= \sum\_{i=1}^px_i \sum\_{j=1}^{k} c_j u\_{ji} && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{, }\href{#def-linear-combination}{\text{Definition~8}}\text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^{k} x_i c_j u\_{ji} && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^px_i c_j u\_{ji} && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^pc_j x_i u\_{ji} && \text{(commute the factors in each product)} \\ &= \sum\_{j=1}^{k} c_j \sum\_{i=1}^px_i u\_{ji} && \text{(factor } c_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{x} \cdot \tilde{u}\_j). && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3076,7 +3076,7 @@ Some special matrices appeared earlier:
 >
 > **Definition 77 (Trace)** The **trace** of a \\p \times p\\ matrix \\\mathbf{M}\\ is the sum of its diagonal entries:
 >
-> \\\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum\_{i=1}^p M\_{ii}\\
+> \\\operatorname{tr}(\mathbf{M}) \stackrel{\text{def}}{=}\sum\_{i=1}^pM\_{ii}\\
 
 > **NOTE:**
 >
@@ -3472,7 +3472,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > **Example 138 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 27](#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top}\mathbf{I}\_p\tilde{x}= \sum\_{i=1}^p x_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
+> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 27](#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top}\mathbf{I}\_p\tilde{x}= \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
 > - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 137](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{B}\tilde{x}= (1 - 1)^2 = 0\\.
 > - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\tilde{x}= (1, -1)\\, \\{\tilde{x}}^{\top}\mathbf{D}\tilde{x}= 1 - 2 - 2 + 1 = -2 \< 0\\.
 
@@ -3499,7 +3499,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > *Proof*. For any vector \\\tilde{x}\\ of length \\p\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\. Then:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}\tilde{x} &= {\tilde{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\tilde{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\tilde{y}}^{\top}\mathbf{\Lambda}\tilde{y} && \text{(definition of } \tilde{y} \text{)} \\ &= \sum\_{i=1}^p \lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}\tilde{x} &= {\tilde{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\tilde{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\tilde{y}}^{\top}\mathbf{\Lambda}\tilde{y} && \text{(definition of } \tilde{y} \text{)} \\ &= \sum\_{i=1}^p\lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
 >
 > The second step is [Theorem 19](#thm-transpose-product). Also, \\\tilde{x}= \tilde{0}\\ exactly when \\\tilde{y} = \tilde{0}\\: \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ for an orthogonal matrix ([Definition 74](#def-orthogonal-matrix)), so \\\tilde{x}= \mathbf{Q}\tilde{y}\\.
 >
@@ -3532,7 +3532,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\\mathbf{A}^{-1}\\ is symmetric by [Corollary 6](#cor-inverse-symmetric). For \\\tilde{x}\neq \tilde{0}\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\, which is not \\\tilde{0}\\ because \\\tilde{x}= \mathbf{Q}\tilde{y}\\. As in the proof of [Theorem 72](#thm-definite-eigenvalues):
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}^{-1}\tilde{x} &= {\tilde{y}}^{\top}\mathbf{\Lambda}^{-1}\tilde{y} && \text{(substitute } \mathbf{A}^{-1} = \mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} \text{)} \\ &= \sum\_{i=1}^p \frac{y_i^2}{\lambda_i} && \text{(} \mathbf{\Lambda}^{-1} \text{ is diagonal)} \\ &\> 0 && \text{(each } \lambda_i \> 0 \text{, and some } y_i \neq 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}^{-1}\tilde{x} &= {\tilde{y}}^{\top}\mathbf{\Lambda}^{-1}\tilde{y} && \text{(substitute } \mathbf{A}^{-1} = \mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} \text{)} \\ &= \sum\_{i=1}^p\frac{y_i^2}{\lambda_i} && \text{(} \mathbf{\Lambda}^{-1} \text{ is diagonal)} \\ &\> 0 && \text{(each } \lambda_i \> 0 \text{, and some } y_i \neq 0 \text{)} \end{aligned} \\
 >
 > So \\\mathbf{A}^{-1}\\ is positive definite.
 
@@ -3569,9 +3569,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 > - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{#thm-transpose-sum}{\text{Theorem~18}}\text{, }\href{#def-scalar-mult}{\text{Definition~23}}\text{, }\href{#def-matrix-transpose}{\text{Definition~20}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{#thm-matmul-distrib}{\text{Theorem~9}}\text{)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\mathbf{A}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 > - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \left\langle \tilde{y}, \tilde{x} \right\rangle\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{#thm-transpose-product}{\text{Theorem~19}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 >
-> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^p x_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 42](#def-basis), [Definition 12](#def-indicator-vector)). By linearity in both slots ([Remark 15](#rem-inner-product-other-sources)):
+> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^px_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 42](#def-basis), [Definition 12](#def-indicator-vector)). By linearity in both slots ([Remark 15](#rem-inner-product-other-sources)):
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^p x_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p \sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^p x_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
 >
 > Symmetry of \\\left\langle \cdot, \cdot \right\rangle\\ ensures \\A\_{ji} = \left\langle \tilde{e}\_j, \tilde{e}\_i \right\rangle = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle = A\_{ij}\\, so \\\mathbf{A}\\ is symmetric ([Definition 67](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}= \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 84](#def-positive-definite)).
 >
@@ -4228,7 +4228,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. Row \\i\\ of \\\mathbf{U} \tilde{x} = \tilde{b}\\ reads
 >
-> \\ \begin{aligned} b_i &= \sum\_{j=1}^{n} u\_{ij}\\x_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\ &= \sum\_{j=i}^{n} u\_{ij}\\x_j && \text{(} u\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= u\_{ii}\\x_i + \sum\_{j=i+1}^{n} u\_{ij}\\x_j. && \text{(split off the } j = i \text{ term)} \end{aligned} \\
+> \\ \begin{aligned} b_i &= \sum\_{j=1}^nu\_{ij}\\x_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\ &= \sum\_{j=i}^{n} u\_{ij}\\x_j && \text{(} u\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= u\_{ii}\\x_i + \sum\_{j=i+1}^{n} u\_{ij}\\x_j. && \text{(split off the } j = i \text{ term)} \end{aligned} \\
 >
 > This equation is equivalent to each of
 >
@@ -4262,7 +4262,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > Let \\\mathbf{R}\\ be the \\n \times n\\ matrix with \\r\_{ji} = \tilde{q}\_j \cdot \tilde{a}\_i\\ for \\j \< i\\, \\r\_{ii} = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} \> 0\\, and \\r\_{ji} = 0\\ for \\j \> i\\; it is upper triangular with positive diagonal. Column \\i\\ of \\\mathbf{Q} \mathbf{R}\\ is \\\mathbf{Q}\\ times column \\i\\ of \\\mathbf{R}\\ ([Definition 24](#def-matrix-mult)), and
 >
-> \\ \begin{aligned} \mathbf{Q}\\(r\_{1i}, \ldots, r\_{ni}) &= \sum\_{j=1}^{n} r\_{ji}\\\tilde{q}\_j && \text{(}\href{#thm-matvec-columns}{\text{Theorem~22}}\text{)} \\ &= \sum\_{j=1}^{i} r\_{ji}\\\tilde{q}\_j && \text{(} r\_{ji} = 0 \text{ for } j \> i \text{)} \\ &= r\_{ii}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} r\_{ji}\\\tilde{q}\_j && \text{(split off the } j = i \text{ term)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(the entries of } \mathbf{R} \text{)} \\ &= \tilde{a}\_i. && \text{(the display)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{Q}\\(r\_{1i}, \ldots, r\_{ni}) &= \sum\_{j=1}^nr\_{ji}\\\tilde{q}\_j && \text{(}\href{#thm-matvec-columns}{\text{Theorem~22}}\text{)} \\ &= \sum\_{j=1}^{i} r\_{ji}\\\tilde{q}\_j && \text{(} r\_{ji} = 0 \text{ for } j \> i \text{)} \\ &= r\_{ii}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} r\_{ji}\\\tilde{q}\_j && \text{(split off the } j = i \text{ term)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(the entries of } \mathbf{R} \text{)} \\ &= \tilde{a}\_i. && \text{(the display)} \end{aligned} \\
 >
 > So \\\mathbf{Q} \mathbf{R} = \mathbf{A}\\.
 
@@ -4741,7 +4741,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. \\\mathbf{X}\_k\\ is symmetric, because \\\mathbf{X}\\ is. For \\\tilde{u} \in \mathbb{R}^k\\ with \\\tilde{u} \ne \tilde{0}\\, let \\\tilde{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \mathbb{R}^p\\, which is nonzero, with entries \\y_i = u_i\\ for \\i \le k\\ and \\y_i = 0\\ for \\i \> k\\. Then
 >
-> \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^py_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^py_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
 >
 > For the diagonal entry \\x\_{ii}\\, take \\\tilde{e}\_i\\ ([Definition 12](#def-indicator-vector)), which is nonzero:
 >
@@ -4923,7 +4923,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > For property 4 (reversal of products), let \\\mathbf{A}\\ be an \\m \times k\\ matrix and \\\mathbf{B}\\ a \\k \times n\\ matrix. Entry \\(i, j)\\ of the product’s Hermitian adjoint (for \\i \in \\1, \ldots, n\\\\ and \\j \in \\1, \ldots, m\\\\) is:
 >
-> \\ \begin{aligned} \[(\mathbf{A}\mathbf{B})^{\mathsf{H}}\]\_{ij} &= \overline{(\mathbf{A}\mathbf{B})\_{ji}} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~102}}\text{)} \\ &= \overline{\sum\_{s=1}^k a\_{js}\\b\_{si}} && \text{(definition of matrix multiplication)} \\ &= \sum\_{s=1}^k \overline{a\_{js}}\\\overline{b\_{si}} && \text{(conjugate of sums and products)} \\ &= \sum\_{s=1}^k \overline{b\_{si}}\\\overline{a\_{js}} && \text{(complex multiplication is commutative)} \\ &= \sum\_{s=1}^k (\mathbf{B}^{\mathsf{H}})\_{is}\\(\mathbf{A}^{\mathsf{H}})\_{sj} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~102}}\text{)} \\ &= (\mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\_{ij} && \text{(definition of matrix multiplication)}. \end{aligned} \\
+> \\ \begin{aligned} \[(\mathbf{A}\mathbf{B})^{\mathsf{H}}\]\_{ij} &= \overline{(\mathbf{A}\mathbf{B})\_{ji}} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~102}}\text{)} \\ &= \overline{\sum\_{s=1}^{k} a\_{js}\\b\_{si}} && \text{(definition of matrix multiplication)} \\ &= \sum\_{s=1}^{k} \overline{a\_{js}}\\\overline{b\_{si}} && \text{(conjugate of sums and products)} \\ &= \sum\_{s=1}^{k} \overline{b\_{si}}\\\overline{a\_{js}} && \text{(complex multiplication is commutative)} \\ &= \sum\_{s=1}^{k} (\mathbf{B}^{\mathsf{H}})\_{is}\\(\mathbf{A}^{\mathsf{H}})\_{sj} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~102}}\text{)} \\ &= (\mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\_{ij} && \text{(definition of matrix multiplication)}. \end{aligned} \\
 >
 > For the inverse, applying property 4 to \\\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}\\ gives:
 >

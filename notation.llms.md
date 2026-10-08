@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 14:38:49 (PDT)
+Last modified: 2026-10-08 15:39:12 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -437,12 +437,12 @@ The vast majority of indicator notations belong to one of two families: set nota
 In set notation, the indicator is tied to a set \\A\\, which appears as a subscript:
 
 - \\\mathbf{1}\_A(x)\\ (bold numeral one)
-- \\\mathbb{1}\_A(x)\\ (blackboard bold numeral one)
+- \\\mathbb{1}\_{A}(x)\\ (blackboard bold numeral one)
 - \\I_A(x)\\ (capital letter \\I\\)
 - \\\mathbb{I}\_A(x)\\ (blackboard bold letter \\I\\)
 - \\\chi_A(x)\\ (Greek letter chi, historically termed the *characteristic function*)
 
-When the function is viewed as a mathematical object in its own right (for instance, as an element of an \\L^p\\ function space, the set of functions \\f\\ for which \\\int \mathopen{}\left\|f(x)\right\|\mathclose{}^p \\ dx\\ is finite), authors often omit the argument \\x\\, writing simply \\\mathbf{1}\_A\\, \\\mathbb{1}\_A\\, or \\I_A\\.
+When the function is viewed as a mathematical object in its own right (for instance, as an element of an \\L^p\\ function space, the set of functions \\f\\ for which \\\int \mathopen{}\left\|f(x)\right\|\mathclose{}^p \\ dx\\ is finite), authors often omit the argument \\x\\, writing simply \\\mathbf{1}\_A\\, \\\mathbb{1}\_{A}\\, or \\I_A\\.
 
 #### Predicate notation
 
@@ -530,7 +530,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 
 | Notation style | Typical syntax | Primary fields | Notes and potential ambiguities |
 |:---|:---|:---|:---|
-| **Blackboard bold 1** | \\\mathbb{1}\_A(x)\\, \\\mathbb{1}(P)\\ | Modern probability, mathematical statistics | Unambiguous; distinct from matrices and scalars; standard in this book. |
+| **Blackboard bold 1** | \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}(P)\\ | Modern probability, mathematical statistics | Unambiguous; distinct from matrices and scalars; standard in this book. |
 | **Bold numeral 1** | \\\mathbf{1}\_A(x)\\, \\\mathbf{1}(P)\\ | Probability theory, measure theory | Can be confused with a vector of ones \\\mathbf{1} = (1, \dots, 1)^{\top}\\. |
 | **Blackboard bold I** | \\\mathbb{I}(x \in A)\\, \\\mathbb{I}(P)\\ | Econometrics, machine learning, statistics | Clear predicate notation; avoids confusion with numerals. |
 | **Letter \\I\\** | \\I_A(x)\\, \\I(P)\\ | Classical statistics, epidemiology | Can be confused with the identity matrix \\I\\ or the Fisher information \\\mathcal{I}\\, which measures how much a sample tells about a parameter. |
@@ -631,9 +631,9 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 | \\\sum\_{x} f(x)\\ | \\\sum\_{x \in \mathcal{R}(x)} f(x)\\ | the set the sum runs over ([sum over a finite set](algebra.llms.md#def-sum-over-set)) |
 | \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^nx_i\\ | the lower and upper limits of the index ([summation notation](algebra.llms.md#def-summation)) |
 | \\\sum x_i\\ | \\\sum\_{i=1}^nx_i\\ | the index and its lower and upper limits |
-| \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the lower and upper limits of the index |
-| \\\prod x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
-| \\\sum\_{i, j} b\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^{n} b\_{ij}\\ | the limits of both indices |
+| \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^nx_i\\ | the lower and upper limits of the index |
+| \\\prod x_i\\ | \\\prod\_{i=1}^nx_i\\ | the index and its lower and upper limits |
+| \\\sum\_{i, j} b\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^nb\_{ij}\\ | the limits of both indices |
 | \\\sum\_{i \neq k} a_i\\ | \\\sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} a_i\\ | the set \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ of indices that \\k\\ is removed from |
 | \\\int f(x)\\dx\\, used for a number | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits of integration |
 | \\\int f\\ | \\\int\_{-\infty}^{\infty} f(x)\\dx\\ | the limits, the variable of integration, and the differential \\dx\\ |
