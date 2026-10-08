@@ -28,7 +28,7 @@ $$
 \ba
 g'(t)
 &= \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z} + t \vecf{h})
-&& \text{(vector chain rule, [Theorem](vector-calculus.qmd#thm-chain-vec))}
+&& \text{(vector chain rule)}
 \\
 &= \sum_{j=1}^{p} h_j\,\deriv{x_j} f(\vecf{z} + t \vecf{h}).
 && \text{(matrix product)}
@@ -52,7 +52,7 @@ g''(t)
 && \text{(differentiate each term of } g'(t) \text{)}
 \\
 &= \sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,\sb{\matr{H}_f(\vecf{z} + t \vecf{h})}_{ij}\,h_j
-&& \text{([Hessian](vector-calculus.qmd#def-hessian); reorder the finite sums)}
+&& \text{(definition of the Hessian; reorder the finite sums)}
 \\
 &= \tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + t \vecf{h})\,\vecf{h}.
 && \text{(matrix product)}

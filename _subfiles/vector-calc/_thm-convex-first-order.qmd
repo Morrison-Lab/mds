@@ -27,7 +27,7 @@ $$
 \ba
 g'(0)
 &= \tp{\vecf{d}}\,\deriv{\vx} f(\vy)
-&& \text{(vector chain rule, [Theorem](vector-calculus.qmd#thm-chain-vec))}
+&& \text{(vector chain rule)}
 \\
 &= \tp{\paren{\deriv{\vx} f(\vy)}} \vecf{d}.
 && \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
