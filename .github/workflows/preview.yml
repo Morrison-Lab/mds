@@ -58,6 +58,7 @@ jobs:
           packages: |
             deps::.
             any::knitr
+            any::reticulate
             any::rmarkdown
             any::tibble
 
