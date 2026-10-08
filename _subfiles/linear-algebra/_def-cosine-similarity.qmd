@@ -1,0 +1,37 @@
+:::{#def-cosine-similarity}
+#### Cosine similarity
+
+The **cosine similarity** between two nonzero vectors $\vx, \vy \in \reals^p$ is
+the cosine of the angle between them (@def-angle):
+
+$$
+\operatorname{cossim}(\vx, \vy) \eqdef \frac{\vx \cdot \vy}{\norm{\vx}\,\norm{\vy}}.
+$$
+
+In a general real inner product space (@def-inner-product-space) with inner product $\iprod{\cdot}{\cdot}$
+and induced norm $\norm{\cdot}$, the cosine similarity is
+
+$$
+\operatorname{cossim}(\vx, \vy) \eqdef \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-cosine-similarity}
+#### Cosine similarity of parallel, orthogonal, and arbitrary vectors
+
+For vectors in $\reals^2$:
+
+- Parallel vectors $\vx = (1, 2)$ and $\vy = (2, 4)$:
+  $\operatorname{cossim}(\vx, \vy) = \frac{2 + 8}{\sqrt{5}\,\sqrt{20}} = \frac{10}{10} = 1$.
+- Orthogonal vectors $\vx = (1, 2)$ and $\vy = (-2, 1)$:
+  $\operatorname{cossim}(\vx, \vy) = \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = \frac{0}{5} = 0$.
+- Arbitrary vectors $\vx = (1, 0)$ and $\vy = (1, 1)$:
+  $\operatorname{cossim}(\vx, \vy) = \frac{1 \cd 1 + 0 \cd 1}{1 \cd \sqrt{2}} = \frac{1}{\sqrt{2}}$.
+
+When both vectors have unit Euclidean norm ($\norm{\vx} = \norm{\vy} = 1$),
+cosine similarity equals their inner product: $\operatorname{cossim}(\vx, \vy) = \iprod{\vx}{\vy}$.
+
+:::
