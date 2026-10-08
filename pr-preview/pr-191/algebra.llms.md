@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 18:30:03 (PDT)
+Last modified: 2026-10-07 18:55:21 (PDT)
 
 ## 1 Equalities
 
@@ -320,6 +320,28 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > By convexity, \\ f(z) \le t f(y) + (1 - t) f(x^\*) \< t f(x^\*) + (1 - t) f(x^\*) = f(x^\*), \\ where the strict inequality uses \\t \> 0\\ and \\f(y) \< f(x^\*)\\. So \\f(z) \< f(x^\*)\\ with \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} \< \delta\\, which contradicts \\x^\*\\ being a local minimizer. Hence \\x^\*\\ is a global minimizer.
 
+> **NOTE:**
+>
+> **Theorem 8 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^{n} w_i = 1\\. Then \\ f\left(\sum\_{i=1}^{n} w_i x_i\right) \le \sum\_{i=1}^{n} w_i f(x_i). \\
+
+> **NOTE:**
+>
+> *Proof*. The proof is by induction on \\n\\.
+>
+> For \\n = 1\\ the weight is \\w_1 = 1\\, and both sides equal \\f(x_1)\\.
+>
+> Now let \\n \ge 2\\, and assume the inequality holds for \\n - 1\\ points. If \\w_n = 1\\, the other weights are all \\0\\, and both sides equal \\f(x_n)\\. Otherwise let \\s = 1 - w_n = \sum\_{i=1}^{n-1} w_i \> 0\\ and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^{n} w_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\left(\sum\_{i=1}^{n} w_i x_i\right) = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^{n} w_i f(x_i). \\
+
+> **NOTE:**
+>
+> **Example 14 (The mean of the squares is at least the square of the mean)** Take \\f(x) = x^2\\. It is convex by [Definition 15](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \left(t x + (1 - t) y\right)^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights \\w_1 = w_2 = w_3 = \tfrac{1}{3}\\. The weighted average of the points is their mean, \\\tfrac{1}{3}(1 + 2 + 6) = 3\\, so the left side of [Theorem 8](#thm-jensen) is \\f(3) = 9\\. The right side is the mean of the squares, \\\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\\. The inequality holds: \\9 \le \tfrac{41}{3}\\.
+>
+> The gap is \\\tfrac{41}{3} - 9 = \tfrac{14}{3}\\. That is the average squared distance of the points from their mean, \\\tfrac{1}{3}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right) = \tfrac{14}{3}\\, which is the variance of the three points. For \\f(x) = x^2\\, Jensen’s inequality says a variance is never negative.
+
+> **NOTE:**
+>
+> *Remark 6* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-strictly-convex), then \\-f\\ is convex, and applying [Theorem 8](#thm-jensen) to \\-f\\ reverses the inequality: \\f\left(\sum_i w_i x_i\right) \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 14](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
+
 ## 7 Infimum and supremum
 
 > **NOTE:**
@@ -333,14 +355,14 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 14 (Bounded and unbounded sets)**  
+> **Example 15 (Bounded and unbounded sets)**  
 >
 > - For \\A = (0, 1\]\\, \\1\\, \\2\\, and \\100\\ are upper bounds, and \\0\\ and \\-5\\ are lower bounds, so \\A\\ is bounded. \\0.5\\ is not an upper bound, because \\0.6 \in A\\ and \\0.6 \> 0.5\\.
 > - The natural numbers \\\mathbb{N} = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are bounded below, by \\1\\, but not bounded above: for any real number \\u\\, some natural number \\n\\ satisfies \\n \> u\\.
 
 > **NOTE:**
 >
-> **Theorem 8 (Completeness of the real numbers)** Let \\A \subseteq \mathbb{R}\\ be nonempty.
+> **Theorem 9 (Completeness of the real numbers)** Let \\A \subseteq \mathbb{R}\\ be nonempty.
 >
 > - If \\A\\ is [bounded above](#def-bounded), the set of upper bounds of \\A\\ has a [minimum](#def-minimum).
 > - If \\A\\ is bounded below, the set of lower bounds of \\A\\ has a [maximum](#def-maximum).
@@ -351,7 +373,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 15 (Completeness for an interval)** For \\A = (1, 2\]\\, the lower bounds of \\A\\ are the numbers \\\ell \le 1\\, and the largest of them is \\1\\. The upper bounds of \\A\\ are the numbers \\u \ge 2\\, and the smallest of them is \\2\\.
+> **Example 16 (Completeness for an interval)** For \\A = (1, 2\]\\, the lower bounds of \\A\\ are the numbers \\\ell \le 1\\, and the largest of them is \\1\\. The upper bounds of \\A\\ are the numbers \\u \ge 2\\, and the smallest of them is \\2\\.
 
 > **NOTE:**
 >
@@ -363,13 +385,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 6* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 17](#def-infimum) always exists, by the completeness of the real numbers ([Theorem 8](#thm-completeness)). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
+> *Remark 7* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 17](#def-infimum) always exists, by the completeness of the real numbers ([Theorem 9](#thm-completeness)). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
 >
 > If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\. For example, \\\inf \[1, 2\] = 1 = \min \[1, 2\]\\. For \\A = (1, 2\]\\, the infimum \\1\\ is not in \\A\\, and \\A\\ has no minimum.
 
 > **NOTE:**
 >
-> **Example 16 (Numerical examples of infimum)**  
+> **Example 17 (Numerical examples of infimum)**  
 >
 > - \\\inf\\1, 2, 3\\ = 1\\, since \\1\\ is the smallest element.
 > - \\\inf(0.5, 1\] = 0.5 = \min\[0.5, 1\]\\: for intervals open below, the infimum equals the minimum of the corresponding closed-below interval, even though \\0.5 \notin (0.5, 1\]\\. More generally, \\\inf(c, b\] = \min\[c, b\] = c\\ for any \\c \< b\\.
@@ -386,13 +408,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 7* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 18](#def-supremum) always exists, by the completeness of the real numbers ([Theorem 8](#thm-completeness)). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
+> *Remark 8* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 18](#def-supremum) always exists, by the completeness of the real numbers ([Theorem 9](#thm-completeness)). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
 >
 > If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\. For example, \\\sup \[1, 2\] = 2 = \max \[1, 2\]\\. For \\A = \[1, 2)\\, the supremum \\2\\ is not in \\A\\, and \\A\\ has no maximum.
 
 > **NOTE:**
 >
-> **Example 17 (Numerical examples of supremum)**  
+> **Example 18 (Numerical examples of supremum)**  
 >
 > - \\\sup\\1, 2, 3\\ = 3\\, since \\3\\ is the largest element.
 > - \\\sup\\t \ge 0 : t \< 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
@@ -406,7 +428,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 18 (Terms of a sum)**  
+> **Example 19 (Terms of a sum)**  
 >
 > - The sum \\3 + 5 + 9\\ has three terms: \\3\\, \\5\\ and \\9\\.
 > - The sum \\x^2 - 3x + 7 = x^2 + (-3x) + 7\\ has three terms: \\x^2\\, \\-3x\\ and \\7\\. A subtracted expression counts as a term with a minus sign.
@@ -417,19 +439,19 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 19 (Identity elements for addition and multiplication)**  
+> **Example 20 (Identity elements for addition and multiplication)**  
 >
-> - \\0\\ is the identity element for addition: for example, \\5 + 0 = 5\\ and \\0 + 5 = 5\\ ([Theorem 9](#thm-add-ident)).
-> - \\1\\ is the identity element for multiplication: for example, \\5 \times 1 = 5\\ and \\1 \times 5 = 5\\ ([Theorem 12](#thm-mult-one)).
+> - \\0\\ is the identity element for addition: for example, \\5 + 0 = 5\\ and \\0 + 5 = 5\\ ([Theorem 10](#thm-add-ident)).
+> - \\1\\ is the identity element for multiplication: for example, \\5 \times 1 = 5\\ and \\1 \times 5 = 5\\ ([Theorem 13](#thm-mult-one)).
 > - \\0\\ is not an identity element for subtraction: \\5 - 0 = 5\\, but \\0 - 5 = -5 \ne 5\\.
 
 > **NOTE:**
 >
-> **Definition 21 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 20](#def-identity-element)) is **commutative** if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 10](#thm-sum-symmetric) and [Theorem 13](#thm-prod-symmetric), call a commutative operation **symmetric**.
+> **Definition 21 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 20](#def-identity-element)) is **commutative** if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 11](#thm-sum-symmetric) and [Theorem 14](#thm-prod-symmetric), call a commutative operation **symmetric**.
 
 > **NOTE:**
 >
-> **Example 20 (A commutative operation, and one that is not)**  
+> **Example 21 (A commutative operation, and one that is not)**  
 >
 > - Addition is commutative: for example, \\2 + 5 = 7 = 5 + 2\\.
 > - Subtraction is not commutative: \\5 - 3 = 2\\, but \\3 - 5 = -2\\.
@@ -440,48 +462,48 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 21 (An associative operation, and one that is not)**  
+> **Example 22 (An associative operation, and one that is not)**  
 >
 > - Multiplication is associative: for example, \\(2 \times 3) \times 4 = 6 \times 4 = 24\\ and \\2 \times (3 \times 4) = 2 \times 12 = 24\\.
 > - Subtraction is not associative: \\(8 - 4) - 2 = 4 - 2 = 2\\, but \\8 - (4 - 2) = 8 - 2 = 6\\.
 
 > **NOTE:**
 >
-> **Theorem 9 (Adding zero changes nothing)** \\a+0=a\\
+> **Theorem 10 (Adding zero changes nothing)** \\a+0=a\\
 
 > **NOTE:**
 >
-> **Theorem 10 (Sums are symmetric)** \\a+b = b+a\\
+> **Theorem 11 (Sums are symmetric)** \\a+b = b+a\\
 
 > **NOTE:**
 >
-> **Theorem 11 (Sums are associative)** When adding three numbers, it does not matter which pair you add first:
+> **Theorem 12 (Sums are associative)** When adding three numbers, it does not matter which pair you add first:
 >
 > \\(a + b) + c = a + (b + c)\\
 
 > **NOTE:**
 >
-> **Example 22 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
+> **Example 23 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
 
 ## 9 Products
 
 > **NOTE:**
 >
-> **Theorem 12 (Multiplying by 1 changes nothing)** \\a \times 1 = a\\
+> **Theorem 13 (Multiplying by 1 changes nothing)** \\a \times 1 = a\\
 
 > **NOTE:**
 >
-> **Theorem 13 (Products are symmetric)** \\a \times b = b \times a\\
+> **Theorem 14 (Products are symmetric)** \\a \times b = b \times a\\
 
 > **NOTE:**
 >
-> **Theorem 14 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
+> **Theorem 15 (Products are associative)** \\(a \times b) \times c = a \times (b \times c)\\
 
 ## 10 Division
 
 > **NOTE:**
 >
-> **Theorem 15 (Division can be written as a product)** If \\b \neq 0\\, then
+> **Theorem 16 (Division can be written as a product)** If \\b \neq 0\\, then
 >
 > \\\frac {a}{b} = a \times \frac{1}{b}\\
 
@@ -493,26 +515,26 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > \\a \star (b \diamond c) = (a \star b) \diamond (a \star c)\\
 >
-> for all \\a, b, c \in S\\. The **distributive law** is the statement that multiplication distributes over addition, \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 16](#thm-mult-distr)); we then say multiplication is **distributive**.
+> for all \\a, b, c \in S\\. The **distributive law** is the statement that multiplication distributes over addition, \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 17](#thm-mult-distr)); we then say multiplication is **distributive**.
 
 > **NOTE:**
 >
-> **Example 23 (Multiplication distributes over addition, but not the reverse)**  
+> **Example 24 (Multiplication distributes over addition, but not the reverse)**  
 >
 > - \\3 \times (4 + 5) = 3 \times 9 = 27\\, and \\(3 \times 4) + (3 \times 5) = 12 + 15 = 27\\.
 > - Addition does not distribute over multiplication: \\2 + (3 \times 4) = 2 + 12 = 14\\, but \\(2 + 3) \times (2 + 4) = 5 \times 6 = 30\\.
 
 > **NOTE:**
 >
-> **Theorem 16 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
+> **Theorem 17 (Multiplication is distributive)** \\a(b+c) = ab + ac\\
 
 > **NOTE:**
 >
-> **Definition 24 (Like terms)** Two [terms](#def-term) of a sum are **like terms** if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product. To **collect** like terms is to replace their sum by one term, using the distributive law ([Theorem 16](#thm-mult-distr)): \\c_1 m + c_2 m = (c_1 + c_2) m\\.
+> **Definition 24 (Like terms)** Two [terms](#def-term) of a sum are **like terms** if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product. To **collect** like terms is to replace their sum by one term, using the distributive law ([Theorem 17](#thm-mult-distr)): \\c_1 m + c_2 m = (c_1 + c_2) m\\.
 
 > **NOTE:**
 >
-> **Example 24 (Like and unlike terms)**  
+> **Example 25 (Like and unlike terms)**  
 >
 > - \\3ab\\ and \\-5ab\\ are like terms; collecting them gives \\3ab + (-5ab) = (3 - 5) ab = -2ab\\.
 > - \\2x\\ and \\2x^2\\ are not like terms: \\x\\ appears to different powers.
@@ -525,15 +547,15 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Solution 4*. No: \\(3 + 4)^2 = 7^2 = 49\\, while \\3^2 + 4^2 = 9 + 16 = 25\\. The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
 >
-> To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 16](#thm-mult-distr)) twice:
+> To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 17](#thm-mult-distr)) twice:
 >
 > \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~24}}\text{)} \end{aligned} \\
 >
-> The step “commutative and associative laws” uses [Theorem 13](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 11](#thm-sum-assoc) to drop the parentheses.
+> The step “commutative and associative laws” uses [Theorem 14](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 12](#thm-sum-assoc) to drop the parentheses.
 
 > **NOTE:**
 >
-> **Theorem 17 (Square of a sum)** For any numbers \\a\\ and \\b\\,
+> **Theorem 18 (Square of a sum)** For any numbers \\a\\ and \\b\\,
 >
 > \\ (a + b)^2 = a^2 + 2ab + b^2 \\
 
@@ -543,7 +565,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 8* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 17](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat{y})^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat{y}\\ of it expands this way. With \\y = 5\\ and \\\hat{y} = 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
+> *Remark 9* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 18](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat{y})^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat{y}\\ of it expands this way. With \\y = 5\\ and \\\hat{y} = 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
 
 ## 12 Summation notation
 
@@ -576,7 +598,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 9* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
+> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
 
 > **NOTE:**
 >
@@ -593,7 +615,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Solution 6*. Each step below applies [Definition 25](#def-summation), the distributive law ([Theorem 16](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 10](#thm-sum-symmetric) and [Theorem 11](#thm-sum-assoc)).
+> *Solution 6*. Each step below applies [Definition 25](#def-summation), the distributive law ([Theorem 17](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 11](#thm-sum-symmetric) and [Theorem 12](#thm-sum-assoc)).
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
@@ -607,7 +629,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 18 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
+> **Theorem 19 (A constant factor comes out of a sum)** For any number \\c\\ and numbers \\a_m, \ldots, a_n\\,
 >
 > \\ \sum\_{i=m}^{n} c\\ a_i = c \sum\_{i=m}^{n} a_i \\
 
@@ -617,7 +639,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 19 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
+> **Theorem 20 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
 >
 > \\ \sum\_{i=m}^{n} \left(a_i + b_i\right) = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
 
@@ -652,13 +674,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 10* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 7](#exr-sum-over-set), part 2, shows another example.
+> *Remark 11* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 7](#exr-sum-over-set), part 2, shows another example.
 >
 > When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 25](#def-summation).
 
 > **NOTE:**
 >
-> *Remark 11* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
+> *Remark 12* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
 
 ## 13 Quotients
 
@@ -674,7 +696,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 25 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 28](#def-quotient) requires a nonzero denominator.
+> **Example 26 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 28](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
@@ -682,7 +704,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 26 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+> **Example 27 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
 
 > **NOTE:**
 >
@@ -698,7 +720,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 27 (A ratio, and a quotient that is not one)**  
+> **Example 28 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
@@ -713,7 +735,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 28 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 29 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
@@ -724,7 +746,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 29 (Proportional and non-proportional functions)**  
+> **Example 30 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{6x^2}{2x^2} = 3\\, which does not depend on \\x\\.
 > - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{x + 1}{x} = \tfrac{x}{x} + \tfrac{1}{x} = 1 + \tfrac{1}{x}\\, which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
@@ -754,7 +776,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 30 (Constant and non-constant functions)**  
+> **Example 31 (Constant and non-constant functions)**  
 >
 > - \\f(x) = 7\\ on \\\mathbb{R}\\ is constant, with \\c = 7\\.
 > - \\f(x) = x^2\\ on \\\mathbb{R}\\ is not constant: \\f(0) = 0\\ but \\f(1) = 1\\.
@@ -765,7 +787,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> *Remark 12* (Constant and zero polynomials). A [constant function](#def-constant-function) \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only: the zero function \\f(x) = 0\\ is excluded here, because it has no nonzero coefficient to serve as \\a_n\\.
+> *Remark 13* (Constant and zero polynomials). A [constant function](#def-constant-function) \\f(x) = 7\\ is a polynomial with \\n = 0\\ and \\a_0 = 7\\. The requirement \\a_n \ne 0\\ means this definition covers nonzero polynomials only: the zero function \\f(x) = 0\\ is excluded here, because it has no nonzero coefficient to serve as \\a_n\\.
 
 > **NOTE:**
 >
@@ -773,7 +795,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 31 (Degrees of some polynomials)**  
+> **Example 32 (Degrees of some polynomials)**  
 >
 > - \\f(x) = 4x\\ has degree \\1\\.
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\: the degree is the highest power with a nonzero coefficient, not the power in the first term written.
@@ -785,7 +807,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 32 (Leading coefficients)**  
+> **Example 33 (Leading coefficients)**  
 >
 > - \\f(x) = 5 - 2x^2 + x^3\\ has degree \\3\\, so its leading coefficient is \\a_3 = 1\\, not the \\5\\ written first.
 > - \\f(x) = 3 - x^2\\ has leading coefficient \\a_2 = -1\\.
@@ -796,9 +818,9 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 33 (Quadratic and cubic polynomials)**  
+> **Example 34 (Quadratic and cubic polynomials)**  
 >
-> - \\f(x) = (x - 2)^2 = x^2 - 4x + 4\\ is quadratic, by [Remark 8](#rem-square-of-a-difference) with \\a = x\\ and \\b = 2\\.
+> - \\f(x) = (x - 2)^2 = x^2 - 4x + 4\\ is quadratic, by [Remark 9](#rem-square-of-a-difference) with \\a = x\\ and \\b = 2\\.
 > - \\f(x) = x^3 - 3x\\ is cubic.
 > - \\f(x) = 4x + 1\\ is neither: it has degree \\1\\.
 
@@ -808,7 +830,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 34 (The parabola \\y = x^2\\)** The graph of \\f(x) = x^2\\ is a parabola. It contains the points \\(-1, 1)\\, \\(0, 0)\\ and \\(2, 4)\\, and its lowest point is \\(0, 0)\\, since \\x^2 \ge 0\\ for every \\x\\.
+> **Example 35 (The parabola \\y = x^2\\)** The graph of \\f(x) = x^2\\ is a parabola. It contains the points \\(-1, 1)\\, \\(0, 0)\\ and \\(2, 4)\\, and its lowest point is \\(0, 0)\\, since \\x^2 \ge 0\\ for every \\x\\.
 
 ## 15 Affine and linear functions of one variable
 
@@ -828,7 +850,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 20 (Intercept and slope of an affine function)** Let \\f(x) = m x + b\\ be an affine function ([Definition 41](#def-affine-function)).
+> **Theorem 21 (Intercept and slope of an affine function)** Let \\f(x) = m x + b\\ be an affine function ([Definition 41](#def-affine-function)).
 >
 > 1.  The intercept is the value at zero: \\f(0) = b\\.
 > 2.  The slope is the change in \\f\\ per unit change in \\x\\: for any \\x_1 \neq x_2\\, \\\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m\\
@@ -838,27 +860,27 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > *Proof*. **Part 1.**
 >
-> \\ \begin{aligned} f(0) &= m \cdot 0 + b && \text{(}\href{#def-affine-function}{\text{Definition~41}}\text{)} \\&= 0 + b && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= b + 0 && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~10}}\text{)} \\&= b && \text{(}\href{#thm-add-ident}{\text{Theorem~9}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} f(0) &= m \cdot 0 + b && \text{(}\href{#def-affine-function}{\text{Definition~41}}\text{)} \\&= 0 + b && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= b + 0 && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~11}}\text{)} \\&= b && \text{(}\href{#thm-add-ident}{\text{Theorem~10}}\text{)} \end{aligned} \\
 >
 > **Part 2.** First the numerator:
 >
-> \\ \begin{aligned} f(x_2) - f(x_1) &= (m x_2 + b) - (m x_1 + b) && \text{(}\href{#def-affine-function}{\text{Definition~41}}\text{)} \\&= m x_2 + b - m x_1 - b && \text{(subtracting a sum subtracts each term)} \\&= m x_2 - m x_1 + b - b && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~10}}\text{, swapping } b \text{ and } {-m x_1} \text{)} \\&= (m x_2 - m x_1) + (b - b) && \text{(}\href{#thm-sum-assoc}{\text{Theorem~11}}\text{)} \\&= (m x_2 - m x_1) + 0 && (b - b = 0) \\&= m x_2 - m x_1 && \text{(}\href{#thm-add-ident}{\text{Theorem~9}}\text{)} \\&= m x_2 + m (-x_1) && (-(m x_1) = m (-x_1) \text{, by }\href{#thm-negative-one}{\text{Theorem~6}}\text{ and }\href{#thm-prod-assoc}{\text{Theorem~14}}\text{)} \\&= m (x_2 + (-x_1)) && \text{(}\href{#thm-mult-distr}{\text{Theorem~16}}\text{, read right to left)} \\&= m (x_2 - x_1) && \text{(adding a negative is subtracting)} \end{aligned} \\
+> \\ \begin{aligned} f(x_2) - f(x_1) &= (m x_2 + b) - (m x_1 + b) && \text{(}\href{#def-affine-function}{\text{Definition~41}}\text{)} \\&= m x_2 + b - m x_1 - b && \text{(subtracting a sum subtracts each term)} \\&= m x_2 - m x_1 + b - b && \text{(}\href{#thm-sum-symmetric}{\text{Theorem~11}}\text{, swapping } b \text{ and } {-m x_1} \text{)} \\&= (m x_2 - m x_1) + (b - b) && \text{(}\href{#thm-sum-assoc}{\text{Theorem~12}}\text{)} \\&= (m x_2 - m x_1) + 0 && (b - b = 0) \\&= m x_2 - m x_1 && \text{(}\href{#thm-add-ident}{\text{Theorem~10}}\text{)} \\&= m x_2 + m (-x_1) && (-(m x_1) = m (-x_1) \text{, by }\href{#thm-negative-one}{\text{Theorem~6}}\text{ and }\href{#thm-prod-assoc}{\text{Theorem~15}}\text{)} \\&= m (x_2 + (-x_1)) && \text{(}\href{#thm-mult-distr}{\text{Theorem~17}}\text{, read right to left)} \\&= m (x_2 - x_1) && \text{(adding a negative is subtracting)} \end{aligned} \\
 >
 > Then, writing \\d = x_2 - x_1\\, which is not \\0\\ because \\x_1 \neq x_2\\,
 >
-> \\ \begin{aligned} \frac{f(x_2) - f(x_1)}{x_2 - x_1} &= \frac{m d}{d} && \text{(the numerator above)} \\&= (m d) \cdot\frac{1}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~15}}\text{)} \\&= m \cdot\mathopen{}\left(d \cdot\frac{1}{d}\right)\mathclose{} && \text{(}\href{#thm-prod-assoc}{\text{Theorem~14}}\text{)} \\&= m \cdot\frac{d}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~15}}\text{)} \\&= m \cdot 1 && \text{(a nonzero number divided by itself is } 1 \text{)} \\&= m && \text{(}\href{#thm-mult-one}{\text{Theorem~12}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \frac{f(x_2) - f(x_1)}{x_2 - x_1} &= \frac{m d}{d} && \text{(the numerator above)} \\&= (m d) \cdot\frac{1}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~16}}\text{)} \\&= m \cdot\mathopen{}\left(d \cdot\frac{1}{d}\right)\mathclose{} && \text{(}\href{#thm-prod-assoc}{\text{Theorem~15}}\text{)} \\&= m \cdot\frac{d}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~16}}\text{)} \\&= m \cdot 1 && \text{(a nonzero number divided by itself is } 1 \text{)} \\&= m && \text{(}\href{#thm-mult-one}{\text{Theorem~13}}\text{)} \end{aligned} \\
 >
 > **Part 3.** Part 1, applied to each formula, gives \\b = f(0) = b'\\. Part 2 with \\x_1 = 0\\ and \\x_2 = 1\\, applied to each formula, gives \\m = f(1) - f(0) = m'\\.
 
 > **NOTE:**
 >
-> **Example 35 (An affine function, and a linear one)** \\f(x) = 2x + 3\\ is affine with slope \\2\\ and intercept \\3\\. By [Theorem 20](#thm-affine-function-props), \\f(0) = 3\\, and each unit step in \\x\\ raises \\f\\ by \\2\\: for example, \\f(1) = 5\\ and \\f(2) = 7\\. Its intercept is not \\0\\, so it is not linear.
+> **Example 36 (An affine function, and a linear one)** \\f(x) = 2x + 3\\ is affine with slope \\2\\ and intercept \\3\\. By [Theorem 21](#thm-affine-function-props), \\f(0) = 3\\, and each unit step in \\x\\ raises \\f\\ by \\2\\: for example, \\f(1) = 5\\ and \\f(2) = 7\\. Its intercept is not \\0\\, so it is not linear.
 >
 > \\g(x) = -\tfrac{1}{2} x\\ is affine with intercept \\0\\, so it is linear: \\g(0) = 0\\, and each unit step in \\x\\ lowers \\g\\ by \\\tfrac{1}{2}\\.
 
 > **NOTE:**
 >
-> *Remark 13* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra.llms.md#thm-linear-map-zero)).
+> *Remark 14* (Elementary algebra calls \\m x + b\\ “linear”). Elementary algebra usually calls \\f(x) = m x + b\\ a *linear function*, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case \\b = 0\\, because that is the sense used in linear algebra, where a [linear map](linear-algebra.llms.md#def-linear-map) must send \\0\\ to \\0\\ ([theorem](linear-algebra.llms.md#thm-linear-map-zero)).
 
 ## 16 Limits of sequences
 
@@ -872,7 +894,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 36 (A convergent sequence and a divergent one)**  
+> **Example 37 (A convergent sequence and a divergent one)**  
 >
 > - \\a_n = \frac{1}{n}\\ converges to \\0\\. Given \\\epsilon \> 0\\, take \\N\\ to be any natural number larger than \\\frac{1}{\epsilon}\\. For every \\n \ge N\\, \\\mathopen{}\left\|\frac{1}{n} - 0\right\|\mathclose{} = \frac{1}{n} \le \frac{1}{N} \< \epsilon\\. For example, with \\\epsilon = 0.01\\, take \\N = 101\\: every \\n \ge 101\\ has \\\frac{1}{n} \le \frac{1}{101} \< 0.01\\.
 > - \\c_n = n\\ diverges. For any real number \\L\\ and \\\epsilon = 1\\, every \\n \> L + 1\\ has \\\mathopen{}\left\|n - L\right\|\mathclose{} \> 1\\, so no \\N\\ works. For example, with \\L = 5\\, every \\n \ge 7\\ has \\\mathopen{}\left\|n - 5\right\|\mathclose{} \ge 2\\. It diverges to \\\infty\\: for every real number \\M\\, every \\n \ge N\\ has \\c_n = n \> M\\ when \\N\\ is a natural number larger than \\M\\.
@@ -889,7 +911,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 37 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
+> **Example 38 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
 >
 > |    \\n\\ | \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ |
 > |---------:|:----------------------------------------------------------|
@@ -908,7 +930,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 38 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+> **Example 39 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
 
 > **NOTE:**
 >
@@ -916,13 +938,13 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> *Remark 14* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 45](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 15* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 45](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
-> **Example 39 (Natural logarithms)**  
+> **Example 40 (Natural logarithms)**  
 >
-> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 37](#exm-exponential-function)).
+> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 38](#exm-exponential-function)).
 > - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 45](#def-euler-number)).
 > - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
 
@@ -936,7 +958,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 40 (Real powers, and \\e^x\\)**  
+> **Example 41 (Real powers, and \\e^x\\)**  
 >
 > - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with \\2^3 = 2 \cdot 2 \cdot 2 = 8\\ from [Definition 4](#def-power).
 >
@@ -944,7 +966,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > - For every real \\x\\, with base \\e\\ ([Definition 45](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~47}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~39}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{#thm-mult-one}{\text{Theorem~12}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~47}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~40}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{#thm-mult-one}{\text{Theorem~13}}\text{)} \end{aligned} \\
 >
 >   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
 
@@ -957,7 +979,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 41 (Powers of zero and of negative numbers)**  
+> **Example 42 (Powers of zero and of negative numbers)**  
 >
 > - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 5](#def-square-root)).
 > - \\(-8)^2 = 64\\ and \\(-8)^{-1} = -\tfrac{1}{8}\\ are defined, since the exponents are integers.
@@ -965,14 +987,14 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 21 (\\\operatorname{exp}\\ and \\\operatorname{log}\\ are mutual inverses)**  
+> **Theorem 22 (\\\operatorname{exp}\\ and \\\operatorname{log}\\ are mutual inverses)**  
 >
 > 1.  For every \\a \> 0\\: \\\operatorname{exp}\mathopen{}\left\\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 > 2.  For every \\a \in \mathbb{R}\\: \\\operatorname{log}\mathopen{}\left\\\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{} = a\\.
 
 > **NOTE:**
 >
-> **Theorem 22 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
+> **Theorem 23 (Logarithm of a product)** If \\a \> 0\\ and \\b \> 0\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a \cdot b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} \\
 
@@ -984,27 +1006,27 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 22](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
+> *Proof*. Since \\a \> 0\\ and \\b \> 0\\, the quotient \\\frac{a}{b}\\ is positive, so [Theorem 23](#thm-log-prod) applies to the product \\\frac{a}{b} \cdot b\\:
 >
 > \\ \begin{aligned} \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\\frac{a}{b} \cdot b\right\\\mathclose{} && \text{(} a = \tfrac{a}{b} \cdot b \text{)} \\ &= \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{} + \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} && \text{(logarithm of a product)} \end{aligned} \\
 >
-> The second step applies [Theorem 22](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
+> The second step applies [Theorem 23](#thm-log-prod). Subtracting \\\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{}\\ from both sides gives \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} - \operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\\frac{a}{b}\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Theorem 23 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
+> **Theorem 24 (Logarithm of a power)** If \\a \> 0\\ and \\b \in \mathbb{R}\\, then
 >
 > \\ \operatorname{log}\mathopen{}\left\\a^b\right\\\mathclose{} = b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} \\
 
 > **NOTE:**
 >
-> **Theorem 24 (Exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
+> **Theorem 25 (Exponential of a sum)** The exponential of a sum is equal to the product of the exponentials of its [terms](#def-term):
 >
 > \\\operatorname{exp}\mathopen{}\left\\a+b\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 42 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 43 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
@@ -1014,11 +1036,11 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 43 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 44 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
-> **Theorem 25 (Powers of 1 and first powers)** For every \\b \in \mathbb{R}\\,
+> **Theorem 26 (Powers of 1 and first powers)** For every \\b \in \mathbb{R}\\,
 >
 > \\1^b = 1,\\
 >
@@ -1028,35 +1050,35 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Theorem 26 (Power of a sum)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 27 (Power of a sum)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{b+c} = a^b \cdot a^c\\
 
 > **NOTE:**
 >
-> **Example 44 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
+> **Example 45 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
 
 > **NOTE:**
 >
-> **Theorem 27 (Power of a product)** If \\a, b \> 0\\ and \\c \in \mathbb{R}\\, then
+> **Theorem 28 (Power of a product)** If \\a, b \> 0\\ and \\c \in \mathbb{R}\\, then
 >
 > \\(ab)^c = a^c \cdot b^c\\
 >
-> When \\c\\ is a positive integer, the same identity holds for all \\a, b \in \mathbb{R}\\, because both sides are products of \\c\\ copies of \\a\\ and \\c\\ copies of \\b\\, which can be regrouped by [Theorem 13](#thm-prod-symmetric) and [Theorem 14](#thm-prod-assoc).
+> When \\c\\ is a positive integer, the same identity holds for all \\a, b \in \mathbb{R}\\, because both sides are products of \\c\\ copies of \\a\\ and \\c\\ copies of \\b\\, which can be regrouped by [Theorem 14](#thm-prod-symmetric) and [Theorem 15](#thm-prod-assoc).
 
 > **NOTE:**
 >
-> **Example 45 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
+> **Example 46 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
 
 > **NOTE:**
 >
-> **Theorem 28 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
+> **Theorem 29 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
 > \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
 
 > **NOTE:**
 >
-> **Example 46 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 47 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >
@@ -1064,7 +1086,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > \\ \begin{aligned} \mathopen{}\left(a^b\right)\mathclose{}^c &= \mathopen{}\left((-1)^2\right)\mathclose{}^{\frac{1}{2}} \\ &= 1^{\frac{1}{2}} \\ &= 1 \end{aligned} \\
 >
-> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 28](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
+> So \\a^{bc} \neq \mathopen{}\left(a^b\right)\mathclose{}^c\\ here, which is why [Theorem 29](#thm-double-exp) requires \\a \> 0\\. The third expression, \\\mathopen{}\left(a^c\right)\mathclose{}^b = \mathopen{}\left((-1)^{\frac{1}{2}}\right)\mathclose{}^2\\, is not even a real number.
 
 > **NOTE:**
 >
@@ -1072,15 +1094,15 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> *Remark 15* (Tarski’s high school identities). Restricted to positive integers, the following results are [Tarski’s eleven “high school” identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
+> *Remark 16* (Tarski’s high school identities). Restricted to positive integers, the following results are [Tarski’s eleven “high school” identities](https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem):
 >
-> - sums are symmetric and associative ([Theorem 10](#thm-sum-symmetric), [Theorem 11](#thm-sum-assoc));
-> - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 12](#thm-mult-one), [Theorem 13](#thm-prod-symmetric), [Theorem 14](#thm-prod-assoc), [Theorem 16](#thm-mult-distr));
-> - \\1^b = 1\\, \\a^1 = a\\, and the power of a sum, of a product, and of a power ([Theorem 25](#thm-power-one), [Theorem 26](#thm-power-sum), [Theorem 27](#thm-power-product), [Theorem 28](#thm-double-exp)).
+> - sums are symmetric and associative ([Theorem 11](#thm-sum-symmetric), [Theorem 12](#thm-sum-assoc));
+> - multiplying by 1 changes nothing, products are symmetric and associative, and multiplication is distributive ([Theorem 13](#thm-mult-one), [Theorem 14](#thm-prod-symmetric), [Theorem 15](#thm-prod-assoc), [Theorem 17](#thm-mult-distr));
+> - \\1^b = 1\\, \\a^1 = a\\, and the power of a sum, of a product, and of a power ([Theorem 26](#thm-power-one), [Theorem 27](#thm-power-sum), [Theorem 28](#thm-power-product), [Theorem 29](#thm-double-exp)).
 
 > **NOTE:**
 >
-> *Remark 16* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 15](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
+> *Remark 17* (Tarski’s identities are not complete). Tarski asked whether every identity in \\+\\, \\\times\\, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in [Remark 16](#rem-tarski-identities). It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.
 
 > **NOTE:**
 >
@@ -1092,7 +1114,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 47 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example, \\g(2, 0) = 4 + 0 = 4\\ and \\g(0, -2) = 0 + 4 = 4\\. The contour line at height \\k = -1\\ is empty, because \\b^2 + c^2 \ge 0\\ for all \\b\\ and \\c\\.
+> **Example 48 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example, \\g(2, 0) = 4 + 0 = 4\\ and \\g(0, -2) = 0 + 4 = 4\\. The contour line at height \\k = -1\\ is empty, because \\b^2 + c^2 \ge 0\\ for all \\b\\ and \\c\\.
 
 > **NOTE:**
 >
@@ -1245,7 +1267,7 @@ Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-lin
 >
 > Split on whether \\a \> 0\\ or \\a = 0\\, because the logarithm we use for \\a \> 0\\ is undefined at \\a = 0\\.
 >
-> **Case \\a \> 0\\.** By [Theorem 28](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 23](#thm-log-exp)):
+> **Case \\a \> 0\\.** By [Theorem 29](#thm-double-exp), \\(a^b)^c = a^{bc}\\, so the question becomes when \\a^{bc} = a^{(b^c)}\\ (for pairs \\(b, c)\\ where \\b^c\\ is defined). Because \\a \> 0\\, both sides are positive, and we can take logarithms ([Theorem 24](#thm-log-exp)):
 >
 > \\ \begin{aligned} a^{bc} &= a^{(b^c)} \\ \operatorname{log}\mathopen{}\left\\a^{bc}\right\\\mathclose{} &= \operatorname{log}\mathopen{}\left\\a^{(b^c)}\right\\\mathclose{} && \text{(take logarithms of both sides)} \\ bc \cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} &= b^c\cdot \operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} && \text{(logarithm of a power)} \end{aligned} \tag{1}\\
 >
@@ -1288,7 +1310,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 48 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
+> **Example 49 (Powers of the imaginary unit)** The powers of \\i\\ repeat in a cycle of four:
 >
 > \\ \begin{aligned} i^3 &= i^2 \cdot i && \text{(split off one factor of } i \text{)} \\ &= (-1) \cdot i && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= -i && \text{(multiply)} \end{aligned} \\
 >
@@ -1304,7 +1326,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
-> **Example 49 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
+> **Example 50 (No real number squares to \\-1\\)** The imaginary unit is not a real number, because the square of every real number \\x\\ is at least \\0\\:
 >
 > - if \\x \ge 0\\, then \\x^2 = x \cdot x\\ is a product of two nonnegative numbers, so \\x^2 \ge 0\\;
 > - if \\x \< 0\\, then \\x^2 = x \cdot x\\ is a product of two negative numbers, so \\x^2 \> 0\\.
@@ -1329,7 +1351,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Example 50 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
+> **Example 51 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
 >
 > The numbers \\1 + i\\ and \\1 - i\\ have the same real part, \\1\\, but different imaginary parts, \\1\\ and \\-1\\, so they are different complex numbers.
 >
@@ -1337,7 +1359,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Theorem 29 (Adding and multiplying complex numbers)** For real numbers \\a, b, c, d\\:
+> **Theorem 30 (Adding and multiplying complex numbers)** For real numbers \\a, b, c, d\\:
 >
 > \\(a + b\\i) + (c + d\\i) = (a + c) + (b + d)\\i\\
 >
@@ -1359,15 +1381,15 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two form
 
 > **NOTE:**
 >
-> **Example 51 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
+> **Example 52 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
 >
-> \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~29}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~30}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
 >
 > and their product, multiplying out directly, is
 >
 > \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
 >
-> The product formula in [Theorem 29](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
+> The product formula in [Theorem 30](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
 
 > **NOTE:**
 >
@@ -1379,7 +1401,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 52 (Complex conjugates)**  
+> **Example 53 (Complex conjugates)**  
 >
 > - \\\overline{3 + 4\\i} = 3 - 4\\i\\.
 > - \\\overline{-2\\i} = \overline{0 + (-2)\\i} = 0 - (-2)\\i = 2\\i\\.
@@ -1395,7 +1417,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 53 (Absolute values of complex numbers)**  
+> **Example 54 (Absolute values of complex numbers)**  
 >
 > - \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5\\.
 > - \\\mathopen{}\left\|-2\\i\right\|\mathclose{} = \sqrt{0^2 + (-2)^2} = \sqrt{4} = 2\\.
@@ -1403,7 +1425,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Theorem 30 (A complex number times its conjugate)** For every complex number \\z\\,
+> **Theorem 31 (A complex number times its conjugate)** For every complex number \\z\\,
 >
 > \\z\\\overline{z} = \mathopen{}\left\|z\right\|\mathclose{}^2.\\
 >
@@ -1419,9 +1441,9 @@ Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity am
 
 > **NOTE:**
 >
-> **Example 54 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 55 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
-> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 53](#exm-complex-modulus), as [Theorem 30](#thm-conj-product) says.
+> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 54](#exm-complex-modulus), as [Theorem 31](#thm-conj-product) says.
 
 ## 19 Further reading
 

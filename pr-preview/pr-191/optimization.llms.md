@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 18:30:03 (PDT)
+Last modified: 2026-10-07 18:55:21 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -90,11 +90,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. Let \\g(t) \stackrel{\text{def}}{=}f(\tilde{z} + t \tilde{h})\\ for \\t \in \mathbb{R}\\, the values of \\f\\ along the line through \\\tilde{z}\\ in the direction \\\tilde{h}\\. The [inner function](sets-functions.llms.md#def-composition) \\\tilde{y}(t) = \tilde{z} + t \tilde{h}\\ has entries \\y_j = z_j + t h_j\\, so \\\frac{\partial}{\partial t} y_j = h_j\\, and its derivative ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)) is the \\1 \times p\\ matrix \\{\tilde{h}}^{\top}\\. By the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec), with its input \\t\\ of length \\1\\, its inner function \\\tilde{y}(t) = \tilde{z} + t \tilde{h}\\, and its outer function \\f\\),
 >
-> \\ \begin{aligned} g'(t) &= {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h}) && \text{(vector chain rule, \[Theorem\](vector-calculus.qmd#thm-chain-vec))} \\ &= \sum\_{j=1}^{p} h_j\\\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}). && \text{(matrix product)} \end{aligned} \\
+> \\ \begin{aligned} g'(t) &= {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h}) && \text{(vector chain rule)} \\ &= \sum\_{j=1}^{p} h_j\\\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}). && \text{(matrix product)} \end{aligned} \\
 >
 > The second step writes out the [matrix product](linear-algebra.llms.md#def-matrix-mult). \\g'\\ is continuous ([continuity](vector-calculus.llms.md#def-continuous-several)): \\t \mapsto \tilde{z} + t \tilde{h}\\ is continuous, since \\\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left\|s - t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\\, each \\\frac{\partial}{\partial x_j} f\\ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each \\\frac{\partial}{\partial x_j} f\\ has continuous partial derivatives, the second partial derivatives of \\f\\, so the same chain-rule computation applies to it: \\\frac{\partial}{\partial t} \mathopen{}\left\[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right\]\mathclose{} = \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\\. So
 >
-> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^{p} h_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(\[Hessian\](vector-calculus.qmd#def-hessian); reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
+> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^{p} h_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(definition of the Hessian; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
 >
 > The last step is again the [matrix product](linear-algebra.llms.md#def-matrix-mult). Now apply [Theorem 3](#thm-taylor-1d) to \\g\\ on \\\[0, 1\]\\: there is a \\\tau \in (0, 1)\\ with
 >
@@ -332,7 +332,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. **Only if.** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, let \\\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{y}\\, and let \\g(t) \stackrel{\text{def}}{=}f(\tilde{y}+ t \tilde{d})\\. The inner function \\t \mapsto \tilde{y}+ t \tilde{d}\\ has derivative \\{\tilde{d}}^{\top}\\ ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)), so the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec)) gives
 >
-> \\ \begin{aligned} g'(0) &= {\tilde{d}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{y}) && \text{(vector chain rule, \[Theorem\](vector-calculus.qmd#thm-chain-vec))} \\ &= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} \tilde{d}. && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
+> \\ \begin{aligned} g'(0) &= {\tilde{d}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{y}) && \text{(vector chain rule)} \\ &= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} \tilde{d}. && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
 >
 > For \\t \in (0, 1\]\\, \\\tilde{y}+ t \tilde{d} = t \tilde{x}+ (1 - t) \tilde{y}\\, so
 >
@@ -757,7 +757,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 - Boyd and Vandenberghe ([2004](#ref-boyd2004convex)) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.
 - Nocedal and Wright ([2006](#ref-nocedal2006numerical)) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.
-- [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/08-optim/08-optim.html)
+- [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)](https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html)
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.
 
 ## References
