@@ -19,16 +19,16 @@ Entry $(i, j)$ of each side, from @def-matrix-mult:
 $$
 \ba
 \sb{(\matr{A}\matr{B})\matr{C}}_{ij}
-&= \sum_{t=1}^{l} (\matr{A}\matr{B})_{it}\, c_{tj}
+&= \sumto{t}{l} (\matr{A}\matr{B})_{it}\, c_{tj}
 && \text{(definition of } (\matr{A}\matr{B})\matr{C} \text{)}
 \\
-&= \sum_{t=1}^{l} \paren{\sum_{s=1}^{k} a_{is}\, b_{st}} c_{tj}
+&= \sumto{t}{l} \paren{\sumto{s}{k} a_{is}\, b_{st}} c_{tj}
 && \text{(definition of } \matr{A}\matr{B} \text{)}
 \\
-&= \sum_{s=1}^{k} a_{is} \paren{\sum_{t=1}^{l} b_{st}\, c_{tj}}
+&= \sumto{s}{k} a_{is} \paren{\sumto{t}{l} b_{st}\, c_{tj}}
 && \text{(distribute and swap the finite sums)}
 \\
-&= \sum_{s=1}^{k} a_{is}\, (\matr{B}\matr{C})_{sj}
+&= \sumto{s}{k} a_{is}\, (\matr{B}\matr{C})_{sj}
 && \text{(definition of } \matr{B}\matr{C} \text{)}
 \\
 &= \sb{\matr{A}(\matr{B}\matr{C})}_{ij}

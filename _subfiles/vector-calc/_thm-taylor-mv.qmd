@@ -42,16 +42,16 @@ each $\deriv{x_j} f$ is continuous by assumption,
 and compositions, sums and constant multiples of continuous functions are continuous.
 Each $\deriv{x_j} f$ has continuous partial derivatives, the second partial derivatives of $f$,
 so the same chain-rule computation applies to it:
-$\deriv{t} \sb{\deriv{x_j} f(\vecf{z} + t \vecf{h})} = \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}$.
+$\deriv{t} \sb{\deriv{x_j} f(\vecf{z} + t \vecf{h})} = \sumip h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}$.
 So
 
 $$
 \ba
 g''(t)
-&= \sumjp h_j \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}
+&= \sumjp h_j \sumip h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}
 && \text{(differentiate each term of } g'(t) \text{)}
 \\
-&= \sum_{i=1}^{p} \sumjp h_i\,\sb{\matr{H}_f(\vecf{z} + t \vecf{h})}_{ij}\,h_j
+&= \sumip \sumjp h_i\,\sb{\matr{H}_f(\vecf{z} + t \vecf{h})}_{ij}\,h_j
 && \text{(definition of the Hessian; reorder the finite sums)}
 \\
 &= \tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + t \vecf{h})\,\vecf{h}.

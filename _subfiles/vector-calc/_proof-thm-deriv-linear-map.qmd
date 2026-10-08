@@ -8,7 +8,7 @@ $$
 \ba
 \left[\deriv{\vb} (\matr{A}\vb)\right]_{ij}
 &= \deriv{\beta_i} (\matr{A}\vb)_j \\
-&= \deriv{\beta_i} \sum_{k=1}^{p} a_{jk} \beta_k \\
+&= \deriv{\beta_i} \sumto{k}{p} a_{jk} \beta_k \\
 &= a_{ji} \\
 &= \left[\tp{\matr{A}}\right]_{ij}
 \ea

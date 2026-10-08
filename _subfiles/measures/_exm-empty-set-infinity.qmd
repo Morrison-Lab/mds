@@ -22,7 +22,7 @@ the limit of its partial sums (@lem-nonneg-series), is:
 
 $$
 \ba
-\sum_{i=1}^{\infty} \mu(A_i)
+\sumto{i}{\infty} \mu(A_i)
 &= \infty + \infty + \cdots
 && \text{(definition of } \mu \text{)} \\
 &= \infty

@@ -35,13 +35,13 @@ For each $l < i$,
 $$
 \ba
 \vecf{q}_l \cdot \tilde{\vecf{q}}_i
-&= \vecf{q}_l \cdot \paren{1\,\vecf{a}_i + \sum_{j=1}^{i-1} \paren{-\vecf{q}_j \cdot \vecf{a}_i}\,\vecf{q}_j}
+&= \vecf{q}_l \cdot \paren{1\,\vecf{a}_i + \sumto{j}{i-1} \paren{-\vecf{q}_j \cdot \vecf{a}_i}\,\vecf{q}_j}
 && \text{(@def-gram-schmidt, as a linear combination)}
 \\
-&= 1\,(\vecf{q}_l \cdot \vecf{a}_i) + \sum_{j=1}^{i-1} \paren{-\vecf{q}_j \cdot \vecf{a}_i}\,(\vecf{q}_l \cdot \vecf{q}_j)
+&= 1\,(\vecf{q}_l \cdot \vecf{a}_i) + \sumto{j}{i-1} \paren{-\vecf{q}_j \cdot \vecf{a}_i}\,(\vecf{q}_l \cdot \vecf{q}_j)
 && \text{(@thm-dot-linear-sum)}
 \\
-&= \vecf{q}_l \cdot \vecf{a}_i - \sum_{j=1}^{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,(\vecf{q}_l \cdot \vecf{q}_j)
+&= \vecf{q}_l \cdot \vecf{a}_i - \sumto{j}{i-1} (\vecf{q}_j \cdot \vecf{a}_i)\,(\vecf{q}_l \cdot \vecf{q}_j)
 && \text{(} 1\,z = z \text{, and pull the minus signs out of the sum)}
 \\
 &= \vecf{q}_l \cdot \vecf{a}_i - \vecf{q}_l \cdot \vecf{a}_i

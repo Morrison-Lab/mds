@@ -82,19 +82,19 @@ Conversely, every inner product on $\reals^p$ has this form for a unique symmetr
 
 For the converse, let $\iprod{\cdot}{\cdot}$ be any inner product on $\reals^p$.
 Any vectors $\vx, \vy \in \reals^p$ can be written in the standard basis as
-$\vx = \sum_{i=1}^p x_i\,\vecf{e}_i$ and $\vy = \sumjp y_j\,\vecf{e}_j$ (@def-basis, @def-indicator-vector).
+$\vx = \sumip x_i\,\vecf{e}_i$ and $\vy = \sumjp y_j\,\vecf{e}_j$ (@def-basis, @def-indicator-vector).
 By linearity in both slots (@rem-inner-product-other-sources):
 
 $$
 \ba
 \iprod{\vx}{\vy}
-&= \iprod{\sum_{i=1}^p x_i\,\vecf{e}_i}{\sumjp y_j\,\vecf{e}_j}
+&= \iprod{\sumip x_i\,\vecf{e}_i}{\sumjp y_j\,\vecf{e}_j}
 && \text{(expand in the standard basis)}
 \\
-&= \sum_{i=1}^p \sumjp x_i y_j\,\iprod{\vecf{e}_i}{\vecf{e}_j}
+&= \sumip \sumjp x_i y_j\,\iprod{\vecf{e}_i}{\vecf{e}_j}
 && \text{(linearity in both slots)}
 \\
-&= \sum_{i=1}^p x_i \sumjp A_{ij} y_j
+&= \sumip x_i \sumjp A_{ij} y_j
 && \text{(define } A_{ij} \eqdef \iprod{\vecf{e}_i}{\vecf{e}_j} \text{)}
 \\
 &= \tp{\vx} \matr{A} \vy.

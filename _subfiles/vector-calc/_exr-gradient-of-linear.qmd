@@ -8,7 +8,7 @@ $$A = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix}$$
 
 let $W \in \reals^{2 \times 3}$ vary, and define
 
-$$g(W) = \sum_{i=1}^{2} \sum_{j=1}^{3} W_{ij} A_{ij}$$
+$$g(W) = \sumto{i}{2} \sumto{j}{3} W_{ij} A_{ij}$$
 
 which is the entry-by-entry version of the inner product for matrices.
 Compute $\nabla_W\, g(W)$,

@@ -20,10 +20,10 @@ By @sol-square-of-a-sum.
 
 Replacing $b$ by $-b$ in @thm-square-of-a-sum
 gives $(a - b)^2 = a^2 - 2ab + b^2$.
-For example, the square $(y - \hat{y})^2$
-of the difference between an observed value $y$ and a prediction $\hat{y}$ of it
+For example, the square $(y - \hy)^2$
+of the difference between an observed value $y$ and a prediction $\hy$ of it
 expands this way.
-With $y = 5$ and $\hat{y} = 3$,
+With $y = 5$ and $\hy = 3$,
 $(5 - 3)^2 = 2^2 = 4$,
 and $5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4$.
 

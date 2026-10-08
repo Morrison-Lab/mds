@@ -83,10 +83,10 @@ Only the entries $d_{kk}$ with $k \le r$ of $\matr{D}$ can be nonzero.
 $$
 \ba
 \lambda_{ij}
-&= \sum_{k=1}^{n} (\tp{\matr{D}})_{ik}\, d_{kj}
+&= \sumto{k}{n} (\tp{\matr{D}})_{ik}\, d_{kj}
 && \text{(definition of matrix multiplication)}
 \\
-&= \sum_{k=1}^{n} d_{ki}\, d_{kj}
+&= \sumto{k}{n} d_{ki}\, d_{kj}
 && \text{(definition of the transpose)}
 \ea
 $$

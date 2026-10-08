@@ -24,10 +24,10 @@ $$
 &= \tp{\vecf{y}} \matr{\Lambda} \vecf{y}
 && \text{(} \tp{\vecf{h}} \matr{Q} = \tp{(\tp{\matr{Q}} \vecf{h})} \text{, transpose of a product)}
 \\
-&= \sum_{i=1}^{p} \lambda_i\,y_i^2
+&= \sumip \lambda_i\,y_i^2
 && \text{(} \matr{\Lambda} \text{ is diagonal)}
 \\
-&\ge \sum_{i=1}^{p} \lambda_{\min}\,y_i^2
+&\ge \sumip \lambda_{\min}\,y_i^2
 && \text{(} \lambda_i \ge \lambda_{\min} \text{ and } y_i^2 \ge 0 \text{)}
 \\
 &= \lambda_{\min}\,\norm{\vecf{y}}^2
@@ -75,16 +75,16 @@ Let $\vecf{a} \eqdef \tp{(\abs{h_1}, \ldots, \abs{h_p})}$ and $\vecf{1} \eqdef \
 $$
 \ba
 \abs{\tp{\vecf{h}} \matr{E} \vecf{h}}
-&= \abs{\sum_{i=1}^{p} \sumjp h_i\,e_{ij}\,h_j}
+&= \abs{\sumip \sumjp h_i\,e_{ij}\,h_j}
 && \text{(matrix product)}
 \\
-&\le \sum_{i=1}^{p} \sumjp \abs{h_i}\,\abs{e_{ij}}\,\abs{h_j}
+&\le \sumip \sumjp \abs{h_i}\,\abs{e_{ij}}\,\abs{h_j}
 && \text{(triangle inequality for numbers)}
 \\
-&\le m \sum_{i=1}^{p} \sumjp \abs{h_i}\,\abs{h_j}
+&\le m \sumip \sumjp \abs{h_i}\,\abs{h_j}
 && \text{(} \abs{e_{ij}} \le m \text{)}
 \\
-&= m\,\paren{\sum_{i=1}^{p} \abs{h_i}}^2
+&= m\,\paren{\sumip \abs{h_i}}^2
 && \text{(the double sum factors)}
 \\
 &= m\,(\vecf{1} \cdot \vecf{a})^2

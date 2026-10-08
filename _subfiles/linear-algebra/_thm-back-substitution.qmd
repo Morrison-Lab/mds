@@ -13,7 +13,7 @@ $$
 (**back substitution**).
 Likewise, if $\matr{L}$ is lower triangular with nonzero diagonal,
 $\matr{L} \vecf{y} = \vecf{b}$ has exactly one solution, given for $i = 1, \ldots, n$ by
-$y_i = \frac{1}{\ell_{ii}} \paren{b_i - \sum_{j=1}^{i-1} \ell_{ij}\,y_j}$
+$y_i = \frac{1}{\ell_{ii}} \paren{b_i - \sumto{j}{i-1} \ell_{ij}\,y_j}$
 (**forward substitution**).
 
 :::
@@ -25,7 +25,7 @@ Row $i$ of $\matr{U} \vecf{x} = \vecf{b}$ reads
 $$
 \ba
 b_i
-&= \sum_{j=1}^{n} u_{ij}\,x_j
+&= \sumjn u_{ij}\,x_j
 && \text{(@def-matvec-mult)}
 \\
 &= \sum_{j=i}^{n} u_{ij}\,x_j
@@ -52,7 +52,7 @@ Row $n$ involves only $x_n$, so it fixes $x_n$;
 once $x_{i+1}, \ldots, x_n$ are fixed, row $i$ fixes $x_i$.
 So the rows, taken from the last to the first, hold exactly when $\vecf{x}$ is the vector the formula builds:
 there is one solution, and only one.
-For $\matr{L}$, row $i$ reads $\sum_{j=1}^{i-1} \ell_{ij}\,y_j + \ell_{ii}\,y_i = b_i$,
+For $\matr{L}$, row $i$ reads $\sumto{j}{i-1} \ell_{ij}\,y_j + \ell_{ii}\,y_i = b_i$,
 and the same argument runs from the first row to the last.
 
 :::

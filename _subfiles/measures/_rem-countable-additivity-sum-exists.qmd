@@ -3,7 +3,7 @@
 
 By @lem-nonneg-series,
 the right-hand side of the equation in @def-countable-additivity,
-$\sum_{i=1}^{\infty} \mu(A_i)$,
+$\sumto{i}{\infty} \mu(A_i)$,
 always has a value,
 because each $\mu(A_i)$ is in $[0, \infty]$.
 For example, if $\mu(A_i) = 1/2^i$ for each $i$,

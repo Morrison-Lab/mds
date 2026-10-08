@@ -6,7 +6,7 @@ and let $g : D \to [0, \infty)$.
 Every function on $D$ is measurable (@exm-measurable-function).
 
 *The integral is the sum of the values.*
-For any split of $D$ into nonempty pairwise disjoint sets $A_1, \ldots, A_n$:
+For any split of $D$ into nonempty pairwise disjoint sets $\dsn{A}$:
 
 $$
 \ba

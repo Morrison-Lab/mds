@@ -6,7 +6,7 @@ A [function](sets-functions.qmd#def-function) $\mu : \salg \to [0, \infty]$,
 with values in the [extended non-negative reals](sets-functions.qmd#def-extended-nonneg-reals),
 is **finitely additive**
 if, for every finite collection of
-[pairwise disjoint](#def-pairwise-disjoint) sets $A_1, \ldots, A_n$ in $\salg$,
+[pairwise disjoint](#def-pairwise-disjoint) sets $\dsn{A}$ in $\salg$,
 the value of their union is the sum of their values:
 
 $$\mu(A_1 \cup \cdots \cup A_n) = \sumin \mu(A_i)$$

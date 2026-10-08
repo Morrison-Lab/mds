@@ -61,13 +61,13 @@ For entry $(i,j)$:
 $$
 \ba
 \left[\deriv{\matr{X}} \tr(\matr{A} \matr{X} \matr{B})\right]_{ij}
-&= \deriv{X_{ij}} \sum_{a=1}^{r} \sum_{b=1}^{m} \sum_{c=1}^{n} A_{ab} X_{bc} B_{ca}
+&= \deriv{X_{ij}} \sumto{a}{r} \sumto{b}{m} \sumto{c}{n} A_{ab} X_{bc} B_{ca}
 && \text{(trace of the } r \times r \text{ product } \matr{A}\matr{X}\matr{B} \text{)}
 \\
-&= \sum_{a=1}^{r} A_{ai} B_{ja}
+&= \sumto{a}{r} A_{ai} B_{ja}
 && \text{(only the terms with } b = i,\ c = j \text{ depend on } X_{ij} \text{)}
 \\
-&= \sum_{a=1}^{r} \left[\tp{\matr{A}}\right]_{ia} \left[\tp{\matr{B}}\right]_{aj}
+&= \sumto{a}{r} \left[\tp{\matr{A}}\right]_{ia} \left[\tp{\matr{B}}\right]_{aj}
 && \text{(definition of the transpose)}
 \\
 &= \left[\tp{\matr{A}}\,\tp{\matr{B}}\right]_{ij}

@@ -24,22 +24,22 @@ $$
 $$
 \ba
 \vecf{x} \cdot (a\,\vecf{u} + b\,\vecf{w})
-&= \sum_{i=1}^{p} x_i\,(a\,\vecf{u} + b\,\vecf{w})_i
+&= \sumip x_i\,(a\,\vecf{u} + b\,\vecf{w})_i
 && \text{(@def-dot-product)}
 \\
-&= \sum_{i=1}^{p} x_i\,(a u_i + b w_i)
+&= \sumip x_i\,(a u_i + b w_i)
 && \text{(@def-scalar-mult, @def-vector-addition)}
 \\
-&= \sum_{i=1}^{p} \paren{x_i a u_i + x_i b w_i}
+&= \sumip \paren{x_i a u_i + x_i b w_i}
 && \text{(distribute each } x_i \text{)}
 \\
-&= \sum_{i=1}^{p} \paren{a\,x_i u_i + b\,x_i w_i}
+&= \sumip \paren{a\,x_i u_i + b\,x_i w_i}
 && \text{(commute the factors in each product)}
 \\
-&= \sum_{i=1}^{p} a\,x_i u_i + \sum_{i=1}^{p} b\,x_i w_i
+&= \sumip a\,x_i u_i + \sumip b\,x_i w_i
 && \text{(split the finite sum)}
 \\
-&= a \sum_{i=1}^{p} x_i u_i + b \sum_{i=1}^{p} x_i w_i
+&= a \sumip x_i u_i + b \sumip x_i w_i
 && \text{(factor } a \text{ and } b \text{ out of the sums)}
 \\
 &= a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w}).

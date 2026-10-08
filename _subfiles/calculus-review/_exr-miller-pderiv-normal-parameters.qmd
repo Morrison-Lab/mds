@@ -29,5 +29,5 @@ $$\ba
 &= \sb{-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}} f(x; \mu, \sigma)
 \ea$$
 
-*Remark:* Setting $\derivf{f}{\mu} = 0$ and $\derivf{f}{\sigma} = 0$ for a sample of independent observations leads directly to the maximum likelihood estimators $\hat{\mu} = \bar{x}$ and $\hat{\sigma}^2 = \frac{1}{n}\sumin (x_i - \bar{x})^2$.
+*Remark:* Setting $\derivf{f}{\mu} = 0$ and $\derivf{f}{\sigma} = 0$ for a sample of independent observations leads directly to the maximum likelihood estimators $\hat{\mu} = \bar{x}$ and $\hat{\sigma}^2 = \avgin (x_i - \bar{x})^2$.
 :::
