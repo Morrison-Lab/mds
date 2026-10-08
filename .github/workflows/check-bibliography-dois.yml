@@ -28,13 +28,15 @@ jobs:
       # folland1999real, marsden2013vector, strang2023linear) were searched
       # on Crossref (2026-10-03, no DOI found). Move a key out of this list
       # when a DOI is found and verified by content negotiation.
-      # boyd2018vmls and velleman2019prove are the exception: their DOIs
-      # (10.1017/9781108583664, 10.1017/9781108539890) are registered
-      # (Crossref returns 200) but Cambridge's landing pages returned 404 to
-      # the checker on 2026-10-07. Remove them once those pages resolve again.
+      # boyd2018vmls, boyd2004convex and velleman2019prove are the
+      # exception: their Cambridge DOIs (10.1017/9781108583664,
+      # 10.1017/CBO9780511804441, 10.1017/9781108539890) returned 404 to the
+      # checker (boyd2018vmls and velleman2019prove on 2026-10-07, whose
+      # Crossref records return 200; boyd2004convex on 2026-10-08).
+      # Remove them once those pages resolve again.
       exclude-keys: >-
         abramson2021algebra banerjee2014linear barkerplummer2011language
-        billingsley1995probability boyd2018vmls calclifesaver
+        billingsley1995probability boyd2004convex boyd2018vmls calclifesaver
         cheng2025math folland1999real fubini1907 goodfellow2016deep
         larsonCalc11e marsden2013vector mosaiccalc
         problifesavercalc

@@ -1,0 +1,12 @@
+::: {#exr-half-space-sides}
+#### Which side of the plane?
+
+Let $\mathcal{H}$ be the plane in $\reals^3$ with $\vec{w} = (1, 1, 1)$ and $b = -1$ (@exm-hyperplane-subspace).
+
+1. For each point, say whether it is in $\mathcal{H}^+$, $\mathcal{H}$ or $\mathcal{H}^-$ (@def-half-space):
+   $(0, 0, 0)$, $(1, 0, 0)$ and $(1, 1, 1)$.
+2. Write the plane and its half-spaces using $-\vec{w}$ and $-b$.
+   Which points from part 1 change sides?
+3. State the dimension of $D(\mathcal{H})$ and of $D(\mathcal{H}^+)$ (@thm-half-space-dimension).
+
+:::
