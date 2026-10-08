@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 18:29:56 (PDT)
+Last modified: 2026-10-07 18:59:31 (PDT)
 
 ## 1 Derivatives
 
@@ -647,7 +647,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > \\f(1.01) = (1.01)^2 - 4(1.01) + 7 = 1.0201 - 4.04 + 7 = 3.9801\\
 >
-> a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\epsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](vector-calculus.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the vector calculus page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
+> a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\epsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](optimization.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
 
 > **NOTE:**
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 18:29:56 (PDT)
+Last modified: 2026-10-07 18:59:31 (PDT)
 
 ## 1 Equalities
 
@@ -340,7 +340,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 6* (The inequality reverses for concave functions). If \\f\\ is [concave](vector-calculus.llms.md#def-strictly-convex), then \\-f\\ is convex, and applying [Theorem 8](#thm-jensen) to \\-f\\ reverses the inequality: \\f\left(\sum_i w_i x_i\right) \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 14](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
+> *Remark 6* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-strictly-convex), then \\-f\\ is convex, and applying [Theorem 8](#thm-jensen) to \\-f\\ reverses the inequality: \\f\left(\sum_i w_i x_i\right) \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 14](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
 
 ## 7 Infimum and supremum
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 18:29:56 (PDT)
+Last modified: 2026-10-07 18:59:31 (PDT)
 
 ## Welcome
 
@@ -12,7 +12,7 @@ Last modified: 2026-10-07 18:29:56 (PDT)
 
 Cheng ([2025](#ref-cheng2025math))
 
-These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, and proof writing. Some key results are listed here, organized by topic:
+These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
 
 - [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, proof symbols, and indicator functions
 - [Sets and Functions](sets-functions.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
@@ -21,6 +21,7 @@ These notes collect the mathematics that data science courses assume: mathematic
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus.llms.md#def-continuous), [differentiability](calculus.llms.md#def-differentiable), and [integrability](calculus.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
+- [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent
 - [Proof Writing](proof-writing.llms.md): showing and annotating every step of a [derivation](notation.llms.md#def-derivation)
 
 ## Further reading
@@ -37,7 +38,7 @@ These resources cover related material.
 
   - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) covers vectors, linear combinations, linear transformations, matrix multiplication, determinants, inverse matrices, dot and cross products, change of basis, and eigenvectors and eigenvalues, overlapping with our [linear algebra](linear-algebra.llms.md) page.
   - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our [calculus](calculus.llms.md) page.
-  - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.llms.md) page.
+  - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our [vector calculus](vector-calculus.llms.md) and [optimization](optimization.llms.md) pages.
 
 ## Using these notes in another site
 
@@ -54,6 +55,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Calculus](calculus.llms.md) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
 | [Linear Algebra](linear-algebra.llms.md) | `mds/_subfiles/_sec_linear_algebra.qmd` |
 | [Vector Calculus](vector-calculus.llms.md) | `mds/_subfiles/_sec_vector_calc.qmd` |
+| [Optimization](optimization.llms.md) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.llms.md) | `mds/_proof-writing.qmd` |
 
 `_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must include `latex-macros/macros.qmd` first, as the pages of this site do.
