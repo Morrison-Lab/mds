@@ -4,7 +4,7 @@ For any two real-valued vectors $\vx = (x_1, \ldots, x_p)$ and $\vy = (y_1, \ldo
 of the same length $p$,
 the **dot product** of $\vx$ and $\vy$ is:
 
-$$\vx \cdot \vy = \vx^\top \vy \eqdef \sumip x_i y_i$$ {#eq-inner-product}
+$$\vx \cdot \vy = \vx\' \vy \eqdef \sumip x_i y_i$$ {#eq-inner-product}
 
 :::
 

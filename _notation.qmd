@@ -16,7 +16,7 @@ and the alternatives you may meet in other sources.
 | $\prod$     | product                                          | `\prod`
 | $\mu$       | mean, $\Expp[X]$, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ | `\mu`
 | $\Expp$     | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)   | `\mathbb{E}`
-| $x^{\top}$  | transpose of $x$                                 | `x^{\top}`
+| $x\'$  | transpose of $x$                                 | `x\'`
 | $'$         | transpose or [derivative](calculus.qmd#def-derivative)[^3] | `'`
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | [therefore](#def-logical-entailment), thus       | `\therefore`
@@ -38,7 +38,7 @@ which define those terms.
 [^4]: A generalized linear model (GLM) is a regression model
     in which a chosen function $g$, the link function,
     of the mean $\mu$ of the outcome
-    equals the linear predictor $\eta = x^{\top} \beta$,
+    equals the linear predictor $\eta = x\' \beta$,
     a [linear combination](linear-algebra.qmd#def-linear-combination)
     of the predictor values $x$ with coefficients $\beta$:
     $g(\mu) = \eta$.

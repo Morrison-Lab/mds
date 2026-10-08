@@ -93,7 +93,7 @@ $$
 \ea
 $$
 
-so $\matr{A}$ is similar to $\operatorname{diag}(3, 1)$.
+so $\matr{A}$ is similar to $\diag(3, 1)$.
 At the other extreme, the identity matrix is similar only to itself:
 $\matr{P}^{-1} \matr{I}_p \matr{P} = \matr{P}^{-1} \matr{P} = \matr{I}_p$ for every invertible $\matr{P}$
 (@thm-identity, @def-matrix-inverse).

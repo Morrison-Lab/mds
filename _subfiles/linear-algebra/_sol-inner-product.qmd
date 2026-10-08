@@ -2,15 +2,15 @@
 
 Multiply entry by entry and add:
 
-$$\vec a^\top \vec b = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8$$
+$$\va\' \vec b = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8$$
 
-For the norm, take the inner product of $\vec a$ with itself first:
+For the norm, take the inner product of $\va$ with itself first:
 
-$$\vec a^\top \vec a = 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14$$
+$$\va\' \va = 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14$$
 
 so
 
-$$\lVert \vec a \rVert_2 = \sqrt{14} \approx 3.742$$
+$$\norm{\va}_2 = \sqrt{14} \approx 3.742$$
 
 The inner product came out negative while the norm cannot:
 a norm is a square root of a sum of squares, so it is never below zero.

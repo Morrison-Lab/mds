@@ -6,7 +6,7 @@ The **inner product** of two $n \times p$ matrices $\matr{A}$ and $\matr{B}$ is
 $$
 \iprod{\matr{A}}{\matr{B}}
 \eqdef
-\operatorname{tr}\paren{\underbrace{\tp{\matr{A}}\matr{B}}_{p \times p}}
+\tr\paren{\underbrace{\tp{\matr{A}}\matr{B}}_{p \times p}}
 $$
 
 :::

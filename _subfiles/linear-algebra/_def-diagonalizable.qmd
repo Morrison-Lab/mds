@@ -17,7 +17,7 @@ so a diagonalizable matrix is one similar to a diagonal matrix (@def-similar).
 #### Diagonalizable and not
 
 - $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is diagonalizable:
-  with $\matr{P}$ as in @exm-similar, $\operatorname{diag}(3, 1) = \matr{P}^{-1} \matr{A} \matr{P}$.
+  with $\matr{P}$ as in @exm-similar, $\diag(3, 1) = \matr{P}^{-1} \matr{A} \matr{P}$.
 - $\matr{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ is not.
   Suppose $\matr{J} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$,
   so $\matr{\Lambda} = \matr{X}^{-1} \matr{J} \matr{X}$ (@rem-similar-both-ways).

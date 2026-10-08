@@ -10,10 +10,10 @@ The [proof](notation.qmd#def-proof) is the standard induction on the number of p
 Let $f : \reals^p \to \reals$ be a
 [convex function](#def-convex-function).
 Let $x_1, \ldots, x_n \in \reals^p$,
-and let $w_1, \ldots, w_n \ge 0$ be weights with $\sum_{i=1}^{n} w_i = 1$.
+and let $w_1, \ldots, w_n \ge 0$ be weights with $\sumin w_i = 1$.
 Then
 $$
-f\left(\sum_{i=1}^{n} w_i x_i\right) \le \sum_{i=1}^{n} w_i f(x_i).
+f\left(\sumin w_i x_i\right) \le \sumin w_i f(x_i).
 $$
 
 :::

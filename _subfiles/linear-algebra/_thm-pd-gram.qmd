@@ -46,7 +46,7 @@ so for $\vx \ne \vzero$, $\matr{B} \vx \ne \vzero$ and $\norm{\matr{B} \vx}^2 > 
 Let $\matr{A}$ be positive semidefinite.
 It is symmetric, so $\matr{A} = \matr{Q} \matr{\Lambda} \tp{\matr{Q}}$ (@thm-spectral),
 and every $\lambda_i \ge 0$ (@thm-definite-eigenvalues).
-Let $\matr{\Lambda}^{1/2} \eqdef \operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$,
+Let $\matr{\Lambda}^{1/2} \eqdef \diag(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$,
 which is symmetric, with $\matr{\Lambda}^{1/2} \matr{\Lambda}^{1/2} = \matr{\Lambda}$
 (the product of diagonal matrices multiplies their diagonals, as in the proof of @thm-diagonalizable-powers),
 and let $\matr{B} \eqdef \matr{\Lambda}^{1/2} \tp{\matr{Q}}$. Then
@@ -71,7 +71,7 @@ $$
 If $\matr{A}$ is positive definite, it is positive semidefinite (@rem-positive-definite-symmetry),
 so the same $\matr{B}$ gives $\matr{A} = \tp{\matr{B}} \matr{B}$; and every $\lambda_i > 0$ (@thm-definite-eigenvalues),
 so $\matr{\Lambda}^{1/2}$ is diagonal with nonzero diagonal, and invertible
-(its inverse is $\operatorname{diag}(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$);
+(its inverse is $\diag(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$);
 $\tp{\matr{Q}}$ is invertible with inverse $\matr{Q}$ (@rem-orthogonal-matrix-columns).
 So $\matr{B}$ is invertible (@thm-inverse-product),
 and its $p$ columns are linearly independent (@thm-invertible-rank, @def-rank).

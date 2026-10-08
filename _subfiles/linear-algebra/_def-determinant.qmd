@@ -9,7 +9,7 @@ is the number defined recursively in $p$:
 - For $p = 1$, $\det(\matr{A}) = a_{11}$.
 - For $p \ge 2$,
   $$
-  \det(\matr{A}) = \sum_{j=1}^p (-1)^{1+j}\, a_{1j} \det\paren{\matr{A}_{(1j)}},
+  \det(\matr{A}) = \sumjp (-1)^{1+j}\, a_{1j} \det\paren{\matr{A}_{(1j)}},
   $$
   where $\matr{A}_{(1j)}$ is the $(p-1) \times (p-1)$ matrix
   left after deleting row $1$ and column $j$ of $\matr{A}$.

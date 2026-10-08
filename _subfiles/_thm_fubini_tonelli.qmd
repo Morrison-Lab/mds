@@ -5,7 +5,7 @@
 Let $(\Omega_1, \mathcal F_1, \mu_1)$ and $(\Omega_2, \mathcal F_2, \mu_2)$
 be [measure spaces](measures.qmd#def-measure-space)
 with [$\sigma$-finite](measures.qmd#def-sigma-finite) measures,
-and let $f : \Omega_1 \times \Omega_2 \to \mathbb{R}$ be [measurable](measures.qmd#def-measurable-function)
+and let $f : \Omega_1 \times \Omega_2 \to \reals$ be [measurable](measures.qmd#def-measurable-function)
 with respect to the [product $\sigma$-algebra](measures.qmd#def-product-sigma-algebra)
 $\mathcal F_1 \otimes \mathcal F_2$.
 If either

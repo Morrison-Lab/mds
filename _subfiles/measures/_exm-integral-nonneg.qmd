@@ -10,10 +10,10 @@ For any split of $D$ into nonempty pairwise disjoint sets $A_1, \ldots, A_n$:
 
 $$
 \ba
-\sum_{i=1}^{n} \paren{\inf_{x \in A_i} g(x)} \mu(A_i)
-&= \sum_{i=1}^{n} \sum_{x \in A_i} \inf_{y \in A_i} g(y)
+\sumin \paren{\inf_{x \in A_i} g(x)} \mu(A_i)
+&= \sumin \sum_{x \in A_i} \inf_{y \in A_i} g(y)
 && \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\
-&\le \sum_{i=1}^{n} \sum_{x \in A_i} g(x)
+&\le \sumin \sum_{x \in A_i} g(x)
 && \text{(an infimum is at most each value)} \\
 &= \sum_{x \in D} g(x)
 && \text{(each } x \in D \text{ is in exactly one } A_i \text{)}

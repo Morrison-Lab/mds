@@ -30,7 +30,7 @@ g'(t)
 &= \tp{\vecf{h}}\,\deriv{\vx} f(\vecf{z} + t \vecf{h})
 && \text{(vector chain rule)}
 \\
-&= \sum_{j=1}^{p} h_j\,\deriv{x_j} f(\vecf{z} + t \vecf{h}).
+&= \sumjp h_j\,\deriv{x_j} f(\vecf{z} + t \vecf{h}).
 && \text{(matrix product)}
 \ea
 $$
@@ -48,10 +48,10 @@ So
 $$
 \ba
 g''(t)
-&= \sum_{j=1}^{p} h_j \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}
+&= \sumjp h_j \sum_{i=1}^{p} h_i\,\deriv{x_i} \paren{\deriv{x_j} f(\vecf{z} + t \vecf{h})}
 && \text{(differentiate each term of } g'(t) \text{)}
 \\
-&= \sum_{i=1}^{p} \sum_{j=1}^{p} h_i\,\sb{\matr{H}_f(\vecf{z} + t \vecf{h})}_{ij}\,h_j
+&= \sum_{i=1}^{p} \sumjp h_i\,\sb{\matr{H}_f(\vecf{z} + t \vecf{h})}_{ij}\,h_j
 && \text{(definition of the Hessian; reorder the finite sums)}
 \\
 &= \tp{\vecf{h}}\,\matr{H}_f(\vecf{z} + t \vecf{h})\,\vecf{h}.

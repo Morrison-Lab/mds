@@ -1,7 +1,7 @@
 :::{#exm-transpose-not-enough}
 #### Why complex vectors use the conjugate transpose
 
-For a real vector $\vx$, $\tp{\vx}\vx = \sum_{j=1}^{p} x_j^2$ is $0$ only when $\vx$ is the zero vector.
+For a real vector $\vx$, $\tp{\vx}\vx = \sumjp x_j^2$ is $0$ only when $\vx$ is the zero vector.
 The same formula fails for complex vectors.
 Let $\vecf{z} = \tp{(1, i)}$. Then
 

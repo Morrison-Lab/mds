@@ -2,9 +2,9 @@
 #### A hyperplane is a translated subspace of dimension $p - 1$
 
 Let $\vec{w} \in \reals^p$ be nonzero, let $b \in \reals$,
-let $\mathcal{H} = \cb{\vx \in \reals^p : \vec{w}^\top \vx + b = 0}$ be the hyperplane
+let $\mathcal{H} = \cb{\vx \in \reals^p : \vec{w}\' \vx + b = 0}$ be the hyperplane
 with normal vector $\vec{w}$ and offset $b$ (@def-hyperplane),
-and let $\mathcal{H}_0 = \cb{\vx \in \reals^p : \vec{w}^\top \vx = 0}$
+and let $\mathcal{H}_0 = \cb{\vx \in \reals^p : \vec{w}\' \vx = 0}$
 be the hyperplane with the same normal vector and offset $0$.
 
 1. $\mathcal{H}_0$ is a subspace of $\reals^p$ (@def-subspace) of dimension $p - 1$ (@def-dimension).
@@ -19,26 +19,26 @@ be the hyperplane with the same normal vector and offset $0$.
 
 ::: proof
 
-Here $\vec{w}^\top$ is a $1 \times p$ matrix, and $\vec{w}^\top \vx = \vec{w} \cdot \vx$ (@exm-dot-product-matmul).
+Here $\vec{w}\'$ is a $1 \times p$ matrix, and $\vec{w}\' \vx = \vec{w} \cdot \vx$ (@exm-dot-product-matmul).
 
 **Part 1.**
-$\mathcal{H}_0$ is the null space $\mathcal{N}(\vec{w}^\top)$ (@def-null-space),
+$\mathcal{H}_0$ is the null space $\mathcal{N}(\vec{w}\')$ (@def-null-space),
 so it is a subspace (@thm-null-space-subspace).
-The $p$ columns of $\vec{w}^\top$ are the numbers $w_1, \ldots, w_p$.
+The $p$ columns of $\vec{w}\'$ are the numbers $w_1, \ldots, w_p$.
 Some $w_j \ne 0$, because $\vec{w} \ne \vzero$,
 and that column on its own is linearly independent ($c\,w_j = 0$ forces $c = 0$),
-so $\operatorname{rank}(\vec{w}^\top) \ge 1$ (@def-rank);
-and $\operatorname{rank}(\vec{w}^\top) \le \min\cb{1, p} = 1$ (@cor-rank-bound).
+so $\operatorname{rank}(\vec{w}\') \ge 1$ (@def-rank);
+and $\operatorname{rank}(\vec{w}\') \le \min\cb{1, p} = 1$ (@cor-rank-bound).
 So
 
 $$
 \ba
 \dim(\mathcal{H}_0)
-&= \operatorname{nullity}(\vec{w}^\top)
+&= \operatorname{nullity}(\vec{w}\')
 && \text{(@def-nullity)}
 \\
-&= p - \operatorname{rank}(\vec{w}^\top)
-&& \text{(@thm-rank-nullity, for the } p \text{ columns of } \vec{w}^\top \text{)}
+&= p - \operatorname{rank}(\vec{w}\')
+&& \text{(@thm-rank-nullity, for the } p \text{ columns of } \vec{w}\' \text{)}
 \\
 &= p - 1.
 && \text{(the rank is } 1 \text{)}
@@ -51,12 +51,12 @@ So $\vx^* \eqdef -\frac{b}{\vec{w} \cdot \vec{w}}\,\vec{w}$ is defined, and
 
 $$
 \ba
-\vec{w}^\top \vx^* + b
-&= -\frac{b}{\vec{w} \cdot \vec{w}}\,(\vec{w}^\top \vec{w}) + b
-&& \text{(homogeneity of } \vx \mapsto \vec{w}^\top \vx \text{, @thm-matrix-map-linear)}
+\vec{w}\' \vx^* + b
+&= -\frac{b}{\vec{w} \cdot \vec{w}}\,(\vec{w}\' \vec{w}) + b
+&& \text{(homogeneity of } \vx \mapsto \vec{w}\' \vx \text{, @thm-matrix-map-linear)}
 \\
 &= -b + b
-&& \text{(} \vec{w}^\top \vec{w} = \vec{w} \cdot \vec{w} \text{)}
+&& \text{(} \vec{w}\' \vec{w} = \vec{w} \cdot \vec{w} \text{)}
 \\
 &= 0,
 && \text{(arithmetic)}
@@ -64,19 +64,19 @@ $$
 $$
 
 so $\vx^* \in \mathcal{H}$, and $\mathcal{H}$ is not empty.
-Now take any $\vx_0 \in \mathcal{H}$, so $\vec{w}^\top \vx_0 = -b$.
+Now take any $\vx_0 \in \mathcal{H}$, so $\vec{w}\' \vx_0 = -b$.
 For any $\vx \in \reals^p$,
 
 $$
 \ba
-\vec{w}^\top (\vx - \vx_0)
-&= \vec{w}^\top \vx - \vec{w}^\top \vx_0
+\vec{w}\' (\vx - \vx_0)
+&= \vec{w}\' \vx - \vec{w}\' \vx_0
 && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
 \\
-&= \vec{w}^\top \vx - (-b)
+&= \vec{w}\' \vx - (-b)
 && \text{(} \vx_0 \in \mathcal{H} \text{)}
 \\
-&= \vec{w}^\top \vx + b,
+&= \vec{w}\' \vx + b,
 && \text{(arithmetic)}
 \ea
 $$
@@ -87,12 +87,12 @@ $\mathcal{H}_0$ is a subspace (part 1),
 so $\mathcal{H}$ has the form in @def-affine-subspace.
 
 **Part 3.**
-For $\vx, \vy \in \mathcal{H}$, both $\vec{w}^\top \vx$ and $\vec{w}^\top \vy$ equal $-b$, so
+For $\vx, \vy \in \mathcal{H}$, both $\vec{w}\' \vx$ and $\vec{w}\' \vy$ equal $-b$, so
 
 $$
 \ba
 \vec{w} \cdot (\vx - \vy)
-&= \vec{w}^\top \vx - \vec{w}^\top \vy
+&= \vec{w}\' \vx - \vec{w}\' \vy
 && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
 \\
 &= (-b) - (-b)

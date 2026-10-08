@@ -2,12 +2,12 @@
 #### Probability measure
 
 A **probability measure** on a [measurable space](#def-measurable-space) $(\Omega, \events)$
-is a [measure](#def-measure) $P$ on $\events$
+is a [measure](#def-measure) $\P$ on $\events$
 that gives the whole set $\Omega$ the value $1$:
 
-$$P(\Omega) = 1$$
+$$\Pf{\Omega} = 1$$
 
-Then $(\Omega, \events, P)$ is a **probability space**,
+Then $(\Omega, \events, \P)$ is a **probability space**,
 $\Omega$ is its **sample space**,
 the elements of $\Omega$ are **outcomes**,
 and the sets in $\events$ are **events**.

@@ -163,7 +163,7 @@ of widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$.
 
 The **mesh** of a partition $\mathcal{P}$ (@def-partition) is its largest subinterval width,
 
-$$\|\mathcal{P}\| \eqdef \max_{i \in \cb{1, \ldots, n}} \Delta x_i,$$
+$$\norm{\mathcal{P}} \eqdef \max_{i \in \cb{1, \ldots, n}} \Delta x_i,$$
 
 where $n$ is the number of subintervals of $\mathcal{P}$.
 
@@ -178,7 +178,7 @@ where $n$ is the number of subintervals of $\mathcal{P}$.
 
 For the partition of $[0, 1]$ in @exm-partition,
 with widths $\Delta x_1 = 0.25$, $\Delta x_2 = 0.25$, and $\Delta x_3 = 0.5$,
-the mesh is the largest of these widths, $\|\mathcal{P}\| = 0.5$.
+the mesh is the largest of these widths, $\norm{\mathcal{P}} = 0.5$.
 
 :::
 
@@ -202,7 +202,7 @@ The **Riemann integral** of $f$ over $[a, b]$
 (also called the **definite integral** of $f$ from $a$ to $b$)
 is the limit of the Riemann sums (@def-riemann-sum) as the mesh (@def-mesh) shrinks to zero:
 
-$$\int_a^b f(x)\,dx \eqdef \lim_{\|\mathcal{P}\| \to 0} \sum_{i=1}^n f(x_i^*)\,\Delta x_i,$$
+$$\int_a^b f(x)\,dx \eqdef \lim_{\norm{\mathcal{P}} \to 0} \sumin f(x_i^*)\,\Delta x_i,$$
 
 when that limit exists and has the same value
 for every choice of the partitions and of the sample points $x_i^*$.
@@ -217,10 +217,10 @@ for every choice of the partitions and of the sample points $x_i^*$.
 #### Riemann integrable
 
 A bounded function $f$ is **Riemann integrable on** $[a, b]$
-if the Riemann sums (@def-riemann-sum) $\sum_{i=1}^n f(x_i^*)\,\Delta x_i$,
+if the Riemann sums (@def-riemann-sum) $\sumin f(x_i^*)\,\Delta x_i$,
 over partitions $\mathcal{P}$ of $[a, b]$ (@def-partition)
 with a sample point $x_i^*$ in each subinterval $[x_{i-1}, x_i]$,
-approach a real-number limit as the mesh $\|\mathcal{P}\|$ (@def-mesh) shrinks to zero,
+approach a real-number limit as the mesh $\norm{\mathcal{P}}$ (@def-mesh) shrinks to zero,
 and that limit is the same
 for every choice of the partitions and of the sample points.
 
@@ -238,11 +238,11 @@ For every partition and every choice of sample points,
 
 $$
 \ba
-\sum_{i=1}^n f(x_i^*)\,\Delta x_i
-&= \sum_{i=1}^n 2\,\Delta x_i
+\sumin f(x_i^*)\,\Delta x_i
+&= \sumin 2\,\Delta x_i
 && \text{(} f \text{ is } 2 \text{ everywhere)}
 \\
-&= 2 \sum_{i=1}^n \Delta x_i
+&= 2 \sumin \Delta x_i
 && \text{(factor out the constant)}
 \\
 &= 2 \cd (3 - 0)
@@ -281,11 +281,11 @@ and $g(x) = 0$ when $x$ is [irrational](notation.qmd#def-irrational-numbers),
 on $[0, 1]$.
 Every subinterval contains both rational and irrational points.
 Choosing every sample point rational gives
-$\sum_{i=1}^n 1 \cd \Delta x_i = 1$
+$\sumin 1 \cd \Delta x_i = 1$
 for every partition,
 because the widths $\Delta x_i$ add up to the length $1 - 0 = 1$ of $[0, 1]$,
 and choosing every sample point irrational gives
-$\sum_{i=1}^n 0 \cd \Delta x_i = 0$.
+$\sumin 0 \cd \Delta x_i = 0$.
 The two limits differ,
 so $g$ is not Riemann integrable on $[0, 1]$,
 and $\int_0^1 g(x)\,dx$ does not exist.
@@ -303,7 +303,7 @@ $\Delta x \eqdef (b - a)/n$,
 and let $x_i^*$ be any point in the $i$-th subinterval.
 The **equal-width Riemann sum** is
 
-$$S_n \eqdef \sum_{i=1}^n f(x_i^*)\,\Delta x.$$
+$$S_n \eqdef \sumin f(x_i^*)\,\Delta x.$$
 
 :::
 

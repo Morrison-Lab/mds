@@ -15,13 +15,13 @@ For each $i \in \{1, \ldots, m\}$, additivity:
 $$
 \ba
 \paren{\matr{A}(\vx + \vy)}_i
-&= \sum_{j=1}^{p} a_{ij} (\vx + \vy)_j
+&= \sumjp a_{ij} (\vx + \vy)_j
 && \text{(@def-matvec-mult)}
-\\&= \sum_{j=1}^{p} a_{ij} (x_j + y_j)
+\\&= \sumjp a_{ij} (x_j + y_j)
 && \text{(@def-vector-addition)}
-\\&= \sum_{j=1}^{p} (a_{ij} x_j + a_{ij} y_j)
+\\&= \sumjp (a_{ij} x_j + a_{ij} y_j)
 && \text{(multiplication distributes over addition)}
-\\&= \sum_{j=1}^{p} a_{ij} x_j + \sum_{j=1}^{p} a_{ij} y_j
+\\&= \sumjp a_{ij} x_j + \sumjp a_{ij} y_j
 && \text{(a sum of sums splits)}
 \\&= (\matr{A}\vx)_i + (\matr{A}\vy)_i
 && \text{(@def-matvec-mult)}
@@ -35,13 +35,13 @@ and homogeneity:
 $$
 \ba
 \paren{\matr{A}(c\vx)}_i
-&= \sum_{j=1}^{p} a_{ij} (c\vx)_j
+&= \sumjp a_{ij} (c\vx)_j
 && \text{(@def-matvec-mult)}
-\\&= \sum_{j=1}^{p} a_{ij}\, c\, x_j
+\\&= \sumjp a_{ij}\, c\, x_j
 && \text{(@def-scalar-mult)}
-\\&= \sum_{j=1}^{p} c\, a_{ij} x_j
+\\&= \sumjp c\, a_{ij} x_j
 && \text{(products are symmetric)}
-\\&= c \sum_{j=1}^{p} a_{ij} x_j
+\\&= c \sumjp a_{ij} x_j
 && \text{(a constant factor comes out of a sum)}
 \\&= c\, (\matr{A}\vx)_i
 && \text{(@def-matvec-mult)}

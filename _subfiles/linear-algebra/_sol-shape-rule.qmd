@@ -1,6 +1,6 @@
 ::: {#sol-shape-rule}
 
-A vector in $\mathbb{R}^3$ is a $3 \times 1$ matrix,
+A vector in $\reals^3$ is a $3 \times 1$ matrix,
 so the same rule settles every case.
 
 1.  $\matr{A}\matr{B}$: $(4 \times 3)(3 \times 2)$. The inner pair is $3$ and $3$, so it is
@@ -10,11 +10,11 @@ so the same rule settles every case.
     Matrix multiplication is not commutative, and this is the blunt form of
     that: swapping the order can leave an expression that means nothing.
 3.  $\matr{A} \vx$: $(4 \times 3)(3 \times 1)$, defined, result $4 \times 1$ ---
-    a vector in $\mathbb{R}^4$.
-4.  $\vx^\top \vx$: $(1 \times 3)(3 \times 1)$, defined, result
+    a vector in $\reals^4$.
+4.  $\vx\' \vx$: $(1 \times 3)(3 \times 1)$, defined, result
     $1 \times 1$ --- a single number.
     The product is the inner product of @eq-inner-product.
-5.  $\vx \vx^\top$: $(3 \times 1)(1 \times 3)$, defined, result
+5.  $\vx \vx\'$: $(3 \times 1)(1 \times 3)$, defined, result
     $3 \times 3$ --- a matrix.
 
 The last two use the same two vectors and differ only in order,

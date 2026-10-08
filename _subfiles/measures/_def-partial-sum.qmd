@@ -6,6 +6,6 @@ of real numbers or of [extended non-negative reals](sets-functions.qmd#def-exten
 For each $n \in \mathbb{N}$, its $n$th **partial sum**
 is the [sum](algebra.qmd#def-summation) of its first $n$ terms:
 
-$$s_n \eqdef \sum_{i=1}^{n} a_i = a_1 + \cdots + a_n$$
+$$s_n \eqdef \sumin a_i = a_1 + \cdots + a_n$$
 
 :::

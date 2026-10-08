@@ -11,7 +11,7 @@ Evaluate the convolution:
 
 $$(f * f)(x) = \int_{-\infty}^\infty f(t)f(x - t)\,dt$$
 
-for all $x \in \mathbb{R}$.
+for all $x \in \reals$.
 :::
 
 ::: {#sol-miller-int-uniform-convolution}

@@ -20,7 +20,7 @@ $m$ and $n$ are its **lower** and **upper limits**.
 #### The index is a placeholder
 
 The name of the index does not change the sum:
-$\sum_{i=1}^{n} a_i$ and $\sum_{j=1}^{n} a_j$ are the same number.
+$\sumin a_i$ and $\sum_{j=1}^{n} a_j$ are the same number.
 For example,
 $\sum_{i=1}^{3} i = 1 + 2 + 3 = 6$
 and $\sum_{j=1}^{3} j = 1 + 2 + 3 = 6$.

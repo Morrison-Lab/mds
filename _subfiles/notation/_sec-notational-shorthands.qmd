@@ -89,8 +89,8 @@ and, in the first row, $\rangef{x}$ is a finite set.
 | Shorthand | Full form | Part left out |
 |:----------|:----------|:--------------|
 | $\sum_{x} f(x)$ | $\sum_{x \in \rangef{x}} f(x)$ | the set the sum runs over ([sum over a finite set](algebra.qmd#def-sum-over-set)) |
-| $\sum_{i} x_i$ | $\sum_{i=1}^{n} x_i$ | the lower and upper limits of the index ([summation notation](algebra.qmd#def-summation)) |
-| $\sum x_i$ | $\sum_{i=1}^{n} x_i$ | the index and its lower and upper limits |
+| $\sum_{i} x_i$ | $\sumin x_i$ | the lower and upper limits of the index ([summation notation](algebra.qmd#def-summation)) |
+| $\sum x_i$ | $\sumin x_i$ | the index and its lower and upper limits |
 | $\prod_{i} x_i$ | $\prod_{i=1}^{n} x_i$ | the lower and upper limits of the index |
 | $\prod x_i$ | $\prod_{i=1}^{n} x_i$ | the index and its lower and upper limits |
 | $\sum_{i, j} b_{ij}$ | $\sum_{i=1}^{m} \sum_{j=1}^{n} b_{ij}$ | the limits of both indices |

@@ -5,6 +5,6 @@ The **matrix-vector product** of an $m \times p$ matrix $\matr{A}$
 and a $p \times 1$ column vector $\vx$
 is the $m \times 1$ column vector $\matr{A}\vx$ with entries:
 
-$$(\matr{A}\vx)_i = \sum_{j=1}^{p} a_{ij}\, x_j$$
+$$(\matr{A}\vx)_i = \sumjp a_{ij}\, x_j$$
 
 :::

@@ -16,10 +16,10 @@ so the induction assumption gives
 $$
 f(y) \le \sum_{i=1}^{n-1} \frac{w_i}{s} f(x_i).
 $$
-Since $\sum_{i=1}^{n} w_i x_i = s y + (1 - s) x_n$ and $s \in (0, 1]$,
+Since $\sumin w_i x_i = s y + (1 - s) x_n$ and $s \in (0, 1]$,
 the definition of a convex function (@def-convex-function) gives
 $$
-f\left(\sum_{i=1}^{n} w_i x_i\right)
+f\left(\sumin w_i x_i\right)
 = f(s y + (1 - s) x_n)
 \le s f(y) + (1 - s) f(x_n).
 $$
@@ -27,6 +27,6 @@ Substituting the bound on $f(y)$, and using $1 - s = w_n$,
 $$
 s f(y) + (1 - s) f(x_n)
 \le \sum_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n)
-= \sum_{i=1}^{n} w_i f(x_i).
+= \sumin w_i f(x_i).
 $$
 :::

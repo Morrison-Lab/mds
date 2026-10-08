@@ -4,7 +4,7 @@
 For every $n \in \mathbb{N}$,
 
 $$
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}.
+\sumin i = \frac{n(n+1)}{2}.
 $$
 
 For example, with $n = 3$,
@@ -52,7 +52,7 @@ Then
 
 $$
 \ba
-\sum_{i=1}^{n} i
+\sumin i
 &= 1 + 2 + \cdots + (n-1) + n
 && \text{(definition of a sum)}
 \\

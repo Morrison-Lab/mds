@@ -7,7 +7,7 @@ Find $\derivf{f}{x}$ and $\derivf{f}{y}$ for
 
 $$f(x, y) = e^{xy} - \log(x^2 + y^2)$$
 
-on $\mathbb{R}^2 \setminus \{(0, 0)\}$.
+on $\reals^2 \setminus \{(0, 0)\}$.
 :::
 
 ::: {#sol-miller-pderiv-symmetric}

@@ -21,9 +21,9 @@ For any $\vx \in \reals^p$,
 $$
 \ba
 f(\vx)
-&= f\paren{\sum_{j=1}^{p} x_j \vecf{e}_j}
+&= f\paren{\sumjp x_j \vecf{e}_j}
 && \text{(@thm-standard-basis-expansion)}
-\\&= \sum_{j=1}^{p} x_j f(\vecf{e}_j)
+\\&= \sumjp x_j f(\vecf{e}_j)
 && \text{(@thm-linear-map-lincom)}
 \ea
 $$
@@ -32,12 +32,12 @@ and entry $i$ of that sum is
 
 $$
 \ba
-\paren{\sum_{j=1}^{p} x_j f(\vecf{e}_j)}_i
-&= \sum_{j=1}^{p} x_j \paren{f(\vecf{e}_j)}_i
+\paren{\sumjp x_j f(\vecf{e}_j)}_i
+&= \sumjp x_j \paren{f(\vecf{e}_j)}_i
 && \text{(@def-linear-combination, entry by entry)}
-\\&= \sum_{j=1}^{p} x_j a_{ij}
+\\&= \sumjp x_j a_{ij}
 && \text{(definition of } \matr{A} \text{)}
-\\&= \sum_{j=1}^{p} a_{ij} x_j
+\\&= \sumjp a_{ij} x_j
 && \text{(products are symmetric)}
 \\&= (\matr{A}\vx)_i
 && \text{(@def-matvec-mult)}

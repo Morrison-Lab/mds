@@ -3,15 +3,15 @@
 #### Which of these are affine in $\vec w$?
 
 Each of the five expressions is a function of the weights
-$\vec w \in \mathbb{R}^p$,
-with the data $\vec x$ and $y$ held fixed.
+$\vec w \in \reals^p$,
+with the data $\vx$ and $y$ held fixed.
 Say which ones are affine (@def-affine-map), that is, have the form @eq-linear-scalar
 --- an inner product plus an offset --- and which of those are also linear (@def-linear-map).
 
-1.  $\vec w^\top \vec x$
-2.  $\vec w^\top \vec x - y$
-3.  $(\vec w^\top \vec x - y)^2$
-4.  $\lVert \vec w \rVert_2^2$
+1.  $\vec w\' \vx$
+2.  $\vec w\' \vx - y$
+3.  $(\vec w\' \vx - y)^2$
+4.  $\norm{\vec w}_2^2$
 5.  $w_1 x_1 + 3$
 
 :::

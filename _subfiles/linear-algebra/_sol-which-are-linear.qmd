@@ -1,7 +1,7 @@
 ::: {#sol-which-are-linear}
 
 1.  **Affine, and linear.** It is @eq-linear-scalar with $b = 0$,
-    which is a linear map by @thm-matrix-map-linear: the matrix $\tp{\vec x}$ times $\vec w$.
+    which is a linear map by @thm-matrix-map-linear: the matrix $\tp{\vx}$ times $\vec w$.
 2.  **Affine.** Still an inner product plus an offset; here the offset is
     $b = -y$, which is a constant because $y$ is held fixed.
     It is linear only when $y = 0$: otherwise $\vec w = \vzero$ gives $-y \ne 0$,
@@ -10,14 +10,14 @@
     This expression is the squared error of one observation, and its
     curvature in $\vec w$ is exactly why fitting a model is an optimization
     problem rather than a lookup.
-4.  **Not affine.** By @eq-l2-norm this is $\vec w^\top \vec w$,
+4.  **Not affine.** By @eq-l2-norm this is $\vec w\' \vec w$,
     which has $\vec w$ in both slots at once.
     Hold either slot fixed and it is linear in the other;
     as a function of the single variable $\vec w$ it is quadratic.
 5.  **Affine, not linear.** It is @eq-linear-scalar with coefficient vector
-    $\vec a = (x_1, 0, \dots, 0)^\top$ and $b = 3$;
+    $\va = (x_1, 0, \dots, 0)\'$ and $b = 3$;
     at $\vec w = \vzero$ it equals $3 \ne 0$, so it is not linear (@thm-linear-map-zero).
-    The data $\vec x$ is untouched --- $\vec a$ is a new vector built from
+    The data $\vx$ is untouched --- $\va$ is a new vector built from
     its first entry.
 
 Items 1, 2 and 5 are affine and items 3 and 4 are not,

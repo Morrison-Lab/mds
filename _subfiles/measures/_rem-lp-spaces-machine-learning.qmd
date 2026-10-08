@@ -4,7 +4,7 @@
 In probability, statistics, and machine learning, $L^p$ spaces structure the geometry of random variables, estimators, and loss functions:
 
 1. **Random variables, moments, and inclusion of $L^p$ spaces**:
-   When $\mu = P$ is a probability measure (@def-probability-measure) with total measure $P(S) = 1$,
+   When $\mu = \P$ is a probability measure (@def-probability-measure) with total measure $\Pf{S} = 1$,
    an $L^p$ function is a random variable $X$ with finite $p$-th moment:
    $$
    \norm{X}_p = \paren{\E{\abs{X}^p}}^{1/p}.

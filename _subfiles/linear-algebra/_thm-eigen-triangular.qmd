@@ -24,7 +24,7 @@ Entry $i$ of $\matr{M} \vecf{v}$ is
 
 $$
 \ba
-\sum_{j=1}^{p} m_{ij}\,v_j
+\sumjp m_{ij}\,v_j
 &= \sum_{j=i}^{p} m_{ij}\,v_j
 && \text{(} m_{ij} = 0 \text{ for } j < i \text{)}
 \\

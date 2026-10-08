@@ -1,27 +1,27 @@
 :::{#def-half-space}
 #### Half-space
 
-Let $\mathcal{H} = \cb{\vx \in \reals^p : \vec{w}^\top \vx + b = 0}$ be a hyperplane (@def-hyperplane).
+Let $\mathcal{H} = \cb{\vx \in \reals^p : \vec{w}\' \vx + b = 0}$ be a hyperplane (@def-hyperplane).
 The two **open half-spaces** of $\mathcal{H}$ are
 
 $$
-\mathcal{H}^+ \eqdef \cb{\vx \in \reals^p : \vec{w}^\top \vx + b > 0}
+\mathcal{H}^+ \eqdef \cb{\vx \in \reals^p : \vec{w}\' \vx + b > 0}
 \quad \text{and} \quad
-\mathcal{H}^- \eqdef \cb{\vx \in \reals^p : \vec{w}^\top \vx + b < 0}.
+\mathcal{H}^- \eqdef \cb{\vx \in \reals^p : \vec{w}\' \vx + b < 0}.
 $$ {#eq-half-space}
 
 The **closed half-spaces** also include $\mathcal{H}$ itself:
 $\mathcal{H}^+ \cup \mathcal{H}$ and $\mathcal{H}^- \cup \mathcal{H}$.
 Every point of $\reals^p$ is in exactly one of $\mathcal{H}^+$, $\mathcal{H}$ and $\mathcal{H}^-$,
-because the number $\vec{w}^\top \vx + b$ is positive, zero or negative.
+because the number $\vec{w}\' \vx + b$ is positive, zero or negative.
 The vector $\vec{w}$ points into $\mathcal{H}^+$:
-the number $\vec{w}^\top \vx + b$ goes up when $\vx$ moves in the direction $\vec{w}$.
+the number $\vec{w}\' \vx + b$ goes up when $\vx$ moves in the direction $\vec{w}$.
 
 :::
 
 ::: {.remark .notes}
 Replacing $(\vec{w}, b)$ by $(-\vec{w}, -b)$ describes the same hyperplane
 but swaps the names $\mathcal{H}^+$ and $\mathcal{H}^-$.
-The sign of $\vec{w}^\top \vx + b$ tells you which side of the hyperplane $\vx$ is on.
+The sign of $\vec{w}\' \vx + b$ tells you which side of the hyperplane $\vx$ is on.
 A linear classifier uses this sign to assign one of two labels.
 :::
