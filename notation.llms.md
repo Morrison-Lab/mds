@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 13:29:17 (PDT)
+Last modified: 2026-10-08 14:38:49 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -20,7 +20,7 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\prod\\ | product | `\prod` |
 | \\\mu\\ | mean, \\\operatorname{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
 | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
-| \\x^{\top}\\ | transpose of \\x\\ | `x^{\top}` |
+| \\x^{\top}\\ | transpose of \\x\\ | `x\'` |
 | \\'\\ | transpose or [derivative](calculus.llms.md#def-derivative)[^1] | `'` |
 | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
 | \\\therefore\\ | [therefore](#def-logical-entailment), thus | `\therefore` |
@@ -629,8 +629,8 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 | Shorthand | Full form | Part left out |
 |:---|:---|:---|
 | \\\sum\_{x} f(x)\\ | \\\sum\_{x \in \mathcal{R}(x)} f(x)\\ | the set the sum runs over ([sum over a finite set](algebra.llms.md#def-sum-over-set)) |
-| \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^{n} x_i\\ | the lower and upper limits of the index ([summation notation](algebra.llms.md#def-summation)) |
-| \\\sum x_i\\ | \\\sum\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
+| \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^nx_i\\ | the lower and upper limits of the index ([summation notation](algebra.llms.md#def-summation)) |
+| \\\sum x_i\\ | \\\sum\_{i=1}^nx_i\\ | the index and its lower and upper limits |
 | \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the lower and upper limits of the index |
 | \\\prod x_i\\ | \\\prod\_{i=1}^{n} x_i\\ | the index and its lower and upper limits |
 | \\\sum\_{i, j} b\_{ij}\\ | \\\sum\_{i=1}^{m} \sum\_{j=1}^{n} b\_{ij}\\ | the limits of both indices |

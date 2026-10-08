@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 13:29:17 (PDT)
+Last modified: 2026-10-08 14:38:49 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -74,7 +74,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
 >
-> *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the maximum likelihood estimators \\\hat{\mu} = \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n (x_i - \bar{x})^2\\.
+> *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the maximum likelihood estimators \\\hat{\mu} = \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n(x_i - \bar{x})^2\\.
 
 > **NOTE:**
 >
@@ -291,7 +291,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > 1.  Compute \\\partial f / \partial w_1\\ ([Definition 1](#def-partial-derivative)), treating \\w_2\\ as a constant.
 > 2.  Compute \\\partial f / \partial w_2\\, treating \\w_1\\ as a constant.
-> 3.  Assemble \\\nabla\_{\tilde{w}} f\\ and evaluate it at \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^\top\\.
+> 3.  Assemble \\\nabla\_{\tilde{w}} f\\ and evaluate it at \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\.
 > 4.  Check the shape of your answer against [Table 1](#tbl-gradient-shape).
 
 > **NOTE:**
@@ -308,7 +308,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > \\\nabla\_{\tilde{w}} f(\tilde{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\\
 >
-> The gradient is a vector-valued *function* of \\\tilde{w}\\, not a single vector. At \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^\top\\,
+> The gradient is a vector-valued *function* of \\\tilde{w}\\, not a single vector. At \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\,
 >
 > \\\nabla\_{\tilde{w}} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix} = \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix} = \begin{bmatrix} -8 \\ 9 \end{bmatrix}\\
 >
@@ -576,9 +576,9 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Proof*. Expanding entry-wise, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum\_{j=1}^p \sum\_{k=1}^p s\_{jk} \beta_j \beta_k\\. Differentiating component-wise with respect to \\\beta_i\\ for \\i = 1, \ldots, p\\:
+> *Proof*. Expanding entry-wise, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum\_{j=1}^p\sum\_{k=1}^p s\_{jk} \beta_j \beta_k\\. Differentiating component-wise with respect to \\\beta_i\\ for \\i = 1, \ldots, p\\:
 >
-> \\ \begin{aligned} \left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right\]\_i &= \frac{\partial}{\partial \beta_i} \sum\_{j=1}^p \sum\_{k=1}^p s\_{jk} \beta_j \beta_k && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^p s\_{ik} \beta_k + \sum\_{j=1}^p s\_{ji} \beta_j && \text{(product rule for } \beta_i \beta_k \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
+> \\ \begin{aligned} \left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right\]\_i &= \frac{\partial}{\partial \beta_i} \sum\_{j=1}^p\sum\_{k=1}^p s\_{jk} \beta_j \beta_k && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^p s\_{ik} \beta_k + \sum\_{j=1}^ps\_{ji} \beta_j && \text{(product rule for } \beta_i \beta_k \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
 >
 > When \\\mathbf{S}\\ is symmetric (\\\mathbf{S} = {\mathbf{S}}^{\top}\\), \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
 
@@ -624,7 +624,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Definition 9 (Residuals and squared errors)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\tilde{y}\in \mathbb{R}^n\\, and \\\tilde{\beta}\in \mathbb{R}^p\\. The **residual vector** of \\\tilde{\beta}\\ is \\\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})\_i\\ are the **residuals**. The square \\\varepsilon_i^2\\ is the \\i\\th **squared error**, and their sum
 >
-> \\ \tilde{\varepsilon}\cdot \tilde{\varepsilon}= \sum\_{i=1}^n \varepsilon_i^2 = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \\
+> \\ \tilde{\varepsilon}\cdot \tilde{\varepsilon}= \sum\_{i=1}^n\varepsilon_i^2 = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \\
 >
 > is the **residual sum of squares**. A [least squares solution](linear-algebra.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares as small as possible too.
 

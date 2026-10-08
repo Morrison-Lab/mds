@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-08 13:29:17 (PDT)</p>
+  <p class="date">Last modified: 2026-10-08 14:38:49 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -446,7 +446,7 @@
 \\
 &amp;= \mathopen{}\left[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right]\mathclose{} f(x; \mu, \sigma)
 \end{aligned}\]</span></p>
-<p><em>Remark:</em> Setting <span class="math inline">\(\frac{\partial f}{\partial \mu} = 0\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma} = 0\)</span> for a sample of independent observations leads directly to the maximum likelihood estimators <span class="math inline">\(\hat{\mu} = \bar{x}\)</span> and <span class="math inline">\(\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n (x_i - \bar{x})^2\)</span>.</p>
+<p><em>Remark:</em> Setting <span class="math inline">\(\frac{\partial f}{\partial \mu} = 0\)</span> and <span class="math inline">\(\frac{\partial f}{\partial \sigma} = 0\)</span> for a sample of independent observations leads directly to the maximum likelihood estimators <span class="math inline">\(\hat{\mu} = \bar{x}\)</span> and <span class="math inline">\(\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^n(x_i - \bar{x})^2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -837,7 +837,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <ol type="1">
 <li>Compute <span class="math inline">\(\partial f / \partial w_1\)</span> (<a href="#/def-partial-derivative" class="quarto-xref">Definition&nbsp;1</a>), treating <span class="math inline">\(w_2\)</span> as a constant.</li>
 <li>Compute <span class="math inline">\(\partial f / \partial w_2\)</span>, treating <span class="math inline">\(w_1\)</span> as a constant.</li>
-<li>Assemble <span class="math inline">\(\nabla_{\tilde{w}} f\)</span> and evaluate it at <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^\top\)</span>.</li>
+<li>Assemble <span class="math inline">\(\nabla_{\tilde{w}} f\)</span> and evaluate it at <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^{\top}\)</span>.</li>
 <li>Check the shape of your answer against <a href="#/tbl-gradient-shape" class="quarto-xref">Table&nbsp;1</a>.</li>
 </ol>
 </div>
@@ -848,7 +848,7 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <p><span class="math display">\[\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2\]</span></p>
 <p><strong>3.</strong> Stack the two, in the order the coordinates are numbered:</p>
 <p><span class="math display">\[\nabla_{\tilde{w}} f(\tilde{w}) = \begin{bmatrix} 3w_2 - 5 \\ 3w_1 + 3w_2^2 \end{bmatrix}\]</span></p>
-<p>The gradient is a vector-valued <em>function</em> of <span class="math inline">\(\tilde{w}\)</span>, not a single vector. At <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^\top\)</span>,</p>
+<p>The gradient is a vector-valued <em>function</em> of <span class="math inline">\(\tilde{w}\)</span>, not a single vector. At <span class="math inline">\(\tilde{w} = \begin{bmatrix} 2 &amp; -1 \end{bmatrix}^{\top}\)</span>,</p>
 <p><span class="math display">\[\nabla_{\tilde{w}} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix}
 = \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix}
 = \begin{bmatrix} -8 \\ 9 \end{bmatrix}\]</span></p>
@@ -1332,13 +1332,13 @@ x_{p}
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Expanding entry-wise, <span class="math inline">\({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum_{j=1}^p \sum_{k=1}^p s_{jk} \beta_j \beta_k\)</span>. Differentiating component-wise with respect to <span class="math inline">\(\beta_i\)</span> for <span class="math inline">\(i = 1, \ldots, p\)</span>:</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Expanding entry-wise, <span class="math inline">\({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum_{j=1}^p\sum_{k=1}^p s_{jk} \beta_j \beta_k\)</span>. Differentiating component-wise with respect to <span class="math inline">\(\beta_i\)</span> for <span class="math inline">\(i = 1, \ldots, p\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \left[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right]_i
-&amp;= \frac{\partial}{\partial \beta_i} \sum_{j=1}^p \sum_{k=1}^p s_{jk} \beta_j \beta_k
+&amp;= \frac{\partial}{\partial \beta_i} \sum_{j=1}^p\sum_{k=1}^p s_{jk} \beta_j \beta_k
 &amp;&amp; \text{(expand quadratic form)} \\
-&amp;= \sum_{k=1}^p s_{ik} \beta_k + \sum_{j=1}^p s_{ji} \beta_j
+&amp;= \sum_{k=1}^p s_{ik} \beta_k + \sum_{j=1}^ps_{ji} \beta_j
 &amp;&amp; \text{(product rule for } \beta_i \beta_k \text{)} \\
 &amp;= [\mathbf{S}\tilde{\beta}]_i + [{\mathbf{S}}^{\top}\tilde{\beta}]_i
 &amp;&amp; \text{(matrix-vector multiplication definition)} \\
@@ -1418,7 +1418,7 @@ x_{p}
 <div id="def-residual" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Residuals and squared errors)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be an <span class="math inline">\(n \times p\)</span> matrix, <span class="math inline">\(\tilde{y}\in \mathbb{R}^n\)</span>, and <span class="math inline">\(\tilde{\beta}\in \mathbb{R}^p\)</span>. The <strong>residual vector</strong> of <span class="math inline">\(\tilde{\beta}\)</span> is <span class="math inline">\(\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\)</span>, and its entries <span class="math inline">\(\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})_i\)</span> are the <strong>residuals</strong>. The square <span class="math inline">\(\varepsilon_i^2\)</span> is the <span class="math inline">\(i\)</span>th <strong>squared error</strong>, and their sum</p>
 <p><span class="math display">\[
-\tilde{\varepsilon}\cdot \tilde{\varepsilon}= \sum_{i=1}^n \varepsilon_i^2 = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2
+\tilde{\varepsilon}\cdot \tilde{\varepsilon}= \sum_{i=1}^n\varepsilon_i^2 = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2
 \]</span></p>
 <p>is the <strong>residual sum of squares</strong>. A <a href="./linear-algebra.html#def-least-squares">least squares solution</a> of <span class="math inline">\(\mathbf{X}\tilde{\beta}= \tilde{y}\)</span> makes <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\)</span> as small as possible, and so makes the residual sum of squares as small as possible too.</p>
 </div>

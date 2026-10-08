@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 13:29:17 (PDT)
+Last modified: 2026-10-08 14:38:49 (PDT)
 
 ## 1 Vectors
 
@@ -101,7 +101,7 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > **Definition 7 (Dot product)** For any two real-valued vectors \\\tilde{x}= (x_1, \ldots, x_p)\\ and \\\tilde{y}= (y_1, \ldots, y_p)\\ of the same length \\p\\, the **dot product** of \\\tilde{x}\\ and \\\tilde{y}\\ is:
 >
-> \\\tilde{x}\cdot \tilde{y}= \tilde{x}^\top \tilde{y}\stackrel{\text{def}}{=}\sum\_{i=1}^px_i y_i \tag{1}\\
+> \\\tilde{x}\cdot \tilde{y}= \tilde{x}^{\top} \tilde{y}\stackrel{\text{def}}{=}\sum\_{i=1}^px_i y_i \tag{1}\\
 
 See also the definitions in:
 
@@ -159,7 +159,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Definition 10 (Mean (average, sample mean))** The **mean** (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra.llms.md#def-summation) divided by how many there are:
 >
-> \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n} \sum\_{i=1}^{n} y_i\\
+> \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n} \sum\_{i=1}^ny_i\\
 >
 > When the numbers are observed data values, \\\bar{y}\\ is also called the **sample mean**.
 
@@ -205,13 +205,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Theorem 3 (A vector is a linear combination of indicator vectors)** Every vector \\\tilde{x}\in \mathbb{R}^p\\ is the linear combination ([Definition 8](#def-linear-combination)) of the indicator vectors \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ ([Definition 12](#def-indicator-vector)) with coefficients \\x_1, \ldots, x_p\\:
 >
-> \\\tilde{x}= \sum\_{j=1}^{p} x_j \tilde{e}\_j\\
+> \\\tilde{x}= \sum\_{j=1}^px_j \tilde{e}\_j\\
 
 > **NOTE:**
 >
 > *Proof*. Compare the two sides entry by entry. For each \\i \in \\1, \ldots, p\\\\:
 >
-> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^{p} x_j \tilde{e}\_j\right)\mathclose{}\_i &= \sum\_{j=1}^{p} x_j (\tilde{e}\_j)\_i && \text{(}\href{#def-linear-combination}{\text{Definition~8}}\text{, entry by entry)} \\&= \sum\_{j=1}^{p} \begin{cases} x_j \cdot 1 & \text{if } j = i \\ x_j \cdot 0 & \text{if } j \neq i \end{cases} && \text{(}\href{#def-indicator-vector}{\text{Definition~12}}\text{)} \\&= x_i \cdot 1 + \sum\_{j \neq i} x_j \cdot 0 && \text{(split off the } j = i \text{ term)} \\&= x_i + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= x_i && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^px_j \tilde{e}\_j\right)\mathclose{}\_i &= \sum\_{j=1}^px_j (\tilde{e}\_j)\_i && \text{(}\href{#def-linear-combination}{\text{Definition~8}}\text{, entry by entry)} \\&= \sum\_{j=1}^p \begin{cases} x_j \cdot 1 & \text{if } j = i \\ x_j \cdot 0 & \text{if } j \neq i \end{cases} && \text{(}\href{#def-indicator-vector}{\text{Definition~12}}\text{)} \\&= x_i \cdot 1 + \sum\_{j \neq i} x_j \cdot 0 && \text{(split off the } j = i \text{ term)} \\&= x_i + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= x_i && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -235,7 +235,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 14 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** (or **length**, also called the **\\L_2\\ norm** and written \\\lVert \tilde{x}\rVert_2\\) of a vector \\\tilde{x}\\ of length \\p\\ is
+> **Definition 14 (Euclidean norm (length, \\L_2\\ norm))** The **Euclidean norm** (or **length**, also called the **\\L_2\\ norm** and written \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2\\) of a vector \\\tilde{x}\\ of length \\p\\ is
 >
 > \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum\_{i=1}^px_i^2} \tag{2}\\
 >
@@ -312,23 +312,23 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Exercise 3 (Compute an inner product and a norm)** Let
 >
-> \\\tilde{a} = \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}, \qquad \tilde{b} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\\
+> \\\tilde{a}= \begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}, \qquad \tilde{b} = \begin{bmatrix} 0 \\ 4 \\ -2 \end{bmatrix}\\
 >
-> Compute \\\tilde{a}^\top \tilde{b}\\ and \\\lVert \tilde{a} \rVert_2\\.
+> Compute \\\tilde{a}^{\top} \tilde{b}\\ and \\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}\_2\\.
 
 > **NOTE:**
 >
 > *Solution 3*. Multiply entry by entry and add:
 >
-> \\\tilde{a}^\top \tilde{b} = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8\\
+> \\\tilde{a}^{\top} \tilde{b} = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8\\
 >
 > For the norm, take the inner product of \\\tilde{a}\\ with itself first:
 >
-> \\\tilde{a}^\top \tilde{a} = 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14\\
+> \\\tilde{a}^{\top} \tilde{a}= 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14\\
 >
 > so
 >
-> \\\lVert \tilde{a} \rVert_2 = \sqrt{14} \approx 3.742\\
+> \\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}\_2 = \sqrt{14} \approx 3.742\\
 >
 > The inner product came out negative while the norm cannot: a norm is a square root of a sum of squares, so it is never below zero.
 >
@@ -512,8 +512,8 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > 1.  \\\mathbf{A}\mathbf{B}\\
 > 2.  \\\mathbf{B}\mathbf{A}\\
 > 3.  \\\mathbf{A} \tilde{x}\\
-> 4.  \\\tilde{x}^\top \tilde{x}\\
-> 5.  \\\tilde{x}\tilde{x}^\top\\
+> 4.  \\\tilde{x}^{\top} \tilde{x}\\
+> 5.  \\\tilde{x}\tilde{x}^{\top}\\
 
 > **NOTE:**
 >
@@ -522,8 +522,8 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > 1.  \\\mathbf{A}\mathbf{B}\\: \\(4 \times 3)(3 \times 2)\\. The inner pair is \\3\\ and \\3\\, so it is defined, and the result is \\4 \times 2\\.
 > 2.  \\\mathbf{B}\mathbf{A}\\: \\(3 \times 2)(4 \times 3)\\. The inner pair is \\2\\ and \\4\\, which do not match, so it is **not defined**. Matrix multiplication is not commutative, and this is the blunt form of that: swapping the order can leave an expression that means nothing.
 > 3.  \\\mathbf{A} \tilde{x}\\: \\(4 \times 3)(3 \times 1)\\, defined, result \\4 \times 1\\ — a vector in \\\mathbb{R}^4\\.
-> 4.  \\\tilde{x}^\top \tilde{x}\\: \\(1 \times 3)(3 \times 1)\\, defined, result \\1 \times 1\\ — a single number. The product is the inner product of [Equation 1](#eq-inner-product).
-> 5.  \\\tilde{x}\tilde{x}^\top\\: \\(3 \times 1)(1 \times 3)\\, defined, result \\3 \times 3\\ — a matrix.
+> 4.  \\\tilde{x}^{\top} \tilde{x}\\: \\(1 \times 3)(3 \times 1)\\, defined, result \\1 \times 1\\ — a single number. The product is the inner product of [Equation 1](#eq-inner-product).
+> 5.  \\\tilde{x}\tilde{x}^{\top}\\: \\(3 \times 1)(1 \times 3)\\, defined, result \\3 \times 3\\ — a matrix.
 >
 > The last two use the same two vectors and differ only in order, and they return objects of different kinds. Reading a transpose as decoration rather than as a shape change is the commonest way to lose track of an expression.
 
@@ -576,7 +576,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Definition 28 (Matrix-vector multiplication)** The **matrix-vector product** of an \\m \times p\\ matrix \\\mathbf{A}\\ and a \\p \times 1\\ column vector \\\tilde{x}\\ is the \\m \times 1\\ column vector \\\mathbf{A}\tilde{x}\\ with entries:
 >
-> \\(\mathbf{A}\tilde{x})\_i = \sum\_{j=1}^{p} a\_{ij}\\ x_j\\
+> \\(\mathbf{A}\tilde{x})\_i = \sum\_{j=1}^pa\_{ij}\\ x_j\\
 
 > **NOTE:**
 >
@@ -645,11 +645,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. Both conditions are checked one entry at a time. For each \\i \in \\1, \ldots, m\\\\, additivity:
 >
-> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(\tilde{x}+ \tilde{y})\right)\mathclose{}\_i &= \sum\_{j=1}^{p} a\_{ij} (\tilde{x}+ \tilde{y})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= \sum\_{j=1}^{p} a\_{ij} (x_j + y_j) && \text{(}\href{#def-vector-addition}{\text{Definition~6}}\text{)} \\&= \sum\_{j=1}^{p} (a\_{ij} x_j + a\_{ij} y_j) && \text{(multiplication distributes over addition)} \\&= \sum\_{j=1}^{p} a\_{ij} x_j + \sum\_{j=1}^{p} a\_{ij} y_j && \text{(a sum of sums splits)} \\&= (\mathbf{A}\tilde{x})\_i + (\mathbf{A}\tilde{y})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= (\mathbf{A}\tilde{x}+ \mathbf{A}\tilde{y})\_i && \text{(}\href{#def-vector-addition}{\text{Definition~6}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(\tilde{x}+ \tilde{y})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (\tilde{x}+ \tilde{y})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= \sum\_{j=1}^pa\_{ij} (x_j + y_j) && \text{(}\href{#def-vector-addition}{\text{Definition~6}}\text{)} \\&= \sum\_{j=1}^p(a\_{ij} x_j + a\_{ij} y_j) && \text{(multiplication distributes over addition)} \\&= \sum\_{j=1}^pa\_{ij} x_j + \sum\_{j=1}^pa\_{ij} y_j && \text{(a sum of sums splits)} \\&= (\mathbf{A}\tilde{x})\_i + (\mathbf{A}\tilde{y})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= (\mathbf{A}\tilde{x}+ \mathbf{A}\tilde{y})\_i && \text{(}\href{#def-vector-addition}{\text{Definition~6}}\text{)} \end{aligned} \\
 >
 > and homogeneity:
 >
-> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(c\tilde{x})\right)\mathclose{}\_i &= \sum\_{j=1}^{p} a\_{ij} (c\tilde{x})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= \sum\_{j=1}^{p} a\_{ij}\\ c\\ x_j && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \\&= \sum\_{j=1}^{p} c\\ a\_{ij} x_j && \text{(products are symmetric)} \\&= c \sum\_{j=1}^{p} a\_{ij} x_j && \text{(a constant factor comes out of a sum)} \\&= c\\ (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= (c\\ \mathbf{A}\tilde{x})\_i && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(c\tilde{x})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (c\tilde{x})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= \sum\_{j=1}^pa\_{ij}\\ c\\ x_j && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \\&= \sum\_{j=1}^pc\\ a\_{ij} x_j && \text{(products are symmetric)} \\&= c \sum\_{j=1}^pa\_{ij} x_j && \text{(a constant factor comes out of a sum)} \\&= c\\ (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= (c\\ \mathbf{A}\tilde{x})\_i && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \end{aligned} \\
 >
 > The four algebra rules cited here are on the [algebra page](algebra.llms.md): [distributivity](algebra.llms.md#thm-mult-distr), [a sum of sums](algebra.llms.md#thm-sum-of-sums), [symmetry of products](algebra.llms.md#thm-prod-symmetric), and [a constant factor](algebra.llms.md#thm-sum-constant-factor).
 
@@ -679,11 +679,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. **Existence.** Let \\\mathbf{A}\\ be the \\m \times p\\ matrix with \\a\_{ij} = \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i\\. For any \\\tilde{x}\in \mathbb{R}^p\\,
 >
-> \\ \begin{aligned} f(\tilde{x}) &= f\mathopen{}\left(\sum\_{j=1}^{p} x_j \tilde{e}\_j\right)\mathclose{} && \text{(}\href{#thm-standard-basis-expansion}{\text{Theorem~3}}\text{)} \\&= \sum\_{j=1}^{p} x_j f(\tilde{e}\_j) && \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~13}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{x}) &= f\mathopen{}\left(\sum\_{j=1}^px_j \tilde{e}\_j\right)\mathclose{} && \text{(}\href{#thm-standard-basis-expansion}{\text{Theorem~3}}\text{)} \\&= \sum\_{j=1}^px_j f(\tilde{e}\_j) && \text{(}\href{#thm-linear-map-lincom}{\text{Theorem~13}}\text{)} \end{aligned} \\
 >
 > and entry \\i\\ of that sum is
 >
-> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^{p} x_j f(\tilde{e}\_j)\right)\mathclose{}\_i &= \sum\_{j=1}^{p} x_j \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i && \text{(}\href{#def-linear-combination}{\text{Definition~8}}\text{, entry by entry)} \\&= \sum\_{j=1}^{p} x_j a\_{ij} && \text{(definition of } \mathbf{A} \text{)} \\&= \sum\_{j=1}^{p} a\_{ij} x_j && \text{(products are symmetric)} \\&= (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^px_j f(\tilde{e}\_j)\right)\mathclose{}\_i &= \sum\_{j=1}^px_j \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i && \text{(}\href{#def-linear-combination}{\text{Definition~8}}\text{, entry by entry)} \\&= \sum\_{j=1}^px_j a\_{ij} && \text{(definition of } \mathbf{A} \text{)} \\&= \sum\_{j=1}^pa\_{ij} x_j && \text{(products are symmetric)} \\&= (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
 >
 > **Uniqueness.** Suppose \\\mathbf{B}\\ is any \\m \times p\\ matrix with \\f(\tilde{x}) = \mathbf{B}\tilde{x}\\ for all \\\tilde{x}\\. Taking \\\tilde{x}= \tilde{e}\_j\\, for each \\i\\:
 >
@@ -707,23 +707,23 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Corollary 1 (Linear functions from vectors to numbers)** A function \\f: \mathbb{R}^p \to \mathbb{R}\\ is linear ([Definition 30](#def-linear-map)) if and only if there is a vector \\\tilde{w} \in \mathbb{R}^p\\ such that
 >
-> \\f(\tilde{x}) = \tilde{w}^\top \tilde{x}\quad \text{for all } \tilde{x}\in \mathbb{R}^p\\
+> \\f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}\quad \text{for all } \tilde{x}\in \mathbb{R}^p\\
 >
 > and then \\w_j = f(\tilde{e}\_j)\\ for each \\j\\.
 
 > **NOTE:**
 >
-> *Proof*. **If \\f\\ is linear.** [Theorem 14](#thm-linear-map-matrix) with \\m = 1\\ gives a \\1 \times p\\ matrix \\\mathbf{A}\\ with \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ and \\a\_{1j} = f(\tilde{e}\_j)\\. Let \\\tilde{w}\\ be the vector with \\w_j = a\_{1j}\\, so that \\\mathbf{A} = \tilde{w}^\top\\. Then
+> *Proof*. **If \\f\\ is linear.** [Theorem 14](#thm-linear-map-matrix) with \\m = 1\\ gives a \\1 \times p\\ matrix \\\mathbf{A}\\ with \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ and \\a\_{1j} = f(\tilde{e}\_j)\\. Let \\\tilde{w}\\ be the vector with \\w_j = a\_{1j}\\, so that \\\mathbf{A} = \tilde{w}^{\top}\\. Then
 >
-> \\ \begin{aligned} f(\tilde{x}) &= \mathbf{A}\tilde{x} && \text{(}\href{#thm-linear-map-matrix}{\text{Theorem~14}}\text{)} \\&= \tilde{w}^\top \tilde{x} && (\mathbf{A} = \tilde{w}^\top) \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{x}) &= \mathbf{A}\tilde{x} && \text{(}\href{#thm-linear-map-matrix}{\text{Theorem~14}}\text{)} \\&= \tilde{w}^{\top} \tilde{x} && (\mathbf{A} = \tilde{w}^{\top}) \end{aligned} \\
 >
 > and \\w_j = a\_{1j} = f(\tilde{e}\_j)\\.
 >
-> **If \\f(\tilde{x}) = \tilde{w}^\top \tilde{x}\\.** Here \\\tilde{w}^\top\\ is a \\1 \times p\\ matrix, so \\f\\ is linear by [Theorem 12](#thm-matrix-map-linear).
+> **If \\f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}\\.** Here \\\tilde{w}^{\top}\\ is a \\1 \times p\\ matrix, so \\f\\ is linear by [Theorem 12](#thm-matrix-map-linear).
 
 > **NOTE:**
 >
-> **Example 27 (A linear function from \\\mathbb{R}^2\\ to \\\mathbb{R}\\)** \\f(\tilde{x}) = 3 x_1 + 5 x_2\\ is \\\tilde{w}^\top \tilde{x}\\ with \\\tilde{w} = {(3, 5)}^{\top}\\, so it is linear by [Corollary 1](#cor-linear-scalar). The entries of \\\tilde{w}\\ are the values at the indicator vectors: \\f(\tilde{e}\_1) = 3 \cdot 1 + 5 \cdot 0 = 3\\ and \\f(\tilde{e}\_2) = 3 \cdot 0 + 5 \cdot 1 = 5\\.
+> **Example 27 (A linear function from \\\mathbb{R}^2\\ to \\\mathbb{R}\\)** \\f(\tilde{x}) = 3 x_1 + 5 x_2\\ is \\\tilde{w}^{\top} \tilde{x}\\ with \\\tilde{w} = {(3, 5)}^{\top}\\, so it is linear by [Corollary 1](#cor-linear-scalar). The entries of \\\tilde{w}\\ are the values at the indicator vectors: \\f(\tilde{e}\_1) = 3 \cdot 1 + 5 \cdot 0 = 3\\ and \\f(\tilde{e}\_2) = 3 \cdot 0 + 5 \cdot 1 = 5\\.
 >
 > \\g(\tilde{x}) = 3 x_1 + 5 x_2 + 1\\ is not linear, because \\g(\tilde{0}) = 1 \neq 0\\ ([Theorem 11](#thm-linear-map-zero)).
 
@@ -758,9 +758,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > The vector \\\tilde{b}\\ is called the **offset** of \\f\\ (statistics also calls it the **intercept**, and machine learning the **bias**).
 >
-> For a real-valued function ([Definition 4](#def-real-vector-valued), \\m = 1\\), \\\mathbf{A}\\ is a single row, written \\\tilde{w}^\top\\, and \\\tilde{b}\\ is a single number \\b\\, so an affine function is a linear function \\\tilde{w}^\top \tilde{x}\\ ([Corollary 1](#cor-linear-scalar)) plus an offset:
+> For a real-valued function ([Definition 4](#def-real-vector-valued), \\m = 1\\), \\\mathbf{A}\\ is a single row, written \\\tilde{w}^{\top}\\, and \\\tilde{b}\\ is a single number \\b\\, so an affine function is a linear function \\\tilde{w}^{\top} \tilde{x}\\ ([Corollary 1](#cor-linear-scalar)) plus an offset:
 >
-> \\f(\tilde{x}) = \tilde{w}^\top \tilde{x}+ b, \qquad \tilde{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{4}\\
+> \\f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}+ b, \qquad \tilde{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{4}\\
 
 > **NOTE:**
 >
@@ -770,9 +770,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 29 (An affine function as a dot product with an augmented vector)** For \\\tilde{x}= {(2, 5)}^{\top}\\, the augmented vector is \\\tilde{\tilde{x}} = {(1, 2, 5)}^{\top}\\. With \\\tilde{w} = {(3, -1)}^{\top}\\ and \\b = 4\\, the affine function \\\tilde{w}^\top \tilde{x}+ b\\ ([Equation 4](#eq-linear-scalar)) equals the dot product of \\{(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\\ with \\\tilde{\tilde{x}}\\:
+> **Example 29 (An affine function as a dot product with an augmented vector)** For \\\tilde{x}= {(2, 5)}^{\top}\\, the augmented vector is \\\tilde{\tilde{x}} = {(1, 2, 5)}^{\top}\\. With \\\tilde{w} = {(3, -1)}^{\top}\\ and \\b = 4\\, the affine function \\\tilde{w}^{\top} \tilde{x}+ b\\ ([Equation 4](#eq-linear-scalar)) equals the dot product of \\{(b, w_1, w_2)}^{\top} = {(4, 3, -1)}^{\top}\\ with \\\tilde{\tilde{x}}\\:
 >
-> \\ \tilde{w}^\top \tilde{x}+ b = 3 \cdot 2 + (-1) \cdot 5 + 4 = 5, \qquad {(4, 3, -1)}^{\top} \cdot \tilde{\tilde{x}} = 4 \cdot 1 + 3 \cdot 2 + (-1) \cdot 5 = 5 \\
+> \\ \tilde{w}^{\top} \tilde{x}+ b = 3 \cdot 2 + (-1) \cdot 5 + 4 = 5, \qquad {(4, 3, -1)}^{\top} \cdot \tilde{\tilde{x}} = 4 \cdot 1 + 3 \cdot 2 + (-1) \cdot 5 = 5 \\
 
 > **NOTE:**
 >
@@ -782,7 +782,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Proof*. First, \\\mathbf{A}\tilde{0}= \tilde{0}\\: for each \\i\\,
 >
-> \\ \begin{aligned} (\mathbf{A}\tilde{0})\_i &= \sum\_{j=1}^{p} a\_{ij} \cdot 0 && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= \sum\_{j=1}^{p} 0 && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= 0 && \text{(a sum of zeros is } 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{A}\tilde{0})\_i &= \sum\_{j=1}^pa\_{ij} \cdot 0 && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= \sum\_{j=1}^p0 && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= 0 && \text{(a sum of zeros is } 0 \text{)} \end{aligned} \\
 >
 > Then
 >
@@ -820,7 +820,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Remark 12* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 30](#def-linear-map), so by [Theorem 16](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
 >
-> Machine learning and statistics often call any function of the form [Equation 4](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset \\b\\ the bias (machine learning) or the intercept (statistics), as [Definition 34](#def-affine-map) notes. A model with an intercept is affine in \\\tilde{x}\\ but linear in its coefficients \\(b, \tilde{w})\\, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: \\w_1 x + w_2 x^2 + b\\ is not affine in \\x\\, but it is linear in \\(b, w_1, w_2)\\. Separately, the affine function \\\tilde{w}^\top \tilde{x}+ b\\ is a linear function of the augmented vector \\\tilde{\tilde{x}}\\ ([Definition 35](#def-augmented-vector)), with \\b\\ as the coefficient on its first entry.
+> Machine learning and statistics often call any function of the form [Equation 4](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset \\b\\ the bias (machine learning) or the intercept (statistics), as [Definition 34](#def-affine-map) notes. A model with an intercept is affine in \\\tilde{x}\\ but linear in its coefficients \\(b, \tilde{w})\\, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: \\w_1 x + w_2 x^2 + b\\ is not affine in \\x\\, but it is linear in \\(b, w_1, w_2)\\. Separately, the affine function \\\tilde{w}^{\top} \tilde{x}+ b\\ is a linear function of the augmented vector \\\tilde{\tilde{x}}\\ ([Definition 35](#def-augmented-vector)), with \\b\\ as the coefficient on its first entry.
 
 > **TIP:**
 >
@@ -831,9 +831,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Definition 36 (Hyperplane)** A **hyperplane** in \\\mathbb{R}^p\\ is the set of points \\\tilde{x}\in \mathbb{R}^p\\ satisfying
 >
-> \\\tilde{w}^\top \tilde{x}+ b = 0\\
+> \\\tilde{w}^{\top} \tilde{x}+ b = 0\\
 >
-> for some vector \\\tilde{w} \in \mathbb{R}^p \setminus \\\tilde{0}\\\\ and number \\b \in \mathbb{R}\\. The vector \\\tilde{w}\\ is a **normal vector** of the hyperplane, and \\b\\ is its offset. When \\b = 0\\, the hyperplane contains the origin \\\tilde{0}\\, since \\\tilde{w}^\top \tilde{0}= 0\\.
+> for some vector \\\tilde{w} \in \mathbb{R}^p \setminus \\\tilde{0}\\\\ and number \\b \in \mathbb{R}\\. The vector \\\tilde{w}\\ is a **normal vector** of the hyperplane, and \\b\\ is its offset. When \\b = 0\\, the hyperplane contains the origin \\\tilde{0}\\, since \\\tilde{w}^{\top} \tilde{0}= 0\\.
 >
 > Geometrically:
 >
@@ -845,7 +845,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Example 31 (A line in \\\mathbb{R}^2\\, and why the normal vector must be nonzero)**  
 >
-> - With \\\tilde{w} = (1, 1)\\ and \\b = -1\\, the hyperplane in \\\mathbb{R}^2\\ is the line \\x_1 + x_2 - 1 = 0\\. The point \\(1, 0)\\ is on it, since \\1 + 0 - 1 = 0\\; the point \\(1, 1)\\ is not, since \\1 + 1 - 1 = 1 \> 0\\, so it lies in the half-space where \\\tilde{w}^\top \tilde{x}+ b \> 0\\.
+> - With \\\tilde{w} = (1, 1)\\ and \\b = -1\\, the hyperplane in \\\mathbb{R}^2\\ is the line \\x_1 + x_2 - 1 = 0\\. The point \\(1, 0)\\ is on it, since \\1 + 0 - 1 = 0\\; the point \\(1, 1)\\ is not, since \\1 + 1 - 1 = 1 \> 0\\, so it lies in the half-space where \\\tilde{w}^{\top} \tilde{x}+ b \> 0\\.
 > - With \\\tilde{w} = \tilde{0}\\, the equation reads \\b = 0\\: if \\b \ne 0\\ no point satisfies it, and if \\b = 0\\ every point does, so the set is empty or all of \\\mathbb{R}^2\\, not a line. That degenerate case is why the definition requires \\\tilde{w} \ne \tilde{0}\\.
 
 Show R code
@@ -972,11 +972,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\\tilde{w} = \begin{bmatrix} 0.4 \\ 0.2 \\ 1.5 \end{bmatrix}, \qquad b = -30\\
 >
-> and the rule is \\f(\tilde{x}) = \tilde{w}^\top \tilde{x} + b\\. For the patient,
+> and the rule is \\f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}+ b\\. For the patient,
 >
-> \\\tilde{x} = \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\\
+> \\\tilde{x}= \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}\\
 >
-> \\\tilde{w}^\top \tilde{x} = (0.4)(50) + (0.2)(130) + (1.5)(28) = 20 + 26 + 42 = 88\\
+> \\\tilde{w}^{\top} \tilde{x}= (0.4)(50) + (0.2)(130) + (1.5)(28) = 20 + 26 + 42 = 88\\
 >
 > \\f(\tilde{x}) = 88 - 30 = 58\\
 >
@@ -986,10 +986,10 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Exercise 6 (Which of these are affine in \\\tilde{w}\\?)** Each of the five expressions is a function of the weights \\\tilde{w} \in \mathbb{R}^p\\, with the data \\\tilde{x}\\ and \\y\\ held fixed. Say which ones are affine ([Definition 34](#def-affine-map)), that is, have the form [Equation 4](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 30](#def-linear-map)).
 >
-> 1.  \\\tilde{w}^\top \tilde{x}\\
-> 2.  \\\tilde{w}^\top \tilde{x} - y\\
-> 3.  \\(\tilde{w}^\top \tilde{x} - y)^2\\
-> 4.  \\\lVert \tilde{w} \rVert_2^2\\
+> 1.  \\\tilde{w}^{\top} \tilde{x}\\
+> 2.  \\\tilde{w}^{\top} \tilde{x}- y\\
+> 3.  \\(\tilde{w}^{\top} \tilde{x}- y)^2\\
+> 4.  \\\mathopen{}\left\lVert\tilde{w}\right\rVert\mathclose{}\_2^2\\
 > 5.  \\w_1 x_1 + 3\\
 
 > **NOTE:**
@@ -999,8 +999,8 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > 1.  **Affine, and linear.** It is [Equation 4](#eq-linear-scalar) with \\b = 0\\, which is a linear map by [Theorem 12](#thm-matrix-map-linear): the matrix \\{\tilde{x}}^{\top}\\ times \\\tilde{w}\\.
 > 2.  **Affine.** Still an inner product plus an offset; here the offset is \\b = -y\\, which is a constant because \\y\\ is held fixed. It is linear only when \\y = 0\\: otherwise \\\tilde{w} = \tilde{0}\\ gives \\-y \ne 0\\, and a linear map sends \\\tilde{0}\\ to \\0\\ ([Theorem 11](#thm-linear-map-zero)).
 > 3.  **Not affine.** Squaring is not an inner product plus an offset. This expression is the squared error of one observation, and its curvature in \\\tilde{w}\\ is exactly why fitting a model is an optimization problem rather than a lookup.
-> 4.  **Not affine.** By [Equation 2](#eq-l2-norm) this is \\\tilde{w}^\top \tilde{w}\\, which has \\\tilde{w}\\ in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable \\\tilde{w}\\ it is quadratic.
-> 5.  **Affine, not linear.** It is [Equation 4](#eq-linear-scalar) with coefficient vector \\\tilde{a} = (x_1, 0, \dots, 0)^\top\\ and \\b = 3\\; at \\\tilde{w} = \tilde{0}\\ it equals \\3 \ne 0\\, so it is not linear ([Theorem 11](#thm-linear-map-zero)). The data \\\tilde{x}\\ is untouched — \\\tilde{a}\\ is a new vector built from its first entry.
+> 4.  **Not affine.** By [Equation 2](#eq-l2-norm) this is \\\tilde{w}^{\top} \tilde{w}\\, which has \\\tilde{w}\\ in both slots at once. Hold either slot fixed and it is linear in the other; as a function of the single variable \\\tilde{w}\\ it is quadratic.
+> 5.  **Affine, not linear.** It is [Equation 4](#eq-linear-scalar) with coefficient vector \\\tilde{a}= (x_1, 0, \dots, 0)^{\top}\\ and \\b = 3\\; at \\\tilde{w} = \tilde{0}\\ it equals \\3 \ne 0\\, so it is not linear ([Theorem 11](#thm-linear-map-zero)). The data \\\tilde{x}\\ is untouched — \\\tilde{a}\\ is a new vector built from its first entry.
 >
 > Items 1, 2 and 5 are affine and items 3 and 4 are not, which is the split that matters: a *model* can be affine in its weights while the *quantity we minimize* is not. Squared error and the norm penalty are both curved in \\\tilde{w}\\, and that curvature is what makes fitting an optimization problem at all: there is always a downhill direction to follow. Curvature alone does not promise a *single* answer. The squared error of one observation is completely flat along a whole line of weight vectors, every one of which fits that observation exactly, and pinning down one of them is part of what the norm penalty is added for in week 3.
 
@@ -1680,7 +1680,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Theorem 39 (A hyperplane is a translated subspace of dimension \\p - 1\\)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^\top \tilde{x}+ b = 0\right\\\mathclose{}\\ be the hyperplane with normal vector \\\tilde{w}\\ and offset \\b\\ ([Definition 36](#def-hyperplane)), and let \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^\top \tilde{x}= 0\right\\\mathclose{}\\ be the hyperplane with the same normal vector and offset \\0\\.
+> **Theorem 39 (A hyperplane is a translated subspace of dimension \\p - 1\\)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b = 0\right\\\mathclose{}\\ be the hyperplane with normal vector \\\tilde{w}\\ and offset \\b\\ ([Definition 36](#def-hyperplane)), and let \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}= 0\right\\\mathclose{}\\ be the hyperplane with the same normal vector and offset \\0\\.
 >
 > 1.  \\\mathcal{H}\_0\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 40](#def-subspace)) of dimension \\p - 1\\ ([Definition 44](#def-dimension)).
 > 2.  \\\mathcal{H}\\ is not empty, and for any \\\tilde{x}\_0 \in \mathcal{H}\\, \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{H}\_0\right\\\mathclose{}\\, so \\\mathcal{H}\\ is an affine subspace ([Definition 49](#def-affine-subspace)).
@@ -1688,25 +1688,25 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Proof*. Here \\\tilde{w}^\top\\ is a \\1 \times p\\ matrix, and \\\tilde{w}^\top \tilde{x}= \tilde{w} \cdot \tilde{x}\\ ([Example 18](#exm-dot-product-matmul)).
+> *Proof*. Here \\\tilde{w}^{\top}\\ is a \\1 \times p\\ matrix, and \\\tilde{w}^{\top} \tilde{x}= \tilde{w} \cdot \tilde{x}\\ ([Example 18](#exm-dot-product-matmul)).
 >
-> **Part 1.** \\\mathcal{H}\_0\\ is the null space \\\mathcal{N}(\tilde{w}^\top)\\ ([Definition 46](#def-null-space)), so it is a subspace ([Theorem 32](#thm-null-space-subspace)). The \\p\\ columns of \\\tilde{w}^\top\\ are the numbers \\w_1, \ldots, w_p\\. Some \\w_j \ne 0\\, because \\\tilde{w} \ne \tilde{0}\\, and that column on its own is linearly independent (\\c\\w_j = 0\\ forces \\c = 0\\), so \\\operatorname{rank}(\tilde{w}^\top) \ge 1\\ ([Definition 38](#def-rank)); and \\\operatorname{rank}(\tilde{w}^\top) \le \min\mathopen{}\left\\1, p\right\\\mathclose{} = 1\\ ([Corollary 3](#cor-rank-bound)). So
+> **Part 1.** \\\mathcal{H}\_0\\ is the null space \\\mathcal{N}(\tilde{w}^{\top})\\ ([Definition 46](#def-null-space)), so it is a subspace ([Theorem 32](#thm-null-space-subspace)). The \\p\\ columns of \\\tilde{w}^{\top}\\ are the numbers \\w_1, \ldots, w_p\\. Some \\w_j \ne 0\\, because \\\tilde{w} \ne \tilde{0}\\, and that column on its own is linearly independent (\\c\\w_j = 0\\ forces \\c = 0\\), so \\\operatorname{rank}(\tilde{w}^{\top}) \ge 1\\ ([Definition 38](#def-rank)); and \\\operatorname{rank}(\tilde{w}^{\top}) \le \min\mathopen{}\left\\1, p\right\\\mathclose{} = 1\\ ([Corollary 3](#cor-rank-bound)). So
 >
-> \\ \begin{aligned} \dim(\mathcal{H}\_0) &= \operatorname{nullity}(\tilde{w}^\top) && \text{(}\href{#def-nullity}{\text{Definition~48}}\text{)} \\ &= p - \operatorname{rank}(\tilde{w}^\top) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~36}}\text{, for the } p \text{ columns of } \tilde{w}^\top \text{)} \\ &= p - 1. && \text{(the rank is } 1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \dim(\mathcal{H}\_0) &= \operatorname{nullity}(\tilde{w}^{\top}) && \text{(}\href{#def-nullity}{\text{Definition~48}}\text{)} \\ &= p - \operatorname{rank}(\tilde{w}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~36}}\text{, for the } p \text{ columns of } \tilde{w}^{\top} \text{)} \\ &= p - 1. && \text{(the rank is } 1 \text{)} \end{aligned} \\
 >
 > **Part 2.** \\\tilde{w} \cdot \tilde{w} = w_1^2 + \cdots + w_p^2 \> 0\\, because some \\w_j \ne 0\\. So \\\tilde{x}^\* \stackrel{\text{def}}{=}-\frac{b}{\tilde{w} \cdot \tilde{w}}\\\tilde{w}\\ is defined, and
 >
-> \\ \begin{aligned} \tilde{w}^\top \tilde{x}^\* + b &= -\frac{b}{\tilde{w} \cdot \tilde{w}}\\(\tilde{w}^\top \tilde{w}) + b && \text{(homogeneity of } \tilde{x}\mapsto \tilde{w}^\top \tilde{x}\text{, }\href{#thm-matrix-map-linear}{\text{Theorem~12}}\text{)} \\ &= -b + b && \text{(} \tilde{w}^\top \tilde{w} = \tilde{w} \cdot \tilde{w} \text{)} \\ &= 0, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w}^{\top} \tilde{x}^\* + b &= -\frac{b}{\tilde{w} \cdot \tilde{w}}\\(\tilde{w}^{\top} \tilde{w}) + b && \text{(homogeneity of } \tilde{x}\mapsto \tilde{w}^{\top} \tilde{x}\text{, }\href{#thm-matrix-map-linear}{\text{Theorem~12}}\text{)} \\ &= -b + b && \text{(} \tilde{w}^{\top} \tilde{w} = \tilde{w} \cdot \tilde{w} \text{)} \\ &= 0, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{x}^\* \in \mathcal{H}\\, and \\\mathcal{H}\\ is not empty. Now take any \\\tilde{x}\_0 \in \mathcal{H}\\, so \\\tilde{w}^\top \tilde{x}\_0 = -b\\. For any \\\tilde{x}\in \mathbb{R}^p\\,
+> so \\\tilde{x}^\* \in \mathcal{H}\\, and \\\mathcal{H}\\ is not empty. Now take any \\\tilde{x}\_0 \in \mathcal{H}\\, so \\\tilde{w}^{\top} \tilde{x}\_0 = -b\\. For any \\\tilde{x}\in \mathbb{R}^p\\,
 >
-> \\ \begin{aligned} \tilde{w}^\top (\tilde{x}- \tilde{x}\_0) &= \tilde{w}^\top \tilde{x}- \tilde{w}^\top \tilde{x}\_0 && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \tilde{w}^\top \tilde{x}- (-b) && \text{(} \tilde{x}\_0 \in \mathcal{H} \text{)} \\ &= \tilde{w}^\top \tilde{x}+ b, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w}^{\top} (\tilde{x}- \tilde{x}\_0) &= \tilde{w}^{\top} \tilde{x}- \tilde{w}^{\top} \tilde{x}\_0 && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \tilde{w}^{\top} \tilde{x}- (-b) && \text{(} \tilde{x}\_0 \in \mathcal{H} \text{)} \\ &= \tilde{w}^{\top} \tilde{x}+ b, && \text{(arithmetic)} \end{aligned} \\
 >
 > so \\\tilde{x}\in \mathcal{H}\\ exactly when \\\tilde{x}- \tilde{x}\_0 \in \mathcal{H}\_0\\, that is, exactly when \\\tilde{x}= \tilde{x}\_0 + \tilde{s}\\ with \\\tilde{s} = \tilde{x}- \tilde{x}\_0 \in \mathcal{H}\_0\\. \\\mathcal{H}\_0\\ is a subspace (part 1), so \\\mathcal{H}\\ has the form in [Definition 49](#def-affine-subspace).
 >
-> **Part 3.** For \\\tilde{x}, \tilde{y}\in \mathcal{H}\\, both \\\tilde{w}^\top \tilde{x}\\ and \\\tilde{w}^\top \tilde{y}\\ equal \\-b\\, so
+> **Part 3.** For \\\tilde{x}, \tilde{y}\in \mathcal{H}\\, both \\\tilde{w}^{\top} \tilde{x}\\ and \\\tilde{w}^{\top} \tilde{y}\\ equal \\-b\\, so
 >
-> \\ \begin{aligned} \tilde{w} \cdot (\tilde{x}- \tilde{y}) &= \tilde{w}^\top \tilde{x}- \tilde{w}^\top \tilde{y} && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= (-b) - (-b) && \text{(} \tilde{x}, \tilde{y}\in \mathcal{H} \text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w} \cdot (\tilde{x}- \tilde{y}) &= \tilde{w}^{\top} \tilde{x}- \tilde{w}^{\top} \tilde{y} && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= (-b) - (-b) && \text{(} \tilde{x}, \tilde{y}\in \mathcal{H} \text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1719,19 +1719,19 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Definition 50 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^\top \tilde{x}+ b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 36](#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
+> **Definition 50 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 36](#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
 >
-> \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^\top \tilde{x}+ b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^\top \tilde{x}+ b \< 0\right\\\mathclose{}. \tag{5}\\
+> \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b \< 0\right\\\mathclose{}. \tag{5}\\
 >
-> The **closed half-spaces** also include \\\mathcal{H}\\ itself: \\\mathcal{H}^+ \cup \mathcal{H}\\ and \\\mathcal{H}^- \cup \mathcal{H}\\. Every point of \\\mathbb{R}^p\\ is in exactly one of \\\mathcal{H}^+\\, \\\mathcal{H}\\ and \\\mathcal{H}^-\\, because the number \\\tilde{w}^\top \tilde{x}+ b\\ is positive, zero or negative. The vector \\\tilde{w}\\ points into \\\mathcal{H}^+\\: the number \\\tilde{w}^\top \tilde{x}+ b\\ goes up when \\\tilde{x}\\ moves in the direction \\\tilde{w}\\.
+> The **closed half-spaces** also include \\\mathcal{H}\\ itself: \\\mathcal{H}^+ \cup \mathcal{H}\\ and \\\mathcal{H}^- \cup \mathcal{H}\\. Every point of \\\mathbb{R}^p\\ is in exactly one of \\\mathcal{H}^+\\, \\\mathcal{H}\\ and \\\mathcal{H}^-\\, because the number \\\tilde{w}^{\top} \tilde{x}+ b\\ is positive, zero or negative. The vector \\\tilde{w}\\ points into \\\mathcal{H}^+\\: the number \\\tilde{w}^{\top} \tilde{x}+ b\\ goes up when \\\tilde{x}\\ moves in the direction \\\tilde{w}\\.
 
 > **NOTE:**
 >
-> *Remark*. Replacing \\(\tilde{w}, b)\\ by \\(-\tilde{w}, -b)\\ describes the same hyperplane but swaps the names \\\mathcal{H}^+\\ and \\\mathcal{H}^-\\. The sign of \\\tilde{w}^\top \tilde{x}+ b\\ tells you which side of the hyperplane \\\tilde{x}\\ is on. A linear classifier uses this sign to assign one of two labels.
+> *Remark*. Replacing \\(\tilde{w}, b)\\ by \\(-\tilde{w}, -b)\\ describes the same hyperplane but swaps the names \\\mathcal{H}^+\\ and \\\mathcal{H}^-\\. The sign of \\\tilde{w}^{\top} \tilde{x}+ b\\ tells you which side of the hyperplane \\\tilde{x}\\ is on. A linear classifier uses this sign to assign one of two labels.
 
 > **NOTE:**
 >
-> **Example 68 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\tilde{w} = (1, 2)\\ and \\b = -2\\ ([Definition 36](#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\tilde{w}^\top \tilde{x}+ b\\ at three points ([Definition 50](#def-half-space)):
+> **Example 68 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\tilde{w} = (1, 2)\\ and \\b = -2\\ ([Definition 36](#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\tilde{w}^{\top} \tilde{x}+ b\\ at three points ([Definition 50](#def-half-space)):
 >
 > - At \\(0, 0)\\ it equals \\0 + 0 - 2 = -2 \< 0\\, so \\(0, 0) \in \mathcal{H}^-\\.
 > - At \\(2, 0)\\ it equals \\2 + 0 - 2 = 0\\, so \\(2, 0) \in \mathcal{H}\\.
@@ -1743,30 +1743,30 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Theorem 40 (Differences of points in a hyperplane and in a half-space)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, and let \\\mathcal{H}\\, \\\mathcal{H}^+\\ be the hyperplane and open half-space of [Definition 50](#def-half-space). For a set \\S \subseteq \mathbb{R}^p\\, let \\D(S) \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{y}- \tilde{x}: \tilde{x}, \tilde{y}\in S\right\\\mathclose{}\\ be the set of differences of its points.
 >
-> 1.  \\D(\mathcal{H}) = \mathopen{}\left\\\tilde{s} : \tilde{w}^\top \tilde{s} = 0\right\\\mathclose{}\\, a subspace of dimension \\p - 1\\.
+> 1.  \\D(\mathcal{H}) = \mathopen{}\left\\\tilde{s} : \tilde{w}^{\top} \tilde{s} = 0\right\\\mathclose{}\\, a subspace of dimension \\p - 1\\.
 > 2.  \\D(\mathcal{H}^+) = \mathbb{R}^p\\, a subspace of dimension \\p\\.
 >
 > The same holds for \\\mathcal{H}^-\\.
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** Let \\\tilde{x}, \tilde{y}\in \mathcal{H}\\. By [Theorem 39](#thm-hyperplane-subspace) part 3, \\\tilde{w} \cdot (\tilde{y}- \tilde{x}) = 0\\, so \\\tilde{y}- \tilde{x}\in \mathcal{H}\_0 = \mathopen{}\left\\\tilde{s} : \tilde{w}^\top \tilde{s} = 0\right\\\mathclose{}\\. Conversely, fix any \\\tilde{x}\_0 \in \mathcal{H}\\ (it exists by [Theorem 39](#thm-hyperplane-subspace) part 2). For any \\\tilde{s} \in \mathcal{H}\_0\\, the point \\\tilde{x}\_0 + \tilde{s}\\ is in \\\mathcal{H}\\ by the same part, and \\(\tilde{x}\_0 + \tilde{s}) - \tilde{x}\_0 = \tilde{s}\\. So \\D(\mathcal{H}) = \mathcal{H}\_0\\, which has dimension \\p - 1\\ by [Theorem 39](#thm-hyperplane-subspace) part 1.
+> *Proof*. **Part 1.** Let \\\tilde{x}, \tilde{y}\in \mathcal{H}\\. By [Theorem 39](#thm-hyperplane-subspace) part 3, \\\tilde{w} \cdot (\tilde{y}- \tilde{x}) = 0\\, so \\\tilde{y}- \tilde{x}\in \mathcal{H}\_0 = \mathopen{}\left\\\tilde{s} : \tilde{w}^{\top} \tilde{s} = 0\right\\\mathclose{}\\. Conversely, fix any \\\tilde{x}\_0 \in \mathcal{H}\\ (it exists by [Theorem 39](#thm-hyperplane-subspace) part 2). For any \\\tilde{s} \in \mathcal{H}\_0\\, the point \\\tilde{x}\_0 + \tilde{s}\\ is in \\\mathcal{H}\\ by the same part, and \\(\tilde{x}\_0 + \tilde{s}) - \tilde{x}\_0 = \tilde{s}\\. So \\D(\mathcal{H}) = \mathcal{H}\_0\\, which has dimension \\p - 1\\ by [Theorem 39](#thm-hyperplane-subspace) part 1.
 >
 > **Part 2.** Every difference is in \\\mathbb{R}^p\\, so \\D(\mathcal{H}^+) \subseteq \mathbb{R}^p\\. For the other direction, fix any \\\tilde{x}\_0 \in \mathcal{H}\\ and any \\\tilde{v} \in \mathbb{R}^p\\. For a number \\t \> 0\\ to be chosen, let \\\tilde{x}\_t \stackrel{\text{def}}{=}\tilde{x}\_0 + t\\\tilde{w}\\. Then
 >
-> \\ \begin{aligned} \tilde{w}^\top \tilde{x}\_t + b &= \mathopen{}\left(\tilde{w}^\top \tilde{x}\_0 + b\right)\mathclose{} + t\\\tilde{w}^\top \tilde{w} && \text{(linearity of } \tilde{x}\mapsto \tilde{w}^\top \tilde{x}\text{)} \\ &= t\\\tilde{w}^\top \tilde{w}, && \text{(} \tilde{x}\_0 \in \mathcal{H} \text{)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w}^{\top} \tilde{x}\_t + b &= \mathopen{}\left(\tilde{w}^{\top} \tilde{x}\_0 + b\right)\mathclose{} + t\\\tilde{w}^{\top} \tilde{w} && \text{(linearity of } \tilde{x}\mapsto \tilde{w}^{\top} \tilde{x}\text{)} \\ &= t\\\tilde{w}^{\top} \tilde{w}, && \text{(} \tilde{x}\_0 \in \mathcal{H} \text{)} \end{aligned} \\
 >
 > which is positive, so \\\tilde{x}\_t \in \mathcal{H}^+\\. Next,
 >
-> \\ \begin{aligned} \tilde{w}^\top (\tilde{x}\_t + \tilde{v}) + b &= \mathopen{}\left(\tilde{w}^\top \tilde{x}\_t + b\right)\mathclose{} + \tilde{w}^\top \tilde{v} && \text{(linearity of } \tilde{x}\mapsto \tilde{w}^\top \tilde{x}\text{)} \\ &= t\\\tilde{w}^\top \tilde{w} + \tilde{w}^\top \tilde{v}. && \text{(the display above)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w}^{\top} (\tilde{x}\_t + \tilde{v}) + b &= \mathopen{}\left(\tilde{w}^{\top} \tilde{x}\_t + b\right)\mathclose{} + \tilde{w}^{\top} \tilde{v} && \text{(linearity of } \tilde{x}\mapsto \tilde{w}^{\top} \tilde{x}\text{)} \\ &= t\\\tilde{w}^{\top} \tilde{w} + \tilde{w}^{\top} \tilde{v}. && \text{(the display above)} \end{aligned} \\
 >
-> Because \\\tilde{w}^\top \tilde{w} \> 0\\, this is positive once \\t \> -\tilde{w}^\top \tilde{v} / \tilde{w}^\top \tilde{w}\\. Choose such a \\t \> 0\\. Then \\\tilde{x}\_t\\ and \\\tilde{x}\_t + \tilde{v}\\ are both in \\\mathcal{H}^+\\, and their difference is \\\tilde{v}\\. So \\\tilde{v} \in D(\mathcal{H}^+)\\. The whole space \\\mathbb{R}^p\\ is a subspace of dimension \\p\\ ([Definition 44](#def-dimension)).
+> Because \\\tilde{w}^{\top} \tilde{w} \> 0\\, this is positive once \\t \> -\tilde{w}^{\top} \tilde{v} / \tilde{w}^{\top} \tilde{w}\\. Choose such a \\t \> 0\\. Then \\\tilde{x}\_t\\ and \\\tilde{x}\_t + \tilde{v}\\ are both in \\\mathcal{H}^+\\, and their difference is \\\tilde{v}\\. So \\\tilde{v} \in D(\mathcal{H}^+)\\. The whole space \\\mathbb{R}^p\\ is a subspace of dimension \\p\\ ([Definition 44](#def-dimension)).
 >
 > The proof for \\\mathcal{H}^-\\ is the same with \\-\tilde{w}\\ and \\-b\\ in place of \\\tilde{w}\\ and \\b\\.
 
 > **NOTE:**
 >
-> **Example 69 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\tilde{x}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\tilde{x}\\ gives a coefficient vector \\\tilde{w}\\ and an intercept \\b\\. The line \\\tilde{w}^\top \tilde{x}+ b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 36](#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 50](#def-half-space)). [Figure 2](#fig-half-space-iris) shows the line and the flowers.
+> **Example 69 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\tilde{x}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\tilde{x}\\ gives a coefficient vector \\\tilde{w}\\ and an intercept \\b\\. The line \\\tilde{w}^{\top} \tilde{x}+ b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 36](#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 50](#def-half-space)). [Figure 2](#fig-half-space-iris) shows the line and the flowers.
 >
 > Show R code
 >
@@ -1816,7 +1816,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > *Solution 7*.
 >
-> 1.  Compute \\\tilde{w}^\top \tilde{x}+ b = x_1 + x_2 + x_3 - 1\\ at each point.
+> 1.  Compute \\\tilde{w}^{\top} \tilde{x}+ b = x_1 + x_2 + x_3 - 1\\ at each point.
 >
 >     - At \\(0, 0, 0)\\ it equals \\0 + 0 + 0 - 1 = -1 \< 0\\, so the point is in \\\mathcal{H}^-\\.
 >     - At \\(1, 0, 0)\\ it equals \\1 + 0 + 0 - 1 = 0\\, so the point is in \\\mathcal{H}\\.
@@ -3144,11 +3144,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > **Theorem 68 (The matrix inner product multiplies matching entries)** For two \\n \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\:
 >
-> \\ \left\langle \mathbf{A}, \mathbf{B} \right\rangle = \sum\_{i=1}^{n} \sum\_{j=1}^{p} a\_{ij}\\ b\_{ij} \\
+> \\ \left\langle \mathbf{A}, \mathbf{B} \right\rangle = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}\\ b\_{ij} \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \left\langle \mathbf{A}, \mathbf{B} \right\rangle &= \operatorname{tr}({\mathbf{A}}^{\top}\mathbf{B}) && \text{(definition of the inner product)} \\ &= \sum\_{j=1}^{p} ({\mathbf{A}}^{\top}\mathbf{B})\_{jj} && \text{(definition of the trace)} \\ &= \sum\_{j=1}^{p} \sum\_{i=1}^{n} ({\mathbf{A}}^{\top})\_{ji}\\ b\_{ij} && \text{(definition of matrix multiplication)} \\ &= \sum\_{j=1}^{p} \sum\_{i=1}^{n} a\_{ij}\\ b\_{ij} && \text{(definition of the transpose)} \\ &= \sum\_{i=1}^{n} \sum\_{j=1}^{p} a\_{ij}\\ b\_{ij} && \text{(swap the order of two finite sums)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \left\langle \mathbf{A}, \mathbf{B} \right\rangle &= \operatorname{tr}({\mathbf{A}}^{\top}\mathbf{B}) && \text{(definition of the inner product)} \\ &= \sum\_{j=1}^p({\mathbf{A}}^{\top}\mathbf{B})\_{jj} && \text{(definition of the trace)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^n({\mathbf{A}}^{\top})\_{ji}\\ b\_{ij} && \text{(definition of matrix multiplication)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}\\ b\_{ij} && \text{(definition of the transpose)} \\ &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}\\ b\_{ij} && \text{(swap the order of two finite sums)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3188,7 +3188,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 27* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 68](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^{n} \sum\_{j=1}^{p} a\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 14](#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
+> *Remark 27* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 68](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 14](#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
 >
 > For example, listing the entries of \\\mathbf{A}\\ in [Example 131](#exm-frobenius-norm) row by row gives the vector \\(1, 2, 3, 4)\\ of length \\2 \cdot 2 = 4\\, and \\\mathopen{}\left\lVert(1, 2, 3, 4)\right\rVert\mathclose{} = \sqrt{1 + 4 + 9 + 16} = \sqrt{30} = \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\.
 
@@ -3569,9 +3569,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 > - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{#thm-transpose-sum}{\text{Theorem~18}}\text{, }\href{#def-scalar-mult}{\text{Definition~23}}\text{, }\href{#def-matrix-transpose}{\text{Definition~20}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{#thm-matmul-distrib}{\text{Theorem~9}}\text{)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\mathbf{A}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 > - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \left\langle \tilde{y}, \tilde{x} \right\rangle\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{#thm-transpose-product}{\text{Theorem~19}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 >
-> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^p x_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^p y_j\\\tilde{e}\_j\\ ([Definition 42](#def-basis), [Definition 12](#def-indicator-vector)). By linearity in both slots ([Remark 15](#rem-inner-product-other-sources)):
+> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^p x_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 42](#def-basis), [Definition 12](#def-indicator-vector)). By linearity in both slots ([Remark 15](#rem-inner-product-other-sources)):
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^p x_i\\\tilde{e}\_i, \sum\_{j=1}^p y_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p \sum\_{j=1}^p x_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^p x_i \sum\_{j=1}^p A\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^p x_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p \sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^p x_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
 >
 > Symmetry of \\\left\langle \cdot, \cdot \right\rangle\\ ensures \\A\_{ji} = \left\langle \tilde{e}\_j, \tilde{e}\_i \right\rangle = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle = A\_{ij}\\, so \\\mathbf{A}\\ is symmetric ([Definition 67](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}= \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 84](#def-positive-definite)).
 >
@@ -3618,7 +3618,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 > **Definition 86 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
-> - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p (-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
+> - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -4475,7 +4475,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > **If \\\lambda\\ is a diagonal entry,** let \\k\\ be the smallest index with \\u\_{kk} = \lambda\\, and write \\\mathbf{M} = \mathbf{U} - \lambda\\\mathbf{I}\_p\\, so \\m\_{kk} = 0\\ and \\m\_{ii} \ne 0\\ for \\i \< k\\. Look for \\\tilde{v}\\ with \\v_k = 1\\ and \\v_j = 0\\ for \\j \> k\\. Entry \\i\\ of \\\mathbf{M} \tilde{v}\\ is
 >
-> \\ \begin{aligned} \sum\_{j=1}^{p} m\_{ij}\\v_j &= \sum\_{j=i}^{p} m\_{ij}\\v_j && \text{(} m\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= \sum\_{j=i}^{k} m\_{ij}\\v_j, && \text{(} v_j = 0 \text{ for } j \> k \text{)} \end{aligned} \\
+> \\ \begin{aligned} \sum\_{j=1}^pm\_{ij}\\v_j &= \sum\_{j=i}^{p} m\_{ij}\\v_j && \text{(} m\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= \sum\_{j=i}^{k} m\_{ij}\\v_j, && \text{(} v_j = 0 \text{ for } j \> k \text{)} \end{aligned} \\
 >
 > where the last sum is empty, and so \\0\\, when \\i \> k\\. So:
 >
@@ -4741,7 +4741,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. \\\mathbf{X}\_k\\ is symmetric, because \\\mathbf{X}\\ is. For \\\tilde{u} \in \mathbb{R}^k\\ with \\\tilde{u} \ne \tilde{0}\\, let \\\tilde{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \mathbb{R}^p\\, which is nonzero, with entries \\y_i = u_i\\ for \\i \le k\\ and \\y_i = 0\\ for \\i \> k\\. Then
 >
-> \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} y_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^py_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{, }\href{#def-dot-product}{\text{Definition~7}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
 >
 > For the diagonal entry \\x\_{ii}\\, take \\\tilde{e}\_i\\ ([Definition 12](#def-indicator-vector)), which is nonzero:
 >
@@ -4951,7 +4951,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > **Theorem 114 (\\\tilde{z}^{\mathsf{H}}\tilde{z}\\ is a sum of squared absolute values)** For every \\\tilde{z} \in \mathbb{C}^p\\,
 >
-> \\\underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times p}\\\underbrace{\tilde{z}}\_{p \times 1} = \sum\_{j=1}^{p} \mathopen{}\left\|z_j\right\|\mathclose{}^2,\\
+> \\\underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times p}\\\underbrace{\tilde{z}}\_{p \times 1} = \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2,\\
 >
 > which is a nonnegative real number, and is \\0\\ only when \\\tilde{z} = \tilde{0}\_{p \times 1}\\.
 
@@ -4959,7 +4959,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. The last step uses the [identity for a complex number times its conjugate](algebra.llms.md#thm-conj-product).
 >
-> \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^{p} \overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~102}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^{p} z_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^{p} \mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^p\overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~102}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^pz_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
 >
 > By the definition of the [absolute value](algebra.llms.md#def-complex-modulus), each \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2\\ is a nonnegative real number, so their sum is too. A sum of nonnegative numbers is \\0\\ only when every term is \\0\\, and \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = 0\\ only when \\\operatorname{Re} z_j = \operatorname{Im} z_j = 0\\, that is, when \\z_j = 0\\.
 
@@ -4975,7 +4975,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 202 (Why complex vectors use the conjugate transpose)** For a real vector \\\tilde{x}\\, \\{\tilde{x}}^{\top}\tilde{x}= \sum\_{j=1}^{p} x_j^2\\ is \\0\\ only when \\\tilde{x}\\ is the zero vector. The same formula fails for complex vectors. Let \\\tilde{z} = {(1, i)}^{\top}\\. Then
+> **Example 202 (Why complex vectors use the conjugate transpose)** For a real vector \\\tilde{x}\\, \\{\tilde{x}}^{\top}\tilde{x}= \sum\_{j=1}^px_j^2\\ is \\0\\ only when \\\tilde{x}\\ is the zero vector. The same formula fails for complex vectors. Let \\\tilde{z} = {(1, i)}^{\top}\\. Then
 >
 > \\ \begin{aligned} \underbrace{{\tilde{z}}^{\top}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= 1 \cdot 1 + i \cdot i && \text{(multiply entry by entry and add)} \\ &= 1 + i^2 && \text{(multiply)} \\ &= 0 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
 >

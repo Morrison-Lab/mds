@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 13:29:17 (PDT)
+Last modified: 2026-10-08 14:38:49 (PDT)
 
 ## 1 Equalities
 
@@ -322,7 +322,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Theorem 8 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^{n} w_i = 1\\. Then \\ f\left(\sum\_{i=1}^{n} w_i x_i\right) \le \sum\_{i=1}^{n} w_i f(x_i). \\
+> **Theorem 8 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^nw_i = 1\\. Then \\ f\left(\sum\_{i=1}^nw_i x_i\right) \le \sum\_{i=1}^nw_i f(x_i). \\
 
 > **NOTE:**
 >
@@ -330,7 +330,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > For \\n = 1\\ the weight is \\w_1 = 1\\, and both sides equal \\f(x_1)\\.
 >
-> Now let \\n \ge 2\\, and assume the inequality holds for \\n - 1\\ points. If \\w_n = 1\\, the other weights are all \\0\\, and both sides equal \\f(x_n)\\. Otherwise let \\s = 1 - w_n = \sum\_{i=1}^{n-1} w_i \> 0\\ and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^{n} w_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\left(\sum\_{i=1}^{n} w_i x_i\right) = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^{n} w_i f(x_i). \\
+> Now let \\n \ge 2\\, and assume the inequality holds for \\n - 1\\ points. If \\w_n = 1\\, the other weights are all \\0\\, and both sides equal \\f(x_n)\\. Otherwise let \\s = 1 - w_n = \sum\_{i=1}^{n-1} w_i \> 0\\ and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^nw_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\left(\sum\_{i=1}^nw_i x_i\right) = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^nw_i f(x_i). \\
 
 > **NOTE:**
 >
@@ -598,7 +598,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^{n} a_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
+> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^na_i\\ and \\\sum\_{j=1}^{n} a_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
 
 > **NOTE:**
 >

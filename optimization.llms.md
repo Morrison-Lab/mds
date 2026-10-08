@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 13:29:17 (PDT)
+Last modified: 2026-10-08 14:38:49 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -100,7 +100,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >     index=["solution", "zero vector"],
 > )
 > #>                                                   beta                                        gradient
-> #> solution     [39.93586102117057, -0.15784473335365445]  [9.471534667682135e-12, 6.662048690486699e-11]
+> #> solution     [39.935861021170574, -0.1578447333536545]  [1.071498445526231e-11, 1.673470251262188e-10]
 > #> zero vector                                 [0.0, 0.0]               [-18381.600000000006, -1737437.6]
 > ```
 >
@@ -137,7 +137,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -156,7 +156,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -180,11 +180,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. Let \\g(t) \stackrel{\text{def}}{=}f(\tilde{z} + t \tilde{h})\\ for \\t \in \mathbb{R}\\, the values of \\f\\ along the line through \\\tilde{z}\\ in the direction \\\tilde{h}\\. The [inner function](sets-functions.llms.md#def-composition) \\\tilde{y}(t) = \tilde{z} + t \tilde{h}\\ has entries \\y_j = z_j + t h_j\\, so \\\frac{\partial}{\partial t} y_j = h_j\\, and its derivative ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)) is the \\1 \times p\\ matrix \\{\tilde{h}}^{\top}\\. By the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec), with its input \\t\\ of length \\1\\, its inner function \\\tilde{y}(t) = \tilde{z} + t \tilde{h}\\, and its outer function \\f\\),
 >
-> \\ \begin{aligned} g'(t) &= {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h}) && \text{(vector chain rule)} \\ &= \sum\_{j=1}^{p} h_j\\\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}). && \text{(matrix product)} \end{aligned} \\
+> \\ \begin{aligned} g'(t) &= {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z} + t \tilde{h}) && \text{(vector chain rule)} \\ &= \sum\_{j=1}^ph_j\\\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h}). && \text{(matrix product)} \end{aligned} \\
 >
 > The second step writes out the [matrix product](linear-algebra.llms.md#def-matrix-mult). \\g'\\ is continuous ([continuity](vector-calculus.llms.md#def-continuous-several)): \\t \mapsto \tilde{z} + t \tilde{h}\\ is continuous, since \\\mathopen{}\left\lVert(\tilde{z} + s \tilde{h}) - (\tilde{z} + t \tilde{h})\right\rVert\mathclose{} = \mathopen{}\left\|s - t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}\\, each \\\frac{\partial}{\partial x_j} f\\ is continuous by assumption, and compositions, sums and constant multiples of continuous functions are continuous. Each \\\frac{\partial}{\partial x_j} f\\ has continuous partial derivatives, the second partial derivatives of \\f\\, so the same chain-rule computation applies to it: \\\frac{\partial}{\partial t} \mathopen{}\left\[\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right\]\mathclose{} = \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{}\\. So
 >
-> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^{p} h_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(definition of the Hessian; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
+> \\ \begin{aligned} g''(t) &= \sum\_{j=1}^ph_j \sum\_{i=1}^{p} h_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^{p} \sum\_{j=1}^ph_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(definition of the Hessian; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
 >
 > The last step is again the [matrix product](linear-algebra.llms.md#def-matrix-mult). Now apply [Theorem 3](#thm-taylor-1d) to \\g\\ on \\\[0, 1\]\\: there is a \\\tau \in (0, 1)\\ with
 >
@@ -235,7 +235,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. Let \\\tilde{a} \stackrel{\text{def}}{=}{(\mathopen{}\left\|h_1\right\|\mathclose{}, \ldots, \mathopen{}\left\|h_p\right\|\mathclose{})}^{\top}\\ and \\\tilde{1} \stackrel{\text{def}}{=}{(1, \ldots, 1)}^{\top}\\, both in \\\mathbb{R}^p\\. Then
 >
-> \\ \begin{aligned} \mathopen{}\left\|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right\|\mathclose{} &= \mathopen{}\left\|\sum\_{i=1}^{p} \sum\_{j=1}^{p} h_i\\e\_{ij}\\h_j\right\|\mathclose{} && \text{(matrix product)} \\ &\le \sum\_{i=1}^{p} \sum\_{j=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|e\_{ij}\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le m \sum\_{i=1}^{p} \sum\_{j=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(} \mathopen{}\left\|e\_{ij}\right\|\mathclose{} \le m \text{)} \\ &= m\\\mathopen{}\left(\sum\_{i=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\right)\mathclose{}^2 && \text{(the double sum factors)} \\ &= m\\(\tilde{1} \cdot \tilde{a})^2 && \text{(dot product)} \\ &\le m\\\mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 && \text{(Cauchy-Schwarz, squared)} \\ &= m\\p\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(} \mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2 = p \text{ and } \mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 = \textstyle\sum_i h_i^2 = \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right\|\mathclose{} &= \mathopen{}\left\|\sum\_{i=1}^{p} \sum\_{j=1}^ph_i\\e\_{ij}\\h_j\right\|\mathclose{} && \text{(matrix product)} \\ &\le \sum\_{i=1}^{p} \sum\_{j=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|e\_{ij}\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le m \sum\_{i=1}^{p} \sum\_{j=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(} \mathopen{}\left\|e\_{ij}\right\|\mathclose{} \le m \text{)} \\ &= m\\\mathopen{}\left(\sum\_{i=1}^{p} \mathopen{}\left\|h_i\right\|\mathclose{}\right)\mathclose{}^2 && \text{(the double sum factors)} \\ &= m\\(\tilde{1} \cdot \tilde{a})^2 && \text{(dot product)} \\ &\le m\\\mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 && \text{(Cauchy-Schwarz, squared)} \\ &= m\\p\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(} \mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2 = p \text{ and } \mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 = \textstyle\sum_i h_i^2 = \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 \text{)} \end{aligned} \\
 >
 > The steps use the [matrix product](linear-algebra.llms.md#def-matrix-mult), the [dot product](linear-algebra.llms.md#def-dot-product) and the [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
 

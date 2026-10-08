@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 13:29:17 (PDT)
+Last modified: 2026-10-08 14:38:49 (PDT)
 
 > **NOTE:**
 >
@@ -155,7 +155,7 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > **Definition 7 (Partial sum)** Let \\a_1, a_2, \ldots\\ be a [sequence](sets-functions.llms.md#def-sequence) of real numbers or of [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals). For each \\n \in \mathbb{N}\\, its \\n\\th **partial sum** is the [sum](algebra.llms.md#def-summation) of its first \\n\\ terms:
 >
-> \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^{n} a_i = a_1 + \cdots + a_n\\
+> \\s_n \stackrel{\text{def}}{=}\sum\_{i=1}^na_i = a_1 + \cdots + a_n\\
 
 > **NOTE:**
 >
@@ -194,7 +194,7 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > **Definition 9 (Finite additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](sets-functions.llms.md#def-function) \\\mu : \mathcal{S}\to \[0, \infty\]\\, with values in the [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
-> \\\mu(A_1 \cup \cdots \cup A_n) = \sum\_{i=1}^{n} \mu(A_i)\\
+> \\\mu(A_1 \cup \cdots \cup A_n) = \sum\_{i=1}^n\mu(A_i)\\
 
 > **NOTE:**
 >
@@ -268,7 +268,7 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > *Proof*. Let \\A_1, \ldots, A_n\\ be pairwise disjoint sets in \\\mathcal{S}\\, and extend them to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\. The extended sequence is still pairwise disjoint, since \\\emptyset\\ shares no element with any set, and its union is \\A_1 \cup \cdots \cup A_n\\. So:
 >
-> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(A_i) && \text{(countable additivity)} \\ &= \sum\_{i=1}^{n} \mu(A_i) + \sum\_{i=n+1}^{\infty} \mu(\emptyset) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(} \mu(\emptyset) = 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(A_i) && \text{(countable additivity)} \\ &= \sum\_{i=1}^n\mu(A_i) + \sum\_{i=n+1}^{\infty} \mu(\emptyset) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^n\mu(A_i) && \text{(} \mu(\emptyset) = 0 \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -278,11 +278,11 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > *\\\mu\\ is finitely additive.* Let \\A_1, \ldots, A_n\\ be pairwise disjoint subsets of \\S\\. If every \\A_i\\ is finite, then so is their union, and:
 >
-> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= 0 && \text{(a finite union of finite sets is finite)} \\ &= \sum\_{i=1}^{n} 0 && \text{(a sum of zeros is 0)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(each } A_i \text{ is finite)} \end{aligned} \\
+> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= 0 && \text{(a finite union of finite sets is finite)} \\ &= \sum\_{i=1}^n0 && \text{(a sum of zeros is 0)} \\ &= \sum\_{i=1}^n\mu(A_i) && \text{(each } A_i \text{ is finite)} \end{aligned} \\
 >
 > If some \\A_k\\ is infinite, then the union, which contains \\A_k\\, is infinite too, and:
 >
-> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \infty && \text{(the union is infinite)} \\ &= \mu(A_k) + \sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} \mu(A_i) && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\ &= \sum\_{i=1}^{n} \mu(A_i) && \text{(regroup the terms)} \end{aligned} \\
+> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \infty && \text{(the union is infinite)} \\ &= \mu(A_k) + \sum\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{} \setminus \mathopen{}\left\\k\right\\\mathclose{}} \mu(A_i) && \text{(} \mu(A_k) = \infty \text{, and } \infty + x = \infty \text{)} \\ &= \sum\_{i=1}^n\mu(A_i) && \text{(regroup the terms)} \end{aligned} \\
 >
 > *\\\mu\\ is not countably additive.* The single-element sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \ldots\\ are pairwise disjoint, and their union is \\S\\, which is infinite. So:
 >
@@ -412,17 +412,17 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\ is a [measure](#def-measure) \\P\\ on \\\mathcal{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
+> **Definition 19 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\ is a [measure](#def-measure) \\\operatorname{P}\\ on \\\mathcal{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
 >
-> \\P(\Omega) = 1\\
+> \\\operatorname{P}\mathopen{}\left(\Omega\right)\mathclose{} = 1\\
 >
-> Then \\(\Omega, \mathcal{F}, P)\\ is a **probability space**, \\\Omega\\ is its **sample space**, the elements of \\\Omega\\ are **outcomes**, and the sets in \\\mathcal{F}\\ are **events**.
+> Then \\(\Omega, \mathcal{F}, \operatorname{P})\\ is a **probability space**, \\\Omega\\ is its **sample space**, the elements of \\\Omega\\ are **outcomes**, and the sets in \\\mathcal{F}\\ are **events**.
 
 > **NOTE:**
 >
 > **Example 24 (A fair die, and the unit interval)**  
 >
-> - For one roll of a fair die, the sample space is \\\Omega = D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the events are all subsets of \\D\\, and \\P(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\P\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\P(\emptyset) = 0\\, and \\P\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since \\P(D) = 6/6 = 1\\. The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has \\P(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}) = 3/6 = 1/2\\.
+> - For one roll of a fair die, the sample space is \\\Omega = D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the events are all subsets of \\D\\, and \\\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\\operatorname{P}\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\\, and \\\operatorname{P}\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since \\\operatorname{P}\mathopen{}\left(D\right)\mathclose{} = 6/6 = 1\\. The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has \\\operatorname{P}\mathopen{}\left(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\right)\mathclose{} = 3/6 = 1/2\\.
 > - Lebesgue measure on \\\[0, 1\]\\ is a probability measure, because \\\lambda(\[0, 1\]) = 1\\ ([Example 20](#exm-lebesgue-measure)).
 > - The counting measure on \\D\\ is not a probability measure, because it gives \\D\\ the value \\6\\.
 
@@ -455,7 +455,7 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > **Definition 21 (Integral of a non-negative function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
 >
-> \\ \int_S f \\ d\mu \stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^{n} \mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
+> \\ \int_S f \\ d\mu \stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^n\mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
 >
 > where the [supremum](algebra.llms.md#def-supremum) is over all ways of writing \\S\\ as the union of finitely many nonempty [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, and each \\\inf\_{s \in A_i} f(s)\\ is the [infimum](algebra.llms.md#def-infimum) of the values of \\f\\ on \\A_i\\. In the sums, \\0 \cdot \infty \stackrel{\text{def}}{=}0\\, and \\x \cdot \infty \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\; the supremum is \\\infty\\ if some sum is \\\infty\\. The integral is also written \\\int_S f(s) \\ d\mu(s)\\.
 >
@@ -471,7 +471,7 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > *The integral is the sum of the values.* For any split of \\D\\ into nonempty pairwise disjoint sets \\A_1, \ldots, A_n\\:
 >
-> \\ \begin{aligned} \sum\_{i=1}^{n} \mathopen{}\left(\inf\_{x \in A_i} g(x)\right)\mathclose{} \mu(A_i) &= \sum\_{i=1}^{n} \sum\_{x \in A_i} \inf\_{y \in A_i} g(y) && \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\ &\le \sum\_{i=1}^{n} \sum\_{x \in A_i} g(x) && \text{(an infimum is at most each value)} \\ &= \sum\_{x \in D} g(x) && \text{(each } x \in D \text{ is in exactly one } A_i \text{)} \end{aligned} \\
+> \\ \begin{aligned} \sum\_{i=1}^n\mathopen{}\left(\inf\_{x \in A_i} g(x)\right)\mathclose{} \mu(A_i) &= \sum\_{i=1}^n\sum\_{x \in A_i} \inf\_{y \in A_i} g(y) && \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\ &\le \sum\_{i=1}^n\sum\_{x \in A_i} g(x) && \text{(an infimum is at most each value)} \\ &= \sum\_{x \in D} g(x) && \text{(each } x \in D \text{ is in exactly one } A_i \text{)} \end{aligned} \\
 >
 > The split into the six single points \\\mathopen{}\left\\1\right\\\mathclose{}, \ldots, \mathopen{}\left\\6\right\\\mathclose{}\\ gives exactly \\\sum\_{x \in D} g(x)\\, so the supremum is \\\int_D g \\ d\mu = \sum\_{x \in D} g(x)\\. For example, with \\g(x) = x\\, \\\int_D g \\ d\mu = 1 + 2 + \cdots + 6 = 21\\.
 >
@@ -563,15 +563,15 @@ Last modified: 2026-10-08 13:29:17 (PDT)
 >
 > **Example 30 (Applying Holder’s inequality to finite sums and expectations)**  
 >
-> 1.  **Finite vectors (Cauchy-Schwarz and taxicab bounds)**: Equipping a finite set with the [counting measure](#def-counting-measure), Holder’s inequality for conjugate exponents \\p, q\\ gives: \\ \sum\_{i=1}^n \mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left(\sum\_{i=1}^n \mathopen{}\left\|x_i\right\|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum\_{i=1}^n \mathopen{}\left\|y_i\right\|\mathclose{}^q\right)\mathclose{}^{1/q}. \\ Setting \\p = 1, q = \infty\\ gives \\\sum\_{i=1}^n \mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_\infty\\. Setting \\p = q = 2\\ gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
+> 1.  **Finite vectors (Cauchy-Schwarz and taxicab bounds)**: Equipping a finite set with the [counting measure](#def-counting-measure), Holder’s inequality for conjugate exponents \\p, q\\ gives: \\ \sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|x_i\right\|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|y_i\right\|\mathclose{}^q\right)\mathclose{}^{1/q}. \\ Setting \\p = 1, q = \infty\\ gives \\\sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_\infty\\. Setting \\p = q = 2\\ gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
 >
-> 2.  **Covariance bound for random variables**: On a probability space with measure \\P\\ ([Definition 19](#def-probability-measure)), taking \\p = q = 2\\ gives \\\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X Y\right\|\mathclose{}\right\]\mathclose{} \le \sqrt{\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{}}\\\sqrt{\operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{}}\\, guaranteeing that the covariance between any two square-integrable random variables is finite.
+> 2.  **Covariance bound for random variables**: On a probability space with measure \\\operatorname{P}\\ ([Definition 19](#def-probability-measure)), taking \\p = q = 2\\ gives \\\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X Y\right\|\mathclose{}\right\]\mathclose{} \le \sqrt{\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{}}\\\sqrt{\operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{}}\\, guaranteeing that the covariance between any two square-integrable random variables is finite.
 
 > **NOTE:**
 >
 > *Remark 12* (\\L^p\\ spaces and norms in probability and machine learning). In probability, statistics, and machine learning, \\L^p\\ spaces structure the geometry of random variables, estimators, and loss functions:
 >
-> 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu = P\\ is a probability measure ([Definition 19](#def-probability-measure)) with total measure \\P(S) = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
+> 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu = \operatorname{P}\\ is a probability measure ([Definition 19](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
 >
 > 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
 >
