@@ -494,6 +494,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-inner-product-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exm-weighted-inner-product.qmd >}}
 
 {{< slidebreak >}}
@@ -527,6 +531,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-cosine-similarity.qmd >}}
 
 ### Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
 
@@ -711,6 +719,18 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-pd-inverse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-matrix-induced-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-matrix-induced-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-inner-products-machine-learning.qmd >}}
 
 ## Determinants
 

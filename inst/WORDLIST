@@ -56,8 +56,10 @@ invertible
 Krohn
 lintr
 Maclaurin
+Mahalanobis
 Mascheroni
 memoization
+Mercer
 minimizer
 minimizers
 mmHg
@@ -72,6 +74,7 @@ quadratically
 qwt
 Rayleigh
 RevealJS
+RKHS
 Roch
 rulesets
 salg
@@ -88,6 +91,7 @@ subfiles
 submodule
 submodule's
 SVD
+SVMs
 symlink
 Tarski
 TinyTeX
