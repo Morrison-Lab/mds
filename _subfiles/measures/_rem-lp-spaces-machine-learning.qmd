@@ -4,13 +4,13 @@
 In probability, statistics, and machine learning, $L^p$ spaces structure the geometry of random variables, estimators, and loss functions:
 
 1. **Random variables, moments, and inclusion of $L^p$ spaces**:
-   When $\mu = \Prob$ is a probability measure (@def-probability-measure) with total measure $\Prob(S) = 1$,
+   When $\mu = P$ is a probability measure (@def-probability-measure) with total measure $P(S) = 1$,
    an $L^p$ function is a random variable $X$ with finite $p$-th moment:
    $$
    \norm{X}_p = \paren{\E{\abs{X}^p}}^{1/p}.
    $$
    By [Jensen's inequality](algebra.qmd#thm-jensen), if $1 \le p \le q \le \infty$,
-   then $\norm{X}_p \le \norm{X}_q$, so $L^q(\Prob) \subseteq L^p(\Prob)$.
+   then $\norm{X}_p \le \norm{X}_q$, so $L^q(P) \subseteq L^p(P)$.
    For instance, every random variable with finite variance ($X \in L^2$) has finite expectation ($X \in L^1$).
 
 2. **The unique Hilbert space $L^2$ and conditional expectation**:
