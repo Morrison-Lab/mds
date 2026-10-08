@@ -45,7 +45,7 @@ So $P(1)$ holds.
 Let $n \ge 2$, and suppose $P(n - 1)$ holds:
 
 $$
-\sumin-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
+\sum_{i=1}^{n-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
 $$
 
 Then
@@ -59,7 +59,7 @@ $$
 &= \paren{1 + 2 + \cdots + (n-1)} + n
 && \text{(associative law)}
 \\
-&= \sumin-1} i + n
+&= \sum_{i=1}^{n-1} i + n
 && \text{(definition of a sum)}
 \\
 &= \frac{(n-1)\,\paren{(n-1)+1}}{2} + n

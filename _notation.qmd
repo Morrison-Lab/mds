@@ -16,7 +16,7 @@ and the alternatives you may meet in other sources.
 | $\prod$     | product                                          | `\prod`
 | $\mu$       | mean, $\Expp[X]$, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) $X$ | `\mu`
 | $\Expp$     | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation)   | `\mathbb{E}`
-| $x\'$  | transpose of $x$                                 | `x^{\top}`
+| $x\'$  | transpose of $x$                                 | `x\'`
 | $'$         | transpose or [derivative](calculus.qmd#def-derivative)[^3] | `'`
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
 | $\tf$       | [therefore](#def-logical-entailment), thus       | `\therefore`
