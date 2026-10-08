@@ -1,0 +1,39 @@
+:::{#exm-jensen}
+#### The mean of the squares is at least the square of the mean
+
+Take $f(x) = x^2$.
+It is convex by @def-convex-function:
+for $t \in [0, 1]$,
+$$
+t x^2 + (1 - t) y^2 - \left(t x + (1 - t) y\right)^2 = t (1 - t) (x - y)^2 \ge 0.
+$$
+Take the three points $x_1 = 1$, $x_2 = 2$, $x_3 = 6$,
+and the equal weights $w_1 = w_2 = w_3 = \tfrac{1}{3}$.
+The weighted average of the points is their mean,
+$\tfrac{1}{3}(1 + 2 + 6) = 3$,
+so the left side of @thm-jensen is $f(3) = 9$.
+The right side is the mean of the squares,
+$\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}$.
+The inequality holds: $9 \le \tfrac{41}{3}$.
+
+The gap is $\tfrac{41}{3} - 9 = \tfrac{14}{3}$.
+That is the average squared distance of the points from their mean,
+$\tfrac{1}{3}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right) = \tfrac{14}{3}$,
+which is the variance of the three points.
+For $f(x) = x^2$, Jensen's inequality says a variance is never negative.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-jensen-concave}
+#### The inequality reverses for concave functions
+
+If $f$ is [concave](vector-calculus.qmd#def-strictly-convex),
+then $-f$ is convex, and applying @thm-jensen to $-f$
+reverses the inequality:
+$f\left(\sum_i w_i x_i\right) \ge \sum_i w_i f(x_i)$.
+For $f(x) = -x^2$ and the points in @exm-jensen,
+$f(3) = -9 \ge -\tfrac{41}{3}$.
+
+:::
