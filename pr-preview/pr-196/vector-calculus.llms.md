@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 11:10:29 (PDT)
+Last modified: 2026-10-08 11:23:02 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -186,7 +186,7 @@ The table is the cheapest check there is on a gradient just worked out by hand: 
 
 Show R code
 
-``` numberSource
+``` js
 gradFns = ({
   "3 w1 w2 + w2^3 - 5 w1": {
     f: (a, b) => 3 * a * b + b ** 3 - 5 * a,
@@ -211,7 +211,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 Show R code
 
-``` numberSource
+``` js
 viewof gradWhich = Inputs.radio(Object.keys(gradFns), {value: "3 w1 w2 + w2^3 - 5 w1", label: "f(w) ="})
 viewof gradW1 = Inputs.range([-3, 3], {value: 2, step: 0.05, label: "w1"})
 viewof gradW2 = Inputs.range([-3, 3], {value: -1, step: 0.05, label: "w2"})
@@ -220,7 +220,7 @@ viewof gradTheta = Inputs.range([0, 359], {value: 0, step: 1, label: "step direc
 
 Show R code
 
-``` numberSource
+``` js
 {
   const f2 = (v) => v.toFixed(2);
   const deg = "\u00b0";
@@ -233,7 +233,7 @@ ${(gradRate(gradTheta) / (gradLen || 1) * 100).toFixed(0)}% of the steepest rate
 
 Show R code
 
-``` numberSource
+``` js
 {
   const u = [Math.cos(gradTheta * Math.PI / 180), Math.sin(gradTheta * Math.PI / 180)];
   const g = gradLen > 1e-9 ? gradG.map((v) => v / gradLen) : [0, 0];
@@ -264,7 +264,7 @@ Show R code
 
 Show R code
 
-``` numberSource
+``` js
 Plot.plot({
   ariaLabel: 'The rate at which f changes when stepping from the chosen point, ' +
     'plotted against the step direction in degrees: ' +

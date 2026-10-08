@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 11:10:29 (PDT)
+Last modified: 2026-10-08 11:23:02 (PDT)
 
 ## 1 Derivatives
 
@@ -524,7 +524,7 @@ For a differentiable function \\f\\ and a small step \\\epsilon\\,
 
 Show R code
 
-``` numberSource
+``` js
 tanF = (w) => w * w - 4 * w + 7
 tanDf = (w) => 2 * w - 4
 tanPred = tanF(tanW) + tanEps * tanDf(tanW)
@@ -533,14 +533,14 @@ tanExact = tanF(tanW + tanEps)
 
 Show R code
 
-``` numberSource
+``` js
 viewof tanW = Inputs.range([-1, 4], {value: 1, step: 0.05, label: "w"})
 viewof tanEps = Inputs.range([0.01, 2], {value: 0.5, transform: Math.log, label: "step \u03b5", format: d3.format(".3~f")})
 ```
 
 Show R code
 
-``` numberSource
+``` js
 md`At w = ${tanW.toFixed(2)}, f(w) = ${tanF(tanW).toFixed(4)} and f\u2032(w) = ${tanDf(tanW).toFixed(2)}.
 
 A step of \u03b5 = ${tanEps.toFixed(3)}:
@@ -552,7 +552,7 @@ A step of \u03b5 = ${tanEps.toFixed(3)}:
 
 Show R code
 
-``` numberSource
+``` js
 Plot.plot({
   ariaLabel: 'The parabola f of w, ' +
     'with the tangent line at the chosen w, ' +
@@ -1103,7 +1103,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
 >   ggplot2::labs(x = "x", y = expression(f(x))) +
@@ -1116,7 +1116,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
 > df <- do.call(rbind, lapply(C_vals, \(C) {
 >   data.frame(
@@ -1373,7 +1373,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
 >   ggplot2::geom_point(ggplot2::aes(x = 0, y = 0), size = 3) +
@@ -1405,7 +1405,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > step_df <- data.frame(
 >   x = c(0, 0.5, 0.5, 1),
 >   y = c(0, 0, 1, 1),
@@ -1719,7 +1719,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_area(
 >     data = data.frame(t = seq(0, x_focus, length.out = 200)),
@@ -1743,7 +1743,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > slope_df <- data.frame(
 >   x = x_marks,
 >   Fx = x_marks^2,
@@ -1801,7 +1801,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_area(
 >     data = data.frame(t = seq(0, t_focus, length.out = 300)),
@@ -1822,7 +1822,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_function(
 >     fun = \(t) 1 - exp(-lambda * t),
@@ -1984,7 +1984,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > region <- data.frame(x = c(0, 1, 1), y = c(0, 0, 1))
 > ggplot2::ggplot(region, ggplot2::aes(x = x, y = y)) +
 >   ggplot2::geom_polygon(
@@ -2037,7 +2037,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > n_grid <- 51
 > x_seq <- seq(0, 1, length.out = n_grid)
 > y_seq <- seq(0, 1, length.out = n_grid)
@@ -2144,7 +2144,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > n_grid <- 81
 > eps <- 0.04
 > x_seq <- seq(eps, 1, length.out = n_grid)
@@ -2198,7 +2198,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::annotate(
 >     "rect", xmin = 0, xmax = 1, ymin = 0, ymax = 1,
@@ -2238,7 +2238,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > n_grid <- 41
 > x_seq <- seq(0, 1, length.out = n_grid)
 > y_seq <- seq(0, 1, length.out = n_grid)

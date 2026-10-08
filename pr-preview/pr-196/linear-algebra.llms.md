@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 11:10:29 (PDT)
+Last modified: 2026-10-08 11:23:02 (PDT)
 
 ## 1 Vectors
 
@@ -334,7 +334,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > Python has both operations built in, and R builds them from `sum`.
 >
-> ``` numberSource
+> ``` python
 > import numpy as np
 >
 > a = np.array([3.0, -1.0, 2.0])
@@ -343,7 +343,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > print(a @ b, round(float(np.linalg.norm(a)), 3))
 > ```
 >
-> ``` numberSource
+> ``` downlit
 > a <- c(3, -1, 2)
 > b <- c(0, 4, -2)
 >
@@ -850,7 +850,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 Show R code
 
-``` numberSource
+``` js
 viewof planeW1 = Inputs.range([-1.5, 1.5], {value: 1, step: 0.1, label: "w1"})
 viewof planeW2 = Inputs.range([-1.5, 1.5], {value: 0.5, step: 0.1, label: "w2"})
 viewof planeB = Inputs.range([-2, 2], {value: 0, step: 0.1, label: "b"})
@@ -859,7 +859,7 @@ viewof planeTurn = Inputs.range([0, 360], {value: 30, step: 5, label: "turn the 
 
 Show R code
 
-``` numberSource
+``` js
 {
   const sign = (v) => (v < 0 ? "\u2212" : "+");
   const fmt = (v) => Math.abs(v).toFixed(1);
@@ -872,7 +872,7 @@ Both slices cross the vertical axis at height b = ${planeB.toFixed(1)}.`;
 
 Show R code
 
-``` numberSource
+``` js
 // The graph z = f(x1, x2) over the square [-2, 2] x [-2, 2], drawn in 3-D:
 // turn the square about the vertical axis, then look down on it from 30 degrees.
 planeView = {
@@ -926,7 +926,7 @@ planeView = {
 
 Show R code
 
-``` numberSource
+``` js
 Plot.plot({
   ariaLabel: 'Contour map of the same plane seen from directly above, ' +
     'with x1 across and x2 up, ' +
@@ -1770,7 +1770,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > Show R code
 >
-> ``` numberSource
+> ``` downlit
 > two_species <- droplevels(subset(iris, Species != "setosa"))
 > fit <- glm(
 >   Species ~ Petal.Length + Petal.Width,
@@ -1794,7 +1794,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > Figure 2: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
 >
-> ``` numberSource
+> ``` downlit
 > table(two_species$Species, two_species$side)
 > #>             
 > #>              negative positive

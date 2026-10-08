@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 11:10:29 (PDT)
+Last modified: 2026-10-08 11:23:02 (PDT)
 
 ## 1 Equalities
 
@@ -1136,7 +1136,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 Show R code
 
-``` numberSource
+``` downlit
 mult_f <- function(b, c) b * c
 pow_f <- function(b, c) b^c
 values_b <- seq(0, 5, by = .01)
@@ -1208,7 +1208,7 @@ Figure 1: Graph of \\b\*c\\ and \\b^c\\
 
 Show R code
 
-``` numberSource
+``` downlit
 pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
 
 mat1 <- outer(values_b, values_c, pow_minus_mult_f)
