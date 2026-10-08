@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 00:33:38 (PDT)
+Last modified: 2026-10-08 00:43:36 (PDT)
 
 ## 1 Vectors
 
@@ -839,7 +839,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > - In \\\mathbb{R}^2\\ (\\p = 2\\), a hyperplane is a line: \\w_1 x_1 + w_2 x_2 + b = 0\\.
 > - In \\\mathbb{R}^3\\ (\\p = 3\\), a hyperplane is a plane.
-> - A hyperplane divides the space \\\mathbb{R}^p\\ into two **half-spaces**: \\\\\tilde{x}: \tilde{w}^\top \tilde{x}+ b \> 0\\\\ and \\\\\tilde{x}: \tilde{w}^\top \tilde{x}+ b \< 0\\\\.
+> - A hyperplane divides the space \\\mathbb{R}^p\\ into two half-spaces, one on each side of it ([Definition 50](#def-half-space)).
 
 > **NOTE:**
 >
