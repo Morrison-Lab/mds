@@ -10,7 +10,7 @@ then $\mu$ is [finitely additive](#def-finite-additivity).
 
 ::: proof
 
-Let $A_1, \ldots, A_n$ be pairwise disjoint sets in $\salg$,
+Let $\dsn{A}$ be pairwise disjoint sets in $\salg$,
 and extend them to a sequence by setting $A_{n+1} = A_{n+2} = \cdots = \emptyset$.
 The extended sequence is still pairwise disjoint,
 since $\emptyset$ shares no element with any set,
@@ -21,7 +21,7 @@ $$
 \mu(A_1 \cup \cdots \cup A_n)
 &= \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
-&= \sum_{i=1}^{\infty} \mu(A_i)
+&= \sumto{i}{\infty} \mu(A_i)
 && \text{(countable additivity)} \\
 &= \sumin \mu(A_i) + \sum_{i=n+1}^{\infty} \mu(\emptyset)
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\

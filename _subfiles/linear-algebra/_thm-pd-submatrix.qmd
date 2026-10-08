@@ -19,13 +19,13 @@ with entries $y_i = u_i$ for $i \le k$ and $y_i = 0$ for $i > k$. Then
 $$
 \ba
 \tp{\vecf{u}} \matr{X}_k \vecf{u}
-&= \sum_{i=1}^{k} \sum_{j=1}^{k} u_i\,x_{ij}\,u_j
+&= \sumto{i}{k} \sumto{j}{k} u_i\,x_{ij}\,u_j
 && \text{(@def-matvec-mult, @def-dot-product)}
 \\
-&= \sum_{i=1}^{k} \sum_{j=1}^{k} y_i\,x_{ij}\,y_j
+&= \sumto{i}{k} \sumto{j}{k} y_i\,x_{ij}\,y_j
 && \text{(} y_i = u_i \text{ for } i \le k \text{)}
 \\
-&= \sum_{i=1}^{p} \sumjp y_i\,x_{ij}\,y_j
+&= \sumip \sumjp y_i\,x_{ij}\,y_j
 && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)}
 \\
 &= \tp{\vecf{y}} \matr{X} \vecf{y}
@@ -41,7 +41,7 @@ For the diagonal entry $x_{ii}$, take $\vecf{e}_i$ (@def-indicator-vector), whic
 $$
 \ba
 \tp{\vecf{e}_i} \matr{X} \vecf{e}_i
-&= \sum_{r=1}^{p} \sum_{s=1}^{p} (\vecf{e}_i)_r\,x_{rs}\,(\vecf{e}_i)_s
+&= \sumto{r}{p} \sumto{s}{p} (\vecf{e}_i)_r\,x_{rs}\,(\vecf{e}_i)_s
 && \text{(@def-matvec-mult, @def-dot-product)}
 \\
 &= x_{ii}

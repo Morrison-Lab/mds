@@ -17,7 +17,7 @@ The sum has one term:
 
 $$
 \ba
-\sum_{i=1}^{1} i
+\sumto{i}{1} i
 &= 1
 && \text{(definition of a sum)}
 \ea
@@ -45,7 +45,7 @@ So $P(1)$ holds.
 Let $n \ge 2$, and suppose $P(n - 1)$ holds:
 
 $$
-\sum_{i=1}^{n-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
+\sumto{i}{n-1} i = \frac{(n-1)\,\paren{(n-1)+1}}{2}.
 $$
 
 Then
@@ -59,7 +59,7 @@ $$
 &= \paren{1 + 2 + \cdots + (n-1)} + n
 && \text{(associative law)}
 \\
-&= \sum_{i=1}^{n-1} i + n
+&= \sumto{i}{n-1} i + n
 && \text{(definition of a sum)}
 \\
 &= \frac{(n-1)\,\paren{(n-1)+1}}{2} + n

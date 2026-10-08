@@ -1,12 +1,12 @@
 :::{#exr-expand-a-sum}
 #### Expand a sum
 
-The expression $\sum_{i=1}^{4} i^2$
+The expression $\sumto{i}{4} i^2$
 is shorthand for a sum of four terms.
 
 1.  Guess which four terms, and add them up.
 2.  Write
-    $\frac{1}{N} \sum_{i=1}^{N} \left(y_i - \hat{y}_i\right)^2$
+    $\avgiN \left(y_i - \hy_i\right)^2$
     for $N = 3$ without the $\sum$ symbol.
 
 :::

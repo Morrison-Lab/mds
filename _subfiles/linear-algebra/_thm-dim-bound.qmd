@@ -30,25 +30,25 @@ Then $\vecf{c}_1, \ldots, \vecf{c}_k$ are $k > d$ vectors in $\reals^d$,
 so some $x_1, \ldots, x_k$, not all zero,
 satisfy $x_1 \vecf{c}_1 + \cdots + x_k \vecf{c}_k = \vzero_d$
 (@thm-many-vectors-dependent);
-entry $i$ of that equation says $\sum_{j=1}^{k} x_j c_{ij} = 0$.
+entry $i$ of that equation says $\sumto{j}{k} x_j c_{ij} = 0$.
 Then
 
 $$
 \ba
-\sum_{j=1}^{k} x_j \vecf{u}_j
-&= \sum_{j=1}^{k} x_j \sum_{i=1}^{d} c_{ij} \vecf{a}_i
+\sumto{j}{k} x_j \vecf{u}_j
+&= \sumto{j}{k} x_j \sumto{i}{d} c_{ij} \vecf{a}_i
 && \text{(substitute each } \vecf{u}_j \text{)}
 \\
-&= \sum_{j=1}^{k} \sum_{i=1}^{d} x_j c_{ij}\,\vecf{a}_i
+&= \sumto{j}{k} \sumto{i}{d} x_j c_{ij}\,\vecf{a}_i
 && \text{(distribute each } x_j \text{ over the inner sum)}
 \\
-&= \sum_{i=1}^{d} \sum_{j=1}^{k} x_j c_{ij}\,\vecf{a}_i
+&= \sumto{i}{d} \sumto{j}{k} x_j c_{ij}\,\vecf{a}_i
 && \text{(swap the order of the finite sums)}
 \\
-&= \sum_{i=1}^{d} \paren{\sum_{j=1}^{k} x_j c_{ij}}\,\vecf{a}_i
+&= \sumto{i}{d} \paren{\sumto{j}{k} x_j c_{ij}}\,\vecf{a}_i
 && \text{(factor } \vecf{a}_i \text{ out of the inner sum)}
 \\
-&= \sum_{i=1}^{d} 0 \cd \vecf{a}_i
+&= \sumto{i}{d} 0 \cd \vecf{a}_i
 && \text{(entry } i \text{ of } \textstyle\sum_j x_j \vecf{c}_j = \vzero_d \text{)}
 \\
 &= \vzero_p,

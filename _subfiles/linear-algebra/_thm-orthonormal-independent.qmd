@@ -8,7 +8,7 @@ then they are linearly independent (@def-linearly-independent).
 
 ::: proof
 
-Suppose $\sum_{j=1}^{k} c_j \vecf{q}_j = \vzero$,
+Suppose $\sumto{j}{k} c_j \vecf{q}_j = \vzero$,
 and fix any $i$ between $1$ and $k$. Then
 
 $$
@@ -17,10 +17,10 @@ $$
 &= \vecf{q}_i \cdot \vzero
 && \text{(every term of the dot product is } 0 \text{)}
 \\
-&= \vecf{q}_i \cdot \paren{\sum_{j=1}^{k} c_j \vecf{q}_j}
+&= \vecf{q}_i \cdot \paren{\sumto{j}{k} c_j \vecf{q}_j}
 && \text{(substitute the supposed equation)}
 \\
-&= \sum_{j=1}^{k} c_j\,(\vecf{q}_i \cdot \vecf{q}_j)
+&= \sumto{j}{k} c_j\,(\vecf{q}_i \cdot \vecf{q}_j)
 && \text{(@thm-dot-linear-sum)}
 \\
 &= c_i.

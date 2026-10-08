@@ -69,7 +69,7 @@ $$
 &= \tp{\vecf{y}}\matr{\Lambda}^{-1}\vecf{y}
 && \text{(substitute } \matr{A}^{-1} = \matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}} \text{)}
 \\
-&= \sum_{i=1}^p \frac{y_i^2}{\lambda_i}
+&= \sumip \frac{y_i^2}{\lambda_i}
 && \text{(} \matr{\Lambda}^{-1} \text{ is diagonal)}
 \\
 &> 0

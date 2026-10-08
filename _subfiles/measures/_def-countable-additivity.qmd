@@ -9,6 +9,6 @@ if, for every sequence of
 [pairwise disjoint](#def-pairwise-disjoint) sets $A_1, A_2, \ldots$ in $\salg$,
 the value of their union is the sum of their values:
 
-$$\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)$$
+$$\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sumto{i}{\infty} \mu(A_i)$$
 
 :::

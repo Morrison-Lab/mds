@@ -6,7 +6,7 @@
   a repeated listing does not count twice.
 - $\emptyset$ is finite, with $\abs{\emptyset} = 0$.
 - The natural numbers $\mathbb{N} = \set{1, 2, 3, \ldots}$ are infinite:
-  for any $n$, a list $a_1, \ldots, a_n$ of natural numbers
+  for any $n$, a list $\dsn{a}$ of natural numbers
   misses the natural number $a_1 + \cdots + a_n + 1$,
   which is larger than every number in the list.
 

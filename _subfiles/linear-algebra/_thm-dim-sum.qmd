@@ -48,9 +48,9 @@ so it contains every linear combination of them.
 Suppose
 
 $$
-\sum_{i=1}^{k} a_i \vecf{z}_i
-+ \sum_{j=1}^{d_1 - k} b_j \vecf{x}_j
-+ \sum_{l=1}^{d_2 - k} c_l \vecf{y}_l
+\sumto{i}{k} a_i \vecf{z}_i
++ \sumto{j}{d_1 - k} b_j \vecf{x}_j
++ \sumto{l}{d_2 - k} c_l \vecf{y}_l
 = \vzero.
 $$
 
@@ -61,7 +61,7 @@ Subtracting $\sum_{i} a_i \vecf{z}_i + \sum_{j} b_j \vecf{x}_j$
 from both sides of the supposed equation gives
 
 $$
-\vecf{w} = \sum_{i=1}^{k} (-a_i)\,\vecf{z}_i + \sum_{j=1}^{d_1 - k} (-b_j)\,\vecf{x}_j,
+\vecf{w} = \sumto{i}{k} (-a_i)\,\vecf{z}_i + \sumto{j}{d_1 - k} (-b_j)\,\vecf{x}_j,
 $$
 
 a linear combination of vectors of $\mathcal{S}_1$,
@@ -77,10 +77,10 @@ $$
 &= \vecf{w} - \vecf{w}
 && \text{(a vector minus itself)}
 \\
-&= \sum_{i=1}^{k} e_i \vecf{z}_i - \sum_{l=1}^{d_2 - k} c_l \vecf{y}_l
+&= \sumto{i}{k} e_i \vecf{z}_i - \sumto{l}{d_2 - k} c_l \vecf{y}_l
 && \text{(substitute the two expressions for } \vecf{w} \text{)}
 \\
-&= \sum_{i=1}^{k} e_i \vecf{z}_i + \sum_{l=1}^{d_2 - k} (-c_l)\,\vecf{y}_l,
+&= \sumto{i}{k} e_i \vecf{z}_i + \sumto{l}{d_2 - k} (-c_l)\,\vecf{y}_l,
 && \text{(write each subtraction as adding } -1 \text{ times)}
 \ea
 $$

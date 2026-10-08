@@ -19,10 +19,10 @@ Write $q_{ki}$ for entry $k$ of $\vecf{q}_i$, which is entry $(k, i)$ of $\matr{
 $$
 \ba
 (\tp{\matr{Q}} \matr{Q})_{ij}
-&= \sum_{k=1}^{p} (\tp{\matr{Q}})_{ik}\, q_{kj}
+&= \sumto{k}{p} (\tp{\matr{Q}})_{ik}\, q_{kj}
 && \text{(@def-matrix-mult)}
 \\
-&= \sum_{k=1}^{p} q_{ki}\, q_{kj}
+&= \sumto{k}{p} q_{ki}\, q_{kj}
 && \text{(@def-matrix-transpose)}
 \\
 &= \vecf{q}_i \cdot \vecf{q}_j,

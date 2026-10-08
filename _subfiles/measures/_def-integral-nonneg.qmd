@@ -12,7 +12,7 @@ $$
 
 where the [supremum](algebra.qmd#def-supremum) is over all ways
 of writing $S$ as the union of finitely many nonempty
-[pairwise disjoint](#def-pairwise-disjoint) sets $A_1, \ldots, A_n$ in $\salg$,
+[pairwise disjoint](#def-pairwise-disjoint) sets $\dsn{A}$ in $\salg$,
 and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra.qmd#def-infimum)
 of the values of $f$ on $A_i$.
 In the sums, $0 \cdot \infty \eqdef 0$, and $x \cdot \infty \eqdef \infty$ for $x > 0$;

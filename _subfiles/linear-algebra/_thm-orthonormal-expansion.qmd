@@ -5,7 +5,7 @@ If $\vecf{q}_1, \ldots, \vecf{q}_k$ is an orthonormal basis of a subspace $\math
 (@def-orthonormal-basis), then every $\vecf{x} \in \mathcal{S}$ satisfies
 
 $$
-\vecf{x} = \sum_{i=1}^{k} (\vecf{q}_i \cdot \vecf{x})\,\vecf{q}_i.
+\vecf{x} = \sumto{i}{k} (\vecf{q}_i \cdot \vecf{x})\,\vecf{q}_i.
 $$
 
 :::
@@ -13,16 +13,16 @@ $$
 ::: proof
 
 The basis spans $\mathcal{S}$,
-so $\vecf{x} = \sum_{j=1}^{k} c_j \vecf{q}_j$ for some numbers $c_j$.
+so $\vecf{x} = \sumto{j}{k} c_j \vecf{q}_j$ for some numbers $c_j$.
 For each $i$,
 
 $$
 \ba
 \vecf{q}_i \cdot \vecf{x}
-&= \vecf{q}_i \cdot \paren{\sum_{j=1}^{k} c_j \vecf{q}_j}
+&= \vecf{q}_i \cdot \paren{\sumto{j}{k} c_j \vecf{q}_j}
 && \text{(substitute)}
 \\
-&= \sum_{j=1}^{k} c_j\,(\vecf{q}_i \cdot \vecf{q}_j)
+&= \sumto{j}{k} c_j\,(\vecf{q}_i \cdot \vecf{q}_j)
 && \text{(@thm-dot-linear-sum)}
 \\
 &= c_i,
@@ -48,7 +48,7 @@ Then
 
 $$
 \ba
-\sum_{i=1}^{3} (\vecf{q}_i \cdot \vecf{x})\,\vecf{q}_i
+\sumto{i}{3} (\vecf{q}_i \cdot \vecf{x})\,\vecf{q}_i
 &= 3\,(0, 0, 1) + \tfrac{3}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, 1, 0)
  - \tfrac{1}{\sqrt{2}} \cd \tfrac{1}{\sqrt{2}}\,(1, -1, 0)
 && \text{(substitute)}

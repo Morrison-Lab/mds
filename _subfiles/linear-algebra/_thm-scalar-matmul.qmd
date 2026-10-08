@@ -22,16 +22,16 @@ where $\matr{B} - \matr{C} = \matr{B} + (-1)\,\matr{C}$
 $$
 \ba
 \paren{\matr{A}\,(c\,\matr{B})}_{ij}
-&= \sum_{l=1}^{k} a_{il}\,(c\,\matr{B})_{lj}
+&= \sumto{l}{k} a_{il}\,(c\,\matr{B})_{lj}
 && \text{(@def-matrix-mult)}
 \\
-&= \sum_{l=1}^{k} a_{il}\,(c\,b_{lj})
+&= \sumto{l}{k} a_{il}\,(c\,b_{lj})
 && \text{(@def-scalar-mult)}
 \\
-&= \sum_{l=1}^{k} c\,(a_{il}\,b_{lj})
+&= \sumto{l}{k} c\,(a_{il}\,b_{lj})
 && \text{(reorder the product of numbers)}
 \\
-&= c \sum_{l=1}^{k} a_{il}\,b_{lj}
+&= c \sumto{l}{k} a_{il}\,b_{lj}
 && \text{(factor } c \text{ out of the sum)}
 \\
 &= c\,(\matr{A} \matr{B})_{ij}
@@ -47,10 +47,10 @@ $$
 $$
 \ba
 \paren{(c\,\matr{A})\,\matr{B}}_{ij}
-&= \sum_{l=1}^{k} (c\,a_{il})\,b_{lj}
+&= \sumto{l}{k} (c\,a_{il})\,b_{lj}
 && \text{(@def-matrix-mult, @def-scalar-mult)}
 \\
-&= c \sum_{l=1}^{k} a_{il}\,b_{lj}
+&= c \sumto{l}{k} a_{il}\,b_{lj}
 && \text{(factor } c \text{ out of the sum)}
 \\
 &= \paren{c\,(\matr{A} \matr{B})}_{ij}.

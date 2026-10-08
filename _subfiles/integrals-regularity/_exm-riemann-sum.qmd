@@ -9,7 +9,7 @@ Then
 
 $$
 \ba
-\sum_{i=1}^3 f(x_i^*)\,\Delta x_i
+\sumto{i}{3} f(x_i^*)\,\Delta x_i
 &= f(0.25) \cd 0.25 + f(0.5) \cd 0.25 + f(1) \cd 0.5
 && \text{(write out the three terms)}
 \\

@@ -18,7 +18,7 @@ $$
 \mu(\emptyset)
 &= \mu\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
 && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\
-&= \sum_{i=1}^{\infty} \mu(\emptyset)
+&= \sumto{i}{\infty} \mu(\emptyset)
 && \text{(countable additivity)}
 \ea
 $$
