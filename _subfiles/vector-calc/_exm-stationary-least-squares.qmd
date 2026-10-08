@@ -58,6 +58,16 @@ pd.DataFrame(
 )
 ```
 
+A library fit gives the same coefficients:
+
+```{python}
+#| code-fold: false
+import numpy as np
+
+# np.polyfit returns the slope first, so reverse to (intercept, slope).
+np.polyfit(auto["horsepower"], auto["mpg"], deg=1)[::-1]
+```
+
 #### R
 
 ```{r}
@@ -77,6 +87,14 @@ list(
   solution = list(beta = c(beta_hat), gradient = c(grad_hat)),
   zero_vector = list(beta = c(0, 0), gradient = c(grad_zero))
 )
+```
+
+A library fit gives the same coefficients:
+
+```{r}
+#| label: stationary-least-squares-lm
+#| code-fold: false
+coef(lm(mpg ~ horsepower, data = auto))
 ```
 
 :::
@@ -103,6 +121,6 @@ against `{r} format(max(abs(grad_zero)), digits = 2, big.mark = ",")`
 at the zero vector.
 So the solution is a stationary point (@def-stationary-point),
 and the zero vector is not.
-The same coefficients come from R's `lm(mpg ~ horsepower, data = auto)`.
+The library fits above agree with the solution of that equation.
 
 :::
