@@ -55,6 +55,8 @@ integrability
 invertibility
 Invertible
 invertible
+ISLP
+ISLR2
 Krohn
 Lasso
 lintr
@@ -90,6 +92,7 @@ Schwarz
 Sebastien
 semidefinite
 SERG
+StatLib
 subadditive
 Subadditivity
 subfiles
@@ -107,6 +110,3 @@ UCLA
 Vandenberghe
 Wilkie
 Zhou
-ISLP
-ISLR2
-StatLib
