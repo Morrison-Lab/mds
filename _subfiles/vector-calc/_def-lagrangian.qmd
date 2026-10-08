@@ -40,9 +40,9 @@ L(\vx, \vecf{\lambda}) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\paren{\tp{\m
 $$
 
 The partial derivatives of a sum are the sums of the partial derivatives, entry by entry.
-Using the first of these forms, @thm-quadratic-form for the first term,
-@cor-deriv-lincom-tp for the second ($\matr{A} \vecf{\lambda}$ is constant in $\vx$),
-and @def-constant-wrt-vector for the third,
+Using the first of these forms, [derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form) for the first term,
+[derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) for the second ($\matr{A} \vecf{\lambda}$ is constant in $\vx$),
+and [constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vector) for the third,
 
 $$
 \ba
@@ -59,7 +59,7 @@ $$
 $$
 
 Using the second form, in which $f(\vx)$ and $\tp{\matr{A}} \vx - \vecf{b}$ are constant in $\vecf{\lambda}$,
-and @cor-deriv-lincom-tp again,
+and [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) again,
 
 $$
 \ba

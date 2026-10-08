@@ -2,7 +2,7 @@
 #### Second-order sufficient condition
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are continuous on $\reals^p$ (@def-continuous-several).
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)).
 If $\vx^*$ is a stationary point of $f$ (@def-stationary-point)
 and $\matr{H}_f(\vx^*)$ is [positive definite](linear-algebra.qmd#def-positive-definite),
 then $\vx^*$ is a strict local minimizer of $f$ (@def-strict-local-minimizer).
@@ -14,7 +14,7 @@ then $\vx^*$ is a strict local minimizer of $f$ (@def-strict-local-minimizer).
 $\matr{H}_f(\vx^*)$ is positive definite, and so symmetric,
 so its smallest eigenvalue $\lambda$ is positive
 ([definiteness and eigenvalues](linear-algebra.qmd#thm-definite-eigenvalues)).
-Each of the $p^2$ entries of $\matr{H}_f$ is continuous at $\vx^*$ (@def-continuous-several):
+Each of the $p^2$ entries of $\matr{H}_f$ is continuous at $\vx^*$ ([continuity](vector-calculus.qmd#def-continuous-several)):
 for $\varepsilon = \lambda / (2p)$ there is a $\delta_{ij} > 0$ with
 $\abs{\sb{\matr{H}_f(\vy)}_{ij} - \sb{\matr{H}_f(\vx^*)}_{ij}} < \lambda / (2p)$
 whenever $\norm{\vy - \vx^*} < \delta_{ij}$.

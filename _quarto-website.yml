@@ -49,6 +49,8 @@ website:
         href: linear-algebra.qmd
       - text: "Vector Calculus"
         href: vector-calculus.qmd
+      - text: "Optimization"
+        href: optimization.qmd
       - text: "Proof Writing"
         href: proof-writing.qmd
     right:
@@ -74,6 +76,7 @@ website:
       - calculus.qmd
       - linear-algebra.qmd
       - vector-calculus.qmd
+      - optimization.qmd
       - proof-writing.qmd
 
 callouty-theorem:

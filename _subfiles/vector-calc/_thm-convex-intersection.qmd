@@ -20,7 +20,7 @@ So $t \vx + (1 - t) \vy \in K_1 \cap K_2$.
 :::{#exm-convex-intersection}
 #### Intersecting a ball with a half-plane
 
-The closed unit ball (@def-ball) in $\reals^2$ is convex (@exm-convex-set),
+The closed unit ball ([ball](vector-calculus.qmd#def-ball)) in $\reals^2$ is convex (@exm-convex-set),
 and so is the half-plane (@def-half-space) $\cb{\vx : x_1 \ge 0}$:
 if $x_1 \ge 0$ and $y_1 \ge 0$, then $t x_1 + (1 - t) y_1 \ge 0$ for $t \in [0, 1]$.
 By @thm-convex-intersection, the closed half-disk $\cb{\vx : \norm{\vx} \le 1,\ x_1 \ge 0}$ is convex.

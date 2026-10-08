@@ -2,7 +2,7 @@
 #### Descent direction
 
 Let $f : \reals^p \to \reals$ have a gradient $\vecf{g} \eqdef \deriv{\vx} f(\vx)$ at $\vx$.
-A direction $\vecf{d}$ (@def-direction) is a **descent direction** for $f$ at $\vx$
+A direction $\vecf{d}$ ([direction](vector-calculus.qmd#def-direction)) is a **descent direction** for $f$ at $\vx$
 if $\tp{\vecf{g}} \vecf{d} < 0$.
 When $\vecf{g} \ne \vzero_{p \times 1}$, $-\vecf{g}$ is a descent direction,
 since $\tp{\vecf{g}} (-\vecf{g}) = -\norm{\vecf{g}}^2 < 0$.
