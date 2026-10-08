@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-07 19:30:46 (PDT)
+Last modified: 2026-10-07 19:46:16 (PDT)
 
 ## 1 Vectors
 
@@ -2302,7 +2302,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Definition 57 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** (or **\\\ell_p\\ norm**, with parameter \\k\\) is:
+> **Definition 57 (Vector \\p\\-norm (\\\ell_p\\ norm, \\\ell_1\\ norm, \\\ell_2\\ norm, infinity norm))** For a vector \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\ and any real number \\k \ge 1\\, the **vector \\p\\-norm** (or **\\\ell_p\\ norm**, traditionally named with parameter \\p\\ but denoted here with exponent \\k\\ to avoid clashing with the ambient vector dimension \\p\\) is:
 >
 > \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p \mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
 >
