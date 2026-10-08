@@ -65,7 +65,8 @@ A library fit gives the same coefficients:
 import numpy as np
 
 # np.polyfit returns the slope first, so reverse to (intercept, slope).
-np.polyfit(auto["horsepower"], auto["mpg"], deg=1)[::-1]
+beta_polyfit = np.polyfit(auto["horsepower"], auto["mpg"], deg=1)[::-1]
+beta_polyfit
 ```
 
 #### R
@@ -107,7 +108,8 @@ coef(lm(mpg ~ horsepower, data = auto))
 stopifnot(
   max(abs(c(beta_hat) - reticulate::py$beta_hat)) < 1e-6,
   max(abs(grad_hat)) < 1e-6 * max(abs(grad_zero)),
-  max(abs(c(beta_hat) - coef(lm(mpg ~ horsepower, data = auto)))) < 1e-8
+  max(abs(c(beta_hat) - coef(lm(mpg ~ horsepower, data = auto)))) < 1e-8,
+  max(abs(c(beta_hat) - reticulate::py$beta_polyfit)) < 1e-6
 )
 ```
 
