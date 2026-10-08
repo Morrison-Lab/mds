@@ -7,7 +7,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
 1. **Mahalanobis metric and whitening**:
    Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences.
    If data features have a symmetric positive definite covariance matrix $\matr{\Sigma}$ (@def-positive-definite),
-   the precision matrix $\matr{A} = \matr{\Sigma}^{-1}$ (@thm-pd-inverse) defines the **Mahalanobis inner product**
+   the precision matrix $\matr{A} = \matr{\Sigma}^{-1}$ (@thm-pd-inverse) defines the Mahalanobis inner product
    $\iprod{\vx}{\vy}_{\matr{\Sigma}^{-1}} = \tp{\vx} \matr{\Sigma}^{-1} \vy$.
    The induced distance
    $d_{\matr{\Sigma}^{-1}}(\vx, \vy) = \sqrt{\tp{(\vx - \vy)}\matr{\Sigma}^{-1}(\vx - \vy)}$
@@ -19,7 +19,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
 2. **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**:
    Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products $\iprod{\vx_i}{\vx_j}$.
    By mapping data into a higher- or infinite-dimensional inner product space via a feature map $\phi: \reals^p \to \mathcal{H}$,
-   the **kernel trick** replaces the computation of $\phi(\vx_i)$ with an evaluation of a positive definite kernel function:
+   the kernel trick replaces the computation of $\phi(\vx_i)$ with an evaluation of a positive definite kernel function:
    $$
    k(\vx_i, \vx_j) \eqdef \iprod{\phi(\vx_i)}{\phi(\vx_j)}_{\mathcal{H}}.
    $$
@@ -27,9 +27,9 @@ tailors geometric notions of distance, angle, and projection to the structure of
 
 3. **Embeddings and cosine similarity**:
    In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations.
-   The angle between embeddings captures semantic similarity through **cosine similarity** (@def-angle):
+   The angle between embeddings captures semantic similarity through cosine similarity (@def-cosine-similarity):
    $$
-   \operatorname{cossim}(\vx, \vy) \eqdef \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
+   \operatorname{cossim}(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
    $$
    When embedding vectors are normalized to unit Euclidean norm ($\norm{\vx} = \norm{\vy} = 1$),
    cosine similarity equals the inner product $\iprod{\vx}{\vy}$.

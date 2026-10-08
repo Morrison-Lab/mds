@@ -490,6 +490,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-inner-product-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_exm-dot-product-inner-product.qmd >}}
 
 {{< slidebreak >}}
@@ -539,6 +543,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-cosine-similarity.qmd >}}
 
 ### Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
 
