@@ -2,7 +2,16 @@
 #### Partial derivatives of $x_1^2 x_2 + 3 x_2$
 
 Let $f(x_1, x_2) = x_1^2 x_2 + 3 x_2$.
-At $\vx = \tp{(1, 2)}$, $f(1, 2) = 1 \cd 2 + 6 = 8$, and for $h \ne 0$
+At $\vx = \tp{(1, 2)}$,
+
+$$
+\begin{aligned}
+f(1, 2) &= 1 \cd 2 + 6 \\
+&= 8,
+\end{aligned}
+$$
+
+and for $h \ne 0$
 
 $$
 \ba

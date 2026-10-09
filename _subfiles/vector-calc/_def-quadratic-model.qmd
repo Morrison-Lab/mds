@@ -22,7 +22,24 @@ with the Hessian evaluated at a point between $\vx$ and $\vx + \stepvec$.
 #### The model at $x = 2.5$
 
 For $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = 2.5$ (@exm-newton-method),
-$g = 2.5^2 - 4 = 2.25$ and $H = [2 \cdot 2.5] = [5]$, so
+
+$$
+\begin{aligned}
+g &= 2.5^2 - 4 \\
+&= 2.25
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+H &= [2 \cdot 2.5] \\
+&= [5],
+\end{aligned}
+$$
+
+so
 $q(\step) = f(2.5) + 2.25\,\step + 2.5\,\step^2$.
 For $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\sbmat{ 1 & 0 \\ 0 & 3 }$ at every point,
 the model at any $\vx$ equals $f(\vx + \stepvec)$ exactly (@exm-taylor-mv with $\matr{S} = \sbmat{ 1/2 & 0 \\ 0 & 3/2 }$).

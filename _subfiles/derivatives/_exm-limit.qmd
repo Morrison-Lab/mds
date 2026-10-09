@@ -28,6 +28,14 @@ $$
 
 For example, with $\tolout = 0.3$ and $\tolin = 0.1$,
 the point $x = 2.05$ satisfies $0 < \abs{2.05 - 2} < 0.1$,
-and $\abs{(3 \cd 2.05 + 1) - 7} = \abs{7.15 - 7} = 0.15 < 0.3$.
+and
+
+$$
+\begin{aligned}
+\abs{(3 \cd 2.05 + 1) - 7} &= \abs{7.15 - 7} \\
+&= 0.15 \\
+&< 0.3.
+\end{aligned}
+$$
 
 :::

@@ -10,7 +10,14 @@ The same function $f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2$ from
 $\iint_R |f|\,dA = \infty$, which violates condition (b).
 Switching to polar coordinates $(r, \angpar)$ near the origin, the
 integrand satisfies
-$|f(x, y)| = \abs{x^2 - y^2}/(x^2 + y^2)^2 = \abs{\cos 2\angpar}/r^2$,
+
+$$
+\begin{aligned}
+|f(x, y)| &= \abs{x^2 - y^2}/(x^2 + y^2)^2 \\
+&= \abs{\cos 2\angpar}/r^2,
+\end{aligned}
+$$
+
 so
 
 $$

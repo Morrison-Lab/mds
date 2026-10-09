@@ -34,7 +34,24 @@ so their maximum $f(t \vx + (1 - t) \vy)$ is too.
 - $f_1(x) = x$ is convex, by the computation for $2x + 1$ in @exm-strictly-convex with $2$ and $1$ replaced by $1$ and $0$,
   and $f_2(x) = x^2$ is convex by the same example, so $\max\cb{x, x^2}$ is convex by @thm-convex-max.
 - The minimum of two convex functions need not be convex:
-  $g(x) = \min\cb{x^2, (x - 2)^2}$ has $g(0) = g(2) = 0$,
-  but at the midpoint $g(1) = \min\cb{1, 1} = 1 > \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0$.
+  $g(x) = \min\cb{x^2, (x - 2)^2}$ has
+
+  $$
+  \begin{aligned}
+  g(0) &= g(2) \\
+  &= 0,
+  \end{aligned}
+  $$
+
+  but at the midpoint
+
+  $$
+  \begin{aligned}
+  g(1) &= \min\cb{1, 1} \\
+  &= 1 \\
+  &> \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) \\
+  &= 0.
+  \end{aligned}
+  $$
 
 :::

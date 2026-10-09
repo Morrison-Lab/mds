@@ -2,7 +2,16 @@
 #### Finite and $\sigma$-finite measures
 
 - Every finite measure is $\sigma$-finite:
-  take $A_1 = S$ and $A_2 = A_3 = \cdots = \emptyset$,
+  take $A_1 = S$ and
+
+  $$
+  \begin{aligned}
+  A_2 &= A_3 \\
+  &= \cdots \\
+  &= \emptyset,
+  \end{aligned}
+  $$
+
   with $\measure(A_1) = \measure(S) < \infty$ and $\measure(\emptyset) = 0$.
 - The counting measure on the die rolls $D$ is finite, with $\measure(D) = 6$.
 - The counting measure on $\set{0, 1, 2, \ldots}$ is not finite,

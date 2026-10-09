@@ -16,7 +16,15 @@ $$
 
 ::: proof
 Apply @thm-chain-vec with $\vx = \vcoef$, $\vy = \vlsresid$, $q = n$,
-and $z = f(\vlsresid) = \vlsresid \cdot \vlsresid = \tp{\vlsresid}\vlsresid$:
+and
+
+$$
+\begin{aligned}
+z &= f(\vlsresid) \\
+&= \vlsresid \cdot \vlsresid \\
+&= \tp{\vlsresid}\vlsresid:
+\end{aligned}
+$$
 
 $$
 \ba

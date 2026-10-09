@@ -14,9 +14,25 @@ since $\dprod{\vecf{g}}{(-\vecf{g})} =-\norm{\vecf{g}}^2 < 0$.
 :::{#exm-descent-directions}
 #### Descent directions for $x_1^2 + x_2^2$ at $\tp{(1, 0)}$
 
-Let $f(\vx) = x_1^2 + x_2^2$ and $\vx = \tp{(1, 0)}$, so $\vecf{g} = \tp{(2 x_1,\ 2 x_2)} = \tp{(2, 0)}$.
+Let $f(\vx) = x_1^2 + x_2^2$ and $\vx = \tp{(1, 0)}$, so
 
-- $\vecf{d} = \tp{(-1, 1)}$ is a descent direction: $\dprod{\vecf{g}}{\vecf{d}} = -2 + 0 = -2 < 0$.
+$$
+\begin{aligned}
+\vecf{g} &= \tp{(2 x_1,\ 2 x_2)} \\
+&= \tp{(2, 0)}.
+\end{aligned}
+$$
+
+- $\vecf{d} = \tp{(-1, 1)}$ is a descent direction:
+
+  $$
+  \begin{aligned}
+  \dprod{\vecf{g}}{\vecf{d}} &= -2 + 0 \\
+  &= -2 \\
+  &< 0.
+  \end{aligned}
+  $$
+
 - $\vecf{d} = \tp{(0, 1)}$ is not: $\dprod{\vecf{g}}{\vecf{d}} = 0$.
 - $-\vecf{g} = \tp{(-2, 0)}$ is: $\dprod{\vecf{g}}{(-\vecf{g})} = -4 < 0$.
 

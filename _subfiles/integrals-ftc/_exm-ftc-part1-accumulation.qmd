@@ -13,7 +13,16 @@ F(x) \;
 \end{aligned}
 $$
 
-so $F(x) = x^2$, and indeed $F'(x) = 2x = f(x)$, as @thm-ftc Part 1
+so $F(x) = x^2$, and indeed
+
+$$
+\begin{aligned}
+F'(x) &= 2x \\
+&= f(x),
+\end{aligned}
+$$
+
+as @thm-ftc Part 1
 predicts.
 @fig-ftc-part1 shows the integrand on the left
 (shaded area equals $F(x)$ at each $x$)
@@ -91,7 +100,16 @@ ggplot2::ggplot() +
 $F(x) = x^2$; tangent slope at each marked $x$ equals $f(x) = 2x$.
 :::
 
-Left: $f(t) = 2t$; the shaded area $\int_0^{`r x_focus`} 2t\,dt = F(`r x_focus`) = `r x_focus^2`$; vertical lines mark $x \in \{`r paste(x_marks, collapse = ", ")`\}$.
+Left: $f(t) = 2t$; the shaded area
+
+$$
+\begin{aligned}
+\int_0^{`r x_focus`} 2t\,dt &= F(`r x_focus`) \\
+&= `r x_focus^2`;
+\end{aligned}
+$$
+
+vertical lines mark $x \in \{`r paste(x_marks, collapse = ", ")`\}$.
 Right: $F(x) = x^2$; for each marked $x$, the tangent slope equals $f(x) = 2x$.
 
 :::

@@ -26,10 +26,33 @@ For $f(\vx) = x_1^2 x_2 + 3 x_2$ of @exm-partial-derivative,
 $\deriv{x_1} f(\vx) = 2 x_1 x_2$ and $\deriv{x_2} f(\vx) = x_1^2 + 3$.
 Differentiating each of these again:
 
-- $\deriv{x_1} \paren{\deriv{x_1} f(\vx)} = \deriv{x_1} (2 x_1 x_2) = 2 x_2$;
-- $\deriv{x_2} \paren{\deriv{x_1} f(\vx)} = \deriv{x_2} (2 x_1 x_2) = 2 x_1$;
-- $\deriv{x_1} \paren{\deriv{x_2} f(\vx)} = \deriv{x_1} (x_1^2 + 3) = 2 x_1$;
-- $\deriv{x_2} \paren{\deriv{x_2} f(\vx)} = \deriv{x_2} (x_1^2 + 3) = 0$.
+- $$
+  \begin{aligned}
+  \deriv{x_1} \paren{\deriv{x_1} f(\vx)} &= \deriv{x_1} (2 x_1 x_2) \\
+  &= 2 x_2;
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \deriv{x_2} \paren{\deriv{x_1} f(\vx)} &= \deriv{x_2} (2 x_1 x_2) \\
+  &= 2 x_1;
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \deriv{x_1} \paren{\deriv{x_2} f(\vx)} &= \deriv{x_1} (x_1^2 + 3) \\
+  &= 2 x_1;
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \deriv{x_2} \paren{\deriv{x_2} f(\vx)} &= \deriv{x_2} (x_1^2 + 3) \\
+  &= 0.
+  \end{aligned}
+  $$
 
 The two mixed partial derivatives are both $2 x_1$.
 

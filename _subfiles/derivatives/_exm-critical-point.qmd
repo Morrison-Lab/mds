@@ -5,7 +5,16 @@
   its one-sided derivatives there are $1$ and $-1$ (@exm-one-sided-derivative),
   so the difference quotient $\tfrac{\abs{h} - 0}{h}$ has no limit as $h \to 0$ (@def-one-sided-limit).
   So $0$ is a critical point of $g$ but not a flat point.
-- $f(w) = w^3$ has $f'(0) = 3 \cd 0^2 = 0$, so $0$ is a flat point of $f$, and hence a critical point.
+- $f(w) = w^3$ has
+
+  $$
+  \begin{aligned}
+  f'(0) &= 3 \cd 0^2 \\
+  &= 0,
+  \end{aligned}
+  $$
+
+  so $0$ is a flat point of $f$, and hence a critical point.
 - $h(w) = w^2$ is differentiable everywhere, with $h'(w) = 2w$,
   which is $0$ only at $w = 0$.
   So $0$ is the only critical point of $h$; for example, $h'(1) = 2 \ne 0$, so $1$ is not one.

@@ -1,7 +1,16 @@
 :::{#def-vector-valued-derivative}
 #### Derivative of a vector-valued function
 
-If $\vy = \vy(\vcoef) = \tp{(y_1, \ldots, y_q)}$ is a $q \times 1$ vector-valued function
+If
+
+$$
+\begin{aligned}
+\vy &= \vy(\vcoef) \\
+&= \tp{(y_1, \ldots, y_q)}
+\end{aligned}
+$$
+
+is a $q \times 1$ vector-valued function
 of the $p \times 1$ vector $\vcoef$,
 its **derivative with respect to** $\vcoef$
 is the $p \times q$ matrix whose $(i, j)$ entry is

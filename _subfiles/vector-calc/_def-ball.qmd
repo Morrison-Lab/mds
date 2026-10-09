@@ -19,9 +19,26 @@ are the open and closed **unit balls**.
 :::{#exm-ball}
 #### Points in the unit balls of $\reals^2$
 
-- $\tp{(0.5, 0.5)}$ has $\norm{\tp{(0.5, 0.5)}}^2 = 0.25 + 0.25 = 0.5 < 1$,
+- $\tp{(0.5, 0.5)}$ has
+
+  $$
+  \begin{aligned}
+  \norm{\tp{(0.5, 0.5)}}^2 &= 0.25 + 0.25 \\
+  &= 0.5 \\
+  &< 1,
+  \end{aligned}
+  $$
+
   so it is in both the open and the closed unit ball.
-- $\tp{(0.6, 0.8)}$ has $\norm{\tp{(0.6, 0.8)}}^2 = 0.36 + 0.64 = 1$,
+- $\tp{(0.6, 0.8)}$ has
+
+  $$
+  \begin{aligned}
+  \norm{\tp{(0.6, 0.8)}}^2 &= 0.36 + 0.64 \\
+  &= 1,
+  \end{aligned}
+  $$
+
   so it is in the closed unit ball but not the open one.
 - For $p = 1$, the open ball of radius $r$ around $c$ is the open interval $(c - r, c + r)$.
 

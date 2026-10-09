@@ -12,7 +12,16 @@ f(\vx) =
 $$
 
 **Both partial derivatives exist at $\vzero$.**
-For $h \ne 0$, $f(h, 0) = \frac{h \cd 0}{h^2 + 0} = 0$, so
+For $h \ne 0$,
+
+$$
+\begin{aligned}
+f(h, 0) &= \frac{h \cd 0}{h^2 + 0} \\
+&= 0,
+\end{aligned}
+$$
+
+so
 
 $$
 \ba
@@ -31,7 +40,18 @@ The same steps with $f(0, h) = 0$ give $\deriv{x_2} f(\vzero) = 0$.
 **But $f$ is not continuous at $\vzero$** (@def-continuous-several).
 Take $\tolout = \tfrac{1}{4}$ and any $\tolin > 0$,
 and let $t = \tolin / 2$ and $\vy = \tp{(t, t)}$.
-Then $\norm{\vy - \vzero} = \sqrt{t^2 + t^2} = t \sqrt{2} = \tolin / \sqrt{2} < \tolin$, but
+Then
+
+$$
+\begin{aligned}
+\norm{\vy - \vzero} &= \sqrt{t^2 + t^2} \\
+&= t \sqrt{2} \\
+&= \tolin / \sqrt{2} \\
+&< \tolin,
+\end{aligned}
+$$
+
+but
 
 $$
 \ba

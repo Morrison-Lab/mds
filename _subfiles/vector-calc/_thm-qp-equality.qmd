@@ -61,7 +61,16 @@ $$
 
 **$\vx^*$ is the unique minimizer.**
 Let $\vx$ satisfy $\tp{\matr{A}} \vx = \vecf{b}$, and let $\vecf{d} \eqdef \vx - \vx^*$,
-so $\tp{\matr{A}} \vecf{d} = \tp{\matr{A}} \vx - \tp{\matr{A}} \vx^* = \vecf{b} - \vecf{b} = \vzero_{m \times 1}$
+so
+
+$$
+\begin{aligned}
+\tp{\matr{A}} \vecf{d} &= \tp{\matr{A}} \vx - \tp{\matr{A}} \vx^* \\
+&= \vecf{b} - \vecf{b} \\
+&= \vzero_{m \times 1}
+\end{aligned}
+$$
+
 (matrix products distribute; both points satisfy the constraint).
 First, the cross term vanishes:
 
@@ -181,9 +190,33 @@ $$
 
 Checks:
 
-- the constraint: $3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5$;
-- the first block of @eq-kkt: $\matr{S} \vx^* + \matr{A} \vlagmult^* = \tp{(1.2, 1.6)} + \tp{(3, 4)} (-0.4) = \tp{(1.2, 1.6)} - \tp{(1.2, 1.6)} = \vzero_{2 \times 1}$;
-- the value: $0.6^2 + 0.8^2 = 0.36 + 0.64 = 1$.
+- the constraint:
+
+  $$
+  \begin{aligned}
+  3 (0.6) + 4 (0.8) &= 1.8 + 3.2 \\
+  &= 5;
+  \end{aligned}
+  $$
+
+- the first block of @eq-kkt:
+
+  $$
+  \begin{aligned}
+  \matr{S} \vx^* + \matr{A} \vlagmult^* &= \tp{(1.2, 1.6)} + \tp{(3, 4)} (-0.4) \\
+  &= \tp{(1.2, 1.6)} - \tp{(1.2, 1.6)} \\
+  &= \vzero_{2 \times 1};
+  \end{aligned}
+  $$
+
+- the value:
+
+  $$
+  \begin{aligned}
+  0.6^2 + 0.8^2 &= 0.36 + 0.64 \\
+  &= 1.
+  \end{aligned}
+  $$
 
 Geometrically, $\vx^*$ is the point of the line nearest the origin, at distance $1$.
 
@@ -200,13 +233,28 @@ Geometrically, $\vx^*$ is the point of the line nearest the origin, at distance 
   $f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)$ decreases without bound as $x_2$ grows.
 - If the columns of $\matr{A}$ are dependent, $\matr{M}$ is not invertible:
   with $\matr{S} = \matr{I}_2$ and $\matr{A} = \sbmat{ 1 & 1 \\ 1 & 1 }$,
-  $\matr{M} = \tp{\matr{A}} \matr{A} = \sbmat{ 2 & 2 \\ 2 & 2 }$,
+
+  $$
+  \begin{aligned}
+  \matr{M} &= \tp{\matr{A}} \matr{A} \\
+  &= \sbmat{ 2 & 2 \\ 2 & 2 },
+  \end{aligned}
+  $$
+
   whose columns are equal.
   So $\matr{M} \tp{(1, -1)} = \vzero_{2 \times 1}$, and $\matr{M}$ is not invertible
   ([a square matrix is invertible exactly when its null space is zero](linear-algebra.qmd#thm-invertible-rank)).
   The two constraints both read $x_1 + x_2 = b_i$,
   so they have no solution at all when $b_1 \ne b_2$.
-  When $b_1 = b_2$ a unique minimizer still exists, $x_1 = x_2 = b_1 / 2$,
+  When $b_1 = b_2$ a unique minimizer still exists,
+
+  $$
+  \begin{aligned}
+  x_1 &= x_2 \\
+  &= b_1 / 2,
+  \end{aligned}
+  $$
+
   but the formula of @thm-qp-equality cannot produce it.
 
 :::
