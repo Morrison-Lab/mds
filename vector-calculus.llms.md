@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 00:29:41 (UTC)
+Last modified: 2026-10-08 18:28:41 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -118,7 +118,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Definition 2 (Vector derivative (gradient))** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
+> **Definition 2 (Vector derivative (gradient))** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = \tilde{x} \cdot \tilde{\beta}\\, then its **vector derivative** is the column vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
 > \\ \frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta}) = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\tilde{\beta}) \\ \frac{\partial}{\partial \beta\_{2}}f(\tilde{\beta}) \\ \vdots \\ \frac{\partial}{\partial \beta\_{p}}f(\tilde{\beta}) \end{bmatrix} \\
 >
@@ -316,7 +316,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Definition 5 (Row-vector derivative (total derivative))** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = {\tilde{x}}^{\top}\tilde{\beta}\\, then its **row-vector derivative** is the row vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
+> **Definition 5 (Row-vector derivative (total derivative))** If \\f(\tilde{\beta})\\ is a scalar-valued function of a \\p \times 1\\ vector \\\tilde{\beta}\\, such as \\f(\tilde{\beta}) = \tilde{x} \cdot \tilde{\beta}\\, then its **row-vector derivative** is the row vector of its partial derivatives ([Definition 1](#def-partial-derivative)):
 >
 > \\ \frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}}f(\tilde{\beta}) & \frac{\partial}{\partial \beta\_{2}}f(\tilde{\beta}) & \cdots & \frac{\partial}{\partial \beta\_{p}}f(\tilde{\beta}) \end{bmatrix} \tag{1}\\
 >
@@ -600,23 +600,23 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Corollary 2 (Derivative of a simple quadratic form)** \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top}\tilde{\beta})}\_{p \times 1} = \underbrace{2\tilde{\beta}}\_{p \times 1} \\
+> **Corollary 2 (Derivative of a simple quadratic form)** \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta})}\_{p \times 1} = \underbrace{2\tilde{\beta}}\_{p \times 1} \\
 
 > **NOTE:**
 >
 > *Proof*. Applying [Theorem 7](#thm-quadratic-form) with \\\mathbf{S} = \mathbf{I}\_{p \times p}\\ (which is symmetric and constant with respect to \\\tilde{\beta}\\):
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{I}\_{p \times p}\tilde{\beta}) && \text{(rewrite with identity matrix)} \\ &= 2\mathbf{I}\_{p \times p}\tilde{\beta} && \text{(derivative of a quadratic form, with } \mathbf{S} = \mathbf{I}\_{p \times p} \text{)} \\ &= 2\tilde{\beta} && \text{(identity matrix property)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{I}\_{p \times p}\tilde{\beta}) && \text{(rewrite with identity matrix)} \\ &= 2\mathbf{I}\_{p \times p}\tilde{\beta} && \text{(derivative of a quadratic form, with } \mathbf{S} = \mathbf{I}\_{p \times p} \text{)} \\ &= 2\tilde{\beta} && \text{(identity matrix property)} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 6* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 2](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top}\tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta\_{1})\\, \\{\tilde{\beta}}^{\top}\tilde{\beta}= \beta\_{1}^2\\, and its derivative is \\2\beta\_{1} = 2\tilde{\beta}\\.
+> *Remark 6* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 2](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta\_{1})\\, \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2\\, and its derivative is \\2\beta\_{1} = 2\tilde{\beta}\\.
 
 > **NOTE:**
 >
-> **Example 17 (Derivative of a sum of squares)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\{\tilde{\beta}}^{\top}\tilde{\beta}= \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 2](#cor-deriv-normsq):
+> **Example 17 (Derivative of a sum of squares)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 2](#cor-deriv-normsq):
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\tilde{\beta})}\_{2 \times 1} = 2\tilde{\beta} = \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \\
+> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta})}\_{2 \times 1} = 2\tilde{\beta} = \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \\
 >
 > Direct partial differentiation yields the same column vector.
 
