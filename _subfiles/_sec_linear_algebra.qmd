@@ -478,6 +478,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_thm-direct-sum-equiv.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-projection.qmd >}}
+
 ### Orthogonal complements {#sec-orthogonal-complements}
 
 {{< include mds/_subfiles/linear-algebra/_thm-dot-linear.qmd >}}
@@ -525,6 +529,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-not-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-orthogonal-inner-product.qmd >}}
 
 ### Cauchy-Schwarz and the triangle inequality {#sec-cauchy-schwarz}
 

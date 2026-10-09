@@ -6,6 +6,7 @@ By @thm-orthogonal-direct-sum,
 $\vecf{y} = \vecf{u} + \vecf{v}$
 for exactly one $\vecf{u} \in \mathcal{S}$ and $\vecf{v} \in \mathcal{S}^\perp$.
 The vector $\vecf{u}$ is the **orthogonal projection** of $\vecf{y}$ onto $\mathcal{S}$.
+It is the projection of $\vecf{y}$ onto $\mathcal{S}$ along $\mathcal{S}^\perp$ (@def-projection).
 
 :::
 
