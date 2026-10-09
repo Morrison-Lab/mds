@@ -11,6 +11,8 @@
    \end{aligned}
    $$
 
+   so
+
    $$
    \ba
    f(x) - f(1) &= x^3 - 3x + 2
@@ -67,6 +69,8 @@
    &= -2,
    \end{aligned}
    $$
+
+   so
 
    $$
    \ba
