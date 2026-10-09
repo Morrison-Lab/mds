@@ -7,7 +7,17 @@ and both sides equal $f(x_1)$.
 Now let $n \ge 2$, and assume the inequality holds for $n - 1$ points.
 If $w_n = 1$, the other weights are all $0$,
 and both sides equal $f(x_n)$.
-Otherwise let $s = 1 - w_n = \sumto{i}{n-1} w_i > 0$ and
+Otherwise let
+
+$$
+\begin{aligned}
+s &= 1 - w_n \\
+&= \sumto{i}{n-1} w_i \\
+&> 0
+\end{aligned}
+$$
+
+and
 $$
 y = \sumto{i}{n-1} \frac{w_i}{s} x_i.
 $$

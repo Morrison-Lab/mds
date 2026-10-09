@@ -6,7 +6,14 @@
 - Every indicator function $\indic{A}$ is idempotent,
   because each of its values is $0$ or $1$.
   For example, with $A = [0, \infty)$,
-  $\indic{A}(3.5) \cd \indic{A}(3.5) = 1 \cd 1 = 1 = \indic{A}(3.5)$.
+
+  $$
+  \begin{aligned}
+  \indic{A}(3.5) \cd \indic{A}(3.5) &= 1 \cd 1 \\
+  &= 1 \\
+  &= \indic{A}(3.5).
+  \end{aligned}
+  $$
 
 The [idempotent matrices](linear-algebra.qmd#def-idempotent-matrix)
 of linear algebra satisfy the same equation with matrix multiplication:

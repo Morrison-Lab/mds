@@ -21,7 +21,24 @@ it is the curve along which the surface has height $k$.
 For $g(b, c) = b^2 + c^2$,
 the contour line at height $k = 4$ is $\cb{(b, c) : b^2 + c^2 = 4}$,
 the circle of radius $2$ around $(0, 0)$:
-for example, $g(2, 0) = 4 + 0 = 4$ and $g(0, -2) = 0 + 4 = 4$.
+for example,
+
+$$
+\begin{aligned}
+g(2, 0) &= 4 + 0 \\
+&= 4
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+g(0, -2) &= 0 + 4 \\
+&= 4.
+\end{aligned}
+$$
+
 The contour line at height $k = -1$ is empty,
 because $b^2 + c^2 \ge 0$ for all $b$ and $c$.
 

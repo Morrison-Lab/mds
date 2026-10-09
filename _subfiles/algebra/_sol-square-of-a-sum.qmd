@@ -2,7 +2,24 @@
 
 :::{#sol-square-of-a-sum}
 
-No: $(3 + 4)^2 = 7^2 = 49$, while $3^2 + 4^2 = 9 + 16 = 25$.
+No:
+
+$$
+\begin{aligned}
+(3 + 4)^2 &= 7^2 \\
+&= 49,
+\end{aligned}
+$$
+
+while
+
+$$
+\begin{aligned}
+3^2 + 4^2 &= 9 + 16 \\
+&= 25.
+\end{aligned}
+$$
+
 The difference, $49 - 25 = 24$, is $2 \cdot 3 \cdot 4$.
 
 To see where that extra term comes from,
@@ -37,7 +54,24 @@ and @thm-sum-assoc to drop the parentheses.
 
 :::{#sol-square-of-a-sum}
 
-No: $(3 + 4)^2 = 7^2 = 49$, while $3^2 + 4^2 = 9 + 16 = 25$.
+No:
+
+$$
+\begin{aligned}
+(3 + 4)^2 &= 7^2 \\
+&= 49,
+\end{aligned}
+$$
+
+while
+
+$$
+\begin{aligned}
+3^2 + 4^2 &= 9 + 16 \\
+&= 25.
+\end{aligned}
+$$
+
 The difference, $49 - 25 = 24$, is $2 \cdot 3 \cdot 4$.
 
 To see where that extra term comes from,

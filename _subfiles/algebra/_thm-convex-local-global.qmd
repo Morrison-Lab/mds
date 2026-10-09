@@ -5,7 +5,17 @@ $f(x) = (x - 2)^2$ is convex (@def-convex-function):
 by expanding the square,
 $f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0$.
 Its local minimizer $x^* = 2$ is also a global minimizer,
-since $f(x) = (x - 2)^2 \ge 0 = f(2)$ for every $x$.
+since
+
+$$
+\begin{aligned}
+f(x) &= (x - 2)^2 \\
+&\ge 0 \\
+&= f(2)
+\end{aligned}
+$$
+
+for every $x$.
 
 Without convexity, a local minimizer need not be global:
 $f(x) = x^3 - 3x$ is not convex (@exm-cubic-not-convex),

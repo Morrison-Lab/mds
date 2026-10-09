@@ -13,8 +13,23 @@ Let $u = 1 + x^2$. Then $du = 2x\,dx$, so $x\,dx = \frac{1}{2}du$.
 
 Transform the limits of integration:
 
-- When $x = 0$: $u = 1 + 0^2 = 1$.
-- When $x = 1$: $u = 1 + 1^2 = 2$.
+- When $x = 0$:
+
+  $$
+  \begin{aligned}
+  u &= 1 + 0^2 \\
+  &= 1.
+  \end{aligned}
+  $$
+
+- When $x = 1$:
+
+  $$
+  \begin{aligned}
+  u &= 1 + 1^2 \\
+  &= 2.
+  \end{aligned}
+  $$
 
 Applying the substitution:
 

@@ -71,7 +71,15 @@ and $t^2 (t - 3) < 0$ whenever $t \ne 0$ and $t < 3$.
 So whatever $\tolin > 0$ is,
 the point $x = -1 + t$ with $t = \min\cb{\tolin / 2, 1}$ satisfies $\abs{x - (-1)} < \tolin$
 and $f(x) < f(-1)$.
-For example, $f(-0.9) = -0.729 + 2.7 = 1.971 < 2$.
+For example,
+
+$$
+\begin{aligned}
+f(-0.9) &= -0.729 + 2.7 \\
+&= 1.971 \\
+&< 2.
+\end{aligned}
+$$
 
 :::
 
@@ -123,7 +131,15 @@ and $t^2 (t - 3) < 0$ whenever $t \ne 0$ and $t < 3$.
 So whatever $\tolin > 0$ is,
 the point $x = -1 + t$ with $t = \min\cb{\tolin / 2, 1}$ satisfies $\abs{x - (-1)} < \tolin$
 and $f(x) < f(-1)$.
-For example, $f(-0.9) = -0.729 + 2.7 = 1.971 < 2$.
+For example,
+
+$$
+\begin{aligned}
+f(-0.9) &= -0.729 + 2.7 \\
+&= 1.971 \\
+&< 2.
+\end{aligned}
+$$
 
 :::
 

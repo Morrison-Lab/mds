@@ -2,10 +2,40 @@
 #### An associative operation, and one that is not
 
 - Multiplication is associative:
-  for example, $(2 \times 3) \times 4 = 6 \times 4 = 24$
-  and $2 \times (3 \times 4) = 2 \times 12 = 24$.
+  for example,
+
+  $$
+  \begin{aligned}
+  (2 \times 3) \times 4 &= 6 \times 4 \\
+  &= 24
+  \end{aligned}
+  $$
+
+  and
+
+  $$
+  \begin{aligned}
+  2 \times (3 \times 4) &= 2 \times 12 \\
+  &= 24.
+  \end{aligned}
+  $$
+
 - Subtraction is not associative:
-  $(8 - 4) - 2 = 4 - 2 = 2$,
-  but $8 - (4 - 2) = 8 - 2 = 6$.
+
+  $$
+  \begin{aligned}
+  (8 - 4) - 2 &= 4 - 2 \\
+  &= 2,
+  \end{aligned}
+  $$
+
+  but
+
+  $$
+  \begin{aligned}
+  8 - (4 - 2) &= 8 - 2 \\
+  &= 6.
+  \end{aligned}
+  $$
 
 :::

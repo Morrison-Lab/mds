@@ -9,6 +9,16 @@ because $a + b + c = (a + b) + c$,
 $a + b$ is even by that result,
 and applying the result again to the even integers $a + b$ and $c$
 shows that $(a + b) + c$ is even.
-For example, $2 + 4 + 6 = (2 + 4) + 6 = 6 + 6 = 12$, which is even.
+For example,
+
+$$
+\begin{aligned}
+2 + 4 + 6 &= (2 + 4) + 6 \\
+&= 6 + 6 \\
+&= 12,
+\end{aligned}
+$$
+
+which is even.
 
 :::

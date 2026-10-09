@@ -44,8 +44,25 @@ and $0^s$ is undefined for $s < 0$.
 - If $b < 0$, then $0^b$ is undefined, so $(a^b)^c$ is undefined.
 - If $b > 0$, then $(0^b)^c = 0^c$ and $b^c > 0$, so $0^{(b^c)} = 0$;
   the two sides agree exactly when $c > 0$.
-- If $b = 0$, then $(0^0)^c = 1^c = 1$;
-  for $c > 0$, $0^{(0^c)} = 0^0 = 1$, so the two sides agree,
+- If $b = 0$, then
+
+  $$
+  \begin{aligned}
+  (0^0)^c &= 1^c \\
+  &= 1;
+  \end{aligned}
+  $$
+
+  for $c > 0$,
+
+  $$
+  \begin{aligned}
+  0^{(0^c)} &= 0^0 \\
+  &= 1,
+  \end{aligned}
+  $$
+
+  so the two sides agree,
   and for $c \le 0$ they do not.
 
 So for $a = 0$, $(a^b)^c = a^{(b^c)}$ exactly when $b \ge 0$ and $c > 0$.
@@ -127,8 +144,25 @@ and $0^s$ is undefined for $s < 0$.
 - If $b < 0$, then $0^b$ is undefined, so $(a^b)^c$ is undefined.
 - If $b > 0$, then $(0^b)^c = 0^c$ and $b^c > 0$, so $0^{(b^c)} = 0$;
   the two sides agree exactly when $c > 0$.
-- If $b = 0$, then $(0^0)^c = 1^c = 1$;
-  for $c > 0$, $0^{(0^c)} = 0^0 = 1$, so the two sides agree,
+- If $b = 0$, then
+
+  $$
+  \begin{aligned}
+  (0^0)^c &= 1^c \\
+  &= 1;
+  \end{aligned}
+  $$
+
+  for $c > 0$,
+
+  $$
+  \begin{aligned}
+  0^{(0^c)} &= 0^0 \\
+  &= 1,
+  \end{aligned}
+  $$
+
+  so the two sides agree,
   and for $c \le 0$ they do not.
 
 So for $a = 0$, $(a^b)^c = a^{(b^c)}$ exactly when $b \ge 0$ and $c > 0$.

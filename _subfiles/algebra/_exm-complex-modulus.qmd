@@ -1,10 +1,39 @@
 :::{#exm-complex-modulus}
 #### Absolute values of complex numbers
 
-- $\abs{3 + 4\,i} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5$.
-- $\abs{-2\,i} = \sqrt{0^2 + (-2)^2} = \sqrt{4} = 2$.
-- For a real number $a = a + 0\,i$, $\abs{a} = \sqrt{a^2 + 0^2} = \sqrt{a^2}$,
+- $$
+  \begin{aligned}
+  \abs{3 + 4\,i} &= \sqrt{3^2 + 4^2} \\
+  &= \sqrt{25} \\
+  &= 5.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \abs{-2\,i} &= \sqrt{0^2 + (-2)^2} \\
+  &= \sqrt{4} \\
+  &= 2.
+  \end{aligned}
+  $$
+
+- For a real number $a = a + 0\,i$,
+
+  $$
+  \begin{aligned}
+  \abs{a} &= \sqrt{a^2 + 0^2} \\
+  &= \sqrt{a^2},
+  \end{aligned}
+  $$
+
   which is the usual absolute value of $a$;
-  for instance, $\abs{-3} = \sqrt{9} = 3$.
+  for instance,
+
+  $$
+  \begin{aligned}
+  \abs{-3} &= \sqrt{9} \\
+  &= 3.
+  \end{aligned}
+  $$
 
 :::

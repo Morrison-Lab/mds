@@ -8,7 +8,15 @@ that is greater than every real number:
 $$[0, \infty] \eqdef [0, \infty) \cup \set{\infty}$$
 
 Addition extends to $[0, \infty]$ by setting
-$x + \infty = \infty + x = \infty$ for every $x \in [0, \infty]$.
+
+$$
+\begin{aligned}
+x + \infty &= \infty + x \\
+&= \infty
+\end{aligned}
+$$
+
+for every $x \in [0, \infty]$.
 
 :::
 

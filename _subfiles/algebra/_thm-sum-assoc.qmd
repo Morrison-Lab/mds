@@ -13,7 +13,20 @@ $$(a + b) + c = a + (b + c)$$
 :::{#exm-sum-assoc}
 #### Grouping a sum two ways
 
-$(2 + 3) + 4 = 5 + 4 = 9$,
-and $2 + (3 + 4) = 2 + 7 = 9$.
+$$
+\begin{aligned}
+(2 + 3) + 4 &= 5 + 4 \\
+&= 9,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+2 + (3 + 4) &= 2 + 7 \\
+&= 9.
+\end{aligned}
+$$
 
 :::

@@ -24,7 +24,21 @@ For example, the square $(y - \hy)^2$
 of the difference between an observed value $y$ and a prediction $\hy$ of it
 expands this way.
 With $y = 5$ and $\hy = 3$,
-$(5 - 3)^2 = 2^2 = 4$,
-and $5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4$.
+
+$$
+\begin{aligned}
+(5 - 3)^2 &= 2^2 \\
+&= 4,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+5^2 - 2 \cdot 5 \cdot 3 + 3^2 &= 25 - 30 + 9 \\
+&= 4.
+\end{aligned}
+$$
 
 :::

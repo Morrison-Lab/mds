@@ -14,7 +14,14 @@ Let $u = 3x^2$. Then $du = 6x\,dx$, meaning $x\,dx = \frac{du}{6}$.
 Limits:
 
 - When $x = 0$: $u = 0$.
-- When $x = 2$: $u = 3(2^2) = 12$.
+- When $x = 2$:
+
+  $$
+  \begin{aligned}
+  u &= 3(2^2) \\
+  &= 12.
+  \end{aligned}
+  $$
 
 Substitute:
 

@@ -22,8 +22,22 @@ $m$ and $n$ are its **lower** and **upper limits**.
 The name of the index does not change the sum:
 $\sumin a_i$ and $\sumjn a_j$ are the same number.
 For example,
-$\sumto{i}{3} i = 1 + 2 + 3 = 6$
-and $\sumto{j}{3} j = 1 + 2 + 3 = 6$.
+
+$$
+\begin{aligned}
+\sumto{i}{3} i &= 1 + 2 + 3 \\
+&= 6
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\sumto{j}{3} j &= 1 + 2 + 3 \\
+&= 6.
+\end{aligned}
+$$
 
 :::
 

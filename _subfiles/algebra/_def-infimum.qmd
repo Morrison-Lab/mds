@@ -28,7 +28,15 @@ and the largest of them is $1$,
 so $\inf A = 1$.
 
 If the infimum belongs to $A$, it equals the minimum: $\inf A = \min A$.
-For example, $\inf [1, 2] = 1 = \min [1, 2]$.
+For example,
+
+$$
+\begin{aligned}
+\inf [1, 2] &= 1 \\
+&= \min [1, 2].
+\end{aligned}
+$$
+
 For $A = (1, 2]$, the infimum $1$ is not in $A$,
 and $A$ has no minimum.
 

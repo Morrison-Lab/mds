@@ -12,6 +12,14 @@ $$
 $$
 
 Verify by differentiating:
-$\deriv{x}\paren{x^3 - x + C} = 3x^2 - 1 = f(x)$, as required.
+
+$$
+\begin{aligned}
+\deriv{x}\paren{x^3 - x + C} &= 3x^2 - 1 \\
+&= f(x),
+\end{aligned}
+$$
+
+as required.
 
 :::

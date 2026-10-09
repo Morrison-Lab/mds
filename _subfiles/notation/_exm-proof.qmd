@@ -17,6 +17,14 @@ $$
 
 The second line uses the [distributive law](algebra.qmd#def-distributive).
 Since $j + k$ is an integer, $a + b$ is even (@def-even-odd).
-For example, $4 + 10 = 2 \cd 2 + 2 \cd 5 = 2 \cd 7 = 14$.
+For example,
+
+$$
+\begin{aligned}
+4 + 10 &= 2 \cd 2 + 2 \cd 5 \\
+&= 2 \cd 7 \\
+&= 14.
+\end{aligned}
+$$
 
 :::
