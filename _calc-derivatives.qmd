@@ -140,7 +140,7 @@ $$
 {{< slidebreak >}}
 
 :::{#thm-deriv-exp}
-#### derivative of exponential
+#### Derivative of exponential
 
 For every real $x$,
 the derivative of the [exponential function](algebra.qmd#def-exponential-function) is:
