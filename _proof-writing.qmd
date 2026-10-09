@@ -116,8 +116,25 @@ $$
 and $2k^2 + 2k$ is an integer,
 because sums and products of integers are integers.
 So $n^2 = 2 \cd (\text{an integer}) + 1$, which is the definition of odd.
-For example, $n = 7 = 2 \cd 3 + 1$ gives
-$n^2 = 49 = 2 \cd 24 + 1$, and $2 \cd 3^2 + 2 \cd 3 = 24$.
+For example,
+
+$$
+\begin{aligned}
+n &= 7 \\
+&= 2 \cd 3 + 1
+\end{aligned}
+$$
+
+gives
+
+$$
+\begin{aligned}
+n^2 &= 49 \\
+&= 2 \cd 24 + 1,
+\end{aligned}
+$$
+
+and $2 \cd 3^2 + 2 \cd 3 = 24$.
 
 The notation page's proof that
 [the sum of two even integers is even](notation.qmd#exm-proof)

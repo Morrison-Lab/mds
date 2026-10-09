@@ -1,11 +1,37 @@
 :::{#exm-power}
 #### Powers
 
-- $2^3 = 2 \cd 2 \cd 2 = 8$, with base $2$ and exponent $3$.
-- $(-3)^2 = (-3) \cd (-3) = 9$,
-  but $-3^2 = -(3^2) = -9$:
+- $$
+  \begin{aligned}
+  2^3 &= 2 \cd 2 \cd 2 \\
+  &= 8,
+  \end{aligned}
+  $$
+
+  with base $2$ and exponent $3$.
+- $$
+  \begin{aligned}
+  (-3)^2 &= (-3) \cd (-3) \\
+  &= 9,
+  \end{aligned}
+  $$
+
+  but
+
+  $$
+  \begin{aligned}
+  -3^2 &= -(3^2) \\
+  &= -9:
+  \end{aligned}
+  $$
+
   the exponent applies only to the $3$.
 - $5^0 = 1$.
-- $2^{-2} = \frac{1}{2^2} = \frac{1}{4}$.
+- $$
+  \begin{aligned}
+  2^{-2} &= \frac{1}{2^2} \\
+  &= \frac{1}{4}.
+  \end{aligned}
+  $$
 
 :::

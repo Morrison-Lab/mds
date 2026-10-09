@@ -26,5 +26,14 @@ Because $\log 2$ is constant with respect to $x$, the constant rule (@thm-deriv-
 
 $$f'(x) = 0$$
 
-*Remark:* While one could apply the chain rule separately to each term ($\frac{4}{4x} - \frac{2}{2x} = \frac{1}{x} - \frac{1}{x} = 0$), simplifying algebraically first is faster and prevents arithmetic errors.
+*Remark:* While one could apply the chain rule separately to each term, giving
+
+$$
+\begin{aligned}
+\frac{4}{4x} - \frac{2}{2x} &= \frac{1}{x} - \frac{1}{x} \\
+&= 0,
+\end{aligned}
+$$
+
+simplifying algebraically first is faster and prevents arithmetic errors.
 :::

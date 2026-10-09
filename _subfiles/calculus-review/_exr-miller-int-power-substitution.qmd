@@ -24,7 +24,15 @@ $$
 Limits:
 
 - When $x = 0$: $u = 0$.
-- When $x = 3$: $u = 3^3 + 3(3) = 27 + 9 = 36$.
+- When $x = 3$:
+
+  $$
+  \begin{aligned}
+  u &= 3^3 + 3(3) \\
+  &= 27 + 9 \\
+  &= 36.
+  \end{aligned}
+  $$
 
 Substitute:
 

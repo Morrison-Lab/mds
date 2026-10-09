@@ -2,9 +2,23 @@
 #### Absolute values
 
 - $\abs{2.5} = 2.5$, because $2.5 \ge 0$.
-- $\abs{-3} = -(-3) = 3$, because $-3 < 0$.
+- $$
+  \begin{aligned}
+  \abs{-3} &= -(-3) \\
+  &= 3,
+  \end{aligned}
+  $$
+
+  because $-3 < 0$.
 - $\abs{0} = 0$.
-- $\abs{-3} = 3 = \sqrt{9} = \sqrt{(-3)^2}$:
+- $$
+  \begin{aligned}
+  \abs{-3} &= 3 \\
+  &= \sqrt{9} \\
+  &= \sqrt{(-3)^2}:
+  \end{aligned}
+  $$
+
   for every real $a$, $\abs{a} = \sqrt{a^2}$ (@def-square-root).
 - $\abs{x - 1} < 1$ says that $x$ is less than $1$ away from $1$,
   that is, $0 < x < 2$.

@@ -76,9 +76,24 @@ $$
 \ea
 $$
 
-**Part 3.** Part 1, applied to each formula, gives $b = f(0) = b'$.
+**Part 3.** Part 1, applied to each formula, gives
+
+$$
+\begin{aligned}
+b &= f(0) \\
+&= b'.
+\end{aligned}
+$$
+
 Part 2 with $x_1 = 0$ and $x_2 = 1$, applied to each formula,
-gives $m = f(1) - f(0) = m'$.
+gives
+
+$$
+\begin{aligned}
+m &= f(1) - f(0) \\
+&= m'.
+\end{aligned}
+$$
 
 :::
 

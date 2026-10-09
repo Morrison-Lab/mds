@@ -18,7 +18,21 @@ which can be regrouped by @thm-prod-symmetric and @thm-prod-assoc.
 #### Power of a product
 
 With $a = 2$, $b = 3$, and $c = 2$,
-$(2 \cd 3)^2 = 6^2 = 36$,
-and $2^2 \cd 3^2 = 4 \cd 9 = 36$.
+
+$$
+\begin{aligned}
+(2 \cd 3)^2 &= 6^2 \\
+&= 36,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+2^2 \cd 3^2 &= 4 \cd 9 \\
+&= 36.
+\end{aligned}
+$$
 
 :::

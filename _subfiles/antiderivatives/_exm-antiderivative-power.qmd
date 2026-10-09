@@ -2,7 +2,14 @@
 #### Antiderivative of $x^2$
 
 For $f(x) = x^2$, an antiderivative is $F(x) = \frac{x^3}{3}$,
-since $\deriv{x}\frac{x^3}{3} = x^2 = f(x)$.
+since
+
+$$
+\begin{aligned}
+\deriv{x}\frac{x^3}{3} &= x^2 \\
+&= f(x).
+\end{aligned}
+$$
 
 Adding any constant $C$ gives another antiderivative;
 for example, with $C = 7$, $F(x) = \frac{x^3}{3} + 7$ also satisfies

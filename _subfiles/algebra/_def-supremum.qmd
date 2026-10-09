@@ -28,7 +28,15 @@ and the smallest of them is $2$,
 so $\sup A = 2$.
 
 If the supremum belongs to $A$, it equals the maximum: $\sup A = \max A$.
-For example, $\sup [1, 2] = 2 = \max [1, 2]$.
+For example,
+
+$$
+\begin{aligned}
+\sup [1, 2] &= 2 \\
+&= \max [1, 2].
+\end{aligned}
+$$
+
 For $A = [1, 2)$, the supremum $2$ is not in $A$,
 and $A$ has no maximum.
 

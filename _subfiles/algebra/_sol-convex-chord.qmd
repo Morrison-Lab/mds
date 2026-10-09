@@ -1,10 +1,39 @@
 :::{#sol-convex-chord}
 
 1. With $t = \tfrac{1}{2}$,
-   $t x + (1 - t) y = \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 = 2$,
-   so $f(2) = (2 - 2)^2 = 0$.
 
-2. $f(0) = (0 - 2)^2 = 4$ and $f(4) = (4 - 2)^2 = 4$,
+   $$
+   \begin{aligned}
+   t x + (1 - t) y &= \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 \\
+   &= 2,
+   \end{aligned}
+   $$
+
+   so
+
+   $$
+   \begin{aligned}
+   f(2) &= (2 - 2)^2 \\
+   &= 0.
+   \end{aligned}
+   $$
+
+2. $$
+   \begin{aligned}
+   f(0) &= (0 - 2)^2 \\
+   &= 4
+   \end{aligned}
+   $$
+
+   and
+
+   $$
+   \begin{aligned}
+   f(4) &= (4 - 2)^2 \\
+   &= 4,
+   \end{aligned}
+   $$
+
    so $\tfrac{1}{2} \cdot 4 + \tfrac{1}{2} \cdot 4 = 4$.
 
 3. Yes: $0 \le 4$.

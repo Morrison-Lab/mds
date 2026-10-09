@@ -202,9 +202,22 @@ Under this notation,
 set membership is written $[x \in A]$,
 so $[x \in A] = \indic{A}(x)$.
 For example, the values in @exm-indicator-numerical become
-$[7.2 > 5] = \indicp{7.2 > 5} = 1$
+
+$$
+\begin{aligned}
+[7.2 > 5] &= \indicp{7.2 > 5} \\
+&= 1
+\end{aligned}
+$$
+
 and, with $A = [0, \infty)$,
-$[-2.1 \in A] = \indic{A}(-2.1) = 0$.
+
+$$
+\begin{aligned}
+[-2.1 \in A] &= \indic{A}(-2.1) \\
+&= 0.
+\end{aligned}
+$$
 
 :::
 
@@ -230,10 +243,33 @@ and $\kron_{ij} = 0$ when $i \neq j$
 :::{#exm-kronecker-delta}
 #### Evaluating the Kronecker delta
 
-- $\kron_{11} = [1 = 1] = 1$.
-- $\kron_{12} = [1 = 2] = 0$.
-- $\kron_{22} = [2 = 2] = 1$.
-- $\kron_{23} = [2 = 3] = 0$.
+- $$
+  \begin{aligned}
+  \kron_{11} &= [1 = 1] \\
+  &= 1.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \kron_{12} &= [1 = 2] \\
+  &= 0.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \kron_{22} &= [2 = 2] \\
+  &= 1.
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  \kron_{23} &= [2 = 3] \\
+  &= 0.
+  \end{aligned}
+  $$
 
 :::
 

@@ -30,7 +30,17 @@ $$f''(x) = 24x - 6$$
 Apply the second derivative test at each critical point:
 
 - At $x = 0$: $f''(0) = -6 < 0$, so $x = 0$ is a strict local maximum.
-- At $x = 1/2$: $f''(1/2) = 24(1/2) - 6 = 6 > 0$, so $x = 1/2$ is a strict local minimum.
+- At $x = 1/2$:
+
+  $$
+  \begin{aligned}
+  f''(1/2) &= 24(1/2) - 6 \\
+  &= 6 \\
+  &> 0,
+  \end{aligned}
+  $$
+
+  so $x = 1/2$ is a strict local minimum.
 
 Inflection points occur where the second derivative changes sign ($f''(x) = 0$ at $x = 1/4$). Because $f''$ is non-zero at both critical points, neither is an inflection point.
 :::

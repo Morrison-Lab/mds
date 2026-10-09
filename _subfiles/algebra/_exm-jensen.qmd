@@ -8,7 +8,16 @@ $$
 t x^2 + (1 - t) y^2 - \left(t x + (1 - t) y\right)^2 = t (1 - t) (x - y)^2 \ge 0.
 $$
 Take the three points $x_1 = 1$, $x_2 = 2$, $x_3 = 6$,
-and the equal weights $w_1 = w_2 = w_3 = \tfrac{1}{3}$.
+and the equal weights
+
+$$
+\begin{aligned}
+w_1 &= w_2 \\
+&= w_3 \\
+&= \tfrac{1}{3}.
+\end{aligned}
+$$
+
 The weighted average of the points is their mean,
 $\tfrac{1}{3}(1 + 2 + 6) = 3$,
 so the left side of @thm-jensen is $f(3) = 9$.
