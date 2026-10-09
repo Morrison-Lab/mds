@@ -55,7 +55,15 @@ $\matr{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0
 of @exm-triangular-matrix has eigenvalues $2$, $\tfrac{1}{2}$ and $-1$.
 For $\eigval = \tfrac{1}{2}$ (so $k = 2$), take $v_2 = 1$, $v_3 = 0$;
 row 1 of $(\matr{U} - \tfrac{1}{2}\,\matr{I}_3)\,\vecf{v}$ is $\tfrac{3}{2}\,v_1 + 1 = 0$, so $v_1 = -\tfrac{2}{3}$.
-Check: $\matr{U}\,(-\tfrac{2}{3}, 1, 0) = (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) = \tfrac{1}{2}\,(-\tfrac{2}{3}, 1, 0)$.
+Check:
+
+$$
+\begin{aligned}
+\matr{U}\,(-\tfrac{2}{3}, 1, 0) &= (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) \\
+&= \tfrac{1}{2}\,(-\tfrac{2}{3}, 1, 0).
+\end{aligned}
+$$
+
 The matrix $\matr{J}$ of @exm-eigenspace is upper triangular with both diagonal entries $0$,
 and $0$ is its only eigenvalue.
 

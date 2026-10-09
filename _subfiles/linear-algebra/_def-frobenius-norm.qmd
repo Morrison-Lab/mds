@@ -54,6 +54,14 @@ of the entries of $\matr{A}$, listed as one vector of length $np$
 
 For example, listing the entries of $\matr{A}$ in @exm-frobenius-norm
 row by row gives the vector $(1, 2, 3, 4)$ of length $2 \cd 2 = 4$,
-and $\norm{(1, 2, 3, 4)} = \sqrt{1 + 4 + 9 + 16} = \sqrt{30} = \norm{\matr{A}}_F$.
+and
+
+$$
+\begin{aligned}
+\norm{(1, 2, 3, 4)} &= \sqrt{1 + 4 + 9 + 16} \\
+&= \sqrt{30} \\
+&= \norm{\matr{A}}_F.
+\end{aligned}
+$$
 
 :::

@@ -162,13 +162,37 @@ $\cb{\vzero}$ (@def-span, @exm-dimension).
 - For the lines $\mathcal{S}_1 = \operatorname{span}\cb{(1, 0, 0)}$
   and $\mathcal{S}_2 = \operatorname{span}\cb{(0, 1, 0)}$ in @exm-subspace-sum,
   a common vector satisfies $a\,(1, 0, 0) = b\,(0, 1, 0)$,
-  so $(a, -b, 0) = \vzero$ and $a = b = 0$.
+  so $(a, -b, 0) = \vzero$ and
+
+  $$
+  \begin{aligned}
+  a &= b \\
+  &= 0.
+  \end{aligned}
+  $$
+
   The intersection is $\cb{\vzero}$,
-  and indeed $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 2 = 1 + 1$:
+  and indeed
+
+  $$
+  \begin{aligned}
+  \dim(\mathcal{S}_1 + \mathcal{S}_2) &= 2 \\
+  &= 1 + 1:
+  \end{aligned}
+  $$
+
   the sum is the plane $z = 0$ (@exm-subspace-sum),
   which has dimension $2$ (@exm-dimension),
   and each line has dimension $1$, with its spanning vector as a basis.
-- For $\mathcal{S}_1 = \mathcal{S}_2 = \operatorname{span}\cb{(1, 0, 0)}$,
+- For
+
+  $$
+  \begin{aligned}
+  \mathcal{S}_1 &= \mathcal{S}_2 \\
+  &= \operatorname{span}\cb{(1, 0, 0)},
+  \end{aligned}
+  $$
+
   the sum is the same line,
   because $a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)$,
   so $\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 < 1 + 1$,

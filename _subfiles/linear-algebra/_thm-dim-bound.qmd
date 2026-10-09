@@ -79,6 +79,14 @@ By @thm-dim-bound,
 no three vectors with third entry $0$ are linearly independent;
 for instance, $(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \vzero$.
 The line $\mathcal{T} = \operatorname{span}\cb{(1, 1, 0)}$ lies in $\mathcal{S}$,
-and $\dim(\mathcal{T}) = 1 \le 2 = \dim(\mathcal{S})$.
+and
+
+$$
+\begin{aligned}
+\dim(\mathcal{T}) &= 1 \\
+&\le 2 \\
+&= \dim(\mathcal{S}).
+\end{aligned}
+$$
 
 :::

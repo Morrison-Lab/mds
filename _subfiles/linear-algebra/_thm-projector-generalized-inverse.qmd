@@ -23,7 +23,16 @@ and since $\tp{\mX} \vy \in \mathcal{C}(\tp{\mX})$ (@def-column-space),
 $\tp{\mX} \vy = \tp{\mX} \mX \vecf{z}$ for some $\vecf{z} \in \reals^p$.
 
 **The split.**
-Let $\vecf{u} = \mX \matr{G} \tp{\mX} \vy = \mX\,(\matr{G} \tp{\mX} \vy)$ (@thm-matmul-assoc),
+Let
+
+$$
+\begin{aligned}
+\vecf{u} &= \mX \matr{G} \tp{\mX} \vy \\
+&= \mX\,(\matr{G} \tp{\mX} \vy)
+\end{aligned}
+$$
+
+(@thm-matmul-assoc),
 which is in $\mathcal{C}(\mX)$ (@def-column-space).
 For $\vy - \vecf{u}$,
 

@@ -38,7 +38,16 @@ $\matr{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$ is invertible:
 $\matr{P}^2 = \matr{I}_2$, so $\matr{P}^{-1} = \matr{P}$ (@def-matrix-inverse);
 but it has no LU factorization.
 If $\matr{P} = \matr{L} \matr{U}$, the $(1, 1)$ entry gives $0 = 1 \cd u_{11}$, so $u_{11} = 0$,
-and then the $(2, 1)$ entry gives $1 = \ell_{21}\,u_{11} = 0$, which is impossible.
+and then the $(2, 1)$ entry gives
+
+$$
+\begin{aligned}
+1 &= \ell_{21}\,u_{11} \\
+&= 0,
+\end{aligned}
+$$
+
+which is impossible.
 Swapping the two rows first removes the obstacle:
 the swapped matrix is $\matr{I}_2 = \matr{I}_2\,\matr{I}_2$.
 

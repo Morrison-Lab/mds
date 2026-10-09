@@ -26,7 +26,15 @@ Let $\vecf{a}_1 = (1, 1, 0)$ and $\vecf{a}_2 = (1, 0, 1)$.
   $\tilde{\vecf{q}}_1 = (1, 1, 0)$, with norm $\sqrt{2}$,
   so $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$.
 - **Step 2.**
-  $\vecf{q}_1 \cdot \vecf{a}_2 = \tfrac{1}{\sqrt{2}}\,(1 + 0 + 0) = \tfrac{1}{\sqrt{2}}$, so
+
+  $$
+  \begin{aligned}
+  \vecf{q}_1 \cdot \vecf{a}_2 &= \tfrac{1}{\sqrt{2}}\,(1 + 0 + 0) \\
+  &= \tfrac{1}{\sqrt{2}},
+  \end{aligned}
+  $$
+
+  so
 
   $$
   \ba
@@ -43,10 +51,23 @@ Let $\vecf{a}_1 = (1, 1, 0)$ and $\vecf{a}_2 = (1, 0, 1)$.
   $$
 
   with norm $\sqrt{\tfrac{1}{4} + \tfrac{1}{4} + 1} = \sqrt{\tfrac{3}{2}}$,
-  so $\vecf{q}_2 = \sqrt{\tfrac{2}{3}}\,\paren{\tfrac{1}{2}, -\tfrac{1}{2}, 1}
-  = \tfrac{1}{\sqrt{6}}\,(1, -1, 2)$.
+  so
 
-As a check, $\vecf{q}_1 \cdot \vecf{q}_2 = \tfrac{1}{\sqrt{12}}\,(1 - 1 + 0) = 0$.
+  $$
+  \begin{aligned}
+  \vecf{q}_2 &= \sqrt{\tfrac{2}{3}}\,\paren{\tfrac{1}{2}, -\tfrac{1}{2}, 1} \\
+  &= \tfrac{1}{\sqrt{6}}\,(1, -1, 2).
+  \end{aligned}
+  $$
+
+As a check,
+
+$$
+\begin{aligned}
+\vecf{q}_1 \cdot \vecf{q}_2 &= \tfrac{1}{\sqrt{12}}\,(1 - 1 + 0) \\
+&= 0.
+\end{aligned}
+$$
 
 :::
 
@@ -57,7 +78,16 @@ As a check, $\vecf{q}_1 \cdot \vecf{q}_2 = \tfrac{1}{\sqrt{12}}\,(1 - 1 + 0) = 0
 
 Let $\vecf{a}_1 = (1, 2)$ and $\vecf{a}_2 = (2, 4)$.
 Step 1 gives $\vecf{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)$.
-In step 2, $\vecf{q}_1 \cdot \vecf{a}_2 = \tfrac{1}{\sqrt{5}}\,(2 + 8) = \tfrac{10}{\sqrt{5}}$, and
+In step 2,
+
+$$
+\begin{aligned}
+\vecf{q}_1 \cdot \vecf{a}_2 &= \tfrac{1}{\sqrt{5}}\,(2 + 8) \\
+&= \tfrac{10}{\sqrt{5}},
+\end{aligned}
+$$
+
+and
 
 $$
 \begin{aligned}

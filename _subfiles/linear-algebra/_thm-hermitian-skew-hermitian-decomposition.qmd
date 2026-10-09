@@ -65,7 +65,22 @@ $$
 \end{aligned}
 $$
 
-Adding $\matr{A} = \matr{H}' + \matr{S}'$ and $\matr{A}^{\mathsf{H}} = \matr{H}' - \matr{S}'$ gives $\matr{A} + \matr{A}^{\mathsf{H}} = 2\matr{H}'$, so $\matr{H}' = \frac{1}{2}(\matr{A} + \matr{A}^{\mathsf{H}}) = \matr{H}$.
-Subtracting the two equations gives $\matr{A} - \matr{A}^{\mathsf{H}} = 2\matr{S}'$, so $\matr{S}' = \frac{1}{2}(\matr{A} - \matr{A}^{\mathsf{H}}) = \matr{S}$.
+Adding $\matr{A} = \matr{H}' + \matr{S}'$ and $\matr{A}^{\mathsf{H}} = \matr{H}' - \matr{S}'$ gives $\matr{A} + \matr{A}^{\mathsf{H}} = 2\matr{H}'$, so
+
+$$
+\begin{aligned}
+\matr{H}' &= \frac{1}{2}(\matr{A} + \matr{A}^{\mathsf{H}}) \\
+&= \matr{H}.
+\end{aligned}
+$$
+
+Subtracting the two equations gives $\matr{A} - \matr{A}^{\mathsf{H}} = 2\matr{S}'$, so
+
+$$
+\begin{aligned}
+\matr{S}' &= \frac{1}{2}(\matr{A} - \matr{A}^{\mathsf{H}}) \\
+&= \matr{S}.
+\end{aligned}
+$$
 
 :::

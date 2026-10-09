@@ -15,7 +15,16 @@ with equality exactly when $\vecf{x}$ and $\vecf{y}$ are linearly dependent
 ::: proof
 
 **If $\vecf{y} = \vzero$.**
-Then $\vecf{x} \cdot \vzero = \sum_i x_i \cd 0 = 0$ (@def-dot-product)
+Then
+
+$$
+\begin{aligned}
+\vecf{x} \cdot \vzero &= \sum_i x_i \cd 0 \\
+&= 0
+\end{aligned}
+$$
+
+(@def-dot-product)
 and $\norm{\vzero} = 0$ (@thm-norm-properties, part 1),
 so both sides are $0$ and equality holds;
 and $\vecf{x}, \vecf{y}$ are linearly dependent, because $0\,\vecf{x} + 1\,\vecf{y} = \vzero$.
@@ -99,7 +108,16 @@ that is, when $\vecf{x} = t\,\vecf{y}$.
 - Conversely, suppose $a\,\vecf{x} + b\,\vecf{y} = \vzero$ with $a, b$ not both $0$.
   Then $a \ne 0$:
   otherwise $b \ne 0$ and $b\,\vecf{y} = \vzero$,
-  so $\vecf{y} = \tfrac{1}{b}\,(b\,\vecf{y}) = \vzero$, contrary to assumption.
+  so
+
+  $$
+  \begin{aligned}
+  \vecf{y} &= \tfrac{1}{b}\,(b\,\vecf{y}) \\
+  &= \vzero,
+  \end{aligned}
+  $$
+
+  contrary to assumption.
   Subtracting $b\,\vecf{y}$ from both sides gives $a\,\vecf{x} = -b\,\vecf{y}$,
   and multiplying by $\tfrac{1}{a}$ gives $\vecf{x} = s\,\vecf{y}$ with $s = -b/a$. Then
 
@@ -139,13 +157,43 @@ that is, when $\vecf{x} = t\,\vecf{y}$.
 #### A strict case and an equality case
 
 - For $\vecf{x} = (1, 2)$ and $\vecf{y} = (3, 4)$:
-  $\vecf{x} \cdot \vecf{y} = 3 + 8 = 11$,
+
+  $$
+  \begin{aligned}
+  \vecf{x} \cdot \vecf{y} &= 3 + 8 \\
+  &= 11,
+  \end{aligned}
+  $$
+
   while $\norm{\vecf{x}}\,\norm{\vecf{y}} = \sqrt{5} \cd 5 \approx 11.18$.
   The inequality is strict, and the vectors are linearly independent:
   $(3, 4)$ is not a multiple of $(1, 2)$, since $3 \cd 2 \ne 4$.
-- For $\vecf{x} = (1, 2)$ and $\vecf{y} = (2, 4) = 2\,\vecf{x}$:
-  $\vecf{x} \cdot \vecf{y} = 2 + 8 = 10$
-  and $\norm{\vecf{x}}\,\norm{\vecf{y}} = \sqrt{5}\,\sqrt{20} = \sqrt{100} = 10$,
+- For $\vecf{x} = (1, 2)$ and
+
+  $$
+  \begin{aligned}
+  \vecf{y} &= (2, 4) \\
+  &= 2\,\vecf{x}:
+  \end{aligned}
+  $$
+
+  $$
+  \begin{aligned}
+  \vecf{x} \cdot \vecf{y} &= 2 + 8 \\
+  &= 10
+  \end{aligned}
+  $$
+
+  and
+
+  $$
+  \begin{aligned}
+  \norm{\vecf{x}}\,\norm{\vecf{y}} &= \sqrt{5}\,\sqrt{20} \\
+  &= \sqrt{100} \\
+  &= 10,
+  \end{aligned}
+  $$
+
   so equality holds.
 
 :::

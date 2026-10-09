@@ -76,7 +76,14 @@ $\vecf{q}_2 = \tfrac{1}{\sqrt{6}}\,(1, -1, 2)$,
 $\vecf{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)$,
 with $\norm{\tilde{\vecf{q}}_1} = \sqrt{2}$, $\norm{\tilde{\vecf{q}}_2} = \sqrt{3/2}$,
 $\norm{\tilde{\vecf{q}}_3} = 2/\sqrt{3}$,
-$\vecf{q}_1 \cdot \vecf{a}_2 = \vecf{q}_1 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{2}}$
+
+$$
+\begin{aligned}
+\vecf{q}_1 \cdot \vecf{a}_2 &= \vecf{q}_1 \cdot \vecf{a}_3 \\
+&= \tfrac{1}{\sqrt{2}}
+\end{aligned}
+$$
+
 and $\vecf{q}_2 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{6}}$. So
 
 $$
@@ -88,7 +95,13 @@ $$
 $$
 
 As a check on the second column,
-$\tfrac{1}{\sqrt{2}}\,\vecf{q}_1 + \sqrt{3/2}\,\vecf{q}_2
-= \tfrac{1}{2}\,(1, 1, 0) + \tfrac{1}{2}\,(1, -1, 2) = (1, 0, 1) = \vecf{a}_2$.
+
+$$
+\begin{aligned}
+\tfrac{1}{\sqrt{2}}\,\vecf{q}_1 + \sqrt{3/2}\,\vecf{q}_2 &= \tfrac{1}{2}\,(1, 1, 0) + \tfrac{1}{2}\,(1, -1, 2) \\
+&= (1, 0, 1) \\
+&= \vecf{a}_2.
+\end{aligned}
+$$
 
 :::

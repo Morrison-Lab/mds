@@ -33,9 +33,25 @@ so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right an
 - $(1, 0)$ and $(1, 1)$:
   $\cos\angpar = \frac{1}{1 \cd \sqrt{2}}$, so $\angpar = \pi/4$.
 - $(1, 2)$ and $(-2, 1)$:
-  $\cos\angpar = \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = 0$, so $\angpar = \pi/2$.
+
+  $$
+  \begin{aligned}
+  \cos\angpar &= \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} \\
+  &= 0,
+  \end{aligned}
+  $$
+
+  so $\angpar = \pi/2$.
 - $(1, 0)$ and $(-3, 0)$:
-  $\cos\angpar = \frac{-3}{1 \cd 3} = -1$, so $\angpar = \pi$.
+
+  $$
+  \begin{aligned}
+  \cos\angpar &= \frac{-3}{1 \cd 3} \\
+  &= -1,
+  \end{aligned}
+  $$
+
+  so $\angpar = \pi$.
 - $(1, 0)$ and $\vzero$: there is no angle,
   because the ratio would divide by $\norm{\vzero} = 0$.
 

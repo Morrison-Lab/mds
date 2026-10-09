@@ -110,6 +110,15 @@ $$
 
 Since $-7 q_1 + q_2$ can be any number,
 the solutions are exactly the vectors $(2, t)$, $t \in \reals$,
-which is what $\matr{A}\,(x_1, x_2) = (x_1, 0) = (2, 0)$ says directly.
+which is what
+
+$$
+\begin{aligned}
+\matr{A}\,(x_1, x_2) &= (x_1, 0) \\
+&= (2, 0)
+\end{aligned}
+$$
+
+says directly.
 
 :::

@@ -4,7 +4,15 @@
 #### Why it is called the hat matrix
 
 The hat matrix gives the fitted values in linear regression:
-$\hat{\vy} = \mX\hvcoef = \mX(\tp{\mX}\mX)^{-1}\tp{\mX}\vy = \matr{H}\vy$.
+
+$$
+\begin{aligned}
+\hat{\vy} &= \mX\hvcoef \\
+&= \mX(\tp{\mX}\mX)^{-1}\tp{\mX}\vy \\
+&= \matr{H}\vy.
+\end{aligned}
+$$
+
 Multiplying by $\matr{H}$ "puts a hat" on $\vy$,
 which is where the name comes from.
 In @exm-hat-matrix, $\matr{H}$ puts a hat on $\vy$

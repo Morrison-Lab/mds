@@ -8,7 +8,15 @@ is linear (@def-linear-map) if and only if $\vec{b} = \vzero$.
 
 ::: proof
 
-If $\vec{b} = \vzero$, then $f(\vx) = \matr{A}\vx + \vzero = \matr{A}\vx$,
+If $\vec{b} = \vzero$, then
+
+$$
+\begin{aligned}
+f(\vx) &= \matr{A}\vx + \vzero \\
+&= \matr{A}\vx,
+\end{aligned}
+$$
+
 which is linear by @thm-matrix-map-linear.
 Conversely, if $f$ is linear, then $f(\vzero) = \vzero$ by @thm-linear-map-zero,
 and $f(\vzero) = \vec{b}$ by @thm-affine-map-zero,

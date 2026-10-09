@@ -9,9 +9,29 @@ By @thm-indicator-selection,
 $\vecf{e}_i \cdot \vecf{e}_j$ is entry $i$ of $\vecf{e}_j$,
 which is $1$ if $i = j$ and $0$ if $i \neq j$.
 For $p = 2$:
-$\vecf{e}_1 \cdot \vecf{e}_1 = 1 \cd 1 + 0 \cd 0 = 1$,
-$\vecf{e}_2 \cdot \vecf{e}_2 = 0 \cd 0 + 1 \cd 1 = 1$,
-and $\vecf{e}_1 \cdot \vecf{e}_2 = 1 \cd 0 + 0 \cd 1 = 0$.
+
+$$
+\begin{aligned}
+\vecf{e}_1 \cdot \vecf{e}_1 &= 1 \cd 1 + 0 \cd 0 \\
+&= 1,
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\vecf{e}_2 \cdot \vecf{e}_2 &= 0 \cd 0 + 1 \cd 1 \\
+&= 1,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\vecf{e}_1 \cdot \vecf{e}_2 &= 1 \cd 0 + 0 \cd 1 \\
+&= 0.
+\end{aligned}
+$$
 
 :::
 
@@ -23,7 +43,15 @@ and $\vecf{e}_1 \cdot \vecf{e}_2 = 1 \cd 0 + 0 \cd 1 = 0$.
 - $(1, 1)$ and $(1, -1)$ are orthogonal, since $1 \cd 1 + 1 \cd (-1) = 0$,
   but not orthonormal: $(1, 1) \cdot (1, 1) = 2 \ne 1$.
 - $(1, 0)$ and $(0.6, 0.8)$ both have unit length,
-  since $(1, 0) \cdot (1, 0) = 1$ and $(0.6, 0.8) \cdot (0.6, 0.8) = 0.36 + 0.64 = 1$,
+  since $(1, 0) \cdot (1, 0) = 1$ and
+
+  $$
+  \begin{aligned}
+  (0.6, 0.8) \cdot (0.6, 0.8) &= 0.36 + 0.64 \\
+  &= 1,
+  \end{aligned}
+  $$
+
   but they are not orthonormal: $(1, 0) \cdot (0.6, 0.8) = 0.6 \ne 0$.
 
 :::

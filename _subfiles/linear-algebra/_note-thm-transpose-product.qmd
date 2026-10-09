@@ -8,7 +8,15 @@ Keeping the original order usually gives an undefined product
 or a different matrix.
 For example, with $\matr{A} = [1,\; 2]$ ($1 \times 2$)
 and $\matr{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$ ($2 \times 1$),
-$\matr{A}\matr{B} = 1 \cd 3 + 2 \cd 4 = 11$, so $\tp{(\matr{A}\matr{B})} = 11$, and
+
+$$
+\begin{aligned}
+\matr{A}\matr{B} &= 1 \cd 3 + 2 \cd 4 \\
+&= 11,
+\end{aligned}
+$$
+
+so $\tp{(\matr{A}\matr{B})} = 11$, and
 
 $$
 \tp{\matr{B}}\,\tp{\matr{A}}

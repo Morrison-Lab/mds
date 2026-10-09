@@ -15,7 +15,14 @@ Let $\matr{A}$ be a $p \times p$ matrix.
 
 **If $\matr{A} = \tp{\matr{B}} \matr{B}$.**
 $\matr{A}$ is symmetric, since
-$\tp{(\tp{\matr{B}} \matr{B})} = \tp{\matr{B}}\,\tp{(\tp{\matr{B}})} = \tp{\matr{B}} \matr{B}$
+
+$$
+\begin{aligned}
+\tp{(\tp{\matr{B}} \matr{B})} &= \tp{\matr{B}}\,\tp{(\tp{\matr{B}})} \\
+&= \tp{\matr{B}} \matr{B}
+\end{aligned}
+$$
+
 (@thm-transpose-product, @def-matrix-transpose). For any $\vx$,
 
 $$

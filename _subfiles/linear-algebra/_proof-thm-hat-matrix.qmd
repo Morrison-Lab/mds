@@ -1,7 +1,14 @@
 :::{.proof}
 We verify symmetry and idempotency.
 Both use that $\tp{\mX}\mX$ is symmetric,
-$\tp{\paren{\tp{\mX}\mX}} = \tp{\mX}\,\tp{\paren{\tp{\mX}}} = \tp{\mX}\mX$
+
+$$
+\begin{aligned}
+\tp{\paren{\tp{\mX}\mX}} &= \tp{\mX}\,\tp{\paren{\tp{\mX}}} \\
+&= \tp{\mX}\mX
+\end{aligned}
+$$
+
 (@thm-transpose-product),
 so its inverse is symmetric too (@cor-inverse-symmetric).
 

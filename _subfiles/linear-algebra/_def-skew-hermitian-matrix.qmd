@@ -16,9 +16,25 @@ $$\matr{A}^{\mathsf{H}} = -\matr{A}.$$
 
 Every entry of a skew-Hermitian matrix satisfies $a_{jk} = -\overline{a_{kj}}$.
 In particular, its diagonal entries satisfy $a_{jj} = -\overline{a_{jj}}$,
-which means $a_{jj} + \overline{a_{jj}} = 2\operatorname{Re}(a_{jj}) = 0$.
+which means
+
+$$
+\begin{aligned}
+a_{jj} + \overline{a_{jj}} &= 2\operatorname{Re}(a_{jj}) \\
+&= 0.
+\end{aligned}
+$$
+
 Therefore, every diagonal entry of a skew-Hermitian matrix must be purely imaginary (or zero).
-For example, $a_{jj} = 3\,i$ works, since $-\overline{3\,i} = -(-3\,i) = 3\,i$,
+For example, $a_{jj} = 3\,i$ works, since
+
+$$
+\begin{aligned}
+-\overline{3\,i} &= -(-3\,i) \\
+&= 3\,i,
+\end{aligned}
+$$
+
 but $a_{jj} = 3$ does not, since $-\overline{3} = -3$.
 
 :::

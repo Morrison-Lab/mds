@@ -46,7 +46,15 @@ so $c_k = 0$ too.
 
 The eigenvectors $(1, 1)$ for $3$ and $(1, -1)$ for $1$ of @exm-eigenvalue
 are linearly independent, as @thm-eigenvectors-independent says they must be:
-$c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)$ is $\vzero$ only if $c_1 = c_2 = 0$.
+$c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)$ is $\vzero$ only if
+
+$$
+\begin{aligned}
+c_1 &= c_2 \\
+&= 0.
+\end{aligned}
+$$
+
 Two eigenvectors for the same eigenvalue need not be independent:
 $(1, 1)$ and $(2, 2)$ are both eigenvectors for $3$.
 

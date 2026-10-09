@@ -106,7 +106,14 @@ $$
 
 Here $[a_{11}]$ is invertible with inverse $[1 / a_{11}]$,
 so with $\matr{B} = \tp{\vecf{b}}$ in @def-schur-complement,
-$\tp{\matr{B}}\,[a_{11}]^{-1} \matr{B} = \vecf{b}\,\tfrac{1}{a_{11}}\,\tp{\vecf{b}} = \tfrac{1}{a_{11}}\,\vecf{b} \tp{\vecf{b}}$
+
+$$
+\begin{aligned}
+\tp{\matr{B}}\,[a_{11}]^{-1} \matr{B} &= \vecf{b}\,\tfrac{1}{a_{11}}\,\tp{\vecf{b}} \\
+&= \tfrac{1}{a_{11}}\,\vecf{b} \tp{\vecf{b}}
+\end{aligned}
+$$
+
 (@thm-scalar-matmul),
 and the right side is the Schur complement of $[a_{11}]$ in $\matr{A}$.
 It is positive definite by @thm-schur-test (with $k = 1$; $\matr{A}_{22}$ is symmetric because $\matr{A}$ is).
@@ -121,16 +128,63 @@ So $\matr{L}$ exists and is unique.
 #### Two Cholesky factors
 
 - $\matr{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$:
-  $\ell_{11} = \sqrt{4} = 2$, $\ell_{21} = 2/2 = 1$,
-  and $\ell_{22}^2 = 5 - 1^2 = 4$, so $\ell_{22} = 2$:
+
+  $$
+  \begin{aligned}
+  \ell_{11} &= \sqrt{4} \\
+  &= 2,
+  \end{aligned}
+  $$
+
+  $$
+  \begin{aligned}
+  \ell_{21} &= 2/2 \\
+  &= 1,
+  \end{aligned}
+  $$
+
+  and
+
+  $$
+  \begin{aligned}
+  \ell_{22}^2 &= 5 - 1^2 \\
+  &= 4,
+  \end{aligned}
+  $$
+
+  so $\ell_{22} = 2$:
   $\matr{L} = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}$, and
-  $\matr{L} \tp{\matr{L}} = \begin{bmatrix} 2 \cd 2 & 2 \cd 1 \\ 1 \cd 2 & 1 \cd 1 + 2 \cd 2 \end{bmatrix} = \matr{A}$.
+
+  $$
+  \begin{aligned}
+  \matr{L} \tp{\matr{L}} &= \begin{bmatrix} 2 \cd 2 & 2 \cd 1 \\ 1 \cd 2 & 1 \cd 1 + 2 \cd 2 \end{bmatrix} \\
+  &= \matr{A}.
+  \end{aligned}
+  $$
+
 - $\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}$:
   $\ell_{11} = \sqrt{5}$, $\ell_{21} = 4/\sqrt{5}$,
-  and $\ell_{22}^2 = 5 - \tfrac{16}{5} = \tfrac{9}{5}$, the Schur complement of @exm-schur-complement,
+  and
+
+  $$
+  \begin{aligned}
+  \ell_{22}^2 &= 5 - \tfrac{16}{5} \\
+  &= \tfrac{9}{5},
+  \end{aligned}
+  $$
+
+  the Schur complement of @exm-schur-complement,
   so $\ell_{22} = \tfrac{3}{\sqrt{5}}$.
 - For $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ the method breaks down:
-  $\ell_{22}^2 = 1 - 4 = -3$ has no real solution,
+
+  $$
+  \begin{aligned}
+  \ell_{22}^2 &= 1 - 4 \\
+  &= -3
+  \end{aligned}
+  $$
+
+  has no real solution,
   matching the failure of the Schur complement test (@exm-schur-test).
 
 :::

@@ -23,8 +23,15 @@ Run the Gram-Schmidt process (@def-gram-schmidt) on $\vecf{a}_1, \ldots, \vecf{a
 Before step $1$, the list of $\vecf{q}$'s is empty,
 which is orthonormal, and both spans are $\cb{\vzero}$ (@def-span).
 Suppose part 1 holds after step $i - 1$,
-and write $\mathcal{S}_{i-1} = \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_{i-1}}
-= \operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_{i-1}}$.
+and write
+
+$$
+\begin{aligned}
+\mathcal{S}_{i-1} &= \operatorname{span}\cb{\vecf{a}_1, \ldots, \vecf{a}_{i-1}} \\
+&= \operatorname{span}\cb{\vecf{q}_1, \ldots, \vecf{q}_{i-1}}.
+\end{aligned}
+$$
+
 The orthonormal vectors $\vecf{q}_1, \ldots, \vecf{q}_{i-1}$ are linearly independent
 (@thm-orthonormal-independent) and span $\mathcal{S}_{i-1}$,
 so they are an orthonormal basis of it.
@@ -119,7 +126,15 @@ so they are an orthonormal basis of it.
 
 Continue @exm-gram-schmidt with $\vecf{a}_3 = (0, 1, 1)$.
 $\vecf{q}_1 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{2}}$ and
-$\vecf{q}_2 \cdot \vecf{a}_3 = \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) = \tfrac{1}{\sqrt{6}}$, so
+
+$$
+\begin{aligned}
+\vecf{q}_2 \cdot \vecf{a}_3 &= \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) \\
+&= \tfrac{1}{\sqrt{6}},
+\end{aligned}
+$$
+
+so
 
 $$
 \ba
@@ -147,7 +162,21 @@ and $\vecf{q}_1, \vecf{q}_2, \vecf{q}_3$ is an orthonormal basis of their span.
 That span therefore has dimension $3$ (@def-dimension),
 so it is $\reals^3$ (@thm-subspace-equal-dim, @exm-dimension).
 As a check,
-$\vecf{q}_1 \cdot \vecf{q}_3 = \tfrac{1}{\sqrt{6}}\,(-1 + 1 + 0) = 0$
-and $\vecf{q}_2 \cdot \vecf{q}_3 = \tfrac{1}{\sqrt{18}}\,(-1 - 1 + 2) = 0$.
+
+$$
+\begin{aligned}
+\vecf{q}_1 \cdot \vecf{q}_3 &= \tfrac{1}{\sqrt{6}}\,(-1 + 1 + 0) \\
+&= 0
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\vecf{q}_2 \cdot \vecf{q}_3 &= \tfrac{1}{\sqrt{18}}\,(-1 - 1 + 2) \\
+&= 0.
+\end{aligned}
+$$
 
 :::

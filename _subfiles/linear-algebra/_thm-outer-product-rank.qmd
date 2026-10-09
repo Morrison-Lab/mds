@@ -20,7 +20,16 @@ $c\,(v_j \vecf{u}) = \vzero$ forces $c = 0$.
 
 **The rank is at most one.**
 Take any two columns $j \neq k$.
-If $v_j = v_k = 0$, both columns are $\vzero$,
+If
+
+$$
+\begin{aligned}
+v_j &= v_k \\
+&= 0,
+\end{aligned}
+$$
+
+both columns are $\vzero$,
 and $1 \cd (v_j \vecf{u}) + 1 \cd (v_k \vecf{u}) = \vzero$.
 Otherwise, use the coefficients $c_j = v_k$ and $c_k = -v_j$,
 which are not both zero:

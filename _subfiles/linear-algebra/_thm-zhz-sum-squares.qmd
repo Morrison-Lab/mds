@@ -32,6 +32,15 @@ By the definition of the [absolute value](algebra.qmd#def-complex-modulus),
 each $\abs{z_j}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2$ is a nonnegative real number,
 so their sum is too.
 A sum of nonnegative numbers is $0$ only when every term is $0$,
-and $\abs{z_j}^2 = 0$ only when $\operatorname{Re} z_j = \operatorname{Im} z_j = 0$, that is, when $z_j = 0$.
+and $\abs{z_j}^2 = 0$ only when
+
+$$
+\begin{aligned}
+\operatorname{Re} z_j &= \operatorname{Im} z_j \\
+&= 0,
+\end{aligned}
+$$
+
+that is, when $z_j = 0$.
 
 :::

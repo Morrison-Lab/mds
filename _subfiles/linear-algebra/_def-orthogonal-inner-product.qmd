@@ -40,6 +40,14 @@ $$
 
 so $\vx$ and $\vy$ are orthogonal with respect to $\iprod{\cdot}{\cdot}_{\vecf{c}}$.
 They are not orthogonal with respect to the dot product,
-since $\vx \cdot \vy = 1 \cd 1 + 2 \cd (-1) = -1 \ne 0$.
+since
+
+$$
+\begin{aligned}
+\vx \cdot \vy &= 1 \cd 1 + 2 \cd (-1) \\
+&= -1 \\
+&\ne 0.
+\end{aligned}
+$$
 
 :::

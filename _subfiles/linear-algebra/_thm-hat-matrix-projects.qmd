@@ -61,7 +61,15 @@ By @thm-projection-matrix-projects, part 2, $\matr{H} = \matr{Q} \tp{\matr{Q}}$.
 For the intercept-only design $\mX = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ of @exm-hat-matrix,
 $\mathcal{C}(\mX) = \operatorname{span}\cb{(1, 1)}$,
 with orthonormal basis $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1)$,
-since $\norm{\vecf{q}_1} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} = 1$.
+since
+
+$$
+\begin{aligned}
+\norm{\vecf{q}_1} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} \\
+&= 1.
+\end{aligned}
+$$
+
 With $\matr{Q} = [\vecf{q}_1]$,
 
 $$
@@ -76,7 +84,14 @@ the hat matrix found in @exm-hat-matrix.
 The fitted values $(\bar{y}, \bar{y})$ are the closest point to $\vy$ on the line of constant vectors
 (@thm-closest-point),
 and the residuals $(y_1 - \bar{y}, y_2 - \bar{y})$ are orthogonal to $(1, 1)$:
-$(1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) = y_1 + y_2 - 2\bar{y} = 0$,
+
+$$
+\begin{aligned}
+(1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) &= y_1 + y_2 - 2\bar{y} \\
+&= 0,
+\end{aligned}
+$$
+
 since $2\bar{y} = y_1 + y_2$.
 
 :::

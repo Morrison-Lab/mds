@@ -24,7 +24,15 @@ Both $\mathcal{S}$ and $\mathcal{S}^\perp$ contain $\vzero$ (@thm-subspace-zero)
 If $\vecf{x}$ is in both,
 then $\vecf{x}$ is orthogonal to every vector of $\mathcal{S}$,
 $\vecf{x}$ itself included,
-so $\vecf{x} \cdot \vecf{x} = x_1^2 + \cdots + x_p^2 = 0$,
+so
+
+$$
+\begin{aligned}
+\vecf{x} \cdot \vecf{x} &= x_1^2 + \cdots + x_p^2 \\
+&= 0,
+\end{aligned}
+$$
+
 which forces every $x_i = 0$.
 
 **Part 2.**
@@ -109,19 +117,59 @@ A single nonzero vector is linearly independent
 so $(1, 1, 0)$ is a basis of $\mathcal{S}$ and $\dim(\mathcal{S}) = 1$.
 A vector $\vecf{u}$ is in $\mathcal{S}^\perp$ exactly when $u_1 + u_2 = 0$:
 that condition says $(1, 1, 0) \cdot \vecf{u} = 0$,
-and then $c\,(1, 1, 0) \cdot \vecf{u} = c\,(u_1 + u_2) = 0$ for every $c$.
-So $\mathcal{S}^\perp = \cb{(a, -a, c) : a, c \in \reals}
-= \operatorname{span}\cb{(1, -1, 0), (0, 0, 1)}$.
+and then
+
+$$
+\begin{aligned}
+c\,(1, 1, 0) \cdot \vecf{u} &= c\,(u_1 + u_2) \\
+&= 0
+\end{aligned}
+$$
+
+for every $c$.
+So
+
+$$
+\begin{aligned}
+\mathcal{S}^\perp &= \cb{(a, -a, c) : a, c \in \reals} \\
+&= \operatorname{span}\cb{(1, -1, 0), (0, 0, 1)}.
+\end{aligned}
+$$
+
 Those two vectors are linearly independent,
-because $a\,(1, -1, 0) + c\,(0, 0, 1) = (a, -a, c)$ is $\vzero$ only if $a = c = 0$,
+because $a\,(1, -1, 0) + c\,(0, 0, 1) = (a, -a, c)$ is $\vzero$ only if
+
+$$
+\begin{aligned}
+a &= c \\
+&= 0,
+\end{aligned}
+$$
+
 so $\dim(\mathcal{S}^\perp) = 2$, and $1 + 2 = 3$, as part 2 says.
 
 To split $\vecf{y} = (3, 1, 2)$,
 look for $\vecf{u} = t\,(1, 1, 0)$
-with $\vecf{v} = \vecf{y} - \vecf{u} = (3 - t, 1 - t, 2)$ in $\mathcal{S}^\perp$:
+with
+
+$$
+\begin{aligned}
+\vecf{v} &= \vecf{y} - \vecf{u} \\
+&= (3 - t, 1 - t, 2)
+\end{aligned}
+$$
+
+in $\mathcal{S}^\perp$:
 that membership needs $(3 - t) + (1 - t) = 0$, so $t = 2$.
 Then $\vecf{u} = (2, 2, 0)$ and $\vecf{v} = (1, -1, 2)$,
 with $\vecf{u} + \vecf{v} = (3, 1, 2)$
-and $(1, 1, 0) \cdot (1, -1, 2) = 1 - 1 + 0 = 0$.
+and
+
+$$
+\begin{aligned}
+(1, 1, 0) \cdot (1, -1, 2) &= 1 - 1 + 0 \\
+&= 0.
+\end{aligned}
+$$
 
 :::

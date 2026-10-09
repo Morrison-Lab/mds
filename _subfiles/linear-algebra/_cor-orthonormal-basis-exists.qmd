@@ -24,11 +24,26 @@ The first $r$ outputs are $\vecf{u}_1, \ldots, \vecf{u}_r$ themselves,
 by [induction](proof-writing.qmd#def-proof-by-induction) on $i \le r$.
 Suppose the outputs before step $i$ are $\vecf{u}_1, \ldots, \vecf{u}_{i-1}$
 (for $i = 1$ there are none, and the sum below is empty). Then
-$\tilde{\vecf{q}}_i = \vecf{u}_i - \sum_{j<i} (\vecf{u}_j \cdot \vecf{u}_i)\,\vecf{u}_j = \vecf{u}_i$,
+
+$$
+\begin{aligned}
+\tilde{\vecf{q}}_i &= \vecf{u}_i - \sum_{j<i} (\vecf{u}_j \cdot \vecf{u}_i)\,\vecf{u}_j \\
+&= \vecf{u}_i,
+\end{aligned}
+$$
+
 because each $\vecf{u}_j \cdot \vecf{u}_i = 0$;
 $\tilde{\vecf{q}}_i = \vecf{u}_i \ne \vzero$, because $\norm{\vecf{u}_i} = 1$,
 so the process does not stop;
-and $\vecf{q}_i = \vecf{u}_i / \norm{\vecf{u}_i} = \vecf{u}_i$.
+and
+
+$$
+\begin{aligned}
+\vecf{q}_i &= \vecf{u}_i / \norm{\vecf{u}_i} \\
+&= \vecf{u}_i.
+\end{aligned}
+$$
+
 So the orthonormal basis contains the starting list.
 
 :::
@@ -54,7 +69,14 @@ Gram-Schmidt on $\vecf{u}_1, (1, 0, 0), (0, 0, 1)$:
 
 1. $\vecf{q}_1 = \vecf{u}_1$.
 2. $\vecf{q}_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}$, so
-   $\tilde{\vecf{q}}_2 = (1, 0, 0) - \tfrac{1}{2}\,(1, 1, 0) = \paren{\tfrac{1}{2}, -\tfrac{1}{2}, 0}$,
+
+   $$
+   \begin{aligned}
+   \tilde{\vecf{q}}_2 &= (1, 0, 0) - \tfrac{1}{2}\,(1, 1, 0) \\
+   &= \paren{\tfrac{1}{2}, -\tfrac{1}{2}, 0},
+   \end{aligned}
+   $$
+
    with norm $\tfrac{1}{\sqrt{2}}$, and $\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(1, -1, 0)$.
 3. $(0, 0, 1)$ is orthogonal to $\vecf{q}_1$ and $\vecf{q}_2$, so
    $\tilde{\vecf{q}}_3 = (0, 0, 1)$, which already has norm $1$, and $\vecf{q}_3 = (0, 0, 1)$.

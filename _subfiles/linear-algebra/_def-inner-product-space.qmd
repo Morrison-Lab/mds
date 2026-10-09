@@ -15,7 +15,14 @@ the pair $(\reals^p, \iprod{\cdot}{\cdot})$ is a real inner product space.
 The Euclidean space $\reals^p$ equipped with the standard dot product (@def-dot-product)
 is an inner product space, because the dot product satisfies the four inner product axioms (@exm-dot-product-inner-product).
 For $p = 2$, any vector $\vx = (x_1, x_2) \in \reals^2$ has squared norm $\iprod{\vx}{\vx} = x_1^2 + x_2^2 \ge 0$,
-which is zero if and only if $x_1 = x_2 = 0$.
+which is zero if and only if
+
+$$
+\begin{aligned}
+x_1 &= x_2 \\
+&= 0.
+\end{aligned}
+$$
 
 Equipping the same vector space $\reals^p$ with different inner products
 yields different inner product spaces with different geometric notions of angle and distance on the same set of vectors.

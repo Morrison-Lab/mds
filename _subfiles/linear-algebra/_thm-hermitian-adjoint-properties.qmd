@@ -26,9 +26,39 @@ $$(\matr{A}^{\mathsf{H}})^{-1} = (\matr{A}^{-1})^{\mathsf{H}}.$$
 
 Properties 1-3 follow directly from entrywise conjugation and transposition:
 
-- For involution: $[(\matr{A}^{\mathsf{H}})^{\mathsf{H}}]_{jk} = \overline{(\matr{A}^{\mathsf{H}})_{kj}} = \overline{\overline{a_{jk}}} = a_{jk}$.
-- For additivity: $[(\matr{A} + \matr{B})^{\mathsf{H}}]_{jk} = \overline{(\matr{A} + \matr{B})_{kj}} = \overline{a_{kj} + b_{kj}} = \overline{a_{kj}} + \overline{b_{kj}} = (\matr{A}^{\mathsf{H}})_{jk} + (\matr{B}^{\mathsf{H}})_{jk}$.
-- For conjugate-homogeneity: $[(c\,\matr{A})^{\mathsf{H}}]_{jk} = \overline{(c\,\matr{A})_{kj}} = \overline{c\,a_{kj}} = \overline{c}\,\overline{a_{kj}} = \overline{c}\,(\matr{A}^{\mathsf{H}})_{jk}$. Unlike the real transpose where $\tp{(c\,\matr{A})} = c\,\tp{\matr{A}}$, scaling conjugates the scalar.
+- For involution:
+
+  $$
+  \begin{aligned}
+  [(\matr{A}^{\mathsf{H}})^{\mathsf{H}}]_{jk} &= \overline{(\matr{A}^{\mathsf{H}})_{kj}} \\
+  &= \overline{\overline{a_{jk}}} \\
+  &= a_{jk}.
+  \end{aligned}
+  $$
+
+- For additivity:
+
+  $$
+  \begin{aligned}
+  [(\matr{A} + \matr{B})^{\mathsf{H}}]_{jk} &= \overline{(\matr{A} + \matr{B})_{kj}} \\
+  &= \overline{a_{kj} + b_{kj}} \\
+  &= \overline{a_{kj}} + \overline{b_{kj}} \\
+  &= (\matr{A}^{\mathsf{H}})_{jk} + (\matr{B}^{\mathsf{H}})_{jk}.
+  \end{aligned}
+  $$
+
+- For conjugate-homogeneity:
+
+  $$
+  \begin{aligned}
+  [(c\,\matr{A})^{\mathsf{H}}]_{jk} &= \overline{(c\,\matr{A})_{kj}} \\
+  &= \overline{c\,a_{kj}} \\
+  &= \overline{c}\,\overline{a_{kj}} \\
+  &= \overline{c}\,(\matr{A}^{\mathsf{H}})_{jk}.
+  \end{aligned}
+  $$
+
+  Unlike the real transpose where $\tp{(c\,\matr{A})} = c\,\tp{\matr{A}}$, scaling conjugates the scalar.
 
 For property 4 (reversal of products), let $\matr{A}$ be an $m \times k$ matrix and $\matr{B}$ a $k \times n$ matrix.
 Entry $(i, j)$ of the product's Hermitian adjoint (for $i \in \{1, \ldots, n\}$ and $j \in \{1, \ldots, m\}$) is:

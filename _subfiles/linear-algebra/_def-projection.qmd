@@ -30,7 +30,15 @@ and let $\vecf{y} = (3, 2)$.
   so the projection of $(3, 2)$ onto $\mathcal{S}$ along $\mathcal{T}_2$ is $(3, 0)$.
 
 Each of $\mathcal{T}_1$ and $\mathcal{T}_2$ is a line that meets $\mathcal{S}$ only at $\vzero$,
-so $\reals^2 = \mathcal{S} \oplus \mathcal{T}_1 = \mathcal{S} \oplus \mathcal{T}_2$
+so
+
+$$
+\begin{aligned}
+\reals^2 &= \mathcal{S} \oplus \mathcal{T}_1 \\
+&= \mathcal{S} \oplus \mathcal{T}_2
+\end{aligned}
+$$
+
 (@def-direct-sum, @thm-direct-sum-equiv).
 The same vector has a different projection onto the same subspace
 when the complement changes.
