@@ -6,7 +6,7 @@ Then $\tp{\vx}\vcoef = 3\coef{1} + 5\coef{2}$, and by @cor-deriv-lincom-tp:
 
 $$
 \begin{aligned}
-\underbrace{\deriv{\vcoef}\left(\underbrace{\tp{\vx}}_{1 \times 2}\underbrace{\vcoef}_{2 \times 1}\right)}_{2 \times 1}
+\underbrace{\deriv{\vcoef}\paren{\underbrace{\tp{\vx}}_{1 \times 2}\underbrace{\vcoef}_{2 \times 1}}}_{2 \times 1}
 &= \underbrace{\vx}_{2 \times 1} \\
 &= \begin{pmatrix} 3 \\
 5 \end{pmatrix}

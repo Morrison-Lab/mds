@@ -16,7 +16,7 @@ and the sequence $\emptyset, \emptyset, \ldots$ is pairwise disjoint with union 
 $$
 \ba
 \measure(\emptyset)
-&= \measure\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
+&= \measure\paren{\bigcup_{i=1}^{\infty} \emptyset}
 && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\
 &= \sumto{i}{\infty} \measure(\emptyset)
 && \text{(countable additivity)}

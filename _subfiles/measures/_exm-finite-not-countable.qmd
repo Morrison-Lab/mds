@@ -51,7 +51,7 @@ So:
 
 $$
 \ba
-\measure\!\left(\bigcup_{k=0}^{\infty} \set{k}\right)
+\measure\paren{\bigcup_{k=0}^{\infty} \set{k}}
 &= \measure(S)
 && \text{(the union is } S \text{)} \\
 &= \infty

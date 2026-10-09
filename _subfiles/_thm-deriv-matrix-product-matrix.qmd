@@ -9,7 +9,7 @@ whose $(i,j)$ entry is the partial derivative of $f$
 with respect to the $(i,j)$ entry of $\matr{X}$:
 
 $$
-\left[\deriv{\matr{X}} f\right]_{ij} = \deriv{X_{ij}} f
+\sb{\deriv{\matr{X}} f}_{ij} = \deriv{X_{ij}} f
 $$
 
 Like the vector derivative (@def-vector-derivative),
@@ -68,17 +68,17 @@ For entry $(i,j)$:
 
 $$
 \ba
-\left[\deriv{\matr{X}} \tr(\matr{A} \matr{X} \matr{B})\right]_{ij}
+\sb{\deriv{\matr{X}} \tr(\matr{A} \matr{X} \matr{B})}_{ij}
 &= \deriv{X_{ij}} \sumto{a}{r} \sumto{b}{m} \sumto{c}{n} A_{ab} X_{bc} B_{ca}
 && \text{(trace of the } r \times r \text{ product } \matr{A}\matr{X}\matr{B} \text{)}
 \\
 &= \sumto{a}{r} A_{ai} B_{ja}
 && \text{(only the terms with } b = i,\ c = j \text{ depend on } X_{ij} \text{)}
 \\
-&= \sumto{a}{r} \left[\tp{\matr{A}}\right]_{ia} \left[\tp{\matr{B}}\right]_{aj}
+&= \sumto{a}{r} \sb{\tp{\matr{A}}}_{ia} \sb{\tp{\matr{B}}}_{aj}
 && \text{(definition of the transpose)}
 \\
-&= \left[\tp{\matr{A}}\,\tp{\matr{B}}\right]_{ij}
+&= \sb{\tp{\matr{A}}\,\tp{\matr{B}}}_{ij}
 && \text{(definition of matrix multiplication)}
 \ea
 $$

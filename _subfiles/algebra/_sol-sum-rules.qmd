@@ -14,7 +14,7 @@ or the commutative and associative laws of addition
     \sumto{i}{3} c\, a_i
     &= c\, a_1 + c\, a_2 + c\, a_3
     && \text{(expand the sum)}
-    \\ &= c \left(a_1 + a_2 + a_3\right)
+    \\ &= c \paren{a_1 + a_2 + a_3}
     && \text{(distributive law)}
     \\ &= c \sumto{i}{3} a_i
     && \text{(collect the sum)}
@@ -25,10 +25,10 @@ or the commutative and associative laws of addition
 
     $$
     \ba
-    \sumto{i}{3} \left(a_i + b_i\right)
-    &= \left(a_1 + b_1\right) + \left(a_2 + b_2\right) + \left(a_3 + b_3\right)
+    \sumto{i}{3} \paren{a_i + b_i}
+    &= \paren{a_1 + b_1} + \paren{a_2 + b_2} + \paren{a_3 + b_3}
     && \text{(expand the sum)}
-    \\ &= \left(a_1 + a_2 + a_3\right) + \left(b_1 + b_2 + b_3\right)
+    \\ &= \paren{a_1 + a_2 + a_3} + \paren{b_1 + b_2 + b_3}
     && \text{(commutative and associative laws)}
     \\ &= \sumto{i}{3} a_i + \sumto{i}{3} b_i
     && \text{(collect the sum)}
@@ -58,7 +58,7 @@ or the commutative and associative laws of addition
     \sumto{i}{3} c\, a_i
     &= c\, a_1 + c\, a_2 + c\, a_3
     && \text{(expand the sum)}
-    \\ &= c \left(a_1 + a_2 + a_3\right)
+    \\ &= c \paren{a_1 + a_2 + a_3}
     && \text{(distributive law)}
     \\ &= c \sumto{i}{3} a_i
     && \text{(collect the sum)}
@@ -75,10 +75,10 @@ or the commutative and associative laws of addition
 
     $$
     \ba
-    \sumto{i}{3} \left(a_i + b_i\right)
-    &= \left(a_1 + b_1\right) + \left(a_2 + b_2\right) + \left(a_3 + b_3\right)
+    \sumto{i}{3} \paren{a_i + b_i}
+    &= \paren{a_1 + b_1} + \paren{a_2 + b_2} + \paren{a_3 + b_3}
     && \text{(expand the sum)}
-    \\ &= \left(a_1 + a_2 + a_3\right) + \left(b_1 + b_2 + b_3\right)
+    \\ &= \paren{a_1 + a_2 + a_3} + \paren{b_1 + b_2 + b_3}
     && \text{(commutative and associative laws)}
     \\ &= \sumto{i}{3} a_i + \sumto{i}{3} b_i
     && \text{(collect the sum)}

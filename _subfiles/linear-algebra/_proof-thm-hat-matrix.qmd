@@ -15,13 +15,13 @@ so its inverse is symmetric too (@cor-inverse-symmetric).
 **Symmetry:**
 $$\ba
 \tp{\matr{H}}
-&= \tp{\left(\mX(\tp{\mX}\mX)^{-1}\tp{\mX}\right)}
+&= \tp{\paren{\mX(\tp{\mX}\mX)^{-1}\tp{\mX}}}
 && \text{(definition of } \matr{H} \text{)}
 \\
-&= \tp{(\tp{\mX})} \cdot \tp{\left((\tp{\mX}\mX)^{-1}\right)} \cdot \tp{\mX}
+&= \tp{(\tp{\mX})} \cdot \tp{\paren{(\tp{\mX}\mX)^{-1}}} \cdot \tp{\mX}
 && \text{(transpose of a product, twice)}
 \\
-&= \mX \cdot \tp{\left((\tp{\mX}\mX)^{-1}\right)} \cdot \tp{\mX}
+&= \mX \cdot \tp{\paren{(\tp{\mX}\mX)^{-1}}} \cdot \tp{\mX}
 && \text{(transposing twice changes nothing)}
 \\
 &= \mX \cdot (\tp{\mX}\mX)^{-1} \cdot \tp{\mX}

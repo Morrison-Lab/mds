@@ -18,12 +18,12 @@
     and multiply the total by $\frac{1}{3}$:
 
     $$
-    \frac{1}{3} \sumto{i}{3} \left(y_i - \hy_i\right)^2
-    = \frac{1}{3} \left[
-      \left(y_1 - \hy_1\right)^2
-      + \left(y_2 - \hy_2\right)^2
-      + \left(y_3 - \hy_3\right)^2
-    \right]
+    \frac{1}{3} \sumto{i}{3} \paren{y_i - \hy_i}^2
+    = \frac{1}{3} \sb{
+      \paren{y_1 - \hy_1}^2
+      + \paren{y_2 - \hy_2}^2
+      + \paren{y_3 - \hy_3}^2
+    }
     $$
 
 :::
@@ -56,12 +56,12 @@
     and multiply the total by $\frac{1}{3}$:
 
     $$
-    \frac{1}{3} \sumto{i}{3} \left(y_i - \hy_i\right)^2
-    = \frac{1}{3} \left[
-      \left(y_1 - \hy_1\right)^2
-      + \left(y_2 - \hy_2\right)^2
-      + \left(y_3 - \hy_3\right)^2
-    \right]
+    \frac{1}{3} \sumto{i}{3} \paren{y_i - \hy_i}^2
+    = \frac{1}{3} \sb{
+      \paren{y_1 - \hy_1}^2
+      + \paren{y_2 - \hy_2}^2
+      + \paren{y_3 - \hy_3}^2
+    }
     $$
 
 :::

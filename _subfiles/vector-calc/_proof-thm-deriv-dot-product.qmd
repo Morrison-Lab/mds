@@ -4,11 +4,11 @@ Entry-wise, for $i = 1, \ldots, p$:
 
 $$
 \ba
-\left[\deriv{\vx} (\vecf{a} \cdot \vecf{b})\right]_i
+\sb{\deriv{\vx} (\vecf{a} \cdot \vecf{b})}_i
 &= \deriv{x_i} \sumto{k}{p} a_k b_k \\
 &= \sumto{k}{p} \paren{b_k \deriv{x_i} a_k + a_k \deriv{x_i} b_k} \\
-&= \left[\paren{\deriv{\vx} \tp{\vecf{a}}}\vecf{b}\right]_i
-  + \left[\paren{\deriv{\vx} \tp{\vecf{b}}}\vecf{a}\right]_i
+&= \sb{\paren{\deriv{\vx} \tp{\vecf{a}}}\vecf{b}}_i
+  + \sb{\paren{\deriv{\vx} \tp{\vecf{b}}}\vecf{a}}_i
 \ea
 $$
 

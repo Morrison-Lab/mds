@@ -6,7 +6,7 @@ Suppose $x^*$ is not a global minimizer (@def-global-minimizer).
 Then some $y \in \reals^p$ has $f(y) < f(x^*)$,
 and in particular $y \ne x^*$.
 
-Let $t = \min\left\{\tfrac{1}{2}, \dfrac{\tolin}{2 \norm{y - x^*}}\right\}$,
+Let $t = \min\set{\tfrac{1}{2}, \dfrac{\tolin}{2 \norm{y - x^*}}}$,
 so $t \in (0, 1)$,
 and let $z = t y + (1 - t) x^*$.
 Then $z - x^* = t (y - x^*)$,

@@ -6,12 +6,12 @@ and column $j$ indexes the numerator $\matr{A}\vecf{v}$
 
 $$
 \ba
-\left[\deriv{\vcoef} (\matr{A}\vecf{v})\right]_{ij}
+\sb{\deriv{\vcoef} (\matr{A}\vecf{v})}_{ij}
 &= \deriv{\coef{i}} (\matr{A}\vecf{v})_j \\
 &= \deriv{\coef{i}} \sumto{k}{q} a_{jk} v_k \\
 &= \sumto{k}{q} a_{jk} \deriv{\coef{i}} v_k \\
-&= \sumto{k}{q} \left[\deriv{\vcoef} \vecf{v}\right]_{ik} \left[\tp{\matr{A}}\right]_{kj} \\
-&= \left[\paren{\deriv{\vcoef} \vecf{v}} \tp{\matr{A}}\right]_{ij}
+&= \sumto{k}{q} \sb{\deriv{\vcoef} \vecf{v}}_{ik} \sb{\tp{\matr{A}}}_{kj} \\
+&= \sb{\paren{\deriv{\vcoef} \vecf{v}} \tp{\matr{A}}}_{ij}
 \ea
 $$
 

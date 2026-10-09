@@ -29,7 +29,7 @@ $$
 Since $\sumin w_i x_i = s y + (1 - s) x_n$ and $s \in (0, 1]$,
 the definition of a convex function (@def-convex-function) gives
 $$
-f\left(\sumin w_i x_i\right)
+f\paren{\sumin w_i x_i}
 = f(s y + (1 - s) x_n)
 \le s f(y) + (1 - s) f(x_n).
 $$
