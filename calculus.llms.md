@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 23:33:31 (PDT)
+Last modified: 2026-10-09 02:04:21 (PDT)
 
 ## 1 Derivatives
 
@@ -238,7 +238,7 @@ Last modified: 2026-10-08 23:33:31 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 5 (derivative of exponential)** For every real \\x\\, the derivative of the [exponential function](algebra.llms.md#def-exponential-function) is:
+> **Theorem 5 (Derivative of exponential)** For every real \\x\\, the derivative of the [exponential function](algebra.llms.md#def-exponential-function) is:
 >
 > \\\operatorname{exp}'\mathopen{}\left\\x\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\
 
