@@ -25,7 +25,7 @@ See @fig-step.
 ```{r}
 #| label: step-code
 #| code-fold: true
-step_df <- data.frame(
+step_df <- tibble::tibble(
   x = c(0, 0.5, 0.5, 1),
   y = c(0, 0, 1, 1),
   segment = c("left", "left", "right", "right")

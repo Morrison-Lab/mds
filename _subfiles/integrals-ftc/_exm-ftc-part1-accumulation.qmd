@@ -47,13 +47,13 @@ x_focus <- 1.5
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_area(
-    data = data.frame(t = seq(0, x_focus, length.out = 200)),
+    data = tibble::tibble(t = seq(0, x_focus, length.out = 200)),
     ggplot2::aes(x = t, y = 2 * t),
     fill = "steelblue", alpha = 0.4
   ) +
   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
   ggplot2::geom_vline(
-    data = data.frame(x = x_marks),
+    data = tibble::tibble(x = x_marks),
     ggplot2::aes(xintercept = x, color = factor(x)),
     linetype = "dashed", linewidth = 0.6
   ) +
@@ -70,7 +70,7 @@ $f(t) = 2t$; shaded area equals $F(`r x_focus`) = `r x_focus^2`$; vertical lines
 ```{r}
 #| label: ftc-part1-right-code
 #| code-fold: true
-slope_df <- data.frame(
+slope_df <- tibble::tibble(
   x = x_marks,
   Fx = x_marks^2,
   slope = 2 * x_marks

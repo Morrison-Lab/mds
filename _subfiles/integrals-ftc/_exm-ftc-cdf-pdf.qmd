@@ -110,7 +110,7 @@ F_at_focus <- 1 - exp(-lambda * t_focus)
 #| code-fold: true
 ggplot2::ggplot() +
   ggplot2::geom_area(
-    data = data.frame(t = seq(0, t_focus, length.out = 300)),
+    data = tibble::tibble(t = seq(0, t_focus, length.out = 300)),
     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
     fill = "steelblue", alpha = 0.4
   ) +
