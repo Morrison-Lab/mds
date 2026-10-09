@@ -14,9 +14,9 @@ The vector $\vec{b}$ is called the **offset** of $f$
 
 For a real-valued function (@def-real-vector-valued, $m = 1$),
 $\matr{A}$ is a single row, written $\vec{w}\'$, and $\vec{b}$ is a single number $b$,
-so an affine function is a linear function $\vec{w}\' \vx$ (@cor-linear-scalar)
+so an affine function is a linear function $\dprod{\vec{w}}{\vx}$ (@cor-linear-scalar)
 plus an offset:
 
-$$f(\vx) = \vec{w}\' \vx + b, \qquad \vec{w} \in \reals^p, \quad b \in \reals$$ {#eq-linear-scalar}
+$$f(\vx) = \dprod{\vec{w}}{\vx} + b, \qquad \vec{w} \in \reals^p, \quad b \in \reals$$ {#eq-linear-scalar}
 
 :::

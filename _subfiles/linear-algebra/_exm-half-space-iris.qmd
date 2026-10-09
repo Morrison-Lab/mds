@@ -5,7 +5,7 @@ The `iris` data set in R has the petal length and petal width, in centimeters, o
 Take the 100 flowers of the species versicolor and virginica,
 and let $\vx = (x_1, x_2)$ be the petal length and petal width of one flower.
 A logistic regression of the species on $\vx$ gives a coefficient vector $\vec{w}$ and an intercept $b$.
-The line $\vec{w}\' \vx + b = 0$ is a hyperplane in $\reals^2$ (@def-hyperplane),
+The line $\dprod{\vec{w}}{\vx} + b = 0$ is a hyperplane in $\reals^2$ (@def-hyperplane),
 and the two species mostly fall in its two open half-spaces (@def-half-space).
 @fig-half-space-iris shows the line and the flowers.
 

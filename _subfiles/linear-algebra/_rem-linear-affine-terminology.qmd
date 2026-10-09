@@ -21,7 +21,7 @@ and that is the sense of "linear" in "linear model":
 it stays linear in the coefficients even when the inputs are transformed:
 $w_1 x + w_2 x^2 + b$ is not affine in $x$,
 but it is linear in $(b, w_1, w_2)$.
-Separately, the affine function $\vec{w}\' \vx + b$
+Separately, the affine function $\dprod{\vec{w}}{\vx} + b$
 is a linear function of the augmented vector $\tilde{\vx}$ (@def-augmented-vector),
 with $b$ as the coefficient on its first entry.
 

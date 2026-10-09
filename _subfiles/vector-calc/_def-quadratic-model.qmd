@@ -6,7 +6,7 @@ with $\vecf{g} \eqdef \deriv{\vx} f(\vx)$ and $\matr{H} \eqdef \matr{H}_f(\vx)$.
 The **quadratic model** of $f$ at $\vx$ is the function of a step $\stepvec \in \reals^p$
 
 $$
-q(\stepvec) \eqdef f(\vx) + \tp{\vecf{g}} \stepvec + \tfrac{1}{2}\,\tp{\stepvec} \matr{H} \stepvec,
+q(\stepvec) \eqdef f(\vx) + \dprod{\vecf{g}}{\stepvec} + \tfrac{1}{2}\,\tp{\stepvec} \matr{H} \stepvec,
 $$
 
 also called the **second-order Taylor polynomial** of $f$ at $\vx$:

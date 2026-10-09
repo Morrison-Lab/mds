@@ -6,7 +6,7 @@ $$\va\' \vec b = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8$$
 
 For the norm, take the inner product of $\va$ with itself first:
 
-$$\va\' \va = 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14$$
+$$\dprod{\va}{\va} = 3^2 + (-1)^2 + 2^2 = 9 + 1 + 4 = 14$$
 
 so
 

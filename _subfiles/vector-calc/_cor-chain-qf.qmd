@@ -21,7 +21,7 @@ and $z = f(\vlsresid) = \vlsresid \cdot \vlsresid = \tp{\vlsresid}\vlsresid$:
 $$
 \ba
 \deriv{\vcoef}\paren{\vlsresid \cdot \vlsresid}
-&= \paren{\deriv{\vcoef}\vlsresid} \deriv{\vlsresid}\paren{\tp{\vlsresid}\vlsresid}
+&= \paren{\deriv{\vcoef}\vlsresid} \deriv{\vlsresid}\paren{\dprod{\vlsresid}{\vlsresid}}
 && \text{(vector chain rule)}
 \\
 &= \paren{\deriv{\vcoef}\vlsresid} \paren{2\vlsresid}

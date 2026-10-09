@@ -5,9 +5,9 @@
 
 This vector derivative is like taking the derivative of $x^2$:
 in scalar calculus $\deriv{x} x^2 = 2x$,
-and @cor-deriv-normsq says $\deriv{\vcoef} (\tp{\vcoef}\vcoef) = 2\vcoef$.
+and @cor-deriv-normsq says $\deriv{\vcoef} (\dprod{\vcoef}{\vcoef}) = 2\vcoef$.
 For example, with $p = 1$ and $\vcoef = (\coef{1})$,
-$\tp{\vcoef}\vcoef = \coef{1}^2$,
+$\dprod{\vcoef}{\vcoef} = \coef{1}^2$,
 and its derivative is $2\coef{1} = 2\vcoef$.
 
 :::

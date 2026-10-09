@@ -33,7 +33,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
    $$
    When embedding vectors are normalized to unit Euclidean norm ($\norm{\vx} = \norm{\vy} = 1$),
    cosine similarity equals the inner product $\iprod{\vx}{\vy}$.
-   Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\tp{\vecf{q}}\vecf{k} / \sqrt{d_k}$.
+   Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\dprod{\vecf{q}}{\vecf{k}} / \sqrt{d_k}$.
 
 4. **Weighted and generalized least squares**:
    In linear regression $\vy \approx \matr{X}\vcoef$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\matr{\errcov}$,

@@ -2,9 +2,9 @@
 #### A hyperplane is a translated subspace of dimension $p - 1$
 
 Let $\vec{w} \in \reals^p$ be nonzero, let $b \in \reals$,
-let $\mathcal{H} = \cb{\vx \in \reals^p : \vec{w}\' \vx + b = 0}$ be the hyperplane
+let $\mathcal{H} = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b = 0}$ be the hyperplane
 with normal vector $\vec{w}$ and offset $b$ (@def-hyperplane),
-and let $\mathcal{H}_0 = \cb{\vx \in \reals^p : \vec{w}\' \vx = 0}$
+and let $\mathcal{H}_0 = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} = 0}$
 be the hyperplane with the same normal vector and offset $0$.
 
 1. $\mathcal{H}_0$ is a subspace of $\reals^p$ (@def-subspace) of dimension $p - 1$ (@def-dimension).
@@ -51,7 +51,7 @@ So $\vx^* \eqdef -\frac{b}{\vec{w} \cdot \vec{w}}\,\vec{w}$ is defined, and
 
 $$
 \ba
-\vec{w}\' \vx^* + b
+\dprod{\vec{w}}{\vx^*} + b
 &= -\frac{b}{\vec{w} \cdot \vec{w}}\,(\vec{w}\' \vec{w}) + b
 && \text{(homogeneity of } \vx \mapsto \vec{w}\' \vx \text{, @thm-matrix-map-linear)}
 \\
@@ -64,19 +64,19 @@ $$
 $$
 
 so $\vx^* \in \mathcal{H}$, and $\mathcal{H}$ is not empty.
-Now take any $\vx_0 \in \mathcal{H}$, so $\vec{w}\' \vx_0 = -b$.
+Now take any $\vx_0 \in \mathcal{H}$, so $\dprod{\vec{w}}{\vx_0} = -b$.
 For any $\vx \in \reals^p$,
 
 $$
 \ba
 \vec{w}\' (\vx - \vx_0)
-&= \vec{w}\' \vx - \vec{w}\' \vx_0
+&= \dprod{\vec{w}}{\vx} - \dprod{\vec{w}}{\vx_0}
 && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
 \\
-&= \vec{w}\' \vx - (-b)
+&= \dprod{\vec{w}}{\vx} - (-b)
 && \text{(} \vx_0 \in \mathcal{H} \text{)}
 \\
-&= \vec{w}\' \vx + b,
+&= \dprod{\vec{w}}{\vx} + b,
 && \text{(arithmetic)}
 \ea
 $$
@@ -87,12 +87,12 @@ $\mathcal{H}_0$ is a subspace (part 1),
 so $\mathcal{H}$ has the form in @def-affine-subspace.
 
 **Part 3.**
-For $\vx, \vy \in \mathcal{H}$, both $\vec{w}\' \vx$ and $\vec{w}\' \vy$ equal $-b$, so
+For $\vx, \vy \in \mathcal{H}$, both $\dprod{\vec{w}}{\vx}$ and $\dprod{\vec{w}}{\vy}$ equal $-b$, so
 
 $$
 \ba
 \vec{w} \cdot (\vx - \vy)
-&= \vec{w}\' \vx - \vec{w}\' \vy
+&= \dprod{\vec{w}}{\vx} - \dprod{\vec{w}}{\vy}
 && \text{(@thm-matvec-linear, with coefficients } 1 \text{ and } -1 \text{)}
 \\
 &= (-b) - (-b)

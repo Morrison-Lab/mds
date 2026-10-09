@@ -1,6 +1,6 @@
 ::: {#sol-half-space-sides}
 
-1. Compute $\vec{w}\' \vx + b = x_1 + x_2 + x_3 - 1$ at each point.
+1. Compute $\dprod{\vec{w}}{\vx} + b = x_1 + x_2 + x_3 - 1$ at each point.
 
    - At $(0, 0, 0)$ it equals $0 + 0 + 0 - 1 = -1 < 0$, so the point is in $\mathcal{H}^-$.
    - At $(1, 0, 0)$ it equals $1 + 0 + 0 - 1 = 0$, so the point is in $\mathcal{H}$.

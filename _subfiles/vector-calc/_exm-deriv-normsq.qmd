@@ -2,11 +2,11 @@
 
 #### Derivative of a sum of squares
 
-Let $\vcoef = \tp{(\coef{1}, \coef{2})}$, so $\tp{\vcoef}\vcoef = \coef{1}^2 + \coef{2}^2$.
+Let $\vcoef = \tp{(\coef{1}, \coef{2})}$, so $\dprod{\vcoef}{\vcoef} = \coef{1}^2 + \coef{2}^2$.
 By @cor-deriv-normsq:
 
 $$
-\underbrace{\deriv{\vcoef}(\tp{\vcoef}\vcoef)}_{2 \times 1}
+\underbrace{\deriv{\vcoef}(\dprod{\vcoef}{\vcoef})}_{2 \times 1}
 = 2\vcoef
 = \begin{pmatrix} 2\coef{1} \\ 2\coef{2} \end{pmatrix}
 $$

@@ -3,7 +3,7 @@
 
 Let $\mathcal{H}$ be the line in $\reals^2$ with $\vec{w} = (1, 2)$ and $b = -2$ (@def-hyperplane),
 so $\mathcal{H} = \cb{\vx : x_1 + 2 x_2 - 2 = 0}$.
-Evaluate $\vec{w}\' \vx + b$ at three points (@def-half-space):
+Evaluate $\dprod{\vec{w}}{\vx} + b$ at three points (@def-half-space):
 
 - At $(0, 0)$ it equals $0 + 0 - 2 = -2 < 0$, so $(0, 0) \in \mathcal{H}^-$.
 - At $(2, 0)$ it equals $2 + 0 - 2 = 0$, so $(2, 0) \in \mathcal{H}$.
