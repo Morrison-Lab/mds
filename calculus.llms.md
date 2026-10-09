@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 22:26:48 (PDT)
+Last modified: 2026-10-08 23:17:53 (PDT)
 
 ## 1 Derivatives
 
@@ -178,7 +178,7 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 1*. Differentiate term by term using the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)) and the power rule ([Theorem 3](#thm-deriv-polynomial)):
 >
-> \\\begin{aligned} \frac{d }{d x}(4x^5) &= 4 \cdot(5x^4) = 20x^4 \\ \frac{d }{d x}(3x^2) &= 3 \cdot(2x) = 6x \\ \frac{d }{d x}(x^{1/3}) &= \frac{1}{3}x^{1/3 - 1} = \frac{1}{3}x^{-2/3} \end{aligned}\\
+> \\\begin{aligned} \frac{d }{d x}(4x^5) &= 4 \cdot(5x^4) \\ &= 20x^4 \\ \frac{d }{d x}(3x^2) &= 3 \cdot(2x) \\ &= 6x \\ \frac{d }{d x}(x^{1/3}) &= \frac{1}{3}x^{1/3 - 1} \\ &= \frac{1}{3}x^{-2/3} \end{aligned}\\
 >
 > Combining the three terms yields:
 >
@@ -206,13 +206,13 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > **3. Slope \\0\\:** Solve \\x^2 + 2x - 1 = 0\\. By the quadratic formula:
 >
-> \\x = \frac{-2 \pm \sqrt{4 - 4(1)(-1)}}{2} = \frac{-2 \pm \sqrt{8}}{2} = -1 \pm \sqrt{2}\\
+> \\ \begin{aligned} x &= \frac{-2 \pm \sqrt{4 - 4(1)(-1)}}{2} \\ &= \frac{-2 \pm \sqrt{8}}{2} \\ &= -1 \pm \sqrt{2} \end{aligned} \\
 
 > **NOTE:**
 >
 > **Theorem 4 (Derivative of natural logarithm)** For every \\x \> 0\\, the derivative of the [natural logarithm](algebra.llms.md#def-natural-log) is:
 >
-> \\\operatorname{log}'\mathopen{}\left\\x\right\\\mathclose{} = \frac{1}{x} = x^{-1}\\
+> \\ \begin{aligned} \operatorname{log}'\mathopen{}\left\\x\right\\\mathclose{} &= \frac{1}{x} \\ &= x^{-1} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -228,7 +228,7 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 3*. Simplify before differentiating using the quotient property of logarithms:
 >
-> \\f(x) = \log(4x) - \log(2x) = \log\mathopen{}\left(\frac{4x}{2x}\right)\mathclose{} = \log 2\\
+> \\ \begin{aligned} f(x) &= \log(4x) - \log(2x) \\ &= \log\mathopen{}\left(\frac{4x}{2x}\right)\mathclose{} \\ &= \log 2 \end{aligned} \\
 >
 > Because \\\log 2\\ is constant with respect to \\x\\, the constant rule ([Theorem 1](#thm-deriv-const)) gives:
 >
@@ -336,13 +336,13 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 6*. Factor the numerator before differentiating:
 >
-> \\f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)\\
+> \\ \begin{aligned} f(x) &= \frac{(x - 1)(x + 1)}{x - 1} \\ &= x + 1 \qquad (x \ne 1) \end{aligned} \\
 >
 > Differentiating directly gives \\f'(x) = 1\\.
 >
 > *Alternative (quotient rule):* Using [Theorem 9](#thm-quotient-rule) with \\u(x) = x^2 - 1\\ and \\v(x) = x - 1\\:
 >
-> \\f'(x) = \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} = \frac{x^2 - 2x + 1}{(x - 1)^2} = \frac{(x - 1)^2}{(x - 1)^2} = 1\\
+> \\ \begin{aligned} f'(x) &= \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} \\ &= \frac{x^2 - 2x + 1}{(x - 1)^2} \\ &= \frac{(x - 1)^2}{(x - 1)^2} \\ &= 1 \end{aligned} \\
 >
 > Both methods yield \\1\\, but factoring first eliminates tedious algebraic simplification.
 
@@ -368,7 +368,7 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 7*. Apply the chain rule ([Theorem 10](#thm-chain-rule)) with outer function \\\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ and inner function \\u(x) = -x^2/2\\. Since \\\frac{d }{d u}\operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\u\right\\\mathclose{}\\ ([Theorem 5](#thm-deriv-exp)) and \\u'(x) = -x\\:
 >
-> \\f'(x) = u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+> \\ \begin{aligned} f'(x) &= u'(x)\operatorname{exp}\mathopen{}\left\\u(x)\right\\\mathclose{} \\ &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -416,7 +416,7 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > Find the derivative of
 >
-> \\f(x) = \sqrt\[3\]{(5x - 2)^2} = (5x - 2)^{2/3}\\
+> \\ \begin{aligned} f(x) &= \sqrt\[3\]{(5x - 2)^2} \\ &= (5x - 2)^{2/3} \end{aligned} \\
 >
 > for \\x \ne 2/5\\.
 
@@ -424,7 +424,7 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 10*. Apply the generalized power rule \\\frac{d }{d x}\[g(x)\]^r = r\[g(x)\]^{r-1}g'(x)\\ with \\g(x) = 5x - 2\\ and \\r = 2/3\\:
 >
-> \\f'(x) = \frac{2}{3}(5x - 2)^{2/3 - 1} \cdot 5 = \frac{10}{3}(5x - 2)^{-1/3} = \frac{10}{3(5x - 2)^{1/3}}\\
+> \\ \begin{aligned} f'(x) &= \frac{2}{3}(5x - 2)^{2/3 - 1} \cdot 5 \\ &= \frac{10}{3}(5x - 2)^{-1/3} \\ &= \frac{10}{3(5x - 2)^{1/3}} \end{aligned} \\
 >
 > *Remark:* Omitting the inner derivative \\g'(x) = 5\\ is a frequent mistake when applying the generalized power rule.
 
@@ -462,7 +462,7 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 11*. Apply the chain rule for logarithms ([Corollary 1](#cor-deriv-log-chain)): if \\g(x) = 1 - x^2\\, then \\g'(x) = -2x\\, and
 >
-> \\f'(x) = \frac{g'(x)}{g(x)} = -\frac{2x}{1 - x^2}\\
+> \\ \begin{aligned} f'(x) &= \frac{g'(x)}{g(x)} \\ &= -\frac{2x}{1 - x^2} \end{aligned} \\
 >
 > *Remark:* A common pitfall in chain rule problems is evaluating the outer derivative at \\x\\ rather than at the inner value \\g(x)\\. The denominator is \\g(x) = 1 - x^2\\, not \\x\\.
 
@@ -480,11 +480,11 @@ Last modified: 2026-10-08 22:26:48 (PDT)
 >
 > *Solution 12*. Because \\\sqrt{162}\\ is constant with respect to \\x\\, its derivative is zero ([Theorem 1](#thm-deriv-const)):
 >
-> \\f'(x) = \frac{1}{x} = x^{-1}\\
+> \\ \begin{aligned} f'(x) &= \frac{1}{x} \\ &= x^{-1} \end{aligned} \\
 >
 > Differentiating again via the power rule ([Theorem 3](#thm-deriv-polynomial)):
 >
-> \\f''(x) = -x^{-2} = -\frac{1}{x^2}\\
+> \\ \begin{aligned} f''(x) &= -x^{-2} \\ &= -\frac{1}{x^2} \end{aligned} \\
 
 ### 1.3 Tangent lines
 
@@ -598,7 +598,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **2.** Evaluate \\f\\ and \\f'\\ at \\x_0 = \pi/4\\:
 >
-> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} = 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} = 4 - 1 = 3 \end{aligned}\\
+> \\\begin{aligned} f(\pi/4) &= 4\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} + \sqrt{2}\cos\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} \\ &= \pi + \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= \pi + 1 \\ f'(\pi/4) &= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose{} \\ &= 4 - \sqrt{2}\mathopen{}\left(\frac{\sqrt{2}}{2}\right)\mathclose{} \\ &= 4 - 1 \\ &= 3 \end{aligned}\\
 >
 > Using the point-slope formula, the tangent line at \\(\pi/4, \pi + 1)\\ is:
 >
@@ -645,7 +645,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **3.** At \\w = 1\\ the derivative is \\2(1) - 4 = -2\\, so \\f\\ is falling there. With \\\varepsilon= 0.01\\, [Equation 1](#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from \\f(1) = 1 - 4 + 7 = 4\\ to \\3.98\\. The exact value is
 >
-> \\f(1.01) = (1.01)^2 - 4(1.01) + 7 = 1.0201 - 4.04 + 7 = 3.9801\\
+> \\ \begin{aligned} f(1.01) &= (1.01)^2 - 4(1.01) + 7 \\ &= 1.0201 - 4.04 + 7 \\ &= 3.9801 \end{aligned} \\
 >
 > a change of \\-0.0199\\. The prediction is off by \\0.0001\\, which is \\\varepsilon^2\\: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of [gradient descent](optimization.llms.md#def-gradient-descent), the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.
 
@@ -675,7 +675,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 15*. Differentiate using the product rule:
 >
-> \\f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)\\
+> \\ \begin{aligned} f'(x) &= 4x^3 e^{-x} - x^4 e^{-x} \\ &= x^3 e^{-x}(4 - x) \end{aligned} \\
 >
 > On \\\[0, \infty)\\, \\e^{-x} \> 0\\, so \\f'(x) = 0\\ only at \\x = 0\\ and \\x = 4\\.
 >
@@ -701,7 +701,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 16*. Compute the first derivative:
 >
-> \\f'(x) = 12x^2 - 6x = 6x(2x - 1)\\
+> \\ \begin{aligned} f'(x) &= 12x^2 - 6x \\ &= 6x(2x - 1) \end{aligned} \\
 >
 > Setting \\f'(x) = 0\\ gives critical points at \\x = 0\\ and \\x = 1/2\\.
 >
@@ -722,7 +722,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **Definition 12 (Taylor polynomial and Taylor series)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
 >
-> \\P_n(x) = \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k = f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \tag{2}\\
+> \\ \begin{aligned} P_n(x) &= \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k \\ &= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \end{aligned} \tag{2}\\
 >
 > When \\x_0 = 0\\, \\P_n(x)\\ is called the **Maclaurin polynomial**. When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
 
@@ -730,7 +730,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **Example 11 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is \\f^{(k)}(0) = e^0 = 1\\. The degree-\\n\\ Maclaurin polynomial is:
 >
-> \\P_n(x) = 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} = \sum\_{k=0}^n \frac{x^k}{k!}\\
+> \\ \begin{aligned} P_n(x) &= 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} \\ &= \sum\_{k=0}^n \frac{x^k}{k!} \end{aligned} \\
 >
 > Because the remainder \\R_n(x) \to 0\\ as \\n \to \infty\\ for all \\x \in \mathbb{R}\\, the Taylor series converges everywhere to \\e^x\\:
 >
@@ -760,7 +760,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > By [Equation 2](#eq-taylor-poly-def):
 >
-> \\P_4(x) = 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 = 3 + x^4\\
+> \\ \begin{aligned} P_4(x) &= 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 \\ &= 3 + x^4 \end{aligned} \\
 >
 > Because \\f\\ is already a polynomial centered at \\0\\, its Taylor polynomial of degree 4 simply collects its terms of degree at most 4.
 
@@ -778,27 +778,27 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 18*. Evaluate \\f\\ and its first two derivatives at \\x_0 = 1\\:
 >
-> \\\begin{aligned} f(1) &= 1^8 + 1^4 + 3 = 5 \\ f'(1) &= 8(1)^7 + 4(1)^3 = 12 \\ f''(1) &= 56(1)^6 + 12(1)^2 = 68 \end{aligned}\\
+> \\\begin{aligned} f(1) &= 1^8 + 1^4 + 3 \\ &= 5 \\ f'(1) &= 8(1)^7 + 4(1)^3 \\ &= 12 \\ f''(1) &= 56(1)^6 + 12(1)^2 \\ &= 68 \end{aligned}\\
 >
 > The degree-2 Taylor polynomial is:
 >
-> \\P_2(x) = f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 = 5 + 12(x - 1) + 34(x - 1)^2\\
+> \\ \begin{aligned} P_2(x) &= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\ &= 5 + 12(x - 1) + 34(x - 1)^2 \end{aligned} \\
 
 > **NOTE:**
 >
 > **Example 12 (Taylor series of the cosine function)** For \\f(x) = \cos x\\ centered at \\x_0 = 0\\, the derivatives follow a repeating cycle of length 4:
 >
-> \\\begin{aligned} f(0) &= \cos(0) = 1, & f'(0) &= -\sin(0) = 0, \\ f''(0) &= -\cos(0) = -1, & f'''(0) &= \sin(0) = 0, \end{aligned}\\
+> \\\begin{aligned} f(0) &= \cos(0) \\ &= 1, \\ f'(0) &= -\sin(0) \\ &= 0, \\ f''(0) &= -\cos(0) \\ &= -1, \\ f'''(0) &= \sin(0) \\ &= 0, \end{aligned}\\
 >
 > and in general \\f^{(2k)}(0) = (-1)^k\\ and \\f^{(2k+1)}(0) = 0\\ for all \\k \ge 0\\. The Taylor series (Maclaurin series) converges everywhere to \\\cos x\\:
 >
-> \\\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots = \sum\_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k}\\
+> \\ \begin{aligned} \cos x &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots \\ &= \sum\_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k} \end{aligned} \\
 
 > **NOTE:**
 >
 > **Example 13 (Taylor series of the sine function)** For \\f(x) = \sin x\\ centered at \\x_0 = 0\\, the derivatives evaluate at \\0\\ to \\f^{(2k)}(0) = 0\\ and \\f^{(2k+1)}(0) = (-1)^k\\ for all \\k \ge 0\\. The Taylor series converges everywhere to \\\sin x\\:
 >
-> \\\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots = \sum\_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1}\\
+> \\ \begin{aligned} \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \\ &= \sum\_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -818,7 +818,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > Substitute \\u = 5x\\:
 >
-> \\\cos(5x) = 1 - \frac{(5x)^2}{2!} + \frac{(5x)^4}{4!} - \dots = 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 - \dots\\
+> \\ \begin{aligned} \cos(5x) &= 1 - \frac{(5x)^2}{2!} + \frac{(5x)^4}{4!} - \dots \\ &= 1 - \frac{25}{2}x^2 + \frac{625}{24}x^4 - \dots \end{aligned} \\
 >
 > *Remark:* Substituting into known Taylor expansions avoids computing high-order derivatives by hand.
 
@@ -856,7 +856,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 21*. Since \\f(0) = e^0 = 1\\ and \\f'(0) = e^0 = 1\\:
 >
-> \\P_1(x) = f(0) + f'(0)x = 1 + x\\
+> \\ \begin{aligned} P_1(x) &= f(0) + f'(0)x \\ &= 1 + x \end{aligned} \\
 >
 > The full Taylor series is \\e^x = \sum\_{n=0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \dots\\.
 
@@ -878,7 +878,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > Because the lowest-order variable term is \\x^8\\, all coefficients for powers \\x^1, x^2, x^3, x^4, x^5\\ are zero:
 >
-> \\P_5(x) = 1 + 0x + 0x^2 + 0x^3 + 0x^4 + 0x^5 = 1\\
+> \\ \begin{aligned} P_5(x) &= 1 + 0x + 0x^2 + 0x^3 + 0x^4 + 0x^5 \\ &= 1 \end{aligned} \\
 
 > **NOTE:**
 >
@@ -918,7 +918,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 24*. Compute the values at \\x_0 = 1/3\\:
 >
-> \\\begin{aligned} f(1/3) &= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3} \\ f'(x) &= \frac{1}{2}x^{-1/2} \implies f'(1/3) = \frac{1}{2}\sqrt{3} = \frac{\sqrt{3}}{2} \\ f''(x) &= -\frac{1}{4}x^{-3/2} \implies f''(1/3) = -\frac{1}{4} \cdot 3\sqrt{3} = -\frac{3\sqrt{3}}{4} \end{aligned}\\
+> \\\begin{aligned} f(1/3) &= \mathopen{}\left(\frac{1}{3}\right)\mathclose{}^{1/2} \\ &= \frac{1}{\sqrt{3}} \\ &= \frac{\sqrt{3}}{3} \\ f'(x) &= \frac{1}{2}x^{-1/2} \\ \implies f'(1/3) &= \frac{1}{2}\sqrt{3} \\ &= \frac{\sqrt{3}}{2} \\ f''(x) &= -\frac{1}{4}x^{-3/2} \\ \implies f''(1/3) &= -\frac{1}{4} \cdot 3\sqrt{3} \\ &= -\frac{3\sqrt{3}}{4} \end{aligned}\\
 >
 > The degree-2 Taylor polynomial is:
 >
@@ -938,7 +938,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 25*. At \\x_0 = 1/2\\, \\1 + x_0 = 3/2\\:
 >
-> \\\begin{aligned} f(1/2) &= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} \\ f'(x) &= \frac{1}{3}(1 + x)^{-2/3} \implies f'(1/2) = \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3} = \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3} \\ f''(x) &= -\frac{2}{9}(1 + x)^{-5/3} \implies f''(1/2) = -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3} = -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3} \end{aligned}\\
+> \\\begin{aligned} f(1/2) &= \mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{1/3} \\ f'(x) &= \frac{1}{3}(1 + x)^{-2/3} \\ \implies f'(1/2) &= \frac{1}{3}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-2/3} \\ &= \frac{1}{3}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{2/3} \\ f''(x) &= -\frac{2}{9}(1 + x)^{-5/3} \\ \implies f''(1/2) &= -\frac{2}{9}\mathopen{}\left(\frac{3}{2}\right)\mathclose{}^{-5/3} \\ &= -\frac{2}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3} \end{aligned}\\
 >
 > Dividing \\f''(1/2)\\ by \\2!\\ gives \\-\frac{1}{9}\mathopen{}\left(\frac{2}{3}\right)\mathclose{}^{5/3}\\. The Taylor polynomial is:
 >
@@ -958,11 +958,11 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 26*. Evaluate derivatives at \\x_0 = 1\\:
 >
-> \\\begin{aligned} f(1) &= 1 \log 1 = 0 \\ f'(x) &= \log x + 1 \implies f'(1) = 0 + 1 = 1 \\ f''(x) &= \frac{1}{x} \implies f''(1) = 1 \end{aligned}\\
+> \\\begin{aligned} f(1) &= 1 \log 1 \\ &= 0 \\ f'(x) &= \log x + 1 \\ \implies f'(1) &= 0 + 1 \\ &= 1 \\ f''(x) &= \frac{1}{x} \implies f''(1) = 1 \end{aligned}\\
 >
 > Therefore:
 >
-> \\P_2(x) = f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 = (x - 1) + \frac{1}{2}(x - 1)^2\\
+> \\ \begin{aligned} P_2(x) &= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\ &= (x - 1) + \frac{1}{2}(x - 1)^2 \end{aligned} \\
 
 > **NOTE:**
 >
@@ -978,7 +978,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 27*. Differentiating repeatedly at \\x_0 = 0\\:
 >
-> \\\begin{aligned} f(0) &= \log 1 = 0 \\ f'(x) &= (1 + x)^{-1} \implies f'(0) = 1 \\ f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1 \\ f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2 \end{aligned}\\
+> \\\begin{aligned} f(0) &= \log 1 \\ &= 0 \\ f'(x) &= (1 + x)^{-1} \implies f'(0) = 1 \\ f''(x) &= -(1 + x)^{-2} \implies f''(0) = -1 \\ f'''(x) &= 2(1 + x)^{-3} \implies f'''(0) = 2 \end{aligned}\\
 >
 > The Taylor polynomial of degree 3 is:
 >
@@ -998,7 +998,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 28*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Exercise 27](#exr-miller-taylor-log-one-plus-x):
 >
-> \\\log(1 - x) = (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots = -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\\
+> \\ \begin{aligned} \log(1 - x) &= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\ &= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1014,11 +1014,11 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 29*. Expand using logarithm properties:
 >
-> \\f(x) = \log(1 - x) + \log(e^x) = \log(1 - x) + x\\
+> \\ \begin{aligned} f(x) &= \log(1 - x) + \log(e^x) \\ &= \log(1 - x) + x \end{aligned} \\
 >
 > Substitute the series for \\\log(1 - x)\\ from [Exercise 28](#exr-miller-taylor-log-one-minus-x):
 >
-> \\f(x) = \mathopen{}\left(-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\right)\mathclose{} + x = -\frac{x^2}{2} - \frac{x^3}{3} - \dots\\
+> \\ \begin{aligned} f(x) &= \mathopen{}\left(-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\right)\mathclose{} + x \\ &= -\frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
 >
 > The constant and linear terms vanish (\\f(0) = 0\\, \\f'(0) = 0\\). The first two non-zero terms are:
 >
@@ -1042,7 +1042,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > Multiplying and dropping terms of order \\x^3\\ and higher:
 >
-> \\f(x) = \mathopen{}\left(1 - \frac{x^2}{2} + \dots\right)\mathclose{}\mathopen{}\left(x - \frac{x^2}{2} + \dots\right)\mathclose{} = x - \frac{x^2}{2} + O(x^3)\\
+> \\ \begin{aligned} f(x) &= \mathopen{}\left(1 - \frac{x^2}{2} + \dots\right)\mathclose{}\mathopen{}\left(x - \frac{x^2}{2} + \dots\right)\mathclose{} \\ &= x - \frac{x^2}{2} + O(x^3) \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1058,7 +1058,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > *Solution 31*. Substitute \\u = 2x\\ into the Maclaurin series \\\log(1 + u) = u - \frac{u^2}{2} + \dots\\:
 >
-> \\\log(1 + 2x) = (2x) - \frac{(2x)^2}{2} + \dots = 2x - 2x^2 + \dots\\
+> \\ \begin{aligned} \log(1 + 2x) &= (2x) - \frac{(2x)^2}{2} + \dots \\ &= 2x - 2x^2 + \dots \end{aligned} \\
 
 ## 2 Integration
 
@@ -1160,7 +1160,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Example 15 (Antiderivative of \\3x^2 - 1\\)** By the power rule (\\n = 2\\) and linearity from [Theorem 11](#thm-integral-rules):
 >
-> \\ \int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx = 3 \cdot\frac{x^3}{3} - x + C = x^3 - x + C. \\
+> \\ \begin{aligned} \int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx &= 3 \cdot\frac{x^3}{3} - x + C \\ &= x^3 - x + C. \end{aligned} \\
 >
 > Verify by differentiating: \\\frac{\partial}{\partial x}\mathopen{}\left(x^3 - x + C\right)\mathclose{} = 3x^2 - 1 = f(x)\\, as required.
 
@@ -1240,7 +1240,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Definition 19 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
 >
-> \\a = x_0 \< x_1 \< \cdots \< x_n = b.\\
+> \\ \begin{aligned} a &= x_0 \\ &\< x_1 \\ &\< \cdots \\ &\< x_n \\ &= b. \end{aligned} \\
 >
 > It splits \\\[a, b\]\\ into the \\n\\ subintervals \\\[x\_{i-1}, x_i\]\\, of widths \\\Delta x_i \stackrel{\text{def}}{=}x_i - x\_{i-1}\\.
 >
@@ -1399,7 +1399,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > **Example 31 (Integrable but not continuous: a step function)** Let \\f(x) = 0\\ for \\x \< \tfrac{1}{2}\\ and \\f(x) = 1\\ for \\x \ge \tfrac{1}{2}\\. Then \\f\\ has a jump discontinuity ([Definition 17](#def-jump-discontinuity)) at \\x = \tfrac{1}{2}\\, but it is integrable on \\\[0, 1\]\\:
 >
-> \\ \int_0^1 f(x)\\dx = \int_0^{1/2} 0\\dx + \int\_{1/2}^1 1\\dx = 0 + \tfrac{1}{2} = \tfrac{1}{2}. \\
+> \\ \begin{aligned} \int_0^1 f(x)\\dx &= \int_0^{1/2} 0\\dx + \int\_{1/2}^1 1\\dx \\ &= 0 + \tfrac{1}{2} \\ &= \tfrac{1}{2}. \end{aligned} \\
 >
 > This counterexample shows that the converse of [Theorem 13](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 4](#fig-step).
 >
@@ -1540,7 +1540,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Solution 32*. Integrate term by term using the power rule for integration:
 >
-> \\\begin{aligned} \int_0^1 (x^4 + x^2 + 1)\\dx &= \mathopen{}\left\[\frac{x^5}{5} + \frac{x^3}{3} + x\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left(\frac{1}{5} + \frac{1}{3} + 1\right)\mathclose{} - 0 = \frac{3 + 5 + 15}{15} = \frac{23}{15} \end{aligned}\\
+> \\\begin{aligned} \int_0^1 (x^4 + x^2 + 1)\\dx &= \mathopen{}\left\[\frac{x^5}{5} + \frac{x^3}{3} + x\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left(\frac{1}{5} + \frac{1}{3} + 1\right)\mathclose{} - 0 \\ &= \frac{3 + 5 + 15}{15} \\ &= \frac{23}{15} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -1556,11 +1556,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > With substitution \\u = x + 1\\ (where \\du = dx\\):
 >
-> \\\int_0^1 (x + 1)^2\\dx = \mathopen{}\left\[\frac{(x + 1)^3}{3}\right\]\mathclose{}\_0^1 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{8 - 1}{3} = \frac{7}{3}\\
+> \\ \begin{aligned} \int_0^1 (x + 1)^2\\dx &= \mathopen{}\left\[\frac{(x + 1)^3}{3}\right\]\mathclose{}\_0^1 \\ &= \frac{2^3}{3} - \frac{1^3}{3} \\ &= \frac{8 - 1}{3} \\ &= \frac{7}{3} \end{aligned} \\
 >
 > *Alternative (term by term):*
 >
-> \\\mathopen{}\left\[\frac{x^3}{3} + x^2 + x\right\]\mathclose{}\_0^1 = \frac{1}{3} + 1 + 1 = \frac{7}{3}\\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{x^3}{3} + x^2 + x\right\]\mathclose{}\_0^1 &= \frac{1}{3} + 1 + 1 \\ &= \frac{7}{3} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1574,11 +1574,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Solution 34*. Recognize that \\x^2 + 2x + 1 = (x + 1)^2\\, so the integrand is:
 >
-> \\(x^2 + 2x + 1)^2 = \mathopen{}\left\[(x + 1)^2\right\]\mathclose{}^2 = (x + 1)^4\\
+> \\ \begin{aligned} (x^2 + 2x + 1)^2 &= \mathopen{}\left\[(x + 1)^2\right\]\mathclose{}^2 \\ &= (x + 1)^4 \end{aligned} \\
 >
 > Using the substitution \\u = x + 1\\ with \\du = dx\\:
 >
-> \\\int_0^1 (x + 1)^4\\dx = \mathopen{}\left\[\frac{(x + 1)^5}{5}\right\]\mathclose{}\_0^1 = \frac{2^5 - 1^5}{5} = \frac{32 - 1}{5} = \frac{31}{5}\\
+> \\ \begin{aligned} \int_0^1 (x + 1)^4\\dx &= \mathopen{}\left\[\frac{(x + 1)^5}{5}\right\]\mathclose{}\_0^1 \\ &= \frac{2^5 - 1^5}{5} \\ &= \frac{32 - 1}{5} \\ &= \frac{31}{5} \end{aligned} \\
 >
 > *Remark:* Do not mistakenly write \\\int (x^2 + 2x + 1)^2\\dx = \frac{(x^2 + 2x + 1)^3}{3}\\; that formula requires the derivative of the inside function (\\2x + 2\\) to be present as a factor in the integrand.
 
@@ -1602,7 +1602,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Alternative (by substitution):* Set \\u = \sin x\\, so \\du = \cos x\\dx\\. As \\x\\ ranges from \\-\pi/2\\ to \\\pi/2\\, \\u\\ ranges from \\-1\\ to \\1\\:
 >
-> \\\int\_{-1}^1 (u^3 + u)\\du = \mathopen{}\left\[\frac{u^4}{4} + \frac{u^2}{2}\right\]\mathclose{}\_{-1}^1 = \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} - \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} = 0\\
+> \\ \begin{aligned} \int\_{-1}^1 (u^3 + u)\\du &= \mathopen{}\left\[\frac{u^4}{4} + \frac{u^2}{2}\right\]\mathclose{}\_{-1}^1 \\ &= \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} - \mathopen{}\left(\frac{1}{4} + \frac{1}{2}\right)\mathclose{} \\ &= 0 \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1620,7 +1620,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > The even part doubles over the half-interval \\\[0, 4\]\\:
 >
-> \\\int\_{-4}^4 (6x^2 - 3)\\dx = 2\int_0^4 (6x^2 - 3)\\dx = 2\mathopen{}\left\[2x^3 - 3x\right\]\mathclose{}\_0^4 = 2\mathopen{}\left\[2(64) - 3(4)\right\]\mathclose{} = 2(128 - 12) = 232\\
+> \\ \begin{aligned} \int\_{-4}^4 (6x^2 - 3)\\dx &= 2\int_0^4 (6x^2 - 3)\\dx \\ &= 2\mathopen{}\left\[2x^3 - 3x\right\]\mathclose{}\_0^4 \\ &= 2\mathopen{}\left\[2(64) - 3(4)\right\]\mathclose{} \\ &= 2(128 - 12) \\ &= 232 \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1641,7 +1641,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Applying the substitution:
 >
-> \\\int_0^1 \frac{x}{1 + x^2}\\dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\mathopen{}\left\[\log u\right\]\mathclose{}\_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}\\
+> \\ \begin{aligned} \int_0^1 \frac{x}{1 + x^2}\\dx &= \frac{1}{2}\int_1^2 \frac{du}{u} \\ &= \frac{1}{2}\mathopen{}\left\[\log u\right\]\mathclose{}\_1^2 \\ &= \frac{1}{2}(\log 2 - \log 1) \\ &= \frac{\log 2}{2} \end{aligned} \\
 >
 > *Remark:* When using \\u\\-substitution with definite integrals, the transformation \\x \mapsto u(x)\\ must be one-to-one on the domain of integration.
 
@@ -1657,7 +1657,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > *Solution 38*. Let \\u = x^3 + 3x\\. Then:
 >
-> \\du = (3x^2 + 3)\\dx = 3(x^2 + 1)\\dx \implies (x^2 + 1)\\dx = \frac{du}{3}\\
+> \\ \begin{aligned} du &= (3x^2 + 3)\\dx \\ &= 3(x^2 + 1)\\dx \\ \implies (x^2 + 1)\\dx &= \frac{du}{3} \end{aligned} \\
 >
 > Limits:
 >
@@ -1666,7 +1666,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\\int_0^3 (x^3 + 3x)^8 (x^2 + 1)\\dx = \frac{1}{3}\int_0^{36} u^8\\du = \frac{1}{3}\mathopen{}\left\[\frac{u^9}{9}\right\]\mathclose{}\_0^{36} = \frac{36^9}{27}\\
+> \\ \begin{aligned} \int_0^3 (x^3 + 3x)^8 (x^2 + 1)\\dx &= \frac{1}{3}\int_0^{36} u^8\\du \\ &= \frac{1}{3}\mathopen{}\left\[\frac{u^9}{9}\right\]\mathclose{}\_0^{36} \\ &= \frac{36^9}{27} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1687,7 +1687,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\\int_0^2 x\cos(3x^2)\\dx = \frac{1}{6}\int_0^{12} \cos u\\du = \frac{1}{6}\mathopen{}\left\[\sin u\right\]\mathclose{}\_0^{12} = \frac{\sin 12}{6}\\
+> \\ \begin{aligned} \int_0^2 x\cos(3x^2)\\dx &= \frac{1}{6}\int_0^{12} \cos u\\du \\ &= \frac{1}{6}\mathopen{}\left\[\sin u\right\]\mathclose{}\_0^{12} \\ &= \frac{\sin 12}{6} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1713,7 +1713,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > **Example 35 (FTC Part 1 visualized: accumulation function for \\f(t) = 2t\\)** Take \\f(t) = 2t\\ on \\\[0, 2\]\\. The accumulation function from \\0\\ is
 >
-> \\F(x) \\\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\=\\ x^2 - 0^2 \\=\\ x^2,\\
+> \\ \begin{aligned} F(x) \\ &\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\ \\ &=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\ \\ &=\\ x^2 - 0^2 \\ \\ &=\\ x^2, \end{aligned} \\
 >
 > so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 15](#thm-ftc) Part 1 predicts. [Figure 5](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
 >
@@ -1795,7 +1795,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > For a concrete instance: with \\{\lambda}= 1\\, the probability that \\T \le 2\\ is:
 >
-> \\ F(2) = 1 - \text{e}^{-1 \cdot 2} = 1 - \text{e}^{-2} \approx 1 - 0.135 = 0.865 \\
+> \\ \begin{aligned} F(2) &= 1 - \text{e}^{-1 \cdot 2} \\ &= 1 - \text{e}^{-2} \\ &\approx 1 - 0.135 \\ &= 0.865 \end{aligned} \\
 >
 > See [Figure 6](#fig-exp-pdf-cdf).
 >
@@ -1869,7 +1869,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Substitute:
 >
-> \\\int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx = 2\int_0^\infty e^{-u}\\du = 2\mathopen{}\left\[-e^{-u}\right\]\mathclose{}\_0^\infty = 2\mathopen{}\left(0 - (-1)\right)\mathclose{} = 2\\
+> \\ \begin{aligned} \int_0^\infty x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{4}\right\\\mathclose{}\\dx &= 2\int_0^\infty e^{-u}\\du \\ &= 2\mathopen{}\left\[-e^{-u}\right\]\mathclose{}\_0^\infty \\ &= 2\mathopen{}\left(0 - (-1)\right)\mathclose{} \\ &= 2 \end{aligned} \\
 >
 > *Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
 
@@ -1901,11 +1901,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > - **Case 1: \\0 \le x \le 1\\.** The overlapping bounds for \\t\\ are \\\[0, x\]\\:
 >
->   \\(f \* f)(x) = \int_0^x 1\\dt = x\\
+>   \\ \begin{aligned} (f \* f)(x) &= \int_0^x 1\\dt \\ &= x \end{aligned} \\
 >
 > - **Case 2: \\1 \le x \le 2\\.** The overlapping bounds for \\t\\ are \\\[x - 1, 1\]\\:
 >
->   \\(f \* f)(x) = \int\_{x-1}^1 1\\dt = 1 - (x - 1) = 2 - x\\
+>   \\ \begin{aligned} (f \* f)(x) &= \int\_{x-1}^1 1\\dt \\ &= 1 - (x - 1) \\ &= 2 - x \end{aligned} \\
 >
 > Combining the cases:
 >
@@ -2074,15 +2074,15 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution 43*. **1. Given order (\\y\\ then \\x\\):**
 >
-> \\\int_0^x xy\\dy = x\mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_0^x = \frac{x^3}{2}\\
+> \\ \begin{aligned} \int_0^x xy\\dy &= x\mathopen{}\left\[\frac{y^2}{2}\right\]\mathclose{}\_0^x \\ &= \frac{x^3}{2} \end{aligned} \\
 >
-> \\\int_0^1 \frac{x^3}{2}\\dx = \mathopen{}\left\[\frac{x^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{8}\\
+> \\ \begin{aligned} \int_0^1 \frac{x^3}{2}\\dx &= \mathopen{}\left\[\frac{x^4}{8}\right\]\mathclose{}\_0^1 \\ &= \frac{1}{8} \end{aligned} \\
 >
 > **2. Reversed order (\\x\\ then \\y\\):** The triangular region \\T = \\(x, y) : 0 \le x \le 1, 0 \le y \le x\\\\ is equivalently described by \\T = \\(x, y) : 0 \le y \le 1, y \le x \le 1\\\\:
 >
-> \\\int_0^1 \int_y^1 xy\\dx\\dy = \int_0^1 y\mathopen{}\left\[\frac{x^2}{2}\right\]\mathclose{}\_{x=y}^1\\dy = \int_0^1 \frac{y(1 - y^2)}{2}\\dy\\
+> \\ \begin{aligned} \int_0^1 \int_y^1 xy\\dx\\dy &= \int_0^1 y\mathopen{}\left\[\frac{x^2}{2}\right\]\mathclose{}\_{x=y}^1\\dy \\ &= \int_0^1 \frac{y(1 - y^2)}{2}\\dy \end{aligned} \\
 >
-> \\\int_0^1 \mathopen{}\left(\frac{y}{2} - \frac{y^3}{2}\right)\mathclose{}\\dy = \mathopen{}\left\[\frac{y^2}{4} - \frac{y^4}{8}\right\]\mathclose{}\_0^1 = \frac{1}{4} - \frac{1}{8} = \frac{1}{8}\\
+> \\ \begin{aligned} \int_0^1 \mathopen{}\left(\frac{y}{2} - \frac{y^3}{2}\right)\mathclose{}\\dy &= \mathopen{}\left\[\frac{y^2}{4} - \frac{y^4}{8}\right\]\mathclose{}\_0^1 \\ &= \frac{1}{4} - \frac{1}{8} \\ &= \frac{1}{8} \end{aligned} \\
 >
 > Both orders yield \\1/8\\.
 
@@ -2106,11 +2106,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Now the inner integral has the factor \\y\\ in place for direct integration with respect to \\x\\:
 >
-> \\\int_y^1 y e^{-xy}\\dx = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{x=y}^1 = e^{-y^2} - e^{-y}\\
+> \\ \begin{aligned} \int_y^1 y e^{-xy}\\dx &= \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{x=y}^1 \\ &= e^{-y^2} - e^{-y} \end{aligned} \\
 >
 > The double integral becomes:
 >
-> \\\int_0^1 (e^{-y^2} - e^{-y})\\dy = \int_0^1 e^{-y^2}\\dy - \mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_0^1 = \int_0^1 e^{-y^2}\\dy - (1 - e^{-1})\\
+> \\ \begin{aligned} \int_0^1 (e^{-y^2} - e^{-y})\\dy &= \int_0^1 e^{-y^2}\\dy - \mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_0^1 \\ &= \int_0^1 e^{-y^2}\\dy - (1 - e^{-1}) \end{aligned} \\
 >
 > The term \\\int_0^1 e^{-y^2}\\dy\\ has no elementary antiderivative; it can be written using the error function \\\operatorname{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\\dt\\ as \\\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) \approx 0.7468\\. The overall value is:
 >
@@ -2232,7 +2232,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > As a cross-check, linearity of expectation gives the same value: since \\\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} = \int_0^1 x^2\\dx = \frac{1}{3}\\ for \\X \sim \operatorname{Uniform}(0, 1)\\ (and likewise for \\Y\\),
 >
-> \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{} = \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} + \operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{} = \frac{1}{3} + \frac{1}{3} = \frac{2}{3}.\\
+> \\ \begin{aligned} \operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} &= \operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{} \\ &= \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} + \operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{} \\ &= \frac{1}{3} + \frac{1}{3} \\ &= \frac{2}{3}. \end{aligned} \\
 >
 > The solid whose volume equals this integral is shown in [Figure 11](#fig-fubini-rect).
 >
@@ -2271,7 +2271,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Now integrate with respect to \\x\\:
 >
-> \\\begin{aligned} 5\int_0^2 \mathopen{}\left(\frac{9}{2}x^2 + 9x + 6\right)\mathclose{}\\dx &= 5\mathopen{}\left\[\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x\right\]\mathclose{}\_0^2 \\ &= 5\mathopen{}\left\[\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)\right\]\mathclose{} \\ &= 5\mathopen{}\left\[12 + 18 + 12\right\]\mathclose{} = 5(42) = 210 \end{aligned}\\
+> \\\begin{aligned} 5\int_0^2 \mathopen{}\left(\frac{9}{2}x^2 + 9x + 6\right)\mathclose{}\\dx &= 5\mathopen{}\left\[\frac{3}{2}x^3 + \frac{9}{2}x^2 + 6x\right\]\mathclose{}\_0^2 \\ &= 5\mathopen{}\left\[\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)\right\]\mathclose{} \\ &= 5\mathopen{}\left\[12 + 18 + 12\right\]\mathclose{} \\ &= 5(42) \\ &= 210 \end{aligned}\\
 >
 > *(Note: The source text carried an arithmetic slip in the inner coefficient resulting in \\190\\; the exact value is \\210\\.)*
 
@@ -2287,7 +2287,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution 46*. Integrating with respect to \\x\\ first requires integration by parts. Integrating with respect to \\y\\ first is much simpler because the factor of \\x\\ is already present:
 >
-> \\\int_0^5 x e^{-xy}\\dy = \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{y=0}^5 = 1 - e^{-5x}\\
+> \\ \begin{aligned} \int_0^5 x e^{-xy}\\dy &= \mathopen{}\left\[-e^{-xy}\right\]\mathclose{}\_{y=0}^5 \\ &= 1 - e^{-5x} \end{aligned} \\
 >
 > Now integrate with respect to \\x\\:
 >
@@ -2329,11 +2329,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > *Solution 48*. Integrate with respect to \\y\\ first:
 >
-> \\\int_0^1 (x^2 + 2xy + y\sqrt{x})\\dy = \mathopen{}\left\[x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}\right\]\mathclose{}\_{y=0}^1 = x^2 + x + \frac{1}{2}x^{1/2}\\
+> \\ \begin{aligned} \int_0^1 (x^2 + 2xy + y\sqrt{x})\\dy &= \mathopen{}\left\[x^2 y + x y^2 + \frac{y^2 \sqrt{x}}{2}\right\]\mathclose{}\_{y=0}^1 \\ &= x^2 + x + \frac{1}{2}x^{1/2} \end{aligned} \\
 >
 > Now integrate with respect to \\x\\:
 >
-> \\\begin{aligned} \int_0^1 \mathopen{}\left(x^2 + x + \frac{1}{2}x^{1/2}\right)\mathclose{}\\dx &= \mathopen{}\left\[\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{2}\cdot\frac{x^{3/2}}{3/2}\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left\[\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{3}x^{3/2}\right\]\mathclose{}\_0^1 \\ &= \frac{1}{3} + \frac{1}{2} + \frac{1}{3} = \frac{2}{3} + \frac{1}{2} = \frac{7}{6} \end{aligned}\\
+> \\\begin{aligned} \int_0^1 \mathopen{}\left(x^2 + x + \frac{1}{2}x^{1/2}\right)\mathclose{}\\dx &= \mathopen{}\left\[\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{2}\cdot\frac{x^{3/2}}{3/2}\right\]\mathclose{}\_0^1 \\ &= \mathopen{}\left\[\frac{x^3}{3} + \frac{x^2}{2} + \frac{1}{3}x^{3/2}\right\]\mathclose{}\_0^1 \\ &= \frac{1}{3} + \frac{1}{2} + \frac{1}{3} \\ &= \frac{2}{3} + \frac{1}{2} \\ &= \frac{7}{6} \end{aligned}\\
 
 > **NOTE:**
 >
@@ -2355,13 +2355,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Prove that for every positive integer \\n\\:
 >
-> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=1}^{n} \frac{1}{k} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
+> \\ \begin{aligned} \int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy &= \sum\_{k=1}^{n} \frac{1}{k} \\ &= 1 + \frac{1}{2} + \dots + \frac{1}{n} \end{aligned} \\
 
 > **NOTE:**
 >
 > *Solution 50*. **Method 1 (integration then geometric series):** Integrate with respect to \\x\\ first:
 >
-> \\\int_0^1 n(1 - xy)^{n-1}\\dx = \mathopen{}\left\[-\frac{(1 - xy)^n}{y}\right\]\mathclose{}\_{x=0}^1 = \frac{1 - (1 - y)^n}{y}\\
+> \\ \begin{aligned} \int_0^1 n(1 - xy)^{n-1}\\dx &= \mathopen{}\left\[-\frac{(1 - xy)^n}{y}\right\]\mathclose{}\_{x=0}^1 \\ &= \frac{1 - (1 - y)^n}{y} \end{aligned} \\
 >
 > Use the finite geometric series identity \\\sum\_{k=0}^{n-1} r^k = \frac{1 - r^n}{1 - r}\\ with \\r = 1 - y\\:
 >
@@ -2369,11 +2369,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Now integrate each term with respect to \\y\\ from \\0\\ to \\1\\:
 >
-> \\\int_0^1 (1 - y)^k\\dy = \mathopen{}\left\[-\frac{(1 - y)^{k+1}}{k+1}\right\]\mathclose{}\_0^1 = \frac{1}{k+1}\\
+> \\ \begin{aligned} \int_0^1 (1 - y)^k\\dy &= \mathopen{}\left\[-\frac{(1 - y)^{k+1}}{k+1}\right\]\mathclose{}\_0^1 \\ &= \frac{1}{k+1} \end{aligned} \\
 >
 > Summing over \\k = 0, 1, \dots, n-1\\:
 >
-> \\\sum\_{k=0}^{n-1} \frac{1}{k+1} = \sum\_{j=1}^n\frac{1}{j} = 1 + \frac{1}{2} + \dots + \frac{1}{n}\\
+> \\ \begin{aligned} \sum\_{k=0}^{n-1} \frac{1}{k+1} &= \sum\_{j=1}^n\frac{1}{j} \\ &= 1 + \frac{1}{2} + \dots + \frac{1}{n} \end{aligned} \\
 >
 > **Method 2 (binomial expansion):** Expand \\(1 - xy)^{n-1} = \sum\_{k=0}^{n-1} \binom{n-1}{k}(-1)^k (xy)^k\\. Integrating over \\\[0, 1\]^2\\:
 >
@@ -2381,7 +2381,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Multiplying by \\n\\ and using the identity \\\frac{n}{k+1}\binom{n-1}{k} = \binom{n}{k+1}\\:
 >
-> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} = \sum\_{j=1}^n\frac{1}{j}\\
+> \\ \begin{aligned} \int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy &= \sum\_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} \\ &= \sum\_{j=1}^n\frac{1}{j} \end{aligned} \\
 >
 > *Remark:* This integral identity connects multivariable integration with harmonic numbers \\H_n = \sum\_{k=1}^{n} \frac{1}{k} \approx \log n + \gamma\\, where \\\gamma \approx 0.5772\\ is the Euler-Mascheroni constant.
 

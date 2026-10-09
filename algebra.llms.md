@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 22:26:48 (PDT)
+Last modified: 2026-10-08 23:17:53 (PDT)
 
 ## 1 Equalities
 
@@ -248,7 +248,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 9 (A point that is not a local minimizer)** For \\f(x) = x^3 - 3x\\, the point \\x = -1\\ is not a local minimizer. For any \\t\\,
 >
-> \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(multiply } -3 \text{ into the parentheses)} \\ &= 2 - 3t^2 + t^3 && \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) = 2 \text{)} \end{aligned} \\
+> \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(multiply } -3 \text{ into the parentheses)} \\ &= 2 - 3t^2 + t^3 && \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) \text{, which equals } 2 \text{)} \end{aligned} \\
 >
 > and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta\> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta/ 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example, \\f(-0.9) = -0.729 + 2.7 = 1.971 \< 2\\.
 
@@ -1074,7 +1074,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > **Theorem 29 (Power of a power)** If \\a \> 0\\ and \\b, c \in \mathbb{R}\\, then
 >
-> \\a^{bc} = \mathopen{}\left(a^b\right)\mathclose{}^c = \mathopen{}\left(a^c\right)\mathclose{}^b\\
+> \\ \begin{aligned} a^{bc} &= \mathopen{}\left(a^b\right)\mathclose{}^c \\ &= \mathopen{}\left(a^c\right)\mathclose{}^b \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1090,7 +1090,7 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Corollary 3 (Natural exponential of a product)** \\\operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} = (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b = (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a\\
+> **Corollary 3 (Natural exponential of a product)** \\ \begin{aligned} \operatorname{exp}\mathopen{}\left\\ab\right\\\mathclose{} &= (\operatorname{exp}\mathopen{}\left\\a\right\\\mathclose{})^b \\ &= (\operatorname{exp}\mathopen{}\left\\b\right\\\mathclose{})^a \end{aligned} \\
 
 > **NOTE:**
 >

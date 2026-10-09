@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 22:26:48 (PDT)
+Last modified: 2026-10-08 23:17:53 (PDT)
 
 ## 1 Optimality conditions in several variables
 
