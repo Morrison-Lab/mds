@@ -3,11 +3,11 @@
 
 A **hyperplane** in $\reals^p$ is the set of points $\vx \in \reals^p$ satisfying
 
-$$\vec{w}\' \vx + b = 0$$
+$$\dprod{\vec{w}}{\vx} + b = 0$$
 
 for some vector $\vec{w} \in \reals^p \setminus \{\vzero\}$ and number $b \in \reals$.
 The vector $\vec{w}$ is a **normal vector** of the hyperplane, and $b$ is its offset.
-When $b = 0$, the hyperplane contains the origin $\vzero$, since $\vec{w}\' \vzero = 0$.
+When $b = 0$, the hyperplane contains the origin $\vzero$, since $\dprod{\vec{w}}{\vzero} = 0$.
 
 Geometrically:
 
@@ -23,7 +23,7 @@ Geometrically:
 
 - With $\vec{w} = (1, 1)$ and $b = -1$, the hyperplane in $\reals^2$ is the line $x_1 + x_2 - 1 = 0$.
   The point $(1, 0)$ is on it, since $1 + 0 - 1 = 0$;
-  the point $(1, 1)$ is not, since $1 + 1 - 1 = 1 > 0$, so it lies in the half-space where $\vec{w}\' \vx + b > 0$.
+  the point $(1, 1)$ is not, since $1 + 1 - 1 = 1 > 0$, so it lies in the half-space where $\dprod{\vec{w}}{\vx} + b > 0$.
 - With $\vec{w} = \vzero$, the equation reads $b = 0$:
   if $b \ne 0$ no point satisfies it, and if $b = 0$ every point does,
   so the set is empty or all of $\reals^2$, not a line.

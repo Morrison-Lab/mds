@@ -2,8 +2,8 @@
 #### Half-space
 
 Let $\vecf{a} \in \reals^p$ be a nonzero vector and $c$ a real number.
-The set $\cb{\vx \in \reals^p : \tp{\vecf{a}} \vx \ge c}$ is a (closed) **half-space**:
-the points on one side of the boundary $\cb{\vx : \tp{\vecf{a}} \vx = c}$, together with the boundary.
+The set $\cb{\vx \in \reals^p : \dprod{\vecf{a}}{\vx} \ge c}$ is a (closed) **half-space**:
+the points on one side of the boundary $\cb{\vx : \dprod{\vecf{a}}{\vx} = c}$, together with the boundary.
 In $\reals^2$, a half-space is called a **half-plane**.
 
 :::

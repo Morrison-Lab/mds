@@ -1,7 +1,7 @@
 ::: {#def-row-vector-derivative}
 #### Row-vector derivative (total derivative)
 If $f(\vcoef)$ is a scalar-valued function of a $p \times 1$ vector $\vcoef$,
-such as $f(\vcoef) = \tp{\vx}\vcoef$,
+such as $f(\vcoef) = \dprod{\vx}{\vcoef}$,
 then its **row-vector derivative** is the row vector of its
 partial derivatives (@def-partial-derivative):
 

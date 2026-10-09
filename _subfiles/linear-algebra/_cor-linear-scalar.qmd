@@ -4,7 +4,7 @@
 A function $f: \reals^p \to \reals$ is linear (@def-linear-map)
 if and only if there is a vector $\vec{w} \in \reals^p$ such that
 
-$$f(\vx) = \vec{w}\' \vx \quad \text{for all } \vx \in \reals^p$$
+$$f(\vx) = \dprod{\vec{w}}{\vx} \quad \text{for all } \vx \in \reals^p$$
 
 and then $w_j = f(\vecf{e}_j)$ for each $j$.
 
@@ -23,7 +23,7 @@ $$
 f(\vx)
 &= \matr{A}\vx
 && \text{(@thm-linear-map-matrix)}
-\\&= \vec{w}\' \vx
+\\&= \dprod{\vec{w}}{\vx}
 && (\matr{A} = \vec{w}\')
 \ea
 $$
@@ -40,7 +40,7 @@ so $f$ is linear by @thm-matrix-map-linear.
 :::{#exm-linear-scalar}
 #### A linear function from $\reals^2$ to $\reals$
 
-$f(\vx) = 3 x_1 + 5 x_2$ is $\vec{w}\' \vx$ with $\vec{w} = \tp{(3, 5)}$,
+$f(\vx) = 3 x_1 + 5 x_2$ is $\dprod{\vec{w}}{\vx}$ with $\vec{w} = \tp{(3, 5)}$,
 so it is linear by @cor-linear-scalar.
 The entries of $\vec{w}$ are the values at the indicator vectors:
 $f(\vecf{e}_1) = 3 \cd 1 + 5 \cd 0 = 3$

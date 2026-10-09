@@ -25,7 +25,7 @@ h'(0)
 &= -\tp{\vecf{g}}\,\deriv{\vx} f(\vx)
 && \text{(set } s = 0 \text{)}
 \\
-&= -\tp{\vecf{g}} \vecf{g}
+&= -\dprod{\vecf{g}}{\vecf{g}}
 && \text{(definition of } \vecf{g} \text{)}
 \\
 &= -\norm{\vecf{g}}^2

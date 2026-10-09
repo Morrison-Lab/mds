@@ -21,7 +21,7 @@ f(\vx)
 && \text{(} \vx^* \text{ is stationary)}
 \\
 &= f(\vx^*).
-&& \text{(} \tp{\vzero} \vecf{v} = 0 \text{)}
+&& \text{(} \dprod{\vzero}{\vecf{v}} = 0 \text{)}
 \ea
 $$
 

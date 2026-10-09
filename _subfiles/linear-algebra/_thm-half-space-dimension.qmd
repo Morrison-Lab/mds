@@ -6,7 +6,7 @@ and let $\mathcal{H}$, $\mathcal{H}^+$ be the hyperplane and open half-space of 
 For a set $S \subseteq \reals^p$, let $D(S) \eqdef \cb{\vy - \vx : \vx, \vy \in S}$
 be the set of differences of its points.
 
-1. $D(\mathcal{H}) = \cb{\vecf{s} : \vec{w}\' \vecf{s} = 0}$,
+1. $D(\mathcal{H}) = \cb{\vecf{s} : \dprod{\vec{w}}{\vecf{s}} = 0}$,
    a subspace of dimension $p - 1$.
 2. $D(\mathcal{H}^+) = \reals^p$, a subspace of dimension $p$.
 
@@ -19,7 +19,7 @@ The same holds for $\mathcal{H}^-$.
 **Part 1.**
 Let $\vx, \vy \in \mathcal{H}$.
 By @thm-hyperplane-subspace part 3, $\vec{w} \cdot (\vy - \vx) = 0$,
-so $\vy - \vx \in \mathcal{H}_0 = \cb{\vecf{s} : \vec{w}\' \vecf{s} = 0}$.
+so $\vy - \vx \in \mathcal{H}_0 = \cb{\vecf{s} : \dprod{\vec{w}}{\vecf{s}} = 0}$.
 Conversely, fix any $\vx_0 \in \mathcal{H}$ (it exists by @thm-hyperplane-subspace part 2).
 For any $\vecf{s} \in \mathcal{H}_0$, the point $\vx_0 + \vecf{s}$ is in $\mathcal{H}$ by the same part,
 and $(\vx_0 + \vecf{s}) - \vx_0 = \vecf{s}$.
@@ -33,11 +33,11 @@ Then
 
 $$
 \ba
-\vec{w}\' \vx_t + b
-&= \paren{\vec{w}\' \vx_0 + b} + t\,\vec{w}\' \vec{w}
-&& \text{(linearity of } \vx \mapsto \vec{w}\' \vx \text{)}
+\dprod{\vec{w}}{\vx_t} + b
+&= \paren{\dprod{\vec{w}}{\vx_0} + b} + t\,\dprod{\vec{w}}{\vec{w}}
+&& \text{(linearity of } \vx \mapsto \dprod{\vec{w}}{\vx} \text{)}
 \\
-&= t\,\vec{w}\' \vec{w},
+&= t\,\dprod{\vec{w}}{\vec{w}},
 && \text{(} \vx_0 \in \mathcal{H} \text{)}
 \ea
 $$
@@ -47,16 +47,16 @@ Next,
 
 $$
 \ba
-\vec{w}\' (\vx_t + \vecf{v}) + b
-&= \paren{\vec{w}\' \vx_t + b} + \vec{w}\' \vecf{v}
-&& \text{(linearity of } \vx \mapsto \vec{w}\' \vx \text{)}
+\dprod{\vec{w}}{(\vx_t + \vecf{v})} + b
+&= \paren{\dprod{\vec{w}}{\vx_t} + b} + \dprod{\vec{w}}{\vecf{v}}
+&& \text{(linearity of } \vx \mapsto \dprod{\vec{w}}{\vx} \text{)}
 \\
-&= t\,\vec{w}\' \vec{w} + \vec{w}\' \vecf{v}.
+&= t\,\dprod{\vec{w}}{\vec{w}} + \dprod{\vec{w}}{\vecf{v}}.
 && \text{(the display above)}
 \ea
 $$
 
-Because $\vec{w}\' \vec{w} > 0$, this is positive once $t > -\vec{w}\' \vecf{v} / \vec{w}\' \vec{w}$.
+Because $\dprod{\vec{w}}{\vec{w}} > 0$, this is positive once $t > -\dprod{\vec{w}}{\vecf{v}} / \dprod{\vec{w}}{\vec{w}}$.
 Choose such a $t > 0$.
 Then $\vx_t$ and $\vx_t + \vecf{v}$ are both in $\mathcal{H}^+$,
 and their difference is $\vecf{v}$.

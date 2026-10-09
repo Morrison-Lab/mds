@@ -4,7 +4,7 @@ Applying @thm-quadratic-form with $\matr{S} = \matr{I}_{p \times p}$ (which is s
 
 $$
 \ba
-\deriv{\vcoef}(\tp{\vcoef}\vcoef)
+\deriv{\vcoef}(\dprod{\vcoef}{\vcoef})
 &= \deriv{\vcoef}(\tp{\vcoef}\matr{I}_{p \times p}\vcoef)
 && \text{(rewrite with identity matrix)} \\
 &= 2\matr{I}_{p \times p}\vcoef

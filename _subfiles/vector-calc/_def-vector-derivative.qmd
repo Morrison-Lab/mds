@@ -1,7 +1,7 @@
 ::: {#def-vector-derivative}
 #### Vector derivative (gradient)
 If $f(\vcoef)$ is a scalar-valued function of a $p \times 1$ vector $\vcoef$,
-such as $f(\vcoef) = \tp{\vx}\vcoef$,
+such as $f(\vcoef) = \dprod{\vx}{\vcoef}$,
 then its **vector derivative** is the column vector of its
 partial derivatives (@def-partial-derivative):
 

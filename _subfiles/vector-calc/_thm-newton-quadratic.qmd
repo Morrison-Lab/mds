@@ -3,7 +3,7 @@
 
 Let $\matr{S}$ be a $p \times p$ [positive definite](linear-algebra.qmd#def-positive-definite) matrix,
 $\vecf{c} \in \reals^p$,
-and $f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx - \tp{\vecf{c}} \vx$.
+and $f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx - \dprod{\vecf{c}}{\vx}$.
 From any $\vx^{(0)}$, Newton's method (@def-newton-method) gives $\vx^{(1)} = \matr{S}^{-1} \vecf{c}$,
 the unique minimizer of $f$.
 
@@ -12,7 +12,7 @@ the unique minimizer of $f$.
 ::: proof
 
 Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives,
-so by [derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form) for $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ and [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) for $\tp{\vecf{c}} \vx$,
+so by [derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form) for $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ and [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) for $\dprod{\vecf{c}}{\vx}$,
 $\deriv{\vx} f(\vx) = \tfrac{1}{2} (2 \matr{S} \vx) - \vecf{c} = \matr{S} \vx - \vecf{c}$;
 by [Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic) with $\tfrac{1}{2} \matr{S}$ in place of $\matr{S}$,
 and because the gradient $-\vecf{c}$ of the linear term is constant ([constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vector)),
