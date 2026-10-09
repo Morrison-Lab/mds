@@ -4,7 +4,7 @@
 For any numbers $a_m, \ldots, a_n$ and $b_m, \ldots, b_n$,
 
 $$
-\sum_{i=m}^{n} \left(a_i + b_i\right) = \sum_{i=m}^{n} a_i + \sum_{i=m}^{n} b_i
+\sum_{i=m}^{n} \paren{a_i + b_i} = \sum_{i=m}^{n} a_i + \sum_{i=m}^{n} b_i
 $$
 
 :::

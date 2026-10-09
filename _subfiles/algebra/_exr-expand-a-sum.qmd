@@ -6,7 +6,7 @@ is shorthand for a sum of four terms.
 
 1.  Guess which four terms, and add them up.
 2.  Write
-    $\avgiN \left(y_i - \hy_i\right)^2$
+    $\avgiN \paren{y_i - \hy_i}^2$
     for $N = 3$ without the $\sum$ symbol.
 
 :::

@@ -13,7 +13,7 @@ Let $\dsn{x} \in \reals^p$,
 and let $\dsn{w} \ge 0$ be weights with $\sumin w_i = 1$.
 Then
 $$
-f\left(\sumin w_i x_i\right) \le \sumin w_i f(x_i).
+f\paren{\sumin w_i x_i} \le \sumin w_i f(x_i).
 $$
 
 :::

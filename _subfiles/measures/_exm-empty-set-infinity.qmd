@@ -11,7 +11,7 @@ the left-hand side of the countable additivity equation is:
 
 $$
 \ba
-\measure\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+\measure\paren{\bigcup_{i=1}^{\infty} A_i}
 &= \infty
 && \text{(definition of } \measure \text{)}
 \ea

@@ -28,7 +28,7 @@ and its union is $A_1 \cup \cdots \cup A_n$. So:
 $$
 \ba
 \measure(A_1 \cup \cdots \cup A_n)
-&= \measure\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&= \measure\paren{\bigcup_{i=1}^{\infty} A_i}
 && \text{(} A_i = \emptyset \text{ for } i > n \text{)} \\
 &= \sumto{i}{\infty} \measure(A_i)
 && \text{(countable additivity)} \\

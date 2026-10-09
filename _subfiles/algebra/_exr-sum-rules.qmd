@@ -5,7 +5,7 @@ Let $c$ be a number, and let $a_1, a_2, a_3$ and $b_1, b_2, b_3$ be numbers.
 Using @def-summation and the rules of algebra above, show that:
 
 1.  $\sumto{i}{3} c\, a_i = c \sumto{i}{3} a_i$;
-2.  $\sumto{i}{3} \left(a_i + b_i\right) = \sumto{i}{3} a_i + \sumto{i}{3} b_i$.
+2.  $\sumto{i}{3} \paren{a_i + b_i} = \sumto{i}{3} a_i + \sumto{i}{3} b_i$.
 
 Does either argument depend on there being exactly three terms?
 

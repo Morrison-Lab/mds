@@ -6,11 +6,11 @@ and column $j$ indexes the numerator $\matr{A}\vcoef$:
 
 $$
 \ba
-\left[\deriv{\vcoef} (\matr{A}\vcoef)\right]_{ij}
+\sb{\deriv{\vcoef} (\matr{A}\vcoef)}_{ij}
 &= \deriv{\coef{i}} (\matr{A}\vcoef)_j \\
 &= \deriv{\coef{i}} \sumto{k}{p} a_{jk} \coef{k} \\
 &= a_{ji} \\
-&= \left[\tp{\matr{A}}\right]_{ij}
+&= \sb{\tp{\matr{A}}}_{ij}
 \ea
 $$
 

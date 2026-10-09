@@ -6,7 +6,7 @@ If $\matr{S}$ is a $p \times p$ matrix and $\vx$ is a vector of length $p$, then
 $$
 \tp{\vx}\matr{S}\vx
 =
-\tp{\vx}\left(\frac{1}{2}(\matr{S}+\tp{\matr{S}})\right)\vx.
+\tp{\vx}\paren{\frac{1}{2}(\matr{S}+\tp{\matr{S}})}\vx.
 $$
 
 So the value of a quadratic form depends only on the symmetric part
@@ -44,7 +44,7 @@ $$
 &= \frac{1}{2}\,\tp{\vx}\paren{\matr{S} + \tp{\matr{S}}}\vx
 && \text{(distributive law)}
 \\
-&= \tp{\vx}\left(\frac{1}{2}(\matr{S}+\tp{\matr{S}})\right)\vx
+&= \tp{\vx}\paren{\frac{1}{2}(\matr{S}+\tp{\matr{S}})}\vx
 && \text{(move the scalar } \tfrac{1}{2} \text{ inside)}
 \ea
 $$

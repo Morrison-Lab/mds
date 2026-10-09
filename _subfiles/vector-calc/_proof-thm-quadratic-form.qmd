@@ -5,7 +5,7 @@ Differentiating component-wise with respect to $\coef{i}$ for $i = 1, \ldots, p$
 
 $$
 \ba
-\left[\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef)\right]_i
+\sb{\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef)}_i
 &= \deriv{\coef{i}} \sumjp \sumto{k}{p} s_{jk} \coef{j} \coef{k}
 && \text{(expand quadratic form)} \\
 &= \sumto{k}{p} s_{ik} \coef{k} + \sumjp s_{ji} \coef{j}
