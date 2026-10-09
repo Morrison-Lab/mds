@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 02:04:21 (PDT)</p>
+  <p class="date">Last modified: 2026-10-09 09:50:57 (PDT)</p>
 </section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -8700,7 +8700,7 @@ a u^2 + 2buw + cw^2 = a\,\mathopen{}\left(u + \tfrac{b}{a}\,w\right)\mathclose{}
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;20</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \tilde{x}= \tilde{0}\)</span> only for <span class="math inline">\(\tilde{x}= \tilde{0}\)</span> (<a href="#/thm-back-substitution" class="quarto-xref">Theorem&nbsp;93</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="#/thm-matvec-columns" class="quarto-xref">Theorem&nbsp;22</a>, <a href="#/def-linearly-independent" class="quarto-xref">Definition&nbsp;37</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="#/def-matrix-transpose" class="quarto-xref">Definition&nbsp;20</a>) is positive definite (<a href="#/thm-pd-gram" class="quarto-xref">Theorem&nbsp;107</a>, part 2).</p>
-<p><strong>Only if, with uniqueness, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(p\)</span>.</strong> For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathbf{A} = [a]\)</span> with <span class="math inline">\(a &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;109</a>), and <span class="math inline">\([\ell]\,[\ell] = [a]\)</span> with <span class="math inline">\(\ell &gt; 0\)</span> holds exactly for <span class="math inline">\(\ell = \sqrt{a}\)</span>. For <span class="math inline">\(p &gt; 1\)</span>, assume every <span class="math inline">\((p - 1) \times (p - 1)\)</span> positive definite matrix has exactly one such factor, and split off the first row and column. <span class="math inline">\(\mathbf{A}\)</span> is symmetric, so its first row is the transpose of its first column:</p>
+<p><strong>Only if, with uniqueness, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(p\)</span>.</strong> For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathbf{A} = [a]\)</span> with <span class="math inline">\(a &gt; 0\)</span> (<a href="#/thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;109</a>), and <span class="math inline">\([c]\,[c] = [a]\)</span> with <span class="math inline">\(c &gt; 0\)</span> holds exactly for <span class="math inline">\(c = \sqrt{a}\)</span>. For <span class="math inline">\(p &gt; 1\)</span>, assume every <span class="math inline">\((p - 1) \times (p - 1)\)</span> positive definite matrix has exactly one such factor, and split off the first row and column. <span class="math inline">\(\mathbf{A}\)</span> is symmetric, so its first row is the transpose of its first column:</p>
 <p><span class="math display">\[
 \mathbf{A} = \begin{bmatrix} a_{11} &amp; {\tilde{b}}^{\top} \\ \tilde{b} &amp; \mathbf{A}_{22} \end{bmatrix},
 \qquad

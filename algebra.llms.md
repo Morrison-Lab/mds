@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 02:04:21 (PDT)
+Last modified: 2026-10-09 09:50:57 (PDT)
 
 ## 1 Equalities
 
@@ -349,7 +349,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > **Definition 16 (Upper and lower bounds)** Let \\A \subseteq \mathbb{R}\\.
 >
 > - A real number \\u\\ is an **upper bound** for \\A\\ if \\a \le u\\ for all \\a \in A\\.
-> - A real number \\\ell\\ is a **lower bound** for \\A\\ if \\\ell \le a\\ for all \\a \in A\\.
+> - A real number \\\ell\\ is a **lower bound** for \\A\\ if \\\ell\le a\\ for all \\a \in A\\.
 >
 > \\A\\ is **bounded above** if it has an upper bound, **bounded below** if it has a lower bound, and **bounded** if it is both bounded above and bounded below. A real-valued [function](sets-functions.llms.md#def-function) is bounded above, bounded below, or bounded if its [image](sets-functions.llms.md#def-image) is.
 
@@ -373,7 +373,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 16 (Completeness for an interval)** For \\A = (1, 2\]\\, the lower bounds of \\A\\ are the numbers \\\ell \le 1\\, and the largest of them is \\1\\. The upper bounds of \\A\\ are the numbers \\u \ge 2\\, and the smallest of them is \\2\\.
+> **Example 16 (Completeness for an interval)** For \\A = (1, 2\]\\, the lower bounds of \\A\\ are the numbers \\\ell\le 1\\, and the largest of them is \\1\\. The upper bounds of \\A\\ are the numbers \\u\ge 2\\, and the smallest of them is \\2\\.
 
 > **NOTE:**
 >
