@@ -21,9 +21,11 @@ and $\det(\matr{B}) = 1 \cd 1 - 0 \cd 3 = 1$.
 The product is
 
 $$
+\begin{aligned}
 \matr{A}\matr{B}
-= \begin{bmatrix} 2 \cd 1 + 1 \cd 3 & 2 \cd 0 + 1 \cd 1 \\ 0 \cd 1 + 1 \cd 3 & 0 \cd 0 + 1 \cd 1 \end{bmatrix}
-= \begin{bmatrix} 5 & 1 \\ 3 & 1 \end{bmatrix},
+&= \begin{bmatrix} 2 \cd 1 + 1 \cd 3 & 2 \cd 0 + 1 \cd 1 \\ 0 \cd 1 + 1 \cd 3 & 0 \cd 0 + 1 \cd 1 \end{bmatrix} \\
+&= \begin{bmatrix} 5 & 1 \\ 3 & 1 \end{bmatrix},
+\end{aligned}
 $$
 
 with $\det(\matr{A}\matr{B}) = 5 \cd 1 - 1 \cd 3 = 2 = \det(\matr{A})\det(\matr{B})$.

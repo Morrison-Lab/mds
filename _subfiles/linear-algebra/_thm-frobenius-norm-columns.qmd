@@ -1,0 +1,61 @@
+:::{#thm-frobenius-norm-columns}
+#### The squared Frobenius norm adds up the squared column norms
+
+If $\matr{A}$ is an $n \times p$ matrix
+with columns $\vecf{a}_1, \ldots, \vecf{a}_p$, then
+
+$$
+\norm{\matr{A}}_F^2 = \sumjp \norm{\vecf{a}_j}^2.
+$$
+
+:::
+
+::: proof
+
+Entry $i$ of $\vecf{a}_j$ is $a_{ij}$, so
+
+$$
+\ba
+\norm{\matr{A}}_F^2
+&= \sumin \sumjp a_{ij}^2
+&& \text{(@rem-frobenius-norm-entries)}
+\\
+&= \sumjp \sumin a_{ij}^2
+&& \text{(swap the order of two finite sums)}
+\\
+&= \sumjp \norm{\vecf{a}_j}^2
+&& \text{(@def-euclidean-norm, applied to each column)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-frobenius-norm-columns}
+#### The Frobenius norm of a $2 \times 2$ matrix, column by column
+
+The matrix $\matr{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$
+in @exm-frobenius-norm has columns
+$\vecf{a}_1 = (1, 3)$ and $\vecf{a}_2 = (2, 4)$, so
+
+$$
+\ba
+\norm{\matr{A}}_F^2
+&= \norm{\vecf{a}_1}^2 + \norm{\vecf{a}_2}^2
+&& \text{(@thm-frobenius-norm-columns)}
+\\
+&= (1^2 + 3^2) + (2^2 + 4^2)
+&& \text{(definition of the norm)}
+\\
+&= 10 + 20
+&& \text{(square and add)}
+\\
+&= 30
+&& \text{(add)}
+\ea
+$$
+
+which matches $\norm{\matr{A}}_F = \sqrt{30}$ from @exm-frobenius-norm.
+
+:::

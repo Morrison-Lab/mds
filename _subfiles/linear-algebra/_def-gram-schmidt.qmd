@@ -60,10 +60,12 @@ Step 1 gives $\vecf{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)$.
 In step 2, $\vecf{q}_1 \cdot \vecf{a}_2 = \tfrac{1}{\sqrt{5}}\,(2 + 8) = \tfrac{10}{\sqrt{5}}$, and
 
 $$
+\begin{aligned}
 \tilde{\vecf{q}}_2
-= (2, 4) - \tfrac{10}{\sqrt{5}} \cd \tfrac{1}{\sqrt{5}}\,(1, 2)
-= (2, 4) - 2\,(1, 2)
-= \vzero,
+&= (2, 4) - \tfrac{10}{\sqrt{5}} \cd \tfrac{1}{\sqrt{5}}\,(1, 2) \\
+&= (2, 4) - 2\,(1, 2) \\
+&= \vzero,
+\end{aligned}
 $$
 
 so the process stops: $\vecf{a}_2$ is a multiple of $\vecf{a}_1$.

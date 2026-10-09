@@ -23,10 +23,10 @@ $$
 && \text{(square both sides of @eq-l2-norm)}
 \\
 &= \vecf{x} \cdot (\vecf{x} + \vecf{y}) + \vecf{y} \cdot (\vecf{x} + \vecf{y})
-&& \text{(@thm-dot-linear, first slot, } a = b = 1 \text{)}
+&& \text{(@thm-dot-linear, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)}
 \\
 &= \vecf{x} \cdot \vecf{x} + \vecf{x} \cdot \vecf{y} + \vecf{y} \cdot \vecf{x} + \vecf{y} \cdot \vecf{y}
-&& \text{(@thm-dot-linear, second slot, } a = b = 1 \text{, twice)}
+&& \text{(@thm-dot-linear, second slot, } a \text{ and } b \text{ both equal to } 1 \text{, twice)}
 \\
 &= \vecf{x} \cdot \vecf{x} + \vecf{x} \cdot \vecf{y} + \vecf{x} \cdot \vecf{y} + \vecf{y} \cdot \vecf{y}
 && \text{(@thm-lincom-symmetric)}

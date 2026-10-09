@@ -42,10 +42,12 @@ $$
 \measureb(\set{1} \cup \set{2})
 &= \measureb(\set{1, 2})
 && \text{(take the union)} \\
-&= 2^2 = 4,
+&= 2^2 \\
+&= 4,
 && \text{(count, then square)} \\
 \measureb(\set{1}) + \measureb(\set{2})
-&= 1^2 + 1^2 = 2,
+&= 1^2 + 1^2 \\
+&= 2,
 && \text{(count each set, then square)}
 \ea
 $$

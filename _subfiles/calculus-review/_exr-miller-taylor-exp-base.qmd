@@ -13,7 +13,13 @@ at $x_0 = 0$.
 ::: {#sol-miller-taylor-exp-base}
 Since $f(0) = e^0 = 1$ and $f'(0) = e^0 = 1$:
 
-$$P_1(x) = f(0) + f'(0)x = 1 + x$$
+$$
+\begin{aligned}
+P_1(x)
+&= f(0) + f'(0)x \\
+&= 1 + x
+\end{aligned}
+$$
 
 The full Taylor series is $e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \dots$.
 :::

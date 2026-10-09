@@ -11,9 +11,21 @@ $$f(x, y) = x\exp{x^2 + y^2}$$
 ::: {#sol-miller-pderiv-exp-quadratic}
 With respect to $x$, apply the product rule:
 
-$$\derivf{f}{x} = (1)\exp{x^2 + y^2} + x \cd \sb{2x\exp{x^2 + y^2}} = (1 + 2x^2)\exp{x^2 + y^2}$$
+$$
+\begin{aligned}
+\derivf{f}{x}
+&= (1)\exp{x^2 + y^2} + x \cd \sb{2x\exp{x^2 + y^2}} \\
+&= (1 + 2x^2)\exp{x^2 + y^2}
+\end{aligned}
+$$
 
 With respect to $y$, treat $x$ as constant:
 
-$$\derivf{f}{y} = x \cd \sb{2y\exp{x^2 + y^2}} = 2xy\exp{x^2 + y^2}$$
+$$
+\begin{aligned}
+\derivf{f}{y}
+&= x \cd \sb{2y\exp{x^2 + y^2}} \\
+&= 2xy\exp{x^2 + y^2}
+\end{aligned}
+$$
 :::

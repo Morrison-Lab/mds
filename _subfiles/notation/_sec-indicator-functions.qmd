@@ -331,7 +331,11 @@ and for every $x \in \universe$:
   (all four terms are defined in the Morrison Lab's probability notes):
 
   $$
-  \Expp[\indic{A}] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A)
+  \begin{aligned}
+  \Expp[\indic{A}]
+  &= 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) \\
+  &= \Pr(A)
+  \end{aligned}
   $$
 
 This [identity](algebra.qmd#def-identity) turns probabilities into expectations.

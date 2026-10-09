@@ -45,7 +45,7 @@ $$
 && \text{(@def-matvec-mult, @def-dot-product)}
 \\
 &= x_{ii}
-&& \text{(only the term } r = s = i \text{ is nonzero)}
+&& \text{(only the term with } r \text{ and } s \text{ both equal to } i \text{ is nonzero)}
 \\
 &> 0.
 && \text{(} \matr{X} \text{ positive definite)}

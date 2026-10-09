@@ -82,7 +82,15 @@ As a cross-check, linearity of expectation gives the same value:
 since $\E{X^2} = \int_0^1 x^2\,dx = \frac{1}{3}$ for $X \sim \operatorname{Uniform}(0, 1)$
 (and likewise for $Y$),
 
-$$\E{g(X, Y)} = \E{X^2 + Y^2} = \E{X^2} + \E{Y^2} = \frac{1}{3} + \frac{1}{3} = \frac{2}{3}.$$
+$$
+\begin{aligned}
+\E{g(X, Y)}
+&= \E{X^2 + Y^2} \\
+&= \E{X^2} + \E{Y^2} \\
+&= \frac{1}{3} + \frac{1}{3} \\
+&= \frac{2}{3}.
+\end{aligned}
+$$
 
 The solid whose volume equals this integral is shown in @fig-fubini-rect.
 

@@ -27,7 +27,13 @@ f^{(4)}(x) &= 1680x^4 + 24 &\implies f^{(4)}(0) &= 24
 
 By @eq-taylor-poly-def:
 
-$$P_4(x) = 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 = 3 + x^4$$
+$$
+\begin{aligned}
+P_4(x)
+&= 3 + 0x + \frac{0}{2!}x^2 + \frac{0}{3!}x^3 + \frac{24}{4!}x^4 \\
+&= 3 + x^4
+\end{aligned}
+$$
 
 Because $f$ is already a polynomial centered at $0$, its Taylor polynomial of degree 4 simply collects its terms of degree at most 4.
 :::

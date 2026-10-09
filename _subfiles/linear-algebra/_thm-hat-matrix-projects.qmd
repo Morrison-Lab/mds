@@ -65,9 +65,11 @@ since $\norm{\vecf{q}_1} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} = 1$.
 With $\matr{Q} = [\vecf{q}_1]$,
 
 $$
+\begin{aligned}
 \matr{Q} \tp{\matr{Q}}
-= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix}
-= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix},
+&= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} \\
+&= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix},
+\end{aligned}
 $$
 
 the hat matrix found in @exm-hat-matrix.

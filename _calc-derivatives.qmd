@@ -124,7 +124,13 @@ the same formula holds for every real $x$.
 For every $x > 0$,
 the derivative of the [natural logarithm](algebra.qmd#def-natural-log) is:
 
-$$\dlogf{x} = \frac{1}{x} = x^{-1}$$
+$$
+\begin{aligned}
+\dlogf{x}
+&= \frac{1}{x} \\
+&= x^{-1}
+\end{aligned}
+$$
 :::
 
 {{< slidebreak >}}

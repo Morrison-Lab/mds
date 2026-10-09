@@ -1,0 +1,45 @@
+:::{#def-orthogonal-inner-product}
+#### Orthogonality in an inner product space
+
+In an inner product space (@def-inner-product-space)
+with inner product $\iprod{\cdot}{\cdot}$,
+two vectors $\vx$ and $\vy$ are **orthogonal with respect to** $\iprod{\cdot}{\cdot}$,
+written $\vx \perp \vy$, if
+
+$$\iprod{\vx}{\vy} = 0$$
+
+[@banerjee2014linear, Definition 7.3, p. 181].
+With the dot product as the inner product (@exm-dot-product-inner-product),
+this condition is orthogonality as in @def-orthogonal-vectors.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-orthogonal-inner-product}
+#### Orthogonality depends on the inner product
+
+Take the weighted inner product of @exm-weighted-inner-product
+with $\vecf{c} = (2, 1)$,
+and let $\vx = (1, 2)$ and $\vy = (1, -1)$.
+Then
+
+$$
+\ba
+\iprod{\vx}{\vy}_{\vecf{c}}
+&= 2 \cd 1 \cd 1 + 1 \cd 2 \cd (-1)
+&& \text{(definition of } \iprod{\cdot}{\cdot}_{\vecf{c}} \text{)}
+\\
+&= 2 - 2
+&& \text{(multiply)}
+\\
+&= 0,
+&& \text{(subtract)}
+\ea
+$$
+
+so $\vx$ and $\vy$ are orthogonal with respect to $\iprod{\cdot}{\cdot}_{\vecf{c}}$.
+They are not orthogonal with respect to the dot product,
+since $\vx \cdot \vy = 1 \cd 1 + 2 \cd (-1) = -1 \ne 0$.
+
+:::

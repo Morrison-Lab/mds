@@ -17,7 +17,14 @@ With $\smallconst = 0.01$, @eq-linear-approx predicts a change of
 $(0.01)(-2) = -0.02$, from $f(1) = 1 - 4 + 7 = 4$ to $3.98$.
 The exact value is
 
-$$f(1.01) = (1.01)^2 - 4(1.01) + 7 = 1.0201 - 4.04 + 7 = 3.9801$$
+$$
+\begin{aligned}
+f(1.01)
+&= (1.01)^2 - 4(1.01) + 7 \\
+&= 1.0201 - 4.04 + 7 \\
+&= 3.9801
+\end{aligned}
+$$
 
 a change of $-0.0199$.
 The prediction is off by $0.0001$, which is $\smallconst^2$:

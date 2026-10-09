@@ -94,7 +94,7 @@ $$
 && \text{(Cauchy-Schwarz, squared)}
 \\
 &= m\,p\,\norm{\vecf{h}}^2.
-&& \text{(} \norm{\vecf{1}}^2 = p \text{ and } \norm{\vecf{a}}^2 = \textstyle\sum_i h_i^2 = \norm{\vecf{h}}^2 \text{)}
+&& \text{(} \norm{\vecf{1}}^2 = p \text{ and } \norm{\vecf{a}}^2 = \textstyle\sum_i h_i^2 \text{, which equals } \norm{\vecf{h}}^2 \text{)}
 \ea
 $$
 

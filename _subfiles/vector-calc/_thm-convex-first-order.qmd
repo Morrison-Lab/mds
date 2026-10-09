@@ -113,7 +113,12 @@ For $f(x) = x^2$, the right side of @eq-supporting-hyperplane is
 $y^2 + 2y (x - y) = 2xy - y^2$, and
 
 $$
-f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0,
+\begin{aligned}
+f(x) - (2xy - y^2)
+&= x^2 - 2xy + y^2 \\
+&= (x - y)^2 \\
+&\ge 0,
+\end{aligned}
 $$
 
 with equality only at $x = y$, confirming that $x^2$ is strictly convex.

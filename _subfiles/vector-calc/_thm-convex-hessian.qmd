@@ -49,10 +49,12 @@ and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
 - $f(\vx) = e^{2x_1 + x_2} - x_1$ has Hessian $e^{u} \sbmat{ 4 & 2 \\ 2 & 1 }$ with $u = 2x_1 + x_2$ ([Example](vector-calculus.qmd#exm-hessian)), and
 
   $$
+  \begin{aligned}
   \tp{\vecf{h}}\,\matr{H}_f(\vx)\,\vecf{h}
-  = e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2)
-  = e^{u} (2 h_1 + h_2)^2
-  \ge 0,
+  &= e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) \\
+  &= e^{u} (2 h_1 + h_2)^2 \\
+  &\ge 0,
+  \end{aligned}
   $$
 
   so $f$ is convex.

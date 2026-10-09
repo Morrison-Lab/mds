@@ -4,6 +4,12 @@
 For a square $p \times p$ matrix $\matr{A}$,
 the **inverse** $\matr{A}^{-1}$ (if it exists) is the unique matrix satisfying:
 
-$$\matr{A}\,\matr{A}^{-1} = \matr{A}^{-1}\,\matr{A} = \matr{I}_p$$
+$$
+\begin{aligned}
+\matr{A}\,\matr{A}^{-1}
+&= \matr{A}^{-1}\,\matr{A} \\
+&= \matr{I}_p
+\end{aligned}
+$$
 
 :::

@@ -7,7 +7,15 @@ on the [Borel $\sigma$-algebra](#def-borel-sigma-algebra) $\borel$
 that assigns each [interval](sets-functions.qmd#def-interval) its length:
 for real numbers $a \le b$,
 
-$$\lebesgue([a, b]) = \lebesgue((a, b)) = \lebesgue([a, b)) = \lebesgue((a, b]) \eqdef b - a,$$
+$$
+\begin{aligned}
+\lebesgue([a, b])
+&= \lebesgue((a, b)) \\
+&= \lebesgue([a, b)) \\
+&= \lebesgue((a, b]) \\
+&\eqdef b - a,
+\end{aligned}
+$$
 
 and $\lebesgue(I) \eqdef \infty$ for each unbounded interval $I$.
 

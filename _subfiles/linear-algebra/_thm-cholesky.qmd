@@ -53,13 +53,13 @@ So, for $i, j = 1, \ldots, p - 1$:
 $$
 \ba
 (\matr{L} \tp{\matr{L}})_{11}
-&= \ell_{11}\,\ell_{11} + \sum_{r=2}^{p} 0 \cd 0
-= \ell_{11}^2,
+&= \ell_{11}\,\ell_{11} + \sum_{r=2}^{p} 0 \cd 0 \\
+&= \ell_{11}^2,
 && \text{(rows 1 and 1)}
 \\
 (\matr{L} \tp{\matr{L}})_{i+1,1}
-&= g_i\,\ell_{11} + \sum_{r=2}^{p} (\matr{L}_{22})_{i,r-1} \cd 0
-= \ell_{11}\,g_i,
+&= g_i\,\ell_{11} + \sum_{r=2}^{p} (\matr{L}_{22})_{i,r-1} \cd 0 \\
+&= \ell_{11}\,g_i,
 && \text{(rows } i + 1 \text{ and } 1 \text{)}
 \\
 (\matr{L} \tp{\matr{L}})_{i+1,j+1}

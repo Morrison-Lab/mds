@@ -7,9 +7,11 @@ Since $\tp{\vx}\vcoef = \vx \cdot \vcoef$
 and $\vx$ is constant with respect to $\vcoef$:
 
 $$
+\begin{aligned}
 \deriv{\vcoef}(\tp{\vx}\vcoef)
-= \deriv{\vcoef}(\vx \cdot \vcoef)
-= \vx
+&= \deriv{\vcoef}(\vx \cdot \vcoef) \\
+&= \vx
+\end{aligned}
 $$
 
 by @thm-deriv-lincom.

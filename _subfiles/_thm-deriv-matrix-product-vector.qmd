@@ -45,17 +45,19 @@ and $\vecf{v}(\vcoef) = \vcoef$ where $\vcoef = \tp{(\coef{1}, \coef{2})}$.
 Then $\matr{A}\matr{B}\vecf{v} = 2\coef{1}$, and:
 
 $$
+\begin{aligned}
 \underbrace{\deriv{\vcoef}(\matr{A}\matr{B}\vecf{v})}_{2 \times 1}
-= \underbrace{\paren{\deriv{\vcoef}\vcoef}}_{2 \times 2}
+&= \underbrace{\paren{\deriv{\vcoef}\vcoef}}_{2 \times 2}
 \underbrace{\tp{\matr{B}}}_{2 \times 2}
-\underbrace{\tp{\matr{A}}}_{2 \times 1}
-= \matr{I}_2
+\underbrace{\tp{\matr{A}}}_{2 \times 1} \\
+&= \matr{I}_2
 \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}
 \begin{pmatrix}1 \\
+0\end{pmatrix} \\
+&= \begin{pmatrix}2 \\
 0\end{pmatrix}
-= \begin{pmatrix}2 \\
-0\end{pmatrix}
+\end{aligned}
 $$
 
 :::

@@ -8,10 +8,12 @@ Then $\tp{\vcoef}\matr{S}\vcoef = 3\coef{1}^2 + 2\coef{1}\coef{2} + 2\coef{2}^2$
 By @thm-quadratic-form:
 
 $$
+\begin{aligned}
 \underbrace{\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef)}_{2 \times 1}
-= 2 \matr{S} \vcoef
-= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \coef{1} \\ \coef{2} \end{pmatrix}
-= \begin{pmatrix} 6\coef{1} + 2\coef{2} \\ 2\coef{1} + 4\coef{2} \end{pmatrix}
+&= 2 \matr{S} \vcoef \\
+&= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \coef{1} \\ \coef{2} \end{pmatrix} \\
+&= \begin{pmatrix} 6\coef{1} + 2\coef{2} \\ 2\coef{1} + 4\coef{2} \end{pmatrix}
+\end{aligned}
 $$
 
 Differentiating component-wise directly:

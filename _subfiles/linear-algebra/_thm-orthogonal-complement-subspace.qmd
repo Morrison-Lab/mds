@@ -21,7 +21,7 @@ $$
 \ba
 \vecf{x} \cdot (\vecf{u} + \vecf{w})
 &= \vecf{x} \cdot \vecf{u} + \vecf{x} \cdot \vecf{w}
-&& \text{(@thm-dot-linear, special case } a = b = 1 \text{)}
+&& \text{(@thm-dot-linear, special case } a \text{ and } b \text{ both equal to } 1 \text{)}
 \\
 &= 0 + 0
 && \text{(} \vecf{u}, \vecf{w} \in \mathcal{X}^\perp \text{)}
@@ -62,9 +62,11 @@ $2\,(1, 2) = (2, 4)$ is not in it.
 Its orthogonal complement is
 
 $$
+\begin{aligned}
 \mathcal{X}^\perp
-= \cb{\vecf{u} \in \reals^2 : u_1 + 2 u_2 = 0}
-= \cb{c\,(-2, 1) : c \in \reals},
+&= \cb{\vecf{u} \in \reals^2 : u_1 + 2 u_2 = 0} \\
+&= \cb{c\,(-2, 1) : c \in \reals},
+\end{aligned}
 $$
 
 since $u_1 + 2u_2 = 0$ means $\vecf{u} = (-2u_2, u_2) = u_2\,(-2, 1)$.
