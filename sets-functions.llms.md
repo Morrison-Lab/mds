@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 09:50:57 (PDT)
+Last modified: 2026-10-09 10:07:51 (PDT)
 
 > **NOTE:**
 >
@@ -373,7 +373,7 @@ Last modified: 2026-10-09 09:50:57 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N} \to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 24 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
 >
 > A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
@@ -404,7 +404,7 @@ Last modified: 2026-10-09 09:50:57 (PDT)
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
 > - \\\emptyset\\ is finite, with \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
-> - The natural numbers \\\mathbb{N} = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are infinite: for any \\n\\, a list \\a_1, \ldots, a_n\\ of natural numbers misses the natural number \\a_1 + \cdots + a_n + 1\\, which is larger than every number in the list.
+> - The natural numbers \\\mathbb{N}= \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are infinite: for any \\n\\, a list \\a_1, \ldots, a_n\\ of natural numbers misses the natural number \\a_1 + \cdots + a_n + 1\\, which is larger than every number in the list.
 
 > **NOTE:**
 >

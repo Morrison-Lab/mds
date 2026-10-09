@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 09:50:57 (PDT)
+Last modified: 2026-10-09 10:07:51 (PDT)
 
 ## 1 Equalities
 
@@ -358,7 +358,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > **Example 15 (Bounded and unbounded sets)**  
 >
 > - For \\A = (0, 1\]\\, \\1\\, \\2\\, and \\100\\ are upper bounds, and \\0\\ and \\-5\\ are lower bounds, so \\A\\ is bounded. \\0.5\\ is not an upper bound, because \\0.6 \in A\\ and \\0.6 \> 0.5\\.
-> - The natural numbers \\\mathbb{N} = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are bounded below, by \\1\\, but not bounded above: for any real number \\u\\, some natural number \\n\\ satisfies \\n \> u\\.
+> - The natural numbers \\\mathbb{N}= \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\ are bounded below, by \\1\\, but not bounded above: for any real number \\u\\, some natural number \\n\\ satisfies \\n \> u\\.
 
 > **NOTE:**
 >

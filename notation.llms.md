@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 09:50:57 (PDT)
+Last modified: 2026-10-09 10:07:51 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -41,7 +41,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> **Exercise 1 (Which numbers are natural?)** List the elements of the set \\\mathopen{}\left\\n \in \mathbb{N} : n \< 3\right\\\mathclose{}\\. Is your answer the same in every textbook?
+> **Exercise 1 (Which numbers are natural?)** List the elements of the set \\\mathopen{}\left\\n \in \mathbb{N}: n \< 3\right\\\mathclose{}\\. Is your answer the same in every textbook?
 
 > **NOTE:**
 >
@@ -86,13 +86,13 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > **Definition 3 (Natural numbers (our convention))** In these notes, the **natural numbers** are the positive integers ([Definition 1](#def-integers)):
 >
-> \\\mathbb{N} \stackrel{\text{def}}{=}\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\
+> \\\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\
 
 > **NOTE:**
 >
 > **Definition 4 (Non-negative integers)** The **non-negative integers** are the natural numbers ([Definition 3](#def-natural-numbers)) together with \\0\\:
 >
-> \\\mathbb{N}\_0 \stackrel{\text{def}}{=}\mathopen{}\left\\0, 1, 2, 3, \ldots\right\\\mathclose{} = \mathbb{N} \cup \mathopen{}\left\\0\right\\\mathclose{}\\
+> \\\mathbb{N}\_0 \stackrel{\text{def}}{=}\mathopen{}\left\\0, 1, 2, 3, \ldots\right\\\mathclose{} = \mathbb{N}\cup \mathopen{}\left\\0\right\\\mathclose{}\\
 
 > **NOTE:**
 >
@@ -146,7 +146,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > - \\3\\, \\-0.5\\, and \\\frac{1}{3} = 0.333\ldots\\ are real numbers.
 > - \\\pi = 3.14159\ldots\\ is a real number.
-> - Every rational number ([Definition 5](#def-rational-numbers)) is a real number, so \\\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\\.
+> - Every rational number ([Definition 5](#def-rational-numbers)) is a real number, so \\\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\\.
 
 > **NOTE:**
 >
