@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-08 18:58:13 (PDT)</p>
+  <p class="date">Last modified: 2026-10-09 01:33:02 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -567,10 +567,12 @@ s_{n+1}
 \nu(\mathopen{}\left\{1\right\}\mathclose{} \cup \mathopen{}\left\{2\right\}\mathclose{})
 &amp;= \nu(\mathopen{}\left\{1, 2\right\}\mathclose{})
 &amp;&amp; \text{(take the union)} \\
-&amp;= 2^2 = 4,
+&amp;= 2^2 \\
+&amp;= 4,
 &amp;&amp; \text{(count, then square)} \\
 \nu(\mathopen{}\left\{1\right\}\mathclose{}) + \nu(\mathopen{}\left\{2\right\}\mathclose{})
-&amp;= 1^2 + 1^2 = 2,
+&amp;= 1^2 + 1^2 \\
+&amp;= 2,
 &amp;&amp; \text{(count each set, then square)}
 \end{aligned}
 \]</span></p>
@@ -819,7 +821,15 @@ s_{n+1}
 
 <div id="def-lebesgue-measure" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#/def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#/def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{B}\)</span> that assigns each <a href="./sets-functions.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
-<p><span class="math display">\[\lambda([a, b]) = \lambda((a, b)) = \lambda([a, b)) = \lambda((a, b]) \stackrel{\text{def}}{=}b - a,\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\lambda([a, b])
+&amp;= \lambda((a, b)) \\
+&amp;= \lambda([a, b)) \\
+&amp;= \lambda((a, b]) \\
+&amp;\stackrel{\text{def}}{=}b - a,
+\end{aligned}
+\]</span></p>
 <p>and <span class="math inline">\(\lambda(I) \stackrel{\text{def}}{=}\infty\)</span> for each unbounded interval <span class="math inline">\(I\)</span>.</p>
 <p><strong>Lebesgue measure on an interval</strong> <span class="math inline">\(I\)</span>, such as <span class="math inline">\([0, 1]\)</span>, is <span class="math inline">\(\lambda\)</span> applied only to the Borel sets that are subsets of <span class="math inline">\(I\)</span>.</p>
 </div>
@@ -1055,12 +1065,27 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <p><span class="theorem-title"><strong>Example 29 (An <span class="math inline">\(L^1\)</span> function not in <span class="math inline">\(L^2\)</span>)</strong></span> Consider the interval <span class="math inline">\((0, 1)\)</span> equipped with the Borel <span class="math inline">\(\sigma\)</span>-algebra (<a href="#/def-borel-sigma-algebra" class="quarto-xref">Definition&nbsp;4</a>) and Lebesgue measure <span class="math inline">\(\mu\)</span> (<a href="#/def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a>). Define <span class="math inline">\(f : (0, 1) \to \mathbb{R}\)</span> by <span class="math inline">\(f(x) = x^{-1/2}\)</span>.</p>
 <ol type="1">
 <li>For <span class="math inline">\(p = 1\)</span>: <span class="math display">\[
-\mathopen{}\left\lVert f\right\rVert\mathclose{}_1 = \int_0^1 x^{-1/2} \, dx = \mathopen{}\left[2 x^{1/2}\right]\mathclose{}_0^1 = 2 &lt; \infty,
+\begin{aligned}
+\mathopen{}\left\lVert f\right\rVert\mathclose{}_1
+&amp;= \int_0^1 x^{-1/2} \, dx \\
+&amp;= \mathopen{}\left[2 x^{1/2}\right]\mathclose{}_0^1 \\
+&amp;= 2 \\
+&amp;&lt; \infty,
+\end{aligned}
 \]</span> so <span class="math inline">\(f \in L^1((0, 1), \mu)\)</span>.</li>
 <li>For <span class="math inline">\(p = 2\)</span>: <span class="math display">\[
-\mathopen{}\left|f(x)\right|\mathclose{}^2 = \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 = \frac{1}{x}.
+\begin{aligned}
+\mathopen{}\left|f(x)\right|\mathclose{}^2
+&amp;= \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 \\
+&amp;= \frac{1}{x}.
+\end{aligned}
 \]</span> The integral is: <span class="math display">\[
-\int_0^1 \frac{1}{x} \, dx = \lim_{\varepsilon\to 0^+} \mathopen{}\left[\ln x\right]\mathclose{}_\varepsilon^1 = \lim_{\varepsilon\to 0^+} (-\ln \varepsilon) = \infty.
+\begin{aligned}
+\int_0^1 \frac{1}{x} \, dx
+&amp;= \lim_{\varepsilon\to 0^+} \mathopen{}\left[\ln x\right]\mathclose{}_\varepsilon^1 \\
+&amp;= \lim_{\varepsilon\to 0^+} (-\ln \varepsilon) \\
+&amp;= \infty.
+\end{aligned}
 \]</span> Therefore, <span class="math inline">\(\mathopen{}\left\lVert f\right\rVert\mathclose{}_2 = \infty\)</span>, so <span class="math inline">\(f \notin L^2((0, 1), \mu)\)</span>.</li>
 </ol>
 <p>This shows that <span class="math inline">\(L^2 \subset L^1\)</span> on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.</p>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 18:58:13 (PDT)
+Last modified: 2026-10-09 01:33:02 (PDT)
 
 > **NOTE:**
 >
@@ -208,7 +208,7 @@ Last modified: 2026-10-08 18:58:13 (PDT)
 >
 > **Example 11 (Squaring the count is not finitely additive)** On the same \\\sigma\\-algebra, let \\\nu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}^2\\. The sets \\\mathopen{}\left\\1\right\\\mathclose{}\\ and \\\mathopen{}\left\\2\right\\\mathclose{}\\ are pairwise disjoint, but
 >
-> \\ \begin{aligned} \nu(\mathopen{}\left\\1\right\\\mathclose{} \cup \mathopen{}\left\\2\right\\\mathclose{}) &= \nu(\mathopen{}\left\\1, 2\right\\\mathclose{}) && \text{(take the union)} \\ &= 2^2 = 4, && \text{(count, then square)} \\ \nu(\mathopen{}\left\\1\right\\\mathclose{}) + \nu(\mathopen{}\left\\2\right\\\mathclose{}) &= 1^2 + 1^2 = 2, && \text{(count each set, then square)} \end{aligned} \\
+> \\ \begin{aligned} \nu(\mathopen{}\left\\1\right\\\mathclose{} \cup \mathopen{}\left\\2\right\\\mathclose{}) &= \nu(\mathopen{}\left\\1, 2\right\\\mathclose{}) && \text{(take the union)} \\ &= 2^2 \\ &= 4, && \text{(count, then square)} \\ \nu(\mathopen{}\left\\1\right\\\mathclose{}) + \nu(\mathopen{}\left\\2\right\\\mathclose{}) &= 1^2 + 1^2 \\ &= 2, && \text{(count each set, then square)} \end{aligned} \\
 >
 > and \\4 \ne 2\\, so \\\nu\\ is not finitely additive.
 
@@ -350,7 +350,7 @@ Last modified: 2026-10-08 18:58:13 (PDT)
 >
 > **Definition 15 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathcal{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
 >
-> \\\lambda(\[a, b\]) = \lambda((a, b)) = \lambda(\[a, b)) = \lambda((a, b\]) \stackrel{\text{def}}{=}b - a,\\
+> \\ \begin{aligned} \lambda(\[a, b\]) &= \lambda((a, b)) \\ &= \lambda(\[a, b)) \\ &= \lambda((a, b\]) \\ &\stackrel{\text{def}}{=}b - a, \end{aligned} \\
 >
 > and \\\lambda(I) \stackrel{\text{def}}{=}\infty\\ for each unbounded interval \\I\\.
 >
@@ -538,8 +538,8 @@ Last modified: 2026-10-08 18:58:13 (PDT)
 >
 > **Example 29 (An \\L^1\\ function not in \\L^2\\)** Consider the interval \\(0, 1)\\ equipped with the Borel \\\sigma\\-algebra ([Definition 4](#def-borel-sigma-algebra)) and Lebesgue measure \\\mu\\ ([Definition 15](#def-lebesgue-measure)). Define \\f : (0, 1) \to \mathbb{R}\\ by \\f(x) = x^{-1/2}\\.
 >
-> 1.  For \\p = 1\\: \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_1 = \int_0^1 x^{-1/2} \\ dx = \mathopen{}\left\[2 x^{1/2}\right\]\mathclose{}\_0^1 = 2 \< \infty, \\ so \\f \in L^1((0, 1), \mu)\\.
-> 2.  For \\p = 2\\: \\ \mathopen{}\left\|f(x)\right\|\mathclose{}^2 = \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 = \frac{1}{x}. \\ The integral is: \\ \int_0^1 \frac{1}{x} \\ dx = \lim\_{\varepsilon\to 0^+} \mathopen{}\left\[\ln x\right\]\mathclose{}\_\varepsilon^1 = \lim\_{\varepsilon\to 0^+} (-\ln \varepsilon) = \infty. \\ Therefore, \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_2 = \infty\\, so \\f \notin L^2((0, 1), \mu)\\.
+> 1.  For \\p = 1\\: \\ \begin{aligned} \mathopen{}\left\lVert f\right\rVert\mathclose{}\_1 &= \int_0^1 x^{-1/2} \\ dx \\ &= \mathopen{}\left\[2 x^{1/2}\right\]\mathclose{}\_0^1 \\ &= 2 \\ &\< \infty, \end{aligned} \\ so \\f \in L^1((0, 1), \mu)\\.
+> 2.  For \\p = 2\\: \\ \begin{aligned} \mathopen{}\left\|f(x)\right\|\mathclose{}^2 &= \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 \\ &= \frac{1}{x}. \end{aligned} \\ The integral is: \\ \begin{aligned} \int_0^1 \frac{1}{x} \\ dx &= \lim\_{\varepsilon\to 0^+} \mathopen{}\left\[\ln x\right\]\mathclose{}\_\varepsilon^1 \\ &= \lim\_{\varepsilon\to 0^+} (-\ln \varepsilon) \\ &= \infty. \end{aligned} \\ Therefore, \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_2 = \infty\\, so \\f \notin L^2((0, 1), \mu)\\.
 >
 > This shows that \\L^2 \subset L^1\\ on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.
 

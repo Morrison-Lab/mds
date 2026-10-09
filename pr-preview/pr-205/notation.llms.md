@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 18:58:13 (PDT)
+Last modified: 2026-10-09 01:33:02 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -580,7 +580,7 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms
 
 - **Expectation gives probability:** When \\\Omega\\ is a [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space) and \\A\\ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event), the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) of its indicator is the [probability](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) of the event (all four terms are defined in the Morrison Lab’s probability notes):
 
-  \\ \operatorname{E}\[\mathbb{1}\_{A}\] = 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) = \Pr(A) \\
+  \\ \begin{aligned} \operatorname{E}\[\mathbb{1}\_{A}\] &= 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) \\ &= \Pr(A) \end{aligned} \\
 
 This [identity](algebra.llms.md#def-identity) turns probabilities into expectations. It is the mathematical foundation for:
 

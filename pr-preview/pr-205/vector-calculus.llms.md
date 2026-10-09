@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 18:58:13 (PDT)
+Last modified: 2026-10-09 01:33:02 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -52,7 +52,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > To compute \\\frac{\partial f}{\partial y}\\, treat \\x\\ as a constant:
 >
-> \\\frac{\partial f}{\partial y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)\\
+> \\ \begin{aligned} \frac{\partial f}{\partial y} &= x^2 + 0 + x\cos(xy) \\ &= x^2 + x\cos(xy) \end{aligned} \\
 
 > **NOTE:**
 >
@@ -88,11 +88,11 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > *Solution 3*. With respect to \\x\\, apply the product rule:
 >
-> \\\frac{\partial f}{\partial x} = (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
+> \\ \begin{aligned} \frac{\partial f}{\partial x} &= (1)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} + x \cdot\mathopen{}\left\[2x\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} \\ &= (1 + 2x^2)\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} \end{aligned} \\
 >
 > With respect to \\y\\, treat \\x\\ as constant:
 >
-> \\\frac{\partial f}{\partial y} = x \cdot\mathopen{}\left\[2y\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} = 2xy\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\\
+> \\ \begin{aligned} \frac{\partial f}{\partial y} &= x \cdot\mathopen{}\left\[2y\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{}\right\]\mathclose{} \\ &= 2xy\operatorname{exp}\mathopen{}\left\\x^2 + y^2\right\\\mathclose{} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -128,7 +128,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > **Example 2 (A vector derivative)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ and \\f(\tilde{\beta}) = 3 \beta\_{1} + 5 \beta\_{2}^2\\. Then
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})}\_{2 \times 1} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} (3 \beta\_{1} + 5 \beta\_{2}^2) \\ \frac{\partial}{\partial \beta\_{2}} (3 \beta\_{1} + 5 \beta\_{2}^2) \end{bmatrix} = \begin{bmatrix} 3 \\ 10 \beta\_{2} \end{bmatrix}, \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} f(\tilde{\beta})}\_{2 \times 1} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} (3 \beta\_{1} + 5 \beta\_{2}^2) \\ \frac{\partial}{\partial \beta\_{2}} (3 \beta\_{1} + 5 \beta\_{2}^2) \end{bmatrix} \\ &= \begin{bmatrix} 3 \\ 10 \beta\_{2} \end{bmatrix}, \end{aligned} \\
 >
 > and at \\\tilde{\beta}= {(1, 2)}^{\top}\\ the vector derivative is \\{(3, 20)}^{\top}\\.
 
@@ -298,11 +298,11 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Solution 5*. **1.** Differentiate with respect to \\w_1\\, holding \\w_2\\ fixed. The first term is the constant \\3w_2\\ times \\w_1\\, so it contributes \\3w_2\\. The second term has no \\w_1\\ in it, so it contributes \\0\\. The third term is \\-5\\ times \\w_1\\, so it contributes \\-5\\:
 >
-> \\\frac{\partial f}{\partial w_1} = 3w_2 + 0 - 5 = 3w_2 - 5\\
+> \\ \begin{aligned} \frac{\partial f}{\partial w_1} &= 3w_2 + 0 - 5 \\ &= 3w_2 - 5 \end{aligned} \\
 >
 > **2.** Now with respect to \\w_2\\, holding \\w_1\\ fixed. The first term is the constant \\3w_1\\ times \\w_2\\, contributing \\3w_1\\. The second term contributes \\3w_2^2\\. The third has no \\w_2\\ in it, contributing \\0\\:
 >
-> \\\frac{\partial f}{\partial w_2} = 3w_1 + 3w_2^2 + 0 = 3w_1 + 3w_2^2\\
+> \\ \begin{aligned} \frac{\partial f}{\partial w_2} &= 3w_1 + 3w_2^2 + 0 \\ &= 3w_1 + 3w_2^2 \end{aligned} \\
 >
 > **3.** Stack the two, in the order the coordinates are numbered:
 >
@@ -310,7 +310,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > The gradient is a vector-valued *function* of \\\tilde{w}\\, not a single vector. At \\\tilde{w} = \begin{bmatrix} 2 & -1 \end{bmatrix}^{\top}\\,
 >
-> \\\nabla\_{\tilde{w}} f = \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix} = \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix} = \begin{bmatrix} -8 \\ 9 \end{bmatrix}\\
+> \\ \begin{aligned} \nabla\_{\tilde{w}} f &= \begin{bmatrix} 3(-1) - 5 \\ 3(2) + 3(-1)^2 \end{bmatrix} \\ &= \begin{bmatrix} -3 - 5 \\ 6 + 3 \end{bmatrix} \\ &= \begin{bmatrix} -8 \\ 9 \end{bmatrix} \end{aligned} \\
 >
 > **4.** The input was a vector in \\\mathbb{R}^2\\ and so is the answer, as [Table 1](#tbl-gradient-shape) requires. Note the signs: from this point, increasing \\w_1\\ *decreases* \\f\\ while increasing \\w_2\\ increases it, so the uphill direction is neither axis.
 
@@ -368,7 +368,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 6 (Differentiating a \\3 \times 1\\ function of a \\2 \times 1\\ vector)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ (\\p = 2\\) and \\\tilde{y}(\tilde{\beta}) = {(\beta\_{1}^2,\\ \beta\_{1}\beta\_{2},\\ 3\beta\_{2})}^{\top}\\ (\\q = 3\\). Then
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}}\_{2 \times 3} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{1}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{1}} 3\beta\_{2} \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{2}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{2}} 3\beta\_{2} \end{bmatrix} = \begin{bmatrix} 2\beta\_{1} & \beta\_{2} & 0 \\ 0 & \beta\_{1} & 3 \end{bmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}}\_{2 \times 3} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{1}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{1}} 3\beta\_{2} \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1}^2 & \frac{\partial}{\partial \beta\_{2}} \beta\_{1}\beta\_{2} & \frac{\partial}{\partial \beta\_{2}} 3\beta\_{2} \end{bmatrix} \\ &= \begin{bmatrix} 2\beta\_{1} & \beta\_{2} & 0 \\ 0 & \beta\_{1} & 3 \end{bmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -396,7 +396,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 8 (A constant vector)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ and \\\tilde{x}= {(3, 5)}^{\top}\\, so \\x_1 = 3\\ and \\x_2 = 5\\ do not depend on \\\tilde{\beta}\\. Expanding \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}\\ into its matrix of scalar partial derivatives ([Definition 6](#def-vector-valued-derivative)) and evaluating each entry:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} = \frac{\partial}{\partial \tilde{\beta}} \begin{bmatrix}x_1 & x_2\end{bmatrix} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} x_1 & \frac{\partial}{\partial \beta\_{1}} x_2 \\ \frac{\partial}{\partial \beta\_{2}} x_1 & \frac{\partial}{\partial \beta\_{2}} x_2 \end{bmatrix} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} 3 & \frac{\partial}{\partial \beta\_{1}} 5 \\ \frac{\partial}{\partial \beta\_{2}} 3 & \frac{\partial}{\partial \beta\_{2}} 5 \end{bmatrix} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} = \underbrace{\mathbf{0}}\_{2 \times 2} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} &= \frac{\partial}{\partial \tilde{\beta}} \begin{bmatrix}x_1 & x_2\end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} x_1 & \frac{\partial}{\partial \beta\_{1}} x_2 \\ \frac{\partial}{\partial \beta\_{2}} x_1 & \frac{\partial}{\partial \beta\_{2}} x_2 \end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} 3 & \frac{\partial}{\partial \beta\_{1}} 5 \\ \frac{\partial}{\partial \beta\_{2}} 3 & \frac{\partial}{\partial \beta\_{2}} 5 \end{bmatrix} \\ &= \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} \\ &= \underbrace{\mathbf{0}}\_{2 \times 2} \end{aligned} \\
 >
 > Every entry is the derivative of a constant, so \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top} = \underbrace{\mathbf{0}}\_{2 \times 2}\\ and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\ ([Definition 8](#def-constant-wrt-vector)).
 
@@ -404,7 +404,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 9 (A vector that is not constant)** With the same \\\tilde{\beta}\\, let \\\tilde{x}= {(\beta\_{1}, 3)}^{\top}\\. Then
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} = \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1} & \frac{\partial}{\partial \beta\_{1}} 3 \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1} & \frac{\partial}{\partial \beta\_{2}} 3 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} \beta\_{1} & \frac{\partial}{\partial \beta\_{1}} 3 \\ \frac{\partial}{\partial \beta\_{2}} \beta\_{1} & \frac{\partial}{\partial \beta\_{2}} 3 \end{bmatrix} \\ &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \end{aligned} \\
 >
 > which is not \\\underbrace{\mathbf{0}}\_{2 \times 2}\\, so this \\\tilde{x}\\ is not constant with respect to \\\tilde{\beta}\\: its first entry changes when \\\beta\_{1}\\ does.
 
@@ -430,7 +430,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Theorem 2 (Derivative of a dot product)** If \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{x}\cdot \tilde{\beta})}\_{p \times 1} = \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta}\cdot \tilde{x})}\_{p \times 1} = \underbrace{\tilde{x}}\_{p \times 1} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{x}\cdot \tilde{\beta})}\_{p \times 1} &= \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta}\cdot \tilde{x})}\_{p \times 1} \\ &= \underbrace{\tilde{x}}\_{p \times 1} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -440,11 +440,11 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 10 (Derivative of a dot product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ (constant with respect to \\\tilde{\beta}\\; see [Example 8](#exm-constant-wrt-vector)) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\tilde{x}\cdot \tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Theorem 2](#thm-deriv-lincom):
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta})}\_{2 \times 1} = \underbrace{\tilde{x}}\_{2 \times 1} = \begin{pmatrix} 3 \\ 5 \end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta})}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 >
 > Verifying entry-wise:
 >
-> \\ \frac{\partial}{\partial \tilde{\beta}}(3\beta\_{1} + 5\beta\_{2}) = \begin{pmatrix} \frac{\partial}{\partial \beta\_{1}}(3\beta\_{1} + 5\beta\_{2}) \\ \frac{\partial}{\partial \beta\_{2}}(3\beta\_{1} + 5\beta\_{2}) \end{pmatrix} = \begin{pmatrix} 3 \\ 5 \end{pmatrix} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}(3\beta\_{1} + 5\beta\_{2}) &= \begin{pmatrix} \frac{\partial}{\partial \beta\_{1}}(3\beta\_{1} + 5\beta\_{2}) \\ \frac{\partial}{\partial \beta\_{2}}(3\beta\_{1} + 5\beta\_{2}) \end{pmatrix} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 >
 > Both methods agree.
 
@@ -464,11 +464,11 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 11 (Example of the dot-product rule)** Apply [Theorem 3](#thm-deriv-dot-product) with the vector \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ in the role of \\\tilde{x}\\. Let \\\tilde{a}(\tilde{\beta}) = {(\beta\_{1}, \beta\_{1}\beta\_{2})}^{\top}\\ and \\\tilde{b}(\tilde{\beta}) = {(\beta\_{2}, \beta\_{1})}^{\top}\\. Then:
 >
-> \\ \tilde{a} \cdot \tilde{b} = \beta\_{1} \cdot \beta\_{2} + \beta\_{1}\beta\_{2} \cdot \beta\_{1} = \beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2} \\
+> \\ \begin{aligned} \tilde{a} \cdot \tilde{b} &= \beta\_{1} \cdot \beta\_{2} + \beta\_{1}\beta\_{2} \cdot \beta\_{1} \\ &= \beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2} \end{aligned} \\
 >
 > By direct calculation:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{a} \cdot \tilde{b})}\_{2 \times 1} = \frac{\partial}{\partial \tilde{\beta}}(\beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2}) = \begin{pmatrix} \beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1} + \beta\_{1}^2 \end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{a} \cdot \tilde{b})}\_{2 \times 1} &= \frac{\partial}{\partial \tilde{\beta}}(\beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2}) \\ &= \begin{pmatrix} \beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1} + \beta\_{1}^2 \end{pmatrix} \end{aligned} \\
 >
 > By the product rule ([Theorem 3](#thm-deriv-dot-product)), using \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{a}}^{\top}}\_{2 \times 2} = \begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}\\ and \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{b}}^{\top}}\_{2 \times 2} = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\\:
 >
@@ -492,7 +492,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 12 (Derivative of a linear map)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\tilde{\beta}= 2\beta\_{1} + 3\beta\_{2}\\, and by [Theorem 4](#thm-deriv-linear-map):
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\tilde{\beta})}\_{2 \times 1} = \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\tilde{\beta})}\_{2 \times 1} &= \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \begin{pmatrix} 2 \\ 3 \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -532,7 +532,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 14** Let \\\mathbf{A} = \begin{pmatrix}1 & 0\end{pmatrix}\\ (\\1 \times 2\\), \\\mathbf{B} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}\\ (\\2 \times 2\\), and \\\tilde{v}(\tilde{\beta}) = \tilde{\beta}\\ where \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\mathbf{B}\tilde{v} = 2\beta\_{1}\\, and:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\mathbf{B}\tilde{v})}\_{2 \times 1} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}\right)\mathclose{}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} = \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \begin{pmatrix}1 \\ 0\end{pmatrix} = \begin{pmatrix}2 \\ 0\end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\mathbf{B}\tilde{v})}\_{2 \times 1} &= \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}\right)\mathclose{}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \begin{pmatrix}1 \\ 0\end{pmatrix} \\ &= \begin{pmatrix}2 \\ 0\end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -546,7 +546,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > Since \\{\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\\ (see [dot product](linear-algebra.llms.md#def-dot-product)), and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\:
 >
-> \\ \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) = \frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta}) = \tilde{x} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta}) \\ &= \tilde{x} \end{aligned} \\
 >
 > by [Theorem 2](#thm-deriv-lincom).
 
@@ -562,7 +562,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 15 (Derivative of a transpose product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{x}}^{\top}\tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Corollary 1](#cor-deriv-lincom-tp):
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}\left(\underbrace{{\tilde{x}}^{\top}}\_{1 \times 2}\underbrace{\tilde{\beta}}\_{2 \times 1}\right)}\_{2 \times 1} = \underbrace{\tilde{x}}\_{2 \times 1} = \begin{pmatrix} 3 \\ 5 \end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}\left(\underbrace{{\tilde{x}}^{\top}}\_{1 \times 2}\underbrace{\tilde{\beta}}\_{2 \times 1}\right)}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -590,7 +590,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 16 (Derivative of a quadratic form)** Let \\\mathbf{S} = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}\\ (\\2 \times 2\\, symmetric and constant) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta}= 3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2\\. By [Theorem 7](#thm-quadratic-form):
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})}\_{2 \times 1} = 2 \mathbf{S} \tilde{\beta} = 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} = \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})}\_{2 \times 1} &= 2 \mathbf{S} \tilde{\beta}\\ &= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \end{aligned} \\
 >
 > Differentiating component-wise directly:
 >
@@ -616,7 +616,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 17 (Derivative of a sum of squares)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 2](#cor-deriv-normsq):
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta})}\_{2 \times 1} = 2\tilde{\beta} = \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta})}\_{2 \times 1} &= 2\tilde{\beta}\\ &= \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \end{aligned} \\
 >
 > Direct partial differentiation yields the same column vector.
 
@@ -624,7 +624,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Definition 9 (Residuals and squared errors)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\tilde{y}\in \mathbb{R}^n\\, and \\\tilde{\beta}\in \mathbb{R}^p\\. The **residual vector** of \\\tilde{\beta}\\ is \\\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})\_i\\ are the **residuals**. The square \\\varepsilon_i^2\\ is the \\i\\th **squared error**, and their sum
 >
-> \\ \tilde{\varepsilon}\cdot \tilde{\varepsilon}= \sum\_{i=1}^n\tilde{\varepsilon}\_i^2 = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \\
+> \\ \begin{aligned} \tilde{\varepsilon}\cdot \tilde{\varepsilon} &= \sum\_{i=1}^n\tilde{\varepsilon}\_i^2 \\ &= \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \end{aligned} \\
 >
 > is the **residual sum of squares**. A [least squares solution](linear-algebra.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares as small as possible too.
 
@@ -732,7 +732,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Example 22 (Differentiating a weighted trace)** Let \\\mathbf{A} = \mathbf{I}\_2\\ (\\2 \times 2\\) and \\\mathbf{B} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}\\ (\\2 \times 2\\). Then \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B}) = 2X\_{11} + 3X\_{22}\\, and:
 >
-> \\ \underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})}\_{2 \times 2} = \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} = \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} = \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})}\_{2 \times 2} &= \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 2} \underbrace{{\mathbf{B}}^{\top}}\_{2 \times 2} \\ &= \mathbf{I}\_2 \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \\ &= \begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -758,7 +758,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > Collecting those partial derivatives into a matrix of the same shape as \\W\\, as [Table 1](#tbl-gradient-shape) requires,
 >
-> \\\nabla_W\\ g(W) = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix} = A\\
+> \\ \begin{aligned} \nabla_W\\ g(W) &= \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix} \\ &= A \end{aligned} \\
 >
 > What is unusual is that the gradient came out **constant**: it does not mention \\W\\ at all. The constant answer is not a quirk of this particular \\A\\. \\g\\ is a linear function of \\W\\, and the gradient of a linear function is constant everywhere, for the same reason the derivative of \\f(w) = cw\\ is \\c\\ no matter where it is evaluated.
 >
@@ -805,7 +805,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > By [Theorem 1](#thm-row-deriv-tp-col-deriv), the transposed gradient is the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\ ([Definition 5](#def-row-vector-derivative)), so the Hessian can also be written
 >
-> \\ \mathbf{H}\_f(\tilde{x}) = \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} = \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \tag{5}\\
+> \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} \\ &= \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \end{aligned} \tag{5}\\
 >
 > Both forms follow the shape rule of matrix multiplication ([Remark 1](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
 >
@@ -821,7 +821,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > Differentiating each entry again,
 >
-> \\ \mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} \frac{\partial}{\partial x_1} (2 e^{u} - 1) & \frac{\partial}{\partial x_1} e^{u} \\ \frac{\partial}{\partial x_2} (2 e^{u} - 1) & \frac{\partial}{\partial x_2} e^{u} \end{bmatrix} = \begin{bmatrix} 4 e^{u} & 2 e^{u} \\ 2 e^{u} & e^{u} \end{bmatrix}, \\
+> \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (2 e^{u} - 1) & \frac{\partial}{\partial x_1} e^{u} \\ \frac{\partial}{\partial x_2} (2 e^{u} - 1) & \frac{\partial}{\partial x_2} e^{u} \end{bmatrix} \\ &= \begin{bmatrix} 4 e^{u} & 2 e^{u} \\ 2 e^{u} & e^{u} \end{bmatrix}, \end{aligned} \\
 >
 > and at \\\tilde{x}= \tilde{0}\\, where \\u = 0\\, \\\mathbf{H}\_f(\tilde{0}) = \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\.
 
@@ -892,11 +892,11 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 >
 > **Example 30 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
 >
-> \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative, }\href{#def-partial-derivative}{\text{Definition~1}}\text{)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} = -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative, }\href{#def-partial-derivative}{\text{Definition~1}}\text{)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} \\ &= -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
 >
 > and \\\frac{\partial}{\partial x_1} f(\tilde{0}) = \lim\_{h \to 0} (0 - 0)/h = 0\\, so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 13](#def-hessian))
 >
-> \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} = \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} = \frac{d }{d x_2} (-x_2) = -1, \qquad \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} = \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} = \frac{d }{d x_1} x_1 = 1: \\
+> \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} &= \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} \\ &= \frac{d }{d x_2} (-x_2) \\ &= -1, \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} &= \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} \\ &= \frac{d }{d x_1} x_1 \\ &= 1: \end{aligned} \\
 >
 > the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 10](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
 
@@ -912,7 +912,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 >
 > **Example 31 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 11](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 13](#def-hessian)) gives
 >
-> \\ \mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \\
+> \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} \\ &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \end{aligned} \\
 
 ## 3 Further reading
 
