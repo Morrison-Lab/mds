@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 12:13:11 (PDT)
+Last modified: 2026-10-09 13:04:05 (PDT)
 
 ## 1 Equalities
 
@@ -1508,12 +1508,6 @@ Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-lin
 > - sums and products with \\i\\ are [commutative](#def-commutative);
 > - sums and products with \\i\\ are [associative](#def-associative);
 > - multiplication [distributes](#def-distributive) over addition.
->
-> The number \\-i\\ also squares to \\-1\\, since
->
-> \\ \begin{aligned} (-i)^2 &= (-1)^2\\i^2 \\ &= -1; \end{aligned} \\
->
-> \\i\\ names one of these two square roots, chosen once and for all.
 
 Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigorous: it defines a complex number as an ordered pair \\(a, b)\\ of real numbers, written \\a + bi\\, defines addition and multiplication of such pairs, writes \\0 + 1i\\ as \\i\\, and leaves it to the reader to verify that \\i^2 = -1\\.
 
@@ -1544,6 +1538,31 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 
 > **NOTE:**
 >
+> **Theorem 30 (The number \\-i\\ also squares to \\-1\\)** \\(-i)^2 = -1.\\
+
+> **NOTE:**
+>
+> *Proof*. \\ \begin{aligned} (-i)^2 &= (-1)^2\\i^2 && \text{(} -i = (-1) \cdot i \text{, and } (ab)^2 = a^2 b^2 \text{ because products commute and associate)} \\ &= 1 \cdot(-1) && \text{(} (-1)^2 = 1 \text{ and }\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= -1 && \text{(multiply)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 51 (Squaring \\i\\ and \\-i\\ in R)** R has the imaginary unit as `1i`. The code below squares it and its negative.
+>
+> ``` downlit
+> squares <- c(i = (1i)^2, minus_i = (-1i)^2)
+> squares
+> #>       i minus_i 
+> #> -1+0i -1+0i
+> ```
+>
+> Both squares have real part -1 and imaginary part 0, as [Definition 50](#def-imaginary-unit) and [Theorem 30](#thm-negative-imaginary-unit) say.
+
+> **NOTE:**
+>
+> *Remark 18* (The rule does not tell \\i\\ from \\-i\\). Because \\-i\\ obeys the same rule as \\i\\ ([Theorem 30](#thm-negative-imaginary-unit)), the rule \\i^2 = -1\\ does not single one of them out. The symbol \\i\\ names one of these two square roots of \\-1\\, chosen once and for all.
+
+> **NOTE:**
+>
 > **Definition 51 (Complex number)** A **complex number** is a number of the form
 >
 > \\z = a + b\\i,\\
@@ -1552,15 +1571,15 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 >
 > - The **real part** of \\z\\ is \\\operatorname{Re} z \stackrel{\text{def}}{=}a\\.
 > - The **imaginary part** of \\z\\ is \\\operatorname{Im} z \stackrel{\text{def}}{=}b\\.
-> - The set of all complex numbers is \\\mathbb{C} \stackrel{\text{def}}{=}\\a + b\\i : a, b \in \mathbb{R}\\\\.
+> - The set of all complex numbers is \\\mathbb{C}\stackrel{\text{def}}{=}\\a + b\\i : a, b \in \mathbb{R}\\\\.
 >
-> Two complex numbers are equal exactly when their real parts are equal and their imaginary parts are equal. A real number \\a\\ is the complex number \\a + 0\\i\\, so \\\mathbb{R}\\ is a subset of \\\mathbb{C}\\.
+> Two complex numbers are equal exactly when their real parts are equal and their imaginary parts are equal.
 
 Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}\\ as the set of ordered pairs \\(a, b)\\ of real numbers, written \\a + bi\\, and Axler ([2024](#ref-axler2024linear), Definition 4.1, p. 120) defines the real and imaginary parts.
 
 > **NOTE:**
 >
-> **Example 51 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
+> **Example 52 (Real and imaginary parts)** For \\z = 2 - 5\\i\\, the real part is \\\operatorname{Re} z = 2\\ and the imaginary part is \\\operatorname{Im} z = -5\\: the imaginary part is the real number \\-5\\, not \\-5\\i\\.
 >
 > The numbers \\1 + i\\ and \\1 - i\\ have the same real part, \\1\\, but different imaginary parts, \\1\\ and \\-1\\, so they are different complex numbers.
 >
@@ -1568,7 +1587,32 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 
 > **NOTE:**
 >
-> **Theorem 30 (Adding and multiplying complex numbers)** For real numbers \\a, b, c, d\\:
+> **Theorem 31 (Every real number is a complex number)** A complex number \\z\\ is a real number exactly when \\\operatorname{Im} z = 0\\. In particular, every real number \\a\\ is the complex number \\a + 0\\i\\, with \\\operatorname{Re} a = a\\ and \\\operatorname{Im} a = 0\\, so \\\mathbb{R}\\ is a subset of \\\mathbb{C}\\.
+
+> **NOTE:**
+>
+> *Proof*. Let \\a\\ be a real number. Since \\0\\i = 0\\,
+>
+> \\ \begin{aligned} a + 0\\i &= a + 0 && \text{(} 0\\i = 0 \text{)} \\ &= a && \text{(}\href{#thm-add-ident}{\text{Theorem~10}}\text{)} \end{aligned} \\
+>
+> so \\a\\ is the complex number \\a + 0\\i\\, whose imaginary part is \\0\\. The real part of \\a + 0\\i\\ is \\a\\, and by the equality rule in [Definition 51](#def-complex-number) no other pair of real and imaginary parts gives the same number.
+>
+> Conversely, if \\z = a + b\\i\\ has \\b = \operatorname{Im} z = 0\\, then \\z = a + 0\\i = a\\ by the same calculation, so \\z\\ is real.
+
+> **NOTE:**
+>
+> **Example 53 (Which complex numbers are real)** R stores complex numbers as a real part and an imaginary part. The code below converts the real number \\7\\ to a complex number and reads the parts of three complex numbers.
+>
+> ``` downlit
+> z <- c(as.complex(7), 2 - 5i, 3 + 0i)
+> data.frame(z = z, re = Re(z), im = Im(z), is_real = Im(z) == 0)
+> ```
+>
+> The real number \\7\\ becomes the complex number 7+0i, with imaginary part 0. Of the 3 numbers, 2 have imaginary part \\0\\, and by [Theorem 31](#thm-reals-in-complex) these are the real ones. The number \\2 - 5\\i\\ is not real, because its imaginary part is -5.
+
+> **NOTE:**
+>
+> **Theorem 32 (Adding and multiplying complex numbers)** For real numbers \\a, b, c, d\\:
 >
 > \\(a + b\\i) + (c + d\\i) = (a + c) + (b + d)\\i\\
 >
@@ -1590,15 +1634,15 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two form
 
 > **NOTE:**
 >
-> **Example 52 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
+> **Example 54 (Adding and multiplying two complex numbers)** Let \\w = 1 + 2\\i\\ and \\z = 3 - i\\. Their sum is
 >
-> \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~30}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} w + z &= (1 + 3) + (2 + (-1))\\i && \text{(}\href{#thm-complex-arithmetic}{\text{Theorem~32}}\text{, sum)} \\ &= 4 + i && \text{(add)} \end{aligned} \\
 >
 > and their product, multiplying out directly, is
 >
 > \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
 >
-> The product formula in [Theorem 30](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\,
+> The product formula in [Theorem 32](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\,
 >
 > \\ \begin{aligned} ac - bd &= 3 - (-2) \\ &= 5 \end{aligned} \\
 >
@@ -1616,7 +1660,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 53 (Complex conjugates)**  
+> **Example 55 (Complex conjugates)**  
 >
 > - \\\overline{3 + 4\\i} = 3 - 4\\i\\.
 >
@@ -1636,7 +1680,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Example 54 (Absolute values of complex numbers)**  
+> **Example 56 (Absolute values of complex numbers)**  
 >
 > - \\ \begin{aligned} \mathopen{}\left\|3 + 4\\i\right\|\mathclose{} &= \sqrt{3^2 + 4^2} \\ &= \sqrt{25} \\ &= 5. \end{aligned} \\
 >
@@ -1652,7 +1696,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Theorem 31 (A complex number times its conjugate)** For every complex number \\z\\,
+> **Theorem 33 (A complex number times its conjugate)** For every complex number \\z\\,
 >
 > \\z\\\overline{z} = \mathopen{}\left\|z\right\|\mathclose{}^2.\\
 >
@@ -1668,9 +1712,9 @@ Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity am
 
 > **NOTE:**
 >
-> **Example 55 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
+> **Example 57 (Multiplying \\3 + 4\\i\\ by its conjugate)** \\ \begin{aligned} &(3 + 4\\i)(3 - 4\\i) \\ &= 9 - 12\\i + 12\\i - 16\\i^2 && \text{(distribute)} \\ &= 9 - 16\\i^2 && \text{(cancel } 12\\i \text{)} \\ &= 9 + 16 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= 25 && \text{(add)} \end{aligned} \\
 >
-> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 54](#exm-complex-modulus), as [Theorem 31](#thm-conj-product) says.
+> which is \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{}^2 = 5^2\\ from [Example 56](#exm-complex-modulus), as [Theorem 33](#thm-conj-product) says.
 
 ## 19 Further reading
 

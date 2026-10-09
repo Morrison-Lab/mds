@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 12:13:11 (PDT)
+Last modified: 2026-10-09 13:04:05 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -302,13 +302,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Definition 16 (Derivation)** A **derivation** is a proof ([Definition 15](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by \\=\\ or by an inequality sign ([Definition 13](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra. The chain shows how its first expression compares with its last:
->
-> - if every step is \\=\\, the first expression equals the last;
-> - if every step is \\=\\ or \\\le\\, the first is less than or equal to the last;
-> - if every step is \\=\\, \\\le\\, or \\\<\\, and at least one step is \\\<\\, the first is less than the last.
->
-> The same holds with \\\ge\\ and \\\>\\ in place of \\\le\\ and \\\<\\.
+> **Definition 16 (Derivation)** A **derivation** is a proof ([Definition 15](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by \\=\\ or by an inequality sign ([Definition 13](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.
 
 > **NOTE:**
 >
@@ -317,6 +311,66 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 > \\ \begin{aligned} (x + 1)^2 &= x^2 + 2x + 1 && \text{(square of a sum)} \\ &\ge 2x + 1 && \text{(} x^2 \ge 0 \text{)} \\ &\> 2x && \text{(} 1 \> 0 \text{)} \end{aligned} \\
 >
 > The first step uses the [square of a sum](algebra.llms.md#thm-square-of-a-sum). The steps are \\=\\, \\\ge\\, and \\\>\\, so the derivation shows \\(x + 1)^2 \> 2x\\. For example, with \\x = 3\\: \\(3 + 1)^2 = 16\\, and \\16 \> 6 = 2 \cdot 3\\.
+
+> **NOTE:**
+>
+> **Theorem 1 (What a derivation shows)** Consider a derivation ([Definition 16](#def-derivation)) with expressions \\E_0, E_1, \ldots, E_n\\, where each line \\E_j\\ is joined to the line \\E\_{j-1}\\ before it by \\=\\, \\\le\\ or \\\<\\.
+>
+> 1.  If every step is \\=\\, then \\E_0 = E_n\\.
+> 2.  If every step is \\=\\ or \\\le\\, then \\E_0 \le E_n\\.
+> 3.  If every step is \\=\\, \\\le\\, or \\\<\\, and at least one step is \\\<\\, then \\E_0 \< E_n\\.
+>
+> The same holds with \\\ge\\ and \\\>\\ in place of \\\le\\ and \\\<\\.
+
+> **NOTE:**
+>
+> *Proof*. First, a fact about two steps in a row. For numbers \\a\\, \\b\\ and \\c\\, if \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\, where \\R\\ and \\S\\ are each one of \\=\\, \\\le\\ and \\\<\\, then \\a \mathrel{T} c\\, where \\T\\ is
+>
+> - \\\<\\ if \\R\\ or \\S\\ is \\\<\\;
+> - otherwise \\\le\\ if \\R\\ or \\S\\ is \\\le\\;
+> - otherwise \\=\\.
+>
+> This holds in each case:
+>
+> - If \\R\\ and \\S\\ are both \\=\\, then \\a = c\\ ([equalities are transitive](algebra.llms.md#thm-equal-trans)).
+> - If exactly one of \\R\\ and \\S\\ is \\=\\, replace \\b\\ by the equal expression in the other relation ([substitution](algebra.llms.md#thm-substitution)). This gives the other relation between \\a\\ and \\c\\.
+> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict and non-strict inequalities](algebra.llms.md#def-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
+>
+> Now let \\T_j\\ be the relation named by the same rule applied to the first \\j\\ steps of the chain, with \\T_0\\ being \\=\\. We show \\E_0 \mathrel{T_j} E_j\\ by induction on \\j\\. For \\j = 0\\, \\E_0 = E_0\\. If \\E_0 \mathrel{T_j} E_j\\, then the step from \\E_j\\ to \\E\_{j+1}\\ and the fact above give \\E_0 \mathrel{T\_{j+1}} E\_{j+1}\\. At \\j = n\\, \\T_n\\ is \\=\\ when every step is \\=\\, which is part 1. It is \\\le\\ or \\=\\ when every step is \\=\\ or \\\le\\, and \\=\\ implies \\\le\\, which is part 2. It is \\\<\\ when some step is \\\<\\, which is part 3.
+>
+> The argument for \\\ge\\ and \\\>\\ is the same with the inequalities reversed.
+
+> **NOTE:**
+>
+> **Example 16 (Checking a derivation line by line)** The derivation in [Example 15](#exm-derivation) has the steps \\=\\, \\\ge\\ and \\\>\\, so by [Theorem 1](#thm-derivation-chain) it shows \\(x + 1)^2 \> 2x\\. The code evaluates the four lines of that derivation at several values of \\x\\, and checks each step and the comparison of the first line with the last.
+>
+> ``` downlit
+> x <- c(-3, -1, 0, 2, 3)
+> lines <- data.frame(
+>   x = x,
+>   line_0 = (x + 1)^2,
+>   line_1 = x^2 + 2 * x + 1,
+>   line_2 = 2 * x + 1,
+>   line_3 = 2 * x
+> )
+> steps <- with(
+>   lines,
+>   data.frame(
+>     x = x,
+>     step_1_equal = line_0 == line_1,
+>     step_2_geq = line_1 >= line_2,
+>     step_3_greater = line_2 > line_3,
+>     first_greater_than_last = line_0 > line_3
+>   )
+> )
+> lines
+> ```
+>
+> ``` downlit
+> steps
+> ```
+>
+> At all 5 values of \\x\\, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as [Theorem 1](#thm-derivation-chain) says. At \\x = 0\\, for example, the first line is 1 and the last is 0.
 
 > **NOTE:**
 >
@@ -332,7 +386,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Example 16 (A corollary of a result)** [Example 14](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example,
+> **Example 17 (A corollary of a result)** [Example 14](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example,
 >
 > \\ \begin{aligned} 2 + 4 + 6 &= (2 + 4) + 6 \\ &= 6 + 6 \\ &= 12, \end{aligned} \\
 >
@@ -344,7 +398,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Example 17 (A counterexample)** The proposition “for every integer \\n\\, \\n + n \> n\\” is false. The integer \\n = 0\\ is a counterexample: \\0 + 0 = 0\\, and \\0 \> 0\\ is false. The proposition is true for some integers, such as \\n = 3\\, since \\3 + 3 = 6 \> 3\\, but one counterexample is enough to make it false.
+> **Example 18 (A counterexample)** The proposition “for every integer \\n\\, \\n + n \> n\\” is false. The integer \\n = 0\\ is a counterexample: \\0 + 0 = 0\\, and \\0 \> 0\\ is false. The proposition is true for some integers, such as \\n = 3\\, since \\3 + 3 = 6 \> 3\\, but one counterexample is enough to make it false.
 
 > **NOTE:**
 >
@@ -352,7 +406,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Example 18 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
+> **Example 19 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
 >
 > - “If \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true:
 >
@@ -370,7 +424,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Example 19 (Necessary but not sufficient)** In [Example 18](#exm-converse), “if \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true, so:
+> **Example 20 (Necessary but not sufficient)** In [Example 19](#exm-converse), “if \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true, so:
 >
 > - being a multiple of \\4\\ is a sufficient condition for \\n\\ to be even;
 > - being even is a necessary condition for \\n\\ to be a multiple of \\4\\.
@@ -379,15 +433,36 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Definition 21 (Proof by contradiction)** A **proof by contradiction** of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false. Since a true assumption cannot lead to a false proposition, the assumption that \\P\\ is false must itself be false, so \\P\\ is true.
+> **Definition 21 (Proof by contradiction)** A **proof by contradiction** of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false.
 
 > **NOTE:**
 >
-> **Example 20 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([Definition 2](#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
+> **Example 21 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([Definition 2](#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
 >
 > \\ \begin{aligned} 2j &= 2k + 1 && \text{(both equal } n \text{)} \\ 2j - 2k &= 1 && \text{(subtract } 2k \text{ from both sides)} \\ 2(j - k) &= 1 && \text{(distributive law)} \\ j - k &= \tfrac{1}{2} && \text{(divide both sides by } 2 \text{)} \end{aligned} \\
 >
 > The third line uses the [distributive law](algebra.llms.md#def-distributive). But \\j - k\\ is an integer, and \\\frac{1}{2}\\ is not, so the last line is false. So no integer is both even and odd. For example, \\6 = 2 \cdot 3\\ is even, and \\6 = 2k + 1\\ would need \\k = 2.5\\, which is not an integer.
+
+> **NOTE:**
+>
+> **Theorem 2 (A proof by contradiction proves its proposition)** Let \\P\\ and \\Q\\ be propositions ([Definition 9](#def-proposition)). If \\\neg P \Rightarrow Q\\ is true and \\Q\\ is false, then \\P\\ is true.
+
+> **NOTE:**
+>
+> *Proof*. By [Definition 11](#def-logical-connective), \\\neg P \Rightarrow Q\\ is false only when \\\neg P\\ is true and \\Q\\ is false. Here \\Q\\ is false, and \\\neg P \Rightarrow Q\\ is true, so \\\neg P\\ is not true. Then \\\neg P\\ is false. Since \\\neg P\\ is true whenever \\P\\ is false, \\P\\ must be true.
+
+> **NOTE:**
+>
+> **Example 22 (A truth table for a proof by contradiction)** There are only four ways to assign truth values to \\P\\ and \\Q\\. The code lists them, with the truth value of \\\neg P \Rightarrow Q\\, and marks the rows where \\\neg P \Rightarrow Q\\ is true and \\Q\\ is false.
+>
+> ``` downlit
+> tt <- expand.grid(Q = c(TRUE, FALSE), P = c(TRUE, FALSE))
+> tt$not_P_implies_Q <- !(!tt$P) | tt$Q
+> tt$hypotheses_hold <- tt$not_P_implies_Q & !tt$Q
+> tt
+> ```
+>
+> The hypotheses of [Theorem 2](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them \\P\\ is true. So whenever the hypotheses hold, \\P\\ is true.
 
 ## 6 Indicator functions
 
@@ -412,7 +487,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 21 (Evaluating set and predicate indicators)** Consider the real line \\\Omega= \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\ (defined in the Morrison Lab’s probability notes).
+> **Example 23 (Evaluating set and predicate indicators)** Consider the real line \\\Omega= \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\ (defined in the Morrison Lab’s probability notes).
 >
 > 1.  Set indicator \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
@@ -427,7 +502,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 22 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 23](#def-binary-variable)). It is also the predicate indicator ([Definition 22](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
+> **Example 24 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 23](#def-binary-variable)). It is also the predicate indicator ([Definition 22](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
 >
 > In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
 
@@ -441,7 +516,7 @@ The vast majority of indicator notations belong to one of two families: set nota
 
 > **NOTE:**
 >
-> **Example 23 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 24](#def-set-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
+> **Example 25 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 24](#def-set-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
 
 #### Set notation
 
@@ -479,7 +554,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 > **NOTE:**
 >
-> **Example 24 (Supports of two count distributions)**  
+> **Example 26 (Supports of two count distributions)**  
 >
 > - A fair six-sided die gives each of \\1, 2, \ldots, 6\\ probability \\\tfrac{1}{6} \> 0\\ and every other value probability \\0\\, so its support is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
 > - A count that can be \\0\\, \\1\\, \\2\\, and so on, each with positive probability, such as the number of hospital visits in a year, has support \\\mathbb{N}\_0 = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\.
@@ -498,7 +573,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Example 25 (Evaluating Iverson brackets)**  
+> **Example 27 (Evaluating Iverson brackets)**  
 >
 > - \\\[3 \> 2\] = 1\\, because \\3 \> 2\\ is true.
 > - \\\[2 \> 3\] = 0\\, because \\2 \> 3\\ is false.
@@ -506,7 +581,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 3* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 22](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 21](#exm-indicator-numerical) become
+> *Remark 3* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 22](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 23](#exm-indicator-numerical) become
 >
 > \\ \begin{aligned} \[7.2 \> 5\] &= \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} \\ &= 1 \end{aligned} \\
 >
@@ -524,7 +599,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Example 26 (Evaluating the Kronecker delta)**  
+> **Example 28 (Evaluating the Kronecker delta)**  
 >
 > - \\ \begin{aligned} \delta\_{11} &= \[1 = 1\] \\ &= 1. \end{aligned} \\
 >
@@ -580,7 +655,7 @@ Indicator functions translate the logical connectives ([Definition 11](#def-log
 
 > **NOTE:**
 >
-> **Example 27 (Idempotent numbers and indicators)**  
+> **Example 29 (Idempotent numbers and indicators)**  
 >
 > - \\0\\ and \\1\\ are idempotent: \\0 \cdot 0 = 0\\ and \\1 \cdot 1 = 1\\.
 >
@@ -620,7 +695,7 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> **Example 28 (Reading off limits)**  
+> **Example 30 (Reading off limits)**  
 >
 > - In \\\sum\_{i=2}^{5} i^2\\, the lower limit is \\2\\ and the upper limit is \\5\\, so the sum is \\2^2 + 3^2 + 4^2 + 5^2 = 54\\.
 > - In \\\int_0^3 x\\dx\\, the lower limit is \\0\\ and the upper limit is \\3\\.
@@ -672,7 +747,7 @@ Table 3: Common notational shorthands and their full forms
 
 > **NOTE:**
 >
-> **Example 29 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+> **Example 31 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 

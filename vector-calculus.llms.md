@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 12:13:11 (PDT)
+Last modified: 2026-10-09 13:04:05 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -853,16 +853,6 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 > **Definition 13 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)) and whose second partial derivatives ([Definition 12](#def-second-partial-derivative)) exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
 >
 > \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \tag{4}\\
->
-> By [Theorem 1](#thm-row-deriv-tp-col-deriv), the transposed gradient is the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\ ([Definition 5](#def-row-vector-derivative)), so the Hessian can also be written
->
-> \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} \\ &= \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \end{aligned} \tag{5}\\
->
-> Both forms follow the shape rule of matrix multiplication ([Remark 1](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
->
-> By [Definition 6](#def-vector-valued-derivative), with \\y_j = \frac{\partial}{\partial x_j} f(\tilde{x})\\, the \\(i, j)\\ entry of the Hessian is
->
-> \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. \\
 
 > **NOTE:**
 >
@@ -880,6 +870,66 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Example 26 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the [difference quotient](calculus.llms.md#def-difference-quotient) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
 
+> **NOTE:**
+>
+> **Theorem 10 (Other ways to write the Hessian, and its entries)** Let \\f\\ and \\\tilde{x}\\ be as in [Definition 13](#def-hessian).
+>
+> 1.  The Hessian can be written with the row-vector derivative ([Definition 5](#def-row-vector-derivative)) of \\f\\:
+>
+>     \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} \mathopen{}\left(\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\right)\mathclose{} \\ &= \frac{\partial^2 f(\tilde{x})}{\partial \tilde{x} \partial {\tilde{x}}^{\top}}. \end{aligned} \tag{5}\\
+>
+> 2.  The \\(i, j)\\ entry of the Hessian is
+>
+>     \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. \tag{6}\\
+
+> **NOTE:**
+>
+> *Proof*. **Part 1.** By [Theorem 1](#thm-row-deriv-tp-col-deriv), the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ equals the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\. Substituting it into [Equation 4](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 1](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
+>
+> **Part 2.** Let \\y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\tilde{x})\\ be entry \\j\\ of the gradient. By [Definition 6](#def-vector-valued-derivative), the \\(i, j)\\ entry of the derivative of the vector \\\tilde{y}= (y_1, \ldots, y_p)\\ with respect to \\\tilde{x}\\ is
+>
+> \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{ij} &= \mathopen{}\left\[\frac{\partial}{\partial \tilde{x}} {\tilde{y}}^{\top}\right\]\mathclose{}\_{ij} && \text{(}\href{#eq-hessian}{\text{Equation~4}}\text{, with } \tilde{y}\text{ the gradient)} \\ &= \frac{\partial}{\partial x_i} y_j && \text{(}\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}. && \text{(} y_j = \frac{\partial}{\partial x_j} f(\tilde{x}) \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 27 (Computing the Hessian entry by entry, and checking it by finite differences)** Take \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ from [Example 25](#exm-hessian). By [Equation 6](#eq-hessian-entry), entry \\(i, j)\\ of the Hessian is the derivative with respect to \\x_i\\ of the derivative with respect to \\x_j\\. The code differentiates `f` symbolically in that order with [`D()`](https://rdrr.io/r/stats/deriv.html), evaluates the four entries at \\\tilde{x}= (0.5, -1)\\, and compares them with central differences of the gradient.
+>
+> ``` downlit
+> f_expr <- quote(exp(2 * x1 + x2) - x1)
+> vars <- c("x1", "x2")
+> point <- c(x1 = 0.5, x2 = -1)
+>
+> grad_expr <- lapply(vars, function(v) D(f_expr, v))
+> hess_expr <- lapply(vars, function(i) {
+>   lapply(grad_expr, function(g_j) D(g_j, i))
+> })
+> H <- sapply(1:2, function(j) {
+>   sapply(1:2, function(i) eval(hess_expr[[i]][[j]], as.list(point)))
+> })
+>
+> grad_at <- function(x) {
+>   sapply(grad_expr, function(g) eval(g, as.list(setNames(x, vars))))
+> }
+> h <- 1e-5
+> H_fd <- sapply(1:2, function(j) {
+>   sapply(1:2, function(i) {
+>     step <- replace(c(0, 0), i, h)
+>     (grad_at(point + step)[j] - grad_at(point - step)[j]) / (2 * h)
+>   })
+> })
+>
+> H
+> #>      [,1] [,2]
+> #> [1,]    4    2
+> #> [2,]    2    1
+> H_fd
+> #>      [,1] [,2]
+> #> [1,]    4    2
+> #> [2,]    2    1
+> ```
+>
+> At this point \\u = 2x_1 + x_2 = 0\\, so the closed form in [Example 25](#exm-hessian) gives \\4 e^u = 4\\ for entry \\(1, 1)\\, and the code gives 4. The off-diagonal entries are 2 and 2, which are equal. The finite differences agree with the symbolic entries to within 0.00000000026.
+
 > **TIP:**
 >
 > Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on second and higher partial derivatives:
@@ -889,21 +939,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 14 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\. For
->
-> \\ \begin{aligned} p &= q \\ &= 1, \end{aligned} \\
->
-> this definition is the usual [continuity](calculus.llms.md#def-continuous), written out with the \\\varepsilon\\-\\\delta\\ definition of the limit \\\lim\_{y \to x} f(y) = f(x)\\.
->
-> Continuity survives the usual operations:
->
-> - A [composition](sets-functions.llms.md#def-composition) of continuous functions is continuous: choose the \\\delta\\ for the [outer function](sets-functions.llms.md#def-composition) first, and use it as the \\\varepsilon\\ for the inner one.
-> - A sum \\f + g\\ of continuous real-valued functions is continuous, since \\\mathopen{}\left\|(f + g)(\tilde{y}) - (f + g)(\tilde{x})\right\|\mathclose{} \le \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} + \mathopen{}\left\|g(\tilde{y}) - g(\tilde{x})\right\|\mathclose{}\\: use \\\varepsilon/ 2\\ for each.
-> - A constant multiple \\c f\\ is continuous, since \\\mathopen{}\left\|c f(\tilde{y}) - c f(\tilde{x})\right\|\mathclose{} = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\: use \\\varepsilon/ (\mathopen{}\left\|c\right\|\mathclose{} + 1)\\ for \\f\\.
+> **Definition 14 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Example 27 (A continuous function, and a discontinuous one)**  
+> **Example 28 (A continuous function, and a discontinuous one)**  
 >
 > - \\f(\tilde{x}) = x_1 + x_2\\ is continuous at every \\\tilde{x}\\. Each \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, since the squared length is a sum of nonnegative squares, so
 >
@@ -915,7 +955,77 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 28 (Partial derivatives can exist where a function is not continuous)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
+> **Theorem 11 (Continuity in one variable, and sums, multiples and compositions)**  
+>
+> 1.  For \\p = q = 1\\, a function \\f\\ is continuous at \\x\\ in the sense of [Definition 14](#def-continuous-several) exactly when \\\lim\_{y \to x} f(y) = f(x)\\ ([limit](calculus.llms.md#def-limit)), which is the usual [continuity](calculus.llms.md#def-continuous) at \\x\\.
+> 2.  If \\f : \mathbb{R}^p \to \mathbb{R}^q\\ is continuous at \\\tilde{x}\\ and \\g : \mathbb{R}^q \to \mathbb{R}^r\\ is continuous at \\f(\tilde{x})\\, then the [composition](sets-functions.llms.md#def-composition) \\g \circ f\\ is continuous at \\\tilde{x}\\.
+> 3.  If \\f, g : \mathbb{R}^p \to \mathbb{R}\\ are continuous at \\\tilde{x}\\, then \\f + g\\ is continuous at \\\tilde{x}\\.
+> 4.  If \\f : \mathbb{R}^p \to \mathbb{R}\\ is continuous at \\\tilde{x}\\ and \\c \in \mathbb{R}\\, then \\c f\\ is continuous at \\\tilde{x}\\.
+>
+> If the hypotheses of part 2, 3 or 4 hold at every point of a set, the conclusion holds at every point of that set.
+
+> **NOTE:**
+>
+> *Proof*. Let \\\varepsilon\> 0\\ be given.
+>
+> **Part 1.** For \\p = q = 1\\, \\\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left\|f(y) - f(x)\right\|\mathclose{}\\ and \\\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left\|y - x\right\|\mathclose{}\\. [Definition 14](#def-continuous-several) then asks for a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(y) - f(x)\right\|\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The [limit definition](calculus.llms.md#def-limit) with \\L = f(x)\\ asks for the same inequality, but only whenever \\0 \< \mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The two agree, because at \\y = x\\ the inequality \\\mathopen{}\left\|f(x) - f(x)\right\|\mathclose{} = 0 \< \varepsilon\\ holds for every \\\delta\\.
+>
+> **Part 2.** Because \\g\\ is continuous at \\f(\tilde{x})\\, there is a \\\delta_g \> 0\\ such that \\\mathopen{}\left\lVert g(\tilde{z}) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\. Because \\f\\ is continuous at \\\tilde{x}\\, applied with \\\delta_g\\ in the role of \\\varepsilon\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. So if \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\, then \\\tilde{z} = f(\tilde{y})\\ has \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\, and therefore \\\mathopen{}\left\lVert g(f(\tilde{y})) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\.
+>
+> **Part 3.** Because \\f\\ and \\g\\ are continuous at \\\tilde{x}\\, there are \\\delta_f \> 0\\ and \\\delta_g \> 0\\ such that \\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} \< \varepsilon/ 2\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta_f\\, and \\\mathopen{}\left\|g(\tilde{y}) - g(\tilde{x})\right\|\mathclose{} \< \varepsilon/ 2\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta_g\\. Let \\\delta\stackrel{\text{def}}{=}\min\mathopen{}\left\\\delta_f, \delta_g\right\\\mathclose{}\\. If \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\, then
+>
+> \\ \begin{aligned} \mathopen{}\left\|(f + g)(\tilde{y}) - (f + g)(\tilde{x})\right\|\mathclose{} &= \mathopen{}\left\|\mathopen{}\left(f(\tilde{y}) - f(\tilde{x})\right)\mathclose{} + \mathopen{}\left(g(\tilde{y}) - g(\tilde{x})\right)\mathclose{}\right\|\mathclose{} && \text{(regroup)} \\ &\le \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} + \mathopen{}\left\|g(\tilde{y}) - g(\tilde{x})\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} && \text{(choice of } \delta\text{)} \\ &= \varepsilon. && \text{(add)} \end{aligned} \\
+>
+> **Part 4.** Because \\f\\ is continuous at \\\tilde{x}\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} \< \varepsilon/ (\mathopen{}\left\|c\right\|\mathclose{} + 1)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. For such \\\tilde{y}\\,
+>
+> \\ \begin{aligned} \mathopen{}\left\|c f(\tilde{y}) - c f(\tilde{x})\right\|\mathclose{} &= \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{} && \text{(factor out } c \text{)} \\ &\le \mathopen{}\left\|c\right\|\mathclose{}\\\frac{\varepsilon}{\mathopen{}\left\|c\right\|\mathclose{} + 1} && \text{(choice of } \delta\text{)} \\ &\< \varepsilon. && \text{(} \mathopen{}\left\|c\right\|\mathclose{} \< \mathopen{}\left\|c\right\|\mathclose{} + 1 \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 29 (Choosing \\\delta\\ for a sum, a multiple and a composition)** Let \\f(\tilde{x}) = x_1\\ and \\g(\tilde{x}) = x_2\\ on \\\mathbb{R}^2\\, and \\h(t) = 3t\\ on \\\mathbb{R}\\. Since \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, the functions \\f\\ and \\g\\ are continuous with \\\delta= \varepsilon\\, and \\h\\ is continuous with \\\delta= \varepsilon/ 3\\, because \\\mathopen{}\left\|h(s) - h(t)\right\|\mathclose{} = 3\\\mathopen{}\left\|s - t\right\|\mathclose{}\\. Take \\\tilde{x}= (1, 2)\\ and \\\varepsilon= 0.1\\. The proof of [Theorem 11](#thm-continuous-several) gives these values of \\\delta\\:
+>
+> - for \\f + g\\ (part 3), \\\delta= \min\mathopen{}\left\\\varepsilon/ 2, \varepsilon/ 2\right\\\mathclose{}\\;
+> - for \\3 f\\ (part 4), \\\delta= \varepsilon/ (3 + 1)\\;
+> - for \\h \circ (f + g)\\ (part 2), the outer value \\\delta_h = \varepsilon/ 3\\ plays the role of \\\varepsilon\\ for \\f + g\\, so \\\delta= \delta_h / 2\\.
+>
+> The code draws many points \\\tilde{y}\\ at distance less than \\\delta\\ from \\\tilde{x}\\ and finds the largest change in each function.
+>
+> ``` downlit
+> set.seed(571)
+> eps <- 0.1
+> x <- c(1, 2)
+> f <- function(x) x[1]
+> g <- function(x) x[2]
+> h <- function(t) 3 * t
+>
+> fun_sum <- function(x) f(x) + g(x)
+> fun_multiple <- function(x) 3 * f(x)
+> fun_composition <- function(x) h(fun_sum(x))
+>
+> deltas <- c(
+>   sum = eps / 2,
+>   multiple = eps / (3 + 1),
+>   composition = (eps / 3) / 2
+> )
+> funs <- list(
+>   sum = fun_sum, multiple = fun_multiple, composition = fun_composition
+> )
+>
+> n <- 10000L
+> largest_change <- sapply(names(funs), function(nm) {
+>   radius <- deltas[[nm]] * sqrt(runif(n))
+>   angle <- runif(n, 0, 2 * pi)
+>   y <- cbind(x[1] + radius * cos(angle), x[2] + radius * sin(angle))
+>   max(abs(apply(y, 1, funs[[nm]]) - funs[[nm]](x)))
+> })
+> data.frame(delta = deltas, largest_change = largest_change, eps = eps)
+> ```
+>
+> For 3 of the 3 functions, the largest change among the 10000 points is below \\\varepsilon= 0.1\\, as [Theorem 11](#thm-continuous-several) guarantees.
+
+> **NOTE:**
+>
+> **Example 30 (Partial derivatives can exist where a function is not continuous)** Let \\f : \mathbb{R}^2 \to \mathbb{R}\\ be
 >
 > \\ f(\tilde{x}) = \begin{cases} \dfrac{x_1 x_2}{x_1^2 + x_2^2} & \text{if } \tilde{x}\ne \tilde{0}, \\ 0 & \text{if } \tilde{x}= \tilde{0}. \end{cases} \\
 >
@@ -943,17 +1053,17 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 10 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 14](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 13](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra.llms.md#def-symmetric-matrix)).
+> **Theorem 12 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 14](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 13](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra.llms.md#def-symmetric-matrix)).
 
 The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
 
 > **NOTE:**
 >
-> **Example 29 (Mixed partial derivatives agree)** In [Example 25](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\tilde{x})\\ are both \\2 e^{2x_1 + x_2}\\.
+> **Example 31 (Mixed partial derivatives agree)** In [Example 25](#exm-hessian), the \\(1, 2)\\ and \\(2, 1)\\ entries of \\\mathbf{H}\_f(\tilde{x})\\ are both \\2 e^{2x_1 + x_2}\\.
 
 > **NOTE:**
 >
-> **Example 30 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
+> **Example 32 (Without continuity, the mixed partials can differ)** Let \\f(x_1, x_2) = \dfrac{x_1 x_2 (x_1^2 - x_2^2)}{x_1^2 + x_2^2}\\ for \\\tilde{x}\ne \tilde{0}\\, and \\f(\tilde{0}) = 0\\. For \\x_2 \ne 0\\, the partial derivative ([Definition 1](#def-partial-derivative)) in \\x_1\\ at \\(0, x_2)\\ is
 >
 > \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative, }\href{#def-partial-derivative}{\text{Definition~1}}\text{)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} \\ &= -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
 >
@@ -965,11 +1075,11 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 >
 > \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} &= \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} \\ &= \frac{d }{d x_2} (-x_2) \\ &= -1, \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} &= \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} \\ &= \frac{d }{d x_1} x_1 \\ &= 1: \end{aligned} \\
 >
-> the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 10](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
+> the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 12](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
 
 > **NOTE:**
 >
-> **Theorem 11 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{x}\\, then \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ has \\\mathbf{H}\_f(\tilde{x}) = 2 \mathbf{S}\\ for every \\\tilde{x}\\.
+> **Theorem 13 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{x}\\, then \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ has \\\mathbf{H}\_f(\tilde{x}) = 2 \mathbf{S}\\ for every \\\tilde{x}\\.
 
 > **NOTE:**
 >
@@ -977,7 +1087,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> **Example 31 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 11](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 13](#def-hessian)) gives
+> **Example 33 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 13](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 13](#def-hessian)) gives
 >
 > \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} \\ &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \end{aligned} \\
 
