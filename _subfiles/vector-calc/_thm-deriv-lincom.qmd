@@ -5,9 +5,13 @@
 If $\vx$ is constant with respect to $\vcoef$, then:
 
 $$
-\underbrace{\deriv{\vcoef} (\vx \cdot \vcoef)}_{p \times 1} =
-\underbrace{\deriv{\vcoef} (\vcoef \cdot \vx)}_{p \times 1} =
+\begin{aligned}
+\underbrace{\deriv{\vcoef} (\vx \cdot \vcoef)}_{p \times 1}
+&=
+\underbrace{\deriv{\vcoef} (\vcoef \cdot \vx)}_{p \times 1} \\
+&=
 \underbrace{\vx}_{p \times 1}
+\end{aligned}
 $$
 
 :::

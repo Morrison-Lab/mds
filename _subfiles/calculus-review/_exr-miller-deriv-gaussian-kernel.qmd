@@ -11,5 +11,11 @@ $$f(x) = \exp{-\frac{x^2}{2}}$$
 ::: {#sol-miller-deriv-gaussian-kernel}
 Apply the chain rule (@thm-chain-rule) with outer function $\exp{u}$ and inner function $u(x) = -x^2/2$. Since $\dif{}{u}\exp{u} = \exp{u}$ (@thm-deriv-exp) and $u'(x) = -x$:
 
-$$f'(x) = u'(x)\exp{u(x)} = -x\exp{-\frac{x^2}{2}}$$
+$$
+\begin{aligned}
+f'(x)
+&= u'(x)\exp{u(x)} \\
+&= -x\exp{-\frac{x^2}{2}}
+\end{aligned}
+$$
 :::

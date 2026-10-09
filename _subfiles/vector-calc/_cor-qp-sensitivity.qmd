@@ -6,7 +6,11 @@ $f^*(\vecf{b}) = \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \vecf{b}$.
 Its sensitivity to $\vecf{b}$ (@def-sensitivity) is
 
 $$
-\deriv{\vecf{b}} f^*(\vecf{b}) = \matr{M}^{-1} \vecf{b} = -\vlagmult^*.
+\begin{aligned}
+\deriv{\vecf{b}} f^*(\vecf{b})
+&= \matr{M}^{-1} \vecf{b} \\
+&= -\vlagmult^*.
+\end{aligned}
 $$
 
 :::

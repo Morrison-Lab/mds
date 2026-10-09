@@ -75,10 +75,13 @@ $\tilde{\vecf{q}}_2 = (1, 2, 3) - 2\,(1, 1, 1) = (-1, 0, 1)$ with norm $\sqrt{2}
 and $\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(-1, 0, 1)$. So
 
 $$
-\matr{R} = \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix},
-\qquad
-\tp{\matr{Q}} \vecf{b} = \paren{\tfrac{1 + 2 + 2}{\sqrt{3}},\; \tfrac{-1 + 0 + 2}{\sqrt{2}}}
-= \paren{\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}}.
+\begin{aligned}
+\matr{R}
+&= \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix}, \\
+\tp{\matr{Q}} \vecf{b}
+&= \paren{\tfrac{1 + 2 + 2}{\sqrt{3}},\; \tfrac{-1 + 0 + 2}{\sqrt{2}}} \\
+&= \paren{\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}}.
+\end{aligned}
 $$
 
 Back substitution gives $x_2 = \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} = \tfrac{1}{2}$

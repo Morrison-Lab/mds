@@ -57,10 +57,12 @@ $\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$,
 so @thm-inverse-transpose says
 
 $$
+\begin{aligned}
 \inv{\tp{\matr{A}}}
-= \inv{\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}}
-= \tp{\paren{\matr{A}^{-1}}}
-= \begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix},
+&= \inv{\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}} \\
+&= \tp{\paren{\matr{A}^{-1}}} \\
+&= \begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix},
+\end{aligned}
 $$
 
 and multiplying $\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix}$

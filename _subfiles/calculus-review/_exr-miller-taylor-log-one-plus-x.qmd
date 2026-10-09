@@ -14,7 +14,8 @@ at $x_0 = 0$.
 Differentiating repeatedly at $x_0 = 0$:
 
 $$\ba
-f(0) &= \log 1 = 0
+f(0) &= \log 1 \\
+&= 0
 \\
 f'(x) &= (1 + x)^{-1} \implies f'(0) = 1
 \\

@@ -12,7 +12,13 @@ $$\frac{\partial g}{\partial W_{ij}} = A_{ij}$$
 Collecting those partial derivatives into a matrix of the same shape as $W$,
 as @tbl-gradient-shape requires,
 
-$$\nabla_W\, g(W) = \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix} = A$$
+$$
+\begin{aligned}
+\nabla_W\, g(W)
+&= \begin{bmatrix} 2 & -1 & 0 \\ 4 & 3 & -2 \end{bmatrix} \\
+&= A
+\end{aligned}
+$$
 
 What is unusual is that the gradient came out **constant**:
 it does not mention $W$ at all.

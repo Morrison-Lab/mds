@@ -42,8 +42,8 @@ $$
 &= \lim_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2}
 && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)}
 \\
-&= \frac{x_2 \cdot (-x_2^2)}{x_2^2}
-= -x_2,
+&= \frac{x_2 \cdot (-x_2^2)}{x_2^2} \\
+&= -x_2,
 && \text{(the quotient is continuous at } h = 0 \text{)}
 \ea
 $$
@@ -56,9 +56,16 @@ so $\deriv{x_2} f(x_1, 0) = x_1$ for every $x_1$.
 So at $\vzero$ (@def-hessian)
 
 $$
-\sb{\matr{H}_f(\vzero)}_{21} = \deriv{x_2} \paren{\deriv{x_1} f} = \dif{}{x_2} (-x_2) = -1,
-\qquad
-\sb{\matr{H}_f(\vzero)}_{12} = \deriv{x_1} \paren{\deriv{x_2} f} = \dif{}{x_1} x_1 = 1:
+\begin{aligned}
+\sb{\matr{H}_f(\vzero)}_{21}
+&= \deriv{x_2} \paren{\deriv{x_1} f} \\
+&= \dif{}{x_2} (-x_2) \\
+&= -1, \\
+\sb{\matr{H}_f(\vzero)}_{12}
+&= \deriv{x_1} \paren{\deriv{x_2} f} \\
+&= \dif{}{x_1} x_1 \\
+&= 1:
+\end{aligned}
 $$
 
 the Hessian at $\vzero$ is not symmetric.

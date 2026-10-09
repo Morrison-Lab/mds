@@ -36,10 +36,12 @@ $\matr{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$
 is idempotent:
 
 $$
+\begin{aligned}
 \matr{Q}^2
-= \begin{bmatrix} 1 \cd 1 + 1 \cd 0 & 1 \cd 1 + 1 \cd 0 \\ 0 \cd 1 + 0 \cd 0 & 0 \cd 1 + 0 \cd 0 \end{bmatrix}
-= \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}
-= \matr{Q},
+&= \begin{bmatrix} 1 \cd 1 + 1 \cd 0 & 1 \cd 1 + 1 \cd 0 \\ 0 \cd 1 + 0 \cd 0 & 0 \cd 1 + 0 \cd 0 \end{bmatrix} \\
+&= \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \\
+&= \matr{Q},
+\end{aligned}
 $$
 
 but $\tp{\matr{Q}} \neq \matr{Q}$,

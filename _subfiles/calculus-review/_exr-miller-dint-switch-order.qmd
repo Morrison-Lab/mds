@@ -19,11 +19,23 @@ $$\int_0^1 \int_y^1 y e^{-xy}\,dx\,dy$$
 
 Now the inner integral has the factor $y$ in place for direct integration with respect to $x$:
 
-$$\int_y^1 y e^{-xy}\,dx = \sb{-e^{-xy}}_{x=y}^1 = e^{-y^2} - e^{-y}$$
+$$
+\begin{aligned}
+\int_y^1 y e^{-xy}\,dx
+&= \sb{-e^{-xy}}_{x=y}^1 \\
+&= e^{-y^2} - e^{-y}
+\end{aligned}
+$$
 
 The double integral becomes:
 
-$$\int_0^1 (e^{-y^2} - e^{-y})\,dy = \int_0^1 e^{-y^2}\,dy - \sb{-e^{-y}}_0^1 = \int_0^1 e^{-y^2}\,dy - (1 - e^{-1})$$
+$$
+\begin{aligned}
+\int_0^1 (e^{-y^2} - e^{-y})\,dy
+&= \int_0^1 e^{-y^2}\,dy - \sb{-e^{-y}}_0^1 \\
+&= \int_0^1 e^{-y^2}\,dy - (1 - e^{-1})
+\end{aligned}
+$$
 
 The term $\int_0^1 e^{-y^2}\,dy$ has no elementary antiderivative; it can be written using the error function $\operatorname{erf}(z) = \frac{2}{\sqrt{\pi}}\int_0^z e^{-t^2}\,dt$ as $\frac{\sqrt{\pi}}{2}\operatorname{erf}(1) \approx 0.7468$. The overall value is:
 

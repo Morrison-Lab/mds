@@ -5,7 +5,13 @@ The **augmented vector** of $\vx \in \reals^p$
 is the vector $\tilde{\vx} \in \reals^{p+1}$
 formed by placing a $1$ above the entries of $\vx$:
 
-$$\tilde{\vx} = \sbmat{1 \\ \vx} = \tp{(1, x_1, \ldots, x_p)}$$
+$$
+\begin{aligned}
+\tilde{\vx}
+&= \sbmat{1 \\ \vx} \\
+&= \tp{(1, x_1, \ldots, x_p)}
+\end{aligned}
+$$
 
 :::
 
@@ -20,9 +26,14 @@ the affine function $\dprod{\vec{w}}{\vx} + b$ (@eq-linear-scalar) equals
 the dot product of $\tp{(b, w_1, w_2)} = \tp{(4, 3, -1)}$ with $\tilde{\vx}$:
 
 $$
-\dprod{\vec{w}}{\vx} + b = 3 \cd 2 + (-1) \cd 5 + 4 = 5,
-\qquad
-\tp{(4, 3, -1)} \cdot \tilde{\vx} = 4 \cd 1 + 3 \cd 2 + (-1) \cd 5 = 5
+\begin{aligned}
+\dprod{\vec{w}}{\vx} + b
+&= 3 \cd 2 + (-1) \cd 5 + 4 \\
+&= 5, \\
+\tp{(4, 3, -1)} \cdot \tilde{\vx}
+&= 4 \cd 1 + 3 \cd 2 + (-1) \cd 5 \\
+&= 5
+\end{aligned}
 $$
 
 :::

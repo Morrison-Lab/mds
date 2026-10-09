@@ -42,9 +42,11 @@ $$
 #### Expanding a vector in indicator vectors
 
 $$
+\begin{aligned}
 \sbmat{4 \\ -1 \\ 2}
-= 4 \sbmat{1 \\ 0 \\ 0} + (-1) \sbmat{0 \\ 1 \\ 0} + 2 \sbmat{0 \\ 0 \\ 1}
-= 4 \vecf{e}_1 - \vecf{e}_2 + 2 \vecf{e}_3
+&= 4 \sbmat{1 \\ 0 \\ 0} + (-1) \sbmat{0 \\ 1 \\ 0} + 2 \sbmat{0 \\ 0 \\ 1} \\
+&= 4 \vecf{e}_1 - \vecf{e}_2 + 2 \vecf{e}_3
+\end{aligned}
 $$
 
 :::

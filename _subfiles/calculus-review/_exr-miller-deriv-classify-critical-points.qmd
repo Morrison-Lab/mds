@@ -13,7 +13,13 @@ and decide whether each is a local maximum, a local minimum, or an inflection po
 ::: {#sol-miller-deriv-classify-critical-points}
 Compute the first derivative:
 
-$$f'(x) = 12x^2 - 6x = 6x(2x - 1)$$
+$$
+\begin{aligned}
+f'(x)
+&= 12x^2 - 6x \\
+&= 6x(2x - 1)
+\end{aligned}
+$$
 
 Setting $f'(x) = 0$ gives critical points at $x = 0$ and $x = 1/2$.
 

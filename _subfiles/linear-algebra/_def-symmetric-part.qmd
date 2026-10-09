@@ -16,12 +16,14 @@ For $\matr{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$,
 the symmetric part is
 
 $$
+\begin{aligned}
 \frac{1}{2}\paren{
 \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}
 + \begin{bmatrix} 1 & 0 \\ 2 & 3 \end{bmatrix}
 }
-= \frac{1}{2}\begin{bmatrix} 2 & 2 \\ 2 & 6 \end{bmatrix}
-= \begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix},
+&= \frac{1}{2}\begin{bmatrix} 2 & 2 \\ 2 & 6 \end{bmatrix} \\
+&= \begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix},
+\end{aligned}
 $$
 
 which is symmetric.

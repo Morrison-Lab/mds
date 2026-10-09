@@ -18,7 +18,15 @@ Transform the limits of integration:
 
 Applying the substitution:
 
-$$\int_0^1 \frac{x}{1 + x^2}\,dx = \frac{1}{2}\int_1^2 \frac{du}{u} = \frac{1}{2}\sb{\log u}_1^2 = \frac{1}{2}(\log 2 - \log 1) = \frac{\log 2}{2}$$
+$$
+\begin{aligned}
+\int_0^1 \frac{x}{1 + x^2}\,dx
+&= \frac{1}{2}\int_1^2 \frac{du}{u} \\
+&= \frac{1}{2}\sb{\log u}_1^2 \\
+&= \frac{1}{2}(\log 2 - \log 1) \\
+&= \frac{\log 2}{2}
+\end{aligned}
+$$
 
 *Remark:* When using $u$-substitution with definite integrals, the transformation $x \mapsto u(x)$ must be one-to-one on the domain of integration.
 :::

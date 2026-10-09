@@ -130,9 +130,13 @@ $$
 and multiplying the second column of $\matr{Q}$ by $-1$ gives
 
 $$
-\matr{Q}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
-\qquad
-\matr{\Eigvals}_2 = \matr{\Eigvals} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{aligned}
+\matr{Q}_2
+&= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix} \\
+\matr{\Eigvals}_2
+&= \matr{\Eigvals} \\
+&= \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\end{aligned}
 $$
 
 The columns of $\matr{Q}_1$ and $\matr{Q}_2$

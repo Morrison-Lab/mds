@@ -111,12 +111,14 @@ Let $\matr{A} = \matr{I}_2$ ($2 \times 2$) and $\matr{B} = \begin{pmatrix}2 & 0 
 Then $\tr(\matr{A} \matr{X} \matr{B}) = 2X_{11} + 3X_{22}$, and:
 
 $$
+\begin{aligned}
 \underbrace{\deriv{\matr{X}} \tr(\matr{A} \matr{X} \matr{B})}_{2 \times 2}
-= \underbrace{\tp{\matr{A}}}_{2 \times 2} \underbrace{\tp{\matr{B}}}_{2 \times 2}
-= \matr{I}_2 \begin{pmatrix}2 & 0 \\
+&= \underbrace{\tp{\matr{A}}}_{2 \times 2} \underbrace{\tp{\matr{B}}}_{2 \times 2} \\
+&= \matr{I}_2 \begin{pmatrix}2 & 0 \\
+0 & 3\end{pmatrix} \\
+&= \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}
-= \begin{pmatrix}2 & 0 \\
-0 & 3\end{pmatrix}
+\end{aligned}
 $$
 
 :::

@@ -160,20 +160,22 @@ Also $\matr{S}^{-1} = \tfrac{1}{2} \matr{I}_2$. Then, from the formulas of @thm-
 $$
 \ba
 \matr{M}
-&= \tp{\matr{A}}\,\tfrac{1}{2} \matr{I}_2\,\matr{A}
-= \tfrac{1}{2}\,(3^2 + 4^2)
-= \tfrac{25}{2},
+&= \tp{\matr{A}}\,\tfrac{1}{2} \matr{I}_2\,\matr{A} \\
+&= \tfrac{1}{2}\,(3^2 + 4^2) \\
+&= \tfrac{25}{2},
 \\
 \vx^*
-&= \tfrac{1}{2} \matr{I}_2 \sbmat{ 3 \\ 4 } \paren{\tfrac{2}{25}} (5)
-= \tfrac{5}{25} \sbmat{ 3 \\ 4 }
-= \sbmat{ 0.6 \\ 0.8 },
+&= \tfrac{1}{2} \matr{I}_2 \sbmat{ 3 \\ 4 } \paren{\tfrac{2}{25}} (5) \\
+&= \tfrac{5}{25} \sbmat{ 3 \\ 4 } \\
+&= \sbmat{ 0.6 \\ 0.8 },
 \\
 \vlagmult^*
-&= -\paren{\tfrac{2}{25}} (5) = -0.4,
+&= -\paren{\tfrac{2}{25}} (5) \\
+&= -0.4,
 \\
 f(\vx^*)
-&= \tfrac{1}{2} (5) \paren{\tfrac{2}{25}} (5) = 1.
+&= \tfrac{1}{2} (5) \paren{\tfrac{2}{25}} (5) \\
+&= 1.
 \ea
 $$
 

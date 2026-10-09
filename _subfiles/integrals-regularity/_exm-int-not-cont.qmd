@@ -6,10 +6,12 @@ Then $f$ has a jump discontinuity (@def-jump-discontinuity) at $x = \tfrac{1}{2}
 but it is integrable on $[0, 1]$:
 
 $$
+\begin{aligned}
 \int_0^1 f(x)\,dx
-= \int_0^{1/2} 0\,dx + \int_{1/2}^1 1\,dx
-= 0 + \tfrac{1}{2}
-= \tfrac{1}{2}.
+&= \int_0^{1/2} 0\,dx + \int_{1/2}^1 1\,dx \\
+&= 0 + \tfrac{1}{2} \\
+&= \tfrac{1}{2}.
+\end{aligned}
 $$
 
 This counterexample shows that the converse of @thm-cont-implies-int fails:

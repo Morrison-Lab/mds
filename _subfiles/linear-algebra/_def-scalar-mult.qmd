@@ -13,9 +13,11 @@ $$(c\matr{A})_{ij} = c \cdot a_{ij}$$
 #### A scalar multiple
 
 $$
+\begin{aligned}
 3 \begin{bmatrix} 1 & -2 \\ 0 & 4 \end{bmatrix}
-= \begin{bmatrix} 3 \cd 1 & 3 \cd (-2) \\ 3 \cd 0 & 3 \cd 4 \end{bmatrix}
-= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}.
+&= \begin{bmatrix} 3 \cd 1 & 3 \cd (-2) \\ 3 \cd 0 & 3 \cd 4 \end{bmatrix} \\
+&= \begin{bmatrix} 3 & -6 \\ 0 & 12 \end{bmatrix}.
+\end{aligned}
 $$
 
 :::

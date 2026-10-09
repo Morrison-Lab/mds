@@ -6,10 +6,12 @@ from @exm-hat-matrix,
 $\tp{\matr{H}} = \matr{H}$, and
 
 $$
+\begin{aligned}
 \matr{H}^2
-= \begin{bmatrix} 0.5 \cd 0.5 + 0.5 \cd 0.5 & 0.5 \cd 0.5 + 0.5 \cd 0.5 \\ 0.5 \cd 0.5 + 0.5 \cd 0.5 & 0.5 \cd 0.5 + 0.5 \cd 0.5 \end{bmatrix}
-= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}
-= \matr{H},
+&= \begin{bmatrix} 0.5 \cd 0.5 + 0.5 \cd 0.5 & 0.5 \cd 0.5 + 0.5 \cd 0.5 \\ 0.5 \cd 0.5 + 0.5 \cd 0.5 & 0.5 \cd 0.5 + 0.5 \cd 0.5 \end{bmatrix} \\
+&= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix} \\
+&= \matr{H},
+\end{aligned}
 $$
 
 as @thm-hat-matrix says.

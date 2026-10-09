@@ -4,7 +4,11 @@
 For an $m \times k$ matrix $\matr{A}$, a $k \times n$ matrix $\matr{B}$ and a number $c$,
 
 $$
-\matr{A}\,(c\,\matr{B}) = c\,(\matr{A} \matr{B}) = (c\,\matr{A})\,\matr{B}.
+\begin{aligned}
+\matr{A}\,(c\,\matr{B})
+&= c\,(\matr{A} \matr{B}) \\
+&= (c\,\matr{A})\,\matr{B}.
+\end{aligned}
 $$
 
 In particular, $\matr{A}\,(\matr{B} - \matr{C}) = \matr{A} \matr{B} - \matr{A} \matr{C}$

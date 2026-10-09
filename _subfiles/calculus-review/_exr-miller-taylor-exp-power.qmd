@@ -17,5 +17,11 @@ $$\exp{x^8} = 1 + x^8 + \frac{x^{16}}{2} + \dots$$
 
 Because the lowest-order variable term is $x^8$, all coefficients for powers $x^1, x^2, x^3, x^4, x^5$ are zero:
 
-$$P_5(x) = 1 + 0x + 0x^2 + 0x^3 + 0x^4 + 0x^5 = 1$$
+$$
+\begin{aligned}
+P_5(x)
+&= 1 + 0x + 0x^2 + 0x^3 + 0x^4 + 0x^5 \\
+&= 1
+\end{aligned}
+$$
 :::

@@ -58,7 +58,14 @@ $$
 
 For the inverse, applying property 4 to $\matr{A}\matr{A}^{-1} = \matr{I}$ gives:
 
-$$(\matr{A}^{-1})^{\mathsf{H}}\matr{A}^{\mathsf{H}} = (\matr{A}\matr{A}^{-1})^{\mathsf{H}} = \matr{I}^{\mathsf{H}} = \matr{I},$$
+$$
+\begin{aligned}
+(\matr{A}^{-1})^{\mathsf{H}}\matr{A}^{\mathsf{H}}
+&= (\matr{A}\matr{A}^{-1})^{\mathsf{H}} \\
+&= \matr{I}^{\mathsf{H}} \\
+&= \matr{I},
+\end{aligned}
+$$
 
 so $(\matr{A}^{\mathsf{H}})^{-1} = (\matr{A}^{-1})^{\mathsf{H}}$.
 

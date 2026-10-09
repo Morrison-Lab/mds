@@ -126,7 +126,16 @@ so condition 3 fails and $f$ is not continuous on $[0, 1]$.
 A **partition** $\mathcal{P}$ of a closed interval $[a, b]$
 is a finite list of points
 
-$$a = x_0 < x_1 < \cdots < x_n = b.$$
+$$
+\begin{aligned}
+a
+&= x_0 \\
+&< x_1 \\
+&< \cdots \\
+&< x_n \\
+&= b.
+\end{aligned}
+$$
 
 It splits $[a, b]$ into the $n$ subintervals $[x_{i-1}, x_i]$,
 of widths $\change x_i \eqdef x_i - x_{i-1}$.
