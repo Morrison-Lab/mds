@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 11:00:09 (PDT)
+Last modified: 2026-10-09 11:33:26 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -36,8 +36,20 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 > **Example 1 (Applying the test, and its limits)**  
 >
-> - \\g(x) = (x - 2)^2\\ has its minimizer at \\c = 2\\, and \\g'(2) = 2 (2 - 2) = 0\\.
-> - The [converse](notation.llms.md#def-converse) fails: \\g(x) = x^3\\ has \\g'(0) = 3 \cdot 0^2 = 0\\, but \\0\\ is not a local minimizer, since \\g(-h) = -h^3 \< 0 = g(0)\\ for every \\h \> 0\\.
+> - \\g(x) = (x - 2)^2\\ has its minimizer at \\c = 2\\, and
+>
+>   \\ \begin{aligned} g'(2) &= 2 (2 - 2) \\ &= 0. \end{aligned} \\
+>
+> - The [converse](notation.llms.md#def-converse) fails: \\g(x) = x^3\\ has
+>
+>   \\ \begin{aligned} g'(0) &= 3 \cdot 0^2 \\ &= 0, \end{aligned} \\
+>
+>   but \\0\\ is not a local minimizer, since
+>
+>   \\ \begin{aligned} g(-h) &= -h^3 \\ &\< 0 \\ &= g(0) \end{aligned} \\
+>
+>   for every \\h \> 0\\.
+>
 > - Differentiability is needed: \\g(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ has its minimizer at \\0\\, but the difference quotient \\\mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\1\\ for \\h \> 0\\ and \\-1\\ for \\h \< 0\\, so it has no limit and \\g'(0)\\ does not exist.
 
 > **NOTE:**
@@ -58,19 +70,39 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> *Proof*. Take \\\delta\> 0\\ as in the definition of a local minimizer. Fix \\i \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\, let \\\tilde{e}\_i\\ be the vector with \\1\\ in entry \\i\\ and \\0\\ elsewhere, and let \\g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^\* + t\\\tilde{e}\_i)\\ for \\t \in \mathbb{R}\\. For \\\mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, \\\mathopen{}\left\lVert(\tilde{x}^\* + t\\\tilde{e}\_i) - \tilde{x}^\*\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{e}\_i\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, so \\g_i(0) = f(\tilde{x}^\*) \le f(\tilde{x}^\* + t\\\tilde{e}\_i) = g_i(t)\\: \\0\\ is a local minimizer of \\g_i\\. Moving \\\tilde{x}\\ from \\\tilde{x}^\*\\ along \\\tilde{e}\_i\\ changes only \\x_i\\, so \\g_i'(0)\\ is the partial derivative \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*)\\, which exists because the gradient does. By [Theorem 1](#thm-fermat), \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*) = g_i'(0) = 0\\. The equation \\g_i'(0) = 0\\ holds for every \\i\\, so every entry of the gradient at \\\tilde{x}^\*\\ is \\0\\ ([vector derivative](vector-calculus.llms.md#def-vector-derivative)).
+> *Proof*. Take \\\delta\> 0\\ as in the definition of a local minimizer. Fix \\i \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\, let \\\tilde{e}\_i\\ be the vector with \\1\\ in entry \\i\\ and \\0\\ elsewhere, and let \\g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^\* + t\\\tilde{e}\_i)\\ for \\t \in \mathbb{R}\\. For \\\mathopen{}\left\|t\right\|\mathclose{} \< \delta\\,
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert(\tilde{x}^\* + t\\\tilde{e}\_i) - \tilde{x}^\*\right\rVert\mathclose{} &= \mathopen{}\left\|t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{e}\_i\right\rVert\mathclose{} \\ &= \mathopen{}\left\|t\right\|\mathclose{} \\ &\< \delta, \end{aligned} \\
+>
+> so
+>
+> \\ \begin{aligned} g_i(0) &= f(\tilde{x}^\*) \\ &\le f(\tilde{x}^\* + t\\\tilde{e}\_i) \\ &= g_i(t): \end{aligned} \\
+>
+> \\0\\ is a local minimizer of \\g_i\\. Moving \\\tilde{x}\\ from \\\tilde{x}^\*\\ along \\\tilde{e}\_i\\ changes only \\x_i\\, so \\g_i'(0)\\ is the partial derivative \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*)\\, which exists because the gradient does. By [Theorem 1](#thm-fermat),
+>
+> \\ \begin{aligned} \frac{\partial}{\partial x_i} f(\tilde{x}^\*) &= g_i'(0) \\ &= 0. \end{aligned} \\
+>
+> The equation \\g_i'(0) = 0\\ holds for every \\i\\, so every entry of the gradient at \\\tilde{x}^\*\\ is \\0\\ ([vector derivative](vector-calculus.llms.md#def-vector-derivative)).
 
 > **NOTE:**
 >
 > **Example 3 (Using the condition to locate, and to rule out, minimizers)**  
 >
-> - For \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ of [Example 2](#exm-stationary-point), any local minimizer must be the stationary point \\{(1, 0)}^{\top}\\. It is one: completing the square, \\f(\tilde{x}) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)\\.
+> - For \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ of [Example 2](#exm-stationary-point), any local minimizer must be the stationary point \\{(1, 0)}^{\top}\\. It is one: completing the square,
+>
+>   \\ \begin{aligned} f(\tilde{x}) &= (x_1 - 1)^2 + x_2^2 - 1 \\ &\ge -1 \\ &= f(1, 0). \end{aligned} \\
+>
 > - For \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ of [Example](vector-calculus.llms.md#exm-hessian), the second entry of the gradient is \\e^{2x_1 + x_2} \> 0\\, so \\f\\ has no stationary point, and so no local minimizer.
-> - The converse fails: \\f(\tilde{x}) = x_1^2 - x_2^2\\ has gradient \\{(2 x_1,\\ -2 x_2)}^{\top}\\, so \\\tilde{0}\\ is a stationary point, but \\f(0, t) = -t^2 \< 0 = f(\tilde{0})\\ for every \\t \ne 0\\, so \\\tilde{0}\\ is not a local minimizer.
+>
+> - The converse fails: \\f(\tilde{x}) = x_1^2 - x_2^2\\ has gradient \\{(2 x_1,\\ -2 x_2)}^{\top}\\, so \\\tilde{0}\\ is a stationary point, but
+>
+>   \\ \begin{aligned} f(0, t) &= -t^2 \\ &\< 0 \\ &= f(\tilde{0}) \end{aligned} \\
+>
+>   for every \\t \ne 0\\, so \\\tilde{0}\\ is not a local minimizer.
 
 > **NOTE:**
 >
-> **Example 4 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This repository holds a copy at `data/auto.csv`, and both code tabs below read that file.
+> **Example 4 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This site has a copy at [`data/auto.csv`](data/auto.csv), and both code tabs below read that file.
 >
 > Let \\y_i\\ be the miles per gallon and \\x_i\\ the horsepower of car \\i\\. To predict miles per gallon from horsepower with a line, write \\\tilde{\beta}= {(\beta\_{0}, \beta\_{1})}^{\top}\\ and let \\\mathbf{X}\\ be the matrix whose row \\i\\ is \\(1, x_i)\\. The sum of squared errors is
 >
@@ -168,7 +200,15 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 5 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so \\g' = g'' = g\\. [Theorem 3](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau\in (0, 1)\\. Solving, \\e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\\, so \\\tau= \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
+> **Example 5 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so
+>
+> \\ \begin{aligned} g' &= g'' \\ &= g. \end{aligned} \\
+>
+> [Theorem 3](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau\in (0, 1)\\. Solving,
+>
+> \\ \begin{aligned} e^{\tau} &= 2 (e - 2) \\ &\approx 2 \times 0.71828 \\ &= 1.43656, \end{aligned} \\
+>
+> so \\\tau= \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
 
 > **NOTE:**
 >
@@ -196,7 +236,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} f(\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}, \end{aligned} \\
 >
-> using \\{(2 \mathbf{S} \tilde{z})}^{\top} = 2\\{\tilde{z}}^{\top}\\{\mathbf{S}}^{\top} = 2\\{\tilde{z}}^{\top} \mathbf{S}\\. Multiplying out directly gives the same:
+> using
+>
+> \\ \begin{aligned} {(2 \mathbf{S} \tilde{z})}^{\top} &= 2\\{\tilde{z}}^{\top}\\{\mathbf{S}}^{\top} \\ &= 2\\{\tilde{z}}^{\top} \mathbf{S}. \end{aligned} \\
+>
+> Multiplying out directly gives the same:
 >
 > \\ \begin{aligned} {(\tilde{z} + \tilde{h})}^{\top} \mathbf{S} (\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{z} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h} && \text{(distribute)} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}. && \text{(} {\tilde{h}}^{\top} \mathbf{S} \tilde{z} = {({\tilde{h}}^{\top} \mathbf{S} \tilde{z})}^{\top} \text{, which equals } {\tilde{z}}^{\top} \mathbf{S} \tilde{h} \text{)} \end{aligned} \\
 
@@ -208,7 +252,12 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Example 7 (Strict and non-strict local minimizers)**  
 >
-> - \\f(x) = (x - 2)^2\\ has \\f(2) = 0 \< (x - 2)^2 = f(x)\\ for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta\> 0\\ works).
+> - \\f(x) = (x - 2)^2\\ has
+>
+>   \\ \begin{aligned} f(2) &= 0 \\ &\< (x - 2)^2 \\ &= f(x) \end{aligned} \\
+>
+>   for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta\> 0\\ works).
+>
 > - A constant function \\f(\tilde{x}) = 0\\ has \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for all \\\tilde{x}^\*\\ and \\\tilde{x}\\, so every point is a [local minimizer](algebra.llms.md#def-local-minimizer), but no point is a strict one: \\f(\tilde{x}^\*) \< f(\tilde{x})\\ never holds.
 
 > **NOTE:**
@@ -221,11 +270,19 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} {\tilde{h}}^{\top} \mathbf{A} \tilde{h} &= {\tilde{h}}^{\top} \mathbf{Q} \mathbf{\Lambda} {\mathbf{Q}}^{\top} \tilde{h} && \text{(substitute the eigendecomposition)} \\ &= {\tilde{y}}^{\top} \mathbf{\Lambda} \tilde{y} && \text{(} {\tilde{h}}^{\top} \mathbf{Q} = {({\mathbf{Q}}^{\top} \tilde{h})}^{\top} \text{, transpose of a product)} \\ &= \sum\_{i=1}^p\lambda_i\\y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \\ &\ge \sum\_{i=1}^p\lambda\_{\min}\\y_i^2 && \text{(} \lambda_i \ge \lambda\_{\min} \text{ and } y_i^2 \ge 0 \text{)} \\ &= \lambda\_{\min}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(the squared length is the sum of squares)} \\ &= \lambda\_{\min}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(orthogonal matrices preserve length)} \end{aligned} \\
 >
-> The second step is the [transpose of a product](linear-algebra.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra.llms.md#thm-orthogonal-norm) to \\{\mathbf{Q}}^{\top}\\, which is orthogonal because \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ ([orthogonal matrix](linear-algebra.llms.md#def-orthogonal-matrix)).
+> The second step is the [transpose of a product](linear-algebra.llms.md#thm-transpose-product). The last step applies [orthogonal matrices preserve length](linear-algebra.llms.md#thm-orthogonal-norm) to \\{\mathbf{Q}}^{\top}\\, which is orthogonal because
+>
+> \\ \begin{aligned} {\mathbf{Q}}^{\top} \mathbf{Q} &= \mathbf{Q} {\mathbf{Q}}^{\top} \\ &= \mathbf{I}\_p \end{aligned} \\
+>
+> ([orthogonal matrix](linear-algebra.llms.md#def-orthogonal-matrix)).
 
 > **NOTE:**
 >
-> **Example 8 (Checking the bound)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([eigenvalue example](linear-algebra.llms.md#exm-eigenvalue)), so \\\lambda\_{\min} = 1\\. At \\\tilde{h} = {(1, 0)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\\. At \\\tilde{h} = {(1, -1)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\\: the bound holds with equality, since this \\\tilde{h}\\ is an eigenvector for \\\lambda\_{\min}\\.
+> **Example 8 (Checking the bound)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([eigenvalue example](linear-algebra.llms.md#exm-eigenvalue)), so \\\lambda\_{\min} = 1\\. At \\\tilde{h} = {(1, 0)}^{\top}\\, \\{\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\\. At \\\tilde{h} = {(1, -1)}^{\top}\\,
+>
+> \\ \begin{aligned} {\tilde{h}}^{\top} \mathbf{A} \tilde{h} &= 2 - 1 - 1 + 2 \\ &= 2 \\ &= 1 \cdot 2: \end{aligned} \\
+>
+> the bound holds with equality, since this \\\tilde{h}\\ is an eigenvector for \\\lambda\_{\min}\\.
 
 > **NOTE:**
 >
@@ -241,7 +298,13 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 9 (Checking the bound)** Let \\\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}\\, so \\m = 0.2\\ works, and \\\tilde{h} = {(1, 1)}^{\top}\\, so \\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\\. Then \\{\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\\, and \\\mathopen{}\left\|-0.2\right\|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\\.
+> **Example 9 (Checking the bound)** Let \\\mathbf{E} = \begin{bmatrix} 0.1 & -0.2 \\ -0.2 & 0.1 \end{bmatrix}\\, so \\m = 0.2\\ works, and \\\tilde{h} = {(1, 1)}^{\top}\\, so \\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\\. Then
+>
+> \\ \begin{aligned} {\tilde{h}}^{\top} \mathbf{E} \tilde{h} &= 0.1 - 0.2 - 0.2 + 0.1 \\ &= -0.2, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \mathopen{}\left\|-0.2\right\|\mathclose{} &= 0.2 \\ &\le 2 \cdot 0.2 \cdot 2 \\ &= 0.8. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -261,12 +324,25 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Example 10 (Classifying stationary points)**  
 >
-> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has the stationary point \\{(1, 0)}^{\top}\\ ([Example 2](#exm-stationary-point)), and its Hessian is \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} = 2 \mathbf{I}\_2\\, which is positive definite, so \\{(1, 0)}^{\top}\\ is a strict local minimizer.
+> - \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\ has the stationary point \\{(1, 0)}^{\top}\\ ([Example 2](#exm-stationary-point)), and its Hessian is
+>
+>   \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \\ &= 2 \mathbf{I}\_2, \end{aligned} \\
+>
+>   which is positive definite, so \\{(1, 0)}^{\top}\\ is a strict local minimizer.
+>
 > - \\f(\tilde{x}) = x_1^2 - x_2^2\\ has the stationary point \\\tilde{0}\\ and Hessian \\\begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}\\, which is not positive definite (\\{(0, 1)}^{\top}\\ gives \\-2\\), and indeed \\\tilde{0}\\ is not a local minimizer ([Example 3](#exm-first-order-condition)).
 
 > **NOTE:**
 >
-> **Example 11 (The condition is sufficient, not necessary)** \\f(\tilde{x}) = x_1^2 + x_2^4\\ and \\g(\tilde{x}) = x_1^2 - x_2^4\\ both have gradient \\\tilde{0}\\ at \\\tilde{0}\\ and the same Hessian there, \\\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\\, since \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\\ at \\x_2 = 0\\. That Hessian is not positive definite (\\{(0, 1)}^{\top}\\ gives \\0\\), so [Theorem 5](#thm-second-order-condition) says nothing about either function. In fact \\\tilde{0}\\ is a strict local minimizer of \\f\\, since \\f(\tilde{x}) \> 0 = f(\tilde{0})\\ for \\\tilde{x}\ne \tilde{0}\\, but not a local minimizer of \\g\\, since \\g(0, t) = -t^4 \< 0 = g(\tilde{0})\\ for \\t \ne 0\\.
+> **Example 11 (The condition is sufficient, not necessary)** \\f(\tilde{x}) = x_1^2 + x_2^4\\ and \\g(\tilde{x}) = x_1^2 - x_2^4\\ both have gradient \\\tilde{0}\\ at \\\tilde{0}\\ and the same Hessian there, \\\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\\, since
+>
+> \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} &= \pm 12 x_2^2 \\ &= 0 \end{aligned} \\
+>
+> at \\x_2 = 0\\. That Hessian is not positive definite (\\{(0, 1)}^{\top}\\ gives \\0\\), so [Theorem 5](#thm-second-order-condition) says nothing about either function. In fact \\\tilde{0}\\ is a strict local minimizer of \\f\\, since \\f(\tilde{x}) \> 0 = f(\tilde{0})\\ for \\\tilde{x}\ne \tilde{0}\\, but not a local minimizer of \\g\\, since
+>
+> \\ \begin{aligned} g(0, t) &= -t^4 \\ &\< 0 \\ &= g(\tilde{0}) \end{aligned} \\
+>
+> for \\t \ne 0\\.
 
 ## 2 Convexity in several variables
 
@@ -332,7 +408,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 >   which is positive when \\x \ne y\\ and \\t \in (0, 1)\\. At \\t \in \mathopen{}\left\\0, 1\right\\\mathclose{}\\ or \\x = y\\ it is \\0\\, so \\x^2\\ is also convex.
 >
-> - \\f(x) = 2x + 1\\ is convex but not strictly convex: \\f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)\\ for every \\x, y, t\\, so the inequality holds, but never strictly. It is also concave.
+> - \\f(x) = 2x + 1\\ is convex but not strictly convex:
+>
+>   \\ \begin{aligned} f(t x + (1 - t) y) &= 2 t x + 2 (1 - t) y + 1 \\ &= t f(x) + (1 - t) f(y) \end{aligned} \\
+>
+>   for every \\x, y, t\\, so the inequality holds, but never strictly. It is also concave.
 
 > **NOTE:**
 >
@@ -351,7 +431,14 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 > **Example 17 (A maximum is convex; a minimum need not be)**  
 >
 > - \\f_1(x) = x\\ is convex, by the computation for \\2x + 1\\ in [Example 16](#exm-strictly-convex) with \\2\\ and \\1\\ replaced by \\1\\ and \\0\\, and \\f_2(x) = x^2\\ is convex by the same example, so \\\max\mathopen{}\left\\x, x^2\right\\\mathclose{}\\ is convex by [Theorem 7](#thm-convex-max).
-> - The minimum of two convex functions need not be convex: \\g(x) = \min\mathopen{}\left\\x^2, (x - 2)^2\right\\\mathclose{}\\ has \\g(0) = g(2) = 0\\, but at the midpoint \\g(1) = \min\mathopen{}\left\\1, 1\right\\\mathclose{} = 1 \> \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0\\.
+>
+> - The minimum of two convex functions need not be convex: \\g(x) = \min\mathopen{}\left\\x^2, (x - 2)^2\right\\\mathclose{}\\ has
+>
+>   \\ \begin{aligned} g(0) &= g(2) \\ &= 0, \end{aligned} \\
+>
+>   but at the midpoint
+>
+>   \\ \begin{aligned} g(1) &= \min\mathopen{}\left\\1, 1\right\\\mathclose{} \\ &= 1 \\ &\> \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -479,15 +566,25 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 >   \\ \begin{aligned} {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x})\\\tilde{h} &= e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) \\ &= e^{u} (2 h_1 + h_2)^2 \\ &\ge 0, \end{aligned} \\
 >
->   so \\f\\ is convex. The Hessian is not positive definite (\\\tilde{h} = {(1, -2)}^{\top}\\ gives \\0\\), so part 2 does not apply, and in fact \\f\\ is not strictly convex: along \\\tilde{x}= t\\{(1, -2)}^{\top}\\, \\u = 2t - 2t = 0\\ and \\f = 1 - t\\ is linear in \\t\\, so the convexity inequality holds with equality there.
+>   so \\f\\ is convex. The Hessian is not positive definite (\\\tilde{h} = {(1, -2)}^{\top}\\ gives \\0\\), so part 2 does not apply, and in fact \\f\\ is not strictly convex: along \\\tilde{x}= t\\{(1, -2)}^{\top}\\,
+>
+>   \\ \begin{aligned} u &= 2t - 2t \\ &= 0 \end{aligned} \\
+>
+>   and \\f = 1 - t\\ is linear in \\t\\, so the convexity inequality holds with equality there.
 
 > **NOTE:**
 >
-> **Example 23 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has \\f''(0) = 12 \cdot 0^2 = 0\\, so \\\mathbf{H}\_f(0) = \[0\]\\ is [singular](linear-algebra.llms.md#def-invertible-matrix) and not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 1](#eq-supporting-hyperplane): for \\x \ne y\\,
+> **Example 23 (Strictly convex with a singular Hessian)** Part 2 is sufficient but not necessary. \\f(x) = x^4\\ has
+>
+> \\ \begin{aligned} f''(0) &= 12 \cdot 0^2 \\ &= 0, \end{aligned} \\
+>
+> so \\\mathbf{H}\_f(0) = \[0\]\\ is [singular](linear-algebra.llms.md#def-invertible-matrix) and not positive definite. Yet \\f\\ is strictly convex, by the strict form of [Equation 1](#eq-supporting-hyperplane): for \\x \ne y\\,
 >
 > \\ \begin{aligned} x^4 - y^4 - 4 y^3 (x - y) &= (x - y)(x^3 + x^2 y + x y^2 + y^3) - 4 y^3 (x - y) && \text{(factor } x^4 - y^4 \text{)} \\ &= (x - y)(x^3 + x^2 y + x y^2 - 3 y^3) && \text{(collect the } y^3 \text{ terms)} \\ &= (x - y)^2 (x^2 + 2 x y + 3 y^2) && \text{(} (x - y)(x^2 + 2 x y + 3 y^2) = x^3 + x^2 y + x y^2 - 3 y^3 \text{)} \\ &= (x - y)^2 \mathopen{}\left((x + y)^2 + 2 y^2\right)\mathclose{}, && \text{(complete the square)} \end{aligned} \\
 >
-> which is positive: \\(x - y)^2 \> 0\\, and \\(x + y)^2 + 2 y^2 = 0\\ would need \\y = 0\\ and then \\x = 0 = y\\.
+> which is positive: \\(x - y)^2 \> 0\\, and \\(x + y)^2 + 2 y^2 = 0\\ would need \\y = 0\\ and then
+>
+> \\ \begin{aligned} x &= 0 \\ &= y. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -523,7 +620,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 25 (A line as a feasible set)** With the single constraint \\3 x_1 + 4 x_2 = 5\\, the feasible set is the line \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\\\mathclose{}\\. \\{(1, 0.5)}^{\top}\\ is feasible, since \\3 \cdot 1 + 4 \cdot 0.5 = 3 + 2 = 5\\; \\\tilde{0}\\ is not feasible, since \\3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\\.
+> **Example 25 (A line as a feasible set)** With the single constraint \\3 x_1 + 4 x_2 = 5\\, the feasible set is the line \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\\\mathclose{}\\. \\{(1, 0.5)}^{\top}\\ is feasible, since
+>
+> \\ \begin{aligned} 3 \cdot 1 + 4 \cdot 0.5 &= 3 + 2 \\ &= 5; \end{aligned} \\
+>
+> \\\tilde{0}\\ is not feasible, since \\3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\\.
 
 > **NOTE:**
 >
@@ -531,7 +632,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 26 (Minimizing over a line)** In the problem of minimizing \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\, the objective function is \\f(\tilde{x}) = x_1^2 + x_2^2\\, and the feasible set is the line of [Example 25](#exm-feasible-set). The feasible point \\{(1, 0.5)}^{\top}\\ has \\f(1, 0.5) = 1 + 0.25 = 1.25\\. \\\tilde{0}\\ minimizes \\f\\ over all of \\\mathbb{R}^2\\, with \\f(\tilde{0}) = 0\\, but it is not a minimizer over the feasible set, because it is not feasible.
+> **Example 26 (Minimizing over a line)** In the problem of minimizing \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\, the objective function is \\f(\tilde{x}) = x_1^2 + x_2^2\\, and the feasible set is the line of [Example 25](#exm-feasible-set). The feasible point \\{(1, 0.5)}^{\top}\\ has
+>
+> \\ \begin{aligned} f(1, 0.5) &= 1 + 0.25 \\ &= 1.25. \end{aligned} \\
+>
+> \\\tilde{0}\\ minimizes \\f\\ over all of \\\mathbb{R}^2\\, with \\f(\tilde{0}) = 0\\, but it is not a minimizer over the feasible set, because it is not feasible.
 
 Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ positive definite, and the constraints ([Definition 8](#def-feasible-set)) are \\m\\ linear equations \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, where \\\mathbf{A}\\ is a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\. The only stationary point of the objective alone ([Definition 1](#def-stationary-point)) is \\\tilde{0}\_{p \times 1}\\ (its gradient is \\\mathbf{S} \tilde{x}\\, and \\\mathbf{S}\\ is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set ([Definition 8](#def-feasible-set)) is then found among the stationary points of a new function of the extended set of unknowns.
 
@@ -585,7 +690,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \tilde{x}^\* &= {\mathbf{A}}^{\top} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(substitute } \tilde{x}^\* \text{)} \\ &= \mathbf{M} \mathbf{M}^{-1} \tilde{b} && \text{(definition of } \mathbf{M} \text{)} \\ &= \tilde{b}, && \text{(} \mathbf{M} \mathbf{M}^{-1} = \mathbf{I}\_m \text{)} \\ \mathbf{S} \tilde{x}^\* + \mathbf{A} \tilde{\lambda}^\* &= \mathbf{S} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b} - \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(substitute } \tilde{x}^\* \text{ and } \tilde{\lambda}^\* \text{)} \\ &= \mathbf{A} \mathbf{M}^{-1} \tilde{b} - \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(} \mathbf{S} \mathbf{S}^{-1} = \mathbf{I}\_p \text{)} \\ &= \tilde{0}\_{p \times 1}. && \text{(subtract)} \end{aligned} \\
 >
-> **\\\tilde{x}^\*\\ is the unique minimizer.** Let \\\tilde{x}\\ satisfy \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, and let \\\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{x}^\*\\, so \\{\mathbf{A}}^{\top} \tilde{d} = {\mathbf{A}}^{\top} \tilde{x}- {\mathbf{A}}^{\top} \tilde{x}^\* = \tilde{b} - \tilde{b} = \tilde{0}\_{m \times 1}\\ (matrix products distribute; both points satisfy the constraint). First, the cross term vanishes:
+> **\\\tilde{x}^\*\\ is the unique minimizer.** Let \\\tilde{x}\\ satisfy \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, and let \\\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{x}^\*\\, so
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \tilde{d} &= {\mathbf{A}}^{\top} \tilde{x}- {\mathbf{A}}^{\top} \tilde{x}^\* \\ &= \tilde{b} - \tilde{b} \\ &= \tilde{0}\_{m \times 1} \end{aligned} \\
+>
+> (matrix products distribute; both points satisfy the constraint). First, the cross term vanishes:
 >
 > \\ \begin{aligned} {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^\* &= {\tilde{d}}^{\top} \mathbf{S} \mathbf{S}^{-1} \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(substitute } \tilde{x}^\* \text{)} \\ &= {\tilde{d}}^{\top} \mathbf{A} \mathbf{M}^{-1} \tilde{b} && \text{(} \mathbf{S} \mathbf{S}^{-1} = \mathbf{I}\_p \text{)} \\ &= {({\mathbf{A}}^{\top} \tilde{d})}^{\top} \mathbf{M}^{-1} \tilde{b} && \text{(transpose of a product; } {({\mathbf{A}}^{\top})}^{\top} = \mathbf{A} \text{)} \\ &= {\tilde{0}\_{m \times 1}}^{\top} \mathbf{M}^{-1} \tilde{b} && \text{(} {\mathbf{A}}^{\top} \tilde{d} = \tilde{0}\_{m \times 1} \text{)} \\ &= 0. && \text{(a product with a zero factor is zero)} \end{aligned} \\
 >
@@ -607,9 +716,17 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > Checks:
 >
-> - the constraint: \\3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5\\;
-> - the first block of [Equation 2](#eq-kkt): \\\mathbf{S} \tilde{x}^\* + \mathbf{A} \tilde{\lambda}^\* = {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) = {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} = \tilde{0}\_{2 \times 1}\\;
-> - the value: \\0.6^2 + 0.8^2 = 0.36 + 0.64 = 1\\.
+> - the constraint:
+>
+>   \\ \begin{aligned} 3 (0.6) + 4 (0.8) &= 1.8 + 3.2 \\ &= 5; \end{aligned} \\
+>
+> - the first block of [Equation 2](#eq-kkt):
+>
+>   \\ \begin{aligned} \mathbf{S} \tilde{x}^\* + \mathbf{A} \tilde{\lambda}^\* &= {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) \\ &= {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} \\ &= \tilde{0}\_{2 \times 1}; \end{aligned} \\
+>
+> - the value:
+>
+>   \\ \begin{aligned} 0.6^2 + 0.8^2 &= 0.36 + 0.64 \\ &= 1. \end{aligned} \\
 >
 > Geometrically, \\\tilde{x}^\*\\ is the point of the line nearest the origin, at distance \\1\\.
 
@@ -618,7 +735,16 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 > **Example 29 (The hypotheses are needed)**  
 >
 > - If \\\mathbf{S}\\ is not positive definite there may be no minimizer: with \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}\\ and the constraint \\x_1 = 1\\ (\\\mathbf{A} = {(1, 0)}^{\top}\\, \\\tilde{b} = \[1\]\\), \\f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\\ decreases without bound as \\x_2\\ grows.
-> - If the columns of \\\mathbf{A}\\ are dependent, \\\mathbf{M}\\ is not invertible: with \\\mathbf{S} = \mathbf{I}\_2\\ and \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, \\\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, whose columns are equal. So \\\mathbf{M} {(1, -1)}^{\top} = \tilde{0}\_{2 \times 1}\\, and \\\mathbf{M}\\ is not invertible ([a square matrix is invertible exactly when its null space is zero](linear-algebra.llms.md#thm-invertible-rank)). The two constraints both read \\x_1 + x_2 = b_i\\, so they have no solution at all when \\b_1 \ne b_2\\. When \\b_1 = b_2\\ a unique minimizer still exists, \\x_1 = x_2 = b_1 / 2\\, but the formula of [Theorem 11](#thm-qp-equality) cannot produce it.
+>
+> - If the columns of \\\mathbf{A}\\ are dependent, \\\mathbf{M}\\ is not invertible: with \\\mathbf{S} = \mathbf{I}\_2\\ and \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\,
+>
+>   \\ \begin{aligned} \mathbf{M} &= {\mathbf{A}}^{\top} \mathbf{A} \\ &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}, \end{aligned} \\
+>
+>   whose columns are equal. So \\\mathbf{M} {(1, -1)}^{\top} = \tilde{0}\_{2 \times 1}\\, and \\\mathbf{M}\\ is not invertible ([a square matrix is invertible exactly when its null space is zero](linear-algebra.llms.md#thm-invertible-rank)). The two constraints both read \\x_1 + x_2 = b_i\\, so they have no solution at all when \\b_1 \ne b_2\\. When \\b_1 = b_2\\ a unique minimizer still exists,
+>
+>   \\ \begin{aligned} x_1 &= x_2 \\ &= b_1 / 2, \end{aligned} \\
+>
+>   but the formula of [Theorem 11](#thm-qp-equality) cannot produce it.
 
 > **NOTE:**
 >
@@ -642,7 +768,15 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 31 (Moving the line)** In [Example 28](#exm-qp-equality) with a general right side \\b\\ in place of \\5\\, \\\mathbf{M}^{-1} = \tfrac{2}{25}\\ and \\f^\*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\\b^2 = \tfrac{b^2}{25}\\, so \\\frac{d }{d b} f^\*(b) = \tfrac{2b}{25}\\. At \\b = 5\\ this derivative is \\\tfrac{10}{25} = 0.4 = -\lambda^\*\\: moving the line \\3 x_1 + 4 x_2 = b\\ outward by a small step \\\varepsilon\\ in \\b\\ raises the minimum value by about \\0.4\\\varepsilon\\.
+> **Example 31 (Moving the line)** In [Example 28](#exm-qp-equality) with a general right side \\b\\ in place of \\5\\, \\\mathbf{M}^{-1} = \tfrac{2}{25}\\ and
+>
+> \\ \begin{aligned} f^\*(b) &= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\\b^2 \\ &= \tfrac{b^2}{25}, \end{aligned} \\
+>
+> so \\\frac{d }{d b} f^\*(b) = \tfrac{2b}{25}\\. At \\b = 5\\ this derivative is
+>
+> \\ \begin{aligned} \tfrac{10}{25} &= 0.4 \\ &= -\lambda^\*: \end{aligned} \\
+>
+> moving the line \\3 x_1 + 4 x_2 = b\\ outward by a small step \\\varepsilon\\ in \\b\\ raises the minimum value by about \\0.4\\\varepsilon\\.
 
 ## 4 Newton’s method and gradient descent
 
@@ -687,8 +821,12 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > From \\x^{(0)} = 2.5\\:
 >
-> - \\x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05\\;
-> - \\x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\\ (to six decimals);
+> - \\ \begin{aligned} x^{(1)} &= \tfrac{1}{2} (2.5 + 1.6) \\ &= 2.05; \end{aligned} \\
+>
+> - \\ \begin{aligned} x^{(2)} &= \tfrac{1}{2} (2.05 + 1.951219\ldots) \\ &= 2.000610 \end{aligned} \\
+>
+>   (to six decimals);
+>
 > - \\x^{(3)} = 2.0000001\\ (to seven decimals).
 >
 > The iterates ([Definition 12](#def-vector-sequence-limit)) approach \\2\\, the local minimizer of \\f\\ (a stationary point, since \\f'(2) = 0\\, with \\f''(2) = 4 \> 0\\; [Theorem 5](#thm-second-order-condition)).
@@ -703,7 +841,15 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 34 (The model at \\x = 2.5\\)** For \\f(x) = \tfrac{1}{3} x^3 - 4x\\ at \\x = 2.5\\ ([Example 33](#exm-newton-method)), \\g = 2.5^2 - 4 = 2.25\\ and \\H = \[2 \cdot 2.5\] = \[5\]\\, so \\q(\delta) = f(2.5) + 2.25\\\delta+ 2.5\\\delta^2\\. For \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, whose Hessian is \\\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ at every point, the model at any \\\tilde{x}\\ equals \\f(\tilde{x}+ \tilde{\delta})\\ exactly ([Example 6](#exm-taylor-mv) with \\\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}\\).
+> **Example 34 (The model at \\x = 2.5\\)** For \\f(x) = \tfrac{1}{3} x^3 - 4x\\ at \\x = 2.5\\ ([Example 33](#exm-newton-method)),
+>
+> \\ \begin{aligned} g &= 2.5^2 - 4 \\ &= 2.25 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} H &= \[2 \cdot 2.5\] \\ &= \[5\], \end{aligned} \\
+>
+> so \\q(\delta) = f(2.5) + 2.25\\\delta+ 2.5\\\delta^2\\. For \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, whose Hessian is \\\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ at every point, the model at any \\\tilde{x}\\ equals \\f(\tilde{x}+ \tilde{\delta})\\ exactly ([Example 6](#exm-taylor-mv) with \\\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}\\).
 
 > **NOTE:**
 >
@@ -723,7 +869,15 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 35 (The Newton step at \\x = 2.5\\)** For the model \\q(\delta) = f(2.5) + 2.25\\\delta+ 2.5\\\delta^2\\ of [Example 34](#exm-quadratic-model), \\H = \[5\]\\ is positive definite, so by [Theorem 12](#thm-newton-model) its minimizer is \\\delta^\* = -H^{-1} g = -2.25 / 5 = -0.45\\. Setting the derivative \\2.25 + 5 \delta\\ to \\0\\ gives the same \\\delta^\*\\, and \\2.5 - 0.45 = 2.05 = x^{(1)}\\ ([Example 33](#exm-newton-method)).
+> **Example 35 (The Newton step at \\x = 2.5\\)** For the model \\q(\delta) = f(2.5) + 2.25\\\delta+ 2.5\\\delta^2\\ of [Example 34](#exm-quadratic-model), \\H = \[5\]\\ is positive definite, so by [Theorem 12](#thm-newton-model) its minimizer is
+>
+> \\ \begin{aligned} \delta^\* &= -H^{-1} g \\ &= -2.25 / 5 \\ &= -0.45. \end{aligned} \\
+>
+> Setting the derivative \\2.25 + 5 \delta\\ to \\0\\ gives the same \\\delta^\*\\, and
+>
+> \\ \begin{aligned} 2.5 - 0.45 &= 2.05 \\ &= x^{(1)} \end{aligned} \\
+>
+> ([Example 33](#exm-newton-method)).
 
 > **NOTE:**
 >
@@ -753,7 +907,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for \\\tilde{c} \cdot \tilde{x}\\, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\\; by [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with \\\tfrac{1}{2} \mathbf{S}\\ in place of \\\mathbf{S}\\, and because the gradient \\-\tilde{c}\\ of the linear term is constant ([constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector)), \\\mathbf{H}\_f(\tilde{x}) = \mathbf{S}\\, which is invertible ([positive definite inverse](linear-algebra.llms.md#thm-pd-inverse)). So
+> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for \\\tilde{c} \cdot \tilde{x}\\,
+>
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}) &= \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} \\ &= \mathbf{S} \tilde{x}- \tilde{c}; \end{aligned} \\
+>
+> by [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with \\\tfrac{1}{2} \mathbf{S}\\ in place of \\\mathbf{S}\\, and because the gradient \\-\tilde{c}\\ of the linear term is constant ([constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector)), \\\mathbf{H}\_f(\tilde{x}) = \mathbf{S}\\, which is invertible ([positive definite inverse](linear-algebra.llms.md#thm-pd-inverse)). So
 >
 > \\ \begin{aligned} \tilde{x}^{(1)} &= \tilde{x}^{(0)} - \mathbf{S}^{-1} (\mathbf{S} \tilde{x}^{(0)} - \tilde{c}) && \text{(definition of Newton's method)} \\ &= \tilde{x}^{(0)} - \mathbf{S}^{-1} \mathbf{S} \tilde{x}^{(0)} + \mathbf{S}^{-1} \tilde{c} && \text{(distribute)} \\ &= \tilde{x}^{(0)} - \tilde{x}^{(0)} + \mathbf{S}^{-1} \tilde{c} && \text{(} \mathbf{S}^{-1} \mathbf{S} = \mathbf{I}\_p \text{)} \\ &= \mathbf{S}^{-1} \tilde{c}. && \text{(cancel)} \end{aligned} \\
 >
@@ -761,7 +919,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 39 (One step to the minimizer)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, so \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ and \\\tilde{c} = \tilde{0}\_{2 \times 1}\\. From \\\tilde{x}^{(0)} = {(3, 1)}^{\top}\\ the gradient is \\\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\\, and \\\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}\\, so the Newton step is \\-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\\ and \\\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}\_{2 \times 1}\\, the minimizer.
+> **Example 39 (One step to the minimizer)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, so \\\mathbf{S} = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ and \\\tilde{c} = \tilde{0}\_{2 \times 1}\\. From \\\tilde{x}^{(0)} = {(3, 1)}^{\top}\\ the gradient is \\\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\\, and \\\mathbf{S}^{-1} = \begin{bmatrix} 1 & 0 \\ 0 & 1/3 \end{bmatrix}\\, so the Newton step is \\-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\\ and
+>
+> \\ \begin{aligned} \tilde{x}^{(1)} &= {(3, 1)}^{\top} - {(3, 1)}^{\top} \\ &= \tilde{0}\_{2 \times 1}, \end{aligned} \\
+>
+> the minimizer.
 
 > **NOTE:**
 >
@@ -773,7 +935,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 40 (Fixed steps on a parabola)** For \\f(x) = x^2\\, \\f'(x) = 2x\\, so gradient descent with fixed step length \\s\\ is \\x^{(t+1)} = x^{(t)} - 2 s\\x^{(t)} = (1 - 2s)\\x^{(t)}\\, and \\x^{(t)} = (1 - 2s)^t x^{(0)}\\.
+> **Example 40 (Fixed steps on a parabola)** For \\f(x) = x^2\\, \\f'(x) = 2x\\, so gradient descent with fixed step length \\s\\ is
+>
+> \\ \begin{aligned} x^{(t+1)} &= x^{(t)} - 2 s\\x^{(t)} \\ &= (1 - 2s)\\x^{(t)}, \end{aligned} \\
+>
+> and \\x^{(t)} = (1 - 2s)^t x^{(0)}\\.
 >
 > - With \\s = 0.25\\, \\x^{(t)} = 0.5^t x^{(0)}\\, which tends to the minimizer \\0\\.
 > - With \\s = 0.5\\, the first step lands on \\0\\, since \\1 - 2s = 0\\.
@@ -789,7 +955,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > \\ \begin{aligned} \phi(s) &= f(2 - 4s) && \text{(the value at step length } s \text{)} \\&= (2 - 4s)^2 && (f(x) = x^2) \end{aligned} \\
 >
-> \\\phi(s) \ge 0\\ for every \\s\\, and \\\phi(0.5) = (2 - 2)^2 = 0\\, so exact line search chooses \\s^{(t)} = 0.5\\, which lands on the minimizer \\x^{(t+1)} = 0\\ in one step.
+> \\\phi(s) \ge 0\\ for every \\s\\, and
+>
+> \\ \begin{aligned} \phi(0.5) &= (2 - 2)^2 \\ &= 0, \end{aligned} \\
+>
+> so exact line search chooses \\s^{(t)} = 0.5\\, which lands on the minimizer \\x^{(t+1)} = 0\\ in one step.
 
 > **NOTE:**
 >
@@ -797,10 +967,16 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 42 (Descent directions for \\x_1^2 + x_2^2\\ at \\{(1, 0)}^{\top}\\)** Let \\f(\tilde{x}) = x_1^2 + x_2^2\\ and \\\tilde{x}= {(1, 0)}^{\top}\\, so \\\tilde{g} = {(2 x_1,\\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\\.
+> **Example 42 (Descent directions for \\x_1^2 + x_2^2\\ at \\{(1, 0)}^{\top}\\)** Let \\f(\tilde{x}) = x_1^2 + x_2^2\\ and \\\tilde{x}= {(1, 0)}^{\top}\\, so
 >
-> - \\\tilde{d} = {(-1, 1)}^{\top}\\ is a descent direction: \\\tilde{g} \cdot \tilde{d} = -2 + 0 = -2 \< 0\\.
+> \\ \begin{aligned} \tilde{g} &= {(2 x_1,\\ 2 x_2)}^{\top} \\ &= {(2, 0)}^{\top}. \end{aligned} \\
+>
+> - \\\tilde{d} = {(-1, 1)}^{\top}\\ is a descent direction:
+>
+>   \\ \begin{aligned} \tilde{g} \cdot \tilde{d} &= -2 + 0 \\ &= -2 \\ &\< 0. \end{aligned} \\
+>
 > - \\\tilde{d} = {(0, 1)}^{\top}\\ is not: \\\tilde{g} \cdot \tilde{d} = 0\\.
+>
 > - \\-\tilde{g} = {(-2, 0)}^{\top}\\ is: \\\tilde{g} \cdot (-\tilde{g}) = -4 \< 0\\.
 
 > **NOTE:**

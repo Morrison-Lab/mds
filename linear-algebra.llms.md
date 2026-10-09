@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 11:00:09 (PDT)
+Last modified: 2026-10-09 11:33:26 (PDT)
 
 ## 1 Vectors
 
@@ -153,7 +153,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 4* (The zero vector is the additive identity). Adding the zero vector to a vector leaves it unchanged ([Definition 6](#def-vector-addition)): \\\tilde{x}+ \tilde{0}= \tilde{x}\\ for any vector \\\tilde{x}\\ of the same length, so \\\tilde{0}\\ is the [identity element](algebra.llms.md#def-identity-element) for vector addition. For example, \\(2, -1) + (0, 0) = (2 + 0, -1 + 0) = (2, -1)\\.
+> *Remark 4* (The zero vector is the additive identity). Adding the zero vector to a vector leaves it unchanged ([Definition 6](#def-vector-addition)): \\\tilde{x}+ \tilde{0}= \tilde{x}\\ for any vector \\\tilde{x}\\ of the same length, so \\\tilde{0}\\ is the [identity element](algebra.llms.md#def-identity-element) for vector addition. For example,
+>
+> \\ \begin{aligned} (2, -1) + (0, 0) &= (2 + 0, -1 + 0) \\ &= (2, -1). \end{aligned} \\
 
 > **NOTE:**
 >
@@ -177,7 +179,15 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 5* (The ones vector sums the entries). The dot product ([Definition 7](#def-dot-product)) of \\\tilde{1}\\ with \\\tilde{x}\\ is the sum of the entries of \\\tilde{x}\\: \\\tilde{1} \cdot \tilde{x}= \sum\_{i=1}^p1 \cdot x_i = \sum\_{i=1}^px_i\\. For example, for \\\tilde{x}= (2, -1, 5)\\, \\\tilde{1} \cdot \tilde{x}= 2 + (-1) + 5 = 6\\, and dividing by the length \\p = 3\\ gives the [mean](#def-mean) of the entries, \\6 / 3 = 2\\.
+> *Remark 5* (The ones vector sums the entries). The dot product (2) of \\\tilde{1}\\ with \\\tilde{x}\\ is the sum of the entries of \\\tilde{x}\\:
+>
+> \\ \begin{aligned} \tilde{1} \cdot \tilde{x}&= \sum\_{i=1}^p1 \cdot x_i \\ &= \sum\_{i=1}^px_i. \end{aligned} \\
+>
+> For example, for \\\tilde{x}= (2, -1, 5)\\,
+>
+> \\ \begin{aligned} \tilde{1} \cdot \tilde{x}&= 2 + (-1) + 5 \\ &= 6, \end{aligned} \\
+>
+> and dividing by the length \\p = 3\\ gives the [mean](#def-mean) of the entries, \\6 / 3 = 2\\.
 
 > **NOTE:**
 >
@@ -221,17 +231,23 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Definition 13 (Orthogonal vectors)** Two vectors \\\tilde{x}\\ and \\\tilde{y}\\ of the same length are **orthogonal** (written \\\tilde{x}\perp \tilde{y}\\) if their dot product ([Definition 7](#def-dot-product)) is zero:
+> **Definition 13 (Orthogonal vectors)** Two vectors \\\tilde{x}\\ and \\\tilde{y}\\ of the same length are **orthogonal** (written \\\tilde{x}\perp \tilde{y}\\) if their dot product (2) is zero:
 >
 > \\\tilde{x}\perp \tilde{y}\iff \tilde{x}\cdot \tilde{y}= 0\\
 
 > **NOTE:**
 >
-> *Remark 7* (Orthogonal means perpendicular). Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, \\(1, 2)\\ and \\(-2, 1)\\ are perpendicular, and their dot product is \\1 \cdot(-2) + 2 \cdot 1 = 0\\. The same test works in \\\mathbb{R}^3\\, where pictures are harder to draw: \\(1, 1, 0) \cdot (1, -1, 5) = 1 - 1 + 0 = 0\\, so \\(1, 1, 0) \perp (1, -1, 5)\\.
+> *Remark 7* (Orthogonal means perpendicular). Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, \\(1, 2)\\ and \\(-2, 1)\\ are perpendicular, and their dot product is \\1 \cdot(-2) + 2 \cdot 1 = 0\\. The same test works in \\\mathbb{R}^3\\, where pictures are harder to draw:
+>
+> \\ \begin{aligned} (1, 1, 0) \cdot (1, -1, 5) &= 1 - 1 + 0 \\ &= 0, \end{aligned} \\
+>
+> so \\(1, 1, 0) \perp (1, -1, 5)\\.
 
 > **NOTE:**
 >
-> **Example 8 (Vectors that are not orthogonal)** \\(1, 2) \cdot (1, 1) = 1 \cdot 1 + 2 \cdot 1 = 3 \ne 0\\, so \\(1, 2)\\ and \\(1, 1)\\ are not orthogonal.
+> **Example 8 (Vectors that are not orthogonal)** \\ \begin{aligned} (1, 2) \cdot (1, 1) &= 1 \cdot 1 + 2 \cdot 1 \\ &= 3 \\ &\ne 0, \end{aligned} \\
+>
+> so \\(1, 2)\\ and \\(1, 1)\\ are not orthogonal.
 
 > **NOTE:**
 >
@@ -259,7 +275,9 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} &= \sqrt{0.6^2 + 0.8^2} && \text{(definition of the norm)} \\ &= \sqrt{0.36 + 0.64} && \text{(square)} \\ &= \sqrt{1} && \text{(add)} \\ &= 1 && \text{(take the square root)} \end{aligned} \\
 >
-> so \\(0.6, 0.8)\\ is a unit vector. The vector \\(1, 1)\\ is not: \\\mathopen{}\left\lVert(1, 1)\right\rVert\mathclose{} = \sqrt{1^2 + 1^2} = \sqrt{2} \ne 1\\.
+> so \\(0.6, 0.8)\\ is a unit vector. The vector \\(1, 1)\\ is not:
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert(1, 1)\right\rVert\mathclose{} &= \sqrt{1^2 + 1^2} \\ &= \sqrt{2} \\ &\ne 1. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -273,11 +291,15 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > *Solution 2*.
 >
-> 1.  \\\tilde{x}- \tilde{y}= (1 - 4, 2 - 6) = (-3, -4)\\.
+> 1.  \\ \begin{aligned} \tilde{x}- \tilde{y}&= (1 - 4, 2 - 6) \\ &= (-3, -4). \end{aligned} \\
 >
-> 2.  \\\mathopen{}\left\lVert\tilde{x}- \tilde{y}\right\rVert\mathclose{} = \sqrt{(-3)^2 + (-4)^2} = \sqrt{25} = 5\\.
+> 2.  \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}- \tilde{y}\right\rVert\mathclose{} &= \sqrt{(-3)^2 + (-4)^2} \\ &= \sqrt{25} \\ &= 5. \end{aligned} \\
 >
-> 3.  \\\tilde{y}- \tilde{x}= (3, 4)\\, and \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} = \sqrt{3^2 + 4^2} = 5\\. Yes, the result is the same.
+> 3.  \\\tilde{y}- \tilde{x}= (3, 4)\\, and
+>
+>     \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &= \sqrt{3^2 + 4^2} \\ &= 5. \end{aligned} \\
+>
+>     Yes, the result is the same.
 
 > **NOTE:**
 >
@@ -287,7 +309,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 8* (Distance from the origin). The distance from the origin \\\tilde{0}\\ to a vector \\\tilde{x}\\ is the norm of \\\tilde{x}\\: \\d(\tilde{x}, \tilde{0}) = \mathopen{}\left\lVert\tilde{x}- \tilde{0}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\ ([Goodfellow et al. 2016, 39](#ref-goodfellow2016deep)).
+> *Remark 8* (Distance from the origin). The distance from the origin \\\tilde{0}\\ to a vector \\\tilde{x}\\ is the norm of \\\tilde{x}\\:
+>
+> \\ \begin{aligned} d(\tilde{x}, \tilde{0}) &= \mathopen{}\left\lVert\tilde{x}- \tilde{0}\right\rVert\mathclose{} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \end{aligned} \\
+>
+> ([Goodfellow et al. 2016, 39](#ref-goodfellow2016deep)).
 >
 > For example, the distance from \\\tilde{0}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 9](#exm-euclidean-norm).
 
@@ -299,14 +325,27 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 11 (Indicator vectors are orthonormal)** The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Definition 12](#def-indicator-vector)) form an orthonormal set. By [Theorem 2](#thm-indicator-selection), \\\tilde{e}\_i \cdot \tilde{e}\_j\\ is entry \\i\\ of \\\tilde{e}\_j\\, which is \\1\\ if \\i = j\\ and \\0\\ if \\i \neq j\\. For \\p = 2\\: \\\tilde{e}\_1 \cdot \tilde{e}\_1 = 1 \cdot 1 + 0 \cdot 0 = 1\\, \\\tilde{e}\_2 \cdot \tilde{e}\_2 = 0 \cdot 0 + 1 \cdot 1 = 1\\, and \\\tilde{e}\_1 \cdot \tilde{e}\_2 = 1 \cdot 0 + 0 \cdot 1 = 0\\.
+> **Example 11 (Indicator vectors are orthonormal)** The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Definition 12](#def-indicator-vector)) form an orthonormal set. By [Theorem 2](#thm-indicator-selection), \\\tilde{e}\_i \cdot \tilde{e}\_j\\ is entry \\i\\ of \\\tilde{e}\_j\\, which is \\1\\ if \\i = j\\ and \\0\\ if \\i \neq j\\. For \\p = 2\\:
+>
+> \\ \begin{aligned} \tilde{e}\_1 \cdot \tilde{e}\_1 &= 1 \cdot 1 + 0 \cdot 0 \\ &= 1, \end{aligned} \\
+>
+> \\ \begin{aligned} \tilde{e}\_2 \cdot \tilde{e}\_2 &= 0 \cdot 0 + 1 \cdot 1 \\ &= 1, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \tilde{e}\_1 \cdot \tilde{e}\_2 &= 1 \cdot 0 + 0 \cdot 1 \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
 > **Example 12 (Two ways to fail to be orthonormal)**  
 >
 > - \\(1, 1)\\ and \\(1, -1)\\ are orthogonal, since \\1 \cdot 1 + 1 \cdot(-1) = 0\\, but not orthonormal: \\(1, 1) \cdot (1, 1) = 2 \ne 1\\.
-> - \\(1, 0)\\ and \\(0.6, 0.8)\\ both have unit length, since \\(1, 0) \cdot (1, 0) = 1\\ and \\(0.6, 0.8) \cdot (0.6, 0.8) = 0.36 + 0.64 = 1\\, but they are not orthonormal: \\(1, 0) \cdot (0.6, 0.8) = 0.6 \ne 0\\.
+>
+> - \\(1, 0)\\ and \\(0.6, 0.8)\\ both have unit length, since \\(1, 0) \cdot (1, 0) = 1\\ and
+>
+>   \\ \begin{aligned} (0.6, 0.8) \cdot (0.6, 0.8) &= 0.36 + 0.64 \\ &= 1, \end{aligned} \\
+>
+>   but they are not orthonormal: \\(1, 0) \cdot (0.6, 0.8) = 0.6 \ne 0\\.
 
 > **NOTE:**
 >
@@ -493,7 +532,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Proof*. Entry \\(i, j)\\ of each side, from [Definition 24](#def-matrix-mult):
+> *Proof*. Entry \\(i, j)\\ of each side, from 4:
 >
 > \\ \begin{aligned} \mathopen{}\left\[(\mathbf{A}\mathbf{B})\mathbf{C}\right\]\mathclose{}\_{ij} &= \sum\_{t=1}^{l} (\mathbf{A}\mathbf{B})\_{it}\\ c\_{tj} && \text{(definition of } (\mathbf{A}\mathbf{B})\mathbf{C} \text{)} \\ &= \sum\_{t=1}^{l} \mathopen{}\left(\sum\_{s=1}^{k} a\_{is}\\ b\_{st}\right)\mathclose{} c\_{tj} && \text{(definition of } \mathbf{A}\mathbf{B} \text{)} \\ &= \sum\_{s=1}^{k} a\_{is} \mathopen{}\left(\sum\_{t=1}^{l} b\_{st}\\ c\_{tj}\right)\mathclose{} && \text{(distribute and swap the finite sums)} \\ &= \sum\_{s=1}^{k} a\_{is}\\ (\mathbf{B}\mathbf{C})\_{sj} && \text{(definition of } \mathbf{B}\mathbf{C} \text{)} \\ &= \mathopen{}\left\[\mathbf{A}(\mathbf{B}\mathbf{C})\right\]\mathclose{}\_{ij} && \text{(definition of } \mathbf{A}(\mathbf{B}\mathbf{C}) \text{)} \end{aligned} \\
 
@@ -582,7 +621,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 11* (Each entry is a dot product). Matrix-vector multiplication extends the dot product ([Definition 7](#def-dot-product)): entry \\i\\ of \\\mathbf{A}\tilde{x}\\ is the dot product of row \\i\\ of \\\mathbf{A}\\ with \\\tilde{x}\\. For example,
+> *Remark 11* (Each entry is a dot product). Matrix-vector multiplication extends the dot product (2): entry \\i\\ of \\\mathbf{A}\tilde{x}\\ is the dot product of row \\i\\ of \\\mathbf{A}\\ with \\\tilde{x}\\. For example,
 >
 > \\ \begin{aligned} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} &= \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\ &= \begin{bmatrix} -1 \\ -1 \end{bmatrix}. \end{aligned} \\
 
@@ -611,8 +650,16 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > **Example 23 (A linear map, and two functions that are not)**  
 >
-> - \\f(\tilde{x}) = (2 x_1,\\ x_1 + x_2)\\ on \\\mathbb{R}^2\\ is linear. For \\\tilde{x}, \tilde{y}\in \mathbb{R}^2\\ and \\c \in \mathbb{R}\\: \\f(\tilde{x}+ \tilde{y}) = (2 (x_1 + y_1),\\ (x_1 + y_1) + (x_2 + y_2)) = f(\tilde{x}) + f(\tilde{y})\\ and \\f(c \tilde{x}) = (2 c x_1,\\ c x_1 + c x_2) = c f(\tilde{x})\\.
+> - \\f(\tilde{x}) = (2 x_1,\\ x_1 + x_2)\\ on \\\mathbb{R}^2\\ is linear. For \\\tilde{x}, \tilde{y}\in \mathbb{R}^2\\ and \\c \in \mathbb{R}\\:
+>
+>   \\ \begin{aligned} f(\tilde{x}+ \tilde{y}) &= (2 (x_1 + y_1),\\ (x_1 + y_1) + (x_2 + y_2)) \\ &= f(\tilde{x}) + f(\tilde{y}) \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} f(c \tilde{x}) &= (2 c x_1,\\ c x_1 + c x_2) \\ &= c f(\tilde{x}). \end{aligned} \\
+>
 > - \\g(x) = x + 1\\ on \\\mathbb{R}\\ is not linear: additivity fails, since \\g(0 + 0) = 1\\ but \\g(0) + g(0) = 2\\.
+>
 > - \\h(x) = x^2\\ on \\\mathbb{R}\\ is not linear: \\h(2 \cdot 1) = 4\\ but \\2\\h(1) = 2\\, so \\h(c x) \ne c\\h(x)\\ for \\c = 2\\, \\x = 1\\.
 
 > **NOTE:**
@@ -691,7 +738,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > \\ \begin{aligned} \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i &= (\mathbf{B}\tilde{e}\_j)\_i && \text{(assumption on } \mathbf{B} \text{)} \\&= \sum\_{k=1}^{p} b\_{ik} (\tilde{e}\_j)\_k && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \\&= b\_{ij} \cdot 1 + \sum\_{k \neq j} b\_{ik} \cdot 0 && \text{(}\href{#def-indicator-vector}{\text{Definition~12}}\text{, splitting off the } k = j \text{ term)} \\&= b\_{ij} + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= b\_{ij} && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
 >
-> So \\b\_{ij} = \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i = a\_{ij}\\ for every \\i\\ and \\j\\, and \\\mathbf{B} = \mathbf{A}\\.
+> So
+>
+> \\ \begin{aligned} b\_{ij} &= \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i \\ &= a\_{ij} \end{aligned} \\
+>
+> for every \\i\\ and \\j\\, and \\\mathbf{B} = \mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -719,13 +770,21 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > \\ \begin{aligned} f(\tilde{x}) &= \mathbf{A}\tilde{x} && \text{(}\href{#thm-linear-map-matrix}{\text{Theorem~14}}\text{)} \\&= \tilde{w} \cdot \tilde{x} && (\mathbf{A} = \tilde{w}^{\top}) \end{aligned} \\
 >
-> and \\w_j = a\_{1j} = f(\tilde{e}\_j)\\.
+> and
+>
+> \\ \begin{aligned} w_j &= a\_{1j} \\ &= f(\tilde{e}\_j). \end{aligned} \\
 >
 > **If \\f(\tilde{x}) = \tilde{w}^{\top} \tilde{x}\\.** Here \\\tilde{w}^{\top}\\ is a \\1 \times p\\ matrix, so \\f\\ is linear by [Theorem 12](#thm-matrix-map-linear).
 
 > **NOTE:**
 >
-> **Example 27 (A linear function from \\\mathbb{R}^2\\ to \\\mathbb{R}\\)** \\f(\tilde{x}) = 3 x_1 + 5 x_2\\ is \\\tilde{w} \cdot \tilde{x}\\ with \\\tilde{w} = {(3, 5)}^{\top}\\, so it is linear by [Corollary 1](#cor-linear-scalar). The entries of \\\tilde{w}\\ are the values at the indicator vectors: \\f(\tilde{e}\_1) = 3 \cdot 1 + 5 \cdot 0 = 3\\ and \\f(\tilde{e}\_2) = 3 \cdot 0 + 5 \cdot 1 = 5\\.
+> **Example 27 (A linear function from \\\mathbb{R}^2\\ to \\\mathbb{R}\\)** \\f(\tilde{x}) = 3 x_1 + 5 x_2\\ is \\\tilde{w} \cdot \tilde{x}\\ with \\\tilde{w} = {(3, 5)}^{\top}\\, so it is linear by [Corollary 1](#cor-linear-scalar). The entries of \\\tilde{w}\\ are the values at the indicator vectors:
+>
+> \\ \begin{aligned} f(\tilde{e}\_1) &= 3 \cdot 1 + 5 \cdot 0 \\ &= 3 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} f(\tilde{e}\_2) &= 3 \cdot 0 + 5 \cdot 1 \\ &= 5. \end{aligned} \\
 >
 > \\g(\tilde{x}) = 3 x_1 + 5 x_2 + 1\\ is not linear, because \\g(\tilde{0}) = 1 \neq 0\\ ([Theorem 11](#thm-linear-map-zero)).
 
@@ -796,7 +855,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Proof*. If \\\tilde{b} = \tilde{0}\\, then \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{0}= \mathbf{A}\tilde{x}\\, which is linear by [Theorem 12](#thm-matrix-map-linear). Conversely, if \\f\\ is linear, then \\f(\tilde{0}) = \tilde{0}\\ by [Theorem 11](#thm-linear-map-zero), and \\f(\tilde{0}) = \tilde{b}\\ by [Theorem 15](#thm-affine-map-zero), so \\\tilde{b} = \tilde{0}\\.
+> *Proof*. If \\\tilde{b} = \tilde{0}\\, then
+>
+> \\ \begin{aligned} f(\tilde{x}) &= \mathbf{A}\tilde{x}+ \tilde{0}\\ &= \mathbf{A}\tilde{x}, \end{aligned} \\
+>
+> which is linear by [Theorem 12](#thm-matrix-map-linear). Conversely, if \\f\\ is linear, then \\f(\tilde{0}) = \tilde{0}\\ by [Theorem 11](#thm-linear-map-zero), and \\f(\tilde{0}) = \tilde{b}\\ by [Theorem 15](#thm-affine-map-zero), so \\\tilde{b} = \tilde{0}\\.
 
 > **NOTE:**
 >
@@ -808,7 +871,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Proof*. If \\f\\ is linear, [Theorem 14](#thm-linear-map-matrix) gives a matrix \\\mathbf{A}\\ with \\f(\tilde{x}) = \mathbf{A}\tilde{x}= \mathbf{A}\tilde{x}+ \tilde{0}\\, which is [Definition 34](#def-affine-map) with \\\tilde{b} = \tilde{0}\\.
+> *Proof*. If \\f\\ is linear, [Theorem 14](#thm-linear-map-matrix) gives a matrix \\\mathbf{A}\\ with
+>
+> \\ \begin{aligned} f(\tilde{x}) &= \mathbf{A}\tilde{x}\\ &= \mathbf{A}\tilde{x}+ \tilde{0}, \end{aligned} \\
+>
+> which is [Definition 34](#def-affine-map) with \\\tilde{b} = \tilde{0}\\.
 
 > **NOTE:**
 >
@@ -816,7 +883,15 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 15](#thm-affine-map-zero), applied to each formula, \\\tilde{b} = f(\tilde{0}) = \tilde{b}'\\. Then \\\mathbf{A}\tilde{x}= f(\tilde{x}) - \tilde{b} = \mathbf{A}'\tilde{x}\\ for all \\\tilde{x}\\, so \\\mathbf{A}\\ and \\\mathbf{A}'\\ are both matrices ([Definition 32](#def-matrix-of-linear-map)) of the linear map \\\tilde{x}\mapsto f(\tilde{x}) - \tilde{b}\\ (linear by [Theorem 12](#thm-matrix-map-linear)), and the uniqueness in [Theorem 14](#thm-linear-map-matrix) gives \\\mathbf{A}' = \mathbf{A}\\.
+> *Proof*. By [Theorem 15](#thm-affine-map-zero), applied to each formula,
+>
+> \\ \begin{aligned} \tilde{b} &= f(\tilde{0}) \\ &= \tilde{b}'. \end{aligned} \\
+>
+> Then
+>
+> \\ \begin{aligned} \mathbf{A}\tilde{x}&= f(\tilde{x}) - \tilde{b} \\ &= \mathbf{A}'\tilde{x} \end{aligned} \\
+>
+> for all \\\tilde{x}\\, so \\\mathbf{A}\\ and \\\mathbf{A}'\\ are both matrices ([Definition 32](#def-matrix-of-linear-map)) of the linear map \\\tilde{x}\mapsto f(\tilde{x}) - \tilde{b}\\ (linear by [Theorem 12](#thm-matrix-map-linear)), and the uniqueness in [Theorem 14](#thm-linear-map-matrix) gives \\\mathbf{A}' = \mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -1038,7 +1113,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Remark 13* (The order of the factors reverses). Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with \\\mathbf{A} = \[1,\\ 2\]\\ (\\1 \times 2\\) and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\ (\\2 \times 1\\), \\\mathbf{A}\mathbf{B} = 1 \cdot 3 + 2 \cdot 4 = 11\\, so \\{(\mathbf{A}\mathbf{B})}^{\top} = 11\\, and
+> *Remark 13* (The order of the factors reverses). Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with \\\mathbf{A} = \[1,\\ 2\]\\ (\\1 \times 2\\) and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\ (\\2 \times 1\\),
+>
+> \\ \begin{aligned} \mathbf{A}\mathbf{B} &= 1 \cdot 3 + 2 \cdot 4 \\ &= 11, \end{aligned} \\
+>
+> so \\{(\mathbf{A}\mathbf{B})}^{\top} = 11\\, and
 >
 > \\ {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top} = \[3,\\ 4\] \begin{bmatrix} 1 \\ 2 \end{bmatrix} = 11, \qquad {\mathbf{A}}^{\top}\\{\mathbf{B}}^{\top} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \[3,\\ 4\] = \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}. \\
 >
@@ -1052,7 +1131,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\c_1 \tilde{v}\_1 + \cdots + c_k \tilde{v}\_k = \tilde{0}\\
 >
-> are \\c_1 = \cdots = c_k = 0\\. Vectors that are not linearly independent are **linearly dependent**.
+> are
+>
+> \\ \begin{aligned} c_1 &= \cdots \\ &= c_k \\ &= 0. \end{aligned} \\
+>
+> Vectors that are not linearly independent are **linearly dependent**.
 
 > **NOTE:**
 >
@@ -1274,9 +1357,15 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 44 (Coefficients of \\(3, 5)\\ in two bases)** In the basis \\(1, 0), (0, 1)\\ of [Example 42](#exm-basis), \\(3, 5) = 3\\(1, 0) + 5\\(0, 1)\\, and no other coefficients work. In the basis \\(1, 0), (1, 1)\\, the formula in [Example 42](#exm-basis) gives \\(3, 5) = (3 - 5)\\(1, 0) + 5\\(1, 1) = -2\\(1, 0) + 5\\(1, 1)\\. The same vector has different coefficients in different bases, but within one basis its coefficients are unique.
+> **Example 44 (Coefficients of \\(3, 5)\\ in two bases)** In the basis \\(1, 0), (0, 1)\\ of [Example 42](#exm-basis), \\(3, 5) = 3\\(1, 0) + 5\\(0, 1)\\, and no other coefficients work. In the basis \\(1, 0), (1, 1)\\, the formula in [Example 42](#exm-basis) gives
 >
-> The list \\(1, 0), (0, 1), (1, 1)\\ in [Example 43](#exm-not-basis) spans \\\mathbb{R}^2\\ but is not linearly independent, and the coefficients of \\(3, 5)\\ are not unique: \\(3, 5) = 3\\(1, 0) + 5\\(0, 1) + 0\\(1, 1) = 0\\(1, 0) + 2\\(0, 1) + 3\\(1, 1)\\.
+> \\ \begin{aligned} (3, 5) &= (3 - 5)\\(1, 0) + 5\\(1, 1) \\ &= -2\\(1, 0) + 5\\(1, 1). \end{aligned} \\
+>
+> The same vector has different coefficients in different bases, but within one basis its coefficients are unique.
+>
+> The list \\(1, 0), (0, 1), (1, 1)\\ in [Example 43](#exm-not-basis) spans \\\mathbb{R}^2\\ but is not linearly independent, and the coefficients of \\(3, 5)\\ are not unique:
+>
+> \\ \begin{aligned} (3, 5) &= 3\\(1, 0) + 5\\(0, 1) + 0\\(1, 1) \\ &= 0\\(1, 0) + 2\\(0, 1) + 3\\(1, 1). \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1386,7 +1475,9 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 50 (Subspaces of a plane have dimension at most two)** The plane \\\mathcal{S} = \mathopen{}\left\\(x, y, 0) : x, y \in \mathbb{R}\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ has dimension \\2\\ ([Example 47](#exm-dimension)). By [Theorem 29](#thm-dim-bound), no three vectors with third entry \\0\\ are linearly independent; for instance, \\(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \tilde{0}\\. The line \\\mathcal{T} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ lies in \\\mathcal{S}\\, and \\\dim(\mathcal{T}) = 1 \le 2 = \dim(\mathcal{S})\\.
+> **Example 50 (Subspaces of a plane have dimension at most two)** The plane \\\mathcal{S} = \mathopen{}\left\\(x, y, 0) : x, y \in \mathbb{R}\right\\\mathclose{}\\ in \\\mathbb{R}^3\\ has dimension \\2\\ ([Example 47](#exm-dimension)). By [Theorem 29](#thm-dim-bound), no three vectors with third entry \\0\\ are linearly independent; for instance, \\(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \tilde{0}\\. The line \\\mathcal{T} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ lies in \\\mathcal{S}\\, and
+>
+> \\ \begin{aligned} \dim(\mathcal{T}) &= 1 \\ &\le 2 \\ &= \dim(\mathcal{S}). \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1420,7 +1511,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\ \mathbf{A} = \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix}. \\
 >
-> For any \\\tilde{x} \in \mathbb{R}^3\\, \\\mathbf{A} \tilde{x} = (x_1 - 2x_2 - 2x_3,\\ 3\\(x_1 - 2x_2 - 2x_3)) = (x_1 - 2x_2 - 2x_3)\\(1, 3)\\ ([Definition 28](#def-matvec-mult)). The number \\x_1 - 2x_2 - 2x_3\\ can be any real number (take \\x_2 = x_3 = 0\\), so \\\mathcal{C}(\mathbf{A}) = \mathopen{}\left\\c\\(1, 3) : c \in \mathbb{R}\right\\\mathclose{}\\, a line in \\\mathbb{R}^2\\. The vector \\(1, 0)\\ is not in \\\mathcal{C}(\mathbf{A})\\: \\c\\(1, 3)\\ has second entry \\3c\\, which is \\0\\ only if \\c = 0\\, and then the first entry is \\0\\, not \\1\\.
+> For any \\\tilde{x} \in \mathbb{R}^3\\,
+>
+> \\ \begin{aligned} \mathbf{A} \tilde{x} &= (x_1 - 2x_2 - 2x_3,\\ 3\\(x_1 - 2x_2 - 2x_3)) \\ &= (x_1 - 2x_2 - 2x_3)\\(1, 3) \end{aligned} \\
+>
+> ([Definition 28](#def-matvec-mult)). The number \\x_1 - 2x_2 - 2x_3\\ can be any real number (take \\x_2 = 0\\ and \\x_3 = 0\\), so \\\mathcal{C}(\mathbf{A}) = \mathopen{}\left\\c\\(1, 3) : c \in \mathbb{R}\right\\\mathclose{}\\, a line in \\\mathbb{R}^2\\. The vector \\(1, 0)\\ is not in \\\mathcal{C}(\mathbf{A})\\: \\c\\(1, 3)\\ has second entry \\3c\\, which is \\0\\ only if \\c = 0\\, and then the first entry is \\0\\, not \\1\\.
 
 > **NOTE:**
 >
@@ -1448,7 +1543,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 55 (The null space and left null space of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), \\\mathbf{A} \tilde{x} = (x_1 - 2x_2 - 2x_3,\\ 3\\(x_1 - 2x_2 - 2x_3))\\, so \\\mathbf{A} \tilde{x} = \tilde{0}\_2\\ exactly when \\x_1 = 2x_2 + 2x_3\\. Writing \\\tilde{x} = (2x_2 + 2x_3, x_2, x_3) = x_2\\(2, 1, 0) + x_3\\(2, 0, 1)\\ shows \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\, a plane in \\\mathbb{R}^3\\.
+> **Example 55 (The null space and left null space of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), \\\mathbf{A} \tilde{x} = (x_1 - 2x_2 - 2x_3,\\ 3\\(x_1 - 2x_2 - 2x_3))\\, so \\\mathbf{A} \tilde{x} = \tilde{0}\_2\\ exactly when \\x_1 = 2x_2 + 2x_3\\. Writing
+>
+> \\ \begin{aligned} \tilde{x} &= (2x_2 + 2x_3, x_2, x_3) \\ &= x_2\\(2, 1, 0) + x_3\\(2, 0, 1) \end{aligned} \\
+>
+> shows \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\, a plane in \\\mathbb{R}^3\\.
 >
 > For the left null space, \\{\mathbf{A}}^{\top} \tilde{y} = (y_1 + 3y_2,\\ -2\\(y_1 + 3y_2),\\ -2\\(y_1 + 3y_2))\\, which is \\\tilde{0}\_3\\ exactly when \\y_1 = -3y_2\\, so \\\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\\(-3, 1)\right\\\mathclose{}\\, a line in \\\mathbb{R}^2\\.
 
@@ -1506,7 +1605,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} &= \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix} && \text{(}\href{#def-matrix-transpose}{\text{Definition~20}}\text{)} \\ &= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 + 0 \cdot 0 & 1 \cdot 0 + 1 \cdot 1 + 0 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 1 + 1 \cdot 0 & 0 \cdot 0 + 1 \cdot 1 + 1 \cdot 1 \end{bmatrix} && \text{(}\href{#def-matrix-mult}{\text{Definition~24}}\text{)} \\ &= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}. && \text{(multiply and add)} \end{aligned} \\
 >
-> Row \\i\\ of \\{\mathbf{A}}^{\top}\\ is column \\i\\ of \\\mathbf{A}\\, so entry \\(i, j)\\ of the Gram matrix is the dot product \\\tilde{a}\_i \cdot \tilde{a}\_j\\: for instance, \\\tilde{a}\_1 \cdot \tilde{a}\_2 = 0 + 1 + 0 = 1\\ is entry \\(1, 2)\\.
+> Row \\i\\ of \\{\mathbf{A}}^{\top}\\ is column \\i\\ of \\\mathbf{A}\\, so entry \\(i, j)\\ of the Gram matrix is the dot product \\\tilde{a}\_i \cdot \tilde{a}\_j\\: for instance,
+>
+> \\ \begin{aligned} \tilde{a}\_1 \cdot \tilde{a}\_2 &= 0 + 1 + 0 \\ &= 1 \end{aligned} \\
+>
+> is entry \\(1, 2)\\.
 
 > **NOTE:**
 >
@@ -1516,7 +1619,9 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Proof*. **\\\mathcal{N}(\mathbf{A}) \subseteq \mathcal{N}({\mathbf{A}}^{\top} \mathbf{A})\\.** If \\\mathbf{A} \tilde{x} = \tilde{0}\_m\\, then \\{\mathbf{A}}^{\top} \mathbf{A} \tilde{x} = {\mathbf{A}}^{\top}\\\tilde{0}\_m = \tilde{0}\_n\\.
+> *Proof*. **\\\mathcal{N}(\mathbf{A}) \subseteq \mathcal{N}({\mathbf{A}}^{\top} \mathbf{A})\\.** If \\\mathbf{A} \tilde{x} = \tilde{0}\_m\\, then
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} \tilde{x} &= {\mathbf{A}}^{\top}\\\tilde{0}\_m \\ &= \tilde{0}\_n. \end{aligned} \\
 >
 > **\\\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) \subseteq \mathcal{N}(\mathbf{A})\\.** If \\{\mathbf{A}}^{\top} \mathbf{A} \tilde{x} = \tilde{0}\_n\\, then
 >
@@ -1566,7 +1671,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 61 (The nullity of the matrix in [Example 53](#exm-column-space))** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ ([Example 55](#exm-null-space)). Those two vectors are linearly independent: \\c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\\, which is \\\tilde{0}\_3\\ only if \\c_1 = c_2 = 0\\. So they are a basis of \\\mathcal{N}(\mathbf{A})\\, and \\\operatorname{nullity}(\mathbf{A}) = 2\\. The \\2 \times 2\\ identity matrix has nullity \\0\\, because \\\mathbf{I} \tilde{x} = \tilde{x}\\ is \\\tilde{0}\_2\\ only when \\\tilde{x} = \tilde{0}\_2\\.
+> **Example 61 (The nullity of the matrix in [Example 53](#exm-column-space))** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ ([Example 55](#exm-null-space)). Those two vectors are linearly independent: \\c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\\, which is \\\tilde{0}\_3\\ only if
+>
+> \\ \begin{aligned} c_1 &= c_2 \\ &= 0. \end{aligned} \\
+>
+> So they are a basis of \\\mathcal{N}(\mathbf{A})\\, and \\\operatorname{nullity}(\mathbf{A}) = 2\\. The \\2 \times 2\\ identity matrix has nullity \\0\\, because \\\mathbf{I} \tilde{x} = \tilde{x}\\ is \\\tilde{0}\_2\\ only when \\\tilde{x} = \tilde{0}\_2\\.
 
 > **NOTE:**
 >
@@ -1715,9 +1824,18 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > **Example 67 (The plane \\x_1 + x_2 + x_3 = 1\\ in \\\mathbb{R}^3\\)** Take \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\, so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + x_2 + x_3 - 1 = 0\right\\\mathclose{}\\, the plane that [Example 36](#exm-subspace-zero) showed is not a subspace. By part 1, \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}: x_1 + x_2 + x_3 = 0\right\\\mathclose{}\\ is a subspace of dimension \\3 - 1 = 2\\.
 >
 > - \\\tilde{x}\_0 = (1, 0, 0)\\ is in \\\mathcal{H}\\, since \\1 + 0 + 0 - 1 = 0\\, and so is \\\tilde{y}= (0, 1, 0)\\.
+>
 > - Their difference \\\tilde{y}- \tilde{x}\_0 = (-1, 1, 0)\\ has entries summing to \\-1 + 1 + 0 = 0\\, so it is in \\\mathcal{H}\_0\\, and \\\tilde{y}= \tilde{x}\_0 + (-1, 1, 0)\\, as part 2 says.
-> - \\\tilde{w} \cdot (-1, 1, 0) = -1 + 1 + 0 = 0\\, as part 3 says.
-> - The point built in the proof is \\\tilde{x}^\* = -\frac{-1}{3}\\(1, 1, 1) = \mathopen{}\left(\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3}\right)\mathclose{}\\, and \\\tfrac{1}{3} + \tfrac{1}{3} + \tfrac{1}{3} - 1 = 0\\.
+>
+> - \\ \begin{aligned} \tilde{w} \cdot (-1, 1, 0) &= -1 + 1 + 0 \\ &= 0, \end{aligned} \\
+>
+>   as part 3 says.
+>
+> - The point built in the proof is
+>
+>   \\ \begin{aligned} \tilde{x}^\* &= -\frac{-1}{3}\\(1, 1, 1) \\ &= \mathopen{}\left(\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3}\right)\mathclose{}, \end{aligned} \\
+>
+>   and \\\tfrac{1}{3} + \tfrac{1}{3} + \tfrac{1}{3} - 1 = 0\\.
 
 > **NOTE:**
 >
@@ -1959,8 +2077,21 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 76 (Equality and strict inequality)**  
 >
-> - For the lines \\\mathcal{S}\_1 = \operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}\\ and \\\mathcal{S}\_2 = \operatorname{span}\mathopen{}\left\\(0, 1, 0)\right\\\mathclose{}\\ in [Example 72](#exm-subspace-sum), a common vector satisfies \\a\\(1, 0, 0) = b\\(0, 1, 0)\\, so \\(a, -b, 0) = \tilde{0}\\ and \\a = b = 0\\. The intersection is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, and indeed \\\dim(\mathcal{S}\_1 + \mathcal{S}\_2) = 2 = 1 + 1\\: the sum is the plane \\z = 0\\ ([Example 72](#exm-subspace-sum)), which has dimension \\2\\ ([Example 47](#exm-dimension)), and each line has dimension \\1\\, with its spanning vector as a basis.
-> - For \\\mathcal{S}\_1 = \mathcal{S}\_2 = \operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}\\, the sum is the same line, because \\a\\(1, 0, 0) + b\\(1, 0, 0) = (a + b)\\(1, 0, 0)\\, so \\\dim(\mathcal{S}\_1 + \mathcal{S}\_2) = 1 \< 1 + 1\\, a [strict inequality](algebra.llms.md#def-strict-inequality).
+> - For the lines \\\mathcal{S}\_1 = \operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}\\ and \\\mathcal{S}\_2 = \operatorname{span}\mathopen{}\left\\(0, 1, 0)\right\\\mathclose{}\\ in [Example 72](#exm-subspace-sum), a common vector satisfies \\a\\(1, 0, 0) = b\\(0, 1, 0)\\, so \\(a, -b, 0) = \tilde{0}\\ and
+>
+>   \\ \begin{aligned} a &= b \\ &= 0. \end{aligned} \\
+>
+>   The intersection is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, and indeed
+>
+>   \\ \begin{aligned} \dim(\mathcal{S}\_1 + \mathcal{S}\_2) &= 2 \\ &= 1 + 1: \end{aligned} \\
+>
+>   the sum is the plane \\z = 0\\ ([Example 72](#exm-subspace-sum)), which has dimension \\2\\ ([Example 47](#exm-dimension)), and each line has dimension \\1\\, with its spanning vector as a basis.
+>
+> - For
+>
+>   \\ \begin{aligned} \mathcal{S}\_1 &= \mathcal{S}\_2 \\ &= \operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}, \end{aligned} \\
+>
+>   the sum is the same line, because \\a\\(1, 0, 0) + b\\(1, 0, 0) = (a + b)\\(1, 0, 0)\\, so \\\dim(\mathcal{S}\_1 + \mathcal{S}\_2) = 1 \< 1 + 1\\, a [strict inequality](algebra.llms.md#def-strict-inequality).
 
 > **NOTE:**
 >
@@ -2002,7 +2133,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 79 (Two planes that sum to \\\mathbb{R}^3\\ but not directly)** The planes \\z = 0\\ and \\x = 0\\ sum to \\\mathbb{R}^3\\ ([Example 74](#exm-sum-intersection-subspace)), but they share the \\y\\-axis, so they are not complementary, and \\\mathbb{R}^3\\ is not their direct sum. The shared line shows up as more than one way to split a vector: \\(0, 1, 0) = (0, 1, 0) + \tilde{0}= \tilde{0}+ (0, 1, 0)\\, with the first term in the plane \\z = 0\\ and the second in the plane \\x = 0\\ both times.
+> **Example 79 (Two planes that sum to \\\mathbb{R}^3\\ but not directly)** The planes \\z = 0\\ and \\x = 0\\ sum to \\\mathbb{R}^3\\ ([Example 74](#exm-sum-intersection-subspace)), but they share the \\y\\-axis, so they are not complementary, and \\\mathbb{R}^3\\ is not their direct sum. The shared line shows up as more than one way to split a vector:
+>
+> \\ \begin{aligned} (0, 1, 0) &= (0, 1, 0) + \tilde{0}\\ &= \tilde{0}+ (0, 1, 0), \end{aligned} \\
+>
+> with the first term in the plane \\z = 0\\ and the second in the plane \\x = 0\\ both times.
 
 > **NOTE:**
 >
@@ -2018,7 +2153,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **1 and 2 are equivalent.** By [Corollary 4](#cor-dim-subadditive), \\\dim(\mathcal{S}\_1 + \mathcal{S}\_2) = \dim(\mathcal{S}\_1) + \dim(\mathcal{S}\_2)\\ exactly when \\\mathcal{S}\_1 \cap \mathcal{S}\_2 = \mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\.
 >
-> **1 implies 3.** Every \\\tilde{x} \in \mathcal{V}\\ has at least one such expression, because \\\mathcal{V} = \mathcal{S}\_1 + \mathcal{S}\_2\\. Suppose \\\tilde{x} = \tilde{u}\_1 + \tilde{u}\_2 = \tilde{v}\_1 + \tilde{v}\_2\\, with \\\tilde{u}\_1, \tilde{v}\_1 \in \mathcal{S}\_1\\ and \\\tilde{u}\_2, \tilde{v}\_2 \in \mathcal{S}\_2\\. Then
+> **1 implies 3.** Every \\\tilde{x} \in \mathcal{V}\\ has at least one such expression, because \\\mathcal{V} = \mathcal{S}\_1 + \mathcal{S}\_2\\. Suppose
+>
+> \\ \begin{aligned} \tilde{x} &= \tilde{u}\_1 + \tilde{u}\_2 \\ &= \tilde{v}\_1 + \tilde{v}\_2, \end{aligned} \\
+>
+> with \\\tilde{u}\_1, \tilde{v}\_1 \in \mathcal{S}\_1\\ and \\\tilde{u}\_2, \tilde{v}\_2 \in \mathcal{S}\_2\\. Then
 >
 > \\ \begin{aligned} \tilde{u}\_1 - \tilde{v}\_1 &= (\tilde{u}\_1 + \tilde{u}\_2) - \tilde{u}\_2 - \tilde{v}\_1 && \text{(add and subtract } \tilde{u}\_2 \text{)} \\ &= (\tilde{v}\_1 + \tilde{v}\_2) - \tilde{u}\_2 - \tilde{v}\_1 && \text{(substitute } \tilde{u}\_1 + \tilde{u}\_2 = \tilde{v}\_1 + \tilde{v}\_2 \text{)} \\ &= \tilde{v}\_2 - \tilde{u}\_2. && \text{(cancel } \tilde{v}\_1 \text{)} \end{aligned} \\
 >
@@ -2030,10 +2169,23 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 80 (Checking the three statements)** For the plane \\z = 0\\ and the \\z\\-axis in [Example 78](#exm-direct-sum):
 >
-> - the dimensions add up: \\2 + 1 = 3 = \dim(\mathbb{R}^3)\\, since the plane has dimension \\2\\ ([Example 47](#exm-dimension)), the \\z\\-axis has the single nonzero vector \\(0, 0, 1)\\ as a basis, and \\\dim(\mathbb{R}^3) = 3\\ ([Example 47](#exm-dimension));
-> - the split is unique: if \\(x, y, z) = (a, b, 0) + (0, 0, c) = (a, b, c)\\, then \\a = x\\, \\b = y\\ and \\c = z\\.
+> - the dimensions add up:
 >
-> For the planes \\z = 0\\ and \\x = 0\\ in [Example 79](#exm-not-direct-sum), both statements fail: \\2 + 2 = 4 \ne 3 = \dim(\mathcal{S}\_1 + \mathcal{S}\_2)\\ ([Example 75](#exm-dim-sum)), and \\(0, 1, 0)\\ splits in two ways.
+>   \\ \begin{aligned} 2 + 1 &= 3 \\ &= \dim(\mathbb{R}^3), \end{aligned} \\
+>
+>   since the plane has dimension \\2\\ ([Example 47](#exm-dimension)), the \\z\\-axis has the single nonzero vector \\(0, 0, 1)\\ as a basis, and \\\dim(\mathbb{R}^3) = 3\\ ([Example 47](#exm-dimension));
+>
+> - the split is unique: if
+>
+>   \\ \begin{aligned} (x, y, z) &= (a, b, 0) + (0, 0, c) \\ &= (a, b, c), \end{aligned} \\
+>
+>   then \\a = x\\, \\b = y\\ and \\c = z\\.
+>
+> For the planes \\z = 0\\ and \\x = 0\\ in [Example 79](#exm-not-direct-sum), both statements fail:
+>
+> \\ \begin{aligned} 2 + 2 &= 4 \\ &\ne 3 \\ &= \dim(\mathcal{S}\_1 + \mathcal{S}\_2) \end{aligned} \\
+>
+> ([Example 75](#exm-dim-sum)), and \\(0, 1, 0)\\ splits in two ways.
 
 > **NOTE:**
 >
@@ -2046,7 +2198,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > - **Along \\\mathcal{T}\_1 = \operatorname{span}\mathopen{}\left\\(1, -1)\right\\\mathclose{}\\:** \\(3, 2) = (5, 0) + (-2, 2)\\, with \\(5, 0) \in \mathcal{S}\\ and \\(-2, 2) = -2 \cdot(1, -1) \in \mathcal{T}\_1\\, so the projection of \\(3, 2)\\ onto \\\mathcal{S}\\ along \\\mathcal{T}\_1\\ is \\(5, 0)\\.
 > - **Along \\\mathcal{T}\_2 = \operatorname{span}\mathopen{}\left\\(0, 1)\right\\\mathclose{}\\:** \\(3, 2) = (3, 0) + (0, 2)\\, with \\(3, 0) \in \mathcal{S}\\ and \\(0, 2) \in \mathcal{T}\_2\\, so the projection of \\(3, 2)\\ onto \\\mathcal{S}\\ along \\\mathcal{T}\_2\\ is \\(3, 0)\\.
 >
-> Each of \\\mathcal{T}\_1\\ and \\\mathcal{T}\_2\\ is a line that meets \\\mathcal{S}\\ only at \\\tilde{0}\\, so \\\mathbb{R}^2 = \mathcal{S} \oplus \mathcal{T}\_1 = \mathcal{S} \oplus \mathcal{T}\_2\\ ([Definition 53](#def-direct-sum), [Theorem 45](#thm-direct-sum-equiv)). The same vector has a different projection onto the same subspace when the complement changes.
+> Each of \\\mathcal{T}\_1\\ and \\\mathcal{T}\_2\\ is a line that meets \\\mathcal{S}\\ only at \\\tilde{0}\\, so
+>
+> \\ \begin{aligned} \mathbb{R}^2 &= \mathcal{S} \oplus \mathcal{T}\_1 \\ &= \mathcal{S} \oplus \mathcal{T}\_2 \end{aligned} \\
+>
+> ([Definition 53](#def-direct-sum), [Theorem 45](#thm-direct-sum-equiv)). The same vector has a different projection onto the same subspace when the complement changes.
 
 ### 2.14 Orthogonal complements
 
@@ -2070,11 +2226,23 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\ \begin{aligned} (a\\\tilde{u} + b\\\tilde{w}) \cdot \tilde{x} &= \tilde{x} \cdot (a\\\tilde{u} + b\\\tilde{w}) && \text{(}\href{#thm-lincom-symmetric}{\text{Theorem~1}}\text{)} \\ &= a\\(\tilde{x} \cdot \tilde{u}) + b\\(\tilde{x} \cdot \tilde{w}) && \text{(second slot)} \\ &= a\\(\tilde{u} \cdot \tilde{x}) + b\\(\tilde{w} \cdot \tilde{x}). && \text{(}\href{#thm-lincom-symmetric}{\text{Theorem~1}}\text{, twice)} \end{aligned} \\
 >
-> Two special cases are used often. With \\a = b = 1\\, and \\1\\\tilde{u} = \tilde{u}\\, the theorem gives \\\tilde{x} \cdot (\tilde{u} + \tilde{w}) = \tilde{x} \cdot \tilde{u} + \tilde{x} \cdot \tilde{w}\\. With \\\tilde{w} = \tilde{u}\\ and \\b = 0\\, and \\0\\\tilde{u} = \tilde{0}\\, it gives \\\tilde{x} \cdot (a\\\tilde{u}) = a\\(\tilde{x} \cdot \tilde{u})\\, and likewise in the first slot.
+> Two special cases are used often. With
+>
+> \\ \begin{aligned} a &= b \\ &= 1, \end{aligned} \\
+>
+> and \\1\\\tilde{u} = \tilde{u}\\, the theorem gives \\\tilde{x} \cdot (\tilde{u} + \tilde{w}) = \tilde{x} \cdot \tilde{u} + \tilde{x} \cdot \tilde{w}\\. With \\\tilde{w} = \tilde{u}\\ and \\b = 0\\, and \\0\\\tilde{u} = \tilde{0}\\, it gives \\\tilde{x} \cdot (a\\\tilde{u}) = a\\(\tilde{x} \cdot \tilde{u})\\, and likewise in the first slot.
 
 > **NOTE:**
 >
-> **Example 82 (Splitting a dot product)** Let \\\tilde{x} = (1, 2)\\, \\\tilde{u} = (3, 0)\\, \\\tilde{w} = (0, 1)\\, \\a = 2\\ and \\b = -1\\. Directly, \\a\\\tilde{u} + b\\\tilde{w} = (6, -1)\\ and \\\tilde{x} \cdot (6, -1) = 6 - 2 = 4\\. By [Theorem 46](#thm-dot-linear), \\a\\(\tilde{x} \cdot \tilde{u}) + b\\(\tilde{x} \cdot \tilde{w}) = 2 \cdot 3 + (-1) \cdot 2 = 4\\, the same number.
+> **Example 82 (Splitting a dot product)** Let \\\tilde{x} = (1, 2)\\, \\\tilde{u} = (3, 0)\\, \\\tilde{w} = (0, 1)\\, \\a = 2\\ and \\b = -1\\. Directly, \\a\\\tilde{u} + b\\\tilde{w} = (6, -1)\\ and
+>
+> \\ \begin{aligned} \tilde{x} \cdot (6, -1) &= 6 - 2 \\ &= 4. \end{aligned} \\
+>
+> By [Theorem 46](#thm-dot-linear),
+>
+> \\ \begin{aligned} a\\(\tilde{x} \cdot \tilde{u}) + b\\(\tilde{x} \cdot \tilde{w}) &= 2 \cdot 3 + (-1) \cdot 2 \\ &= 4, \end{aligned} \\
+>
+> the same number.
 
 > **NOTE:**
 >
@@ -2088,9 +2256,23 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 83 (Orthogonal complements in \\\mathbb{R}^3\\)**  
 >
-> - **A plane.** Let \\\mathcal{X} = \mathopen{}\left\\(a, b, 0) : a, b \in \mathbb{R}\right\\\mathclose{}\\, the plane \\z = 0\\. A vector \\\tilde{u}\\ is in \\\mathcal{X}^\perp\\ when \\(a, b, 0) \cdot \tilde{u} = a u_1 + b u_2 = 0\\ for all \\a\\ and \\b\\. Taking \\(a, b) = (1, 0)\\ forces \\u_1 = 0\\, and taking \\(a, b) = (0, 1)\\ forces \\u_2 = 0\\; conversely, if \\u_1 = u_2 = 0\\, then \\a u_1 + b u_2 = 0\\ for all \\a\\ and \\b\\. So \\\mathcal{X}^\perp = \mathopen{}\left\\(0, 0, c) : c \in \mathbb{R}\right\\\mathclose{}\\, the \\z\\-axis.
+> - **A plane.** Let \\\mathcal{X} = \mathopen{}\left\\(a, b, 0) : a, b \in \mathbb{R}\right\\\mathclose{}\\, the plane \\z = 0\\. A vector \\\tilde{u}\\ is in \\\mathcal{X}^\perp\\ when
+>
+>   \\ \begin{aligned} (a, b, 0) \cdot \tilde{u} &= a u_1 + b u_2 \\ &= 0 \end{aligned} \\
+>
+>   for all \\a\\ and \\b\\. Taking \\(a, b) = (1, 0)\\ forces \\u_1 = 0\\, and taking \\(a, b) = (0, 1)\\ forces \\u_2 = 0\\; conversely, if
+>
+>   \\ \begin{aligned} u_1 &= u_2 \\ &= 0, \end{aligned} \\
+>
+>   then \\a u_1 + b u_2 = 0\\ for all \\a\\ and \\b\\. So \\\mathcal{X}^\perp = \mathopen{}\left\\(0, 0, c) : c \in \mathbb{R}\right\\\mathclose{}\\, the \\z\\-axis.
+>
 > - **Two vectors.** The two-element set \\\mathopen{}\left\\(1, 0, 0), (0, 1, 0)\right\\\mathclose{}\\ is not a subspace, and its orthogonal complement is the \\z\\-axis too: the two conditions \\u_1 = 0\\ and \\u_2 = 0\\ are the same as for the plane.
-> - **The extremes.** \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}^\perp = \mathbb{R}^3\\, because \\\tilde{0}\cdot \tilde{u} = 0\\ for every \\\tilde{u}\\. \\(\mathbb{R}^3)^\perp = \mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, because a \\\tilde{u}\\ in it is orthogonal to itself, and \\\tilde{u} \cdot \tilde{u} = u_1^2 + u_2^2 + u_3^2 = 0\\ forces \\\tilde{u} = \tilde{0}\\.
+>
+> - **The extremes.** \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}^\perp = \mathbb{R}^3\\, because \\\tilde{0}\cdot \tilde{u} = 0\\ for every \\\tilde{u}\\. \\(\mathbb{R}^3)^\perp = \mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, because a \\\tilde{u}\\ in it is orthogonal to itself, and
+>
+>   \\ \begin{aligned} \tilde{u} \cdot \tilde{u} &= u_1^2 + u_2^2 + u_3^2 \\ &= 0 \end{aligned} \\
+>
+>   forces \\\tilde{u} = \tilde{0}\\.
 
 > **NOTE:**
 >
@@ -2098,7 +2280,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Proof*. \\\mathcal{X}^\perp\\ is not empty: \\\tilde{x} \cdot \tilde{0}= \sum_i x_i \cdot 0 = 0\\ for every \\\tilde{x}\\, so \\\tilde{0}\in \mathcal{X}^\perp\\. Let \\\tilde{u}, \tilde{w} \in \mathcal{X}^\perp\\, let \\c \in \mathbb{R}\\, and let \\\tilde{x} \in \mathcal{X}\\.
+> *Proof*. \\\mathcal{X}^\perp\\ is not empty:
+>
+> \\ \begin{aligned} \tilde{x} \cdot \tilde{0}&= \sum_i x_i \cdot 0 \\ &= 0 \end{aligned} \\
+>
+> for every \\\tilde{x}\\, so \\\tilde{0}\in \mathcal{X}^\perp\\. Let \\\tilde{u}, \tilde{w} \in \mathcal{X}^\perp\\, let \\c \in \mathbb{R}\\, and let \\\tilde{x} \in \mathcal{X}\\.
 >
 > **Addition.**
 >
@@ -2116,7 +2302,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\ \begin{aligned} \mathcal{X}^\perp &= \mathopen{}\left\\\tilde{u} \in \mathbb{R}^2 : u_1 + 2 u_2 = 0\right\\\mathclose{} \\ &= \mathopen{}\left\\c\\(-2, 1) : c \in \mathbb{R}\right\\\mathclose{}, \end{aligned} \\
 >
-> since \\u_1 + 2u_2 = 0\\ means \\\tilde{u} = (-2u_2, u_2) = u_2\\(-2, 1)\\. That set is \\\operatorname{span}\mathopen{}\left\\(-2, 1)\right\\\mathclose{}\\, a subspace by [Theorem 21](#thm-span-subspace), as [Theorem 47](#thm-orthogonal-complement-subspace) says it must be. It contains \\(-2, 1)\\, the vector [Remark 7](#rem-orthogonal-perpendicular) found perpendicular to \\(1, 2)\\.
+> since \\u_1 + 2u_2 = 0\\ means
+>
+> \\ \begin{aligned} \tilde{u} &= (-2u_2, u_2) \\ &= u_2\\(-2, 1). \end{aligned} \\
+>
+> That set is \\\operatorname{span}\mathopen{}\left\\(-2, 1)\right\\\mathclose{}\\, a subspace by [Theorem 21](#thm-span-subspace), as [Theorem 47](#thm-orthogonal-complement-subspace) says it must be. It contains \\(-2, 1)\\, the vector [Remark 7](#rem-orthogonal-perpendicular) found perpendicular to \\(1, 2)\\.
 
 > **NOTE:**
 >
@@ -2160,7 +2350,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > *Proof*. \\\mathcal{S}^\perp\\ is a subspace ([Theorem 47](#thm-orthogonal-complement-subspace)), so it has a dimension ([Definition 44](#def-dimension)).
 >
-> **Part 1.** Both \\\mathcal{S}\\ and \\\mathcal{S}^\perp\\ contain \\\tilde{0}\\ ([Theorem 20](#thm-subspace-zero)). If \\\tilde{x}\\ is in both, then \\\tilde{x}\\ is orthogonal to every vector of \\\mathcal{S}\\, \\\tilde{x}\\ itself included, so \\\tilde{x} \cdot \tilde{x} = x_1^2 + \cdots + x_p^2 = 0\\, which forces every \\x_i = 0\\.
+> **Part 1.** Both \\\mathcal{S}\\ and \\\mathcal{S}^\perp\\ contain \\\tilde{0}\\ ([Theorem 20](#thm-subspace-zero)). If \\\tilde{x}\\ is in both, then \\\tilde{x}\\ is orthogonal to every vector of \\\mathcal{S}\\, \\\tilde{x}\\ itself included, so
+>
+> \\ \begin{aligned} \tilde{x} \cdot \tilde{x} &= x_1^2 + \cdots + x_p^2 \\ &= 0, \end{aligned} \\
+>
+> which forces every \\x_i = 0\\.
 >
 > **Part 2.** Let \\d = \dim(\mathcal{S})\\. If \\d = 0\\, then \\\mathcal{S}\\ has a basis ([Theorem 28](#thm-extend-basis)) with \\0\\ vectors ([Definition 44](#def-dimension)), the empty list, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 41](#def-span)); so \\\mathcal{S} = \mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, \\\mathcal{S}^\perp = \mathbb{R}^p\\ (every \\\tilde{u}\\ satisfies \\\tilde{0}\cdot \tilde{u} = 0\\), and \\0 + p = p\\ ([Example 47](#exm-dimension)). If \\d \ge 1\\, choose a basis \\\tilde{a}\_1, \ldots, \tilde{a}\_d\\ of \\\mathcal{S}\\ ([Theorem 28](#thm-extend-basis)), and let \\\mathbf{A}\\ be the \\p \times d\\ matrix with these columns. The basis spans \\\mathcal{S}\\, so \\\mathcal{S} = \mathcal{C}(\mathbf{A})\\ ([Theorem 31](#thm-column-space-span)), and \\\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})\\ ([Theorem 48](#thm-complement-null-space)). \\{\mathbf{A}}^{\top}\\ is \\d \times p\\, so
 >
@@ -2174,9 +2368,27 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 86 (Splitting a vector of \\\mathbb{R}^3\\ along a line and its complement)** Let \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ in \\\mathbb{R}^3\\. A single nonzero vector is linearly independent (\\c\\\tilde{v} = \tilde{0}\\ with \\\tilde{v} \ne \tilde{0}\\ forces \\c = 0\\), so \\(1, 1, 0)\\ is a basis of \\\mathcal{S}\\ and \\\dim(\mathcal{S}) = 1\\. A vector \\\tilde{u}\\ is in \\\mathcal{S}^\perp\\ exactly when \\u_1 + u_2 = 0\\: that condition says \\(1, 1, 0) \cdot \tilde{u} = 0\\, and then \\c\\(1, 1, 0) \cdot \tilde{u} = c\\(u_1 + u_2) = 0\\ for every \\c\\. So \\\mathcal{S}^\perp = \mathopen{}\left\\(a, -a, c) : a, c \in \mathbb{R}\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\(1, -1, 0), (0, 0, 1)\right\\\mathclose{}\\. Those two vectors are linearly independent, because \\a\\(1, -1, 0) + c\\(0, 0, 1) = (a, -a, c)\\ is \\\tilde{0}\\ only if \\a = c = 0\\, so \\\dim(\mathcal{S}^\perp) = 2\\, and \\1 + 2 = 3\\, as part 2 says.
+> **Example 86 (Splitting a vector of \\\mathbb{R}^3\\ along a line and its complement)** Let \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ in \\\mathbb{R}^3\\. A single nonzero vector is linearly independent (\\c\\\tilde{v} = \tilde{0}\\ with \\\tilde{v} \ne \tilde{0}\\ forces \\c = 0\\), so \\(1, 1, 0)\\ is a basis of \\\mathcal{S}\\ and \\\dim(\mathcal{S}) = 1\\. A vector \\\tilde{u}\\ is in \\\mathcal{S}^\perp\\ exactly when \\u_1 + u_2 = 0\\: that condition says \\(1, 1, 0) \cdot \tilde{u} = 0\\, and then
 >
-> To split \\\tilde{y} = (3, 1, 2)\\, look for \\\tilde{u} = t\\(1, 1, 0)\\ with \\\tilde{v} = \tilde{y} - \tilde{u} = (3 - t, 1 - t, 2)\\ in \\\mathcal{S}^\perp\\: that membership needs \\(3 - t) + (1 - t) = 0\\, so \\t = 2\\. Then \\\tilde{u} = (2, 2, 0)\\ and \\\tilde{v} = (1, -1, 2)\\, with \\\tilde{u} + \tilde{v} = (3, 1, 2)\\ and \\(1, 1, 0) \cdot (1, -1, 2) = 1 - 1 + 0 = 0\\.
+> \\ \begin{aligned} c\\(1, 1, 0) \cdot \tilde{u} &= c\\(u_1 + u_2) \\ &= 0 \end{aligned} \\
+>
+> for every \\c\\. So
+>
+> \\ \begin{aligned} \mathcal{S}^\perp &= \mathopen{}\left\\(a, -a, c) : a, c \in \mathbb{R}\right\\\mathclose{} \\ &= \operatorname{span}\mathopen{}\left\\(1, -1, 0), (0, 0, 1)\right\\\mathclose{}. \end{aligned} \\
+>
+> Those two vectors are linearly independent, because \\a\\(1, -1, 0) + c\\(0, 0, 1) = (a, -a, c)\\ is \\\tilde{0}\\ only if
+>
+> \\ \begin{aligned} a &= c \\ &= 0, \end{aligned} \\
+>
+> so \\\dim(\mathcal{S}^\perp) = 2\\, and \\1 + 2 = 3\\, as part 2 says.
+>
+> To split \\\tilde{y} = (3, 1, 2)\\, look for \\\tilde{u} = t\\(1, 1, 0)\\ with
+>
+> \\ \begin{aligned} \tilde{v} &= \tilde{y} - \tilde{u} \\ &= (3 - t, 1 - t, 2) \end{aligned} \\
+>
+> in \\\mathcal{S}^\perp\\: that membership needs \\(3 - t) + (1 - t) = 0\\, so \\t = 2\\. Then \\\tilde{u} = (2, 2, 0)\\ and \\\tilde{v} = (1, -1, 2)\\, with \\\tilde{u} + \tilde{v} = (3, 1, 2)\\ and
+>
+> \\ \begin{aligned} (1, 1, 0) \cdot (1, -1, 2) &= 1 - 1 + 0 \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2196,7 +2408,9 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 87 (Back to the line)** In [Example 86](#exm-orthogonal-direct-sum), \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ and \\\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\\(1, -1, 0), (0, 0, 1)\right\\\mathclose{}\\. Put those two spanning vectors in the columns of the \\3 \times 2\\ matrix \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}\\, so \\\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\\ ([Theorem 31](#thm-column-space-span)) and \\(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\\ ([Theorem 48](#thm-complement-null-space)). Since \\{\mathbf{B}}^{\top} \tilde{w} = (w_1 - w_2,\\ w_3)\\ ([Definition 28](#def-matvec-mult)), \\\tilde{w} \in (\mathcal{S}^\perp)^\perp\\ exactly when \\w_1 - w_2 = 0\\ and \\w_3 = 0\\. So \\(\mathcal{S}^\perp)^\perp = \mathopen{}\left\\(a, a, 0) : a \in \mathbb{R}\right\\\mathclose{} = \mathcal{S}\\.
+> **Example 87 (Back to the line)** In [Example 86](#exm-orthogonal-direct-sum), \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\ and \\\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\\(1, -1, 0), (0, 0, 1)\right\\\mathclose{}\\. Put those two spanning vectors in the columns of the \\3 \times 2\\ matrix \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ -1 & 0 \\ 0 & 1 \end{bmatrix}\\, so \\\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\\ ([Theorem 31](#thm-column-space-span)) and \\(\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\\ ([Theorem 48](#thm-complement-null-space)). Since \\{\mathbf{B}}^{\top} \tilde{w} = (w_1 - w_2,\\ w_3)\\ ([Definition 28](#def-matvec-mult)), \\\tilde{w} \in (\mathcal{S}^\perp)^\perp\\ exactly when \\w_1 - w_2 = 0\\ and \\w_3 = 0\\. So
+>
+> \\ \begin{aligned} (\mathcal{S}^\perp)^\perp &= \mathopen{}\left\\(a, a, 0) : a \in \mathbb{R}\right\\\mathclose{} \\ &= \mathcal{S}. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2209,9 +2423,14 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > **Theorem 51 (Fundamental theorem of linear algebra)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r\\. Then
 >
 > 1.  \\\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\\, and \\\mathbb{R}^m = \mathcal{C}(\mathbf{A}) \oplus \mathcal{N}({\mathbf{A}}^{\top})\\;
+>
 > 2.  \\\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp\\;
+>
 > 3.  \\\mathcal{N}(\mathbf{A})^\perp = \mathcal{C}({\mathbf{A}}^{\top})\\, and \\\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\\;
-> 4.  \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = \dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = r\\, \\\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\\, and \\\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\\.
+>
+> 4.  \\ \begin{aligned} \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} &= \dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} \\ &= r, \end{aligned} \\
+>
+>     \\\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\\, and \\\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\\.
 
 > **NOTE:**
 >
@@ -2232,7 +2451,15 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > **Example 89 (The four subspaces of the matrix in [Example 53](#exm-column-space))** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), \\m = 2\\, \\n = 3\\ and \\r = 1\\ ([Example 60](#exm-rank-dim)).
 >
 > - **In \\\mathbb{R}^3\\:** the row space \\\mathcal{C}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\\(1, -2, -2)\right\\\mathclose{}\\
->   1.  has dimension \\1 = r\\, and \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ has dimension \\2 = n - r\\ ([Example 61](#exm-nullity)). The spanning vectors are orthogonal: \\(1, -2, -2) \cdot (2, 1, 0) = 2 - 2 + 0 = 0\\ and \\(1, -2, -2) \cdot (2, 0, 1) = 2 + 0 - 2 = 0\\.
+>
+>   1.  has dimension \\1 = r\\, and \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ has dimension \\2 = n - r\\ ([Example 61](#exm-nullity)). The spanning vectors are orthogonal:
+>
+>   \\ \begin{aligned} (1, -2, -2) \cdot (2, 1, 0) &= 2 - 2 + 0 \\ &= 0 \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} (1, -2, -2) \cdot (2, 0, 1) &= 2 + 0 - 2 \\ &= 0. \end{aligned} \\
+>
 > - **In \\\mathbb{R}^2\\:** \\\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(1, 3)\right\\\mathclose{}\\ has dimension \\1 = r\\, and \\\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\\(-3, 1)\right\\\mathclose{}\\ has dimension \\1 = m - r\\ ([Example 85](#exm-complement-null-space)).
 >
 > By part 3, \\\tilde{y} = (1, 0, 0)\\ splits uniquely into a row-space part \\t\\(1, -2, -2)\\ and a null-space part. The null-space part \\\tilde{y} - t\\(1, -2, -2)\\ lies in \\\mathcal{N}(\mathbf{A})\\ (part 3), and \\\mathcal{N}(\mathbf{A}) = \mathcal{C}({\mathbf{A}}^{\top})^\perp\\ ([Theorem 48](#thm-complement-null-space) applied to \\{\mathbf{A}}^{\top}\\, with \\{({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\\), so it must be orthogonal to \\(1, -2, -2)\\:
@@ -2258,7 +2485,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 90 (The dot product is an inner product)** The dot product ([Definition 7](#def-dot-product)) is an inner product on \\\mathbb{R}^p\\, called the **Euclidean** or **standard** inner product. Each of the four properties in [Definition 56](#def-inner-product) holds:
+> **Example 90 (The dot product is an inner product)** The dot product (2) is an inner product on \\\mathbb{R}^p\\, called the **Euclidean** or **standard** inner product. Each of the four properties in [Definition 56](#def-inner-product) holds:
 >
 > - **positivity**: \\\tilde{x}\cdot \tilde{x}= \sum\_{i=1}^px_i^2\\ is a sum of squares, so it is at least \\0\\;
 > - **definiteness**: a sum of squares is \\0\\ exactly when every term is \\0\\, so \\\tilde{x}\cdot \tilde{x}= 0\\ exactly when every \\x_i = 0\\, that is, when \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
@@ -2277,7 +2504,9 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 91 (Real coordinate space as an inner product space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the standard dot product ([Definition 7](#def-dot-product)) is an inner product space, because the dot product satisfies the four inner product axioms ([Example 90](#exm-dot-product-inner-product)). For \\p = 2\\, any vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\ has squared norm \\\left\langle \tilde{x}, \tilde{x} \right\rangle = x_1^2 + x_2^2 \ge 0\\, which is zero if and only if \\x_1 = x_2 = 0\\.
+> **Example 91 (Real coordinate space as an inner product space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the standard dot product (2) is an inner product space, because the dot product satisfies the four inner product axioms ([Example 90](#exm-dot-product-inner-product)). For \\p = 2\\, any vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\ has squared norm \\\left\langle \tilde{x}, \tilde{x} \right\rangle = x_1^2 + x_2^2 \ge 0\\, which is zero if and only if
+>
+> \\ \begin{aligned} x_1 &= x_2 \\ &= 0. \end{aligned} \\
 >
 > Equipping the same vector space \\\mathbb{R}^p\\ with different inner products yields different inner product spaces with different geometric notions of angle and distance on the same set of vectors.
 
@@ -2310,9 +2539,33 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 93 (Functions that are not inner products)** Each of these functions on \\\mathbb{R}^2\\ has some of the properties in [Definition 56](#def-inner-product), but not all four:
 >
-> - \\f(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1 - x_2 y_2\\ is symmetric, because \\x_i y_i = y_i x_i\\, and linear in the first slot, because it is a linear combination of \\x_1\\ and \\x_2\\ with coefficients \\y_1\\ and \\-y_2\\. It fails positivity: for \\\tilde{x}= (0, 1)\\, \\f(\tilde{x}, \tilde{x}) = 0 \cdot 0 - 1 \cdot 1 = -1 \< 0\\. It also fails definiteness: for \\\tilde{x}= (1, 1)\\, \\f(\tilde{x}, \tilde{x}) = 1 \cdot 1 - 1 \cdot 1 = 0\\ although \\\tilde{x}\neq \tilde{0}\_{2 \times 1}\\.
-> - \\g(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1\\ is symmetric and linear in the first slot, for the same reasons as \\f\\, and has positivity, because \\g(\tilde{x}, \tilde{x}) = x_1^2 \ge 0\\. It fails definiteness: for \\\tilde{x}= (0, 1)\\, \\g(\tilde{x}, \tilde{x}) = 0 \cdot 0 = 0\\ although \\\tilde{x}\neq \tilde{0}\_{2 \times 1}\\.
-> - \\h(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left\|x_1 y_1\right\|\mathclose{} + \mathopen{}\left\|x_2 y_2\right\|\mathclose{}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value), is symmetric, because \\\mathopen{}\left\|x_i y_i\right\|\mathclose{} = \mathopen{}\left\|y_i x_i\right\|\mathclose{}\\, and has positivity and definiteness, because \\h(\tilde{x}, \tilde{x}) = x_1^2 + x_2^2\\ is a sum of squares. It is not linear in the first slot: take \\\tilde{x}= \tilde{y}= (1, 0)\\, \\a = -1\\ and \\b = 0\\; then \\h(a\\\tilde{x}, \tilde{y}) = \mathopen{}\left\|(-1) \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{} = 1\\, while \\a\\h(\tilde{x}, \tilde{y}) = (-1) \cdot(\mathopen{}\left\|1 \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{}) = -1\\.
+> - \\f(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1 - x_2 y_2\\ is symmetric, because \\x_i y_i = y_i x_i\\, and linear in the first slot, because it is a linear combination of \\x_1\\ and \\x_2\\ with coefficients \\y_1\\ and \\-y_2\\. It fails positivity: for \\\tilde{x}= (0, 1)\\,
+>
+>   \\ \begin{aligned} f(\tilde{x}, \tilde{x}) &= 0 \cdot 0 - 1 \cdot 1 \\ &= -1 \\ &\< 0. \end{aligned} \\
+>
+>   It also fails definiteness: for \\\tilde{x}= (1, 1)\\,
+>
+>   \\ \begin{aligned} f(\tilde{x}, \tilde{x}) &= 1 \cdot 1 - 1 \cdot 1 \\ &= 0 \end{aligned} \\
+>
+>   although \\\tilde{x}\neq \tilde{0}\_{2 \times 1}\\.
+>
+> - \\g(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}x_1 y_1\\ is symmetric and linear in the first slot, for the same reasons as \\f\\, and has positivity, because \\g(\tilde{x}, \tilde{x}) = x_1^2 \ge 0\\. It fails definiteness: for \\\tilde{x}= (0, 1)\\,
+>
+>   \\ \begin{aligned} g(\tilde{x}, \tilde{x}) &= 0 \cdot 0 \\ &= 0 \end{aligned} \\
+>
+>   although \\\tilde{x}\neq \tilde{0}\_{2 \times 1}\\.
+>
+> - \\h(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\mathopen{}\left\|x_1 y_1\right\|\mathclose{} + \mathopen{}\left\|x_2 y_2\right\|\mathclose{}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value), is symmetric, because \\\mathopen{}\left\|x_i y_i\right\|\mathclose{} = \mathopen{}\left\|y_i x_i\right\|\mathclose{}\\, and has positivity and definiteness, because \\h(\tilde{x}, \tilde{x}) = x_1^2 + x_2^2\\ is a sum of squares. It is not linear in the first slot: take
+>
+>   \\ \begin{aligned} \tilde{x}&= \tilde{y}\\ &= (1, 0), \end{aligned} \\
+>
+>   \\a = -1\\ and \\b = 0\\; then
+>
+>   \\ \begin{aligned} h(a\\\tilde{x}, \tilde{y}) &= \mathopen{}\left\|(-1) \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{} \\ &= 1, \end{aligned} \\
+>
+>   while
+>
+>   \\ \begin{aligned} a\\h(\tilde{x}, \tilde{y}) &= (-1) \cdot(\mathopen{}\left\|1 \cdot 1\right\|\mathclose{} + \mathopen{}\left\|0 \cdot 0\right\|\mathclose{}) \\ &= -1. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2328,7 +2581,9 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\tilde{c}} &= 2 \cdot 1 \cdot 1 + 1 \cdot 2 \cdot(-1) && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \\ &= 2 - 2 && \text{(multiply)} \\ &= 0, && \text{(subtract)} \end{aligned} \\
 >
-> so \\\tilde{x}\\ and \\\tilde{y}\\ are orthogonal with respect to \\\left\langle \cdot, \cdot \right\rangle\_{\tilde{c}}\\. They are not orthogonal with respect to the dot product, since \\\tilde{x}\cdot \tilde{y}= 1 \cdot 1 + 2 \cdot(-1) = -1 \ne 0\\.
+> so \\\tilde{x}\\ and \\\tilde{y}\\ are orthogonal with respect to \\\left\langle \cdot, \cdot \right\rangle\_{\tilde{c}}\\. They are not orthogonal with respect to the dot product, since
+>
+> \\ \begin{aligned} \tilde{x}\cdot \tilde{y}&= 1 \cdot 1 + 2 \cdot(-1) \\ &= -1 \\ &\ne 0. \end{aligned} \\
 
 ### 2.17 Cauchy-Schwarz and the triangle inequality
 
@@ -2353,7 +2608,15 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 95 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 9](#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm \\\sqrt{36 + 64} = 10 = \mathopen{}\left\|-2\right\|\mathclose{} \cdot 5\\, as part 2 says. Dividing by the norm gives a vector of length \\1\\: \\\mathopen{}\left\lVert\tfrac{1}{5}\\\tilde{x}\right\rVert\mathclose{} = \tfrac{1}{5} \cdot 5 = 1\\, and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 9](#exm-euclidean-norm).
+> **Example 95 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 9](#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm
+>
+> \\ \begin{aligned} \sqrt{36 + 64} &= 10 \\ &= \mathopen{}\left\|-2\right\|\mathclose{} \cdot 5, \end{aligned} \\
+>
+> as part 2 says. Dividing by the norm gives a vector of length \\1\\:
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tfrac{1}{5}\\\tilde{x}\right\rVert\mathclose{} &= \tfrac{1}{5} \cdot 5 \\ &= 1, \end{aligned} \\
+>
+> and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 9](#exm-euclidean-norm).
 
 > **NOTE:**
 >
@@ -2371,7 +2634,19 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 96 (Checking the expansion)** For \\\tilde{x} = (3, 0)\\ and \\\tilde{y} = (1, 4)\\: \\\tilde{x} + \tilde{y} = (4, 4)\\, so \\\mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 = 16 + 16 = 32\\, and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 = 9 + 2 \cdot 3 + 17 = 32\\. For the orthogonal vectors \\(3, 0)\\ and \\(0, 4)\\, \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{}^2 = 25 = 9 + 16\\, the \\3\\-\\4\\-\\5\\ right triangle.
+> **Example 96 (Checking the expansion)** For \\\tilde{x} = (3, 0)\\ and \\\tilde{y} = (1, 4)\\: \\\tilde{x} + \tilde{y} = (4, 4)\\, so
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 &= 16 + 16 \\ &= 32, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 &= 9 + 2 \cdot 3 + 17 \\ &= 32. \end{aligned} \\
+>
+> For the orthogonal vectors \\(3, 0)\\ and \\(0, 4)\\,
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{}^2 &= 25 \\ &= 9 + 16, \end{aligned} \\
+>
+> the \\3\\-\\4\\-\\5\\ right triangle.
 
 > **NOTE:**
 >
@@ -2383,7 +2658,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Proof*. **If \\\tilde{y} = \tilde{0}\\.** Then \\\tilde{x} \cdot \tilde{0}= \sum_i x_i \cdot 0 = 0\\ ([Definition 7](#def-dot-product)) and \\\mathopen{}\left\lVert\tilde{0}\right\rVert\mathclose{} = 0\\ ([Theorem 52](#thm-norm-properties), part 1), so both sides are \\0\\ and equality holds; and \\\tilde{x}, \tilde{y}\\ are linearly dependent, because \\0\\\tilde{x} + 1\\\tilde{y} = \tilde{0}\\.
+> *Proof*. **If \\\tilde{y} = \tilde{0}\\.** Then
+>
+> \\ \begin{aligned} \tilde{x} \cdot \tilde{0}&= \sum_i x_i \cdot 0 \\ &= 0 \end{aligned} \\
+>
+> 2.  and \\\mathopen{}\left\lVert\tilde{0}\right\rVert\mathclose{} = 0\\ ([Theorem 52](#thm-norm-properties), part 1), so both sides are \\0\\ and equality holds; and \\\tilde{x}, \tilde{y}\\ are linearly dependent, because \\0\\\tilde{x} + 1\\\tilde{y} = \tilde{0}\\.
 >
 > **If \\\tilde{y} \ne \tilde{0}\\.** Then \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} \> 0\\ ([Theorem 52](#thm-norm-properties), part 1). Let \\t \stackrel{\text{def}}{=}(\tilde{x} \cdot \tilde{y}) / \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2\\. Then
 >
@@ -2399,7 +2678,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > - If \\\tilde{x} = t\\\tilde{y}\\, then \\1\\\tilde{x} + (-t)\\\tilde{y} = \tilde{0}\\, so the two vectors are linearly dependent.
 >
-> - Conversely, suppose \\a\\\tilde{x} + b\\\tilde{y} = \tilde{0}\\ with \\a, b\\ not both \\0\\. Then \\a \ne 0\\: otherwise \\b \ne 0\\ and \\b\\\tilde{y} = \tilde{0}\\, so \\\tilde{y} = \tfrac{1}{b}\\(b\\\tilde{y}) = \tilde{0}\\, contrary to assumption. Subtracting \\b\\\tilde{y}\\ from both sides gives \\a\\\tilde{x} = -b\\\tilde{y}\\, and multiplying by \\\tfrac{1}{a}\\ gives \\\tilde{x} = s\\\tilde{y}\\ with \\s = -b/a\\. Then
+> - Conversely, suppose \\a\\\tilde{x} + b\\\tilde{y} = \tilde{0}\\ with \\a, b\\ not both \\0\\. Then \\a \ne 0\\: otherwise \\b \ne 0\\ and \\b\\\tilde{y} = \tilde{0}\\, so
+>
+>   \\ \begin{aligned} \tilde{y} &= \tfrac{1}{b}\\(b\\\tilde{y}) \\ &= \tilde{0}, \end{aligned} \\
+>
+>   contrary to assumption. Subtracting \\b\\\tilde{y}\\ from both sides gives \\a\\\tilde{x} = -b\\\tilde{y}\\, and multiplying by \\\tfrac{1}{a}\\ gives \\\tilde{x} = s\\\tilde{y}\\ with \\s = -b/a\\. Then
 >
 >   \\ \begin{aligned} \mathopen{}\left\|\tilde{x} \cdot \tilde{y}\right\|\mathclose{} &= \mathopen{}\left\|(s\\\tilde{y}) \cdot \tilde{y}\right\|\mathclose{} && \text{(substitute } \tilde{x} = s\\\tilde{y} \text{)} \\ &= \mathopen{}\left\|s\\(\tilde{y} \cdot \tilde{y})\right\|\mathclose{} && \text{(}\href{#thm-dot-linear}{\text{Theorem~46}}\text{, special case } b = 0 \text{, first slot)} \\ &= \mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\|\tilde{y} \cdot \tilde{y}\right\|\mathclose{} && \text{(} \mathopen{}\left\|ab\right\|\mathclose{} = \mathopen{}\left\|a\right\|\mathclose{}\\\mathopen{}\left\|b\right\|\mathclose{} \text{)} \\ &= \mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 && \text{(} \tilde{y} \cdot \tilde{y} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{#eq-l2-norm}{\text{Equation~2}}\text{)} \\ &= \mathopen{}\left(\mathopen{}\left\|s\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\right)\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} && \text{(regroup)} \\ &= \mathopen{}\left\lVert s\\\tilde{y}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} && \text{(}\href{#thm-norm-properties}{\text{Theorem~52}}\text{, part 2)} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}, && \text{(} s\\\tilde{y} = \tilde{x} \text{)} \end{aligned} \\
 >
@@ -2409,8 +2692,23 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 97 (A strict case and an equality case)**  
 >
-> - For \\\tilde{x} = (1, 2)\\ and \\\tilde{y} = (3, 4)\\: \\\tilde{x} \cdot \tilde{y} = 3 + 8 = 11\\, while \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = \sqrt{5} \cdot 5 \approx 11.18\\. The inequality is strict, and the vectors are linearly independent: \\(3, 4)\\ is not a multiple of \\(1, 2)\\, since \\3 \cdot 2 \ne 4\\.
-> - For \\\tilde{x} = (1, 2)\\ and \\\tilde{y} = (2, 4) = 2\\\tilde{x}\\: \\\tilde{x} \cdot \tilde{y} = 2 + 8 = 10\\ and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = \sqrt{5}\\\sqrt{20} = \sqrt{100} = 10\\, so equality holds.
+> - For \\\tilde{x} = (1, 2)\\ and \\\tilde{y} = (3, 4)\\:
+>
+>   \\ \begin{aligned} \tilde{x} \cdot \tilde{y} &= 3 + 8 \\ &= 11, \end{aligned} \\
+>
+>   while \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = \sqrt{5} \cdot 5 \approx 11.18\\. The inequality is strict, and the vectors are linearly independent: \\(3, 4)\\ is not a multiple of \\(1, 2)\\, since \\3 \cdot 2 \ne 4\\.
+>
+> - For \\\tilde{x} = (1, 2)\\ and
+>
+>   \\ \begin{aligned} \tilde{y} &= (2, 4) \\ &= 2\\\tilde{x}: \end{aligned} \\
+>
+>   \\ \begin{aligned} \tilde{x} \cdot \tilde{y} &= 2 + 8 \\ &= 10 \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} &= \sqrt{5}\\\sqrt{20} \\ &= \sqrt{100} \\ &= 10, \end{aligned} \\
+>
+>   so equality holds.
 
 > **NOTE:**
 >
@@ -2428,8 +2726,19 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 98 (A strict case and an equality case)**  
 >
-> - For \\\tilde{x} = (3, 0)\\ and \\\tilde{y} = (0, 4)\\: \\\mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{} = \mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, while \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 3 + 4 = 7\\.
-> - For \\\tilde{x} = (1, 0)\\ and \\\tilde{y} = (2, 0)\\, which point the same way: \\\mathopen{}\left\lVert(3, 0)\right\rVert\mathclose{} = 3 = 1 + 2\\, so equality holds.
+> - For \\\tilde{x} = (3, 0)\\ and \\\tilde{y} = (0, 4)\\:
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{} &= \mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} \\ &= 5, \end{aligned} \\
+>
+>   while
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} &= 3 + 4 \\ &= 7. \end{aligned} \\
+>
+> - For \\\tilde{x} = (1, 0)\\ and \\\tilde{y} = (2, 0)\\, which point the same way:
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert(3, 0)\right\rVert\mathclose{} &= 3 \\ &= 1 + 2, \end{aligned} \\
+>
+>   so equality holds.
 
 > **NOTE:**
 >
@@ -2468,9 +2777,17 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 100 (Calculating \\\ell_1\\, \\\ell_2\\, and \\\ell\_\infty\\ norms)** For \\\tilde{x}= (3, -4) \in \mathbb{R}^2\\:
 >
-> - \\\ell_1\\ norm: \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 = \mathopen{}\left\|3\right\|\mathclose{} + \mathopen{}\left\|-4\right\|\mathclose{} = 3 + 4 = 7\\.
-> - \\\ell_2\\ norm: \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5\\.
-> - \\\ell\_\infty\\ norm: \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty = \max(\mathopen{}\left\|3\right\|\mathclose{}, \mathopen{}\left\|-4\right\|\mathclose{}) = 4\\.
+> - \\\ell_1\\ norm:
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 &= \mathopen{}\left\|3\right\|\mathclose{} + \mathopen{}\left\|-4\right\|\mathclose{} \\ &= 3 + 4 \\ &= 7. \end{aligned} \\
+>
+> - \\\ell_2\\ norm:
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 &= \sqrt{3^2 + (-4)^2} \\ &= \sqrt{9 + 16} \\ &= \sqrt{25} \\ &= 5. \end{aligned} \\
+>
+> - \\\ell\_\infty\\ norm:
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty &= \max(\mathopen{}\left\|3\right\|\mathclose{}, \mathopen{}\left\|-4\right\|\mathclose{}) \\ &= 4. \end{aligned} \\
 >
 > Notice that \\4 \le 5 \le 7\\. For any vector \\\tilde{x}\in \mathbb{R}^p\\, the norms satisfy the chain of inequalities:
 >
@@ -2495,9 +2812,14 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > **Example 101 (Cosines and sines of some angles)**  
 >
 > - \\\theta= 0\\ stays at \\(1, 0)\\, so \\\cos 0 = 1\\ and \\\sin 0 = 0\\.
+>
 > - \\\theta= \pi\\ goes half way around the circle, to \\(-1, 0)\\, so \\\cos\pi = -1\\ and \\\sin\pi = 0\\.
+>
 > - \\\theta= \pi/2\\ goes a quarter of the way round, to \\(0, 1)\\, so \\\cos(\pi/2) = 0\\ and \\\sin(\pi/2) = 1\\.
-> - \\\theta= \pi/4\\ goes an eighth of the way round, to the point of the circle with \\x_1 = x_2 \> 0\\. There \\x_1^2 + x_1^2 = 1\\, so \\x_1^2 = \tfrac{1}{2}\\ and \\x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\\: \\\cos(\pi/4) = \sin(\pi/4) = \tfrac{1}{\sqrt{2}}\\.
+>
+> - \\\theta= \pi/4\\ goes an eighth of the way round, to the point of the circle with \\x_1 = x_2 \> 0\\. There \\x_1^2 + x_1^2 = 1\\, so \\x_1^2 = \tfrac{1}{2}\\ and \\x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\\:
+>
+>   \\ \begin{aligned} \cos(\pi/4) &= \sin(\pi/4) \\ &= \tfrac{1}{\sqrt{2}}. \end{aligned} \\
 >
 > Angles are also measured in *degrees*, with a full turn of \\2\pi\\ equal to \\360\\ degrees, so \\\pi/2\\ is \\90\\ degrees and \\\pi/4\\ is \\45\\ degrees.
 
@@ -2516,8 +2838,19 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > **Example 102 (Some angles in the plane)**  
 >
 > - \\(1, 0)\\ and \\(1, 1)\\: \\\cos\theta= \frac{1}{1 \cdot\sqrt{2}}\\, so \\\theta= \pi/4\\.
-> - \\(1, 2)\\ and \\(-2, 1)\\: \\\cos\theta= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} = 0\\, so \\\theta= \pi/2\\.
-> - \\(1, 0)\\ and \\(-3, 0)\\: \\\cos\theta= \frac{-3}{1 \cdot 3} = -1\\, so \\\theta= \pi\\.
+>
+> - \\(1, 2)\\ and \\(-2, 1)\\:
+>
+>   \\ \begin{aligned} \cos\theta&= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} \\ &= 0, \end{aligned} \\
+>
+>   so \\\theta= \pi/2\\.
+>
+> - \\(1, 0)\\ and \\(-3, 0)\\:
+>
+>   \\ \begin{aligned} \cos\theta&= \frac{-3}{1 \cdot 3} \\ &= -1, \end{aligned} \\
+>
+>   so \\\theta= \pi\\.
+>
 > - \\(1, 0)\\ and \\\tilde{0}\\: there is no angle, because the ratio would divide by \\\mathopen{}\left\lVert\tilde{0}\right\rVert\mathclose{} = 0\\.
 
 > **NOTE:**
@@ -2534,11 +2867,19 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **Example 103 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)** For vectors in \\\mathbb{R}^2\\:
 >
-> - Parallel vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (2, 4)\\: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{2 + 8}{\sqrt{5}\\\sqrt{20}} = \frac{10}{10} = 1\\.
-> - Orthogonal vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (-2, 1)\\: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} = \frac{0}{5} = 0\\.
-> - Arbitrary vectors \\\tilde{x}= (1, 0)\\ and \\\tilde{y}= (1, 1)\\: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} = \frac{1}{\sqrt{2}}\\.
+> - Parallel vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (2, 4)\\:
 >
-> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\\.
+>   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{2 + 8}{\sqrt{5}\\\sqrt{20}} \\ &= \frac{10}{10} \\ &= 1. \end{aligned} \\
+>
+> - Orthogonal vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (-2, 1)\\:
+>
+>   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{-2 + 2}{\sqrt{5}\\\sqrt{5}} \\ &= \frac{0}{5} \\ &= 0. \end{aligned} \\
+>
+> - Arbitrary vectors \\\tilde{x}= (1, 0)\\ and \\\tilde{y}= (1, 1)\\:
+>
+>   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
+>
+> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\\.
 
 ### 2.18 Orthonormal bases and Gram-Schmidt
 
@@ -2560,7 +2901,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 104 (Dotting with a combination of three vectors)** Let \\\tilde{x} = (1, 2, 3)\\ and take the combination \\2\\(1, 0, 0) - (0, 1, 0) + 4\\(0, 0, 1) = (2, -1, 4)\\. Directly, \\\tilde{x} \cdot (2, -1, 4) = 2 - 2 + 12 = 12\\. By [Theorem 56](#thm-dot-linear-sum), \\2 \cdot 1 - 1 \cdot 2 + 4 \cdot 3 = 12\\, the same number.
+> **Example 104 (Dotting with a combination of three vectors)** Let \\\tilde{x} = (1, 2, 3)\\ and take the combination \\2\\(1, 0, 0) - (0, 1, 0) + 4\\(0, 0, 1) = (2, -1, 4)\\. Directly,
+>
+> \\ \begin{aligned} \tilde{x} \cdot (2, -1, 4) &= 2 - 2 + 12 \\ &= 12. \end{aligned} \\
+>
+> By [Theorem 56](#thm-dot-linear-sum), \\2 \cdot 1 - 1 \cdot 2 + 4 \cdot 3 = 12\\, the same number.
 
 > **NOTE:**
 >
@@ -2580,7 +2925,15 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > \\ \tilde{q}\_1 = (0, 0, 1), \quad \tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0), \quad \tilde{q}\_3 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0). \\
 >
-> Each has norm \\1\\: \\\mathopen{}\left\lVert\tilde{q}\_2\right\rVert\mathclose{}^2 = \tfrac{1}{2}\\(1 + 1 + 0) = 1\\, and likewise for the others. They are mutually orthogonal: \\\tilde{q}\_1 \cdot \tilde{q}\_2 = 0\\ and \\\tilde{q}\_1 \cdot \tilde{q}\_3 = 0\\, because \\\tilde{q}\_1\\ has its only nonzero entry where the others have \\0\\, and \\\tilde{q}\_2 \cdot \tilde{q}\_3 = \tfrac{1}{2}\\(1 - 1 + 0) = 0\\. So by [Theorem 57](#thm-orthonormal-independent) they are linearly independent, with no need to solve \\c_1 \tilde{q}\_1 + c_2 \tilde{q}\_2 + c_3 \tilde{q}\_3 = \tilde{0}\\.
+> Each has norm \\1\\:
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{q}\_2\right\rVert\mathclose{}^2 &= \tfrac{1}{2}\\(1 + 1 + 0) \\ &= 1, \end{aligned} \\
+>
+> and likewise for the others. They are mutually orthogonal: \\\tilde{q}\_1 \cdot \tilde{q}\_2 = 0\\ and \\\tilde{q}\_1 \cdot \tilde{q}\_3 = 0\\, because \\\tilde{q}\_1\\ has its only nonzero entry where the others have \\0\\, and
+>
+> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{q}\_3 &= \tfrac{1}{2}\\(1 - 1 + 0) \\ &= 0. \end{aligned} \\
+>
+> So by [Theorem 57](#thm-orthonormal-independent) they are linearly independent, with no need to solve \\c_1 \tilde{q}\_1 + c_2 \tilde{q}\_2 + c_3 \tilde{q}\_3 = \tilde{0}\\.
 >
 > The converse fails: \\(1, 0)\\ and \\(1, 1)\\ are linearly independent, since \\c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)\\ is \\\tilde{0}\\ only if \\c_2 = 0\\ and then \\c_1 = 0\\, but they are not orthonormal, since \\(1, 0) \cdot (1, 1) = 1 \ne 0\\.
 
@@ -2593,7 +2946,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > **Example 106 (Orthonormal bases of \\\mathbb{R}^3\\)**  
 >
 > - The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \tilde{e}\_3\\ are orthonormal
->   2.  and a basis of \\\mathbb{R}^3\\ ([Example 47](#exm-dimension)).
+>   3.  and a basis of \\\mathbb{R}^3\\ ([Example 47](#exm-dimension)).
 > - The vectors \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of [Example 105](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 42](#def-basis)), which therefore has dimension \\3\\ ([Definition 44](#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 30](#thm-subspace-equal-dim), [Example 47](#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
 
 > **NOTE:**
@@ -2619,7 +2972,15 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 108 (Expanding a vector in an orthonormal basis)** With the orthonormal basis \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of \\\mathbb{R}^3\\ from [Example 106](#exm-orthonormal-basis) and \\\tilde{x} = (1, 2, 3)\\: \\\tilde{q}\_1 \cdot \tilde{x} = 3\\, \\\tilde{q}\_2 \cdot \tilde{x} = \tfrac{1}{\sqrt{2}}\\(1 + 2) = \tfrac{3}{\sqrt{2}}\\ and \\\tilde{q}\_3 \cdot \tilde{x} = \tfrac{1}{\sqrt{2}}\\(1 - 2) = -\tfrac{1}{\sqrt{2}}\\. Then
+> **Example 108 (Expanding a vector in an orthonormal basis)** With the orthonormal basis \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of \\\mathbb{R}^3\\ from [Example 106](#exm-orthonormal-basis) and \\\tilde{x} = (1, 2, 3)\\: \\\tilde{q}\_1 \cdot \tilde{x} = 3\\,
+>
+> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{x} &= \tfrac{1}{\sqrt{2}}\\(1 + 2) \\ &= \tfrac{3}{\sqrt{2}} \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \tilde{q}\_3 \cdot \tilde{x} &= \tfrac{1}{\sqrt{2}}\\(1 - 2) \\ &= -\tfrac{1}{\sqrt{2}}. \end{aligned} \\
+>
+> Then
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} (\tilde{q}\_i \cdot \tilde{x})\\\tilde{q}\_i &= 3\\(0, 0, 1) + \tfrac{3}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, -1, 0) && \text{(substitute)} \\ &= (0, 0, 3) + \mathopen{}\left(\tfrac{3}{2}, \tfrac{3}{2}, 0\right)\mathclose{} + \mathopen{}\left(-\tfrac{1}{2}, \tfrac{1}{2}, 0\right)\mathclose{} && \text{(multiply out each term)} \\ &= (1, 2, 3), && \text{(add entrywise)} \end{aligned} \\
 >
@@ -2641,17 +3002,29 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > - **Step 1.** \\\tilde{\tilde{q}}\_1 = (1, 1, 0)\\, with norm \\\sqrt{2}\\, so \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\.
 >
-> - **Step 2.** \\\tilde{q}\_1 \cdot \tilde{a}\_2 = \tfrac{1}{\sqrt{2}}\\(1 + 0 + 0) = \tfrac{1}{\sqrt{2}}\\, so
+> - **Step 2.**
+>
+>   \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{a}\_2 &= \tfrac{1}{\sqrt{2}}\\(1 + 0 + 0) \\ &= \tfrac{1}{\sqrt{2}}, \end{aligned} \\
+>
+>   so
 >
 >   \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (1, 0, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) && \text{(orthogonalize)} \\ &= (1, 0, 1) - \mathopen{}\left(\tfrac{1}{2}, \tfrac{1}{2}, 0\right)\mathclose{} && \text{(multiply out)} \\ &= \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{}, && \text{(subtract entrywise)} \end{aligned} \\
 >
->   with norm \\\sqrt{\tfrac{1}{4} + \tfrac{1}{4} + 1} = \sqrt{\tfrac{3}{2}}\\, so \\\tilde{q}\_2 = \sqrt{\tfrac{2}{3}}\\\mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{} = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\.
+>   with norm \\\sqrt{\tfrac{1}{4} + \tfrac{1}{4} + 1} = \sqrt{\tfrac{3}{2}}\\, so
 >
-> As a check, \\\tilde{q}\_1 \cdot \tilde{q}\_2 = \tfrac{1}{\sqrt{12}}\\(1 - 1 + 0) = 0\\.
+>   \\ \begin{aligned} \tilde{q}\_2 &= \sqrt{\tfrac{2}{3}}\\\mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 1\right)\mathclose{} \\ &= \tfrac{1}{\sqrt{6}}\\(1, -1, 2). \end{aligned} \\
+>
+> As a check,
+>
+> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{q}\_2 &= \tfrac{1}{\sqrt{12}}\\(1 - 1 + 0) \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 110 (Gram-Schmidt stops on dependent vectors)** Let \\\tilde{a}\_1 = (1, 2)\\ and \\\tilde{a}\_2 = (2, 4)\\. Step 1 gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{5}}\\(1, 2)\\. In step 2, \\\tilde{q}\_1 \cdot \tilde{a}\_2 = \tfrac{1}{\sqrt{5}}\\(2 + 8) = \tfrac{10}{\sqrt{5}}\\, and
+> **Example 110 (Gram-Schmidt stops on dependent vectors)** Let \\\tilde{a}\_1 = (1, 2)\\ and \\\tilde{a}\_2 = (2, 4)\\. Step 1 gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{5}}\\(1, 2)\\. In step 2,
+>
+> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{a}\_2 &= \tfrac{1}{\sqrt{5}}\\(2 + 8) \\ &= \tfrac{10}{\sqrt{5}}, \end{aligned} \\
+>
+> and
 >
 > \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (2, 4) - \tfrac{10}{\sqrt{5}} \cdot\tfrac{1}{\sqrt{5}}\\(1, 2) \\ &= (2, 4) - 2\\(1, 2) \\ &= \tilde{0}, \end{aligned} \\
 >
@@ -2667,7 +3040,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Proof*. **Parts 1 and 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i\\.** Before step \\1\\, the list of \\\tilde{q}\\’s is empty, which is orthonormal, and both spans are \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 41](#def-span)). Suppose part 1 holds after step \\i - 1\\, and write \\\mathcal{S}\_{i-1} = \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\right\\\mathclose{}\\. The orthonormal vectors \\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\\ are linearly independent ([Theorem 57](#thm-orthonormal-independent)) and span \\\mathcal{S}\_{i-1}\\, so they are an orthonormal basis of it.
+> *Proof*. **Parts 1 and 2, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i\\.** Before step \\1\\, the list of \\\tilde{q}\\’s is empty, which is orthonormal, and both spans are \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 41](#def-span)). Suppose part 1 holds after step \\i - 1\\, and write
+>
+> \\ \begin{aligned} \mathcal{S}\_{i-1} &= \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{} \\ &= \operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\right\\\mathclose{}. \end{aligned} \\
+>
+> The orthonormal vectors \\\tilde{q}\_1, \ldots, \tilde{q}\_{i-1}\\ are linearly independent ([Theorem 57](#thm-orthonormal-independent)) and span \\\mathcal{S}\_{i-1}\\, so they are an orthonormal basis of it.
 >
 > *\\\tilde{\tilde{q}}\_i\\ is orthogonal to the earlier \\\tilde{q}\\’s.* For each \\l \< i\\,
 >
@@ -2690,11 +3067,21 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Example 111 (Finishing an orthonormal basis of \\\mathbb{R}^3\\)** Continue [Example 109](#exm-gram-schmidt) with \\\tilde{a}\_3 = (0, 1, 1)\\. \\\tilde{q}\_1 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{2}}\\ and \\\tilde{q}\_2 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{6}}\\(0 - 1 + 2) = \tfrac{1}{\sqrt{6}}\\, so
+> **Example 111 (Finishing an orthonormal basis of \\\mathbb{R}^3\\)** Continue [Example 109](#exm-gram-schmidt) with \\\tilde{a}\_3 = (0, 1, 1)\\. \\\tilde{q}\_1 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{2}}\\ and
+>
+> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{a}\_3 &= \tfrac{1}{\sqrt{6}}\\(0 - 1 + 2) \\ &= \tfrac{1}{\sqrt{6}}, \end{aligned} \\
+>
+> so
 >
 > \\ \begin{aligned} \tilde{\tilde{q}}\_3 &= (0, 1, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{6}} \cdot\tfrac{1}{\sqrt{6}}\\(1, -1, 2) && \text{(orthogonalize)} \\ &= (0, 1, 1) - \tfrac{1}{2}\\(1, 1, 0) - \tfrac{1}{6}\\(1, -1, 2) && \text{(multiply the scalars)} \\ &= \mathopen{}\left(0 - \tfrac{1}{2} - \tfrac{1}{6},\\ 1 - \tfrac{1}{2} + \tfrac{1}{6},\\ 1 - 0 - \tfrac{2}{6}\right)\mathclose{} && \text{(subtract entrywise)} \\ &= \mathopen{}\left(-\tfrac{2}{3}, \tfrac{2}{3}, \tfrac{2}{3}\right)\mathclose{}, && \text{(arithmetic)} \end{aligned} \\
 >
-> with norm \\\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\\, so \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\. The process did not stop, so by [Theorem 59](#thm-gram-schmidt) \\\tilde{a}\_1, \tilde{a}\_2, \tilde{a}\_3\\ are linearly independent and \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ is an orthonormal basis of their span. That span therefore has dimension \\3\\ ([Definition 44](#def-dimension)), so it is \\\mathbb{R}^3\\ ([Theorem 30](#thm-subspace-equal-dim), [Example 47](#exm-dimension)). As a check, \\\tilde{q}\_1 \cdot \tilde{q}\_3 = \tfrac{1}{\sqrt{6}}\\(-1 + 1 + 0) = 0\\ and \\\tilde{q}\_2 \cdot \tilde{q}\_3 = \tfrac{1}{\sqrt{18}}\\(-1 - 1 + 2) = 0\\.
+> with norm \\\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\\, so \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\. The process did not stop, so by [Theorem 59](#thm-gram-schmidt) \\\tilde{a}\_1, \tilde{a}\_2, \tilde{a}\_3\\ are linearly independent and \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ is an orthonormal basis of their span. That span therefore has dimension \\3\\ ([Definition 44](#def-dimension)), so it is \\\mathbb{R}^3\\ ([Theorem 30](#thm-subspace-equal-dim), [Example 47](#exm-dimension)). As a check,
+>
+> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{q}\_3 &= \tfrac{1}{\sqrt{6}}\\(-1 + 1 + 0) \\ &= 0 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \tilde{q}\_2 \cdot \tilde{q}\_3 &= \tfrac{1}{\sqrt{18}}\\(-1 - 1 + 2) \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2704,14 +3091,28 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > *Proof*. Let \\\tilde{u}\_1, \ldots, \tilde{u}\_r \in \mathcal{S}\\ be orthonormal. They are linearly independent ([Theorem 57](#thm-orthonormal-independent)), so they extend to a basis \\\tilde{u}\_1, \ldots, \tilde{u}\_r, \tilde{a}\_{r+1}, \ldots, \tilde{a}\_d\\ of \\\mathcal{S}\\ ([Theorem 28](#thm-extend-basis)). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is \\\mathcal{S}\\ ([Theorem 59](#thm-gram-schmidt), part 3).
 >
-> The first \\r\\ outputs are \\\tilde{u}\_1, \ldots, \tilde{u}\_r\\ themselves, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i \le r\\. Suppose the outputs before step \\i\\ are \\\tilde{u}\_1, \ldots, \tilde{u}\_{i-1}\\ (for \\i = 1\\ there are none, and the sum below is empty). Then \\\tilde{\tilde{q}}\_i = \tilde{u}\_i - \sum\_{j\<i} (\tilde{u}\_j \cdot \tilde{u}\_i)\\\tilde{u}\_j = \tilde{u}\_i\\, because each \\\tilde{u}\_j \cdot \tilde{u}\_i = 0\\; \\\tilde{\tilde{q}}\_i = \tilde{u}\_i \ne \tilde{0}\\, because \\\mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = 1\\, so the process does not stop; and \\\tilde{q}\_i = \tilde{u}\_i / \mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = \tilde{u}\_i\\. So the orthonormal basis contains the starting list.
+> The first \\r\\ outputs are \\\tilde{u}\_1, \ldots, \tilde{u}\_r\\ themselves, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\i \le r\\. Suppose the outputs before step \\i\\ are \\\tilde{u}\_1, \ldots, \tilde{u}\_{i-1}\\ (for \\i = 1\\ there are none, and the sum below is empty). Then
+>
+> \\ \begin{aligned} \tilde{\tilde{q}}\_i &= \tilde{u}\_i - \sum\_{j\<i} (\tilde{u}\_j \cdot \tilde{u}\_i)\\\tilde{u}\_j \\ &= \tilde{u}\_i, \end{aligned} \\
+>
+> because each \\\tilde{u}\_j \cdot \tilde{u}\_i = 0\\; \\\tilde{\tilde{q}}\_i = \tilde{u}\_i \ne \tilde{0}\\, because \\\mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} = 1\\, so the process does not stop; and
+>
+> \\ \begin{aligned} \tilde{q}\_i &= \tilde{u}\_i / \mathopen{}\left\lVert\tilde{u}\_i\right\rVert\mathclose{} \\ &= \tilde{u}\_i. \end{aligned} \\
+>
+> So the orthonormal basis contains the starting list.
 
 > **NOTE:**
 >
 > **Example 112 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\tilde{u}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 49](#exm-extend-basis), starting from the empty list: \\\tilde{u}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\tilde{u}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1\right\\\mathclose{}\\, because every multiple of \\\tilde{u}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 27](#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 44](#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 30](#thm-subspace-equal-dim), [Example 47](#exm-dimension))). Gram-Schmidt on \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\:
 >
 > 1.  \\\tilde{q}\_1 = \tilde{u}\_1\\.
-> 2.  \\\tilde{q}\_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}\\, so \\\tilde{\tilde{q}}\_2 = (1, 0, 0) - \tfrac{1}{2}\\(1, 1, 0) = \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 0\right)\mathclose{}\\, with norm \\\tfrac{1}{\sqrt{2}}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0)\\.
+>
+> 2.  \\\tilde{q}\_1 \cdot (1, 0, 0) = \tfrac{1}{\sqrt{2}}\\, so
+>
+>     \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (1, 0, 0) - \tfrac{1}{2}\\(1, 1, 0) \\ &= \mathopen{}\left(\tfrac{1}{2}, -\tfrac{1}{2}, 0\right)\mathclose{}, \end{aligned} \\
+>
+>     with norm \\\tfrac{1}{\sqrt{2}}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(1, -1, 0)\\.
+>
 > 3.  \\(0, 0, 1)\\ is orthogonal to \\\tilde{q}\_1\\ and \\\tilde{q}\_2\\, so \\\tilde{\tilde{q}}\_3 = (0, 0, 1)\\, which already has norm \\1\\, and \\\tilde{q}\_3 = (0, 0, 1)\\.
 >
 > The result is the orthonormal basis of [Example 106](#exm-orthonormal-basis), in a different order.
@@ -2720,7 +3121,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> **Definition 66 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 24](#def-matrix-mult)) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
+> **Definition 66 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product (4) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
 >
 > \\ \mathopen{}\left(\underbrace{\tilde{u}}\_{m \times 1}\\\underbrace{{\tilde{v}}^{\top}}\_{1 \times n}\right)\mathclose{}\_{ij} = u_i v_j \qquad \text{(definition of matrix multiplication; the sum has one term)} \\
 
@@ -2748,7 +3149,11 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 >
 > **The rank is at least one.** Because \\\tilde{v} \neq \tilde{0}\\, some entry \\v_j\\ is nonzero. Then column \\j\\, \\v_j \tilde{u}\\, is a nonzero vector, and a single nonzero vector is linearly independent ([Definition 37](#def-linearly-independent)): \\c\\(v_j \tilde{u}) = \tilde{0}\\ forces \\c = 0\\.
 >
-> **The rank is at most one.** Take any two columns \\j \neq k\\. If \\v_j = v_k = 0\\, both columns are \\\tilde{0}\\, and \\1 \cdot(v_j \tilde{u}) + 1 \cdot(v_k \tilde{u}) = \tilde{0}\\. Otherwise, use the coefficients \\c_j = v_k\\ and \\c_k = -v_j\\, which are not both zero:
+> **The rank is at most one.** Take any two columns \\j \neq k\\. If
+>
+> \\ \begin{aligned} v_j &= v_k \\ &= 0, \end{aligned} \\
+>
+> both columns are \\\tilde{0}\\, and \\1 \cdot(v_j \tilde{u}) + 1 \cdot(v_k \tilde{u}) = \tilde{0}\\. Otherwise, use the coefficients \\c_j = v_k\\ and \\c_k = -v_j\\, which are not both zero:
 >
 > \\ \begin{aligned} v_k\\(v_j \tilde{u}) - v_j\\(v_k \tilde{u}) &= (v_k v_j - v_j v_k)\\\tilde{u} && \text{(collect the scalar multiples of } \tilde{u} \text{)} \\ &= 0 \cdot\tilde{u} && \text{(multiplication of numbers is commutative)} \\ &= \tilde{0} && \text{(a zero multiple of a vector is } \tilde{0}\text{)} \end{aligned} \\
 >
@@ -2788,7 +3193,7 @@ Some special matrices appeared earlier:
 >
 > \\ \begin{aligned} \mathbf{A}^2 &= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 0 & 0 \cdot 1 + 1 \cdot 1 \end{bmatrix} && \text{(definition of matrix multiplication)} \\ &= \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}, && \text{(multiply and add)} \\ \mathbf{A}^3 = \mathbf{A}^2 \mathbf{A} &= \begin{bmatrix} 1 \cdot 1 + 2 \cdot 0 & 1 \cdot 1 + 2 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 0 & 0 \cdot 1 + 1 \cdot 1 \end{bmatrix} && \text{(definition of matrix multiplication)} \\ &= \begin{bmatrix} 1 & 3 \\ 0 & 1 \end{bmatrix}. && \text{(multiply and add)} \end{aligned} \\
 >
-> A \\2 \times 3\\ matrix \\\mathbf{B}\\ is not square ([Definition 25](#def-square-matrix)), so \\\mathbf{B}^2\\ is not defined; indeed \\\mathbf{B} \mathbf{B}\\ would multiply a matrix with \\3\\ columns by one with \\2\\ rows, which [Definition 24](#def-matrix-mult) does not allow.
+> A \\2 \times 3\\ matrix \\\mathbf{B}\\ is not square ([Definition 25](#def-square-matrix)), so \\\mathbf{B}^2\\ is not defined; indeed \\\mathbf{B} \mathbf{B}\\ would multiply a matrix with \\3\\ columns by one with \\2\\ rows, which 4 does not allow.
 
 > **NOTE:**
 >
@@ -2802,7 +3207,9 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 117 (A matrix that is not symmetric)** \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\ is not symmetric: \\a\_{12} = 2 \ne 3 = a\_{21}\\.
+> **Example 117 (A matrix that is not symmetric)** \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\ is not symmetric:
+>
+> \\ \begin{aligned} a\_{12} &= 2 \\ &\ne 3 \\ &= a\_{21}. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2838,17 +3245,31 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> **Example 119 (An invertible matrix and a singular one)** The matrix \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ is invertible, with \\\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}\\: multiplying out gives \\\mathbf{A}\mathbf{A}^{-1} = \mathbf{A}^{-1}\mathbf{A} = \mathbf{I}\_2\\.
+> **Example 119 (An invertible matrix and a singular one)** The matrix \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ is invertible, with \\\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}\\: multiplying out gives
+>
+> \\ \begin{aligned} \mathbf{A}\mathbf{A}^{-1} &= \mathbf{A}^{-1}\mathbf{A} \\ &= \mathbf{I}\_2. \end{aligned} \\
 >
 > The matrix \\\mathbf{M} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ is singular: for any \\2 \times 2\\ matrix \\\mathbf{C}\\, the two rows of \\\mathbf{M}\mathbf{C}\\ are equal, so \\\mathbf{M}\mathbf{C}\\ can never be \\\mathbf{I}\_2\\, whose two rows differ.
 
 > **NOTE:**
 >
-> *Remark 21* (Invertible matrices and inverses). Let \\\mathbf{A}\\ be a \\p \times p\\ matrix, and suppose that two \\p \times p\\ matrices \\\mathbf{B}\\ and \\\mathbf{C}\\ satisfy \\\mathbf{A}\mathbf{B} = \mathbf{B}\mathbf{A} = \mathbf{I}\_p\\ and \\\mathbf{A}\mathbf{C} = \mathbf{C}\mathbf{A} = \mathbf{I}\_p\\. Then
+> *Remark 21* (Invertible matrices and inverses). Let \\\mathbf{A}\\ be a \\p \times p\\ matrix, and suppose that two \\p \times p\\ matrices \\\mathbf{B}\\ and \\\mathbf{C}\\ satisfy
+>
+> \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \mathbf{B}\mathbf{A} \\ &= \mathbf{I}\_p \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \mathbf{A}\mathbf{C} &= \mathbf{C}\mathbf{A} \\ &= \mathbf{I}\_p. \end{aligned} \\
+>
+> Then
 >
 > \\ \begin{aligned} \mathbf{B} &= \mathbf{B}\\\mathbf{I}\_p && \text{(identity matrix)} \\ &= \mathbf{B}(\mathbf{A}\mathbf{C}) && \text{(} \mathbf{A}\mathbf{C} = \mathbf{I}\_p \text{)} \\ &= (\mathbf{B}\mathbf{A})\mathbf{C} && \text{(matrix multiplication is associative)} \\ &= \mathbf{I}\_p\\\mathbf{C} && \text{(} \mathbf{B}\mathbf{A} = \mathbf{I}\_p \text{)} \\ &= \mathbf{C} && \text{(identity matrix)} \end{aligned} \\
 >
-> The steps use [Theorem 8](#thm-matmul-assoc) and [Theorem 10](#thm-identity). Since \\\mathbf{B} = \mathbf{C}\\, at most one matrix satisfies these equations, which is the uniqueness that [Definition 71](#def-matrix-inverse) asserts. When \\\mathbf{A}\\ is invertible, the matrix \\\mathbf{B}\\ in [Definition 72](#def-invertible-matrix) is therefore the inverse \\\mathbf{A}^{-1}\\ of \\\mathbf{A}\\, and \\\mathbf{A}\\ is invertible exactly when it has an inverse. For example, for \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ in [Example 119](#exm-invertible-matrix), \\\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}\\ is the only \\2 \times 2\\ matrix \\\mathbf{B}\\ with \\\mathbf{A}\mathbf{B} = \mathbf{B}\mathbf{A} = \mathbf{I}\_2\\, so it is \\\mathbf{A}^{-1}\\.
+> The steps use [Theorem 8](#thm-matmul-assoc) and [Theorem 10](#thm-identity). Since \\\mathbf{B} = \mathbf{C}\\, at most one matrix satisfies these equations, which is the uniqueness that 5 asserts. When \\\mathbf{A}\\ is invertible, the matrix \\\mathbf{B}\\ in [Definition 72](#def-invertible-matrix) is therefore the inverse \\\mathbf{A}^{-1}\\ of \\\mathbf{A}\\, and \\\mathbf{A}\\ is invertible exactly when it has an inverse. For example, for \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ in [Example 119](#exm-invertible-matrix), \\\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}\\ is the only \\2 \times 2\\ matrix \\\mathbf{B}\\ with
+>
+> \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \mathbf{B}\mathbf{A} \\ &= \mathbf{I}\_2, \end{aligned} \\
+>
+> so it is \\\mathbf{A}^{-1}\\.
 
 > **NOTE:**
 >
@@ -2866,7 +3287,7 @@ Some special matrices appeared earlier:
 >
 > \\ \begin{aligned} (\mathbf{B}^{-1}\mathbf{A}^{-1})(\mathbf{A}\mathbf{B}) &= \mathbf{B}^{-1}(\mathbf{A}^{-1}\mathbf{A})\mathbf{B} && \text{(matrix multiplication is associative)} \\ &= \mathbf{B}^{-1}\\\mathbf{I}\_p\\\mathbf{B} && \text{(definition of } \mathbf{A}^{-1} \text{)} \\ &= \mathbf{B}^{-1}\mathbf{B} && \text{(identity matrix)} \\ &= \mathbf{I}\_p && \text{(definition of } \mathbf{B}^{-1} \text{)} \end{aligned} \\
 >
-> So \\\mathbf{B}^{-1}\mathbf{A}^{-1}\\ satisfies [Definition 71](#def-matrix-inverse) for \\\mathbf{A}\mathbf{B}\\. The steps use [Theorem 8](#thm-matmul-assoc) and [Theorem 10](#thm-identity).
+> So \\\mathbf{B}^{-1}\mathbf{A}^{-1}\\ satisfies 5 for \\\mathbf{A}\mathbf{B}\\. The steps use [Theorem 8](#thm-matmul-assoc) and [Theorem 10](#thm-identity).
 
 > **NOTE:**
 >
@@ -2882,7 +3303,7 @@ Some special matrices appeared earlier:
 >
 > \\ \begin{aligned} {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\{\mathbf{A}}^{\top} &= {\mathopen{}\left(\mathbf{A}\mathbf{A}^{-1}\right)\mathclose{}}^{\top} && \text{(transpose of a product)} \\ &= {\mathbf{I}\_p}^{\top} && \text{(definition of } \mathbf{A}^{-1} \text{)} \\ &= \mathbf{I}\_p && \text{(} \mathbf{I}\_p \text{ is symmetric)} \end{aligned} \\
 >
-> So \\{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\ satisfies [Definition 71](#def-matrix-inverse) for \\{\mathbf{A}}^{\top}\\. The first step of each display is [Theorem 19](#thm-transpose-product).
+> So \\{\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\ satisfies 5 for \\{\mathbf{A}}^{\top}\\. The first step of each display is [Theorem 19](#thm-transpose-product).
 
 > **NOTE:**
 >
@@ -3006,7 +3427,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 23* (The columns of an orthogonal matrix are orthonormal). Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 17](#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 71](#def-matrix-inverse)) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
+> *Remark 23* (The columns of an orthogonal matrix are orthonormal). Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 17](#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ (5) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
 >
 > For example, the columns of \\\mathbf{Q}\\ in [Example 125](#exm-orthogonal-matrix) are \\(0.6, 0.8)\\ and \\(-0.8, 0.6)\\. The diagonal entries \\0.36 + 0.64 = 1\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ are their squared norms, and the off-diagonal entries \\-0.48 + 0.48 = 0\\ are their dot product. Multiplying in the other order also gives \\\mathbf{I}\_2\\:
 >
@@ -3161,7 +3582,13 @@ Some special matrices appeared earlier:
 >
 > \\ (\mathbf{A}\mathbf{B})\\\mathbf{C} = \begin{bmatrix} 3 \cdot 0 + 2 \cdot 1 & 3 \cdot 1 + 2 \cdot 0 \\ 1 \cdot 0 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot 0 \end{bmatrix} = \begin{bmatrix} 2 & 3 \\ 1 & 1 \end{bmatrix} \qquad (\mathbf{C}\mathbf{A})\\\mathbf{B} = \begin{bmatrix} 0 \cdot 1 + 1 \cdot 1 & 0 \cdot 0 + 1 \cdot 1 \\ 1 \cdot 1 + 2 \cdot 1 & 1 \cdot 0 + 2 \cdot 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 3 & 2 \end{bmatrix} \\
 >
-> and both traces are the same: \\\operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = 2 + 1 = 3\\ and \\\operatorname{tr}(\mathbf{C}\mathbf{A}\mathbf{B}) = 1 + 2 = 3\\.
+> and both traces are the same:
+>
+> \\ \begin{aligned} \operatorname{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) &= 2 + 1 \\ &= 3 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \operatorname{tr}(\mathbf{C}\mathbf{A}\mathbf{B}) &= 1 + 2 \\ &= 3. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3197,9 +3624,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 26* (The matrix inner product as a dot product). [Theorem 68](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 7](#def-dot-product)) of the two matrices’ entries, each listed as one vector of length \\np\\, with both matrices’ entries listed in the same order.
+> *Remark 26* (The matrix inner product as a dot product). [Theorem 68](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product (2) of the two matrices’ entries, each listed as one vector of length \\np\\, with both matrices’ entries listed in the same order.
 >
-> For example, listing the entries of \\\mathbf{A}\\ and \\\mathbf{B}\\ in [Example 132](#exm-matrix-inner-product) row by row gives \\(1, 2, 3, 4)\\ and \\(0, 1, -1, 2)\\, and \\(1, 2, 3, 4) \cdot (0, 1, -1, 2) = 7 = \left\langle \mathbf{A}, \mathbf{B} \right\rangle\\.
+> For example, listing the entries of \\\mathbf{A}\\ and \\\mathbf{B}\\ in [Example 132](#exm-matrix-inner-product) row by row gives \\(1, 2, 3, 4)\\ and \\(0, 1, -1, 2)\\, and
+>
+> \\ \begin{aligned} (1, 2, 3, 4) \cdot (0, 1, -1, 2) &= 7 \\ &= \left\langle \mathbf{A}, \mathbf{B} \right\rangle. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3221,7 +3650,9 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > *Remark 27* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 68](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 14](#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
 >
-> For example, listing the entries of \\\mathbf{A}\\ in [Example 133](#exm-frobenius-norm) row by row gives the vector \\(1, 2, 3, 4)\\ of length \\2 \cdot 2 = 4\\, and \\\mathopen{}\left\lVert(1, 2, 3, 4)\right\rVert\mathclose{} = \sqrt{1 + 4 + 9 + 16} = \sqrt{30} = \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\.
+> For example, listing the entries of \\\mathbf{A}\\ in [Example 133](#exm-frobenius-norm) row by row gives the vector \\(1, 2, 3, 4)\\ of length \\2 \cdot 2 = 4\\, and
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert(1, 2, 3, 4)\right\rVert\mathclose{} &= \sqrt{1 + 4 + 9 + 16} \\ &= \sqrt{30} \\ &= \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3287,7 +3718,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > *Remark 29* (Real and complex eigenvalues). These notes take \\\lambda\\ and \\\tilde{v}\\ to be real. Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Definition 11.1, pp. 312-313) also allows [complex](algebra.llms.md#def-complex-number) eigenvalues and eigenvectors, because some real matrices, such as a rotation by \\90\\ degrees, have no real eigenvalues ([Banerjee and Roy 2014, chap. 11](#ref-banerjee2014linear), Example 11.2, p. 312).
 >
-> For example, \\\mathbf{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\\ rotates each vector in the plane counterclockwise by \\90\\ degrees: \\\mathbf{R}\\(v_1, v_2) = (-v_2, v_1)\\. Suppose \\\mathbf{R}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\-v_2 = \lambda v_1\\ and \\v_1 = \lambda v_2\\. Substituting the second equation into the first gives \\-v_2 = \lambda^2 v_2\\, so \\(1 + \lambda^2)\\ v_2 = 0\\. Since \\1 + \lambda^2 \> 0\\, \\v_2 = 0\\, and then \\v_1 = \lambda v_2 = 0\\. So the only solution is \\\tilde{v} = \tilde{0}\\, and \\\mathbf{R}\\ has no real eigenvalue.
+> For example, \\\mathbf{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}\\ rotates each vector in the plane counterclockwise by \\90\\ degrees: \\\mathbf{R}\\(v_1, v_2) = (-v_2, v_1)\\. Suppose \\\mathbf{R}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\-v_2 = \lambda v_1\\ and \\v_1 = \lambda v_2\\. Substituting the second equation into the first gives \\-v_2 = \lambda^2 v_2\\, so \\(1 + \lambda^2)\\ v_2 = 0\\. Since \\1 + \lambda^2 \> 0\\, \\v_2 = 0\\, and then
+>
+> \\ \begin{aligned} v_1 &= \lambda v_2 \\ &= 0. \end{aligned} \\
+>
+> So the only solution is \\\tilde{v} = \tilde{0}\\, and \\\mathbf{R}\\ has no real eigenvalue.
 
 > **TIP:**
 >
@@ -3305,7 +3740,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 30* (An equivalent form of the spectral theorem). The proof, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\, is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Theorem 11.27, p. 349), which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ ([Remark 23](#rem-orthogonal-matrix-columns)). Multiplying \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ by \\{\mathbf{Q}}^{\top}\\ on the left and by \\\mathbf{Q}\\ on the right gives
+> *Remark 30* (An equivalent form of the spectral theorem). The proof, by [induction](proof-writing.llms.md#def-proof-by-induction) on \\p\\, is outside the scope of these notes; see Banerjee and Roy ([2014, chap. 11](#ref-banerjee2014linear), Theorem 11.27, p. 349), which states the result in the equivalent form \\{\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} = \mathbf{\Lambda}\\. The two forms are equivalent because
+>
+> \\ \begin{aligned} {\mathbf{Q}}^{\top}\mathbf{Q} &= \mathbf{Q}{\mathbf{Q}}^{\top} \\ &= \mathbf{I}\_p \end{aligned} \\
+>
+> ([Remark 23](#rem-orthogonal-matrix-columns)). Multiplying \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ by \\{\mathbf{Q}}^{\top}\\ on the left and by \\\mathbf{Q}\\ on the right gives
 >
 > \\ \begin{aligned} {\mathbf{Q}}^{\top}\mathbf{A}\mathbf{Q} &= {\mathbf{Q}}^{\top}\mathopen{}\left(\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\right)\mathclose{}\mathbf{Q} && \text{(substitute)} \\ &= \mathopen{}\left({\mathbf{Q}}^{\top}\mathbf{Q}\right)\mathclose{}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\mathbf{Q}\right)\mathclose{} && \text{(regroup; matrix multiplication is associative)} \\ &= \mathbf{I}\_p\mathbf{\Lambda}\mathbf{I}\_p && \text{(} \mathbf{Q} \text{ is orthogonal)} \\ &= \mathbf{\Lambda} && \text{(multiplying by } \mathbf{I}\_p \text{ changes nothing)} \end{aligned} \\
 >
@@ -3377,7 +3816,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > \\ \begin{aligned} \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top} &= \begin{bmatrix} 1 \end{bmatrix} \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(substitute)} \\ &= \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(multiplying by the } 1 \times 1 \text{ identity changes nothing)} \\ &= \frac{1}{\sqrt{2}} \begin{bmatrix} \sqrt{2} & 0 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(move the scalar to the front)} \\ &= \frac{1}{\sqrt{2}} \begin{bmatrix} \sqrt{2} \cdot 1 + 0 \cdot 1 & \sqrt{2} \cdot 1 + 0 \cdot(-1) \end{bmatrix} && \text{(definition of matrix multiplication)} \\ &= \frac{1}{\sqrt{2}} \begin{bmatrix} \sqrt{2} + 0 & \sqrt{2} + 0 \end{bmatrix} && \text{(multiply)} \\ &= \frac{1}{\sqrt{2}} \begin{bmatrix} \sqrt{2} & \sqrt{2} \end{bmatrix} && \text{(add)} \\ &= \begin{bmatrix} 1 & 1 \end{bmatrix} && \text{(divide by } \sqrt{2} \text{)} \end{aligned} \\
 >
-> \\\mathbf{U}\\ is orthogonal because \\{\mathbf{U}}^{\top}\mathbf{U} = \begin{bmatrix} 1 \end{bmatrix} = \mathbf{I}\_1\\, and the single singular value is \\\sigma_1 = \sqrt{2}\\.
+> \\\mathbf{U}\\ is orthogonal because
+>
+> \\ \begin{aligned} {\mathbf{U}}^{\top}\mathbf{U} &= \begin{bmatrix} 1 \end{bmatrix} \\ &= \mathbf{I}\_1, \end{aligned} \\
+>
+> and the single singular value is \\\sigma_1 = \sqrt{2}\\.
 
 > **NOTE:**
 >
@@ -3437,7 +3880,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > *Remark 34* (Counting zero singular values). Some texts, and R’s [`svd()`](https://rdrr.io/r/base/svd.html), also count \\\min(n, p) - r\\ singular values equal to \\0\\, so that every \\n \times p\\ matrix has \\\min(n, p)\\ singular values.
 >
-> For example, \\\mathbf{B} = \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}\\ has rank \\r = 1\\. Taking \\\mathbf{U} = \mathbf{V} = \mathbf{I}\_2\\ and \\\mathbf{D} = \mathbf{B}\\ gives an SVD \\\mathbf{B} = \mathbf{I}\_2 \mathbf{B} {\mathbf{I}\_2}^{\top}\\, so by [Definition 84](#def-svd), \\\mathbf{B}\\ has one singular value, \\\sigma_1 = 3\\. R’s [`svd()`](https://rdrr.io/r/base/svd.html) reports \\\min(2, 2) = 2\\ singular values for \\\mathbf{B}\\: \\3\\ and \\0\\.
+> For example, \\\mathbf{B} = \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}\\ has rank \\r = 1\\. Taking
+>
+> \\ \begin{aligned} \mathbf{U} &= \mathbf{V} \\ &= \mathbf{I}\_2 \end{aligned} \\
+>
+> and \\\mathbf{D} = \mathbf{B}\\ gives an SVD \\\mathbf{B} = \mathbf{I}\_2 \mathbf{B} {\mathbf{I}\_2}^{\top}\\, so by [Definition 84](#def-svd), \\\mathbf{B}\\ has one singular value, \\\sigma_1 = 3\\. R’s [`svd()`](https://rdrr.io/r/base/svd.html) reports \\\min(2, 2) = 2\\ singular values for \\\mathbf{B}\\: \\3\\ and \\0\\.
 
 > **NOTE:**
 >
@@ -3524,8 +3971,14 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 > **Example 141 (Positive definite, semidefinite, and neither)**  
 >
 > - The identity matrix \\\mathbf{I}\_p\\ ([Definition 27](#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top}\mathbf{I}\_p\tilde{x}= \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
-> - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 140](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{B}\tilde{x}= (1 - 1)^2 = 0\\.
-> - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\tilde{x}= (1, -1)\\, \\{\tilde{x}}^{\top}\mathbf{D}\tilde{x}= 1 - 2 - 2 + 1 = -2 \< 0\\.
+>
+> - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 140](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\,
+>
+>   \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{B}\tilde{x}&= (1 - 1)^2 \\ &= 0. \end{aligned} \\
+>
+> - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\tilde{x}= (1, -1)\\,
+>
+>   \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{D}\tilde{x}&= 1 - 2 - 2 + 1 \\ &= -2 \\ &\< 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3535,7 +3988,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{C}\tilde{x} &= x_1 (x_1 + x_2) + x_2 (-x_1 + x_2) && \text{(multiply out the quadratic form)} \\ &= x_1^2 + x_1 x_2 - x_2 x_1 + x_2^2 && \text{(distribute)} \\ &= x_1^2 + x_2^2 && \text{(the middle terms cancel)} \end{aligned} \\
 >
-> which is positive for every \\\tilde{x}\neq \tilde{0}\\. But suppose \\\mathbf{C}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\v_1 + v_2 = \lambda v_1\\ and \\-v_1 + v_2 = \lambda v_2\\, so \\v_2 = (\lambda- 1)\\ v_1\\ and \\-v_1 = (\lambda- 1)\\ v_2\\. Substituting the first into the second gives \\-v_1 = (\lambda- 1)^2 v_1\\, so \\\mathopen{}\left(1 + (\lambda- 1)^2\right)\mathclose{} v_1 = 0\\. Since \\1 + (\lambda- 1)^2 \> 0\\, \\v_1 = 0\\, and then \\v_2 = (\lambda- 1)\\ v_1 = 0\\. So no real \\\lambda\\ has an eigenvector \\\tilde{v} \neq \tilde{0}\\.
+> which is positive for every \\\tilde{x}\neq \tilde{0}\\. But suppose \\\mathbf{C}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\v_1 + v_2 = \lambda v_1\\ and \\-v_1 + v_2 = \lambda v_2\\, so \\v_2 = (\lambda- 1)\\ v_1\\ and \\-v_1 = (\lambda- 1)\\ v_2\\. Substituting the first into the second gives \\-v_1 = (\lambda- 1)^2 v_1\\, so \\\mathopen{}\left(1 + (\lambda- 1)^2\right)\mathclose{} v_1 = 0\\. Since \\1 + (\lambda- 1)^2 \> 0\\, \\v_1 = 0\\, and then
+>
+> \\ \begin{aligned} v_2 &= (\lambda- 1)\\ v_1 \\ &= 0. \end{aligned} \\
+>
+> So no real \\\lambda\\ has an eigenvector \\\tilde{v} \neq \tilde{0}\\.
 
 See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
@@ -3575,11 +4032,15 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> *Proof*. By [Theorem 73](#thm-definite-eigenvalues), every \\\lambda_i \> 0\\, so \\\mathbf{\Lambda}^{-1}\\ is well defined, and multiplying the two diagonal matrices entry by entry gives \\\mathbf{\Lambda}\mathbf{\Lambda}^{-1} = \mathbf{\Lambda}^{-1}\mathbf{\Lambda} = \mathbf{I}\_p\\. Write \\\mathbf{B} = \mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top}\\. Then:
+> *Proof*. By [Theorem 73](#thm-definite-eigenvalues), every \\\lambda_i \> 0\\, so \\\mathbf{\Lambda}^{-1}\\ is well defined, and multiplying the two diagonal matrices entry by entry gives
+>
+> \\ \begin{aligned} \mathbf{\Lambda}\mathbf{\Lambda}^{-1} &= \mathbf{\Lambda}^{-1}\mathbf{\Lambda} \\ &= \mathbf{I}\_p. \end{aligned} \\
+>
+> Write \\\mathbf{B} = \mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top}\\. Then:
 >
 > \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\mathbf{Q}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} && \text{(substitute)} \\ &= \mathbf{Q}\mathbf{\Lambda}\mathbf{I}\_p\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} && \text{(} {\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p \text{)} \\ &= \mathbf{Q}\mathbf{\Lambda}\mathbf{\Lambda}^{-1}{\mathbf{Q}}^{\top} && \text{(identity matrix)} \\ &= \mathbf{Q}{\mathbf{Q}}^{\top} && \text{(} \mathbf{\Lambda}\mathbf{\Lambda}^{-1} = \mathbf{I}\_p \text{)} \\ &= \mathbf{I}\_p && \text{(} \mathbf{Q} \text{ is orthogonal)} \end{aligned} \\
 >
-> The same steps, with \\\mathbf{\Lambda}^{-1}\\ and \\\mathbf{\Lambda}\\ swapped, give \\\mathbf{B}\mathbf{A} = \mathbf{I}\_p\\, so \\\mathbf{B} = \mathbf{A}^{-1}\\ ([Definition 71](#def-matrix-inverse)). The steps with \\\mathbf{Q}\\ use [Definition 76](#def-orthogonal-matrix), whose remark records that \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ too, and the identity step uses [Theorem 10](#thm-identity).
+> The same steps, with \\\mathbf{\Lambda}^{-1}\\ and \\\mathbf{\Lambda}\\ swapped, give \\\mathbf{B}\mathbf{A} = \mathbf{I}\_p\\, so \\\mathbf{B} = \mathbf{A}^{-1}\\ (5). The steps with \\\mathbf{Q}\\ use [Definition 76](#def-orthogonal-matrix), whose remark records that \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ too, and the identity step uses [Theorem 10](#thm-identity).
 >
 > \\\mathbf{A}^{-1}\\ is symmetric by [Corollary 6](#cor-inverse-symmetric). For \\\tilde{x}\neq \tilde{0}\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\, which is not \\\tilde{0}\\ because \\\tilde{x}= \mathbf{Q}\tilde{y}\\. As in the proof of [Theorem 73](#thm-definite-eigenvalues):
 >
@@ -3593,7 +4054,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} \mathbf{A}^{-1} &= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 1/3 & 0 \\ 0 & 1 \end{bmatrix} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(substitute; } \mathbf{Q} \text{ is symmetric)} \\ &= \frac{1}{2} \begin{bmatrix} 1/3 & 1 \\ 1/3 & -1 \end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} && \text{(multiply the first two matrices)} \\ &= \frac{1}{2} \begin{bmatrix} 4/3 & -2/3 \\ -2/3 & 4/3 \end{bmatrix} && \text{(multiply)} \\ &= \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} && \text{(simplify)} \end{aligned} \\
 >
-> Multiplying out, \\\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \cdot\frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} = \mathbf{I}\_2\\.
+> Multiplying out,
+>
+> \\ \begin{aligned} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \cdot\frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} &= \frac{1}{3}\begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} \\ &= \mathbf{I}\_2. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3624,9 +4087,17 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{#def-matvec-mult}{\text{Definition~28}}\text{)} \end{aligned} \\
 >
-> Symmetry of \\\left\langle \cdot, \cdot \right\rangle\\ ensures \\A\_{ji} = \left\langle \tilde{e}\_j, \tilde{e}\_i \right\rangle = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle = A\_{ij}\\, so \\\mathbf{A}\\ is symmetric ([Definition 69](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}= \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 86](#def-positive-definite)).
+> Symmetry of \\\left\langle \cdot, \cdot \right\rangle\\ ensures
 >
-> For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\left\langle \tilde{x}, \tilde{y} \right\rangle = {\tilde{x}}^{\top}\mathbf{B}\tilde{y}\\ for all \\\tilde{x}, \tilde{y}\\, evaluating at \\\tilde{x}= \tilde{e}\_i\\ and \\\tilde{y}= \tilde{e}\_j\\ gives \\B\_{ij} = {\tilde{e}\_i}^{\top}\mathbf{B}\tilde{e}\_j = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle = A\_{ij}\\, so \\\mathbf{B} = \mathbf{A}\\.
+> \\ \begin{aligned} A\_{ji} &= \left\langle \tilde{e}\_j, \tilde{e}\_i \right\rangle \\ &= \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \\ &= A\_{ij}, \end{aligned} \\
+>
+> so \\\mathbf{A}\\ is symmetric ([Definition 69](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}= \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 86](#def-positive-definite)).
+>
+> For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\left\langle \tilde{x}, \tilde{y} \right\rangle = {\tilde{x}}^{\top}\mathbf{B}\tilde{y}\\ for all \\\tilde{x}, \tilde{y}\\, evaluating at \\\tilde{x}= \tilde{e}\_i\\ and \\\tilde{y}= \tilde{e}\_j\\ gives
+>
+> \\ \begin{aligned} B\_{ij} &= {\tilde{e}\_i}^{\top}\mathbf{B}\tilde{e}\_j \\ &= \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \\ &= A\_{ij}, \end{aligned} \\
+>
+> so \\\mathbf{B} = \mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -3648,7 +4119,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} \tilde{x}\cdot \tilde{y} &= 1 \cdot 3 + 2 \cdot(-1) \\ &= 1. \end{aligned} \\
 >
-> The off-diagonal entries \\A\_{12} = A\_{21} = 1\\ couple the coordinate directions, altering lengths and angles from their Euclidean values. When \\\mathbf{A} = \mathbf{I}\_p\\, the matrix-induced inner product recovers the standard dot product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{I}\_p} = \tilde{x}\cdot \tilde{y}\\.
+> The off-diagonal entries
+>
+> \\ \begin{aligned} A\_{12} &= A\_{21} \\ &= 1 \end{aligned} \\
+>
+> couple the coordinate directions, altering lengths and angles from their Euclidean values. When \\\mathbf{A} = \mathbf{I}\_p\\, the matrix-induced inner product recovers the standard dot product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{I}\_p} = \tilde{x}\cdot \tilde{y}\\.
 
 > **NOTE:**
 >
@@ -3658,7 +4133,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products \\\left\langle \tilde{x}\_i, \tilde{x}\_j \right\rangle\\. By mapping data into a higher- or infinite-dimensional inner product space via a feature map \\\phi: \mathbb{R}^p \to \mathcal{H}\\, the kernel trick replaces the computation of \\\phi(\tilde{x}\_i)\\ with an evaluation of a positive definite kernel function: \\ k(\tilde{x}\_i, \tilde{x}\_j) \stackrel{\text{def}}{=}\left\langle \phi(\tilde{x}\_i), \phi(\tilde{x}\_j) \right\rangle\_{\mathcal{H}}. \\ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space \\\mathcal{H}\\ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
 >
-> 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 63](#def-cosine-similarity)): \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\ When embedding vectors are normalized to unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals the inner product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\\. Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products \\\tilde{q} \cdot \tilde{k} / \sqrt{d_k}\\.
+> 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 63](#def-cosine-similarity)): \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\ When embedding vectors are normalized to unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals the inner product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\\. Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products \\\tilde{q} \cdot \tilde{k} / \sqrt{d_k}\\.
 >
 > 4.  **Weighted and generalized least squares**: In linear regression \\\tilde{y}\approx \mathbf{X}\tilde{\beta}\\, when observation errors have unequal variances or known correlations with positive definite covariance matrix \\\mathbf{\Omega}\\, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by \\\mathbf{W} = \mathbf{\Omega}^{-1}\\: \\ \min\_{\tilde{\beta}} \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\_{\mathbf{W}}^2 = \min\_{\tilde{\beta}} \left\langle \tilde{y}- \mathbf{X}\tilde{\beta}, \tilde{y}- \mathbf{X}\tilde{\beta} \right\rangle\_{\mathbf{W}}. \\
 
@@ -3677,7 +4152,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= (-1)^{1+1}\\ a \det\mathopen{}\left(\begin{bmatrix} d \end{bmatrix}\right)\mathclose{} + (-1)^{1+2}\\ b \det\mathopen{}\left(\begin{bmatrix} c \end{bmatrix}\right)\mathclose{} && \text{(definition, } p = 2 \text{)} \\ &= a d - b c && \text{(definition, } p = 1 \text{)} \end{aligned} \\
 >
-> For example, \\\det\mathopen{}\left(\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\right)\mathclose{} = 2 \cdot 2 - 1 \cdot 1 = 3\\.
+> For example,
+>
+> \\ \begin{aligned} \det\mathopen{}\left(\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\right)\mathclose{} &= 2 \cdot 2 - 1 \cdot 1 \\ &= 3. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3721,11 +4198,21 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 147 (Checking the product rule)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}\\, [Example 145](#exm-determinant) gives \\\det(\mathbf{A}) = 2 \cdot 1 - 1 \cdot 0 = 2\\ and \\\det(\mathbf{B}) = 1 \cdot 1 - 0 \cdot 3 = 1\\. The product is
+> **Example 147 (Checking the product rule)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}\\, [Example 145](#exm-determinant) gives
+>
+> \\ \begin{aligned} \det(\mathbf{A}) &= 2 \cdot 1 - 1 \cdot 0 \\ &= 2 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \det(\mathbf{B}) &= 1 \cdot 1 - 0 \cdot 3 \\ &= 1. \end{aligned} \\
+>
+> The product is
 >
 > \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \begin{bmatrix} 2 \cdot 1 + 1 \cdot 3 & 2 \cdot 0 + 1 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 3 & 0 \cdot 0 + 1 \cdot 1 \end{bmatrix} \\ &= \begin{bmatrix} 5 & 1 \\ 3 & 1 \end{bmatrix}, \end{aligned} \\
 >
-> with \\\det(\mathbf{A}\mathbf{B}) = 5 \cdot 1 - 1 \cdot 3 = 2 = \det(\mathbf{A})\det(\mathbf{B})\\.
+> with
+>
+> \\ \begin{aligned} \det(\mathbf{A}\mathbf{B}) &= 5 \cdot 1 - 1 \cdot 3 \\ &= 2 \\ &= \det(\mathbf{A})\det(\mathbf{B}). \end{aligned} \\
 
 > **NOTE:**
 >
@@ -3761,7 +4248,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 148 (Two ways to the same determinant)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([Example 135](#exm-eigenvalue)), so [Theorem 78](#thm-det-eigenvalues) gives \\\det(\mathbf{A}) = 3 \cdot 1 = 3\\, matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 145](#exm-determinant).
+> **Example 148 (Two ways to the same determinant)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([Example 135](#exm-eigenvalue)), so [Theorem 78](#thm-det-eigenvalues) gives
+>
+> \\ \begin{aligned} \det(\mathbf{A}) &= 3 \cdot 1 \\ &= 3, \end{aligned} \\
+>
+> matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 145](#exm-determinant).
 
 ## 9 Design Matrix
 
@@ -3781,7 +4272,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \mathbf{X}\tilde{\beta} &= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix} \begin{bmatrix} 1 \\ 2 \end{bmatrix} \\ &= \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix}. \end{aligned} \\
 >
-> The matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is \\p \times p\\ and symmetric, since \\{({\mathbf{X}}^{\top}\mathbf{X})}^{\top} = {\mathbf{X}}^{\top}\\{({\mathbf{X}}^{\top})}^{\top} = {\mathbf{X}}^{\top}\mathbf{X}\\ ([Theorem 19](#thm-transpose-product)). When \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible, it appears in the OLS estimator \\\hat{\tilde{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\.
+> The matrix \\{\mathbf{X}}^{\top}\mathbf{X}\\ is \\p \times p\\ and symmetric, since
+>
+> \\ \begin{aligned} {({\mathbf{X}}^{\top}\mathbf{X})}^{\top} &= {\mathbf{X}}^{\top}\\{({\mathbf{X}}^{\top})}^{\top} \\ &= {\mathbf{X}}^{\top}\mathbf{X} \end{aligned} \\
+>
+> ([Theorem 19](#thm-transpose-product)). When \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible, it appears in the OLS estimator \\\hat{\tilde{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\.
 
 > **NOTE:**
 >
@@ -3825,7 +4320,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. We verify symmetry and idempotency. Both use that \\{\mathbf{X}}^{\top}\mathbf{X}\\ is symmetric, \\{\mathopen{}\left({\mathbf{X}}^{\top}\mathbf{X}\right)\mathclose{}}^{\top} = {\mathbf{X}}^{\top}\\{\mathopen{}\left({\mathbf{X}}^{\top}\right)\mathclose{}}^{\top} = {\mathbf{X}}^{\top}\mathbf{X}\\ ([Theorem 19](#thm-transpose-product)), so its inverse is symmetric too ([Corollary 6](#cor-inverse-symmetric)).
+> *Proof*. We verify symmetry and idempotency. Both use that \\{\mathbf{X}}^{\top}\mathbf{X}\\ is symmetric,
+>
+> \\ \begin{aligned} {\mathopen{}\left({\mathbf{X}}^{\top}\mathbf{X}\right)\mathclose{}}^{\top} &= {\mathbf{X}}^{\top}\\{\mathopen{}\left({\mathbf{X}}^{\top}\right)\mathclose{}}^{\top} \\ &= {\mathbf{X}}^{\top}\mathbf{X} \end{aligned} \\
+>
+> ([Theorem 19](#thm-transpose-product)), so its inverse is symmetric too ([Corollary 6](#cor-inverse-symmetric)).
 >
 > **Symmetry:** \\\begin{aligned} {\mathbf{H}}^{\top} &= {\left(\mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\right)}^{\top} && \text{(definition of } \mathbf{H} \text{)} \\ &= {({\mathbf{X}}^{\top})}^{\top} \cdot {\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1}\right)}^{\top} \cdot {\mathbf{X}}^{\top} && \text{(transpose of a product, twice)} \\ &= \mathbf{X}\cdot {\left(({\mathbf{X}}^{\top}\mathbf{X})^{-1}\right)}^{\top} \cdot {\mathbf{X}}^{\top} && \text{(transposing twice changes nothing)} \\ &= \mathbf{X}\cdot ({\mathbf{X}}^{\top}\mathbf{X})^{-1} \cdot {\mathbf{X}}^{\top} && \text{(the inverse of a symmetric matrix is symmetric)} \\ &= \mathbf{H} && \text{(definition of } \mathbf{H} \text{)} \end{aligned}\\
 >
@@ -3841,7 +4340,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Remark 41* (Why it is called the hat matrix). The hat matrix gives the fitted values in linear regression: \\\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}}= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\\. Multiplying by \\\mathbf{H}\\ “puts a hat” on \\\tilde{y}\\, which is where the name comes from. In [Example 150](#exm-hat-matrix), \\\mathbf{H}\\ puts a hat on \\\tilde{y}\\ by replacing each \\y_i\\ with the sample mean \\\bar{y}\\.
+> *Remark 41* (Why it is called the hat matrix). The hat matrix gives the fitted values in linear regression:
+>
+> \\ \begin{aligned} \hat{\tilde{y}} &= \mathbf{X}\hat{\tilde{\beta}}\\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\ &= \mathbf{H}\tilde{y}. \end{aligned} \\
+>
+> Multiplying by \\\mathbf{H}\\ “puts a hat” on \\\tilde{y}\\, which is where the name comes from. In [Example 150](#exm-hat-matrix), \\\mathbf{H}\\ puts a hat on \\\tilde{y}\\ by replacing each \\y_i\\ with the sample mean \\\bar{y}\\.
 
 ### 9.1 Orthogonal projection onto a subspace
 
@@ -3879,7 +4382,15 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 154 (No point of the line is closer)** In [Example 152](#exm-orthogonal-projection), \\\tilde{y} = (3, 1, 2)\\ has projection \\\tilde{u} = (2, 2, 0)\\ onto \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, at distance \\\mathopen{}\left\lVert(1, -1, 2)\right\rVert\mathclose{} = \sqrt{6}\\. Another point of \\\mathcal{S}\\, such as \\\tilde{w} = (3, 3, 0)\\, is farther: \\\mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{} = \mathopen{}\left\lVert(0, -2, 2)\right\rVert\mathclose{} = \sqrt{8} \> \sqrt{6}\\, and the difference of squares is \\\mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert(-1, -1, 0)\right\rVert\mathclose{}^2 = 2 = 8 - 6\\, by the Pythagorean theorem ([Theorem 53](#thm-norm-sum-square)), since \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\ and \\\tilde{u} - \tilde{w} \in \mathcal{S}\\.
+> **Example 154 (No point of the line is closer)** In [Example 152](#exm-orthogonal-projection), \\\tilde{y} = (3, 1, 2)\\ has projection \\\tilde{u} = (2, 2, 0)\\ onto \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, at distance \\\mathopen{}\left\lVert(1, -1, 2)\right\rVert\mathclose{} = \sqrt{6}\\. Another point of \\\mathcal{S}\\, such as \\\tilde{w} = (3, 3, 0)\\, is farther:
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{} &= \mathopen{}\left\lVert(0, -2, 2)\right\rVert\mathclose{} \\ &= \sqrt{8} \\ &\> \sqrt{6}, \end{aligned} \\
+>
+> and the difference of squares is
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(-1, -1, 0)\right\rVert\mathclose{}^2 \\ &= 2 \\ &= 8 - 6, \end{aligned} \\
+>
+> by the Pythagorean theorem ([Theorem 53](#thm-norm-sum-square)), since \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\ and \\\tilde{u} - \tilde{w} \in \mathcal{S}\\.
 
 > **NOTE:**
 >
@@ -3897,7 +4408,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} {\mathbf{Q}}^{\top} \tilde{v} &= {\mathbf{Q}}^{\top}\\(\tilde{y} - \mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}) && \text{(substitute)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - {\mathbf{Q}}^{\top}\\(\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}) && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - ({\mathbf{Q}}^{\top} \mathbf{Q})\\{\mathbf{Q}}^{\top} \tilde{y} && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - \mathbf{I}\_r\\{\mathbf{Q}}^{\top} \tilde{y} && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r \text{, from the first part of the proof)} \\ &= {\mathbf{Q}}^{\top} \tilde{y} - {\mathbf{Q}}^{\top} \tilde{y} && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \\ &= \tilde{0}\_r, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{v} \in \mathcal{N}({\mathbf{Q}}^{\top}) = \mathcal{C}(\mathbf{Q})^\perp = \mathcal{S}^\perp\\ ([Theorem 48](#thm-complement-null-space)). By the uniqueness in [Theorem 49](#thm-orthogonal-direct-sum), \\\tilde{u}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\.
+> so \\\tilde{v} \in \mathcal{N}({\mathbf{Q}}^{\top})\\, and
+>
+> \\ \begin{aligned} \mathcal{N}({\mathbf{Q}}^{\top}) &= \mathcal{C}(\mathbf{Q})^\perp \\ &= \mathcal{S}^\perp \end{aligned} \\
+>
+> ([Theorem 48](#thm-complement-null-space)). By the uniqueness in [Theorem 49](#thm-orthogonal-direct-sum), \\\tilde{u}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\.
 >
 > **\\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is symmetric and idempotent.**
 >
@@ -3909,7 +4424,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 155 (The projection matrix onto a line)** For \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, the single vector \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\ is an orthonormal basis: it spans \\\mathcal{S}\\, it is nonzero and so linearly independent, and \\\mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} = 1\\. With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
+> **Example 155 (The projection matrix onto a line)** For \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 1, 0)\right\\\mathclose{}\\, the single vector \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\ is an orthonormal basis: it spans \\\mathcal{S}\\, it is nonzero and so linearly independent, and
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} \\ &= 1. \end{aligned} \\
+>
+> With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
 >
 > \\ \begin{aligned} \mathbf{Q} {\mathbf{Q}}^{\top} &= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 1 & 0 \end{bmatrix} \\ &= \begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 \end{bmatrix}. \end{aligned} \\
 >
@@ -3928,13 +4447,21 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \mathbf{P}\\(\tilde{y} - \mathbf{P} \tilde{y}) &= \mathbf{P} \tilde{y} - \mathbf{P}\\(\mathbf{P} \tilde{y}) && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \mathbf{P} \tilde{y} - (\mathbf{P} \mathbf{P})\\\tilde{y} && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{P} \tilde{y} - \mathbf{P}^2 \tilde{y} && \text{(}\href{#def-matrix-power}{\text{Definition~68}}\text{)} \\ &= \mathbf{P} \tilde{y} - \mathbf{P} \tilde{y} && \text{(} \mathbf{P} \text{ is idempotent)} \\ &= \tilde{0}\_p, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{y} - \mathbf{P} \tilde{y} \in \mathcal{N}(\mathbf{P})\\. Since \\\mathbf{P} = {\mathbf{P}}^{\top}\\, \\\mathcal{N}(\mathbf{P}) = \mathcal{N}({\mathbf{P}}^{\top}) = \mathcal{C}(\mathbf{P})^\perp\\ ([Theorem 48](#thm-complement-null-space)). By the uniqueness in [Theorem 49](#thm-orthogonal-direct-sum), \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\.
+> so \\\tilde{y} - \mathbf{P} \tilde{y} \in \mathcal{N}(\mathbf{P})\\. Since \\\mathbf{P} = {\mathbf{P}}^{\top}\\,
+>
+> \\ \begin{aligned} \mathcal{N}(\mathbf{P}) &= \mathcal{N}({\mathbf{P}}^{\top}) \\ &= \mathcal{C}(\mathbf{P})^\perp \end{aligned} \\
+>
+> ([Theorem 48](#thm-complement-null-space)). By the uniqueness in [Theorem 49](#thm-orthogonal-direct-sum), \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\.
 >
 > **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 91](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \tilde{e}\_j = \mathbf{P}\_2 \tilde{e}\_j\\ for each indicator vector \\\tilde{e}\_j\\ ([Definition 12](#def-indicator-vector)). \\\mathbf{P}\_1 \tilde{e}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 22](#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\tilde{e}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 12](#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
 
 > **NOTE:**
 >
-> **Example 156 (Two routes to the same projection matrix)** The matrix \\\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ of [Example 124](#exm-projection-matrix) is an orthogonal projection matrix, and its column space is \\\operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\, the horizontal axis. By part 1, \\\mathbf{P}(v_1, v_2) = (v_1, 0)\\ is the orthogonal projection onto that axis: the remainder \\(0, v_2)\\ is orthogonal to \\(1, 0)\\. The vector \\\tilde{q}\_1 = (1, 0)\\ has length \\1\\ and spans the axis, so it is an orthonormal basis of it, and with \\\mathbf{B} = \[\tilde{q}\_1\]\\, \\\mathbf{B} {\mathbf{B}}^{\top} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} = \mathbf{P}\\, as part 2 and [Theorem 82](#thm-projector-onb) require.
+> **Example 156 (Two routes to the same projection matrix)** The matrix \\\mathbf{P} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ of [Example 124](#exm-projection-matrix) is an orthogonal projection matrix, and its column space is \\\operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\, the horizontal axis. By part 1, \\\mathbf{P}(v_1, v_2) = (v_1, 0)\\ is the orthogonal projection onto that axis: the remainder \\(0, v_2)\\ is orthogonal to \\(1, 0)\\. The vector \\\tilde{q}\_1 = (1, 0)\\ has length \\1\\ and spans the axis, so it is an orthonormal basis of it, and with \\\mathbf{B} = \[\tilde{q}\_1\]\\,
+>
+> \\ \begin{aligned} \mathbf{B} {\mathbf{B}}^{\top} &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} \\ &= \mathbf{P}, \end{aligned} \\
+>
+> as part 2 and [Theorem 82](#thm-projector-onb) require.
 >
 > The oblique projection \\\mathbf{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\ of [Example 124](#exm-projection-matrix) also maps every vector into the horizontal axis. It sends \\(0, 1)\\ to \\(1, 0)\\, but the remainder \\(0, 1) - (1, 0) = (-1, 1)\\ is not orthogonal to the axis, so \\(1, 0)\\ is not the orthogonal projection of \\(0, 1)\\ onto the axis, which is \\\mathbf{P}(0, 1) = (0, 0)\\.
 
@@ -3958,11 +4485,19 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 157 (The intercept-only hat matrix, from an orthonormal basis)** For the intercept-only design \\\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ of [Example 150](#exm-hat-matrix), \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, with orthonormal basis \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1)\\, since \\\mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} = 1\\. With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
+> **Example 157 (The intercept-only hat matrix, from an orthonormal basis)** For the intercept-only design \\\mathbf{X}= \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ of [Example 150](#exm-hat-matrix), \\\mathcal{C}(\mathbf{X}) = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, with orthonormal basis \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1)\\, since
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{q}\_1\right\rVert\mathclose{} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2}} \\ &= 1. \end{aligned} \\
+>
+> With \\\mathbf{Q} = \[\tilde{q}\_1\]\\,
 >
 > \\ \begin{aligned} \mathbf{Q} {\mathbf{Q}}^{\top} &= \tfrac{1}{2} \begin{bmatrix} 1 \\ 1 \end{bmatrix} \begin{bmatrix} 1 & 1 \end{bmatrix} \\ &= \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}, \end{aligned} \\
 >
-> the hat matrix found in [Example 150](#exm-hat-matrix). The fitted values \\(\bar{y}, \bar{y})\\ are the closest point to \\\tilde{y}\\ on the line of constant vectors ([Theorem 81](#thm-closest-point)), and the residuals \\(y_1 - \bar{y}, y_2 - \bar{y})\\ are orthogonal to \\(1, 1)\\: \\(1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) = y_1 + y_2 - 2\bar{y} = 0\\, since \\2\bar{y} = y_1 + y_2\\.
+> the hat matrix found in [Example 150](#exm-hat-matrix). The fitted values \\(\bar{y}, \bar{y})\\ are the closest point to \\\tilde{y}\\ on the line of constant vectors ([Theorem 81](#thm-closest-point)), and the residuals \\(y_1 - \bar{y}, y_2 - \bar{y})\\ are orthogonal to \\(1, 1)\\:
+>
+> \\ \begin{aligned} (1, 1) \cdot (y_1 - \bar{y}, y_2 - \bar{y}) &= y_1 + y_2 - 2\bar{y} \\ &= 0, \end{aligned} \\
+>
+> since \\2\bar{y} = y_1 + y_2\\.
 
 ### 9.2 Generalized inverses and linear systems
 
@@ -3996,7 +4531,13 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 158 (Pulling a scalar out of a product)** With \\\mathbf{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\: \\\mathbf{A}\\(2\\\mathbf{B}) = \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 6 \\ 8 \end{bmatrix} = 22\\, and \\2\\(\mathbf{A} \mathbf{B}) = 2\\(3 + 8) = 22\\.
+> **Example 158 (Pulling a scalar out of a product)** With \\\mathbf{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\:
+>
+> \\ \begin{aligned} \mathbf{A}\\(2\\\mathbf{B}) &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 6 \\ 8 \end{bmatrix} \\ &= 22, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} 2\\(\mathbf{A} \mathbf{B}) &= 2\\(3 + 8) \\ &= 22. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -4018,7 +4559,9 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{A} \mathbf{A}^{-1} \mathbf{A} = \mathbf{I}\_p \mathbf{A} = \mathbf{A}\\ ([Definition 71](#def-matrix-inverse), [Theorem 10](#thm-identity)), so \\\mathbf{A}^{-1}\\ is a generalized inverse. If \\\mathbf{G}\\ is any generalized inverse, then
+> *Proof*. \\ \begin{aligned} \mathbf{A} \mathbf{A}^{-1} \mathbf{A} &= \mathbf{I}\_p \mathbf{A} \\ &= \mathbf{A} \end{aligned} \\
+>
+> (5, [Theorem 10](#thm-identity)), so \\\mathbf{A}^{-1}\\ is a generalized inverse. If \\\mathbf{G}\\ is any generalized inverse, then
 >
 > \\ \begin{aligned} \mathbf{G} &= \mathbf{I}\_p\\\mathbf{G}\\\mathbf{I}\_p && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \\ &= (\mathbf{A}^{-1} \mathbf{A})\\\mathbf{G}\\(\mathbf{A} \mathbf{A}^{-1}) && \text{(}\href{#def-matrix-inverse}{\text{Definition~71}}\text{)} \\ &= \mathbf{A}^{-1}\\(\mathbf{A} \mathbf{G} \mathbf{A})\\\mathbf{A}^{-1} && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{A}^{-1} \mathbf{A} \mathbf{A}^{-1} && \text{(}\href{#def-generalized-inverse}{\text{Definition~92}}\text{)} \\ &= \mathbf{I}\_p\\\mathbf{A}^{-1} && \text{(}\href{#def-matrix-inverse}{\text{Definition~71}}\text{)} \\ &= \mathbf{A}^{-1}. && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \end{aligned} \\
 
@@ -4053,7 +4596,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 162 (Checking the four conditions)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, the matrix \\\mathbf{G} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ satisfies all four: \\\mathbf{A} \mathbf{G} = \mathbf{G} \mathbf{A} = \mathbf{A}\\ and \\\mathbf{A}^2 = \mathbf{A}\\, so conditions 1 and 2 read \\\mathbf{A} = \mathbf{A}\\, and conditions 3 and 4 hold because \\\mathbf{A}\\ is symmetric.
+> **Example 162 (Checking the four conditions)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, the matrix \\\mathbf{G} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ satisfies all four:
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{G} &= \mathbf{G} \mathbf{A} \\ &= \mathbf{A} \end{aligned} \\
+>
+> and \\\mathbf{A}^2 = \mathbf{A}\\, so conditions 1 and 2 read \\\mathbf{A} = \mathbf{A}\\, and conditions 3 and 4 hold because \\\mathbf{A}\\ is symmetric.
 >
 > The generalized inverse \\\mathbf{G}' = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\ of \\\mathbf{A}\\ ([Example 159](#exm-generalized-inverse)) is not a Moore-Penrose inverse: \\\mathbf{A} \mathbf{G}' = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\\, which is not symmetric, so condition 3 fails.
 
@@ -4102,7 +4649,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} r &= \operatorname{rank}\mathopen{}\left({\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\right)\mathclose{} && \text{(}\href{#thm-rank-transpose}{\text{Theorem~38}}\text{)} \\ &\le \operatorname{rank}({\mathbf{R}}^{\top}) && \text{(}\href{#thm-rank-product}{\text{Theorem~37}}\text{)} \\ &\le r. && \text{(}\href{#cor-rank-bound}{\text{Corollary~3}}\text{, } {\mathbf{R}}^{\top} \text{ has } r \text{ columns)} \end{aligned} \\
 >
-> So \\\mathbf{C}\\ and \\{\mathbf{R}}^{\top}\\ have full column rank \\r\\, and \\{\mathbf{C}}^{\top} \mathbf{C}\\ and \\\mathbf{R} {\mathbf{R}}^{\top} = {({\mathbf{R}}^{\top})}^{\top}\\{\mathbf{R}}^{\top}\\ are invertible ([Theorem 79](#thm-gram-invertible)). They are symmetric: \\{({\mathbf{C}}^{\top} \mathbf{C})}^{\top} = {\mathbf{C}}^{\top}\\{({\mathbf{C}}^{\top})}^{\top} = {\mathbf{C}}^{\top} \mathbf{C}\\ ([Theorem 19](#thm-transpose-product), [Definition 20](#def-matrix-transpose)), and likewise for \\\mathbf{R} {\mathbf{R}}^{\top}\\. Write \\\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}\\ and \\\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}\\, both symmetric ([Corollary 6](#cor-inverse-symmetric)), and \\\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}\\.
+> So \\\mathbf{C}\\ and \\{\mathbf{R}}^{\top}\\ have full column rank \\r\\, and \\{\mathbf{C}}^{\top} \mathbf{C}\\ and \\\mathbf{R} {\mathbf{R}}^{\top} = {({\mathbf{R}}^{\top})}^{\top}\\{\mathbf{R}}^{\top}\\ are invertible ([Theorem 79](#thm-gram-invertible)). They are symmetric:
+>
+> \\ \begin{aligned} {({\mathbf{C}}^{\top} \mathbf{C})}^{\top} &= {\mathbf{C}}^{\top}\\{({\mathbf{C}}^{\top})}^{\top} \\ &= {\mathbf{C}}^{\top} \mathbf{C} \end{aligned} \\
+>
+> ([Theorem 19](#thm-transpose-product), [Definition 20](#def-matrix-transpose)), and likewise for \\\mathbf{R} {\mathbf{R}}^{\top}\\. Write \\\mathbf{S} \stackrel{\text{def}}{=}(\mathbf{R} {\mathbf{R}}^{\top})^{-1}\\ and \\\mathbf{T} \stackrel{\text{def}}{=}({\mathbf{C}}^{\top} \mathbf{C})^{-1}\\, both symmetric ([Corollary 6](#cor-inverse-symmetric)), and \\\mathbf{G} \stackrel{\text{def}}{=}{\mathbf{R}}^{\top} \mathbf{S} \mathbf{T} {\mathbf{C}}^{\top}\\.
 >
 > **Two products.**
 >
@@ -4126,11 +4677,23 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 164 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 70](#exm-rank-factorization)) gives \\{\mathbf{C}}^{\top} \mathbf{C} = 1 + 9 = 10\\ and \\\mathbf{R} {\mathbf{R}}^{\top} = 1 + 4 + 4 = 9\\, so
+> **Example 164 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 53](#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 70](#exm-rank-factorization)) gives
+>
+> \\ \begin{aligned} {\mathbf{C}}^{\top} \mathbf{C} &= 1 + 9 \\ &= 10 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \mathbf{R} {\mathbf{R}}^{\top} &= 1 + 4 + 4 \\ &= 9, \end{aligned} \\
+>
+> so
 >
 > \\ \begin{aligned} \mathbf{A}^+ &= \frac{1}{9 \cdot 10} \begin{bmatrix} 1 \\ -2 \\ -2 \end{bmatrix} \begin{bmatrix} 1 & 3 \end{bmatrix} \\ &= \frac{1}{90} \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}. \end{aligned} \\
 >
-> As a check on condition 1, \\\mathbf{A} \mathbf{A}^+ = \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top} = \frac{1}{10} \begin{bmatrix} 1 & 3 \\ 3 & 9 \end{bmatrix}\\, and its first row times \\\mathbf{A}\\ is \\\frac{1}{10}\mathopen{}\left(1 \cdot(1, -2, -2) + 3 \cdot(3, -6, -6)\right)\mathclose{} = (1, -2, -2)\\, the first row of \\\mathbf{A}\\; the second row is \\3\\ times the first, like the second row of \\\mathbf{A}\\.
+> As a check on condition 1,
+>
+> \\ \begin{aligned} \mathbf{A} \mathbf{A}^+ &= \mathbf{C} \mathbf{T} {\mathbf{C}}^{\top} \\ &= \frac{1}{10} \begin{bmatrix} 1 & 3 \\ 3 & 9 \end{bmatrix}, \end{aligned} \\
+>
+> and its first row times \\\mathbf{A}\\ is \\\frac{1}{10}\mathopen{}\left(1 \cdot(1, -2, -2) + 3 \cdot(3, -6, -6)\right)\mathclose{} = (1, -2, -2)\\, the first row of \\\mathbf{A}\\; the second row is \\3\\ times the first, like the second row of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -4163,7 +4726,12 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > **Example 166 (Testing consistency with a generalized inverse)** For \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\ and the generalized inverse \\\mathbf{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}\\, \\\mathbf{A} \mathbf{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}\\.
 >
-> - \\\tilde{b} = (2, 0)\\: \\\mathbf{A} \mathbf{G} \tilde{b} = (2, 0) = \tilde{b}\\, so the system is consistent.
+> - \\\tilde{b} = (2, 0)\\:
+>
+>   \\ \begin{aligned} \mathbf{A} \mathbf{G} \tilde{b} &= (2, 0) \\ &= \tilde{b}, \end{aligned} \\
+>
+>   so the system is consistent.
+>
 > - \\\tilde{b} = (2, 1)\\: \\\mathbf{A} \mathbf{G} \tilde{b} = (7, 0) \ne \tilde{b}\\, so it is not, as [Example 161](#exm-generalized-inverse-solves) found directly.
 
 > **NOTE:**
@@ -4197,7 +4765,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \tilde{x} = (2, 14) + (0, -7 q_1 + q_2), \qquad q_1, q_2 \in \mathbb{R}. \\
 >
-> Since \\-7 q_1 + q_2\\ can be any number, the solutions are exactly the vectors \\(2, t)\\, \\t \in \mathbb{R}\\, which is what \\\mathbf{A}\\(x_1, x_2) = (x_1, 0) = (2, 0)\\ says directly.
+> Since \\-7 q_1 + q_2\\ can be any number, the solutions are exactly the vectors \\(2, t)\\, \\t \in \mathbb{R}\\, which is what
+>
+> \\ \begin{aligned} \mathbf{A}\\(x_1, x_2) &= (x_1, 0) \\ &= (2, 0) \end{aligned} \\
+>
+> says directly.
 
 > **NOTE:**
 >
@@ -4217,8 +4789,14 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **Example 168 (Three systems)**  
 >
 > - The \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Example 65](#exm-rank-bound) has rank \\2 = m\\, so every system with it is consistent, but \\2 \< 3 = n\\, so the solutions are never unique.
+>
 > - The \\3 \times 2\\ matrix \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ of [Example 149](#exm-gram-invertible) has rank \\2 = n\\, so a consistent system has one solution, but \\2 \< 3 = m\\, so some systems are inconsistent: \\(1, 0, 0) \notin \mathcal{C}(\mathbf{X})\\, because \\a\\(1, 1, 1) + b\\(1, 2, 3)\\ has equal differences between consecutive entries, and \\(1, 0, 0)\\ does not.
-> - An invertible \\p \times p\\ matrix \\\mathbf{A}\\ has rank \\p\\: if \\\mathbf{A} \tilde{x} = \tilde{0}\\ then \\\tilde{x} = \mathbf{A}^{-1} \mathbf{A} \tilde{x} = \tilde{0}\\, so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 36](#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \tilde{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \tilde{b}) = \tilde{b}\\.
+>
+> - An invertible \\p \times p\\ matrix \\\mathbf{A}\\ has rank \\p\\: if \\\mathbf{A} \tilde{x} = \tilde{0}\\ then
+>
+>   \\ \begin{aligned} \tilde{x} &= \mathbf{A}^{-1} \mathbf{A} \tilde{x} \\ &= \tilde{0}, \end{aligned} \\
+>
+>   so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 36](#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \tilde{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \tilde{b}) = \tilde{b}\\.
 
 > **NOTE:**
 >
@@ -4228,7 +4806,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. **\\{\mathbf{X}}^{\top} \tilde{y}\\ is in \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\\.** \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\\, since \\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} = {\mathbf{X}}^{\top}\\(\mathbf{X}\tilde{z})\\ ([Theorem 8](#thm-matmul-assoc)). Both are subspaces of \\\mathbb{R}^p\\ ([Theorem 31](#thm-column-space-span)) with the same dimension: \\\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\\ ([Theorem 38](#thm-rank-transpose), [Theorem 35](#thm-rank-dim)). So \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\\ ([Theorem 30](#thm-subspace-equal-dim)), and since \\{\mathbf{X}}^{\top} \tilde{y}\in \mathcal{C}({\mathbf{X}}^{\top})\\ ([Definition 45](#def-column-space)), \\{\mathbf{X}}^{\top} \tilde{y}= {\mathbf{X}}^{\top} \mathbf{X}\tilde{z}\\ for some \\\tilde{z} \in \mathbb{R}^p\\.
 >
-> **The split.** Let \\\tilde{u} = \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}= \mathbf{X}\\(\mathbf{G} {\mathbf{X}}^{\top} \tilde{y})\\ ([Theorem 8](#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 45](#def-column-space)). For \\\tilde{y}- \tilde{u}\\,
+> **The split.** Let
+>
+> \\ \begin{aligned} \tilde{u} &= \mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}\\ &= \mathbf{X}\\(\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}) \end{aligned} \\
+>
+> ([Theorem 8](#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{X})\\ ([Definition 45](#def-column-space)). For \\\tilde{y}- \tilde{u}\\,
 >
 > \\ \begin{aligned} {\mathbf{X}}^{\top}\\(\tilde{y}- \tilde{u}) &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top}\\\tilde{u} && \text{(}\href{#thm-matvec-linear}{\text{Theorem~23}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top}\\(\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top} \tilde{y}) && \text{(substitute } \tilde{u} \text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \tilde{y}) && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} && \text{(first step)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- \mathopen{}\left(({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X})\right)\mathclose{}\\\tilde{z} && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- ({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} && \text{(}\href{#def-generalized-inverse}{\text{Definition~92}}\text{)} \\ &= {\mathbf{X}}^{\top} \tilde{y}- {\mathbf{X}}^{\top} \tilde{y} && \text{(first step)} \\ &= \tilde{0}\_p, && \text{(arithmetic)} \end{aligned} \\
 >
@@ -4291,9 +4873,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > **Example 171 (Back substitution on a \\3 \times 3\\ system)** Solve \\\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \tilde{x} = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}\\:
 >
-> 1.  \\x_3 = \frac{1}{-1} \cdot 1 = -1\\;
-> 2.  \\x_2 = \frac{1}{1/2} \mathopen{}\left(1 - \tfrac{1}{2} \cdot(-1)\right)\mathclose{} = 2 \cdot\tfrac{3}{2} = 3\\;
-> 3.  \\x_1 = \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclose{} = \frac{1}{2} \cdot 4 = 2\\.
+> 1.  \\ \begin{aligned} x_3 &= \frac{1}{-1} \cdot 1 \\ &= -1; \end{aligned} \\
+>
+> 2.  \\ \begin{aligned} x_2 &= \frac{1}{1/2} \mathopen{}\left(1 - \tfrac{1}{2} \cdot(-1)\right)\mathclose{} \\ &= 2 \cdot\tfrac{3}{2} \\ &= 3; \end{aligned} \\
+>
+> 3.  \\ \begin{aligned} x_1 &= \frac{1}{2} \mathopen{}\left(8 - 1 \cdot 3 - (-1)(-1)\right)\mathclose{} \\ &= \frac{1}{2} \cdot 4 \\ &= 2. \end{aligned} \\
 >
 > So \\\tilde{x} = (2, 3, -1)\\. Without a nonzero diagonal the method fails: \\\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} \tilde{x} = (1, 1)\\ has no solution, since its second row reads \\0 = 1\\.
 
@@ -4311,7 +4895,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \tilde{a}\_i &= \tilde{\tilde{q}}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(add the sum to both sides of the orthogonalize step)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j. && \text{(normalize step: } \tilde{\tilde{q}}\_i = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i \text{)} \end{aligned} \\
 >
-> Let \\\mathbf{R}\\ be the \\n \times n\\ matrix with \\r\_{ji} = \tilde{q}\_j \cdot \tilde{a}\_i\\ for \\j \< i\\, \\r\_{ii} = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} \> 0\\, and \\r\_{ji} = 0\\ for \\j \> i\\; it is upper triangular with positive diagonal. Column \\i\\ of \\\mathbf{Q} \mathbf{R}\\ is \\\mathbf{Q}\\ times column \\i\\ of \\\mathbf{R}\\ ([Definition 24](#def-matrix-mult)), and
+> Let \\\mathbf{R}\\ be the \\n \times n\\ matrix with \\r\_{ji} = \tilde{q}\_j \cdot \tilde{a}\_i\\ for \\j \< i\\, \\r\_{ii} = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{} \> 0\\, and \\r\_{ji} = 0\\ for \\j \> i\\; it is upper triangular with positive diagonal. Column \\i\\ of \\\mathbf{Q} \mathbf{R}\\ is \\\mathbf{Q}\\ times column \\i\\ of \\\mathbf{R}\\ (4), and
 >
 > \\ \begin{aligned} \mathbf{Q}\\(r\_{1i}, \ldots, r\_{ni}) &= \sum\_{j=1}^nr\_{ji}\\\tilde{q}\_j && \text{(}\href{#thm-matvec-columns}{\text{Theorem~22}}\text{)} \\ &= \sum\_{j=1}^{i} r\_{ji}\\\tilde{q}\_j && \text{(} r\_{ji} = 0 \text{ for } j \> i \text{)} \\ &= r\_{ii}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} r\_{ji}\\\tilde{q}\_j && \text{(split off the } j = i \text{ term)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(the entries of } \mathbf{R} \text{)} \\ &= \tilde{a}\_i. && \text{(the display)} \end{aligned} \\
 >
@@ -4319,11 +4903,17 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 172 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\tilde{a}\_1 = (1, 1, 0)\\, \\\tilde{a}\_2 = (1, 0, 1)\\, \\\tilde{a}\_3 = (0, 1, 1)\\, [Example 109](#exm-gram-schmidt) and [Example 111](#exm-thm-gram-schmidt) found \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\tilde{q}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\, \\\tilde{q}\_1 \cdot \tilde{a}\_2 = \tilde{q}\_1 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{2}}\\ and \\\tilde{q}\_2 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{6}}\\. So
+> **Example 172 (A QR factorization from Gram-Schmidt)** For \\\mathbf{A}\\ with columns \\\tilde{a}\_1 = (1, 1, 0)\\, \\\tilde{a}\_2 = (1, 0, 1)\\, \\\tilde{a}\_3 = (0, 1, 1)\\, [Example 109](#exm-gram-schmidt) and [Example 111](#exm-thm-gram-schmidt) found \\\tilde{q}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\, \\\tilde{q}\_2 = \tfrac{1}{\sqrt{6}}\\(1, -1, 2)\\, \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\, with \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_1\right\rVert\mathclose{} = \sqrt{2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_2\right\rVert\mathclose{} = \sqrt{3/2}\\, \\\mathopen{}\left\lVert\tilde{\tilde{q}}\_3\right\rVert\mathclose{} = 2/\sqrt{3}\\,
+>
+> \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{a}\_2 &= \tilde{q}\_1 \cdot \tilde{a}\_3 \\ &= \tfrac{1}{\sqrt{2}} \end{aligned} \\
+>
+> and \\\tilde{q}\_2 \cdot \tilde{a}\_3 = \tfrac{1}{\sqrt{6}}\\. So
 >
 > \\ \mathbf{R} = \begin{bmatrix} \sqrt{2} & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}} \\ 0 & \sqrt{3/2} & \tfrac{1}{\sqrt{6}} \\ 0 & 0 & \tfrac{2}{\sqrt{3}} \end{bmatrix}. \\
 >
-> As a check on the second column, \\\tfrac{1}{\sqrt{2}}\\\tilde{q}\_1 + \sqrt{3/2}\\\tilde{q}\_2 = \tfrac{1}{2}\\(1, 1, 0) + \tfrac{1}{2}\\(1, -1, 2) = (1, 0, 1) = \tilde{a}\_2\\.
+> As a check on the second column,
+>
+> \\ \begin{aligned} \tfrac{1}{\sqrt{2}}\\\tilde{q}\_1 + \sqrt{3/2}\\\tilde{q}\_2 &= \tfrac{1}{2}\\(1, 1, 0) + \tfrac{1}{2}\\(1, -1, 2) \\ &= (1, 0, 1) \\ &= \tilde{a}\_2. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -4335,7 +4925,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 173 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\tilde{b} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 94](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\, \\\mathopen{}\left\lVert\tilde{b} - \mathbf{A} x\right\rVert\mathclose{}^2 = (1 - x)^2 + (3 - x)^2 = 2\\(x - 2)^2 + 2\\, which is smallest at \\x = 2\\, so \\\hat{x} = 2\\ is the least squares solution. The value \\x = 1\\ is not one: it gives \\0 + 4 = 4 \> 2\\. The normal equations read \\2x = 4\\, and their solution is \\x = 2\\ too.
+> **Example 173 (Fitting a constant)** Let \\\mathbf{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\\ and \\\tilde{b} = (1, 3)\\. The system \\x\\(1, 1) = (1, 3)\\ is inconsistent ([Definition 94](#def-consistent-system)): its first entry needs \\x = 1\\ and its second needs \\x = 3\\. For any number \\x\\,
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{b} - \mathbf{A} x\right\rVert\mathclose{}^2 &= (1 - x)^2 + (3 - x)^2 \\ &= 2\\(x - 2)^2 + 2, \end{aligned} \\
+>
+> which is smallest at \\x = 2\\, so \\\hat{x} = 2\\ is the least squares solution. The value \\x = 1\\ is not one: it gives \\0 + 4 = 4 \> 2\\. The normal equations read \\2x = 4\\, and their solution is \\x = 2\\ too.
 
 > **NOTE:**
 >
@@ -4368,7 +4962,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 174 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 149](#exm-gram-invertible)) and \\\tilde{b} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 33](#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 149](#exm-gram-invertible)), and \\{\mathbf{A}}^{\top} \tilde{b} = (1 + 2 + 2,\\ 1 + 4 + 6) = (5, 11)\\, so
+> **Example 174 (A least squares line)** Fit \\y = x_1 + x_2\\t\\ to the points \\(t, y) = (1, 1), (2, 2), (3, 2)\\: \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ (the \\\mathbf{X}\\ of [Example 149](#exm-gram-invertible)) and \\\tilde{b} = (1, 2, 2)\\. \\\mathbf{A}\\ has rank \\2\\ ([Example 33](#exm-rank)), so the solution is unique (part 4). \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ has inverse \\\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}\\ ([Example 149](#exm-gram-invertible)), and
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \tilde{b} &= (1 + 2 + 2,\\ 1 + 4 + 6) \\ &= (5, 11), \end{aligned} \\
+>
+> so
 >
 > \\ \begin{aligned} \hat{\tilde{x}} &= \frac{1}{6} \mathopen{}\left(14 \cdot 5 - 6 \cdot 11,\\ -6 \cdot 5 + 3 \cdot 11\right)\mathclose{} \\ &= \frac{1}{6}\\(4, 3) \\ &= \mathopen{}\left(\tfrac{2}{3}, \tfrac{1}{2}\right)\mathclose{}. \end{aligned} \\
 >
@@ -4376,7 +4974,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 175 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 33](#exm-rank)) and \\\tilde{b} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \tilde{b} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector \\\mathbf{A} \hat{\tilde{x}} = (x_1 + 2 x_2)\\(1, 1, 1) = \tfrac{5}{3}\\(1, 1, 1)\\, as part 3 says.
+> **Example 175 (Many least squares solutions, one fitted vector)** With the rank-\\1\\ matrix \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}\\ ([Example 33](#exm-rank)) and \\\tilde{b} = (1, 2, 2)\\, \\{\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 3 & 6 \\ 6 & 12 \end{bmatrix}\\ and \\{\mathbf{A}}^{\top} \tilde{b} = (5, 10)\\, so both normal equations say \\3 x_1 + 6 x_2 = 5\\, that is, \\x_1 + 2 x_2 = \tfrac{5}{3}\\. There are infinitely many least squares solutions, such as \\(\tfrac{5}{3}, 0)\\ and \\(0, \tfrac{5}{6})\\, as part 4 predicts for \\\operatorname{rank}(\mathbf{A}) = 1 \< 2\\; but every one gives the same fitted vector
+>
+> \\ \begin{aligned} \mathbf{A} \hat{\tilde{x}} &= (x_1 + 2 x_2)\\(1, 1, 1) \\ &= \tfrac{5}{3}\\(1, 1, 1), \end{aligned} \\
+>
+> as part 3 says.
 
 > **NOTE:**
 >
@@ -4392,15 +4994,33 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} \hat{\tilde{x}} &= {(\mathbf{Q} \mathbf{R})}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\tilde{x}} && \text{(substitute } \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \\ &= {\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top}\\(\mathbf{Q} \mathbf{R})\\\hat{\tilde{x}} && \text{(}\href{#thm-transpose-product}{\text{Theorem~19}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \mathbf{Q})\\(\mathbf{R} \hat{\tilde{x}}) && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= {\mathbf{R}}^{\top}\\\mathbf{I}\_n\\(\mathbf{R} \hat{\tilde{x}}) && \text{(} {\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_n \text{)} \\ &= {\mathbf{R}}^{\top}\\(\mathbf{R} \hat{\tilde{x}}) && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \\ &= {\mathbf{R}}^{\top}\\({\mathbf{Q}}^{\top} \tilde{b}) && \text{(} \mathbf{R} \hat{\tilde{x}} = {\mathbf{Q}}^{\top} \tilde{b} \text{)} \\ &= ({\mathbf{R}}^{\top}\\{\mathbf{Q}}^{\top})\\\tilde{b} && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= {(\mathbf{Q} \mathbf{R})}^{\top}\\\tilde{b} && \text{(}\href{#thm-transpose-product}{\text{Theorem~19}}\text{)} \\ &= {\mathbf{A}}^{\top} \tilde{b}, && \text{(} \mathbf{A} = \mathbf{Q} \mathbf{R} \text{)} \end{aligned} \\
 >
-> so \\\hat{\tilde{x}}\\ solves the normal equations and is the least squares solution ([Theorem 95](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\, \\\operatorname{rank}(\mathbf{A}) = n = m\\, so \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent for every \\\tilde{b}\\ ([Corollary 8](#cor-solution-unique), part 1), so its solution leaves residual \\\tilde{0}\\, is a least squares solution, and is therefore \\\hat{\tilde{x}}\\.
+> so \\\hat{\tilde{x}}\\ solves the normal equations and is the least squares solution ([Theorem 95](#thm-normal-equations)), which is unique because \\\operatorname{rank}(\mathbf{A}) = n\\. When \\m = n\\,
+>
+> \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= n \\ &= m, \end{aligned} \\
+>
+> so \\\mathbf{A} \tilde{x} = \tilde{b}\\ is consistent for every \\\tilde{b}\\ ([Corollary 8](#cor-solution-unique), part 1), so its solution leaves residual \\\tilde{0}\\, is a least squares solution, and is therefore \\\hat{\tilde{x}}\\.
 
 > **NOTE:**
 >
-> **Example 176 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\tilde{b}\\ of [Example 174](#exm-normal-equations), Gram-Schmidt gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then \\\tilde{q}\_1 \cdot (1, 2, 3) = \tfrac{6}{\sqrt{3}} = 2\sqrt{3}\\, \\\tilde{\tilde{q}}\_2 = (1, 2, 3) - 2\\(1, 1, 1) = (-1, 0, 1)\\ with norm \\\sqrt{2}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(-1, 0, 1)\\. So
+> **Example 176 (The least squares line by QR)** For \\\mathbf{A}\\ and \\\tilde{b}\\ of [Example 174](#exm-normal-equations), Gram-Schmidt gives \\\tilde{q}\_1 = \tfrac{1}{\sqrt{3}}\\(1, 1, 1)\\; then
+>
+> \\ \begin{aligned} \tilde{q}\_1 \cdot (1, 2, 3) &= \tfrac{6}{\sqrt{3}} \\ &= 2\sqrt{3}, \end{aligned} \\
+>
+> \\ \begin{aligned} \tilde{\tilde{q}}\_2 &= (1, 2, 3) - 2\\(1, 1, 1) \\ &= (-1, 0, 1) \end{aligned} \\
+>
+> with norm \\\sqrt{2}\\, and \\\tilde{q}\_2 = \tfrac{1}{\sqrt{2}}\\(-1, 0, 1)\\. So
 >
 > \\ \begin{aligned} \mathbf{R} &= \begin{bmatrix} \sqrt{3} & 2\sqrt{3} \\ 0 & \sqrt{2} \end{bmatrix}, \\ {\mathbf{Q}}^{\top} \tilde{b} &= \mathopen{}\left(\tfrac{1 + 2 + 2}{\sqrt{3}},\\ \tfrac{-1 + 0 + 2}{\sqrt{2}}\right)\mathclose{} \\ &= \mathopen{}\left(\tfrac{5}{\sqrt{3}}, \tfrac{1}{\sqrt{2}}\right)\mathclose{}. \end{aligned} \\
 >
-> Back substitution gives \\x_2 = \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} = \tfrac{1}{2}\\ and \\x_1 = \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}\right)\mathclose{} = \tfrac{5}{3} - 1 = \tfrac{2}{3}\\, the solution found in [Example 174](#exm-normal-equations).
+> Back substitution gives
+>
+> \\ \begin{aligned} x_2 &= \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} \\ &= \tfrac{1}{2} \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} x_1 &= \tfrac{1}{\sqrt{3}} \mathopen{}\left(\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}\right)\mathclose{} \\ &= \tfrac{5}{3} - 1 \\ &= \tfrac{2}{3}, \end{aligned} \\
+>
+> the solution found in [Example 174](#exm-normal-equations).
 
 > **NOTE:**
 >
@@ -4408,11 +5028,15 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 177 (An LU factorization of a \\3 \times 3\\ matrix)** Let \\\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}\\, \\\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}\\ (unit lower triangular) and \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ (upper triangular). By [Definition 24](#def-matrix-mult), entry \\(i, j)\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\u\_{kj}\\, so row \\i\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\ times row \\k\\ of \\\mathbf{U}\\. Row 1 is \\1 \cdot(2, 1, -1) = (2, 1, -1)\\; row 2 is \\-\tfrac{3}{2}\\(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\\, and row 3 is \\-(2, 1, -1) + 4\\(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\\. These are the rows of \\\mathbf{A}\\, so \\\mathbf{L} \mathbf{U} = \mathbf{A}\\ is an LU factorization. The below-diagonal entries of \\\mathbf{L}\\ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce \\\mathbf{A}\\ to \\\mathbf{U}\\.
+> **Example 177 (An LU factorization of a \\3 \times 3\\ matrix)** Let \\\mathbf{A} = \begin{bmatrix} 2 & 1 & -1 \\ -3 & -1 & 2 \\ -2 & 1 & 2 \end{bmatrix}\\, \\\mathbf{L} = \begin{bmatrix} 1 & 0 & 0 \\ -\frac{3}{2} & 1 & 0 \\ -1 & 4 & 1 \end{bmatrix}\\ (unit lower triangular) and \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ (upper triangular). By 4, entry \\(i, j)\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\u\_{kj}\\, so row \\i\\ of \\\mathbf{L} \mathbf{U}\\ is \\\sum_k \ell\_{ik}\\ times row \\k\\ of \\\mathbf{U}\\. Row 1 is \\1 \cdot(2, 1, -1) = (2, 1, -1)\\; row 2 is \\-\tfrac{3}{2}\\(2, 1, -1) + (0, \tfrac{1}{2}, \tfrac{1}{2}) = (-3, -1, 2)\\, and row 3 is \\-(2, 1, -1) + 4\\(0, \tfrac{1}{2}, \tfrac{1}{2}) + (0, 0, -1) = (-2, 1, 2)\\. These are the rows of \\\mathbf{A}\\, so \\\mathbf{L} \mathbf{U} = \mathbf{A}\\ is an LU factorization. The below-diagonal entries of \\\mathbf{L}\\ are the negatives of the multiples of earlier rows that Gaussian elimination adds to reduce \\\mathbf{A}\\ to \\\mathbf{U}\\.
 
 > **NOTE:**
 >
-> **Example 178 (An invertible matrix with no LU factorization)** \\\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ is invertible: \\\mathbf{P}^2 = \mathbf{I}\_2\\, so \\\mathbf{P}^{-1} = \mathbf{P}\\ ([Definition 71](#def-matrix-inverse)); but it has no LU factorization. If \\\mathbf{P} = \mathbf{L} \mathbf{U}\\, the \\(1, 1)\\ entry gives \\0 = 1 \cdot u\_{11}\\, so \\u\_{11} = 0\\, and then the \\(2, 1)\\ entry gives \\1 = \ell\_{21}\\u\_{11} = 0\\, which is impossible. Swapping the two rows first removes the obstacle: the swapped matrix is \\\mathbf{I}\_2 = \mathbf{I}\_2\\\mathbf{I}\_2\\.
+> **Example 178 (An invertible matrix with no LU factorization)** \\\mathbf{P} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ is invertible: \\\mathbf{P}^2 = \mathbf{I}\_2\\, so \\\mathbf{P}^{-1} = \mathbf{P}\\ (5); but it has no LU factorization. If \\\mathbf{P} = \mathbf{L} \mathbf{U}\\, the \\(1, 1)\\ entry gives \\0 = 1 \cdot u\_{11}\\, so \\u\_{11} = 0\\, and then the \\(2, 1)\\ entry gives
+>
+> \\ \begin{aligned} 1 &= \ell\_{21}\\u\_{11} \\ &= 0, \end{aligned} \\
+>
+> which is impossible. Swapping the two rows first removes the obstacle: the swapped matrix is \\\mathbf{I}\_2 = \mathbf{I}\_2\\\mathbf{I}\_2\\.
 
 > **NOTE:**
 >
@@ -4420,11 +5044,27 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 93](#thm-back-substitution)). If \\\tilde{y}\\ and \\\tilde{x}\\ are those solutions, then \\\mathbf{A} \tilde{x} = \mathbf{L}\\(\mathbf{U} \tilde{x}) = \mathbf{L} \tilde{y} = \tilde{b}\\ ([Theorem 8](#thm-matmul-assoc)), so \\\tilde{x}\\ is a solution. Conversely, if \\\mathbf{A} \tilde{x} = \tilde{b}\\, then \\\tilde{y} \stackrel{\text{def}}{=}\mathbf{U} \tilde{x}\\ satisfies \\\mathbf{L} \tilde{y} = \mathbf{L}\\(\mathbf{U} \tilde{x}) = (\mathbf{L} \mathbf{U})\\\tilde{x} = \mathbf{A} \tilde{x} = \tilde{b}\\ ([Theorem 8](#thm-matmul-assoc)), so \\\tilde{y}\\ is the unique solution of that system, and \\\tilde{x}\\ is then the unique solution of \\\mathbf{U} \tilde{x} = \tilde{y}\\.
+> *Proof*. \\\mathbf{L}\\ has diagonal entries \\1\\ and \\\mathbf{U}\\ has nonzero ones, so each of the two triangular systems has exactly one solution ([Theorem 93](#thm-back-substitution)). If \\\tilde{y}\\ and \\\tilde{x}\\ are those solutions, then
+>
+> \\ \begin{aligned} \mathbf{A} \tilde{x} &= \mathbf{L}\\(\mathbf{U} \tilde{x}) \\ &= \mathbf{L} \tilde{y} \\ &= \tilde{b} \end{aligned} \\
+>
+> ([Theorem 8](#thm-matmul-assoc)), so \\\tilde{x}\\ is a solution. Conversely, if \\\mathbf{A} \tilde{x} = \tilde{b}\\, then \\\tilde{y} \stackrel{\text{def}}{=}\mathbf{U} \tilde{x}\\ satisfies
+>
+> \\ \begin{aligned} \mathbf{L} \tilde{y} &= \mathbf{L}\\(\mathbf{U} \tilde{x}) \\ &= (\mathbf{L} \mathbf{U})\\\tilde{x} \\ &= \mathbf{A} \tilde{x} \\ &= \tilde{b} \end{aligned} \\
+>
+> ([Theorem 8](#thm-matmul-assoc)), so \\\tilde{y}\\ is the unique solution of that system, and \\\tilde{x}\\ is then the unique solution of \\\mathbf{U} \tilde{x} = \tilde{y}\\.
 
 > **NOTE:**
 >
-> **Example 179 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 177](#exm-lu), solve \\\mathbf{A} \tilde{x} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \tilde{y} = (8, -11, -3)\\ gives \\y_1 = 8\\, \\y_2 = -11 + \tfrac{3}{2} \cdot 8 = 1\\, \\y_3 = -3 + 8 - 4 \cdot 1 = 1\\. Back substitution on \\\mathbf{U} \tilde{x} = (8, 1, 1)\\ is [Example 171](#exm-back-substitution), which gives \\\tilde{x} = (2, 3, -1)\\. As a check, \\\mathbf{A}\\(2, 3, -1) = (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) = (8, -11, -3)\\.
+> **Example 179 (Two triangular solves)** With \\\mathbf{L}\\ and \\\mathbf{U}\\ of [Example 177](#exm-lu), solve \\\mathbf{A} \tilde{x} = (8, -11, -3)\\. Forward substitution on \\\mathbf{L} \tilde{y} = (8, -11, -3)\\ gives \\y_1 = 8\\,
+>
+> \\ \begin{aligned} y_2 &= -11 + \tfrac{3}{2} \cdot 8 \\ &= 1, \end{aligned} \\
+>
+> \\ \begin{aligned} y_3 &= -3 + 8 - 4 \cdot 1 \\ &= 1. \end{aligned} \\
+>
+> Back substitution on \\\mathbf{U} \tilde{x} = (8, 1, 1)\\ is [Example 171](#exm-back-substitution), which gives \\\tilde{x} = (2, 3, -1)\\. As a check,
+>
+> \\ \begin{aligned} \mathbf{A}\\(2, 3, -1) &= (4 + 3 + 1,\\ -6 - 3 - 2,\\ -4 + 3 - 2) \\ &= (8, -11, -3). \end{aligned} \\
 
 ### 9.4 Similarity and diagonalization
 
@@ -4444,11 +5084,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > so \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, the nullity is \\0\\, and \\\operatorname{rank}(\mathbf{A}) = n\\ ([Theorem 36](#thm-rank-nullity)).
 >
-> **Rank \\n\\ implies invertible.** Every system \\\mathbf{A} \tilde{y} = \tilde{b}\\ has exactly one solution ([Corollary 8](#cor-solution-unique), both parts, with \\m = n\\). Let \\\tilde{y}\_j\\ solve \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 12](#def-indicator-vector)), and let \\\mathbf{B}\\ have columns \\\tilde{y}\_1, \ldots, \tilde{y}\_n\\. Column \\j\\ of \\\mathbf{A} \mathbf{B}\\ is \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 24](#def-matrix-mult)), so \\\mathbf{A} \mathbf{B} = \mathbf{I}\_n\\. For the other order,
+> **Rank \\n\\ implies invertible.** Every system \\\mathbf{A} \tilde{y} = \tilde{b}\\ has exactly one solution ([Corollary 8](#cor-solution-unique), both parts, with \\m = n\\). Let \\\tilde{y}\_j\\ solve \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 12](#def-indicator-vector)), and let \\\mathbf{B}\\ have columns \\\tilde{y}\_1, \ldots, \tilde{y}\_n\\. Column \\j\\ of \\\mathbf{A} \mathbf{B}\\ is \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ (4), so \\\mathbf{A} \mathbf{B} = \mathbf{I}\_n\\. For the other order,
 >
 > \\ \begin{aligned} \mathbf{A}\\(\mathbf{B} \mathbf{A} - \mathbf{I}\_n) &= \mathbf{A} \mathbf{B} \mathbf{A} - \mathbf{A} \mathbf{I}\_n && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~85}}\text{, }\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{I}\_n \mathbf{A} - \mathbf{A} \mathbf{I}\_n && \text{(} \mathbf{A} \mathbf{B} = \mathbf{I}\_n \text{)} \\ &= \mathbf{A} - \mathbf{A} && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \\ &= \mathbf{0}\_{n \times n}, && \text{(arithmetic)} \end{aligned} \\
 >
-> so every column of \\\mathbf{B} \mathbf{A} - \mathbf{I}\_n\\ is in \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\ ([Definition 24](#def-matrix-mult)), and \\\mathbf{B} \mathbf{A} = \mathbf{I}\_n\\. So \\\mathbf{B}\\ satisfies [Definition 72](#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 36](#thm-rank-nullity): the nullity is \\0\\ exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, because a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 44](#def-dimension), [Definition 41](#def-span)), and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\ ([Example 47](#exm-dimension)).
+> so every column of \\\mathbf{B} \mathbf{A} - \mathbf{I}\_n\\ is in \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\ (4), and \\\mathbf{B} \mathbf{A} = \mathbf{I}\_n\\. So \\\mathbf{B}\\ satisfies [Definition 72](#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 36](#thm-rank-nullity): the nullity is \\0\\ exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, because a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 44](#def-dimension), [Definition 41](#def-span)), and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\ ([Example 47](#exm-dimension)).
 
 > **NOTE:**
 >
@@ -4466,7 +5106,16 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **Example 181 (Eigenspaces of two matrices)**  
 >
 > - For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ of [Example 135](#exm-eigenvalue), \\\mathbf{A} - 3\\\mathbf{I}\_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}\\ sends \\\tilde{v}\\ to \\(v_2 - v_1)\\(1, -1)\\, so \\\mathcal{E}\_3 = \operatorname{span}\mathopen{}\left\\(1, 1)\right\\\mathclose{}\\, with geometric multiplicity \\1\\.
-> - For \\\mathbf{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{J} \tilde{v} = (v_2, 0)\\. \\\mathbf{J}\\(1, 0) = (0, 0) = 0\\(1, 0)\\, so \\0\\ is an eigenvalue. If \\\mathbf{J} \tilde{v} = \lambda\tilde{v}\\ with \\\lambda\ne 0\\, the second entry gives \\\lambda v_2 = 0\\, so \\v_2 = 0\\, and then the first gives \\\lambda v_1 = 0\\, so \\\tilde{v} = \tilde{0}\\. So \\0\\ is the only eigenvalue, and \\\mathcal{E}\_0 = \mathcal{N}(\mathbf{J}) = \mathopen{}\left\\(t, 0) : t \in \mathbb{R}\right\\\mathclose{}\\, with geometric multiplicity \\1\\.
+>
+> - For \\\mathbf{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{J} \tilde{v} = (v_2, 0)\\.
+>
+>   \\ \begin{aligned} \mathbf{J}\\(1, 0) &= (0, 0) \\ &= 0\\(1, 0), \end{aligned} \\
+>
+>   so \\0\\ is an eigenvalue. If \\\mathbf{J} \tilde{v} = \lambda\tilde{v}\\ with \\\lambda\ne 0\\, the second entry gives \\\lambda v_2 = 0\\, so \\v_2 = 0\\, and then the first gives \\\lambda v_1 = 0\\, so \\\tilde{v} = \tilde{0}\\. So \\0\\ is the only eigenvalue, and
+>
+>   \\ \begin{aligned} \mathcal{E}\_0 &= \mathcal{N}(\mathbf{J}) \\ &= \mathopen{}\left\\(t, 0) : t \in \mathbb{R}\right\\\mathclose{}, \end{aligned} \\
+>
+>   with geometric multiplicity \\1\\.
 
 > **NOTE:**
 >
@@ -4486,7 +5135,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 183 (Eigenvalues and singular matrices)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\, \\\mathbf{A} - 3\\\mathbf{I}\_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}\\ is singular (its columns are negatives of each other, so its rank is \\1\\), matching the eigenvalue \\3\\ of [Example 135](#exm-eigenvalue). \\\mathbf{A}\\ itself has rank \\2\\, since \\c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)\\ is \\\tilde{0}\\ only if \\c_1 = c_2 = 0\\ (subtract twice the second entry from the first: \\-3c_2 = 0\\, and then the second entry gives \\c_1 = 0\\); so it is invertible ([Theorem 98](#thm-invertible-rank)), and \\0\\ is not an eigenvalue. The singular matrix \\\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ has eigenvalue \\0\\, with eigenvector \\(1, -1)\\.
+> **Example 183 (Eigenvalues and singular matrices)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\, \\\mathbf{A} - 3\\\mathbf{I}\_2 = \begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}\\ is singular (its columns are negatives of each other, so its rank is \\1\\), matching the eigenvalue \\3\\ of [Example 135](#exm-eigenvalue). \\\mathbf{A}\\ itself has rank \\2\\, since \\c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)\\ is \\\tilde{0}\\ only if
+>
+> \\ \begin{aligned} c_1 &= c_2 \\ &= 0 \end{aligned} \\
+>
+> (subtract twice the second entry from the first: \\-3c_2 = 0\\, and then the second entry gives \\c_1 = 0\\); so it is invertible ([Theorem 98](#thm-invertible-rank)), and \\0\\ is not an eigenvalue. The singular matrix \\\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ has eigenvalue \\0\\, with eigenvector \\(1, -1)\\.
 
 > **NOTE:**
 >
@@ -4512,7 +5165,10 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **Example 184 (Shifting and squaring)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ with eigenvector \\(1, 1)\\ for \\3\\ ([Example 135](#exm-eigenvalue)):
 >
 > - \\\mathbf{A} - 2\\\mathbf{I}\_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ sends \\(1, 1)\\ to \\(1, 1) = (3 - 2)\\(1, 1)\\;
-> - \\\mathbf{A}^2 = \begin{bmatrix} 2 \cdot 2 + 1 \cdot 1 & 2 \cdot 1 + 1 \cdot 2 \\ 1 \cdot 2 + 2 \cdot 1 & 1 \cdot 1 + 2 \cdot 2 \end{bmatrix} = \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\ ([Definition 24](#def-matrix-mult)) sends \\(1, 1)\\ to \\(9, 9) = 3^2\\(1, 1)\\.
+>
+> - \\ \begin{aligned} \mathbf{A}^2 &= \begin{bmatrix} 2 \cdot 2 + 1 \cdot 1 & 2 \cdot 1 + 1 \cdot 2 \\ 1 \cdot 2 + 2 \cdot 1 & 1 \cdot 1 + 2 \cdot 2 \end{bmatrix} \\ &= \begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix} \end{aligned} \\
+>
+>   4.  sends \\(1, 1)\\ to \\(9, 9) = 3^2\\(1, 1)\\.
 
 > **NOTE:**
 >
@@ -4538,7 +5194,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 185 (Eigenvalues read off the diagonal)** \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ of [Example 170](#exm-triangular-matrix) has eigenvalues \\2\\, \\\tfrac{1}{2}\\ and \\-1\\. For \\\lambda= \tfrac{1}{2}\\ (so \\k = 2\\), take \\v_2 = 1\\, \\v_3 = 0\\; row 1 of \\(\mathbf{U} - \tfrac{1}{2}\\\mathbf{I}\_3)\\\tilde{v}\\ is \\\tfrac{3}{2}\\v_1 + 1 = 0\\, so \\v_1 = -\tfrac{2}{3}\\. Check: \\\mathbf{U}\\(-\tfrac{2}{3}, 1, 0) = (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) = \tfrac{1}{2}\\(-\tfrac{2}{3}, 1, 0)\\. The matrix \\\mathbf{J}\\ of [Example 181](#exm-eigenspace) is upper triangular with both diagonal entries \\0\\, and \\0\\ is its only eigenvalue.
+> **Example 185 (Eigenvalues read off the diagonal)** \\\mathbf{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}\\ of [Example 170](#exm-triangular-matrix) has eigenvalues \\2\\, \\\tfrac{1}{2}\\ and \\-1\\. For \\\lambda= \tfrac{1}{2}\\ (so \\k = 2\\), take \\v_2 = 1\\, \\v_3 = 0\\; row 1 of \\(\mathbf{U} - \tfrac{1}{2}\\\mathbf{I}\_3)\\\tilde{v}\\ is \\\tfrac{3}{2}\\v_1 + 1 = 0\\, so \\v_1 = -\tfrac{2}{3}\\. Check:
+>
+> \\ \begin{aligned} \mathbf{U}\\(-\tfrac{2}{3}, 1, 0) &= (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) \\ &= \tfrac{1}{2}\\(-\tfrac{2}{3}, 1, 0). \end{aligned} \\
+>
+> The matrix \\\mathbf{J}\\ of [Example 181](#exm-eigenspace) is upper triangular with both diagonal entries \\0\\, and \\0\\ is its only eigenvalue.
 
 > **NOTE:**
 >
@@ -4555,7 +5215,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \lambda\tilde{v} &= \mathbf{A} \tilde{v} && \text{(eigenvector)} \\ &= \mathbf{A}^2 \tilde{v} && \text{(idempotent)} \\ &= \lambda^2 \tilde{v}, && \text{(}\href{#thm-eigen-shift-power}{\text{Theorem~100}}\text{, part 2)} \end{aligned} \\
 >
-> and subtracting \\\lambda\tilde{v}\\ from both sides gives \\(\lambda^2 - \lambda)\\\tilde{v} = \tilde{0}\\. Some entry of \\\tilde{v}\\ is nonzero, so \\\lambda^2 - \lambda= \lambda\\(\lambda- 1) = 0\\, and a product of two numbers is \\0\\ only when one of them is: \\\lambda= 0\\ or \\\lambda= 1\\.
+> and subtracting \\\lambda\tilde{v}\\ from both sides gives \\(\lambda^2 - \lambda)\\\tilde{v} = \tilde{0}\\. Some entry of \\\tilde{v}\\ is nonzero, so
+>
+> \\ \begin{aligned} \lambda^2 - \lambda&= \lambda\\(\lambda- 1) \\ &= 0, \end{aligned} \\
+>
+> and a product of two numbers is \\0\\ only when one of them is: \\\lambda= 0\\ or \\\lambda= 1\\.
 >
 > **Part 2.** If \\\mathbf{A}\\ is orthogonal, then
 >
@@ -4568,8 +5232,14 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **Example 186 (Projections and reflections)**  
 >
 > - The idempotent matrix \\\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & 0.5 \end{bmatrix}\\ of [Example 151](#exm-hat-matrix-projection) sends \\(1, 1)\\ to \\(1, 1)\\ and \\(1, -1)\\ to \\(0, 0)\\: eigenvalues \\1\\ and \\0\\.
+>
 > - The matrix \\\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\, which swaps the two entries, is orthogonal: its columns \\(0, 1)\\ and \\(1, 0)\\ are orthonormal ([Remark 23](#rem-orthogonal-matrix-columns)). It sends \\(1, 1)\\ to \\(1, 1)\\ and \\(1, -1)\\ to \\(-1, 1)\\: eigenvalues \\1\\ and \\-1\\.
-> - The rotation \\\mathbf{Q}\\ of [Example 125](#exm-orthogonal-matrix) has no real eigenvalue. By part 2 the only candidates are \\\pm 1\\. \\\mathbf{Q} \tilde{v} = \tilde{v}\\ reads \\-0.4\\v_1 - 0.8\\v_2 = 0\\ and \\0.8\\v_1 - 0.4\\v_2 = 0\\, so \\v_1 = -2 v_2\\ and \\v_2 = 2 v_1 = -4 v_2\\, forcing \\\tilde{v} = \tilde{0}\\; \\\mathbf{Q} \tilde{v} = -\tilde{v}\\ reads \\1.6\\v_1 - 0.8\\v_2 = 0\\ and \\0.8\\v_1 + 1.6\\v_2 = 0\\, so \\v_2 = 2 v_1\\ and \\0.8\\v_1 + 3.2\\v_1 = 0\\, forcing \\\tilde{v} = \tilde{0}\\ again.
+>
+> - The rotation \\\mathbf{Q}\\ of [Example 125](#exm-orthogonal-matrix) has no real eigenvalue. By part 2 the only candidates are \\\pm 1\\. \\\mathbf{Q} \tilde{v} = \tilde{v}\\ reads \\-0.4\\v_1 - 0.8\\v_2 = 0\\ and \\0.8\\v_1 - 0.4\\v_2 = 0\\, so \\v_1 = -2 v_2\\ and
+>
+>   \\ \begin{aligned} v_2 &= 2 v_1 \\ &= -4 v_2, \end{aligned} \\
+>
+>   forcing \\\tilde{v} = \tilde{0}\\; \\\mathbf{Q} \tilde{v} = -\tilde{v}\\ reads \\1.6\\v_1 - 0.8\\v_2 = 0\\ and \\0.8\\v_1 + 1.6\\v_2 = 0\\, so \\v_2 = 2 v_1\\ and \\0.8\\v_1 + 3.2\\v_1 = 0\\, forcing \\\tilde{v} = \tilde{0}\\ again.
 
 > **NOTE:**
 >
@@ -4577,7 +5247,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Remark 42* (Similarity read both ways). If \\\mathbf{P}\\ is invertible, then \\\mathbf{P}^{-1}\\ is invertible with inverse \\\mathbf{P}\\: \\\mathbf{P}^{-1} \mathbf{P} = \mathbf{P} \mathbf{P}^{-1} = \mathbf{I}\_p\\ ([Definition 71](#def-matrix-inverse)) is the condition of [Definition 72](#def-invertible-matrix) for \\\mathbf{P}^{-1}\\ with \\\mathbf{P}\\ as the other factor, and that factor is unique ([Remark 21](#rem-invertible-inverse)). If \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\, then
+> *Remark 42* (Similarity read both ways). If \\\mathbf{P}\\ is invertible, then \\\mathbf{P}^{-1}\\ is invertible with inverse \\\mathbf{P}\\:
+>
+> \\ \begin{aligned} \mathbf{P}^{-1} \mathbf{P} &= \mathbf{P} \mathbf{P}^{-1} \\ &= \mathbf{I}\_p \end{aligned} \\
+>
+> 5.  is the condition of [Definition 72](#def-invertible-matrix) for \\\mathbf{P}^{-1}\\ with \\\mathbf{P}\\ as the other factor, and that factor is unique ([Remark 21](#rem-invertible-inverse)). If \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\, then
 >
 > \\ \begin{aligned} \mathbf{P} \mathbf{B} \mathbf{P}^{-1} &= \mathbf{P}\\(\mathbf{P}^{-1} \mathbf{A} \mathbf{P})\\\mathbf{P}^{-1} && \text{(substitute } \mathbf{B} \text{)} \\ &= (\mathbf{P} \mathbf{P}^{-1})\\\mathbf{A}\\(\mathbf{P} \mathbf{P}^{-1}) && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{I}\_p\\\mathbf{A}\\\mathbf{I}\_p && \text{(}\href{#def-matrix-inverse}{\text{Definition~71}}\text{)} \\ &= \mathbf{A}, && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \end{aligned} \\
 >
@@ -4589,11 +5263,19 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \mathbf{P}^2 &= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot(-1) \\ 1 \cdot 1 + (-1) \cdot 1 & 1 \cdot 1 + (-1)(-1) \end{bmatrix} && \text{(}\href{#def-matrix-mult}{\text{Definition~24}}\text{)} \\ &= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} && \text{(arithmetic)} \\ &= 2\\\mathbf{I}\_2, && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{, }\href{#def-identity-matrix}{\text{Definition~27}}\text{)} \end{aligned} \\
 >
-> so \\\mathbf{P}\\(\tfrac{1}{2}\\\mathbf{P}) = \tfrac{1}{2}\\\mathbf{P}^2 = \mathbf{I}\_2\\ and likewise \\(\tfrac{1}{2}\\\mathbf{P})\\\mathbf{P} = \mathbf{I}\_2\\ ([Theorem 85](#thm-scalar-matmul)): \\\mathbf{P}^{-1} = \tfrac{1}{2}\\\mathbf{P}\\ ([Definition 71](#def-matrix-inverse)). Then
+> so
+>
+> \\ \begin{aligned} \mathbf{P}\\(\tfrac{1}{2}\\\mathbf{P}) &= \tfrac{1}{2}\\\mathbf{P}^2 \\ &= \mathbf{I}\_2 \end{aligned} \\
+>
+> and likewise \\(\tfrac{1}{2}\\\mathbf{P})\\\mathbf{P} = \mathbf{I}\_2\\ ([Theorem 85](#thm-scalar-matmul)): \\\mathbf{P}^{-1} = \tfrac{1}{2}\\\mathbf{P}\\ (5). Then
 >
 > \\ \begin{aligned} \mathbf{P}^{-1} \mathbf{A} \mathbf{P} &= (\tfrac{1}{2}\\\mathbf{P})\\\mathbf{A} \mathbf{P} && \text{(substitute } \mathbf{P}^{-1} \text{)} \\ &= \tfrac{1}{2}\\(\mathbf{P} \mathbf{A} \mathbf{P}) && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~85}}\text{)} \\ &= \tfrac{1}{2}\\\mathbf{P}\\(\mathbf{A} \mathbf{P}) && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \tfrac{1}{2} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \begin{bmatrix} 3 & 1 \\ 3 & -1 \end{bmatrix} && \text{(}\href{#def-matrix-mult}{\text{Definition~24}}\text{, for } \mathbf{A} \mathbf{P} \text{)} \\ &= \tfrac{1}{2} \begin{bmatrix} 6 & 0 \\ 0 & 2 \end{bmatrix} && \text{(}\href{#def-matrix-mult}{\text{Definition~24}}\text{)} \\ &= \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}, && \text{(}\href{#def-scalar-mult}{\text{Definition~23}}\text{)} \end{aligned} \\
 >
-> so \\\mathbf{A}\\ is similar to \\\operatorname{diag}(3, 1)\\. At the other extreme, the identity matrix is similar only to itself: \\\mathbf{P}^{-1} \mathbf{I}\_p \mathbf{P} = \mathbf{P}^{-1} \mathbf{P} = \mathbf{I}\_p\\ for every invertible \\\mathbf{P}\\ ([Theorem 10](#thm-identity), [Definition 71](#def-matrix-inverse)).
+> so \\\mathbf{A}\\ is similar to \\\operatorname{diag}(3, 1)\\. At the other extreme, the identity matrix is similar only to itself:
+>
+> \\ \begin{aligned} \mathbf{P}^{-1} \mathbf{I}\_p \mathbf{P} &= \mathbf{P}^{-1} \mathbf{P} \\ &= \mathbf{I}\_p \end{aligned} \\
+>
+> for every invertible \\\mathbf{P}\\ ([Theorem 10](#thm-identity), 5).
 
 > **NOTE:**
 >
@@ -4605,9 +5287,21 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \mathbf{B} \tilde{w} &= (\mathbf{P}^{-1} \mathbf{A} \mathbf{P})\\(\mathbf{P}^{-1} \tilde{v}) && \text{(substitute } \mathbf{B} \text{ and } \tilde{w} \text{)} \\ &= \mathbf{P}^{-1} \mathbf{A}\\(\mathbf{P} \mathbf{P}^{-1})\\\tilde{v} && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{P}^{-1} \mathbf{A}\\\mathbf{I}\_p\\\tilde{v} && \text{(}\href{#def-matrix-inverse}{\text{Definition~71}}\text{)} \\ &= \mathbf{P}^{-1} \mathbf{A} \tilde{v} && \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)} \\ &= \mathbf{P}^{-1}\\(\mathbf{A} \tilde{v}) && \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathbf{P}^{-1}\\(\lambda\tilde{v}) && \text{(eigenvector)} \\ &= \lambda\\\tilde{w}. && \text{(}\href{#thm-scalar-matmul}{\text{Theorem~85}}\text{)} \end{aligned} \\
 >
-> And \\\tilde{w} \ne \tilde{0}\\: if \\\tilde{w} = \tilde{0}\\, then \\\tilde{v} = \mathbf{I}\_p \tilde{v} = \mathbf{P}\\(\mathbf{P}^{-1} \tilde{v}) = \mathbf{P}\\\tilde{0}= \tilde{0}\\ ([Theorem 10](#thm-identity), [Definition 71](#def-matrix-inverse), [Theorem 8](#thm-matmul-assoc), [Definition 28](#def-matvec-mult)), which is false.
+> And \\\tilde{w} \ne \tilde{0}\\: if \\\tilde{w} = \tilde{0}\\, then
 >
-> **From \\\mathbf{B}\\ to \\\mathbf{A}\\.** By [Remark 42](#rem-similar-both-ways), \\\mathbf{A} = \mathbf{P} \mathbf{B} \mathbf{P}^{-1} = (\mathbf{P}^{-1})^{-1} \mathbf{B}\\\mathbf{P}^{-1}\\, so the first part, with \\\mathbf{P}^{-1}\\ in place of \\\mathbf{P}\\ and the roles of \\\mathbf{A}\\ and \\\mathbf{B}\\ exchanged, shows that if \\\tilde{w} = \mathbf{P}^{-1} \tilde{v}\\ is an eigenvector of \\\mathbf{B}\\ for \\\lambda\\, then \\\mathbf{P} \tilde{w}\\ is an eigenvector of \\\mathbf{A}\\ for \\\lambda\\; and \\\mathbf{P} \tilde{w} = \mathbf{P} \mathbf{P}^{-1} \tilde{v} = \tilde{v}\\ ([Theorem 8](#thm-matmul-assoc), [Definition 71](#def-matrix-inverse), [Theorem 10](#thm-identity)).
+> \\ \begin{aligned} \tilde{v} &= \mathbf{I}\_p \tilde{v} \\ &= \mathbf{P}\\(\mathbf{P}^{-1} \tilde{v}) \\ &= \mathbf{P}\\\tilde{0}\\ &= \tilde{0} \end{aligned} \\
+>
+> ([Theorem 10](#thm-identity), 5, [Theorem 8](#thm-matmul-assoc), [Definition 28](#def-matvec-mult)), which is false.
+>
+> **From \\\mathbf{B}\\ to \\\mathbf{A}\\.** By [Remark 42](#rem-similar-both-ways),
+>
+> \\ \begin{aligned} \mathbf{A} &= \mathbf{P} \mathbf{B} \mathbf{P}^{-1} \\ &= (\mathbf{P}^{-1})^{-1} \mathbf{B}\\\mathbf{P}^{-1}, \end{aligned} \\
+>
+> so the first part, with \\\mathbf{P}^{-1}\\ in place of \\\mathbf{P}\\ and the roles of \\\mathbf{A}\\ and \\\mathbf{B}\\ exchanged, shows that if \\\tilde{w} = \mathbf{P}^{-1} \tilde{v}\\ is an eigenvector of \\\mathbf{B}\\ for \\\lambda\\, then \\\mathbf{P} \tilde{w}\\ is an eigenvector of \\\mathbf{A}\\ for \\\lambda\\; and
+>
+> \\ \begin{aligned} \mathbf{P} \tilde{w} &= \mathbf{P} \mathbf{P}^{-1} \tilde{v} \\ &= \tilde{v} \end{aligned} \\
+>
+> ([Theorem 8](#thm-matmul-assoc), 5, [Theorem 10](#thm-identity)).
 
 > **NOTE:**
 >
@@ -4627,7 +5321,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 189 (Independent eigenvectors)** The eigenvectors \\(1, 1)\\ for \\3\\ and \\(1, -1)\\ for \\1\\ of [Example 135](#exm-eigenvalue) are linearly independent, as [Theorem 104](#thm-eigenvectors-independent) says they must be: \\c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)\\ is \\\tilde{0}\\ only if \\c_1 = c_2 = 0\\. Two eigenvectors for the same eigenvalue need not be independent: \\(1, 1)\\ and \\(2, 2)\\ are both eigenvectors for \\3\\.
+> **Example 189 (Independent eigenvectors)** The eigenvectors \\(1, 1)\\ for \\3\\ and \\(1, -1)\\ for \\1\\ of [Example 135](#exm-eigenvalue) are linearly independent, as [Theorem 104](#thm-eigenvectors-independent) says they must be: \\c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)\\ is \\\tilde{0}\\ only if
+>
+> \\ \begin{aligned} c_1 &= c_2 \\ &= 0. \end{aligned} \\
+>
+> Two eigenvectors for the same eigenvalue need not be independent: \\(1, 1)\\ and \\(2, 2)\\ are both eigenvectors for \\3\\.
 
 > **NOTE:**
 >
@@ -4638,7 +5336,12 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **Example 190 (Diagonalizable and not)**  
 >
 > - \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ is diagonalizable: with \\\mathbf{P}\\ as in [Example 187](#exm-similar), \\\operatorname{diag}(3, 1) = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\.
-> - \\\mathbf{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\\ is not. Suppose \\\mathbf{J} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\, so \\\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{J} \mathbf{X}\\ ([Remark 42](#rem-similar-both-ways)). The eigenvalues of \\\mathbf{\Lambda}\\ are its diagonal entries ([Theorem 101](#thm-eigen-triangular), since a diagonal matrix is upper triangular) and are the eigenvalues of \\\mathbf{J}\\ ([Theorem 103](#thm-similar-eigenvalues)), of which \\0\\ is the only one ([Example 181](#exm-eigenspace)). So \\\mathbf{\Lambda} = \mathbf{0}\_{2 \times 2}\\, and then \\\mathbf{J} = \mathbf{X}\\\mathbf{0}\_{2 \times 2}\\\mathbf{X}^{-1} = \mathbf{0}\_{2 \times 2}\\ ([Definition 24](#def-matrix-mult)), which it is not.
+>
+> - \\\mathbf{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\\ is not. Suppose \\\mathbf{J} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\, so \\\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{J} \mathbf{X}\\ ([Remark 42](#rem-similar-both-ways)). The eigenvalues of \\\mathbf{\Lambda}\\ are its diagonal entries ([Theorem 101](#thm-eigen-triangular), since a diagonal matrix is upper triangular) and are the eigenvalues of \\\mathbf{J}\\ ([Theorem 103](#thm-similar-eigenvalues)), of which \\0\\ is the only one ([Example 181](#exm-eigenspace)). So \\\mathbf{\Lambda} = \mathbf{0}\_{2 \times 2}\\, and then
+>
+>   \\ \begin{aligned} \mathbf{J} &= \mathbf{X}\\\mathbf{0}\_{2 \times 2}\\\mathbf{X}^{-1} \\ &= \mathbf{0}\_{2 \times 2} \end{aligned} \\
+>
+>   (4), which it is not.
 
 > **NOTE:**
 >
@@ -4646,7 +5349,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. Let \\\mathbf{X}\\ have columns \\\tilde{x}\_1, \ldots, \tilde{x}\_p\\ and \\\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\\. Column \\j\\ of \\\mathbf{A} \mathbf{X}\\ is \\\mathbf{A} \tilde{x}\_j\\, and column \\j\\ of \\\mathbf{X} \mathbf{\Lambda}\\ is \\\mathbf{X}\\ times column \\j\\ of \\\mathbf{\Lambda}\\ ([Definition 24](#def-matrix-mult)), which is \\\mathbf{X}\\(\lambda_j \tilde{e}\_j) = \lambda_j\\(\mathbf{X} \tilde{e}\_j) = \lambda_j \tilde{x}\_j\\ ([Theorem 85](#thm-scalar-matmul), [Theorem 22](#thm-matvec-columns)), so
+> *Proof*. Let \\\mathbf{X}\\ have columns \\\tilde{x}\_1, \ldots, \tilde{x}\_p\\ and \\\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\\. Column \\j\\ of \\\mathbf{A} \mathbf{X}\\ is \\\mathbf{A} \tilde{x}\_j\\, and column \\j\\ of \\\mathbf{X} \mathbf{\Lambda}\\ is \\\mathbf{X}\\ times column \\j\\ of \\\mathbf{\Lambda}\\ (4), which is
+>
+> \\ \begin{aligned} \mathbf{X}\\(\lambda_j \tilde{e}\_j) &= \lambda_j\\(\mathbf{X} \tilde{e}\_j) \\ &= \lambda_j \tilde{x}\_j \end{aligned} \\
+>
+> ([Theorem 85](#thm-scalar-matmul), [Theorem 22](#thm-matvec-columns)), so
 >
 > \\ \mathbf{A} \mathbf{X} = \mathbf{X} \mathbf{\Lambda} \iff \mathbf{A} \tilde{x}\_j = \lambda_j \tilde{x}\_j \text{ for every } j. \tag{7}\\
 >
@@ -4684,7 +5391,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. **Powers of \\\mathbf{\Lambda}\\.** If \\\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)\\ and \\\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)\\, with entries \\d\_{il}\\ and \\e\_{lj}\\ (so \\d\_{ii} = d_i\\ and \\e\_{jj} = e_j\\), entry \\(i, j)\\ of \\\mathbf{D} \mathbf{E}\\ is \\\sum_l d\_{il}\\e\_{lj}\\ ([Definition 24](#def-matrix-mult)), where \\d\_{il} = 0\\ unless \\l = i\\ and \\e\_{lj} = 0\\ unless \\l = j\\. For \\i \ne j\\ no term survives, so the entry is \\0\\; for \\i = j\\ only \\l = i\\ survives, giving \\d_i\\e_i\\. So \\\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)\\, and [induction](proof-writing.llms.md#def-proof-by-induction) on \\k\\ gives \\\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\\.
+> *Proof*. **Powers of \\\mathbf{\Lambda}\\.** If \\\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)\\ and \\\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)\\, with entries \\d\_{il}\\ and \\e\_{lj}\\ (so \\d\_{ii} = d_i\\ and \\e\_{jj} = e_j\\), entry \\(i, j)\\ of \\\mathbf{D} \mathbf{E}\\ is \\\sum_l d\_{il}\\e\_{lj}\\ (4), where \\d\_{il} = 0\\ unless \\l = i\\ and \\e\_{lj} = 0\\ unless \\l = j\\. For \\i \ne j\\ no term survives, so the entry is \\0\\; for \\i = j\\ only \\l = i\\ survives, giving \\d_i\\e_i\\. So \\\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)\\, and [induction](proof-writing.llms.md#def-proof-by-induction) on \\k\\ gives \\\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\\.
 >
 > **Powers of \\\mathbf{A}\\, by induction on \\k\\.** \\k = 1\\ is the assumption. If it holds for \\k - 1\\,
 >
@@ -4722,7 +5429,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. **If \\\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\\.** \\\mathbf{A}\\ is symmetric, since \\{({\mathbf{B}}^{\top} \mathbf{B})}^{\top} = {\mathbf{B}}^{\top}\\{({\mathbf{B}}^{\top})}^{\top} = {\mathbf{B}}^{\top} \mathbf{B}\\ ([Theorem 19](#thm-transpose-product), [Definition 20](#def-matrix-transpose)). For any \\\tilde{x}\\,
+> *Proof*. **If \\\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\\.** \\\mathbf{A}\\ is symmetric, since
+>
+> \\ \begin{aligned} {({\mathbf{B}}^{\top} \mathbf{B})}^{\top} &= {\mathbf{B}}^{\top}\\{({\mathbf{B}}^{\top})}^{\top} \\ &= {\mathbf{B}}^{\top} \mathbf{B} \end{aligned} \\
+>
+> ([Theorem 19](#thm-transpose-product), [Definition 20](#def-matrix-transpose)). For any \\\tilde{x}\\,
 >
 > \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= {\tilde{x}}^{\top}\\{\mathbf{B}}^{\top}\\\mathbf{B} \tilde{x} && \text{(substitute } \mathbf{A} \text{)} \\ &= {(\mathbf{B} \tilde{x})}^{\top}\\(\mathbf{B} \tilde{x}) && \text{(}\href{#thm-transpose-product}{\text{Theorem~19}}\text{, }\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &= \mathopen{}\left\lVert\mathbf{B} \tilde{x}\right\rVert\mathclose{}^2 && \text{(}\href{#eq-l2-norm}{\text{Equation~2}}\text{, squared)} \\ &\ge 0. && \text{(}\href{#thm-norm-properties}{\text{Theorem~52}}\text{)} \end{aligned} \\
 >
@@ -4751,7 +5462,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** \\{\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\\ is symmetric: \\{({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A})}^{\top} = {\mathbf{A}}^{\top}\\{\mathbf{C}}^{\top}\\{({\mathbf{A}}^{\top})}^{\top} = {\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\\ ([Theorem 19](#thm-transpose-product), twice; \\\mathbf{C}\\ symmetric; [Definition 20](#def-matrix-transpose)). For \\\tilde{x}\ne \tilde{0}\_k\\, \\\mathbf{A} \tilde{x}\ne \tilde{0}\_p\\, since the columns of \\\mathbf{A}\\ are independent ([Theorem 22](#thm-matvec-columns), [Definition 37](#def-linearly-independent)), and
+> *Proof*. **Part 1.** \\{\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\\ is symmetric:
+>
+> \\ \begin{aligned} {({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A})}^{\top} &= {\mathbf{A}}^{\top}\\{\mathbf{C}}^{\top}\\{({\mathbf{A}}^{\top})}^{\top} \\ &= {\mathbf{A}}^{\top} \mathbf{C} \mathbf{A} \end{aligned} \\
+>
+> ([Theorem 19](#thm-transpose-product), twice; \\\mathbf{C}\\ symmetric; [Definition 20](#def-matrix-transpose)). For \\\tilde{x}\ne \tilde{0}\_k\\, \\\mathbf{A} \tilde{x}\ne \tilde{0}\_p\\, since the columns of \\\mathbf{A}\\ are independent ([Theorem 22](#thm-matvec-columns), [Definition 37](#def-linearly-independent)), and
 >
 > \\ \begin{aligned} {\tilde{x}}^{\top}\\({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A})\\\tilde{x} &= {(\mathbf{A} \tilde{x})}^{\top}\\\mathbf{C}\\(\mathbf{A} \tilde{x}) && \text{(}\href{#thm-transpose-product}{\text{Theorem~19}}\text{, }\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)} \\ &\> 0. && \text{(} \mathbf{C} \text{ positive definite, } \mathbf{A} \tilde{x}\ne \tilde{0}\text{)} \end{aligned} \\
 >
@@ -4764,8 +5479,15 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 > **Example 195 (Building positive definite matrices)**  
 >
 > - With \\\mathbf{C} = \mathbf{I}\_3\\ and \\\mathbf{X}\\ of [Example 194](#exm-pd-gram), part 1 gives again that \\{\mathbf{X}}^{\top} \mathbf{X}\\ is positive definite.
-> - With \\\alpha_1 = 2\\, \\\mathbf{A}\_1 = \mathbf{I}\_2\\ ([Example 141](#exm-positive-definite)), \\\alpha_2 = 1\\ and \\\mathbf{A}\_2 = {\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix}\\ ([Example 194](#exm-pd-gram)), part 2 gives that \\2 \mathbf{I}\_2 + {\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 5 & 6 \\ 6 & 16 \end{bmatrix}\\ is positive definite.
+>
+> - With \\\alpha_1 = 2\\, \\\mathbf{A}\_1 = \mathbf{I}\_2\\ ([Example 141](#exm-positive-definite)), \\\alpha_2 = 1\\ and
+>
+>   \\ \begin{aligned} \mathbf{A}\_2 &= {\mathbf{X}}^{\top} \mathbf{X}\\ &= \begin{bmatrix} 3 & 6 \\ 6 & 14 \end{bmatrix} \end{aligned} \\
+>
+>   ([Example 194](#exm-pd-gram)), part 2 gives that \\2 \mathbf{I}\_2 + {\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 5 & 6 \\ 6 & 16 \end{bmatrix}\\ is positive definite.
+>
 > - An aside beyond part 2: \\\mathbf{I}\_2 + \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ is positive definite plus positive semidefinite; its quadratic form is \\x_1^2 + x_2^2 + (x_1 + x_2)^2 \> 0\\ for \\\tilde{x}\ne \tilde{0}\\, so it is positive definite, in line with its eigenvalues \\3\\ and \\1\\ ([Example 135](#exm-eigenvalue)).
+>
 > - Independence is needed in part 1: with \\\mathbf{A} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, whose columns are equal, \\{\mathbf{A}}^{\top}\\\mathbf{I}\_2\\\mathbf{A} = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\, and \\(1, -1)\\ gives quadratic form \\0\\.
 
 > **NOTE:**
@@ -4778,11 +5500,21 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 196 (Cutting a \\3 \times 3\\ matrix into blocks)** With \\k = l = 1\\,
+> **Example 196 (Cutting a \\3 \times 3\\ matrix into blocks)** With
+>
+> \\ \begin{aligned} k &= l \\ &= 1, \end{aligned} \\
 >
 > \\ \mathbf{X} = \begin{bmatrix} 4 & 2 & 1 \\ 2 & 5 & 3 \\ 1 & 3 & 6 \end{bmatrix} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}, \qquad \mathbf{A} = \begin{bmatrix} 4 \end{bmatrix}, \quad \mathbf{B} = \begin{bmatrix} 2 & 1 \end{bmatrix}, \quad \mathbf{C} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad \mathbf{D} = \begin{bmatrix} 5 & 3 \\ 3 & 6 \end{bmatrix}. \\
 >
-> For instance, entry \\(1, 2)\\ of \\\mathbf{D}\\ is \\x\_{1 + 1, 2 + 1} = x\_{23} = 3\\. With \\k = l = 2\\ instead, the leading \\2 \times 2\\ block is \\\begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}\\.
+> For instance, entry \\(1, 2)\\ of \\\mathbf{D}\\ is
+>
+> \\ \begin{aligned} x\_{1 + 1, 2 + 1} &= x\_{23} \\ &= 3. \end{aligned} \\
+>
+> With
+>
+> \\ \begin{aligned} k &= l \\ &= 2 \end{aligned} \\
+>
+> instead, the leading \\2 \times 2\\ block is \\\begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}\\.
 
 > **NOTE:**
 >
@@ -4800,7 +5532,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 197 (A quick necessary test)** \\\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ is positive definite ([Example 195](#exm-pd-operations)), and its diagonal entries \\2, 2\\ and its \\1 \times 1\\ leading block \\\[2\]\\ are positive. The test can only rule matrices out: \\-\mathbf{I}\_2\\ has negative diagonal entries, so it is not positive definite, even though \\\det(-\mathbf{I}\_2) = (-1)(-1) - 0 = 1 \> 0\\ ([Definition 88](#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ of [Example 141](#exm-positive-definite) has them but is not positive definite.
+> **Example 197 (A quick necessary test)** \\\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ is positive definite ([Example 195](#exm-pd-operations)), and its diagonal entries \\2, 2\\ and its \\1 \times 1\\ leading block \\\[2\]\\ are positive. The test can only rule matrices out: \\-\mathbf{I}\_2\\ has negative diagonal entries, so it is not positive definite, even though
+>
+> \\ \begin{aligned} \det(-\mathbf{I}\_2) &= (-1)(-1) - 0 \\ &= 1 \\ &\> 0 \end{aligned} \\
+>
+> ([Definition 88](#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ of [Example 141](#exm-positive-definite) has them but is not positive definite.
 
 > **NOTE:**
 >
@@ -4808,7 +5544,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \mathbf{X} = \begin{bmatrix} \underbrace{\mathbf{A}}\_{k \times k} & \underbrace{\mathbf{B}}\_{k \times m} \\ \underbrace{{\mathbf{B}}^{\top}}\_{m \times k} & \underbrace{\mathbf{C}}\_{m \times m} \end{bmatrix}, \\
 >
-> that is, \\x\_{ij} = a\_{ij}\\, \\x\_{i, k+j} = b\_{ij}\\, \\x\_{k+i, j} = b\_{ji}\\ and \\x\_{k+i, k+j} = c\_{ij}\\ for indices in range. \\\mathbf{X}\\ is symmetric ([Definition 69](#def-symmetric-matrix)): \\x\_{k+i, j} = b\_{ji} = x\_{j, k+i}\\, and \\\mathbf{A}\\ and \\\mathbf{C}\\ are symmetric. Split \\\tilde{v} \in \mathbb{R}^{k + m}\\ as \\\tilde{v} = (\tilde{u}, \tilde{w})\\, with \\\tilde{u} \in \mathbb{R}^k\\ its first \\k\\ entries and \\\tilde{w} \in \mathbb{R}^m\\ the rest. Then
+> that is, \\x\_{ij} = a\_{ij}\\, \\x\_{i, k+j} = b\_{ij}\\, \\x\_{k+i, j} = b\_{ji}\\ and \\x\_{k+i, k+j} = c\_{ij}\\ for indices in range. \\\mathbf{X}\\ is symmetric ([Definition 69](#def-symmetric-matrix)):
+>
+> \\ \begin{aligned} x\_{k+i, j} &= b\_{ji} \\ &= x\_{j, k+i}, \end{aligned} \\
+>
+> and \\\mathbf{A}\\ and \\\mathbf{C}\\ are symmetric. Split \\\tilde{v} \in \mathbb{R}^{k + m}\\ as \\\tilde{v} = (\tilde{u}, \tilde{w})\\, with \\\tilde{u} \in \mathbb{R}^k\\ its first \\k\\ entries and \\\tilde{w} \in \mathbb{R}^m\\ the rest. Then
 >
 > \\ {\tilde{v}}^{\top} \mathbf{X} \tilde{v} = {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}, \tag{8}\\
 >
@@ -4828,7 +5568,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} {\tilde{v}}^{\top} \mathbf{X} \tilde{v} &= \sum\_{i=1}^{k} u_i\\(\mathbf{X} \tilde{v})\_i + \sum\_{i=1}^{m} w_i\\(\mathbf{X} \tilde{v})\_{k+i} && \text{(}\href{#def-dot-product}{\text{Definition~7}}\text{, split the sum at } k \text{)} \\ &= \tilde{u} \cdot (\mathbf{A} \tilde{u} + \mathbf{B} \tilde{w}) + \tilde{w} \cdot ({\mathbf{B}}^{\top} \tilde{u} + \mathbf{C} \tilde{w}) && \text{(the blocks of } \mathbf{X} \tilde{v} \text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w} && \text{(}\href{#thm-dot-linear}{\text{Theorem~46}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w} && \text{(} {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} = {\mathopen{}\left({\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u}\right)\mathclose{}}^{\top} \text{, which equals } {\tilde{u}}^{\top} \mathbf{B} \tilde{w} \text{; } 1 \times 1 \text{, }\href{#def-matrix-transpose}{\text{Definition~20}}\text{, }\href{#thm-transpose-product}{\text{Theorem~19}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}. && \text{(combine like terms)} \end{aligned} \\
 >
-> **Completing the square.** Write \\\tilde{d} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \tilde{w}\\, so \\\tilde{z} = \tilde{u} + \tilde{d}\\ and \\\mathbf{A} \tilde{d} = \mathbf{B} \tilde{w}\\ ([Theorem 8](#thm-matmul-assoc), [Definition 71](#def-matrix-inverse), [Theorem 10](#thm-identity)); \\\mathbf{A}^{-1}\\ is symmetric ([Corollary 6](#cor-inverse-symmetric)). Then
+> **Completing the square.** Write \\\tilde{d} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \tilde{w}\\, so \\\tilde{z} = \tilde{u} + \tilde{d}\\ and \\\mathbf{A} \tilde{d} = \mathbf{B} \tilde{w}\\ ([Theorem 8](#thm-matmul-assoc), 5, [Theorem 10](#thm-identity)); \\\mathbf{A}^{-1}\\ is symmetric ([Corollary 6](#cor-inverse-symmetric)). Then
 >
 > \\ \begin{aligned} {\tilde{z}}^{\top} \mathbf{A} \tilde{z} &= (\tilde{u} + \tilde{d}) \cdot \mathbf{A}\\(\tilde{u} + \tilde{d}) && \text{(substitute } \tilde{z} = \tilde{u} + \tilde{d} \text{)} \\ &= (\tilde{u} + \tilde{d}) \cdot (\mathbf{A} \tilde{u} + \mathbf{A} \tilde{d}) && \text{(}\href{#thm-matmul-distrib}{\text{Theorem~9}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{u} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d} && \text{(}\href{#thm-dot-linear}{\text{Theorem~46}}\text{, both slots)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d} && \text{(as in the expansion, with } {\mathbf{A}}^{\top} = \mathbf{A} \text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d} && \text{(combine like terms)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{d}}^{\top} \mathbf{B} \tilde{w} && \text{(} \mathbf{A} \tilde{d} = \mathbf{B} \tilde{w} \text{, twice)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top}\\{\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \tilde{w}, && \text{(} {\tilde{d}}^{\top} = {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \mathbf{A}^{-1} \text{, }\href{#thm-transpose-product}{\text{Theorem~19}}\text{, }\href{#cor-inverse-symmetric}{\text{Corollary~6}}\text{)} \end{aligned} \\
 >
@@ -4840,11 +5580,17 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 198 (The \\2 \times 2\\ case)** For \\\mathbf{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}\\ (\\k = m = 1\\) and \\a \ne 0\\, the theorem reads
+> **Example 198 (The \\2 \times 2\\ case)** For \\\mathbf{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}\\ (\\k = 1\\ and \\m = 1\\) and \\a \ne 0\\, the theorem reads
 >
 > \\ a u^2 + 2buw + cw^2 = a\\\mathopen{}\left(u + \tfrac{b}{a}\\w\right)\mathclose{}^2 + \mathopen{}\left(c - \tfrac{b^2}{a}\right)\mathclose{}\\w^2, \\
 >
-> with \\\tilde{v} = (u, w)\\: the familiar completing of the square. With \\a = c = 5\\ and \\b = 4\\: \\5\\(u + 0.8\\w)^2 + 1.8\\w^2 = 5\\(u^2 + 1.6\\uw + 0.64\\w^2) + 1.8\\w^2 = 5u^2 + 8uw + 3.2\\w^2 + 1.8\\w^2 = 5u^2 + 8uw + 5w^2\\.
+> with \\\tilde{v} = (u, w)\\: the familiar completing of the square. With
+>
+> \\ \begin{aligned} a &= c \\ &= 5 \end{aligned} \\
+>
+> and \\b = 4\\:
+>
+> \\ \begin{aligned} 5\\(u + 0.8\\w)^2 + 1.8\\w^2 &= 5\\(u^2 + 1.6\\uw + 0.64\\w^2) + 1.8\\w^2 \\ &= 5u^2 + 8uw + 3.2\\w^2 + 1.8\\w^2 \\ &= 5u^2 + 8uw + 5w^2. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -4854,8 +5600,16 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > **Example 199 (Schur complements of \\2 \times 2\\ matrices)**  
 >
-> - For \\\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\ with \\\mathbf{A} = \[5\]\\: \\\mathbf{S} = 5 - 4 \cdot\tfrac{1}{5} \cdot 4 = \tfrac{25}{5} - \tfrac{16}{5} = \tfrac{9}{5}\\, that is, \\\mathbf{S} = \[\tfrac{9}{5}\]\\.
-> - For \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ with \\\mathbf{A} = \[1\]\\: \\\mathbf{S} = \[1 - 2 \cdot 1 \cdot 2\] = \[-3\]\\.
+> - For \\\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\ with \\\mathbf{A} = \[5\]\\:
+>
+>   \\ \begin{aligned} \mathbf{S} &= 5 - 4 \cdot\tfrac{1}{5} \cdot 4 \\ &= \tfrac{25}{5} - \tfrac{16}{5} \\ &= \tfrac{9}{5}, \end{aligned} \\
+>
+>   that is, \\\mathbf{S} = \[\tfrac{9}{5}\]\\.
+>
+> - For \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ with \\\mathbf{A} = \[1\]\\:
+>
+>   \\ \begin{aligned} \mathbf{S} &= \[1 - 2 \cdot 1 \cdot 2\] \\ &= \[-3\]. \end{aligned} \\
+>
 > - For \\\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}\\ the top-left block \\\[0\]\\ is not invertible, so there is no Schur complement of it.
 
 > **NOTE:**
@@ -4866,7 +5620,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. **If.** \\\mathbf{A}\\ is positive definite, so invertible ([Theorem 74](#thm-pd-inverse)), and \\\mathbf{S}\\ is defined. \\\mathbf{X}\\ is symmetric. Let \\\tilde{v} = (\tilde{u}, \tilde{w}) \ne \tilde{0}\\ and \\\tilde{z} = \tilde{u} + \mathbf{A}^{-1} \mathbf{B} \tilde{w}\\. By [Theorem 110](#thm-block-quadratic), \\{\tilde{v}}^{\top} \mathbf{X} \tilde{v} = {\tilde{z}}^{\top} \mathbf{A} \tilde{z} + {\tilde{w}}^{\top} \mathbf{S} \tilde{w}\\, and both terms are at least \\0\\. If \\\tilde{w} \ne \tilde{0}\\, the second term is positive. If \\\tilde{w} = \tilde{0}\\, then \\\tilde{u} \ne \tilde{0}\\ and \\\tilde{z} = \tilde{u}\\, so the first term is positive. Either way \\{\tilde{v}}^{\top} \mathbf{X} \tilde{v} \> 0\\.
 >
-> **Only if.** \\\mathbf{A}\\ is the top-left \\k \times k\\ block of \\\mathbf{X}\\, so it is positive definite ([Theorem 109](#thm-pd-submatrix)), and invertible ([Theorem 74](#thm-pd-inverse)). \\\mathbf{S}\\ is symmetric: \\{({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} = {\mathbf{B}}^{\top}\\{(\mathbf{A}^{-1})}^{\top}\\\mathbf{B} = {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ ([Theorem 19](#thm-transpose-product), [Definition 20](#def-matrix-transpose) for \\{({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\\, [Corollary 6](#cor-inverse-symmetric)), and \\\mathbf{C}\\ is symmetric, so \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, [Definition 20](#def-matrix-transpose)). For \\\tilde{w} \ne \tilde{0}\\, take \\\tilde{u} = -\mathbf{A}^{-1} \mathbf{B} \tilde{w}\\, so \\\tilde{z} = \tilde{0}\\ and \\\tilde{v} = (\tilde{u}, \tilde{w}) \ne \tilde{0}\\; then \\{\tilde{w}}^{\top} \mathbf{S} \tilde{w} = {\tilde{v}}^{\top} \mathbf{X} \tilde{v} \> 0\\ ([Theorem 110](#thm-block-quadratic)).
+> **Only if.** \\\mathbf{A}\\ is the top-left \\k \times k\\ block of \\\mathbf{X}\\, so it is positive definite ([Theorem 109](#thm-pd-submatrix)), and invertible ([Theorem 74](#thm-pd-inverse)). \\\mathbf{S}\\ is symmetric:
+>
+> \\ \begin{aligned} {({\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B})}^{\top} &= {\mathbf{B}}^{\top}\\{(\mathbf{A}^{-1})}^{\top}\\\mathbf{B} \\ &= {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B} \end{aligned} \\
+>
+> ([Theorem 19](#thm-transpose-product), [Definition 20](#def-matrix-transpose) for \\{({\mathbf{B}}^{\top})}^{\top} = \mathbf{B}\\, [Corollary 6](#cor-inverse-symmetric)), and \\\mathbf{C}\\ is symmetric, so \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ is symmetric (the transpose of a difference is the difference of the transposes, entry by entry, [Definition 20](#def-matrix-transpose)). For \\\tilde{w} \ne \tilde{0}\\, take \\\tilde{u} = -\mathbf{A}^{-1} \mathbf{B} \tilde{w}\\, so \\\tilde{z} = \tilde{0}\\ and \\\tilde{v} = (\tilde{u}, \tilde{w}) \ne \tilde{0}\\; then \\{\tilde{w}}^{\top} \mathbf{S} \tilde{w} = {\tilde{v}}^{\top} \mathbf{X} \tilde{v} \> 0\\ ([Theorem 110](#thm-block-quadratic)).
 
 > **NOTE:**
 >
@@ -4889,7 +5647,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > with \\\tilde{b}, \tilde{g} \in \mathbb{R}^{p-1}\\, where \\b_i\\ and \\g_i\\ are entries \\(i + 1, 1)\\ of \\\mathbf{A}\\ and \\\mathbf{L}\\, and \\(\mathbf{A}\_{22})\_{ij}\\ and \\(\mathbf{L}\_{22})\_{ij}\\ are their entries \\(i + 1, j + 1)\\; \\{\mathbf{L}}^{\top}\\ has this form by [Definition 20](#def-matrix-transpose). A \\p \times p\\ matrix \\\mathbf{L}\\ is lower triangular with positive diagonal exactly when \\\ell\_{11} \> 0\\, its first row is otherwise zero, and \\\mathbf{L}\_{22}\\ is lower triangular with positive diagonal; \\\tilde{g}\\ can be anything. So choosing \\\mathbf{L}\\ means choosing \\\ell\_{11} \> 0\\, \\\tilde{g}\\ and such an \\\mathbf{L}\_{22}\\.
 >
-> Entry \\(i, j)\\ of \\\mathbf{L} {\mathbf{L}}^{\top}\\ is \\\sum\_{r=1}^{p} \ell\_{ir}\\\ell\_{jr}\\, with \\\ell\_{ir}\\ entry \\(i, r)\\ of \\\mathbf{L}\\ ([Definition 24](#def-matrix-mult), [Definition 20](#def-matrix-transpose)). Row \\1\\ of \\\mathbf{L}\\ is \\(\ell\_{11}, 0, \ldots, 0)\\, and row \\i + 1\\ is \\(g_i, (\mathbf{L}\_{22})\_{i1}, \ldots, (\mathbf{L}\_{22})\_{i,p-1})\\. So, for \\i, j = 1, \ldots, p - 1\\:
+> Entry \\(i, j)\\ of \\\mathbf{L} {\mathbf{L}}^{\top}\\ is \\\sum\_{r=1}^{p} \ell\_{ir}\\\ell\_{jr}\\, with \\\ell\_{ir}\\ entry \\(i, r)\\ of \\\mathbf{L}\\ (4, [Definition 20](#def-matrix-transpose)). Row \\1\\ of \\\mathbf{L}\\ is \\(\ell\_{11}, 0, \ldots, 0)\\, and row \\i + 1\\ is \\(g_i, (\mathbf{L}\_{22})\_{i1}, \ldots, (\mathbf{L}\_{22})\_{i,p-1})\\. So, for \\i, j = 1, \ldots, p - 1\\:
 >
 > \\ \begin{aligned} (\mathbf{L} {\mathbf{L}}^{\top})\_{11} &= \ell\_{11}\\\ell\_{11} + \sum\_{r=2}^{p} 0 \cdot 0 \\ &= \ell\_{11}^2, && \text{(rows 1 and 1)} \\ (\mathbf{L} {\mathbf{L}}^{\top})\_{i+1,1} &= g_i\\\ell\_{11} + \sum\_{r=2}^{p} (\mathbf{L}\_{22})\_{i,r-1} \cdot 0 \\ &= \ell\_{11}\\g_i, && \text{(rows } i + 1 \text{ and } 1 \text{)} \\ (\mathbf{L} {\mathbf{L}}^{\top})\_{i+1,j+1} &= g_i\\g_j + \sum\_{r=2}^{p} (\mathbf{L}\_{22})\_{i,r-1}\\(\mathbf{L}\_{22})\_{j,r-1} && \text{(rows } i + 1 \text{ and } j + 1 \text{)} \\ &= (\tilde{g} {\tilde{g}}^{\top})\_{ij} + (\mathbf{L}\_{22} {\mathbf{L}\_{22}}^{\top})\_{ij}. && \text{(}\href{#def-matrix-mult}{\text{Definition~24}}\text{, with } s = r - 1 \text{)} \end{aligned} \\
 >
@@ -4901,15 +5659,41 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \mathbf{L}\_{22} {\mathbf{L}\_{22}}^{\top} &= \mathbf{A}\_{22} - \tilde{g} {\tilde{g}}^{\top} && \text{(subtract } \tilde{g} {\tilde{g}}^{\top} \text{)} \\ &= \mathbf{A}\_{22} - \mathopen{}\left(\tfrac{1}{\ell\_{11}}\\\tilde{b}\right)\mathclose{} {\mathopen{}\left(\tfrac{1}{\ell\_{11}}\\\tilde{b}\right)\mathclose{}}^{\top} && \text{(substitute } \tilde{g} \text{)} \\ &= \mathbf{A}\_{22} - \tfrac{1}{\ell\_{11}^2}\\\tilde{b} {\tilde{b}}^{\top} && \text{(}\href{#def-matrix-transpose}{\text{Definition~20}}\text{, }\href{#thm-scalar-matmul}{\text{Theorem~85}}\text{)} \\ &= \mathbf{A}\_{22} - \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top}. && \text{(} \ell\_{11}^2 = a\_{11} \text{)} \end{aligned} \\
 >
-> Here \\\[a\_{11}\]\\ is invertible with inverse \\\[1 / a\_{11}\]\\, so with \\\mathbf{B} = {\tilde{b}}^{\top}\\ in [Definition 102](#def-schur-complement), \\{\mathbf{B}}^{\top}\\\[a\_{11}\]^{-1} \mathbf{B} = \tilde{b}\\\tfrac{1}{a\_{11}}\\{\tilde{b}}^{\top} = \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top}\\ ([Theorem 85](#thm-scalar-matmul)), and the right side is the Schur complement of \\\[a\_{11}\]\\ in \\\mathbf{A}\\. It is positive definite by [Theorem 111](#thm-schur-test) (with \\k = 1\\; \\\mathbf{A}\_{22}\\ is symmetric because \\\mathbf{A}\\ is). By the induction hypothesis it has exactly one factor \\\mathbf{L}\_{22}\\ of the required kind. So \\\mathbf{L}\\ exists and is unique.
+> Here \\\[a\_{11}\]\\ is invertible with inverse \\\[1 / a\_{11}\]\\, so with \\\mathbf{B} = {\tilde{b}}^{\top}\\ in [Definition 102](#def-schur-complement),
+>
+> \\ \begin{aligned} {\mathbf{B}}^{\top}\\\[a\_{11}\]^{-1} \mathbf{B} &= \tilde{b}\\\tfrac{1}{a\_{11}}\\{\tilde{b}}^{\top} \\ &= \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top} \end{aligned} \\
+>
+> ([Theorem 85](#thm-scalar-matmul)), and the right side is the Schur complement of \\\[a\_{11}\]\\ in \\\mathbf{A}\\. It is positive definite by [Theorem 111](#thm-schur-test) (with \\k = 1\\; \\\mathbf{A}\_{22}\\ is symmetric because \\\mathbf{A}\\ is). By the induction hypothesis it has exactly one factor \\\mathbf{L}\_{22}\\ of the required kind. So \\\mathbf{L}\\ exists and is unique.
 
 > **NOTE:**
 >
 > **Example 201 (Two Cholesky factors)**  
 >
-> - \\\mathbf{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}\\: \\\ell\_{11} = \sqrt{4} = 2\\, \\\ell\_{21} = 2/2 = 1\\, and \\\ell\_{22}^2 = 5 - 1^2 = 4\\, so \\\ell\_{22} = 2\\: \\\mathbf{L} = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}\\, and \\\mathbf{L} {\mathbf{L}}^{\top} = \begin{bmatrix} 2 \cdot 2 & 2 \cdot 1 \\ 1 \cdot 2 & 1 \cdot 1 + 2 \cdot 2 \end{bmatrix} = \mathbf{A}\\.
-> - \\\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\: \\\ell\_{11} = \sqrt{5}\\, \\\ell\_{21} = 4/\sqrt{5}\\, and \\\ell\_{22}^2 = 5 - \tfrac{16}{5} = \tfrac{9}{5}\\, the Schur complement of [Example 199](#exm-schur-complement), so \\\ell\_{22} = \tfrac{3}{\sqrt{5}}\\.
-> - For \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ the method breaks down: \\\ell\_{22}^2 = 1 - 4 = -3\\ has no real solution, matching the failure of the Schur complement test ([Example 200](#exm-schur-test)).
+> - \\\mathbf{A} = \begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}\\:
+>
+>   \\ \begin{aligned} \ell\_{11} &= \sqrt{4} \\ &= 2, \end{aligned} \\
+>
+>   \\ \begin{aligned} \ell\_{21} &= 2/2 \\ &= 1, \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} \ell\_{22}^2 &= 5 - 1^2 \\ &= 4, \end{aligned} \\
+>
+>   so \\\ell\_{22} = 2\\: \\\mathbf{L} = \begin{bmatrix} 2 & 0 \\ 1 & 2 \end{bmatrix}\\, and
+>
+>   \\ \begin{aligned} \mathbf{L} {\mathbf{L}}^{\top} &= \begin{bmatrix} 2 \cdot 2 & 2 \cdot 1 \\ 1 \cdot 2 & 1 \cdot 1 + 2 \cdot 2 \end{bmatrix} \\ &= \mathbf{A}. \end{aligned} \\
+>
+> - \\\begin{bmatrix} 5 & 4 \\ 4 & 5 \end{bmatrix}\\: \\\ell\_{11} = \sqrt{5}\\, \\\ell\_{21} = 4/\sqrt{5}\\, and
+>
+>   \\ \begin{aligned} \ell\_{22}^2 &= 5 - \tfrac{16}{5} \\ &= \tfrac{9}{5}, \end{aligned} \\
+>
+>   the Schur complement of [Example 199](#exm-schur-complement), so \\\ell\_{22} = \tfrac{3}{\sqrt{5}}\\.
+>
+> - For \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ the method breaks down:
+>
+>   \\ \begin{aligned} \ell\_{22}^2 &= 1 - 4 \\ &= -3 \end{aligned} \\
+>
+>   has no real solution, matching the failure of the Schur complement test ([Example 200](#exm-schur-test)).
 
 ## 10 Complex vectors and matrices
 
@@ -4949,7 +5733,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \underbrace{\mathbf{A}^{\mathsf{H}}}\_{3 \times 2} = \begin{bmatrix} 1 - i & i \\ 2 & 3 + 2\\i \\ 0 & 4 \end{bmatrix}. \\
 >
-> For instance, \\(\mathbf{A}^{\mathsf{H}})\_{12} = \overline{a\_{21}} = \overline{-i} = i\\. The transpose alone would have \\-i\\ in that position, so for a matrix with an entry that is not real, \\\mathbf{A}^{\mathsf{H}}\\ and \\{\mathbf{A}}^{\top}\\ differ. For a real matrix, conjugating changes nothing, so \\\mathbf{A}^{\mathsf{H}} = {\mathbf{A}}^{\top}\\.
+> For instance,
+>
+> \\ \begin{aligned} (\mathbf{A}^{\mathsf{H}})\_{12} &= \overline{a\_{21}} \\ &= \overline{-i} \\ &= i. \end{aligned} \\
+>
+> The transpose alone would have \\-i\\ in that position, so for a matrix with an entry that is not real, \\\mathbf{A}^{\mathsf{H}}\\ and \\{\mathbf{A}}^{\top}\\ differ. For a real matrix, conjugating changes nothing, so \\\mathbf{A}^{\mathsf{H}} = {\mathbf{A}}^{\top}\\.
 
 > **NOTE:**
 >
@@ -4968,9 +5756,19 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > *Proof*. Properties 1-3 follow directly from entrywise conjugation and transposition:
 >
-> - For involution: \\\[(\mathbf{A}^{\mathsf{H}})^{\mathsf{H}}\]\_{jk} = \overline{(\mathbf{A}^{\mathsf{H}})\_{kj}} = \overline{\overline{a\_{jk}}} = a\_{jk}\\.
-> - For additivity: \\\[(\mathbf{A} + \mathbf{B})^{\mathsf{H}}\]\_{jk} = \overline{(\mathbf{A} + \mathbf{B})\_{kj}} = \overline{a\_{kj} + b\_{kj}} = \overline{a\_{kj}} + \overline{b\_{kj}} = (\mathbf{A}^{\mathsf{H}})\_{jk} + (\mathbf{B}^{\mathsf{H}})\_{jk}\\.
-> - For conjugate-homogeneity: \\\[(c\\\mathbf{A})^{\mathsf{H}}\]\_{jk} = \overline{(c\\\mathbf{A})\_{kj}} = \overline{c\\a\_{kj}} = \overline{c}\\\overline{a\_{kj}} = \overline{c}\\(\mathbf{A}^{\mathsf{H}})\_{jk}\\. Unlike the real transpose where \\{(c\\\mathbf{A})}^{\top} = c\\{\mathbf{A}}^{\top}\\, scaling conjugates the scalar.
+> - For involution:
+>
+>   \\ \begin{aligned} \[(\mathbf{A}^{\mathsf{H}})^{\mathsf{H}}\]\_{jk} &= \overline{(\mathbf{A}^{\mathsf{H}})\_{kj}} \\ &= \overline{\overline{a\_{jk}}} \\ &= a\_{jk}. \end{aligned} \\
+>
+> - For additivity:
+>
+>   \\ \begin{aligned} \[(\mathbf{A} + \mathbf{B})^{\mathsf{H}}\]\_{jk} &= \overline{(\mathbf{A} + \mathbf{B})\_{kj}} \\ &= \overline{a\_{kj} + b\_{kj}} \\ &= \overline{a\_{kj}} + \overline{b\_{kj}} \\ &= (\mathbf{A}^{\mathsf{H}})\_{jk} + (\mathbf{B}^{\mathsf{H}})\_{jk}. \end{aligned} \\
+>
+> - For conjugate-homogeneity:
+>
+>   \\ \begin{aligned} \[(c\\\mathbf{A})^{\mathsf{H}}\]\_{jk} &= \overline{(c\\\mathbf{A})\_{kj}} \\ &= \overline{c\\a\_{kj}} \\ &= \overline{c}\\\overline{a\_{kj}} \\ &= \overline{c}\\(\mathbf{A}^{\mathsf{H}})\_{jk}. \end{aligned} \\
+>
+>   Unlike the real transpose where \\{(c\\\mathbf{A})}^{\top} = c\\{\mathbf{A}}^{\top}\\, scaling conjugates the scalar.
 >
 > For property 4 (reversal of products), let \\\mathbf{A}\\ be an \\m \times k\\ matrix and \\\mathbf{B}\\ a \\k \times n\\ matrix. Entry \\(i, j)\\ of the product’s Hermitian adjoint (for \\i \in \\1, \ldots, n\\\\ and \\j \in \\1, \ldots, m\\\\) is:
 >
@@ -5012,7 +5810,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^p\overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~104}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^pz_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
 >
-> By the definition of the [absolute value](algebra.llms.md#def-complex-modulus), each \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2\\ is a nonnegative real number, so their sum is too. A sum of nonnegative numbers is \\0\\ only when every term is \\0\\, and \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = 0\\ only when \\\operatorname{Re} z_j = \operatorname{Im} z_j = 0\\, that is, when \\z_j = 0\\.
+> By the definition of the [absolute value](algebra.llms.md#def-complex-modulus), each \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2\\ is a nonnegative real number, so their sum is too. A sum of nonnegative numbers is \\0\\ only when every term is \\0\\, and \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = 0\\ only when
+>
+> \\ \begin{aligned} \operatorname{Re} z_j &= \operatorname{Im} z_j \\ &= 0, \end{aligned} \\
+>
+> that is, when \\z_j = 0\\.
 
 > **NOTE:**
 >
@@ -5070,7 +5872,15 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Remark 46* (The diagonal of a skew-Hermitian matrix). Every entry of a skew-Hermitian matrix satisfies \\a\_{jk} = -\overline{a\_{kj}}\\. In particular, its diagonal entries satisfy \\a\_{jj} = -\overline{a\_{jj}}\\, which means \\a\_{jj} + \overline{a\_{jj}} = 2\operatorname{Re}(a\_{jj}) = 0\\. Therefore, every diagonal entry of a skew-Hermitian matrix must be purely imaginary (or zero). For example, \\a\_{jj} = 3\\i\\ works, since \\-\overline{3\\i} = -(-3\\i) = 3\\i\\, but \\a\_{jj} = 3\\ does not, since \\-\overline{3} = -3\\.
+> *Remark 46* (The diagonal of a skew-Hermitian matrix). Every entry of a skew-Hermitian matrix satisfies \\a\_{jk} = -\overline{a\_{kj}}\\. In particular, its diagonal entries satisfy \\a\_{jj} = -\overline{a\_{jj}}\\, which means
+>
+> \\ \begin{aligned} a\_{jj} + \overline{a\_{jj}} &= 2\operatorname{Re}(a\_{jj}) \\ &= 0. \end{aligned} \\
+>
+> Therefore, every diagonal entry of a skew-Hermitian matrix must be purely imaginary (or zero). For example, \\a\_{jj} = 3\\i\\ works, since
+>
+> \\ \begin{aligned} -\overline{3\\i} &= -(-3\\i) \\ &= 3\\i, \end{aligned} \\
+>
+> but \\a\_{jj} = 3\\ does not, since \\-\overline{3} = -3\\.
 
 > **NOTE:**
 >
@@ -5110,7 +5920,13 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \mathbf{A}^{\mathsf{H}} &= (\mathbf{H}' + \mathbf{S}')^{\mathsf{H}} \\ &= (\mathbf{H}')^{\mathsf{H}} + (\mathbf{S}')^{\mathsf{H}} \\ &= \mathbf{H}' - \mathbf{S}'. \end{aligned} \\
 >
-> Adding \\\mathbf{A} = \mathbf{H}' + \mathbf{S}'\\ and \\\mathbf{A}^{\mathsf{H}} = \mathbf{H}' - \mathbf{S}'\\ gives \\\mathbf{A} + \mathbf{A}^{\mathsf{H}} = 2\mathbf{H}'\\, so \\\mathbf{H}' = \frac{1}{2}(\mathbf{A} + \mathbf{A}^{\mathsf{H}}) = \mathbf{H}\\. Subtracting the two equations gives \\\mathbf{A} - \mathbf{A}^{\mathsf{H}} = 2\mathbf{S}'\\, so \\\mathbf{S}' = \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}}) = \mathbf{S}\\.
+> Adding \\\mathbf{A} = \mathbf{H}' + \mathbf{S}'\\ and \\\mathbf{A}^{\mathsf{H}} = \mathbf{H}' - \mathbf{S}'\\ gives \\\mathbf{A} + \mathbf{A}^{\mathsf{H}} = 2\mathbf{H}'\\, so
+>
+> \\ \begin{aligned} \mathbf{H}' &= \frac{1}{2}(\mathbf{A} + \mathbf{A}^{\mathsf{H}}) \\ &= \mathbf{H}. \end{aligned} \\
+>
+> Subtracting the two equations gives \\\mathbf{A} - \mathbf{A}^{\mathsf{H}} = 2\mathbf{S}'\\, so
+>
+> \\ \begin{aligned} \mathbf{S}' &= \frac{1}{2}(\mathbf{A} - \mathbf{A}^{\mathsf{H}}) \\ &= \mathbf{S}. \end{aligned} \\
 
 ## 11 Further reading
 

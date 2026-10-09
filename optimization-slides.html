@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 11:00:09 (PDT)</p>
+  <p class="date">Last modified: 2026-10-09 11:33:26 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-optimality-vector" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Optimality conditions in several variables</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -390,9 +390,33 @@
 <p><span class="theorem-title"><strong>Example 1 (Applying the test, and its limits)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(g(x) = (x - 2)^2\)</span> has its minimizer at <span class="math inline">\(c = 2\)</span>, and <span class="math inline">\(g'(2) = 2 (2 - 2) = 0\)</span>.</li>
-<li>The <a href="./notation.html#def-converse">converse</a> fails: <span class="math inline">\(g(x) = x^3\)</span> has <span class="math inline">\(g'(0) = 3 \cdot 0^2 = 0\)</span>, but <span class="math inline">\(0\)</span> is not a local minimizer, since <span class="math inline">\(g(-h) = -h^3 &lt; 0 = g(0)\)</span> for every <span class="math inline">\(h &gt; 0\)</span>.</li>
-<li>Differentiability is needed: <span class="math inline">\(g(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has its minimizer at <span class="math inline">\(0\)</span>, but the difference quotient <span class="math inline">\(\mathopen{}\left|h\right|\mathclose{} / h\)</span> is <span class="math inline">\(1\)</span> for <span class="math inline">\(h &gt; 0\)</span> and <span class="math inline">\(-1\)</span> for <span class="math inline">\(h &lt; 0\)</span>, so it has no limit and <span class="math inline">\(g'(0)\)</span> does not exist.</li>
+<p><span class="math inline">\(g(x) = (x - 2)^2\)</span> has its minimizer at <span class="math inline">\(c = 2\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+g'(2) &amp;= 2 (2 - 2) \\
+&amp;= 0.
+\end{aligned}
+\]</span></p>
+</li>
+<li>
+<p>The <a href="./notation.html#def-converse">converse</a> fails: <span class="math inline">\(g(x) = x^3\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+g'(0) &amp;= 3 \cdot 0^2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>but <span class="math inline">\(0\)</span> is not a local minimizer, since</p>
+<p><span class="math display">\[
+\begin{aligned}
+g(-h) &amp;= -h^3 \\
+&amp;&lt; 0 \\
+&amp;= g(0)
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(h &gt; 0\)</span>.</p>
+</li>
+<li><p>Differentiability is needed: <span class="math inline">\(g(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> has its minimizer at <span class="math inline">\(0\)</span>, but the difference quotient <span class="math inline">\(\mathopen{}\left|h\right|\mathclose{} / h\)</span> is <span class="math inline">\(1\)</span> for <span class="math inline">\(h &gt; 0\)</span> and <span class="math inline">\(-1\)</span> for <span class="math inline">\(h &lt; 0\)</span>, so it has no limit and <span class="math inline">\(g'(0)\)</span> does not exist.</p></li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-stationary-point" class="theorem definition">
@@ -409,18 +433,60 @@
 <p><span class="theorem-title"><strong>Theorem 2 (First-order necessary condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span>. If <span class="math inline">\(\tilde{x}^*\)</span> is a <a href="./algebra.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(f\)</span> and the gradient of <span class="math inline">\(f\)</span> exists at <span class="math inline">\(\tilde{x}^*\)</span>, then <span class="math inline">\(\tilde{x}^*\)</span> is a stationary point of <span class="math inline">\(f\)</span> (<a href="#/def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>).</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Take <span class="math inline">\(\delta&gt; 0\)</span> as in the definition of a local minimizer. Fix <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, p\right\}\mathclose{}\)</span>, let <span class="math inline">\(\tilde{e}_i\)</span> be the vector with <span class="math inline">\(1\)</span> in entry <span class="math inline">\(i\)</span> and <span class="math inline">\(0\)</span> elsewhere, and let <span class="math inline">\(g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^* + t\,\tilde{e}_i)\)</span> for <span class="math inline">\(t \in \mathbb{R}\)</span>. For <span class="math inline">\(\mathopen{}\left|t\right|\mathclose{} &lt; \delta\)</span>, <span class="math inline">\(\mathopen{}\left\lVert(\tilde{x}^* + t\,\tilde{e}_i) - \tilde{x}^*\right\rVert\mathclose{} = \mathopen{}\left|t\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{e}_i\right\rVert\mathclose{} = \mathopen{}\left|t\right|\mathclose{} &lt; \delta\)</span>, so <span class="math inline">\(g_i(0) = f(\tilde{x}^*) \le f(\tilde{x}^* + t\,\tilde{e}_i) = g_i(t)\)</span>: <span class="math inline">\(0\)</span> is a local minimizer of <span class="math inline">\(g_i\)</span>. Moving <span class="math inline">\(\tilde{x}\)</span> from <span class="math inline">\(\tilde{x}^*\)</span> along <span class="math inline">\(\tilde{e}_i\)</span> changes only <span class="math inline">\(x_i\)</span>, so <span class="math inline">\(g_i'(0)\)</span> is the partial derivative <span class="math inline">\(\frac{\partial}{\partial x_i} f(\tilde{x}^*)\)</span>, which exists because the gradient does. By <a href="#/thm-fermat" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(\frac{\partial}{\partial x_i} f(\tilde{x}^*) = g_i'(0) = 0\)</span>. The equation <span class="math inline">\(g_i'(0) = 0\)</span> holds for every <span class="math inline">\(i\)</span>, so every entry of the gradient at <span class="math inline">\(\tilde{x}^*\)</span> is <span class="math inline">\(0\)</span> (<a href="./vector-calculus.html#def-vector-derivative">vector derivative</a>).</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Take <span class="math inline">\(\delta&gt; 0\)</span> as in the definition of a local minimizer. Fix <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, p\right\}\mathclose{}\)</span>, let <span class="math inline">\(\tilde{e}_i\)</span> be the vector with <span class="math inline">\(1\)</span> in entry <span class="math inline">\(i\)</span> and <span class="math inline">\(0\)</span> elsewhere, and let <span class="math inline">\(g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^* + t\,\tilde{e}_i)\)</span> for <span class="math inline">\(t \in \mathbb{R}\)</span>. For <span class="math inline">\(\mathopen{}\left|t\right|\mathclose{} &lt; \delta\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left\lVert(\tilde{x}^* + t\,\tilde{e}_i) - \tilde{x}^*\right\rVert\mathclose{} &amp;= \mathopen{}\left|t\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{e}_i\right\rVert\mathclose{} \\
+&amp;= \mathopen{}\left|t\right|\mathclose{} \\
+&amp;&lt; \delta,
+\end{aligned}
+\]</span></p>
+<p>so</p>
+<p><span class="math display">\[
+\begin{aligned}
+g_i(0) &amp;= f(\tilde{x}^*) \\
+&amp;\le f(\tilde{x}^* + t\,\tilde{e}_i) \\
+&amp;= g_i(t):
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(0\)</span> is a local minimizer of <span class="math inline">\(g_i\)</span>. Moving <span class="math inline">\(\tilde{x}\)</span> from <span class="math inline">\(\tilde{x}^*\)</span> along <span class="math inline">\(\tilde{e}_i\)</span> changes only <span class="math inline">\(x_i\)</span>, so <span class="math inline">\(g_i'(0)\)</span> is the partial derivative <span class="math inline">\(\frac{\partial}{\partial x_i} f(\tilde{x}^*)\)</span>, which exists because the gradient does. By <a href="#/thm-fermat" class="quarto-xref">Theorem&nbsp;1</a>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_i} f(\tilde{x}^*) &amp;= g_i'(0) \\
+&amp;= 0.
+\end{aligned}
+\]</span></p>
+<p>The equation <span class="math inline">\(g_i'(0) = 0\)</span> holds for every <span class="math inline">\(i\)</span>, so every entry of the gradient at <span class="math inline">\(\tilde{x}^*\)</span> is <span class="math inline">\(0\)</span> (<a href="./vector-calculus.html#def-vector-derivative">vector derivative</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-first-order-condition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Using the condition to locate, and to rule out, minimizers)</strong></span> &nbsp;</p>
 <ul>
-<li>For <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> of <a href="#/exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>, any local minimizer must be the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span>. It is one: completing the square, <span class="math inline">\(f(\tilde{x}) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)\)</span>.</li>
-<li>For <span class="math inline">\(f(\tilde{x}) = e^{2x_1 + x_2} - x_1\)</span> of <a href="./vector-calculus.html#exm-hessian">Example</a>, the second entry of the gradient is <span class="math inline">\(e^{2x_1 + x_2} &gt; 0\)</span>, so <span class="math inline">\(f\)</span> has no stationary point, and so no local minimizer.</li>
-<li>The converse fails: <span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has gradient <span class="math inline">\({(2 x_1,\ -2 x_2)}^{\top}\)</span>, so <span class="math inline">\(\tilde{0}\)</span> is a stationary point, but <span class="math inline">\(f(0, t) = -t^2 &lt; 0 = f(\tilde{0})\)</span> for every <span class="math inline">\(t \ne 0\)</span>, so <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer.</li>
+<li>
+<p>For <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> of <a href="#/exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>, any local minimizer must be the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span>. It is one: completing the square,</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(\tilde{x}) &amp;= (x_1 - 1)^2 + x_2^2 - 1 \\
+&amp;\ge -1 \\
+&amp;= f(1, 0).
+\end{aligned}
+\]</span></p>
+</li>
+<li><p>For <span class="math inline">\(f(\tilde{x}) = e^{2x_1 + x_2} - x_1\)</span> of <a href="./vector-calculus.html#exm-hessian">Example</a>, the second entry of the gradient is <span class="math inline">\(e^{2x_1 + x_2} &gt; 0\)</span>, so <span class="math inline">\(f\)</span> has no stationary point, and so no local minimizer.</p></li>
+<li>
+<p>The converse fails: <span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has gradient <span class="math inline">\({(2 x_1,\ -2 x_2)}^{\top}\)</span>, so <span class="math inline">\(\tilde{0}\)</span> is a stationary point, but</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(0, t) &amp;= -t^2 \\
+&amp;&lt; 0 \\
+&amp;= f(\tilde{0})
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(t \ne 0\)</span>, so <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer.</p>
+</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-stationary-least-squares" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (A stationary point of the sum of squared errors, on real data)</strong></span> The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book <em>An Introduction to Statistical Learning</em>, in the Python package <a href="https://islp.readthedocs.io/"><code>ISLP</code></a> (<code>ISLP.load_data("Auto")</code>) and the R package <a href="https://cran.r-project.org/package=ISLR2"><code>ISLR2</code></a> (<code>ISLR2::Auto</code>). This repository holds a copy at <code>data/auto.csv</code>, and both code tabs below read that file.</p>
+<p><span class="theorem-title"><strong>Example 4 (A stationary point of the sum of squared errors, on real data)</strong></span> The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book <em>An Introduction to Statistical Learning</em>, in the Python package <a href="https://islp.readthedocs.io/"><code>ISLP</code></a> (<code>ISLP.load_data("Auto")</code>) and the R package <a href="https://cran.r-project.org/package=ISLR2"><code>ISLR2</code></a> (<code>ISLR2::Auto</code>). This site has a copy at <a href="data/auto.csv"><code>data/auto.csv</code></a>, and both code tabs below read that file.</p>
 <p>Let <span class="math inline">\(y_i\)</span> be the miles per gallon and <span class="math inline">\(x_i\)</span> the horsepower of car <span class="math inline">\(i\)</span>. To predict miles per gallon from horsepower with a line, write <span class="math inline">\(\tilde{\beta}= {(\beta_{0}, \beta_{1})}^{\top}\)</span> and let <span class="math inline">\(\mathbf{X}\)</span> be the matrix whose row <span class="math inline">\(i\)</span> is <span class="math inline">\((1, x_i)\)</span>. The sum of squared errors is</p>
 <p><span class="math display">\[
 f(\tilde{\beta}) = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2,
@@ -516,7 +582,22 @@ g(b) = g(a) + g'(a)\,(b - a) + \frac{1}{2}\,g''(\tau)\,(b - a)^2.
 </div>
 <p>This theorem is the case <span class="math inline">\(n = 2\)</span> of <span class="citation" data-cites="rudin1976principles">(<a href="#/references" role="doc-biblioref" onclick="">Rudin 1976</a>, Theorem 5.15)</span>; its proof uses the mean value theorem, which these notes do not develop.</p>
 </section><section class="slide level2"><div id="exm-taylor-1d" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (The remainder point for <span class="math inline">\(e^x\)</span>)</strong></span> Take <span class="math inline">\(g(x) = e^x\)</span> on <span class="math inline">\([0, 1]\)</span>, so <span class="math inline">\(g' = g'' = g\)</span>. <a href="#/thm-taylor-1d" class="quarto-xref">Theorem&nbsp;3</a> says <span class="math inline">\(e = 1 + 1 + \tfrac{1}{2}\,e^{\tau}\)</span> for some <span class="math inline">\(\tau\in (0, 1)\)</span>. Solving, <span class="math inline">\(e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\)</span>, so <span class="math inline">\(\tau= \log 1.43656 \approx 0.362\)</span> (<a href="./algebra.html#def-natural-log">natural logarithm</a>), which is in <span class="math inline">\((0, 1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 5 (The remainder point for <span class="math inline">\(e^x\)</span>)</strong></span> Take <span class="math inline">\(g(x) = e^x\)</span> on <span class="math inline">\([0, 1]\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+g' &amp;= g'' \\
+&amp;= g.
+\end{aligned}
+\]</span></p>
+<p><a href="#/thm-taylor-1d" class="quarto-xref">Theorem&nbsp;3</a> says <span class="math inline">\(e = 1 + 1 + \tfrac{1}{2}\,e^{\tau}\)</span> for some <span class="math inline">\(\tau\in (0, 1)\)</span>. Solving,</p>
+<p><span class="math display">\[
+\begin{aligned}
+e^{\tau} &amp;= 2 (e - 2) \\
+&amp;\approx 2 \times 0.71828 \\
+&amp;= 1.43656,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\tau= \log 1.43656 \approx 0.362\)</span> (<a href="./algebra.html#def-natural-log">natural logarithm</a>), which is in <span class="math inline">\((0, 1)\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-taylor-mv" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (Second-order Taylor theorem in several variables)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-several">continuity</a>), and let <span class="math inline">\(\tilde{z}, \tilde{h} \in \mathbb{R}^p\)</span>. Then there is a <span class="math inline">\(\tau\in (0, 1)\)</span> with</p>
@@ -583,7 +664,14 @@ f(\tilde{z} + \tilde{h})
 &amp;= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\,{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h},
 \end{aligned}
 \]</span></p>
-<p>using <span class="math inline">\({(2 \mathbf{S} \tilde{z})}^{\top} = 2\,{\tilde{z}}^{\top}\,{\mathbf{S}}^{\top} = 2\,{\tilde{z}}^{\top} \mathbf{S}\)</span>. Multiplying out directly gives the same:</p>
+<p>using</p>
+<p><span class="math display">\[
+\begin{aligned}
+{(2 \mathbf{S} \tilde{z})}^{\top} &amp;= 2\,{\tilde{z}}^{\top}\,{\mathbf{S}}^{\top} \\
+&amp;= 2\,{\tilde{z}}^{\top} \mathbf{S}.
+\end{aligned}
+\]</span></p>
+<p>Multiplying out directly gives the same:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {(\tilde{z} + \tilde{h})}^{\top} \mathbf{S} (\tilde{z} + \tilde{h})
@@ -602,8 +690,17 @@ f(\tilde{z} + \tilde{h})
 <p><span class="theorem-title"><strong>Example 7 (Strict and non-strict local minimizers)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(f(x) = (x - 2)^2\)</span> has <span class="math inline">\(f(2) = 0 &lt; (x - 2)^2 = f(x)\)</span> for every <span class="math inline">\(x \ne 2\)</span>, so <span class="math inline">\(2\)</span> is a strict local minimizer (any <span class="math inline">\(\delta&gt; 0\)</span> works).</li>
-<li>A constant function <span class="math inline">\(f(\tilde{x}) = 0\)</span> has <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for all <span class="math inline">\(\tilde{x}^*\)</span> and <span class="math inline">\(\tilde{x}\)</span>, so every point is a <a href="./algebra.html#def-local-minimizer">local minimizer</a>, but no point is a strict one: <span class="math inline">\(f(\tilde{x}^*) &lt; f(\tilde{x})\)</span> never holds.</li>
+<p><span class="math inline">\(f(x) = (x - 2)^2\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(2) &amp;= 0 \\
+&amp;&lt; (x - 2)^2 \\
+&amp;= f(x)
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(x \ne 2\)</span>, so <span class="math inline">\(2\)</span> is a strict local minimizer (any <span class="math inline">\(\delta&gt; 0\)</span> works).</p>
+</li>
+<li><p>A constant function <span class="math inline">\(f(\tilde{x}) = 0\)</span> has <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for all <span class="math inline">\(\tilde{x}^*\)</span> and <span class="math inline">\(\tilde{x}\)</span>, so every point is a <a href="./algebra.html#def-local-minimizer">local minimizer</a>, but no point is a strict one: <span class="math inline">\(f(\tilde{x}^*) &lt; f(\tilde{x})\)</span> never holds.</p></li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="lem-qf-eigen-bound" class="theorem lemma">
@@ -633,10 +730,25 @@ f(\tilde{z} + \tilde{h})
 &amp;&amp; \text{(orthogonal matrices preserve length)}
 \end{aligned}
 \]</span></p>
-<p>The second step is the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>. The last step applies <a href="./linear-algebra.html#thm-orthogonal-norm">orthogonal matrices preserve length</a> to <span class="math inline">\({\mathbf{Q}}^{\top}\)</span>, which is orthogonal because <span class="math inline">\({\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{Q} {\mathbf{Q}}^{\top} = \mathbf{I}_p\)</span> (<a href="./linear-algebra.html#def-orthogonal-matrix">orthogonal matrix</a>).</p>
+<p>The second step is the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>. The last step applies <a href="./linear-algebra.html#thm-orthogonal-norm">orthogonal matrices preserve length</a> to <span class="math inline">\({\mathbf{Q}}^{\top}\)</span>, which is orthogonal because</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{Q}}^{\top} \mathbf{Q} &amp;= \mathbf{Q} {\mathbf{Q}}^{\top} \\
+&amp;= \mathbf{I}_p
+\end{aligned}
+\]</span></p>
+<p>(<a href="./linear-algebra.html#def-orthogonal-matrix">orthogonal matrix</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-qf-eigen-bound" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (Checking the bound)</strong></span> <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> has eigenvalues <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span> (<a href="./linear-algebra.html#exm-eigenvalue">eigenvalue example</a>), so <span class="math inline">\(\lambda_{\min} = 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, -1)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2\)</span>: the bound holds with equality, since this <span class="math inline">\(\tilde{h}\)</span> is an eigenvector for <span class="math inline">\(\lambda_{\min}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 8 (Checking the bound)</strong></span> <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> has eigenvalues <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span> (<a href="./linear-algebra.html#exm-eigenvalue">eigenvalue example</a>), so <span class="math inline">\(\lambda_{\min} = 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\({\tilde{h}}^{\top} \mathbf{A} \tilde{h} = 2 \ge 1 \cdot 1\)</span>. At <span class="math inline">\(\tilde{h} = {(1, -1)}^{\top}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{h}}^{\top} \mathbf{A} \tilde{h} &amp;= 2 - 1 - 1 + 2 \\
+&amp;= 2 \\
+&amp;= 1 \cdot 2:
+\end{aligned}
+\]</span></p>
+<p>the bound holds with equality, since this <span class="math inline">\(\tilde{h}\)</span> is an eigenvector for <span class="math inline">\(\lambda_{\min}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="lem-qf-entry-bound" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 2 (A quadratic form with small entries is small)</strong></span> Let <span class="math inline">\(\mathbf{E}\)</span> be a <span class="math inline">\(p \times p\)</span> matrix whose entries all satisfy <span class="math inline">\(\mathopen{}\left|e_{ij}\right|\mathclose{} \le m\)</span>. Then <span class="math inline">\(\mathopen{}\left|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right|\mathclose{} \le p\,m\,\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2\)</span> for every <span class="math inline">\(\tilde{h} \in \mathbb{R}^p\)</span>.</p>
@@ -671,7 +783,21 @@ f(\tilde{z} + \tilde{h})
 <p>The steps use the <a href="./linear-algebra.html#def-matrix-mult">matrix product</a>, the <a href="./linear-algebra.html#def-dot-product">dot product</a> and the <a href="./linear-algebra.html#thm-cauchy-schwarz">Cauchy-Schwarz inequality</a>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-qf-entry-bound" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Checking the bound)</strong></span> Let <span class="math inline">\(\mathbf{E} = \begin{bmatrix} 0.1 &amp; -0.2 \\ -0.2 &amp; 0.1 \end{bmatrix}\)</span>, so <span class="math inline">\(m = 0.2\)</span> works, and <span class="math inline">\(\tilde{h} = {(1, 1)}^{\top}\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\)</span>. Then <span class="math inline">\({\tilde{h}}^{\top} \mathbf{E} \tilde{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2\)</span>, and <span class="math inline">\(\mathopen{}\left|-0.2\right|\mathclose{} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 9 (Checking the bound)</strong></span> Let <span class="math inline">\(\mathbf{E} = \begin{bmatrix} 0.1 &amp; -0.2 \\ -0.2 &amp; 0.1 \end{bmatrix}\)</span>, so <span class="math inline">\(m = 0.2\)</span> works, and <span class="math inline">\(\tilde{h} = {(1, 1)}^{\top}\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 = 2\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\tilde{h}}^{\top} \mathbf{E} \tilde{h} &amp;= 0.1 - 0.2 - 0.2 + 0.1 \\
+&amp;= -0.2,
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left|-0.2\right|\mathclose{} &amp;= 0.2 \\
+&amp;\le 2 \cdot 0.2 \cdot 2 \\
+&amp;= 0.8.
+\end{aligned}
+\]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-second-order-condition" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Second-order sufficient condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-several">continuity</a>). If <span class="math inline">\(\tilde{x}^*\)</span> is a stationary point of <span class="math inline">\(f\)</span> (<a href="#/def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathbf{H}_f(\tilde{x}^*)\)</span> is <a href="./linear-algebra.html#def-positive-definite">positive definite</a>, then <span class="math inline">\(\tilde{x}^*\)</span> is a strict local minimizer of <span class="math inline">\(f\)</span> (<a href="#/def-strict-local-minimizer" class="quarto-xref">Definition&nbsp;2</a>).</p>
@@ -713,13 +839,35 @@ f(\tilde{x}^* + \tilde{h}) - f(\tilde{x}^*)
 <p><span class="theorem-title"><strong>Example 10 (Classifying stationary points)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#/exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>), and its Hessian is <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{bmatrix} = 2 \mathbf{I}_2\)</span>, which is positive definite, so <span class="math inline">\({(1, 0)}^{\top}\)</span> is a strict local minimizer.</li>
-<li>
-<span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span> and Hessian <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}\)</span>, which is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(-2\)</span>), and indeed <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer (<a href="#/exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</li>
+<p><span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\)</span> has the stationary point <span class="math inline">\({(1, 0)}^{\top}\)</span> (<a href="#/exm-stationary-point" class="quarto-xref">Example&nbsp;2</a>), and its Hessian is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{H}_f(\tilde{x}) &amp;= \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{bmatrix} \\
+&amp;= 2 \mathbf{I}_2,
+\end{aligned}
+\]</span></p>
+<p>which is positive definite, so <span class="math inline">\({(1, 0)}^{\top}\)</span> is a strict local minimizer.</p>
+</li>
+<li><p><span class="math inline">\(f(\tilde{x}) = x_1^2 - x_2^2\)</span> has the stationary point <span class="math inline">\(\tilde{0}\)</span> and Hessian <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -2 \end{bmatrix}\)</span>, which is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(-2\)</span>), and indeed <span class="math inline">\(\tilde{0}\)</span> is not a local minimizer (<a href="#/exm-first-order-condition" class="quarto-xref">Example&nbsp;3</a>).</p></li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-second-order-inconclusive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (The condition is sufficient, not necessary)</strong></span> <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^4\)</span> and <span class="math inline">\(g(\tilde{x}) = x_1^2 - x_2^4\)</span> both have gradient <span class="math inline">\(\tilde{0}\)</span> at <span class="math inline">\(\tilde{0}\)</span> and the same Hessian there, <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, since <span class="math inline">\(\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} = \pm 12 x_2^2 = 0\)</span> at <span class="math inline">\(x_2 = 0\)</span>. That Hessian is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so <a href="#/thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a> says nothing about either function. In fact <span class="math inline">\(\tilde{0}\)</span> is a strict local minimizer of <span class="math inline">\(f\)</span>, since <span class="math inline">\(f(\tilde{x}) &gt; 0 = f(\tilde{0})\)</span> for <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>, but not a local minimizer of <span class="math inline">\(g\)</span>, since <span class="math inline">\(g(0, t) = -t^4 &lt; 0 = g(\tilde{0})\)</span> for <span class="math inline">\(t \ne 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 11 (The condition is sufficient, not necessary)</strong></span> <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^4\)</span> and <span class="math inline">\(g(\tilde{x}) = x_1^2 - x_2^4\)</span> both have gradient <span class="math inline">\(\tilde{0}\)</span> at <span class="math inline">\(\tilde{0}\)</span> and the same Hessian there, <span class="math inline">\(\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span>, since</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} (\pm x_2^4)\right)\mathclose{} &amp;= \pm 12 x_2^2 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>at <span class="math inline">\(x_2 = 0\)</span>. That Hessian is not positive definite (<span class="math inline">\({(0, 1)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so <a href="#/thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a> says nothing about either function. In fact <span class="math inline">\(\tilde{0}\)</span> is a strict local minimizer of <span class="math inline">\(f\)</span>, since <span class="math inline">\(f(\tilde{x}) &gt; 0 = f(\tilde{0})\)</span> for <span class="math inline">\(\tilde{x}\ne \tilde{0}\)</span>, but not a local minimizer of <span class="math inline">\(g\)</span>, since</p>
+<p><span class="math display">\[
+\begin{aligned}
+g(0, t) &amp;= -t^4 \\
+&amp;&lt; 0 \\
+&amp;= g(\tilde{0})
+\end{aligned}
+\]</span></p>
+<p>for <span class="math inline">\(t \ne 0\)</span>.</p>
 </div>
 </section><section id="sec-convexity-vector" class="slide level2" data-number="2"><h2>
 <span class="header-section-number">2</span> Convexity in several variables</h2>
@@ -812,7 +960,16 @@ t x^2 + (1 - t) y^2 - (t x + (1 - t) y)^2
 \]</span></p>
 <p>which is positive when <span class="math inline">\(x \ne y\)</span> and <span class="math inline">\(t \in (0, 1)\)</span>. At <span class="math inline">\(t \in \mathopen{}\left\{0, 1\right\}\mathclose{}\)</span> or <span class="math inline">\(x = y\)</span> it is <span class="math inline">\(0\)</span>, so <span class="math inline">\(x^2\)</span> is also convex.</p>
 </li>
-<li><p><span class="math inline">\(f(x) = 2x + 1\)</span> is convex but not strictly convex: <span class="math inline">\(f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)\)</span> for every <span class="math inline">\(x, y, t\)</span>, so the inequality holds, but never strictly. It is also concave.</p></li>
+<li>
+<p><span class="math inline">\(f(x) = 2x + 1\)</span> is convex but not strictly convex:</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(t x + (1 - t) y) &amp;= 2 t x + 2 (1 - t) y + 1 \\
+&amp;= t f(x) + (1 - t) f(y)
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(x, y, t\)</span>, so the inequality holds, but never strictly. It is also concave.</p>
+</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-convex-max" class="theorem">
@@ -835,9 +992,25 @@ f_i(t \tilde{x}+ (1 - t) \tilde{y})
 </section><section class="slide level2"><div id="exm-convex-max" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (A maximum is convex; a minimum need not be)</strong></span> &nbsp;</p>
 <ul>
+<li><p><span class="math inline">\(f_1(x) = x\)</span> is convex, by the computation for <span class="math inline">\(2x + 1\)</span> in <a href="#/exm-strictly-convex" class="quarto-xref">Example&nbsp;16</a> with <span class="math inline">\(2\)</span> and <span class="math inline">\(1\)</span> replaced by <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span>, and <span class="math inline">\(f_2(x) = x^2\)</span> is convex by the same example, so <span class="math inline">\(\max\mathopen{}\left\{x, x^2\right\}\mathclose{}\)</span> is convex by <a href="#/thm-convex-max" class="quarto-xref">Theorem&nbsp;7</a>.</p></li>
 <li>
-<span class="math inline">\(f_1(x) = x\)</span> is convex, by the computation for <span class="math inline">\(2x + 1\)</span> in <a href="#/exm-strictly-convex" class="quarto-xref">Example&nbsp;16</a> with <span class="math inline">\(2\)</span> and <span class="math inline">\(1\)</span> replaced by <span class="math inline">\(1\)</span> and <span class="math inline">\(0\)</span>, and <span class="math inline">\(f_2(x) = x^2\)</span> is convex by the same example, so <span class="math inline">\(\max\mathopen{}\left\{x, x^2\right\}\mathclose{}\)</span> is convex by <a href="#/thm-convex-max" class="quarto-xref">Theorem&nbsp;7</a>.</li>
-<li>The minimum of two convex functions need not be convex: <span class="math inline">\(g(x) = \min\mathopen{}\left\{x^2, (x - 2)^2\right\}\mathclose{}\)</span> has <span class="math inline">\(g(0) = g(2) = 0\)</span>, but at the midpoint <span class="math inline">\(g(1) = \min\mathopen{}\left\{1, 1\right\}\mathclose{} = 1 &gt; \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) = 0\)</span>.</li>
+<p>The minimum of two convex functions need not be convex: <span class="math inline">\(g(x) = \min\mathopen{}\left\{x^2, (x - 2)^2\right\}\mathclose{}\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+g(0) &amp;= g(2) \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>but at the midpoint</p>
+<p><span class="math display">\[
+\begin{aligned}
+g(1) &amp;= \min\mathopen{}\left\{1, 1\right\}\mathclose{} \\
+&amp;= 1 \\
+&amp;&gt; \tfrac{1}{2} g(0) + \tfrac{1}{2} g(2) \\
+&amp;= 0.
+\end{aligned}
+\]</span></p>
+</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-epigraph" class="theorem definition">
@@ -1043,12 +1216,26 @@ f(\tilde{x})
 &amp;\ge 0,
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(f\)</span> is convex. The Hessian is not positive definite (<span class="math inline">\(\tilde{h} = {(1, -2)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so part 2 does not apply, and in fact <span class="math inline">\(f\)</span> is not strictly convex: along <span class="math inline">\(\tilde{x}= t\,{(1, -2)}^{\top}\)</span>, <span class="math inline">\(u = 2t - 2t = 0\)</span> and <span class="math inline">\(f = 1 - t\)</span> is linear in <span class="math inline">\(t\)</span>, so the convexity inequality holds with equality there.</p>
+<p>so <span class="math inline">\(f\)</span> is convex. The Hessian is not positive definite (<span class="math inline">\(\tilde{h} = {(1, -2)}^{\top}\)</span> gives <span class="math inline">\(0\)</span>), so part 2 does not apply, and in fact <span class="math inline">\(f\)</span> is not strictly convex: along <span class="math inline">\(\tilde{x}= t\,{(1, -2)}^{\top}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+u &amp;= 2t - 2t \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(f = 1 - t\)</span> is linear in <span class="math inline">\(t\)</span>, so the convexity inequality holds with equality there.</p>
 </li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-convex-hessian-not-necessary" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (Strictly convex with a singular Hessian)</strong></span> Part 2 is sufficient but not necessary. <span class="math inline">\(f(x) = x^4\)</span> has <span class="math inline">\(f''(0) = 12 \cdot 0^2 = 0\)</span>, so <span class="math inline">\(\mathbf{H}_f(0) = [0]\)</span> is <a href="./linear-algebra.html#def-invertible-matrix">singular</a> and not positive definite. Yet <span class="math inline">\(f\)</span> is strictly convex, by the strict form of <a href="#/eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a>: for <span class="math inline">\(x \ne y\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 23 (Strictly convex with a singular Hessian)</strong></span> Part 2 is sufficient but not necessary. <span class="math inline">\(f(x) = x^4\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+f''(0) &amp;= 12 \cdot 0^2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\mathbf{H}_f(0) = [0]\)</span> is <a href="./linear-algebra.html#def-invertible-matrix">singular</a> and not positive definite. Yet <span class="math inline">\(f\)</span> is strictly convex, by the strict form of <a href="#/eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a>: for <span class="math inline">\(x \ne y\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 x^4 - y^4 - 4 y^3 (x - y)
@@ -1065,7 +1252,13 @@ x^4 - y^4 - 4 y^3 (x - y)
 &amp;&amp; \text{(complete the square)}
 \end{aligned}
 \]</span></p>
-<p>which is positive: <span class="math inline">\((x - y)^2 &gt; 0\)</span>, and <span class="math inline">\((x + y)^2 + 2 y^2 = 0\)</span> would need <span class="math inline">\(y = 0\)</span> and then <span class="math inline">\(x = 0 = y\)</span>.</p>
+<p>which is positive: <span class="math inline">\((x - y)^2 &gt; 0\)</span>, and <span class="math inline">\((x + y)^2 + 2 y^2 = 0\)</span> would need <span class="math inline">\(y = 0\)</span> and then</p>
+<p><span class="math display">\[
+\begin{aligned}
+x &amp;= 0 \\
+&amp;= y.
+\end{aligned}
+\]</span></p>
 </div>
 </section><section class="slide level2"><div id="cor-convex-stationary" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (Stationary points of a convex function are global minimizers)</strong></span> If <span class="math inline">\(f\)</span> is as in <a href="#/thm-convex-first-order" class="quarto-xref">Theorem&nbsp;9</a> and convex, then every stationary point <span class="math inline">\(\tilde{x}^*\)</span> of <span class="math inline">\(f\)</span> (<a href="#/def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>) is a <a href="./algebra.html#def-global-minimizer">global minimizer</a>.</p>
@@ -1119,13 +1312,27 @@ f(\tilde{x})
 <p><span class="theorem-title"><strong>Definition 8 (Feasible set and constraints)</strong></span> In a problem that looks for a best point among some allowed points of <span class="math inline">\(\mathbb{R}^p\)</span>, the set <span class="math inline">\(F \subseteq \mathbb{R}^p\)</span> of allowed points is the <strong>feasible set</strong>, and its points are <strong>feasible</strong>. When <span class="math inline">\(F\)</span> is the set of points that satisfy some equations or inequalities, those equations or inequalities are the <strong>constraints</strong>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-feasible-set" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (A line as a feasible set)</strong></span> With the single constraint <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the feasible set is the line <span class="math inline">\(\mathopen{}\left\{\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\}\mathclose{}\)</span>. <span class="math inline">\({(1, 0.5)}^{\top}\)</span> is feasible, since <span class="math inline">\(3 \cdot 1 + 4 \cdot 0.5 = 3 + 2 = 5\)</span>; <span class="math inline">\(\tilde{0}\)</span> is not feasible, since <span class="math inline">\(3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 25 (A line as a feasible set)</strong></span> With the single constraint <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the feasible set is the line <span class="math inline">\(\mathopen{}\left\{\tilde{x}\in \mathbb{R}^2 : 3 x_1 + 4 x_2 = 5\right\}\mathclose{}\)</span>. <span class="math inline">\({(1, 0.5)}^{\top}\)</span> is feasible, since</p>
+<p><span class="math display">\[
+\begin{aligned}
+3 \cdot 1 + 4 \cdot 0.5 &amp;= 3 + 2 \\
+&amp;= 5;
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\tilde{0}\)</span> is not feasible, since <span class="math inline">\(3 \cdot 0 + 4 \cdot 0 = 0 \ne 5\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-minimization-problem" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Objective function (objective) and minimization problem)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and let <span class="math inline">\(F \subseteq \mathbb{R}^p\)</span> be a feasible set (<a href="#/def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>). In the problem of minimizing <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span>, <span class="math inline">\(f\)</span> is the <strong>objective function</strong> (or <strong>objective</strong>). A <strong>minimizer of <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span></strong> is a feasible <span class="math inline">\(\tilde{x}^*\)</span> with <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for every feasible <span class="math inline">\(\tilde{x}\)</span>: a <a href="./algebra.html#def-global-minimizer">global minimizer</a> of <span class="math inline">\(f\)</span> with its domain restricted to <span class="math inline">\(F\)</span>. When <span class="math inline">\(F\)</span> is given by constraints, the problem is to minimize <span class="math inline">\(f\)</span> <strong>subject to</strong> them.</p>
 </div>
 </section><section class="slide level2"><div id="exm-minimization-problem" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (Minimizing over a line)</strong></span> In the problem of minimizing <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the objective function is <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span>, and the feasible set is the line of <a href="#/exm-feasible-set" class="quarto-xref">Example&nbsp;25</a>. The feasible point <span class="math inline">\({(1, 0.5)}^{\top}\)</span> has <span class="math inline">\(f(1, 0.5) = 1 + 0.25 = 1.25\)</span>. <span class="math inline">\(\tilde{0}\)</span> minimizes <span class="math inline">\(f\)</span> over all of <span class="math inline">\(\mathbb{R}^2\)</span>, with <span class="math inline">\(f(\tilde{0}) = 0\)</span>, but it is not a minimizer over the feasible set, because it is not feasible.</p>
+<p><span class="theorem-title"><strong>Example 26 (Minimizing over a line)</strong></span> In the problem of minimizing <span class="math inline">\(x_1^2 + x_2^2\)</span> subject to <span class="math inline">\(3 x_1 + 4 x_2 = 5\)</span>, the objective function is <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span>, and the feasible set is the line of <a href="#/exm-feasible-set" class="quarto-xref">Example&nbsp;25</a>. The feasible point <span class="math inline">\({(1, 0.5)}^{\top}\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(1, 0.5) &amp;= 1 + 0.25 \\
+&amp;= 1.25.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\tilde{0}\)</span> minimizes <span class="math inline">\(f\)</span> over all of <span class="math inline">\(\mathbb{R}^2\)</span>, with <span class="math inline">\(f(\tilde{0}) = 0\)</span>, but it is not a minimizer over the feasible set, because it is not feasible.</p>
 </div>
 </section><section class="slide level2"><p>Here the objective (<a href="#/def-minimization-problem" class="quarto-xref">Definition&nbsp;9</a>) is a quadratic <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> with <span class="math inline">\(\mathbf{S}\)</span> positive definite, and the constraints (<a href="#/def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>) are <span class="math inline">\(m\)</span> linear equations <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, where <span class="math inline">\(\mathbf{A}\)</span> is a <span class="math inline">\(p \times m\)</span> matrix and <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>. The only stationary point of the objective alone (<a href="#/def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>) is <span class="math inline">\(\tilde{0}_{p \times 1}\)</span> (its gradient is <span class="math inline">\(\mathbf{S} \tilde{x}\)</span>, and <span class="math inline">\(\mathbf{S}\)</span> is invertible), which may not satisfy the constraints. A Lagrange multiplier adds one unknown per constraint, and the minimizer over the feasible set (<a href="#/def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>) is then found among the stationary points of a new function of the extended set of unknowns.</p>
 </section><section class="slide level2"><div id="def-lagrangian" class="theorem definition">
@@ -1225,7 +1432,15 @@ L(\tilde{x}, \tilde{\lambda}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \til
 &amp;&amp; \text{(subtract)}
 \end{aligned}
 \]</span></p>
-<p><strong><span class="math inline">\(\tilde{x}^*\)</span> is the unique minimizer.</strong> Let <span class="math inline">\(\tilde{x}\)</span> satisfy <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, and let <span class="math inline">\(\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{x}^*\)</span>, so <span class="math inline">\({\mathbf{A}}^{\top} \tilde{d} = {\mathbf{A}}^{\top} \tilde{x}- {\mathbf{A}}^{\top} \tilde{x}^* = \tilde{b} - \tilde{b} = \tilde{0}_{m \times 1}\)</span> (matrix products distribute; both points satisfy the constraint). First, the cross term vanishes:</p>
+<p><strong><span class="math inline">\(\tilde{x}^*\)</span> is the unique minimizer.</strong> Let <span class="math inline">\(\tilde{x}\)</span> satisfy <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\)</span>, and let <span class="math inline">\(\tilde{d} \stackrel{\text{def}}{=}\tilde{x}- \tilde{x}^*\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathbf{A}}^{\top} \tilde{d} &amp;= {\mathbf{A}}^{\top} \tilde{x}- {\mathbf{A}}^{\top} \tilde{x}^* \\
+&amp;= \tilde{b} - \tilde{b} \\
+&amp;= \tilde{0}_{m \times 1}
+\end{aligned}
+\]</span></p>
+<p>(matrix products distribute; both points satisfy the constraint). First, the cross term vanishes:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\tilde{d}}^{\top} \mathbf{S} \tilde{x}^*
@@ -1324,17 +1539,58 @@ f(\tilde{x}^*)
 \]</span></p>
 <p>Checks:</p>
 <ul>
-<li>the constraint: <span class="math inline">\(3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5\)</span>;</li>
-<li>the first block of <a href="#/eq-kkt" class="quarto-xref">Equation&nbsp;2</a>: <span class="math inline">\(\mathbf{S} \tilde{x}^* + \mathbf{A} \tilde{\lambda}^* = {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) = {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} = \tilde{0}_{2 \times 1}\)</span>;</li>
-<li>the value: <span class="math inline">\(0.6^2 + 0.8^2 = 0.36 + 0.64 = 1\)</span>.</li>
+<li>
+<p>the constraint:</p>
+<p><span class="math display">\[
+\begin{aligned}
+3 (0.6) + 4 (0.8) &amp;= 1.8 + 3.2 \\
+&amp;= 5;
+\end{aligned}
+\]</span></p>
+</li>
+<li>
+<p>the first block of <a href="#/eq-kkt" class="quarto-xref">Equation&nbsp;2</a>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{S} \tilde{x}^* + \mathbf{A} \tilde{\lambda}^* &amp;= {(1.2, 1.6)}^{\top} + {(3, 4)}^{\top} (-0.4) \\
+&amp;= {(1.2, 1.6)}^{\top} - {(1.2, 1.6)}^{\top} \\
+&amp;= \tilde{0}_{2 \times 1};
+\end{aligned}
+\]</span></p>
+</li>
+<li>
+<p>the value:</p>
+<p><span class="math display">\[
+\begin{aligned}
+0.6^2 + 0.8^2 &amp;= 0.36 + 0.64 \\
+&amp;= 1.
+\end{aligned}
+\]</span></p>
+</li>
 </ul>
 <p>Geometrically, <span class="math inline">\(\tilde{x}^*\)</span> is the point of the line nearest the origin, at distance <span class="math inline">\(1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-qp-equality-fails" class="theorem example">
 <p><span class="theorem-title"><strong>Example 29 (The hypotheses are needed)</strong></span> &nbsp;</p>
 <ul>
-<li>If <span class="math inline">\(\mathbf{S}\)</span> is not positive definite there may be no minimizer: with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\)</span> and the constraint <span class="math inline">\(x_1 = 1\)</span> (<span class="math inline">\(\mathbf{A} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\(\tilde{b} = [1]\)</span>), <span class="math inline">\(f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\)</span> decreases without bound as <span class="math inline">\(x_2\)</span> grows.</li>
-<li>If the columns of <span class="math inline">\(\mathbf{A}\)</span> are dependent, <span class="math inline">\(\mathbf{M}\)</span> is not invertible: with <span class="math inline">\(\mathbf{S} = \mathbf{I}_2\)</span> and <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{M} = {\mathbf{A}}^{\top} \mathbf{A} = \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix}\)</span>, whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not invertible (<a href="./linear-algebra.html#thm-invertible-rank">a square matrix is invertible exactly when its null space is zero</a>). The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists, <span class="math inline">\(x_1 = x_2 = b_1 / 2\)</span>, but the formula of <a href="#/thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a> cannot produce it.</li>
+<li><p>If <span class="math inline">\(\mathbf{S}\)</span> is not positive definite there may be no minimizer: with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}\)</span> and the constraint <span class="math inline">\(x_1 = 1\)</span> (<span class="math inline">\(\mathbf{A} = {(1, 0)}^{\top}\)</span>, <span class="math inline">\(\tilde{b} = [1]\)</span>), <span class="math inline">\(f(1, x_2) = \tfrac{1}{2} (1 - x_2^2)\)</span> decreases without bound as <span class="math inline">\(x_2\)</span> grows.</p></li>
+<li>
+<p>If the columns of <span class="math inline">\(\mathbf{A}\)</span> are dependent, <span class="math inline">\(\mathbf{M}\)</span> is not invertible: with <span class="math inline">\(\mathbf{S} = \mathbf{I}_2\)</span> and <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{M} &amp;= {\mathbf{A}}^{\top} \mathbf{A} \\
+&amp;= \begin{bmatrix} 2 &amp; 2 \\ 2 &amp; 2 \end{bmatrix},
+\end{aligned}
+\]</span></p>
+<p>whose columns are equal. So <span class="math inline">\(\mathbf{M} {(1, -1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, and <span class="math inline">\(\mathbf{M}\)</span> is not invertible (<a href="./linear-algebra.html#thm-invertible-rank">a square matrix is invertible exactly when its null space is zero</a>). The two constraints both read <span class="math inline">\(x_1 + x_2 = b_i\)</span>, so they have no solution at all when <span class="math inline">\(b_1 \ne b_2\)</span>. When <span class="math inline">\(b_1 = b_2\)</span> a unique minimizer still exists,</p>
+<p><span class="math display">\[
+\begin{aligned}
+x_1 &amp;= x_2 \\
+&amp;= b_1 / 2,
+\end{aligned}
+\]</span></p>
+<p>but the formula of <a href="#/thm-qp-equality" class="quarto-xref">Theorem&nbsp;11</a> cannot produce it.</p>
+</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-sensitivity" class="theorem definition">
@@ -1373,7 +1629,21 @@ f(\tilde{x}^*)
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-qp-sensitivity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 31 (Moving the line)</strong></span> In <a href="#/exm-qp-equality" class="quarto-xref">Example&nbsp;28</a> with a general right side <span class="math inline">\(b\)</span> in place of <span class="math inline">\(5\)</span>, <span class="math inline">\(\mathbf{M}^{-1} = \tfrac{2}{25}\)</span> and <span class="math inline">\(f^*(b) = \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 = \tfrac{b^2}{25}\)</span>, so <span class="math inline">\(\frac{d }{d b} f^*(b) = \tfrac{2b}{25}\)</span>. At <span class="math inline">\(b = 5\)</span> this derivative is <span class="math inline">\(\tfrac{10}{25} = 0.4 = -\lambda^*\)</span>: moving the line <span class="math inline">\(3 x_1 + 4 x_2 = b\)</span> outward by a small step <span class="math inline">\(\varepsilon\)</span> in <span class="math inline">\(b\)</span> raises the minimum value by about <span class="math inline">\(0.4\,\varepsilon\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 31 (Moving the line)</strong></span> In <a href="#/exm-qp-equality" class="quarto-xref">Example&nbsp;28</a> with a general right side <span class="math inline">\(b\)</span> in place of <span class="math inline">\(5\)</span>, <span class="math inline">\(\mathbf{M}^{-1} = \tfrac{2}{25}\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+f^*(b) &amp;= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^2 \\
+&amp;= \tfrac{b^2}{25},
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\frac{d }{d b} f^*(b) = \tfrac{2b}{25}\)</span>. At <span class="math inline">\(b = 5\)</span> this derivative is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tfrac{10}{25} &amp;= 0.4 \\
+&amp;= -\lambda^*:
+\end{aligned}
+\]</span></p>
+<p>moving the line <span class="math inline">\(3 x_1 + 4 x_2 = b\)</span> outward by a small step <span class="math inline">\(\varepsilon\)</span> in <span class="math inline">\(b\)</span> raises the minimum value by about <span class="math inline">\(0.4\,\varepsilon\)</span>.</p>
 </div>
 </section><section id="sec-descent" class="slide level2" data-number="4"><h2>
 <span class="header-section-number">4</span> Newton’s method and gradient descent</h2>
@@ -1440,12 +1710,22 @@ x^{(t+1)}
 \]</span></p>
 <p>From <span class="math inline">\(x^{(0)} = 2.5\)</span>:</p>
 <ul>
+<li><p><span class="math display">\[
+\begin{aligned}
+x^{(1)} &amp;= \tfrac{1}{2} (2.5 + 1.6) \\
+&amp;= 2.05;
+\end{aligned}
+\]</span></p></li>
 <li>
-<span class="math inline">\(x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05\)</span>;</li>
-<li>
-<span class="math inline">\(x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610\)</span> (to six decimals);</li>
-<li>
-<span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</li>
+<p><span class="math display">\[
+\begin{aligned}
+x^{(2)} &amp;= \tfrac{1}{2} (2.05 + 1.951219\ldots) \\
+&amp;= 2.000610
+\end{aligned}
+\]</span></p>
+<p>(to six decimals);</p>
+</li>
+<li><p><span class="math inline">\(x^{(3)} = 2.0000001\)</span> (to seven decimals).</p></li>
 </ul>
 <p>The iterates (<a href="#/def-vector-sequence-limit" class="quarto-xref">Definition&nbsp;12</a>) approach <span class="math inline">\(2\)</span>, the local minimizer of <span class="math inline">\(f\)</span> (a stationary point, since <span class="math inline">\(f'(2) = 0\)</span>, with <span class="math inline">\(f''(2) = 4 &gt; 0\)</span>; <a href="#/thm-second-order-condition" class="quarto-xref">Theorem&nbsp;5</a>).</p>
 </div>
@@ -1457,7 +1737,21 @@ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + \tilde{g} \cdot \tilde{
 <p>also called the <strong>second-order Taylor polynomial</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span>: when the second partial derivatives of <span class="math inline">\(f\)</span> are continuous, <a href="#/thm-taylor-mv" class="quarto-xref">Theorem&nbsp;4</a> says that <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> equals the same expression with the Hessian evaluated at a point between <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{x}+ \tilde{\delta}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-quadratic-model" class="theorem example">
-<p><span class="theorem-title"><strong>Example 34 (The model at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> at <span class="math inline">\(x = 2.5\)</span> (<a href="#/exm-newton-method" class="quarto-xref">Example&nbsp;33</a>), <span class="math inline">\(g = 2.5^2 - 4 = 2.25\)</span> and <span class="math inline">\(H = [2 \cdot 2.5] = [5]\)</span>, so <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the model at any <span class="math inline">\(\tilde{x}\)</span> equals <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> exactly (<a href="#/exm-taylor-mv" class="quarto-xref">Example&nbsp;6</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>).</p>
+<p><span class="theorem-title"><strong>Example 34 (The model at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For <span class="math inline">\(f(x) = \tfrac{1}{3} x^3 - 4x\)</span> at <span class="math inline">\(x = 2.5\)</span> (<a href="#/exm-newton-method" class="quarto-xref">Example&nbsp;33</a>),</p>
+<p><span class="math display">\[
+\begin{aligned}
+g &amp;= 2.5^2 - 4 \\
+&amp;= 2.25
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+H &amp;= [2 \cdot 2.5] \\
+&amp;= [5],
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2\)</span>. For <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, whose Hessian is <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> at every point, the model at any <span class="math inline">\(\tilde{x}\)</span> equals <span class="math inline">\(f(\tilde{x}+ \tilde{\delta})\)</span> exactly (<a href="#/exm-taylor-mv" class="quarto-xref">Example&nbsp;6</a> with <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1/2 &amp; 0 \\ 0 &amp; 3/2 \end{bmatrix}\)</span>).</p>
 </div>
 </section><section class="slide level2"><div id="thm-newton-model" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 12 (The Newton step minimizes the quadratic model)</strong></span> Let <span class="math inline">\(q\)</span> be the quadratic model of <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> (<a href="#/def-quadratic-model" class="quarto-xref">Definition&nbsp;14</a>), with <span class="math inline">\(\mathbf{H} = \mathbf{H}_f(\tilde{x})\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a>. Its unique minimizer is the Newton step <span class="math inline">\(\tilde{\delta}^* = -\mathbf{H}^{-1} \tilde{g}\)</span>.</p>
@@ -1499,7 +1793,22 @@ q(\tilde{\delta}^* + \tilde{d})
 <p>which is greater than <span class="math inline">\(q(\tilde{\delta}^*)\)</span> for every <span class="math inline">\(\tilde{d} \ne \tilde{0}_{p \times 1}\)</span>, since <span class="math inline">\(\mathbf{H}\)</span> is positive definite.</p>
 </div>
 </section><section class="slide level2"><div id="exm-newton-model" class="theorem example">
-<p><span class="theorem-title"><strong>Example 35 (The Newton step at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For the model <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2\)</span> of <a href="#/exm-quadratic-model" class="quarto-xref">Example&nbsp;34</a>, <span class="math inline">\(H = [5]\)</span> is positive definite, so by <a href="#/thm-newton-model" class="quarto-xref">Theorem&nbsp;12</a> its minimizer is <span class="math inline">\(\delta^* = -H^{-1} g = -2.25 / 5 = -0.45\)</span>. Setting the derivative <span class="math inline">\(2.25 + 5 \delta\)</span> to <span class="math inline">\(0\)</span> gives the same <span class="math inline">\(\delta^*\)</span>, and <span class="math inline">\(2.5 - 0.45 = 2.05 = x^{(1)}\)</span> (<a href="#/exm-newton-method" class="quarto-xref">Example&nbsp;33</a>).</p>
+<p><span class="theorem-title"><strong>Example 35 (The Newton step at <span class="math inline">\(x = 2.5\)</span>)</strong></span> For the model <span class="math inline">\(q(\delta) = f(2.5) + 2.25\,\delta+ 2.5\,\delta^2\)</span> of <a href="#/exm-quadratic-model" class="quarto-xref">Example&nbsp;34</a>, <span class="math inline">\(H = [5]\)</span> is positive definite, so by <a href="#/thm-newton-model" class="quarto-xref">Theorem&nbsp;12</a> its minimizer is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\delta^* &amp;= -H^{-1} g \\
+&amp;= -2.25 / 5 \\
+&amp;= -0.45.
+\end{aligned}
+\]</span></p>
+<p>Setting the derivative <span class="math inline">\(2.25 + 5 \delta\)</span> to <span class="math inline">\(0\)</span> gives the same <span class="math inline">\(\delta^*\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+2.5 - 0.45 &amp;= 2.05 \\
+&amp;= x^{(1)}
+\end{aligned}
+\]</span></p>
+<p>(<a href="#/exm-newton-method" class="quarto-xref">Example&nbsp;33</a>).</p>
 </div>
 </section><section class="slide level2"><div id="def-quadratic-convergence" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Quadratic convergence)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> that converges (<a href="#/def-vector-sequence-limit" class="quarto-xref">Definition&nbsp;12</a>) to <span class="math inline">\(\tilde{x}^*\)</span> <strong>converges quadratically</strong> if there is a constant <span class="math inline">\(C\)</span> with</p>
@@ -1535,7 +1844,14 @@ x^{(t+1)} - 2
 <p><span class="theorem-title"><strong>Theorem 13 (Newton’s method minimizes a quadratic in one step)</strong></span> Let <span class="math inline">\(\mathbf{S}\)</span> be a <span class="math inline">\(p \times p\)</span> <a href="./linear-algebra.html#def-positive-definite">positive definite</a> matrix, <span class="math inline">\(\tilde{c} \in \mathbb{R}^p\)</span>, and <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- \tilde{c} \cdot \tilde{x}\)</span>. From any <span class="math inline">\(\tilde{x}^{(0)}\)</span>, Newton’s method (<a href="#/def-newton-method" class="quarto-xref">Definition&nbsp;13</a>) gives <span class="math inline">\(\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\)</span>, the unique minimizer of <span class="math inline">\(f\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by <a href="./vector-calculus.html#thm-quadratic-form">derivative of a quadratic form</a> for <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> and <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> for <span class="math inline">\(\tilde{c} \cdot \tilde{x}\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\)</span>; by <a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the gradient <span class="math inline">\(-\tilde{c}\)</span> of the linear term is constant (<a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to a vector</a>), <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \mathbf{S}\)</span>, which is invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>). So</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by <a href="./vector-calculus.html#thm-quadratic-form">derivative of a quadratic form</a> for <span class="math inline">\(\tfrac{1}{2}\,{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\)</span> and <a href="./vector-calculus.html#cor-deriv-lincom-tp">derivative of a linear combination</a> for <span class="math inline">\(\tilde{c} \cdot \tilde{x}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) &amp;= \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} \\
+&amp;= \mathbf{S} \tilde{x}- \tilde{c};
+\end{aligned}
+\]</span></p>
+<p>by <a href="./vector-calculus.html#thm-hessian-quadratic">Hessian of a quadratic form</a> with <span class="math inline">\(\tfrac{1}{2} \mathbf{S}\)</span> in place of <span class="math inline">\(\mathbf{S}\)</span>, and because the gradient <span class="math inline">\(-\tilde{c}\)</span> of the linear term is constant (<a href="./vector-calculus.html#def-constant-wrt-vector">constant with respect to a vector</a>), <span class="math inline">\(\mathbf{H}_f(\tilde{x}) = \mathbf{S}\)</span>, which is invertible (<a href="./linear-algebra.html#thm-pd-inverse">positive definite inverse</a>). So</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{x}^{(1)}
@@ -1555,7 +1871,14 @@ x^{(t+1)} - 2
 <p>The gradient at <span class="math inline">\(\mathbf{S}^{-1} \tilde{c}\)</span> is <span class="math inline">\(\mathbf{S} \mathbf{S}^{-1} \tilde{c} - \tilde{c} = \tilde{0}_{p \times 1}\)</span>, and <span class="math inline">\(f\)</span> is strictly convex (<a href="#/thm-convex-hessian" class="quarto-xref">Theorem&nbsp;10</a>, part 2), so <span class="math inline">\(\mathbf{S}^{-1} \tilde{c}\)</span> is a global minimizer (<a href="#/cor-convex-stationary" class="quarto-xref">Corollary&nbsp;1</a>). It is the only one: a strictly convex function has at most one global minimizer, since the midpoint of two distinct global minimizers, which have equal values, would have a strictly smaller value (<a href="#/def-strictly-convex" class="quarto-xref">Definition&nbsp;5</a> with <span class="math inline">\(t = \tfrac{1}{2}\)</span>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-newton-quadratic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 39 (One step to the minimizer)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, so <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\tilde{c} = \tilde{0}_{2 \times 1}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(3, 1)}^{\top}\)</span> the gradient is <span class="math inline">\(\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\)</span>, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1/3 \end{bmatrix}\)</span>, so the Newton step is <span class="math inline">\(-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\)</span> and <span class="math inline">\(\tilde{x}^{(1)} = {(3, 1)}^{\top} - {(3, 1)}^{\top} = \tilde{0}_{2 \times 1}\)</span>, the minimizer.</p>
+<p><span class="theorem-title"><strong>Example 39 (One step to the minimizer)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\)</span>, so <span class="math inline">\(\mathbf{S} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 3 \end{bmatrix}\)</span> and <span class="math inline">\(\tilde{c} = \tilde{0}_{2 \times 1}\)</span>. From <span class="math inline">\(\tilde{x}^{(0)} = {(3, 1)}^{\top}\)</span> the gradient is <span class="math inline">\(\mathbf{S} \tilde{x}^{(0)} = {(3, 3)}^{\top}\)</span>, and <span class="math inline">\(\mathbf{S}^{-1} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1/3 \end{bmatrix}\)</span>, so the Newton step is <span class="math inline">\(-\mathbf{S}^{-1} {(3, 3)}^{\top} = -{(3, 1)}^{\top}\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x}^{(1)} &amp;= {(3, 1)}^{\top} - {(3, 1)}^{\top} \\
+&amp;= \tilde{0}_{2 \times 1},
+\end{aligned}
+\]</span></p>
+<p>the minimizer.</p>
 </div>
 </section><section class="slide level2"><div id="def-gradient-descent" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Gradient descent)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives, let <span class="math inline">\(\tilde{x}^{(0)}\)</span> be a starting point, and let <span class="math inline">\(s^{(0)}, s^{(1)}, \ldots\)</span> be positive <strong>step lengths</strong>. <strong>Gradient descent</strong> computes, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>,</p>
@@ -1565,7 +1888,14 @@ x^{(t+1)} - 2
 <p>It is Newton’s method (<a href="#/def-newton-method" class="quarto-xref">Definition&nbsp;13</a>) with the Hessian replaced by <span class="math inline">\(\tfrac{1}{s^{(t)}} \mathbf{I}_p\)</span>, so it needs no second derivatives.</p>
 </div>
 </section><section class="slide level2"><div id="exm-gradient-descent" class="theorem example">
-<p><span class="theorem-title"><strong>Example 40 (Fixed steps on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(f'(x) = 2x\)</span>, so gradient descent with fixed step length <span class="math inline">\(s\)</span> is <span class="math inline">\(x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}\)</span>, and <span class="math inline">\(x^{(t)} = (1 - 2s)^t x^{(0)}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 40 (Fixed steps on a parabola)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, <span class="math inline">\(f'(x) = 2x\)</span>, so gradient descent with fixed step length <span class="math inline">\(s\)</span> is</p>
+<p><span class="math display">\[
+\begin{aligned}
+x^{(t+1)} &amp;= x^{(t)} - 2 s\,x^{(t)} \\
+&amp;= (1 - 2s)\,x^{(t)},
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(x^{(t)} = (1 - 2s)^t x^{(0)}\)</span>.</p>
 <ul>
 <li>With <span class="math inline">\(s = 0.25\)</span>, <span class="math inline">\(x^{(t)} = 0.5^t x^{(0)}\)</span>, which tends to the minimizer <span class="math inline">\(0\)</span>.</li>
 <li>With <span class="math inline">\(s = 0.5\)</span>, the first step lands on <span class="math inline">\(0\)</span>, since <span class="math inline">\(1 - 2s = 0\)</span>.</li>
@@ -1586,20 +1916,39 @@ x^{(t+1)} - 2
 &amp;&amp; (f(x) = x^2)
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(\phi(s) \ge 0\)</span> for every <span class="math inline">\(s\)</span>, and <span class="math inline">\(\phi(0.5) = (2 - 2)^2 = 0\)</span>, so exact line search chooses <span class="math inline">\(s^{(t)} = 0.5\)</span>, which lands on the minimizer <span class="math inline">\(x^{(t+1)} = 0\)</span> in one step.</p>
+<p><span class="math inline">\(\phi(s) \ge 0\)</span> for every <span class="math inline">\(s\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\phi(0.5) &amp;= (2 - 2)^2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>so exact line search chooses <span class="math inline">\(s^{(t)} = 0.5\)</span>, which lands on the minimizer <span class="math inline">\(x^{(t+1)} = 0\)</span> in one step.</p>
 </div>
 </section><section class="slide level2"><div id="def-descent-direction" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18 (Descent direction)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have a gradient <span class="math inline">\(\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\)</span> at <span class="math inline">\(\tilde{x}\)</span>. A direction <span class="math inline">\(\tilde{d}\)</span> (<a href="./vector-calculus.html#def-direction">direction</a>) is a <strong>descent direction</strong> for <span class="math inline">\(f\)</span> at <span class="math inline">\(\tilde{x}\)</span> if <span class="math inline">\(\tilde{g} \cdot \tilde{d} &lt; 0\)</span>. When <span class="math inline">\(\tilde{g} \ne \tilde{0}_{p \times 1}\)</span>, <span class="math inline">\(-\tilde{g}\)</span> is a descent direction, since <span class="math inline">\(\tilde{g} \cdot (-\tilde{g}) =-\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 &lt; 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-descent-directions" class="theorem example">
-<p><span class="theorem-title"><strong>Example 42 (Descent directions for <span class="math inline">\(x_1^2 + x_2^2\)</span> at <span class="math inline">\({(1, 0)}^{\top}\)</span>)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span> and <span class="math inline">\(\tilde{x}= {(1, 0)}^{\top}\)</span>, so <span class="math inline">\(\tilde{g} = {(2 x_1,\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 42 (Descent directions for <span class="math inline">\(x_1^2 + x_2^2\)</span> at <span class="math inline">\({(1, 0)}^{\top}\)</span>)</strong></span> Let <span class="math inline">\(f(\tilde{x}) = x_1^2 + x_2^2\)</span> and <span class="math inline">\(\tilde{x}= {(1, 0)}^{\top}\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{g} &amp;= {(2 x_1,\ 2 x_2)}^{\top} \\
+&amp;= {(2, 0)}^{\top}.
+\end{aligned}
+\]</span></p>
 <ul>
 <li>
-<span class="math inline">\(\tilde{d} = {(-1, 1)}^{\top}\)</span> is a descent direction: <span class="math inline">\(\tilde{g} \cdot \tilde{d} = -2 + 0 = -2 &lt; 0\)</span>.</li>
-<li>
-<span class="math inline">\(\tilde{d} = {(0, 1)}^{\top}\)</span> is not: <span class="math inline">\(\tilde{g} \cdot \tilde{d} = 0\)</span>.</li>
-<li>
-<span class="math inline">\(-\tilde{g} = {(-2, 0)}^{\top}\)</span> is: <span class="math inline">\(\tilde{g} \cdot (-\tilde{g}) = -4 &lt; 0\)</span>.</li>
+<p><span class="math inline">\(\tilde{d} = {(-1, 1)}^{\top}\)</span> is a descent direction:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{g} \cdot \tilde{d} &amp;= -2 + 0 \\
+&amp;= -2 \\
+&amp;&lt; 0.
+\end{aligned}
+\]</span></p>
+</li>
+<li><p><span class="math inline">\(\tilde{d} = {(0, 1)}^{\top}\)</span> is not: <span class="math inline">\(\tilde{g} \cdot \tilde{d} = 0\)</span>.</p></li>
+<li><p><span class="math inline">\(-\tilde{g} = {(-2, 0)}^{\top}\)</span> is: <span class="math inline">\(\tilde{g} \cdot (-\tilde{g}) = -4 &lt; 0\)</span>.</p></li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-descent-direction" class="theorem">
