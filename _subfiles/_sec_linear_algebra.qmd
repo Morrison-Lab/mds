@@ -714,6 +714,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-frobenius-norm.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-frobenius-norm-columns.qmd >}}
+
 ## Matrix Decompositions
 
 {{< include mds/_subfiles/linear-algebra/_def-eigenvalue.qmd >}}
