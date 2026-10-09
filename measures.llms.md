@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:27:12 (PDT)
+Last modified: 2026-10-09 10:43:26 (PDT)
 
 > **NOTE:**
 >
@@ -62,7 +62,11 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > *Proof*. *Empty set.* \\\mathcal{S}\\ contains \\S\\, so it contains the complement of \\S\\, which is \\S \setminus S = \emptyset\\.
 >
-> *Finite unions.* Extend \\A_1, \ldots, A_n\\ to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\; each of these sets is in \\\mathcal{S}\\, by the first part. Then:
+> *Finite unions.* Extend \\A_1, \ldots, A_n\\ to a sequence by setting
+>
+> \\ \begin{aligned} A\_{n+1} &= A\_{n+2} \\ &= \cdots \\ &= \emptyset; \end{aligned} \\
+>
+> each of these sets is in \\\mathcal{S}\\, by the first part. Then:
 >
 > \\ \begin{aligned} A_1 \cup \cdots \cup A_n &= A_1 \cup \cdots \cup A_n \cup \emptyset \cup \emptyset \cup \cdots && \text{(a union with } \emptyset \text{ adds no elements)} \\ &= \bigcup\_{i=1}^{\infty} A_i && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \end{aligned} \\
 >
@@ -148,8 +152,12 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 > **Example 7 (Non-decreasing and not)**  
 >
 > - \\1, 2, 2, 3, 3, 3, \ldots\\ is non-decreasing: a term may equal the one before it.
+>
 > - \\1, 2, \infty, \infty, \ldots\\ is non-decreasing, because \\\infty\\ is greater than every real number.
-> - \\1, \frac{1}{2}, \frac{1}{3}, \ldots\\ is not non-decreasing, because \\a_2 = \frac{1}{2} \< 1 = a_1\\.
+>
+> - \\1, \frac{1}{2}, \frac{1}{3}, \ldots\\ is not non-decreasing, because
+>
+>   \\ \begin{aligned} a_2 &= \frac{1}{2} \\ &\< 1 \\ &= a_1. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -159,7 +167,15 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 
 > **NOTE:**
 >
-> **Example 8 (Partial sums of halves)** For \\a_i = 1/2^i\\, the sequence \\\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots\\, the first three partial sums are \\s_1 = \frac{1}{2}\\, \\s_2 = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\\, and \\s_3 = \frac{3}{4} + \frac{1}{8} = \frac{7}{8}\\. In general, \\s_n = 1 - 1/2^n\\.
+> **Example 8 (Partial sums of halves)** For \\a_i = 1/2^i\\, the sequence \\\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots\\, the first three partial sums are \\s_1 = \frac{1}{2}\\,
+>
+> \\ \begin{aligned} s_2 &= \frac{1}{2} + \frac{1}{4} \\ &= \frac{3}{4}, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} s_3 &= \frac{3}{4} + \frac{1}{8} \\ &= \frac{7}{8}. \end{aligned} \\
+>
+> In general, \\s_n = 1 - 1/2^n\\.
 
 > **NOTE:**
 >
@@ -266,7 +282,11 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\A_1, \ldots, A_n\\ be pairwise disjoint sets in \\\mathcal{S}\\, and extend them to a sequence by setting \\A\_{n+1} = A\_{n+2} = \cdots = \emptyset\\. The extended sequence is still pairwise disjoint, since \\\emptyset\\ shares no element with any set, and its union is \\A_1 \cup \cdots \cup A_n\\. So:
+> *Proof*. Let \\A_1, \ldots, A_n\\ be pairwise disjoint sets in \\\mathcal{S}\\, and extend them to a sequence by setting
+>
+> \\ \begin{aligned} A\_{n+1} &= A\_{n+2} \\ &= \cdots \\ &= \emptyset. \end{aligned} \\
+>
+> The extended sequence is still pairwise disjoint, since \\\emptyset\\ shares no element with any set, and its union is \\A_1 \cup \cdots \cup A_n\\. So:
 >
 > \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(A_i) && \text{(countable additivity)} \\ &= \sum\_{i=1}^n\mu(A_i) + \sum\_{i=n+1}^{\infty} \mu(\emptyset) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^n\mu(A_i) && \text{(} \mu(\emptyset) = 0 \text{)} \end{aligned} \\
 
@@ -325,7 +345,9 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees: \\\sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) = 1 + 1 + \cdots = \infty\\.
+> **Example 17 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees:
+>
+> \\ \begin{aligned} \sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) &= 1 + 1 + \cdots \\ &= \infty. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -364,11 +386,21 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 20 (Lengths of some Borel sets)**  
 >
-> - \\\lambda(\[2, 5\]) = 5 - 2 = 3\\.
-> - A single point has length zero: \\\lambda(\mathopen{}\left\\a\right\\\mathclose{}) = \lambda(\[a, a\]) = a - a = 0\\.
-> - The integers are the union of the pairwise disjoint single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([Example 5](#exm-borel-sigma-algebra)), so countable additivity gives \\\lambda(\mathbb{Z}) = 0 + 0 + \cdots = 0\\.
+> - \\ \begin{aligned} \lambda(\[2, 5\]) &= 5 - 2 \\ &= 3. \end{aligned} \\
+>
+> - A single point has length zero:
+>
+>   \\ \begin{aligned} \lambda(\mathopen{}\left\\a\right\\\mathclose{}) &= \lambda(\[a, a\]) \\ &= a - a \\ &= 0. \end{aligned} \\
+>
+> - The integers are the union of the pairwise disjoint single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([Example 5](#exm-borel-sigma-algebra)), so countable additivity gives
+>
+>   \\ \begin{aligned} \lambda(\mathbb{Z}) &= 0 + 0 + \cdots \\ &= 0. \end{aligned} \\
+>
 > - \\\lambda(\[0, \infty)) = \infty\\, because \\\[0, \infty)\\ is unbounded.
-> - Lebesgue measure on \\\[0, 1\]\\ gives the whole interval \\\[0, 1\]\\ the value \\\lambda(\[0, 1\]) = 1 - 0 = 1\\.
+>
+> - Lebesgue measure on \\\[0, 1\]\\ gives the whole interval \\\[0, 1\]\\ the value
+>
+>   \\ \begin{aligned} \lambda(\[0, 1\]) &= 1 - 0 \\ &= 1. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -403,9 +435,16 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 23 (Finite and \\\sigma\\-finite measures)**  
 >
-> - Every finite measure is \\\sigma\\-finite: take \\A_1 = S\\ and \\A_2 = A_3 = \cdots = \emptyset\\, with \\\mu(A_1) = \mu(S) \< \infty\\ and \\\mu(\emptyset) = 0\\.
+> - Every finite measure is \\\sigma\\-finite: take \\A_1 = S\\ and
+>
+>   \\ \begin{aligned} A_2 &= A_3 \\ &= \cdots \\ &= \emptyset, \end{aligned} \\
+>
+>   with \\\mu(A_1) = \mu(S) \< \infty\\ and \\\mu(\emptyset) = 0\\.
+>
 > - The counting measure on the die rolls \\D\\ is finite, with \\\mu(D) = 6\\.
+>
 > - The counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ is not finite, but it is \\\sigma\\-finite: it is the union of the sets \\A_i = \mathopen{}\left\\0, 1, \ldots, i\right\\\mathclose{}\\, each with \\\mu(A_i) = i + 1 \< \infty\\.
+>
 > - Lebesgue measure on \\\mathbb{R}\\ is not finite, since \\\lambda(\mathbb{R}) = \infty\\, but it is \\\sigma\\-finite: \\\mathbb{R}\\ is the union of the intervals \\A_i = \[-i, i\]\\, each with \\\lambda(A_i) = 2i \< \infty\\.
 
 ## 6 Probability measures
@@ -422,8 +461,20 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 24 (A fair die, and the unit interval)**  
 >
-> - For one roll of a fair die, the sample space is \\\Omega= D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the events are all subsets of \\D\\, and \\\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\\operatorname{P}\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\\, and \\\operatorname{P}\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since \\\operatorname{P}\mathopen{}\left(D\right)\mathclose{} = 6/6 = 1\\. The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has \\\operatorname{P}\mathopen{}\left(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\right)\mathclose{} = 3/6 = 1/2\\.
+> - For one roll of a fair die, the sample space is
+>
+>   \\ \begin{aligned} \Omega&= D \\ &= \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}, \end{aligned} \\
+>
+>   the events are all subsets of \\D\\, and \\\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\\operatorname{P}\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\\, and \\\operatorname{P}\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since
+>
+>   \\ \begin{aligned} \operatorname{P}\mathopen{}\left(D\right)\mathclose{} &= 6/6 \\ &= 1. \end{aligned} \\
+>
+>   The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has
+>
+>   \\ \begin{aligned} \operatorname{P}\mathopen{}\left(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\right)\mathclose{} &= 3/6 \\ &= 1/2. \end{aligned} \\
+>
 > - Lebesgue measure on \\\[0, 1\]\\ is a probability measure, because \\\lambda(\[0, 1\]) = 1\\ ([Example 20](#exm-lebesgue-measure)).
+>
 > - The counting measure on \\D\\ is not a probability measure, because it gives \\D\\ the value \\6\\.
 
 > **NOTE:**
@@ -473,9 +524,15 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > \\ \begin{aligned} \sum\_{i=1}^n\mathopen{}\left(\inf\_{x \in A_i} g(x)\right)\mathclose{} \mu(A_i) &= \sum\_{i=1}^n\sum\_{x \in A_i} \inf\_{y \in A_i} g(y) && \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\ &\le \sum\_{i=1}^n\sum\_{x \in A_i} g(x) && \text{(an infimum is at most each value)} \\ &= \sum\_{x \in D} g(x) && \text{(each } x \in D \text{ is in exactly one } A_i \text{)} \end{aligned} \\
 >
-> The split into the six single points \\\mathopen{}\left\\1\right\\\mathclose{}, \ldots, \mathopen{}\left\\6\right\\\mathclose{}\\ gives exactly \\\sum\_{x \in D} g(x)\\, so the supremum is \\\int_D g \\ d\mu= \sum\_{x \in D} g(x)\\. For example, with \\g(x) = x\\, \\\int_D g \\ d\mu= 1 + 2 + \cdots + 6 = 21\\.
+> The split into the six single points \\\mathopen{}\left\\1\right\\\mathclose{}, \ldots, \mathopen{}\left\\6\right\\\mathclose{}\\ gives exactly \\\sum\_{x \in D} g(x)\\, so the supremum is \\\int_D g \\ d\mu= \sum\_{x \in D} g(x)\\. For example, with \\g(x) = x\\,
 >
-> *An infinite integral.* For the counting measure \\\mu\\ on \\\mathbb{N}\\ and the constant function \\h(n) = 1\\, the split with one set, \\A_1 = \mathbb{N}\\, gives the sum \\1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty\\, so \\\int\_{\mathbb{N}} h \\ d\mu= \infty\\.
+> \\ \begin{aligned} \int_D g \\ d\mu&= 1 + 2 + \cdots + 6 \\ &= 21. \end{aligned} \\
+>
+> *An infinite integral.* For the counting measure \\\mu\\ on \\\mathbb{N}\\ and the constant function \\h(n) = 1\\, the split with one set, \\A_1 = \mathbb{N}\\, gives the sum
+>
+> \\ \begin{aligned} 1 \cdot \mu(\mathbb{N}) &= 1 \cdot \infty \\ &= \infty, \end{aligned} \\
+>
+> so \\\int\_{\mathbb{N}} h \\ d\mu= \infty\\.
 
 > **NOTE:**
 >
@@ -496,8 +553,14 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 > **Example 27 (An integral with positive and negative parts)** For the counting measure \\\mu\\ on the die rolls \\D\\, let \\f(x) = x - 3\\. Its values at \\1, \ldots, 6\\ are \\-2, -1, 0, 1, 2, 3\\, so:
 >
 > - \\f^{+}\\ has values \\0, 0, 0, 1, 2, 3\\, and \\\int_D f^{+} \\ d\mu= 6\\ by [Example 26](#exm-integral-nonneg);
+>
 > - \\f^{-}\\ has values \\2, 1, 0, 0, 0, 0\\, and \\\int_D f^{-} \\ d\mu= 3\\;
-> - \\\int_D f \\ d\mu= 6 - 3 = 3\\, which is also \\\sum\_{x \in D} (x - 3) = 21 - 18 = 3\\.
+>
+> - \\ \begin{aligned} \int_D f \\ d\mu&= 6 - 3 \\ &= 3, \end{aligned} \\
+>
+>   which is also
+>
+>   \\ \begin{aligned} \sum\_{x \in D} (x - 3) &= 21 - 18 \\ &= 3. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -515,8 +578,17 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 28 (Absolutely integrable and not)**  
 >
-> - For the counting measure on the die rolls \\D\\, \\f(x) = x - 3\\ ([Example 27](#exm-integral)) is absolutely integrable: \\\int_D \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu= 2 + 1 + 0 + 1 + 2 + 3 = 9 \< \infty\\ by [Example 26](#exm-integral-nonneg).
-> - For the counting measure on \\\mathbb{N}\\, the constant function \\h(n) = 1\\ is not absolutely integrable, because \\\int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu= \int\_{\mathbb{N}} h \\ d\mu= \infty\\ ([Example 26](#exm-integral-nonneg)).
+> - For the counting measure on the die rolls \\D\\, \\f(x) = x - 3\\ ([Example 27](#exm-integral)) is absolutely integrable:
+>
+>   \\ \begin{aligned} \int_D \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu&= 2 + 1 + 0 + 1 + 2 + 3 \\ &= 9 \\ &\< \infty \end{aligned} \\
+>
+>   by [Example 26](#exm-integral-nonneg).
+>
+> - For the counting measure on \\\mathbb{N}\\, the constant function \\h(n) = 1\\ is not absolutely integrable, because
+>
+>   \\ \begin{aligned} \int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu&= \int\_{\mathbb{N}} h \\ d\mu\\ &= \infty \end{aligned} \\
+>
+>   ([Example 26](#exm-integral-nonneg)).
 
 ## 8 \\L^p\\ spaces
 
@@ -549,7 +621,11 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > \\ \mathopen{}\left\lVert f g\right\rVert\mathclose{}\_1 = \int_S \mathopen{}\left\|f g\right\|\mathclose{} \\ d\mu\le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_q. \\
 >
-> When \\p = q = 2\\, this inequality is the Cauchy-Schwarz inequality for integrals.
+> When
+>
+> \\ \begin{aligned} p &= q \\ &= 2, \end{aligned} \\
+>
+> this inequality is the Cauchy-Schwarz inequality for integrals.
 
 > **NOTE:**
 >
@@ -563,9 +639,17 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 30 (Applying Holder’s inequality to finite sums and expectations)**  
 >
-> 1.  **Finite vectors (Cauchy-Schwarz and taxicab bounds)**: Equipping a finite set with the [counting measure](#def-counting-measure), Holder’s inequality for conjugate exponents \\p, q\\ gives: \\ \sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|x_i\right\|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|y_i\right\|\mathclose{}^q\right)\mathclose{}^{1/q}. \\ Setting \\p = 1, q = \infty\\ gives \\\sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_\infty\\. Setting \\p = q = 2\\ gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
+> 1.  **Finite vectors (Cauchy-Schwarz and taxicab bounds)**: Equipping a finite set with the [counting measure](#def-counting-measure), Holder’s inequality for conjugate exponents \\p, q\\ gives: \\ \sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|x_i\right\|\mathclose{}^p\right)\mathclose{}^{1/p} \mathopen{}\left(\sum\_{i=1}^n\mathopen{}\left\|y_i\right\|\mathclose{}^q\right)\mathclose{}^{1/q}. \\ Setting \\p = 1\\, \\q = \infty\\ gives \\\sum\_{i=1}^n\mathopen{}\left\|x_i y_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\_\infty\\. Setting
 >
-> 2.  **Covariance bound for random variables**: On a probability space with measure \\\operatorname{P}\\ ([Definition 19](#def-probability-measure)), taking \\p = q = 2\\ gives \\\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X Y\right\|\mathclose{}\right\]\mathclose{} \le \sqrt{\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{}}\\\sqrt{\operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{}}\\, guaranteeing that the covariance between any two square-integrable random variables is finite.
+>     \\ \begin{aligned} p &= q \\ &= 2 \end{aligned} \\
+>
+>     gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
+>
+> 2.  **Covariance bound for random variables**: On a probability space with measure \\\operatorname{P}\\ ([Definition 19](#def-probability-measure)), taking
+>
+>     \\ \begin{aligned} p &= q \\ &= 2 \end{aligned} \\
+>
+>     gives \\\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X Y\right\|\mathclose{}\right\]\mathclose{} \le \sqrt{\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{}}\\\sqrt{\operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{}}\\, guaranteeing that the covariance between any two square-integrable random variables is finite.
 
 > **NOTE:**
 >
@@ -606,8 +690,17 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 32 (Product measures)**  
 >
-> - For the counting measure \\\mu\\ on the die rolls \\D\\, \\(\mu\otimes \mu)(A \times B) = \mathopen{}\left\|A\right\|\mathclose{} \mathopen{}\left\|B\right\|\mathclose{}\\, the number of pairs in \\A \times B\\. For example, the set of pairs in which both rolls are even is \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, with \\(\mu\otimes \mu)(\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}) = 3 \cdot 3 = 9\\ pairs.
-> - For Lebesgue measure \\\lambda\\ on \\\mathbb{R}\\, \\(\lambda\otimes \lambda)(\[0, 2\] \times \[0, 3\]) = 2 \cdot 3 = 6\\, the area of the rectangle.
+> - For the counting measure \\\mu\\ on the die rolls \\D\\, \\(\mu\otimes \mu)(A \times B) = \mathopen{}\left\|A\right\|\mathclose{} \mathopen{}\left\|B\right\|\mathclose{}\\, the number of pairs in \\A \times B\\. For example, the set of pairs in which both rolls are even is \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, with
+>
+>   \\ \begin{aligned} (\mu\otimes \mu)(\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}) &= 3 \cdot 3 \\ &= 9 \end{aligned} \\
+>
+>   pairs.
+>
+> - For Lebesgue measure \\\lambda\\ on \\\mathbb{R}\\,
+>
+>   \\ \begin{aligned} (\lambda\otimes \lambda)(\[0, 2\] \times \[0, 3\]) &= 2 \cdot 3 \\ &= 6, \end{aligned} \\
+>
+>   the area of the rectangle.
 
 ## 10 Further reading
 

@@ -229,6 +229,26 @@ cookieconsent.run({
 <script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <style>
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -249,16 +269,6 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-lem.callout {
   border-left-color: #1565C0;
 }
@@ -268,36 +278,6 @@ div.callout-lem.callout-style-default .callout-header {
 div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -309,6 +289,26 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -319,15 +319,15 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -709,7 +709,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-09 10:27:12 (PDT)</p>
+      <p class="date">Last modified: 2026-10-09 10:43:26 (PDT)</p>
     </div>
   </div>
   
@@ -748,7 +748,14 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="exm-partial-derivative" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (Partial derivatives of <span class="math inline">\(x_1^2 x_2 + 3 x_2\)</span>)</strong></span> Let <span class="math inline">\(f(x_1, x_2) = x_1^2 x_2 + 3 x_2\)</span>. At <span class="math inline">\(\tilde{x}= {(1, 2)}^{\top}\)</span>, <span class="math inline">\(f(1, 2) = 1 \cdot 2 + 6 = 8\)</span>, and for <span class="math inline">\(h \ne 0\)</span></p>
+<p><span class="theorem-title"><strong>Example 1 (Partial derivatives of <span class="math inline">\(x_1^2 x_2 + 3 x_2\)</span>)</strong></span> Let <span class="math inline">\(f(x_1, x_2) = x_1^2 x_2 + 3 x_2\)</span>. At <span class="math inline">\(\tilde{x}= {(1, 2)}^{\top}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(1, 2) &amp;= 1 \cdot 2 + 6 \\
+&amp;= 8,
+\end{aligned}
+\]</span></p>
+<p>and for <span class="math inline">\(h \ne 0\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{f(1 + h, 2) - f(1, 2)}{h}
@@ -1491,7 +1498,14 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 </div>
 <div class="callout-body-container">
 <div id="def-vector-valued-derivative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Derivative of a vector-valued function)</strong></span> If <span class="math inline">\(\tilde{y}= \tilde{y}(\tilde{\beta}) = {(y_1, \ldots, y_q)}^{\top}\)</span> is a <span class="math inline">\(q \times 1\)</span> vector-valued function of the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span>, its <strong>derivative with respect to</strong> <span class="math inline">\(\tilde{\beta}\)</span> is the <span class="math inline">\(p \times q\)</span> matrix whose <span class="math inline">\((i, j)\)</span> entry is</p>
+<p><span class="theorem-title"><strong>Definition 6 (Derivative of a vector-valued function)</strong></span> If</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{y}&amp;= \tilde{y}(\tilde{\beta}) \\
+&amp;= {(y_1, \ldots, y_q)}^{\top}
+\end{aligned}
+\]</span></p>
+<p>is a <span class="math inline">\(q \times 1\)</span> vector-valued function of the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span>, its <strong>derivative with respect to</strong> <span class="math inline">\(\tilde{\beta}\)</span> is the <span class="math inline">\(p \times q\)</span> matrix whose <span class="math inline">\((i, j)\)</span> entry is</p>
 <p><span class="math display">\[
 \mathopen{}\left[\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\right]\mathclose{}_{ij} \stackrel{\text{def}}{=}\frac{\partial}{\partial \beta_{i}} y_j,
 \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q.
@@ -1533,7 +1547,14 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 </div>
 <div class="callout-body-container">
 <div id="def-jacobian-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Jacobian matrix)</strong></span> Let <span class="math inline">\(\tilde{y}= \tilde{y}(\tilde{\beta}) = {(y_1, \ldots, y_q)}^{\top}\)</span> be a <span class="math inline">\(q \times 1\)</span> vector-valued function of the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span>. The <strong>Jacobian matrix</strong> of <span class="math inline">\(\tilde{y}\)</span> is the <span class="math inline">\(q \times p\)</span> matrix whose <span class="math inline">\((j, i)\)</span> entry is <span class="math inline">\(\frac{\partial}{\partial \beta_{i}} y_j\)</span>, for <span class="math inline">\(j = 1, \ldots, q\)</span> and <span class="math inline">\(i = 1, \ldots, p\)</span>. It is the transpose of the derivative <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\)</span> of <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>. Writing derivatives this way, with rows indexing the entries of <span class="math inline">\(\tilde{y}\)</span> (the numerator) and columns indexing the entries of <span class="math inline">\(\tilde{\beta}\)</span> (the denominator), is the <strong>numerator layout</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 7 (Jacobian matrix)</strong></span> Let</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{y}&amp;= \tilde{y}(\tilde{\beta}) \\
+&amp;= {(y_1, \ldots, y_q)}^{\top}
+\end{aligned}
+\]</span></p>
+<p>be a <span class="math inline">\(q \times 1\)</span> vector-valued function of the <span class="math inline">\(p \times 1\)</span> vector <span class="math inline">\(\tilde{\beta}\)</span>. The <strong>Jacobian matrix</strong> of <span class="math inline">\(\tilde{y}\)</span> is the <span class="math inline">\(q \times p\)</span> matrix whose <span class="math inline">\((j, i)\)</span> entry is <span class="math inline">\(\frac{\partial}{\partial \beta_{i}} y_j\)</span>, for <span class="math inline">\(j = 1, \ldots, q\)</span> and <span class="math inline">\(i = 1, \ldots, p\)</span>. It is the transpose of the derivative <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\)</span> of <a href="#def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>. Writing derivatives this way, with rows indexing the entries of <span class="math inline">\(\tilde{y}\)</span> (the numerator) and columns indexing the entries of <span class="math inline">\(\tilde{\beta}\)</span> (the denominator), is the <strong>numerator layout</strong>.</p>
 </div>
 </div>
 </div>
@@ -2015,7 +2036,14 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="rem-deriv-matrix-vector-special-case" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (The derivative of a linear map as a special case). </span>This result generalizes <a href="#thm-deriv-linear-map" class="quarto-xref">Theorem&nbsp;4</a>, which is the special case <span class="math inline">\(\tilde{v} = \tilde{\beta}\)</span> (so that <span class="math inline">\(q = p\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}_p\)</span>, and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}_p {\mathbf{A}}^{\top} = {\mathbf{A}}^{\top}\)</span>). For example, <a href="#exm-deriv-linear-map" class="quarto-xref">Example&nbsp;12</a> is the case <span class="math inline">\(\mathbf{A} = \begin{pmatrix} 2 &amp; 3 \end{pmatrix}\)</span> and <span class="math inline">\(\tilde{v} = \tilde{\beta}= {(\beta_{1}, \beta_{2})}^{\top}\)</span>, where this result gives <span class="math inline">\(\mathbf{I}_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 3</em> (The derivative of a linear map as a special case). </span>This result generalizes <a href="#thm-deriv-linear-map" class="quarto-xref">Theorem&nbsp;4</a>, which is the special case <span class="math inline">\(\tilde{v} = \tilde{\beta}\)</span> (so that <span class="math inline">\(q = p\)</span>, <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}_p\)</span>, and <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}_p {\mathbf{A}}^{\top}\)</span>, which is <span class="math inline">\({\mathbf{A}}^{\top}\)</span>). For example, <a href="#exm-deriv-linear-map" class="quarto-xref">Example&nbsp;12</a> is the case <span class="math inline">\(\mathbf{A} = \begin{pmatrix} 2 &amp; 3 \end{pmatrix}\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{v} &amp;= \tilde{\beta}\\
+&amp;= {(\beta_{1}, \beta_{2})}^{\top},
+\end{aligned}
+\]</span></p>
+<p>where this result gives <span class="math inline">\(\mathbf{I}_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2454,7 +2482,21 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-chain-vec" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (Applying the vector chain rule)</strong></span> Let <span class="math inline">\(\tilde{x}= {(x_1, x_2)}^{\top}\)</span>, <span class="math inline">\(\tilde{y}= \tilde{g}(\tilde{x}) = {(x_1 + x_2,\ x_1 x_2)}^{\top}\)</span>, and <span class="math inline">\(z = f(\tilde{y}) = y_1^2 + y_2\)</span>. Then</p>
+<p><span class="theorem-title"><strong>Example 19 (Applying the vector chain rule)</strong></span> Let <span class="math inline">\(\tilde{x}= {(x_1, x_2)}^{\top}\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{y}&amp;= \tilde{g}(\tilde{x}) \\
+&amp;= {(x_1 + x_2,\ x_1 x_2)}^{\top},
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+z &amp;= f(\tilde{y}) \\
+&amp;= y_1^2 + y_2.
+\end{aligned}
+\]</span></p>
+<p>Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \underbrace{\frac{\partial z}{\partial \tilde{x}}}_{2 \times 1}
@@ -2485,7 +2527,14 @@ x_{p}
 &amp;&amp; \text{(collect terms)}
 \end{aligned}
 \]</span></p>
-<p>This matches differentiating <span class="math inline">\(z\)</span> directly: <span class="math inline">\(z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_1} z = 2x_1 + 3x_2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_2} z = 3x_1 + 2x_2\)</span>. The product in the other order, a <span class="math inline">\(2 \times 1\)</span> matrix times a <span class="math inline">\(2 \times 2\)</span> matrix, is not defined. The total derivative is the transpose, the row vector <span class="math inline">\((2x_1 + 3x_2,\ 3x_1 + 2x_2)\)</span>.</p>
+<p>This matches differentiating <span class="math inline">\(z\)</span> directly:</p>
+<p><span class="math display">\[
+\begin{aligned}
+z &amp;= (x_1 + x_2)^2 + x_1 x_2 \\
+&amp;= x_1^2 + 3x_1 x_2 + x_2^2,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\frac{\partial}{\partial x_1} z = 2x_1 + 3x_2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_2} z = 3x_1 + 2x_2\)</span>. The product in the other order, a <span class="math inline">\(2 \times 1\)</span> matrix times a <span class="math inline">\(2 \times 2\)</span> matrix, is not defined. The total derivative is the transpose, the row vector <span class="math inline">\((2x_1 + 3x_2,\ 3x_1 + 2x_2)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -2523,7 +2572,14 @@ x_{p}
 <div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a> with <span class="math inline">\(\tilde{x}= \tilde{\beta}\)</span>, <span class="math inline">\(\tilde{y}= \tilde{\varepsilon}\)</span>, <span class="math inline">\(q = n\)</span>, and <span class="math inline">\(z = f(\tilde{\varepsilon}) = \tilde{\varepsilon}\cdot \tilde{\varepsilon}= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\)</span>:</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-chain-vec" class="quarto-xref">Theorem&nbsp;8</a> with <span class="math inline">\(\tilde{x}= \tilde{\beta}\)</span>, <span class="math inline">\(\tilde{y}= \tilde{\varepsilon}\)</span>, <span class="math inline">\(q = n\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+z &amp;= f(\tilde{\varepsilon}) \\
+&amp;= \tilde{\varepsilon}\cdot \tilde{\varepsilon}\\
+&amp;= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}:
+\end{aligned}
+\]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{}
@@ -2602,7 +2658,14 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="exm-matrix-derivative" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (The matrix derivative of a trace)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(2 \times 2\)</span> matrix and <span class="math inline">\(f(\mathbf{X}) = \operatorname{tr}(\mathbf{X}) = X_{11} + X_{22}\)</span> (see <a href="./linear-algebra.html#def-trace">trace</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
+<p><span class="theorem-title"><strong>Example 21 (The matrix derivative of a trace)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(2 \times 2\)</span> matrix and</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
+&amp;= X_{11} + X_{22}
+\end{aligned}
+\]</span></p>
+<p>(see <a href="./linear-algebra.html#def-trace">trace</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
 <p><span class="math display">\[
 \frac{\partial}{\partial \mathbf{X}} f = \mathbf{I}_2
 \]</span></p>
@@ -2669,7 +2732,14 @@ x_{p}
 <div class="callout-body-container">
 <div id="rem-matrix-product-tensor" class="proof remark">
 <p><span class="proof-title"><em>Remark 8</em> (Why the theorem uses the trace). </span>The trace makes <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\)</span> a scalar, so its matrix derivative (<a href="#def-matrix-derivative" class="quarto-xref">Definition&nbsp;10</a>) is again an <span class="math inline">\(m \times n\)</span> matrix. The matrix product <span class="math inline">\(\mathbf{A} \mathbf{X} \mathbf{B}\)</span> itself (without the trace) is an <span class="math inline">\(r \times r\)</span> matrix, and each of its <span class="math inline">\(r^2\)</span> entries has a partial derivative with respect to each of the <span class="math inline">\(m n\)</span> entries of <span class="math inline">\(\mathbf{X}\)</span>. Those <span class="math inline">\(r^2 m n\)</span> partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar <span class="math inline">\(\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\)</span>.</p>
-<p>For example, with <span class="math inline">\(\mathbf{A} = \mathbf{B} = \mathbf{I}_2\)</span>, the product <span class="math inline">\(\mathbf{A} \mathbf{X} \mathbf{B} = \mathbf{X}\)</span> has <span class="math inline">\(4\)</span> entries, each with <span class="math inline">\(4\)</span> partial derivatives, <span class="math inline">\(16\)</span> in all, while its trace <span class="math inline">\(X_{11} + X_{22}\)</span> has the <span class="math inline">\(4\)</span> partial derivatives that form the <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{I}_2\)</span> of <a href="#exm-matrix-derivative" class="quarto-xref">Example&nbsp;21</a>.</p>
+<p>For example, with</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf{A} &amp;= \mathbf{B} \\
+&amp;= \mathbf{I}_2,
+\end{aligned}
+\]</span></p>
+<p>the product <span class="math inline">\(\mathbf{A} \mathbf{X} \mathbf{B} = \mathbf{X}\)</span> has <span class="math inline">\(4\)</span> entries, each with <span class="math inline">\(4\)</span> partial derivatives, <span class="math inline">\(16\)</span> in all, while its trace <span class="math inline">\(X_{11} + X_{22}\)</span> has the <span class="math inline">\(4\)</span> partial derivatives that form the <span class="math inline">\(2 \times 2\)</span> matrix <span class="math inline">\(\mathbf{I}_2\)</span> of <a href="#exm-matrix-derivative" class="quarto-xref">Example&nbsp;21</a>.</p>
 </div>
 </div>
 </div>
@@ -2768,9 +2838,24 @@ x_{p}
 <div id="exm-ball" class="theorem example">
 <p><span class="theorem-title"><strong>Example 23 (Points in the unit balls of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> &nbsp;</p>
 <ul>
-<li><span class="math inline">\({(0.5, 0.5)}^{\top}\)</span> has <span class="math inline">\(\mathopen{}\left\lVert{(0.5, 0.5)}^{\top}\right\rVert\mathclose{}^2 = 0.25 + 0.25 = 0.5 &lt; 1\)</span>, so it is in both the open and the closed unit ball.</li>
-<li><span class="math inline">\({(0.6, 0.8)}^{\top}\)</span> has <span class="math inline">\(\mathopen{}\left\lVert{(0.6, 0.8)}^{\top}\right\rVert\mathclose{}^2 = 0.36 + 0.64 = 1\)</span>, so it is in the closed unit ball but not the open one.</li>
-<li>For <span class="math inline">\(p = 1\)</span>, the open ball of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(c\)</span> is the open interval <span class="math inline">\((c - r, c + r)\)</span>.</li>
+<li><p><span class="math inline">\({(0.5, 0.5)}^{\top}\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left\lVert{(0.5, 0.5)}^{\top}\right\rVert\mathclose{}^2 &amp;= 0.25 + 0.25 \\
+&amp;= 0.5 \\
+&amp;&lt; 1,
+\end{aligned}
+\]</span></p>
+<p>so it is in both the open and the closed unit ball.</p></li>
+<li><p><span class="math inline">\({(0.6, 0.8)}^{\top}\)</span> has</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left\lVert{(0.6, 0.8)}^{\top}\right\rVert\mathclose{}^2 &amp;= 0.36 + 0.64 \\
+&amp;= 1,
+\end{aligned}
+\]</span></p>
+<p>so it is in the closed unit ball but not the open one.</p></li>
+<li><p>For <span class="math inline">\(p = 1\)</span>, the open ball of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(c\)</span> is the open interval <span class="math inline">\((c - r, c + r)\)</span>.</p></li>
 </ul>
 </div>
 </div>
@@ -2801,10 +2886,30 @@ x_{p}
 <div id="exm-second-partial-derivative" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (Second partial derivatives of <span class="math inline">\(x_1^2 x_2 + 3 x_2\)</span>)</strong></span> For <span class="math inline">\(f(\tilde{x}) = x_1^2 x_2 + 3 x_2\)</span> of <a href="#exm-partial-derivative" class="quarto-xref">Example&nbsp;1</a>, <span class="math inline">\(\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\)</span> and <span class="math inline">\(\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\)</span>. Differentiating each of these again:</p>
 <ul>
-<li><span class="math inline">\(\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_1} (2 x_1 x_2) = 2 x_2\)</span>;</li>
-<li><span class="math inline">\(\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_2} (2 x_1 x_2) = 2 x_1\)</span>;</li>
-<li><span class="math inline">\(\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_1} (x_1^2 + 3) = 2 x_1\)</span>;</li>
-<li><span class="math inline">\(\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_2} (x_1^2 + 3) = 0\)</span>.</li>
+<li><p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} &amp;= \frac{\partial}{\partial x_1} (2 x_1 x_2) \\
+&amp;= 2 x_2;
+\end{aligned}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} &amp;= \frac{\partial}{\partial x_2} (2 x_1 x_2) \\
+&amp;= 2 x_1;
+\end{aligned}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} &amp;= \frac{\partial}{\partial x_1} (x_1^2 + 3) \\
+&amp;= 2 x_1;
+\end{aligned}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} &amp;= \frac{\partial}{\partial x_2} (x_1^2 + 3) \\
+&amp;= 0.
+\end{aligned}
+\]</span></p></li>
 </ul>
 <p>The two mixed partial derivatives are both <span class="math inline">\(2 x_1\)</span>.</p>
 </div>
@@ -2905,7 +3010,14 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="def-continuous-several" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Continuity in several variables)</strong></span> A function <span class="math inline">\(f\)</span> from <span class="math inline">\(\mathbb{R}^p\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span> is <strong>continuous at</strong> <span class="math inline">\(\tilde{x}\)</span> if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>. It is <strong>continuous on</strong> a set if it is continuous at every point of the set. For <span class="math inline">\(q = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left|f(\tilde{y}) - f(\tilde{x})\right|\mathclose{}\)</span>. For <span class="math inline">\(p = q = 1\)</span>, this definition is the usual <a href="./calculus.html#def-continuous">continuity</a>, written out with the <span class="math inline">\(\varepsilon\)</span>-<span class="math inline">\(\delta\)</span> definition of the limit <span class="math inline">\(\lim_{y \to x} f(y) = f(x)\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Continuity in several variables)</strong></span> A function <span class="math inline">\(f\)</span> from <span class="math inline">\(\mathbb{R}^p\)</span> to <span class="math inline">\(\mathbb{R}^q\)</span> is <strong>continuous at</strong> <span class="math inline">\(\tilde{x}\)</span> if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} &lt; \varepsilon\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; \delta\)</span>. It is <strong>continuous on</strong> a set if it is continuous at every point of the set. For <span class="math inline">\(q = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left|f(\tilde{y}) - f(\tilde{x})\right|\mathclose{}\)</span>. For</p>
+<p><span class="math display">\[
+\begin{aligned}
+p &amp;= q \\
+&amp;= 1,
+\end{aligned}
+\]</span></p>
+<p>this definition is the usual <a href="./calculus.html#def-continuous">continuity</a>, written out with the <span class="math inline">\(\varepsilon\)</span>-<span class="math inline">\(\delta\)</span> definition of the limit <span class="math inline">\(\lim_{y \to x} f(y) = f(x)\)</span>.</p>
 <p>Continuity survives the usual operations:</p>
 <ul>
 <li>A <a href="./sets-functions.html#def-composition">composition</a> of continuous functions is continuous: choose the <span class="math inline">\(\delta\)</span> for the <a href="./sets-functions.html#def-composition">outer function</a> first, and use it as the <span class="math inline">\(\varepsilon\)</span> for the inner one.</li>
@@ -2961,7 +3073,14 @@ f(\tilde{x}) =
 0 &amp; \text{if } \tilde{x}= \tilde{0}.
 \end{cases}
 \]</span></p>
-<p><strong>Both partial derivatives exist at <span class="math inline">\(\tilde{0}\)</span>.</strong> For <span class="math inline">\(h \ne 0\)</span>, <span class="math inline">\(f(h, 0) = \frac{h \cdot 0}{h^2 + 0} = 0\)</span>, so</p>
+<p><strong>Both partial derivatives exist at <span class="math inline">\(\tilde{0}\)</span>.</strong> For <span class="math inline">\(h \ne 0\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>so</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{f(0 + h, 0) - f(0, 0)}{h}
@@ -2973,7 +3092,16 @@ f(\tilde{x}) =
 \end{aligned}
 \]</span></p>
 <p>and the limit as <span class="math inline">\(h \to 0\)</span> is <span class="math inline">\(0\)</span>: <span class="math inline">\(\frac{\partial}{\partial x_1} f(\tilde{0}) = 0\)</span> (<a href="#def-partial-derivative" class="quarto-xref">Definition&nbsp;1</a>). The same steps with <span class="math inline">\(f(0, h) = 0\)</span> give <span class="math inline">\(\frac{\partial}{\partial x_2} f(\tilde{0}) = 0\)</span>.</p>
-<p><strong>But <span class="math inline">\(f\)</span> is not continuous at <span class="math inline">\(\tilde{0}\)</span></strong> (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;14</a>). Take <span class="math inline">\(\varepsilon= \tfrac{1}{4}\)</span> and any <span class="math inline">\(\delta&gt; 0\)</span>, and let <span class="math inline">\(t = \delta/ 2\)</span> and <span class="math inline">\(\tilde{y}= {(t, t)}^{\top}\)</span>. Then <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} = \sqrt{t^2 + t^2} = t \sqrt{2} = \delta/ \sqrt{2} &lt; \delta\)</span>, but</p>
+<p><strong>But <span class="math inline">\(f\)</span> is not continuous at <span class="math inline">\(\tilde{0}\)</span></strong> (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;14</a>). Take <span class="math inline">\(\varepsilon= \tfrac{1}{4}\)</span> and any <span class="math inline">\(\delta&gt; 0\)</span>, and let <span class="math inline">\(t = \delta/ 2\)</span> and <span class="math inline">\(\tilde{y}= {(t, t)}^{\top}\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} &amp;= \sqrt{t^2 + t^2} \\
+&amp;= t \sqrt{2} \\
+&amp;= \delta/ \sqrt{2} \\
+&amp;&lt; \delta,
+\end{aligned}
+\]</span></p>
+<p>but</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left|f(\tilde{y}) - f(\tilde{0})\right|\mathclose{}
@@ -3040,7 +3168,14 @@ f(\tilde{x}) =
 &amp;&amp; \text{(the quotient is continuous at } h = 0 \text{)}
 \end{aligned}
 \]</span></p>
-<p>and <span class="math inline">\(\frac{\partial}{\partial x_1} f(\tilde{0}) = \lim_{h \to 0} (0 - 0)/h = 0\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\)</span> holds at <span class="math inline">\(x_2 = 0\)</span> too. In the same way, with the roles of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> swapped, <span class="math inline">\(f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\)</span> for every <span class="math inline">\(x_1\)</span>. So at <span class="math inline">\(\tilde{0}\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;13</a>)</p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial}{\partial x_1} f(\tilde{0}) &amp;= \lim_{h \to 0} (0 - 0)/h \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\)</span> holds at <span class="math inline">\(x_2 = 0\)</span> too. In the same way, with the roles of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> swapped, <span class="math inline">\(f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\)</span>, so <span class="math inline">\(\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\)</span> for every <span class="math inline">\(x_1\)</span>. So at <span class="math inline">\(\tilde{0}\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;13</a>)</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathopen{}\left[\mathbf{H}_f(\tilde{0})\right]\mathclose{}_{21}

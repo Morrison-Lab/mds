@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:27:12 (PDT)
+Last modified: 2026-10-09 10:43:26 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -32,7 +32,11 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 
 > **NOTE:**
 >
-> **Example 1 (Partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** Let \\f(x_1, x_2) = x_1^2 x_2 + 3 x_2\\. At \\\tilde{x}= {(1, 2)}^{\top}\\, \\f(1, 2) = 1 \cdot 2 + 6 = 8\\, and for \\h \ne 0\\
+> **Example 1 (Partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** Let \\f(x_1, x_2) = x_1^2 x_2 + 3 x_2\\. At \\\tilde{x}= {(1, 2)}^{\top}\\,
+>
+> \\ \begin{aligned} f(1, 2) &= 1 \cdot 2 + 6 \\ &= 8, \end{aligned} \\
+>
+> and for \\h \ne 0\\
 >
 > \\ \begin{aligned} \frac{f(1 + h, 2) - f(1, 2)}{h} &= \frac{(1 + h)^2 \cdot 2 + 6 - 8}{h} && \text{(substitute into } f \text{)} \\ &= \frac{(1 + h)^2 \cdot 2 - 2}{h} && \text{(} 6 - 8 = -2 \text{)} \\ &= \frac{(1 + 2h + h^2) \cdot 2 - 2}{h} && \text{(expand } (1 + h)^2 \text{)} \\ &= \frac{2 + 4h + 2h^2 - 2}{h} && \text{(distributive law)} \\ &= \frac{4h + 2h^2 + 2 - 2}{h} && \text{(reorder the terms)} \\ &= \frac{4h + 2h^2}{h} && \text{(} 2 - 2 = 0 \text{)} \\ &= 4 + 2h, && \text{(divide by } h \ne 0 \text{)} \end{aligned} \\
 >
@@ -358,7 +362,11 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Definition 6 (Derivative of a vector-valued function)** If \\\tilde{y}= \tilde{y}(\tilde{\beta}) = {(y_1, \ldots, y_q)}^{\top}\\ is a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\, its **derivative with respect to** \\\tilde{\beta}\\ is the \\p \times q\\ matrix whose \\(i, j)\\ entry is
+> **Definition 6 (Derivative of a vector-valued function)** If
+>
+> \\ \begin{aligned} \tilde{y}&= \tilde{y}(\tilde{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
+>
+> is a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\, its **derivative with respect to** \\\tilde{\beta}\\ is the \\p \times q\\ matrix whose \\(i, j)\\ entry is
 >
 > \\ \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\right\]\mathclose{}\_{ij} \stackrel{\text{def}}{=}\frac{\partial}{\partial \beta\_{i}} y_j, \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q. \\
 >
@@ -372,7 +380,11 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Definition 7 (Jacobian matrix)** Let \\\tilde{y}= \tilde{y}(\tilde{\beta}) = {(y_1, \ldots, y_q)}^{\top}\\ be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\. The **Jacobian matrix** of \\\tilde{y}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative). Writing derivatives this way, with rows indexing the entries of \\\tilde{y}\\ (the numerator) and columns indexing the entries of \\\tilde{\beta}\\ (the denominator), is the **numerator layout**.
+> **Definition 7 (Jacobian matrix)** Let
+>
+> \\ \begin{aligned} \tilde{y}&= \tilde{y}(\tilde{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
+>
+> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\. The **Jacobian matrix** of \\\tilde{y}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative). Writing derivatives this way, with rows indexing the entries of \\\tilde{y}\\ (the numerator) and columns indexing the entries of \\\tilde{\beta}\\ (the denominator), is the **numerator layout**.
 
 > **NOTE:**
 >
@@ -514,7 +526,11 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 3* (The derivative of a linear map as a special case). This result generalizes [Theorem 4](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top} = {\mathbf{A}}^{\top}\\). For example, [Example 12](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and \\\tilde{v} = \tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, where this result gives \\\mathbf{I}\_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\\.
+> *Remark 3* (The derivative of a linear map as a special case). This result generalizes [Theorem 4](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top}\\, which is \\{\mathbf{A}}^{\top}\\). For example, [Example 12](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and
+>
+> \\ \begin{aligned} \tilde{v} &= \tilde{\beta}\\ &= {(\beta\_{1}, \beta\_{2})}^{\top}, \end{aligned} \\
+>
+> where this result gives \\\mathbf{I}\_2 {\mathbf{A}}^{\top} = {(2, 3)}^{\top}\\.
 
 > **NOTE:**
 >
@@ -659,11 +675,23 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Example 19 (Applying the vector chain rule)** Let \\\tilde{x}= {(x_1, x_2)}^{\top}\\, \\\tilde{y}= \tilde{g}(\tilde{x}) = {(x_1 + x_2,\\ x_1 x_2)}^{\top}\\, and \\z = f(\tilde{y}) = y_1^2 + y_2\\. Then
+> **Example 19 (Applying the vector chain rule)** Let \\\tilde{x}= {(x_1, x_2)}^{\top}\\,
+>
+> \\ \begin{aligned} \tilde{y}&= \tilde{g}(\tilde{x}) \\ &= {(x_1 + x_2,\\ x_1 x_2)}^{\top}, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} z &= f(\tilde{y}) \\ &= y_1^2 + y_2. \end{aligned} \\
+>
+> Then
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial z}{\partial \tilde{x}}}\_{2 \times 1} &= \underbrace{\frac{\partial \tilde{y}}{\partial \tilde{x}}}\_{2 \times 2} \underbrace{\frac{\partial z}{\partial \tilde{y}}}\_{2 \times 1} && \text{(vector chain rule)} \\ &= \begin{bmatrix} 1 & x_2 \\ 1 & x_1 \end{bmatrix} \begin{bmatrix} 2y_1 \\ 1 \end{bmatrix} && \text{(differentiate } \tilde{g} \text{ and } f \text{)} \\ &= \begin{bmatrix} 2(x_1 + x_2) + x_2 \\ 2(x_1 + x_2) + x_1 \end{bmatrix} && \text{(multiply, and substitute } y_1 = x_1 + x_2 \text{)} \\ &= \begin{bmatrix} 2x_1 + 3x_2 \\ 3x_1 + 2x_2 \end{bmatrix} && \text{(collect terms)} \end{aligned} \\
 >
-> This matches differentiating \\z\\ directly: \\z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2\\, so \\\frac{\partial}{\partial x_1} z = 2x_1 + 3x_2\\ and \\\frac{\partial}{\partial x_2} z = 3x_1 + 2x_2\\. The product in the other order, a \\2 \times 1\\ matrix times a \\2 \times 2\\ matrix, is not defined. The total derivative is the transpose, the row vector \\(2x_1 + 3x_2,\\ 3x_1 + 2x_2)\\.
+> This matches differentiating \\z\\ directly:
+>
+> \\ \begin{aligned} z &= (x_1 + x_2)^2 + x_1 x_2 \\ &= x_1^2 + 3x_1 x_2 + x_2^2, \end{aligned} \\
+>
+> so \\\frac{\partial}{\partial x_1} z = 2x_1 + 3x_2\\ and \\\frac{\partial}{\partial x_2} z = 3x_1 + 2x_2\\. The product in the other order, a \\2 \times 1\\ matrix times a \\2 \times 2\\ matrix, is not defined. The total derivative is the transpose, the row vector \\(2x_1 + 3x_2,\\ 3x_1 + 2x_2)\\.
 
 See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contributors ([n.d.](#ref-wp:gradient)), section “Relationship with Frechet derivative”.
 
@@ -675,7 +703,9 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 8](#thm-chain-vec) with \\\tilde{x}= \tilde{\beta}\\, \\\tilde{y}= \tilde{\varepsilon}\\, \\q = n\\, and \\z = f(\tilde{\varepsilon}) = \tilde{\varepsilon}\cdot \tilde{\varepsilon}= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\\:
+> *Proof*. Apply [Theorem 8](#thm-chain-vec) with \\\tilde{x}= \tilde{\beta}\\, \\\tilde{y}= \tilde{\varepsilon}\\, \\q = n\\, and
+>
+> \\ \begin{aligned} z &= f(\tilde{\varepsilon}) \\ &= \tilde{\varepsilon}\cdot \tilde{\varepsilon}\\ &= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}: \end{aligned} \\
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}\right)\mathclose{} \frac{\partial}{\partial \tilde{\varepsilon}}\mathopen{}\left({\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\right)\mathclose{} && \text{(vector chain rule)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}\right)\mathclose{} \mathopen{}\left(2\tilde{\varepsilon}\right)\mathclose{} && \text{(derivative of a simple quadratic form, in } \tilde{\varepsilon}\text{)} \end{aligned} \\
 >
@@ -706,7 +736,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 21 (The matrix derivative of a trace)** Let \\\mathbf{X}\\ be a \\2 \times 2\\ matrix and \\f(\mathbf{X}) = \operatorname{tr}(\mathbf{X}) = X\_{11} + X\_{22}\\ (see [trace](linear-algebra.llms.md#def-trace)). Then \\\frac{\partial}{\partial X\_{ij}} f = 1\\ if \\i = j\\ and \\0\\ otherwise, so:
+> **Example 21 (The matrix derivative of a trace)** Let \\\mathbf{X}\\ be a \\2 \times 2\\ matrix and
+>
+> \\ \begin{aligned} f(\mathbf{X}) &= \operatorname{tr}(\mathbf{X}) \\ &= X\_{11} + X\_{22} \end{aligned} \\
+>
+> (see [trace](linear-algebra.llms.md#def-trace)). Then \\\frac{\partial}{\partial X\_{ij}} f = 1\\ if \\i = j\\ and \\0\\ otherwise, so:
 >
 > \\ \frac{\partial}{\partial \mathbf{X}} f = \mathbf{I}\_2 \\
 
@@ -726,7 +760,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > *Remark 8* (Why the theorem uses the trace). The trace makes \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\ a scalar, so its matrix derivative ([Definition 10](#def-matrix-derivative)) is again an \\m \times n\\ matrix. The matrix product \\\mathbf{A} \mathbf{X} \mathbf{B}\\ itself (without the trace) is an \\r \times r\\ matrix, and each of its \\r^2\\ entries has a partial derivative with respect to each of the \\m n\\ entries of \\\mathbf{X}\\. Those \\r^2 m n\\ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\.
 >
-> For example, with \\\mathbf{A} = \mathbf{B} = \mathbf{I}\_2\\, the product \\\mathbf{A} \mathbf{X} \mathbf{B} = \mathbf{X}\\ has \\4\\ entries, each with \\4\\ partial derivatives, \\16\\ in all, while its trace \\X\_{11} + X\_{22}\\ has the \\4\\ partial derivatives that form the \\2 \times 2\\ matrix \\\mathbf{I}\_2\\ of [Example 21](#exm-matrix-derivative).
+> For example, with
+>
+> \\ \begin{aligned} \mathbf{A} &= \mathbf{B} \\ &= \mathbf{I}\_2, \end{aligned} \\
+>
+> the product \\\mathbf{A} \mathbf{X} \mathbf{B} = \mathbf{X}\\ has \\4\\ entries, each with \\4\\ partial derivatives, \\16\\ in all, while its trace \\X\_{11} + X\_{22}\\ has the \\4\\ partial derivatives that form the \\2 \times 2\\ matrix \\\mathbf{I}\_2\\ of [Example 21](#exm-matrix-derivative).
 
 > **NOTE:**
 >
@@ -774,8 +812,18 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Example 23 (Points in the unit balls of \\\mathbb{R}^2\\)**  
 >
-> - \\{(0.5, 0.5)}^{\top}\\ has \\\mathopen{}\left\lVert{(0.5, 0.5)}^{\top}\right\rVert\mathclose{}^2 = 0.25 + 0.25 = 0.5 \< 1\\, so it is in both the open and the closed unit ball.
-> - \\{(0.6, 0.8)}^{\top}\\ has \\\mathopen{}\left\lVert{(0.6, 0.8)}^{\top}\right\rVert\mathclose{}^2 = 0.36 + 0.64 = 1\\, so it is in the closed unit ball but not the open one.
+> - \\{(0.5, 0.5)}^{\top}\\ has
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert{(0.5, 0.5)}^{\top}\right\rVert\mathclose{}^2 &= 0.25 + 0.25 \\ &= 0.5 \\ &\< 1, \end{aligned} \\
+>
+>   so it is in both the open and the closed unit ball.
+>
+> - \\{(0.6, 0.8)}^{\top}\\ has
+>
+>   \\ \begin{aligned} \mathopen{}\left\lVert{(0.6, 0.8)}^{\top}\right\rVert\mathclose{}^2 &= 0.36 + 0.64 \\ &= 1, \end{aligned} \\
+>
+>   so it is in the closed unit ball but not the open one.
+>
 > - For \\p = 1\\, the open ball of radius \\r\\ around \\c\\ is the open interval \\(c - r, c + r)\\.
 
 > **NOTE:**
@@ -790,10 +838,13 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Example 24 (Second partial derivatives of \\x_1^2 x_2 + 3 x_2\\)** For \\f(\tilde{x}) = x_1^2 x_2 + 3 x_2\\ of [Example 1](#exm-partial-derivative), \\\frac{\partial}{\partial x_1} f(\tilde{x}) = 2 x_1 x_2\\ and \\\frac{\partial}{\partial x_2} f(\tilde{x}) = x_1^2 + 3\\. Differentiating each of these again:
 >
-> - \\\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_1} (2 x_1 x_2) = 2 x_2\\;
-> - \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_2} (2 x_1 x_2) = 2 x_1\\;
-> - \\\frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_1} (x_1^2 + 3) = 2 x_1\\;
-> - \\\frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_2} (x_1^2 + 3) = 0\\.
+> - \\ \begin{aligned} \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_1} (2 x_1 x_2) \\ &= 2 x_2; \end{aligned} \\
+>
+> - \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_2} (2 x_1 x_2) \\ &= 2 x_1; \end{aligned} \\
+>
+> - \\ \begin{aligned} \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_1} (x_1^2 + 3) \\ &= 2 x_1; \end{aligned} \\
+>
+> - \\ \begin{aligned} \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_2} f(\tilde{x})\right)\mathclose{} &= \frac{\partial}{\partial x_2} (x_1^2 + 3) \\ &= 0. \end{aligned} \\
 >
 > The two mixed partial derivatives are both \\2 x_1\\.
 
@@ -838,7 +889,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 14 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\. For \\p = q = 1\\, this definition is the usual [continuity](calculus.llms.md#def-continuous), written out with the \\\varepsilon\\-\\\delta\\ definition of the limit \\\lim\_{y \to x} f(y) = f(x)\\.
+> **Definition 14 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\. For
+>
+> \\ \begin{aligned} p &= q \\ &= 1, \end{aligned} \\
+>
+> this definition is the usual [continuity](calculus.llms.md#def-continuous), written out with the \\\varepsilon\\-\\\delta\\ definition of the limit \\\lim\_{y \to x} f(y) = f(x)\\.
 >
 > Continuity survives the usual operations:
 >
@@ -864,13 +919,21 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > \\ f(\tilde{x}) = \begin{cases} \dfrac{x_1 x_2}{x_1^2 + x_2^2} & \text{if } \tilde{x}\ne \tilde{0}, \\ 0 & \text{if } \tilde{x}= \tilde{0}. \end{cases} \\
 >
-> **Both partial derivatives exist at \\\tilde{0}\\.** For \\h \ne 0\\, \\f(h, 0) = \frac{h \cdot 0}{h^2 + 0} = 0\\, so
+> **Both partial derivatives exist at \\\tilde{0}\\.** For \\h \ne 0\\,
+>
+> \\ \begin{aligned} f(h, 0) &= \frac{h \cdot 0}{h^2 + 0} \\ &= 0, \end{aligned} \\
+>
+> so
 >
 > \\ \begin{aligned} \frac{f(0 + h, 0) - f(0, 0)}{h} &= \frac{0 - 0}{h} && \text{(} f(h, 0) = 0 \text{ and } f(0, 0) = 0 \text{)} \\ &= 0, && \text{(} 0 / h = 0 \text{ for } h \ne 0 \text{)} \end{aligned} \\
 >
 > and the limit as \\h \to 0\\ is \\0\\: \\\frac{\partial}{\partial x_1} f(\tilde{0}) = 0\\ ([Definition 1](#def-partial-derivative)). The same steps with \\f(0, h) = 0\\ give \\\frac{\partial}{\partial x_2} f(\tilde{0}) = 0\\.
 >
-> **But \\f\\ is not continuous at \\\tilde{0}\\** ([Definition 14](#def-continuous-several)). Take \\\varepsilon= \tfrac{1}{4}\\ and any \\\delta\> 0\\, and let \\t = \delta/ 2\\ and \\\tilde{y}= {(t, t)}^{\top}\\. Then \\\mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} = \sqrt{t^2 + t^2} = t \sqrt{2} = \delta/ \sqrt{2} \< \delta\\, but
+> **But \\f\\ is not continuous at \\\tilde{0}\\** ([Definition 14](#def-continuous-several)). Take \\\varepsilon= \tfrac{1}{4}\\ and any \\\delta\> 0\\, and let \\t = \delta/ 2\\ and \\\tilde{y}= {(t, t)}^{\top}\\. Then
+>
+> \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} &= \sqrt{t^2 + t^2} \\ &= t \sqrt{2} \\ &= \delta/ \sqrt{2} \\ &\< \delta, \end{aligned} \\
+>
+> but
 >
 > \\ \begin{aligned} \mathopen{}\left\|f(\tilde{y}) - f(\tilde{0})\right\|\mathclose{} &= \mathopen{}\left\|\frac{t \cdot t}{t^2 + t^2} - 0\right\|\mathclose{} && \text{(} \tilde{y}\ne \tilde{0}\text{, since } t \> 0 \text{)} \\ &= \frac{t^2}{2 t^2} && \text{(} t^2 + t^2 = 2 t^2 \text{)} \\ &= \tfrac{1}{2}, && \text{(cancel } t^2 \> 0 \text{)} \end{aligned} \\
 >
@@ -894,7 +957,11 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 >
 > \\ \begin{aligned} \frac{\partial}{\partial x_1} f(0, x_2) &= \lim\_{h \to 0} \frac{f(h, x_2) - f(0, x_2)}{h} && \text{(definition of the partial derivative, }\href{#def-partial-derivative}{\text{Definition~1}}\text{)} \\ &= \lim\_{h \to 0} \frac{x_2 (h^2 - x_2^2)}{h^2 + x_2^2} && \text{(} f(0, x_2) = 0 \text{; cancel } h \text{)} \\ &= \frac{x_2 \cdot (-x_2^2)}{x_2^2} \\ &= -x_2, && \text{(the quotient is continuous at } h = 0 \text{)} \end{aligned} \\
 >
-> and \\\frac{\partial}{\partial x_1} f(\tilde{0}) = \lim\_{h \to 0} (0 - 0)/h = 0\\, so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 13](#def-hessian))
+> and
+>
+> \\ \begin{aligned} \frac{\partial}{\partial x_1} f(\tilde{0}) &= \lim\_{h \to 0} (0 - 0)/h \\ &= 0, \end{aligned} \\
+>
+> so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 13](#def-hessian))
 >
 > \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} &= \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} \\ &= \frac{d }{d x_2} (-x_2) \\ &= -1, \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} &= \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} \\ &= \frac{d }{d x_1} x_1 \\ &= 1: \end{aligned} \\
 >

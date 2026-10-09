@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:27:12 (PDT)
+Last modified: 2026-10-09 10:43:26 (PDT)
 
 ## 1 Derivatives
 
@@ -24,7 +24,9 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > \\ \begin{aligned} \mathopen{}\left\|(3x + 1) - 7\right\|\mathclose{} &= \mathopen{}\left\|3x - 6\right\|\mathclose{} && \text{(subtract)} \\ &= \mathopen{}\left\|3(x - 2)\right\|\mathclose{} && \text{(distributive law)} \\ &= 3 \mathopen{}\left\|x - 2\right\|\mathclose{} && \text{(} \mathopen{}\left\|3y\right\|\mathclose{} = 3 \mathopen{}\left\|y\right\|\mathclose{} \text{, since } 3 \> 0 \text{)} \\ &\< 3 \cdot\frac{\varepsilon}{3} && \text{(} \mathopen{}\left\|x - 2\right\|\mathclose{} \< \delta= \varepsilon/ 3 \text{)} \\ &= \varepsilon && \text{(multiply)} \end{aligned} \\
 >
-> For example, with \\\varepsilon= 0.3\\ and \\\delta= 0.1\\, the point \\x = 2.05\\ satisfies \\0 \< \mathopen{}\left\|2.05 - 2\right\|\mathclose{} \< 0.1\\, and \\\mathopen{}\left\|(3 \cdot 2.05 + 1) - 7\right\|\mathclose{} = \mathopen{}\left\|7.15 - 7\right\|\mathclose{} = 0.15 \< 0.3\\.
+> For example, with \\\varepsilon= 0.3\\ and \\\delta= 0.1\\, the point \\x = 2.05\\ satisfies \\0 \< \mathopen{}\left\|2.05 - 2\right\|\mathclose{} \< 0.1\\, and
+>
+> \\ \begin{aligned} \mathopen{}\left\|(3 \cdot 2.05 + 1) - 7\right\|\mathclose{} &= \mathopen{}\left\|7.15 - 7\right\|\mathclose{} \\ &= 0.15 \\ &\< 0.3. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -68,7 +70,9 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > \\ \begin{aligned} \frac{f(1 + h) - f(1)}{h} &= \frac{(1 + h)^2 - 1}{h} && \text{(substitute into } f \text{)} \\ &= \frac{1 + 2h + h^2 - 1}{h} && \text{(expand } (1 + h)^2 \text{)} \\ &= \frac{2h + h^2}{h} && \text{(} 1 - 1 = 0 \text{)} \\ &= 2 + h, && \text{(divide by } h \ne 0 \text{)} \end{aligned} \\
 >
-> which tends to \\2\\ as \\h \to 0\\ ([Definition 1](#def-limit)). With \\h = 0.1\\ the difference quotient is \\2 + 0.1 = 2.1\\: the line through \\(1, 1)\\ and \\(1.1, 1.21)\\ has slope \\\tfrac{1.21 - 1}{0.1} = \tfrac{0.21}{0.1} = 2.1\\.
+> which tends to \\2\\ as \\h \to 0\\ ([Definition 1](#def-limit)). With \\h = 0.1\\ the difference quotient is \\2 + 0.1 = 2.1\\: the line through \\(1, 1)\\ and \\(1.1, 1.21)\\ has slope
+>
+> \\ \begin{aligned} \tfrac{1.21 - 1}{0.1} &= \tfrac{0.21}{0.1} \\ &= 2.1. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -90,7 +94,11 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 >   which tends to the finite limit \\f'(3) = 6\\ as \\h \to 0\\.
 >
-> - \\g(x) = \sqrt\[3\]{x}\\ is not differentiable at \\c = 0\\: the difference quotient \\\tfrac{g(h) - g(0)}{h} = \tfrac{\sqrt\[3\]{h}}{h} = \tfrac{1}{(\sqrt\[3\]{h})^2}\\ grows without bound as \\h \to 0\\, so the limit is not finite.
+> - \\g(x) = \sqrt\[3\]{x}\\ is not differentiable at \\c = 0\\: the difference quotient
+>
+>   \\ \begin{aligned} \tfrac{g(h) - g(0)}{h} &= \tfrac{\sqrt\[3\]{h}}{h} \\ &= \tfrac{1}{(\sqrt\[3\]{h})^2} \end{aligned} \\
+>
+>   grows without bound as \\h \to 0\\, so the limit is not finite.
 
 > **NOTE:**
 >
@@ -113,8 +121,17 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 >
 > **Example 6 (One-sided derivatives of \\\mathopen{}\left\|x\right\|\mathclose{}\\ at \\0\\)** Let \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\, the [absolute value](algebra.llms.md#def-absolute-value), and \\c = 0\\.
 >
-> - For \\h \> 0\\, \\\mathopen{}\left\|h\right\|\mathclose{} = h\\, so \\\frac{f(0 + h) - f(0)}{h} = \frac{h - 0}{h} = 1\\. The right-hand derivative of \\f\\ at \\0\\ is \\1\\.
-> - For \\h \< 0\\, \\\mathopen{}\left\|h\right\|\mathclose{} = -h\\, so \\\frac{f(0 + h) - f(0)}{h} = \frac{-h - 0}{h} = -1\\. The left-hand derivative of \\f\\ at \\0\\ is \\-1\\.
+> - For \\h \> 0\\, \\\mathopen{}\left\|h\right\|\mathclose{} = h\\, so
+>
+>   \\ \begin{aligned} \frac{f(0 + h) - f(0)}{h} &= \frac{h - 0}{h} \\ &= 1. \end{aligned} \\
+>
+>   The right-hand derivative of \\f\\ at \\0\\ is \\1\\.
+>
+> - For \\h \< 0\\, \\\mathopen{}\left\|h\right\|\mathclose{} = -h\\, so
+>
+>   \\ \begin{aligned} \frac{f(0 + h) - f(0)}{h} &= \frac{-h - 0}{h} \\ &= -1. \end{aligned} \\
+>
+>   The left-hand derivative of \\f\\ at \\0\\ is \\-1\\.
 >
 > For example, \\h = 0.5\\ gives \\\tfrac{0.5}{0.5} = 1\\, and \\h = -0.5\\ gives \\\tfrac{0.5}{-0.5} = -1\\. The one-sided derivatives differ, since \\1 \ne -1\\.
 
@@ -124,7 +141,11 @@ Last modified: 2026-10-09 10:27:12 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (The second derivative of \\x^3\\)** For \\f(x) = x^3\\, the power rule ([Theorem 3](#thm-deriv-polynomial)) gives \\f'(x) = 3x^2\\ at every \\x\\, and differentiating again, with the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)), gives \\f''(x) = 3 \cdot 2x = 6x\\. So \\f''(2) = 12\\, \\f''(0) = 0\\, and \\f''(-1) = -6\\.
+> **Example 7 (The second derivative of \\x^3\\)** For \\f(x) = x^3\\, the power rule ([Theorem 3](#thm-deriv-polynomial)) gives \\f'(x) = 3x^2\\ at every \\x\\, and differentiating again, with the constant multiple rule ([Theorem 2](#thm-deriv-const-factor)), gives
+>
+> \\ \begin{aligned} f''(x) &= 3 \cdot 2x \\ &= 6x. \end{aligned} \\
+>
+> So \\f''(2) = 12\\, \\f''(0) = 0\\, and \\f''(-1) = -6\\.
 
 ### 1.2 Derivative rules
 
@@ -641,9 +662,21 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > \\\frac{df}{dw} = 2w - 4\\
 >
-> **2.** Set it to zero: \\2w - 4 = 0\\ gives \\w = 2\\. \\f(2) = 4 - 8 + 7 = 3\\ is the minimum of the values of \\f\\. Completing the square, \\f(w) = (w - 2)^2 + 3\\, since \\(w - 2)^2 + 3 = w^2 - 4w + 4 + 3 = w^2 - 4w + 7\\, and \\(w - 2)^2 \ge 0\\, so \\f(w) \ge 3 = f(2)\\ for every \\w\\. Equivalently, the derivative is negative below \\w = 2\\ and positive above it, so the function falls into that point and rises out of it.
+> **2.** Set it to zero: \\2w - 4 = 0\\ gives \\w = 2\\.
 >
-> **3.** At \\w = 1\\ the derivative is \\2(1) - 4 = -2\\, so \\f\\ is falling there. With \\\varepsilon= 0.01\\, [Equation 1](#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from \\f(1) = 1 - 4 + 7 = 4\\ to \\3.98\\. The exact value is
+> \\ \begin{aligned} f(2) &= 4 - 8 + 7 \\ &= 3 \end{aligned} \\
+>
+> is the minimum of the values of \\f\\. Completing the square, \\f(w) = (w - 2)^2 + 3\\, since
+>
+> \\ \begin{aligned} (w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\ &= w^2 - 4w + 7, \end{aligned} \\
+>
+> and \\(w - 2)^2 \ge 0\\, so \\f(w) \ge 3 = f(2)\\ for every \\w\\. Equivalently, the derivative is negative below \\w = 2\\ and positive above it, so the function falls into that point and rises out of it.
+>
+> **3.** At \\w = 1\\ the derivative is \\2(1) - 4 = -2\\, so \\f\\ is falling there. With \\\varepsilon= 0.01\\, [Equation 1](#eq-linear-approx) predicts a change of \\(0.01)(-2) = -0.02\\, from
+>
+> \\ \begin{aligned} f(1) &= 1 - 4 + 7 \\ &= 4 \end{aligned} \\
+>
+> to \\3.98\\. The exact value is
 >
 > \\ \begin{aligned} f(1.01) &= (1.01)^2 - 4(1.01) + 7 \\ &= 1.0201 - 4.04 + 7 \\ &= 3.9801 \end{aligned} \\
 >
@@ -658,7 +691,13 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Example 10 (Critical points that are and are not flat points)**  
 >
 > - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 2](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
-> - \\f(w) = w^3\\ has \\f'(0) = 3 \cdot 0^2 = 0\\, so \\0\\ is a flat point of \\f\\, and hence a critical point.
+>
+> - \\f(w) = w^3\\ has
+>
+>   \\ \begin{aligned} f'(0) &= 3 \cdot 0^2 \\ &= 0, \end{aligned} \\
+>
+>   so \\0\\ is a flat point of \\f\\, and hence a critical point.
+>
 > - \\h(w) = w^2\\ is differentiable everywhere, with \\h'(w) = 2w\\, which is \\0\\ only at \\w = 0\\. So \\0\\ is the only critical point of \\h\\; for example, \\h'(1) = 2 \ne 0\\, so \\1\\ is not one.
 
 > **NOTE:**
@@ -728,7 +767,11 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Example 11 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is \\f^{(k)}(0) = e^0 = 1\\. The degree-\\n\\ Maclaurin polynomial is:
+> **Example 11 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is
+>
+> \\ \begin{aligned} f^{(k)}(0) &= e^0 \\ &= 1. \end{aligned} \\
+>
+> The degree-\\n\\ Maclaurin polynomial is:
 >
 > \\ \begin{aligned} P_n(x) &= 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} \\ &= \sum\_{k=0}^n \frac{x^k}{k!} \end{aligned} \\
 >
@@ -1202,9 +1245,18 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > **Example 17 (A continuous function, and one failure of each condition)**  
 >
-> - \\f(x) = x^2\\ is continuous at \\c = 1\\: \\f(1) = 1\\ is defined, and \\\lim\_{x \to 1} x^2 = 1 = f(1)\\.
-> - \\g(x) = \tfrac{x^2 - 1}{x - 1}\\ fails condition 1 at \\c = 1\\: \\g(1)\\ is not defined (it would divide by zero), even though \\\lim\_{x \to 1} g(x) = \lim\_{x \to 1} (x + 1) = 2\\ exists (\\x^2 - 1 = (x - 1)(x + 1)\\, and the factor \\x - 1\\ cancels for \\x \ne 1\\).
+> - \\f(x) = x^2\\ is continuous at \\c = 1\\: \\f(1) = 1\\ is defined, and
+>
+>   \\ \begin{aligned} \lim\_{x \to 1} x^2 &= 1 \\ &= f(1). \end{aligned} \\
+>
+> - \\g(x) = \tfrac{x^2 - 1}{x - 1}\\ fails condition 1 at \\c = 1\\: \\g(1)\\ is not defined (it would divide by zero), even though
+>
+>   \\ \begin{aligned} \lim\_{x \to 1} g(x) &= \lim\_{x \to 1} (x + 1) \\ &= 2 \end{aligned} \\
+>
+>   exists (\\x^2 - 1 = (x - 1)(x + 1)\\, and the factor \\x - 1\\ cancels for \\x \ne 1\\).
+>
 > - The step function \\H(x) = 1\\ for \\x \ge 0\\ and \\H(x) = 0\\ for \\x \< 0\\ fails condition 2 at \\c = 0\\: values to the left are all \\0\\ and values to the right are all \\1\\, so \\\lim\_{x \to 0} H(x)\\ does not exist.
+>
 > - \\k(x) = x^2\\ for \\x \ne 1\\, with \\k(1) = 5\\, fails condition 3 at \\c = 1\\: \\\lim\_{x \to 1} k(x) = 1\\ exists but differs from \\k(1) = 5\\.
 
 > **NOTE:**
@@ -1230,11 +1282,23 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 19 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, the [square root](algebra.llms.md#def-square-root), defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 18](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\, \\\lim\_{x \to 0^+} \sqrt{x} = 0 = f(0)\\, and \\\lim\_{x \to 1^-} \sqrt{x} = 1 = f(1)\\, so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 18](#def-continuous-on)).
+> **Example 19 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, the [square root](algebra.llms.md#def-square-root), defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 18](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\,
+>
+> \\ \begin{aligned} \lim\_{x \to 0^+} \sqrt{x} &= 0 \\ &= f(0), \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \lim\_{x \to 1^-} \sqrt{x} &= 1 \\ &= f(1), \end{aligned} \\
+>
+> so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 18](#def-continuous-on)).
 
 > **NOTE:**
 >
-> **Example 20 (A function not continuous on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = 0\\ for \\0 \le x \< 1\\ and \\f(1) = 2\\. Conditions 1 and 2 of [Definition 18](#def-continuous-on) hold, but \\\lim\_{x \to 1^-} f(x) = 0 \ne 2 = f(1)\\, so condition 3 fails and \\f\\ is not continuous on \\\[0, 1\]\\.
+> **Example 20 (A function not continuous on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = 0\\ for \\0 \le x \< 1\\ and \\f(1) = 2\\. Conditions 1 and 2 of [Definition 18](#def-continuous-on) hold, but
+>
+> \\ \begin{aligned} \lim\_{x \to 1^-} f(x) &= 0 \\ &\ne 2 \\ &= f(1), \end{aligned} \\
+>
+> so condition 3 fails and \\f\\ is not continuous on \\\[0, 1\]\\.
 
 > **NOTE:**
 >
@@ -1273,7 +1337,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 21 (Riemann sum)** Let \\f\\ be a function on \\\[a, b\]\\, let \\\mathcal{P}\\ be a partition \\a = x_0 \< x_1 \< \cdots \< x_n = b\\ of \\\[a, b\]\\ ([Definition 19](#def-partition)), and choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ and these sample points is
+> **Definition 21 (Riemann sum)** Let \\f\\ be a function on \\\[a, b\]\\, let \\\mathcal{P}\\ be a partition
+>
+> \\ \begin{aligned} a &= x_0 \\ &\< x_1 \\ &\< \cdots \\ &\< x_n \\ &= b \end{aligned} \\
+>
+> of \\\[a, b\]\\ ([Definition 19](#def-partition)), and choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ and these sample points is
 >
 > \\\sum\_{i=1}^nf(x_i^\*)\\\Delta x_i,\\
 >
@@ -1367,7 +1435,11 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 
 > **NOTE:**
 >
-> **Example 29 (Continuous but not differentiable: \\\mathopen{}\left\|x\right\|\mathclose{}\\)** The absolute-value function \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is continuous at \\x = 0\\ (\\\lim\_{x \to 0}\mathopen{}\left\|x\right\|\mathclose{} = 0 = \mathopen{}\left\|0\right\|\mathclose{}\\), but it is not differentiable at \\x = 0\\: its left-hand derivative there is \\-1\\ and its right-hand derivative is \\+1\\ ([Example 6](#exm-one-sided-derivative)).
+> **Example 29 (Continuous but not differentiable: \\\mathopen{}\left\|x\right\|\mathclose{}\\)** The absolute-value function \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ is continuous at \\x = 0\\, since
+>
+> \\ \begin{aligned} \lim\_{x \to 0}\mathopen{}\left\|x\right\|\mathclose{} &= 0 \\ &= \mathopen{}\left\|0\right\|\mathclose{}, \end{aligned} \\
+>
+> but it is not differentiable at \\x = 0\\: its left-hand derivative there is \\-1\\ and its right-hand derivative is \\+1\\ ([Example 6](#exm-one-sided-derivative)).
 >
 > This [counterexample](notation.llms.md#def-counterexample) shows that the [converse](notation.llms.md#def-converse) of [Theorem 12](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 3](#fig-abs-value).
 >
@@ -1477,7 +1549,15 @@ Together, [Theorem 12](#thm-diff-implies-cont) and [Theorem 13](#thm-cont-impl
 >
 > \\ \begin{aligned} F(x) &= \int_0^x 2\\dt && \text{(definition of the accumulation function)} \\ &= 2 \cdot(x - 0) && \text{(every Riemann sum is } 2 \text{ times the total width } x - 0 \text{)} \\ &= 2x && \text{(subtract)} \end{aligned} \\
 >
-> and \\F(0) = 0 = 2 \cdot 0\\ too. For example, \\F(1.5) = 2 \cdot 1.5 = 3\\, the area of a rectangle of height \\2\\ and width \\1.5\\.
+> and
+>
+> \\ \begin{aligned} F(0) &= 0 \\ &= 2 \cdot 0 \end{aligned} \\
+>
+> too. For example,
+>
+> \\ \begin{aligned} F(1.5) &= 2 \cdot 1.5 \\ &= 3, \end{aligned} \\
+>
+> the area of a rectangle of height \\2\\ and width \\1.5\\.
 
 > **NOTE:**
 >
@@ -1715,7 +1795,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \\ \begin{aligned} F(x) \\ &\stackrel{\text{def}}{=}\\ \int_0^x 2t\\dt \\ \\ &=\\ \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=0}^{t=x} \\ \\ &=\\ x^2 - 0^2 \\ \\ &=\\ x^2, \end{aligned} \\
 >
-> so \\F(x) = x^2\\, and indeed \\F'(x) = 2x = f(x)\\, as [Theorem 15](#thm-ftc) Part 1 predicts. [Figure 5](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
+> so \\F(x) = x^2\\, and indeed
+>
+> \\ \begin{aligned} F'(x) &= 2x \\ &= f(x), \end{aligned} \\
+>
+> as [Theorem 15](#thm-ftc) Part 1 predicts. [Figure 5](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
 >
 > Show R code
 >
@@ -1775,7 +1859,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \(b\) \\F(x) = x^2\\; tangent slope at each marked \\x\\ equals \\f(x) = 2x\\.
 >
-> Figure 5: Left: \\f(t) = 2t\\; the shaded area \\\int_0^{1.5} 2t\\dt = F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
+> Left: \\f(t) = 2t\\; the shaded area
+>
+> \\ \begin{aligned} \int_0^{1.5} 2t\\dt &= F(1.5) \\ &= 2.25; \end{aligned} \\
+>
+> Figure 5: vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
 
 > **NOTE:**
 >
@@ -1936,7 +2024,9 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 37 (The double integral of \\1\\ is an area)** Let \\f(x, y) = 1\\ on the rectangle \\R = \[0, 2\] \times \[0, 3\]\\. Every sum in [Definition 28](#def-double-integral) adds up the areas of rectangles inside \\R\\, and those sums approach the area of \\R\\ as the grid gets finer, so \\\iint_R 1\\dA = 2 \cdot 3 = 6\\.
+> **Example 37 (The double integral of \\1\\ is an area)** Let \\f(x, y) = 1\\ on the rectangle \\R = \[0, 2\] \times \[0, 3\]\\. Every sum in [Definition 28](#def-double-integral) adds up the areas of rectangles inside \\R\\, and those sums approach the area of \\R\\ as the grid gets finer, so
+>
+> \\ \begin{aligned} \iint_R 1\\dA &= 2 \cdot 3 \\ &= 6. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -2124,13 +2214,19 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > **Integrating \\y\\ first, then \\x\\:**
 >
-> Holding \\x\\ fixed and differentiating in \\y\\ (by the quotient rule, [Theorem 9](#thm-quotient-rule)), \\\displaystyle\frac{d }{d y}\frac{y}{x^2 + y^2} = \frac{(x^2 + y^2) - y \cdot 2y}{(x^2 + y^2)^2} = \frac{x^2 - y^2}{(x^2 + y^2)^2}\\. (A derivative in one variable with the others held fixed is a [partial derivative](vector-calculus.llms.md#def-partial-derivative), defined on the vector calculus page.) The arctangent \\\arctan\\ is the inverse of the tangent function from trigonometry; all this example needs is that \\\frac{d }{d x}\arctan(x) = \frac{1}{1 + x^2}\\, \\\arctan(0) = 0\\, and \\\arctan(1) = \frac{\pi}{4}\\.
+> Holding \\x\\ fixed and differentiating in \\y\\ (by the quotient rule, [Theorem 9](#thm-quotient-rule)),
+>
+> \\ \begin{aligned} \frac{d }{d y}\frac{y}{x^2 + y^2} &= \frac{(x^2 + y^2) - y \cdot 2y}{(x^2 + y^2)^2} \\ &= \frac{x^2 - y^2}{(x^2 + y^2)^2}. \end{aligned} \\
+>
+> (A derivative in one variable with the others held fixed is a [partial derivative](vector-calculus.llms.md#def-partial-derivative), defined on the vector calculus page.) The arctangent \\\arctan\\ is the inverse of the tangent function from trigonometry; all this example needs is that \\\frac{d }{d x}\arctan(x) = \frac{1}{1 + x^2}\\, \\\arctan(0) = 0\\, and \\\arctan(1) = \frac{\pi}{4}\\.
 >
 > \\ \begin{aligned} \int_0^1\\\int_0^1 f(x, y)\\dy\\dx &= \int_0^1 \mathopen{}\left\[\frac{y}{x^2 + y^2}\right\]\mathclose{}\_{y=0}^{y=1}\\dx \\&= \int_0^1 \frac{1}{x^2 + 1}\\dx \\&= \mathopen{}\left\[\arctan(x)\right\]\mathclose{}\_0^1 \\&= \frac{\pi}{4} \end{aligned} \\
 >
 > **Integrating \\x\\ first, then \\y\\:**
 >
-> Holding \\y\\ fixed and differentiating in \\x\\, \\\displaystyle\frac{d }{d x}\mathopen{}\left(-\frac{x}{x^2 + y^2}\right)\mathclose{} = -\frac{(x^2 + y^2) - x \cdot 2x}{(x^2 + y^2)^2} = \frac{x^2 - y^2}{(x^2 + y^2)^2}\\:
+> Holding \\y\\ fixed and differentiating in \\x\\,
+>
+> \\ \begin{aligned} \frac{d }{d x}\mathopen{}\left(-\frac{x}{x^2 + y^2}\right)\mathclose{} &= -\frac{(x^2 + y^2) - x \cdot 2x}{(x^2 + y^2)^2} \\ &= \frac{x^2 - y^2}{(x^2 + y^2)^2}: \end{aligned} \\
 >
 > \\ \begin{aligned} \int_0^1\\\int_0^1 f(x, y)\\dx\\dy &= \int_0^1 \mathopen{}\left\[-\frac{x}{x^2 + y^2}\right\]\mathclose{}\_{x=0}^{x=1}\\dy \\&= \int_0^1 \mathopen{}\left(-\frac{1}{1 + y^2}\right)\mathclose{}\\dy \\&= -\mathopen{}\left\[\arctan(y)\right\]\mathclose{}\_0^1 \\&= -\frac{\pi}{4} \end{aligned} \\
 >
@@ -2230,7 +2326,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > Both orders give \\\frac{2}{3}\\, as [Corollary 2](#cor-fubini-rect) guarantees.
 >
-> As a cross-check, linearity of expectation gives the same value: since \\\operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} = \int_0^1 x^2\\dx = \frac{1}{3}\\ for \\X \sim \operatorname{Uniform}(0, 1)\\ (and likewise for \\Y\\),
+> As a cross-check, linearity of expectation gives the same value: since
+>
+> \\ \begin{aligned} \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} &= \int_0^1 x^2\\dx \\ &= \frac{1}{3} \end{aligned} \\
+>
+> for \\X \sim \operatorname{Uniform}(0, 1)\\ (and likewise for \\Y\\),
 >
 > \\ \begin{aligned} \operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} &= \operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{} \\ &= \operatorname{E}\mathopen{}\left\[X^2\right\]\mathclose{} + \operatorname{E}\mathopen{}\left\[Y^2\right\]\mathclose{} \\ &= \frac{1}{3} + \frac{1}{3} \\ &= \frac{2}{3}. \end{aligned} \\
 >
@@ -2425,7 +2525,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > **Example 43 (When neither Fubini–Tonelli condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 40](#exm-fubini-fail) illustrates a case where neither condition of [Theorem 17](#thm-fubini-tonelli) is satisfied.
 >
-> **Why [Theorem 17](#thm-fubini-tonelli)’s conditions fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates condition (b). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies \\\|f(x, y)\| = \mathopen{}\left\|x^2 - y^2\right\|\mathclose{}/(x^2 + y^2)^2 = \mathopen{}\left\|\cos 2\theta\right\|\mathclose{}/r^2\\, so
+> **Why [Theorem 17](#thm-fubini-tonelli)’s conditions fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates condition (b). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies
+>
+> \\ \begin{aligned} \|f(x, y)\| &= \mathopen{}\left\|x^2 - y^2\right\|\mathclose{}/(x^2 + y^2)^2 \\ &= \mathopen{}\left\|\cos 2\theta\right\|\mathclose{}/r^2, \end{aligned} \\
+>
+> so
 >
 > \\ \begin{aligned} \iint_R \|f\|\\dA &\ge \int_0^{\pi/2}\\\int_0^{\varepsilon} \frac{\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}}{r^2}\\ r\\dr\\d\theta\\ &= \mathopen{}\left(\int_0^{\pi/2}\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}\\d\theta\right)\mathclose{} \int_0^{\varepsilon} \frac{dr}{r}\\ &= +\infty, \end{aligned} \\
 >
