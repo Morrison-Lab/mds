@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 23:13:21 (UTC)
+Last modified: 2026-10-09 00:29:41 (UTC)
 
 > **NOTE:**
 >
@@ -192,7 +192,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 
 > **NOTE:**
 >
-> **Definition 9 (Finite additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](sets-functions.llms.md#def-function) \\\mu : \mathcal{S}\to \[0, \infty\]\\, with values in the [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
+> **Definition 9 (Finite additivity)** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A [function](sets-functions.llms.md#def-function) \\\mu: \mathcal{S}\to \[0, \infty\]\\, with values in the [extended non-negative reals](sets-functions.llms.md#def-extended-nonneg-reals), is **finitely additive** if, for every finite collection of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
 > \\\mu(A_1 \cup \cdots \cup A_n) = \sum\_{i=1}^n\mu(A_i)\\
 
@@ -214,7 +214,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 
 > **NOTE:**
 >
-> **Definition 10 (Countable additivity (\\\sigma\\-additivity))** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu : \mathcal{S}\to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
+> **Definition 10 (Countable additivity (\\\sigma\\-additivity))** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu: \mathcal{S}\to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
 > \\\mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) = \sum\_{i=1}^{\infty} \mu(A_i)\\
 
@@ -242,17 +242,17 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Example 13 (A countably additive function with \\\mu(\emptyset) = 0\\)** The counting function \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 12](#exm-countable-additivity) is countably additive, and:
 >
-> \\ \begin{aligned} \mu(\emptyset) &= \mathopen{}\left\|\emptyset\right\|\mathclose{} && \text{(definition of } \mu \text{)} \\ &= 0 && \text{(} \emptyset \text{ has no elements)} \end{aligned} \\
+> \\ \begin{aligned} \mu(\emptyset) &= \mathopen{}\left\|\emptyset\right\|\mathclose{} && \text{(definition of } \mu\text{)} \\ &= 0 && \text{(} \emptyset \text{ has no elements)} \end{aligned} \\
 
 > **NOTE:**
 >
 > **Example 14 (A countably additive function with \\\mu(\emptyset) = \infty\\)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\infty\\ for every set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), including \\A = \emptyset\\. For any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\, the left-hand side of the countable additivity equation is:
 >
-> \\ \begin{aligned} \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) &= \infty && \text{(definition of } \mu \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) &= \infty && \text{(definition of } \mu\text{)} \end{aligned} \\
 >
 > and the right-hand side, the limit of its partial sums ([Lemma 1](#lem-nonneg-series)), is:
 >
-> \\ \begin{aligned} \sum\_{i=1}^{\infty} \mu(A_i) &= \infty + \infty + \cdots && \text{(definition of } \mu \text{)} \\ &= \infty && \text{(every partial sum is } \infty \text{)} \end{aligned} \\
+> \\ \begin{aligned} \sum\_{i=1}^{\infty} \mu(A_i) &= \infty + \infty + \cdots && \text{(definition of } \mu\text{)} \\ &= \infty && \text{(every partial sum is } \infty \text{)} \end{aligned} \\
 >
 > The two sides agree, so \\\mu\\ is countably additive, and \\\mu(\emptyset) = \infty\\.
 
@@ -300,7 +300,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 
 > **NOTE:**
 >
-> **Definition 11 (Measure)** A **measure** on a set \\S\\ with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ is a function \\\mu : \mathcal{S}\to \[0, \infty\]\\ that satisfies:
+> **Definition 11 (Measure)** A **measure** on a set \\S\\ with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ is a function \\\mu: \mathcal{S}\to \[0, \infty\]\\ that satisfies:
 >
 > - \\\mu(\emptyset) = 0\\.
 > - \\\mu\\ is [countably additive](#def-countable-additivity).
@@ -422,7 +422,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Example 24 (A fair die, and the unit interval)**  
 >
-> - For one roll of a fair die, the sample space is \\\Omega = D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the events are all subsets of \\D\\, and \\\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\\operatorname{P}\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\\, and \\\operatorname{P}\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since \\\operatorname{P}\mathopen{}\left(D\right)\mathclose{} = 6/6 = 1\\. The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has \\\operatorname{P}\mathopen{}\left(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\right)\mathclose{} = 3/6 = 1/2\\.
+> - For one roll of a fair die, the sample space is \\\Omega= D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, the events are all subsets of \\D\\, and \\\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{} / 6\\. \\\operatorname{P}\\ is the counting function \\\mu(A) = \mathopen{}\left\|A\right\|\mathclose{}\\ of [Example 16](#exm-measure) divided by \\6\\. So \\\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\\, and \\\operatorname{P}\\ is countably additive, because each sum in [Example 12](#exm-countable-additivity) has at most six nonzero terms, and dividing a finite sum by \\6\\ divides each term by \\6\\. It is a probability measure, since \\\operatorname{P}\mathopen{}\left(D\right)\mathclose{} = 6/6 = 1\\. The outcome \\3\\ is in the event “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, which has \\\operatorname{P}\mathopen{}\left(\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\right)\mathclose{} = 3/6 = 1/2\\.
 > - Lebesgue measure on \\\[0, 1\]\\ is a probability measure, because \\\lambda(\[0, 1\]) = 1\\ ([Example 20](#exm-lebesgue-measure)).
 > - The counting measure on \\D\\ is not a probability measure, because it gives \\D\\ the value \\6\\.
 
@@ -455,7 +455,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Definition 21 (Integral of a non-negative function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
 >
-> \\ \int_S f \\ d\mu \stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^n\mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
+> \\ \int_S f \\ d\mu\stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^n\mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
 >
 > where the [supremum](algebra.llms.md#def-supremum) is over all ways of writing \\S\\ as the union of finitely many nonempty [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, \ldots, A_n\\ in \\\mathcal{S}\\, and each \\\inf\_{s \in A_i} f(s)\\ is the [infimum](algebra.llms.md#def-infimum) of the values of \\f\\ on \\A_i\\. In the sums, \\0 \cdot \infty \stackrel{\text{def}}{=}0\\, and \\x \cdot \infty \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\; the supremum is \\\infty\\ if some sum is \\\infty\\. The integral is also written \\\int_S f(s) \\ d\mu(s)\\.
 >
@@ -463,7 +463,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 
 > **NOTE:**
 >
-> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 21](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda = \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
+> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 21](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda= \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
 
 > **NOTE:**
 >
@@ -473,9 +473,9 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > \\ \begin{aligned} \sum\_{i=1}^n\mathopen{}\left(\inf\_{x \in A_i} g(x)\right)\mathclose{} \mu(A_i) &= \sum\_{i=1}^n\sum\_{x \in A_i} \inf\_{y \in A_i} g(y) && \text{(} \mu(A_i) \text{ counts the elements of } A_i \text{)} \\ &\le \sum\_{i=1}^n\sum\_{x \in A_i} g(x) && \text{(an infimum is at most each value)} \\ &= \sum\_{x \in D} g(x) && \text{(each } x \in D \text{ is in exactly one } A_i \text{)} \end{aligned} \\
 >
-> The split into the six single points \\\mathopen{}\left\\1\right\\\mathclose{}, \ldots, \mathopen{}\left\\6\right\\\mathclose{}\\ gives exactly \\\sum\_{x \in D} g(x)\\, so the supremum is \\\int_D g \\ d\mu = \sum\_{x \in D} g(x)\\. For example, with \\g(x) = x\\, \\\int_D g \\ d\mu = 1 + 2 + \cdots + 6 = 21\\.
+> The split into the six single points \\\mathopen{}\left\\1\right\\\mathclose{}, \ldots, \mathopen{}\left\\6\right\\\mathclose{}\\ gives exactly \\\sum\_{x \in D} g(x)\\, so the supremum is \\\int_D g \\ d\mu= \sum\_{x \in D} g(x)\\. For example, with \\g(x) = x\\, \\\int_D g \\ d\mu= 1 + 2 + \cdots + 6 = 21\\.
 >
-> *An infinite integral.* For the counting measure \\\mu\\ on \\\mathbb{N}\\ and the constant function \\h(n) = 1\\, the split with one set, \\A_1 = \mathbb{N}\\, gives the sum \\1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty\\, so \\\int\_{\mathbb{N}} h \\ d\mu = \infty\\.
+> *An infinite integral.* For the counting measure \\\mu\\ on \\\mathbb{N}\\ and the constant function \\h(n) = 1\\, the split with one set, \\A_1 = \mathbb{N}\\, gives the sum \\1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty\\, so \\\int\_{\mathbb{N}} h \\ d\mu= \infty\\.
 
 > **NOTE:**
 >
@@ -485,7 +485,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > so that \\f = f^{+} - f^{-}\\ and \\\mathopen{}\left\|f\right\|\mathclose{} = f^{+} + f^{-}\\. The **integral** of \\f\\ with respect to \\\mu\\ is
 >
-> \\\int_S f \\ d\mu \stackrel{\text{def}}{=}\int_S f^{+} \\ d\mu - \int_S f^{-} \\ d\mu,\\
+> \\\int_S f \\ d\mu\stackrel{\text{def}}{=}\int_S f^{+} \\ d\mu- \int_S f^{-} \\ d\mu,\\
 >
 > using [Definition 21](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995](#ref-billingsley1995probability), Theorem 13.3).)
 >
@@ -495,15 +495,15 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Example 27 (An integral with positive and negative parts)** For the counting measure \\\mu\\ on the die rolls \\D\\, let \\f(x) = x - 3\\. Its values at \\1, \ldots, 6\\ are \\-2, -1, 0, 1, 2, 3\\, so:
 >
-> - \\f^{+}\\ has values \\0, 0, 0, 1, 2, 3\\, and \\\int_D f^{+} \\ d\mu = 6\\ by [Example 26](#exm-integral-nonneg);
-> - \\f^{-}\\ has values \\2, 1, 0, 0, 0, 0\\, and \\\int_D f^{-} \\ d\mu = 3\\;
-> - \\\int_D f \\ d\mu = 6 - 3 = 3\\, which is also \\\sum\_{x \in D} (x - 3) = 21 - 18 = 3\\.
+> - \\f^{+}\\ has values \\0, 0, 0, 1, 2, 3\\, and \\\int_D f^{+} \\ d\mu= 6\\ by [Example 26](#exm-integral-nonneg);
+> - \\f^{-}\\ has values \\2, 1, 0, 0, 0, 0\\, and \\\int_D f^{-} \\ d\mu= 3\\;
+> - \\\int_D f \\ d\mu= 6 - 3 = 3\\, which is also \\\sum\_{x \in D} (x - 3) = 21 - 18 = 3\\.
 
 > **NOTE:**
 >
 > **Definition 23 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra.llms.md#def-absolute-value) is finite:
 >
-> \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu \< \infty\\
+> \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu\< \infty\\
 >
 > The property itself is called **absolute integrability**.
 
@@ -515,8 +515,8 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Example 28 (Absolutely integrable and not)**  
 >
-> - For the counting measure on the die rolls \\D\\, \\f(x) = x - 3\\ ([Example 27](#exm-integral)) is absolutely integrable: \\\int_D \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 \< \infty\\ by [Example 26](#exm-integral-nonneg).
-> - For the counting measure on \\\mathbb{N}\\, the constant function \\h(n) = 1\\ is not absolutely integrable, because \\\int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu = \int\_{\mathbb{N}} h \\ d\mu = \infty\\ ([Example 26](#exm-integral-nonneg)).
+> - For the counting measure on the die rolls \\D\\, \\f(x) = x - 3\\ ([Example 27](#exm-integral)) is absolutely integrable: \\\int_D \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu= 2 + 1 + 0 + 1 + 2 + 3 = 9 \< \infty\\ by [Example 26](#exm-integral-nonneg).
+> - For the counting measure on \\\mathbb{N}\\, the constant function \\h(n) = 1\\ is not absolutely integrable, because \\\int\_{\mathbb{N}} \mathopen{}\left\|h\right\|\mathclose{} \\ d\mu= \int\_{\mathbb{N}} h \\ d\mu= \infty\\ ([Example 26](#exm-integral-nonneg)).
 
 ## 8 \\L^p\\ spaces
 
@@ -539,7 +539,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 > **Example 29 (An \\L^1\\ function not in \\L^2\\)** Consider the interval \\(0, 1)\\ equipped with the Borel \\\sigma\\-algebra ([Definition 4](#def-borel-sigma-algebra)) and Lebesgue measure \\\mu\\ ([Definition 15](#def-lebesgue-measure)). Define \\f : (0, 1) \to \mathbb{R}\\ by \\f(x) = x^{-1/2}\\.
 >
 > 1.  For \\p = 1\\: \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_1 = \int_0^1 x^{-1/2} \\ dx = \mathopen{}\left\[2 x^{1/2}\right\]\mathclose{}\_0^1 = 2 \< \infty, \\ so \\f \in L^1((0, 1), \mu)\\.
-> 2.  For \\p = 2\\: \\ \mathopen{}\left\|f(x)\right\|\mathclose{}^2 = \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 = \frac{1}{x}. \\ The integral is: \\ \int_0^1 \frac{1}{x} \\ dx = \lim\_{\epsilon \to 0^+} \mathopen{}\left\[\ln x\right\]\mathclose{}\_\epsilon^1 = \lim\_{\epsilon \to 0^+} (-\ln \epsilon) = \infty. \\ Therefore, \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_2 = \infty\\, so \\f \notin L^2((0, 1), \mu)\\.
+> 2.  For \\p = 2\\: \\ \mathopen{}\left\|f(x)\right\|\mathclose{}^2 = \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 = \frac{1}{x}. \\ The integral is: \\ \int_0^1 \frac{1}{x} \\ dx = \lim\_{\varepsilon\to 0^+} \mathopen{}\left\[\ln x\right\]\mathclose{}\_\varepsilon^1 = \lim\_{\varepsilon\to 0^+} (-\ln \varepsilon) = \infty. \\ Therefore, \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_2 = \infty\\, so \\f \notin L^2((0, 1), \mu)\\.
 >
 > This shows that \\L^2 \subset L^1\\ on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.
 
@@ -547,7 +547,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Theorem 5 (Holder’s inequality)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\p, q \in \[1, \infty\]\\ be conjugate exponents satisfying \\\frac{1}{p} + \frac{1}{q} = 1\\ (with the convention that \\q = \infty\\ when \\p = 1\\, and \\q = 1\\ when \\p = \infty\\). If \\f \in L^p(\mu)\\ and \\g \in L^q(\mu)\\ ([Definition 24](#def-lp-space)), then their product \\f g\\ is [absolutely integrable](#def-absolutely-integrable) (\\f g \in L^1(\mu)\\) and satisfies:
 >
-> \\ \mathopen{}\left\lVert f g\right\rVert\mathclose{}\_1 = \int_S \mathopen{}\left\|f g\right\|\mathclose{} \\ d\mu \le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_q. \\
+> \\ \mathopen{}\left\lVert f g\right\rVert\mathclose{}\_1 = \int_S \mathopen{}\left\|f g\right\|\mathclose{} \\ d\mu\le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_q. \\
 >
 > When \\p = q = 2\\, this inequality is the Cauchy-Schwarz inequality for integrals.
 
@@ -571,7 +571,7 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > *Remark 12* (\\L^p\\ spaces and norms in probability and machine learning). In probability, statistics, and machine learning, \\L^p\\ spaces structure the geometry of random variables, estimators, and loss functions:
 >
-> 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu = \operatorname{P}\\ is a probability measure ([Definition 19](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
+> 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu= \operatorname{P}\\ is a probability measure ([Definition 19](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
 >
 > 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
 >
@@ -596,9 +596,9 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 
 > **NOTE:**
 >
-> **Definition 26 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu \otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
+> **Definition 26 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu\otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
 >
-> \\(\mu \otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\\
+> \\(\mu\otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\\
 >
 > with \\0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\\ and \\x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\\ for \\x \> 0\\. Exactly one measure has these values ([Billingsley 1995](#ref-billingsley1995probability), Theorem 18.2).
 
@@ -606,8 +606,8 @@ Last modified: 2026-10-08 23:13:21 (UTC)
 >
 > **Example 32 (Product measures)**  
 >
-> - For the counting measure \\\mu\\ on the die rolls \\D\\, \\(\mu \otimes \mu)(A \times B) = \mathopen{}\left\|A\right\|\mathclose{} \mathopen{}\left\|B\right\|\mathclose{}\\, the number of pairs in \\A \times B\\. For example, the set of pairs in which both rolls are even is \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, with \\(\mu \otimes \mu)(\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}) = 3 \cdot 3 = 9\\ pairs.
-> - For Lebesgue measure \\\lambda\\ on \\\mathbb{R}\\, \\(\lambda \otimes \lambda)(\[0, 2\] \times \[0, 3\]) = 2 \cdot 3 = 6\\, the area of the rectangle.
+> - For the counting measure \\\mu\\ on the die rolls \\D\\, \\(\mu\otimes \mu)(A \times B) = \mathopen{}\left\|A\right\|\mathclose{} \mathopen{}\left\|B\right\|\mathclose{}\\, the number of pairs in \\A \times B\\. For example, the set of pairs in which both rolls are even is \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, with \\(\mu\otimes \mu)(\mathopen{}\left\\2, 4, 6\right\\\mathclose{} \times \mathopen{}\left\\2, 4, 6\right\\\mathclose{}) = 3 \cdot 3 = 9\\ pairs.
+> - For Lebesgue measure \\\lambda\\ on \\\mathbb{R}\\, \\(\lambda\otimes \lambda)(\[0, 2\] \times \[0, 3\]) = 2 \cdot 3 = 6\\, the area of the rectangle.
 
 ## 10 Further reading
 

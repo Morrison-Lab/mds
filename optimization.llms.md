@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-08 23:13:21 (UTC)
+Last modified: 2026-10-09 00:29:41 (UTC)
 
 ## 1 Optimality conditions in several variables
 
@@ -26,11 +26,11 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> *Proof*. Take \\\delta \> 0\\ as in the definition of a local minimizer, shrunk if needed so that \\(c - \delta, c + \delta)\\ lies inside the interval; then \\g(c) \le g(c + h)\\ whenever \\\mathopen{}\left\|h\right\|\mathclose{} \< \delta\\. For \\0 \< h \< \delta\\, the difference quotient is
+> *Proof*. Take \\\delta\> 0\\ as in the definition of a local minimizer, shrunk if needed so that \\(c - \delta, c + \delta)\\ lies inside the interval; then \\g(c) \le g(c + h)\\ whenever \\\mathopen{}\left\|h\right\|\mathclose{} \< \delta\\. For \\0 \< h \< \delta\\, the difference quotient is
 >
 > \\ \frac{g(c + h) - g(c)}{h} \ge 0, \\
 >
-> because its numerator is at least \\0\\ and its denominator is positive. As \\h \to 0\\ from the right, these quotients tend to \\g'(c)\\ (the two-sided limit exists, so the [one-sided limit](calculus.llms.md#def-one-sided-limit) equals it), and a limit of numbers that are all at least \\0\\ is at least \\0\\; so \\g'(c) \ge 0\\. For \\-\delta \< h \< 0\\, the numerator is still at least \\0\\ but the denominator is negative, so the quotient is at most \\0\\, and in the same way, with \\h \to 0\\ from the left, \\g'(c) \le 0\\. Together, \\g'(c) = 0\\.
+> because its numerator is at least \\0\\ and its denominator is positive. As \\h \to 0\\ from the right, these quotients tend to \\g'(c)\\ (the two-sided limit exists, so the [one-sided limit](calculus.llms.md#def-one-sided-limit) equals it), and a limit of numbers that are all at least \\0\\ is at least \\0\\; so \\g'(c) \ge 0\\. For \\-\delta\< h \< 0\\, the numerator is still at least \\0\\ but the denominator is negative, so the quotient is at most \\0\\, and in the same way, with \\h \to 0\\ from the left, \\g'(c) \le 0\\. Together, \\g'(c) = 0\\.
 
 > **NOTE:**
 >
@@ -58,7 +58,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> *Proof*. Take \\\delta \> 0\\ as in the definition of a local minimizer. Fix \\i \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\, let \\\tilde{e}\_i\\ be the vector with \\1\\ in entry \\i\\ and \\0\\ elsewhere, and let \\g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^\* + t\\\tilde{e}\_i)\\ for \\t \in \mathbb{R}\\. For \\\mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, \\\mathopen{}\left\lVert(\tilde{x}^\* + t\\\tilde{e}\_i) - \tilde{x}^\*\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{e}\_i\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, so \\g_i(0) = f(\tilde{x}^\*) \le f(\tilde{x}^\* + t\\\tilde{e}\_i) = g_i(t)\\: \\0\\ is a local minimizer of \\g_i\\. Moving \\\tilde{x}\\ from \\\tilde{x}^\*\\ along \\\tilde{e}\_i\\ changes only \\x_i\\, so \\g_i'(0)\\ is the partial derivative \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*)\\, which exists because the gradient does. By [Theorem 1](#thm-fermat), \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*) = g_i'(0) = 0\\. The equation \\g_i'(0) = 0\\ holds for every \\i\\, so every entry of the gradient at \\\tilde{x}^\*\\ is \\0\\ ([vector derivative](vector-calculus.llms.md#def-vector-derivative)).
+> *Proof*. Take \\\delta\> 0\\ as in the definition of a local minimizer. Fix \\i \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\, let \\\tilde{e}\_i\\ be the vector with \\1\\ in entry \\i\\ and \\0\\ elsewhere, and let \\g_i(t) \stackrel{\text{def}}{=}f(\tilde{x}^\* + t\\\tilde{e}\_i)\\ for \\t \in \mathbb{R}\\. For \\\mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, \\\mathopen{}\left\lVert(\tilde{x}^\* + t\\\tilde{e}\_i) - \tilde{x}^\*\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{}\\\mathopen{}\left\lVert\tilde{e}\_i\right\rVert\mathclose{} = \mathopen{}\left\|t\right\|\mathclose{} \< \delta\\, so \\g_i(0) = f(\tilde{x}^\*) \le f(\tilde{x}^\* + t\\\tilde{e}\_i) = g_i(t)\\: \\0\\ is a local minimizer of \\g_i\\. Moving \\\tilde{x}\\ from \\\tilde{x}^\*\\ along \\\tilde{e}\_i\\ changes only \\x_i\\, so \\g_i'(0)\\ is the partial derivative \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*)\\, which exists because the gradient does. By [Theorem 1](#thm-fermat), \\\frac{\partial}{\partial x_i} f(\tilde{x}^\*) = g_i'(0) = 0\\. The equation \\g_i'(0) = 0\\ holds for every \\i\\, so every entry of the gradient at \\\tilde{x}^\*\\ is \\0\\ ([vector derivative](vector-calculus.llms.md#def-vector-derivative)).
 
 > **NOTE:**
 >
@@ -72,7 +72,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 > **Example 4 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This repository holds a copy at `data/auto.csv`, and both code tabs below read that file.
 >
-> Let \\y_i\\ be the miles per gallon and \\x_i\\ the horsepower of car \\i\\. To predict miles per gallon from horsepower with a line, write \\\tilde{\beta}= {(\beta_0, \beta_1)}^{\top}\\ and let \\\mathbf{X}\\ be the matrix whose row \\i\\ is \\(1, x_i)\\. The sum of squared errors is
+> Let \\y_i\\ be the miles per gallon and \\x_i\\ the horsepower of car \\i\\. To predict miles per gallon from horsepower with a line, write \\\tilde{\beta}= {(\beta\_{0}, \beta\_{1})}^{\top}\\ and let \\\mathbf{X}\\ be the matrix whose row \\i\\ is \\(1, x_i)\\. The sum of squared errors is
 >
 > \\ f(\tilde{\beta}) = \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2, \\
 >
@@ -100,7 +100,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >     index=["solution", "zero vector"],
 > )
 > #>                                                   beta                                        gradient
-> #> solution     [39.93586102117057, -0.15784473335365445]  [9.471534667682135e-12, 6.662048690486699e-11]
+> #> solution     [39.935861021170574, -0.1578447333536545]  [1.071498445526231e-11, 1.673470251262188e-10]
 > #> zero vector                                 [0.0, 0.0]               [-18381.600000000006, -1737437.6]
 > ```
 >
@@ -137,7 +137,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 9.471535e-12 6.662049e-11
+> #> [1] 1.071498e-11 1.673470e-10
 > #> 
 > #> 
 > #> $zero_vector
@@ -156,11 +156,11 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
-> **Theorem 3 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau \in (a, b)\\ with
+> **Theorem 3 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau\in (a, b)\\ with
 >
 > \\ g(b) = g(a) + g'(a)\\(b - a) + \frac{1}{2}\\g''(\tau)\\(b - a)^2. \\
 
@@ -168,13 +168,13 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 5 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so \\g' = g'' = g\\. [Theorem 3](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau \in (0, 1)\\. Solving, \\e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\\, so \\\tau = \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
+> **Example 5 (The remainder point for \\e^x\\)** Take \\g(x) = e^x\\ on \\\[0, 1\]\\, so \\g' = g'' = g\\. [Theorem 3](#thm-taylor-1d) says \\e = 1 + 1 + \tfrac{1}{2}\\e^{\tau}\\ for some \\\tau\in (0, 1)\\. Solving, \\e^{\tau} = 2 (e - 2) \approx 2 \times 0.71828 = 1.43656\\, so \\\tau= \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
 
 > **NOTE:**
 >
-> **Theorem 4 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)), and let \\\tilde{z}, \tilde{h} \in \mathbb{R}^p\\. Then there is a \\\tau \in (0, 1)\\ with
+> **Theorem 4 (Second-order Taylor theorem in several variables)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)), and let \\\tilde{z}, \tilde{h} \in \mathbb{R}^p\\. Then there is a \\\tau\in (0, 1)\\ with
 >
-> \\ f(\tilde{z} + \tilde{h}) = f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h}. \\
+> \\ f(\tilde{z} + \tilde{h}) = f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau\tilde{h})\\\tilde{h}. \\
 
 > **NOTE:**
 >
@@ -186,9 +186,9 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} g''(t) &= \sum\_{j=1}^ph_j \sum\_{i=1}^ph_i\\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{z} + t \tilde{h})\right)\mathclose{} && \text{(differentiate each term of } g'(t) \text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^ph_i\\\mathopen{}\left\[\mathbf{H}\_f(\tilde{z} + t \tilde{h})\right\]\mathclose{}\_{ij}\\h_j && \text{(definition of the Hessian; reorder the finite sums)} \\ &= {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + t \tilde{h})\\\tilde{h}. && \text{(matrix product)} \end{aligned} \\
 >
-> The last step is again the [matrix product](linear-algebra.llms.md#def-matrix-mult). Now apply [Theorem 3](#thm-taylor-1d) to \\g\\ on \\\[0, 1\]\\: there is a \\\tau \in (0, 1)\\ with
+> The last step is again the [matrix product](linear-algebra.llms.md#def-matrix-mult). Now apply [Theorem 3](#thm-taylor-1d) to \\g\\ on \\\[0, 1\]\\: there is a \\\tau\in (0, 1)\\ with
 >
-> \\ \begin{aligned} f(\tilde{z} + \tilde{h}) &= g(1) && \text{(definition of } g \text{)} \\ &= g(0) + g'(0)\\(1 - 0) + \frac{1}{2}\\g''(\tau)\\(1 - 0)^2 && \text{(}\href{#thm-taylor-1d}{\text{Theorem~3}}\text{, with } a = 0, b = 1 \text{)} \\ &= g(0) + g'(0) + \frac{1}{2}\\g''(\tau) && \text{(} 1 - 0 = 1 \text{)} \\ &= f(\tilde{z}) + {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z}) + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h} && \text{(substitute } g(0), g'(0), g''(\tau) \text{)} \\ &= f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau \tilde{h})\\\tilde{h}. && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{z} + \tilde{h}) &= g(1) && \text{(definition of } g \text{)} \\ &= g(0) + g'(0)\\(1 - 0) + \frac{1}{2}\\g''(\tau)\\(1 - 0)^2 && \text{(}\href{#thm-taylor-1d}{\text{Theorem~3}}\text{, with } a = 0, b = 1 \text{)} \\ &= g(0) + g'(0) + \frac{1}{2}\\g''(\tau) && \text{(} 1 - 0 = 1 \text{)} \\ &= f(\tilde{z}) + {\tilde{h}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{z}) + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau\tilde{h})\\\tilde{h} && \text{(substitute } g(0), g'(0), g''(\tau) \text{)} \\ &= f(\tilde{z}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{z} + \tau\tilde{h})\\\tilde{h}. && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -202,13 +202,13 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 2 (Strict local minimizer)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A point \\\tilde{x}^\*\\ is a **strict local minimizer** of \\f\\ if there is a number \\\delta \> 0\\ such that \\f(\tilde{x}^\*) \< f(\tilde{x})\\ for every \\\tilde{x}\ne \tilde{x}^\*\\ with \\\mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\.
+> **Definition 2 (Strict local minimizer)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. A point \\\tilde{x}^\*\\ is a **strict local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(\tilde{x}^\*) \< f(\tilde{x})\\ for every \\\tilde{x}\ne \tilde{x}^\*\\ with \\\mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\.
 
 > **NOTE:**
 >
 > **Example 7 (Strict and non-strict local minimizers)**  
 >
-> - \\f(x) = (x - 2)^2\\ has \\f(2) = 0 \< (x - 2)^2 = f(x)\\ for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta \> 0\\ works).
+> - \\f(x) = (x - 2)^2\\ has \\f(2) = 0 \< (x - 2)^2 = f(x)\\ for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta\> 0\\ works).
 > - A constant function \\f(\tilde{x}) = 0\\ has \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for all \\\tilde{x}^\*\\ and \\\tilde{x}\\, so every point is a [local minimizer](algebra.llms.md#def-local-minimizer), but no point is a strict one: \\f(\tilde{x}^\*) \< f(\tilde{x})\\ never holds.
 
 > **NOTE:**
@@ -249,11 +249,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{H}\_f(\tilde{x}^\*)\\ is positive definite, and so symmetric, so its smallest eigenvalue \\\lambda\\ is positive ([definiteness and eigenvalues](linear-algebra.llms.md#thm-definite-eigenvalues)). Each of the \\p^2\\ entries of \\\mathbf{H}\_f\\ is continuous at \\\tilde{x}^\*\\ ([continuity](vector-calculus.llms.md#def-continuous-several)): for \\\varepsilon = \lambda / (2p)\\ there is a \\\delta\_{ij} \> 0\\ with \\\mathopen{}\left\|\mathopen{}\left\[\mathbf{H}\_f(\tilde{y})\right\]\mathclose{}\_{ij} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^\*)\right\]\mathclose{}\_{ij}\right\|\mathclose{} \< \lambda / (2p)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\_{ij}\\. Let \\\delta\\ be the smallest of these \\p^2\\ numbers.
+> *Proof*. \\\mathbf{H}\_f(\tilde{x}^\*)\\ is positive definite, and so symmetric, so its smallest eigenvalue \\\lambda\\ is positive ([definiteness and eigenvalues](linear-algebra.llms.md#thm-definite-eigenvalues)). Each of the \\p^2\\ entries of \\\mathbf{H}\_f\\ is continuous at \\\tilde{x}^\*\\ ([continuity](vector-calculus.llms.md#def-continuous-several)): for \\\varepsilon= \lambda/ (2p)\\ there is a \\\delta\_{ij} \> 0\\ with \\\mathopen{}\left\|\mathopen{}\left\[\mathbf{H}\_f(\tilde{y})\right\]\mathclose{}\_{ij} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^\*)\right\]\mathclose{}\_{ij}\right\|\mathclose{} \< \lambda/ (2p)\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\_{ij}\\. Let \\\delta\\ be the smallest of these \\p^2\\ numbers.
 >
-> Now let \\0 \< \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\. By [Theorem 4](#thm-taylor-mv) there is a \\\tau \in (0, 1)\\ for which the first step of the next display holds; let \\\tilde{y}\stackrel{\text{def}}{=}\tilde{x}^\* + \tau \tilde{h}\\ and \\\mathbf{E} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{y}) - \mathbf{H}\_f(\tilde{x}^\*)\\. Since \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} = \tau\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\, every entry of \\\mathbf{E}\\ has absolute value less than \\\lambda / (2p)\\, so [Lemma 2](#lem-qf-entry-bound) applies with \\m = \lambda / (2p)\\:
+> Now let \\0 \< \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\. By [Theorem 4](#thm-taylor-mv) there is a \\\tau\in (0, 1)\\ for which the first step of the next display holds; let \\\tilde{y}\stackrel{\text{def}}{=}\tilde{x}^\* + \tau\tilde{h}\\ and \\\mathbf{E} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{y}) - \mathbf{H}\_f(\tilde{x}^\*)\\. Since \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}^\*\right\rVert\mathclose{} = \tau\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{} \< \delta\\, every entry of \\\mathbf{E}\\ has absolute value less than \\\lambda/ (2p)\\, so [Lemma 2](#lem-qf-entry-bound) applies with \\m = \lambda/ (2p)\\:
 >
-> \\ \begin{aligned} f(\tilde{x}^\* + \tilde{h}) - f(\tilde{x}^\*) &= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{y})\\\tilde{h} && \text{(}\href{#thm-taylor-mv}{\text{Theorem~4}}\text{)} \\ &= \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{y})\\\tilde{h} && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x}^\*)\\\tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h} && \text{(} \mathbf{H}\_f(\tilde{y}) = \mathbf{H}\_f(\tilde{x}^\*) + \mathbf{E} \text{; distribute)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h} && \text{(}\href{#lem-qf-eigen-bound}{\text{Lemma~1}}\text{)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\\\mathopen{}\left\|{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h}\right\|\mathclose{} && \text{(a number is at least minus its absolute value)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\\p\\\frac{\lambda}{2p}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 && \text{(}\href{#lem-qf-entry-bound}{\text{Lemma~2}}\text{, } m = \lambda / (2p) \text{)} \\ &= \frac{\lambda}{4}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 && \text{(arithmetic)} \\ &\> 0. && \text{(} \lambda \> 0 \text{ and } \tilde{h} \ne \tilde{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{x}^\* + \tilde{h}) - f(\tilde{x}^\*) &= {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{y})\\\tilde{h} && \text{(}\href{#thm-taylor-mv}{\text{Theorem~4}}\text{)} \\ &= \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{y})\\\tilde{h} && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x}^\*)\\\tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h} && \text{(} \mathbf{H}\_f(\tilde{y}) = \mathbf{H}\_f(\tilde{x}^\*) + \mathbf{E} \text{; distribute)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 + \frac{1}{2}\\{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h} && \text{(}\href{#lem-qf-eigen-bound}{\text{Lemma~1}}\text{)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\\\mathopen{}\left\|{\tilde{h}}^{\top}\\\mathbf{E}\\\tilde{h}\right\|\mathclose{} && \text{(a number is at least minus its absolute value)} \\ &\ge \frac{1}{2}\\\lambda\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 - \frac{1}{2}\\p\\\frac{\lambda}{2p}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 && \text{(}\href{#lem-qf-entry-bound}{\text{Lemma~2}}\text{, } m = \lambda/ (2p) \text{)} \\ &= \frac{\lambda}{4}\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 && \text{(arithmetic)} \\ &\> 0. && \text{(} \lambda\> 0 \text{ and } \tilde{h} \ne \tilde{0}\text{)} \end{aligned} \\
 >
 > So \\f(\tilde{x}^\*) \< f(\tilde{x})\\ whenever \\0 \< \mathopen{}\left\lVert\tilde{x}- \tilde{x}^\*\right\rVert\mathclose{} \< \delta\\ (take \\\tilde{h} = \tilde{x}- \tilde{x}^\*\\).
 
@@ -461,7 +461,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> *Proof*. Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\. By [Theorem 4](#thm-taylor-mv) with \\\tilde{z} = \tilde{y}\\ and \\\tilde{h} = \tilde{x}- \tilde{y}\\, there is a \\\tau \in (0, 1)\\ such that, with \\\tilde{w} \stackrel{\text{def}}{=}\tilde{y}+ \tau (\tilde{x}- \tilde{y})\\,
+> *Proof*. Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\. By [Theorem 4](#thm-taylor-mv) with \\\tilde{z} = \tilde{y}\\ and \\\tilde{h} = \tilde{x}- \tilde{y}\\, there is a \\\tau\in (0, 1)\\ such that, with \\\tilde{w} \stackrel{\text{def}}{=}\tilde{y}+ \tau(\tilde{x}- \tilde{y})\\,
 >
 > \\ \begin{aligned} f(\tilde{x}) &= f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) + \frac{1}{2}\\{(\tilde{x}- \tilde{y})}^{\top}\\\mathbf{H}\_f(\tilde{w})\\(\tilde{x}- \tilde{y}) && \text{(}\href{#thm-taylor-mv}{\text{Theorem~4}}\text{)} \\ &\ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}). && \text{(} \mathbf{H}\_f(\tilde{w}) \text{ is positive semidefinite)} \end{aligned} \\
 >
@@ -537,7 +537,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 10 (Lagrangian)** For the problem of minimizing \\f(\tilde{x})\\ over \\\tilde{x}\in \mathbb{R}^p\\ subject to \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, with \\\mathbf{A}\\ a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, the **Lagrangian** is the function of \\\tilde{x}\in \mathbb{R}^p\\ and \\\tilde{\lambda} \in \mathbb{R}^m\\
+> **Definition 10 (Lagrangian)** For the problem of minimizing \\f(\tilde{x})\\ over \\\tilde{x}\in \mathbb{R}^p\\ subject to \\{\mathbf{A}}^{\top} \tilde{x}= \tilde{b}\\, with \\\mathbf{A}\\ a \\p \times m\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, the **Lagrangian** is the function of \\\tilde{x}\in \mathbb{R}^p\\ and \\\tilde{\lambda}\in \mathbb{R}^m\\
 >
 > \\ L(\tilde{x}, \tilde{\lambda}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{\lambda}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}, \\
 >
@@ -555,7 +555,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for the first term, [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for the second (\\\mathbf{A} \tilde{\lambda}\\ is constant in \\\tilde{x}\\), and [constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector) for the third,
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{x}} L(\tilde{x}, \tilde{\lambda}) &= \tfrac{1}{2}\\\frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x}\right)\mathclose{} + \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}\right)\mathclose{} - \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{\lambda}}^{\top} \tilde{b}\right)\mathclose{} && \text{(sum and constant multiple)} \\ &= \tfrac{1}{2} \mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{} + \mathbf{A} \tilde{\lambda} - \tilde{0}\_{p \times 1} && \text{(the three derivatives)} \\ &= \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda}. && \text{(simplify)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{x}} L(\tilde{x}, \tilde{\lambda}) &= \tfrac{1}{2}\\\frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x}\right)\mathclose{} + \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}\right)\mathclose{} - \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{\lambda}}^{\top} \tilde{b}\right)\mathclose{} && \text{(sum and constant multiple)} \\ &= \tfrac{1}{2} \mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{} + \mathbf{A} \tilde{\lambda}- \tilde{0}\_{p \times 1} && \text{(the three derivatives)} \\ &= \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda}. && \text{(simplify)} \end{aligned} \\
 >
 > Using the second form, in which \\f(\tilde{x})\\ and \\{\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\\ are constant in \\\tilde{\lambda}\\, and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) again,
 >
@@ -563,7 +563,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > So \\(\tilde{x}, \tilde{\lambda})\\ makes the gradients equal \\\tilde{0}\_{p \times 1}\\ and \\\tilde{0}\_{m \times 1}\\ exactly when
 >
-> \\ \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda} = \tilde{0}\_{p \times 1} \quad \text{and} \quad {\mathbf{A}}^{\top} \tilde{x}= \tilde{b}, \qquad\text{that is,}\qquad \underbrace{\begin{bmatrix} \mathbf{S} & \mathbf{A} \\ {\mathbf{A}}^{\top} & \tilde{0}\_{m \times m} \end{bmatrix}}\_{(p + m) \times (p + m)} \underbrace{\begin{bmatrix} \tilde{x}\\ \tilde{\lambda} \end{bmatrix}}\_{(p + m) \times 1} = \underbrace{\begin{bmatrix} \tilde{0}\_{p \times 1} \\ \tilde{b} \end{bmatrix}}\_{(p + m) \times 1}, \tag{2}\\
+> \\ \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda}= \tilde{0}\_{p \times 1} \quad \text{and} \quad {\mathbf{A}}^{\top} \tilde{x}= \tilde{b}, \qquad\text{that is,}\qquad \underbrace{\begin{bmatrix} \mathbf{S} & \mathbf{A} \\ {\mathbf{A}}^{\top} & \tilde{0}\_{m \times m} \end{bmatrix}}\_{(p + m) \times (p + m)} \underbrace{\begin{bmatrix} \tilde{x}\\ \tilde{\lambda}\end{bmatrix}}\_{(p + m) \times 1} = \underbrace{\begin{bmatrix} \tilde{0}\_{p \times 1} \\ \tilde{b} \end{bmatrix}}\_{(p + m) \times 1}, \tag{2}\\
 >
 > the second equation being the constraint itself.
 
@@ -695,15 +695,15 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 14 (Quadratic model (second-order Taylor polynomial))** Let \\f\\ be as in [Definition 13](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta} \in \mathbb{R}^p\\
+> **Definition 14 (Quadratic model (second-order Taylor polynomial))** Let \\f\\ be as in [Definition 13](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta}\in \mathbb{R}^p\\
 >
-> \\ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta} + \tfrac{1}{2}\\{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta}, \\
+> \\ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}+ \tfrac{1}{2}\\{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta}, \\
 >
 > also called the **second-order Taylor polynomial** of \\f\\ at \\\tilde{x}\\: when the second partial derivatives of \\f\\ are continuous, [Theorem 4](#thm-taylor-mv) says that \\f(\tilde{x}+ \tilde{\delta})\\ equals the same expression with the Hessian evaluated at a point between \\\tilde{x}\\ and \\\tilde{x}+ \tilde{\delta}\\.
 
 > **NOTE:**
 >
-> **Example 34 (The model at \\x = 2.5\\)** For \\f(x) = \tfrac{1}{3} x^3 - 4x\\ at \\x = 2.5\\ ([Example 33](#exm-newton-method)), \\g = 2.5^2 - 4 = 2.25\\ and \\H = \[2 \cdot 2.5\] = \[5\]\\, so \\q(\delta) = f(2.5) + 2.25\\\delta + 2.5\\\delta^2\\. For \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, whose Hessian is \\\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ at every point, the model at any \\\tilde{x}\\ equals \\f(\tilde{x}+ \tilde{\delta})\\ exactly ([Example 6](#exm-taylor-mv) with \\\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}\\).
+> **Example 34 (The model at \\x = 2.5\\)** For \\f(x) = \tfrac{1}{3} x^3 - 4x\\ at \\x = 2.5\\ ([Example 33](#exm-newton-method)), \\g = 2.5^2 - 4 = 2.25\\ and \\H = \[2 \cdot 2.5\] = \[5\]\\, so \\q(\delta) = f(2.5) + 2.25\\\delta+ 2.5\\\delta^2\\. For \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)\\, whose Hessian is \\\begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}\\ at every point, the model at any \\\tilde{x}\\ equals \\f(\tilde{x}+ \tilde{\delta})\\ exactly ([Example 6](#exm-taylor-mv) with \\\mathbf{S} = \begin{bmatrix} 1/2 & 0 \\ 0 & 3/2 \end{bmatrix}\\).
 
 > **NOTE:**
 >
@@ -723,7 +723,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 35 (The Newton step at \\x = 2.5\\)** For the model \\q(\delta) = f(2.5) + 2.25\\\delta + 2.5\\\delta^2\\ of [Example 34](#exm-quadratic-model), \\H = \[5\]\\ is positive definite, so by [Theorem 12](#thm-newton-model) its minimizer is \\\delta^\* = -H^{-1} g = -2.25 / 5 = -0.45\\. Setting the derivative \\2.25 + 5 \delta\\ to \\0\\ gives the same \\\delta^\*\\, and \\2.5 - 0.45 = 2.05 = x^{(1)}\\ ([Example 33](#exm-newton-method)).
+> **Example 35 (The Newton step at \\x = 2.5\\)** For the model \\q(\delta) = f(2.5) + 2.25\\\delta+ 2.5\\\delta^2\\ of [Example 34](#exm-quadratic-model), \\H = \[5\]\\ is positive definite, so by [Theorem 12](#thm-newton-model) its minimizer is \\\delta^\* = -H^{-1} g = -2.25 / 5 = -0.45\\. Setting the derivative \\2.25 + 5 \delta\\ to \\0\\ gives the same \\\delta^\*\\, and \\2.5 - 0.45 = 2.05 = x^{(1)}\\ ([Example 33](#exm-newton-method)).
 
 > **NOTE:**
 >
@@ -745,7 +745,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 38 (Newton’s method can find a maximum)** From \\x^{(0)} = -2.5\\ the same iteration gives \\-2.05\\, \\-2.000610\\, \\-2.0000001\\, approaching \\-2\\. But \\-2\\ is not a minimizer of \\f\\: it is a stationary point of \\-f\\, whose second derivative there is \\-f''(-2) = 4 \> 0\\, so it is a strict local minimizer of \\-f\\ ([Theorem 5](#thm-second-order-condition)), that is, \\f\\ is strictly larger at \\-2\\ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian \\f''(x) = 2x\\ is negative along the way, so the quadratic model has no minimizer (with \\H \< 0\\, \\q(\delta) = f + g\\\delta + \tfrac{1}{2} H \delta^2\\ decreases without bound) and [Theorem 12](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
+> **Example 38 (Newton’s method can find a maximum)** From \\x^{(0)} = -2.5\\ the same iteration gives \\-2.05\\, \\-2.000610\\, \\-2.0000001\\, approaching \\-2\\. But \\-2\\ is not a minimizer of \\f\\: it is a stationary point of \\-f\\, whose second derivative there is \\-f''(-2) = 4 \> 0\\, so it is a strict local minimizer of \\-f\\ ([Theorem 5](#thm-second-order-condition)), that is, \\f\\ is strictly larger at \\-2\\ than at all nearby points. Newton’s method looks only for a stationary point, and here the Hessian \\f''(x) = 2x\\ is negative along the way, so the quadratic model has no minimizer (with \\H \< 0\\, \\q(\delta) = f + g\\\delta+ \tfrac{1}{2} H \delta^2\\ decreases without bound) and [Theorem 12](#thm-newton-model) does not apply: the positive definite hypothesis there is needed.
 
 > **NOTE:**
 >
@@ -813,7 +813,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > \\ \begin{aligned} h'(s) &= -{\tilde{g}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}- s \tilde{g}), && \text{(chain rule)} \\ h'(0) &= -{\tilde{g}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) && \text{(set } s = 0 \text{)} \\ &= -{\tilde{g}}^{\top} \tilde{g} && \text{(definition of } \tilde{g} \text{)} \\ &= -\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 && \text{(squared length)} \\ &\< 0. && \text{(} \tilde{g} \ne \tilde{0}\_{p \times 1} \text{)} \end{aligned} \\
 >
-> Since \\h'(0) = \lim\_{s \to 0} (h(s) - h(0)) / s\\ is negative, taking \\\varepsilon = \mathopen{}\left\|h'(0)\right\|\mathclose{}\\ in the definition of the limit gives an \\\bar{s} \> 0\\ such that \\(h(s) - h(0)) / s \< h'(0) + \mathopen{}\left\|h'(0)\right\|\mathclose{} = 0\\ for \\0 \< s \< \bar{s}\\. Multiplying by \\s \> 0\\, \\h(s) \< h(0)\\, that is, \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\.
+> Since \\h'(0) = \lim\_{s \to 0} (h(s) - h(0)) / s\\ is negative, taking \\\varepsilon= \mathopen{}\left\|h'(0)\right\|\mathclose{}\\ in the definition of the limit gives an \\\bar{s} \> 0\\ such that \\(h(s) - h(0)) / s \< h'(0) + \mathopen{}\left\|h'(0)\right\|\mathclose{} = 0\\ for \\0 \< s \< \bar{s}\\. Multiplying by \\s \> 0\\, \\h(s) \< h(0)\\, that is, \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\.
 
 > **NOTE:**
 >

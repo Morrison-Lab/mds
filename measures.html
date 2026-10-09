@@ -227,6 +227,26 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-exr.callout {
   border-left-color: #FFA500;
 }
@@ -237,15 +257,15 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -267,15 +287,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -287,45 +307,25 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-lem.callout {
+  border-left-color: #1565C0;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -714,7 +714,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-08 23:13:21 (UTC)</p>
+      <p class="date">Last modified: 2026-10-09 00:29:41 (UTC)</p>
     </div>
   </div>
   
@@ -1184,7 +1184,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-finite-additivity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(\mu : \mathcal{S}\to [0, \infty]\)</span>, with values in the <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="theorem-title"><strong>Definition 9 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span>, with values in the <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
 <p><span class="math display">\[\mu(A_1 \cup \cdots \cup A_n) = \sum_{i=1}^n\mu(A_i)\]</span></p>
 </div>
 </div>
@@ -1248,7 +1248,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-countable-additivity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Countable additivity (<span class="math inline">\(\sigma\)</span>-additivity))</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu : \mathcal{S}\to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
+<p><span class="theorem-title"><strong>Definition 10 (Countable additivity (<span class="math inline">\(\sigma\)</span>-additivity))</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
 <p><span class="math display">\[\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)\]</span></p>
 </div>
 </div>
@@ -1330,7 +1330,7 @@ s_{n+1}
 \begin{aligned}
 \mu(\emptyset)
 &amp;= \mathopen{}\left|\emptyset\right|\mathclose{}
-&amp;&amp; \text{(definition of } \mu \text{)} \\
+&amp;&amp; \text{(definition of } \mu\text{)} \\
 &amp;= 0
 &amp;&amp; \text{(} \emptyset \text{ has no elements)}
 \end{aligned}
@@ -1351,7 +1351,7 @@ s_{n+1}
 \begin{aligned}
 \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
 &amp;= \infty
-&amp;&amp; \text{(definition of } \mu \text{)}
+&amp;&amp; \text{(definition of } \mu\text{)}
 \end{aligned}
 \]</span></p>
 <p>and the right-hand side, the limit of its partial sums (<a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>), is:</p>
@@ -1359,7 +1359,7 @@ s_{n+1}
 \begin{aligned}
 \sum_{i=1}^{\infty} \mu(A_i)
 &amp;= \infty + \infty + \cdots
-&amp;&amp; \text{(definition of } \mu \text{)} \\
+&amp;&amp; \text{(definition of } \mu\text{)} \\
 &amp;= \infty
 &amp;&amp; \text{(every partial sum is } \infty \text{)}
 \end{aligned}
@@ -1508,7 +1508,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="def-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Measure)</strong></span> A <strong>measure</strong> on a set <span class="math inline">\(S\)</span> with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\)</span> is a function <span class="math inline">\(\mu : \mathcal{S}\to [0, \infty]\)</span> that satisfies:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Measure)</strong></span> A <strong>measure</strong> on a set <span class="math inline">\(S\)</span> with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\)</span> is a function <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span> that satisfies:</p>
 <ul>
 <li><span class="math inline">\(\mu(\emptyset) = 0\)</span>.</li>
 <li><span class="math inline">\(\mu\)</span> is <a href="#def-countable-additivity">countably additive</a>.</li>
@@ -1808,7 +1808,7 @@ s_{n+1}
 <div id="exm-probability-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (A fair die, and the unit interval)</strong></span> &nbsp;</p>
 <ul>
-<li>For one roll of a fair die, the sample space is <span class="math inline">\(\Omega = D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, the events are all subsets of <span class="math inline">\(D\)</span>, and <span class="math inline">\(\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{} / 6\)</span>. <span class="math inline">\(\operatorname{P}\)</span> is the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> divided by <span class="math inline">\(6\)</span>. So <span class="math inline">\(\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\)</span>, and <span class="math inline">\(\operatorname{P}\)</span> is countably additive, because each sum in <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> has at most six nonzero terms, and dividing a finite sum by <span class="math inline">\(6\)</span> divides each term by <span class="math inline">\(6\)</span>. It is a probability measure, since <span class="math inline">\(\operatorname{P}\mathopen{}\left(D\right)\mathclose{} = 6/6 = 1\)</span>. The outcome <span class="math inline">\(3\)</span> is in the event “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, which has <span class="math inline">\(\operatorname{P}\mathopen{}\left(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\right)\mathclose{} = 3/6 = 1/2\)</span>.</li>
+<li>For one roll of a fair die, the sample space is <span class="math inline">\(\Omega= D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, the events are all subsets of <span class="math inline">\(D\)</span>, and <span class="math inline">\(\operatorname{P}\mathopen{}\left(A\right)\mathclose{} \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{} / 6\)</span>. <span class="math inline">\(\operatorname{P}\)</span> is the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> divided by <span class="math inline">\(6\)</span>. So <span class="math inline">\(\operatorname{P}\mathopen{}\left(\emptyset\right)\mathclose{} = 0\)</span>, and <span class="math inline">\(\operatorname{P}\)</span> is countably additive, because each sum in <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> has at most six nonzero terms, and dividing a finite sum by <span class="math inline">\(6\)</span> divides each term by <span class="math inline">\(6\)</span>. It is a probability measure, since <span class="math inline">\(\operatorname{P}\mathopen{}\left(D\right)\mathclose{} = 6/6 = 1\)</span>. The outcome <span class="math inline">\(3\)</span> is in the event “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, which has <span class="math inline">\(\operatorname{P}\mathopen{}\left(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\right)\mathclose{} = 3/6 = 1/2\)</span>.</li>
 <li>Lebesgue measure on <span class="math inline">\([0, 1]\)</span> is a probability measure, because <span class="math inline">\(\lambda([0, 1]) = 1\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a>).</li>
 <li>The counting measure on <span class="math inline">\(D\)</span> is not a probability measure, because it gives <span class="math inline">\(D\)</span> the value <span class="math inline">\(6\)</span>.</li>
 </ul>
@@ -1882,7 +1882,7 @@ s_{n+1}
 <div id="def-integral-nonneg" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 21 (Integral of a non-negative function)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to [0, \infty)\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
 <p><span class="math display">\[
-\int_S f \, d\mu \stackrel{\text{def}}{=}
+\int_S f \, d\mu\stackrel{\text{def}}{=}
 \sup \mathopen{}\left\{\sum_{i=1}^n\mathopen{}\left(\inf_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\}\mathclose{}
 \]</span></p>
 <p>where the <a href="./algebra.html#def-supremum">supremum</a> is over all ways of writing <span class="math inline">\(S\)</span> as the union of finitely many nonempty <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, and each <span class="math inline">\(\inf_{s \in A_i} f(s)\)</span> is the <a href="./algebra.html#def-infimum">infimum</a> of the values of <span class="math inline">\(f\)</span> on <span class="math inline">\(A_i\)</span>. In the sums, <span class="math inline">\(0 \cdot \infty \stackrel{\text{def}}{=}0\)</span>, and <span class="math inline">\(x \cdot \infty \stackrel{\text{def}}{=}\infty\)</span> for <span class="math inline">\(x &gt; 0\)</span>; the supremum is <span class="math inline">\(\infty\)</span> if some sum is <span class="math inline">\(\infty\)</span>. The integral is also written <span class="math inline">\(\int_S f(s) \, d\mu(s)\)</span>.</p>
@@ -1898,7 +1898,7 @@ s_{n+1}
 </div>
 <div class="callout-body-container">
 <div id="rem-integral-nonneg-lower-sums" class="proof remark">
-<p><span class="proof-title"><em>Remark 10</em> (Each sum is a lower estimate). </span>Each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> splits <span class="math inline">\(S\)</span> into pieces and weights each piece <span class="math inline">\(A_i\)</span> by the smallest value <span class="math inline">\(f\)</span> approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval <span class="math inline">\([a, b]\)</span> and a function <span class="math inline">\(f \ge 0\)</span> that has a <a href="./calculus.html#def-riemann-integral">Riemann integral</a> on <span class="math inline">\([a, b]\)</span>, the two integrals agree: <span class="math inline">\(\int_{[a, b]} f \, d\lambda = \int_a^b f(x) \, dx\)</span> (see <a href="https://en.wikipedia.org/wiki/Lebesgue_integral">Wikipedia: Lebesgue integral</a>).</p>
+<p><span class="proof-title"><em>Remark 10</em> (Each sum is a lower estimate). </span>Each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> splits <span class="math inline">\(S\)</span> into pieces and weights each piece <span class="math inline">\(A_i\)</span> by the smallest value <span class="math inline">\(f\)</span> approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval <span class="math inline">\([a, b]\)</span> and a function <span class="math inline">\(f \ge 0\)</span> that has a <a href="./calculus.html#def-riemann-integral">Riemann integral</a> on <span class="math inline">\([a, b]\)</span>, the two integrals agree: <span class="math inline">\(\int_{[a, b]} f \, d\lambda= \int_a^b f(x) \, dx\)</span> (see <a href="https://en.wikipedia.org/wiki/Lebesgue_integral">Wikipedia: Lebesgue integral</a>).</p>
 </div>
 </div>
 </div>
@@ -1923,8 +1923,8 @@ s_{n+1}
 &amp;&amp; \text{(each } x \in D \text{ is in exactly one } A_i \text{)}
 \end{aligned}
 \]</span></p>
-<p>The split into the six single points <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}, \ldots, \mathopen{}\left\{6\right\}\mathclose{}\)</span> gives exactly <span class="math inline">\(\sum_{x \in D} g(x)\)</span>, so the supremum is <span class="math inline">\(\int_D g \, d\mu = \sum_{x \in D} g(x)\)</span>. For example, with <span class="math inline">\(g(x) = x\)</span>, <span class="math inline">\(\int_D g \, d\mu = 1 + 2 + \cdots + 6 = 21\)</span>.</p>
-<p><em>An infinite integral.</em> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathbb{N}\)</span> and the constant function <span class="math inline">\(h(n) = 1\)</span>, the split with one set, <span class="math inline">\(A_1 = \mathbb{N}\)</span>, gives the sum <span class="math inline">\(1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty\)</span>, so <span class="math inline">\(\int_{\mathbb{N}} h \, d\mu = \infty\)</span>.</p>
+<p>The split into the six single points <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}, \ldots, \mathopen{}\left\{6\right\}\mathclose{}\)</span> gives exactly <span class="math inline">\(\sum_{x \in D} g(x)\)</span>, so the supremum is <span class="math inline">\(\int_D g \, d\mu= \sum_{x \in D} g(x)\)</span>. For example, with <span class="math inline">\(g(x) = x\)</span>, <span class="math inline">\(\int_D g \, d\mu= 1 + 2 + \cdots + 6 = 21\)</span>.</p>
+<p><em>An infinite integral.</em> For the counting measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathbb{N}\)</span> and the constant function <span class="math inline">\(h(n) = 1\)</span>, the split with one set, <span class="math inline">\(A_1 = \mathbb{N}\)</span>, gives the sum <span class="math inline">\(1 \cdot \mu(\mathbb{N}) = 1 \cdot \infty = \infty\)</span>, so <span class="math inline">\(\int_{\mathbb{N}} h \, d\mu= \infty\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1944,7 +1944,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 \end{aligned}
 \]</span></p>
 <p>so that <span class="math inline">\(f = f^{+} - f^{-}\)</span> and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{} = f^{+} + f^{-}\)</span>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
-<p><span class="math display">\[\int_S f \, d\mu \stackrel{\text{def}}{=}\int_S f^{+} \, d\mu - \int_S f^{-} \, d\mu,\]</span></p>
+<p><span class="math display">\[\int_S f \, d\mu\stackrel{\text{def}}{=}\int_S f^{+} \, d\mu- \int_S f^{-} \, d\mu,\]</span></p>
 <p>using <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> for each term, when at least one of the two terms is finite; otherwise, the integral of <span class="math inline">\(f\)</span> is undefined. (<span class="math inline">\(f^{+}\)</span>, <span class="math inline">\(f^{-}\)</span>, and <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span> are measurable when <span class="math inline">\(f\)</span> is <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 13.3)</span>.)</p>
 <p><span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995, sec. 15</a>)</span></p>
 </div>
@@ -1960,9 +1960,9 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <div id="exm-integral" class="theorem example">
 <p><span class="theorem-title"><strong>Example 27 (An integral with positive and negative parts)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, let <span class="math inline">\(f(x) = x - 3\)</span>. Its values at <span class="math inline">\(1, \ldots, 6\)</span> are <span class="math inline">\(-2, -1, 0, 1, 2, 3\)</span>, so:</p>
 <ul>
-<li><span class="math inline">\(f^{+}\)</span> has values <span class="math inline">\(0, 0, 0, 1, 2, 3\)</span>, and <span class="math inline">\(\int_D f^{+} \, d\mu = 6\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>;</li>
-<li><span class="math inline">\(f^{-}\)</span> has values <span class="math inline">\(2, 1, 0, 0, 0, 0\)</span>, and <span class="math inline">\(\int_D f^{-} \, d\mu = 3\)</span>;</li>
-<li><span class="math inline">\(\int_D f \, d\mu = 6 - 3 = 3\)</span>, which is also <span class="math inline">\(\sum_{x \in D} (x - 3) = 21 - 18 = 3\)</span>.</li>
+<li><span class="math inline">\(f^{+}\)</span> has values <span class="math inline">\(0, 0, 0, 1, 2, 3\)</span>, and <span class="math inline">\(\int_D f^{+} \, d\mu= 6\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>;</li>
+<li><span class="math inline">\(f^{-}\)</span> has values <span class="math inline">\(2, 1, 0, 0, 0, 0\)</span>, and <span class="math inline">\(\int_D f^{-} \, d\mu= 3\)</span>;</li>
+<li><span class="math inline">\(\int_D f \, d\mu= 6 - 3 = 3\)</span>, which is also <span class="math inline">\(\sum_{x \in D} (x - 3) = 21 - 18 = 3\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -1976,7 +1976,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <div class="callout-body-container">
 <div id="def-absolutely-integrable" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 23 (Absolutely integrable function (integrable function, absolute integrability))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A <a href="#def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra.html#def-absolute-value">absolute value</a> is finite:</p>
-<p><span class="math display">\[\int_S \mathopen{}\left|f\right|\mathclose{} \, d\mu &lt; \infty\]</span></p>
+<p><span class="math display">\[\int_S \mathopen{}\left|f\right|\mathclose{} \, d\mu&lt; \infty\]</span></p>
 <p>The property itself is called <strong>absolute integrability</strong>.</p>
 </div>
 </div>
@@ -2003,8 +2003,8 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <div id="exm-absolutely-integrable" class="theorem example">
 <p><span class="theorem-title"><strong>Example 28 (Absolutely integrable and not)</strong></span> &nbsp;</p>
 <ul>
-<li>For the counting measure on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\(f(x) = x - 3\)</span> (<a href="#exm-integral" class="quarto-xref">Example&nbsp;27</a>) is absolutely integrable: <span class="math inline">\(\int_D \mathopen{}\left|f\right|\mathclose{} \, d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 &lt; \infty\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>.</li>
-<li>For the counting measure on <span class="math inline">\(\mathbb{N}\)</span>, the constant function <span class="math inline">\(h(n) = 1\)</span> is not absolutely integrable, because <span class="math inline">\(\int_{\mathbb{N}} \mathopen{}\left|h\right|\mathclose{} \, d\mu = \int_{\mathbb{N}} h \, d\mu = \infty\)</span> (<a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>).</li>
+<li>For the counting measure on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\(f(x) = x - 3\)</span> (<a href="#exm-integral" class="quarto-xref">Example&nbsp;27</a>) is absolutely integrable: <span class="math inline">\(\int_D \mathopen{}\left|f\right|\mathclose{} \, d\mu= 2 + 1 + 0 + 1 + 2 + 3 = 9 &lt; \infty\)</span> by <a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>.</li>
+<li>For the counting measure on <span class="math inline">\(\mathbb{N}\)</span>, the constant function <span class="math inline">\(h(n) = 1\)</span> is not absolutely integrable, because <span class="math inline">\(\int_{\mathbb{N}} \mathopen{}\left|h\right|\mathclose{} \, d\mu= \int_{\mathbb{N}} h \, d\mu= \infty\)</span> (<a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a>).</li>
 </ul>
 </div>
 </div>
@@ -2049,7 +2049,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <li>For <span class="math inline">\(p = 2\)</span>: <span class="math display">\[
 \mathopen{}\left|f(x)\right|\mathclose{}^2 = \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 = \frac{1}{x}.
 \]</span> The integral is: <span class="math display">\[
-\int_0^1 \frac{1}{x} \, dx = \lim_{\epsilon \to 0^+} \mathopen{}\left[\ln x\right]\mathclose{}_\epsilon^1 = \lim_{\epsilon \to 0^+} (-\ln \epsilon) = \infty.
+\int_0^1 \frac{1}{x} \, dx = \lim_{\varepsilon\to 0^+} \mathopen{}\left[\ln x\right]\mathclose{}_\varepsilon^1 = \lim_{\varepsilon\to 0^+} (-\ln \varepsilon) = \infty.
 \]</span> Therefore, <span class="math inline">\(\mathopen{}\left\lVert f\right\rVert\mathclose{}_2 = \infty\)</span>, so <span class="math inline">\(f \notin L^2((0, 1), \mu)\)</span>.</li>
 </ol>
 <p>This shows that <span class="math inline">\(L^2 \subset L^1\)</span> on finite-measure sets: higher exponents impose stricter integrability requirements near singularities.</p>
@@ -2066,7 +2066,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <div id="thm-holder-inequality" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Holder’s inequality)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(p, q \in [1, \infty]\)</span> be conjugate exponents satisfying <span class="math inline">\(\frac{1}{p} + \frac{1}{q} = 1\)</span> (with the convention that <span class="math inline">\(q = \infty\)</span> when <span class="math inline">\(p = 1\)</span>, and <span class="math inline">\(q = 1\)</span> when <span class="math inline">\(p = \infty\)</span>). If <span class="math inline">\(f \in L^p(\mu)\)</span> and <span class="math inline">\(g \in L^q(\mu)\)</span> (<a href="#def-lp-space" class="quarto-xref">Definition&nbsp;24</a>), then their product <span class="math inline">\(f g\)</span> is <a href="#def-absolutely-integrable">absolutely integrable</a> (<span class="math inline">\(f g \in L^1(\mu)\)</span>) and satisfies:</p>
 <p><span class="math display">\[
-\mathopen{}\left\lVert f g\right\rVert\mathclose{}_1 = \int_S \mathopen{}\left|f g\right|\mathclose{} \, d\mu \le \mathopen{}\left\lVert f\right\rVert\mathclose{}_p\,\mathopen{}\left\lVert g\right\rVert\mathclose{}_q.
+\mathopen{}\left\lVert f g\right\rVert\mathclose{}_1 = \int_S \mathopen{}\left|f g\right|\mathclose{} \, d\mu\le \mathopen{}\left\lVert f\right\rVert\mathclose{}_p\,\mathopen{}\left\lVert g\right\rVert\mathclose{}_q.
 \]</span></p>
 <p>When <span class="math inline">\(p = q = 2\)</span>, this inequality is the Cauchy-Schwarz inequality for integrals.</p>
 </div>
@@ -2116,7 +2116,7 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <div id="rem-lp-spaces-machine-learning" class="proof remark">
 <p><span class="proof-title"><em>Remark 12</em> (<span class="math inline">\(L^p\)</span> spaces and norms in probability and machine learning). </span>In probability, statistics, and machine learning, <span class="math inline">\(L^p\)</span> spaces structure the geometry of random variables, estimators, and loss functions:</p>
 <ol type="1">
-<li><p><strong>Random variables, moments, and inclusion of <span class="math inline">\(L^p\)</span> spaces</strong>: When <span class="math inline">\(\mu = \operatorname{P}\)</span> is a probability measure (<a href="#def-probability-measure" class="quarto-xref">Definition&nbsp;19</a>) with total measure <span class="math inline">\(\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\)</span>, an <span class="math inline">\(L^p\)</span> function is a random variable <span class="math inline">\(X\)</span> with finite <span class="math inline">\(p\)</span>-th moment: <span class="math display">\[
+<li><p><strong>Random variables, moments, and inclusion of <span class="math inline">\(L^p\)</span> spaces</strong>: When <span class="math inline">\(\mu= \operatorname{P}\)</span> is a probability measure (<a href="#def-probability-measure" class="quarto-xref">Definition&nbsp;19</a>) with total measure <span class="math inline">\(\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\)</span>, an <span class="math inline">\(L^p\)</span> function is a random variable <span class="math inline">\(X\)</span> with finite <span class="math inline">\(p\)</span>-th moment: <span class="math display">\[
 \mathopen{}\left\lVert X\right\rVert\mathclose{}_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left[\mathopen{}\left|X\right|\mathclose{}^p\right]\mathclose{}\right)\mathclose{}^{1/p}.
 \]</span> By <a href="./algebra.html#thm-jensen">Jensen’s inequality</a>, if <span class="math inline">\(1 \le p \le q \le \infty\)</span>, then <span class="math inline">\(\mathopen{}\left\lVert X\right\rVert\mathclose{}_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}_q\)</span>, so <span class="math inline">\(L^q(P) \subseteq L^p(P)\)</span>. For instance, every random variable with finite variance (<span class="math inline">\(X \in L^2\)</span>) has finite expectation (<span class="math inline">\(X \in L^1\)</span>).</p></li>
 <li><p><strong>The unique Hilbert space <span class="math inline">\(L^2\)</span> and conditional expectation</strong>: Among all <span class="math inline">\(L^p\)</span> spaces, only <span class="math inline">\(L^2(\mu)\)</span> is an <a href="./linear-algebra.html#def-inner-product-space">inner product space</a>, equipped with the inner product <span class="math inline">\(\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \, d\mu\)</span> (all other <span class="math inline">\(L^p\)</span> spaces fail the parallelogram law). The completeness of <span class="math inline">\(L^2\)</span> makes it a Hilbert space. In regression, the conditional expectation <span class="math inline">\(\operatorname{E}\mathopen{}\left[Y \mid X\right]\mathclose{}\)</span> is the orthogonal projection of <span class="math inline">\(Y \in L^2\)</span> onto the closed subspace of <span class="math inline">\(L^2\)</span> functions measurable with respect to <span class="math inline">\(X\)</span>, minimizing the expected mean squared error <span class="math inline">\(\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}_2^2\)</span>.</p></li>
@@ -2169,8 +2169,8 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 <div class="callout-body-container">
 <div id="def-product-measure" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 26 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> and <span class="math inline">\((T, \mathcal{T}, \nu)\)</span> be measure spaces with <a href="#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu \otimes \nu\)</span> is the measure on the <a href="#def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
-<p><span class="math display">\[(\mu \otimes \nu)(A \times B) = \mu(A) \, \nu(B)
+<p><span class="theorem-title"><strong>Definition 26 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> and <span class="math inline">\((T, \mathcal{T}, \nu)\)</span> be measure spaces with <a href="#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu\otimes \nu\)</span> is the measure on the <a href="#def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
+<p><span class="math display">\[(\mu\otimes \nu)(A \times B) = \mu(A) \, \nu(B)
 \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\]</span></p>
 <p>with <span class="math inline">\(0 \cdot \infty = \infty \cdot 0 \stackrel{\text{def}}{=}0\)</span> and <span class="math inline">\(x \cdot \infty = \infty \cdot x \stackrel{\text{def}}{=}\infty\)</span> for <span class="math inline">\(x &gt; 0\)</span>. Exactly one measure has these values <span class="citation" data-cites="billingsley1995probability">(<a href="#ref-billingsley1995probability" role="doc-biblioref">Billingsley 1995</a>, Theorem 18.2)</span>.</p>
 </div>
@@ -2186,8 +2186,8 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 <div id="exm-product-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 32 (Product measures)</strong></span> &nbsp;</p>
 <ul>
-<li>For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\((\mu \otimes \mu)(A \times B) = \mathopen{}\left|A\right|\mathclose{} \mathopen{}\left|B\right|\mathclose{}\)</span>, the number of pairs in <span class="math inline">\(A \times B\)</span>. For example, the set of pairs in which both rolls are even is <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, with <span class="math inline">\((\mu \otimes \mu)(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}) = 3 \cdot 3 = 9\)</span> pairs.</li>
-<li>For Lebesgue measure <span class="math inline">\(\lambda\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\((\lambda \otimes \lambda)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6\)</span>, the area of the rectangle.</li>
+<li>For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, <span class="math inline">\((\mu\otimes \mu)(A \times B) = \mathopen{}\left|A\right|\mathclose{} \mathopen{}\left|B\right|\mathclose{}\)</span>, the number of pairs in <span class="math inline">\(A \times B\)</span>. For example, the set of pairs in which both rolls are even is <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, with <span class="math inline">\((\mu\otimes \mu)(\mathopen{}\left\{2, 4, 6\right\}\mathclose{} \times \mathopen{}\left\{2, 4, 6\right\}\mathclose{}) = 3 \cdot 3 = 9\)</span> pairs.</li>
+<li>For Lebesgue measure <span class="math inline">\(\lambda\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, <span class="math inline">\((\lambda\otimes \lambda)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6\)</span>, the area of the rectangle.</li>
 </ul>
 </div>
 </div>

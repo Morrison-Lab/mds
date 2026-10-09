@@ -356,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-08 23:13:21 (UTC)</p>
+  <p class="date">Last modified: 2026-10-09 00:29:41 (UTC)</p>
 </section><section id="vectors" class="slide level2 scrollable" data-number="1"><h2>
 <span class="header-section-number">1</span> Vectors</h2>
 <div id="exr-list-as-vector" class="theorem exercise">
@@ -962,7 +962,7 @@ not taken from that page.
 \beta_{p}
 \end{bmatrix}
 \\ &amp;=
-x_1\beta_1 + x_2\beta_2 + \cdots + x_p \beta_p
+x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 \end{aligned}
 \]</span></p>
 </div>
@@ -1427,7 +1427,7 @@ f(\tilde{0})
 <div class="callout-content">
 <ul>
 <li>
-<span class="citation" data-cites="zhou2024matrix">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024d</a>)</span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;31</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;14</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\tilde{x}+ \tilde{b}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha \tilde{x}+ \beta \tilde{y}) = \alpha f(\tilde{x}) + \beta f(\tilde{y})\)</span> whenever <span class="math inline">\(\alpha + \beta = 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\tilde{x}+ \tilde{b}\)</span>, so the two definitions agree.</li>
+<span class="citation" data-cites="zhou2024matrix">Zhou (<a href="#/references" role="doc-biblioref" onclick="">2024d</a>)</span>, sections 6 (“Linear functions and operators”; see <a href="#/def-linear-operator" class="quarto-xref">Definition&nbsp;31</a>) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as <a href="#/thm-linear-map-matrix" class="quarto-xref">Theorem&nbsp;14</a>, and that every affine function has the form <span class="math inline">\(\mathbf{A}\tilde{x}+ \tilde{b}\)</span>. It defines “affine” differently, by <span class="math inline">\(f(\alpha\tilde{x}+ \beta\tilde{y}) = \alpha f(\tilde{x}) + \beta f(\tilde{y})\)</span> whenever <span class="math inline">\(\alpha+ \beta= 1\)</span>, and shows that this condition holds exactly for the maps <span class="math inline">\(\mathbf{A}\tilde{x}+ \tilde{b}\)</span>, so the two definitions agree.</li>
 <li>
 <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>, chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the <a href="./calculus.html#def-linear-approximation">first-order Taylor approximation</a> as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.</li>
 </ul>
@@ -2414,7 +2414,7 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\nu = \operatorname{nullity}(\mathbf{A})\)</span>. Choose a basis <span class="math inline">\(\tilde{x}_1, \ldots, \tilde{x}_\nu\)</span> of <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, and extend it to a basis <span class="math inline">\(\tilde{x}_1, \ldots, \tilde{x}_\nu, \tilde{y}_1, \ldots, \tilde{y}_{n - \nu}\)</span> of <span class="math inline">\(\mathbb{R}^n\)</span> (<a href="#/thm-extend-basis" class="quarto-xref">Theorem&nbsp;28</a>); it has <span class="math inline">\(n\)</span> vectors, because every basis of <span class="math inline">\(\mathbb{R}^n\)</span> has <span class="math inline">\(\dim(\mathbb{R}^n) = n\)</span> vectors (<a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;26</a>, <a href="#/exm-dimension" class="quarto-xref">Example&nbsp;47</a>). We show that <span class="math inline">\(\mathbf{A} \tilde{y}_1, \ldots, \mathbf{A} \tilde{y}_{n - \nu}\)</span> are a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, using <a href="#/thm-matvec-linear" class="quarto-xref">Theorem&nbsp;23</a> to apply <span class="math inline">\(\mathbf{A}\)</span> to linear combinations.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\nu= \operatorname{nullity}(\mathbf{A})\)</span>. Choose a basis <span class="math inline">\(\tilde{x}_1, \ldots, \tilde{x}_\nu\)</span> of <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>, and extend it to a basis <span class="math inline">\(\tilde{x}_1, \ldots, \tilde{x}_\nu, \tilde{y}_1, \ldots, \tilde{y}_{n - \nu}\)</span> of <span class="math inline">\(\mathbb{R}^n\)</span> (<a href="#/thm-extend-basis" class="quarto-xref">Theorem&nbsp;28</a>); it has <span class="math inline">\(n\)</span> vectors, because every basis of <span class="math inline">\(\mathbb{R}^n\)</span> has <span class="math inline">\(\dim(\mathbb{R}^n) = n\)</span> vectors (<a href="#/thm-basis-size" class="quarto-xref">Theorem&nbsp;26</a>, <a href="#/exm-dimension" class="quarto-xref">Example&nbsp;47</a>). We show that <span class="math inline">\(\mathbf{A} \tilde{y}_1, \ldots, \mathbf{A} \tilde{y}_{n - \nu}\)</span> are a basis of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>, using <a href="#/thm-matvec-linear" class="quarto-xref">Theorem&nbsp;23</a> to apply <span class="math inline">\(\mathbf{A}\)</span> to linear combinations.</p>
 <p><strong>They are linearly independent.</strong> Suppose <span class="math inline">\(\sum_{i=1}^{n-\nu} v_i\,\mathbf{A} \tilde{y}_i = \tilde{0}_m\)</span>. Then <span class="math inline">\(\mathbf{A}\,\mathopen{}\left(\sum_i v_i \tilde{y}_i\right)\mathclose{} = \tilde{0}_m\)</span> (<a href="#/thm-matvec-linear" class="quarto-xref">Theorem&nbsp;23</a>), so <span class="math inline">\(\sum_i v_i \tilde{y}_i \in \mathcal{N}(\mathbf{A})\)</span>, and it equals <span class="math inline">\(\sum_{j=1}^{\nu} u_j \tilde{x}_j\)</span> for some numbers <span class="math inline">\(u_j\)</span>, since the <span class="math inline">\(\tilde{x}_j\)</span> span <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span>. Moving everything to one side,</p>
 <p><span class="math display">\[
 \sum_{j=1}^{\nu} (-u_j)\,\tilde{x}_j + \sum_{i=1}^{n-\nu} v_i \tilde{y}_i = \tilde{0}_n,
@@ -3822,26 +3822,26 @@ c\,\tilde{u}
 <p>In regression and machine learning, adding an <span class="math inline">\(\ell_1\)</span> penalty (Lasso regularization) to an objective function encourages sparse solutions: the level curves of the loss function tend to make contact with the sharp corners of the <span class="math inline">\(\ell_1\)</span> unit ball on the coordinate axes, setting irrelevant feature weights exactly to zero. In contrast, the smooth spherical <span class="math inline">\(\ell_2\)</span> penalty (Ridge regularization) shrinks all weights toward zero without setting them exactly to zero.</p>
 </div>
 </section><section class="slide level2"><div id="def-cosine-sine" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 59 (Cosine and sine)</strong></span> The <em>unit circle</em> is the set of points <span class="math inline">\((x_1, x_2)\)</span> in the plane with <span class="math inline">\(x_1^2 + x_2^2 = 1\)</span>, and <span class="math inline">\(\pi \approx 3.14159\)</span> is half of its circumference. For a real number <span class="math inline">\(\theta\)</span>, start at the point <span class="math inline">\((1, 0)\)</span> and move a distance <span class="math inline">\(\mathopen{}\left|\theta\right|\mathclose{}\)</span> along the unit circle, counterclockwise if <span class="math inline">\(\theta \ge 0\)</span> and clockwise if <span class="math inline">\(\theta &lt; 0\)</span>. The point reached is <span class="math inline">\((\cos\theta, \sin\theta)\)</span>: its first coordinate is the <strong>cosine</strong> of <span class="math inline">\(\theta\)</span>, and its second coordinate is the <strong>sine</strong> of <span class="math inline">\(\theta\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 59 (Cosine and sine)</strong></span> The <em>unit circle</em> is the set of points <span class="math inline">\((x_1, x_2)\)</span> in the plane with <span class="math inline">\(x_1^2 + x_2^2 = 1\)</span>, and <span class="math inline">\(\pi \approx 3.14159\)</span> is half of its circumference. For a real number <span class="math inline">\(\theta\)</span>, start at the point <span class="math inline">\((1, 0)\)</span> and move a distance <span class="math inline">\(\mathopen{}\left|\theta\right|\mathclose{}\)</span> along the unit circle, counterclockwise if <span class="math inline">\(\theta\ge 0\)</span> and clockwise if <span class="math inline">\(\theta&lt; 0\)</span>. The point reached is <span class="math inline">\((\cos\theta, \sin\theta)\)</span>: its first coordinate is the <strong>cosine</strong> of <span class="math inline">\(\theta\)</span>, and its second coordinate is the <strong>sine</strong> of <span class="math inline">\(\theta\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-cosine-sine" class="theorem example">
 <p><span class="theorem-title"><strong>Example 99 (Cosines and sines of some angles)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(\theta = 0\)</span> stays at <span class="math inline">\((1, 0)\)</span>, so <span class="math inline">\(\cos 0 = 1\)</span> and <span class="math inline">\(\sin 0 = 0\)</span>.</li>
+<span class="math inline">\(\theta= 0\)</span> stays at <span class="math inline">\((1, 0)\)</span>, so <span class="math inline">\(\cos 0 = 1\)</span> and <span class="math inline">\(\sin 0 = 0\)</span>.</li>
 <li>
-<span class="math inline">\(\theta = \pi\)</span> goes half way around the circle, to <span class="math inline">\((-1, 0)\)</span>, so <span class="math inline">\(\cos\pi = -1\)</span> and <span class="math inline">\(\sin\pi = 0\)</span>.</li>
+<span class="math inline">\(\theta= \pi\)</span> goes half way around the circle, to <span class="math inline">\((-1, 0)\)</span>, so <span class="math inline">\(\cos\pi = -1\)</span> and <span class="math inline">\(\sin\pi = 0\)</span>.</li>
 <li>
-<span class="math inline">\(\theta = \pi/2\)</span> goes a quarter of the way round, to <span class="math inline">\((0, 1)\)</span>, so <span class="math inline">\(\cos(\pi/2) = 0\)</span> and <span class="math inline">\(\sin(\pi/2) = 1\)</span>.</li>
+<span class="math inline">\(\theta= \pi/2\)</span> goes a quarter of the way round, to <span class="math inline">\((0, 1)\)</span>, so <span class="math inline">\(\cos(\pi/2) = 0\)</span> and <span class="math inline">\(\sin(\pi/2) = 1\)</span>.</li>
 <li>
-<span class="math inline">\(\theta = \pi/4\)</span> goes an eighth of the way round, to the point of the circle with <span class="math inline">\(x_1 = x_2 &gt; 0\)</span>. There <span class="math inline">\(x_1^2 + x_1^2 = 1\)</span>, so <span class="math inline">\(x_1^2 = \tfrac{1}{2}\)</span> and <span class="math inline">\(x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\)</span>: <span class="math inline">\(\cos(\pi/4) = \sin(\pi/4) = \tfrac{1}{\sqrt{2}}\)</span>.</li>
+<span class="math inline">\(\theta= \pi/4\)</span> goes an eighth of the way round, to the point of the circle with <span class="math inline">\(x_1 = x_2 &gt; 0\)</span>. There <span class="math inline">\(x_1^2 + x_1^2 = 1\)</span>, so <span class="math inline">\(x_1^2 = \tfrac{1}{2}\)</span> and <span class="math inline">\(x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\)</span>: <span class="math inline">\(\cos(\pi/4) = \sin(\pi/4) = \tfrac{1}{\sqrt{2}}\)</span>.</li>
 </ul>
 <p>Angles are also measured in <em>degrees</em>, with a full turn of <span class="math inline">\(2\pi\)</span> equal to <span class="math inline">\(360\)</span> degrees, so <span class="math inline">\(\pi/2\)</span> is <span class="math inline">\(90\)</span> degrees and <span class="math inline">\(\pi/4\)</span> is <span class="math inline">\(45\)</span> degrees.</p>
 </div>
 </section><section class="slide level2"><div id="def-angle" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 60 (Angle between two vectors)</strong></span> The <strong>angle</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y} \in \mathbb{R}^p\)</span> is the unique number <span class="math inline">\(\theta \in [0, \pi]\)</span> whose cosine (<a href="#/def-cosine-sine" class="quarto-xref">Definition&nbsp;59</a>) satisfies</p>
+<p><span class="theorem-title"><strong>Definition 60 (Angle between two vectors)</strong></span> The <strong>angle</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y} \in \mathbb{R}^p\)</span> is the unique number <span class="math inline">\(\theta\in [0, \pi]\)</span> whose cosine (<a href="#/def-cosine-sine" class="quarto-xref">Definition&nbsp;59</a>) satisfies</p>
 <p><span class="math display">\[
-\cos\theta = \frac{\tilde{x} \cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
+\cos\theta= \frac{\tilde{x} \cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-angle-well-defined" class="proof remark">
@@ -3851,11 +3851,11 @@ c\,\tilde{u}
 <p><span class="theorem-title"><strong>Example 100 (Some angles in the plane)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span>: <span class="math inline">\(\cos\theta = \frac{1}{1 \cdot\sqrt{2}}\)</span>, so <span class="math inline">\(\theta = \pi/4\)</span>.</li>
+<span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span>: <span class="math inline">\(\cos\theta= \frac{1}{1 \cdot\sqrt{2}}\)</span>, so <span class="math inline">\(\theta= \pi/4\)</span>.</li>
 <li>
-<span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((-2, 1)\)</span>: <span class="math inline">\(\cos\theta = \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = 0\)</span>, so <span class="math inline">\(\theta = \pi/2\)</span>.</li>
+<span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((-2, 1)\)</span>: <span class="math inline">\(\cos\theta= \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = 0\)</span>, so <span class="math inline">\(\theta= \pi/2\)</span>.</li>
 <li>
-<span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((-3, 0)\)</span>: <span class="math inline">\(\cos\theta = \frac{-3}{1 \cdot 3} = -1\)</span>, so <span class="math inline">\(\theta = \pi\)</span>.</li>
+<span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((-3, 0)\)</span>: <span class="math inline">\(\cos\theta= \frac{-3}{1 \cdot 3} = -1\)</span>, so <span class="math inline">\(\theta= \pi\)</span>.</li>
 <li>
 <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\(\tilde{0}\)</span>: there is no angle, because the ratio would divide by <span class="math inline">\(\mathopen{}\left\lVert\tilde{0}\right\rVert\mathclose{} = 0\)</span>.</li>
 </ul>
@@ -4544,7 +4544,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 <p><span class="math display">\[
 \mathbf{Q} = \begin{bmatrix} 0.6 &amp; -0.8 \\ 0.8 &amp; 0.6 \end{bmatrix}
 \]</span></p>
-<p>rotates each vector in the plane counterclockwise by the angle <span class="math inline">\(\theta\)</span> with <span class="math inline">\(\cos\theta = 0.6\)</span> and <span class="math inline">\(\sin\theta = 0.8\)</span> (about <span class="math inline">\(53\)</span> degrees) <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 8</a>, Example 8.1, p.&nbsp;207)</span>. It is orthogonal:</p>
+<p>rotates each vector in the plane counterclockwise by the angle <span class="math inline">\(\theta\)</span> with <span class="math inline">\(\cos\theta= 0.6\)</span> and <span class="math inline">\(\sin\theta= 0.8\)</span> (about <span class="math inline">\(53\)</span> degrees) <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 8</a>, Example 8.1, p.&nbsp;207)</span>. It is orthogonal:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf{Q}}^{\top}\mathbf{Q}
@@ -5069,7 +5069,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(move the scalar } c \text{ to the front)}
 \\
 &amp;= c\,\lambda\tilde{v}
-&amp;&amp; \text{(} \tilde{v} \text{ is an eigenvector for } \lambda \text{)}
+&amp;&amp; \text{(} \tilde{v} \text{ is an eigenvector for } \lambda\text{)}
 \\
 &amp;= \lambda\,(c\,\tilde{v})
 &amp;&amp; \text{(multiplication of numbers is commutative)}
@@ -5101,7 +5101,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
 = \begin{bmatrix} 2 \\ 1 \end{bmatrix},
 \]</span></p>
-<p>and no number <span class="math inline">\(\lambda\)</span> gives <span class="math inline">\((2, 1) = \lambda\,(1, 0)\)</span>, because the second entries would need <span class="math inline">\(1 = \lambda \cdot 0\)</span>.</p>
+<p>and no number <span class="math inline">\(\lambda\)</span> gives <span class="math inline">\((2, 1) = \lambda\,(1, 0)\)</span>, because the second entries would need <span class="math inline">\(1 = \lambda\cdot 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="rem-real-eigenvalues" class="proof remark">
 <p><span class="proof-title"><em>Remark 29</em> (Real and complex eigenvalues). </span>These notes take <span class="math inline">\(\lambda\)</span> and <span class="math inline">\(\tilde{v}\)</span> to be real. <span class="citation" data-cites="banerjee2014linear">Banerjee and Roy (<a href="#/references" role="doc-biblioref" onclick="">2014, chap. 11</a>, Definition 11.1, pp.&nbsp;312-313)</span> also allows <a href="./algebra.html#def-complex-number">complex</a> eigenvalues and eigenvectors, because some real matrices, such as a rotation by <span class="math inline">\(90\)</span> degrees, have no real eigenvalues <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 11</a>, Example 11.2, p.&nbsp;312)</span>.</p>
@@ -5952,7 +5952,7 @@ d_1    &amp; 0      &amp; \cdots &amp; 0      \\
 &amp;&amp; \text{(the middle terms cancel)}
 \end{aligned}
 \]</span></p>
-<p>which is positive for every <span class="math inline">\(\tilde{x}\neq \tilde{0}\)</span>. But suppose <span class="math inline">\(\mathbf{C}\tilde{v} = \lambda\tilde{v}\)</span> for a real number <span class="math inline">\(\lambda\)</span>. Matching entries gives <span class="math inline">\(v_1 + v_2 = \lambda v_1\)</span> and <span class="math inline">\(-v_1 + v_2 = \lambda v_2\)</span>, so <span class="math inline">\(v_2 = (\lambda - 1)\, v_1\)</span> and <span class="math inline">\(-v_1 = (\lambda - 1)\, v_2\)</span>. Substituting the first into the second gives <span class="math inline">\(-v_1 = (\lambda - 1)^2 v_1\)</span>, so <span class="math inline">\(\mathopen{}\left(1 + (\lambda - 1)^2\right)\mathclose{} v_1 = 0\)</span>. Since <span class="math inline">\(1 + (\lambda - 1)^2 &gt; 0\)</span>, <span class="math inline">\(v_1 = 0\)</span>, and then <span class="math inline">\(v_2 = (\lambda - 1)\, v_1 = 0\)</span>. So no real <span class="math inline">\(\lambda\)</span> has an eigenvector <span class="math inline">\(\tilde{v} \neq \tilde{0}\)</span>.</p>
+<p>which is positive for every <span class="math inline">\(\tilde{x}\neq \tilde{0}\)</span>. But suppose <span class="math inline">\(\mathbf{C}\tilde{v} = \lambda\tilde{v}\)</span> for a real number <span class="math inline">\(\lambda\)</span>. Matching entries gives <span class="math inline">\(v_1 + v_2 = \lambda v_1\)</span> and <span class="math inline">\(-v_1 + v_2 = \lambda v_2\)</span>, so <span class="math inline">\(v_2 = (\lambda- 1)\, v_1\)</span> and <span class="math inline">\(-v_1 = (\lambda- 1)\, v_2\)</span>. Substituting the first into the second gives <span class="math inline">\(-v_1 = (\lambda- 1)^2 v_1\)</span>, so <span class="math inline">\(\mathopen{}\left(1 + (\lambda- 1)^2\right)\mathclose{} v_1 = 0\)</span>. Since <span class="math inline">\(1 + (\lambda- 1)^2 &gt; 0\)</span>, <span class="math inline">\(v_1 = 0\)</span>, and then <span class="math inline">\(v_2 = (\lambda- 1)\, v_1 = 0\)</span>. So no real <span class="math inline">\(\lambda\)</span> has an eigenvector <span class="math inline">\(\tilde{v} \neq \tilde{0}\)</span>.</p>
 </div>
 <aside class="notes"><p>See also <a href="https://en.wikipedia.org/wiki/Definite_matrix" class="uri">https://en.wikipedia.org/wiki/Definite_matrix</a>.</p>
 <style type="text/css">
@@ -6438,7 +6438,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 \begin{bmatrix} 1 \\ 2 \end{bmatrix}
 = \begin{bmatrix} 3 \\ 5 \\ 7 \end{bmatrix}.
 \]</span></p>
-<p>The matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is <span class="math inline">\(p \times p\)</span> and symmetric, since <span class="math inline">\({({\mathbf{X}}^{\top}\mathbf{X})}^{\top} = {\mathbf{X}}^{\top}\,{({\mathbf{X}}^{\top})}^{\top} = {\mathbf{X}}^{\top}\mathbf{X}\)</span> (<a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;19</a>). When <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible, it appears in the OLS estimator <span class="math inline">\(\hat{\tilde{\beta}} = ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\)</span>.</p>
+<p>The matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is <span class="math inline">\(p \times p\)</span> and symmetric, since <span class="math inline">\({({\mathbf{X}}^{\top}\mathbf{X})}^{\top} = {\mathbf{X}}^{\top}\,{({\mathbf{X}}^{\top})}^{\top} = {\mathbf{X}}^{\top}\mathbf{X}\)</span> (<a href="#/thm-transpose-product" class="quarto-xref">Theorem&nbsp;19</a>). When <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible, it appears in the OLS estimator <span class="math inline">\(\hat{\tilde{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-gram-invertible" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 78 (<span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible when <span class="math inline">\(\mathbf{X}\)</span> has full column rank)</strong></span> If <span class="math inline">\(\mathbf{X}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{X}) = p\)</span> (<a href="#/def-rank" class="quarto-xref">Definition&nbsp;38</a>), then the <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\({\mathbf{X}}^{\top}\mathbf{X}\)</span> is invertible.</p>
@@ -6540,7 +6540,7 @@ x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{np}
 <p>as <a href="#/thm-hat-matrix" class="quarto-xref">Theorem&nbsp;79</a> says.</p>
 </div>
 </section><section class="slide level2"><div id="rem-hat-matrix-name" class="proof remark">
-<p><span class="proof-title"><em>Remark 41</em> (Why it is called the hat matrix). </span>The hat matrix gives the fitted values in linear regression: <span class="math inline">\(\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\)</span>. Multiplying by <span class="math inline">\(\mathbf{H}\)</span> “puts a hat” on <span class="math inline">\(\tilde{y}\)</span>, which is where the name comes from. In <a href="#/exm-hat-matrix" class="quarto-xref">Example&nbsp;147</a>, <span class="math inline">\(\mathbf{H}\)</span> puts a hat on <span class="math inline">\(\tilde{y}\)</span> by replacing each <span class="math inline">\(y_i\)</span> with the sample mean <span class="math inline">\(\bar{y}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 41</em> (Why it is called the hat matrix). </span>The hat matrix gives the fitted values in linear regression: <span class="math inline">\(\hat{\tilde{y}} = \mathbf{X}\hat{\tilde{\beta}}= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}= \mathbf{H}\tilde{y}\)</span>. Multiplying by <span class="math inline">\(\mathbf{H}\)</span> “puts a hat” on <span class="math inline">\(\tilde{y}\)</span>, which is where the name comes from. In <a href="#/exm-hat-matrix" class="quarto-xref">Example&nbsp;147</a>, <span class="math inline">\(\mathbf{H}\)</span> puts a hat on <span class="math inline">\(\tilde{y}\)</span> by replacing each <span class="math inline">\(y_i\)</span> with the sample mean <span class="math inline">\(\bar{y}\)</span>.</p>
 </div>
 <h3 id="sec-orthogonal-projection">Orthogonal projection onto a subspace</h3>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -7728,20 +7728,20 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-eigenspace" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 96 (Eigenspace and geometric multiplicity)</strong></span> Let <span class="math inline">\(\lambda\)</span> be an eigenvalue of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>). The <strong>eigenspace</strong> of <span class="math inline">\(\lambda\)</span> is <span class="math inline">\(\mathcal{E}_\lambda \stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>. It is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#/thm-null-space-subspace" class="quarto-xref">Theorem&nbsp;32</a>), and its dimension (<a href="#/def-dimension" class="quarto-xref">Definition&nbsp;44</a>) is the <strong>geometric multiplicity</strong> of <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 96 (Eigenspace and geometric multiplicity)</strong></span> Let <span class="math inline">\(\lambda\)</span> be an eigenvalue of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>). The <strong>eigenspace</strong> of <span class="math inline">\(\lambda\)</span> is <span class="math inline">\(\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>. It is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#/thm-null-space-subspace" class="quarto-xref">Theorem&nbsp;32</a>), and its dimension (<a href="#/def-dimension" class="quarto-xref">Definition&nbsp;44</a>) is the <strong>geometric multiplicity</strong> of <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-eigenspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 178 (Eigenspaces of two matrices)</strong></span> &nbsp;</p>
 <ul>
 <li>For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> of <a href="#/exm-eigenvalue" class="quarto-xref">Example&nbsp;132</a>, <span class="math inline">\(\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}\)</span> sends <span class="math inline">\(\tilde{v}\)</span> to <span class="math inline">\((v_2 - v_1)\,(1, -1)\)</span>, so <span class="math inline">\(\mathcal{E}_3 = \operatorname{span}\mathopen{}\left\{(1, 1)\right\}\mathclose{}\)</span>, with geometric multiplicity <span class="math inline">\(1\)</span>.</li>
-<li>For <span class="math inline">\(\mathbf{J} = \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{J} \tilde{v} = (v_2, 0)\)</span>. <span class="math inline">\(\mathbf{J}\,(1, 0) = (0, 0) = 0\,(1, 0)\)</span>, so <span class="math inline">\(0\)</span> is an eigenvalue. If <span class="math inline">\(\mathbf{J} \tilde{v} = \lambda \tilde{v}\)</span> with <span class="math inline">\(\lambda \ne 0\)</span>, the second entry gives <span class="math inline">\(\lambda v_2 = 0\)</span>, so <span class="math inline">\(v_2 = 0\)</span>, and then the first gives <span class="math inline">\(\lambda v_1 = 0\)</span>, so <span class="math inline">\(\tilde{v} = \tilde{0}\)</span>. So <span class="math inline">\(0\)</span> is the only eigenvalue, and <span class="math inline">\(\mathcal{E}_0 = \mathcal{N}(\mathbf{J}) = \mathopen{}\left\{(t, 0) : t \in \mathbb{R}\right\}\mathclose{}\)</span>, with geometric multiplicity <span class="math inline">\(1\)</span>.</li>
+<li>For <span class="math inline">\(\mathbf{J} = \begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{J} \tilde{v} = (v_2, 0)\)</span>. <span class="math inline">\(\mathbf{J}\,(1, 0) = (0, 0) = 0\,(1, 0)\)</span>, so <span class="math inline">\(0\)</span> is an eigenvalue. If <span class="math inline">\(\mathbf{J} \tilde{v} = \lambda\tilde{v}\)</span> with <span class="math inline">\(\lambda\ne 0\)</span>, the second entry gives <span class="math inline">\(\lambda v_2 = 0\)</span>, so <span class="math inline">\(v_2 = 0\)</span>, and then the first gives <span class="math inline">\(\lambda v_1 = 0\)</span>, so <span class="math inline">\(\tilde{v} = \tilde{0}\)</span>. So <span class="math inline">\(0\)</span> is the only eigenvalue, and <span class="math inline">\(\mathcal{E}_0 = \mathcal{N}(\mathbf{J}) = \mathopen{}\left\{(t, 0) : t \in \mathbb{R}\right\}\mathclose{}\)</span>, with geometric multiplicity <span class="math inline">\(1\)</span>.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-not-eigenspace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 179 (A number that is not an eigenvalue has no eigenspace)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> and <span class="math inline">\(\lambda = 2\)</span>, <span class="math inline">\(\mathbf{A} - 2\,\mathbf{I}_2 = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> sends <span class="math inline">\(\tilde{v}\)</span> to <span class="math inline">\((v_2, v_1)\)</span>, which is <span class="math inline">\(\tilde{0}\)</span> only for <span class="math inline">\(\tilde{v} = \tilde{0}\)</span>, so <span class="math inline">\(\mathcal{N}(\mathbf{A} - 2\,\mathbf{I}_2) = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>. And <span class="math inline">\(2\)</span> is not an eigenvalue (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>): <span class="math inline">\(\mathbf{A} \tilde{v} = 2\tilde{v}\)</span> reads <span class="math inline">\((2v_1 + v_2, v_1 + 2v_2) = (2v_1, 2v_2)\)</span>, so <span class="math inline">\(v_2 = 0\)</span> and <span class="math inline">\(v_1 = 0\)</span>. So <a href="#/def-eigenspace" class="quarto-xref">Definition&nbsp;96</a> does not apply to <span class="math inline">\(2\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 179 (A number that is not an eigenvalue has no eigenspace)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> and <span class="math inline">\(\lambda= 2\)</span>, <span class="math inline">\(\mathbf{A} - 2\,\mathbf{I}_2 = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> sends <span class="math inline">\(\tilde{v}\)</span> to <span class="math inline">\((v_2, v_1)\)</span>, which is <span class="math inline">\(\tilde{0}\)</span> only for <span class="math inline">\(\tilde{v} = \tilde{0}\)</span>, so <span class="math inline">\(\mathcal{N}(\mathbf{A} - 2\,\mathbf{I}_2) = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>. And <span class="math inline">\(2\)</span> is not an eigenvalue (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>): <span class="math inline">\(\mathbf{A} \tilde{v} = 2\tilde{v}\)</span> reads <span class="math inline">\((2v_1 + v_2, v_1 + 2v_2) = (2v_1, 2v_2)\)</span>, so <span class="math inline">\(v_2 = 0\)</span> and <span class="math inline">\(v_1 = 0\)</span>. So <a href="#/def-eigenspace" class="quarto-xref">Definition&nbsp;96</a> does not apply to <span class="math inline">\(2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="thm-eigenvalue-singular" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 98 (Eigenvalues are where <span class="math inline">\(\mathbf{A} - \lambda \mathbf{I}\)</span> is singular)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> matrix and <span class="math inline">\(\lambda\)</span> a real number. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(\mathbf{A}\)</span> (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>) exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular (<a href="#/def-invertible-matrix" class="quarto-xref">Definition&nbsp;70</a>). In particular, <span class="math inline">\(\mathbf{A}\)</span> is singular exactly when <span class="math inline">\(0\)</span> is one of its eigenvalues; and each eigenspace <span class="math inline">\(\mathcal{E}_\lambda\)</span> (<a href="#/def-eigenspace" class="quarto-xref">Definition&nbsp;96</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> consisting of <span class="math inline">\(\tilde{0}\)</span> and the eigenvectors for <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 98 (Eigenvalues are where <span class="math inline">\(\mathbf{A} - \lambda\mathbf{I}\)</span> is singular)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> matrix and <span class="math inline">\(\lambda\)</span> a real number. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(\mathbf{A}\)</span> (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>) exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular (<a href="#/def-invertible-matrix" class="quarto-xref">Definition&nbsp;70</a>). In particular, <span class="math inline">\(\mathbf{A}\)</span> is singular exactly when <span class="math inline">\(0\)</span> is one of its eigenvalues; and each eigenspace <span class="math inline">\(\mathcal{E}_\lambda\)</span> (<a href="#/def-eigenspace" class="quarto-xref">Definition&nbsp;96</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> consisting of <span class="math inline">\(\tilde{0}\)</span> and the eigenvectors for <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For any <span class="math inline">\(\tilde{v} \in \mathbb{R}^p\)</span>,</p>
@@ -7754,11 +7754,11 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 &amp;= \mathbf{A} \tilde{v} - \lambda\,(\mathbf{I}_p \tilde{v})
 &amp;&amp; \text{(}\href{#thm-scalar-matmul}{\text{Theorem~84}}\text{, the scalar factor)}
 \\
-&amp;= \mathbf{A} \tilde{v} - \lambda \tilde{v},
+&amp;= \mathbf{A} \tilde{v} - \lambda\tilde{v},
 &amp;&amp; \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda \tilde{v}\)</span> exactly when <span class="math inline">\(\tilde{v} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>; the nonzero such <span class="math inline">\(\tilde{v}\)</span> are the eigenvectors for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\lambda\)</span> is an eigenvalue exactly when that null space contains a nonzero vector, which by <a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;97</a> is exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular. With <span class="math inline">\(\lambda = 0\)</span>, <span class="math inline">\(\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}\)</span>. An eigenspace is a null space, so it is a subspace (<a href="#/thm-null-space-subspace" class="quarto-xref">Theorem&nbsp;32</a>).</p>
+<p>so <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span> exactly when <span class="math inline">\(\tilde{v} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>; the nonzero such <span class="math inline">\(\tilde{v}\)</span> are the eigenvectors for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\lambda\)</span> is an eigenvalue exactly when that null space contains a nonzero vector, which by <a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;97</a> is exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular. With <span class="math inline">\(\lambda= 0\)</span>, <span class="math inline">\(\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}\)</span>. An eigenspace is a null space, so it is a subspace (<a href="#/thm-null-space-subspace" class="quarto-xref">Theorem&nbsp;32</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-eigenvalue-singular" class="theorem example">
 <p><span class="theorem-title"><strong>Example 180 (Eigenvalues and singular matrices)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}\)</span> is singular (its columns are negatives of each other, so its rank is <span class="math inline">\(1\)</span>), matching the eigenvalue <span class="math inline">\(3\)</span> of <a href="#/exm-eigenvalue" class="quarto-xref">Example&nbsp;132</a>. <span class="math inline">\(\mathbf{A}\)</span> itself has rank <span class="math inline">\(2\)</span>, since <span class="math inline">\(c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c_1 = c_2 = 0\)</span> (subtract twice the second entry from the first: <span class="math inline">\(-3c_2 = 0\)</span>, and then the second entry gives <span class="math inline">\(c_1 = 0\)</span>); so it is invertible (<a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;97</a>), and <span class="math inline">\(0\)</span> is not an eigenvalue. The singular matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}\)</span> has eigenvalue <span class="math inline">\(0\)</span>, with eigenvector <span class="math inline">\((1, -1)\)</span>.</p>
@@ -7767,7 +7767,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 <p><span class="theorem-title"><strong>Theorem 99 (Eigenvalues of shifts and powers)</strong></span> Let <span class="math inline">\(\tilde{v}\)</span> be an eigenvector of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> for the eigenvalue <span class="math inline">\(\lambda\)</span> (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>). Then</p>
 <ol type="1">
 <li>
-<span class="math inline">\(\tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{A} + s\,\mathbf{I}_p\)</span> for <span class="math inline">\(\lambda + s\)</span>, for every number <span class="math inline">\(s\)</span>;</li>
+<span class="math inline">\(\tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{A} + s\,\mathbf{I}_p\)</span> for <span class="math inline">\(\lambda+ s\)</span>, for every number <span class="math inline">\(s\)</span>;</li>
 <li>
 <span class="math inline">\(\tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{A}^k\)</span> (<a href="#/def-matrix-power" class="quarto-xref">Definition&nbsp;66</a>) for <span class="math inline">\(\lambda^k\)</span>, for every positive integer <span class="math inline">\(k\)</span>.</li>
 </ol>
@@ -7783,13 +7783,13 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 &amp;= \mathbf{A} \tilde{v} + s\,(\mathbf{I}_p \tilde{v})
 &amp;&amp; \text{(}\href{#thm-scalar-matmul}{\text{Theorem~84}}\text{)}
 \\
-&amp;= \lambda \tilde{v} + s\,(\mathbf{I}_p \tilde{v})
+&amp;= \lambda\tilde{v} + s\,(\mathbf{I}_p \tilde{v})
 &amp;&amp; \text{(eigenvector)}
 \\
-&amp;= \lambda \tilde{v} + s \tilde{v}
+&amp;= \lambda\tilde{v} + s \tilde{v}
 &amp;&amp; \text{(}\href{#thm-identity}{\text{Theorem~10}}\text{)}
 \\
-&amp;= (\lambda + s)\,\tilde{v}.
+&amp;= (\lambda+ s)\,\tilde{v}.
 &amp;&amp; \text{(add entrywise)}
 \end{aligned}
 \]</span></p>
@@ -7806,7 +7806,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 &amp;= \lambda^{k-1}\,(\mathbf{A} \tilde{v})
 &amp;&amp; \text{(}\href{#thm-scalar-matmul}{\text{Theorem~84}}\text{)}
 \\
-&amp;= \lambda^{k-1}\,(\lambda \tilde{v})
+&amp;= \lambda^{k-1}\,(\lambda\tilde{v})
 &amp;&amp; \text{(eigenvector)}
 \\
 &amp;= \lambda^k \tilde{v}.
@@ -7830,7 +7830,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{U} - \lambda\,\mathbf{I}_p\)</span> is upper triangular, with diagonal entries <span class="math inline">\(u_{ii} - \lambda\)</span> (<a href="#/def-identity-matrix" class="quarto-xref">Definition&nbsp;27</a>, <a href="#/def-matrix-addition" class="quarto-xref">Definition&nbsp;22</a>).</p>
-<p><strong>If <span class="math inline">\(\lambda\)</span> is not a diagonal entry,</strong> every <span class="math inline">\(u_{ii} - \lambda \ne 0\)</span>, so <span class="math inline">\((\mathbf{U} - \lambda\,\mathbf{I}_p)\,\tilde{v} = \tilde{0}\)</span> has exactly one solution, <span class="math inline">\(\tilde{v} = \tilde{0}\)</span> (<a href="#/thm-back-substitution" class="quarto-xref">Theorem&nbsp;92</a>), and <span class="math inline">\(\lambda\)</span> is not an eigenvalue (<a href="#/thm-eigenvalue-singular" class="quarto-xref">Theorem&nbsp;98</a>).</p>
+<p><strong>If <span class="math inline">\(\lambda\)</span> is not a diagonal entry,</strong> every <span class="math inline">\(u_{ii} - \lambda\ne 0\)</span>, so <span class="math inline">\((\mathbf{U} - \lambda\,\mathbf{I}_p)\,\tilde{v} = \tilde{0}\)</span> has exactly one solution, <span class="math inline">\(\tilde{v} = \tilde{0}\)</span> (<a href="#/thm-back-substitution" class="quarto-xref">Theorem&nbsp;92</a>), and <span class="math inline">\(\lambda\)</span> is not an eigenvalue (<a href="#/thm-eigenvalue-singular" class="quarto-xref">Theorem&nbsp;98</a>).</p>
 <p><strong>If <span class="math inline">\(\lambda\)</span> is a diagonal entry,</strong> let <span class="math inline">\(k\)</span> be the smallest index with <span class="math inline">\(u_{kk} = \lambda\)</span>, and write <span class="math inline">\(\mathbf{M} = \mathbf{U} - \lambda\,\mathbf{I}_p\)</span>, so <span class="math inline">\(m_{kk} = 0\)</span> and <span class="math inline">\(m_{ii} \ne 0\)</span> for <span class="math inline">\(i &lt; k\)</span>. Look for <span class="math inline">\(\tilde{v}\)</span> with <span class="math inline">\(v_k = 1\)</span> and <span class="math inline">\(v_j = 0\)</span> for <span class="math inline">\(j &gt; k\)</span>. Entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{M} \tilde{v}\)</span> is</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -7851,7 +7851,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 <p>So <span class="math inline">\(\mathbf{M} \tilde{v} = \tilde{0}\)</span> with <span class="math inline">\(v_k = 1\)</span>, hence <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span>, and <span class="math inline">\(\lambda\)</span> is an eigenvalue.</p>
 </div>
 </section><section class="slide level2"><div id="exm-eigen-triangular" class="theorem example">
-<p><span class="theorem-title"><strong>Example 182 (Eigenvalues read off the diagonal)</strong></span> <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> of <a href="#/exm-triangular-matrix" class="quarto-xref">Example&nbsp;167</a> has eigenvalues <span class="math inline">\(2\)</span>, <span class="math inline">\(\tfrac{1}{2}\)</span> and <span class="math inline">\(-1\)</span>. For <span class="math inline">\(\lambda = \tfrac{1}{2}\)</span> (so <span class="math inline">\(k = 2\)</span>), take <span class="math inline">\(v_2 = 1\)</span>, <span class="math inline">\(v_3 = 0\)</span>; row 1 of <span class="math inline">\((\mathbf{U} - \tfrac{1}{2}\,\mathbf{I}_3)\,\tilde{v}\)</span> is <span class="math inline">\(\tfrac{3}{2}\,v_1 + 1 = 0\)</span>, so <span class="math inline">\(v_1 = -\tfrac{2}{3}\)</span>. Check: <span class="math inline">\(\mathbf{U}\,(-\tfrac{2}{3}, 1, 0) = (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) = \tfrac{1}{2}\,(-\tfrac{2}{3}, 1, 0)\)</span>. The matrix <span class="math inline">\(\mathbf{J}\)</span> of <a href="#/exm-eigenspace" class="quarto-xref">Example&nbsp;178</a> is upper triangular with both diagonal entries <span class="math inline">\(0\)</span>, and <span class="math inline">\(0\)</span> is its only eigenvalue.</p>
+<p><span class="theorem-title"><strong>Example 182 (Eigenvalues read off the diagonal)</strong></span> <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> of <a href="#/exm-triangular-matrix" class="quarto-xref">Example&nbsp;167</a> has eigenvalues <span class="math inline">\(2\)</span>, <span class="math inline">\(\tfrac{1}{2}\)</span> and <span class="math inline">\(-1\)</span>. For <span class="math inline">\(\lambda= \tfrac{1}{2}\)</span> (so <span class="math inline">\(k = 2\)</span>), take <span class="math inline">\(v_2 = 1\)</span>, <span class="math inline">\(v_3 = 0\)</span>; row 1 of <span class="math inline">\((\mathbf{U} - \tfrac{1}{2}\,\mathbf{I}_3)\,\tilde{v}\)</span> is <span class="math inline">\(\tfrac{3}{2}\,v_1 + 1 = 0\)</span>, so <span class="math inline">\(v_1 = -\tfrac{2}{3}\)</span>. Check: <span class="math inline">\(\mathbf{U}\,(-\tfrac{2}{3}, 1, 0) = (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) = \tfrac{1}{2}\,(-\tfrac{2}{3}, 1, 0)\)</span>. The matrix <span class="math inline">\(\mathbf{J}\)</span> of <a href="#/exm-eigenspace" class="quarto-xref">Example&nbsp;178</a> is upper triangular with both diagonal entries <span class="math inline">\(0\)</span>, and <span class="math inline">\(0\)</span> is its only eigenvalue.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="thm-eigen-idempotent-orthogonal" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 101 (Eigenvalues of idempotent and orthogonal matrices)</strong></span> &nbsp;</p>
@@ -7861,11 +7861,11 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 </ol>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span> with <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda \tilde{v}\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span> with <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span>.</p>
 <p><strong>Part 1.</strong> If <span class="math inline">\(\mathbf{A}^2 = \mathbf{A}\)</span>, then</p>
 <p><span class="math display">\[
 \begin{aligned}
-\lambda \tilde{v}
+\lambda\tilde{v}
 &amp;= \mathbf{A} \tilde{v}
 &amp;&amp; \text{(eigenvector)}
 \\
@@ -7876,7 +7876,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 &amp;&amp; \text{(}\href{#thm-eigen-shift-power}{\text{Theorem~99}}\text{, part 2)}
 \end{aligned}
 \]</span></p>
-<p>and subtracting <span class="math inline">\(\lambda \tilde{v}\)</span> from both sides gives <span class="math inline">\((\lambda^2 - \lambda)\,\tilde{v} = \tilde{0}\)</span>. Some entry of <span class="math inline">\(\tilde{v}\)</span> is nonzero, so <span class="math inline">\(\lambda^2 - \lambda = \lambda\,(\lambda - 1) = 0\)</span>, and a product of two numbers is <span class="math inline">\(0\)</span> only when one of them is: <span class="math inline">\(\lambda = 0\)</span> or <span class="math inline">\(\lambda = 1\)</span>.</p>
+<p>and subtracting <span class="math inline">\(\lambda\tilde{v}\)</span> from both sides gives <span class="math inline">\((\lambda^2 - \lambda)\,\tilde{v} = \tilde{0}\)</span>. Some entry of <span class="math inline">\(\tilde{v}\)</span> is nonzero, so <span class="math inline">\(\lambda^2 - \lambda= \lambda\,(\lambda- 1) = 0\)</span>, and a product of two numbers is <span class="math inline">\(0\)</span> only when one of them is: <span class="math inline">\(\lambda= 0\)</span> or <span class="math inline">\(\lambda= 1\)</span>.</p>
 <p><strong>Part 2.</strong> If <span class="math inline">\(\mathbf{A}\)</span> is orthogonal, then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -7884,14 +7884,14 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 &amp;= \mathopen{}\left\lVert\mathbf{A} \tilde{v}\right\rVert\mathclose{}
 &amp;&amp; \text{(}\href{#thm-orthogonal-norm}{\text{Theorem~65}}\text{)}
 \\
-&amp;= \mathopen{}\left\lVert\lambda \tilde{v}\right\rVert\mathclose{}
+&amp;= \mathopen{}\left\lVert\lambda\tilde{v}\right\rVert\mathclose{}
 &amp;&amp; \text{(eigenvector)}
 \\
 &amp;= \mathopen{}\left|\lambda\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{v}\right\rVert\mathclose{},
 &amp;&amp; \text{(}\href{#thm-norm-properties}{\text{Theorem~52}}\text{, part 2)}
 \end{aligned}
 \]</span></p>
-<p>and <span class="math inline">\(\mathopen{}\left\lVert\tilde{v}\right\rVert\mathclose{} &gt; 0\)</span> (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;52</a>, part 1), so dividing by <span class="math inline">\(\mathopen{}\left\lVert\tilde{v}\right\rVert\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left|\lambda\right|\mathclose{} = 1\)</span>; since <span class="math inline">\(\lambda\)</span> is real (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>), <span class="math inline">\(\lambda = 1\)</span> or <span class="math inline">\(\lambda = -1\)</span>.</p>
+<p>and <span class="math inline">\(\mathopen{}\left\lVert\tilde{v}\right\rVert\mathclose{} &gt; 0\)</span> (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;52</a>, part 1), so dividing by <span class="math inline">\(\mathopen{}\left\lVert\tilde{v}\right\rVert\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left|\lambda\right|\mathclose{} = 1\)</span>; since <span class="math inline">\(\lambda\)</span> is real (<a href="#/def-eigenvalue" class="quarto-xref">Definition&nbsp;80</a>), <span class="math inline">\(\lambda= 1\)</span> or <span class="math inline">\(\lambda= -1\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-eigen-idempotent-orthogonal" class="theorem example">
 <p><span class="theorem-title"><strong>Example 183 (Projections and reflections)</strong></span> &nbsp;</p>
@@ -7968,7 +7968,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 <p><span class="theorem-title"><strong>Theorem 102 (Similar matrices have the same eigenvalues)</strong></span> If <span class="math inline">\(\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\)</span> (<a href="#/def-similar" class="quarto-xref">Definition&nbsp;97</a>), then <span class="math inline">\(\tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{A}\)</span> for <span class="math inline">\(\lambda\)</span> exactly when <span class="math inline">\(\mathbf{P}^{-1} \tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{B}\)</span> for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> have the same eigenvalues.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong>From <span class="math inline">\(\mathbf{A}\)</span> to <span class="math inline">\(\mathbf{B}\)</span>.</strong> Let <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda \tilde{v}\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span>, and <span class="math inline">\(\tilde{w} = \mathbf{P}^{-1} \tilde{v}\)</span>. Then</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong>From <span class="math inline">\(\mathbf{A}\)</span> to <span class="math inline">\(\mathbf{B}\)</span>.</strong> Let <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span>, and <span class="math inline">\(\tilde{w} = \mathbf{P}^{-1} \tilde{v}\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{B} \tilde{w}
@@ -7987,7 +7987,7 @@ x_i &amp;= \frac{1}{u_{ii}} \mathopen{}\left(b_i - \sum_{j=i+1}^{n} u_{ij}\,x_j\
 &amp;= \mathbf{P}^{-1}\,(\mathbf{A} \tilde{v})
 &amp;&amp; \text{(}\href{#thm-matmul-assoc}{\text{Theorem~8}}\text{)}
 \\
-&amp;= \mathbf{P}^{-1}\,(\lambda \tilde{v})
+&amp;= \mathbf{P}^{-1}\,(\lambda\tilde{v})
 &amp;&amp; \text{(eigenvector)}
 \\
 &amp;= \lambda\,\tilde{w}.
