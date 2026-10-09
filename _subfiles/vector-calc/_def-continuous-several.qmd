@@ -6,29 +6,6 @@ if for every $\tolout > 0$ there is a $\tolin > 0$ such that
 $\norm{f(\vy) - f(\vx)} < \tolout$ whenever $\norm{\vy - \vx} < \tolin$.
 It is **continuous on** a set if it is continuous at every point of the set.
 For $q = 1$, $\norm{f(\vy) - f(\vx)} = \abs{f(\vy) - f(\vx)}$.
-For
-
-$$
-\begin{aligned}
-p &= q \\
-&= 1,
-\end{aligned}
-$$
-
-this definition is the usual [continuity](calculus.qmd#def-continuous),
-written out with the $\tolout$-$\tolin$ definition of the limit $\lim_{y \to x} f(y) = f(x)$.
-
-Continuity survives the usual operations:
-
-- A [composition](sets-functions.qmd#def-composition) of continuous functions is continuous:
-  choose the $\tolin$ for the [outer function](sets-functions.qmd#def-composition) first,
-  and use it as the $\tolout$ for the inner one.
-- A sum $f + g$ of continuous real-valued functions is continuous,
-  since $\abs{(f + g)(\vy) - (f + g)(\vx)} \le \abs{f(\vy) - f(\vx)} + \abs{g(\vy) - g(\vx)}$:
-  use $\tolout / 2$ for each.
-- A constant multiple $c f$ is continuous,
-  since $\abs{c f(\vy) - c f(\vx)} = \abs{c}\,\abs{f(\vy) - f(\vx)}$:
-  use $\tolout / (\abs{c} + 1)$ for $f$.
 
 :::
 

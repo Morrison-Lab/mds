@@ -1,0 +1,20 @@
+:::{#thm-moore-penrose-generalized-inverse}
+#### A Moore-Penrose inverse is a generalized inverse
+
+If $\matr{G}$ is a Moore-Penrose inverse of an $m \times n$ matrix $\matr{A}$ (@def-moore-penrose),
+then $\matr{G}$ is a generalized inverse of $\matr{A}$ (@def-generalized-inverse).
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+A generalized inverse of $\matr{A}$ is an $n \times m$ matrix $\matr{G}$ with $\matr{A}\matr{G}\matr{A} = \matr{A}$.
+A Moore-Penrose inverse is an $n \times m$ matrix, and condition 1 of @def-moore-penrose is $\matr{A}\matr{G}\matr{A} = \matr{A}$.
+
+:::
+
+:::

@@ -1,0 +1,42 @@
+:::{#exm-matrix-induced-inner-product-axioms}
+#### Checking the inner product axioms, and recovering the matrix from the inner product
+
+Take $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ from @exm-matrix-induced-inner-product,
+the vectors $\vx = (1, 2)$, $\vy = (3, -1)$ and $\vecf{z} = (0, 4)$,
+and the numbers $a = 2$ and $b = -3$.
+The code computes both sides of each axiom in @thm-matrix-induced-inner-product,
+and then the numbers $\iprod{\vecf{e}_i}{\vecf{e}_j}_{\matr{A}}$ for the standard basis vectors.
+
+```{r}
+#| label: matrix-induced-inner-product-axioms
+#| code-fold: false
+A <- matrix(c(2, 1, 1, 2), nrow = 2)
+ip <- function(x, y) drop(t(x) %*% A %*% y)
+
+x <- c(1, 2)
+y <- c(3, -1)
+z <- c(0, 4)
+a <- 2
+b <- -3
+
+c(
+  positivity = ip(x, x),
+  symmetry_xy = ip(x, y),
+  symmetry_yx = ip(y, x),
+  linearity_left = ip(a * x + b * y, z),
+  linearity_right = a * ip(x, z) + b * ip(y, z)
+)
+
+e <- diag(2)
+recovered <- outer(1:2, 1:2, Vectorize(function(i, j) ip(e[, i], e[, j])))
+recovered
+```
+
+The inner product of $\vx$ with itself is `{r} ip(x, x)`, which is positive.
+The two orders give the same number, `{r} ip(x, y)` and `{r} ip(y, x)`.
+Both sides of the linearity axiom equal `{r} ip(a * x + b * y, z)`.
+The matrix of numbers $\iprod{\vecf{e}_i}{\vecf{e}_j}_{\matr{A}}$ is
+`{r} if (isTRUE(all.equal(recovered, A))) "equal" else "not equal"` to $\matr{A}$,
+as the converse in @thm-matrix-induced-inner-product says.
+
+:::

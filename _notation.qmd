@@ -217,6 +217,14 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-seque
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/notation/_thm-derivation-chain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-derivation-chain.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/notation/_def-theorem.qmd >}}
 
 {{< slidebreak >}}
@@ -254,6 +262,14 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-seque
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/notation/_exm-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_thm-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/notation/_exm-proof-by-contradiction-truth-table.qmd >}}
 
 ## Indicator functions {#sec-indicator-functions}
 

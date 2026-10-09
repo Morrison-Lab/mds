@@ -1,0 +1,39 @@
+:::{#thm-reals-in-complex}
+#### Every real number is a complex number
+
+A complex number $z$ is a real number exactly when $\operatorname{Im} z = 0$.
+In particular, every real number $a$ is the complex number $a + 0\,i$,
+with $\operatorname{Re} a = a$ and $\operatorname{Im} a = 0$,
+so $\reals$ is a subset of $\bbC$.
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+Let $a$ be a real number.
+Since $0\,i = 0$,
+
+$$
+\ba
+a + 0\,i
+&= a + 0
+&& \text{(} 0\,i = 0 \text{)}
+\\
+&= a
+&& \text{(@thm-add-ident)}
+\ea
+$$
+
+so $a$ is the complex number $a + 0\,i$, whose imaginary part is $0$.
+The real part of $a + 0\,i$ is $a$, and by the equality rule in @def-complex-number
+no other pair of real and imaginary parts gives the same number.
+
+Conversely, if $z = a + b\,i$ has $b = \operatorname{Im} z = 0$, then $z = a + 0\,i = a$ by the same calculation, so $z$ is real.
+
+:::
+
+:::

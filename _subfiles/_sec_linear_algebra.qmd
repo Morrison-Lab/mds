@@ -426,6 +426,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-hyperplane-origin.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-hyperplane-origin.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-half-space.qmd >}}
 
 {{< slidebreak >}}
@@ -561,6 +569,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-vector-p-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-vector-p-norm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-vector-p-norm-limit.qmd >}}
 
 {{< slidebreak >}}
 
@@ -772,6 +788,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-matrix-induced-inner-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-matrix-induced-inner-product-axioms.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_rem-inner-products-machine-learning.qmd >}}
 
 ## Determinants
@@ -855,6 +879,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-moore-penrose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-moore-penrose-generalized-inverse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_exm-moore-penrose-generalized-inverse.qmd >}}
 
 {{< slidebreak >}}
 

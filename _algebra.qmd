@@ -526,11 +526,31 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-negative-imaginary-unit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-negative-imaginary-unit.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-imaginary-unit-choice.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-complex-number.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exm-complex-number.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-reals-in-complex.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-reals-in-complex.qmd >}}
 
 {{< slidebreak >}}
 

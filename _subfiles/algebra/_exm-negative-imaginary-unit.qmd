@@ -1,0 +1,18 @@
+:::{#exm-negative-imaginary-unit}
+#### Squaring $i$ and $-i$ in R
+
+R has the imaginary unit as `1i`.
+The code below squares it and its negative.
+
+```{r}
+#| label: negative-imaginary-unit
+#| code-fold: false
+squares <- c(i = (1i)^2, minus_i = (-1i)^2)
+squares
+```
+
+Both squares have real part `{r} Re(squares[["i"]])`
+and imaginary part `{r} Im(squares[["i"]])`,
+as @def-imaginary-unit and @thm-negative-imaginary-unit say.
+
+:::

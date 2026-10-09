@@ -1,0 +1,30 @@
+:::{#exm-moore-penrose-generalized-inverse}
+#### The Moore-Penrose inverse of a rank-one matrix
+
+The $3 \times 2$ matrix $\matr{A}$ below has rank $1$, because its second column is twice its first,
+so it has no ordinary inverse.
+The function `MASS::ginv()` computes its Moore-Penrose inverse $\matr{G}$.
+The code checks the four conditions of @def-moore-penrose,
+of which the first is the equation that makes $\matr{G}$ a generalized inverse.
+
+```{r}
+#| label: moore-penrose-generalized-inverse
+#| code-fold: false
+A <- cbind(c(1, 2, 3), c(2, 4, 6))
+G <- MASS::ginv(A)
+conditions <- c(
+  "1: AGA = A" = isTRUE(all.equal(A %*% G %*% A, A)),
+  "2: GAG = G" = isTRUE(all.equal(G %*% A %*% G, G)),
+  "3: AG symmetric" = isTRUE(all.equal(A %*% G, t(A %*% G))),
+  "4: GA symmetric" = isTRUE(all.equal(G %*% A, t(G %*% A)))
+)
+conditions
+round(G, 4)
+```
+
+All `{r} sum(conditions)` of `{r} length(conditions)` conditions hold,
+so $\matr{G}$ is a Moore-Penrose inverse of $\matr{A}$.
+By @thm-moore-penrose-generalized-inverse it is also a generalized inverse,
+which is condition 1: $\matr{A}\matr{G}\matr{A} = \matr{A}$ up to rounding error.
+
+:::

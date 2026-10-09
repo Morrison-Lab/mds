@@ -1,0 +1,85 @@
+:::{#thm-continuous-several}
+#### Continuity in one variable, and sums, multiples and compositions
+
+1. For $p = q = 1$, a function $f$ is continuous at $x$ in the sense of @def-continuous-several
+   exactly when $\lim_{y \to x} f(y) = f(x)$ ([limit](calculus.qmd#def-limit)),
+   which is the usual [continuity](calculus.qmd#def-continuous) at $x$.
+2. If $f : \reals^p \to \reals^q$ is continuous at $\vx$ and $g : \reals^q \to \reals^r$ is continuous at $f(\vx)$,
+   then the [composition](sets-functions.qmd#def-composition) $g \circ f$ is continuous at $\vx$.
+3. If $f, g : \reals^p \to \reals$ are continuous at $\vx$, then $f + g$ is continuous at $\vx$.
+4. If $f : \reals^p \to \reals$ is continuous at $\vx$ and $c \in \reals$, then $c f$ is continuous at $\vx$.
+
+If the hypotheses of part 2, 3 or 4 hold at every point of a set,
+the conclusion holds at every point of that set.
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+Let $\tolout > 0$ be given.
+
+**Part 1.**
+For $p = q = 1$, $\norm{f(y) - f(x)} = \abs{f(y) - f(x)}$ and $\norm{y - x} = \abs{y - x}$.
+@def-continuous-several then asks for a $\tolin > 0$ such that
+$\abs{f(y) - f(x)} < \tolout$ whenever $\abs{y - x} < \tolin$.
+The [limit definition](calculus.qmd#def-limit) with $L = f(x)$ asks for the same inequality, but only whenever $0 < \abs{y - x} < \tolin$.
+The two agree, because at $y = x$ the inequality $\abs{f(x) - f(x)} = 0 < \tolout$ holds for every $\tolin$.
+
+**Part 2.**
+Because $g$ is continuous at $f(\vx)$, there is a $\tolin_g > 0$ such that
+$\norm{g(\vecf{z}) - g(f(\vx))} < \tolout$ whenever $\norm{\vecf{z} - f(\vx)} < \tolin_g$.
+Because $f$ is continuous at $\vx$, applied with $\tolin_g$ in the role of $\tolout$,
+there is a $\tolin > 0$ such that $\norm{f(\vy) - f(\vx)} < \tolin_g$ whenever $\norm{\vy - \vx} < \tolin$.
+So if $\norm{\vy - \vx} < \tolin$, then $\vecf{z} = f(\vy)$ has $\norm{\vecf{z} - f(\vx)} < \tolin_g$,
+and therefore $\norm{g(f(\vy)) - g(f(\vx))} < \tolout$.
+
+**Part 3.**
+Because $f$ and $g$ are continuous at $\vx$, there are $\tolin_f > 0$ and $\tolin_g > 0$ such that
+$\abs{f(\vy) - f(\vx)} < \tolout / 2$ whenever $\norm{\vy - \vx} < \tolin_f$,
+and $\abs{g(\vy) - g(\vx)} < \tolout / 2$ whenever $\norm{\vy - \vx} < \tolin_g$.
+Let $\tolin \eqdef \min\cb{\tolin_f, \tolin_g}$.
+If $\norm{\vy - \vx} < \tolin$, then
+
+$$
+\ba
+\abs{(f + g)(\vy) - (f + g)(\vx)}
+&= \abs{\paren{f(\vy) - f(\vx)} + \paren{g(\vy) - g(\vx)}}
+&& \text{(regroup)}
+\\
+&\le \abs{f(\vy) - f(\vx)} + \abs{g(\vy) - g(\vx)}
+&& \text{(triangle inequality for numbers)}
+\\
+&< \frac{\tolout}{2} + \frac{\tolout}{2}
+&& \text{(choice of } \tolin \text{)}
+\\
+&= \tolout.
+&& \text{(add)}
+\ea
+$$
+
+**Part 4.**
+Because $f$ is continuous at $\vx$, there is a $\tolin > 0$ such that
+$\abs{f(\vy) - f(\vx)} < \tolout / (\abs{c} + 1)$ whenever $\norm{\vy - \vx} < \tolin$.
+For such $\vy$,
+
+$$
+\ba
+\abs{c f(\vy) - c f(\vx)}
+&= \abs{c}\,\abs{f(\vy) - f(\vx)}
+&& \text{(factor out } c \text{)}
+\\
+&\le \abs{c}\,\frac{\tolout}{\abs{c} + 1}
+&& \text{(choice of } \tolin \text{)}
+\\
+&< \tolout.
+&& \text{(} \abs{c} < \abs{c} + 1 \text{)}
+\ea
+$$
+
+:::
+
+:::

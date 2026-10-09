@@ -1,0 +1,30 @@
+:::{#thm-negative-imaginary-unit}
+#### The number $-i$ also squares to $-1$
+
+$$(-i)^2 = -1.$$
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+$$
+\ba
+(-i)^2
+&= (-1)^2\,i^2
+&& \text{(} -i = (-1) \cd i \text{, and } (ab)^2 = a^2 b^2 \text{ because products commute and associate)}
+\\
+&= 1 \cd (-1)
+&& \text{(} (-1)^2 = 1 \text{ and @def-imaginary-unit)}
+\\
+&= -1
+&& \text{(multiply)}
+\ea
+$$
+
+:::
+
+:::

@@ -7,13 +7,7 @@ $$\dprod{\vec{w}}{\vx} + b = 0$$
 
 for some vector $\vec{w} \in \reals^p \setminus \{\vzero\}$ and number $b \in \reals$.
 The vector $\vec{w}$ is a **normal vector** of the hyperplane, and $b$ is its offset.
-When $b = 0$, the hyperplane contains the origin $\vzero$, since $\dprod{\vec{w}}{\vzero} = 0$.
 
-Geometrically:
-
-- In $\reals^2$ ($p = 2$), a hyperplane is a line: $w_1 x_1 + w_2 x_2 + b = 0$.
-- In $\reals^3$ ($p = 3$), a hyperplane is a plane.
-- A hyperplane divides the space $\reals^p$ into two half-spaces, one on each side of it (@def-half-space).
 :::
 
 {{< slidebreak >}}

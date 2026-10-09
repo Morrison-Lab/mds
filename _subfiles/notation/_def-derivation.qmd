@@ -7,13 +7,5 @@ in which each line is joined to the line before it
 by $=$ or by an inequality sign (@def-inequality),
 and carries an annotation that names the reason that step holds:
 an assumption, a definition, a previously proved result, or a rule of algebra.
-The chain shows how its first expression compares with its last:
-
-- if every step is $=$, the first expression equals the last;
-- if every step is $=$ or $\le$, the first is less than or equal to the last;
-- if every step is $=$, $\le$, or $<$, and at least one step is $<$,
-  the first is less than the last.
-
-The same holds with $\ge$ and $>$ in place of $\le$ and $<$.
 
 :::

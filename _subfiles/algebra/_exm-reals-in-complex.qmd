@@ -1,0 +1,22 @@
+:::{#exm-reals-in-complex}
+#### Which complex numbers are real
+
+R stores complex numbers as a real part and an imaginary part.
+The code below converts the real number $7$ to a complex number
+and reads the parts of three complex numbers.
+
+```{r}
+#| label: reals-in-complex
+#| code-fold: false
+z <- c(as.complex(7), 2 - 5i, 3 + 0i)
+data.frame(z = z, re = Re(z), im = Im(z), is_real = Im(z) == 0)
+```
+
+The real number $7$ becomes the complex number `{r} format(z[1])`,
+with imaginary part `{r} Im(z[1])`.
+Of the `{r} length(z)` numbers,
+`{r} sum(Im(z) == 0)` have imaginary part $0$,
+and by @thm-reals-in-complex these are the real ones.
+The number $2 - 5\,i$ is not real, because its imaginary part is `{r} Im(z[2])`.
+
+:::

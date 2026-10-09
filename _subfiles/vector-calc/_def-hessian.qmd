@@ -11,29 +11,6 @@ $$
 \underbrace{\matr{H}_f(\vx)}_{p \times p} \eqdef \deriv{\vx} \tp{\paren{\deriv{\vx} f(\vx)}}.
 $$ {#eq-hessian}
 
-By @thm-row-deriv-tp-col-deriv, the transposed gradient is the row-vector derivative
-$\derivf{f(\vx)}{\tp{\vx}}$ (@def-row-vector-derivative),
-so the Hessian can also be written
-
-$$
-\begin{aligned}
-\matr{H}_f(\vx)
-&= \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}} \\
-&= \xderivf{f(\vx)}{\vx}{\tp{\vx}}.
-\end{aligned}
-$$ {#eq-hessian-row}
-
-Both forms follow the shape rule of matrix multiplication (@rem-row-derivative-shape):
-the $p \times 1$ column-vector operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row vector,
-giving a $p \times p$ matrix.
-
-By @def-vector-valued-derivative, with $y_j = \deriv{x_j} f(\vx)$,
-the $(i, j)$ entry of the Hessian is
-
-$$
-\sb{\matr{H}_f(\vx)}_{ij} = \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
-$$
-
 :::
 
 {{< slidebreak >}}

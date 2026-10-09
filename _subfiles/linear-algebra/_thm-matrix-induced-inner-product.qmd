@@ -1,0 +1,113 @@
+:::{#thm-matrix-induced-inner-product}
+#### Properties of the matrix-induced inner product
+
+For every $p \times p$ symmetric positive definite matrix $\matr{A}$,
+the function $\iprod{\vx}{\vy}_{\matr{A}} = \tp{\vx} \matr{A} \vy$ satisfies the four inner product axioms (@def-inner-product):
+positivity, definiteness, linearity in the first slot, and symmetry.
+Thus $(\reals^p, \iprod{\cdot}{\cdot}_{\matr{A}})$ is an inner product space (@def-inner-product-space).
+
+Taking $\matr{A} = \matr{I}_p$ recovers the standard dot product (@exm-dot-product-inner-product),
+while taking $\matr{A} = \diag(c_1, \ldots, c_p)$ recovers the weighted inner product (@exm-weighted-inner-product).
+
+Conversely, every inner product on $\reals^p$ has this form for a unique symmetric positive definite matrix $\matr{A}$, whose $(i, j)$ entry is $A_{ij} = \iprod{\vecf{e}_i}{\vecf{e}_j}$, where $\vecf{e}_1, \ldots, \vecf{e}_p$ are the standard basis vectors (@def-indicator-vector).
+
+:::
+
+{{< slidebreak >}}
+
+::: proof
+
+- **positivity**: $\iprod{\vx}{\vx}_{\matr{A}} = \tp{\vx}\matr{A}\vx \ge 0$ for all $\vx \in \reals^p$,
+  because $\matr{A}$ is positive definite (@def-positive-definite);
+- **definiteness**: $\iprod{\vx}{\vx}_{\matr{A}} = 0$ if and only if $\vx = \vzero_{p \times 1}$,
+  by definition of a positive definite matrix (@def-positive-definite);
+- **linearity in the first slot**: for all $\vx, \vy, \vecf{z} \in \reals^p$ and real numbers $a, b$,
+  $$
+  \ba
+  \iprod{a\,\vx + b\,\vy}{\vecf{z}}_{\matr{A}}
+  &= \tp{(a\,\vx + b\,\vy)}\,\matr{A}\vecf{z}
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \\
+  &= (a\,\tp{\vx} + b\,\tp{\vy})\,\matr{A}\vecf{z}
+  && \text{(@thm-transpose-sum, @def-scalar-mult, @def-matrix-transpose)}
+  \\
+  &= a\,\tp{\vx}\matr{A}\vecf{z} + b\,\tp{\vy}\matr{A}\vecf{z}
+  && \text{(@thm-matmul-distrib)}
+  \\
+  &= a\,\iprod{\vx}{\vecf{z}}_{\matr{A}} + b\,\iprod{\vy}{\vecf{z}}_{\matr{A}}
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \ea
+  $$
+- **symmetry**: because $\tp{\vy}\matr{A}\vx$ is a $1 \times 1$ scalar and $\matr{A}$ is symmetric ($\tp{\matr{A}} = \matr{A}$),
+  $$
+  \ba
+  \iprod{\vy}{\vx}_{\matr{A}}
+  &= \tp{\vy}\matr{A}\vx
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \\
+  &= \tp{\paren{\tp{\vy}\matr{A}\vx}}
+  && \text{(a scalar equals its transpose)}
+  \\
+  &= \tp{\vx}\tp{\matr{A}}\vy
+  && \text{(@thm-transpose-product, twice)}
+  \\
+  &= \tp{\vx}\matr{A}\vy
+  && \text{($\matr{A}$ is symmetric)}
+  \\
+  &= \iprod{\vx}{\vy}_{\matr{A}}
+  && \text{(definition of } \iprod{\cdot}{\cdot}_{\matr{A}} \text{)}
+  \ea
+  $$
+
+{{< slidebreak >}}
+
+For the converse, let $\iprod{\cdot}{\cdot}$ be any inner product on $\reals^p$.
+Any vectors $\vx, \vy \in \reals^p$ can be written in the standard basis as
+$\vx = \sumip x_i\,\vecf{e}_i$ and $\vy = \sumjp y_j\,\vecf{e}_j$ (@def-basis, @def-indicator-vector).
+By linearity in both slots (@rem-inner-product-other-sources):
+
+$$
+\ba
+\iprod{\vx}{\vy}
+&= \iprod{\sumip x_i\,\vecf{e}_i}{\sumjp y_j\,\vecf{e}_j}
+&& \text{(expand in the standard basis)}
+\\
+&= \sumip \sumjp x_i y_j\,\iprod{\vecf{e}_i}{\vecf{e}_j}
+&& \text{(linearity in both slots)}
+\\
+&= \sumip x_i \sumjp A_{ij} y_j
+&& \text{(define } A_{ij} \eqdef \iprod{\vecf{e}_i}{\vecf{e}_j} \text{)}
+\\
+&= \tp{\vx} \matr{A} \vy.
+&& \text{(@def-matvec-mult)}
+\ea
+$$
+
+Symmetry of $\iprod{\cdot}{\cdot}$ ensures
+
+$$
+\begin{aligned}
+A_{ji} &= \iprod{\vecf{e}_j}{\vecf{e}_i} \\
+&= \iprod{\vecf{e}_i}{\vecf{e}_j} \\
+&= A_{ij},
+\end{aligned}
+$$
+
+so $\matr{A}$ is symmetric (@def-symmetric-matrix).
+For any $\vx \neq \vzero$, $\tp{\vx}\matr{A}\vx = \iprod{\vx}{\vx} > 0$ by positivity and definiteness of the inner product,
+so $\matr{A}$ is positive definite (@def-positive-definite).
+
+For uniqueness, if another matrix $\matr{B}$ satisfies $\iprod{\vx}{\vy} = \tp{\vx}\matr{B}\vy$ for all $\vx, \vy$,
+evaluating at $\vx = \vecf{e}_i$ and $\vy = \vecf{e}_j$ gives
+
+$$
+\begin{aligned}
+B_{ij} &= \tp{\vecf{e}_i}\matr{B}\vecf{e}_j \\
+&= \iprod{\vecf{e}_i}{\vecf{e}_j} \\
+&= A_{ij},
+\end{aligned}
+$$
+
+so $\matr{B} = \matr{A}$.
+
+:::

@@ -1,0 +1,119 @@
+:::{#thm-vector-p-norm}
+#### The $\ell_1$, $\ell_2$ and infinity norms, and the norm axioms
+
+Let $\vx = (x_1, \ldots, x_p) \in \reals^p$.
+
+1. $\norm{\vx}_1 = \sumip \abs{x_i}$, and $\norm{\vx}_2 = \sqrt{\sumip x_i^2}$,
+   which is the Euclidean norm (@def-euclidean-norm).
+2. $\norm{\vx}_\infty = \lim_{k \to \infty} \norm{\vx}_k$.
+3. For every real number $k \ge 1$, and for $k = \infty$,
+   $\norm{\cdot}_k$ is a norm on $\reals^p$ (@def-norm).
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+**Part 1.**
+Setting $k = 1$ in @def-vector-p-norm gives $\paren{\sumip \abs{x_i}}^{1/1} = \sumip \abs{x_i}$.
+Setting $k = 2$ gives $\paren{\sumip \abs{x_i}^2}^{1/2}$,
+and $\abs{x_i}^2 = x_i^2$ for every real number $x_i$.
+
+**Part 2.**
+If $\vx = \vzero$, every $\norm{\vx}_k$ is $0$, and so is $\norm{\vx}_\infty$.
+Otherwise, let $M \eqdef \max_i \abs{x_i} > 0$, and pick $j$ with $\abs{x_j} = M$.
+Every term of $\sumip \abs{x_i}^k$ is at most $M^k$, and the $j$th term equals $M^k$, so
+
+$$
+M^k \le \sumip \abs{x_i}^k \le p\,M^k.
+$$
+
+Taking the $1/k$ power, which preserves order on $[0, \infty)$, gives
+
+$$
+M \le \norm{\vx}_k \le p^{1/k} M.
+$$
+
+As $k \to \infty$, $p^{1/k} = \expf{\frac{\ln p}{k}} \to 1$,
+so $\norm{\vx}_k$ is squeezed between $M$ and a quantity that tends to $M$.
+Thus $\norm{\vx}_k \to M = \norm{\vx}_\infty$.
+
+**Part 3, finite $k$.**
+
+- *Positivity and definiteness.*
+  Each term $\abs{x_i}^k$ is at least $0$, so $\norm{\vx}_k \ge 0$.
+  The sum $\sumip \abs{x_i}^k$ is $0$ exactly when every term is $0$, that is, when $\vx = \vzero$.
+- *Absolute homogeneity.* For a number $c$,
+
+  $$
+  \ba
+  \norm{c\,\vx}_k
+  &= \paren{\sumip \abs{c\,x_i}^k}^{1/k}
+  && \text{(definition)}
+  \\
+  &= \paren{\abs{c}^k \sumip \abs{x_i}^k}^{1/k}
+  && \text{(} \abs{c\,x_i} = \abs{c}\,\abs{x_i} \text{, and factor out } \abs{c}^k \text{)}
+  \\
+  &= \abs{c}\,\norm{\vx}_k.
+  && \text{(take the } 1/k \text{ power of each factor)}
+  \ea
+  $$
+- *Triangle inequality.*
+  Let $\vy \in \reals^p$.
+  If $\vx = \vzero$ or $\vy = \vzero$, both sides of $\norm{\vx + \vy}_k \le \norm{\vx}_k + \norm{\vy}_k$ are equal.
+  Otherwise, let $a \eqdef \norm{\vx}_k > 0$, $b \eqdef \norm{\vy}_k > 0$,
+  $\lambda \eqdef \frac{a}{a + b}$, $\vecf{u} \eqdef \vx / a$ and $\vecf{v} \eqdef \vy / b$.
+  By absolute homogeneity, $\norm{\vecf{u}}_k = \norm{\vecf{v}}_k = 1$,
+  and
+
+  $$
+  \frac{\vx + \vy}{a + b} = \lambda\,\vecf{u} + (1 - \lambda)\,\vecf{v}.
+  $$
+
+  The function $s \mapsto s^k$ is non-decreasing and convex on $[0, \infty)$
+  (its second derivative $k (k - 1) s^{k - 2}$ is nonnegative).
+  So for each coordinate $i$,
+
+  $$
+  \ba
+  \abs{\lambda u_i + (1 - \lambda) v_i}^k
+  &\le \paren{\lambda \abs{u_i} + (1 - \lambda) \abs{v_i}}^k
+  && \text{(triangle inequality for numbers; } s^k \text{ is non-decreasing)}
+  \\
+  &\le \lambda \abs{u_i}^k + (1 - \lambda) \abs{v_i}^k.
+  && \text{(} s^k \text{ is convex)}
+  \ea
+  $$
+
+  Summing over $i$, and using $\sumip \abs{u_i}^k = \norm{\vecf{u}}_k^k = 1$ and likewise for $\vecf{v}$,
+
+  $$
+  \norm{\lambda\,\vecf{u} + (1 - \lambda)\,\vecf{v}}_k^k \le \lambda + (1 - \lambda) = 1.
+  $$
+
+  So $\norm{\vx + \vy}_k / (a + b) \le 1$ by absolute homogeneity, that is, $\norm{\vx + \vy}_k \le a + b$.
+
+**Part 3, $k = \infty$.**
+Every $\abs{x_i}$ is at least $0$, and the largest of them is $0$ exactly when $\vx = \vzero$.
+For a number $c$, $\max_i \abs{c\,x_i} = \abs{c} \max_i \abs{x_i}$.
+For each $i$,
+
+$$
+\ba
+\abs{x_i + y_i}
+&\le \abs{x_i} + \abs{y_i}
+&& \text{(triangle inequality for numbers)}
+\\
+&\le \norm{\vx}_\infty + \norm{\vy}_\infty,
+&& \text{(each is at most the maximum)}
+\ea
+$$
+
+and taking the maximum over $i$ on the left gives $\norm{\vx + \vy}_\infty \le \norm{\vx}_\infty + \norm{\vy}_\infty$.
+
+:::
+
+:::
