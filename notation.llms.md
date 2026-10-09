@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:43:26 (PDT)
+Last modified: 2026-10-09 11:00:09 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -296,7 +296,9 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 >
 > \\ \begin{aligned} a + b &= 2j + 2k && \text{(substitute } a = 2j \text{ and } b = 2k \text{)} \\ &= 2(j + k) && \text{(distributive law)} \end{aligned} \\
 >
-> The second line uses the [distributive law](algebra.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([Definition 2](#def-even-odd)). For example, \\4 + 10 = 2 \cdot 2 + 2 \cdot 5 = 2 \cdot 7 = 14\\.
+> The second line uses the [distributive law](algebra.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([Definition 2](#def-even-odd)). For example,
+>
+> \\ \begin{aligned} 4 + 10 &= 2 \cdot 2 + 2 \cdot 5 \\ &= 2 \cdot 7 \\ &= 14. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -330,7 +332,11 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 
 > **NOTE:**
 >
-> **Example 16 (A corollary of a result)** [Example 14](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example, \\2 + 4 + 6 = (2 + 4) + 6 = 6 + 6 = 12\\, which is even.
+> **Example 16 (A corollary of a result)** [Example 14](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example,
+>
+> \\ \begin{aligned} 2 + 4 + 6 &= (2 + 4) + 6 \\ &= 6 + 6 \\ &= 12, \end{aligned} \\
+>
+> which is even.
 
 > **NOTE:**
 >
@@ -348,7 +354,12 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 >
 > **Example 18 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
 >
-> - “If \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true: \\n = 4k = 2 \cdot(2k)\\, and \\2k\\ is an integer.
+> - “If \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true:
+>
+>   \\ \begin{aligned} n &= 4k \\ &= 2 \cdot(2k), \end{aligned} \\
+>
+>   and \\2k\\ is an integer.
+>
 > - Its converse, “if \\n\\ is even, then \\n\\ is a multiple of \\4\\”, is false. The integer \\n = 2\\ is a counterexample ([Definition 18](#def-counterexample)): \\2\\ is even, but \\2 = 4k\\ only for \\k = \frac{1}{2}\\, which is not an integer.
 >
 > So a proposition can be true while its converse is false.
@@ -495,7 +506,13 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 3* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 22](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 21](#exm-indicator-numerical) become \\\[7.2 \> 5\] = \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} = 1\\ and, with \\A = \[0, \infty)\\, \\\[-2.1 \in A\] = \mathbb{1}\_{A}(-2.1) = 0\\.
+> *Remark 3* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 22](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 21](#exm-indicator-numerical) become
+>
+> \\ \begin{aligned} \[7.2 \> 5\] &= \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} \\ &= 1 \end{aligned} \\
+>
+> and, with \\A = \[0, \infty)\\,
+>
+> \\ \begin{aligned} \[-2.1 \in A\] &= \mathbb{1}\_{A}(-2.1) \\ &= 0. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -509,10 +526,13 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 >
 > **Example 26 (Evaluating the Kronecker delta)**  
 >
-> - \\\delta\_{11} = \[1 = 1\] = 1\\.
-> - \\\delta\_{12} = \[1 = 2\] = 0\\.
-> - \\\delta\_{22} = \[2 = 2\] = 1\\.
-> - \\\delta\_{23} = \[2 = 3\] = 0\\.
+> - \\ \begin{aligned} \delta\_{11} &= \[1 = 1\] \\ &= 1. \end{aligned} \\
+>
+> - \\ \begin{aligned} \delta\_{12} &= \[1 = 2\] \\ &= 0. \end{aligned} \\
+>
+> - \\ \begin{aligned} \delta\_{22} &= \[2 = 2\] \\ &= 1. \end{aligned} \\
+>
+> - \\ \begin{aligned} \delta\_{23} &= \[2 = 3\] \\ &= 0. \end{aligned} \\
 
 ### 6.3 Strengths and limitations of the Iverson bracket
 
@@ -563,8 +583,12 @@ Indicator functions translate the logical connectives ([Definition 11](#def-log
 > **Example 27 (Idempotent numbers and indicators)**  
 >
 > - \\0\\ and \\1\\ are idempotent: \\0 \cdot 0 = 0\\ and \\1 \cdot 1 = 1\\.
+>
 > - \\2\\ is not idempotent: \\2 \cdot 2 = 4 \neq 2\\.
-> - Every indicator function \\\mathbb{1}\_{A}\\ is idempotent, because each of its values is \\0\\ or \\1\\. For example, with \\A = \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) \cdot\mathbb{1}\_{A}(3.5) = 1 \cdot 1 = 1 = \mathbb{1}\_{A}(3.5)\\.
+>
+> - Every indicator function \\\mathbb{1}\_{A}\\ is idempotent, because each of its values is \\0\\ or \\1\\. For example, with \\A = \[0, \infty)\\,
+>
+>   \\ \begin{aligned} \mathbb{1}\_{A}(3.5) \cdot\mathbb{1}\_{A}(3.5) &= 1 \cdot 1 \\ &= 1 \\ &= \mathbb{1}\_{A}(3.5). \end{aligned} \\
 >
 > The [idempotent matrices](linear-algebra.llms.md#def-idempotent-matrix) of linear algebra satisfy the same equation with matrix multiplication: \\\mathbf{M}^2 = \mathbf{M}\\ for a square matrix \\\mathbf{M}\\.
 

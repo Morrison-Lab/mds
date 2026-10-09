@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:43:26 (PDT)
+Last modified: 2026-10-09 11:00:09 (PDT)
 
 ## 1 Equalities
 
@@ -92,10 +92,21 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 4 (Powers)**  
 >
-> - \\2^3 = 2 \cdot 2 \cdot 2 = 8\\, with base \\2\\ and exponent \\3\\.
-> - \\(-3)^2 = (-3) \cdot(-3) = 9\\, but \\-3^2 = -(3^2) = -9\\: the exponent applies only to the \\3\\.
+> - \\ \begin{aligned} 2^3 &= 2 \cdot 2 \cdot 2 \\ &= 8, \end{aligned} \\
+>
+>   with base \\2\\ and exponent \\3\\.
+>
+> - \\ \begin{aligned} (-3)^2 &= (-3) \cdot(-3) \\ &= 9, \end{aligned} \\
+>
+>   but
+>
+>   \\ \begin{aligned} -3^2 &= -(3^2) \\ &= -9: \end{aligned} \\
+>
+>   the exponent applies only to the \\3\\.
+>
 > - \\5^0 = 1\\.
-> - \\2^{-2} = \frac{1}{2^2} = \frac{1}{4}\\.
+>
+> - \\ \begin{aligned} 2^{-2} &= \frac{1}{2^2} \\ &= \frac{1}{4}. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -123,9 +134,17 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > **Example 6 (Absolute values)**  
 >
 > - \\\mathopen{}\left\|2.5\right\|\mathclose{} = 2.5\\, because \\2.5 \ge 0\\.
-> - \\\mathopen{}\left\|-3\right\|\mathclose{} = -(-3) = 3\\, because \\-3 \< 0\\.
+>
+> - \\ \begin{aligned} \mathopen{}\left\|-3\right\|\mathclose{} &= -(-3) \\ &= 3, \end{aligned} \\
+>
+>   because \\-3 \< 0\\.
+>
 > - \\\mathopen{}\left\|0\right\|\mathclose{} = 0\\.
-> - \\\mathopen{}\left\|-3\right\|\mathclose{} = 3 = \sqrt{9} = \sqrt{(-3)^2}\\: for every real \\a\\, \\\mathopen{}\left\|a\right\|\mathclose{} = \sqrt{a^2}\\ ([Definition 5](#def-square-root)).
+>
+> - \\ \begin{aligned} \mathopen{}\left\|-3\right\|\mathclose{} &= 3 \\ &= \sqrt{9} \\ &= \sqrt{(-3)^2}: \end{aligned} \\
+>
+>   for every real \\a\\, \\\mathopen{}\left\|a\right\|\mathclose{} = \sqrt{a^2}\\ ([Definition 5](#def-square-root)).
+>
 > - \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ says that \\x\\ is less than \\1\\ away from \\1\\, that is, \\0 \< x \< 2\\.
 
 ## 4 Minimum, maximum, argmin and argmax
@@ -214,15 +233,25 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Solution 2*.
 >
-> 1.  Since \\f(1) = 1 - 3 = -2\\,
+> 1.  Since
+>
+>     \\ \begin{aligned} f(1) &= 1 - 3 \\ &= -2, \end{aligned} \\
+>
+>     so
 >
 >     \\ \begin{aligned} f(x) - f(1) &= x^3 - 3x + 2 \\ &= (x - 1)(x^2 + x - 2) \\ &= (x - 1)(x - 1)(x + 2) \\ &= (x - 1)^2 (x + 2). \end{aligned} \\
 >
 > 2.  For \\x \in (0, 2)\\, \\(x - 1)^2 \ge 0\\ and \\x + 2 \> 0\\, so their product is at least \\0\\. By part 1, \\f(x) - f(1) \ge 0\\, that is, \\f(x) \ge f(1)\\.
 >
-> 3.  \\f(-3) = -27 + 9 = -18\\. Since \\-18 \< -2 = f(1)\\, \\f(1)\\ is not the smallest value of \\f\\ on \\\mathbb{R}\\.
+> 3.  \\ \begin{aligned} f(-3) &= -27 + 9 \\ &= -18. \end{aligned} \\
 >
-> 4.  No. For each \\n \ge 2\\, \\f(-n) = -n^3 + 3n = -n(n^2 - 3) \le -n\\, so no value of \\f\\ is smaller than all the others: for any \\x\\, picking \\n \ge 2\\ with \\-n \< f(x)\\ gives \\f(-n) \< f(x)\\.
+>     Since \\-18 \< -2 = f(1)\\, \\f(1)\\ is not the smallest value of \\f\\ on \\\mathbb{R}\\.
+>
+> 4.  No. For each \\n \ge 2\\,
+>
+>     \\ \begin{aligned} f(-n) &= -n^3 + 3n \\ &= -n(n^2 - 3) \\ &\le -n, \end{aligned} \\
+>
+>     so no value of \\f\\ is smaller than all the others: for any \\x\\, picking \\n \ge 2\\ with \\-n \< f(x)\\ gives \\f(-n) \< f(x)\\.
 
 > **NOTE:**
 >
@@ -250,7 +279,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > \\ \begin{aligned} f(-1 + t) &= (-1 + t)^3 - 3(-1 + t) && \text{(substitute)} \\ &= (-1 + 3t - 3t^2 + t^3) - 3(-1 + t) && \text{(expand the cube)} \\ &= -1 + 3t - 3t^2 + t^3 + 3 - 3t && \text{(multiply } -3 \text{ into the parentheses)} \\ &= 2 - 3t^2 + t^3 && \text{(} 3t - 3t = 0 \text{ and } -1 + 3 = 2 \text{)} \\ &= 2 + t^2 (t - 3) && \text{(factor out } t^2 \text{)} \\ &= f(-1) + t^2 (t - 3), && \text{(} f(-1) = (-1)^3 - 3(-1) \text{, which equals } 2 \text{)} \end{aligned} \\
 >
-> and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta\> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta/ 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example, \\f(-0.9) = -0.729 + 2.7 = 1.971 \< 2\\.
+> and \\t^2 (t - 3) \< 0\\ whenever \\t \ne 0\\ and \\t \< 3\\. So whatever \\\delta\> 0\\ is, the point \\x = -1 + t\\ with \\t = \min\mathopen{}\left\\\delta/ 2, 1\right\\\mathclose{}\\ satisfies \\\mathopen{}\left\|x - (-1)\right\|\mathclose{} \< \delta\\ and \\f(x) \< f(-1)\\. For example,
+>
+> \\ \begin{aligned} f(-0.9) &= -0.729 + 2.7 \\ &= 1.971 \\ &\< 2. \end{aligned} \\
 
 ## 6 Convex functions
 
@@ -266,9 +297,21 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Solution 3*.
 >
-> 1.  With \\t = \tfrac{1}{2}\\, \\t x + (1 - t) y = \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 = 2\\, so \\f(2) = (2 - 2)^2 = 0\\.
+> 1.  With \\t = \tfrac{1}{2}\\,
 >
-> 2.  \\f(0) = (0 - 2)^2 = 4\\ and \\f(4) = (4 - 2)^2 = 4\\, so \\\tfrac{1}{2} \cdot 4 + \tfrac{1}{2} \cdot 4 = 4\\.
+>     \\ \begin{aligned} t x + (1 - t) y &= \tfrac{1}{2} \cdot 0 + \tfrac{1}{2} \cdot 4 \\ &= 2, \end{aligned} \\
+>
+>     so
+>
+>     \\ \begin{aligned} f(2) &= (2 - 2)^2 \\ &= 0. \end{aligned} \\
+>
+> 2.  \\ \begin{aligned} f(0) &= (0 - 2)^2 \\ &= 4 \end{aligned} \\
+>
+>     and
+>
+>     \\ \begin{aligned} f(4) &= (4 - 2)^2 \\ &= 4, \end{aligned} \\
+>
+>     so \\\tfrac{1}{2} \cdot 4 + \tfrac{1}{2} \cdot 4 = 4\\.
 >
 > 3.  Yes: \\0 \le 4\\. The value of \\f\\ at the midpoint of \\0\\ and \\4\\ is below the average of its values at the two endpoints.
 
@@ -296,15 +339,31 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 5* (Chords lie on or above the graph). The point \\t x + (1 - t) y\\ lies on the [line segment](#def-line-segment) from \\x\\ to \\y\\, and the right-hand side is the height above that point of the [chord](#def-chord) of \\f\\ from \\x\\ to \\y\\. So \\f\\ is convex when every chord lies on or above the [graph](sets-functions.llms.md#def-graph).
 >
-> For example, take \\f(x) = x^2\\, \\x = -1\\, \\y = 3\\, and \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3 = 1\\, where the graph has height \\f(1) = 1\\ and the chord has height \\\tfrac{1}{2} f(-1) + \tfrac{1}{2} f(3) = \tfrac{1}{2} \cdot 1 + \tfrac{1}{2} \cdot 9 = 5\\. The chord is above the graph: \\1 \le 5\\.
+> For example, take \\f(x) = x^2\\, \\x = -1\\, \\y = 3\\, and \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-1) + \tfrac{1}{2} \cdot 3 = 1\\, where the graph has height \\f(1) = 1\\ and the chord has height
+>
+> \\ \begin{aligned} \tfrac{1}{2} f(-1) + \tfrac{1}{2} f(3) &= \tfrac{1}{2} \cdot 1 + \tfrac{1}{2} \cdot 9 \\ &= 5. \end{aligned} \\
+>
+> The chord is above the graph: \\1 \le 5\\.
 
 > **NOTE:**
 >
-> **Example 12 (A function that is not convex)** The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\\, where the graph has height \\f(-1) = -1 + 3 = 2\\, but the chord has height \\\tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) = \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 = -1\\, and \\2 \le -1\\ is false.
+> **Example 12 (A function that is not convex)** The function in [Exercise 2](#exr-local-vs-global-min), \\f(x) = x^3 - 3x\\, is not convex. Take \\x = -2\\, \\y = 0\\, \\t = \tfrac{1}{2}\\. The point is \\\tfrac{1}{2} \cdot (-2) + \tfrac{1}{2} \cdot 0 = -1\\, where the graph has height
+>
+> \\ \begin{aligned} f(-1) &= -1 + 3 \\ &= 2, \end{aligned} \\
+>
+> but the chord has height
+>
+> \\ \begin{aligned} \tfrac{1}{2} f(-2) + \tfrac{1}{2} f(0) &= \tfrac{1}{2} (-8 + 6) + \tfrac{1}{2} \cdot 0 \\ &= -1, \end{aligned} \\
+>
+> and \\2 \le -1\\ is false.
 
 > **NOTE:**
 >
-> **Example 13 (A convex and a non-convex function)** \\f(x) = (x - 2)^2\\ is convex ([Definition 15](#def-convex-function)): by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\. Its local minimizer \\x^\* = 2\\ is also a global minimizer, since \\f(x) = (x - 2)^2 \ge 0 = f(2)\\ for every \\x\\.
+> **Example 13 (A convex and a non-convex function)** \\f(x) = (x - 2)^2\\ is convex ([Definition 15](#def-convex-function)): by expanding the square, \\f(t x + (1 - t) y) - t f(x) - (1 - t) f(y) = -t (1 - t) (x - y)^2 \le 0\\. Its local minimizer \\x^\* = 2\\ is also a global minimizer, since
+>
+> \\ \begin{aligned} f(x) &= (x - 2)^2 \\ &\ge 0 \\ &= f(2) \end{aligned} \\
+>
+> for every \\x\\.
 >
 > Without convexity, a local minimizer need not be global: \\f(x) = x^3 - 3x\\ is not convex ([Example 12](#exm-cubic-not-convex)), and it has a local minimizer at \\x^\* = 1\\ that is not global ([Exercise 2](#exr-local-vs-global-min)).
 
@@ -330,11 +389,19 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > For \\n = 1\\ the weight is \\w_1 = 1\\, and both sides equal \\f(x_1)\\.
 >
-> Now let \\n \ge 2\\, and assume the inequality holds for \\n - 1\\ points. If \\w_n = 1\\, the other weights are all \\0\\, and both sides equal \\f(x_n)\\. Otherwise let \\s = 1 - w_n = \sum\_{i=1}^{n-1} w_i \> 0\\ and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^nw_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\left(\sum\_{i=1}^nw_i x_i\right) = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^nw_i f(x_i). \\
+> Now let \\n \ge 2\\, and assume the inequality holds for \\n - 1\\ points. If \\w_n = 1\\, the other weights are all \\0\\, and both sides equal \\f(x_n)\\. Otherwise let
+>
+> \\ \begin{aligned} s &= 1 - w_n \\ &= \sum\_{i=1}^{n-1} w_i \\ &\> 0 \end{aligned} \\
+>
+> and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^nw_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\left(\sum\_{i=1}^nw_i x_i\right) = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^nw_i f(x_i). \\
 
 > **NOTE:**
 >
-> **Example 14 (The mean of the squares is at least the square of the mean)** Take \\f(x) = x^2\\. It is convex by [Definition 15](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \left(t x + (1 - t) y\right)^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights \\w_1 = w_2 = w_3 = \tfrac{1}{3}\\. The weighted average of the points is their mean, \\\tfrac{1}{3}(1 + 2 + 6) = 3\\, so the left side of [Theorem 8](#thm-jensen) is \\f(3) = 9\\. The right side is the mean of the squares, \\\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\\. The inequality holds: \\9 \le \tfrac{41}{3}\\.
+> **Example 14 (The mean of the squares is at least the square of the mean)** Take \\f(x) = x^2\\. It is convex by [Definition 15](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \left(t x + (1 - t) y\right)^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights
+>
+> \\ \begin{aligned} w_1 &= w_2 \\ &= w_3 \\ &= \tfrac{1}{3}. \end{aligned} \\
+>
+> The weighted average of the points is their mean, \\\tfrac{1}{3}(1 + 2 + 6) = 3\\, so the left side of [Theorem 8](#thm-jensen) is \\f(3) = 9\\. The right side is the mean of the squares, \\\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\\. The inequality holds: \\9 \le \tfrac{41}{3}\\.
 >
 > The gap is \\\tfrac{41}{3} - 9 = \tfrac{14}{3}\\. That is the average squared distance of the points from their mean, \\\tfrac{1}{3}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right) = \tfrac{14}{3}\\, which is the variance of the three points. For \\f(x) = x^2\\, Jensen’s inequality says a variance is never negative.
 
@@ -387,15 +454,28 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 7* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 17](#def-infimum) always exists, by the completeness of the real numbers ([Theorem 9](#thm-completeness)). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
 >
-> If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\. For example, \\\inf \[1, 2\] = 1 = \min \[1, 2\]\\. For \\A = (1, 2\]\\, the infimum \\1\\ is not in \\A\\, and \\A\\ has no minimum.
+> If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\. For example,
+>
+> \\ \begin{aligned} \inf \[1, 2\] &= 1 \\ &= \min \[1, 2\]. \end{aligned} \\
+>
+> For \\A = (1, 2\]\\, the infimum \\1\\ is not in \\A\\, and \\A\\ has no minimum.
 
 > **NOTE:**
 >
 > **Example 17 (Numerical examples of infimum)**  
 >
 > - \\\inf\\1, 2, 3\\ = 1\\, since \\1\\ is the smallest element.
-> - \\\inf(0.5, 1\] = 0.5 = \min\[0.5, 1\]\\: for intervals open below, the infimum equals the minimum of the corresponding closed-below interval, even though \\0.5 \notin (0.5, 1\]\\. More generally, \\\inf(c, b\] = \min\[c, b\] = c\\ for any \\c \< b\\.
+>
+> - \\ \begin{aligned} \inf(0.5, 1\] &= 0.5 \\ &= \min\[0.5, 1\]: \end{aligned} \\
+>
+>   for intervals open below, the infimum equals the minimum of the corresponding closed-below interval, even though \\0.5 \notin (0.5, 1\]\\. More generally,
+>
+>   \\ \begin{aligned} \inf(c, b\] &= \min\[c, b\] \\ &= c \end{aligned} \\
+>
+>   for any \\c \< b\\.
+>
 > - \\\inf\\t \ge 0 : t \> 0.5\\ = 0.5\\, even though \\0.5\\ itself is not in the set.
+>
 > - \\\inf\\-1, -2, -3, \ldots\\ = -\infty\\, because no real number is less than or equal to every element of that set.
 
 > **NOTE:**
@@ -410,7 +490,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Remark 8* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 18](#def-supremum) always exists, by the completeness of the real numbers ([Theorem 9](#thm-completeness)). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
 >
-> If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\. For example, \\\sup \[1, 2\] = 2 = \max \[1, 2\]\\. For \\A = \[1, 2)\\, the supremum \\2\\ is not in \\A\\, and \\A\\ has no maximum.
+> If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\. For example,
+>
+> \\ \begin{aligned} \sup \[1, 2\] &= 2 \\ &= \max \[1, 2\]. \end{aligned} \\
+>
+> For \\A = \[1, 2)\\, the supremum \\2\\ is not in \\A\\, and \\A\\ has no maximum.
 
 > **NOTE:**
 >
@@ -453,7 +537,10 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 21 (A commutative operation, and one that is not)**  
 >
-> - Addition is commutative: for example, \\2 + 5 = 7 = 5 + 2\\.
+> - Addition is commutative: for example,
+>
+>   \\ \begin{aligned} 2 + 5 &= 7 \\ &= 5 + 2. \end{aligned} \\
+>
 > - Subtraction is not commutative: \\5 - 3 = 2\\, but \\3 - 5 = -2\\.
 
 > **NOTE:**
@@ -464,8 +551,21 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 22 (An associative operation, and one that is not)**  
 >
-> - Multiplication is associative: for example, \\(2 \times 3) \times 4 = 6 \times 4 = 24\\ and \\2 \times (3 \times 4) = 2 \times 12 = 24\\.
-> - Subtraction is not associative: \\(8 - 4) - 2 = 4 - 2 = 2\\, but \\8 - (4 - 2) = 8 - 2 = 6\\.
+> - Multiplication is associative: for example,
+>
+>   \\ \begin{aligned} (2 \times 3) \times 4 &= 6 \times 4 \\ &= 24 \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} 2 \times (3 \times 4) &= 2 \times 12 \\ &= 24. \end{aligned} \\
+>
+> - Subtraction is not associative:
+>
+>   \\ \begin{aligned} (8 - 4) - 2 &= 4 - 2 \\ &= 2, \end{aligned} \\
+>
+>   but
+>
+>   \\ \begin{aligned} 8 - (4 - 2) &= 8 - 2 \\ &= 6. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -483,7 +583,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Example 23 (Grouping a sum two ways)** \\(2 + 3) + 4 = 5 + 4 = 9\\, and \\2 + (3 + 4) = 2 + 7 = 9\\.
+> **Example 23 (Grouping a sum two ways)** \\ \begin{aligned} (2 + 3) + 4 &= 5 + 4 \\ &= 9, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} 2 + (3 + 4) &= 2 + 7 \\ &= 9. \end{aligned} \\
 
 ## 9 Products
 
@@ -521,8 +625,19 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 24 (Multiplication distributes over addition, but not the reverse)**  
 >
-> - \\3 \times (4 + 5) = 3 \times 9 = 27\\, and \\(3 \times 4) + (3 \times 5) = 12 + 15 = 27\\.
-> - Addition does not distribute over multiplication: \\2 + (3 \times 4) = 2 + 12 = 14\\, but \\(2 + 3) \times (2 + 4) = 5 \times 6 = 30\\.
+> - \\ \begin{aligned} 3 \times (4 + 5) &= 3 \times 9 \\ &= 27, \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} (3 \times 4) + (3 \times 5) &= 12 + 15 \\ &= 27. \end{aligned} \\
+>
+> - Addition does not distribute over multiplication:
+>
+>   \\ \begin{aligned} 2 + (3 \times 4) &= 2 + 12 \\ &= 14, \end{aligned} \\
+>
+>   but
+>
+>   \\ \begin{aligned} (2 + 3) \times (2 + 4) &= 5 \times 6 \\ &= 30. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -536,7 +651,10 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Example 25 (Like and unlike terms)**  
 >
-> - \\3ab\\ and \\-5ab\\ are like terms; collecting them gives \\3ab + (-5ab) = (3 - 5) ab = -2ab\\.
+> - \\3ab\\ and \\-5ab\\ are like terms; collecting them gives
+>
+>   \\ \begin{aligned} 3ab + (-5ab) &= (3 - 5) ab \\ &= -2ab. \end{aligned} \\
+>
 > - \\2x\\ and \\2x^2\\ are not like terms: \\x\\ appears to different powers.
 
 > **NOTE:**
@@ -545,7 +663,15 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Solution 4*. No: \\(3 + 4)^2 = 7^2 = 49\\, while \\3^2 + 4^2 = 9 + 16 = 25\\. The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
+> *Solution 4*. No:
+>
+> \\ \begin{aligned} (3 + 4)^2 &= 7^2 \\ &= 49, \end{aligned} \\
+>
+> while
+>
+> \\ \begin{aligned} 3^2 + 4^2 &= 9 + 16 \\ &= 25. \end{aligned} \\
+>
+> The difference, \\49 - 25 = 24\\, is \\2 \cdot 3 \cdot 4\\.
 >
 > To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 17](#thm-mult-distr)) twice:
 >
@@ -565,7 +691,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 9* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 18](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat y)^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat y\\ of it expands this way. With \\y = 5\\ and \\\hat y= 3\\, \\(5 - 3)^2 = 2^2 = 4\\, and \\5^2 - 2 \cdot 5 \cdot 3 + 3^2 = 25 - 30 + 9 = 4\\.
+> *Remark 9* (Square of a difference). Replacing \\b\\ by \\-b\\ in [Theorem 18](#thm-square-of-a-sum) gives \\(a - b)^2 = a^2 - 2ab + b^2\\. For example, the square \\(y - \hat y)^2\\ of the difference between an observed value \\y\\ and a prediction \\\hat y\\ of it expands this way. With \\y = 5\\ and \\\hat y= 3\\,
+>
+> \\ \begin{aligned} (5 - 3)^2 &= 2^2 \\ &= 4, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} 5^2 - 2 \cdot 5 \cdot 3 + 3^2 &= 25 - 30 + 9 \\ &= 4. \end{aligned} \\
 
 ## 12 Summation notation
 
@@ -598,7 +730,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^na_i\\ and \\\sum\_{j=1}^na_j\\ are the same number. For example, \\\sum\_{i=1}^{3} i = 1 + 2 + 3 = 6\\ and \\\sum\_{j=1}^{3} j = 1 + 2 + 3 = 6\\.
+> *Remark 10* (The index is a placeholder). The name of the index does not change the sum: \\\sum\_{i=1}^na_i\\ and \\\sum\_{j=1}^na_j\\ are the same number. For example,
+>
+> \\ \begin{aligned} \sum\_{i=1}^{3} i &= 1 + 2 + 3 \\ &= 6 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} \sum\_{j=1}^{3} j &= 1 + 2 + 3 \\ &= 6. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -748,8 +886,17 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 >
 > **Example 30 (Proportional and non-proportional functions)**  
 >
-> - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{6x^2}{2x^2} = 3\\, which does not depend on \\x\\.
-> - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\, \\\tfrac{f(x)}{g(x)} = \tfrac{x + 1}{x} = \tfrac{x}{x} + \tfrac{1}{x} = 1 + \tfrac{1}{x}\\, which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
+> - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\,
+>
+>   \\ \begin{aligned} \tfrac{f(x)}{g(x)} &= \tfrac{6x^2}{2x^2} \\ &= 3, \end{aligned} \\
+>
+>   which does not depend on \\x\\.
+>
+> - \\f(x) = x + 1\\ and \\g(x) = x\\ are not proportional: for \\x \ne 0\\,
+>
+>   \\ \begin{aligned} \tfrac{f(x)}{g(x)} &= \tfrac{x + 1}{x} \\ &= \tfrac{x}{x} + \tfrac{1}{x} \\ &= 1 + \tfrac{1}{x}, \end{aligned} \\
+>
+>   which is \\2\\ at \\x = 1\\ and \\\tfrac{3}{2}\\ at \\x = 2\\.
 
 Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition>
 
@@ -820,8 +967,12 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > **Example 34 (Quadratic and cubic polynomials)**  
 >
-> - \\f(x) = (x - 2)^2 = x^2 - 4x + 4\\ is quadratic, by [Remark 9](#rem-square-of-a-difference) with \\a = x\\ and \\b = 2\\.
+> - \\ \begin{aligned} f(x) &= (x - 2)^2 \\ &= x^2 - 4x + 4 \end{aligned} \\
+>
+>   is quadratic, by [Remark 9](#rem-square-of-a-difference) with \\a = x\\ and \\b = 2\\.
+>
 > - \\f(x) = x^3 - 3x\\ is cubic.
+>
 > - \\f(x) = 4x + 1\\ is neither: it has degree \\1\\.
 
 > **NOTE:**
@@ -870,7 +1021,13 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > \\ \begin{aligned} \frac{f(x_2) - f(x_1)}{x_2 - x_1} &= \frac{m d}{d} && \text{(the numerator above)} \\&= (m d) \cdot\frac{1}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~16}}\text{)} \\&= m \cdot\mathopen{}\left(d \cdot\frac{1}{d}\right)\mathclose{} && \text{(}\href{#thm-prod-assoc}{\text{Theorem~15}}\text{)} \\&= m \cdot\frac{d}{d} && \text{(}\href{#thm-prod-div}{\text{Theorem~16}}\text{)} \\&= m \cdot 1 && \text{(a nonzero number divided by itself is } 1 \text{)} \\&= m && \text{(}\href{#thm-mult-one}{\text{Theorem~13}}\text{)} \end{aligned} \\
 >
-> **Part 3.** Part 1, applied to each formula, gives \\b = f(0) = b'\\. Part 2 with \\x_1 = 0\\ and \\x_2 = 1\\, applied to each formula, gives \\m = f(1) - f(0) = m'\\.
+> **Part 3.** Part 1, applied to each formula, gives
+>
+> \\ \begin{aligned} b &= f(0) \\ &= b'. \end{aligned} \\
+>
+> Part 2 with \\x_1 = 0\\ and \\x_2 = 1\\, applied to each formula, gives
+>
+> \\ \begin{aligned} m &= f(1) - f(0) \\ &= m'. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -960,7 +1117,11 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 >
 > **Example 41 (Real powers, and \\e^x\\)**  
 >
-> - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with \\2^3 = 2 \cdot 2 \cdot 2 = 8\\ from [Definition 4](#def-power).
+> - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with
+>
+>   \\ \begin{aligned} 2^3 &= 2 \cdot 2 \cdot 2 \\ &= 8 \end{aligned} \\
+>
+>   from [Definition 4](#def-power).
 >
 > - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 5](#def-square-root)).
 >
@@ -1056,7 +1217,13 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 45 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\, \\2^{3+4} = 2^7 = 128\\, and \\2^3 \cdot 2^4 = 8 \cdot 16 = 128\\.
+> **Example 45 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\,
+>
+> \\ \begin{aligned} 2^{3+4} &= 2^7 \\ &= 128, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} 2^3 \cdot 2^4 &= 8 \cdot 16 \\ &= 128. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1068,7 +1235,13 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 46 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\, \\(2 \cdot 3)^2 = 6^2 = 36\\, and \\2^2 \cdot 3^2 = 4 \cdot 9 = 36\\.
+> **Example 46 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\,
+>
+> \\ \begin{aligned} (2 \cdot 3)^2 &= 6^2 \\ &= 36, \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} 2^2 \cdot 3^2 &= 4 \cdot 9 \\ &= 36. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1114,7 +1287,15 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 
 > **NOTE:**
 >
-> **Example 48 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example, \\g(2, 0) = 4 + 0 = 4\\ and \\g(0, -2) = 0 + 4 = 4\\. The contour line at height \\k = -1\\ is empty, because \\b^2 + c^2 \ge 0\\ for all \\b\\ and \\c\\.
+> **Example 48 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example,
+>
+> \\ \begin{aligned} g(2, 0) &= 4 + 0 \\ &= 4 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} g(0, -2) &= 0 + 4 \\ &= 4. \end{aligned} \\
+>
+> The contour line at height \\k = -1\\ is empty, because \\b^2 + c^2 \ge 0\\ for all \\b\\ and \\c\\.
 
 > **NOTE:**
 >
@@ -1125,10 +1306,24 @@ Additional reference for elementary algebra: <https://en.wikipedia.org/wiki/Popu
 > *Solution 9*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 48](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
-> 2.  \\b = 0\\ and \\c \> 0\\, since then \\b^c = 0 = bc\\. (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
-> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = \operatorname{exp}\mathopen{}\left\\\frac{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}{c-1}\right\\\mathclose{}\\. For \\b \> 0\\, dividing both sides of \\b^c = bc\\ by \\b\\ gives \\b^{c-1} = c\\, which needs \\c \> 0\\ because \\b^{c-1} \> 0\\; taking logarithms then gives \\(c-1)\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}\\. For example, \\c = 2\\ gives \\b = 2\\, and indeed \\2^2 = 4 = 2 \cdot 2\\.
-> 4.  \\b \< 0\\ and \\c\\ is an odd integer with \\c \ge 3\\, with \\b = -c^{1/(c-1)}\\; for example, \\b = -\sqrt{3}\\ and \\c = 3\\ give \\b^c = -3\sqrt{3} = bc\\.
-> 5.  \\b \< 0\\ and \\c\\ is an even integer with \\c \le -2\\, with \\b = -(-c)^{1/(c-1)}\\; for example, \\b = -2^{-1/3}\\ and \\c = -2\\ give \\b^c = 2^{2/3} = bc\\.
+>
+> 2.  \\b = 0\\ and \\c \> 0\\, since then
+>
+>     \\ \begin{aligned} b^c &= 0 \\ &= bc. \end{aligned} \\
+>
+>     (\\b = 0\\ and \\c = 0\\ fails, since \\0^0 = 1 \neq 0\\.)
+>
+> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = \operatorname{exp}\mathopen{}\left\\\frac{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}{c-1}\right\\\mathclose{}\\. For \\b \> 0\\, dividing both sides of \\b^c = bc\\ by \\b\\ gives \\b^{c-1} = c\\, which needs \\c \> 0\\ because \\b^{c-1} \> 0\\; taking logarithms then gives \\(c-1)\operatorname{log}\mathopen{}\left\\b\right\\\mathclose{} = \operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}\\. For example, \\c = 2\\ gives \\b = 2\\, and indeed
+>
+>     \\ \begin{aligned} 2^2 &= 4 \\ &= 2 \cdot 2. \end{aligned} \\
+>
+> 4.  \\b \< 0\\ and \\c\\ is an odd integer with \\c \ge 3\\, with \\b = -c^{1/(c-1)}\\; for example, \\b = -\sqrt{3}\\ and \\c = 3\\ give
+>
+>     \\ \begin{aligned} b^c &= -3\sqrt{3} \\ &= bc. \end{aligned} \\
+>
+> 5.  \\b \< 0\\ and \\c\\ is an even integer with \\c \le -2\\, with \\b = -(-c)^{1/(c-1)}\\; for example, \\b = -2^{-1/3}\\ and \\c = -2\\ give
+>
+>     \\ \begin{aligned} b^c &= 2^{2/3} \\ &= bc. \end{aligned} \\
 >
 > For \\b \< 0\\, cases 4 and 5 come from \\b^{c-1} = c\\ as well: when \\c - 1\\ is even, \\b^{c-1} \> 0\\, so \\c\\ must be positive; when \\c - 1\\ is odd, \\b^{c-1} \< 0\\, so \\c\\ must be negative.
 >
@@ -1279,8 +1474,18 @@ Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-lin
 > **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 48](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
 > - If \\b \< 0\\, then \\0^b\\ is undefined, so \\(a^b)^c\\ is undefined.
+>
 > - If \\b \> 0\\, then \\(0^b)^c = 0^c\\ and \\b^c \> 0\\, so \\0^{(b^c)} = 0\\; the two sides agree exactly when \\c \> 0\\.
-> - If \\b = 0\\, then \\(0^0)^c = 1^c = 1\\; for \\c \> 0\\, \\0^{(0^c)} = 0^0 = 1\\, so the two sides agree, and for \\c \le 0\\ they do not.
+>
+> - If \\b = 0\\, then
+>
+>   \\ \begin{aligned} (0^0)^c &= 1^c \\ &= 1; \end{aligned} \\
+>
+>   for \\c \> 0\\,
+>
+>   \\ \begin{aligned} 0^{(0^c)} &= 0^0 \\ &= 1, \end{aligned} \\
+>
+>   so the two sides agree, and for \\c \le 0\\ they do not.
 >
 > So for \\a = 0\\, \\(a^b)^c = a^{(b^c)}\\ exactly when \\b \ge 0\\ and \\c \> 0\\.
 >
@@ -1304,7 +1509,11 @@ Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-lin
 > - sums and products with \\i\\ are [associative](#def-associative);
 > - multiplication [distributes](#def-distributive) over addition.
 >
-> The number \\-i\\ also squares to \\-1\\, since \\(-i)^2 = (-1)^2\\i^2 = -1\\; \\i\\ names one of these two square roots, chosen once and for all.
+> The number \\-i\\ also squares to \\-1\\, since
+>
+> \\ \begin{aligned} (-i)^2 &= (-1)^2\\i^2 \\ &= -1; \end{aligned} \\
+>
+> \\i\\ names one of these two square roots, chosen once and for all.
 
 Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigorous: it defines a complex number as an ordered pair \\(a, b)\\ of real numbers, written \\a + bi\\, defines addition and multiplication of such pairs, writes \\0 + 1i\\ as \\i\\, and leaves it to the reader to verify that \\i^2 = -1\\.
 
@@ -1389,7 +1598,13 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two form
 >
 > \\ \begin{aligned} w z &= 1 \cdot 3 + 1 \cdot(-i) + 2\\i \cdot 3 + 2\\i \cdot(-i) && \text{(distribute)} \\ &= 3 - i + 6\\i - 2\\i^2 && \text{(multiply)} \\ &= 3 - i + 6\\i + 2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~50}}\text{)} \\ &= (3 + 2) + (-1 + 6)\\i && \text{(group the real terms and the terms with } i \text{)} \\ &= 5 + 5\\i && \text{(add)} \end{aligned} \\
 >
-> The product formula in [Theorem 30](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\, \\ac - bd = 3 - (-2) = 5\\ and \\ad + bc = -1 + 6 = 5\\.
+> The product formula in [Theorem 30](#thm-complex-arithmetic) gives the same answer: with \\a = 1\\, \\b = 2\\, \\c = 3\\ and \\d = -1\\,
+>
+> \\ \begin{aligned} ac - bd &= 3 - (-2) \\ &= 5 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} ad + bc &= -1 + 6 \\ &= 5. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1404,8 +1619,12 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 > **Example 53 (Complex conjugates)**  
 >
 > - \\\overline{3 + 4\\i} = 3 - 4\\i\\.
-> - \\\overline{-2\\i} = \overline{0 + (-2)\\i} = 0 - (-2)\\i = 2\\i\\.
-> - \\\overline{5} = \overline{5 + 0\\i} = 5 - 0\\i = 5\\: a real number is its own complex conjugate. A complex number with a nonzero imaginary part, such as \\3 + 4\\i\\, is not.
+>
+> - \\ \begin{aligned} \overline{-2\\i} &= \overline{0 + (-2)\\i} \\ &= 0 - (-2)\\i \\ &= 2\\i. \end{aligned} \\
+>
+> - \\ \begin{aligned} \overline{5} &= \overline{5 + 0\\i} \\ &= 5 - 0\\i \\ &= 5: \end{aligned} \\
+>
+>   a real number is its own complex conjugate. A complex number with a nonzero imaginary part, such as \\3 + 4\\i\\, is not.
 
 > **NOTE:**
 >
@@ -1419,9 +1638,17 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 >
 > **Example 54 (Absolute values of complex numbers)**  
 >
-> - \\\mathopen{}\left\|3 + 4\\i\right\|\mathclose{} = \sqrt{3^2 + 4^2} = \sqrt{25} = 5\\.
-> - \\\mathopen{}\left\|-2\\i\right\|\mathclose{} = \sqrt{0^2 + (-2)^2} = \sqrt{4} = 2\\.
-> - For a real number \\a = a + 0\\i\\, \\\mathopen{}\left\|a\right\|\mathclose{} = \sqrt{a^2 + 0^2} = \sqrt{a^2}\\, which is the usual absolute value of \\a\\; for instance, \\\mathopen{}\left\|-3\right\|\mathclose{} = \sqrt{9} = 3\\.
+> - \\ \begin{aligned} \mathopen{}\left\|3 + 4\\i\right\|\mathclose{} &= \sqrt{3^2 + 4^2} \\ &= \sqrt{25} \\ &= 5. \end{aligned} \\
+>
+> - \\ \begin{aligned} \mathopen{}\left\|-2\\i\right\|\mathclose{} &= \sqrt{0^2 + (-2)^2} \\ &= \sqrt{4} \\ &= 2. \end{aligned} \\
+>
+> - For a real number \\a = a + 0\\i\\,
+>
+>   \\ \begin{aligned} \mathopen{}\left\|a\right\|\mathclose{} &= \sqrt{a^2 + 0^2} \\ &= \sqrt{a^2}, \end{aligned} \\
+>
+>   which is the usual absolute value of \\a\\; for instance,
+>
+>   \\ \begin{aligned} \mathopen{}\left\|-3\right\|\mathclose{} &= \sqrt{9} \\ &= 3. \end{aligned} \\
 
 > **NOTE:**
 >

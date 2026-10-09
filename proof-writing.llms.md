@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:43:26 (PDT)
+Last modified: 2026-10-09 11:00:09 (PDT)
 
 This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and [derivations](notation.llms.md#def-derivation). The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](notation.llms.md#def-logical-entailment) are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
@@ -42,7 +42,15 @@ The [Linear Algebra](linear-algebra.llms.md#thm-hat-matrix) page uses this deriv
 >
 > \\ \begin{aligned} n^2 &= (2k + 1)^2 && \text{(substitute } n = 2k + 1 \text{)} \\&= (2k)^2 + 2 \cdot 2k \cdot 1 + 1^2 && \text{(square of a sum)} \\&= 4k^2 + 4k + 1 && \text{(arithmetic)} \\&= 2(2k^2 + 2k) + 1 && \text{(distributive law, read from right to left)} \end{aligned} \\
 >
-> and \\2k^2 + 2k\\ is an integer, because sums and products of integers are integers. So \\n^2 = 2 \cdot(\text{an integer}) + 1\\, which is the definition of odd. For example, \\n = 7 = 2 \cdot 3 + 1\\ gives \\n^2 = 49 = 2 \cdot 24 + 1\\, and \\2 \cdot 3^2 + 2 \cdot 3 = 24\\.
+> and \\2k^2 + 2k\\ is an integer, because sums and products of integers are integers. So \\n^2 = 2 \cdot(\text{an integer}) + 1\\, which is the definition of odd. For example,
+>
+> \\ \begin{aligned} n &= 7 \\ &= 2 \cdot 3 + 1 \end{aligned} \\
+>
+> gives
+>
+> \\ \begin{aligned} n^2 &= 49 \\ &= 2 \cdot 24 + 1, \end{aligned} \\
+>
+> and \\2 \cdot 3^2 + 2 \cdot 3 = 24\\.
 >
 > The notation page’s proof that [the sum of two even integers is even](notation.llms.md#exm-proof) is also a direct proof.
 

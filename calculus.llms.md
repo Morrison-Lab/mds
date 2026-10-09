@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:43:26 (PDT)
+Last modified: 2026-10-09 11:00:09 (PDT)
 
 ## 1 Derivatives
 
@@ -221,9 +221,29 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > \\f'(x) = x^2 + 2x - 1\\
 >
-> **1. Slope \\-1\\:** Solve \\x^2 + 2x - 1 = -1 \iff x^2 + 2x = 0 \iff x(x + 2) = 0\\. The roots are \\x = 0\\ and \\x = -2\\. Evaluating \\f\\: \\f(0) = -1\\ and \\f(-2) = -\frac{8}{3} + 4 + 2 - 1 = \frac{7}{3}\\. The points are \\(0, -1)\\ and \\(-2, 7/3)\\.
+> **1. Slope \\-1\\:** Solve
 >
-> **2. Slope \\2\\:** Solve \\x^2 + 2x - 1 = 2 \iff x^2 + 2x - 3 = 0 \iff (x + 3)(x - 1) = 0\\. The roots are \\x = -3\\ and \\x = 1\\. Evaluating \\f\\: \\f(-3) = -9 + 9 + 3 - 1 = 2\\ and \\f(1) = \frac{1}{3} + 1 - 1 - 1 = -\frac{2}{3}\\. The points are \\(-3, 2)\\ and \\(1, -2/3)\\.
+> \\ \begin{aligned} x^2 + 2x - 1 = -1 &\iff x^2 + 2x = 0 \\ &\iff x(x + 2) = 0. \end{aligned} \\
+>
+> The roots are \\x = 0\\ and \\x = -2\\. Evaluating \\f\\: \\f(0) = -1\\ and
+>
+> \\ \begin{aligned} f(-2) &= -\frac{8}{3} + 4 + 2 - 1 \\ &= \frac{7}{3}. \end{aligned} \\
+>
+> The points are \\(0, -1)\\ and \\(-2, 7/3)\\.
+>
+> **2. Slope \\2\\:** Solve
+>
+> \\ \begin{aligned} x^2 + 2x - 1 = 2 &\iff x^2 + 2x - 3 = 0 \\ &\iff (x + 3)(x - 1) = 0. \end{aligned} \\
+>
+> The roots are \\x = -3\\ and \\x = 1\\. Evaluating \\f\\:
+>
+> \\ \begin{aligned} f(-3) &= -9 + 9 + 3 - 1 \\ &= 2 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} f(1) &= \frac{1}{3} + 1 - 1 - 1 \\ &= -\frac{2}{3}. \end{aligned} \\
+>
+> The points are \\(-3, 2)\\ and \\(1, -2/3)\\.
 >
 > **3. Slope \\0\\:** Solve \\x^2 + 2x - 1 = 0\\. By the quadratic formula:
 >
@@ -255,7 +275,11 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > \\f'(x) = 0\\
 >
-> *Remark:* While one could apply the chain rule separately to each term (\\\frac{4}{4x} - \frac{2}{2x} = \frac{1}{x} - \frac{1}{x} = 0\\), simplifying algebraically first is faster and prevents arithmetic errors.
+> *Remark:* While one could apply the chain rule separately to each term, giving
+>
+> \\ \begin{aligned} \frac{4}{4x} - \frac{2}{2x} &= \frac{1}{x} - \frac{1}{x} \\ &= 0, \end{aligned} \\
+>
+> simplifying algebraically first is faster and prevents arithmetic errors.
 
 > **NOTE:**
 >
@@ -721,7 +745,11 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > Evaluate \\f\\ at the boundary and critical points:
 >
 > - At \\x = 0\\: \\f(0) = 0\\.
-> - At \\x = 4\\: \\f(4) = 4^4 e^{-4} = 256 e^{-4} \approx 4.6888\\.
+>
+> - At \\x = 4\\:
+>
+>   \\ \begin{aligned} f(4) &= 4^4 e^{-4} \\ &= 256 e^{-4} \\ &\approx 4.6888. \end{aligned} \\
+>
 > - As \\x \to \infty\\: exponential decay dominates polynomial growth, so \\\lim\_{x \to \infty} x^4 e^{-x} = 0\\.
 >
 > Since \\f(x) \ge 0\\ for all \\x \ge 0\\ and \\f(4) \> 0\\, the global maximum occurs at \\x = 4\\, with maximum value \\256/e^4\\.
@@ -751,7 +779,12 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > Apply the second derivative test at each critical point:
 >
 > - At \\x = 0\\: \\f''(0) = -6 \< 0\\, so \\x = 0\\ is a strict local maximum.
-> - At \\x = 1/2\\: \\f''(1/2) = 24(1/2) - 6 = 6 \> 0\\, so \\x = 1/2\\ is a strict local minimum.
+>
+> - At \\x = 1/2\\:
+>
+>   \\ \begin{aligned} f''(1/2) &= 24(1/2) - 6 \\ &= 6 \\ &\> 0, \end{aligned} \\
+>
+>   so \\x = 1/2\\ is a strict local minimum.
 >
 > Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
 
@@ -897,11 +930,19 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> *Solution 21*. Since \\f(0) = e^0 = 1\\ and \\f'(0) = e^0 = 1\\:
+> *Solution 21*. Since
+>
+> \\ \begin{aligned} f(0) &= e^0 \\ &= 1 \end{aligned} \\
+>
+> and
+>
+> \\ \begin{aligned} f'(0) &= e^0 \\ &= 1: \end{aligned} \\
 >
 > \\ \begin{aligned} P_1(x) &= f(0) + f'(0)x \\ &= 1 + x \end{aligned} \\
 >
-> The full Taylor series is \\e^x = \sum\_{n=0}^\infty \frac{x^n}{n!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \dots\\.
+> The full Taylor series is
+>
+> \\ \begin{aligned} e^x &= \sum\_{n=0}^\infty \frac{x^n}{n!} \\ &= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \dots. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -1138,7 +1179,9 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 14 (Antiderivative of \\x^2\\)** For \\f(x) = x^2\\, an antiderivative is \\F(x) = \frac{x^3}{3}\\, since \\\frac{\partial}{\partial x}\frac{x^3}{3} = x^2 = f(x)\\.
+> **Example 14 (Antiderivative of \\x^2\\)** For \\f(x) = x^2\\, an antiderivative is \\F(x) = \frac{x^3}{3}\\, since
+>
+> \\ \begin{aligned} \frac{\partial}{\partial x}\frac{x^3}{3} &= x^2 \\ &= f(x). \end{aligned} \\
 >
 > Adding any constant \\C\\ gives another antiderivative; for example, with \\C = 7\\, \\F(x) = \frac{x^3}{3} + 7\\ also satisfies \\F'(x) = x^2\\, since adding a constant does not change the derivative. \\G(x) = x^3\\ is not an antiderivative of \\x^2\\: \\G'(x) = 3x^2 \ne x^2\\ for \\x \ne 0\\.
 >
@@ -1205,7 +1248,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > \\ \begin{aligned} \int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx &= 3 \cdot\frac{x^3}{3} - x + C \\ &= x^3 - x + C. \end{aligned} \\
 >
-> Verify by differentiating: \\\frac{\partial}{\partial x}\mathopen{}\left(x^3 - x + C\right)\mathclose{} = 3x^2 - 1 = f(x)\\, as required.
+> Verify by differentiating:
+>
+> \\ \begin{aligned} \frac{\partial}{\partial x}\mathopen{}\left(x^3 - x + C\right)\mathclose{} &= 3x^2 - 1 \\ &= f(x), \end{aligned} \\
+>
+> as required.
 
 > **TIP:**
 >
@@ -1716,8 +1763,13 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > Transform the limits of integration:
 >
-> - When \\x = 0\\: \\u = 1 + 0^2 = 1\\.
-> - When \\x = 1\\: \\u = 1 + 1^2 = 2\\.
+> - When \\x = 0\\:
+>
+>   \\ \begin{aligned} u &= 1 + 0^2 \\ &= 1. \end{aligned} \\
+>
+> - When \\x = 1\\:
+>
+>   \\ \begin{aligned} u &= 1 + 1^2 \\ &= 2. \end{aligned} \\
 >
 > Applying the substitution:
 >
@@ -1742,7 +1794,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > Limits:
 >
 > - When \\x = 0\\: \\u = 0\\.
-> - When \\x = 3\\: \\u = 3^3 + 3(3) = 27 + 9 = 36\\.
+>
+> - When \\x = 3\\:
+>
+>   \\ \begin{aligned} u &= 3^3 + 3(3) \\ &= 27 + 9 \\ &= 36. \end{aligned} \\
 >
 > Substitute:
 >
@@ -1763,7 +1818,10 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > Limits:
 >
 > - When \\x = 0\\: \\u = 0\\.
-> - When \\x = 2\\: \\u = 3(2^2) = 12\\.
+>
+> - When \\x = 2\\:
+>
+>   \\ \begin{aligned} u &= 3(2^2) \\ &= 12. \end{aligned} \\
 >
 > Substitute:
 >

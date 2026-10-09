@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 10:43:26 (PDT)
+Last modified: 2026-10-09 11:00:09 (PDT)
 
 > **NOTE:**
 >
@@ -205,8 +205,10 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > **Example 11 (Unions and intersections of many sets)**  
 >
-> - \\\bigcup\_{i=1}^{3} \mathopen{}\left\\i, i + 1\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\2, 3\right\\\mathclose{} \cup \mathopen{}\left\\3, 4\right\\\mathclose{} = \mathopen{}\left\\1, 2, 3, 4\right\\\mathclose{}\\.
+> - \\ \begin{aligned} \bigcup\_{i=1}^{3} \mathopen{}\left\\i, i + 1\right\\\mathclose{} &= \mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\2, 3\right\\\mathclose{} \cup \mathopen{}\left\\3, 4\right\\\mathclose{} \\ &= \mathopen{}\left\\1, 2, 3, 4\right\\\mathclose{}. \end{aligned} \\
+>
 > - \\\bigcup\_{i=1}^{\infty} \mathopen{}\left\\i\right\\\mathclose{} = \mathbb{N}\\: each natural number \\n\\ is in the set \\\mathopen{}\left\\n\right\\\mathclose{}\\, and each set \\\mathopen{}\left\\i\right\\\mathclose{}\\ contains only the natural number \\i\\.
+>
 > - \\\bigcap\_{i=1}^{\infty} \[0, 1/i\] = \mathopen{}\left\\0\right\\\mathclose{}\\: \\0\\ is in every interval \\\[0, 1/i\]\\; a number \\x \> 0\\ is not in \\\[0, 1/i\]\\ once \\i \> 1/x\\; and a number \\x \< 0\\ is in none of them.
 
 > **NOTE:**
@@ -231,8 +233,17 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > **Example 12 (De Morgan’s laws for die rolls)** In \\S = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\, let \\A = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ and \\B = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\, as in [Example 10](#exm-set-operations), so \\A^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\ and \\B^c = \mathopen{}\left\\4, 5, 6\right\\\mathclose{}\\.
 >
-> - \\(A \cup B)^c = \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}^c = \mathopen{}\left\\5\right\\\mathclose{}\\, and \\A^c \cap B^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{} \cap \mathopen{}\left\\4, 5, 6\right\\\mathclose{} = \mathopen{}\left\\5\right\\\mathclose{}\\.
-> - \\(A \cap B)^c = \mathopen{}\left\\2\right\\\mathclose{}^c = \mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}\\, and \\A^c \cup B^c = \mathopen{}\left\\1, 3, 5\right\\\mathclose{} \cup \mathopen{}\left\\4, 5, 6\right\\\mathclose{} = \mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}\\.
+> - \\ \begin{aligned} (A \cup B)^c &= \mathopen{}\left\\1, 2, 3, 4, 6\right\\\mathclose{}^c \\ &= \mathopen{}\left\\5\right\\\mathclose{}, \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} A^c \cap B^c &= \mathopen{}\left\\1, 3, 5\right\\\mathclose{} \cap \mathopen{}\left\\4, 5, 6\right\\\mathclose{} \\ &= \mathopen{}\left\\5\right\\\mathclose{}. \end{aligned} \\
+>
+> - \\ \begin{aligned} (A \cap B)^c &= \mathopen{}\left\\2\right\\\mathclose{}^c \\ &= \mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}, \end{aligned} \\
+>
+>   and
+>
+>   \\ \begin{aligned} A^c \cup B^c &= \mathopen{}\left\\1, 3, 5\right\\\mathclose{} \cup \mathopen{}\left\\4, 5, 6\right\\\mathclose{} \\ &= \mathopen{}\left\\1, 3, 4, 5, 6\right\\\mathclose{}. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -346,8 +357,13 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > **Example 18 (The order of composition matters)** Let \\g : \mathbb{R}\to \mathbb{R}\\ with \\g(x) = x + 1\\, and \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = x^2\\.
 >
-> - \\(f \circ g)(2) = f(g(2)) = f(3) = 9\\: \\g\\ is the inner function, and \\f\\ is the outer function.
-> - \\(g \circ f)(2) = g(f(2)) = g(4) = 5\\: now \\f\\ is the inner function, and \\g\\ is the outer function.
+> - \\ \begin{aligned} (f \circ g)(2) &= f(g(2)) \\ &= f(3) \\ &= 9: \end{aligned} \\
+>
+>   \\g\\ is the inner function, and \\f\\ is the outer function.
+>
+> - \\ \begin{aligned} (g \circ f)(2) &= g(f(2)) \\ &= g(4) \\ &= 5: \end{aligned} \\
+>
+>   now \\f\\ is the inner function, and \\g\\ is the outer function.
 >
 > Since \\9 \ne 5\\, \\f \circ g\\ and \\g \circ f\\ are different functions.
 
@@ -368,7 +384,10 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > **Example 19 (An invertible function, and one that is not)**  
 >
-> - Let \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = 2x + 1\\. Its inverse function is \\f^{-1}(y) = \frac{y - 1}{2}\\. For example, \\f(3) = 7\\ and \\f^{-1}(7) = \frac{7 - 1}{2} = 3\\.
+> - Let \\f : \mathbb{R}\to \mathbb{R}\\ with \\f(x) = 2x + 1\\. Its inverse function is \\f^{-1}(y) = \frac{y - 1}{2}\\. For example, \\f(3) = 7\\ and
+>
+>   \\ \begin{aligned} f^{-1}(7) &= \frac{7 - 1}{2} \\ &= 3. \end{aligned} \\
+>
 > - Let \\h : \mathbb{R}\to \mathbb{R}\\ with \\h(x) = x^2\\. Then \\h(-2) = 4\\ and \\h(2) = 4\\, so an inverse function would need \\h^{-1}(4)\\ to equal both \\-2\\ and \\2\\. So \\h\\ is not invertible.
 
 > **NOTE:**
@@ -438,7 +457,11 @@ Last modified: 2026-10-09 10:43:26 (PDT)
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
-> Addition extends to \\\[0, \infty\]\\ by setting \\x + \infty = \infty + x = \infty\\ for every \\x \in \[0, \infty\]\\.
+> Addition extends to \\\[0, \infty\]\\ by setting
+>
+> \\ \begin{aligned} x + \infty &= \infty + x \\ &= \infty \end{aligned} \\
+>
+> for every \\x \in \[0, \infty\]\\.
 
 > **NOTE:**
 >
