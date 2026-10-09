@@ -47,7 +47,15 @@ $$
 
 Let $\vecf{x} = (1, 2, 3)$ and take the combination
 $2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)$.
-Directly, $\vecf{x} \cdot (2, -1, 4) = 2 - 2 + 12 = 12$.
+Directly,
+
+$$
+\begin{aligned}
+\vecf{x} \cdot (2, -1, 4) &= 2 - 2 + 12 \\
+&= 12.
+\end{aligned}
+$$
+
 By @thm-dot-linear-sum,
 $2 \cd 1 - 1 \cd 2 + 4 \cd 3 = 12$, the same number.
 

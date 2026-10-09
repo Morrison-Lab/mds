@@ -23,11 +23,25 @@ if it satisfies both conditions:
   from @exm-positive-semidefinite is positive semidefinite
   but not positive definite:
   at $\vx = (1, -1) \neq \vzero$,
-  $\tp{\vx}\matr{B}\vx = (1 - 1)^2 = 0$.
+
+  $$
+  \begin{aligned}
+  \tp{\vx}\matr{B}\vx &= (1 - 1)^2 \\
+  &= 0.
+  \end{aligned}
+  $$
+
 - $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ is symmetric
   but not positive semidefinite:
   at $\vx = (1, -1)$,
-  $\tp{\vx}\matr{D}\vx = 1 - 2 - 2 + 1 = -2 < 0$.
+
+  $$
+  \begin{aligned}
+  \tp{\vx}\matr{D}\vx &= 1 - 2 - 2 + 1 \\
+  &= -2 \\
+  &< 0.
+  \end{aligned}
+  $$
 
 :::
 
@@ -72,7 +86,15 @@ Substituting the first into the second gives
 $-v_1 = (\eigval - 1)^2 v_1$,
 so $\paren{1 + (\eigval - 1)^2} v_1 = 0$.
 Since $1 + (\eigval - 1)^2 > 0$, $v_1 = 0$,
-and then $v_2 = (\eigval - 1)\, v_1 = 0$.
+and then
+
+$$
+\begin{aligned}
+v_2 &= (\eigval - 1)\, v_1 \\
+&= 0.
+\end{aligned}
+$$
+
 So no real $\eigval$ has an eigenvector $\vecf{v} \neq \vzero$.
 
 :::

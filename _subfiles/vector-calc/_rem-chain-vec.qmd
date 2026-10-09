@@ -26,8 +26,23 @@ there $\tp{\paren{\derivf{\vy}{\vx}}}$ is the Jacobian matrix of $\vy$ as a func
 #### Applying the vector chain rule
 
 Let $\vx = \tp{(x_1, x_2)}$,
-$\vy = \vec{g}(\vx) = \tp{(x_1 + x_2,\ x_1 x_2)}$,
-and $z = f(\vy) = y_1^2 + y_2$.
+
+$$
+\begin{aligned}
+\vy &= \vec{g}(\vx) \\
+&= \tp{(x_1 + x_2,\ x_1 x_2)},
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+z &= f(\vy) \\
+&= y_1^2 + y_2.
+\end{aligned}
+$$
+
 Then
 
 $$
@@ -62,7 +77,14 @@ $$
 $$
 
 This matches differentiating $z$ directly:
-$z = (x_1 + x_2)^2 + x_1 x_2 = x_1^2 + 3x_1 x_2 + x_2^2$,
+
+$$
+\begin{aligned}
+z &= (x_1 + x_2)^2 + x_1 x_2 \\
+&= x_1^2 + 3x_1 x_2 + x_2^2,
+\end{aligned}
+$$
+
 so $\deriv{x_1} z = 2x_1 + 3x_2$ and $\deriv{x_2} z = 3x_1 + 2x_2$.
 The product in the other order,
 a $2 \times 1$ matrix times a $2 \times 2$ matrix,

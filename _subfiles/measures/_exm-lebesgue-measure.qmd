@@ -1,14 +1,43 @@
 :::{#exm-lebesgue-measure}
 #### Lengths of some Borel sets
 
-- $\lebesgue([2, 5]) = 5 - 2 = 3$.
-- A single point has length zero: $\lebesgue(\set{a}) = \lebesgue([a, a]) = a - a = 0$.
+- $$
+  \begin{aligned}
+  \lebesgue([2, 5]) &= 5 - 2 \\
+  &= 3.
+  \end{aligned}
+  $$
+
+- A single point has length zero:
+
+  $$
+  \begin{aligned}
+  \lebesgue(\set{a}) &= \lebesgue([a, a]) \\
+  &= a - a \\
+  &= 0.
+  \end{aligned}
+  $$
+
 - The integers are the union of the pairwise disjoint single points
   $\set{0}, \set{1}, \set{-1}, \set{2}, \set{-2}, \ldots$
   (@exm-borel-sigma-algebra), so countable additivity gives
-  $\lebesgue(\mathbb{Z}) = 0 + 0 + \cdots = 0$.
+
+  $$
+  \begin{aligned}
+  \lebesgue(\mathbb{Z}) &= 0 + 0 + \cdots \\
+  &= 0.
+  \end{aligned}
+  $$
+
 - $\lebesgue([0, \infty)) = \infty$, because $[0, \infty)$ is unbounded.
 - Lebesgue measure on $[0, 1]$ gives the whole interval $[0, 1]$
-  the value $\lebesgue([0, 1]) = 1 - 0 = 1$.
+  the value
+
+  $$
+  \begin{aligned}
+  \lebesgue([0, 1]) &= 1 - 0 \\
+  &= 1.
+  \end{aligned}
+  $$
 
 :::

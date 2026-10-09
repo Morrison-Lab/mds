@@ -32,6 +32,13 @@ $$
 
 so $(0.6, 0.8)$ is a unit vector.
 The vector $(1, 1)$ is not:
-$\norm{(1, 1)} = \sqrt{1^2 + 1^2} = \sqrt{2} \ne 1$.
+
+$$
+\begin{aligned}
+\norm{(1, 1)} &= \sqrt{1^2 + 1^2} \\
+&= \sqrt{2} \\
+&\ne 1.
+\end{aligned}
+$$
 
 :::

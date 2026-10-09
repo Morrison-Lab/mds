@@ -103,7 +103,15 @@ f(\vecf{z} + \vecf{h})
 \end{aligned}
 $$
 
-using $\tp{(2 \matr{S} \vecf{z})} = 2\,\tp{\vecf{z}}\,\tp{\matr{S}} = 2\,\tp{\vecf{z}} \matr{S}$.
+using
+
+$$
+\begin{aligned}
+\tp{(2 \matr{S} \vecf{z})} &= 2\,\tp{\vecf{z}}\,\tp{\matr{S}} \\
+&= 2\,\tp{\vecf{z}} \matr{S}.
+\end{aligned}
+$$
+
 Multiplying out directly gives the same:
 
 $$

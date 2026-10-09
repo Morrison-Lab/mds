@@ -6,9 +6,25 @@
   the number of pairs in $A \times B$.
   For example, the set of pairs in which both rolls are even is
   $\set{2, 4, 6} \times \set{2, 4, 6}$,
-  with $(\measure \otimes \measure)(\set{2, 4, 6} \times \set{2, 4, 6}) = 3 \cdot 3 = 9$ pairs.
+  with
+
+  $$
+  \begin{aligned}
+  (\measure \otimes \measure)(\set{2, 4, 6} \times \set{2, 4, 6}) &= 3 \cdot 3 \\
+  &= 9
+  \end{aligned}
+  $$
+
+  pairs.
 - For Lebesgue measure $\lebesgue$ on $\reals$,
-  $(\lebesgue \otimes \lebesgue)([0, 2] \times [0, 3]) = 2 \cdot 3 = 6$,
+
+  $$
+  \begin{aligned}
+  (\lebesgue \otimes \lebesgue)([0, 2] \times [0, 3]) &= 2 \cdot 3 \\
+  &= 6,
+  \end{aligned}
+  $$
+
   the area of the rectangle.
 
 :::

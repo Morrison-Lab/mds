@@ -37,8 +37,21 @@ $$
 
 From $x^{(0)} = 2.5$:
 
-- $x^{(1)} = \tfrac{1}{2} (2.5 + 1.6) = 2.05$;
-- $x^{(2)} = \tfrac{1}{2} (2.05 + 1.951219\ldots) = 2.000610$ (to six decimals);
+- $$
+  \begin{aligned}
+  x^{(1)} &= \tfrac{1}{2} (2.5 + 1.6) \\
+  &= 2.05;
+  \end{aligned}
+  $$
+
+- $$
+  \begin{aligned}
+  x^{(2)} &= \tfrac{1}{2} (2.05 + 1.951219\ldots) \\
+  &= 2.000610
+  \end{aligned}
+  $$
+
+  (to six decimals);
 - $x^{(3)} = 2.0000001$ (to seven decimals).
 
 The iterates (@def-vector-sequence-limit) approach $2$, the local minimizer of $f$

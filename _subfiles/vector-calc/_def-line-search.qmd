@@ -28,7 +28,15 @@ $$
 \ea
 $$
 
-$\linefn(s) \ge 0$ for every $s$, and $\linefn(0.5) = (2 - 2)^2 = 0$,
+$\linefn(s) \ge 0$ for every $s$, and
+
+$$
+\begin{aligned}
+\linefn(0.5) &= (2 - 2)^2 \\
+&= 0,
+\end{aligned}
+$$
+
 so exact line search chooses $s^{(t)} = 0.5$,
 which lands on the minimizer $x^{(t+1)} = 0$ in one step.
 

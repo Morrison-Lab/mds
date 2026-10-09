@@ -24,7 +24,14 @@ Let $\matr{A} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\vecf{b} = (1, 3)$.
 The system $x\,(1, 1) = (1, 3)$ is inconsistent (@def-consistent-system):
 its first entry needs $x = 1$ and its second needs $x = 3$.
 For any number $x$,
-$\norm{\vecf{b} - \matr{A} x}^2 = (1 - x)^2 + (3 - x)^2 = 2\,(x - 2)^2 + 2$,
+
+$$
+\begin{aligned}
+\norm{\vecf{b} - \matr{A} x}^2 &= (1 - x)^2 + (3 - x)^2 \\
+&= 2\,(x - 2)^2 + 2,
+\end{aligned}
+$$
+
 which is smallest at $x = 2$, so $\hat{x} = 2$ is the least squares solution.
 The value $x = 1$ is not one: it gives $0 + 4 = 4 > 2$.
 The normal equations read $2x = 4$, and their solution is $x = 2$ too.

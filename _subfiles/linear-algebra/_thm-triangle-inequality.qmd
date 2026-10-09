@@ -40,9 +40,32 @@ and for nonnegative numbers $a^2 \le b^2$ implies $a \le b$.
 #### A strict case and an equality case
 
 - For $\vecf{x} = (3, 0)$ and $\vecf{y} = (0, 4)$:
-  $\norm{\vecf{x} + \vecf{y}} = \norm{(3, 4)} = 5$,
-  while $\norm{\vecf{x}} + \norm{\vecf{y}} = 3 + 4 = 7$.
+
+  $$
+  \begin{aligned}
+  \norm{\vecf{x} + \vecf{y}} &= \norm{(3, 4)} \\
+  &= 5,
+  \end{aligned}
+  $$
+
+  while
+
+  $$
+  \begin{aligned}
+  \norm{\vecf{x}} + \norm{\vecf{y}} &= 3 + 4 \\
+  &= 7.
+  \end{aligned}
+  $$
+
 - For $\vecf{x} = (1, 0)$ and $\vecf{y} = (2, 0)$, which point the same way:
-  $\norm{(3, 0)} = 3 = 1 + 2$, so equality holds.
+
+  $$
+  \begin{aligned}
+  \norm{(3, 0)} &= 3 \\
+  &= 1 + 2,
+  \end{aligned}
+  $$
+
+  so equality holds.
 
 :::

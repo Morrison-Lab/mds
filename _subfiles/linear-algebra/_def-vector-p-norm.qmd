@@ -34,11 +34,34 @@ Each vector $p$-norm satisfies the norm axioms (@def-norm) on $\reals^p$.
 For $\vx = (3, -4) \in \reals^2$:
 
 - $\ell_1$ norm:
-  $\norm{\vx}_1 = \abs{3} + \abs{-4} = 3 + 4 = 7$.
+
+  $$
+  \begin{aligned}
+  \norm{\vx}_1 &= \abs{3} + \abs{-4} \\
+  &= 3 + 4 \\
+  &= 7.
+  \end{aligned}
+  $$
+
 - $\ell_2$ norm:
-  $\norm{\vx}_2 = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5$.
+
+  $$
+  \begin{aligned}
+  \norm{\vx}_2 &= \sqrt{3^2 + (-4)^2} \\
+  &= \sqrt{9 + 16} \\
+  &= \sqrt{25} \\
+  &= 5.
+  \end{aligned}
+  $$
+
 - $\ell_\infty$ norm:
-  $\norm{\vx}_\infty = \max(\abs{3}, \abs{-4}) = 4$.
+
+  $$
+  \begin{aligned}
+  \norm{\vx}_\infty &= \max(\abs{3}, \abs{-4}) \\
+  &= 4.
+  \end{aligned}
+  $$
 
 Notice that $4 \le 5 \le 7$. For any vector $\vx \in \reals^p$, the norms satisfy the chain of inequalities:
 

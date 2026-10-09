@@ -45,7 +45,14 @@ but they share the $y$-axis,
 so they are not complementary,
 and $\reals^3$ is not their direct sum.
 The shared line shows up as more than one way to split a vector:
-$(0, 1, 0) = (0, 1, 0) + \vzero = \vzero + (0, 1, 0)$,
+
+$$
+\begin{aligned}
+(0, 1, 0) &= (0, 1, 0) + \vzero \\
+&= \vzero + (0, 1, 0),
+\end{aligned}
+$$
+
 with the first term in the plane $z = 0$ and the second in the plane $x = 0$
 both times.
 

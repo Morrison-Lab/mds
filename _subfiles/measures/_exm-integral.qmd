@@ -9,7 +9,20 @@ Its values at $1, \ldots, 6$ are $-2, -1, 0, 1, 2, 3$, so:
   and $\int_D f^{+} \, d\measure = 6$ by @exm-integral-nonneg;
 - $f^{-}$ has values $2, 1, 0, 0, 0, 0$,
   and $\int_D f^{-} \, d\measure = 3$;
-- $\int_D f \, d\measure = 6 - 3 = 3$,
-  which is also $\sum_{x \in D} (x - 3) = 21 - 18 = 3$.
+- $$
+  \begin{aligned}
+  \int_D f \, d\measure &= 6 - 3 \\
+  &= 3,
+  \end{aligned}
+  $$
+
+  which is also
+
+  $$
+  \begin{aligned}
+  \sum_{x \in D} (x - 3) &= 21 - 18 \\
+  &= 3.
+  \end{aligned}
+  $$
 
 :::

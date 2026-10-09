@@ -39,7 +39,16 @@ For $\matr{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$
 and the generalized inverse $\matr{G} = \begin{bmatrix} 1 & 5 \\ 7 & 0 \end{bmatrix}$,
 $\matr{A} \matr{G} = \begin{bmatrix} 1 & 5 \\ 0 & 0 \end{bmatrix}$.
 
-- $\vecf{b} = (2, 0)$: $\matr{A} \matr{G} \vecf{b} = (2, 0) = \vecf{b}$, so the system is consistent.
+- $\vecf{b} = (2, 0)$:
+
+  $$
+  \begin{aligned}
+  \matr{A} \matr{G} \vecf{b} &= (2, 0) \\
+  &= \vecf{b},
+  \end{aligned}
+  $$
+
+  so the system is consistent.
 - $\vecf{b} = (2, 1)$: $\matr{A} \matr{G} \vecf{b} = (7, 0) \ne \vecf{b}$, so it is not,
   as @exm-generalized-inverse-solves found directly.
 

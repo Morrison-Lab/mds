@@ -16,8 +16,24 @@ $$
 
 For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
 and $\matr{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}$,
-@exm-determinant gives $\det(\matr{A}) = 2 \cd 1 - 1 \cd 0 = 2$
-and $\det(\matr{B}) = 1 \cd 1 - 0 \cd 3 = 1$.
+@exm-determinant gives
+
+$$
+\begin{aligned}
+\det(\matr{A}) &= 2 \cd 1 - 1 \cd 0 \\
+&= 2
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\det(\matr{B}) &= 1 \cd 1 - 0 \cd 3 \\
+&= 1.
+\end{aligned}
+$$
+
 The product is
 
 $$
@@ -28,7 +44,15 @@ $$
 \end{aligned}
 $$
 
-with $\det(\matr{A}\matr{B}) = 5 \cd 1 - 1 \cd 3 = 2 = \det(\matr{A})\det(\matr{B})$.
+with
+
+$$
+\begin{aligned}
+\det(\matr{A}\matr{B}) &= 5 \cd 1 - 1 \cd 3 \\
+&= 2 \\
+&= \det(\matr{A})\det(\matr{B}).
+\end{aligned}
+$$
 
 :::
 

@@ -13,7 +13,14 @@ $$
 
 **$\mathcal{N}(\matr{A}) \subseteq \mathcal{N}(\tp{\matr{A}} \matr{A})$.**
 If $\matr{A} \vecf{x} = \vzero_m$,
-then $\tp{\matr{A}} \matr{A} \vecf{x} = \tp{\matr{A}}\,\vzero_m = \vzero_n$.
+then
+
+$$
+\begin{aligned}
+\tp{\matr{A}} \matr{A} \vecf{x} &= \tp{\matr{A}}\,\vzero_m \\
+&= \vzero_n.
+\end{aligned}
+$$
 
 **$\mathcal{N}(\tp{\matr{A}} \matr{A}) \subseteq \mathcal{N}(\matr{A})$.**
 If $\tp{\matr{A}} \matr{A} \vecf{x} = \vzero_n$, then

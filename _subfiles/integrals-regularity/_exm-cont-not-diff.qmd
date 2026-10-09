@@ -1,8 +1,15 @@
 ::::{#exm-cont-not-diff}
 #### Continuous but not differentiable: $\abs{x}$
 
-The absolute-value function $f(x) = \abs{x}$ is continuous at $x = 0$
-($\lim_{x \to 0}\abs{x} = 0 = \abs{0}$),
+The absolute-value function $f(x) = \abs{x}$ is continuous at $x = 0$, since
+
+$$
+\begin{aligned}
+\lim_{x \to 0}\abs{x} &= 0 \\
+&= \abs{0},
+\end{aligned}
+$$
+
 but it is not differentiable at $x = 0$:
 its left-hand derivative there is $-1$ and its right-hand derivative is $+1$
 (@exm-one-sided-derivative).

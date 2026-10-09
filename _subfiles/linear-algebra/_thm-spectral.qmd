@@ -29,7 +29,14 @@ see @banerjee2014linear [Chapter 11, Theorem 11.27, p. 349],
 which states the result in the equivalent form
 $\tp{\matr{Q}}\matr{A}\matr{Q} = \matr{\Eigvals}$.
 The two forms are equivalent because
-$\tp{\matr{Q}}\matr{Q} = \matr{Q}\tp{\matr{Q}} = \matr{I}_p$
+
+$$
+\begin{aligned}
+\tp{\matr{Q}}\matr{Q} &= \matr{Q}\tp{\matr{Q}} \\
+&= \matr{I}_p
+\end{aligned}
+$$
+
 (@rem-orthogonal-matrix-columns).
 Multiplying $\matr{A} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
 by $\tp{\matr{Q}}$ on the left and by $\matr{Q}$ on the right gives

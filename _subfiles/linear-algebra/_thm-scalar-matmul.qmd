@@ -94,7 +94,21 @@ so all of this applies with $\matr{B}$, $\matr{C}$ or $\matr{D}$ a vector.
 #### Pulling a scalar out of a product
 
 With $\matr{A} = \begin{bmatrix} 1 & 2 \end{bmatrix}$ and $\matr{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$:
-$\matr{A}\,(2\,\matr{B}) = \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 6 \\ 8 \end{bmatrix} = 22$,
-and $2\,(\matr{A} \matr{B}) = 2\,(3 + 8) = 22$.
+
+$$
+\begin{aligned}
+\matr{A}\,(2\,\matr{B}) &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 6 \\ 8 \end{bmatrix} \\
+&= 22,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+2\,(\matr{A} \matr{B}) &= 2\,(3 + 8) \\
+&= 22.
+\end{aligned}
+$$
 
 :::

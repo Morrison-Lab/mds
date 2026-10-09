@@ -31,7 +31,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
    $$
    \operatorname{cossim}(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
    $$
-   When embedding vectors are normalized to unit Euclidean norm ($\norm{\vx} = \norm{\vy} = 1$),
+   When embedding vectors are normalized to unit Euclidean norm ($\norm{\vx} = 1$ and $\norm{\vy} = 1$),
    cosine similarity equals the inner product $\iprod{\vx}{\vy}$.
    Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\dprod{\vecf{q}}{\vecf{k}} / \sqrt{d_k}$.
 

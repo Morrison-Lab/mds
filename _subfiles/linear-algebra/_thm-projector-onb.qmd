@@ -64,7 +64,15 @@ $$
 \ea
 $$
 
-so $\vecf{v} \in \mathcal{N}(\tp{\matr{Q}}) = \mathcal{C}(\matr{Q})^\perp = \mathcal{S}^\perp$
+so $\vecf{v} \in \mathcal{N}(\tp{\matr{Q}})$, and
+
+$$
+\begin{aligned}
+\mathcal{N}(\tp{\matr{Q}}) &= \mathcal{C}(\matr{Q})^\perp \\
+&= \mathcal{S}^\perp
+\end{aligned}
+$$
+
 (@thm-complement-null-space).
 By the uniqueness in @thm-orthogonal-direct-sum,
 $\vecf{u}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{S}$.
@@ -109,7 +117,15 @@ $$
 For $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$,
 the single vector $\vecf{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)$ is an orthonormal basis:
 it spans $\mathcal{S}$, it is nonzero and so linearly independent,
-and $\norm{\vecf{q}_1} = \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} = 1$.
+and
+
+$$
+\begin{aligned}
+\norm{\vecf{q}_1} &= \sqrt{\tfrac{1}{2} + \tfrac{1}{2} + 0} \\
+&= 1.
+\end{aligned}
+$$
+
 With $\matr{Q} = [\vecf{q}_1]$,
 
 $$

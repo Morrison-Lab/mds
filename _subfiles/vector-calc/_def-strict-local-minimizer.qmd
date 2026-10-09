@@ -13,7 +13,17 @@ for every $\vx \ne \vx^*$ with $\norm{\vx - \vx^*} < \tolin$.
 :::{#exm-strict-local-minimizer}
 #### Strict and non-strict local minimizers
 
-- $f(x) = (x - 2)^2$ has $f(2) = 0 < (x - 2)^2 = f(x)$ for every $x \ne 2$,
+- $f(x) = (x - 2)^2$ has
+
+  $$
+  \begin{aligned}
+  f(2) &= 0 \\
+  &< (x - 2)^2 \\
+  &= f(x)
+  \end{aligned}
+  $$
+
+  for every $x \ne 2$,
   so $2$ is a strict local minimizer (any $\tolin > 0$ works).
 - A constant function $f(\vx) = 0$ has $f(\vx^*) \le f(\vx)$ for all $\vx^*$ and $\vx$,
   so every point is a [local minimizer](algebra.qmd#def-local-minimizer),

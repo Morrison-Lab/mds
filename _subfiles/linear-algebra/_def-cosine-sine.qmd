@@ -25,7 +25,13 @@ and its second coordinate is the **sine** of $\angpar$.
 - $\angpar = \pi/4$ goes an eighth of the way round,
   to the point of the circle with $x_1 = x_2 > 0$.
   There $x_1^2 + x_1^2 = 1$, so $x_1^2 = \tfrac{1}{2}$ and $x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071$:
-  $\cos(\pi/4) = \sin(\pi/4) = \tfrac{1}{\sqrt{2}}$.
+
+  $$
+  \begin{aligned}
+  \cos(\pi/4) &= \sin(\pi/4) \\
+  &= \tfrac{1}{\sqrt{2}}.
+  \end{aligned}
+  $$
 
 Angles are also measured in *degrees*, with a full turn of $2\pi$ equal to $360$ degrees,
 so $\pi/2$ is $90$ degrees and $\pi/4$ is $45$ degrees.

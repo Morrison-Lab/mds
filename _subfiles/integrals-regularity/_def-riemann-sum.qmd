@@ -2,7 +2,19 @@
 #### Riemann sum
 
 Let $f$ be a function on $[a, b]$,
-let $\mathcal{P}$ be a partition $a = x_0 < x_1 < \cdots < x_n = b$ of $[a, b]$ (@def-partition),
+let $\mathcal{P}$ be a partition
+
+$$
+\begin{aligned}
+a &= x_0 \\
+&< x_1 \\
+&< \cdots \\
+&< x_n \\
+&= b
+\end{aligned}
+$$
+
+of $[a, b]$ (@def-partition),
 and choose a **sample point** $x_i^*$ in each subinterval $[x_{i-1}, x_i]$.
 The **Riemann sum** of $f$ for $\mathcal{P}$ and these sample points is
 

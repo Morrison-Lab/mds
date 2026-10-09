@@ -7,6 +7,12 @@ and the set of even numbers has $\measure(\set{0, 2, 4, \ldots}) = \infty$.
 The even numbers are the union of the pairwise disjoint sets
 $\set{0}, \set{2}, \set{4}, \ldots$,
 and countable additivity agrees:
-$\sum_{k=0}^{\infty} \measure(\set{2k}) = 1 + 1 + \cdots = \infty$.
+
+$$
+\begin{aligned}
+\sum_{k=0}^{\infty} \measure(\set{2k}) &= 1 + 1 + \cdots \\
+&= \infty.
+\end{aligned}
+$$
 
 :::

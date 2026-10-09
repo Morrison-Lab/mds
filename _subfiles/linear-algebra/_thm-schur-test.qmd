@@ -25,7 +25,14 @@ Either way $\tp{\vecf{v}} \matr{X} \vecf{v} > 0$.
 $\matr{A}$ is the top-left $k \times k$ block of $\matr{X}$, so it is positive definite (@thm-pd-submatrix),
 and invertible (@thm-pd-inverse).
 $\matr{S}$ is symmetric:
-$\tp{(\tp{\matr{B}} \matr{A}^{-1} \matr{B})} = \tp{\matr{B}}\,\tp{(\matr{A}^{-1})}\,\matr{B} = \tp{\matr{B}} \matr{A}^{-1} \matr{B}$
+
+$$
+\begin{aligned}
+\tp{(\tp{\matr{B}} \matr{A}^{-1} \matr{B})} &= \tp{\matr{B}}\,\tp{(\matr{A}^{-1})}\,\matr{B} \\
+&= \tp{\matr{B}} \matr{A}^{-1} \matr{B}
+\end{aligned}
+$$
+
 (@thm-transpose-product, @def-matrix-transpose for $\tp{(\tp{\matr{B}})} = \matr{B}$, @cor-inverse-symmetric),
 and $\matr{C}$ is symmetric,
 so $\matr{S} = \matr{C} - \tp{\matr{B}} \matr{A}^{-1} \matr{B}$ is symmetric

@@ -29,7 +29,14 @@ and for $k = n$ it is $\matr{X}$ itself.
 :::{#exm-block-matrix}
 #### Cutting a $3 \times 3$ matrix into blocks
 
-With $k = l = 1$,
+With
+
+$$
+\begin{aligned}
+k &= l \\
+&= 1,
+\end{aligned}
+$$
 
 $$
 \matr{X} = \begin{bmatrix} 4 & 2 & 1 \\ 2 & 5 & 3 \\ 1 & 3 & 6 \end{bmatrix}
@@ -44,8 +51,25 @@ $$
 \matr{D} = \begin{bmatrix} 5 & 3 \\ 3 & 6 \end{bmatrix}.
 $$
 
-For instance, entry $(1, 2)$ of $\matr{D}$ is $x_{1 + 1, 2 + 1} = x_{23} = 3$.
-With $k = l = 2$ instead, the leading $2 \times 2$ block is
+For instance, entry $(1, 2)$ of $\matr{D}$ is
+
+$$
+\begin{aligned}
+x_{1 + 1, 2 + 1} &= x_{23} \\
+&= 3.
+\end{aligned}
+$$
+
+With
+
+$$
+\begin{aligned}
+k &= l \\
+&= 2
+\end{aligned}
+$$
+
+instead, the leading $2 \times 2$ block is
 $\begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}$.
 
 :::

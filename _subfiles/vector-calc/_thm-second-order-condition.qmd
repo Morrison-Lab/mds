@@ -66,7 +66,15 @@ So $f(\vx^*) < f(\vx)$ whenever $0 < \norm{\vx - \vx^*} < \tolin$ (take $\vecf{h
 #### Classifying stationary points
 
 - $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ has the stationary point $\tp{(1, 0)}$ (@exm-stationary-point),
-  and its Hessian is $\matr{H}_f(\vx) = \sbmat{ 2 & 0 \\ 0 & 2 } = 2 \matr{I}_2$,
+  and its Hessian is
+
+  $$
+  \begin{aligned}
+  \matr{H}_f(\vx) &= \sbmat{ 2 & 0 \\ 0 & 2 } \\
+  &= 2 \matr{I}_2,
+  \end{aligned}
+  $$
+
   which is positive definite, so $\tp{(1, 0)}$ is a strict local minimizer.
 - $f(\vx) = x_1^2 - x_2^2$ has the stationary point $\vzero$
   and Hessian $\sbmat{ 2 & 0 \\ 0 & -2 }$, which is not positive definite
@@ -83,11 +91,30 @@ So $f(\vx^*) < f(\vx)$ whenever $0 < \norm{\vx - \vx^*} < \tolin$ (take $\vecf{h
 $f(\vx) = x_1^2 + x_2^4$ and $g(\vx) = x_1^2 - x_2^4$
 both have gradient $\vzero$ at $\vzero$
 and the same Hessian there, $\sbmat{ 2 & 0 \\ 0 & 0 }$,
-since $\deriv{x_2} \paren{\deriv{x_2} (\pm x_2^4)} = \pm 12 x_2^2 = 0$ at $x_2 = 0$.
+since
+
+$$
+\begin{aligned}
+\deriv{x_2} \paren{\deriv{x_2} (\pm x_2^4)} &= \pm 12 x_2^2 \\
+&= 0
+\end{aligned}
+$$
+
+at $x_2 = 0$.
 That Hessian is not positive definite ($\tp{(0, 1)}$ gives $0$),
 so @thm-second-order-condition says nothing about either function.
 In fact $\vzero$ is a strict local minimizer of $f$,
 since $f(\vx) > 0 = f(\vzero)$ for $\vx \ne \vzero$,
-but not a local minimizer of $g$, since $g(0, t) = -t^4 < 0 = g(\vzero)$ for $t \ne 0$.
+but not a local minimizer of $g$, since
+
+$$
+\begin{aligned}
+g(0, t) &= -t^4 \\
+&< 0 \\
+&= g(\vzero)
+\end{aligned}
+$$
+
+for $t \ne 0$.
 
 :::

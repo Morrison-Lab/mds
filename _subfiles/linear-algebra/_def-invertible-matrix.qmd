@@ -28,7 +28,13 @@ $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
 is invertible, with
 $\matr{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$:
 multiplying out gives
-$\matr{A}\matr{A}^{-1} = \matr{A}^{-1}\matr{A} = \matr{I}_2$.
+
+$$
+\begin{aligned}
+\matr{A}\matr{A}^{-1} &= \matr{A}^{-1}\matr{A} \\
+&= \matr{I}_2.
+\end{aligned}
+$$
 
 The matrix
 $\matr{M} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$
@@ -48,9 +54,23 @@ whose two rows differ.
 Let $\matr{A}$ be a $p \times p$ matrix,
 and suppose that two $p \times p$ matrices $\matr{B}$ and $\matr{C}$
 satisfy
-$\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_p$
+
+$$
+\begin{aligned}
+\matr{A}\matr{B} &= \matr{B}\matr{A} \\
+&= \matr{I}_p
+\end{aligned}
+$$
+
 and
-$\matr{A}\matr{C} = \matr{C}\matr{A} = \matr{I}_p$.
+
+$$
+\begin{aligned}
+\matr{A}\matr{C} &= \matr{C}\matr{A} \\
+&= \matr{I}_p.
+\end{aligned}
+$$
+
 Then
 
 $$
@@ -86,7 +106,15 @@ for $\matr{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}$
 in @exm-invertible-matrix,
 $\begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}$
 is the only $2 \times 2$ matrix $\matr{B}$
-with $\matr{A}\matr{B} = \matr{B}\matr{A} = \matr{I}_2$,
+with
+
+$$
+\begin{aligned}
+\matr{A}\matr{B} &= \matr{B}\matr{A} \\
+&= \matr{I}_2,
+\end{aligned}
+$$
+
 so it is $\matr{A}^{-1}$.
 
 :::

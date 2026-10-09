@@ -42,7 +42,14 @@ $$
 
 so $\vecf{y} - \matr{P} \vecf{y} \in \mathcal{N}(\matr{P})$.
 Since $\matr{P} = \tp{\matr{P}}$,
-$\mathcal{N}(\matr{P}) = \mathcal{N}(\tp{\matr{P}}) = \mathcal{C}(\matr{P})^\perp$
+
+$$
+\begin{aligned}
+\mathcal{N}(\matr{P}) &= \mathcal{N}(\tp{\matr{P}}) \\
+&= \mathcal{C}(\matr{P})^\perp
+\end{aligned}
+$$
+
 (@thm-complement-null-space).
 By the uniqueness in @thm-orthogonal-direct-sum,
 $\matr{P} \vecf{y}$ is the orthogonal projection of $\vecf{y}$ onto $\mathcal{C}(\matr{P})$.
@@ -72,7 +79,14 @@ By part 1, $\matr{P}(v_1, v_2) = (v_1, 0)$ is the orthogonal projection onto tha
 the remainder $(0, v_2)$ is orthogonal to $(1, 0)$.
 The vector $\vecf{q}_1 = (1, 0)$ has length $1$ and spans the axis,
 so it is an orthonormal basis of it, and with $\matr{B} = [\vecf{q}_1]$,
-$\matr{B} \tp{\matr{B}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} = \matr{P}$,
+
+$$
+\begin{aligned}
+\matr{B} \tp{\matr{B}} &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} \\
+&= \matr{P},
+\end{aligned}
+$$
+
 as part 2 and @thm-projector-onb require.
 
 The oblique projection $\matr{Q} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$

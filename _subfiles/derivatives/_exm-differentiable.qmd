@@ -22,7 +22,16 @@
 
   which tends to the finite limit $f'(3) = 6$ as $h \to 0$.
 - $g(x) = \sqrt[3]{x}$ is not differentiable at $c = 0$:
-  the difference quotient $\tfrac{g(h) - g(0)}{h} = \tfrac{\sqrt[3]{h}}{h} = \tfrac{1}{(\sqrt[3]{h})^2}$ grows without bound as $h \to 0$,
+  the difference quotient
+
+  $$
+  \begin{aligned}
+  \tfrac{g(h) - g(0)}{h} &= \tfrac{\sqrt[3]{h}}{h} \\
+  &= \tfrac{1}{(\sqrt[3]{h})^2}
+  \end{aligned}
+  $$
+
+  grows without bound as $h \to 0$,
   so the limit is not finite.
 
 :::

@@ -20,12 +20,29 @@ and its dimension (@def-dimension) is the **geometric multiplicity** of $\eigval
   so $\mathcal{E}_3 = \operatorname{span}\cb{(1, 1)}$, with geometric multiplicity $1$.
 - For $\matr{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$,
   $\matr{J} \vecf{v} = (v_2, 0)$.
-  $\matr{J}\,(1, 0) = (0, 0) = 0\,(1, 0)$, so $0$ is an eigenvalue.
+
+  $$
+  \begin{aligned}
+  \matr{J}\,(1, 0) &= (0, 0) \\
+  &= 0\,(1, 0),
+  \end{aligned}
+  $$
+
+  so $0$ is an eigenvalue.
   If $\matr{J} \vecf{v} = \eigval \vecf{v}$ with $\eigval \ne 0$,
   the second entry gives $\eigval v_2 = 0$, so $v_2 = 0$,
   and then the first gives $\eigval v_1 = 0$, so $\vecf{v} = \vzero$.
   So $0$ is the only eigenvalue,
-  and $\mathcal{E}_0 = \mathcal{N}(\matr{J}) = \cb{(t, 0) : t \in \reals}$, with geometric multiplicity $1$.
+  and
+
+  $$
+  \begin{aligned}
+  \mathcal{E}_0 &= \mathcal{N}(\matr{J}) \\
+  &= \cb{(t, 0) : t \in \reals},
+  \end{aligned}
+  $$
+
+  with geometric multiplicity $1$.
 
 :::
 

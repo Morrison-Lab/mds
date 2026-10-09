@@ -75,7 +75,15 @@ $$
 \ea
 $$
 
-$\matr{U}$ is orthogonal because $\tp{\matr{U}}\matr{U} = \begin{bmatrix} 1 \end{bmatrix} = \matr{I}_1$,
+$\matr{U}$ is orthogonal because
+
+$$
+\begin{aligned}
+\tp{\matr{U}}\matr{U} &= \begin{bmatrix} 1 \end{bmatrix} \\
+&= \matr{I}_1,
+\end{aligned}
+$$
+
 and the single singular value is $\singval_1 = \sqrt{2}$.
 
 :::

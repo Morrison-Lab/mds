@@ -119,9 +119,23 @@ By part 1, $\mathcal{H}_0 = \cb{\vx : x_1 + x_2 + x_3 = 0}$ is a subspace of dim
   and so is $\vy = (0, 1, 0)$.
 - Their difference $\vy - \vx_0 = (-1, 1, 0)$ has entries summing to $-1 + 1 + 0 = 0$,
   so it is in $\mathcal{H}_0$, and $\vy = \vx_0 + (-1, 1, 0)$, as part 2 says.
-- $\vec{w} \cdot (-1, 1, 0) = -1 + 1 + 0 = 0$, as part 3 says.
+- $$
+  \begin{aligned}
+  \vec{w} \cdot (-1, 1, 0) &= -1 + 1 + 0 \\
+  &= 0,
+  \end{aligned}
+  $$
+
+  as part 3 says.
 - The point built in the proof is
-  $\vx^* = -\frac{-1}{3}\,(1, 1, 1) = \paren{\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3}}$,
+
+  $$
+  \begin{aligned}
+  \vx^* &= -\frac{-1}{3}\,(1, 1, 1) \\
+  &= \paren{\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3}},
+  \end{aligned}
+  $$
+
   and $\tfrac{1}{3} + \tfrac{1}{3} + \tfrac{1}{3} - 1 = 0$.
 
 :::

@@ -52,9 +52,26 @@ $\vecf{y} = (3, 1, 2)$ has projection $\vecf{u} = (2, 2, 0)$
 onto $\mathcal{S} = \operatorname{span}\cb{(1, 1, 0)}$,
 at distance $\norm{(1, -1, 2)} = \sqrt{6}$.
 Another point of $\mathcal{S}$, such as $\vecf{w} = (3, 3, 0)$,
-is farther: $\norm{\vecf{y} - \vecf{w}} = \norm{(0, -2, 2)} = \sqrt{8} > \sqrt{6}$,
+is farther:
+
+$$
+\begin{aligned}
+\norm{\vecf{y} - \vecf{w}} &= \norm{(0, -2, 2)} \\
+&= \sqrt{8} \\
+&> \sqrt{6},
+\end{aligned}
+$$
+
 and the difference of squares is
-$\norm{\vecf{u} - \vecf{w}}^2 = \norm{(-1, -1, 0)}^2 = 2 = 8 - 6$,
+
+$$
+\begin{aligned}
+\norm{\vecf{u} - \vecf{w}}^2 &= \norm{(-1, -1, 0)}^2 \\
+&= 2 \\
+&= 8 - 6,
+\end{aligned}
+$$
+
 by the Pythagorean theorem (@thm-norm-sum-square),
 since $\vecf{y} - \vecf{u} \in \mathcal{S}^\perp$ and $\vecf{u} - \vecf{w} \in \mathcal{S}$.
 

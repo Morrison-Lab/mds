@@ -40,16 +40,41 @@ $$
 $$
 
 And $\vecf{w} \ne \vzero$: if $\vecf{w} = \vzero$, then
-$\vecf{v} = \matr{I}_p \vecf{v} = \matr{P}\,(\matr{P}^{-1} \vecf{v}) = \matr{P}\,\vzero = \vzero$
+
+$$
+\begin{aligned}
+\vecf{v} &= \matr{I}_p \vecf{v} \\
+&= \matr{P}\,(\matr{P}^{-1} \vecf{v}) \\
+&= \matr{P}\,\vzero \\
+&= \vzero
+\end{aligned}
+$$
+
 (@thm-identity, @def-matrix-inverse, @thm-matmul-assoc, @def-matvec-mult),
 which is false.
 
 **From $\matr{B}$ to $\matr{A}$.**
-By @rem-similar-both-ways, $\matr{A} = \matr{P} \matr{B} \matr{P}^{-1} = (\matr{P}^{-1})^{-1} \matr{B}\,\matr{P}^{-1}$,
+By @rem-similar-both-ways,
+
+$$
+\begin{aligned}
+\matr{A} &= \matr{P} \matr{B} \matr{P}^{-1} \\
+&= (\matr{P}^{-1})^{-1} \matr{B}\,\matr{P}^{-1},
+\end{aligned}
+$$
+
 so the first part, with $\matr{P}^{-1}$ in place of $\matr{P}$ and the roles of $\matr{A}$ and $\matr{B}$ exchanged,
 shows that if $\vecf{w} = \matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\eigval$,
 then $\matr{P} \vecf{w}$ is an eigenvector of $\matr{A}$ for $\eigval$;
-and $\matr{P} \vecf{w} = \matr{P} \matr{P}^{-1} \vecf{v} = \vecf{v}$
+and
+
+$$
+\begin{aligned}
+\matr{P} \vecf{w} &= \matr{P} \matr{P}^{-1} \vecf{v} \\
+&= \vecf{v}
+\end{aligned}
+$$
+
 (@thm-matmul-assoc, @def-matrix-inverse, @thm-identity).
 
 :::

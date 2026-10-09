@@ -45,9 +45,25 @@ $$
 #### Moving the line
 
 In @exm-qp-equality with a general right side $b$ in place of $5$,
-$\matr{M}^{-1} = \tfrac{2}{25}$ and $f^*(b) = \tfrac{1}{2} \paren{\tfrac{2}{25}}\,b^2 = \tfrac{b^2}{25}$,
+$\matr{M}^{-1} = \tfrac{2}{25}$ and
+
+$$
+\begin{aligned}
+f^*(b) &= \tfrac{1}{2} \paren{\tfrac{2}{25}}\,b^2 \\
+&= \tfrac{b^2}{25},
+\end{aligned}
+$$
+
 so $\dif{}{b} f^*(b) = \tfrac{2b}{25}$.
-At $b = 5$ this derivative is $\tfrac{10}{25} = 0.4 = -\lagmult^*$:
+At $b = 5$ this derivative is
+
+$$
+\begin{aligned}
+\tfrac{10}{25} &= 0.4 \\
+&= -\lagmult^*:
+\end{aligned}
+$$
+
 moving the line $3 x_1 + 4 x_2 = b$ outward by a small step $\smallconst$ in $b$
 raises the minimum value by about $0.4\,\smallconst$.
 

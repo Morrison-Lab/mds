@@ -40,7 +40,15 @@ $$
 
 The second step is the [transpose of a product](linear-algebra.qmd#thm-transpose-product).
 The last step applies [orthogonal matrices preserve length](linear-algebra.qmd#thm-orthogonal-norm) to $\tp{\matr{Q}}$,
-which is orthogonal because $\tp{\matr{Q}} \matr{Q} = \matr{Q} \tp{\matr{Q}} = \matr{I}_p$
+which is orthogonal because
+
+$$
+\begin{aligned}
+\tp{\matr{Q}} \matr{Q} &= \matr{Q} \tp{\matr{Q}} \\
+&= \matr{I}_p
+\end{aligned}
+$$
+
 ([orthogonal matrix](linear-algebra.qmd#def-orthogonal-matrix)).
 
 :::
@@ -53,7 +61,16 @@ which is orthogonal because $\tp{\matr{Q}} \matr{Q} = \matr{Q} \tp{\matr{Q}} = \
 $\matr{A} = \sbmat{ 2 & 1 \\ 1 & 2 }$ has eigenvalues $3$ and $1$
 ([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)), so $\eigval_{\min} = 1$.
 At $\vecf{h} = \tp{(1, 0)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 \ge 1 \cdot 1$.
-At $\vecf{h} = \tp{(1, -1)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2$:
+At $\vecf{h} = \tp{(1, -1)}$,
+
+$$
+\begin{aligned}
+\tp{\vecf{h}} \matr{A} \vecf{h} &= 2 - 1 - 1 + 2 \\
+&= 2 \\
+&= 1 \cdot 2:
+\end{aligned}
+$$
+
 the bound holds with equality, since this $\vecf{h}$ is an eigenvector for $\eigval_{\min}$.
 
 :::
@@ -111,7 +128,23 @@ and the [Cauchy-Schwarz inequality](linear-algebra.qmd#thm-cauchy-schwarz).
 
 Let $\matr{E} = \sbmat{ 0.1 & -0.2 \\ -0.2 & 0.1 }$, so $m = 0.2$ works,
 and $\vecf{h} = \tp{(1, 1)}$, so $\norm{\vecf{h}}^2 = 2$.
-Then $\tp{\vecf{h}} \matr{E} \vecf{h} = 0.1 - 0.2 - 0.2 + 0.1 = -0.2$,
-and $\abs{-0.2} = 0.2 \le 2 \cdot 0.2 \cdot 2 = 0.8$.
+Then
+
+$$
+\begin{aligned}
+\tp{\vecf{h}} \matr{E} \vecf{h} &= 0.1 - 0.2 - 0.2 + 0.1 \\
+&= -0.2,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\abs{-0.2} &= 0.2 \\
+&\le 2 \cdot 0.2 \cdot 2 \\
+&= 0.8.
+\end{aligned}
+$$
 
 :::

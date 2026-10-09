@@ -56,7 +56,15 @@ $$
 
 so $\hat{\vecf{x}}$ solves the normal equations and is the least squares solution
 (@thm-normal-equations), which is unique because $\operatorname{rank}(\matr{A}) = n$.
-When $m = n$, $\operatorname{rank}(\matr{A}) = n = m$,
+When $m = n$,
+
+$$
+\begin{aligned}
+\operatorname{rank}(\matr{A}) &= n \\
+&= m,
+\end{aligned}
+$$
+
 so $\matr{A} \vecf{x} = \vecf{b}$ is consistent for every $\vecf{b}$ (@cor-solution-unique, part 1),
 so its solution leaves residual $\vzero$, is a least squares solution,
 and is therefore $\hat{\vecf{x}}$.
@@ -70,8 +78,23 @@ and is therefore $\hat{\vecf{x}}$.
 
 For $\matr{A}$ and $\vecf{b}$ of @exm-normal-equations,
 Gram-Schmidt gives $\vecf{q}_1 = \tfrac{1}{\sqrt{3}}\,(1, 1, 1)$;
-then $\vecf{q}_1 \cdot (1, 2, 3) = \tfrac{6}{\sqrt{3}} = 2\sqrt{3}$,
-$\tilde{\vecf{q}}_2 = (1, 2, 3) - 2\,(1, 1, 1) = (-1, 0, 1)$ with norm $\sqrt{2}$,
+then
+
+$$
+\begin{aligned}
+\vecf{q}_1 \cdot (1, 2, 3) &= \tfrac{6}{\sqrt{3}} \\
+&= 2\sqrt{3},
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\tilde{\vecf{q}}_2 &= (1, 2, 3) - 2\,(1, 1, 1) \\
+&= (-1, 0, 1)
+\end{aligned}
+$$
+
+with norm $\sqrt{2}$,
 and $\vecf{q}_2 = \tfrac{1}{\sqrt{2}}\,(-1, 0, 1)$. So
 
 $$
@@ -84,8 +107,25 @@ $$
 \end{aligned}
 $$
 
-Back substitution gives $x_2 = \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} = \tfrac{1}{2}$
-and $x_1 = \tfrac{1}{\sqrt{3}} \paren{\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}} = \tfrac{5}{3} - 1 = \tfrac{2}{3}$,
+Back substitution gives
+
+$$
+\begin{aligned}
+x_2 &= \tfrac{1}{\sqrt{2}} \cdot \tfrac{1}{\sqrt{2}} \\
+&= \tfrac{1}{2}
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+x_1 &= \tfrac{1}{\sqrt{3}} \paren{\tfrac{5}{\sqrt{3}} - 2\sqrt{3} \cdot \tfrac{1}{2}} \\
+&= \tfrac{5}{3} - 1 \\
+&= \tfrac{2}{3},
+\end{aligned}
+$$
+
 the solution found in @exm-normal-equations.
 
 :::

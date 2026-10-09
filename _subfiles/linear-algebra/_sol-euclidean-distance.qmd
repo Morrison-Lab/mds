@@ -1,11 +1,30 @@
 :::{#sol-euclidean-distance}
 
-1. $\vx - \vy = (1 - 4, 2 - 6) = (-3, -4)$.
+1. $$
+   \begin{aligned}
+   \vx - \vy &= (1 - 4, 2 - 6) \\
+   &= (-3, -4).
+   \end{aligned}
+   $$
 
-2. $\norm{\vx - \vy} = \sqrt{(-3)^2 + (-4)^2} = \sqrt{25} = 5$.
+2. $$
+   \begin{aligned}
+   \norm{\vx - \vy} &= \sqrt{(-3)^2 + (-4)^2} \\
+   &= \sqrt{25} \\
+   &= 5.
+   \end{aligned}
+   $$
 
 3. $\vy - \vx = (3, 4)$,
-   and $\norm{\vy - \vx} = \sqrt{3^2 + 4^2} = 5$.
+   and
+
+   $$
+   \begin{aligned}
+   \norm{\vy - \vx} &= \sqrt{3^2 + 4^2} \\
+   &= 5.
+   \end{aligned}
+   $$
+
    Yes, the result is the same.
 
 :::

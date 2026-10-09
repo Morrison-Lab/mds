@@ -1,7 +1,16 @@
 :::{#def-jacobian-matrix}
 #### Jacobian matrix
 
-Let $\vy = \vy(\vcoef) = \tp{(y_1, \ldots, y_q)}$ be a $q \times 1$ vector-valued function
+Let
+
+$$
+\begin{aligned}
+\vy &= \vy(\vcoef) \\
+&= \tp{(y_1, \ldots, y_q)}
+\end{aligned}
+$$
+
+be a $q \times 1$ vector-valued function
 of the $p \times 1$ vector $\vcoef$.
 The **Jacobian matrix** of $\vy$ is the $q \times p$ matrix
 whose $(j, i)$ entry is $\deriv{\coef{i}} y_j$,

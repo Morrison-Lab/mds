@@ -66,9 +66,28 @@ Solve
 $\begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix} \vecf{x}
 = \begin{bmatrix} 8 \\ 1 \\ 1 \end{bmatrix}$:
 
-1. $x_3 = \frac{1}{-1} \cd 1 = -1$;
-2. $x_2 = \frac{1}{1/2} \paren{1 - \tfrac{1}{2} \cd (-1)} = 2 \cd \tfrac{3}{2} = 3$;
-3. $x_1 = \frac{1}{2} \paren{8 - 1 \cd 3 - (-1)(-1)} = \frac{1}{2} \cd 4 = 2$.
+1. $$
+   \begin{aligned}
+   x_3 &= \frac{1}{-1} \cd 1 \\
+   &= -1;
+   \end{aligned}
+   $$
+
+2. $$
+   \begin{aligned}
+   x_2 &= \frac{1}{1/2} \paren{1 - \tfrac{1}{2} \cd (-1)} \\
+   &= 2 \cd \tfrac{3}{2} \\
+   &= 3;
+   \end{aligned}
+   $$
+
+3. $$
+   \begin{aligned}
+   x_1 &= \frac{1}{2} \paren{8 - 1 \cd 3 - (-1)(-1)} \\
+   &= \frac{1}{2} \cd 4 \\
+   &= 2.
+   \end{aligned}
+   $$
 
 So $\vecf{x} = (2, 3, -1)$.
 Without a nonzero diagonal the method fails:

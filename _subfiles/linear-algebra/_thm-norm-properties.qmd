@@ -50,10 +50,24 @@ $$
 
 For $\vecf{x} = (3, 4)$, $\norm{\vecf{x}} = 5$ (@exm-euclidean-norm).
 Then $-2\,\vecf{x} = (-6, -8)$ has norm
-$\sqrt{36 + 64} = 10 = \abs{-2} \cd 5$,
+
+$$
+\begin{aligned}
+\sqrt{36 + 64} &= 10 \\
+&= \abs{-2} \cd 5,
+\end{aligned}
+$$
+
 as part 2 says.
 Dividing by the norm gives a vector of length $1$:
-$\norm{\tfrac{1}{5}\,\vecf{x}} = \tfrac{1}{5} \cd 5 = 1$,
+
+$$
+\begin{aligned}
+\norm{\tfrac{1}{5}\,\vecf{x}} &= \tfrac{1}{5} \cd 5 \\
+&= 1,
+\end{aligned}
+$$
+
 and $\tfrac{1}{5}\,\vecf{x} = (0.6, 0.8)$ is the unit vector in @exm-euclidean-norm.
 
 :::

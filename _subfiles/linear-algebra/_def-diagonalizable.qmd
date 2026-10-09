@@ -26,7 +26,16 @@ so a diagonalizable matrix is one similar to a diagonal matrix (@def-similar).
   and are the eigenvalues of $\matr{J}$ (@thm-similar-eigenvalues),
   of which $0$ is the only one (@exm-eigenspace).
   So $\matr{\Eigvals} = \matr{0}_{2 \times 2}$,
-  and then $\matr{J} = \matr{X}\,\matr{0}_{2 \times 2}\,\matr{X}^{-1} = \matr{0}_{2 \times 2}$ (@def-matrix-mult),
+  and then
+
+  $$
+  \begin{aligned}
+  \matr{J} &= \matr{X}\,\matr{0}_{2 \times 2}\,\matr{X}^{-1} \\
+  &= \matr{0}_{2 \times 2}
+  \end{aligned}
+  $$
+
+  (@def-matrix-mult),
   which it is not.
 
 :::

@@ -34,9 +34,35 @@ Together, $g'(c) = 0$.
 :::{#exm-fermat}
 #### Applying the test, and its limits
 
-- $g(x) = (x - 2)^2$ has its minimizer at $c = 2$, and $g'(2) = 2 (2 - 2) = 0$.
-- The [converse](notation.qmd#def-converse) fails: $g(x) = x^3$ has $g'(0) = 3 \cdot 0^2 = 0$,
-  but $0$ is not a local minimizer, since $g(-h) = -h^3 < 0 = g(0)$ for every $h > 0$.
+- $g(x) = (x - 2)^2$ has its minimizer at $c = 2$, and
+
+  $$
+  \begin{aligned}
+  g'(2) &= 2 (2 - 2) \\
+  &= 0.
+  \end{aligned}
+  $$
+
+- The [converse](notation.qmd#def-converse) fails: $g(x) = x^3$ has
+
+  $$
+  \begin{aligned}
+  g'(0) &= 3 \cdot 0^2 \\
+  &= 0,
+  \end{aligned}
+  $$
+
+  but $0$ is not a local minimizer, since
+
+  $$
+  \begin{aligned}
+  g(-h) &= -h^3 \\
+  &< 0 \\
+  &= g(0)
+  \end{aligned}
+  $$
+
+  for every $h > 0$.
 - Differentiability is needed: $g(x) = \abs{x}$ has its minimizer at $0$,
   but the difference quotient $\abs{h} / h$ is $1$ for $h > 0$ and $-1$ for $h < 0$,
   so it has no limit and $g'(0)$ does not exist.

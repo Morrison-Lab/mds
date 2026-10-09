@@ -102,14 +102,31 @@ $$
 \ea
 $$
 
-Symmetry of $\iprod{\cdot}{\cdot}$ ensures $A_{ji} = \iprod{\vecf{e}_j}{\vecf{e}_i} = \iprod{\vecf{e}_i}{\vecf{e}_j} = A_{ij}$,
+Symmetry of $\iprod{\cdot}{\cdot}$ ensures
+
+$$
+\begin{aligned}
+A_{ji} &= \iprod{\vecf{e}_j}{\vecf{e}_i} \\
+&= \iprod{\vecf{e}_i}{\vecf{e}_j} \\
+&= A_{ij},
+\end{aligned}
+$$
+
 so $\matr{A}$ is symmetric (@def-symmetric-matrix).
 For any $\vx \neq \vzero$, $\tp{\vx}\matr{A}\vx = \iprod{\vx}{\vx} > 0$ by positivity and definiteness of the inner product,
 so $\matr{A}$ is positive definite (@def-positive-definite).
 
 For uniqueness, if another matrix $\matr{B}$ satisfies $\iprod{\vx}{\vy} = \tp{\vx}\matr{B}\vy$ for all $\vx, \vy$,
 evaluating at $\vx = \vecf{e}_i$ and $\vy = \vecf{e}_j$ gives
-$B_{ij} = \tp{\vecf{e}_i}\matr{B}\vecf{e}_j = \iprod{\vecf{e}_i}{\vecf{e}_j} = A_{ij}$,
+
+$$
+\begin{aligned}
+B_{ij} &= \tp{\vecf{e}_i}\matr{B}\vecf{e}_j \\
+&= \iprod{\vecf{e}_i}{\vecf{e}_j} \\
+&= A_{ij},
+\end{aligned}
+$$
+
 so $\matr{B} = \matr{A}$.
 
 :::

@@ -19,7 +19,25 @@ F(x)
 \ea
 $$
 
-and $F(0) = 0 = 2 \cd 0$ too.
-For example, $F(1.5) = 2 \cd 1.5 = 3$, the area of a rectangle of height $2$ and width $1.5$.
+and
+
+$$
+\begin{aligned}
+F(0) &= 0 \\
+&= 2 \cd 0
+\end{aligned}
+$$
+
+too.
+For example,
+
+$$
+\begin{aligned}
+F(1.5) &= 2 \cd 1.5 \\
+&= 3,
+\end{aligned}
+$$
+
+the area of a rectangle of height $2$ and width $1.5$.
 
 :::

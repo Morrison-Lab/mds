@@ -41,7 +41,14 @@ Let $f(x, y) = 1$ on the rectangle $R = [0, 2] \times [0, 3]$.
 Every sum in @def-double-integral
 adds up the areas of rectangles inside $R$,
 and those sums approach the area of $R$ as the grid gets finer,
-so $\iint_R 1\,dA = 2 \cd 3 = 6$.
+so
+
+$$
+\begin{aligned}
+\iint_R 1\,dA &= 2 \cd 3 \\
+&= 6.
+\end{aligned}
+$$
 
 :::
 

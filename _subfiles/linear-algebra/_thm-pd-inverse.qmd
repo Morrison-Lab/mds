@@ -28,7 +28,15 @@ and $\matr{A}^{-1}$ is positive definite.
 By @thm-definite-eigenvalues, every $\eigval_i > 0$,
 so $\matr{\Eigvals}^{-1}$ is well defined,
 and multiplying the two diagonal matrices entry by entry
-gives $\matr{\Eigvals}\matr{\Eigvals}^{-1} = \matr{\Eigvals}^{-1}\matr{\Eigvals} = \matr{I}_p$.
+gives
+
+$$
+\begin{aligned}
+\matr{\Eigvals}\matr{\Eigvals}^{-1} &= \matr{\Eigvals}^{-1}\matr{\Eigvals} \\
+&= \matr{I}_p.
+\end{aligned}
+$$
+
 Write $\matr{B} = \matr{Q}\matr{\Eigvals}^{-1}\tp{\matr{Q}}$. Then:
 
 $$
@@ -112,7 +120,12 @@ $$
 $$
 
 Multiplying out,
-$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \cd \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}
-= \frac{1}{3}\begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} = \matr{I}_2$.
+
+$$
+\begin{aligned}
+\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \cd \frac{1}{3}\begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} &= \frac{1}{3}\begin{bmatrix} 3 & 0 \\ 0 & 3 \end{bmatrix} \\
+&= \matr{I}_2.
+\end{aligned}
+$$
 
 :::

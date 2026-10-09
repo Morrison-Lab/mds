@@ -34,6 +34,15 @@ $$
 
 Row $i$ of $\tp{\matr{A}}$ is column $i$ of $\matr{A}$,
 so entry $(i, j)$ of the Gram matrix is the dot product $\vecf{a}_i \cdot \vecf{a}_j$:
-for instance, $\vecf{a}_1 \cdot \vecf{a}_2 = 0 + 1 + 0 = 1$ is entry $(1, 2)$.
+for instance,
+
+$$
+\begin{aligned}
+\vecf{a}_1 \cdot \vecf{a}_2 &= 0 + 1 + 0 \\
+&= 1
+\end{aligned}
+$$
+
+is entry $(1, 2)$.
 
 :::

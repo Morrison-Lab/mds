@@ -12,7 +12,15 @@ $$
 that is, $x_{ij} = a_{ij}$, $x_{i, k+j} = b_{ij}$, $x_{k+i, j} = b_{ji}$ and $x_{k+i, k+j} = c_{ij}$
 for indices in range.
 $\matr{X}$ is symmetric (@def-symmetric-matrix):
-$x_{k+i, j} = b_{ji} = x_{j, k+i}$, and $\matr{A}$ and $\matr{C}$ are symmetric.
+
+$$
+\begin{aligned}
+x_{k+i, j} &= b_{ji} \\
+&= x_{j, k+i},
+\end{aligned}
+$$
+
+and $\matr{A}$ and $\matr{C}$ are symmetric.
 Split $\vecf{v} \in \reals^{k + m}$ as $\vecf{v} = (\vecf{u}, \vecf{w})$,
 with $\vecf{u} \in \reals^k$ its first $k$ entries and $\vecf{w} \in \reals^m$ the rest. Then
 
@@ -133,7 +141,7 @@ which is $\tp{\vecf{v}} \matr{X} \vecf{v}$ by @eq-block-quadratic.
 :::{#exm-block-quadratic}
 #### The $2 \times 2$ case
 
-For $\matr{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}$ ($k = m = 1$) and $a \ne 0$,
+For $\matr{X} = \begin{bmatrix} a & b \\ b & c \end{bmatrix}$ ($k = 1$ and $m = 1$) and $a \ne 0$,
 the theorem reads
 
 $$
@@ -141,8 +149,23 @@ a u^2 + 2buw + cw^2 = a\,\paren{u + \tfrac{b}{a}\,w}^2 + \paren{c - \tfrac{b^2}{
 $$
 
 with $\vecf{v} = (u, w)$: the familiar completing of the square.
-With $a = c = 5$ and $b = 4$:
-$5\,(u + 0.8\,w)^2 + 1.8\,w^2 = 5\,(u^2 + 1.6\,uw + 0.64\,w^2) + 1.8\,w^2
-= 5u^2 + 8uw + 3.2\,w^2 + 1.8\,w^2 = 5u^2 + 8uw + 5w^2$.
+With
+
+$$
+\begin{aligned}
+a &= c \\
+&= 5
+\end{aligned}
+$$
+
+and $b = 4$:
+
+$$
+\begin{aligned}
+5\,(u + 0.8\,w)^2 + 1.8\,w^2 &= 5\,(u^2 + 1.6\,uw + 0.64\,w^2) + 1.8\,w^2 \\
+&= 5u^2 + 8uw + 3.2\,w^2 + 1.8\,w^2 \\
+&= 5u^2 + 8uw + 5w^2.
+\end{aligned}
+$$
 
 :::

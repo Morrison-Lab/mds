@@ -16,9 +16,14 @@ the denominator vanishes at the origin, so $f$ is undefined there
 
 Holding $x$ fixed and differentiating in $y$
 (by the quotient rule, @thm-quotient-rule),
-$\displaystyle\dif{}{y}\frac{y}{x^2 + y^2}
-= \frac{(x^2 + y^2) - y \cd 2y}{(x^2 + y^2)^2}
-= \frac{x^2 - y^2}{(x^2 + y^2)^2}$.
+
+$$
+\begin{aligned}
+\dif{}{y}\frac{y}{x^2 + y^2} &= \frac{(x^2 + y^2) - y \cd 2y}{(x^2 + y^2)^2} \\
+&= \frac{x^2 - y^2}{(x^2 + y^2)^2}.
+\end{aligned}
+$$
+
 (A derivative in one variable with the others held fixed is a
 [partial derivative](vector-calculus.qmd#def-partial-derivative),
 defined on the vector calculus page.)
@@ -39,9 +44,13 @@ $$
 **Integrating $x$ first, then $y$:**
 
 Holding $y$ fixed and differentiating in $x$,
-$\displaystyle\dif{}{x}\paren{-\frac{x}{x^2 + y^2}}
-= -\frac{(x^2 + y^2) - x \cd 2x}{(x^2 + y^2)^2}
-= \frac{x^2 - y^2}{(x^2 + y^2)^2}$:
+
+$$
+\begin{aligned}
+\dif{}{x}\paren{-\frac{x}{x^2 + y^2}} &= -\frac{(x^2 + y^2) - x \cd 2x}{(x^2 + y^2)^2} \\
+&= \frac{x^2 - y^2}{(x^2 + y^2)^2}:
+\end{aligned}
+$$
 
 $$
 \ba
