@@ -11,9 +11,22 @@ For the patient,
 
 $$\vx = \begin{bmatrix} 50 \\ 130 \\ 28 \end{bmatrix}$$
 
-$$\vec w\' \vx = (0.4)(50) + (0.2)(130) + (1.5)(28) = 20 + 26 + 42 = 88$$
+$$
+\begin{aligned}
+\vec w\' \vx
+&= (0.4)(50) + (0.2)(130) + (1.5)(28) \\
+&= 20 + 26 + 42 \\
+&= 88
+\end{aligned}
+$$
 
-$$f(\vx) = 88 - 30 = 58$$
+$$
+\begin{aligned}
+f(\vx)
+&= 88 - 30 \\
+&= 58
+\end{aligned}
+$$
 
 Two things are worth noticing.
 The coefficients are not comparable as they stand: $1.5$ is the largest

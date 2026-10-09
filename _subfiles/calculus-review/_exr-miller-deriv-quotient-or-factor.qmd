@@ -13,13 +13,27 @@ for $x \ne 1$.
 ::: {#sol-miller-deriv-quotient-or-factor}
 Factor the numerator before differentiating:
 
-$$f(x) = \frac{(x - 1)(x + 1)}{x - 1} = x + 1 \qquad (x \ne 1)$$
+$$
+\begin{aligned}
+f(x)
+&= \frac{(x - 1)(x + 1)}{x - 1} \\
+&= x + 1 \qquad (x \ne 1)
+\end{aligned}
+$$
 
 Differentiating directly gives $f'(x) = 1$.
 
 *Alternative (quotient rule):* Using @thm-quotient-rule with $u(x) = x^2 - 1$ and $v(x) = x - 1$:
 
-$$f'(x) = \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} = \frac{x^2 - 2x + 1}{(x - 1)^2} = \frac{(x - 1)^2}{(x - 1)^2} = 1$$
+$$
+\begin{aligned}
+f'(x)
+&= \frac{2x(x - 1) - (x^2 - 1)(1)}{(x - 1)^2} \\
+&= \frac{x^2 - 2x + 1}{(x - 1)^2} \\
+&= \frac{(x - 1)^2}{(x - 1)^2} \\
+&= 1
+\end{aligned}
+$$
 
 Both methods yield $1$, but factoring first eliminates tedious algebraic simplification.
 :::

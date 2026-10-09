@@ -4,7 +4,13 @@
 For $f(x) = e^x$ centered at $x_0 = 0$, every derivative is $f^{(k)}(0) = e^0 = 1$.
 The degree-$n$ Maclaurin polynomial is:
 
-$$P_n(x) = 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} = \sum_{k=0}^n \frac{x^k}{k!}$$
+$$
+\begin{aligned}
+P_n(x)
+&= 1 + x + \frac{x^2}{2!} + \dots + \frac{x^n}{n!} \\
+&= \sum_{k=0}^n \frac{x^k}{k!}
+\end{aligned}
+$$
 
 Because the remainder $R_n(x) \to 0$ as $n \to \infty$ for all $x \in \reals$, the Taylor series converges everywhere to $e^x$:
 

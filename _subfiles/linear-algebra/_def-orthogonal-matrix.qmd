@@ -54,10 +54,12 @@ $$
 $\matr{Q} = 2 \matr{I}_2$ has orthogonal columns $(2, 0)$ and $(0, 2)$, but
 
 $$
+\begin{aligned}
 \tp{\matr{Q}} \matr{Q}
-= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}
-= \begin{bmatrix} 4 & 0 \\ 0 & 4 \end{bmatrix}
-\ne \matr{I}_2,
+&= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \\
+&= \begin{bmatrix} 4 & 0 \\ 0 & 4 \end{bmatrix} \\
+&\ne \matr{I}_2,
+\end{aligned}
 $$
 
 so $\matr{Q}$ is not an orthogonal matrix: its columns have norm $2$, not $1$.

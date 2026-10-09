@@ -13,5 +13,11 @@ $$\derivf{f}{x} = 2xy + e^x + y\cos(xy)$$
 
 To compute $\derivf{f}{y}$, treat $x$ as a constant:
 
-$$\derivf{f}{y} = x^2 + 0 + x\cos(xy) = x^2 + x\cos(xy)$$
+$$
+\begin{aligned}
+\derivf{f}{y}
+&= x^2 + 0 + x\cos(xy) \\
+&= x^2 + x\cos(xy)
+\end{aligned}
+$$
 :::

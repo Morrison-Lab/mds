@@ -24,7 +24,9 @@ $$\ba
 \\
 &= 5\sb{\frac{3}{2}(8) + \frac{9}{2}(4) + 6(2)}
 \\
-&= 5\sb{12 + 18 + 12} = 5(42) = 210
+&= 5\sb{12 + 18 + 12} \\
+&= 5(42) \\
+&= 210
 \ea$$
 
 *(Note: The source text carried an arithmetic slip in the inner coefficient resulting in $190$; the exact value is $210$.)*

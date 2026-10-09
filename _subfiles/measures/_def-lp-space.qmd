@@ -34,16 +34,31 @@ Define $f : (0, 1) \to \reals$ by $f(x) = x^{-1/2}$.
 
 1. For $p = 1$:
    $$
-   \norm{f}_1 = \int_0^1 x^{-1/2} \, dx = \sb{2 x^{1/2}}_0^1 = 2 < \infty,
+   \begin{aligned}
+   \norm{f}_1
+   &= \int_0^1 x^{-1/2} \, dx \\
+   &= \sb{2 x^{1/2}}_0^1 \\
+   &= 2 \\
+   &< \infty,
+   \end{aligned}
    $$
    so $f \in L^1((0, 1), \measure)$.
 2. For $p = 2$:
    $$
-   \abs{f(x)}^2 = \paren{x^{-1/2}}^2 = \frac{1}{x}.
+   \begin{aligned}
+   \abs{f(x)}^2
+   &= \paren{x^{-1/2}}^2 \\
+   &= \frac{1}{x}.
+   \end{aligned}
    $$
    The integral is:
    $$
-   \int_0^1 \frac{1}{x} \, dx = \lim_{\smallconst \to 0^+} \sb{\ln x}_\smallconst^1 = \lim_{\smallconst \to 0^+} (-\ln \smallconst) = \infty.
+   \begin{aligned}
+   \int_0^1 \frac{1}{x} \, dx
+   &= \lim_{\smallconst \to 0^+} \sb{\ln x}_\smallconst^1 \\
+   &= \lim_{\smallconst \to 0^+} (-\ln \smallconst) \\
+   &= \infty.
+   \end{aligned}
    $$
    Therefore, $\norm{f}_2 = \infty$, so $f \notin L^2((0, 1), \measure)$.
 

@@ -6,9 +6,11 @@ Let $\vcoef = \tp{(\coef{1}, \coef{2})}$, so $\dprod{\vcoef}{\vcoef} = \coef{1}^
 By @cor-deriv-normsq:
 
 $$
+\begin{aligned}
 \underbrace{\deriv{\vcoef}(\dprod{\vcoef}{\vcoef})}_{2 \times 1}
-= 2\vcoef
-= \begin{pmatrix} 2\coef{1} \\ 2\coef{2} \end{pmatrix}
+&= 2\vcoef \\
+&= \begin{pmatrix} 2\coef{1} \\ 2\coef{2} \end{pmatrix}
+\end{aligned}
 $$
 
 Direct partial differentiation yields the same column vector.

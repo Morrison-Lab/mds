@@ -11,7 +11,13 @@ $$\int_0^6 \int_0^5 x e^{-xy}\,dy\,dx$$
 ::: {#sol-miller-dint-order-of-integration}
 Integrating with respect to $x$ first requires integration by parts. Integrating with respect to $y$ first is much simpler because the factor of $x$ is already present:
 
-$$\int_0^5 x e^{-xy}\,dy = \sb{-e^{-xy}}_{y=0}^5 = 1 - e^{-5x}$$
+$$
+\begin{aligned}
+\int_0^5 x e^{-xy}\,dy
+&= \sb{-e^{-xy}}_{y=0}^5 \\
+&= 1 - e^{-5x}
+\end{aligned}
+$$
 
 Now integrate with respect to $x$:
 

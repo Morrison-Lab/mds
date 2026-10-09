@@ -20,7 +20,8 @@ $$
 &= \begin{bmatrix} 1 \cd 1 + 0 \cd 0 & 1 \cd 0 + 0 \cd 0 \\ 0 \cd 1 + 0 \cd 0 & 0 \cd 0 + 0 \cd 0 \end{bmatrix}
 && \text{(definition of matrix multiplication)}
 \\
-&= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} = \matr{P},
+&= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} \\
+&= \matr{P},
 && \text{(multiply and add)}
 \ea
 $$
@@ -37,10 +38,12 @@ so $\matr{P}$ is idempotent.
 For $\matr{A} = \begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}$,
 
 $$
+\begin{aligned}
 \matr{A}^2
-= \begin{bmatrix} 2 \cd 2 + 0 \cd 0 & 2 \cd 0 + 0 \cd 0 \\ 0 \cd 2 + 0 \cd 0 & 0 \cd 0 + 0 \cd 0 \end{bmatrix}
-= \begin{bmatrix} 4 & 0 \\ 0 & 0 \end{bmatrix}
-\ne \matr{A},
+&= \begin{bmatrix} 2 \cd 2 + 0 \cd 0 & 2 \cd 0 + 0 \cd 0 \\ 0 \cd 2 + 0 \cd 0 & 0 \cd 0 + 0 \cd 0 \end{bmatrix} \\
+&= \begin{bmatrix} 4 & 0 \\ 0 & 0 \end{bmatrix} \\
+&\ne \matr{A},
+\end{aligned}
 $$
 
 so $\matr{A}$ is not idempotent.

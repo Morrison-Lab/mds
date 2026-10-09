@@ -2,7 +2,13 @@
 We verify symmetry and idempotency.
 
 **Symmetry:**
-$$\tp{(\matr{I} - \matr{P})} = \tp{\matr{I}} - \tp{\matr{P}} = \matr{I} - \matr{P}$$
+$$
+\begin{aligned}
+\tp{(\matr{I} - \matr{P})}
+&= \tp{\matr{I}} - \tp{\matr{P}} \\
+&= \matr{I} - \matr{P}
+\end{aligned}
+$$
 
 **Idempotency:**
 $$\ba

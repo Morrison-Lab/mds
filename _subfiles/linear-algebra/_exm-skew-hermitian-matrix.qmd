@@ -15,15 +15,20 @@ is skew-Hermitian:
 transposing and conjugating gives
 
 $$
-\matr{A}^{\mathsf{H}} =
+\begin{aligned}
+\matr{A}^{\mathsf{H}}
+&=
 \begin{bmatrix}
 \overline{2\,i} & \overline{-1 + i} \\
 \overline{1 + i} & \overline{0}
-\end{bmatrix} =
+\end{bmatrix} \\
+&=
 \begin{bmatrix}
 -2\,i & -1 - i \\
 1 - i & 0
-\end{bmatrix} = -\matr{A}.
+\end{bmatrix} \\
+&= -\matr{A}.
+\end{aligned}
 $$
 
 Its diagonal entries $2\,i$ and $0$ are purely imaginary.

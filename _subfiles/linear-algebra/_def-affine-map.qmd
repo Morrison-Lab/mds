@@ -7,7 +7,13 @@ if it is a matrix product followed by a translation (@def-translation)
 (a [composition](sets-functions.qmd#def-composition), with the matrix product as the inner function):
 there are an $m \times p$ matrix $\matr{A}$ and a vector $\vec{b} \in \reals^m$ such that
 
-$$f(\vx) = t_{\vec{b}}(\matr{A} \vx) = \matr{A} \vx + \vec{b} \quad \text{for all } \vx \in \reals^p$$
+$$
+\begin{aligned}
+f(\vx)
+&= t_{\vec{b}}(\matr{A} \vx) \\
+&= \matr{A} \vx + \vec{b} \quad \text{for all } \vx \in \reals^p
+\end{aligned}
+$$
 
 The vector $\vec{b}$ is called the **offset** of $f$
 (statistics also calls it the **intercept**, and machine learning the **bias**).

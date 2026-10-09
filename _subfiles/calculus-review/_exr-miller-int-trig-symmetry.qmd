@@ -19,5 +19,12 @@ $$\int_{-\pi/2}^{\pi/2} (\sin^3 x \cos x + \sin x \cos x)\,dx = 0$$
 
 *Alternative (by substitution):* Set $u = \sin x$, so $du = \cos x\,dx$. As $x$ ranges from $-\pi/2$ to $\pi/2$, $u$ ranges from $-1$ to $1$:
 
-$$\int_{-1}^1 (u^3 + u)\,du = \sb{\frac{u^4}{4} + \frac{u^2}{2}}_{-1}^1 = \paren{\frac{1}{4} + \frac{1}{2}} - \paren{\frac{1}{4} + \frac{1}{2}} = 0$$
+$$
+\begin{aligned}
+\int_{-1}^1 (u^3 + u)\,du
+&= \sb{\frac{u^4}{4} + \frac{u^2}{2}}_{-1}^1 \\
+&= \paren{\frac{1}{4} + \frac{1}{2}} - \paren{\frac{1}{4} + \frac{1}{2}} \\
+&= 0
+\end{aligned}
+$$
 :::

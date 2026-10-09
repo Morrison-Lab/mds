@@ -68,7 +68,7 @@ $$
 && \text{(@thm-dot-linear)}
 \\
 &= \tp{\vecf{u}} \matr{A} \vecf{u} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}
-&& \text{(} \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} = \tp{\paren{\tp{\vecf{w}} \tp{\matr{B}} \vecf{u}}} = \tp{\vecf{u}} \matr{B} \vecf{w} \text{; } 1 \times 1 \text{, @def-matrix-transpose, @thm-transpose-product)}
+&& \text{(} \tp{\vecf{w}} \tp{\matr{B}} \vecf{u} = \tp{\paren{\tp{\vecf{w}} \tp{\matr{B}} \vecf{u}}} \text{, which equals } \tp{\vecf{u}} \matr{B} \vecf{w} \text{; } 1 \times 1 \text{, @def-matrix-transpose, @thm-transpose-product)}
 \\
 &= \tp{\vecf{u}} \matr{A} \vecf{u} + 2\,\tp{\vecf{u}} \matr{B} \vecf{w} + \tp{\vecf{w}} \matr{C} \vecf{w}.
 && \text{(combine like terms)}

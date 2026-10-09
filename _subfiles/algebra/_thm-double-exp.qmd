@@ -4,7 +4,13 @@
 
 If $a > 0$ and $b, c \in \reals$, then
 
-$$a^{bc} = \paren{a^b}^c = \paren{a^c}^b$$
+$$
+\begin{aligned}
+a^{bc}
+&= \paren{a^b}^c \\
+&= \paren{a^c}^b
+\end{aligned}
+$$
 :::
 
 {{< slidebreak >}}

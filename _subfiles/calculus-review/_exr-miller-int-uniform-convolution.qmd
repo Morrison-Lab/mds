@@ -28,12 +28,25 @@ For $x \in [0, 2]$, we distinguish two cases:
 - **Case 1: $0 \le x \le 1$.**
   The overlapping bounds for $t$ are $[0, x]$:
 
-  $$(f * f)(x) = \int_0^x 1\,dt = x$$
+  $$
+  \begin{aligned}
+  (f * f)(x)
+  &= \int_0^x 1\,dt \\
+  &= x
+  \end{aligned}
+  $$
 
 - **Case 2: $1 \le x \le 2$.**
   The overlapping bounds for $t$ are $[x - 1, 1]$:
 
-  $$(f * f)(x) = \int_{x-1}^1 1\,dt = 1 - (x - 1) = 2 - x$$
+  $$
+  \begin{aligned}
+  (f * f)(x)
+  &= \int_{x-1}^1 1\,dt \\
+  &= 1 - (x - 1) \\
+  &= 2 - x
+  \end{aligned}
+  $$
 
 Combining the cases:
 

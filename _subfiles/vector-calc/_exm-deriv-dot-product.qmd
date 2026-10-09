@@ -8,17 +8,21 @@ and $\vecf{b}(\vcoef) = \tp{(\coef{2}, \coef{1})}$.
 Then:
 
 $$
+\begin{aligned}
 \vecf{a} \cdot \vecf{b}
-= \coef{1} \cdot \coef{2} + \coef{1}\coef{2} \cdot \coef{1}
-= \coef{1}\coef{2} + \coef{1}^2\coef{2}
+&= \coef{1} \cdot \coef{2} + \coef{1}\coef{2} \cdot \coef{1} \\
+&= \coef{1}\coef{2} + \coef{1}^2\coef{2}
+\end{aligned}
 $$
 
 By direct calculation:
 
 $$
+\begin{aligned}
 \underbrace{\deriv{\vcoef}(\vecf{a} \cdot \vecf{b})}_{2 \times 1}
-= \deriv{\vcoef}(\coef{1}\coef{2} + \coef{1}^2\coef{2})
-= \begin{pmatrix} \coef{2} + 2\coef{1}\coef{2} \\ \coef{1} + \coef{1}^2 \end{pmatrix}
+&= \deriv{\vcoef}(\coef{1}\coef{2} + \coef{1}^2\coef{2}) \\
+&= \begin{pmatrix} \coef{2} + 2\coef{1}\coef{2} \\ \coef{1} + \coef{1}^2 \end{pmatrix}
+\end{aligned}
 $$
 
 By the product rule (@thm-deriv-dot-product),

@@ -63,9 +63,14 @@ With $\matr{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$ from @exm-symmetr
 and $\vx = (1, 1)$:
 
 $$
-\tp{\vx}\matr{S}\vx = 1 + 2 + 0 + 3 = 6
-\qquad
-\tp{\vx}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\vx = 1 + 1 + 1 + 3 = 6
+\begin{aligned}
+\tp{\vx}\matr{S}\vx
+&= 1 + 2 + 0 + 3 \\
+&= 6 \\
+\tp{\vx}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\vx
+&= 1 + 1 + 1 + 3 \\
+&= 6
+\end{aligned}
 $$
 
 Both quadratic forms equal the sum of their matrix's entries,

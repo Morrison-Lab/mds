@@ -13,9 +13,21 @@ for $x > 0$.
 ::: {#sol-miller-deriv-second-log-constant}
 Because $\sqrt{162}$ is constant with respect to $x$, its derivative is zero (@thm-deriv-const):
 
-$$f'(x) = \frac{1}{x} = x^{-1}$$
+$$
+\begin{aligned}
+f'(x)
+&= \frac{1}{x} \\
+&= x^{-1}
+\end{aligned}
+$$
 
 Differentiating again via the power rule (@thm-deriv-polynomial):
 
-$$f''(x) = -x^{-2} = -\frac{1}{x^2}$$
+$$
+\begin{aligned}
+f''(x)
+&= -x^{-2} \\
+&= -\frac{1}{x^2}
+\end{aligned}
+$$
 :::

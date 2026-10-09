@@ -114,10 +114,12 @@ $\frac{1}{6}\begin{bmatrix} 14 & -6 \\ -6 & 3 \end{bmatrix}$ (@exm-gram-invertib
 and $\tp{\matr{A}} \vecf{b} = (1 + 2 + 2,\; 1 + 4 + 6) = (5, 11)$, so
 
 $$
+\begin{aligned}
 \hat{\vecf{x}}
-= \frac{1}{6} \paren{14 \cd 5 - 6 \cd 11,\; -6 \cd 5 + 3 \cd 11}
-= \frac{1}{6}\,(4, 3)
-= \paren{\tfrac{2}{3}, \tfrac{1}{2}}.
+&= \frac{1}{6} \paren{14 \cd 5 - 6 \cd 11,\; -6 \cd 5 + 3 \cd 11} \\
+&= \frac{1}{6}\,(4, 3) \\
+&= \paren{\tfrac{2}{3}, \tfrac{1}{2}}.
+\end{aligned}
 $$
 
 The fitted values are $\matr{A} \hat{\vecf{x}} = \paren{\tfrac{7}{6}, \tfrac{5}{3}, \tfrac{13}{6}}$,

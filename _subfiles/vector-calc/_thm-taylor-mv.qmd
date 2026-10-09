@@ -96,8 +96,11 @@ and its Hessian is $2 \matr{S}$ at every point ([Hessian of a quadratic form](ve
 so whatever $\midpt$ is, @thm-taylor-mv reads
 
 $$
-f(\vecf{z} + \vecf{h}) = \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{(2 \matr{S} \vecf{z})} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}} (2 \matr{S}) \vecf{h}
-= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h},
+\begin{aligned}
+f(\vecf{z} + \vecf{h})
+&= \tp{\vecf{z}} \matr{S} \vecf{z} + \tp{(2 \matr{S} \vecf{z})} \vecf{h} + \frac{1}{2}\,\tp{\vecf{h}} (2 \matr{S}) \vecf{h} \\
+&= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h},
+\end{aligned}
 $$
 
 using $\tp{(2 \matr{S} \vecf{z})} = 2\,\tp{\vecf{z}}\,\tp{\matr{S}} = 2\,\tp{\vecf{z}} \matr{S}$.
@@ -110,7 +113,7 @@ $$
 && \text{(distribute)}
 \\
 &= \tp{\vecf{z}} \matr{S} \vecf{z} + 2\,\tp{\vecf{z}} \matr{S} \vecf{h} + \tp{\vecf{h}} \matr{S} \vecf{h}.
-&& \text{(} \tp{\vecf{h}} \matr{S} \vecf{z} = \tp{(\tp{\vecf{h}} \matr{S} \vecf{z})} = \tp{\vecf{z}} \matr{S} \vecf{h} \text{)}
+&& \text{(} \tp{\vecf{h}} \matr{S} \vecf{z} = \tp{(\tp{\vecf{h}} \matr{S} \vecf{z})} \text{, which equals } \tp{\vecf{z}} \matr{S} \vecf{h} \text{)}
 \ea
 $$
 

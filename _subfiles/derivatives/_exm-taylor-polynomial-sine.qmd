@@ -4,5 +4,11 @@
 For $f(x) = \sin x$ centered at $x_0 = 0$, the derivatives evaluate at $0$ to $f^{(2k)}(0) = 0$ and $f^{(2k+1)}(0) = (-1)^k$ for all $k \ge 0$.
 The Taylor series converges everywhere to $\sin x$:
 
-$$\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots = \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1}$$
+$$
+\begin{aligned}
+\sin x
+&= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \\
+&= \sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1}
+\end{aligned}
+$$
 :::

@@ -2,6 +2,12 @@
 
 #### Natural exponential of a product
 
-$$\exp{ab} = (\exp{a})^b = (\exp{b})^a$$
+$$
+\begin{aligned}
+\exp{ab}
+&= (\exp{a})^b \\
+&= (\exp{b})^a
+\end{aligned}
+$$
 
 :::

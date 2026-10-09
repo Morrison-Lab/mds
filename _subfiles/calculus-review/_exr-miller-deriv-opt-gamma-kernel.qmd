@@ -13,7 +13,13 @@ on the interval $[0, \infty)$.
 ::: {#sol-miller-deriv-opt-gamma-kernel}
 Differentiate using the product rule:
 
-$$f'(x) = 4x^3 e^{-x} - x^4 e^{-x} = x^3 e^{-x}(4 - x)$$
+$$
+\begin{aligned}
+f'(x)
+&= 4x^3 e^{-x} - x^4 e^{-x} \\
+&= x^3 e^{-x}(4 - x)
+\end{aligned}
+$$
 
 On $[0, \infty)$, $e^{-x} > 0$, so $f'(x) = 0$ only at $x = 0$ and $x = 4$.
 

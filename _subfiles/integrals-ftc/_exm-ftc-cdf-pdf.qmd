@@ -79,7 +79,13 @@ For a concrete instance: with $\rate = 1$,
 the probability that $T \le 2$ is:
 
 $$
-F(2) = 1 - \ef{-1 \cd 2} = 1 - \ef{-2} \approx 1 - 0.135 = 0.865
+\begin{aligned}
+F(2)
+&= 1 - \ef{-1 \cd 2} \\
+&= 1 - \ef{-2} \\
+&\approx 1 - 0.135 \\
+&= 0.865
+\end{aligned}
 $$
 
 See @fig-exp-pdf-cdf.

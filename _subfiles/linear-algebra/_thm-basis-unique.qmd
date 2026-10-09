@@ -17,9 +17,11 @@ because the basis spans $\mathcal{S}$ (@def-span).
 Suppose two lists both work:
 
 $$
+\begin{aligned}
 c_1 \vecf{a}_1 + \cdots + c_k \vecf{a}_k
-= \vecf{x}
-= d_1 \vecf{a}_1 + \cdots + d_k \vecf{a}_k.
+&= \vecf{x} \\
+&= d_1 \vecf{a}_1 + \cdots + d_k \vecf{a}_k.
+\end{aligned}
 $$
 
 Subtracting the right side from the left side gives

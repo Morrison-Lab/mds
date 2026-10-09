@@ -13,5 +13,11 @@ at $x_0 = 0$.
 ::: {#sol-miller-taylor-log-scaled}
 Substitute $u = 2x$ into the Maclaurin series $\log(1 + u) = u - \frac{u^2}{2} + \dots$:
 
-$$\log(1 + 2x) = (2x) - \frac{(2x)^2}{2} + \dots = 2x - 2x^2 + \dots$$
+$$
+\begin{aligned}
+\log(1 + 2x)
+&= (2x) - \frac{(2x)^2}{2} + \dots \\
+&= 2x - 2x^2 + \dots
+\end{aligned}
+$$
 :::

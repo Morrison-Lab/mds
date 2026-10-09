@@ -18,7 +18,15 @@ Limits:
 
 Substitute:
 
-$$\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx = 2\int_0^\infty e^{-u}\,du = 2\sb{-e^{-u}}_0^\infty = 2\paren{0 - (-1)} = 2$$
+$$
+\begin{aligned}
+\int_0^\infty x\exp{-\frac{x^2}{4}}\,dx
+&= 2\int_0^\infty e^{-u}\,du \\
+&= 2\sb{-e^{-u}}_0^\infty \\
+&= 2\paren{0 - (-1)} \\
+&= 2
+\end{aligned}
+$$
 
 *Remark:* Integrals of this structure arise directly in calculating moments and normalization constants for Gaussian and Rayleigh probability distributions.
 :::

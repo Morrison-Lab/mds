@@ -16,7 +16,11 @@ $\derivf{f(\vx)}{\tp{\vx}}$ (@def-row-vector-derivative),
 so the Hessian can also be written
 
 $$
-\matr{H}_f(\vx) = \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}} = \xderivf{f(\vx)}{\vx}{\tp{\vx}}.
+\begin{aligned}
+\matr{H}_f(\vx)
+&= \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}} \\
+&= \xderivf{f(\vx)}{\vx}{\tp{\vx}}.
+\end{aligned}
 $$ {#eq-hessian-row}
 
 Both forms follow the shape rule of matrix multiplication (@rem-row-derivative-shape):
@@ -50,15 +54,17 @@ $$
 Differentiating each entry again,
 
 $$
+\begin{aligned}
 \matr{H}_f(\vx)
-= \sbmat{
+&= \sbmat{
 \deriv{x_1} (2 e^{u} - 1) & \deriv{x_1} e^{u} \\
 \deriv{x_2} (2 e^{u} - 1) & \deriv{x_2} e^{u}
-}
-= \sbmat{
+} \\
+&= \sbmat{
 4 e^{u} & 2 e^{u} \\
 2 e^{u} & e^{u}
 },
+\end{aligned}
 $$
 
 and at $\vx = \vzero$, where $u = 0$,

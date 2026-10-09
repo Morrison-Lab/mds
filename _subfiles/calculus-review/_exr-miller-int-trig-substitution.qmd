@@ -18,5 +18,12 @@ Limits:
 
 Substitute:
 
-$$\int_0^2 x\cos(3x^2)\,dx = \frac{1}{6}\int_0^{12} \cos u\,du = \frac{1}{6}\sb{\sin u}_0^{12} = \frac{\sin 12}{6}$$
+$$
+\begin{aligned}
+\int_0^2 x\cos(3x^2)\,dx
+&= \frac{1}{6}\int_0^{12} \cos u\,du \\
+&= \frac{1}{6}\sb{\sin u}_0^{12} \\
+&= \frac{\sin 12}{6}
+\end{aligned}
+$$
 :::

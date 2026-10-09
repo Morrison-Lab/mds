@@ -14,14 +14,26 @@ at $x_0 = 1$.
 Evaluate derivatives at $x_0 = 1$:
 
 $$\ba
-f(1) &= 1 \log 1 = 0
+f(1) &= 1 \log 1
 \\
-f'(x) &= \log x + 1 \implies f'(1) = 0 + 1 = 1
+&= 0
+\\
+f'(x) &= \log x + 1
+\\
+\implies f'(1) &= 0 + 1
+\\
+&= 1
 \\
 f''(x) &= \frac{1}{x} \implies f''(1) = 1
 \ea$$
 
 Therefore:
 
-$$P_2(x) = f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 = (x - 1) + \frac{1}{2}(x - 1)^2$$
+$$
+\begin{aligned}
+P_2(x)
+&= f(1) + f'(1)(x - 1) + \frac{f''(1)}{2!}(x - 1)^2 \\
+&= (x - 1) + \frac{1}{2}(x - 1)^2
+\end{aligned}
+$$
 :::

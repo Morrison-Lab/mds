@@ -13,7 +13,14 @@ for $x > 0$.
 ::: {#sol-miller-deriv-log-simplify}
 Simplify before differentiating using the quotient property of logarithms:
 
-$$f(x) = \log(4x) - \log(2x) = \log\paren{\frac{4x}{2x}} = \log 2$$
+$$
+\begin{aligned}
+f(x)
+&= \log(4x) - \log(2x) \\
+&= \log\paren{\frac{4x}{2x}} \\
+&= \log 2
+\end{aligned}
+$$
 
 Because $\log 2$ is constant with respect to $x$, the constant rule (@thm-deriv-const) gives:
 

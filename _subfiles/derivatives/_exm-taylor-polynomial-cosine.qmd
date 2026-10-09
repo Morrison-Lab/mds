@@ -4,12 +4,24 @@
 For $f(x) = \cos x$ centered at $x_0 = 0$, the derivatives follow a repeating cycle of length 4:
 
 $$\ba
-f(0) &= \cos(0) = 1, & f'(0) &= -\sin(0) = 0, \\
-f''(0) &= -\cos(0) = -1, & f'''(0) &= \sin(0) = 0,
+f(0) &= \cos(0) \\
+&= 1, \\
+f'(0) &= -\sin(0) \\
+&= 0, \\
+f''(0) &= -\cos(0) \\
+&= -1, \\
+f'''(0) &= \sin(0) \\
+&= 0,
 \ea$$
 
 and in general $f^{(2k)}(0) = (-1)^k$ and $f^{(2k+1)}(0) = 0$ for all $k \ge 0$.
 The Taylor series (Maclaurin series) converges everywhere to $\cos x$:
 
-$$\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots = \sum_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k}$$
+$$
+\begin{aligned}
+\cos x
+&= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots \\
+&= \sum_{k=0}^\infty \frac{(-1)^k}{(2k)!}x^{2k}
+\end{aligned}
+$$
 :::

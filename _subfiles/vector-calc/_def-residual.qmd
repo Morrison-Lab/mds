@@ -7,7 +7,11 @@ and its entries $\lsresid_i = y_i - (\mX\vcoef)_i$ are the **residuals**.
 The square $\lsresid_i^2$ is the $i$th **squared error**, and their sum
 
 $$
-\vlsresid \cdot \vlsresid = \sumin \vlsresid_i^2 = \norm{\vy - \mX\vcoef}^2
+\begin{aligned}
+\vlsresid \cdot \vlsresid
+&= \sumin \vlsresid_i^2 \\
+&= \norm{\vy - \mX\vcoef}^2
+\end{aligned}
 $$
 
 is the **residual sum of squares**.

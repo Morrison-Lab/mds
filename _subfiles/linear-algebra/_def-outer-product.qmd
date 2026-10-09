@@ -66,11 +66,14 @@ For $\vecf{a} = (1, 2)$ and $\vecf{b} = (3, 4)$,
 which have the same length, both products exist:
 
 $$
-\tp{\vecf{a}}\vecf{b} = 1 \cd 3 + 2 \cd 4 = 11
-\qquad
+\begin{aligned}
+\tp{\vecf{a}}\vecf{b}
+&= 1 \cd 3 + 2 \cd 4 \\
+&= 11 \\
 \vecf{a}\,\tp{\vecf{b}}
-= \begin{bmatrix} 1 \cd 3 & 1 \cd 4 \\ 2 \cd 3 & 2 \cd 4 \end{bmatrix}
-= \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}
+&= \begin{bmatrix} 1 \cd 3 & 1 \cd 4 \\ 2 \cd 3 & 2 \cd 4 \end{bmatrix} \\
+&= \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}
+\end{aligned}
 $$
 
 :::

@@ -4,9 +4,11 @@
 By the power rule ($n = 2$) and linearity from @thm-integral-rules:
 
 $$
+\begin{aligned}
 \int \paren{3x^2 - 1}\,dx
-= 3 \cd \frac{x^3}{3} - x + C
-= x^3 - x + C.
+&= 3 \cd \frac{x^3}{3} - x + C \\
+&= x^3 - x + C.
+\end{aligned}
 $$
 
 Verify by differentiating:

@@ -21,5 +21,11 @@ $$\ba
 
 Multiplying and dropping terms of order $x^3$ and higher:
 
-$$f(x) = \paren{1 - \frac{x^2}{2} + \dots}\paren{x - \frac{x^2}{2} + \dots} = x - \frac{x^2}{2} + O(x^3)$$
+$$
+\begin{aligned}
+f(x)
+&= \paren{1 - \frac{x^2}{2} + \dots}\paren{x - \frac{x^2}{2} + \dots} \\
+&= x - \frac{x^2}{2} + O(x^3)
+\end{aligned}
+$$
 :::

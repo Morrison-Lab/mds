@@ -13,5 +13,11 @@ at $x_0 = 0$.
 ::: {#sol-miller-taylor-log-one-minus-x}
 Substitute $u = -x$ into the expansion for $\log(1 + u)$ from @exr-miller-taylor-log-one-plus-x:
 
-$$\log(1 - x) = (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots = -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots$$
+$$
+\begin{aligned}
+\log(1 - x)
+&= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\
+&= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots
+\end{aligned}
+$$
 :::

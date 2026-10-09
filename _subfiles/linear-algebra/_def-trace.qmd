@@ -16,7 +16,11 @@ $$\tr(\matr{M}) \eqdef \sumip M_{ii}$$
 #### The trace of a $2 \times 2$ matrix
 
 $$
-\tr\paren{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}} = 1 + 4 = 5
+\begin{aligned}
+\tr\paren{\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}
+&= 1 + 4 \\
+&= 5
+\end{aligned}
 $$
 
 :::
