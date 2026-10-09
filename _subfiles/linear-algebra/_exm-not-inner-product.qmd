@@ -7,21 +7,69 @@ Each of these functions on $\reals^2$ has some of the properties in @def-inner-p
   and linear in the first slot, because it is a linear combination of $x_1$ and $x_2$ with coefficients $y_1$ and $-y_2$.
   It fails positivity:
   for $\vx = (0, 1)$,
-  $f(\vx, \vx) = 0 \cd 0 - 1 \cd 1 = -1 < 0$.
+
+  $$
+  \begin{aligned}
+  f(\vx, \vx) &= 0 \cd 0 - 1 \cd 1 \\
+  &= -1 \\
+  &< 0.
+  \end{aligned}
+  $$
+
   It also fails definiteness:
   for $\vx = (1, 1)$,
-  $f(\vx, \vx) = 1 \cd 1 - 1 \cd 1 = 0$ although $\vx \neq \vzero_{2 \times 1}$.
+
+  $$
+  \begin{aligned}
+  f(\vx, \vx) &= 1 \cd 1 - 1 \cd 1 \\
+  &= 0
+  \end{aligned}
+  $$
+
+  although $\vx \neq \vzero_{2 \times 1}$.
 - $g(\vx, \vy) \eqdef x_1 y_1$ is symmetric and linear in the first slot, for the same reasons as $f$,
   and has positivity, because $g(\vx, \vx) = x_1^2 \ge 0$.
   It fails definiteness:
   for $\vx = (0, 1)$,
-  $g(\vx, \vx) = 0 \cd 0 = 0$ although $\vx \neq \vzero_{2 \times 1}$.
+
+  $$
+  \begin{aligned}
+  g(\vx, \vx) &= 0 \cd 0 \\
+  &= 0
+  \end{aligned}
+  $$
+
+  although $\vx \neq \vzero_{2 \times 1}$.
 - $h(\vx, \vy) \eqdef \abs{x_1 y_1} + \abs{x_2 y_2}$,
   where $\abs{\cdot}$ is the [absolute value](algebra.qmd#def-absolute-value), is symmetric, because $\abs{x_i y_i} = \abs{y_i x_i}$,
   and has positivity and definiteness, because $h(\vx, \vx) = x_1^2 + x_2^2$ is a sum of squares.
   It is not linear in the first slot:
-  take $\vx = \vy = (1, 0)$, $a = -1$ and $b = 0$;
-  then $h(a\,\vx, \vy) = \abs{(-1) \cd 1} + \abs{0 \cd 0} = 1$,
-  while $a\,h(\vx, \vy) = (-1) \cd (\abs{1 \cd 1} + \abs{0 \cd 0}) = -1$.
+  take
+
+  $$
+  \begin{aligned}
+  \vx &= \vy \\
+  &= (1, 0),
+  \end{aligned}
+  $$
+
+  $a = -1$ and $b = 0$;
+  then
+
+  $$
+  \begin{aligned}
+  h(a\,\vx, \vy) &= \abs{(-1) \cd 1} + \abs{0 \cd 0} \\
+  &= 1,
+  \end{aligned}
+  $$
+
+  while
+
+  $$
+  \begin{aligned}
+  a\,h(\vx, \vy) &= (-1) \cd (\abs{1 \cd 1} + \abs{0 \cd 0}) \\
+  &= -1.
+  \end{aligned}
+  $$
 
 :::

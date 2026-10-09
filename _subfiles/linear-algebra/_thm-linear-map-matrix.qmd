@@ -64,7 +64,16 @@ $$
 \ea
 $$
 
-So $b_{ij} = \paren{f(\vecf{e}_j)}_i = a_{ij}$ for every $i$ and $j$,
+So
+
+$$
+\begin{aligned}
+b_{ij} &= \paren{f(\vecf{e}_j)}_i \\
+&= a_{ij}
+\end{aligned}
+$$
+
+for every $i$ and $j$,
 and $\matr{B} = \matr{A}$.
 
 :::

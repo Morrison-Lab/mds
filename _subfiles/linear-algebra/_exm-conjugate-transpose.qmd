@@ -23,7 +23,16 @@ $$
 \end{bmatrix}.
 $$
 
-For instance, $(\matr{A}^{\mathsf{H}})_{12} = \overline{a_{21}} = \overline{-i} = i$.
+For instance,
+
+$$
+\begin{aligned}
+(\matr{A}^{\mathsf{H}})_{12} &= \overline{a_{21}} \\
+&= \overline{-i} \\
+&= i.
+\end{aligned}
+$$
+
 The transpose alone would have $-i$ in that position,
 so for a matrix with an entry that is not real, $\matr{A}^{\mathsf{H}}$ and $\tp{\matr{A}}$ differ.
 For a real matrix, conjugating changes nothing, so $\matr{A}^{\mathsf{H}} = \tp{\matr{A}}$.

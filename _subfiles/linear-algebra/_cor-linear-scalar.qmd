@@ -28,7 +28,14 @@ f(\vx)
 \ea
 $$
 
-and $w_j = a_{1j} = f(\vecf{e}_j)$.
+and
+
+$$
+\begin{aligned}
+w_j &= a_{1j} \\
+&= f(\vecf{e}_j).
+\end{aligned}
+$$
 
 **If $f(\vx) = \vec{w}\' \vx$.** Here $\vec{w}\'$ is a $1 \times p$ matrix,
 so $f$ is linear by @thm-matrix-map-linear.
@@ -43,8 +50,22 @@ so $f$ is linear by @thm-matrix-map-linear.
 $f(\vx) = 3 x_1 + 5 x_2$ is $\dprod{\vec{w}}{\vx}$ with $\vec{w} = \tp{(3, 5)}$,
 so it is linear by @cor-linear-scalar.
 The entries of $\vec{w}$ are the values at the indicator vectors:
-$f(\vecf{e}_1) = 3 \cd 1 + 5 \cd 0 = 3$
-and $f(\vecf{e}_2) = 3 \cd 0 + 5 \cd 1 = 5$.
+
+$$
+\begin{aligned}
+f(\vecf{e}_1) &= 3 \cd 1 + 5 \cd 0 \\
+&= 3
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+f(\vecf{e}_2) &= 3 \cd 0 + 5 \cd 1 \\
+&= 5.
+\end{aligned}
+$$
 
 $g(\vx) = 3 x_1 + 5 x_2 + 1$ is not linear,
 because $g(\vzero) = 1 \neq 0$ (@thm-linear-map-zero).

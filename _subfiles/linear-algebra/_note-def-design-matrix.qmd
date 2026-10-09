@@ -30,7 +30,15 @@ $$
 $$
 
 The matrix $\tp{\mX}\mX$ is $p \times p$ and symmetric,
-since $\tp{(\tp{\mX}\mX)} = \tp{\mX}\,\tp{(\tp{\mX})} = \tp{\mX}\mX$
+since
+
+$$
+\begin{aligned}
+\tp{(\tp{\mX}\mX)} &= \tp{\mX}\,\tp{(\tp{\mX})} \\
+&= \tp{\mX}\mX
+\end{aligned}
+$$
+
 (@thm-transpose-product).
 When $\tp{\mX}\mX$ is invertible,
 it appears in the OLS estimator $\hvcoef = (\tp{\mX}\mX)^{-1}\tp{\mX}\vy$.

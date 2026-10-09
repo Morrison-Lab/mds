@@ -27,7 +27,15 @@ $$
 $$
 
 and subtracting $\eigval \vecf{v}$ from both sides gives $(\eigval^2 - \eigval)\,\vecf{v} = \vzero$.
-Some entry of $\vecf{v}$ is nonzero, so $\eigval^2 - \eigval = \eigval\,(\eigval - 1) = 0$,
+Some entry of $\vecf{v}$ is nonzero, so
+
+$$
+\begin{aligned}
+\eigval^2 - \eigval &= \eigval\,(\eigval - 1) \\
+&= 0,
+\end{aligned}
+$$
+
 and a product of two numbers is $0$ only when one of them is: $\eigval = 0$ or $\eigval = 1$.
 
 **Part 2.** If $\matr{A}$ is orthogonal, then
@@ -66,7 +74,16 @@ since $\eigval$ is real (@def-eigenvalue), $\eigval = 1$ or $\eigval = -1$.
 - The rotation $\matr{Q}$ of @exm-orthogonal-matrix has no real eigenvalue.
   By part 2 the only candidates are $\pm 1$.
   $\matr{Q} \vecf{v} = \vecf{v}$ reads $-0.4\,v_1 - 0.8\,v_2 = 0$ and $0.8\,v_1 - 0.4\,v_2 = 0$,
-  so $v_1 = -2 v_2$ and $v_2 = 2 v_1 = -4 v_2$, forcing $\vecf{v} = \vzero$;
+  so $v_1 = -2 v_2$ and
+
+  $$
+  \begin{aligned}
+  v_2 &= 2 v_1 \\
+  &= -4 v_2,
+  \end{aligned}
+  $$
+
+  forcing $\vecf{v} = \vzero$;
   $\matr{Q} \vecf{v} = -\vecf{v}$ reads $1.6\,v_1 - 0.8\,v_2 = 0$ and $0.8\,v_1 + 1.6\,v_2 = 0$,
   so $v_2 = 2 v_1$ and $0.8\,v_1 + 3.2\,v_1 = 0$, forcing $\vecf{v} = \vzero$ again.
 

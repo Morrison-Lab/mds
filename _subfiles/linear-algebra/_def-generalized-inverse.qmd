@@ -52,7 +52,13 @@ its only generalized inverse is $\matr{A}^{-1}$.
 
 ::: proof
 
-$\matr{A} \matr{A}^{-1} \matr{A} = \matr{I}_p \matr{A} = \matr{A}$
+$$
+\begin{aligned}
+\matr{A} \matr{A}^{-1} \matr{A} &= \matr{I}_p \matr{A} \\
+&= \matr{A}
+\end{aligned}
+$$
+
 (@def-matrix-inverse, @thm-identity),
 so $\matr{A}^{-1}$ is a generalized inverse.
 If $\matr{G}$ is any generalized inverse, then

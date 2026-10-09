@@ -63,7 +63,17 @@ $\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ is positive definite (@exm-pd-ope
 and its diagonal entries $2, 2$ and its $1 \times 1$ leading block $[2]$ are positive.
 The test can only rule matrices out:
 $-\matr{I}_2$ has negative diagonal entries, so it is not positive definite,
-even though $\det(-\matr{I}_2) = (-1)(-1) - 0 = 1 > 0$ (@def-determinant);
+even though
+
+$$
+\begin{aligned}
+\det(-\matr{I}_2) &= (-1)(-1) - 0 \\
+&= 1 \\
+&> 0
+\end{aligned}
+$$
+
+(@def-determinant);
 a positive determinant alone does not make a matrix positive definite.
 And positive diagonal entries are not enough:
 $\matr{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}$ of @exm-positive-definite has them

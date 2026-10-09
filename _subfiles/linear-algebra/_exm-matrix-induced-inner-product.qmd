@@ -59,7 +59,16 @@ $$
 \end{aligned}
 $$
 
-The off-diagonal entries $A_{12} = A_{21} = 1$ couple the coordinate directions,
+The off-diagonal entries
+
+$$
+\begin{aligned}
+A_{12} &= A_{21} \\
+&= 1
+\end{aligned}
+$$
+
+couple the coordinate directions,
 altering lengths and angles from their Euclidean values.
 When $\matr{A} = \matr{I}_p$, the matrix-induced inner product recovers the standard dot product $\iprod{\vx}{\vy}_{\matr{I}_p} = \vx \cdot \vy$.
 

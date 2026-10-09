@@ -6,7 +6,16 @@ are **linearly independent** if the only numbers $c_1, \ldots, c_k$ with
 
 $$c_1 \vecf{v}_1 + \cdots + c_k \vecf{v}_k = \vzero$$
 
-are $c_1 = \cdots = c_k = 0$.
+are
+
+$$
+\begin{aligned}
+c_1 &= \cdots \\
+&= c_k \\
+&= 0.
+\end{aligned}
+$$
+
 Vectors that are not linearly independent are **linearly dependent**.
 
 :::

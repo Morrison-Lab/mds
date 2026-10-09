@@ -47,7 +47,15 @@ By @thm-rank-nullity, that is when $\operatorname{rank}(\matr{A}) = n$.
   has equal differences between consecutive entries,
   and $(1, 0, 0)$ does not.
 - An invertible $p \times p$ matrix $\matr{A}$ has rank $p$:
-  if $\matr{A} \vecf{x} = \vzero$ then $\vecf{x} = \matr{A}^{-1} \matr{A} \vecf{x} = \vzero$,
+  if $\matr{A} \vecf{x} = \vzero$ then
+
+  $$
+  \begin{aligned}
+  \vecf{x} &= \matr{A}^{-1} \matr{A} \vecf{x} \\
+  &= \vzero,
+  \end{aligned}
+  $$
+
   so its nullity is $0$ and its rank is $p$ (@thm-rank-nullity).
   So every system with it is consistent (part 1, with $p = m$)
   and has exactly one solution (part 2, with $p = n$),

@@ -139,7 +139,15 @@ Substituting the second equation into the first gives
 $-v_2 = \eigval^2 v_2$,
 so $(1 + \eigval^2)\, v_2 = 0$.
 Since $1 + \eigval^2 > 0$, $v_2 = 0$,
-and then $v_1 = \eigval v_2 = 0$.
+and then
+
+$$
+\begin{aligned}
+v_1 &= \eigval v_2 \\
+&= 0.
+\end{aligned}
+$$
+
 So the only solution is $\vecf{v} = \vzero$,
 and $\matr{R}$ has no real eigenvalue.
 

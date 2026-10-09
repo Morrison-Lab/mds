@@ -50,10 +50,33 @@ and the middle term drops out.
 #### Checking the expansion
 
 For $\vecf{x} = (3, 0)$ and $\vecf{y} = (1, 4)$:
-$\vecf{x} + \vecf{y} = (4, 4)$, so $\norm{\vecf{x} + \vecf{y}}^2 = 16 + 16 = 32$,
-and $\norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2
-= 9 + 2 \cd 3 + 17 = 32$.
+$\vecf{x} + \vecf{y} = (4, 4)$, so
+
+$$
+\begin{aligned}
+\norm{\vecf{x} + \vecf{y}}^2 &= 16 + 16 \\
+&= 32,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\norm{\vecf{x}}^2 + 2\,(\vecf{x} \cdot \vecf{y}) + \norm{\vecf{y}}^2 &= 9 + 2 \cd 3 + 17 \\
+&= 32.
+\end{aligned}
+$$
+
 For the orthogonal vectors $(3, 0)$ and $(0, 4)$,
-$\norm{(3, 4)}^2 = 25 = 9 + 16$, the $3$-$4$-$5$ right triangle.
+
+$$
+\begin{aligned}
+\norm{(3, 4)}^2 &= 25 \\
+&= 9 + 16,
+\end{aligned}
+$$
+
+the $3$-$4$-$5$ right triangle.
 
 :::

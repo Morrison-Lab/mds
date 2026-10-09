@@ -15,10 +15,29 @@ then $\matr{U} \vecf{x} = \vecf{y}$ by back substitution (@thm-back-substitution
 $\matr{L}$ has diagonal entries $1$ and $\matr{U}$ has nonzero ones,
 so each of the two triangular systems has exactly one solution (@thm-back-substitution).
 If $\vecf{y}$ and $\vecf{x}$ are those solutions, then
-$\matr{A} \vecf{x} = \matr{L}\,(\matr{U} \vecf{x}) = \matr{L} \vecf{y} = \vecf{b}$ (@thm-matmul-assoc),
+
+$$
+\begin{aligned}
+\matr{A} \vecf{x} &= \matr{L}\,(\matr{U} \vecf{x}) \\
+&= \matr{L} \vecf{y} \\
+&= \vecf{b}
+\end{aligned}
+$$
+
+(@thm-matmul-assoc),
 so $\vecf{x}$ is a solution.
 Conversely, if $\matr{A} \vecf{x} = \vecf{b}$, then $\vecf{y} \eqdef \matr{U} \vecf{x}$
-satisfies $\matr{L} \vecf{y} = \matr{L}\,(\matr{U} \vecf{x}) = (\matr{L} \matr{U})\,\vecf{x} = \matr{A} \vecf{x} = \vecf{b}$
+satisfies
+
+$$
+\begin{aligned}
+\matr{L} \vecf{y} &= \matr{L}\,(\matr{U} \vecf{x}) \\
+&= (\matr{L} \matr{U})\,\vecf{x} \\
+&= \matr{A} \vecf{x} \\
+&= \vecf{b}
+\end{aligned}
+$$
+
 (@thm-matmul-assoc),
 so $\vecf{y}$ is the unique solution of that system,
 and $\vecf{x}$ is then the unique solution of $\matr{U} \vecf{x} = \vecf{y}$.
@@ -33,10 +52,30 @@ and $\vecf{x}$ is then the unique solution of $\matr{U} \vecf{x} = \vecf{y}$.
 With $\matr{L}$ and $\matr{U}$ of @exm-lu, solve $\matr{A} \vecf{x} = (8, -11, -3)$.
 Forward substitution on $\matr{L} \vecf{y} = (8, -11, -3)$ gives
 $y_1 = 8$,
-$y_2 = -11 + \tfrac{3}{2} \cd 8 = 1$,
-$y_3 = -3 + 8 - 4 \cd 1 = 1$.
+
+$$
+\begin{aligned}
+y_2 &= -11 + \tfrac{3}{2} \cd 8 \\
+&= 1,
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+y_3 &= -3 + 8 - 4 \cd 1 \\
+&= 1.
+\end{aligned}
+$$
+
 Back substitution on $\matr{U} \vecf{x} = (8, 1, 1)$ is @exm-back-substitution,
 which gives $\vecf{x} = (2, 3, -1)$.
-As a check, $\matr{A}\,(2, 3, -1) = (4 + 3 + 1,\; -6 - 3 - 2,\; -4 + 3 - 2) = (8, -11, -3)$.
+As a check,
+
+$$
+\begin{aligned}
+\matr{A}\,(2, 3, -1) &= (4 + 3 + 1,\; -6 - 3 - 2,\; -4 + 3 - 2) \\
+&= (8, -11, -3).
+\end{aligned}
+$$
 
 :::

@@ -24,10 +24,28 @@ $\mathcal{X}$ need not be a subspace.
 - **A plane.**
   Let $\mathcal{X} = \cb{(a, b, 0) : a, b \in \reals}$, the plane $z = 0$.
   A vector $\vecf{u}$ is in $\mathcal{X}^\perp$
-  when $(a, b, 0) \cdot \vecf{u} = a u_1 + b u_2 = 0$ for all $a$ and $b$.
+  when
+
+  $$
+  \begin{aligned}
+  (a, b, 0) \cdot \vecf{u} &= a u_1 + b u_2 \\
+  &= 0
+  \end{aligned}
+  $$
+
+  for all $a$ and $b$.
   Taking $(a, b) = (1, 0)$ forces $u_1 = 0$,
   and taking $(a, b) = (0, 1)$ forces $u_2 = 0$;
-  conversely, if $u_1 = u_2 = 0$, then $a u_1 + b u_2 = 0$ for all $a$ and $b$.
+  conversely, if
+
+  $$
+  \begin{aligned}
+  u_1 &= u_2 \\
+  &= 0,
+  \end{aligned}
+  $$
+
+  then $a u_1 + b u_2 = 0$ for all $a$ and $b$.
   So $\mathcal{X}^\perp = \cb{(0, 0, c) : c \in \reals}$, the $z$-axis.
 - **Two vectors.**
   The two-element set $\cb{(1, 0, 0), (0, 1, 0)}$ is not a subspace,
@@ -37,6 +55,15 @@ $\mathcal{X}$ need not be a subspace.
   $\cb{\vzero}^\perp = \reals^3$, because $\vzero \cdot \vecf{u} = 0$ for every $\vecf{u}$.
   $(\reals^3)^\perp = \cb{\vzero}$,
   because a $\vecf{u}$ in it is orthogonal to itself,
-  and $\vecf{u} \cdot \vecf{u} = u_1^2 + u_2^2 + u_3^2 = 0$ forces $\vecf{u} = \vzero$.
+  and
+
+  $$
+  \begin{aligned}
+  \vecf{u} \cdot \vecf{u} &= u_1^2 + u_2^2 + u_3^2 \\
+  &= 0
+  \end{aligned}
+  $$
+
+  forces $\vecf{u} = \vzero$.
 
 :::

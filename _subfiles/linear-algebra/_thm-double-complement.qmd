@@ -57,7 +57,14 @@ and $(\mathcal{S}^\perp)^\perp = \mathcal{N}(\tp{\matr{B}})$ (@thm-complement-nu
 Since $\tp{\matr{B}} \vecf{w} = (w_1 - w_2,\ w_3)$ (@def-matvec-mult),
 $\vecf{w} \in (\mathcal{S}^\perp)^\perp$
 exactly when $w_1 - w_2 = 0$ and $w_3 = 0$.
-So $(\mathcal{S}^\perp)^\perp = \cb{(a, a, 0) : a \in \reals} = \mathcal{S}$.
+So
+
+$$
+\begin{aligned}
+(\mathcal{S}^\perp)^\perp &= \cb{(a, a, 0) : a \in \reals} \\
+&= \mathcal{S}.
+\end{aligned}
+$$
 
 :::
 

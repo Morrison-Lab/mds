@@ -318,7 +318,16 @@ so that every $n \times p$ matrix has $\min(n, p)$ singular values.
 
 For example, $\matr{B} = \begin{bmatrix} 3 & 0 \\ 0 & 0 \end{bmatrix}$
 has rank $r = 1$.
-Taking $\matr{U} = \matr{V} = \matr{I}_2$ and $\matr{D} = \matr{B}$
+Taking
+
+$$
+\begin{aligned}
+\matr{U} &= \matr{V} \\
+&= \matr{I}_2
+\end{aligned}
+$$
+
+and $\matr{D} = \matr{B}$
 gives an SVD $\matr{B} = \matr{I}_2 \matr{B} \tp{\matr{I}_2}$,
 so by @def-svd, $\matr{B}$ has one singular value, $\singval_1 = 3$.
 R's `svd()` reports $\min(2, 2) = 2$ singular values for $\matr{B}$:

@@ -108,6 +108,13 @@ with both matrices' entries listed in the same order.
 For example, listing the entries of $\matr{A}$ and $\matr{B}$
 in @exm-matrix-inner-product row by row
 gives $(1, 2, 3, 4)$ and $(0, 1, -1, 2)$,
-and $(1, 2, 3, 4) \cdot (0, 1, -1, 2) = 7 = \iprod{\matr{A}}{\matr{B}}$.
+and
+
+$$
+\begin{aligned}
+(1, 2, 3, 4) \cdot (0, 1, -1, 2) &= 7 \\
+&= \iprod{\matr{A}}{\matr{B}}.
+\end{aligned}
+$$
 
 :::

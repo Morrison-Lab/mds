@@ -42,8 +42,23 @@ so each coefficient $c_i$ is $\vecf{q}_i \cdot \vecf{x}$.
 With the orthonormal basis $\vecf{q}_1, \vecf{q}_2, \vecf{q}_3$ of $\reals^3$
 from @exm-orthonormal-basis and $\vecf{x} = (1, 2, 3)$:
 $\vecf{q}_1 \cdot \vecf{x} = 3$,
-$\vecf{q}_2 \cdot \vecf{x} = \tfrac{1}{\sqrt{2}}\,(1 + 2) = \tfrac{3}{\sqrt{2}}$
-and $\vecf{q}_3 \cdot \vecf{x} = \tfrac{1}{\sqrt{2}}\,(1 - 2) = -\tfrac{1}{\sqrt{2}}$.
+
+$$
+\begin{aligned}
+\vecf{q}_2 \cdot \vecf{x} &= \tfrac{1}{\sqrt{2}}\,(1 + 2) \\
+&= \tfrac{3}{\sqrt{2}}
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\vecf{q}_3 \cdot \vecf{x} &= \tfrac{1}{\sqrt{2}}\,(1 - 2) \\
+&= -\tfrac{1}{\sqrt{2}}.
+\end{aligned}
+$$
+
 Then
 
 $$

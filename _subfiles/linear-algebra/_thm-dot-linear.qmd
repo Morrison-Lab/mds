@@ -64,7 +64,16 @@ $$
 $$
 
 Two special cases are used often.
-With $a = b = 1$, and $1\,\vecf{u} = \vecf{u}$,
+With
+
+$$
+\begin{aligned}
+a &= b \\
+&= 1,
+\end{aligned}
+$$
+
+and $1\,\vecf{u} = \vecf{u}$,
 the theorem gives $\vecf{x} \cdot (\vecf{u} + \vecf{w}) = \vecf{x} \cdot \vecf{u} + \vecf{x} \cdot \vecf{w}$.
 With $\vecf{w} = \vecf{u}$ and $b = 0$, and $0\,\vecf{u} = \vzero$,
 it gives $\vecf{x} \cdot (a\,\vecf{u}) = a\,(\vecf{x} \cdot \vecf{u})$,
@@ -80,9 +89,24 @@ and likewise in the first slot.
 Let $\vecf{x} = (1, 2)$, $\vecf{u} = (3, 0)$, $\vecf{w} = (0, 1)$, $a = 2$ and $b = -1$.
 Directly,
 $a\,\vecf{u} + b\,\vecf{w} = (6, -1)$
-and $\vecf{x} \cdot (6, -1) = 6 - 2 = 4$.
+and
+
+$$
+\begin{aligned}
+\vecf{x} \cdot (6, -1) &= 6 - 2 \\
+&= 4.
+\end{aligned}
+$$
+
 By @thm-dot-linear,
-$a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w}) = 2 \cd 3 + (-1) \cd 2 = 4$,
+
+$$
+\begin{aligned}
+a\,(\vecf{x} \cdot \vecf{u}) + b\,(\vecf{x} \cdot \vecf{w}) &= 2 \cd 3 + (-1) \cd 2 \\
+&= 4,
+\end{aligned}
+$$
+
 the same number.
 
 :::

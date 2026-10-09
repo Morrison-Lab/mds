@@ -9,7 +9,15 @@ is an affine map (@def-affine-map) with offset $\vzero$.
 ::: proof
 
 If $f$ is linear, @thm-linear-map-matrix gives a matrix $\matr{A}$
-with $f(\vx) = \matr{A}\vx = \matr{A}\vx + \vzero$,
+with
+
+$$
+\begin{aligned}
+f(\vx) &= \matr{A}\vx \\
+&= \matr{A}\vx + \vzero,
+\end{aligned}
+$$
+
 which is @def-affine-map with $\vec{b} = \vzero$.
 
 :::

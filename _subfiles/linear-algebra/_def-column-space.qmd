@@ -28,10 +28,17 @@ $$
 $$
 
 For any $\vecf{x} \in \reals^3$,
-$\matr{A} \vecf{x} = (x_1 - 2x_2 - 2x_3,\; 3\,(x_1 - 2x_2 - 2x_3))
-= (x_1 - 2x_2 - 2x_3)\,(1, 3)$ (@def-matvec-mult).
+
+$$
+\begin{aligned}
+\matr{A} \vecf{x} &= (x_1 - 2x_2 - 2x_3,\; 3\,(x_1 - 2x_2 - 2x_3)) \\
+&= (x_1 - 2x_2 - 2x_3)\,(1, 3)
+\end{aligned}
+$$
+
+(@def-matvec-mult).
 The number $x_1 - 2x_2 - 2x_3$ can be any real number
-(take $x_2 = x_3 = 0$),
+(take $x_2 = 0$ and $x_3 = 0$),
 so $\mathcal{C}(\matr{A}) = \cb{c\,(1, 3) : c \in \reals}$,
 a line in $\reals^2$.
 The vector $(1, 0)$ is not in $\mathcal{C}(\matr{A})$:
@@ -117,7 +124,15 @@ a set of vectors in $\reals^m$.
 For $\matr{A}$ in @exm-column-space,
 $\matr{A} \vecf{x} = (x_1 - 2x_2 - 2x_3,\; 3\,(x_1 - 2x_2 - 2x_3))$,
 so $\matr{A} \vecf{x} = \vzero_2$ exactly when $x_1 = 2x_2 + 2x_3$.
-Writing $\vecf{x} = (2x_2 + 2x_3, x_2, x_3) = x_2\,(2, 1, 0) + x_3\,(2, 0, 1)$
+Writing
+
+$$
+\begin{aligned}
+\vecf{x} &= (2x_2 + 2x_3, x_2, x_3) \\
+&= x_2\,(2, 1, 0) + x_3\,(2, 0, 1)
+\end{aligned}
+$$
+
 shows $\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(2, 1, 0), (2, 0, 1)}$,
 a plane in $\reals^3$.
 

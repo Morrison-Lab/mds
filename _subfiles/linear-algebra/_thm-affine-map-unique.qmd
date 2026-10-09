@@ -9,8 +9,25 @@ then $\matr{A}' = \matr{A}$ and $\vec{b}' = \vec{b}$.
 
 ::: proof
 
-By @thm-affine-map-zero, applied to each formula, $\vec{b} = f(\vzero) = \vec{b}'$.
-Then $\matr{A}\vx = f(\vx) - \vec{b} = \matr{A}'\vx$ for all $\vx$,
+By @thm-affine-map-zero, applied to each formula,
+
+$$
+\begin{aligned}
+\vec{b} &= f(\vzero) \\
+&= \vec{b}'.
+\end{aligned}
+$$
+
+Then
+
+$$
+\begin{aligned}
+\matr{A}\vx &= f(\vx) - \vec{b} \\
+&= \matr{A}'\vx
+\end{aligned}
+$$
+
+for all $\vx$,
 so $\matr{A}$ and $\matr{A}'$ are both matrices (@def-matrix-of-linear-map) of the linear map
 $\vx \mapsto f(\vx) - \vec{b}$ (linear by @thm-matrix-map-linear),
 and the uniqueness in @thm-linear-map-matrix gives $\matr{A}' = \matr{A}$.

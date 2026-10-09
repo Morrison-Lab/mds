@@ -15,7 +15,15 @@ Let $\matr{X}$ have columns $\vecf{x}_1, \ldots, \vecf{x}_p$
 and $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$.
 Column $j$ of $\matr{A} \matr{X}$ is $\matr{A} \vecf{x}_j$,
 and column $j$ of $\matr{X} \matr{\Eigvals}$ is $\matr{X}$ times column $j$ of $\matr{\Eigvals}$ (@def-matrix-mult),
-which is $\matr{X}\,(\eigval_j \vecf{e}_j) = \eigval_j\,(\matr{X} \vecf{e}_j) = \eigval_j \vecf{x}_j$
+which is
+
+$$
+\begin{aligned}
+\matr{X}\,(\eigval_j \vecf{e}_j) &= \eigval_j\,(\matr{X} \vecf{e}_j) \\
+&= \eigval_j \vecf{x}_j
+\end{aligned}
+$$
+
 (@thm-scalar-matmul, @thm-matvec-columns),
 so
 

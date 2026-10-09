@@ -10,7 +10,15 @@ is a subspace of $\reals^p$ (@def-subspace).
 ::: proof
 
 $\mathcal{X}^\perp$ is not empty:
-$\vecf{x} \cdot \vzero = \sum_i x_i \cd 0 = 0$ for every $\vecf{x}$,
+
+$$
+\begin{aligned}
+\vecf{x} \cdot \vzero &= \sum_i x_i \cd 0 \\
+&= 0
+\end{aligned}
+$$
+
+for every $\vecf{x}$,
 so $\vzero \in \mathcal{X}^\perp$.
 Let $\vecf{u}, \vecf{w} \in \mathcal{X}^\perp$, let $c \in \reals$,
 and let $\vecf{x} \in \mathcal{X}$.
@@ -69,7 +77,15 @@ $$
 \end{aligned}
 $$
 
-since $u_1 + 2u_2 = 0$ means $\vecf{u} = (-2u_2, u_2) = u_2\,(-2, 1)$.
+since $u_1 + 2u_2 = 0$ means
+
+$$
+\begin{aligned}
+\vecf{u} &= (-2u_2, u_2) \\
+&= u_2\,(-2, 1).
+\end{aligned}
+$$
+
 That set is $\operatorname{span}\cb{(-2, 1)}$,
 a subspace by @thm-span-subspace,
 as @thm-orthogonal-complement-subspace says it must be.

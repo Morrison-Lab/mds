@@ -20,7 +20,15 @@ $\mathcal{N}(\matr{A}) = \operatorname{span}\cb{(2, 1, 0), (2, 0, 1)}$
 (@exm-null-space).
 Those two vectors are linearly independent:
 $c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)$,
-which is $\vzero_3$ only if $c_1 = c_2 = 0$.
+which is $\vzero_3$ only if
+
+$$
+\begin{aligned}
+c_1 &= c_2 \\
+&= 0.
+\end{aligned}
+$$
+
 So they are a basis of $\mathcal{N}(\matr{A})$,
 and $\operatorname{nullity}(\matr{A}) = 2$.
 The $2 \times 2$ identity matrix has nullity $0$,
