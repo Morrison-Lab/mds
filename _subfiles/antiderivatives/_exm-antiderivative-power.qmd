@@ -50,8 +50,8 @@ The function $f(x) = x^2$.
 #| label: antiderivatives-F-code
 #| code-fold: true
 x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
-df <- do.call(rbind, lapply(C_vals, \(C) {
-  data.frame(
+df <- dplyr::bind_rows(lapply(C_vals, \(C) {
+  tibble::tibble(
     x = x_seq,
     y = x_seq^3 / 3 + C,
     C = factor(C)

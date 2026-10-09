@@ -35,7 +35,7 @@ $$\E{g(X, Y)} = \iint_D \ef{-x^2}\,dA.$$
 #| code-fold: true
 #| message: false
 
-region <- data.frame(x = c(0, 1, 1), y = c(0, 0, 1))
+region <- tibble::tibble(x = c(0, 1, 1), y = c(0, 0, 1))
 ggplot2::ggplot(region, ggplot2::aes(x = x, y = y)) +
   ggplot2::geom_polygon(
     fill = "steelblue", alpha = 0.4, color = "black", linewidth = 0.7

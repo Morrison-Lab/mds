@@ -20,7 +20,7 @@ and the two species mostly fall in its two open half-spaces (@def-half-space).
 #|   Versicolor points, in one color, are mostly to the lower left.
 #|   Virginica points, in another color, are mostly to the upper right.
 #|   A straight line runs between the two groups and separates most of them.
-two_species <- droplevels(subset(iris, Species != "setosa"))
+two_species <- dplyr::filter(iris, Species != "setosa") |> droplevels()
 fit <- glm(
   Species ~ Petal.Length + Petal.Width,
   family = binomial,
