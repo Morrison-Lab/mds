@@ -1,7 +1,7 @@
 :::{#exm-induction-sum}
 #### Sum of the first $n$ natural numbers
 
-For every $n \in \mathbb{N}$,
+For every $n \in \Nat$,
 
 $$
 \sumin i = \frac{n(n+1)}{2}.
@@ -87,6 +87,6 @@ $$
 
 which is $P(n)$.
 By @def-proof-by-induction,
-the equation holds for every $n \in \mathbb{N}$.
+the equation holds for every $n \in \Nat$.
 
 :::
