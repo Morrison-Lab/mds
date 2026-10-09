@@ -51,10 +51,27 @@ If any of the three conditions fails, $f$ is **discontinuous** at $c$.
 #### A continuous function, and one failure of each condition
 
 - $f(x) = x^2$ is continuous at $c = 1$:
-  $f(1) = 1$ is defined, and $\lim_{x \to 1} x^2 = 1 = f(1)$.
+  $f(1) = 1$ is defined, and
+
+  $$
+  \begin{aligned}
+  \lim_{x \to 1} x^2 &= 1 \\
+  &= f(1).
+  \end{aligned}
+  $$
+
 - $g(x) = \tfrac{x^2 - 1}{x - 1}$ fails condition 1 at $c = 1$:
   $g(1)$ is not defined (it would divide by zero),
-  even though $\lim_{x \to 1} g(x) = \lim_{x \to 1} (x + 1) = 2$ exists
+  even though
+
+  $$
+  \begin{aligned}
+  \lim_{x \to 1} g(x) &= \lim_{x \to 1} (x + 1) \\
+  &= 2
+  \end{aligned}
+  $$
+
+  exists
   ($x^2 - 1 = (x - 1)(x + 1)$, and the factor $x - 1$ cancels for $x \ne 1$).
 - The step function $H(x) = 1$ for $x \ge 0$ and $H(x) = 0$ for $x < 0$
   fails condition 2 at $c = 0$:
@@ -100,8 +117,23 @@ Because $f$ is undefined for $x < 0$,
 only the right-hand limit of $f$ at $0$ makes sense,
 and @def-continuous-on asks only for that one-sided limit at the endpoint $0$.
 Here $f$ is continuous at every point of $(0, 1)$,
-$\lim_{x \to 0^+} \sqrt{x} = 0 = f(0)$,
-and $\lim_{x \to 1^-} \sqrt{x} = 1 = f(1)$,
+
+$$
+\begin{aligned}
+\lim_{x \to 0^+} \sqrt{x} &= 0 \\
+&= f(0),
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+\lim_{x \to 1^-} \sqrt{x} &= 1 \\
+&= f(1),
+\end{aligned}
+$$
+
 so $f$ is continuous on $[0, 1]$ (@def-continuous-on).
 
 :::
@@ -113,7 +145,16 @@ so $f$ is continuous on $[0, 1]$ (@def-continuous-on).
 
 Let $f(x) = 0$ for $0 \le x < 1$ and $f(1) = 2$.
 Conditions 1 and 2 of @def-continuous-on hold,
-but $\lim_{x \to 1^-} f(x) = 0 \ne 2 = f(1)$,
+but
+
+$$
+\begin{aligned}
+\lim_{x \to 1^-} f(x) &= 0 \\
+&\ne 2 \\
+&= f(1),
+\end{aligned}
+$$
+
 so condition 3 fails and $f$ is not continuous on $[0, 1]$.
 
 :::

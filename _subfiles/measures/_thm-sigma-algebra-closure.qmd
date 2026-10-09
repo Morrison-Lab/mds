@@ -22,7 +22,16 @@ which is $S \setminus S = \emptyset$.
 
 *Finite unions.*
 Extend $\dsn{A}$ to a sequence
-by setting $A_{n+1} = A_{n+2} = \cdots = \emptyset$;
+by setting
+
+$$
+\begin{aligned}
+A_{n+1} &= A_{n+2} \\
+&= \cdots \\
+&= \emptyset;
+\end{aligned}
+$$
+
 each of these sets is in $\salg$, by the first part.
 Then:
 

@@ -23,12 +23,26 @@ $$
 The split into the six single points $\set{1}, \ldots, \set{6}$
 gives exactly $\sum_{x \in D} g(x)$,
 so the supremum is $\int_D g \, d\measure = \sum_{x \in D} g(x)$.
-For example, with $g(x) = x$, $\int_D g \, d\measure = 1 + 2 + \cdots + 6 = 21$.
+For example, with $g(x) = x$,
+
+$$
+\begin{aligned}
+\int_D g \, d\measure &= 1 + 2 + \cdots + 6 \\
+&= 21.
+\end{aligned}
+$$
 
 *An infinite integral.*
 For the counting measure $\measure$ on $\Nat$ and the constant function $h(n) = 1$,
 the split with one set, $A_1 = \Nat$, gives the sum
-$1 \cdot \measure(\Nat) = 1 \cdot \infty = \infty$,
+
+$$
+\begin{aligned}
+1 \cdot \measure(\Nat) &= 1 \cdot \infty \\
+&= \infty,
+\end{aligned}
+$$
+
 so $\int_{\Nat} h \, d\measure = \infty$.
 
 :::

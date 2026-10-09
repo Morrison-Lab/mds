@@ -16,7 +16,15 @@ those equations or inequalities are the **constraints**.
 
 With the single constraint $3 x_1 + 4 x_2 = 5$,
 the feasible set is the line $\cb{\vx \in \reals^2 : 3 x_1 + 4 x_2 = 5}$.
-$\tp{(1, 0.5)}$ is feasible, since $3 \cd 1 + 4 \cd 0.5 = 3 + 2 = 5$;
+$\tp{(1, 0.5)}$ is feasible, since
+
+$$
+\begin{aligned}
+3 \cd 1 + 4 \cd 0.5 &= 3 + 2 \\
+&= 5;
+\end{aligned}
+$$
+
 $\vzero$ is not feasible, since $3 \cd 0 + 4 \cd 0 = 0 \ne 5$.
 
 :::
@@ -44,7 +52,15 @@ the problem is to minimize $f$ **subject to** them.
 In the problem of minimizing $x_1^2 + x_2^2$ subject to $3 x_1 + 4 x_2 = 5$,
 the objective function is $f(\vx) = x_1^2 + x_2^2$,
 and the feasible set is the line of @exm-feasible-set.
-The feasible point $\tp{(1, 0.5)}$ has $f(1, 0.5) = 1 + 0.25 = 1.25$.
+The feasible point $\tp{(1, 0.5)}$ has
+
+$$
+\begin{aligned}
+f(1, 0.5) &= 1 + 0.25 \\
+&= 1.25.
+\end{aligned}
+$$
+
 $\vzero$ minimizes $f$ over all of $\reals^2$, with $f(\vzero) = 0$,
 but it is not a minimizer over the feasible set, because it is not feasible.
 

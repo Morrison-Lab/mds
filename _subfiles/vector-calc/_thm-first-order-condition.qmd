@@ -14,13 +14,39 @@ Take $\tolin > 0$ as in the definition of a local minimizer.
 Fix $i \in \cb{1, \ldots, p}$,
 let $\vecf{e}_i$ be the vector with $1$ in entry $i$ and $0$ elsewhere,
 and let $g_i(t) \eqdef f(\vx^* + t\,\vecf{e}_i)$ for $t \in \reals$.
-For $\abs{t} < \tolin$, $\norm{(\vx^* + t\,\vecf{e}_i) - \vx^*} = \abs{t}\,\norm{\vecf{e}_i} = \abs{t} < \tolin$,
-so $g_i(0) = f(\vx^*) \le f(\vx^* + t\,\vecf{e}_i) = g_i(t)$:
+For $\abs{t} < \tolin$,
+
+$$
+\begin{aligned}
+\norm{(\vx^* + t\,\vecf{e}_i) - \vx^*} &= \abs{t}\,\norm{\vecf{e}_i} \\
+&= \abs{t} \\
+&< \tolin,
+\end{aligned}
+$$
+
+so
+
+$$
+\begin{aligned}
+g_i(0) &= f(\vx^*) \\
+&\le f(\vx^* + t\,\vecf{e}_i) \\
+&= g_i(t):
+\end{aligned}
+$$
+
 $0$ is a local minimizer of $g_i$.
 Moving $\vx$ from $\vx^*$ along $\vecf{e}_i$ changes only $x_i$,
 so $g_i'(0)$ is the partial derivative $\deriv{x_i} f(\vx^*)$,
 which exists because the gradient does.
-By @thm-fermat, $\deriv{x_i} f(\vx^*) = g_i'(0) = 0$.
+By @thm-fermat,
+
+$$
+\begin{aligned}
+\deriv{x_i} f(\vx^*) &= g_i'(0) \\
+&= 0.
+\end{aligned}
+$$
+
 The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the gradient at $\vx^*$ is $0$ ([vector derivative](vector-calculus.qmd#def-vector-derivative)).
 
 :::
@@ -32,13 +58,32 @@ The equation $g_i'(0) = 0$ holds for every $i$, so every entry of the gradient a
 
 - For $f(\vx) = x_1^2 + x_2^2 - 2 x_1$ of @exm-stationary-point,
   any local minimizer must be the stationary point $\tp{(1, 0)}$.
-  It is one: completing the square, $f(\vx) = (x_1 - 1)^2 + x_2^2 - 1 \ge -1 = f(1, 0)$.
+  It is one: completing the square,
+
+  $$
+  \begin{aligned}
+  f(\vx) &= (x_1 - 1)^2 + x_2^2 - 1 \\
+  &\ge -1 \\
+  &= f(1, 0).
+  \end{aligned}
+  $$
+
 - For $f(\vx) = e^{2x_1 + x_2} - x_1$ of [Example](vector-calculus.qmd#exm-hessian),
   the second entry of the gradient is $e^{2x_1 + x_2} > 0$,
   so $f$ has no stationary point, and so no local minimizer.
 - The converse fails: $f(\vx) = x_1^2 - x_2^2$ has gradient $\tp{(2 x_1,\ -2 x_2)}$,
   so $\vzero$ is a stationary point,
-  but $f(0, t) = -t^2 < 0 = f(\vzero)$ for every $t \ne 0$,
+  but
+
+  $$
+  \begin{aligned}
+  f(0, t) &= -t^2 \\
+  &< 0 \\
+  &= f(\vzero)
+  \end{aligned}
+  $$
+
+  for every $t \ne 0$,
   so $\vzero$ is not a local minimizer.
 
 :::

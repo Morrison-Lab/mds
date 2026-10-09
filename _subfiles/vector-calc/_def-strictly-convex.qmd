@@ -33,7 +33,15 @@ and **strictly concave** if $-f$ is strictly convex.
   which is positive when $x \ne y$ and $t \in (0, 1)$.
   At $t \in \cb{0, 1}$ or $x = y$ it is $0$, so $x^2$ is also convex.
 - $f(x) = 2x + 1$ is convex but not strictly convex:
-  $f(t x + (1 - t) y) = 2 t x + 2 (1 - t) y + 1 = t f(x) + (1 - t) f(y)$ for every $x, y, t$,
+
+  $$
+  \begin{aligned}
+  f(t x + (1 - t) y) &= 2 t x + 2 (1 - t) y + 1 \\
+  &= t f(x) + (1 - t) f(y)
+  \end{aligned}
+  $$
+
+  for every $x, y, t$,
   so the inequality holds, but never strictly.
   It is also concave.
 

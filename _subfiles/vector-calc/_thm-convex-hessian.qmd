@@ -61,7 +61,16 @@ and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
   The Hessian is not positive definite ($\vecf{h} = \tp{(1, -2)}$ gives $0$),
   so part 2 does not apply,
   and in fact $f$ is not strictly convex:
-  along $\vx = t\,\tp{(1, -2)}$, $u = 2t - 2t = 0$ and $f = 1 - t$ is linear in $t$,
+  along $\vx = t\,\tp{(1, -2)}$,
+
+  $$
+  \begin{aligned}
+  u &= 2t - 2t \\
+  &= 0
+  \end{aligned}
+  $$
+
+  and $f = 1 - t$ is linear in $t$,
   so the convexity inequality holds with equality there.
 
 :::
@@ -72,7 +81,16 @@ and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
 #### Strictly convex with a singular Hessian
 
 Part 2 is sufficient but not necessary.
-$f(x) = x^4$ has $f''(0) = 12 \cdot 0^2 = 0$, so $\matr{H}_f(0) = [0]$ is [singular](linear-algebra.qmd#def-invertible-matrix) and not positive definite.
+$f(x) = x^4$ has
+
+$$
+\begin{aligned}
+f''(0) &= 12 \cdot 0^2 \\
+&= 0,
+\end{aligned}
+$$
+
+so $\matr{H}_f(0) = [0]$ is [singular](linear-algebra.qmd#def-invertible-matrix) and not positive definite.
 Yet $f$ is strictly convex, by the strict form of @eq-supporting-hyperplane: for $x \ne y$,
 
 $$
@@ -92,6 +110,13 @@ x^4 - y^4 - 4 y^3 (x - y)
 \ea
 $$
 
-which is positive: $(x - y)^2 > 0$, and $(x + y)^2 + 2 y^2 = 0$ would need $y = 0$ and then $x = 0 = y$.
+which is positive: $(x - y)^2 > 0$, and $(x + y)^2 + 2 y^2 = 0$ would need $y = 0$ and then
+
+$$
+\begin{aligned}
+x &= 0 \\
+&= y.
+\end{aligned}
+$$
 
 :::

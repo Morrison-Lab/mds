@@ -21,7 +21,15 @@ so it needs no second derivatives.
 #### Fixed steps on a parabola
 
 For $f(x) = x^2$, $f'(x) = 2x$, so gradient descent with fixed step length $s$ is
-$x^{(t+1)} = x^{(t)} - 2 s\,x^{(t)} = (1 - 2s)\,x^{(t)}$, and $x^{(t)} = (1 - 2s)^t x^{(0)}$.
+
+$$
+\begin{aligned}
+x^{(t+1)} &= x^{(t)} - 2 s\,x^{(t)} \\
+&= (1 - 2s)\,x^{(t)},
+\end{aligned}
+$$
+
+and $x^{(t)} = (1 - 2s)^t x^{(0)}$.
 
 - With $s = 0.25$, $x^{(t)} = 0.5^t x^{(0)}$, which tends to the minimizer $0$.
 - With $s = 0.5$, the first step lands on $0$, since $1 - 2s = 0$.

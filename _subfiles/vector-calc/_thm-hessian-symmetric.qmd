@@ -48,7 +48,15 @@ $$
 \ea
 $$
 
-and $\deriv{x_1} f(\vzero) = \lim_{h \to 0} (0 - 0)/h = 0$,
+and
+
+$$
+\begin{aligned}
+\deriv{x_1} f(\vzero) &= \lim_{h \to 0} (0 - 0)/h \\
+&= 0,
+\end{aligned}
+$$
+
 so $\deriv{x_1} f(0, x_2) = -x_2$ holds at $x_2 = 0$ too.
 In the same way, with the roles of $x_1$ and $x_2$ swapped,
 $f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1$,

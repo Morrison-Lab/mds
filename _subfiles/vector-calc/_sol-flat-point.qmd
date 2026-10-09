@@ -5,16 +5,41 @@
 $$\frac{df}{dw} = 2w - 4$$
 
 **2.** Set it to zero: $2w - 4 = 0$ gives $w = 2$.
-$f(2) = 4 - 8 + 7 = 3$ is the minimum of the values of $f$.
+
+$$
+\begin{aligned}
+f(2) &= 4 - 8 + 7 \\
+&= 3
+\end{aligned}
+$$
+
+is the minimum of the values of $f$.
 Completing the square, $f(w) = (w - 2)^2 + 3$,
-since $(w - 2)^2 + 3 = w^2 - 4w + 4 + 3 = w^2 - 4w + 7$,
+since
+
+$$
+\begin{aligned}
+(w - 2)^2 + 3 &= w^2 - 4w + 4 + 3 \\
+&= w^2 - 4w + 7,
+\end{aligned}
+$$
+
 and $(w - 2)^2 \ge 0$, so $f(w) \ge 3 = f(2)$ for every $w$.
 Equivalently, the derivative is negative below $w = 2$ and positive above it,
 so the function falls into that point and rises out of it.
 
 **3.** At $w = 1$ the derivative is $2(1) - 4 = -2$, so $f$ is falling there.
 With $\smallconst = 0.01$, @eq-linear-approx predicts a change of
-$(0.01)(-2) = -0.02$, from $f(1) = 1 - 4 + 7 = 4$ to $3.98$.
+$(0.01)(-2) = -0.02$, from
+
+$$
+\begin{aligned}
+f(1) &= 1 - 4 + 7 \\
+&= 4
+\end{aligned}
+$$
+
+to $3.98$.
 The exact value is
 
 $$
