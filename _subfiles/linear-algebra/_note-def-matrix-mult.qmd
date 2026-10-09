@@ -17,10 +17,11 @@ $$
 \begin{aligned}
 \matr{A}\matr{B}
 &= \begin{bmatrix} 3 & 2 \\ 1 & 1 \end{bmatrix} \\
-&\neq
-\begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix} \\
-&= \matr{B}\matr{A}.
+\matr{B}\matr{A}
+&= \begin{bmatrix} 1 & 2 \\ 1 & 3 \end{bmatrix},
 \end{aligned}
 $$
+
+so $\matr{A}\matr{B} \neq \matr{B}\matr{A}$.
 
 :::
