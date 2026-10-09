@@ -19,6 +19,6 @@ is the set of values where its density is positive.
 - A count that can be $0$, $1$, $2$, and so on,
   each with positive probability,
   such as the number of hospital visits in a year,
-  has support $\mathbb{N}_0 = \cb{0, 1, 2, \ldots}$.
+  has support $\Nat_0 = \cb{0, 1, 2, \ldots}$.
 
 :::

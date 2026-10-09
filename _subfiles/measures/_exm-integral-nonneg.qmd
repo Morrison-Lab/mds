@@ -26,9 +26,9 @@ so the supremum is $\int_D g \, d\measure = \sum_{x \in D} g(x)$.
 For example, with $g(x) = x$, $\int_D g \, d\measure = 1 + 2 + \cdots + 6 = 21$.
 
 *An infinite integral.*
-For the counting measure $\measure$ on $\mathbb{N}$ and the constant function $h(n) = 1$,
-the split with one set, $A_1 = \mathbb{N}$, gives the sum
-$1 \cdot \measure(\mathbb{N}) = 1 \cdot \infty = \infty$,
-so $\int_{\mathbb{N}} h \, d\measure = \infty$.
+For the counting measure $\measure$ on $\Nat$ and the constant function $h(n) = 1$,
+the split with one set, $A_1 = \Nat$, gives the sum
+$1 \cdot \measure(\Nat) = 1 \cdot \infty = \infty$,
+so $\int_{\Nat} h \, d\measure = \infty$.
 
 :::
