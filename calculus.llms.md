@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 11:58:26 (PDT)
+Last modified: 2026-10-09 12:13:11 (PDT)
 
 ## 1 Derivatives
 
@@ -1204,13 +1204,15 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > ``` downlit
 > x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
-> df <- do.call(rbind, lapply(C_vals, \(C) {
->   data.frame(
->     x = x_seq,
->     y = x_seq^3 / 3 + C,
->     C = factor(C)
->   )
-> }))
+> df <- C_vals |>
+>   lapply(\(C) {
+>     tibble::tibble(
+>       x = x_seq,
+>       y = x_seq^3 / 3 + C,
+>       C = factor(C)
+>     )
+>   }) |>
+>   dplyr::bind_rows()
 >
 > ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
 >   ggplot2::geom_line(linewidth = 0.8) +
@@ -1525,7 +1527,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 > Show R code
 >
 > ``` downlit
-> step_df <- data.frame(
+> step_df <- tibble::tibble(
 >   x = c(0, 0.5, 0.5, 1),
 >   y = c(0, 0, 1, 1),
 >   segment = c("left", "left", "right", "right")
@@ -1864,13 +1866,13 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_area(
->     data = data.frame(t = seq(0, x_focus, length.out = 200)),
+>     data = tibble::tibble(t = seq(0, x_focus, length.out = 200)),
 >     ggplot2::aes(x = t, y = 2 * t),
 >     fill = "steelblue", alpha = 0.4
 >   ) +
 >   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
 >   ggplot2::geom_vline(
->     data = data.frame(x = x_marks),
+>     data = tibble::tibble(x = x_marks),
 >     ggplot2::aes(xintercept = x, color = factor(x)),
 >     linetype = "dashed", linewidth = 0.6
 >   ) +
@@ -1886,7 +1888,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > Show R code
 >
 > ``` downlit
-> slope_df <- data.frame(
+> slope_df <- tibble::tibble(
 >   x = x_marks,
 >   Fx = x_marks^2,
 >   slope = 2 * x_marks
@@ -1950,7 +1952,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > ``` downlit
 > ggplot2::ggplot() +
 >   ggplot2::geom_area(
->     data = data.frame(t = seq(0, t_focus, length.out = 300)),
+>     data = tibble::tibble(t = seq(0, t_focus, length.out = 300)),
 >     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
 >     fill = "steelblue", alpha = 0.4
 >   ) +
@@ -2133,7 +2135,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 > Show R code
 >
 > ``` downlit
-> region <- data.frame(x = c(0, 1, 1), y = c(0, 0, 1))
+> region <- tibble::tibble(x = c(0, 1, 1), y = c(0, 0, 1))
 > ggplot2::ggplot(region, ggplot2::aes(x = x, y = y)) +
 >   ggplot2::geom_polygon(
 >     fill = "steelblue", alpha = 0.4, color = "black", linewidth = 0.7
