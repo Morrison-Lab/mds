@@ -393,6 +393,14 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary 
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_thm-flat-point-critical.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-flat-point-critical.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-opt-gamma-kernel.qmd >}}
 
 {{< slidebreak >}}

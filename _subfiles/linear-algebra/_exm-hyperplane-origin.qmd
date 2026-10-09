@@ -1,0 +1,53 @@
+:::{#exm-hyperplane-origin}
+#### A line in $\reals^2$ and a plane in $\reals^3$, checked on a grid of points
+
+In $\reals^2$, take $\vec{w} = (1, 1)$ and $b = -1$, the line of @exm-hyperplane.
+The point $\vx_0 = -\frac{b}{\dprod{\vec{w}}{\vec{w}}}\,\vec{w}$ is on it,
+and the vector $\vecf{v} = (-w_2, w_1)$ is nonzero with $\dprod{\vec{w}}{\vecf{v}} = 0$,
+so it spans the subspace $\mathcal{H}_0$ of @thm-hyperplane-subspace.
+In $\reals^3$, take $\vec{w} = (1, 1, 1)$ and $b = -1$, the plane of @exm-hyperplane-subspace,
+with the independent vectors $\vecf{v}_1 = (1, -1, 0)$ and $\vecf{v}_2 = (0, 1, -1)$ in $\mathcal{H}_0$.
+The code evaluates $\dprod{\vec{w}}{\vx} + b$ at the origin
+and at points $\vx_0 + t\,\vecf{v}$ and $\vx_0 + s\,\vecf{v}_1 + t\,\vecf{v}_2$.
+
+```{r}
+#| label: hyperplane-origin
+#| code-fold: false
+level <- function(w, b, x) sum(w * x) + b
+
+w2 <- c(1, 1)
+b2 <- -1
+point_line <- -b2 / sum(w2 * w2) * w2
+v <- c(-w2[2], w2[1])
+line_levels <- sapply(-2:2, function(t) level(w2, b2, point_line + t * v))
+
+w3 <- c(1, 1, 1)
+b3 <- -1
+point_plane <- -b3 / sum(w3 * w3) * w3
+v1 <- c(1, -1, 0)
+v2 <- c(0, 1, -1)
+grid <- expand.grid(s = -2:2, t = -2:2)
+plane_levels <- mapply(
+  function(s, t) level(w3, b3, point_plane + s * v1 + t * v2),
+  grid$s, grid$t
+)
+
+c(
+  origin_in_R2 = level(w2, b2, c(0, 0)),
+  origin_in_R3 = level(w3, b3, c(0, 0, 0)),
+  origin_with_b0 = level(w3, 0, c(0, 0, 0))
+)
+```
+
+At the origin the left side equals the offset,
+so the origin is on the line only if $b$ is $0$:
+it gives `{r} level(w2, b2, c(0, 0))` for the line and `{r} level(w3, b3, c(0, 0, 0))` for the plane,
+and `{r} level(w3, 0, c(0, 0, 0))` once the offset is changed to $0$.
+All `{r} length(line_levels)` points $\vx_0 + t\,\vecf{v}$ on the line
+and all `{r} length(plane_levels)` points $\vx_0 + s\,\vecf{v}_1 + t\,\vecf{v}_2$ on the plane
+satisfy the equation up to rounding error:
+`{r} sum(abs(c(line_levels, plane_levels)) < 1e-10)` of the
+`{r} length(line_levels) + length(plane_levels)` points have
+$\abs{\dprod{\vec{w}}{\vx} + b} < 10^{-10}$.
+
+:::

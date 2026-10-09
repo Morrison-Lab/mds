@@ -1,0 +1,29 @@
+:::{#exm-flat-point-critical}
+#### The flat points of a cubic, and a critical point that is not flat
+
+For $f(w) = w^3 - 3w$, the derivative is $f'(w) = 3w^2 - 3$.
+The code differentiates $f$ with `D()` and evaluates $f'$ at several points.
+For $g(w) = \abs{w}$, it computes the difference quotients at $0$ from both sides.
+
+```{r}
+#| label: flat-point-critical
+#| code-fold: false
+f_prime <- D(quote(w^3 - 3 * w), "w")
+points <- c(-2, -1, 0, 1, 2)
+derivs <- data.frame(w = points, f_prime = eval(f_prime, list(w = points)))
+derivs
+flat <- derivs$w[derivs$f_prime == 0]
+
+h <- c(-1e-3, 1e-3)
+quotients <- abs(h) / h
+quotients
+```
+
+The derivative is $0$ at `{r} sum(derivs$f_prime == 0)` of the `{r} nrow(derivs)` points,
+namely $w = `{r} flat[1]`$ and $w = `{r} flat[2]`$.
+These are flat points of $f$, so by @thm-flat-point-critical they are critical points.
+The difference quotients of $g$ at $0$ are `{r} quotients[1]` from the left and `{r} quotients[2]` from the right,
+so $g$ has no derivative at $0$.
+Thus $0$ is a critical point of $g$ (@def-critical-point), but not a flat point.
+
+:::

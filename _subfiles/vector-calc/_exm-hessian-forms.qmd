@@ -1,0 +1,49 @@
+:::{#exm-hessian-forms}
+#### Computing the Hessian entry by entry, and checking it by finite differences
+
+Take $f(\vx) = e^{2x_1 + x_2} - x_1$ from @exm-hessian.
+By @eq-hessian-entry, entry $(i, j)$ of the Hessian is the derivative with respect to $x_i$
+of the derivative with respect to $x_j$.
+The code differentiates `f` symbolically in that order with `D()`,
+evaluates the four entries at $\vx = (0.5, -1)$,
+and compares them with central differences of the gradient.
+
+```{r}
+#| label: hessian-forms
+#| code-fold: false
+f_expr <- quote(exp(2 * x1 + x2) - x1)
+vars <- c("x1", "x2")
+point <- c(x1 = 0.5, x2 = -1)
+
+grad_expr <- lapply(vars, function(v) D(f_expr, v))
+hess_expr <- lapply(vars, function(i) {
+  lapply(grad_expr, function(g_j) D(g_j, i))
+})
+H <- sapply(1:2, function(j) {
+  sapply(1:2, function(i) eval(hess_expr[[i]][[j]], as.list(point)))
+})
+
+grad_at <- function(x) {
+  sapply(grad_expr, function(g) eval(g, as.list(setNames(x, vars))))
+}
+h <- 1e-5
+H_fd <- sapply(1:2, function(j) {
+  sapply(1:2, function(i) {
+    step <- replace(c(0, 0), i, h)
+    (grad_at(point + step)[j] - grad_at(point - step)[j]) / (2 * h)
+  })
+})
+
+H
+H_fd
+```
+
+At this point $u = 2x_1 + x_2 = `{r} 2 * point[["x1"]] + point[["x2"]]`$,
+so the closed form in @exm-hessian gives $4 e^u = `{r} 4 * exp(2 * point[["x1"]] + point[["x2"]])`$
+for entry $(1, 1)$,
+and the code gives `{r} H[1, 1]`.
+The off-diagonal entries are `{r} H[1, 2]` and `{r} H[2, 1]`, which are equal.
+The finite differences agree with the symbolic entries to within
+`{r} format(max(abs(H - H_fd)), digits = 2, scientific = FALSE)`.
+
+:::

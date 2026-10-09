@@ -12,17 +12,6 @@ $i$ obeys the usual rules of arithmetic:
 - sums and products with $i$ are [associative](#def-associative);
 - multiplication [distributes](#def-distributive) over addition.
 
-The number $-i$ also squares to $-1$, since
-
-$$
-\begin{aligned}
-(-i)^2 &= (-1)^2\,i^2 \\
-&= -1;
-\end{aligned}
-$$
-
-$i$ names one of these two square roots, chosen once and for all.
-
 :::
 
 ::: notes

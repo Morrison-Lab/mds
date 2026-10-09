@@ -215,11 +215,27 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_thm-hessian-forms.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-hessian-forms.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-higher-partials.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-continuous-several.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-continuous-several.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_exm-continuous-several-operations.qmd >}}
 
 {{< slidebreak >}}
 

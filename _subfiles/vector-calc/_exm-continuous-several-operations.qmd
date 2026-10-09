@@ -1,0 +1,55 @@
+:::{#exm-continuous-several-operations}
+#### Choosing $\tolin$ for a sum, a multiple and a composition
+
+Let $f(\vx) = x_1$ and $g(\vx) = x_2$ on $\reals^2$, and $h(t) = 3t$ on $\reals$.
+Since $\abs{y_i - x_i} \le \norm{\vy - \vx}$, the functions $f$ and $g$ are continuous with $\tolin = \tolout$,
+and $h$ is continuous with $\tolin = \tolout / 3$, because $\abs{h(s) - h(t)} = 3\,\abs{s - t}$.
+Take $\vx = (1, 2)$ and $\tolout = 0.1$.
+The proof of @thm-continuous-several gives these values of $\tolin$:
+
+- for $f + g$ (part 3), $\tolin = \min\cb{\tolout / 2, \tolout / 2}$;
+- for $3 f$ (part 4), $\tolin = \tolout / (3 + 1)$;
+- for $h \circ (f + g)$ (part 2), the outer value $\tolin_h = \tolout / 3$ plays the role of $\tolout$ for $f + g$,
+  so $\tolin = \tolin_h / 2$.
+
+The code draws many points $\vy$ at distance less than $\tolin$ from $\vx$
+and finds the largest change in each function.
+
+```{r}
+#| label: continuous-several-operations
+#| code-fold: false
+set.seed(571)
+eps <- 0.1
+x <- c(1, 2)
+f <- function(x) x[1]
+g <- function(x) x[2]
+h <- function(t) 3 * t
+
+fun_sum <- function(x) f(x) + g(x)
+fun_multiple <- function(x) 3 * f(x)
+fun_composition <- function(x) h(fun_sum(x))
+
+deltas <- c(
+  sum = eps / 2,
+  multiple = eps / (3 + 1),
+  composition = (eps / 3) / 2
+)
+funs <- list(
+  sum = fun_sum, multiple = fun_multiple, composition = fun_composition
+)
+
+n <- 10000L
+largest_change <- sapply(names(funs), function(nm) {
+  radius <- deltas[[nm]] * sqrt(runif(n))
+  angle <- runif(n, 0, 2 * pi)
+  y <- cbind(x[1] + radius * cos(angle), x[2] + radius * sin(angle))
+  max(abs(apply(y, 1, funs[[nm]]) - funs[[nm]](x)))
+})
+data.frame(delta = deltas, largest_change = largest_change, eps = eps)
+```
+
+For `{r} sum(largest_change < eps)` of the `{r} length(largest_change)` functions,
+the largest change among the `{r} n` points is below $\tolout = `{r} eps`$,
+as @thm-continuous-several guarantees.
+
+:::

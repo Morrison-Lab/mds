@@ -1,0 +1,60 @@
+:::{#thm-hessian-forms}
+#### Other ways to write the Hessian, and its entries
+
+Let $f$ and $\vx$ be as in @def-hessian.
+
+1. The Hessian can be written with the row-vector derivative (@def-row-vector-derivative) of $f$:
+
+   $$
+   \begin{aligned}
+   \matr{H}_f(\vx)
+   &= \deriv{\vx} \paren{\derivf{f(\vx)}{\tp{\vx}}} \\
+   &= \xderivf{f(\vx)}{\vx}{\tp{\vx}}.
+   \end{aligned}
+   $$ {#eq-hessian-row}
+
+2. The $(i, j)$ entry of the Hessian is
+
+   $$
+   \sb{\matr{H}_f(\vx)}_{ij} = \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
+   $$ {#eq-hessian-entry}
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+**Part 1.**
+By @thm-row-deriv-tp-col-deriv, the transposed gradient $\tp{\paren{\deriv{\vx} f(\vx)}}$
+equals the row-vector derivative $\derivf{f(\vx)}{\tp{\vx}}$.
+Substituting it into @eq-hessian gives the first line.
+The second line is the same expression written as a second derivative.
+It follows the shape rule of matrix multiplication (@rem-row-derivative-shape):
+the $p \times 1$ column-vector operator $\deriv{\vx}$ stands on the left of a $1 \times p$ row vector,
+giving a $p \times p$ matrix.
+
+**Part 2.**
+Let $y_j \eqdef \deriv{x_j} f(\vx)$ be entry $j$ of the gradient.
+By @def-vector-valued-derivative, the $(i, j)$ entry of the derivative of the vector $\vy = (y_1, \ldots, y_p)$
+with respect to $\vx$ is
+
+$$
+\ba
+\sb{\matr{H}_f(\vx)}_{ij}
+&= \sb{\deriv{\vx} \tp{\vy}}_{ij}
+&& \text{(@eq-hessian, with } \vy \text{ the gradient)}
+\\
+&= \deriv{x_i} y_j
+&& \text{(@def-vector-valued-derivative)}
+\\
+&= \deriv{x_i} \paren{\deriv{x_j} f(\vx)}.
+&& \text{(} y_j = \deriv{x_j} f(\vx) \text{)}
+\ea
+$$
+
+:::
+
+:::

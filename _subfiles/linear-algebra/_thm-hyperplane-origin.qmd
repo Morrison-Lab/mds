@@ -1,0 +1,50 @@
+:::{#thm-hyperplane-origin}
+#### Where a hyperplane passes, and its shape in $\reals^2$ and $\reals^3$
+
+Let $\mathcal{H} = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b = 0}$ be a hyperplane (@def-hyperplane).
+
+1. $\mathcal{H}$ contains the origin $\vzero$ exactly when $b = 0$.
+2. If $p = 2$, then $\mathcal{H}$ is a line:
+   $\mathcal{H} = \cb{\vx_0 + t\,\vecf{v} : t \in \reals}$ for some $\vx_0 \in \reals^2$ and some nonzero $\vecf{v} \in \reals^2$.
+3. If $p = 3$, then $\mathcal{H}$ is a plane:
+   $\mathcal{H} = \cb{\vx_0 + s\,\vecf{v}_1 + t\,\vecf{v}_2 : s, t \in \reals}$
+   for some $\vx_0 \in \reals^3$ and some linearly independent $\vecf{v}_1, \vecf{v}_2 \in \reals^3$.
+
+:::
+
+{{< slidebreak >}}
+
+::: {.content-hidden when-format="revealjs"}
+
+::: proof
+
+**Part 1.**
+Since $\dprod{\vec{w}}{\vzero} = 0$,
+
+$$
+\ba
+\dprod{\vec{w}}{\vzero} + b
+&= 0 + b
+&& \text{(the dot product with } \vzero \text{ is } 0 \text{)}
+\\
+&= b,
+&& \text{(@thm-add-ident)}
+\ea
+$$
+
+so $\vzero \in \mathcal{H}$ exactly when $b = 0$.
+
+**Parts 2 and 3.**
+By @thm-hyperplane-subspace, $\mathcal{H} = \cb{\vx_0 + \vecf{s} : \vecf{s} \in \mathcal{H}_0}$
+for any $\vx_0 \in \mathcal{H}$,
+where $\mathcal{H}_0$ is a subspace of $\reals^p$ of dimension $p - 1$.
+
+For $p = 2$, $\mathcal{H}_0$ has dimension $1$, so it has a basis (@def-basis) with one vector $\vecf{v}$.
+That vector is nonzero, and $\mathcal{H}_0 = \cb{t\,\vecf{v} : t \in \reals}$.
+
+For $p = 3$, $\mathcal{H}_0$ has dimension $2$, so it has a basis with two vectors $\vecf{v}_1$ and $\vecf{v}_2$.
+They are linearly independent, and $\mathcal{H}_0 = \cb{s\,\vecf{v}_1 + t\,\vecf{v}_2 : s, t \in \reals}$.
+
+:::
+
+:::

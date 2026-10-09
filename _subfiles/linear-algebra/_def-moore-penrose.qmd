@@ -9,8 +9,6 @@ is an $n \times m$ matrix $\matr{G}$ satisfying all four conditions
 3. $\tp{(\matr{A} \matr{G})} = \matr{A} \matr{G}$;
 4. $\tp{(\matr{G} \matr{A})} = \matr{G} \matr{A}$.
 
-Condition 1 says $\matr{G}$ is a generalized inverse (@def-generalized-inverse).
-
 :::
 
 {{< slidebreak >}}

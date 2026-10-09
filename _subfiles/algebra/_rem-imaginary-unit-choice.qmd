@@ -1,0 +1,8 @@
+:::{#rem-imaginary-unit-choice}
+#### The rule does not tell $i$ from $-i$
+
+Because $-i$ obeys the same rule as $i$ (@thm-negative-imaginary-unit),
+the rule $i^2 = -1$ does not single one of them out.
+The symbol $i$ names one of these two square roots of $-1$, chosen once and for all.
+
+:::
