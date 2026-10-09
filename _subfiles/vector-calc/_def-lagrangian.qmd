@@ -25,10 +25,10 @@ $\tp{\vlagmult} \tp{\matr{A}} = \tp{(\matr{A} \vlagmult)}$, so
 $$
 \ba
 L(\vx, \vlagmult)
-&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\vlagmult} \tp{\matr{A}} \vx - \dprod{\vlagmult}{\vecf{b}}
+&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\vlagmult} \tp{\matr{A}} \vx - \tp{\vlagmult} \vecf{b}
 && \text{(distribute)}
 \\
-&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{(\matr{A} \vlagmult)} \vx - \dprod{\vlagmult}{\vecf{b}},
+&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{(\matr{A} \vlagmult)} \vx - \tp{\vlagmult} \vecf{b},
 && \text{(transpose of a product)}
 \ea
 $$
@@ -47,7 +47,7 @@ and [constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vec
 $$
 \ba
 \deriv{\vx} L(\vx, \vlagmult)
-&= \tfrac{1}{2}\,\deriv{\vx} \paren{\tp{\vx} \matr{S} \vx} + \deriv{\vx} \paren{\tp{(\matr{A} \vlagmult)} \vx} - \deriv{\vx} \paren{\dprod{\vlagmult}{\vecf{b}}}
+&= \tfrac{1}{2}\,\deriv{\vx} \paren{\tp{\vx} \matr{S} \vx} + \deriv{\vx} \paren{\tp{(\matr{A} \vlagmult)} \vx} - \deriv{\vx} \paren{\tp{\vlagmult} \vecf{b}}
 && \text{(sum and constant multiple)}
 \\
 &= \tfrac{1}{2} \paren{2 \matr{S} \vx} + \matr{A} \vlagmult - \vzero_{p \times 1}

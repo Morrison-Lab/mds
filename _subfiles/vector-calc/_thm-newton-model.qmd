@@ -30,7 +30,7 @@ and $\tp{\stepvec^*{}} \matr{H} \vecf{d} = \tp{\vecf{d}} \matr{H} \stepvec^*$ in
 $$
 \ba
 q(\stepvec^* + \vecf{d})
-&= f(\vx) + \tp{\vecf{g}} (\stepvec^* + \vecf{d}) + \tfrac{1}{2}\,\tp{(\stepvec^* + \vecf{d})} \matr{H} (\stepvec^* + \vecf{d})
+&= f(\vx) + \dprod{\vecf{g}}{(\stepvec^* + \vecf{d})} +\tfrac{1}{2}\,\tp{(\stepvec^* + \vecf{d})} \matr{H} (\stepvec^* + \vecf{d})
 && \text{(definition of } q \text{)}
 \\
 &= f(\vx) + \dprod{\vecf{g}}{\stepvec^*} + \dprod{\vecf{g}}{\vecf{d}}

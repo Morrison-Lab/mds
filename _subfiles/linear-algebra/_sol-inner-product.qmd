@@ -2,7 +2,7 @@
 
 Multiply entry by entry and add:
 
-$$\va\' \vec b = (3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8$$
+$$\dprod{\va}{\vec{b}} =(3)(0) + (-1)(4) + (2)(-2) = 0 - 4 - 4 = -8$$
 
 For the norm, take the inner product of $\va$ with itself first:
 

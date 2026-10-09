@@ -47,7 +47,7 @@ Next,
 
 $$
 \ba
-\vec{w}\' (\vx_t + \vecf{v}) + b
+\dprod{\vec{w}}{(\vx_t + \vecf{v})} + b
 &= \paren{\dprod{\vec{w}}{\vx_t} + b} + \dprod{\vec{w}}{\vecf{v}}
 && \text{(linearity of } \vx \mapsto \dprod{\vec{w}}{\vx} \text{)}
 \\

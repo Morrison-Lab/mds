@@ -24,7 +24,7 @@ Then
 
 $$
 \ba
-\dprod{\vecf{x}}{\vecf{x}}
+\tp{\vecf{x}} \vecf{x}
 &= \tp{(\tp{\matr{A}} \vecf{u})}\,\vecf{x}
 && \text{(substitute } \vecf{x} = \tp{\matr{A}} \vecf{u} \text{ in the first factor)}
 \\
@@ -45,7 +45,7 @@ $$
 \ea
 $$
 
-But $\dprod{\vecf{x}}{\vecf{x}} = x_1^2 + \cdots + x_n^2$,
+But $\tp{\vecf{x}} \vecf{x} = x_1^2 + \cdots + x_n^2$,
 which is $0$ only when every $x_i = 0$.
 So $\vecf{x} = \vzero_n$.
 
