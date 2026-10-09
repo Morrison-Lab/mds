@@ -2,8 +2,8 @@
 
 The answer depends on whether the source counts $0$ as a natural number:
 
-- if $\mathbb{N}$ starts at $0$, the set is $\cb{0, 1, 2}$;
-- if $\mathbb{N}$ starts at $1$, the set is $\cb{1, 2}$.
+- if $\Nat$ starts at $0$, the set is $\cb{0, 1, 2}$;
+- if $\Nat$ starts at $1$, the set is $\cb{1, 2}$.
 
 Both conventions are in common use,
 so the answer is not the same in every textbook.

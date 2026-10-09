@@ -75,7 +75,7 @@ The probability $P(X \le 1,\, Y \le 1)$
 is the integral of $f$ over $[0, 1]^2$
 with respect to Lebesgue measure (ordinary length) in each coordinate.
 Lebesgue measure on $[0, \infty)$ is $\sigma$-finite,
-because $[0, \infty)$ is the union of the intervals $[0, n]$, $n \in \mathbb{N}$,
+because $[0, \infty)$ is the union of the intervals $[0, n]$, $n \in \Nat$,
 each of finite length $n$;
 so the $\sigma$-finiteness condition of @thm-fubini-tonelli holds.
 Since $f(x,y) = e^{-(x+y)} \ge 0$,

@@ -13,13 +13,13 @@
   $$
 
   by @exm-integral-nonneg.
-- For the counting measure on $\mathbb{N}$,
+- For the counting measure on $\Nat$,
   the constant function $h(n) = 1$ is not absolutely integrable,
   because
 
   $$
   \begin{aligned}
-  \int_{\mathbb{N}} \abs{h} \, d\measure &= \int_{\mathbb{N}} h \, d\measure \\
+  \int_{\Nat} \abs{h} \, d\measure &= \int_{\Nat} h \, d\measure \\
   &= \infty
   \end{aligned}
   $$

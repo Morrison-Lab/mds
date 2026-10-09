@@ -1,16 +1,16 @@
 ::: {.callout-note}
 #### Other conventions for the natural numbers
 
-Other sources may define $\mathbb{N}$ differently,
+Other sources may define $\Nat$ differently,
 so check each source's definition before reading its formulas:
 
-- Many sources include $0$ in $\mathbb{N}$.
-  The international standard ISO 80000-2 defines $\mathbb{N}$ to include $0$,
+- Many sources include $0$ in $\Nat$.
+  The international standard ISO 80000-2 defines $\Nat$ to include $0$,
   continuing the earlier standard ISO 31-11 (1978).
-- Other sources start $\mathbb{N}$ at $1$, as these notes do.
+- Other sources start $\Nat$ at $1$, as these notes do.
 - To remove the ambiguity,
-  some sources write $\mathbb{N}_1$ or $\mathbb{Z}^+$ for $\cb{1, 2, 3, \ldots}$,
-  and $\mathbb{N}_0$ or $\mathbb{Z}^{0+}$ for $\cb{0, 1, 2, \ldots}$.
+  some sources write $\Nat_1$ or $\mathbb{Z}^+$ for $\cb{1, 2, 3, \ldots}$,
+  and $\Nat_0$ or $\mathbb{Z}^{0+}$ for $\cb{0, 1, 2, \ldots}$.
 - The words vary too.
   "Positive integers" ($\cb{1, 2, 3, \ldots}$)
   and "non-negative integers" ($\cb{0, 1, 2, \ldots}$)

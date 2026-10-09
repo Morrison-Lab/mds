@@ -2,17 +2,17 @@
 
 #### Vector-derivative of a product of matrices
 
-If $\matr{A}$ ($\ell \times m$) and $\matr{B}$ ($m \times q$)
+If $\matr{A}$ ($k \times m$) and $\matr{B}$ ($m \times q$)
 are constant with respect to $\vcoef$,
 and $\vecf{v} = \vecf{v}(\vcoef)$ is a $q \times 1$ vector
 that depends on the $p \times 1$ vector $\vcoef$,
 then:
 
 $$
-\underbrace{\deriv{\vcoef} (\matr{A} \matr{B} \vecf{v})}_{p \times \ell} =
+\underbrace{\deriv{\vcoef} (\matr{A} \matr{B} \vecf{v})}_{p \times k} =
 \underbrace{\paren{\deriv{\vcoef} \vecf{v}}}_{p \times q}
 \underbrace{\tp{\matr{B}}}_{q \times m}
-\underbrace{\tp{\matr{A}}}_{m \times \ell}
+\underbrace{\tp{\matr{A}}}_{m \times k}
 $$
 
 :::
@@ -20,7 +20,7 @@ $$
 ::: proof
 
 Apply @thm-deriv-matrix-vector
-with the constant $\ell \times q$ matrix $\matr{A}\matr{B}$,
+with the constant $k \times q$ matrix $\matr{A}\matr{B}$,
 then use the [transpose of a product](linear-algebra.qmd#thm-transpose-product):
 
 $$

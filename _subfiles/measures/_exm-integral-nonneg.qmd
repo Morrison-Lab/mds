@@ -33,16 +33,16 @@ $$
 $$
 
 *An infinite integral.*
-For the counting measure $\measure$ on $\mathbb{N}$ and the constant function $h(n) = 1$,
-the split with one set, $A_1 = \mathbb{N}$, gives the sum
+For the counting measure $\measure$ on $\Nat$ and the constant function $h(n) = 1$,
+the split with one set, $A_1 = \Nat$, gives the sum
 
 $$
 \begin{aligned}
-1 \cdot \measure(\mathbb{N}) &= 1 \cdot \infty \\
+1 \cdot \measure(\Nat) &= 1 \cdot \infty \\
 &= \infty,
 \end{aligned}
 $$
 
-so $\int_{\mathbb{N}} h \, d\measure = \infty$.
+so $\int_{\Nat} h \, d\measure = \infty$.
 
 :::
