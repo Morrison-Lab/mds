@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 00:57:32 (PDT)
+Last modified: 2026-10-09 01:18:43 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -70,7 +70,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Example 4 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This repository holds a copy at `data/auto.csv`, and both code tabs below read that file.
+> **Example 4 (A stationary point of the sum of squared errors, on real data)** The Auto data record the horsepower and fuel economy (miles per gallon) of 392 car models sold between 1970 and 1982. They come from the StatLib library at Carnegie Mellon University and ship with the book *An Introduction to Statistical Learning*, in the Python package [`ISLP`](https://islp.readthedocs.io/) (`ISLP.load_data("Auto")`) and the R package [`ISLR2`](https://cran.r-project.org/package=ISLR2) (`ISLR2::Auto`). This site has a copy at [`data/auto.csv`](data/auto.csv), and both code tabs below read that file.
 >
 > Let \\y_i\\ be the miles per gallon and \\x_i\\ the horsepower of car \\i\\. To predict miles per gallon from horsepower with a line, write \\\tilde{\beta}= {(\beta\_{0}, \beta\_{1})}^{\top}\\ and let \\\mathbf{X}\\ be the matrix whose row \\i\\ is \\(1, x_i)\\. The sum of squared errors is
 >
@@ -194,11 +194,11 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Example 6 (For a quadratic form the expansion is exact)** Let \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. Its gradient is \\2 \mathbf{S} \tilde{x}\\ ([derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form)) and its Hessian is \\2 \mathbf{S}\\ at every point ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever \\\tau\\ is, [Theorem 4](#thm-taylor-mv) reads
 >
-> \\ f(\tilde{z} + \tilde{h}) = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h} = {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}, \\
+> \\ \begin{aligned} f(\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}, \end{aligned} \\
 >
 > using \\{(2 \mathbf{S} \tilde{z})}^{\top} = 2\\{\tilde{z}}^{\top}\\{\mathbf{S}}^{\top} = 2\\{\tilde{z}}^{\top} \mathbf{S}\\. Multiplying out directly gives the same:
 >
-> \\ \begin{aligned} {(\tilde{z} + \tilde{h})}^{\top} \mathbf{S} (\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{z} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h} && \text{(distribute)} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}. && \text{(} {\tilde{h}}^{\top} \mathbf{S} \tilde{z} = {({\tilde{h}}^{\top} \mathbf{S} \tilde{z})}^{\top} = {\tilde{z}}^{\top} \mathbf{S} \tilde{h} \text{)} \end{aligned} \\
+> \\ \begin{aligned} {(\tilde{z} + \tilde{h})}^{\top} \mathbf{S} (\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{z} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h} && \text{(distribute)} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}. && \text{(} {\tilde{h}}^{\top} \mathbf{S} \tilde{z} = {({\tilde{h}}^{\top} \mathbf{S} \tilde{z})}^{\top} \text{, which equals } {\tilde{z}}^{\top} \mathbf{S} \tilde{h} \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -235,7 +235,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. Let \\\tilde{a} \stackrel{\text{def}}{=}{(\mathopen{}\left\|h_1\right\|\mathclose{}, \ldots, \mathopen{}\left\|h_p\right\|\mathclose{})}^{\top}\\ and \\\tilde{1} \stackrel{\text{def}}{=}{(1, \ldots, 1)}^{\top}\\, both in \\\mathbb{R}^p\\. Then
 >
-> \\ \begin{aligned} \mathopen{}\left\|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right\|\mathclose{} &= \mathopen{}\left\|\sum\_{i=1}^p\sum\_{j=1}^ph_i\\e\_{ij}\\h_j\right\|\mathclose{} && \text{(matrix product)} \\ &\le \sum\_{i=1}^p\sum\_{j=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|e\_{ij}\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le m \sum\_{i=1}^p\sum\_{j=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(} \mathopen{}\left\|e\_{ij}\right\|\mathclose{} \le m \text{)} \\ &= m\\\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\right)\mathclose{}^2 && \text{(the double sum factors)} \\ &= m\\(\tilde{1} \cdot \tilde{a})^2 && \text{(dot product)} \\ &\le m\\\mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 && \text{(Cauchy-Schwarz, squared)} \\ &= m\\p\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(} \mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2 = p \text{ and } \mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 = \textstyle\sum_i h_i^2 = \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\|{\tilde{h}}^{\top} \mathbf{E} \tilde{h}\right\|\mathclose{} &= \mathopen{}\left\|\sum\_{i=1}^p\sum\_{j=1}^ph_i\\e\_{ij}\\h_j\right\|\mathclose{} && \text{(matrix product)} \\ &\le \sum\_{i=1}^p\sum\_{j=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|e\_{ij}\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(triangle inequality for numbers)} \\ &\le m \sum\_{i=1}^p\sum\_{j=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\\\mathopen{}\left\|h_j\right\|\mathclose{} && \text{(} \mathopen{}\left\|e\_{ij}\right\|\mathclose{} \le m \text{)} \\ &= m\\\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|h_i\right\|\mathclose{}\right)\mathclose{}^2 && \text{(the double sum factors)} \\ &= m\\(\tilde{1} \cdot \tilde{a})^2 && \text{(dot product)} \\ &\le m\\\mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2\\\mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 && \text{(Cauchy-Schwarz, squared)} \\ &= m\\p\\\mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2. && \text{(} \mathopen{}\left\lVert\tilde{1}\right\rVert\mathclose{}^2 = p \text{ and } \mathopen{}\left\lVert\tilde{a}\right\rVert\mathclose{}^2 = \textstyle\sum_i h_i^2 \text{, which equals } \mathopen{}\left\lVert\tilde{h}\right\rVert\mathclose{}^2 \text{)} \end{aligned} \\
 >
 > The steps use the [matrix product](linear-algebra.llms.md#def-matrix-mult), the [dot product](linear-algebra.llms.md#def-dot-product) and the [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
 
@@ -300,7 +300,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 4 (Half-space)** Let \\\tilde{a} \in \mathbb{R}^p\\ be a nonzero vector and \\c\\ a real number. The set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : {\tilde{a}}^{\top} \tilde{x}\ge c\right\\\mathclose{}\\ is a (closed) **half-space**: the points on one side of the boundary \\\mathopen{}\left\\\tilde{x}: {\tilde{a}}^{\top} \tilde{x}= c\right\\\mathclose{}\\, together with the boundary. In \\\mathbb{R}^2\\, a half-space is called a **half-plane**.
+> **Definition 4 (Half-space)** Let \\\tilde{a} \in \mathbb{R}^p\\ be a nonzero vector and \\c\\ a real number. The set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{a} \cdot \tilde{x} \ge c\right\\\mathclose{}\\ is a (closed) **half-space**: the points on one side of the boundary \\\mathopen{}\left\\\tilde{x}: \tilde{a} \cdot \tilde{x} = c\right\\\mathclose{}\\, together with the boundary. In \\\mathbb{R}^2\\, a half-space is called a **half-plane**.
 
 > **NOTE:**
 >
@@ -448,7 +448,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Example 21 (Tangent lines under a parabola)** For \\f(x) = x^2\\, the right side of [Equation 1](#eq-supporting-hyperplane) is \\y^2 + 2y (x - y) = 2xy - y^2\\, and
 >
-> \\ f(x) - (2xy - y^2) = x^2 - 2xy + y^2 = (x - y)^2 \ge 0, \\
+> \\ \begin{aligned} f(x) - (2xy - y^2) &= x^2 - 2xy + y^2 \\ &= (x - y)^2 \\ &\ge 0, \end{aligned} \\
 >
 > with equality only at \\x = y\\, confirming that \\x^2\\ is strictly convex. For \\g(x) = -x^2\\ the inequality fails: at \\y = 0\\ the tangent line is \\s = 0\\, and \\g(1) = -1 \< 0\\.
 
@@ -477,7 +477,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > - \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ has Hessian \\e^{u} \begin{bmatrix} 4 & 2 \\ 2 & 1 \end{bmatrix}\\ with \\u = 2x_1 + x_2\\ ([Example](vector-calculus.llms.md#exm-hessian)), and
 >
->   \\ {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x})\\\tilde{h} = e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) = e^{u} (2 h_1 + h_2)^2 \ge 0, \\
+>   \\ \begin{aligned} {\tilde{h}}^{\top}\\\mathbf{H}\_f(\tilde{x})\\\tilde{h} &= e^{u} (4 h_1^2 + 4 h_1 h_2 + h_2^2) \\ &= e^{u} (2 h_1 + h_2)^2 \\ &\ge 0, \end{aligned} \\
 >
 >   so \\f\\ is convex. The Hessian is not positive definite (\\\tilde{h} = {(1, -2)}^{\top}\\ gives \\0\\), so part 2 does not apply, and in fact \\f\\ is not strictly convex: along \\\tilde{x}= t\\{(1, -2)}^{\top}\\, \\u = 2t - 2t = 0\\ and \\f = 1 - t\\ is linear in \\t\\, so the convexity inequality holds with equality there.
 
@@ -497,7 +497,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > *Proof*. For every \\\tilde{x}\\,
 >
-> \\ \begin{aligned} f(\tilde{x}) &\ge f(\tilde{x}^\*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(}\href{#eq-supporting-hyperplane}{\text{Equation~1}}\text{ with } \tilde{y}= \tilde{x}^\* \text{)} \\ &= f(\tilde{x}^\*) + {\tilde{0}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= f(\tilde{x}^\*). && \text{(} {\tilde{0}}^{\top} \tilde{v} = 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{x}) &\ge f(\tilde{x}^\*) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^\*)\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(}\href{#eq-supporting-hyperplane}{\text{Equation~1}}\text{ with } \tilde{y}= \tilde{x}^\* \text{)} \\ &= f(\tilde{x}^\*) + {\tilde{0}}^{\top} (\tilde{x}- \tilde{x}^\*) && \text{(} \tilde{x}^\* \text{ is stationary)} \\ &= f(\tilde{x}^\*). && \text{(} \tilde{0} \cdot \tilde{v} = 0 \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -603,7 +603,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > **Example 28 (The closest point on a line to the origin)** Minimize \\x_1^2 + x_2^2\\ subject to \\3 x_1 + 4 x_2 = 5\\. In the form of [Theorem 11](#thm-qp-equality), \\x_1^2 + x_2^2 = \tfrac{1}{2}\\{\tilde{x}}^{\top} (2 \mathbf{I}\_2) \tilde{x}\\, so \\\mathbf{S} = 2 \mathbf{I}\_2\\, \\\mathbf{A} = {(3, 4)}^{\top}\\ (\\p = 2\\, \\m = 1\\) and \\\tilde{b} = \[5\]\\. The hypotheses hold: \\2 \mathbf{I}\_2\\ is positive definite, and the single column \\{(3, 4)}^{\top}\\ is nonzero, so it is linearly independent. Also \\\mathbf{S}^{-1} = \tfrac{1}{2} \mathbf{I}\_2\\. Then, from the formulas of [Theorem 11](#thm-qp-equality),
 >
-> \\ \begin{aligned} \mathbf{M} &= {\mathbf{A}}^{\top}\\\tfrac{1}{2} \mathbf{I}\_2\\\mathbf{A} = \tfrac{1}{2}\\(3^2 + 4^2) = \tfrac{25}{2}, \\ \tilde{x}^\* &= \tfrac{1}{2} \mathbf{I}\_2 \begin{bmatrix} 3 \\ 4 \end{bmatrix} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = \tfrac{5}{25} \begin{bmatrix} 3 \\ 4 \end{bmatrix} = \begin{bmatrix} 0.6 \\ 0.8 \end{bmatrix}, \\ \tilde{\lambda}^\* &= -\mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = -0.4, \\ f(\tilde{x}^\*) &= \tfrac{1}{2} (5) \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) = 1. \end{aligned} \\
+> \\ \begin{aligned} \mathbf{M} &= {\mathbf{A}}^{\top}\\\tfrac{1}{2} \mathbf{I}\_2\\\mathbf{A} \\ &= \tfrac{1}{2}\\(3^2 + 4^2) \\ &= \tfrac{25}{2}, \\ \tilde{x}^\* &= \tfrac{1}{2} \mathbf{I}\_2 \begin{bmatrix} 3 \\ 4 \end{bmatrix} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) \\ &= \tfrac{5}{25} \begin{bmatrix} 3 \\ 4 \end{bmatrix} \\ &= \begin{bmatrix} 0.6 \\ 0.8 \end{bmatrix}, \\ \tilde{\lambda}^\* &= -\mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) \\ &= -0.4, \\ f(\tilde{x}^\*) &= \tfrac{1}{2} (5) \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{} (5) \\ &= 1. \end{aligned} \\
 >
 > Checks:
 >
@@ -632,7 +632,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > **Corollary 2 (The multiplier is the sensitivity of the minimum value)** In [Theorem 11](#thm-qp-equality), write the minimum value as a function of \\\tilde{b}\\, \\f^\*(\tilde{b}) = \tfrac{1}{2}\\{\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\\. Its sensitivity to \\\tilde{b}\\ ([Definition 11](#def-sensitivity)) is
 >
-> \\ \frac{\partial}{\partial \tilde{b}} f^\*(\tilde{b}) = \mathbf{M}^{-1} \tilde{b} = -\tilde{\lambda}^\*. \\
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{b}} f^\*(\tilde{b}) &= \mathbf{M}^{-1} \tilde{b} \\ &= -\tilde{\lambda}^\*. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -697,7 +697,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > **Definition 14 (Quadratic model (second-order Taylor polynomial))** Let \\f\\ be as in [Definition 13](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta}\in \mathbb{R}^p\\
 >
-> \\ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}+ \tfrac{1}{2}\\{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta}, \\
+> \\ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + \tilde{g} \cdot \tilde{\delta} + \tfrac{1}{2}\\{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta}, \\
 >
 > also called the **second-order Taylor polynomial** of \\f\\ at \\\tilde{x}\\: when the second partial derivatives of \\f\\ are continuous, [Theorem 4](#thm-taylor-mv) says that \\f(\tilde{x}+ \tilde{\delta})\\ equals the same expression with the Hessian evaluated at a point between \\\tilde{x}\\ and \\\tilde{x}+ \tilde{\delta}\\.
 
@@ -713,11 +713,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > *Proof*. \\\mathbf{H}\\ is symmetric, by the definition of [positive definite](linear-algebra.llms.md#def-positive-definite), and invertible ([positive definite inverse](linear-algebra.llms.md#thm-pd-inverse)), so \\\tilde{\delta}^\*\\ exists and \\\mathbf{H} \tilde{\delta}^\* = -\tilde{g}\\. For any \\\tilde{d} \in \mathbb{R}^p\\, first
 >
-> \\ \begin{aligned} {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^\* &= -{\tilde{d}}^{\top} \tilde{g} && \text{(} \mathbf{H} \tilde{\delta}^\* = -\tilde{g} \text{)} \\ &= -{\tilde{g}}^{\top} \tilde{d}, && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^\* &= -\tilde{d} \cdot \tilde{g} && \text{(} \mathbf{H} \tilde{\delta}^\* = -\tilde{g} \text{)} \\ &= -\tilde{g} \cdot \tilde{d}, && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \end{aligned} \\
 >
 > and \\{\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{d} = {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^\*\\ in the same way, using \\{\mathbf{H}}^{\top} = \mathbf{H}\\. Then
 >
-> \\ \begin{aligned} q(\tilde{\delta}^\* + \tilde{d}) &= f(\tilde{x}) + {\tilde{g}}^{\top} (\tilde{\delta}^\* + \tilde{d}) + \tfrac{1}{2}\\{(\tilde{\delta}^\* + \tilde{d})}^{\top} \mathbf{H} (\tilde{\delta}^\* + \tilde{d}) && \text{(definition of } q \text{)} \\ &= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^\* + {\tilde{g}}^{\top} \tilde{d} + \tfrac{1}{2} \mathopen{}\left({\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{\delta}^\* + {\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{d} + {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^\* + {\tilde{d}}^{\top} \mathbf{H} \tilde{d}\right)\mathclose{} && \text{(distribute)} \\ &= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^\* + {\tilde{g}}^{\top} \tilde{d} + \tfrac{1}{2}\\{\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{\delta}^\* - {\tilde{g}}^{\top} \tilde{d} + \tfrac{1}{2}\\{\tilde{d}}^{\top} \mathbf{H} \tilde{d} && \text{(both cross terms equal } -{\tilde{g}}^{\top} \tilde{d} \text{)} \\ &= f(\tilde{x}) + {\tilde{g}}^{\top} \tilde{\delta}^\* + \tfrac{1}{2}\\{\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{\delta}^\* + \tfrac{1}{2}\\{\tilde{d}}^{\top} \mathbf{H} \tilde{d} && \text{(cancel } {\tilde{g}}^{\top} \tilde{d} \text{)} \\ &= q(\tilde{\delta}^\*) + \tfrac{1}{2}\\{\tilde{d}}^{\top} \mathbf{H} \tilde{d}, && \text{(definition of } q \text{)} \end{aligned} \\
+> \\ \begin{aligned} q(\tilde{\delta}^\* + \tilde{d}) &= f(\tilde{x}) + \tilde{g} \cdot (\tilde{\delta}^\* + \tilde{d}) +\tfrac{1}{2}\\{(\tilde{\delta}^\* + \tilde{d})}^{\top} \mathbf{H} (\tilde{\delta}^\* + \tilde{d}) && \text{(definition of } q \text{)} \\ &= f(\tilde{x}) + \tilde{g} \cdot \tilde{\delta}^\* + \tilde{g} \cdot \tilde{d} + \tfrac{1}{2} \mathopen{}\left({\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{\delta}^\* + {\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{d} + {\tilde{d}}^{\top} \mathbf{H} \tilde{\delta}^\* + {\tilde{d}}^{\top} \mathbf{H} \tilde{d}\right)\mathclose{} && \text{(distribute)} \\ &= f(\tilde{x}) + \tilde{g} \cdot \tilde{\delta}^\* + \tilde{g} \cdot \tilde{d} + \tfrac{1}{2}\\{\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{\delta}^\* - \tilde{g} \cdot \tilde{d} + \tfrac{1}{2}\\{\tilde{d}}^{\top} \mathbf{H} \tilde{d} && \text{(both cross terms equal } -\tilde{g} \cdot \tilde{d} \text{)} \\ &= f(\tilde{x}) + \tilde{g} \cdot \tilde{\delta}^\* + \tfrac{1}{2}\\{\tilde{\delta}^\*{}}^{\top} \mathbf{H} \tilde{\delta}^\* + \tfrac{1}{2}\\{\tilde{d}}^{\top} \mathbf{H} \tilde{d} && \text{(cancel } \tilde{g} \cdot \tilde{d} \text{)} \\ &= q(\tilde{\delta}^\*) + \tfrac{1}{2}\\{\tilde{d}}^{\top} \mathbf{H} \tilde{d}, && \text{(definition of } q \text{)} \end{aligned} \\
 >
 > which is greater than \\q(\tilde{\delta}^\*)\\ for every \\\tilde{d} \ne \tilde{0}\_{p \times 1}\\, since \\\mathbf{H}\\ is positive definite.
 
@@ -749,11 +749,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Theorem 13 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- {\tilde{c}}^{\top} \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 13](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
+> **Theorem 13 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- \tilde{c} \cdot \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 13](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
 
 > **NOTE:**
 >
-> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for \\{\tilde{c}}^{\top} \tilde{x}\\, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\\; by [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with \\\tfrac{1}{2} \mathbf{S}\\ in place of \\\mathbf{S}\\, and because the gradient \\-\tilde{c}\\ of the linear term is constant ([constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector)), \\\mathbf{H}\_f(\tilde{x}) = \mathbf{S}\\, which is invertible ([positive definite inverse](linear-algebra.llms.md#thm-pd-inverse)). So
+> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for \\\tilde{c} \cdot \tilde{x}\\, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} = \mathbf{S} \tilde{x}- \tilde{c}\\; by [Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic) with \\\tfrac{1}{2} \mathbf{S}\\ in place of \\\mathbf{S}\\, and because the gradient \\-\tilde{c}\\ of the linear term is constant ([constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector)), \\\mathbf{H}\_f(\tilde{x}) = \mathbf{S}\\, which is invertible ([positive definite inverse](linear-algebra.llms.md#thm-pd-inverse)). So
 >
 > \\ \begin{aligned} \tilde{x}^{(1)} &= \tilde{x}^{(0)} - \mathbf{S}^{-1} (\mathbf{S} \tilde{x}^{(0)} - \tilde{c}) && \text{(definition of Newton's method)} \\ &= \tilde{x}^{(0)} - \mathbf{S}^{-1} \mathbf{S} \tilde{x}^{(0)} + \mathbf{S}^{-1} \tilde{c} && \text{(distribute)} \\ &= \tilde{x}^{(0)} - \tilde{x}^{(0)} + \mathbf{S}^{-1} \tilde{c} && \text{(} \mathbf{S}^{-1} \mathbf{S} = \mathbf{I}\_p \text{)} \\ &= \mathbf{S}^{-1} \tilde{c}. && \text{(cancel)} \end{aligned} \\
 >
@@ -793,15 +793,15 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 18 (Descent direction)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ at \\\tilde{x}\\. A direction \\\tilde{d}\\ ([direction](vector-calculus.llms.md#def-direction)) is a **descent direction** for \\f\\ at \\\tilde{x}\\ if \\{\tilde{g}}^{\top} \tilde{d} \< 0\\. When \\\tilde{g} \ne \tilde{0}\_{p \times 1}\\, \\-\tilde{g}\\ is a descent direction, since \\{\tilde{g}}^{\top} (-\tilde{g}) = -\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 \< 0\\.
+> **Definition 18 (Descent direction)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ at \\\tilde{x}\\. A direction \\\tilde{d}\\ ([direction](vector-calculus.llms.md#def-direction)) is a **descent direction** for \\f\\ at \\\tilde{x}\\ if \\\tilde{g} \cdot \tilde{d} \< 0\\. When \\\tilde{g} \ne \tilde{0}\_{p \times 1}\\, \\-\tilde{g}\\ is a descent direction, since \\\tilde{g} \cdot (-\tilde{g}) =-\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 \< 0\\.
 
 > **NOTE:**
 >
 > **Example 42 (Descent directions for \\x_1^2 + x_2^2\\ at \\{(1, 0)}^{\top}\\)** Let \\f(\tilde{x}) = x_1^2 + x_2^2\\ and \\\tilde{x}= {(1, 0)}^{\top}\\, so \\\tilde{g} = {(2 x_1,\\ 2 x_2)}^{\top} = {(2, 0)}^{\top}\\.
 >
-> - \\\tilde{d} = {(-1, 1)}^{\top}\\ is a descent direction: \\{\tilde{g}}^{\top} \tilde{d} = -2 + 0 = -2 \< 0\\.
-> - \\\tilde{d} = {(0, 1)}^{\top}\\ is not: \\{\tilde{g}}^{\top} \tilde{d} = 0\\.
-> - \\-\tilde{g} = {(-2, 0)}^{\top}\\ is: \\{\tilde{g}}^{\top} (-\tilde{g}) = -4 \< 0\\.
+> - \\\tilde{d} = {(-1, 1)}^{\top}\\ is a descent direction: \\\tilde{g} \cdot \tilde{d} = -2 + 0 = -2 \< 0\\.
+> - \\\tilde{d} = {(0, 1)}^{\top}\\ is not: \\\tilde{g} \cdot \tilde{d} = 0\\.
+> - \\-\tilde{g} = {(-2, 0)}^{\top}\\ is: \\\tilde{g} \cdot (-\tilde{g}) = -4 \< 0\\.
 
 > **NOTE:**
 >
@@ -811,7 +811,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > *Proof*. Let \\h(s) \stackrel{\text{def}}{=}f(\tilde{x}- s \tilde{g})\\. The inner function \\s \mapsto \tilde{x}- s \tilde{g}\\ has derivative \\-{\tilde{g}}^{\top}\\ ([vector-valued derivative](vector-calculus.llms.md#def-vector-valued-derivative)), so by the vector chain rule ([vector chain rule](vector-calculus.llms.md#thm-chain-vec))
 >
-> \\ \begin{aligned} h'(s) &= -{\tilde{g}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}- s \tilde{g}), && \text{(chain rule)} \\ h'(0) &= -{\tilde{g}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) && \text{(set } s = 0 \text{)} \\ &= -{\tilde{g}}^{\top} \tilde{g} && \text{(definition of } \tilde{g} \text{)} \\ &= -\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 && \text{(squared length)} \\ &\< 0. && \text{(} \tilde{g} \ne \tilde{0}\_{p \times 1} \text{)} \end{aligned} \\
+> \\ \begin{aligned} h'(s) &= -{\tilde{g}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}- s \tilde{g}), && \text{(chain rule)} \\ h'(0) &= -{\tilde{g}}^{\top}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) && \text{(set } s = 0 \text{)} \\ &= -\tilde{g} \cdot \tilde{g} && \text{(definition of } \tilde{g} \text{)} \\ &= -\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 && \text{(squared length)} \\ &\< 0. && \text{(} \tilde{g} \ne \tilde{0}\_{p \times 1} \text{)} \end{aligned} \\
 >
 > Since \\h'(0) = \lim\_{s \to 0} (h(s) - h(0)) / s\\ is negative, taking \\\varepsilon= \mathopen{}\left\|h'(0)\right\|\mathclose{}\\ in the definition of the limit gives an \\\bar{s} \> 0\\ such that \\(h(s) - h(0)) / s \< h'(0) + \mathopen{}\left\|h'(0)\right\|\mathclose{} = 0\\ for \\0 \< s \< \bar{s}\\. Multiplying by \\s \> 0\\, \\h(s) \< h(0)\\, that is, \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\.
 
@@ -831,11 +831,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > and, with \\r \stackrel{\text{def}}{=}\tfrac{b - 1}{b + 1}\\,
 >
-> \\ \begin{aligned} 1 - s^{(0)} &= \frac{1 + b - 2}{1 + b} = r, && \text{(common denominator)} \\ 1 - b\\s^{(0)} &= \frac{1 + b - 2b}{1 + b} = -r, && \text{(common denominator)} \\ \tilde{x}^{(1)} &= {\mathopen{}\left(r\\b,\\ -r \cdot 1\right)\mathclose{}}^{\top} = r\\{(b, -1)}^{\top}. && \text{(the gradient step from } {(b, 1)}^{\top} \text{)} \end{aligned} \\
+> \\ \begin{aligned} 1 - s^{(0)} &= \frac{1 + b - 2}{1 + b} \\ &= r, && \text{(common denominator)} \\ 1 - b\\s^{(0)} &= \frac{1 + b - 2b}{1 + b} \\ &= -r, && \text{(common denominator)} \\ \tilde{x}^{(1)} &= {\mathopen{}\left(r\\b,\\ -r \cdot 1\right)\mathclose{}}^{\top} \\ &= r\\{(b, -1)}^{\top}. && \text{(the gradient step from } {(b, 1)}^{\top} \text{)} \end{aligned} \\
 >
 > For \\b \ne 1\\ the same holds at every step, by [induction](proof-writing.llms.md#def-proof-by-induction) (when \\b = 1\\, \\r = 0\\ and \\\tilde{x}^{(1)}\\ is already the minimizer): if \\\tilde{x}^{(t)} = {(c\\b,\\ \pm c)}^{\top}\\ for a number \\c \ne 0\\, then \\s^\*\\, which depends only on \\x_1^2 = c^2 b^2\\ and \\x_2^2 = c^2\\, is again \\\tfrac{2}{1 + b}\\ (the factor \\c^2\\ cancels), and the step multiplies the first entry by \\r\\ and the second by \\-r\\. So
 >
-> \\ \tilde{x}^{(t)} = {\mathopen{}\left(b\\r^t,\\ (-r)^t\right)\mathclose{}}^{\top}, \qquad f(\tilde{x}^{(t)}) = \tfrac{1}{2} (b^2 + b)\\r^{2t} = r^{2t} f(\tilde{x}^{(0)}). \\
+> \\ \begin{aligned} \tilde{x}^{(t)} &= {\mathopen{}\left(b\\r^t,\\ (-r)^t\right)\mathclose{}}^{\top}, \\ f(\tilde{x}^{(t)}) &= \tfrac{1}{2} (b^2 + b)\\r^{2t} \\ &= r^{2t} f(\tilde{x}^{(0)}). \end{aligned} \\
 >
 > For \\b \ne 1\\, exactly one entry changes sign at every step: the second when \\b \> 1\\ (then \\r \> 0\\), and the first when \\b \< 1\\ (then \\r \< 0\\). So the iterates zigzag toward the minimizer \\\tilde{0}\_{2 \times 1}\\.
 >
