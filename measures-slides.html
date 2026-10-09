@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 11:33:26 (PDT)</p>
+  <p class="date">Last modified: 2026-10-09 11:58:26 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -612,7 +612,7 @@ s_{n+1}
 
 <div id="def-countable-additivity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Countable additivity (<span class="math inline">\(\sigma\)</span>-additivity))</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#/def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#/def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
-<p><span class="math display">\[\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \mu(A_i)\]</span></p>
+<p><span class="math display">\[\mu\mathopen{}\left(\bigcup_{i=1}^{\infty} A_i\right)\mathclose{} = \sum_{i=1}^{\infty} \mu(A_i)\]</span></p>
 </div>
 </section>
 <section class="slide level2">
@@ -637,7 +637,7 @@ s_{n+1}
 <p><span class="math display">\[
 \begin{aligned}
 \mu(\emptyset)
-&amp;= \mu\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
+&amp;= \mu\mathopen{}\left(\bigcup_{i=1}^{\infty} \emptyset\right)\mathclose{}
 &amp;&amp; \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\
 &amp;= \sum_{i=1}^{\infty} \mu(\emptyset)
 &amp;&amp; \text{(countable additivity)}
@@ -667,7 +667,7 @@ s_{n+1}
 <p><span class="theorem-title"><strong>Example 14 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#/exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+\mu\mathopen{}\left(\bigcup_{i=1}^{\infty} A_i\right)\mathclose{}
 &amp;= \infty
 &amp;&amp; \text{(definition of } \mu\text{)}
 \end{aligned}
@@ -709,7 +709,7 @@ A_{n+1} &amp;= A_{n+2} \\
 <p><span class="math display">\[
 \begin{aligned}
 \mu(A_1 \cup \cdots \cup A_n)
-&amp;= \mu\!\left(\bigcup_{i=1}^{\infty} A_i\right)
+&amp;= \mu\mathopen{}\left(\bigcup_{i=1}^{\infty} A_i\right)\mathclose{}
 &amp;&amp; \text{(} A_i = \emptyset \text{ for } i &gt; n \text{)} \\
 &amp;= \sum_{i=1}^{\infty} \mu(A_i)
 &amp;&amp; \text{(countable additivity)} \\
@@ -758,7 +758,7 @@ A_{n+1} &amp;= A_{n+2} \\
 <p><em><span class="math inline">\(\mu\)</span> is not countably additive.</em> The single-element sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{1\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \ldots\)</span> are pairwise disjoint, and their union is <span class="math inline">\(S\)</span>, which is infinite. So:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\mu\!\left(\bigcup_{k=0}^{\infty} \mathopen{}\left\{k\right\}\mathclose{}\right)
+\mu\mathopen{}\left(\bigcup_{k=0}^{\infty} \mathopen{}\left\{k\right\}\mathclose{}\right)\mathclose{}
 &amp;= \mu(S)
 &amp;&amp; \text{(the union is } S \text{)} \\
 &amp;= \infty

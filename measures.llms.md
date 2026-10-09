@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 11:33:26 (PDT)
+Last modified: 2026-10-09 11:58:26 (PDT)
 
 > **NOTE:**
 >
@@ -232,7 +232,7 @@ Last modified: 2026-10-09 11:33:26 (PDT)
 >
 > **Definition 10 (Countable additivity (\\\sigma\\-additivity))** Let \\\mathcal{S}\\ be a [\\\sigma\\-algebra](#def-sigma-algebra) on a set \\S\\. A function \\\mu: \mathcal{S}\to \[0, \infty\]\\ is **countably additive** (also called **\\\sigma\\-additive**) if, for every sequence of [pairwise disjoint](#def-pairwise-disjoint) sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\, the value of their union is the sum of their values:
 >
-> \\\mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) = \sum\_{i=1}^{\infty} \mu(A_i)\\
+> \\\mu\mathopen{}\left(\bigcup\_{i=1}^{\infty} A_i\right)\mathclose{} = \sum\_{i=1}^{\infty} \mu(A_i)\\
 
 > **NOTE:**
 >
@@ -250,7 +250,7 @@ Last modified: 2026-10-09 11:33:26 (PDT)
 >
 > *Proof*. The set \\\emptyset = S \setminus S\\ is in \\\mathcal{S}\\, as the complement of \\S\\, and the sequence \\\emptyset, \emptyset, \ldots\\ is pairwise disjoint with union \\\emptyset\\, so:
 >
-> \\ \begin{aligned} \mu(\emptyset) &= \mu\\\left(\bigcup\_{i=1}^{\infty} \emptyset\right) && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(\emptyset) && \text{(countable additivity)} \end{aligned} \\
+> \\ \begin{aligned} \mu(\emptyset) &= \mu\mathopen{}\left(\bigcup\_{i=1}^{\infty} \emptyset\right)\mathclose{} && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(\emptyset) && \text{(countable additivity)} \end{aligned} \\
 >
 > If \\\mu(\emptyset) = c\\ for a finite \\c \> 0\\, the right-hand side is \\c + c + \cdots = \infty \neq c\\, a [contradiction](notation.llms.md#def-proof-by-contradiction). So \\\mu(\emptyset)\\ is 0 or \\\infty\\.
 
@@ -264,7 +264,7 @@ Last modified: 2026-10-09 11:33:26 (PDT)
 >
 > **Example 14 (A countably additive function with \\\mu(\emptyset) = \infty\\)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\infty\\ for every set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)), including \\A = \emptyset\\. For any sequence of pairwise disjoint sets \\A_1, A_2, \ldots\\, the left-hand side of the countable additivity equation is:
 >
-> \\ \begin{aligned} \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) &= \infty && \text{(definition of } \mu\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mu\mathopen{}\left(\bigcup\_{i=1}^{\infty} A_i\right)\mathclose{} &= \infty && \text{(definition of } \mu\text{)} \end{aligned} \\
 >
 > and the right-hand side, the limit of its partial sums ([Lemma 1](#lem-nonneg-series)), is:
 >
@@ -288,7 +288,7 @@ Last modified: 2026-10-09 11:33:26 (PDT)
 >
 > The extended sequence is still pairwise disjoint, since \\\emptyset\\ shares no element with any set, and its union is \\A_1 \cup \cdots \cup A_n\\. So:
 >
-> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \mu\\\left(\bigcup\_{i=1}^{\infty} A_i\right) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(A_i) && \text{(countable additivity)} \\ &= \sum\_{i=1}^n\mu(A_i) + \sum\_{i=n+1}^{\infty} \mu(\emptyset) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^n\mu(A_i) && \text{(} \mu(\emptyset) = 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mu(A_1 \cup \cdots \cup A_n) &= \mu\mathopen{}\left(\bigcup\_{i=1}^{\infty} A_i\right)\mathclose{} && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(A_i) && \text{(countable additivity)} \\ &= \sum\_{i=1}^n\mu(A_i) + \sum\_{i=n+1}^{\infty} \mu(\emptyset) && \text{(} A_i = \emptyset \text{ for } i \> n \text{)} \\ &= \sum\_{i=1}^n\mu(A_i) && \text{(} \mu(\emptyset) = 0 \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -306,7 +306,7 @@ Last modified: 2026-10-09 11:33:26 (PDT)
 >
 > *\\\mu\\ is not countably additive.* The single-element sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \ldots\\ are pairwise disjoint, and their union is \\S\\, which is infinite. So:
 >
-> \\ \begin{aligned} \mu\\\left(\bigcup\_{k=0}^{\infty} \mathopen{}\left\\k\right\\\mathclose{}\right) &= \mu(S) && \text{(the union is } S \text{)} \\ &= \infty && \text{(} S \text{ is infinite)} \end{aligned} \\
+> \\ \begin{aligned} \mu\mathopen{}\left(\bigcup\_{k=0}^{\infty} \mathopen{}\left\\k\right\\\mathclose{}\right)\mathclose{} &= \mu(S) && \text{(the union is } S \text{)} \\ &= \infty && \text{(} S \text{ is infinite)} \end{aligned} \\
 >
 > but:
 >

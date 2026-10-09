@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 11:33:26 (PDT)</p>
+  <p class="date">Last modified: 2026-10-09 11:58:26 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -1185,11 +1185,11 @@ x_{p}
 <p><span class="proof-title"><em>Proof</em>. </span>Entry-wise, for <span class="math inline">\(i = 1, \ldots, p\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left[\frac{\partial}{\partial \tilde{x}} (\tilde{a} \cdot \tilde{b})\right]_i
+\mathopen{}\left[\frac{\partial}{\partial \tilde{x}} (\tilde{a} \cdot \tilde{b})\right]\mathclose{}_i
 &amp;= \frac{\partial}{\partial x_i} \sum_{k=1}^{p} a_k b_k \\
 &amp;= \sum_{k=1}^{p} \mathopen{}\left(b_k \frac{\partial}{\partial x_i} a_k + a_k \frac{\partial}{\partial x_i} b_k\right)\mathclose{} \\
-&amp;= \left[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{a}}^{\top}\right)\mathclose{}\tilde{b}\right]_i
-  + \left[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{b}}^{\top}\right)\mathclose{}\tilde{a}\right]_i
+&amp;= \mathopen{}\left[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{a}}^{\top}\right)\mathclose{}\tilde{b}\right]\mathclose{}_i
+  + \mathopen{}\left[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{b}}^{\top}\right)\mathclose{}\tilde{a}\right]\mathclose{}_i
 \end{aligned}
 \]</span></p>
 </div>
@@ -1248,11 +1248,11 @@ x_{p}
 <p><span class="proof-title"><em>Proof</em>. </span>For entry <span class="math inline">\((i,j)\)</span>, where row <span class="math inline">\(i\)</span> indexes the denominator <span class="math inline">\(\tilde{\beta}\)</span> (see <a href="#/def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>) and column <span class="math inline">\(j\)</span> indexes the numerator <span class="math inline">\(\mathbf{A}\tilde{\beta}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})\right]_{ij}
+\mathopen{}\left[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})\right]\mathclose{}_{ij}
 &amp;= \frac{\partial}{\partial \beta_{i}} (\mathbf{A}\tilde{\beta})_j \\
 &amp;= \frac{\partial}{\partial \beta_{i}} \sum_{k=1}^{p} a_{jk} \beta_{k} \\
 &amp;= a_{ji} \\
-&amp;= \left[{\mathbf{A}}^{\top}\right]_{ij}
+&amp;= \mathopen{}\left[{\mathbf{A}}^{\top}\right]\mathclose{}_{ij}
 \end{aligned}
 \]</span></p>
 </div>
@@ -1282,12 +1282,12 @@ x_{p}
 <p><span class="proof-title"><em>Proof</em>. </span>For entry <span class="math inline">\((i,j)\)</span>, where row <span class="math inline">\(i\)</span> indexes the denominator <span class="math inline">\(\tilde{\beta}\)</span> and column <span class="math inline">\(j\)</span> indexes the numerator <span class="math inline">\(\mathbf{A}\tilde{v}\)</span> (see <a href="#/def-vector-valued-derivative" class="quarto-xref">Definition&nbsp;6</a>):</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})\right]_{ij}
+\mathopen{}\left[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})\right]\mathclose{}_{ij}
 &amp;= \frac{\partial}{\partial \beta_{i}} (\mathbf{A}\tilde{v})_j \\
 &amp;= \frac{\partial}{\partial \beta_{i}} \sum_{k=1}^{q} a_{jk} v_k \\
 &amp;= \sum_{k=1}^{q} a_{jk} \frac{\partial}{\partial \beta_{i}} v_k \\
-&amp;= \sum_{k=1}^{q} \left[\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right]_{ik} \left[{\mathbf{A}}^{\top}\right]_{kj} \\
-&amp;= \left[\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{A}}^{\top}\right]_{ij}
+&amp;= \sum_{k=1}^{q} \mathopen{}\left[\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right]\mathclose{}_{ik} \mathopen{}\left[{\mathbf{A}}^{\top}\right]\mathclose{}_{kj} \\
+&amp;= \mathopen{}\left[\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{A}}^{\top}\right]\mathclose{}_{ij}
 \end{aligned}
 \]</span></p>
 </div>
@@ -1400,7 +1400,7 @@ x_{p}
 <p><span class="theorem-title"><strong>Example 15 (Derivative of a transpose product)</strong></span> Let <span class="math inline">\(\tilde{x}= {(3, 5)}^{\top}\)</span> and <span class="math inline">\(\tilde{\beta}= {(\beta_{1}, \beta_{2})}^{\top}\)</span>. Then <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= 3\beta_{1} + 5\beta_{2}\)</span>, and by <a href="#/cor-deriv-lincom-tp" class="quarto-xref">Corollary&nbsp;1</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\underbrace{\frac{\partial}{\partial \tilde{\beta}}\left(\underbrace{{\tilde{x}}^{\top}}_{1 \times 2}\underbrace{\tilde{\beta}}_{2 \times 1}\right)}_{2 \times 1}
+\underbrace{\frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\underbrace{{\tilde{x}}^{\top}}_{1 \times 2}\underbrace{\tilde{\beta}}_{2 \times 1}\right)\mathclose{}}_{2 \times 1}
 &amp;= \underbrace{\tilde{x}}_{2 \times 1} \\
 &amp;= \begin{pmatrix} 3 \\
 5 \end{pmatrix}
@@ -1426,7 +1426,7 @@ x_{p}
 <p><span class="proof-title"><em>Proof</em>. </span>Expanding entry-wise, <span class="math inline">\({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum_{j=1}^p\sum_{k=1}^{p} s_{jk} \beta_{j} \beta_{k}\)</span>. Differentiating component-wise with respect to <span class="math inline">\(\beta_{i}\)</span> for <span class="math inline">\(i = 1, \ldots, p\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right]_i
+\mathopen{}\left[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right]\mathclose{}_i
 &amp;= \frac{\partial}{\partial \beta_{i}} \sum_{j=1}^p\sum_{k=1}^{p} s_{jk} \beta_{j} \beta_{k}
 &amp;&amp; \text{(expand quadratic form)} \\
 &amp;= \sum_{k=1}^{p} s_{ik} \beta_{k} + \sum_{j=1}^ps_{ji} \beta_{j}
@@ -1727,7 +1727,7 @@ z &amp;= f(\tilde{\varepsilon}) \\
 <div id="def-matrix-derivative" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Matrix derivative (gradient))</strong></span> For a scalar-valued function <span class="math inline">\(f(\mathbf{X})\)</span> of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span>, the <strong>matrix derivative</strong> is the <span class="math inline">\(m \times n\)</span> matrix whose <span class="math inline">\((i,j)\)</span> entry is the partial derivative of <span class="math inline">\(f\)</span> with respect to the <span class="math inline">\((i,j)\)</span> entry of <span class="math inline">\(\mathbf{X}\)</span>:</p>
 <p><span class="math display">\[
-\left[\frac{\partial}{\partial \mathbf{X}} f\right]_{ij} = \frac{\partial}{\partial X_{ij}} f
+\mathopen{}\left[\frac{\partial}{\partial \mathbf{X}} f\right]\mathclose{}_{ij} = \frac{\partial}{\partial X_{ij}} f
 \]</span></p>
 <p>Like the vector derivative (<a href="#/def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>), the matrix derivative is also called the <strong>gradient</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mathbf{X}\)</span>, written <span class="math inline">\(\nabla_{\mathbf{X}} f\)</span>.</p>
 </div>
@@ -1762,17 +1762,17 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 <p><span class="proof-title"><em>Proof</em>. </span>Write <span class="math inline">\(A_{kl}\)</span>, <span class="math inline">\(X_{kl}\)</span>, and <span class="math inline">\(B_{kl}\)</span> for the entries of <span class="math inline">\(\mathbf{A}\)</span>, <span class="math inline">\(\mathbf{X}\)</span>, and <span class="math inline">\(\mathbf{B}\)</span>. For entry <span class="math inline">\((i,j)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left[\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\right]_{ij}
+\mathopen{}\left[\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\right]\mathclose{}_{ij}
 &amp;= \frac{\partial}{\partial X_{ij}} \sum_{a=1}^{r} \sum_{b=1}^{m} \sum_{c=1}^{n} A_{ab} X_{bc} B_{ca}
 &amp;&amp; \text{(trace of the } r \times r \text{ product } \mathbf{A}\mathbf{X}\mathbf{B} \text{)}
 \\
 &amp;= \sum_{a=1}^{r} A_{ai} B_{ja}
 &amp;&amp; \text{(only the terms with } b = i,\ c = j \text{ depend on } X_{ij} \text{)}
 \\
-&amp;= \sum_{a=1}^{r} \left[{\mathbf{A}}^{\top}\right]_{ia} \left[{\mathbf{B}}^{\top}\right]_{aj}
+&amp;= \sum_{a=1}^{r} \mathopen{}\left[{\mathbf{A}}^{\top}\right]\mathclose{}_{ia} \mathopen{}\left[{\mathbf{B}}^{\top}\right]\mathclose{}_{aj}
 &amp;&amp; \text{(definition of the transpose)}
 \\
-&amp;= \left[{\mathbf{A}}^{\top}\,{\mathbf{B}}^{\top}\right]_{ij}
+&amp;= \mathopen{}\left[{\mathbf{A}}^{\top}\,{\mathbf{B}}^{\top}\right]\mathclose{}_{ij}
 &amp;&amp; \text{(definition of matrix multiplication)}
 \end{aligned}
 \]</span></p>

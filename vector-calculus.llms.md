@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 11:33:26 (PDT)
+Last modified: 2026-10-09 11:58:26 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -470,7 +470,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Proof*. Entry-wise, for \\i = 1, \ldots, p\\:
 >
-> \\ \begin{aligned} \left\[\frac{\partial}{\partial \tilde{x}} (\tilde{a} \cdot \tilde{b})\right\]\_i &= \frac{\partial}{\partial x_i} \sum\_{k=1}^{p} a_k b_k \\ &= \sum\_{k=1}^{p} \mathopen{}\left(b_k \frac{\partial}{\partial x_i} a_k + a_k \frac{\partial}{\partial x_i} b_k\right)\mathclose{} \\ &= \left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{a}}^{\top}\right)\mathclose{}\tilde{b}\right\]\_i + \left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{b}}^{\top}\right)\mathclose{}\tilde{a}\right\]\_i \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{x}} (\tilde{a} \cdot \tilde{b})\right\]\mathclose{}\_i &= \frac{\partial}{\partial x_i} \sum\_{k=1}^{p} a_k b_k \\ &= \sum\_{k=1}^{p} \mathopen{}\left(b_k \frac{\partial}{\partial x_i} a_k + a_k \frac{\partial}{\partial x_i} b_k\right)\mathclose{} \\ &= \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{a}}^{\top}\right)\mathclose{}\tilde{b}\right\]\mathclose{}\_i + \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} {\tilde{b}}^{\top}\right)\mathclose{}\tilde{a}\right\]\mathclose{}\_i \end{aligned} \\
 
 > **NOTE:**
 >
@@ -498,7 +498,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Proof*. For entry \\(i,j)\\, where row \\i\\ indexes the denominator \\\tilde{\beta}\\ (see [Definition 6](#def-vector-valued-derivative)) and column \\j\\ indexes the numerator \\\mathbf{A}\tilde{\beta}\\:
 >
-> \\ \begin{aligned} \left\[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})\right\]\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\tilde{\beta})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{p} a\_{jk} \beta\_{k} \\ &= a\_{ji} \\ &= \left\[{\mathbf{A}}^{\top}\right\]\_{ij} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\tilde{\beta})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{p} a\_{jk} \beta\_{k} \\ &= a\_{ji} \\ &= \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{ij} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -516,7 +516,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Proof*. For entry \\(i,j)\\, where row \\i\\ indexes the denominator \\\tilde{\beta}\\ and column \\j\\ indexes the numerator \\\mathbf{A}\tilde{v}\\ (see [Definition 6](#def-vector-valued-derivative)):
 >
-> \\ \begin{aligned} \left\[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})\right\]\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\tilde{v})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{q} a\_{jk} v_k \\ &= \sum\_{k=1}^{q} a\_{jk} \frac{\partial}{\partial \beta\_{i}} v_k \\ &= \sum\_{k=1}^{q} \left\[\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right\]\_{ik} \left\[{\mathbf{A}}^{\top}\right\]\_{kj} \\ &= \left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{A}}^{\top}\right\]\_{ij} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial \beta\_{i}} (\mathbf{A}\tilde{v})\_j \\ &= \frac{\partial}{\partial \beta\_{i}} \sum\_{k=1}^{q} a\_{jk} v_k \\ &= \sum\_{k=1}^{q} a\_{jk} \frac{\partial}{\partial \beta\_{i}} v_k \\ &= \sum\_{k=1}^{q} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right\]\mathclose{}\_{ik} \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{kj} \\ &= \mathopen{}\left\[\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{A}}^{\top}\right\]\mathclose{}\_{ij} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -578,7 +578,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > **Example 15 (Derivative of a transpose product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{x}}^{\top}\tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Corollary 1](#cor-deriv-lincom-tp):
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}\left(\underbrace{{\tilde{x}}^{\top}}\_{1 \times 2}\underbrace{\tilde{\beta}}\_{2 \times 1}\right)}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\underbrace{{\tilde{x}}^{\top}}\_{1 \times 2}\underbrace{\tilde{\beta}}\_{2 \times 1}\right)\mathclose{}}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -594,7 +594,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Proof*. Expanding entry-wise, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k}\\. Differentiating component-wise with respect to \\\beta\_{i}\\ for \\i = 1, \ldots, p\\:
 >
-> \\ \begin{aligned} \left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right\]\_i &= \frac{\partial}{\partial \beta\_{i}} \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k} && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^{p} s\_{ik} \beta\_{k} + \sum\_{j=1}^ps\_{ji} \beta\_{j} && \text{(product rule for } \beta\_{i} \beta\_{k} \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right\]\mathclose{}\_i &= \frac{\partial}{\partial \beta\_{i}} \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k} && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^{p} s\_{ik} \beta\_{k} + \sum\_{j=1}^ps\_{ji} \beta\_{j} && \text{(product rule for } \beta\_{i} \beta\_{k} \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
 >
 > When \\\mathbf{S}\\ is symmetric (\\\mathbf{S} = {\mathbf{S}}^{\top}\\), \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
 
@@ -730,7 +730,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Definition 10 (Matrix derivative (gradient))** For a scalar-valued function \\f(\mathbf{X})\\ of an \\m \times n\\ matrix \\\mathbf{X}\\, the **matrix derivative** is the \\m \times n\\ matrix whose \\(i,j)\\ entry is the partial derivative of \\f\\ with respect to the \\(i,j)\\ entry of \\\mathbf{X}\\:
 >
-> \\ \left\[\frac{\partial}{\partial \mathbf{X}} f\right\]\_{ij} = \frac{\partial}{\partial X\_{ij}} f \\
+> \\ \mathopen{}\left\[\frac{\partial}{\partial \mathbf{X}} f\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial X\_{ij}} f \\
 >
 > Like the vector derivative ([Definition 2](#def-vector-derivative)), the matrix derivative is also called the **gradient** of \\f\\ with respect to \\\mathbf{X}\\, written \\\nabla\_{\mathbf{X}} f\\.
 
@@ -754,7 +754,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > *Proof*. Write \\A\_{kl}\\, \\X\_{kl}\\, and \\B\_{kl}\\ for the entries of \\\mathbf{A}\\, \\\mathbf{X}\\, and \\\mathbf{B}\\. For entry \\(i,j)\\:
 >
-> \\ \begin{aligned} \left\[\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\right\]\_{ij} &= \frac{\partial}{\partial X\_{ij}} \sum\_{a=1}^{r} \sum\_{b=1}^{m} \sum\_{c=1}^{n} A\_{ab} X\_{bc} B\_{ca} && \text{(trace of the } r \times r \text{ product } \mathbf{A}\mathbf{X}\mathbf{B} \text{)} \\ &= \sum\_{a=1}^{r} A\_{ai} B\_{ja} && \text{(only the terms with } b = i,\\ c = j \text{ depend on } X\_{ij} \text{)} \\ &= \sum\_{a=1}^{r} \left\[{\mathbf{A}}^{\top}\right\]\_{ia} \left\[{\mathbf{B}}^{\top}\right\]\_{aj} && \text{(definition of the transpose)} \\ &= \left\[{\mathbf{A}}^{\top}\\{\mathbf{B}}^{\top}\right\]\_{ij} && \text{(definition of matrix multiplication)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\right\]\mathclose{}\_{ij} &= \frac{\partial}{\partial X\_{ij}} \sum\_{a=1}^{r} \sum\_{b=1}^{m} \sum\_{c=1}^{n} A\_{ab} X\_{bc} B\_{ca} && \text{(trace of the } r \times r \text{ product } \mathbf{A}\mathbf{X}\mathbf{B} \text{)} \\ &= \sum\_{a=1}^{r} A\_{ai} B\_{ja} && \text{(only the terms with } b = i,\\ c = j \text{ depend on } X\_{ij} \text{)} \\ &= \sum\_{a=1}^{r} \mathopen{}\left\[{\mathbf{A}}^{\top}\right\]\mathclose{}\_{ia} \mathopen{}\left\[{\mathbf{B}}^{\top}\right\]\mathclose{}\_{aj} && \text{(definition of the transpose)} \\ &= \mathopen{}\left\[{\mathbf{A}}^{\top}\\{\mathbf{B}}^{\top}\right\]\mathclose{}\_{ij} && \text{(definition of matrix multiplication)} \end{aligned} \\
 
 > **NOTE:**
 >

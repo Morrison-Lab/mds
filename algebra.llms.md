@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 11:33:26 (PDT)
+Last modified: 2026-10-09 11:58:26 (PDT)
 
 ## 1 Equalities
 
@@ -375,13 +375,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 12](#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 11](#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
-> Let \\t = \min\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
+> Let \\t = \min\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
 >
 > By convexity, \\ f(z) \le t f(y) + (1 - t) f(x^\*) \< t f(x^\*) + (1 - t) f(x^\*) = f(x^\*), \\ where the strict inequality uses \\t \> 0\\ and \\f(y) \< f(x^\*)\\. So \\f(z) \< f(x^\*)\\ with \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} \< \delta\\, which contradicts \\x^\*\\ being a local minimizer. Hence \\x^\*\\ is a global minimizer.
 
 > **NOTE:**
 >
-> **Theorem 8 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^nw_i = 1\\. Then \\ f\left(\sum\_{i=1}^nw_i x_i\right) \le \sum\_{i=1}^nw_i f(x_i). \\
+> **Theorem 8 (Jensen’s inequality for a weighted average)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ be a [convex function](#def-convex-function). Let \\x_1, \ldots, x_n \in \mathbb{R}^p\\, and let \\w_1, \ldots, w_n \ge 0\\ be weights with \\\sum\_{i=1}^nw_i = 1\\. Then \\ f\mathopen{}\left(\sum\_{i=1}^nw_i x_i\right)\mathclose{} \le \sum\_{i=1}^nw_i f(x_i). \\
 
 > **NOTE:**
 >
@@ -393,21 +393,21 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > \\ \begin{aligned} s &= 1 - w_n \\ &= \sum\_{i=1}^{n-1} w_i \\ &\> 0 \end{aligned} \\
 >
-> and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^nw_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\left(\sum\_{i=1}^nw_i x_i\right) = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^nw_i f(x_i). \\
+> and \\ y = \sum\_{i=1}^{n-1} \frac{w_i}{s} x_i. \\ The weights \\w_i / s\\ are non-negative and sum to \\1\\, so the induction assumption gives \\ f(y) \le \sum\_{i=1}^{n-1} \frac{w_i}{s} f(x_i). \\ Since \\\sum\_{i=1}^nw_i x_i = s y + (1 - s) x_n\\ and \\s \in (0, 1\]\\, the definition of a convex function ([Definition 15](#def-convex-function)) gives \\ f\mathopen{}\left(\sum\_{i=1}^nw_i x_i\right)\mathclose{} = f(s y + (1 - s) x_n) \le s f(y) + (1 - s) f(x_n). \\ Substituting the bound on \\f(y)\\, and using \\1 - s = w_n\\, \\ s f(y) + (1 - s) f(x_n) \le \sum\_{i=1}^{n-1} w_i f(x_i) + w_n f(x_n) = \sum\_{i=1}^nw_i f(x_i). \\
 
 > **NOTE:**
 >
-> **Example 14 (The mean of the squares is at least the square of the mean)** Take \\f(x) = x^2\\. It is convex by [Definition 15](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \left(t x + (1 - t) y\right)^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights
+> **Example 14 (The mean of the squares is at least the square of the mean)** Take \\f(x) = x^2\\. It is convex by [Definition 15](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \mathopen{}\left(t x + (1 - t) y\right)\mathclose{}^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights
 >
 > \\ \begin{aligned} w_1 &= w_2 \\ &= w_3 \\ &= \tfrac{1}{3}. \end{aligned} \\
 >
 > The weighted average of the points is their mean, \\\tfrac{1}{3}(1 + 2 + 6) = 3\\, so the left side of [Theorem 8](#thm-jensen) is \\f(3) = 9\\. The right side is the mean of the squares, \\\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\\. The inequality holds: \\9 \le \tfrac{41}{3}\\.
 >
-> The gap is \\\tfrac{41}{3} - 9 = \tfrac{14}{3}\\. That is the average squared distance of the points from their mean, \\\tfrac{1}{3}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right) = \tfrac{14}{3}\\, which is the variance of the three points. For \\f(x) = x^2\\, Jensen’s inequality says a variance is never negative.
+> The gap is \\\tfrac{41}{3} - 9 = \tfrac{14}{3}\\. That is the average squared distance of the points from their mean, \\\tfrac{1}{3}\mathopen{}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right)\mathclose{} = \tfrac{14}{3}\\, which is the variance of the three points. For \\f(x) = x^2\\, Jensen’s inequality says a variance is never negative.
 
 > **NOTE:**
 >
-> *Remark 6* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-strictly-convex), then \\-f\\ is convex, and applying [Theorem 8](#thm-jensen) to \\-f\\ reverses the inequality: \\f\left(\sum_i w_i x_i\right) \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 14](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
+> *Remark 6* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-strictly-convex), then \\-f\\ is convex, and applying [Theorem 8](#thm-jensen) to \\-f\\ reverses the inequality: \\f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 14](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
 
 ## 7 Infimum and supremum
 
@@ -706,7 +706,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > **Exercise 5 (Expand a sum)** The expression \\\sum\_{i=1}^{4} i^2\\ is shorthand for a sum of four terms.
 >
 > 1.  Guess which four terms, and add them up.
-> 2.  Write \\\frac{1}{N}\sum\_{i=1}^N\left(y_i - \hat y_i\right)^2\\ for \\N = 3\\ without the \\\sum\\ symbol.
+> 2.  Write \\\frac{1}{N}\sum\_{i=1}^N\mathopen{}\left(y_i - \hat y_i\right)\mathclose{}^2\\ for \\N = 3\\ without the \\\sum\\ symbol.
 
 > **NOTE:**
 >
@@ -718,7 +718,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > 2.  Replace \\i\\ by each of \\1, 2, 3\\ in turn inside the parentheses, add the three squares, and multiply the total by \\\frac{1}{3}\\:
 >
->     \\ \frac{1}{3} \sum\_{i=1}^{3} \left(y_i - \hat y_i\right)^2 = \frac{1}{3} \left\[ \left(y_1 - \hat y_1\right)^2 + \left(y_2 - \hat y_2\right)^2 + \left(y_3 - \hat y_3\right)^2 \right\] \\
+>     \\ \frac{1}{3} \sum\_{i=1}^{3} \mathopen{}\left(y_i - \hat y_i\right)\mathclose{}^2 = \frac{1}{3} \mathopen{}\left\[ \mathopen{}\left(y_1 - \hat y_1\right)\mathclose{}^2 + \mathopen{}\left(y_2 - \hat y_2\right)\mathclose{}^2 + \mathopen{}\left(y_3 - \hat y_3\right)\mathclose{}^2 \right\]\mathclose{} \\
 
 > **NOTE:**
 >
@@ -747,7 +747,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 > **Exercise 6 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 25](#def-summation) and the rules of algebra above, show that:
 >
 > 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
-> 2.  \\\sum\_{i=1}^{3} \left(a_i + b_i\right) = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
+> 2.  \\\sum\_{i=1}^{3} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
 >
 > Does either argument depend on there being exactly three terms?
 
@@ -757,11 +757,11 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
->     \\ \begin{aligned} \sum\_{i=1}^{3} c\\ a_i &= c\\ a_1 + c\\ a_2 + c\\ a_3 && \text{(expand the sum)} \\ &= c \left(a_1 + a_2 + a_3\right) && \text{(distributive law)} \\ &= c \sum\_{i=1}^{3} a_i && \text{(collect the sum)} \end{aligned} \\
+>     \\ \begin{aligned} \sum\_{i=1}^{3} c\\ a_i &= c\\ a_1 + c\\ a_2 + c\\ a_3 && \text{(expand the sum)} \\ &= c \mathopen{}\left(a_1 + a_2 + a_3\right)\mathclose{} && \text{(distributive law)} \\ &= c \sum\_{i=1}^{3} a_i && \text{(collect the sum)} \end{aligned} \\
 >
 > 2.  Expand the sum, then regroup the terms:
 >
->     \\ \begin{aligned} \sum\_{i=1}^{3} \left(a_i + b_i\right) &= \left(a_1 + b_1\right) + \left(a_2 + b_2\right) + \left(a_3 + b_3\right) && \text{(expand the sum)} \\ &= \left(a_1 + a_2 + a_3\right) + \left(b_1 + b_2 + b_3\right) && \text{(commutative and associative laws)} \\ &= \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i && \text{(collect the sum)} \end{aligned} \\
+>     \\ \begin{aligned} \sum\_{i=1}^{3} \mathopen{}\left(a_i + b_i\right)\mathclose{} &= \mathopen{}\left(a_1 + b_1\right)\mathclose{} + \mathopen{}\left(a_2 + b_2\right)\mathclose{} + \mathopen{}\left(a_3 + b_3\right)\mathclose{} && \text{(expand the sum)} \\ &= \mathopen{}\left(a_1 + a_2 + a_3\right)\mathclose{} + \mathopen{}\left(b_1 + b_2 + b_3\right)\mathclose{} && \text{(commutative and associative laws)} \\ &= \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i && \text{(collect the sum)} \end{aligned} \\
 >
 > Neither argument uses the number of terms: the same steps work for any lower and upper limits.
 
@@ -779,7 +779,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Theorem 20 (A sum of sums splits)** For any numbers \\a_m, \ldots, a_n\\ and \\b_m, \ldots, b_n\\,
 >
-> \\ \sum\_{i=m}^{n} \left(a_i + b_i\right) = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
+> \\ \sum\_{i=m}^{n} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum\_{i=m}^{n} a_i + \sum\_{i=m}^{n} b_i \\
 
 > **NOTE:**
 >
