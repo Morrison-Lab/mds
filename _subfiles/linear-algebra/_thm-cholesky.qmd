@@ -21,7 +21,7 @@ is positive definite (@thm-pd-gram, part 2).
 
 **Only if, with uniqueness, by [induction](proof-writing.qmd#def-proof-by-induction) on $p$.**
 For $p = 1$, $\matr{A} = [a]$ with $a > 0$ (@thm-pd-submatrix),
-and $[\ell]\,[\ell] = [a]$ with $\ell > 0$ holds exactly for $\ell = \sqrt{a}$.
+and $[c]\,[c] = [a]$ with $c > 0$ holds exactly for $c = \sqrt{a}$.
 For $p > 1$, assume every $(p - 1) \times (p - 1)$ positive definite matrix
 has exactly one such factor, and split off the first row and column.
 $\matr{A}$ is symmetric, so its first row is the transpose of its first column:

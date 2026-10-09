@@ -6,9 +6,9 @@
   and $0$ and $-5$ are lower bounds,
   so $A$ is bounded.
   $0.5$ is not an upper bound, because $0.6 \in A$ and $0.6 > 0.5$.
-- The natural numbers $\mathbb{N} = \cb{1, 2, 3, \ldots}$
+- The natural numbers $\Nat = \cb{1, 2, 3, \ldots}$
   are bounded below, by $1$,
   but not bounded above:
-  for any real number $u$, some natural number $n$ satisfies $n > u$.
+  for any real number $\ubound$, some natural number $n$ satisfies $n > \ubound$.
 
 :::

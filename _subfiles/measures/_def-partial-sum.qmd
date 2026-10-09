@@ -3,7 +3,7 @@
 
 Let $a_1, a_2, \ldots$ be a [sequence](sets-functions.qmd#def-sequence)
 of real numbers or of [extended non-negative reals](sets-functions.qmd#def-extended-nonneg-reals).
-For each $n \in \mathbb{N}$, its $n$th **partial sum**
+For each $n \in \Nat$, its $n$th **partial sum**
 is the [sum](algebra.qmd#def-summation) of its first $n$ terms:
 
 $$s_n \eqdef \sumin a_i = a_1 + \cdots + a_n$$

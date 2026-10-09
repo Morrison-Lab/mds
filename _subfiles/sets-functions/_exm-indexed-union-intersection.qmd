@@ -8,7 +8,7 @@
   \end{aligned}
   $$
 
-- $\bigcup_{i=1}^{\infty} \set{i} = \mathbb{N}$:
+- $\bigcup_{i=1}^{\infty} \set{i} = \Nat$:
   each natural number $n$ is in the set $\set{n}$,
   and each set $\set{i}$ contains only the natural number $i$.
 - $\bigcap_{i=1}^{\infty} [0, 1/i] = \set{0}$:

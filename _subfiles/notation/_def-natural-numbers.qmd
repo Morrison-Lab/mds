@@ -3,6 +3,6 @@
 
 In these notes, the **natural numbers** are the positive integers (@def-integers):
 
-$$\mathbb{N} \eqdef \cb{1, 2, 3, \ldots}$$
+$$\Nat \eqdef \cb{1, 2, 3, \ldots}$$
 
 :::

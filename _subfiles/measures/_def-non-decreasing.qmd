@@ -6,6 +6,6 @@ of real numbers or of [extended non-negative reals](sets-functions.qmd#def-exten
 is **non-decreasing**
 if each term is at least as large as the one before it:
 
-$$a_n \le a_{n+1} \quad \text{for every } n \in \mathbb{N}$$
+$$a_n \le a_{n+1} \quad \text{for every } n \in \Nat$$
 
 :::

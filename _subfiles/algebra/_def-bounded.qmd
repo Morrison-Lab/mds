@@ -3,10 +3,10 @@
 
 Let $A \subseteq \reals$.
 
-- A real number $u$ is an **upper bound** for $A$
-  if $a \le u$ for all $a \in A$.
-- A real number $\ell$ is a **lower bound** for $A$
-  if $\ell \le a$ for all $a \in A$.
+- A real number $\ubound$ is an **upper bound** for $A$
+  if $a \le \ubound$ for all $a \in A$.
+- A real number $\lbound$ is a **lower bound** for $A$
+  if $\lbound \le a$ for all $a \in A$.
 
 $A$ is **bounded above** if it has an upper bound,
 **bounded below** if it has a lower bound,
