@@ -50,13 +50,15 @@ The function $f(x) = x^2$.
 #| label: antiderivatives-F-code
 #| code-fold: true
 x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
-df <- dplyr::bind_rows(lapply(C_vals, \(C) {
-  tibble::tibble(
-    x = x_seq,
-    y = x_seq^3 / 3 + C,
-    C = factor(C)
-  )
-}))
+df <- C_vals |>
+  lapply(\(C) {
+    tibble::tibble(
+      x = x_seq,
+      y = x_seq^3 / 3 + C,
+      C = factor(C)
+    )
+  }) |>
+  dplyr::bind_rows()
 
 ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
   ggplot2::geom_line(linewidth = 0.8) +
