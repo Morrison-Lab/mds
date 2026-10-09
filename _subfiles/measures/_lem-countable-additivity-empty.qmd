@@ -1,9 +1,9 @@
 :::{#lem-countable-additivity-empty}
 #### Countable additivity and the empty set
 
-If $\mu$ is a [countably additive](#def-countable-additivity) function
+If $\measure$ is a [countably additive](#def-countable-additivity) function
 on a [$\sigma$-algebra](#def-sigma-algebra) $\salg$,
-then $\mu(\emptyset) = 0$ or $\mu(\emptyset) = \infty$.
+then $\measure(\emptyset) = 0$ or $\measure(\emptyset) = \infty$.
 
 :::
 
@@ -15,17 +15,17 @@ and the sequence $\emptyset, \emptyset, \ldots$ is pairwise disjoint with union 
 
 $$
 \ba
-\mu(\emptyset)
-&= \mu\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
+\measure(\emptyset)
+&= \measure\!\left(\bigcup_{i=1}^{\infty} \emptyset\right)
 && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\
-&= \sumto{i}{\infty} \mu(\emptyset)
+&= \sumto{i}{\infty} \measure(\emptyset)
 && \text{(countable additivity)}
 \ea
 $$
 
-If $\mu(\emptyset) = c$ for a finite $c > 0$,
+If $\measure(\emptyset) = c$ for a finite $c > 0$,
 the right-hand side is $c + c + \cdots = \infty \neq c$,
 a [contradiction](notation.qmd#def-proof-by-contradiction).
-So $\mu(\emptyset)$ is 0 or $\infty$.
+So $\measure(\emptyset)$ is 0 or $\infty$.
 
 :::

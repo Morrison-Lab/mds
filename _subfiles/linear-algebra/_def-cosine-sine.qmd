@@ -3,12 +3,12 @@
 
 The *unit circle* is the set of points $(x_1, x_2)$ in the plane with $x_1^2 + x_2^2 = 1$,
 and $\pi \approx 3.14159$ is half of its circumference.
-For a real number $\theta$, start at the point $(1, 0)$
-and move a distance $\abs{\theta}$ along the unit circle,
-counterclockwise if $\theta \ge 0$ and clockwise if $\theta < 0$.
-The point reached is $(\cos\theta, \sin\theta)$:
-its first coordinate is the **cosine** of $\theta$,
-and its second coordinate is the **sine** of $\theta$.
+For a real number $\angpar$, start at the point $(1, 0)$
+and move a distance $\abs{\angpar}$ along the unit circle,
+counterclockwise if $\angpar \ge 0$ and clockwise if $\angpar < 0$.
+The point reached is $(\cos\angpar, \sin\angpar)$:
+its first coordinate is the **cosine** of $\angpar$,
+and its second coordinate is the **sine** of $\angpar$.
 
 :::
 
@@ -17,12 +17,12 @@ and its second coordinate is the **sine** of $\theta$.
 :::{#exm-cosine-sine}
 #### Cosines and sines of some angles
 
-- $\theta = 0$ stays at $(1, 0)$, so $\cos 0 = 1$ and $\sin 0 = 0$.
-- $\theta = \pi$ goes half way around the circle, to $(-1, 0)$,
+- $\angpar = 0$ stays at $(1, 0)$, so $\cos 0 = 1$ and $\sin 0 = 0$.
+- $\angpar = \pi$ goes half way around the circle, to $(-1, 0)$,
   so $\cos\pi = -1$ and $\sin\pi = 0$.
-- $\theta = \pi/2$ goes a quarter of the way round, to $(0, 1)$,
+- $\angpar = \pi/2$ goes a quarter of the way round, to $(0, 1)$,
   so $\cos(\pi/2) = 0$ and $\sin(\pi/2) = 1$.
-- $\theta = \pi/4$ goes an eighth of the way round,
+- $\angpar = \pi/4$ goes an eighth of the way round,
   to the point of the circle with $x_1 = x_2 > 0$.
   There $x_1^2 + x_1^2 = 1$, so $x_1^2 = \tfrac{1}{2}$ and $x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071$:
   $\cos(\pi/4) = \sin(\pi/4) = \tfrac{1}{\sqrt{2}}$.

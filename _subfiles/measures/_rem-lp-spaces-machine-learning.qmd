@@ -4,7 +4,7 @@
 In probability, statistics, and machine learning, $L^p$ spaces structure the geometry of random variables, estimators, and loss functions:
 
 1. **Random variables, moments, and inclusion of $L^p$ spaces**:
-   When $\mu = \P$ is a probability measure (@def-probability-measure) with total measure $\Pf{S} = 1$,
+   When $\measure = \P$ is a probability measure (@def-probability-measure) with total measure $\Pf{S} = 1$,
    an $L^p$ function is a random variable $X$ with finite $p$-th moment:
    $$
    \norm{X}_p = \paren{\E{\abs{X}^p}}^{1/p}.
@@ -14,8 +14,8 @@ In probability, statistics, and machine learning, $L^p$ spaces structure the geo
    For instance, every random variable with finite variance ($X \in L^2$) has finite expectation ($X \in L^1$).
 
 2. **The unique Hilbert space $L^2$ and conditional expectation**:
-   Among all $L^p$ spaces, only $L^2(\mu)$ is an [inner product space](linear-algebra.qmd#def-inner-product-space),
-   equipped with the inner product $\iprod{f}{g} \eqdef \int_S f g \, d\mu$
+   Among all $L^p$ spaces, only $L^2(\measure)$ is an [inner product space](linear-algebra.qmd#def-inner-product-space),
+   equipped with the inner product $\iprod{f}{g} \eqdef \int_S f g \, d\measure$
    (all other $L^p$ spaces fail the parallelogram law).
    The completeness of $L^2$ makes it a Hilbert space.
    In regression, the conditional expectation $\E{Y \mid X}$ is the orthogonal projection of $Y \in L^2$

@@ -2,38 +2,38 @@
 #### A quadratic form is at least the smallest eigenvalue times the squared length
 
 Let $\matr{A}$ be a symmetric $p \times p$ matrix,
-and let $\lambda_{\min}$ be the smallest of its eigenvalues
+and let $\eigval_{\min}$ be the smallest of its eigenvalues
 ([eigendecomposition](linear-algebra.qmd#def-eigendecomposition)).
-Then $\tp{\vecf{h}} \matr{A} \vecf{h} \ge \lambda_{\min}\,\norm{\vecf{h}}^2$ for every $\vecf{h} \in \reals^p$.
+Then $\tp{\vecf{h}} \matr{A} \vecf{h} \ge \eigval_{\min}\,\norm{\vecf{h}}^2$ for every $\vecf{h} \in \reals^p$.
 
 :::
 
 ::: proof
 
-Write $\matr{A} = \matr{Q} \matr{\Lambda} \tp{\matr{Q}}$ with $\matr{Q}$ orthogonal
-and $\matr{\Lambda} = \diag(\lambda_1, \ldots, \lambda_p)$
+Write $\matr{A} = \matr{Q} \matr{\Eigvals} \tp{\matr{Q}}$ with $\matr{Q}$ orthogonal
+and $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$
 ([spectral theorem](linear-algebra.qmd#thm-spectral)),
 and let $\vecf{y} \eqdef \tp{\matr{Q}} \vecf{h}$. Then
 
 $$
 \ba
 \tp{\vecf{h}} \matr{A} \vecf{h}
-&= \tp{\vecf{h}} \matr{Q} \matr{\Lambda} \tp{\matr{Q}} \vecf{h}
+&= \tp{\vecf{h}} \matr{Q} \matr{\Eigvals} \tp{\matr{Q}} \vecf{h}
 && \text{(substitute the eigendecomposition)}
 \\
-&= \tp{\vecf{y}} \matr{\Lambda} \vecf{y}
+&= \tp{\vecf{y}} \matr{\Eigvals} \vecf{y}
 && \text{(} \tp{\vecf{h}} \matr{Q} = \tp{(\tp{\matr{Q}} \vecf{h})} \text{, transpose of a product)}
 \\
-&= \sumip \lambda_i\,y_i^2
-&& \text{(} \matr{\Lambda} \text{ is diagonal)}
+&= \sumip \eigval_i\,y_i^2
+&& \text{(} \matr{\Eigvals} \text{ is diagonal)}
 \\
-&\ge \sumip \lambda_{\min}\,y_i^2
-&& \text{(} \lambda_i \ge \lambda_{\min} \text{ and } y_i^2 \ge 0 \text{)}
+&\ge \sumip \eigval_{\min}\,y_i^2
+&& \text{(} \eigval_i \ge \eigval_{\min} \text{ and } y_i^2 \ge 0 \text{)}
 \\
-&= \lambda_{\min}\,\norm{\vecf{y}}^2
+&= \eigval_{\min}\,\norm{\vecf{y}}^2
 && \text{(the squared length is the sum of squares)}
 \\
-&= \lambda_{\min}\,\norm{\vecf{h}}^2.
+&= \eigval_{\min}\,\norm{\vecf{h}}^2.
 && \text{(orthogonal matrices preserve length)}
 \ea
 $$
@@ -51,10 +51,10 @@ which is orthogonal because $\tp{\matr{Q}} \matr{Q} = \matr{Q} \tp{\matr{Q}} = \
 #### Checking the bound
 
 $\matr{A} = \sbmat{ 2 & 1 \\ 1 & 2 }$ has eigenvalues $3$ and $1$
-([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)), so $\lambda_{\min} = 1$.
+([eigenvalue example](linear-algebra.qmd#exm-eigenvalue)), so $\eigval_{\min} = 1$.
 At $\vecf{h} = \tp{(1, 0)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 \ge 1 \cdot 1$.
 At $\vecf{h} = \tp{(1, -1)}$, $\tp{\vecf{h}} \matr{A} \vecf{h} = 2 - 1 - 1 + 2 = 2 = 1 \cdot 2$:
-the bound holds with equality, since this $\vecf{h}$ is an eigenvector for $\lambda_{\min}$.
+the bound holds with equality, since this $\vecf{h}$ is an eigenvector for $\eigval_{\min}$.
 
 :::
 

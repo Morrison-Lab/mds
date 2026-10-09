@@ -1,9 +1,9 @@
 :::{#def-measure-zero}
 #### Measure zero (null set)
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 A set $A \in \salg$ has **measure zero**
-(also called a **null set** for $\mu$)
-if $\mu(A) = 0$.
+(also called a **null set** for $\measure$)
+if $\measure(A) = 0$.
 
 :::

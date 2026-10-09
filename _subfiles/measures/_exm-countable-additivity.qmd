@@ -1,14 +1,14 @@
 :::{#exm-countable-additivity}
 #### Counting elements is countably additive
 
-For the counting function $\mu(A) \eqdef \abs{A}$ of @exm-finite-additivity,
+For the counting function $\measure(A) \eqdef \abs{A}$ of @exm-finite-additivity,
 take any sequence of pairwise disjoint sets $A_1, A_2, \ldots$.
 No two of them share an element, and $D$ has only six elements,
 so at most six of the $A_i$ contain any elements;
-the rest are $\emptyset$, with $\mu(\emptyset) = 0$.
+the rest are $\emptyset$, with $\measure(\emptyset) = 0$.
 The infinite sum therefore has at most six nonzero terms,
 and finite additivity (@exm-finite-additivity) shows that those terms
-add up to $\mu$ of the union.
-So $\mu$ is countably additive.
+add up to $\measure$ of the union.
+So $\measure$ is countably additive.
 
 :::

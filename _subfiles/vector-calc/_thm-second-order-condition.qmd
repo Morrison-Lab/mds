@@ -12,20 +12,20 @@ then $\vx^*$ is a strict local minimizer of $f$ (@def-strict-local-minimizer).
 ::: proof
 
 $\matr{H}_f(\vx^*)$ is positive definite, and so symmetric,
-so its smallest eigenvalue $\lambda$ is positive
+so its smallest eigenvalue $\eigval$ is positive
 ([definiteness and eigenvalues](linear-algebra.qmd#thm-definite-eigenvalues)).
 Each of the $p^2$ entries of $\matr{H}_f$ is continuous at $\vx^*$ ([continuity](vector-calculus.qmd#def-continuous-several)):
-for $\varepsilon = \lambda / (2p)$ there is a $\delta_{ij} > 0$ with
-$\abs{\sb{\matr{H}_f(\vy)}_{ij} - \sb{\matr{H}_f(\vx^*)}_{ij}} < \lambda / (2p)$
-whenever $\norm{\vy - \vx^*} < \delta_{ij}$.
-Let $\delta$ be the smallest of these $p^2$ numbers.
+for $\tolout = \eigval / (2p)$ there is a $\tolin_{ij} > 0$ with
+$\abs{\sb{\matr{H}_f(\vy)}_{ij} - \sb{\matr{H}_f(\vx^*)}_{ij}} < \eigval / (2p)$
+whenever $\norm{\vy - \vx^*} < \tolin_{ij}$.
+Let $\tolin$ be the smallest of these $p^2$ numbers.
 
-Now let $0 < \norm{\vecf{h}} < \delta$.
-By @thm-taylor-mv there is a $\tau \in (0, 1)$ for which the first step of the next display holds;
-let $\vy \eqdef \vx^* + \tau \vecf{h}$ and $\matr{E} \eqdef \matr{H}_f(\vy) - \matr{H}_f(\vx^*)$.
-Since $\norm{\vy - \vx^*} = \tau\,\norm{\vecf{h}} < \delta$,
-every entry of $\matr{E}$ has absolute value less than $\lambda / (2p)$,
-so @lem-qf-entry-bound applies with $m = \lambda / (2p)$:
+Now let $0 < \norm{\vecf{h}} < \tolin$.
+By @thm-taylor-mv there is a $\midpt \in (0, 1)$ for which the first step of the next display holds;
+let $\vy \eqdef \vx^* + \midpt \vecf{h}$ and $\matr{E} \eqdef \matr{H}_f(\vy) - \matr{H}_f(\vx^*)$.
+Since $\norm{\vy - \vx^*} = \midpt\,\norm{\vecf{h}} < \tolin$,
+every entry of $\matr{E}$ has absolute value less than $\eigval / (2p)$,
+so @lem-qf-entry-bound applies with $m = \eigval / (2p)$:
 
 $$
 \ba
@@ -39,24 +39,24 @@ f(\vx^* + \vecf{h}) - f(\vx^*)
 &= \frac{1}{2}\,\tp{\vecf{h}}\,\matr{H}_f(\vx^*)\,\vecf{h} + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{E}\,\vecf{h}
 && \text{(} \matr{H}_f(\vy) = \matr{H}_f(\vx^*) + \matr{E} \text{; distribute)}
 \\
-&\ge \frac{1}{2}\,\lambda\,\norm{\vecf{h}}^2 + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{E}\,\vecf{h}
+&\ge \frac{1}{2}\,\eigval\,\norm{\vecf{h}}^2 + \frac{1}{2}\,\tp{\vecf{h}}\,\matr{E}\,\vecf{h}
 && \text{(@lem-qf-eigen-bound)}
 \\
-&\ge \frac{1}{2}\,\lambda\,\norm{\vecf{h}}^2 - \frac{1}{2}\,\abs{\tp{\vecf{h}}\,\matr{E}\,\vecf{h}}
+&\ge \frac{1}{2}\,\eigval\,\norm{\vecf{h}}^2 - \frac{1}{2}\,\abs{\tp{\vecf{h}}\,\matr{E}\,\vecf{h}}
 && \text{(a number is at least minus its absolute value)}
 \\
-&\ge \frac{1}{2}\,\lambda\,\norm{\vecf{h}}^2 - \frac{1}{2}\,p\,\frac{\lambda}{2p}\,\norm{\vecf{h}}^2
-&& \text{(@lem-qf-entry-bound, } m = \lambda / (2p) \text{)}
+&\ge \frac{1}{2}\,\eigval\,\norm{\vecf{h}}^2 - \frac{1}{2}\,p\,\frac{\eigval}{2p}\,\norm{\vecf{h}}^2
+&& \text{(@lem-qf-entry-bound, } m = \eigval / (2p) \text{)}
 \\
-&= \frac{\lambda}{4}\,\norm{\vecf{h}}^2
+&= \frac{\eigval}{4}\,\norm{\vecf{h}}^2
 && \text{(arithmetic)}
 \\
 &> 0.
-&& \text{(} \lambda > 0 \text{ and } \vecf{h} \ne \vzero \text{)}
+&& \text{(} \eigval > 0 \text{ and } \vecf{h} \ne \vzero \text{)}
 \ea
 $$
 
-So $f(\vx^*) < f(\vx)$ whenever $0 < \norm{\vx - \vx^*} < \delta$ (take $\vecf{h} = \vx - \vx^*$).
+So $f(\vx^*) < f(\vx)$ whenever $0 < \norm{\vx - \vx^*} < \tolin$ (take $\vecf{h} = \vx - \vx^*$).
 
 :::
 

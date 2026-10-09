@@ -2,10 +2,10 @@
 #### Angle between two vectors
 
 The **angle** between two nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$
-is the unique number $\theta \in [0, \pi]$ whose cosine (@def-cosine-sine) satisfies
+is the unique number $\angpar \in [0, \pi]$ whose cosine (@def-cosine-sine) satisfies
 
 $$
-\cos\theta = \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.
+\cos\angpar = \frac{\vecf{x} \cdot \vecf{y}}{\norm{\vecf{x}}\,\norm{\vecf{y}}}.
 $$
 
 :::
@@ -19,7 +19,7 @@ The denominator is positive, because both vectors are nonzero (@thm-norm-propert
 and by @thm-cauchy-schwarz the ratio lies between $-1$ and $1$.
 On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$
 and takes each value in $[-1, 1]$ exactly once,
-so there is exactly one such $\theta$.
+so there is exactly one such $\angpar$.
 The angle is $\pi/2$ exactly when $\vecf{x} \cdot \vecf{y} = 0$,
 so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right angle.
 
@@ -31,11 +31,11 @@ so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right an
 #### Some angles in the plane
 
 - $(1, 0)$ and $(1, 1)$:
-  $\cos\theta = \frac{1}{1 \cd \sqrt{2}}$, so $\theta = \pi/4$.
+  $\cos\angpar = \frac{1}{1 \cd \sqrt{2}}$, so $\angpar = \pi/4$.
 - $(1, 2)$ and $(-2, 1)$:
-  $\cos\theta = \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = 0$, so $\theta = \pi/2$.
+  $\cos\angpar = \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} = 0$, so $\angpar = \pi/2$.
 - $(1, 0)$ and $(-3, 0)$:
-  $\cos\theta = \frac{-3}{1 \cd 3} = -1$, so $\theta = \pi$.
+  $\cos\angpar = \frac{-3}{1 \cd 3} = -1$, so $\angpar = \pi$.
 - $(1, 0)$ and $\vzero$: there is no angle,
   because the ratio would divide by $\norm{\vzero} = 0$.
 

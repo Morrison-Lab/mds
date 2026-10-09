@@ -2,7 +2,7 @@
 #### Counting elements is finitely additive
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets-functions.qmd#exm-set)),
-let $\mu(A) \eqdef \abs{A}$, the number of elements of $A$
+let $\measure(A) \eqdef \abs{A}$, the number of elements of $A$
 ([cardinality](sets-functions.qmd#def-finite-set)),
 for each set $A$ in the $\sigma$-algebra of all subsets of $D$
 (@exm-sigma-algebra).
@@ -11,21 +11,21 @@ The sets $\set{1, 2}$ and $\set{5, 6}$ are pairwise disjoint
 
 $$
 \ba
-\mu(\set{1, 2} \cup \set{5, 6})
-&= \mu(\set{1, 2, 5, 6})
+\measure(\set{1, 2} \cup \set{5, 6})
+&= \measure(\set{1, 2, 5, 6})
 && \text{(take the union)} \\
 &= 4
 && \text{(count the elements)} \\
 &= 2 + 2
 && \text{(write 4 as a sum)} \\
-&= \mu(\set{1, 2}) + \mu(\set{5, 6})
+&= \measure(\set{1, 2}) + \measure(\set{5, 6})
 && \text{(count each set's elements)}
 \ea
 $$
 
 The same holds for any pairwise disjoint sets,
 because the sizes of disjoint sets add,
-so $\mu$ is finitely additive.
+so $\measure$ is finitely additive.
 
 :::
 
@@ -34,22 +34,22 @@ so $\mu$ is finitely additive.
 :::{#exm-not-finitely-additive}
 #### Squaring the count is not finitely additive
 
-On the same $\sigma$-algebra, let $\nu(A) \eqdef \abs{A}^2$.
+On the same $\sigma$-algebra, let $\measureb(A) \eqdef \abs{A}^2$.
 The sets $\set{1}$ and $\set{2}$ are pairwise disjoint, but
 
 $$
 \ba
-\nu(\set{1} \cup \set{2})
-&= \nu(\set{1, 2})
+\measureb(\set{1} \cup \set{2})
+&= \measureb(\set{1, 2})
 && \text{(take the union)} \\
 &= 2^2 = 4,
 && \text{(count, then square)} \\
-\nu(\set{1}) + \nu(\set{2})
+\measureb(\set{1}) + \measureb(\set{2})
 &= 1^2 + 1^2 = 2,
 && \text{(count each set, then square)}
 \ea
 $$
 
-and $4 \ne 2$, so $\nu$ is not finitely additive.
+and $4 \ne 2$, so $\measureb$ is not finitely additive.
 
 :::

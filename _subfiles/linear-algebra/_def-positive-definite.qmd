@@ -64,16 +64,16 @@ $$
 $$
 
 which is positive for every $\vx \neq \vzero$.
-But suppose $\matr{C}\vecf{v} = \lambda\vecf{v}$ for a real number $\lambda$.
-Matching entries gives $v_1 + v_2 = \lambda v_1$
-and $-v_1 + v_2 = \lambda v_2$,
-so $v_2 = (\lambda - 1)\, v_1$ and $-v_1 = (\lambda - 1)\, v_2$.
+But suppose $\matr{C}\vecf{v} = \eigval\vecf{v}$ for a real number $\eigval$.
+Matching entries gives $v_1 + v_2 = \eigval v_1$
+and $-v_1 + v_2 = \eigval v_2$,
+so $v_2 = (\eigval - 1)\, v_1$ and $-v_1 = (\eigval - 1)\, v_2$.
 Substituting the first into the second gives
-$-v_1 = (\lambda - 1)^2 v_1$,
-so $\paren{1 + (\lambda - 1)^2} v_1 = 0$.
-Since $1 + (\lambda - 1)^2 > 0$, $v_1 = 0$,
-and then $v_2 = (\lambda - 1)\, v_1 = 0$.
-So no real $\lambda$ has an eigenvector $\vecf{v} \neq \vzero$.
+$-v_1 = (\eigval - 1)^2 v_1$,
+so $\paren{1 + (\eigval - 1)^2} v_1 = 0$.
+Since $1 + (\eigval - 1)^2 > 0$, $v_1 = 0$,
+and then $v_2 = (\eigval - 1)\, v_1 = 0$.
+So no real $\eigval$ has an eigenvector $\vecf{v} \neq \vzero$.
 
 :::
 

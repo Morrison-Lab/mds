@@ -2,8 +2,8 @@
 #### Measure space of die rolls
 
 For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$,
-adding the counting function $\mu(A) = \abs{A}$ of @exm-measure
+adding the counting function $\measure(A) = \abs{A}$ of @exm-measure
 to the [measurable space](#def-measurable-space) $(D, \salg)$ of @exm-measurable-space
-makes $(D, \salg, \mu)$ a measure space.
+makes $(D, \salg, \measure)$ a measure space.
 
 :::

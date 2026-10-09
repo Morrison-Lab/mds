@@ -2,10 +2,10 @@
 #### Measure
 
 A **measure** on a set $S$ with a [$\sigma$-algebra](#def-sigma-algebra) $\salg$
-is a function $\mu : \salg \to [0, \infty]$
+is a function $\measure : \salg \to [0, \infty]$
 that satisfies:
 
-- $\mu(\emptyset) = 0$.
-- $\mu$ is [countably additive](#def-countable-additivity).
+- $\measure(\emptyset) = 0$.
+- $\measure$ is [countably additive](#def-countable-additivity).
 
 :::

@@ -2,13 +2,13 @@
 
 $$
 \ba
-\deriv{\vb} (\vx \cdot \vb)
+\deriv{\vcoef} (\vx \cdot \vcoef)
 &=
 \begin{bmatrix}
-\deriv{\beta_1}(x_1\beta_1+x_2\beta_2 +...+x_p \beta_p ) \\
-\deriv{\beta_2}(x_1\beta_1+x_2\beta_2 +...+x_p \beta_p ) \\
+\deriv{\coef{1}}(x_1\coef{1}+x_2\coef{2} +...+x_p \coef{p} ) \\
+\deriv{\coef{2}}(x_1\coef{1}+x_2\coef{2} +...+x_p \coef{p} ) \\
 \vdots \\
-\deriv{\beta_p}(x_1\beta_1+x_2\beta_2 +...+x_p \beta_p )
+\deriv{\coef{p}}(x_1\coef{1}+x_2\coef{2} +...+x_p \coef{p} )
 \end{bmatrix}
 \\ &=
 \begin{bmatrix}

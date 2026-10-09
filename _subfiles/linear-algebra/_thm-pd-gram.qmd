@@ -44,24 +44,24 @@ so for $\vx \ne \vzero$, $\matr{B} \vx \ne \vzero$ and $\norm{\matr{B} \vx}^2 > 
 
 **Only if.**
 Let $\matr{A}$ be positive semidefinite.
-It is symmetric, so $\matr{A} = \matr{Q} \matr{\Lambda} \tp{\matr{Q}}$ (@thm-spectral),
-and every $\lambda_i \ge 0$ (@thm-definite-eigenvalues).
-Let $\matr{\Lambda}^{1/2} \eqdef \diag(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_p})$,
-which is symmetric, with $\matr{\Lambda}^{1/2} \matr{\Lambda}^{1/2} = \matr{\Lambda}$
+It is symmetric, so $\matr{A} = \matr{Q} \matr{\Eigvals} \tp{\matr{Q}}$ (@thm-spectral),
+and every $\eigval_i \ge 0$ (@thm-definite-eigenvalues).
+Let $\matr{\Eigvals}^{1/2} \eqdef \diag(\sqrt{\eigval_1}, \ldots, \sqrt{\eigval_p})$,
+which is symmetric, with $\matr{\Eigvals}^{1/2} \matr{\Eigvals}^{1/2} = \matr{\Eigvals}$
 (the product of diagonal matrices multiplies their diagonals, as in the proof of @thm-diagonalizable-powers),
-and let $\matr{B} \eqdef \matr{\Lambda}^{1/2} \tp{\matr{Q}}$. Then
+and let $\matr{B} \eqdef \matr{\Eigvals}^{1/2} \tp{\matr{Q}}$. Then
 
 $$
 \ba
 \tp{\matr{B}} \matr{B}
-&= \tp{(\tp{\matr{Q}})}\,\tp{(\matr{\Lambda}^{1/2})}\,\matr{\Lambda}^{1/2} \tp{\matr{Q}}
+&= \tp{(\tp{\matr{Q}})}\,\tp{(\matr{\Eigvals}^{1/2})}\,\matr{\Eigvals}^{1/2} \tp{\matr{Q}}
 && \text{(@thm-transpose-product)}
 \\
-&= \matr{Q}\,\matr{\Lambda}^{1/2} \matr{\Lambda}^{1/2}\,\tp{\matr{Q}}
-&& \text{(@def-matrix-transpose; } \matr{\Lambda}^{1/2} \text{ is symmetric)}
+&= \matr{Q}\,\matr{\Eigvals}^{1/2} \matr{\Eigvals}^{1/2}\,\tp{\matr{Q}}
+&& \text{(@def-matrix-transpose; } \matr{\Eigvals}^{1/2} \text{ is symmetric)}
 \\
-&= \matr{Q} \matr{\Lambda} \tp{\matr{Q}}
-&& \text{(} \matr{\Lambda}^{1/2} \matr{\Lambda}^{1/2} = \matr{\Lambda} \text{)}
+&= \matr{Q} \matr{\Eigvals} \tp{\matr{Q}}
+&& \text{(} \matr{\Eigvals}^{1/2} \matr{\Eigvals}^{1/2} = \matr{\Eigvals} \text{)}
 \\
 &= \matr{A}.
 && \text{(@thm-spectral)}
@@ -69,9 +69,9 @@ $$
 $$
 
 If $\matr{A}$ is positive definite, it is positive semidefinite (@rem-positive-definite-symmetry),
-so the same $\matr{B}$ gives $\matr{A} = \tp{\matr{B}} \matr{B}$; and every $\lambda_i > 0$ (@thm-definite-eigenvalues),
-so $\matr{\Lambda}^{1/2}$ is diagonal with nonzero diagonal, and invertible
-(its inverse is $\diag(1/\sqrt{\lambda_1}, \ldots, 1/\sqrt{\lambda_p})$);
+so the same $\matr{B}$ gives $\matr{A} = \tp{\matr{B}} \matr{B}$; and every $\eigval_i > 0$ (@thm-definite-eigenvalues),
+so $\matr{\Eigvals}^{1/2}$ is diagonal with nonzero diagonal, and invertible
+(its inverse is $\diag(1/\sqrt{\eigval_1}, \ldots, 1/\sqrt{\eigval_p})$);
 $\tp{\matr{Q}}$ is invertible with inverse $\matr{Q}$ (@rem-orthogonal-matrix-columns).
 So $\matr{B}$ is invertible (@thm-inverse-product),
 and its $p$ columns are linearly independent (@thm-invertible-rank, @def-rank).

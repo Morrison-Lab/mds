@@ -3,16 +3,16 @@
 
 Let $f$ be as in @def-newton-method and let $\vx$ be a point,
 with $\vecf{g} \eqdef \deriv{\vx} f(\vx)$ and $\matr{H} \eqdef \matr{H}_f(\vx)$.
-The **quadratic model** of $f$ at $\vx$ is the function of a step $\vecf{\delta} \in \reals^p$
+The **quadratic model** of $f$ at $\vx$ is the function of a step $\stepvec \in \reals^p$
 
 $$
-q(\vecf{\delta}) \eqdef f(\vx) + \tp{\vecf{g}} \vecf{\delta} + \tfrac{1}{2}\,\tp{\vecf{\delta}} \matr{H} \vecf{\delta},
+q(\stepvec) \eqdef f(\vx) + \tp{\vecf{g}} \stepvec + \tfrac{1}{2}\,\tp{\stepvec} \matr{H} \stepvec,
 $$
 
 also called the **second-order Taylor polynomial** of $f$ at $\vx$:
 when the second partial derivatives of $f$ are continuous,
-@thm-taylor-mv says that $f(\vx + \vecf{\delta})$ equals the same expression
-with the Hessian evaluated at a point between $\vx$ and $\vx + \vecf{\delta}$.
+@thm-taylor-mv says that $f(\vx + \stepvec)$ equals the same expression
+with the Hessian evaluated at a point between $\vx$ and $\vx + \stepvec$.
 
 :::
 
@@ -23,8 +23,8 @@ with the Hessian evaluated at a point between $\vx$ and $\vx + \vecf{\delta}$.
 
 For $f(x) = \tfrac{1}{3} x^3 - 4x$ at $x = 2.5$ (@exm-newton-method),
 $g = 2.5^2 - 4 = 2.25$ and $H = [2 \cdot 2.5] = [5]$, so
-$q(\delta) = f(2.5) + 2.25\,\delta + 2.5\,\delta^2$.
+$q(\step) = f(2.5) + 2.25\,\step + 2.5\,\step^2$.
 For $f(\vx) = \tfrac{1}{2} (x_1^2 + 3 x_2^2)$, whose Hessian is $\sbmat{ 1 & 0 \\ 0 & 3 }$ at every point,
-the model at any $\vx$ equals $f(\vx + \vecf{\delta})$ exactly (@exm-taylor-mv with $\matr{S} = \sbmat{ 1/2 & 0 \\ 0 & 3/2 }$).
+the model at any $\vx$ equals $f(\vx + \stepvec)$ exactly (@exm-taylor-mv with $\matr{S} = \sbmat{ 1/2 & 0 \\ 0 & 3/2 }$).
 
 :::

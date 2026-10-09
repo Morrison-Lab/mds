@@ -2,11 +2,11 @@
 
 #### Derivative of a dot product
 
-If $\vx$ is constant with respect to $\vb$, then:
+If $\vx$ is constant with respect to $\vcoef$, then:
 
 $$
-\underbrace{\deriv{\vb} (\vx \cdot \vb)}_{p \times 1} =
-\underbrace{\deriv{\vb} (\vb \cdot \vx)}_{p \times 1} =
+\underbrace{\deriv{\vcoef} (\vx \cdot \vcoef)}_{p \times 1} =
+\underbrace{\deriv{\vcoef} (\vcoef \cdot \vx)}_{p \times 1} =
 \underbrace{\vx}_{p \times 1}
 $$
 

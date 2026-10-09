@@ -1,13 +1,13 @@
 :::{#def-absolutely-integrable}
 #### Absolutely integrable function (integrable function, absolute integrability)
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space).
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 A [measurable](#def-measurable-function) function $f : S \to \reals$
-is **absolutely integrable** with respect to $\mu$
+is **absolutely integrable** with respect to $\measure$
 (often just called **integrable**)
 if the integral of its [absolute value](algebra.qmd#def-absolute-value) is finite:
 
-$$\int_S \abs{f} \, d\mu < \infty$$
+$$\int_S \abs{f} \, d\measure < \infty$$
 
 The property itself is called **absolute integrability**.
 
@@ -19,10 +19,10 @@ The property itself is called **absolute integrability**.
 #### An absolutely integrable function has a finite integral
 
 If $f$ is absolutely integrable,
-then $\int_S f^{+} \, d\mu$ and $\int_S f^{-} \, d\mu$ are both finite,
+then $\int_S f^{+} \, d\measure$ and $\int_S f^{-} \, d\measure$ are both finite,
 because $f^{+} \le \abs{f}$ and $f^{-} \le \abs{f}$,
 so each sum in @def-integral-nonneg for $f^{+}$ or $f^{-}$
 is at most the matching sum for $\abs{f}$.
-So $\int_S f \, d\mu$ (@def-integral) is a real number.
+So $\int_S f \, d\measure$ (@def-integral) is a real number.
 
 :::

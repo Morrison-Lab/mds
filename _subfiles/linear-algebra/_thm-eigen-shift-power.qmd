@@ -1,11 +1,11 @@
 :::{#thm-eigen-shift-power}
 #### Eigenvalues of shifts and powers
 
-Let $\vecf{v}$ be an eigenvector of a $p \times p$ matrix $\matr{A}$ for the eigenvalue $\lambda$
+Let $\vecf{v}$ be an eigenvector of a $p \times p$ matrix $\matr{A}$ for the eigenvalue $\eigval$
 (@def-eigenvalue). Then
 
-1. $\vecf{v}$ is an eigenvector of $\matr{A} + s\,\matr{I}_p$ for $\lambda + s$, for every number $s$;
-2. $\vecf{v}$ is an eigenvector of $\matr{A}^k$ (@def-matrix-power) for $\lambda^k$,
+1. $\vecf{v}$ is an eigenvector of $\matr{A} + s\,\matr{I}_p$ for $\eigval + s$, for every number $s$;
+2. $\vecf{v}$ is an eigenvector of $\matr{A}^k$ (@def-matrix-power) for $\eigval^k$,
    for every positive integer $k$.
 
 :::
@@ -23,20 +23,20 @@ $$
 &= \matr{A} \vecf{v} + s\,(\matr{I}_p \vecf{v})
 && \text{(@thm-scalar-matmul)}
 \\
-&= \lambda \vecf{v} + s\,(\matr{I}_p \vecf{v})
+&= \eigval \vecf{v} + s\,(\matr{I}_p \vecf{v})
 && \text{(eigenvector)}
 \\
-&= \lambda \vecf{v} + s \vecf{v}
+&= \eigval \vecf{v} + s \vecf{v}
 && \text{(@thm-identity)}
 \\
-&= (\lambda + s)\,\vecf{v}.
+&= (\eigval + s)\,\vecf{v}.
 && \text{(add entrywise)}
 \ea
 $$
 
 **Part 2, by [induction](proof-writing.qmd#def-proof-by-induction) on $k$.**
 For $k = 1$ it is the assumption.
-If $\matr{A}^{k-1} \vecf{v} = \lambda^{k-1} \vecf{v}$, then
+If $\matr{A}^{k-1} \vecf{v} = \eigval^{k-1} \vecf{v}$, then
 
 $$
 \ba
@@ -44,16 +44,16 @@ $$
 &= \matr{A}\,(\matr{A}^{k-1} \vecf{v})
 && \text{(@def-matrix-power, @thm-matmul-assoc)}
 \\
-&= \matr{A}\,(\lambda^{k-1} \vecf{v})
+&= \matr{A}\,(\eigval^{k-1} \vecf{v})
 && \text{(induction hypothesis)}
 \\
-&= \lambda^{k-1}\,(\matr{A} \vecf{v})
+&= \eigval^{k-1}\,(\matr{A} \vecf{v})
 && \text{(@thm-scalar-matmul)}
 \\
-&= \lambda^{k-1}\,(\lambda \vecf{v})
+&= \eigval^{k-1}\,(\eigval \vecf{v})
 && \text{(eigenvector)}
 \\
-&= \lambda^k \vecf{v}.
+&= \eigval^k \vecf{v}.
 && \text{(multiply the numbers)}
 \ea
 $$

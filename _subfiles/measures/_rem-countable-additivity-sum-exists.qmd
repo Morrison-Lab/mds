@@ -3,12 +3,12 @@
 
 By @lem-nonneg-series,
 the right-hand side of the equation in @def-countable-additivity,
-$\sumto{i}{\infty} \mu(A_i)$,
+$\sumto{i}{\infty} \measure(A_i)$,
 always has a value,
-because each $\mu(A_i)$ is in $[0, \infty]$.
-For example, if $\mu(A_i) = 1/2^i$ for each $i$,
+because each $\measure(A_i)$ is in $[0, \infty]$.
+For example, if $\measure(A_i) = 1/2^i$ for each $i$,
 the partial sums are $s_n = 1 - 1/2^n$, and the sum is $1$;
-if $\mu(A_i) = 1$ for each $i$,
+if $\measure(A_i) = 1$ for each $i$,
 the partial sums are $s_n = n$, and the sum is $\infty$.
 
 :::

@@ -3,25 +3,25 @@
 
 Let $\matr{A} = \matr{U}\matr{D}\tp{\matr{V}}$
 be a singular value decomposition (@def-svd) of an $n \times p$ matrix $\matr{A}$
-with singular values $\sigma_1, \ldots, \sigma_r$.
+with singular values $\singval_1, \ldots, \singval_r$.
 Then $\tp{\matr{A}}\matr{A}$ is symmetric (@def-symmetric-matrix), and
 
 $$
 \underbrace{\tp{\matr{A}}\matr{A}}_{p \times p}
 = \underbrace{\matr{V}}_{p \times p}\,
-\underbrace{\matr{\Lambda}}_{p \times p}\,
+\underbrace{\matr{\Eigvals}}_{p \times p}\,
 \underbrace{\tp{\matr{V}}}_{p \times p}
 $$
 
-where $\matr{\Lambda} \eqdef \tp{\matr{D}}\matr{D}$
+where $\matr{\Eigvals} \eqdef \tp{\matr{D}}\matr{D}$
 is the $p \times p$ diagonal matrix
-whose $i$-th diagonal entry $\lambda_i$ is
-$\sigma_i^2$ for $i \le r$
+whose $i$-th diagonal entry $\eigval_i$ is
+$\singval_i^2$ for $i \le r$
 and $0$ for $i > r$.
-So $\matr{V}\matr{\Lambda}\tp{\matr{V}}$ is an eigendecomposition
+So $\matr{V}\matr{\Eigvals}\tp{\matr{V}}$ is an eigendecomposition
 (@def-eigendecomposition) of $\tp{\matr{A}}\matr{A}$:
 column $i$ of $\matr{V}$ is an eigenvector of $\tp{\matr{A}}\matr{A}$
-for the eigenvalue $\lambda_i$.
+for the eigenvalue $\eigval_i$.
 
 :::
 
@@ -70,19 +70,19 @@ $$
 &= \matr{V}\,\paren{\tp{\matr{D}}\matr{D}}\,\tp{\matr{V}}
 && \text{(identity matrix)}
 \\
-&= \matr{V}\matr{\Lambda}\tp{\matr{V}}
-&& \text{(definition of } \matr{\Lambda} \text{)}
+&= \matr{V}\matr{\Eigvals}\tp{\matr{V}}
+&& \text{(definition of } \matr{\Eigvals} \text{)}
 \ea
 $$
 
-**The entries of $\matr{\Lambda}$.**
-Write $\lambda_{ij}$ for entry $(i, j)$ of $\matr{\Lambda}$,
-so $\lambda_i = \lambda_{ii}$.
+**The entries of $\matr{\Eigvals}$.**
+Write $\eigval_{ij}$ for entry $(i, j)$ of $\matr{\Eigvals}$,
+so $\eigval_i = \eigval_{ii}$.
 Only the entries $d_{kk}$ with $k \le r$ of $\matr{D}$ can be nonzero.
 
 $$
 \ba
-\lambda_{ij}
+\eigval_{ij}
 &= \sumto{k}{n} (\tp{\matr{D}})_{ik}\, d_{kj}
 && \text{(definition of matrix multiplication)}
 \\
@@ -92,27 +92,27 @@ $$
 $$
 
 The term for $k$ is nonzero only if $k = i \le r$ and $k = j$.
-So $\lambda_{ij} = 0$ when $i \neq j$.
+So $\eigval_{ij} = 0$ when $i \neq j$.
 On the diagonal, only the term $k = i$ can be nonzero, and for $i \le r$
 
 $$
 \ba
-\lambda_i
-&= \lambda_{ii}
+\eigval_i
+&= \eigval_{ii}
 && \text{(notation)}
 \\
 &= d_{ii}\, d_{ii}
 && \text{(the only term that can be nonzero)}
 \\
-&= \sigma_i \cd \sigma_i
+&= \singval_i \cd \singval_i
 && \text{(definition of } \matr{D} \text{)}
 \\
-&= \sigma_i^2
+&= \singval_i^2
 && \text{(notation for a square)}
 \ea
 $$
 
-For $i > r$, every term is $0$, so $\lambda_i = 0$.
+For $i > r$, every term is $0$, so $\eigval_i = 0$.
 
 **The eigenvectors.**
 Write $\vecf{v}_i$ for column $i$ of $\matr{V}$,
@@ -123,19 +123,19 @@ Then
 $$
 \ba
 \tp{\matr{A}}\matr{A}\,\vecf{v}_i
-&= \matr{V}\matr{\Lambda}\,\tp{\matr{V}}\vecf{v}_i
+&= \matr{V}\matr{\Eigvals}\,\tp{\matr{V}}\vecf{v}_i
 && \text{(the factorization)}
 \\
-&= \matr{V}\matr{\Lambda}\,\vecf{e}_i
+&= \matr{V}\matr{\Eigvals}\,\vecf{e}_i
 && \text{(} \tp{\matr{V}}\vecf{v}_i = \vecf{e}_i \text{)}
 \\
-&= \matr{V}\,(\lambda_i\,\vecf{e}_i)
-&& \text{(column } i \text{ of the diagonal matrix } \matr{\Lambda} \text{)}
+&= \matr{V}\,(\eigval_i\,\vecf{e}_i)
+&& \text{(column } i \text{ of the diagonal matrix } \matr{\Eigvals} \text{)}
 \\
-&= \lambda_i\,\matr{V}\vecf{e}_i
-&& \text{(move the scalar } \lambda_i \text{ to the front)}
+&= \eigval_i\,\matr{V}\vecf{e}_i
+&& \text{(move the scalar } \eigval_i \text{ to the front)}
 \\
-&= \lambda_i\,\vecf{v}_i
+&= \eigval_i\,\vecf{v}_i
 && \text{(} \matr{V}\vecf{e}_i \text{ is column } i \text{ of } \matr{V} \text{)}
 \ea
 $$
@@ -167,7 +167,7 @@ $$
 $$
 
 @thm-svd-evd says its eigenvalues are
-$\sigma_1^2 = 4$ and $\sigma_2^2 = 2$,
+$\singval_1^2 = 4$ and $\singval_2^2 = 2$,
 with the columns of $\matr{V}$ as eigenvectors.
 Checking the first column, up to its factor $\frac{1}{\sqrt{2}}$:
 
@@ -219,11 +219,11 @@ $$
 @thm-svd-evd matches @banerjee2014linear [Chapter 12, pp. 372-373],
 which works in the other direction:
 it constructs an SVD from a spectral decomposition of $\tp{\matr{A}}\matr{A}$
-and sets $\sigma_i = \sqrt{\lambda_i}$.
+and sets $\singval_i = \sqrt{\eigval_i}$.
 
 For example, in @exm-svd-evd
 the eigenvalues of $\tp{\matr{A}}\matr{A}$ are $4$ and $2$,
 and $\sqrt{4} = 2$ and $\sqrt{2}$
-are the singular values $\sigma_1$ and $\sigma_2$ of $\matr{A}$ from @exm-svd.
+are the singular values $\singval_1$ and $\singval_2$ of $\matr{A}$ from @exm-svd.
 
 :::

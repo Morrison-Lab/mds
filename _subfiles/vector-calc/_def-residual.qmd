@@ -1,18 +1,18 @@
 :::{#def-residual}
 #### Residuals and squared errors
 
-Let $\mX$ be an $n \times p$ matrix, $\vy \in \reals^n$, and $\vb \in \reals^p$.
-The **residual vector** of $\vb$ is $\vec\eps(\vb) \eqdef \vy - \mX\vb$,
-and its entries $\eps_i = y_i - (\mX\vb)_i$ are the **residuals**.
-The square $\eps_i^2$ is the $i$th **squared error**, and their sum
+Let $\mX$ be an $n \times p$ matrix, $\vy \in \reals^n$, and $\vcoef \in \reals^p$.
+The **residual vector** of $\vcoef$ is $\vlsresid(\vcoef) \eqdef \vy - \mX\vcoef$,
+and its entries $\lsresid_i = y_i - (\mX\vcoef)_i$ are the **residuals**.
+The square $\lsresid_i^2$ is the $i$th **squared error**, and their sum
 
 $$
-\vec\eps \cdot \vec\eps = \sumin \eps_i^2 = \norm{\vy - \mX\vb}^2
+\vlsresid \cdot \vlsresid = \sumin \vlsresid_i^2 = \norm{\vy - \mX\vcoef}^2
 $$
 
 is the **residual sum of squares**.
-A [least squares solution](linear-algebra.qmd#def-least-squares) of $\mX\vb = \vy$
-makes $\norm{\vy - \mX\vb}$ as small as possible,
+A [least squares solution](linear-algebra.qmd#def-least-squares) of $\mX\vcoef = \vy$
+makes $\norm{\vy - \mX\vcoef}$ as small as possible,
 and so makes the residual sum of squares as small as possible too.
 
 :::
@@ -23,11 +23,11 @@ and so makes the residual sum of squares as small as possible too.
 #### Residuals of a constant fit
 
 Let $\mX = \tp{(1, 1)}$ ($n = 2$, $p = 1$) and $\vy = \tp{(1, 3)}$.
-For $\vb = (2)$, $\mX\vb = \tp{(2, 2)}$, so
+For $\vcoef = (2)$, $\mX\vcoef = \tp{(2, 2)}$, so
 
 $$
 \ba
-\vec\eps(\vb)
+\vlsresid(\vcoef)
 &= \tp{(1, 3)} - \tp{(2, 2)}
 && \text{(definition of the residual vector)}
 \\
@@ -38,7 +38,7 @@ $$
 
 the squared errors are $(-1)^2 = 1$ and $1^2 = 1$,
 and the residual sum of squares is $1 + 1 = 2$.
-For $\vb = (1)$ the residuals are $0$ and $2$,
+For $\vcoef = (1)$ the residuals are $0$ and $2$,
 and the residual sum of squares is $0 + 4 = 4$.
 
 :::

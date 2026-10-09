@@ -1,13 +1,13 @@
 :::{#def-integral-nonneg}
 #### Integral of a non-negative function
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space),
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
 and let $f : S \to [0, \infty)$ be [measurable](#def-measurable-function).
-The **integral** of $f$ with respect to $\mu$ is
+The **integral** of $f$ with respect to $\measure$ is
 
 $$
-\int_S f \, d\mu \eqdef
-\sup \set{\sumin \paren{\inf_{s \in A_i} f(s)} \mu(A_i)}
+\int_S f \, d\measure \eqdef
+\sup \set{\sumin \paren{\inf_{s \in A_i} f(s)} \measure(A_i)}
 $$
 
 where the [supremum](algebra.qmd#def-supremum) is over all ways
@@ -17,7 +17,7 @@ and each $\inf_{s \in A_i} f(s)$ is the [infimum](algebra.qmd#def-infimum)
 of the values of $f$ on $A_i$.
 In the sums, $0 \cdot \infty \eqdef 0$, and $x \cdot \infty \eqdef \infty$ for $x > 0$;
 the supremum is $\infty$ if some sum is $\infty$.
-The integral is also written $\int_S f(s) \, d\mu(s)$.
+The integral is also written $\int_S f(s) \, d\measure(s)$.
 
 [@billingsley1995probability, Section 15]
 
@@ -35,7 +35,7 @@ For Lebesgue measure on a closed interval $[a, b]$
 and a function $f \ge 0$ that has a
 [Riemann integral](calculus.qmd#def-riemann-integral) on $[a, b]$,
 the two integrals agree:
-$\int_{[a, b]} f \, d\lambda = \int_a^b f(x) \, dx$
+$\int_{[a, b]} f \, d\lebesgue = \int_a^b f(x) \, dx$
 (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
 
 :::

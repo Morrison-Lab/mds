@@ -3,19 +3,19 @@
 
 Let $\matr{A}$ be a $p \times p$ positive definite matrix
 (@def-positive-definite) with real entries,
-with eigendecomposition $\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}$
+with eigendecomposition $\matr{A} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
 (@def-eigendecomposition)
-and eigenvalues $\lambda_1, \ldots, \lambda_p$.
+and eigenvalues $\eigval_1, \ldots, \eigval_p$.
 Then $\matr{A}$ is invertible (@def-invertible-matrix),
 
 $$
-\matr{A}^{-1} = \matr{Q}\,\matr{\Lambda}^{-1}\,\tp{\matr{Q}},
+\matr{A}^{-1} = \matr{Q}\,\matr{\Eigvals}^{-1}\,\tp{\matr{Q}},
 \qquad
-\matr{\Lambda}^{-1} =
+\matr{\Eigvals}^{-1} =
 \begin{bmatrix}
-1/\lambda_1 & \cdots & 0           \\
+1/\eigval_1 & \cdots & 0           \\
 \vdots      & \ddots & \vdots      \\
-0           & \cdots & 1/\lambda_p
+0           & \cdots & 1/\eigval_p
 \end{bmatrix},
 $$
 
@@ -25,33 +25,33 @@ and $\matr{A}^{-1}$ is positive definite.
 
 ::: proof
 
-By @thm-definite-eigenvalues, every $\lambda_i > 0$,
-so $\matr{\Lambda}^{-1}$ is well defined,
+By @thm-definite-eigenvalues, every $\eigval_i > 0$,
+so $\matr{\Eigvals}^{-1}$ is well defined,
 and multiplying the two diagonal matrices entry by entry
-gives $\matr{\Lambda}\matr{\Lambda}^{-1} = \matr{\Lambda}^{-1}\matr{\Lambda} = \matr{I}_p$.
-Write $\matr{B} = \matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}}$. Then:
+gives $\matr{\Eigvals}\matr{\Eigvals}^{-1} = \matr{\Eigvals}^{-1}\matr{\Eigvals} = \matr{I}_p$.
+Write $\matr{B} = \matr{Q}\matr{\Eigvals}^{-1}\tp{\matr{Q}}$. Then:
 
 $$
 \ba
 \matr{A}\matr{B}
-&= \matr{Q}\matr{\Lambda}\tp{\matr{Q}}\matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}}
+&= \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}\matr{Q}\matr{\Eigvals}^{-1}\tp{\matr{Q}}
 && \text{(substitute)}
 \\
-&= \matr{Q}\matr{\Lambda}\matr{I}_p\matr{\Lambda}^{-1}\tp{\matr{Q}}
+&= \matr{Q}\matr{\Eigvals}\matr{I}_p\matr{\Eigvals}^{-1}\tp{\matr{Q}}
 && \text{(} \tp{\matr{Q}}\matr{Q} = \matr{I}_p \text{)}
 \\
-&= \matr{Q}\matr{\Lambda}\matr{\Lambda}^{-1}\tp{\matr{Q}}
+&= \matr{Q}\matr{\Eigvals}\matr{\Eigvals}^{-1}\tp{\matr{Q}}
 && \text{(identity matrix)}
 \\
 &= \matr{Q}\tp{\matr{Q}}
-&& \text{(} \matr{\Lambda}\matr{\Lambda}^{-1} = \matr{I}_p \text{)}
+&& \text{(} \matr{\Eigvals}\matr{\Eigvals}^{-1} = \matr{I}_p \text{)}
 \\
 &= \matr{I}_p
 && \text{(} \matr{Q} \text{ is orthogonal)}
 \ea
 $$
 
-The same steps, with $\matr{\Lambda}^{-1}$ and $\matr{\Lambda}$ swapped,
+The same steps, with $\matr{\Eigvals}^{-1}$ and $\matr{\Eigvals}$ swapped,
 give $\matr{B}\matr{A} = \matr{I}_p$,
 so $\matr{B} = \matr{A}^{-1}$ (@def-matrix-inverse).
 The steps with $\matr{Q}$ use @def-orthogonal-matrix,
@@ -66,14 +66,14 @@ As in the proof of @thm-definite-eigenvalues:
 $$
 \ba
 \tp{\vx}\matr{A}^{-1}\vx
-&= \tp{\vecf{y}}\matr{\Lambda}^{-1}\vecf{y}
-&& \text{(substitute } \matr{A}^{-1} = \matr{Q}\matr{\Lambda}^{-1}\tp{\matr{Q}} \text{)}
+&= \tp{\vecf{y}}\matr{\Eigvals}^{-1}\vecf{y}
+&& \text{(substitute } \matr{A}^{-1} = \matr{Q}\matr{\Eigvals}^{-1}\tp{\matr{Q}} \text{)}
 \\
-&= \sumip \frac{y_i^2}{\lambda_i}
-&& \text{(} \matr{\Lambda}^{-1} \text{ is diagonal)}
+&= \sumip \frac{y_i^2}{\eigval_i}
+&& \text{(} \matr{\Eigvals}^{-1} \text{ is diagonal)}
 \\
 &> 0
-&& \text{(each } \lambda_i > 0 \text{, and some } y_i \neq 0 \text{)}
+&& \text{(each } \eigval_i > 0 \text{, and some } y_i \neq 0 \text{)}
 \ea
 $$
 

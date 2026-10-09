@@ -2,15 +2,15 @@
 #### Eigenvalue and eigenvector
 
 Let $\matr{A}$ be a $p \times p$ matrix.
-A real number $\lambda$ is an **eigenvalue** of $\matr{A}$
+A real number $\eigval$ is an **eigenvalue** of $\matr{A}$
 if some real vector $\vecf{v} \neq \vzero$ of length $p$ satisfies
 
 $$
 \underbrace{\matr{A}}_{p \times p}\,\underbrace{\vecf{v}}_{p \times 1}
-= \lambda\,\underbrace{\vecf{v}}_{p \times 1}
+= \eigval\,\underbrace{\vecf{v}}_{p \times 1}
 $$
 
-Any such $\vecf{v}$ is an **eigenvector** of $\matr{A}$ for $\lambda$.
+Any such $\vecf{v}$ is an **eigenvector** of $\matr{A}$ for $\eigval$.
 
 :::
 
@@ -56,10 +56,10 @@ $$
 :::{#rem-eigenvector-multiples}
 #### Multiples of an eigenvector
 
-Multiplying by $\matr{A}$ rescales an eigenvector by $\lambda$
+Multiplying by $\matr{A}$ rescales an eigenvector by $\eigval$
 and does not change the line it lies on.
 Any nonzero multiple $c\,\vecf{v}$ of an eigenvector
-is also an eigenvector for the same $\lambda$:
+is also an eigenvector for the same $\eigval$:
 
 $$
 \ba
@@ -67,10 +67,10 @@ $$
 &= c\,\matr{A}\vecf{v}
 && \text{(move the scalar } c \text{ to the front)}
 \\
-&= c\,\lambda\vecf{v}
-&& \text{(} \vecf{v} \text{ is an eigenvector for } \lambda \text{)}
+&= c\,\eigval\vecf{v}
+&& \text{(} \vecf{v} \text{ is an eigenvector for } \eigval \text{)}
 \\
-&= \lambda\,(c\,\vecf{v})
+&= \eigval\,(c\,\vecf{v})
 && \text{(multiplication of numbers is commutative)}
 \ea
 $$
@@ -112,8 +112,8 @@ $$
 = \begin{bmatrix} 2 \\ 1 \end{bmatrix},
 $$
 
-and no number $\lambda$ gives $(2, 1) = \lambda\,(1, 0)$,
-because the second entries would need $1 = \lambda \cd 0$.
+and no number $\eigval$ gives $(2, 1) = \eigval\,(1, 0)$,
+because the second entries would need $1 = \eigval \cd 0$.
 
 :::
 
@@ -122,7 +122,7 @@ because the second entries would need $1 = \lambda \cd 0$.
 :::{#rem-real-eigenvalues}
 #### Real and complex eigenvalues
 
-These notes take $\lambda$ and $\vecf{v}$ to be real.
+These notes take $\eigval$ and $\vecf{v}$ to be real.
 @banerjee2014linear [Chapter 11, Definition 11.1, pp. 312-313]
 also allows [complex](algebra.qmd#def-complex-number) eigenvalues and eigenvectors,
 because some real matrices, such as a rotation by $90$ degrees,
@@ -133,13 +133,13 @@ For example,
 $\matr{R} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$
 rotates each vector in the plane counterclockwise by $90$ degrees:
 $\matr{R}\,(v_1, v_2) = (-v_2, v_1)$.
-Suppose $\matr{R}\vecf{v} = \lambda\vecf{v}$ for a real number $\lambda$.
-Matching entries gives $-v_2 = \lambda v_1$ and $v_1 = \lambda v_2$.
+Suppose $\matr{R}\vecf{v} = \eigval\vecf{v}$ for a real number $\eigval$.
+Matching entries gives $-v_2 = \eigval v_1$ and $v_1 = \eigval v_2$.
 Substituting the second equation into the first gives
-$-v_2 = \lambda^2 v_2$,
-so $(1 + \lambda^2)\, v_2 = 0$.
-Since $1 + \lambda^2 > 0$, $v_2 = 0$,
-and then $v_1 = \lambda v_2 = 0$.
+$-v_2 = \eigval^2 v_2$,
+so $(1 + \eigval^2)\, v_2 = 0$.
+Since $1 + \eigval^2 > 0$, $v_2 = 0$,
+and then $v_1 = \eigval v_2 = 0$.
 So the only solution is $\vecf{v} = \vzero$,
 and $\matr{R}$ has no real eigenvalue.
 

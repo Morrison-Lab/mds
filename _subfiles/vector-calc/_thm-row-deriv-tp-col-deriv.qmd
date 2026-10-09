@@ -1,15 +1,15 @@
 :::{#thm-row-deriv-tp-col-deriv}
 #### Row and column derivatives are transposes
-$$\derivf{f(\vb)}{\tp{\vb}} = \tp{\paren{\derivf{f(\vb)}{\vb}}}$$ {#eq-row-deriv-tp-col-deriv}
+$$\derivf{f(\vcoef)}{\tp{\vcoef}} = \tp{\paren{\derivf{f(\vcoef)}{\vcoef}}}$$ {#eq-row-deriv-tp-col-deriv}
 
-$$\derivf{f(\vb)}{\vb} = \tp{\paren{\derivf{f(\vb)}{\tp{\vb}}}}$$ {#eq-col-deriv-tp-row-deriv}
+$$\derivf{f(\vcoef)}{\vcoef} = \tp{\paren{\derivf{f(\vcoef)}{\tp{\vcoef}}}}$$ {#eq-col-deriv-tp-row-deriv}
 
 :::
 
 ::: proof
 By @def-vector-derivative and @def-row-vector-derivative,
-entry $j$ of both $\derivf{f(\vb)}{\vb}$ and $\derivf{f(\vb)}{\tp{\vb}}$
-is $\deriv{\beta_j} f(\vb)$;
+entry $j$ of both $\derivf{f(\vcoef)}{\vcoef}$ and $\derivf{f(\vcoef)}{\tp{\vcoef}}$
+is $\deriv{\coef{j}} f(\vcoef)$;
 the first is a $p \times 1$ column vector and the second a $1 \times p$ row vector
 with the same entries in the same order,
 so each is the transpose of the other.
@@ -20,12 +20,12 @@ so each is the transpose of the other.
 :::{#exm-row-deriv-tp-col-deriv}
 #### Row and column derivatives of a linear function
 
-For $f(\vb) = 3\beta_1 + 5\beta_2$:
+For $f(\vcoef) = 3\coef{1} + 5\coef{2}$:
 
 $$
-\derivf{f(\vb)}{\vb} = \sbmat{3 \\ 5},
+\derivf{f(\vcoef)}{\vcoef} = \sbmat{3 \\ 5},
 \qquad
-\derivf{f(\vb)}{\tp{\vb}} = \sbmat{3 & 5},
+\derivf{f(\vcoef)}{\tp{\vcoef}} = \sbmat{3 & 5},
 $$
 
 and each is the transpose of the other.

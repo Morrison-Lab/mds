@@ -1,22 +1,22 @@
 ::: proof
 
-Expanding entry-wise, $\tp{\vb} \matr{S} \vb = \sumjp \sumto{k}{p} s_{jk} \beta_j \beta_k$.
-Differentiating component-wise with respect to $\beta_i$ for $i = 1, \ldots, p$:
+Expanding entry-wise, $\tp{\vcoef} \matr{S} \vcoef = \sumjp \sumto{k}{p} s_{jk} \coef{j} \coef{k}$.
+Differentiating component-wise with respect to $\coef{i}$ for $i = 1, \ldots, p$:
 
 $$
 \ba
-\left[\deriv{\vb}(\tp{\vb}\matr{S}\vb)\right]_i
-&= \deriv{\beta_i} \sumjp \sumto{k}{p} s_{jk} \beta_j \beta_k
+\left[\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef)\right]_i
+&= \deriv{\coef{i}} \sumjp \sumto{k}{p} s_{jk} \coef{j} \coef{k}
 && \text{(expand quadratic form)} \\
-&= \sumto{k}{p} s_{ik} \beta_k + \sumjp s_{ji} \beta_j
-&& \text{(product rule for } \beta_i \beta_k \text{)} \\
-&= [\matr{S}\vb]_i + [\tp{\matr{S}}\vb]_i
+&= \sumto{k}{p} s_{ik} \coef{k} + \sumjp s_{ji} \coef{j}
+&& \text{(product rule for } \coef{i} \coef{k} \text{)} \\
+&= [\matr{S}\vcoef]_i + [\tp{\matr{S}}\vcoef]_i
 && \text{(matrix-vector multiplication definition)} \\
-&= [(\matr{S} + \tp{\matr{S}})\vb]_i
+&= [(\matr{S} + \tp{\matr{S}})\vcoef]_i
 && \text{(linearity of matrix multiplication)}
 \ea
 $$
 
-When $\matr{S}$ is symmetric ($\matr{S} = \tp{\matr{S}}$), $\matr{S} + \tp{\matr{S}} = 2\matr{S}$, so $\deriv{\vb}(\tp{\vb}\matr{S}\vb) = 2\matr{S}\vb$.
+When $\matr{S}$ is symmetric ($\matr{S} = \tp{\matr{S}}$), $\matr{S} + \tp{\matr{S}} = 2\matr{S}$, so $\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef) = 2\matr{S}\vcoef$.
 
 :::

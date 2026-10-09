@@ -1,12 +1,12 @@
 :::{#thm-eigenvalue-singular}
-#### Eigenvalues are where $\matr{A} - \lambda \matr{I}$ is singular
+#### Eigenvalues are where $\matr{A} - \eigval \matr{I}$ is singular
 
-Let $\matr{A}$ be a $p \times p$ matrix and $\lambda$ a real number.
-Then $\lambda$ is an eigenvalue of $\matr{A}$ (@def-eigenvalue)
-exactly when $\matr{A} - \lambda\,\matr{I}_p$ is singular (@def-invertible-matrix).
+Let $\matr{A}$ be a $p \times p$ matrix and $\eigval$ a real number.
+Then $\eigval$ is an eigenvalue of $\matr{A}$ (@def-eigenvalue)
+exactly when $\matr{A} - \eigval\,\matr{I}_p$ is singular (@def-invertible-matrix).
 In particular, $\matr{A}$ is singular exactly when $0$ is one of its eigenvalues;
-and each eigenspace $\mathcal{E}_\lambda$ (@def-eigenspace) is a subspace of $\reals^p$
-consisting of $\vzero$ and the eigenvectors for $\lambda$.
+and each eigenspace $\mathcal{E}_\eigval$ (@def-eigenspace) is a subspace of $\reals^p$
+consisting of $\vzero$ and the eigenvectors for $\eigval$.
 
 :::
 
@@ -16,23 +16,23 @@ For any $\vecf{v} \in \reals^p$,
 
 $$
 \ba
-(\matr{A} - \lambda\,\matr{I}_p)\,\vecf{v}
-&= \matr{A} \vecf{v} - (\lambda\,\matr{I}_p)\,\vecf{v}
+(\matr{A} - \eigval\,\matr{I}_p)\,\vecf{v}
+&= \matr{A} \vecf{v} - (\eigval\,\matr{I}_p)\,\vecf{v}
 && \text{(@thm-scalar-matmul, the difference law)}
 \\
-&= \matr{A} \vecf{v} - \lambda\,(\matr{I}_p \vecf{v})
+&= \matr{A} \vecf{v} - \eigval\,(\matr{I}_p \vecf{v})
 && \text{(@thm-scalar-matmul, the scalar factor)}
 \\
-&= \matr{A} \vecf{v} - \lambda \vecf{v},
+&= \matr{A} \vecf{v} - \eigval \vecf{v},
 && \text{(@thm-identity)}
 \ea
 $$
 
-so $\matr{A} \vecf{v} = \lambda \vecf{v}$ exactly when $\vecf{v} \in \mathcal{N}(\matr{A} - \lambda\,\matr{I}_p)$;
-the nonzero such $\vecf{v}$ are the eigenvectors for $\lambda$.
-So $\lambda$ is an eigenvalue exactly when that null space contains a nonzero vector,
-which by @thm-invertible-rank is exactly when $\matr{A} - \lambda\,\matr{I}_p$ is singular.
-With $\lambda = 0$, $\matr{A} - 0\,\matr{I}_p = \matr{A}$.
+so $\matr{A} \vecf{v} = \eigval \vecf{v}$ exactly when $\vecf{v} \in \mathcal{N}(\matr{A} - \eigval\,\matr{I}_p)$;
+the nonzero such $\vecf{v}$ are the eigenvectors for $\eigval$.
+So $\eigval$ is an eigenvalue exactly when that null space contains a nonzero vector,
+which by @thm-invertible-rank is exactly when $\matr{A} - \eigval\,\matr{I}_p$ is singular.
+With $\eigval = 0$, $\matr{A} - 0\,\matr{I}_p = \matr{A}$.
 An eigenspace is a null space, so it is a subspace (@thm-null-space-subspace).
 
 :::

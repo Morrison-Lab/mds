@@ -1,14 +1,14 @@
 ::: proof
 
-For entry $(i,j)$, where row $i$ indexes the denominator $\vb$
+For entry $(i,j)$, where row $i$ indexes the denominator $\vcoef$
 (see @def-vector-valued-derivative)
-and column $j$ indexes the numerator $\matr{A}\vb$:
+and column $j$ indexes the numerator $\matr{A}\vcoef$:
 
 $$
 \ba
-\left[\deriv{\vb} (\matr{A}\vb)\right]_{ij}
-&= \deriv{\beta_i} (\matr{A}\vb)_j \\
-&= \deriv{\beta_i} \sumto{k}{p} a_{jk} \beta_k \\
+\left[\deriv{\vcoef} (\matr{A}\vcoef)\right]_{ij}
+&= \deriv{\coef{i}} (\matr{A}\vcoef)_j \\
+&= \deriv{\coef{i}} \sumto{k}{p} a_{jk} \coef{k} \\
 &= a_{ji} \\
 &= \left[\tp{\matr{A}}\right]_{ij}
 \ea

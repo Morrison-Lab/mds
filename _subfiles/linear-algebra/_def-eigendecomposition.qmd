@@ -6,11 +6,11 @@ An **eigendecomposition**, or **spectral decomposition**, of $\matr{A}$
 is a factorization
 
 $$
-\matr{A} = \matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+\matr{A} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}
 $$
 
 with $\matr{Q}$ a $p \times p$ orthogonal matrix (@def-orthogonal-matrix)
-and $\matr{\Lambda}$ a $p \times p$ diagonal matrix (@def-diagonal-matrix).
+and $\matr{\Eigvals}$ a $p \times p$ diagonal matrix (@def-diagonal-matrix).
 @thm-spectral says that every such $\matr{A}$ has one.
 
 :::
@@ -42,19 +42,19 @@ Each has norm $\sqrt{1^2 + 1^2} = \sqrt{2}$ (@def-euclidean-norm),
 so dividing each by $\sqrt{2}$ gives two orthonormal eigenvectors
 (@def-orthonormal-vectors).
 Put them in the columns of $\matr{Q}$,
-and the matching eigenvalues on the diagonal of $\matr{\Lambda}$:
+and the matching eigenvalues on the diagonal of $\matr{\Eigvals}$:
 
 $$
 \matr{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 \qquad
-\matr{\Lambda} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\matr{\Eigvals} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
 $$
 
 This $\matr{Q}$ is symmetric, so $\tp{\matr{Q}} = \matr{Q}$. Then
 
 $$
 \ba
-\matr{Q}\matr{\Lambda}\tp{\matr{Q}}
+\matr{Q}\matr{\Eigvals}\tp{\matr{Q}}
 &= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
 \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
 \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
@@ -114,7 +114,7 @@ which is $\matr{A}$.
 #### An eigendecomposition is not unique
 
 A symmetric matrix can have more than one eigendecomposition.
-Reordering the eigenvalues on the diagonal of $\matr{\Lambda}$,
+Reordering the eigenvalues on the diagonal of $\matr{\Eigvals}$,
 and the columns of $\matr{Q}$ with them, gives another one,
 and so does multiplying a column of $\matr{Q}$ by $-1$.
 
@@ -124,7 +124,7 @@ Swapping the two eigenvalues and the two columns gives
 $$
 \matr{Q}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
 \qquad
-\matr{\Lambda}_1 = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
+\matr{\Eigvals}_1 = \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
 $$
 
 and multiplying the second column of $\matr{Q}$ by $-1$ gives
@@ -132,7 +132,7 @@ and multiplying the second column of $\matr{Q}$ by $-1$ gives
 $$
 \matr{Q}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
 \qquad
-\matr{\Lambda}_2 = \matr{\Lambda} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
+\matr{\Eigvals}_2 = \matr{\Eigvals} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
 $$
 
 The columns of $\matr{Q}_1$ and $\matr{Q}_2$
@@ -143,7 +143,7 @@ Both products give back $\matr{A}$:
 
 $$
 \ba
-\matr{Q}_1\matr{\Lambda}_1\tp{\matr{Q}_1}
+\matr{Q}_1\matr{\Eigvals}_1\tp{\matr{Q}_1}
 &= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}
 \begin{bmatrix} 1 & 0 \\ 0 & 3 \end{bmatrix}
 \tp{\paren{\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}}}
@@ -200,7 +200,7 @@ $$
 
 $$
 \ba
-\matr{Q}_2\matr{\Lambda}_2\tp{\matr{Q}_2}
+\matr{Q}_2\matr{\Eigvals}_2\tp{\matr{Q}_2}
 &= \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
 \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix}
 \tp{\paren{\frac{1}{\sqrt{2}} \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}}}

@@ -5,8 +5,8 @@
   by the same route as @thm-linear-map-matrix,
   and that every affine function has the form $\matr{A}\vx + \vec{b}$.
   It defines "affine" differently, by
-  $f(\alpha \vx + \beta \vy) = \alpha f(\vx) + \beta f(\vy)$
-  whenever $\alpha + \beta = 1$,
+  $f(\combwt \vx + \combwtb \vy) = \combwt f(\vx) + \combwtb f(\vy)$
+  whenever $\combwt + \combwtb = 1$,
   and shows that this condition holds exactly for the maps $\matr{A}\vx + \vec{b}$,
   so the two definitions agree.
 - @boyd2018vmls, chapter 2 ("Linear functions"),

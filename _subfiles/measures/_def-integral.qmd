@@ -1,7 +1,7 @@
 :::{#def-integral}
 #### Integral of a real-valued function
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space),
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
 and let $f : S \to \reals$ be [measurable](#def-measurable-function).
 The **positive part** and **negative part** of $f$ are the non-negative functions
 
@@ -13,9 +13,9 @@ f^{-}(s) &\eqdef \max\cb{-f(s), 0}
 $$
 
 so that $f = f^{+} - f^{-}$ and $\abs{f} = f^{+} + f^{-}$.
-The **integral** of $f$ with respect to $\mu$ is
+The **integral** of $f$ with respect to $\measure$ is
 
-$$\int_S f \, d\mu \eqdef \int_S f^{+} \, d\mu - \int_S f^{-} \, d\mu,$$
+$$\int_S f \, d\measure \eqdef \int_S f^{+} \, d\measure - \int_S f^{-} \, d\measure,$$
 
 using @def-integral-nonneg for each term,
 when at least one of the two terms is finite;

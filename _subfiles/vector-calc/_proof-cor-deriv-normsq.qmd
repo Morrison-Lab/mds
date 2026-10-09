@@ -1,15 +1,15 @@
 ::: proof
 
-Applying @thm-quadratic-form with $\matr{S} = \matr{I}_{p \times p}$ (which is symmetric and constant with respect to $\vb$):
+Applying @thm-quadratic-form with $\matr{S} = \matr{I}_{p \times p}$ (which is symmetric and constant with respect to $\vcoef$):
 
 $$
 \ba
-\deriv{\vb}(\tp{\vb}\vb)
-&= \deriv{\vb}(\tp{\vb}\matr{I}_{p \times p}\vb)
+\deriv{\vcoef}(\tp{\vcoef}\vcoef)
+&= \deriv{\vcoef}(\tp{\vcoef}\matr{I}_{p \times p}\vcoef)
 && \text{(rewrite with identity matrix)} \\
-&= 2\matr{I}_{p \times p}\vb
+&= 2\matr{I}_{p \times p}\vcoef
 && \text{(derivative of a quadratic form, with } \matr{S} = \matr{I}_{p \times p} \text{)} \\
-&= 2\vb
+&= 2\vcoef
 && \text{(identity matrix property)}
 \ea
 $$

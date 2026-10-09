@@ -3,25 +3,25 @@
 
 A $p \times p$ matrix $\matr{A}$ is diagonalizable (@def-diagonalizable)
 exactly when it has $p$ linearly independent eigenvectors.
-Then $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$
+Then $\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$
 with the eigenvectors as the columns of $\matr{X}$
-and their eigenvalues, in the same order, on the diagonal of $\matr{\Lambda}$.
+and their eigenvalues, in the same order, on the diagonal of $\matr{\Eigvals}$.
 
 :::
 
 ::: proof
 
 Let $\matr{X}$ have columns $\vecf{x}_1, \ldots, \vecf{x}_p$
-and $\matr{\Lambda} = \diag(\lambda_1, \ldots, \lambda_p)$.
+and $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$.
 Column $j$ of $\matr{A} \matr{X}$ is $\matr{A} \vecf{x}_j$,
-and column $j$ of $\matr{X} \matr{\Lambda}$ is $\matr{X}$ times column $j$ of $\matr{\Lambda}$ (@def-matrix-mult),
-which is $\matr{X}\,(\lambda_j \vecf{e}_j) = \lambda_j\,(\matr{X} \vecf{e}_j) = \lambda_j \vecf{x}_j$
+and column $j$ of $\matr{X} \matr{\Eigvals}$ is $\matr{X}$ times column $j$ of $\matr{\Eigvals}$ (@def-matrix-mult),
+which is $\matr{X}\,(\eigval_j \vecf{e}_j) = \eigval_j\,(\matr{X} \vecf{e}_j) = \eigval_j \vecf{x}_j$
 (@thm-scalar-matmul, @thm-matvec-columns),
 so
 
 $$
-\matr{A} \matr{X} = \matr{X} \matr{\Lambda}
-\iff \matr{A} \vecf{x}_j = \lambda_j \vecf{x}_j \text{ for every } j.
+\matr{A} \matr{X} = \matr{X} \matr{\Eigvals}
+\iff \matr{A} \vecf{x}_j = \eigval_j \vecf{x}_j \text{ for every } j.
 $$ {#eq-ax-xlambda}
 
 Also, $\matr{X}$ has rank $p$ exactly when its $p$ columns are linearly independent (@def-rank),
@@ -29,7 +29,7 @@ which by @thm-invertible-rank is exactly when $\matr{X}$ is invertible.
 
 **Eigenvectors give a diagonalization.**
 If $\vecf{x}_1, \ldots, \vecf{x}_p$ are linearly independent eigenvectors,
-then $\matr{X}$ is invertible and @eq-ax-xlambda gives $\matr{A} \matr{X} = \matr{X} \matr{\Lambda}$, so
+then $\matr{X}$ is invertible and @eq-ax-xlambda gives $\matr{A} \matr{X} = \matr{X} \matr{\Eigvals}$, so
 
 $$
 \ba
@@ -43,32 +43,32 @@ $$
 &= (\matr{A} \matr{X})\,\matr{X}^{-1}
 && \text{(@thm-matmul-assoc)}
 \\
-&= \matr{X} \matr{\Lambda} \matr{X}^{-1}.
-&& \text{(} \matr{A} \matr{X} = \matr{X} \matr{\Lambda} \text{)}
+&= \matr{X} \matr{\Eigvals} \matr{X}^{-1}.
+&& \text{(} \matr{A} \matr{X} = \matr{X} \matr{\Eigvals} \text{)}
 \ea
 $$
 
 **A diagonalization gives eigenvectors.**
-If $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$, then
+If $\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$, then
 
 $$
 \ba
 \matr{A} \matr{X}
-&= (\matr{X} \matr{\Lambda} \matr{X}^{-1})\,\matr{X}
+&= (\matr{X} \matr{\Eigvals} \matr{X}^{-1})\,\matr{X}
 && \text{(substitute } \matr{A} \text{)}
 \\
-&= \matr{X} \matr{\Lambda}\,(\matr{X}^{-1} \matr{X})
+&= \matr{X} \matr{\Eigvals}\,(\matr{X}^{-1} \matr{X})
 && \text{(@thm-matmul-assoc)}
 \\
-&= \matr{X} \matr{\Lambda}\,\matr{I}_p
+&= \matr{X} \matr{\Eigvals}\,\matr{I}_p
 && \text{(@def-matrix-inverse)}
 \\
-&= \matr{X} \matr{\Lambda},
+&= \matr{X} \matr{\Eigvals},
 && \text{(@thm-identity)}
 \ea
 $$
 
-so each column satisfies $\matr{A} \vecf{x}_j = \lambda_j \vecf{x}_j$ (@eq-ax-xlambda).
+so each column satisfies $\matr{A} \vecf{x}_j = \eigval_j \vecf{x}_j$ (@eq-ax-xlambda).
 $\matr{X}$ is invertible, so its columns are linearly independent,
 and in particular nonzero;
 they are $p$ linearly independent eigenvectors.
@@ -82,8 +82,8 @@ they are $p$ linearly independent eigenvectors.
 
 The eigenvectors $(1, 1)$ and $(1, -1)$ of $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$
 are linearly independent (@exm-eigenvectors-independent),
-so with $\matr{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\matr{\Lambda} = \diag(3, 1)$,
-$\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$;
+so with $\matr{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$ and $\matr{\Eigvals} = \diag(3, 1)$,
+$\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$;
 by @rem-similar-both-ways this is the similarity of @exm-similar, with $\matr{X} = \matr{P}$.
 Because $\matr{A}$ is symmetric, @thm-spectral even gives such a factorization with orthonormal eigenvectors
 (@def-eigendecomposition):
@@ -131,17 +131,17 @@ but has only the eigenvalue $1$.
 :::{#thm-diagonalizable-powers}
 #### Powers of a diagonalizable matrix
 
-If $\matr{A} = \matr{X} \matr{\Lambda} \matr{X}^{-1}$ (@def-diagonalizable)
-with $\matr{\Lambda} = \diag(\lambda_1, \ldots, \lambda_p)$,
+If $\matr{A} = \matr{X} \matr{\Eigvals} \matr{X}^{-1}$ (@def-diagonalizable)
+with $\matr{\Eigvals} = \diag(\eigval_1, \ldots, \eigval_p)$,
 then for every positive integer $k$,
-$\matr{A}^k = \matr{X} \matr{\Lambda}^k \matr{X}^{-1}$
-and $\matr{\Lambda}^k = \diag(\lambda_1^k, \ldots, \lambda_p^k)$.
+$\matr{A}^k = \matr{X} \matr{\Eigvals}^k \matr{X}^{-1}$
+and $\matr{\Eigvals}^k = \diag(\eigval_1^k, \ldots, \eigval_p^k)$.
 
 :::
 
 ::: proof
 
-**Powers of $\matr{\Lambda}$.**
+**Powers of $\matr{\Eigvals}$.**
 If $\matr{D} = \diag(d_1, \ldots, d_p)$ and $\matr{E} = \diag(e_1, \ldots, e_p)$,
 with entries $d_{il}$ and $e_{lj}$ (so $d_{ii} = d_i$ and $e_{jj} = e_j$),
 entry $(i, j)$ of $\matr{D} \matr{E}$ is $\sum_l d_{il}\,e_{lj}$ (@def-matrix-mult),
@@ -149,7 +149,7 @@ where $d_{il} = 0$ unless $l = i$ and $e_{lj} = 0$ unless $l = j$.
 For $i \ne j$ no term survives, so the entry is $0$;
 for $i = j$ only $l = i$ survives, giving $d_i\,e_i$.
 So $\matr{D} \matr{E} = \diag(d_1 e_1, \ldots, d_p e_p)$,
-and [induction](proof-writing.qmd#def-proof-by-induction) on $k$ gives $\matr{\Lambda}^k = \diag(\lambda_1^k, \ldots, \lambda_p^k)$.
+and [induction](proof-writing.qmd#def-proof-by-induction) on $k$ gives $\matr{\Eigvals}^k = \diag(\eigval_1^k, \ldots, \eigval_p^k)$.
 
 **Powers of $\matr{A}$, by induction on $k$.**
 $k = 1$ is the assumption. If it holds for $k - 1$,
@@ -160,22 +160,22 @@ $$
 &= \matr{A}^{k-1} \matr{A}
 && \text{(@def-matrix-power, @thm-matmul-assoc)}
 \\
-&= \matr{X} \matr{\Lambda}^{k-1} \matr{X}^{-1}\,\matr{A}
+&= \matr{X} \matr{\Eigvals}^{k-1} \matr{X}^{-1}\,\matr{A}
 && \text{(induction hypothesis)}
 \\
-&= \matr{X} \matr{\Lambda}^{k-1} \matr{X}^{-1}\,\matr{X} \matr{\Lambda} \matr{X}^{-1}
+&= \matr{X} \matr{\Eigvals}^{k-1} \matr{X}^{-1}\,\matr{X} \matr{\Eigvals} \matr{X}^{-1}
 && \text{(the assumption)}
 \\
-&= \matr{X} \matr{\Lambda}^{k-1}\,(\matr{X}^{-1} \matr{X})\,\matr{\Lambda} \matr{X}^{-1}
+&= \matr{X} \matr{\Eigvals}^{k-1}\,(\matr{X}^{-1} \matr{X})\,\matr{\Eigvals} \matr{X}^{-1}
 && \text{(@thm-matmul-assoc)}
 \\
-&= \matr{X} \matr{\Lambda}^{k-1}\,\matr{I}_p\,\matr{\Lambda} \matr{X}^{-1}
+&= \matr{X} \matr{\Eigvals}^{k-1}\,\matr{I}_p\,\matr{\Eigvals} \matr{X}^{-1}
 && \text{(@def-matrix-inverse)}
 \\
-&= \matr{X} \matr{\Lambda}^{k-1} \matr{\Lambda} \matr{X}^{-1}
+&= \matr{X} \matr{\Eigvals}^{k-1} \matr{\Eigvals} \matr{X}^{-1}
 && \text{(@thm-identity)}
 \\
-&= \matr{X} \matr{\Lambda}^{k} \matr{X}^{-1}.
+&= \matr{X} \matr{\Eigvals}^{k} \matr{X}^{-1}.
 && \text{(@def-matrix-power)}
 \ea
 $$

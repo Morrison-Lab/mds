@@ -8,27 +8,27 @@
 
 ::: proof
 
-Let $\vecf{v} \ne \vzero$ with $\matr{A} \vecf{v} = \lambda \vecf{v}$.
+Let $\vecf{v} \ne \vzero$ with $\matr{A} \vecf{v} = \eigval \vecf{v}$.
 
 **Part 1.** If $\matr{A}^2 = \matr{A}$, then
 
 $$
 \ba
-\lambda \vecf{v}
+\eigval \vecf{v}
 &= \matr{A} \vecf{v}
 && \text{(eigenvector)}
 \\
 &= \matr{A}^2 \vecf{v}
 && \text{(idempotent)}
 \\
-&= \lambda^2 \vecf{v},
+&= \eigval^2 \vecf{v},
 && \text{(@thm-eigen-shift-power, part 2)}
 \ea
 $$
 
-and subtracting $\lambda \vecf{v}$ from both sides gives $(\lambda^2 - \lambda)\,\vecf{v} = \vzero$.
-Some entry of $\vecf{v}$ is nonzero, so $\lambda^2 - \lambda = \lambda\,(\lambda - 1) = 0$,
-and a product of two numbers is $0$ only when one of them is: $\lambda = 0$ or $\lambda = 1$.
+and subtracting $\eigval \vecf{v}$ from both sides gives $(\eigval^2 - \eigval)\,\vecf{v} = \vzero$.
+Some entry of $\vecf{v}$ is nonzero, so $\eigval^2 - \eigval = \eigval\,(\eigval - 1) = 0$,
+and a product of two numbers is $0$ only when one of them is: $\eigval = 0$ or $\eigval = 1$.
 
 **Part 2.** If $\matr{A}$ is orthogonal, then
 
@@ -38,17 +38,17 @@ $$
 &= \norm{\matr{A} \vecf{v}}
 && \text{(@thm-orthogonal-norm)}
 \\
-&= \norm{\lambda \vecf{v}}
+&= \norm{\eigval \vecf{v}}
 && \text{(eigenvector)}
 \\
-&= \abs{\lambda}\,\norm{\vecf{v}},
+&= \abs{\eigval}\,\norm{\vecf{v}},
 && \text{(@thm-norm-properties, part 2)}
 \ea
 $$
 
 and $\norm{\vecf{v}} > 0$ (@thm-norm-properties, part 1),
-so dividing by $\norm{\vecf{v}}$ gives $\abs{\lambda} = 1$;
-since $\lambda$ is real (@def-eigenvalue), $\lambda = 1$ or $\lambda = -1$.
+so dividing by $\norm{\vecf{v}}$ gives $\abs{\eigval} = 1$;
+since $\eigval$ is real (@def-eigenvalue), $\eigval = 1$ or $\eigval = -1$.
 
 :::
 

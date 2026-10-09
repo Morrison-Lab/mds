@@ -20,7 +20,7 @@ so the line is $\cb{2 - 4s : s > 0}$ and the values along it are
 
 $$
 \ba
-\phi(s)
+\linefn(s)
 &= f(2 - 4s)
 && \text{(the value at step length } s \text{)}
 \\&= (2 - 4s)^2
@@ -28,7 +28,7 @@ $$
 \ea
 $$
 
-$\phi(s) \ge 0$ for every $s$, and $\phi(0.5) = (2 - 2)^2 = 0$,
+$\linefn(s) \ge 0$ for every $s$, and $\linefn(0.5) = (2 - 2)^2 = 0$,
 so exact line search chooses $s^{(t)} = 0.5$,
 which lands on the minimizer $x^{(t+1)} = 0$ in one step.
 

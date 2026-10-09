@@ -2,8 +2,8 @@
 #### Similar matrices have the same eigenvalues
 
 If $\matr{B} = \matr{P}^{-1} \matr{A} \matr{P}$ (@def-similar),
-then $\vecf{v}$ is an eigenvector of $\matr{A}$ for $\lambda$
-exactly when $\matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\lambda$.
+then $\vecf{v}$ is an eigenvector of $\matr{A}$ for $\eigval$
+exactly when $\matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\eigval$.
 So $\matr{A}$ and $\matr{B}$ have the same eigenvalues.
 
 :::
@@ -11,7 +11,7 @@ So $\matr{A}$ and $\matr{B}$ have the same eigenvalues.
 ::: proof
 
 **From $\matr{A}$ to $\matr{B}$.**
-Let $\matr{A} \vecf{v} = \lambda \vecf{v}$ with $\vecf{v} \ne \vzero$, and $\vecf{w} = \matr{P}^{-1} \vecf{v}$. Then
+Let $\matr{A} \vecf{v} = \eigval \vecf{v}$ with $\vecf{v} \ne \vzero$, and $\vecf{w} = \matr{P}^{-1} \vecf{v}$. Then
 
 $$
 \ba
@@ -31,10 +31,10 @@ $$
 &= \matr{P}^{-1}\,(\matr{A} \vecf{v})
 && \text{(@thm-matmul-assoc)}
 \\
-&= \matr{P}^{-1}\,(\lambda \vecf{v})
+&= \matr{P}^{-1}\,(\eigval \vecf{v})
 && \text{(eigenvector)}
 \\
-&= \lambda\,\vecf{w}.
+&= \eigval\,\vecf{w}.
 && \text{(@thm-scalar-matmul)}
 \ea
 $$
@@ -47,8 +47,8 @@ which is false.
 **From $\matr{B}$ to $\matr{A}$.**
 By @rem-similar-both-ways, $\matr{A} = \matr{P} \matr{B} \matr{P}^{-1} = (\matr{P}^{-1})^{-1} \matr{B}\,\matr{P}^{-1}$,
 so the first part, with $\matr{P}^{-1}$ in place of $\matr{P}$ and the roles of $\matr{A}$ and $\matr{B}$ exchanged,
-shows that if $\vecf{w} = \matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\lambda$,
-then $\matr{P} \vecf{w}$ is an eigenvector of $\matr{A}$ for $\lambda$;
+shows that if $\vecf{w} = \matr{P}^{-1} \vecf{v}$ is an eigenvector of $\matr{B}$ for $\eigval$,
+then $\matr{P} \vecf{w}$ is an eigenvector of $\matr{A}$ for $\eigval$;
 and $\matr{P} \vecf{w} = \matr{P} \matr{P}^{-1} \vecf{v} = \vecf{v}$
 (@thm-matmul-assoc, @def-matrix-inverse, @thm-identity).
 

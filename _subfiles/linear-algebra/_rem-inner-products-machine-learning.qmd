@@ -6,22 +6,22 @@ tailors geometric notions of distance, angle, and projection to the structure of
 
 1. **Mahalanobis metric and whitening**:
    Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences.
-   If data features have a symmetric positive definite covariance matrix $\matr{\Sigma}$ (@def-positive-definite),
-   the precision matrix $\matr{A} = \matr{\Sigma}^{-1}$ (@thm-pd-inverse) defines the Mahalanobis inner product
-   $\iprod{\vx}{\vy}_{\matr{\Sigma}^{-1}} = \tp{\vx} \matr{\Sigma}^{-1} \vy$.
+   If data features have a symmetric positive definite covariance matrix $\matr{\covmat}$ (@def-positive-definite),
+   the precision matrix $\matr{A} = \matr{\covmat}^{-1}$ (@thm-pd-inverse) defines the Mahalanobis inner product
+   $\iprod{\vx}{\vy}_{\matr{\covmat}^{-1}} = \tp{\vx} \matr{\covmat}^{-1} \vy$.
    The induced distance
-   $d_{\matr{\Sigma}^{-1}}(\vx, \vy) = \sqrt{\tp{(\vx - \vy)}\matr{\Sigma}^{-1}(\vx - \vy)}$
+   $d_{\matr{\covmat}^{-1}}(\vx, \vy) = \sqrt{\tp{(\vx - \vy)}\matr{\covmat}^{-1}(\vx - \vy)}$
    measures statistical distance normalized by variance along each principal direction.
-   Factoring $\matr{\Sigma}^{-1} = \tp{\matr{W}}\matr{W}$ (via Cholesky or spectral decomposition),
+   Factoring $\matr{\covmat}^{-1} = \tp{\matr{W}}\matr{W}$ (via Cholesky or spectral decomposition),
    this inner product corresponds to the Euclidean dot product of whitened coordinates $\vecf{z} = \matr{W}\vx$:
-   $\iprod{\vx}{\vy}_{\matr{\Sigma}^{-1}} = (\matr{W}\vx) \cdot (\matr{W}\vy)$.
+   $\iprod{\vx}{\vy}_{\matr{\covmat}^{-1}} = (\matr{W}\vx) \cdot (\matr{W}\vy)$.
 
 2. **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**:
    Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products $\iprod{\vx_i}{\vx_j}$.
-   By mapping data into a higher- or infinite-dimensional inner product space via a feature map $\phi: \reals^p \to \mathcal{H}$,
-   the kernel trick replaces the computation of $\phi(\vx_i)$ with an evaluation of a positive definite kernel function:
+   By mapping data into a higher- or infinite-dimensional inner product space via a feature map $\featmap: \reals^p \to \mathcal{H}$,
+   the kernel trick replaces the computation of $\featmap(\vx_i)$ with an evaluation of a positive definite kernel function:
    $$
-   k(\vx_i, \vx_j) \eqdef \iprod{\phi(\vx_i)}{\phi(\vx_j)}_{\mathcal{H}}.
+   k(\vx_i, \vx_j) \eqdef \iprod{\featmap(\vx_i)}{\featmap(\vx_j)}_{\mathcal{H}}.
    $$
    Mercer's theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space $\mathcal{H}$ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
 
@@ -36,11 +36,11 @@ tailors geometric notions of distance, angle, and projection to the structure of
    Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\tp{\vecf{q}}\vecf{k} / \sqrt{d_k}$.
 
 4. **Weighted and generalized least squares**:
-   In linear regression $\vy \approx \matr{X}\vecf{\beta}$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\matr{\Omega}$,
+   In linear regression $\vy \approx \matr{X}\vcoef$, when observation errors have unequal variances or known correlations with positive definite covariance matrix $\matr{\errcov}$,
    ordinary least squares is inefficient.
-   Generalized least squares minimizes the residual norm in the inner product space induced by $\matr{W} = \matr{\Omega}^{-1}$:
+   Generalized least squares minimizes the residual norm in the inner product space induced by $\matr{W} = \matr{\errcov}^{-1}$:
    $$
-   \min_{\vecf{\beta}} \norm{\vy - \matr{X}\vecf{\beta}}_{\matr{W}}^2 = \min_{\vecf{\beta}} \iprod{\vy - \matr{X}\vecf{\beta}}{\vy - \matr{X}\vecf{\beta}}_{\matr{W}}.
+   \min_{\vcoef} \norm{\vy - \matr{X}\vcoef}_{\matr{W}}^2 = \min_{\vcoef} \iprod{\vy - \matr{X}\vcoef}{\vy - \matr{X}\vcoef}_{\matr{W}}.
    $$
 
 :::

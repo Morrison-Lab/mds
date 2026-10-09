@@ -8,17 +8,17 @@ The eigenvalues (@def-eigenvalue) of an upper triangular $p \times p$ matrix $\m
 
 ::: proof
 
-$\matr{U} - \lambda\,\matr{I}_p$ is upper triangular,
-with diagonal entries $u_{ii} - \lambda$ (@def-identity-matrix, @def-matrix-addition).
+$\matr{U} - \eigval\,\matr{I}_p$ is upper triangular,
+with diagonal entries $u_{ii} - \eigval$ (@def-identity-matrix, @def-matrix-addition).
 
-**If $\lambda$ is not a diagonal entry,**
-every $u_{ii} - \lambda \ne 0$, so $(\matr{U} - \lambda\,\matr{I}_p)\,\vecf{v} = \vzero$
+**If $\eigval$ is not a diagonal entry,**
+every $u_{ii} - \eigval \ne 0$, so $(\matr{U} - \eigval\,\matr{I}_p)\,\vecf{v} = \vzero$
 has exactly one solution, $\vecf{v} = \vzero$ (@thm-back-substitution),
-and $\lambda$ is not an eigenvalue (@thm-eigenvalue-singular).
+and $\eigval$ is not an eigenvalue (@thm-eigenvalue-singular).
 
-**If $\lambda$ is a diagonal entry,**
-let $k$ be the smallest index with $u_{kk} = \lambda$,
-and write $\matr{M} = \matr{U} - \lambda\,\matr{I}_p$, so $m_{kk} = 0$ and $m_{ii} \ne 0$ for $i < k$.
+**If $\eigval$ is a diagonal entry,**
+let $k$ be the smallest index with $u_{kk} = \eigval$,
+and write $\matr{M} = \matr{U} - \eigval\,\matr{I}_p$, so $m_{kk} = 0$ and $m_{ii} \ne 0$ for $i < k$.
 Look for $\vecf{v}$ with $v_k = 1$ and $v_j = 0$ for $j > k$.
 Entry $i$ of $\matr{M} \vecf{v}$ is
 
@@ -42,7 +42,7 @@ where the last sum is empty, and so $0$, when $i > k$. So:
   and these equations fix $v_{k-1}, \ldots, v_1$ in turn, as in @thm-back-substitution.
 
 So $\matr{M} \vecf{v} = \vzero$ with $v_k = 1$, hence $\vecf{v} \ne \vzero$,
-and $\lambda$ is an eigenvalue.
+and $\eigval$ is an eigenvalue.
 
 :::
 
@@ -53,7 +53,7 @@ and $\lambda$ is an eigenvalue.
 
 $\matr{U} = \begin{bmatrix} 2 & 1 & -1 \\ 0 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & -1 \end{bmatrix}$
 of @exm-triangular-matrix has eigenvalues $2$, $\tfrac{1}{2}$ and $-1$.
-For $\lambda = \tfrac{1}{2}$ (so $k = 2$), take $v_2 = 1$, $v_3 = 0$;
+For $\eigval = \tfrac{1}{2}$ (so $k = 2$), take $v_2 = 1$, $v_3 = 0$;
 row 1 of $(\matr{U} - \tfrac{1}{2}\,\matr{I}_3)\,\vecf{v}$ is $\tfrac{3}{2}\,v_1 + 1 = 0$, so $v_1 = -\tfrac{2}{3}$.
 Check: $\matr{U}\,(-\tfrac{2}{3}, 1, 0) = (-\tfrac{4}{3} + 1, \tfrac{1}{2}, 0) = \tfrac{1}{2}\,(-\tfrac{2}{3}, 1, 0)$.
 The matrix $\matr{J}$ of @exm-eigenspace is upper triangular with both diagonal entries $0$,

@@ -4,9 +4,9 @@
 A [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers
 **converges** to a real number $L$,
 written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$,
-if for every $\epsilon > 0$ there is a natural number $N$ such that
+if for every $\tolout > 0$ there is a natural number $N$ such that
 
-$$\abs{a_n - L} < \epsilon \quad \text{for every } n \ge N.$$
+$$\abs{a_n - L} < \tolout \quad \text{for every } n \ge N.$$
 
 Then $L$ is the **limit** of the sequence.
 A sequence that converges to some real number is **convergent**,

@@ -2,19 +2,19 @@
 
 #### Fubini--Tonelli theorem (measure-theoretic form)
 
-Let $(\Omega_1, \mathcal F_1, \mu_1)$ and $(\Omega_2, \mathcal F_2, \mu_2)$
+Let $(\samplespace_1, \mathcal F_1, \measure_1)$ and $(\samplespace_2, \mathcal F_2, \measure_2)$
 be [measure spaces](measures.qmd#def-measure-space)
 with [$\sigma$-finite](measures.qmd#def-sigma-finite) measures,
-and let $f : \Omega_1 \times \Omega_2 \to \reals$ be [measurable](measures.qmd#def-measurable-function)
+and let $f : \samplespace_1 \times \samplespace_2 \to \reals$ be [measurable](measures.qmd#def-measurable-function)
 with respect to the [product $\sigma$-algebra](measures.qmd#def-product-sigma-algebra)
 $\mathcal F_1 \otimes \mathcal F_2$.
 If either
 
 (a) $f \ge 0$ [almost everywhere](measures.qmd#def-almost-everywhere)
-with respect to the [product measure](measures.qmd#def-product-measure) $\mu_1 \otimes \mu_2$
+with respect to the [product measure](measures.qmd#def-product-measure) $\measure_1 \otimes \measure_2$
 (**Tonelli's theorem**), or
 
-(b) $\int_{\Omega_1 \times \Omega_2} \abs{f}\,d(\mu_1 \otimes \mu_2) < \infty$,
+(b) $\int_{\samplespace_1 \times \samplespace_2} \abs{f}\,d(\measure_1 \otimes \measure_2) < \infty$,
 that is, $f$ is [absolutely integrable](measures.qmd#def-absolutely-integrable)
 (**Fubini's theorem**),
 
@@ -23,9 +23,9 @@ and equal each other:
 
 $$
 \ba
-\int_{\Omega_1 \times \Omega_2} f\,d(\mu_1 \otimes \mu_2)
-&= \int_{\Omega_1} \paren{\int_{\Omega_2} f(\omega_1, \omega_2)\,d\mu_2(\omega_2)}\,d\mu_1(\omega_1)\\
-&= \int_{\Omega_2} \paren{\int_{\Omega_1} f(\omega_1, \omega_2)\,d\mu_1(\omega_1)}\,d\mu_2(\omega_2).
+\int_{\samplespace_1 \times \samplespace_2} f\,d(\measure_1 \otimes \measure_2)
+&= \int_{\samplespace_1} \paren{\int_{\samplespace_2} f(\outcome_1, \outcome_2)\,d\measure_2(\outcome_2)}\,d\measure_1(\outcome_1)\\
+&= \int_{\samplespace_2} \paren{\int_{\samplespace_1} f(\outcome_1, \outcome_2)\,d\measure_1(\outcome_1)}\,d\measure_2(\outcome_2).
 \ea
 $$
 
@@ -43,7 +43,7 @@ Applied courses rarely need the measure-theoretic generalization itself,
 but it is what justifies the
 [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint)
 corollary in *Probability for Data Science*.
-A [probability measure](measures.qmd#def-probability-measure) $P$ on $\Omega$ has $P(\Omega) = 1 < \infty$,
+A [probability measure](measures.qmd#def-probability-measure) $P$ on $\samplespace$ has $P(\samplespace) = 1 < \infty$,
 so it is [finite](measures.qmd#def-sigma-finite), and hence $\sigma$-finite
 ([finite and $\sigma$-finite measures](measures.qmd#exm-sigma-finite));
 for probability measures, the $\sigma$-finiteness condition is automatic.

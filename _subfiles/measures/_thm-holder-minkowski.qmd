@@ -1,14 +1,14 @@
 :::{#thm-holder-inequality}
 #### Holder's inequality
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space),
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
 and let $p, q \in [1, \infty]$ be conjugate exponents satisfying $\frac{1}{p} + \frac{1}{q} = 1$
 (with the convention that $q = \infty$ when $p = 1$, and $q = 1$ when $p = \infty$).
-If $f \in L^p(\mu)$ and $g \in L^q(\mu)$ (@def-lp-space),
-then their product $f g$ is [absolutely integrable](#def-absolutely-integrable) ($f g \in L^1(\mu)$) and satisfies:
+If $f \in L^p(\measure)$ and $g \in L^q(\measure)$ (@def-lp-space),
+then their product $f g$ is [absolutely integrable](#def-absolutely-integrable) ($f g \in L^1(\measure)$) and satisfies:
 
 $$
-\norm{f g}_1 = \int_S \abs{f g} \, d\mu \le \norm{f}_p\,\norm{g}_q.
+\norm{f g}_1 = \int_S \abs{f g} \, d\measure \le \norm{f}_p\,\norm{g}_q.
 $$
 
 When $p = q = 2$, this inequality is the Cauchy-Schwarz inequality for integrals.
@@ -20,15 +20,15 @@ When $p = q = 2$, this inequality is the Cauchy-Schwarz inequality for integrals
 :::{#thm-minkowski-inequality}
 #### Minkowski's inequality ($L^p$ triangle inequality)
 
-Let $(S, \salg, \mu)$ be a [measure space](#def-measure-space) and let $1 \le p \le \infty$.
-For any functions $f, g \in L^p(\mu)$ (@def-lp-space), their sum $f + g$ is in $L^p(\mu)$ and satisfies:
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space) and let $1 \le p \le \infty$.
+For any functions $f, g \in L^p(\measure)$ (@def-lp-space), their sum $f + g$ is in $L^p(\measure)$ and satisfies:
 
 $$
 \norm{f + g}_p \le \norm{f}_p + \norm{g}_p.
 $$
 
 Together with absolute homogeneity $\norm{c f}_p = \abs{c}\,\norm{f}_p$ and definiteness,
-Minkowski's inequality establishes that $L^p(\mu)$ satisfies all axioms of a [normed vector space](linear-algebra.qmd#def-norm).
+Minkowski's inequality establishes that $L^p(\measure)$ satisfies all axioms of a [normed vector space](linear-algebra.qmd#def-norm).
 
 :::
 

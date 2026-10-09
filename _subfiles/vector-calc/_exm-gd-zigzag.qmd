@@ -4,15 +4,15 @@
 Let $f(\vx) = \tfrac{1}{2} (x_1^2 + b\,x_2^2)$ with $b > 0$,
 so $\deriv{\vx} f(\vx) = \tp{(x_1,\ b x_2)}$
 and one gradient step of length $s$ from $\vx$ gives $\tp{((1 - s) x_1,\ (1 - b s) x_2)}$.
-For exact line search (@def-line-search), let $\phi(s) \eqdef f$ at that point:
+For exact line search (@def-line-search), let $\linefn(s) \eqdef f$ at that point:
 
 $$
 \ba
-\phi(s)
+\linefn(s)
 &= \tfrac{1}{2} \paren{(1 - s)^2 x_1^2 + b (1 - b s)^2 x_2^2},
 && \text{(definition of } f \text{)}
 \\
-\phi'(s)
+\linefn'(s)
 &= -(1 - s) x_1^2 - b^2 (1 - b s) x_2^2
 && \text{(chain rule, term by term)}
 \\
@@ -25,7 +25,7 @@ $$
 $$
 
 For $\vx \ne \vzero_{2 \times 1}$, $x_1^2 + b^3 x_2^2 > 0$,
-so $\phi'$ is increasing in $s$ with a single zero, and $\phi$ is minimized at
+so $\linefn'$ is increasing in $s$ with a single zero, and $\linefn$ is minimized at
 $s^* = \dfrac{x_1^2 + b^2 x_2^2}{x_1^2 + b^3 x_2^2}$.
 From $\vx^{(0)} = \tp{(b, 1)}$:
 

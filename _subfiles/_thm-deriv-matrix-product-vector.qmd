@@ -3,14 +3,14 @@
 #### Vector-derivative of a product of matrices
 
 If $\matr{A}$ ($\ell \times m$) and $\matr{B}$ ($m \times q$)
-are constant with respect to $\vb$,
-and $\vecf{v} = \vecf{v}(\vb)$ is a $q \times 1$ vector
-that depends on the $p \times 1$ vector $\vb$,
+are constant with respect to $\vcoef$,
+and $\vecf{v} = \vecf{v}(\vcoef)$ is a $q \times 1$ vector
+that depends on the $p \times 1$ vector $\vcoef$,
 then:
 
 $$
-\underbrace{\deriv{\vb} (\matr{A} \matr{B} \vecf{v})}_{p \times \ell} =
-\underbrace{\paren{\deriv{\vb} \vecf{v}}}_{p \times q}
+\underbrace{\deriv{\vcoef} (\matr{A} \matr{B} \vecf{v})}_{p \times \ell} =
+\underbrace{\paren{\deriv{\vcoef} \vecf{v}}}_{p \times q}
 \underbrace{\tp{\matr{B}}}_{q \times m}
 \underbrace{\tp{\matr{A}}}_{m \times \ell}
 $$
@@ -25,11 +25,11 @@ then use the [transpose of a product](linear-algebra.qmd#thm-transpose-product):
 
 $$
 \ba
-\deriv{\vb} (\matr{A} \matr{B} \vecf{v})
-&= \paren{\deriv{\vb} \vecf{v}} \tp{(\matr{A}\matr{B})}
+\deriv{\vcoef} (\matr{A} \matr{B} \vecf{v})
+&= \paren{\deriv{\vcoef} \vecf{v}} \tp{(\matr{A}\matr{B})}
 && \text{(derivative of a matrix-vector product)}
 \\
-&= \paren{\deriv{\vb} \vecf{v}} \tp{\matr{B}}\,\tp{\matr{A}}
+&= \paren{\deriv{\vcoef} \vecf{v}} \tp{\matr{B}}\,\tp{\matr{A}}
 && \text{(transpose of a product)}
 \ea
 $$
@@ -41,12 +41,12 @@ $$
 Let $\matr{A} = \begin{pmatrix}1 & 0\end{pmatrix}$ ($1 \times 2$),
 $\matr{B} = \begin{pmatrix}2 & 0 \\
 0 & 3\end{pmatrix}$ ($2 \times 2$),
-and $\vecf{v}(\vb) = \vb$ where $\vb = \tp{(\beta_1, \beta_2)}$.
-Then $\matr{A}\matr{B}\vecf{v} = 2\beta_1$, and:
+and $\vecf{v}(\vcoef) = \vcoef$ where $\vcoef = \tp{(\coef{1}, \coef{2})}$.
+Then $\matr{A}\matr{B}\vecf{v} = 2\coef{1}$, and:
 
 $$
-\underbrace{\deriv{\vb}(\matr{A}\matr{B}\vecf{v})}_{2 \times 1}
-= \underbrace{\paren{\deriv{\vb}\vb}}_{2 \times 2}
+\underbrace{\deriv{\vcoef}(\matr{A}\matr{B}\vecf{v})}_{2 \times 1}
+= \underbrace{\paren{\deriv{\vcoef}\vcoef}}_{2 \times 2}
 \underbrace{\tp{\matr{B}}}_{2 \times 2}
 \underbrace{\tp{\matr{A}}}_{2 \times 1}
 = \matr{I}_2

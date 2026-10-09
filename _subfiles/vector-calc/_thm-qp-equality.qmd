@@ -12,8 +12,8 @@ $$
 \vx^* = \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b}.
 $$
 
-With $\vecf{\lambda}^* \eqdef -\matr{M}^{-1} \vecf{b}$,
-the pair $(\vx^*, \vecf{\lambda}^*)$ solves @eq-kkt,
+With $\vlagmult^* \eqdef -\matr{M}^{-1} \vecf{b}$,
+the pair $(\vx^*, \vlagmult^*)$ solves @eq-kkt,
 and the minimum value is $f(\vx^*) = \tfrac{1}{2}\,\tp{\vecf{b}} \matr{M}^{-1} \vecf{b}$.
 
 :::
@@ -47,9 +47,9 @@ $$
 &= \vecf{b},
 && \text{(} \matr{M} \matr{M}^{-1} = \matr{I}_m \text{)}
 \\
-\matr{S} \vx^* + \matr{A} \vecf{\lambda}^*
+\matr{S} \vx^* + \matr{A} \vlagmult^*
 &= \matr{S} \matr{S}^{-1} \matr{A} \matr{M}^{-1} \vecf{b} - \matr{A} \matr{M}^{-1} \vecf{b}
-&& \text{(substitute } \vx^* \text{ and } \vecf{\lambda}^* \text{)}
+&& \text{(substitute } \vx^* \text{ and } \vlagmult^* \text{)}
 \\
 &= \matr{A} \matr{M}^{-1} \vecf{b} - \matr{A} \matr{M}^{-1} \vecf{b}
 && \text{(} \matr{S} \matr{S}^{-1} = \matr{I}_p \text{)}
@@ -169,7 +169,7 @@ $$
 = \tfrac{5}{25} \sbmat{ 3 \\ 4 }
 = \sbmat{ 0.6 \\ 0.8 },
 \\
-\vecf{\lambda}^*
+\vlagmult^*
 &= -\paren{\tfrac{2}{25}} (5) = -0.4,
 \\
 f(\vx^*)
@@ -180,7 +180,7 @@ $$
 Checks:
 
 - the constraint: $3 (0.6) + 4 (0.8) = 1.8 + 3.2 = 5$;
-- the first block of @eq-kkt: $\matr{S} \vx^* + \matr{A} \vecf{\lambda}^* = \tp{(1.2, 1.6)} + \tp{(3, 4)} (-0.4) = \tp{(1.2, 1.6)} - \tp{(1.2, 1.6)} = \vzero_{2 \times 1}$;
+- the first block of @eq-kkt: $\matr{S} \vx^* + \matr{A} \vlagmult^* = \tp{(1.2, 1.6)} + \tp{(3, 4)} (-0.4) = \tp{(1.2, 1.6)} - \tp{(1.2, 1.6)} = \vzero_{2 \times 1}$;
 - the value: $0.6^2 + 0.8^2 = 0.36 + 0.64 = 1$.
 
 Geometrically, $\vx^*$ is the point of the line nearest the origin, at distance $1$.

@@ -1,7 +1,7 @@
 :::{#def-measure-space}
 #### Measure space
 
-A **measure space** $(S, \salg, \mu)$
-is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) $\mu$ on $\salg$.
+A **measure space** $(S, \salg, \measure)$
+is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) $\measure$ on $\salg$.
 
 :::

@@ -1,11 +1,11 @@
 :::{#def-eigenspace}
 #### Eigenspace and geometric multiplicity
 
-Let $\lambda$ be an eigenvalue of a $p \times p$ matrix $\matr{A}$ (@def-eigenvalue).
-The **eigenspace** of $\lambda$ is
-$\mathcal{E}_\lambda \eqdef \mathcal{N}(\matr{A} - \lambda\,\matr{I}_p)$.
+Let $\eigval$ be an eigenvalue of a $p \times p$ matrix $\matr{A}$ (@def-eigenvalue).
+The **eigenspace** of $\eigval$ is
+$\mathcal{E}_\eigval \eqdef \mathcal{N}(\matr{A} - \eigval\,\matr{I}_p)$.
 It is a subspace of $\reals^p$ (@thm-null-space-subspace),
-and its dimension (@def-dimension) is the **geometric multiplicity** of $\lambda$.
+and its dimension (@def-dimension) is the **geometric multiplicity** of $\eigval$.
 
 :::
 
@@ -21,9 +21,9 @@ and its dimension (@def-dimension) is the **geometric multiplicity** of $\lambda
 - For $\matr{J} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$,
   $\matr{J} \vecf{v} = (v_2, 0)$.
   $\matr{J}\,(1, 0) = (0, 0) = 0\,(1, 0)$, so $0$ is an eigenvalue.
-  If $\matr{J} \vecf{v} = \lambda \vecf{v}$ with $\lambda \ne 0$,
-  the second entry gives $\lambda v_2 = 0$, so $v_2 = 0$,
-  and then the first gives $\lambda v_1 = 0$, so $\vecf{v} = \vzero$.
+  If $\matr{J} \vecf{v} = \eigval \vecf{v}$ with $\eigval \ne 0$,
+  the second entry gives $\eigval v_2 = 0$, so $v_2 = 0$,
+  and then the first gives $\eigval v_1 = 0$, so $\vecf{v} = \vzero$.
   So $0$ is the only eigenvalue,
   and $\mathcal{E}_0 = \mathcal{N}(\matr{J}) = \cb{(t, 0) : t \in \reals}$, with geometric multiplicity $1$.
 
@@ -34,7 +34,7 @@ and its dimension (@def-dimension) is the **geometric multiplicity** of $\lambda
 :::{#exm-not-eigenspace}
 #### A number that is not an eigenvalue has no eigenspace
 
-For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ and $\lambda = 2$,
+For $\matr{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$ and $\eigval = 2$,
 $\matr{A} - 2\,\matr{I}_2 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$
 sends $\vecf{v}$ to $(v_2, v_1)$, which is $\vzero$ only for $\vecf{v} = \vzero$,
 so $\mathcal{N}(\matr{A} - 2\,\matr{I}_2) = \cb{\vzero}$.

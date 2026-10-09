@@ -29,7 +29,7 @@ Let $f(x) = x$ on $[0, 1]$,
 which is continuous and so Riemann integrable (@thm-cont-implies-int),
 and take each sample point at the right end of its subinterval,
 $x_i^* = i/n$.
-With $\Delta x = 1/n$:
+With $\change x = 1/n$:
 
 $$
 \ba

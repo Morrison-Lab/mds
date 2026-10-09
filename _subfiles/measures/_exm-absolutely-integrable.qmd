@@ -3,11 +3,11 @@
 
 - For the counting measure on the die rolls $D$,
   $f(x) = x - 3$ (@exm-integral) is absolutely integrable:
-  $\int_D \abs{f} \, d\mu = 2 + 1 + 0 + 1 + 2 + 3 = 9 < \infty$
+  $\int_D \abs{f} \, d\measure = 2 + 1 + 0 + 1 + 2 + 3 = 9 < \infty$
   by @exm-integral-nonneg.
 - For the counting measure on $\mathbb{N}$,
   the constant function $h(n) = 1$ is not absolutely integrable,
-  because $\int_{\mathbb{N}} \abs{h} \, d\mu = \int_{\mathbb{N}} h \, d\mu = \infty$
+  because $\int_{\mathbb{N}} \abs{h} \, d\measure = \int_{\mathbb{N}} h \, d\measure = \infty$
   (@exm-integral-nonneg).
 
 :::
