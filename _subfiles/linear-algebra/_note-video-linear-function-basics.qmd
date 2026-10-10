@@ -1,7 +1,7 @@
 ::: {.callout-tip title="Video lecture"}
 Hutchinson's [Linear Function Basics](https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/#linear_function_basics) (24 min)
 covers dot products and the Euclidean norm,
-and goes on to hyperplanes (@def-hyperplane, later on this page)
+and goes on to hyperplanes (@def-hyperplane)
 and [level sets](vector-calculus.qmd#def-level-set)
 [@hutchinson_wwu_ml_videos].
 The login for the video site is posted [on Canvas](https://wwu.instructure.com/courses/1906010/modules#module_3922392).

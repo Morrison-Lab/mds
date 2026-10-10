@@ -46,7 +46,17 @@ website:
       - text: "Calculus"
         href: calculus.qmd
       - text: "Linear Algebra"
-        href: linear-algebra.qmd
+        menu:
+          - text: "Overview"
+            href: linear-algebra.qmd
+          - linear-algebra-vectors.qmd
+          - linear-algebra-matrices.qmd
+          - linear-algebra-subspaces.qmd
+          - linear-algebra-inner-products.qmd
+          - linear-algebra-special-matrices.qmd
+          - linear-algebra-projections.qmd
+          - linear-algebra-diagonalization.qmd
+          - linear-algebra-complex.qmd
       - text: "Vector Calculus"
         href: vector-calculus.qmd
       - text: "Optimization"
@@ -74,7 +84,17 @@ website:
       - algebra.qmd
       - measures.qmd
       - calculus.qmd
-      - linear-algebra.qmd
+      - section: "Linear Algebra"
+        href: linear-algebra.qmd
+        contents:
+          - linear-algebra-vectors.qmd
+          - linear-algebra-matrices.qmd
+          - linear-algebra-subspaces.qmd
+          - linear-algebra-inner-products.qmd
+          - linear-algebra-special-matrices.qmd
+          - linear-algebra-projections.qmd
+          - linear-algebra-diagonalization.qmd
+          - linear-algebra-complex.qmd
       - vector-calculus.qmd
       - optimization.qmd
       - proof-writing.qmd

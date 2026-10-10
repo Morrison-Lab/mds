@@ -1,0 +1,15 @@
+---
+title: "Projections and Linear Systems"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-projections-slides.html
+  pdf:
+    output-file: linear-algebra-projections-handout.pdf
+  docx:
+    output-file: linear-algebra-projections.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_projections.qmd >}}

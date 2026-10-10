@@ -15,6 +15,8 @@ local labels = {
 
 local resolved = {}
 local counts = {}
+-- Targets on other pages, with their labels and URLs, from page-xrefs.lua.
+local remote = {}
 
 local function note(id)
   local prefix = id and id:match("^(%a+)%-")
@@ -51,7 +53,21 @@ local function rewrite(tex)
       local id = tex:match("^@(%a+%-[%w%-]*%w)", i)
       local prefix = id and id:match("^(%a+)%-")
       local is_latex = quarto.doc.is_format("pdf") or quarto.doc.is_format("latex")
-      if is_latex and prefix and labels[prefix] then
+      local far = id and not resolved[id] and remote[id]
+      if far then
+        -- A target on another page of a split chapter (page-xrefs.lua).
+        local shown = "\\text{" .. far.label .. "}"
+        if html or is_latex then
+          local url = is_latex and far.url:gsub("#", "\\#") or far.url
+          shown = "\\href{" .. url .. "}{" .. shown .. "}"
+        end
+        if text_depths[depth] then
+          table.insert(out, "}" .. shown .. "\\text{")
+        else
+          table.insert(out, shown)
+        end
+        i = i + 1 + #id
+      elseif is_latex and prefix and labels[prefix] then
         local shown = "\\text{" .. labels[prefix] .. "~\\ref{" .. id .. "}}"
         if text_depths[depth] then
           table.insert(out, "}" .. shown .. "\\text{")
@@ -85,6 +101,14 @@ return {
   -- holds theorem-type divs as Theorem (or Proof) nodes, and an equation label is still
   -- the literal string "{#eq-...}" after its display math.
   {
+    Meta = function(meta)
+      for id, t in pairs(meta["page-xrefs-math"] or {}) do
+        remote[id] = {
+          label = pandoc.utils.stringify(t.label):gsub(utf8.char(160), "~"),
+          url = pandoc.utils.stringify(t.url),
+        }
+      end
+    end,
     Theorem = function(el) note(el.identifier) end,
     -- Remarks and solutions are Proof nodes, numbered like theorems.
     Proof = function(el) note(el.identifier) end,
