@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Calculus – Math for Data Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./calculus-derivatives.html" rel="next">
+<link href="./measures.html" rel="prev">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
+</script><script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script><script>
+// Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
+// handles light/dark and remembers it; the two tinted palettes are a
+// data-palette attribute on <html>. The choice is kept under "mln-theme".
+// Off-white is the default for a first visit.
+(function () {
+  var KEY = "mln-theme";
+  var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+  function stored() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function isDark() { return document.body.classList.contains("quarto-dark"); }
+  function apply(choice, remember) {
+    if (choice === "offwhite" || choice === "parchment") {
+      document.documentElement.setAttribute("data-palette", choice);
+    } else {
+      document.documentElement.removeAttribute("data-palette");
+    }
+    if ((choice === "dark") !== isDark() && window.quartoToggleColorScheme) {
+      window.quartoToggleColorScheme();
+    }
+    if (remember) { try { localStorage.setItem(KEY, choice); } catch (e) {} }
+    mark(choice);
+  }
+  function mark(choice) {
+    document.querySelectorAll(".theme-picker [data-theme-choice]").forEach(function (b) {
+      var on = b.getAttribute("data-theme-choice") === choice;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-checked", on ? "true" : "false");
+    });
+  }
+  // Set the palette before first paint to avoid a flash.
+  var early = stored();
+  if (early !== "light" && early !== "dark" && early !== "parchment") early = "offwhite";
+  if (early === "offwhite" || early === "parchment") {
+    document.documentElement.setAttribute("data-palette", early);
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+    if (!toggles.length) return;
+    var tools = toggles[0];
+    var wrap = document.createElement("div");
+    wrap.className = "theme-picker dropdown";
+    wrap.innerHTML =
+      '<button type="button" class="nav-link dropdown-toggle px-1 border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Colour theme"><i class="bi bi-palette"></i></button>' +
+      '<ul class="dropdown-menu dropdown-menu-end" role="menu">' +
+      OPTIONS.map(function (o) {
+        return '<li role="none"><button type="button" class="dropdown-item" role="menuitemradio" aria-checked="false" data-theme-choice="' + o[0] + '">' + o[1] + "</button></li>";
+      }).join("") + "</ul>";
+    tools.parentNode.insertBefore(wrap, tools);
+    toggles.forEach(function (t) { t.style.display = "none"; });
+    wrap.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-theme-choice]");
+      if (b) apply(b.getAttribute("data-theme-choice"), true);
+    });
+    var choice = stored();
+    if (OPTIONS.every(function (o) { return o[0] !== choice; })) {
+      choice = isDark() ? "dark" : "offwhite";
+    }
+    apply(choice, false);
+  });
+})();
+</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="site_libs/plotly-binding-4.12.1/plotly.js"></script><script src="site_libs/typedarray-0.1/typedarray.min.js"></script><script src="site_libs/jquery-3.5.1/jquery.min.js"></script><link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+</style>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Math for Data Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link active" href="./notation.html" aria-current="page"> 
+<span class="menu-text">Notation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sets-functions.html"> 
+<span class="menu-text">Sets and Functions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./algebra.html"> 
+<span class="menu-text">Algebra</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./measures.html"> 
+<span class="menu-text">Measures</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-calculus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Calculus</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-calculus">
+<li>
+    <a class="dropdown-item" href="./calculus.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./calculus-derivatives.html">
+ <span class="dropdown-text">Derivatives and Taylor Series</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./calculus-integration.html">
+ <span class="dropdown-text">Integrals and the Fundamental Theorem of Calculus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./calculus-double-integrals.html">
+ <span class="dropdown-text">Double Integrals and Fubini’s Theorem</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-linear-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Linear Algebra</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">
+<li>
+    <a class="dropdown-item" href="./linear-algebra.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-vectors.html">
+ <span class="dropdown-text">Vectors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-matrices.html">
+ <span class="dropdown-text">Matrices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-subspaces.html">
+ <span class="dropdown-text">Subspaces and Rank</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-rank-nullity.html">
+ <span class="dropdown-text">Column Space, Null Space and Rank-Nullity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-direct-sums.html">
+ <span class="dropdown-text">Direct Sums and Orthogonal Complements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-inner-products.html">
+ <span class="dropdown-text">Inner Products and Orthogonality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-special-matrices.html">
+ <span class="dropdown-text">Special Matrices and Decompositions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-projections.html">
+ <span class="dropdown-text">Projections and Linear Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-diagonalization.html">
+ <span class="dropdown-text">Diagonalization and Cholesky</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-complex.html">
+ <span class="dropdown-text">Complex Vectors and Matrices</span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="./vector-calculus.html"> 
+<span class="menu-text">Vector Calculus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./optimization.html"> 
+<span class="menu-text">Optimization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proof-writing.html"> 
+<span class="menu-text">Proof Writing</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Morrison-Lab/mds"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./calculus.html">Calculus</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sets-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets and Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algebra</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./calculus.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Calculus</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculus-derivatives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Derivatives and Taylor Series</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculus-integration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Integrals and the Fundamental Theorem of Calculus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculus-double-integrals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Double Integrals and Fubini’s Theorem</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Algebra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-subspaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Subspaces and Rank</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-rank-nullity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Column Space, Null Space and Rank-Nullity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-direct-sums.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Direct Sums and Orthogonal Complements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-inner-products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inner Products and Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-special-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Special Matrices and Decompositions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-projections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projections and Linear Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-diagonalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagonalization and Cholesky</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-complex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complex Vectors and Matrices</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vector Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proof-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#sec-additional-resources" id="toc-sec-additional-resources" class="nav-link active" data-scroll-target="#sec-additional-resources"><span class="header-section-number">1</span> Further reading</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/calculus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/calculus.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="calculus-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="calculus.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
+<div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
+    <p style="margin: 0;">
+        <strong>📋 Changes in this PR:</strong> <a href="algebra.html">Algebra</a>, <a href="calculus-derivatives.html">Derivatives and Taylor Series</a>, <a href="calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>, <a href="calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>, <a href="calculus.html">Calculus</a>, <a href="index.html">Math for Data Science</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <br>
+        <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
+    </p>
+</div>
+
+
+<div class="preview-page-formats-banner" style="background-color: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 4px; padding: 12px; margin: 16px 0;">
+    <p style="margin: 0;">
+        <strong>📋 Other Formats:</strong> <a href="calculus-tracked-changes.docx" download>📝 MS Word (tracked changes)</a>
+    </p>
+</div>
+<header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Calculus</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Last modified: 2026-10-10 10:39:03 (PDT)</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><p>The calculus notes are split across these pages:</p>
+<ul>
+<li>
+<a href="./calculus-derivatives.html">Derivatives and Taylor Series</a>: limits and derivatives, derivative rules, tangent lines, linear approximation, critical points and optimization, and Taylor series.</li>
+<li>
+<a href="./calculus-integration.html">Integrals and the Fundamental Theorem of Calculus</a>: antiderivatives, regularity conditions, and the Fundamental Theorem of Calculus.</li>
+<li>
+<a href="./calculus-double-integrals.html">Double Integrals and Fubini’s Theorem</a>: double integrals over rectangles and non-rectangular regions, and Fubini’s and Tonelli’s theorems.</li>
+</ul>
+<p>A link to a section, theorem or definition on this page from before the split goes on to the page that now holds it.</p>
+<section id="sec-additional-resources" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="sec-additional-resources">
+<span class="header-section-number">1</span> Further reading</h2>
+<ul>
+<li><span class="citation" data-cites="mosaiccalc">Kaplan (<a href="#ref-mosaiccalc" role="doc-biblioref">2022</a>)</span></li>
+<li><span class="citation" data-cites="khuri2003advanced">Khuri (<a href="#ref-khuri2003advanced" role="doc-biblioref">2003</a>)</span></li>
+<li><span class="citation" data-cites="calclifesaver">Banner (<a href="#ref-calclifesaver" role="doc-biblioref">2007</a>)</span></li>
+<li><span class="citation" data-cites="larsonCalc11e">Larson and Edwards (<a href="#ref-larsonCalc11e" role="doc-biblioref">2018</a>)</span></li>
+<li>
+<span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span> The calculus review exercises and worked solutions across these pages and in <a href="./vector-calculus.html#def-partial-derivative">Vector Calculus</a> are adapted from this supplemental review chapter.
+<ul>
+<li><a href="http://www.youtube.com/watch?v=xYzQL0TUtBA" class="uri">http://www.youtube.com/watch?v=xYzQL0TUtBA</a></li>
+<li><a href="http://www.youtube.com/watch?v=Ps2SBo_WjoE" class="uri">http://www.youtube.com/watch?v=Ps2SBo_WjoE</a></li>
+</ul>
+</li>
+<li>
+<span class="citation" data-cites="realanalysislifesaver">Grinberg (<a href="#ref-realanalysislifesaver" role="doc-biblioref">2017</a>)</span> (the rigorous foundations behind these results)</li>
+<li>
+<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus</a> is a 12-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops geometric and visual intuition for limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series.</li>
+</ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-calclifesaver" class="csl-entry" role="listitem">
+Banner, Adrian D. 2007. <em>The Calculus Lifesaver : All the Tools You Need to Excel at Calculus</em>. A Princeton Lifesaver Study Guide. Princeton University Press. <a href="https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver">https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver</a>.
+</div>
+<div id="ref-realanalysislifesaver" class="csl-entry" role="listitem">
+Grinberg, Raffi. 2017. <em>The Real Analysis Lifesaver: All the Tools You Need to Understand Proofs</em>. 1st ed. Princeton Lifesaver Study Guides. Princeton University Press. <a href="https://press.princeton.edu/books/paperback/9780691172934/the-real-analysis-lifesaver">https://press.princeton.edu/books/paperback/9780691172934/the-real-analysis-lifesaver</a>.
+</div>
+<div id="ref-mosaiccalc" class="csl-entry" role="listitem">
+Kaplan, Daniel. 2022. <em>MOSAIC Calculus</em>. Www.mosaic-web.org. <a href="https://www.mosaic-web.org">www.mosaic-web.org</a>.
+</div>
+<div id="ref-khuri2003advanced" class="csl-entry" role="listitem">
+Khuri, André I. 2003. <em>Advanced Calculus with Applications in Statistics</em>. John Wiley &amp; Sons. <a href="https://doi.org/10.1002/0471394882">https://doi.org/10.1002/0471394882</a>.
+</div>
+<div id="ref-larsonCalc11e" class="csl-entry" role="listitem">
+Larson, Ron, and Bruce H. Edwards. 2018. <em>Calculus</em>. 11th ed. Cengage Learning. <a href="https://www.cengage.com/c/calculus-11e-larson/">https://www.cengage.com/c/calculus-11e-larson/</a>.
+</div>
+<div id="ref-problifesavercalc" class="csl-entry" role="listitem">
+Miller, Steven J. 2016. <em>The Probability Lifesaver: Calculus Review Problems</em>. <a href="https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf">https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf</a>.
+</div>
+</div>
+
+
+<!-- -->
+
+<script>
+const theoremLikeClasses = new Set([
+  "thm",
+  "theorem",
+  "lem",
+  "lemma",
+  "cor",
+  "corollary",
+  "prp",
+  "proposition",
+  "cnj",
+  "conjecture",
+  "def",
+  "definition",
+  "exm",
+  "example",
+  "exr",
+  "exercise",
+  "proof",
+  "rem",
+  "remark",
+  "sol",
+  "solution"
+]);
+const theoremLikePrefixes = [
+  "thm-",
+  "lem-",
+  "cor-",
+  "prp-",
+  "cnj-",
+  "def-",
+  "exm-",
+  "exr-",
+  "rem-",
+  "sol-"
+];
+const inlineAnchorSeparator = "\u00A0";
+const maxAnchorRetryAttempts = 5;
+const anchorRetryDelayMs = 50;
+
+const isTheoremLikeDiv = (div) =>
+  Array.from(div.classList).some((className) => theoremLikeClasses.has(className)) ||
+  (div.id && theoremLikePrefixes.some((prefix) => div.id.startsWith(prefix)));
+
+const addTheoremLikeDivAnchors = () => {
+  for (const theoremDiv of window.document.querySelectorAll("div[id]")) {
+    if (!isTheoremLikeDiv(theoremDiv)) {
+      continue;
+    }
+
+    if (!theoremDiv.classList.contains("anchored")) {
+      theoremDiv.classList.add("anchored");
+    }
+
+    if (!theoremDiv.dataset.anchorId) {
+      theoremDiv.dataset.anchorId = theoremDiv.id;
+    }
+  }
+};
+
+const ensureSectionHeadingAnchorAttributes = () => {
+  for (const sectionHeading of window.document.querySelectorAll(
+    "section[id] > h1, section[id] > h2, section[id] > h3, section[id] > h4, section[id] > h5, section[id] > h6"
+  )) {
+    if (!sectionHeading.classList.contains("anchored")) {
+      sectionHeading.classList.add("anchored");
+    }
+
+    if (!sectionHeading.dataset.anchorId) {
+      sectionHeading.dataset.anchorId = sectionHeading.parentElement.id;
+    }
+  }
+};
+
+const normalizeInternalAnchorLinkIcons = () => {
+  for (const link of window.document.querySelectorAll(
+    "a.anchorjs-link, a.quarto-xref"
+  )) {
+    if (link.classList.contains("quarto-xref")) {
+      link.classList.add("no-external");
+      link.classList.remove("external");
+      continue;
+    }
+
+    const href = link.getAttribute("href") || "";
+    if (!href.startsWith("#")) {
+      continue;
+    }
+
+    link.classList.add("no-external");
+    link.classList.remove("external");
+  }
+};
+
+const moveTheoremDivAnchorsInline = () => {
+  let hasPendingAnchors = false;
+
+  for (const theoremDiv of window.document.querySelectorAll("div[id]")) {
+    if (!isTheoremLikeDiv(theoremDiv)) {
+      continue;
+    }
+
+    const theoremTitle = theoremDiv.querySelector(".theorem-title, .proof-title");
+    if (!theoremTitle) {
+      continue;
+    }
+
+    const anchorLink = Array.from(
+      theoremDiv.querySelectorAll("a.anchorjs-link")
+    ).find((link) => {
+      const href = link.getAttribute("href") || "";
+      return href === `#${theoremDiv.id}` || href.endsWith(`#${theoremDiv.id}`);
+    });
+
+    if (anchorLink && anchorLink.parentElement === theoremTitle) {
+      continue;
+    }
+
+    if (!anchorLink) {
+      hasPendingAnchors = true;
+      continue;
+    }
+
+    anchorLink.classList.remove("external");
+
+    // If the title ends with whitespace (e.g. Quarto's proof-title ending in ". "),
+    // trim the trailing whitespace so the non-breaking separator and anchor stay attached
+    // to the title text, and ensure a trailing space separates the anchor from following content.
+    let lastTextNode = theoremTitle.lastChild;
+    while (lastTextNode && lastTextNode.nodeType !== Node.TEXT_NODE && lastTextNode.lastChild) {
+      lastTextNode = lastTextNode.lastChild;
+    }
+    if (lastTextNode && lastTextNode.nodeType === Node.TEXT_NODE && /\s+$/.test(lastTextNode.textContent)) {
+      lastTextNode.textContent = lastTextNode.textContent.replace(/\s+$/, "");
+      if (theoremTitle.nextSibling &&
+          !(theoremTitle.nextSibling.nodeType === Node.TEXT_NODE && /^\s/.test(theoremTitle.nextSibling.textContent))) {
+        theoremTitle.after(" ");
+      }
+    }
+
+    theoremTitle.append(inlineAnchorSeparator);
+    theoremTitle.append(anchorLink);
+  }
+
+  return hasPendingAnchors;
+};
+
+const moveTheoremDivAnchorsInlineWithRetry = (
+  attemptsRemaining = maxAnchorRetryAttempts
+) => {
+  const hasPendingAnchors = moveTheoremDivAnchorsInline();
+  if (hasPendingAnchors && attemptsRemaining > 0) {
+    window.setTimeout(() => {
+      moveTheoremDivAnchorsInlineWithRetry(attemptsRemaining - 1);
+    }, anchorRetryDelayMs);
+  }
+};
+
+if (window.document.readyState === "loading") {
+  window.document.addEventListener("DOMContentLoaded", () => {
+    addTheoremLikeDivAnchors();
+    ensureSectionHeadingAnchorAttributes();
+    normalizeInternalAnchorLinkIcons();
+    moveTheoremDivAnchorsInlineWithRetry();
+  });
+} else {
+  addTheoremLikeDivAnchors();
+  ensureSectionHeadingAnchorAttributes();
+  normalizeInternalAnchorLinkIcons();
+  moveTheoremDivAnchorsInlineWithRetry();
+}
+
+window.addEventListener("load", () => {
+  normalizeInternalAnchorLinkIcons();
+  moveTheoremDivAnchorsInlineWithRetry();
+});
+</script><script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script><script>
+(function () {
+  var moved = {"a-constant-function-is-integrable":"calculus-integration.html","a-continuous-function-and-one-failure-of-each-condition":"calculus-integration.html","a-differentiable-function-and-a-limit-that-is-not-finite":"calculus-derivatives.html","a-function-not-continuous-on-lbrack-0-1rbrack":"calculus-integration.html","a-jump-discontinuity-and-a-discontinuity-that-is-not-a-jump":"calculus-integration.html","a-partition-of-lbrack-0-1rbrack":"calculus-integration.html","a-riemann-sum-for-x2-on-lbrack-0-1rbrack":"calculus-integration.html","abs-value-code":"calculus-integration.html","accumulation-function":"calculus-integration.html","an-equal-width-riemann-sum":"calculus-integration.html","an-iterated-integral":"calculus-double-integrals.html","antiderivative":"calculus-integration.html","antiderivative-of-3x2---1":"calculus-integration.html","antiderivative-of-x2":"calculus-integration.html","antiderivatives":"calculus-integration.html","antiderivatives-F-code":"calculus-integration.html","antiderivatives-f-code":"calculus-integration.html","antiderivatives-setup":"calculus-integration.html","basic-integration-rules":"calculus-integration.html","cdf-and-pdf-of-the-exponential-distribution":"calculus-integration.html","chain-rule":"calculus-derivatives.html","chain-rule-for-logarithms":"calculus-derivatives.html","chain-rule-with-logarithm":"calculus-derivatives.html","changing-the-order-of-integration-for-a-non-rectangular-region":"calculus-double-integrals.html","choosing-the-order-of-integration":"calculus-double-integrals.html","classifying-critical-points-with-the-second-derivative-test":"calculus-derivatives.html","combining-product-and-chain-rules":"calculus-derivatives.html","constant-multiple-rule":"calculus-derivatives.html","constant-rule":"calculus-derivatives.html","continuity-implies-integrability":"calculus-integration.html","continuity-on-lbrack-0-1rbrack-uses-one-sided-limits-at-the-endpoints":"calculus-integration.html","continuous-but-not-differentiable-absx":"calculus-integration.html","continuous-function":"calculus-integration.html","continuous-functions-on-a-rectangle-corollary-of-thm-fubini":"calculus-double-integrals.html","continuous-hence-integrable-polynomials":"calculus-integration.html","continuous-on-a-closed-interval":"calculus-integration.html","convolution-of-two-uniform-densities":"calculus-integration.html","cor-deriv-log-chain":"calculus-derivatives.html","cor-fubini-rect":"calculus-double-integrals.html","critical-point":"calculus-derivatives.html","critical-points-that-are-and-are-not-flat-points":"calculus-derivatives.html","def-accumulation-function":"calculus-integration.html","def-antiderivative":"calculus-integration.html","def-continuous":"calculus-integration.html","def-continuous-on":"calculus-integration.html","def-critical-point":"calculus-derivatives.html","def-derivative":"calculus-derivatives.html","def-difference-quotient":"calculus-derivatives.html","def-differentiable":"calculus-derivatives.html","def-differentiable-on":"calculus-integration.html","def-double-integral":"calculus-double-integrals.html","def-evaluation-bracket":"calculus-integration.html","def-flat-point":"calculus-derivatives.html","def-indefinite-integral":"calculus-integration.html","def-integrable":"calculus-integration.html","def-integrand":"calculus-integration.html","def-iterated-integral":"calculus-double-integrals.html","def-jump-discontinuity":"calculus-integration.html","def-limit":"calculus-derivatives.html","def-linear-approximation":"calculus-derivatives.html","def-mesh":"calculus-integration.html","def-one-sided-derivative":"calculus-derivatives.html","def-one-sided-limit":"calculus-derivatives.html","def-partition":"calculus-integration.html","def-riemann-integral":"calculus-integration.html","def-riemann-sum":"calculus-integration.html","def-riemann-sum-equal-width":"calculus-integration.html","def-second-derivative":"calculus-derivatives.html","def-tangent-line":"calculus-derivatives.html","def-taylor-polynomial":"calculus-derivatives.html","definite-integral-of-a-polynomial":"calculus-integration.html","derivative":"calculus-derivatives.html","derivative-after-logarithmic-simplification":"calculus-derivatives.html","derivative-of-a-product":"calculus-derivatives.html","derivative-of-a-rational-function":"calculus-derivatives.html","derivative-of-cosine":"calculus-derivatives.html","derivative-of-exponential":"calculus-derivatives.html","derivative-of-natural-logarithm":"calculus-derivatives.html","derivative-of-polynomial-and-power-functions":"calculus-derivatives.html","derivative-of-sine":"calculus-derivatives.html","derivative-of-the-standard-gaussian-kernel":"calculus-derivatives.html","difference-quotient":"calculus-derivatives.html","differentiability-implies-continuity":"calculus-integration.html","differentiable-function":"calculus-derivatives.html","differentiable-hence-continuous-x3---x":"calculus-integration.html","differentiable-on-an-interval":"calculus-integration.html","differentiable-on-one-interval-but-not-another":"calculus-integration.html","double-integral":"calculus-double-integrals.html","double-integral-of-a-polynomial-over-a-rectangle":"calculus-double-integrals.html","double-integral-of-an-affine-function":"calculus-double-integrals.html","double-integral-over-a-triangular-region":"calculus-double-integrals.html","double-integral-with-polynomial-and-radical-terms":"calculus-double-integrals.html","eq-ftc-deriv-of-integral":"calculus-integration.html","eq-ftc-integral-of-deriv":"calculus-integration.html","eq-ftc-part2":"calculus-integration.html","eq-linear-approx":"calculus-derivatives.html","eq-taylor-poly-def":"calculus-derivatives.html","equal-width-riemann-sum":"calculus-integration.html","equal-width-riemann-sums-converge-to-the-integral":"calculus-integration.html","equal-width-sums-for-int_01-xdx":"calculus-integration.html","evaluating-a-double-integral-on-a-rectangle":"calculus-double-integrals.html","evaluating-int_13-2tdt-with-a-bracket":"calculus-integration.html","evaluation-bracket":"calculus-integration.html","every-flat-point-is-a-critical-point":"calculus-derivatives.html","exm-accumulation-function":"calculus-integration.html","exm-antiderivative-power":"calculus-integration.html","exm-cont-implies-int":"calculus-integration.html","exm-cont-not-diff":"calculus-integration.html","exm-continuous":"calculus-integration.html","exm-continuous-on-sqrt":"calculus-integration.html","exm-critical-point":"calculus-derivatives.html","exm-derivative":"calculus-derivatives.html","exm-diff-implies-cont":"calculus-integration.html","exm-difference-quotient":"calculus-derivatives.html","exm-differentiable":"calculus-derivatives.html","exm-differentiable-on":"calculus-integration.html","exm-double-integral-area":"calculus-double-integrals.html","exm-equal-width-sum":"calculus-integration.html","exm-evaluation-bracket":"calculus-integration.html","exm-flat-point":"calculus-derivatives.html","exm-flat-point-critical":"calculus-derivatives.html","exm-ftc-cdf-pdf":"calculus-integration.html","exm-ftc-part1-accumulation":"calculus-integration.html","exm-fubini-fail":"calculus-double-integrals.html","exm-fubini-fail-tonelli":"calculus-double-integrals.html","exm-fubini-nonrect":"calculus-double-integrals.html","exm-fubini-rect":"calculus-double-integrals.html","exm-fubini-tonelli-apply":"calculus-double-integrals.html","exm-int-not-cont":"calculus-integration.html","exm-integrable-constant":"calculus-integration.html","exm-integral-rules-quadratic":"calculus-integration.html","exm-integrand":"calculus-integration.html","exm-iterated-integral":"calculus-double-integrals.html","exm-jump-discontinuity":"calculus-integration.html","exm-limit":"calculus-derivatives.html","exm-mesh":"calculus-integration.html","exm-not-continuous-on":"calculus-integration.html","exm-not-partition":"calculus-integration.html","exm-one-sided-derivative":"calculus-derivatives.html","exm-one-sided-limit":"calculus-derivatives.html","exm-partition":"calculus-integration.html","exm-riemann-equal-width":"calculus-integration.html","exm-riemann-sum":"calculus-integration.html","exm-second-derivative":"calculus-derivatives.html","exm-tangent-line":"calculus-derivatives.html","exm-taylor-polynomial-cosine":"calculus-derivatives.html","exm-taylor-polynomial-exponential":"calculus-derivatives.html","exm-taylor-polynomial-sine":"calculus-derivatives.html","exp-pdf-cdf-cdf-code":"calculus-integration.html","exp-pdf-cdf-pdf-code":"calculus-integration.html","exp-pdf-cdf-setup":"calculus-integration.html","exr-flat-point":"calculus-derivatives.html","exr-miller-deriv-chain-log":"calculus-derivatives.html","exr-miller-deriv-classify-critical-points":"calculus-derivatives.html","exr-miller-deriv-find-slopes":"calculus-derivatives.html","exr-miller-deriv-gaussian-kernel":"calculus-derivatives.html","exr-miller-deriv-generalized-power-rule":"calculus-derivatives.html","exr-miller-deriv-log-simplify":"calculus-derivatives.html","exr-miller-deriv-opt-gamma-kernel":"calculus-derivatives.html","exr-miller-deriv-polynomial-root":"calculus-derivatives.html","exr-miller-deriv-product-chain-composite":"calculus-derivatives.html","exr-miller-deriv-product-poly-cos":"calculus-derivatives.html","exr-miller-deriv-quotient-or-factor":"calculus-derivatives.html","exr-miller-deriv-second-gaussian-kernel":"calculus-derivatives.html","exr-miller-deriv-second-log-constant":"calculus-derivatives.html","exr-miller-deriv-second-product":"calculus-derivatives.html","exr-miller-deriv-tangent-line-approx":"calculus-derivatives.html","exr-miller-dint-harmonic-identity":"calculus-double-integrals.html","exr-miller-dint-linear-plane":"calculus-double-integrals.html","exr-miller-dint-order-of-integration":"calculus-double-integrals.html","exr-miller-dint-polynomial-rectangle":"calculus-double-integrals.html","exr-miller-dint-separable":"calculus-double-integrals.html","exr-miller-dint-square-root-term":"calculus-double-integrals.html","exr-miller-dint-switch-order":"calculus-double-integrals.html","exr-miller-dint-triangular-region":"calculus-double-integrals.html","exr-miller-int-by-parts-gaussian":"calculus-integration.html","exr-miller-int-composite-power":"calculus-integration.html","exr-miller-int-log-substitution":"calculus-integration.html","exr-miller-int-polynomial":"calculus-integration.html","exr-miller-int-polynomial-symmetry":"calculus-integration.html","exr-miller-int-power-substitution":"calculus-integration.html","exr-miller-int-quadratic-complete":"calculus-integration.html","exr-miller-int-rayleigh-normal-kernel":"calculus-integration.html","exr-miller-int-trig-substitution":"calculus-integration.html","exr-miller-int-trig-symmetry":"calculus-integration.html","exr-miller-int-uniform-convolution":"calculus-integration.html","exr-miller-taylor-cos-cubed":"calculus-derivatives.html","exr-miller-taylor-cos-scaled":"calculus-derivatives.html","exr-miller-taylor-cube-root":"calculus-derivatives.html","exr-miller-taylor-exp-base":"calculus-derivatives.html","exr-miller-taylor-exp-power":"calculus-derivatives.html","exr-miller-taylor-log-one-minus-x":"calculus-derivatives.html","exr-miller-taylor-log-one-plus-x":"calculus-derivatives.html","exr-miller-taylor-log-product-exp":"calculus-derivatives.html","exr-miller-taylor-log-scaled":"calculus-derivatives.html","exr-miller-taylor-normal-density":"calculus-derivatives.html","exr-miller-taylor-poly-nonzero":"calculus-derivatives.html","exr-miller-taylor-poly-zero":"calculus-derivatives.html","exr-miller-taylor-product-cos-log":"calculus-derivatives.html","exr-miller-taylor-sqrt":"calculus-derivatives.html","exr-miller-taylor-x-log-x":"calculus-derivatives.html","fig-abs-value":"calculus-integration.html","fig-antiderivatives":"calculus-integration.html","fig-antiderivatives-F":"calculus-integration.html","fig-antiderivatives-f":"calculus-integration.html","fig-exp-pdf-cdf":"calculus-integration.html","fig-exp-pdf-cdf-cdf":"calculus-integration.html","fig-exp-pdf-cdf-pdf":"calculus-integration.html","fig-ftc-part1":"calculus-integration.html","fig-ftc-part1-left":"calculus-integration.html","fig-ftc-part1-right":"calculus-integration.html","fig-fubini-fail":"calculus-double-integrals.html","fig-fubini-nonrect":"calculus-double-integrals.html","fig-fubini-nonrect-region":"calculus-double-integrals.html","fig-fubini-rect":"calculus-double-integrals.html","fig-fubini-rect-region":"calculus-double-integrals.html","fig-linear-approx":"calculus-derivatives.html","fig-step":"calculus-integration.html","find-the-flat-point-and-check-the-approximation":"calculus-derivatives.html","finding-points-with-a-prescribed-slope":"calculus-derivatives.html","flat-point-critical":"calculus-derivatives.html","flat-point-stationary-point":"calculus-derivatives.html","flat-points-and-a-point-that-is-not-one":"calculus-derivatives.html","ftc-part-1-visualized-accumulation-function-for-ft-2t":"calculus-integration.html","ftc-part1-left-code":"calculus-integration.html","ftc-part1-right-code":"calculus-integration.html","ftc-part1-setup":"calculus-integration.html","fubinis-theorem-riemann-version":"calculus-double-integrals.html","fubinitonelli-for-probability-measures":"calculus-double-integrals.html","fubinitonelli-theorem-measure-theoretic-form":"calculus-double-integrals.html","fundamental-theorem-of-calculus":"calculus-integration.html","fundamental-theorem-of-calculus-1":"calculus-integration.html","generalized-power-rule":"calculus-derivatives.html","harmonic-numbers-via-double-integrals":"calculus-double-integrals.html","improper-gaussian-kernel-integral":"calculus-integration.html","indefinite-integral":"calculus-integration.html","integrable-but-not-continuous-a-step-function":"calculus-integration.html","integral-of-a-composite-power":"calculus-integration.html","integral-of-a-perfect-square":"calculus-integration.html","integral-of-odd-trigonometric-functions":"calculus-integration.html","integrand":"calculus-integration.html","integrands":"calculus-integration.html","integration-by-parts-with-an-exponential-factor":"calculus-integration.html","iterated-integral":"calculus-double-integrals.html","jump-discontinuity":"calculus-integration.html","limit-of-a-function-at-a-point":"calculus-derivatives.html","linear-approximation-first-order-taylor-approximation":"calculus-derivatives.html","linear-taylor-polynomial-of-the-exponential":"calculus-derivatives.html","lists-that-are-not-partitions-of-lbrack-0-1rbrack":"calculus-integration.html","maclaurin-series-of-log1---x":"calculus-derivatives.html","maclaurin-series-of-log1-x":"calculus-derivatives.html","maximizing-a-gamma-family-kernel":"calculus-derivatives.html","mesh-of-a-partition":"calculus-integration.html","one-sided-derivatives":"calculus-derivatives.html","one-sided-derivatives-of-absx-at-0":"calculus-derivatives.html","one-sided-limits":"calculus-derivatives.html","one-sided-limits-of-a-step-function":"calculus-derivatives.html","partition-of-an-interval":"calculus-integration.html","positive-application-of-thm-fubini-tonelli":"calculus-double-integrals.html","power-rule":"calculus-derivatives.html","product-of-single-integrals-for-separable-functions":"calculus-double-integrals.html","product-rule":"calculus-derivatives.html","quotient-rule":"calculus-derivatives.html","regularity-conditions":"calculus-integration.html","rem-fubini-tonelli-probability":"calculus-double-integrals.html","rem-integrable-integral":"calculus-integration.html","rem-linear-approx-affine":"calculus-derivatives.html","riemann-integrable":"calculus-integration.html","riemann-integrable-functions-and-riemann-integrals":"calculus-integration.html","riemann-integral-definite-integral":"calculus-integration.html","riemann-sum":"calculus-integration.html","sec-critical-points":"calculus-derivatives.html","sec-derivative-rules":"calculus-derivatives.html","sec-derivatives":"calculus-derivatives.html","sec-double-integrals":"calculus-double-integrals.html","sec-integration":"calculus-integration.html","sec-limits-derivatives":"calculus-derivatives.html","sec-linear-approximation":"calculus-derivatives.html","sec-tangent-lines":"calculus-derivatives.html","sec-taylor-series":"calculus-derivatives.html","second-derivative":"calculus-derivatives.html","second-derivative-of-a-product":"calculus-derivatives.html","second-derivative-of-the-gaussian-kernel":"calculus-derivatives.html","second-derivative-with-an-added-constant":"calculus-derivatives.html","separating-even-and-odd-parts-of-a-polynomial":"calculus-integration.html","sol-flat-point":"calculus-derivatives.html","sol-miller-deriv-chain-log":"calculus-derivatives.html","sol-miller-deriv-classify-critical-points":"calculus-derivatives.html","sol-miller-deriv-find-slopes":"calculus-derivatives.html","sol-miller-deriv-gaussian-kernel":"calculus-derivatives.html","sol-miller-deriv-generalized-power-rule":"calculus-derivatives.html","sol-miller-deriv-log-simplify":"calculus-derivatives.html","sol-miller-deriv-opt-gamma-kernel":"calculus-derivatives.html","sol-miller-deriv-polynomial-root":"calculus-derivatives.html","sol-miller-deriv-product-chain-composite":"calculus-derivatives.html","sol-miller-deriv-product-poly-cos":"calculus-derivatives.html","sol-miller-deriv-quotient-or-factor":"calculus-derivatives.html","sol-miller-deriv-second-gaussian-kernel":"calculus-derivatives.html","sol-miller-deriv-second-log-constant":"calculus-derivatives.html","sol-miller-deriv-second-product":"calculus-derivatives.html","sol-miller-deriv-tangent-line-approx":"calculus-derivatives.html","sol-miller-dint-harmonic-identity":"calculus-double-integrals.html","sol-miller-dint-linear-plane":"calculus-double-integrals.html","sol-miller-dint-order-of-integration":"calculus-double-integrals.html","sol-miller-dint-polynomial-rectangle":"calculus-double-integrals.html","sol-miller-dint-separable":"calculus-double-integrals.html","sol-miller-dint-square-root-term":"calculus-double-integrals.html","sol-miller-dint-switch-order":"calculus-double-integrals.html","sol-miller-dint-triangular-region":"calculus-double-integrals.html","sol-miller-int-by-parts-gaussian":"calculus-integration.html","sol-miller-int-composite-power":"calculus-integration.html","sol-miller-int-log-substitution":"calculus-integration.html","sol-miller-int-polynomial":"calculus-integration.html","sol-miller-int-polynomial-symmetry":"calculus-integration.html","sol-miller-int-power-substitution":"calculus-integration.html","sol-miller-int-quadratic-complete":"calculus-integration.html","sol-miller-int-rayleigh-normal-kernel":"calculus-integration.html","sol-miller-int-trig-substitution":"calculus-integration.html","sol-miller-int-trig-symmetry":"calculus-integration.html","sol-miller-int-uniform-convolution":"calculus-integration.html","sol-miller-taylor-cos-cubed":"calculus-derivatives.html","sol-miller-taylor-cos-scaled":"calculus-derivatives.html","sol-miller-taylor-cube-root":"calculus-derivatives.html","sol-miller-taylor-exp-base":"calculus-derivatives.html","sol-miller-taylor-exp-power":"calculus-derivatives.html","sol-miller-taylor-log-one-minus-x":"calculus-derivatives.html","sol-miller-taylor-log-one-plus-x":"calculus-derivatives.html","sol-miller-taylor-log-product-exp":"calculus-derivatives.html","sol-miller-taylor-log-scaled":"calculus-derivatives.html","sol-miller-taylor-normal-density":"calculus-derivatives.html","sol-miller-taylor-poly-nonzero":"calculus-derivatives.html","sol-miller-taylor-poly-zero":"calculus-derivatives.html","sol-miller-taylor-product-cos-log":"calculus-derivatives.html","sol-miller-taylor-sqrt":"calculus-derivatives.html","sol-miller-taylor-x-log-x":"calculus-derivatives.html","step-code":"calculus-integration.html","substitution-leading-to-a-natural-logarithm":"calculus-integration.html","substitution-with-a-polynomial-power":"calculus-integration.html","substitution-with-a-trigonometric-integrand":"calculus-integration.html","switching-order-of-integration-on-a-non-rectangular-region":"calculus-double-integrals.html","tangent-line":"calculus-derivatives.html","tangent-line-approximation":"calculus-derivatives.html","taylor-expansion-of-a-fractional-power":"calculus-derivatives.html","taylor-expansion-of-a-polynomial-at-a-nonzero-point":"calculus-derivatives.html","taylor-expansion-of-a-scaled-cosine":"calculus-derivatives.html","taylor-expansion-of-the-normal-density":"calculus-derivatives.html","taylor-expansion-of-the-square-root":"calculus-derivatives.html","taylor-expansion-of-x-log-x":"calculus-derivatives.html","taylor-polynomial-and-taylor-series":"calculus-derivatives.html","taylor-polynomial-of-a-polynomial-at-the-origin":"calculus-derivatives.html","taylor-series-of-a-composite-exponential":"calculus-derivatives.html","taylor-series-of-a-power-of-a-function":"calculus-derivatives.html","taylor-series-of-a-product-of-known-expansions":"calculus-derivatives.html","taylor-series-of-log1---xex":"calculus-derivatives.html","taylor-series-of-log1-2x":"calculus-derivatives.html","taylor-series-of-the-cosine-function":"calculus-derivatives.html","taylor-series-of-the-exponential-function":"calculus-derivatives.html","taylor-series-of-the-sine-function":"calculus-derivatives.html","the-accumulation-function-of-a-constant":"calculus-integration.html","the-derivative-of-x2":"calculus-derivatives.html","the-difference-quotient-of-x2-at-1":"calculus-derivatives.html","the-double-integral-of-1-is-an-area":"calculus-double-integrals.html","the-flat-points-of-a-cubic-and-a-critical-point-that-is-not-flat":"calculus-derivatives.html","the-limit-of-3x-1-at-2":"calculus-derivatives.html","the-linear-approximation-is-affine":"calculus-derivatives.html","the-mesh-of-a-partition-of-lbrack-0-1rbrack":"calculus-integration.html","the-second-derivative-of-x3":"calculus-derivatives.html","the-tangent-line-to-x2-at-1":"calculus-derivatives.html","thm-chain-rule":"calculus-derivatives.html","thm-cont-implies-int":"calculus-integration.html","thm-deriv-const":"calculus-derivatives.html","thm-deriv-const-factor":"calculus-derivatives.html","thm-deriv-cos":"calculus-derivatives.html","thm-deriv-exp":"calculus-derivatives.html","thm-deriv-log":"calculus-derivatives.html","thm-deriv-polynomial":"calculus-derivatives.html","thm-deriv-sin":"calculus-derivatives.html","thm-diff-implies-cont":"calculus-integration.html","thm-flat-point-critical":"calculus-derivatives.html","thm-ftc":"calculus-integration.html","thm-fubini":"calculus-double-integrals.html","thm-fubini-tonelli":"calculus-double-integrals.html","thm-integral-rules":"calculus-integration.html","thm-product-rule":"calculus-derivatives.html","thm-quotient-rule":"calculus-derivatives.html","thm-riemann-general":"calculus-integration.html","when-conditions-fail-a-counterexample":"calculus-double-integrals.html","when-neither-fubinitonelli-condition-is-satisfied":"calculus-double-integrals.html"};
+  function follow() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    if (id && !document.getElementById(id) && moved[id]) {
+      location.replace(moved[id] + location.hash);
+    }
+  }
+  follow();
+  window.addEventListener('hashchange', follow);
+})();
+</script></section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><!--
+Page-navigation helpers for the HTML format, included after the body of every
+page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
+
+1. Navbar highlighting.
+Quarto marks as active the first top-level navbar link whose target also
+appears in the sidebar. Every navbar link is in the sidebar, so "Notation"
+would be highlighted on every page. The script below instead highlights the navbar
+link (or the dropdown holding the link) for the current page.
+
+2. Floating previous/next arrows in the page margins.
+Quarto has no built-in option for these, so this script copies the
+previous/next links that `page-navigation: true` puts at the foot of each
+page into two fixed-position tabs. The links follow the sidebar order.
+Each tab sits in empty space so that it never covers, or takes clicks from,
+the text, the sidebar, or the table of contents:
+
+- previous: in the gutter between the docked sidebar and the page text;
+- next: in the right margin when the window is wide enough, otherwise in the
+  gutter between the page text and the table of contents.
+
+Both are hidden below Bootstrap's large breakpoint, where the sidebar
+collapses and there is no gutter to put them in.
+--><style>
+.page-nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Narrow enough to fit the ~25px gutters beside the page text; px, not
+     rem, because the theme's rem is about 17px. */
+  width: 20px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  /* Muted but fully opaque when idle: opacity would also fade the border and
+     icon below the 3:1 contrast that controls need (WCAG 1.4.11). */
+  color: var(--bs-secondary-color, var(--bs-body-color));
+  background-color: var(--bs-body-bg);
+  /* currentColor, because darkly does not redefine --bs-border-color. */
+  border: 1px solid currentColor;
+  transition: color 0.15s ease-in-out;
+}
+.page-nav-arrow:hover,
+.page-nav-arrow:focus-visible {
+  color: var(--bs-link-color);
+}
+@media (max-width: 991.98px) {
+  .page-nav-arrow { display: none; }
+}
+@media print {
+  .page-nav-arrow { display: none; }
+}
+</style>
+<script>
+// This file is included at the end of <body>, so the navbar already exists.
+// Run straight away rather than on DOMContentLoaded, so that the wrong
+// highlight is never painted and then faded out by Bootstrap's transition.
+(function () {
+  // GitHub Pages serves /x, /x.html, / and /index.html, so compare paths
+  // without the "index.html" or ".html" ending.
+  // Links to other sites (e.g. a GitHub icon) never match the current page.
+  const norm = function (u) {
+    const url = new URL(u, location.href);
+    if (url.origin !== location.origin) return null;
+    return url.pathname
+      .replace(/index\.html$/, "")
+      .replace(/\.html$/, "");
+  };
+  document.querySelectorAll("#quarto-header .navbar-nav > .nav-item").forEach(
+    function (item) {
+      const toggle = item.querySelector(":scope > a.nav-link");
+      if (!toggle) return;
+      const targets = [toggle, ...item.querySelectorAll("a.dropdown-item")];
+      const match = targets.find(function (a) {
+        return a.getAttribute("href") && !a.classList.contains("dropdown-toggle") &&
+          norm(a.href) === norm(location.href);
+      });
+      // The top-level item is highlighted, but aria-current goes on the link
+      // for this page itself, not on a dropdown toggle that only holds it.
+      toggle.classList.toggle("active", Boolean(match));
+      targets.forEach(function (a) {
+        if (a === match) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+    }
+  );
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav.page-navigation");
+  if (!nav) return;
+
+  const make = function (dir, icon) {
+    const link = nav.querySelector(".nav-page-" + dir + " a.pagination-link");
+    if (!link) return null;
+    const title = link.querySelector(".nav-page-text")?.textContent.trim() || dir;
+    const arrow = document.createElement("a");
+    arrow.href = link.getAttribute("href");
+    arrow.className = "page-nav-arrow page-nav-arrow-" + dir;
+    arrow.title = (dir === "previous" ? "Previous: " : "Next: ") + title;
+    arrow.setAttribute("aria-label", arrow.title);
+    arrow.innerHTML = '<i class="bi ' + icon + '" aria-hidden="true"></i>';
+    document.body.appendChild(arrow);
+    return arrow;
+  };
+  const prev = make("previous", "bi-chevron-left");
+  const next = make("next", "bi-chevron-right");
+
+  const box = function (selector) {
+    const el = document.querySelector(selector);
+    if (!el || el.offsetWidth === 0) return null;
+    return el.getBoundingClientRect();
+  };
+  // Left edge that centres an arrow between x = from and x = to.
+  const centre = function (arrow, from, to) {
+    return (from + to - arrow.offsetWidth) / 2 + "px";
+  };
+
+  function place() {
+    const main = box("main.content");
+    if (!main) return;
+    if (prev) {
+      const sidebar = box("#quarto-sidebar");
+      prev.style.left = centre(prev, sidebar ? sidebar.right : 0, main.left);
+    }
+    if (next) {
+      const margin = box("#quarto-margin-sidebar");
+      const viewport = document.documentElement.clientWidth;
+      if (!margin) {
+        next.style.left = centre(next, main.right, viewport);
+      } else if (viewport - margin.right >= next.offsetWidth + 16) {
+        next.style.left = centre(next, margin.right, viewport);
+      } else {
+        next.style.left = centre(next, main.right, margin.left);
+      }
+    }
+  }
+  place();
+  window.addEventListener("resize", place);
+});
+</script><script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIGYodykgPSB3XjIgLSA0dyArIDcgYW5kIGl0cyBkZXJpdmF0aXZlLCBmcm9tIHRoZSBmbGF0LXBvaW50IGV4ZXJjaXNlXG50YW5GID0gKHcpID0+IHcgKiB3IC0gNCAqIHcgKyA3XG50YW5EZiA9ICh3KSA9PiAyICogdyAtIDRcbnRhblByZWQgPSB0YW5GKHRhblcpICsgdGFuRXBzICogdGFuRGYodGFuVylcbnRhbkV4YWN0ID0gdGFuRih0YW5XICsgdGFuRXBzKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHRhblcgPSBJbnB1dHMucmFuZ2UoWy0xLCA0XSwge3ZhbHVlOiAxLCBzdGVwOiAwLjA1LCBsYWJlbDogXCJ3XCJ9KVxudmlld29mIHRhbkVwcyA9IElucHV0cy5yYW5nZShbMC4wMSwgMl0sIHt2YWx1ZTogMC41LCB0cmFuc2Zvcm06IE1hdGgubG9nLCBsYWJlbDogXCJzdGVwIFxcdTAzYjVcIiwgZm9ybWF0OiBkMy5mb3JtYXQoXCIuM35mXCIpfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1kYEF0IHcgPSAke3RhblcudG9GaXhlZCgyKX0sIGYodykgPSAke3RhbkYodGFuVykudG9GaXhlZCg0KX0gYW5kIGZcXHUyMDMyKHcpID0gJHt0YW5EZih0YW5XKS50b0ZpeGVkKDIpfS5cblxuQSBzdGVwIG9mIFxcdTAzYjUgPSAke3RhbkVwcy50b0ZpeGVkKDMpfTpcblxuLSBwcmVkaWN0ZWQgYnkgdGhlIHRhbmdlbnQgbGluZSwgZih3KSArIFxcdTAzYjUgZlxcdTIwMzIodykgPSAke3RhblByZWQudG9GaXhlZCg0KX07XG4tIGV4YWN0LCBmKHcgKyBcXHUwM2I1KSA9ICR7dGFuRXhhY3QudG9GaXhlZCg0KX07XG4tIGVycm9yICR7KHRhbkV4YWN0IC0gdGFuUHJlZCkudG9QcmVjaXNpb24oMyl9LCBhbmQgZXJyb3IgLyBcXHUwM2I1XFx1MDBiMiA9ICR7KCh0YW5FeGFjdCAtIHRhblByZWQpIC8gdGFuRXBzICoqIDIpLnRvRml4ZWQoMyl9LmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlBsb3QucGxvdCh7XG4gIGFyaWFMYWJlbDogJ1RoZSBwYXJhYm9sYSBmIG9mIHcsICcgK1xuICAgICd3aXRoIHRoZSB0YW5nZW50IGxpbmUgYXQgdGhlIGNob3NlbiB3LCAnICtcbiAgICAnYW5kIHR3byBwb2ludHMgYWJvdmUgdyBwbHVzIGVwc2lsb246ICcgK1xuICAgICdvbmUgb24gdGhlIHRhbmdlbnQgbGluZSAodGhlIHByZWRpY3Rpb24pIGFuZCBvbmUgb24gdGhlIGN1cnZlICh0aGUgZXhhY3QgdmFsdWUpLCAnICtcbiAgICAnam9pbmVkIGJ5IGEgcmVkIHNlZ21lbnQgc2hvd2luZyB0aGUgZXJyb3IuJyxcbiAgd2lkdGg6IDQ2MCwgaGVpZ2h0OiAzNDAsIGdyaWQ6IHRydWUsXG4gIHg6IHtkb21haW46IFstMS41LCA2LjVdLCBsYWJlbDogXCJ3XCJ9LFxuICB5OiB7ZG9tYWluOiBbMCwgMjBdLCBsYWJlbDogXCJmKHcpXCJ9LFxuICBtYXJrczogW1xuICAgIFBsb3QubGluZShkMy5yYW5nZSgtMS41LCA2LjUxLCAwLjA1KSwge3g6ICh3KSA9PiB3LCB5OiB0YW5GLCBzdHJva2U6IFwiIzU1NVwiLCBzdHJva2VXaWR0aDogMiwgY2xpcDogdHJ1ZX0pLFxuICAgIFBsb3QubGluZShbLTEuNSwgNi41XSwge3g6ICh3KSA9PiB3LCB5OiAodykgPT4gdGFuRih0YW5XKSArICh3IC0gdGFuVykgKiB0YW5EZih0YW5XKSxcbiAgICAgICAgICAgICAgICAgICAgICAgIHN0cm9rZTogXCIjMWY3N2I0XCIsIHN0cm9rZVdpZHRoOiAyLCBzdHJva2VEYXNoYXJyYXk6IFwiNiw0XCIsIGNsaXA6IHRydWV9KSxcbiAgICBQbG90LnJ1bGVYKFt0YW5XICsgdGFuRXBzXSwge3N0cm9rZTogXCIjYmJiXCIsIHN0cm9rZURhc2hhcnJheTogXCIyLDNcIn0pLFxuICAgIFBsb3QubGluayhbMF0sIHt4MTogdGFuVyArIHRhbkVwcywgeDI6IHRhblcgKyB0YW5FcHMsIHkxOiB0YW5QcmVkLCB5MjogdGFuRXhhY3QsXG4gICAgICAgICAgICAgICAgICAgIHN0cm9rZTogXCIjZDYyNzI4XCIsIHN0cm9rZVdpZHRoOiAzLCBjbGlwOiB0cnVlfSksXG4gICAgUGxvdC5kb3QoW1t0YW5XLCB0YW5GKHRhblcpXV0sIHt4OiAoZCkgPT4gZFswXSwgeTogKGQpID0+IGRbMV0sIHI6IDUsIGZpbGw6IFwiIzIyMlwifSksXG4gICAgUGxvdC5kb3QoW1t0YW5XICsgdGFuRXBzLCB0YW5QcmVkXV0sIHt4OiAoZCkgPT4gZFswXSwgeTogKGQpID0+IGRbMV0sIHI6IDQsIGZpbGw6IFwiIzFmNzdiNFwiLCBjbGlwOiB0cnVlfSksXG4gICAgUGxvdC5kb3QoW1t0YW5XICsgdGFuRXBzLCB0YW5FeGFjdF1dLCB7eDogKGQpID0+IGRbMF0sIHk6IChkKSA9PiBkWzFdLCByOiA0LCBmaWxsOiBcIiM1NTVcIiwgY2xpcDogdHJ1ZX0pXG4gIF1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3RhblcnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGFuRXBzJykifV19
+</script><script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mds\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./measures.html" class="pagination-link" aria-label="Measures">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Measures</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./calculus-derivatives.html" class="pagination-link" aria-label="Derivatives and Taylor Series">
+        <span class="nav-page-text">Derivatives and Taylor Series</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Calculus"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: calculus-handout.pdf</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: calculus.docx</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>The calculus notes are split across these pages:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Derivatives and Taylor Series</span><span class="co">](calculus-derivatives.qmd)</span>:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  limits and derivatives, derivative rules, tangent lines, linear approximation,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  critical points and optimization, and Taylor series.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Integrals and the Fundamental Theorem of Calculus</span><span class="co">](calculus-integration.qmd)</span>:</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  antiderivatives, regularity conditions,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  and the Fundamental Theorem of Calculus.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Double Integrals and Fubini's Theorem</span><span class="co">](calculus-double-integrals.qmd)</span>:</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  double integrals over rectangles and non-rectangular regions,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  and Fubini's and Tonelli's theorems.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>A link to a section, theorem or definition on this page from before the split</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>goes on to the page that now holds it.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>::: {.content-visible unless-format="html"}</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_calculus.qmd &gt;}}</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-additional-resources}</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@mosaiccalc</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@khuri2003advanced</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@calclifesaver</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@larsonCalc11e</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@problifesavercalc</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  The calculus review exercises and worked solutions across these pages and in <span class="co">[</span><span class="ot">Vector Calculus</span><span class="co">](vector-calculus.qmd#def-partial-derivative)</span> are adapted from this supplemental review chapter.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="ot">&lt;http://www.youtube.com/watch?v=xYzQL0TUtBA&gt;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="ot">&lt;http://www.youtube.com/watch?v=Ps2SBo_WjoE&gt;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@realanalysislifesaver (the rigorous foundations behind these results)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Essence of Calculus</span><span class="co">](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  is a 12-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops geometric and visual intuition for limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/calculus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/calculus.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+</body></html>
