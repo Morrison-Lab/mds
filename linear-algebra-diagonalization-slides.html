@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 22:14:55 (PDT)</p>
+  <p class="date">Last modified: 2026-10-10 10:38:55 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -341,7 +341,7 @@
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span>, the nullity is <span class="math inline">\(0\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span> (<a href="./linear-algebra-subspaces.html#thm-rank-nullity">Theorem&nbsp;17 in Subspaces and Rank</a>).</p>
+<p>so <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span>, the nullity is <span class="math inline">\(0\)</span>, and <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>).</p>
 <p><strong>Rank <span class="math inline">\(n\)</span> implies invertible.</strong> Every system <span class="math inline">\(\mathbf{A} \tilde{y} = \tilde{b}\)</span> has exactly one solution (<a href="./linear-algebra-projections.html#cor-solution-unique">Corollary&nbsp;1 in Projections and Linear Systems</a>, both parts, with <span class="math inline">\(m = n\)</span>). Let <span class="math inline">\(\tilde{y}_j\)</span> solve <span class="math inline">\(\mathbf{A} \tilde{y}_j = \tilde{e}_j\)</span> (<a href="./linear-algebra-vectors.html#def-indicator-vector">Definition&nbsp;12 in Vectors</a>), and let <span class="math inline">\(\mathbf{B}\)</span> have columns <span class="math inline">\(\tilde{y}_1, \ldots, \tilde{y}_n\)</span>. Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A} \mathbf{B}\)</span> is <span class="math inline">\(\mathbf{A} \tilde{y}_j = \tilde{e}_j\)</span> (1), so <span class="math inline">\(\mathbf{A} \mathbf{B} = \mathbf{I}_n\)</span>. For the other order,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -359,7 +359,7 @@
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p>so every column of <span class="math inline">\(\mathbf{B} \mathbf{A} - \mathbf{I}_n\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span> (1), and <span class="math inline">\(\mathbf{B} \mathbf{A} = \mathbf{I}_n\)</span>. So <span class="math inline">\(\mathbf{B}\)</span> satisfies <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>. The two conditions in the statement are equivalent by <a href="./linear-algebra-subspaces.html#thm-rank-nullity">Theorem&nbsp;17 in Subspaces and Rank</a>: the nullity is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span>, because a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>), and <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
+<p>so every column of <span class="math inline">\(\mathbf{B} \mathbf{A} - \mathbf{I}_n\)</span> is in <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span> (1), and <span class="math inline">\(\mathbf{B} \mathbf{A} = \mathbf{I}_n\)</span>. So <span class="math inline">\(\mathbf{B}\)</span> satisfies <a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>. The two conditions in the statement are equivalent by <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>: the nullity is <span class="math inline">\(0\)</span> exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span>, because a subspace of dimension <span class="math inline">\(0\)</span> has the empty list as a basis, whose span is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>), and <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(0\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -375,7 +375,7 @@
 <section class="slide level2">
 
 <div id="def-eigenspace" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Eigenspace and geometric multiplicity)</strong></span> Let <span class="math inline">\(\lambda\)</span> be an eigenvalue of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>). The <strong>eigenspace</strong> of <span class="math inline">\(\lambda\)</span> is <span class="math inline">\(\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>. It is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#thm-null-space-subspace">Theorem&nbsp;13 in Subspaces and Rank</a>), and its dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) is the <strong>geometric multiplicity</strong> of <span class="math inline">\(\lambda\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Eigenspace and geometric multiplicity)</strong></span> Let <span class="math inline">\(\lambda\)</span> be an eigenvalue of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>). The <strong>eigenspace</strong> of <span class="math inline">\(\lambda\)</span> is <span class="math inline">\(\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>. It is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-null-space-subspace">Theorem&nbsp;2 in Column Space, Null Space and Rank-Nullity</a>), and its dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) is the <strong>geometric multiplicity</strong> of <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -428,7 +428,7 @@
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span> exactly when <span class="math inline">\(\tilde{v} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>; the nonzero such <span class="math inline">\(\tilde{v}\)</span> are the eigenvectors for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\lambda\)</span> is an eigenvalue exactly when that null space contains a nonzero vector, which by <a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a> is exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular. With <span class="math inline">\(\lambda= 0\)</span>, <span class="math inline">\(\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}\)</span>. An eigenspace is a null space, so it is a subspace (<a href="./linear-algebra-subspaces.html#thm-null-space-subspace">Theorem&nbsp;13 in Subspaces and Rank</a>).</p>
+<p>so <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span> exactly when <span class="math inline">\(\tilde{v} \in \mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>; the nonzero such <span class="math inline">\(\tilde{v}\)</span> are the eigenvectors for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\lambda\)</span> is an eigenvalue exactly when that null space contains a nonzero vector, which by <a href="#/thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a> is exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular. With <span class="math inline">\(\lambda= 0\)</span>, <span class="math inline">\(\mathbf{A} - 0\,\mathbf{I}_p = \mathbf{A}\)</span>. An eigenspace is a null space, so it is a subspace (<a href="./linear-algebra-rank-nullity.html#thm-null-space-subspace">Theorem&nbsp;2 in Column Space, Null Space and Rank-Nullity</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1297,7 +1297,7 @@ x_{k+i, j} &amp;= b_{ji} \\
 &amp;&amp; \text{(the blocks of } \mathbf{X} \tilde{v} \text{)}
 \\
 &amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{)}
 \\
 &amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}
 &amp;&amp; \text{(} {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} = {\mathopen{}\left({\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u}\right)\mathclose{}}^{\top} \text{, which equals } {\tilde{u}}^{\top} \mathbf{B} \tilde{w} \text{; } 1 \times 1 \text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)}
@@ -1317,7 +1317,7 @@ x_{k+i, j} &amp;= b_{ji} \\
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)}
 \\
 &amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{u} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d}
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{, both slots)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, both slots)}
 \\
 &amp;= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{u}}^{\top} \mathbf{A} \tilde{d} + {\tilde{d}}^{\top} \mathbf{A} \tilde{d}
 &amp;&amp; \text{(as in the expansion, with } {\mathbf{A}}^{\top} = \mathbf{A} \text{)}

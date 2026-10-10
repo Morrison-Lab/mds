@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 22:14:55 (PDT)</p>
+  <p class="date">Last modified: 2026-10-10 10:38:55 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
@@ -379,7 +379,7 @@
 <li>
 <strong>definiteness</strong>: a sum of squares is <span class="math inline">\(0\)</span> exactly when every term is <span class="math inline">\(0\)</span>, so <span class="math inline">\(\tilde{x}\cdot \tilde{x}= 0\)</span> exactly when every <span class="math inline">\(x_i = 0\)</span>, that is, when <span class="math inline">\(\tilde{x}= \tilde{0}_{p \times 1}\)</span>;</li>
 <li>
-<strong>linearity in the first slot</strong>: this property is the first-slot half of <a href="./linear-algebra-subspaces.html#thm-dot-linear">Theorem&nbsp;28 in Subspaces and Rank</a>;</li>
+<strong>linearity in the first slot</strong>: this property is the first-slot half of <a href="./linear-algebra-direct-sums.html#thm-dot-linear">Theorem&nbsp;5 in Direct Sums and Orthogonal Complements</a>;</li>
 <li>
 <strong>symmetry</strong>: this property is <a href="./linear-algebra-vectors.html#thm-lincom-symmetric">Theorem&nbsp;1 in Vectors</a>.</li>
 </ul>
@@ -643,10 +643,10 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(square both sides of }\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{)}
 \\
 &amp;= \tilde{x} \cdot (\tilde{x} + \tilde{y}) + \tilde{y} \cdot (\tilde{x} + \tilde{y})
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, first slot, } a \text{ and } b \text{ both equal to } 1 \text{)}
 \\
 &amp;= \tilde{x} \cdot \tilde{x} + \tilde{x} \cdot \tilde{y} + \tilde{y} \cdot \tilde{x} + \tilde{y} \cdot \tilde{y}
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{, second slot, } a \text{ and } b \text{ both equal to } 1 \text{, twice)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, second slot, } a \text{ and } b \text{ both equal to } 1 \text{, twice)}
 \\
 &amp;= \tilde{x} \cdot \tilde{x} + \tilde{x} \cdot \tilde{y} + \tilde{x} \cdot \tilde{y} + \tilde{y} \cdot \tilde{y}
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{)}
@@ -716,7 +716,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(}\href{#thm-norm-sum-square}{\text{Theorem~2}}\text{)}
 \\
 &amp;= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\,(-t)\,(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert(-t)\,\tilde{y}\right\rVert\mathclose{}^2
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{, special case } b = 0 \text{)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{)}
 \\
 &amp;= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\,(-t)\,(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left(\mathopen{}\left|-t\right|\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}\right)\mathclose{}^2
 &amp;&amp; \text{(}\href{#thm-norm-properties}{\text{Theorem~1}}\text{, part 2)}
@@ -775,7 +775,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(substitute } \tilde{x} = s\,\tilde{y} \text{)}
 \\
 &amp;= \mathopen{}\left|s\,(\tilde{y} \cdot \tilde{y})\right|\mathclose{}
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{, special case } b = 0 \text{, first slot)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{, first slot)}
 \\
 &amp;= \mathopen{}\left|s\right|\mathclose{}\,\mathopen{}\left|\tilde{y} \cdot \tilde{y}\right|\mathclose{}
 &amp;&amp; \text{(} \mathopen{}\left|ab\right|\mathclose{} = \mathopen{}\left|a\right|\mathclose{}\,\mathopen{}\left|b\right|\mathclose{} \text{)}
@@ -1408,7 +1408,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \begin{aligned}
 \tilde{q}_l \cdot \tilde{q}_i
 &amp;= \frac{1}{\mathopen{}\left\lVert\tilde{\tilde{q}}_i\right\rVert\mathclose{}}\,(\tilde{q}_l \cdot \tilde{\tilde{q}}_i)
-&amp;&amp; \text{(}\href{linear-algebra-subspaces.qmd#thm-dot-linear}{\text{Theorem~28 in Subspaces and Rank}}\text{, special case } b = 0 \text{)}
+&amp;&amp; \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{, special case } b = 0 \text{)}
 \\
 &amp;= 0,
 &amp;&amp; \text{(} \tilde{\tilde{q}}_i \text{ is orthogonal to } \tilde{q}_l \text{)}

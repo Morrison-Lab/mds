@@ -4,13 +4,15 @@ Code
 
 Published
 
-Last modified: 2026-10-09 22:14:55 (PDT)
+Last modified: 2026-10-10 10:38:55 (PDT)
 
 The linear algebra notes are split across these pages:
 
 - [Vectors](linear-algebra-vectors.llms.md): column vectors, transposes, linear combinations, special vectors, and orthogonality.
 - [Matrices](linear-algebra-matrices.llms.md): matrix arithmetic, matrix-vector products, linear and affine maps, and hyperplanes.
-- [Subspaces and Rank](linear-algebra-subspaces.llms.md): rank, subspaces, bases, column and null spaces, rank-nullity, direct sums, orthogonal complements, and the fundamental theorem of linear algebra.
+- [Subspaces and Rank](linear-algebra-subspaces.llms.md): rank, subspaces, and bases.
+- [Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md): column and null spaces, the rank-nullity theorem, and rank factorization.
+- [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md): sums and direct sums, orthogonal complements, and the fundamental theorem of linear algebra.
 - [Inner Products and Orthogonality](linear-algebra-inner-products.llms.md): inner products, the Cauchy-Schwarz and triangle inequalities, norms, angles, Gram-Schmidt, and outer products.
 - [Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md): symmetric, diagonal, inverse, projection and orthogonal matrices, quadratic forms, the trace, eigendecompositions and the SVD, definite matrices, and determinants.
 - [Projections and Linear Systems](linear-algebra-projections.llms.md): design matrices, orthogonal projection, generalized inverses, and solving linear systems and least squares.
