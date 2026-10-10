@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Direct Sums and Orthogonal Complements – Math for Data Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./linear-algebra-inner-products.html" rel="next">
+<link href="./linear-algebra-rank-nullity.html" rel="prev">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<script>
+// Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
+// handles light/dark and remembers it; the two tinted palettes are a
+// data-palette attribute on <html>. The choice is kept under "mln-theme".
+// Off-white is the default for a first visit.
+(function () {
+  var KEY = "mln-theme";
+  var OPTIONS = [["light", "Light"], ["offwhite", "Off-white"], ["parchment", "Parchment"], ["dark", "Dark"]];
+  function stored() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function isDark() { return document.body.classList.contains("quarto-dark"); }
+  function apply(choice, remember) {
+    if (choice === "offwhite" || choice === "parchment") {
+      document.documentElement.setAttribute("data-palette", choice);
+    } else {
+      document.documentElement.removeAttribute("data-palette");
+    }
+    if ((choice === "dark") !== isDark() && window.quartoToggleColorScheme) {
+      window.quartoToggleColorScheme();
+    }
+    if (remember) { try { localStorage.setItem(KEY, choice); } catch (e) {} }
+    mark(choice);
+  }
+  function mark(choice) {
+    document.querySelectorAll(".theme-picker [data-theme-choice]").forEach(function (b) {
+      var on = b.getAttribute("data-theme-choice") === choice;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-checked", on ? "true" : "false");
+    });
+  }
+  // Set the palette before first paint to avoid a flash.
+  var early = stored();
+  if (early !== "light" && early !== "dark" && early !== "parchment") early = "offwhite";
+  if (early === "offwhite" || early === "parchment") {
+    document.documentElement.setAttribute("data-palette", early);
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggles = document.querySelectorAll(".quarto-color-scheme-toggle");
+    if (!toggles.length) return;
+    var tools = toggles[0];
+    var wrap = document.createElement("div");
+    wrap.className = "theme-picker dropdown";
+    wrap.innerHTML =
+      '<button type="button" class="nav-link dropdown-toggle px-1 border-0 bg-transparent" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Colour theme"><i class="bi bi-palette"></i></button>' +
+      '<ul class="dropdown-menu dropdown-menu-end" role="menu">' +
+      OPTIONS.map(function (o) {
+        return '<li role="none"><button type="button" class="dropdown-item" role="menuitemradio" aria-checked="false" data-theme-choice="' + o[0] + '">' + o[1] + "</button></li>";
+      }).join("") + "</ul>";
+    tools.parentNode.insertBefore(wrap, tools);
+    toggles.forEach(function (t) { t.style.display = "none"; });
+    wrap.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-theme-choice]");
+      if (b) apply(b.getAttribute("data-theme-choice"), true);
+    });
+    var choice = stored();
+    if (OPTIONS.every(function (o) { return o[0] !== choice; })) {
+      choice = isDark() ? "dark" : "offwhite";
+    }
+    apply(choice, false);
+  });
+})();
+</script>
+<style>
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Math for Data Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./notation.html" aria-current="page"> 
+<span class="menu-text">Notation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./sets-functions.html"> 
+<span class="menu-text">Sets and Functions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./algebra.html"> 
+<span class="menu-text">Algebra</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./measures.html"> 
+<span class="menu-text">Measures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./calculus.html"> 
+<span class="menu-text">Calculus</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-linear-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Linear Algebra</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">    
+        <li>
+    <a class="dropdown-item" href="./linear-algebra.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-vectors.html">
+ <span class="dropdown-text">Vectors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-matrices.html">
+ <span class="dropdown-text">Matrices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-subspaces.html">
+ <span class="dropdown-text">Subspaces and Rank</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-rank-nullity.html">
+ <span class="dropdown-text">Column Space, Null Space and Rank-Nullity</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-direct-sums.html">
+ <span class="dropdown-text">Direct Sums and Orthogonal Complements</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-inner-products.html">
+ <span class="dropdown-text">Inner Products and Orthogonality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-special-matrices.html">
+ <span class="dropdown-text">Special Matrices and Decompositions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-projections.html">
+ <span class="dropdown-text">Projections and Linear Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-diagonalization.html">
+ <span class="dropdown-text">Diagonalization and Cholesky</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-complex.html">
+ <span class="dropdown-text">Complex Vectors and Matrices</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./vector-calculus.html"> 
+<span class="menu-text">Vector Calculus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./optimization.html"> 
+<span class="menu-text">Optimization</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proof-writing.html"> 
+<span class="menu-text">Proof Writing</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Morrison-Lab/mds"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linear-algebra.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="./linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sets-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sets and Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algebra</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Algebra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-subspaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Subspaces and Rank</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-rank-nullity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Column Space, Null Space and Rank-Nullity</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-direct-sums.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Direct Sums and Orthogonal Complements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-inner-products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inner Products and Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-special-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Special Matrices and Decompositions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-projections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projections and Linear Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-diagonalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagonalization and Cholesky</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-complex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complex Vectors and Matrices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vector Calculus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./optimization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./proof-writing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proof Writing</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-direct-sums" id="toc-sec-direct-sums" class="nav-link active" data-scroll-target="#sec-direct-sums"><span class="header-section-number">1</span> Sums and direct sums</a></li>
+  <li><a href="#sec-orthogonal-complements" id="toc-sec-orthogonal-complements" class="nav-link" data-scroll-target="#sec-orthogonal-complements"><span class="header-section-number">2</span> Orthogonal complements</a></li>
+  <li><a href="#sec-fundamental-theorem" id="toc-sec-fundamental-theorem" class="nav-link" data-scroll-target="#sec-fundamental-theorem"><span class="header-section-number">3</span> The fundamental theorem of linear algebra</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/linear-algebra-direct-sums.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/linear-algebra-direct-sums.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="linear-algebra-direct-sums-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="linear-algebra-direct-sums-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="linear-algebra-direct-sums.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
+<div class="preview-changes-banner" style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 12px; margin: 16px 0;">
+    <p style="margin: 0;">
+        <strong>📋 Changes in this PR:</strong> <a href="algebra.html">Algebra</a>, <a href="calculus.html">Calculus</a>, <a href="index.html">Math for Data Science</a>, <a href="linear-algebra-complex.html">Complex Vectors and Matrices</a>, <a href="linear-algebra-diagonalization.html">Diagonalization and Cholesky</a>, <a href="linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a>, <a href="linear-algebra-inner-products.html">Inner Products and Orthogonality</a>, <a href="linear-algebra-matrices.html">Matrices</a>, <a href="linear-algebra-projections.html">Projections and Linear Systems</a>, <a href="linear-algebra-rank-nullity.html">Column Space, Null Space and Rank-Nullity</a>, <a href="linear-algebra-special-matrices.html">Special Matrices and Decompositions</a>, <a href="linear-algebra-subspaces.html">Subspaces and Rank</a>, <a href="linear-algebra-vectors.html">Vectors</a>, <a href="linear-algebra.html">Linear Algebra</a>, <a href="measures.html">Measures</a>, <a href="notation.html">Notation</a>, <a href="optimization.html">Optimization</a>, <a href="proof-writing.html">Proof Writing</a>, <a href="sets-functions.html">Sets and Functions</a>, <a href="vector-calculus.html">Vector Calculus</a>
+        <br>
+        <strong>💡 Tip:</strong> If change highlighting is glitchy, add the <code>no-preview-highlights</code> label to this PR to disable it.
+    </p>
+</div>
+
+
+<div class="preview-page-formats-banner" style="background-color: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 4px; padding: 12px; margin: 16px 0;">
+    <p style="margin: 0;">
+        <strong>📋 Other Formats:</strong> <a href="linear-algebra-direct-sums-tracked-changes.docx" download>📝 MS Word (tracked changes)</a> | <a href="linear-algebra-direct-sums-slides.html">🎞️ Slides</a>
+    </p>
+</div>
+
+<!-- gha-preview-page-banner:start -->
+<div class="preview-page-changes-banner" style="background: #f8f9fa; border-left: 4px solid #0d6efd; padding: 10px 15px; margin: 15px 0; border-radius: 4px;">
+    <p style="margin: 0;">
+        <strong>📝 Preview:</strong> This is a new page added in this pull request.
+    </p>
+</div>
+<!-- gha-preview-page-banner:end -->
+
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./linear-algebra.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="./linear-algebra-direct-sums.html">Direct Sums and Orthogonal Complements</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Direct Sums and Orthogonal Complements</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Last modified: 2026-10-10 00:44:20 (PDT)</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-direct-sums" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-direct-sums"><span class="header-section-number">1</span> Sums and direct sums</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Source
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This section, <a href="#sec-orthogonal-complements" class="quarto-xref">Section&nbsp;2</a> and <a href="#sec-fundamental-theorem" class="quarto-xref">Section&nbsp;3</a> are adapted from <span class="citation" data-cites="zhou2024orthproj">Zhou (<a href="#ref-zhou2024orthproj" role="doc-biblioref">2024</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source proves that a subspace and its orthogonal complement together make up <span class="math inline">\(\mathbb{R}^p\)</span> by extending an orthonormal basis; the proof here uses the rank-nullity theorem (<a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>) instead.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-subspace-sum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Sum of subspaces)</strong></span> The <strong>sum</strong> of two subspaces <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>) is the set of all sums of a vector from <span class="math inline">\(\mathcal{S}_1\)</span> and a vector from <span class="math inline">\(\mathcal{S}_2\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{S}_1 + \mathcal{S}_2
+\stackrel{\text{def}}{=}
+\mathopen{}\left\{\tilde{x}_1 + \tilde{x}_2 : \tilde{x}_1 \in \mathcal{S}_1,\ \tilde{x}_2 \in \mathcal{S}_2\right\}\mathclose{}.
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-subspace-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Two lines sum to a plane)</strong></span> Let <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span>, two lines in <span class="math inline">\(\mathbb{R}^3\)</span>. A vector of <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> has the form <span class="math inline">\(a\,(1, 0, 0) + b\,(0, 1, 0) = (a, b, 0)\)</span>, and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> can be any numbers, so <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-sum-not-union" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (The sum is not the union)</strong></span> For the two lines in <a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;1</a>, the union <span class="math inline">\(\mathcal{S}_1 \cup \mathcal{S}_2\)</span> contains <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((0, 1, 0)\)</span> but not their sum <span class="math inline">\((1, 1, 0)\)</span>: every multiple of <span class="math inline">\((1, 0, 0)\)</span> has second entry <span class="math inline">\(0\)</span>, and every multiple of <span class="math inline">\((0, 1, 0)\)</span> has first entry <span class="math inline">\(0\)</span>. So the union is not closed under addition and is not a subspace, while the sum, the whole plane <span class="math inline">\(z = 0\)</span>, is.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-sum-intersection-subspace" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Sums and intersections of subspaces are subspaces)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>), then <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (<a href="#def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Both <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> contain <span class="math inline">\(\tilde{0}\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a>).</p>
+<p><strong>The sum.</strong> It is not empty: it contains <span class="math inline">\(\tilde{0}+ \tilde{0}= \tilde{0}\)</span>. Take two of its vectors, <span class="math inline">\(\tilde{u} = \tilde{u}_1 + \tilde{u}_2\)</span> and <span class="math inline">\(\tilde{w} = \tilde{w}_1 + \tilde{w}_2\)</span>, with <span class="math inline">\(\tilde{u}_1, \tilde{w}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{u}_2, \tilde{w}_2 \in \mathcal{S}_2\)</span>, and a number <span class="math inline">\(c\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{u} + \tilde{w}
+&amp;= (\tilde{u}_1 + \tilde{u}_2) + (\tilde{w}_1 + \tilde{w}_2)
+&amp;&amp; \text{(substitute)}
+\\
+&amp;= (\tilde{u}_1 + \tilde{w}_1) + (\tilde{u}_2 + \tilde{w}_2),
+&amp;&amp; \text{(regroup; vector addition is entrywise)}
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\tilde{u}_1 + \tilde{w}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{u}_2 + \tilde{w}_2 \in \mathcal{S}_2\)</span>, because each subspace is closed under addition. Likewise</p>
+<p><span class="math display">\[
+\begin{aligned}
+c\,\tilde{u}
+&amp;= c\,(\tilde{u}_1 + \tilde{u}_2)
+&amp;&amp; \text{(substitute)}
+\\
+&amp;= c\,\tilde{u}_1 + c\,\tilde{u}_2,
+&amp;&amp; \text{(distribute } c \text{ entrywise)}
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(c\,\tilde{u}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(c\,\tilde{u}_2 \in \mathcal{S}_2\)</span>, because each subspace is closed under scalar multiplication. So <span class="math inline">\(\tilde{u} + \tilde{w}\)</span> and <span class="math inline">\(c\,\tilde{u}\)</span> are in <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span>.</p>
+<p><strong>The intersection.</strong> It is not empty: it contains <span class="math inline">\(\tilde{0}\)</span>. If <span class="math inline">\(\tilde{u}\)</span> and <span class="math inline">\(\tilde{w}\)</span> are in both <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span>, then <span class="math inline">\(\tilde{u} + \tilde{w}\)</span> and <span class="math inline">\(c\,\tilde{u}\)</span> are in <span class="math inline">\(\mathcal{S}_1\)</span>, because <span class="math inline">\(\mathcal{S}_1\)</span> is a subspace, and in <span class="math inline">\(\mathcal{S}_2\)</span> for the same reason, so they are in <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-sum-intersection-subspace" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Two planes in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, and <span class="math inline">\(\mathcal{S}_2 = \mathopen{}\left\{(0, b, c) : b, c \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(x = 0\)</span>.</p>
+<ul>
+<li><strong>Intersection:</strong> a vector in both has third entry <span class="math inline">\(0\)</span> and first entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{(0, b, 0) : b \in \mathbb{R}\right\}\mathclose{}\)</span>, the <span class="math inline">\(y\)</span>-axis, which is a line through the origin.</li>
+<li><strong>Sum:</strong> <span class="math inline">\((a, b, 0) + (0, b', c) = (a, b + b', c)\)</span>, and any <span class="math inline">\((x, y, z)\)</span> arises this way, with <span class="math inline">\(a = x\)</span>, <span class="math inline">\(b = y\)</span>, <span class="math inline">\(b' = 0\)</span> and <span class="math inline">\(c = z\)</span>. So <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-dim-sum" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (The dimension of a sum of subspaces)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, then</p>
+<p><span class="math display">\[
+\dim(\mathcal{S}_1 + \mathcal{S}_2)
+= \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2) - \dim(\mathcal{S}_1 \cap \mathcal{S}_2).
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>All three sets in the formula are subspaces (<a href="#thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a>), so each has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>). Let <span class="math inline">\(k = \dim(\mathcal{S}_1 \cap \mathcal{S}_2)\)</span>, <span class="math inline">\(d_1 = \dim(\mathcal{S}_1)\)</span> and <span class="math inline">\(d_2 = \dim(\mathcal{S}_2)\)</span>.</p>
+<p><strong>Build a list.</strong> Choose a basis <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k\)</span> of <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>). These vectors are linearly independent and lie in <span class="math inline">\(\mathcal{S}_1\)</span>, so <a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a> extends them to a basis <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k, \tilde{x}_1, \ldots, \tilde{x}_{d_1 - k}\)</span> of <span class="math inline">\(\mathcal{S}_1\)</span>, which has <span class="math inline">\(d_1\)</span> vectors (<a href="./linear-algebra-subspaces.html#thm-basis-size">Theorem&nbsp;7 in Subspaces and Rank</a>). In the same way, extend them to a basis <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k, \tilde{y}_1, \ldots, \tilde{y}_{d_2 - k}\)</span> of <span class="math inline">\(\mathcal{S}_2\)</span>. We show that the <span class="math inline">\(\tilde{z}\)</span>’s, <span class="math inline">\(\tilde{x}\)</span>’s and <span class="math inline">\(\tilde{y}\)</span>’s together, <span class="math inline">\(k + (d_1 - k) + (d_2 - k) = d_1 + d_2 - k\)</span> vectors, are a basis of <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>).</p>
+<p><strong>They span <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span>.</strong> Any <span class="math inline">\(\tilde{v} \in \mathcal{S}_1 + \mathcal{S}_2\)</span> is <span class="math inline">\(\tilde{v}_1 + \tilde{v}_2\)</span> with <span class="math inline">\(\tilde{v}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{v}_2 \in \mathcal{S}_2\)</span>. <span class="math inline">\(\tilde{v}_1\)</span> is a linear combination of the <span class="math inline">\(\tilde{z}\)</span>’s and <span class="math inline">\(\tilde{x}\)</span>’s, and <span class="math inline">\(\tilde{v}_2\)</span> is a linear combination of the <span class="math inline">\(\tilde{z}\)</span>’s and <span class="math inline">\(\tilde{y}\)</span>’s, so their sum is a linear combination of all three groups. Conversely, each vector in the list is in <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (for example, <span class="math inline">\(\tilde{x}_1 = \tilde{x}_1 + \tilde{0}\)</span>), and <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> is a subspace, so it contains every linear combination of them.</p>
+<p><strong>They are linearly independent.</strong> Suppose</p>
+<p><span class="math display">\[
+\sum_{i=1}^{k} a_i \tilde{z}_i
++ \sum_{j=1}^{d_1 - k} b_j \tilde{x}_j
++ \sum_{l=1}^{d_2 - k} c_l \tilde{y}_l
+= \tilde{0}.
+\]</span></p>
+<p>Let <span class="math inline">\(\tilde{w} \stackrel{\text{def}}{=}\sum_{l} c_l \tilde{y}_l\)</span>. Then <span class="math inline">\(\tilde{w} \in \mathcal{S}_2\)</span>, because it is a linear combination of vectors of <span class="math inline">\(\mathcal{S}_2\)</span>. Subtracting <span class="math inline">\(\sum_{i} a_i \tilde{z}_i + \sum_{j} b_j \tilde{x}_j\)</span> from both sides of the supposed equation gives</p>
+<p><span class="math display">\[
+\tilde{w} = \sum_{i=1}^{k} (-a_i)\,\tilde{z}_i + \sum_{j=1}^{d_1 - k} (-b_j)\,\tilde{x}_j,
+\]</span></p>
+<p>a linear combination of vectors of <span class="math inline">\(\mathcal{S}_1\)</span>, so <span class="math inline">\(\tilde{w} \in \mathcal{S}_1\)</span> too. So <span class="math inline">\(\tilde{w} \in \mathcal{S}_1 \cap \mathcal{S}_2\)</span>, and <span class="math inline">\(\tilde{w} = \sum_{i} e_i \tilde{z}_i\)</span> for some numbers <span class="math inline">\(e_i\)</span>, since the <span class="math inline">\(\tilde{z}\)</span>’s span the intersection. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{0}
+&amp;= \tilde{w} - \tilde{w}
+&amp;&amp; \text{(a vector minus itself)}
+\\
+&amp;= \sum_{i=1}^{k} e_i \tilde{z}_i - \sum_{l=1}^{d_2 - k} c_l \tilde{y}_l
+&amp;&amp; \text{(substitute the two expressions for } \tilde{w} \text{)}
+\\
+&amp;= \sum_{i=1}^{k} e_i \tilde{z}_i + \sum_{l=1}^{d_2 - k} (-c_l)\,\tilde{y}_l,
+&amp;&amp; \text{(write each subtraction as adding } -1 \text{ times)}
+\end{aligned}
+\]</span></p>
+<p>and because the <span class="math inline">\(\tilde{z}\)</span>’s and <span class="math inline">\(\tilde{y}\)</span>’s are a basis of <span class="math inline">\(\mathcal{S}_2\)</span>, every <span class="math inline">\(c_l = 0\)</span>. The supposed equation then reads <span class="math inline">\(\sum_{i} a_i \tilde{z}_i + \sum_{j} b_j \tilde{x}_j = \tilde{0}\)</span>, and because the <span class="math inline">\(\tilde{z}\)</span>’s and <span class="math inline">\(\tilde{x}\)</span>’s are a basis of <span class="math inline">\(\mathcal{S}_1\)</span>, every <span class="math inline">\(a_i\)</span> and <span class="math inline">\(b_j\)</span> is <span class="math inline">\(0\)</span>.</p>
+<p>So <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2) = d_1 + d_2 - k\)</span>. When some of the groups are empty (for example <span class="math inline">\(k = 0\)</span>, or <span class="math inline">\(\mathcal{S}_1 = \mathcal{S}_1 \cap \mathcal{S}_2\)</span>), the sums over them are <span class="math inline">\(\tilde{0}\)</span> and the argument goes through unchanged.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-dim-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Two planes in <span class="math inline">\(\mathbb{R}^3\)</span>, by dimension)</strong></span> For the planes <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(x = 0\)</span> in <a href="#exm-sum-intersection-subspace" class="quarto-xref">Example&nbsp;3</a>, each has dimension <span class="math inline">\(2\)</span>: the plane <span class="math inline">\(z = 0\)</span> has basis <span class="math inline">\((1, 0, 0), (0, 1, 0)\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>), and the plane <span class="math inline">\(x = 0\)</span> has basis <span class="math inline">\((0, 1, 0), (0, 0, 1)\)</span> by the same argument. Their intersection, the <span class="math inline">\(y\)</span>-axis <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span>, has dimension <span class="math inline">\(1\)</span>, because the single nonzero vector <span class="math inline">\((0, 1, 0)\)</span> is linearly independent (<span class="math inline">\(c\,(0, 1, 0) = (0, c, 0)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c = 0\)</span>) and so is a basis of it. <a href="#thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a> gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim(\mathcal{S}_1 + \mathcal{S}_2)
+&amp;= 2 + 2 - 1 \\
+&amp;= 3,
+\end{aligned}
+\]</span></p>
+<p>which agrees with <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3\)</span> (<a href="#exm-sum-intersection-subspace" class="quarto-xref">Example&nbsp;3</a>) and <span class="math inline">\(\dim(\mathbb{R}^3) = 3\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-cor no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="cor-dim-subadditive" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (The dimension of a sum is at most the sum of the dimensions)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, then</p>
+<p><span class="math display">\[
+\dim(\mathcal{S}_1 + \mathcal{S}_2) \le \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2),
+\]</span></p>
+<p>with equality exactly when <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a>, the two sides differ by <span class="math inline">\(\dim(\mathcal{S}_1 \cap \mathcal{S}_2) \ge 0\)</span>. That dimension is <span class="math inline">\(0\)</span> exactly when a basis of the intersection is the empty list, that is, when the intersection is the span of the empty list, <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-dim-subadditive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Equality and strict inequality)</strong></span> &nbsp;</p>
+<ul>
+<li><p>For the lines <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span> in <a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;1</a>, a common vector satisfies <span class="math inline">\(a\,(1, 0, 0) = b\,(0, 1, 0)\)</span>, so <span class="math inline">\((a, -b, 0) = \tilde{0}\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= b \\
+&amp;= 0.
+\end{aligned}
+\]</span></p>
+<p>The intersection is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, and indeed</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim(\mathcal{S}_1 + \mathcal{S}_2) &amp;= 2 \\
+&amp;= 1 + 1:
+\end{aligned}
+\]</span></p>
+<p>the sum is the plane <span class="math inline">\(z = 0\)</span> (<a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;1</a>), which has dimension <span class="math inline">\(2\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>), and each line has dimension <span class="math inline">\(1\)</span>, with its spanning vector as a basis.</p></li>
+<li><p>For</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{S}_1 &amp;= \mathcal{S}_2 \\
+&amp;= \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{},
+\end{aligned}
+\]</span></p>
+<p>the sum is the same line, because <span class="math inline">\(a\,(1, 0, 0) + b\,(1, 0, 0) = (a + b)\,(1, 0, 0)\)</span>, so <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2) = 1 &lt; 1 + 1\)</span>, a <a href="./algebra.html#def-strict-inequality">strict inequality</a>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-rank-subadditive" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3 (Rank is subadditive)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>,</p>
+<p><span class="math display">\[
+\operatorname{rank}(\mathbf{A} + \mathbf{B})
+\le \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(\mathbf{B}).
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{C}(\mathbf{A} + \mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})\)</span>.</strong> Any vector of <span class="math inline">\(\mathcal{C}(\mathbf{A} + \mathbf{B})\)</span> is <span class="math inline">\((\mathbf{A} + \mathbf{B})\,\tilde{x}\)</span> for some <span class="math inline">\(\tilde{x} \in \mathbb{R}^n\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\((\mathbf{A} + \mathbf{B})\,\tilde{x} = \mathbf{A} \tilde{x} + \mathbf{B} \tilde{x}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>, with <span class="math inline">\(\tilde{x}\)</span> as an <span class="math inline">\(n \times 1\)</span> matrix), a vector of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> plus a vector of <span class="math inline">\(\mathcal{C}(\mathbf{B})\)</span>.</p>
+<p><strong>Compare dimensions.</strong> All the sets involved are subspaces of <span class="math inline">\(\mathbb{R}^m\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <a href="#thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a>), so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{rank}(\mathbf{A} + \mathbf{B})
+&amp;= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} + \mathbf{B})\right)\mathclose{}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~5 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\\
+&amp;\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})\right)\mathclose{}
+&amp;&amp; \text{(the containment, and part 2 of }\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{)}
+\\
+&amp;\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} + \dim\mathopen{}\left(\mathcal{C}(\mathbf{B})\right)\mathclose{}
+&amp;&amp; \text{(}\href{#cor-dim-subadditive}{\text{Corollary~1}}\text{)}
+\\
+&amp;= \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(\mathbf{B}).
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~5 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-rank-subadditive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Subadditivity with equality and without)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>. Each has one nonzero column and one zero column. The nonzero column on its own is linearly independent (<span class="math inline">\(c\,\tilde{v} = \tilde{0}_2\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), and the two columns together are not, since <span class="math inline">\(1\)</span> times the zero column is <span class="math inline">\(\tilde{0}_2\)</span>; so each matrix has rank <span class="math inline">\(1\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>). By the same argument, <span class="math inline">\(-\mathbf{A}\)</span> has rank <span class="math inline">\(1\)</span>.</p>
+<ul>
+<li><span class="math inline">\(\mathbf{A} + \mathbf{B}\)</span> is the <span class="math inline">\(2 \times 2\)</span> identity matrix, which has rank <span class="math inline">\(2\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-nullity">Example&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>), so the bound <span class="math inline">\(2 \le 1 + 1\)</span> holds with equality.</li>
+<li><span class="math inline">\(\mathbf{A} + (-\mathbf{A})\)</span> is the <span class="math inline">\(2 \times 2\)</span> zero matrix, which has rank <span class="math inline">\(0\)</span>: any nonempty list of its columns contains <span class="math inline">\(\tilde{0}_2\)</span>, and <span class="math inline">\(1 \cdot\tilde{0}_2 = \tilde{0}_2\)</span>. So the bound <span class="math inline">\(0 \le \operatorname{rank}(\mathbf{A}) + \operatorname{rank}(-\mathbf{A}) = 1 + 1\)</span> is strict.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-direct-sum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Direct sum)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span>, <span class="math inline">\(\mathcal{S}_2\)</span> and <span class="math inline">\(\mathcal{V}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>. <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are <strong>complementary</strong> in <span class="math inline">\(\mathcal{V}\)</span> if</p>
+<p><span class="math display">\[
+\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2
+\quad \text{and} \quad
+\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}
+\]</span></p>
+<p>(<a href="#def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(\mathcal{V}\)</span> is the <strong>direct sum</strong> of <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span>, written <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-direct-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (<span class="math inline">\(\mathbb{R}^3\)</span> is a plane plus a line)</strong></span> Let <span class="math inline">\(\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, and <span class="math inline">\(\mathcal{S}_2 = \mathopen{}\left\{(0, 0, c) : c \in \mathbb{R}\right\}\mathclose{}\)</span>, the <span class="math inline">\(z\)</span>-axis.</p>
+<ul>
+<li><strong>Sum:</strong> any <span class="math inline">\((x, y, z) \in \mathbb{R}^3\)</span> is <span class="math inline">\((x, y, 0) + (0, 0, z)\)</span>, so <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathbb{R}^3\)</span>.</li>
+<li><strong>Intersection:</strong> a vector in both has third entry <span class="math inline">\(0\)</span> and first and second entries <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>.</li>
+</ul>
+<p>So <span class="math inline">\(\mathbb{R}^3 = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-not-direct-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (Two planes that sum to <span class="math inline">\(\mathbb{R}^3\)</span> but not directly)</strong></span> The planes <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(x = 0\)</span> sum to <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="#exm-sum-intersection-subspace" class="quarto-xref">Example&nbsp;3</a>), but they share the <span class="math inline">\(y\)</span>-axis, so they are not complementary, and <span class="math inline">\(\mathbb{R}^3\)</span> is not their direct sum. The shared line shows up as more than one way to split a vector:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(0, 1, 0) &amp;= (0, 1, 0) + \tilde{0}\\
+&amp;= \tilde{0}+ (0, 1, 0),
+\end{aligned}
+\]</span></p>
+<p>with the first term in the plane <span class="math inline">\(z = 0\)</span> and the second in the plane <span class="math inline">\(x = 0\)</span> both times.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-direct-sum-equiv" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4 (Three ways to recognize a direct sum)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2\)</span>. The following statements are equivalent:</p>
+<ol type="1">
+<li><span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span> (<a href="#def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>).</li>
+<li><span class="math inline">\(\dim(\mathcal{V}) = \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2)\)</span>.</li>
+<li>Every <span class="math inline">\(\tilde{x} \in \mathcal{V}\)</span> can be written as <span class="math inline">\(\tilde{x} = \tilde{x}_1 + \tilde{x}_2\)</span> with <span class="math inline">\(\tilde{x}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{x}_2 \in \mathcal{S}_2\)</span> in only one way.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2\)</span> is given, statement 1 says exactly that <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>.</p>
+<p><strong>1 and 2 are equivalent.</strong> By <a href="#cor-dim-subadditive" class="quarto-xref">Corollary&nbsp;1</a>, <span class="math inline">\(\dim(\mathcal{S}_1 + \mathcal{S}_2) = \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2)\)</span> exactly when <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>.</p>
+<p><strong>1 implies 3.</strong> Every <span class="math inline">\(\tilde{x} \in \mathcal{V}\)</span> has at least one such expression, because <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2\)</span>. Suppose</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} &amp;= \tilde{u}_1 + \tilde{u}_2 \\
+&amp;= \tilde{v}_1 + \tilde{v}_2,
+\end{aligned}
+\]</span></p>
+<p>with <span class="math inline">\(\tilde{u}_1, \tilde{v}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{u}_2, \tilde{v}_2 \in \mathcal{S}_2\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{u}_1 - \tilde{v}_1
+&amp;= (\tilde{u}_1 + \tilde{u}_2) - \tilde{u}_2 - \tilde{v}_1
+&amp;&amp; \text{(add and subtract } \tilde{u}_2 \text{)}
+\\
+&amp;= (\tilde{v}_1 + \tilde{v}_2) - \tilde{u}_2 - \tilde{v}_1
+&amp;&amp; \text{(substitute } \tilde{u}_1 + \tilde{u}_2 = \tilde{v}_1 + \tilde{v}_2 \text{)}
+\\
+&amp;= \tilde{v}_2 - \tilde{u}_2.
+&amp;&amp; \text{(cancel } \tilde{v}_1 \text{)}
+\end{aligned}
+\]</span></p>
+<p>The left side is in <span class="math inline">\(\mathcal{S}_1\)</span> and the right side is in <span class="math inline">\(\mathcal{S}_2\)</span>, because each subspace is closed under addition and scalar multiplication (the difference is <span class="math inline">\(\tilde{u}_1 + (-1)\,\tilde{v}_1\)</span>). So both sides are in <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, which gives <span class="math inline">\(\tilde{u}_1 = \tilde{v}_1\)</span> and <span class="math inline">\(\tilde{u}_2 = \tilde{v}_2\)</span>.</p>
+<p><strong>3 implies 1.</strong> Take any <span class="math inline">\(\tilde{x} \in \mathcal{S}_1 \cap \mathcal{S}_2\)</span>. Then <span class="math inline">\(\tilde{x} = \tilde{x} + \tilde{0}\)</span>, with <span class="math inline">\(\tilde{x} \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{0}\in \mathcal{S}_2\)</span>, and <span class="math inline">\(\tilde{x} = \tilde{0}+ \tilde{x}\)</span>, with <span class="math inline">\(\tilde{0}\in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{x} \in \mathcal{S}_2\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a>). By statement 3 these two expressions are the same, so <span class="math inline">\(\tilde{x} = \tilde{0}\)</span>, and <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-direct-sum-equiv" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Checking the three statements)</strong></span> For the plane <span class="math inline">\(z = 0\)</span> and the <span class="math inline">\(z\)</span>-axis in <a href="#exm-direct-sum" class="quarto-xref">Example&nbsp;7</a>:</p>
+<ul>
+<li><p>the dimensions add up:</p>
+<p><span class="math display">\[
+\begin{aligned}
+2 + 1 &amp;= 3 \\
+&amp;= \dim(\mathbb{R}^3),
+\end{aligned}
+\]</span></p>
+<p>since the plane has dimension <span class="math inline">\(2\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>), the <span class="math inline">\(z\)</span>-axis has the single nonzero vector <span class="math inline">\((0, 0, 1)\)</span> as a basis, and <span class="math inline">\(\dim(\mathbb{R}^3) = 3\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>);</p></li>
+<li><p>the split is unique: if</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x, y, z) &amp;= (a, b, 0) + (0, 0, c) \\
+&amp;= (a, b, c),
+\end{aligned}
+\]</span></p>
+<p>then <span class="math inline">\(a = x\)</span>, <span class="math inline">\(b = y\)</span> and <span class="math inline">\(c = z\)</span>.</p></li>
+</ul>
+<p>For the planes <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(x = 0\)</span> in <a href="#exm-not-direct-sum" class="quarto-xref">Example&nbsp;8</a>, both statements fail:</p>
+<p><span class="math display">\[
+\begin{aligned}
+2 + 2 &amp;= 4 \\
+&amp;\ne 3 \\
+&amp;= \dim(\mathcal{S}_1 + \mathcal{S}_2)
+\end{aligned}
+\]</span></p>
+<p>(<a href="#exm-dim-sum" class="quarto-xref">Example&nbsp;4</a>), and <span class="math inline">\((0, 1, 0)\)</span> splits in two ways.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-projection" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>), and let <span class="math inline">\(\tilde{y} \in \mathbb{R}^p\)</span>. By <a href="#thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\tilde{y} = \tilde{u} + \tilde{v}\)</span> for exactly one <span class="math inline">\(\tilde{u} \in \mathcal{S}\)</span> and <span class="math inline">\(\tilde{v} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\tilde{u}\)</span> is the <strong>projection</strong> of <span class="math inline">\(\tilde{y}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear">(<a href="#ref-banerjee2014linear" role="doc-biblioref">Banerjee and Roy 2014</a>, Definition 6.3, p.&nbsp;163)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-projection" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (The projection depends on the complement)</strong></span> Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}\)</span>, the horizontal axis in <span class="math inline">\(\mathbb{R}^2\)</span>, and let <span class="math inline">\(\tilde{y} = (3, 2)\)</span>.</p>
+<ul>
+<li><strong>Along <span class="math inline">\(\mathcal{T}_1 = \operatorname{span}\mathopen{}\left\{(1, -1)\right\}\mathclose{}\)</span>:</strong> <span class="math inline">\((3, 2) = (5, 0) + (-2, 2)\)</span>, with <span class="math inline">\((5, 0) \in \mathcal{S}\)</span> and <span class="math inline">\((-2, 2) = -2 \cdot(1, -1) \in \mathcal{T}_1\)</span>, so the projection of <span class="math inline">\((3, 2)\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}_1\)</span> is <span class="math inline">\((5, 0)\)</span>.</li>
+<li><strong>Along <span class="math inline">\(\mathcal{T}_2 = \operatorname{span}\mathopen{}\left\{(0, 1)\right\}\mathclose{}\)</span>:</strong> <span class="math inline">\((3, 2) = (3, 0) + (0, 2)\)</span>, with <span class="math inline">\((3, 0) \in \mathcal{S}\)</span> and <span class="math inline">\((0, 2) \in \mathcal{T}_2\)</span>, so the projection of <span class="math inline">\((3, 2)\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}_2\)</span> is <span class="math inline">\((3, 0)\)</span>.</li>
+</ul>
+<p>Each of <span class="math inline">\(\mathcal{T}_1\)</span> and <span class="math inline">\(\mathcal{T}_2\)</span> is a line that meets <span class="math inline">\(\mathcal{S}\)</span> only at <span class="math inline">\(\tilde{0}\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbb{R}^2 &amp;= \mathcal{S} \oplus \mathcal{T}_1 \\
+&amp;= \mathcal{S} \oplus \mathcal{T}_2
+\end{aligned}
+\]</span></p>
+<p>(<a href="#def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>, <a href="#thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>). The same vector has a different projection onto the same subspace when the complement changes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-orthogonal-complements" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-orthogonal-complements"><span class="header-section-number">2</span> Orthogonal complements</h2>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-dot-linear" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 5 (The dot product is linear in each slot)</strong></span> For vectors <span class="math inline">\(\tilde{x}, \tilde{u}, \tilde{w} \in \mathbb{R}^p\)</span> and numbers <span class="math inline">\(a, b\)</span>,</p>
+<p><span class="math display">\[
+\tilde{x} \cdot (a\,\tilde{u} + b\,\tilde{w})
+= a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w})
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+(a\,\tilde{u} + b\,\tilde{w}) \cdot \tilde{x}
+= a\,(\tilde{u} \cdot \tilde{x}) + b\,(\tilde{w} \cdot \tilde{x}).
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Second slot.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} \cdot (a\,\tilde{u} + b\,\tilde{w})
+&amp;= \sum_{i=1}^px_i\,(a\,\tilde{u} + b\,\tilde{w})_i
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\\
+&amp;= \sum_{i=1}^px_i\,(a u_i + b w_i)
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)}
+\\
+&amp;= \sum_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{}
+&amp;&amp; \text{(distribute each } x_i \text{)}
+\\
+&amp;= \sum_{i=1}^p\mathopen{}\left(a\,x_i u_i + b\,x_i w_i\right)\mathclose{}
+&amp;&amp; \text{(commute the factors in each product)}
+\\
+&amp;= \sum_{i=1}^pa\,x_i u_i + \sum_{i=1}^pb\,x_i w_i
+&amp;&amp; \text{(split the finite sum)}
+\\
+&amp;= a \sum_{i=1}^px_i u_i + b \sum_{i=1}^px_i w_i
+&amp;&amp; \text{(factor } a \text{ and } b \text{ out of the sums)}
+\\
+&amp;= a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}).
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\end{aligned}
+\]</span></p>
+<p><strong>First slot.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+(a\,\tilde{u} + b\,\tilde{w}) \cdot \tilde{x}
+&amp;= \tilde{x} \cdot (a\,\tilde{u} + b\,\tilde{w})
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{)}
+\\
+&amp;= a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w})
+&amp;&amp; \text{(second slot)}
+\\
+&amp;= a\,(\tilde{u} \cdot \tilde{x}) + b\,(\tilde{w} \cdot \tilde{x}).
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\text{Theorem~1 in Vectors}}\text{, twice)}
+\end{aligned}
+\]</span></p>
+<p>Two special cases are used often. With</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= b \\
+&amp;= 1,
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(1\,\tilde{u} = \tilde{u}\)</span>, the theorem gives <span class="math inline">\(\tilde{x} \cdot (\tilde{u} + \tilde{w}) = \tilde{x} \cdot \tilde{u} + \tilde{x} \cdot \tilde{w}\)</span>. With <span class="math inline">\(\tilde{w} = \tilde{u}\)</span> and <span class="math inline">\(b = 0\)</span>, and <span class="math inline">\(0\,\tilde{u} = \tilde{0}\)</span>, it gives <span class="math inline">\(\tilde{x} \cdot (a\,\tilde{u}) = a\,(\tilde{x} \cdot \tilde{u})\)</span>, and likewise in the first slot.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-dot-linear" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (Splitting a dot product)</strong></span> Let <span class="math inline">\(\tilde{x} = (1, 2)\)</span>, <span class="math inline">\(\tilde{u} = (3, 0)\)</span>, <span class="math inline">\(\tilde{w} = (0, 1)\)</span>, <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = -1\)</span>. Directly, <span class="math inline">\(a\,\tilde{u} + b\,\tilde{w} = (6, -1)\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} \cdot (6, -1) &amp;= 6 - 2 \\
+&amp;= 4.
+\end{aligned}
+\]</span></p>
+<p>By <a href="#thm-dot-linear" class="quarto-xref">Theorem&nbsp;5</a>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}) &amp;= 2 \cdot 3 + (-1) \cdot 2 \\
+&amp;= 4,
+\end{aligned}
+\]</span></p>
+<p>the same number.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-orthogonal-complement" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;13 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
+<p><span class="math display">\[
+\mathcal{X}^\perp
+\stackrel{\text{def}}{=}
+\mathopen{}\left\{\tilde{u} \in \mathbb{R}^p : \tilde{x} \cdot \tilde{u} = 0 \text{ for all } \tilde{x} \in \mathcal{X}\right\}\mathclose{}.
+\]</span></p>
+<p><span class="math inline">\(\mathcal{X}^\perp\)</span> is read “<span class="math inline">\(\mathcal{X}\)</span> perp”. <span class="math inline">\(\mathcal{X}\)</span> need not be a subspace.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-orthogonal-complement" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (Orthogonal complements in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
+<ul>
+<li><p><strong>A plane.</strong> Let <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>. A vector <span class="math inline">\(\tilde{u}\)</span> is in <span class="math inline">\(\mathcal{X}^\perp\)</span> when</p>
+<p><span class="math display">\[
+\begin{aligned}
+(a, b, 0) \cdot \tilde{u} &amp;= a u_1 + b u_2 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>for all <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Taking <span class="math inline">\((a, b) = (1, 0)\)</span> forces <span class="math inline">\(u_1 = 0\)</span>, and taking <span class="math inline">\((a, b) = (0, 1)\)</span> forces <span class="math inline">\(u_2 = 0\)</span>; conversely, if</p>
+<p><span class="math display">\[
+\begin{aligned}
+u_1 &amp;= u_2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>then <span class="math inline">\(a u_1 + b u_2 = 0\)</span> for all <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. So <span class="math inline">\(\mathcal{X}^\perp = \mathopen{}\left\{(0, 0, c) : c \in \mathbb{R}\right\}\mathclose{}\)</span>, the <span class="math inline">\(z\)</span>-axis.</p></li>
+<li><p><strong>Two vectors.</strong> The two-element set <span class="math inline">\(\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span> is not a subspace, and its orthogonal complement is the <span class="math inline">\(z\)</span>-axis too: the two conditions <span class="math inline">\(u_1 = 0\)</span> and <span class="math inline">\(u_2 = 0\)</span> are the same as for the plane.</p></li>
+<li><p><strong>The extremes.</strong> <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}^\perp = \mathbb{R}^3\)</span>, because <span class="math inline">\(\tilde{0}\cdot \tilde{u} = 0\)</span> for every <span class="math inline">\(\tilde{u}\)</span>. <span class="math inline">\((\mathbb{R}^3)^\perp = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, because a <span class="math inline">\(\tilde{u}\)</span> in it is orthogonal to itself, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{u} \cdot \tilde{u} &amp;= u_1^2 + u_2^2 + u_3^2 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>forces <span class="math inline">\(\tilde{u} = \tilde{0}\)</span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-orthogonal-complement-subspace" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (An orthogonal complement is a subspace)</strong></span> For any set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span>, <span class="math inline">\(\mathcal{X}^\perp\)</span> (<a href="#def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{X}^\perp\)</span> is not empty:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} \cdot \tilde{0}&amp;= \sum_i x_i \cdot 0 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(\tilde{x}\)</span>, so <span class="math inline">\(\tilde{0}\in \mathcal{X}^\perp\)</span>. Let <span class="math inline">\(\tilde{u}, \tilde{w} \in \mathcal{X}^\perp\)</span>, let <span class="math inline">\(c \in \mathbb{R}\)</span>, and let <span class="math inline">\(\tilde{x} \in \mathcal{X}\)</span>.</p>
+<p><strong>Addition.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} \cdot (\tilde{u} + \tilde{w})
+&amp;= \tilde{x} \cdot \tilde{u} + \tilde{x} \cdot \tilde{w}
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{, special case } a \text{ and } b \text{ both equal to } 1 \text{)}
+\\
+&amp;= 0 + 0
+&amp;&amp; \text{(} \tilde{u}, \tilde{w} \in \mathcal{X}^\perp \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p><strong>Scalar multiplication.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} \cdot (c\,\tilde{u})
+&amp;= c\,(\tilde{x} \cdot \tilde{u})
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{, special case } b = 0 \text{)}
+\\
+&amp;= c \cdot 0
+&amp;&amp; \text{(} \tilde{u} \in \mathcal{X}^\perp \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>These two equations hold for every <span class="math inline">\(\tilde{x} \in \mathcal{X}\)</span>, so <span class="math inline">\(\tilde{u} + \tilde{w}\)</span> and <span class="math inline">\(c\,\tilde{u}\)</span> are in <span class="math inline">\(\mathcal{X}^\perp\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-orthogonal-complement-subspace" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (The complement of a single vector is a line)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> is not a subspace: <span class="math inline">\(2\,(1, 2) = (2, 4)\)</span> is not in it. Its orthogonal complement is</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{X}^\perp
+&amp;= \mathopen{}\left\{\tilde{u} \in \mathbb{R}^2 : u_1 + 2 u_2 = 0\right\}\mathclose{} \\
+&amp;= \mathopen{}\left\{c\,(-2, 1) : c \in \mathbb{R}\right\}\mathclose{},
+\end{aligned}
+\]</span></p>
+<p>since <span class="math inline">\(u_1 + 2u_2 = 0\)</span> means</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{u} &amp;= (-2u_2, u_2) \\
+&amp;= u_2\,(-2, 1).
+\end{aligned}
+\]</span></p>
+<p>That set is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>, a subspace by <a href="./linear-algebra-subspaces.html#thm-span-subspace">Theorem&nbsp;2 in Subspaces and Rank</a>, as <a href="#thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a> says it must be. It contains <span class="math inline">\((-2, 1)\)</span>, the vector <a href="./linear-algebra-vectors.html#rem-orthogonal-perpendicular">Remark&nbsp;7 in Vectors</a> found perpendicular to <span class="math inline">\((1, 2)\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-complement-null-space" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 7 (The orthogonal complement of a column space is a null space)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
+<p><span class="math display">\[
+\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top}).
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_n\)</span> be the columns of <span class="math inline">\(\mathbf{A}\)</span>, so <span class="math inline">\(\tilde{a}_j = (a_{1j}, \ldots, a_{mj})\)</span>. For <span class="math inline">\(\tilde{x} \in \mathbb{R}^m\)</span>, entry <span class="math inline">\(j\)</span> of <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}\)</span> is</p>
+<p><span class="math display">\[
+\begin{aligned}
+({\mathbf{A}}^{\top} \tilde{x})_j
+&amp;= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)}
+\\
+&amp;= \sum_{i=1}^{m} a_{ij}\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)}
+\\
+&amp;= \tilde{a}_j \cdot \tilde{x}.
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(\tilde{x} \in \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-null-space">Definition&nbsp;2 in Column Space, Null Space and Rank-Nullity</a>) exactly when <span class="math inline">\(\tilde{a}_j \cdot \tilde{x} = 0\)</span> for every column <span class="math inline">\(\tilde{a}_j\)</span>.</p>
+<p><strong><span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp \subseteq \mathcal{N}({\mathbf{A}}^{\top})\)</span>.</strong> Each column <span class="math inline">\(\tilde{a}_j\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), so a vector orthogonal to all of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is orthogonal to every column.</p>
+<p><strong><span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) \subseteq \mathcal{C}(\mathbf{A})^\perp\)</span>.</strong> Suppose <span class="math inline">\(\tilde{a}_j \cdot \tilde{x} = 0\)</span> for every <span class="math inline">\(j\)</span>, and take any <span class="math inline">\(\tilde{y} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\tilde{y} = \mathbf{A} \tilde{z}\)</span> for some <span class="math inline">\(\tilde{z} \in \mathbb{R}^n\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>). Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{y} \cdot \tilde{x}
+&amp;= \sum_{i=1}^{m} (\mathbf{A} \tilde{z})_i\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\\
+&amp;= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)}
+\\
+&amp;= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
+&amp;&amp; \text{(distribute each } x_i \text{ over the inner sum)}
+\\
+&amp;= \sum_{j=1}^n\sum_{i=1}^{m} a_{ij}\, z_j\, x_i
+&amp;&amp; \text{(swap the order of the finite sums)}
+\\
+&amp;= \sum_{j=1}^nz_j \sum_{i=1}^{m} a_{ij}\, x_i
+&amp;&amp; \text{(commute, then factor } z_j \text{ out of the inner sum)}
+\\
+&amp;= \sum_{j=1}^nz_j\, (\tilde{a}_j \cdot \tilde{x})
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\\
+&amp;= \sum_{j=1}^nz_j \cdot 0
+&amp;&amp; \text{(each } \tilde{a}_j \cdot \tilde{x} = 0 \text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(\tilde{x}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-complement-null-space" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (The complement of the column space in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> (1). <a href="./linear-algebra-rank-nullity.html#exm-null-space">Example&nbsp;3 in Column Space, Null Space and Rank-Nullity</a> found <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}\)</span>, so by <a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a> this line is <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp\)</span>. Directly, for any <span class="math inline">\(c\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathopen{}\left(c\,(1, 3)\right)\mathclose{} \cdot (-3, 1)
+&amp;= c\,\mathopen{}\left((1, 3) \cdot (-3, 1)\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{, special case } b = 0 \text{, first slot)}
+\\
+&amp;= c\,(-3 + 3)
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\\
+&amp;= 0.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-orthogonal-direct-sum" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 8 (A subspace and its orthogonal complement make up the whole space)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Then</p>
+<ol type="1">
+<li><span class="math inline">\(\mathcal{S} \cap \mathcal{S}^\perp = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>;</li>
+<li><span class="math inline">\(\dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) = p\)</span>;</li>
+<li><span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{S}^\perp\)</span> (<a href="#def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>).</li>
+</ol>
+<p>So every <span class="math inline">\(\tilde{y} \in \mathbb{R}^p\)</span> can be written as <span class="math inline">\(\tilde{y} = \tilde{u} + \tilde{v}\)</span> with <span class="math inline">\(\tilde{u} \in \mathcal{S}\)</span> and <span class="math inline">\(\tilde{v} \in \mathcal{S}^\perp\)</span> in only one way (<a href="#thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>), so it has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>).</p>
+<p><strong>Part 1.</strong> Both <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{S}^\perp\)</span> contain <span class="math inline">\(\tilde{0}\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a>). If <span class="math inline">\(\tilde{x}\)</span> is in both, then <span class="math inline">\(\tilde{x}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\tilde{x}\)</span> itself included, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{x} \cdot \tilde{x} &amp;= x_1^2 + \cdots + x_p^2 \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>which forces every <span class="math inline">\(x_i = 0\)</span>.</p>
+<p><strong>Part 2.</strong> Let <span class="math inline">\(d = \dim(\mathcal{S})\)</span>. If <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\(\mathcal{S}\)</span> has a basis (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>) with <span class="math inline">\(0\)</span> vectors (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>), the empty list, whose span is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>); so <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, <span class="math inline">\(\mathcal{S}^\perp = \mathbb{R}^p\)</span> (every <span class="math inline">\(\tilde{u}\)</span> satisfies <span class="math inline">\(\tilde{0}\cdot \tilde{u} = 0\)</span>), and <span class="math inline">\(0 + p = p\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). If <span class="math inline">\(d \ge 1\)</span>, choose a basis <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>), and let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(p \times d\)</span> matrix with these columns. The basis spans <span class="math inline">\(\mathcal{S}\)</span>, so <span class="math inline">\(\mathcal{S} = \mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\(\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is <span class="math inline">\(d \times p\)</span>, so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim(\mathcal{S}^\perp)
+&amp;= \dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-complement-null-space}{\text{Theorem~7}}\text{)}
+\\
+&amp;= \operatorname{nullity}({\mathbf{A}}^{\top})
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~4 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\\
+&amp;= p - \operatorname{rank}({\mathbf{A}}^{\top})
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~6 in Column Space, Null Space and Rank-Nullity}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
+\\
+&amp;= p - \operatorname{rank}(\mathbf{A})
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~8 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\\
+&amp;= p - \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-dim}{\text{Theorem~5 in Column Space, Null Space and Rank-Nullity}}\text{)}
+\\
+&amp;= p - d.
+&amp;&amp; \text{(} \mathcal{C}(\mathbf{A}) = \mathcal{S} \text{)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 3.</strong> <span class="math inline">\(\mathcal{S} + \mathcal{S}^\perp\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a>), and</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim(\mathcal{S} + \mathcal{S}^\perp)
+&amp;= \dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) - \dim(\mathcal{S} \cap \mathcal{S}^\perp)
+&amp;&amp; \text{(}\href{#thm-dim-sum}{\text{Theorem~2}}\text{)}
+\\
+&amp;= p - \dim(\mathcal{S} \cap \mathcal{S}^\perp)
+&amp;&amp; \text{(part 2)}
+\\
+&amp;= p - 0
+&amp;&amp; \text{(part 1, and } \dim(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}) = 0 \text{ by }\href{linear-algebra-subspaces.qmd#exm-dimension}{\text{Example~16 in Subspaces and Rank}}\text{)}
+\\
+&amp;= p.
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>Since <span class="math inline">\(\mathcal{S} + \mathcal{S}^\perp \subseteq \mathbb{R}^p\)</span>, <span class="math inline">\(\mathbb{R}^p\)</span> is a subspace (<a href="./linear-algebra-subspaces.html#exm-subspace">Example&nbsp;3 in Subspaces and Rank</a>) and <span class="math inline">\(\dim(\mathbb{R}^p) = p\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>), <a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a> gives <span class="math inline">\(\mathcal{S} + \mathcal{S}^\perp = \mathbb{R}^p\)</span>. Together with part 1, <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{S}^\perp\)</span>. The uniqueness of the split then follows from <a href="#thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a> (statement 1 implies statement 3).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-orthogonal-direct-sum" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (Splitting a vector of <span class="math inline">\(\mathbb{R}^3\)</span> along a line and its complement)</strong></span> Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>. A single nonzero vector is linearly independent (<span class="math inline">\(c\,\tilde{v} = \tilde{0}\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span> forces <span class="math inline">\(c = 0\)</span>), so <span class="math inline">\((1, 1, 0)\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\dim(\mathcal{S}) = 1\)</span>. A vector <span class="math inline">\(\tilde{u}\)</span> is in <span class="math inline">\(\mathcal{S}^\perp\)</span> exactly when <span class="math inline">\(u_1 + u_2 = 0\)</span>: that condition says <span class="math inline">\((1, 1, 0) \cdot \tilde{u} = 0\)</span>, and then</p>
+<p><span class="math display">\[
+\begin{aligned}
+c\,(1, 1, 0) \cdot \tilde{u} &amp;= c\,(u_1 + u_2) \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>for every <span class="math inline">\(c\)</span>. So</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{S}^\perp &amp;= \mathopen{}\left\{(a, -a, c) : a, c \in \mathbb{R}\right\}\mathclose{} \\
+&amp;= \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}.
+\end{aligned}
+\]</span></p>
+<p>Those two vectors are linearly independent, because <span class="math inline">\(a\,(1, -1, 0) + c\,(0, 0, 1) = (a, -a, c)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= c \\
+&amp;= 0,
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(\dim(\mathcal{S}^\perp) = 2\)</span>, and <span class="math inline">\(1 + 2 = 3\)</span>, as part 2 says.</p>
+<p>To split <span class="math inline">\(\tilde{y} = (3, 1, 2)\)</span>, look for <span class="math inline">\(\tilde{u} = t\,(1, 1, 0)\)</span> with</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{v} &amp;= \tilde{y} - \tilde{u} \\
+&amp;= (3 - t, 1 - t, 2)
+\end{aligned}
+\]</span></p>
+<p>in <span class="math inline">\(\mathcal{S}^\perp\)</span>: that membership needs <span class="math inline">\((3 - t) + (1 - t) = 0\)</span>, so <span class="math inline">\(t = 2\)</span>. Then <span class="math inline">\(\tilde{u} = (2, 2, 0)\)</span> and <span class="math inline">\(\tilde{v} = (1, -1, 2)\)</span>, with <span class="math inline">\(\tilde{u} + \tilde{v} = (3, 1, 2)\)</span> and</p>
+<p><span class="math display">\[
+\begin{aligned}
+(1, 1, 0) \cdot (1, -1, 2) &amp;= 1 - 1 + 0 \\
+&amp;= 0.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-double-complement" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 9 (The orthogonal complement of the orthogonal complement)</strong></span> For any subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span>,</p>
+<p><span class="math display">\[
+(\mathcal{S}^\perp)^\perp = \mathcal{S}.
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp\)</span>.</strong> Take <span class="math inline">\(\tilde{s} \in \mathcal{S}\)</span> and any <span class="math inline">\(\tilde{v} \in \mathcal{S}^\perp\)</span>. By <a href="#def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a>, <span class="math inline">\(\tilde{s} \cdot \tilde{v} = 0\)</span>, so <span class="math inline">\(\tilde{v} \cdot \tilde{s} = 0\)</span> too (<a href="./linear-algebra-vectors.html#thm-lincom-symmetric">Theorem&nbsp;1 in Vectors</a>). So <span class="math inline">\(\tilde{s}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}^\perp\)</span>, that is, <span class="math inline">\(\tilde{s} \in (\mathcal{S}^\perp)^\perp\)</span>.</p>
+<p><strong>Equal dimensions.</strong> <span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>), so part 2 of <a href="#thm-orthogonal-direct-sum" class="quarto-xref">Theorem&nbsp;8</a> applies to it as well as to <span class="math inline">\(\mathcal{S}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\dim\mathopen{}\left((\mathcal{S}^\perp)^\perp\right)\mathclose{}
+&amp;= p - \dim(\mathcal{S}^\perp)
+&amp;&amp; \text{(}\href{#thm-orthogonal-direct-sum}{\text{Theorem~8}}\text{, applied to } \mathcal{S}^\perp \text{)}
+\\
+&amp;= p - \mathopen{}\left(p - \dim(\mathcal{S})\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-orthogonal-direct-sum}{\text{Theorem~8}}\text{, applied to } \mathcal{S} \text{)}
+\\
+&amp;= \dim(\mathcal{S}).
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\((\mathcal{S}^\perp)^\perp\)</span> is a subspace (<a href="#thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>) that contains <span class="math inline">\(\mathcal{S}\)</span> and has the same dimension, so it equals <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-double-complement" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Back to the line)</strong></span> In <a href="#exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \tilde{w} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;11 in Matrices</a>), <span class="math inline">\(\tilde{w} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\mathcal{S}^\perp)^\perp &amp;= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
+&amp;= \mathcal{S}.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-double-complement-fails" class="theorem example">
+<p><span class="theorem-title"><strong>Example 17 (A set that is not a subspace does not come back)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> is not a subspace. Its orthogonal complement is the same as that of <span class="math inline">\(\mathcal{S}\)</span> in <a href="#exm-double-complement" class="quarto-xref">Example&nbsp;16</a>, since both are defined by the single condition <span class="math inline">\(u_1 + u_2 = 0\)</span>, so <span class="math inline">\((\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span>, which contains <span class="math inline">\((2, 2, 0) \notin \mathcal{X}\)</span>. <a href="#thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> needs <span class="math inline">\(\mathcal{S}\)</span> to be a subspace.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-fundamental-theorem" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-fundamental-theorem"><span class="header-section-number">3</span> The fundamental theorem of linear algebra</h2>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-fundamental-subspaces" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 10 (Fundamental theorem of linear algebra)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r\)</span>. Then</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span>, and <span class="math inline">\(\mathbb{R}^m = \mathcal{C}(\mathbf{A}) \oplus \mathcal{N}({\mathbf{A}}^{\top})\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathcal{C}(\mathbf{A}) = \mathcal{N}({\mathbf{A}}^{\top})^\perp\)</span>;</p></li>
+<li><p><span class="math inline">\(\mathcal{N}(\mathbf{A})^\perp = \mathcal{C}({\mathbf{A}}^{\top})\)</span>, and <span class="math inline">\(\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\)</span>;</p></li>
+<li><p><span class="math display">\[
+\begin{aligned}
+\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} &amp;= \dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} \\
+&amp;= r,
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span>, and <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span>.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> The first equation is <a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>. <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^m\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), so</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbb{R}^m
+&amp;= \mathcal{C}(\mathbf{A}) \oplus \mathcal{C}(\mathbf{A})^\perp
+&amp;&amp; \text{(}\href{#thm-orthogonal-direct-sum}{\text{Theorem~8}}\text{)}
+\\
+&amp;= \mathcal{C}(\mathbf{A}) \oplus \mathcal{N}({\mathbf{A}}^{\top}).
+&amp;&amp; \text{(first equation)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 2.</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{C}(\mathbf{A})
+&amp;= \mathopen{}\left(\mathcal{C}(\mathbf{A})^\perp\right)\mathclose{}^\perp
+&amp;&amp; \text{(}\href{#thm-double-complement}{\text{Theorem~9}}\text{)}
+\\
+&amp;= \mathcal{N}({\mathbf{A}}^{\top})^\perp.
+&amp;&amp; \text{(part 1)}
+\end{aligned}
+\]</span></p>
+<p><strong>Part 3.</strong> Apply parts 2 and 1 to the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, using <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>: part 2 gives <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \mathcal{N}(\mathbf{A})^\perp\)</span>, and part 1 gives <span class="math inline">\(\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\)</span>.</p>
+<p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;5 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;5 in Column Space, Null Space and Rank-Nullity</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;4 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-fundamental-subspaces" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (The four subspaces of the matrix in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(m = 2\)</span>, <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(r = 1\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-dim">Example&nbsp;8 in Column Space, Null Space and Rank-Nullity</a>).</p>
+<ul>
+<li><p><strong>In <span class="math inline">\(\mathbb{R}^3\)</span>:</strong> the row space <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(1, -2, -2)\right\}\mathclose{}\)</span></p>
+<ol class="example" type="1">
+<li>has dimension <span class="math inline">\(1 = r\)</span>, and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(2, 1, 0), (2, 0, 1)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(2 = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-nullity">Example&nbsp;9 in Column Space, Null Space and Rank-Nullity</a>). The spanning vectors are orthogonal:</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+(1, -2, -2) \cdot (2, 1, 0) &amp;= 2 - 2 + 0 \\
+&amp;= 0
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+(1, -2, -2) \cdot (2, 0, 1) &amp;= 2 + 0 - 2 \\
+&amp;= 0.
+\end{aligned}
+\]</span></p></li>
+<li><p><strong>In <span class="math inline">\(\mathbb{R}^2\)</span>:</strong> <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(1 = r\)</span>, and <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}\)</span> has dimension <span class="math inline">\(1 = m - r\)</span> (<a href="#exm-complement-null-space" class="quarto-xref">Example&nbsp;14</a>).</p></li>
+</ul>
+<p>By part 3, <span class="math inline">\(\tilde{y} = (1, 0, 0)\)</span> splits uniquely into a row-space part <span class="math inline">\(t\,(1, -2, -2)\)</span> and a null-space part. The null-space part <span class="math inline">\(\tilde{y} - t\,(1, -2, -2)\)</span> lies in <span class="math inline">\(\mathcal{N}(\mathbf{A})\)</span> (part 3), and <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathcal{C}({\mathbf{A}}^{\top})^\perp\)</span> (<a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a> applied to <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, with <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>), so it must be orthogonal to <span class="math inline">\((1, -2, -2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+0
+&amp;= (1, -2, -2) \cdot \mathopen{}\left((1, 0, 0) - t\,(1, -2, -2)\right)\mathclose{}
+&amp;&amp; \text{(orthogonality)}
+\\
+&amp;= (1, -2, -2) \cdot \mathopen{}\left(1 \cdot(1, 0, 0) + (-t)\,(1, -2, -2)\right)\mathclose{}
+&amp;&amp; \text{(write the difference as a linear combination)}
+\\
+&amp;= 1 \cdot\mathopen{}\left((1, -2, -2) \cdot (1, 0, 0)\right)\mathclose{} + (-t)\,\mathopen{}\left((1, -2, -2) \cdot (1, -2, -2)\right)\mathclose{}
+&amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{)}
+\\
+&amp;= 1 \cdot 1 + (-t) \cdot 9
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+\\
+&amp;= 1 - 9t,
+&amp;&amp; \text{(arithmetic)}
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(t = \frac{1}{9}\)</span>. The row-space part is <span class="math inline">\(\mathopen{}\left(\frac{1}{9}, -\frac{2}{9}, -\frac{2}{9}\right)\mathclose{}\)</span> and the null-space part is <span class="math inline">\(\mathopen{}\left(\frac{8}{9}, \frac{2}{9}, \frac{2}{9}\right)\mathclose{}\)</span>; as a check, row 1 of <span class="math inline">\(\mathbf{A}\)</span> gives <span class="math inline">\(\frac{8}{9} - 2 \cdot\frac{2}{9} - 2 \cdot\frac{2}{9} = 0\)</span>, and row 2 is <span class="math inline">\(3\)</span> times row 1, so <span class="math inline">\(\mathbf{A}\)</span> sends the null-space part to <span class="math inline">\(\tilde{0}_2\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+<script>
+const theoremLikeClasses = new Set([
+  "thm",
+  "theorem",
+  "lem",
+  "lemma",
+  "cor",
+  "corollary",
+  "prp",
+  "proposition",
+  "cnj",
+  "conjecture",
+  "def",
+  "definition",
+  "exm",
+  "example",
+  "exr",
+  "exercise",
+  "proof",
+  "rem",
+  "remark",
+  "sol",
+  "solution"
+]);
+const theoremLikePrefixes = [
+  "thm-",
+  "lem-",
+  "cor-",
+  "prp-",
+  "cnj-",
+  "def-",
+  "exm-",
+  "exr-",
+  "rem-",
+  "sol-"
+];
+const inlineAnchorSeparator = "\u00A0";
+const maxAnchorRetryAttempts = 5;
+const anchorRetryDelayMs = 50;
+
+const isTheoremLikeDiv = (div) =>
+  Array.from(div.classList).some((className) => theoremLikeClasses.has(className)) ||
+  (div.id && theoremLikePrefixes.some((prefix) => div.id.startsWith(prefix)));
+
+const addTheoremLikeDivAnchors = () => {
+  for (const theoremDiv of window.document.querySelectorAll("div[id]")) {
+    if (!isTheoremLikeDiv(theoremDiv)) {
+      continue;
+    }
+
+    if (!theoremDiv.classList.contains("anchored")) {
+      theoremDiv.classList.add("anchored");
+    }
+
+    if (!theoremDiv.dataset.anchorId) {
+      theoremDiv.dataset.anchorId = theoremDiv.id;
+    }
+  }
+};
+
+const ensureSectionHeadingAnchorAttributes = () => {
+  for (const sectionHeading of window.document.querySelectorAll(
+    "section[id] > h1, section[id] > h2, section[id] > h3, section[id] > h4, section[id] > h5, section[id] > h6"
+  )) {
+    if (!sectionHeading.classList.contains("anchored")) {
+      sectionHeading.classList.add("anchored");
+    }
+
+    if (!sectionHeading.dataset.anchorId) {
+      sectionHeading.dataset.anchorId = sectionHeading.parentElement.id;
+    }
+  }
+};
+
+const normalizeInternalAnchorLinkIcons = () => {
+  for (const link of window.document.querySelectorAll(
+    "a.anchorjs-link, a.quarto-xref"
+  )) {
+    if (link.classList.contains("quarto-xref")) {
+      link.classList.add("no-external");
+      link.classList.remove("external");
+      continue;
+    }
+
+    const href = link.getAttribute("href") || "";
+    if (!href.startsWith("#")) {
+      continue;
+    }
+
+    link.classList.add("no-external");
+    link.classList.remove("external");
+  }
+};
+
+const moveTheoremDivAnchorsInline = () => {
+  let hasPendingAnchors = false;
+
+  for (const theoremDiv of window.document.querySelectorAll("div[id]")) {
+    if (!isTheoremLikeDiv(theoremDiv)) {
+      continue;
+    }
+
+    const theoremTitle = theoremDiv.querySelector(".theorem-title, .proof-title");
+    if (!theoremTitle) {
+      continue;
+    }
+
+    const anchorLink = Array.from(
+      theoremDiv.querySelectorAll("a.anchorjs-link")
+    ).find((link) => {
+      const href = link.getAttribute("href") || "";
+      return href === `#${theoremDiv.id}` || href.endsWith(`#${theoremDiv.id}`);
+    });
+
+    if (anchorLink && anchorLink.parentElement === theoremTitle) {
+      continue;
+    }
+
+    if (!anchorLink) {
+      hasPendingAnchors = true;
+      continue;
+    }
+
+    anchorLink.classList.remove("external");
+
+    // If the title ends with whitespace (e.g. Quarto's proof-title ending in ". "),
+    // trim the trailing whitespace so the non-breaking separator and anchor stay attached
+    // to the title text, and ensure a trailing space separates the anchor from following content.
+    let lastTextNode = theoremTitle.lastChild;
+    while (lastTextNode && lastTextNode.nodeType !== Node.TEXT_NODE && lastTextNode.lastChild) {
+      lastTextNode = lastTextNode.lastChild;
+    }
+    if (lastTextNode && lastTextNode.nodeType === Node.TEXT_NODE && /\s+$/.test(lastTextNode.textContent)) {
+      lastTextNode.textContent = lastTextNode.textContent.replace(/\s+$/, "");
+      if (theoremTitle.nextSibling &&
+          !(theoremTitle.nextSibling.nodeType === Node.TEXT_NODE && /^\s/.test(theoremTitle.nextSibling.textContent))) {
+        theoremTitle.after(" ");
+      }
+    }
+
+    theoremTitle.append(inlineAnchorSeparator);
+    theoremTitle.append(anchorLink);
+  }
+
+  return hasPendingAnchors;
+};
+
+const moveTheoremDivAnchorsInlineWithRetry = (
+  attemptsRemaining = maxAnchorRetryAttempts
+) => {
+  const hasPendingAnchors = moveTheoremDivAnchorsInline();
+  if (hasPendingAnchors && attemptsRemaining > 0) {
+    window.setTimeout(() => {
+      moveTheoremDivAnchorsInlineWithRetry(attemptsRemaining - 1);
+    }, anchorRetryDelayMs);
+  }
+};
+
+if (window.document.readyState === "loading") {
+  window.document.addEventListener("DOMContentLoaded", () => {
+    addTheoremLikeDivAnchors();
+    ensureSectionHeadingAnchorAttributes();
+    normalizeInternalAnchorLinkIcons();
+    moveTheoremDivAnchorsInlineWithRetry();
+  });
+} else {
+  addTheoremLikeDivAnchors();
+  ensureSectionHeadingAnchorAttributes();
+  normalizeInternalAnchorLinkIcons();
+  moveTheoremDivAnchorsInlineWithRetry();
+}
+
+window.addEventListener("load", () => {
+  normalizeInternalAnchorLinkIcons();
+  moveTheoremDivAnchorsInlineWithRetry();
+});
+</script>
+
+<script>
+const defaultAnchorIconFallback = "#";
+
+function getDefaultAnchorTemplate() {
+  const defaultAnchor = document.querySelector("a.anchorjs-link[data-anchorjs-icon]");
+  if (!defaultAnchor) {
+    return null;
+  }
+
+  return {
+    icon: defaultAnchor.getAttribute("data-anchorjs-icon"),
+    style: defaultAnchor.getAttribute("style")
+  };
+}
+
+function alignEquationAnchorWithDefault(anchor, template) {
+  if (!anchor) {
+    return;
+  }
+
+  anchor.classList.remove("external");
+
+  if (template && template.icon) {
+    anchor.setAttribute("data-anchorjs-icon", template.icon);
+    anchor.textContent = "";
+  } else if (!anchor.textContent) {
+    anchor.textContent = defaultAnchorIconFallback;
+  }
+
+  if (template && template.style) {
+    anchor.setAttribute("style", template.style);
+  } else {
+    anchor.removeAttribute("style");
+  }
+}
+
+function alignEquationAnchorsWithDefault() {
+  const template = getDefaultAnchorTemplate();
+  document.querySelectorAll("a.equation-anchor").forEach(function (anchor) {
+    alignEquationAnchorWithDefault(anchor, template);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const equations = document.querySelectorAll("span[id^='eq-']");
+  equations.forEach(function (equation) {
+    if (equation.querySelector(".equation-anchor")) {
+      return;
+    }
+
+    if (!equation.querySelector(".math.display")) {
+      return;
+    }
+
+    const id = equation.getAttribute("id");
+    if (!id) {
+      return;
+    }
+
+    equation.classList.add("equation-anchor-target");
+
+    const anchor = document.createElement("a");
+    anchor.className = "equation-anchor anchorjs-link";
+    anchor.href = "#" + id;
+    anchor.setAttribute("aria-label", "Permalink to this equation");
+    equation.appendChild(anchor);
+  });
+
+  alignEquationAnchorsWithDefault();
+});
+
+window.addEventListener("load", alignEquationAnchorsWithDefault);
+</script>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-banerjee2014linear" class="csl-entry" role="listitem">
+Banerjee, Sudipto, and Anindya Roy. 2014. <em>Linear Algebra and Matrix Analysis for Statistics</em>. Vol. 181. Crc Press Boca Raton. <a href="https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388">https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388</a>.
+</div>
+<div id="ref-zhou2024orthproj" class="csl-entry" role="listitem">
+Zhou, Hua. 2024. <em>Orthogonal Projections</em>. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. <a href="https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html">https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<!--
+Page-navigation helpers for the HTML format, included after the body of every
+page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
+
+1. Navbar highlighting.
+Quarto marks as active the first top-level navbar link whose target also
+appears in the sidebar. Every navbar link is in the sidebar, so "Notation"
+would be highlighted on every page. The script below instead highlights the navbar
+link (or the dropdown holding the link) for the current page.
+
+2. Floating previous/next arrows in the page margins.
+Quarto has no built-in option for these, so this script copies the
+previous/next links that `page-navigation: true` puts at the foot of each
+page into two fixed-position tabs. The links follow the sidebar order.
+Each tab sits in empty space so that it never covers, or takes clicks from,
+the text, the sidebar, or the table of contents:
+
+- previous: in the gutter between the docked sidebar and the page text;
+- next: in the right margin when the window is wide enough, otherwise in the
+  gutter between the page text and the table of contents.
+
+Both are hidden below Bootstrap's large breakpoint, where the sidebar
+collapses and there is no gutter to put them in.
+-->
+<style>
+.page-nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Narrow enough to fit the ~25px gutters beside the page text; px, not
+     rem, because the theme's rem is about 17px. */
+  width: 20px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  /* Muted but fully opaque when idle: opacity would also fade the border and
+     icon below the 3:1 contrast that controls need (WCAG 1.4.11). */
+  color: var(--bs-secondary-color, var(--bs-body-color));
+  background-color: var(--bs-body-bg);
+  /* currentColor, because darkly does not redefine --bs-border-color. */
+  border: 1px solid currentColor;
+  transition: color 0.15s ease-in-out;
+}
+.page-nav-arrow:hover,
+.page-nav-arrow:focus-visible {
+  color: var(--bs-link-color);
+}
+@media (max-width: 991.98px) {
+  .page-nav-arrow { display: none; }
+}
+@media print {
+  .page-nav-arrow { display: none; }
+}
+</style>
+<script>
+// This file is included at the end of <body>, so the navbar already exists.
+// Run straight away rather than on DOMContentLoaded, so that the wrong
+// highlight is never painted and then faded out by Bootstrap's transition.
+(function () {
+  // GitHub Pages serves /x, /x.html, / and /index.html, so compare paths
+  // without the "index.html" or ".html" ending.
+  // Links to other sites (e.g. a GitHub icon) never match the current page.
+  const norm = function (u) {
+    const url = new URL(u, location.href);
+    if (url.origin !== location.origin) return null;
+    return url.pathname
+      .replace(/index\.html$/, "")
+      .replace(/\.html$/, "");
+  };
+  document.querySelectorAll("#quarto-header .navbar-nav > .nav-item").forEach(
+    function (item) {
+      const toggle = item.querySelector(":scope > a.nav-link");
+      if (!toggle) return;
+      const targets = [toggle, ...item.querySelectorAll("a.dropdown-item")];
+      const match = targets.find(function (a) {
+        return a.getAttribute("href") && !a.classList.contains("dropdown-toggle") &&
+          norm(a.href) === norm(location.href);
+      });
+      // The top-level item is highlighted, but aria-current goes on the link
+      // for this page itself, not on a dropdown toggle that only holds it.
+      toggle.classList.toggle("active", Boolean(match));
+      targets.forEach(function (a) {
+        if (a === match) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+    }
+  );
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav.page-navigation");
+  if (!nav) return;
+
+  const make = function (dir, icon) {
+    const link = nav.querySelector(".nav-page-" + dir + " a.pagination-link");
+    if (!link) return null;
+    const title = link.querySelector(".nav-page-text")?.textContent.trim() || dir;
+    const arrow = document.createElement("a");
+    arrow.href = link.getAttribute("href");
+    arrow.className = "page-nav-arrow page-nav-arrow-" + dir;
+    arrow.title = (dir === "previous" ? "Previous: " : "Next: ") + title;
+    arrow.setAttribute("aria-label", arrow.title);
+    arrow.innerHTML = '<i class="bi ' + icon + '" aria-hidden="true"></i>';
+    document.body.appendChild(arrow);
+    return arrow;
+  };
+  const prev = make("previous", "bi-chevron-left");
+  const next = make("next", "bi-chevron-right");
+
+  const box = function (selector) {
+    const el = document.querySelector(selector);
+    if (!el || el.offsetWidth === 0) return null;
+    return el.getBoundingClientRect();
+  };
+  // Left edge that centres an arrow between x = from and x = to.
+  const centre = function (arrow, from, to) {
+    return (from + to - arrow.offsetWidth) / 2 + "px";
+  };
+
+  function place() {
+    const main = box("main.content");
+    if (!main) return;
+    if (prev) {
+      const sidebar = box("#quarto-sidebar");
+      prev.style.left = centre(prev, sidebar ? sidebar.right : 0, main.left);
+    }
+    if (next) {
+      const margin = box("#quarto-margin-sidebar");
+      const viewport = document.documentElement.clientWidth;
+      if (!margin) {
+        next.style.left = centre(next, main.right, viewport);
+      } else if (viewport - margin.right >= next.offsetWidth + 16) {
+        next.style.left = centre(next, margin.right, viewport);
+      } else {
+        next.style.left = centre(next, main.right, margin.left);
+      }
+    }
+  }
+  place();
+  window.addEventListener("resize", place);
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/morrison-lab\.github\.io\/mds\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./linear-algebra-rank-nullity.html" class="pagination-link" aria-label="Column Space, Null Space and Rank-Nullity">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Column Space, Null Space and Rank-Nullity</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./linear-algebra-inner-products.html" class="pagination-link" aria-label="Inner Products and Orthogonality">
+        <span class="nav-page-text">Inner Products and Orthogonality</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Direct Sums and Orthogonal Complements"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-direct-sums-slides.html</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-direct-sums-handout.pdf</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: linear-algebra-direct-sums.docx</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_subfiles/_sec_linear_algebra_direct_sums.qmd &gt;}}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/linear-algebra-direct-sums.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/linear-algebra-direct-sums.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
