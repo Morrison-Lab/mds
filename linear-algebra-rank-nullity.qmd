@@ -1,0 +1,15 @@
+---
+title: "Column Space, Null Space and Rank-Nullity"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-rank-nullity-slides.html
+  pdf:
+    output-file: linear-algebra-rank-nullity-handout.pdf
+  docx:
+    output-file: linear-algebra-rank-nullity.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd >}}

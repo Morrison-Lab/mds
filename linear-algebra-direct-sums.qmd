@@ -1,0 +1,15 @@
+---
+title: "Direct Sums and Orthogonal Complements"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-direct-sums-slides.html
+  pdf:
+    output-file: linear-algebra-direct-sums-handout.pdf
+  docx:
+    output-file: linear-algebra-direct-sums.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums.qmd >}}
