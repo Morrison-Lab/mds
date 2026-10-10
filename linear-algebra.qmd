@@ -17,8 +17,12 @@ The linear algebra notes are split across these pages:
 - [Matrices](linear-algebra-matrices.qmd):
   matrix arithmetic, matrix-vector products, linear and affine maps, and hyperplanes.
 - [Subspaces and Rank](linear-algebra-subspaces.qmd):
-  rank, subspaces, bases, column and null spaces, rank-nullity, direct sums,
-  orthogonal complements, and the fundamental theorem of linear algebra.
+  rank, subspaces, and bases.
+- [Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.qmd):
+  column and null spaces, the rank-nullity theorem, and rank factorization.
+- [Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.qmd):
+  sums and direct sums, orthogonal complements,
+  and the fundamental theorem of linear algebra.
 - [Inner Products and Orthogonality](linear-algebra-inner-products.qmd):
   inner products, the Cauchy-Schwarz and triangle inequalities, norms, angles,
   Gram-Schmidt, and outer products.
