@@ -50,7 +50,12 @@ website:
       - text: "Measures"
         href: measures.qmd
       - text: "Calculus"
-        href: calculus.qmd
+        menu:
+          - text: "Overview"
+            href: calculus.qmd
+          - calculus-derivatives.qmd
+          - calculus-integration.qmd
+          - calculus-double-integrals.qmd
       - text: "Linear Algebra"
         menu:
           - text: "Overview"
@@ -97,7 +102,12 @@ website:
           - algebra-exponentials.qmd
           - algebra-complex.qmd
       - measures.qmd
-      - calculus.qmd
+      - section: "Calculus"
+        href: calculus.qmd
+        contents:
+          - calculus-derivatives.qmd
+          - calculus-integration.qmd
+          - calculus-double-integrals.qmd
       - section: "Linear Algebra"
         href: linear-algebra.qmd
         contents:

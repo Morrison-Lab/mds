@@ -36,6 +36,11 @@ page-xrefs:
       - algebra-sums.qmd
       - algebra-exponentials.qmd
       - algebra-complex.qmd
+  - index: calculus.qmd
+    pages:
+      - calculus-derivatives.qmd
+      - calculus-integration.qmd
+      - calculus-double-integrals.qmd
   - index: linear-algebra.qmd
     pages:
       - linear-algebra-vectors.qmd

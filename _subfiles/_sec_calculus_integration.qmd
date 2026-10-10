@@ -1,0 +1,3 @@
+## Integration {#sec-integration}
+
+{{< include mds/_calc-integrals.qmd >}}

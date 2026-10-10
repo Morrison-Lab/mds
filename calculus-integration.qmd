@@ -1,0 +1,15 @@
+---
+title: "Integrals and the Fundamental Theorem of Calculus"
+format:
+  html: default
+  revealjs:
+    output-file: calculus-integration-slides.html
+  pdf:
+    output-file: calculus-integration-handout.pdf
+  docx:
+    output-file: calculus-integration.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_calculus_integration.qmd >}}
