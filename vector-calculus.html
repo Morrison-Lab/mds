@@ -87,7 +87,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./optimization.html" rel="next">
-<link href="./linear-algebra.html" rel="prev">
+<link href="./linear-algebra-complex.html" rel="prev">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -216,15 +216,15 @@ cookieconsent.run({
 </script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -236,46 +236,6 @@ div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -285,6 +245,16 @@ div.callout-exm.callout-style-default .callout-header {
 div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -296,6 +266,26 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -306,15 +296,25 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -541,10 +541,49 @@ window.Quarto = {
     <a class="nav-link" href="./calculus.html"> 
 <span class="menu-text">Calculus</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./linear-algebra.html"> 
-<span class="menu-text">Linear Algebra</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-linear-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Linear Algebra</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">
+<li>
+    <a class="dropdown-item" href="./linear-algebra.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-vectors.html">
+ <span class="dropdown-text">Vectors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-matrices.html">
+ <span class="dropdown-text">Matrices</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-subspaces.html">
+ <span class="dropdown-text">Subspaces and Rank</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-inner-products.html">
+ <span class="dropdown-text">Inner Products and Orthogonality</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-special-matrices.html">
+ <span class="dropdown-text">Special Matrices and Decompositions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-projections.html">
+ <span class="dropdown-text">Projections and Linear Systems</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-diagonalization.html">
+ <span class="dropdown-text">Diagonalization and Cholesky</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./linear-algebra-complex.html">
+ <span class="dropdown-text">Complex Vectors and Matrices</span></a>
+  </li>  
+    </ul>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="./vector-calculus.html"> 
 <span class="menu-text">Vector Calculus</span></a>
@@ -623,11 +662,64 @@ window.Quarto = {
  <span class="menu-text">Calculus</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Algebra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vectors</span></a>
   </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-subspaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Subspaces and Rank</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-inner-products.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inner Products and Orthogonality</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-special-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Special Matrices and Decompositions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-projections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projections and Linear Systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-diagonalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diagonalization and Cholesky</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear-algebra-complex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complex Vectors and Matrices</span></a>
+  </div>
+</li>
+      </ul>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -674,7 +766,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-09 13:04:05 (PDT)</p>
+      <p class="date">Last modified: 2026-10-09 22:14:55 (PDT)</p>
     </div>
   </div>
   
@@ -685,7 +777,7 @@ window.Quarto = {
 
 </header><p>(adapted from <span class="citation" data-cites="fieller2018basics">Fieller (<a href="#ref-fieller2018basics" role="doc-biblioref">2016</a>)</span>, <a href="https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&amp;refId=c310b723-786a-4f33-ae56-720a6cccd3a1">Section 7.2</a>)</p>
 <p>This section covers <a href="./calculus.html#def-derivative">derivatives</a> of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in <a href="./linear-algebra.html">Linear Algebra</a>.</p>
-<p>Let <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{\beta}\)</span> be column vectors of length <span class="math inline">\(p\)</span> (see <a href="./linear-algebra.html#def-column-vector">column vector</a> and <a href="./linear-algebra.html#def-dot-product">dot product</a>).</p>
+<p>Let <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{\beta}\)</span> be column vectors of length <span class="math inline">\(p\)</span> (see <a href="./linear-algebra-vectors.html#def-column-vector">column vector</a> and <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a>).</p>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1376,9 +1468,9 @@ Figure&nbsp;1: A gradient explorer: the red arrow points along the gradient at t
 <p><span class="proof-title"><em>Remark 1</em> (Which side the operator goes on). </span>Read <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}}\)</span> as a <span class="math inline">\(p \times 1\)</span> column vector of operators with entries <span class="math inline">\(\frac{\partial}{\partial \beta_{1}}, \ldots, \frac{\partial}{\partial \beta_{p}}\)</span>, and <span class="math inline">\(\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\)</span> as the <span class="math inline">\(1 \times p\)</span> row vector of operators with the same entries. Writing either one next to <span class="math inline">\(f\)</span> can be read in two ways:</p>
 <ul>
 <li>
-<strong>As a matrix product,</strong> with <span class="math inline">\(f\)</span> a <span class="math inline">\(1 \times 1\)</span> matrix, under the shape rule of <a href="./linear-algebra.html#def-matrix-mult">matrix multiplication</a>. The column-vector operator works on the left: <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} f\)</span> is <span class="math inline">\((p \times 1)(1 \times 1)\)</span>, a <span class="math inline">\(p \times 1\)</span> column vector (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>). The row-vector operator does not: <span class="math inline">\(\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\)</span> is <span class="math inline">\((1 \times p)(1 \times 1)\)</span>, whose inner dimensions <span class="math inline">\(p\)</span> and <span class="math inline">\(1\)</span> do not match when <span class="math inline">\(p &gt; 1\)</span>. For the shape rule to give the <span class="math inline">\(1 \times p\)</span> row vector, the operator would have to go on the right of <span class="math inline">\(f\)</span>, as in <span class="math inline">\((1 \times 1)(1 \times p)\)</span>, which changes its meaning (see below).</li>
+<strong>As a matrix product,</strong> with <span class="math inline">\(f\)</span> a <span class="math inline">\(1 \times 1\)</span> matrix, under the shape rule of <a href="./linear-algebra-matrices.html#def-matrix-mult">matrix multiplication</a>. The column-vector operator works on the left: <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} f\)</span> is <span class="math inline">\((p \times 1)(1 \times 1)\)</span>, a <span class="math inline">\(p \times 1\)</span> column vector (<a href="#def-vector-derivative" class="quarto-xref">Definition&nbsp;2</a>). The row-vector operator does not: <span class="math inline">\(\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\)</span> is <span class="math inline">\((1 \times p)(1 \times 1)\)</span>, whose inner dimensions <span class="math inline">\(p\)</span> and <span class="math inline">\(1\)</span> do not match when <span class="math inline">\(p &gt; 1\)</span>. For the shape rule to give the <span class="math inline">\(1 \times p\)</span> row vector, the operator would have to go on the right of <span class="math inline">\(f\)</span>, as in <span class="math inline">\((1 \times 1)(1 \times p)\)</span>, which changes its meaning (see below).</li>
 <li>
-<strong>As a scalar multiple,</strong> with <span class="math inline">\(f\)</span> a scalar, the way <span class="math inline">\(c \tilde{x}\)</span> is read in <a href="./linear-algebra.html#def-scalar-mult">scalar multiplication</a>, which has no shape rule: each entry of the operator vector is applied to <span class="math inline">\(f\)</span>. Then both <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} f\)</span> and <span class="math inline">\(\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\)</span> work with the operator on the left.</li>
+<strong>As a scalar multiple,</strong> with <span class="math inline">\(f\)</span> a scalar, the way <span class="math inline">\(c \tilde{x}\)</span> is read in <a href="./linear-algebra-matrices.html#def-scalar-mult">scalar multiplication</a>, which has no shape rule: each entry of the operator vector is applied to <span class="math inline">\(f\)</span>. Then both <span class="math inline">\(\frac{\partial}{\partial \tilde{\beta}} f\)</span> and <span class="math inline">\(\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\)</span> work with the operator on the left.</li>
 </ul>
 <p>The fraction <span class="math inline">\(\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\)</span> of <a href="#eq-row-vector-derivative" class="quarto-xref">Equation&nbsp;1</a> means the same thing under both readings: the transpose in the denominator says the result is a row vector, without making the derivative a product.</p>
 <p>Treating the operators as vectors is sound for checking shapes, but “multiplying” an operator by a function means applying the operator to it, so two rules of ordinary matrix algebra do not carry over: scalars commute with matrices, and products can be regrouped.</p>
@@ -2029,7 +2121,7 @@ x_{p}
 <div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-deriv-matrix-vector" class="quarto-xref">Theorem&nbsp;5</a> with the constant <span class="math inline">\(k \times q\)</span> matrix <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>, then use the <a href="./linear-algebra.html#thm-transpose-product">transpose of a product</a>:</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Apply <a href="#thm-deriv-matrix-vector" class="quarto-xref">Theorem&nbsp;5</a> with the constant <span class="math inline">\(k \times q\)</span> matrix <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>, then use the <a href="./linear-algebra-matrices.html#thm-transpose-product">transpose of a product</a>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\beta}} (\mathbf{A} \mathbf{B} \tilde{v})
@@ -2102,7 +2194,7 @@ x_{p}
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Using <a href="#thm-deriv-lincom" class="quarto-xref">Theorem&nbsp;2</a>:</strong></p>
-<p>Since <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\)</span> (see <a href="./linear-algebra.html#def-dot-product">dot product</a>), and <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>:</p>
+<p>Since <span class="math inline">\({\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\)</span> (see <a href="./linear-algebra-vectors.html#def-dot-product">dot product</a>), and <span class="math inline">\(\tilde{x}\)</span> is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta})
@@ -2181,7 +2273,7 @@ x_{p}
 </div>
 <div class="callout-body-container">
 <div id="thm-quadratic-form" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Derivative of a quadratic form)</strong></span> For a quadratic form (see <a href="./linear-algebra.html#def-quadratic-form">quadratic form</a>), if <span class="math inline">\(\mathbf{S}\)</span> is a symmetric <span class="math inline">\(p \times p\)</span> matrix that is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>, then:</p>
+<p><span class="theorem-title"><strong>Theorem 7 (Derivative of a quadratic form)</strong></span> For a quadratic form (see <a href="./linear-algebra-special-matrices.html#def-quadratic-form">quadratic form</a>), if <span class="math inline">\(\mathbf{S}\)</span> is a symmetric <span class="math inline">\(p \times p\)</span> matrix that is constant with respect to <span class="math inline">\(\tilde{\beta}\)</span>, then:</p>
 <p><span class="math display">\[
 \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}_{p \times 1} = \underbrace{2 \mathbf{S} \tilde{\beta}}_{p \times 1}
 \]</span></p>
@@ -2349,7 +2441,7 @@ x_{p}
 &amp;= \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2
 \end{aligned}
 \]</span></p>
-<p>is the <strong>residual sum of squares</strong>. A <a href="./linear-algebra.html#def-least-squares">least squares solution</a> of <span class="math inline">\(\mathbf{X}\tilde{\beta}= \tilde{y}\)</span> makes <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\)</span> as small as possible, and so makes the residual sum of squares as small as possible too.</p>
+<p>is the <strong>residual sum of squares</strong>. A <a href="./linear-algebra-projections.html#def-least-squares">least squares solution</a> of <span class="math inline">\(\mathbf{X}\tilde{\beta}= \tilde{y}\)</span> makes <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\)</span> as small as possible, and so makes the residual sum of squares as small as possible too.</p>
 </div>
 </div>
 </div>
@@ -2615,7 +2707,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 &amp;= X_{11} + X_{22}
 \end{aligned}
 \]</span></p>
-<p>(see <a href="./linear-algebra.html#def-trace">trace</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
+<p>(see <a href="./linear-algebra-special-matrices.html#def-trace">trace</a>). Then <span class="math inline">\(\frac{\partial}{\partial X_{ij}} f = 1\)</span> if <span class="math inline">\(i = j\)</span> and <span class="math inline">\(0\)</span> otherwise, so:</p>
 <p><span class="math display">\[
 \frac{\partial}{\partial \mathbf{X}} f = \mathbf{I}_2
 \]</span></p>
@@ -2773,7 +2865,7 @@ f(\mathbf{X}) &amp;= \operatorname{tr}(\mathbf{X}) \\
 </div>
 <div class="callout-body-container">
 <div id="def-ball" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Open and closed balls)</strong></span> Let <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> and <span class="math inline">\(r &gt; 0\)</span>. The <strong>open ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is the set <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; r\right\}\mathclose{}\)</span>, of points whose distance from <span class="math inline">\(\tilde{x}\)</span> (the <a href="./linear-algebra.html#def-euclidean-norm">Euclidean norm</a> of the difference) is less than <span class="math inline">\(r\)</span>. The <strong>closed ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span>. The open and closed balls of radius <span class="math inline">\(1\)</span> around <span class="math inline">\(\tilde{0}\)</span> are the open and closed <strong>unit balls</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Open and closed balls)</strong></span> Let <span class="math inline">\(\tilde{x}\in \mathbb{R}^p\)</span> and <span class="math inline">\(r &gt; 0\)</span>. The <strong>open ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is the set <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} &lt; r\right\}\mathclose{}\)</span>, of points whose distance from <span class="math inline">\(\tilde{x}\)</span> (the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a> of the difference) is less than <span class="math inline">\(r\)</span>. The <strong>closed ball</strong> of radius <span class="math inline">\(r\)</span> around <span class="math inline">\(\tilde{x}\)</span> is <span class="math inline">\(\mathopen{}\left\{\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\}\mathclose{}\)</span>. The open and closed balls of radius <span class="math inline">\(1\)</span> around <span class="math inline">\(\tilde{0}\)</span> are the open and closed <strong>unit balls</strong>.</p>
 </div>
 </div>
 </div>
@@ -3291,7 +3383,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 </div>
 <div class="callout-body-container">
 <div id="thm-hessian-symmetric" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 12 (Symmetry of the Hessian)</strong></span> If the second partial derivatives of <span class="math inline">\(f\)</span> exist and are continuous (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;14</a>) on an open ball around <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;11</a>), then <span class="math inline">\(\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\)</span> for all <span class="math inline">\(i, j\)</span>, so <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;13</a>) is symmetric (<a href="./linear-algebra.html#def-symmetric-matrix">symmetric matrix</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 12 (Symmetry of the Hessian)</strong></span> If the second partial derivatives of <span class="math inline">\(f\)</span> exist and are continuous (<a href="#def-continuous-several" class="quarto-xref">Definition&nbsp;14</a>) on an open ball around <span class="math inline">\(\tilde{x}\)</span> (<a href="#def-ball" class="quarto-xref">Definition&nbsp;11</a>), then <span class="math inline">\(\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\)</span> for all <span class="math inline">\(i, j\)</span>, so <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> (<a href="#def-hessian" class="quarto-xref">Definition&nbsp;13</a>) is symmetric (<a href="./linear-algebra-special-matrices.html#def-symmetric-matrix">symmetric matrix</a>).</p>
 </div>
 </div>
 </div>
@@ -3436,7 +3528,7 @@ f(h, 0) &amp;= \frac{h \cdot 0}{h^2 + 0} \\
 <li>
 <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span> The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.</li>
 </ul>
-<p>See also the <a href="./linear-algebra.html#sec-additional-resources">Linear Algebra and Vector Calculus further reading</a>.</p>
+<p>See also the <a href="#sec-additional-resources">Linear Algebra and Vector Calculus further reading</a>.</p>
 <ul>
 <li>
 <a href="https://hua-zhou.github.io/">Hua Zhou</a>’s <a href="https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html">lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)</a>
@@ -4343,8 +4435,8 @@ window._ojs.runtime.interpretFromScriptTags();
     }
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./linear-algebra.html" class="pagination-link" aria-label="Linear Algebra">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Linear Algebra</span>
+      <a href="./linear-algebra-complex.html" class="pagination-link" aria-label="Complex Vectors and Matrices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Complex Vectors and Matrices</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

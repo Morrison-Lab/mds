@@ -14,13 +14,13 @@ Code
 
 Published
 
-Last modified: 2026-10-09 13:04:05 (PDT)
+Last modified: 2026-10-09 22:14:55 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
 This section covers [derivatives](calculus.llms.md#def-derivative) of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in [Linear Algebra](linear-algebra.llms.md).
 
-Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [column vector](linear-algebra.llms.md#def-column-vector) and [dot product](linear-algebra.llms.md#def-dot-product)).
+Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [column vector](linear-algebra-vectors.llms.md#def-column-vector) and [dot product](linear-algebra-vectors.llms.md#def-dot-product)).
 
 > **NOTE:**
 >
@@ -332,8 +332,8 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Remark 1* (Which side the operator goes on). Read \\\frac{\partial}{\partial \tilde{\beta}}\\ as a \\p \times 1\\ column vector of operators with entries \\\frac{\partial}{\partial \beta\_{1}}, \ldots, \frac{\partial}{\partial \beta\_{p}}\\, and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}}\\ as the \\1 \times p\\ row vector of operators with the same entries. Writing either one next to \\f\\ can be read in two ways:
 >
-> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra.llms.md#def-matrix-mult). The column-vector operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column vector ([Definition 2](#def-vector-derivative)). The row-vector operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row vector, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
-> - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \tilde{x}\\ is read in [scalar multiplication](linear-algebra.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \tilde{\beta}} f\\ and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ work with the operator on the left.
+> - **As a matrix product,** with \\f\\ a \\1 \times 1\\ matrix, under the shape rule of [matrix multiplication](linear-algebra-matrices.llms.md#def-matrix-mult). The column-vector operator works on the left: \\\frac{\partial}{\partial \tilde{\beta}} f\\ is \\(p \times 1)(1 \times 1)\\, a \\p \times 1\\ column vector ([Definition 2](#def-vector-derivative)). The row-vector operator does not: \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ is \\(1 \times p)(1 \times 1)\\, whose inner dimensions \\p\\ and \\1\\ do not match when \\p \> 1\\. For the shape rule to give the \\1 \times p\\ row vector, the operator would have to go on the right of \\f\\, as in \\(1 \times 1)(1 \times p)\\, which changes its meaning (see below).
+> - **As a scalar multiple,** with \\f\\ a scalar, the way \\c \tilde{x}\\ is read in [scalar multiplication](linear-algebra-matrices.llms.md#def-scalar-mult), which has no shape rule: each entry of the operator vector is applied to \\f\\. Then both \\\frac{\partial}{\partial \tilde{\beta}} f\\ and \\\frac{\partial}{\partial {\tilde{\beta}}^{\top}} f\\ work with the operator on the left.
 >
 > The fraction \\\frac{\partial f}{\partial {\tilde{\beta}}^{\top}}\\ of [Equation 1](#eq-row-vector-derivative) means the same thing under both readings: the transpose in the denominator says the result is a row vector, without making the derivative a product.
 >
@@ -540,7 +540,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 5](#thm-deriv-matrix-vector) with the constant \\k \times q\\ matrix \\\mathbf{A}\mathbf{B}\\, then use the [transpose of a product](linear-algebra.llms.md#thm-transpose-product):
+> *Proof*. Apply [Theorem 5](#thm-deriv-matrix-vector) with the constant \\k \times q\\ matrix \\\mathbf{A}\mathbf{B}\\, then use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product):
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}} (\mathbf{A} \mathbf{B} \tilde{v}) &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {(\mathbf{A}\mathbf{B})}^{\top} && \text{(derivative of a matrix-vector product)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top} && \text{(transpose of a product)} \end{aligned} \\
 
@@ -560,7 +560,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > *Proof*. **Using [Theorem 2](#thm-deriv-lincom):**
 >
-> Since \\{\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\\ (see [dot product](linear-algebra.llms.md#def-dot-product)), and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\:
+> Since \\{\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\\ (see [dot product](linear-algebra-vectors.llms.md#def-dot-product)), and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\:
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta}) \\ &= \tilde{x} \end{aligned} \\
 >
@@ -586,7 +586,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Theorem 7 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 7 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{2 \mathbf{S} \tilde{\beta}}\_{p \times 1} \\
 
@@ -642,7 +642,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 >
 > \\ \begin{aligned} \tilde{\varepsilon}\cdot \tilde{\varepsilon} &= \sum\_{i=1}^n\tilde{\varepsilon}\_i^2 \\ &= \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \end{aligned} \\
 >
-> is the **residual sum of squares**. A [least squares solution](linear-algebra.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares as small as possible too.
+> is the **residual sum of squares**. A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares as small as possible too.
 
 > **NOTE:**
 >
@@ -740,7 +740,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > \\ \begin{aligned} f(\mathbf{X}) &= \operatorname{tr}(\mathbf{X}) \\ &= X\_{11} + X\_{22} \end{aligned} \\
 >
-> (see [trace](linear-algebra.llms.md#def-trace)). Then \\\frac{\partial}{\partial X\_{ij}} f = 1\\ if \\i = j\\ and \\0\\ otherwise, so:
+> (see [trace](linear-algebra-special-matrices.llms.md#def-trace)). Then \\\frac{\partial}{\partial X\_{ij}} f = 1\\ if \\i = j\\ and \\0\\ otherwise, so:
 >
 > \\ \frac{\partial}{\partial \mathbf{X}} f = \mathbf{I}\_2 \\
 
@@ -806,7 +806,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 11 (Open and closed balls)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra.llms.md#def-euclidean-norm) of the difference) is less than \\r\\. The **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\. The open and closed balls of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
+> **Definition 11 (Open and closed balls)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\. The **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\. The open and closed balls of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
 
 > **NOTE:**
 >
@@ -1053,7 +1053,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 12 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 14](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 13](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra.llms.md#def-symmetric-matrix)).
+> **Theorem 12 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 14](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 11](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 13](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
 
 The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
 
@@ -1097,7 +1097,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 - Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.
 - Miller ([2016](#ref-problifesavercalc)) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.
 
-See also the [Linear Algebra and Vector Calculus further reading](linear-algebra.llms.md#sec-additional-resources).
+See also the [Linear Algebra and Vector Calculus further reading](#sec-additional-resources).
 
 - [Hua Zhou](https://hua-zhou.github.io/)’s [lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)](https://ucla-biostat-216.github.io/2023fall/schedule/schedule.html)
 - [Neural Networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization.

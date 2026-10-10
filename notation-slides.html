@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-09 13:04:05 (PDT)</p>
+  <p class="date">Last modified: 2026-10-09 22:14:55 (PDT)</p>
 </section><section class="slide level2 scrollable"><p>Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.</p>
 <div id="tbl-notation-collected" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notation-collected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -476,7 +476,7 @@ Table&nbsp;1: Notation used in this book
 </figure>
 </div>
 <p>The links for conditioning, random variables, expectation, and independence go to the Morrison Lab’s probability notes, which define those terms.</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>depending on whether it is applied to a matrix or a function</p></li><li id="fn2"><p>A generalized linear model (GLM) is a regression model in which a chosen function <span class="math inline">\(g\)</span>, the link function, of the mean <span class="math inline">\(\mu\)</span> of the outcome equals the linear predictor <span class="math inline">\(\eta = x^{\top} \beta\)</span>, a <a href="./linear-algebra.html#def-linear-combination">linear combination</a> of the predictor values <span class="math inline">\(x\)</span> with coefficients <span class="math inline">\(\beta\)</span>: <span class="math inline">\(g(\mu) = \eta\)</span>.</p></li></ol></aside></section><section id="sec-writing-math-quarto" class="slide level2" data-number="1"><h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>depending on whether it is applied to a matrix or a function</p></li><li id="fn2"><p>A generalized linear model (GLM) is a regression model in which a chosen function <span class="math inline">\(g\)</span>, the link function, of the mean <span class="math inline">\(\mu\)</span> of the outcome equals the linear predictor <span class="math inline">\(\eta = x^{\top} \beta\)</span>, a <a href="./linear-algebra-vectors.html#def-linear-combination">linear combination</a> of the predictor values <span class="math inline">\(x\)</span> with coefficients <span class="math inline">\(\beta\)</span>: <span class="math inline">\(g(\mu) = \eta\)</span>.</p></li></ol></aside></section><section id="sec-writing-math-quarto" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Writing math in Quarto</h2>
 <p>The third column of <a href="#/tbl-notation-collected" class="quarto-xref">Table&nbsp;1</a> gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in <code>$x^2$</code>, and displayed equations between double dollar signs, as in <code>$$x^2$$</code>. The <a href="https://quarto.org/docs/authoring/markdown-basics.html#equations">equations section of Quarto’s Markdown guide</a> shows the details. These notes also use shorthand macros, such as <code>\floor{x}</code> for <span class="math inline">\(\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\)</span>, defined in the <code>latex-macros</code> submodule’s <code>macros.qmd</code>.</p>
 </section><section id="sec-notation-naturals" class="slide level2" data-number="2"><h2>
@@ -1242,7 +1242,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 \]</span></p>
 </li>
 </ul>
-<p>The <a href="./linear-algebra.html#def-idempotent-matrix">idempotent matrices</a> of linear algebra satisfy the same equation with matrix multiplication: <span class="math inline">\(\mathbf{M}^2 = \mathbf{M}\)</span> for a square matrix <span class="math inline">\(\mathbf{M}\)</span>.</p>
+<p>The <a href="./linear-algebra-special-matrices.html#def-idempotent-matrix">idempotent matrices</a> of linear algebra satisfy the same equation with matrix multiplication: <span class="math inline">\(\mathbf{M}^2 = \mathbf{M}\)</span> for a square matrix <span class="math inline">\(\mathbf{M}\)</span>.</p>
 </div>
 </section><section class="slide level2"><p>For subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of <span class="math inline">\(\Omega\)</span>, with <a href="./sets-functions.html#def-complement">complement</a> <span class="math inline">\(A^c \stackrel{\text{def}}{=}\Omega\setminus A\)</span>, and for every <span class="math inline">\(x \in \Omega\)</span>:</p>
 <ul>

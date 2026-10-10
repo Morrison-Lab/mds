@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 13:04:05 (PDT)
+Last modified: 2026-10-09 22:14:55 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -665,7 +665,7 @@ Indicator functions translate the logical connectives ([Definition 11](#def-log
 >
 >   \\ \begin{aligned} \mathbb{1}\_{A}(3.5) \cdot\mathbb{1}\_{A}(3.5) &= 1 \cdot 1 \\ &= 1 \\ &= \mathbb{1}\_{A}(3.5). \end{aligned} \\
 >
-> The [idempotent matrices](linear-algebra.llms.md#def-idempotent-matrix) of linear algebra satisfy the same equation with matrix multiplication: \\\mathbf{M}^2 = \mathbf{M}\\ for a square matrix \\\mathbf{M}\\.
+> The [idempotent matrices](linear-algebra-special-matrices.llms.md#def-idempotent-matrix) of linear algebra satisfy the same equation with matrix multiplication: \\\mathbf{M}^2 = \mathbf{M}\\ for a square matrix \\\mathbf{M}\\.
 
 For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms.md#def-complement) \\A^c \stackrel{\text{def}}{=}\Omega\setminus A\\, and for every \\x \in \Omega\\:
 
@@ -782,4 +782,4 @@ Back to top
 
 [^1]: depending on whether it is applied to a matrix or a function
 
-[^2]: A generalized linear model (GLM) is a regression model in which a chosen function \\g\\, the link function, of the mean \\\mu\\ of the outcome equals the linear predictor \\\eta = x^{\top} \beta\\, a [linear combination](linear-algebra.llms.md#def-linear-combination) of the predictor values \\x\\ with coefficients \\\beta\\: \\g(\mu) = \eta\\.
+[^2]: A generalized linear model (GLM) is a regression model in which a chosen function \\g\\, the link function, of the mean \\\mu\\ of the outcome equals the linear predictor \\\eta = x^{\top} \beta\\, a [linear combination](linear-algebra-vectors.llms.md#def-linear-combination) of the predictor values \\x\\ with coefficients \\\beta\\: \\g(\mu) = \eta\\.

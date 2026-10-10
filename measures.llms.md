@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-09 13:04:05 (PDT)
+Last modified: 2026-10-09 22:14:55 (PDT)
 
 > **NOTE:**
 >
@@ -598,7 +598,7 @@ Last modified: 2026-10-09 13:04:05 (PDT)
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \stackrel{\text{def}}{=}\mathopen{}\left(\int_S \mathopen{}\left\|f\right\|\mathclose{}^p \\ d\mu\right)\mathclose{}^{1/p}. \\
 >
-> The space \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ consists of all measurable functions \\f : S \to \mathbb{R}\\ for which \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\. To satisfy the definiteness axiom of a [norm](linear-algebra.llms.md#def-norm) (\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p = 0\\ if and only if \\f = 0\\), functions that are equal [almost everywhere](#def-almost-everywhere) (\\\mu\\-a.e.) are identified into equivalence classes. The resulting normed vector space is the **\\L^p\\ space**, denoted \\L^p(S, \mathcal{S}, \mu)\\ (or simply \\L^p(\mu)\\).
+> The space \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ consists of all measurable functions \\f : S \to \mathbb{R}\\ for which \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\. To satisfy the definiteness axiom of a [norm](linear-algebra-inner-products.llms.md#def-norm) (\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p = 0\\ if and only if \\f = 0\\), functions that are equal [almost everywhere](#def-almost-everywhere) (\\\mu\\-a.e.) are identified into equivalence classes. The resulting normed vector space is the **\\L^p\\ space**, denoted \\L^p(S, \mathcal{S}, \mu)\\ (or simply \\L^p(\mu)\\).
 >
 > For \\p = \infty\\, the **essential supremum norm** (or **\\L^\infty\\ norm**) is:
 >
@@ -633,7 +633,7 @@ Last modified: 2026-10-09 13:04:05 (PDT)
 >
 > \\ \mathopen{}\left\lVert f + g\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p + \mathopen{}\left\lVert g\right\rVert\mathclose{}\_p. \\
 >
-> Together with absolute homogeneity \\\mathopen{}\left\lVert c f\right\rVert\mathclose{}\_p = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\ and definiteness, Minkowski’s inequality establishes that \\L^p(\mu)\\ satisfies all axioms of a [normed vector space](linear-algebra.llms.md#def-norm).
+> Together with absolute homogeneity \\\mathopen{}\left\lVert c f\right\rVert\mathclose{}\_p = \mathopen{}\left\|c\right\|\mathclose{}\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\ and definiteness, Minkowski’s inequality establishes that \\L^p(\mu)\\ satisfies all axioms of a [normed vector space](linear-algebra-inner-products.llms.md#def-norm).
 
 > **NOTE:**
 >
@@ -643,7 +643,7 @@ Last modified: 2026-10-09 13:04:05 (PDT)
 >
 >     \\ \begin{aligned} p &= q \\ &= 2 \end{aligned} \\
 >
->     gives the standard vector [Cauchy-Schwarz inequality](linear-algebra.llms.md#thm-cauchy-schwarz).
+>     gives the standard vector [Cauchy-Schwarz inequality](linear-algebra-inner-products.llms.md#thm-cauchy-schwarz).
 >
 > 2.  **Covariance bound for random variables**: On a probability space with measure \\\operatorname{P}\\ ([Definition 19](#def-probability-measure)), taking
 >
@@ -657,7 +657,7 @@ Last modified: 2026-10-09 13:04:05 (PDT)
 >
 > 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu= \operatorname{P}\\ is a probability measure ([Definition 19](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
 >
-> 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
+> 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
 >
 > 3.  **Loss functions, estimation, and robustness**: The choice of \\p\\ in \\L^p\\ norms defines loss functions for optimization and regression:
 >
