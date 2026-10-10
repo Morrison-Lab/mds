@@ -23,7 +23,23 @@ filters:
   - code-language-labels
   - revealjs-level1-slide-breaks.lua
   - revealjs-html-links.lua
+  - page-xrefs.lua
   - math-xrefs.lua
+
+# The pages of a chapter split across several pages, for page-xrefs.lua,
+# which resolves @id references from one of them to another, and sends
+# links to the old single page (index#id) on to the page holding #id.
+page-xrefs:
+  - index: linear-algebra.qmd
+    pages:
+      - linear-algebra-vectors.qmd
+      - linear-algebra-matrices.qmd
+      - linear-algebra-subspaces.qmd
+      - linear-algebra-inner-products.qmd
+      - linear-algebra-special-matrices.qmd
+      - linear-algebra-projections.qmd
+      - linear-algebra-diagonalization.qmd
+      - linear-algebra-complex.qmd
 
 format:
   pdf:

@@ -1,0 +1,15 @@
+---
+title: "Complex Vectors and Matrices"
+format:
+  html: default
+  revealjs:
+    output-file: linear-algebra-complex-slides.html
+  pdf:
+    output-file: linear-algebra-complex-handout.pdf
+  docx:
+    output-file: linear-algebra-complex.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_complex.qmd >}}
