@@ -145,11 +145,6 @@ local function scan(path, root, fmt)
   return { title = title, ids = ids }
 end
 
--- Test hook: tools can load this file with PAGE_XREFS_TEST set to call scan.
-if PAGE_XREFS_TEST then
-  return { scan = scan }
-end
-
 local function current_format()
   if quarto.doc.is_format("revealjs") then return "revealjs" end
   if quarto.doc.is_format("html") then return "html" end
@@ -251,11 +246,12 @@ local function link(el)
     for _, group in ipairs(groups) do
       local index = stem(group.index)
       if page == group.index or page == index .. ".html" then
-        t = targets[id]
-        if t and t.page == this_page then
+        if local_ids[id] ~= nil then
+          -- The target is on this page: link to it directly, not through the index.
           el.target = "#" .. id
           return el
         end
+        t = targets[id]
       end
     end
   end

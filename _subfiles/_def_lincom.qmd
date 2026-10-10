@@ -81,7 +81,7 @@ is the linear combination of $4$, $5$, and $6$
 with coefficients $1$, $2$, and $3$.
 
 The dot product is also the standard *inner product* on $\reals^p$;
-"inner product" is the general notion (@def-inner-product, later on this page),
+"inner product" is the general notion (@def-inner-product, later in these notes),
 of which the dot product is one example.
 
 :::
