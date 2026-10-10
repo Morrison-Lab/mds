@@ -1,0 +1,15 @@
+---
+title: "Double Integrals and Fubini's Theorem"
+format:
+  html: default
+  revealjs:
+    output-file: calculus-double-integrals-slides.html
+  pdf:
+    output-file: calculus-double-integrals-handout.pdf
+  docx:
+    output-file: calculus-double-integrals.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_calculus_double_integrals.qmd >}}

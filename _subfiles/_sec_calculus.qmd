@@ -1,0 +1,7 @@
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_calculus_derivatives.qmd >}}
+
+{{< include mds/_subfiles/_sec_calculus_integration.qmd >}}
+
+{{< include mds/_subfiles/_sec_calculus_double_integrals.qmd >}}
