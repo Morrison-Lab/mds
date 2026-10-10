@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 > **NOTE:**
 >
@@ -404,7 +404,7 @@ Last modified: 2026-10-10 10:38:55 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 15](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Fubini–Tonelli theorem](calculus.llms.md#thm-fubini-tonelli).
+> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 15](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Fubini–Tonelli theorem](calculus-double-integrals.llms.md#thm-fubini-tonelli).
 
 > **NOTE:**
 >
@@ -514,7 +514,7 @@ Last modified: 2026-10-10 10:38:55 (PDT)
 
 > **NOTE:**
 >
-> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 21](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda= \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
+> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 21](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus-integration.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda= \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
 
 > **NOTE:**
 >

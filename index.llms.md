@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 ## Welcome
 
@@ -18,7 +18,7 @@ These notes collect the mathematics that data science courses assume: mathematic
 - [Sets and Functions](sets-functions.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
 - [Algebra](algebra.llms.md): equalities and [inequalities](notation.llms.md#def-inequality), infimum and supremum, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
-- [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus.llms.md#def-continuous), [differentiability](calculus.llms.md#def-differentiable), and [integrability](calculus.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
+- [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent

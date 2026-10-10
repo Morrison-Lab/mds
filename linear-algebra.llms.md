@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 The linear algebra notes are split across these pages:
 
@@ -28,7 +28,7 @@ A link to a section, theorem or definition on this page from before the split go
 - Fieller ([2016](#ref-fieller2018basics))
 - Banerjee and Roy ([2014](#ref-banerjee2014linear))
 - Searle and Khuri ([2017](#ref-searle2017matrix))
-- Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and [derivatives](calculus.llms.md#def-derivative) of vectors and matrices, so it is a quick place to look up a formula these pages prove.
+- Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and [derivatives](calculus-derivatives.llms.md#def-derivative) of vectors and matrices, so it is a quick place to look up a formula these pages prove.
 - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.
 
 ## References

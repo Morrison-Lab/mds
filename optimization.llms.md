@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 ## 1 Optimality conditions in several variables
 
 > **NOTE:**
 >
-> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](notation.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](notation.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
 >
 > - its one-variable Taylor example and its plots
 > - matrix calculus
@@ -18,11 +18,11 @@ Last modified: 2026-10-10 10:38:55 (PDT)
 > - Lagrange multipliers
 > - Newton’s method and gradient descent
 
-A local minimizer of a differentiable function on an open interval is a [flat point](calculus.llms.md#def-flat-point), and, at a flat point, a positive [second derivative](calculus.llms.md#def-second-derivative) guarantees a strict local minimum. This section extends both facts to a function \\f\\ of a \\p \times 1\\ vector \\\tilde{x}\\: the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([gradient](vector-calculus.llms.md#def-vector-derivative)) takes the place of the first derivative, and a \\p \times p\\ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every \\p \ge 1\\. Throughout, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\ means the gradient evaluated at \\\tilde{x}= \tilde{z}\\.
+A local minimizer of a differentiable function on an open interval is a [flat point](calculus-derivatives.llms.md#def-flat-point), and, at a flat point, a positive [second derivative](calculus-derivatives.llms.md#def-second-derivative) guarantees a strict local minimum. This section extends both facts to a function \\f\\ of a \\p \times 1\\ vector \\\tilde{x}\\: the gradient \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ ([gradient](vector-calculus.llms.md#def-vector-derivative)) takes the place of the first derivative, and a \\p \times p\\ matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every \\p \ge 1\\. Throughout, \\\frac{\partial}{\partial \tilde{x}} f(\tilde{z})\\ means the gradient evaluated at \\\tilde{x}= \tilde{z}\\.
 
 > **NOTE:**
 >
-> **Theorem 1 (A minimizer has derivative zero)** Let \\g\\ be a [real](notation.llms.md#def-real-numbers)-valued function on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\, and let \\g\\ be [differentiable](calculus.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\.
+> **Theorem 1 (A minimizer has derivative zero)** Let \\g\\ be a [real](notation.llms.md#def-real-numbers)-valued function on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\, and let \\g\\ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\.
 
 > **NOTE:**
 >
@@ -30,7 +30,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 > \\ \frac{g(c + h) - g(c)}{h} \ge 0, \\
 >
-> because its numerator is at least \\0\\ and its denominator is positive. As \\h \to 0\\ from the right, these quotients tend to \\g'(c)\\ (the two-sided limit exists, so the [one-sided limit](calculus.llms.md#def-one-sided-limit) equals it), and a limit of numbers that are all at least \\0\\ is at least \\0\\; so \\g'(c) \ge 0\\. For \\-\delta\< h \< 0\\, the numerator is still at least \\0\\ but the denominator is negative, so the quotient is at most \\0\\, and in the same way, with \\h \to 0\\ from the left, \\g'(c) \le 0\\. Together, \\g'(c) = 0\\.
+> because its numerator is at least \\0\\ and its denominator is positive. As \\h \to 0\\ from the right, these quotients tend to \\g'(c)\\ (the two-sided limit exists, so the [one-sided limit](calculus-derivatives.llms.md#def-one-sided-limit) equals it), and a limit of numbers that are all at least \\0\\ is at least \\0\\; so \\g'(c) \ge 0\\. For \\-\delta\< h \< 0\\, the numerator is still at least \\0\\ but the denominator is negative, so the quotient is at most \\0\\, and in the same way, with \\h \to 0\\ from the left, \\g'(c) \le 0\\. Together, \\g'(c) = 0\\.
 
 > **NOTE:**
 >
@@ -58,7 +58,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 > \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{z}) = \tilde{0}\_{p \times 1} \\
 >
-> is a **stationary point** of \\f\\. For \\p = 1\\, this is a [flat point](calculus.llms.md#def-flat-point).
+> is a **stationary point** of \\f\\. For \\p = 1\\, this is a [flat point](calculus-derivatives.llms.md#def-flat-point).
 
 > **NOTE:**
 >
@@ -192,7 +192,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Theorem 3 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau\in (a, b)\\ with
+> **Theorem 3 (Taylor’s theorem with a second-order remainder)** Let \\a \< b\\, and let \\g\\ be a real-valued function on \\\[a, b\]\\ whose derivative \\g'\\ is [continuous](calculus-integration.llms.md#def-continuous) on \\\[a, b\]\\ and whose [second derivative](calculus-derivatives.llms.md#def-second-derivative) \\g''\\ exists at every point of \\(a, b)\\. Then there is a \\\tau\in (a, b)\\ with
 >
 > \\ g(b) = g(a) + g'(a)\\(b - a) + \frac{1}{2}\\g''(\tau)\\(b - a)^2. \\
 
@@ -483,7 +483,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \tilde{x}\mapsto f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}), \\
 >
-> which takes the value \\f(\tilde{y})\\ at \\\tilde{x}= \tilde{y}\\ and has the same gradient as \\f\\ there. For \\p = 1\\ it is the [tangent line](calculus.llms.md#def-tangent-line) \\s = f(y) + f'(y)\\(x - y)\\, the line through \\(y, f(y))\\ with slope \\f'(y)\\.
+> which takes the value \\f(\tilde{y})\\ at \\\tilde{x}= \tilde{y}\\ and has the same gradient as \\f\\ there. For \\p = 1\\ it is the [tangent line](calculus-derivatives.llms.md#def-tangent-line) \\s = f(y) + f'(y)\\(x - y)\\, the line through \\(y, f(y))\\ with slope \\f'(y)\\.
 
 > **NOTE:**
 >

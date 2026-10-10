@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -21,7 +21,7 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\mu\\ | mean, \\\operatorname{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
 | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
 | \\x^{\top}\\ | transpose of \\x\\ | `x\'` |
-| \\'\\ | transpose or [derivative](calculus.llms.md#def-derivative)[^1] | `'` |
+| \\'\\ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
 | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
 | \\\therefore\\ | [therefore](#def-logical-entailment), thus | `\therefore` |
 | \\\eta\\ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
@@ -691,7 +691,7 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> **Definition 29 (Lower and upper limits of a sum or integral)** In a [sum](algebra.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
+> **Definition 29 (Lower and upper limits of a sum or integral)** In a [sum](algebra.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
 
 > **NOTE:**
 >
@@ -702,7 +702,7 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 29](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus.llms.md#def-limit) or the [limit of a sequence](algebra.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
+> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 29](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
 
 > **NOTE:**
 >
@@ -743,7 +743,7 @@ Table 3: Common notational shorthands and their full forms
 
 > **NOTE:**
 >
-> *Remark 5* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
+> *Remark 5* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus-integration.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
 
 > **NOTE:**
 >

@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-10 10:38:55 (PDT)</p>
+  <p class="date">Last modified: 2026-10-10 11:17:20 (PDT)</p>
 </section><section class="slide level2 scrollable"><p>Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.</p>
 <div id="tbl-notation-collected" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notation-collected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -427,7 +427,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="even">
 <td><span class="math inline">\('\)</span></td>
-<td>transpose or <a href="./calculus.html#def-derivative">derivative</a><sup>1</sup>
+<td>transpose or <a href="./calculus-derivatives.html#def-derivative">derivative</a><sup>1</sup>
 </td>
 <td><code>'</code></td>
 </tr>
@@ -1269,7 +1269,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </ul></section><section id="sec-notational-shorthands" class="slide level2" data-number="7"><h2>
 <span class="header-section-number">7</span> Notational shorthands</h2>
 <div id="def-lower-upper-limits" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 29 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</p>
+<p><span class="theorem-title"><strong>Definition 29 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</p>
 </div>
 </section><section class="slide level2"><div id="exm-lower-upper-limits" class="theorem example">
 <p><span class="theorem-title"><strong>Example 30 (Reading off limits)</strong></span> &nbsp;</p>
@@ -1279,7 +1279,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </ul>
 </div>
 </section><section class="slide level2"><div id="rem-limits-two-meanings" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;29</a>) are not limits in the calculus sense, such as the <a href="./calculus.html#def-limit">limit of a function</a> or the <a href="./algebra.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;29</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
 </div>
 </section><section class="slide level2"><div id="def-notational-shorthand" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 30 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
@@ -1383,7 +1383,7 @@ Table&nbsp;3: Common notational shorthands and their full forms
 </figure>
 </div>
 </section><section class="slide level2"><div id="rem-indefinite-integral-not-shorthand" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
+<p><span class="proof-title"><em>Remark 5</em> (<span class="math inline">\(\int f(x)\,dx\)</span> has two readings). </span>In calculus, <span class="math inline">\(\int f(x)\,dx\)</span> with no limits is not a shorthand: it is the <a href="./calculus-integration.html#def-indefinite-integral">indefinite integral</a> of <span class="math inline">\(f\)</span>, a family of functions rather than a number. Some sources, especially in probability, also write <span class="math inline">\(\int f(x)\,dx\)</span> for the number <span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx\)</span>. Writing the limits out tells the reader which of the two is meant.</p>
 </div>
 </section><section class="slide level2"><div id="exm-expand-index-shorthand" class="theorem example">
 <p><span class="theorem-title"><strong>Example 31 (Writing out an index shorthand)</strong></span> Let <span class="math inline">\(n = 3\)</span> and <span class="math inline">\((x_1, x_2, x_3) = (2, 5, 1)\)</span>. A source that writes <span class="math inline">\(\sum_{i} x_i\)</span> means <span class="math inline">\(\sum_{i=1}^{3} x_i\)</span>:</p>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 ## 1 Matrices
 
@@ -512,7 +512,7 @@ Last modified: 2026-10-10 10:38:55 (PDT)
 > **TIP:**
 >
 > - Zhou ([2024](#ref-zhou2024matrix)), sections 6 (“Linear functions and operators”; see [Definition 14](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 11](#thm-linear-map-matrix), and that every affine function has the form \\\mathbf{A}\tilde{x}+ \tilde{b}\\. It defines “affine” differently, by \\f(\alpha\tilde{x}+ \beta\tilde{y}) = \alpha f(\tilde{x}) + \beta f(\tilde{y})\\ whenever \\\alpha+ \beta= 1\\, and shows that this condition holds exactly for the maps \\\mathbf{A}\tilde{x}+ \tilde{b}\\, so the two definitions agree.
-> - Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the [first-order Taylor approximation](calculus.llms.md#def-linear-approximation) as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.
+> - Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the [first-order Taylor approximation](calculus-derivatives.llms.md#def-linear-approximation) as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.
 
 > **NOTE:**
 >

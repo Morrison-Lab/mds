@@ -14,11 +14,11 @@ Code
 
 Published
 
-Last modified: 2026-10-10 10:38:55 (PDT)
+Last modified: 2026-10-10 11:17:20 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
-This section covers [derivatives](calculus.llms.md#def-derivative) of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in [Linear Algebra](linear-algebra.llms.md).
+This section covers [derivatives](calculus-derivatives.llms.md#def-derivative) of functions of vectors and matrices. Its linear algebra prerequisites, such as vectors, matrices, transposes, dot products, and quadratic forms, are covered in [Linear Algebra](linear-algebra.llms.md).
 
 Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [column vector](linear-algebra-vectors.llms.md#def-column-vector) and [dot product](linear-algebra-vectors.llms.md#def-dot-product)).
 
@@ -28,7 +28,7 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 >
 > \\ \frac{\partial}{\partial x_j} f(\tilde{x}) \stackrel{\text{def}}{=} \lim\_{h \to 0} \frac{f(x_1, \ldots, x_j + h, \ldots, x_p) - f(x_1, \ldots, x_p)}{h}, \\
 >
-> when this [limit](calculus.llms.md#def-limit) exists. It is the [derivative](calculus.llms.md#def-derivative) at \\x_j\\ of the one-variable function \\t \mapsto f(x_1, \ldots, t, \ldots, x_p)\\, which varies the \\j\\th coordinate and holds the other coordinates fixed.
+> when this [limit](calculus-derivatives.llms.md#def-limit) exists. It is the [derivative](calculus-derivatives.llms.md#def-derivative) at \\x_j\\ of the one-variable function \\t \mapsto f(x_1, \ldots, t, \ldots, x_p)\\, which varies the \\j\\th coordinate and holds the other coordinates fixed.
 
 > **NOTE:**
 >
@@ -340,7 +340,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 > Treating the operators as vectors is sound for checking shapes, but “multiplying” an operator by a function means applying the operator to it, so two rules of ordinary matrix algebra do not carry over: scalars commute with matrices, and products can be regrouped.
 >
 > - **Scalars do not commute with operators.** \\\frac{\partial}{\partial \beta\_{i}} f\\ is a function, but \\f \frac{\partial}{\partial \beta\_{i}}\\ is still an unapplied operator, waiting for something to act on. So, unlike \\c \tilde{x}= \tilde{x}c\\, the operator cannot move to the other side of \\f\\ without changing the meaning. Putting the row-vector operator on the right of \\f\\ gives the row-vector derivative only under the convention that it acts on the factor to its left.
-> - **Products cannot be regrouped.** An operator acts on the whole product to its right, so by the [product rule](calculus.llms.md#thm-product-rule), \\\frac{\partial}{\partial \beta\_{i}} (f g) \ne \mathopen{}\left(\frac{\partial}{\partial \beta\_{i}} f\right)\mathclose{} g\\ in general. For example, with \\f(\tilde{\beta}) = \beta\_{1}\\, \\\frac{\partial}{\partial \beta\_{1}} (f f) = 2 \beta\_{1}\\ but \\\mathopen{}\left(\frac{\partial}{\partial \beta\_{1}} f\right)\mathclose{} f = \beta\_{1}\\.
+> - **Products cannot be regrouped.** An operator acts on the whole product to its right, so by the [product rule](calculus-derivatives.llms.md#thm-product-rule), \\\frac{\partial}{\partial \beta\_{i}} (f g) \ne \mathopen{}\left(\frac{\partial}{\partial \beta\_{i}} f\right)\mathclose{} g\\ in general. For example, with \\f(\tilde{\beta}) = \beta\_{1}\\, \\\frac{\partial}{\partial \beta\_{1}} (f f) = 2 \beta\_{1}\\ but \\\mathopen{}\left(\frac{\partial}{\partial \beta\_{1}} f\right)\mathclose{} f = \beta\_{1}\\.
 
 > **NOTE:**
 >
@@ -669,7 +669,7 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> *Remark 7* (The order of the factors matters). The vector chain rule ([Theorem 8](#thm-chain-vec)) is like the univariate [chain rule](calculus.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
+> *Remark 7* (The order of the factors matters). The vector chain rule ([Theorem 8](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
 >
 > The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 5](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 1](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives \\{\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\, with the factors in the reverse order; there \\{\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\ is the Jacobian matrix of \\\tilde{y}\\ as a function of \\\tilde{x}\\ ([Definition 7](#def-jacobian-matrix)).
 
@@ -856,7 +856,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 25 (A Hessian matrix)** Let \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\e\\ is [Euler’s number](algebra.llms.md#def-euler-number), and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
+> **Example 25 (A Hessian matrix)** Let \\f(\tilde{x}) = e^{2x_1 + x_2} - x_1\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\e\\ is [Euler’s number](algebra.llms.md#def-euler-number), and write \\u = 2x_1 + x_2\\. By the [chain rule](calculus-derivatives.llms.md#thm-chain-rule), \\\frac{\partial}{\partial x_1} e^{u} = 2 e^{u}\\ and \\\frac{\partial}{\partial x_2} e^{u} = e^{u}\\, so
 >
 > \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = \begin{bmatrix} 2 e^{u} - 1 \\ e^{u} \end{bmatrix}. \\
 >
@@ -868,7 +868,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 26 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the [difference quotient](calculus.llms.md#def-difference-quotient) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
+> **Example 26 (A function with a gradient but no Hessian at a point)** Let \\f(\tilde{x}) = x_1 \mathopen{}\left\|x_1\right\|\mathclose{}\\ for \\\tilde{x}= {(x_1, x_2)}^{\top}\\, where \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value). For \\x_1 \> 0\\, \\f = x_1^2\\ and \\\frac{\partial}{\partial x_1} f = 2 x_1\\; for \\x_1 \< 0\\, \\f = -x_1^2\\ and \\\frac{\partial}{\partial x_1} f = -2 x_1\\; and at \\x_1 = 0\\ the [difference quotient](calculus-derivatives.llms.md#def-difference-quotient) is \\h \mathopen{}\left\|h\right\|\mathclose{} / h = \mathopen{}\left\|h\right\|\mathclose{} \to 0\\. So the gradient exists everywhere: it is \\{(2 \mathopen{}\left\|x_1\right\|\mathclose{},\\ 0)}^{\top}\\. But \\2 \mathopen{}\left\|x_1\right\|\mathclose{}\\ has no derivative in \\x_1\\ at \\x_1 = 0\\ (its difference quotient \\2 \mathopen{}\left\|h\right\|\mathclose{} / h\\ is \\2\\ for \\h \> 0\\ and \\-2\\ for \\h \< 0\\), so \\\mathopen{}\left\[\mathbf{H}\_f(\tilde{x})\right\]\mathclose{}\_{11}\\, and with it the Hessian, does not exist at any \\\tilde{x}\\ with \\x_1 = 0\\.
 
 > **NOTE:**
 >
@@ -957,7 +957,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > **Theorem 11 (Continuity in one variable, and sums, multiples and compositions)**  
 >
-> 1.  For \\p = q = 1\\, a function \\f\\ is continuous at \\x\\ in the sense of [Definition 14](#def-continuous-several) exactly when \\\lim\_{y \to x} f(y) = f(x)\\ ([limit](calculus.llms.md#def-limit)), which is the usual [continuity](calculus.llms.md#def-continuous) at \\x\\.
+> 1.  For \\p = q = 1\\, a function \\f\\ is continuous at \\x\\ in the sense of [Definition 14](#def-continuous-several) exactly when \\\lim\_{y \to x} f(y) = f(x)\\ ([limit](calculus-derivatives.llms.md#def-limit)), which is the usual [continuity](calculus-integration.llms.md#def-continuous) at \\x\\.
 > 2.  If \\f : \mathbb{R}^p \to \mathbb{R}^q\\ is continuous at \\\tilde{x}\\ and \\g : \mathbb{R}^q \to \mathbb{R}^r\\ is continuous at \\f(\tilde{x})\\, then the [composition](sets-functions.llms.md#def-composition) \\g \circ f\\ is continuous at \\\tilde{x}\\.
 > 3.  If \\f, g : \mathbb{R}^p \to \mathbb{R}\\ are continuous at \\\tilde{x}\\, then \\f + g\\ is continuous at \\\tilde{x}\\.
 > 4.  If \\f : \mathbb{R}^p \to \mathbb{R}\\ is continuous at \\\tilde{x}\\ and \\c \in \mathbb{R}\\, then \\c f\\ is continuous at \\\tilde{x}\\.
@@ -968,7 +968,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > *Proof*. Let \\\varepsilon\> 0\\ be given.
 >
-> **Part 1.** For \\p = q = 1\\, \\\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left\|f(y) - f(x)\right\|\mathclose{}\\ and \\\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left\|y - x\right\|\mathclose{}\\. [Definition 14](#def-continuous-several) then asks for a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(y) - f(x)\right\|\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The [limit definition](calculus.llms.md#def-limit) with \\L = f(x)\\ asks for the same inequality, but only whenever \\0 \< \mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The two agree, because at \\y = x\\ the inequality \\\mathopen{}\left\|f(x) - f(x)\right\|\mathclose{} = 0 \< \varepsilon\\ holds for every \\\delta\\.
+> **Part 1.** For \\p = q = 1\\, \\\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left\|f(y) - f(x)\right\|\mathclose{}\\ and \\\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left\|y - x\right\|\mathclose{}\\. [Definition 14](#def-continuous-several) then asks for a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(y) - f(x)\right\|\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The [limit definition](calculus-derivatives.llms.md#def-limit) with \\L = f(x)\\ asks for the same inequality, but only whenever \\0 \< \mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The two agree, because at \\y = x\\ the inequality \\\mathopen{}\left\|f(x) - f(x)\right\|\mathclose{} = 0 \< \varepsilon\\ holds for every \\\delta\\.
 >
 > **Part 2.** Because \\g\\ is continuous at \\f(\tilde{x})\\, there is a \\\delta_g \> 0\\ such that \\\mathopen{}\left\lVert g(\tilde{z}) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\. Because \\f\\ is continuous at \\\tilde{x}\\, applied with \\\delta_g\\ in the role of \\\varepsilon\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. So if \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\, then \\\tilde{z} = f(\tilde{y})\\ has \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\, and therefore \\\mathopen{}\left\lVert g(f(\tilde{y})) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\.
 >
