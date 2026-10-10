@@ -2,83 +2,36 @@
 title: "Calculus"
 format:
   html: default
-  revealjs:
-    output-file: calculus-slides.html
   pdf:
     output-file: calculus-handout.pdf
   docx:
     output-file: calculus.docx
 ---
 
-## Derivatives {#sec-derivatives}
+::: {.content-visible when-format="html"}
 
-{{< include latex-macros/macros.qmd >}}
+The calculus notes are split across these pages:
 
-{{< include mds/_calc-derivatives.qmd >}}
+- [Derivatives and Taylor Series](calculus-derivatives.qmd):
+  limits and derivatives, derivative rules, tangent lines, linear approximation,
+  critical points and optimization, and Taylor series.
+- [Integrals and the Fundamental Theorem of Calculus](calculus-integration.qmd):
+  antiderivatives, regularity conditions,
+  and the Fundamental Theorem of Calculus.
+- [Double Integrals and Fubini's Theorem](calculus-double-integrals.qmd):
+  double integrals over rectangles and non-rectangular regions,
+  and Fubini's and Tonelli's theorems.
 
-## Integration {#sec-integration}
+A link to a section, theorem or definition on this page from before the split
+goes on to the page that now holds it.
 
-{{< include mds/_calc-integrals.qmd >}}
+:::
 
-## Double Integrals {#sec-double-integrals}
+::: {.content-visible unless-format="html"}
 
-{{< include mds/_subfiles/_fubini_intro_thm.qmd >}}
+{{< include mds/_subfiles/_sec_calculus.qmd >}}
 
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_exm_fubini_nonrect.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-triangular-region.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-switch-order.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_exm_fubini_fail.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_cor_fubini_rect.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_exm_fubini_rect.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-polynomial-rectangle.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-order-of-integration.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-separable.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-square-root-term.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-linear-plane.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/calculus-review/_exr-miller-dint-harmonic-identity.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_thm_fubini_tonelli.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
+:::
 
 ## Further reading {#sec-additional-resources}
 
@@ -87,7 +40,7 @@ format:
 - @calclifesaver
 - @larsonCalc11e
 - @problifesavercalc
-  The calculus review exercises and worked solutions across this page and in [Vector Calculus](vector-calculus.qmd#def-partial-derivative) are adapted from this supplemental review chapter.
+  The calculus review exercises and worked solutions across these pages and in [Vector Calculus](vector-calculus.qmd#def-partial-derivative) are adapted from this supplemental review chapter.
    - <http://www.youtube.com/watch?v=xYzQL0TUtBA>
    - <http://www.youtube.com/watch?v=Ps2SBo_WjoE>
 - @realanalysislifesaver (the rigorous foundations behind these results)

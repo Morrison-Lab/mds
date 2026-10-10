@@ -1,0 +1,59 @@
+## Double Integrals {#sec-double-integrals}
+
+{{< include mds/_subfiles/_fubini_intro_thm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_nonrect.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-triangular-region.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-switch-order.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_fail.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_cor_fubini_rect.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_rect.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-polynomial-rectangle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-order-of-integration.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-separable.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-square-root-term.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-linear-plane.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_exr-miller-dint-harmonic-identity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_thm_fubini_tonelli.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/_exm_fubini_fail_tonelli.qmd >}}
