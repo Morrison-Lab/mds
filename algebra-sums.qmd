@@ -1,0 +1,15 @@
+---
+title: "Convexity, Infimum and Sums"
+format:
+  html: default
+  revealjs:
+    output-file: algebra-sums-slides.html
+  pdf:
+    output-file: algebra-sums-handout.pdf
+  docx:
+    output-file: algebra-sums.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_algebra_sums.qmd >}}

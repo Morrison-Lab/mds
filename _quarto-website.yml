@@ -40,7 +40,13 @@ website:
       - text: "Sets and Functions"
         href: sets-functions.qmd
       - text: "Algebra"
-        href: algebra.qmd
+        menu:
+          - text: "Overview"
+            href: algebra.qmd
+          - algebra-basics.qmd
+          - algebra-sums.qmd
+          - algebra-exponentials.qmd
+          - algebra-complex.qmd
       - text: "Measures"
         href: measures.qmd
       - text: "Calculus"
@@ -81,7 +87,13 @@ website:
         href: index.qmd
       - notation.qmd
       - sets-functions.qmd
-      - algebra.qmd
+      - section: "Algebra"
+        href: algebra.qmd
+        contents:
+          - algebra-basics.qmd
+          - algebra-sums.qmd
+          - algebra-exponentials.qmd
+          - algebra-complex.qmd
       - measures.qmd
       - calculus.qmd
       - section: "Linear Algebra"
