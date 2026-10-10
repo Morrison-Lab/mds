@@ -6,6 +6,10 @@
 
 {{< include mds/_subfiles/_sec_linear_algebra_subspaces.qmd >}}
 
+{{< include mds/_subfiles/_sec_linear_algebra_rank_nullity.qmd >}}
+
+{{< include mds/_subfiles/_sec_linear_algebra_direct_sums.qmd >}}
+
 {{< include mds/_subfiles/_sec_linear_algebra_inner_products.qmd >}}
 
 {{< include mds/_subfiles/_sec_linear_algebra_special_matrices.qmd >}}

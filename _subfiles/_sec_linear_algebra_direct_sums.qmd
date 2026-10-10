@@ -1,0 +1,59 @@
+## Sums and direct sums {#sec-direct-sums}
+
+{{< include mds/_subfiles/linear-algebra/_prose-direct-sums-attribution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-subspace-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-sum-intersection-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-dim-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-rank-subadditive.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-direct-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-direct-sum-equiv.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-projection.qmd >}}
+
+## Orthogonal complements {#sec-orthogonal-complements}
+
+{{< include mds/_subfiles/linear-algebra/_thm-dot-linear.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-orthogonal-complement.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-orthogonal-complement-subspace.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-complement-null-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-orthogonal-direct-sum.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-double-complement.qmd >}}
+
+## The fundamental theorem of linear algebra {#sec-fundamental-theorem}
+
+{{< include mds/_subfiles/linear-algebra/_thm-fundamental-subspaces.qmd >}}

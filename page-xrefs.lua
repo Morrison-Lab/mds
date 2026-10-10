@@ -171,13 +171,15 @@ local function load_targets(fmt)
   this_page = input:sub(1, #root + 1) == root .. "/" and input:sub(#root + 2) or input
   local_ids = scan(this_page, root, fmt).ids
   for _, group in ipairs(groups) do
+    -- The targets of this group alone, for the redirect script of its index page.
+    group.targets = {}
     for _, page in ipairs(group.pages) do
       if page ~= this_page then
         local found = scan(page, root, fmt)
         for id, label in pairs(found.ids) do
-          if targets[id] == nil then
-            targets[id] = { page = page, label = label, title = found.title }
-          end
+          local t = { page = page, label = label, title = found.title }
+          if group.targets[id] == nil then group.targets[id] = t end
+          if targets[id] == nil then targets[id] = t end
         end
       end
     end
@@ -263,9 +265,9 @@ end
 
 -- The script for an index page: a link to a target that moved to another
 -- page is sent on to it.
-local function redirect_script()
+local function redirect_script(group)
   local map = {}
-  for id, t in pairs(targets) do
+  for id, t in pairs(group.targets) do
     if local_ids[id] == nil then
       table.insert(map, string.format("%q:%q", id, stem(t.page) .. ".html"))
     end
@@ -325,7 +327,7 @@ return {
       local html = quarto.doc.is_format("html") and not quarto.doc.is_format("revealjs")
       for _, group in ipairs(groups) do
         if group.index == this_page and html then
-          doc.blocks:insert(redirect_script())
+          doc.blocks:insert(redirect_script(group))
         end
       end
       return doc
