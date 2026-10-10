@@ -57,6 +57,8 @@ website:
           - linear-algebra-vectors.qmd
           - linear-algebra-matrices.qmd
           - linear-algebra-subspaces.qmd
+          - linear-algebra-rank-nullity.qmd
+          - linear-algebra-direct-sums.qmd
           - linear-algebra-inner-products.qmd
           - linear-algebra-special-matrices.qmd
           - linear-algebra-projections.qmd
@@ -100,6 +102,8 @@ website:
           - linear-algebra-vectors.qmd
           - linear-algebra-matrices.qmd
           - linear-algebra-subspaces.qmd
+          - linear-algebra-rank-nullity.qmd
+          - linear-algebra-direct-sums.qmd
           - linear-algebra-inner-products.qmd
           - linear-algebra-special-matrices.qmd
           - linear-algebra-projections.qmd

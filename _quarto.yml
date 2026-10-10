@@ -40,11 +40,19 @@ page-xrefs:
       - linear-algebra-vectors.qmd
       - linear-algebra-matrices.qmd
       - linear-algebra-subspaces.qmd
+      - linear-algebra-rank-nullity.qmd
+      - linear-algebra-direct-sums.qmd
       - linear-algebra-inner-products.qmd
       - linear-algebra-special-matrices.qmd
       - linear-algebra-projections.qmd
       - linear-algebra-diagonalization.qmd
       - linear-algebra-complex.qmd
+  # linear-algebra-subspaces.qmd was split again, so links to it from before
+  # the second split (index#id) go on to the page now holding #id.
+  - index: linear-algebra-subspaces.qmd
+    pages:
+      - linear-algebra-rank-nullity.qmd
+      - linear-algebra-direct-sums.qmd
 
 format:
   pdf:
