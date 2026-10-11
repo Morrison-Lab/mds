@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 19:44:14 (PDT)
+Last modified: 2026-10-11 00:33:48 (PDT)
 
 > **NOTE:**
 >
@@ -392,13 +392,45 @@ Last modified: 2026-10-10 19:44:14 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 24 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= \mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
+>
+> \\ f^{\odot}(\tilde{x}) = \mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}^{\top}. \\
+>
+> It is a function \\f^{\odot} : A^n \to B^n\\, where \\A^n\\ is the \\n\\-fold Cartesian product of \\A\\ with itself ([definition](#def-cartesian-product)).
+>
+> - The superscript \\\odot\\ keeps \\f^{\odot}\\ apart from \\f\\ itself. Where a function \\f\\ takes a whole vector as its argument, as in the multivariable calculus of [vector calculus](vector-calculus.llms.md), \\f(\tilde{x})\\ means \\f\\ evaluated at the vector, which is generally not the vector of its values at the entries.
+> - If \\f\\ has parameters, as in \\f\_{\tilde{\beta}}\\, the same parameters are used at every entry.
+> - Software usually applies a scalar function to a vector this way, without a special symbol: R and NumPy evaluate `exp(x)` entry by entry. The matrix exponential of a square matrix is a different function from \\\operatorname{exp}^{\odot}\\.
+
+> **NOTE:**
+>
+> **Example 20 (The exponential and logistic functions applied to a vector)** Let \\\tilde{x}= \mathopen{}\left(-1, 0, 2\right)\mathclose{}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
+>
+> \\ \begin{aligned} \operatorname{exp}^{\odot}(\tilde{x}) &= \mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}^{\top}, \\ \operatorname{expit}^{\odot}(\tilde{x}) &= \mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}^{\top}. \end{aligned} \\
+>
+> The code evaluates both, using R’s [`exp()`](https://rdrr.io/r/base/Log.html) and [`plogis()`](https://rdrr.io/r/stats/Logistic.html), which apply to a vector entry by entry.
+>
+> ``` downlit
+> x <- c(-1, 0, 2)
+> exp_x <- exp(x)
+> expit_x <- plogis(x)
+> exp_x
+> #> [1] 0.3678794 1.0000000 7.3890561
+> expit_x
+> #> [1] 0.2689414 0.5000000 0.8807971
+> ```
+>
+> So \\\operatorname{exp}^{\odot}(\tilde{x}) \approx\\ (0.3679, 1, 7.3891) and \\\operatorname{expit}^{\odot}(\tilde{x}) \approx\\ (0.2689, 0.5, 0.8808). Each entry of the output depends only on the entry of \\\tilde{x}\\ in the same position.
+
+> **NOTE:**
+>
+> **Definition 25 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
 >
 > A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 > **NOTE:**
 >
-> **Example 20 (Sequences)**  
+> **Example 21 (Sequences)**  
 >
 > - \\a_n = \frac{1}{n}\\ is the sequence \\1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots\\; its third term is \\a_3 = \frac{1}{3}\\.
 > - \\b_n = (-1)^n\\ is the sequence \\-1, 1, -1, 1, \ldots\\: a sequence can repeat values.
@@ -408,7 +440,7 @@ Last modified: 2026-10-10 19:44:14 (PDT)
 
 > **NOTE:**
 >
-> **Definition 25 (Finite set, infinite set, and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 24](#def-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 26 (Finite set, infinite set, and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 25](#def-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 >
 > A set that is not finite is **infinite**.
 
@@ -418,7 +450,7 @@ Last modified: 2026-10-10 19:44:14 (PDT)
 
 > **NOTE:**
 >
-> **Example 21 (Finite and infinite sets)**  
+> **Example 22 (Finite and infinite sets)**  
 >
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
@@ -427,15 +459,15 @@ Last modified: 2026-10-10 19:44:14 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Countable set)** A set is **countable** if it is finite ([Definition 25](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 24](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 27 (Countable set)** A set is **countable** if it is finite ([Definition 26](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 25](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 27 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 28 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 22 (Countable and uncountable sets)**  
+> **Example 23 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
@@ -453,7 +485,7 @@ Last modified: 2026-10-10 19:44:14 (PDT)
 
 > **NOTE:**
 >
-> **Definition 28 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 29 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -469,7 +501,7 @@ Last modified: 2026-10-10 19:44:14 (PDT)
 
 > **NOTE:**
 >
-> **Example 23 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 24 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 6 Further reading
 
