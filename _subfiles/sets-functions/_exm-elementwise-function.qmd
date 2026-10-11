@@ -2,11 +2,11 @@
 #### The exponential and logistic functions applied to a vector
 
 Let $\vx = \pt{-1, 0, 2}$.
-With $\exp(t) = e^t$ and the logistic function $\expit(t) = \frac{1}{1 + e^{-t}}$,
+With $\operatorname{exp}(t) = e^t$ and the logistic function $\expit(t) = \frac{1}{1 + e^{-t}}$,
 
 $$
 \begin{aligned}
-\exp^{\odot}(\vx) &= \pt{e^{-1}, e^{0}, e^{2}}, \\
+\operatorname{exp}^{\odot}(\vx) &= \pt{e^{-1}, e^{0}, e^{2}}, \\
 \expit^{\odot}(\vx) &= \pt{\expit(-1), \expit(0), \expit(2)}.
 \end{aligned}
 $$
@@ -24,7 +24,7 @@ exp_x
 expit_x
 ```
 
-So $\exp^{\odot}(\vx) \approx$ (`{r} paste(round(exp_x, 4), collapse = ", ")`)
+So $\operatorname{exp}^{\odot}(\vx) \approx$ (`{r} paste(round(exp_x, 4), collapse = ", ")`)
 and $\expit^{\odot}(\vx) \approx$ (`{r} paste(round(expit_x, 4), collapse = ", ")`).
 Each entry of the output depends only on the entry of $\vx$ in the same position.
 
