@@ -1,0 +1,119 @@
+:::{#exm-function-profile-logistic}
+#### The profile of the logistic function
+
+The **logistic function** (also called $\expit$ or the sigmoid) is
+
+$$
+f(x) = \frac{1}{1 + e^{-x}}.
+$$
+
+The profile in @def-function-profile of $f$ is as follows.
+Write $E = e^{-x}$, so that $f = \frac{1}{1 + E}$ and $1 - f = \frac{E}{1 + E}$.
+
+- **Logarithm:** $\logf{f(x)} = -\logf{1 + e^{-x}}$, defined for every real $x$ because $f(x) > 0$.
+- **Derivative:** by the chain rule,
+
+  $$
+  \begin{aligned}
+  f'(x)
+  &= \frac{e^{-x}}{\paren{1 + e^{-x}}^2}
+  && \text{(chain rule applied to } (1 + e^{-x})^{-1} \text{)} \\
+  &= \frac{1}{1 + E} \cdot \frac{E}{1 + E}
+  && \text{(split the square)} \\
+  &= f(x)\,\paren{1 - f(x)}.
+  && \text{(identify } f \text{ and } 1 - f \text{)}
+  \end{aligned}
+  $$
+
+  Differentiating again with the product rule gives
+  $f''(x) = f'(1 - f) - f f' = f(x)\paren{1 - f(x)}\paren{1 - 2f(x)}$.
+- **Logarithmic derivative:** $\frac{f'(x)}{f(x)} = 1 - f(x)$,
+  so the relative rate of change of $f$ is the complement of $f$ itself.
+- **Inverse:** for $y \in (0, 1)$, solving $y = \frac{1}{1 + e^{-x}}$ for $x$ gives
+
+  $$
+  \begin{aligned}
+  \frac{1}{y} &= 1 + e^{-x} \\
+  e^{-x} &= \frac{1 - y}{y} \\
+  x &= \logf{\frac{y}{1 - y}}.
+  \end{aligned}
+  $$
+
+  So $f^{-1}(y) = \logitf{y}$, the log-odds.
+  The inverse exists because $f' = f(1 - f) > 0$, so $f$ is strictly increasing and therefore one-to-one.
+- **Complement:** $1 - f(x) = \frac{e^{-x}}{1 + e^{-x}} = \frac{1}{e^{x} + 1} = f(-x)$.
+- **Reciprocal:** $\frac{1}{f(x)} = 1 + e^{-x}$.
+- **Antiderivative:** $F(x) = \logf{1 + e^{x}}$ satisfies $F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)$,
+  so $\int f(x)\,dx = \logf{1 + e^{x}} + C$.
+- **Key values:** $f(0) = \frac{1}{1 + 1} = \frac{1}{2}$ and $f(1) = \frac{1}{1 + e^{-1}}$.
+  As $x \to \infty$, $e^{-x} \to 0$, so $f(x) \to 1$;
+  as $x \to -\infty$, $e^{-x} \to \infty$, so $f(x) \to 0$.
+
+The code checks these results numerically,
+using the base R functions `plogis()` for $f$ and `qlogis()` for $f^{-1}$,
+and `D()` to differentiate symbolically.
+
+```{r}
+#| label: function-profile-logistic
+#| code-fold: false
+f <- plogis
+x <- c(-2, -0.5, 0, 1, 3)
+
+f_expr <- quote(1 / (1 + exp(-x)))
+f_prime <- eval(D(f_expr, "x"), list(x = x))
+f_second <- eval(D(D(f_expr, "x"), "x"), list(x = x))
+
+checks <- c(
+  derivative = max(abs(f_prime - f(x) * (1 - f(x)))),
+  second_derivative = max(abs(f_second - f(x) * (1 - f(x)) * (1 - 2 * f(x)))),
+  log_derivative = max(abs(f_prime / f(x) - (1 - f(x)))),
+  inverse = max(abs(qlogis(f(x)) - x)),
+  complement = max(abs(1 - f(x) - f(-x))),
+  reciprocal = max(abs(1 / f(x) - (1 + exp(-x)))),
+  antiderivative = abs(
+    integrate(f, 0, 1)$value - (log(1 + exp(1)) - log(2))
+  )
+)
+signif(checks, 3)
+stopifnot(all(checks < 1e-14))
+
+key_values <- c(f(0), f(1), f(10), f(-10))
+```
+
+Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation;
+every one is below $10^{-14}$ (the chunk stops with an error otherwise), which is rounding error.
+The key values are $f(0) =$ `{r} key_values[1]` and $f(1) \approx$ `{r} round(key_values[2], 4)`.
+At $x = 10$ and $x = -10$ the function is already close to its limits,
+$f(10) \approx$ `{r} round(key_values[3], 5)` and $f(-10) \approx$ `{r} format(key_values[4], digits = 3, scientific = FALSE)`.
+@fig-function-profile-logistic graphs $f$, $f'$ and $\logf{f}$.
+
+```{r}
+#| label: fig-function-profile-logistic
+#| fig-cap: >-
+#|   The logistic function, its derivative and its logarithm
+#| fig-alt: >-
+#|   Three panels over x from -6 to 6.
+#|   The first, the logistic function, rises in an S shape from near 0 to near 1
+#|   and passes through 0.5 at x = 0.
+#|   The second, its derivative, is a bell-shaped bump
+#|   with maximum 0.25 at x = 0 and tails near 0.
+#|   The third, the logarithm of the logistic function,
+#|   increases from a steep line of slope 1 on the left
+#|   and flattens toward 0 on the right.
+grid <- seq(-6, 6, length.out = 241)
+panels <- data.frame(
+  x = rep(grid, 3),
+  panel = factor(
+    rep(c("f(x)", "f'(x)", "log f(x)"), each = length(grid)),
+    levels = c("f(x)", "f'(x)", "log f(x)")
+  ),
+  value = c(f(grid), f(grid) * (1 - f(grid)), log(f(grid)))
+)
+ggplot2::ggplot(panels) +
+  ggplot2::aes(x = x, y = value) +
+  ggplot2::geom_line() +
+  ggplot2::facet_wrap(~panel, scales = "free_y") +
+  ggplot2::labs(x = "x", y = NULL)
+```
+
+:::

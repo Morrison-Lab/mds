@@ -297,6 +297,16 @@ $$
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-log-constant.qmd >}}
 
+### Studying a new function {#sec-function-profile}
+
+{{< include mds/_subfiles/derivatives/_def-function-profile.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_exm-function-profile-logistic.qmd >}}
+
+{{< slidebreak >}}
+
 ### Tangent lines {#sec-tangent-lines}
 
 {{< include mds/_subfiles/derivatives/_def-tangent-line.qmd >}}
