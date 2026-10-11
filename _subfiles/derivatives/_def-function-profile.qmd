@@ -1,0 +1,29 @@
+:::{#def-function-profile}
+#### Profile of a function
+
+The **profile** of a function $f$ of a real variable
+is the list of related functions and values to work out
+when meeting $f$ for the first time:
+
+- the logarithm $\logf{f(x)}$, where $f(x) > 0$;
+- the derivatives $f'(x)$, $f''(x)$, and so on,
+  as far as they are informative;
+- the **logarithmic derivative** $\frac{f'(x)}{f(x)}$,
+  which equals $\dif{}{x}\logf{f(x)}$ by @cor-deriv-log-chain
+  and measures the rate of change of $f$ relative to its size;
+  it needs $f(x) > 0$,
+  and for $f(x) < 0$ the same expression is the derivative of $\logf{\abs{f(x)}}$;
+- the inverse function $f^{-1}$ ([definition](sets-functions.qmd#def-inverse-function)),
+  which exists on the range of $f$ when $f$ is one-to-one,
+  and otherwise only after restricting the domain of $f$;
+- the complement $1 - f(x)$,
+  which is informative when $f$ takes values in $[0, 1]$, as a probability does;
+- the reciprocal $\frac{1}{f(x)}$, where $f(x) \neq 0$
+  (not to be confused with $f^{-1}$);
+- an antiderivative of $f$, a function $F$ with $F' = f$ ([integration](calculus-integration.qmd#sec-integration));
+- the values $f(0)$ and $f(1)$,
+  and the limits of $f(x)$ as $x \to \infty$ and as $x \to -\infty$,
+  at each of these that lies in the domain of $f$ or exists;
+- the graph of $f$.
+
+:::
