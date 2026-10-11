@@ -2,22 +2,45 @@
 title: "Algebra"
 format:
   html: default
-  revealjs:
-    output-file: algebra-slides.html
   pdf:
     output-file: algebra-handout.pdf
   docx:
     output-file: algebra.docx
 ---
 
+::: {.content-visible when-format="html"}
+
+The algebra notes are split across these pages:
+
+- [Equalities, Inequalities and Minimizers](algebra-basics.qmd):
+  equalities, inequalities, powers, square roots and absolute values,
+  minima and maxima, and global and local minimizers.
+- [Convexity, Infimum and Sums](algebra-sums.qmd):
+  convex functions, the infimum and supremum,
+  sums, products and quotients, and summation notation.
+- [Polynomials, Exponentials and Logarithms](algebra-exponentials.qmd):
+  polynomials, affine and linear functions of one variable,
+  limits of sequences, exponentials and logarithms.
+- [Complex Numbers](algebra-complex.qmd):
+  complex numbers and their arithmetic.
+
+A link to a section, theorem or definition on this page from before the split
+goes on to the page that now holds it.
+
+:::
+
+::: {.content-visible unless-format="html"}
+
 {{< include mds/_algebra.qmd >}}
+
+:::
 
 ## Further reading {#sec-further-reading}
 
 - @abramson2021algebra
   is a free online textbook on algebra and trigonometry.
   It covers equations, inequalities, polynomials, exponentials, and logarithms,
-  which overlap with the algebra on this page.
+  which overlap with the algebra in these notes.
 - @rudin1976principles
   develops the real numbers, including the least upper bound property
   behind the infimum and supremum.

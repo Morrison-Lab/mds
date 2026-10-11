@@ -1,0 +1,15 @@
+---
+title: "Equalities, Inequalities and Minimizers"
+format:
+  html: default
+  revealjs:
+    output-file: algebra-basics-slides.html
+  pdf:
+    output-file: algebra-basics-handout.pdf
+  docx:
+    output-file: algebra-basics.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_algebra_basics.qmd >}}
