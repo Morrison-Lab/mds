@@ -195,6 +195,14 @@ that the Morrison Lab's probability and statistics notes build on.
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/sets-functions/_def-elementwise-function.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/sets-functions/_exm-elementwise-function.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/sets-functions/_def-sequence.qmd >}}
 
 {{< slidebreak >}}
