@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 ## 1 Column space and null space
 
@@ -370,7 +370,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 >
 > *Proof*. **Part 1.** Since \\\tilde{w} \cdot \tilde{0} = 0\\,
 >
-> \\ \begin{aligned} \tilde{w} \cdot \tilde{0} + b &= 0 + b && \text{(the dot product with } \tilde{0}\text{ is } 0 \text{)} \\ &= b, && \text{(@thm-add-ident)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{w} \cdot \tilde{0} + b &= 0 + b && \text{(the dot product with } \tilde{0}\text{ is } 0 \text{)} \\ &= b, && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
 > so \\\tilde{0}\in \mathcal{H}\\ exactly when \\b = 0\\.
 >

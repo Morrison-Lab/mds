@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 ## 1 Sums and direct sums
 
@@ -121,7 +121,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 >
 >   \\ \begin{aligned} \mathcal{S}\_1 &= \mathcal{S}\_2 \\ &= \operatorname{span}\mathopen{}\left\\(1, 0, 0)\right\\\mathclose{}, \end{aligned} \\
 >
->   the sum is the same line, because \\a\\(1, 0, 0) + b\\(1, 0, 0) = (a + b)\\(1, 0, 0)\\, so \\\dim(\mathcal{S}\_1 + \mathcal{S}\_2) = 1 \< 1 + 1\\, a [strict inequality](algebra.llms.md#def-strict-inequality).
+>   the sum is the same line, because \\a\\(1, 0, 0) + b\\(1, 0, 0) = (a + b)\\(1, 0, 0)\\, so \\\dim(\mathcal{S}\_1 + \mathcal{S}\_2) = 1 \< 1 + 1\\, a [strict inequality](algebra-basics.llms.md#def-strict-inequality).
 
 > **NOTE:**
 >

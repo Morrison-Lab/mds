@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 ## 1 Vectors
 
@@ -143,13 +143,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 4* (The zero vector is the additive identity). Adding the zero vector to a vector leaves it unchanged ([Definition 6](#def-vector-addition)): \\\tilde{x}+ \tilde{0}= \tilde{x}\\ for any vector \\\tilde{x}\\ of the same length, so \\\tilde{0}\\ is the [identity element](algebra.llms.md#def-identity-element) for vector addition. For example,
+> *Remark 4* (The zero vector is the additive identity). Adding the zero vector to a vector leaves it unchanged ([Definition 6](#def-vector-addition)): \\\tilde{x}+ \tilde{0}= \tilde{x}\\ for any vector \\\tilde{x}\\ of the same length, so \\\tilde{0}\\ is the [identity element](algebra-sums.llms.md#def-identity-element) for vector addition. For example,
 >
 > \\ \begin{aligned} (2, -1) + (0, 0) &= (2 + 0, -1 + 0) \\ &= (2, -1). \end{aligned} \\
 
 > **NOTE:**
 >
-> **Definition 10 (Mean (average, sample mean))** The **mean** (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra.llms.md#def-summation) divided by how many there are:
+> **Definition 10 (Mean (average, sample mean))** The **mean** (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
 >
 > \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum\_{i=1}^ny_i\\
 >
@@ -245,7 +245,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\tilde{x}\cdot \tilde{x}} = \sqrt{\sum\_{i=1}^px_i^2} \tag{2}\\
 >
-> where \\\sqrt{\cdot}\\ is the [square root](algebra.llms.md#def-square-root).
+> where \\\sqrt{\cdot}\\ is the [square root](algebra-basics.llms.md#def-square-root).
 
 > **NOTE:**
 >

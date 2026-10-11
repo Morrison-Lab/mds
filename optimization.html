@@ -215,6 +215,16 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-def.callout {
   border-left-color: #1B5E20;
 }
@@ -224,26 +234,6 @@ div.callout-def.callout-style-default .callout-header {
 div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-prp.callout {
   border-left-color: #827717;
@@ -255,45 +245,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
+div.callout-cor.callout {
+  border-left-color: #00838F;
 }
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
 }
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -305,15 +265,55 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -528,10 +528,33 @@ window.Quarto = {
     <a class="nav-link" href="./sets-functions.html"> 
 <span class="menu-text">Sets and Functions</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./algebra.html"> 
-<span class="menu-text">Algebra</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Algebra</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-algebra">
+<li>
+    <a class="dropdown-item" href="./algebra.html">
+ <span class="dropdown-text">Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-basics.html">
+ <span class="dropdown-text">Equalities, Inequalities and Minimizers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-sums.html">
+ <span class="dropdown-text">Convexity, Infimum and Sums</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-exponentials.html">
+ <span class="dropdown-text">Polynomials, Exponentials and Logarithms</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./algebra-complex.html">
+ <span class="dropdown-text">Complex Numbers</span></a>
+  </li>  
+    </ul>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="./measures.html"> 
 <span class="menu-text">Measures</span></a>
@@ -670,11 +693,40 @@ window.Quarto = {
  <span class="menu-text">Sets and Functions</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./algebra.html" class="sidebar-item-text sidebar-link">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./algebra.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Algebra</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Equalities, Inequalities and Minimizers</span></a>
   </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-sums.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexity, Infimum and Sums</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-exponentials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polynomials, Exponentials and Logarithms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./algebra-complex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complex Numbers</span></a>
+  </div>
+</li>
+      </ul>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -686,11 +738,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./calculus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Calculus</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./calculus-derivatives.html" class="sidebar-item-text sidebar-link">
@@ -715,11 +767,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Algebra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-vectors.html" class="sidebar-item-text sidebar-link">
@@ -829,7 +881,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-10 18:57:52 (PDT)</p>
+      <p class="date">Last modified: 2026-10-10 19:44:14 (PDT)</p>
     </div>
   </div>
   
@@ -871,7 +923,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="thm-fermat" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (A minimizer has derivative zero)</strong></span> Let <span class="math inline">\(g\)</span> be a <a href="./notation.html#def-real-numbers">real</a>-valued function on an <a href="./sets-functions.html#def-interval">open interval</a> containing <span class="math inline">\(c\)</span>, and let <span class="math inline">\(g\)</span> be <a href="./calculus-derivatives.html#def-differentiable">differentiable</a> at <span class="math inline">\(c\)</span>. If <span class="math inline">\(c\)</span> is a <a href="./algebra.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(g\)</span>, then <span class="math inline">\(g'(c) = 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 1 (A minimizer has derivative zero)</strong></span> Let <span class="math inline">\(g\)</span> be a <a href="./notation.html#def-real-numbers">real</a>-valued function on an <a href="./sets-functions.html#def-interval">open interval</a> containing <span class="math inline">\(c\)</span>, and let <span class="math inline">\(g\)</span> be <a href="./calculus-derivatives.html#def-differentiable">differentiable</a> at <span class="math inline">\(c\)</span>. If <span class="math inline">\(c\)</span> is a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(g\)</span>, then <span class="math inline">\(g'(c) = 0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -975,7 +1027,7 @@ g(-h) &amp;= -h^3 \\
 </div>
 <div class="callout-body-container">
 <div id="thm-first-order-condition" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (First-order necessary condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span>. If <span class="math inline">\(\tilde{x}^*\)</span> is a <a href="./algebra.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(f\)</span> and the gradient of <span class="math inline">\(f\)</span> exists at <span class="math inline">\(\tilde{x}^*\)</span>, then <span class="math inline">\(\tilde{x}^*\)</span> is a stationary point of <span class="math inline">\(f\)</span> (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 2 (First-order necessary condition)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span>. If <span class="math inline">\(\tilde{x}^*\)</span> is a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(f\)</span> and the gradient of <span class="math inline">\(f\)</span> exists at <span class="math inline">\(\tilde{x}^*\)</span>, then <span class="math inline">\(\tilde{x}^*\)</span> is a stationary point of <span class="math inline">\(f\)</span> (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>).</p>
 </div>
 </div>
 </div>
@@ -1193,7 +1245,7 @@ e^{\tau} &amp;= 2 (e - 2) \\
 &amp;= 1.43656,
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\tau= \log 1.43656 \approx 0.362\)</span> (<a href="./algebra.html#def-natural-log">natural logarithm</a>), which is in <span class="math inline">\((0, 1)\)</span>.</p>
+<p>so <span class="math inline">\(\tau= \log 1.43656 \approx 0.362\)</span> (<a href="./algebra-exponentials.html#def-natural-log">natural logarithm</a>), which is in <span class="math inline">\((0, 1)\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1347,7 +1399,7 @@ f(2) &amp;= 0 \\
 \]</span></p>
 <p>for every <span class="math inline">\(x \ne 2\)</span>, so <span class="math inline">\(2\)</span> is a strict local minimizer (any <span class="math inline">\(\delta&gt; 0\)</span> works).</p>
 </li>
-<li><p>A constant function <span class="math inline">\(f(\tilde{x}) = 0\)</span> has <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for all <span class="math inline">\(\tilde{x}^*\)</span> and <span class="math inline">\(\tilde{x}\)</span>, so every point is a <a href="./algebra.html#def-local-minimizer">local minimizer</a>, but no point is a strict one: <span class="math inline">\(f(\tilde{x}^*) &lt; f(\tilde{x})\)</span> never holds.</p></li>
+<li><p>A constant function <span class="math inline">\(f(\tilde{x}) = 0\)</span> has <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for all <span class="math inline">\(\tilde{x}^*\)</span> and <span class="math inline">\(\tilde{x}\)</span>, so every point is a <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a>, but no point is a strict one: <span class="math inline">\(f(\tilde{x}^*) &lt; f(\tilde{x})\)</span> never holds.</p></li>
 </ul>
 </div>
 </div>
@@ -1783,7 +1835,7 @@ g(0, t) &amp;= -t^4 \\
 </div>
 <div class="callout-body-container">
 <div id="def-strictly-convex" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Strictly convex and concave functions)</strong></span> A function <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is <strong>strictly convex</strong> if <span class="math inline">\(f(t \tilde{x}+ (1 - t) \tilde{y}) &lt; t f(\tilde{x}) + (1 - t) f(\tilde{y})\)</span> for all <span class="math inline">\(\tilde{x}\ne \tilde{y}\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> and all <span class="math inline">\(t \in (0, 1)\)</span>. It is <strong>concave</strong> if <span class="math inline">\(-f\)</span> is <a href="./algebra.html#def-convex-function">convex</a>, and <strong>strictly concave</strong> if <span class="math inline">\(-f\)</span> is strictly convex.</p>
+<p><span class="theorem-title"><strong>Definition 5 (Strictly convex and concave functions)</strong></span> A function <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is <strong>strictly convex</strong> if <span class="math inline">\(f(t \tilde{x}+ (1 - t) \tilde{y}) &lt; t f(\tilde{x}) + (1 - t) f(\tilde{y})\)</span> for all <span class="math inline">\(\tilde{x}\ne \tilde{y}\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> and all <span class="math inline">\(t \in (0, 1)\)</span>. It is <strong>concave</strong> if <span class="math inline">\(-f\)</span> is <a href="./algebra-sums.html#def-convex-function">convex</a>, and <strong>strictly concave</strong> if <span class="math inline">\(-f\)</span> is strictly convex.</p>
 </div>
 </div>
 </div>
@@ -1836,7 +1888,7 @@ f(t x + (1 - t) y) &amp;= 2 t x + 2 (1 - t) y + 1 \\
 </div>
 <div class="callout-body-container">
 <div id="thm-convex-max" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (The maximum of convex functions is convex)</strong></span> If <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are <a href="./algebra.html#def-convex-function">convex</a> functions on <span class="math inline">\(\mathbb{R}^p\)</span>, then <span class="math inline">\(f(\tilde{x}) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f_1(\tilde{x}), f_2(\tilde{x})\right\}\mathclose{}\)</span> is convex.</p>
+<p><span class="theorem-title"><strong>Theorem 7 (The maximum of convex functions is convex)</strong></span> If <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are <a href="./algebra-sums.html#def-convex-function">convex</a> functions on <span class="math inline">\(\mathbb{R}^p\)</span>, then <span class="math inline">\(f(\tilde{x}) \stackrel{\text{def}}{=}\max\mathopen{}\left\{f_1(\tilde{x}), f_2(\tilde{x})\right\}\mathclose{}\)</span> is convex.</p>
 </div>
 </div>
 </div>
@@ -1938,7 +1990,7 @@ g(1) &amp;= \min\mathopen{}\left\{1, 1\right\}\mathclose{} \\
 </div>
 <div class="callout-body-container">
 <div id="thm-epigraph" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (Convexity through the epigraph)</strong></span> <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is <a href="./algebra.html#def-convex-function">convex</a> if and only if its epigraph (<a href="#def-epigraph" class="quarto-xref">Definition&nbsp;6</a>) is convex (<a href="#def-convex-set" class="quarto-xref">Definition&nbsp;3</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 8 (Convexity through the epigraph)</strong></span> <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> is <a href="./algebra-sums.html#def-convex-function">convex</a> if and only if its epigraph (<a href="#def-epigraph" class="quarto-xref">Definition&nbsp;6</a>) is convex (<a href="#def-convex-set" class="quarto-xref">Definition&nbsp;3</a>).</p>
 </div>
 </div>
 </div>
@@ -2062,7 +2114,7 @@ s
 </div>
 <div class="callout-body-container">
 <div id="thm-convex-first-order" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (First-order characterization of convexity)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-several">continuity</a>). Then <span class="math inline">\(f\)</span> is <a href="./algebra.html#def-convex-function">convex</a> if and only if</p>
+<p><span class="theorem-title"><strong>Theorem 9 (First-order characterization of convexity)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-several">continuity</a>). Then <span class="math inline">\(f\)</span> is <a href="./algebra-sums.html#def-convex-function">convex</a> if and only if</p>
 <p><span id="eq-supporting-hyperplane"><span class="math display">\[
 f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y})
 \qquad \text{for all } \tilde{x}, \tilde{y}\in \mathbb{R}^p:
@@ -2140,7 +2192,7 @@ t f(\tilde{x}) + (1 - t) f(\tilde{y})
 &amp;&amp; \text{(definition of } \tilde{z} \text{)}
 \end{aligned}
 \]</span></p>
-<p>That inequality is the defining inequality of a <a href="./algebra.html#def-convex-function">convex function</a>. If <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is strict for distinct points, and <span class="math inline">\(\tilde{x}\ne \tilde{y}\)</span> and <span class="math inline">\(t \in (0, 1)\)</span>, then:</p>
+<p>That inequality is the defining inequality of a <a href="./algebra-sums.html#def-convex-function">convex function</a>. If <a href="#eq-supporting-hyperplane" class="quarto-xref">Equation&nbsp;1</a> is strict for distinct points, and <span class="math inline">\(\tilde{x}\ne \tilde{y}\)</span> and <span class="math inline">\(t \in (0, 1)\)</span>, then:</p>
 <ul>
 <li>
 <span class="math inline">\(\tilde{z}\)</span> differs from both <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span>, since <span class="math inline">\(\tilde{x}- \tilde{z} = (1 - t)(\tilde{x}- \tilde{y}) \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{y}- \tilde{z} = t (\tilde{y}- \tilde{x}) \ne \tilde{0}\)</span>;</li>
@@ -2181,7 +2233,7 @@ f(x) - (2xy - y^2)
 <div id="thm-convex-hessian" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (Second-derivative test for convexity)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> have first and second partial derivatives that are continuous on <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./vector-calculus.html#def-continuous-several">continuity</a>).</p>
 <ol type="1">
-<li>If <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-semidefinite">positive semidefinite</a> for every <span class="math inline">\(\tilde{x}\)</span>, then <span class="math inline">\(f\)</span> is <a href="./algebra.html#def-convex-function">convex</a>.</li>
+<li>If <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-semidefinite">positive semidefinite</a> for every <span class="math inline">\(\tilde{x}\)</span>, then <span class="math inline">\(f\)</span> is <a href="./algebra-sums.html#def-convex-function">convex</a>.</li>
 <li>If <span class="math inline">\(\mathbf{H}_f(\tilde{x})\)</span> is <a href="./linear-algebra-special-matrices.html#def-positive-definite">positive definite</a> for every <span class="math inline">\(\tilde{x}\)</span>, then <span class="math inline">\(f\)</span> is strictly convex (<a href="#def-strictly-convex" class="quarto-xref">Definition&nbsp;5</a>).</li>
 </ol>
 </div>
@@ -2301,7 +2353,7 @@ x &amp;= 0 \\
 </div>
 <div class="callout-body-container">
 <div id="cor-convex-stationary" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (Stationary points of a convex function are global minimizers)</strong></span> If <span class="math inline">\(f\)</span> is as in <a href="#thm-convex-first-order" class="quarto-xref">Theorem&nbsp;9</a> and convex, then every stationary point <span class="math inline">\(\tilde{x}^*\)</span> of <span class="math inline">\(f\)</span> (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>) is a <a href="./algebra.html#def-global-minimizer">global minimizer</a>.</p>
+<p><span class="theorem-title"><strong>Corollary 1 (Stationary points of a convex function are global minimizers)</strong></span> If <span class="math inline">\(f\)</span> is as in <a href="#thm-convex-first-order" class="quarto-xref">Theorem&nbsp;9</a> and convex, then every stationary point <span class="math inline">\(\tilde{x}^*\)</span> of <span class="math inline">\(f\)</span> (<a href="#def-stationary-point" class="quarto-xref">Definition&nbsp;1</a>) is a <a href="./algebra-basics.html#def-global-minimizer">global minimizer</a>.</p>
 </div>
 </div>
 </div>
@@ -2416,7 +2468,7 @@ f(\tilde{x})
 </div>
 <div class="callout-body-container">
 <div id="def-minimization-problem" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Objective function (objective) and minimization problem)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and let <span class="math inline">\(F \subseteq \mathbb{R}^p\)</span> be a feasible set (<a href="#def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>). In the problem of minimizing <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span>, <span class="math inline">\(f\)</span> is the <strong>objective function</strong> (or <strong>objective</strong>). A <strong>minimizer of <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span></strong> is a feasible <span class="math inline">\(\tilde{x}^*\)</span> with <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for every feasible <span class="math inline">\(\tilde{x}\)</span>: a <a href="./algebra.html#def-global-minimizer">global minimizer</a> of <span class="math inline">\(f\)</span> with its domain restricted to <span class="math inline">\(F\)</span>. When <span class="math inline">\(F\)</span> is given by constraints, the problem is to minimize <span class="math inline">\(f\)</span> <strong>subject to</strong> them.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Objective function (objective) and minimization problem)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> and let <span class="math inline">\(F \subseteq \mathbb{R}^p\)</span> be a feasible set (<a href="#def-feasible-set" class="quarto-xref">Definition&nbsp;8</a>). In the problem of minimizing <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span>, <span class="math inline">\(f\)</span> is the <strong>objective function</strong> (or <strong>objective</strong>). A <strong>minimizer of <span class="math inline">\(f\)</span> over <span class="math inline">\(F\)</span></strong> is a feasible <span class="math inline">\(\tilde{x}^*\)</span> with <span class="math inline">\(f(\tilde{x}^*) \le f(\tilde{x})\)</span> for every feasible <span class="math inline">\(\tilde{x}\)</span>: a <a href="./algebra-basics.html#def-global-minimizer">global minimizer</a> of <span class="math inline">\(f\)</span> with its domain restricted to <span class="math inline">\(F\)</span>. When <span class="math inline">\(F\)</span> is given by constraints, the problem is to minimize <span class="math inline">\(f\)</span> <strong>subject to</strong> them.</p>
 </div>
 </div>
 </div>
@@ -2895,7 +2947,7 @@ f^*(b) &amp;= \tfrac{1}{2} \mathopen{}\left(\tfrac{2}{25}\right)\mathclose{}\,b^
 </div>
 <div class="callout-body-container">
 <div id="def-vector-sequence-limit" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Iterates and convergence of a sequence of vectors)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> <strong>converges</strong> to <span class="math inline">\(\tilde{x}^* \in \mathbb{R}^p\)</span> if the sequence of distances <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^*\right\rVert\mathclose{}\)</span> <a href="./algebra.html#def-sequence-limit">converges</a> to <span class="math inline">\(0\)</span>. For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert x^{(t)} - x^*\right\rVert\mathclose{} = \mathopen{}\left|x^{(t)} - x^*\right|\mathclose{}\)</span>, and this is the convergence of a sequence of numbers to <span class="math inline">\(x^*\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Iterates and convergence of a sequence of vectors)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\)</span> in <span class="math inline">\(\mathbb{R}^p\)</span> <strong>converges</strong> to <span class="math inline">\(\tilde{x}^* \in \mathbb{R}^p\)</span> if the sequence of distances <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^*\right\rVert\mathclose{}\)</span> <a href="./algebra-exponentials.html#def-sequence-limit">converges</a> to <span class="math inline">\(0\)</span>. For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert x^{(t)} - x^*\right\rVert\mathclose{} = \mathopen{}\left|x^{(t)} - x^*\right|\mathclose{}\)</span>, and this is the convergence of a sequence of numbers to <span class="math inline">\(x^*\)</span>.</p>
 <p>An <strong>iterative method</strong> starts from a point <span class="math inline">\(\tilde{x}^{(0)}\)</span> and computes <span class="math inline">\(\tilde{x}^{(t+1)}\)</span> from <span class="math inline">\(\tilde{x}^{(t)}\)</span> by a fixed rule, for <span class="math inline">\(t = 0, 1, 2, \ldots\)</span>; the points <span class="math inline">\(\tilde{x}^{(t)}\)</span> are its <strong>iterates</strong>. For a point <span class="math inline">\(\tilde{x}^*\)</span> that the method is meant to reach, <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^*\right\rVert\mathclose{}\)</span> is the <strong>error</strong> of the iterate <span class="math inline">\(\tilde{x}^{(t)}\)</span>.</p>
 </div>
 </div>

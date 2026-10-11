@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -16,7 +16,7 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\\cup\\ | union, “or” | `\cup` |
 | \\\cap\\ | intersection, “and” | `\cap` |
 | \\\mid\\ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
-| \\\sum\\ | [sum](algebra.llms.md#sec-summation) | `\sum` |
+| \\\sum\\ | [sum](algebra-sums.llms.md#sec-summation) | `\sum` |
 | \\\prod\\ | product | `\prod` |
 | \\\mu\\ | mean, \\\operatorname{E}\[X\]\\, of a [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ | `\mu` |
 | \\\operatorname{E}\\ | [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) | `\mathbb{E}` |
@@ -156,7 +156,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > **Example 6 (Irrational numbers)**  
 >
-> - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ (see [Wikipedia: Square root of 2](https://en.wikipedia.org/wiki/Square_root_of_2)).
+> - \\\sqrt{2} = 1.41421\ldots\\, the [square root](algebra-basics.llms.md#def-square-root) of \\2\\, is irrational: no fraction of integers \\\frac{a}{b}\\ squares to \\2\\ (see [Wikipedia: Square root of 2](https://en.wikipedia.org/wiki/Square_root_of_2)).
 > - \\\pi = 3.14159\ldots\\ is irrational (see [Wikipedia: Proof that \\\pi\\ is irrational](https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational)).
 > - \\1.5\\ is not irrational, because \\1.5 = \frac{3}{2}\\ is rational.
 
@@ -279,7 +279,7 @@ We can use any of:
 
 to denote logical entailment ([Definition 14](#def-logical-entailment)). \\\Rightarrow\\ also writes the connective “implies” ([Definition 11](#def-logical-connective)); \\P\\ entails \\Q\\ exactly when \\P \Rightarrow Q\\ is true for every choice of values for the variables in \\P\\ and \\Q\\.
 
-Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#def-sequence-limit) results.
+Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-sequence-limit) results.
 
 > **NOTE:**
 >
@@ -296,7 +296,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 >
 > \\ \begin{aligned} a + b &= 2j + 2k && \text{(substitute } a = 2j \text{ and } b = 2k \text{)} \\ &= 2(j + k) && \text{(distributive law)} \end{aligned} \\
 >
-> The second line uses the [distributive law](algebra.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([Definition 2](#def-even-odd)). For example,
+> The second line uses the [distributive law](algebra-sums.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([Definition 2](#def-even-odd)). For example,
 >
 > \\ \begin{aligned} 4 + 10 &= 2 \cdot 2 + 2 \cdot 5 \\ &= 2 \cdot 7 \\ &= 14. \end{aligned} \\
 
@@ -310,7 +310,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 >
 > \\ \begin{aligned} (x + 1)^2 &= x^2 + 2x + 1 && \text{(square of a sum)} \\ &\ge 2x + 1 && \text{(} x^2 \ge 0 \text{)} \\ &\> 2x && \text{(} 1 \> 0 \text{)} \end{aligned} \\
 >
-> The first step uses the [square of a sum](algebra.llms.md#thm-square-of-a-sum). The steps are \\=\\, \\\ge\\, and \\\>\\, so the derivation shows \\(x + 1)^2 \> 2x\\. For example, with \\x = 3\\: \\(3 + 1)^2 = 16\\, and \\16 \> 6 = 2 \cdot 3\\.
+> The first step uses the [square of a sum](algebra-sums.llms.md#thm-square-of-a-sum). The steps are \\=\\, \\\ge\\, and \\\>\\, so the derivation shows \\(x + 1)^2 \> 2x\\. For example, with \\x = 3\\: \\(3 + 1)^2 = 16\\, and \\16 \> 6 = 2 \cdot 3\\.
 
 > **NOTE:**
 >
@@ -332,9 +332,9 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 >
 > This holds in each case:
 >
-> - If \\R\\ and \\S\\ are both \\=\\, then \\a = c\\ ([equalities are transitive](algebra.llms.md#thm-equal-trans)).
-> - If exactly one of \\R\\ and \\S\\ is \\=\\, replace \\b\\ by the equal expression in the other relation ([substitution](algebra.llms.md#thm-substitution)). This gives the other relation between \\a\\ and \\c\\.
-> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict and non-strict inequalities](algebra.llms.md#def-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
+> - If \\R\\ and \\S\\ are both \\=\\, then \\a = c\\ ([equalities are transitive](algebra-basics.llms.md#thm-equal-trans)).
+> - If exactly one of \\R\\ and \\S\\ is \\=\\, replace \\b\\ by the equal expression in the other relation ([substitution](algebra-basics.llms.md#thm-substitution)). This gives the other relation between \\a\\ and \\c\\.
+> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict and non-strict inequalities](algebra-basics.llms.md#def-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
 >
 > Now let \\T_j\\ be the relation named by the same rule applied to the first \\j\\ steps of the chain, with \\T_0\\ being \\=\\. We show \\E_0 \mathrel{T_j} E_j\\ by induction on \\j\\. For \\j = 0\\, \\E_0 = E_0\\. If \\E_0 \mathrel{T_j} E_j\\, then the step from \\E_j\\ to \\E\_{j+1}\\ and the fact above give \\E_0 \mathrel{T\_{j+1}} E\_{j+1}\\. At \\j = n\\, \\T_n\\ is \\=\\ when every step is \\=\\, which is part 1. It is \\\le\\ or \\=\\ when every step is \\=\\ or \\\le\\, and \\=\\ implies \\\le\\, which is part 2. It is \\\<\\ when some step is \\\<\\, which is part 3.
 >
@@ -441,7 +441,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra.llms.md#d
 >
 > \\ \begin{aligned} 2j &= 2k + 1 && \text{(both equal } n \text{)} \\ 2j - 2k &= 1 && \text{(subtract } 2k \text{ from both sides)} \\ 2(j - k) &= 1 && \text{(distributive law)} \\ j - k &= \tfrac{1}{2} && \text{(divide both sides by } 2 \text{)} \end{aligned} \\
 >
-> The third line uses the [distributive law](algebra.llms.md#def-distributive). But \\j - k\\ is an integer, and \\\frac{1}{2}\\ is not, so the last line is false. So no integer is both even and odd. For example, \\6 = 2 \cdot 3\\ is even, and \\6 = 2k + 1\\ would need \\k = 2.5\\, which is not an integer.
+> The third line uses the [distributive law](algebra-sums.llms.md#def-distributive). But \\j - k\\ is an integer, and \\\frac{1}{2}\\ is not, so the last line is false. So no integer is both even and odd. For example, \\6 = 2 \cdot 3\\ is even, and \\6 = 2k + 1\\ would need \\k = 2.5\\, which is not an integer.
 
 > **NOTE:**
 >
@@ -681,7 +681,7 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms
 
   \\ \begin{aligned} \operatorname{E}\[\mathbb{1}\_{A}\] &= 0 \cdot \Pr(A^c) + 1 \cdot \Pr(A) \\ &= \Pr(A) \end{aligned} \\
 
-This [identity](algebra.llms.md#def-identity) turns probabilities into expectations. It is the mathematical foundation for:
+This [identity](algebra-basics.llms.md#def-identity) turns probabilities into expectations. It is the mathematical foundation for:
 
 - empirical proportions;
 - estimators of survival curves, the probability of no event by each time;
@@ -691,7 +691,7 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> **Definition 29 (Lower and upper limits of a sum or integral)** In a [sum](algebra.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
+> **Definition 29 (Lower and upper limits of a sum or integral)** In a [sum](algebra-sums.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
 
 > **NOTE:**
 >
@@ -702,7 +702,7 @@ This [identity](algebra.llms.md#def-identity) turns probabilities into expectati
 
 > **NOTE:**
 >
-> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 29](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
+> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 29](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra-exponentials.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
 
 > **NOTE:**
 >
@@ -727,8 +727,8 @@ For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\ma
 
 | Shorthand | Full form | Part left out |
 |:---|:---|:---|
-| \\\sum\_{x} f(x)\\ | \\\sum\_{x \in \mathcal{R}(x)} f(x)\\ | the set the sum runs over ([sum over a finite set](algebra.llms.md#def-sum-over-set)) |
-| \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^nx_i\\ | the lower and upper limits of the index ([summation notation](algebra.llms.md#def-summation)) |
+| \\\sum\_{x} f(x)\\ | \\\sum\_{x \in \mathcal{R}(x)} f(x)\\ | the set the sum runs over ([sum over a finite set](algebra-sums.llms.md#def-sum-over-set)) |
+| \\\sum\_{i} x_i\\ | \\\sum\_{i=1}^nx_i\\ | the lower and upper limits of the index ([summation notation](algebra-sums.llms.md#def-summation)) |
 | \\\sum x_i\\ | \\\sum\_{i=1}^nx_i\\ | the index and its lower and upper limits |
 | \\\prod\_{i} x_i\\ | \\\prod\_{i=1}^nx_i\\ | the lower and upper limits of the index |
 | \\\prod x_i\\ | \\\prod\_{i=1}^nx_i\\ | the index and its lower and upper limits |

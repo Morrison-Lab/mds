@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 ## 1 Derivatives
 
@@ -16,11 +16,11 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 >
 > \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } x \text{ with } 0 \< \mathopen{}\left\|x - c\right\|\mathclose{} \< \delta.\\
 >
-> Here \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra.llms.md#def-absolute-value). When such a real number \\L\\ exists, the limit **exists**; otherwise, the limit does not exist. The value \\f(c)\\, if it is defined, plays no role.
+> Here \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\ is the [absolute value](algebra-basics.llms.md#def-absolute-value). When such a real number \\L\\ exists, the limit **exists**; otherwise, the limit does not exist. The value \\f(c)\\, if it is defined, plays no role.
 
 > **NOTE:**
 >
-> **Example 1 (The limit of \\3x + 1\\ at \\2\\)** \\\lim\_{x \to 2} (3x + 1) = 7\\. Given \\\varepsilon\> 0\\, take \\\delta= \varepsilon/ 3\\. For every \\x\\ with \\0 \< \mathopen{}\left\|x - 2\right\|\mathclose{} \< \delta\\, using the [distributive law](algebra.llms.md#def-distributive) in the second line,
+> **Example 1 (The limit of \\3x + 1\\ at \\2\\)** \\\lim\_{x \to 2} (3x + 1) = 7\\. Given \\\varepsilon\> 0\\, take \\\delta= \varepsilon/ 3\\. For every \\x\\ with \\0 \< \mathopen{}\left\|x - 2\right\|\mathclose{} \< \delta\\, using the [distributive law](algebra-sums.llms.md#def-distributive) in the second line,
 >
 > \\ \begin{aligned} \mathopen{}\left\|(3x + 1) - 7\right\|\mathclose{} &= \mathopen{}\left\|3x - 6\right\|\mathclose{} && \text{(subtract)} \\ &= \mathopen{}\left\|3(x - 2)\right\|\mathclose{} && \text{(distributive law)} \\ &= 3 \mathopen{}\left\|x - 2\right\|\mathclose{} && \text{(} \mathopen{}\left\|3y\right\|\mathclose{} = 3 \mathopen{}\left\|y\right\|\mathclose{} \text{, since } 3 \> 0 \text{)} \\ &\< 3 \cdot\frac{\varepsilon}{3} && \text{(} \mathopen{}\left\|x - 2\right\|\mathclose{} \< \delta= \varepsilon/ 3 \text{)} \\ &= \varepsilon && \text{(multiply)} \end{aligned} \\
 >
@@ -62,7 +62,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 >
 > \\ \frac{f(c + h) - f(c)}{h}, \\
 >
-> the [slope](algebra.llms.md#def-affine-function) of the line through the points \\(c, f(c))\\ and \\(c + h, f(c + h))\\.
+> the [slope](algebra-exponentials.llms.md#def-affine-function) of the line through the points \\(c, f(c))\\ and \\(c + h, f(c + h))\\.
 
 > **NOTE:**
 >
@@ -119,7 +119,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (One-sided derivatives of \\\mathopen{}\left\|x\right\|\mathclose{}\\ at \\0\\)** Let \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\, the [absolute value](algebra.llms.md#def-absolute-value), and \\c = 0\\.
+> **Example 6 (One-sided derivatives of \\\mathopen{}\left\|x\right\|\mathclose{}\\ at \\0\\)** Let \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\, the [absolute value](algebra-basics.llms.md#def-absolute-value), and \\c = 0\\.
 >
 > - For \\h \> 0\\, \\\mathopen{}\left\|h\right\|\mathclose{} = h\\, so
 >
@@ -173,7 +173,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 3 (Power rule)** For every real number \\q\\ and every \\x \> 0\\, the derivative of the [power](algebra.llms.md#def-real-power) \\x^q\\ is:
+> **Theorem 3 (Power rule)** For every real number \\q\\ and every \\x \> 0\\, the derivative of the [power](algebra-exponentials.llms.md#def-real-power) \\x^q\\ is:
 >
 > \\\frac{\partial}{\partial x}x^q = qx^{q-1}\\
 >
@@ -251,7 +251,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (Derivative of natural logarithm)** For every \\x \> 0\\, the derivative of the [natural logarithm](algebra.llms.md#def-natural-log) is:
+> **Theorem 4 (Derivative of natural logarithm)** For every \\x \> 0\\, the derivative of the [natural logarithm](algebra-exponentials.llms.md#def-natural-log) is:
 >
 > \\ \begin{aligned} \operatorname{log}'\mathopen{}\left\\x\right\\\mathclose{} &= \frac{1}{x} \\ &= x^{-1} \end{aligned} \\
 
@@ -283,7 +283,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 5 (Derivative of exponential)** For every real \\x\\, the derivative of the [exponential function](algebra.llms.md#def-exponential-function) is:
+> **Theorem 5 (Derivative of exponential)** For every real \\x\\, the derivative of the [exponential function](algebra-exponentials.llms.md#def-exponential-function) is:
 >
 > \\\operatorname{exp}'\mathopen{}\left\\x\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\
 
@@ -535,11 +535,11 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra.llms.md#def-affine-function)
+> **Definition 8 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
 >
-> the line through the point \\(c, f(c))\\ with [slope](algebra.llms.md#def-affine-function) \\f'(c)\\. The slope \\f'(c)\\ is also called the **tangent slope** of \\f\\ at \\c\\.
+> the line through the point \\(c, f(c))\\ with [slope](algebra-exponentials.llms.md#def-affine-function) \\f'(c)\\. The slope \\f'(c)\\ is also called the **tangent slope** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -565,7 +565,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Remark 1* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 9](#def-linear-approximation)) is an [affine function](algebra.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
+> *Remark 1* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 9](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
 
 Show R code
 
@@ -669,7 +669,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > **Example 9 (Flat points, and a point that is not one)**  
 >
-> - \\f(w) = w^3\\ has \\f'(w) = 3w^2\\, which is \\0\\ at \\w = 0\\, so \\0\\ is a flat point. Yet \\f(0) = 0\\ is neither the [minimum](algebra.llms.md#def-minimum) nor the [maximum](algebra.llms.md#def-maximum) of the values \\f\\ takes on any open interval around \\0\\: \\f(w) \< 0\\ for \\w \< 0\\ and \\f(w) \> 0\\ for \\w \> 0\\.
+> - \\f(w) = w^3\\ has \\f'(w) = 3w^2\\, which is \\0\\ at \\w = 0\\, so \\0\\ is a flat point. Yet \\f(0) = 0\\ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the values \\f\\ takes on any open interval around \\0\\: \\f(w) \< 0\\ for \\w \< 0\\ and \\f(w) \> 0\\ for \\w \> 0\\.
 > - \\h(w) = w^2\\ has \\h'(1) = 2 \ne 0\\, so \\1\\ is not a flat point.
 
 > **NOTE:**
@@ -677,7 +677,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > **Exercise 14 (Find the flat point, and check the approximation)** Let \\f(w) = w^2 - 4w + 7\\.
 >
 > 1.  Differentiate \\f\\.
-> 2.  Find the flat point \\w\\ of \\f\\, and say whether \\f(w)\\ is the [minimum](algebra.llms.md#def-minimum) or the [maximum](algebra.llms.md#def-maximum) of the values of \\f\\.
+> 2.  Find the flat point \\w\\ of \\f\\, and say whether \\f(w)\\ is the [minimum](algebra-basics.llms.md#def-minimum) or the [maximum](algebra-basics.llms.md#def-maximum) of the values of \\f\\.
 > 3.  Evaluate the derivative at \\w = 1\\, use [Equation 1](#eq-linear-approx) to predict \\f(1.01)\\, and compare that prediction with the exact value.
 
 > **NOTE:**

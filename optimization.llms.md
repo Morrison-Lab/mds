@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -22,7 +22,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Theorem 1 (A minimizer has derivative zero)** Let \\g\\ be a [real](notation.llms.md#def-real-numbers)-valued function on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\, and let \\g\\ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\.
+> **Theorem 1 (A minimizer has derivative zero)** Let \\g\\ be a [real](notation.llms.md#def-real-numbers)-valued function on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\, and let \\g\\ be [differentiable](calculus-derivatives.llms.md#def-differentiable) at \\c\\. If \\c\\ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of \\g\\, then \\g'(c) = 0\\.
 
 > **NOTE:**
 >
@@ -66,7 +66,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 
 > **NOTE:**
 >
-> **Theorem 2 (First-order necessary condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. If \\\tilde{x}^\*\\ is a [local minimizer](algebra.llms.md#def-local-minimizer) of \\f\\ and the gradient of \\f\\ exists at \\\tilde{x}^\*\\, then \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 1](#def-stationary-point)).
+> **Theorem 2 (First-order necessary condition)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\. If \\\tilde{x}^\*\\ is a [local minimizer](algebra-basics.llms.md#def-local-minimizer) of \\f\\ and the gradient of \\f\\ exists at \\\tilde{x}^\*\\, then \\\tilde{x}^\*\\ is a stationary point of \\f\\ ([Definition 1](#def-stationary-point)).
 
 > **NOTE:**
 >
@@ -208,7 +208,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} e^{\tau} &= 2 (e - 2) \\ &\approx 2 \times 0.71828 \\ &= 1.43656, \end{aligned} \\
 >
-> so \\\tau= \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra.llms.md#def-natural-log)), which is in \\(0, 1)\\.
+> so \\\tau= \log 1.43656 \approx 0.362\\ ([natural logarithm](algebra-exponentials.llms.md#def-natural-log)), which is in \\(0, 1)\\.
 
 > **NOTE:**
 >
@@ -258,7 +258,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 >   for every \\x \ne 2\\, so \\2\\ is a strict local minimizer (any \\\delta\> 0\\ works).
 >
-> - A constant function \\f(\tilde{x}) = 0\\ has \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for all \\\tilde{x}^\*\\ and \\\tilde{x}\\, so every point is a [local minimizer](algebra.llms.md#def-local-minimizer), but no point is a strict one: \\f(\tilde{x}^\*) \< f(\tilde{x})\\ never holds.
+> - A constant function \\f(\tilde{x}) = 0\\ has \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for all \\\tilde{x}^\*\\ and \\\tilde{x}\\, so every point is a [local minimizer](algebra-basics.llms.md#def-local-minimizer), but no point is a strict one: \\f(\tilde{x}^\*) \< f(\tilde{x})\\ never holds.
 
 > **NOTE:**
 >
@@ -396,7 +396,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 5 (Strictly convex and concave functions)** A function \\f : \mathbb{R}^p \to \mathbb{R}\\ is **strictly convex** if \\f(t \tilde{x}+ (1 - t) \tilde{y}) \< t f(\tilde{x}) + (1 - t) f(\tilde{y})\\ for all \\\tilde{x}\ne \tilde{y}\\ in \\\mathbb{R}^p\\ and all \\t \in (0, 1)\\. It is **concave** if \\-f\\ is [convex](algebra.llms.md#def-convex-function), and **strictly concave** if \\-f\\ is strictly convex.
+> **Definition 5 (Strictly convex and concave functions)** A function \\f : \mathbb{R}^p \to \mathbb{R}\\ is **strictly convex** if \\f(t \tilde{x}+ (1 - t) \tilde{y}) \< t f(\tilde{x}) + (1 - t) f(\tilde{y})\\ for all \\\tilde{x}\ne \tilde{y}\\ in \\\mathbb{R}^p\\ and all \\t \in (0, 1)\\. It is **concave** if \\-f\\ is [convex](algebra-sums.llms.md#def-convex-function), and **strictly concave** if \\-f\\ is strictly convex.
 
 > **NOTE:**
 >
@@ -416,7 +416,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Theorem 7 (The maximum of convex functions is convex)** If \\f_1\\ and \\f_2\\ are [convex](algebra.llms.md#def-convex-function) functions on \\\mathbb{R}^p\\, then \\f(\tilde{x}) \stackrel{\text{def}}{=}\max\mathopen{}\left\\f_1(\tilde{x}), f_2(\tilde{x})\right\\\mathclose{}\\ is convex.
+> **Theorem 7 (The maximum of convex functions is convex)** If \\f_1\\ and \\f_2\\ are [convex](algebra-sums.llms.md#def-convex-function) functions on \\\mathbb{R}^p\\, then \\f(\tilde{x}) \stackrel{\text{def}}{=}\max\mathopen{}\left\\f_1(\tilde{x}), f_2(\tilde{x})\right\\\mathclose{}\\ is convex.
 
 > **NOTE:**
 >
@@ -454,7 +454,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Theorem 8 (Convexity through the epigraph)** \\f : \mathbb{R}^p \to \mathbb{R}\\ is [convex](algebra.llms.md#def-convex-function) if and only if its epigraph ([Definition 6](#def-epigraph)) is convex ([Definition 3](#def-convex-set)).
+> **Theorem 8 (Convexity through the epigraph)** \\f : \mathbb{R}^p \to \mathbb{R}\\ is [convex](algebra-sums.llms.md#def-convex-function) if and only if its epigraph ([Definition 6](#def-epigraph)) is convex ([Definition 3](#def-convex-set)).
 
 > **NOTE:**
 >
@@ -499,7 +499,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Theorem 9 (First-order characterization of convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)). Then \\f\\ is [convex](algebra.llms.md#def-convex-function) if and only if
+> **Theorem 9 (First-order characterization of convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)). Then \\f\\ is [convex](algebra-sums.llms.md#def-convex-function) if and only if
 >
 > \\ f(\tilde{x}) \ge f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}) \qquad \text{for all } \tilde{x}, \tilde{y}\in \mathbb{R}^p: \tag{1}\\
 >
@@ -525,7 +525,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \begin{aligned} t f(\tilde{x}) + (1 - t) f(\tilde{y}) &\ge t \mathopen{}\left(f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{x}- \tilde{z})\right)\mathclose{} + (1 - t) \mathopen{}\left(f(\tilde{z}) + {\tilde{g}}^{\top} (\tilde{y}- \tilde{z})\right)\mathclose{} && \text{(multiply by } t, 1 - t \ge 0 \text{ and add)} \\ &= (t + (1 - t))\\f(\tilde{z}) + t\\{\tilde{g}}^{\top} (\tilde{x}- \tilde{z}) + (1 - t)\\{\tilde{g}}^{\top} (\tilde{y}- \tilde{z}) && \text{(distribute } t \text{ and } 1 - t \text{)} \\ &= f(\tilde{z}) + t\\{\tilde{g}}^{\top} (\tilde{x}- \tilde{z}) + (1 - t)\\{\tilde{g}}^{\top} (\tilde{y}- \tilde{z}) && \text{(} t + (1 - t) = 1 \text{)} \\ &= f(\tilde{z}) + {\tilde{g}}^{\top} \mathopen{}\left(t (\tilde{x}- \tilde{z}) + (1 - t) (\tilde{y}- \tilde{z})\right)\mathclose{} && \text{(factor out } {\tilde{g}}^{\top} \text{; matrix products distribute)} \\ &= f(\tilde{z}) + {\tilde{g}}^{\top} \mathopen{}\left(t \tilde{x}+ (1 - t) \tilde{y}- \tilde{z}\right)\mathclose{} && \text{(collect terms)} \\ &= f(\tilde{z}). && \text{(definition of } \tilde{z} \text{)} \end{aligned} \\
 >
-> That inequality is the defining inequality of a [convex function](algebra.llms.md#def-convex-function). If [Equation 1](#eq-supporting-hyperplane) is strict for distinct points, and \\\tilde{x}\ne \tilde{y}\\ and \\t \in (0, 1)\\, then:
+> That inequality is the defining inequality of a [convex function](algebra-sums.llms.md#def-convex-function). If [Equation 1](#eq-supporting-hyperplane) is strict for distinct points, and \\\tilde{x}\ne \tilde{y}\\ and \\t \in (0, 1)\\, then:
 >
 > - \\\tilde{z}\\ differs from both \\\tilde{x}\\ and \\\tilde{y}\\, since \\\tilde{x}- \tilde{z} = (1 - t)(\tilde{x}- \tilde{y}) \ne \tilde{0}\\ and \\\tilde{y}- \tilde{z} = t (\tilde{y}- \tilde{x}) \ne \tilde{0}\\;
 > - so both inequalities at \\\tilde{z}\\ are strict;
@@ -543,7 +543,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > **Theorem 10 (Second-derivative test for convexity)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)).
 >
-> 1.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every \\\tilde{x}\\, then \\f\\ is [convex](algebra.llms.md#def-convex-function).
+> 1.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite) for every \\\tilde{x}\\, then \\f\\ is [convex](algebra-sums.llms.md#def-convex-function).
 > 2.  If \\\mathbf{H}\_f(\tilde{x})\\ is [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) for every \\\tilde{x}\\, then \\f\\ is strictly convex ([Definition 5](#def-strictly-convex)).
 
 > **NOTE:**
@@ -588,7 +588,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Corollary 1 (Stationary points of a convex function are global minimizers)** If \\f\\ is as in [Theorem 9](#thm-convex-first-order) and convex, then every stationary point \\\tilde{x}^\*\\ of \\f\\ ([Definition 1](#def-stationary-point)) is a [global minimizer](algebra.llms.md#def-global-minimizer).
+> **Corollary 1 (Stationary points of a convex function are global minimizers)** If \\f\\ is as in [Theorem 9](#thm-convex-first-order) and convex, then every stationary point \\\tilde{x}^\*\\ of \\f\\ ([Definition 1](#def-stationary-point)) is a [global minimizer](algebra-basics.llms.md#def-global-minimizer).
 
 > **NOTE:**
 >
@@ -628,7 +628,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Definition 9 (Objective function (objective) and minimization problem)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\F \subseteq \mathbb{R}^p\\ be a feasible set ([Definition 8](#def-feasible-set)). In the problem of minimizing \\f\\ over \\F\\, \\f\\ is the **objective function** (or **objective**). A **minimizer of \\f\\ over \\F\\** is a feasible \\\tilde{x}^\*\\ with \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for every feasible \\\tilde{x}\\: a [global minimizer](algebra.llms.md#def-global-minimizer) of \\f\\ with its domain restricted to \\F\\. When \\F\\ is given by constraints, the problem is to minimize \\f\\ **subject to** them.
+> **Definition 9 (Objective function (objective) and minimization problem)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ and let \\F \subseteq \mathbb{R}^p\\ be a feasible set ([Definition 8](#def-feasible-set)). In the problem of minimizing \\f\\ over \\F\\, \\f\\ is the **objective function** (or **objective**). A **minimizer of \\f\\ over \\F\\** is a feasible \\\tilde{x}^\*\\ with \\f(\tilde{x}^\*) \le f(\tilde{x})\\ for every feasible \\\tilde{x}\\: a [global minimizer](algebra-basics.llms.md#def-global-minimizer) of \\f\\ with its domain restricted to \\F\\. When \\F\\ is given by constraints, the problem is to minimize \\f\\ **subject to** them.
 
 > **NOTE:**
 >
@@ -793,7 +793,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 12 (Iterates and convergence of a sequence of vectors)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ **converges** to \\\tilde{x}^\* \in \mathbb{R}^p\\ if the sequence of distances \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ [converges](algebra.llms.md#def-sequence-limit) to \\0\\. For \\p = 1\\, \\\mathopen{}\left\lVert x^{(t)} - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x^{(t)} - x^\*\right\|\mathclose{}\\, and this is the convergence of a sequence of numbers to \\x^\*\\.
+> **Definition 12 (Iterates and convergence of a sequence of vectors)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ **converges** to \\\tilde{x}^\* \in \mathbb{R}^p\\ if the sequence of distances \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ [converges](algebra-exponentials.llms.md#def-sequence-limit) to \\0\\. For \\p = 1\\, \\\mathopen{}\left\lVert x^{(t)} - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x^{(t)} - x^\*\right\|\mathclose{}\\, and this is the convergence of a sequence of numbers to \\x^\*\\.
 >
 > An **iterative method** starts from a point \\\tilde{x}^{(0)}\\ and computes \\\tilde{x}^{(t+1)}\\ from \\\tilde{x}^{(t)}\\ by a fixed rule, for \\t = 0, 1, 2, \ldots\\; the points \\\tilde{x}^{(t)}\\ are its **iterates**. For a point \\\tilde{x}^\*\\ that the method is meant to reach, \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ is the **error** of the iterate \\\tilde{x}^{(t)}\\.
 

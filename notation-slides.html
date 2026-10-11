@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-10 18:57:52 (PDT)</p>
+  <p class="date">Last modified: 2026-10-10 19:44:14 (PDT)</p>
 </section><section class="slide level2 scrollable"><p>Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.</p>
 <div id="tbl-notation-collected" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-notation-collected-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -400,7 +400,7 @@ Table&nbsp;1: Notation used in this book
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\sum\)</span></td>
-<td><a href="./algebra.html#sec-summation">sum</a></td>
+<td><a href="./algebra-sums.html#sec-summation">sum</a></td>
 <td><code>\sum</code></td>
 </tr>
 <tr class="even">
@@ -604,7 +604,7 @@ Table&nbsp;1: Notation used in this book
 <p><span class="theorem-title"><strong>Example 6 (Irrational numbers)</strong></span> &nbsp;</p>
 <ul>
 <li>
-<span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> (see <a href="https://en.wikipedia.org/wiki/Square_root_of_2">Wikipedia: Square root of 2</a>).</li>
+<span class="math inline">\(\sqrt{2} = 1.41421\ldots\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a> of <span class="math inline">\(2\)</span>, is irrational: no fraction of integers <span class="math inline">\(\frac{a}{b}\)</span> squares to <span class="math inline">\(2\)</span> (see <a href="https://en.wikipedia.org/wiki/Square_root_of_2">Wikipedia: Square root of 2</a>).</li>
 <li>
 <span class="math inline">\(\pi = 3.14159\ldots\)</span> is irrational (see <a href="https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational">Wikipedia: Proof that <span class="math inline">\(\pi\)</span> is irrational</a>).</li>
 <li>
@@ -748,7 +748,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <span class="math inline">\(\models\)</span> (<code>\models</code>)</li>
 </ul>
 <p>to denote logical entailment (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;14</a>). <span class="math inline">\(\Rightarrow\)</span> also writes the connective “implies” (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;11</a>); <span class="math inline">\(P\)</span> entails <span class="math inline">\(Q\)</span> exactly when <span class="math inline">\(P \Rightarrow Q\)</span> is true for every choice of values for the variables in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
-<p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra.html#def-sequence-limit">convergence</a> results.</p>
+<p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra-exponentials.html#def-sequence-limit">convergence</a> results.</p>
 </section><section class="slide level2"><div id="def-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Proof)</strong></span> A <strong>proof</strong> of a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;9</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
 <ul>
@@ -770,7 +770,7 @@ a + b
 &amp;&amp; \text{(distributive law)}
 \end{aligned}
 \]</span></p>
-<p>The second line uses the <a href="./algebra.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an integer, <span class="math inline">\(a + b\)</span> is even (<a href="#/def-even-odd" class="quarto-xref">Definition&nbsp;2</a>). For example,</p>
+<p>The second line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an integer, <span class="math inline">\(a + b\)</span> is even (<a href="#/def-even-odd" class="quarto-xref">Definition&nbsp;2</a>). For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
 4 + 10 &amp;= 2 \cdot 2 + 2 \cdot 5 \\
@@ -797,7 +797,7 @@ a + b
 &amp;&amp; \text{(} 1 &gt; 0 \text{)}
 \end{aligned}
 \]</span></p>
-<p>The first step uses the <a href="./algebra.html#thm-square-of-a-sum">square of a sum</a>. The steps are <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span>, and <span class="math inline">\(&gt;\)</span>, so the derivation shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. For example, with <span class="math inline">\(x = 3\)</span>: <span class="math inline">\((3 + 1)^2 = 16\)</span>, and <span class="math inline">\(16 &gt; 6 = 2 \cdot 3\)</span>.</p>
+<p>The first step uses the <a href="./algebra-sums.html#thm-square-of-a-sum">square of a sum</a>. The steps are <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span>, and <span class="math inline">\(&gt;\)</span>, so the derivation shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. For example, with <span class="math inline">\(x = 3\)</span>: <span class="math inline">\((3 + 1)^2 = 16\)</span>, and <span class="math inline">\(16 &gt; 6 = 2 \cdot 3\)</span>.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="thm-derivation-chain" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (What a derivation shows)</strong></span> Consider a derivation (<a href="#/def-derivation" class="quarto-xref">Definition&nbsp;16</a>) with expressions <span class="math inline">\(E_0, E_1, \ldots, E_n\)</span>, where each line <span class="math inline">\(E_j\)</span> is joined to the line <span class="math inline">\(E_{j-1}\)</span> before it by <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span>.</p>
@@ -927,7 +927,7 @@ j - k &amp;= \tfrac{1}{2}
 &amp;&amp; \text{(divide both sides by } 2 \text{)}
 \end{aligned}
 \]</span></p>
-<p>The third line uses the <a href="./algebra.html#def-distributive">distributive law</a>. But <span class="math inline">\(j - k\)</span> is an integer, and <span class="math inline">\(\frac{1}{2}\)</span> is not, so the last line is false. So no integer is both even and odd. For example, <span class="math inline">\(6 = 2 \cdot 3\)</span> is even, and <span class="math inline">\(6 = 2k + 1\)</span> would need <span class="math inline">\(k = 2.5\)</span>, which is not an integer.</p>
+<p>The third line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. But <span class="math inline">\(j - k\)</span> is an integer, and <span class="math inline">\(\frac{1}{2}\)</span> is not, so the last line is false. So no integer is both even and odd. For example, <span class="math inline">\(6 = 2 \cdot 3\)</span> is even, and <span class="math inline">\(6 = 2k + 1\)</span> would need <span class="math inline">\(k = 2.5\)</span>, which is not an integer.</p>
 </div>
 </section><section class="slide level2"><div id="thm-proof-by-contradiction" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (A proof by contradiction proves its proposition)</strong></span> Let <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> be propositions (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;9</a>). If <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false, then <span class="math inline">\(P\)</span> is true.</p>
@@ -1261,7 +1261,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 \]</span></p>
 </li>
 </ul>
-<p>This <a href="./algebra.html#def-identity">identity</a> turns probabilities into expectations. It is the mathematical foundation for:</p>
+<p>This <a href="./algebra-basics.html#def-identity">identity</a> turns probabilities into expectations. It is the mathematical foundation for:</p>
 <ul>
 <li>empirical proportions;</li>
 <li>estimators of survival curves, the probability of no event by each time;</li>
@@ -1269,7 +1269,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </ul></section><section id="sec-notational-shorthands" class="slide level2" data-number="7"><h2>
 <span class="header-section-number">7</span> Notational shorthands</h2>
 <div id="def-lower-upper-limits" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 29 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</p>
+<p><span class="theorem-title"><strong>Definition 29 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</p>
 </div>
 </section><section class="slide level2"><div id="exm-lower-upper-limits" class="theorem example">
 <p><span class="theorem-title"><strong>Example 30 (Reading off limits)</strong></span> &nbsp;</p>
@@ -1279,7 +1279,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 </ul>
 </div>
 </section><section class="slide level2"><div id="rem-limits-two-meanings" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;29</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;29</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra-exponentials.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
 </div>
 </section><section class="slide level2"><div id="def-notational-shorthand" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 30 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
@@ -1323,12 +1323,12 @@ Table&nbsp;3: Common notational shorthands and their full forms
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\sum_{x} f(x)\)</span></td>
 <td style="text-align: left;"><span class="math inline">\(\sum_{x \in \mathcal{R}(x)} f(x)\)</span></td>
-<td style="text-align: left;">the set the sum runs over (<a href="./algebra.html#def-sum-over-set">sum over a finite set</a>)</td>
+<td style="text-align: left;">the set the sum runs over (<a href="./algebra-sums.html#def-sum-over-set">sum over a finite set</a>)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\(\sum_{i} x_i\)</span></td>
 <td style="text-align: left;"><span class="math inline">\(\sum_{i=1}^nx_i\)</span></td>
-<td style="text-align: left;">the lower and upper limits of the index (<a href="./algebra.html#def-summation">summation notation</a>)</td>
+<td style="text-align: left;">the lower and upper limits of the index (<a href="./algebra-sums.html#def-summation">summation notation</a>)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\sum x_i\)</span></td>

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-10 18:57:52 (PDT)
+Last modified: 2026-10-10 19:44:14 (PDT)
 
 ## 1 Matrices
 
@@ -76,13 +76,13 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 1 (Matrix addition is commutative)** For \\m \times n\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\, matrix addition is [commutative](algebra.llms.md#def-commutative):
+> **Theorem 1 (Matrix addition is commutative)** For \\m \times n\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\, matrix addition is [commutative](algebra-sums.llms.md#def-commutative):
 >
 > \\\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}\\
 
 > **NOTE:**
 >
-> **Theorem 2 (Matrix addition is associative)** For \\m \times n\\ matrices \\\mathbf{A}\\, \\\mathbf{B}\\, and \\\mathbf{C}\\, matrix addition is [associative](algebra.llms.md#def-associative):
+> **Theorem 2 (Matrix addition is associative)** For \\m \times n\\ matrices \\\mathbf{A}\\, \\\mathbf{B}\\, and \\\mathbf{C}\\, matrix addition is [associative](algebra-sums.llms.md#def-associative):
 >
 > \\(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})\\
 
@@ -148,7 +148,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Matrix multiplication is distributive over addition)** Matrix multiplication [distributes](algebra.llms.md#def-distributive) over addition from the left and from the right. For an \\m \times k\\ matrix \\\mathbf{A}\\ and \\k \times n\\ matrices \\\mathbf{B}\\ and \\\mathbf{C}\\:
+> **Theorem 6 (Matrix multiplication is distributive over addition)** Matrix multiplication [distributes](algebra-sums.llms.md#def-distributive) over addition from the left and from the right. For an \\m \times k\\ matrix \\\mathbf{A}\\ and \\k \times n\\ matrices \\\mathbf{B}\\ and \\\mathbf{C}\\:
 >
 > \\\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\\
 >
@@ -310,7 +310,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 >
 > \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(c\tilde{x})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (c\tilde{x})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= \sum\_{j=1}^pa\_{ij}\\ c\\ x_j && \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)} \\&= \sum\_{j=1}^pc\\ a\_{ij} x_j && \text{(products are symmetric)} \\&= c \sum\_{j=1}^pa\_{ij} x_j && \text{(a constant factor comes out of a sum)} \\&= c\\ (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= (c\\ \mathbf{A}\tilde{x})\_i && \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)} \end{aligned} \\
 >
-> The four algebra rules cited here are on the [algebra page](algebra.llms.md): [distributivity](algebra.llms.md#thm-mult-distr), [a sum of sums](algebra.llms.md#thm-sum-of-sums), [symmetry of products](algebra.llms.md#thm-prod-symmetric), and [a constant factor](algebra.llms.md#thm-sum-constant-factor).
+> The four algebra rules cited here are on the [algebra page](algebra.llms.md): [distributivity](algebra-sums.llms.md#thm-mult-distr), [a sum of sums](algebra-sums.llms.md#thm-sum-of-sums), [symmetry of products](algebra-sums.llms.md#thm-prod-symmetric), and [a constant factor](algebra-sums.llms.md#thm-sum-constant-factor).
 
 > **NOTE:**
 >
@@ -505,7 +505,7 @@ Last modified: 2026-10-10 18:57:52 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 13](#def-linear-map), so by [Theorem 13](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
+> *Remark 4* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 13](#def-linear-map), so by [Theorem 13](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra-exponentials.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
 >
 > Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset \\b\\ the bias (machine learning) or the intercept (statistics), as [Definition 17](#def-affine-map) notes. A model with an intercept is affine in \\\tilde{x}\\ but linear in its coefficients \\(b, \tilde{w})\\, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: \\w_1 x + w_2 x^2 + b\\ is not affine in \\x\\, but it is linear in \\(b, w_1, w_2)\\. Separately, the affine function \\\tilde{w} \cdot \tilde{x} + b\\ is a linear function of the augmented vector \\\tilde{\tilde{x}}\\ ([Definition 18](#def-augmented-vector)), with \\b\\ as the coefficient on its first entry.
 
