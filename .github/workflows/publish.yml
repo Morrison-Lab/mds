@@ -33,5 +33,8 @@ jobs:
       # One bare `quarto render` of every declared format, as before.
       formats: ''
       timezone: America/Los_Angeles
+      # The full render (every page in html, slides, PDF and docx) outlasts gha's
+      # default 45-minute cap.
+      timeout-minutes: 90
       freeze-cache: true
       checkout-submodules: true
