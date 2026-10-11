@@ -44,6 +44,9 @@ jobs:
       # only the formats requested by `preview:*` labels.
       formats: default
       timezone: America/Los_Angeles
+      # The full render (every page in html, slides, PDF and docx) outlasts gha's
+      # default 45-minute cap.
+      timeout-minutes: 90
       # Rebuild when this label is added or removed (it toggles highlighting below).
       extra-preview-labels: '["no-preview-highlights"]'
       # Compare against the published render: banner on the home page naming the
