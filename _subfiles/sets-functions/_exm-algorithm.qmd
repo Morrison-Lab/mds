@@ -1,0 +1,21 @@
+:::{#exm-algorithm}
+#### Two algorithms for one function
+
+Take the function that @exm-expression writes two ways.
+Evaluating the tree of $a x^2 + b x + c$, with $x^2$ computed as $x \cdot x$,
+takes three multiplications and two additions.
+Evaluating the tree of Horner's form $(a x + b)\,x + c$
+takes two multiplications and two additions.
+At $a = 2$, $b = -3$, $c = 5$ and $x = 1.5$,
+the first algorithm computes $4.5 - 4.5 + 5 = 5$
+and the second computes $(3 - 3) \cdot 1.5 + 5 = 5$,
+the same value by different steps.
+
+By contrast, the minimizer
+$\argmin_{x \in \reals} \paren{x - \cos x}^2$ is well defined,
+because $x - \cos x$ is strictly increasing and equals zero at one point,
+yet that point has no known closed-form expression,
+so no known finite list of arithmetic steps returns it exactly.
+An algorithm such as bisection approximates it as closely as we like.
+
+:::

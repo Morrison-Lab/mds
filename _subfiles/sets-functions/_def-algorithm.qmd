@@ -1,0 +1,30 @@
+:::{#def-algorithm}
+#### Algorithm
+
+An **algorithm** is a finite list of unambiguous steps that,
+applied to any valid input, halts and returns an output.
+An algorithm *computes* a [function](#def-function):
+for each input it returns the function's value at that input.
+
+The three ideas fit together this way:
+
+- A function is the input-output relationship.
+- An [expression](#def-expression) denotes a function,
+  and many expressions denote the same one.
+- An algorithm computes a function,
+  and many algorithms compute the same one.
+
+An expression is not an algorithm,
+because it does not say what to do, or in what order.
+Given values for its variables,
+evaluating its parse tree from the leaves up is one algorithm for the function it denotes,
+and a different expression for the same function gives a different tree and a different algorithm.
+
+Some functions have no known finite algorithm for their exact values,
+and expressions that denote them,
+such as a limit, a supremum, an integral with no closed form,
+or an $\argmin$ over a set with no formula for the minimizer,
+cannot be evaluated by following their tree.
+Such a value can still be well defined and approximated by an algorithm.
+
+:::
