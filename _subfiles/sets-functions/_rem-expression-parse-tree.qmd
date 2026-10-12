@@ -9,7 +9,6 @@ an expression is one way of writing it down.
 The rules of operator precedence (PEMDAS: parentheses, exponents,
 multiplication and division, addition and subtraction)
 decide how the symbols group.
-They turn the string into a **parse tree**,
-whose leaves are constants and variables and whose internal nodes are operations.
+They turn the string into its parse tree (@def-parse-tree).
 
 :::
