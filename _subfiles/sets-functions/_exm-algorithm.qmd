@@ -11,11 +11,4 @@ the first algorithm computes $4.5 - 4.5 + 5 = 5$
 and the second computes $(3 - 3) \cdot 1.5 + 5 = 5$,
 the same value by different steps.
 
-By contrast, the minimizer
-$\argmin_{x \in \reals} \paren{x - \cos x}^2$ is well defined,
-because $x - \cos x$ is strictly increasing and equals zero at one point,
-yet that point has no known closed-form expression,
-so no known finite list of arithmetic steps returns it exactly.
-An algorithm such as bisection approximates it as closely as we like.
-
 :::
