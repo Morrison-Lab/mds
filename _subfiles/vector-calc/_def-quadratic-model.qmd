@@ -9,10 +9,7 @@ $$
 q(\stepvec) \eqdef f(\vx) + \dprod{\vecf{g}}{\stepvec} + \tfrac{1}{2}\,\tp{\stepvec} \matr{H} \stepvec,
 $$
 
-also called the **second-order Taylor polynomial** of $f$ at $\vx$:
-when the second partial derivatives of $f$ are continuous,
-@thm-taylor-mv says that $f(\vx + \stepvec)$ equals the same expression
-with the Hessian evaluated at a point between $\vx$ and $\vx + \stepvec$.
+also called the **second-order Taylor polynomial** of $f$ at $\vx$.
 
 :::
 

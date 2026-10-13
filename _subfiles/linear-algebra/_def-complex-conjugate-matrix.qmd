@@ -1,0 +1,8 @@
+:::{#def-complex-conjugate-matrix}
+#### Complex conjugate of a complex vector or matrix
+
+The **complex conjugate** of a complex vector or matrix
+takes the [complex conjugate](algebra.qmd#def-complex-conjugate) of each entry:
+$(\overline{\matr{A}})_{jk} \eqdef \overline{a_{jk}}$.
+
+:::

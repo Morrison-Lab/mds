@@ -1,0 +1,10 @@
+:::{#def-probability-space}
+#### Probability space, sample space, outcomes and events
+
+For a probability measure $\P$ (@def-probability-measure) on a [measurable space](#def-measurable-space) $(\samplespace, \events)$,
+$(\samplespace, \events, \P)$ is a **probability space**,
+$\samplespace$ is its **sample space**,
+the elements of $\samplespace$ are **outcomes**,
+and the sets in $\events$ are **events**.
+
+:::
