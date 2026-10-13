@@ -2,11 +2,8 @@
 #### Distributive law
 
 The **distributive law** is the statement that multiplication distributes over addition
-(@def-distributes-over),
-
-$$a \times (b + c) = (a \times b) + (a \times c)$$
-
-(@thm-mult-distr);
-we then say multiplication is **distributive**.
+(@def-distributes-over):
+$a \times (b + c) = (a \times b) + (a \times c)$ (@thm-mult-distr).
+We then say multiplication is **distributive**.
 
 :::
