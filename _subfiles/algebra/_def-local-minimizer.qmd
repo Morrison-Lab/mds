@@ -27,7 +27,7 @@ take any $\tolin > 0$.
 For example, $x^* = 0$ is a global minimizer of $f(x) = x^2$ on $\reals$,
 so it is also a local minimizer.
 
-The [converse](notation.qmd#def-converse) fails.
+The [converse](proof-writing.qmd#def-converse) fails.
 In @exr-local-vs-global-min,
 $x^* = 1$ is a local minimizer of $f(x) = x^3 - 3x$ (take $\tolin = 1$),
 but not a global one.
