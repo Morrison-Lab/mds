@@ -3,7 +3,8 @@
 :::{#rem-hat-matrix-name}
 #### Why it is called the hat matrix
 
-The hat matrix gives the fitted values in linear regression:
+The hat matrix gives the fitted values of the least squares solution
+(@def-least-squares, defined later in this chapter):
 
 $$
 \begin{aligned}

@@ -41,6 +41,6 @@ $$
 
 (@thm-transpose-product).
 When $\tp{\mX}\mX$ is invertible,
-it appears in the OLS estimator $\hvcoef = (\tp{\mX}\mX)^{-1}\tp{\mX}\vy$.
+it appears in the least squares solution (@def-least-squares, defined later in this chapter) $\hvcoef = (\tp{\mX}\mX)^{-1}\tp{\mX}\vy$.
 
 :::
