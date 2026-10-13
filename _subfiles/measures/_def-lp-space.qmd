@@ -12,6 +12,7 @@ The space $\mathcal{L}^p(S, \salg, \measure)$ consists of all measurable functio
 To satisfy the definiteness axiom of a [norm](linear-algebra.qmd#def-norm) ($\norm{f}_p = 0$ if and only if $f = 0$),
 functions that are equal [almost everywhere](#def-almost-everywhere) ($\measure$-a.e.) are identified into equivalence classes.
 The resulting normed vector space is the **$L^p$ space**, denoted $L^p(S, \salg, \measure)$ (or simply $L^p(\measure)$).
+The case $p = \infty$ is defined separately, in @def-linf-space.
 
 :::
 

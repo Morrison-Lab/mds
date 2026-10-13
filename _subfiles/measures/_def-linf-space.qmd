@@ -8,6 +8,7 @@ $$
 \norm{f}_\infty \eqdef \inf \cb{ C \ge 0 : \measure(\cb{s \in S : \abs{f(s)} > C}) = 0 }.
 $$
 
-The space $L^\infty(S, \salg, \measure)$ consists of equivalence classes of essentially bounded measurable functions.
+The space $L^\infty(S, \salg, \measure)$ consists of equivalence classes of essentially bounded measurable functions,
+identified as in @def-lp-space when they are equal [almost everywhere](#def-almost-everywhere).
 
 :::
