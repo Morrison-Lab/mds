@@ -2,7 +2,7 @@
 #### Truth values of connectives
 
 Let $P$ be "$2 + 3 = 5$", which is true,
-and let $Q$ be "$7$ is [even](#def-even-odd)", which is false.
+and let $Q$ be "$7$ is [even](notation.qmd#def-even-odd)", which is false.
 
 - $\neg Q$, "$7$ is not even", is true, because $Q$ is false.
 - $P \land Q$ is false, because $Q$ is false.

@@ -15,7 +15,7 @@ format:
 // Definitions about proofs and logic moved to the Proof Writing page
 // (https://github.com/Morrison-Lab/mds/issues/258).
 // Send an old notation.html#id link to the page that now holds the item.
-// Generated from the moved subfiles' ids; maps old id -> new path.
+// The ids are those of the subfiles moved on 2026-10-13; maps old id -> new path.
 (function () {
   var map = {"def-converse":"proof-writing.html#def-converse","def-counterexample":"proof-writing.html#def-counterexample","def-derivation":"proof-writing.html#def-derivation","def-inequality":"proof-writing.html#def-inequality","def-logical-connective":"proof-writing.html#def-logical-connective","def-logical-entailment":"proof-writing.html#def-logical-entailment","def-necessary-sufficient":"proof-writing.html#def-necessary-sufficient","def-predicate":"proof-writing.html#def-predicate","def-proof":"proof-writing.html#def-proof","def-proof-by-contradiction":"proof-writing.html#def-proof-by-contradiction","def-proposition":"proof-writing.html#def-proposition","def-quantifier":"proof-writing.html#def-quantifier","def-theorem":"proof-writing.html#def-theorem","exm-converse":"proof-writing.html#exm-converse","exm-counterexample":"proof-writing.html#exm-counterexample","exm-derivation":"proof-writing.html#exm-derivation","exm-derivation-chain":"proof-writing.html#exm-derivation-chain","exm-inequality":"proof-writing.html#exm-inequality","exm-logical-connective":"proof-writing.html#exm-logical-connective","exm-logical-entailment":"proof-writing.html#exm-logical-entailment","exm-necessary-sufficient":"proof-writing.html#exm-necessary-sufficient","exm-predicate":"proof-writing.html#exm-predicate","exm-proof":"proof-writing.html#exm-proof","exm-proof-by-contradiction":"proof-writing.html#exm-proof-by-contradiction","exm-proof-by-contradiction-truth-table":"proof-writing.html#exm-proof-by-contradiction-truth-table","exm-proposition":"proof-writing.html#exm-proposition","exm-quantifier":"proof-writing.html#exm-quantifier","exm-theorem":"proof-writing.html#exm-theorem","proofs":"proof-writing.html#sec-proof-definitions","rem-proposition-as-result":"proof-writing.html#rem-proposition-as-result","thm-derivation-chain":"proof-writing.html#thm-derivation-chain","thm-proof-by-contradiction":"proof-writing.html#thm-proof-by-contradiction"};
   var id;
@@ -37,7 +37,8 @@ format:
 
 ## Further reading {#sec-further-reading}
 
-For the logical symbols and proof conventions used in these notes:
+For the logical symbols and proof conventions used in these notes
+(whose definitions are on the [Proof Writing](proof-writing.qmd#sec-proof-definitions) page):
 
 - @velleman2019prove
   explains how mathematical statements are built from

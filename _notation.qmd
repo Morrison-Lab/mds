@@ -138,12 +138,6 @@ so "percent" means "per hundred"
 You are welcome to switch between decimal and percent notation freely;
 just make sure you execute it correctly.
 
-## Proofs {#sec-notation-proofs}
-
-The definitions of propositions, predicates, logical connectives, quantifiers, inequalities,
-logical entailment, proofs, derivations, theorems and proof by contradiction
-now live on the [Proof Writing](proof-writing.qmd#sec-proof-definitions) page.
-
 ## Indicator functions {#sec-indicator-functions}
 
 {{< include mds/_subfiles/notation/_sec-indicator-functions.qmd >}}
