@@ -25,7 +25,7 @@ $$
 
 If $\measure(\emptyset) = c$ for a finite $c > 0$,
 the right-hand side is $c + c + \cdots = \infty \neq c$,
-a [contradiction](notation.qmd#def-proof-by-contradiction).
+a [contradiction](proof-writing.qmd#def-proof-by-contradiction).
 So $\measure(\emptyset)$ is 0 or $\infty$.
 
 :::

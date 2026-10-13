@@ -1,10 +1,144 @@
-This page collects general advice on how to write [proofs](notation.qmd#def-proof) and [derivations](notation.qmd#def-derivation).
-The goal of a proof is not just to convince yourself that a [result](notation.qmd#def-theorem) is true;
+This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation).
+The goal of a proof is not just to convince yourself that a [result](#def-theorem) is true;
 it is to convince a *reader*,
 and to show them *why* it is true.
 Each principle on this page serves that goal.
-The symbols for [logical entailment](notation.qmd#def-logical-entailment) are listed under
-[Proofs](notation.qmd#proofs) on the Notation page.
+The symbols for [logical entailment](#def-logical-entailment) are listed under
+[Definitions for proofs](#sec-proof-definitions) below.
+
+## Definitions for proofs {#sec-proof-definitions}
+
+{{< include mds/_subfiles/proof-writing/_def-proposition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-proposition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-predicate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-predicate.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-logical-connective.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-logical-connective.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-inequality.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-logical-entailment.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-logical-entailment.qmd >}}
+
+We can use any of:
+
+- $\therefore$ (`\therefore` in LaTeX),
+- $\Rightarrow$ (`\Rightarrow`),
+- $\models$ (`\models`)
+
+to denote logical entailment (@def-logical-entailment).
+$\Rightarrow$ also writes the connective "implies" (@def-logical-connective);
+$P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
+for every choice of values for the variables in $P$ and $Q$.
+
+Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-proof.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-derivation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-derivation.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-derivation-chain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-derivation-chain.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-theorem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-theorem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-counterexample.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-counterexample.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-converse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-converse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-necessary-sufficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-necessary-sufficient.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_thm-proof-by-contradiction.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-proof-by-contradiction-truth-table.qmd >}}
+
 
 ## Don't skip steps {#sec-dont-skip-steps}
 
@@ -27,7 +161,7 @@ show the step instead.
 ## Annotate each step {#sec-annotate-each-step}
 
 For each step,
-note the definition, [theorem](notation.qmd#def-theorem), or algebraic rule that justifies it.
+note the definition, [theorem](#def-theorem), or algebraic rule that justifies it.
 A brief annotation to the right of the line is usually enough.
 Annotations make the proof checkable,
 and they teach the reader which tool to reach for in similar situations.
@@ -82,7 +216,7 @@ a previously proved result,
 or one rule of logic or algebra
 to the assumptions or to earlier steps.
 A direct proof never assumes that $Q$ is false;
-compare [proof by contradiction](notation.qmd#def-proof-by-contradiction),
+compare [proof by contradiction](#def-proof-by-contradiction),
 which does.
 
 :::
@@ -137,7 +271,7 @@ $$
 and $2 \cd 3^2 + 2 \cd 3 = 24$.
 
 The notation page's proof that
-[the sum of two even integers is even](notation.qmd#exm-proof)
+[the sum of two even integers is even](#exm-proof)
 is also a direct proof.
 
 :::
@@ -180,10 +314,10 @@ The following example uses [summation notation](algebra.qmd#def-summation).
 #### Propositional logic
 
 **Propositional logic** is the study of
-[logical entailment](notation.qmd#def-logical-entailment)
-among [propositions](notation.qmd#def-proposition)
+[logical entailment](#def-logical-entailment)
+among [propositions](#def-proposition)
 built from basic propositions $P, Q, R, \ldots$
-using only the [logical connectives](notation.qmd#def-logical-connective).
+using only the [logical connectives](#def-logical-connective).
 Whether such propositions entail one another
 depends only on the truth values of the basic propositions,
 not on what the basic propositions say.
@@ -215,11 +349,11 @@ so $P$ and $P \Rightarrow Q$ logically entail $Q$.
 by also allowing:
 
 - variables $x, y, \ldots$ that stand for elements of a set;
-- [predicates](notation.qmd#def-predicate) of one or more of those variables,
+- [predicates](#def-predicate) of one or more of those variables,
   such as $P(x)$ or $x < y$;
 - [functions](sets-functions.qmd#def-function) of them, such as $x + y$;
 - equality between them;
-- [quantifiers](notation.qmd#def-quantifier) $\forall$ and $\exists$ over them.
+- [quantifiers](#def-quantifier) $\forall$ and $\exists$ over them.
 
 :::
 
@@ -246,7 +380,7 @@ because it has no way to refer to the elements of $S$.
 :::{#def-formal-proof}
 #### Formal proof
 
-A **formal proof** is a [proof](notation.qmd#def-proof)
+A **formal proof** is a [proof](#def-proof)
 written in propositional logic (@def-propositional-logic)
 or first-order logic (@def-first-order-logic)
 in which each step is an assumption

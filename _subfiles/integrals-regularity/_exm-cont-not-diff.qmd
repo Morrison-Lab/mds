@@ -14,7 +14,7 @@ but it is not differentiable at $x = 0$:
 its left-hand derivative there is $-1$ and its right-hand derivative is $+1$
 (@exm-one-sided-derivative).
 
-This [counterexample](notation.qmd#def-counterexample) shows that the [converse](notation.qmd#def-converse) of @thm-diff-implies-cont fails:
+This [counterexample](proof-writing.qmd#def-counterexample) shows that the [converse](proof-writing.qmd#def-converse) of @thm-diff-implies-cont fails:
 continuity does not imply differentiability.
 See @fig-abs-value.
 
