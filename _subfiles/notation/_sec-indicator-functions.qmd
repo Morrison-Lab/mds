@@ -24,7 +24,7 @@ This section summarizes the principal notational conventions.
 {{< slidebreak >}}
 
 :::{#def-indicator-function}
-#### Indicator function (set indicator, predicate indicator)
+#### Indicator function (set indicator)
 
 For any subset $A \subseteq \universe$ of a universal set $\universe$,
 the **indicator function** of $A$,
@@ -39,8 +39,14 @@ $$
 \end{cases}
 $$
 
-More generally,
-for any logical proposition or predicate $P$,
+:::
+
+{{< slidebreak >}}
+
+:::{#def-predicate-indicator}
+#### Predicate indicator
+
+For any logical proposition or predicate $P$,
 the **indicator** of $P$,
 or **predicate indicator**,
 takes the value $1$ when $P$ is true
