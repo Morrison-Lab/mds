@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 01:20:47 (PDT)
+Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
@@ -404,7 +404,7 @@ Last modified: 2026-10-13 01:20:47 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 15](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Fubini–Tonelli theorem](calculus-double-integrals.llms.md#thm-fubini-tonelli).
+> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 15](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
 
 > **NOTE:**
 >
