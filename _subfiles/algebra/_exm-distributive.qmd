@@ -1,38 +1,20 @@
 :::{#exm-distributive}
-#### Multiplication distributes over addition, but not the reverse
+#### Multiplication distributes over addition
 
-- $$
-  \begin{aligned}
-  3 \times (4 + 5) &= 3 \times 9 \\
-  &= 27,
-  \end{aligned}
-  $$
+$$
+\begin{aligned}
+3 \times (4 + 5) &= 3 \times 9 \\
+&= 27,
+\end{aligned}
+$$
 
-  and
+and
 
-  $$
-  \begin{aligned}
-  (3 \times 4) + (3 \times 5) &= 12 + 15 \\
-  &= 27.
-  \end{aligned}
-  $$
-
-- Addition does not distribute over multiplication:
-
-  $$
-  \begin{aligned}
-  2 + (3 \times 4) &= 2 + 12 \\
-  &= 14,
-  \end{aligned}
-  $$
-
-  but
-
-  $$
-  \begin{aligned}
-  (2 + 3) \times (2 + 4) &= 5 \times 6 \\
-  &= 30.
-  \end{aligned}
-  $$
+$$
+\begin{aligned}
+(3 \times 4) + (3 \times 5) &= 12 + 15 \\
+&= 27.
+\end{aligned}
+$$
 
 :::
