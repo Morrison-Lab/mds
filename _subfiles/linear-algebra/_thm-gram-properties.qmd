@@ -1,0 +1,82 @@
+:::{#thm-gram-properties}
+#### Entries and symmetry of a Gram matrix
+
+Let $\matr{A}$ be an $m \times n$ matrix with columns $\vecf{a}_1, \ldots, \vecf{a}_n$,
+and let $\matr{G} = \tp{\matr{A}} \matr{A}$ (@def-gram-matrix).
+
+1. Entry $(i, j)$ of $\matr{G}$ is $\vecf{a}_i \cdot \vecf{a}_j$.
+2. $\matr{G}$ is symmetric (@def-symmetric-matrix).
+3. $\tp{\vx} \matr{G} \vx = \norm{\matr{A} \vx}^2 \ge 0$ for every $\vx \in \reals^n$,
+   so $\matr{G}$ is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite).
+
+:::
+
+::: proof
+
+**Entries.**
+Row $i$ of $\tp{\matr{A}}$ is $\tp{\vecf{a}_i}$,
+so entry $(i, j)$ of $\tp{\matr{A}} \matr{A}$ is the dot product of that row with column $j$ of $\matr{A}$,
+namely $\tp{\vecf{a}_i} \vecf{a}_j = \vecf{a}_i \cdot \vecf{a}_j$.
+
+**Symmetry.**
+The dot product is commutative, so
+
+$$
+\begin{aligned}
+g_{ij} &= \vecf{a}_i \cdot \vecf{a}_j \\
+&= \vecf{a}_j \cdot \vecf{a}_i \\
+&= g_{ji}.
+\end{aligned}
+$$
+
+**Positive semidefiniteness.**
+For any $\vx$,
+
+$$
+\ba
+\tp{\vx} \matr{G} \vx
+&= \tp{\vx}\,\tp{\matr{A}}\,\matr{A} \vx
+&& \text{(substitute } \matr{G} \text{)}
+\\
+&= \tp{(\matr{A} \vx)}\,(\matr{A} \vx)
+&& \text{(@thm-transpose-product)}
+\\
+&= \norm{\matr{A} \vx}^2
+&& \text{(@eq-l2-norm, squared)}
+\\
+&\ge 0.
+&& \text{(a squared norm is nonnegative)}
+\ea
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-gram-properties}
+#### Checking the properties on a small Gram matrix
+
+For $\matr{A}$ in @exm-gram-matrix, $\matr{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}$.
+It is symmetric: $g_{12} = g_{21} = 1$.
+Take $\vx = (1, -1)$. Then
+
+$$
+\ba
+\tp{\vx} \matr{G} \vx
+&= \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+&& \text{(} \matr{G} \vx = (1, -1) \text{)}
+\\
+&= 2,
+&& \text{(multiply and add)}
+\ea
+$$
+
+and $\matr{A} \vx = (1, 0, -1)$ has $\norm{\matr{A} \vx}^2 = 1 + 0 + 1 = 2$,
+as the theorem says.
+The converse (every positive semidefinite matrix is a Gram matrix) is
+[this theorem](linear-algebra.qmd#thm-pd-gram).
+
+:::
+
+{{< slidebreak >}}
+
