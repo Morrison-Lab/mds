@@ -1,0 +1,10 @@
+:::{#def-expression}
+#### Expression
+
+An **expression** is a string of symbols, built from constants, variables,
+operations and function names according to the rules of the notation.
+When its variables are read as inputs,
+an expression *denotes* a [function](#def-function):
+it fixes the output for each input.
+
+:::
