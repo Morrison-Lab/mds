@@ -7,9 +7,4 @@ that gives the whole set $\samplespace$ the value $1$:
 
 $$\Pf{\samplespace} = 1$$
 
-Then $(\samplespace, \events, \P)$ is a **probability space**,
-$\samplespace$ is its **sample space**,
-the elements of $\samplespace$ are **outcomes**,
-and the sets in $\events$ are **events**.
-
 :::

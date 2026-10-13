@@ -1,0 +1,7 @@
+:::{#def-lebesgue-measure-interval}
+#### Lebesgue measure on an interval
+
+**Lebesgue measure on an interval** $I$, such as $[0, 1]$,
+is $\lebesgue$ (@def-lebesgue-measure) applied only to the Borel sets that are subsets of $I$.
+
+:::
