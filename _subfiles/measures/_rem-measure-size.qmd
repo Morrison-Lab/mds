@@ -10,6 +10,7 @@ assigning each [interval](sets-functions.qmd#def-interval) $[a, b]$ its length $
 For example, the counting measure on $\set{0, 1, 2, \ldots}$ gives $\set{2, 3, 4, 5}$ the value $4$,
 while the Lebesgue measure of the interval $[2, 5]$ is $5 - 2 = 3$.
 Both can serve as the measures $\measure_1$ and $\measure_2$ in the
-[Fubini--Tonelli theorem](calculus.qmd#thm-fubini-tonelli).
+[Tonelli](calculus-double-integrals.qmd#thm-tonelli-measure)
+and [Fubini](calculus-double-integrals.qmd#thm-fubini-measure) theorems.
 
 :::

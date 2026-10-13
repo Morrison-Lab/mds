@@ -1,13 +1,14 @@
 :::{#exm-fubini-fail-tonelli}
 
-#### When neither Fubini--Tonelli condition is satisfied
+#### When neither Tonelli's nor Fubini's condition is satisfied
 
 The same function $f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2$ from
-@exm-fubini-fail illustrates a case where neither condition of
-@thm-fubini-tonelli is satisfied.
+@exm-fubini-fail illustrates a case where neither the hypothesis of
+@thm-tonelli-measure nor that of @thm-fubini-measure is satisfied.
 
-**Why @thm-fubini-tonelli's conditions fail:**
-$\iint_R |f|\,dA = \infty$, which violates condition (b).
+**Why the hypotheses fail:**
+$\iint_R |f|\,dA = \infty$, which violates the absolute-integrability
+hypothesis of @thm-fubini-measure.
 Switching to polar coordinates $(r, \angpar)$ near the origin, the
 integrand satisfies
 
@@ -33,11 +34,11 @@ $$
 
 since $\int_0^{\smallconst} dr/r$ diverges.
 Therefore $\iint_R |f|\,dA = \infty$,
-and condition (b) of @thm-fubini-tonelli is not satisfied.
-(Condition (a) also fails: $f$ takes both positive and negative values,
-so it is not nonnegative a.e.)
+and the hypothesis of @thm-fubini-measure is not satisfied.
+(The hypothesis of @thm-tonelli-measure also fails: $f$ takes both positive
+and negative values, so it is not nonnegative a.e.)
 The unequal iterated integrals from @exm-fubini-fail are thus consistent
-with @thm-fubini-tonelli: the theorem simply does not apply.
+with both theorems: neither one applies.
 
 [@wp:fubini]
 

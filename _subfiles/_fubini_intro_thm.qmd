@@ -1,9 +1,10 @@
 The **Fubini--Tonelli theorem** states conditions under which the order
 of integration in a double integral can be exchanged.
-We state two versions:
+We state them in two settings:
 the Riemann version (@thm-fubini) is what applied courses usually use
 for double integrals of continuous functions on simple regions;
-the [$\sigma$-finite](measures.qmd#def-sigma-finite) measure-theoretic version (@thm-fubini-tonelli) is
+the [$\sigma$-finite](measures.qmd#def-sigma-finite) measure-theoretic versions
+(@thm-tonelli-measure and @thm-fubini-measure) are
 included to make the
 [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint)
 corollary in *Probability for Data Science*
