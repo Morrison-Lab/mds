@@ -1,0 +1,11 @@
+:::{#def-distributes-over}
+#### Distributes over
+
+An operation $\star$ on a set $S$ **distributes over** an operation $\diamond$ on $S$
+if
+
+$$a \star (b \diamond c) = (a \star b) \diamond (a \star c)$$
+
+for all $a, b, c \in S$.
+
+:::
