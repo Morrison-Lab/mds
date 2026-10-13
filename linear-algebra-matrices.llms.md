@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 10:37:49 (PDT)
+Last modified: 2026-10-13 11:22:25 (PDT)
 
 ## 1 Matrices
 
@@ -148,7 +148,7 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Matrix multiplication is distributive over addition)** Matrix multiplication [distributes](algebra-sums.llms.md#def-distributive) over addition from the left and from the right. For an \\m \times k\\ matrix \\\mathbf{A}\\ and \\k \times n\\ matrices \\\mathbf{B}\\ and \\\mathbf{C}\\:
+> **Theorem 6 (Matrix multiplication is distributive over addition)** Matrix multiplication [distributes](algebra-sums.llms.md#def-distributes-over) over addition from the left and from the right. For an \\m \times k\\ matrix \\\mathbf{A}\\ and \\k \times n\\ matrices \\\mathbf{B}\\ and \\\mathbf{C}\\:
 >
 > \\\mathbf{A}(\mathbf{B} + \mathbf{C}) = \mathbf{A}\mathbf{B} + \mathbf{A}\mathbf{C}\\
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 10:37:49 (PDT)
+Last modified: 2026-10-13 11:22:25 (PDT)
 
 ## 1 Convex functions
 
@@ -338,29 +338,33 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Distributive law)** An operation \\\star\\ on a set \\S\\ **distributes over** an operation \\\diamond\\ on \\S\\ ([Definition 8](#def-identity-element)) if
+> **Definition 11 (Distributes over)** An operation \\\star\\ on a set \\S\\ **distributes over** an operation \\\diamond\\ on \\S\\ if
 >
 > \\a \star (b \diamond c) = (a \star b) \diamond (a \star c)\\
 >
-> for all \\a, b, c \in S\\. The **distributive law** is the statement that multiplication distributes over addition, \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)); we then say multiplication is **distributive**.
+> for all \\a, b, c \in S\\.
 
 > **NOTE:**
 >
-> **Example 15 (Multiplication distributes over addition, but not the reverse)**  
+> **Example 15 (Addition does not distribute over multiplication)** \\ \begin{aligned} 2 + (3 \times 4) &= 2 + 12 \\ &= 14, \end{aligned} \\
 >
-> - \\ \begin{aligned} 3 \times (4 + 5) &= 3 \times 9 \\ &= 27, \end{aligned} \\
+> but
 >
->   and
+> \\ \begin{aligned} (2 + 3) \times (2 + 4) &= 5 \times 6 \\ &= 30. \end{aligned} \\
 >
->   \\ \begin{aligned} (3 \times 4) + (3 \times 5) &= 12 + 15 \\ &= 27. \end{aligned} \\
+> So [Definition 11](#def-distributes-over) fails with \\\star = +\\ and \\\diamond = \times\\.
+
+> **NOTE:**
 >
-> - Addition does not distribute over multiplication:
+> **Definition 12 (Distributive law)** The **distributive law** is the statement that multiplication distributes over addition ([Definition 11](#def-distributes-over)): \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)). We then say multiplication is **distributive**.
+
+> **NOTE:**
 >
->   \\ \begin{aligned} 2 + (3 \times 4) &= 2 + 12 \\ &= 14, \end{aligned} \\
+> **Example 16 (Multiplication distributes over addition)** \\ \begin{aligned} 3 \times (4 + 5) &= 3 \times 9 \\ &= 27, \end{aligned} \\
 >
->   but
+> and
 >
->   \\ \begin{aligned} (2 + 3) \times (2 + 4) &= 5 \times 6 \\ &= 30. \end{aligned} \\
+> \\ \begin{aligned} (3 \times 4) + (3 \times 5) &= 12 + 15 \\ &= 27. \end{aligned} \\
 
 > **NOTE:**
 >
@@ -368,11 +372,11 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Like terms)** Two [terms](#def-term) of a sum are **like terms** if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product. To **collect** like terms is to replace their sum by one term, using the distributive law ([Theorem 11](#thm-mult-distr)): \\c_1 m + c_2 m = (c_1 + c_2) m\\.
+> **Definition 13 (Like terms)** Two [terms](#def-term) of a sum are **like terms** if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product. To **collect** like terms is to replace their sum by one term, using the distributive law ([Theorem 11](#thm-mult-distr)): \\c_1 m + c_2 m = (c_1 + c_2) m\\.
 
 > **NOTE:**
 >
-> **Example 16 (Like and unlike terms)**  
+> **Example 17 (Like and unlike terms)**  
 >
 > - \\3ab\\ and \\-5ab\\ are like terms; collecting them gives
 >
@@ -398,7 +402,7 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 >
 > To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 11](#thm-mult-distr)) twice:
 >
-> \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~12}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~13}}\text{)} \end{aligned} \\
 >
 > The step “commutative and associative laws” uses [Theorem 8](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 6](#thm-sum-assoc) to drop the parentheses.
 
@@ -445,7 +449,7 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
+> **Definition 14 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
@@ -463,11 +467,11 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
+> **Definition 15 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
 
 > **NOTE:**
 >
-> **Exercise 4 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 13](#def-summation) and the rules of algebra above, show that:
+> **Exercise 4 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 14](#def-summation) and the rules of algebra above, show that:
 >
 > 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
 > 2.  \\\sum\_{i=1}^{3} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
@@ -476,7 +480,7 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> *Solution 4*. Each step below applies [Definition 13](#def-summation), the distributive law ([Theorem 11](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 5](#thm-sum-symmetric) and [Theorem 6](#thm-sum-assoc)).
+> *Solution 4*. Each step below applies [Definition 14](#def-summation), the distributive law ([Theorem 11](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 5](#thm-sum-symmetric) and [Theorem 6](#thm-sum-assoc)).
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
@@ -527,7 +531,7 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](sets-functions.llms.md#def-finite-set) [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
+> **Definition 16 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](sets-functions.llms.md#def-finite-set) [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
 >
 > \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
 >
@@ -537,7 +541,7 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 >
 > *Remark 7* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 5](#exr-sum-over-set), part 2, shows another example.
 >
-> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 13](#def-summation).
+> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 14](#def-summation).
 
 > **NOTE:**
 >
@@ -547,48 +551,48 @@ Last modified: 2026-10-13 10:37:49 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Definition 17 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
 > **NOTE:**
 >
-> **Definition 17 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 16](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
+> **Definition 18 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 17](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
 
 > **NOTE:**
 >
-> **Example 17 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 16](#def-quotient) requires a nonzero denominator.
+> **Example 18 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 17](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
-> **Definition 18 (Follow-up and person-years)** In a study that observes participants over time, a participant’s **follow-up** is the length of time the study observes that participant, and the study’s **person-years** are the sum of the follow-up times of all participants, measured in years.
+> **Definition 19 (Follow-up and person-years)** In a study that observes participants over time, a participant’s **follow-up** is the length of time the study observes that participant, and the study’s **person-years** are the sum of the follow-up times of all participants, measured in years.
 
 > **NOTE:**
 >
-> **Example 18 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+> **Example 19 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
 
 > **NOTE:**
 >
-> **Definition 19 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up ([Definition 18](#def-person-years)). For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
+> **Definition 20 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up ([Definition 19](#def-person-years)). For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
 
 cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 20 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 21 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Example 19 (A ratio, and a quotient that is not one)**  
+> **Example 20 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
 
 > **NOTE:**
 >
-> **Definition 21 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 22 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -596,18 +600,18 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 20 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 21 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
 
 > **NOTE:**
 >
-> **Definition 22 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 23 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 > **NOTE:**
 >
-> **Example 21 (Proportional and non-proportional functions)**  
+> **Example 22 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\,
 >

@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 10:37:49 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 11:22:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -810,32 +810,16 @@ w_1 &amp;= w_2 \\
 <section id="sums-and-products-together" class="slide level2" data-number="6">
 <h2><span class="header-section-number">6</span> Sums and products together</h2>
 <!-- heading shares the slide; do not re-flag -->
-<div id="def-distributive" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Distributive law)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> <strong>distributes over</strong> an operation <span class="math inline">\(\diamond\)</span> on <span class="math inline">\(S\)</span> (<a href="#/def-identity-element" class="quarto-xref">Definition&nbsp;8</a>) if</p>
+<div id="def-distributes-over" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Distributes over)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> <strong>distributes over</strong> an operation <span class="math inline">\(\diamond\)</span> on <span class="math inline">\(S\)</span> if</p>
 <p><span class="math display">\[a \star (b \diamond c) = (a \star b) \diamond (a \star c)\]</span></p>
-<p>for all <span class="math inline">\(a, b, c \in S\)</span>. The <strong>distributive law</strong> is the statement that multiplication distributes over addition, <span class="math inline">\(a \times (b + c) = (a \times b) + (a \times c)\)</span> (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>); we then say multiplication is <strong>distributive</strong>.</p>
+<p>for all <span class="math inline">\(a, b, c \in S\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="exm-distributive" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Multiplication distributes over addition, but not the reverse)</strong></span> &nbsp;</p>
-<ul>
-<li><p><span class="math display">\[
-\begin{aligned}
-3 \times (4 + 5) &amp;= 3 \times 9 \\
-&amp;= 27,
-\end{aligned}
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-\begin{aligned}
-(3 \times 4) + (3 \times 5) &amp;= 12 + 15 \\
-&amp;= 27.
-\end{aligned}
-\]</span></p></li>
-<li><p>Addition does not distribute over multiplication:</p>
-<p><span class="math display">\[
+<div id="exm-addition-not-distributive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (Addition does not distribute over multiplication)</strong></span> <span class="math display">\[
 \begin{aligned}
 2 + (3 \times 4) &amp;= 2 + 12 \\
 &amp;= 14,
@@ -847,8 +831,32 @@ w_1 &amp;= w_2 \\
 (2 + 3) \times (2 + 4) &amp;= 5 \times 6 \\
 &amp;= 30.
 \end{aligned}
-\]</span></p></li>
-</ul>
+\]</span></p>
+<p>So <a href="#/def-distributes-over" class="quarto-xref">Definition&nbsp;11</a> fails with <span class="math inline">\(\star = +\)</span> and <span class="math inline">\(\diamond = \times\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-distributive" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Distributive law)</strong></span> The <strong>distributive law</strong> is the statement that multiplication distributes over addition (<a href="#/def-distributes-over" class="quarto-xref">Definition&nbsp;11</a>): <span class="math inline">\(a \times (b + c) = (a \times b) + (a \times c)\)</span> (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>). We then say multiplication is <strong>distributive</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-distributive" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Multiplication distributes over addition)</strong></span> <span class="math display">\[
+\begin{aligned}
+3 \times (4 + 5) &amp;= 3 \times 9 \\
+&amp;= 27,
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+(3 \times 4) + (3 \times 5) &amp;= 12 + 15 \\
+&amp;= 27.
+\end{aligned}
+\]</span></p>
 </div>
 </section>
 <section class="slide level2">
@@ -860,13 +868,13 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-like-terms" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Like terms)</strong></span> Two <a href="#/def-term">terms</a> of a sum are <strong>like terms</strong> if they are the same product of variables, each to the same power, possibly multiplied by different constants: <span class="math inline">\(c_1 m\)</span> and <span class="math inline">\(c_2 m\)</span>, where <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are constants and <span class="math inline">\(m\)</span> is that product. To <strong>collect</strong> like terms is to replace their sum by one term, using the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>): <span class="math inline">\(c_1 m + c_2 m = (c_1 + c_2) m\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Like terms)</strong></span> Two <a href="#/def-term">terms</a> of a sum are <strong>like terms</strong> if they are the same product of variables, each to the same power, possibly multiplied by different constants: <span class="math inline">\(c_1 m\)</span> and <span class="math inline">\(c_2 m\)</span>, where <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are constants and <span class="math inline">\(m\)</span> is that product. To <strong>collect</strong> like terms is to replace their sum by one term, using the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>): <span class="math inline">\(c_1 m + c_2 m = (c_1 + c_2) m\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-like-terms" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Like and unlike terms)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 17 (Like and unlike terms)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(3ab\)</span> and <span class="math inline">\(-5ab\)</span> are like terms; collecting them gives</p>
 <p><span class="math display">\[
@@ -921,7 +929,7 @@ w_1 &amp;= w_2 \\
 \\ &amp;= a^2 + ab + ab + b^2
 &amp;&amp; \text{(commutative and associative laws)}
 \\ &amp;= a^2 + 2ab + b^2
-&amp;&amp; \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~12}}\text{)}
+&amp;&amp; \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~13}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>The step “commutative and associative laws” uses <a href="#/thm-prod-symmetric" class="quarto-xref">Theorem&nbsp;8</a> to write <span class="math inline">\(ba\)</span> as <span class="math inline">\(ab\)</span>, and <a href="#/thm-sum-assoc" class="quarto-xref">Theorem&nbsp;6</a> to drop the parentheses.</p>
@@ -1005,7 +1013,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-summation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Summation notation)</strong></span> Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be integers with <span class="math inline">\(m \le n\)</span>, and let <span class="math inline">\(a_m, a_{m+1}, \ldots, a_n\)</span> be numbers. The <strong>sum</strong> of <span class="math inline">\(a_m\)</span> through <span class="math inline">\(a_n\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 14 (Summation notation)</strong></span> Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be integers with <span class="math inline">\(m \le n\)</span>, and let <span class="math inline">\(a_m, a_{m+1}, \ldots, a_n\)</span> be numbers. The <strong>sum</strong> of <span class="math inline">\(a_m\)</span> through <span class="math inline">\(a_n\)</span> is</p>
 <p><span class="math display">\[
 \sum_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a_{m+1} + \cdots + a_n
 \]</span></p>
@@ -1034,13 +1042,13 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-empty-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Empty sum)</strong></span> When the upper limit is less than the lower limit (<span class="math inline">\(n &lt; m\)</span>), the sum <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span> has no terms. By convention, such an <strong>empty sum</strong> equals <span class="math inline">\(0\)</span>. For example, <span class="math inline">\(\sum_{i=1}^{0} a_i = 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 15 (Empty sum)</strong></span> When the upper limit is less than the lower limit (<span class="math inline">\(n &lt; m\)</span>), the sum <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span> has no terms. By convention, such an <strong>empty sum</strong> equals <span class="math inline">\(0\)</span>. For example, <span class="math inline">\(\sum_{i=1}^{0} a_i = 0\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
 
 <div id="exr-sum-rules" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Rearrange a sum)</strong></span> Let <span class="math inline">\(c\)</span> be a number, and let <span class="math inline">\(a_1, a_2, a_3\)</span> and <span class="math inline">\(b_1, b_2, b_3\)</span> be numbers. Using <a href="#/def-summation" class="quarto-xref">Definition&nbsp;13</a> and the rules of algebra above, show that:</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Rearrange a sum)</strong></span> Let <span class="math inline">\(c\)</span> be a number, and let <span class="math inline">\(a_1, a_2, a_3\)</span> and <span class="math inline">\(b_1, b_2, b_3\)</span> be numbers. Using <a href="#/def-summation" class="quarto-xref">Definition&nbsp;14</a> and the rules of algebra above, show that:</p>
 <ol type="1">
 <li><span class="math inline">\(\sum_{i=1}^{3} c\, a_i = c \sum_{i=1}^{3} a_i\)</span>;</li>
 <li><span class="math inline">\(\sum_{i=1}^{3} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum_{i=1}^{3} a_i + \sum_{i=1}^{3} b_i\)</span>.</li>
@@ -1051,7 +1059,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2 scrollable">
 
 <div id="sol-sum-rules" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span>Each step below applies <a href="#/def-summation" class="quarto-xref">Definition&nbsp;13</a>, the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>), or the commutative and associative laws of addition (<a href="#/thm-sum-symmetric" class="quarto-xref">Theorem&nbsp;5</a> and <a href="#/thm-sum-assoc" class="quarto-xref">Theorem&nbsp;6</a>).</p>
+<p><span class="proof-title"><em>Solution 4</em>. </span>Each step below applies <a href="#/def-summation" class="quarto-xref">Definition&nbsp;14</a>, the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>), or the commutative and associative laws of addition (<a href="#/thm-sum-symmetric" class="quarto-xref">Theorem&nbsp;5</a> and <a href="#/thm-sum-assoc" class="quarto-xref">Theorem&nbsp;6</a>).</p>
 <ol type="1">
 <li><p>Expand the sum, then factor out <span class="math inline">\(c\)</span>:</p>
 <p><span class="math display">\[
@@ -1153,7 +1161,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-sum-over-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Sum over a finite set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}\)</span> be a <a href="./sets-functions.html#def-finite-set">finite</a> <a href="./sets-functions.html#def-set">set</a> with <span class="math inline">\(k \ge 1\)</span> different elements. Let <span class="math inline">\(f\)</span> be a <a href="./sets-functions.html#def-function">function</a> that gives a number <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>. The <strong>sum of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span></strong> is</p>
+<p><span class="theorem-title"><strong>Definition 16 (Sum over a finite set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}\)</span> be a <a href="./sets-functions.html#def-finite-set">finite</a> <a href="./sets-functions.html#def-set">set</a> with <span class="math inline">\(k \ge 1\)</span> different elements. Let <span class="math inline">\(f\)</span> be a <a href="./sets-functions.html#def-function">function</a> that gives a number <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>. The <strong>sum of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span></strong> is</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k)
 \]</span></p>
@@ -1164,7 +1172,7 @@ w_1 &amp;= w_2 \\
 
 <div id="rem-sum-over-set-order" class="proof remark">
 <p><span class="proof-title"><em>Remark 7</em> (The order of the terms does not matter). </span>The order in which we list the elements of <span class="math inline">\(A\)</span> does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if <span class="math inline">\(A = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> and <span class="math inline">\(f(x) = x^2\)</span>, listing <span class="math inline">\(A\)</span> as <span class="math inline">\(1, 2, 3\)</span> gives <span class="math inline">\(1 + 4 + 9 = 14\)</span>, and listing <span class="math inline">\(A\)</span> as <span class="math inline">\(3, 1, 2\)</span> gives <span class="math inline">\(9 + 1 + 4 = 14\)</span>. <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, part 2, shows another example.</p>
-<p>When <span class="math inline">\(A = \mathopen{}\left\{m, m+1, \ldots, n\right\}\mathclose{}\)</span>, this sum is the same as <span class="math inline">\(\sum_{i=m}^{n} f(i)\)</span> from <a href="#/def-summation" class="quarto-xref">Definition&nbsp;13</a>.</p>
+<p>When <span class="math inline">\(A = \mathopen{}\left\{m, m+1, \ldots, n\right\}\mathclose{}\)</span>, this sum is the same as <span class="math inline">\(\sum_{i=m}^{n} f(i)\)</span> from <a href="#/def-summation" class="quarto-xref">Definition&nbsp;14</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1176,38 +1184,38 @@ w_1 &amp;= w_2 \\
 <section id="quotients" class="slide level2" data-number="8">
 <h2><span class="header-section-number">8</span> Quotients</h2>
 <div id="def-quotient" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Quotient)</strong></span> For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(b \neq 0\)</span>, the <strong>quotient</strong> of <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> is the result of dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 17 (Quotient)</strong></span> For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(b \neq 0\)</span>, the <strong>quotient</strong> of <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> is the result of dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span>:</p>
 <p><span class="math display">\[\frac{a}{b}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-fraction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Fraction, numerator, and denominator)</strong></span> A quotient <span class="math inline">\(\frac{a}{b}\)</span> (<a href="#/def-quotient" class="quarto-xref">Definition&nbsp;16</a>) is also called a <strong>fraction</strong>; <span class="math inline">\(a\)</span> is its <strong>numerator</strong> and <span class="math inline">\(b\)</span> its <strong>denominator</strong>. For example, the fraction <span class="math inline">\(\frac{6}{4}\)</span> has numerator <span class="math inline">\(6\)</span> and denominator <span class="math inline">\(4\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Fraction, numerator, and denominator)</strong></span> A quotient <span class="math inline">\(\frac{a}{b}\)</span> (<a href="#/def-quotient" class="quarto-xref">Definition&nbsp;17</a>) is also called a <strong>fraction</strong>; <span class="math inline">\(a\)</span> is its <strong>numerator</strong> and <span class="math inline">\(b\)</span> its <strong>denominator</strong>. For example, the fraction <span class="math inline">\(\frac{6}{4}\)</span> has numerator <span class="math inline">\(6\)</span> and denominator <span class="math inline">\(4\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-quotient" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (A quotient)</strong></span> The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(4\)</span> is <span class="math inline">\(\frac{6}{4} = 1.5\)</span>. The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(0\)</span> is undefined, because <a href="#/def-quotient" class="quarto-xref">Definition&nbsp;16</a> requires a nonzero denominator.</p>
+<p><span class="theorem-title"><strong>Example 18 (A quotient)</strong></span> The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(4\)</span> is <span class="math inline">\(\frac{6}{4} = 1.5\)</span>. The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(0\)</span> is undefined, because <a href="#/def-quotient" class="quarto-xref">Definition&nbsp;17</a> requires a nonzero denominator.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-person-years" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Follow-up and person-years)</strong></span> In a study that observes participants over time, a participant’s <strong>follow-up</strong> is the length of time the study observes that participant, and the study’s <strong>person-years</strong> are the sum of the follow-up times of all participants, measured in years.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Follow-up and person-years)</strong></span> In a study that observes participants over time, a participant’s <strong>follow-up</strong> is the length of time the study observes that participant, and the study’s <strong>person-years</strong> are the sum of the follow-up times of all participants, measured in years.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-person-years" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Counting person-years)</strong></span> If <span class="math inline">\(10\)</span> people are each followed for <span class="math inline">\(2\)</span> years, the study has <span class="math inline">\(10 \cdot 2 = 20\)</span> person-years. If one person is followed for <span class="math inline">\(3\)</span> years and another for <span class="math inline">\(\tfrac{1}{2}\)</span> year, the study has <span class="math inline">\(3 + \tfrac{1}{2} = 3.5\)</span> person-years.</p>
+<p><span class="theorem-title"><strong>Example 19 (Counting person-years)</strong></span> If <span class="math inline">\(10\)</span> people are each followed for <span class="math inline">\(2\)</span> years, the study has <span class="math inline">\(10 \cdot 2 = 20\)</span> person-years. If one person is followed for <span class="math inline">\(3\)</span> years and another for <span class="math inline">\(\tfrac{1}{2}\)</span> year, the study has <span class="math inline">\(3 + \tfrac{1}{2} = 3.5\)</span> person-years.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-rate" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Rate)</strong></span> A <strong>rate</strong> is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up (<a href="#/def-person-years" class="quarto-xref">Definition&nbsp;18</a>). For example, <span class="math inline">\(12\)</span> new cases in <span class="math inline">\(4\)</span> weeks is a rate of <span class="math inline">\(\frac{12}{4} = 3\)</span> new cases per week, and <span class="math inline">\(30\)</span> cases over <span class="math inline">\(10{,}000\)</span> person-years of follow-up is a rate of <span class="math inline">\(\frac{30}{10{,}000} = 0.003\)</span> cases per person-year.</p>
+<p><span class="theorem-title"><strong>Definition 20 (Rate)</strong></span> A <strong>rate</strong> is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up (<a href="#/def-person-years" class="quarto-xref">Definition&nbsp;19</a>). For example, <span class="math inline">\(12\)</span> new cases in <span class="math inline">\(4\)</span> weeks is a rate of <span class="math inline">\(\frac{12}{4} = 3\)</span> new cases per week, and <span class="math inline">\(30\)</span> cases over <span class="math inline">\(10{,}000\)</span> person-years of follow-up is a rate of <span class="math inline">\(\frac{30}{10{,}000} = 0.003\)</span> cases per person-year.</p>
 </div>
 <aside class="notes">
 <p>cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Rate_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Rate_(mathematics)</a></p>
@@ -1226,7 +1234,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-ratio" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Ratios)</strong></span> A <strong>ratio</strong> is a quotient in which the numerator and denominator are measured using the same unit scales.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Ratios)</strong></span> A <strong>ratio</strong> is a quotient in which the numerator and denominator are measured using the same unit scales.</p>
 <aside class="notes">
 <p>cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Ratio" class="uri">https://en.wikipedia.org/wiki/Ratio</a></p>
 <style type="text/css">
@@ -1245,7 +1253,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="exm-ratio" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (A ratio, and a quotient that is not one)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 20 (A ratio, and a quotient that is not one)</strong></span> &nbsp;</p>
 <ul>
 <li>A board <span class="math inline">\(150\)</span> cm long and one <span class="math inline">\(75\)</span> cm long have length ratio <span class="math inline">\(\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\)</span>: both lengths are in centimeters, so the units cancel and the ratio has none.</li>
 <li>A sample of mass <span class="math inline">\(300\)</span> g and volume <span class="math inline">\(150\)</span> cm<span class="math inline">\(^3\)</span> gives the quotient <span class="math inline">\(\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\)</span> g per cm<span class="math inline">\(^3\)</span>, its density. The numerator and denominator are in different units, so this quotient is not a ratio.</li>
@@ -1255,7 +1263,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-proportion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Proportion)</strong></span> In statistics, a <strong>proportion</strong> typically means a ratio where the numerator represents a subset of the denominator.</p>
+<p><span class="theorem-title"><strong>Definition 22 (Proportion)</strong></span> In statistics, a <strong>proportion</strong> typically means a ratio where the numerator represents a subset of the denominator.</p>
 <aside class="notes">
 <p>See <a href="https://en.wikipedia.org/wiki/Population_proportion" class="uri">https://en.wikipedia.org/wiki/Population_proportion</a>.</p>
 <p>See also <a href="https://en.wikipedia.org/wiki/Proportion_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Proportion_(mathematics)</a> for other meanings.</p>
@@ -1275,7 +1283,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="exm-proportion" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (A proportion, and a ratio that is not one)</strong></span> In a clinic with <span class="math inline">\(120\)</span> patients, <span class="math inline">\(30\)</span> of whom smoke:</p>
+<p><span class="theorem-title"><strong>Example 21 (A proportion, and a ratio that is not one)</strong></span> In a clinic with <span class="math inline">\(120\)</span> patients, <span class="math inline">\(30\)</span> of whom smoke:</p>
 <ul>
 <li>the proportion of patients who smoke is <span class="math inline">\(\tfrac{30}{120} = 0.25\)</span>: the <span class="math inline">\(30\)</span> smokers are a subset of the <span class="math inline">\(120\)</span> patients;</li>
 <li>the ratio of smokers to non-smokers is <span class="math inline">\(\tfrac{30}{90} = \tfrac{1}{3}\)</span>. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the <span class="math inline">\(30\)</span> smokers are not part of the <span class="math inline">\(90\)</span> non-smokers.</li>
@@ -1285,13 +1293,13 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-proportional" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Proportional)</strong></span> Two functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are <strong>proportional</strong> if their ratio <span class="math inline">\(\frac{f(x)}{g(x)}\)</span> does not depend on <span class="math inline">\(x\)</span>. (cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Proportionality_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Proportionality_(mathematics)</a>)</p>
+<p><span class="theorem-title"><strong>Definition 23 (Proportional)</strong></span> Two functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are <strong>proportional</strong> if their ratio <span class="math inline">\(\frac{f(x)}{g(x)}\)</span> does not depend on <span class="math inline">\(x\)</span>. (cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Proportionality_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Proportionality_(mathematics)</a>)</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-proportional" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Proportional and non-proportional functions)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 22 (Proportional and non-proportional functions)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(f(x) = 6x^2\)</span> and <span class="math inline">\(g(x) = 2x^2\)</span> are proportional: for <span class="math inline">\(x \ne 0\)</span>,</p>
 <p><span class="math display">\[
