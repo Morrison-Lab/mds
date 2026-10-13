@@ -37,7 +37,6 @@ jobs:
       exclude-keys: >-
         abramson2021algebra banerjee2014linear barkerplummer2011language
         billingsley1995probability boyd2004convex boyd2018vmls calclifesaver
-        CaseBerg01
         cheng2025math folland1999real fubini1907 goodfellow2016deep
         larsonCalc11e marsden2013vector mosaiccalc
         problifesavercalc
