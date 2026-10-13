@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 14:29:41 (PDT)
+Last modified: 2026-10-13 15:25:57 (PDT)
 
 ## 1 Equalities
 
@@ -271,7 +271,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > Every global minimizer ([Definition 11](#def-global-minimizer)) is a local minimizer: take any \\\delta\> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
 >
-> The [converse](notation.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta= 1\\), but not a global one.
+> The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta= 1\\), but not a global one.
 
 > **NOTE:**
 >

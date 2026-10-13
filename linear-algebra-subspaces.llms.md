@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 14:29:41 (PDT)
+Last modified: 2026-10-13 15:25:57 (PDT)
 
 ## 1 Rank
 
@@ -136,7 +136,7 @@ Last modified: 2026-10-13 14:29:41 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (The line in [Example 3](#exm-subspace) is a span)** The line \\\mathcal{S} = \mathopen{}\left\\c\\(1, 2) : c \in \mathbb{R}\right\\\mathclose{}\\ in [Example 3](#exm-subspace) is \\\operatorname{span}\mathopen{}\left\\(1, 2)\right\\\mathclose{}\\, so [Theorem 2](#thm-span-subspace) gives a second [proof](notation.llms.md#def-proof) that it is a subspace. Likewise, the plane \\z = 0\\ in [Example 6](#exm-span) is a subspace of \\\mathbb{R}^3\\, because it is \\\operatorname{span}\mathopen{}\left\\(1, 0, 0), (0, 1, 0)\right\\\mathclose{}\\.
+> **Example 7 (The line in [Example 3](#exm-subspace) is a span)** The line \\\mathcal{S} = \mathopen{}\left\\c\\(1, 2) : c \in \mathbb{R}\right\\\mathclose{}\\ in [Example 3](#exm-subspace) is \\\operatorname{span}\mathopen{}\left\\(1, 2)\right\\\mathclose{}\\, so [Theorem 2](#thm-span-subspace) gives a second [proof](proof-writing.llms.md#def-proof) that it is a subspace. Likewise, the plane \\z = 0\\ in [Example 6](#exm-span) is a subspace of \\\mathbb{R}^3\\, because it is \\\operatorname{span}\mathopen{}\left\\(1, 0, 0), (0, 1, 0)\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -184,7 +184,7 @@ Last modified: 2026-10-13 14:29:41 (PDT)
 >
 > **Base case, \\p = 1\\.** Each \\\tilde{v}\_i\\ is a single number \\v_i\\, and \\k \ge 2\\. If \\v_1 = 0\\, take \\c_1 = 1\\ and every other \\c_i = 0\\. Otherwise take \\c_1 = v_2\\, \\c_2 = -v_1\\ and every other \\c_i = 0\\; then \\c_2 \neq 0\\, and \\v_2 v_1 - v_1 v_2 = 0\\.
 >
-> **Inductive step.** Let \\p \ge 2\\, assume the [theorem](notation.llms.md#def-theorem) holds for vectors in \\\mathbb{R}^{p-1}\\, and take \\k \> p\\ vectors in \\\mathbb{R}^p\\. Write \\v\_{i,p}\\ for the last entry of \\\tilde{v}\_i\\.
+> **Inductive step.** Let \\p \ge 2\\, assume the [theorem](proof-writing.llms.md#def-theorem) holds for vectors in \\\mathbb{R}^{p-1}\\, and take \\k \> p\\ vectors in \\\mathbb{R}^p\\. Write \\v\_{i,p}\\ for the last entry of \\\tilde{v}\_i\\.
 >
 > *Case 1: every \\v\_{i,p} = 0\\.* Deleting the last entry gives \\k \> p - 1\\ vectors in \\\mathbb{R}^{p-1}\\, which by the inductive hypothesis have a combination with coefficients not all zero that equals \\\tilde{0}\_{p-1}\\. The same coefficients combine the original vectors to \\\tilde{0}\_p\\, since every last entry is \\0\\.
 >

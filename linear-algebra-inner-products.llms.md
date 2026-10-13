@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 14:29:41 (PDT)
+Last modified: 2026-10-13 15:25:57 (PDT)
 
 ## 1 Inner products
 

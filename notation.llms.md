@@ -4,15 +4,15 @@ Code
 
 Published
 
-Last modified: 2026-10-13 14:29:41 (PDT)
+Last modified: 2026-10-13 15:25:57 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
 | symbol | meaning | LaTeX |
 |----|----|----|
-| \\\neg\\ | [not](#def-logical-connective) | `\neg` |
-| \\\forall\\ | [for all](#def-quantifier) | `\forall` |
-| \\\exists\\ | [there exists](#def-quantifier) | `\exists` |
+| \\\neg\\ | [not](proof-writing.llms.md#def-logical-connective) | `\neg` |
+| \\\forall\\ | [for all](proof-writing.llms.md#def-quantifier) | `\forall` |
+| \\\exists\\ | [there exists](proof-writing.llms.md#def-quantifier) | `\exists` |
 | \\\cup\\ | union, “or” | `\cup` |
 | \\\cap\\ | intersection, “and” | `\cap` |
 | \\\mid\\ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
@@ -23,11 +23,11 @@ Mathematical notation is not standardized. This section states the conventions t
 | \\x^{\top}\\ | transpose of \\x\\ | `x\'` |
 | \\'\\ | transpose or [derivative](calculus-derivatives.llms.md#def-derivative)[^1] | `'` |
 | \\\perp\\\\\\\perp\\ | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) | `\perp\!\!\!\perp` |
-| \\\therefore\\ | [therefore](#def-logical-entailment), thus | `\therefore` |
+| \\\therefore\\ | [therefore](proof-writing.llms.md#def-logical-entailment), thus | `\therefore` |
 | \\\eta\\ | [linear predictor](https://en.wikipedia.org/wiki/Generalized_linear_model#:~:text=The%20linear%20predictor%20is%20the,data%20through%20the%20link%20function "linear predictor notation") of a generalized linear model[^2] | `\eta` |
 | \\\mathopen{}\left\lfloor x\right\rfloor\mathclose{}\\ | floor of \\x\\: largest [integer](#def-integers) less than or equal to \\x\\ | `\lfloor x \rfloor` |
 | \\\mathopen{}\left\lceil x\right\rceil\mathclose{}\\ | ceiling of \\x\\: smallest [integer](#def-integers) greater than or equal to \\x\\ | `\lceil x \rceil` |
-| \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 6](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
+| \\\mathbb{1}\_{A}(x)\\, \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ | indicator function ([Section 5](#sec-indicator-functions)): \\1\\ if condition holds, \\0\\ otherwise | `\indic{A}(x)`, `\indicp{P}` |
 
 Table 1: Notation used in this book
 
@@ -180,295 +180,11 @@ The word “percent” comes from the Latin “per centum”; “centum” is La
 
 You are welcome to switch between decimal and percent notation freely; just make sure you execute it correctly.
 
-## 5 Proofs
-
-> **NOTE:**
->
-> **Definition 9 (Proposition (statement))** A **proposition**, or **statement**, is a sentence that is either true or false.
-
-> **NOTE:**
->
-> **Example 8 (Propositions, and a sentence that is not one)**  
->
-> - “\\2 + 3 = 5\\” is a proposition, and it is true.
-> - “\\7\\ is [even](#def-even-odd)” is a proposition, and it is false.
-> - “\\x \> 2\\” is not a proposition on its own: it is true when \\x = 3\\ and false when \\x = 1\\, so it has no truth value until \\x\\ is given a value.
-
-> **NOTE:**
->
-> **Definition 10 (Predicate)** A **predicate** \\P(x)\\ is a sentence about a variable \\x\\ that becomes a proposition ([Definition 9](#def-proposition)) whenever a value is substituted for \\x\\.
-
-> **NOTE:**
->
-> **Example 9 (A predicate)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for real numbers \\x\\.
->
-> - \\P(3)\\ is the proposition “\\3 \> 2\\”, which is true.
-> - \\P(1)\\ is the proposition “\\1 \> 2\\”, which is false.
-
-> **NOTE:**
->
-> **Definition 11 (Logical connective)** A **logical connective** builds a new proposition ([Definition 9](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five:
->
-> - **not**: \\\neg P\\ (“not \\P\\”) is true when \\P\\ is false, and false when \\P\\ is true.
-> - **and**: \\P \land Q\\ (“\\P\\ and \\Q\\”) is true when \\P\\ and \\Q\\ are both true, and false otherwise.
-> - **or**: \\P \lor Q\\ (“\\P\\ or \\Q\\”) is true when at least one of \\P\\ and \\Q\\ is true, and false when both are false.
-> - **implies**: \\P \Rightarrow Q\\ (“if \\P\\, then \\Q\\”, or “\\P\\ implies \\Q\\”) is false when \\P\\ is true and \\Q\\ is false, and true otherwise.
-> - **if and only if**: \\P \Leftrightarrow Q\\ (“\\P\\ if and only if \\Q\\”) is true when \\P\\ and \\Q\\ have the same truth value, and false otherwise.
-
-> **NOTE:**
->
-> **Example 10 (Truth values of connectives)** Let \\P\\ be “\\2 + 3 = 5\\”, which is true, and let \\Q\\ be “\\7\\ is [even](#def-even-odd)”, which is false.
->
-> - \\\neg Q\\, “\\7\\ is not even”, is true, because \\Q\\ is false.
-> - \\P \land Q\\ is false, because \\Q\\ is false.
-> - \\P \lor Q\\ is true, because \\P\\ is true.
-> - \\P \Rightarrow Q\\ is false, because \\P\\ is true and \\Q\\ is false.
-> - \\Q \Rightarrow P\\ is true, because \\Q\\ is false.
-> - \\P \Leftrightarrow Q\\ is false, because \\P\\ and \\Q\\ have different truth values.
-
-> **NOTE:**
->
-> **Definition 12 (Quantifier)** A **quantifier** turns a predicate \\P(x)\\ ([Definition 10](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 9](#def-proposition)):
->
-> - the **universal quantifier** “for all”: \\\forall x \in S, P(x)\\ (“for every \\x\\ in \\S\\, \\P(x)\\”) is true when \\P(x)\\ is true for every element \\x\\ of \\S\\, and false otherwise;
-> - the **existential quantifier** “there exists”: \\\exists x \in S, P(x)\\ (“there is an \\x\\ in \\S\\ such that \\P(x)\\”) is true when \\P(x)\\ is true for at least one element \\x\\ of \\S\\, and false otherwise.
-
-> **NOTE:**
->
-> **Example 11 (Quantified propositions)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for [integers](#def-integers) \\x\\.
->
-> - “\\\exists x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is true, because \\P(3)\\ is true.
-> - “\\\forall x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is false, because \\P(1)\\ is false.
-> - “\\\forall x \in \mathopen{}\left\\3, 4, 5\right\\\mathclose{}, P(x)\\” is true, because \\3 \> 2\\, \\4 \> 2\\, and \\5 \> 2\\ are all true.
-
-> **NOTE:**
->
-> **Definition 13 (Inequality)** An **inequality** is a proposition ([Definition 9](#def-proposition)) or a predicate ([Definition 10](#def-predicate)) that compares two expressions \\a\\ and \\b\\ whose values are [real numbers](#def-real-numbers), in one of the forms:
->
-> - \\a \< b\\ (“\\a\\ is less than \\b\\”);
-> - \\a \le b\\ (“\\a\\ is less than or equal to \\b\\”);
-> - \\a \> b\\ (“\\a\\ is greater than \\b\\”);
-> - \\a \ge b\\ (“\\a\\ is greater than or equal to \\b\\”).
-
-> **NOTE:**
->
-> **Example 12 (Inequalities)**  
->
-> - “\\3 \< 5\\” is an inequality, and it is true.
-> - “\\5 \le 3\\” is an inequality, and it is false.
-> - “\\x \ge 2\\” is an inequality and a predicate: it is true when \\x = 2\\ and false when \\x = 1\\.
-> - “\\x = 2\\” is not an inequality: it is an equality.
-
-> **NOTE:**
->
-> **Definition 14 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates \\P_1, \ldots, P_n\\ ([Definition 9](#def-proposition), [Definition 10](#def-predicate)) **logically entail** a proposition or predicate \\Q\\ when every choice of values for their variables that makes all of \\P_1, \ldots, P_n\\ true also makes \\Q\\ true. Then \\Q\\ is a **logical consequence**, or **deductive consequence**, of \\P_1, \ldots, P_n\\.
-
-> **NOTE:**
->
-> **Example 13 (Entailment, and its failure)** Let \\x\\ be an [integer](#def-integers).
->
-> - “\\x = 2\\” entails “\\x^2 = 4\\”: the only value that makes “\\x = 2\\” true is \\x = 2\\, and \\2^2 = 4\\.
-> - “\\x \> 3\\” and “\\x \< 5\\” together entail “\\x = 4\\”: \\4\\ is the only integer greater than \\3\\ and less than \\5\\.
-> - “\\x^2 = 4\\” does not entail “\\x = 2\\”: the value \\x = -2\\ makes “\\x^2 = 4\\” true, since \\(-2)^2 = 4\\, but makes “\\x = 2\\” false.
-
-We can use any of:
-
-- \\\therefore\\ (`\therefore` in LaTeX),
-- \\\Rightarrow\\ (`\Rightarrow`),
-- \\\models\\ (`\models`)
-
-to denote logical entailment ([Definition 14](#def-logical-entailment)). \\\Rightarrow\\ also writes the connective “implies” ([Definition 11](#def-logical-connective)); \\P\\ entails \\Q\\ exactly when \\P \Rightarrow Q\\ is true for every choice of values for the variables in \\P\\ and \\Q\\.
-
-Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-sequence-limit) results.
-
-> **NOTE:**
->
-> **Definition 15 (Proof)** A **proof** of a proposition ([Definition 9](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
->
-> - an assumption,
-> - a definition,
-> - a previously proved result, or
-> - a consequence of earlier statements in the list, by one rule of logic or algebra.
-
-> **NOTE:**
->
-> **Example 14 (The sum of two even integers is even)** Let \\a\\ and \\b\\ be even integers ([Definition 2](#def-even-odd)). Then \\a = 2j\\ and \\b = 2k\\ for some integers \\j\\ and \\k\\, and
->
-> \\ \begin{aligned} a + b &= 2j + 2k && \text{(substitute } a = 2j \text{ and } b = 2k \text{)} \\ &= 2(j + k) && \text{(distributive law)} \end{aligned} \\
->
-> The second line uses the [distributive law](algebra-sums.llms.md#def-distributive). Since \\j + k\\ is an integer, \\a + b\\ is even ([Definition 2](#def-even-odd)). For example,
->
-> \\ \begin{aligned} 4 + 10 &= 2 \cdot 2 + 2 \cdot 5 \\ &= 2 \cdot 7 \\ &= 14. \end{aligned} \\
-
-> **NOTE:**
->
-> **Definition 16 (Derivation)** A **derivation** is a proof ([Definition 15](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by \\=\\ or by an inequality sign ([Definition 13](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.
-
-> **NOTE:**
->
-> **Example 15 (A derivation with equalities and inequalities)** For every real number \\x\\:
->
-> \\ \begin{aligned} (x + 1)^2 &= x^2 + 2x + 1 && \text{(square of a sum)} \\ &\ge 2x + 1 && \text{(} x^2 \ge 0 \text{)} \\ &\> 2x && \text{(} 1 \> 0 \text{)} \end{aligned} \\
->
-> The first step uses the [square of a sum](algebra-sums.llms.md#thm-square-of-a-sum). The steps are \\=\\, \\\ge\\, and \\\>\\, so the derivation shows \\(x + 1)^2 \> 2x\\. For example, with \\x = 3\\: \\(3 + 1)^2 = 16\\, and \\16 \> 6 = 2 \cdot 3\\.
-
-> **NOTE:**
->
-> **Theorem 1 (What a derivation shows)** Consider a derivation ([Definition 16](#def-derivation)) with expressions \\E_0, E_1, \ldots, E_n\\, where each line \\E_j\\ is joined to the line \\E\_{j-1}\\ before it by \\=\\, \\\le\\ or \\\<\\.
->
-> 1.  If every step is \\=\\, then \\E_0 = E_n\\.
-> 2.  If every step is \\=\\ or \\\le\\, then \\E_0 \le E_n\\.
-> 3.  If every step is \\=\\, \\\le\\, or \\\<\\, and at least one step is \\\<\\, then \\E_0 \< E_n\\.
->
-> The same holds with \\\ge\\ and \\\>\\ in place of \\\le\\ and \\\<\\.
-
-> **NOTE:**
->
-> *Proof*. First, a fact about two steps in a row. For numbers \\a\\, \\b\\ and \\c\\, if \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\, where \\R\\ and \\S\\ are each one of \\=\\, \\\le\\ and \\\<\\, then \\a \mathrel{T} c\\, where \\T\\ is
->
-> - \\\<\\ if \\R\\ or \\S\\ is \\\<\\;
-> - otherwise \\\le\\ if \\R\\ or \\S\\ is \\\le\\;
-> - otherwise \\=\\.
->
-> This holds in each case:
->
-> - If \\R\\ and \\S\\ are both \\=\\, then \\a = c\\ ([equalities are transitive](algebra-basics.llms.md#thm-equal-trans)).
-> - If exactly one of \\R\\ and \\S\\ is \\=\\, replace \\b\\ by the equal expression in the other relation ([substitution](algebra-basics.llms.md#thm-substitution)). This gives the other relation between \\a\\ and \\c\\.
-> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict and non-strict inequalities](algebra-basics.llms.md#def-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
->
-> Now let \\T_j\\ be the relation named by the same rule applied to the first \\j\\ steps of the chain, with \\T_0\\ being \\=\\. We show \\E_0 \mathrel{T_j} E_j\\ by induction on \\j\\. For \\j = 0\\, \\E_0 = E_0\\. If \\E_0 \mathrel{T_j} E_j\\, then the step from \\E_j\\ to \\E\_{j+1}\\ and the fact above give \\E_0 \mathrel{T\_{j+1}} E\_{j+1}\\. At \\j = n\\, \\T_n\\ is \\=\\ when every step is \\=\\, which is part 1. It is \\\le\\ or \\=\\ when every step is \\=\\ or \\\le\\, and \\=\\ implies \\\le\\, which is part 2. It is \\\<\\ when some step is \\\<\\, which is part 3.
->
-> The argument for \\\ge\\ and \\\>\\ is the same with the inequalities reversed.
-
-> **NOTE:**
->
-> **Example 16 (Checking a derivation line by line)** The derivation in [Example 15](#exm-derivation) has the steps \\=\\, \\\ge\\ and \\\>\\, so by [Theorem 1](#thm-derivation-chain) it shows \\(x + 1)^2 \> 2x\\. The code evaluates the four lines of that derivation at several values of \\x\\, and checks each step and the comparison of the first line with the last.
->
-> ``` downlit
-> x <- c(-3, -1, 0, 2, 3)
-> lines <- data.frame(
->   x = x,
->   line_0 = (x + 1)^2,
->   line_1 = x^2 + 2 * x + 1,
->   line_2 = 2 * x + 1,
->   line_3 = 2 * x
-> )
-> steps <- with(
->   lines,
->   data.frame(
->     x = x,
->     step_1_equal = line_0 == line_1,
->     step_2_geq = line_1 >= line_2,
->     step_3_greater = line_2 > line_3,
->     first_greater_than_last = line_0 > line_3
->   )
-> )
-> lines
-> ```
->
-> ``` downlit
-> steps
-> ```
->
-> At all 5 values of \\x\\, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as [Theorem 1](#thm-derivation-chain) says. At \\x = 0\\, for example, the first line is 1 and the last is 0.
-
-> **NOTE:**
->
-> **Definition 17 (Result, theorem, lemma, and corollary)** A **result** is a proposition ([Definition 9](#def-proposition)) that has a proof ([Definition 15](#def-proof)). These notes label each result by its role:
->
-> - a **theorem** is a result of interest in its own right;
-> - a **lemma** is a result proved mainly as a step in the proof of another result;
-> - a **corollary** is a result that follows from a theorem with little extra work.
-
-> **NOTE:**
->
-> *Remark 2* (“Proposition” as a kind of result). Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false ([Definition 9](#def-proposition)), whether or not it has been proved.
-
-> **NOTE:**
->
-> **Example 17 (A corollary of a result)** [Example 14](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example,
->
-> \\ \begin{aligned} 2 + 4 + 6 &= (2 + 4) + 6 \\ &= 6 + 6 \\ &= 12, \end{aligned} \\
->
-> which is even.
-
-> **NOTE:**
->
-> **Definition 18 (Counterexample)** A **counterexample** to a proposition of the form “for every \\x\\ in \\A\\, \\P(x)\\”, where \\P(x)\\ is a predicate ([Definition 10](#def-predicate)), is an element \\x\\ of \\A\\ for which \\P(x)\\ is false. A single counterexample shows that the proposition is false.
-
-> **NOTE:**
->
-> **Example 18 (A counterexample)** The proposition “for every integer \\n\\, \\n + n \> n\\” is false. The integer \\n = 0\\ is a counterexample: \\0 + 0 = 0\\, and \\0 \> 0\\ is false. The proposition is true for some integers, such as \\n = 3\\, since \\3 + 3 = 6 \> 3\\, but one counterexample is enough to make it false.
-
-> **NOTE:**
->
-> **Definition 19 (Converse)** The **converse** of the proposition “if \\P\\, then \\Q\\” is the proposition “if \\Q\\, then \\P\\”.
-
-> **NOTE:**
->
-> **Example 19 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
->
-> - “If \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true:
->
->   \\ \begin{aligned} n &= 4k \\ &= 2 \cdot(2k), \end{aligned} \\
->
->   and \\2k\\ is an integer.
->
-> - Its converse, “if \\n\\ is even, then \\n\\ is a multiple of \\4\\”, is false. The integer \\n = 2\\ is a counterexample ([Definition 18](#def-counterexample)): \\2\\ is even, but \\2 = 4k\\ only for \\k = \frac{1}{2}\\, which is not an integer.
->
-> So a proposition can be true while its converse is false.
-
-> **NOTE:**
->
-> **Definition 20 (Necessary and sufficient conditions)** When the proposition “if \\P\\, then \\Q\\” is true, \\P\\ is a **sufficient condition** for \\Q\\, and \\Q\\ is a **necessary condition** for \\P\\. When both “if \\P\\, then \\Q\\” and its converse ([Definition 19](#def-converse)) are true, \\P\\ is a **necessary and sufficient condition** for \\Q\\, written “\\P\\ if and only if \\Q\\”.
-
-> **NOTE:**
->
-> **Example 20 (Necessary but not sufficient)** In [Example 19](#exm-converse), “if \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true, so:
->
-> - being a multiple of \\4\\ is a sufficient condition for \\n\\ to be even;
-> - being even is a necessary condition for \\n\\ to be a multiple of \\4\\.
->
-> Being even is not a sufficient condition for being a multiple of \\4\\: \\n = 2\\ is even, but not a multiple of \\4\\.
-
-> **NOTE:**
->
-> **Definition 21 (Proof by contradiction)** A **proof by contradiction** of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false.
-
-> **NOTE:**
->
-> **Example 21 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([Definition 2](#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
->
-> \\ \begin{aligned} 2j &= 2k + 1 && \text{(both equal } n \text{)} \\ 2j - 2k &= 1 && \text{(subtract } 2k \text{ from both sides)} \\ 2(j - k) &= 1 && \text{(distributive law)} \\ j - k &= \tfrac{1}{2} && \text{(divide both sides by } 2 \text{)} \end{aligned} \\
->
-> The third line uses the [distributive law](algebra-sums.llms.md#def-distributive). But \\j - k\\ is an integer, and \\\frac{1}{2}\\ is not, so the last line is false. So no integer is both even and odd. For example, \\6 = 2 \cdot 3\\ is even, and \\6 = 2k + 1\\ would need \\k = 2.5\\, which is not an integer.
-
-> **NOTE:**
->
-> **Theorem 2 (A proof by contradiction proves its proposition)** Let \\P\\ and \\Q\\ be propositions ([Definition 9](#def-proposition)). If \\\neg P \Rightarrow Q\\ is true and \\Q\\ is false, then \\P\\ is true.
-
-> **NOTE:**
->
-> *Proof*. By [Definition 11](#def-logical-connective), \\\neg P \Rightarrow Q\\ is false only when \\\neg P\\ is true and \\Q\\ is false. Here \\Q\\ is false, and \\\neg P \Rightarrow Q\\ is true, so \\\neg P\\ is not true. Then \\\neg P\\ is false. Since \\\neg P\\ is true whenever \\P\\ is false, \\P\\ must be true.
-
-> **NOTE:**
->
-> **Example 22 (A truth table for a proof by contradiction)** There are only four ways to assign truth values to \\P\\ and \\Q\\. The code lists them, with the truth value of \\\neg P \Rightarrow Q\\, and marks the rows where \\\neg P \Rightarrow Q\\ is true and \\Q\\ is false.
->
-> ``` downlit
-> tt <- expand.grid(Q = c(TRUE, FALSE), P = c(TRUE, FALSE))
-> tt$not_P_implies_Q <- !(!tt$P) | tt$Q
-> tt$hypotheses_hold <- tt$not_P_implies_Q & !tt$Q
-> tt
-> ```
->
-> The hypotheses of [Theorem 2](#thm-proof-by-contradiction) hold in 1 of the 4 rows, and in 1 of them \\P\\ is true. So whenever the hypotheses hold, \\P\\ is true.
-
-## 6 Indicator functions
+## 5 Indicator functions
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
-- binary variables, which take only the values \\0\\ and \\1\\ ([Definition 23](#def-binary-variable));
+- binary variables, which take only the values \\0\\ and \\1\\ ([Definition 10](#def-binary-variable));
 - event and censoring indicators in survival analysis, the study of the time until an event such as death, where an observation is censored when follow-up ends before its event is seen;
 - membership in subpopulations;
 - domain restrictions in integrals and sums.
@@ -477,7 +193,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 22 (Indicator function (set indicator, predicate indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
+> **Definition 9 (Indicator function (set indicator, predicate indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
 >
 > \\ \mathbb{1}\_{A}(x) \stackrel{\text{def}}{=}\begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases} \\
 >
@@ -487,7 +203,7 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Example 23 (Evaluating set and predicate indicators)** Consider the real line \\\Omega= \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\ (defined in the Morrison Lab’s probability notes).
+> **Example 8 (Evaluating set and predicate indicators)** Consider the real line \\\Omega= \mathbb{R}\\, the set of nonnegative numbers \\A = \[0, \infty)\\, and a continuous [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\Y\\ (defined in the Morrison Lab’s probability notes).
 >
 > 1.  Set indicator \\\mathbb{1}\_{A}(x)\\:
 >     - For \\x = 3.5\\: since \\3.5 \in \[0, \infty)\\, \\\mathbb{1}\_{A}(3.5) = 1\\.
@@ -498,25 +214,25 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 23 (Binary variable)** A **binary variable** is a variable that takes only the values \\0\\ and \\1\\.
+> **Definition 10 (Binary variable)** A **binary variable** is a variable that takes only the values \\0\\ and \\1\\.
 
 > **NOTE:**
 >
-> **Example 24 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 23](#def-binary-variable)). It is also the predicate indicator ([Definition 22](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
+> **Example 9 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 10](#def-binary-variable)). It is also the predicate indicator ([Definition 9](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
 >
 > In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
 
-### 6.1 Two primary notational paradigms: set vs. predicate notation
+### 5.1 Two primary notational paradigms: set vs. predicate notation
 
 The vast majority of indicator notations belong to one of two families: set notation or predicate notation.
 
 > **NOTE:**
 >
-> **Definition 24 (Set notation and predicate notation for indicators)** An indicator ([Definition 22](#def-indicator-function)) is written in **set notation** when the set \\A\\ appears as a subscript, as in \\\mathbb{1}\_{A}(x)\\, and in **predicate notation** when a proposition or predicate \\P\\ ([Definition 10](#def-predicate)) appears as its argument, as in \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\.
+> **Definition 11 (Set notation and predicate notation for indicators)** An indicator ([Definition 9](#def-indicator-function)) is written in **set notation** when the set \\A\\ appears as a subscript, as in \\\mathbb{1}\_{A}(x)\\, and in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Example 25 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 24](#def-set-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
+> **Example 10 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 11](#def-set-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
 
 #### Set notation
 
@@ -540,7 +256,7 @@ In predicate notation, the indicator takes a logical condition, relation, or pro
 - \\\mathbb{1}\\x \in A\\\\ or \\\mathbb{1}\\P\\\\
 - \\I(x \in A)\\ or \\I(P)\\
 
-Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([Definition 13](#def-inequality)) involving random variables, such as \\\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}\\ (an event occurring before time \\t\\) or \\\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}\\ (a binary outcome).
+Predicate notation is especially common in applied statistics and survival analysis, where indicators frequently depend on inequalities ([definition](proof-writing.llms.md#def-inequality)) involving random variables, such as \\\mathbb{1}\mathopen{}\left(T_i \le t\right)\mathclose{}\\ (an event occurring before time \\t\\) or \\\mathbb{1}\mathopen{}\left(Y_i = 1\right)\mathclose{}\\ (a binary outcome).
 
 #### Equivalence between paradigms
 
@@ -550,30 +266,30 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 > **NOTE:**
 >
-> **Definition 25 (Support of a distribution)** The **support** of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
+> **Definition 12 (Support of a distribution)** The **support** of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
 
 > **NOTE:**
 >
-> **Example 26 (Supports of two count distributions)**  
+> **Example 11 (Supports of two count distributions)**  
 >
 > - A fair six-sided die gives each of \\1, 2, \ldots, 6\\ probability \\\tfrac{1}{6} \> 0\\ and every other value probability \\0\\, so its support is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
 > - A count that can be \\0\\, \\1\\, \\2\\, and so on, each with positive probability, such as the number of hospital visits in a year, has support \\\mathbb{N}\_0 = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\.
 
-Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 25](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
+Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 12](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
 
-### 6.2 Iverson bracket notation
+### 5.2 Iverson bracket notation
 
 In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the [Iverson bracket](https://en.wikipedia.org/wiki/Iverson_bracket).
 
 > **NOTE:**
 >
-> **Definition 26 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
+> **Definition 13 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
 >
 > \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
 > **NOTE:**
 >
-> **Example 27 (Evaluating Iverson brackets)**  
+> **Example 12 (Evaluating Iverson brackets)**  
 >
 > - \\\[3 \> 2\] = 1\\, because \\3 \> 2\\ is true.
 > - \\\[2 \> 3\] = 0\\, because \\2 \> 3\\ is false.
@@ -581,7 +297,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 3* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 22](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 23](#exm-indicator-numerical) become
+> *Remark 2* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 9](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 8](#exm-indicator-numerical) become
 >
 > \\ \begin{aligned} \[7.2 \> 5\] &= \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} \\ &= 1 \end{aligned} \\
 >
@@ -591,15 +307,15 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Definition 27 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
+> **Definition 14 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
 >
 > \\\delta\_{ij} \stackrel{\text{def}}{=}\[i = j\]\\
 >
-> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 26](#def-iverson-bracket)).
+> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 13](#def-iverson-bracket)).
 
 > **NOTE:**
 >
-> **Example 28 (Evaluating the Kronecker delta)**  
+> **Example 13 (Evaluating the Kronecker delta)**  
 >
 > - \\ \begin{aligned} \delta\_{11} &= \[1 = 1\] \\ &= 1. \end{aligned} \\
 >
@@ -609,7 +325,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 >
 > - \\ \begin{aligned} \delta\_{23} &= \[2 = 3\] \\ &= 0. \end{aligned} \\
 
-### 6.3 Strengths and limitations of the Iverson bracket
+### 5.3 Strengths and limitations of the Iverson bracket
 
 The primary advantage of the Iverson bracket is algebraic conciseness: it turns a sum or integral over a subset into a sum or integral over a larger, fixed set. For example, if \\U\\ is a [finite set](sets-functions.llms.md#def-finite-set) that contains \\A\\, then:
 
@@ -619,7 +335,7 @@ With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U =
 
 However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets-functions.llms.md#def-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\operatorname{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
-### 6.4 Summary of indicator notations
+### 5.4 Summary of indicator notations
 
 [Table 2](#tbl-indicator-notations) compares the major notations encountered across the literature.
 
@@ -634,7 +350,7 @@ However, in statistics and epidemiology, square brackets are already heavily ove
 
 Table 2: Notations for indicator functions across mathematical and statistical literature
 
-### 6.5 Conventions in this book
+### 5.5 Conventions in this book
 
 In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros defined in `latex-macros/macros.qmd`:
 
@@ -645,17 +361,17 @@ In these notes, we standardize on blackboard bold \\\mathbb{1}\\ via the macros 
 
 Blackboard bold \\\mathbb{1}\\ is preferred because it avoids all common collisions: it is visually distinct from the scalar \\1\\, the identity matrix \\I\\, and the observed and expected Fisher information matrices (\\I\\, \\\mathcal{I}\\).
 
-### 6.6 Key algebraic properties
+### 5.6 Key algebraic properties
 
-Indicator functions translate the logical connectives ([Definition 11](#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
-
-> **NOTE:**
->
-> **Definition 28 (Idempotent)** A number \\a\\ is **idempotent** if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](sets-functions.llms.md#def-domain).
+Indicator functions translate the logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:
 
 > **NOTE:**
 >
-> **Example 29 (Idempotent numbers and indicators)**  
+> **Definition 15 (Idempotent)** A number \\a\\ is **idempotent** if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](sets-functions.llms.md#def-domain).
+
+> **NOTE:**
+>
+> **Example 14 (Idempotent numbers and indicators)**  
 >
 > - \\0\\ and \\1\\ are idempotent: \\0 \cdot 0 = 0\\ and \\1 \cdot 1 = 1\\.
 >
@@ -675,7 +391,7 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms
 
 - **Complement (“not”):** \\\mathbb{1}\_{A^c}(x) = 1 - \mathbb{1}\_{A}(x)\\
 
-- **Idempotence ([Definition 28](#def-idempotent)):** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
+- **Idempotence ([Definition 15](#def-idempotent)):** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
 
 - **Expectation gives probability:** When \\\Omega\\ is a [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space) and \\A\\ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event), the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) of its indicator is the [probability](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) of the event (all four terms are defined in the Morrison Lab’s probability notes):
 
@@ -687,26 +403,26 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 - estimators of survival curves, the probability of no event by each time;
 - regression models for binary outcomes.
 
-## 7 Notational shorthands
+## 6 Notational shorthands
 
 > **NOTE:**
 >
-> **Definition 29 (Lower and upper limits of a sum or integral)** In a [sum](algebra-sums.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
+> **Definition 16 (Lower and upper limits of a sum or integral)** In a [sum](algebra-sums.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
 
 > **NOTE:**
 >
-> **Example 30 (Reading off limits)**  
+> **Example 15 (Reading off limits)**  
 >
 > - In \\\sum\_{i=2}^{5} i^2\\, the lower limit is \\2\\ and the upper limit is \\5\\, so the sum is \\2^2 + 3^2 + 4^2 + 5^2 = 54\\.
 > - In \\\int_0^3 x\\dx\\, the lower limit is \\0\\ and the upper limit is \\3\\.
 
 > **NOTE:**
 >
-> *Remark 4* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 29](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra-exponentials.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
+> *Remark 3* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 16](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra-exponentials.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
 
 > **NOTE:**
 >
-> **Definition 30 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
+> **Definition 17 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
 
 > **NOTE:**
 >
@@ -719,7 +435,7 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 
 > **NOTE:**
 >
-> **Definition 31 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
+> **Definition 18 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 
@@ -743,25 +459,25 @@ Table 3: Common notational shorthands and their full forms
 
 > **NOTE:**
 >
-> *Remark 5* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus-integration.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
+> *Remark 4* (\\\int f(x)\\dx\\ has two readings). In calculus, \\\int f(x)\\dx\\ with no limits is not a shorthand: it is the [indefinite integral](calculus-integration.llms.md#def-indefinite-integral) of \\f\\, a family of functions rather than a number. Some sources, especially in probability, also write \\\int f(x)\\dx\\ for the number \\\int\_{-\infty}^{\infty} f(x)\\dx\\. Writing the limits out tells the reader which of the two is meant.
 
 > **NOTE:**
 >
-> **Example 31 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
+> **Example 16 (Writing out an index shorthand)** Let \\n = 3\\ and \\(x_1, x_2, x_3) = (2, 5, 1)\\. A source that writes \\\sum\_{i} x_i\\ means \\\sum\_{i=1}^{3} x_i\\:
 >
 > \\ \begin{aligned} \sum\_{i=1}^{3} x_i &= x_1 + x_2 + x_3 && \text{(definition of summation notation)} \\ &= 2 + 5 + 1 && \text{(substitute the values)} \\ &= 8 && \text{(add)} \end{aligned} \\
 
-## 8 Why is notation in probability and statistics so inconsistent and disorganized?
+## 7 Why is notation in probability and statistics so inconsistent and disorganized?
 
 In grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.
 
 It’s worth noting that calculus was formalized in the [1600s](https://en.wikipedia.org/wiki/Leibniz%27s_notation), elementary algebra was formalized around [820](https://en.wikipedia.org/wiki/Al-Jabr), and arithmetic [even earlier](https://en.wikipedia.org/wiki/Arithmetic#History). And calculus still has [several competing notation systems](https://en.wikipedia.org/wiki/Notation_for_differentiation). In contrast, the field of statistics only emerged in the [late 1800s and early 1900s](https://en.wikipedia.org/wiki/History_of_statistics#Development_of_modern_statistics), so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 ([Nelder and Wedderburn 1972](#ref-nelder1972generalized)), which is very recent in terms of the [pace of scientific development](https://en.wikipedia.org/wiki/The_Structure_of_Scientific_Revolutions).
 
-## 9 Further reading
+## 8 Further reading
 
-For the logical symbols and proof conventions used in these notes:
+For the logical symbols and proof conventions used in these notes (whose definitions are on the [Proof Writing](proof-writing.llms.md#sec-proof-definitions) page):
 
-- Velleman ([2019](#ref-velleman2019prove)) explains how mathematical statements are built from logical connectives ([Definition 11](#def-logical-connective)) and quantifiers ([Definition 12](#def-quantifier)), and how to read and write them.
+- Velleman ([2019](#ref-velleman2019prove)) explains how mathematical statements are built from logical connectives ([definition](proof-writing.llms.md#def-logical-connective)) and quantifiers ([definition](proof-writing.llms.md#def-quantifier)), and how to read and write them.
 - Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).
 
 For set and function notation, see the [Sets and Functions](sets-functions.llms.md) page.
