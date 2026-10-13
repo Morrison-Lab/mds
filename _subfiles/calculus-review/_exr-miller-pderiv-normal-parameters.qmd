@@ -29,5 +29,5 @@ $$\ba
 &= \sb{-\frac{1}{\sdpar} + \frac{(x - \mean)^2}{\sdpar^3}} f(x; \mean, \sdpar)
 \ea$$
 
-*Remark:* Setting $\derivf{f}{\mean} = 0$ and $\derivf{f}{\sdpar} = 0$ for a sample of independent observations leads directly to the maximum likelihood estimators $\hmean = \bar{x}$ and $\hsdpar^2 = \avgin (x_i - \bar{x})^2$.
+*Remark:* Setting $\derivf{f}{\mean} = 0$ and $\derivf{f}{\sdpar} = 0$ for a sample of independent observations leads directly to the values that make the sample most probable, which statistics calls the maximum likelihood estimates: $\hmean = \bar{x}$ and $\hsdpar^2 = \avgin (x_i - \bar{x})^2$.
 :::
