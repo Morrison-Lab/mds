@@ -6,11 +6,6 @@ their [sum](algebra.qmd#def-summation) divided by how many there are:
 
 $$\bar{y} \eqdef \avgin y_i$$
 
-When the numbers are observed data values,
-$\bar{y}$ is also called the **sample mean**,
-an estimator of the
-[population mean](https://morrison-lab.github.io/pds/expectation.html#def-expectation).
-
 :::
 
 {{< slidebreak >}}

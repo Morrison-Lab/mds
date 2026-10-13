@@ -64,6 +64,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-leading-block.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-pd-submatrix.qmd >}}
 
 {{< slidebreak >}}

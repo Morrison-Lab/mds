@@ -8,11 +8,19 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-complex-conjugate-matrix.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-conjugate-transpose.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-conjugate-transpose.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-conjugate-transpose-vector.qmd >}}
 
 {{< slidebreak >}}
 

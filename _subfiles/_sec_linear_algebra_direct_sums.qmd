@@ -40,6 +40,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-orthogonal-complement-any-set.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-orthogonal-complement-subspace.qmd >}}
 
 {{< slidebreak >}}
