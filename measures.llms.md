@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-12 20:31:51 (PDT)
+Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
@@ -22,7 +22,7 @@ Last modified: 2026-10-12 20:31:51 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). For example, Billingsley ([1995](#ref-billingsley1995probability)) uses “\\\sigma\\-field”. The two names mean the same thing.
+> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). For example, Billingsley ([1995](#ref-billingsley1995probability)) uses “\\\sigma\\-field”. The two names mean the same thing. Casella and Berger call it a **Borel field** ([Casella and Berger 2002](#ref-CaseBerg01), Def. 1.2.1). That is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
 
 > **NOTE:**
 >
@@ -711,6 +711,8 @@ Last modified: 2026-10-12 20:31:51 (PDT)
 ## References
 
 Billingsley, Patrick. 1995. *Probability and Measure*. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.
+
+Casella, George, and Roger Berger. 2002. *Statistical Inference*. 2nd ed. Cengage Learning. <https://www.cengage.com/c/statistical-inference-2e-casella-berger/9780534243128/>.
 
 Folland, Gerald B. 1999. *Real Analysis: Modern Techniques and Their Applications*. 2nd ed. Wiley. <https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166>.
 
