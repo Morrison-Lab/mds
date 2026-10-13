@@ -9,8 +9,6 @@ written $\vx \perp \vy$, if
 $$\iprod{\vx}{\vy} = 0$$
 
 [@banerjee2014linear, Definition 7.3, p. 181].
-With the dot product as the inner product (@exm-dot-product-inner-product),
-this condition is orthogonality as in @def-orthogonal-vectors.
 
 :::
 

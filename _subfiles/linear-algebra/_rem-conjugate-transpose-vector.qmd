@@ -1,0 +1,7 @@
+:::{#rem-conjugate-transpose-vector}
+#### Conjugate transpose of a complex vector
+
+The conjugate transpose of a column vector $\vecf{z} \in \mathbb{C}^p$
+is the $1 \times p$ row vector $\vecf{z}^{\mathsf{H}} = [\overline{z_1},\; \ldots,\; \overline{z_p}]$.
+
+:::

@@ -76,6 +76,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-identity-matrix.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-identity-matrix-kronecker-delta.qmd >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-identity.qmd >}}
 
 ### Matrix-vector multiplication
@@ -124,7 +128,15 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-translation-moves-every-point.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-affine-map.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-affine-map-real-valued.qmd >}}
 
 {{< slidebreak >}}
 
