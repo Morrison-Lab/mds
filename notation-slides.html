@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 15:25:57 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 16:09:33 (PDT)</p>
 </section>
 <section class="slide level2 scrollable">
 
@@ -630,7 +630,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <h2><span class="header-section-number">5</span> Indicator functions</h2>
 <p>An <strong>indicator function</strong> is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:</p>
 <ul>
-<li>binary variables, which take only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;10</a>);</li>
+<li>binary variables, which take only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;11</a>);</li>
 <li>event and censoring indicators in survival analysis, the study of the time until an event such as death, where an observation is censored when follow-up ends before its event is seen;</li>
 <li>membership in subpopulations;</li>
 <li>domain restrictions in integrals and sums.</li>
@@ -640,14 +640,19 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="def-indicator-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Indicator function (set indicator, predicate indicator))</strong></span> For any subset <span class="math inline">\(A \subseteq \Omega\)</span> of a universal set <span class="math inline">\(\Omega\)</span>, the <strong>indicator function</strong> of <span class="math inline">\(A\)</span>, or <strong>set indicator</strong>, is the function <span class="math inline">\(\mathbb{1}_{A} : \Omega\to \{0, 1\}\)</span> defined by:</p>
+<p><span class="theorem-title"><strong>Definition 9 (Indicator function (set indicator))</strong></span> For any subset <span class="math inline">\(A \subseteq \Omega\)</span> of a universal set <span class="math inline">\(\Omega\)</span>, the <strong>indicator function</strong> of <span class="math inline">\(A\)</span>, or <strong>set indicator</strong>, is the function <span class="math inline">\(\mathbb{1}_{A} : \Omega\to \{0, 1\}\)</span> defined by:</p>
 <p><span class="math display">\[
 \mathbb{1}_{A}(x) \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; x \in A \\
 0, &amp; x \notin A
 \end{cases}
 \]</span></p>
-<p>More generally, for any logical proposition or predicate <span class="math inline">\(P\)</span>, the <strong>indicator</strong> of <span class="math inline">\(P\)</span>, or <strong>predicate indicator</strong>, takes the value <span class="math inline">\(1\)</span> when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(0\)</span> when <span class="math inline">\(P\)</span> is false:</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-predicate-indicator" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Predicate indicator)</strong></span> For any logical proposition or predicate <span class="math inline">\(P\)</span>, the <strong>indicator</strong> of <span class="math inline">\(P\)</span>, or <strong>predicate indicator</strong>, takes the value <span class="math inline">\(1\)</span> when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(0\)</span> when <span class="math inline">\(P\)</span> is false:</p>
 <p><span class="math display">\[
 \mathbb{1}\mathopen{}\left(P\right)\mathclose{} \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
@@ -677,13 +682,13 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="def-binary-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Binary variable)</strong></span> A <strong>binary variable</strong> is a variable that takes only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Binary variable)</strong></span> A <strong>binary variable</strong> is a variable that takes only the values <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-binary-variable" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;10</a>). It is also the predicate indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;9</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 9 (A binary variable is an indicator)</strong></span> In a study of <span class="math inline">\(n\)</span> people, let <span class="math inline">\(s_i = 1\)</span> if person <span class="math inline">\(i\)</span> smokes and <span class="math inline">\(s_i = 0\)</span> otherwise, for <span class="math inline">\(i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}\)</span>. Then <span class="math inline">\(s_i\)</span> is a binary variable (<a href="#/def-binary-variable" class="quarto-xref">Definition&nbsp;11</a>). It is also the predicate indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;9</a>) of the proposition “person <span class="math inline">\(i\)</span> smokes”: <span class="math inline">\(s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\)</span>.</p>
 <p>In the same way, every indicator is a binary variable, and every binary variable <span class="math inline">\(X\)</span> is the indicator of its own value being <span class="math inline">\(1\)</span>: <span class="math inline">\(X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\)</span>, since both sides are <span class="math inline">\(1\)</span> when <span class="math inline">\(X = 1\)</span> and <span class="math inline">\(0\)</span> when <span class="math inline">\(X = 0\)</span>.</p>
 </div>
 <h3 id="two-primary-notational-paradigms-set-vs.-predicate-notation">Two primary notational paradigms: set vs.&nbsp;predicate notation</h3>
@@ -692,13 +697,13 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="def-set-predicate-notation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Set notation and predicate notation for indicators)</strong></span> An indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;9</a>) is written in <strong>set notation</strong> when the set <span class="math inline">\(A\)</span> appears as a subscript, as in <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>, and in <strong>predicate notation</strong> when a proposition or predicate <span class="math inline">\(P\)</span> (<a href="./proof-writing.html#def-predicate">definition</a>) appears as its argument, as in <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Set notation and predicate notation for indicators)</strong></span> An indicator (<a href="#/def-indicator-function" class="quarto-xref">Definition&nbsp;9</a>) is written in <strong>set notation</strong> when the set <span class="math inline">\(A\)</span> appears as a subscript, as in <span class="math inline">\(\mathbb{1}_{A}(x)\)</span>, and in <strong>predicate notation</strong> when a proposition or predicate <span class="math inline">\(P\)</span> (<a href="./proof-writing.html#def-predicate">definition</a>) appears as its argument, as in <span class="math inline">\(\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-set-predicate-notation" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\)</span> in predicate notation (<a href="#/def-set-predicate-notation" class="quarto-xref">Definition&nbsp;11</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 10 (One indicator in both notations)</strong></span> Let <span class="math inline">\(A = [0, \infty)\)</span>, the nonnegative real numbers. The indicator of <span class="math inline">\(A\)</span> is <span class="math inline">\(\mathbb{1}_{A}(x)\)</span> in set notation, and <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\)</span> or <span class="math inline">\(\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\)</span> in predicate notation (<a href="#/def-set-predicate-notation" class="quarto-xref">Definition&nbsp;12</a>). At <span class="math inline">\(x = 3.5\)</span>, all three equal <span class="math inline">\(1\)</span>; at <span class="math inline">\(x = -2.1\)</span>, all three equal <span class="math inline">\(0\)</span>.</p>
 </div>
 <h4 id="set-notation">Set notation</h4>
 <p>In set notation, the indicator is tied to a set <span class="math inline">\(A\)</span>, which appears as a subscript:</p>
@@ -726,7 +731,7 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
 \]</span></p>
 <div id="def-support" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Support of a distribution)</strong></span> The <strong>support</strong> of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Support of a distribution)</strong></span> The <strong>support</strong> of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -741,14 +746,14 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 </section>
 <section class="slide level2">
 
-<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#/def-support" class="quarto-xref">Definition&nbsp;12</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
+<p>Set notation is more natural when the underlying set <span class="math inline">\(A\)</span> has a standard name (such as the support of a distribution (<a href="#/def-support" class="quarto-xref">Definition&nbsp;13</a>), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as <span class="math inline">\(\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\)</span>.</p>
 <h3 id="iverson-bracket-notation">Iverson bracket notation</h3>
 <p>In 1962, Kenneth Iverson introduced a compact notation in the programming language APL, later popularized in mathematics and computer science by Donald Knuth: the <a href="https://en.wikipedia.org/wiki/Iverson_bracket">Iverson bracket</a>.</p>
 </section>
 <section class="slide level2">
 
 <div id="def-iverson-bracket" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 14 (Iverson bracket)</strong></span> For any logical proposition <span class="math inline">\(P\)</span>, the <strong>Iverson bracket</strong> of <span class="math inline">\(P\)</span> is</p>
 <p><span class="math display">\[
 [P] \stackrel{\text{def}}{=}\begin{cases}
 1, &amp; \text{if } P \text{ is true} \\
@@ -790,9 +795,9 @@ x\% \stackrel{\text{def}}{=}\frac{x}{100}
 <section class="slide level2">
 
 <div id="def-kronecker-delta" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
+<p><span class="theorem-title"><strong>Definition 15 (Kronecker delta)</strong></span> For integers <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, the <strong>Kronecker delta</strong> is</p>
 <p><span class="math display">\[\delta_{ij} \stackrel{\text{def}}{=}[i = j]\]</span></p>
-<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#/def-iverson-bracket" class="quarto-xref">Definition&nbsp;13</a>).</p>
+<p>that is, <span class="math inline">\(\delta_{ij} = 1\)</span> when <span class="math inline">\(i = j\)</span> and <span class="math inline">\(\delta_{ij} = 0\)</span> when <span class="math inline">\(i \neq j\)</span> (<a href="#/def-iverson-bracket" class="quarto-xref">Definition&nbsp;14</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -910,7 +915,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <h3 id="key-algebraic-properties">Key algebraic properties</h3>
 <p>Indicator functions translate the logical connectives (<a href="./proof-writing.html#def-logical-connective">definition</a>) “and”, “or”, and “not”, applied to set membership, into ordinary arithmetic on real numbers. One of the identities below uses idempotence:</p>
 <div id="def-idempotent" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./sets-functions.html#def-domain">domain</a>.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Idempotent)</strong></span> A number <span class="math inline">\(a\)</span> is <strong>idempotent</strong> if <span class="math inline">\(a \cdot a = a\)</span>. A function <span class="math inline">\(f\)</span> with real values is <strong>idempotent</strong> if <span class="math inline">\(f(x) \cdot f(x) = f(x)\)</span> for every <span class="math inline">\(x\)</span> in its <a href="./sets-functions.html#def-domain">domain</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -939,7 +944,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <li><p><strong>Intersection (“and”):</strong> <span class="math inline">\(\mathbb{1}_{A \cap B}(x) = \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Union (“or”):</strong> <span class="math inline">\(\mathbb{1}_{A \cup B}(x) = \mathbb{1}_{A}(x) + \mathbb{1}_{B}(x) - \mathbb{1}_{A}(x) \cdot \mathbb{1}_{B}(x)\)</span></p></li>
 <li><p><strong>Complement (“not”):</strong> <span class="math inline">\(\mathbb{1}_{A^c}(x) = 1 - \mathbb{1}_{A}(x)\)</span></p></li>
-<li><p><strong>Idempotence (<a href="#/def-idempotent" class="quarto-xref">Definition&nbsp;15</a>):</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
+<li><p><strong>Idempotence (<a href="#/def-idempotent" class="quarto-xref">Definition&nbsp;16</a>):</strong> <span class="math inline">\((\mathbb{1}_{A}(x))^2 = \mathbb{1}_{A}(x)\)</span></p></li>
 <li><p><strong>Expectation gives probability:</strong> When <span class="math inline">\(\Omega\)</span> is a <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space">sample space</a> and <span class="math inline">\(A\)</span> is an <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-event">event</a>, the <a href="https://morrison-lab.github.io/pds/expectation.html#def-expectation">expectation</a> of its indicator is the <a href="https://morrison-lab.github.io/pds/probability-basics.html#def-probability">probability</a> of the event (all four terms are defined in the Morrison Lab’s probability notes):</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -959,7 +964,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <section id="sec-notational-shorthands" class="slide level2" data-number="6">
 <h2><span class="header-section-number">6</span> Notational shorthands</h2>
 <div id="def-lower-upper-limits" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Lower and upper limits of a sum or integral)</strong></span> In a <a href="./algebra-sums.html#def-summation">sum</a> <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span>, the <strong>lower limit</strong> <span class="math inline">\(m\)</span> is the first value of the index <span class="math inline">\(i\)</span>, and the <strong>upper limit</strong> <span class="math inline">\(n\)</span> is its last value. In an <a href="./calculus-integration.html#def-riemann-integral">integral</a> <span class="math inline">\(\int_a^b f(x)\,dx\)</span>, the <strong>lower limit</strong> <span class="math inline">\(a\)</span> is the left end of the interval of integration, and the <strong>upper limit</strong> <span class="math inline">\(b\)</span> is its right end; together they are the <strong>limits of integration</strong>. In both, the lower limit is written below the symbol and the upper limit above it.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -975,13 +980,13 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <section class="slide level2">
 
 <div id="rem-limits-two-meanings" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;16</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra-exponentials.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
+<p><span class="proof-title"><em>Remark 3</em> (Two meanings of “limit”). </span>The lower and upper limits of a sum or integral (<a href="#/def-lower-upper-limits" class="quarto-xref">Definition&nbsp;17</a>) are not limits in the calculus sense, such as the <a href="./calculus-derivatives.html#def-limit">limit of a function</a> or the <a href="./algebra-exponentials.html#def-sequence-limit">limit of a sequence</a>. They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as <span class="math inline">\(\int_0^{\infty} f(x)\,dx\)</span>, which means <span class="math inline">\(\lim_{b \to \infty} \int_0^b f(x)\,dx\)</span>: the upper limit <span class="math inline">\(b\)</span> is sent to infinity by a calculus limit.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-notational-shorthand" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Notational shorthand)</strong></span> A <strong>notational shorthand</strong> is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its <strong>full form</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1008,7 +1013,7 @@ Table&nbsp;2: Notations for indicator functions across mathematical and statisti
 <section class="slide level2">
 
 <div id="def-range-of-variable" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
+<p><span class="theorem-title"><strong>Definition 19 (Range of a variable)</strong></span> The <strong>range</strong> of a variable <span class="math inline">\(x\)</span>, written <span class="math inline">\(\mathcal{R}(x)\)</span>, is the set of values that <span class="math inline">\(x\)</span> can take.</p>
 </div>
 <p>For example, if <span class="math inline">\(x\)</span> is the number of heads in two tosses of a coin, then <span class="math inline">\(\mathcal{R}(x) = \mathopen{}\left\{0, 1, 2\right\}\mathclose{}\)</span>. A <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> <span class="math inline">\(X\)</span> (defined in the Morrison Lab’s probability notes) is a <a href="./sets-functions.html#def-function">function</a>, and the set of values <span class="math inline">\(X\)</span> can take, <span class="math inline">\(\mathcal{R}(X)\)</span>, is the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(X\)</span>. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain (<a href="./sets-functions.html#rem-image-range">Image and range</a>). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; <span class="math inline">\(\mathcal{R}(x)\)</span> is a set, not that difference.</p>
 </section>
