@@ -28,14 +28,14 @@ organized by topic:
 
 - [Notation](notation.qmd):
   common symbols, natural numbers, the percent sign,
-  proof symbols, and indicator functions
+  and indicator functions
 - [Sets and Functions](sets-functions.qmd):
   sets, subsets and supersets, the empty set,
   unions, intersections, and set differences, countable sets,
   functions with their domains, codomains, and images,
   and the extended non-negative real numbers
 - [Algebra](algebra.qmd):
-  equalities and [inequalities](notation.qmd#def-inequality), infimum and supremum,
+  equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   sums, products, quotients, exponentials and logarithms
 - [Measures](measures.qmd):
   $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
@@ -57,7 +57,7 @@ organized by topic:
   optimality conditions, Taylor approximations, convexity in several variables,
   Lagrange multipliers, Newton's method, and gradient descent
 - [Proof Writing](proof-writing.qmd):
-  showing and annotating every step of a [derivation](notation.qmd#def-derivation)
+  propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.qmd#def-derivation)
 
 ## Further reading {.unnumbered}
 

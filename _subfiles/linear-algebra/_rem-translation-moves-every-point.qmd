@@ -1,0 +1,6 @@
+:::{#rem-translation-moves-every-point}
+#### A translation moves every point by the same vector
+
+A translation by $\vec{b}$ moves every point by the same vector $\vec{b}$.
+
+:::
