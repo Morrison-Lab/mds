@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 14:32:01 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 15:28:32 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -446,7 +446,7 @@ Source: Goodfellow, Bengio and Courville (2016), Deep Learning,
 section 4.3, p. 93 (states that all local minima of a convex function
 are global); Murphy (2012), section 7.3.3, p. 222 (convex functions
 have a unique global minimum when strictly convex).
-The [proof](notation.qmd#def-proof) is the standard argument from the chord inequality.
+The [proof](proof-writing.qmd#def-proof) is the standard argument from the chord inequality.
 -->
 <div id="thm-convex-local-global" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Local minimizers of convex functions are global)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> be a <a href="#/def-convex-function">convex function</a>. Every <a href="./algebra-basics.html#def-local-minimizer">local minimizer</a> of <span class="math inline">\(f\)</span> is a <a href="./algebra-basics.html#def-global-minimizer">global minimizer</a> of <span class="math inline">\(f\)</span> over <span class="math inline">\(\mathbb{R}^p\)</span>.</p>
@@ -468,7 +468,7 @@ f(z) \le t f(y) + (1 - t) f(x^*) &lt; t f(x^*) + (1 - t) f(x^*) = f(x^*),
 Source: Boyd and Vandenberghe (2004), Convex Optimization,
 section 3.1.8 (Jensen's inequality and extensions), p. 77,
 checked against the author-hosted PDF at web.stanford.edu/~boyd/cvxbook.
-The [proof](notation.qmd#def-proof) is the standard induction on the number of points.
+The [proof](proof-writing.qmd#def-proof) is the standard induction on the number of points.
 -->
 <div id="thm-jensen" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Jensen’s inequality for a weighted average)</strong></span> Let <span class="math inline">\(f : \mathbb{R}^p \to \mathbb{R}\)</span> be a <a href="#/def-convex-function">convex function</a>. Let <span class="math inline">\(x_1, \ldots, x_n \in \mathbb{R}^p\)</span>, and let <span class="math inline">\(w_1, \ldots, w_n \ge 0\)</span> be weights with <span class="math inline">\(\sum_{i=1}^nw_i = 1\)</span>. Then <span class="math display">\[

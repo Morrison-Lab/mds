@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 14:32:01 (PDT)
+Last modified: 2026-10-13 15:28:32 (PDT)
 
 > **NOTE:**
 >
@@ -225,7 +225,7 @@ Last modified: 2026-10-13 14:32:01 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element \\x\\ is in the left-hand side [if and only if](notation.llms.md#def-necessary-sufficient) (\\\iff\\) it is in the right-hand side. For the first law:
+> *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element \\x\\ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) (\\\iff\\) it is in the right-hand side. For the first law:
 >
 > \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~15}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~11}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~15}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~13}}\text{)} \end{aligned} \\
 >
@@ -555,7 +555,7 @@ Last modified: 2026-10-13 14:32:01 (PDT)
 
 > **NOTE:**
 >
-> *Remark 15* (Cantor’s diagonal argument). The standard [proof](notation.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](notation.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 15* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](notation.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 ## 5 Extended non-negative real numbers
 
