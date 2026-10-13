@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-12 22:45:08 (PDT)
+Last modified: 2026-10-13 01:20:47 (PDT)
 
 ## 1 Convex functions
 
@@ -120,13 +120,13 @@ Last modified: 2026-10-12 22:45:08 (PDT)
 
 > **NOTE:**
 >
-> **Example 5 (The mean of the squares is at least the square of the mean)** Take \\f(x) = x^2\\. It is convex by [Definition 3](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \mathopen{}\left(t x + (1 - t) y\right)\mathclose{}^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights
+> **Example 5 (The average of the squares is at least the square of the average)** Take \\f(x) = x^2\\. It is convex by [Definition 3](#def-convex-function): for \\t \in \[0, 1\]\\, \\ t x^2 + (1 - t) y^2 - \mathopen{}\left(t x + (1 - t) y\right)\mathclose{}^2 = t (1 - t) (x - y)^2 \ge 0. \\ Take the three points \\x_1 = 1\\, \\x_2 = 2\\, \\x_3 = 6\\, and the equal weights
 >
 > \\ \begin{aligned} w_1 &= w_2 \\ &= w_3 \\ &= \tfrac{1}{3}. \end{aligned} \\
 >
-> The weighted average of the points is their mean, \\\tfrac{1}{3}(1 + 2 + 6) = 3\\, so the left side of [Theorem 2](#thm-jensen) is \\f(3) = 9\\. The right side is the mean of the squares, \\\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\\. The inequality holds: \\9 \le \tfrac{41}{3}\\.
+> The weighted average of the points is their ordinary average, \\\tfrac{1}{3}(1 + 2 + 6) = 3\\, so the left side of [Theorem 2](#thm-jensen) is \\f(3) = 9\\. The right side is the average of the squares, \\\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\\. The inequality holds: \\9 \le \tfrac{41}{3}\\.
 >
-> The gap is \\\tfrac{41}{3} - 9 = \tfrac{14}{3}\\. That is the average squared distance of the points from their mean, \\\tfrac{1}{3}\mathopen{}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right)\mathclose{} = \tfrac{14}{3}\\, which is the variance of the three points. For \\f(x) = x^2\\, Jensen’s inequality says a variance is never negative.
+> The gap is \\\tfrac{41}{3} - 9 = \tfrac{14}{3}\\. That is the average squared distance of the points from their average, \\\tfrac{1}{3}\mathopen{}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right)\mathclose{} = \tfrac{14}{3}\\, which statistics calls the variance of the three points (about their [mean](linear-algebra-vectors.llms.md#def-mean), defined later). For \\f(x) = x^2\\, Jensen’s inequality says this average squared distance is never negative.
 
 > **NOTE:**
 >

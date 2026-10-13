@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-12 22:45:08 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 01:20:47 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -507,7 +507,7 @@ s f(y) + (1 - s) f(x_n)
 <section class="slide level2">
 
 <div id="exm-jensen" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (The mean of the squares is at least the square of the mean)</strong></span> Take <span class="math inline">\(f(x) = x^2\)</span>. It is convex by <a href="#/def-convex-function" class="quarto-xref">Definition&nbsp;3</a>: for <span class="math inline">\(t \in [0, 1]\)</span>, <span class="math display">\[
+<p><span class="theorem-title"><strong>Example 5 (The average of the squares is at least the square of the average)</strong></span> Take <span class="math inline">\(f(x) = x^2\)</span>. It is convex by <a href="#/def-convex-function" class="quarto-xref">Definition&nbsp;3</a>: for <span class="math inline">\(t \in [0, 1]\)</span>, <span class="math display">\[
 t x^2 + (1 - t) y^2 - \mathopen{}\left(t x + (1 - t) y\right)\mathclose{}^2 = t (1 - t) (x - y)^2 \ge 0.
 \]</span> Take the three points <span class="math inline">\(x_1 = 1\)</span>, <span class="math inline">\(x_2 = 2\)</span>, <span class="math inline">\(x_3 = 6\)</span>, and the equal weights</p>
 <p><span class="math display">\[
@@ -517,8 +517,8 @@ w_1 &amp;= w_2 \\
 &amp;= \tfrac{1}{3}.
 \end{aligned}
 \]</span></p>
-<p>The weighted average of the points is their mean, <span class="math inline">\(\tfrac{1}{3}(1 + 2 + 6) = 3\)</span>, so the left side of <a href="#/thm-jensen" class="quarto-xref">Theorem&nbsp;2</a> is <span class="math inline">\(f(3) = 9\)</span>. The right side is the mean of the squares, <span class="math inline">\(\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\)</span>. The inequality holds: <span class="math inline">\(9 \le \tfrac{41}{3}\)</span>.</p>
-<p>The gap is <span class="math inline">\(\tfrac{41}{3} - 9 = \tfrac{14}{3}\)</span>. That is the average squared distance of the points from their mean, <span class="math inline">\(\tfrac{1}{3}\mathopen{}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right)\mathclose{} = \tfrac{14}{3}\)</span>, which is the variance of the three points. For <span class="math inline">\(f(x) = x^2\)</span>, Jensen’s inequality says a variance is never negative.</p>
+<p>The weighted average of the points is their ordinary average, <span class="math inline">\(\tfrac{1}{3}(1 + 2 + 6) = 3\)</span>, so the left side of <a href="#/thm-jensen" class="quarto-xref">Theorem&nbsp;2</a> is <span class="math inline">\(f(3) = 9\)</span>. The right side is the average of the squares, <span class="math inline">\(\tfrac{1}{3}(1 + 4 + 36) = \tfrac{41}{3}\)</span>. The inequality holds: <span class="math inline">\(9 \le \tfrac{41}{3}\)</span>.</p>
+<p>The gap is <span class="math inline">\(\tfrac{41}{3} - 9 = \tfrac{14}{3}\)</span>. That is the average squared distance of the points from their average, <span class="math inline">\(\tfrac{1}{3}\mathopen{}\left((1-3)^2 + (2-3)^2 + (6-3)^2\right)\mathclose{} = \tfrac{14}{3}\)</span>, which statistics calls the variance of the three points (about their <a href="./linear-algebra-vectors.html#def-mean">mean</a>, defined later). For <span class="math inline">\(f(x) = x^2\)</span>, Jensen’s inequality says this average squared distance is never negative.</p>
 </div>
 </section>
 <section class="slide level2">

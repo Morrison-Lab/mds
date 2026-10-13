@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-12 22:45:08 (PDT)
+Last modified: 2026-10-13 01:20:47 (PDT)
 
 This page collects general advice on how to write [proofs](notation.llms.md#def-proof) and [derivations](notation.llms.md#def-derivation). The goal of a proof is not just to convince yourself that a [result](notation.llms.md#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](notation.llms.md#def-logical-entailment) are listed under [Proofs](notation.llms.md#proofs) on the Notation page.
 
