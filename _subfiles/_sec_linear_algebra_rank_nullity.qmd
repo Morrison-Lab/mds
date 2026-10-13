@@ -12,9 +12,13 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-cross-product-matrix.qmd >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-gram-matrix.qmd >}}
 
 {{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-gram-properties.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_thm-null-gram.qmd >}}
 
