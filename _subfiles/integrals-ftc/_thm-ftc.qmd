@@ -1,9 +1,9 @@
-:::{#thm-ftc}
-#### Fundamental Theorem of Calculus
+[]{#thm-ftc}
+
+:::{#thm-ftc-part1}
+#### Fundamental Theorem of Calculus, Part 1 (derivative of an integral)
 
 Let $f$ be a continuous function on a closed interval $[a, b]$.
-
-**Part 1 (Derivative of an integral).**
 Let $F(x) = \int_a^x f(t)\,dt$ for $x \in [a, b]$
 be the accumulation function of $f$ from $a$ (@def-accumulation-function).
 Then $F$ is differentiable and:
@@ -20,9 +20,16 @@ integrable on $[a, b]$ (see @def-integrable) and continuous at $x$
 
 [@larsonCalc11e, Theorem 4.11, p. 288]
 
-**Part 2 (Evaluation theorem).**
+:::
+
+{{< slidebreak >}}
+
+:::{#thm-ftc-part2}
+#### Fundamental Theorem of Calculus, Part 2 (evaluation theorem)
+
+Let $f$ be a continuous function on a closed interval $[a, b]$.
 The $F$ here may be *any* antiderivative of $f$ --- not just the
-accumulation function from Part 1.
+accumulation function from @thm-ftc-part1.
 If $F$ is an antiderivative of $f$ on $[a, b]$
 (i.e., $\deriv{x} F(x) = f(x)$ for all $x \in [a, b]$), then:
 
