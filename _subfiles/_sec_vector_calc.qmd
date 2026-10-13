@@ -211,6 +211,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-mixed-partial-derivative.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-hessian.qmd >}}
 
 {{< slidebreak >}}

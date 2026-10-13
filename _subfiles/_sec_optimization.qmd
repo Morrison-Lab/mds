@@ -14,6 +14,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_rem-stationary-point-one-variable.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-first-order-condition.qmd >}}
 
 {{< slidebreak >}}
@@ -74,6 +78,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_rem-tangent-plane-one-variable.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_thm-convex-first-order.qmd >}}
 
 {{< slidebreak >}}
@@ -118,6 +126,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/vector-calc/_def-iterative-method.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/vector-calc/_def-vector-sequence-limit.qmd >}}
 
 {{< slidebreak >}}
@@ -127,6 +139,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-quadratic-model.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-quadratic-model-taylor.qmd >}}
 
 {{< slidebreak >}}
 
@@ -147,6 +163,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-gradient-descent.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_rem-gradient-descent-newton.qmd >}}
 
 {{< slidebreak >}}
 

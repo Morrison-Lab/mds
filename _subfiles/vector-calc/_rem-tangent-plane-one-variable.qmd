@@ -1,0 +1,7 @@
+:::{#rem-tangent-plane-one-variable}
+#### The tangent plane in one variable
+
+For $p = 1$ the tangent plane is the [tangent line](calculus.qmd#def-tangent-line) $s = f(y) + f'(y)\,(x - y)$,
+the line through $(y, f(y))$ with slope $f'(y)$.
+
+:::

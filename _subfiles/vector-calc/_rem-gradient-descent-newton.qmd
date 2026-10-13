@@ -1,0 +1,7 @@
+:::{#rem-gradient-descent-newton}
+#### Gradient descent as Newton's method with a simpler Hessian
+
+Gradient descent (@def-gradient-descent) is Newton's method (@def-newton-method) with the Hessian replaced by $\tfrac{1}{s^{(t)}} \matr{I}_p$,
+so it needs no second derivatives.
+
+:::
