@@ -13,8 +13,5 @@ Let $f$ be a function and $L$ a real number.
   $\abs{f(x) - L} < \tolout$ for every $x$ with $c - \tolin < x < c$.
 
 These are the **one-sided limits** of $f$ at $c$.
-The limit $\lim_{x \to c} f(x)$ (@def-limit) exists
-exactly when both one-sided limits exist and are equal,
-and then all three are equal.
 
 :::

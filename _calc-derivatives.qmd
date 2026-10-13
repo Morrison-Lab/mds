@@ -16,6 +16,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_rem-one-sided-limit-and-limit.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-limits.qmd >}}
 
 {{< slidebreak >}}
@@ -426,6 +430,14 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/derivatives/_exm-taylor-polynomial-exponential.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-maclaurin-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-taylor-series.qmd >}}
 
 {{< slidebreak >}}
 
