@@ -1,7 +1,7 @@
 :::{#def-critical-point}
 #### Critical point
 
-Let $f$ be a function defined on an [open interval](sets-functions.qmd#def-interval) containing $c$.
+Let $f$ be a function defined on an [open interval](sets.qmd#def-interval) containing $c$.
 The point $c$ is a **critical point** of $f$
 if either $f'(c) = 0$ or $f$ is not differentiable at $c$ (@def-differentiable).
 

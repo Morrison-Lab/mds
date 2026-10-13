@@ -2,7 +2,7 @@
 #### Tangent line
 
 Let $f$ be differentiable at $c$ (@def-differentiable).
-The **tangent line** to the [graph](sets-functions.qmd#def-graph) of $f$ at $c$
+The **tangent line** to the [graph](functions.qmd#def-graph) of $f$ at $c$
 is the graph of the [affine function](algebra.qmd#def-affine-function)
 
 $$x \mapsto f(c) + f'(c)\,(x - c),$$

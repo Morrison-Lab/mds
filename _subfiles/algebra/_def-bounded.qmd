@@ -11,8 +11,8 @@ Let $A \subseteq \reals$.
 $A$ is **bounded above** if it has an upper bound,
 **bounded below** if it has a lower bound,
 and **bounded** if it is both bounded above and bounded below.
-A real-valued [function](sets-functions.qmd#def-function) is
+A real-valued [function](functions.qmd#def-function) is
 bounded above, bounded below, or bounded
-if its [image](sets-functions.qmd#def-image) is.
+if its [image](functions.qmd#def-image) is.
 
 :::

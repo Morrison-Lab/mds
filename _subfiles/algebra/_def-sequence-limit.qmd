@@ -1,7 +1,7 @@
 :::{#def-sequence-limit}
 #### Limit of a sequence
 
-A [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers
+A [sequence](functions.qmd#def-sequence) $(a_n)$ of real numbers
 **converges** to a real number $L$,
 written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$,
 if for every $\tolout > 0$ there is a natural number $N$ such that

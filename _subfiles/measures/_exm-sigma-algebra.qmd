@@ -1,7 +1,7 @@
 :::{#exm-sigma-algebra}
 #### $\sigma$-algebras for die rolls
 
-For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets-functions.qmd#exm-set)),
+For the die rolls $D = \set{1, 2, 3, 4, 5, 6}$ ([sets of die rolls](sets.qmd#exm-set)),
 the collection of all subsets of $D$ is a $\sigma$-algebra on $D$,
 since complements and unions of subsets of $D$ are again subsets of $D$.
 So is the smaller collection

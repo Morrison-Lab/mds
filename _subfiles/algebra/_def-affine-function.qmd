@@ -1,7 +1,7 @@
 :::{#def-affine-function}
 #### Affine function of one variable
 
-A [function](sets-functions.qmd#def-function) $f: \reals \to \reals$
+A [function](functions.qmd#def-function) $f: \reals \to \reals$
 is **affine** if there are numbers $m$ and $b$ such that
 
 $$f(x) = m x + b \quad \text{for all } x \in \reals$$

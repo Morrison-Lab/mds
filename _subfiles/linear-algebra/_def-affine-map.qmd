@@ -1,10 +1,10 @@
 :::{#def-affine-map}
 #### Affine map (affine transformation, affine function)
 
-A [function](sets-functions.qmd#def-function) $f: \reals^p \to \reals^m$ is an **affine map**
+A [function](functions.qmd#def-function) $f: \reals^p \to \reals^m$ is an **affine map**
 (also called an **affine transformation** or **affine function**)
 if it is a matrix product followed by a translation (@def-translation)
-(a [composition](sets-functions.qmd#def-composition), with the matrix product as the inner function):
+(a [composition](functions.qmd#def-composition), with the matrix product as the inner function):
 there are an $m \times p$ matrix $\matr{A}$ and a vector $\vec{b} \in \reals^m$ such that
 
 $$

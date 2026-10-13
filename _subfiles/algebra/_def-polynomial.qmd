@@ -7,7 +7,7 @@ print page number not verified).
 #### Polynomial
 
 A **polynomial** (in one variable $x$) is a
-[function](sets-functions.qmd#def-function) $f : \reals \to \reals$
+[function](functions.qmd#def-function) $f : \reals \to \reals$
 that can be written as
 $$
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0

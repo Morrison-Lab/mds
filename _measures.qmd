@@ -3,7 +3,7 @@
 ::: remark
 
 A measure assigns a size to each set in a
-[collection of sets](sets-functions.qmd#def-collection):
+[collection of sets](sets.qmd#def-collection):
 how many elements it has, how long it is, or how likely it is.
 This page builds measures from $\sigma$-algebras and additivity,
 using the [sets and functions](sets-functions.qmd) page's definitions.

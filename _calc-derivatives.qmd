@@ -231,7 +231,7 @@ $$
 or in Lagrange's notation (@def-derivative),
 if $g$ is differentiable at $x$
 and $f$ is differentiable at $g(x)$,
-then for the [composition](sets-functions.qmd#def-composition) $f \circ g$,
+then for the [composition](functions.qmd#def-composition) $f \circ g$,
 with inner function $g$ and outer function $f$:
 
 $$(f(g(x)))' = g'(x) f'(g(x))$$

@@ -2,7 +2,7 @@
 #### Global minimizer
 
 Let $A \subseteq \reals^p$
-and let $f : A \to \reals$ be a [function](sets-functions.qmd#def-function).
+and let $f : A \to \reals$ be a [function](functions.qmd#def-function).
 A point $x^* \in A$ is a **global minimizer** of $f$ over $A$
 if $f(x^*) \le f(x)$ for all $x \in A$.
 

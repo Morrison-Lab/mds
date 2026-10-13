@@ -2,7 +2,7 @@
 #### Tangent plane
 
 Let $f : \reals^p \to \reals$ have a gradient at $\vy$ ([gradient](vector-calculus.qmd#def-vector-derivative)).
-The **tangent plane** to the [graph](sets-functions.qmd#def-graph) of $f$ at $\vy$
+The **tangent plane** to the [graph](functions.qmd#def-graph) of $f$ at $\vy$
 is the graph of the function
 
 $$
