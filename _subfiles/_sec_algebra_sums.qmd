@@ -144,6 +144,10 @@
 
 <!-- heading shares the slide; do not re-flag -->
 
+{{< include mds/_subfiles/algebra/_def-distributes-over.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-distributive.qmd >}}
 
 {{< slidebreak >}}
