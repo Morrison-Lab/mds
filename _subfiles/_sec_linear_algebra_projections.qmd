@@ -118,6 +118,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-normal-equations.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-normal-equations.qmd >}}
 
 {{< slidebreak >}}

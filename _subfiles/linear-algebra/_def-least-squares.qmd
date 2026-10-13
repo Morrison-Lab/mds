@@ -10,9 +10,6 @@ $$
 \quad \text{for every } \vecf{x} \in \reals^n.
 $$
 
-The equations $\tp{\matr{A}} \matr{A} \vecf{x} = \tp{\matr{A}} \vecf{b}$
-are the **normal equations**.
-
 :::
 
 {{< slidebreak >}}

@@ -1,0 +1,7 @@
+:::{#rem-orthogonal-inner-product-dot-product}
+#### Orthogonality for the dot product
+
+With the dot product as the inner product (@exm-dot-product-inner-product),
+the condition of @def-orthogonal-inner-product is orthogonality as in @def-orthogonal-vectors.
+
+:::
