@@ -8,12 +8,6 @@ if the sequence of distances $\norm{\vx^{(t)} - \vx^*}$
 For $p = 1$, $\norm{x^{(t)} - x^*} = \abs{x^{(t)} - x^*}$,
 and this is the convergence of a sequence of numbers to $x^*$.
 
-An **iterative method** starts from a point $\vx^{(0)}$
-and computes $\vx^{(t+1)}$ from $\vx^{(t)}$ by a fixed rule, for $t = 0, 1, 2, \ldots$;
-the points $\vx^{(t)}$ are its **iterates**.
-For a point $\vx^*$ that the method is meant to reach,
-$\norm{\vx^{(t)} - \vx^*}$ is the **error** of the iterate $\vx^{(t)}$.
-
 :::
 
 {{< slidebreak >}}

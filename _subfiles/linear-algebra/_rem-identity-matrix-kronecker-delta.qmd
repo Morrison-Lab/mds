@@ -1,0 +1,8 @@
+:::{#rem-identity-matrix-kronecker-delta}
+#### The identity matrix and the Kronecker delta
+
+The entries of the identity matrix are given by the
+[Kronecker delta](notation.qmd#def-kronecker-delta):
+$(\matr{I}_p)_{ij} = \kron_{ij}$.
+
+:::

@@ -11,7 +11,15 @@ $$
 
 the set of all vectors $\matr{A} \vecf{x}$ in $\reals^m$.
 It is also called the **range** or **image** of $\matr{A}$.
-The **row space** of $\matr{A}$ is $\mathcal{C}(\tp{\matr{A}})$,
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-row-space}
+#### Row space
+
+The **row space** of an $m \times n$ matrix $\matr{A}$ is $\mathcal{C}(\tp{\matr{A}})$,
 a set of vectors in $\reals^n$.
 
 :::
@@ -111,7 +119,15 @@ $$
 
 the set of [solutions](#def-linear-system) of the linear system $\matr{A} \vecf{x} = \vzero_m$.
 It is also called the **kernel** of $\matr{A}$.
-The **left null space** of $\matr{A}$ is $\mathcal{N}(\tp{\matr{A}})$,
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-left-null-space}
+#### Left null space
+
+The **left null space** of an $m \times n$ matrix $\matr{A}$ is $\mathcal{N}(\tp{\matr{A}})$,
 a set of vectors in $\reals^m$.
 
 :::

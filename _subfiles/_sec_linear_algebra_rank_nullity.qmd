@@ -68,6 +68,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-half-space-sides.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-half-space-dimension.qmd >}}
 
 {{< slidebreak >}}

@@ -1,0 +1,6 @@
+:::{#rem-orthogonal-complement-any-set}
+#### The orthogonal complement of a set that is not a subspace
+
+$\mathcal{X}$ in @def-orthogonal-complement need not be a subspace.
+
+:::

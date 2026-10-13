@@ -5,7 +5,7 @@ An indicator (@def-indicator-function) is written in **set notation**
 when the set $A$ appears as a subscript,
 as in $\indic{A}(x)$,
 and in **predicate notation**
-when a proposition or predicate $P$ (@def-predicate) appears as its argument,
+when a proposition or predicate $P$ ([definition](proof-writing.qmd#def-predicate)) appears as its argument,
 as in $\indicp{P}$ or $\indicp{x \in A}$.
 
 :::
