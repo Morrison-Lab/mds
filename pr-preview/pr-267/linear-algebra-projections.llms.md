@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:39 (PDT)
+Last modified: 2026-10-13 16:09:45 (PDT)
 
 ## 1 Design Matrix
 
@@ -28,7 +28,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 >
 > \\ \begin{aligned} {({\mathbf{X}}^{\top}\mathbf{X})}^{\top} &= {\mathbf{X}}^{\top}\\{({\mathbf{X}}^{\top})}^{\top} \\ &= {\mathbf{X}}^{\top}\mathbf{X} \end{aligned} \\
 >
-> ([Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product)). When \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible, it appears in the OLS estimator \\\hat{\tilde{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\.
+> ([Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product)). When \\{\mathbf{X}}^{\top}\mathbf{X}\\ is invertible, it appears in the least squares solution ([Definition 8](#def-least-squares), defined later in this chapter) \\\hat{\tilde{\beta}}= ({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\.
 
 > **NOTE:**
 >
@@ -92,7 +92,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Why it is called the hat matrix). The hat matrix gives the fitted values in linear regression:
+> *Remark 2* (Why it is called the hat matrix). The hat matrix gives the fitted values of the least squares solution ([Definition 8](#def-least-squares), defined later in this chapter):
 >
 > \\ \begin{aligned} \hat{\tilde{y}} &= \mathbf{X}\hat{\tilde{\beta}}\\ &= \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\tilde{y}\\ &= \mathbf{H}\tilde{y}. \end{aligned} \\
 >
@@ -146,7 +146,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (Projecting with an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = r \ge 1\\, and let \\\mathbf{Q}\\ be the \\p \times r\\ matrix whose columns \\\tilde{q}\_1, \ldots, \tilde{q}\_r\\ are an orthonormal basis of \\\mathcal{S}\\ ([Definition 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every \\\tilde{y} \in \mathbb{R}^p\\, \\\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\, and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
+> **Theorem 4 (Projecting with an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = r \ge 1\\, and let \\\mathbf{Q}\\ be the \\p \times r\\ matrix whose columns \\\tilde{q}\_1, \ldots, \tilde{q}\_r\\ are an orthonormal basis of \\\mathcal{S}\\ ([Definition 11 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-orthonormal-basis), [Corollary 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-orthonormal-basis-exists)). Then for every \\\tilde{y} \in \mathbb{R}^p\\, \\\mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{S}\\, and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ is an orthogonal projection matrix ([Definition 8 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-projection-matrix)).
 
 > **NOTE:**
 >
@@ -413,7 +413,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 > **Theorem 12 (Every matrix has a Moore-Penrose inverse)** Every \\m \times n\\ matrix \\\mathbf{A}\\ has a Moore-Penrose inverse ([Definition 5](#def-moore-penrose)), written \\\mathbf{A}^+\\; it is unique by [Theorem 11](#thm-moore-penrose-unique).
 >
 > - If \\\mathbf{A} = \mathbf{0}\_{m \times n}\\, then \\\mathbf{A}^+ = \mathbf{0}\_{n \times m}\\.
-> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-rank-factorization)), then
+> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-rank-factorization)), then
 >
 > \\ \underbrace{\mathbf{A}^+}\_{n \times m} = \underbrace{{\mathbf{R}}^{\top}}\_{n \times r} \underbrace{(\mathbf{R} {\mathbf{R}}^{\top})^{-1}}\_{r \times r} \underbrace{({\mathbf{C}}^{\top} \mathbf{C})^{-1}}\_{r \times r} \underbrace{{\mathbf{C}}^{\top}}\_{r \times m}. \\
 
@@ -673,7 +673,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. The \\n\\ columns \\\tilde{a}\_1, \ldots, \tilde{a}\_n\\ of \\\mathbf{A}\\ are linearly independent ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), so the Gram-Schmidt process ([Definition 10 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-gram-schmidt)) runs all \\n\\ steps and gives orthonormal \\\tilde{q}\_1, \ldots, \tilde{q}\_n\\ ([Theorem 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt), parts 1 and 3); let \\\mathbf{Q}\\ have these columns. At step \\i\\, \\\tilde{\tilde{q}}\_i \ne \tilde{0}\\, and rearranging the orthogonalize step,
+> *Proof*. The \\n\\ columns \\\tilde{a}\_1, \ldots, \tilde{a}\_n\\ of \\\mathbf{A}\\ are linearly independent ([Definition 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-full-column-rank)), so the Gram-Schmidt process ([Definition 12 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-gram-schmidt)) runs all \\n\\ steps and gives orthonormal \\\tilde{q}\_1, \ldots, \tilde{q}\_n\\ ([Theorem 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#thm-gram-schmidt), parts 1 and 3); let \\\mathbf{Q}\\ have these columns. At step \\i\\, \\\tilde{\tilde{q}}\_i \ne \tilde{0}\\, and rearranging the orthogonalize step,
 >
 > \\ \begin{aligned} \tilde{a}\_i &= \tilde{\tilde{q}}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j && \text{(add the sum to both sides of the orthogonalize step)} \\ &= \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i + \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j. && \text{(normalize step: } \tilde{\tilde{q}}\_i = \mathopen{}\left\lVert\tilde{\tilde{q}}\_i\right\rVert\mathclose{}\\\tilde{q}\_i \text{)} \end{aligned} \\
 >
@@ -702,8 +702,6 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 > **Definition 8 (Least squares solution)** Let \\\mathbf{A}\\ be \\m \times n\\ and \\\tilde{b} \in \mathbb{R}^m\\. A **least squares solution** of \\\mathbf{A} \tilde{x} = \tilde{b}\\ is a vector \\\hat{\tilde{x}} \in \mathbb{R}^n\\ such that
 >
 > \\ \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \hat{\tilde{x}}\right\rVert\mathclose{} \le \mathopen{}\left\lVert\tilde{b} - \mathbf{A} \tilde{x}\right\rVert\mathclose{} \quad \text{for every } \tilde{x} \in \mathbb{R}^n. \\
->
-> The equations \\{\mathbf{A}}^{\top} \mathbf{A} \tilde{x} = {\mathbf{A}}^{\top} \tilde{b}\\ are the **normal equations**.
 
 > **NOTE:**
 >
@@ -712,6 +710,10 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 > \\ \begin{aligned} \mathopen{}\left\lVert\tilde{b} - \mathbf{A} x\right\rVert\mathclose{}^2 &= (1 - x)^2 + (3 - x)^2 \\ &= 2\\(x - 2)^2 + 2, \end{aligned} \\
 >
 > which is smallest at \\x = 2\\, so \\\hat{x} = 2\\ is the least squares solution. The value \\x = 1\\ is not one: it gives \\0 + 4 = 4 \> 2\\. The normal equations read \\2x = 4\\, and their solution is \\x = 2\\ too.
+
+> **NOTE:**
+>
+> **Definition 9 (Normal equations)** For \\\mathbf{A}\\ and \\\tilde{b}\\ as in [Definition 8](#def-least-squares), the equations \\{\mathbf{A}}^{\top} \mathbf{A} \tilde{x} = {\mathbf{A}}^{\top} \tilde{b}\\ are the **normal equations**.
 
 > **NOTE:**
 >
@@ -806,7 +808,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (LU factorization)** An **LU factorization** of an \\n \times n\\ matrix \\\mathbf{A}\\ is a product \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ with \\\mathbf{L}\\ unit lower triangular and \\\mathbf{U}\\ upper triangular ([Definition 7](#def-triangular-matrix)).
+> **Definition 10 (LU factorization)** An **LU factorization** of an \\n \times n\\ matrix \\\mathbf{A}\\ is a product \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ with \\\mathbf{L}\\ unit lower triangular and \\\mathbf{U}\\ upper triangular ([Definition 7](#def-triangular-matrix)).
 
 > **NOTE:**
 >
@@ -822,7 +824,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 20 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 9](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\tilde{b} \in \mathbb{R}^n\\ the system \\\mathbf{A} \tilde{x} = \tilde{b}\\ has exactly one solution: solve \\\mathbf{L} \tilde{y} = \tilde{b}\\ by forward substitution, then \\\mathbf{U} \tilde{x} = \tilde{y}\\ by back substitution ([Theorem 16](#thm-back-substitution)).
+> **Theorem 20 (Solving a system with an LU factorization)** If \\\mathbf{A} = \mathbf{L} \mathbf{U}\\ is an LU factorization ([Definition 10](#def-lu)) and the diagonal entries of \\\mathbf{U}\\ are all nonzero, then for every \\\tilde{b} \in \mathbb{R}^n\\ the system \\\mathbf{A} \tilde{x} = \tilde{b}\\ has exactly one solution: solve \\\mathbf{L} \tilde{y} = \tilde{b}\\ by forward substitution, then \\\mathbf{U} \tilde{x} = \tilde{y}\\ by back substitution ([Theorem 16](#thm-back-substitution)).
 
 > **NOTE:**
 >

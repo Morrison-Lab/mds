@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:39 (PDT)
+Last modified: 2026-10-13 16:09:45 (PDT)
 
 ## 1 Similarity and diagonalization
 
@@ -436,7 +436,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 >
 > \\ \mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}, \\
 >
-> where \\\mathbf{A}\\ (\\k \times l\\) holds the entries \\x\_{ij}\\ with \\i \le k\\ and \\j \le l\\, \\\mathbf{B}\\ (\\k \times (n - l)\\) those with \\i \le k\\ and \\j \> l\\, \\\mathbf{C}\\ (\\(m - k) \times l\\) those with \\i \> k\\ and \\j \le l\\, and \\\mathbf{D}\\ (\\(m - k) \times (n - l)\\) those with \\i \> k\\ and \\j \> l\\, each in its original order. A matrix written this way is a **block matrix**. When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ above with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
+> where \\\mathbf{A}\\ (\\k \times l\\) holds the entries \\x\_{ij}\\ with \\i \le k\\ and \\j \le l\\, \\\mathbf{B}\\ (\\k \times (n - l)\\) those with \\i \le k\\ and \\j \> l\\, \\\mathbf{C}\\ (\\(m - k) \times l\\) those with \\i \> k\\ and \\j \le l\\, and \\\mathbf{D}\\ (\\(m - k) \times (n - l)\\) those with \\i \> k\\ and \\j \> l\\, each in its original order. A matrix written this way is a **block matrix**.
 
 > **NOTE:**
 >
@@ -455,6 +455,10 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 > \\ \begin{aligned} k &= l \\ &= 2 \end{aligned} \\
 >
 > instead, the leading \\2 \times 2\\ block is \\\begin{bmatrix} 4 & 2 \\ 2 & 5 \end{bmatrix}\\.
+
+> **NOTE:**
+>
+> **Definition 5 (Leading block of a square matrix)** When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ of [Definition 4](#def-block-matrix) with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
 
 > **NOTE:**
 >
@@ -534,7 +538,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Schur complement)** For a block matrix \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ as in [Theorem 13](#thm-block-quadratic) with \\\mathbf{A}\\ invertible, the **Schur complement** of \\\mathbf{A}\\ in \\\mathbf{X}\\ is the \\m \times m\\ matrix \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ defined in [Theorem 13](#thm-block-quadratic).
+> **Definition 6 (Schur complement)** For a block matrix \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ as in [Theorem 13](#thm-block-quadratic) with \\\mathbf{A}\\ invertible, the **Schur complement** of \\\mathbf{A}\\ in \\\mathbf{X}\\ is the \\m \times m\\ matrix \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ defined in [Theorem 13](#thm-block-quadratic).
 
 > **NOTE:**
 >
@@ -554,7 +558,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 14 (Schur complement test)** Let \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ be as in [Theorem 13](#thm-block-quadratic). Then \\\mathbf{X}\\ is positive definite ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A}\\ is positive definite and its Schur complement \\\mathbf{S}\\ ([Definition 5](#def-schur-complement)) is positive definite.
+> **Theorem 14 (Schur complement test)** Let \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ be as in [Theorem 13](#thm-block-quadratic). Then \\\mathbf{X}\\ is positive definite ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A}\\ is positive definite and its Schur complement \\\mathbf{S}\\ ([Definition 6](#def-schur-complement)) is positive definite.
 
 > **NOTE:**
 >
@@ -599,7 +603,7 @@ Last modified: 2026-10-13 13:40:39 (PDT)
 >
 > \\ \begin{aligned} \mathbf{L}\_{22} {\mathbf{L}\_{22}}^{\top} &= \mathbf{A}\_{22} - \tilde{g} {\tilde{g}}^{\top} && \text{(subtract } \tilde{g} {\tilde{g}}^{\top} \text{)} \\ &= \mathbf{A}\_{22} - \mathopen{}\left(\tfrac{1}{\ell\_{11}}\\\tilde{b}\right)\mathclose{} {\mathopen{}\left(\tfrac{1}{\ell\_{11}}\\\tilde{b}\right)\mathclose{}}^{\top} && \text{(substitute } \tilde{g} \text{)} \\ &= \mathbf{A}\_{22} - \tfrac{1}{\ell\_{11}^2}\\\tilde{b} {\tilde{b}}^{\top} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)} \\ &= \mathbf{A}\_{22} - \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top}. && \text{(} \ell\_{11}^2 = a\_{11} \text{)} \end{aligned} \\
 >
-> Here \\\[a\_{11}\]\\ is invertible with inverse \\\[1 / a\_{11}\]\\, so with \\\mathbf{B} = {\tilde{b}}^{\top}\\ in [Definition 5](#def-schur-complement),
+> Here \\\[a\_{11}\]\\ is invertible with inverse \\\[1 / a\_{11}\]\\, so with \\\mathbf{B} = {\tilde{b}}^{\top}\\ in [Definition 6](#def-schur-complement),
 >
 > \\ \begin{aligned} {\mathbf{B}}^{\top}\\\[a\_{11}\]^{-1} \mathbf{B} &= \tilde{b}\\\tfrac{1}{a\_{11}}\\{\tilde{b}}^{\top} \\ &= \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top} \end{aligned} \\
 >
