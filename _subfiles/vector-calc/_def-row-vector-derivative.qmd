@@ -15,13 +15,20 @@ $$
 }
 $$ {#eq-row-vector-derivative}
 
+The row-vector derivative is also called the **total derivative** of $f$,
+the name used when the derivative of a scalar-valued function is written as a row vector.
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-row-vector-derivative-notation}
+#### Other notation for the row-vector derivative
+
 Some sources write the same row vector as $\deriv{\tp{\vcoef}} f(\vcoef)$,
 with the operator on the left,
 read as each operator $\deriv{\coef{i}}$ applied to $f$ rather than as a matrix product
 (see @rem-row-derivative-shape).
 
-The row-vector derivative is also called the **total derivative** of $f$,
-the name used when the derivative of a scalar-valued function is written as a row vector.
 :::
 
 {{< slidebreak >}}

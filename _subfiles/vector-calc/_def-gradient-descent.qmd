@@ -10,9 +10,6 @@ $$
 \vx^{(t+1)} \eqdef \vx^{(t)} - s^{(t)}\,\deriv{\vx} f(\vx^{(t)}).
 $$
 
-It is Newton's method (@def-newton-method) with the Hessian replaced by $\tfrac{1}{s^{(t)}} \matr{I}_p$,
-so it needs no second derivatives.
-
 :::
 
 {{< slidebreak >}}
