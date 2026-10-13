@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-12 21:21:07 (PDT)
+Last modified: 2026-10-12 22:07:53 (PDT)
 
 ## 1 Column space and null space
 
@@ -118,11 +118,25 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Gram matrix)** The **Gram matrix** of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times n\\ matrix \\{\mathbf{A}}^{\top} \mathbf{A}\\.
+> **Definition 3 (Cross-product matrix)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with columns \\\tilde{a}\_1, \ldots, \tilde{a}\_n\\ and \\\mathbf{B}\\ an \\m \times q\\ matrix with columns \\\tilde{b}\_1, \ldots, \tilde{b}\_q\\. The **cross-product matrix** of \\\mathbf{A}\\ and \\\mathbf{B}\\ is the \\n \times q\\ matrix \\{\mathbf{A}}^{\top} \mathbf{B}\\, whose entry \\(i, j)\\ is the dot product \\\tilde{a}\_i \cdot \tilde{b}\_j\\.
+
+This is what R’s `crossprod(A, B)` computes, and `crossprod(A)` is \\{\mathbf{A}}^{\top} \mathbf{A}\\. In NumPy it has no name of its own: write `A.T @ B`.
+
+For two column vectors it is the \\1 \times 1\\ matrix holding their [dot product](linear-algebra-vectors.llms.md#def-dot-product). It is unrelated to the cross product \\\tilde{u} \times \tilde{v}\\ of two vectors in \\\mathbb{R}^3\\, and differs from the Frobenius inner product \\\operatorname{tr}\mathopen{}\left({\mathbf{A}}^{\top} \mathbf{B}\right)\mathclose{}\\, which sums the diagonal of this matrix into a single number.
 
 > **NOTE:**
 >
-> **Example 6 (A Gram matrix and its entries)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}\\, with columns \\\tilde{a}\_1 = (1, 1, 0)\\ and \\\tilde{a}\_2 = (0, 1, 1)\\. Then
+> **Example 6 (A cross-product matrix)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\\. Then \\{\mathbf{A}}^{\top} \mathbf{B}\\ is \\2 \times 1\\, and
+>
+> \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{B} &= \begin{bmatrix} \tilde{a}\_1 \cdot \tilde{b}\_1 \\ \tilde{a}\_2 \cdot \tilde{b}\_1 \end{bmatrix} && \text{(}\href{#def-cross-product-matrix}{\text{Definition~3}}\text{)} \\ &= \begin{bmatrix} 1 + 2 + 0 \\ 0 + 2 + 3 \end{bmatrix} && \text{(multiply and add)} \\ &= \begin{bmatrix} 3 \\ 5 \end{bmatrix}. && \text{(add)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Definition 4 (Gram matrix)** The **Gram matrix** of an \\m \times n\\ matrix \\\mathbf{A}\\ is the \\n \times n\\ matrix \\{\mathbf{A}}^{\top} \mathbf{A}\\, the [cross-product matrix](#def-cross-product-matrix) of \\\mathbf{A}\\ with itself.
+
+> **NOTE:**
+>
+> **Example 7 (A Gram matrix and its entries)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}\\, with columns \\\tilde{a}\_1 = (1, 1, 0)\\ and \\\tilde{a}\_2 = (0, 1, 1)\\. Then
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} &= \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 + 0 \cdot 0 & 1 \cdot 0 + 1 \cdot 1 + 0 \cdot 1 \\ 0 \cdot 1 + 1 \cdot 1 + 1 \cdot 0 & 0 \cdot 0 + 1 \cdot 1 + 1 \cdot 1 \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}. && \text{(multiply and add)} \end{aligned} \\
 >
@@ -134,7 +148,35 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (\\{\mathbf{A}}^{\top} \mathbf{A}\\ has the same null space as \\\mathbf{A}\\)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 4 (Entries and symmetry of a Gram matrix)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with columns \\\tilde{a}\_1, \ldots, \tilde{a}\_n\\, and let \\\mathbf{G} = {\mathbf{A}}^{\top} \mathbf{A}\\ ([Definition 4](#def-gram-matrix)).
+>
+> 1.  Entry \\(i, j)\\ of \\\mathbf{G}\\ is \\\tilde{a}\_i \cdot \tilde{a}\_j\\.
+> 2.  \\\mathbf{G}\\ is symmetric ([Definition 3 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
+> 3.  \\{\tilde{x}}^{\top} \mathbf{G} \tilde{x}= \mathopen{}\left\lVert\mathbf{A} \tilde{x}\right\rVert\mathclose{}^2 \ge 0\\ for every \\\tilde{x}\in \mathbb{R}^n\\, so \\\mathbf{G}\\ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite).
+
+> **NOTE:**
+>
+> *Proof*. **Entries.** Row \\i\\ of \\{\mathbf{A}}^{\top}\\ is \\{\tilde{a}\_i}^{\top}\\, so entry \\(i, j)\\ of \\{\mathbf{A}}^{\top} \mathbf{A}\\ is the dot product of that row with column \\j\\ of \\\mathbf{A}\\, namely \\{\tilde{a}\_i}^{\top} \tilde{a}\_j = \tilde{a}\_i \cdot \tilde{a}\_j\\.
+>
+> **Symmetry.** The dot product is commutative, so
+>
+> \\ \begin{aligned} g\_{ij} &= \tilde{a}\_i \cdot \tilde{a}\_j \\ &= \tilde{a}\_j \cdot \tilde{a}\_i \\ &= g\_{ji}. \end{aligned} \\
+>
+> **Positive semidefiniteness.** For any \\\tilde{x}\\,
+>
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{G} \tilde{x} &= {\tilde{x}}^{\top}\\{\mathbf{A}}^{\top}\\\mathbf{A} \tilde{x} && \text{(substitute } \mathbf{G} \text{)} \\ &= {(\mathbf{A} \tilde{x})}^{\top}\\(\mathbf{A} \tilde{x}) && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= \mathopen{}\left\lVert\mathbf{A} \tilde{x}\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-vectors.qmd#eq-l2-norm}{\text{Equation~2 in Vectors}}\text{, squared)} \\ &\ge 0. && \text{(a squared norm is nonnegative)} \end{aligned} \\
+
+> **NOTE:**
+>
+> **Example 8 (Checking the properties on a small Gram matrix)** For \\\mathbf{A}\\ in [Example 7](#exm-gram-matrix), \\\mathbf{G} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\. It is symmetric: \\g\_{12} = g\_{21} = 1\\. Take \\\tilde{x}= (1, -1)\\. Then
+>
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{G} \tilde{x} &= \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} && \text{(} \mathbf{G} \tilde{x}= (1, -1) \text{)} \\ &= 2, && \text{(multiply and add)} \end{aligned} \\
+>
+> and \\\mathbf{A} \tilde{x}= (1, 0, -1)\\ has \\\mathopen{}\left\lVert\mathbf{A} \tilde{x}\right\rVert\mathclose{}^2 = 1 + 0 + 1 = 2\\, as the theorem says. The converse (every positive semidefinite matrix is a Gram matrix) is [this theorem](linear-algebra-diagonalization.llms.md#thm-pd-gram).
+
+> **NOTE:**
+>
+> **Theorem 5 (\\{\mathbf{A}}^{\top} \mathbf{A}\\ has the same null space as \\\mathbf{A}\\)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A}). \\
 
@@ -152,7 +194,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 7 (The null space of a Gram matrix)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space),
+> **Example 9 (The null space of a Gram matrix)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space),
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top} \mathbf{A} &= \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix} \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix} \\ &= \begin{bmatrix} 10 & -20 & -20 \\ -20 & 40 & 40 \\ -20 & 40 & 40 \end{bmatrix}. \end{aligned} \\
 >
@@ -166,7 +208,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 5 (The rank is the dimension of the column space)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 6 (The rank is the dimension of the column space)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \operatorname{rank}(\mathbf{A}) = \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{}. \\
 
@@ -182,17 +224,17 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 8 (The rank of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(1, 3)\right\\\mathclose{}\\ ([Example 2](#exm-column-space-span)), and \\(1, 3)\\ is linearly independent because it is nonzero, so it is a basis and \\\mathcal{C}(\mathbf{A})\\ has dimension \\1\\. So \\\operatorname{rank}(\mathbf{A}) = 1\\, by [Theorem 5](#thm-rank-dim). Directly: the first column \\(1, 3)\\ is linearly independent on its own, and any two columns are dependent, because each column is a multiple of \\(1, 3)\\.
+> **Example 10 (The rank of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(1, 3)\right\\\mathclose{}\\ ([Example 2](#exm-column-space-span)), and \\(1, 3)\\ is linearly independent because it is nonzero, so it is a basis and \\\mathcal{C}(\mathbf{A})\\ has dimension \\1\\. So \\\operatorname{rank}(\mathbf{A}) = 1\\, by [Theorem 6](#thm-rank-dim). Directly: the first column \\(1, 3)\\ is linearly independent on its own, and any two columns are dependent, because each column is a multiple of \\(1, 3)\\.
 
 > **NOTE:**
 >
-> **Definition 4 (Nullity)** The **nullity** of a matrix \\\mathbf{A}\\ is the dimension of its null space ([Definition 2](#def-null-space)):
+> **Definition 5 (Nullity)** The **nullity** of a matrix \\\mathbf{A}\\ is the dimension of its null space ([Definition 2](#def-null-space)):
 >
 > \\ \operatorname{nullity}(\mathbf{A}) \stackrel{\text{def}}{=}\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{}. \\
 
 > **NOTE:**
 >
-> **Example 9 (The nullity of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ ([Example 3](#exm-null-space)). Those two vectors are linearly independent: \\c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\\, which is \\\tilde{0}\_3\\ only if
+> **Example 11 (The nullity of the matrix in [Example 1](#exm-column-space))** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\mathcal{N}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\\(2, 1, 0), (2, 0, 1)\right\\\mathclose{}\\ ([Example 3](#exm-null-space)). Those two vectors are linearly independent: \\c_1 (2, 1, 0) + c_2 (2, 0, 1) = (2c_1 + 2c_2, c_1, c_2)\\, which is \\\tilde{0}\_3\\ only if
 >
 > \\ \begin{aligned} c_1 &= c_2 \\ &= 0. \end{aligned} \\
 >
@@ -200,7 +242,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Rank-nullity theorem)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 7 (Rank-nullity theorem)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \operatorname{rank}(\mathbf{A}) + \operatorname{nullity}(\mathbf{A}) = n. \\
 
@@ -220,15 +262,15 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > a linear combination of \\\mathbf{A} \tilde{y}\_1, \ldots, \mathbf{A} \tilde{y}\_{n-\nu}\\. These vectors are in \\\mathcal{C}(\mathbf{A})\\, so their span is exactly \\\mathcal{C}(\mathbf{A})\\.
 >
-> So \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = n - \nu\\, and \\\operatorname{rank}(\mathbf{A}) = n - \nu\\ by [Theorem 5](#thm-rank-dim).
+> So \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = n - \nu\\, and \\\operatorname{rank}(\mathbf{A}) = n - \nu\\ by [Theorem 6](#thm-rank-dim).
 
 > **NOTE:**
 >
-> **Example 10 (Checking rank-nullity on the matrix in [Example 1](#exm-column-space))** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has \\n = 3\\ columns, rank \\1\\ ([Example 8](#exm-rank-dim)) and nullity \\2\\ ([Example 9](#exm-nullity)), and \\1 + 2 = 3\\. The \\2 \times 2\\ identity matrix has rank \\2\\ and nullity \\0\\ ([Example 9](#exm-nullity)), and \\2 + 0 = 2\\.
+> **Example 12 (Checking rank-nullity on the matrix in [Example 1](#exm-column-space))** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has \\n = 3\\ columns, rank \\1\\ ([Example 10](#exm-rank-dim)) and nullity \\2\\ ([Example 11](#exm-nullity)), and \\1 + 2 = 3\\. The \\2 \times 2\\ identity matrix has rank \\2\\ and nullity \\0\\ ([Example 11](#exm-nullity)), and \\2 + 0 = 2\\.
 
 > **NOTE:**
 >
-> **Theorem 7 (Multiplying on the right cannot increase the rank)** If \\\mathbf{A}\\ is \\m \times n\\ and \\\mathbf{B}\\ is \\n \times k\\, then
+> **Theorem 8 (Multiplying on the right cannot increase the rank)** If \\\mathbf{A}\\ is \\m \times n\\ and \\\mathbf{B}\\ is \\n \times k\\, then
 >
 > \\ \operatorname{rank}(\mathbf{A} \mathbf{B}) \le \operatorname{rank}(\mathbf{A}). \\
 
@@ -242,19 +284,19 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > **Compare dimensions.** Both column spaces are subspaces ([Theorem 1](#thm-column-space-span)), so
 >
-> \\ \begin{aligned} \operatorname{rank}(\mathbf{A} \mathbf{B}) &= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} \mathbf{B})\right)\mathclose{} && \text{(}\href{#thm-rank-dim}{\text{Theorem~5}}\text{)} \\ &\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} && \text{(}\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{, part 2)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-dim}{\text{Theorem~5}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}(\mathbf{A} \mathbf{B}) &= \dim\mathopen{}\left(\mathcal{C}(\mathbf{A} \mathbf{B})\right)\mathclose{} && \text{(}\href{#thm-rank-dim}{\text{Theorem~6}}\text{)} \\ &\le \dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} && \text{(}\href{linear-algebra-subspaces.qmd#thm-dim-bound}{\text{Theorem~10 in Subspaces and Rank}}\text{, part 2)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-dim}{\text{Theorem~6}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 11 (A product can lose rank)** Let
+> **Example 13 (A product can lose rank)** Let
 >
 > \\ \mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad \mathbf{B} = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}, \qquad \mathbf{A} \mathbf{B} = \begin{bmatrix} 1 \cdot 0 + 0 \cdot 1 & 1 \cdot 0 + 0 \cdot 0 \\ 0 \cdot 0 + 0 \cdot 1 & 0 \cdot 0 + 0 \cdot 0 \end{bmatrix} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}. \\
 >
-> \\\mathbf{A}\\ has rank \\1\\, but \\\mathbf{A} \mathbf{B}\\ has rank \\0\\, so the inequality in [Theorem 7](#thm-rank-product) can be strict. With the \\2 \times 2\\ identity in place of \\\mathbf{B}\\, \\\mathbf{A} \mathbf{I} = \mathbf{A}\\ keeps rank \\1\\, and the inequality is an equality.
+> \\\mathbf{A}\\ has rank \\1\\, but \\\mathbf{A} \mathbf{B}\\ has rank \\0\\, so the inequality in [Theorem 8](#thm-rank-product) can be strict. With the \\2 \times 2\\ identity in place of \\\mathbf{B}\\, \\\mathbf{A} \mathbf{I} = \mathbf{A}\\ keeps rank \\1\\, and the inequality is an equality.
 
 > **NOTE:**
 >
-> **Theorem 8 (Fundamental theorem of ranks)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
+> **Theorem 9 (Fundamental theorem of ranks)** For any \\m \times n\\ matrix \\\mathbf{A}\\,
 >
 > \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= \operatorname{rank}({\mathbf{A}}^{\top}) \\ &= \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) \\ &= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}). \end{aligned} \\
 >
@@ -262,21 +304,21 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **\\\operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) = \operatorname{rank}(\mathbf{A})\\.** Both matrices have \\n\\ columns, and \\\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A})\\ ([Theorem 4](#thm-null-gram)), so they have the same nullity ([Definition 4](#def-nullity)). Then
+> *Proof*. **\\\operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) = \operatorname{rank}(\mathbf{A})\\.** Both matrices have \\n\\ columns, and \\\mathcal{N}({\mathbf{A}}^{\top} \mathbf{A}) = \mathcal{N}(\mathbf{A})\\ ([Theorem 5](#thm-null-gram)), so they have the same nullity ([Definition 5](#def-nullity)). Then
 >
-> \\ \begin{aligned} \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) &= n - \operatorname{nullity}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~6}}\text{)} \\ &= n - \operatorname{nullity}(\mathbf{A}) && \text{(equal null spaces)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-nullity}{\text{Theorem~6}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) &= n - \operatorname{nullity}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)} \\ &= n - \operatorname{nullity}(\mathbf{A}) && \text{(equal null spaces)} \\ &= \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{)} \end{aligned} \\
 >
 > **\\\operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) = \operatorname{rank}({\mathbf{A}}^{\top})\\.** Apply the previous step to the \\n \times m\\ matrix \\{\mathbf{A}}^{\top}\\, using \\{({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\\.
 >
 > **Chain the inequalities.**
 >
-> \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(first step)} \\ &\le \operatorname{rank}({\mathbf{A}}^{\top}) && \text{(}\href{#thm-rank-product}{\text{Theorem~7}}\text{, with } {\mathbf{A}}^{\top} \text{ on the left)} \\ &= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) && \text{(second step)} \\ &\le \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-product}{\text{Theorem~7}}\text{, with } \mathbf{A} \text{ on the left)} \end{aligned} \\
+> \\ \begin{aligned} \operatorname{rank}(\mathbf{A}) &= \operatorname{rank}({\mathbf{A}}^{\top} \mathbf{A}) && \text{(first step)} \\ &\le \operatorname{rank}({\mathbf{A}}^{\top}) && \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } {\mathbf{A}}^{\top} \text{ on the left)} \\ &= \operatorname{rank}(\mathbf{A} {\mathbf{A}}^{\top}) && \text{(second step)} \\ &\le \operatorname{rank}(\mathbf{A}). && \text{(}\href{#thm-rank-product}{\text{Theorem~8}}\text{, with } \mathbf{A} \text{ on the left)} \end{aligned} \\
 >
 > The chain starts and ends at \\\operatorname{rank}(\mathbf{A})\\, so every quantity in it equals \\\operatorname{rank}(\mathbf{A})\\. The columns of \\{\mathbf{A}}^{\top}\\ are the rows of \\\mathbf{A}\\, which gives the statement about rows.
 
 > **NOTE:**
 >
-> **Example 12 (Four equal ranks)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\operatorname{rank}(\mathbf{A}) = 1\\ ([Example 8](#exm-rank-dim)). Its transpose \\{\mathbf{A}}^{\top} = \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}\\ has second column \\3\\ times its first, so its rank is \\1\\. \\{\mathbf{A}}^{\top} \mathbf{A}\\ in [Example 7](#exm-null-gram) has every row a multiple of \\(1, -2, -2)\\, so its rank is \\1\\ too, and
+> **Example 14 (Four equal ranks)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\\operatorname{rank}(\mathbf{A}) = 1\\ ([Example 10](#exm-rank-dim)). Its transpose \\{\mathbf{A}}^{\top} = \begin{bmatrix} 1 & 3 \\ -2 & -6 \\ -2 & -6 \end{bmatrix}\\ has second column \\3\\ times its first, so its rank is \\1\\. \\{\mathbf{A}}^{\top} \mathbf{A}\\ in [Example 9](#exm-null-gram) has every row a multiple of \\(1, -2, -2)\\, so its rank is \\1\\ too, and
 >
 > \\ \begin{aligned} \mathbf{A} {\mathbf{A}}^{\top} &= \begin{bmatrix} 1 \cdot 1 + (-2)(-2) + (-2)(-2) & 1 \cdot 3 + (-2)(-6) + (-2)(-6) \\ 3 \cdot 1 + (-6)(-2) + (-6)(-2) & 3 \cdot 3 + (-6)(-6) + (-6)(-6) \end{bmatrix} \\ &= \begin{bmatrix} 9 & 27 \\ 27 & 81 \end{bmatrix}, \end{aligned} \\
 >
@@ -288,15 +330,15 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{A}\\ has \\n\\ columns, so at most \\n\\ of them are linearly independent, and \\\operatorname{rank}(\mathbf{A}) \le n\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). Likewise \\{\mathbf{A}}^{\top}\\ has \\m\\ columns, so \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top}) \le m\\ ([Theorem 8](#thm-rank-transpose)).
+> *Proof*. \\\mathbf{A}\\ has \\n\\ columns, so at most \\n\\ of them are linearly independent, and \\\operatorname{rank}(\mathbf{A}) \le n\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)). Likewise \\{\mathbf{A}}^{\top}\\ has \\m\\ columns, so \\\operatorname{rank}(\mathbf{A}) = \operatorname{rank}({\mathbf{A}}^{\top}) \le m\\ ([Theorem 9](#thm-rank-transpose)).
 
 > **NOTE:**
 >
-> **Example 13 (A \\2 \times 3\\ matrix has rank at most \\2\\)** By [Corollary 1](#cor-rank-bound), every \\2 \times 3\\ matrix has rank at most \\\min\mathopen{}\left\\2, 3\right\\\mathclose{} = 2\\, even though it has \\3\\ columns. The matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Remark 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#rem-full-column-rank-shape) reaches that bound: its first two columns \\(1, 0)\\ and \\(0, 1)\\ are linearly independent, so its rank is \\2\\.
+> **Example 15 (A \\2 \times 3\\ matrix has rank at most \\2\\)** By [Corollary 1](#cor-rank-bound), every \\2 \times 3\\ matrix has rank at most \\\min\mathopen{}\left\\2, 3\right\\\mathclose{} = 2\\, even though it has \\3\\ columns. The matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Remark 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#rem-full-column-rank-shape) reaches that bound: its first two columns \\(1, 0)\\ and \\(0, 1)\\ are linearly independent, so its rank is \\2\\.
 
 > **NOTE:**
 >
-> **Definition 5 (Affine subspace)** An **affine subspace** of \\\mathbb{R}^p\\ is a set of the form
+> **Definition 6 (Affine subspace)** An **affine subspace** of \\\mathbb{R}^p\\ is a set of the form
 >
 > \\ \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{S}\right\\\mathclose{} \\
 >
@@ -304,7 +346,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 14 (A line that misses the origin is an affine subspace)** The line \\\mathcal{T} = \mathopen{}\left\\(x, 1) : x \in \mathbb{R}\right\\\mathclose{}\\ of [Example 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-not-subspace) is not a subspace, but it is an affine subspace, with \\\tilde{x}\_0 = (0, 1)\\ and \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)):
+> **Example 16 (A line that misses the origin is an affine subspace)** The line \\\mathcal{T} = \mathopen{}\left\\(x, 1) : x \in \mathbb{R}\right\\\mathclose{}\\ of [Example 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-not-subspace) is not a subspace, but it is an affine subspace, with \\\tilde{x}\_0 = (0, 1)\\ and \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)):
 >
 > \\ \begin{aligned} (0, 1) + c\\(1, 0) &= (0 + c,\\ 1 + 0) && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)} \\ &= (c, 1), && \text{(add)} \end{aligned} \\
 >
@@ -312,10 +354,10 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (A hyperplane is a translated subspace of dimension \\p - 1\\)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b = 0\right\\\mathclose{}\\ be the hyperplane with normal vector \\\tilde{w}\\ and offset \\b\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and let \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}= 0\right\\\mathclose{}\\ be the hyperplane with the same normal vector and offset \\0\\.
+> **Theorem 10 (A hyperplane is a translated subspace of dimension \\p - 1\\)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b = 0\right\\\mathclose{}\\ be the hyperplane with normal vector \\\tilde{w}\\ and offset \\b\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and let \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}= 0\right\\\mathclose{}\\ be the hyperplane with the same normal vector and offset \\0\\.
 >
 > 1.  \\\mathcal{H}\_0\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension \\p - 1\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
-> 2.  \\\mathcal{H}\\ is not empty, and for any \\\tilde{x}\_0 \in \mathcal{H}\\, \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{H}\_0\right\\\mathclose{}\\, so \\\mathcal{H}\\ is an affine subspace ([Definition 5](#def-affine-subspace)).
+> 2.  \\\mathcal{H}\\ is not empty, and for any \\\tilde{x}\_0 \in \mathcal{H}\\, \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{H}\_0\right\\\mathclose{}\\, so \\\mathcal{H}\\ is an affine subspace ([Definition 6](#def-affine-subspace)).
 > 3.  For any \\\tilde{x}, \tilde{y}\in \mathcal{H}\\, the normal vector is orthogonal to their difference: \\\tilde{w} \perp (\tilde{x}- \tilde{y})\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
 
 > **NOTE:**
@@ -324,7 +366,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > **Part 1.** \\\mathcal{H}\_0\\ is the null space \\\mathcal{N}(\tilde{w}^{\top})\\ ([Definition 2](#def-null-space)), so it is a subspace ([Theorem 2](#thm-null-space-subspace)). The \\p\\ columns of \\\tilde{w}^{\top}\\ are the numbers \\w_1, \ldots, w_p\\. Some \\w_j \ne 0\\, because \\\tilde{w} \ne \tilde{0}\\, and that column on its own is linearly independent (\\c\\w_j = 0\\ forces \\c = 0\\), so \\\operatorname{rank}(\tilde{w}^{\top}) \ge 1\\ ([Definition 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-rank)); and \\\operatorname{rank}(\tilde{w}^{\top}) \le \min\mathopen{}\left\\1, p\right\\\mathclose{} = 1\\ ([Corollary 1](#cor-rank-bound)). So
 >
-> \\ \begin{aligned} \dim(\mathcal{H}\_0) &= \operatorname{nullity}(\tilde{w}^{\top}) && \text{(}\href{#def-nullity}{\text{Definition~4}}\text{)} \\ &= p - \operatorname{rank}(\tilde{w}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~6}}\text{, for the } p \text{ columns of } \tilde{w}^{\top} \text{)} \\ &= p - 1. && \text{(the rank is } 1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \dim(\mathcal{H}\_0) &= \operatorname{nullity}(\tilde{w}^{\top}) && \text{(}\href{#def-nullity}{\text{Definition~5}}\text{)} \\ &= p - \operatorname{rank}(\tilde{w}^{\top}) && \text{(}\href{#thm-rank-nullity}{\text{Theorem~7}}\text{, for the } p \text{ columns of } \tilde{w}^{\top} \text{)} \\ &= p - 1. && \text{(the rank is } 1 \text{)} \end{aligned} \\
 >
 > **Part 2.** \\\tilde{w} \cdot \tilde{w} = w_1^2 + \cdots + w_p^2 \> 0\\, because some \\w_j \ne 0\\. So \\\tilde{x}^\* \stackrel{\text{def}}{=}-\frac{b}{\tilde{w} \cdot \tilde{w}}\\\tilde{w}\\ is defined, and
 >
@@ -334,7 +376,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > \\ \begin{aligned} \tilde{w}^{\top} (\tilde{x}- \tilde{x}\_0) &= \tilde{w}^{\top} \tilde{x}- \tilde{w}^{\top} \tilde{x}\_0 && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-linear}{\text{Theorem~4 in Subspaces and Rank}}\text{, with coefficients } 1 \text{ and } -1 \text{)} \\ &= \tilde{w}^{\top} \tilde{x}- (-b) && \text{(} \tilde{x}\_0 \in \mathcal{H} \text{)} \\ &= \tilde{w}^{\top} \tilde{x}+ b, && \text{(arithmetic)} \end{aligned} \\
 >
-> so \\\tilde{x}\in \mathcal{H}\\ exactly when \\\tilde{x}- \tilde{x}\_0 \in \mathcal{H}\_0\\, that is, exactly when \\\tilde{x}= \tilde{x}\_0 + \tilde{s}\\ with \\\tilde{s} = \tilde{x}- \tilde{x}\_0 \in \mathcal{H}\_0\\. \\\mathcal{H}\_0\\ is a subspace (part 1), so \\\mathcal{H}\\ has the form in [Definition 5](#def-affine-subspace).
+> so \\\tilde{x}\in \mathcal{H}\\ exactly when \\\tilde{x}- \tilde{x}\_0 \in \mathcal{H}\_0\\, that is, exactly when \\\tilde{x}= \tilde{x}\_0 + \tilde{s}\\ with \\\tilde{s} = \tilde{x}- \tilde{x}\_0 \in \mathcal{H}\_0\\. \\\mathcal{H}\_0\\ is a subspace (part 1), so \\\mathcal{H}\\ has the form in [Definition 6](#def-affine-subspace).
 >
 > **Part 3.** For \\\tilde{x}, \tilde{y}\in \mathcal{H}\\, both \\\tilde{w}^{\top} \tilde{x}\\ and \\\tilde{w}^{\top} \tilde{y}\\ equal \\-b\\, so
 >
@@ -342,7 +384,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 15 (The plane \\x_1 + x_2 + x_3 = 1\\ in \\\mathbb{R}^3\\)** Take \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\, so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + x_2 + x_3 - 1 = 0\right\\\mathclose{}\\, the plane that [Example 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-subspace-zero) showed is not a subspace. By part 1, \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}: x_1 + x_2 + x_3 = 0\right\\\mathclose{}\\ is a subspace of dimension \\3 - 1 = 2\\.
+> **Example 17 (The plane \\x_1 + x_2 + x_3 = 1\\ in \\\mathbb{R}^3\\)** Take \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\, so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + x_2 + x_3 - 1 = 0\right\\\mathclose{}\\, the plane that [Example 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-subspace-zero) showed is not a subspace. By part 1, \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}: x_1 + x_2 + x_3 = 0\right\\\mathclose{}\\ is a subspace of dimension \\3 - 1 = 2\\.
 >
 > - \\\tilde{x}\_0 = (1, 0, 0)\\ is in \\\mathcal{H}\\, since \\1 + 0 + 0 - 1 = 0\\, and so is \\\tilde{y}= (0, 1, 0)\\.
 >
@@ -360,7 +402,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 10 (Where a hyperplane passes, and its shape in \\\mathbb{R}^2\\ and \\\mathbb{R}^3\\)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
+> **Theorem 11 (Where a hyperplane passes, and its shape in \\\mathbb{R}^2\\ and \\\mathbb{R}^3\\)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
 >
 > 1.  \\\mathcal{H}\\ contains the origin \\\tilde{0}\\ exactly when \\b = 0\\.
 > 2.  If \\p = 2\\, then \\\mathcal{H}\\ is a line: \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + t\\\tilde{v} : t \in \mathbb{R}\right\\\mathclose{}\\ for some \\\tilde{x}\_0 \in \mathbb{R}^2\\ and some nonzero \\\tilde{v} \in \mathbb{R}^2\\.
@@ -374,7 +416,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > so \\\tilde{0}\in \mathcal{H}\\ exactly when \\b = 0\\.
 >
-> **Parts 2 and 3.** By [Theorem 9](#thm-hyperplane-subspace), \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{H}\_0\right\\\mathclose{}\\ for any \\\tilde{x}\_0 \in \mathcal{H}\\, where \\\mathcal{H}\_0\\ is a subspace of \\\mathbb{R}^p\\ of dimension \\p - 1\\.
+> **Parts 2 and 3.** By [Theorem 10](#thm-hyperplane-subspace), \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{H}\_0\right\\\mathclose{}\\ for any \\\tilde{x}\_0 \in \mathcal{H}\\, where \\\mathcal{H}\_0\\ is a subspace of \\\mathbb{R}^p\\ of dimension \\p - 1\\.
 >
 > For \\p = 2\\, \\\mathcal{H}\_0\\ has dimension \\1\\, so it has a basis ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) with one vector \\\tilde{v}\\. That vector is nonzero, and \\\mathcal{H}\_0 = \mathopen{}\left\\t\\\tilde{v} : t \in \mathbb{R}\right\\\mathclose{}\\.
 >
@@ -382,7 +424,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 16 (A line in \\\mathbb{R}^2\\ and a plane in \\\mathbb{R}^3\\, checked on a grid of points)** In \\\mathbb{R}^2\\, take \\\tilde{w} = (1, 1)\\ and \\b = -1\\, the line of [Example 19 in Matrices](linear-algebra-matrices.llms.md#exm-hyperplane). The point \\\tilde{x}\_0 = -\frac{b}{\tilde{w} \cdot \tilde{w}}\\\tilde{w}\\ is on it, and the vector \\\tilde{v} = (-w_2, w_1)\\ is nonzero with \\\tilde{w} \cdot \tilde{v} = 0\\, so it spans the subspace \\\mathcal{H}\_0\\ of [Theorem 9](#thm-hyperplane-subspace). In \\\mathbb{R}^3\\, take \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\, the plane of [Example 15](#exm-hyperplane-subspace), with the independent vectors \\\tilde{v}\_1 = (1, -1, 0)\\ and \\\tilde{v}\_2 = (0, 1, -1)\\ in \\\mathcal{H}\_0\\. The code evaluates \\\tilde{w} \cdot \tilde{x} + b\\ at the origin and at points \\\tilde{x}\_0 + t\\\tilde{v}\\ and \\\tilde{x}\_0 + s\\\tilde{v}\_1 + t\\\tilde{v}\_2\\.
+> **Example 18 (A line in \\\mathbb{R}^2\\ and a plane in \\\mathbb{R}^3\\, checked on a grid of points)** In \\\mathbb{R}^2\\, take \\\tilde{w} = (1, 1)\\ and \\b = -1\\, the line of [Example 19 in Matrices](linear-algebra-matrices.llms.md#exm-hyperplane). The point \\\tilde{x}\_0 = -\frac{b}{\tilde{w} \cdot \tilde{w}}\\\tilde{w}\\ is on it, and the vector \\\tilde{v} = (-w_2, w_1)\\ is nonzero with \\\tilde{w} \cdot \tilde{v} = 0\\, so it spans the subspace \\\mathcal{H}\_0\\ of [Theorem 10](#thm-hyperplane-subspace). In \\\mathbb{R}^3\\, take \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\, the plane of [Example 17](#exm-hyperplane-subspace), with the independent vectors \\\tilde{v}\_1 = (1, -1, 0)\\ and \\\tilde{v}\_2 = (0, 1, -1)\\ in \\\mathcal{H}\_0\\. The code evaluates \\\tilde{w} \cdot \tilde{x} + b\\ at the origin and at points \\\tilde{x}\_0 + t\\\tilde{v}\\ and \\\tilde{x}\_0 + s\\\tilde{v}\_1 + t\\\tilde{v}\_2\\.
 >
 > ``` downlit
 > level <- function(w, b, x) sum(w * x) + b
@@ -417,7 +459,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
+> **Definition 7 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
 >
 > \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b \< 0\right\\\mathclose{}. \tag{1}\\
 >
@@ -429,7 +471,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\tilde{w} = (1, 2)\\ and \\b = -2\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\tilde{w} \cdot \tilde{x} + b\\ at three points ([Definition 6](#def-half-space)):
+> **Example 19 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\tilde{w} = (1, 2)\\ and \\b = -2\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\tilde{w} \cdot \tilde{x} + b\\ at three points ([Definition 7](#def-half-space)):
 >
 > - At \\(0, 0)\\ it equals \\0 + 0 - 2 = -2 \< 0\\, so \\(0, 0) \in \mathcal{H}^-\\.
 > - At \\(2, 0)\\ it equals \\2 + 0 - 2 = 0\\, so \\(2, 0) \in \mathcal{H}\\.
@@ -439,7 +481,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 11 (Differences of points in a hyperplane and in a half-space)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, and let \\\mathcal{H}\\, \\\mathcal{H}^+\\ be the hyperplane and open half-space of [Definition 6](#def-half-space). For a set \\S \subseteq \mathbb{R}^p\\, let \\D(S) \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{y}- \tilde{x}: \tilde{x}, \tilde{y}\in S\right\\\mathclose{}\\ be the set of differences of its points.
+> **Theorem 12 (Differences of points in a hyperplane and in a half-space)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, and let \\\mathcal{H}\\, \\\mathcal{H}^+\\ be the hyperplane and open half-space of [Definition 7](#def-half-space). For a set \\S \subseteq \mathbb{R}^p\\, let \\D(S) \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{y}- \tilde{x}: \tilde{x}, \tilde{y}\in S\right\\\mathclose{}\\ be the set of differences of its points.
 >
 > 1.  \\D(\mathcal{H}) = \mathopen{}\left\\\tilde{s} : \tilde{w} \cdot \tilde{s} = 0\right\\\mathclose{}\\, a subspace of dimension \\p - 1\\.
 > 2.  \\D(\mathcal{H}^+) = \mathbb{R}^p\\, a subspace of dimension \\p\\.
@@ -448,7 +490,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** Let \\\tilde{x}, \tilde{y}\in \mathcal{H}\\. By [Theorem 9](#thm-hyperplane-subspace) part 3, \\\tilde{w} \cdot (\tilde{y}- \tilde{x}) = 0\\, so \\\tilde{y}- \tilde{x}\in \mathcal{H}\_0 = \mathopen{}\left\\\tilde{s} : \tilde{w} \cdot \tilde{s} = 0\right\\\mathclose{}\\. Conversely, fix any \\\tilde{x}\_0 \in \mathcal{H}\\ (it exists by [Theorem 9](#thm-hyperplane-subspace) part 2). For any \\\tilde{s} \in \mathcal{H}\_0\\, the point \\\tilde{x}\_0 + \tilde{s}\\ is in \\\mathcal{H}\\ by the same part, and \\(\tilde{x}\_0 + \tilde{s}) - \tilde{x}\_0 = \tilde{s}\\. So \\D(\mathcal{H}) = \mathcal{H}\_0\\, which has dimension \\p - 1\\ by [Theorem 9](#thm-hyperplane-subspace) part 1.
+> *Proof*. **Part 1.** Let \\\tilde{x}, \tilde{y}\in \mathcal{H}\\. By [Theorem 10](#thm-hyperplane-subspace) part 3, \\\tilde{w} \cdot (\tilde{y}- \tilde{x}) = 0\\, so \\\tilde{y}- \tilde{x}\in \mathcal{H}\_0 = \mathopen{}\left\\\tilde{s} : \tilde{w} \cdot \tilde{s} = 0\right\\\mathclose{}\\. Conversely, fix any \\\tilde{x}\_0 \in \mathcal{H}\\ (it exists by [Theorem 10](#thm-hyperplane-subspace) part 2). For any \\\tilde{s} \in \mathcal{H}\_0\\, the point \\\tilde{x}\_0 + \tilde{s}\\ is in \\\mathcal{H}\\ by the same part, and \\(\tilde{x}\_0 + \tilde{s}) - \tilde{x}\_0 = \tilde{s}\\. So \\D(\mathcal{H}) = \mathcal{H}\_0\\, which has dimension \\p - 1\\ by [Theorem 10](#thm-hyperplane-subspace) part 1.
 >
 > **Part 2.** Every difference is in \\\mathbb{R}^p\\, so \\D(\mathcal{H}^+) \subseteq \mathbb{R}^p\\. For the other direction, fix any \\\tilde{x}\_0 \in \mathcal{H}\\ and any \\\tilde{v} \in \mathbb{R}^p\\. For a number \\t \> 0\\ to be chosen, let \\\tilde{x}\_t \stackrel{\text{def}}{=}\tilde{x}\_0 + t\\\tilde{w}\\. Then
 >
@@ -464,7 +506,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\tilde{x}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\tilde{x}\\ gives a coefficient vector \\\tilde{w}\\ and an intercept \\b\\. The line \\\tilde{w} \cdot \tilde{x} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 6](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
+> **Example 20 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\tilde{x}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\tilde{x}\\ gives a coefficient vector \\\tilde{w}\\ and an intercept \\b\\. The line \\\tilde{w} \cdot \tilde{x} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 7](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
 >
 > Show R code
 >
@@ -500,15 +542,15 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 > #>   virginica         3       47
 > ```
 >
-> The vector \\\tilde{w}\\ points toward the virginica side, so the positive half-space \\\mathcal{H}^+\\ holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension \\p - 1 = 1\\, and each side is a region of the plane of dimension \\p = 2\\ ([Theorem 11](#thm-half-space-dimension)).
+> The vector \\\tilde{w}\\ points toward the virginica side, so the positive half-space \\\mathcal{H}^+\\ holds 50 of the 100 flowers, and 47 of them are virginica. The line is a set of dimension \\p - 1 = 1\\, and each side is a region of the plane of dimension \\p = 2\\ ([Theorem 12](#thm-half-space-dimension)).
 
 > **NOTE:**
 >
-> **Exercise 1 (Which side of the plane?)** Let \\\mathcal{H}\\ be the plane in \\\mathbb{R}^3\\ with \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\ ([Example 15](#exm-hyperplane-subspace)).
+> **Exercise 1 (Which side of the plane?)** Let \\\mathcal{H}\\ be the plane in \\\mathbb{R}^3\\ with \\\tilde{w} = (1, 1, 1)\\ and \\b = -1\\ ([Example 17](#exm-hyperplane-subspace)).
 >
-> 1.  For each point, say whether it is in \\\mathcal{H}^+\\, \\\mathcal{H}\\ or \\\mathcal{H}^-\\ ([Definition 6](#def-half-space)): \\(0, 0, 0)\\, \\(1, 0, 0)\\ and \\(1, 1, 1)\\.
+> 1.  For each point, say whether it is in \\\mathcal{H}^+\\, \\\mathcal{H}\\ or \\\mathcal{H}^-\\ ([Definition 7](#def-half-space)): \\(0, 0, 0)\\, \\(1, 0, 0)\\ and \\(1, 1, 1)\\.
 > 2.  Write the plane and its half-spaces using \\-\tilde{w}\\ and \\-b\\. Which points from part 1 change sides?
-> 3.  State the dimension of \\D(\mathcal{H})\\ and of \\D(\mathcal{H}^+)\\ ([Theorem 11](#thm-half-space-dimension)).
+> 3.  State the dimension of \\D(\mathcal{H})\\ and of \\D(\mathcal{H}^+)\\ ([Theorem 12](#thm-half-space-dimension)).
 
 > **NOTE:**
 >
@@ -526,13 +568,13 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Rank factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A **rank factorization** of \\\mathbf{A}\\ is a product
+> **Definition 8 (Rank factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A **rank factorization** of \\\mathbf{A}\\ is a product
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{C}}\_{m \times r}\\\underbrace{\mathbf{R}}\_{r \times n}. \\
 
 > **NOTE:**
 >
-> **Example 19 (A rank factorization of a rank-one matrix)** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has rank \\1\\ ([Example 8](#exm-rank-dim)), and
+> **Example 21 (A rank factorization of a rank-one matrix)** The matrix \\\mathbf{A}\\ in [Example 1](#exm-column-space) has rank \\1\\ ([Example 10](#exm-rank-dim)), and
 >
 > \\ \begin{aligned} \begin{bmatrix} 1 \\ 3 \end{bmatrix} \begin{bmatrix} 1 & -2 & -2 \end{bmatrix} &= \begin{bmatrix} 1 \cdot 1 & 1 \cdot(-2) & 1 \cdot(-2) \\ 3 \cdot 1 & 3 \cdot(-2) & 3 \cdot(-2) \end{bmatrix} \\ &= \begin{bmatrix} 1 & -2 & -2 \\ 3 & -6 & -6 \end{bmatrix}, \end{aligned} \\
 >
@@ -540,11 +582,11 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 12 (Every nonzero matrix has a rank factorization)** Every \\m \times n\\ matrix \\\mathbf{A}\\ with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ has a rank factorization ([Definition 7](#def-rank-factorization)). One is given by taking the columns of \\\mathbf{C}\\ to be any basis of \\\mathcal{C}(\mathbf{A})\\.
+> **Theorem 13 (Every nonzero matrix has a rank factorization)** Every \\m \times n\\ matrix \\\mathbf{A}\\ with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ has a rank factorization ([Definition 8](#def-rank-factorization)). One is given by taking the columns of \\\mathbf{C}\\ to be any basis of \\\mathcal{C}(\mathbf{A})\\.
 
 > **NOTE:**
 >
-> *Proof*. \\\mathcal{C}(\mathbf{A})\\ has dimension \\r\\ ([Theorem 5](#thm-rank-dim)), so it has a basis \\\tilde{c}\_1, \ldots, \tilde{c}\_r\\ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)); let \\\mathbf{C}\\ be the \\m \times r\\ matrix with these columns. Each column \\\tilde{a}\_j\\ of \\\mathbf{A}\\ is in \\\mathcal{C}(\mathbf{A})\\, so \\\tilde{a}\_j = r\_{1j} \tilde{c}\_1 + \cdots + r\_{rj} \tilde{c}\_r\\ for some numbers \\r\_{ij}\\, because the basis spans \\\mathcal{C}(\mathbf{A})\\. Let \\\mathbf{R}\\ be the \\r \times n\\ matrix with entries \\r\_{ij}\\, whose column \\j\\ is \\\tilde{r}\_j = (r\_{1j}, \ldots, r\_{rj})\\. Then column \\j\\ of \\\mathbf{C} \mathbf{R}\\ is
+> *Proof*. \\\mathcal{C}(\mathbf{A})\\ has dimension \\r\\ ([Theorem 6](#thm-rank-dim)), so it has a basis \\\tilde{c}\_1, \ldots, \tilde{c}\_r\\ ([Theorem 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-extend-basis)); let \\\mathbf{C}\\ be the \\m \times r\\ matrix with these columns. Each column \\\tilde{a}\_j\\ of \\\mathbf{A}\\ is in \\\mathcal{C}(\mathbf{A})\\, so \\\tilde{a}\_j = r\_{1j} \tilde{c}\_1 + \cdots + r\_{rj} \tilde{c}\_r\\ for some numbers \\r\_{ij}\\, because the basis spans \\\mathcal{C}(\mathbf{A})\\. Let \\\mathbf{R}\\ be the \\r \times n\\ matrix with entries \\r\_{ij}\\, whose column \\j\\ is \\\tilde{r}\_j = (r\_{1j}, \ldots, r\_{rj})\\. Then column \\j\\ of \\\mathbf{C} \mathbf{R}\\ is
 >
 > \\ \begin{aligned} \mathbf{C} \tilde{r}\_j &= r\_{1j} \tilde{c}\_1 + \cdots + r\_{rj} \tilde{c}\_r && \text{(}\href{linear-algebra-subspaces.qmd#thm-matvec-columns}{\text{Theorem~3 in Subspaces and Rank}}\text{)} \\ &= \tilde{a}\_j, && \text{(choice of the } r\_{ij} \text{)} \end{aligned} \\
 >
@@ -552,7 +594,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 20 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \tilde{0}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 12](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 19](#exm-rank-factorization).
+> **Example 22 (Building a rank factorization from a basis)** For \\\mathbf{A}\\ in [Example 1](#exm-column-space), \\(1, 3)\\ spans \\\mathcal{C}(\mathbf{A})\\ ([Example 2](#exm-column-space-span)), and it is linearly independent because it is nonzero (\\c\\(1, 3) = \tilde{0}\_2\\ forces \\c = 0\\), so it is a basis of \\\mathcal{C}(\mathbf{A})\\. The columns of \\\mathbf{A}\\ are \\(1, 3) = 1 \cdot(1, 3)\\, \\(-2, -6) = -2 \cdot(1, 3)\\ and \\(-2, -6) = -2 \cdot(1, 3)\\, so the construction in [Theorem 13](#thm-rank-factorization) gives \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\ and \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\, the factorization in [Example 21](#exm-rank-factorization).
 
 Back to top
 

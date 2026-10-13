@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-12 21:21:07 (PDT)
+Last modified: 2026-10-12 22:07:53 (PDT)
 
 ## 1 Design Matrix
 
@@ -233,7 +233,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > So for every \\\tilde{b} \in \mathbb{R}^p\\, \\\mathbf{X}\tilde{b} = (\mathbf{H} \mathbf{X})\\\tilde{b}\\, since \\\mathbf{H} \mathbf{X}= \mathbf{X}\\, and \\(\mathbf{H} \mathbf{X})\\\tilde{b} = \mathbf{H}\\(\mathbf{X}\tilde{b})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{H})\\.
 >
-> \\\mathcal{C}(\mathbf{X})\\ has dimension \\p \ge 1\\ ([Theorem 5 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), so an orthonormal basis of it has \\p\\ vectors ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ also gives the orthogonal projection onto \\\mathcal{C}(\mathbf{X})\\ ([Theorem 4](#thm-projector-onb), with \\n\\ in place of \\p\\ and \\r = p\\). By [Theorem 5](#thm-projection-matrix-projects), part 2, \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\.
+> \\\mathcal{C}(\mathbf{X})\\ has dimension \\p \ge 1\\ ([Theorem 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), so an orthonormal basis of it has \\p\\ vectors ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ also gives the orthogonal projection onto \\\mathcal{C}(\mathbf{X})\\ ([Theorem 4](#thm-projector-onb), with \\n\\ in place of \\p\\ and \\r = p\\). By [Theorem 5](#thm-projection-matrix-projects), part 2, \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\.
 
 > **NOTE:**
 >
@@ -255,7 +255,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> This section is adapted from Zhou ([2024b](#ref-zhou2024matinv)), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 12 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover.
+> This section is adapted from Zhou ([2024b](#ref-zhou2024matinv)), used under the MIT License (see the license text in [Section 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#sec-subspaces)). The source defers the existence of the Moore-Penrose inverse to the singular value decomposition; the proof here builds it from a rank factorization ([Theorem 13 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)) instead, and the section adds the projection \\\mathbf{X}\mathbf{G} {\mathbf{X}}^{\top}\\ for any generalized inverse \\\mathbf{G}\\ of \\{\mathbf{X}}^{\top} \mathbf{X}\\, which the source does not cover.
 
 > **NOTE:**
 >
@@ -413,7 +413,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 > **Theorem 12 (Every matrix has a Moore-Penrose inverse)** Every \\m \times n\\ matrix \\\mathbf{A}\\ has a Moore-Penrose inverse ([Definition 5](#def-moore-penrose)), written \\\mathbf{A}^+\\; it is unique by [Theorem 11](#thm-moore-penrose-unique).
 >
 > - If \\\mathbf{A} = \mathbf{0}\_{m \times n}\\, then \\\mathbf{A}^+ = \mathbf{0}\_{n \times m}\\.
-> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-rank-factorization)), then
+> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-rank-factorization)), then
 >
 > \\ \underbrace{\mathbf{A}^+}\_{n \times m} = \underbrace{{\mathbf{R}}^{\top}}\_{n \times r} \underbrace{(\mathbf{R} {\mathbf{R}}^{\top})^{-1}}\_{r \times r} \underbrace{({\mathbf{C}}^{\top} \mathbf{C})^{-1}}\_{r \times r} \underbrace{{\mathbf{C}}^{\top}}\_{r \times m}. \\
 
@@ -423,13 +423,13 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 > **The zero matrix.** With \\\mathbf{A} = \mathbf{0}\_{m \times n}\\ and \\\mathbf{G} = \mathbf{0}\_{n \times m}\\, every product in conditions 1 to 4 is a zero matrix, and a zero matrix equals its own transpose, so all four conditions hold.
 >
-> **The two inverses exist.** Now suppose \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A rank factorization exists ([Theorem 12 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)). \\\mathbf{C}\\ is \\m \times r\\ and \\\mathbf{R}\\ is \\r \times n\\. Both have rank \\r\\:
+> **The two inverses exist.** Now suppose \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A rank factorization exists ([Theorem 13 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-factorization)). \\\mathbf{C}\\ is \\m \times r\\ and \\\mathbf{R}\\ is \\r \times n\\. Both have rank \\r\\:
 >
-> \\ \begin{aligned} r &= \operatorname{rank}(\mathbf{C} \mathbf{R}) && \text{(} \mathbf{A} = \mathbf{C} \mathbf{R} \text{)} \\ &\le \operatorname{rank}(\mathbf{C}) && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le r, && \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } \mathbf{C} \text{ has } r \text{ columns)} \end{aligned} \\
+> \\ \begin{aligned} r &= \operatorname{rank}(\mathbf{C} \mathbf{R}) && \text{(} \mathbf{A} = \mathbf{C} \mathbf{R} \text{)} \\ &\le \operatorname{rank}(\mathbf{C}) && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~8 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le r, && \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } \mathbf{C} \text{ has } r \text{ columns)} \end{aligned} \\
 >
 > and, using \\{(\mathbf{C} \mathbf{R})}^{\top} = {\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\\ ([Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product)),
 >
-> \\ \begin{aligned} r &= \operatorname{rank}\mathopen{}\left({\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\right)\mathclose{} && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~8 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le \operatorname{rank}({\mathbf{R}}^{\top}) && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le r. && \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } {\mathbf{R}}^{\top} \text{ has } r \text{ columns)} \end{aligned} \\
+> \\ \begin{aligned} r &= \operatorname{rank}\mathopen{}\left({\mathbf{R}}^{\top} {\mathbf{C}}^{\top}\right)\mathclose{} && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-transpose}{\text{Theorem~9 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le \operatorname{rank}({\mathbf{R}}^{\top}) && \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-product}{\text{Theorem~8 in Column Space, Null Space and Rank-Nullity}}\text{)} \\ &\le r. && \text{(}\href{linear-algebra-rank-nullity.qmd#cor-rank-bound}{\text{Corollary~1 in Column Space, Null Space and Rank-Nullity}}\text{, } {\mathbf{R}}^{\top} \text{ has } r \text{ columns)} \end{aligned} \\
 >
 > So \\\mathbf{C}\\ and \\{\mathbf{R}}^{\top}\\ have full column rank \\r\\, and \\{\mathbf{C}}^{\top} \mathbf{C}\\ and \\\mathbf{R} {\mathbf{R}}^{\top} = {({\mathbf{R}}^{\top})}^{\top}\\{\mathbf{R}}^{\top}\\ are invertible ([Theorem 1](#thm-gram-invertible)). They are symmetric:
 >
@@ -459,7 +459,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 19 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-factorization)) gives
+> **Example 17 (The Moore-Penrose inverse of a rank-one matrix)** For \\\mathbf{A}\\ in [Example 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-column-space), the rank factorization \\\mathbf{C} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\\, \\\mathbf{R} = \begin{bmatrix} 1 & -2 & -2 \end{bmatrix}\\ ([Example 21 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-factorization)) gives
 >
 > \\ \begin{aligned} {\mathbf{C}}^{\top} \mathbf{C} &= 1 + 9 \\ &= 10 \end{aligned} \\
 >
@@ -562,15 +562,15 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 13](#thm-consistency), the system is consistent for every \\\tilde{b}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 5 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
+> *Proof*. **Part 1.** By [Theorem 13](#thm-consistency), the system is consistent for every \\\tilde{b}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
 >
-> **Part 2.** By [Theorem 14](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, by [Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
+> **Part 2.** By [Theorem 14](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, by [Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
 
 > **NOTE:**
 >
 > **Example 21 (Three systems)**  
 >
-> - The \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Example 13 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-bound) has rank \\2 = m\\, so every system with it is consistent, but \\2 \< 3 = n\\, so the solutions are never unique.
+> - The \\2 \times 3\\ matrix \\\begin{bmatrix} 1 & 0 & 1 \\ 0 & 1 & 1 \end{bmatrix}\\ of [Example 15 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#exm-rank-bound) has rank \\2 = m\\, so every system with it is consistent, but \\2 \< 3 = n\\, so the solutions are never unique.
 >
 > - The \\3 \times 2\\ matrix \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}\\ of [Example 1](#exm-gram-invertible) has rank \\2 = n\\, so a consistent system has one solution, but \\2 \< 3 = m\\, so some systems are inconsistent: \\(1, 0, 0) \notin \mathcal{C}(\mathbf{X})\\, because \\a\\(1, 1, 1) + b\\(1, 2, 3)\\ has equal differences between consecutive entries, and \\(1, 0, 0)\\ does not.
 >
@@ -578,7 +578,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 >
 >   \\ \begin{aligned} \tilde{x} &= \mathbf{A}^{-1} \mathbf{A} \tilde{x} \\ &= \tilde{0}, \end{aligned} \\
 >
->   so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \tilde{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \tilde{b}) = \tilde{b}\\.
+>   so its nullity is \\0\\ and its rank is \\p\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)). So every system with it is consistent (part 1, with \\p = m\\) and has exactly one solution (part 2, with \\p = n\\), namely \\\mathbf{A}^{-1} \tilde{b}\\, since \\\mathbf{A}\\(\mathbf{A}^{-1} \tilde{b}) = \tilde{b}\\.
 
 > **NOTE:**
 >
@@ -586,7 +586,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. **\\{\mathbf{X}}^{\top} \tilde{y}\\ is in \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\\.** \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\\, since \\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} = {\mathbf{X}}^{\top}\\(\mathbf{X}\tilde{z})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)). Both are subspaces of \\\mathbb{R}^p\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with the same dimension: \\\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\\ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose), [Theorem 5 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)). So \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)), and since \\{\mathbf{X}}^{\top} \tilde{y}\in \mathcal{C}({\mathbf{X}}^{\top})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), \\{\mathbf{X}}^{\top} \tilde{y}= {\mathbf{X}}^{\top} \mathbf{X}\tilde{z}\\ for some \\\tilde{z} \in \mathbb{R}^p\\.
+> *Proof*. **\\{\mathbf{X}}^{\top} \tilde{y}\\ is in \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X})\\.** \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) \subseteq \mathcal{C}({\mathbf{X}}^{\top})\\, since \\({\mathbf{X}}^{\top} \mathbf{X})\\\tilde{z} = {\mathbf{X}}^{\top}\\(\mathbf{X}\tilde{z})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)). Both are subspaces of \\\mathbb{R}^p\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with the same dimension: \\\operatorname{rank}({\mathbf{X}}^{\top} \mathbf{X}) = \operatorname{rank}({\mathbf{X}}^{\top})\\ ([Theorem 9 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose), [Theorem 6 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)). So \\\mathcal{C}({\mathbf{X}}^{\top} \mathbf{X}) = \mathcal{C}({\mathbf{X}}^{\top})\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)), and since \\{\mathbf{X}}^{\top} \tilde{y}\in \mathcal{C}({\mathbf{X}}^{\top})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), \\{\mathbf{X}}^{\top} \tilde{y}= {\mathbf{X}}^{\top} \mathbf{X}\tilde{z}\\ for some \\\tilde{z} \in \mathbb{R}^p\\.
 >
 > **The split.** Let
 >
@@ -602,7 +602,7 @@ Last modified: 2026-10-12 21:21:07 (PDT)
 
 > **NOTE:**
 >
-> **Example 22 (A design matrix with a repeated column)** Let \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, an intercept column entered twice, so \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ and \\{\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\ is not invertible: its rank is \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose)), while an invertible \\2 \times 2\\ matrix has rank \\2\\ ([Example 21](#exm-solution-unique)). The matrix \\\mathbf{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}\\ is a generalized inverse of it:
+> **Example 22 (A design matrix with a repeated column)** Let \\\mathbf{X}= \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, an intercept column entered twice, so \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ and \\{\mathbf{X}}^{\top} \mathbf{X}= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}\\ is not invertible: its rank is \\\operatorname{rank}(\mathbf{X}) = 1 \< 2\\ ([Theorem 9 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-transpose)), while an invertible \\2 \times 2\\ matrix has rank \\2\\ ([Example 21](#exm-solution-unique)). The matrix \\\mathbf{G} = \begin{bmatrix} \frac{1}{2} & 0 \\ 0 & 0 \end{bmatrix}\\ is a generalized inverse of it:
 >
 > \\ \begin{aligned} ({\mathbf{X}}^{\top} \mathbf{X})\\\mathbf{G}\\({\mathbf{X}}^{\top} \mathbf{X}) &= \begin{bmatrix} 1 & 0 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{, for the first product)} \\ &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix}. && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \end{aligned} \\
 >
