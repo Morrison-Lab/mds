@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 11:22:25 (PDT)
+Last modified: 2026-10-13 14:29:41 (PDT)
 
 ## 1 Rank
 
@@ -154,7 +154,7 @@ Last modified: 2026-10-13 11:22:25 (PDT)
 >
 > **Example 8 (A product as a combination of columns)** \\ \begin{aligned} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} &= 1 \cdot\begin{bmatrix} 1 \\ 3 \end{bmatrix} + (-1) \cdot\begin{bmatrix} 2 \\ 4 \end{bmatrix} && \text{(}\href{#thm-matvec-columns}{\text{Theorem~3}}\text{)} \\ &= \begin{bmatrix} -1 \\ -1 \end{bmatrix}, && \text{(arithmetic)} \end{aligned} \\
 >
-> the same answer as computing each entry as a row-times-vector dot product ([Remark 3 in Matrices](linear-algebra-matrices.llms.md#rem-matvec-row-dot-products)).
+> the same answer as computing each entry as a row-times-vector dot product ([Remark 4 in Matrices](linear-algebra-matrices.llms.md#rem-matvec-row-dot-products)).
 
 > **NOTE:**
 >
