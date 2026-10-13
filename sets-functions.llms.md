@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-12 01:27:56 (PDT)
+Last modified: 2026-10-12 19:40:12 (PDT)
 
 > **NOTE:**
 >
@@ -436,21 +436,81 @@ Last modified: 2026-10-12 01:27:56 (PDT)
 > - \\b_n = (-1)^n\\ is the sequence \\-1, 1, -1, 1, \ldots\\: a sequence can repeat values.
 > - The die rolls \\4, 1, 4\\ form a finite sequence of length \\3\\, with \\a_1 = 4\\, \\a_2 = 1\\, and \\a_3 = 4\\. As a set, \\\mathopen{}\left\\4, 1, 4\right\\\mathclose{} = \mathopen{}\left\\1, 4\right\\\mathclose{}\\, but as a sequence, the order and the repeats matter.
 
+> **NOTE:**
+>
+> **Definition 26 (Expression)** An **expression** is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](#def-function): it fixes the output for each input.
+
+> **NOTE:**
+>
+> **Example 22 (Two expressions for one function)** The expressions \\a x^2 + b x + c\\ and \\(a x + b)\\x + c\\ denote the same function of \\x\\ for any fixed \\a\\, \\b\\ and \\c\\, because they give the same value at every \\x\\.
+>
+> Precedence parses \\a x^2 + b x + c\\ as a sum of three terms: the power \\x^2\\ is applied first, then \\a\\ multiplies \\x^2\\ and \\b\\ multiplies \\x\\, and the three products are added. The parentheses in \\(a x + b)\\x + c\\ force a different tree: \\a\\ multiplies \\x\\, \\b\\ is added, the sum multiplies \\x\\, and \\c\\ is added.
+
+> **NOTE:**
+>
+> **Definition 27 (Parse tree)** The **parse tree** of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+
+> **NOTE:**
+>
+> **Example 23 (The parse tree of a polynomial)** The parse tree of \\(a x + b)\\x + c\\, with each operation having two children, is:
+>
+> - the root \\+\\, whose children are
+>   - the node \\\times\\, whose children are
+>     - the node \\+\\, whose children are
+>       - the node \\\times\\, whose children are the leaves \\a\\ and \\x\\,
+>       - the leaf \\b\\;
+>     - the leaf \\x\\;
+>   - the leaf \\c\\.
+>
+> Read from the leaves up, the tree says to multiply \\a\\ by \\x\\, add \\b\\, multiply by \\x\\, and add \\c\\. The expression \\a x^2 + b x + c\\ has a different tree. Its root is the \\+\\ whose children are \\a x^2 + b x\\ and \\c\\, and the first of these is a \\+\\ whose children are \\a x^2\\ and \\b x\\.
+
+> **NOTE:**
+>
+> *Remark 9* (Expressions, precedence and parse trees). An expression does not say how to compute the output it fixes, and many expressions denote the same function. A function is the input-output relationship itself; an expression is one way of writing it down.
+>
+> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 27](#def-parse-tree)).
+
+> **NOTE:**
+>
+> **Definition 28 (Algorithm)** An **algorithm** is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](#def-function): for each input it returns the function’s value at that input.
+
+> **NOTE:**
+>
+> **Example 24 (Two algorithms for one function)** Take the function that [Example 22](#exm-expression) writes two ways. Evaluating the tree of \\a x^2 + b x + c\\, with \\x^2\\ computed as \\x \cdot x\\, takes three multiplications and two additions. Evaluating the tree of Horner’s form \\(a x + b)\\x + c\\ takes two multiplications and two additions. At \\a = 2\\, \\b = -3\\, \\c = 5\\ and \\x = 1.5\\, the first algorithm computes \\4.5 - 4.5 + 5 = 5\\ and the second computes \\(3 - 3) \cdot 1.5 + 5 = 5\\, the same value by different steps.
+
+> **NOTE:**
+>
+> *Remark 10* (How functions, expressions and algorithms relate). The three ideas fit together this way:
+>
+> - A function is the input-output relationship.
+> - An [expression](#def-expression) denotes a function, and many expressions denote the same one.
+> - An [algorithm](#def-algorithm) computes a function, and many algorithms compute the same one.
+>
+> An expression is not an algorithm, because it does not say what to do, or in what order. Given values for its variables, evaluating its parse tree from the leaves up is one algorithm for the function it denotes, and a different expression for the same function gives a different tree and a different algorithm.
+
+> **NOTE:**
+>
+> *Remark 11* (Values with no known algorithm). Some functions have no known finite algorithm for their exact values, and expressions that denote them, such as a limit, a supremum, an integral with no closed form, or an \\\arg \min\\ over a set with no formula for the minimizer, cannot be evaluated by following their tree. Such a value can still be well defined and approximated by an algorithm.
+
+> **NOTE:**
+>
+> **Example 25 (A minimizer with no known formula)** The minimizer \\\arg \min\_{x \in \mathbb{R}} \mathopen{}\left(x - \cos x\right)\mathclose{}^2\\ is well defined, because \\x - \cos x\\ is strictly increasing and equals zero at one point, yet that point has no known closed-form expression, so no known finite list of arithmetic steps returns it exactly. An algorithm such as bisection approximates it as closely as we like.
+
 ## 4 Countable sets
 
 > **NOTE:**
 >
-> **Definition 26 (Finite set, infinite set, and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 25](#def-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 29 (Finite set, infinite set, and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 25](#def-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 >
 > A set that is not finite is **infinite**.
 
 > **NOTE:**
 >
-> *Remark 9* (Two meanings of \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\). Applied to a set, the bars \\\mathopen{}\left\|A\right\|\mathclose{}\\ mean the cardinality of \\A\\. Applied to a number, \\\mathopen{}\left\|x\right\|\mathclose{}\\ means its [absolute value](algebra-basics.llms.md#def-absolute-value), or its [modulus](algebra-complex.llms.md#def-complex-modulus) when \\x\\ is complex. For example, \\\mathopen{}\left\|\mathopen{}\left\\-3\right\\\mathclose{}\right\|\mathclose{} = 1\\, but \\\mathopen{}\left\|-3\right\|\mathclose{} = 3\\.
+> *Remark 12* (Two meanings of \\\mathopen{}\left\|\cdot\right\|\mathclose{}\\). Applied to a set, the bars \\\mathopen{}\left\|A\right\|\mathclose{}\\ mean the cardinality of \\A\\. Applied to a number, \\\mathopen{}\left\|x\right\|\mathclose{}\\ means its [absolute value](algebra-basics.llms.md#def-absolute-value), or its [modulus](algebra-complex.llms.md#def-complex-modulus) when \\x\\ is complex. For example, \\\mathopen{}\left\|\mathopen{}\left\\-3\right\\\mathclose{}\right\|\mathclose{} = 1\\, but \\\mathopen{}\left\|-3\right\|\mathclose{} = 3\\.
 
 > **NOTE:**
 >
-> **Example 22 (Finite and infinite sets)**  
+> **Example 26 (Finite and infinite sets)**  
 >
 > - \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is finite, with \\\mathopen{}\left\|\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\right\|\mathclose{} = 3\\.
 > - \\\mathopen{}\left\\1, 1, 2\right\\\mathclose{} = \mathopen{}\left\\1, 2\right\\\mathclose{}\\, so \\\mathopen{}\left\|\mathopen{}\left\\1, 1, 2\right\\\mathclose{}\right\|\mathclose{} = 2\\: a repeated listing does not count twice.
@@ -459,15 +519,15 @@ Last modified: 2026-10-12 01:27:56 (PDT)
 
 > **NOTE:**
 >
-> **Definition 27 (Countable set)** A set is **countable** if it is finite ([Definition 26](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 25](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 30 (Countable set)** A set is **countable** if it is finite ([Definition 29](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 25](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 28 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 31 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
-> **Example 23 (Countable and uncountable sets)**  
+> **Example 27 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
 > - The [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
@@ -479,13 +539,13 @@ Last modified: 2026-10-12 01:27:56 (PDT)
 
 > **NOTE:**
 >
-> *Remark 10* (Cantor’s diagonal argument). The standard [proof](notation.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](notation.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 13* (Cantor’s diagonal argument). The standard [proof](notation.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](notation.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 ## 5 Extended non-negative real numbers
 
 > **NOTE:**
 >
-> **Definition 29 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 32 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >
@@ -497,11 +557,11 @@ Last modified: 2026-10-12 01:27:56 (PDT)
 
 > **NOTE:**
 >
-> *Remark 11* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite (see [Wikipedia: Extended real number line](https://en.wikipedia.org/wiki/Extended_real_number_line)).
+> *Remark 14* (Arithmetic with \\\infty\\). \\\infty\\ is not a real number, so some real-number arithmetic does not extend to it: \\\infty - \infty\\ is left undefined, and \\\infty + 1 = \infty + 2\\ does not imply \\1 = 2\\. Measure theory uses \\\[0, \infty\]\\ because the size of a set, such as the length of the whole real line, can be infinite (see [Wikipedia: Extended real number line](https://en.wikipedia.org/wiki/Extended_real_number_line)).
 
 > **NOTE:**
 >
-> **Example 24 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
+> **Example 28 (Adding with \\\infty\\)** In \\\[0, \infty\]\\, \\2 + 3 = 5\\ as usual, while \\2 + \infty = \infty\\ and \\\infty + \infty = \infty\\.
 
 ## 6 Further reading
 
