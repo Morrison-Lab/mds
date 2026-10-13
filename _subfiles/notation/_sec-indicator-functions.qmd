@@ -39,8 +39,14 @@ $$
 \end{cases}
 $$
 
-More generally,
-for any logical proposition or predicate $P$,
+:::
+
+{{< slidebreak >}}
+
+:::{#def-predicate-indicator}
+#### Predicate indicator
+
+For any logical proposition or predicate $P$,
 the **indicator** of $P$,
 or **predicate indicator**,
 takes the value $1$ when $P$ is true

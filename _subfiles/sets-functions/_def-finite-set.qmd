@@ -1,5 +1,5 @@
 :::{#def-finite-set}
-#### Finite set, infinite set, and cardinality
+#### Finite set and cardinality
 
 A set $A$ is **finite**
 if it is empty,
@@ -9,8 +9,6 @@ in which each element of $A$ appears exactly once.
 That number $n$ is the **cardinality** of $A$, its number of elements,
 written $\abs{A}$;
 the empty set has cardinality $\abs{\emptyset} = 0$.
-
-A set that is not finite is **infinite**.
 
 :::
 
