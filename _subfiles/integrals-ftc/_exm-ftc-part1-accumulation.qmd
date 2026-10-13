@@ -22,7 +22,7 @@ F'(x) &= 2x \\
 \end{aligned}
 $$
 
-as @thm-ftc Part 1
+as @thm-ftc-part1
 predicts.
 @fig-ftc-part1 shows the integrand on the left
 (shaded area equals $F(x)$ at each $x$)
