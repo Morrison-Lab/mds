@@ -23,7 +23,7 @@ and $\paren{\bigcap_{i \in I} A_i}^c = \bigcup_{i \in I} A_i^c$.
 
 Two sets are equal when they have the same elements (@def-set),
 so it is enough to show that an element $x$ is in the left-hand side
-[if and only if](notation.qmd#def-necessary-sufficient) ($\iff$)
+[if and only if](proof-writing.qmd#def-necessary-sufficient) ($\iff$)
 it is in the right-hand side.
 For the first law:
 

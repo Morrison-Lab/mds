@@ -6,9 +6,9 @@ and the alternatives you may meet in other sources.
 
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
-| $\neg$      | [not](#def-logical-connective)                   | `\neg`
-| $\forall$   | [for all](#def-quantifier)                       | `\forall`
-| $\exists$   | [there exists](#def-quantifier)                  | `\exists`
+| $\neg$      | [not](proof-writing.qmd#def-logical-connective)                   | `\neg`
+| $\forall$   | [for all](proof-writing.qmd#def-quantifier)                       | `\forall`
+| $\exists$   | [there exists](proof-writing.qmd#def-quantifier)                  | `\exists`
 | $\cup$      | union, "or"                                      | `\cup`
 | $\cap$      | intersection, "and"                              | `\cap`
 | $\mid$      | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|`
@@ -19,7 +19,7 @@ and the alternatives you may meet in other sources.
 | $x\'$  | transpose of $x$                                 | `x\'`
 | $'$         | transpose or [derivative](calculus.qmd#def-derivative)[^3] | `'`
 | $\ind$      | [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt)         | `\perp\!\!\!\perp`
-| $\tf$       | [therefore](#def-logical-entailment), thus       | `\therefore`
+| $\tf$       | [therefore](proof-writing.qmd#def-logical-entailment), thus       | `\therefore`
 | $\eta$      | [linear predictor][eta] of a generalized linear model[^4] | `\eta`
 | $\floor{x}$ | floor of $x$: largest [integer](#def-integers) less than or equal to $x$ | `\lfloor x \rfloor`
 | $\ceil{x}$  | ceiling of $x$: smallest [integer](#def-integers) greater than or equal to $x$ | `\lceil x \rceil`
@@ -137,139 +137,6 @@ so "percent" means "per hundred"
 
 You are welcome to switch between decimal and percent notation freely;
 just make sure you execute it correctly.
-
-## Proofs
-
-{{< include mds/_subfiles/notation/_def-proposition.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-proposition.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-predicate.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-predicate.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-logical-connective.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-logical-connective.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-quantifier.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-quantifier.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-inequality.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-inequality.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-logical-entailment.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-logical-entailment.qmd >}}
-
-We can use any of:
-
-- $\therefore$ (`\therefore` in LaTeX),
-- $\Rightarrow$ (`\Rightarrow`),
-- $\models$ (`\models`)
-
-to denote logical entailment (@def-logical-entailment).
-$\Rightarrow$ also writes the connective "implies" (@def-logical-connective);
-$P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
-for every choice of values for the variables in $P$ and $Q$.
-
-Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-proof.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-proof.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-derivation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-derivation.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_thm-derivation-chain.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-derivation-chain.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-theorem.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-theorem.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-counterexample.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-counterexample.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-converse.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-converse.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-necessary-sufficient.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-necessary-sufficient.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-proof-by-contradiction.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-proof-by-contradiction.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_thm-proof-by-contradiction.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-proof-by-contradiction-truth-table.qmd >}}
 
 ## Indicator functions {#sec-indicator-functions}
 
