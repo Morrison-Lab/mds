@@ -1,0 +1,49 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+A function can be written down as an expression and computed by an algorithm.
+This page defines expressions, parse trees, and algorithms
+for the [functions](functions.qmd) in the Morrison Lab's probability and statistics notes.
+
+:::
+
+## Expressions
+
+{{< include mds/_subfiles/expressions-algorithms/_def-expression.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exm-expression.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_def-parse-tree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exm-parse-tree.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_rem-expression-parse-tree.qmd >}}
+
+## Algorithms
+
+{{< include mds/_subfiles/expressions-algorithms/_def-algorithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exm-algorithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_rem-function-expression-algorithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_rem-no-known-algorithm.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/expressions-algorithms/_exm-no-known-algorithm.qmd >}}

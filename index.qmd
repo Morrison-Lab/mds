@@ -29,11 +29,15 @@ organized by topic:
 - [Notation](notation.qmd):
   common symbols, natural numbers, the percent sign,
   and indicator functions
-- [Sets and Functions](sets-functions.qmd):
-  sets, subsets and supersets, the empty set,
-  unions, intersections, and set differences, countable sets,
-  functions with their domains, codomains, and images,
-  and the extended non-negative real numbers
+- [Sets and Functions](sets-functions.qmd), on three pages:
+  - [Sets](sets.qmd):
+    sets, subsets and supersets, the empty set,
+    unions, intersections, and set differences,
+    and the extended non-negative real numbers
+  - [Functions](functions.qmd):
+    functions with their domains, codomains, and images, sequences, and countable sets
+  - [Expressions and Algorithms](expressions-algorithms.qmd):
+    expressions, parse trees, and algorithms
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
   sums, products, quotients, exponentials and logarithms
@@ -117,7 +121,9 @@ Each page is a thin wrapper around one or more fragments:
 | Page | Fragment(s) to include |
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
-| [Sets and Functions](sets-functions.qmd) | `mds/_sets-functions.qmd` |
+| [Sets](sets.qmd) | `mds/_sets.qmd` |
+| [Functions](functions.qmd) | `mds/_functions.qmd` |
+| [Expressions and Algorithms](expressions-algorithms.qmd) | `mds/_expressions-algorithms.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
 | [Calculus](calculus.qmd) | `mds/_calc-derivatives.qmd`, `mds/_calc-integrals.qmd`, and the double-integral subfiles `mds/_subfiles/_*fubini*.qmd` |
@@ -126,7 +132,7 @@ Each page is a thin wrapper around one or more fragments:
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`, `_algebra.qmd`, `_measures.qmd`, and `_subfiles/_sec_linear_algebra.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.
