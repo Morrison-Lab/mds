@@ -1,0 +1,22 @@
+:::{#exm-addition-not-distributive}
+#### Addition does not distribute over multiplication
+
+$$
+\begin{aligned}
+2 + (3 \times 4) &= 2 + 12 \\
+&= 14,
+\end{aligned}
+$$
+
+but
+
+$$
+\begin{aligned}
+(2 + 3) \times (2 + 4) &= 5 \times 6 \\
+&= 30.
+\end{aligned}
+$$
+
+So @def-distributes-over fails with $\star = +$ and $\diamond = \times$.
+
+:::

@@ -148,6 +148,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_exm-addition-not-distributive.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-distributive.qmd >}}
 
 {{< slidebreak >}}
