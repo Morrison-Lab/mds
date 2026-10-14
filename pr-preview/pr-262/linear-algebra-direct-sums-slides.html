@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 13:44:18 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 16:53:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -746,7 +746,7 @@ a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}) &amp;= 2 \cdot 3
 \stackrel{\text{def}}{=}
 \mathopen{}\left\{\tilde{u} \in \mathbb{R}^p : \tilde{x} \cdot \tilde{u} = 0 \text{ for all } \tilde{x} \in \mathcal{X}\right\}\mathclose{}.
 \]</span></p>
-<p><span class="math inline">\(\mathcal{X}^\perp\)</span> is read “<span class="math inline">\(\mathcal{X}\)</span> perp”. <span class="math inline">\(\mathcal{X}\)</span> need not be a subspace.</p>
+<p><span class="math inline">\(\mathcal{X}^\perp\)</span> is read “<span class="math inline">\(\mathcal{X}\)</span> perp”.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -779,6 +779,12 @@ u_1 &amp;= u_2 \\
 \]</span></p>
 <p>forces <span class="math inline">\(\tilde{u} = \tilde{0}\)</span>.</p></li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-orthogonal-complement-any-set" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (The orthogonal complement of a set that is not a subspace). </span><span class="math inline">\(\mathcal{X}\)</span> in <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a> need not be a subspace.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -844,7 +850,7 @@ u_1 &amp;= u_2 \\
 &amp;= u_2\,(-2, 1).
 \end{aligned}
 \]</span></p>
-<p>That set is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>, a subspace by <a href="./linear-algebra-subspaces.html#thm-span-subspace">Theorem&nbsp;2 in Subspaces and Rank</a>, as <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a> says it must be. It contains <span class="math inline">\((-2, 1)\)</span>, the vector <a href="./linear-algebra-vectors.html#rem-orthogonal-perpendicular">Remark&nbsp;7 in Vectors</a> found perpendicular to <span class="math inline">\((1, 2)\)</span>.</p>
+<p>That set is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(-2, 1)\right\}\mathclose{}\)</span>, a subspace by <a href="./linear-algebra-subspaces.html#thm-span-subspace">Theorem&nbsp;2 in Subspaces and Rank</a>, as <a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a> says it must be. It contains <span class="math inline">\((-2, 1)\)</span>, the vector <a href="./linear-algebra-vectors.html#rem-orthogonal-perpendicular">Remark&nbsp;8 in Vectors</a> found perpendicular to <span class="math inline">\((1, 2)\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -870,7 +876,7 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
 \end{aligned}
 \]</span></p>
-<p>So <span class="math inline">\(\tilde{x} \in \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-null-space">Definition&nbsp;2 in Column Space, Null Space and Rank-Nullity</a>) exactly when <span class="math inline">\(\tilde{a}_j \cdot \tilde{x} = 0\)</span> for every column <span class="math inline">\(\tilde{a}_j\)</span>.</p>
+<p>So <span class="math inline">\(\tilde{x} \in \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-null-space">Definition&nbsp;3 in Column Space, Null Space and Rank-Nullity</a>) exactly when <span class="math inline">\(\tilde{a}_j \cdot \tilde{x} = 0\)</span> for every column <span class="math inline">\(\tilde{a}_j\)</span>.</p>
 <p><strong><span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp \subseteq \mathcal{N}({\mathbf{A}}^{\top})\)</span>.</strong> Each column <span class="math inline">\(\tilde{a}_j\)</span> is in <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), so a vector orthogonal to all of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is orthogonal to every column.</p>
 <p><strong><span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) \subseteq \mathcal{C}(\mathbf{A})^\perp\)</span>.</strong> Suppose <span class="math inline">\(\tilde{a}_j \cdot \tilde{x} = 0\)</span> for every <span class="math inline">\(j\)</span>, and take any <span class="math inline">\(\tilde{y} \in \mathcal{C}(\mathbf{A})\)</span>, so <span class="math inline">\(\tilde{y} = \mathbf{A} \tilde{z}\)</span> for some <span class="math inline">\(\tilde{z} \in \mathbb{R}^n\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>). Then</p>
 <p><span class="math display">\[
@@ -952,7 +958,7 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(}\href{#thm-complement-null-space}{\text{Theorem~7}}\text{)}
 \\
 &amp;= \operatorname{nullity}({\mathbf{A}}^{\top})
-&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~5 in Column Space, Null Space and Rank-Nullity}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#def-nullity}{\text{Definition~7 in Column Space, Null Space and Rank-Nullity}}\text{)}
 \\
 &amp;= p - \operatorname{rank}({\mathbf{A}}^{\top})
 &amp;&amp; \text{(}\href{linear-algebra-rank-nullity.qmd#thm-rank-nullity}{\text{Theorem~7 in Column Space, Null Space and Rank-Nullity}}\text{, for the } p \text{ columns of } {\mathbf{A}}^{\top} \text{)}
@@ -1114,7 +1120,7 @@ a &amp;= c \\
 \end{aligned}
 \]</span></p>
 <p><strong>Part 3.</strong> Apply parts 2 and 1 to the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\({\mathbf{A}}^{\top}\)</span>, using <span class="math inline">\({({\mathbf{A}}^{\top})}^{\top} = \mathbf{A}\)</span>: part 2 gives <span class="math inline">\(\mathcal{C}({\mathbf{A}}^{\top}) = \mathcal{N}(\mathbf{A})^\perp\)</span>, and part 1 gives <span class="math inline">\(\mathbb{R}^n = \mathcal{C}({\mathbf{A}}^{\top}) \oplus \mathcal{N}(\mathbf{A})\)</span>.</p>
-<p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;9 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;5 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
+<p><strong>Part 4.</strong> <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\dim\mathopen{}\left(\mathcal{C}({\mathbf{A}}^{\top})\right)\mathclose{} = \operatorname{rank}({\mathbf{A}}^{\top})\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-dim">Theorem&nbsp;6 in Column Space, Null Space and Rank-Nullity</a>, and that is <span class="math inline">\(r\)</span> by <a href="./linear-algebra-rank-nullity.html#thm-rank-transpose">Theorem&nbsp;9 in Column Space, Null Space and Rank-Nullity</a>. <span class="math inline">\(\mathbf{A}\)</span> has <span class="math inline">\(n\)</span> columns, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}(\mathbf{A})\right)\mathclose{} = n - r\)</span> (<a href="./linear-algebra-rank-nullity.html#def-nullity">Definition&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>, <a href="./linear-algebra-rank-nullity.html#thm-rank-nullity">Theorem&nbsp;7 in Column Space, Null Space and Rank-Nullity</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> has <span class="math inline">\(m\)</span> columns and rank <span class="math inline">\(r\)</span>, so <span class="math inline">\(\dim\mathopen{}\left(\mathcal{N}({\mathbf{A}}^{\top})\right)\mathclose{} = m - r\)</span> in the same way.</p>
 </div>
 </section>
 <section class="slide level2 smaller scrollable" id="references">
