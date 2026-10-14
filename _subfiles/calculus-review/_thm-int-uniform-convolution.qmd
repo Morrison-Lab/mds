@@ -1,0 +1,22 @@
+:::{#thm-int-uniform-convolution}
+#### Convolution of two uniform densities
+
+Let $f(x) = \indic{[0, 1]}(x)$ be the indicator of the unit interval.
+Then for every $x \in \reals$,
+
+$$
+(f * f)(x) = \int_{-\infty}^\infty f(t)f(x - t)\,dt
+= \begin{cases}
+x & \text{if } 0 \le x \le 1 \\
+2 - x & \text{if } 1 < x \le 2 \\
+0 & \text{otherwise.}
+\end{cases}
+$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-int-uniform-convolution.
+
+:::
