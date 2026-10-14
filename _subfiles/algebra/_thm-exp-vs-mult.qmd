@@ -15,6 +15,6 @@ Then $b^c = bc$ if and only if one of the following holds:
 
 ::: proof
 
-This is the solution to @exr-exp-vs-mult.
+This is the solution to @exr-exp-vs-mult, worked in @sol-exp-vs-mult.
 
 :::

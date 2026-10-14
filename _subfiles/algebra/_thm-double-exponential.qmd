@@ -11,6 +11,6 @@ Then $(a^b)^c = a^{(b^c)}$, with both sides defined, if and only if
 
 ::: proof
 
-This is the solution to @exr-double-exponential.
+This is the solution to @exr-double-exponential, worked in @sol-double-exponential.
 
 :::
