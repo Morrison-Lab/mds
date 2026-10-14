@@ -229,6 +229,46 @@ cookieconsent.run({
 })();
 </script>
 <style>
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -259,35 +299,15 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-solution.callout {
-  border-left-color: #4E342E;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -299,35 +319,15 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -937,7 +937,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 18:25:48 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 19:36:44 (PDT)</p>
     </div>
   </div>
   
@@ -964,14 +964,16 @@ window.Quarto = {
 <section id="sigma-algebras" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="sigma-algebras"><span class="header-section-number">1</span> <span class="math inline">\(\sigma\)</span>-algebras</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> (<span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-sigma-algebra" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (<span class="math inline">\(\sigma\)</span>-algebra)</strong></span> A <strong><span class="math inline">\(\sigma\)</span>-algebra</strong> on a set <span class="math inline">\(S\)</span> is a <a href="./sets-functions.html#def-collection">collection</a> <span class="math inline">\(\mathcal{S}\)</span> of <a href="./sets-functions.html#def-subset">subsets</a> of <span class="math inline">\(S\)</span> that satisfies:</p>
@@ -983,30 +985,36 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-sigma-field" class="quarto-xref">Remark&nbsp;1</a> (<span class="math inline">\(\sigma\)</span>-field)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-sigma-field" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (<span class="math inline">\(\sigma\)</span>-field). </span>Other sources call a <span class="math inline">\(\sigma\)</span>-algebra a <strong><span class="math inline">\(\sigma\)</span>-field</strong> (see <a href="https://en.wikipedia.org/wiki/%CE%A3-algebra">Wikipedia: <span class="math inline">\(\sigma\)</span>-algebra</a>). For example, <span class="citation" data-cites="billingsley1995probability">Billingsley (<a href="#ref-billingsley1995probability" role="doc-biblioref">1995</a>)</span> uses “<span class="math inline">\(\sigma\)</span>-field”. The two names mean the same thing. Casella and Berger call it a <strong>Borel field</strong> <span class="citation" data-cites="CaseBerg01">(<a href="#ref-CaseBerg01" role="doc-biblioref">Casella and Berger 2002</a>, Def. 1.2.1)</span>. That is a different use of “Borel” from the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> on <span class="math inline">\(\mathbb{R}\)</span>, which is one particular <span class="math inline">\(\sigma\)</span>-algebra.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a> (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-sigma-algebra" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (<span class="math inline">\(\sigma\)</span>-algebras for die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the collection of all subsets of <span class="math inline">\(D\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span>, since complements and unions of subsets of <span class="math inline">\(D\)</span> are again subsets of <span class="math inline">\(D\)</span>. So is the smaller collection</p>
@@ -1015,45 +1023,54 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-not-sigma-algebra" class="quarto-xref">Example&nbsp;2</a> (A collection that is not a <span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-not-sigma-algebra" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (A collection that is not a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The collection <span class="math inline">\(\mathopen{}\left\{\emptyset, \mathopen{}\left\{1\right\}\mathclose{}, D\right\}\mathclose{}\)</span> is not a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>: it contains <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> but not its complement <span class="math inline">\(D \setminus \mathopen{}\left\{1\right\}\mathclose{} = \mathopen{}\left\{2, 3, 4, 5, 6\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-closed-under" class="quarto-xref">Definition&nbsp;2</a> (Closed under an operation (closure))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-closed-under" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Closed under an operation (closure))</strong></span> A set <span class="math inline">\(A\)</span> is <strong>closed under</strong> an operation, such as addition of numbers or union of sets, if applying the operation to elements of <span class="math inline">\(A\)</span> always gives an element of <span class="math inline">\(A\)</span>. This property is called <strong>closure</strong> under the operation.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-closed-under" class="quarto-xref">Example&nbsp;3</a> (Closed and not closed)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-closed-under" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Closed and not closed)</strong></span> &nbsp;</p>
@@ -1065,15 +1082,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#thm-sigma-algebra-closure" class="quarto-xref">Theorem&nbsp;1</a> (Closure properties of a <span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-sigma-algebra-closure" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Closure properties of a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> If <span class="math inline">\(\mathcal{S}\)</span> is a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>, then <span class="math inline">\(\mathcal{S}\)</span> contains:</p>
@@ -1083,6 +1103,7 @@ window.Quarto = {
 <li>the intersection <span class="math inline">\(\bigcap_{i=1}^{\infty} A_i\)</span> of any sequence <span class="math inline">\(A_1, A_2, \ldots\)</span> of sets in <span class="math inline">\(\mathcal{S}\)</span>.</li>
 </ul>
 <p>So <span class="math inline">\(\mathcal{S}\)</span> is <a href="#def-closed-under">closed under</a> finite unions and under intersections of sequences of its sets.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1135,17 +1156,20 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a> (All subsets form a <span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-power-set-sigma-algebra" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (All subsets form a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> For any set <span class="math inline">\(S\)</span>, the collection of all subsets of <span class="math inline">\(S\)</span> is a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on <span class="math inline">\(S\)</span>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1173,17 +1197,20 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#thm-sigma-algebra-intersection" class="quarto-xref">Theorem&nbsp;3</a> (An intersection of <span class="math inline">\(\sigma\)</span>-algebras is a <span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-sigma-algebra-intersection" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (An intersection of <span class="math inline">\(\sigma\)</span>-algebras is a <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\(\mathcal{S}_j\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span> for each <span class="math inline">\(j\)</span> in a nonempty set of indices <span class="math inline">\(J\)</span>. Then their <a href="./sets-functions.html#def-intersection">intersection</a> <span class="math inline">\(\bigcap_{j \in J} \mathcal{S}_j\)</span>, the collection of subsets of <span class="math inline">\(S\)</span> that are in every <span class="math inline">\(\mathcal{S}_j\)</span>, is a <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1211,74 +1238,88 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 </div>
 </div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-generated-sigma-algebra" class="quarto-xref">Definition&nbsp;3</a> (<span class="math inline">\(\sigma\)</span>-algebra generated by a collection)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-generated-sigma-algebra" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (<span class="math inline">\(\sigma\)</span>-algebra generated by a collection)</strong></span> Let <span class="math inline">\(\mathcal{C}\)</span> be a <a href="./sets-functions.html#def-collection">collection</a> of subsets of a set <span class="math inline">\(S\)</span>. The <strong><span class="math inline">\(\sigma\)</span>-algebra generated by</strong> <span class="math inline">\(\mathcal{C}\)</span>, written <span class="math inline">\(\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\)</span>, is the intersection of all the <span class="math inline">\(\sigma\)</span>-algebras on <span class="math inline">\(S\)</span> that contain every set in <span class="math inline">\(\mathcal{C}\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-generated-sigma-algebra-smallest" class="quarto-xref">Remark&nbsp;2</a> (The smallest <span class="math inline">\(\sigma\)</span>-algebra containing <span class="math inline">\(\mathcal{C}\)</span>)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-generated-sigma-algebra-smallest" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (The smallest <span class="math inline">\(\sigma\)</span>-algebra containing <span class="math inline">\(\mathcal{C}\)</span>). </span><span class="math inline">\(\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\)</span> is a <span class="math inline">\(\sigma\)</span>-algebra by <a href="#thm-sigma-algebra-intersection" class="quarto-xref">Theorem&nbsp;3</a> (the collection of all subsets of <span class="math inline">\(S\)</span> is one of the <span class="math inline">\(\sigma\)</span>-algebras intersected, by <a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>, so there is at least one). It contains every set in <span class="math inline">\(\mathcal{C}\)</span>, and it is contained in every other <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span> that does, so it is the smallest <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S\)</span> that contains <span class="math inline">\(\mathcal{C}\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-generated-sigma-algebra" class="quarto-xref">Example&nbsp;4</a> (The <span class="math inline">\(\sigma\)</span>-algebra generated by the even rolls)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-generated-sigma-algebra" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (The <span class="math inline">\(\sigma\)</span>-algebra generated by the even rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, let <span class="math inline">\(\mathcal{C}= \mathopen{}\left\{\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\right\}\mathclose{}\)</span>. Every <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(D\)</span> that contains <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> must also contain <span class="math inline">\(D\)</span>, the complement <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, and <span class="math inline">\(\emptyset\)</span> (<a href="#def-sigma-algebra" class="quarto-xref">Definition&nbsp;1</a> and <a href="#thm-sigma-algebra-closure" class="quarto-xref">Theorem&nbsp;1</a>). The collection <span class="math inline">\(\mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\)</span> is already a <span class="math inline">\(\sigma\)</span>-algebra (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), so it is <span class="math inline">\(\sigma\mathopen{}\left(\mathcal{C}\right)\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-borel-sigma-algebra" class="quarto-xref">Definition&nbsp;4</a> (Borel <span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-borel-sigma-algebra" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Borel <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> The <strong>Borel <span class="math inline">\(\sigma\)</span>-algebra</strong> on <span class="math inline">\(\mathbb{R}\)</span>, written <span class="math inline">\(\mathcal{B}\)</span>, is the <span class="math inline">\(\sigma\)</span>-algebra generated by (<a href="#def-generated-sigma-algebra" class="quarto-xref">Definition&nbsp;3</a>) the collection of all <a href="./sets-functions.html#def-interval">intervals</a>. Its sets are called <strong>Borel sets</strong>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-borel-sigma-algebra" class="quarto-xref">Example&nbsp;5</a> (Some Borel sets)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-borel-sigma-algebra" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Some Borel sets)</strong></span> &nbsp;</p>
@@ -1291,18 +1332,21 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="pairwise-disjoint-sets" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="pairwise-disjoint-sets"><span class="header-section-number">2</span> Pairwise disjoint sets</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-pairwise-disjoint" class="quarto-xref">Definition&nbsp;5</a> (Pairwise disjoint sets (disjoint, mutually disjoint))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-pairwise-disjoint" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Pairwise disjoint sets (disjoint, mutually disjoint))</strong></span> Finitely or countably many sets <span class="math inline">\(A_1, A_2, \ldots\)</span> are <strong>pairwise disjoint</strong> (also called <strong>disjoint</strong> or <strong>mutually disjoint</strong>) when no two of them share an element:</p>
@@ -1310,18 +1354,22 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;6</a> (Low and high die rolls)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-pairwise-disjoint" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Low and high die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), the sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint: no roll is in both. The sets <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> are not, because <span class="math inline">\(2\)</span> is in both.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1329,14 +1377,16 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 <section id="infinite-sums" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="infinite-sums"><span class="header-section-number">3</span> Infinite sums</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-non-decreasing" class="quarto-xref">Definition&nbsp;6</a> (Non-decreasing sequence)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-non-decreasing" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Non-decreasing sequence)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\(a_1, a_2, \ldots\)</span> of real numbers or of <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a> is <strong>non-decreasing</strong> if each term is at least as large as the one before it:</p>
@@ -1344,15 +1394,18 @@ S \setminus \bigcup_{i=1}^{\infty} (S \setminus A_i)
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-non-decreasing" class="quarto-xref">Example&nbsp;7</a> (Non-decreasing and not)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-non-decreasing" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (Non-decreasing and not)</strong></span> &nbsp;</p>
@@ -1371,15 +1424,18 @@ a_2 &amp;= \frac{1}{2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;7</a> (Partial sum)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-partial-sum" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Partial sum)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a <a href="./sets-functions.html#def-sequence">sequence</a> of real numbers or of <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>. For each <span class="math inline">\(n \in \mathbb{N}\)</span>, its <span class="math inline">\(n\)</span>th <strong>partial sum</strong> is the <a href="./algebra-sums.html#def-summation">sum</a> of its first <span class="math inline">\(n\)</span> terms:</p>
@@ -1387,15 +1443,18 @@ a_2 &amp;= \frac{1}{2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-partial-sum" class="quarto-xref">Example&nbsp;8</a> (Partial sums of halves)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-partial-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (Partial sums of halves)</strong></span> For <span class="math inline">\(a_i = 1/2^i\)</span>, the sequence <span class="math inline">\(\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots\)</span>, the first three partial sums are <span class="math inline">\(s_1 = \frac{1}{2}\)</span>,</p>
@@ -1416,15 +1475,18 @@ s_3 &amp;= \frac{3}{4} + \frac{1}{8} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-infinite-sum" class="quarto-xref">Definition&nbsp;8</a> (Infinite sum (series))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-infinite-sum" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Infinite sum (series))</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be a sequence in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> (<a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;7</a>). The <strong>infinite sum</strong> (also called a <strong>series</strong>) <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> is the limit of the partial sums:</p>
@@ -1433,15 +1495,18 @@ s_3 &amp;= \frac{3}{4} + \frac{1}{8} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-infinite-sum" class="quarto-xref">Example&nbsp;9</a> (A finite and an infinite sum)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-infinite-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (A finite and an infinite sum)</strong></span> &nbsp;</p>
@@ -1452,18 +1517,22 @@ s_3 &amp;= \frac{3}{4} + \frac{1}{8} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a> (Sums of non-negative terms)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="lem-nonneg-series" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 1 (Sums of non-negative terms)</strong></span> Let <span class="math inline">\(a_1, a_2, \ldots\)</span> be values in <span class="math inline">\([0, \infty]\)</span>, with partial sums <span class="math inline">\(s_n\)</span> (<a href="#def-partial-sum" class="quarto-xref">Definition&nbsp;7</a>), where <span class="math inline">\(x + \infty = \infty\)</span> for every <span class="math inline">\(x\)</span> in <span class="math inline">\([0, \infty]\)</span>. Then the partial sums are <a href="#def-non-decreasing">non-decreasing</a>, <span class="math inline">\(s_1 \le s_2 \le \cdots\)</span>, so their <a href="./algebra-exponentials.html#def-sequence-limit">limit</a>, the infinite sum <span class="math inline">\(\sum_{i=1}^{\infty} a_i\)</span> (<a href="#def-infinite-sum" class="quarto-xref">Definition&nbsp;8</a>), always exists, and it is either a finite number or <span class="math inline">\(\infty\)</span>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1499,14 +1568,16 @@ s_{n+1}
 <section id="additivity" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="additivity"><span class="header-section-number">4</span> Additivity</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-finite-additivity" class="quarto-xref">Definition&nbsp;9</a> (Finite additivity)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-finite-additivity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Finite additivity)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span>, with values in the <a href="./sets-functions.html#def-extended-nonneg-reals">extended non-negative reals</a>, is <strong>finitely additive</strong> if, for every finite collection of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, \ldots, A_n\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
@@ -1514,15 +1585,18 @@ s_{n+1}
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a> (Counting elements is finitely additive)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-finite-additivity" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (Counting elements is finitely additive)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span>, the number of elements of <span class="math inline">\(A\)</span> (<a href="./sets-functions.html#def-finite-set">cardinality</a>), for each set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>). The sets <span class="math inline">\(\mathopen{}\left\{1, 2\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{5, 6\right\}\mathclose{}\)</span> are pairwise disjoint (<a href="#exm-pairwise-disjoint" class="quarto-xref">Example&nbsp;6</a>), and:</p>
@@ -1543,15 +1617,18 @@ s_{n+1}
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-not-finitely-additive" class="quarto-xref">Example&nbsp;11</a> (Squaring the count is not finitely additive)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-not-finitely-additive" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Squaring the count is not finitely additive)</strong></span> On the same <span class="math inline">\(\sigma\)</span>-algebra, let <span class="math inline">\(\nu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}^2\)</span>. The sets <span class="math inline">\(\mathopen{}\left\{1\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathopen{}\left\{2\right\}\mathclose{}\)</span> are pairwise disjoint, but</p>
@@ -1573,15 +1650,18 @@ s_{n+1}
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-countable-additivity" class="quarto-xref">Definition&nbsp;10</a> (Countable additivity (<span class="math inline">\(\sigma\)</span>-additivity))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-countable-additivity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Countable additivity (<span class="math inline">\(\sigma\)</span>-additivity))</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> on a set <span class="math inline">\(S\)</span>. A function <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span> is <strong>countably additive</strong> (also called <strong><span class="math inline">\(\sigma\)</span>-additive</strong>) if, for every sequence of <a href="#def-pairwise-disjoint">pairwise disjoint</a> sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, the value of their union is the sum of their values:</p>
@@ -1589,48 +1669,58 @@ s_{n+1}
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> (Counting elements is countably additive)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-countable-additivity" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Counting elements is countably additive)</strong></span> For the counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a>, take any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>. No two of them share an element, and <span class="math inline">\(D\)</span> has only six elements, so at most six of the <span class="math inline">\(A_i\)</span> contain any elements; the rest are <span class="math inline">\(\emptyset\)</span>, with <span class="math inline">\(\mu(\emptyset) = 0\)</span>. The infinite sum therefore has at most six nonzero terms, and finite additivity (<a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a>) shows that those terms add up to <span class="math inline">\(\mu\)</span> of the union. So <span class="math inline">\(\mu\)</span> is countably additive.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-countable-additivity-sum-exists" class="quarto-xref">Remark&nbsp;3</a> (The sum in countable additivity always has a value)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-countable-additivity-sum-exists" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (The sum in countable additivity always has a value). </span>By <a href="#lem-nonneg-series" class="quarto-xref">Lemma&nbsp;1</a>, the right-hand side of the equation in <a href="#def-countable-additivity" class="quarto-xref">Definition&nbsp;10</a>, <span class="math inline">\(\sum_{i=1}^{\infty} \mu(A_i)\)</span>, always has a value, because each <span class="math inline">\(\mu(A_i)\)</span> is in <span class="math inline">\([0, \infty]\)</span>. For example, if <span class="math inline">\(\mu(A_i) = 1/2^i\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = 1 - 1/2^n\)</span>, and the sum is <span class="math inline">\(1\)</span>; if <span class="math inline">\(\mu(A_i) = 1\)</span> for each <span class="math inline">\(i\)</span>, the partial sums are <span class="math inline">\(s_n = n\)</span>, and the sum is <span class="math inline">\(\infty\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> (Countable additivity and the empty set)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="lem-countable-additivity-empty" class="theorem lemma">
 <p><span class="theorem-title"><strong>Lemma 2 (Countable additivity and the empty set)</strong></span> If <span class="math inline">\(\mu\)</span> is a <a href="#def-countable-additivity">countably additive</a> function on a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\)</span>, then <span class="math inline">\(\mu(\emptyset) = 0\)</span> or <span class="math inline">\(\mu(\emptyset) = \infty\)</span>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1663,14 +1753,16 @@ s_{n+1}
 </div>
 </div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;13</a> (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-empty-set-zero" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = 0\)</span>)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a> is countably additive, and:</p>
@@ -1686,15 +1778,18 @@ s_{n+1}
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;14</a> (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-empty-set-infinity" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (A countably additive function with <span class="math inline">\(\mu(\emptyset) = \infty\)</span>)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span> (<a href="./sets-functions.html#exm-set">sets of die rolls</a>), let <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\infty\)</span> for every set <span class="math inline">\(A\)</span> in the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), including <span class="math inline">\(A = \emptyset\)</span>. For any sequence of pairwise disjoint sets <span class="math inline">\(A_1, A_2, \ldots\)</span>, the left-hand side of the countable additivity equation is:</p>
@@ -1719,33 +1814,40 @@ s_{n+1}
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-empty-set-requirement" class="quarto-xref">Remark&nbsp;4</a> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-empty-set-requirement" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (<span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement). </span><a href="#exm-empty-set-zero" class="quarto-xref">Example&nbsp;13</a> and <a href="#exm-empty-set-infinity" class="quarto-xref">Example&nbsp;14</a> show that both values allowed by <a href="#lem-countable-additivity-empty" class="quarto-xref">Lemma&nbsp;2</a> occur for countably additive functions. So <span class="math inline">\(\mu(\emptyset) = 0\)</span> is an extra requirement, not a consequence of countable additivity.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;4</a> (Countable additivity implies finite additivity)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-countable-implies-finite" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (Countable additivity implies finite additivity)</strong></span> If <span class="math inline">\(\mu\)</span> is a <a href="#def-countable-additivity">countably additive</a> function on a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\)</span>, and <span class="math inline">\(\mu(\emptyset) = 0\)</span>, then <span class="math inline">\(\mu\)</span> is <a href="#def-finite-additivity">finitely additive</a>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1789,14 +1891,16 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;15</a> (Finitely additive but not countably additive)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-finite-not-countable" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Finitely additive but not countably additive)</strong></span> Let <span class="math inline">\(S = \mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, with the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span> (<a href="#thm-power-set-sigma-algebra" class="quarto-xref">Theorem&nbsp;2</a>), and define:</p>
@@ -1853,18 +1957,22 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-finite-not-countable-converse" class="quarto-xref">Remark&nbsp;5</a> (Finite additivity does not imply countable additivity)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-finite-not-countable-converse" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (Finite additivity does not imply countable additivity). </span><a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;15</a> shows that the <a href="./proof-writing.html#def-converse">converse</a> of <a href="#thm-countable-implies-finite" class="quarto-xref">Theorem&nbsp;4</a> fails, even when <span class="math inline">\(\mu(\emptyset) = 0\)</span>: a finitely additive function need not be countably additive (see <a href="https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive">Wikipedia: Sigma-additive set function, “An additive function which is not <span class="math inline">\(\sigma\)</span>-additive”</a>). The function <span class="math inline">\(\mu\)</span> in <a href="#exm-finite-not-countable" class="quarto-xref">Example&nbsp;15</a> has <span class="math inline">\(\mu(\emptyset) = 0\)</span>, because <span class="math inline">\(\emptyset\)</span> is finite.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1872,14 +1980,16 @@ A_{n+1} &amp;= A_{n+2} \\
 <section id="measures" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="measures"><span class="header-section-number">5</span> Measures</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-measure" class="quarto-xref">Definition&nbsp;11</a> (Measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-measure" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11 (Measure)</strong></span> A <strong>measure</strong> on a set <span class="math inline">\(S\)</span> with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\)</span> is a function <span class="math inline">\(\mu: \mathcal{S}\to [0, \infty]\)</span> that satisfies:</p>
@@ -1890,33 +2000,40 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> (Counting elements is a measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Counting elements is a measure)</strong></span> The counting function <span class="math inline">\(\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-finite-additivity" class="quarto-xref">Example&nbsp;10</a>, defined on the <span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(D\)</span> (<a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>), takes values in <span class="math inline">\([0, \infty]\)</span>, is countably additive (<a href="#exm-countable-additivity" class="quarto-xref">Example&nbsp;12</a>), and gives <span class="math inline">\(\mu(\emptyset) = 0\)</span>, so it is a measure.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-cor no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Cor</span><a href="#cor-measure-finitely-additive" class="quarto-xref">Corollary&nbsp;1</a> (Measures are finitely additive)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-45" class="callout-45-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="cor-measure-finitely-additive" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (Measures are finitely additive)</strong></span> Every <a href="#def-measure">measure</a> is <a href="#def-finite-additivity">finitely additive</a>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1939,14 +2056,16 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;12</a> (Counting measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-counting-measure" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Counting measure)</strong></span> The <strong>counting measure</strong> on a set <span class="math inline">\(S\)</span> is the <a href="#def-measure">measure</a> on the <a href="#thm-power-set-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra of all subsets of <span class="math inline">\(S\)</span></a> that assigns each finite set its number of elements, and each infinite set the value <span class="math inline">\(\infty\)</span>:</p>
@@ -1959,15 +2078,18 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-counting-measure" class="quarto-xref">Example&nbsp;17</a> (Counting measure on the non-negative integers)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-counting-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Counting measure on the non-negative integers)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the <a href="./notation.html#def-nonnegative-integers">non-negative integers</a> <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span>, <span class="math inline">\(\mu(\mathopen{}\left\{0, 1, 2\right\}\mathclose{}) = 3\)</span>, and the set of even numbers has <span class="math inline">\(\mu(\mathopen{}\left\{0, 2, 4, \ldots\right\}\mathclose{}) = \infty\)</span>. The even numbers are the union of the pairwise disjoint sets <span class="math inline">\(\mathopen{}\left\{0\right\}\mathclose{}, \mathopen{}\left\{2\right\}\mathclose{}, \mathopen{}\left\{4\right\}\mathclose{}, \ldots\)</span>, and countable additivity agrees:</p>
@@ -1980,30 +2102,36 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-measurable-space" class="quarto-xref">Definition&nbsp;13</a> (Measurable space)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-measurable-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 13 (Measurable space)</strong></span> A <strong>measurable space</strong> <span class="math inline">\((S, \mathcal{S})\)</span> is a set <span class="math inline">\(S\)</span> together with a <a href="#def-sigma-algebra"><span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\)</span> on <span class="math inline">\(S\)</span>; the sets in <span class="math inline">\(\mathcal{S}\)</span> are its <strong>measurable sets</strong>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-measurable-space" class="quarto-xref">Example&nbsp;18</a> (Measurable spaces of die rolls)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-measurable-space" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Measurable spaces of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>:</p>
@@ -2014,45 +2142,54 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-measure-space" class="quarto-xref">Definition&nbsp;14</a> (Measure space)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-51" class="callout-51-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-measure-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Measure space)</strong></span> A <strong>measure space</strong> <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> is a <a href="#def-measurable-space">measurable space</a> together with a <a href="#def-measure">measure</a> <span class="math inline">\(\mu\)</span> on <span class="math inline">\(\mathcal{S}\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-measure-space" class="quarto-xref">Example&nbsp;19</a> (Measure space of die rolls)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-52" class="callout-52-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-measure-space" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (Measure space of die rolls)</strong></span> For the die rolls <span class="math inline">\(D = \mathopen{}\left\{1, 2, 3, 4, 5, 6\right\}\mathclose{}\)</span>, adding the counting function <span class="math inline">\(\mu(A) = \mathopen{}\left|A\right|\mathclose{}\)</span> of <a href="#exm-measure" class="quarto-xref">Example&nbsp;16</a> to the <a href="#def-measurable-space">measurable space</a> <span class="math inline">\((D, \mathcal{S})\)</span> of <a href="#exm-measurable-space" class="quarto-xref">Example&nbsp;18</a> makes <span class="math inline">\((D, \mathcal{S}, \mu)\)</span> a measure space.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a> (Lebesgue measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-lebesgue-measure" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Lebesgue measure)</strong></span> <strong>Lebesgue measure</strong> on <span class="math inline">\(\mathbb{R}\)</span> is the <a href="#def-measure">measure</a> <span class="math inline">\(\lambda\)</span> on the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{B}\)</span> that assigns each <a href="./sets-functions.html#def-interval">interval</a> its length: for real numbers <span class="math inline">\(a \le b\)</span>,</p>
@@ -2070,30 +2207,36 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-lebesgue-measure-exists" class="quarto-xref">Remark&nbsp;6</a> (Lebesgue measure exists)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-54" class="callout-54-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-lebesgue-measure-exists" class="proof remark">
 <p><span class="proof-title"><em>Remark 6</em> (Lebesgue measure exists). </span>Exactly one measure on <span class="math inline">\(\mathcal{B}\)</span> assigns every interval its length; constructing it takes more measure theory than these notes cover (see <a href="https://en.wikipedia.org/wiki/Lebesgue_measure">Wikipedia: Lebesgue measure</a>, which also extends <span class="math inline">\(\lambda\)</span> to a larger <span class="math inline">\(\sigma\)</span>-algebra, the Lebesgue-measurable sets, with the same values on Borel sets).</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a> (Lengths of some Borel sets)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-lebesgue-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (Lengths of some Borel sets)</strong></span> &nbsp;</p>
@@ -2131,45 +2274,54 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-measure-size" class="quarto-xref">Remark&nbsp;7</a> (Measures generalize size)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-56" class="callout-56-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-measure-size" class="proof remark">
 <p><span class="proof-title"><em>Remark 7</em> (Measures generalize size). </span>A <a href="#def-measure">measure</a> generalizes size: it can measure how many elements a set has, as in <a href="#def-counting-measure" class="quarto-xref">Definition&nbsp;12</a>, or how long a set of real numbers is, as Lebesgue measure (<a href="#def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a>) does, assigning each <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([a, b]\)</span> its length <span class="math inline">\(b - a\)</span>. For example, the counting measure on <span class="math inline">\(\mathopen{}\left\{0, 1, 2, \ldots\right\}\mathclose{}\)</span> gives <span class="math inline">\(\mathopen{}\left\{2, 3, 4, 5\right\}\mathclose{}\)</span> the value <span class="math inline">\(4\)</span>, while the Lebesgue measure of the interval <span class="math inline">\([2, 5]\)</span> is <span class="math inline">\(5 - 2 = 3\)</span>. Both can serve as the measures <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> in the <a href="./calculus-double-integrals.html#thm-tonelli-measure">Tonelli</a> and <a href="./calculus-double-integrals.html#thm-fubini-measure">Fubini</a> theorems.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-measure-zero" class="quarto-xref">Definition&nbsp;16</a> (Measure zero (null set))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-57" class="callout-57-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-measure-zero" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Measure zero (null set))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A set <span class="math inline">\(A \in \mathcal{S}\)</span> has <strong>measure zero</strong> (also called a <strong>null set</strong> for <span class="math inline">\(\mu\)</span>) if <span class="math inline">\(\mu(A) = 0\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-measure-zero" class="quarto-xref">Example&nbsp;21</a> (Sets of measure zero)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-58" class="callout-58-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-measure-zero" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Sets of measure zero)</strong></span> &nbsp;</p>
@@ -2180,30 +2332,36 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-almost-everywhere" class="quarto-xref">Definition&nbsp;17</a> (Almost everywhere (<span class="math inline">\(\mu\)</span>-almost everywhere, <span class="math inline">\(\mu\)</span>-a.e.))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-59" class="callout-59-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-almost-everywhere" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 17 (Almost everywhere (<span class="math inline">\(\mu\)</span>-almost everywhere, <span class="math inline">\(\mu\)</span>-a.e.))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A statement about the elements of <span class="math inline">\(S\)</span> holds <strong><span class="math inline">\(\mu\)</span>-almost everywhere</strong> (written <strong><span class="math inline">\(\mu\)</span>-a.e.</strong>, or <strong>almost everywhere</strong> when <span class="math inline">\(\mu\)</span> is clear from context) if the set of elements for which it fails is a <a href="./sets-functions.html#def-subset">subset</a> of a set of <a href="#def-measure-zero">measure zero</a>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-almost-everywhere" class="quarto-xref">Example&nbsp;22</a> (Non-negative except on the integers)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-60" class="callout-60-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-almost-everywhere" class="theorem example">
 <p><span class="theorem-title"><strong>Example 22 (Non-negative except on the integers)</strong></span> Let <span class="math inline">\(g : \mathbb{R}\to \mathbb{R}\)</span> with <span class="math inline">\(g(x) = -1\)</span> when <span class="math inline">\(x\)</span> is an integer and <span class="math inline">\(g(x) = x^2\)</span> otherwise. The statement “<span class="math inline">\(g(x) \ge 0\)</span>” fails exactly for <span class="math inline">\(x \in \mathbb{Z}\)</span>, and <span class="math inline">\(\lambda(\mathbb{Z}) = 0\)</span> (<a href="#exm-lebesgue-measure" class="quarto-xref">Example&nbsp;20</a>), so <span class="math inline">\(g \ge 0\)</span> holds <span class="math inline">\(\lambda\)</span>-almost everywhere, though not everywhere.</p>
@@ -2211,30 +2369,36 @@ A_{n+1} &amp;= A_{n+2} \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-sigma-finite" class="quarto-xref">Definition&nbsp;18</a> (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-61" class="callout-61-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-sigma-finite" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. The measure <span class="math inline">\(\mu\)</span> is <strong>finite</strong> if <span class="math inline">\(\mu(S) &lt; \infty\)</span>. It is <strong><span class="math inline">\(\sigma\)</span>-finite</strong> if <span class="math inline">\(S\)</span> is the union <span class="math inline">\(\bigcup_{i=1}^{\infty} A_i\)</span> of a sequence of sets <span class="math inline">\(A_1, A_2, \ldots\)</span> in <span class="math inline">\(\mathcal{S}\)</span> with <span class="math inline">\(\mu(A_i) &lt; \infty\)</span> for every <span class="math inline">\(i\)</span>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-sigma-finite" class="quarto-xref">Example&nbsp;23</a> (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-62" class="callout-62-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-sigma-finite" class="theorem example">
 <p><span class="theorem-title"><strong>Example 23 (Finite and <span class="math inline">\(\sigma\)</span>-finite measures)</strong></span> &nbsp;</p>
@@ -2255,18 +2419,21 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="probability-measures" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="probability-measures"><span class="header-section-number">6</span> Probability measures</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-probability-measure" class="quarto-xref">Definition&nbsp;19</a> (Probability measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-63" class="callout-63-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-probability-measure" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 19 (Probability measure)</strong></span> A <strong>probability measure</strong> on a <a href="#def-measurable-space">measurable space</a> <span class="math inline">\((\Omega, \mathcal{F})\)</span> is a <a href="#def-measure">measure</a> <span class="math inline">\(\operatorname{P}\)</span> on <span class="math inline">\(\mathcal{F}\)</span> that gives the whole set <span class="math inline">\(\Omega\)</span> the value <span class="math inline">\(1\)</span>:</p>
@@ -2275,15 +2442,18 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-64-contents" aria-controls="callout-64" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-probability-measure" class="quarto-xref">Example&nbsp;24</a> (A fair die, and the unit interval)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-64" class="callout-64-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-probability-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 24 (A fair die, and the unit interval)</strong></span> &nbsp;</p>
@@ -2315,18 +2485,22 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-65-contents" aria-controls="callout-65" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-mutually-exclusive" class="quarto-xref">Remark&nbsp;8</a> (Mutually exclusive events)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-65" class="callout-65-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-mutually-exclusive" class="proof remark">
 <p><span class="proof-title"><em>Remark 8</em> (Mutually exclusive events). </span>In probability, <a href="#def-pairwise-disjoint">pairwise disjoint</a> <a href="#def-probability-measure">events</a> are usually called <strong>mutually exclusive</strong>. For example, for one roll of a six-sided die, the events “the roll is <a href="./notation.html#def-even-odd">even</a>”, <span class="math inline">\(\mathopen{}\left\{2, 4, 6\right\}\mathclose{}\)</span>, and “the roll is odd”, <span class="math inline">\(\mathopen{}\left\{1, 3, 5\right\}\mathclose{}\)</span>, are mutually exclusive: no roll is both even and odd.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2334,14 +2508,16 @@ A_2 &amp;= A_3 \\
 <section id="measurable-functions-and-integrals" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="measurable-functions-and-integrals"><span class="header-section-number">7</span> Measurable functions and integrals</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-66-contents" aria-controls="callout-66" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a> (Measurable function)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-66" class="callout-66-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-measurable-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 20 (Measurable function)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> be a <a href="#def-measurable-space">measurable space</a>. A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>measurable</strong> (with respect to <span class="math inline">\(\mathcal{S}\)</span>) if, for every real number <span class="math inline">\(c\)</span>, the set of elements where <span class="math inline">\(f\)</span> is at most <span class="math inline">\(c\)</span> is measurable:</p>
@@ -2349,30 +2525,36 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-67-contents" aria-controls="callout-67" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-measurable-function-general" class="quarto-xref">Remark&nbsp;9</a> (Measurable functions in general)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-67" class="callout-67-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-measurable-function-general" class="proof remark">
 <p><span class="proof-title"><em>Remark 9</em> (Measurable functions in general). </span>Other sources define a function <span class="math inline">\(f : S \to T\)</span> between measurable spaces <span class="math inline">\((S, \mathcal{S})\)</span> and <span class="math inline">\((T, \mathcal{T})\)</span> to be measurable when <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \in B\right\}\mathclose{} \in \mathcal{S}\)</span> for every <span class="math inline">\(B \in \mathcal{T}\)</span>. For <span class="math inline">\(T = \mathbb{R}\)</span> with the <a href="#def-borel-sigma-algebra">Borel <span class="math inline">\(\sigma\)</span>-algebra</a>, that definition is equivalent to <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a> (see <a href="https://en.wikipedia.org/wiki/Measurable_function">Wikipedia: Measurable function</a>). For example, with <span class="math inline">\(B = (-\infty, c]\)</span>, the general definition requires <span class="math inline">\(\mathopen{}\left\{s \in S : f(s) \le c\right\}\mathclose{} \in \mathcal{S}\)</span>, which is the condition in <a href="#def-measurable-function" class="quarto-xref">Definition&nbsp;20</a>.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-68-contents" aria-controls="callout-68" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-measurable-function" class="quarto-xref">Example&nbsp;25</a> (Measurable and not measurable)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-68" class="callout-68-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-measurable-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 25 (Measurable and not measurable)</strong></span> On the die rolls <span class="math inline">\(D\)</span>, take the <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\mathcal{S}= \mathopen{}\left\{\emptyset, \mathopen{}\left\{2, 4, 6\right\}\mathclose{}, \mathopen{}\left\{1, 3, 5\right\}\mathclose{}, D\right\}\mathclose{}\)</span> of <a href="#exm-sigma-algebra" class="quarto-xref">Example&nbsp;1</a>.</p>
@@ -2384,15 +2566,18 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-69-contents" aria-controls="callout-69" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> (Integral of a non-negative function)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-69" class="callout-69-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-integral-nonneg" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 21 (Integral of a non-negative function)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to [0, \infty)\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>integral</strong> of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(\mu\)</span> is</p>
@@ -2405,30 +2590,36 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-70-contents" aria-controls="callout-70" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-integral-nonneg-lower-sums" class="quarto-xref">Remark&nbsp;10</a> (Each sum is a lower estimate)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-70" class="callout-70-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-integral-nonneg-lower-sums" class="proof remark">
 <p><span class="proof-title"><em>Remark 10</em> (Each sum is a lower estimate). </span>Each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> splits <span class="math inline">\(S\)</span> into pieces and weights each piece <span class="math inline">\(A_i\)</span> by the smallest value <span class="math inline">\(f\)</span> approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval <span class="math inline">\([a, b]\)</span> and a function <span class="math inline">\(f \ge 0\)</span> that has a <a href="./calculus-integration.html#def-riemann-integral">Riemann integral</a> on <span class="math inline">\([a, b]\)</span>, the two integrals agree: <span class="math inline">\(\int_{[a, b]} f \, d\lambda= \int_a^b f(x) \, dx\)</span> (see <a href="https://en.wikipedia.org/wiki/Lebesgue_integral">Wikipedia: Lebesgue integral</a>).</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-71-contents" aria-controls="callout-71" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-integral-nonneg" class="quarto-xref">Example&nbsp;26</a> (Integrals with respect to counting measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-71" class="callout-71-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-integral-nonneg" class="theorem example">
 <p><span class="theorem-title"><strong>Example 26 (Integrals with respect to counting measure)</strong></span> Let <span class="math inline">\(\mu\)</span> be the counting measure on the die rolls <span class="math inline">\(D\)</span>, and let <span class="math inline">\(g : D \to [0, \infty)\)</span>. Every function on <span class="math inline">\(D\)</span> is measurable (<a href="#exm-measurable-function" class="quarto-xref">Example&nbsp;25</a>).</p>
@@ -2462,15 +2653,18 @@ A_2 &amp;= A_3 \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-72-contents" aria-controls="callout-72" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-integral" class="quarto-xref">Definition&nbsp;22</a> (Integral of a real-valued function)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-72" class="callout-72-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-integral" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 22 (Integral of a real-valued function)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(f : S \to \mathbb{R}\)</span> be <a href="#def-measurable-function">measurable</a>. The <strong>positive part</strong> and <strong>negative part</strong> of <span class="math inline">\(f\)</span> are the non-negative functions</p>
@@ -2487,15 +2681,18 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-73-contents" aria-controls="callout-73" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-integral" class="quarto-xref">Example&nbsp;27</a> (An integral with positive and negative parts)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-73" class="callout-73-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-integral" class="theorem example">
 <p><span class="theorem-title"><strong>Example 27 (An integral with positive and negative parts)</strong></span> For the counting measure <span class="math inline">\(\mu\)</span> on the die rolls <span class="math inline">\(D\)</span>, let <span class="math inline">\(f(x) = x - 3\)</span>. Its values at <span class="math inline">\(1, \ldots, 6\)</span> are <span class="math inline">\(-2, -1, 0, 1, 2, 3\)</span>, so:</p>
@@ -2519,15 +2716,18 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-74-contents" aria-controls="callout-74" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-absolutely-integrable" class="quarto-xref">Definition&nbsp;23</a> (Absolutely integrable function (integrable function, absolute integrability))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-74" class="callout-74-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-absolutely-integrable" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 23 (Absolutely integrable function (integrable function, absolute integrability))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. A <a href="#def-measurable-function">measurable</a> function <span class="math inline">\(f : S \to \mathbb{R}\)</span> is <strong>absolutely integrable</strong> with respect to <span class="math inline">\(\mu\)</span> (often just called <strong>integrable</strong>) if the integral of its <a href="./algebra-basics.html#def-absolute-value">absolute value</a> is finite:</p>
@@ -2536,30 +2736,36 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-75-contents" aria-controls="callout-75" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-absolutely-integrable-integral" class="quarto-xref">Remark&nbsp;11</a> (An absolutely integrable function has a finite integral)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-75" class="callout-75-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-absolutely-integrable-integral" class="proof remark">
 <p><span class="proof-title"><em>Remark 11</em> (An absolutely integrable function has a finite integral). </span>If <span class="math inline">\(f\)</span> is absolutely integrable, then <span class="math inline">\(\int_S f^{+} \, d\mu\)</span> and <span class="math inline">\(\int_S f^{-} \, d\mu\)</span> are both finite, because <span class="math inline">\(f^{+} \le \mathopen{}\left|f\right|\mathclose{}\)</span> and <span class="math inline">\(f^{-} \le \mathopen{}\left|f\right|\mathclose{}\)</span>, so each sum in <a href="#def-integral-nonneg" class="quarto-xref">Definition&nbsp;21</a> for <span class="math inline">\(f^{+}\)</span> or <span class="math inline">\(f^{-}\)</span> is at most the matching sum for <span class="math inline">\(\mathopen{}\left|f\right|\mathclose{}\)</span>. So <span class="math inline">\(\int_S f \, d\mu\)</span> (<a href="#def-integral" class="quarto-xref">Definition&nbsp;22</a>) is a real number.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-76-contents" aria-controls="callout-76" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-absolutely-integrable" class="quarto-xref">Example&nbsp;28</a> (Absolutely integrable and not)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-76" class="callout-76-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-absolutely-integrable" class="theorem example">
 <p><span class="theorem-title"><strong>Example 28 (Absolutely integrable and not)</strong></span> &nbsp;</p>
@@ -2585,18 +2791,21 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="lp-spaces" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="lp-spaces"><span class="header-section-number">8</span> <span class="math inline">\(L^p\)</span> spaces</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-77-contents" aria-controls="callout-77" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-lp-space" class="quarto-xref">Definition&nbsp;24</a> (<span class="math inline">\(L^p\)</span> space and <span class="math inline">\(L^p\)</span> norm (<span class="math inline">\(L^p(\mu)\)</span>, <span class="math inline">\(\mathcal{L}^p\)</span>))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-77" class="callout-77-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-lp-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 24 (<span class="math inline">\(L^p\)</span> space and <span class="math inline">\(L^p\)</span> norm (<span class="math inline">\(L^p(\mu)\)</span>, <span class="math inline">\(\mathcal{L}^p\)</span>))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>. For any real number <span class="math inline">\(p \ge 1\)</span>, the <strong><span class="math inline">\(L^p\)</span> norm</strong> of a <a href="#def-measurable-function">measurable function</a> <span class="math inline">\(f : S \to \mathbb{R}\)</span> is:</p>
@@ -2612,15 +2821,18 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-78-contents" aria-controls="callout-78" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-lp-space" class="quarto-xref">Example&nbsp;29</a> (An <span class="math inline">\(L^1\)</span> function not in <span class="math inline">\(L^2\)</span>)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-78" class="callout-78-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-lp-space" class="theorem example">
 <p><span class="theorem-title"><strong>Example 29 (An <span class="math inline">\(L^1\)</span> function not in <span class="math inline">\(L^2\)</span>)</strong></span> Consider the interval <span class="math inline">\((0, 1)\)</span> equipped with the Borel <span class="math inline">\(\sigma\)</span>-algebra (<a href="#def-borel-sigma-algebra" class="quarto-xref">Definition&nbsp;4</a>) and Lebesgue measure <span class="math inline">\(\mu\)</span> (<a href="#def-lebesgue-measure" class="quarto-xref">Definition&nbsp;15</a>). Define <span class="math inline">\(f : (0, 1) \to \mathbb{R}\)</span> by <span class="math inline">\(f(x) = x^{-1/2}\)</span>.</p>
@@ -2653,15 +2865,18 @@ f^{-}(s) &amp;\stackrel{\text{def}}{=}\max\mathopen{}\left\{-f(s), 0\right\}\mat
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-79-contents" aria-controls="callout-79" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#thm-holder-inequality" class="quarto-xref">Theorem&nbsp;5</a> (Holder’s inequality)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-79" class="callout-79-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-holder-inequality" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Holder’s inequality)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a>, and let <span class="math inline">\(p, q \in [1, \infty]\)</span> be conjugate exponents satisfying <span class="math inline">\(\frac{1}{p} + \frac{1}{q} = 1\)</span> (with the convention that <span class="math inline">\(q = \infty\)</span> when <span class="math inline">\(p = 1\)</span>, and <span class="math inline">\(q = 1\)</span> when <span class="math inline">\(p = \infty\)</span>). If <span class="math inline">\(f \in L^p(\mu)\)</span> and <span class="math inline">\(g \in L^q(\mu)\)</span> (<a href="#def-lp-space" class="quarto-xref">Definition&nbsp;24</a>), then their product <span class="math inline">\(f g\)</span> is <a href="#def-absolutely-integrable">absolutely integrable</a> (<span class="math inline">\(f g \in L^1(\mu)\)</span>) and satisfies:</p>
@@ -2679,15 +2894,18 @@ p &amp;= q \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-80-contents" aria-controls="callout-80" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Lem</span><a href="#thm-minkowski-inequality" class="quarto-xref">Theorem&nbsp;6</a> (Minkowski’s inequality (<span class="math inline">\(L^p\)</span> triangle inequality))
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-80" class="callout-80-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="thm-minkowski-inequality" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (Minkowski’s inequality (<span class="math inline">\(L^p\)</span> triangle inequality))</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> be a <a href="#def-measure-space">measure space</a> and let <span class="math inline">\(1 \le p \le \infty\)</span>. For any functions <span class="math inline">\(f, g \in L^p(\mu)\)</span> (<a href="#def-lp-space" class="quarto-xref">Definition&nbsp;24</a>), their sum <span class="math inline">\(f + g\)</span> is in <span class="math inline">\(L^p(\mu)\)</span> and satisfies:</p>
@@ -2698,15 +2916,18 @@ p &amp;= q \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-81-contents" aria-controls="callout-81" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-holder-inequality" class="quarto-xref">Example&nbsp;30</a> (Applying Holder’s inequality to finite sums and expectations)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-81" class="callout-81-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-holder-inequality" class="theorem example">
 <p><span class="theorem-title"><strong>Example 30 (Applying Holder’s inequality to finite sums and expectations)</strong></span> &nbsp;</p>
@@ -2733,15 +2954,18 @@ p &amp;= q \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-82-contents" aria-controls="callout-82" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Remark</span><a href="#rem-lp-spaces-machine-learning" class="quarto-xref">Remark&nbsp;12</a> (<span class="math inline">\(L^p\)</span> spaces and norms in probability and machine learning)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-82" class="callout-82-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="rem-lp-spaces-machine-learning" class="proof remark">
 <p><span class="proof-title"><em>Remark 12</em> (<span class="math inline">\(L^p\)</span> spaces and norms in probability and machine learning). </span>In probability, statistics, and machine learning, <span class="math inline">\(L^p\)</span> spaces structure the geometry of random variables, estimators, and loss functions:</p>
@@ -2760,33 +2984,39 @@ p &amp;= q \\
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="product-measures" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="product-measures"><span class="header-section-number">9</span> Product measures</h2>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-83-contents" aria-controls="callout-83" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-product-sigma-algebra" class="quarto-xref">Definition&nbsp;25</a> (Product <span class="math inline">\(\sigma\)</span>-algebra)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-83" class="callout-83-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-product-sigma-algebra" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 25 (Product <span class="math inline">\(\sigma\)</span>-algebra)</strong></span> Let <span class="math inline">\((S, \mathcal{S})\)</span> and <span class="math inline">\((T, \mathcal{T})\)</span> be <a href="#def-measurable-space">measurable spaces</a>. A <strong>measurable rectangle</strong> is a <a href="./sets-functions.html#def-cartesian-product">Cartesian product</a> <span class="math inline">\(A \times B\)</span> with <span class="math inline">\(A \in \mathcal{S}\)</span> and <span class="math inline">\(B \in \mathcal{T}\)</span>. The <strong>product <span class="math inline">\(\sigma\)</span>-algebra</strong> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(S \times T\)</span> <a href="#def-generated-sigma-algebra">generated by</a> the measurable rectangles.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-84-contents" aria-controls="callout-84" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-product-sigma-algebra" class="quarto-xref">Example&nbsp;31</a> (Product <span class="math inline">\(\sigma\)</span>-algebras)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-84" class="callout-84-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-product-sigma-algebra" class="theorem example">
 <p><span class="theorem-title"><strong>Example 31 (Product <span class="math inline">\(\sigma\)</span>-algebras)</strong></span> &nbsp;</p>
@@ -2797,15 +3027,18 @@ p &amp;= q \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-85-contents" aria-controls="callout-85" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Def</span><a href="#def-product-measure" class="quarto-xref">Definition&nbsp;26</a> (Product measure)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-85" class="callout-85-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="def-product-measure" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 26 (Product measure)</strong></span> Let <span class="math inline">\((S, \mathcal{S}, \mu)\)</span> and <span class="math inline">\((T, \mathcal{T}, \nu)\)</span> be measure spaces with <a href="#def-sigma-finite"><span class="math inline">\(\sigma\)</span>-finite</a> measures <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span>. The <strong>product measure</strong> <span class="math inline">\(\mu\otimes \nu\)</span> is the measure on the <a href="#def-product-sigma-algebra">product <span class="math inline">\(\sigma\)</span>-algebra</a> <span class="math inline">\(\mathcal{S}\otimes \mathcal{T}\)</span> that gives each measurable rectangle the product of the measures of its sides:</p>
@@ -2815,15 +3048,18 @@ p &amp;= q \\
 </div>
 </div>
 </div>
+</div>
 <div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-86-contents" aria-controls="callout-86" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 <span class="screen-reader-only">Exm</span><a href="#exm-product-measure" class="quarto-xref">Example&nbsp;32</a> (Product measures)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-86" class="callout-86-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <div id="exm-product-measure" class="theorem example">
 <p><span class="theorem-title"><strong>Example 32 (Product measures)</strong></span> &nbsp;</p>
@@ -2845,6 +3081,7 @@ p &amp;= q \\
 \]</span></p>
 <p>the area of the rectangle.</p></li>
 </ul>
+</div>
 </div>
 </div>
 </div>
