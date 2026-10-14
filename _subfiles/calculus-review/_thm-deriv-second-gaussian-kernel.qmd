@@ -9,6 +9,6 @@ $$f''(x) = (x^2 - 1)\expf{-\frac{x^2}{2}}$$
 
 ::: proof
 
-This is the solution to @exr-miller-deriv-second-gaussian-kernel.
+This is the solution to @exr-miller-deriv-second-gaussian-kernel, worked in @sol-miller-deriv-second-gaussian-kernel.
 
 :::

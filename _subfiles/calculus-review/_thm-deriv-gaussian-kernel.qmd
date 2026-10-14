@@ -9,6 +9,6 @@ $$f'(x) = -x\expf{-\frac{x^2}{2}}$$
 
 ::: proof
 
-This is the solution to @exr-miller-deriv-gaussian-kernel.
+This is the solution to @exr-miller-deriv-gaussian-kernel, worked in @sol-miller-deriv-gaussian-kernel.
 
 :::

@@ -9,6 +9,6 @@ $$P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}$$
 
 ::: proof
 
-This is the solution to @exr-miller-taylor-log-one-plus-x.
+This is the solution to @exr-miller-taylor-log-one-plus-x, worked in @sol-miller-taylor-log-one-plus-x.
 
 :::

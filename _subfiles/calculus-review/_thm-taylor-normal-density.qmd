@@ -10,6 +10,6 @@ $$P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}$$
 
 ::: proof
 
-This is the solution to @exr-miller-taylor-normal-density.
+This is the solution to @exr-miller-taylor-normal-density, worked in @sol-miller-taylor-normal-density.
 
 :::
