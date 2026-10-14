@@ -12,6 +12,6 @@ $$
 
 ::: proof
 
-This is the solution to @exr-miller-dint-harmonic-identity.
+This is the solution to @exr-miller-dint-harmonic-identity, worked in @sol-miller-dint-harmonic-identity.
 
 :::
