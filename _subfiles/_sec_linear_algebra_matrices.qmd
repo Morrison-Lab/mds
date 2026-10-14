@@ -195,3 +195,7 @@
 {{< include mds/_subfiles/linear-algebra/_thm-transpose-product.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-thm-transpose-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-scalar-transpose.qmd >}}
