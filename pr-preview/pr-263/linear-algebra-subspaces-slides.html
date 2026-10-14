@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 13:40:26 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 17:44:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -477,7 +477,7 @@ c\,\tilde{u}
 <section class="slide level2">
 
 <div id="exm-span-subspace" class="theorem example">
-<p><span class="theorem-title"><strong>Example 7 (The line in <a href="#/exm-subspace" class="quarto-xref">Example&nbsp;3</a> is a span)</strong></span> The line <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}\)</span> in <a href="#/exm-subspace" class="quarto-xref">Example&nbsp;3</a> is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, so <a href="#/thm-span-subspace" class="quarto-xref">Theorem&nbsp;2</a> gives a second <a href="./notation.html#def-proof">proof</a> that it is a subspace. Likewise, the plane <span class="math inline">\(z = 0\)</span> in <a href="#/exm-span" class="quarto-xref">Example&nbsp;6</a> is a subspace of <span class="math inline">\(\mathbb{R}^3\)</span>, because it is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 7 (The line in <a href="#/exm-subspace" class="quarto-xref">Example&nbsp;3</a> is a span)</strong></span> The line <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}\)</span> in <a href="#/exm-subspace" class="quarto-xref">Example&nbsp;3</a> is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, so <a href="#/thm-span-subspace" class="quarto-xref">Theorem&nbsp;2</a> gives a second <a href="./proof-writing.html#def-proof">proof</a> that it is a subspace. Likewise, the plane <span class="math inline">\(z = 0\)</span> in <a href="#/exm-span" class="quarto-xref">Example&nbsp;6</a> is a subspace of <span class="math inline">\(\mathbb{R}^3\)</span>, because it is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -520,7 +520,7 @@ c\,\tilde{u}
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p>the same answer as computing each entry as a row-times-vector dot product (<a href="./linear-algebra-matrices.html#rem-matvec-row-dot-products">Remark&nbsp;3 in Matrices</a>).</p>
+<p>the same answer as computing each entry as a row-times-vector dot product (<a href="./linear-algebra-matrices.html#rem-matvec-row-dot-products">Remark&nbsp;4 in Matrices</a>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -564,7 +564,7 @@ c\,\tilde{u}
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><a href="./proof-writing.html#def-proof-by-induction">Induction</a> on <span class="math inline">\(p\)</span>.</p>
 <p><strong>Base case, <span class="math inline">\(p = 1\)</span>.</strong> Each <span class="math inline">\(\tilde{v}_i\)</span> is a single number <span class="math inline">\(v_i\)</span>, and <span class="math inline">\(k \ge 2\)</span>. If <span class="math inline">\(v_1 = 0\)</span>, take <span class="math inline">\(c_1 = 1\)</span> and every other <span class="math inline">\(c_i = 0\)</span>. Otherwise take <span class="math inline">\(c_1 = v_2\)</span>, <span class="math inline">\(c_2 = -v_1\)</span> and every other <span class="math inline">\(c_i = 0\)</span>; then <span class="math inline">\(c_2 \neq 0\)</span>, and <span class="math inline">\(v_2 v_1 - v_1 v_2 = 0\)</span>.</p>
-<p><strong>Inductive step.</strong> Let <span class="math inline">\(p \ge 2\)</span>, assume the <a href="./notation.html#def-theorem">theorem</a> holds for vectors in <span class="math inline">\(\mathbb{R}^{p-1}\)</span>, and take <span class="math inline">\(k &gt; p\)</span> vectors in <span class="math inline">\(\mathbb{R}^p\)</span>. Write <span class="math inline">\(v_{i,p}\)</span> for the last entry of <span class="math inline">\(\tilde{v}_i\)</span>.</p>
+<p><strong>Inductive step.</strong> Let <span class="math inline">\(p \ge 2\)</span>, assume the <a href="./proof-writing.html#def-theorem">theorem</a> holds for vectors in <span class="math inline">\(\mathbb{R}^{p-1}\)</span>, and take <span class="math inline">\(k &gt; p\)</span> vectors in <span class="math inline">\(\mathbb{R}^p\)</span>. Write <span class="math inline">\(v_{i,p}\)</span> for the last entry of <span class="math inline">\(\tilde{v}_i\)</span>.</p>
 <p><em>Case 1: every <span class="math inline">\(v_{i,p} = 0\)</span>.</em> Deleting the last entry gives <span class="math inline">\(k &gt; p - 1\)</span> vectors in <span class="math inline">\(\mathbb{R}^{p-1}\)</span>, which by the inductive hypothesis have a combination with coefficients not all zero that equals <span class="math inline">\(\tilde{0}_{p-1}\)</span>. The same coefficients combine the original vectors to <span class="math inline">\(\tilde{0}_p\)</span>, since every last entry is <span class="math inline">\(0\)</span>.</p>
 <p><em>Case 2: some <span class="math inline">\(v_{i,p} \neq 0\)</span>.</em> Renumber the vectors so that <span class="math inline">\(v_{k,p} \neq 0\)</span>, and for <span class="math inline">\(i = 1, \ldots, k-1\)</span> let</p>
 <p><span class="math display">\[

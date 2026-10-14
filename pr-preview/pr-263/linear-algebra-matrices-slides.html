@@ -361,7 +361,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 13:40:26 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 17:44:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -685,7 +685,6 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 0      &amp; 0      &amp; \cdots &amp; 1
 \end{bmatrix}
 \]</span></p>
-<p>Equivalently, the entries of the identity matrix are given by the <a href="./notation.html#def-kronecker-delta">Kronecker delta</a>: <span class="math inline">\((\mathbf{I}_p)_{ij} = \delta_{ij}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -695,6 +694,12 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 \mathbf{I}_3 = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix},
 \]</span></p>
 <p>so, for instance, <span class="math inline">\((\mathbf{I}_3)_{22} = 1\)</span> and <span class="math inline">\((\mathbf{I}_3)_{23} = 0\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-identity-matrix-kronecker-delta" class="proof remark">
+<p><span class="proof-title"><em>Remark 3</em> (The identity matrix and the Kronecker delta). </span>The entries of the identity matrix are given by the <a href="./notation.html#def-kronecker-delta">Kronecker delta</a>: <span class="math inline">\((\mathbf{I}_p)_{ij} = \delta_{ij}\)</span>.</p>
 </div>
 <div id="thm-identity" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (Identity matrix is a multiplicative identity)</strong></span> For any <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>:</p>
@@ -710,7 +715,7 @@ x_1\beta_{1} + x_2\beta_{2} + \cdots + x_p \beta_{p}
 <section class="slide level2">
 
 <div id="rem-matvec-row-dot-products" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Each entry is a dot product). </span>Matrix-vector multiplication extends the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;7 in Vectors</a>): entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\tilde{x}\)</span> is the dot product of row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\tilde{x}\)</span>. For example,</p>
+<p><span class="proof-title"><em>Remark 4</em> (Each entry is a dot product). </span>Matrix-vector multiplication extends the dot product (<a href="./linear-algebra-vectors.html#def-dot-product">Definition&nbsp;7 in Vectors</a>): entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\tilde{x}\)</span> is the dot product of row <span class="math inline">\(i\)</span> of <span class="math inline">\(\mathbf{A}\)</span> with <span class="math inline">\(\tilde{x}\)</span>. For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
@@ -1040,7 +1045,6 @@ f(\tilde{e}_2) &amp;= 3 \cdot 0 + 5 \cdot 1 \\
 <div id="def-translation" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Translation)</strong></span> For a fixed vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span>, the <strong>translation</strong> by <span class="math inline">\(\tilde{b}\)</span> is the function <span class="math inline">\(t_{\tilde{b}} : \mathbb{R}^m \to \mathbb{R}^m\)</span> defined by</p>
 <p><span class="math display">\[t_{\tilde{b}}(\tilde{y}) = \tilde{y}+ \tilde{b}\]</span></p>
-<p>It moves every point by the same vector <span class="math inline">\(\tilde{b}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1057,6 +1061,12 @@ t_{\tilde{b}}\mathopen{}\left(\begin{bmatrix}3 \\ 4\end{bmatrix}\right)\mathclos
 </section>
 <section class="slide level2">
 
+<div id="rem-translation-moves-every-point" class="proof remark">
+<p><span class="proof-title"><em>Remark 5</em> (A translation moves every point by the same vector). </span>A translation by <span class="math inline">\(\tilde{b}\)</span> moves every point by the same vector <span class="math inline">\(\tilde{b}\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-affine-map" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 17 (Affine map (affine transformation, affine function))</strong></span> A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}^p \to \mathbb{R}^m\)</span> is an <strong>affine map</strong> (also called an <strong>affine transformation</strong> or <strong>affine function</strong>) if it is a matrix product followed by a translation (<a href="#/def-translation" class="quarto-xref">Definition&nbsp;16</a>) (a <a href="./sets-functions.html#def-composition">composition</a>, with the matrix product as the inner function): there are an <span class="math inline">\(m \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> and a vector <span class="math inline">\(\tilde{b} \in \mathbb{R}^m\)</span> such that</p>
 <p><span class="math display">\[
@@ -1067,7 +1077,12 @@ f(\tilde{x})
 \end{aligned}
 \]</span></p>
 <p>The vector <span class="math inline">\(\tilde{b}\)</span> is called the <strong>offset</strong> of <span class="math inline">\(f\)</span> (statistics also calls it the <strong>intercept</strong>, and machine learning the <strong>bias</strong>).</p>
-<p>For a real-valued function (<a href="./linear-algebra-vectors.html#def-real-vector-valued">Definition&nbsp;4 in Vectors</a>, <span class="math inline">\(m = 1\)</span>), <span class="math inline">\(\mathbf{A}\)</span> is a single row, written <span class="math inline">\(\tilde{w}^{\top}\)</span>, and <span class="math inline">\(\tilde{b}\)</span> is a single number <span class="math inline">\(b\)</span>, so an affine function is a linear function <span class="math inline">\(\tilde{w} \cdot \tilde{x}\)</span> (<a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>) plus an offset:</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-affine-map-real-valued" class="proof remark">
+<p><span class="proof-title"><em>Remark 6</em> (Real-valued affine maps). </span>For a real-valued function (<a href="./linear-algebra-vectors.html#def-real-vector-valued">Definition&nbsp;4 in Vectors</a>, <span class="math inline">\(m = 1\)</span>), <span class="math inline">\(\mathbf{A}\)</span> is a single row, written <span class="math inline">\(\tilde{w}^{\top}\)</span>, and <span class="math inline">\(\tilde{b}\)</span> is a single number <span class="math inline">\(b\)</span>, so an affine function is a linear function <span class="math inline">\(\tilde{w} \cdot \tilde{x}\)</span> (<a href="#/cor-linear-scalar" class="quarto-xref">Corollary&nbsp;1</a>) plus an offset:</p>
 <p><span id="eq-linear-scalar"><span class="math display">\[f(\tilde{x}) = \tilde{w} \cdot \tilde{x} + b, \qquad \tilde{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{1}\]</span></span></p>
 </div>
 </section>
@@ -1196,7 +1211,7 @@ f(\tilde{x}) &amp;= \mathbf{A}\tilde{x}\\
 <section class="slide level2">
 
 <div id="rem-linear-affine-terminology" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;13</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
+<p><span class="proof-title"><em>Remark 7</em> (“Linear” in this site, and in machine learning and statistics). </span>This site uses “linear” only in the sense of <a href="#/def-linear-map" class="quarto-xref">Definition&nbsp;13</a>, so by <a href="#/thm-affine-linear-iff" class="quarto-xref">Theorem&nbsp;13</a> a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as <a href="./algebra-exponentials.html#def-affine-function">affine</a> <span class="math inline">\(a x + b\)</span> versus <a href="./algebra-exponentials.html#def-linear-function">linear</a> <span class="math inline">\(a x\)</span> on the algebra page. (The algebra page writes these as <span class="math inline">\(m x + b\)</span> and <span class="math inline">\(m x\)</span>; here <span class="math inline">\(m\)</span> already names the number of outputs.)</p>
 <p>Machine learning and statistics often call any function of the form <a href="#/eq-linear-scalar" class="quarto-xref">Equation&nbsp;1</a> “linear”, as in a <em>linear model</em> in statistics or a <em>linear layer</em> in a neural network, and call the offset <span class="math inline">\(b\)</span> the bias (machine learning) or the intercept (statistics), as <a href="#/def-affine-map" class="quarto-xref">Definition&nbsp;17</a> notes. A model with an intercept is affine in <span class="math inline">\(\tilde{x}\)</span> but linear in its coefficients <span class="math inline">\((b, \tilde{w})\)</span>, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: <span class="math inline">\(w_1 x + w_2 x^2 + b\)</span> is not affine in <span class="math inline">\(x\)</span>, but it is linear in <span class="math inline">\((b, w_1, w_2)\)</span>. Separately, the affine function <span class="math inline">\(\tilde{w} \cdot \tilde{x} + b\)</span> is a linear function of the augmented vector <span class="math inline">\(\tilde{\tilde{x}}\)</span> (<a href="#/def-augmented-vector" class="quarto-xref">Definition&nbsp;18</a>), with <span class="math inline">\(b\)</span> as the coefficient on its first entry.</p>
 </div>
 <div title="Further reading">
@@ -1538,7 +1553,7 @@ f(\tilde{x})
 <section class="slide level2 smaller scrollable" id="references">
 
 <div id="rem-transpose-product-order" class="proof remark">
-<p><span class="proof-title"><em>Remark 5</em> (The order of the factors reverses). </span>Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with <span class="math inline">\(\mathbf{A} = [1,\; 2]\)</span> (<span class="math inline">\(1 \times 2\)</span>) and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span> (<span class="math inline">\(2 \times 1\)</span>),</p>
+<p><span class="proof-title"><em>Remark 8</em> (The order of the factors reverses). </span>Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with <span class="math inline">\(\mathbf{A} = [1,\; 2]\)</span> (<span class="math inline">\(1 \times 2\)</span>) and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span> (<span class="math inline">\(2 \times 1\)</span>),</p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf{A}\mathbf{B} &amp;= 1 \cdot 3 + 2 \cdot 4 \\

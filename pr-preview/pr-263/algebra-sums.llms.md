@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:26 (PDT)
+Last modified: 2026-10-13 17:44:25 (PDT)
 
 ## 1 Convex functions
 
@@ -96,7 +96,7 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 12 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 11 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
+> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 13 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 12 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
 > Let \\t = \min\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
 >
@@ -535,7 +535,7 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 >
 > \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
 >
-> If \\A\\ has no elements, the sum has no terms, and by convention it equals \\0\\. For example, \\\sum\_{x \in \mathopen{}\left\\\right\\\mathclose{}} x^2 = 0\\.
+> If \\A\\ has no elements, the sum has no terms, and by convention it equals \\0\\.
 
 > **NOTE:**
 >
@@ -546,6 +546,10 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 > **NOTE:**
 >
 > *Remark 8* (Leaving the set out). Some authors leave the set out and write \\\sum\_{x} f(x)\\. This shorthand means the sum over every value \\x\\ can take, \\\sum\_{x \in \mathcal{R}(x)} f(x)\\, where \\\mathcal{R}(x)\\ is the [range](notation.llms.md#def-range-of-variable) of \\x\\. For example, if \\x\\ is the outcome of one roll of a six-sided die, \\\sum\_{x} f(x)\\ means \\\sum\_{x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}} f(x)\\. In these notes, we write the set out in full (see [Notational shorthands](notation.llms.md#sec-notational-shorthands)).
+
+> **NOTE:**
+>
+> **Example 18 (A sum over the empty set)** For example, \\\sum\_{x \in \mathopen{}\left\\\right\\\mathclose{}} x^2 = 0\\.
 
 ## 8 Quotients
 
@@ -561,7 +565,7 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 
 > **NOTE:**
 >
-> **Example 18 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 17](#def-quotient) requires a nonzero denominator.
+> **Example 19 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 17](#def-quotient) requires a nonzero denominator.
 
 > **NOTE:**
 >
@@ -569,7 +573,7 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 
 > **NOTE:**
 >
-> **Example 19 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+> **Example 20 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
 
 > **NOTE:**
 >
@@ -585,7 +589,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 20 (A ratio, and a quotient that is not one)**  
+> **Example 21 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
@@ -600,7 +604,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 21 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 22 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
@@ -611,7 +615,7 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 22 (Proportional and non-proportional functions)**  
+> **Example 23 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\,
 >

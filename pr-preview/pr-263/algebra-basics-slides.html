@@ -274,7 +274,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 13:40:26 (PDT)</p>
+  <p class="date">Last modified: 2026-10-13 17:44:25 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -387,12 +387,7 @@
 <div id="def-power" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Power, base, and exponent)</strong></span> Let <span class="math inline">\(a\)</span> be a real number and <span class="math inline">\(n\)</span> a <a href="./notation.html#def-natural-numbers">natural number</a>. The <span class="math inline">\(n\)</span>th <strong>power</strong> of <span class="math inline">\(a\)</span> is the product of <span class="math inline">\(n\)</span> copies of <span class="math inline">\(a\)</span>:</p>
 <p><span class="math display">\[a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}_{n \text{ factors}}\]</span></p>
-<p>In <span class="math inline">\(a^n\)</span>, <span class="math inline">\(a\)</span> is the <strong>base</strong> and <span class="math inline">\(n\)</span> is the <strong>exponent</strong>. The second power <span class="math inline">\(a^2\)</span> is the <strong>square</strong> of <span class="math inline">\(a\)</span>. For the exponent <span class="math inline">\(0\)</span> and negative <a href="./notation.html#def-integers">integer</a> exponents:</p>
-<ul>
-<li><span class="math inline">\(a^0 \stackrel{\text{def}}{=}1\)</span>, including <span class="math inline">\(0^0 = 1\)</span> by convention;</li>
-<li><span class="math inline">\(a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\)</span>, when <span class="math inline">\(a \ne 0\)</span>.</li>
-</ul>
-<p><a href="./algebra-exponentials.html#def-real-power">Definition&nbsp;13 in Polynomials, Exponentials and Logarithms</a> extends powers to real exponents when the base is positive.</p>
+<p>In <span class="math inline">\(a^n\)</span>, <span class="math inline">\(a\)</span> is the <strong>base</strong> and <span class="math inline">\(n\)</span> is the <strong>exponent</strong>. The second power <span class="math inline">\(a^2\)</span> is the <strong>square</strong> of <span class="math inline">\(a\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -433,8 +428,24 @@
 </section>
 <section class="slide level2">
 
+<div id="def-power-integer" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Powers with exponent zero or a negative integer)</strong></span> For the exponent <span class="math inline">\(0\)</span> and negative <a href="./notation.html#def-integers">integer</a> exponents:</p>
+<ul>
+<li><span class="math inline">\(a^0 \stackrel{\text{def}}{=}1\)</span>, including <span class="math inline">\(0^0 = 1\)</span> by convention;</li>
+<li><span class="math inline">\(a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\)</span>, when <span class="math inline">\(a \ne 0\)</span>.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-power-real-exponents" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (Powers with real exponents). </span><a href="./algebra-exponentials.html#def-real-power">Definition&nbsp;14 in Polynomials, Exponentials and Logarithms</a> extends powers to real exponents when the base is positive.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-square-root" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Square root)</strong></span> For a real number <span class="math inline">\(a \ge 0\)</span>, the <strong>square root</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\(\sqrt{a}\)</span>, is the non-negative real number whose square (<a href="#/def-power" class="quarto-xref">Definition&nbsp;4</a>) is <span class="math inline">\(a\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 6 (Square root)</strong></span> For a real number <span class="math inline">\(a \ge 0\)</span>, the <strong>square root</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\(\sqrt{a}\)</span>, is the non-negative real number whose square (<a href="#/def-power" class="quarto-xref">Definition&nbsp;4</a>) is <span class="math inline">\(a\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -452,14 +463,13 @@
 <section class="slide level2">
 
 <div id="def-absolute-value" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Absolute value of a real number)</strong></span> The <strong>absolute value</strong> of a real number <span class="math inline">\(a\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 7 (Absolute value of a real number)</strong></span> The <strong>absolute value</strong> of a real number <span class="math inline">\(a\)</span> is</p>
 <p><span class="math display">\[
 \mathopen{}\left|a\right|\mathclose{} \stackrel{\text{def}}{=}\begin{cases}
 a, &amp; a \ge 0 \\
 -a, &amp; a &lt; 0
 \end{cases}
 \]</span></p>
-<p>For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, <span class="math inline">\(\mathopen{}\left|a - b\right|\mathclose{}\)</span> is the distance between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> on the number line.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -483,9 +493,15 @@ a, &amp; a \ge 0 \\
 &amp;= \sqrt{(-3)^2}:
 \end{aligned}
 \]</span></p>
-<p>for every real <span class="math inline">\(a\)</span>, <span class="math inline">\(\mathopen{}\left|a\right|\mathclose{} = \sqrt{a^2}\)</span> (<a href="#/def-square-root" class="quarto-xref">Definition&nbsp;5</a>).</p></li>
+<p>for every real <span class="math inline">\(a\)</span>, <span class="math inline">\(\mathopen{}\left|a\right|\mathclose{} = \sqrt{a^2}\)</span> (<a href="#/def-square-root" class="quarto-xref">Definition&nbsp;6</a>).</p></li>
 <li><p><span class="math inline">\(\mathopen{}\left|x - 1\right|\mathclose{} &lt; 1\)</span> says that <span class="math inline">\(x\)</span> is less than <span class="math inline">\(1\)</span> away from <span class="math inline">\(1\)</span>, that is, <span class="math inline">\(0 &lt; x &lt; 2\)</span>.</p></li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="rem-absolute-value-distance" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Absolute value as distance). </span>For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, <span class="math inline">\(\mathopen{}\left|a - b\right|\mathclose{}\)</span> is the distance between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> on the number line.</p>
 </div>
 </section>
 <section id="sec-min-max" class="slide level2 scrollable" data-number="4">
@@ -540,19 +556,19 @@ a, &amp; a \ge 0 \\
 <section class="slide level2">
 
 <div id="def-minimum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Minimum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(m\)</span> is the <strong>minimum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\min A\)</span>, if <span class="math inline">\(m \in A\)</span> and <span class="math inline">\(m \le a\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Minimum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(m\)</span> is the <strong>minimum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\min A\)</span>, if <span class="math inline">\(m \in A\)</span> and <span class="math inline">\(m \le a\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-minimum-may-not-exist" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Not every set has a minimum). </span>The set <span class="math inline">\(\mathopen{}\left\{3, 1, 4\right\}\mathclose{}\)</span> has minimum <span class="math inline">\(1\)</span>, and the <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([0, 1]\)</span> has minimum <span class="math inline">\(0\)</span>. The interval <span class="math inline">\((0, 1]\)</span> has no minimum: every element <span class="math inline">\(a\)</span> of it has a smaller element, <span class="math inline">\(a/2\)</span>, also in it.</p>
+<p><span class="proof-title"><em>Remark 3</em> (Not every set has a minimum). </span>The set <span class="math inline">\(\mathopen{}\left\{3, 1, 4\right\}\mathclose{}\)</span> has minimum <span class="math inline">\(1\)</span>, and the <a href="./sets-functions.html#def-interval">interval</a> <span class="math inline">\([0, 1]\)</span> has minimum <span class="math inline">\(0\)</span>. The interval <span class="math inline">\((0, 1]\)</span> has no minimum: every element <span class="math inline">\(a\)</span> of it has a smaller element, <span class="math inline">\(a/2\)</span>, also in it.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-maximum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Maximum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(M\)</span> is the <strong>maximum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\max A\)</span>, if <span class="math inline">\(M \in A\)</span> and <span class="math inline">\(a \le M\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Maximum)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A number <span class="math inline">\(M\)</span> is the <strong>maximum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\max A\)</span>, if <span class="math inline">\(M \in A\)</span> and <span class="math inline">\(a \le M\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -568,7 +584,7 @@ a, &amp; a \ge 0 \\
 <section class="slide level2">
 
 <div id="def-argmin" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Argmin)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. The <strong>argmin</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its smallest value:</p>
+<p><span class="theorem-title"><strong>Definition 10 (Argmin)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. The <strong>argmin</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its smallest value:</p>
 <p><span class="math display">\[\arg \min_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(x) \le f(a)\right\}\mathclose{}\]</span></p>
 <p>When this set has exactly one element <span class="math inline">\(\hat{x}\)</span>, we write <span class="math inline">\(\hat{x} = \arg \min_{x \in A} f(x)\)</span>.</p>
 </div>
@@ -576,14 +592,14 @@ a, &amp; a \ge 0 \\
 <section class="slide level2">
 
 <div id="rem-argmin-vs-minimum" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em> (Smallest value versus where it occurs). </span>The smallest value itself is <span class="math inline">\(\min f(A)\)</span>, the minimum (<a href="#/def-minimum" class="quarto-xref">Definition&nbsp;7</a>) of the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(f\)</span>, and the argmin is where that value is attained. For example, let <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}\)</span>. The image is <span class="math inline">\(f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}\)</span>, so the smallest value is <span class="math inline">\(\min f(A) = 0\)</span>, and <span class="math inline">\(\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Smallest value versus where it occurs). </span>The smallest value itself is <span class="math inline">\(\min f(A)\)</span>, the minimum (<a href="#/def-minimum" class="quarto-xref">Definition&nbsp;8</a>) of the <a href="./sets-functions.html#def-image">image</a> of <span class="math inline">\(f\)</span>, and the argmin is where that value is attained. For example, let <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(A = \mathopen{}\left\{-1, 0, 2\right\}\mathclose{}\)</span>. The image is <span class="math inline">\(f(A) = \mathopen{}\left\{1, 0, 4\right\}\mathclose{}\)</span>, so the smallest value is <span class="math inline">\(\min f(A) = 0\)</span>, and <span class="math inline">\(\arg \min_{x \in A} f(x) = \mathopen{}\left\{0\right\}\mathclose{}\)</span>.</p>
 <p>The argmin is empty when <span class="math inline">\(f\)</span> has no smallest value, for example <span class="math inline">\(f(x) = x\)</span> on <span class="math inline">\((0, 1]\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-argmax" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Argmax)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. The <strong>argmax</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its largest value:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Argmax)</strong></span> Let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. The <strong>argmax</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> is the set of inputs where <span class="math inline">\(f\)</span> takes its largest value:</p>
 <p><span class="math display">\[\arg \max_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\{x \in A : \forall a \in A,\ f(a) \le f(x)\right\}\mathclose{}\]</span></p>
 <p>When this set has exactly one element <span class="math inline">\(\hat{x}\)</span>, we write <span class="math inline">\(\hat{x} = \arg \max_{x \in A} f(x)\)</span>.</p>
 </div>
@@ -662,27 +678,27 @@ f(-n) &amp;= -n^3 + 3n \\
 <section class="slide level2">
 
 <div id="def-global-minimizer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Global minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>global minimizer</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> if <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Global minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>global minimizer</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span> if <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-global-minimizer-argmin" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Global minimizers form the argmin). </span>The global minimizers of <span class="math inline">\(f\)</span> are exactly the elements of <span class="math inline">\(\arg \min_{x \in A} f(x)\)</span> (<a href="#/def-argmin" class="quarto-xref">Definition&nbsp;9</a>). A function can have more than one global minimizer. For example, <span class="math inline">\(f(x) = (x^2 - 1)^2\)</span> on <span class="math inline">\(\mathbb{R}\)</span> satisfies <span class="math inline">\(f(x) \ge 0\)</span> for every <span class="math inline">\(x\)</span>, and <span class="math inline">\(f(x) = 0\)</span> exactly when <span class="math inline">\(x = -1\)</span> or <span class="math inline">\(x = 1\)</span>, so its global minimizers are <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>, and <span class="math inline">\(\arg \min_{x \in \mathbb{R}} f(x) = \mathopen{}\left\{-1, 1\right\}\mathclose{}\)</span>.</p>
+<p><span class="proof-title"><em>Remark 5</em> (Global minimizers form the argmin). </span>The global minimizers of <span class="math inline">\(f\)</span> are exactly the elements of <span class="math inline">\(\arg \min_{x \in A} f(x)\)</span> (<a href="#/def-argmin" class="quarto-xref">Definition&nbsp;10</a>). A function can have more than one global minimizer. For example, <span class="math inline">\(f(x) = (x^2 - 1)^2\)</span> on <span class="math inline">\(\mathbb{R}\)</span> satisfies <span class="math inline">\(f(x) \ge 0\)</span> for every <span class="math inline">\(x\)</span>, and <span class="math inline">\(f(x) = 0\)</span> exactly when <span class="math inline">\(x = -1\)</span> or <span class="math inline">\(x = 1\)</span>, so its global minimizers are <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>, and <span class="math inline">\(\arg \min_{x \in \mathbb{R}} f(x) = \mathopen{}\left\{-1, 1\right\}\mathclose{}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-local-minimizer" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Local minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>local minimizer</strong> of <span class="math inline">\(f\)</span> if there is a number <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span>, where <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span> is the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Local minimizer)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}^p\)</span> and let <span class="math inline">\(f : A \to \mathbb{R}\)</span> be a <a href="./sets-functions.html#def-function">function</a>. A point <span class="math inline">\(x^* \in A\)</span> is a <strong>local minimizer</strong> of <span class="math inline">\(f\)</span> if there is a number <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(f(x^*) \le f(x)\)</span> for all <span class="math inline">\(x \in A\)</span> with <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span>, where <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span> is the <a href="./linear-algebra-vectors.html#def-euclidean-norm">Euclidean norm</a>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="rem-local-minimizer" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Local and global minimizers). </span>For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} = \mathopen{}\left|x - x^*\right|\mathclose{}\)</span>. For example, with <span class="math inline">\(x^* = 1\)</span> and <span class="math inline">\(\delta= 1\)</span>, the condition <span class="math inline">\(\mathopen{}\left|x - 1\right|\mathclose{} &lt; 1\)</span> means <span class="math inline">\(0 &lt; x &lt; 2\)</span>.</p>
-<p>Every global minimizer (<a href="#/def-global-minimizer" class="quarto-xref">Definition&nbsp;11</a>) is a local minimizer: take any <span class="math inline">\(\delta&gt; 0\)</span>. For example, <span class="math inline">\(x^* = 0\)</span> is a global minimizer of <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, so it is also a local minimizer.</p>
-<p>The <a href="./notation.html#def-converse">converse</a> fails. In <a href="#/exr-local-vs-global-min" class="quarto-xref">Exercise&nbsp;2</a>, <span class="math inline">\(x^* = 1\)</span> is a local minimizer of <span class="math inline">\(f(x) = x^3 - 3x\)</span> (take <span class="math inline">\(\delta= 1\)</span>), but not a global one.</p>
+<p><span class="proof-title"><em>Remark 6</em> (Local and global minimizers). </span>For <span class="math inline">\(p = 1\)</span>, <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} = \mathopen{}\left|x - x^*\right|\mathclose{}\)</span>. For example, with <span class="math inline">\(x^* = 1\)</span> and <span class="math inline">\(\delta= 1\)</span>, the condition <span class="math inline">\(\mathopen{}\left|x - 1\right|\mathclose{} &lt; 1\)</span> means <span class="math inline">\(0 &lt; x &lt; 2\)</span>.</p>
+<p>Every global minimizer (<a href="#/def-global-minimizer" class="quarto-xref">Definition&nbsp;12</a>) is a local minimizer: take any <span class="math inline">\(\delta&gt; 0\)</span>. For example, <span class="math inline">\(x^* = 0\)</span> is a global minimizer of <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\(\mathbb{R}\)</span>, so it is also a local minimizer.</p>
+<p>The <a href="./proof-writing.html#def-converse">converse</a> fails. In <a href="#/exr-local-vs-global-min" class="quarto-xref">Exercise&nbsp;2</a>, <span class="math inline">\(x^* = 1\)</span> is a local minimizer of <span class="math inline">\(f(x) = x^3 - 3x\)</span> (take <span class="math inline">\(\delta= 1\)</span>), but not a global one.</p>
 </div>
 </section>
 <section class="slide level2">

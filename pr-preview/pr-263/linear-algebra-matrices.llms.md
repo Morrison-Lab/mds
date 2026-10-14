@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:26 (PDT)
+Last modified: 2026-10-13 17:44:25 (PDT)
 
 ## 1 Matrices
 
@@ -204,14 +204,16 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 > **Definition 10 (Identity matrix)** The \\p \times p\\ **identity matrix** \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
 >
 > \\ (\mathbf{I}\_p)\_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathbf{I}\_p = \begin{bmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{bmatrix} \\
->
-> Equivalently, the entries of the identity matrix are given by the [Kronecker delta](notation.llms.md#def-kronecker-delta): \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\.
 
 > **NOTE:**
 >
 > **Example 9 (The \\3 \times 3\\ identity)** \\ \mathbf{I}\_3 = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}, \\
 >
 > so, for instance, \\(\mathbf{I}\_3)\_{22} = 1\\ and \\(\mathbf{I}\_3)\_{23} = 0\\.
+
+> **NOTE:**
+>
+> *Remark 3* (The identity matrix and the Kronecker delta). The entries of the identity matrix are given by the [Kronecker delta](notation.llms.md#def-kronecker-delta): \\(\mathbf{I}\_p)\_{ij} = \delta\_{ij}\\.
 
 > **NOTE:**
 >
@@ -231,7 +233,7 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Each entry is a dot product). Matrix-vector multiplication extends the dot product ([Definition 7 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)): entry \\i\\ of \\\mathbf{A}\tilde{x}\\ is the dot product of row \\i\\ of \\\mathbf{A}\\ with \\\tilde{x}\\. For example,
+> *Remark 4* (Each entry is a dot product). Matrix-vector multiplication extends the dot product ([Definition 7 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)): entry \\i\\ of \\\mathbf{A}\tilde{x}\\ is the dot product of row \\i\\ of \\\mathbf{A}\\ with \\\tilde{x}\\. For example,
 >
 > \\ \begin{aligned} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} &= \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\ &= \begin{bmatrix} -1 \\ -1 \end{bmatrix}. \end{aligned} \\
 
@@ -410,8 +412,6 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 > **Definition 16 (Translation)** For a fixed vector \\\tilde{b} \in \mathbb{R}^m\\, the **translation** by \\\tilde{b}\\ is the function \\t\_{\tilde{b}} : \mathbb{R}^m \to \mathbb{R}^m\\ defined by
 >
 > \\t\_{\tilde{b}}(\tilde{y}) = \tilde{y}+ \tilde{b}\\
->
-> It moves every point by the same vector \\\tilde{b}\\.
 
 > **NOTE:**
 >
@@ -423,13 +423,19 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 
 > **NOTE:**
 >
+> *Remark 5* (A translation moves every point by the same vector). A translation by \\\tilde{b}\\ moves every point by the same vector \\\tilde{b}\\.
+
+> **NOTE:**
+>
 > **Definition 17 (Affine map (affine transformation, affine function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 16](#def-translation)) (a [composition](sets-functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
 >
 > \\ \begin{aligned} f(\tilde{x}) &= t\_{\tilde{b}}(\mathbf{A} \tilde{x}) \\ &= \mathbf{A} \tilde{x}+ \tilde{b} \quad \text{for all } \tilde{x}\in \mathbb{R}^p \end{aligned} \\
 >
 > The vector \\\tilde{b}\\ is called the **offset** of \\f\\ (statistics also calls it the **intercept**, and machine learning the **bias**).
+
+> **NOTE:**
 >
-> For a real-valued function ([Definition 4 in Vectors](linear-algebra-vectors.llms.md#def-real-vector-valued), \\m = 1\\), \\\mathbf{A}\\ is a single row, written \\\tilde{w}^{\top}\\, and \\\tilde{b}\\ is a single number \\b\\, so an affine function is a linear function \\\tilde{w} \cdot \tilde{x}\\ ([Corollary 1](#cor-linear-scalar)) plus an offset:
+> *Remark 6* (Real-valued affine maps). For a real-valued function ([Definition 4 in Vectors](linear-algebra-vectors.llms.md#def-real-vector-valued), \\m = 1\\), \\\mathbf{A}\\ is a single row, written \\\tilde{w}^{\top}\\, and \\\tilde{b}\\ is a single number \\b\\, so an affine function is a linear function \\\tilde{w} \cdot \tilde{x}\\ ([Corollary 1](#cor-linear-scalar)) plus an offset:
 >
 > \\f(\tilde{x}) = \tilde{w} \cdot \tilde{x} + b, \qquad \tilde{w} \in \mathbb{R}^p, \quad b \in \mathbb{R} \tag{1}\\
 
@@ -505,7 +511,7 @@ Last modified: 2026-10-13 13:40:26 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 13](#def-linear-map), so by [Theorem 13](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra-exponentials.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
+> *Remark 7* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 13](#def-linear-map), so by [Theorem 13](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra-exponentials.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
 >
 > Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset \\b\\ the bias (machine learning) or the intercept (statistics), as [Definition 17](#def-affine-map) notes. A model with an intercept is affine in \\\tilde{x}\\ but linear in its coefficients \\(b, \tilde{w})\\, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: \\w_1 x + w_2 x^2 + b\\ is not affine in \\x\\, but it is linear in \\(b, w_1, w_2)\\. Separately, the affine function \\\tilde{w} \cdot \tilde{x} + b\\ is a linear function of the augmented vector \\\tilde{\tilde{x}}\\ ([Definition 18](#def-augmented-vector)), with \\b\\ as the coefficient on its first entry.
 
@@ -717,7 +723,7 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 
 > **NOTE:**
 >
-> *Remark 5* (The order of the factors reverses). Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with \\\mathbf{A} = \[1,\\ 2\]\\ (\\1 \times 2\\) and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\ (\\2 \times 1\\),
+> *Remark 8* (The order of the factors reverses). Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with \\\mathbf{A} = \[1,\\ 2\]\\ (\\1 \times 2\\) and \\\mathbf{B} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\\ (\\2 \times 1\\),
 >
 > \\ \begin{aligned} \mathbf{A}\mathbf{B} &= 1 \cdot 3 + 2 \cdot 4 \\ &= 11, \end{aligned} \\
 >
