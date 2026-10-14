@@ -1,0 +1,14 @@
+:::{#thm-deriv-second-gaussian-kernel}
+#### Second derivative of the standard Gaussian kernel
+
+For $f(x) = \expf{-\frac{x^2}{2}}$ and every $x \in \reals$,
+
+$$f''(x) = (x^2 - 1)\expf{-\frac{x^2}{2}}$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-deriv-second-gaussian-kernel.
+
+:::
