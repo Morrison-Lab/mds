@@ -12,7 +12,6 @@ $$
 $$
 
 $\mathcal{X}^\perp$ is read "$\mathcal{X}$ perp".
-$\mathcal{X}$ need not be a subspace.
 
 :::
 

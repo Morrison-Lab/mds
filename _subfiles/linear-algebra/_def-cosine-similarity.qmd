@@ -8,13 +8,6 @@ $$
 \operatorname{cossim}(\vx, \vy) \eqdef \frac{\vx \cdot \vy}{\norm{\vx}\,\norm{\vy}}.
 $$
 
-In a general real inner product space (@def-inner-product-space) with inner product $\iprod{\cdot}{\cdot}$
-and induced norm $\norm{\cdot}$, the cosine similarity is
-
-$$
-\operatorname{cossim}(\vx, \vy) \eqdef \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
-$$
-
 :::
 
 {{< slidebreak >}}

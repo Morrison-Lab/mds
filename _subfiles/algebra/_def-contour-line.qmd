@@ -8,9 +8,6 @@ is the set of points where $g$ equals $k$:
 
 $$\cb{(b, c) : g(b, c) = k}$$
 
-On a plot of the surface $z = g(b, c)$,
-it is the curve along which the surface has height $k$.
-
 :::
 
 {{< slidebreak >}}

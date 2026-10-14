@@ -22,6 +22,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-orthogonal-inner-product.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_rem-orthogonal-inner-product-dot-product.qmd >}}
+
 ## Cauchy-Schwarz and the triangle inequality {#sec-cauchy-schwarz}
 
 {{< include mds/_subfiles/linear-algebra/_prose-cauchy-schwarz-attribution.qmd >}}
@@ -52,6 +56,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-infinity-norm.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-vector-p-norm.qmd >}}
 
 {{< slidebreak >}}
@@ -69,6 +77,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-cosine-similarity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_def-cosine-similarity-inner-product-space.qmd >}}
 
 ## Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
 

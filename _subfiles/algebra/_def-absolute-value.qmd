@@ -10,7 +10,4 @@ a, & a \ge 0 \\
 \end{cases}
 $$
 
-For real numbers $a$ and $b$,
-$\abs{a - b}$ is the distance between $a$ and $b$ on the number line.
-
 :::
