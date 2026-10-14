@@ -222,6 +222,10 @@
 
 {{< include mds/_subfiles/algebra/_def-sum-over-set.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-sum-over-empty-set.qmd >}}
+
 ## Quotients
 
 {{< include mds/_subfiles/algebra/_def-quotient.qmd >}}
