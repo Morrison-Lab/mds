@@ -1,5 +1,5 @@
 ::: {#def-taylor-polynomial}
-#### Taylor polynomial and Taylor series
+#### Taylor polynomial
 
 Let $f$ be a function that has at least $n$ derivatives at a point $x_0$.
 The **Taylor polynomial** of degree $n$ for $f$ centered at $x_0$ is:
@@ -12,6 +12,4 @@ P_n(x)
 \end{aligned}
 $$ {#eq-taylor-poly-def}
 
-When $x_0 = 0$, $P_n(x)$ is called the **Maclaurin polynomial**.
-When $f$ is infinitely differentiable and the series converges to $f(x)$ on an open interval containing $x_0$, the infinite sum $\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$ is the **Taylor series** of $f$ centered at $x_0$.
 :::
