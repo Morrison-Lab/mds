@@ -1,0 +1,14 @@
+:::{#thm-dint-separable}
+#### Double integral of a product of powers
+
+For $m, n > 0$,
+
+$$\int_0^1 \int_0^1 x^m y^n\,dy\,dx = \frac{1}{(m + 1)(n + 1)}$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-dint-separable.
+
+:::
