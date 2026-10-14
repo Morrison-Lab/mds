@@ -1,0 +1,8 @@
+:::{#rem-one-sided-limit-and-limit}
+#### A limit exists exactly when both one-sided limits exist and are equal
+
+The limit $\lim_{x \to c} f(x)$ (@def-limit) exists
+exactly when both one-sided limits (@def-one-sided-limit) exist and are equal,
+and then all three are equal.
+
+:::

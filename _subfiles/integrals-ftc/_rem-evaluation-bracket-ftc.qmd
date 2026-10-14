@@ -1,0 +1,7 @@
+:::{#rem-evaluation-bracket-ftc}
+#### The evaluation bracket and the Fundamental Theorem of Calculus
+
+With FTC Part 2 (@thm-ftc-part2), $\int_a^b f(t)\,dt = \sb{F(t)}_{t=a}^{t=b}$
+for any antiderivative $F$ of a continuous $f$.
+
+:::

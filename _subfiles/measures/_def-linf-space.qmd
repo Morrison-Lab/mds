@@ -1,0 +1,14 @@
+:::{#def-linf-space}
+#### $L^\infty$ space and essential supremum norm
+
+Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
+For $p = \infty$, the **essential supremum norm** (or **$L^\infty$ norm**) of a [measurable function](#def-measurable-function) $f : S \to \reals$ is:
+
+$$
+\norm{f}_\infty \eqdef \inf \cb{ C \ge 0 : \measure(\cb{s \in S : \abs{f(s)} > C}) = 0 }.
+$$
+
+The space $L^\infty(S, \salg, \measure)$ consists of equivalence classes of essentially bounded measurable functions,
+identified as in @def-lp-space when they are equal [almost everywhere](#def-almost-everywhere).
+
+:::
