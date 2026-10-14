@@ -7,4 +7,4 @@ The two results are
 "differentiability implies continuity",
 which says where continuity comes from,
 and "continuity implies integrability",
-which says what continuity buys us.
+which says what continuity gives us.
