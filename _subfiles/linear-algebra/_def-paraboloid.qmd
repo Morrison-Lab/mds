@@ -41,5 +41,33 @@ At $\vx = \vzero$, $f(\vx) = 0$;
 at $\vx = (1, 1)$, $f(\vx) = 2$;
 and $f(\vx) > 0$ at every $\vx \neq \vzero$,
 so the origin is the only lowest point of the bowl.
+@fig-paraboloid shows the surface and its contour lines,
+which are circles around the origin.
+
+```{r}
+#| label: fig-paraboloid
+#| fig-cap: >-
+#|   The paraboloid of f(x) = x1^2 + x2^2,
+#|   as a surface and as contour lines
+#| fig-alt: >-
+#|   Two panels.
+#|   The left panel is a three-dimensional surface shaped like a bowl
+#|   that opens upward, with its lowest point above the origin.
+#|   The right panel shows contour lines of the same function
+#|   as concentric circles around the origin,
+#|   which is marked with a dot.
+axis_values <- seq(-2, 2, length.out = 41)
+height <- outer(axis_values, axis_values, function(x1, x2) x1^2 + x2^2)
+old_par <- par(mfrow = c(1, 2), mar = c(1, 1, 1, 1))
+persp(
+  axis_values, axis_values, height,
+  theta = 30, phi = 25,
+  xlab = "x1", ylab = "x2", zlab = "f(x)"
+)
+par(mar = c(4, 4, 1, 1))
+contour(axis_values, axis_values, height, xlab = "x1", ylab = "x2")
+points(0, 0, pch = 19)
+par(old_par)
+```
 
 :::
