@@ -55,34 +55,6 @@
     ]
   },
   {
-    "objectID": "vector-calculus-slides.html#sec-gradient-shape",
-    "href": "vector-calculus-slides.html#sec-gradient-shape",
-    "title": "Vector Calculus",
-    "section": "\n1 Checking a gradient by its shape",
-    "text": "1 Checking a gradient by its shape\nThe gradient always has the same shape as the input it is taken with respect to, because it holds exactly one partial derivative per component of that input:\n\n\nTable 1: The shape of a gradient follows the shape of what it differentiates with respect to.\n\n\n\n\n\n\n\n\n\\(f\\) is a function of\nits gradient is\n\n\n\na single number\na single number — the ordinary derivative\n\n\na vector in \\(\\mathbb{R}^p\\)\n\na vector in \\(\\mathbb{R}^p\\)\n\n\n\na matrix in \\(\\mathbb{R}^{m \\times n}\\)\n\na matrix in \\(\\mathbb{R}^{m \\times n}\\)\n\n\n\n\n\n\n\nThe table is the cheapest check there is on a gradient just worked out by hand: if the shapes disagree, something went wrong. It is the shape rule of matrix multiplication again, applied to calculus."
-  },
-  {
-    "objectID": "vector-calculus-slides.html#sec-second-derivatives",
-    "href": "vector-calculus-slides.html#sec-second-derivatives",
-    "title": "Vector Calculus",
-    "section": "\n2 Second partial derivatives and the Hessian",
-    "text": "2 Second partial derivatives and the Hessian\n\nDefinition 12 (Open and closed balls) Let \\(\\tilde{x}\\in \\mathbb{R}^p\\) and \\(r &gt; 0\\). The open ball of radius \\(r\\) around \\(\\tilde{x}\\) is the set \\(\\mathopen{}\\left\\{\\tilde{y}\\in \\mathbb{R}^p : \\mathopen{}\\left\\lVert\\tilde{y}- \\tilde{x}\\right\\rVert\\mathclose{} &lt; r\\right\\}\\mathclose{}\\), of points whose distance from \\(\\tilde{x}\\) (the Euclidean norm of the difference) is less than \\(r\\). The closed ball of radius \\(r\\) around \\(\\tilde{x}\\) is \\(\\mathopen{}\\left\\{\\tilde{y}\\in \\mathbb{R}^p : \\mathopen{}\\left\\lVert\\tilde{y}- \\tilde{x}\\right\\rVert\\mathclose{} \\le r\\right\\}\\mathclose{}\\). The open and closed balls of radius \\(1\\) around \\(\\tilde{0}\\) are the open and closed unit balls."
-  },
-  {
-    "objectID": "vector-calculus-slides.html#sec-additional-resources",
-    "href": "vector-calculus-slides.html#sec-additional-resources",
-    "title": "Vector Calculus",
-    "section": "\n3 Further reading",
-    "text": "3 Further reading\n\n\nMarsden and Tromba (2013) is a standard textbook on multivariable and vector calculus. It covers differentiation of functions of several variables, multiple integrals, line and surface integrals, and the theorems of Green, Gauss, and Stokes.\n\nPetersen and Pedersen (2012) is a free desk reference that collects matrix identities. Its chapter on derivatives lists derivatives of vector and matrix expressions, such as the linear and quadratic forms on this page.\n\nMiller (2016) The partial derivative review exercises and worked solutions on this page are adapted from this supplemental review chapter.\n\nSee also the Linear Algebra and Vector Calculus further reading.\n\n\nHua Zhou’s lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2023 Fall)\n\n\nNeural Networks is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization."
-  },
-  {
-    "objectID": "vector-calculus-slides.html#references",
-    "href": "vector-calculus-slides.html#references",
-    "title": "Vector Calculus",
-    "section": "References",
-    "text": "References\n\n\nFelippa, Carlos A. n.d. Matrix Calculus. Appendix F of Introduction to Finite Element Methods, course notes, University of Colorado Boulder. Accessed October 6, 2026. https://quickfem.com/wp-content/uploads/IFEM.AppF_.pdf.\n\n\nFieller, Nick. 2016. Basics of Matrix Algebra for Statistics with R. Chapman; Hall/CRC. https://doi.org/10.1201/9781315370200.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nMarsden, Jerrold E., and Anthony Tromba. 2013. Vector Calculus. 6th ed. Macmillan Learning. https://www.macmillanlearning.com/college/us/product/Vector-Calculus/p/1429215089.\n\n\nMiller, Steven J. 2016. The Probability Lifesaver: Calculus Review Problems. https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf.\n\n\nPetersen, Kaare Brandt, and Michael Syskind Pedersen. 2012. The Matrix Cookbook. Technical University of Denmark. https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.\n\n\nWikipedia contributors. n.d. Gradient — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Gradient."
-  },
-  {
     "objectID": "proof-writing.html",
     "href": "proof-writing.html",
     "title": "Proof Writing",
@@ -191,69 +163,6 @@
       "Notation",
       "Proof Writing"
     ]
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-proof-definitions",
-    "href": "proof-writing-slides.html#sec-proof-definitions",
-    "title": "Proof Writing",
-    "section": "\n1 Definitions for proofs",
-    "text": "1 Definitions for proofs\n\nDefinition 1 (Proposition (statement)) A proposition, or statement, is a sentence that is either true or false."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-dont-skip-steps",
-    "href": "proof-writing-slides.html#sec-dont-skip-steps",
-    "title": "Proof Writing",
-    "section": "\n2 Don’t skip steps",
-    "text": "2 Don’t skip steps\nShow every step of the derivation. Each line should follow from the previous line by a single, identifiable move:\n\napplying a definition,\nsubstituting a known result, or\nperforming one algebraic operation.\n\nWhen you skip steps, you force the reader to reconstruct your reasoning, which is exactly the work the proof was supposed to do for them. A step that feels “obvious” while you are writing it is often the step a reader gets stuck on. Phrases like “it can be shown that” or “clearly” usually mark a skipped step; show the step instead."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-annotate-each-step",
-    "href": "proof-writing-slides.html#sec-annotate-each-step",
-    "title": "Proof Writing",
-    "section": "\n3 Annotate each step",
-    "text": "3 Annotate each step\nFor each step, note the definition, theorem, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.\nFor example, here is a derivation that the hat matrix \\(\\mathbf{H} = \\mathbf{X}({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}{\\mathbf{X}}^{\\top}\\) is idempotent, \\(\\mathbf{H}^2 = \\mathbf{H}\\), with each step annotated:\n\\[\n\\begin{aligned}\n\\mathbf{H}^2\n&= \\mathbf{H}\\mathbf{H}\n&& \\text{(definition of a matrix power)}\n\\\\\n&= \\mathbf{X}({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}{\\mathbf{X}}^{\\top}\\,\\mathbf{X}({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}{\\mathbf{X}}^{\\top}\n&& \\text{(definition of } \\mathbf{H} \\text{)}\n\\\\\n&= \\mathbf{X}({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}({\\mathbf{X}}^{\\top}\\mathbf{X})({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}{\\mathbf{X}}^{\\top}\n&& \\text{(regroup; matrix multiplication is associative)}\n\\\\\n&= \\mathbf{X}\\,\\mathbf{I}_p\\,({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}{\\mathbf{X}}^{\\top}\n&& \\text{(a matrix inverse times the matrix is } \\mathbf{I}_p \\text{)}\n\\\\\n&= \\mathbf{X}({\\mathbf{X}}^{\\top}\\mathbf{X})^{-1}{\\mathbf{X}}^{\\top}\n&& \\text{(the identity matrix changes nothing)}\n\\\\\n&= \\mathbf{H}\n&& \\text{(definition of } \\mathbf{H} \\text{)}\n\\end{aligned}\n\\]\nThe Linear Algebra page uses this derivation to show that \\(\\mathbf{H}\\) is a projection matrix. The probability notes derive the variance identity \\(\\operatorname{Var}\\mathopen{}\\left(X\\right)\\mathclose{} = \\operatorname{E}\\mathopen{}\\left[X^2\\right]\\mathclose{} - \\mathopen{}\\left(\\operatorname{E}\\mathopen{}\\left[X\\right]\\mathclose{}\\right)^2\\mathclose{}\\) in the same annotated style."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-direct-proof",
-    "href": "proof-writing-slides.html#sec-direct-proof",
-    "title": "Proof Writing",
-    "section": "\n4 Direct proof",
-    "text": "4 Direct proof\n\nDefinition 14 (Direct proof) A direct proof of a proposition \\(Q\\) starts from the assumptions that \\(Q\\) is stated under, if any, and reaches \\(Q\\) through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that \\(Q\\) is false; compare proof by contradiction, which does."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-golden-rule",
-    "href": "proof-writing-slides.html#sec-golden-rule",
-    "title": "Proof Writing",
-    "section": "\n5 Follow the golden rule",
-    "text": "5 Follow the golden rule\nIn general, follow the golden rule: treat your readers the way you want to be treated as a reader.\nWhen you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-proof-by-induction",
-    "href": "proof-writing-slides.html#sec-proof-by-induction",
-    "title": "Proof Writing",
-    "section": "\n6 Proof by induction",
-    "text": "6 Proof by induction\nMany proofs in these notes show that a statement holds for every natural number \\(n\\), or for every integer \\(n\\) from some starting value on. Checking the statement one \\(n\\) at a time would never finish; induction proves it for all of them with two arguments.\n\nDefinition 15 (Proof by induction) Let \\(n_0\\) be an integer, and let \\(P(n)\\) be a predicate about the integers \\(n \\ge n_0\\). A proof by induction on \\(n\\) shows that \\(P(n)\\) holds for every integer \\(n \\ge n_0\\) by showing two things:\n\n\nBase case: \\(P(n_0)\\) holds.\n\nInductive step: for every integer \\(n &gt; n_0\\), if \\(P(n - 1)\\) holds, then \\(P(n)\\) holds.\n\nIn the inductive step, the assumption that \\(P(n - 1)\\) holds is called the induction hypothesis."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-formal-logic",
-    "href": "proof-writing-slides.html#sec-formal-logic",
-    "title": "Proof Writing",
-    "section": "\n7 Formal logic",
-    "text": "7 Formal logic\n\nDefinition 16 (Propositional logic) Propositional logic is the study of logical entailment among propositions built from basic propositions \\(P, Q, R, \\ldots\\) using only the logical connectives. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say."
-  },
-  {
-    "objectID": "proof-writing-slides.html#sec-further-reading",
-    "href": "proof-writing-slides.html#sec-further-reading",
-    "title": "Proof Writing",
-    "section": "\n8 Further reading",
-    "text": "8 Further reading\n\n\nVelleman (2019) is a structured introduction to proof techniques such as direct proof, proof by contradiction, and induction.\n\nBarker-Plummer et al. (2011) treats proofs as formal proofs in propositional logic and first-order logic."
-  },
-  {
-    "objectID": "proof-writing-slides.html#references",
-    "href": "proof-writing-slides.html#references",
-    "title": "Proof Writing",
-    "section": "References",
-    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nVelleman, Daniel J. 2019. How to Prove It: A Structured Approach. 3rd ed. Cambridge University Press. https://doi.org/10.1017/9781108539890."
   },
   {
     "objectID": "notation.html",
@@ -366,69 +275,6 @@
     ]
   },
   {
-    "objectID": "notation-slides.html#sec-writing-math-quarto",
-    "href": "notation-slides.html#sec-writing-math-quarto",
-    "title": "Notation",
-    "section": "1 Writing math in Quarto",
-    "text": "1 Writing math in Quarto\nThe third column of Table 1 gives the LaTeX command for each symbol. Quarto and R Markdown documents write math in LaTeX syntax: put inline math between single dollar signs, as in $x^2$, and displayed equations between double dollar signs, as in $$x^2$$. The equations section of Quarto’s Markdown guide shows the details. These notes also use shorthand macros, such as \\floor{x} for \\(\\mathopen{}\\left\\lfloor x\\right\\rfloor\\mathclose{}\\), defined in the latex-macros submodule’s macros.qmd."
-  },
-  {
-    "objectID": "notation-slides.html#sec-notation-naturals",
-    "href": "notation-slides.html#sec-notation-naturals",
-    "title": "Notation",
-    "section": "2 Natural numbers",
-    "text": "2 Natural numbers\n\nExercise 1 (Which numbers are natural?) List the elements of the set \\(\\mathopen{}\\left\\{n \\in \\mathbb{N}: n &lt; 3\\right\\}\\mathclose{}\\). Is your answer the same in every textbook?"
-  },
-  {
-    "objectID": "notation-slides.html#sec-notation-reals",
-    "href": "notation-slides.html#sec-notation-reals",
-    "title": "Notation",
-    "section": "3 Rational, real, and irrational numbers",
-    "text": "3 Rational, real, and irrational numbers\n\nDefinition 5 (Rational numbers) A rational number is a number that can be written as a fraction \\(\\frac{a}{b}\\), where \\(a\\) and \\(b\\) are integers (Definition 1) and \\(b \\ne 0\\). The set of rational numbers is written \\(\\mathbb{Q}\\):\n\\[\\mathbb{Q} \\stackrel{\\text{def}}{=}\\mathopen{}\\left\\{\\frac{a}{b} : a \\in \\mathbb{Z},\\ b \\in \\mathbb{Z},\\ b \\ne 0\\right\\}\\mathclose{}\\]"
-  },
-  {
-    "objectID": "notation-slides.html#percent-sign",
-    "href": "notation-slides.html#percent-sign",
-    "title": "Notation",
-    "section": "4 Percent sign (“%”)",
-    "text": "4 Percent sign (“%”)\nThe word “percent” comes from the Latin “per centum”; “centum” is Latin for 100, so “percent” means “per hundred” (cf. https://en.wikipedia.org/wiki/Percentage)."
-  },
-  {
-    "objectID": "notation-slides.html#sec-indicator-functions",
-    "href": "notation-slides.html#sec-indicator-functions",
-    "title": "Notation",
-    "section": "5 Indicator functions",
-    "text": "5 Indicator functions\nAn indicator function is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:\n\nbinary variables, which take only the values \\(0\\) and \\(1\\) (Definition 11);\nevent and censoring indicators in survival analysis, the study of the time until an event such as death, where an observation is censored when follow-up ends before its event is seen;\nmembership in subpopulations;\ndomain restrictions in integrals and sums.\n\nDespite their conceptual simplicity, notation for indicator functions varies substantially across textbooks, research papers, and subfields. This section summarizes the principal notational conventions."
-  },
-  {
-    "objectID": "notation-slides.html#sec-notational-shorthands",
-    "href": "notation-slides.html#sec-notational-shorthands",
-    "title": "Notation",
-    "section": "6 Notational shorthands",
-    "text": "6 Notational shorthands\n\nDefinition 17 (Lower and upper limits of a sum or integral) In a sum \\(\\sum_{i=m}^{n} a_i\\), the lower limit \\(m\\) is the first value of the index \\(i\\), and the upper limit \\(n\\) is its last value. In an integral \\(\\int_a^b f(x)\\,dx\\), the lower limit \\(a\\) is the left end of the interval of integration, and the upper limit \\(b\\) is its right end; together they are the limits of integration. In both, the lower limit is written below the symbol and the upper limit above it."
-  },
-  {
-    "objectID": "notation-slides.html#why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized",
-    "href": "notation-slides.html#why-is-notation-in-probability-and-statistics-so-inconsistent-and-disorganized",
-    "title": "Notation",
-    "section": "7 Why is notation in probability and statistics so inconsistent and disorganized?",
-    "text": "7 Why is notation in probability and statistics so inconsistent and disorganized?\nIn grad school, we are asked to learn from increasingly disorganized materials and lectures. Not coincidentally, as the amount of organization decreases, the amount of complexity increases, the amount of difficulty increases, the number of reliable references decreases, and the amount of inconsistency in notation and content increases (both between multiple references and within single references!). In other words, as you approach the cutting-edge of most fields, you start to run into content that hasn’t been fully thought through or standardized. This lack of clarity is unfortunate and undesirable, but it is understandable and inevitable.\nIt’s worth noting that calculus was formalized in the 1600s, elementary algebra was formalized around 820, and arithmetic even earlier. And calculus still has several competing notation systems. In contrast, the field of statistics only emerged in the late 1800s and early 1900s, so it’s not surprising that the notation and terminology is still developing. Generalized linear models were only formalized in 1972 (Nelder and Wedderburn 1972), which is very recent in terms of the pace of scientific development."
-  },
-  {
-    "objectID": "notation-slides.html#sec-further-reading",
-    "href": "notation-slides.html#sec-further-reading",
-    "title": "Notation",
-    "section": "8 Further reading",
-    "text": "8 Further reading\nFor the logical symbols and proof conventions used in these notes (whose definitions are on the Proof Writing page):\n\nVelleman (2019) explains how mathematical statements are built from logical connectives (definition) and quantifiers (definition), and how to read and write them.\nBarker-Plummer et al. (2011) covers the same symbols as a formal language, with propositional logic (the logic of connectives) and first-order logic (which adds quantifiers).\n\nFor set and function notation, see the Sets and Functions page."
-  },
-  {
-    "objectID": "notation-slides.html#references",
-    "href": "notation-slides.html#references",
-    "title": "Notation",
-    "section": "References",
-    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nNelder, John Ashworth, and Robert WM Wedderburn. 1972. “Generalized Linear Models.” Journal of the Royal Statistical Society Series A: Statistics in Society 135 (3): 370–84. https://doi.org/10.2307/2344614.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.\n\n\nVelleman, Daniel J. 2019. How to Prove It: A Structured Approach. 3rd ed. Cambridge University Press. https://doi.org/10.1017/9781108539890."
-  },
-  {
     "objectID": "linear-algebra.html",
     "href": "linear-algebra.html",
     "title": "Linear Algebra",
@@ -498,27 +344,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra-subspaces-slides.html#rank",
-    "href": "linear-algebra-subspaces-slides.html#rank",
-    "title": "Subspaces and Rank",
-    "section": "1 Rank",
-    "text": "1 Rank\n\nDefinition 1 (Linearly independent vectors) Vectors \\(\\tilde{v}_1, \\ldots, \\tilde{v}_k\\) of the same length \\(p\\) are linearly independent if the only numbers \\(c_1, \\ldots, c_k\\) with\n\\[c_1 \\tilde{v}_1 + \\cdots + c_k \\tilde{v}_k = \\tilde{0}\\]\nare\n\\[\n\\begin{aligned}\nc_1 &= \\cdots \\\\\n&= c_k \\\\\n&= 0.\n\\end{aligned}\n\\]\nVectors that are not linearly independent are linearly dependent."
-  },
-  {
-    "objectID": "linear-algebra-subspaces-slides.html#sec-subspaces",
-    "href": "linear-algebra-subspaces-slides.html#sec-subspaces",
-    "title": "Subspaces and Rank",
-    "section": "2 Subspaces",
-    "text": "2 Subspaces\n\n\n\n\n\n\nSource and license\n\n\nThis section is adapted from Zhou (2024), used under the MIT License. The license text is:\n\nCopyright (c) 2024 ucla-biostat-216\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
-  },
-  {
-    "objectID": "linear-algebra-subspaces-slides.html#references",
-    "href": "linear-algebra-subspaces-slides.html#references",
-    "title": "Subspaces and Rank",
-    "section": "",
-    "text": "Example 21 (Equal dimensions without containment) The lines \\(\\operatorname{span}\\mathopen{}\\left\\{(1, 0, 0)\\right\\}\\mathclose{}\\) and \\(\\operatorname{span}\\mathopen{}\\left\\{(0, 1, 0)\\right\\}\\mathclose{}\\) in \\(\\mathbb{R}^3\\) both have dimension \\(1\\), but they are not equal: \\((1, 0, 0)\\) is in the first and not the second. Theorem 11 does not apply, because neither line contains the other.\n\n\n\n\n\n\n\n\n\nZhou, Hua. 2024. Vector Space. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/04-vecsp/04-vecsp.html."
-  },
-  {
     "objectID": "linear-algebra-rank-nullity.html",
     "href": "linear-algebra-rank-nullity.html",
     "title": "Column Space, Null Space and Rank-Nullity",
@@ -555,27 +380,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra-rank-nullity-slides.html#sec-column-null-space",
-    "href": "linear-algebra-rank-nullity-slides.html#sec-column-null-space",
-    "title": "Column Space, Null Space and Rank-Nullity",
-    "section": "\n1 Column space and null space",
-    "text": "1 Column space and null space\n\nDefinition 1 (Column space (range, image)) The column space of an \\(m \\times n\\) matrix \\(\\mathbf{A}\\) is\n\\[\n\\mathcal{C}(\\mathbf{A})\n\\stackrel{\\text{def}}{=}\n\\mathopen{}\\left\\{\\mathbf{A} \\tilde{x} : \\tilde{x} \\in \\mathbb{R}^n\\right\\}\\mathclose{},\n\\]\nthe set of all vectors \\(\\mathbf{A} \\tilde{x}\\) in \\(\\mathbb{R}^m\\). It is also called the range or image of \\(\\mathbf{A}\\)."
-  },
-  {
-    "objectID": "linear-algebra-rank-nullity-slides.html#sec-rank-nullity",
-    "href": "linear-algebra-rank-nullity-slides.html#sec-rank-nullity",
-    "title": "Column Space, Null Space and Rank-Nullity",
-    "section": "\n2 Rank-nullity and rank factorization",
-    "text": "2 Rank-nullity and rank factorization\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from Zhou (2024), used under the MIT License (see the license text in Section 2 in Subspaces and Rank)."
-  },
-  {
-    "objectID": "linear-algebra-rank-nullity-slides.html#references",
-    "href": "linear-algebra-rank-nullity-slides.html#references",
-    "title": "Column Space, Null Space and Rank-Nullity",
-    "section": "",
-    "text": "Example 22 (Building a rank factorization from a basis) For \\(\\mathbf{A}\\) in Example 1, \\((1, 3)\\) spans \\(\\mathcal{C}(\\mathbf{A})\\) (Example 2), and it is linearly independent because it is nonzero (\\(c\\,(1, 3) = \\tilde{0}_2\\) forces \\(c = 0\\)), so it is a basis of \\(\\mathcal{C}(\\mathbf{A})\\). The columns of \\(\\mathbf{A}\\) are \\((1, 3) = 1 \\cdot(1, 3)\\), \\((-2, -6) = -2 \\cdot(1, 3)\\) and \\((-2, -6) = -2 \\cdot(1, 3)\\), so the construction in Theorem 13 gives \\(\\mathbf{C} = \\begin{bmatrix} 1 \\\\ 3 \\end{bmatrix}\\) and \\(\\mathbf{R} = \\begin{bmatrix} 1 & -2 & -2 \\end{bmatrix}\\), the factorization in Example 21.\n\n\n\n\n\nZhou, Hua. 2024. Rank and Nullity. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/05-rank/05-rank.html."
-  },
-  {
     "objectID": "linear-algebra-matrices.html",
     "href": "linear-algebra-matrices.html",
     "title": "Matrices",
@@ -598,20 +402,6 @@
       "Linear Algebra",
       "Matrices"
     ]
-  },
-  {
-    "objectID": "linear-algebra-matrices-slides.html#matrices",
-    "href": "linear-algebra-matrices-slides.html#matrices",
-    "title": "Matrices",
-    "section": "1 Matrices",
-    "text": "1 Matrices\n\nDefinition 1 (Matrix) A matrix of dimensions \\(m \\times n\\) is a rectangular array of \\(m \\cdot n\\) numbers, arranged in \\(m\\) rows and \\(n\\) columns:\n\\[\n\\mathbf{A} =\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\n\\]"
-  },
-  {
-    "objectID": "linear-algebra-matrices-slides.html#references",
-    "href": "linear-algebra-matrices-slides.html#references",
-    "title": "Matrices",
-    "section": "",
-    "text": "Remark 8 (The order of the factors reverses). Transposing a product reverses the order of the factors. Keeping the original order usually gives an undefined product or a different matrix. For example, with \\(\\mathbf{A} = [1,\\; 2]\\) (\\(1 \\times 2\\)) and \\(\\mathbf{B} = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}\\) (\\(2 \\times 1\\)),\n\\[\n\\begin{aligned}\n\\mathbf{A}\\mathbf{B} &= 1 \\cdot 3 + 2 \\cdot 4 \\\\\n&= 11,\n\\end{aligned}\n\\]\nso \\({(\\mathbf{A}\\mathbf{B})}^{\\top} = 11\\), and\n\\[\n{\\mathbf{B}}^{\\top}\\,{\\mathbf{A}}^{\\top}\n= [3,\\; 4] \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}\n= 11,\n\\qquad\n{\\mathbf{A}}^{\\top}\\,{\\mathbf{B}}^{\\top}\n= \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix} [3,\\; 4]\n= \\begin{bmatrix} 3 & 4 \\\\ 6 & 8 \\end{bmatrix}.\n\\]\nIf instead \\(\\mathbf{A}\\) is \\(2 \\times 3\\) and \\(\\mathbf{B}\\) is \\(3 \\times 1\\), then \\({\\mathbf{B}}^{\\top}\\,{\\mathbf{A}}^{\\top}\\) is a \\((1 \\times 3)(3 \\times 2)\\) product, but \\({\\mathbf{A}}^{\\top}\\,{\\mathbf{B}}^{\\top}\\) is a \\((3 \\times 2)(1 \\times 3)\\) product, which is undefined.\n\n\n\n\n\n\n\n\n\nBoyd, Stephen, and Lieven Vandenberghe. 2018. Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares. Cambridge University Press. https://doi.org/10.1017/9781108583664.\n\n\nZhou, Hua. 2024. Matrices. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/03-matrix/03-matrix.html."
   },
   {
     "objectID": "linear-algebra-direct-sums.html",
@@ -662,34 +452,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra-direct-sums-slides.html#sec-direct-sums",
-    "href": "linear-algebra-direct-sums-slides.html#sec-direct-sums",
-    "title": "Direct Sums and Orthogonal Complements",
-    "section": "1 Sums and direct sums",
-    "text": "1 Sums and direct sums\n\n\n\n\n\n\nSource\n\n\nThis section, Section 2 and Section 3 are adapted from Zhou (2024), used under the MIT License (see the license text in Section 2 in Subspaces and Rank). The source proves that a subspace and its orthogonal complement together make up \\(\\mathbb{R}^p\\) by extending an orthonormal basis; the proof here uses the rank-nullity theorem (Theorem 7 in Column Space, Null Space and Rank-Nullity) instead."
-  },
-  {
-    "objectID": "linear-algebra-direct-sums-slides.html#sec-orthogonal-complements",
-    "href": "linear-algebra-direct-sums-slides.html#sec-orthogonal-complements",
-    "title": "Direct Sums and Orthogonal Complements",
-    "section": "2 Orthogonal complements",
-    "text": "2 Orthogonal complements\n\nTheorem 5 (The dot product is linear in each slot) For vectors \\(\\tilde{x}, \\tilde{u}, \\tilde{w} \\in \\mathbb{R}^p\\) and numbers \\(a, b\\),\n\\[\n\\tilde{x} \\cdot (a\\,\\tilde{u} + b\\,\\tilde{w})\n= a\\,(\\tilde{x} \\cdot \\tilde{u}) + b\\,(\\tilde{x} \\cdot \\tilde{w})\n\\]\nand\n\\[\n(a\\,\\tilde{u} + b\\,\\tilde{w}) \\cdot \\tilde{x}\n= a\\,(\\tilde{u} \\cdot \\tilde{x}) + b\\,(\\tilde{w} \\cdot \\tilde{x}).\n\\]\n\n\nProof. Second slot.\n\\[\n\\begin{aligned}\n\\tilde{x} \\cdot (a\\,\\tilde{u} + b\\,\\tilde{w})\n&= \\sum_{i=1}^px_i\\,(a\\,\\tilde{u} + b\\,\\tilde{w})_i\n&& \\text{(}\\href{linear-algebra-vectors.qmd#def-dot-product}{\\text{Definition~7 in Vectors}}\\text{)}\n\\\\\n&= \\sum_{i=1}^px_i\\,(a u_i + b w_i)\n&& \\text{(}\\href{linear-algebra-matrices.qmd#def-scalar-mult}{\\text{Definition~6 in Matrices}}\\text{, }\\href{linear-algebra-vectors.qmd#def-vector-addition}{\\text{Definition~6 in Vectors}}\\text{)}\n\\\\\n&= \\sum_{i=1}^p\\mathopen{}\\left(x_i a u_i + x_i b w_i\\right)\\mathclose{}\n&& \\text{(distribute each } x_i \\text{)}\n\\\\\n&= \\sum_{i=1}^p\\mathopen{}\\left(a\\,x_i u_i + b\\,x_i w_i\\right)\\mathclose{}\n&& \\text{(commute the factors in each product)}\n\\\\\n&= \\sum_{i=1}^pa\\,x_i u_i + \\sum_{i=1}^pb\\,x_i w_i\n&& \\text{(split the finite sum)}\n\\\\\n&= a \\sum_{i=1}^px_i u_i + b \\sum_{i=1}^px_i w_i\n&& \\text{(factor } a \\text{ and } b \\text{ out of the sums)}\n\\\\\n&= a\\,(\\tilde{x} \\cdot \\tilde{u}) + b\\,(\\tilde{x} \\cdot \\tilde{w}).\n&& \\text{(}\\href{linear-algebra-vectors.qmd#def-dot-product}{\\text{Definition~7 in Vectors}}\\text{)}\n\\end{aligned}\n\\]\nFirst slot.\n\\[\n\\begin{aligned}\n(a\\,\\tilde{u} + b\\,\\tilde{w}) \\cdot \\tilde{x}\n&= \\tilde{x} \\cdot (a\\,\\tilde{u} + b\\,\\tilde{w})\n&& \\text{(}\\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\\text{Theorem~1 in Vectors}}\\text{)}\n\\\\\n&= a\\,(\\tilde{x} \\cdot \\tilde{u}) + b\\,(\\tilde{x} \\cdot \\tilde{w})\n&& \\text{(second slot)}\n\\\\\n&= a\\,(\\tilde{u} \\cdot \\tilde{x}) + b\\,(\\tilde{w} \\cdot \\tilde{x}).\n&& \\text{(}\\href{linear-algebra-vectors.qmd#thm-lincom-symmetric}{\\text{Theorem~1 in Vectors}}\\text{, twice)}\n\\end{aligned}\n\\]\nTwo special cases are used often. With\n\\[\n\\begin{aligned}\na &= b \\\\\n&= 1,\n\\end{aligned}\n\\]\nand \\(1\\,\\tilde{u} = \\tilde{u}\\), the theorem gives \\(\\tilde{x} \\cdot (\\tilde{u} + \\tilde{w}) = \\tilde{x} \\cdot \\tilde{u} + \\tilde{x} \\cdot \\tilde{w}\\). With \\(\\tilde{w} = \\tilde{u}\\) and \\(b = 0\\), and \\(0\\,\\tilde{u} = \\tilde{0}\\), it gives \\(\\tilde{x} \\cdot (a\\,\\tilde{u}) = a\\,(\\tilde{x} \\cdot \\tilde{u})\\), and likewise in the first slot."
-  },
-  {
-    "objectID": "linear-algebra-direct-sums-slides.html#sec-fundamental-theorem",
-    "href": "linear-algebra-direct-sums-slides.html#sec-fundamental-theorem",
-    "title": "Direct Sums and Orthogonal Complements",
-    "section": "3 The fundamental theorem of linear algebra",
-    "text": "3 The fundamental theorem of linear algebra\n\nTheorem 10 (Fundamental theorem of linear algebra) Let \\(\\mathbf{A}\\) be an \\(m \\times n\\) matrix with \\(\\operatorname{rank}(\\mathbf{A}) = r\\). Then\n\n\\(\\mathcal{C}(\\mathbf{A})^\\perp = \\mathcal{N}({\\mathbf{A}}^{\\top})\\), and \\(\\mathbb{R}^m = \\mathcal{C}(\\mathbf{A}) \\oplus \\mathcal{N}({\\mathbf{A}}^{\\top})\\);\n\\(\\mathcal{C}(\\mathbf{A}) = \\mathcal{N}({\\mathbf{A}}^{\\top})^\\perp\\);\n\\(\\mathcal{N}(\\mathbf{A})^\\perp = \\mathcal{C}({\\mathbf{A}}^{\\top})\\), and \\(\\mathbb{R}^n = \\mathcal{C}({\\mathbf{A}}^{\\top}) \\oplus \\mathcal{N}(\\mathbf{A})\\);\n\\[\n\\begin{aligned}\n\\dim\\mathopen{}\\left(\\mathcal{C}(\\mathbf{A})\\right)\\mathclose{} &= \\dim\\mathopen{}\\left(\\mathcal{C}({\\mathbf{A}}^{\\top})\\right)\\mathclose{} \\\\\n&= r,\n\\end{aligned}\n\\]\n\\(\\dim\\mathopen{}\\left(\\mathcal{N}(\\mathbf{A})\\right)\\mathclose{} = n - r\\), and \\(\\dim\\mathopen{}\\left(\\mathcal{N}({\\mathbf{A}}^{\\top})\\right)\\mathclose{} = m - r\\).\n\n\n\nProof. Part 1. The first equation is Theorem 7. \\(\\mathcal{C}(\\mathbf{A})\\) is a subspace of \\(\\mathbb{R}^m\\) (Theorem 1 in Column Space, Null Space and Rank-Nullity), so\n\\[\n\\begin{aligned}\n\\mathbb{R}^m\n&= \\mathcal{C}(\\mathbf{A}) \\oplus \\mathcal{C}(\\mathbf{A})^\\perp\n&& \\text{(}\\href{#thm-orthogonal-direct-sum}{\\text{Theorem~8}}\\text{)}\n\\\\\n&= \\mathcal{C}(\\mathbf{A}) \\oplus \\mathcal{N}({\\mathbf{A}}^{\\top}).\n&& \\text{(first equation)}\n\\end{aligned}\n\\]\nPart 2.\n\\[\n\\begin{aligned}\n\\mathcal{C}(\\mathbf{A})\n&= \\mathopen{}\\left(\\mathcal{C}(\\mathbf{A})^\\perp\\right)\\mathclose{}^\\perp\n&& \\text{(}\\href{#thm-double-complement}{\\text{Theorem~9}}\\text{)}\n\\\\\n&= \\mathcal{N}({\\mathbf{A}}^{\\top})^\\perp.\n&& \\text{(part 1)}\n\\end{aligned}\n\\]\nPart 3. Apply parts 2 and 1 to the \\(n \\times m\\) matrix \\({\\mathbf{A}}^{\\top}\\), using \\({({\\mathbf{A}}^{\\top})}^{\\top} = \\mathbf{A}\\): part 2 gives \\(\\mathcal{C}({\\mathbf{A}}^{\\top}) = \\mathcal{N}(\\mathbf{A})^\\perp\\), and part 1 gives \\(\\mathbb{R}^n = \\mathcal{C}({\\mathbf{A}}^{\\top}) \\oplus \\mathcal{N}(\\mathbf{A})\\).\nPart 4. \\(\\dim\\mathopen{}\\left(\\mathcal{C}(\\mathbf{A})\\right)\\mathclose{} = r\\) by Theorem 6 in Column Space, Null Space and Rank-Nullity. \\(\\dim\\mathopen{}\\left(\\mathcal{C}({\\mathbf{A}}^{\\top})\\right)\\mathclose{} = \\operatorname{rank}({\\mathbf{A}}^{\\top})\\) by Theorem 6 in Column Space, Null Space and Rank-Nullity, and that is \\(r\\) by Theorem 9 in Column Space, Null Space and Rank-Nullity. \\(\\mathbf{A}\\) has \\(n\\) columns, so \\(\\dim\\mathopen{}\\left(\\mathcal{N}(\\mathbf{A})\\right)\\mathclose{} = n - r\\) (Definition 7 in Column Space, Null Space and Rank-Nullity, Theorem 7 in Column Space, Null Space and Rank-Nullity). \\({\\mathbf{A}}^{\\top}\\) has \\(m\\) columns and rank \\(r\\), so \\(\\dim\\mathopen{}\\left(\\mathcal{N}({\\mathbf{A}}^{\\top})\\right)\\mathclose{} = m - r\\) in the same way."
-  },
-  {
-    "objectID": "linear-algebra-direct-sums-slides.html#references",
-    "href": "linear-algebra-direct-sums-slides.html#references",
-    "title": "Direct Sums and Orthogonal Complements",
-    "section": "",
-    "text": "Example 18 (The four subspaces of the matrix in Example 1 in Column Space, Null Space and Rank-Nullity) For \\(\\mathbf{A}\\) in Example 1 in Column Space, Null Space and Rank-Nullity, \\(m = 2\\), \\(n = 3\\) and \\(r = 1\\) (Example 10 in Column Space, Null Space and Rank-Nullity).\n\nIn \\(\\mathbb{R}^3\\): the row space \\(\\mathcal{C}({\\mathbf{A}}^{\\top}) = \\operatorname{span}\\mathopen{}\\left\\{(1, -2, -2)\\right\\}\\mathclose{}\\)\n\nhas dimension \\(1 = r\\), and \\(\\mathcal{N}(\\mathbf{A}) = \\operatorname{span}\\mathopen{}\\left\\{(2, 1, 0), (2, 0, 1)\\right\\}\\mathclose{}\\) has dimension \\(2 = n - r\\) (Example 11 in Column Space, Null Space and Rank-Nullity). The spanning vectors are orthogonal:\n\n\\[\n\\begin{aligned}\n(1, -2, -2) \\cdot (2, 1, 0) &= 2 - 2 + 0 \\\\\n&= 0\n\\end{aligned}\n\\]\nand\n\\[\n\\begin{aligned}\n(1, -2, -2) \\cdot (2, 0, 1) &= 2 + 0 - 2 \\\\\n&= 0.\n\\end{aligned}\n\\]\nIn \\(\\mathbb{R}^2\\): \\(\\mathcal{C}(\\mathbf{A}) = \\operatorname{span}\\mathopen{}\\left\\{(1, 3)\\right\\}\\mathclose{}\\) has dimension \\(1 = r\\), and \\(\\mathcal{N}({\\mathbf{A}}^{\\top}) = \\operatorname{span}\\mathopen{}\\left\\{(-3, 1)\\right\\}\\mathclose{}\\) has dimension \\(1 = m - r\\) (Example 14).\n\nBy part 3, \\(\\tilde{y} = (1, 0, 0)\\) splits uniquely into a row-space part \\(t\\,(1, -2, -2)\\) and a null-space part. The null-space part \\(\\tilde{y} - t\\,(1, -2, -2)\\) lies in \\(\\mathcal{N}(\\mathbf{A})\\) (part 3), and \\(\\mathcal{N}(\\mathbf{A}) = \\mathcal{C}({\\mathbf{A}}^{\\top})^\\perp\\) (Theorem 7 applied to \\({\\mathbf{A}}^{\\top}\\), with \\({({\\mathbf{A}}^{\\top})}^{\\top} = \\mathbf{A}\\)), so it must be orthogonal to \\((1, -2, -2)\\):\n\\[\n\\begin{aligned}\n0\n&= (1, -2, -2) \\cdot \\mathopen{}\\left((1, 0, 0) - t\\,(1, -2, -2)\\right)\\mathclose{}\n&& \\text{(orthogonality)}\n\\\\\n&= (1, -2, -2) \\cdot \\mathopen{}\\left(1 \\cdot(1, 0, 0) + (-t)\\,(1, -2, -2)\\right)\\mathclose{}\n&& \\text{(write the difference as a linear combination)}\n\\\\\n&= 1 \\cdot\\mathopen{}\\left((1, -2, -2) \\cdot (1, 0, 0)\\right)\\mathclose{} + (-t)\\,\\mathopen{}\\left((1, -2, -2) \\cdot (1, -2, -2)\\right)\\mathclose{}\n&& \\text{(}\\href{#thm-dot-linear}{\\text{Theorem~5}}\\text{)}\n\\\\\n&= 1 \\cdot 1 + (-t) \\cdot 9\n&& \\text{(}\\href{linear-algebra-vectors.qmd#def-dot-product}{\\text{Definition~7 in Vectors}}\\text{)}\n\\\\\n&= 1 - 9t,\n&& \\text{(arithmetic)}\n\\end{aligned}\n\\]\nso \\(t = \\frac{1}{9}\\). The row-space part is \\(\\mathopen{}\\left(\\frac{1}{9}, -\\frac{2}{9}, -\\frac{2}{9}\\right)\\mathclose{}\\) and the null-space part is \\(\\mathopen{}\\left(\\frac{8}{9}, \\frac{2}{9}, \\frac{2}{9}\\right)\\mathclose{}\\); as a check, row 1 of \\(\\mathbf{A}\\) gives \\(\\frac{8}{9} - 2 \\cdot\\frac{2}{9} - 2 \\cdot\\frac{2}{9} = 0\\), and row 2 is \\(3\\) times row 1, so \\(\\mathbf{A}\\) sends the null-space part to \\(\\tilde{0}_2\\).\n\n\n\n\n\n\n\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nZhou, Hua. 2024. Orthogonal Projections. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html."
-  },
-  {
     "objectID": "linear-algebra-complex.html",
     "href": "linear-algebra-complex.html",
     "title": "Complex Vectors and Matrices",
@@ -712,20 +474,6 @@
       "Linear Algebra",
       "Complex Vectors and Matrices"
     ]
-  },
-  {
-    "objectID": "linear-algebra-complex-slides.html#sec-complex-vectors-matrices",
-    "href": "linear-algebra-complex-slides.html#sec-complex-vectors-matrices",
-    "title": "Complex Vectors and Matrices",
-    "section": "1 Complex vectors and matrices",
-    "text": "1 Complex vectors and matrices\n\nDefinition 1 (Complex vectors and matrices) A complex vector of length \\(p\\) is a column vector whose entries are complex numbers; the set of all of them is denoted \\(\\mathbb{C}^p\\). A complex matrix of size \\(m \\times n\\) is a matrix with complex entries; the set of all of them is denoted \\(\\mathbb{C}^{m \\times n}\\)."
-  },
-  {
-    "objectID": "linear-algebra-complex-slides.html#references",
-    "href": "linear-algebra-complex-slides.html#references",
-    "title": "Complex Vectors and Matrices",
-    "section": "",
-    "text": "Proof. Existence: Define \\(\\mathbf{H} = \\frac{1}{2}(\\mathbf{A} + \\mathbf{A}^{\\mathsf{H}})\\) and \\(\\mathbf{S} = \\frac{1}{2}(\\mathbf{A} - \\mathbf{A}^{\\mathsf{H}})\\). Their sum is:\n\\[\n\\begin{aligned}\n\\mathbf{H} + \\mathbf{S}\n&= \\frac{\\mathbf{A} + \\mathbf{A}^{\\mathsf{H}}}{2} + \\frac{\\mathbf{A} - \\mathbf{A}^{\\mathsf{H}}}{2} \\\\\n&= \\frac{2\\mathbf{A}}{2} \\\\\n&= \\mathbf{A}.\n\\end{aligned}\n\\]\nApplying the properties of the Hermitian adjoint (Theorem 1):\n\\[\n\\begin{aligned}\n\\mathbf{H}^{\\mathsf{H}}\n&= \\mathopen{}\\left(\\frac{\\mathbf{A} + \\mathbf{A}^{\\mathsf{H}}}{2}\\right)\\mathclose{}^{\\mathsf{H}} \\\\\n&= \\frac{\\mathbf{A}^{\\mathsf{H}} + (\\mathbf{A}^{\\mathsf{H}})^{\\mathsf{H}}}{2} \\\\\n&= \\frac{\\mathbf{A}^{\\mathsf{H}} + \\mathbf{A}}{2} \\\\\n&= \\mathbf{H},\n\\\\\n\\mathbf{S}^{\\mathsf{H}}\n&= \\mathopen{}\\left(\\frac{\\mathbf{A} - \\mathbf{A}^{\\mathsf{H}}}{2}\\right)\\mathclose{}^{\\mathsf{H}} \\\\\n&= \\frac{\\mathbf{A}^{\\mathsf{H}} - (\\mathbf{A}^{\\mathsf{H}})^{\\mathsf{H}}}{2} \\\\\n&= \\frac{\\mathbf{A}^{\\mathsf{H}} - \\mathbf{A}}{2} \\\\\n&= -\\mathbf{S}.\n\\end{aligned}\n\\]\nThus \\(\\mathbf{H}\\) is Hermitian and \\(\\mathbf{S}\\) is skew-Hermitian.\nUniqueness: Suppose \\(\\mathbf{A} = \\mathbf{H}' + \\mathbf{S}'\\) with \\((\\mathbf{H}')^{\\mathsf{H}} = \\mathbf{H}'\\) and \\((\\mathbf{S}')^{\\mathsf{H}} = -\\mathbf{S}'\\). Taking the Hermitian adjoint of both sides yields:\n\\[\n\\begin{aligned}\n\\mathbf{A}^{\\mathsf{H}}\n&= (\\mathbf{H}' + \\mathbf{S}')^{\\mathsf{H}} \\\\\n&= (\\mathbf{H}')^{\\mathsf{H}} + (\\mathbf{S}')^{\\mathsf{H}} \\\\\n&= \\mathbf{H}' - \\mathbf{S}'.\n\\end{aligned}\n\\]\nAdding \\(\\mathbf{A} = \\mathbf{H}' + \\mathbf{S}'\\) and \\(\\mathbf{A}^{\\mathsf{H}} = \\mathbf{H}' - \\mathbf{S}'\\) gives \\(\\mathbf{A} + \\mathbf{A}^{\\mathsf{H}} = 2\\mathbf{H}'\\), so\n\\[\n\\begin{aligned}\n\\mathbf{H}' &= \\frac{1}{2}(\\mathbf{A} + \\mathbf{A}^{\\mathsf{H}}) \\\\\n&= \\mathbf{H}.\n\\end{aligned}\n\\]\nSubtracting the two equations gives \\(\\mathbf{A} - \\mathbf{A}^{\\mathsf{H}} = 2\\mathbf{S}'\\), so\n\\[\n\\begin{aligned}\n\\mathbf{S}' &= \\frac{1}{2}(\\mathbf{A} - \\mathbf{A}^{\\mathsf{H}}) \\\\\n&= \\mathbf{S}.\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\n\n\nAxler, Sheldon. 2024. Linear Algebra Done Right. 4th ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-3-031-41026-0."
   },
   {
     "objectID": "calculus.html",
@@ -783,20 +531,6 @@
       "Calculus",
       "Double Integrals and Fubini's Theorem"
     ]
-  },
-  {
-    "objectID": "calculus-double-integrals-slides.html#sec-double-integrals",
-    "href": "calculus-double-integrals-slides.html#sec-double-integrals",
-    "title": "Double Integrals and Fubini’s Theorem",
-    "section": "\n1 Double Integrals",
-    "text": "1 Double Integrals\nThe Fubini–Tonelli theorem states conditions under which the order of integration in a double integral can be exchanged. We state two versions: the Riemann version (Theorem 1) is what applied courses usually use for double integrals of continuous functions on simple regions; the \\(\\sigma\\)-finite measure-theoretic version (Theorem 2) is included to make the joint-distribution form corollary in Probability for Data Science follow from a stated theorem rather than from an aside."
-  },
-  {
-    "objectID": "calculus-double-integrals-slides.html#references",
-    "href": "calculus-double-integrals-slides.html#references",
-    "title": "Double Integrals and Fubini’s Theorem",
-    "section": "",
-    "text": "Example 7 (When neither Fubini–Tonelli condition is satisfied) The same function \\(f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\) from Example 4 illustrates a case where neither condition of Theorem 2 is satisfied.\nWhy Theorem 2’s conditions fail: \\(\\iint_R |f|\\,dA = \\infty\\), which violates condition (b). Switching to polar coordinates \\((r, \\theta)\\) near the origin, the integrand satisfies\n\\[\n\\begin{aligned}\n|f(x, y)| &= \\mathopen{}\\left|x^2 - y^2\\right|\\mathclose{}/(x^2 + y^2)^2 \\\\\n&= \\mathopen{}\\left|\\cos 2\\theta\\right|\\mathclose{}/r^2,\n\\end{aligned}\n\\]\nso\n\\[\n\\begin{aligned}\n\\iint_R |f|\\,dA\n&\\ge \\int_0^{\\pi/2}\\!\\int_0^{\\varepsilon}\n   \\frac{\\mathopen{}\\left|\\cos 2\\theta\\right|\\mathclose{}}{r^2}\\, r\\,dr\\,d\\theta\\\\\n&= \\mathopen{}\\left(\\int_0^{\\pi/2}\\mathopen{}\\left|\\cos 2\\theta\\right|\\mathclose{}\\,d\\theta\\right)\\mathclose{}\n       \\int_0^{\\varepsilon} \\frac{dr}{r}\\\\\n&= +\\infty,\n\\end{aligned}\n\\]\nsince \\(\\int_0^{\\varepsilon} dr/r\\) diverges. Therefore \\(\\iint_R |f|\\,dA = \\infty\\), and condition (b) of Theorem 2 is not satisfied. (Condition (a) also fails: \\(f\\) takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from Example 4 are thus consistent with Theorem 2: the theorem simply does not apply.\n(Wikipedia contributors 2024)\n\n\n\n\n\nBillingsley, Patrick. 1995. Probability and Measure. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.\n\n\nFubini, Guido. 1907. “Sugli Integrali Multipli.” Rendiconti Della Reale Accademia Dei Lincei. Classe Di Scienze Fisiche, Matematiche e Naturali 16: 608–14.\n\n\nGut, Allan. 2013. Probability: A Graduate Course. 2nd ed. Springer Texts in Statistics. Springer. https://doi.org/10.1007/978-1-4614-4708-5.\n\n\nLarson, Ron, and Bruce H. Edwards. 2018. Calculus. 11th ed. Cengage Learning. https://www.cengage.com/c/calculus-11e-larson/.\n\n\nMiller, Steven J. 2016. The Probability Lifesaver: Calculus Review Problems. https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf.\n\n\nWikipedia contributors. 2024. Fubini’s Theorem — Wikipedia, the Free Encyclopedia. https://en.wikipedia.org/wiki/Fubini%27s_theorem."
   },
   {
     "objectID": "algebra.html",
@@ -892,34 +626,6 @@
     ]
   },
   {
-    "objectID": "algebra-exponentials-slides.html#sec-polynomials",
-    "href": "algebra-exponentials-slides.html#sec-polynomials",
-    "title": "Polynomials, Exponentials and Logarithms",
-    "section": "\n1 Polynomials",
-    "text": "1 Polynomials\n\nExercise 1 (Reading a polynomial) Let \\(f(x) = 3x^4 - x + 7\\).\n\nWrite \\(f\\) in the form \\(a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0\\), listing every coefficient \\(a_4, a_3, a_2, a_1, a_0\\).\nWhat is the degree of \\(f\\), and what is its leading coefficient?"
-  },
-  {
-    "objectID": "algebra-exponentials-slides.html#sec-affine-linear-functions",
-    "href": "algebra-exponentials-slides.html#sec-affine-linear-functions",
-    "title": "Polynomials, Exponentials and Logarithms",
-    "section": "\n2 Affine and linear functions of one variable",
-    "text": "2 Affine and linear functions of one variable\n\nDefinition 7 (Affine function of one variable) A function \\(f: \\mathbb{R}\\to \\mathbb{R}\\) is affine if there are numbers \\(m\\) and \\(b\\) such that\n\\[f(x) = m x + b \\quad \\text{for all } x \\in \\mathbb{R}\\]\nIn this formula, \\(m\\) is called the slope of \\(f\\) and \\(b\\) its intercept."
-  },
-  {
-    "objectID": "algebra-exponentials-slides.html#sec-sequence-limits",
-    "href": "algebra-exponentials-slides.html#sec-sequence-limits",
-    "title": "Polynomials, Exponentials and Logarithms",
-    "section": "\n3 Limits of sequences",
-    "text": "3 Limits of sequences\n\nDefinition 9 (Limit of a sequence) A sequence \\((a_n)\\) of real numbers converges to a real number \\(L\\), written \\(\\lim_{n \\to \\infty} a_n = L\\) or \\(a_n \\to L\\), if for every \\(\\varepsilon&gt; 0\\) there is a natural number \\(N\\) such that\n\\[\\mathopen{}\\left|a_n - L\\right|\\mathclose{} &lt; \\varepsilon\\quad \\text{for every } n \\ge N.\\]\nThen \\(L\\) is the limit of the sequence. A sequence that converges to some real number is convergent, and a sequence that does not converge to any real number diverges."
-  },
-  {
-    "objectID": "algebra-exponentials-slides.html#exponentials-and-logarithms",
-    "href": "algebra-exponentials-slides.html#exponentials-and-logarithms",
-    "title": "Polynomials, Exponentials and Logarithms",
-    "section": "\n4 Exponentials and Logarithms",
-    "text": "4 Exponentials and Logarithms\n\nDefinition 11 (Exponential function) The exponential function \\(\\operatorname{exp}: \\mathbb{R}\\to (0, \\infty)\\) is\n\\[\\operatorname{exp}\\mathopen{}\\left\\{x\\right\\}\\mathclose{} \\stackrel{\\text{def}}{=}\\lim_{n \\to \\infty} \\mathopen{}\\left(1 + \\frac{x}{n}\\right)\\mathclose{}^n,\\]\nthe limit of the sequence \\(\\mathopen{}\\left(1 + \\frac{x}{1}\\right)\\mathclose{}^1, \\mathopen{}\\left(1 + \\frac{x}{2}\\right)\\mathclose{}^2, \\mathopen{}\\left(1 + \\frac{x}{3}\\right)\\mathclose{}^3, \\ldots\\). That limit exists for every real number \\(x\\), and it is positive."
-  },
-  {
     "objectID": "algebra-basics.html",
     "href": "algebra-basics.html",
     "title": "Equalities, Inequalities and Minimizers",
@@ -992,55 +698,6 @@
     ]
   },
   {
-    "objectID": "algebra-basics-slides.html#equalities",
-    "href": "algebra-basics-slides.html#equalities",
-    "title": "Equalities, Inequalities and Minimizers",
-    "section": "1 Equalities",
-    "text": "1 Equalities\n\nMastery of Elementary Algebra (a.k.a. “College Algebra”) is a prerequisite for calculus, which is in turn a prerequisite for most statistics and data science courses. Nevertheless, each year, some students are still uncomfortable with algebraic manipulations of mathematical formulas. Therefore, I include this section as a quick reference.\n\n\nDefinition 1 (Transitive relation) Let \\(\\sim\\) be a relation on a set \\(S\\). The relation \\(\\sim\\) is transitive if, for all \\(a, b, c \\in S\\), \\(a \\sim b\\) and \\(b \\sim c\\) together imply \\(a \\sim c\\)."
-  },
-  {
-    "objectID": "algebra-basics-slides.html#inequalities",
-    "href": "algebra-basics-slides.html#inequalities",
-    "title": "Equalities, Inequalities and Minimizers",
-    "section": "2 Inequalities",
-    "text": "2 Inequalities\n\nDefinition 3 (Strict and non-strict inequalities) For real numbers \\(a\\) and \\(b\\), \\(a &lt; b\\) (“\\(a\\) is less than \\(b\\)”) and \\(a &gt; b\\) (“\\(a\\) is greater than \\(b\\)”) are strict inequalities. The non-strict inequalities also allow equality:\n\n\\(a \\le b\\) means \\(a &lt; b\\) or \\(a = b\\);\n\\(a \\ge b\\) means \\(a &gt; b\\) or \\(a = b\\)."
-  },
-  {
-    "objectID": "algebra-basics-slides.html#sec-powers-roots-abs",
-    "href": "algebra-basics-slides.html#sec-powers-roots-abs",
-    "title": "Equalities, Inequalities and Minimizers",
-    "section": "3 Powers, square roots, and absolute values",
-    "text": "3 Powers, square roots, and absolute values\n\nDefinition 4 (Power, base, and exponent) Let \\(a\\) be a real number and \\(n\\) a natural number. The \\(n\\)th power of \\(a\\) is the product of \\(n\\) copies of \\(a\\):\n\\[a^n \\stackrel{\\text{def}}{=}\\underbrace{a \\cdot a \\cdot\\cdots \\cdot a}_{n \\text{ factors}}\\]\nIn \\(a^n\\), \\(a\\) is the base and \\(n\\) is the exponent. The second power \\(a^2\\) is the square of \\(a\\)."
-  },
-  {
-    "objectID": "algebra-basics-slides.html#sec-min-max",
-    "href": "algebra-basics-slides.html#sec-min-max",
-    "title": "Equalities, Inequalities and Minimizers",
-    "section": "4 Minimum, maximum, argmin and argmax",
-    "text": "4 Minimum, maximum, argmin and argmax\n\nExercise 1 (Smallest value, and where it occurs)  \n\nLet \\(f(x) = (x - 2)^2 + 1\\) for every \\(x \\in \\mathbb{R}\\). What is the smallest value \\(f\\) takes, and at which \\(x\\) does it take that value?\nNow let \\(g(x) = (x - 2)^2 + 1\\) only for \\(x \\in \\mathopen{}\\left\\{0, 1, 3, 4\\right\\}\\mathclose{}\\). What is the smallest value \\(g\\) takes, and at which \\(x\\) does it take that value?"
-  },
-  {
-    "objectID": "algebra-basics-slides.html#sec-minimizers",
-    "href": "algebra-basics-slides.html#sec-minimizers",
-    "title": "Equalities, Inequalities and Minimizers",
-    "section": "5 Global and local minimizers",
-    "text": "5 Global and local minimizers\n\nExercise 2 (A dip that is not the bottom) Let \\(f(x) = x^3 - 3x\\) for \\(x \\in \\mathbb{R}\\).\n\nShow that \\(f(x) - f(1) = (x - 1)^2 (x + 2)\\).\nUse part 1 to show that \\(f(x) \\ge f(1)\\) for every \\(x\\) in the interval \\((0, 2)\\).\nCompute \\(f(-3)\\). Is \\(f(1)\\) the smallest value \\(f\\) takes on all of \\(\\mathbb{R}\\)?\nDoes \\(f\\) take a smallest value anywhere on \\(\\mathbb{R}\\)?"
-  },
-  {
-    "objectID": "algebra-complex-slides.html#sec-complex-numbers",
-    "href": "algebra-complex-slides.html#sec-complex-numbers",
-    "title": "Complex Numbers",
-    "section": "\n1 Complex numbers",
-    "text": "1 Complex numbers"
-  },
-  {
-    "objectID": "algebra-complex-slides.html#references",
-    "href": "algebra-complex-slides.html#references",
-    "title": "Complex Numbers",
-    "section": "",
-    "text": "Example 9 (Multiplying \\(3 + 4\\,i\\) by its conjugate) \\[\n\\begin{aligned}\n&(3 + 4\\,i)(3 - 4\\,i)\n\\\\\n&= 9 - 12\\,i + 12\\,i - 16\\,i^2\n&& \\text{(distribute)}\n\\\\\n&= 9 - 16\\,i^2\n&& \\text{(cancel } 12\\,i \\text{)}\n\\\\\n&= 9 + 16\n&& \\text{(}\\href{#def-imaginary-unit}{\\text{Definition~1}}\\text{)}\n\\\\\n&= 25\n&& \\text{(add)}\n\\end{aligned}\n\\]\nwhich is \\(\\mathopen{}\\left|3 + 4\\,i\\right|\\mathclose{}^2 = 5^2\\) from Example 8, as Theorem 4 says.\n\n\n\n\n\nAxler, Sheldon. 2024. Linear Algebra Done Right. 4th ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-3-031-41026-0."
-  },
-  {
     "objectID": "algebra-complex.html",
     "href": "algebra-complex.html",
     "title": "Complex Numbers",
@@ -1063,69 +720,6 @@
       "Algebra",
       "Complex Numbers"
     ]
-  },
-  {
-    "objectID": "algebra-sums-slides.html#sec-convexity",
-    "href": "algebra-sums-slides.html#sec-convexity",
-    "title": "Convexity, Infimum and Sums",
-    "section": "1 Convex functions",
-    "text": "1 Convex functions\n\nExercise 1 (A value compared with an average of values) Let \\(f(x) = (x - 2)^2\\), and take the points \\(x = 0\\) and \\(y = 4\\) with \\(t = \\tfrac{1}{2}\\).\n\nCompute \\(f(t x + (1 - t) y)\\).\nCompute \\(t f(x) + (1 - t) f(y)\\).\nIs \\(f(t x + (1 - t) y) \\le t f(x) + (1 - t) f(y)\\)?"
-  },
-  {
-    "objectID": "algebra-sums-slides.html#infimum-and-supremum",
-    "href": "algebra-sums-slides.html#infimum-and-supremum",
-    "title": "Convexity, Infimum and Sums",
-    "section": "2 Infimum and supremum",
-    "text": "2 Infimum and supremum\n\nDefinition 4 (Upper and lower bounds) Let \\(A \\subseteq \\mathbb{R}\\).\n\nA real number \\(u\\) is an upper bound for \\(A\\) if \\(a \\le u\\) for all \\(a \\in A\\).\nA real number \\(\\ell\\) is a lower bound for \\(A\\) if \\(\\ell\\le a\\) for all \\(a \\in A\\).\n\n\\(A\\) is bounded above if it has an upper bound, bounded below if it has a lower bound, and bounded if it is both bounded above and bounded below. A real-valued function is bounded above, bounded below, or bounded if its image is."
-  },
-  {
-    "objectID": "algebra-sums-slides.html#sums",
-    "href": "algebra-sums-slides.html#sums",
-    "title": "Convexity, Infimum and Sums",
-    "section": "3 Sums",
-    "text": "3 Sums\n\nDefinition 7 (Term of a sum) In a sum \\(a_1 + a_2 + \\cdots + a_n\\), each of the numbers or expressions \\(a_1, a_2, \\ldots, a_n\\) being added is a term of the sum."
-  },
-  {
-    "objectID": "algebra-sums-slides.html#products",
-    "href": "algebra-sums-slides.html#products",
-    "title": "Convexity, Infimum and Sums",
-    "section": "4 Products",
-    "text": "4 Products\n\n\nTheorem 7 (Multiplying by 1 changes nothing) \\[a \\times 1 = a\\]"
-  },
-  {
-    "objectID": "algebra-sums-slides.html#division",
-    "href": "algebra-sums-slides.html#division",
-    "title": "Convexity, Infimum and Sums",
-    "section": "5 Division",
-    "text": "5 Division\n\nTheorem 10 (Division can be written as a product) If \\(b \\neq 0\\), then\n\\[\\frac {a}{b} = a \\times \\frac{1}{b}\\]"
-  },
-  {
-    "objectID": "algebra-sums-slides.html#sums-and-products-together",
-    "href": "algebra-sums-slides.html#sums-and-products-together",
-    "title": "Convexity, Infimum and Sums",
-    "section": "6 Sums and products together",
-    "text": "6 Sums and products together\n\n\nDefinition 11 (Distributes over) An operation \\(\\star\\) on a set \\(S\\) distributes over an operation \\(\\diamond\\) on \\(S\\) if\n\\[a \\star (b \\diamond c) = (a \\star b) \\diamond (a \\star c)\\]\nfor all \\(a, b, c \\in S\\)."
-  },
-  {
-    "objectID": "algebra-sums-slides.html#sec-summation",
-    "href": "algebra-sums-slides.html#sec-summation",
-    "title": "Convexity, Infimum and Sums",
-    "section": "7 Summation notation",
-    "text": "7 Summation notation\n\nExercise 3 (Expand a sum) The expression \\(\\sum_{i=1}^{4} i^2\\) is shorthand for a sum of four terms.\n\nGuess which four terms, and add them up.\nWrite \\(\\frac{1}{N}\\sum_{i=1}^N\\mathopen{}\\left(y_i - \\hat y_i\\right)\\mathclose{}^2\\) for \\(N = 3\\) without the \\(\\sum\\) symbol."
-  },
-  {
-    "objectID": "algebra-sums-slides.html#quotients",
-    "href": "algebra-sums-slides.html#quotients",
-    "title": "Convexity, Infimum and Sums",
-    "section": "8 Quotients",
-    "text": "8 Quotients\n\nDefinition 17 (Quotient) For real numbers \\(a\\) and \\(b\\) with \\(b \\neq 0\\), the quotient of \\(a\\) by \\(b\\) is the result of dividing \\(a\\) by \\(b\\):\n\\[\\frac{a}{b}\\]"
-  },
-  {
-    "objectID": "algebra-sums-slides.html#references",
-    "href": "algebra-sums-slides.html#references",
-    "title": "Convexity, Infimum and Sums",
-    "section": "",
-    "text": "Additional reference for elementary algebra: https://en.wikipedia.org/wiki/Population_proportion#Mathematical_definition\n\n\n\n\n\n\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill."
   },
   {
     "objectID": "algebra-sums.html",
@@ -1236,20 +830,6 @@
     ]
   },
   {
-    "objectID": "calculus-derivatives-slides.html#sec-derivatives",
-    "href": "calculus-derivatives-slides.html#sec-derivatives",
-    "title": "Derivatives and Taylor Series",
-    "section": "\n1 Derivatives",
-    "text": "1 Derivatives\nLimits and derivatives\n\nDefinition 1 (Limit of a function at a point) Let \\(f\\) be a function defined at every point of an open interval around \\(c\\), except possibly at \\(c\\) itself, and let \\(L\\) be a real number. The limit of \\(f(x)\\) as \\(x\\) approaches \\(c\\) is \\(L\\), written \\(\\lim_{x \\to c} f(x) = L\\), if for every \\(\\varepsilon&gt; 0\\) there is a \\(\\delta&gt; 0\\) such that\n\\[\\mathopen{}\\left|f(x) - L\\right|\\mathclose{} &lt; \\varepsilon\\quad \\text{for every } x \\text{ with } 0 &lt; \\mathopen{}\\left|x - c\\right|\\mathclose{} &lt; \\delta.\\]\nHere \\(\\mathopen{}\\left|\\cdot\\right|\\mathclose{}\\) is the absolute value. When such a real number \\(L\\) exists, the limit exists; otherwise, the limit does not exist. The value \\(f(c)\\), if it is defined, plays no role."
-  },
-  {
-    "objectID": "calculus-derivatives-slides.html#references",
-    "href": "calculus-derivatives-slides.html#references",
-    "title": "Derivatives and Taylor Series",
-    "section": "",
-    "text": "Exercise 31 (Taylor series of \\(\\log(1 + 2x)\\)) Adapted from Miller (2016), Question 1.1.30.\nFind the first two non-zero terms of the Taylor series for\n\\[f(x) = \\log(1 + 2x)\\]\nat \\(x_0 = 0\\).\n\n\nSolution 31. Substitute \\(u = 2x\\) into the Maclaurin series \\(\\log(1 + u) = u - \\frac{u^2}{2} + \\dots\\):\n\\[\n\\begin{aligned}\n\\log(1 + 2x)\n&= (2x) - \\frac{(2x)^2}{2} + \\dots \\\\\n&= 2x - 2x^2 + \\dots\n\\end{aligned}\n\\]\n\n\n\n\n\nBoyd, Stephen, and Lieven Vandenberghe. 2018. Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares. Cambridge University Press. https://doi.org/10.1017/9781108583664.\n\n\nLarson, Ron, and Bruce H. Edwards. 2018. Calculus. 11th ed. Cengage Learning. https://www.cengage.com/c/calculus-11e-larson/.\n\n\nMiller, Steven J. 2016. The Probability Lifesaver: Calculus Review Problems. https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf."
-  },
-  {
     "objectID": "calculus-derivatives.html",
     "href": "calculus-derivatives.html",
     "title": "Derivatives and Taylor Series",
@@ -1274,20 +854,6 @@
     ]
   },
   {
-    "objectID": "calculus-integration-slides.html#sec-integration",
-    "href": "calculus-integration-slides.html#sec-integration",
-    "title": "Integrals and the Fundamental Theorem of Calculus",
-    "section": "\n1 Integration",
-    "text": "1 Integration\nIntegration is the inverse operation of differentiation: it recovers a function from its derivative and accumulates quantities such as areas, totals, and probabilities. We begin with antiderivatives, then state basic integration rules, and conclude with the Fundamental Theorem of Calculus and a worked example from probability."
-  },
-  {
-    "objectID": "calculus-integration-slides.html#references",
-    "href": "calculus-integration-slides.html#references",
-    "title": "Integrals and the Fundamental Theorem of Calculus",
-    "section": "",
-    "text": "Videos\n\n\nJon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on evaluating definite integrals:\n\nDefinite Integrals\nDefinite Integral Exercise\n\n\n\n\n\n\n\n\n\nBanner, Adrian D. 2007. The Calculus Lifesaver : All the Tools You Need to Excel at Calculus. A Princeton Lifesaver Study Guide. Princeton University Press. https://press.princeton.edu/books/paperback/9780691130880/the-calculus-lifesaver.\n\n\nKleinbaum, David G, and Mitchel Klein. 2012. Survival Analysis: A Self-Learning Text. 3rd ed. Springer. https://doi.org/10.1007/978-1-4419-6646-9.\n\n\nLarson, Ron, and Bruce H. Edwards. 2018. Calculus. 11th ed. Cengage Learning. https://www.cengage.com/c/calculus-11e-larson/.\n\n\nMiller, Steven J. 2016. The Probability Lifesaver: Calculus Review Problems. https://web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/index.htm#:~:text=http%3A//web.williams.edu/Mathematics/sjmiller/public_html/probabilitylifesaver/supplementalchap_calcreview.pdf.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill."
-  },
-  {
     "objectID": "calculus-integration.html",
     "href": "calculus-integration.html",
     "title": "Integrals and the Fundamental Theorem of Calculus",
@@ -1310,34 +876,6 @@
       "Calculus",
       "Integrals and the Fundamental Theorem of Calculus"
     ]
-  },
-  {
-    "objectID": "index-slides.html#welcome",
-    "href": "index-slides.html#welcome",
-    "title": "Math for Data Science",
-    "section": "Welcome",
-    "text": "Welcome\n\nMath is not just a way of calculating numerical answers; it is a way of thinking, using clear definitions for concepts and rigorous logic to organize our thoughts and back up our assertions.\n\nCheng (2025)\nThese notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:\n\nNotation: common symbols, natural numbers, the percent sign, and indicator functions\nSets and Functions: sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers\nAlgebra: equalities and inequalities, infimum and supremum, sums, products, quotients, exponentials and logarithms\nMeasures: \\(\\sigma\\)-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure\nCalculus: derivative rules, antiderivatives, regularity conditions (the continuity, differentiability, and integrability that results assume), the Fundamental Theorem of Calculus, and double integrals\nLinear Algebra: vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix\nVector Calculus: derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule\nOptimization: optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent\nProof Writing: propositions, quantifiers, proofs and derivations, and showing and annotating every step of a derivation"
-  },
-  {
-    "objectID": "index-slides.html#further-reading",
-    "href": "index-slides.html#further-reading",
-    "title": "Math for Data Science",
-    "section": "Further reading",
-    "text": "Further reading\nThese resources cover related material.\n\nMathematical Methods in Data Science (MMiDS) by Sebastien Roch (University of Wisconsin-Madison), is available online and in print from Cambridge University Press. It grew out of MATH 535, a one-semester advanced undergraduate and master’s course at the University of Wisconsin-Madison. It is written as an invitation to data science and AI for math students, and as a mathematical companion to machine learning, AI, and statistics courses. Its chapters treat least squares, optimization (finding where a function is smallest or largest), the singular value decomposition, spectral graph theory, probabilistic models, random walks on graphs, and neural networks, so they overlap with our linear algebra and vector calculus pages.\nUCLA Biostat 216, Mathematical Methods for Biostatistics is a course for first-year biostatistics MS and PhD students at UCLA. As of October 2026, the most recent course site in the organization is the 2024 Fall edition, taught by Hua Zhou. Its schedule links slides on vectors, matrices, vector spaces, rank, orthogonal projection, matrix inverses, least squares, determinants, eigendecompositions, positive (semi)definite matrices, the SVD, and multivariate calculus and optimization. Those topics overlap with our linear algebra and vector calculus pages.\nCalculus for Machine Learning is a YouTube playlist by Jon Krohn (56 videos as of October 2026), taken from his Machine Learning Foundations series. It includes limits, derivative rules, partial derivatives, and integrals, so it overlaps with our calculus and vector calculus pages. Those pages link the individual videos in the sections they match.\n3Blue1Brown playlists by Grant Sanderson produce animated visual explanations of core mathematical concepts. Recommended playlists include:\n\nEssence of Linear Algebra covers vectors, linear combinations, linear transformations, matrix multiplication, determinants, inverse matrices, dot and cross products, change of basis, and eigenvectors and eigenvalues, overlapping with our linear algebra page.\nEssence of Calculus covers limits, derivatives, product and chain rules, implicit differentiation, integration, and Taylor series, overlapping with our calculus page.\nNeural Networks covers gradient descent and backpropagation calculus, visualizing multivariable optimization in connection with our vector calculus and optimization pages."
-  },
-  {
-    "objectID": "index-slides.html#using-these-notes-in-another-site",
-    "href": "index-slides.html#using-these-notes-in-another-site",
-    "title": "Math for Data Science",
-    "section": "Using these notes in another site",
-    "text": "Using these notes in another site\nCourse sites link to these pages by URL; they do not include this repository as a git submodule. A host site that keeps a copy of this repository at its root, named mds, can still include fragments with paths that start with mds/, for example {{&lt; include mds/_notation.qmd &gt;}}. This site includes its own fragments the same way, through a mds symlink that points at the repository root.\nEach page is a thin wrapper around one or more fragments:\n\n\n\nPage\nFragment(s) to include\n\n\n\n\nNotation\nmds/_notation.qmd\n\n\nSets and Functions\nmds/_sets-functions.qmd\n\n\nAlgebra\nmds/_algebra.qmd\n\n\nMeasures\nmds/_measures.qmd\n\n\nCalculus\nmds/_calc-derivatives.qmd, mds/_calc-integrals.qmd, and the double-integral subfiles mds/_subfiles/_*fubini*.qmd\n\n\nLinear Algebra\nmds/_subfiles/_sec_linear_algebra.qmd\n\n\nVector Calculus\nmds/_subfiles/_sec_vector_calc.qmd\n\n\nOptimization\nmds/_subfiles/_sec_optimization.qmd\n\n\nProof Writing\nmds/_proof-writing.qmd\n\n\n\n_notation.qmd, _sets-functions.qmd, _algebra.qmd, _measures.qmd, and _subfiles/_sec_linear_algebra.qmd include latex-macros/macros.qmd themselves; a host page that includes any of the other fragments must include latex-macros/macros.qmd first, as the pages of this site do.\nQuarto resolves @id cross-references only within one rendered page, so a host site that links to a result here uses an explicit link, [text](notation.qmd#id)."
-  },
-  {
-    "objectID": "index-slides.html#references",
-    "href": "index-slides.html#references",
-    "title": "Math for Data Science",
-    "section": "References",
-    "text": "References\n\n\nCheng, Eugenia. 2025. “Opinion | How Math Turned Me from a D.E.I. Skeptic to a Supporter.” The New York Times. https://www.nytimes.com/2025/09/05/opinion/math-dei.html."
   },
   {
     "objectID": "index.html",
@@ -1395,27 +933,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra-diagonalization-slides.html#sec-diagonalization",
-    "href": "linear-algebra-diagonalization-slides.html#sec-diagonalization",
-    "title": "Diagonalization and Cholesky",
-    "section": "1 Similarity and diagonalization",
-    "text": "1 Similarity and diagonalization\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from Zhou (2024a), used under the MIT License (see the license text in Section 2 in Subspaces and Rank). These notes take eigenvalues to be real numbers (Definition 16 in Special Matrices and Decompositions), so the source’s complex eigenvalues are left out, and eigenvalues are characterized through null spaces rather than through the characteristic polynomial. Only the source’s material on similarity, diagonalization and the basic eigenvalue properties is adapted; its characteristic polynomial and algebraic multiplicity, its trace and determinant identities, and its section on symmetric matrices (covered by Theorem 10 in Special Matrices and Decompositions) are left out, and its result that eigenvalues of orthogonal matrices have modulus \\(1\\) appears here in the real form \\(\\pm 1\\). The source’s two-vector argument that eigenvectors for distinct eigenvalues are independent is extended here to any number of eigenvectors."
-  },
-  {
-    "objectID": "linear-algebra-diagonalization-slides.html#sec-cholesky",
-    "href": "linear-algebra-diagonalization-slides.html#sec-cholesky",
-    "title": "Diagonalization and Cholesky",
-    "section": "2 Gram matrices, Schur complements and Cholesky",
-    "text": "2 Gram matrices, Schur complements and Cholesky\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from Zhou (2024b), used under the MIT License (see the license text in Section 2 in Subspaces and Rank). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already (Theorem 13 in Special Matrices and Decompositions). These parts of the source are left out:\n\nits covariance test, which needs probability\nits material on minimization\nits positive semidefinite version of the Schur complement test\nits pivot test\nits Hadamard-product “Schur lemma”\nits notes on the LU factorization and computational cost\n\nThe source leaves the Schur complement test unproved; it is proved here from a block expansion of the quadratic form, and the Cholesky factorization is derived from it."
-  },
-  {
-    "objectID": "linear-algebra-diagonalization-slides.html#references",
-    "href": "linear-algebra-diagonalization-slides.html#references",
-    "title": "Diagonalization and Cholesky",
-    "section": "",
-    "text": "Example 22 (Two Cholesky factors)  \n\n\\(\\mathbf{A} = \\begin{bmatrix} 4 & 2 \\\\ 2 & 5 \\end{bmatrix}\\):\n\\[\n\\begin{aligned}\n\\ell_{11} &= \\sqrt{4} \\\\\n&= 2,\n\\end{aligned}\n\\]\n\\[\n\\begin{aligned}\n\\ell_{21} &= 2/2 \\\\\n&= 1,\n\\end{aligned}\n\\]\nand\n\\[\n\\begin{aligned}\n\\ell_{22}^2 &= 5 - 1^2 \\\\\n&= 4,\n\\end{aligned}\n\\]\nso \\(\\ell_{22} = 2\\): \\(\\mathbf{L} = \\begin{bmatrix} 2 & 0 \\\\ 1 & 2 \\end{bmatrix}\\), and\n\\[\n\\begin{aligned}\n\\mathbf{L} {\\mathbf{L}}^{\\top} &= \\begin{bmatrix} 2 \\cdot 2 & 2 \\cdot 1 \\\\ 1 \\cdot 2 & 1 \\cdot 1 + 2 \\cdot 2 \\end{bmatrix} \\\\\n&= \\mathbf{A}.\n\\end{aligned}\n\\]\n\\(\\begin{bmatrix} 5 & 4 \\\\ 4 & 5 \\end{bmatrix}\\): \\(\\ell_{11} = \\sqrt{5}\\), \\(\\ell_{21} = 4/\\sqrt{5}\\), and\n\\[\n\\begin{aligned}\n\\ell_{22}^2 &= 5 - \\tfrac{16}{5} \\\\\n&= \\tfrac{9}{5},\n\\end{aligned}\n\\]\nthe Schur complement of Example 20, so \\(\\ell_{22} = \\tfrac{3}{\\sqrt{5}}\\).\nFor \\(\\mathbf{D} = \\begin{bmatrix} 1 & 2 \\\\ 2 & 1 \\end{bmatrix}\\) the method breaks down:\n\\[\n\\begin{aligned}\n\\ell_{22}^2 &= 1 - 4 \\\\\n&= -3\n\\end{aligned}\n\\]\nhas no real solution, matching the failure of the Schur complement test (Example 21).\n\n\n\n\n\n\n\n\n\n\nZhou, Hua. 2024a. Eigen-Decomposition. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/10-eig/10-eig.html.\n\n\nZhou, Hua. 2024b. Symmetric Positive Definite Matrices. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/11-pd/11-pd.html."
-  },
-  {
     "objectID": "linear-algebra-diagonalization.html",
     "href": "linear-algebra-diagonalization.html",
     "title": "Diagonalization and Cholesky",
@@ -1450,41 +967,6 @@
       "Linear Algebra",
       "Diagonalization and Cholesky"
     ]
-  },
-  {
-    "objectID": "linear-algebra-inner-products-slides.html#sec-inner-products",
-    "href": "linear-algebra-inner-products-slides.html#sec-inner-products",
-    "title": "Inner Products and Orthogonality",
-    "section": "\n1 Inner products",
-    "text": "1 Inner products\n\nDefinition 1 (Inner product) An inner product on \\(\\mathbb{R}^p\\) is a function that assigns to each ordered pair of vectors \\(\\tilde{x}, \\tilde{y}\\in \\mathbb{R}^p\\) a real number \\(\\left\\langle \\tilde{x}, \\tilde{y} \\right\\rangle\\), and that has the following four properties for all \\(\\tilde{x}, \\tilde{y}, \\tilde{z} \\in \\mathbb{R}^p\\) and all real numbers \\(a, b\\):\n\n\npositivity: \\(\\left\\langle \\tilde{x}, \\tilde{x} \\right\\rangle \\ge 0\\);\n\ndefiniteness: \\(\\left\\langle \\tilde{x}, \\tilde{x} \\right\\rangle = 0\\) if and only if \\(\\tilde{x}= \\tilde{0}_{p \\times 1}\\);\n\nlinearity in the first slot: \\(\\left\\langle a\\,\\tilde{x}+ b\\,\\tilde{y}, \\tilde{z} \\right\\rangle = a\\,\\left\\langle \\tilde{x}, \\tilde{z} \\right\\rangle + b\\,\\left\\langle \\tilde{y}, \\tilde{z} \\right\\rangle\\);\n\nsymmetry: \\(\\left\\langle \\tilde{x}, \\tilde{y} \\right\\rangle = \\left\\langle \\tilde{y}, \\tilde{x} \\right\\rangle\\)."
-  },
-  {
-    "objectID": "linear-algebra-inner-products-slides.html#sec-cauchy-schwarz",
-    "href": "linear-algebra-inner-products-slides.html#sec-cauchy-schwarz",
-    "title": "Inner Products and Orthogonality",
-    "section": "\n2 Cauchy-Schwarz and the triangle inequality",
-    "text": "2 Cauchy-Schwarz and the triangle inequality\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from Zhou (2024), used under the MIT License (see the license text in Section 2 in Subspaces and Rank). The source leaves the proof of the triangle inequality to class; it is written out here."
-  },
-  {
-    "objectID": "linear-algebra-inner-products-slides.html#sec-gram-schmidt",
-    "href": "linear-algebra-inner-products-slides.html#sec-gram-schmidt",
-    "title": "Inner Products and Orthogonality",
-    "section": "\n3 Orthonormal bases and Gram-Schmidt",
-    "text": "3 Orthonormal bases and Gram-Schmidt\n\n\n\n\n\n\nSource\n\n\nLike Section 2, this section is adapted from Zhou (2024), used under the MIT License (see the license text in Section 2 in Subspaces and Rank). The source leaves the proof that orthonormal vectors are linearly independent to class; it is written out here."
-  },
-  {
-    "objectID": "linear-algebra-inner-products-slides.html#outer-product",
-    "href": "linear-algebra-inner-products-slides.html#outer-product",
-    "title": "Inner Products and Orthogonality",
-    "section": "\n4 Outer product",
-    "text": "4 Outer product\n\nDefinition 13 (Outer product) The outer product of a vector \\(\\tilde{u}\\) of length \\(m\\) and a vector \\(\\tilde{v}\\) of length \\(n\\) is the \\(m \\times n\\) matrix product (Definition 7 in Matrices) \\(\\tilde{u}\\,{\\tilde{v}}^{\\top}\\) of the column vector \\(\\tilde{u}\\) with the row vector \\({\\tilde{v}}^{\\top}\\). Its entries are\n\\[\n\\mathopen{}\\left(\\underbrace{\\tilde{u}}_{m \\times 1}\\,\\underbrace{{\\tilde{v}}^{\\top}}_{1 \\times n}\\right)\\mathclose{}_{ij}\n= u_i v_j\n\\qquad \\text{(definition of matrix multiplication; the sum has one term)}\n\\]"
-  },
-  {
-    "objectID": "linear-algebra-inner-products-slides.html#references",
-    "href": "linear-algebra-inner-products-slides.html#references",
-    "title": "Inner Products and Orthogonality",
-    "section": "",
-    "text": "Example 26 (The rank of an outer product) In Example 25, the second column \\((5, 10, 15)\\) of \\(\\tilde{u}\\,{\\tilde{v}}^{\\top}\\) is \\(\\frac{5}{4}\\) times the first column \\((4, 8, 12)\\), because the columns are \\(v_1 \\tilde{u} = 4\\tilde{u}\\) and \\(v_2 \\tilde{u} = 5\\tilde{u}\\). So the two columns are not linearly independent, and the \\(3 \\times 2\\) matrix has rank \\(1\\).\n\n\n\n\n\nAxler, Sheldon. 2024. Linear Algebra Done Right. 4th ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-3-031-41026-0.\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nZhou, Hua. 2024. Vectors. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/02-vector/02-vector.html."
   },
   {
     "objectID": "linear-algebra-inner-products.html",
@@ -1547,20 +1029,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra-projections-slides.html#design-matrix",
-    "href": "linear-algebra-projections-slides.html#design-matrix",
-    "title": "Projections and Linear Systems",
-    "section": "\n1 Design Matrix",
-    "text": "1 Design Matrix\n\nDefinition 1 (Design matrix (model matrix)) In a regression model with \\(n\\) observations and \\(p\\) predictors, the design matrix (or model matrix) \\(\\mathbf{X}\\) is the \\(n \\times p\\) matrix whose \\(i\\)-th row is the covariate vector \\({\\tilde{x}_i}^{\\top}\\) for observation \\(i\\):\n\\[\n\\begin{aligned}\n\\mathbf{X}\n&=\n\\begin{bmatrix}\n{\\tilde{x}_1}^{\\top} \\\\\n{\\tilde{x}_2}^{\\top} \\\\\n\\vdots \\\\\n{\\tilde{x}_n}^{\\top}\n\\end{bmatrix} \\\\\n&=\n\\begin{bmatrix}\nx_{11} & x_{12} & \\cdots & x_{1p} \\\\\nx_{21} & x_{22} & \\cdots & x_{2p} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nx_{n1} & x_{n2} & \\cdots & x_{np}\n\\end{bmatrix}\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "linear-algebra-projections-slides.html#references",
-    "href": "linear-algebra-projections-slides.html#references",
-    "title": "Projections and Linear Systems",
-    "section": "",
-    "text": "Example 32 (Two triangular solves) With \\(\\mathbf{L}\\) and \\(\\mathbf{U}\\) of Example 30, solve \\(\\mathbf{A} \\tilde{x} = (8, -11, -3)\\). Forward substitution on \\(\\mathbf{L} \\tilde{y} = (8, -11, -3)\\) gives \\(y_1 = 8\\),\n\\[\n\\begin{aligned}\ny_2 &= -11 + \\tfrac{3}{2} \\cdot 8 \\\\\n&= 1,\n\\end{aligned}\n\\]\n\\[\n\\begin{aligned}\ny_3 &= -3 + 8 - 4 \\cdot 1 \\\\\n&= 1.\n\\end{aligned}\n\\]\nBack substitution on \\(\\mathbf{U} \\tilde{x} = (8, 1, 1)\\) is Example 24, which gives \\(\\tilde{x} = (2, 3, -1)\\). As a check,\n\\[\n\\begin{aligned}\n\\mathbf{A}\\,(2, 3, -1) &= (4 + 3 + 1,\\; -6 - 3 - 2,\\; -4 + 3 - 2) \\\\\n&= (8, -11, -3).\n\\end{aligned}\n\\]\n\n\n\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388.\n\n\nZhou, Hua. 2024a. Least Squares. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/08-ls/08-ls.html.\n\n\nZhou, Hua. 2024b. Linear Equations and Matrix Inverses. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/07-matinv/07-matinv.html.\n\n\nZhou, Hua. 2024c. Orthogonal Projections. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/06-orthproj/06-orthproj.html."
-  },
-  {
     "objectID": "linear-algebra-projections.html",
     "href": "linear-algebra-projections.html",
     "title": "Projections and Linear Systems",
@@ -1583,55 +1051,6 @@
       "Linear Algebra",
       "Projections and Linear Systems"
     ]
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#special-matrices",
-    "href": "linear-algebra-special-matrices-slides.html#special-matrices",
-    "title": "Special Matrices and Decompositions",
-    "section": "\n1 Special Matrices",
-    "text": "1 Special Matrices\nSome special matrices appeared earlier:\n\nthe zero matrix (Definition 4 in Matrices), in the section on matrix addition\nsquare matrices (Definition 8 in Matrices), in the section on square and identity matrices\nthe identity matrix (Definition 10 in Matrices), in that same section\n\n\nDefinition 1 (Order of a square matrix) The order of a square matrix (Definition 8 in Matrices) is its number of rows, which equals its number of columns."
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#quadratic-forms",
-    "href": "linear-algebra-special-matrices-slides.html#quadratic-forms",
-    "title": "Special Matrices and Decompositions",
-    "section": "\n2 Quadratic Forms",
-    "text": "2 Quadratic Forms\n\nDefinition 11 (Quadratic form) A quadratic form is a mathematical expression of the structure\n\\[{\\tilde{x}}^{\\top}\\, \\mathbf{S}\\, \\tilde{x}\\]\nwhere \\(\\tilde{x}\\) is a \\(p \\times 1\\) vector and \\(\\mathbf{S}\\) is a \\(p \\times p\\) matrix."
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#trace-and-matrix-inner-product",
-    "href": "linear-algebra-special-matrices-slides.html#trace-and-matrix-inner-product",
-    "title": "Special Matrices and Decompositions",
-    "section": "\n3 Trace and Matrix Inner Product",
-    "text": "3 Trace and Matrix Inner Product\n\nDefinition 13 (Trace) The trace of a \\(p \\times p\\) matrix \\(\\mathbf{M}\\) is the sum of its diagonal entries:\n\\[\\operatorname{tr}(\\mathbf{M}) \\stackrel{\\text{def}}{=}\\sum_{i=1}^pM_{ii}\\]"
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#matrix-decompositions",
-    "href": "linear-algebra-special-matrices-slides.html#matrix-decompositions",
-    "title": "Special Matrices and Decompositions",
-    "section": "\n4 Matrix Decompositions",
-    "text": "4 Matrix Decompositions\n\nDefinition 16 (Eigenvalue and eigenvector) Let \\(\\mathbf{A}\\) be a \\(p \\times p\\) matrix. A real number \\(\\lambda\\) is an eigenvalue of \\(\\mathbf{A}\\) if some real vector \\(\\tilde{v} \\neq \\tilde{0}\\) of length \\(p\\) satisfies\n\\[\n\\underbrace{\\mathbf{A}}_{p \\times p}\\,\\underbrace{\\tilde{v}}_{p \\times 1}\n= \\lambda\\,\\underbrace{\\tilde{v}}_{p \\times 1}\n\\]\nAny such \\(\\tilde{v}\\) is an eigenvector of \\(\\mathbf{A}\\) for \\(\\lambda\\)."
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#definite-matrices",
-    "href": "linear-algebra-special-matrices-slides.html#definite-matrices",
-    "title": "Special Matrices and Decompositions",
-    "section": "\n5 Definite Matrices",
-    "text": "5 Definite Matrices\n\nDefinition 19 (Positive semidefinite matrix) A \\(p \\times p\\) matrix \\(\\mathbf{A}\\) is positive semidefinite if it satisfies both conditions:\n\n\n\\(\\mathbf{A}\\) is symmetric (Definition 3).\nEvery quadratic form (Definition 11) in \\(\\mathbf{A}\\) is non-negative: \\({\\tilde{x}}^{\\top}\\mathbf{A}\\tilde{x}\\ge 0\\) for every vector \\(\\tilde{x}\\) of length \\(p\\)."
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#determinants",
-    "href": "linear-algebra-special-matrices-slides.html#determinants",
-    "title": "Special Matrices and Decompositions",
-    "section": "\n6 Determinants",
-    "text": "6 Determinants\n\nDefinition 22 (Determinant) The determinant of a \\(p \\times p\\) matrix \\(\\mathbf{A}\\) with entries \\(a_{ij}\\), written \\(\\det(\\mathbf{A})\\) or \\(\\mathopen{}\\left|\\mathbf{A}\\right|\\mathclose{}\\), is the number defined recursively in \\(p\\):\n\nFor \\(p = 1\\), \\(\\det(\\mathbf{A}) = a_{11}\\).\nFor \\(p \\ge 2\\), \\[\n\\det(\\mathbf{A}) = \\sum_{j=1}^p(-1)^{1+j}\\, a_{1j} \\det\\mathopen{}\\left(\\mathbf{A}_{(1j)}\\right)\\mathclose{},\n\\] where \\(\\mathbf{A}_{(1j)}\\) is the \\((p-1) \\times (p-1)\\) matrix left after deleting row \\(1\\) and column \\(j\\) of \\(\\mathbf{A}\\)."
-  },
-  {
-    "objectID": "linear-algebra-special-matrices-slides.html#references",
-    "href": "linear-algebra-special-matrices-slides.html#references",
-    "title": "Special Matrices and Decompositions",
-    "section": "",
-    "text": "Example 35 (Two ways to the same determinant) \\(\\mathbf{A} = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}\\) has eigenvalues \\(3\\) and \\(1\\) (Example 21), so Theorem 18 gives\n\\[\n\\begin{aligned}\n\\det(\\mathbf{A}) &= 3 \\cdot 1 \\\\\n&= 3,\n\\end{aligned}\n\\]\nmatching \\(2 \\cdot 2 - 1 \\cdot 1 = 3\\) from Example 32.\n\n\n\n\n\nBanerjee, Sudipto, and Anindya Roy. 2014. Linear Algebra and Matrix Analysis for Statistics. Vol. 181. Crc Press Boca Raton. https://www.routledge.com/Linear-Algebra-and-Matrix-Analysis-for-Statistics/Banerjee-Roy/p/book/9781420095388."
   },
   {
     "objectID": "linear-algebra-special-matrices.html",
@@ -1718,20 +1137,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra-vectors-slides.html#vectors",
-    "href": "linear-algebra-vectors-slides.html#vectors",
-    "title": "Vectors",
-    "section": "\n1 Vectors",
-    "text": "1 Vectors\n\nExercise 1 (Store a data point as one object) A house has a floor area of \\(120\\) square meters, \\(3\\) bedrooms, and an age of \\(15\\) years.\n\nWrite these three numbers as a single vertical list \\(\\tilde{x}\\), in the order given, and call its entries \\(x_1\\), \\(x_2\\) and \\(x_3\\). What is \\(x_2\\)?\nDoes the list \\((3, 120, 15)\\) describe the same house?"
-  },
-  {
-    "objectID": "linear-algebra-vectors-slides.html#references",
-    "href": "linear-algebra-vectors-slides.html#references",
-    "title": "Vectors",
-    "section": "",
-    "text": "Video lecture\n\n\nHutchinson’s Linear Function Basics (24 min) covers dot products and the Euclidean norm, and goes on to hyperplanes (Definition 19 in Matrices) and level sets (Hutchinson, n.d.). The login for the video site is posted on Canvas.\n\n\n\n\n\n\n\n\nDobson, Annette J, and Adrian G Barnett. 2018. An Introduction to Generalized Linear Models. 4th ed. CRC press. https://doi.org/10.1201/9781315182780.\n\n\nGoodfellow, Ian, Yoshua Bengio, and Aaron Courville. 2016. Deep Learning. MIT Press. https://www.deeplearningbook.org/.\n\n\nHutchinson, Brian. n.d. DATA 471/571 (Machine Learning) and CSCI 481/581 (Deep Learning) Video Lectures. Western Washington University. Accessed September 28, 2026. https://facultyweb.cs.wwu.edu/~hutchib2/video_lectures/data371/.\n\n\nKaplan, Daniel. 2022. MOSAIC Calculus. Www.mosaic-web.org. www.mosaic-web.org."
-  },
-  {
     "objectID": "linear-algebra-vectors.html",
     "href": "linear-algebra-vectors.html",
     "title": "Vectors",
@@ -1754,83 +1159,6 @@
       "Linear Algebra",
       "Vectors"
     ]
-  },
-  {
-    "objectID": "measures-slides.html#sigma-algebras",
-    "href": "measures-slides.html#sigma-algebras",
-    "title": "Measures",
-    "section": "1 \\(\\sigma\\)-algebras",
-    "text": "1 \\(\\sigma\\)-algebras\n\nDefinition 1 (\\(\\sigma\\)-algebra) A \\(\\sigma\\)-algebra on a set \\(S\\) is a collection \\(\\mathcal{S}\\) of subsets of \\(S\\) that satisfies:\n\n\\(\\mathcal{S}\\) contains \\(S\\) itself.\nFor each set \\(A\\) in \\(\\mathcal{S}\\), \\(\\mathcal{S}\\) contains its complement \\(S \\setminus A\\).\nFor each sequence \\(A_1, A_2, \\ldots\\) of sets in \\(\\mathcal{S}\\), \\(\\mathcal{S}\\) contains their union \\(\\bigcup_{i=1}^{\\infty} A_i\\)."
-  },
-  {
-    "objectID": "measures-slides.html#pairwise-disjoint-sets",
-    "href": "measures-slides.html#pairwise-disjoint-sets",
-    "title": "Measures",
-    "section": "2 Pairwise disjoint sets",
-    "text": "2 Pairwise disjoint sets\n\nDefinition 5 (Pairwise disjoint sets (disjoint, mutually disjoint)) Finitely or countably many sets \\(A_1, A_2, \\ldots\\) are pairwise disjoint (also called disjoint or mutually disjoint) when no two of them share an element:\n\\[A_i \\cap A_j = \\emptyset \\quad \\text{for all } i \\neq j\\]"
-  },
-  {
-    "objectID": "measures-slides.html#infinite-sums",
-    "href": "measures-slides.html#infinite-sums",
-    "title": "Measures",
-    "section": "3 Infinite sums",
-    "text": "3 Infinite sums\n\nDefinition 6 (Non-decreasing sequence) A sequence \\(a_1, a_2, \\ldots\\) of real numbers or of extended non-negative reals is non-decreasing if each term is at least as large as the one before it:\n\\[a_n \\le a_{n+1} \\quad \\text{for every } n \\in \\mathbb{N}\\]"
-  },
-  {
-    "objectID": "measures-slides.html#additivity",
-    "href": "measures-slides.html#additivity",
-    "title": "Measures",
-    "section": "4 Additivity",
-    "text": "4 Additivity\n\nDefinition 9 (Finite additivity) Let \\(\\mathcal{S}\\) be a \\(\\sigma\\)-algebra on a set \\(S\\). A function \\(\\mu: \\mathcal{S}\\to [0, \\infty]\\), with values in the extended non-negative reals, is finitely additive if, for every finite collection of pairwise disjoint sets \\(A_1, \\ldots, A_n\\) in \\(\\mathcal{S}\\), the value of their union is the sum of their values:\n\\[\\mu(A_1 \\cup \\cdots \\cup A_n) = \\sum_{i=1}^n\\mu(A_i)\\]"
-  },
-  {
-    "objectID": "measures-slides.html#measures",
-    "href": "measures-slides.html#measures",
-    "title": "Measures",
-    "section": "5 Measures",
-    "text": "5 Measures\n\nDefinition 11 (Measure) A measure on a set \\(S\\) with a \\(\\sigma\\)-algebra \\(\\mathcal{S}\\) is a function \\(\\mu: \\mathcal{S}\\to [0, \\infty]\\) that satisfies:\n\n\\(\\mu(\\emptyset) = 0\\).\n\\(\\mu\\) is countably additive."
-  },
-  {
-    "objectID": "measures-slides.html#probability-measures",
-    "href": "measures-slides.html#probability-measures",
-    "title": "Measures",
-    "section": "6 Probability measures",
-    "text": "6 Probability measures\n\nDefinition 20 (Probability measure) A probability measure on a measurable space \\((\\Omega, \\mathcal{F})\\) is a measure \\(\\operatorname{P}\\) on \\(\\mathcal{F}\\) that gives the whole set \\(\\Omega\\) the value \\(1\\):\n\\[\\operatorname{P}\\mathopen{}\\left(\\Omega\\right)\\mathclose{} = 1\\]"
-  },
-  {
-    "objectID": "measures-slides.html#measurable-functions-and-integrals",
-    "href": "measures-slides.html#measurable-functions-and-integrals",
-    "title": "Measures",
-    "section": "7 Measurable functions and integrals",
-    "text": "7 Measurable functions and integrals\n\nDefinition 22 (Measurable function) Let \\((S, \\mathcal{S})\\) be a measurable space. A function \\(f : S \\to \\mathbb{R}\\) is measurable (with respect to \\(\\mathcal{S}\\)) if, for every real number \\(c\\), the set of elements where \\(f\\) is at most \\(c\\) is measurable:\n\\[\\mathopen{}\\left\\{s \\in S : f(s) \\le c\\right\\}\\mathclose{} \\in \\mathcal{S}\\]"
-  },
-  {
-    "objectID": "measures-slides.html#lp-spaces",
-    "href": "measures-slides.html#lp-spaces",
-    "title": "Measures",
-    "section": "8 \\(L^p\\) spaces",
-    "text": "8 \\(L^p\\) spaces\n\nDefinition 27 (\\(L^p\\) space and \\(L^p\\) norm (\\(L^p(\\mu)\\), \\(\\mathcal{L}^p\\))) Let \\((S, \\mathcal{S}, \\mu)\\) be a measure space. For any real number \\(p \\ge 1\\), the \\(L^p\\) norm of a measurable function \\(f : S \\to \\mathbb{R}\\) is:\n\\[\n\\mathopen{}\\left\\lVert f\\right\\rVert\\mathclose{}_p \\stackrel{\\text{def}}{=}\\mathopen{}\\left(\\int_S \\mathopen{}\\left|f\\right|\\mathclose{}^p \\, d\\mu\\right)\\mathclose{}^{1/p}.\n\\]\nThe space \\(\\mathcal{L}^p(S, \\mathcal{S}, \\mu)\\) consists of all measurable functions \\(f : S \\to \\mathbb{R}\\) for which \\(\\mathopen{}\\left\\lVert f\\right\\rVert\\mathclose{}_p &lt; \\infty\\). To satisfy the definiteness axiom of a norm (\\(\\mathopen{}\\left\\lVert f\\right\\rVert\\mathclose{}_p = 0\\) if and only if \\(f = 0\\)), functions that are equal almost everywhere (\\(\\mu\\)-a.e.) are identified into equivalence classes. The resulting normed vector space is the \\(L^p\\) space, denoted \\(L^p(S, \\mathcal{S}, \\mu)\\) (or simply \\(L^p(\\mu)\\)). The case \\(p = \\infty\\) is defined separately, in Definition 28."
-  },
-  {
-    "objectID": "measures-slides.html#product-measures",
-    "href": "measures-slides.html#product-measures",
-    "title": "Measures",
-    "section": "9 Product measures",
-    "text": "9 Product measures\n\nDefinition 29 (Product \\(\\sigma\\)-algebra) Let \\((S, \\mathcal{S})\\) and \\((T, \\mathcal{T})\\) be measurable spaces. A measurable rectangle is a Cartesian product \\(A \\times B\\) with \\(A \\in \\mathcal{S}\\) and \\(B \\in \\mathcal{T}\\). The product \\(\\sigma\\)-algebra \\(\\mathcal{S}\\otimes \\mathcal{T}\\) is the \\(\\sigma\\)-algebra on \\(S \\times T\\) generated by the measurable rectangles."
-  },
-  {
-    "objectID": "measures-slides.html#sec-further-reading",
-    "href": "measures-slides.html#sec-further-reading",
-    "title": "Measures",
-    "section": "10 Further reading",
-    "text": "10 Further reading\n\nBillingsley (1995) develops measure theory and builds probability on it. Its early chapters define \\(\\sigma\\)-algebras, measures, and their basic properties.\nFolland (1999) is a graduate text on measure and integration; its first chapters treat \\(\\sigma\\)-algebras and measures.\nGut (2013) is a graduate course in probability that opens with a chapter on introductory measure theory."
-  },
-  {
-    "objectID": "measures-slides.html#references",
-    "href": "measures-slides.html#references",
-    "title": "Measures",
-    "section": "References",
-    "text": "References\n\n\nBillingsley, Patrick. 1995. Probability and Measure. 3rd ed. Wiley Series in Probability and Mathematical Statistics. Wiley.\n\n\nCasella, George, and Roger Berger. 2002. Statistical Inference. 2nd ed. Cengage Learning. https://www.cengage.com/c/statistical-inference-2e-casella-berger/9780534243128/.\n\n\nFolland, Gerald B. 1999. Real Analysis: Modern Techniques and Their Applications. 2nd ed. Wiley. https://www.wiley.com/en-us/Real+Analysis%3A+Modern+Techniques+and+Their+Applications%2C+2nd+Edition-p-9780471317166.\n\n\nGut, Allan. 2013. Probability: A Graduate Course. 2nd ed. Springer Texts in Statistics. Springer. https://doi.org/10.1007/978-1-4614-4708-5."
   },
   {
     "objectID": "measures.html",
@@ -1965,48 +1293,6 @@
     ]
   },
   {
-    "objectID": "optimization-slides.html#sec-optimality-vector",
-    "href": "optimization-slides.html#sec-optimality-vector",
-    "title": "Optimization",
-    "section": "\n1 Optimality conditions in several variables",
-    "text": "1 Optimality conditions in several variables\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from the multivariate calculus and optimality-condition parts of Zhou (2024), used under the MIT License (see the license text in Linear Algebra). The source states the second-order Taylor approximation and the optimality conditions without proof; here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\(\\tilde{z}\\) and \\(\\tilde{z} + \\tilde{h}\\). The source calls points with zero gradient critical points; here they are stationary points, because the calculus notes give “critical point” a wider meaning. These parts of the source are not part of this section:\n\nits one-variable Taylor example and its plots\nmatrix calculus\nconvexity\nLagrange multipliers\nNewton’s method and gradient descent\n\n\n\n\nA local minimizer of a differentiable function on an open interval is a flat point, and, at a flat point, a positive second derivative guarantees a strict local minimum. This section extends both facts to a function \\(f\\) of a \\(p \\times 1\\) vector \\(\\tilde{x}\\): the gradient \\(\\frac{\\partial}{\\partial \\tilde{x}} f(\\tilde{x})\\) (gradient) takes the place of the first derivative, and a \\(p \\times p\\) matrix of second partial derivatives takes the place of the second; both facts are proved in this section, for every \\(p \\ge 1\\). Throughout, \\(\\frac{\\partial}{\\partial \\tilde{x}} f(\\tilde{z})\\) means the gradient evaluated at \\(\\tilde{x}= \\tilde{z}\\)."
-  },
-  {
-    "objectID": "optimization-slides.html#sec-convexity-vector",
-    "href": "optimization-slides.html#sec-convexity-vector",
-    "title": "Optimization",
-    "section": "\n2 Convexity in several variables",
-    "text": "2 Convexity in several variables\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from the convexity part of Zhou (2024), used under the MIT License (see the license text in Linear Algebra). The source states the first-order test (in one direction) and the second-derivative test for convexity without proof; here both directions of the first-order test are proved, and the second-derivative test is proved from the Taylor theorem of Section 1. The source defines both concave and strictly concave as “\\(-f\\) is strictly convex”; here \\(f\\) is concave when \\(-f\\) is convex. These parts of the source are not part of this section:\n\nits catalogs of convex sets and convex functions, including the positive semidefinite matrices and \\(-\\log \\det\\)\n\nintersections of infinitely many convex sets, and suprema of infinitely many convex functions\nits examples, exercises and figures, including the multivariate normal maximum likelihood example"
-  },
-  {
-    "objectID": "optimization-slides.html#sec-lagrange",
-    "href": "optimization-slides.html#sec-lagrange",
-    "title": "Optimization",
-    "section": "\n3 Minimizing a quadratic under linear constraints",
-    "text": "3 Minimizing a quadratic under linear constraints\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from the Lagrange-multiplier part of Zhou (2024), used under the MIT License (see the license text in Linear Algebra). The source solves the stationarity equations of the Lagrangian and reports the solution; here the solution is also proved to be the unique minimizer, directly from the positive definiteness of the matrices involved. The source assumes only that \\(\\mathbf{S}\\) is positive definite; the added hypothesis that the columns of \\(\\mathbf{A}\\) are linearly independent makes \\({\\mathbf{A}}^{\\top} \\mathbf{S}^{-1} \\mathbf{A}\\) invertible. The source’s example with general coefficients \\(a_1, a_2, b\\) is specialized here to \\(3, 4, 5\\). These parts of the source are not part of this section:\n\nthe Lagrange multiplier method for constraints that are not linear, or objectives that are not quadratic, including its multinomial maximum likelihood example\nthe eigenvalues of the block matrix of the stationarity equations, and the convexity of the Lagrangian in \\(\\tilde{x}\\) and its concavity in the multipliers\nits homework examples"
-  },
-  {
-    "objectID": "optimization-slides.html#sec-descent",
-    "href": "optimization-slides.html#sec-descent",
-    "title": "Optimization",
-    "section": "\n4 Newton’s method and gradient descent",
-    "text": "4 Newton’s method and gradient descent\n\n\n\n\n\n\nSource\n\n\nThis section is adapted from the Newton-Raphson and gradient descent parts of Zhou (2024), used under the MIT License (see the license text in Linear Algebra). The source motivates the Newton step by minimizing a quadratic approximation; here that step is proved to be the exact minimizer of the quadratic model. In the source’s zigzag example the starting value of the objective is \\(\\tfrac{1}{2}(b^2 + b)\\), not \\(\\tfrac{1}{2}(1 + b^2)\\) as the source writes; the ratio of successive values is unaffected. In the same example the source’s formula for \\(\\tilde{x}^{(1)}\\) has \\(\\tilde{x}^{(1)}\\) on its right side where \\(\\tilde{x}^{(0)}\\) is meant. These parts of the source are not part of this section:\n\nthe quadratic convergence theorem for Newton’s method in general, and its remedies for instability (a positive definite substitute for the Hessian, and shortening the Newton step by a search along its direction)\nits remark that Hessians are expensive to compute\nthe convergence-rate theorem for strongly convex functions\ngradient descent with momentum, and its optimal parameters\nNesterov acceleration, and stochastic gradient descent\nits code and animations"
-  },
-  {
-    "objectID": "optimization-slides.html#sec-additional-resources",
-    "href": "optimization-slides.html#sec-additional-resources",
-    "title": "Optimization",
-    "section": "\n5 Further reading",
-    "text": "5 Further reading\n\n\nBoyd and Vandenberghe (2004) is the standard reference on convex optimization, covering convex sets, convex functions, convex optimization problems, duality, unconstrained minimization, and interior-point methods.\n\nNocedal and Wright (2006) is a comprehensive reference on continuous numerical optimization, covering line search methods, trust-region methods, conjugate gradient methods, quasi-Newton methods, and nonlinear equations.\n\nHua Zhou’s lecture notes for “UCLA Biostat 216 - Mathematical Methods for Biostatistics” (2024 Fall)\n\n\nNeural Networks is a YouTube playlist by Grant Sanderson (3Blue1Brown); its chapters on gradient descent and backpropagation calculus visually illustrate how gradients of multivariate cost functions are computed and used for optimization."
-  },
-  {
-    "objectID": "optimization-slides.html#references",
-    "href": "optimization-slides.html#references",
-    "title": "Optimization",
-    "section": "References",
-    "text": "References\n\n\nBoyd, Stephen, and Lieven Vandenberghe. 2004. Convex Optimization. Cambridge University Press. https://doi.org/10.1017/CBO9780511804441.\n\n\nNocedal, Jorge, and Stephen J. Wright. 2006. Numerical Optimization. 2nd ed. Springer Series in Operations Research and Financial Engineering. Springer. https://doi.org/10.1007/978-0-387-40065-5.\n\n\nRudin, Walter. 1976. Principles of Mathematical Analysis. 3rd ed. International Series in Pure and Applied Mathematics. McGraw-Hill.\n\n\nZhou, Hua. 2024. Optimization and Multivariate Calculus. Lecture notes for Biostat 216, Mathematical Methods for Biostatistics, University of California, Los Angeles. https://ucla-biostat-216.github.io/2024fall/slides/13-optim/13-optim.html."
-  },
-  {
     "objectID": "optimization.html",
     "href": "optimization.html",
     "title": "Optimization",
@@ -2082,55 +1368,6 @@
       "Notation",
       "Optimization"
     ]
-  },
-  {
-    "objectID": "sets-functions-slides.html#sets",
-    "href": "sets-functions-slides.html#sets",
-    "title": "Sets and Functions",
-    "section": "\n1 Sets",
-    "text": "1 Sets\n\nDefinition 1 (Set) A set is a collection of distinct objects, called its elements. We write \\(a \\in A\\) when \\(a\\) is an element of the set \\(A\\), and \\(a \\notin A\\) when it is not. Two sets are equal when they have exactly the same elements."
-  },
-  {
-    "objectID": "sets-functions-slides.html#combining-sets",
-    "href": "sets-functions-slides.html#combining-sets",
-    "title": "Sets and Functions",
-    "section": "\n2 Combining sets",
-    "text": "2 Combining sets\n\nDefinition 11 (Union) The union of sets \\(A\\) and \\(B\\), written \\(A \\cup B\\), is the set of elements that are in \\(A\\), in \\(B\\), or in both:\n\\[A \\cup B \\stackrel{\\text{def}}{=}\\mathopen{}\\left\\{x : x \\in A \\text{ or } x \\in B\\right\\}\\mathclose{}\\]"
-  },
-  {
-    "objectID": "sets-functions-slides.html#functions",
-    "href": "sets-functions-slides.html#functions",
-    "title": "Sets and Functions",
-    "section": "\n3 Functions",
-    "text": "3 Functions\n\nDefinition 19 (Function (map, mapping, transformation)) A function \\(f\\) from a set \\(A\\) to a set \\(B\\), written \\(f : A \\to B\\), assigns to each element \\(a \\in A\\) exactly one element \\(f(a) \\in B\\).\n\nThe element \\(a \\in A\\) is called the argument (or input) to \\(f\\).\nThe assigned element \\(f(a) \\in B\\) is called the value (or output) of \\(f\\) at \\(a\\).\n\nA function is also called a map (or mapping) or a transformation; on this site the three words mean the same thing, although some authors reserve “transformation” for a function from a set to itself."
-  },
-  {
-    "objectID": "sets-functions-slides.html#countable-sets",
-    "href": "sets-functions-slides.html#countable-sets",
-    "title": "Sets and Functions",
-    "section": "\n4 Countable sets",
-    "text": "4 Countable sets\n\nDefinition 33 (Finite set and cardinality) A set \\(A\\) is finite if it is empty, or if, for some natural number \\(n\\), its elements can be listed as a finite sequence (Definition 29) \\(a_1, \\ldots, a_n\\) in which each element of \\(A\\) appears exactly once. That number \\(n\\) is the cardinality of \\(A\\), its number of elements, written \\(\\mathopen{}\\left|A\\right|\\mathclose{}\\); the empty set has cardinality \\(\\mathopen{}\\left|\\emptyset\\right|\\mathclose{} = 0\\)."
-  },
-  {
-    "objectID": "sets-functions-slides.html#extended-non-negative-real-numbers",
-    "href": "sets-functions-slides.html#extended-non-negative-real-numbers",
-    "title": "Sets and Functions",
-    "section": "\n5 Extended non-negative real numbers",
-    "text": "5 Extended non-negative real numbers\n\nDefinition 37 (Extended non-negative real numbers) The extended non-negative real numbers, written \\([0, \\infty]\\), are the non-negative real numbers together with an extra element \\(\\infty\\) that is greater than every real number:\n\\[[0, \\infty] \\stackrel{\\text{def}}{=}[0, \\infty) \\cup \\mathopen{}\\left\\{\\infty\\right\\}\\mathclose{}\\]\nAddition extends to \\([0, \\infty]\\) by setting\n\\[\n\\begin{aligned}\nx + \\infty &= \\infty + x \\\\\n&= \\infty\n\\end{aligned}\n\\]\nfor every \\(x \\in [0, \\infty]\\)."
-  },
-  {
-    "objectID": "sets-functions-slides.html#sec-further-reading",
-    "href": "sets-functions-slides.html#sec-further-reading",
-    "title": "Sets and Functions",
-    "section": "\n6 Further reading",
-    "text": "6 Further reading\nThese books treat sets and the logic behind them in more depth.\n\n\nDevlin (1993) is an undergraduate introduction to axiomatic set theory. It covers the axioms of set theory, ordinals, and cardinals, which go well beyond the countable sets and functions on this page.\n\nHalmos (1974) is a short, informal treatment of the same axioms, covering relations, functions, families of sets, and cardinal numbers.\n\nEnderton (2001) is a standard introduction to mathematical logic. Its first chapter collects the facts about sets, relations, and functions that the later chapters use.\n\nBarker-Plummer et al. (2011) teaches propositional and first-order logic, the language behind statements such as “for every set \\(A\\) there exists…”."
-  },
-  {
-    "objectID": "sets-functions-slides.html#references",
-    "href": "sets-functions-slides.html#references",
-    "title": "Sets and Functions",
-    "section": "References",
-    "text": "References\n\n\nBarker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. Language, Proof and Logic. 2nd ed. CSLI Publications. https://www.amazon.com/dp/1575866323.\n\n\nDevlin, Keith. 1993. The Joy of Sets: Fundamentals of Contemporary Set Theory. 2nd ed. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-1-4612-0903-4.\n\n\nEnderton, Herbert B. 2001. A Mathematical Introduction to Logic. 2nd ed. Academic Press. https://doi.org/10.1016/C2009-0-22107-6.\n\n\nHalmos, Paul R. 1974. Naive Set Theory. Undergraduate Texts in Mathematics. Springer. https://doi.org/10.1007/978-1-4757-1645-0."
   },
   {
     "objectID": "sets-functions.html",
