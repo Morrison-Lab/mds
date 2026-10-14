@@ -148,6 +148,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-paraboloid.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-matrix-induced-inner-product.qmd >}}
 
 {{< slidebreak >}}
