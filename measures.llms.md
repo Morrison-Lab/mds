@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 16:58:37 (PDT)
+Last modified: 2026-10-13 17:46:07 (PDT)
 
 > **NOTE:**
 >
@@ -183,7 +183,7 @@ Last modified: 2026-10-13 16:58:37 (PDT)
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
-> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-sequence-limit) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-sequence-limit) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
+> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-sequence-limit) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
 
 > **NOTE:**
 >
