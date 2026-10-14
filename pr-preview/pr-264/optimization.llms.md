@@ -4,13 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 ## 1 Optimality conditions in several variables
 
 > **NOTE:**
 >
-> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](notation.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
+> This section is adapted from the multivariate calculus and optimality-condition parts of Zhou ([2024](#ref-zhou2024optim)), used under the MIT License (see the license text in [Linear Algebra](linear-algebra-subspaces.llms.md#sec-subspaces)). The source states the second-order Taylor approximation and the optimality conditions without [proof](proof-writing.llms.md#def-proof); here they are proved from the one-variable Taylor theorem, and the approximation is made exact by evaluating the Hessian at a point between \\\tilde{z}\\ and \\\tilde{z} + \tilde{h}\\. The source calls points with zero gradient critical points; here they are stationary points, because the [calculus notes](calculus-derivatives.llms.md#def-critical-point) give “critical point” a wider meaning. These parts of the source are not part of this section:
 >
 > - its one-variable Taylor example and its plots
 > - matrix calculus
@@ -40,7 +40,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 >   \\ \begin{aligned} g'(2) &= 2 (2 - 2) \\ &= 0. \end{aligned} \\
 >
-> - The [converse](notation.llms.md#def-converse) fails: \\g(x) = x^3\\ has
+> - The [converse](proof-writing.llms.md#def-converse) fails: \\g(x) = x^3\\ has
 >
 >   \\ \begin{aligned} g'(0) &= 3 \cdot 0^2 \\ &= 0, \end{aligned} \\
 >
@@ -58,11 +58,15 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >
 > \\ \frac{\partial}{\partial \tilde{x}} f(\tilde{z}) = \tilde{0}\_{p \times 1} \\
 >
-> is a **stationary point** of \\f\\. For \\p = 1\\, this is a [flat point](calculus-derivatives.llms.md#def-flat-point).
+> is a **stationary point** of \\f\\.
 
 > **NOTE:**
 >
 > **Example 2 (A stationary point, and a point that is not one)** Let \\f(\tilde{x}) = x_1^2 + x_2^2 - 2 x_1\\. Its gradient is \\{(2 x_1 - 2,\\ 2 x_2)}^{\top}\\, which is \\\tilde{0}\_{2 \times 1}\\ exactly when \\x_1 = 1\\ and \\x_2 = 0\\. So \\{(1, 0)}^{\top}\\ is its only stationary point, and \\\tilde{0}\\ is not one: the gradient there is \\{(-2, 0)}^{\top}\\.
+
+> **NOTE:**
+>
+> *Remark 1* (Stationary points in one variable). For \\p = 1\\, a stationary point is a [flat point](calculus-derivatives.llms.md#def-flat-point).
 
 > **NOTE:**
 >
@@ -483,7 +487,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 >
 > \\ \tilde{x}\mapsto f(\tilde{y}) + {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{y})\right)\mathclose{}}^{\top} (\tilde{x}- \tilde{y}), \\
 >
-> which takes the value \\f(\tilde{y})\\ at \\\tilde{x}= \tilde{y}\\ and has the same gradient as \\f\\ there. For \\p = 1\\ it is the [tangent line](calculus-derivatives.llms.md#def-tangent-line) \\s = f(y) + f'(y)\\(x - y)\\, the line through \\(y, f(y))\\ with slope \\f'(y)\\.
+> which takes the value \\f(\tilde{y})\\ at \\\tilde{x}= \tilde{y}\\ and has the same gradient as \\f\\ there.
 
 > **NOTE:**
 >
@@ -496,6 +500,10 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 > - For \\f(\tilde{x}) = x_1^2 + x_2^2\\ at \\\tilde{y}= {(1, 1)}^{\top}\\, \\f(\tilde{y}) = 2\\ and the gradient is \\{(2 y_1,\\ 2 y_2)}^{\top} = {(2, 2)}^{\top}\\, so the tangent plane is
 >
 >   \\ \begin{aligned} s &= 2 + 2\\(x_1 - 1) + 2\\(x_2 - 1) && \text{(substitute } f(\tilde{y}) \text{ and the gradient)} \\ &= 2 + 2 x_1 - 2 + 2 x_2 - 2 && \text{(distribute)} \\ &= 2 x_1 + 2 x_2 - 2. && \text{(} 2 - 2 - 2 = -2 \text{)} \end{aligned} \\
+
+> **NOTE:**
+>
+> *Remark 2* (The tangent plane in one variable). For \\p = 1\\ the tangent plane is the [tangent line](calculus-derivatives.llms.md#def-tangent-line) \\s = f(y) + f'(y)\\(x - y)\\, the line through \\(y, f(y))\\ with slope \\f'(y)\\.
 
 > **NOTE:**
 >
@@ -793,9 +801,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 12 (Iterates and convergence of a sequence of vectors)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ **converges** to \\\tilde{x}^\* \in \mathbb{R}^p\\ if the sequence of distances \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ [converges](algebra-exponentials.llms.md#def-sequence-limit) to \\0\\. For \\p = 1\\, \\\mathopen{}\left\lVert x^{(t)} - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x^{(t)} - x^\*\right\|\mathclose{}\\, and this is the convergence of a sequence of numbers to \\x^\*\\.
+> **Definition 12 (Iterative method, iterates and error)** An **iterative method** starts from a point \\\tilde{x}^{(0)}\\ and computes \\\tilde{x}^{(t+1)}\\ from \\\tilde{x}^{(t)}\\ by a fixed rule, for \\t = 0, 1, 2, \ldots\\; the points \\\tilde{x}^{(t)}\\ are its **iterates**. For a point \\\tilde{x}^\*\\ that the method is meant to reach, \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ is the **error** of the iterate \\\tilde{x}^{(t)}\\.
+
+> **NOTE:**
 >
-> An **iterative method** starts from a point \\\tilde{x}^{(0)}\\ and computes \\\tilde{x}^{(t+1)}\\ from \\\tilde{x}^{(t)}\\ by a fixed rule, for \\t = 0, 1, 2, \ldots\\; the points \\\tilde{x}^{(t)}\\ are its **iterates**. For a point \\\tilde{x}^\*\\ that the method is meant to reach, \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ is the **error** of the iterate \\\tilde{x}^{(t)}\\.
+> **Definition 13 (Iterates and convergence of a sequence of vectors)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ **converges** to \\\tilde{x}^\* \in \mathbb{R}^p\\ if the sequence of distances \\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}\\ [converges](algebra-exponentials.llms.md#def-sequence-limit) to \\0\\. For \\p = 1\\, \\\mathopen{}\left\lVert x^{(t)} - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x^{(t)} - x^\*\right\|\mathclose{}\\, and this is the convergence of a sequence of numbers to \\x^\*\\.
 
 > **NOTE:**
 >
@@ -807,7 +817,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 13 (Newton’s method for minimization)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives, and let \\\tilde{x}^{(0)}\\ be a starting point. **Newton’s method** computes, for \\t = 0, 1, 2, \ldots\\, as long as \\\mathbf{H}\_f(\tilde{x}^{(t)})\\ is invertible,
+> **Definition 14 (Newton’s method for minimization)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first and second partial derivatives, and let \\\tilde{x}^{(0)}\\ be a starting point. **Newton’s method** computes, for \\t = 0, 1, 2, \ldots\\, as long as \\\mathbf{H}\_f(\tilde{x}^{(t)})\\ is invertible,
 >
 > \\ \tilde{x}^{(t+1)} \stackrel{\text{def}}{=}\tilde{x}^{(t)} - \mathopen{}\left\[\mathbf{H}\_f(\tilde{x}^{(t)})\right\]\mathclose{}^{-1} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}). \\
 >
@@ -829,15 +839,15 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > - \\x^{(3)} = 2.0000001\\ (to seven decimals).
 >
-> The iterates ([Definition 12](#def-vector-sequence-limit)) approach \\2\\, the local minimizer of \\f\\ (a stationary point, since \\f'(2) = 0\\, with \\f''(2) = 4 \> 0\\; [Theorem 5](#thm-second-order-condition)).
+> The iterates ([Definition 12](#def-iterative-method)) approach \\2\\, the local minimizer of \\f\\ (a stationary point, since \\f'(2) = 0\\, with \\f''(2) = 4 \> 0\\; [Theorem 5](#thm-second-order-condition)).
 
 > **NOTE:**
 >
-> **Definition 14 (Quadratic model (second-order Taylor polynomial))** Let \\f\\ be as in [Definition 13](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta}\in \mathbb{R}^p\\
+> **Definition 15 (Quadratic model (second-order Taylor polynomial))** Let \\f\\ be as in [Definition 14](#def-newton-method) and let \\\tilde{x}\\ be a point, with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ and \\\mathbf{H} \stackrel{\text{def}}{=}\mathbf{H}\_f(\tilde{x})\\. The **quadratic model** of \\f\\ at \\\tilde{x}\\ is the function of a step \\\tilde{\delta}\in \mathbb{R}^p\\
 >
 > \\ q(\tilde{\delta}) \stackrel{\text{def}}{=}f(\tilde{x}) + \tilde{g} \cdot \tilde{\delta} + \tfrac{1}{2}\\{\tilde{\delta}}^{\top} \mathbf{H} \tilde{\delta}, \\
 >
-> also called the **second-order Taylor polynomial** of \\f\\ at \\\tilde{x}\\: when the second partial derivatives of \\f\\ are continuous, [Theorem 4](#thm-taylor-mv) says that \\f(\tilde{x}+ \tilde{\delta})\\ equals the same expression with the Hessian evaluated at a point between \\\tilde{x}\\ and \\\tilde{x}+ \tilde{\delta}\\.
+> also called the **second-order Taylor polynomial** of \\f\\ at \\\tilde{x}\\.
 
 > **NOTE:**
 >
@@ -853,7 +863,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Theorem 12 (The Newton step minimizes the quadratic model)** Let \\q\\ be the quadratic model of \\f\\ at \\\tilde{x}\\ ([Definition 14](#def-quadratic-model)), with \\\mathbf{H} = \mathbf{H}\_f(\tilde{x})\\ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step \\\tilde{\delta}^\* = -\mathbf{H}^{-1} \tilde{g}\\.
+> *Remark 3* (The quadratic model and Taylor’s theorem). When the second partial derivatives of \\f\\ are continuous, [Theorem 4](#thm-taylor-mv) says that \\f(\tilde{x}+ \tilde{\delta})\\ equals the expression for \\q(\tilde{\delta})\\ in [Definition 15](#def-quadratic-model) with the Hessian evaluated at a point between \\\tilde{x}\\ and \\\tilde{x}+ \tilde{\delta}\\.
+
+> **NOTE:**
+>
+> **Theorem 12 (The Newton step minimizes the quadratic model)** Let \\q\\ be the quadratic model of \\f\\ at \\\tilde{x}\\ ([Definition 15](#def-quadratic-model)), with \\\mathbf{H} = \mathbf{H}\_f(\tilde{x})\\ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite). Its unique minimizer is the Newton step \\\tilde{\delta}^\* = -\mathbf{H}^{-1} \tilde{g}\\.
 
 > **NOTE:**
 >
@@ -881,7 +895,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 15 (Quadratic convergence)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ that converges ([Definition 12](#def-vector-sequence-limit)) to \\\tilde{x}^\*\\ **converges quadratically** if there is a constant \\C\\ with
+> **Definition 16 (Quadratic convergence)** A [sequence](sets-functions.llms.md#def-sequence) \\\tilde{x}^{(0)}, \tilde{x}^{(1)}, \ldots\\ in \\\mathbb{R}^p\\ that converges ([Definition 13](#def-vector-sequence-limit)) to \\\tilde{x}^\*\\ **converges quadratically** if there is a constant \\C\\ with
 >
 > \\ \mathopen{}\left\lVert\tilde{x}^{(t+1)} - \tilde{x}^\*\right\rVert\mathclose{} \le C\\\mathopen{}\left\lVert\tilde{x}^{(t)} - \tilde{x}^\*\right\rVert\mathclose{}^2 \qquad \text{for every } t. \\
 
@@ -895,7 +909,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > \\ \begin{aligned} x^{(t+1)} - 2 &= \frac{1}{2} \mathopen{}\left(x^{(t)} + \frac{4}{x^{(t)}}\right)\mathclose{} - 2 && \text{(the iteration)} \\ &= \frac{(x^{(t)})^2 + 4 - 4 x^{(t)}}{2 x^{(t)}} && \text{(common denominator)} \\ &= \frac{(x^{(t)} - 2)^2}{2 x^{(t)}}. && \text{(the numerator is a perfect square)} \end{aligned} \\
 >
-> So near \\2\\ the error is roughly squared and divided by \\4\\ at each step: the errors are \\0.05\\, then \\0.00061\\, then \\0.000000093\\, and \\0.05^2 / (2 \cdot 2.05) \approx 0.00061\\. The iterates converge quadratically ([Definition 15](#def-quadratic-convergence)): \\C = \tfrac{1}{2}\\ works for every \\x^{(t)} \ge 1\\, since then \\\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\\, and every iterate from \\2.5\\ is at least \\2\\, since the identity makes \\x^{(t+1)} - 2 \ge 0\\ whenever \\x^{(t)} \> 0\\. Zhou ([2024](#ref-zhou2024optim)) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
+> So near \\2\\ the error is roughly squared and divided by \\4\\ at each step: the errors are \\0.05\\, then \\0.00061\\, then \\0.000000093\\, and \\0.05^2 / (2 \cdot 2.05) \approx 0.00061\\. The iterates converge quadratically ([Definition 16](#def-quadratic-convergence)): \\C = \tfrac{1}{2}\\ works for every \\x^{(t)} \ge 1\\, since then \\\tfrac{1}{2 x^{(t)}} \le \tfrac{1}{2}\\, and every iterate from \\2.5\\ is at least \\2\\, since the identity makes \\x^{(t+1)} - 2 \ge 0\\ whenever \\x^{(t)} \> 0\\. Zhou ([2024](#ref-zhou2024optim)) states such a bound for Newton’s method in general; it holds from starting points close enough to a minimizer where the Hessian is positive definite, when near that minimizer the Hessian changes by at most a constant times the distance moved, which these notes do not prove.
 
 > **NOTE:**
 >
@@ -903,7 +917,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Theorem 13 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- \tilde{c} \cdot \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 13](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
+> **Theorem 13 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- \tilde{c} \cdot \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 14](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
 
 > **NOTE:**
 >
@@ -927,11 +941,9 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 16 (Gradient descent)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\tilde{x}^{(0)}\\ be a starting point, and let \\s^{(0)}, s^{(1)}, \ldots\\ be positive **step lengths**. **Gradient descent** computes, for \\t = 0, 1, 2, \ldots\\,
+> **Definition 17 (Gradient descent)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives, let \\\tilde{x}^{(0)}\\ be a starting point, and let \\s^{(0)}, s^{(1)}, \ldots\\ be positive **step lengths**. **Gradient descent** computes, for \\t = 0, 1, 2, \ldots\\,
 >
 > \\ \tilde{x}^{(t+1)} \stackrel{\text{def}}{=}\tilde{x}^{(t)} - s^{(t)}\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}). \\
->
-> It is Newton’s method ([Definition 13](#def-newton-method)) with the Hessian replaced by \\\tfrac{1}{s^{(t)}} \mathbf{I}\_p\\, so it needs no second derivatives.
 
 > **NOTE:**
 >
@@ -947,7 +959,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 17 (Line search and exact line search)** In gradient descent ([Definition 16](#def-gradient-descent)), a **line search** is a rule that chooses the step length \\s^{(t)}\\ by examining the values of \\f\\ along the line \\\mathopen{}\left\\\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}) : s \> 0\right\\\mathclose{}\\. **Exact line search** is the line search that chooses \\s^{(t)}\\ to minimize \\f(\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}))\\ over \\s \> 0\\.
+> *Remark 4* (Gradient descent as Newton’s method with a simpler Hessian). Gradient descent ([Definition 17](#def-gradient-descent)) is Newton’s method ([Definition 14](#def-newton-method)) with the Hessian replaced by \\\tfrac{1}{s^{(t)}} \mathbf{I}\_p\\, so it needs no second derivatives.
+
+> **NOTE:**
+>
+> **Definition 18 (Line search and exact line search)** In gradient descent ([Definition 17](#def-gradient-descent)), a **line search** is a rule that chooses the step length \\s^{(t)}\\ by examining the values of \\f\\ along the line \\\mathopen{}\left\\\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}) : s \> 0\right\\\mathclose{}\\. **Exact line search** is the line search that chooses \\s^{(t)}\\ to minimize \\f(\tilde{x}^{(t)} - s\\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}^{(t)}))\\ over \\s \> 0\\.
 
 > **NOTE:**
 >
@@ -963,7 +979,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Definition 18 (Descent direction)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ at \\\tilde{x}\\. A direction \\\tilde{d}\\ ([direction](vector-calculus.llms.md#def-direction)) is a **descent direction** for \\f\\ at \\\tilde{x}\\ if \\\tilde{g} \cdot \tilde{d} \< 0\\. When \\\tilde{g} \ne \tilde{0}\_{p \times 1}\\, \\-\tilde{g}\\ is a descent direction, since \\\tilde{g} \cdot (-\tilde{g}) =-\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 \< 0\\.
+> **Definition 19 (Descent direction)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have a gradient \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\\ at \\\tilde{x}\\. A direction \\\tilde{d}\\ ([direction](vector-calculus.llms.md#def-direction)) is a **descent direction** for \\f\\ at \\\tilde{x}\\ if \\\tilde{g} \cdot \tilde{d} \< 0\\. When \\\tilde{g} \ne \tilde{0}\_{p \times 1}\\, \\-\tilde{g}\\ is a descent direction, since \\\tilde{g} \cdot (-\tilde{g}) =-\mathopen{}\left\lVert\tilde{g}\right\rVert\mathclose{}^2 \< 0\\.
 
 > **NOTE:**
 >
@@ -981,7 +997,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Theorem 14 (A short enough step downhill decreases the function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)), and let \\\tilde{x}\in \mathbb{R}^p\\ be a point with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) \ne \tilde{0}\_{p \times 1}\\. Then there is an \\\bar{s} \> 0\\ with \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\ for every \\s \in (0, \bar{s})\\: a short enough step in the descent direction \\-\tilde{g}\\ ([Definition 18](#def-descent-direction)) decreases \\f\\.
+> **Theorem 14 (A short enough step downhill decreases the function)** Let \\f : \mathbb{R}^p \to \mathbb{R}\\ have first partial derivatives that are continuous on \\\mathbb{R}^p\\ ([continuity](vector-calculus.llms.md#def-continuous-several)), and let \\\tilde{x}\in \mathbb{R}^p\\ be a point with \\\tilde{g} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) \ne \tilde{0}\_{p \times 1}\\. Then there is an \\\bar{s} \> 0\\ with \\f(\tilde{x}- s \tilde{g}) \< f(\tilde{x})\\ for every \\s \in (0, \bar{s})\\: a short enough step in the descent direction \\-\tilde{g}\\ ([Definition 19](#def-descent-direction)) decreases \\f\\.
 
 > **NOTE:**
 >
@@ -997,7 +1013,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Example 44 (Gradient descent zigzags)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\\x_2^2)\\ with \\b \> 0\\, so \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\\ b x_2)}^{\top}\\ and one gradient step of length \\s\\ from \\\tilde{x}\\ gives \\{((1 - s) x_1,\\ (1 - b s) x_2)}^{\top}\\. For exact line search ([Definition 17](#def-line-search)), let \\\phi(s) \stackrel{\text{def}}{=}f\\ at that point:
+> **Example 44 (Gradient descent zigzags)** Let \\f(\tilde{x}) = \tfrac{1}{2} (x_1^2 + b\\x_2^2)\\ with \\b \> 0\\, so \\\frac{\partial}{\partial \tilde{x}} f(\tilde{x}) = {(x_1,\\ b x_2)}^{\top}\\ and one gradient step of length \\s\\ from \\\tilde{x}\\ gives \\{((1 - s) x_1,\\ (1 - b s) x_2)}^{\top}\\. For exact line search ([Definition 18](#def-line-search)), let \\\phi(s) \stackrel{\text{def}}{=}f\\ at that point:
 >
 > \\ \begin{aligned} \phi(s) &= \tfrac{1}{2} \mathopen{}\left((1 - s)^2 x_1^2 + b (1 - b s)^2 x_2^2\right)\mathclose{}, && \text{(definition of } f \text{)} \\ \phi'(s) &= -(1 - s) x_1^2 - b^2 (1 - b s) x_2^2 && \text{(chain rule, term by term)} \\ &= -x_1^2 + s\\x_1^2 - b^2 x_2^2 + b^3 s\\x_2^2 && \text{(expand the products)} \\ &= s\\(x_1^2 + b^3 x_2^2) - (x_1^2 + b^2 x_2^2). && \text{(collect the terms in } s \text{)} \end{aligned} \\
 >

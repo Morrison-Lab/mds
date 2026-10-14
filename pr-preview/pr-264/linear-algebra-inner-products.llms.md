@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 ## 1 Inner products
 
@@ -111,7 +111,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > \\\left\langle \tilde{x}, \tilde{y} \right\rangle = 0\\
 >
-> ([Banerjee and Roy 2014](#ref-banerjee2014linear), Definition 7.3, p. 181). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), this condition is orthogonality as in [Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
+> ([Banerjee and Roy 2014](#ref-banerjee2014linear), Definition 7.3, p. 181).
 
 > **NOTE:**
 >
@@ -122,6 +122,10 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 > so \\\tilde{x}\\ and \\\tilde{y}\\ are orthogonal with respect to \\\left\langle \cdot, \cdot \right\rangle\_{\tilde{c}}\\. They are not orthogonal with respect to the dot product, since
 >
 > \\ \begin{aligned} \tilde{x}\cdot \tilde{y}&= 1 \cdot 1 + 2 \cdot(-1) \\ &= -1 \\ &\ne 0. \end{aligned} \\
+
+> **NOTE:**
+>
+> *Remark 2* (Orthogonality for the dot product). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), the condition of [Definition 3](#def-orthogonal-inner-product) is orthogonality as in [Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
 
 ## 2 Cauchy-Schwarz and the triangle inequality
 
@@ -146,7 +150,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 9 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm
+> **Example 6 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 10 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm
 >
 > \\ \begin{aligned} \sqrt{36 + 64} &= 10 \\ &= \mathopen{}\left\|-2\right\|\mathclose{} \cdot 5, \end{aligned} \\
 >
@@ -154,7 +158,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tfrac{1}{5}\\\tilde{x}\right\rVert\mathclose{} &= \tfrac{1}{5} \cdot 5 \\ &= 1, \end{aligned} \\
 >
-> and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 9 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
+> and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 10 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
 
 > **NOTE:**
 >
@@ -303,9 +307,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}^k\right)\mathclose{}^{1/k}. \\
 >
-> The cases \\k = 1\\ and \\k = 2\\ are named the **\\\ell_1\\ norm** (also the **taxicab norm** or **Manhattan norm**) and the **\\\ell_2\\ norm**. The **infinity norm** (also the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately by
->
-> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\max\_{1 \le i \le p} \mathopen{}\left\|x_i\right\|\mathclose{}. \\
+> The cases \\k = 1\\ and \\k = 2\\ are named the **\\\ell_1\\ norm** (also the **taxicab norm** or **Manhattan norm**) and the **\\\ell_2\\ norm**.
 
 > **NOTE:**
 >
@@ -329,13 +331,19 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Unit balls and regularization in machine learning). The unit ball in \\\mathbb{R}^2\\ under the \\\ell_p\\ norm is the set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \le 1\right\\\mathclose{}\\:
+> *Remark 3* (Unit balls and regularization in machine learning). The unit ball in \\\mathbb{R}^2\\ under the \\\ell_p\\ norm is the set \\\mathopen{}\left\\\tilde{x}\in \mathbb{R}^2 : \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k \le 1\right\\\mathclose{}\\:
 >
 > - For \\k = 1\\, the unit ball is a diamond (cross-polytope) with sharp vertices along the coordinate axes \\(\pm 1, 0)\\ and \\(0, \pm 1)\\.
 > - For \\k = 2\\, the unit ball is the smooth round Euclidean unit disk.
 > - For \\k = \infty\\, the unit ball is an axis-aligned square with vertices \\(\pm 1, \pm 1)\\.
 >
 > In regression and machine learning, adding an \\\ell_1\\ penalty (Lasso regularization) to an objective function encourages sparse solutions: the level curves of the loss function tend to make contact with the sharp corners of the \\\ell_1\\ unit ball on the coordinate axes, setting irrelevant feature weights exactly to zero. In contrast, the smooth spherical \\\ell_2\\ penalty (Ridge regularization) shrinks all weights toward zero without setting them exactly to zero.
+
+> **NOTE:**
+>
+> **Definition 6 (Infinity norm (\\\ell\_\infty\\ norm, maximum norm, Chebyshev norm))** For a vector \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\, the **infinity norm** (also the **\\\ell\_\infty\\ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately from the \\p\\-norms ([Definition 5](#def-vector-p-norm)) by
+>
+> \\ \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\max\_{1 \le i \le p} \mathopen{}\left\|x_i\right\|\mathclose{}. \\
 
 > **NOTE:**
 >
@@ -411,7 +419,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Cosine and sine)** The *unit circle* is the set of points \\(x_1, x_2)\\ in the plane with \\x_1^2 + x_2^2 = 1\\, and \\\pi \approx 3.14159\\ is half of its circumference. For a real number \\\theta\\, start at the point \\(1, 0)\\ and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The point reached is \\(\cos\theta, \sin\theta)\\: its first coordinate is the **cosine** of \\\theta\\, and its second coordinate is the **sine** of \\\theta\\.
+> **Definition 7 (Cosine and sine)** The *unit circle* is the set of points \\(x_1, x_2)\\ in the plane with \\x_1^2 + x_2^2 = 1\\, and \\\pi \approx 3.14159\\ is half of its circumference. For a real number \\\theta\\, start at the point \\(1, 0)\\ and move a distance \\\mathopen{}\left\|\theta\right\|\mathclose{}\\ along the unit circle, counterclockwise if \\\theta\ge 0\\ and clockwise if \\\theta\< 0\\. The point reached is \\(\cos\theta, \sin\theta)\\: its first coordinate is the **cosine** of \\\theta\\, and its second coordinate is the **sine** of \\\theta\\.
 
 > **NOTE:**
 >
@@ -431,13 +439,13 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Angle between two vectors)** The **angle** between two nonzero vectors \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 6](#def-cosine-sine)) satisfies
+> **Definition 8 (Angle between two vectors)** The **angle** between two nonzero vectors \\\tilde{x}, \tilde{y} \in \mathbb{R}^p\\ is the unique number \\\theta\in \[0, \pi\]\\ whose cosine ([Definition 7](#def-cosine-sine)) satisfies
 >
 > \\ \cos\theta= \frac{\tilde{x} \cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
-> *Remark 3* (Why the angle is well defined). The denominator is positive, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)), and by [Theorem 3](#thm-cauchy-schwarz) the ratio lies between \\-1\\ and \\1\\. On \\\[0, \pi\]\\, \\\cos\\ is decreasing from \\1\\ to \\-1\\ and takes each value in \\\[-1, 1\]\\ exactly once, so there is exactly one such \\\theta\\. The angle is \\\pi/2\\ exactly when \\\tilde{x} \cdot \tilde{y} = 0\\, so for nonzero vectors, orthogonal ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
+> *Remark 4* (Why the angle is well defined). The denominator is positive, because both vectors are nonzero ([Theorem 1](#thm-norm-properties)), and by [Theorem 3](#thm-cauchy-schwarz) the ratio lies between \\-1\\ and \\1\\. On \\\[0, \pi\]\\, \\\cos\\ is decreasing from \\1\\ to \\-1\\ and takes each value in \\\[-1, 1\]\\ exactly once, so there is exactly one such \\\theta\\. The angle is \\\pi/2\\ exactly when \\\tilde{x} \cdot \tilde{y} = 0\\, so for nonzero vectors, orthogonal ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
 
 > **NOTE:**
 >
@@ -461,13 +469,9 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Cosine similarity)** The **cosine similarity** between two nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ is the cosine of the angle between them ([Definition 7](#def-angle)):
+> **Definition 9 (Cosine similarity)** The **cosine similarity** between two nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ is the cosine of the angle between them ([Definition 8](#def-angle)):
 >
 > \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\tilde{x}\cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
->
-> In a general real inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\left\langle \cdot, \cdot \right\rangle\\ and induced norm \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\, the cosine similarity is
->
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
@@ -486,6 +490,12 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
 >
 > When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\\.
+
+> **NOTE:**
+>
+> **Definition 10 (Cosine similarity in an inner product space)** In a general real inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\left\langle \cdot, \cdot \right\rangle\\ and induced norm \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\, the **cosine similarity** is
+>
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
 
 ## 3 Orthonormal bases and Gram-Schmidt
 
@@ -545,7 +555,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Orthonormal basis)** An **orthonormal basis** of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ is a basis of \\\mathcal{S}\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
+> **Definition 11 (Orthonormal basis)** An **orthonormal basis** of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ is a basis of \\\mathcal{S}\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
 
 > **NOTE:**
 >
@@ -564,7 +574,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 8 (Coordinates in an orthonormal basis are dot products)** If \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ is an orthonormal basis of a subspace \\\mathcal{S}\\ ([Definition 9](#def-orthonormal-basis)), then every \\\tilde{x} \in \mathcal{S}\\ satisfies
+> **Theorem 8 (Coordinates in an orthonormal basis are dot products)** If \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ is an orthonormal basis of a subspace \\\mathcal{S}\\ ([Definition 11](#def-orthonormal-basis)), then every \\\tilde{x} \in \mathcal{S}\\ satisfies
 >
 > \\ \tilde{x} = \sum\_{i=1}^{k} (\tilde{q}\_i \cdot \tilde{x})\\\tilde{q}\_i. \\
 
@@ -594,7 +604,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Gram-Schmidt process)** The **Gram-Schmidt process** takes vectors \\\tilde{a}\_1, \ldots, \tilde{a}\_k \in \mathbb{R}^p\\ and, for \\i = 1, 2, \ldots, k\\ in turn:
+> **Definition 12 (Gram-Schmidt process)** The **Gram-Schmidt process** takes vectors \\\tilde{a}\_1, \ldots, \tilde{a}\_k \in \mathbb{R}^p\\ and, for \\i = 1, 2, \ldots, k\\ in turn:
 >
 > 1.  **Orthogonalize:** \\\tilde{\tilde{q}}\_i \stackrel{\text{def}}{=}\tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\\ (for \\i = 1\\ the sum is empty, so \\\tilde{\tilde{q}}\_1 = \tilde{a}\_1\\);
 > 2.  **Test:** if \\\tilde{\tilde{q}}\_i = \tilde{0}\\, stop;
@@ -638,11 +648,11 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (What Gram-Schmidt produces)** Run the Gram-Schmidt process ([Definition 10](#def-gram-schmidt)) on \\\tilde{a}\_1, \ldots, \tilde{a}\_k \in \mathbb{R}^p\\.
+> **Theorem 9 (What Gram-Schmidt produces)** Run the Gram-Schmidt process ([Definition 12](#def-gram-schmidt)) on \\\tilde{a}\_1, \ldots, \tilde{a}\_k \in \mathbb{R}^p\\.
 >
 > 1.  If it has produced \\\tilde{q}\_1, \ldots, \tilde{q}\_i\\ without stopping, then \\\tilde{q}\_1, \ldots, \tilde{q}\_i\\ are orthonormal and \\\operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_i\right\\\mathclose{} = \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_i\right\\\mathclose{}\\.
 > 2.  If it reaches step \\i\\ (that is, it did not stop at steps \\1, \ldots, i - 1\\), it stops there exactly when \\\tilde{a}\_i \in \operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_{i-1}\right\\\mathclose{}\\.
-> 3.  It completes all \\k\\ steps exactly when \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\ are linearly independent; then \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ is an orthonormal basis of \\\operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_k\right\\\mathclose{}\\ ([Definition 9](#def-orthonormal-basis)).
+> 3.  It completes all \\k\\ steps exactly when \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\ are linearly independent; then \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ is an orthonormal basis of \\\operatorname{span}\mathopen{}\left\\\tilde{a}\_1, \ldots, \tilde{a}\_k\right\\\mathclose{}\\ ([Definition 11](#def-orthonormal-basis)).
 
 > **NOTE:**
 >
@@ -654,7 +664,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > *\\\tilde{\tilde{q}}\_i\\ is orthogonal to the earlier \\\tilde{q}\\’s.* For each \\l \< i\\,
 >
-> \\ \begin{aligned} \tilde{q}\_l \cdot \tilde{\tilde{q}}\_i &= \tilde{q}\_l \cdot \mathopen{}\left(1\\\tilde{a}\_i + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\\tilde{q}\_j\right)\mathclose{} && \text{(}\href{#def-gram-schmidt}{\text{Definition~10}}\text{, as a linear combination)} \\ &= 1\\(\tilde{q}\_l \cdot \tilde{a}\_i) + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~6}}\text{)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(} 1\\z = z \text{, and pull the minus signs out of the sum)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \tilde{q}\_l \cdot \tilde{a}\_i && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~17 in Vectors}}\text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{q}\_l \cdot \tilde{\tilde{q}}\_i &= \tilde{q}\_l \cdot \mathopen{}\left(1\\\tilde{a}\_i + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\\tilde{q}\_j\right)\mathclose{} && \text{(}\href{#def-gram-schmidt}{\text{Definition~12}}\text{, as a linear combination)} \\ &= 1\\(\tilde{q}\_l \cdot \tilde{a}\_i) + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~6}}\text{)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(} 1\\z = z \text{, and pull the minus signs out of the sum)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \tilde{q}\_l \cdot \tilde{a}\_i && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~17 in Vectors}}\text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
 >
 > *Part 2 at step \\i\\.* If \\\tilde{\tilde{q}}\_i = \tilde{0}\\, then \\\tilde{a}\_i = \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j \in \mathcal{S}\_{i-1}\\. Conversely, if \\\tilde{a}\_i \in \mathcal{S}\_{i-1}\\, then \\\tilde{a}\_i = \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\\ ([Theorem 8](#thm-orthonormal-expansion)), so \\\tilde{\tilde{q}}\_i = \tilde{0}\\.
 >
@@ -691,7 +701,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 1 (Every subspace has an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\. Every orthonormal list of vectors in \\\mathcal{S}\\ extends to an orthonormal basis of \\\mathcal{S}\\ ([Definition 9](#def-orthonormal-basis)). Starting from the empty list shows that \\\mathcal{S}\\ has an orthonormal basis.
+> **Corollary 1 (Every subspace has an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\. Every orthonormal list of vectors in \\\mathcal{S}\\ extends to an orthonormal basis of \\\mathcal{S}\\ ([Definition 11](#def-orthonormal-basis)). Starting from the empty list shows that \\\mathcal{S}\\ has an orthonormal basis.
 
 > **NOTE:**
 >
@@ -727,7 +737,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
+> **Definition 13 (Outer product)** The **outer product** of a vector \\\tilde{u}\\ of length \\m\\ and a vector \\\tilde{v}\\ of length \\n\\ is the \\m \times n\\ matrix product ([Definition 7 in Matrices](linear-algebra-matrices.llms.md#def-matrix-mult)) \\\tilde{u}\\{\tilde{v}}^{\top}\\ of the column vector \\\tilde{u}\\ with the row vector \\{\tilde{v}}^{\top}\\. Its entries are
 >
 > \\ \mathopen{}\left(\underbrace{\tilde{u}}\_{m \times 1}\\\underbrace{{\tilde{v}}^{\top}}\_{1 \times n}\right)\mathclose{}\_{ij} = u_i v_j \qquad \text{(definition of matrix multiplication; the sum has one term)} \\
 
@@ -739,7 +749,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Outer product and dot product). The dot product \\{\tilde{u}}^{\top}\tilde{v}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\tilde{u}\\{\tilde{v}}^{\top}\\ takes vectors of any two lengths and gives a matrix ([Banerjee and Roy 2014, chap. 1](#ref-banerjee2014linear), p. 11).
+> *Remark 5* (Outer product and dot product). The dot product \\{\tilde{u}}^{\top}\tilde{v}\\ ([Example 6 in Matrices](linear-algebra-matrices.llms.md#exm-dot-product-matmul)) needs two vectors of the same length and gives a number. The outer product \\\tilde{u}\\{\tilde{v}}^{\top}\\ takes vectors of any two lengths and gives a matrix ([Banerjee and Roy 2014, chap. 1](#ref-banerjee2014linear), p. 11).
 >
 > For example, \\\tilde{u} = (1, 2, 3)\\ and \\\tilde{v} = (4, 5)\\ in [Example 25](#exm-outer-product) have different lengths, so they have no dot product, but their outer product is a \\3 \times 2\\ matrix. For \\\tilde{a} = (1, 2)\\ and \\\tilde{b} = (3, 4)\\, which have the same length, both products exist:
 >

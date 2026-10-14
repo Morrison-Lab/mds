@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 ## 1 Polynomials
 
@@ -153,7 +153,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
 >
-> Then \\L\\ is the **limit** of the sequence. A sequence that converges to some real number is **convergent**, and a sequence that does not converge to any real number **diverges**. A sequence **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
+> Then \\L\\ is the **limit** of the sequence. A sequence that converges to some real number is **convergent**, and a sequence that does not converge to any real number **diverges**.
 
 > **NOTE:**
 >
@@ -162,11 +162,15 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 > - \\a_n = \frac{1}{n}\\ converges to \\0\\. Given \\\varepsilon\> 0\\, take \\N\\ to be any natural number larger than \\\frac{1}{\varepsilon}\\. For every \\n \ge N\\, \\\mathopen{}\left\|\frac{1}{n} - 0\right\|\mathclose{} = \frac{1}{n} \le \frac{1}{N} \< \varepsilon\\. For example, with \\\varepsilon= 0.01\\, take \\N = 101\\: every \\n \ge 101\\ has \\\frac{1}{n} \le \frac{1}{101} \< 0.01\\.
 > - \\c_n = n\\ diverges. For any real number \\L\\ and \\\varepsilon= 1\\, every \\n \> L + 1\\ has \\\mathopen{}\left\|n - L\right\|\mathclose{} \> 1\\, so no \\N\\ works. For example, with \\L = 5\\, every \\n \ge 7\\ has \\\mathopen{}\left\|n - 5\right\|\mathclose{} \ge 2\\. It diverges to \\\infty\\: for every real number \\M\\, every \\n \ge N\\ has \\c_n = n \> M\\ when \\N\\ is a natural number larger than \\M\\.
 
+> **NOTE:**
+>
+> **Definition 10 (Divergence of a sequence to infinity)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
+
 ## 4 Exponentials and Logarithms
 
 > **NOTE:**
 >
-> **Definition 10 (Exponential function)** The **exponential function** \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+> **Definition 11 (Exponential function)** The **exponential function** \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -187,7 +191,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Euler’s number)** **Euler’s number** is
+> **Definition 12 (Euler’s number)** **Euler’s number** is
 >
 > \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
 
@@ -197,27 +201,27 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 10](#def-exponential-function)).
+> **Definition 13 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 11](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 11](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 12](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
 > **Example 10 (Natural logarithms)**  
 >
 > - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 8](#exm-exponential-function)).
-> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 11](#def-euler-number)).
+> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 12](#def-euler-number)).
 > - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
 
 > **NOTE:**
 >
-> **Definition 13 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
+> **Definition 14 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
 >
 > \\a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{}.\\
 >
-> When \\b\\ is an integer, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
+> When \\b\\ is an integer, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer).
 
 > **NOTE:**
 >
@@ -229,26 +233,26 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 >   from [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 >
-> - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 6 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 >
-> - For every real \\x\\, with base \\e\\ ([Definition 11](#def-euler-number)):
+> - For every real \\x\\, with base \\e\\ ([Definition 12](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~13}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~10}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~14}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~10}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
 >   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
 
 > **NOTE:**
 >
-> **Definition 14 (Real powers of zero and of negative numbers)** [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 13](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
+> **Definition 15 (Real powers of zero and of negative numbers)** [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 14](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
 >
 > - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
-> - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](notation.llms.md#def-integers), by [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
+> - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](notation.llms.md#def-integers), by [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
 
 > **NOTE:**
 >
 > **Example 12 (Powers of zero and of negative numbers)**  
 >
-> - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 6 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 > - \\(-8)^2 = 64\\ and \\(-8)^{-1} = -\tfrac{1}{8}\\ are defined, since the exponents are integers.
 > - \\(-8)^{1/3}\\ is undefined, even though \\(-2)^3 = -8\\. R follows the same convention: `(-8)^(1/3)` is `NaN`.
 
@@ -385,11 +389,9 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+> **Definition 16 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
 >
 > \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
->
-> On a plot of the surface \\z = g(b, c)\\, it is the curve along which the surface has height \\k\\.
 
 > **NOTE:**
 >
@@ -405,11 +407,15 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
+> *Remark 6* (Contour lines on a plot of a surface). On a plot of the surface \\z = g(b, c)\\, the [contour line](#def-contour-line) is the curve along which the surface has height \\k\\.
+
+> **NOTE:**
+>
 > **Exercise 2 (Exponentiation versus multiplication)** For \\b,c \in \mathbb{R}\\, when does \\b^c = bc\\?
 
 > **NOTE:**
 >
-> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 14](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 15](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 >
@@ -577,7 +583,7 @@ Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-lin
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
 > 2.  \\bc = b^c\\ (see [Exercise 2](#exr-exp-vs-mult)).
 >
-> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 14](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
+> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 15](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
 > - If \\b \< 0\\, then \\0^b\\ is undefined, so \\(a^b)^c\\ is undefined.
 >

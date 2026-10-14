@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 > **NOTE:**
 >
@@ -183,7 +183,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
-> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-sequence-limit) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-sequence-limit) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
+> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-sequence-limit) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
 
 > **NOTE:**
 >
@@ -252,7 +252,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > \\ \begin{aligned} \mu(\emptyset) &= \mu\mathopen{}\left(\bigcup\_{i=1}^{\infty} \emptyset\right)\mathclose{} && \text{(the union of copies of } \emptyset \text{ is } \emptyset \text{)} \\ &= \sum\_{i=1}^{\infty} \mu(\emptyset) && \text{(countable additivity)} \end{aligned} \\
 >
-> If \\\mu(\emptyset) = c\\ for a finite \\c \> 0\\, the right-hand side is \\c + c + \cdots = \infty \neq c\\, a [contradiction](notation.llms.md#def-proof-by-contradiction). So \\\mu(\emptyset)\\ is 0 or \\\infty\\.
+> If \\\mu(\emptyset) = c\\ for a finite \\c \> 0\\, the right-hand side is \\c + c + \cdots = \infty \neq c\\, a [contradiction](proof-writing.llms.md#def-proof-by-contradiction). So \\\mu(\emptyset)\\ is 0 or \\\infty\\.
 
 > **NOTE:**
 >
@@ -314,7 +314,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> *Remark 5* (Finite additivity does not imply countable additivity). [Example 15](#exm-finite-not-countable) shows that the [converse](notation.llms.md#def-converse) of [Theorem 4](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 15](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
+> *Remark 5* (Finite additivity does not imply countable additivity). [Example 15](#exm-finite-not-countable) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 4](#thm-countable-implies-finite) fails, even when \\\mu(\emptyset) = 0\\: a finitely additive function need not be countably additive (see [Wikipedia: Sigma-additive set function, “An additive function which is not \\\sigma\\-additive”](https://en.wikipedia.org/wiki/Sigma-additive_set_function#An_additive_function_which_is_not_%CF%83-additive)). The function \\\mu\\ in [Example 15](#exm-finite-not-countable) has \\\mu(\emptyset) = 0\\, because \\\emptyset\\ is finite.
 
 ## 5 Measures
 

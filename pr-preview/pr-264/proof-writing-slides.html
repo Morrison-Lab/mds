@@ -9,16 +9,16 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
-
-  <title>Math for Data Science – Proof Writing</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
-  <style>
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+<title>Math for Data Science – Proof Writing</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+<style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
@@ -36,6 +36,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -56,18 +122,14 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-8bf93e1a1ae4568f338a25a981ddcad4.css">
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
-
-  <script type="text/plain" cookie-consent="tracking">
+<link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-8bf93e1a1ae4568f338a25a981ddcad4.css">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
-  </script>
-  
-  <script type="text/javascript" charset="UTF-8">
+  </script><script type="text/javascript" charset="UTF-8">
   document.addEventListener('DOMContentLoaded', function () {
   cookieconsent.run({
     "notice_banner_type":"simple",
@@ -82,13 +144,11 @@
   "language":"en"
     });
   });
-  </script> 
-    
-  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+  </script><link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -176,7 +236,7 @@
       margin-right: 0; 
     }
   </style>
-  <!--
+<!--
     Colour-theme dropdown for the qwt revealjs format: Light, Off-white,
     Parchment, Dark. Pulled into every slide deck via the `include-in-header`
     entry in the `revealjs:` block of `_quarto-website.yml`. Pairs with
@@ -187,8 +247,7 @@
     "mln-theme", the key the website's theme dropdown (theme-picker.html) uses,
     so it carries across the site and the decks. First-time visitors get
     Dark if their system prefers it, and Off-white otherwise.
-  -->
-  <style>
+  --><style>
     #qwt-theme-select {
       position: fixed;
       bottom: 8px;
@@ -217,7 +276,7 @@
     }
     @media print { #qwt-theme-select { display: none; } }
   </style>
-  <script>
+<script>
   (function () {
     "use strict";
     var KEY = "mln-theme";
@@ -281,26 +340,338 @@
       init();
     }
   })();
-  </script>
+  </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Proof Writing</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Proof Writing</h1>
 
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-13 13:40:32 (PDT)</p>
-</section>
-<section class="slide level2">
-
-<p>This page collects general advice on how to write <a href="./notation.html#def-proof">proofs</a> and <a href="./notation.html#def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="./notation.html#def-theorem">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="./notation.html#def-logical-entailment">logical entailment</a> are listed under <a href="./notation.html#proofs">Proofs</a> on the Notation page.</p>
-</section>
-<section id="sec-dont-skip-steps" class="slide level2" data-number="1">
-<h2><span class="header-section-number">1</span> Don’t skip steps</h2>
+  <p class="date">Last modified: 2026-10-13 18:36:56 (PDT)</p>
+</section><section class="slide level2"><p>This page collects general advice on how to write <a href="#/def-proof">proofs</a> and <a href="#/def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="#/def-theorem">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="#/def-logical-entailment">logical entailment</a> are listed under <a href="#/sec-proof-definitions">Definitions for proofs</a> below.</p>
+</section><section id="sec-proof-definitions" class="slide level2" data-number="1"><h2>
+<span class="header-section-number">1</span> Definitions for proofs</h2>
+<div id="def-proposition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong>, or <strong>statement</strong>, is a sentence that is either true or false.</p>
+</div>
+</section><section class="slide level2"><div id="exm-proposition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Propositions, and a sentence that is not one)</strong></span> &nbsp;</p>
+<ul>
+<li>“<span class="math inline">\(2 + 3 = 5\)</span>” is a proposition, and it is true.</li>
+<li>“<span class="math inline">\(7\)</span> is <a href="./notation.html#def-even-odd">even</a>” is a proposition, and it is false.</li>
+<li>“<span class="math inline">\(x &gt; 2\)</span>” is not a proposition on its own: it is true when <span class="math inline">\(x = 3\)</span> and false when <span class="math inline">\(x = 1\)</span>, so it has no truth value until <span class="math inline">\(x\)</span> is given a value.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="def-predicate" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="math inline">\(P(x)\)</span> is a sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-predicate" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (A predicate)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for real numbers <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li>
+<span class="math inline">\(P(3)\)</span> is the proposition “<span class="math inline">\(3 &gt; 2\)</span>”, which is true.</li>
+<li>
+<span class="math inline">\(P(1)\)</span> is the proposition “<span class="math inline">\(1 &gt; 2\)</span>”, which is false.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="def-logical-connective" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> builds a new proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five:</p>
+<ul>
+<li>
+<strong>not</strong>: <span class="math inline">\(\neg P\)</span> (“not <span class="math inline">\(P\)</span>”) is true when <span class="math inline">\(P\)</span> is false, and false when <span class="math inline">\(P\)</span> is true.</li>
+<li>
+<strong>and</strong>: <span class="math inline">\(P \land Q\)</span> (“<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>”) is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are both true, and false otherwise.</li>
+<li>
+<strong>or</strong>: <span class="math inline">\(P \lor Q\)</span> (“<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>”) is true when at least one of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is true, and false when both are false.</li>
+<li>
+<strong>implies</strong>: <span class="math inline">\(P \Rightarrow Q\)</span> (“if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”, or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”) is false when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, and true otherwise.</li>
+<li>
+<strong>if and only if</strong>: <span class="math inline">\(P \Leftrightarrow Q\)</span> (“<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”) is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value, and false otherwise.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="exm-logical-connective" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Truth values of connectives)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(2 + 3 = 5\)</span>”, which is true, and let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(7\)</span> is <a href="./notation.html#def-even-odd">even</a>”, which is false.</p>
+<ul>
+<li>
+<span class="math inline">\(\neg Q\)</span>, “<span class="math inline">\(7\)</span> is not even”, is true, because <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(P \land Q\)</span> is false, because <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(P \lor Q\)</span> is true, because <span class="math inline">\(P\)</span> is true.</li>
+<li>
+<span class="math inline">\(P \Rightarrow Q\)</span> is false, because <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(Q \Rightarrow P\)</span> is true, because <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(P \Leftrightarrow Q\)</span> is false, because <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have different truth values.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="def-quantifier" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Quantifier)</strong></span> A <strong>quantifier</strong> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>):</p>
+<ul>
+<li>the <strong>universal quantifier</strong> “for all”: <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise;</li>
+<li>the <strong>existential quantifier</strong> “there exists”: <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="exm-quantifier" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Quantified propositions)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for <a href="./notation.html#def-integers">integers</a> <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li>“<span class="math inline">\(\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(P(3)\)</span> is true.</li>
+<li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is false, because <span class="math inline">\(P(1)\)</span> is false.</li>
+<li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{3, 4, 5\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(3 &gt; 2\)</span>, <span class="math inline">\(4 &gt; 2\)</span>, and <span class="math inline">\(5 &gt; 2\)</span> are all true.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="def-inequality" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Inequality)</strong></span> An <strong>inequality</strong> is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) or a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) that compares two expressions <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> whose values are <a href="./notation.html#def-real-numbers">real numbers</a>, in one of the forms:</p>
+<ul>
+<li>
+<span class="math inline">\(a &lt; b\)</span> (“<span class="math inline">\(a\)</span> is less than <span class="math inline">\(b\)</span>”);</li>
+<li>
+<span class="math inline">\(a \le b\)</span> (“<span class="math inline">\(a\)</span> is less than or equal to <span class="math inline">\(b\)</span>”);</li>
+<li>
+<span class="math inline">\(a &gt; b\)</span> (“<span class="math inline">\(a\)</span> is greater than <span class="math inline">\(b\)</span>”);</li>
+<li>
+<span class="math inline">\(a \ge b\)</span> (“<span class="math inline">\(a\)</span> is greater than or equal to <span class="math inline">\(b\)</span>”).</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="exm-inequality" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Inequalities)</strong></span> &nbsp;</p>
+<ul>
+<li>“<span class="math inline">\(3 &lt; 5\)</span>” is an inequality, and it is true.</li>
+<li>“<span class="math inline">\(5 \le 3\)</span>” is an inequality, and it is false.</li>
+<li>“<span class="math inline">\(x \ge 2\)</span>” is an inequality and a predicate: it is true when <span class="math inline">\(x = 2\)</span> and false when <span class="math inline">\(x = 1\)</span>.</li>
+<li>“<span class="math inline">\(x = 2\)</span>” is not an inequality: it is an equality.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="def-logical-entailment" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-logical-entailment" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Entailment, and its failure)</strong></span> Let <span class="math inline">\(x\)</span> be an <a href="./notation.html#def-integers">integer</a>.</p>
+<ul>
+<li>“<span class="math inline">\(x = 2\)</span>” entails “<span class="math inline">\(x^2 = 4\)</span>”: the only value that makes “<span class="math inline">\(x = 2\)</span>” true is <span class="math inline">\(x = 2\)</span>, and <span class="math inline">\(2^2 = 4\)</span>.</li>
+<li>“<span class="math inline">\(x &gt; 3\)</span>” and “<span class="math inline">\(x &lt; 5\)</span>” together entail “<span class="math inline">\(x = 4\)</span>”: <span class="math inline">\(4\)</span> is the only integer greater than <span class="math inline">\(3\)</span> and less than <span class="math inline">\(5\)</span>.</li>
+<li>“<span class="math inline">\(x^2 = 4\)</span>” does not entail “<span class="math inline">\(x = 2\)</span>”: the value <span class="math inline">\(x = -2\)</span> makes “<span class="math inline">\(x^2 = 4\)</span>” true, since <span class="math inline">\((-2)^2 = 4\)</span>, but makes “<span class="math inline">\(x = 2\)</span>” false.</li>
+</ul>
+</div>
+<p>We can use any of:</p>
+<ul>
+<li>
+<span class="math inline">\(\therefore\)</span> (<code>\therefore</code> in LaTeX),</li>
+<li>
+<span class="math inline">\(\Rightarrow\)</span> (<code>\Rightarrow</code>),</li>
+<li>
+<span class="math inline">\(\models\)</span> (<code>\models</code>)</li>
+</ul>
+<p>to denote logical entailment (<a href="#/def-logical-entailment" class="quarto-xref">Definition&nbsp;6</a>). <span class="math inline">\(\Rightarrow\)</span> also writes the connective “implies” (<a href="#/def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>); <span class="math inline">\(P\)</span> entails <span class="math inline">\(Q\)</span> exactly when <span class="math inline">\(P \Rightarrow Q\)</span> is true for every choice of values for the variables in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
+<p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra-exponentials.html#def-sequence-limit">convergence</a> results.</p>
+</section><section class="slide level2"><div id="def-proof" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Proof)</strong></span> A <strong>proof</strong> of a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
+<ul>
+<li>an assumption,</li>
+<li>a definition,</li>
+<li>a previously proved result, or</li>
+<li>a consequence of earlier statements in the list, by one rule of logic or algebra.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="exm-proof" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (The sum of two even integers is even)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be even integers (<a href="./notation.html#def-even-odd">definition</a>). Then <span class="math inline">\(a = 2j\)</span> and <span class="math inline">\(b = 2k\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+a + b
+&amp;= 2j + 2k
+&amp;&amp; \text{(substitute } a = 2j \text{ and } b = 2k \text{)}
+\\
+&amp;= 2(j + k)
+&amp;&amp; \text{(distributive law)}
+\end{aligned}
+\]</span></p>
+<p>The second line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an integer, <span class="math inline">\(a + b\)</span> is even (<a href="./notation.html#def-even-odd">definition</a>). For example,</p>
+<p><span class="math display">\[
+\begin{aligned}
+4 + 10 &amp;= 2 \cdot 2 + 2 \cdot 5 \\
+&amp;= 2 \cdot 7 \\
+&amp;= 14.
+\end{aligned}
+\]</span></p>
+</div>
+</section><section class="slide level2"><div id="def-derivation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Derivation)</strong></span> A <strong>derivation</strong> is a proof (<a href="#/def-proof" class="quarto-xref">Definition&nbsp;7</a>), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by <span class="math inline">\(=\)</span> or by an inequality sign (<a href="#/def-inequality" class="quarto-xref">Definition&nbsp;5</a>), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.</p>
+</div>
+</section><section class="slide level2"><div id="exm-derivation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (A derivation with equalities and inequalities)</strong></span> For every real number <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x + 1)^2
+&amp;= x^2 + 2x + 1
+&amp;&amp; \text{(square of a sum)}
+\\
+&amp;\ge 2x + 1
+&amp;&amp; \text{(} x^2 \ge 0 \text{)}
+\\
+&amp;&gt; 2x
+&amp;&amp; \text{(} 1 &gt; 0 \text{)}
+\end{aligned}
+\]</span></p>
+<p>The first step uses the <a href="./algebra-sums.html#thm-square-of-a-sum">square of a sum</a>. The steps are <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span>, and <span class="math inline">\(&gt;\)</span>, so the derivation shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. For example, with <span class="math inline">\(x = 3\)</span>: <span class="math inline">\((3 + 1)^2 = 16\)</span>, and <span class="math inline">\(16 &gt; 6 = 2 \cdot 3\)</span>.</p>
+</div>
+</section><section class="slide level2 scrollable"><div id="thm-derivation-chain" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (What a derivation shows)</strong></span> Consider a derivation (<a href="#/def-derivation" class="quarto-xref">Definition&nbsp;8</a>) with expressions <span class="math inline">\(E_0, E_1, \ldots, E_n\)</span>, where each line <span class="math inline">\(E_j\)</span> is joined to the line <span class="math inline">\(E_{j-1}\)</span> before it by <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span>.</p>
+<ol type="1">
+<li>If every step is <span class="math inline">\(=\)</span>, then <span class="math inline">\(E_0 = E_n\)</span>.</li>
+<li>If every step is <span class="math inline">\(=\)</span> or <span class="math inline">\(\le\)</span>, then <span class="math inline">\(E_0 \le E_n\)</span>.</li>
+<li>If every step is <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span>, or <span class="math inline">\(&lt;\)</span>, and at least one step is <span class="math inline">\(&lt;\)</span>, then <span class="math inline">\(E_0 &lt; E_n\)</span>.</li>
+</ol>
+<p>The same holds with <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span> in place of <span class="math inline">\(\le\)</span> and <span class="math inline">\(&lt;\)</span>.</p>
+</div>
+</section><section class="slide level2"></section><section class="slide level2"><div id="exm-derivation-chain" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Checking a derivation line by line)</strong></span> The derivation in <a href="#/exm-derivation" class="quarto-xref">Example&nbsp;8</a> has the steps <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span>, so by <a href="#/thm-derivation-chain" class="quarto-xref">Theorem&nbsp;1</a> it shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. The code evaluates the four lines of that derivation at several values of <span class="math inline">\(x\)</span>, and checks each step and the comparison of the first line with the last.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb1-2"><a aria-label="2"></a>lines <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-3"><a aria-label="3"></a>  <span class="at">x =</span> x,</span>
+<span id="cb1-4"><a aria-label="4"></a>  <span class="at">line_0 =</span> (x <span class="sc">+</span> <span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span>,</span>
+<span id="cb1-5"><a aria-label="5"></a>  <span class="at">line_1 =</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">1</span>,</span>
+<span id="cb1-6"><a aria-label="6"></a>  <span class="at">line_2 =</span> <span class="dv">2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">1</span>,</span>
+<span id="cb1-7"><a aria-label="7"></a>  <span class="at">line_3 =</span> <span class="dv">2</span> <span class="sc">*</span> x</span>
+<span id="cb1-8"><a aria-label="8"></a>)</span>
+<span id="cb1-9"><a aria-label="9"></a>steps <span class="ot">&lt;-</span> <span class="fu">with</span>(</span>
+<span id="cb1-10"><a aria-label="10"></a>  lines,</span>
+<span id="cb1-11"><a aria-label="11"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb1-12"><a aria-label="12"></a>    <span class="at">x =</span> x,</span>
+<span id="cb1-13"><a aria-label="13"></a>    <span class="at">step_1_equal =</span> line_0 <span class="sc">==</span> line_1,</span>
+<span id="cb1-14"><a aria-label="14"></a>    <span class="at">step_2_geq =</span> line_1 <span class="sc">&gt;=</span> line_2,</span>
+<span id="cb1-15"><a aria-label="15"></a>    <span class="at">step_3_greater =</span> line_2 <span class="sc">&gt;</span> line_3,</span>
+<span id="cb1-16"><a aria-label="16"></a>    <span class="at">first_greater_than_last =</span> line_0 <span class="sc">&gt;</span> line_3</span>
+<span id="cb1-17"><a aria-label="17"></a>  )</span>
+<span id="cb1-18"><a aria-label="18"></a>)</span>
+<span id="cb1-19"><a aria-label="19"></a>lines</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["line_0"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["line_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["line_2"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["line_3"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"-3","2":"4","3":"4","4":"-5","5":"-6"},{"1":"-1","2":"0","3":"0","4":"-1","5":"-2"},{"1":"0","2":"1","3":"1","4":"1","5":"0"},{"1":"2","2":"9","3":"9","4":"5","5":"4"},{"1":"3","2":"16","3":"16","4":"7","5":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>steps</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["step_1_equal"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["step_2_geq"],"name":[3],"type":["lgl"],"align":["right"]},{"label":["step_3_greater"],"name":[4],"type":["lgl"],"align":["right"]},{"label":["first_greater_than_last"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"-3","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"-1","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"0","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"2","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"3","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>At all 5 values of <span class="math inline">\(x\)</span>, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as <a href="#/thm-derivation-chain" class="quarto-xref">Theorem&nbsp;1</a> says. At <span class="math inline">\(x = 0\)</span>, for example, the first line is 1 and the last is 0.</p>
+</div>
+</section><section class="slide level2"><div id="def-theorem" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Result, theorem, lemma, and corollary)</strong></span> A <strong>result</strong> is a proposition (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>) that has a proof (<a href="#/def-proof" class="quarto-xref">Definition&nbsp;7</a>). These notes label each result by its role:</p>
+<ul>
+<li>a <strong>theorem</strong> is a result of interest in its own right;</li>
+<li>a <strong>lemma</strong> is a result proved mainly as a step in the proof of another result;</li>
+<li>a <strong>corollary</strong> is a result that follows from a theorem with little extra work.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="rem-proposition-as-result" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (“Proposition” as a kind of result). </span>Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>), whether or not it has been proved.</p>
+</div>
+</section><section class="slide level2"><div id="exm-theorem" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (A corollary of a result)</strong></span> <a href="#/exm-proof" class="quarto-xref">Example&nbsp;7</a> proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> is even, because <span class="math inline">\(a + b + c = (a + b) + c\)</span>, <span class="math inline">\(a + b\)</span> is even by that result, and applying the result again to the even integers <span class="math inline">\(a + b\)</span> and <span class="math inline">\(c\)</span> shows that <span class="math inline">\((a + b) + c\)</span> is even. For example,</p>
+<p><span class="math display">\[
+\begin{aligned}
+2 + 4 + 6 &amp;= (2 + 4) + 6 \\
+&amp;= 6 + 6 \\
+&amp;= 12,
+\end{aligned}
+\]</span></p>
+<p>which is even.</p>
+</div>
+</section><section class="slide level2"><div id="def-counterexample" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Counterexample)</strong></span> A <strong>counterexample</strong> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#/def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
+</div>
+</section><section class="slide level2"><div id="exm-counterexample" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (A counterexample)</strong></span> The proposition “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n + n &gt; n\)</span>” is false. The integer <span class="math inline">\(n = 0\)</span> is a counterexample: <span class="math inline">\(0 + 0 = 0\)</span>, and <span class="math inline">\(0 &gt; 0\)</span> is false. The proposition is true for some integers, such as <span class="math inline">\(n = 3\)</span>, since <span class="math inline">\(3 + 3 = 6 &gt; 3\)</span>, but one counterexample is enough to make it false.</p>
+</div>
+</section><section class="slide level2"><div id="def-converse" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Converse)</strong></span> The <strong>converse</strong> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
+</div>
+</section><section class="slide level2"><div id="exm-converse" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (A true proposition with a false converse)</strong></span> For an integer <span class="math inline">\(n\)</span>, call <span class="math inline">\(n\)</span> a multiple of <span class="math inline">\(4\)</span> if <span class="math inline">\(n = 4k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<ul>
+<li>
+<p>“If <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true:</p>
+<p><span class="math display">\[
+\begin{aligned}
+n &amp;= 4k \\
+&amp;= 2 \cdot(2k),
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(2k\)</span> is an integer.</p>
+</li>
+<li><p>Its converse, “if <span class="math inline">\(n\)</span> is even, then <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>”, is false. The integer <span class="math inline">\(n = 2\)</span> is a counterexample (<a href="#/def-counterexample" class="quarto-xref">Definition&nbsp;10</a>): <span class="math inline">\(2\)</span> is even, but <span class="math inline">\(2 = 4k\)</span> only for <span class="math inline">\(k = \frac{1}{2}\)</span>, which is not an integer.</p></li>
+</ul>
+<p>So a proposition can be true while its converse is false.</p>
+</div>
+</section><section class="slide level2"><div id="def-necessary-sufficient" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Necessary and sufficient conditions)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> for <span class="math inline">\(Q\)</span>, and <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> for <span class="math inline">\(P\)</span>. When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#/def-converse" class="quarto-xref">Definition&nbsp;11</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> for <span class="math inline">\(Q\)</span>, written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
+</div>
+</section><section class="slide level2"><div id="exm-necessary-sufficient" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (Necessary but not sufficient)</strong></span> In <a href="#/exm-converse" class="quarto-xref">Example&nbsp;12</a>, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true, so:</p>
+<ul>
+<li>being a multiple of <span class="math inline">\(4\)</span> is a sufficient condition for <span class="math inline">\(n\)</span> to be even;</li>
+<li>being even is a necessary condition for <span class="math inline">\(n\)</span> to be a multiple of <span class="math inline">\(4\)</span>.</li>
+</ul>
+<p>Being even is not a sufficient condition for being a multiple of <span class="math inline">\(4\)</span>: <span class="math inline">\(n = 2\)</span> is even, but not a multiple of <span class="math inline">\(4\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="def-proof-by-contradiction" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
+</div>
+</section><section class="slide level2"><div id="exm-proof-by-contradiction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (No integer is both even and odd)</strong></span> Suppose, for contradiction, that some integer <span class="math inline">\(n\)</span> is both even and odd (<a href="./notation.html#def-even-odd">definition</a>). Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+2j &amp;= 2k + 1
+&amp;&amp; \text{(both equal } n \text{)}
+\\
+2j - 2k &amp;= 1
+&amp;&amp; \text{(subtract } 2k \text{ from both sides)}
+\\
+2(j - k) &amp;= 1
+&amp;&amp; \text{(distributive law)}
+\\
+j - k &amp;= \tfrac{1}{2}
+&amp;&amp; \text{(divide both sides by } 2 \text{)}
+\end{aligned}
+\]</span></p>
+<p>The third line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. But <span class="math inline">\(j - k\)</span> is an integer, and <span class="math inline">\(\frac{1}{2}\)</span> is not, so the last line is false. So no integer is both even and odd. For example, <span class="math inline">\(6 = 2 \cdot 3\)</span> is even, and <span class="math inline">\(6 = 2k + 1\)</span> would need <span class="math inline">\(k = 2.5\)</span>, which is not an integer.</p>
+</div>
+</section><section class="slide level2"><div id="thm-proof-by-contradiction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (A proof by contradiction proves its proposition)</strong></span> Let <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> be propositions (<a href="#/def-proposition" class="quarto-xref">Definition&nbsp;1</a>). If <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false, then <span class="math inline">\(P\)</span> is true.</p>
+</div>
+</section><section class="slide level2"></section><section class="slide level2"><div id="exm-proof-by-contradiction-truth-table" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (A truth table for a proof by contradiction)</strong></span> There are only four ways to assign truth values to <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. The code lists them, with the truth value of <span class="math inline">\(\neg P \Rightarrow Q\)</span>, and marks the rows where <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>tt <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">Q =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>), <span class="at">P =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span>
+<span id="cb3-2"><a aria-label="2"></a>tt<span class="sc">$</span>not_P_implies_Q <span class="ot">&lt;-</span> <span class="sc">!</span>(<span class="sc">!</span>tt<span class="sc">$</span>P) <span class="sc">|</span> tt<span class="sc">$</span>Q</span>
+<span id="cb3-3"><a aria-label="3"></a>tt<span class="sc">$</span>hypotheses_hold <span class="ot">&lt;-</span> tt<span class="sc">$</span>not_P_implies_Q <span class="sc">&amp;</span> <span class="sc">!</span>tt<span class="sc">$</span>Q</span>
+<span id="cb3-4"><a aria-label="4"></a>tt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Q"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["P"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["not_P_implies_Q"],"name":[3],"type":["lgl"],"align":["right"]},{"label":["hypotheses_hold"],"name":[4],"type":["lgl"],"align":["right"]}],"data":[{"1":"TRUE","2":"TRUE","3":"TRUE","4":"FALSE"},{"1":"FALSE","2":"TRUE","3":"TRUE","4":"TRUE"},{"1":"TRUE","2":"FALSE","3":"TRUE","4":"FALSE"},{"1":"FALSE","2":"FALSE","3":"FALSE","4":"FALSE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>The hypotheses of <a href="#/thm-proof-by-contradiction" class="quarto-xref">Theorem&nbsp;2</a> hold in 1 of the 4 rows, and in 1 of them <span class="math inline">\(P\)</span> is true. So whenever the hypotheses hold, <span class="math inline">\(P\)</span> is true.</p>
+</div>
+</section><section id="sec-dont-skip-steps" class="slide level2" data-number="2"><h2>
+<span class="header-section-number">2</span> Don’t skip steps</h2>
 <p>Show every step of the derivation. Each line should follow from the previous line by a single, identifiable move:</p>
 <ul>
 <li>applying a definition,</li>
@@ -308,10 +679,9 @@
 <li>performing one algebraic operation.</li>
 </ul>
 <p>When you skip steps, you force the reader to reconstruct your reasoning, which is exactly the work the proof was supposed to do <em>for</em> them. A step that feels “obvious” while you are writing it is often the step a reader gets stuck on. Phrases like “it can be shown that” or “clearly” usually mark a skipped step; show the step instead.</p>
-</section>
-<section id="sec-annotate-each-step" class="slide level2" data-number="2">
-<h2><span class="header-section-number">2</span> Annotate each step</h2>
-<p>For each step, note the definition, <a href="./notation.html#def-theorem">theorem</a>, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.</p>
+</section><section id="sec-annotate-each-step" class="slide level2" data-number="3"><h2>
+<span class="header-section-number">3</span> Annotate each step</h2>
+<p>For each step, note the definition, <a href="#/def-theorem">theorem</a>, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.</p>
 <p>For example, here is a derivation that the <a href="./linear-algebra-projections.html#def-hat-matrix">hat matrix</a> <span class="math inline">\(\mathbf{H} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\)</span> is <a href="./linear-algebra-special-matrices.html#def-idempotent-matrix">idempotent</a>, <span class="math inline">\(\mathbf{H}^2 = \mathbf{H}\)</span>, with each step annotated:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -336,17 +706,13 @@
 \end{aligned}
 \]</span></p>
 <p>The <a href="./linear-algebra-projections.html#thm-hat-matrix">Linear Algebra</a> page uses this derivation to show that <span class="math inline">\(\mathbf{H}\)</span> is a <a href="./linear-algebra-special-matrices.html#def-projection-matrix">projection matrix</a>. The probability notes derive the variance identity <span class="math inline">\(\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left[X^2\right]\mathclose{} - \mathopen{}\left(\operatorname{E}\mathopen{}\left[X\right]\mathclose{}\right)^2\mathclose{}\)</span> <a href="https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance">in the same annotated style</a>.</p>
-</section>
-<section id="sec-direct-proof" class="slide level2" data-number="3">
-<h2><span class="header-section-number">3</span> Direct proof</h2>
+</section><section id="sec-direct-proof" class="slide level2" data-number="4"><h2>
+<span class="header-section-number">4</span> Direct proof</h2>
 <div id="def-direct-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Direct proof)</strong></span> A <strong>direct proof</strong> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="./notation.html#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Direct proof)</strong></span> A <strong>direct proof</strong> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#/def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-direct-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./notation.html#def-even-odd">odd</a> integer, then <span class="math inline">\(n^2\)</span> is odd.</p>
+</section><section class="slide level2"><div id="exm-direct-proof" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./notation.html#def-even-odd">odd</a> integer, then <span class="math inline">\(n^2\)</span> is odd.</p>
 <p>Since <span class="math inline">\(n\)</span> is odd, there is an integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n = 2k + 1\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -376,42 +742,36 @@ n^2 &amp;= 49 \\
 \end{aligned}
 \]</span></p>
 <p>and <span class="math inline">\(2 \cdot 3^2 + 2 \cdot 3 = 24\)</span>.</p>
-<p>The notation page’s proof that <a href="./notation.html#exm-proof">the sum of two even integers is even</a> is also a direct proof.</p>
+<p>The proof above that <a href="#/exm-proof">the sum of two even integers is even</a> is also a direct proof.</p>
 </div>
-</section>
-<section id="sec-golden-rule" class="slide level2" data-number="4">
-<h2><span class="header-section-number">4</span> Follow the golden rule</h2>
+</section><section id="sec-golden-rule" class="slide level2" data-number="5"><h2>
+<span class="header-section-number">5</span> Follow the golden rule</h2>
 <p>In general, follow the golden rule: treat your readers the way you want to be treated as a reader.</p>
 <p>When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.</p>
-</section>
-<section id="sec-proof-by-induction" class="slide level2 scrollable" data-number="5">
-<h2><span class="header-section-number">5</span> Proof by induction</h2>
+</section><section id="sec-proof-by-induction" class="slide level2 scrollable" data-number="6"><h2>
+<span class="header-section-number">6</span> Proof by induction</h2>
 <p>Many proofs in these notes show that a statement holds for every <a href="./notation.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
 <div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./notation.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./notation.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./notation.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
-<li><strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
-<li><strong>Inductive step:</strong> for every integer <span class="math inline">\(n &gt; n_0\)</span>, if <span class="math inline">\(P(n - 1)\)</span> holds, then <span class="math inline">\(P(n)\)</span> holds.</li>
+<li>
+<strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
+<li>
+<strong>Inductive step:</strong> for every integer <span class="math inline">\(n &gt; n_0\)</span>, if <span class="math inline">\(P(n - 1)\)</span> holds, then <span class="math inline">\(P(n)\)</span> holds.</li>
 </ol>
 <p>In the inductive step, the assumption that <span class="math inline">\(P(n - 1)\)</span> holds is called the <strong>induction hypothesis</strong>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="rem-induction-why" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Why the two steps suffice). </span>The base case gives <span class="math inline">\(P(n_0)\)</span>. The inductive step with <span class="math inline">\(n = n_0 + 1\)</span> then gives <span class="math inline">\(P(n_0 + 1)\)</span>, with <span class="math inline">\(n = n_0 + 2\)</span> it gives <span class="math inline">\(P(n_0 + 2)\)</span>, and so on: each integer <span class="math inline">\(n \ge n_0\)</span> is reached after <span class="math inline">\(n - n_0\)</span> uses of the inductive step.</p>
+</section><section class="slide level2"><div id="rem-induction-why" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em> (Why the two steps suffice). </span>The base case gives <span class="math inline">\(P(n_0)\)</span>. The inductive step with <span class="math inline">\(n = n_0 + 1\)</span> then gives <span class="math inline">\(P(n_0 + 1)\)</span>, with <span class="math inline">\(n = n_0 + 2\)</span> it gives <span class="math inline">\(P(n_0 + 2)\)</span>, and so on: each integer <span class="math inline">\(n \ge n_0\)</span> is reached after <span class="math inline">\(n - n_0\)</span> uses of the inductive step.</p>
 <p>When <span class="math inline">\(P(n)\)</span> is needed only for <span class="math inline">\(n_0 \le n \le r\)</span>, it is enough to show the inductive step for <span class="math inline">\(n_0 &lt; n \le r\)</span>; the same chain then stops at <span class="math inline">\(P(r)\)</span>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<p>The following example uses <a href="./algebra-sums.html#def-summation">summation notation</a>.</p>
+</section><section class="slide level2"><p>The following example uses <a href="./algebra-sums.html#def-summation">summation notation</a>.</p>
 <div id="exm-induction-sum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 17 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
 <p><span class="math display">\[
 \sum_{i=1}^ni = \frac{n(n+1)}{2}.
 \]</span></p>
-<p>For example, with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\(1 + 2 + 3 = 6\)</span> and <span class="math inline">\(\frac{3 \cdot 4}{2} = 6\)</span>. To prove the equation for every <span class="math inline">\(n\)</span>, let <span class="math inline">\(P(n)\)</span> be the equation and use <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;2</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
+<p>For example, with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\(1 + 2 + 3 = 6\)</span> and <span class="math inline">\(\frac{3 \cdot 4}{2} = 6\)</span>. To prove the equation for every <span class="math inline">\(n\)</span>, let <span class="math inline">\(P(n)\)</span> be the equation and use <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;15</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
 <p><strong>Base case, <span class="math inline">\(n = 1\)</span>.</strong> The sum has one term:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -474,66 +834,54 @@ n^2 &amp;= 49 \\
 &amp;&amp; \text{(commutative law)}
 \end{aligned}
 \]</span></p>
-<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;2</a>, the equation holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#/def-proof-by-induction" class="quarto-xref">Definition&nbsp;15</a>, the equation holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div>
-</section>
-<section id="sec-formal-logic" class="slide level2" data-number="6">
-<h2><span class="header-section-number">6</span> Formal logic</h2>
+</section><section id="sec-formal-logic" class="slide level2" data-number="7"><h2>
+<span class="header-section-number">7</span> Formal logic</h2>
 <div id="def-propositional-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Propositional logic)</strong></span> <strong>Propositional logic</strong> is the study of <a href="./notation.html#def-logical-entailment">logical entailment</a> among <a href="./notation.html#def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="./notation.html#def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Propositional logic)</strong></span> <strong>Propositional logic</strong> is the study of <a href="#/def-logical-entailment">logical entailment</a> among <a href="#/def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#/def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-propositional-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)</strong></span> Suppose <span class="math inline">\(P\)</span> is true and <span class="math inline">\(P \Rightarrow Q\)</span> is true. If <span class="math inline">\(Q\)</span> were false, then <span class="math inline">\(P \Rightarrow Q\)</span> would have a true <span class="math inline">\(P\)</span> and a false <span class="math inline">\(Q\)</span>, so <span class="math inline">\(P \Rightarrow Q\)</span> would be false, which contradicts the assumption. So <span class="math inline">\(Q\)</span> is true. This holds whatever <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> say, so <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> logically entail <span class="math inline">\(Q\)</span>.</p>
+</section><section class="slide level2"><div id="exm-propositional-logic" class="theorem example">
+<p><span class="theorem-title"><strong>Example 18 (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)</strong></span> Suppose <span class="math inline">\(P\)</span> is true and <span class="math inline">\(P \Rightarrow Q\)</span> is true. If <span class="math inline">\(Q\)</span> were false, then <span class="math inline">\(P \Rightarrow Q\)</span> would have a true <span class="math inline">\(P\)</span> and a false <span class="math inline">\(Q\)</span>, so <span class="math inline">\(P \Rightarrow Q\)</span> would be false, which contradicts the assumption. So <span class="math inline">\(Q\)</span> is true. This holds whatever <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> say, so <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> logically entail <span class="math inline">\(Q\)</span>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="def-first-order-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (First-order logic)</strong></span> <strong>First-order logic</strong> extends propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;3</a>) by also allowing:</p>
+</section><section class="slide level2"><div id="def-first-order-logic" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 17 (First-order logic)</strong></span> <strong>First-order logic</strong> extends propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a>) by also allowing:</p>
 <ul>
 <li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a set;</li>
-<li><a href="./notation.html#def-predicate">predicates</a> of one or more of those variables, such as <span class="math inline">\(P(x)\)</span> or <span class="math inline">\(x &lt; y\)</span>;</li>
-<li><a href="./sets-functions.html#def-function">functions</a> of them, such as <span class="math inline">\(x + y\)</span>;</li>
+<li>
+<a href="#/def-predicate">predicates</a> of one or more of those variables, such as <span class="math inline">\(P(x)\)</span> or <span class="math inline">\(x &lt; y\)</span>;</li>
+<li>
+<a href="./sets-functions.html#def-function">functions</a> of them, such as <span class="math inline">\(x + y\)</span>;</li>
 <li>equality between them;</li>
-<li><a href="./notation.html#def-quantifier">quantifiers</a> <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> over them.</li>
+<li>
+<a href="#/def-quantifier">quantifiers</a> <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> over them.</li>
 </ul>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="exm-first-order-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a predicate about the elements of a set <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The propositions <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> logically entail <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
+</section><section class="slide level2"><div id="exm-first-order-logic" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a predicate about the elements of a set <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The propositions <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> logically entail <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="def-formal-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Formal proof)</strong></span> A <strong>formal proof</strong> is a <a href="./notation.html#def-proof">proof</a> written in propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;3</a>) or first-order logic (<a href="#/def-first-order-logic" class="quarto-xref">Definition&nbsp;4</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
+</section><section class="slide level2"><div id="def-formal-proof" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Formal proof)</strong></span> A <strong>formal proof</strong> is a <a href="#/def-proof">proof</a> written in propositional logic (<a href="#/def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a>) or first-order logic (<a href="#/def-first-order-logic" class="quarto-xref">Definition&nbsp;17</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
 </div>
-</section>
-<section class="slide level2 scrollable">
-
-<div id="exm-formal-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (A three-step formal proof)</strong></span> Suppose the allowed rules include “from <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>, conclude <span class="math inline">\(Q\)</span>”. Then this is a formal proof of <span class="math inline">\(Q\)</span> from the assumptions <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>:</p>
+</section><section class="slide level2 scrollable"><div id="exm-formal-proof" class="theorem example">
+<p><span class="theorem-title"><strong>Example 20 (A three-step formal proof)</strong></span> Suppose the allowed rules include “from <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>, conclude <span class="math inline">\(Q\)</span>”. Then this is a formal proof of <span class="math inline">\(Q\)</span> from the assumptions <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>:</p>
 <ol type="1">
-<li><span class="math inline">\(P\)</span> (assumption)</li>
-<li><span class="math inline">\(P \Rightarrow Q\)</span> (assumption)</li>
-<li><span class="math inline">\(Q\)</span> (from steps 1 and 2, by the rule above)</li>
+<li>
+<span class="math inline">\(P\)</span> (assumption)</li>
+<li>
+<span class="math inline">\(P \Rightarrow Q\)</span> (assumption)</li>
+<li>
+<span class="math inline">\(Q\)</span> (from steps 1 and 2, by the rule above)</li>
 </ol>
 </div>
-</section>
-<section id="sec-further-reading" class="slide level2" data-number="7">
-<h2><span class="header-section-number">7</span> Further reading</h2>
+</section><section id="sec-further-reading" class="slide level2" data-number="8"><h2>
+<span class="header-section-number">8</span> Further reading</h2>
 <ul>
-<li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> is a structured introduction to proof techniques such as <a href="#/def-direct-proof">direct proof</a>, <a href="./notation.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</li>
-<li><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> treats proofs as <a href="#/def-formal-proof">formal proofs</a> in <a href="#/def-propositional-logic">propositional logic</a> and <a href="#/def-first-order-logic">first-order logic</a>.</li>
-</ul>
-</section>
-<section id="references" class="slide level2 unnumbered smaller scrollable">
-<h2>References</h2>
+<li>
+<span class="citation" data-cites="velleman2019prove">Velleman (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span> is a structured introduction to proof techniques such as <a href="#/def-direct-proof">direct proof</a>, <a href="./proof-writing.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</li>
+<li>
+<span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> treats proofs as <a href="#/def-formal-proof">formal proofs</a> in <a href="#/def-propositional-logic">propositional logic</a> and <a href="#/def-first-order-logic">first-order logic</a>.</li>
+</ul></section><section id="references" class="slide level2 unnumbered smaller scrollable"><h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
 Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proof and Logic</em>. 2nd ed. CSLI Publications. <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>.
@@ -616,9 +964,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
-</script>
-
-<script>
+</script><script>
 (function () {
   var css = [
     "#revealjs-html-link {",
@@ -732,33 +1078,15 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
     initRevealJsHtmlLink();
   }
 })();
-</script>
-
-</section>
-    </div>
+</script></section>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="site_libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="site_libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="site_libs/revealjs/plugin/notes/notes.js"></script><script src="site_libs/revealjs/plugin/search/search.js"></script><script src="site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -949,8 +1277,7 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
           RevealZoom
         ]
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1118,6 +1445,6 @@ window.addEventListener("load", alignEquationAnchorsWithDefault);
         }
       });
       </script>
-    
+
 
 </body></html>

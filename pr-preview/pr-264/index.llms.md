@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 ## Welcome
 
@@ -14,15 +14,15 @@ Cheng ([2025](#ref-cheng2025math))
 
 These notes collect the mathematics that data science courses assume: mathematical notation, algebra (including exponentials and logarithms), univariate calculus, linear algebra, vector calculus, optimization, and proof writing. Some key results are listed here, organized by topic:
 
-- [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, proof symbols, and indicator functions
+- [Notation](notation.llms.md): common symbols, natural numbers, the percent sign, and indicator functions
 - [Sets and Functions](sets-functions.llms.md): sets, subsets and supersets, the empty set, unions, intersections, and set differences, countable sets, functions with their domains, codomains, and images, and the extended non-negative real numbers
-- [Algebra](algebra.llms.md): equalities and [inequalities](notation.llms.md#def-inequality), infimum and supremum, sums, products, quotients, exponentials and logarithms
+- [Algebra](algebra.llms.md): equalities and [inequalities](proof-writing.llms.md#def-inequality), infimum and supremum, sums, products, quotients, exponentials and logarithms
 - [Measures](measures.llms.md): \\\sigma\\-algebras, pairwise disjoint sets, finite and countable additivity, measures, and the counting measure
 - [Calculus](calculus.llms.md): derivative rules, antiderivatives, regularity conditions (the [continuity](calculus-integration.llms.md#def-continuous), [differentiability](calculus-derivatives.llms.md#def-differentiable), and [integrability](calculus-integration.llms.md#def-integrable) that results assume), the Fundamental Theorem of Calculus, and double integrals
 - [Linear Algebra](linear-algebra.llms.md): vectors, matrices and their operations, special matrices, quadratic forms, eigendecompositions, definite matrices, determinants, and the design matrix
 - [Vector Calculus](vector-calculus.llms.md): derivatives with respect to vectors and matrices, quadratic forms, and the vector chain rule
 - [Optimization](optimization.llms.md): optimality conditions, Taylor approximations, convexity in several variables, Lagrange multipliers, Newton’s method, and gradient descent
-- [Proof Writing](proof-writing.llms.md): showing and annotating every step of a [derivation](notation.llms.md#def-derivation)
+- [Proof Writing](proof-writing.llms.md): propositions, quantifiers, proofs and derivations, and showing and annotating every step of a [derivation](proof-writing.llms.md#def-derivation)
 
 ## Further reading
 

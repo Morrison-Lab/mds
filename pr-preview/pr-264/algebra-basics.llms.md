@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 ## 1 Equalities
 
@@ -81,12 +81,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > \\a^n \stackrel{\text{def}}{=}\underbrace{a \cdot a \cdot\cdots \cdot a}\_{n \text{ factors}}\\
 >
-> In \\a^n\\, \\a\\ is the **base** and \\n\\ is the **exponent**. The second power \\a^2\\ is the **square** of \\a\\. For the exponent \\0\\ and negative [integer](notation.llms.md#def-integers) exponents:
->
-> - \\a^0 \stackrel{\text{def}}{=}1\\, including \\0^0 = 1\\ by convention;
-> - \\a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\\, when \\a \ne 0\\.
->
-> [Definition 13 in Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
+> In \\a^n\\, \\a\\ is the **base** and \\n\\ is the **exponent**. The second power \\a^2\\ is the **square** of \\a\\.
 
 > **NOTE:**
 >
@@ -110,7 +105,18 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 5 (Square root)** For a real number \\a \ge 0\\, the **square root** of \\a\\, written \\\sqrt{a}\\, is the non-negative real number whose square ([Definition 4](#def-power)) is \\a\\.
+> **Definition 5 (Powers with exponent zero or a negative integer)** For the exponent \\0\\ and negative [integer](notation.llms.md#def-integers) exponents:
+>
+> - \\a^0 \stackrel{\text{def}}{=}1\\, including \\0^0 = 1\\ by convention;
+> - \\a^{-n} \stackrel{\text{def}}{=}\frac{1}{a^n}\\, when \\a \ne 0\\.
+
+> **NOTE:**
+>
+> *Remark 1* (Powers with real exponents). [Definition 14 in Polynomials, Exponentials and Logarithms](algebra-exponentials.llms.md#def-real-power) extends powers to real exponents when the base is positive.
+
+> **NOTE:**
+>
+> **Definition 6 (Square root)** For a real number \\a \ge 0\\, the **square root** of \\a\\, written \\\sqrt{a}\\, is the non-negative real number whose square ([Definition 4](#def-power)) is \\a\\.
 
 > **NOTE:**
 >
@@ -123,11 +129,9 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 6 (Absolute value of a real number)** The **absolute value** of a real number \\a\\ is
+> **Definition 7 (Absolute value of a real number)** The **absolute value** of a real number \\a\\ is
 >
 > \\ \mathopen{}\left\|a\right\|\mathclose{} \stackrel{\text{def}}{=}\begin{cases} a, & a \ge 0 \\ -a, & a \< 0 \end{cases} \\
->
-> For real numbers \\a\\ and \\b\\, \\\mathopen{}\left\|a - b\right\|\mathclose{}\\ is the distance between \\a\\ and \\b\\ on the number line.
 
 > **NOTE:**
 >
@@ -143,9 +147,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > - \\ \begin{aligned} \mathopen{}\left\|-3\right\|\mathclose{} &= 3 \\ &= \sqrt{9} \\ &= \sqrt{(-3)^2}: \end{aligned} \\
 >
->   for every real \\a\\, \\\mathopen{}\left\|a\right\|\mathclose{} = \sqrt{a^2}\\ ([Definition 5](#def-square-root)).
+>   for every real \\a\\, \\\mathopen{}\left\|a\right\|\mathclose{} = \sqrt{a^2}\\ ([Definition 6](#def-square-root)).
 >
 > - \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ says that \\x\\ is less than \\1\\ away from \\1\\, that is, \\0 \< x \< 2\\.
+
+> **NOTE:**
+>
+> *Remark 2* (Absolute value as distance). For real numbers \\a\\ and \\b\\, \\\mathopen{}\left\|a - b\right\|\mathclose{}\\ is the distance between \\a\\ and \\b\\ on the number line.
 
 ## 4 Minimum, maximum, argmin and argmax
 
@@ -172,15 +180,15 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 7 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\, written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
+> **Definition 8 (Minimum)** Let \\A \subseteq \mathbb{R}\\. A number \\m\\ is the **minimum** of \\A\\, written \\\min A\\, if \\m \in A\\ and \\m \le a\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
-> *Remark 1* (Not every set has a minimum). The set \\\mathopen{}\left\\3, 1, 4\right\\\mathclose{}\\ has minimum \\1\\, and the [interval](sets-functions.llms.md#def-interval) \\\[0, 1\]\\ has minimum \\0\\. The interval \\(0, 1\]\\ has no minimum: every element \\a\\ of it has a smaller element, \\a/2\\, also in it.
+> *Remark 3* (Not every set has a minimum). The set \\\mathopen{}\left\\3, 1, 4\right\\\mathclose{}\\ has minimum \\1\\, and the [interval](sets-functions.llms.md#def-interval) \\\[0, 1\]\\ has minimum \\0\\. The interval \\(0, 1\]\\ has no minimum: every element \\a\\ of it has a smaller element, \\a/2\\, also in it.
 
 > **NOTE:**
 >
-> **Definition 8 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\, written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
+> **Definition 9 (Maximum)** Let \\A \subseteq \mathbb{R}\\. A number \\M\\ is the **maximum** of \\A\\, written \\\max A\\, if \\M \in A\\ and \\a \le M\\ for all \\a \in A\\.
 
 > **NOTE:**
 >
@@ -191,7 +199,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 9 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
+> **Definition 10 (Argmin)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmin** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its smallest value:
 >
 > \\\arg \min\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(x) \le f(a)\right\\\mathclose{}\\
 >
@@ -199,13 +207,13 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> *Remark 2* (Smallest value versus where it occurs). The smallest value itself is \\\min f(A)\\, the minimum ([Definition 7](#def-minimum)) of the [image](sets-functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. For example, let \\f(x) = x^2\\ on \\A = \mathopen{}\left\\-1, 0, 2\right\\\mathclose{}\\. The image is \\f(A) = \mathopen{}\left\\1, 0, 4\right\\\mathclose{}\\, so the smallest value is \\\min f(A) = 0\\, and \\\arg \min\_{x \in A} f(x) = \mathopen{}\left\\0\right\\\mathclose{}\\.
+> *Remark 4* (Smallest value versus where it occurs). The smallest value itself is \\\min f(A)\\, the minimum ([Definition 8](#def-minimum)) of the [image](sets-functions.llms.md#def-image) of \\f\\, and the argmin is where that value is attained. For example, let \\f(x) = x^2\\ on \\A = \mathopen{}\left\\-1, 0, 2\right\\\mathclose{}\\. The image is \\f(A) = \mathopen{}\left\\1, 0, 4\right\\\mathclose{}\\, so the smallest value is \\\min f(A) = 0\\, and \\\arg \min\_{x \in A} f(x) = \mathopen{}\left\\0\right\\\mathclose{}\\.
 >
 > The argmin is empty when \\f\\ has no smallest value, for example \\f(x) = x\\ on \\(0, 1\]\\.
 
 > **NOTE:**
 >
-> **Definition 10 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
+> **Definition 11 (Argmax)** Let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). The **argmax** of \\f\\ over \\A\\ is the set of inputs where \\f\\ takes its largest value:
 >
 > \\\arg \max\_{x \in A} f(x) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : \forall a \in A,\\ f(a) \le f(x)\right\\\mathclose{}\\
 >
@@ -255,23 +263,23 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 
 > **NOTE:**
 >
-> **Definition 11 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
+> **Definition 12 (Global minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **global minimizer** of \\f\\ over \\A\\ if \\f(x^\*) \le f(x)\\ for all \\x \in A\\.
 
 > **NOTE:**
 >
-> *Remark 3* (Global minimizers form the argmin). The global minimizers of \\f\\ are exactly the elements of \\\arg \min\_{x \in A} f(x)\\ ([Definition 9](#def-argmin)). A function can have more than one global minimizer. For example, \\f(x) = (x^2 - 1)^2\\ on \\\mathbb{R}\\ satisfies \\f(x) \ge 0\\ for every \\x\\, and \\f(x) = 0\\ exactly when \\x = -1\\ or \\x = 1\\, so its global minimizers are \\-1\\ and \\1\\, and \\\arg \min\_{x \in \mathbb{R}} f(x) = \mathopen{}\left\\-1, 1\right\\\mathclose{}\\.
+> *Remark 5* (Global minimizers form the argmin). The global minimizers of \\f\\ are exactly the elements of \\\arg \min\_{x \in A} f(x)\\ ([Definition 10](#def-argmin)). A function can have more than one global minimizer. For example, \\f(x) = (x^2 - 1)^2\\ on \\\mathbb{R}\\ satisfies \\f(x) \ge 0\\ for every \\x\\, and \\f(x) = 0\\ exactly when \\x = -1\\ or \\x = 1\\, so its global minimizers are \\-1\\ and \\1\\, and \\\arg \min\_{x \in \mathbb{R}} f(x) = \mathopen{}\left\\-1, 1\right\\\mathclose{}\\.
 
 > **NOTE:**
 >
-> **Definition 12 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
+> **Definition 13 (Local minimizer)** Let \\A \subseteq \mathbb{R}^p\\ and let \\f : A \to \mathbb{R}\\ be a [function](sets-functions.llms.md#def-function). A point \\x^\* \in A\\ is a **local minimizer** of \\f\\ if there is a number \\\delta\> 0\\ such that \\f(x^\*) \le f(x)\\ for all \\x \in A\\ with \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\, where \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\ is the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm).
 
 > **NOTE:**
 >
-> *Remark 4* (Local and global minimizers). For \\p = 1\\, \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x - x^\*\right\|\mathclose{}\\. For example, with \\x^\* = 1\\ and \\\delta= 1\\, the condition \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ means \\0 \< x \< 2\\.
+> *Remark 6* (Local and global minimizers). For \\p = 1\\, \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} = \mathopen{}\left\|x - x^\*\right\|\mathclose{}\\. For example, with \\x^\* = 1\\ and \\\delta= 1\\, the condition \\\mathopen{}\left\|x - 1\right\|\mathclose{} \< 1\\ means \\0 \< x \< 2\\.
 >
-> Every global minimizer ([Definition 11](#def-global-minimizer)) is a local minimizer: take any \\\delta\> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
+> Every global minimizer ([Definition 12](#def-global-minimizer)) is a local minimizer: take any \\\delta\> 0\\. For example, \\x^\* = 0\\ is a global minimizer of \\f(x) = x^2\\ on \\\mathbb{R}\\, so it is also a local minimizer.
 >
-> The [converse](notation.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta= 1\\), but not a global one.
+> The [converse](proof-writing.llms.md#def-converse) fails. In [Exercise 2](#exr-local-vs-global-min), \\x^\* = 1\\ is a local minimizer of \\f(x) = x^3 - 3x\\ (take \\\delta= 1\\), but not a global one.
 
 > **NOTE:**
 >

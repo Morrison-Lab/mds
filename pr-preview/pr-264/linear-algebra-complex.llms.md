@@ -4,15 +4,13 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:40:32 (PDT)
+Last modified: 2026-10-13 18:36:56 (PDT)
 
 ## 1 Complex vectors and matrices
 
 > **NOTE:**
 >
 > **Definition 1 (Complex vectors and matrices)** A **complex vector** of length \\p\\ is a column vector whose entries are [complex numbers](algebra-complex.llms.md#def-complex-number); the set of all of them is denoted \\\mathbb{C}^p\\. A **complex matrix** of size \\m \times n\\ is a matrix with complex entries; the set of all of them is denoted \\\mathbb{C}^{m \times n}\\.
->
-> The **complex conjugate** of a complex vector or matrix takes the [complex conjugate](algebra-complex.llms.md#def-complex-conjugate) of each entry: \\(\overline{\mathbf{A}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{jk}}\\.
 
 > **NOTE:**
 >
@@ -22,11 +20,13 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
+> **Definition 2 (Complex conjugate of a complex vector or matrix)** The **complex conjugate** of a complex vector or matrix takes the [complex conjugate](algebra-complex.llms.md#def-complex-conjugate) of each entry: \\(\overline{\mathbf{A}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{jk}}\\.
+
+> **NOTE:**
+>
+> **Definition 3 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))** The **conjugate transpose** (also called the **Hermitian adjoint**, **Hermitian conjugate**, or **transjugate**) of an \\m \times n\\ complex matrix \\\mathbf{A}\\ is the \\n \times m\\ matrix \\\mathbf{A}^{\mathsf{H}}\\ obtained by transposing \\\mathbf{A}\\ and then taking the complex conjugate of each entry:
 >
 > \\(\mathbf{A}^{\mathsf{H}})\_{jk} \stackrel{\text{def}}{=}\overline{a\_{kj}} \quad \text{for } j \in \\1, \ldots, n\\,\\ k \in \\1, \ldots, m\\.\\
->
-> The conjugate transpose of a column vector \\\tilde{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\tilde{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
 
 > **NOTE:**
 >
@@ -52,7 +52,11 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 1 (Properties of the Hermitian adjoint)** Let \\\mathbf{A}\\ and \\\mathbf{B}\\ be complex matrices of compatible dimensions, and let \\c \in \mathbb{C}\\ be a scalar. The Hermitian adjoint ([Definition 2](#def-conjugate-transpose)) satisfies:
+> *Remark 2* (Conjugate transpose of a complex vector). The conjugate transpose of a column vector \\\tilde{z} \in \mathbb{C}^p\\ is the \\1 \times p\\ row vector \\\tilde{z}^{\mathsf{H}} = \[\overline{z_1},\\ \ldots,\\ \overline{z_p}\]\\.
+
+> **NOTE:**
+>
+> **Theorem 1 (Properties of the Hermitian adjoint)** Let \\\mathbf{A}\\ and \\\mathbf{B}\\ be complex matrices of compatible dimensions, and let \\c \in \mathbb{C}\\ be a scalar. The Hermitian adjoint ([Definition 3](#def-conjugate-transpose)) satisfies:
 >
 > 1.  **Involution**: \\(\mathbf{A}^{\mathsf{H}})^{\mathsf{H}} = \mathbf{A}\\
 > 2.  **Additivity**: \\(\mathbf{A} + \mathbf{B})^{\mathsf{H}} = \mathbf{A}^{\mathsf{H}} + \mathbf{B}^{\mathsf{H}}\\
@@ -83,7 +87,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > For property 4 (reversal of products), let \\\mathbf{A}\\ be an \\m \times k\\ matrix and \\\mathbf{B}\\ a \\k \times n\\ matrix. Entry \\(i, j)\\ of the product’s Hermitian adjoint (for \\i \in \\1, \ldots, n\\\\ and \\j \in \\1, \ldots, m\\\\) is:
 >
-> \\ \begin{aligned} \[(\mathbf{A}\mathbf{B})^{\mathsf{H}}\]\_{ij} &= \overline{(\mathbf{A}\mathbf{B})\_{ji}} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~2}}\text{)} \\ &= \overline{\sum\_{s=1}^{k} a\_{js}\\b\_{si}} && \text{(definition of matrix multiplication)} \\ &= \sum\_{s=1}^{k} \overline{a\_{js}}\\\overline{b\_{si}} && \text{(conjugate of sums and products)} \\ &= \sum\_{s=1}^{k} \overline{b\_{si}}\\\overline{a\_{js}} && \text{(complex multiplication is commutative)} \\ &= \sum\_{s=1}^{k} (\mathbf{B}^{\mathsf{H}})\_{is}\\(\mathbf{A}^{\mathsf{H}})\_{sj} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~2}}\text{)} \\ &= (\mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\_{ij} && \text{(definition of matrix multiplication)}. \end{aligned} \\
+> \\ \begin{aligned} \[(\mathbf{A}\mathbf{B})^{\mathsf{H}}\]\_{ij} &= \overline{(\mathbf{A}\mathbf{B})\_{ji}} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{)} \\ &= \overline{\sum\_{s=1}^{k} a\_{js}\\b\_{si}} && \text{(definition of matrix multiplication)} \\ &= \sum\_{s=1}^{k} \overline{a\_{js}}\\\overline{b\_{si}} && \text{(conjugate of sums and products)} \\ &= \sum\_{s=1}^{k} \overline{b\_{si}}\\\overline{a\_{js}} && \text{(complex multiplication is commutative)} \\ &= \sum\_{s=1}^{k} (\mathbf{B}^{\mathsf{H}})\_{is}\\(\mathbf{A}^{\mathsf{H}})\_{sj} && \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{)} \\ &= (\mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})\_{ij} && \text{(definition of matrix multiplication)}. \end{aligned} \\
 >
 > For the inverse, applying property 4 to \\\mathbf{A}\mathbf{A}^{-1} = \mathbf{I}\\ gives:
 >
@@ -105,7 +109,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\left\langle T\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, T^\*\tilde{v} \right\rangle\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
+> *Remark 3* (Where the name “adjoint” comes from). This identity is the origin of the name **adjoint**: in functional analysis and operator theory, the *adjoint* of a linear map \\T: V \to W\\ between inner product spaces is defined as the unique operator \\T^\*: W \to V\\ satisfying \\\left\langle T\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, T^\*\tilde{v} \right\rangle\\ (Axler ([2024](#ref-axler2024linear), Definition 7.1, p. 226)). When \\V\\ and \\W\\ are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator \\T^\*\\ is precisely the Hermitian adjoint matrix \\\mathbf{A}^{\mathsf{H}}\\ (Axler ([2024](#ref-axler2024linear), Proposition 7.9, p. 231)).
 
 > **NOTE:**
 >
@@ -119,7 +123,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > *Proof*. The last step uses the [identity for a complex number times its conjugate](algebra-complex.llms.md#thm-conj-product).
 >
-> \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^p\overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~2}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^pz_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{z}^{\mathsf{H}}\tilde{z} &= \sum\_{j=1}^p\overline{z_j}\\z_j && \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{, and the row-times-column product)} \\ &= \sum\_{j=1}^pz_j\\\overline{z_j} && \text{(complex multiplication is commutative)} \\ &= \sum\_{j=1}^p\mathopen{}\left\|z_j\right\|\mathclose{}^2 && \text{(a number times its conjugate)} \end{aligned} \\
 >
 > By the definition of the [absolute value](algebra-complex.llms.md#def-complex-modulus), each \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = (\operatorname{Re} z_j)^2 + (\operatorname{Im} z_j)^2\\ is a nonnegative real number, so their sum is too. A sum of nonnegative numbers is \\0\\ only when every term is \\0\\, and \\\mathopen{}\left\|z_j\right\|\mathclose{}^2 = 0\\ only when
 >
@@ -145,19 +149,19 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 >
 > although \\\tilde{z} \neq \tilde{0}\_{2 \times 1}\\. Using the conjugate transpose instead,
 >
-> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \overline{1} \cdot 1 + \overline{i} \cdot i && \text{(}\href{#def-conjugate-transpose}{\text{Definition~2}}\text{)} \\ &= 1 + (-i) \cdot i && \text{(conjugate each entry)} \\ &= 1 - i^2 && \text{(multiply)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
+> \\ \begin{aligned} \underbrace{\tilde{z}^{\mathsf{H}}}\_{1 \times 2}\\\underbrace{\tilde{z}}\_{2 \times 1} &= \overline{1} \cdot 1 + \overline{i} \cdot i && \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{)} \\ &= 1 + (-i) \cdot i && \text{(conjugate each entry)} \\ &= 1 - i^2 && \text{(multiply)} \\ &= 2 && \text{(} i^2 = -1 \text{)} \end{aligned} \\
 >
 > which is positive, as [Theorem 3](#thm-zhz-sum-squares) guarantees.
 
 > **NOTE:**
 >
-> **Definition 3 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** (or **self-adjoint**) if it equals its conjugate transpose ([Definition 2](#def-conjugate-transpose)):
+> **Definition 4 (Hermitian matrix (self-adjoint matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **Hermitian** (or **self-adjoint**) if it equals its conjugate transpose ([Definition 3](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\\
 
 > **NOTE:**
 >
-> *Remark 3* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}\tilde{v} \right\rangle\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
+> *Remark 4* (Why “self-adjoint”). The term *self-adjoint* comes directly from [Theorem 2](#thm-adjoint-inner-product): when \\\mathbf{A}\\ is Hermitian, \\\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}\tilde{v} \right\rangle\\ for all \\\tilde{u}, \tilde{v} \in \mathbb{C}^n\\. The linear operator moves across the inner product without change.
 
 > **NOTE:**
 >
@@ -177,13 +181,13 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 2](#def-conjugate-transpose)):
+> **Definition 5 (Skew-Hermitian matrix (anti-Hermitian matrix))** A square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ is **skew-Hermitian** (or **anti-Hermitian**) if it equals the negative of its conjugate transpose ([Definition 3](#def-conjugate-transpose)):
 >
 > \\\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\\
 
 > **NOTE:**
 >
-> *Remark 4* (The diagonal of a skew-Hermitian matrix). Every entry of a skew-Hermitian matrix satisfies \\a\_{jk} = -\overline{a\_{kj}}\\. In particular, its diagonal entries satisfy \\a\_{jj} = -\overline{a\_{jj}}\\, which means
+> *Remark 5* (The diagonal of a skew-Hermitian matrix). Every entry of a skew-Hermitian matrix satisfies \\a\_{jk} = -\overline{a\_{kj}}\\. In particular, its diagonal entries satisfy \\a\_{jj} = -\overline{a\_{jj}}\\, which means
 >
 > \\ \begin{aligned} a\_{jj} + \overline{a\_{jj}} &= 2\operatorname{Re}(a\_{jj}) \\ &= 0. \end{aligned} \\
 >
@@ -207,7 +211,7 @@ Last modified: 2026-10-13 13:40:32 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 4 (Hermitian and skew-Hermitian decomposition)** Every square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ can be uniquely expressed as the sum of a Hermitian matrix \\\mathbf{H}\\ ([Definition 3](#def-hermitian-matrix)) and a skew-Hermitian matrix \\\mathbf{S}\\ ([Definition 4](#def-skew-hermitian-matrix)):
+> **Theorem 4 (Hermitian and skew-Hermitian decomposition)** Every square complex matrix \\\mathbf{A} \in \mathbb{C}^{n \times n}\\ can be uniquely expressed as the sum of a Hermitian matrix \\\mathbf{H}\\ ([Definition 4](#def-hermitian-matrix)) and a skew-Hermitian matrix \\\mathbf{S}\\ ([Definition 5](#def-skew-hermitian-matrix)):
 >
 > \\\mathbf{A} = \mathbf{H} + \mathbf{S},\\
 >
