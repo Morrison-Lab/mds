@@ -175,6 +175,10 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_def-lebesgue-measure-interval.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_exm-lebesgue-measure.qmd >}}
 
 {{< slidebreak >}}
@@ -215,6 +219,10 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_def-probability-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_rem-mutually-exclusive.qmd >}}
 
 ## Measurable functions and integrals
@@ -235,6 +243,10 @@ is the starting point of the Morrison Lab's probability notes
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/measures/_def-positive-negative-parts.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/measures/_def-integral.qmd >}}
 
 {{< slidebreak >}}
@@ -252,6 +264,10 @@ is the starting point of the Morrison Lab's probability notes
 ## $L^p$ spaces
 
 {{< include mds/_subfiles/measures/_def-lp-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/measures/_def-linf-space.qmd >}}
 
 {{< slidebreak >}}
 
