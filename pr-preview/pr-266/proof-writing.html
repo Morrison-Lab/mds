@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.19">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Proof Writing – Math for Data Science</title>
 <style>
 /* Default styles provided by pandoc.
@@ -82,7 +79,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -107,8 +103,7 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -134,18 +129,13 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script>
-
-<script type="text/plain" cookie-consent="tracking">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLDZY2T3JF"></script><script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-VLDZY2T3JF', { 'anonymize_ip': true});
-</script>
-
-<script type="text/javascript" charset="UTF-8">
+</script><script type="text/javascript" charset="UTF-8">
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
@@ -160,9 +150,7 @@ cookieconsent.run({
 "language":"en"
   });
 });
-</script> 
-  
-<script>
+</script><script>
 // Theme dropdown: Light, Off-white, Parchment, Dark. Quarto's own toggle
 // handles light/dark and remembers it; the two tinted palettes are a
 // data-palette attribute on <html>. The choice is kept under "mln-theme".
@@ -224,17 +212,17 @@ cookieconsent.run({
     apply(choice, false);
   });
 })();
-</script>
-<style>
-div.callout-cor.callout {
-  border-left-color: #00838F;
+</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
+div.callout-proof.callout {
+  border-left-color: #37474F;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -246,15 +234,35 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-remark.callout {
-  border-left-color: #AD1457;
+div.callout-exr.callout {
+  border-left-color: #FFA500;
 }
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
 }
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -276,16 +284,6 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -296,25 +294,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-remark.callout {
+  border-left-color: #AD1457;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cnj.callout {
   border-left-color: #558B2F;
@@ -327,11 +315,7 @@ div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.cal
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -356,11 +340,8 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script>
-
-<link rel="stylesheet" href="styles.css">
+</script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -526,9 +507,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Math for Data Science</span>
@@ -540,7 +519,7 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link active" href="./notation.html" aria-current="page"> 
 <span class="menu-text">Notation</span></a>
   </li>  
@@ -552,8 +531,8 @@ window.Quarto = {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Algebra</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-algebra">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-algebra">
+<li>
     <a class="dropdown-item" href="./algebra.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
@@ -574,7 +553,7 @@ window.Quarto = {
  <span class="dropdown-text">Complex Numbers</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="./measures.html"> 
 <span class="menu-text">Measures</span></a>
@@ -583,8 +562,8 @@ window.Quarto = {
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-calculus" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Calculus</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-calculus">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-calculus">
+<li>
     <a class="dropdown-item" href="./calculus.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
@@ -601,13 +580,13 @@ window.Quarto = {
  <span class="dropdown-text">Double Integrals and Fubini’s Theorem</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-linear-algebra" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Linear Algebra</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">    
-        <li>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-linear-algebra">
+<li>
     <a class="dropdown-item" href="./linear-algebra.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
@@ -652,7 +631,7 @@ window.Quarto = {
  <span class="dropdown-text">Complex Vectors and Matrices</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="./vector-calculus.html"> 
 <span class="menu-text">Vector Calculus</span></a>
@@ -666,14 +645,14 @@ window.Quarto = {
 <span class="menu-text">Proof Writing</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/Morrison-Lab/mds"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -683,9 +662,7 @@ window.Quarto = {
 </a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -693,15 +670,11 @@ window.Quarto = {
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
@@ -727,8 +700,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./algebra-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Equalities, Inequalities and Minimizers</span></a>
@@ -753,7 +726,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./measures.html" class="sidebar-item-text sidebar-link">
@@ -768,8 +741,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./calculus-derivatives.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Derivatives and Taylor Series</span></a>
@@ -788,7 +761,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./linear-algebra.html" class="sidebar-item-text sidebar-link">
@@ -797,8 +770,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear-algebra-vectors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vectors</span></a>
@@ -859,7 +832,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./vector-calculus.html" class="sidebar-item-text sidebar-link">
@@ -879,25 +852,23 @@ window.Quarto = {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-dont-skip-steps" id="toc-sec-dont-skip-steps" class="nav-link active" data-scroll-target="#sec-dont-skip-steps"><span class="header-section-number">1</span> Don’t skip steps</a></li>
-  <li><a href="#sec-annotate-each-step" id="toc-sec-annotate-each-step" class="nav-link" data-scroll-target="#sec-annotate-each-step"><span class="header-section-number">2</span> Annotate each step</a></li>
-  <li><a href="#sec-direct-proof" id="toc-sec-direct-proof" class="nav-link" data-scroll-target="#sec-direct-proof"><span class="header-section-number">3</span> Direct proof</a></li>
-  <li><a href="#sec-golden-rule" id="toc-sec-golden-rule" class="nav-link" data-scroll-target="#sec-golden-rule"><span class="header-section-number">4</span> Follow the golden rule</a></li>
-  <li><a href="#sec-proof-by-induction" id="toc-sec-proof-by-induction" class="nav-link" data-scroll-target="#sec-proof-by-induction"><span class="header-section-number">5</span> Proof by induction</a></li>
-  <li><a href="#sec-formal-logic" id="toc-sec-formal-logic" class="nav-link" data-scroll-target="#sec-formal-logic"><span class="header-section-number">6</span> Formal logic</a></li>
-  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">7</span> Further reading</a></li>
+<li><a href="#sec-proof-definitions" id="toc-sec-proof-definitions" class="nav-link active" data-scroll-target="#sec-proof-definitions"><span class="header-section-number">1</span> Definitions for proofs</a></li>
+  <li><a href="#sec-dont-skip-steps" id="toc-sec-dont-skip-steps" class="nav-link" data-scroll-target="#sec-dont-skip-steps"><span class="header-section-number">2</span> Don’t skip steps</a></li>
+  <li><a href="#sec-annotate-each-step" id="toc-sec-annotate-each-step" class="nav-link" data-scroll-target="#sec-annotate-each-step"><span class="header-section-number">3</span> Annotate each step</a></li>
+  <li><a href="#sec-direct-proof" id="toc-sec-direct-proof" class="nav-link" data-scroll-target="#sec-direct-proof"><span class="header-section-number">4</span> Direct proof</a></li>
+  <li><a href="#sec-golden-rule" id="toc-sec-golden-rule" class="nav-link" data-scroll-target="#sec-golden-rule"><span class="header-section-number">5</span> Follow the golden rule</a></li>
+  <li><a href="#sec-proof-by-induction" id="toc-sec-proof-by-induction" class="nav-link" data-scroll-target="#sec-proof-by-induction"><span class="header-section-number">6</span> Proof by induction</a></li>
+  <li><a href="#sec-formal-logic" id="toc-sec-formal-logic" class="nav-link" data-scroll-target="#sec-formal-logic"><span class="header-section-number">7</span> Formal logic</a></li>
+  <li><a href="#sec-further-reading" id="toc-sec-further-reading" class="nav-link" data-scroll-target="#sec-further-reading"><span class="header-section-number">8</span> Further reading</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/proof-writing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/proof-writing.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="proof-writing-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="proof-writing-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="proof-writing.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/Morrison-Lab/mds/edit/main/proof-writing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Morrison-Lab/mds/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/Morrison-Lab/mds/blob/main/proof-writing.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="proof-writing-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li><li><a href="proof-writing-handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="proof-writing.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><!-- qwt-page-banners -->
@@ -915,11 +886,7 @@ window.Quarto = {
         <strong>📋 Other Formats:</strong> <a href="proof-writing-tracked-changes.docx" download>📝 MS Word (tracked changes)</a> | <a href="proof-writing-slides.html">🎞️ Slides</a>
     </p>
 </div>
-
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Proof Writing</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -931,7 +898,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 13:45:46 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 19:29:08 (PDT)</p>
     </div>
   </div>
   
@@ -940,12 +907,654 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>This page collects general advice on how to write <a href="./notation.html#def-proof">proofs</a> and <a href="./notation.html#def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="./notation.html#def-theorem">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="./notation.html#def-logical-entailment">logical entailment</a> are listed under <a href="./notation.html#proofs">Proofs</a> on the Notation page.</p>
-<section id="sec-dont-skip-steps" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-dont-skip-steps"><span class="header-section-number">1</span> Don’t skip steps</h2>
+</header><p>This page collects general advice on how to write <a href="#def-proof">proofs</a> and <a href="#def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="#def-theorem">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="#def-logical-entailment">logical entailment</a> are listed under <a href="#sec-proof-definitions">Definitions for proofs</a> below.</p>
+<section id="sec-proof-definitions" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="sec-proof-definitions">
+<span class="header-section-number">1</span> Definitions for proofs</h2>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-proposition" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong>, or <strong>statement</strong>, is a sentence that is either true or false.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-proposition" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Propositions, and a sentence that is not one)</strong></span> &nbsp;</p>
+<ul>
+<li>“<span class="math inline">\(2 + 3 = 5\)</span>” is a proposition, and it is true.</li>
+<li>“<span class="math inline">\(7\)</span> is <a href="./notation.html#def-even-odd">even</a>” is a proposition, and it is false.</li>
+<li>“<span class="math inline">\(x &gt; 2\)</span>” is not a proposition on its own: it is true when <span class="math inline">\(x = 3\)</span> and false when <span class="math inline">\(x = 1\)</span>, so it has no truth value until <span class="math inline">\(x\)</span> is given a value.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-predicate" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="math inline">\(P(x)\)</span> is a sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-predicate" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (A predicate)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for real numbers <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li>
+<span class="math inline">\(P(3)\)</span> is the proposition “<span class="math inline">\(3 &gt; 2\)</span>”, which is true.</li>
+<li>
+<span class="math inline">\(P(1)\)</span> is the proposition “<span class="math inline">\(1 &gt; 2\)</span>”, which is false.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-logical-connective" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> builds a new proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five:</p>
+<ul>
+<li>
+<strong>not</strong>: <span class="math inline">\(\neg P\)</span> (“not <span class="math inline">\(P\)</span>”) is true when <span class="math inline">\(P\)</span> is false, and false when <span class="math inline">\(P\)</span> is true.</li>
+<li>
+<strong>and</strong>: <span class="math inline">\(P \land Q\)</span> (“<span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>”) is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are both true, and false otherwise.</li>
+<li>
+<strong>or</strong>: <span class="math inline">\(P \lor Q\)</span> (“<span class="math inline">\(P\)</span> or <span class="math inline">\(Q\)</span>”) is true when at least one of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is true, and false when both are false.</li>
+<li>
+<strong>implies</strong>: <span class="math inline">\(P \Rightarrow Q\)</span> (“if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>”, or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>”) is false when <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false, and true otherwise.</li>
+<li>
+<strong>if and only if</strong>: <span class="math inline">\(P \Leftrightarrow Q\)</span> (“<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”) is true when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value, and false otherwise.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-logical-connective" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (Truth values of connectives)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(2 + 3 = 5\)</span>”, which is true, and let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(7\)</span> is <a href="./notation.html#def-even-odd">even</a>”, which is false.</p>
+<ul>
+<li>
+<span class="math inline">\(\neg Q\)</span>, “<span class="math inline">\(7\)</span> is not even”, is true, because <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(P \land Q\)</span> is false, because <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(P \lor Q\)</span> is true, because <span class="math inline">\(P\)</span> is true.</li>
+<li>
+<span class="math inline">\(P \Rightarrow Q\)</span> is false, because <span class="math inline">\(P\)</span> is true and <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(Q \Rightarrow P\)</span> is true, because <span class="math inline">\(Q\)</span> is false.</li>
+<li>
+<span class="math inline">\(P \Leftrightarrow Q\)</span> is false, because <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have different truth values.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-quantifier" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Quantifier)</strong></span> A <strong>quantifier</strong> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>):</p>
+<ul>
+<li>the <strong>universal quantifier</strong> “for all”: <span class="math inline">\(\forall x \in S, P(x)\)</span> (“for every <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span>, <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise;</li>
+<li>the <strong>existential quantifier</strong> “there exists”: <span class="math inline">\(\exists x \in S, P(x)\)</span> (“there is an <span class="math inline">\(x\)</span> in <span class="math inline">\(S\)</span> such that <span class="math inline">\(P(x)\)</span>”) is true when <span class="math inline">\(P(x)\)</span> is true for at least one element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, and false otherwise.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-quantifier" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (Quantified propositions)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for <a href="./notation.html#def-integers">integers</a> <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li>“<span class="math inline">\(\exists x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(P(3)\)</span> is true.</li>
+<li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{1, 2, 3\right\}\mathclose{}, P(x)\)</span>” is false, because <span class="math inline">\(P(1)\)</span> is false.</li>
+<li>“<span class="math inline">\(\forall x \in \mathopen{}\left\{3, 4, 5\right\}\mathclose{}, P(x)\)</span>” is true, because <span class="math inline">\(3 &gt; 2\)</span>, <span class="math inline">\(4 &gt; 2\)</span>, and <span class="math inline">\(5 &gt; 2\)</span> are all true.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-inequality" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Inequality)</strong></span> An <strong>inequality</strong> is a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) or a predicate (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) that compares two expressions <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> whose values are <a href="./notation.html#def-real-numbers">real numbers</a>, in one of the forms:</p>
+<ul>
+<li>
+<span class="math inline">\(a &lt; b\)</span> (“<span class="math inline">\(a\)</span> is less than <span class="math inline">\(b\)</span>”);</li>
+<li>
+<span class="math inline">\(a \le b\)</span> (“<span class="math inline">\(a\)</span> is less than or equal to <span class="math inline">\(b\)</span>”);</li>
+<li>
+<span class="math inline">\(a &gt; b\)</span> (“<span class="math inline">\(a\)</span> is greater than <span class="math inline">\(b\)</span>”);</li>
+<li>
+<span class="math inline">\(a \ge b\)</span> (“<span class="math inline">\(a\)</span> is greater than or equal to <span class="math inline">\(b\)</span>”).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-inequality" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5 (Inequalities)</strong></span> &nbsp;</p>
+<ul>
+<li>“<span class="math inline">\(3 &lt; 5\)</span>” is an inequality, and it is true.</li>
+<li>“<span class="math inline">\(5 \le 3\)</span>” is an inequality, and it is false.</li>
+<li>“<span class="math inline">\(x \ge 2\)</span>” is an inequality and a predicate: it is true when <span class="math inline">\(x = 2\)</span> and false when <span class="math inline">\(x = 1\)</span>.</li>
+<li>“<span class="math inline">\(x = 2\)</span>” is not an inequality: it is an equality.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-logical-entailment" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-logical-entailment" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Entailment, and its failure)</strong></span> Let <span class="math inline">\(x\)</span> be an <a href="./notation.html#def-integers">integer</a>.</p>
+<ul>
+<li>“<span class="math inline">\(x = 2\)</span>” entails “<span class="math inline">\(x^2 = 4\)</span>”: the only value that makes “<span class="math inline">\(x = 2\)</span>” true is <span class="math inline">\(x = 2\)</span>, and <span class="math inline">\(2^2 = 4\)</span>.</li>
+<li>“<span class="math inline">\(x &gt; 3\)</span>” and “<span class="math inline">\(x &lt; 5\)</span>” together entail “<span class="math inline">\(x = 4\)</span>”: <span class="math inline">\(4\)</span> is the only integer greater than <span class="math inline">\(3\)</span> and less than <span class="math inline">\(5\)</span>.</li>
+<li>“<span class="math inline">\(x^2 = 4\)</span>” does not entail “<span class="math inline">\(x = 2\)</span>”: the value <span class="math inline">\(x = -2\)</span> makes “<span class="math inline">\(x^2 = 4\)</span>” true, since <span class="math inline">\((-2)^2 = 4\)</span>, but makes “<span class="math inline">\(x = 2\)</span>” false.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>We can use any of:</p>
+<ul>
+<li>
+<span class="math inline">\(\therefore\)</span> (<code>\therefore</code> in LaTeX),</li>
+<li>
+<span class="math inline">\(\Rightarrow\)</span> (<code>\Rightarrow</code>),</li>
+<li>
+<span class="math inline">\(\models\)</span> (<code>\models</code>)</li>
+</ul>
+<p>to denote logical entailment (<a href="#def-logical-entailment" class="quarto-xref">Definition&nbsp;6</a>). <span class="math inline">\(\Rightarrow\)</span> also writes the connective “implies” (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>); <span class="math inline">\(P\)</span> entails <span class="math inline">\(Q\)</span> exactly when <span class="math inline">\(P \Rightarrow Q\)</span> is true for every choice of values for the variables in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
+<p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra-exponentials.html#def-sequence-limit">convergence</a> results.</p>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-proof" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Proof)</strong></span> A <strong>proof</strong> of a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
+<ul>
+<li>an assumption,</li>
+<li>a definition,</li>
+<li>a previously proved result, or</li>
+<li>a consequence of earlier statements in the list, by one rule of logic or algebra.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-proof" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7 (The sum of two even integers is even)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be even integers (<a href="./notation.html#def-even-odd">definition</a>). Then <span class="math inline">\(a = 2j\)</span> and <span class="math inline">\(b = 2k\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+a + b
+&amp;= 2j + 2k
+&amp;&amp; \text{(substitute } a = 2j \text{ and } b = 2k \text{)}
+\\
+&amp;= 2(j + k)
+&amp;&amp; \text{(distributive law)}
+\end{aligned}
+\]</span></p>
+<p>The second line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. Since <span class="math inline">\(j + k\)</span> is an integer, <span class="math inline">\(a + b\)</span> is even (<a href="./notation.html#def-even-odd">definition</a>). For example,</p>
+<p><span class="math display">\[
+\begin{aligned}
+4 + 10 &amp;= 2 \cdot 2 + 2 \cdot 5 \\
+&amp;= 2 \cdot 7 \\
+&amp;= 14.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-derivation" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Derivation)</strong></span> A <strong>derivation</strong> is a proof (<a href="#def-proof" class="quarto-xref">Definition&nbsp;7</a>), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by <span class="math inline">\(=\)</span> or by an inequality sign (<a href="#def-inequality" class="quarto-xref">Definition&nbsp;5</a>), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-derivation" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (A derivation with equalities and inequalities)</strong></span> For every real number <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x + 1)^2
+&amp;= x^2 + 2x + 1
+&amp;&amp; \text{(square of a sum)}
+\\
+&amp;\ge 2x + 1
+&amp;&amp; \text{(} x^2 \ge 0 \text{)}
+\\
+&amp;&gt; 2x
+&amp;&amp; \text{(} 1 &gt; 0 \text{)}
+\end{aligned}
+\]</span></p>
+<p>The first step uses the <a href="./algebra-sums.html#thm-square-of-a-sum">square of a sum</a>. The steps are <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span>, and <span class="math inline">\(&gt;\)</span>, so the derivation shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. For example, with <span class="math inline">\(x = 3\)</span>: <span class="math inline">\((3 + 1)^2 = 16\)</span>, and <span class="math inline">\(16 &gt; 6 = 2 \cdot 3\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-derivation-chain" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (What a derivation shows)</strong></span> Consider a derivation (<a href="#def-derivation" class="quarto-xref">Definition&nbsp;8</a>) with expressions <span class="math inline">\(E_0, E_1, \ldots, E_n\)</span>, where each line <span class="math inline">\(E_j\)</span> is joined to the line <span class="math inline">\(E_{j-1}\)</span> before it by <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span>.</p>
+<ol type="1">
+<li>If every step is <span class="math inline">\(=\)</span>, then <span class="math inline">\(E_0 = E_n\)</span>.</li>
+<li>If every step is <span class="math inline">\(=\)</span> or <span class="math inline">\(\le\)</span>, then <span class="math inline">\(E_0 \le E_n\)</span>.</li>
+<li>If every step is <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span>, or <span class="math inline">\(&lt;\)</span>, and at least one step is <span class="math inline">\(&lt;\)</span>, then <span class="math inline">\(E_0 &lt; E_n\)</span>.</li>
+</ol>
+<p>The same holds with <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span> in place of <span class="math inline">\(\le\)</span> and <span class="math inline">\(&lt;\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First, a fact about two steps in a row. For numbers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, if <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{S} c\)</span>, where <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are each one of <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> and <span class="math inline">\(&lt;\)</span>, then <span class="math inline">\(a \mathrel{T} c\)</span>, where <span class="math inline">\(T\)</span> is</p>
+<ul>
+<li>
+<span class="math inline">\(&lt;\)</span> if <span class="math inline">\(R\)</span> or <span class="math inline">\(S\)</span> is <span class="math inline">\(&lt;\)</span>;</li>
+<li>otherwise <span class="math inline">\(\le\)</span> if <span class="math inline">\(R\)</span> or <span class="math inline">\(S\)</span> is <span class="math inline">\(\le\)</span>;</li>
+<li>otherwise <span class="math inline">\(=\)</span>.</li>
+</ul>
+<p>This holds in each case:</p>
+<ul>
+<li>If <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are both <span class="math inline">\(=\)</span>, then <span class="math inline">\(a = c\)</span> (<a href="./algebra-basics.html#thm-equal-trans">equalities are transitive</a>).</li>
+<li>If exactly one of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\(=\)</span>, replace <span class="math inline">\(b\)</span> by the equal expression in the other relation (<a href="./algebra-basics.html#thm-substitution">substitution</a>). This gives the other relation between <span class="math inline">\(a\)</span> and <span class="math inline">\(c\)</span>.</li>
+<li>If neither is <span class="math inline">\(=\)</span>, then each of <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{S} c\)</span> is <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span>, and <span class="math inline">\(\le\)</span> means <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(=\)</span> (<a href="./algebra-basics.html#def-strict-inequality">strict and non-strict inequalities</a>). A case with an <span class="math inline">\(=\)</span> is covered by the previous bullet, and the remaining case is <span class="math inline">\(a &lt; b\)</span> and <span class="math inline">\(b &lt; c\)</span>, which gives <span class="math inline">\(a &lt; c\)</span> because <span class="math inline">\(&lt;\)</span> is transitive on the real numbers. So two steps that are each <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span> give <span class="math inline">\(&lt;\)</span> if either is <span class="math inline">\(&lt;\)</span>, and otherwise <span class="math inline">\(\le\)</span>.</li>
+</ul>
+<p>Now let <span class="math inline">\(T_j\)</span> be the relation named by the same rule applied to the first <span class="math inline">\(j\)</span> steps of the chain, with <span class="math inline">\(T_0\)</span> being <span class="math inline">\(=\)</span>. We show <span class="math inline">\(E_0 \mathrel{T_j} E_j\)</span> by induction on <span class="math inline">\(j\)</span>. For <span class="math inline">\(j = 0\)</span>, <span class="math inline">\(E_0 = E_0\)</span>. If <span class="math inline">\(E_0 \mathrel{T_j} E_j\)</span>, then the step from <span class="math inline">\(E_j\)</span> to <span class="math inline">\(E_{j+1}\)</span> and the fact above give <span class="math inline">\(E_0 \mathrel{T_{j+1}} E_{j+1}\)</span>. At <span class="math inline">\(j = n\)</span>, <span class="math inline">\(T_n\)</span> is <span class="math inline">\(=\)</span> when every step is <span class="math inline">\(=\)</span>, which is part 1. It is <span class="math inline">\(\le\)</span> or <span class="math inline">\(=\)</span> when every step is <span class="math inline">\(=\)</span> or <span class="math inline">\(\le\)</span>, and <span class="math inline">\(=\)</span> implies <span class="math inline">\(\le\)</span>, which is part 2. It is <span class="math inline">\(&lt;\)</span> when some step is <span class="math inline">\(&lt;\)</span>, which is part 3.</p>
+<p>The argument for <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span> is the same with the inequalities reversed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-derivation-chain" class="theorem example">
+<p><span class="theorem-title"><strong>Example 9 (Checking a derivation line by line)</strong></span> The derivation in <a href="#exm-derivation" class="quarto-xref">Example&nbsp;8</a> has the steps <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span>, so by <a href="#thm-derivation-chain" class="quarto-xref">Theorem&nbsp;1</a> it shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. The code evaluates the four lines of that derivation at several values of <span class="math inline">\(x\)</span>, and checks each step and the comparison of the first line with the last.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span>, <span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">x</span>,</span>
+<span>  line_0 <span class="op">=</span> <span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span>,</span>
+<span>  line_1 <span class="op">=</span> <span class="va">x</span><span class="op">^</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">x</span> <span class="op">+</span> <span class="fl">1</span>,</span>
+<span>  line_2 <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">x</span> <span class="op">+</span> <span class="fl">1</span>,</span>
+<span>  line_3 <span class="op">=</span> <span class="fl">2</span> <span class="op">*</span> <span class="va">x</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">steps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html">with</a></span><span class="op">(</span></span>
+<span>  <span class="va">lines</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="va">x</span>,</span>
+<span>    step_1_equal <span class="op">=</span> <span class="va">line_0</span> <span class="op">==</span> <span class="va">line_1</span>,</span>
+<span>    step_2_geq <span class="op">=</span> <span class="va">line_1</span> <span class="op">&gt;=</span> <span class="va">line_2</span>,</span>
+<span>    step_3_greater <span class="op">=</span> <span class="va">line_2</span> <span class="op">&gt;</span> <span class="va">line_3</span>,</span>
+<span>    first_greater_than_last <span class="op">=</span> <span class="va">line_0</span> <span class="op">&gt;</span> <span class="va">line_3</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">lines</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["line_0"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["line_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["line_2"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["line_3"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"-3","2":"4","3":"4","4":"-5","5":"-6"},{"1":"-1","2":"0","3":"0","4":"-1","5":"-2"},{"1":"0","2":"1","3":"1","4":"1","5":"0"},{"1":"2","2":"9","3":"9","4":"5","5":"4"},{"1":"3","2":"16","3":"16","4":"7","5":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">steps</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["step_1_equal"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["step_2_geq"],"name":[3],"type":["lgl"],"align":["right"]},{"label":["step_3_greater"],"name":[4],"type":["lgl"],"align":["right"]},{"label":["first_greater_than_last"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"-3","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"-1","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"0","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"2","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"},{"1":"3","2":"TRUE","3":"TRUE","4":"TRUE","5":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>At all 5 values of <span class="math inline">\(x\)</span>, the three steps hold in 5, 5 and 5 cases, and the first line exceeds the last in 5 cases, as <a href="#thm-derivation-chain" class="quarto-xref">Theorem&nbsp;1</a> says. At <span class="math inline">\(x = 0\)</span>, for example, the first line is 1 and the last is 0.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-theorem" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (Result, theorem, lemma, and corollary)</strong></span> A <strong>result</strong> is a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) that has a proof (<a href="#def-proof" class="quarto-xref">Definition&nbsp;7</a>). These notes label each result by its role:</p>
+<ul>
+<li>a <strong>theorem</strong> is a result of interest in its own right;</li>
+<li>a <strong>lemma</strong> is a result proved mainly as a step in the proof of another result;</li>
+<li>a <strong>corollary</strong> is a result that follows from a theorem with little extra work.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-remark no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="rem-proposition-as-result" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (“Proposition” as a kind of result). </span>Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>), whether or not it has been proved.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-theorem" class="theorem example">
+<p><span class="theorem-title"><strong>Example 10 (A corollary of a result)</strong></span> <a href="#exm-proof" class="quarto-xref">Example&nbsp;7</a> proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> is even, because <span class="math inline">\(a + b + c = (a + b) + c\)</span>, <span class="math inline">\(a + b\)</span> is even by that result, and applying the result again to the even integers <span class="math inline">\(a + b\)</span> and <span class="math inline">\(c\)</span> shows that <span class="math inline">\((a + b) + c\)</span> is even. For example,</p>
+<p><span class="math display">\[
+\begin{aligned}
+2 + 4 + 6 &amp;= (2 + 4) + 6 \\
+&amp;= 6 + 6 \\
+&amp;= 12,
+\end{aligned}
+\]</span></p>
+<p>which is even.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-counterexample" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 10 (Counterexample)</strong></span> A <strong>counterexample</strong> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-counterexample" class="theorem example">
+<p><span class="theorem-title"><strong>Example 11 (A counterexample)</strong></span> The proposition “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n + n &gt; n\)</span>” is false. The integer <span class="math inline">\(n = 0\)</span> is a counterexample: <span class="math inline">\(0 + 0 = 0\)</span>, and <span class="math inline">\(0 &gt; 0\)</span> is false. The proposition is true for some integers, such as <span class="math inline">\(n = 3\)</span>, since <span class="math inline">\(3 + 3 = 6 &gt; 3\)</span>, but one counterexample is enough to make it false.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-converse" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11 (Converse)</strong></span> The <strong>converse</strong> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-converse" class="theorem example">
+<p><span class="theorem-title"><strong>Example 12 (A true proposition with a false converse)</strong></span> For an integer <span class="math inline">\(n\)</span>, call <span class="math inline">\(n\)</span> a multiple of <span class="math inline">\(4\)</span> if <span class="math inline">\(n = 4k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<ul>
+<li>
+<p>“If <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true:</p>
+<p><span class="math display">\[
+\begin{aligned}
+n &amp;= 4k \\
+&amp;= 2 \cdot(2k),
+\end{aligned}
+\]</span></p>
+<p>and <span class="math inline">\(2k\)</span> is an integer.</p>
+</li>
+<li><p>Its converse, “if <span class="math inline">\(n\)</span> is even, then <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>”, is false. The integer <span class="math inline">\(n = 2\)</span> is a counterexample (<a href="#def-counterexample" class="quarto-xref">Definition&nbsp;10</a>): <span class="math inline">\(2\)</span> is even, but <span class="math inline">\(2 = 4k\)</span> only for <span class="math inline">\(k = \frac{1}{2}\)</span>, which is not an integer.</p></li>
+</ul>
+<p>So a proposition can be true while its converse is false.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-necessary-sufficient" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 12 (Necessary and sufficient conditions)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> for <span class="math inline">\(Q\)</span>, and <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> for <span class="math inline">\(P\)</span>. When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#def-converse" class="quarto-xref">Definition&nbsp;11</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> for <span class="math inline">\(Q\)</span>, written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-necessary-sufficient" class="theorem example">
+<p><span class="theorem-title"><strong>Example 13 (Necessary but not sufficient)</strong></span> In <a href="#exm-converse" class="quarto-xref">Example&nbsp;12</a>, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true, so:</p>
+<ul>
+<li>being a multiple of <span class="math inline">\(4\)</span> is a sufficient condition for <span class="math inline">\(n\)</span> to be even;</li>
+<li>being even is a necessary condition for <span class="math inline">\(n\)</span> to be a multiple of <span class="math inline">\(4\)</span>.</li>
+</ul>
+<p>Being even is not a sufficient condition for being a multiple of <span class="math inline">\(4\)</span>: <span class="math inline">\(n = 2\)</span> is even, but not a multiple of <span class="math inline">\(4\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-def no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="def-proof-by-contradiction" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 13 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-proof-by-contradiction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 14 (No integer is both even and odd)</strong></span> Suppose, for contradiction, that some integer <span class="math inline">\(n\)</span> is both even and odd (<a href="./notation.html#def-even-odd">definition</a>). Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
+<p><span class="math display">\[
+\begin{aligned}
+2j &amp;= 2k + 1
+&amp;&amp; \text{(both equal } n \text{)}
+\\
+2j - 2k &amp;= 1
+&amp;&amp; \text{(subtract } 2k \text{ from both sides)}
+\\
+2(j - k) &amp;= 1
+&amp;&amp; \text{(distributive law)}
+\\
+j - k &amp;= \tfrac{1}{2}
+&amp;&amp; \text{(divide both sides by } 2 \text{)}
+\end{aligned}
+\]</span></p>
+<p>The third line uses the <a href="./algebra-sums.html#def-distributive">distributive law</a>. But <span class="math inline">\(j - k\)</span> is an integer, and <span class="math inline">\(\frac{1}{2}\)</span> is not, so the last line is false. So no integer is both even and odd. For example, <span class="math inline">\(6 = 2 \cdot 3\)</span> is even, and <span class="math inline">\(6 = 2k + 1\)</span> would need <span class="math inline">\(k = 2.5\)</span>, which is not an integer.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-lem no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="thm-proof-by-contradiction" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (A proof by contradiction proves its proposition)</strong></span> Let <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> be propositions (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>). If <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false, then <span class="math inline">\(P\)</span> is true.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Proof</span>Proof
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>By <a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>, <span class="math inline">\(\neg P \Rightarrow Q\)</span> is false only when <span class="math inline">\(\neg P\)</span> is true and <span class="math inline">\(Q\)</span> is false. Here <span class="math inline">\(Q\)</span> is false, and <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true, so <span class="math inline">\(\neg P\)</span> is not true. Then <span class="math inline">\(\neg P\)</span> is false. Since <span class="math inline">\(\neg P\)</span> is true whenever <span class="math inline">\(P\)</span> is false, <span class="math inline">\(P\)</span> must be true.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-exm no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<div id="exm-proof-by-contradiction-truth-table" class="theorem example">
+<p><span class="theorem-title"><strong>Example 15 (A truth table for a proof by contradiction)</strong></span> There are only four ways to assign truth values to <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. The code lists them, with the truth value of <span class="math inline">\(\neg P \Rightarrow Q\)</span>, and marks the rows where <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html">expand.grid</a></span><span class="op">(</span>Q <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span>, P <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tt</span><span class="op">$</span><span class="va">not_P_implies_Q</span> <span class="op">&lt;-</span> <span class="op">!</span><span class="op">(</span><span class="op">!</span><span class="va">tt</span><span class="op">$</span><span class="va">P</span><span class="op">)</span> <span class="op">|</span> <span class="va">tt</span><span class="op">$</span><span class="va">Q</span></span>
+<span><span class="va">tt</span><span class="op">$</span><span class="va">hypotheses_hold</span> <span class="op">&lt;-</span> <span class="va">tt</span><span class="op">$</span><span class="va">not_P_implies_Q</span> <span class="op">&amp;</span> <span class="op">!</span><span class="va">tt</span><span class="op">$</span><span class="va">Q</span></span>
+<span><span class="va">tt</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Q"],"name":[1],"type":["lgl"],"align":["right"]},{"label":["P"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["not_P_implies_Q"],"name":[3],"type":["lgl"],"align":["right"]},{"label":["hypotheses_hold"],"name":[4],"type":["lgl"],"align":["right"]}],"data":[{"1":"TRUE","2":"TRUE","3":"TRUE","4":"FALSE"},{"1":"FALSE","2":"TRUE","3":"TRUE","4":"TRUE"},{"1":"TRUE","2":"FALSE","3":"TRUE","4":"FALSE"},{"1":"FALSE","2":"FALSE","3":"FALSE","4":"FALSE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>The hypotheses of <a href="#thm-proof-by-contradiction" class="quarto-xref">Theorem&nbsp;2</a> hold in 1 of the 4 rows, and in 1 of them <span class="math inline">\(P\)</span> is true. So whenever the hypotheses hold, <span class="math inline">\(P\)</span> is true.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="sec-dont-skip-steps" class="level2" data-number="2"><h2 data-number="2" class="anchored" data-anchor-id="sec-dont-skip-steps">
+<span class="header-section-number">2</span> Don’t skip steps</h2>
 <p>Show every step of the derivation. Each line should follow from the previous line by a single, identifiable move:</p>
 <ul>
 <li>applying a definition,</li>
@@ -953,10 +1562,9 @@ window.Quarto = {
 <li>performing one algebraic operation.</li>
 </ul>
 <p>When you skip steps, you force the reader to reconstruct your reasoning, which is exactly the work the proof was supposed to do <em>for</em> them. A step that feels “obvious” while you are writing it is often the step a reader gets stuck on. Phrases like “it can be shown that” or “clearly” usually mark a skipped step; show the step instead.</p>
-</section>
-<section id="sec-annotate-each-step" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-annotate-each-step"><span class="header-section-number">2</span> Annotate each step</h2>
-<p>For each step, note the definition, <a href="./notation.html#def-theorem">theorem</a>, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.</p>
+</section><section id="sec-annotate-each-step" class="level2" data-number="3"><h2 data-number="3" class="anchored" data-anchor-id="sec-annotate-each-step">
+<span class="header-section-number">3</span> Annotate each step</h2>
+<p>For each step, note the definition, <a href="#def-theorem">theorem</a>, or algebraic rule that justifies it. A brief annotation to the right of the line is usually enough. Annotations make the proof checkable, and they teach the reader which tool to reach for in similar situations.</p>
 <p>For example, here is a derivation that the <a href="./linear-algebra-projections.html#def-hat-matrix">hat matrix</a> <span class="math inline">\(\mathbf{H} = \mathbf{X}({\mathbf{X}}^{\top}\mathbf{X})^{-1}{\mathbf{X}}^{\top}\)</span> is <a href="./linear-algebra-special-matrices.html#def-idempotent-matrix">idempotent</a>, <span class="math inline">\(\mathbf{H}^2 = \mathbf{H}\)</span>, with each step annotated:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -981,9 +1589,8 @@ window.Quarto = {
 \end{aligned}
 \]</span></p>
 <p>The <a href="./linear-algebra-projections.html#thm-hat-matrix">Linear Algebra</a> page uses this derivation to show that <span class="math inline">\(\mathbf{H}\)</span> is a <a href="./linear-algebra-special-matrices.html#def-projection-matrix">projection matrix</a>. The probability notes derive the variance identity <span class="math inline">\(\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left[X^2\right]\mathclose{} - \mathopen{}\left(\operatorname{E}\mathopen{}\left[X\right]\mathclose{}\right)^2\mathclose{}\)</span> <a href="https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance">in the same annotated style</a>.</p>
-</section>
-<section id="sec-direct-proof" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="sec-direct-proof"><span class="header-section-number">3</span> Direct proof</h2>
+</section><section id="sec-direct-proof" class="level2" data-number="4"><h2 data-number="4" class="anchored" data-anchor-id="sec-direct-proof">
+<span class="header-section-number">4</span> Direct proof</h2>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -991,7 +1598,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="def-direct-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Direct proof)</strong></span> A <strong>direct proof</strong> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="./notation.html#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Direct proof)</strong></span> A <strong>direct proof</strong> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
 </div>
 </div>
@@ -1003,7 +1610,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container">
 <div id="exm-direct-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./notation.html#def-even-odd">odd</a> integer, then <span class="math inline">\(n^2\)</span> is odd.</p>
+<p><span class="theorem-title"><strong>Example 16 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./notation.html#def-even-odd">odd</a> integer, then <span class="math inline">\(n^2\)</span> is odd.</p>
 <p>Since <span class="math inline">\(n\)</span> is odd, there is an integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n = 2k + 1\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1033,19 +1640,17 @@ n^2 &amp;= 49 \\
 \end{aligned}
 \]</span></p>
 <p>and <span class="math inline">\(2 \cdot 3^2 + 2 \cdot 3 = 24\)</span>.</p>
-<p>The notation page’s proof that <a href="./notation.html#exm-proof">the sum of two even integers is even</a> is also a direct proof.</p>
+<p>The proof above that <a href="#exm-proof">the sum of two even integers is even</a> is also a direct proof.</p>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sec-golden-rule" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="sec-golden-rule"><span class="header-section-number">4</span> Follow the golden rule</h2>
+</section><section id="sec-golden-rule" class="level2" data-number="5"><h2 data-number="5" class="anchored" data-anchor-id="sec-golden-rule">
+<span class="header-section-number">5</span> Follow the golden rule</h2>
 <p>In general, follow the golden rule: treat your readers the way you want to be treated as a reader.</p>
 <p>When you read someone else’s proof, you want to be able to follow every step without guessing, to know which result is being used at each line, and to never be left wondering where a quantity came from. Write your own proofs to meet that same standard.</p>
-</section>
-<section id="sec-proof-by-induction" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="sec-proof-by-induction"><span class="header-section-number">5</span> Proof by induction</h2>
+</section><section id="sec-proof-by-induction" class="level2" data-number="6"><h2 data-number="6" class="anchored" data-anchor-id="sec-proof-by-induction">
+<span class="header-section-number">6</span> Proof by induction</h2>
 <p>Many proofs in these notes show that a statement holds for every <a href="./notation.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
@@ -1054,10 +1659,12 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="def-proof-by-induction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./notation.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./notation.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
+<p><span class="theorem-title"><strong>Definition 15 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./notation.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
-<li><strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
-<li><strong>Inductive step:</strong> for every integer <span class="math inline">\(n &gt; n_0\)</span>, if <span class="math inline">\(P(n - 1)\)</span> holds, then <span class="math inline">\(P(n)\)</span> holds.</li>
+<li>
+<strong>Base case:</strong> <span class="math inline">\(P(n_0)\)</span> holds.</li>
+<li>
+<strong>Inductive step:</strong> for every integer <span class="math inline">\(n &gt; n_0\)</span>, if <span class="math inline">\(P(n - 1)\)</span> holds, then <span class="math inline">\(P(n)\)</span> holds.</li>
 </ol>
 <p>In the inductive step, the assumption that <span class="math inline">\(P(n - 1)\)</span> holds is called the <strong>induction hypothesis</strong>.</p>
 </div>
@@ -1071,7 +1678,7 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="rem-induction-why" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (Why the two steps suffice). </span>The base case gives <span class="math inline">\(P(n_0)\)</span>. The inductive step with <span class="math inline">\(n = n_0 + 1\)</span> then gives <span class="math inline">\(P(n_0 + 1)\)</span>, with <span class="math inline">\(n = n_0 + 2\)</span> it gives <span class="math inline">\(P(n_0 + 2)\)</span>, and so on: each integer <span class="math inline">\(n \ge n_0\)</span> is reached after <span class="math inline">\(n - n_0\)</span> uses of the inductive step.</p>
+<p><span class="proof-title"><em>Remark 2</em> (Why the two steps suffice). </span>The base case gives <span class="math inline">\(P(n_0)\)</span>. The inductive step with <span class="math inline">\(n = n_0 + 1\)</span> then gives <span class="math inline">\(P(n_0 + 1)\)</span>, with <span class="math inline">\(n = n_0 + 2\)</span> it gives <span class="math inline">\(P(n_0 + 2)\)</span>, and so on: each integer <span class="math inline">\(n \ge n_0\)</span> is reached after <span class="math inline">\(n - n_0\)</span> uses of the inductive step.</p>
 <p>When <span class="math inline">\(P(n)\)</span> is needed only for <span class="math inline">\(n_0 \le n \le r\)</span>, it is enough to show the inductive step for <span class="math inline">\(n_0 &lt; n \le r\)</span>; the same chain then stops at <span class="math inline">\(P(r)\)</span>.</p>
 </div>
 </div>
@@ -1085,11 +1692,11 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="exm-induction-sum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 17 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
 <p><span class="math display">\[
 \sum_{i=1}^ni = \frac{n(n+1)}{2}.
 \]</span></p>
-<p>For example, with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\(1 + 2 + 3 = 6\)</span> and <span class="math inline">\(\frac{3 \cdot 4}{2} = 6\)</span>. To prove the equation for every <span class="math inline">\(n\)</span>, let <span class="math inline">\(P(n)\)</span> be the equation and use <a href="#def-proof-by-induction" class="quarto-xref">Definition&nbsp;2</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
+<p>For example, with <span class="math inline">\(n = 3\)</span>, <span class="math inline">\(1 + 2 + 3 = 6\)</span> and <span class="math inline">\(\frac{3 \cdot 4}{2} = 6\)</span>. To prove the equation for every <span class="math inline">\(n\)</span>, let <span class="math inline">\(P(n)\)</span> be the equation and use <a href="#def-proof-by-induction" class="quarto-xref">Definition&nbsp;15</a> with <span class="math inline">\(n_0 = 1\)</span>.</p>
 <p><strong>Base case, <span class="math inline">\(n = 1\)</span>.</strong> The sum has one term:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1152,14 +1759,13 @@ n^2 &amp;= 49 \\
 &amp;&amp; \text{(commutative law)}
 \end{aligned}
 \]</span></p>
-<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#def-proof-by-induction" class="quarto-xref">Definition&nbsp;2</a>, the equation holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
+<p>which is <span class="math inline">\(P(n)\)</span>. By <a href="#def-proof-by-induction" class="quarto-xref">Definition&nbsp;15</a>, the equation holds for every <span class="math inline">\(n \in \mathbb{N}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sec-formal-logic" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="sec-formal-logic"><span class="header-section-number">6</span> Formal logic</h2>
+</section><section id="sec-formal-logic" class="level2" data-number="7"><h2 data-number="7" class="anchored" data-anchor-id="sec-formal-logic">
+<span class="header-section-number">7</span> Formal logic</h2>
 <div class="callout callout-style-simple callout-def no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1167,7 +1773,7 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="def-propositional-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Propositional logic)</strong></span> <strong>Propositional logic</strong> is the study of <a href="./notation.html#def-logical-entailment">logical entailment</a> among <a href="./notation.html#def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="./notation.html#def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Propositional logic)</strong></span> <strong>Propositional logic</strong> is the study of <a href="#def-logical-entailment">logical entailment</a> among <a href="#def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
 </div>
 </div>
 </div>
@@ -1179,7 +1785,7 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="exm-propositional-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3 (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)</strong></span> Suppose <span class="math inline">\(P\)</span> is true and <span class="math inline">\(P \Rightarrow Q\)</span> is true. If <span class="math inline">\(Q\)</span> were false, then <span class="math inline">\(P \Rightarrow Q\)</span> would have a true <span class="math inline">\(P\)</span> and a false <span class="math inline">\(Q\)</span>, so <span class="math inline">\(P \Rightarrow Q\)</span> would be false, which contradicts the assumption. So <span class="math inline">\(Q\)</span> is true. This holds whatever <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> say, so <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> logically entail <span class="math inline">\(Q\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 18 (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)</strong></span> Suppose <span class="math inline">\(P\)</span> is true and <span class="math inline">\(P \Rightarrow Q\)</span> is true. If <span class="math inline">\(Q\)</span> were false, then <span class="math inline">\(P \Rightarrow Q\)</span> would have a true <span class="math inline">\(P\)</span> and a false <span class="math inline">\(Q\)</span>, so <span class="math inline">\(P \Rightarrow Q\)</span> would be false, which contradicts the assumption. So <span class="math inline">\(Q\)</span> is true. This holds whatever <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> say, so <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> logically entail <span class="math inline">\(Q\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1191,13 +1797,16 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="def-first-order-logic" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (First-order logic)</strong></span> <strong>First-order logic</strong> extends propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;3</a>) by also allowing:</p>
+<p><span class="theorem-title"><strong>Definition 17 (First-order logic)</strong></span> <strong>First-order logic</strong> extends propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a>) by also allowing:</p>
 <ul>
 <li>variables <span class="math inline">\(x, y, \ldots\)</span> that stand for elements of a set;</li>
-<li><a href="./notation.html#def-predicate">predicates</a> of one or more of those variables, such as <span class="math inline">\(P(x)\)</span> or <span class="math inline">\(x &lt; y\)</span>;</li>
-<li><a href="./sets-functions.html#def-function">functions</a> of them, such as <span class="math inline">\(x + y\)</span>;</li>
+<li>
+<a href="#def-predicate">predicates</a> of one or more of those variables, such as <span class="math inline">\(P(x)\)</span> or <span class="math inline">\(x &lt; y\)</span>;</li>
+<li>
+<a href="./sets-functions.html#def-function">functions</a> of them, such as <span class="math inline">\(x + y\)</span>;</li>
 <li>equality between them;</li>
-<li><a href="./notation.html#def-quantifier">quantifiers</a> <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> over them.</li>
+<li>
+<a href="#def-quantifier">quantifiers</a> <span class="math inline">\(\forall\)</span> and <span class="math inline">\(\exists\)</span> over them.</li>
 </ul>
 </div>
 </div>
@@ -1210,7 +1819,7 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="exm-first-order-logic" class="theorem example">
-<p><span class="theorem-title"><strong>Example 4 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a predicate about the elements of a set <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The propositions <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> logically entail <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 19 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a predicate about the elements of a set <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The propositions <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> logically entail <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
 </div>
 </div>
 </div>
@@ -1222,7 +1831,7 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="def-formal-proof" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Formal proof)</strong></span> A <strong>formal proof</strong> is a <a href="./notation.html#def-proof">proof</a> written in propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;3</a>) or first-order logic (<a href="#def-first-order-logic" class="quarto-xref">Definition&nbsp;4</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
+<p><span class="theorem-title"><strong>Definition 18 (Formal proof)</strong></span> A <strong>formal proof</strong> is a <a href="#def-proof">proof</a> written in propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a>) or first-order logic (<a href="#def-first-order-logic" class="quarto-xref">Definition&nbsp;17</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
 </div>
 </div>
 </div>
@@ -1234,26 +1843,27 @@ n^2 &amp;= 49 \\
 </div>
 <div class="callout-body-container">
 <div id="exm-formal-proof" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5 (A three-step formal proof)</strong></span> Suppose the allowed rules include “from <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>, conclude <span class="math inline">\(Q\)</span>”. Then this is a formal proof of <span class="math inline">\(Q\)</span> from the assumptions <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 20 (A three-step formal proof)</strong></span> Suppose the allowed rules include “from <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>, conclude <span class="math inline">\(Q\)</span>”. Then this is a formal proof of <span class="math inline">\(Q\)</span> from the assumptions <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>:</p>
 <ol type="1">
-<li><span class="math inline">\(P\)</span> (assumption)</li>
-<li><span class="math inline">\(P \Rightarrow Q\)</span> (assumption)</li>
-<li><span class="math inline">\(Q\)</span> (from steps 1 and 2, by the rule above)</li>
+<li>
+<span class="math inline">\(P\)</span> (assumption)</li>
+<li>
+<span class="math inline">\(P \Rightarrow Q\)</span> (assumption)</li>
+<li>
+<span class="math inline">\(Q\)</span> (from steps 1 and 2, by the rule above)</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="sec-further-reading" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="sec-further-reading"><span class="header-section-number">7</span> Further reading</h2>
+</section><section id="sec-further-reading" class="level2" data-number="8"><h2 data-number="8" class="anchored" data-anchor-id="sec-further-reading">
+<span class="header-section-number">8</span> Further reading</h2>
 <ul>
-<li><span class="citation" data-cites="velleman2019prove">Velleman (<a href="#ref-velleman2019prove" role="doc-biblioref">2019</a>)</span> is a structured introduction to proof techniques such as <a href="#def-direct-proof">direct proof</a>, <a href="./notation.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</li>
-<li><span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#ref-barkerplummer2011language" role="doc-biblioref">2011</a>)</span> treats proofs as <a href="#def-formal-proof">formal proofs</a> in <a href="#def-propositional-logic">propositional logic</a> and <a href="#def-first-order-logic">first-order logic</a>.</li>
-</ul>
-</section>
-<section id="references" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
+<li>
+<span class="citation" data-cites="velleman2019prove">Velleman (<a href="#ref-velleman2019prove" role="doc-biblioref">2019</a>)</span> is a structured introduction to proof techniques such as <a href="#def-direct-proof">direct proof</a>, <a href="./proof-writing.html#def-proof-by-contradiction">proof by contradiction</a>, and induction.</li>
+<li>
+<span class="citation" data-cites="barkerplummer2011language">Barker-Plummer et al. (<a href="#ref-barkerplummer2011language" role="doc-biblioref">2011</a>)</span> treats proofs as <a href="#def-formal-proof">formal proofs</a> in <a href="#def-propositional-logic">propositional logic</a> and <a href="#def-first-order-logic">first-order logic</a>.</li>
+</ul></section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-barkerplummer2011language" class="csl-entry" role="listitem">
 Barker-Plummer, Dave, Jon Barwise, and John Etchemendy. 2011. <em>Language, Proof and Logic</em>. 2nd ed. CSLI Publications. <a href="https://www.amazon.com/dp/1575866323">https://www.amazon.com/dp/1575866323</a>.
@@ -1442,9 +2052,7 @@ window.addEventListener("load", () => {
   normalizeInternalAnchorLinkIcons();
   moveTheoremDivAnchorsInlineWithRetry();
 });
-</script>
-
-<script>
+</script><script>
 const defaultAnchorIconFallback = "#";
 
 function getDefaultAnchorTemplate() {
@@ -1516,12 +2124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener("load", alignEquationAnchorsWithDefault);
-</script>
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<!--
+</script></section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><!--
 Page-navigation helpers for the HTML format, included after the body of every
 page by _quarto-website.yml. Vendored from Morrison-Lab/lbt (a private repo), via Morrison-Lab/qwt.
 
@@ -1544,8 +2147,7 @@ the text, the sidebar, or the table of contents:
 
 Both are hidden below Bootstrap's large breakpoint, where the sidebar
 collapses and there is no gutter to put them in.
--->
-<style>
+--><style>
 .page-nav-arrow {
   position: fixed;
   top: 50%;
@@ -1668,8 +2270,7 @@ document.addEventListener("DOMContentLoaded", function () {
   place();
   window.addEventListener("resize", place);
 });
-</script>
-<script>
+</script><script>
 // A link to #target scrolls the browser to the target before MathJax and the
 // images have set their final heights. Equations above the target then grow
 // and push it up out of view. Scroll to the target again once the page has
@@ -1690,8 +2291,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.readyState === "complete") afterMath();
   else window.addEventListener("load", afterMath);
 })();
-</script>
-<script id="quarto-html-after-body" type="application/javascript">
+</script><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2156,9 +2756,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./optimization.html" class="pagination-link" aria-label="Optimization">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Optimization</span>
       </a>          
@@ -2166,40 +2764,39 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="nav-page nav-page-next">
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Proof Writing"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: proof-writing-slides.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: proof-writing-handout.pdf</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: proof-writing.docx</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_proof-writing.qmd &gt;}}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-further-reading}</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@velleman2019prove</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  is a structured introduction to proof techniques</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  such as <span class="co">[</span><span class="ot">direct proof</span><span class="co">](#def-direct-proof)</span>, <span class="co">[</span><span class="ot">proof by contradiction</span><span class="co">](notation.qmd#def-proof-by-contradiction)</span>, and induction.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@barkerplummer2011language</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  treats proofs as <span class="co">[</span><span class="ot">formal proofs</span><span class="co">](#def-formal-proof)</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  in <span class="co">[</span><span class="ot">propositional logic</span><span class="co">](#def-propositional-logic)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  and <span class="co">[</span><span class="ot">first-order logic</span><span class="co">](#def-first-order-logic)</span>.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Proof Writing"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html: default</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: proof-writing-slides.html</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">  pdf:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: proof-writing-handout.pdf</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">  docx:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: proof-writing.docx</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>{{&lt; include latex-macros/macros.qmd &gt;}}</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>{{&lt; include mds/_proof-writing.qmd &gt;}}</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading {#sec-further-reading}</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@velleman2019prove</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  is a structured introduction to proof techniques</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  such as <span class="co">[</span><span class="ot">direct proof</span><span class="co">](#def-direct-proof)</span>, <span class="co">[</span><span class="ot">proof by contradiction</span><span class="co">](proof-writing.qmd#def-proof-by-contradiction)</span>, and induction.</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>@barkerplummer2011language</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  treats proofs as <span class="co">[</span><span class="ot">formal proofs</span><span class="co">](#def-formal-proof)</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  in <span class="co">[</span><span class="ot">propositional logic</span><span class="co">](#def-propositional-logic)</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  and <span class="co">[</span><span class="ot">first-order logic</span><span class="co">](#def-first-order-logic)</span>.</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -2211,8 +2808,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

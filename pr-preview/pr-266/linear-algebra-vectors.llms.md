@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-13 13:45:46 (PDT)
+Last modified: 2026-10-13 19:29:08 (PDT)
 
 ## 1 Vectors
 
@@ -115,7 +115,11 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 >
 > \\c_1 a_1 + \cdots + c_k a_k = \sum\_{i=1}^{k} c_i a_i\\
 >
-> A linear combination of vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ of the same length is defined entry by entry: entry \\j\\ of \\\sum\_{i=1}^{k} c_i \tilde{v}\_i\\ is the linear combination of the \\j\\th entries of \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ with the same coefficients. For example, the linear combination of \\{(1, 0)}^{\top}\\ and \\{(0, 1)}^{\top}\\ with coefficients \\2\\ and \\3\\ is \\{(2 \cdot 1 + 3 \cdot 0,\\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\\.
+> A linear combination of vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ of the same length is defined entry by entry: entry \\j\\ of \\\sum\_{i=1}^{k} c_i \tilde{v}\_i\\ is the linear combination of the \\j\\th entries of \\\tilde{v}\_1, \ldots, \tilde{v}\_k\\ with the same coefficients.
+
+> **NOTE:**
+>
+> **Example 6 (A linear combination of two vectors)** The linear combination of \\{(1, 0)}^{\top}\\ and \\{(0, 1)}^{\top}\\ with coefficients \\2\\ and \\3\\ is \\{(2 \cdot 1 + 3 \cdot 0,\\ 2 \cdot 0 + 3 \cdot 1)}^{\top} = {(2, 3)}^{\top}\\.
 
 > **NOTE:**
 >
@@ -152,14 +156,16 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 > **Definition 10 (Mean (average, sample mean))** The **mean** (or **average**) of \\n\\ numbers \\y_1, \ldots, y_n\\ is their [sum](algebra-sums.llms.md#def-summation) divided by how many there are:
 >
 > \\\bar{y} \stackrel{\text{def}}{=}\frac{1}{n}\sum\_{i=1}^ny_i\\
->
-> When the numbers are observed data values, \\\bar{y}\\ is also called the **sample mean**.
 
 > **NOTE:**
 >
-> **Example 6 (The mean of three numbers)** For \\y_1 = 2\\, \\y_2 = -1\\ and \\y_3 = 5\\:
+> **Example 7 (The mean of three numbers)** For \\y_1 = 2\\, \\y_2 = -1\\ and \\y_3 = 5\\:
 >
 > \\ \begin{aligned} \bar{y} &= \frac{1}{3}\\\mathopen{}\left(2 + (-1) + 5\right)\mathclose{} && \text{(definition of the mean, with } n = 3 \text{)} \\ &= \frac{1}{3} \cdot 6 && \text{(add)} \\ &= 2 && \text{(multiply)} \end{aligned} \\
+
+> **NOTE:**
+>
+> *Remark 5* (The sample mean estimates the population mean). When the numbers are observed data values, \\\bar{y}\\ is also called the sample mean, an estimator of the [population mean](https://morrison-lab.github.io/pds/expectation.html#def-expectation).
 
 > **NOTE:**
 >
@@ -169,7 +175,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 5* (The ones vector sums the entries). The dot product ([Definition 7](#def-dot-product)) of \\\tilde{1}\\ with \\\tilde{x}\\ is the sum of the entries of \\\tilde{x}\\:
+> *Remark 6* (The ones vector sums the entries). The dot product ([Definition 7](#def-dot-product)) of \\\tilde{1}\\ with \\\tilde{x}\\ is the sum of the entries of \\\tilde{x}\\:
 >
 > \\ \begin{aligned} \tilde{1} \cdot \tilde{x}&= \sum\_{i=1}^p1 \cdot x_i \\ &= \sum\_{i=1}^px_i. \end{aligned} \\
 >
@@ -187,7 +193,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 6* (Indicator vectors build every vector). For \\p = 3\\, the indicator vectors are \\\tilde{e}\_1 = (1, 0, 0)\\, \\\tilde{e}\_2 = (0, 1, 0)\\, and \\\tilde{e}\_3 = (0, 0, 1)\\. Every vector of length \\3\\ is a weighted sum \\c_1\tilde{e}\_1 + c_2\tilde{e}\_2 + c_3\tilde{e}\_3\\ of them, with weights equal to its entries; for example, \\(2, -1, 5) = 2\tilde{e}\_1 - 1\tilde{e}\_2 + 5\tilde{e}\_3\\. No other weights work: entry \\j\\ of \\c_1\tilde{e}\_1 + c_2\tilde{e}\_2 + c_3\tilde{e}\_3\\ is \\c_j\\, so each weight \\c_j\\ must equal entry \\j\\ of the vector.
+> *Remark 7* (Indicator vectors build every vector). For \\p = 3\\, the indicator vectors are \\\tilde{e}\_1 = (1, 0, 0)\\, \\\tilde{e}\_2 = (0, 1, 0)\\, and \\\tilde{e}\_3 = (0, 0, 1)\\. Every vector of length \\3\\ is a weighted sum \\c_1\tilde{e}\_1 + c_2\tilde{e}\_2 + c_3\tilde{e}\_3\\ of them, with weights equal to its entries; for example, \\(2, -1, 5) = 2\tilde{e}\_1 - 1\tilde{e}\_2 + 5\tilde{e}\_3\\. No other weights work: entry \\j\\ of \\c_1\tilde{e}\_1 + c_2\tilde{e}\_2 + c_3\tilde{e}\_3\\ is \\c_j\\, so each weight \\c_j\\ must equal entry \\j\\ of the vector.
 
 > **NOTE:**
 >
@@ -215,7 +221,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 7 (Expanding a vector in indicator vectors)** \\ \begin{aligned} \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix} &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\ &= 4 \tilde{e}\_1 - \tilde{e}\_2 + 2 \tilde{e}\_3 \end{aligned} \\
+> **Example 8 (Expanding a vector in indicator vectors)** \\ \begin{aligned} \begin{bmatrix}4 \\ -1 \\ 2\end{bmatrix} &= 4 \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} + (-1) \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix} + 2 \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \\ &= 4 \tilde{e}\_1 - \tilde{e}\_2 + 2 \tilde{e}\_3 \end{aligned} \\
 
 ### 1.2 Orthogonality
 
@@ -227,7 +233,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 7* (Orthogonal means perpendicular). Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, \\(1, 2)\\ and \\(-2, 1)\\ are perpendicular, and their dot product is \\1 \cdot(-2) + 2 \cdot 1 = 0\\. The same test works in \\\mathbb{R}^3\\, where pictures are harder to draw:
+> *Remark 8* (Orthogonal means perpendicular). Orthogonality extends the geometric idea of perpendicular lines to vectors with any number of entries. In the plane, \\(1, 2)\\ and \\(-2, 1)\\ are perpendicular, and their dot product is \\1 \cdot(-2) + 2 \cdot 1 = 0\\. The same test works in \\\mathbb{R}^3\\, where pictures are harder to draw:
 >
 > \\ \begin{aligned} (1, 1, 0) \cdot (1, -1, 5) &= 1 - 1 + 0 \\ &= 0, \end{aligned} \\
 >
@@ -235,7 +241,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 8 (Vectors that are not orthogonal)** \\ \begin{aligned} (1, 2) \cdot (1, 1) &= 1 \cdot 1 + 2 \cdot 1 \\ &= 3 \\ &\ne 0, \end{aligned} \\
+> **Example 9 (Vectors that are not orthogonal)** \\ \begin{aligned} (1, 2) \cdot (1, 1) &= 1 \cdot 1 + 2 \cdot 1 \\ &= 3 \\ &\ne 0, \end{aligned} \\
 >
 > so \\(1, 2)\\ and \\(1, 1)\\ are not orthogonal.
 
@@ -249,7 +255,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 9 (The length of a vector)** For \\\tilde{x}= (3, 4)\\:
+> **Example 10 (The length of a vector)** For \\\tilde{x}= (3, 4)\\:
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} &= \sqrt{3^2 + 4^2} && \text{(definition of the norm)} \\ &= \sqrt{25} && \text{(square and add)} \\ &= 5 \end{aligned} \\
 >
@@ -261,7 +267,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 10 (A unit vector and a vector that is not one)** For \\\tilde{x}= (0.6, 0.8)\\:
+> **Example 11 (A unit vector and a vector that is not one)** For \\\tilde{x}= (0.6, 0.8)\\:
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} &= \sqrt{0.6^2 + 0.8^2} && \text{(definition of the norm)} \\ &= \sqrt{0.36 + 0.64} && \text{(square)} \\ &= \sqrt{1} && \text{(add)} \\ &= 1 && \text{(take the square root)} \end{aligned} \\
 >
@@ -299,13 +305,13 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> *Remark 8* (Distance from the origin). The distance from the origin \\\tilde{0}\\ to a vector \\\tilde{x}\\ is the norm of \\\tilde{x}\\:
+> *Remark 9* (Distance from the origin). The distance from the origin \\\tilde{0}\\ to a vector \\\tilde{x}\\ is the norm of \\\tilde{x}\\:
 >
 > \\ \begin{aligned} d(\tilde{x}, \tilde{0}) &= \mathopen{}\left\lVert\tilde{x}- \tilde{0}\right\rVert\mathclose{} \\ &= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \end{aligned} \\
 >
 > ([Goodfellow et al. 2016, 39](#ref-goodfellow2016deep)).
 >
-> For example, the distance from \\\tilde{0}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 9](#exm-euclidean-norm).
+> For example, the distance from \\\tilde{0}\\ to \\(3, 4)\\ is \\\mathopen{}\left\lVert(3, 4)\right\rVert\mathclose{} = 5\\, as in [Example 10](#exm-euclidean-norm).
 
 > **NOTE:**
 >
@@ -315,7 +321,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 11 (Indicator vectors are orthonormal)** The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Definition 12](#def-indicator-vector)) form an orthonormal set. By [Theorem 2](#thm-indicator-selection), \\\tilde{e}\_i \cdot \tilde{e}\_j\\ is entry \\i\\ of \\\tilde{e}\_j\\, which is \\1\\ if \\i = j\\ and \\0\\ if \\i \neq j\\. For \\p = 2\\:
+> **Example 12 (Indicator vectors are orthonormal)** The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \ldots, \tilde{e}\_p\\ ([Definition 12](#def-indicator-vector)) form an orthonormal set. By [Theorem 2](#thm-indicator-selection), \\\tilde{e}\_i \cdot \tilde{e}\_j\\ is entry \\i\\ of \\\tilde{e}\_j\\, which is \\1\\ if \\i = j\\ and \\0\\ if \\i \neq j\\. For \\p = 2\\:
 >
 > \\ \begin{aligned} \tilde{e}\_1 \cdot \tilde{e}\_1 &= 1 \cdot 1 + 0 \cdot 0 \\ &= 1, \end{aligned} \\
 >
@@ -327,7 +333,7 @@ The dot product has a different generalization for two matrices; see [wikipedia]
 
 > **NOTE:**
 >
-> **Example 12 (Two ways to fail to be orthonormal)**  
+> **Example 13 (Two ways to fail to be orthonormal)**  
 >
 > - \\(1, 1)\\ and \\(1, -1)\\ are orthogonal, since \\1 \cdot 1 + 1 \cdot(-1) = 0\\, but not orthonormal: \\(1, 1) \cdot (1, 1) = 2 \ne 1\\.
 >
