@@ -109,6 +109,8 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.js"></script>
+<link href="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -227,25 +229,15 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-exr.callout {
-  border-left-color: #FFA500;
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
 }
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
 }
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -256,6 +248,36 @@ div.callout-proof.callout-style-default .callout-header {
 div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -287,16 +309,6 @@ div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-solution.callout {
   border-left-color: #4E342E;
 }
@@ -307,25 +319,15 @@ div.callout-solution .callout-toggle::before {  background-image: url('data:imag
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
+div.callout-def.callout {
+  border-left-color: #1B5E20;
 }
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
 }
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -912,7 +914,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 20:27:09 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 23:18:59 (PDT)</p>
     </div>
   </div>
   
@@ -942,12 +944,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a> (Sum of subspaces)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-subspace-sum" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Sum of subspaces)</strong></span> The <strong>sum</strong> of two subspaces <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>) is the set of all sums of a vector from <span class="math inline">\(\mathcal{S}_1\)</span> and a vector from <span class="math inline">\(\mathcal{S}_2\)</span>:</p>
 <p><span class="math display">\[
@@ -959,44 +967,62 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;1</a> (Two lines sum to a plane)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-subspace-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Two lines sum to a plane)</strong></span> Let <span class="math inline">\(\mathcal{S}_1 = \operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}_2 = \operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span>, two lines in <span class="math inline">\(\mathbb{R}^3\)</span>. A vector of <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> has the form <span class="math inline">\(a\,(1, 0, 0) + b\,(0, 1, 0) = (a, b, 0)\)</span>, and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> can be any numbers, so <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-sum-not-union" class="quarto-xref">Example&nbsp;2</a> (The sum is not the union)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-sum-not-union" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (The sum is not the union)</strong></span> For the two lines in <a href="#exm-subspace-sum" class="quarto-xref">Example&nbsp;1</a>, the union <span class="math inline">\(\mathcal{S}_1 \cup \mathcal{S}_2\)</span> contains <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((0, 1, 0)\)</span> but not their sum <span class="math inline">\((1, 1, 0)\)</span>: every multiple of <span class="math inline">\((1, 0, 0)\)</span> has second entry <span class="math inline">\(0\)</span>, and every multiple of <span class="math inline">\((0, 1, 0)\)</span> has first entry <span class="math inline">\(0\)</span>. So the union is not closed under addition and is not a subspace, while the sum, the whole plane <span class="math inline">\(z = 0\)</span>, is.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a> (Sums and intersections of subspaces are subspaces)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-sum-intersection-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Sums and intersections of subspaces are subspaces)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>), then <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (<a href="#def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1005,7 +1031,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Both <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> contain <span class="math inline">\(\tilde{0}\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a>).</p>
@@ -1037,12 +1063,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-sum-intersection-subspace" class="quarto-xref">Example&nbsp;3</a> (Two planes in <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-sum-intersection-subspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Two planes in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, and <span class="math inline">\(\mathcal{S}_2 = \mathopen{}\left\{(0, b, c) : b, c \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(x = 0\)</span>.</p>
 <ul>
@@ -1053,12 +1085,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a> (The dimension of a sum of subspaces)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-dim-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (The dimension of a sum of subspaces)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, then</p>
 <p><span class="math display">\[
@@ -1069,8 +1107,8 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1079,7 +1117,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>All three sets in the formula are subspaces (<a href="#thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a>), so each has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>). Let <span class="math inline">\(k = \dim(\mathcal{S}_1 \cap \mathcal{S}_2)\)</span>, <span class="math inline">\(d_1 = \dim(\mathcal{S}_1)\)</span> and <span class="math inline">\(d_2 = \dim(\mathcal{S}_2)\)</span>.</p>
@@ -1116,12 +1154,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-dim-sum" class="quarto-xref">Example&nbsp;4</a> (Two planes in <span class="math inline">\(\mathbb{R}^3\)</span>, by dimension)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-dim-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Two planes in <span class="math inline">\(\mathbb{R}^3\)</span>, by dimension)</strong></span> For the planes <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(x = 0\)</span> in <a href="#exm-sum-intersection-subspace" class="quarto-xref">Example&nbsp;3</a>, each has dimension <span class="math inline">\(2\)</span>: the plane <span class="math inline">\(z = 0\)</span> has basis <span class="math inline">\((1, 0, 0), (0, 1, 0)\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>), and the plane <span class="math inline">\(x = 0\)</span> has basis <span class="math inline">\((0, 1, 0), (0, 0, 1)\)</span> by the same argument. Their intersection, the <span class="math inline">\(y\)</span>-axis <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span>, has dimension <span class="math inline">\(1\)</span>, because the single nonzero vector <span class="math inline">\((0, 1, 0)\)</span> is linearly independent (<span class="math inline">\(c\,(0, 1, 0) = (0, c, 0)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c = 0\)</span>) and so is a basis of it. <a href="#thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a> gives</p>
 <p><span class="math display">\[
@@ -1136,12 +1180,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-cor no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-cor no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cor</span><a href="#cor-dim-subadditive" class="quarto-xref">Corollary&nbsp;1</a> (The dimension of a sum is at most the sum of the dimensions)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="cor-dim-subadditive" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (The dimension of a sum is at most the sum of the dimensions)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, then</p>
 <p><span class="math display">\[
@@ -1152,8 +1202,8 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1162,7 +1212,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#thm-dim-sum" class="quarto-xref">Theorem&nbsp;2</a>, the two sides differ by <span class="math inline">\(\dim(\mathcal{S}_1 \cap \mathcal{S}_2) \ge 0\)</span>. That dimension is <span class="math inline">\(0\)</span> exactly when a basis of the intersection is the empty list, that is, when the intersection is the span of the empty list, <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</p>
@@ -1170,12 +1220,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-dim-subadditive" class="quarto-xref">Example&nbsp;5</a> (Equality and strict inequality)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-dim-subadditive" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Equality and strict inequality)</strong></span> &nbsp;</p>
 <ul>
@@ -1207,12 +1263,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-rank-subadditive" class="quarto-xref">Theorem&nbsp;3</a> (Rank is subadditive)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-rank-subadditive" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Rank is subadditive)</strong></span> For <span class="math inline">\(m \times n\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span>,</p>
 <p><span class="math display">\[
@@ -1223,8 +1285,8 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1233,7 +1295,7 @@ a &amp;= b \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{C}(\mathbf{A} + \mathbf{B}) \subseteq \mathcal{C}(\mathbf{A}) + \mathcal{C}(\mathbf{B})\)</span>.</strong> Any vector of <span class="math inline">\(\mathcal{C}(\mathbf{A} + \mathbf{B})\)</span> is <span class="math inline">\((\mathbf{A} + \mathbf{B})\,\tilde{x}\)</span> for some <span class="math inline">\(\tilde{x} \in \mathbb{R}^n\)</span> (<a href="./linear-algebra-rank-nullity.html#def-column-space">Definition&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\((\mathbf{A} + \mathbf{B})\,\tilde{x} = \mathbf{A} \tilde{x} + \mathbf{B} \tilde{x}\)</span> (<a href="./linear-algebra-matrices.html#thm-matmul-distrib">Theorem&nbsp;6 in Matrices</a>, with <span class="math inline">\(\tilde{x}\)</span> as an <span class="math inline">\(n \times 1\)</span> matrix), a vector of <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> plus a vector of <span class="math inline">\(\mathcal{C}(\mathbf{B})\)</span>.</p>
@@ -1258,12 +1320,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-rank-subadditive" class="quarto-xref">Example&nbsp;6</a> (Subadditivity with equality and without)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-rank-subadditive" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Subadditivity with equality and without)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>. Each has one nonzero column and one zero column. The nonzero column on its own is linearly independent (<span class="math inline">\(c\,\tilde{v} = \tilde{0}_2\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}_2\)</span> forces <span class="math inline">\(c = 0\)</span>), and the two columns together are not, since <span class="math inline">\(1\)</span> times the zero column is <span class="math inline">\(\tilde{0}_2\)</span>; so each matrix has rank <span class="math inline">\(1\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>). By the same argument, <span class="math inline">\(-\mathbf{A}\)</span> has rank <span class="math inline">\(1\)</span>.</p>
 <ul>
@@ -1274,12 +1342,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-direct-sum" class="quarto-xref">Definition&nbsp;2</a> (Direct sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-direct-sum" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Direct sum)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span>, <span class="math inline">\(\mathcal{S}_2\)</span> and <span class="math inline">\(\mathcal{V}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>. <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are <strong>complementary</strong> in <span class="math inline">\(\mathcal{V}\)</span> if</p>
 <p><span class="math display">\[
@@ -1292,12 +1366,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-direct-sum" class="quarto-xref">Example&nbsp;7</a> (<span class="math inline">\(\mathbb{R}^3\)</span> is a plane plus a line)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-direct-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (<span class="math inline">\(\mathbb{R}^3\)</span> is a plane plus a line)</strong></span> Let <span class="math inline">\(\mathcal{S}_1 = \mathopen{}\left\{(a, b, 0) : a, b \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, and <span class="math inline">\(\mathcal{S}_2 = \mathopen{}\left\{(0, 0, c) : c \in \mathbb{R}\right\}\mathclose{}\)</span>, the <span class="math inline">\(z\)</span>-axis.</p>
 <ul>
@@ -1309,12 +1389,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-not-direct-sum" class="quarto-xref">Example&nbsp;8</a> (Two planes that sum to <span class="math inline">\(\mathbb{R}^3\)</span> but not directly)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-not-direct-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (Two planes that sum to <span class="math inline">\(\mathbb{R}^3\)</span> but not directly)</strong></span> The planes <span class="math inline">\(z = 0\)</span> and <span class="math inline">\(x = 0\)</span> sum to <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="#exm-sum-intersection-subspace" class="quarto-xref">Example&nbsp;3</a>), but they share the <span class="math inline">\(y\)</span>-axis, so they are not complementary, and <span class="math inline">\(\mathbb{R}^3\)</span> is not their direct sum. The shared line shows up as more than one way to split a vector:</p>
 <p><span class="math display">\[
@@ -1328,12 +1414,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a> (Three ways to recognize a direct sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-direct-sum-equiv" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (Three ways to recognize a direct sum)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2\)</span>. The following statements are equivalent:</p>
 <ol type="1">
@@ -1345,8 +1437,8 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1355,7 +1447,7 @@ a &amp;= b \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2\)</span> is given, statement 1 says exactly that <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>.</p>
@@ -1387,12 +1479,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-direct-sum-equiv" class="quarto-xref">Example&nbsp;9</a> (Checking the three statements)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-direct-sum-equiv" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (Checking the three statements)</strong></span> For the plane <span class="math inline">\(z = 0\)</span> and the <span class="math inline">\(z\)</span>-axis in <a href="#exm-direct-sum" class="quarto-xref">Example&nbsp;7</a>:</p>
 <ul>
@@ -1426,24 +1524,36 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-projection" class="quarto-xref">Definition&nbsp;3</a> (Projection onto a subspace along a complement)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-projection" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>), and let <span class="math inline">\(\tilde{y} \in \mathbb{R}^p\)</span>. By <a href="#thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\tilde{y} = \tilde{u} + \tilde{v}\)</span> for exactly one <span class="math inline">\(\tilde{u} \in \mathcal{S}\)</span> and <span class="math inline">\(\tilde{v} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\tilde{u}\)</span> is the <strong>projection</strong> of <span class="math inline">\(\tilde{y}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear">(<a href="#ref-banerjee2014linear" role="doc-biblioref">Banerjee and Roy 2014</a>, Definition 6.3, p.&nbsp;163)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-projection" class="quarto-xref">Example&nbsp;10</a> (The projection depends on the complement)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-projection" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (The projection depends on the complement)</strong></span> Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 0)\right\}\mathclose{}\)</span>, the horizontal axis in <span class="math inline">\(\mathbb{R}^2\)</span>, and let <span class="math inline">\(\tilde{y} = (3, 2)\)</span>.</p>
 <ul>
@@ -1465,12 +1575,18 @@ a &amp;= b \\
 </section>
 <section id="sec-orthogonal-complements" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="sec-orthogonal-complements"><span class="header-section-number">2</span> Orthogonal complements</h2>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-dot-linear" class="quarto-xref">Theorem&nbsp;5</a> (The dot product is linear in each slot)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-dot-linear" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (The dot product is linear in each slot)</strong></span> For vectors <span class="math inline">\(\tilde{x}, \tilde{u}, \tilde{w} \in \mathbb{R}^p\)</span> and numbers <span class="math inline">\(a, b\)</span>,</p>
 <p><span class="math display">\[
@@ -1486,8 +1602,8 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1496,7 +1612,7 @@ a &amp;= b \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Second slot.</strong></p>
@@ -1551,12 +1667,18 @@ a &amp;= b \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-dot-linear" class="quarto-xref">Example&nbsp;11</a> (Splitting a dot product)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-dot-linear" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Splitting a dot product)</strong></span> Let <span class="math inline">\(\tilde{x} = (1, 2)\)</span>, <span class="math inline">\(\tilde{u} = (3, 0)\)</span>, <span class="math inline">\(\tilde{w} = (0, 1)\)</span>, <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = -1\)</span>. Directly, <span class="math inline">\(a\,\tilde{u} + b\,\tilde{w} = (6, -1)\)</span> and</p>
 <p><span class="math display">\[
@@ -1577,12 +1699,18 @@ a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}) &amp;= 2 \cdot 3
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a> (Orthogonal complement)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-orthogonal-complement" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;13 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
 <p><span class="math display">\[
@@ -1595,12 +1723,18 @@ a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}) &amp;= 2 \cdot 3
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-orthogonal-complement" class="quarto-xref">Example&nbsp;12</a> (Orthogonal complements in <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-orthogonal-complement" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Orthogonal complements in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
 <ul>
@@ -1633,32 +1767,44 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-orthogonal-complement-any-set" class="quarto-xref">Remark&nbsp;1</a> (The orthogonal complement of a set that is not a subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-orthogonal-complement-any-set" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (The orthogonal complement of a set that is not a subspace). </span><span class="math inline">\(\mathcal{X}\)</span> in <a href="#def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a> need not be a subspace.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a> (An orthogonal complement is a subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-orthogonal-complement-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (An orthogonal complement is a subspace)</strong></span> For any set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span>, <span class="math inline">\(\mathcal{X}^\perp\)</span> (<a href="#def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1667,7 +1813,7 @@ u_1 &amp;= u_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{X}^\perp\)</span> is not empty:</p>
@@ -1711,12 +1857,18 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-orthogonal-complement-subspace" class="quarto-xref">Example&nbsp;13</a> (The complement of a single vector is a line)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-orthogonal-complement-subspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (The complement of a single vector is a line)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> is not a subspace: <span class="math inline">\(2\,(1, 2) = (2, 4)\)</span> is not in it. Its orthogonal complement is</p>
 <p><span class="math display">\[
@@ -1738,12 +1890,18 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a> (The orthogonal complement of a column space is a null space)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-complement-null-space" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (The orthogonal complement of a column space is a null space)</strong></span> For any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span>,</p>
 <p><span class="math display">\[
@@ -1753,8 +1911,8 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1763,7 +1921,7 @@ u_1 &amp;= u_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_n\)</span> be the columns of <span class="math inline">\(\mathbf{A}\)</span>, so <span class="math inline">\(\tilde{a}_j = (a_{1j}, \ldots, a_{mj})\)</span>. For <span class="math inline">\(\tilde{x} \in \mathbb{R}^m\)</span>, entry <span class="math inline">\(j\)</span> of <span class="math inline">\({\mathbf{A}}^{\top} \tilde{x}\)</span> is</p>
@@ -1816,12 +1974,18 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-complement-null-space" class="quarto-xref">Example&nbsp;14</a> (The complement of the column space in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-complement-null-space" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (The complement of the column space in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(\mathcal{C}(\mathbf{A}) = \operatorname{span}\mathopen{}\left\{(1, 3)\right\}\mathclose{}\)</span> (1). <a href="./linear-algebra-rank-nullity.html#exm-null-space">Example&nbsp;3 in Column Space, Null Space and Rank-Nullity</a> found <span class="math inline">\(\mathcal{N}({\mathbf{A}}^{\top}) = \operatorname{span}\mathopen{}\left\{(-3, 1)\right\}\mathclose{}\)</span>, so by <a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a> this line is <span class="math inline">\(\mathcal{C}(\mathbf{A})^\perp\)</span>. Directly, for any <span class="math inline">\(c\)</span>,</p>
 <p><span class="math display">\[
@@ -1841,12 +2005,18 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-orthogonal-direct-sum" class="quarto-xref">Theorem&nbsp;8</a> (A subspace and its orthogonal complement make up the whole space)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-orthogonal-direct-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (A subspace and its orthogonal complement make up the whole space)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Then</p>
 <ol type="1">
@@ -1859,8 +2029,8 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1869,7 +2039,7 @@ u_1 &amp;= u_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>), so it has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>).</p>
@@ -1926,12 +2096,18 @@ u_1 &amp;= u_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a> (Splitting a vector of <span class="math inline">\(\mathbb{R}^3\)</span> along a line and its complement)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-orthogonal-direct-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Splitting a vector of <span class="math inline">\(\mathbb{R}^3\)</span> along a line and its complement)</strong></span> Let <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span>. A single nonzero vector is linearly independent (<span class="math inline">\(c\,\tilde{v} = \tilde{0}\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span> forces <span class="math inline">\(c = 0\)</span>), so <span class="math inline">\((1, 1, 0)\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\dim(\mathcal{S}) = 1\)</span>. A vector <span class="math inline">\(\tilde{u}\)</span> is in <span class="math inline">\(\mathcal{S}^\perp\)</span> exactly when <span class="math inline">\(u_1 + u_2 = 0\)</span>: that condition says <span class="math inline">\((1, 1, 0) \cdot \tilde{u} = 0\)</span>, and then</p>
 <p><span class="math display">\[
@@ -1973,12 +2149,18 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> (The orthogonal complement of the orthogonal complement)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-double-complement" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (The orthogonal complement of the orthogonal complement)</strong></span> For any subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span>,</p>
 <p><span class="math display">\[
@@ -1988,8 +2170,8 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1998,7 +2180,7 @@ a &amp;= c \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp\)</span>.</strong> Take <span class="math inline">\(\tilde{s} \in \mathcal{S}\)</span> and any <span class="math inline">\(\tilde{v} \in \mathcal{S}^\perp\)</span>. By <a href="#def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a>, <span class="math inline">\(\tilde{s} \cdot \tilde{v} = 0\)</span>, so <span class="math inline">\(\tilde{v} \cdot \tilde{s} = 0\)</span> too (<a href="./linear-algebra-vectors.html#thm-lincom-symmetric">Theorem&nbsp;1 in Vectors</a>). So <span class="math inline">\(\tilde{s}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}^\perp\)</span>, that is, <span class="math inline">\(\tilde{s} \in (\mathcal{S}^\perp)^\perp\)</span>.</p>
@@ -2021,12 +2203,18 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-double-complement" class="quarto-xref">Example&nbsp;16</a> (Back to the line)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-double-complement" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Back to the line)</strong></span> In <a href="#exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \tilde{w} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;11 in Matrices</a>), <span class="math inline">\(\tilde{w} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
 <p><span class="math display">\[
@@ -2039,12 +2227,18 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-double-complement-fails" class="quarto-xref">Example&nbsp;17</a> (A set that is not a subspace does not come back)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-double-complement-fails" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (A set that is not a subspace does not come back)</strong></span> The one-element set <span class="math inline">\(\mathcal{X} = \mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> is not a subspace. Its orthogonal complement is the same as that of <span class="math inline">\(\mathcal{S}\)</span> in <a href="#exm-double-complement" class="quarto-xref">Example&nbsp;16</a>, since both are defined by the single condition <span class="math inline">\(u_1 + u_2 = 0\)</span>, so <span class="math inline">\((\mathcal{X}^\perp)^\perp = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span>, which contains <span class="math inline">\((2, 2, 0) \notin \mathcal{X}\)</span>. <a href="#thm-double-complement" class="quarto-xref">Theorem&nbsp;9</a> needs <span class="math inline">\(\mathcal{S}\)</span> to be a subspace.</p>
 </div>
@@ -2054,12 +2248,18 @@ a &amp;= c \\
 </section>
 <section id="sec-fundamental-theorem" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="sec-fundamental-theorem"><span class="header-section-number">3</span> The fundamental theorem of linear algebra</h2>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-fundamental-subspaces" class="quarto-xref">Theorem&nbsp;10</a> (Fundamental theorem of linear algebra)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-fundamental-subspaces" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (Fundamental theorem of linear algebra)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> matrix with <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = r\)</span>. Then</p>
 <ol type="1">
@@ -2078,8 +2278,8 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2088,7 +2288,7 @@ a &amp;= c \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> The first equation is <a href="#thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>. <span class="math inline">\(\mathcal{C}(\mathbf{A})\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^m\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), so</p>
@@ -2119,12 +2319,18 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-fundamental-subspaces" class="quarto-xref">Example&nbsp;18</a> (The four subspaces of the matrix in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-fundamental-subspaces" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (The four subspaces of the matrix in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>)</strong></span> For <span class="math inline">\(\mathbf{A}\)</span> in <a href="./linear-algebra-rank-nullity.html#exm-column-space">Example&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>, <span class="math inline">\(m = 2\)</span>, <span class="math inline">\(n = 3\)</span> and <span class="math inline">\(r = 1\)</span> (<a href="./linear-algebra-rank-nullity.html#exm-rank-dim">Example&nbsp;10 in Column Space, Null Space and Rank-Nullity</a>).</p>
 <ul>

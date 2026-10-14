@@ -85,7 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.js"></script>
+<link href="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -199,45 +201,15 @@ cookieconsent.run({
 <script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
 <script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
@@ -249,6 +221,36 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-proof.callout {
   border-left-color: #37474F;
 }
@@ -258,6 +260,16 @@ div.callout-proof.callout-style-default .callout-header {
 div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-lem.callout {
   border-left-color: #1565C0;
@@ -288,16 +300,6 @@ div.callout-solution.callout-style-default .callout-header {
 div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -863,7 +865,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 20:27:09 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 23:18:59 (PDT)</p>
     </div>
   </div>
   
@@ -874,12 +876,18 @@ window.Quarto = {
 
 </header><section id="sec-polynomials" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="sec-polynomials">
 <span class="header-section-number">1</span> Polynomials</h2>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-polynomial-degree" class="quarto-xref">Exercise&nbsp;1</a> (Reading a polynomial)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-polynomial-degree" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Reading a polynomial)</strong></span> Let <span class="math inline">\(f(x) = 3x^4 - x + 7\)</span>.</p>
 <ol type="1">
@@ -890,17 +898,17 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-polynomial-degree" class="quarto-xref">Solution&nbsp;1</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-polynomial-degree" class="proof solution">
 <p><span class="proof-title"><em>Solution 1</em>. </span></p>
@@ -912,24 +920,36 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-constant-function" class="quarto-xref">Definition&nbsp;1</a> (Constant function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-constant-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Constant function)</strong></span> A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : A \to B\)</span> is <strong>constant</strong> if there is some <span class="math inline">\(c \in B\)</span> with <span class="math inline">\(f(x) = c\)</span> for all <span class="math inline">\(x \in A\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-constant-function" class="quarto-xref">Example&nbsp;1</a> (Constant and non-constant functions)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-constant-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Constant and non-constant functions)</strong></span> &nbsp;</p>
 <ul>
@@ -947,12 +967,18 @@ Source: OpenStax, Calculus Volume 1, section 1.2 "Basic Classes of Functions"
 (online text, https://openstax.org/books/calculus-volume-1/pages/1-2-basic-classes-of-functions;
 print page number not verified).
 -->
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-polynomial" class="quarto-xref">Definition&nbsp;2</a> (Polynomial)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-polynomial" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Polynomial)</strong></span> A <strong>polynomial</strong> (in one variable <span class="math inline">\(x\)</span>) is a <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f : \mathbb{R}\to \mathbb{R}\)</span> that can be written as <span class="math display">\[
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
@@ -961,12 +987,18 @@ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-polynomial-nonzero" class="quarto-xref">Remark&nbsp;1</a> (Constant and zero polynomials)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-polynomial-nonzero" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (Constant and zero polynomials). </span>A <a href="#def-constant-function">constant function</a> <span class="math inline">\(f(x) = 7\)</span> is a polynomial with <span class="math inline">\(n = 0\)</span> and <span class="math inline">\(a_0 = 7\)</span>. The requirement <span class="math inline">\(a_n \ne 0\)</span> means this definition covers nonzero polynomials only: the zero function <span class="math inline">\(f(x) = 0\)</span> is excluded here, because it has no nonzero coefficient to serve as <span class="math inline">\(a_n\)</span>.</p>
 </div>
@@ -974,24 +1006,36 @@ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 </div>
 </div>
 <!-- Source: same as _def-polynomial.qmd (OpenStax Calculus Volume 1, section 1.2). -->
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-polynomial-degree" class="quarto-xref">Definition&nbsp;3</a> (Degree of a polynomial)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-polynomial-degree" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Degree of a polynomial)</strong></span> Let <span class="math inline">\(f(x) = a_n x^n + \cdots + a_1 x + a_0\)</span> be a <a href="#def-polynomial">polynomial</a> with <span class="math inline">\(a_n \ne 0\)</span>. The integer <span class="math inline">\(n\)</span> is the <strong>degree</strong> of <span class="math inline">\(f\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-polynomial-degree" class="quarto-xref">Example&nbsp;2</a> (Degrees of some polynomials)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-polynomial-degree" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (Degrees of some polynomials)</strong></span> &nbsp;</p>
 <ul>
@@ -1006,24 +1050,36 @@ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 </div>
 </div>
 <!-- Source: same as _def-polynomial.qmd (OpenStax Calculus Volume 1, section 1.2). -->
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-polynomial-leading-coefficient" class="quarto-xref">Definition&nbsp;4</a> (Leading coefficient)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-polynomial-leading-coefficient" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Leading coefficient)</strong></span> Let <span class="math inline">\(f(x) = a_n x^n + \cdots + a_1 x + a_0\)</span> be a <a href="#def-polynomial">polynomial</a> of <a href="#def-polynomial-degree">degree</a> <span class="math inline">\(n\)</span>. The constant <span class="math inline">\(a_n\)</span> is the <strong>leading coefficient</strong> of <span class="math inline">\(f\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-leading-coefficient" class="quarto-xref">Example&nbsp;3</a> (Leading coefficients)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-leading-coefficient" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Leading coefficients)</strong></span> &nbsp;</p>
 <ul>
@@ -1036,24 +1092,36 @@ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-quadratic-cubic" class="quarto-xref">Definition&nbsp;5</a> (Quadratic and cubic polynomials)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-quadratic-cubic" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Quadratic and cubic polynomials)</strong></span> A <a href="#def-polynomial">polynomial</a> of <a href="#def-polynomial-degree">degree</a> <span class="math inline">\(2\)</span>, <span class="math inline">\(f(x) = a_2 x^2 + a_1 x + a_0\)</span> with <span class="math inline">\(a_2 \ne 0\)</span>, is a <strong>quadratic</strong> polynomial. A polynomial of degree <span class="math inline">\(3\)</span> is a <strong>cubic</strong> polynomial.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-quadratic-cubic" class="quarto-xref">Example&nbsp;4</a> (Quadratic and cubic polynomials)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-quadratic-cubic" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Quadratic and cubic polynomials)</strong></span> &nbsp;</p>
 <ul>
@@ -1073,24 +1141,36 @@ f(x) &amp;= (x - 2)^2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-parabola" class="quarto-xref">Definition&nbsp;6</a> (Parabola)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-parabola" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Parabola)</strong></span> A <strong>parabola</strong> is the <a href="./sets-functions.html#def-graph">graph</a> of a quadratic polynomial (<a href="#def-quadratic-cubic" class="quarto-xref">Definition&nbsp;5</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-parabola" class="quarto-xref">Example&nbsp;5</a> (The parabola <span class="math inline">\(y = x^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-parabola" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (The parabola <span class="math inline">\(y = x^2\)</span>)</strong></span> The graph of <span class="math inline">\(f(x) = x^2\)</span> is a parabola. It contains the points <span class="math inline">\((-1, 1)\)</span>, <span class="math inline">\((0, 0)\)</span> and <span class="math inline">\((2, 4)\)</span>, and its lowest point is <span class="math inline">\((0, 0)\)</span>, since <span class="math inline">\(x^2 \ge 0\)</span> for every <span class="math inline">\(x\)</span>.</p>
 </div>
@@ -1099,12 +1179,18 @@ f(x) &amp;= (x - 2)^2 \\
 </div>
 </section><section id="sec-affine-linear-functions" class="level2" data-number="2"><h2 data-number="2" class="anchored" data-anchor-id="sec-affine-linear-functions">
 <span class="header-section-number">2</span> Affine and linear functions of one variable</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-affine-function" class="quarto-xref">Definition&nbsp;7</a> (Affine function of one variable)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-affine-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Affine function of one variable)</strong></span> A <a href="./sets-functions.html#def-function">function</a> <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> is <strong>affine</strong> if there are numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> such that</p>
 <p><span class="math display">\[f(x) = m x + b \quad \text{for all } x \in \mathbb{R}\]</span></p>
@@ -1113,12 +1199,18 @@ f(x) &amp;= (x - 2)^2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-linear-function" class="quarto-xref">Definition&nbsp;8</a> (Linear function of one variable)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-linear-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Linear function of one variable)</strong></span> A function <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> is <strong>linear</strong> if it is affine (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;7</a>) with intercept <span class="math inline">\(0\)</span>; that is, if there is a number <span class="math inline">\(m\)</span> such that</p>
 <p><span class="math display">\[f(x) = m x \quad \text{for all } x \in \mathbb{R}\]</span></p>
@@ -1126,12 +1218,18 @@ f(x) &amp;= (x - 2)^2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-affine-function-props" class="quarto-xref">Theorem&nbsp;1</a> (Intercept and slope of an affine function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-affine-function-props" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Intercept and slope of an affine function)</strong></span> Let <span class="math inline">\(f(x) = m x + b\)</span> be an affine function (<a href="#def-affine-function" class="quarto-xref">Definition&nbsp;7</a>).</p>
 <ol type="1">
@@ -1144,8 +1242,8 @@ f(x) &amp;= (x - 2)^2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1154,7 +1252,7 @@ f(x) &amp;= (x - 2)^2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong></p>
@@ -1231,12 +1329,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-affine-function" class="quarto-xref">Example&nbsp;6</a> (An affine function, and a linear one)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-affine-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (An affine function, and a linear one)</strong></span> <span class="math inline">\(f(x) = 2x + 3\)</span> is affine with slope <span class="math inline">\(2\)</span> and intercept <span class="math inline">\(3\)</span>. By <a href="#thm-affine-function-props" class="quarto-xref">Theorem&nbsp;1</a>, <span class="math inline">\(f(0) = 3\)</span>, and each unit step in <span class="math inline">\(x\)</span> raises <span class="math inline">\(f\)</span> by <span class="math inline">\(2\)</span>: for example, <span class="math inline">\(f(1) = 5\)</span> and <span class="math inline">\(f(2) = 7\)</span>. Its intercept is not <span class="math inline">\(0\)</span>, so it is not linear.</p>
 <p><span class="math inline">\(g(x) = -\tfrac{1}{2} x\)</span> is affine with intercept <span class="math inline">\(0\)</span>, so it is linear: <span class="math inline">\(g(0) = 0\)</span>, and each unit step in <span class="math inline">\(x\)</span> lowers <span class="math inline">\(g\)</span> by <span class="math inline">\(\tfrac{1}{2}\)</span>.</p>
@@ -1244,12 +1348,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-linear-function-terminology" class="quarto-xref">Remark&nbsp;2</a> (Elementary algebra calls <span class="math inline">\(m x + b\)</span> “linear”)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-linear-function-terminology" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Elementary algebra calls <span class="math inline">\(m x + b\)</span> “linear”). </span>Elementary algebra usually calls <span class="math inline">\(f(x) = m x + b\)</span> a <em>linear function</em>, because its graph is a straight line. This site calls that an affine function and keeps “linear” for the case <span class="math inline">\(b = 0\)</span>, because that is the sense used in linear algebra, where a <a href="./linear-algebra-matrices.html#def-linear-map">linear map</a> must send <span class="math inline">\(0\)</span> to <span class="math inline">\(0\)</span> (<a href="./linear-algebra-matrices.html#thm-linear-map-zero">theorem</a>).</p>
 </div>
@@ -1258,12 +1368,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </section><section id="sec-sequence-limits" class="level2" data-number="3"><h2 data-number="3" class="anchored" data-anchor-id="sec-sequence-limits">
 <span class="header-section-number">3</span> Limits of sequences</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-sequence-limit" class="quarto-xref">Definition&nbsp;9</a> (Limit of a sequence)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-sequence-limit" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Limit of a sequence)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\((a_n)\)</span> of real numbers <strong>converges</strong> to a real number <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{n \to \infty} a_n = L\)</span> or <span class="math inline">\(a_n \to L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a natural number <span class="math inline">\(N\)</span> such that</p>
 <p><span class="math display">\[\mathopen{}\left|a_n - L\right|\mathclose{} &lt; \varepsilon\quad \text{for every } n \ge N.\]</span></p>
@@ -1272,12 +1388,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-sequence-limit" class="quarto-xref">Example&nbsp;7</a> (A convergent sequence and a divergent one)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-sequence-limit" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (A convergent sequence and a divergent one)</strong></span> &nbsp;</p>
 <ul>
@@ -1290,12 +1412,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-diverges-to-infinity" class="quarto-xref">Definition&nbsp;10</a> (Divergence of a sequence to infinity)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-diverges-to-infinity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Divergence of a sequence to infinity)</strong></span> A <a href="./sets-functions.html#def-sequence">sequence</a> <span class="math inline">\((a_n)\)</span> of real numbers <strong>diverges to <span class="math inline">\(\infty\)</span></strong>, written <span class="math inline">\(\lim_{n \to \infty} a_n = \infty\)</span>, if for every real number <span class="math inline">\(M\)</span> there is a natural number <span class="math inline">\(N\)</span> such that <span class="math inline">\(a_n &gt; M\)</span> for every <span class="math inline">\(n \ge N\)</span>.</p>
 </div>
@@ -1304,12 +1432,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </section><section id="exponentials-and-logarithms" class="level2" data-number="4"><h2 data-number="4" class="anchored" data-anchor-id="exponentials-and-logarithms">
 <span class="header-section-number">4</span> Exponentials and Logarithms</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-exponential-function" class="quarto-xref">Definition&nbsp;11</a> (Exponential function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-exponential-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11 (Exponential function)</strong></span> The <strong>exponential function</strong> <span class="math inline">\(\operatorname{exp}: \mathbb{R}\to (0, \infty)\)</span> is</p>
 <p><span class="math display">\[\operatorname{exp}\mathopen{}\left\{x\right\}\mathclose{} \stackrel{\text{def}}{=}\lim_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\]</span></p>
@@ -1318,12 +1452,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-exponential-function" class="quarto-xref">Example&nbsp;8</a> (Approximating <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-exponential-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (Approximating <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{}\)</span>)</strong></span> For <span class="math inline">\(x = 1\)</span>, the terms <span class="math inline">\(\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\)</span> are:</p>
 <table class="caption-top table">
@@ -1355,12 +1495,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-euler-number" class="quarto-xref">Definition&nbsp;12</a> (Euler’s number)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-euler-number" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Euler’s number)</strong></span> <strong>Euler’s number</strong> is</p>
 <p><span class="math display">\[e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\{1\right\}\mathclose{} = 2.71828\ldots\]</span></p>
@@ -1368,48 +1514,72 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-euler-number" class="quarto-xref">Example&nbsp;9</a> (Euler’s number is irrational)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-euler-number" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (Euler’s number is irrational)</strong></span> <span class="math inline">\(e = 2.71828\ldots\)</span> is an <a href="./notation.html#def-irrational-numbers">irrational number</a>, so no fraction equals it exactly. The fraction <span class="math inline">\(\frac{19}{7} = 2.714\ldots\)</span> is close, but <span class="math inline">\(\frac{19}{7} \ne e\)</span> (see <a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)">Wikipedia: e (mathematical constant)</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-natural-log" class="quarto-xref">Definition&nbsp;13</a> (Natural logarithm)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-natural-log" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 13 (Natural logarithm)</strong></span> For a real number <span class="math inline">\(a &gt; 0\)</span>, the <strong>natural logarithm</strong> of <span class="math inline">\(a\)</span>, written <span class="math inline">\(\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}\)</span>, is the real number <span class="math inline">\(y\)</span> with <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{y\right\}\mathclose{} = a\)</span>. The exponential function takes each positive value at exactly one input, so there is exactly one such <span class="math inline">\(y\)</span>, and <span class="math inline">\(\log : (0, \infty) \to \mathbb{R}\)</span> is the <a href="./sets-functions.html#def-inverse-function">inverse function</a> of <span class="math inline">\(\operatorname{exp}\)</span> (<a href="#def-exponential-function" class="quarto-xref">Definition&nbsp;11</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-log-notation" class="quarto-xref">Remark&nbsp;3</a> (Other notations for the natural logarithm)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-log-notation" class="proof remark">
 <p><span class="proof-title"><em>Remark 3</em> (Other notations for the natural logarithm). </span>In these notes, <span class="math inline">\(\operatorname{log}\mathopen{}\left\{x\right\}\mathclose{}\)</span> is always the natural logarithm, the logarithm with base <span class="math inline">\(e\)</span> (<a href="#def-euler-number" class="quarto-xref">Definition&nbsp;12</a>). Some sources write <span class="math inline">\(\ln x\)</span> for the natural logarithm and reserve <span class="math inline">\(\log x\)</span> for the logarithm with base 10.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-natural-log" class="quarto-xref">Example&nbsp;10</a> (Natural logarithms)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-natural-log" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (Natural logarithms)</strong></span> &nbsp;</p>
 <ul>
@@ -1424,12 +1594,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-real-power" class="quarto-xref">Definition&nbsp;14</a> (Power with a real exponent)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-real-power" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Power with a real exponent)</strong></span> For a real number <span class="math inline">\(a &gt; 0\)</span> and a real number <span class="math inline">\(b\)</span>,</p>
 <p><span class="math display">\[a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\{b \cdot\operatorname{log}\mathopen{}\left\{a\right\}\mathclose{}\right\}\mathclose{}.\]</span></p>
@@ -1438,12 +1614,18 @@ m &amp;= f(1) - f(0) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-real-power" class="quarto-xref">Example&nbsp;11</a> (Real powers, and <span class="math inline">\(e^x\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-real-power" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Real powers, and <span class="math inline">\(e^x\)</span>)</strong></span> &nbsp;</p>
 <ul>
@@ -1480,12 +1662,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-power-nonpositive-base" class="quarto-xref">Definition&nbsp;15</a> (Real powers of zero and of negative numbers)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-power-nonpositive-base" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Real powers of zero and of negative numbers)</strong></span> <a href="./algebra-basics.html#def-power">Definition&nbsp;4 in Equalities, Inequalities and Minimizers</a>, <a href="./algebra-basics.html#def-power-integer">Definition&nbsp;5 in Equalities, Inequalities and Minimizers</a> and <a href="#def-real-power" class="quarto-xref">Definition&nbsp;14</a> leave some powers <span class="math inline">\(b^c\)</span> with <span class="math inline">\(b \le 0\)</span> unassigned. We complete them as follows.</p>
 <ul>
@@ -1496,12 +1684,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-power-nonpositive-base" class="quarto-xref">Example&nbsp;12</a> (Powers of zero and of negative numbers)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-power-nonpositive-base" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Powers of zero and of negative numbers)</strong></span> &nbsp;</p>
 <ul>
@@ -1516,12 +1710,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-exp-log-inverse" class="quarto-xref">Theorem&nbsp;2</a> (<span class="math inline">\(\operatorname{exp}\)</span> and <span class="math inline">\(\operatorname{log}\)</span> are mutual inverses)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-exp-log-inverse" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (<span class="math inline">\(\operatorname{exp}\)</span> and <span class="math inline">\(\operatorname{log}\)</span> are mutual inverses)</strong></span> &nbsp;</p>
 <ol type="1">
@@ -1532,12 +1732,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-log-prod" class="quarto-xref">Theorem&nbsp;3</a> (Logarithm of a product)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-log-prod" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Logarithm of a product)</strong></span> If <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b &gt; 0\)</span>, then</p>
 <p><span class="math display">\[
@@ -1547,12 +1753,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-cor no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-cor no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cor</span><a href="#cor-log-quot" class="quarto-xref">Corollary&nbsp;1</a> (Logarithm of a quotient)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="cor-log-quot" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (Logarithm of a quotient)</strong></span> If <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b &gt; 0\)</span>, then</p>
 <p><span class="math display">\[\operatorname{log}\mathopen{}\left\{\frac{a}{b}\right\}\mathclose{} = \operatorname{log}\mathopen{}\left\{a\right\}\mathclose{} - \operatorname{log}\mathopen{}\left\{b\right\}\mathclose{}\]</span></p>
@@ -1560,8 +1772,8 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1570,7 +1782,7 @@ e^x
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b &gt; 0\)</span>, the quotient <span class="math inline">\(\frac{a}{b}\)</span> is positive, so <a href="#thm-log-prod" class="quarto-xref">Theorem&nbsp;3</a> applies to the product <span class="math inline">\(\frac{a}{b} \cdot b\)</span>:</p>
@@ -1589,12 +1801,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-log-exp" class="quarto-xref">Theorem&nbsp;4</a> (Logarithm of a power)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-log-exp" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (Logarithm of a power)</strong></span> If <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b \in \mathbb{R}\)</span>, then</p>
 <p><span class="math display">\[
@@ -1604,12 +1822,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-exp-sum" class="quarto-xref">Theorem&nbsp;5</a> (Exponential of a sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-exp-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Exponential of a sum)</strong></span> The exponential of a sum is equal to the product of the exponentials of its <a href="./algebra-sums.html#def-term">terms</a>:</p>
 <p><span class="math display">\[\operatorname{exp}\mathopen{}\left\{a+b\right\}\mathclose{} = \operatorname{exp}\mathopen{}\left\{a\right\}\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\{b\right\}\mathclose{}\]</span></p>
@@ -1617,24 +1841,36 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-exp-sum" class="quarto-xref">Example&nbsp;13</a> (Exponential of a sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-exp-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Exponential of a sum)</strong></span> With <span class="math inline">\(a = 2\)</span> and <span class="math inline">\(b = 3\)</span>, <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{2 + 3\right\}\mathclose{} = \operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{} \approx 148.41\)</span>, and <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-cor no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-cor no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cor</span><a href="#cor-exp-sum" class="quarto-xref">Corollary&nbsp;2</a> (Exponential of a difference)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="cor-exp-sum" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 2 (Exponential of a difference)</strong></span> The exponential of a difference is the exponential of the first term divided by the exponential of the second term:</p>
 <p><span class="math display">\[\operatorname{exp}\mathopen{}\left\{a-b\right\}\mathclose{} = \frac{\operatorname{exp}\mathopen{}\left\{a\right\}\mathclose{}}{\operatorname{exp}\mathopen{}\left\{b\right\}\mathclose{}}\]</span></p>
@@ -1642,24 +1878,36 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-exp-difference" class="quarto-xref">Example&nbsp;14</a> (Exponential of a difference)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-exp-difference" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (Exponential of a difference)</strong></span> With <span class="math inline">\(a = 5\)</span> and <span class="math inline">\(b = 2\)</span>, <span class="math inline">\(\operatorname{exp}\mathopen{}\left\{5 - 2\right\}\mathclose{} = \operatorname{exp}\mathopen{}\left\{3\right\}\mathclose{} \approx 20.09\)</span>, and <span class="math inline">\(\frac{\operatorname{exp}\mathopen{}\left\{5\right\}\mathclose{}}{\operatorname{exp}\mathopen{}\left\{2\right\}\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-power-one" class="quarto-xref">Theorem&nbsp;6</a> (Powers of 1 and first powers)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-power-one" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (Powers of 1 and first powers)</strong></span> For every <span class="math inline">\(b \in \mathbb{R}\)</span>,</p>
 <p><span class="math display">\[1^b = 1,\]</span></p>
@@ -1669,12 +1917,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-power-sum" class="quarto-xref">Theorem&nbsp;7</a> (Power of a sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-45" class="callout-45-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-power-sum" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (Power of a sum)</strong></span> If <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b, c \in \mathbb{R}\)</span>, then</p>
 <p><span class="math display">\[a^{b+c} = a^b \cdot a^c\]</span></p>
@@ -1682,12 +1936,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-power-sum" class="quarto-xref">Example&nbsp;15</a> (Power of a sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-power-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Power of a sum)</strong></span> With <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = 3\)</span>, and <span class="math inline">\(c = 4\)</span>,</p>
 <p><span class="math display">\[
@@ -1707,12 +1967,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-power-product" class="quarto-xref">Theorem&nbsp;8</a> (Power of a product)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-power-product" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Power of a product)</strong></span> If <span class="math inline">\(a, b &gt; 0\)</span> and <span class="math inline">\(c \in \mathbb{R}\)</span>, then</p>
 <p><span class="math display">\[(ab)^c = a^c \cdot b^c\]</span></p>
@@ -1721,12 +1987,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-power-product" class="quarto-xref">Example&nbsp;16</a> (Power of a product)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-power-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Power of a product)</strong></span> With <span class="math inline">\(a = 2\)</span>, <span class="math inline">\(b = 3\)</span>, and <span class="math inline">\(c = 2\)</span>,</p>
 <p><span class="math display">\[
@@ -1746,12 +2018,18 @@ e^x
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-double-exp" class="quarto-xref">Theorem&nbsp;9</a> (Power of a power)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-double-exp" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (Power of a power)</strong></span> If <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(b, c \in \mathbb{R}\)</span>, then</p>
 <p><span class="math display">\[
@@ -1765,12 +2043,18 @@ a^{bc}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-double-exp-negative-base" class="quarto-xref">Example&nbsp;17</a> (A negative base)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-double-exp-negative-base" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (A negative base)</strong></span> With <span class="math inline">\(a = -1\)</span>, <span class="math inline">\(b = 2\)</span>, and <span class="math inline">\(c = \frac{1}{2}\)</span>:</p>
 <p><span class="math display">\[
@@ -1799,12 +2083,18 @@ a^{bc}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-cor no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-cor no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cor</span><a href="#cor-exp-ab" class="quarto-xref">Corollary&nbsp;3</a> (Natural exponential of a product)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-51" class="callout-51-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="cor-exp-ab" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 3 (Natural exponential of a product)</strong></span> <span class="math display">\[
 \begin{aligned}
@@ -1817,12 +2107,18 @@ a^{bc}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-tarski-identities" class="quarto-xref">Remark&nbsp;4</a> (Tarski’s high school identities)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-52" class="callout-52-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-tarski-identities" class="proof remark">
 <p><span class="proof-title"><em>Remark 4</em> (Tarski’s high school identities). </span>Restricted to positive integers, the following results are <a href="https://en.wikipedia.org/wiki/Tarski%27s_high_school_algebra_problem">Tarski’s eleven “high school” identities</a>:</p>
 <ul>
@@ -1835,24 +2131,36 @@ a^{bc}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-tarski-incomplete" class="quarto-xref">Remark&nbsp;5</a> (Tarski’s identities are not complete)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-tarski-incomplete" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (Tarski’s identities are not complete). </span>Tarski asked whether every identity in <span class="math inline">\(+\)</span>, <span class="math inline">\(\times\)</span>, exponentiation and 1 that is true for all positive integers can be derived from the eleven identities in <a href="#rem-tarski-identities" class="quarto-xref">Remark&nbsp;4</a>. It cannot: Wilkie found an identity that is true for all positive integers but does not follow from them. So this list is a useful core, not a complete rulebook.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-contour-line" class="quarto-xref">Definition&nbsp;16</a> (Contour line)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-54" class="callout-54-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-contour-line" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Contour line)</strong></span> For a function <span class="math inline">\(g\)</span> of two real variables <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> and a number <span class="math inline">\(k\)</span>, the <strong>contour line</strong> of <span class="math inline">\(g\)</span> at height <span class="math inline">\(k\)</span> is the set of points where <span class="math inline">\(g\)</span> equals <span class="math inline">\(k\)</span>:</p>
 <p><span class="math display">\[\mathopen{}\left\{(b, c) : g(b, c) = k\right\}\mathclose{}\]</span></p>
@@ -1860,12 +2168,18 @@ a^{bc}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-contour-line" class="quarto-xref">Example&nbsp;18</a> (Contour lines of a bowl)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-contour-line" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Contour lines of a bowl)</strong></span> For <span class="math inline">\(g(b, c) = b^2 + c^2\)</span>, the contour line at height <span class="math inline">\(k = 4\)</span> is <span class="math inline">\(\mathopen{}\left\{(b, c) : b^2 + c^2 = 4\right\}\mathclose{}\)</span>, the circle of radius <span class="math inline">\(2\)</span> around <span class="math inline">\((0, 0)\)</span>: for example,</p>
 <p><span class="math display">\[
@@ -1886,41 +2200,53 @@ g(0, -2) &amp;= 0 + 4 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-contour-line-surface" class="quarto-xref">Remark&nbsp;6</a> (Contour lines on a plot of a surface)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-56" class="callout-56-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-contour-line-surface" class="proof remark">
 <p><span class="proof-title"><em>Remark 6</em> (Contour lines on a plot of a surface). </span>On a plot of the surface <span class="math inline">\(z = g(b, c)\)</span>, the <a href="#def-contour-line">contour line</a> is the curve along which the surface has height <span class="math inline">\(k\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-exp-vs-mult" class="quarto-xref">Exercise&nbsp;2</a> (Exponentiation versus multiplication)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-57" class="callout-57-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-exp-vs-mult" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2 (Exponentiation versus multiplication)</strong></span> For <span class="math inline">\(b,c \in \mathbb{R}\)</span>, when does <span class="math inline">\(b^c = bc\)</span>?</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-exp-vs-mult" class="quarto-xref">Solution&nbsp;2</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-exp-vs-mult" class="proof solution">
 <p><span class="proof-title"><em>Solution 2</em>. </span>We only count a pair <span class="math inline">\((b, c)\)</span> when <span class="math inline">\(b^c\)</span> is defined, so for <span class="math inline">\(b &lt; 0\)</span> we only consider integer <span class="math inline">\(c\)</span> (<a href="#def-power-nonpositive-base" class="quarto-xref">Definition&nbsp;15</a>). With that convention, <span class="math inline">\(bc = b^c\)</span> in each of the following cases:</p>
@@ -2103,29 +2429,35 @@ Figure&nbsp;2: <strong>Graph of <span class="math inline">\(b^c - b*c\)</span></
 </div>
 </figure>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-double-exponential" class="quarto-xref">Exercise&nbsp;3</a> (Repeated exponentiation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-59" class="callout-59-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-double-exponential" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Repeated exponentiation)</strong></span> For <span class="math inline">\(a \ge 0,~b,c \in \mathbb{R}\)</span>, when does <span class="math inline">\((a^b)^c = a^{(b^c)}\)</span>?</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-double-exponential" class="quarto-xref">Solution&nbsp;3</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-double-exponential" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span>Short answer: rarely (that’s all you need to know for this course).</p>

@@ -109,6 +109,8 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.js"></script>
+<link href="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -227,16 +229,6 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -246,66 +238,6 @@ div.callout-cnj.callout-style-default .callout-header {
 div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-def.callout {
   border-left-color: #1B5E20;
@@ -317,6 +249,56 @@ div.callout-def .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-prp.callout {
+  border-left-color: #827717;
+}
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
+}
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cor.callout {
   border-left-color: #00838F;
 }
@@ -326,6 +308,26 @@ div.callout-cor.callout-style-default .callout-header {
 div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-solution.callout {
+  border-left-color: #4E342E;
+}
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
+}
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -911,7 +913,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 20:27:09 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 23:18:59 (PDT)</p>
     </div>
   </div>
   
@@ -925,12 +927,18 @@ window.Quarto = {
 
 <section id="rank" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="rank"><span class="header-section-number">1</span> Rank</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a> (Linearly independent vectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-linearly-independent" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Linearly independent vectors)</strong></span> Vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> of the same length <span class="math inline">\(p\)</span> are <strong>linearly independent</strong> if the only numbers <span class="math inline">\(c_1, \ldots, c_k\)</span> with</p>
 <p><span class="math display">\[c_1 \tilde{v}_1 + \cdots + c_k \tilde{v}_k = \tilde{0}\]</span></p>
@@ -947,12 +955,18 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-linearly-independent" class="quarto-xref">Example&nbsp;1</a> (Independent and dependent pairs of vectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-linearly-independent" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Independent and dependent pairs of vectors)</strong></span> &nbsp;</p>
 <ul>
@@ -963,24 +977,36 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-rank" class="quarto-xref">Definition&nbsp;2</a> (Rank)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-rank" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Rank)</strong></span> The <strong>rank</strong> of a matrix <span class="math inline">\(\mathbf{A}\)</span>, written <span class="math inline">\(\operatorname{rank}(\mathbf{A})\)</span>, is the largest number of columns of <span class="math inline">\(\mathbf{A}\)</span> that are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-rank" class="quarto-xref">Example&nbsp;2</a> (The rank of two <span class="math inline">\(3 \times 2\)</span> matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-rank" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (The rank of two <span class="math inline">\(3 \times 2\)</span> matrices)</strong></span> The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span> has rank <span class="math inline">\(2\)</span>: if <span class="math inline">\(c_1 (1, 1, 1) + c_2 (1, 2, 3) = \tilde{0}\)</span>, then subtracting the first entry from the second gives <span class="math inline">\(c_2 = 0\)</span>, and then <span class="math inline">\(c_1 = 0\)</span>.</p>
 <p>The matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 2 \\ 1 &amp; 2 \\ 1 &amp; 2 \end{bmatrix}\)</span> has rank <span class="math inline">\(1\)</span>: its second column is twice its first, so the two columns are not linearly independent, but the first column on its own is.</p>
@@ -988,24 +1014,36 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-full-column-rank" class="quarto-xref">Definition&nbsp;3</a> (Full column rank)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-full-column-rank" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Full column rank)</strong></span> An <span class="math inline">\(n \times p\)</span> matrix has <strong>full column rank</strong> if its rank (<a href="#def-rank" class="quarto-xref">Definition&nbsp;2</a>) is <span class="math inline">\(p\)</span>, so that all of its columns are linearly independent.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-full-column-rank-shape" class="quarto-xref">Remark&nbsp;1</a> (Full column rank needs at least as many rows as columns)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-full-column-rank-shape" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (Full column rank needs at least as many rows as columns). </span>In <a href="#exm-rank" class="quarto-xref">Example&nbsp;2</a>, the first matrix has full column rank: its rank is <span class="math inline">\(2\)</span>, and it has <span class="math inline">\(2\)</span> columns. The second does not, because its rank is <span class="math inline">\(1\)</span>.</p>
 <p>An <span class="math inline">\(n \times p\)</span> matrix can have full column rank only when <span class="math inline">\(p \le n\)</span>, because more than <span class="math inline">\(n\)</span> vectors of length <span class="math inline">\(n\)</span> are never linearly independent. For example, the <span class="math inline">\(2 \times 3\)</span> matrix <span class="math inline">\(\begin{bmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 \end{bmatrix}\)</span> has <span class="math inline">\(3\)</span> columns of length <span class="math inline">\(2\)</span>, and <span class="math inline">\(1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = \tilde{0}\)</span>, with coefficients that are not all zero. So its <span class="math inline">\(3\)</span> columns are not linearly independent, and its rank is less than <span class="math inline">\(3\)</span>.</p>
@@ -1017,7 +1055,7 @@ c_1 &amp;= \cdots \\
 <section id="sec-subspaces" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="sec-subspaces"><span class="header-section-number">2</span> Subspaces</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1026,7 +1064,7 @@ c_1 &amp;= \cdots \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section is adapted from <span class="citation" data-cites="zhou2024vecsp">Zhou (<a href="#ref-zhou2024vecsp" role="doc-biblioref">2024</a>)</span>, used under the MIT License. The license text is:</p>
 <blockquote class="blockquote">
@@ -1038,12 +1076,18 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-subspace" class="quarto-xref">Definition&nbsp;4</a> (Subspace (linear subspace, vector space, linear space))
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-subspace" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Subspace (linear subspace, vector space, linear space))</strong></span> A set <span class="math inline">\(\mathcal{S}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is a <strong>subspace</strong> of <span class="math inline">\(\mathbb{R}^p\)</span> if it is not empty and it is closed under vector addition and scalar multiplication:</p>
 <ol type="1">
@@ -1055,12 +1099,18 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-subspace" class="quarto-xref">Example&nbsp;3</a> (A line through the origin is a subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-subspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (A line through the origin is a subspace)</strong></span> Let <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}\)</span>, the line in <span class="math inline">\(\mathbb{R}^2\)</span> through <span class="math inline">\((0, 0)\)</span> and <span class="math inline">\((1, 2)\)</span>.</p>
 <ul>
@@ -1072,32 +1122,44 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-not-subspace" class="quarto-xref">Example&nbsp;4</a> (A line that misses the origin is not a subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-not-subspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (A line that misses the origin is not a subspace)</strong></span> Let <span class="math inline">\(\mathcal{T} = \mathopen{}\left\{(x, 1) : x \in \mathbb{R}\right\}\mathclose{}\)</span>, the horizontal line in <span class="math inline">\(\mathbb{R}^2\)</span> at height <span class="math inline">\(1\)</span>. The vectors <span class="math inline">\((0, 1)\)</span> and <span class="math inline">\((2, 1)\)</span> are in <span class="math inline">\(\mathcal{T}\)</span>, but their sum <span class="math inline">\((2, 2)\)</span> is not, because its second entry is <span class="math inline">\(2\)</span>, not <span class="math inline">\(1\)</span>. So <span class="math inline">\(\mathcal{T}\)</span> is not closed under addition, and it is not a subspace.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-subspace-zero" class="quarto-xref">Theorem&nbsp;1</a> (Every subspace contains the zero vector)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-subspace-zero" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Every subspace contains the zero vector)</strong></span> If <span class="math inline">\(\mathcal{S}\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-subspace" class="quarto-xref">Definition&nbsp;4</a>), then <span class="math inline">\(\tilde{0}\in \mathcal{S}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1106,7 +1168,7 @@ c_1 &amp;= \cdots \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>A subspace is not empty, so it contains some vector <span class="math inline">\(\tilde{u}\)</span>. Closure under scalar multiplication with <span class="math inline">\(c = 0\)</span> puts <span class="math inline">\(0 \cdot\tilde{u}\)</span> in <span class="math inline">\(\mathcal{S}\)</span>, and <span class="math inline">\(0 \cdot\tilde{u} = \tilde{0}\)</span>.</p>
@@ -1114,12 +1176,18 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-subspace-zero" class="quarto-xref">Example&nbsp;5</a> (Using the zero vector to rule out a subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-subspace-zero" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Using the zero vector to rule out a subspace)</strong></span> The plane <span class="math inline">\(\mathopen{}\left\{(x, y, z) : x + y + z = 1\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> does not contain <span class="math inline">\(\tilde{0}= (0, 0, 0)\)</span>, because <span class="math inline">\(0 + 0 + 0 = 0 \neq 1\)</span>. So, by <a href="#thm-subspace-zero" class="quarto-xref">Theorem&nbsp;1</a>, it is not a subspace. The line <span class="math inline">\(\mathcal{T}\)</span> in <a href="#exm-not-subspace" class="quarto-xref">Example&nbsp;4</a> fails the same test: <span class="math inline">\((0, 0)\)</span> is not in <span class="math inline">\(\mathcal{T}\)</span>, because its second entry is not <span class="math inline">\(1\)</span>.</p>
 <p>Containing <span class="math inline">\(\tilde{0}\)</span> is necessary but not sufficient. The union of the two coordinate axes in <span class="math inline">\(\mathbb{R}^2\)</span>, <span class="math inline">\(\mathopen{}\left\{(x, 0) : x \in \mathbb{R}\right\}\mathclose{} \cup \mathopen{}\left\{(0, y) : y \in \mathbb{R}\right\}\mathclose{}\)</span>, contains <span class="math inline">\(\tilde{0}\)</span>, but <span class="math inline">\((1, 0) + (0, 1) = (1, 1)\)</span> lies on neither axis, so the union is not closed under addition and is not a subspace.</p>
@@ -1127,12 +1195,18 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-span" class="quarto-xref">Definition&nbsp;5</a> (Span)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-span" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Span)</strong></span> The <strong>span</strong> of vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k \in \mathbb{R}^p\)</span> is the set of all their linear combinations:</p>
 <p><span class="math display">\[
@@ -1146,12 +1220,18 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-span" class="quarto-xref">Example&nbsp;6</a> (Two spans in <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-span" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Two spans in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
 <ul>
@@ -1162,20 +1242,26 @@ c_1 &amp;= \cdots \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-span-subspace" class="quarto-xref">Theorem&nbsp;2</a> (A span is a subspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-span-subspace" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (A span is a subspace)</strong></span> For any vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k \in \mathbb{R}^p\)</span>, <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{v}_1, \ldots, \tilde{v}_k\right\}\mathclose{}\)</span> (<a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-subspace" class="quarto-xref">Definition&nbsp;4</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1184,7 +1270,7 @@ c_1 &amp;= \cdots \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The span is not empty: it contains <span class="math inline">\(0 \cdot\tilde{v}_1 + \cdots + 0 \cdot\tilde{v}_k = \tilde{0}\)</span>.</p>
@@ -1217,24 +1303,36 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-span-subspace" class="quarto-xref">Example&nbsp;7</a> (The line in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;3</a> is a span)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-span-subspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (The line in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;3</a> is a span)</strong></span> The line <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{c\,(1, 2) : c \in \mathbb{R}\right\}\mathclose{}\)</span> in <a href="#exm-subspace" class="quarto-xref">Example&nbsp;3</a> is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 2)\right\}\mathclose{}\)</span>, so <a href="#thm-span-subspace" class="quarto-xref">Theorem&nbsp;2</a> gives a second <a href="./proof-writing.html#def-proof">proof</a> that it is a subspace. Likewise, the plane <span class="math inline">\(z = 0\)</span> in <a href="#exm-span" class="quarto-xref">Example&nbsp;6</a> is a subspace of <span class="math inline">\(\mathbb{R}^3\)</span>, because it is <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0), (0, 1, 0)\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-matvec-columns" class="quarto-xref">Theorem&nbsp;3</a> (A matrix-vector product combines the columns)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-matvec-columns" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (A matrix-vector product combines the columns)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(m \times n\)</span> matrix with columns <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_n\)</span> and <span class="math inline">\(\tilde{x} \in \mathbb{R}^n\)</span>, then</p>
 <p><span class="math display">\[
@@ -1244,8 +1342,8 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1254,7 +1352,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Compare entry <span class="math inline">\(i\)</span> of the two sides, for each <span class="math inline">\(i = 1, \ldots, m\)</span>. Entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\tilde{a}_j\)</span> is <span class="math inline">\(a_{ij}\)</span>, so</p>
@@ -1275,12 +1373,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-matvec-columns" class="quarto-xref">Example&nbsp;8</a> (A product as a combination of columns)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-matvec-columns" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (A product as a combination of columns)</strong></span> <span class="math display">\[
 \begin{aligned}
@@ -1299,12 +1403,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-matvec-linear" class="quarto-xref">Theorem&nbsp;4</a> (A matrix maps a combination to the same combination of images)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-matvec-linear" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (A matrix maps a combination to the same combination of images)</strong></span> If <span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(m \times n\)</span> matrix, <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k \in \mathbb{R}^n\)</span> and <span class="math inline">\(c_1, \ldots, c_k \in \mathbb{R}\)</span>, then</p>
 <p><span class="math display">\[
@@ -1315,8 +1425,8 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1325,7 +1435,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The function <span class="math inline">\(\tilde{x}\mapsto \mathbf{A}\tilde{x}\)</span> is a linear map by <a href="./linear-algebra-matrices.html#thm-matrix-map-linear">Theorem&nbsp;9 in Matrices</a>, and a linear map preserves linear combinations by <a href="./linear-algebra-matrices.html#thm-linear-map-lincom">Theorem&nbsp;10 in Matrices</a>. Applying that theorem with <span class="math inline">\(f(\tilde{x}) = \mathbf{A}\tilde{x}\)</span> and <span class="math inline">\(\tilde{v}_i = \tilde{z}_i\)</span> gives the identity.</p>
@@ -1333,12 +1443,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-matvec-linear" class="quarto-xref">Example&nbsp;9</a> (Applying a matrix to a combination)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-matvec-linear" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (Applying a matrix to a combination)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span>, <span class="math inline">\(\tilde{z}_1 = (1, 0)\)</span> and <span class="math inline">\(\tilde{z}_2 = (0, 1)\)</span>. Then <span class="math inline">\(\mathbf{A} \tilde{z}_1 = (1, 3)\)</span> and <span class="math inline">\(\mathbf{A} \tilde{z}_2 = (2, 4)\)</span>, and for the combination <span class="math inline">\(2 \tilde{z}_1 - \tilde{z}_2 = (2, -1)\)</span>:</p>
 <p><span class="math display">\[
@@ -1359,20 +1475,26 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-many-vectors-dependent" class="quarto-xref">Theorem&nbsp;5</a> (More than <span class="math inline">\(p\)</span> vectors in <span class="math inline">\(\mathbb{R}^p\)</span> are linearly dependent)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-many-vectors-dependent" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (More than <span class="math inline">\(p\)</span> vectors in <span class="math inline">\(\mathbb{R}^p\)</span> are linearly dependent)</strong></span> If <span class="math inline">\(k &gt; p\)</span>, then any <span class="math inline">\(k\)</span> vectors <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k \in \mathbb{R}^p\)</span> are not linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>): some numbers <span class="math inline">\(c_1, \ldots, c_k\)</span>, not all zero, satisfy <span class="math inline">\(c_1 \tilde{v}_1 + \cdots + c_k \tilde{v}_k = \tilde{0}_p\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1381,7 +1503,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><a href="./proof-writing.html#def-proof-by-induction">Induction</a> on <span class="math inline">\(p\)</span>.</p>
@@ -1416,36 +1538,54 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-many-vectors-dependent" class="quarto-xref">Example&nbsp;10</a> (Three vectors in <span class="math inline">\(\mathbb{R}^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-many-vectors-dependent" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (Three vectors in <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> <a href="#thm-many-vectors-dependent" class="quarto-xref">Theorem&nbsp;5</a> says the three vectors <span class="math inline">\((1, 0)\)</span>, <span class="math inline">\((0, 1)\)</span> and <span class="math inline">\((1, 1)\)</span> in <span class="math inline">\(\mathbb{R}^2\)</span> are linearly dependent, and indeed <span class="math inline">\(1 \cdot(1, 0) + 1 \cdot(0, 1) - 1 \cdot(1, 1) = (0, 0)\)</span>. The theorem says nothing about <span class="math inline">\(k \le p\)</span> vectors: <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((0, 1)\)</span> are linearly independent, while <span class="math inline">\((1, 2)\)</span> and <span class="math inline">\((2, 4)\)</span> are not (<a href="#exm-linearly-independent" class="quarto-xref">Example&nbsp;1</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a> (Basis)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-basis" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Basis)</strong></span> A <strong>basis</strong> of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-subspace" class="quarto-xref">Definition&nbsp;4</a>) is a list of vectors that are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>) and span <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a> (Two bases of <span class="math inline">\(\mathbb{R}^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-basis" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Two bases of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> &nbsp;</p>
 <ul>
@@ -1456,12 +1596,18 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-not-basis" class="quarto-xref">Example&nbsp;12</a> (Lists that are not bases of <span class="math inline">\(\mathbb{R}^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-not-basis" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Lists that are not bases of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> &nbsp;</p>
 <ul>
@@ -1472,20 +1618,26 @@ c\,\tilde{u}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-basis-unique" class="quarto-xref">Theorem&nbsp;6</a> (Coefficients in a basis are unique)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-basis-unique" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (Coefficients in a basis are unique)</strong></span> If <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> is a basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a>), then every <span class="math inline">\(\tilde{x} \in \mathcal{S}\)</span> is a linear combination <span class="math inline">\(\tilde{x} = c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k\)</span> for exactly one list of numbers <span class="math inline">\(c_1, \ldots, c_k\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1494,7 +1646,7 @@ c\,\tilde{u}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>At least one such list exists, because the basis spans <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>).</p>
@@ -1523,12 +1675,18 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-basis-unique" class="quarto-xref">Example&nbsp;13</a> (Coefficients of <span class="math inline">\((3, 5)\)</span> in two bases)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-basis-unique" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Coefficients of <span class="math inline">\((3, 5)\)</span> in two bases)</strong></span> In the basis <span class="math inline">\((1, 0), (0, 1)\)</span> of <a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a>, <span class="math inline">\((3, 5) = 3\,(1, 0) + 5\,(0, 1)\)</span>, and no other coefficients work. In the basis <span class="math inline">\((1, 0), (1, 1)\)</span>, the formula in <a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a> gives</p>
 <p><span class="math display">\[
@@ -1549,24 +1707,36 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-coordinates" class="quarto-xref">Definition&nbsp;7</a> (Coordinates in a basis)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-coordinates" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Coordinates in a basis)</strong></span> Let <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> be a basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a>), and let <span class="math inline">\(\tilde{x} \in \mathcal{S}\)</span>. The <strong>coordinates</strong> of <span class="math inline">\(\tilde{x}\)</span> in this basis are the numbers <span class="math inline">\(c_1, \ldots, c_k\)</span> with <span class="math inline">\(\tilde{x} = c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k\)</span>, and <span class="math inline">\((c_1, \ldots, c_k) \in \mathbb{R}^k\)</span> is the <strong>coordinate vector</strong> of <span class="math inline">\(\tilde{x}\)</span>. By <a href="#thm-basis-unique" class="quarto-xref">Theorem&nbsp;6</a> there is exactly one such list of numbers.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-coordinates" class="quarto-xref">Example&nbsp;14</a> (Coordinates of <span class="math inline">\((4, 1)\)</span> in two bases of <span class="math inline">\(\mathbb{R}^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-coordinates" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (Coordinates of <span class="math inline">\((4, 1)\)</span> in two bases of <span class="math inline">\(\mathbb{R}^2\)</span>)</strong></span> In the basis <span class="math inline">\((1, 0), (1, 1)\)</span> of <a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a>, the coordinates of <span class="math inline">\((4, 1)\)</span> are <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span>:</p>
 <p><span class="math display">\[
@@ -1584,20 +1754,26 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> (All bases of a subspace have the same number of vectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-basis-size" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (All bases of a subspace have the same number of vectors)</strong></span> If <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> and <span class="math inline">\(\tilde{b}_1, \ldots, \tilde{b}_l\)</span> are both bases of a subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a>), then <span class="math inline">\(k = l\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1606,7 +1782,7 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(p \times k\)</span> matrix with columns <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span>, and <span class="math inline">\(\mathbf{B}\)</span> the <span class="math inline">\(p \times l\)</span> matrix with columns <span class="math inline">\(\tilde{b}_1, \ldots, \tilde{b}_l\)</span>.</p>
@@ -1635,36 +1811,54 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-basis-size" class="quarto-xref">Example&nbsp;15</a> (Both bases of <span class="math inline">\(\mathbb{R}^2\)</span> in <a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a> have two vectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-basis-size" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Both bases of <span class="math inline">\(\mathbb{R}^2\)</span> in <a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a> have two vectors)</strong></span> The bases <span class="math inline">\((1, 0), (0, 1)\)</span> and <span class="math inline">\((1, 0), (1, 1)\)</span> of <span class="math inline">\(\mathbb{R}^2\)</span> in <a href="#exm-basis" class="quarto-xref">Example&nbsp;11</a> both have <span class="math inline">\(2\)</span> vectors, as <a href="#thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> requires. So no list of <span class="math inline">\(3\)</span> vectors is a basis of <span class="math inline">\(\mathbb{R}^2\)</span>, which agrees with <a href="#exm-not-basis" class="quarto-xref">Example&nbsp;12</a>: the list <span class="math inline">\((1, 0), (0, 1), (1, 1)\)</span> spans <span class="math inline">\(\mathbb{R}^2\)</span> but is not linearly independent.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-dimension" class="quarto-xref">Definition&nbsp;8</a> (Dimension)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-dimension" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Dimension)</strong></span> The <strong>dimension</strong> of a subspace <span class="math inline">\(\mathcal{S}\)</span>, written <span class="math inline">\(\dim(\mathcal{S})\)</span>, is the number of vectors in any basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a>). <a href="#thm-basis-size" class="quarto-xref">Theorem&nbsp;7</a> makes this number well defined. By convention, the empty list is the basis of <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, so <span class="math inline">\(\dim(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}) = 0\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-dimension" class="quarto-xref">Example&nbsp;16</a> (The dimensions of some subspaces)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-dimension" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (The dimensions of some subspaces)</strong></span> &nbsp;</p>
 <ul>
@@ -1677,20 +1871,26 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> (Adding a vector outside the span keeps a list independent)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-add-outside-span" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Adding a vector outside the span keeps a list independent)</strong></span> If <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>) and <span class="math inline">\(\tilde{w}\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{v}_1, \ldots, \tilde{v}_k\right\}\mathclose{}\)</span> (<a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>), then <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k, \tilde{w}\)</span> are linearly independent.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1699,7 +1899,7 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(c_1 \tilde{v}_1 + \cdots + c_k \tilde{v}_k + d\,\tilde{w} = \tilde{0}\)</span>.</p>
@@ -1723,32 +1923,44 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-add-outside-span" class="quarto-xref">Example&nbsp;17</a> (Adding <span class="math inline">\((0, 0, 1)\)</span> to two independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-add-outside-span" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Adding <span class="math inline">\((0, 0, 1)\)</span> to two independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> The vectors <span class="math inline">\((1, 0, 0)\)</span> and <span class="math inline">\((0, 1, 0)\)</span> are linearly independent, and their span is the plane <span class="math inline">\(z = 0\)</span> (<a href="#exm-span" class="quarto-xref">Example&nbsp;6</a>). The vector <span class="math inline">\((0, 0, 1)\)</span> has third entry <span class="math inline">\(1\)</span>, so it is not in that plane, and by <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a> the three vectors <span class="math inline">\((1, 0, 0)\)</span>, <span class="math inline">\((0, 1, 0)\)</span>, <span class="math inline">\((0, 0, 1)\)</span> are linearly independent. Adding <span class="math inline">\((1, 1, 0)\)</span> instead would not work: <span class="math inline">\((1, 1, 0)\)</span> is in the span, and <span class="math inline">\((1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \tilde{0}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-extend-basis" class="quarto-xref">Theorem&nbsp;9</a> (An independent list extends to a basis)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-extend-basis" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (An independent list extends to a basis)</strong></span> If <span class="math inline">\(\mathcal{S}\)</span> is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="#def-subspace" class="quarto-xref">Definition&nbsp;4</a>) and <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k \in \mathcal{S}\)</span> are linearly independent (<a href="#def-linearly-independent" class="quarto-xref">Definition&nbsp;1</a>), then adding vectors of <span class="math inline">\(\mathcal{S}\)</span> to the list gives a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#def-basis" class="quarto-xref">Definition&nbsp;6</a>). Starting from the empty list shows that every subspace has a basis.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1757,7 +1969,7 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Repeat the following step. If the current list spans <span class="math inline">\(\mathcal{S}\)</span>, stop: it is linearly independent and spans <span class="math inline">\(\mathcal{S}\)</span>, so it is a basis. Otherwise, some <span class="math inline">\(\tilde{w} \in \mathcal{S}\)</span> is not in the span of the current list; add <span class="math inline">\(\tilde{w}\)</span> to the list, which stays linearly independent by <a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>.</p>
@@ -1767,12 +1979,18 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-extend-basis" class="quarto-xref">Example&nbsp;18</a> (Extending <span class="math inline">\((1, 1, 0)\)</span> to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-extend-basis" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Extending <span class="math inline">\((1, 1, 0)\)</span> to a basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Start with the single vector <span class="math inline">\((1, 1, 0)\)</span>.</p>
 <ol type="1">
@@ -1785,12 +2003,18 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a> (An independent list in a subspace has at most <span class="math inline">\(\dim\)</span> vectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-dim-bound" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (An independent list in a subspace has at most <span class="math inline">\(\dim\)</span> vectors)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\dim(\mathcal{S}) = d\)</span> (<a href="#def-dimension" class="quarto-xref">Definition&nbsp;8</a>).</p>
 <ol type="1">
@@ -1801,8 +2025,8 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1811,7 +2035,7 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> If <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, so every vector in a nonempty list from <span class="math inline">\(\mathcal{S}\)</span> is <span class="math inline">\(\tilde{0}\)</span>, and <span class="math inline">\(1 \cdot\tilde{0}= \tilde{0}\)</span> shows the list is not linearly independent; only the empty list, with <span class="math inline">\(0 = d\)</span> vectors, is. Now let <span class="math inline">\(d \ge 1\)</span>, and let <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_d\)</span> be a basis of <span class="math inline">\(\mathcal{S}\)</span>, and let <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_k \in \mathcal{S}\)</span> be linearly independent. Each <span class="math inline">\(\tilde{u}_j\)</span> is in <span class="math inline">\(\mathcal{S}\)</span>, so <span class="math inline">\(\tilde{u}_j = c_{1j} \tilde{a}_1 + \cdots + c_{dj} \tilde{a}_d\)</span> for some coordinate vector <span class="math inline">\(\tilde{c}_j = (c_{1j}, \ldots, c_{dj}) \in \mathbb{R}^d\)</span>. Suppose <span class="math inline">\(k &gt; d\)</span>. Then <span class="math inline">\(\tilde{c}_1, \ldots, \tilde{c}_k\)</span> are <span class="math inline">\(k &gt; d\)</span> vectors in <span class="math inline">\(\mathbb{R}^d\)</span>, so some <span class="math inline">\(x_1, \ldots, x_k\)</span>, not all zero, satisfy <span class="math inline">\(x_1 \tilde{c}_1 + \cdots + x_k \tilde{c}_k = \tilde{0}_d\)</span> (<a href="#thm-many-vectors-dependent" class="quarto-xref">Theorem&nbsp;5</a>); entry <span class="math inline">\(i\)</span> of that equation says <span class="math inline">\(\sum_{j=1}^{k} x_j c_{ij} = 0\)</span>. Then</p>
@@ -1843,12 +2067,18 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-dim-bound" class="quarto-xref">Example&nbsp;19</a> (Subspaces of a plane have dimension at most two)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-dim-bound" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (Subspaces of a plane have dimension at most two)</strong></span> The plane <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{(x, y, 0) : x, y \in \mathbb{R}\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> has dimension <span class="math inline">\(2\)</span> (<a href="#exm-dimension" class="quarto-xref">Example&nbsp;16</a>). By <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a>, no three vectors with third entry <span class="math inline">\(0\)</span> are linearly independent; for instance, <span class="math inline">\((1, 0, 0) + (0, 1, 0) - (1, 1, 0) = \tilde{0}\)</span>. The line <span class="math inline">\(\mathcal{T} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> lies in <span class="math inline">\(\mathcal{S}\)</span>, and</p>
 <p><span class="math display">\[
@@ -1862,20 +2092,26 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> (A subspace inside another of the same dimension equals it)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-subspace-equal-dim" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (A subspace inside another of the same dimension equals it)</strong></span> If <span class="math inline">\(\mathcal{T}\)</span> and <span class="math inline">\(\mathcal{S}\)</span> are subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span> and <span class="math inline">\(\dim(\mathcal{T}) = \dim(\mathcal{S})\)</span> (<a href="#def-dimension" class="quarto-xref">Definition&nbsp;8</a>), then <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1884,7 +2120,7 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(d = \dim(\mathcal{S})\)</span>, and let <span class="math inline">\(\tilde{t}_1, \ldots, \tilde{t}_d\)</span> be a basis of <span class="math inline">\(\mathcal{T}\)</span> (<a href="#thm-extend-basis" class="quarto-xref">Theorem&nbsp;9</a>); it has <span class="math inline">\(d\)</span> vectors because <span class="math inline">\(\dim(\mathcal{T}) = d\)</span>. (When <span class="math inline">\(d = 0\)</span> it is the empty list, whose span is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> by the convention in <a href="#def-span" class="quarto-xref">Definition&nbsp;5</a>, and the argument is unchanged.) Suppose some <span class="math inline">\(\tilde{s} \in \mathcal{S}\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{t}_1, \ldots, \tilde{t}_d\right\}\mathclose{} = \mathcal{T}\)</span>. Then <span class="math inline">\(\tilde{t}_1, \ldots, \tilde{t}_d, \tilde{s}\)</span> are linearly independent (<a href="#thm-add-outside-span" class="quarto-xref">Theorem&nbsp;8</a>), and they are <span class="math inline">\(d + 1\)</span> vectors of <span class="math inline">\(\mathcal{S}\)</span>, which contradicts part 1 of <a href="#thm-dim-bound" class="quarto-xref">Theorem&nbsp;10</a>. So every vector of <span class="math inline">\(\mathcal{S}\)</span> is in <span class="math inline">\(\mathcal{T}\)</span>, that is, <span class="math inline">\(\mathcal{S} \subseteq \mathcal{T}\)</span>. Together with <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span>, this inclusion gives <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span>.</p>
@@ -1892,24 +2128,36 @@ c_1 \tilde{a}_1 + \cdots + c_k \tilde{a}_k
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-subspace-equal-dim" class="quarto-xref">Example&nbsp;20</a> (Two independent vectors in a plane span it)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-52" class="callout-52-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-subspace-equal-dim" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (Two independent vectors in a plane span it)</strong></span> Let <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{(x, y, 0) : x, y \in \mathbb{R}\right\}\mathclose{}\)</span>, the plane <span class="math inline">\(z = 0\)</span>, which has dimension <span class="math inline">\(2\)</span> (<a href="#exm-dimension" class="quarto-xref">Example&nbsp;16</a>), and let <span class="math inline">\(\mathcal{T} = \operatorname{span}\mathopen{}\left\{(1, 0, 0), (1, 1, 0)\right\}\mathclose{}\)</span>. Both vectors have third entry <span class="math inline">\(0\)</span>, so <span class="math inline">\(\mathcal{T} \subseteq \mathcal{S}\)</span>. They are linearly independent: <span class="math inline">\(c_1 (1, 0, 0) + c_2 (1, 1, 0) = (c_1 + c_2, c_2, 0)\)</span>, which is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>. So <span class="math inline">\(\dim(\mathcal{T}) = 2\)</span>, and <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> gives <span class="math inline">\(\mathcal{T} = \mathcal{S}\)</span> without solving for any coefficients. As a check, <span class="math inline">\((x, y, 0) = (x - y)\,(1, 0, 0) + y\,(1, 1, 0)\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-subspace-equal-dim-fails" class="quarto-xref">Example&nbsp;21</a> (Equal dimensions without containment)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-subspace-equal-dim-fails" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Equal dimensions without containment)</strong></span> The lines <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(1, 0, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\operatorname{span}\mathopen{}\left\{(0, 1, 0)\right\}\mathclose{}\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> both have dimension <span class="math inline">\(1\)</span>, but they are not equal: <span class="math inline">\((1, 0, 0)\)</span> is in the first and not the second. <a href="#thm-subspace-equal-dim" class="quarto-xref">Theorem&nbsp;11</a> does not apply, because neither line contains the other.</p>
 </div>

@@ -109,6 +109,8 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.js"></script>
+<link href="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -227,25 +229,15 @@ cookieconsent.run({
 })();
 </script>
 <style>
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-prp.callout {
-  border-left-color: #827717;
-}
-div.callout-prp.callout-style-default .callout-header {
-  background-color: rgba(130, 119, 23, 0.13);
-}
-div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -257,16 +249,6 @@ div.callout-proof .callout-toggle::before {  background-image: url('data:image/s
 div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -276,6 +258,26 @@ div.callout-cnj.callout-style-default .callout-header {
 div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-remark.callout {
   border-left-color: #AD1457;
@@ -297,6 +299,16 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-exm.callout {
   border-left-color: #6A1B9A;
 }
@@ -307,25 +319,15 @@ div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-cor.callout {
-  border-left-color: #00838F;
+div.callout-prp.callout {
+  border-left-color: #827717;
 }
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
+div.callout-prp.callout-style-default .callout-header {
+  background-color: rgba(130, 119, 23, 0.13);
 }
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 
@@ -911,7 +913,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 20:27:09 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 23:18:59 (PDT)</p>
     </div>
   </div>
   
@@ -941,20 +943,26 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-invertible-rank" class="quarto-xref">Theorem&nbsp;1</a> (A square matrix is invertible exactly when it has full column rank)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-invertible-rank" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (A square matrix is invertible exactly when it has full column rank)</strong></span> An <span class="math inline">\(n \times n\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is invertible (<a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\operatorname{rank}(\mathbf{A}) = n\)</span> (full column rank, <a href="./linear-algebra-subspaces.html#def-full-column-rank">Definition&nbsp;3 in Subspaces and Rank</a>), that is, exactly when <span class="math inline">\(\mathcal{N}(\mathbf{A}) = \mathopen{}\left\{\tilde{0}_n\right\}\mathclose{}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -963,7 +971,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Invertible implies rank <span class="math inline">\(n\)</span>.</strong> If <span class="math inline">\(\mathbf{A} \tilde{x} = \tilde{0}_n\)</span>, then</p>
@@ -1009,12 +1017,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-invertible-rank" class="quarto-xref">Example&nbsp;1</a> (Rank decides invertibility)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-invertible-rank" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Rank decides invertibility)</strong></span> &nbsp;</p>
 <ul>
@@ -1025,24 +1039,36 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-eigenspace" class="quarto-xref">Definition&nbsp;1</a> (Eigenspace and geometric multiplicity)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-eigenspace" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Eigenspace and geometric multiplicity)</strong></span> Let <span class="math inline">\(\lambda\)</span> be an eigenvalue of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>). The <strong>eigenspace</strong> of <span class="math inline">\(\lambda\)</span> is <span class="math inline">\(\mathcal{E}_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\,\mathbf{I}_p)\)</span>. It is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-null-space-subspace">Theorem&nbsp;2 in Column Space, Null Space and Rank-Nullity</a>), and its dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) is the <strong>geometric multiplicity</strong> of <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-eigenspace" class="quarto-xref">Example&nbsp;2</a> (Eigenspaces of two matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-eigenspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (Eigenspaces of two matrices)</strong></span> &nbsp;</p>
 <ul>
@@ -1067,32 +1093,44 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-not-eigenspace" class="quarto-xref">Example&nbsp;3</a> (A number that is not an eigenvalue has no eigenspace)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-not-eigenspace" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (A number that is not an eigenvalue has no eigenspace)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> and <span class="math inline">\(\lambda= 2\)</span>, <span class="math inline">\(\mathbf{A} - 2\,\mathbf{I}_2 = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span> sends <span class="math inline">\(\tilde{v}\)</span> to <span class="math inline">\((v_2, v_1)\)</span>, which is <span class="math inline">\(\tilde{0}\)</span> only for <span class="math inline">\(\tilde{v} = \tilde{0}\)</span>, so <span class="math inline">\(\mathcal{N}(\mathbf{A} - 2\,\mathbf{I}_2) = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>. And <span class="math inline">\(2\)</span> is not an eigenvalue (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>): <span class="math inline">\(\mathbf{A} \tilde{v} = 2\tilde{v}\)</span> reads <span class="math inline">\((2v_1 + v_2, v_1 + 2v_2) = (2v_1, 2v_2)\)</span>, so <span class="math inline">\(v_2 = 0\)</span> and <span class="math inline">\(v_1 = 0\)</span>. So <a href="#def-eigenspace" class="quarto-xref">Definition&nbsp;1</a> does not apply to <span class="math inline">\(2\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-eigenvalue-singular" class="quarto-xref">Theorem&nbsp;2</a> (Eigenvalues are where <span class="math inline">\(\mathbf{A} - \lambda\mathbf{I}\)</span> is singular)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-eigenvalue-singular" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Eigenvalues are where <span class="math inline">\(\mathbf{A} - \lambda\mathbf{I}\)</span> is singular)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> matrix and <span class="math inline">\(\lambda\)</span> a real number. Then <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(\mathbf{A}\)</span> (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A} - \lambda\,\mathbf{I}_p\)</span> is singular (<a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>). In particular, <span class="math inline">\(\mathbf{A}\)</span> is singular exactly when <span class="math inline">\(0\)</span> is one of its eigenvalues; and each eigenspace <span class="math inline">\(\mathcal{E}_\lambda\)</span> (<a href="#def-eigenspace" class="quarto-xref">Definition&nbsp;1</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> consisting of <span class="math inline">\(\tilde{0}\)</span> and the eigenvectors for <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1101,7 +1139,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>For any <span class="math inline">\(\tilde{v} \in \mathbb{R}^p\)</span>,</p>
@@ -1123,12 +1161,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-eigenvalue-singular" class="quarto-xref">Example&nbsp;4</a> (Eigenvalues and singular matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-eigenvalue-singular" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Eigenvalues and singular matrices)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span>, <span class="math inline">\(\mathbf{A} - 3\,\mathbf{I}_2 = \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}\)</span> is singular (its columns are negatives of each other, so its rank is <span class="math inline">\(1\)</span>), matching the eigenvalue <span class="math inline">\(3\)</span> of <a href="./linear-algebra-special-matrices.html#exm-eigenvalue">Example&nbsp;21 in Special Matrices and Decompositions</a>. <span class="math inline">\(\mathbf{A}\)</span> itself has rank <span class="math inline">\(2\)</span>, since <span class="math inline">\(c_1 (2, 1) + c_2 (1, 2) = (2c_1 + c_2, c_1 + 2c_2)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if</p>
 <p><span class="math display">\[
@@ -1142,12 +1186,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-eigen-shift-power" class="quarto-xref">Theorem&nbsp;3</a> (Eigenvalues of shifts and powers)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-eigen-shift-power" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Eigenvalues of shifts and powers)</strong></span> Let <span class="math inline">\(\tilde{v}\)</span> be an eigenvector of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> for the eigenvalue <span class="math inline">\(\lambda\)</span> (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>). Then</p>
 <ol type="1">
@@ -1158,8 +1208,8 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1168,7 +1218,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong></p>
@@ -1216,12 +1266,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-eigen-shift-power" class="quarto-xref">Example&nbsp;5</a> (Shifting and squaring)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-eigen-shift-power" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Shifting and squaring)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> with eigenvector <span class="math inline">\((1, 1)\)</span> for <span class="math inline">\(3\)</span> (<a href="./linear-algebra-special-matrices.html#exm-eigenvalue">Example&nbsp;21 in Special Matrices and Decompositions</a>):</p>
 <ul>
@@ -1240,20 +1296,26 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-eigen-triangular" class="quarto-xref">Theorem&nbsp;4</a> (The eigenvalues of an upper triangular matrix are its diagonal entries)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-eigen-triangular" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (The eigenvalues of an upper triangular matrix are its diagonal entries)</strong></span> The eigenvalues (<a href="./linear-algebra-special-matrices.html#def-eigenvalue">Definition&nbsp;16 in Special Matrices and Decompositions</a>) of an upper triangular <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{U}\)</span> (<a href="./linear-algebra-projections.html#def-triangular-matrix">Definition&nbsp;7 in Projections and Linear Systems</a>) are exactly its diagonal entries <span class="math inline">\(u_{11}, \ldots, u_{pp}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1262,7 +1324,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{U} - \lambda\,\mathbf{I}_p\)</span> is upper triangular, with diagonal entries <span class="math inline">\(u_{ii} - \lambda\)</span> (<a href="./linear-algebra-matrices.html#def-identity-matrix">Definition&nbsp;10 in Matrices</a>, <a href="./linear-algebra-matrices.html#def-matrix-addition">Definition&nbsp;5 in Matrices</a>).</p>
@@ -1289,12 +1351,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-eigen-triangular" class="quarto-xref">Example&nbsp;6</a> (Eigenvalues read off the diagonal)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-eigen-triangular" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Eigenvalues read off the diagonal)</strong></span> <span class="math inline">\(\mathbf{U} = \begin{bmatrix} 2 &amp; 1 &amp; -1 \\ 0 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; -1 \end{bmatrix}\)</span> of <a href="./linear-algebra-projections.html#exm-triangular-matrix">Example&nbsp;23 in Projections and Linear Systems</a> has eigenvalues <span class="math inline">\(2\)</span>, <span class="math inline">\(\tfrac{1}{2}\)</span> and <span class="math inline">\(-1\)</span>. For <span class="math inline">\(\lambda= \tfrac{1}{2}\)</span> (so <span class="math inline">\(k = 2\)</span>), take <span class="math inline">\(v_2 = 1\)</span>, <span class="math inline">\(v_3 = 0\)</span>; row 1 of <span class="math inline">\((\mathbf{U} - \tfrac{1}{2}\,\mathbf{I}_3)\,\tilde{v}\)</span> is <span class="math inline">\(\tfrac{3}{2}\,v_1 + 1 = 0\)</span>, so <span class="math inline">\(v_1 = -\tfrac{2}{3}\)</span>. Check:</p>
 <p><span class="math display">\[
@@ -1308,12 +1376,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-eigen-idempotent-orthogonal" class="quarto-xref">Theorem&nbsp;5</a> (Eigenvalues of idempotent and orthogonal matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-eigen-idempotent-orthogonal" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Eigenvalues of idempotent and orthogonal matrices)</strong></span> &nbsp;</p>
 <ol type="1">
@@ -1324,8 +1398,8 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1334,7 +1408,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span> with <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span>.</p>
@@ -1379,12 +1453,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-eigen-idempotent-orthogonal" class="quarto-xref">Example&nbsp;7</a> (Projections and reflections)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-eigen-idempotent-orthogonal" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (Projections and reflections)</strong></span> &nbsp;</p>
 <ul>
@@ -1403,24 +1483,36 @@ v_2 &amp;= 2 v_1 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-similar" class="quarto-xref">Definition&nbsp;2</a> (Similar matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-similar" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Similar matrices)</strong></span> Two <span class="math inline">\(p \times p\)</span> matrices <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> are <strong>similar</strong> if <span class="math inline">\(\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\)</span> for some invertible <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{P}\)</span> (<a href="./linear-algebra-special-matrices.html#def-invertible-matrix">Definition&nbsp;6 in Special Matrices and Decompositions</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-similar-both-ways" class="quarto-xref">Remark&nbsp;1</a> (Similarity read both ways)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-similar-both-ways" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (Similarity read both ways). </span>If <span class="math inline">\(\mathbf{P}\)</span> is invertible, then <span class="math inline">\(\mathbf{P}^{-1}\)</span> is invertible with inverse <span class="math inline">\(\mathbf{P}\)</span>:</p>
 <p><span class="math display">\[
@@ -1453,12 +1545,18 @@ v_2 &amp;= 2 v_1 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-similar" class="quarto-xref">Example&nbsp;8</a> (A matrix similar to a diagonal one)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-similar" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (A matrix similar to a diagonal one)</strong></span> Let <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{P} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}\)</span>. Then</p>
 <p><span class="math display">\[
@@ -1516,20 +1614,26 @@ v_2 &amp;= 2 v_1 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-similar-eigenvalues" class="quarto-xref">Theorem&nbsp;6</a> (Similar matrices have the same eigenvalues)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-similar-eigenvalues" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 6 (Similar matrices have the same eigenvalues)</strong></span> If <span class="math inline">\(\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\)</span> (<a href="#def-similar" class="quarto-xref">Definition&nbsp;2</a>), then <span class="math inline">\(\tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{A}\)</span> for <span class="math inline">\(\lambda\)</span> exactly when <span class="math inline">\(\mathbf{P}^{-1} \tilde{v}\)</span> is an eigenvector of <span class="math inline">\(\mathbf{B}\)</span> for <span class="math inline">\(\lambda\)</span>. So <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> have the same eigenvalues.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1538,7 +1642,7 @@ v_2 &amp;= 2 v_1 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>From <span class="math inline">\(\mathbf{A}\)</span> to <span class="math inline">\(\mathbf{B}\)</span>.</strong> Let <span class="math inline">\(\mathbf{A} \tilde{v} = \lambda\tilde{v}\)</span> with <span class="math inline">\(\tilde{v} \ne \tilde{0}\)</span>, and <span class="math inline">\(\tilde{w} = \mathbf{P}^{-1} \tilde{v}\)</span>. Then</p>
@@ -1596,32 +1700,44 @@ v_2 &amp;= 2 v_1 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-similar-eigenvalues" class="quarto-xref">Example&nbsp;9</a> (Eigenvectors carried across a similarity)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-similar-eigenvalues" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (Eigenvectors carried across a similarity)</strong></span> In <a href="#exm-similar" class="quarto-xref">Example&nbsp;8</a>, <span class="math inline">\(\mathbf{B} = \operatorname{diag}(3, 1)\)</span> has eigenvectors <span class="math inline">\((1, 0)\)</span> for <span class="math inline">\(3\)</span> and <span class="math inline">\((0, 1)\)</span> for <span class="math inline">\(1\)</span>: <span class="math inline">\(\operatorname{diag}(3, 1)\,(1, 0) = (3, 0)\)</span> and <span class="math inline">\(\operatorname{diag}(3, 1)\,(0, 1) = (0, 1)\)</span>. <span class="math inline">\(\mathbf{P}\,(1, 0) = (1, 1)\)</span> and <span class="math inline">\(\mathbf{P}\,(0, 1) = (1, -1)\)</span> are the eigenvectors of <span class="math inline">\(\mathbf{A}\)</span> for <span class="math inline">\(3\)</span> and <span class="math inline">\(1\)</span> found in <a href="./linear-algebra-special-matrices.html#exm-eigenvalue">Example&nbsp;21 in Special Matrices and Decompositions</a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-eigenvectors-independent" class="quarto-xref">Theorem&nbsp;7</a> (Eigenvectors for distinct eigenvalues are linearly independent)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-eigenvectors-independent" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 7 (Eigenvectors for distinct eigenvalues are linearly independent)</strong></span> If <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> are eigenvectors of a <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> for eigenvalues <span class="math inline">\(\lambda_1, \ldots, \lambda_k\)</span> that are all different, then <span class="math inline">\(\tilde{v}_1, \ldots, \tilde{v}_k\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1630,7 +1746,7 @@ v_2 &amp;= 2 v_1 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span>. For <span class="math inline">\(k = 1\)</span>, <span class="math inline">\(\tilde{v}_1 \ne \tilde{0}\)</span> is linearly independent on its own. Suppose the result holds for <span class="math inline">\(k - 1\)</span> eigenvectors, and <span class="math inline">\(\sum_{i=1}^{k} c_i \tilde{v}_i = \tilde{0}\)</span>. Then</p>
@@ -1655,12 +1771,18 @@ v_2 &amp;= 2 v_1 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-eigenvectors-independent" class="quarto-xref">Example&nbsp;10</a> (Independent eigenvectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-eigenvectors-independent" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (Independent eigenvectors)</strong></span> The eigenvectors <span class="math inline">\((1, 1)\)</span> for <span class="math inline">\(3\)</span> and <span class="math inline">\((1, -1)\)</span> for <span class="math inline">\(1\)</span> of <a href="./linear-algebra-special-matrices.html#exm-eigenvalue">Example&nbsp;21 in Special Matrices and Decompositions</a> are linearly independent, as <a href="#thm-eigenvectors-independent" class="quarto-xref">Theorem&nbsp;7</a> says they must be: <span class="math inline">\(c_1 (1, 1) + c_2 (1, -1) = (c_1 + c_2, c_1 - c_2)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if</p>
 <p><span class="math display">\[
@@ -1674,24 +1796,36 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-diagonalizable" class="quarto-xref">Definition&nbsp;3</a> (Diagonalizable matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-diagonalizable" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Diagonalizable matrix)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is <strong>diagonalizable</strong> if <span class="math inline">\(\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\)</span> for some invertible <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span> and diagonal <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{\Lambda}\)</span> (<a href="./linear-algebra-special-matrices.html#def-diagonal-matrix">Definition&nbsp;4 in Special Matrices and Decompositions</a>); by <a href="#rem-similar-both-ways" class="quarto-xref">Remark&nbsp;1</a>, that is the same as <span class="math inline">\(\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}\)</span>, so a diagonalizable matrix is one similar to a diagonal matrix (<a href="#def-similar" class="quarto-xref">Definition&nbsp;2</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-diagonalizable" class="quarto-xref">Example&nbsp;11</a> (Diagonalizable and not)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-diagonalizable" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (Diagonalizable and not)</strong></span> &nbsp;</p>
 <ul>
@@ -1709,20 +1843,26 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-diagonalizable" class="quarto-xref">Theorem&nbsp;8</a> (Diagonalizable means a basis of eigenvectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-diagonalizable" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 8 (Diagonalizable means a basis of eigenvectors)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is diagonalizable (<a href="#def-diagonalizable" class="quarto-xref">Definition&nbsp;3</a>) exactly when it has <span class="math inline">\(p\)</span> linearly independent eigenvectors. Then <span class="math inline">\(\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\)</span> with the eigenvectors as the columns of <span class="math inline">\(\mathbf{X}\)</span> and their eigenvalues, in the same order, on the diagonal of <span class="math inline">\(\mathbf{\Lambda}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1731,7 +1871,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\mathbf{X}\)</span> have columns <span class="math inline">\(\tilde{x}_1, \ldots, \tilde{x}_p\)</span> and <span class="math inline">\(\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\)</span>. Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{A} \mathbf{X}\)</span> is <span class="math inline">\(\mathbf{A} \tilde{x}_j\)</span>, and column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{X} \mathbf{\Lambda}\)</span> is <span class="math inline">\(\mathbf{X}\)</span> times column <span class="math inline">\(j\)</span> of <span class="math inline">\(\mathbf{\Lambda}\)</span> (1), which is</p>
@@ -1786,32 +1926,44 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-thm-diagonalizable" class="quarto-xref">Example&nbsp;12</a> (Building the diagonalization from eigenvectors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-thm-diagonalizable" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (Building the diagonalization from eigenvectors)</strong></span> The eigenvectors <span class="math inline">\((1, 1)\)</span> and <span class="math inline">\((1, -1)\)</span> of <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> are linearly independent (<a href="#exm-eigenvectors-independent" class="quarto-xref">Example&nbsp;10</a>), so with <span class="math inline">\(\mathbf{X} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}\)</span> and <span class="math inline">\(\mathbf{\Lambda} = \operatorname{diag}(3, 1)\)</span>, <span class="math inline">\(\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\)</span>; by <a href="#rem-similar-both-ways" class="quarto-xref">Remark&nbsp;1</a> this is the similarity of <a href="#exm-similar" class="quarto-xref">Example&nbsp;8</a>, with <span class="math inline">\(\mathbf{X} = \mathbf{P}\)</span>. Because <span class="math inline">\(\mathbf{A}\)</span> is symmetric, <a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;10 in Special Matrices and Decompositions</a> even gives such a factorization with orthonormal eigenvectors (<a href="./linear-algebra-special-matrices.html#def-eigendecomposition">Definition&nbsp;17 in Special Matrices and Decompositions</a>): dividing each column of <span class="math inline">\(\mathbf{X}\)</span> by its length <span class="math inline">\(\sqrt{2}\)</span> gives one. By contrast, every eigenvector of <span class="math inline">\(\mathbf{J}\)</span> in <a href="#exm-eigenspace" class="quarto-xref">Example&nbsp;2</a> has the form <span class="math inline">\((t, 0)\)</span>, so any two of them are multiples of each other, and <span class="math inline">\(\mathbf{J}\)</span> has no two linearly independent eigenvectors: another way to see that it is not diagonalizable.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-cor no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-cor no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Cor</span><a href="#cor-distinct-diagonalizable" class="quarto-xref">Corollary&nbsp;1</a> (Distinct eigenvalues make a matrix diagonalizable)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="cor-distinct-diagonalizable" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 1 (Distinct eigenvalues make a matrix diagonalizable)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix with <span class="math inline">\(p\)</span> different eigenvalues is diagonalizable.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1820,7 +1972,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Choose one eigenvector for each eigenvalue. These <span class="math inline">\(p\)</span> eigenvectors are linearly independent (<a href="#thm-eigenvectors-independent" class="quarto-xref">Theorem&nbsp;7</a>), so the matrix is diagonalizable (<a href="#thm-diagonalizable" class="quarto-xref">Theorem&nbsp;8</a>).</p>
@@ -1828,32 +1980,44 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-distinct-diagonalizable" class="quarto-xref">Example&nbsp;13</a> (A triangular matrix with distinct diagonal entries)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-distinct-diagonalizable" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (A triangular matrix with distinct diagonal entries)</strong></span> <span class="math inline">\(\mathbf{U}\)</span> of <a href="#exm-eigen-triangular" class="quarto-xref">Example&nbsp;6</a> has the three different eigenvalues <span class="math inline">\(2\)</span>, <span class="math inline">\(\tfrac{1}{2}\)</span> and <span class="math inline">\(-1\)</span> (<a href="#thm-eigen-triangular" class="quarto-xref">Theorem&nbsp;4</a>), so it is diagonalizable, even though it is not symmetric, so <a href="./linear-algebra-special-matrices.html#thm-spectral">Theorem&nbsp;10 in Special Matrices and Decompositions</a> does not apply to it. The converse fails: <span class="math inline">\(\mathbf{I}_2\)</span> is diagonal, hence diagonalizable (<span class="math inline">\(\mathbf{I}_2 = \mathbf{I}_2\,\mathbf{I}_2\,\mathbf{I}_2^{-1}\)</span>), but has only the eigenvalue <span class="math inline">\(1\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-diagonalizable-powers" class="quarto-xref">Theorem&nbsp;9</a> (Powers of a diagonalizable matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-diagonalizable-powers" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 9 (Powers of a diagonalizable matrix)</strong></span> If <span class="math inline">\(\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\)</span> (<a href="#def-diagonalizable" class="quarto-xref">Definition&nbsp;3</a>) with <span class="math inline">\(\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\)</span>, then for every positive integer <span class="math inline">\(k\)</span>, <span class="math inline">\(\mathbf{A}^k = \mathbf{X} \mathbf{\Lambda}^k \mathbf{X}^{-1}\)</span> and <span class="math inline">\(\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1862,7 +2026,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Powers of <span class="math inline">\(\mathbf{\Lambda}\)</span>.</strong> If <span class="math inline">\(\mathbf{D} = \operatorname{diag}(d_1, \ldots, d_p)\)</span> and <span class="math inline">\(\mathbf{E} = \operatorname{diag}(e_1, \ldots, e_p)\)</span>, with entries <span class="math inline">\(d_{il}\)</span> and <span class="math inline">\(e_{lj}\)</span> (so <span class="math inline">\(d_{ii} = d_i\)</span> and <span class="math inline">\(e_{jj} = e_j\)</span>), entry <span class="math inline">\((i, j)\)</span> of <span class="math inline">\(\mathbf{D} \mathbf{E}\)</span> is <span class="math inline">\(\sum_l d_{il}\,e_{lj}\)</span> (1), where <span class="math inline">\(d_{il} = 0\)</span> unless <span class="math inline">\(l = i\)</span> and <span class="math inline">\(e_{lj} = 0\)</span> unless <span class="math inline">\(l = j\)</span>. For <span class="math inline">\(i \ne j\)</span> no term survives, so the entry is <span class="math inline">\(0\)</span>; for <span class="math inline">\(i = j\)</span> only <span class="math inline">\(l = i\)</span> survives, giving <span class="math inline">\(d_i\,e_i\)</span>. So <span class="math inline">\(\mathbf{D} \mathbf{E} = \operatorname{diag}(d_1 e_1, \ldots, d_p e_p)\)</span>, and <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(k\)</span> gives <span class="math inline">\(\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\)</span>.</p>
@@ -1896,12 +2060,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-diagonalizable-powers" class="quarto-xref">Example&nbsp;14</a> (A closed form for the powers)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-diagonalizable-powers" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (A closed form for the powers)</strong></span> For <span class="math inline">\(\mathbf{A} = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span>, with <span class="math inline">\(\mathbf{X}\)</span> as in <a href="#exm-thm-diagonalizable" class="quarto-xref">Example&nbsp;12</a> and <span class="math inline">\(\mathbf{X}^{-1} = \tfrac{1}{2}\,\mathbf{X}\)</span> (<a href="#exm-similar" class="quarto-xref">Example&nbsp;8</a>),</p>
 <p><span class="math display">\[
@@ -1932,7 +2102,7 @@ c_1 &amp;= c_2 \\
 <section id="sec-cholesky" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="sec-cholesky"><span class="header-section-number">2</span> Gram matrices, Schur complements and Cholesky</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1941,7 +2111,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This section is adapted from <span class="citation" data-cites="zhou2024pd">Zhou (<a href="#ref-zhou2024pd" role="doc-biblioref">2024b</a>)</span>, used under the MIT License (see the license text in <a href="./linear-algebra-subspaces.html#sec-subspaces">Section&nbsp;2 in Subspaces and Rank</a>). The source’s eigenvalue and quadratic-form characterizations of definiteness are covered in these notes already (<a href="./linear-algebra-special-matrices.html#thm-definite-eigenvalues">Theorem&nbsp;13 in Special Matrices and Decompositions</a>). These parts of the source are left out:</p>
 <ul>
@@ -1956,12 +2126,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-pd-gram" class="quarto-xref">Theorem&nbsp;10</a> (Definite matrices are Gram matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-pd-gram" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 10 (Definite matrices are Gram matrices)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be a <span class="math inline">\(p \times p\)</span> matrix.</p>
 <ol type="1">
@@ -1972,8 +2148,8 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1982,7 +2158,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If <span class="math inline">\(\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\)</span>.</strong> <span class="math inline">\(\mathbf{A}\)</span> is symmetric, since</p>
@@ -2032,12 +2208,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-pd-gram" class="quarto-xref">Example&nbsp;15</a> (Gram factorizations)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-pd-gram" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Gram factorizations)</strong></span> &nbsp;</p>
 <ul>
@@ -2049,12 +2231,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-pd-operations" class="quarto-xref">Theorem&nbsp;11</a> (Operations that preserve definiteness)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-pd-operations" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 11 (Operations that preserve definiteness)</strong></span> &nbsp;</p>
 <ol type="1">
@@ -2065,8 +2253,8 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2075,7 +2263,7 @@ c_1 &amp;= c_2 \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>Part 1.</strong> <span class="math inline">\({\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\)</span> is symmetric:</p>
@@ -2114,12 +2302,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-pd-operations" class="quarto-xref">Example&nbsp;16</a> (Building positive definite matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-pd-operations" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Building positive definite matrices)</strong></span> &nbsp;</p>
 <ul>
@@ -2139,12 +2333,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-block-matrix" class="quarto-xref">Definition&nbsp;4</a> (Block matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-block-matrix" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Block matrix)</strong></span> Split the rows of an <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(\mathbf{X}\)</span> into the first <span class="math inline">\(k\)</span> and the last <span class="math inline">\(m - k\)</span>, and its columns into the first <span class="math inline">\(l\)</span> and the last <span class="math inline">\(n - l\)</span>, with <span class="math inline">\(1 \le k &lt; m\)</span> and <span class="math inline">\(1 \le l &lt; n\)</span>. This cuts <span class="math inline">\(\mathbf{X}\)</span> into four smaller matrices, its <strong>blocks</strong>:</p>
 <p><span class="math display">\[
@@ -2155,12 +2355,18 @@ c_1 &amp;= c_2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-block-matrix" class="quarto-xref">Example&nbsp;17</a> (Cutting a <span class="math inline">\(3 \times 3\)</span> matrix into blocks)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-block-matrix" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Cutting a <span class="math inline">\(3 \times 3\)</span> matrix into blocks)</strong></span> With</p>
 <p><span class="math display">\[
@@ -2200,32 +2406,44 @@ k &amp;= l \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-leading-block" class="quarto-xref">Definition&nbsp;5</a> (Leading block of a square matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-leading-block" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Leading block of a square matrix)</strong></span> When <span class="math inline">\(\mathbf{X}\)</span> is <span class="math inline">\(n \times n\)</span> and <span class="math inline">\(1 \le k \le n\)</span>, the <span class="math inline">\(k \times k\)</span> matrix of the entries <span class="math inline">\(x_{ij}\)</span> with <span class="math inline">\(i, j \le k\)</span> is the <strong>leading</strong> (or <strong>top-left</strong>) <span class="math inline">\(k \times k\)</span> <strong>block</strong> of <span class="math inline">\(\mathbf{X}\)</span>; for <span class="math inline">\(k &lt; n\)</span> it is the block <span class="math inline">\(\mathbf{A}\)</span> of <a href="#def-block-matrix" class="quarto-xref">Definition&nbsp;4</a> with <span class="math inline">\(l = k\)</span>, and for <span class="math inline">\(k = n\)</span> it is <span class="math inline">\(\mathbf{X}\)</span> itself.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-pd-submatrix" class="quarto-xref">Theorem&nbsp;12</a> (Leading blocks of a positive definite matrix are positive definite)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-pd-submatrix" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 12 (Leading blocks of a positive definite matrix are positive definite)</strong></span> Let <span class="math inline">\(\mathbf{X}\)</span> be a <span class="math inline">\(p \times p\)</span> positive definite matrix (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;20 in Special Matrices and Decompositions</a>), and for <span class="math inline">\(1 \le k \le p\)</span> let <span class="math inline">\(\mathbf{X}_k\)</span> be its leading <span class="math inline">\(k \times k\)</span> block (<a href="#def-block-matrix" class="quarto-xref">Definition&nbsp;4</a>), with entries <span class="math inline">\(x_{ij}\)</span> for <span class="math inline">\(i, j \le k\)</span>. Then <span class="math inline">\(\mathbf{X}_k\)</span> is positive definite. Also, every diagonal entry of a positive definite matrix is positive.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2234,7 +2452,7 @@ k &amp;= l \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathbf{X}_k\)</span> is symmetric, because <span class="math inline">\(\mathbf{X}\)</span> is. For <span class="math inline">\(\tilde{u} \in \mathbb{R}^k\)</span> with <span class="math inline">\(\tilde{u} \ne \tilde{0}\)</span>, let <span class="math inline">\(\tilde{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \mathbb{R}^p\)</span>, which is nonzero, with entries <span class="math inline">\(y_i = u_i\)</span> for <span class="math inline">\(i \le k\)</span> and <span class="math inline">\(y_i = 0\)</span> for <span class="math inline">\(i &gt; k\)</span>. Then</p>
@@ -2275,12 +2493,18 @@ k &amp;= l \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-pd-submatrix" class="quarto-xref">Example&nbsp;18</a> (A quick necessary test)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-52" class="callout-52-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-pd-submatrix" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (A quick necessary test)</strong></span> <span class="math inline">\(\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}\)</span> is positive definite (<a href="#exm-pd-operations" class="quarto-xref">Example&nbsp;16</a>), and its diagonal entries <span class="math inline">\(2, 2\)</span> and its <span class="math inline">\(1 \times 1\)</span> leading block <span class="math inline">\([2]\)</span> are positive. The test can only rule matrices out: <span class="math inline">\(-\mathbf{I}_2\)</span> has negative diagonal entries, so it is not positive definite, even though</p>
 <p><span class="math display">\[
@@ -2295,12 +2519,18 @@ k &amp;= l \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a> (The quadratic form of a block matrix)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-block-quadratic" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 13 (The quadratic form of a block matrix)</strong></span> Let <span class="math inline">\(k, m \ge 1\)</span>, let <span class="math inline">\(\mathbf{A}\)</span> be a symmetric <span class="math inline">\(k \times k\)</span> matrix, <span class="math inline">\(\mathbf{B}\)</span> a <span class="math inline">\(k \times m\)</span> matrix and <span class="math inline">\(\mathbf{C}\)</span> a symmetric <span class="math inline">\(m \times m\)</span> matrix, and let <span class="math inline">\(\mathbf{X}\)</span> be the <span class="math inline">\((k + m) \times (k + m)\)</span> block matrix (<a href="#def-block-matrix" class="quarto-xref">Definition&nbsp;4</a>)</p>
 <p><span class="math display">\[
@@ -2326,8 +2556,8 @@ x_{k+i, j} &amp;= b_{ji} \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2336,7 +2566,7 @@ x_{k+i, j} &amp;= b_{ji} \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathbf{X} \tilde{v}\)</span> in blocks.</strong> For <span class="math inline">\(i \le k\)</span>,</p>
@@ -2422,12 +2652,18 @@ x_{k+i, j} &amp;= b_{ji} \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-block-quadratic" class="quarto-xref">Example&nbsp;19</a> (The <span class="math inline">\(2 \times 2\)</span> case)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-block-quadratic" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (The <span class="math inline">\(2 \times 2\)</span> case)</strong></span> For <span class="math inline">\(\mathbf{X} = \begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> (<span class="math inline">\(k = 1\)</span> and <span class="math inline">\(m = 1\)</span>) and <span class="math inline">\(a \ne 0\)</span>, the theorem reads</p>
 <p><span class="math display">\[
@@ -2452,24 +2688,36 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-schur-complement" class="quarto-xref">Definition&nbsp;6</a> (Schur complement)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-56" class="callout-56-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-schur-complement" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Schur complement)</strong></span> For a block matrix <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> as in <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a> with <span class="math inline">\(\mathbf{A}\)</span> invertible, the <strong>Schur complement</strong> of <span class="math inline">\(\mathbf{A}\)</span> in <span class="math inline">\(\mathbf{X}\)</span> is the <span class="math inline">\(m \times m\)</span> matrix <span class="math inline">\(\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\)</span> defined in <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-schur-complement" class="quarto-xref">Example&nbsp;20</a> (Schur complements of <span class="math inline">\(2 \times 2\)</span> matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-57" class="callout-57-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-schur-complement" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (Schur complements of <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> &nbsp;</p>
 <ul>
@@ -2495,20 +2743,26 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-schur-test" class="quarto-xref">Theorem&nbsp;14</a> (Schur complement test)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-58" class="callout-58-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-schur-test" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 14 (Schur complement test)</strong></span> Let <span class="math inline">\(\mathbf{X} = \begin{bmatrix} \mathbf{A} &amp; \mathbf{B} \\ {\mathbf{B}}^{\top} &amp; \mathbf{C} \end{bmatrix}\)</span> be as in <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>. Then <span class="math inline">\(\mathbf{X}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;20 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A}\)</span> is positive definite and its Schur complement <span class="math inline">\(\mathbf{S}\)</span> (<a href="#def-schur-complement" class="quarto-xref">Definition&nbsp;6</a>) is positive definite.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2517,7 +2771,7 @@ a &amp;= c \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-59" class="callout-59-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\(\mathbf{A}\)</span> is positive definite, so invertible (<a href="./linear-algebra-special-matrices.html#thm-pd-inverse">Theorem&nbsp;14 in Special Matrices and Decompositions</a>), and <span class="math inline">\(\mathbf{S}\)</span> is defined. <span class="math inline">\(\mathbf{X}\)</span> is symmetric. Let <span class="math inline">\(\tilde{v} = (\tilde{u}, \tilde{w}) \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{z} = \tilde{u} + \mathbf{A}^{-1} \mathbf{B} \tilde{w}\)</span>. By <a href="#thm-block-quadratic" class="quarto-xref">Theorem&nbsp;13</a>, <span class="math inline">\({\tilde{v}}^{\top} \mathbf{X} \tilde{v} = {\tilde{z}}^{\top} \mathbf{A} \tilde{z} + {\tilde{w}}^{\top} \mathbf{S} \tilde{w}\)</span>, and both terms are at least <span class="math inline">\(0\)</span>. If <span class="math inline">\(\tilde{w} \ne \tilde{0}\)</span>, the second term is positive. If <span class="math inline">\(\tilde{w} = \tilde{0}\)</span>, then <span class="math inline">\(\tilde{u} \ne \tilde{0}\)</span> and <span class="math inline">\(\tilde{z} = \tilde{u}\)</span>, so the first term is positive. Either way <span class="math inline">\({\tilde{v}}^{\top} \mathbf{X} \tilde{v} &gt; 0\)</span>.</p>
@@ -2533,12 +2787,18 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-schur-test" class="quarto-xref">Example&nbsp;21</a> (Testing <span class="math inline">\(2 \times 2\)</span> matrices)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-60" class="callout-60-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-schur-test" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Testing <span class="math inline">\(2 \times 2\)</span> matrices)</strong></span> A symmetric <span class="math inline">\(\begin{bmatrix} a &amp; b \\ b &amp; c \end{bmatrix}\)</span> is positive definite exactly when <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(c - \tfrac{b^2}{a} &gt; 0\)</span>, that is, <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(ac &gt; b^2\)</span> (a <span class="math inline">\(1 \times 1\)</span> matrix <span class="math inline">\([s]\)</span> is positive definite exactly when <span class="math inline">\(s &gt; 0\)</span>, since <span class="math inline">\({x}^{\top} s x = s x^2\)</span>).</p>
 <ul>
@@ -2549,20 +2809,26 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-cholesky" class="quarto-xref">Theorem&nbsp;15</a> (Cholesky factorization)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-61" class="callout-61-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-cholesky" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 15 (Cholesky factorization)</strong></span> A <span class="math inline">\(p \times p\)</span> matrix <span class="math inline">\(\mathbf{A}\)</span> is positive definite (<a href="./linear-algebra-special-matrices.html#def-positive-definite">Definition&nbsp;20 in Special Matrices and Decompositions</a>) exactly when <span class="math inline">\(\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\)</span> for some lower triangular <span class="math inline">\(\mathbf{L}\)</span> (<a href="./linear-algebra-projections.html#def-triangular-matrix">Definition&nbsp;7 in Projections and Linear Systems</a>) with positive diagonal entries. For a positive definite <span class="math inline">\(\mathbf{A}\)</span> that <span class="math inline">\(\mathbf{L}\)</span> is unique; it is the <strong>Cholesky factor</strong> of <span class="math inline">\(\mathbf{A}\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2571,7 +2837,7 @@ a &amp;= c \\
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><strong>If.</strong> <span class="math inline">\({\mathbf{L}}^{\top}\)</span> is upper triangular with positive diagonal (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>), so <span class="math inline">\({\mathbf{L}}^{\top} \tilde{x}= \tilde{0}\)</span> only for <span class="math inline">\(\tilde{x}= \tilde{0}\)</span> (<a href="./linear-algebra-projections.html#thm-back-substitution">Theorem&nbsp;16 in Projections and Linear Systems</a>), and the columns of <span class="math inline">\({\mathbf{L}}^{\top}\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-matvec-columns">Theorem&nbsp;3 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). So <span class="math inline">\(\mathbf{A} = {({\mathbf{L}}^{\top})}^{\top}\,{\mathbf{L}}^{\top}\)</span> (<a href="./linear-algebra-matrices.html#def-matrix-transpose">Definition&nbsp;3 in Matrices</a>) is positive definite (<a href="#thm-pd-gram" class="quarto-xref">Theorem&nbsp;10</a>, part 2).</p>
@@ -2640,12 +2906,18 @@ a &amp;= c \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-cholesky" class="quarto-xref">Example&nbsp;22</a> (Two Cholesky factors)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-63" class="callout-63-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-cholesky" class="theorem example">
 <p><span class="theorem-title"><strong>Example 22 (Two Cholesky factors)</strong></span> &nbsp;</p>
 <ul>

@@ -103,7 +103,9 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.js"></script>
+<link href="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -224,75 +226,15 @@ div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-def.callout {
-  border-left-color: #1B5E20;
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
 }
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
 }
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cnj.callout {
-  border-left-color: #558B2F;
-}
-div.callout-cnj.callout-style-default .callout-header {
-  background-color: rgba(85, 139, 47, 0.13);
-}
-div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-cor.callout {
-  border-left-color: #00838F;
-}
-div.callout-cor.callout-style-default .callout-header {
-  background-color: rgba(0, 131, 143, 0.13);
-}
-div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-solution.callout {
-  border-left-color: #4E342E;
-}
-div.callout-solution.callout-style-default .callout-header {
-  background-color: rgba(78, 52, 46, 0.13);
-}
-div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-remark.callout {
-  border-left-color: #AD1457;
-}
-div.callout-remark.callout-style-default .callout-header {
-  background-color: rgba(173, 20, 87, 0.13);
-}
-div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-proof.callout {
-  border-left-color: #37474F;
-}
-div.callout-proof.callout-style-default .callout-header {
-  background-color: rgba(55, 71, 79, 0.13);
-}
-div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-exr.callout {
   border-left-color: #FFA500;
@@ -304,15 +246,75 @@ div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg
 div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
+div.callout-solution.callout {
+  border-left-color: #4E342E;
 }
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
+div.callout-solution.callout-style-default .callout-header {
+  background-color: rgba(78, 52, 46, 0.13);
 }
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+div.callout-solution .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-solution.callout-style-default .callout-icon::before, div.callout-solution.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234E342E" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-proof.callout {
+  border-left-color: #37474F;
+}
+div.callout-proof.callout-style-default .callout-header {
+  background-color: rgba(55, 71, 79, 0.13);
+}
+div.callout-proof .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-proof.callout-style-default .callout-icon::before, div.callout-proof.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2337474F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cnj.callout {
+  border-left-color: #558B2F;
+}
+div.callout-cnj.callout-style-default .callout-header {
+  background-color: rgba(85, 139, 47, 0.13);
+}
+div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-remark.callout {
+  border-left-color: #AD1457;
+}
+div.callout-remark.callout-style-default .callout-header {
+  background-color: rgba(173, 20, 87, 0.13);
+}
+div.callout-remark .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-cor.callout {
+  border-left-color: #00838F;
+}
+div.callout-cor.callout-style-default .callout-header {
+  background-color: rgba(0, 131, 143, 0.13);
+}
+div.callout-cor .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-cor.callout-style-default .callout-icon::before, div.callout-cor.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2300838F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 </style>
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
@@ -883,7 +885,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 20:27:09 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 23:18:59 (PDT)</p>
     </div>
   </div>
   
@@ -895,24 +897,36 @@ window.Quarto = {
 </header><p>This page collects general advice on how to write <a href="#def-proof">proofs</a> and <a href="#def-derivation">derivations</a>. The goal of a proof is not just to convince yourself that a <a href="#def-theorem">result</a> is true; it is to convince a <em>reader</em>, and to show them <em>why</em> it is true. Each principle on this page serves that goal. The symbols for <a href="#def-logical-entailment">logical entailment</a> are listed under <a href="#sec-proof-definitions">Definitions for proofs</a> below.</p>
 <section id="sec-proof-definitions" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="sec-proof-definitions">
 <span class="header-section-number">1</span> Definitions for proofs</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a> (Proposition (statement))
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-proposition" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Proposition (statement))</strong></span> A <strong>proposition</strong>, or <strong>statement</strong>, is a sentence that is either true or false.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-proposition" class="quarto-xref">Example&nbsp;1</a> (Propositions, and a sentence that is not one)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-proposition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Propositions, and a sentence that is not one)</strong></span> &nbsp;</p>
 <ul>
@@ -924,24 +938,36 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a> (Predicate)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-predicate" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Predicate)</strong></span> A <strong>predicate</strong> <span class="math inline">\(P(x)\)</span> is a sentence about a variable <span class="math inline">\(x\)</span> that becomes a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) whenever a value is substituted for <span class="math inline">\(x\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-predicate" class="quarto-xref">Example&nbsp;2</a> (A predicate)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-predicate" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (A predicate)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for real numbers <span class="math inline">\(x\)</span>.</p>
 <ul>
@@ -954,12 +980,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a> (Logical connective)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-logical-connective" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Logical connective)</strong></span> A <strong>logical connective</strong> builds a new proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) from one or two propositions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, with a truth value that depends only on the truth values of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. These notes use five:</p>
 <ul>
@@ -978,12 +1010,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-logical-connective" class="quarto-xref">Example&nbsp;3</a> (Truth values of connectives)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-logical-connective" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Truth values of connectives)</strong></span> Let <span class="math inline">\(P\)</span> be “<span class="math inline">\(2 + 3 = 5\)</span>”, which is true, and let <span class="math inline">\(Q\)</span> be “<span class="math inline">\(7\)</span> is <a href="./notation.html#def-even-odd">even</a>”, which is false.</p>
 <ul>
@@ -1004,12 +1042,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-quantifier" class="quarto-xref">Definition&nbsp;4</a> (Quantifier)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-quantifier" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Quantifier)</strong></span> A <strong>quantifier</strong> turns a predicate <span class="math inline">\(P(x)\)</span> (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) about the elements <span class="math inline">\(x\)</span> of a set <span class="math inline">\(S\)</span> into a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>):</p>
 <ul>
@@ -1020,12 +1064,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-quantifier" class="quarto-xref">Example&nbsp;4</a> (Quantified propositions)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-quantifier" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (Quantified propositions)</strong></span> Let <span class="math inline">\(P(x)\)</span> be the predicate “<span class="math inline">\(x &gt; 2\)</span>”, for <a href="./notation.html#def-integers">integers</a> <span class="math inline">\(x\)</span>.</p>
 <ul>
@@ -1037,12 +1087,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-inequality" class="quarto-xref">Definition&nbsp;5</a> (Inequality)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-inequality" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Inequality)</strong></span> An <strong>inequality</strong> is a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) or a predicate (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) that compares two expressions <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> whose values are <a href="./notation.html#def-real-numbers">real numbers</a>, in one of the forms:</p>
 <ul>
@@ -1059,12 +1115,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-inequality" class="quarto-xref">Example&nbsp;5</a> (Inequalities)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-inequality" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Inequalities)</strong></span> &nbsp;</p>
 <ul>
@@ -1077,24 +1139,36 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-logical-entailment" class="quarto-xref">Definition&nbsp;6</a> (Logical entailment (logical consequence, deductive consequence))
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-logical-entailment" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Logical entailment (logical consequence, deductive consequence))</strong></span> Propositions or predicates <span class="math inline">\(P_1, \ldots, P_n\)</span> (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>, <a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>) <strong>logically entail</strong> a proposition or predicate <span class="math inline">\(Q\)</span> when every choice of values for their variables that makes all of <span class="math inline">\(P_1, \ldots, P_n\)</span> true also makes <span class="math inline">\(Q\)</span> true. Then <span class="math inline">\(Q\)</span> is a <strong>logical consequence</strong>, or <strong>deductive consequence</strong>, of <span class="math inline">\(P_1, \ldots, P_n\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-logical-entailment" class="quarto-xref">Example&nbsp;6</a> (Entailment, and its failure)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-logical-entailment" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Entailment, and its failure)</strong></span> Let <span class="math inline">\(x\)</span> be an <a href="./notation.html#def-integers">integer</a>.</p>
 <ul>
@@ -1117,12 +1191,18 @@ window.Quarto = {
 </ul>
 <p>to denote logical entailment (<a href="#def-logical-entailment" class="quarto-xref">Definition&nbsp;6</a>). <span class="math inline">\(\Rightarrow\)</span> also writes the connective “implies” (<a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>); <span class="math inline">\(P\)</span> entails <span class="math inline">\(Q\)</span> exactly when <span class="math inline">\(P \Rightarrow Q\)</span> is true for every choice of values for the variables in <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
 <p>Let’s save <span class="math inline">\(\rightarrow\)</span> (<code>\rightarrow</code>) for <a href="./algebra-exponentials.html#def-sequence-limit">convergence</a> results.</p>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-proof" class="quarto-xref">Definition&nbsp;7</a> (Proof)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Proof)</strong></span> A <strong>proof</strong> of a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) is a finite list of statements that ends with that proposition, in which each statement is</p>
 <ul>
@@ -1135,12 +1215,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-proof" class="quarto-xref">Example&nbsp;7</a> (The sum of two even integers is even)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-proof" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (The sum of two even integers is even)</strong></span> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be even integers (<a href="./notation.html#def-even-odd">definition</a>). Then <span class="math inline">\(a = 2j\)</span> and <span class="math inline">\(b = 2k\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
 <p><span class="math display">\[
@@ -1165,24 +1251,36 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-derivation" class="quarto-xref">Definition&nbsp;8</a> (Derivation)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-derivation" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Derivation)</strong></span> A <strong>derivation</strong> is a proof (<a href="#def-proof" class="quarto-xref">Definition&nbsp;7</a>), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by <span class="math inline">\(=\)</span> or by an inequality sign (<a href="#def-inequality" class="quarto-xref">Definition&nbsp;5</a>), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-derivation" class="quarto-xref">Example&nbsp;8</a> (A derivation with equalities and inequalities)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-derivation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (A derivation with equalities and inequalities)</strong></span> For every real number <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[
@@ -1203,12 +1301,18 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-derivation-chain" class="quarto-xref">Theorem&nbsp;1</a> (What a derivation shows)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-derivation-chain" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (What a derivation shows)</strong></span> Consider a derivation (<a href="#def-derivation" class="quarto-xref">Definition&nbsp;8</a>) with expressions <span class="math inline">\(E_0, E_1, \ldots, E_n\)</span>, where each line <span class="math inline">\(E_j\)</span> is joined to the line <span class="math inline">\(E_{j-1}\)</span> before it by <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> or <span class="math inline">\(&lt;\)</span>.</p>
 <ol type="1">
@@ -1221,8 +1325,8 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1231,7 +1335,7 @@ a + b
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>First, a fact about two steps in a row. For numbers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span>, if <span class="math inline">\(a \mathrel{R} b\)</span> and <span class="math inline">\(b \mathrel{S} c\)</span>, where <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> are each one of <span class="math inline">\(=\)</span>, <span class="math inline">\(\le\)</span> and <span class="math inline">\(&lt;\)</span>, then <span class="math inline">\(a \mathrel{T} c\)</span>, where <span class="math inline">\(T\)</span> is</p>
@@ -1253,12 +1357,18 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-derivation-chain" class="quarto-xref">Example&nbsp;9</a> (Checking a derivation line by line)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-derivation-chain" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (Checking a derivation line by line)</strong></span> The derivation in <a href="#exm-derivation" class="quarto-xref">Example&nbsp;8</a> has the steps <span class="math inline">\(=\)</span>, <span class="math inline">\(\ge\)</span> and <span class="math inline">\(&gt;\)</span>, so by <a href="#thm-derivation-chain" class="quarto-xref">Theorem&nbsp;1</a> it shows <span class="math inline">\((x + 1)^2 &gt; 2x\)</span>. The code evaluates the four lines of that derivation at several values of <span class="math inline">\(x\)</span>, and checks each step and the comparison of the first line with the last.</p>
 <div class="cell">
@@ -1302,12 +1412,18 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-theorem" class="quarto-xref">Definition&nbsp;9</a> (Result, theorem, lemma, and corollary)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-theorem" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Result, theorem, lemma, and corollary)</strong></span> A <strong>result</strong> is a proposition (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>) that has a proof (<a href="#def-proof" class="quarto-xref">Definition&nbsp;7</a>). These notes label each result by its role:</p>
 <ul>
@@ -1319,24 +1435,36 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-proposition-as-result" class="quarto-xref">Remark&nbsp;1</a> (“Proposition” as a kind of result)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-proposition-as-result" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (“Proposition” as a kind of result). </span>Some sources also call a result of moderate importance a “proposition”. In these notes, “proposition” always means a sentence that is true or false (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>), whether or not it has been proved.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-theorem" class="quarto-xref">Example&nbsp;10</a> (A corollary of a result)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-theorem" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (A corollary of a result)</strong></span> <a href="#exm-proof" class="quarto-xref">Example&nbsp;7</a> proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> is even, because <span class="math inline">\(a + b + c = (a + b) + c\)</span>, <span class="math inline">\(a + b\)</span> is even by that result, and applying the result again to the even integers <span class="math inline">\(a + b\)</span> and <span class="math inline">\(c\)</span> shows that <span class="math inline">\((a + b) + c\)</span> is even. For example,</p>
 <p><span class="math display">\[
@@ -1351,48 +1479,72 @@ a + b
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-counterexample" class="quarto-xref">Definition&nbsp;10</a> (Counterexample)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-counterexample" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Counterexample)</strong></span> A <strong>counterexample</strong> to a proposition of the form “for every <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, <span class="math inline">\(P(x)\)</span>”, where <span class="math inline">\(P(x)\)</span> is a predicate (<a href="#def-predicate" class="quarto-xref">Definition&nbsp;2</a>), is an element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> for which <span class="math inline">\(P(x)\)</span> is false. A single counterexample shows that the proposition is false.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-counterexample" class="quarto-xref">Example&nbsp;11</a> (A counterexample)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-counterexample" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (A counterexample)</strong></span> The proposition “for every integer <span class="math inline">\(n\)</span>, <span class="math inline">\(n + n &gt; n\)</span>” is false. The integer <span class="math inline">\(n = 0\)</span> is a counterexample: <span class="math inline">\(0 + 0 = 0\)</span>, and <span class="math inline">\(0 &gt; 0\)</span> is false. The proposition is true for some integers, such as <span class="math inline">\(n = 3\)</span>, since <span class="math inline">\(3 + 3 = 6 &gt; 3\)</span>, but one counterexample is enough to make it false.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-converse" class="quarto-xref">Definition&nbsp;11</a> (Converse)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-converse" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11 (Converse)</strong></span> The <strong>converse</strong> of the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is the proposition “if <span class="math inline">\(Q\)</span>, then <span class="math inline">\(P\)</span>”.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-converse" class="quarto-xref">Example&nbsp;12</a> (A true proposition with a false converse)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-converse" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (A true proposition with a false converse)</strong></span> For an integer <span class="math inline">\(n\)</span>, call <span class="math inline">\(n\)</span> a multiple of <span class="math inline">\(4\)</span> if <span class="math inline">\(n = 4k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
 <ul>
@@ -1413,24 +1565,36 @@ n &amp;= 4k \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-necessary-sufficient" class="quarto-xref">Definition&nbsp;12</a> (Necessary and sufficient conditions)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-necessary-sufficient" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Necessary and sufficient conditions)</strong></span> When the proposition “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” is true, <span class="math inline">\(P\)</span> is a <strong>sufficient condition</strong> for <span class="math inline">\(Q\)</span>, and <span class="math inline">\(Q\)</span> is a <strong>necessary condition</strong> for <span class="math inline">\(P\)</span>. When both “if <span class="math inline">\(P\)</span>, then <span class="math inline">\(Q\)</span>” and its converse (<a href="#def-converse" class="quarto-xref">Definition&nbsp;11</a>) are true, <span class="math inline">\(P\)</span> is a <strong>necessary and sufficient condition</strong> for <span class="math inline">\(Q\)</span>, written “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-necessary-sufficient" class="quarto-xref">Example&nbsp;13</a> (Necessary but not sufficient)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-necessary-sufficient" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Necessary but not sufficient)</strong></span> In <a href="#exm-converse" class="quarto-xref">Example&nbsp;12</a>, “if <span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(4\)</span>, then <span class="math inline">\(n\)</span> is even” is true, so:</p>
 <ul>
@@ -1442,24 +1606,36 @@ n &amp;= 4k \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-proof-by-contradiction" class="quarto-xref">Definition&nbsp;13</a> (Proof by contradiction)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-proof-by-contradiction" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 13 (Proof by contradiction)</strong></span> A <strong>proof by contradiction</strong> of a proposition <span class="math inline">\(P\)</span> assumes that <span class="math inline">\(P\)</span> is false, and derives from that assumption a proposition that is known to be false.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-proof-by-contradiction" class="quarto-xref">Example&nbsp;14</a> (No integer is both even and odd)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-proof-by-contradiction" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (No integer is both even and odd)</strong></span> Suppose, for contradiction, that some integer <span class="math inline">\(n\)</span> is both even and odd (<a href="./notation.html#def-even-odd">definition</a>). Then <span class="math inline">\(n = 2j\)</span> and <span class="math inline">\(n = 2k + 1\)</span> for some integers <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and</p>
 <p><span class="math display">\[
@@ -1482,20 +1658,26 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-proof-by-contradiction" class="quarto-xref">Theorem&nbsp;2</a> (A proof by contradiction proves its proposition)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-proof-by-contradiction" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (A proof by contradiction proves its proposition)</strong></span> Let <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> be propositions (<a href="#def-proposition" class="quarto-xref">Definition&nbsp;1</a>). If <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false, then <span class="math inline">\(P\)</span> is true.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1504,7 +1686,7 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>By <a href="#def-logical-connective" class="quarto-xref">Definition&nbsp;3</a>, <span class="math inline">\(\neg P \Rightarrow Q\)</span> is false only when <span class="math inline">\(\neg P\)</span> is true and <span class="math inline">\(Q\)</span> is false. Here <span class="math inline">\(Q\)</span> is false, and <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true, so <span class="math inline">\(\neg P\)</span> is not true. Then <span class="math inline">\(\neg P\)</span> is false. Since <span class="math inline">\(\neg P\)</span> is true whenever <span class="math inline">\(P\)</span> is false, <span class="math inline">\(P\)</span> must be true.</p>
@@ -1512,12 +1694,18 @@ j - k &amp;= \tfrac{1}{2}
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-proof-by-contradiction-truth-table" class="quarto-xref">Example&nbsp;15</a> (A truth table for a proof by contradiction)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-proof-by-contradiction-truth-table" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (A truth table for a proof by contradiction)</strong></span> There are only four ways to assign truth values to <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. The code lists them, with the truth value of <span class="math inline">\(\neg P \Rightarrow Q\)</span>, and marks the rows where <span class="math inline">\(\neg P \Rightarrow Q\)</span> is true and <span class="math inline">\(Q\)</span> is false.</p>
 <div class="cell">
@@ -1576,24 +1764,36 @@ j - k &amp;= \tfrac{1}{2}
 <p>The <a href="./linear-algebra-projections.html#thm-hat-matrix">Linear Algebra</a> page uses this derivation to show that <span class="math inline">\(\mathbf{H}\)</span> is a <a href="./linear-algebra-special-matrices.html#def-projection-matrix">projection matrix</a>. The probability notes derive the variance identity <span class="math inline">\(\operatorname{Var}\mathopen{}\left(X\right)\mathclose{} = \operatorname{E}\mathopen{}\left[X^2\right]\mathclose{} - \mathopen{}\left(\operatorname{E}\mathopen{}\left[X\right]\mathclose{}\right)^2\mathclose{}\)</span> <a href="https://morrison-lab.github.io/pds/variance-covariance.html#thm-variance">in the same annotated style</a>.</p>
 </section><section id="sec-direct-proof" class="level2" data-number="4"><h2 data-number="4" class="anchored" data-anchor-id="sec-direct-proof">
 <span class="header-section-number">4</span> Direct proof</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-direct-proof" class="quarto-xref">Definition&nbsp;14</a> (Direct proof)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-direct-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Direct proof)</strong></span> A <strong>direct proof</strong> of a proposition <span class="math inline">\(Q\)</span> starts from the assumptions that <span class="math inline">\(Q\)</span> is stated under, if any, and reaches <span class="math inline">\(Q\)</span> through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that <span class="math inline">\(Q\)</span> is false; compare <a href="#def-proof-by-contradiction">proof by contradiction</a>, which does.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-direct-proof" class="quarto-xref">Example&nbsp;16</a> (The square of an odd integer is odd)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-direct-proof" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (The square of an odd integer is odd)</strong></span> Claim: if <span class="math inline">\(n\)</span> is an <a href="./notation.html#def-even-odd">odd</a> integer, then <span class="math inline">\(n^2\)</span> is odd.</p>
 <p>Since <span class="math inline">\(n\)</span> is odd, there is an integer <span class="math inline">\(k\)</span> with <span class="math inline">\(n = 2k + 1\)</span>. Then</p>
@@ -1637,12 +1837,18 @@ n^2 &amp;= 49 \\
 </section><section id="sec-proof-by-induction" class="level2" data-number="6"><h2 data-number="6" class="anchored" data-anchor-id="sec-proof-by-induction">
 <span class="header-section-number">6</span> Proof by induction</h2>
 <p>Many proofs in these notes show that a statement holds for every <a href="./notation.html#def-natural-numbers">natural number</a> <span class="math inline">\(n\)</span>, or for every integer <span class="math inline">\(n\)</span> from some starting value on. Checking the statement one <span class="math inline">\(n\)</span> at a time would never finish; induction proves it for all of them with two arguments.</p>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-proof-by-induction" class="quarto-xref">Definition&nbsp;15</a> (Proof by induction)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-proof-by-induction" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Proof by induction)</strong></span> Let <span class="math inline">\(n_0\)</span> be an <a href="./notation.html#def-integers">integer</a>, and let <span class="math inline">\(P(n)\)</span> be a <a href="./proof-writing.html#def-predicate">predicate</a> about the integers <span class="math inline">\(n \ge n_0\)</span>. A <strong>proof by induction</strong> on <span class="math inline">\(n\)</span> shows that <span class="math inline">\(P(n)\)</span> holds for every integer <span class="math inline">\(n \ge n_0\)</span> by showing two things:</p>
 <ol type="1">
@@ -1656,12 +1862,18 @@ n^2 &amp;= 49 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-induction-why" class="quarto-xref">Remark&nbsp;2</a> (Why the two steps suffice)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-induction-why" class="proof remark">
 <p><span class="proof-title"><em>Remark 2</em> (Why the two steps suffice). </span>The base case gives <span class="math inline">\(P(n_0)\)</span>. The inductive step with <span class="math inline">\(n = n_0 + 1\)</span> then gives <span class="math inline">\(P(n_0 + 1)\)</span>, with <span class="math inline">\(n = n_0 + 2\)</span> it gives <span class="math inline">\(P(n_0 + 2)\)</span>, and so on: each integer <span class="math inline">\(n \ge n_0\)</span> is reached after <span class="math inline">\(n - n_0\)</span> uses of the inductive step.</p>
 <p>When <span class="math inline">\(P(n)\)</span> is needed only for <span class="math inline">\(n_0 \le n \le r\)</span>, it is enough to show the inductive step for <span class="math inline">\(n_0 &lt; n \le r\)</span>; the same chain then stops at <span class="math inline">\(P(r)\)</span>.</p>
@@ -1670,12 +1882,18 @@ n^2 &amp;= 49 \\
 </div>
 </div>
 <p>The following example uses <a href="./algebra-sums.html#def-summation">summation notation</a>.</p>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-induction-sum" class="quarto-xref">Example&nbsp;17</a> (Sum of the first <span class="math inline">\(n\)</span> natural numbers)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-induction-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Sum of the first <span class="math inline">\(n\)</span> natural numbers)</strong></span> For every <span class="math inline">\(n \in \mathbb{N}\)</span>,</p>
 <p><span class="math display">\[
@@ -1751,36 +1969,54 @@ n^2 &amp;= 49 \\
 </div>
 </section><section id="sec-formal-logic" class="level2" data-number="7"><h2 data-number="7" class="anchored" data-anchor-id="sec-formal-logic">
 <span class="header-section-number">7</span> Formal logic</h2>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a> (Propositional logic)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-propositional-logic" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 16 (Propositional logic)</strong></span> <strong>Propositional logic</strong> is the study of <a href="#def-logical-entailment">logical entailment</a> among <a href="#def-proposition">propositions</a> built from basic propositions <span class="math inline">\(P, Q, R, \ldots\)</span> using only the <a href="#def-logical-connective">logical connectives</a>. Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-propositional-logic" class="quarto-xref">Example&nbsp;18</a> (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-propositional-logic" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (<span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> entail <span class="math inline">\(Q\)</span>)</strong></span> Suppose <span class="math inline">\(P\)</span> is true and <span class="math inline">\(P \Rightarrow Q\)</span> is true. If <span class="math inline">\(Q\)</span> were false, then <span class="math inline">\(P \Rightarrow Q\)</span> would have a true <span class="math inline">\(P\)</span> and a false <span class="math inline">\(Q\)</span>, so <span class="math inline">\(P \Rightarrow Q\)</span> would be false, which contradicts the assumption. So <span class="math inline">\(Q\)</span> is true. This holds whatever <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> say, so <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span> logically entail <span class="math inline">\(Q\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-first-order-logic" class="quarto-xref">Definition&nbsp;17</a> (First-order logic)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-first-order-logic" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 17 (First-order logic)</strong></span> <strong>First-order logic</strong> extends propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a>) by also allowing:</p>
 <ul>
@@ -1797,36 +2033,54 @@ n^2 &amp;= 49 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-first-order-logic" class="quarto-xref">Example&nbsp;19</a> (From “for all” to one element)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-first-order-logic" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (From “for all” to one element)</strong></span> Let <span class="math inline">\(P(x)\)</span> be a predicate about the elements of a set <span class="math inline">\(S\)</span>, and let <span class="math inline">\(a \in S\)</span>. The propositions <span class="math inline">\(\forall x \in S, P(x)\)</span> and <span class="math inline">\(a \in S\)</span> logically entail <span class="math inline">\(P(a)\)</span>: if <span class="math inline">\(P(x)\)</span> is true for every element <span class="math inline">\(x\)</span> of <span class="math inline">\(S\)</span>, then it is true for the element <span class="math inline">\(a\)</span>. For example, <span class="math inline">\(\forall x \in \mathbb{Z}, x^2 \ge 0\)</span> entails <span class="math inline">\(3^2 \ge 0\)</span>. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of <span class="math inline">\(S\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-formal-proof" class="quarto-xref">Definition&nbsp;18</a> (Formal proof)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-formal-proof" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 18 (Formal proof)</strong></span> A <strong>formal proof</strong> is a <a href="#def-proof">proof</a> written in propositional logic (<a href="#def-propositional-logic" class="quarto-xref">Definition&nbsp;16</a>) or first-order logic (<a href="#def-first-order-logic" class="quarto-xref">Definition&nbsp;17</a>) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-formal-proof" class="quarto-xref">Example&nbsp;20</a> (A three-step formal proof)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-formal-proof" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (A three-step formal proof)</strong></span> Suppose the allowed rules include “from <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>, conclude <span class="math inline">\(Q\)</span>”. Then this is a formal proof of <span class="math inline">\(Q\)</span> from the assumptions <span class="math inline">\(P\)</span> and <span class="math inline">\(P \Rightarrow Q\)</span>:</p>
 <ol type="1">

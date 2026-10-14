@@ -105,6 +105,8 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-dark-c086fb9aa89bc5726abb3173de9057c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-33c90a2a9295b6ab69d7f48c49ac5fff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.js"></script>
+<link href="site_libs/quarto-contrib/callouty-theorem-1.2.2/callouty-theorem.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -218,36 +220,6 @@ cookieconsent.run({
 })();
 </script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>
-div.callout-lem.callout {
-  border-left-color: #1565C0;
-}
-div.callout-lem.callout-style-default .callout-header {
-  background-color: rgba(21, 101, 192, 0.13);
-}
-div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exr.callout {
-  border-left-color: #FFA500;
-}
-div.callout-exr.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-def.callout {
-  border-left-color: #1B5E20;
-}
-div.callout-def.callout-style-default .callout-header {
-  background-color: rgba(27, 94, 32, 0.13);
-}
-div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
 div.callout-prp.callout {
   border-left-color: #827717;
 }
@@ -257,16 +229,6 @@ div.callout-prp.callout-style-default .callout-header {
 div.callout-prp .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-prp.callout-style-default .callout-icon::before, div.callout-prp.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23827717" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
-}
-div.callout-exm.callout {
-  border-left-color: #6A1B9A;
-}
-div.callout-exm.callout-style-default .callout-header {
-  background-color: rgba(106, 27, 154, 0.13);
-}
-div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-cor.callout {
   border-left-color: #00838F;
@@ -288,6 +250,26 @@ div.callout-remark .callout-toggle::before {  background-image: url('data:image/
 div.callout-remark.callout-style-default .callout-icon::before, div.callout-remark.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AD1457" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
+div.callout-lem.callout {
+  border-left-color: #1565C0;
+}
+div.callout-lem.callout-style-default .callout-header {
+  background-color: rgba(21, 101, 192, 0.13);
+}
+div.callout-lem .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-lem.callout-style-default .callout-icon::before, div.callout-lem.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231565C0" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exr.callout {
+  border-left-color: #FFA500;
+}
+div.callout-exr.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-exr .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exr.callout-style-default .callout-icon::before, div.callout-exr.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFA500" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
 div.callout-cnj.callout {
   border-left-color: #558B2F;
 }
@@ -297,6 +279,26 @@ div.callout-cnj.callout-style-default .callout-header {
 div.callout-cnj .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-cnj.callout-style-default .callout-icon::before, div.callout-cnj.callout-titled .callout-icon::before {
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23558B2F" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-def.callout {
+  border-left-color: #1B5E20;
+}
+div.callout-def.callout-style-default .callout-header {
+  background-color: rgba(27, 94, 32, 0.13);
+}
+div.callout-def .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-def.callout-style-default .callout-icon::before, div.callout-def.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231B5E20" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
+}
+div.callout-exm.callout {
+  border-left-color: #6A1B9A;
+}
+div.callout-exm.callout-style-default .callout-header {
+  background-color: rgba(106, 27, 154, 0.13);
+}
+div.callout-exm .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-exm.callout-style-default .callout-icon::before, div.callout-exm.callout-titled .callout-icon::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236A1B9A" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/></svg>');
 }
 div.callout-proof.callout {
   border-left-color: #37474F;
@@ -886,7 +888,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Last modified: 2026-10-13 20:27:09 (PDT)</p>
+      <p class="date">Last modified: 2026-10-13 23:18:59 (PDT)</p>
     </div>
   </div>
   
@@ -917,12 +919,18 @@ window.Quarto = {
 </div>
 <section id="antiderivatives" class="level3" data-number="1.1"><h3 data-number="1.1" class="anchored" data-anchor-id="antiderivatives">
 <span class="header-section-number">1.1</span> Antiderivatives</h3>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-antiderivative" class="quarto-xref">Definition&nbsp;1</a> (Antiderivative)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-antiderivative" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Antiderivative)</strong></span> A function <span class="math inline">\(F\)</span> is an <strong>antiderivative</strong> of <span class="math inline">\(f\)</span> on an interval <span class="math inline">\(I\)</span> if:</p>
 <p><span class="math display">\[\frac{\partial}{\partial x} F(x) = f(x), \quad \forall x \in I\]</span></p>
@@ -932,12 +940,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-indefinite-integral" class="quarto-xref">Definition&nbsp;2</a> (Indefinite integral)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-indefinite-integral" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Indefinite integral)</strong></span> The <strong>indefinite integral</strong> of <span class="math inline">\(f\)</span> is the family of all antiderivatives (<a href="#def-antiderivative" class="quarto-xref">Definition&nbsp;1</a>) of <span class="math inline">\(f\)</span>:</p>
 <p><span class="math display">\[\int f(x)\,dx = F(x) + C\]</span></p>
@@ -947,12 +961,18 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-antiderivative-power" class="quarto-xref">Example&nbsp;1</a> (Antiderivative of <span class="math inline">\(x^2\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-antiderivative-power" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Antiderivative of <span class="math inline">\(x^2\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span>, an antiderivative is <span class="math inline">\(F(x) = \frac{x^3}{3}\)</span>, since</p>
 <p><span class="math display">\[
@@ -1029,12 +1049,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-integral-rules" class="quarto-xref">Theorem&nbsp;1</a> (Basic integration rules)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-integral-rules" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1 (Basic integration rules)</strong></span> Each antiderivative in the table is defined only up to an arbitrary constant <span class="math inline">\(C\)</span> (see <a href="#def-antiderivative" class="quarto-xref">Definition&nbsp;1</a>); the table omits <span class="math inline">\(+ C\)</span> from every row for brevity.</p>
 <table class="caption-top table">
@@ -1098,12 +1124,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-integral-rules-quadratic" class="quarto-xref">Example&nbsp;2</a> (Antiderivative of <span class="math inline">\(3x^2 - 1\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-integral-rules-quadratic" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (Antiderivative of <span class="math inline">\(3x^2 - 1\)</span>)</strong></span> By the power rule (<span class="math inline">\(n = 2\)</span>) and linearity from <a href="#thm-integral-rules" class="quarto-xref">Theorem&nbsp;1</a>:</p>
 <p><span class="math display">\[
@@ -1144,12 +1176,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </section><section id="regularity-conditions" class="level3" data-number="1.2"><h3 data-number="1.2" class="anchored" data-anchor-id="regularity-conditions">
 <span class="header-section-number">1.2</span> Regularity Conditions</h3>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-differentiable-on" class="quarto-xref">Definition&nbsp;3</a> (Differentiable on an interval)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-differentiable-on" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Differentiable on an interval)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>differentiable on</strong> an interval if it is differentiable (<a href="./calculus-derivatives.html#def-differentiable">Definition&nbsp;4 in Derivatives and Taylor Series</a>) at every point of the interval other than its <a href="./sets-functions.html#def-interval">endpoints</a>, and, at each endpoint that belongs to the interval, it has the one-sided derivative (<a href="./calculus-derivatives.html#def-one-sided-derivative">Definition&nbsp;6 in Derivatives and Taylor Series</a>) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.</p>
 <p><span class="citation" data-cites="larsonCalc11e">(<a href="#ref-larsonCalc11e" role="doc-biblioref">Larson and Edwards 2018, sec. 2.1</a>, p.&nbsp;100)</span></p>
@@ -1157,12 +1195,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-differentiable-on" class="quarto-xref">Example&nbsp;3</a> (Differentiable on one interval but not another)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-differentiable-on" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (Differentiable on one interval but not another)</strong></span> &nbsp;</p>
 <ul>
@@ -1175,12 +1219,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-continuous" class="quarto-xref">Definition&nbsp;4</a> (Continuous function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-continuous" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Continuous function)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>continuous at</strong> <span class="math inline">\(x = c\)</span> if all three conditions hold:</p>
 <ol type="1">
@@ -1197,12 +1247,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-continuous" class="quarto-xref">Example&nbsp;4</a> (A continuous function, and one failure of each condition)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-continuous" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4 (A continuous function, and one failure of each condition)</strong></span> &nbsp;</p>
 <ul>
@@ -1232,24 +1288,36 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-jump-discontinuity" class="quarto-xref">Definition&nbsp;5</a> (Jump discontinuity)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-jump-discontinuity" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Jump discontinuity)</strong></span> A function <span class="math inline">\(f\)</span> has a <strong>jump discontinuity</strong> at <span class="math inline">\(c\)</span> if both one-sided limits (<a href="./calculus-derivatives.html#def-one-sided-limit">Definition&nbsp;2 in Derivatives and Taylor Series</a>) <span class="math inline">\(\lim_{x \to c^-} f(x)\)</span> and <span class="math inline">\(\lim_{x \to c^+} f(x)\)</span> exist but are not equal. Then <span class="math inline">\(\lim_{x \to c} f(x)\)</span> does not exist, so <span class="math inline">\(f\)</span> is discontinuous at <span class="math inline">\(c\)</span> (<a href="#def-continuous" class="quarto-xref">Definition&nbsp;4</a>).</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-jump-discontinuity" class="quarto-xref">Example&nbsp;5</a> (A jump discontinuity, and a discontinuity that is not a jump)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-jump-discontinuity" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (A jump discontinuity, and a discontinuity that is not a jump)</strong></span> &nbsp;</p>
 <ul>
@@ -1261,12 +1329,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;6</a> (Continuous on a closed interval)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-continuous-on" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Continuous on a closed interval)</strong></span> A function <span class="math inline">\(f\)</span> is <strong>continuous on</strong> a closed interval <span class="math inline">\([a, b]\)</span> if all three conditions hold:</p>
 <ol type="1">
@@ -1282,12 +1356,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-continuous-on-sqrt" class="quarto-xref">Example&nbsp;6</a> (Continuity on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span> uses one-sided limits at the endpoints)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-continuous-on-sqrt" class="theorem example">
 <p><span class="theorem-title"><strong>Example 6 (Continuity on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span> uses one-sided limits at the endpoints)</strong></span> Let <span class="math inline">\(f(x) = \sqrt{x}\)</span>, the <a href="./algebra-basics.html#def-square-root">square root</a>, defined for <span class="math inline">\(x \ge 0\)</span>. Because <span class="math inline">\(f\)</span> is undefined for <span class="math inline">\(x &lt; 0\)</span>, only the right-hand limit of <span class="math inline">\(f\)</span> at <span class="math inline">\(0\)</span> makes sense, and <a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;6</a> asks only for that one-sided limit at the endpoint <span class="math inline">\(0\)</span>. Here <span class="math inline">\(f\)</span> is continuous at every point of <span class="math inline">\((0, 1)\)</span>,</p>
 <p><span class="math display">\[
@@ -1308,12 +1388,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-not-continuous-on" class="quarto-xref">Example&nbsp;7</a> (A function not continuous on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-not-continuous-on" class="theorem example">
 <p><span class="theorem-title"><strong>Example 7 (A function not continuous on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(0 \le x &lt; 1\)</span> and <span class="math inline">\(f(1) = 2\)</span>. Conditions 1 and 2 of <a href="#def-continuous-on" class="quarto-xref">Definition&nbsp;6</a> hold, but</p>
 <p><span class="math display">\[
@@ -1328,12 +1414,18 @@ Figure&nbsp;1: The function <span class="math inline">\(f(x) = x^2\)</span> and 
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-partition" class="quarto-xref">Definition&nbsp;7</a> (Partition of an interval)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-partition" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Partition of an interval)</strong></span> A <strong>partition</strong> <span class="math inline">\(\mathcal{P}\)</span> of a closed interval <span class="math inline">\([a, b]\)</span> is a finite list of points</p>
 <p><span class="math display">\[
@@ -1352,24 +1444,36 @@ a
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-partition" class="quarto-xref">Example&nbsp;8</a> (A partition of <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-partition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 8 (A partition of <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> The points <span class="math inline">\(0 &lt; 0.25 &lt; 0.5 &lt; 1\)</span> form a partition of <span class="math inline">\([0, 1]\)</span> with <span class="math inline">\(n = 3\)</span> subintervals, of widths <span class="math inline">\(\Delta x_1 = 0.25\)</span>, <span class="math inline">\(\Delta x_2 = 0.25\)</span>, and <span class="math inline">\(\Delta x_3 = 0.5\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-not-partition" class="quarto-xref">Example&nbsp;9</a> (Lists that are not partitions of <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-not-partition" class="theorem example">
 <p><span class="theorem-title"><strong>Example 9 (Lists that are not partitions of <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> &nbsp;</p>
 <ul>
@@ -1382,12 +1486,18 @@ a
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-mesh" class="quarto-xref">Definition&nbsp;8</a> (Mesh of a partition)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-mesh" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 8 (Mesh of a partition)</strong></span> The <strong>mesh</strong> of a partition <span class="math inline">\(\mathcal{P}\)</span> (<a href="#def-partition" class="quarto-xref">Definition&nbsp;7</a>) is its largest subinterval width,</p>
 <p><span class="math display">\[\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\max_{i \in \mathopen{}\left\{1, \ldots, n\right\}\mathclose{}} \Delta x_i,\]</span></p>
@@ -1397,24 +1507,36 @@ a
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-mesh" class="quarto-xref">Example&nbsp;10</a> (The mesh of a partition of <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-mesh" class="theorem example">
 <p><span class="theorem-title"><strong>Example 10 (The mesh of a partition of <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> For the partition of <span class="math inline">\([0, 1]\)</span> in <a href="#exm-partition" class="quarto-xref">Example&nbsp;8</a>, with widths <span class="math inline">\(\Delta x_1 = 0.25\)</span>, <span class="math inline">\(\Delta x_2 = 0.25\)</span>, and <span class="math inline">\(\Delta x_3 = 0.5\)</span>, the mesh is the largest of these widths, <span class="math inline">\(\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} = 0.5\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-riemann-sum" class="quarto-xref">Definition&nbsp;9</a> (Riemann sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-riemann-sum" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 9 (Riemann sum)</strong></span> Let <span class="math inline">\(f\)</span> be a function on <span class="math inline">\([a, b]\)</span>, let <span class="math inline">\(\mathcal{P}\)</span> be a partition</p>
 <p><span class="math display">\[
@@ -1434,12 +1556,18 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-riemann-sum" class="quarto-xref">Example&nbsp;11</a> (A Riemann sum for <span class="math inline">\(x^2\)</span> on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-riemann-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 11 (A Riemann sum for <span class="math inline">\(x^2\)</span> on <span class="math inline">\(\lbrack 0, 1\rbrack\)</span>)</strong></span> Let <span class="math inline">\(f(x) = x^2\)</span>, take the partition <span class="math inline">\(0 &lt; 0.25 &lt; 0.5 &lt; 1\)</span> of <a href="#exm-partition" class="quarto-xref">Example&nbsp;8</a>, with widths <span class="math inline">\(\Delta x_1 = 0.25\)</span>, <span class="math inline">\(\Delta x_2 = 0.25\)</span>, and <span class="math inline">\(\Delta x_3 = 0.5\)</span>, and take each sample point at the right end of its subinterval: <span class="math inline">\(x_1^* = 0.25\)</span>, <span class="math inline">\(x_2^* = 0.5\)</span>, and <span class="math inline">\(x_3^* = 1\)</span>. Then</p>
 <p><span class="math display">\[
@@ -1462,12 +1590,18 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-riemann-integral" class="quarto-xref">Definition&nbsp;10</a> (Riemann integral (definite integral))
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-riemann-integral" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Riemann integral (definite integral))</strong></span> Let <span class="math inline">\(f\)</span> be a <a href="./algebra-sums.html#def-bounded">bounded</a> function on <span class="math inline">\([a, b]\)</span>. For each partition <span class="math inline">\(\mathcal{P}\)</span> of <span class="math inline">\([a, b]\)</span> (<a href="#def-partition" class="quarto-xref">Definition&nbsp;7</a>), choose a sample point <span class="math inline">\(x_i^*\)</span> in each subinterval <span class="math inline">\([x_{i-1}, x_i]\)</span>. The <strong>Riemann integral</strong> of <span class="math inline">\(f\)</span> over <span class="math inline">\([a, b]\)</span> (also called the <strong>definite integral</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>) is the limit of the Riemann sums (<a href="#def-riemann-sum" class="quarto-xref">Definition&nbsp;9</a>) as the mesh (<a href="#def-mesh" class="quarto-xref">Definition&nbsp;8</a>) shrinks to zero:</p>
 <p><span class="math display">\[\int_a^b f(x)\,dx \stackrel{\text{def}}{=}\lim_{\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \to 0} \sum_{i=1}^nf(x_i^*)\,\Delta x_i,\]</span></p>
@@ -1477,12 +1611,18 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-integrable" class="quarto-xref">Definition&nbsp;11</a> (Riemann integrable)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-integrable" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11 (Riemann integrable)</strong></span> A bounded function <span class="math inline">\(f\)</span> is <strong>Riemann integrable on</strong> <span class="math inline">\([a, b]\)</span> if the Riemann sums (<a href="#def-riemann-sum" class="quarto-xref">Definition&nbsp;9</a>) <span class="math inline">\(\sum_{i=1}^nf(x_i^*)\,\Delta x_i\)</span>, over partitions <span class="math inline">\(\mathcal{P}\)</span> of <span class="math inline">\([a, b]\)</span> (<a href="#def-partition" class="quarto-xref">Definition&nbsp;7</a>) with a sample point <span class="math inline">\(x_i^*\)</span> in each subinterval <span class="math inline">\([x_{i-1}, x_i]\)</span>, approach a real-number limit as the mesh <span class="math inline">\(\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{}\)</span> (<a href="#def-mesh" class="quarto-xref">Definition&nbsp;8</a>) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.</p>
 <p><span class="citation" data-cites="larsonCalc11e">(<a href="#ref-larsonCalc11e" role="doc-biblioref">Larson and Edwards 2018, sec. 4.3</a>, p.&nbsp;272)</span></p>
@@ -1490,12 +1630,18 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a> (A constant function is integrable)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-integrable-constant" class="theorem example">
 <p><span class="theorem-title"><strong>Example 12 (A constant function is integrable)</strong></span> Let <span class="math inline">\(f(x) = 2\)</span> on <span class="math inline">\([0, 3]\)</span>. For every partition and every choice of sample points,</p>
 <p><span class="math display">\[
@@ -1519,24 +1665,36 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-integrand" class="quarto-xref">Definition&nbsp;12</a> (Integrand)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-integrand" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Integrand)</strong></span> In an integral such as <span class="math inline">\(\int_a^b f(x)\,dx\)</span> (<a href="#def-riemann-integral" class="quarto-xref">Definition&nbsp;10</a>) or <span class="math inline">\(\int f(x)\,dx\)</span> (<a href="#def-indefinite-integral" class="quarto-xref">Definition&nbsp;2</a>), the function <span class="math inline">\(f\)</span> being integrated is the <strong>integrand</strong>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-integrand" class="quarto-xref">Example&nbsp;13</a> (Integrands)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-integrand" class="theorem example">
 <p><span class="theorem-title"><strong>Example 13 (Integrands)</strong></span> &nbsp;</p>
 <ul>
@@ -1547,24 +1705,36 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-remark no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-remark no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Remark</span><a href="#rem-integrable-integral" class="quarto-xref">Remark&nbsp;1</a> (Riemann integrable functions and Riemann integrals)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="rem-integrable-integral" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em> (Riemann integrable functions and Riemann integrals). </span>A bounded function <span class="math inline">\(f\)</span> is Riemann integrable on <span class="math inline">\([a, b]\)</span> exactly when its Riemann integral <span class="math inline">\(\int_a^b f(x)\,dx\)</span> (<a href="#def-riemann-integral" class="quarto-xref">Definition&nbsp;10</a>) exists; the integral is the common limit of the sums. For example, let <span class="math inline">\(g(x) = 1\)</span> when <span class="math inline">\(x\)</span> is <a href="./notation.html#def-rational-numbers">rational</a> and <span class="math inline">\(g(x) = 0\)</span> when <span class="math inline">\(x\)</span> is <a href="./notation.html#def-irrational-numbers">irrational</a>, on <span class="math inline">\([0, 1]\)</span>. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives <span class="math inline">\(\sum_{i=1}^n1 \cdot\Delta x_i = 1\)</span> for every partition, because the widths <span class="math inline">\(\Delta x_i\)</span> add up to the length <span class="math inline">\(1 - 0 = 1\)</span> of <span class="math inline">\([0, 1]\)</span>, and choosing every sample point irrational gives <span class="math inline">\(\sum_{i=1}^n0 \cdot\Delta x_i = 0\)</span>. The two limits differ, so <span class="math inline">\(g\)</span> is not Riemann integrable on <span class="math inline">\([0, 1]\)</span>, and <span class="math inline">\(\int_0^1 g(x)\,dx\)</span> does not exist.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-riemann-sum-equal-width" class="quarto-xref">Definition&nbsp;13</a> (Equal-width Riemann sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-riemann-sum-equal-width" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 13 (Equal-width Riemann sum)</strong></span> For a bounded function <span class="math inline">\(f\)</span> on <span class="math inline">\([a, b]\)</span> and a positive integer <span class="math inline">\(n\)</span>, split <span class="math inline">\([a, b]\)</span> into <span class="math inline">\(n\)</span> subintervals of equal width <span class="math inline">\(\Delta x \stackrel{\text{def}}{=}(b - a)/n\)</span>, and let <span class="math inline">\(x_i^*\)</span> be any point in the <span class="math inline">\(i\)</span>-th subinterval. The <strong>equal-width Riemann sum</strong> is</p>
 <p><span class="math display">\[S_n \stackrel{\text{def}}{=}\sum_{i=1}^nf(x_i^*)\,\Delta x.\]</span></p>
@@ -1572,12 +1742,18 @@ a &amp;= x_0 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-equal-width-sum" class="quarto-xref">Example&nbsp;14</a> (An equal-width Riemann sum)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-equal-width-sum" class="theorem example">
 <p><span class="theorem-title"><strong>Example 14 (An equal-width Riemann sum)</strong></span> Let <span class="math inline">\(f(x) = x^2\)</span> on <span class="math inline">\([0, 1]\)</span>, with <span class="math inline">\(n = 2\)</span>, so <span class="math inline">\(\Delta x = 1/2\)</span>, and take each sample point at the right end of its subinterval: <span class="math inline">\(x_1^* = \frac{1}{2}\)</span> and <span class="math inline">\(x_2^* = 1\)</span>. Then</p>
 <p><span class="math display">\[
@@ -1615,12 +1791,18 @@ S_2
 </div>
 </div>
 <p>Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a, b]\)</span>; continuity is <a href="./notation.html#def-necessary-sufficient">sufficient</a> there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity buys us.</p>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> (Differentiability implies continuity)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-diff-implies-cont" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 2 (Differentiability implies continuity)</strong></span> If <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x = c\)</span>, then <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x = c\)</span>.</p>
 <p><span class="citation" data-cites="larsonCalc11e">(<a href="#ref-larsonCalc11e" role="doc-biblioref">Larson and Edwards 2018</a>, Theorem 2.1, p.&nbsp;106)</span></p>
@@ -1628,8 +1810,8 @@ S_2
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1638,7 +1820,7 @@ S_2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Because <span class="math inline">\(f'(c)\)</span> exists, <span class="math inline">\(f(c)\)</span> is defined, and:</p>
@@ -1663,24 +1845,36 @@ S_2
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-diff-implies-cont" class="quarto-xref">Example&nbsp;15</a> (Differentiable, hence continuous: <span class="math inline">\(x^3 - x\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-diff-implies-cont" class="theorem example">
 <p><span class="theorem-title"><strong>Example 15 (Differentiable, hence continuous: <span class="math inline">\(x^3 - x\)</span>)</strong></span> <span class="math inline">\(f(x) = x^3 - x\)</span> is differentiable everywhere (with derivative <span class="math inline">\(f'(x) = 3x^2 - 1\)</span>), so by <a href="#thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> it is continuous everywhere.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-cont-not-diff" class="quarto-xref">Example&nbsp;16</a> (Continuous but not differentiable: <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-cont-not-diff" class="theorem example">
 <p><span class="theorem-title"><strong>Example 16 (Continuous but not differentiable: <span class="math inline">\(\mathopen{}\left|x\right|\mathclose{}\)</span>)</strong></span> The absolute-value function <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\mathclose{}\)</span> is continuous at <span class="math inline">\(x = 0\)</span>, since</p>
 <p><span class="math display">\[
@@ -1715,12 +1909,18 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> (Continuity implies integrability)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-cont-implies-int" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Continuity implies integrability)</strong></span> If <span class="math inline">\(f\)</span> is continuous on the closed interval <span class="math inline">\([a, b]\)</span>, then <span class="math inline">\(f\)</span> is integrable on <span class="math inline">\([a, b]\)</span> (i.e., the Riemann integral <span class="math inline">\(\int_a^b f(x)\,dx\)</span> exists and is finite).</p>
 <p><span class="citation" data-cites="larsonCalc11e">(<a href="#ref-larsonCalc11e" role="doc-biblioref">Larson and Edwards 2018</a>, Theorem 4.4, p.&nbsp;272)</span></p>
@@ -1728,24 +1928,36 @@ Figure&nbsp;2: <span class="math inline">\(f(x) = \mathopen{}\left|x\right|\math
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-cont-implies-int" class="quarto-xref">Example&nbsp;17</a> (Continuous, hence integrable: polynomials)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-cont-implies-int" class="theorem example">
 <p><span class="theorem-title"><strong>Example 17 (Continuous, hence integrable: polynomials)</strong></span> Every <a href="./algebra-exponentials.html#def-polynomial">polynomial</a> is continuous on <span class="math inline">\(\mathbb{R}\)</span>, so by <a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> every polynomial is integrable on every closed interval <span class="math inline">\([a, b]\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-int-not-cont" class="quarto-xref">Example&nbsp;18</a> (Integrable but not continuous: a step function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-int-not-cont" class="theorem example">
 <p><span class="theorem-title"><strong>Example 18 (Integrable but not continuous: a step function)</strong></span> Let <span class="math inline">\(f(x) = 0\)</span> for <span class="math inline">\(x &lt; \tfrac{1}{2}\)</span> and <span class="math inline">\(f(x) = 1\)</span> for <span class="math inline">\(x \ge \tfrac{1}{2}\)</span>. Then <span class="math inline">\(f\)</span> has a jump discontinuity (<a href="#def-jump-discontinuity" class="quarto-xref">Definition&nbsp;5</a>) at <span class="math inline">\(x = \tfrac{1}{2}\)</span>, but it is integrable on <span class="math inline">\([0, 1]\)</span>:</p>
 <p><span class="math display">\[
@@ -1804,12 +2016,18 @@ Figure&nbsp;3: Step function: <span class="math inline">\(f(x) = 0\)</span> on <
 <p>Together, <a href="#thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a> and <a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a> establish the chain:</p>
 <p><span class="math display">\[\text{differentiable on } [a, b] \;\Rightarrow\; \text{continuous on } [a, b] \;\Rightarrow\; \text{integrable on } [a, b]\]</span></p>
 <p><a href="#exm-cont-not-diff" class="quarto-xref">Example&nbsp;16</a> and <a href="#exm-int-not-cont" class="quarto-xref">Example&nbsp;18</a> show that neither implication reverses in general.</p>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-riemann-general" class="quarto-xref">Theorem&nbsp;4</a> (Equal-width Riemann sums converge to the integral)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-riemann-general" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (Equal-width Riemann sums converge to the integral)</strong></span> If <span class="math inline">\(f\)</span> is Riemann integrable on <span class="math inline">\([a, b]\)</span> (<a href="#def-integrable" class="quarto-xref">Definition&nbsp;11</a>), then for every choice of the sample points <span class="math inline">\(x_i^*\)</span>, the equal-width Riemann sums (<a href="#def-riemann-sum-equal-width" class="quarto-xref">Definition&nbsp;13</a>) converge to the integral:</p>
 <p><span class="math display">\[\lim_{n \to \infty} S_n = \int_a^b f(x)\,dx.\]</span></p>
@@ -1817,8 +2035,8 @@ Figure&nbsp;3: Step function: <span class="math inline">\(f(x) = 0\)</span> on <
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-proof callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-proof callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1827,7 +2045,7 @@ Figure&nbsp;3: Step function: <span class="math inline">\(f(x) = 0\)</span> on <
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The <span class="math inline">\(n\)</span> equal-width subintervals form a partition of <span class="math inline">\([a, b]\)</span> whose mesh (<a href="#def-mesh" class="quarto-xref">Definition&nbsp;8</a>) is <span class="math inline">\((b - a)/n\)</span>, which goes to <span class="math inline">\(0\)</span> as <span class="math inline">\(n \to \infty\)</span>. So <span class="math inline">\(S_n\)</span> is one of the sums in the limit that defines the integral (<a href="#def-riemann-integral" class="quarto-xref">Definition&nbsp;10</a>), along a sequence of partitions whose mesh goes to <span class="math inline">\(0\)</span>, and a limit that has the same value for every choice of partitions has that value along this sequence too.</p>
@@ -1835,12 +2053,18 @@ Figure&nbsp;3: Step function: <span class="math inline">\(f(x) = 0\)</span> on <
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-riemann-equal-width" class="quarto-xref">Example&nbsp;19</a> (Equal-width sums for <span class="math inline">\(\int_0^1 x\,dx\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-riemann-equal-width" class="theorem example">
 <p><span class="theorem-title"><strong>Example 19 (Equal-width sums for <span class="math inline">\(\int_0^1 x\,dx\)</span>)</strong></span> Let <span class="math inline">\(f(x) = x\)</span> on <span class="math inline">\([0, 1]\)</span>, which is continuous and so Riemann integrable (<a href="#thm-cont-implies-int" class="quarto-xref">Theorem&nbsp;3</a>), and take each sample point at the right end of its subinterval, <span class="math inline">\(x_i^* = i/n\)</span>. With <span class="math inline">\(\Delta x = 1/n\)</span>:</p>
 <p><span class="math display">\[
@@ -1866,12 +2090,18 @@ S_n
 </div>
 </section><section id="fundamental-theorem-of-calculus" class="level3" data-number="1.3"><h3 data-number="1.3" class="anchored" data-anchor-id="fundamental-theorem-of-calculus">
 <span class="header-section-number">1.3</span> Fundamental Theorem of Calculus</h3>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-accumulation-function" class="quarto-xref">Definition&nbsp;14</a> (Accumulation function)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-accumulation-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 14 (Accumulation function)</strong></span> Let <span class="math inline">\(f\)</span> be Riemann integrable on <span class="math inline">\([a, b]\)</span> (<a href="#def-integrable" class="quarto-xref">Definition&nbsp;11</a>). The <strong>accumulation function</strong> of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> is the function <span class="math inline">\(F\)</span> on <span class="math inline">\([a, b]\)</span> with <span class="math inline">\(F(a) \stackrel{\text{def}}{=}0\)</span> and</p>
 <p><span class="math display">\[F(x) \stackrel{\text{def}}{=}\int_a^x f(t)\,dt \quad \text{for } a &lt; x \le b.\]</span></p>
@@ -1880,12 +2110,18 @@ S_n
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-accumulation-function" class="quarto-xref">Example&nbsp;20</a> (The accumulation function of a constant)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-accumulation-function" class="theorem example">
 <p><span class="theorem-title"><strong>Example 20 (The accumulation function of a constant)</strong></span> Let <span class="math inline">\(f(t) = 2\)</span> on <span class="math inline">\([0, 3]\)</span>, which is Riemann integrable (<a href="#exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a>). For <span class="math inline">\(0 &lt; x \le 3\)</span>, the computation of <a href="#exm-integrable-constant" class="quarto-xref">Example&nbsp;12</a>, with the interval <span class="math inline">\([0, 3]\)</span> replaced by <span class="math inline">\([0, x]\)</span>, gives</p>
 <p><span class="math display">\[
@@ -1920,12 +2156,18 @@ F(1.5) &amp;= 2 \cdot 1.5 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-lem no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-lem no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Lem</span><a href="#thm-ftc" class="quarto-xref">Theorem&nbsp;5</a> (Fundamental Theorem of Calculus)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="thm-ftc" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 5 (Fundamental Theorem of Calculus)</strong></span> Let <span class="math inline">\(f\)</span> be a continuous function on a closed interval <span class="math inline">\([a, b]\)</span>.</p>
 <p><strong>Part 1 (Derivative of an integral).</strong> Let <span class="math inline">\(F(x) = \int_a^x f(t)\,dt\)</span> for <span class="math inline">\(x \in [a, b]\)</span> be the accumulation function of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> (<a href="#def-accumulation-function" class="quarto-xref">Definition&nbsp;14</a>). Then <span class="math inline">\(F\)</span> is differentiable and:</p>
@@ -1961,12 +2203,18 @@ Note
 <li>Part 2: the integral of <span class="math inline">\(f\)</span> over <span class="math inline">\([a, b]\)</span> equals the difference of any antiderivative’s values at the endpoints (<a href="#eq-ftc-part2" class="quarto-xref">Equation&nbsp;2</a>), which rearranges to “integrating the derivative of <span class="math inline">\(F\)</span> recovers the net change in <span class="math inline">\(F\)</span>” (<a href="#eq-ftc-integral-of-deriv" class="quarto-xref">Equation&nbsp;3</a>).</li>
 </ul>
 <p>The standard form of the FTC assumes <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a, b]\)</span>; continuity is <em>sufficient</em> but not strictly necessary (see the callout note inside <a href="#thm-ftc" class="quarto-xref">Theorem&nbsp;5</a> for the more general statement). Since differentiability implies continuity (<a href="#thm-diff-implies-cont" class="quarto-xref">Theorem&nbsp;2</a>), the FTC applies in particular whenever <span class="math inline">\(f\)</span> is differentiable — a common situation in applied statistics.</p>
-<div class="callout callout-style-simple callout-def no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-def no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Def</span><a href="#def-evaluation-bracket" class="quarto-xref">Definition&nbsp;15</a> (Evaluation bracket)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="def-evaluation-bracket" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 15 (Evaluation bracket)</strong></span> For a function <span class="math inline">\(F\)</span> and numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> where <span class="math inline">\(F\)</span> is defined, the <strong>evaluation bracket</strong> is the difference</p>
 <p><span class="math display">\[\mathopen{}\left[F(t)\right]\mathclose{}_{t=a}^{t=b} \stackrel{\text{def}}{=}F(b) - F(a).\]</span></p>
@@ -1975,12 +2223,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-evaluation-bracket" class="quarto-xref">Example&nbsp;21</a> (Evaluating <span class="math inline">\(\int_1^3 2t\,dt\)</span> with a bracket)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-evaluation-bracket" class="theorem example">
 <p><span class="theorem-title"><strong>Example 21 (Evaluating <span class="math inline">\(\int_1^3 2t\,dt\)</span> with a bracket)</strong></span> <span class="math inline">\(F(t) = t^2\)</span> is an antiderivative of <span class="math inline">\(f(t) = 2t\)</span>, since <span class="math inline">\(\frac{\partial}{\partial t} t^2 = 2t\)</span>, so</p>
 <p><span class="math display">\[
@@ -2003,12 +2257,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-polynomial" class="quarto-xref">Exercise&nbsp;1</a> (Definite integral of a polynomial)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-polynomial" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Definite integral of a polynomial)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.31.</p>
 <p>Evaluate the integral:</p>
@@ -2017,17 +2277,17 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-polynomial" class="quarto-xref">Solution&nbsp;1</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-polynomial" class="proof solution">
 <p><span class="proof-title"><em>Solution 1</em>. </span>Integrate term by term using the power rule for integration:</p>
@@ -2042,12 +2302,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-quadratic-complete" class="quarto-xref">Exercise&nbsp;2</a> (Integral of a perfect square)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-51" class="callout-51-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-quadratic-complete" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2 (Integral of a perfect square)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.32.</p>
 <p>Evaluate the integral:</p>
@@ -2056,17 +2322,17 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-quadratic-complete" class="quarto-xref">Solution&nbsp;2</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-52" class="callout-52-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-quadratic-complete" class="proof solution">
 <p><span class="proof-title"><em>Solution 2</em>. </span>Notice that the integrand is a perfect square: <span class="math inline">\(x^2 + 2x + 1 = (x + 1)^2\)</span>.</p>
@@ -2092,12 +2358,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-composite-power" class="quarto-xref">Exercise&nbsp;3</a> (Integral of a composite power)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-composite-power" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3 (Integral of a composite power)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.33.</p>
 <p>Evaluate the integral:</p>
@@ -2106,17 +2378,17 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-composite-power" class="quarto-xref">Solution&nbsp;3</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-composite-power" class="proof solution">
 <p><span class="proof-title"><em>Solution 3</em>. </span>Recognize that <span class="math inline">\(x^2 + 2x + 1 = (x + 1)^2\)</span>, so the integrand is:</p>
@@ -2142,12 +2414,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-trig-symmetry" class="quarto-xref">Exercise&nbsp;4</a> (Integral of odd trigonometric functions)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-trig-symmetry" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Integral of odd trigonometric functions)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.34.</p>
 <p>Evaluate the integral:</p>
@@ -2156,17 +2434,17 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-trig-symmetry" class="quarto-xref">Solution&nbsp;4</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-56" class="callout-56-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-trig-symmetry" class="proof solution">
 <p><span class="proof-title"><em>Solution 4</em>. </span>Because <span class="math inline">\(\sin(-x) = -\sin x\)</span> and <span class="math inline">\(\cos(-x) = \cos x\)</span>:</p>
@@ -2186,12 +2464,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-polynomial-symmetry" class="quarto-xref">Exercise&nbsp;5</a> (Separating even and odd parts of a polynomial)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-57" class="callout-57-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-polynomial-symmetry" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5 (Separating even and odd parts of a polynomial)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.35.</p>
 <p>Evaluate the integral:</p>
@@ -2200,17 +2484,17 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-polynomial-symmetry" class="quarto-xref">Solution&nbsp;5</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-polynomial-symmetry" class="proof solution">
 <p><span class="proof-title"><em>Solution 5</em>. </span>Split the integrand into its odd part <span class="math inline">\(x^3 - 2x\)</span> and its even part <span class="math inline">\(6x^2 - 3\)</span>:</p>
@@ -2230,12 +2514,18 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-log-substitution" class="quarto-xref">Exercise&nbsp;6</a> (Substitution leading to a natural logarithm)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-59" class="callout-59-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-log-substitution" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 6 (Substitution leading to a natural logarithm)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.36.</p>
 <p>Evaluate the integral:</p>
@@ -2244,17 +2534,17 @@ Note
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-log-substitution" class="quarto-xref">Solution&nbsp;6</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-log-substitution" class="proof solution">
 <p><span class="proof-title"><em>Solution 6</em>. </span>Let <span class="math inline">\(u = 1 + x^2\)</span>. Then <span class="math inline">\(du = 2x\,dx\)</span>, so <span class="math inline">\(x\,dx = \frac{1}{2}du\)</span>.</p>
@@ -2294,12 +2584,18 @@ u &amp;= 1 + 1^2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-power-substitution" class="quarto-xref">Exercise&nbsp;7</a> (Substitution with a polynomial power)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-61" class="callout-61-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-power-substitution" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 7 (Substitution with a polynomial power)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.37.</p>
 <p>Evaluate the integral:</p>
@@ -2308,17 +2604,17 @@ u &amp;= 1 + 1^2 \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-power-substitution" class="quarto-xref">Solution&nbsp;7</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-power-substitution" class="proof solution">
 <p><span class="proof-title"><em>Solution 7</em>. </span>Let <span class="math inline">\(u = x^3 + 3x\)</span>. Then:</p>
@@ -2358,12 +2654,18 @@ u &amp;= 3^3 + 3(3) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-trig-substitution" class="quarto-xref">Exercise&nbsp;8</a> (Substitution with a trigonometric integrand)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-63" class="callout-63-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-trig-substitution" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 8 (Substitution with a trigonometric integrand)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.38.</p>
 <p>Evaluate the integral:</p>
@@ -2372,17 +2674,17 @@ u &amp;= 3^3 + 3(3) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-64-contents" aria-controls="callout-64" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-trig-substitution" class="quarto-xref">Solution&nbsp;8</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-64" class="callout-64-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-trig-substitution" class="proof solution">
 <p><span class="proof-title"><em>Solution 8</em>. </span>Let <span class="math inline">\(u = 3x^2\)</span>. Then <span class="math inline">\(du = 6x\,dx\)</span>, meaning <span class="math inline">\(x\,dx = \frac{du}{6}\)</span>.</p>
@@ -2412,12 +2714,18 @@ u &amp;= 3(2^2) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-65-contents" aria-controls="callout-65" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-by-parts-gaussian" class="quarto-xref">Exercise&nbsp;9</a> (Integration by parts with an exponential factor)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-65" class="callout-65-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-by-parts-gaussian" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 9 (Integration by parts with an exponential factor)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.40.</p>
 <p>Evaluate the integral:</p>
@@ -2426,17 +2734,17 @@ u &amp;= 3(2^2) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-66-contents" aria-controls="callout-66" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-by-parts-gaussian" class="quarto-xref">Solution&nbsp;9</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-66" class="callout-66-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-by-parts-gaussian" class="proof solution">
 <p><span class="proof-title"><em>Solution 9</em>. </span>Factor the integrand as <span class="math inline">\(x^2 \cdot\mathopen{}\left(x \operatorname{exp}\mathopen{}\left\{-x^2/2\right\}\mathclose{}\right)\mathclose{}\)</span>. Set:</p>
@@ -2458,12 +2766,18 @@ u &amp;= 3(2^2) \\
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-67-contents" aria-controls="callout-67" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-ftc-part1-accumulation" class="quarto-xref">Example&nbsp;22</a> (FTC Part 1 visualized: accumulation function for <span class="math inline">\(f(t) = 2t\)</span>)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-67" class="callout-67-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-ftc-part1-accumulation" class="theorem example">
 <p><span class="theorem-title"><strong>Example 22 (FTC Part 1 visualized: accumulation function for <span class="math inline">\(f(t) = 2t\)</span>)</strong></span> Take <span class="math inline">\(f(t) = 2t\)</span> on <span class="math inline">\([0, 2]\)</span>. The accumulation function from <span class="math inline">\(0\)</span> is</p>
 <p><span class="math display">\[
@@ -2583,12 +2897,18 @@ Figure&nbsp;4: vertical lines mark <span class="math inline">\(x \in \{1, 1.5, 2
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exm no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exm no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-68-contents" aria-controls="callout-68" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exm</span><a href="#exm-ftc-cdf-pdf" class="quarto-xref">Example&nbsp;23</a> (CDF and PDF of the exponential distribution)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-68" class="callout-68-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exm-ftc-cdf-pdf" class="theorem example">
 <p><span class="theorem-title"><strong>Example 23 (CDF and PDF of the exponential distribution)</strong></span> In what follows, <span class="math inline">\(f\)</span> denotes the PDF and <span class="math inline">\(F\)</span> the CDF — the same letters as the antiderivative pair in <a href="#def-antiderivative" class="quarto-xref">Definition&nbsp;1</a>, because the FTC will show <span class="math inline">\(F\)</span> is exactly an antiderivative of <span class="math inline">\(f\)</span>.</p>
 <p>Let <span class="math inline">\(T\)</span> be a <a href="https://morrison-lab.github.io/pds/random-variables.html#def-random-variable">random variable</a> with the <a href="https://morrison-lab.github.io/pds/random-variables.html#def-exponential">exponential distribution</a> with rate <span class="math inline">\({\lambda}&gt; 0\)</span>. Its <a href="https://morrison-lab.github.io/pds/random-variables.html#def-pdf">probability density function (PDF)</a> is <span class="citation" data-cites="kleinbaum2012survival">(<a href="#ref-kleinbaum2012survival" role="doc-biblioref">Kleinbaum and Klein 2012, sec. II</a>, p.&nbsp;295, “Survival and Hazard Functions for Selected Distributions”)</span>:</p>
@@ -2734,12 +3054,18 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-69-contents" aria-controls="callout-69" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-rayleigh-normal-kernel" class="quarto-xref">Exercise&nbsp;10</a> (Improper Gaussian-kernel integral)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-69" class="callout-69-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-rayleigh-normal-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 10 (Improper Gaussian-kernel integral)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.39.</p>
 <p>Evaluate the improper integral:</p>
@@ -2748,17 +3074,17 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-70-contents" aria-controls="callout-70" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-rayleigh-normal-kernel" class="quarto-xref">Solution&nbsp;10</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-70" class="callout-70-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-rayleigh-normal-kernel" class="proof solution">
 <p><span class="proof-title"><em>Solution 10</em>. </span>Let <span class="math inline">\(u = x^2/4\)</span>. Then <span class="math inline">\(du = \frac{x}{2}\,dx\)</span>, so <span class="math inline">\(x\,dx = 2\,du\)</span>.</p>
@@ -2782,12 +3108,18 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-exr no-icon">
-<div class="callout-body d-flex">
+<div class="callouty-titled callout callout-style-simple callout-exr no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-71-contents" aria-controls="callout-71" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Exr</span><a href="#exr-miller-int-uniform-convolution" class="quarto-xref">Exercise&nbsp;11</a> (Convolution of two uniform densities)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-71" class="callout-71-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <div id="exr-miller-int-uniform-convolution" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 11 (Convolution of two uniform densities)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#ref-problifesavercalc" role="doc-biblioref">2016</a>)</span>, Question 1.1.41.</p>
 <p>Let <span class="math inline">\(f(x) = \mathbf{1}_{[0, 1]}(x)\)</span> be the indicator of the unit interval:</p>
@@ -2799,17 +3131,17 @@ Figure&nbsp;5: Exponential distribution with <span class="math inline">\({\lambd
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-solution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callouty-titled callout callout-style-default callout-solution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-72-contents" aria-controls="callout-72" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Solution</span>Solution
+<span class="screen-reader-only">Solution</span><a href="#sol-miller-int-uniform-convolution" class="quarto-xref">Solution&nbsp;11</a>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-72" class="callout-72-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div id="sol-miller-int-uniform-convolution" class="proof solution">
 <p><span class="proof-title"><em>Solution 11</em>. </span>The integrand <span class="math inline">\(f(t)f(x - t)\)</span> equals <span class="math inline">\(1\)</span> when both <span class="math inline">\(t \in [0, 1]\)</span> and <span class="math inline">\(x - t \in [0, 1]\)</span>, and equals <span class="math inline">\(0\)</span> otherwise.</p>
