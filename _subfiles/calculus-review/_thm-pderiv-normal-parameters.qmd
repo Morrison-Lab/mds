@@ -1,0 +1,24 @@
+:::{#thm-pderiv-normal-parameters}
+#### Partial derivatives of the normal density with respect to its parameters
+
+Let $\mean \in \reals$ and $\sdpar > 0$, and let
+
+$$f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi\sdpar^2}}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}}$$
+
+Then for every $x \in \reals$,
+
+$$
+\ba
+\derivf{f}{\mean} &= \frac{x - \mean}{\sdpar^2} f(x; \mean, \sdpar)
+\\
+\derivf{f}{\sdpar} &= \sb{-\frac{1}{\sdpar} + \frac{(x - \mean)^2}{\sdpar^3}} f(x; \mean, \sdpar)
+\ea
+$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-pderiv-normal-parameters.
+
+:::
