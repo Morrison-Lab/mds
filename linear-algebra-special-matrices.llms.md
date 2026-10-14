@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 01:48:43 (PDT)
+Last modified: 2026-10-14 08:08:00 (PDT)
 
 ## 1 Special Matrices
 
@@ -903,13 +903,46 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 21 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 20](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
+> **Definition 21 (Paraboloid)** A **paraboloid** in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\tilde{x}, f(\tilde{x})) \mid \tilde{x}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
+>
+> \\ f(\tilde{x}) = {\tilde{x}}^{\top}\mathbf{S}\tilde{x}+ \tilde{b} \cdot \tilde{x} + c, \\
+>
+> where \\\mathbf{S}\\ is a nonzero symmetric \\p \times p\\ matrix ([Definition 3](#def-symmetric-matrix)), \\\tilde{b} \in \mathbb{R}^p\\, and \\c \in \mathbb{R}\\. The first term is a quadratic form ([Definition 11](#def-quadratic-form)). The paraboloid is **elliptic** if \\\mathbf{S}\\ is positive definite ([Definition 20](#def-positive-definite)); it is then a bowl that opens upward.
+
+> **NOTE:**
+>
+> **Example 30 (A bowl with its lowest point at the origin)** Take \\p = 2\\, \\\mathbf{S} = \mathbf{I}\_2\\, \\\tilde{b} = \tilde{0}\_{2 \times 1}\\ and \\c = 0\\. Then \\\mathbf{S}\\ is positive definite ([Example 27](#exm-positive-definite)), so the graph of
+>
+> \\ \begin{aligned} f(\tilde{x}) &= {\tilde{x}}^{\top}\mathbf{I}\_2\tilde{x}\\ &= x_1^2 + x_2^2 \end{aligned} \\
+>
+> is an elliptic paraboloid. At \\\tilde{x}= \tilde{0}\\, \\f(\tilde{x}) = 0\\; at \\\tilde{x}= (1, 1)\\, \\f(\tilde{x}) = 2\\; and \\f(\tilde{x}) \> 0\\ at every \\\tilde{x}\neq \tilde{0}\\, so the origin is the only lowest point of the bowl. [Figure 1](#fig-paraboloid) shows the surface.
+>
+> Show R code
+>
+> ``` downlit
+> axis_values <- seq(-2, 2, length.out = 41)
+> height <- outer(axis_values, axis_values, function(x1, x2) x1^2 + x2^2)
+>
+> plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
+>   plotly::add_surface(showscale = FALSE) |>
+>   plotly::layout(scene = list(
+>     xaxis = list(title = "x1"),
+>     yaxis = list(title = "x2"),
+>     zaxis = list(title = "f(x)")
+>   ))
+> ```
+>
+> Figure 1: The surface \\z = x_1^2 + x_2^2\\ over \\\[-2, 2\]^2\\: a bowl that opens upward, with its lowest point above the origin. Horizontal slices of the bowl are circles around the origin.
+
+> **NOTE:**
+>
+> **Definition 22 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 20](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
 >
 > \\ \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} \stackrel{\text{def}}{=}{\tilde{x}}^{\top} \mathbf{A} \tilde{y}. \\
 
 > **NOTE:**
 >
-> **Example 30 (A matrix-induced inner product calculation)** Consider the symmetric matrix
+> **Example 31 (A matrix-induced inner product calculation)** Consider the symmetric matrix
 >
 > \\ \mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}. \\
 >
@@ -968,7 +1001,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Example 31 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 30](#exm-matrix-induced-inner-product), the vectors \\\tilde{x}= (1, 2)\\, \\\tilde{y}= (3, -1)\\ and \\\tilde{z} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 15](#thm-matrix-induced-inner-product), and then the numbers \\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\_{\mathbf{A}}\\ for the standard basis vectors.
+> **Example 32 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 31](#exm-matrix-induced-inner-product), the vectors \\\tilde{x}= (1, 2)\\, \\\tilde{y}= (3, -1)\\ and \\\tilde{z} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 15](#thm-matrix-induced-inner-product), and then the numbers \\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\_{\mathbf{A}}\\ for the standard basis vectors.
 >
 > ``` downlit
 > A <- matrix(c(2, 1, 1, 2), nrow = 2)
@@ -1016,14 +1049,14 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 22 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
+> **Definition 23 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
 > - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
-> **Example 32 (Determinant of a \\2 \times 2\\ matrix)** For \\\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\\, deleting row 1 and column 1 leaves \\\begin{bmatrix} d \end{bmatrix}\\, and deleting row 1 and column 2 leaves \\\begin{bmatrix} c \end{bmatrix}\\. So:
+> **Example 33 (Determinant of a \\2 \times 2\\ matrix)** For \\\mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}\\, deleting row 1 and column 1 leaves \\\begin{bmatrix} d \end{bmatrix}\\, and deleting row 1 and column 2 leaves \\\begin{bmatrix} c \end{bmatrix}\\. So:
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= (-1)^{1+1}\\ a \det\mathopen{}\left(\begin{bmatrix} d \end{bmatrix}\right)\mathclose{} + (-1)^{1+2}\\ b \det\mathopen{}\left(\begin{bmatrix} c \end{bmatrix}\right)\mathclose{} && \text{(definition, } p = 2 \text{)} \\ &= a d - b c && \text{(definition, } p = 1 \text{)} \end{aligned} \\
 >
@@ -1033,11 +1066,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> *Remark 20* (Cofactor expansion). The recursive formula in [Definition 22](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree ([Banerjee and Roy 2014](#ref-banerjee2014linear)).
+> *Remark 20* (Cofactor expansion). The recursive formula in [Definition 23](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree ([Banerjee and Roy 2014](#ref-banerjee2014linear)).
 >
 > Each ordering picks one entry from each row, from the column that the ordering assigns to that row, and multiplies them. Its sign is \\+1\\ if the ordering takes an even number of swaps of two columns to reach from \\(1, 2, \ldots, p)\\, and \\-1\\ if it takes an odd number.
 >
-> For \\p = 2\\, the columns have two orderings. The ordering \\(1, 2)\\ keeps each column in place, picks the entries \\a\_{11}\\ and \\a\_{22}\\, and has sign \\+1\\. The ordering \\(2, 1)\\ swaps the two columns, picks the entries \\a\_{12}\\ and \\a\_{21}\\, and has sign \\-1\\. The sum \\a\_{11} a\_{22} - a\_{12} a\_{21}\\ is the value \\a d - b c\\ from [Example 32](#exm-determinant).
+> For \\p = 2\\, the columns have two orderings. The ordering \\(1, 2)\\ keeps each column in place, picks the entries \\a\_{11}\\ and \\a\_{22}\\, and has sign \\+1\\. The ordering \\(2, 1)\\ swaps the two columns, picks the entries \\a\_{12}\\ and \\a\_{21}\\, and has sign \\-1\\. The sum \\a\_{11} a\_{22} - a\_{12} a\_{21}\\ is the value \\a d - b c\\ from [Example 33](#exm-determinant).
 
 See also <https://en.wikipedia.org/wiki/Determinant>.
 
@@ -1049,7 +1082,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Theorem 16 (Determinant of a diagonal matrix)** The determinant ([Definition 22](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
+> **Theorem 16 (Determinant of a diagonal matrix)** The determinant ([Definition 23](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
 >
 > \\ \det\mathopen{}\left( \begin{bmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_p \end{bmatrix} \right)\mathclose{} = \prod\_{i=1}^p d_i \\
 
@@ -1063,7 +1096,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 33 (Determinant of a scaled identity matrix)** For a number \\c\\, \\c\\\mathbf{I}\_p\\ is diagonal with every diagonal entry equal to \\c\\, so \\\det(c\\\mathbf{I}\_p) = c^p\\. In particular, \\\det(\mathbf{I}\_p) = 1\\.
+> **Example 34 (Determinant of a scaled identity matrix)** For a number \\c\\, \\c\\\mathbf{I}\_p\\ is diagonal with every diagonal entry equal to \\c\\, so \\\det(c\\\mathbf{I}\_p) = c^p\\. In particular, \\\det(\mathbf{I}\_p) = 1\\.
 
 > **NOTE:**
 >
@@ -1073,7 +1106,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 34 (Checking the product rule)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}\\, [Example 32](#exm-determinant) gives
+> **Example 35 (Checking the product rule)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\ and \\\mathbf{B} = \begin{bmatrix} 1 & 0 \\ 3 & 1 \end{bmatrix}\\, [Example 33](#exm-determinant) gives
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= 2 \cdot 1 - 1 \cdot 0 \\ &= 2 \end{aligned} \\
 >
@@ -1091,7 +1124,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> *Remark 21* (An example is not a proof). [Example 34](#exm-det-product) checks [Theorem 17](#thm-det-product) for one pair of \\2 \times 2\\ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy ([2014](#ref-banerjee2014linear)).
+> *Remark 21* (An example is not a proof). [Example 35](#exm-det-product) checks [Theorem 17](#thm-det-product) for one pair of \\2 \times 2\\ matrices, which shows the theorem holds there but does not prove it for every pair. The proof needs properties of the determinant that these notes don’t develop; see Banerjee and Roy ([2014](#ref-banerjee2014linear)).
 
 See also <https://en.wikipedia.org/wiki/Determinant>.
 
@@ -1111,7 +1144,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= \det(\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}) && \text{(substitute the eigendecomposition)} \\ &= \det(\mathbf{Q}) \det(\mathbf{\Lambda}) \det({\mathbf{Q}}^{\top}) && \text{(determinant of a product, twice)} \\ &= \det(\mathbf{\Lambda}) \cdot\det({\mathbf{Q}}^{\top})\det(\mathbf{Q}) && \text{(reorder the three numbers)} \\ &= \det(\mathbf{\Lambda}) && \text{(the first display)} \\ &= \prod\_{i=1}^p \lambda_i && \text{(determinant of a diagonal matrix)} \end{aligned} \\
 >
-> The product steps are [Theorem 17](#thm-det-product), the orthogonality step is [Definition 10](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 16](#thm-det-diagonal) and [Example 33](#exm-det-diagonal).
+> The product steps are [Theorem 17](#thm-det-product), the orthogonality step is [Definition 10](#def-orthogonal-matrix), and the identity and diagonal steps are [Theorem 16](#thm-det-diagonal) and [Example 34](#exm-det-diagonal).
 
 > **NOTE:**
 >
@@ -1123,11 +1156,11 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Example 35 (Two ways to the same determinant)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([Example 21](#exm-eigenvalue)), so [Theorem 18](#thm-det-eigenvalues) gives
+> **Example 36 (Two ways to the same determinant)** \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ has eigenvalues \\3\\ and \\1\\ ([Example 21](#exm-eigenvalue)), so [Theorem 18](#thm-det-eigenvalues) gives
 >
 > \\ \begin{aligned} \det(\mathbf{A}) &= 3 \cdot 1 \\ &= 3, \end{aligned} \\
 >
-> matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 32](#exm-determinant).
+> matching \\2 \cdot 2 - 1 \cdot 1 = 3\\ from [Example 33](#exm-determinant).
 
 Back to top
 
