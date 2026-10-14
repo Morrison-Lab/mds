@@ -1,0 +1,49 @@
+:::{#thm-independent-null-space}
+#### Independent columns exactly when the null space is trivial
+
+For an $m \times n$ matrix $\matr{A}$, the following are equivalent:
+
+1. The columns of $\matr{A}$ are linearly independent (@def-linearly-independent).
+2. $\matr{A} \vecf{x} = \vzero_m$ only for $\vecf{x} = \vzero_n$.
+3. $\mathcal{N}(\matr{A}) = \cb{\vzero_n}$ (@def-null-space).
+
+So $\matr{A}$ has full column rank (@def-full-column-rank) exactly when its null space contains only the zero vector.
+
+:::
+
+::: proof
+
+Write $\vecf{a}_1, \ldots, \vecf{a}_n$ for the columns of $\matr{A}$.
+For $\vecf{x} = (x_1, \ldots, x_n)$, the matrix-vector product is the combination of the columns with weights $x_1, \ldots, x_n$:
+
+$$
+\matr{A} \vecf{x} = x_1 \vecf{a}_1 + \cdots + x_n \vecf{a}_n.
+$$
+
+So $\matr{A} \vecf{x} = \vzero_m$ says exactly that $x_1 \vecf{a}_1 + \cdots + x_n \vecf{a}_n = \vzero_m$.
+By @def-linearly-independent, the columns are linearly independent exactly when the only weights with this property are $x_1 = \cdots = x_n = 0$.
+That is statement 2, so statements 1 and 2 are equivalent.
+Statement 2 says that the only vector in $\mathcal{N}(\matr{A})$ is $\vzero_n$, which is statement 3.
+The last sentence is the definition of full column rank (@def-full-column-rank).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-independent-null-space}
+#### Checking independence through the null space
+
+For $\matr{A} = \begin{bmatrix} 1 & 1 \\ 1 & 2 \\ 1 & 3 \end{bmatrix}$,
+
+$$
+\matr{A} \vecf{x}
+= \begin{bmatrix} x_1 + x_2 \\ x_1 + 2 x_2 \\ x_1 + 3 x_2 \end{bmatrix}.
+$$
+
+This is $\vzero_3$ only if $x_2 = 0$ (subtract the first entry from the second), and then $x_1 = 0$.
+So $\mathcal{N}(\matr{A}) = \cb{\vzero_2}$ and the two columns are linearly independent.
+
+For $\matr{B} = \begin{bmatrix} 1 & 2 \\ 1 & 2 \\ 1 & 2 \end{bmatrix}$,
+$\matr{B} (2, -1) = \vzero_3$, so $\mathcal{N}(\matr{B})$ contains a nonzero vector and the columns of $\matr{B}$ are linearly dependent.
+
+:::
