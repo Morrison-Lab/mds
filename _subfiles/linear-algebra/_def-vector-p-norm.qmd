@@ -10,11 +10,6 @@ $$
 
 The cases $k = 1$ and $k = 2$ are named the **$\ell_1$ norm** (also the **taxicab norm** or **Manhattan norm**)
 and the **$\ell_2$ norm**.
-The **infinity norm** (also the **$\ell_\infty$ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately by
-
-$$
-\norm{\vx}_\infty \eqdef \max_{1 \le i \le p} \abs{x_i}.
-$$
 
 :::
 

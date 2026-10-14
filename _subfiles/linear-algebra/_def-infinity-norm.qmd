@@ -1,0 +1,11 @@
+:::{#def-infinity-norm}
+#### Infinity norm ($\ell_\infty$ norm, maximum norm, Chebyshev norm)
+
+For a vector $\vx = (x_1, \ldots, x_p) \in \reals^p$,
+the **infinity norm** (also the **$\ell_\infty$ norm**, **maximum norm**, or **Chebyshev norm**) is defined separately from the $p$-norms (@def-vector-p-norm) by
+
+$$
+\norm{\vx}_\infty \eqdef \max_{1 \le i \le p} \abs{x_i}.
+$$
+
+:::

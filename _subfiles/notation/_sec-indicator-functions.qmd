@@ -24,7 +24,7 @@ This section summarizes the principal notational conventions.
 {{< slidebreak >}}
 
 :::{#def-indicator-function}
-#### Indicator function (set indicator, predicate indicator)
+#### Indicator function (set indicator)
 
 For any subset $A \subseteq \universe$ of a universal set $\universe$,
 the **indicator function** of $A$,
@@ -39,8 +39,14 @@ $$
 \end{cases}
 $$
 
-More generally,
-for any logical proposition or predicate $P$,
+:::
+
+{{< slidebreak >}}
+
+:::{#def-predicate-indicator}
+#### Predicate indicator
+
+For any logical proposition or predicate $P$,
 the **indicator** of $P$,
 or **predicate indicator**,
 takes the value $1$ when $P$ is true
@@ -133,7 +139,7 @@ or proposition $P$ directly as its argument or subscript:
 - $I(x \in A)$ or $I(P)$
 
 Predicate notation is especially common in applied statistics and survival analysis,
-where indicators frequently depend on inequalities (@def-inequality) involving random variables,
+where indicators frequently depend on inequalities ([definition](proof-writing.qmd#def-inequality)) involving random variables,
 such as $\indicp{T_i \le t}$ (an event occurring before time $t$)
 or $\indicp{Y_i = 1}$ (a binary outcome).
 
@@ -332,7 +338,7 @@ and the observed and expected Fisher information matrices ($\oinf$, $\einf$).
 
 ### Key algebraic properties
 
-Indicator functions translate the logical connectives (@def-logical-connective)
+Indicator functions translate the logical connectives ([definition](proof-writing.qmd#def-logical-connective))
 "and", "or", and "not", applied to set membership,
 into ordinary arithmetic on real numbers.
 One of the identities below uses idempotence:

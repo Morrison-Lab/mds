@@ -43,7 +43,7 @@ Together, $g'(c) = 0$.
   \end{aligned}
   $$
 
-- The [converse](notation.qmd#def-converse) fails: $g(x) = x^3$ has
+- The [converse](proof-writing.qmd#def-converse) fails: $g(x) = x^3$ has
 
   $$
   \begin{aligned}

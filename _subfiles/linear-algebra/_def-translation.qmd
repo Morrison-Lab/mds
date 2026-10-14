@@ -7,8 +7,6 @@ $t_{\vec{b}} : \reals^m \to \reals^m$ defined by
 
 $$t_{\vec{b}}(\vy) = \vy + \vec{b}$$
 
-It moves every point by the same vector $\vec{b}$.
-
 :::
 
 {{< slidebreak >}}

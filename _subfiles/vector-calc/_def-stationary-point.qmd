@@ -9,7 +9,6 @@ $$
 $$
 
 is a **stationary point** of $f$.
-For $p = 1$, this is a [flat point](calculus.qmd#def-flat-point).
 
 :::
 
