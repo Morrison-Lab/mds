@@ -1,0 +1,45 @@
+:::{#def-paraboloid}
+#### Paraboloid
+
+A **paraboloid** in $\reals^{p+1}$ is the graph
+$\set{(\vx, f(\vx)) \mid \vx \in \reals^p}$
+of a function
+
+$$
+f(\vx) = \tp{\vx}\matr{S}\vx + \dprod{\vecf{b}}{\vx} + c,
+$$
+
+where $\matr{S}$ is a nonzero symmetric $p \times p$ matrix
+(@def-symmetric-matrix),
+$\vecf{b} \in \reals^p$,
+and $c \in \reals$.
+The first term is a quadratic form (@def-quadratic-form).
+The paraboloid is **elliptic** if $\matr{S}$ is positive definite
+(@def-positive-definite);
+it is then a bowl that opens upward.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-paraboloid}
+#### A bowl with its lowest point at the origin
+
+Take $p = 2$, $\matr{S} = \matr{I}_2$, $\vecf{b} = \vzero_{2 \times 1}$ and $c = 0$.
+Then $\matr{S}$ is positive definite (@exm-positive-definite),
+so the graph of
+
+$$
+\begin{aligned}
+f(\vx) &= \tp{\vx}\matr{I}_2\vx \\
+&= x_1^2 + x_2^2
+\end{aligned}
+$$
+
+is an elliptic paraboloid.
+At $\vx = \vzero$, $f(\vx) = 0$;
+at $\vx = (1, 1)$, $f(\vx) = 2$;
+and $f(\vx) > 0$ at every $\vx \neq \vzero$,
+so the origin is the only lowest point of the bowl.
+
+:::
