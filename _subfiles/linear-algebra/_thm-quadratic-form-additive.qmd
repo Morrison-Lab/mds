@@ -1,0 +1,59 @@
+:::{#thm-quadratic-form-additive}
+#### A quadratic form is additive in its matrix
+
+If $\matr{A}$ and $\matr{B}$ are $p \times p$ matrices, $c$ is a number and $\vx$ is a vector of length $p$, then
+
+$$
+\ba
+\tp{\vx}(\matr{A} + \matr{B})\vx &= \tp{\vx}\matr{A}\vx + \tp{\vx}\matr{B}\vx, \\
+\tp{\vx}(c\,\matr{A})\vx &= c\,\tp{\vx}\matr{A}\vx.
+\ea
+$$
+
+So for a fixed $\vx$, the map $\matr{S} \mapsto \tp{\vx}\matr{S}\vx$ is linear in $\matr{S}$.
+
+:::
+
+::: proof
+
+By the distributive law (@thm-matmul-distrib), applied on the left and then on the right,
+
+$$
+\ba
+\tp{\vx}(\matr{A} + \matr{B})\vx
+&= \paren{\tp{\vx}\matr{A} + \tp{\vx}\matr{B}}\vx
+&& \text{(distribute } \tp{\vx} \text{ over the sum)}
+\\
+&= \tp{\vx}\matr{A}\vx + \tp{\vx}\matr{B}\vx
+&& \text{(distribute } \vx \text{ over the sum)}
+\ea
+$$
+
+For the scalar, a number can be moved out of any product, so $\tp{\vx}(c\,\matr{A})\vx = c\,\tp{\vx}\matr{A}\vx$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-quadratic-form-additive}
+#### Combining two quadratic forms into one
+
+Take $\matr{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$, $\matr{B} = \matr{I}$ and $\vx = (1, 2)$.
+Then
+
+$$
+\ba
+\tp{\vx}\matr{A}\vx &= 1 + 4 + 12 = 17, \\
+\tp{\vx}\matr{I}\vx &= 1 + 4 = 5, \\
+\tp{\vx}(\matr{A} + \matr{I})\vx
+&= \tp{\vx}\begin{bmatrix} 2 & 2 \\ 0 & 4 \end{bmatrix}\vx \\
+&= 2 + 4 + 16 \\
+&= 22,
+\ea
+$$
+
+which equals $17 + 5$.
+In particular, $\tp{\vx}(\matr{A} + c\,\matr{I})\vx = \tp{\vx}\matr{A}\vx + c\,\norm{\vx}^2$ for every number $c$, because $\tp{\vx}\matr{I}\vx = \tp{\vx}\vx = \norm{\vx}^2$.
+This is how two quadratic terms in the same vector combine into a single quadratic form.
+
+:::
