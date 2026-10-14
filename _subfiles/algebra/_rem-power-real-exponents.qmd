@@ -1,0 +1,6 @@
+:::{#rem-power-real-exponents}
+#### Powers with real exponents
+
+@def-real-power extends powers to real exponents when the base is positive.
+
+:::

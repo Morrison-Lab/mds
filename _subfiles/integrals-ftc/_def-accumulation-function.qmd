@@ -7,7 +7,5 @@ The **accumulation function** of $f$ from $a$ is the function $F$ on $[a, b]$ wi
 $$F(x) \eqdef \int_a^x f(t)\,dt \quad \text{for } a < x \le b.$$
 
 So $F(x)$ is the integral of $f$ accumulated from $a$ up to $x$.
-The letter $t$ inside the integral is a placeholder,
-renamed from $x$ so that $x$ can serve as the [upper limit](notation.qmd#def-lower-upper-limits).
 
 :::

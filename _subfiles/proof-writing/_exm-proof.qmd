@@ -1,7 +1,7 @@
 :::{#exm-proof}
 #### The sum of two even integers is even
 
-Let $a$ and $b$ be even integers (@def-even-odd).
+Let $a$ and $b$ be even integers ([definition](notation.qmd#def-even-odd)).
 Then $a = 2j$ and $b = 2k$ for some integers $j$ and $k$, and
 
 $$
@@ -16,7 +16,7 @@ a + b
 $$
 
 The second line uses the [distributive law](algebra.qmd#def-distributive).
-Since $j + k$ is an integer, $a + b$ is even (@def-even-odd).
+Since $j + k$ is an integer, $a + b$ is even ([definition](notation.qmd#def-even-odd)).
 For example,
 
 $$

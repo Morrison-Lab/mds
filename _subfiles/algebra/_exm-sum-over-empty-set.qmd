@@ -1,0 +1,6 @@
+:::{#exm-sum-over-empty-set}
+#### A sum over the empty set
+
+For example, $\sum_{x \in \cb{}} x^2 = 0$.
+
+:::

@@ -50,6 +50,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_rem-mean-sample-mean.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-ones-vector.qmd >}}
 
 {{< include mds/_subfiles/linear-algebra/_note-def-ones-vector.qmd >}}

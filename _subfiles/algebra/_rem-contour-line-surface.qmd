@@ -1,0 +1,7 @@
+:::{#rem-contour-line-surface}
+#### Contour lines on a plot of a surface
+
+On a plot of the surface $z = g(b, c)$,
+the [contour line](#def-contour-line) is the curve along which the surface has height $k$.
+
+:::
