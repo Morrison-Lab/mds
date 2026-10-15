@@ -9,7 +9,7 @@ $\sumto{i}{\infty} a_i$ is the limit of the partial sums:
 $$\sumto{i}{\infty} a_i \eqdef \lim_{n \to \infty} s_n$$
 
 Here the limit is a real number
-when the partial sums are real numbers that [converge](algebra.qmd#def-sequence-limit) to it,
+when the partial sums are real numbers that [converge](algebra.qmd#def-convergent-sequence) to it,
 and it is $\infty$
 when the partial sums [diverge to $\infty$](algebra.qmd#def-diverges-to-infinity)
 or some partial sum is $\infty$;

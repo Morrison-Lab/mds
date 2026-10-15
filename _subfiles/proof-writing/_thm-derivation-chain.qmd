@@ -34,7 +34,7 @@ This holds in each case:
   in the other relation ([substitution](algebra.qmd#thm-substitution)).
   This gives the other relation between $a$ and $c$.
 - If neither is $=$, then each of $a \mathrel{R} b$ and $b \mathrel{S} c$ is $\le$ or $<$,
-  and $\le$ means $<$ or $=$ ([strict and non-strict inequalities](algebra.qmd#def-strict-inequality)).
+  and $\le$ means $<$ or $=$ ([strict](algebra.qmd#def-strict-inequality) and [non-strict inequalities](algebra.qmd#def-non-strict-inequality)).
   A case with an $=$ is covered by the previous bullet, and the remaining case is $a < b$ and $b < c$,
   which gives $a < c$ because $<$ is transitive on the real numbers.
   So two steps that are each $\le$ or $<$ give $<$ if either is $<$, and otherwise $\le$.

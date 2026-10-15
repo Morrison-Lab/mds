@@ -6,12 +6,34 @@ A **complex number** is a number of the form
 $$z = a + b\,i,$$
 
 where $a$ and $b$ are real numbers and $i$ is the imaginary unit (@def-imaginary-unit).
+The set of all complex numbers is $\bbC \eqdef \{a + b\,i : a, b \in \reals\}$.
 
-- The **real part** of $z$ is $\operatorname{Re} z \eqdef a$.
-- The **imaginary part** of $z$ is $\operatorname{Im} z \eqdef b$.
-- The set of all complex numbers is $\bbC \eqdef \{a + b\,i : a, b \in \reals\}$.
+:::
 
-Two complex numbers are equal exactly when their real parts are equal and their imaginary parts are equal.
+{{< slidebreak >}}
+
+:::{#def-real-part}
+#### Real part
+
+The **real part** of a complex number $z = a + b\,i$ (@def-complex-number) is $\operatorname{Re} z \eqdef a$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-imaginary-part}
+#### Imaginary part
+
+The **imaginary part** of a complex number $z = a + b\,i$ (@def-complex-number) is $\operatorname{Im} z \eqdef b$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-complex-equality}
+#### Equal complex numbers
+
+Two complex numbers (@def-complex-number) are **equal** exactly when their real parts (@def-real-part) are equal and their imaginary parts (@def-imaginary-part) are equal.
 
 :::
 

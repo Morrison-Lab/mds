@@ -29,7 +29,7 @@ a + 0\,i
 $$
 
 so $a$ is the complex number $a + 0\,i$, whose imaginary part is $0$.
-The real part of $a + 0\,i$ is $a$, and by the equality rule in @def-complex-number
+The real part of $a + 0\,i$ is $a$, and by the equality rule in @def-complex-equality
 no other pair of real and imaginary parts gives the same number.
 
 Conversely, if $z = a + b\,i$ has $b = \operatorname{Im} z = 0$, then $z = a + 0\,i = a$ by the same calculation, so $z$ is real.

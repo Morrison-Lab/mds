@@ -13,11 +13,36 @@ $$\frac{a}{b}$$
 {{< slidebreak >}}
 
 :::{#def-fraction}
-#### Fraction, numerator, and denominator
+#### Fraction
 
-A quotient $\frac{a}{b}$ (@def-quotient) is also called a **fraction**;
-$a$ is its **numerator** and $b$ its **denominator**.
-For example, the fraction $\frac{6}{4}$ has numerator $6$ and denominator $4$.
+A quotient $\frac{a}{b}$ (@def-quotient) is also called a **fraction**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-numerator}
+#### Numerator
+
+In a fraction $\frac{a}{b}$ (@def-fraction), $a$ is its **numerator**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-denominator}
+#### Denominator
+
+In a fraction $\frac{a}{b}$ (@def-fraction), $b$ is its **denominator**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-fraction}
+#### Numerator and denominator of a fraction
+
+The fraction $\frac{6}{4}$ has numerator $6$ and denominator $4$.
 
 :::
 
@@ -34,12 +59,21 @@ because @def-quotient requires a nonzero denominator.
 
 {{< slidebreak >}}
 
-:::{#def-person-years}
-#### Follow-up and person-years
+:::{#def-follow-up}
+#### Follow-up
 
 In a study that observes participants over time,
-a participant's **follow-up** is the length of time the study observes that participant,
-and the study's **person-years** are the sum of the follow-up times of all participants,
+a participant's **follow-up** is the length of time the study observes that participant.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-person-years}
+#### Person-years
+
+In a study that observes participants over time,
+the study's **person-years** are the sum of the follow-up times (@def-follow-up) of all participants,
 measured in years.
 
 :::

@@ -1,15 +1,69 @@
 :::{#def-sequence-limit}
 #### Limit of a sequence
 
-A [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers
-**converges** to a real number $L$,
+A real number $L$ is the **limit** of a [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers,
 written $\lim_{n \to \infty} a_n = L$ or $a_n \to L$,
 if for every $\tolout > 0$ there is a natural number $N$ such that
 
 $$\abs{a_n - L} < \tolout \quad \text{for every } n \ge N.$$
 
-Then $L$ is the **limit** of the sequence.
-A sequence that converges to some real number is **convergent**,
-and a sequence that does not converge to any real number **diverges**.
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-sequence-limit}
+#### The limit of a sequence
+
+$a_n = \frac{1}{n}$ has limit $0$.
+Given $\tolout > 0$, take $N$ to be any natural number larger than $\frac{1}{\tolout}$.
+For every $n \ge N$, $\abs{\frac{1}{n} - 0} = \frac{1}{n} \le \frac{1}{N} < \tolout$.
+For example, with $\tolout = 0.01$, take $N = 101$:
+every $n \ge 101$ has $\frac{1}{n} \le \frac{1}{101} < 0.01$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-convergent-sequence}
+#### Convergent sequence (converges)
+
+A sequence $(a_n)$ of real numbers **converges** to a real number $L$ if $L$ is its limit (@def-sequence-limit).
+A sequence that converges to some real number is **convergent**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-convergent-sequence}
+#### A convergent sequence
+
+$a_n = \frac{1}{n}$ converges to $0$, because $0$ is its limit (@exm-sequence-limit),
+so $a_n = \frac{1}{n}$ is convergent.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-divergent-sequence}
+#### Divergent sequence (diverges)
+
+A sequence that does not converge (@def-convergent-sequence) to any real number **diverges**,
+and a sequence that diverges is **divergent**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-divergent-sequence}
+#### A divergent sequence
+
+$c_n = n$ diverges.
+For any real number $L$ and $\tolout = 1$,
+every $n > L + 1$ has $\abs{n - L} > 1$,
+so no $N$ works.
+For example, with $L = 5$, every $n \ge 7$ has $\abs{n - 5} \ge 2$.
+It diverges to $\infty$:
+for every real number $M$, every $n \ge N$ has $c_n = n > M$
+when $N$ is a natural number larger than $M$.
 
 :::

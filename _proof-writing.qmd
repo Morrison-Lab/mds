@@ -65,7 +65,7 @@ $\Rightarrow$ also writes the connective "implies" (@def-logical-connective);
 $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
 for every choice of values for the variables in $P$ and $Q$.
 
-Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
+Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-convergent-sequence) results.
 
 {{< slidebreak >}}
 
