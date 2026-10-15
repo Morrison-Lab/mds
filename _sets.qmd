@@ -7,7 +7,7 @@ This page collects the definitions of sets
 that the Morrison Lab's probability and statistics notes build on.
 The [Functions](functions.qmd) page defines functions between sets,
 and the [Expressions and Algorithms](expressions-algorithms.qmd) page defines
-the expressions and algorithms that write down and compute them.
+the expressions that write functions down and the algorithms that compute them.
 
 :::
 
