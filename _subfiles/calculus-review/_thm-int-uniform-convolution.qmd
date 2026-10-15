@@ -1,0 +1,31 @@
+::: {#thm-int-uniform-convolution}
+#### Convolution of two uniform densities
+
+Let $f(x) = \indic{[0, 1]}(x)$ be the indicator of the unit interval.
+Then for every $x \in \reals$,
+
+$$
+(f * f)(x) = \int_{-\infty}^\infty f(t)f(x - t)\,dt
+= \begin{cases}
+x & \text{if } 0 \le x \le 1 \\
+2 - x & \text{if } 1 < x \le 2 \\
+0 & \text{otherwise.}
+\end{cases}
+$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-int-uniform-convolution, worked in @sol-miller-int-uniform-convolution.
+
+The integrand $f(t)f(x - t)$ equals $1$ when both $t \in [0, 1]$ and $x - t \in [0, 1]$, and $0$ otherwise.
+The second condition is $x - 1 \le t \le x$,
+so the integrand is $1$ exactly on the overlap $[\max(0, x - 1), \min(1, x)]$,
+and the integral is the length of that overlap.
+
+- If $x < 0$ or $x > 2$, the overlap is empty, so $(f * f)(x) = 0$.
+- If $0 \le x \le 1$, the overlap is $[0, x]$, so $(f * f)(x) = \int_0^x 1\,dt = x$.
+- If $1 < x \le 2$, the overlap is $[x - 1, 1]$, so $(f * f)(x) = \int_{x-1}^1 1\,dt = 2 - x$.
+
+:::

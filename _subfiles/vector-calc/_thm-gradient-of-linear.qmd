@@ -1,0 +1,21 @@
+::: {#thm-gradient-of-linear}
+#### Gradient of an entrywise inner product with a fixed matrix
+
+Let $A$ be a fixed $m \times n$ matrix, and for $W \in \reals^{m \times n}$ define
+
+$$g(W) = \sumto{i}{m} \sumto{j}{n} W_{ij} A_{ij}$$
+
+Then for every $W$, $\nabla_W\, g(W) = A$.
+In particular, the gradient is constant: it does not depend on $W$.
+
+:::
+
+::: proof
+
+This is the solution to @exr-gradient-of-linear, worked in @sol-gradient-of-linear,
+where $m = 2$, $n = 3$, and the entries of $A$ are given.
+The same argument works for every $A$:
+each $W_{ij}$ appears in exactly one term, multiplied by $A_{ij}$,
+so $\derivf{g}{W_{ij}} = A_{ij}$.
+
+:::

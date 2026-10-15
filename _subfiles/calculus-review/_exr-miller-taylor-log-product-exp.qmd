@@ -21,7 +21,7 @@ f(x)
 \end{aligned}
 $$
 
-Substitute the series for $\log(1 - x)$ from @exr-miller-taylor-log-one-minus-x:
+Substitute the series for $\log(1 - x)$ from @thm-taylor-log-one-minus-x:
 
 $$
 \begin{aligned}
