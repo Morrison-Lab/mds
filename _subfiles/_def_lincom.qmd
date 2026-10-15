@@ -53,7 +53,7 @@ $$
 #### Linear combination
 
 A **linear combination** of the numbers $a_1, \ldots, a_k$
-with **coefficients** $c_1, \ldots, c_k$
+with coefficients $c_1, \ldots, c_k$ (@def-lincom-coefficient)
 is the weighted sum
 
 $$c_1 a_1 + \cdots + c_k a_k = \sumto{i}{k} c_i a_i$$
@@ -63,6 +63,26 @@ is defined entry by entry:
 entry $j$ of $\sumto{i}{k} c_i \vecf{v}_i$ is the linear combination
 of the $j$th entries of $\vecf{v}_1, \ldots, \vecf{v}_k$
 with the same coefficients.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-lincom-coefficient}
+#### Coefficients of a linear combination
+
+The numbers $c_1, \ldots, c_k$ in a linear combination (@def-linear-combination)
+$\sumto{i}{k} c_i a_i$ are its **coefficients**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-lincom-coefficient}
+#### Coefficients of a linear combination of numbers
+
+The linear combination of the numbers $4$ and $5$ with coefficients $2$ and $3$ is
+$2 \cd 4 + 3 \cd 5 = 8 + 15 = 23$.
 
 :::
 

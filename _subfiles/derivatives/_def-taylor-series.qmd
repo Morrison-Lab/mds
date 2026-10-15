@@ -1,0 +1,7 @@
+:::{#def-taylor-series}
+#### Taylor series
+
+Let $f$ and $x_0$ be as in @def-taylor-polynomial.
+When $f$ is infinitely differentiable and the series converges to $f(x)$ on an open interval containing $x_0$, the infinite sum $\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$ is the **Taylor series** of $f$ centered at $x_0$.
+
+:::

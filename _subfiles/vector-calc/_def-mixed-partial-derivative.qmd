@@ -1,0 +1,6 @@
+:::{#def-mixed-partial-derivative}
+#### Mixed partial derivative
+
+When $i \ne j$, the second partial derivative of @def-second-partial-derivative is a **mixed partial derivative**.
+
+:::

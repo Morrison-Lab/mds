@@ -68,19 +68,25 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_def-cosine-sine.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-cosine-similarity.qmd >}}
 
+{{< include mds/_subfiles/linear-algebra/_cor-cosine-similarity-angle.qmd >}}
+
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_def-cosine-similarity-inner-product-space.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-cosine-similarity-unit-vectors.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-pearson-cosine-centered.qmd >}}
 
 ## Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
 

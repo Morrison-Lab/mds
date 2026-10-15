@@ -6,10 +6,18 @@ with $\matr{A}$ a $p \times m$ matrix and $\vecf{b} \in \reals^m$,
 the **Lagrangian** is the function of $\vx \in \reals^p$ and $\vlagmult \in \reals^m$
 
 $$
-L(\vx, \vlagmult) \eqdef f(\vx) + \tp{\vlagmult} \paren{\tp{\matr{A}} \vx - \vecf{b}},
+L(\vx, \vlagmult) \eqdef f(\vx) + \tp{\vlagmult} \paren{\tp{\matr{A}} \vx - \vecf{b}}.
 $$
 
-and the entries of $\vlagmult$ are the **Lagrange multipliers**, one per constraint.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-lagrange-multipliers}
+#### Lagrange multipliers
+
+In the Lagrangian $L(\vx, \vlagmult)$ (@def-lagrangian),
+the entries of $\vlagmult$ are the **Lagrange multipliers**, one per constraint.
 
 :::
 
@@ -18,17 +26,17 @@ and the entries of $\vlagmult$ are the **Lagrange multipliers**, one per constra
 :::{#exm-lagrangian}
 #### The gradients of the Lagrangian of a quadratic
 
-Let $f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ symmetric and constant.
+Let $f(\vx) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ with $\matr{S}$ symmetric and constant.
 By the [transpose of a product](linear-algebra.qmd#thm-transpose-product),
 $\tp{\vlagmult} \tp{\matr{A}} = \tp{(\matr{A} \vlagmult)}$, so
 
 $$
 \ba
 L(\vx, \vlagmult)
-&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\vlagmult} \tp{\matr{A}} \vx - \tp{\vlagmult} \vecf{b}
+&= \tfrac{1}{2}\,\qform{\matr{S}}{\vx} + \tp{\vlagmult} \tp{\matr{A}} \vx - \tp{\vlagmult} \vecf{b}
 && \text{(distribute)}
 \\
-&= \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{(\matr{A} \vlagmult)} \vx - \tp{\vlagmult} \vecf{b},
+&= \tfrac{1}{2}\,\qform{\matr{S}}{\vx} + \tp{(\matr{A} \vlagmult)} \vx - \tp{\vlagmult} \vecf{b},
 && \text{(transpose of a product)}
 \ea
 $$
@@ -36,18 +44,18 @@ $$
 and, since $\tp{\vlagmult} \paren{\tp{\matr{A}} \vx - \vecf{b}}$ is $1 \times 1$ and so equals its transpose,
 
 $$
-L(\vx, \vlagmult) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx + \tp{\paren{\tp{\matr{A}} \vx - \vecf{b}}} \vlagmult.
+L(\vx, \vlagmult) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx} + \tp{\paren{\tp{\matr{A}} \vx - \vecf{b}}} \vlagmult.
 $$
 
 The partial derivatives of a sum are the sums of the partial derivatives, entry by entry.
-Using the first of these forms, [derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form) for the first term,
+Using the first of these forms, [derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric) for the first term,
 [derivative of a linear combination](vector-calculus.qmd#cor-deriv-lincom-tp) for the second ($\matr{A} \vlagmult$ is constant in $\vx$),
 and [constant with respect to a vector](vector-calculus.qmd#def-constant-wrt-vector) for the third,
 
 $$
 \ba
 \deriv{\vx} L(\vx, \vlagmult)
-&= \tfrac{1}{2}\,\deriv{\vx} \paren{\tp{\vx} \matr{S} \vx} + \deriv{\vx} \paren{\tp{(\matr{A} \vlagmult)} \vx} - \deriv{\vx} \paren{\tp{\vlagmult} \vecf{b}}
+&= \tfrac{1}{2}\,\deriv{\vx} \paren{\qform{\matr{S}}{\vx}} + \deriv{\vx} \paren{\tp{(\matr{A} \vlagmult)} \vx} - \deriv{\vx} \paren{\tp{\vlagmult} \vecf{b}}
 && \text{(sum and constant multiple)}
 \\
 &= \tfrac{1}{2} \paren{2 \matr{S} \vx} + \matr{A} \vlagmult - \vzero_{p \times 1}

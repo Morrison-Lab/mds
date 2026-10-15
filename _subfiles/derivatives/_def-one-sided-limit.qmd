@@ -1,20 +1,34 @@
+:::{#def-right-hand-limit}
+#### Right-hand limit
+
+Let $f$ be a function and $L$ a real number.
+The **right-hand limit** of $f$ at $c$ is $L$,
+written $\lim_{x \to c^+} f(x) = L$,
+if for every $\tolout > 0$ there is a $\tolin > 0$ such that
+$\abs{f(x) - L} < \tolout$ for every $x$ with $c < x < c + \tolin$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-left-hand-limit}
+#### Left-hand limit
+
+Let $f$ be a function and $L$ a real number.
+The **left-hand limit** of $f$ at $c$ is $L$,
+written $\lim_{x \to c^-} f(x) = L$,
+if for every $\tolout > 0$ there is a $\tolin > 0$ such that
+$\abs{f(x) - L} < \tolout$ for every $x$ with $c - \tolin < x < c$.
+
+:::
+
+{{< slidebreak >}}
+
 :::{#def-one-sided-limit}
 #### One-sided limits
 
-Let $f$ be a function and $L$ a real number.
-
-- The **right-hand limit** of $f$ at $c$ is $L$,
-  written $\lim_{x \to c^+} f(x) = L$,
-  if for every $\tolout > 0$ there is a $\tolin > 0$ such that
-  $\abs{f(x) - L} < \tolout$ for every $x$ with $c < x < c + \tolin$.
-- The **left-hand limit** of $f$ at $c$ is $L$,
-  written $\lim_{x \to c^-} f(x) = L$,
-  if for every $\tolout > 0$ there is a $\tolin > 0$ such that
-  $\abs{f(x) - L} < \tolout$ for every $x$ with $c - \tolin < x < c$.
-
-These are the **one-sided limits** of $f$ at $c$.
-The limit $\lim_{x \to c} f(x)$ (@def-limit) exists
-exactly when both one-sided limits exist and are equal,
-and then all three are equal.
+Let $f$ be a function.
+The right-hand limit (@def-right-hand-limit) and the left-hand limit (@def-left-hand-limit) of $f$ at $c$
+are the **one-sided limits** of $f$ at $c$.
 
 :::

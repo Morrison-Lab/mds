@@ -19,9 +19,6 @@ $$
 
 and $\lebesgue(I) \eqdef \infty$ for each unbounded interval $I$.
 
-**Lebesgue measure on an interval** $I$, such as $[0, 1]$,
-is $\lebesgue$ applied only to the Borel sets that are subsets of $I$.
-
 :::
 
 {{< slidebreak >}}

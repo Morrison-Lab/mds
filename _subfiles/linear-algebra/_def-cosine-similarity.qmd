@@ -2,10 +2,10 @@
 #### Cosine similarity
 
 The **cosine similarity** between two nonzero vectors $\vx, \vy \in \reals^p$ is
-the cosine of the angle between them (@def-angle):
+their dot product divided by the product of their lengths:
 
 $$
-\operatorname{cossim}(\vx, \vy) \eqdef \frac{\vx \cdot \vy}{\norm{\vx}\,\norm{\vy}}.
+\cossim(\vx, \vy) \eqdef \frac{\vx \cdot \vy}{\norm{\vx}\,\norm{\vy}}.
 $$
 
 :::
@@ -21,7 +21,7 @@ For vectors in $\reals^2$:
 
   $$
   \begin{aligned}
-  \operatorname{cossim}(\vx, \vy) &= \frac{2 + 8}{\sqrt{5}\,\sqrt{20}} \\
+  \cossim(\vx, \vy) &= \frac{2 + 8}{\sqrt{5}\,\sqrt{20}} \\
   &= \frac{10}{10} \\
   &= 1.
   \end{aligned}
@@ -31,7 +31,7 @@ For vectors in $\reals^2$:
 
   $$
   \begin{aligned}
-  \operatorname{cossim}(\vx, \vy) &= \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} \\
+  \cossim(\vx, \vy) &= \frac{-2 + 2}{\sqrt{5}\,\sqrt{5}} \\
   &= \frac{0}{5} \\
   &= 0.
   \end{aligned}
@@ -41,12 +41,12 @@ For vectors in $\reals^2$:
 
   $$
   \begin{aligned}
-  \operatorname{cossim}(\vx, \vy) &= \frac{1 \cd 1 + 0 \cd 1}{1 \cd \sqrt{2}} \\
+  \cossim(\vx, \vy) &= \frac{1 \cd 1 + 0 \cd 1}{1 \cd \sqrt{2}} \\
   &= \frac{1}{\sqrt{2}}.
   \end{aligned}
   $$
 
 When both vectors have unit Euclidean norm ($\norm{\vx} = 1$ and $\norm{\vy} = 1$),
-cosine similarity equals their inner product: $\operatorname{cossim}(\vx, \vy) = \iprod{\vx}{\vy}$.
+cosine similarity equals their inner product: $\cossim(\vx, \vy) = \iprod{\vx}{\vy}$.
 
 :::

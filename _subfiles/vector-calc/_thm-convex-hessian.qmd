@@ -2,7 +2,7 @@
 #### Second-derivative test for convexity
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)).
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)).
 
 1. If $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite) for every $\vx$,
    then $f$ is [convex](algebra.qmd#def-convex-function).
@@ -40,7 +40,7 @@ and $f$ is strictly convex by the last sentence of @thm-convex-first-order.
 :::{#exm-convex-hessian}
 #### Using the Hessian to show convexity
 
-- For a symmetric positive semidefinite $\matr{A}$, $f(\vx) = \tp{\vx} \matr{A} \vx$
+- For a symmetric positive semidefinite $\matr{A}$, $f(\vx) = \qform{\matr{A}}{\vx}$
   has Hessian $2 \matr{A}$ ([Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic)),
   which is positive semidefinite because $\tp{\vecf{h}} (2 \matr{A}) \vecf{h} = 2\,\tp{\vecf{h}} \matr{A} \vecf{h} \ge 0$;
   so $f$ is convex.

@@ -15,7 +15,14 @@ f(\vx)
 \end{aligned}
 $$
 
-The vector $\vec{b}$ is called the **offset** of $f$
+:::
+
+{{< slidebreak >}}
+
+:::{#def-affine-offset}
+#### Offset (intercept, bias) of an affine map
+
+In @def-affine-map, the vector $\vec{b}$ is called the **offset** of $f$
 (statistics also calls it the **intercept**, and machine learning the **bias**).
 
 :::

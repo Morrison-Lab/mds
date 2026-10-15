@@ -1,0 +1,7 @@
+:::{#rem-absolute-value-distance}
+#### Absolute value as distance
+
+For real numbers $a$ and $b$,
+$\abs{a - b}$ is the distance between $a$ and $b$ on the number line.
+
+:::

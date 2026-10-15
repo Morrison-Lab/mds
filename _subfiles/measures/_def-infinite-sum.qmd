@@ -9,9 +9,9 @@ $\sumto{i}{\infty} a_i$ is the limit of the partial sums:
 $$\sumto{i}{\infty} a_i \eqdef \lim_{n \to \infty} s_n$$
 
 Here the limit is a real number
-when the partial sums are real numbers that [converge](algebra.qmd#def-sequence-limit) to it,
+when the partial sums are real numbers that [converge](algebra.qmd#def-convergent-sequence) to it,
 and it is $\infty$
-when the partial sums [diverge to $\infty$](algebra.qmd#def-sequence-limit)
+when the partial sums [diverge to $\infty$](algebra.qmd#def-diverges-to-infinity)
 or some partial sum is $\infty$;
 @lem-nonneg-series, next, shows that one of these always happens.
 Sums with other index ranges, such as $\sum_{k=0}^{\infty} a_k$,

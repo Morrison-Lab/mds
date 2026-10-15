@@ -2,9 +2,9 @@ Before stating the Fundamental Theorem of Calculus, we record two
 prerequisite results.
 The usual statement of the Fundamental Theorem of Calculus
 assumes that the integrand $f$ is continuous on $[a, b]$;
-continuity is [sufficient](proof-writing.qmd#def-necessary-sufficient) there, though not necessary.
+continuity is [sufficient](proof-writing.qmd#def-sufficient-condition) there, though not necessary.
 The two results are
 "differentiability implies continuity",
 which says where continuity comes from,
 and "continuity implies integrability",
-which says what continuity buys us.
+which says what continuity gives us.

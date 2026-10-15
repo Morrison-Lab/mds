@@ -58,6 +58,14 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_def-power-integer.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-power-real-exponents.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/algebra/_def-square-root.qmd >}}
 
 {{< slidebreak >}}
@@ -71,6 +79,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_exm-absolute-value.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-absolute-value-distance.qmd >}}
 
 ## Minimum, maximum, argmin and argmax {#sec-min-max}
 

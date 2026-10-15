@@ -1,5 +1,5 @@
 :::{#def-second-partial-derivative}
-#### Second partial derivative and mixed partial derivative
+#### Second partial derivative
 
 Let $f$ be a scalar-valued function of a $p \times 1$ vector $\vx$,
 and let $i, j \in \cb{1, \ldots, p}$.
@@ -13,7 +13,6 @@ $$
 $$
 
 the partial derivative with respect to $x_i$ of the function $\deriv{x_j} f$, when it exists.
-When $i \ne j$, it is a **mixed partial derivative**.
 
 :::
 

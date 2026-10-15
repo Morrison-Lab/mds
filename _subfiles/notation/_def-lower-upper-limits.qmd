@@ -1,14 +1,34 @@
 :::{#def-lower-upper-limits}
-#### Lower and upper limits of a sum or integral
+#### Lower limit of a sum or integral
 
 In a [sum](algebra.qmd#def-summation) $\sum_{i=m}^{n} a_i$,
-the **lower limit** $m$ is the first value of the index $i$,
-and the **upper limit** $n$ is its last value.
+the **lower limit** $m$ is the first value of the index $i$.
 In an [integral](calculus.qmd#def-riemann-integral) $\int_a^b f(x)\,dx$,
-the **lower limit** $a$ is the left end of the interval of integration,
-and the **upper limit** $b$ is its right end;
-together they are the **limits of integration**.
-In both, the lower limit is written below the symbol
-and the upper limit above it.
+the **lower limit** $a$ is the left end of the interval of integration.
+In both, the lower limit is written below the symbol.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-upper-limit}
+#### Upper limit of a sum or integral
+
+In a [sum](algebra.qmd#def-summation) $\sum_{i=m}^{n} a_i$,
+the **upper limit** $n$ is the last value of the index $i$.
+In an [integral](calculus.qmd#def-riemann-integral) $\int_a^b f(x)\,dx$,
+the **upper limit** $b$ is the right end of the interval of integration.
+In both, the upper limit is written above the symbol.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-limits-of-integration}
+#### Limits of integration
+
+In an [integral](calculus.qmd#def-riemann-integral) $\int_a^b f(x)\,dx$,
+the lower limit (@def-lower-upper-limits) $a$ and the upper limit (@def-upper-limit) $b$
+together are the **limits of integration**.
 
 :::

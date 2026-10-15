@@ -11,15 +11,8 @@ $$
 The space $\mathcal{L}^p(S, \salg, \measure)$ consists of all measurable functions $f : S \to \reals$ for which $\norm{f}_p < \infty$.
 To satisfy the definiteness axiom of a [norm](linear-algebra.qmd#def-norm) ($\norm{f}_p = 0$ if and only if $f = 0$),
 functions that are equal [almost everywhere](#def-almost-everywhere) ($\measure$-a.e.) are identified into equivalence classes.
-The resulting normed vector space is the **$L^p$ space**, denoted $L^p(S, \salg, \measure)$ (or simply $L^p(\measure)$).
-
-For $p = \infty$, the **essential supremum norm** (or **$L^\infty$ norm**) is:
-
-$$
-\norm{f}_\infty \eqdef \inf \cb{ C \ge 0 : \measure(\cb{s \in S : \abs{f(s)} > C}) = 0 }.
-$$
-
-The space $L^\infty(S, \salg, \measure)$ consists of equivalence classes of essentially bounded measurable functions.
+The resulting normed vector space is the **$L^p$ space**, denoted $L^p(S, \salg, \measure)$ (or simply **$L^p(\measure)$**).
+The case $p = \infty$ is defined separately, in @def-linf-space.
 
 :::
 

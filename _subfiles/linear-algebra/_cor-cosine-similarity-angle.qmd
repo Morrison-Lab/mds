@@ -1,0 +1,18 @@
+{{< slidebreak >}}
+
+:::{#cor-cosine-similarity-angle}
+#### Cosine similarity is the cosine of the angle
+
+For nonzero vectors $\vx, \vy \in \reals^p$ with angle $\angpar$ between them (@def-angle),
+
+$$
+\cossim(\vx, \vy) = \cos\angpar.
+$$
+
+:::
+
+::: proof
+
+The ratio that @def-angle sets equal to $\cos\angpar$ is the ratio that @def-cosine-similarity defines as $\cossim(\vx, \vy)$.
+
+:::

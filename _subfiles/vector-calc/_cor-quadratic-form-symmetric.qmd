@@ -1,0 +1,19 @@
+{{< slidebreak >}}
+
+:::{#cor-quadratic-form-symmetric}
+
+#### Derivative of a quadratic form with a symmetric matrix
+
+If, in addition, $\matr{S}$ is symmetric (and, as in @thm-quadratic-form, $p \times p$ and constant with respect to $\vcoef$), then
+
+$$
+\underbrace{\deriv{\vcoef} (\qform{\matr{S}}{\vcoef})}_{p \times 1} = \underbrace{2 \matr{S} \vcoef}_{p \times 1}.
+$$
+
+:::
+
+::: proof
+
+If $\matr{S} = \tp{\matr{S}}$, then $\matr{S} + \tp{\matr{S}} = 2\matr{S}$, so @thm-quadratic-form gives $\deriv{\vcoef}(\qform{\matr{S}}{\vcoef}) = 2\matr{S}\vcoef$.
+
+:::

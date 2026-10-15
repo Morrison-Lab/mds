@@ -1,5 +1,5 @@
-Here the objective (@def-minimization-problem) is a quadratic $\tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ with $\matr{S}$ positive definite,
-and the constraints (@def-feasible-set) are $m$ linear equations $\tp{\matr{A}} \vx = \vecf{b}$,
+Here the objective (@def-objective-function) is a quadratic $\tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ with $\matr{S}$ positive definite,
+and the constraints (@def-constraints) are $m$ linear equations $\tp{\matr{A}} \vx = \vecf{b}$,
 where $\matr{A}$ is a $p \times m$ matrix and $\vecf{b} \in \reals^m$.
 The only stationary point of the objective alone (@def-stationary-point) is $\vzero_{p \times 1}$
 (its gradient is $\matr{S} \vx$, and $\matr{S}$ is invertible), which may not satisfy the constraints.

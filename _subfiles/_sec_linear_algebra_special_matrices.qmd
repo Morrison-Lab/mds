@@ -72,6 +72,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-additive.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-symmetric-part.qmd >}}
 
 {{< slidebreak >}}
@@ -148,6 +152,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_def-paraboloid.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-matrix-induced-inner-product.qmd >}}
 
 {{< slidebreak >}}
@@ -161,6 +169,14 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/linear-algebra/_exm-matrix-induced-inner-product-axioms.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_cor-pd-transpose-product.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-whitening-inner-product.qmd >}}
 
 {{< slidebreak >}}
 

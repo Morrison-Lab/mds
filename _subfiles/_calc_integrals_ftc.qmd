@@ -6,6 +6,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/integrals-ftc/_rem-accumulation-function-dummy-variable.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/integrals-ftc/_thm-ftc.qmd >}}
 
 {{< slidebreak >}}
@@ -19,6 +23,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/integrals-ftc/_exm-evaluation-bracket.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/integrals-ftc/_rem-evaluation-bracket-ftc.qmd >}}
 
 {{< slidebreak >}}
 
@@ -71,6 +79,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-int-uniform-convolution.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-int-uniform-convolution.qmd >}}
 
 {{< slidebreak >}}
 

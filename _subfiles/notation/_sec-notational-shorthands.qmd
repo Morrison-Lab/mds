@@ -17,7 +17,16 @@ A **notational shorthand** is a way of writing an expression
 that leaves part of the expression out,
 such as the set a sum runs over or the limits of an integral,
 and relies on the reader to supply the missing part from context.
-The expression with every part written out is its **full form**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-full-form}
+#### Full form
+
+The **full form** of a notational shorthand (@def-notational-shorthand)
+is the expression with every part written out.
 
 :::
 

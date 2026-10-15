@@ -1,0 +1,7 @@
+:::{#rem-accumulation-function-dummy-variable}
+#### Why the integration variable is called $t$
+
+The letter $t$ inside the integral is a placeholder,
+renamed from $x$ so that $x$ can serve as the [upper limit](notation.qmd#def-upper-limit).
+
+:::

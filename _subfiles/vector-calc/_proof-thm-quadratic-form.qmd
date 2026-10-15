@@ -1,11 +1,11 @@
 ::: proof
 
-Expanding entry-wise, $\tp{\vcoef} \matr{S} \vcoef = \sumjp \sumto{k}{p} s_{jk} \coef{j} \coef{k}$.
+Expanding entry-wise, $\qform{\matr{S}}{\vcoef} = \sumjp \sumto{k}{p} s_{jk} \coef{j} \coef{k}$.
 Differentiating component-wise with respect to $\coef{i}$ for $i = 1, \ldots, p$:
 
 $$
 \ba
-\sb{\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef)}_i
+\sb{\deriv{\vcoef}(\qform{\matr{S}}{\vcoef})}_i
 &= \deriv{\coef{i}} \sumjp \sumto{k}{p} s_{jk} \coef{j} \coef{k}
 && \text{(expand quadratic form)} \\
 &= \sumto{k}{p} s_{ik} \coef{k} + \sumjp s_{ji} \coef{j}
@@ -16,7 +16,5 @@ $$
 && \text{(linearity of matrix multiplication)}
 \ea
 $$
-
-When $\matr{S}$ is symmetric ($\matr{S} = \tp{\matr{S}}$), $\matr{S} + \tp{\matr{S}} = 2\matr{S}$, so $\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef) = 2\matr{S}\vcoef$.
 
 :::

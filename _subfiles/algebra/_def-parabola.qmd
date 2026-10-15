@@ -2,6 +2,6 @@
 #### Parabola
 
 A **parabola** is the [graph](functions.qmd#def-graph)
-of a quadratic polynomial (@def-quadratic-cubic).
+of a quadratic polynomial (@def-quadratic-polynomial).
 
 :::

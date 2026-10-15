@@ -1,0 +1,91 @@
+:::{#def-paraboloid}
+#### Paraboloid
+
+A **paraboloid** in $\reals^{p+1}$ is the graph
+$\set{(\vx, f(\vx)) \mid \vx \in \reals^p}$
+of a function
+
+$$
+f(\vx) = \qform{\matr{S}}{\vx} + \dprod{\vecf{b}}{\vx} + c,
+$$
+
+where $\matr{S}$ is a nonzero symmetric $p \times p$ matrix
+(@def-symmetric-matrix),
+$\vecf{b} \in \reals^p$,
+and $c \in \reals$.
+The first term is a quadratic form (@def-quadratic-form).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-elliptic-paraboloid}
+#### Elliptic paraboloid
+
+The paraboloid of @def-paraboloid is **elliptic** if $\matr{S}$ is positive definite
+(@def-positive-definite);
+it is then a bowl that opens upward.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-paraboloid}
+#### A bowl with its lowest point at the origin
+
+Take $p = 2$, $\matr{S} = \matr{I}_2$, $\vecf{b} = \vzero_{2 \times 1}$ and $c = 0$.
+Then $\matr{S}$ is positive definite (@exm-positive-definite),
+so the graph of
+
+$$
+\begin{aligned}
+f(\vx) &= \qform{\matr{I}_2}{\vx} \\
+&= x_1^2 + x_2^2
+\end{aligned}
+$$
+
+is an elliptic paraboloid.
+At $\vx = \vzero$, $f(\vx) = 0$;
+at $\vx = (1, 1)$, $f(\vx) = 2$;
+and $f(\vx) > 0$ at every $\vx \neq \vzero$,
+so the origin is the only lowest point of the bowl.
+@fig-paraboloid shows the surface.
+
+:::{#fig-paraboloid}
+
+```{r}
+#| code-fold: true
+#| message: false
+#| echo: !expr knitr::is_html_output()
+#| eval: !expr knitr::is_html_output()
+
+axis_values <- seq(-2, 2, length.out = 41)
+height <- outer(axis_values, axis_values, function(x1, x2) x1^2 + x2^2)
+
+plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
+  plotly::add_surface(showscale = FALSE) |>
+  plotly::layout(scene = list(
+    xaxis = list(title = "x1"),
+    yaxis = list(title = "x2"),
+    zaxis = list(title = "f(x)")
+  ))
+```
+
+```{r}
+#| echo: false
+#| eval: !expr isFALSE(knitr::is_html_output())
+#| results: asis
+
+cat(
+  "*(This 3D surface is interactive; see the HTML or slide version",
+  "of this page to view it.)*"
+)
+```
+
+The surface $z = x_1^2 + x_2^2$ over $[-2, 2]^2$:
+a bowl that opens upward, with its lowest point above the origin.
+Horizontal slices of the bowl are circles around the origin.
+
+:::
+
+:::

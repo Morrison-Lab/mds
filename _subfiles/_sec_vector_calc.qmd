@@ -22,6 +22,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-pderiv-normal-parameters.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-exp-quadratic.qmd >}}
 
 {{< slidebreak >}}
@@ -150,6 +154,8 @@
 
 {{< include mds/_subfiles/vector-calc/_proof-thm-quadratic-form.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_cor-quadratic-form-symmetric.qmd >}}
+
 {{< include mds/_subfiles/vector-calc/_rem-quadratic-form-scalar.qmd >}}
 
 {{< slidebreak >}}
@@ -200,6 +206,10 @@
 
 {{< include mds/_subfiles/vector-calc/_sol-gradient-of-linear.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-gradient-of-linear.qmd >}}
+
 
 ## Second partial derivatives and the Hessian {#sec-second-derivatives}
 
@@ -208,6 +218,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/vector-calc/_def-second-partial-derivative.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_def-mixed-partial-derivative.qmd >}}
 
 {{< slidebreak >}}
 

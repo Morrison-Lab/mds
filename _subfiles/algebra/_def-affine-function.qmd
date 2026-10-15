@@ -6,7 +6,24 @@ is **affine** if there are numbers $m$ and $b$ such that
 
 $$f(x) = m x + b \quad \text{for all } x \in \reals$$
 
-In this formula, $m$ is called the **slope** of $f$
-and $b$ its **intercept**.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-slope}
+#### Slope
+
+In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
+$m$ is called the **slope** of $f$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-intercept}
+#### Intercept
+
+In the formula $f(x) = m x + b$ for an affine function $f$ (@def-affine-function),
+$b$ is called the **intercept** of $f$.
 
 :::

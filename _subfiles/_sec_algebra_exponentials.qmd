@@ -60,7 +60,7 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_exm-sequence-limit.qmd >}}
+{{< include mds/_subfiles/algebra/_def-diverges-to-infinity.qmd >}}
 
 ## Exponentials and Logarithms
 
@@ -153,6 +153,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_def-contour-line.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_rem-contour-line-surface.qmd >}}
 
 {{< slidebreak >}}
 

@@ -1,0 +1,6 @@
+:::{#def-maclaurin-polynomial}
+#### Maclaurin polynomial
+
+When $x_0 = 0$, the Taylor polynomial $P_n(x)$ (@def-taylor-polynomial) is called the **Maclaurin polynomial**.
+
+:::

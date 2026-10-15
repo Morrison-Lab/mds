@@ -3,7 +3,7 @@
 
 Let $A \subseteq \reals$ be nonempty.
 
-- If $A$ is [bounded above](#def-bounded),
+- If $A$ is [bounded above](#def-bounded-above),
   the set of upper bounds of $A$ has a [minimum](#def-minimum).
 - If $A$ is bounded below,
   the set of lower bounds of $A$ has a [maximum](#def-maximum).

@@ -16,6 +16,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_rem-one-sided-limit-and-limit.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-limits.qmd >}}
 
 {{< slidebreak >}}
@@ -243,7 +247,15 @@ $$(f(g(x)))' = g'(x) f'(g(x))$$
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-deriv-gaussian-kernel.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-deriv-second-gaussian-kernel.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-deriv-second-gaussian-kernel.qmd >}}
 
 {{< slidebreak >}}
 
@@ -429,6 +441,14 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary 
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/derivatives/_def-maclaurin-polynomial.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/derivatives/_def-taylor-series.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-taylor-series.qmd >}}
 
 {{< slidebreak >}}
@@ -469,6 +489,10 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary 
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-taylor-normal-density.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-taylor-sqrt.qmd >}}
 
 {{< slidebreak >}}
@@ -485,7 +509,15 @@ If $f'(c) = 0$, then $c$ is a **flat point** of $f$ (also called a **stationary 
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-taylor-log-one-plus-x.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-taylor-log-one-minus-x.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-taylor-log-one-minus-x.qmd >}}
 
 {{< slidebreak >}}
 

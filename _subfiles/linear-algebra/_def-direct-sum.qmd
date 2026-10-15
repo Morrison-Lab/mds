@@ -1,5 +1,5 @@
-:::{#def-direct-sum}
-#### Direct sum
+:::{#def-complementary-subspaces}
+#### Complementary subspaces
 
 Let $\mathcal{S}_1$, $\mathcal{S}_2$ and $\mathcal{V}$ be subspaces of $\reals^p$.
 $\mathcal{S}_1$ and $\mathcal{S}_2$ are **complementary** in $\mathcal{V}$ if
@@ -11,7 +11,16 @@ $$
 $$
 
 (@def-subspace-sum).
-Then $\mathcal{V}$ is the **direct sum** of $\mathcal{S}_1$ and $\mathcal{S}_2$,
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-direct-sum}
+#### Direct sum
+
+If $\mathcal{S}_1$ and $\mathcal{S}_2$ are complementary in $\mathcal{V}$ (@def-complementary-subspaces),
+then $\mathcal{V}$ is the **direct sum** of $\mathcal{S}_1$ and $\mathcal{S}_2$,
 written $\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2$.
 
 :::
