@@ -1,12 +1,12 @@
-{{< include mds/_subfiles/notation/_def-lower-upper-limits.qmd >}}
+{{< include mds/_subfiles/algebra/_def-lower-upper-limits.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_exm-lower-upper-limits.qmd >}}
+{{< include mds/_subfiles/algebra/_exm-lower-upper-limits.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_rem-limits-two-meanings.qmd >}}
+{{< include mds/_subfiles/algebra/_rem-limits-two-meanings.qmd >}}
 
 {{< slidebreak >}}
 
