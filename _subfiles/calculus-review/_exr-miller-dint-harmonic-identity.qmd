@@ -1,17 +1,14 @@
 ::: {#exr-miller-dint-harmonic-identity}
-#### Harmonic numbers via double integrals
+#### A double integral with a parameter
 
 Adapted from @problifesavercalc, Question 1.1.54.
 
-Prove that for every positive integer $n$:
+Evaluate the double integral
 
-$$
-\begin{aligned}
-\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy
-&= \sumto{k}{n} \frac{1}{k} \\
-&= 1 + \frac{1}{2} + \dots + \frac{1}{n}
-\end{aligned}
-$$
+$$\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy$$
+
+for every positive integer $n$,
+and write the result as an expression in $n$.
 :::
 
 ::: {#sol-miller-dint-harmonic-identity}
