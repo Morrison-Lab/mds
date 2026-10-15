@@ -20,6 +20,9 @@ or more fragments, which are what a host site includes:
 | Page                                   | Fragment(s) to include                                                                                                 |
 |----------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | [Notation](notation.qmd)               | `mds/_notation.qmd`                                                                                                    |
+| [Sets](sets.qmd) | `mds/_sets.qmd` |
+| [Functions](functions.qmd) | `mds/_functions.qmd` |
+| [Expressions and Algorithms](expressions-algorithms.qmd) | `mds/_expressions-algorithms.qmd` |
 | [Sets and Functions](sets-functions.qmd) | `mds/_sets-functions.qmd` |
 | [Algebra](algebra.qmd)                 | `mds/_algebra.qmd`                                                                                                     |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
@@ -29,8 +32,9 @@ or more fragments, which are what a host site includes:
 | [Optimization](optimization.qmd)       | `mds/_subfiles/_sec_optimization.qmd`                                                                                  |
 | [Proof Writing](proof-writing.qmd)     | `mds/_proof-writing.qmd`                                                                                               |
 
-`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, and `_measures.qmd` include
-`latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must
+`mds/_sets-functions.qmd` still includes the three fragments of the old Sets and Functions page,
+in order. `_notation.qmd`, `_sets.qmd`, `_functions.qmd`, `_expressions-algorithms.qmd`,
+`_algebra.qmd`, and `_measures.qmd` include `latex-macros/macros.qmd` themselves; a host page that includes any of the other fragments must
 include `latex-macros/macros.qmd` first, as the pages of this site do.
 
 ## Using these notes in another site

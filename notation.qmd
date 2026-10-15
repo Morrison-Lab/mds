@@ -49,7 +49,7 @@ For the logical symbols and proof conventions used in these notes
   with propositional logic (the logic of connectives)
   and first-order logic (which adds quantifiers).
 
-For set and function notation, see the [Sets and Functions](sets-functions.qmd) page.
+For set and function notation, see the [Sets](sets.qmd), [Functions](functions.qmd), and [Expressions and Algorithms](expressions-algorithms.qmd) pages.
 
 ## References {.unnumbered}
 

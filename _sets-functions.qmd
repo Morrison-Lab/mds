@@ -1,0 +1,14 @@
+::: remark
+
+Sets, functions, and expressions and algorithms now have a fragment each.
+This file keeps the old path working for host sites:
+it includes the three fragments, in the order of the old page.
+A host site may include the fragments directly instead.
+
+:::
+
+{{< include mds/_sets.qmd >}}
+
+{{< include mds/_functions.qmd >}}
+
+{{< include mds/_expressions-algorithms.qmd >}}
