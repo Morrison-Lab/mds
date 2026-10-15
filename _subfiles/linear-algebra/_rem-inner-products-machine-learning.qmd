@@ -13,8 +13,8 @@ tailors geometric notions of distance, angle, and projection to the structure of
    $d_{\matr{\covmat}^{-1}}(\vx, \vy) = \sqrt{\tp{(\vx - \vy)}\matr{\covmat}^{-1}(\vx - \vy)}$
    measures statistical distance normalized by variance along each principal direction.
    Factoring $\matr{\covmat}^{-1} = \tp{\matr{W}}\matr{W}$ (via Cholesky or spectral decomposition),
-   this inner product corresponds to the Euclidean dot product of whitened coordinates $\vecf{z} = \matr{W}\vx$:
-   $\iprod{\vx}{\vy}_{\matr{\covmat}^{-1}} = (\matr{W}\vx) \cdot (\matr{W}\vy)$.
+   this inner product corresponds to the Euclidean dot product of whitened coordinates $\vecf{z} = \matr{W}\vx$
+   (@thm-whitening-inner-product).
 
 2. **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**:
    Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products $\iprod{\vx_i}{\vx_j}$.
@@ -32,7 +32,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
    \cossim(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
    $$
    When embedding vectors are normalized to unit Euclidean norm ($\norm{\vx} = 1$ and $\norm{\vy} = 1$),
-   cosine similarity equals the inner product $\iprod{\vx}{\vy}$.
+   cosine similarity equals the inner product $\iprod{\vx}{\vy}$ (@cor-cosine-similarity-unit-vectors).
    Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products $\dprod{\vecf{q}}{\vecf{k}} / \sqrt{d_k}$.
 
 4. **Weighted and generalized least squares**:
