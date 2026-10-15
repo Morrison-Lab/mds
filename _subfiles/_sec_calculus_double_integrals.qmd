@@ -40,6 +40,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-dint-separable.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-dint-square-root-term.qmd >}}
 
 {{< slidebreak >}}
@@ -49,6 +53,10 @@
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/calculus-review/_exr-miller-dint-harmonic-identity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/calculus-review/_thm-dint-harmonic-identity.qmd >}}
 
 {{< slidebreak >}}
 

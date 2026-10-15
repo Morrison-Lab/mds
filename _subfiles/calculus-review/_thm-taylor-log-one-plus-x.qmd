@@ -1,0 +1,14 @@
+:::{#thm-taylor-log-one-plus-x}
+#### Maclaurin polynomial of $\log(1 + x)$
+
+The Maclaurin polynomial (@def-maclaurin-polynomial) of degree 3 of $f(x) = \log(1 + x)$ is
+
+$$P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-taylor-log-one-plus-x, worked in @sol-miller-taylor-log-one-plus-x.
+
+:::

@@ -1,0 +1,20 @@
+:::{#thm-exp-vs-mult}
+#### When exponentiation equals multiplication
+
+Let $b, c \in \reals$, where $b^c$ is defined
+(for $b < 0$, only integer $c$ is allowed; @def-power-nonpositive-base).
+Then $b^c = bc$ if and only if one of the following holds:
+
+1. $c = 1$;
+2. $b = 0$ and $c > 0$;
+3. $b > 0$, $c > 0$, $c \neq 1$, and $b = \expf{\frac{\logf{c}}{c-1}}$;
+4. $b < 0$, $c$ is an odd integer with $c \ge 3$, and $b = -c^{1/(c-1)}$;
+5. $b < 0$, $c$ is an even integer with $c \le -2$, and $b = -(-c)^{1/(c-1)}$.
+
+:::
+
+::: proof
+
+This is the solution to @exr-exp-vs-mult, worked in @sol-exp-vs-mult.
+
+:::
