@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 01:35:55 (PDT)
+Last modified: 2026-10-15 08:34:32 (PDT)
 
 ## 1 Equalities
 
@@ -232,8 +232,8 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 > **Exercise 2 (A dip that is not the bottom)** Let \\f(x) = x^3 - 3x\\ for \\x \in \mathbb{R}\\.
 >
-> 1.  Show that \\f(x) - f(1) = (x - 1)^2 (x + 2)\\.
-> 2.  Use part 1 to show that \\f(x) \ge f(1)\\ for every \\x\\ in the interval \\(0, 2)\\.
+> 1.  Factor \\f(x) - f(1)\\ completely.
+> 2.  Use part 1 to compare \\f(x)\\ with \\f(1)\\ for every \\x\\ in the interval \\(0, 2)\\. Is \\f(x)\\ larger than, smaller than, or equal to \\f(1)\\, and for which \\x\\?
 > 3.  Compute \\f(-3)\\. Is \\f(1)\\ the smallest value \\f\\ takes on all of \\\mathbb{R}\\?
 > 4.  Does \\f\\ take a smallest value anywhere on \\\mathbb{R}\\?
 
@@ -249,7 +249,7 @@ Mastery of [Elementary Algebra](https://en.wikipedia.org/wiki/Elementary_algebra
 >
 >     \\ \begin{aligned} f(x) - f(1) &= x^3 - 3x + 2 \\ &= (x - 1)(x^2 + x - 2) \\ &= (x - 1)(x - 1)(x + 2) \\ &= (x - 1)^2 (x + 2). \end{aligned} \\
 >
-> 2.  For \\x \in (0, 2)\\, \\(x - 1)^2 \ge 0\\ and \\x + 2 \> 0\\, so their product is at least \\0\\. By part 1, \\f(x) - f(1) \ge 0\\, that is, \\f(x) \ge f(1)\\.
+> 2.  For \\x \in (0, 2)\\, \\(x - 1)^2 \ge 0\\ and \\x + 2 \> 0\\, so their product is at least \\0\\. By part 1, \\f(x) - f(1) \ge 0\\, that is, \\f(x) \ge f(1)\\. So \\f(x)\\ is never smaller than \\f(1)\\ on \\(0, 2)\\. It equals \\f(1)\\ only when \\(x - 1)^2 = 0\\, that is, only at \\x = 1\\, and it is larger than \\f(1)\\ at every other \\x \in (0, 2)\\.
 >
 > 3.  \\ \begin{aligned} f(-3) &= -27 + 9 \\ &= -18. \end{aligned} \\
 >
