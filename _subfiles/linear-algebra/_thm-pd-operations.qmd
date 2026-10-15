@@ -49,7 +49,7 @@ $$
 &= \tp{\vx}\,(\combwt_1 \matr{A}_1)\,\vx + \tp{\vx}\,(\combwt_2 \matr{A}_2)\,\vx
 && \text{(@thm-matmul-distrib, twice)}
 \\
-&= \combwt_1\,\tp{\vx} \matr{A}_1 \vx + \combwt_2\,\tp{\vx} \matr{A}_2 \vx
+&= \combwt_1\,\qform{\matr{A}_1}{\vx} + \combwt_2\,\qform{\matr{A}_2}{\vx}
 && \text{(@thm-scalar-matmul)}
 \\
 &> 0.

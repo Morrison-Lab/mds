@@ -1,0 +1,60 @@
+:::{#thm-scalar-transpose}
+#### A $1 \times 1$ product equals its own transpose
+
+If $\vecf{u}$ and $\vecf{v}$ are vectors of length $p$ and $\matr{M}$ is a $p \times p$ matrix, then $\tp{\vecf{u}}\matr{M}\vecf{v}$ is a number, and
+
+$$
+\tp{\vecf{u}}\matr{M}\vecf{v}
+= \tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u}.
+$$
+
+In particular, $\tp{\vecf{u}}\vecf{v} = \tp{\vecf{v}}\vecf{u}$.
+
+:::
+
+::: proof
+
+The product $\tp{\vecf{u}}\matr{M}\vecf{v}$ is a $(1 \times p)(p \times p)(p \times 1)$ product, so it is a $1 \times 1$ matrix.
+The transpose of a $1 \times 1$ matrix is itself, so
+
+$$
+\ba
+\tp{\vecf{u}}\matr{M}\vecf{v}
+&= \tp{\paren{\tp{\vecf{u}}\matr{M}\vecf{v}}}
+&& \text{(a } 1 \times 1 \text{ matrix equals its transpose)}
+\\
+&= \tp{\vecf{v}}\,\tp{\matr{M}}\,\tp{\paren{\tp{\vecf{u}}}}
+&& \text{(transpose of a product, twice)}
+\\
+&= \tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u}
+&& \text{(transposing twice changes nothing)}
+\ea
+$$
+
+The transpose step is @thm-transpose-product.
+Taking $\matr{M} = \matr{I}$ gives the last statement.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#exm-scalar-transpose}
+#### Two ways to write the same number
+
+Take $\vecf{u} = (1, 2)$, $\vecf{v} = (3, -1)$ and $\matr{M} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}$.
+Then $\matr{M}\vecf{v} = (1, -3)$, so
+
+$$
+\tp{\vecf{u}}\matr{M}\vecf{v} = 1 \cdot 1 + 2 \cdot (-3) = -5.
+$$
+
+Also $\tp{\matr{M}} = \begin{bmatrix} 1 & 0 \\ 2 & 3 \end{bmatrix}$ and $\tp{\matr{M}}\vecf{u} = (1, 8)$, so
+
+$$
+\tp{\vecf{v}}\,\tp{\matr{M}}\,\vecf{u} = 3 \cdot 1 + (-1) \cdot 8 = -5.
+$$
+
+The two products are equal, as the theorem says.
+In least squares, this is why the two cross terms of $\tp{(\mX\vcoef - \vy)}(\mX\vcoef - \vy)$ are equal and can be combined.
+
+:::

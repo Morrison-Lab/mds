@@ -6,7 +6,7 @@ and let $\matr{G} = \tp{\matr{A}} \matr{A}$ (@def-gram-matrix).
 
 1. Entry $(i, j)$ of $\matr{G}$ is $\vecf{a}_i \cdot \vecf{a}_j$.
 2. $\matr{G}$ is symmetric (@def-symmetric-matrix).
-3. $\tp{\vx} \matr{G} \vx = \norm{\matr{A} \vx}^2 \ge 0$ for every $\vx \in \reals^n$,
+3. $\qform{\matr{G}}{\vx} = \norm{\matr{A} \vx}^2 \ge 0$ for every $\vx \in \reals^n$,
    so $\matr{G}$ is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite).
 
 :::
@@ -34,7 +34,7 @@ For any $\vx$,
 
 $$
 \ba
-\tp{\vx} \matr{G} \vx
+\qform{\matr{G}}{\vx}
 &= \tp{\vx}\,\tp{\matr{A}}\,\matr{A} \vx
 && \text{(substitute } \matr{G} \text{)}
 \\
@@ -62,7 +62,7 @@ Take $\vx = (1, -1)$. Then
 
 $$
 \ba
-\tp{\vx} \matr{G} \vx
+\qform{\matr{G}}{\vx}
 &= \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 && \text{(} \matr{G} \vx = (1, -1) \text{)}
 \\

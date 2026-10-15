@@ -4,7 +4,7 @@
 If $\matr{S}$ is a $p \times p$ matrix and $\vx$ is a vector of length $p$, then
 
 $$
-\tp{\vx}\matr{S}\vx
+\qform{\matr{S}}{\vx}
 =
 \tp{\vx}\paren{\frac{1}{2}(\matr{S}+\tp{\matr{S}})}\vx.
 $$
@@ -16,13 +16,13 @@ So the value of a quadratic form depends only on the symmetric part
 
 ::: proof
 
-The quadratic form $\tp{\vx}\matr{S}\vx$ is a $1 \times 1$ matrix,
+The quadratic form $\qform{\matr{S}}{\vx}$ is a $1 \times 1$ matrix,
 so it equals its own transpose:
 
 $$
 \ba
-\tp{\vx}\matr{S}\vx
-&= \tp{\paren{\tp{\vx}\matr{S}\vx}}
+\qform{\matr{S}}{\vx}
+&= \tp{\paren{\qform{\matr{S}}{\vx}}}
 && \text{(a } 1 \times 1 \text{ matrix is symmetric)}
 \\
 &= \tp{\vx}\,\tp{\matr{S}}\,\tp{\paren{\tp{\vx}}}
@@ -33,12 +33,12 @@ $$
 \ea
 $$
 
-Averaging the two expressions for $\tp{\vx}\matr{S}\vx$:
+Averaging the two expressions for $\qform{\matr{S}}{\vx}$:
 
 $$
 \ba
-\tp{\vx}\matr{S}\vx
-&= \frac{1}{2}\paren{\tp{\vx}\matr{S}\vx + \tp{\vx}\,\tp{\matr{S}}\,\vx}
+\qform{\matr{S}}{\vx}
+&= \frac{1}{2}\paren{\qform{\matr{S}}{\vx} + \tp{\vx}\,\tp{\matr{S}}\,\vx}
 && \text{(average of two equal numbers)}
 \\
 &= \frac{1}{2}\,\tp{\vx}\paren{\matr{S} + \tp{\matr{S}}}\vx
@@ -64,7 +64,7 @@ and $\vx = (1, 1)$:
 
 $$
 \begin{aligned}
-\tp{\vx}\matr{S}\vx
+\qform{\matr{S}}{\vx}
 &= 1 + 2 + 0 + 3 \\
 &= 6 \\
 \tp{\vx}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\vx

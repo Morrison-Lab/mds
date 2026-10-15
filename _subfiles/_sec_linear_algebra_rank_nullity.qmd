@@ -8,6 +8,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-independent-null-space.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-row-null-disjoint.qmd >}}
 
 {{< slidebreak >}}

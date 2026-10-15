@@ -22,7 +22,7 @@ Then:
 
 $$
 \ba
-\tp{\vx}\matr{A}\vx
+\qform{\matr{A}}{\vx}
 &= \tp{\vx}\matr{Q}\matr{\Eigvals}\tp{\matr{Q}}\vx
 && \text{(substitute the eigendecomposition)}
 \\
@@ -44,11 +44,11 @@ $\matr{Q}\tp{\matr{Q}} = \matr{I}_p$ for an orthogonal matrix
 so $\vx = \matr{Q}\vecf{y}$.
 
 *If every $\eigval_i \ge 0$*, then every term $\eigval_i y_i^2 \ge 0$,
-so $\tp{\vx}\matr{A}\vx \ge 0$.
+so $\qform{\matr{A}}{\vx} \ge 0$.
 *If every $\eigval_i > 0$* and $\vx \neq \vzero$,
 then some $y_i \neq 0$,
 so at least one term is positive and the rest are non-negative,
-and $\tp{\vx}\matr{A}\vx > 0$.
+and $\qform{\matr{A}}{\vx} > 0$.
 
 *Conversely*, take $\vx = \vecf{q}_i$, column $i$ of $\matr{Q}$,
 which is not $\vzero$ because it has norm 1.

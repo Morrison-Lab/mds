@@ -72,6 +72,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_thm-quadratic-form-additive.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_def-symmetric-part.qmd >}}
 
 {{< slidebreak >}}

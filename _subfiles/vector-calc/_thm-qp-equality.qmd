@@ -5,7 +5,7 @@ Let $\matr{S}$ be a $p \times p$ [positive definite](linear-algebra.qmd#def-posi
 $\matr{A}$ a $p \times m$ matrix with [linearly independent](linear-algebra.qmd#def-linearly-independent) columns,
 and $\vecf{b} \in \reals^m$.
 Then the $m \times m$ matrix $\matr{M} \eqdef \tp{\matr{A}} \matr{S}^{-1} \matr{A}$ is invertible, and
-$f(\vx) = \tfrac{1}{2}\,\tp{\vx} \matr{S} \vx$ has exactly one minimizer
+$f(\vx) = \tfrac{1}{2}\,\qform{\matr{S}}{\vx}$ has exactly one minimizer
 over the $\vx \in \reals^p$ with $\tp{\matr{A}} \vx = \vecf{b}$, namely
 
 $$
