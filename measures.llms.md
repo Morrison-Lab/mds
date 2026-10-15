@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:28:32 (PDT)
+Last modified: 2026-10-15 09:23:43 (PDT)
 
 > **NOTE:**
 >
@@ -183,7 +183,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
-> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-sequence-limit) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
+> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-convergent-sequence) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
 
 > **NOTE:**
 >
@@ -202,7 +202,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 >
 > \\ \begin{aligned} s\_{n+1} &= s_n + a\_{n+1} && \text{(definition of } s\_{n+1} \text{)} \\ &\ge s_n && \text{(} a\_{n+1} \ge 0 \text{)} \end{aligned} \\
 >
-> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded), it [converges](algebra-exponentials.llms.md#def-sequence-limit) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
+> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
 
 ## 4 Additivity
 
@@ -214,7 +214,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 
 > **NOTE:**
 >
-> **Example 10 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](sets-functions.llms.md#def-finite-set)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 6](#exm-pairwise-disjoint)), and:
+> **Example 10 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](sets-functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 6](#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu(\mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\5, 6\right\\\mathclose{}) &= \mu(\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu(\mathopen{}\left\\1, 2\right\\\mathclose{}) + \mu(\mathopen{}\left\\5, 6\right\\\mathclose{}) && \text{(count each set's elements)} \end{aligned} \\
 >

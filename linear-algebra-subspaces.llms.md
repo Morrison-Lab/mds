@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:28:32 (PDT)
+Last modified: 2026-10-15 09:23:43 (PDT)
 
 ## 1 Rank
 
@@ -293,7 +293,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 > **Example 16 (The dimensions of some subspaces)**  
 >
 > - \\\dim(\mathopen{}\left\\\tilde{0}\right\\\mathclose{}) = 0\\, by the convention in [Definition 8](#def-dimension).
-> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \tilde{e}\_1 + \cdots + c_p \tilde{e}\_p = (c_1, \ldots, c_p)\\, which is \\\tilde{0}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\tilde{x} = x_1 \tilde{e}\_1 + \cdots + x_p \tilde{e}\_p\\.
+> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \tilde{e}\_1 + \cdots + c_p \tilde{e}\_p = (c_1, \ldots, c_p)\\, which is \\\tilde{0}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\tilde{x} = x_1 \tilde{e}\_1 + \cdots + x_p \tilde{e}\_p\\.
 > - The line in [Example 3](#exm-subspace) has dimension \\1\\: the single vector \\(1, 2)\\ is linearly independent and spans the line.
 > - The plane \\z = 0\\ in [Example 6](#exm-span) has dimension \\2\\, with basis \\(1, 0, 0), (0, 1, 0)\\.
 

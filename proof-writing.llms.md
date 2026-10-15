@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:28:32 (PDT)
+Last modified: 2026-10-15 09:23:43 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -107,7 +107,7 @@ We can use any of:
 
 to denote logical entailment ([Definition 6](#def-logical-entailment)). \\\Rightarrow\\ also writes the connective “implies” ([Definition 3](#def-logical-connective)); \\P\\ entails \\Q\\ exactly when \\P \Rightarrow Q\\ is true for every choice of values for the variables in \\P\\ and \\Q\\.
 
-Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-sequence-limit) results.
+Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-convergent-sequence) results.
 
 > **NOTE:**
 >
@@ -162,7 +162,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 >
 > - If \\R\\ and \\S\\ are both \\=\\, then \\a = c\\ ([equalities are transitive](algebra-basics.llms.md#thm-equal-trans)).
 > - If exactly one of \\R\\ and \\S\\ is \\=\\, replace \\b\\ by the equal expression in the other relation ([substitution](algebra-basics.llms.md#thm-substitution)). This gives the other relation between \\a\\ and \\c\\.
-> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict and non-strict inequalities](algebra-basics.llms.md#def-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
+> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict](algebra-basics.llms.md#def-strict-inequality) and [non-strict inequalities](algebra-basics.llms.md#def-non-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
 >
 > Now let \\T_j\\ be the relation named by the same rule applied to the first \\j\\ steps of the chain, with \\T_0\\ being \\=\\. We show \\E_0 \mathrel{T_j} E_j\\ by induction on \\j\\. For \\j = 0\\, \\E_0 = E_0\\. If \\E_0 \mathrel{T_j} E_j\\, then the step from \\E_j\\ to \\E\_{j+1}\\ and the fact above give \\E_0 \mathrel{T\_{j+1}} E\_{j+1}\\. At \\j = n\\, \\T_n\\ is \\=\\ when every step is \\=\\, which is part 1. It is \\\le\\ or \\=\\ when every step is \\=\\ or \\\le\\, and \\=\\ implies \\\le\\, which is part 2. It is \\\<\\ when some step is \\\<\\, which is part 3.
 >

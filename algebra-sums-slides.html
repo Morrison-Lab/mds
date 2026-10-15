@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 08:28:32 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 09:23:43 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -455,7 +455,7 @@ The [proof](proof-writing.qmd#def-proof) is the standard argument from the chord
 <section class="slide level2">
 
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^*\)</span> be a local minimizer of <span class="math inline">\(f\)</span>, so there is a <span class="math inline">\(\delta&gt; 0\)</span> with <span class="math inline">\(f(x^*) \le f(x)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span> (<a href="./algebra-basics.html#def-local-minimizer">Definition&nbsp;13 in Equalities, Inequalities and Minimizers</a>). Suppose <span class="math inline">\(x^*\)</span> is not a global minimizer (<a href="./algebra-basics.html#def-global-minimizer">Definition&nbsp;12 in Equalities, Inequalities and Minimizers</a>). Then some <span class="math inline">\(y \in \mathbb{R}^p\)</span> has <span class="math inline">\(f(y) &lt; f(x^*)\)</span>, and in particular <span class="math inline">\(y \ne x^*\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(x^*\)</span> be a local minimizer of <span class="math inline">\(f\)</span>, so there is a <span class="math inline">\(\delta&gt; 0\)</span> with <span class="math inline">\(f(x^*) \le f(x)\)</span> whenever <span class="math inline">\(\mathopen{}\left\lVert x - x^*\right\rVert\mathclose{} &lt; \delta\)</span> (<a href="./algebra-basics.html#def-local-minimizer">Definition&nbsp;17 in Equalities, Inequalities and Minimizers</a>). Suppose <span class="math inline">\(x^*\)</span> is not a global minimizer (<a href="./algebra-basics.html#def-global-minimizer">Definition&nbsp;16 in Equalities, Inequalities and Minimizers</a>). Then some <span class="math inline">\(y \in \mathbb{R}^p\)</span> has <span class="math inline">\(f(y) &lt; f(x^*)\)</span>, and in particular <span class="math inline">\(y \ne x^*\)</span>.</p>
 <p>Let <span class="math inline">\(t = \min\mathopen{}\left\{\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{}}\right\}\mathclose{}\)</span>, so <span class="math inline">\(t \in (0, 1)\)</span>, and let <span class="math inline">\(z = t y + (1 - t) x^*\)</span>. Then <span class="math inline">\(z - x^* = t (y - x^*)\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert z - x^*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^*\right\rVert\mathclose{} \le \delta/ 2 &lt; \delta\)</span>.</p>
 <p>By convexity, <span class="math display">\[
 f(z) \le t f(y) + (1 - t) f(x^*) &lt; t f(x^*) + (1 - t) f(x^*) = f(x^*),
@@ -529,13 +529,32 @@ w_1 &amp;= w_2 \\
 </section>
 <section id="infimum-and-supremum" class="slide level2" data-number="2">
 <h2><span class="header-section-number">2</span> Infimum and supremum</h2>
+<div id="def-upper-bound" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Upper bound)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A real number <span class="math inline">\(u\)</span> is an <strong>upper bound</strong> for <span class="math inline">\(A\)</span> if <span class="math inline">\(a \le u\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-lower-bound" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Lower bound)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>. A real number <span class="math inline">\(\ell\)</span> is a <strong>lower bound</strong> for <span class="math inline">\(A\)</span> if <span class="math inline">\(\ell\le a\)</span> for all <span class="math inline">\(a \in A\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-bounded-above" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Bounded above)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded above</strong> if it has an upper bound (<a href="#/def-upper-bound" class="quarto-xref">Definition&nbsp;4</a>). A real-valued <a href="./sets-functions.html#def-function">function</a> is bounded above if its <a href="./sets-functions.html#def-image">image</a> is.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-bounded-below" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Bounded below)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded below</strong> if it has a lower bound (<a href="#/def-lower-bound" class="quarto-xref">Definition&nbsp;5</a>). A real-valued <a href="./sets-functions.html#def-function">function</a> is bounded below if its <a href="./sets-functions.html#def-image">image</a> is.</p>
+</div>
+</section>
+<section class="slide level2">
+
 <div id="def-bounded" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Upper and lower bounds)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span>.</p>
-<ul>
-<li>A real number <span class="math inline">\(u\)</span> is an <strong>upper bound</strong> for <span class="math inline">\(A\)</span> if <span class="math inline">\(a \le u\)</span> for all <span class="math inline">\(a \in A\)</span>.</li>
-<li>A real number <span class="math inline">\(\ell\)</span> is a <strong>lower bound</strong> for <span class="math inline">\(A\)</span> if <span class="math inline">\(\ell\le a\)</span> for all <span class="math inline">\(a \in A\)</span>.</li>
-</ul>
-<p><span class="math inline">\(A\)</span> is <strong>bounded above</strong> if it has an upper bound, <strong>bounded below</strong> if it has a lower bound, and <strong>bounded</strong> if it is both bounded above and bounded below. A real-valued <a href="./sets-functions.html#def-function">function</a> is bounded above, bounded below, or bounded if its <a href="./sets-functions.html#def-image">image</a> is.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Bounded)</strong></span> A set <span class="math inline">\(A \subseteq \mathbb{R}\)</span> is <strong>bounded</strong> if it is both bounded above (<a href="#/def-bounded-above" class="quarto-xref">Definition&nbsp;6</a>) and bounded below (<a href="#/def-bounded-below" class="quarto-xref">Definition&nbsp;7</a>). A real-valued <a href="./sets-functions.html#def-function">function</a> is bounded if its <a href="./sets-functions.html#def-image">image</a> is.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -553,7 +572,7 @@ w_1 &amp;= w_2 \\
 <div id="thm-completeness" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 3 (Completeness of the real numbers)</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be nonempty.</p>
 <ul>
-<li>If <span class="math inline">\(A\)</span> is <a href="#/def-bounded">bounded above</a>, the set of upper bounds of <span class="math inline">\(A\)</span> has a <a href="./algebra-basics.html#def-minimum">minimum</a>.</li>
+<li>If <span class="math inline">\(A\)</span> is <a href="#/def-bounded-above">bounded above</a>, the set of upper bounds of <span class="math inline">\(A\)</span> has a <a href="./algebra-basics.html#def-minimum">minimum</a>.</li>
 <li>If <span class="math inline">\(A\)</span> is bounded below, the set of lower bounds of <span class="math inline">\(A\)</span> has a <a href="./algebra-basics.html#def-maximum">maximum</a>.</li>
 </ul>
 </div>
@@ -570,7 +589,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-infimum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Infimum (greatest lower bound))</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be nonempty and bounded below (<a href="#/def-bounded" class="quarto-xref">Definition&nbsp;4</a>). The <strong>infimum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\inf A\)</span>, is the greatest real number <span class="math inline">\(t\)</span> satisfying <span class="math inline">\(t \le a\)</span> for all <span class="math inline">\(a \in A\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 9 (Infimum (greatest lower bound))</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be nonempty and bounded below (<a href="#/def-bounded-below" class="quarto-xref">Definition&nbsp;7</a>). The <strong>infimum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\inf A\)</span>, is the greatest real number <span class="math inline">\(t\)</span> satisfying <span class="math inline">\(t \le a\)</span> for all <span class="math inline">\(a \in A\)</span>:</p>
 <p><span class="math display">\[\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\{t \in \mathbb{R}: \forall a \in A,\ t \le a\right\}\mathclose{}\]</span></p>
 <p>If <span class="math inline">\(A\)</span> is nonempty but not bounded below, we write <span class="math inline">\(\inf A = -\infty\)</span> by convention.</p>
 </div>
@@ -578,7 +597,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="rem-infimum-exists" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Existence of the infimum, and when it is a minimum). </span>The maximum in <a href="#/def-infimum" class="quarto-xref">Definition&nbsp;5</a> always exists, by the completeness of the real numbers (<a href="#/thm-completeness" class="quarto-xref">Theorem&nbsp;3</a>). For example, for <span class="math inline">\(A = (1, 2]\)</span>, the numbers <span class="math inline">\(t\)</span> with <span class="math inline">\(t \le a\)</span> for all <span class="math inline">\(a \in A\)</span> are those with <span class="math inline">\(t \le 1\)</span>, and the largest of them is <span class="math inline">\(1\)</span>, so <span class="math inline">\(\inf A = 1\)</span>.</p>
+<p><span class="proof-title"><em>Remark 3</em> (Existence of the infimum, and when it is a minimum). </span>The maximum in <a href="#/def-infimum" class="quarto-xref">Definition&nbsp;9</a> always exists, by the completeness of the real numbers (<a href="#/thm-completeness" class="quarto-xref">Theorem&nbsp;3</a>). For example, for <span class="math inline">\(A = (1, 2]\)</span>, the numbers <span class="math inline">\(t\)</span> with <span class="math inline">\(t \le a\)</span> for all <span class="math inline">\(a \in A\)</span> are those with <span class="math inline">\(t \le 1\)</span>, and the largest of them is <span class="math inline">\(1\)</span>, so <span class="math inline">\(\inf A = 1\)</span>.</p>
 <p>If the infimum belongs to <span class="math inline">\(A\)</span>, it equals the minimum: <span class="math inline">\(\inf A = \min A\)</span>. For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -617,7 +636,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-supremum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Supremum (least upper bound))</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be nonempty and bounded above (<a href="#/def-bounded" class="quarto-xref">Definition&nbsp;4</a>). The <strong>supremum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\sup A\)</span>, is the smallest real number <span class="math inline">\(t\)</span> satisfying <span class="math inline">\(a \le t\)</span> for all <span class="math inline">\(a \in A\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 10 (Supremum (least upper bound))</strong></span> Let <span class="math inline">\(A \subseteq \mathbb{R}\)</span> be nonempty and bounded above (<a href="#/def-bounded-above" class="quarto-xref">Definition&nbsp;6</a>). The <strong>supremum</strong> of <span class="math inline">\(A\)</span>, written <span class="math inline">\(\sup A\)</span>, is the smallest real number <span class="math inline">\(t\)</span> satisfying <span class="math inline">\(a \le t\)</span> for all <span class="math inline">\(a \in A\)</span>:</p>
 <p><span class="math display">\[\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\{t \in \mathbb{R}: \forall a \in A,\ a \le t\right\}\mathclose{}\]</span></p>
 <p>If <span class="math inline">\(A\)</span> is nonempty but not bounded above, we write <span class="math inline">\(\sup A = +\infty\)</span> by convention.</p>
 </div>
@@ -625,7 +644,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="rem-supremum-exists" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Existence of the supremum, and when it is a maximum). </span>The minimum in <a href="#/def-supremum" class="quarto-xref">Definition&nbsp;6</a> always exists, by the completeness of the real numbers (<a href="#/thm-completeness" class="quarto-xref">Theorem&nbsp;3</a>). For example, for <span class="math inline">\(A = [1, 2)\)</span>, the numbers <span class="math inline">\(t\)</span> with <span class="math inline">\(a \le t\)</span> for all <span class="math inline">\(a \in A\)</span> are those with <span class="math inline">\(t \ge 2\)</span>, and the smallest of them is <span class="math inline">\(2\)</span>, so <span class="math inline">\(\sup A = 2\)</span>.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Existence of the supremum, and when it is a maximum). </span>The minimum in <a href="#/def-supremum" class="quarto-xref">Definition&nbsp;10</a> always exists, by the completeness of the real numbers (<a href="#/thm-completeness" class="quarto-xref">Theorem&nbsp;3</a>). For example, for <span class="math inline">\(A = [1, 2)\)</span>, the numbers <span class="math inline">\(t\)</span> with <span class="math inline">\(a \le t\)</span> for all <span class="math inline">\(a \in A\)</span> are those with <span class="math inline">\(t \ge 2\)</span>, and the smallest of them is <span class="math inline">\(2\)</span>, so <span class="math inline">\(\sup A = 2\)</span>.</p>
 <p>If the supremum belongs to <span class="math inline">\(A\)</span>, it equals the maximum: <span class="math inline">\(\sup A = \max A\)</span>. For example,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -650,7 +669,7 @@ w_1 &amp;= w_2 \\
 <section id="sums" class="slide level2" data-number="3">
 <h2><span class="header-section-number">3</span> Sums</h2>
 <div id="def-term" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Term of a sum)</strong></span> In a sum <span class="math inline">\(a_1 + a_2 + \cdots + a_n\)</span>, each of the numbers or expressions <span class="math inline">\(a_1, a_2, \ldots, a_n\)</span> being added is a <strong>term</strong> of the sum.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Term of a sum)</strong></span> In a sum <span class="math inline">\(a_1 + a_2 + \cdots + a_n\)</span>, each of the numbers or expressions <span class="math inline">\(a_1, a_2, \ldots, a_n\)</span> being added is a <strong>term</strong> of the sum.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -666,7 +685,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-identity-element" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Identity element)</strong></span> Let <span class="math inline">\(S\)</span> be a set, such as the real numbers <span class="math inline">\(\mathbb{R}\)</span>, and let <span class="math inline">\(\star\)</span> be an operation that combines two elements <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of <span class="math inline">\(S\)</span> into an element <span class="math inline">\(a \star b\)</span> of <span class="math inline">\(S\)</span>, such as addition (<span class="math inline">\(a + b\)</span>) or multiplication (<span class="math inline">\(a \times b\)</span>) of real numbers. An element <span class="math inline">\(u\)</span> of <span class="math inline">\(S\)</span> is an <strong>identity element</strong> for <span class="math inline">\(\star\)</span> if <span class="math inline">\(a \star u = a\)</span> and <span class="math inline">\(u \star a = a\)</span> for every <span class="math inline">\(a \in S\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 12 (Identity element)</strong></span> Let <span class="math inline">\(S\)</span> be a set, such as the real numbers <span class="math inline">\(\mathbb{R}\)</span>, and let <span class="math inline">\(\star\)</span> be an operation that combines two elements <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of <span class="math inline">\(S\)</span> into an element <span class="math inline">\(a \star b\)</span> of <span class="math inline">\(S\)</span>, such as addition (<span class="math inline">\(a + b\)</span>) or multiplication (<span class="math inline">\(a \times b\)</span>) of real numbers. An element <span class="math inline">\(u\)</span> of <span class="math inline">\(S\)</span> is an <strong>identity element</strong> for <span class="math inline">\(\star\)</span> if <span class="math inline">\(a \star u = a\)</span> and <span class="math inline">\(u \star a = a\)</span> for every <span class="math inline">\(a \in S\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -683,7 +702,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-commutative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Commutative operation)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> (<a href="#/def-identity-element" class="quarto-xref">Definition&nbsp;8</a>) is <strong>commutative</strong> if <span class="math inline">\(a \star b = b \star a\)</span> for all <span class="math inline">\(a, b \in S\)</span>: the order of the two inputs does not matter. Some sources, including the titles of <a href="#/thm-sum-symmetric" class="quarto-xref">Theorem&nbsp;5</a> and <a href="#/thm-prod-symmetric" class="quarto-xref">Theorem&nbsp;8</a>, call a commutative operation <strong>symmetric</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 13 (Commutative operation)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> (<a href="#/def-identity-element" class="quarto-xref">Definition&nbsp;12</a>) is <strong>commutative</strong> if <span class="math inline">\(a \star b = b \star a\)</span> for all <span class="math inline">\(a, b \in S\)</span>: the order of the two inputs does not matter. Some sources, including the titles of <a href="#/thm-sum-symmetric" class="quarto-xref">Theorem&nbsp;5</a> and <a href="#/thm-prod-symmetric" class="quarto-xref">Theorem&nbsp;8</a>, call a commutative operation <strong>symmetric</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -705,7 +724,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-associative" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Associative operation)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> (<a href="#/def-identity-element" class="quarto-xref">Definition&nbsp;8</a>) is <strong>associative</strong> if <span class="math inline">\((a \star b) \star c = a \star (b \star c)\)</span> for all <span class="math inline">\(a, b, c \in S\)</span>: which pair is combined first does not matter.</p>
+<p><span class="theorem-title"><strong>Definition 14 (Associative operation)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> (<a href="#/def-identity-element" class="quarto-xref">Definition&nbsp;12</a>) is <strong>associative</strong> if <span class="math inline">\((a \star b) \star c = a \star (b \star c)\)</span> for all <span class="math inline">\(a, b, c \in S\)</span>: which pair is combined first does not matter.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -811,7 +830,7 @@ w_1 &amp;= w_2 \\
 <h2><span class="header-section-number">6</span> Sums and products together</h2>
 <!-- heading shares the slide; do not re-flag -->
 <div id="def-distributes-over" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Distributes over)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> <strong>distributes over</strong> an operation <span class="math inline">\(\diamond\)</span> on <span class="math inline">\(S\)</span> if</p>
+<p><span class="theorem-title"><strong>Definition 15 (Distributes over)</strong></span> An operation <span class="math inline">\(\star\)</span> on a set <span class="math inline">\(S\)</span> <strong>distributes over</strong> an operation <span class="math inline">\(\diamond\)</span> on <span class="math inline">\(S\)</span> if</p>
 <p><span class="math display">\[a \star (b \diamond c) = (a \star b) \diamond (a \star c)\]</span></p>
 <p>for all <span class="math inline">\(a, b, c \in S\)</span>.</p>
 </div>
@@ -832,13 +851,13 @@ w_1 &amp;= w_2 \\
 &amp;= 30.
 \end{aligned}
 \]</span></p>
-<p>So <a href="#/def-distributes-over" class="quarto-xref">Definition&nbsp;11</a> fails with <span class="math inline">\(\star = +\)</span> and <span class="math inline">\(\diamond = \times\)</span>.</p>
+<p>So <a href="#/def-distributes-over" class="quarto-xref">Definition&nbsp;15</a> fails with <span class="math inline">\(\star = +\)</span> and <span class="math inline">\(\diamond = \times\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-distributive" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Distributive law)</strong></span> The <strong>distributive law</strong> is the statement that multiplication distributes over addition (<a href="#/def-distributes-over" class="quarto-xref">Definition&nbsp;11</a>): <span class="math inline">\(a \times (b + c) = (a \times b) + (a \times c)\)</span> (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>). We then say multiplication is <strong>distributive</strong>.</p>
+<p><span class="theorem-title"><strong>Definition 16 (Distributive law)</strong></span> The <strong>distributive law</strong> is the statement that multiplication distributes over addition (<a href="#/def-distributes-over" class="quarto-xref">Definition&nbsp;15</a>): <span class="math inline">\(a \times (b + c) = (a \times b) + (a \times c)\)</span> (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>). We then say multiplication is <strong>distributive</strong>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -868,7 +887,13 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-like-terms" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Like terms)</strong></span> Two <a href="#/def-term">terms</a> of a sum are <strong>like terms</strong> if they are the same product of variables, each to the same power, possibly multiplied by different constants: <span class="math inline">\(c_1 m\)</span> and <span class="math inline">\(c_2 m\)</span>, where <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are constants and <span class="math inline">\(m\)</span> is that product. To <strong>collect</strong> like terms is to replace their sum by one term, using the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>): <span class="math inline">\(c_1 m + c_2 m = (c_1 + c_2) m\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 17 (Like terms)</strong></span> Two <a href="#/def-term">terms</a> of a sum are <strong>like terms</strong> if they are the same product of variables, each to the same power, possibly multiplied by different constants: <span class="math inline">\(c_1 m\)</span> and <span class="math inline">\(c_2 m\)</span>, where <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are constants and <span class="math inline">\(m\)</span> is that product.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-collect-like-terms" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 18 (Collecting like terms)</strong></span> To <strong>collect</strong> like terms (<a href="#/def-like-terms" class="quarto-xref">Definition&nbsp;17</a>) is to replace their sum by one term, using the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>): <span class="math inline">\(c_1 m + c_2 m = (c_1 + c_2) m\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -929,7 +954,7 @@ w_1 &amp;= w_2 \\
 \\ &amp;= a^2 + ab + ab + b^2
 &amp;&amp; \text{(commutative and associative laws)}
 \\ &amp;= a^2 + 2ab + b^2
-&amp;&amp; \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~13}}\text{)}
+&amp;&amp; \text{(collect like terms, }\href{#def-collect-like-terms}{\text{Definition~18}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>The step “commutative and associative laws” uses <a href="#/thm-prod-symmetric" class="quarto-xref">Theorem&nbsp;8</a> to write <span class="math inline">\(ba\)</span> as <span class="math inline">\(ab\)</span>, and <a href="#/thm-sum-assoc" class="quarto-xref">Theorem&nbsp;6</a> to drop the parentheses.</p>
@@ -1013,11 +1038,17 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-summation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 14 (Summation notation)</strong></span> Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be integers with <span class="math inline">\(m \le n\)</span>, and let <span class="math inline">\(a_m, a_{m+1}, \ldots, a_n\)</span> be numbers. The <strong>sum</strong> of <span class="math inline">\(a_m\)</span> through <span class="math inline">\(a_n\)</span> is</p>
+<p><span class="theorem-title"><strong>Definition 19 (Summation notation)</strong></span> Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be integers with <span class="math inline">\(m \le n\)</span>, and let <span class="math inline">\(a_m, a_{m+1}, \ldots, a_n\)</span> be numbers. The <strong>sum</strong> of <span class="math inline">\(a_m\)</span> through <span class="math inline">\(a_n\)</span> is</p>
 <p><span class="math display">\[
 \sum_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a_{m+1} + \cdots + a_n
 \]</span></p>
-<p>The variable <span class="math inline">\(i\)</span> is the <strong>index</strong> of the sum; <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are its <strong>lower</strong> and <strong>upper limits</strong>.</p>
+<p>The numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are its lower and upper limits, defined in the <a href="./notation.html#def-lower-upper-limits">notation for limits of a sum</a>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-summation-index" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 20 (Index of a sum)</strong></span> The variable <span class="math inline">\(i\)</span> in <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span> (<a href="#/def-summation" class="quarto-xref">Definition&nbsp;19</a>) is the <strong>index</strong> of the sum.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1042,13 +1073,13 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-empty-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 15 (Empty sum)</strong></span> When the upper limit is less than the lower limit (<span class="math inline">\(n &lt; m\)</span>), the sum <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span> has no terms. By convention, such an <strong>empty sum</strong> equals <span class="math inline">\(0\)</span>. For example, <span class="math inline">\(\sum_{i=1}^{0} a_i = 0\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 21 (Empty sum)</strong></span> When the upper limit is less than the lower limit (<span class="math inline">\(n &lt; m\)</span>), the sum <span class="math inline">\(\sum_{i=m}^{n} a_i\)</span> has no terms. By convention, such an <strong>empty sum</strong> equals <span class="math inline">\(0\)</span>. For example, <span class="math inline">\(\sum_{i=1}^{0} a_i = 0\)</span>.</p>
 </div>
 </section>
 <section class="slide level2 scrollable">
 
 <div id="exr-sum-rules" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4 (Rearrange a sum)</strong></span> Let <span class="math inline">\(c\)</span> be a number, and let <span class="math inline">\(a_1, a_2, a_3\)</span> and <span class="math inline">\(b_1, b_2, b_3\)</span> be numbers. Using <a href="#/def-summation" class="quarto-xref">Definition&nbsp;14</a> and the rules of algebra above, show that:</p>
+<p><span class="theorem-title"><strong>Exercise 4 (Rearrange a sum)</strong></span> Let <span class="math inline">\(c\)</span> be a number, and let <span class="math inline">\(a_1, a_2, a_3\)</span> and <span class="math inline">\(b_1, b_2, b_3\)</span> be numbers. Using <a href="#/def-summation" class="quarto-xref">Definition&nbsp;19</a> and the rules of algebra above, show that:</p>
 <ol type="1">
 <li><span class="math inline">\(\sum_{i=1}^{3} c\, a_i = c \sum_{i=1}^{3} a_i\)</span>;</li>
 <li><span class="math inline">\(\sum_{i=1}^{3} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum_{i=1}^{3} a_i + \sum_{i=1}^{3} b_i\)</span>.</li>
@@ -1059,7 +1090,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2 scrollable">
 
 <div id="sol-sum-rules" class="proof solution">
-<p><span class="proof-title"><em>Solution 4</em>. </span>Each step below applies <a href="#/def-summation" class="quarto-xref">Definition&nbsp;14</a>, the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>), or the commutative and associative laws of addition (<a href="#/thm-sum-symmetric" class="quarto-xref">Theorem&nbsp;5</a> and <a href="#/thm-sum-assoc" class="quarto-xref">Theorem&nbsp;6</a>).</p>
+<p><span class="proof-title"><em>Solution 4</em>. </span>Each step below applies <a href="#/def-summation" class="quarto-xref">Definition&nbsp;19</a>, the distributive law (<a href="#/thm-mult-distr" class="quarto-xref">Theorem&nbsp;11</a>), or the commutative and associative laws of addition (<a href="#/thm-sum-symmetric" class="quarto-xref">Theorem&nbsp;5</a> and <a href="#/thm-sum-assoc" class="quarto-xref">Theorem&nbsp;6</a>).</p>
 <ol type="1">
 <li><p>Expand the sum, then factor out <span class="math inline">\(c\)</span>:</p>
 <p><span class="math display">\[
@@ -1161,7 +1192,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-sum-over-set" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 16 (Sum over a finite set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}\)</span> be a <a href="./sets-functions.html#def-finite-set">finite</a> <a href="./sets-functions.html#def-set">set</a> with <span class="math inline">\(k \ge 1\)</span> different elements. Let <span class="math inline">\(f\)</span> be a <a href="./sets-functions.html#def-function">function</a> that gives a number <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>. The <strong>sum of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span></strong> is</p>
+<p><span class="theorem-title"><strong>Definition 22 (Sum over a finite set)</strong></span> Let <span class="math inline">\(A = \mathopen{}\left\{x_1, x_2, \ldots, x_k\right\}\mathclose{}\)</span> be a <a href="./sets-functions.html#def-finite-set">finite</a> <a href="./sets-functions.html#def-set">set</a> with <span class="math inline">\(k \ge 1\)</span> different elements. Let <span class="math inline">\(f\)</span> be a <a href="./sets-functions.html#def-function">function</a> that gives a number <span class="math inline">\(f(x)\)</span> for each element <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span>. The <strong>sum of <span class="math inline">\(f\)</span> over <span class="math inline">\(A\)</span></strong> is</p>
 <p><span class="math display">\[
 \sum_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k)
 \]</span></p>
@@ -1172,7 +1203,7 @@ w_1 &amp;= w_2 \\
 
 <div id="rem-sum-over-set-order" class="proof remark">
 <p><span class="proof-title"><em>Remark 7</em> (The order of the terms does not matter). </span>The order in which we list the elements of <span class="math inline">\(A\)</span> does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if <span class="math inline">\(A = \mathopen{}\left\{1, 2, 3\right\}\mathclose{}\)</span> and <span class="math inline">\(f(x) = x^2\)</span>, listing <span class="math inline">\(A\)</span> as <span class="math inline">\(1, 2, 3\)</span> gives <span class="math inline">\(1 + 4 + 9 = 14\)</span>, and listing <span class="math inline">\(A\)</span> as <span class="math inline">\(3, 1, 2\)</span> gives <span class="math inline">\(9 + 1 + 4 = 14\)</span>. <a href="#/exr-sum-over-set" class="quarto-xref">Exercise&nbsp;5</a>, part 2, shows another example.</p>
-<p>When <span class="math inline">\(A = \mathopen{}\left\{m, m+1, \ldots, n\right\}\mathclose{}\)</span>, this sum is the same as <span class="math inline">\(\sum_{i=m}^{n} f(i)\)</span> from <a href="#/def-summation" class="quarto-xref">Definition&nbsp;14</a>.</p>
+<p>When <span class="math inline">\(A = \mathopen{}\left\{m, m+1, \ldots, n\right\}\mathclose{}\)</span>, this sum is the same as <span class="math inline">\(\sum_{i=m}^{n} f(i)\)</span> from <a href="#/def-summation" class="quarto-xref">Definition&nbsp;19</a>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1190,38 +1221,62 @@ w_1 &amp;= w_2 \\
 <section id="quotients" class="slide level2" data-number="8">
 <h2><span class="header-section-number">8</span> Quotients</h2>
 <div id="def-quotient" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 17 (Quotient)</strong></span> For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(b \neq 0\)</span>, the <strong>quotient</strong> of <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> is the result of dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 23 (Quotient)</strong></span> For real numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(b \neq 0\)</span>, the <strong>quotient</strong> of <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> is the result of dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span>:</p>
 <p><span class="math display">\[\frac{a}{b}\]</span></p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-fraction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 18 (Fraction, numerator, and denominator)</strong></span> A quotient <span class="math inline">\(\frac{a}{b}\)</span> (<a href="#/def-quotient" class="quarto-xref">Definition&nbsp;17</a>) is also called a <strong>fraction</strong>; <span class="math inline">\(a\)</span> is its <strong>numerator</strong> and <span class="math inline">\(b\)</span> its <strong>denominator</strong>. For example, the fraction <span class="math inline">\(\frac{6}{4}\)</span> has numerator <span class="math inline">\(6\)</span> and denominator <span class="math inline">\(4\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 24 (Fraction)</strong></span> A quotient <span class="math inline">\(\frac{a}{b}\)</span> (<a href="#/def-quotient" class="quarto-xref">Definition&nbsp;23</a>) is also called a <strong>fraction</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-numerator" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 25 (Numerator)</strong></span> In a fraction <span class="math inline">\(\frac{a}{b}\)</span> (<a href="#/def-fraction" class="quarto-xref">Definition&nbsp;24</a>), <span class="math inline">\(a\)</span> is its <strong>numerator</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-denominator" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 26 (Denominator)</strong></span> In a fraction <span class="math inline">\(\frac{a}{b}\)</span> (<a href="#/def-fraction" class="quarto-xref">Definition&nbsp;24</a>), <span class="math inline">\(b\)</span> is its <strong>denominator</strong>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="exm-fraction" class="theorem example">
+<p><span class="theorem-title"><strong>Example 19 (Numerator and denominator of a fraction)</strong></span> The fraction <span class="math inline">\(\frac{6}{4}\)</span> has numerator <span class="math inline">\(6\)</span> and denominator <span class="math inline">\(4\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-quotient" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (A quotient)</strong></span> The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(4\)</span> is <span class="math inline">\(\frac{6}{4} = 1.5\)</span>. The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(0\)</span> is undefined, because <a href="#/def-quotient" class="quarto-xref">Definition&nbsp;17</a> requires a nonzero denominator.</p>
+<p><span class="theorem-title"><strong>Example 20 (A quotient)</strong></span> The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(4\)</span> is <span class="math inline">\(\frac{6}{4} = 1.5\)</span>. The quotient of <span class="math inline">\(6\)</span> by <span class="math inline">\(0\)</span> is undefined, because <a href="#/def-quotient" class="quarto-xref">Definition&nbsp;23</a> requires a nonzero denominator.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-follow-up" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 27 (Follow-up)</strong></span> In a study that observes participants over time, a participant’s <strong>follow-up</strong> is the length of time the study observes that participant.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-person-years" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 19 (Follow-up and person-years)</strong></span> In a study that observes participants over time, a participant’s <strong>follow-up</strong> is the length of time the study observes that participant, and the study’s <strong>person-years</strong> are the sum of the follow-up times of all participants, measured in years.</p>
+<p><span class="theorem-title"><strong>Definition 28 (Person-years)</strong></span> In a study that observes participants over time, the study’s <strong>person-years</strong> are the sum of the follow-up times (<a href="#/def-follow-up" class="quarto-xref">Definition&nbsp;27</a>) of all participants, measured in years.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-person-years" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Counting person-years)</strong></span> If <span class="math inline">\(10\)</span> people are each followed for <span class="math inline">\(2\)</span> years, the study has <span class="math inline">\(10 \cdot 2 = 20\)</span> person-years. If one person is followed for <span class="math inline">\(3\)</span> years and another for <span class="math inline">\(\tfrac{1}{2}\)</span> year, the study has <span class="math inline">\(3 + \tfrac{1}{2} = 3.5\)</span> person-years.</p>
+<p><span class="theorem-title"><strong>Example 21 (Counting person-years)</strong></span> If <span class="math inline">\(10\)</span> people are each followed for <span class="math inline">\(2\)</span> years, the study has <span class="math inline">\(10 \cdot 2 = 20\)</span> person-years. If one person is followed for <span class="math inline">\(3\)</span> years and another for <span class="math inline">\(\tfrac{1}{2}\)</span> year, the study has <span class="math inline">\(3 + \tfrac{1}{2} = 3.5\)</span> person-years.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-rate" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 20 (Rate)</strong></span> A <strong>rate</strong> is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up (<a href="#/def-person-years" class="quarto-xref">Definition&nbsp;19</a>). For example, <span class="math inline">\(12\)</span> new cases in <span class="math inline">\(4\)</span> weeks is a rate of <span class="math inline">\(\frac{12}{4} = 3\)</span> new cases per week, and <span class="math inline">\(30\)</span> cases over <span class="math inline">\(10{,}000\)</span> person-years of follow-up is a rate of <span class="math inline">\(\frac{30}{10{,}000} = 0.003\)</span> cases per person-year.</p>
+<p><span class="theorem-title"><strong>Definition 29 (Rate)</strong></span> A <strong>rate</strong> is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up (<a href="#/def-person-years" class="quarto-xref">Definition&nbsp;28</a>). For example, <span class="math inline">\(12\)</span> new cases in <span class="math inline">\(4\)</span> weeks is a rate of <span class="math inline">\(\frac{12}{4} = 3\)</span> new cases per week, and <span class="math inline">\(30\)</span> cases over <span class="math inline">\(10{,}000\)</span> person-years of follow-up is a rate of <span class="math inline">\(\frac{30}{10{,}000} = 0.003\)</span> cases per person-year.</p>
 </div>
 <aside class="notes">
 <p>cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Rate_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Rate_(mathematics)</a></p>
@@ -1240,7 +1295,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-ratio" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 21 (Ratios)</strong></span> A <strong>ratio</strong> is a quotient in which the numerator and denominator are measured using the same unit scales.</p>
+<p><span class="theorem-title"><strong>Definition 30 (Ratios)</strong></span> A <strong>ratio</strong> is a quotient in which the numerator and denominator are measured using the same unit scales.</p>
 <aside class="notes">
 <p>cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Ratio" class="uri">https://en.wikipedia.org/wiki/Ratio</a></p>
 <style type="text/css">
@@ -1259,7 +1314,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="exm-ratio" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (A ratio, and a quotient that is not one)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 22 (A ratio, and a quotient that is not one)</strong></span> &nbsp;</p>
 <ul>
 <li>A board <span class="math inline">\(150\)</span> cm long and one <span class="math inline">\(75\)</span> cm long have length ratio <span class="math inline">\(\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\)</span>: both lengths are in centimeters, so the units cancel and the ratio has none.</li>
 <li>A sample of mass <span class="math inline">\(300\)</span> g and volume <span class="math inline">\(150\)</span> cm<span class="math inline">\(^3\)</span> gives the quotient <span class="math inline">\(\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\)</span> g per cm<span class="math inline">\(^3\)</span>, its density. The numerator and denominator are in different units, so this quotient is not a ratio.</li>
@@ -1269,7 +1324,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-proportion" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 22 (Proportion)</strong></span> In statistics, a <strong>proportion</strong> typically means a ratio where the numerator represents a subset of the denominator.</p>
+<p><span class="theorem-title"><strong>Definition 31 (Proportion)</strong></span> In statistics, a <strong>proportion</strong> typically means a ratio where the numerator represents a subset of the denominator.</p>
 <aside class="notes">
 <p>See <a href="https://en.wikipedia.org/wiki/Population_proportion" class="uri">https://en.wikipedia.org/wiki/Population_proportion</a>.</p>
 <p>See also <a href="https://en.wikipedia.org/wiki/Proportion_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Proportion_(mathematics)</a> for other meanings.</p>
@@ -1289,7 +1344,7 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="exm-proportion" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (A proportion, and a ratio that is not one)</strong></span> In a clinic with <span class="math inline">\(120\)</span> patients, <span class="math inline">\(30\)</span> of whom smoke:</p>
+<p><span class="theorem-title"><strong>Example 23 (A proportion, and a ratio that is not one)</strong></span> In a clinic with <span class="math inline">\(120\)</span> patients, <span class="math inline">\(30\)</span> of whom smoke:</p>
 <ul>
 <li>the proportion of patients who smoke is <span class="math inline">\(\tfrac{30}{120} = 0.25\)</span>: the <span class="math inline">\(30\)</span> smokers are a subset of the <span class="math inline">\(120\)</span> patients;</li>
 <li>the ratio of smokers to non-smokers is <span class="math inline">\(\tfrac{30}{90} = \tfrac{1}{3}\)</span>. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the <span class="math inline">\(30\)</span> smokers are not part of the <span class="math inline">\(90\)</span> non-smokers.</li>
@@ -1299,13 +1354,13 @@ w_1 &amp;= w_2 \\
 <section class="slide level2">
 
 <div id="def-proportional" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 23 (Proportional)</strong></span> Two functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are <strong>proportional</strong> if their ratio <span class="math inline">\(\frac{f(x)}{g(x)}\)</span> does not depend on <span class="math inline">\(x\)</span>. (cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Proportionality_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Proportionality_(mathematics)</a>)</p>
+<p><span class="theorem-title"><strong>Definition 32 (Proportional)</strong></span> Two functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are <strong>proportional</strong> if their ratio <span class="math inline">\(\frac{f(x)}{g(x)}\)</span> does not depend on <span class="math inline">\(x\)</span>. (cf.&nbsp;<a href="https://en.wikipedia.org/wiki/Proportionality_(mathematics)" class="uri">https://en.wikipedia.org/wiki/Proportionality_(mathematics)</a>)</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="exm-proportional" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (Proportional and non-proportional functions)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 24 (Proportional and non-proportional functions)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(f(x) = 6x^2\)</span> and <span class="math inline">\(g(x) = 2x^2\)</span> are proportional: for <span class="math inline">\(x \ne 0\)</span>,</p>
 <p><span class="math display">\[

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:28:32 (PDT)
+Last modified: 2026-10-15 09:23:43 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -337,7 +337,7 @@ The primary advantage of the Iverson bracket is algebraic conciseness: it turns 
 
 With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U = \mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
 
-However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets-functions.llms.md#def-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\operatorname{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
+However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets-functions.llms.md#def-closed-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\operatorname{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
 ### 5.4 Summary of indicator notations
 

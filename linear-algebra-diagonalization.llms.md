@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:28:32 (PDT)
+Last modified: 2026-10-15 09:23:43 (PDT)
 
 ## 1 Similarity and diagonalization
 
@@ -24,7 +24,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 >
 > so \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, the nullity is \\0\\, and \\\operatorname{rank}(\mathbf{A}) = n\\ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)).
 >
-> **Rank \\n\\ implies invertible.** Every system \\\mathbf{A} \tilde{y} = \tilde{b}\\ has exactly one solution ([Corollary 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with \\m = n\\). Let \\\tilde{y}\_j\\ solve \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let \\\mathbf{B}\\ have columns \\\tilde{y}\_1, \ldots, \tilde{y}\_n\\. Column \\j\\ of \\\mathbf{A} \mathbf{B}\\ is \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ (1), so \\\mathbf{A} \mathbf{B} = \mathbf{I}\_n\\. For the other order,
+> **Rank \\n\\ implies invertible.** Every system \\\mathbf{A} \tilde{y} = \tilde{b}\\ has exactly one solution ([Corollary 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with \\m = n\\). Let \\\tilde{y}\_j\\ solve \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let \\\mathbf{B}\\ have columns \\\tilde{y}\_1, \ldots, \tilde{y}\_n\\. Column \\j\\ of \\\mathbf{A} \mathbf{B}\\ is \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ (1), so \\\mathbf{A} \mathbf{B} = \mathbf{I}\_n\\. For the other order,
 >
 > \\ \begin{aligned} \mathbf{A}\\(\mathbf{B} \mathbf{A} - \mathbf{I}\_n) &= \mathbf{A} \mathbf{B} \mathbf{A} - \mathbf{A} \mathbf{I}\_n && \text{(}\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{I}\_n \mathbf{A} - \mathbf{A} \mathbf{I}\_n && \text{(} \mathbf{A} \mathbf{B} = \mathbf{I}\_n \text{)} \\ &= \mathbf{A} - \mathbf{A} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \mathbf{0}\_{n \times n}, && \text{(arithmetic)} \end{aligned} \\
 >
@@ -470,7 +470,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 >
 > \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^py_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
 >
-> For the diagonal entry \\x\_{ii}\\, take \\\tilde{e}\_i\\ ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
+> For the diagonal entry \\x\_{ii}\\, take \\\tilde{e}\_i\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
 >
 > \\ \begin{aligned} {\tilde{e}\_i}^{\top} \mathbf{X} \tilde{e}\_i &= \sum\_{r=1}^{p} \sum\_{s=1}^{p} (\tilde{e}\_i)\_r\\x\_{rs}\\(\tilde{e}\_i)\_s && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \\ &= x\_{ii} && \text{(only the term with } r \text{ and } s \text{ both equal to } i \text{ is nonzero)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite)} \end{aligned} \\
 

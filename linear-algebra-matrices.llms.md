@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:28:32 (PDT)
+Last modified: 2026-10-15 09:23:43 (PDT)
 
 ## 1 Matrices
 
@@ -334,7 +334,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 >
 > \\f(\tilde{x}) = \mathbf{A}\tilde{x}\quad \text{for all } \tilde{x}\in \mathbb{R}^p\\
 >
-> Column \\j\\ of \\\mathbf{A}\\ is \\f(\tilde{e}\_j)\\, the value of \\f\\ at the \\j\\th indicator vector ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)); that is, \\a\_{ij} = \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i\\.
+> Column \\j\\ of \\\mathbf{A}\\ is \\f(\tilde{e}\_j)\\, the value of \\f\\ at the \\j\\th indicator vector ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)); that is, \\a\_{ij} = \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i\\.
 
 > **NOTE:**
 >
@@ -348,7 +348,7 @@ Last modified: 2026-10-15 08:28:32 (PDT)
 >
 > **Uniqueness.** Suppose \\\mathbf{B}\\ is any \\m \times p\\ matrix with \\f(\tilde{x}) = \mathbf{B}\tilde{x}\\ for all \\\tilde{x}\\. Taking \\\tilde{x}= \tilde{e}\_j\\, for each \\i\\:
 >
-> \\ \begin{aligned} \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i &= (\mathbf{B}\tilde{e}\_j)\_i && \text{(assumption on } \mathbf{B} \text{)} \\&= \sum\_{k=1}^{p} b\_{ik} (\tilde{e}\_j)\_k && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= b\_{ij} \cdot 1 + \sum\_{k \neq j} b\_{ik} \cdot 0 && \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~12 in Vectors}}\text{, splitting off the } k = j \text{ term)} \\&= b\_{ij} + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= b\_{ij} && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i &= (\mathbf{B}\tilde{e}\_j)\_i && \text{(assumption on } \mathbf{B} \text{)} \\&= \sum\_{k=1}^{p} b\_{ik} (\tilde{e}\_j)\_k && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= b\_{ij} \cdot 1 + \sum\_{k \neq j} b\_{ik} \cdot 0 && \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~13 in Vectors}}\text{, splitting off the } k = j \text{ term)} \\&= b\_{ij} + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= b\_{ij} && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
 >
 > So
 >
