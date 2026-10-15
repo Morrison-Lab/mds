@@ -16,7 +16,15 @@ The **Jacobian matrix** of $\vy$ is the $q \times p$ matrix
 whose $(j, i)$ entry is $\deriv{\coef{i}} y_j$,
 for $j = 1, \ldots, q$ and $i = 1, \ldots, p$.
 It is the transpose of the derivative $\deriv{\vcoef} \tp{\vy}$ of @def-vector-valued-derivative.
-Writing derivatives this way,
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-numerator-layout}
+#### Numerator layout
+
+Writing derivatives as in @def-jacobian-matrix,
 with rows indexing the entries of $\vy$ (the numerator)
 and columns indexing the entries of $\vcoef$ (the denominator),
 is the **numerator layout**.

@@ -2,7 +2,7 @@
 #### Second-order sufficient condition
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)).
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)).
 If $\vx^*$ is a stationary point of $f$ (@def-stationary-point)
 and $\matr{H}_f(\vx^*)$ is [positive definite](linear-algebra.qmd#def-positive-definite),
 then $\vx^*$ is a strict local minimizer of $f$ (@def-strict-local-minimizer).
