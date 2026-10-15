@@ -20,6 +20,8 @@ So $\cos$ is one-to-one on $[0, \pi]$.
 Every $x_1 \in [-1, 1]$ is the first coordinate of the point $(x_1, \sqrt{1 - x_1^2})$ of the upper half,
 and the distance along the half circle from $(1, 0)$ to that point is some $\angpar \in [0, \pi]$,
 so $\cos$ takes every value in $[-1, 1]$.
-A one-to-one continuous function that goes from $1$ at $0$ to $-1$ at $\pi$ is decreasing.
+Finally, move along the upper half circle from $(1, 0)$ to $(-1, 0)$ as $\angpar$ increases from $0$ to $\pi$.
+The first coordinate never takes the same value twice, so it never turns back.
+It starts at $\cos 0 = 1$ and ends at $\cos\pi = -1$, so it only decreases.
 
 :::

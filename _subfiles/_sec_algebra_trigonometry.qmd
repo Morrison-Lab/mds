@@ -1,7 +1,5 @@
 ## Cosine and sine {#sec-cosine-sine}
 
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_def-cosine-sine.qmd >}}
 
 {{< slidebreak >}}

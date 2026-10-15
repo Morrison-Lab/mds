@@ -3,9 +3,24 @@
 
 Take $\angpar = \pi/3$, one sixth of the way round the circle.
 @fig-cosine-sine-unit-circle shows the point reached,
-$(\cos\angpar, \sin\angpar) \approx$
-(`r round(cos(pi / 3), 3)`, `r round(sin(pi / 3), 3)`),
-and its two coordinates.
+$(\cos\angpar, \sin\angpar)$, and its two coordinates.
+The point is a vertex of a regular hexagon inscribed in the unit circle,
+whose sides have the same length as its radius,
+so the point is at distance $1$ from $(1, 0)$.
+Writing $(x_1, x_2) = (\cos\angpar, \sin\angpar)$,
+
+$$
+\begin{aligned}
+1 &= (x_1 - 1)^2 + x_2^2 \\
+&= x_1^2 + x_2^2 - 2 x_1 + 1 \\
+&= 2 - 2 x_1,
+\end{aligned}
+$$
+
+so $\cos(\pi/3) = x_1 = \tfrac{1}{2}$,
+and then $\sin(\pi/3) = \sqrt{1 - \tfrac{1}{4}} = \tfrac{\sqrt{3}}{2}$.
+To three decimal places these are
+`r round(cos(pi / 3), 3)` and `r round(sin(pi / 3), 3)`.
 As @thm-cosine-sine-identity says, the squared coordinates add to
 `r round(cos(pi / 3)^2 + sin(pi / 3)^2, 3)`.
 
