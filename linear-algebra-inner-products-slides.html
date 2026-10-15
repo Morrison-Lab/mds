@@ -352,24 +352,24 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 14:23:59 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 15:19:18 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Inner product)</strong></span> An <strong>inner product</strong> on <span class="math inline">\(\mathbb{R}^p\)</span> is a function that assigns to each ordered pair of vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> a real number <span class="math inline">\(\left\langle \tilde{x}, \tilde{y} \right\rangle\)</span>, and that has the following four properties for all <span class="math inline">\(\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\)</span> and all real numbers <span class="math inline">\(a, b\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 1 (Inner product)</strong></span> An <strong>inner product</strong> on <span class="math inline">\(\mathbb{R}^p\)</span> is a function that assigns to each ordered pair of vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> a real number <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\)</span>, and that has the following four properties for all <span class="math inline">\(\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\)</span> and all real numbers <span class="math inline">\(a, b\)</span>:</p>
 <ul>
 <li>
-<strong>positivity</strong>: <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle \ge 0\)</span>;</li>
+<strong>positivity</strong>: <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} \ge 0\)</span>;</li>
 <li>
-<strong>definiteness</strong>: <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle = 0\)</span> if and only if <span class="math inline">\(\tilde{x}= \tilde{0}_{p \times 1}\)</span>;</li>
+<strong>definiteness</strong>: <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} = 0\)</span> if and only if <span class="math inline">\(\tilde{x}= \tilde{0}_{p \times 1}\)</span>;</li>
 <li>
-<strong>linearity in the first slot</strong>: <span class="math inline">\(\left\langle a\,\tilde{x}+ b\,\tilde{y}, \tilde{z} \right\rangle = a\,\left\langle \tilde{x}, \tilde{z} \right\rangle + b\,\left\langle \tilde{y}, \tilde{z} \right\rangle\)</span>;</li>
+<strong>linearity in the first slot</strong>: <span class="math inline">\(\mathopen{}\left\langle a\,\tilde{x}+ b\,\tilde{y}, \tilde{z}\right\rangle\mathclose{} = a\,\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{} + b\,\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\)</span>;</li>
 <li>
-<strong>symmetry</strong>: <span class="math inline">\(\left\langle \tilde{x}, \tilde{y} \right\rangle = \left\langle \tilde{y}, \tilde{x} \right\rangle\)</span>.</li>
+<strong>symmetry</strong>: <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\)</span>.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="rem-inner-product-other-sources" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The definition in other sources). </span><span class="citation" data-cites="axler2024linear">Axler (<a href="#/references" role="doc-biblioref" onclick="">2024</a>, Definition 6.2, p.&nbsp;183)</span> states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is <em>conjugate</em> symmetry, <span class="math inline">\(\left\langle \tilde{u}, \tilde{v} \right\rangle = \overline{\left\langle \tilde{v}, \tilde{u} \right\rangle}\)</span>, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.</p>
+<p><span class="proof-title"><em>Remark 1</em> (The definition in other sources). </span><span class="citation" data-cites="axler2024linear">Axler (<a href="#/references" role="doc-biblioref" onclick="">2024</a>, Definition 6.2, p.&nbsp;183)</span> states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is <em>conjugate</em> symmetry, <span class="math inline">\(\mathopen{}\left\langle \tilde{u}, \tilde{v}\right\rangle\mathclose{} = \overline{\mathopen{}\left\langle \tilde{v}, \tilde{u}\right\rangle\mathclose{}}\)</span>, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.</p>
 </div>
 </section><section class="slide level2"><div id="exm-dot-product-inner-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (The dot product is an inner product)</strong></span> The dot product (1) is an inner product on <span class="math inline">\(\mathbb{R}^p\)</span>, called the <strong>Euclidean</strong> or <strong>standard</strong> inner product. Each of the four properties in <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> holds:</p>
@@ -400,10 +400,10 @@
 <p>which is positive, as positivity and definiteness require of a nonzero vector.</p>
 </div>
 </section><section class="slide level2"><div id="def-inner-product-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Inner product space)</strong></span> A <strong>real inner product space</strong> is a pair <span class="math inline">\((V, \left\langle \cdot, \cdot \right\rangle)\)</span> of a real vector space <span class="math inline">\(V\)</span> and an inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span> on it, a function with the four properties of <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a>. We say that <span class="math inline">\(V\)</span> is <strong>equipped with</strong> that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> states the properties for <span class="math inline">\(V = \mathbb{R}^p\)</span> (<a href="./linear-algebra-vectors.html#def-real-coordinate-space">Definition&nbsp;2 in Vectors</a>), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Inner product space)</strong></span> A <strong>real inner product space</strong> is a pair <span class="math inline">\((V, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> of a real vector space <span class="math inline">\(V\)</span> and an inner product <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span> on it, a function with the four properties of <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a>. We say that <span class="math inline">\(V\)</span> is <strong>equipped with</strong> that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> states the properties for <span class="math inline">\(V = \mathbb{R}^p\)</span> (<a href="./linear-algebra-vectors.html#def-real-coordinate-space">Definition&nbsp;2 in Vectors</a>), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.</p>
 </div>
 </section><section class="slide level2"><div id="exm-inner-product-space" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Real coordinate space as an inner product space)</strong></span> The Euclidean space <span class="math inline">\(\mathbb{R}^p\)</span> equipped with the standard dot product (1), that is, the pair <span class="math inline">\((\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\)</span> with <span class="math inline">\(\left\langle \tilde{x}, \tilde{y} \right\rangle = \tilde{x}\cdot \tilde{y}\)</span>, is an inner product space, because the dot product satisfies the four inner product axioms (<a href="#/exm-dot-product-inner-product" class="quarto-xref">Example&nbsp;1</a>). For <span class="math inline">\(p = 2\)</span>, any vector <span class="math inline">\(\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\)</span> has squared norm <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle = x_1^2 + x_2^2 \ge 0\)</span>, which is zero if and only if</p>
+<p><span class="theorem-title"><strong>Example 2 (Real coordinate space as an inner product space)</strong></span> The Euclidean space <span class="math inline">\(\mathbb{R}^p\)</span> equipped with the standard dot product (1), that is, the pair <span class="math inline">\((\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> with <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = \tilde{x}\cdot \tilde{y}\)</span>, is an inner product space, because the dot product satisfies the four inner product axioms (<a href="#/exm-dot-product-inner-product" class="quarto-xref">Example&nbsp;1</a>). For <span class="math inline">\(p = 2\)</span>, any vector <span class="math inline">\(\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\)</span> has squared norm <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} = x_1^2 + x_2^2 \ge 0\)</span>, which is zero if and only if</p>
 <p><span class="math display">\[
 \begin{aligned}
 x_1 &amp;= x_2 \\
@@ -414,24 +414,24 @@ x_1 &amp;= x_2 \\
 </div>
 </section><section class="slide level2"><div id="exm-weighted-inner-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3 (A weighted inner product)</strong></span> Let <span class="math inline">\(\tilde{c} = (c_1, \ldots, c_p)\)</span> be a vector of positive numbers, and define</p>
-<p><span class="math display">\[\left\langle \tilde{x}, \tilde{y} \right\rangle_{\tilde{c}} \stackrel{\text{def}}{=}\sum_{i=1}^pc_i\,x_i y_i.\]</span></p>
+<p><span class="math display">\[\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}_{\tilde{c}} \stackrel{\text{def}}{=}\sum_{i=1}^pc_i\,x_i y_i.\]</span></p>
 <p>This function is also an inner product on <span class="math inline">\(\mathbb{R}^p\)</span> <span class="citation" data-cites="axler2024linear">(<a href="#/references" role="doc-biblioref" onclick="">Axler 2024</a>, Example 6.3(b), p.&nbsp;184)</span>:</p>
 <ul>
 <li>
-<strong>positivity</strong>: <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle_{\tilde{c}} = \sum_{i=1}^pc_i\,x_i^2\)</span>, and each term <span class="math inline">\(c_i\,x_i^2\)</span> is a positive number times a square, so the sum is at least <span class="math inline">\(0\)</span>;</li>
+<strong>positivity</strong>: <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}_{\tilde{c}} = \sum_{i=1}^pc_i\,x_i^2\)</span>, and each term <span class="math inline">\(c_i\,x_i^2\)</span> is a positive number times a square, so the sum is at least <span class="math inline">\(0\)</span>;</li>
 <li>
-<strong>definiteness</strong>: a sum of nonnegative terms is <span class="math inline">\(0\)</span> exactly when every term is <span class="math inline">\(0\)</span>, and <span class="math inline">\(c_i\,x_i^2 = 0\)</span> exactly when <span class="math inline">\(x_i = 0\)</span>, because <span class="math inline">\(c_i &gt; 0\)</span>; so <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle_{\tilde{c}} = 0\)</span> exactly when <span class="math inline">\(\tilde{x}= \tilde{0}_{p \times 1}\)</span>;</li>
+<strong>definiteness</strong>: a sum of nonnegative terms is <span class="math inline">\(0\)</span> exactly when every term is <span class="math inline">\(0\)</span>, and <span class="math inline">\(c_i\,x_i^2 = 0\)</span> exactly when <span class="math inline">\(x_i = 0\)</span>, because <span class="math inline">\(c_i &gt; 0\)</span>; so <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}_{\tilde{c}} = 0\)</span> exactly when <span class="math inline">\(\tilde{x}= \tilde{0}_{p \times 1}\)</span>;</li>
 <li>
 <strong>linearity in the first slot</strong>: see the derivation after this list;</li>
 <li>
-<strong>symmetry</strong>: <span class="math inline">\(c_i\,x_i y_i = c_i\,y_i x_i\)</span> for each <span class="math inline">\(i\)</span>, so <span class="math inline">\(\left\langle \tilde{x}, \tilde{y} \right\rangle_{\tilde{c}} = \left\langle \tilde{y}, \tilde{x} \right\rangle_{\tilde{c}}\)</span>.</li>
+<strong>symmetry</strong>: <span class="math inline">\(c_i\,x_i y_i = c_i\,y_i x_i\)</span> for each <span class="math inline">\(i\)</span>, so <span class="math inline">\(\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}_{\tilde{c}} = \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}_{\tilde{c}}\)</span>.</li>
 </ul>
 <p>For linearity in the first slot, take <span class="math inline">\(\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\)</span> and real numbers <span class="math inline">\(a, b\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left\langle a\,\tilde{x}+ b\,\tilde{y}, \tilde{z} \right\rangle_{\tilde{c}}
+\mathopen{}\left\langle a\,\tilde{x}+ b\,\tilde{y}, \tilde{z}\right\rangle\mathclose{}_{\tilde{c}}
 &amp;= \sum_{i=1}^pc_i\,(a\,\tilde{x}+ b\,\tilde{y})_i\,z_i
-&amp;&amp; \text{(definition of } \left\langle \cdot, \cdot \right\rangle_{\tilde{c}} \text{)}
+&amp;&amp; \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\tilde{c}} \text{)}
 \\
 &amp;= \sum_{i=1}^pc_i\,(a x_i + b y_i)\,z_i
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
@@ -445,16 +445,16 @@ x_1 &amp;= x_2 \\
 &amp;= a \sum_{i=1}^pc_i x_i z_i + b \sum_{i=1}^pc_i y_i z_i
 &amp;&amp; \text{(factor } a \text{ and } b \text{ out of the sums)}
 \\
-&amp;= a\,\left\langle \tilde{x}, \tilde{z} \right\rangle_{\tilde{c}} + b\,\left\langle \tilde{y}, \tilde{z} \right\rangle_{\tilde{c}}
-&amp;&amp; \text{(definition of } \left\langle \cdot, \cdot \right\rangle_{\tilde{c}} \text{)}
+&amp;= a\,\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{}_{\tilde{c}} + b\,\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}_{\tilde{c}}
+&amp;&amp; \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\tilde{c}} \text{)}
 \end{aligned}
 \]</span></p>
 <p>Different inner products can give different numbers for the same pair of vectors. With <span class="math inline">\(p = 2\)</span>, <span class="math inline">\(\tilde{c} = (2, 1)\)</span>, <span class="math inline">\(\tilde{x}= (1, 3)\)</span> and <span class="math inline">\(\tilde{y}= (4, -1)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left\langle \tilde{x}, \tilde{y} \right\rangle_{\tilde{c}}
+\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}_{\tilde{c}}
 &amp;= 2 \cdot 1 \cdot 4 + 1 \cdot 3 \cdot(-1)
-&amp;&amp; \text{(definition of } \left\langle \cdot, \cdot \right\rangle_{\tilde{c}} \text{)}
+&amp;&amp; \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\tilde{c}} \text{)}
 \\
 &amp;= 8 - 3
 &amp;&amp; \text{(multiply)}
@@ -535,17 +535,17 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-orthogonal-inner-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Orthogonality in an inner product space)</strong></span> In an inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span>, two vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> are <strong>orthogonal with respect to</strong> <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span>, written <span class="math inline">\(\tilde{x}\perp \tilde{y}\)</span>, if</p>
-<p><span class="math display">\[\left\langle \tilde{x}, \tilde{y} \right\rangle = 0\]</span></p>
+<p><span class="theorem-title"><strong>Definition 3 (Orthogonality in an inner product space)</strong></span> In an inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span>, two vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> are <strong>orthogonal with respect to</strong> <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span>, written <span class="math inline">\(\tilde{x}\perp \tilde{y}\)</span>, if</p>
+<p><span class="math display">\[\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = 0\]</span></p>
 <p><span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014</a>, Definition 7.3, p.&nbsp;181)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthogonal-inner-product" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5 (Orthogonality depends on the inner product)</strong></span> Take the weighted inner product of <a href="#/exm-weighted-inner-product" class="quarto-xref">Example&nbsp;3</a> with <span class="math inline">\(\tilde{c} = (2, 1)\)</span>, and let <span class="math inline">\(\tilde{x}= (1, 2)\)</span> and <span class="math inline">\(\tilde{y}= (1, -1)\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left\langle \tilde{x}, \tilde{y} \right\rangle_{\tilde{c}}
+\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}_{\tilde{c}}
 &amp;= 2 \cdot 1 \cdot 1 + 1 \cdot 2 \cdot(-1)
-&amp;&amp; \text{(definition of } \left\langle \cdot, \cdot \right\rangle_{\tilde{c}} \text{)}
+&amp;&amp; \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\tilde{c}} \text{)}
 \\
 &amp;= 2 - 2
 &amp;&amp; \text{(multiply)}
@@ -554,7 +554,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(subtract)}
 \end{aligned}
 \]</span></p>
-<p>so <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> are orthogonal with respect to <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle_{\tilde{c}}\)</span>. They are not orthogonal with respect to the dot product, since</p>
+<p>so <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> are orthogonal with respect to <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}_{\tilde{c}}\)</span>. They are not orthogonal with respect to the dot product, since</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{x}\cdot \tilde{y}&amp;= 1 \cdot 1 + 2 \cdot(-1) \\
@@ -913,7 +913,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <li>Positivity and absolute homogeneity hold by <a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;1</a>.</li>
 <li>The triangle inequality holds by <a href="#/thm-triangle-inequality" class="quarto-xref">Theorem&nbsp;4</a>.</li>
 </ul>
-<p>Every inner product space <span class="math inline">\((\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\)</span> (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) naturally defines an induced norm <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\left\langle \tilde{x}, \tilde{x} \right\rangle}\)</span>, which satisfies all three norm axioms.</p>
+<p>Every inner product space <span class="math inline">\((\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\)</span> (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) naturally defines an induced norm <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}}\)</span>, which satisfies all three norm axioms.</p>
 </div>
 </section><section class="slide level2"><div id="def-vector-p-norm" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Vector <span class="math inline">\(p\)</span>-norm (<span class="math inline">\(\ell_p\)</span> norm, <span class="math inline">\(\ell_1\)</span> norm, taxicab norm, Manhattan norm, <span class="math inline">\(\ell_2\)</span> norm, infinity norm))</strong></span> For a vector <span class="math inline">\(\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span> and any real number <span class="math inline">\(k \ge 1\)</span>, the <strong>vector <span class="math inline">\(p\)</span>-norm</strong> (or <strong><span class="math inline">\(\ell_p\)</span> norm</strong>, traditionally named with parameter <span class="math inline">\(p\)</span> but denoted here with exponent <span class="math inline">\(k\)</span> to avoid clashing with the ambient vector dimension <span class="math inline">\(p\)</span>) is:</p>
@@ -1099,7 +1099,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \]</span></p>
 </li>
 </ul>
-<p>When both vectors have unit Euclidean norm (<span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\)</span>), cosine similarity equals their inner product: <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\)</span>.</p>
+<p>When both vectors have unit Euclidean norm (<span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\)</span>), cosine similarity equals their inner product: <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y}) = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="cor-cosine-similarity-angle" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 2 (Cosine similarity is the cosine of the angle)</strong></span> For nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> with angle <span class="math inline">\(\theta\)</span> between them (<a href="#/def-angle" class="quarto-xref">Definition&nbsp;7</a>),</p>
@@ -1111,21 +1111,21 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p><span class="proof-title"><em>Proof</em>. </span>The ratio that <a href="#/def-angle" class="quarto-xref">Definition&nbsp;7</a> sets equal to <span class="math inline">\(\cos\theta\)</span> is the ratio that <a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;8</a> defines as <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y})\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-cosine-similarity-inner-product-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Cosine similarity in an inner product space)</strong></span> In a general real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span> and induced norm <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span>, the <strong>cosine similarity</strong> is</p>
+<p><span class="theorem-title"><strong>Definition 9 (Cosine similarity in an inner product space)</strong></span> In a general real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\)</span> and induced norm <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span>, the <strong>cosine similarity</strong> is</p>
 <p><span class="math display">\[
-\operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
+\operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="cor-cosine-similarity-unit-vectors" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corollary 3 (Cosine similarity of unit vectors is their inner product)</strong></span> In a real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>), for all vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> with <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\)</span>,</p>
 <p><span class="math display">\[
-\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle.
+\operatorname{cossim}(\tilde{x}, \tilde{y}) = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}.
 \]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Both norms in the denominator of <a href="#/def-cosine-similarity-inner-product-space" class="quarto-xref">Definition&nbsp;9</a> equal <span class="math inline">\(1\)</span>, so</p>
 <p><span class="math display">\[
-\operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{1 \cdot 1} = \left\langle \tilde{x}, \tilde{y} \right\rangle.
+\operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{1 \cdot 1} = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-pearson-cosine-centered" class="theorem">

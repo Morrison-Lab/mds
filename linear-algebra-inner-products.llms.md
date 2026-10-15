@@ -4,22 +4,22 @@ Code
 
 Published
 
-Last modified: 2026-10-15 14:23:59 (PDT)
+Last modified: 2026-10-15 15:19:18 (PDT)
 
 ## 1 Inner products
 
 > **NOTE:**
 >
-> **Definition 1 (Inner product)** An **inner product** on \\\mathbb{R}^p\\ is a function that assigns to each ordered pair of vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ a real number \\\left\langle \tilde{x}, \tilde{y} \right\rangle\\, and that has the following four properties for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and all real numbers \\a, b\\:
+> **Definition 1 (Inner product)** An **inner product** on \\\mathbb{R}^p\\ is a function that assigns to each ordered pair of vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ a real number \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\\, and that has the following four properties for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and all real numbers \\a, b\\:
 >
-> - **positivity**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle \ge 0\\;
-> - **definiteness**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
-> - **linearity in the first slot**: \\\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle = a\\\left\langle \tilde{x}, \tilde{z} \right\rangle + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\\;
-> - **symmetry**: \\\left\langle \tilde{x}, \tilde{y} \right\rangle = \left\langle \tilde{y}, \tilde{x} \right\rangle\\.
+> - **positivity**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} \ge 0\\;
+> - **definiteness**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
+> - **linearity in the first slot**: \\\mathopen{}\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z}\right\rangle\mathclose{} = a\\\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{} + b\\\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\\;
+> - **symmetry**: \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\\.
 
 > **NOTE:**
 >
-> *Remark 1* (The definition in other sources). Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is *conjugate* symmetry, \\\left\langle \tilde{u}, \tilde{v} \right\rangle = \overline{\left\langle \tilde{v}, \tilde{u} \right\rangle}\\, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.
+> *Remark 1* (The definition in other sources). Axler ([2024](#ref-axler2024linear), Definition 6.2, p. 183) states the same definition for any vector space over the real or complex numbers. Axler splits linearity in the first slot into additivity and homogeneity, and his last property is *conjugate* symmetry, \\\mathopen{}\left\langle \tilde{u}, \tilde{v}\right\rangle\mathclose{} = \overline{\mathopen{}\left\langle \tilde{v}, \tilde{u}\right\rangle\mathclose{}}\\, which for real numbers is the same as symmetry. Symmetry and linearity in the first slot together give linearity in the second slot.
 
 > **NOTE:**
 >
@@ -38,11 +38,11 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Inner product space)** A **real inner product space** is a pair \\(V, \left\langle \cdot, \cdot \right\rangle)\\ of a real vector space \\V\\ and an inner product \\\left\langle \cdot, \cdot \right\rangle\\ on it, a function with the four properties of [Definition 1](#def-inner-product). We say that \\V\\ is **equipped with** that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. [Definition 1](#def-inner-product) states the properties for \\V = \mathbb{R}^p\\ ([Definition 2 in Vectors](linear-algebra-vectors.llms.md#def-real-coordinate-space)), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.
+> **Definition 2 (Inner product space)** A **real inner product space** is a pair \\(V, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ of a real vector space \\V\\ and an inner product \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ on it, a function with the four properties of [Definition 1](#def-inner-product). We say that \\V\\ is **equipped with** that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. [Definition 1](#def-inner-product) states the properties for \\V = \mathbb{R}^p\\ ([Definition 2 in Vectors](linear-algebra-vectors.llms.md#def-real-coordinate-space)), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.
 
 > **NOTE:**
 >
-> **Example 2 (Real coordinate space as an inner product space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the standard dot product (1), that is, the pair \\(\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\\ with \\\left\langle \tilde{x}, \tilde{y} \right\rangle = \tilde{x}\cdot \tilde{y}\\, is an inner product space, because the dot product satisfies the four inner product axioms ([Example 1](#exm-dot-product-inner-product)). For \\p = 2\\, any vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\ has squared norm \\\left\langle \tilde{x}, \tilde{x} \right\rangle = x_1^2 + x_2^2 \ge 0\\, which is zero if and only if
+> **Example 2 (Real coordinate space as an inner product space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the standard dot product (1), that is, the pair \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ with \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = \tilde{x}\cdot \tilde{y}\\, is an inner product space, because the dot product satisfies the four inner product axioms ([Example 1](#exm-dot-product-inner-product)). For \\p = 2\\, any vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\ has squared norm \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} = x_1^2 + x_2^2 \ge 0\\, which is zero if and only if
 >
 > \\ \begin{aligned} x_1 &= x_2 \\ &= 0. \end{aligned} \\
 >
@@ -52,22 +52,22 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 >
 > **Example 3 (A weighted inner product)** Let \\\tilde{c} = (c_1, \ldots, c_p)\\ be a vector of positive numbers, and define
 >
-> \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\tilde{c}} \stackrel{\text{def}}{=}\sum\_{i=1}^pc_i\\x_i y_i.\\
+> \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} \stackrel{\text{def}}{=}\sum\_{i=1}^pc_i\\x_i y_i.\\
 >
 > This function is also an inner product on \\\mathbb{R}^p\\ ([Axler 2024](#ref-axler2024linear), Example 6.3(b), p. 184):
 >
-> - **positivity**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\tilde{c}} = \sum\_{i=1}^pc_i\\x_i^2\\, and each term \\c_i\\x_i^2\\ is a positive number times a square, so the sum is at least \\0\\;
-> - **definiteness**: a sum of nonnegative terms is \\0\\ exactly when every term is \\0\\, and \\c_i\\x_i^2 = 0\\ exactly when \\x_i = 0\\, because \\c_i \> 0\\; so \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\tilde{c}} = 0\\ exactly when \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
+> - **positivity**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\tilde{c}} = \sum\_{i=1}^pc_i\\x_i^2\\, and each term \\c_i\\x_i^2\\ is a positive number times a square, so the sum is at least \\0\\;
+> - **definiteness**: a sum of nonnegative terms is \\0\\ exactly when every term is \\0\\, and \\c_i\\x_i^2 = 0\\ exactly when \\x_i = 0\\, because \\c_i \> 0\\; so \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\tilde{c}} = 0\\ exactly when \\\tilde{x}= \tilde{0}\_{p \times 1}\\;
 > - **linearity in the first slot**: see the derivation after this list;
-> - **symmetry**: \\c_i\\x_i y_i = c_i\\y_i x_i\\ for each \\i\\, so \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\tilde{c}} = \left\langle \tilde{y}, \tilde{x} \right\rangle\_{\tilde{c}}\\.
+> - **symmetry**: \\c_i\\x_i y_i = c_i\\y_i x_i\\ for each \\i\\, so \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} = \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\_{\tilde{c}}\\.
 >
 > For linearity in the first slot, take \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\:
 >
-> \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\tilde{c}} &= \sum\_{i=1}^pc_i\\(a\\\tilde{x}+ b\\\tilde{y})\_i\\z_i && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \\ &= \sum\_{i=1}^pc_i\\(a x_i + b y_i)\\z_i && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\c_i x_i z_i + b\\c_i y_i z_i\right)\mathclose{} && \text{(distribute, and commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\c_i x_i z_i + \sum\_{i=1}^pb\\c_i y_i z_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^pc_i x_i z_i + b \sum\_{i=1}^pc_i y_i z_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\tilde{c}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\tilde{c}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\tilde{c}} &= \sum\_{i=1}^pc_i\\(a\\\tilde{x}+ b\\\tilde{y})\_i\\z_i && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \\ &= \sum\_{i=1}^pc_i\\(a x_i + b y_i)\\z_i && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\c_i x_i z_i + b\\c_i y_i z_i\right)\mathclose{} && \text{(distribute, and commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\c_i x_i z_i + \sum\_{i=1}^pb\\c_i y_i z_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^pc_i x_i z_i + b \sum\_{i=1}^pc_i y_i z_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{}\_{\tilde{c}} + b\\\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\tilde{c}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \end{aligned} \\
 >
 > Different inner products can give different numbers for the same pair of vectors. With \\p = 2\\, \\\tilde{c} = (2, 1)\\, \\\tilde{x}= (1, 3)\\ and \\\tilde{y}= (4, -1)\\:
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\tilde{c}} &= 2 \cdot 1 \cdot 4 + 1 \cdot 3 \cdot(-1) && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \\ &= 8 - 3 && \text{(multiply)} \\ &= 5 && \text{(subtract)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} &= 2 \cdot 1 \cdot 4 + 1 \cdot 3 \cdot(-1) && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \\ &= 8 - 3 && \text{(multiply)} \\ &= 5 && \text{(subtract)} \end{aligned} \\
 >
 > while the dot product of the same vectors is
 >
@@ -107,9 +107,9 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Orthogonality in an inner product space)** In an inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\left\langle \cdot, \cdot \right\rangle\\, two vectors \\\tilde{x}\\ and \\\tilde{y}\\ are **orthogonal with respect to** \\\left\langle \cdot, \cdot \right\rangle\\, written \\\tilde{x}\perp \tilde{y}\\, if
+> **Definition 3 (Orthogonality in an inner product space)** In an inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\, two vectors \\\tilde{x}\\ and \\\tilde{y}\\ are **orthogonal with respect to** \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\, written \\\tilde{x}\perp \tilde{y}\\, if
 >
-> \\\left\langle \tilde{x}, \tilde{y} \right\rangle = 0\\
+> \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = 0\\
 >
 > ([Banerjee and Roy 2014](#ref-banerjee2014linear), Definition 7.3, p. 181).
 
@@ -117,9 +117,9 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 >
 > **Example 5 (Orthogonality depends on the inner product)** Take the weighted inner product of [Example 3](#exm-weighted-inner-product) with \\\tilde{c} = (2, 1)\\, and let \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (1, -1)\\. Then
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\tilde{c}} &= 2 \cdot 1 \cdot 1 + 1 \cdot 2 \cdot(-1) && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \\ &= 2 - 2 && \text{(multiply)} \\ &= 0, && \text{(subtract)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\tilde{c}} &= 2 \cdot 1 \cdot 1 + 1 \cdot 2 \cdot(-1) && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}} \text{)} \\ &= 2 - 2 && \text{(multiply)} \\ &= 0, && \text{(subtract)} \end{aligned} \\
 >
-> so \\\tilde{x}\\ and \\\tilde{y}\\ are orthogonal with respect to \\\left\langle \cdot, \cdot \right\rangle\_{\tilde{c}}\\. They are not orthogonal with respect to the dot product, since
+> so \\\tilde{x}\\ and \\\tilde{y}\\ are orthogonal with respect to \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\tilde{c}}\\. They are not orthogonal with respect to the dot product, since
 >
 > \\ \begin{aligned} \tilde{x}\cdot \tilde{y}&= 1 \cdot 1 + 2 \cdot(-1) \\ &= -1 \\ &\ne 0. \end{aligned} \\
 
@@ -299,7 +299,7 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 > - Positivity and absolute homogeneity hold by [Theorem 1](#thm-norm-properties).
 > - The triangle inequality holds by [Theorem 4](#thm-triangle-inequality).
 >
-> Every inner product space \\(\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\\ ([Definition 2](#def-inner-product-space)) naturally defines an induced norm \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\left\langle \tilde{x}, \tilde{x} \right\rangle}\\, which satisfies all three norm axioms.
+> Every inner product space \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{})\\ ([Definition 2](#def-inner-product-space)) naturally defines an induced norm \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}}\\, which satisfies all three norm axioms.
 
 > **NOTE:**
 >
@@ -481,7 +481,7 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 >
 >   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
 >
-> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\\.
+> When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\\.
 
 > **NOTE:**
 >
@@ -495,21 +495,21 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Cosine similarity in an inner product space)** In a general real inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\left\langle \cdot, \cdot \right\rangle\\ and induced norm \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\, the **cosine similarity** is
+> **Definition 9 (Cosine similarity in an inner product space)** In a general real inner product space ([Definition 2](#def-inner-product-space)) with inner product \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ and induced norm \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\\, the **cosine similarity** is
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
 
 > **NOTE:**
 >
 > **Corollary 3 (Cosine similarity of unit vectors is their inner product)** In a real inner product space ([Definition 2](#def-inner-product-space)), for all vectors \\\tilde{x}\\ and \\\tilde{y}\\ with \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\,
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle. \\
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}. \\
 
 > **NOTE:**
 >
 > *Proof*. Both norms in the denominator of [Definition 9](#def-cosine-similarity-inner-product-space) equal \\1\\, so
 >
-> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{1 \cdot 1} = \left\langle \tilde{x}, \tilde{y} \right\rangle. \\
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{1 \cdot 1} = \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}. \\
 
 > **NOTE:**
 >

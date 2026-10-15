@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 14:23:59 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 15:19:18 (PDT)</p>
 </section><section class="slide level2"><div class="proof remark">
 <p><span class="proof-title"><em>Remark</em>. </span>Probability and statistics describe events, outcomes, and parameters as sets, and random variables, densities, and measures as functions. This page collects the definitions of sets and functions that the Morrison Lab’s probability and statistics notes build on.</p>
 </div>
@@ -774,18 +774,18 @@ f^{-1}(7) &amp;= \frac{7 - 1}{2} \\
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-elementwise-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 33 (Elementwise application of a function to a vector)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="#/def-function">definition</a>), and let <span class="math inline">\(\tilde{x}= \mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}^{\top}\)</span> be a vector whose entries all lie in <span class="math inline">\(A\)</span>. The <strong>elementwise application</strong> of <span class="math inline">\(f\)</span> to <span class="math inline">\(\tilde{x}\)</span>, written <span class="math inline">\(f^{\odot}(\tilde{x})\)</span>, is the vector of the values of <span class="math inline">\(f\)</span> at the entries of <span class="math inline">\(\tilde{x}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 33 (Elementwise application of a function to a vector)</strong></span> Let <span class="math inline">\(f : A \to B\)</span> be a function (<a href="#/def-function">definition</a>), and let <span class="math inline">\(\tilde{x}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\)</span> be a vector whose entries all lie in <span class="math inline">\(A\)</span>. The <strong>elementwise application</strong> of <span class="math inline">\(f\)</span> to <span class="math inline">\(\tilde{x}\)</span>, written <span class="math inline">\(f^{\odot}(\tilde{x})\)</span>, is the vector of the values of <span class="math inline">\(f\)</span> at the entries of <span class="math inline">\(\tilde{x}\)</span>:</p>
 <p><span class="math display">\[
-f^{\odot}(\tilde{x}) = \mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}^{\top}.
+f^{\odot}(\tilde{x}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}.
 \]</span></p>
 <p>It is a function <span class="math inline">\(f^{\odot} : A^n \to B^n\)</span>, where <span class="math inline">\(A^n\)</span> is the <span class="math inline">\(n\)</span>-fold Cartesian product of <span class="math inline">\(A\)</span> with itself (<a href="#/def-cartesian-product">definition</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-elementwise-function" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (The exponential and logistic functions applied to a vector)</strong></span> Let <span class="math inline">\(\tilde{x}= \mathopen{}\left(-1, 0, 2\right)\mathclose{}^{\top}\)</span>. With <span class="math inline">\(\operatorname{exp}(t) = e^t\)</span> and the logistic function <span class="math inline">\(\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 20 (The exponential and logistic functions applied to a vector)</strong></span> Let <span class="math inline">\(\tilde{x}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\)</span>. With <span class="math inline">\(\operatorname{exp}(t) = e^t\)</span> and the logistic function <span class="math inline">\(\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
-\operatorname{exp}^{\odot}(\tilde{x}) &amp;= \mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}^{\top}, \\
-\operatorname{expit}^{\odot}(\tilde{x}) &amp;= \mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}^{\top}.
+\operatorname{exp}^{\odot}(\tilde{x}) &amp;= {\mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}}^{\top}, \\
+\operatorname{expit}^{\odot}(\tilde{x}) &amp;= {\mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}}^{\top}.
 \end{aligned}
 \]</span></p>
 <p>The code evaluates both, using R’s <code><a href="https://rdrr.io/r/base/Log.html">exp()</a></code> and <code><a href="https://rdrr.io/r/stats/Logistic.html">plogis()</a></code>, which apply to a vector entry by entry.</p>

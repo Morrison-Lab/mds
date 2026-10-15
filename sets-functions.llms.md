@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 14:23:59 (PDT)
+Last modified: 2026-10-15 15:19:18 (PDT)
 
 > **NOTE:**
 >
@@ -416,17 +416,17 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 
 > **NOTE:**
 >
-> **Definition 33 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= \mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
+> **Definition 33 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
 >
-> \\ f^{\odot}(\tilde{x}) = \mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}^{\top}. \\
+> \\ f^{\odot}(\tilde{x}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}. \\
 >
 > It is a function \\f^{\odot} : A^n \to B^n\\, where \\A^n\\ is the \\n\\-fold Cartesian product of \\A\\ with itself ([definition](#def-cartesian-product)).
 
 > **NOTE:**
 >
-> **Example 20 (The exponential and logistic functions applied to a vector)** Let \\\tilde{x}= \mathopen{}\left(-1, 0, 2\right)\mathclose{}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
+> **Example 20 (The exponential and logistic functions applied to a vector)** Let \\\tilde{x}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
 >
-> \\ \begin{aligned} \operatorname{exp}^{\odot}(\tilde{x}) &= \mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}^{\top}, \\ \operatorname{expit}^{\odot}(\tilde{x}) &= \mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}^{\top}. \end{aligned} \\
+> \\ \begin{aligned} \operatorname{exp}^{\odot}(\tilde{x}) &= {\mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}}^{\top}, \\ \operatorname{expit}^{\odot}(\tilde{x}) &= {\mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}}^{\top}. \end{aligned} \\
 >
 > The code evaluates both, using R’s [`exp()`](https://rdrr.io/r/base/Log.html) and [`plogis()`](https://rdrr.io/r/stats/Logistic.html), which apply to a vector entry by entry.
 >

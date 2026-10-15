@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 14:23:59 (PDT)
+Last modified: 2026-10-15 15:19:18 (PDT)
 
 > **NOTE:**
 >
@@ -695,7 +695,7 @@ Last modified: 2026-10-15 14:23:59 (PDT)
 >
 > 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu= \operatorname{P}\\ is a probability measure ([Definition 22](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra-sums.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
 >
-> 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
+> 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product \\\mathopen{}\left\langle f, g\right\rangle\mathclose{} \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
 >
 > 3.  **Loss functions, estimation, and robustness**: The choice of \\p\\ in \\L^p\\ norms defines loss functions for optimization and regression:
 >

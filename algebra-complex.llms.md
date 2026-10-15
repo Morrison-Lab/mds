@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 14:23:59 (PDT)
+Last modified: 2026-10-15 15:19:18 (PDT)
 
 ## 1 Complex numbers
 
@@ -78,13 +78,19 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) makes this idea rigo
 >
 > \\z = a + b\\i,\\
 >
-> where \\a\\ and \\b\\ are real numbers and \\i\\ is the imaginary unit ([Definition 1](#def-imaginary-unit)).
+> where \\a\\ and \\b\\ are real numbers and \\i\\ is the imaginary unit ([Definition 1](#def-imaginary-unit)). The set of all complex numbers is \\\mathbb{C}\stackrel{\text{def}}{=}\\a + b\\i : a, b \in \mathbb{R}\\\\.
+
+> **NOTE:**
 >
-> - The **real part** of \\z\\ is \\\operatorname{Re} z \stackrel{\text{def}}{=}a\\.
-> - The **imaginary part** of \\z\\ is \\\operatorname{Im} z \stackrel{\text{def}}{=}b\\.
-> - The set of all complex numbers is \\\mathbb{C}\stackrel{\text{def}}{=}\\a + b\\i : a, b \in \mathbb{R}\\\\.
+> **Definition 3 (Real part)** The **real part** of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is \\\operatorname{Re} z \stackrel{\text{def}}{=}a\\.
+
+> **NOTE:**
 >
-> Two complex numbers are equal exactly when their real parts are equal and their imaginary parts are equal.
+> **Definition 4 (Imaginary part)** The **imaginary part** of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is \\\operatorname{Im} z \stackrel{\text{def}}{=}b\\.
+
+> **NOTE:**
+>
+> **Definition 5 (Equal complex numbers)** Two complex numbers ([Definition 2](#def-complex-number)) are **equal** exactly when their real parts ([Definition 3](#def-real-part)) are equal and their imaginary parts ([Definition 4](#def-imaginary-part)) are equal.
 
 Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}\\ as the set of ordered pairs \\(a, b)\\ of real numbers, written \\a + bi\\, and Axler ([2024](#ref-axler2024linear), Definition 4.1, p. 120) defines the real and imaginary parts.
 
@@ -106,7 +112,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) defines \\\mathbb{C}
 >
 > \\ \begin{aligned} a + 0\\i &= a + 0 && \text{(} 0\\i = 0 \text{)} \\ &= a && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
-> so \\a\\ is the complex number \\a + 0\\i\\, whose imaginary part is \\0\\. The real part of \\a + 0\\i\\ is \\a\\, and by the equality rule in [Definition 2](#def-complex-number) no other pair of real and imaginary parts gives the same number.
+> so \\a\\ is the complex number \\a + 0\\i\\, whose imaginary part is \\0\\. The real part of \\a + 0\\i\\ is \\a\\, and by the equality rule in [Definition 5](#def-complex-equality) no other pair of real and imaginary parts gives the same number.
 >
 > Conversely, if \\z = a + b\\i\\ has \\b = \operatorname{Im} z = 0\\, then \\z = a + 0\\i = a\\ by the same calculation, so \\z\\ is real.
 
@@ -163,7 +169,7 @@ Axler ([2024](#ref-axler2024linear), Definition 1.1, p. 2) takes these two form
 
 > **NOTE:**
 >
-> **Definition 3 (Complex conjugate)** The **complex conjugate** of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
+> **Definition 6 (Complex conjugate)** The **complex conjugate** of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
 >
 > \\\overline{z} \stackrel{\text{def}}{=}a - b\\i.\\
 
@@ -183,7 +189,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 
 > **NOTE:**
 >
-> **Definition 4 (Absolute value (modulus) of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
+> **Definition 7 (Absolute value (modulus) of a complex number)** The **absolute value**, or **modulus**, of a complex number \\z = a + b\\i\\ ([Definition 2](#def-complex-number)) is
 >
 > \\\mathopen{}\left\|z\right\|\mathclose{} \stackrel{\text{def}}{=}\sqrt{a^2 + b^2}.\\
 
@@ -217,7 +223,7 @@ Axler ([2024](#ref-axler2024linear), Definition 4.2, p. 120) gives the same def
 >
 > *Proof*. Write \\z = a + b\\i\\ with \\a, b\\ real. Then
 >
-> \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~3}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~1}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~4}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} z\\\overline{z} &= (a + b\\i)(a - b\\i) && \text{(}\href{#def-complex-conjugate}{\text{Definition~6}}\text{)} \\ &= a^2 - ab\\i + ab\\i - b^2\\i^2 && \text{(distribute)} \\ &= a^2 - b^2\\i^2 && \text{(cancel } ab\\i \text{)} \\ &= a^2 + b^2 && \text{(}\href{#def-imaginary-unit}{\text{Definition~1}}\text{)} \\ &= \mathopen{}\left\|z\right\|\mathclose{}^2 && \text{(}\href{#def-complex-modulus}{\text{Definition~7}}\text{)} \end{aligned} \\
 
 Axler ([2024](#ref-axler2024linear), result 4.4, p. 121) lists this identity among the properties of complex numbers.
 
