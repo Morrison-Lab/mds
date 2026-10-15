@@ -12,7 +12,7 @@ and write the result as a sum of reciprocals of integers.
 :::
 
 ::: {#sol-miller-dint-harmonic-identity}
-**Method 1 (integration then geometric series):**
+**Integration, then a geometric series:**
 Integrate with respect to $x$ first:
 
 $$
@@ -47,7 +47,10 @@ $$
 \end{aligned}
 $$
 
-**Method 2 (binomial expansion):**
+The result is stated as @thm-dint-harmonic-identity.
+
+*Remark (binomial expansion):*
+The same integral can be expanded in a different way.
 Expand $(1 - xy)^{n-1} = \sum_{k=0}^{n-1} \binom{n-1}{k}(-1)^k (xy)^k$. Integrating over $[0, 1]^2$:
 
 $$\int_0^1 \int_0^1 (xy)^k\,dx\,dy = \paren{\frac{1}{k+1}}^2$$
@@ -61,8 +64,8 @@ $$
 \end{aligned}
 $$
 
-This is the same integral as in Method 1,
-so Method 1 shows that the alternating binomial sum equals $\sumjn \frac{1}{j}$.
+This reaches the alternating binomial sum for the same integral as above,
+so it inherits the value $\sumjn \frac{1}{j}$ from the integration-then-geometric-series computation.
 
 *Remark:* This integral identity connects multivariable integration with harmonic numbers $H_n = \sumto{k}{n} \frac{1}{k} \approx \log n + \gamma$, where $\gamma \approx 0.5772$ is the Euler-Mascheroni constant.
 :::
