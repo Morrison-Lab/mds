@@ -50,6 +50,15 @@ Always put a blank line before the start of a bullet-point list in markdown (`.m
 - Use bullet lists when the items are important and deserve emphasis
 - Technical lists (commands, file names, features) typically benefit from bullet format
 
+### Definitions and Theorems
+
+Define one term per `#def-` div, and give each further term its own div and id, placed right after the first (or before it, if the first uses it) and linking to it.
+Aliases of one term ("also called ...") stay in the same div, in bold and in the div title.
+Put commentary in a separate `#rem-` div and each example in an `#exm-` div after the definition it illustrates.
+A theorem-type div states one result.
+Keep the old id on the original term, since other pages link to it (Ezra, 2026-10-12).
+The wording is canonical in psw's [Writing for teaching](https://morrison-lab.github.io/psw/chapters/teaching.html).
+
 ## Code Chunks
 
 ### Code Folding
