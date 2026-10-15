@@ -8,7 +8,7 @@ Evaluate the double integral
 $$\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy$$
 
 for every positive integer $n$,
-and write the result as an expression in $n$.
+and write the result as a sum of reciprocals of integers.
 :::
 
 ::: {#sol-miller-dint-harmonic-identity}
@@ -57,10 +57,12 @@ Multiplying by $n$ and using the identity $\frac{n}{k+1}\binom{n-1}{k} = \binom{
 $$
 \begin{aligned}
 \int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy
-&= \sum_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} \\
-&= \sumjn \frac{1}{j}
+&= \sum_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1}
 \end{aligned}
 $$
+
+This is the same integral as in Method 1,
+so Method 1 shows that the alternating binomial sum equals $\sumjn \frac{1}{j}$.
 
 *Remark:* This integral identity connects multivariable integration with harmonic numbers $H_n = \sumto{k}{n} \frac{1}{k} \approx \log n + \gamma$, where $\gamma \approx 0.5772$ is the Euler-Mascheroni constant.
 :::
