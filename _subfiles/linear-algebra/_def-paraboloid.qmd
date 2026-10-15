@@ -14,7 +14,15 @@ where $\matr{S}$ is a nonzero symmetric $p \times p$ matrix
 $\vecf{b} \in \reals^p$,
 and $c \in \reals$.
 The first term is a quadratic form (@def-quadratic-form).
-The paraboloid is **elliptic** if $\matr{S}$ is positive definite
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-elliptic-paraboloid}
+#### Elliptic paraboloid
+
+The paraboloid of @def-paraboloid is **elliptic** if $\matr{S}$ is positive definite
 (@def-positive-definite);
 it is then a bowl that opens upward.
 
