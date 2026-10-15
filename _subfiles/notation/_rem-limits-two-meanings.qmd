@@ -1,7 +1,7 @@
 :::{#rem-limits-two-meanings}
 #### Two meanings of "limit"
 
-The lower and upper limits of a sum or integral (@def-lower-upper-limits)
+The lower and upper limits of a sum or integral (@def-lower-upper-limits, @def-upper-limit)
 are not limits in the calculus sense,
 such as the [limit of a function](calculus.qmd#def-limit)
 or the [limit of a sequence](algebra.qmd#def-sequence-limit).
