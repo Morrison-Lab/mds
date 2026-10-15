@@ -7,27 +7,3 @@ There are two: the universal quantifier (@def-universal-quantifier)
 and the existential quantifier (@def-existential-quantifier).
 
 :::
-
-{{< slidebreak >}}
-
-:::{#def-universal-quantifier}
-#### Universal quantifier
-
-The **universal quantifier** "for all" is a quantifier (@def-quantifier):
-$\forall x \in S, P(x)$ ("for every $x$ in $S$, $P(x)$")
-is true when $P(x)$ is true for every element $x$ of $S$,
-and false otherwise.
-
-:::
-
-{{< slidebreak >}}
-
-:::{#def-existential-quantifier}
-#### Existential quantifier
-
-The **existential quantifier** "there exists" is a quantifier (@def-quantifier):
-$\exists x \in S, P(x)$ ("there is an $x$ in $S$ such that $P(x)$")
-is true when $P(x)$ is true for at least one element $x$ of $S$,
-and false otherwise.
-
-:::
