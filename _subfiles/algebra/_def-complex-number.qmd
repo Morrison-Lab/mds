@@ -31,9 +31,9 @@ The **imaginary part** of a complex number $z = a + b\,i$ (@def-complex-number) 
 {{< slidebreak >}}
 
 :::{#def-complex-equality}
-#### Equality of complex numbers
+#### Equal complex numbers
 
-Two complex numbers (@def-complex-number) are equal exactly when their real parts (@def-real-part) are equal and their imaginary parts (@def-imaginary-part) are equal.
+Two complex numbers (@def-complex-number) are **equal** exactly when their real parts (@def-real-part) are equal and their imaginary parts (@def-imaginary-part) are equal.
 
 :::
 
