@@ -18,10 +18,9 @@ that satisfies:
 :::{#rem-sigma-field}
 #### $\sigma$-field
 
-Other sources call a $\sigma$-algebra a **$\sigma$-field**
+Other sources call a $\sigma$-algebra a **$\sigma$-field** [@billingsley1995probability]
+or a **Borel field** [@CaseBerg01, Def. 1.2.1]
 (see [Wikipedia: $\sigma$-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)).
-Examples are **$\sigma$-field** [@billingsley1995probability]
-and **Borel field** [@CaseBerg01, Def. 1.2.1].
 The names mean the same thing.
 The "Borel" in "Borel field" is a different use of "Borel" from the
 [Borel $\sigma$-algebra](#def-borel-sigma-algebra) on $\reals$,
