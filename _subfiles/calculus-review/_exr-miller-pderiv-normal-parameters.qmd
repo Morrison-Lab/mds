@@ -5,7 +5,7 @@ Adapted from @problifesavercalc, Question 1.1.43.
 
 Let
 
-$$f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi\sdpar^2}}\exp{-\frac{(x - \mean)^2}{2\sdpar^2}}$$
+$$f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi\sdpar^2}}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}}$$
 
 Find $\derivf{f}{\mean}$ and $\derivf{f}{\sdpar}$.
 :::
@@ -15,16 +15,16 @@ Find $\derivf{f}{\mean}$ and $\derivf{f}{\sdpar}$.
 Treat $\sdpar$ as constant. Differentiating the exponential factor via the chain rule:
 
 $$\ba
-\derivf{f}{\mean} &= \frac{1}{\sqrt{2\pi\varpar}}\exp{-\frac{(x - \mean)^2}{2\varpar}} \cd \sb{-\frac{2(x - \mean)(-1)}{2\varpar}}
+\derivf{f}{\mean} &= \frac{1}{\sqrt{2\pi\varpar}}\expf{-\frac{(x - \mean)^2}{2\varpar}} \cd \sb{-\frac{2(x - \mean)(-1)}{2\varpar}}
 \\
 &= \frac{x - \mean}{\sdpar^2} f(x; \mean, \sdpar)
 \ea$$
 
 **2. Derivative with respect to $\sdpar$:**
-Write $f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi}}\sdpar^{-1}\exp{-\frac{(x - \mean)^2}{2\sdpar^2}}$ and apply the product rule:
+Write $f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi}}\sdpar^{-1}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}}$ and apply the product rule:
 
 $$\ba
-\derivf{f}{\sdpar} &= -\frac{1}{\sqrt{2\pi}}\sdpar^{-2}\exp{-\frac{(x - \mean)^2}{2\sdpar^2}} + \frac{1}{\sqrt{2\pi}}\sdpar^{-1}\exp{-\frac{(x - \mean)^2}{2\sdpar^2}} \cd \sb{\frac{(x - \mean)^2}{\sdpar^3}}
+\derivf{f}{\sdpar} &= -\frac{1}{\sqrt{2\pi}}\sdpar^{-2}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}} + \frac{1}{\sqrt{2\pi}}\sdpar^{-1}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}} \cd \sb{\frac{(x - \mean)^2}{\sdpar^3}}
 \\
 &= \sb{-\frac{1}{\sdpar} + \frac{(x - \mean)^2}{\sdpar^3}} f(x; \mean, \sdpar)
 \ea$$
