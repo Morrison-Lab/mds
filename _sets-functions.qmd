@@ -1,11 +1,6 @@
-::: remark
-
-Sets, functions, and expressions and algorithms now have a fragment each.
-This file keeps the old path working for host sites:
-it includes the three fragments, in the order of the old page.
-A host site may include the fragments directly instead.
-
-:::
+<!-- Compatibility shim: the old Sets and Functions fragment, kept so host sites that
+include mds/_sets-functions.qmd keep rendering. It includes the three fragments that
+replaced it, in the old page's order. -->
 
 {{< include mds/_sets.qmd >}}
 
