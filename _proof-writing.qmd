@@ -326,7 +326,7 @@ which does.
 :::{#exm-direct-proof}
 #### The square of an odd integer is odd
 
-Claim: if $n$ is an [odd](notation.qmd#def-even-odd) integer,
+Claim: if $n$ is an [odd](notation.qmd#def-odd) integer,
 then $n^2$ is odd.
 
 Since $n$ is odd,
