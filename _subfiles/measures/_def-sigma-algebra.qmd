@@ -18,12 +18,11 @@ that satisfies:
 :::{#rem-sigma-field}
 #### $\sigma$-field
 
-Other sources call a $\sigma$-algebra a **$\sigma$-field**
+Other sources call a $\sigma$-algebra a **$\sigma$-field** [@billingsley1995probability]
+or a **Borel field** [@CaseBerg01, Def. 1.2.1]
 (see [Wikipedia: $\sigma$-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)).
-For example, @billingsley1995probability uses "$\sigma$-field".
-The two names mean the same thing.
-Casella and Berger call it a **Borel field** [@CaseBerg01, Def. 1.2.1].
-That is a different use of "Borel" from the
+The names mean the same thing.
+The "Borel" in "Borel field" is a different use of "Borel" from the
 [Borel $\sigma$-algebra](#def-borel-sigma-algebra) on $\reals$,
 which is one particular $\sigma$-algebra.
 
