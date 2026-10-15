@@ -82,6 +82,10 @@
 
 {{< include mds/_subfiles/linear-algebra/_def-cosine-similarity-inner-product-space.qmd >}}
 
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/linear-algebra/_thm-pearson-cosine-centered.qmd >}}
+
 ## Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
 
 {{< include mds/_subfiles/linear-algebra/_prose-gram-schmidt-attribution.qmd >}}
