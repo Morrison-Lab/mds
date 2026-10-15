@@ -120,24 +120,6 @@ defined in the `latex-macros` submodule's `macros.qmd`.
 
 {{< include mds/_subfiles/notation/_exm-irrational-numbers.qmd >}}
 
-## Percent sign ("%")
-
-The word "percent" comes from the Latin "per centum";
-"centum" is Latin for 100,
-so "percent" means "per hundred"
-(cf. <https://en.wikipedia.org/wiki/Percentage>).
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_def-percent.qmd >}}
-
-{{< slidebreak >}}
-
-{{< include mds/_subfiles/notation/_exm-percent.qmd >}}
-
-You are welcome to switch between decimal and percent notation freely;
-just make sure you execute it correctly.
-
 ## Indicator functions {#sec-indicator-functions}
 
 {{< include mds/_subfiles/notation/_sec-indicator-functions.qmd >}}
