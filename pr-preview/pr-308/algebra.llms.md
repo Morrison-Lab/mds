@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 02:49:28 (PDT)
+Last modified: 2026-10-15 05:19:02 (PDT)
 
 The algebra notes are split across these pages:
 
@@ -18,7 +18,7 @@ A link to a section, theorem or definition on this page from before the split go
 
 ## 1 Further reading
 
-- Abramson et al. ([2021](#ref-abramson2021algebra)) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, and logarithms, which overlap with the algebra in these notes.
+- Abramson et al. ([2021](#ref-abramson2021algebra)) is a free online textbook on algebra and trigonometry. It covers equations, inequalities, polynomials, exponentials, logarithms, and trigonometry, which overlap with the algebra in these notes.
 - Rudin ([1976](#ref-rudin1976principles)) develops the real numbers, including the least upper bound property behind the infimum and supremum.
 
 ## References
