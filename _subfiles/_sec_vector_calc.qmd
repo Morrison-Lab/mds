@@ -22,6 +22,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-pderiv-normal-parameters.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/calculus-review/_exr-miller-pderiv-exp-quadratic.qmd >}}
 
 {{< slidebreak >}}
@@ -201,6 +205,10 @@
 {{< include mds/_subfiles/vector-calc/_exr-gradient-of-linear.qmd >}}
 
 {{< include mds/_subfiles/vector-calc/_sol-gradient-of-linear.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/vector-calc/_thm-gradient-of-linear.qmd >}}
 
 
 ## Second partial derivatives and the Hessian {#sec-second-derivatives}

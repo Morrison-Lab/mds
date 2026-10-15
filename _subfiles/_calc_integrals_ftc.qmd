@@ -82,4 +82,8 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/calculus-review/_thm-int-uniform-convolution.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/videos/_note-video-definite-integrals.qmd >}}

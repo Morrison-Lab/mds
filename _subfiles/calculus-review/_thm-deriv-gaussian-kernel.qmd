@@ -1,0 +1,14 @@
+:::{#thm-deriv-gaussian-kernel}
+#### Derivative of the standard Gaussian kernel
+
+For $f(x) = \expf{-\frac{x^2}{2}}$ and every $x \in \reals$,
+
+$$f'(x) = -x\expf{-\frac{x^2}{2}}$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-deriv-gaussian-kernel, worked in @sol-miller-deriv-gaussian-kernel.
+
+:::

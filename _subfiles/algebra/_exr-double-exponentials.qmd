@@ -13,6 +13,10 @@ For $b,c \in \reals$, when does $b^c = bc$?
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/algebra/_thm-exp-vs-mult.qmd >}}
+
+{{< slidebreak >}}
+
 :::{#exr-double-exponential}
 #### Repeated exponentiation
 
@@ -24,3 +28,7 @@ when does $(a^b)^c = a^{(b^c)}$?
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/algebra/_sol-double-exponential.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-double-exponential.qmd >}}
