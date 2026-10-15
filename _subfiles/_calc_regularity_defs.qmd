@@ -39,7 +39,16 @@ A function $f$ is **continuous at** $x = c$ if all three conditions hold:
 2. $\lim_{x \to c} f(x)$ exists, and
 3. $\lim_{x \to c} f(x) = f(c)$.
 
-If any of the three conditions fails, $f$ is **discontinuous** at $c$.
+[@larsonCalc11e, Section 1.4, p. 73]
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-discontinuous}
+#### Discontinuous function
+
+If any of the three conditions of @def-continuous fails, $f$ is **discontinuous** at $c$.
 
 [@larsonCalc11e, Section 1.4, p. 73]
 
