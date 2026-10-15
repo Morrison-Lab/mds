@@ -4,7 +4,16 @@
 The **main diagonal** of an $m \times n$ matrix $\matr{A}$
 is the list of its entries $a_{11}, a_{22}, \ldots, a_{kk}$,
 where $k$ is the smaller of $m$ and $n$.
-These are the **diagonal entries** of $\matr{A}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-diagonal-entry}
+#### Diagonal entry
+
+The entries on the main diagonal (@def-main-diagonal) of a matrix $\matr{A}$
+are the **diagonal entries** of $\matr{A}$.
 
 :::
 
