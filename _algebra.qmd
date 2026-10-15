@@ -6,4 +6,6 @@
 
 {{< include mds/_subfiles/_sec_algebra_exponentials.qmd >}}
 
+{{< include mds/_subfiles/_sec_algebra_trigonometry.qmd >}}
+
 {{< include mds/_subfiles/_sec_algebra_complex.qmd >}}
