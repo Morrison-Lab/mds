@@ -1,0 +1,15 @@
+## Cosine and sine {#sec-cosine-sine}
+
+{{< include mds/_subfiles/algebra/_def-cosine-sine.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-cosine-sine-identity.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_exm-cosine-sine-unit-circle.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/algebra/_thm-cosine-bijection.qmd >}}

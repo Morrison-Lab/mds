@@ -3,7 +3,7 @@
 
 Adapted from @problifesavercalc, Question 1.1.41.
 
-Let $f(x) = \mathbf{1}_{[0, 1]}(x)$ be the indicator of the unit interval:
+Let $f(x) = \indic{[0, 1]}(x)$ be the indicator of the unit interval:
 
 $$f(x) = \begin{cases} 1 & \text{if } x \in [0, 1] \\ 0 & \text{otherwise} \end{cases}$$
 

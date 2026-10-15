@@ -1,0 +1,35 @@
+::: {#thm-pderiv-normal-parameters}
+#### Partial derivatives of the normal density with respect to its parameters
+
+Let $\mean \in \reals$ and $\sdpar > 0$, and let
+
+$$f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi\sdpar^2}}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}}$$
+
+Then for every $x \in \reals$,
+
+$$
+\ba
+\derivf{f}{\mean} &= \frac{x - \mean}{\sdpar^2} f(x; \mean, \sdpar)
+\\
+\derivf{f}{\sdpar} &= \sb{-\frac{1}{\sdpar} + \frac{(x - \mean)^2}{\sdpar^3}} f(x; \mean, \sdpar)
+\ea
+$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-pderiv-normal-parameters, worked in @sol-miller-pderiv-normal-parameters.
+The argument has two steps.
+
+1. For $\derivf{f}{\mean}$, treat $\sdpar$ as constant.
+   The prefactor is constant, so the chain rule on the exponential gives
+   $\derivf{f}{\mean} = f(x; \mean, \sdpar) \cd \sb{-\frac{2(x - \mean)(-1)}{2\sdpar^2}}
+   = \frac{x - \mean}{\sdpar^2} f(x; \mean, \sdpar)$.
+2. For $\derivf{f}{\sdpar}$, write
+   $f(x; \mean, \sdpar) = \frac{1}{\sqrt{2\pi}}\sdpar^{-1}\expf{-\frac{(x - \mean)^2}{2\sdpar^2}}$.
+   The product rule gives one term from differentiating $\sdpar^{-1}$, namely $-\sdpar^{-1} f(x; \mean, \sdpar)$,
+   and one from the chain rule on the exponential, namely $\frac{(x - \mean)^2}{\sdpar^3} f(x; \mean, \sdpar)$.
+   Adding them gives $\sb{-\frac{1}{\sdpar} + \frac{(x - \mean)^2}{\sdpar^3}} f(x; \mean, \sdpar)$.
+
+:::
