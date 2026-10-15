@@ -11,6 +11,10 @@ $$
 
 ::: proof
 
-Both norms in the denominator of @def-cosine-similarity-inner-product-space equal $1$.
+Both norms in the denominator of @def-cosine-similarity-inner-product-space equal $1$, so
+
+$$
+\cossim(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{1 \cd 1} = \iprod{\vx}{\vy}.
+$$
 
 :::
