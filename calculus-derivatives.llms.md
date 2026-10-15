@@ -2,9 +2,19 @@
 
 Code
 
+- [Show All Code](javascript:void(0))
+
+- [Hide All Code](javascript:void(0))
+
+- 
+
+  ------------------------------------------------------------------------
+
+- [View Source](javascript:void(0))
+
 Published
 
-Last modified: 2026-10-14 13:15:43 (PDT)
+Last modified: 2026-10-14 23:45:57 (PDT)
 
 ## 1 Derivatives
 
@@ -35,7 +45,7 @@ Last modified: 2026-10-14 13:15:43 (PDT)
 > - The **right-hand limit** of \\f\\ at \\c\\ is \\L\\, written \\\lim\_{x \to c^+} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c \< x \< c + \delta\\.
 > - The **left-hand limit** of \\f\\ at \\c\\ is \\L\\, written \\\lim\_{x \to c^-} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c - \delta\< x \< c\\.
 >
-> These are the **one-sided limits** of \\f\\ at \\c\\. The limit \\\lim\_{x \to c} f(x)\\ ([Definition 1](#def-limit)) exists exactly when both one-sided limits exist and are equal, and then all three are equal.
+> These are the **one-sided limits** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -45,6 +55,10 @@ Last modified: 2026-10-14 13:15:43 (PDT)
 > - \\\lim\_{x \to 0^-} H(x) = 0\\, because \\H(x) = 0\\ for every \\x \< 0\\.
 >
 > The one-sided limits differ, since \\1 \ne 0\\, so \\\lim\_{x \to 0} H(x)\\ does not exist.
+
+> **NOTE:**
+>
+> *Remark 1* (A limit exists exactly when both one-sided limits exist and are equal). The limit \\\lim\_{x \to c} f(x)\\ ([Definition 1](#def-limit)) exists exactly when both one-sided limits ([Definition 2](#def-one-sided-limit)) exist and are equal, and then all three are equal.
 
 > **TIP:**
 >
@@ -531,11 +545,115 @@ Last modified: 2026-10-14 13:15:43 (PDT)
 >
 > \\ \begin{aligned} f''(x) &= -x^{-2} \\ &= -\frac{1}{x^2} \end{aligned} \\
 
-### 1.3 Tangent lines
+### 1.3 Studying a new function
 
 > **NOTE:**
 >
-> **Definition 8 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
+> **Definition 8 (Profile of a function)** The **profile** of a function \\f\\ of a real variable is the list of related functions and values to work out when meeting \\f\\ for the first time:
+>
+> - the logarithm \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\, where \\f(x) \> 0\\;
+> - the derivatives \\f'(x)\\, \\f''(x)\\, and so on, as far as they are informative;
+> - the **logarithmic derivative** \\\frac{f'(x)}{f(x)}\\, which equals \\\frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of \\f\\ relative to its size; it needs \\f(x) \> 0\\, and for \\f(x) \< 0\\ the same expression is the derivative of \\\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|f(x)\right\|\mathclose{}\right\\\mathclose{}\\;
+> - the inverse function \\f^{-1}\\ ([definition](sets-functions.llms.md#def-inverse-function)), which exists on the range of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
+> - the complement \\1 - f(x)\\, which is informative when \\f\\ takes values in \\\[0, 1\]\\, as a probability does;
+> - the reciprocal \\\frac{1}{f(x)}\\, where \\f(x) \neq 0\\ (not to be confused with \\f^{-1}\\);
+> - an antiderivative of \\f\\, a function \\F\\ with \\F' = f\\ ([integration](calculus-integration.llms.md#sec-integration));
+> - the values \\f(0)\\ and \\f(1)\\, and the limits of \\f(x)\\ as \\x \to \infty\\ and as \\x \to -\infty\\, at each of these that lies in the domain of \\f\\ or exists;
+> - the graph of \\f\\.
+
+> **NOTE:**
+>
+> **Example 8 (The profile of the logistic function)** The **logistic function** (also called \\\operatorname{expit}\\ or the sigmoid) is
+>
+> \\ f(x) = \frac{1}{1 + e^{-x}}. \\
+>
+> The profile in [Definition 8](#def-function-profile) of \\f\\ is as follows. Write \\E = e^{-x}\\, so that \\f = \frac{1}{1 + E}\\ and \\1 - f = \frac{E}{1 + E}\\.
+>
+> - **Logarithm:** \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} = -\operatorname{log}\mathopen{}\left\\1 + e^{-x}\right\\\mathclose{}\\, defined for every real \\x\\ because \\f(x) \> 0\\.
+>
+> - **Derivative:** by the chain rule,
+>
+>   \\ \begin{aligned} f'(x) &= \frac{e^{-x}}{\mathopen{}\left(1 + e^{-x}\right)\mathclose{}^2} && \text{(chain rule applied to } (1 + e^{-x})^{-1} \text{)} \\ &= \frac{1}{1 + E} \cdot \frac{E}{1 + E} && \text{(split the square)} \\ &= f(x)\\\mathopen{}\left(1 - f(x)\right)\mathclose{}. && \text{(identify } f \text{ and } 1 - f \text{)} \end{aligned} \\
+>
+>   Differentiating again with the product rule gives \\f''(x) = f'(1 - f) - f f' = f(x)\mathopen{}\left(1 - f(x)\right)\mathclose{}\mathopen{}\left(1 - 2f(x)\right)\mathclose{}\\.
+>
+> - **Logarithmic derivative:** \\\frac{f'(x)}{f(x)} = 1 - f(x)\\, so the relative rate of change of \\f\\ is the complement of \\f\\ itself.
+>
+> - **Inverse:** for \\y \in (0, 1)\\, solving \\y = \frac{1}{1 + e^{-x}}\\ for \\x\\ gives
+>
+>   \\ \begin{aligned} \frac{1}{y} &= 1 + e^{-x} \\ e^{-x} &= \frac{1 - y}{y} \\ x &= \operatorname{log}\mathopen{}\left\\\frac{y}{1 - y}\right\\\mathclose{}. \end{aligned} \\
+>
+>   So \\f^{-1}(y) = \operatorname{logit}\mathopen{}\left\\y\right\\\mathclose{}\\, the log-odds. The inverse exists because \\f' = f(1 - f) \> 0\\, so \\f\\ is strictly increasing and therefore one-to-one.
+>
+> - **Complement:** \\1 - f(x) = \frac{e^{-x}}{1 + e^{-x}} = \frac{1}{e^{x} + 1} = f(-x)\\.
+>
+> - **Reciprocal:** \\\frac{1}{f(x)} = 1 + e^{-x}\\.
+>
+> - **Antiderivative:** \\F(x) = \operatorname{log}\mathopen{}\left\\1 + e^{x}\right\\\mathclose{}\\ satisfies \\F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)\\, so \\\int f(x)\\dx = \operatorname{log}\mathopen{}\left\\1 + e^{x}\right\\\mathclose{} + C\\.
+>
+> - **Key values:** \\f(0) = \frac{1}{1 + 1} = \frac{1}{2}\\ and \\f(1) = \frac{1}{1 + e^{-1}}\\. As \\x \to \infty\\, \\e^{-x} \to 0\\, so \\f(x) \to 1\\; as \\x \to -\infty\\, \\e^{-x} \to \infty\\, so \\f(x) \to 0\\.
+>
+> The code checks these results numerically, using the base R functions [`plogis()`](https://rdrr.io/r/stats/Logistic.html) for \\f\\ and [`qlogis()`](https://rdrr.io/r/stats/Logistic.html) for \\f^{-1}\\, and [`D()`](https://rdrr.io/r/stats/deriv.html) to differentiate symbolically.
+>
+> ``` downlit
+> f <- plogis
+> x <- c(-2, -0.5, 0, 1, 3)
+>
+> f_expr <- quote(1 / (1 + exp(-x)))
+> f_prime <- eval(D(f_expr, "x"), list(x = x))
+> f_second <- eval(D(D(f_expr, "x"), "x"), list(x = x))
+>
+> checks <- c(
+>   derivative = max(abs(f_prime - f(x) * (1 - f(x)))),
+>   second_derivative = max(abs(f_second - f(x) * (1 - f(x)) * (1 - 2 * f(x)))),
+>   log_derivative = max(abs(f_prime / f(x) - (1 - f(x)))),
+>   inverse = max(abs(qlogis(f(x)) - x)),
+>   complement = max(abs(1 - f(x) - f(-x))),
+>   reciprocal = max(abs(1 / f(x) - (1 + exp(-x)))),
+>   antiderivative = abs(
+>     integrate(f, 0, 1)$value - (log(1 + exp(1)) - log(2))
+>   )
+> )
+> signif(checks, 3)
+> #>        derivative second_derivative    log_derivative           inverse 
+> #>          1.46e-16          1.18e-16          1.53e-16          3.11e-15 
+> #>        complement        reciprocal    antiderivative 
+> #>          1.46e-16          0.00e+00          0.00e+00
+> stopifnot(all(checks < 1e-14))
+>
+> key_values <- c(f(0), f(1), f(10), f(-10))
+> ```
+>
+> Each entry of `checks` is the largest discrepancy between a formula above and a numerical computation; every one is below \\10^{-14}\\ (the chunk stops with an error otherwise), which is rounding error. The key values are \\f(0) =\\ 0.5 and \\f(1) \approx\\ 0.7311. At \\x = 10\\ and \\x = -10\\ the function is already close to its limits, \\f(10) \approx\\ 0.99995 and \\f(-10) \approx\\ 0.0000454. [Figure 1](#fig-function-profile-logistic) graphs \\f\\, \\f'\\ and \\\operatorname{log}\mathopen{}\left\\f\right\\\mathclose{}\\.
+>
+> Show R code
+>
+> ``` downlit
+> grid <- seq(-6, 6, length.out = 241)
+> panels <- data.frame(
+>   x = rep(grid, 3),
+>   panel = factor(
+>     rep(c("f(x)", "f'(x)", "log f(x)"), each = length(grid)),
+>     levels = c("f(x)", "f'(x)", "log f(x)")
+>   ),
+>   value = c(f(grid), f(grid) * (1 - f(grid)), log(f(grid)))
+> )
+> ggplot2::ggplot(panels) +
+>   ggplot2::aes(x = x, y = value) +
+>   ggplot2::geom_line() +
+>   ggplot2::facet_wrap(~panel, scales = "free_y") +
+>   ggplot2::labs(x = "x", y = NULL)
+> ```
+>
+> [![Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png)](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png "Figure 1: The logistic function, its derivative and its logarithm")
+>
+> Figure 1: The logistic function, its derivative and its logarithm
+
+### 1.4 Tangent lines
+
+> **NOTE:**
+>
+> **Definition 9 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
 >
@@ -543,13 +661,13 @@ Last modified: 2026-10-14 13:15:43 (PDT)
 
 > **NOTE:**
 >
-> **Example 8 (The tangent line to \\x^2\\ at \\1\\)** For \\f(x) = x^2\\ at \\c = 1\\, \\f(1) = 1\\ and \\f'(1) = 2\\ ([Example 5](#exm-derivative)), so the tangent line is the graph of
+> **Example 9 (The tangent line to \\x^2\\ at \\1\\)** For \\f(x) = x^2\\ at \\c = 1\\, \\f(1) = 1\\ and \\f'(1) = 2\\ ([Example 5](#exm-derivative)), so the tangent line is the graph of
 >
 > \\ \begin{aligned} x &\mapsto 1 + 2\\(x - 1) && \text{(substitute } f(1) = 1 \text{ and } f'(1) = 2 \text{)} \\ &= 2x - 1 && \text{(distribute, and } 1 - 2 = -1 \text{)} \end{aligned} \\
 >
 > At \\x = 1.1\\ the tangent line has height \\2(1.1) - 1 = 1.2\\, close to the curve’s height \\f(1.1) = 1.21\\; the gap, \\1.21 - 1.2 = 0.01\\, is \\(1.1 - 1)^2\\.
 
-### 1.4 Linear approximation
+### 1.5 Linear approximation
 
 For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
@@ -557,15 +675,15 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 9 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\varepsilon\\
+> **Definition 10 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\varepsilon\\
 >
 > \\\hat{f}\_w(\varepsilon) = f(w) + \varepsilon\\\frac{d }{d w}f(w)\\
 >
-> so [Equation 1](#eq-linear-approx) says \\f(w + \varepsilon) \approx \hat{f}\_w(\varepsilon)\\ for small \\\varepsilon\\. [Figure 1](#fig-linear-approx) illustrates this approximation interactively for a quadratic function.
+> so [Equation 1](#eq-linear-approx) says \\f(w + \varepsilon) \approx \hat{f}\_w(\varepsilon)\\ for small \\\varepsilon\\. [Figure 2](#fig-linear-approx) illustrates this approximation interactively for a quadratic function.
 
 > **NOTE:**
 >
-> *Remark 1* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 9](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
+> *Remark 2* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 10](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
 
 Show R code
 
@@ -621,9 +739,9 @@ Plot.plot({
 })
 ```
 
-The dashed blue line is the tangent line ([Definition 8](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
+The dashed blue line is the tangent line ([Definition 9](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
 
-Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\varepsilon\\.
+Figure 2: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\varepsilon\\.
 
 > **NOTE:**
 >
@@ -659,15 +777,15 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > The approximation error is \\\|4.171593 - 4.171543\| \approx 0.00005\\, on the order of \\(0.01)^2 = 10^{-4}\\.
 
-### 1.5 Critical points and optimization
+### 1.6 Critical points and optimization
 
 > **NOTE:**
 >
-> **Definition 10 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**).
+> **Definition 11 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**).
 
 > **NOTE:**
 >
-> **Example 9 (Flat points, and a point that is not one)**  
+> **Example 10 (Flat points, and a point that is not one)**  
 >
 > - \\f(w) = w^3\\ has \\f'(w) = 3w^2\\, which is \\0\\ at \\w = 0\\, so \\0\\ is a flat point. Yet \\f(0) = 0\\ is neither the [minimum](algebra-basics.llms.md#def-minimum) nor the [maximum](algebra-basics.llms.md#def-maximum) of the values \\f\\ takes on any open interval around \\0\\: \\f(w) \< 0\\ for \\w \< 0\\ and \\f(w) \> 0\\ for \\w \> 0\\.
 > - \\h(w) = w^2\\ has \\h'(1) = 2 \ne 0\\, so \\1\\ is not a flat point.
@@ -708,11 +826,11 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Definition 11 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 4](#def-differentiable)).
+> **Definition 12 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 4](#def-differentiable)).
 
 > **NOTE:**
 >
-> **Example 10 (Critical points that are and are not flat points)**  
+> **Example 11 (Critical points that are and are not flat points)**  
 >
 > - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 2](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
 >
@@ -726,15 +844,15 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Theorem 11 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 10](#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 11](#def-critical-point)).
+> **Theorem 11 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 11](#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 12](#def-critical-point)).
 
 > **NOTE:**
 >
-> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 11](#def-critical-point), so \\c\\ is a critical point.
+> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 12](#def-critical-point), so \\c\\ is a critical point.
 
 > **NOTE:**
 >
-> **Example 11 (The flat points of a cubic, and a critical point that is not flat)** For \\f(w) = w^3 - 3w\\, the derivative is \\f'(w) = 3w^2 - 3\\. The code differentiates \\f\\ with [`D()`](https://rdrr.io/r/stats/deriv.html) and evaluates \\f'\\ at several points. For \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\, it computes the difference quotients at \\0\\ from both sides.
+> **Example 12 (The flat points of a cubic, and a critical point that is not flat)** For \\f(w) = w^3 - 3w\\, the derivative is \\f'(w) = 3w^2 - 3\\. The code differentiates \\f\\ with [`D()`](https://rdrr.io/r/stats/deriv.html) and evaluates \\f'\\ at several points. For \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\, it computes the difference quotients at \\0\\ from both sides.
 >
 > ``` downlit
 > f_prime <- D(quote(w^3 - 3 * w), "w")
@@ -752,7 +870,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 > #> [1] -1  1
 > ```
 >
-> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 11](#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 11](#def-critical-point)), but not a flat point.
+> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 11](#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 12](#def-critical-point)), but not a flat point.
 
 > **NOTE:**
 >
@@ -818,19 +936,17 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > Inflection points occur where the second derivative changes sign (\\f''(x) = 0\\ at \\x = 1/4\\). Because \\f''\\ is non-zero at both critical points, neither is an inflection point.
 
-### 1.6 Taylor series
+### 1.7 Taylor series
 
 > **NOTE:**
 >
-> **Definition 12 (Taylor polynomial and Taylor series)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
+> **Definition 13 (Taylor polynomial)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
 >
 > \\ \begin{aligned} P_n(x) &= \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k \\ &= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \end{aligned} \tag{2}\\
->
-> When \\x_0 = 0\\, \\P_n(x)\\ is called the **Maclaurin polynomial**. When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
 
 > **NOTE:**
 >
-> **Example 12 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is
+> **Example 13 (Taylor series of the exponential function)** For \\f(x) = e^x\\ centered at \\x_0 = 0\\, every derivative is
 >
 > \\ \begin{aligned} f^{(k)}(0) &= e^0 \\ &= 1. \end{aligned} \\
 >
@@ -842,11 +958,19 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 >
 > \\e^x = \sum\_{k=0}^\infty \frac{x^k}{k!}\\
 
+> **NOTE:**
+>
+> **Definition 14 (Maclaurin polynomial)** When \\x_0 = 0\\, the Taylor polynomial \\P_n(x)\\ ([Definition 13](#def-taylor-polynomial)) is called the **Maclaurin polynomial**.
+
+> **NOTE:**
+>
+> **Definition 15 (Taylor series)** Let \\f\\ and \\x_0\\ be as in [Definition 13](#def-taylor-polynomial). When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
+
 > **TIP:**
 >
 > Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
 >
-> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 12](#def-taylor-polynomial)).
+> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 13](#def-taylor-polynomial)).
 
 > **NOTE:**
 >
@@ -892,7 +1016,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Example 13 (Taylor series of the cosine function)** For \\f(x) = \cos x\\ centered at \\x_0 = 0\\, the derivatives follow a repeating cycle of length 4:
+> **Example 14 (Taylor series of the cosine function)** For \\f(x) = \cos x\\ centered at \\x_0 = 0\\, the derivatives follow a repeating cycle of length 4:
 >
 > \\\begin{aligned} f(0) &= \cos(0) \\ &= 1, \\ f'(0) &= -\sin(0) \\ &= 0, \\ f''(0) &= -\cos(0) \\ &= -1, \\ f'''(0) &= \sin(0) \\ &= 0, \end{aligned}\\
 >
@@ -902,7 +1026,7 @@ Figure 1: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) 
 
 > **NOTE:**
 >
-> **Example 14 (Taylor series of the sine function)** For \\f(x) = \sin x\\ centered at \\x_0 = 0\\, the derivatives evaluate at \\0\\ to \\f^{(2k)}(0) = 0\\ and \\f^{(2k+1)}(0) = (-1)^k\\ for all \\k \ge 0\\. The Taylor series converges everywhere to \\\sin x\\:
+> **Example 15 (Taylor series of the sine function)** For \\f(x) = \sin x\\ centered at \\x_0 = 0\\, the derivatives evaluate at \\0\\ to \\f^{(2k)}(0) = 0\\ and \\f^{(2k+1)}(0) = (-1)^k\\ for all \\k \ge 0\\. The Taylor series converges everywhere to \\\sin x\\:
 >
 > \\ \begin{aligned} \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots \\ &= \sum\_{k=0}^\infty \frac{(-1)^k}{(2k+1)!}x^{2k+1} \end{aligned} \\
 

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 13:15:43 (PDT)
+Last modified: 2026-10-14 23:45:57 (PDT)
 
 ## 1 Integration
 
@@ -324,7 +324,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [The Method of Exhaustion](https://www.youtube.com/watch?v=h0gPomI3h8o&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Numeric Integration with Python](https://www.youtube.com/watch?v=f4nfLIkNv0A&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand \\f\\ is continuous on \\\[a, b\]\\; continuity is [sufficient](notation.llms.md#def-necessary-sufficient) there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity buys us.
+Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand \\f\\ is continuous on \\\[a, b\]\\; continuity is [sufficient](proof-writing.llms.md#def-necessary-sufficient) there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity gives us.
 
 > **NOTE:**
 >
@@ -352,7 +352,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > but it is not differentiable at \\x = 0\\: its left-hand derivative there is \\-1\\ and its right-hand derivative is \\+1\\ ([Example 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#exm-one-sided-derivative)).
 >
-> This [counterexample](notation.llms.md#def-counterexample) shows that the [converse](notation.llms.md#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
+> This [counterexample](proof-writing.llms.md#def-counterexample) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
 >
 > Show R code
 >
@@ -452,7 +452,7 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 >
 > \\F(x) \stackrel{\text{def}}{=}\int_a^x f(t)\\dt \quad \text{for } a \< x \le b.\\
 >
-> So \\F(x)\\ is the integral of \\f\\ accumulated from \\a\\ up to \\x\\. The letter \\t\\ inside the integral is a placeholder, renamed from \\x\\ so that \\x\\ can serve as the [upper limit](notation.llms.md#def-lower-upper-limits).
+> So \\F(x)\\ is the integral of \\f\\ accumulated from \\a\\ up to \\x\\.
 
 > **NOTE:**
 >
@@ -472,9 +472,11 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 
 > **NOTE:**
 >
-> **Theorem 5 (Fundamental Theorem of Calculus)** Let \\f\\ be a continuous function on a closed interval \\\[a, b\]\\.
+> *Remark 2* (Why the integration variable is called \\t\\). The letter \\t\\ inside the integral is a placeholder, renamed from \\x\\ so that \\x\\ can serve as the [upper limit](notation.llms.md#def-lower-upper-limits).
+
+> **NOTE:**
 >
-> **Part 1 (Derivative of an integral).** Let \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\ be the accumulation function of \\f\\ from \\a\\ ([Definition 14](#def-accumulation-function)). Then \\F\\ is differentiable and:
+> **Theorem 5 (Fundamental Theorem of Calculus, Part 1 (derivative of an integral))** Let \\f\\ be a continuous function on a closed interval \\\[a, b\]\\. Let \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\ be the accumulation function of \\f\\ from \\a\\ ([Definition 14](#def-accumulation-function)). Then \\F\\ is differentiable and:
 >
 > \\\frac{\partial}{\partial x}\int_a^x f(t)\\dt = f(x) \tag{1}\\
 >
@@ -483,8 +485,10 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 > > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 11](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 5](#def-jump-discontinuity)) elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
 >
 > ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.11, p. 288)
+
+> **NOTE:**
 >
-> **Part 2 (Evaluation theorem).** The \\F\\ here may be *any* antiderivative of \\f\\ — not just the accumulation function from Part 1. If \\F\\ is an antiderivative of \\f\\ on \\\[a, b\]\\ (i.e., \\\frac{\partial}{\partial x} F(x) = f(x)\\ for all \\x \in \[a, b\]\\), then:
+> **Theorem 6 (Fundamental Theorem of Calculus, Part 2 (evaluation theorem))** Let \\f\\ be a continuous function on a closed interval \\\[a, b\]\\. The \\F\\ here may be *any* antiderivative of \\f\\ — not just the accumulation function from [Theorem 5](#thm-ftc-part1). If \\F\\ is an antiderivative of \\f\\ on \\\[a, b\]\\ (i.e., \\\frac{\partial}{\partial x} F(x) = f(x)\\ for all \\x \in \[a, b\]\\), then:
 >
 > \\\int_a^b f(x)\\dx = F(b) - F(a) \tag{2}\\
 >
@@ -503,7 +507,7 @@ The two parts of the FTC together express that **differentiation and integration
 - Part 1: differentiating the integral of \\f\\ recovers \\f\\ ([Equation 1](#eq-ftc-deriv-of-integral)).
 - Part 2: the integral of \\f\\ over \\\[a, b\]\\ equals the difference of any antiderivative’s values at the endpoints ([Equation 2](#eq-ftc-part2)), which rearranges to “integrating the derivative of \\F\\ recovers the net change in \\F\\” ([Equation 3](#eq-ftc-integral-of-deriv)).
 
-The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; continuity is *sufficient* but not strictly necessary (see the callout note inside [Theorem 5](#thm-ftc) for the more general statement). Since differentiability implies continuity ([Theorem 2](#thm-diff-implies-cont)), the FTC applies in particular whenever \\f\\ is differentiable — a common situation in applied statistics.
+The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; continuity is *sufficient* but not strictly necessary (see the callout note inside [Theorem 5](#thm-ftc-part1) for the more general statement). Since differentiability implies continuity ([Theorem 2](#thm-diff-implies-cont)), the FTC applies in particular whenever \\f\\ is differentiable — a common situation in applied statistics.
 
 > **NOTE:**
 >
@@ -511,13 +515,17 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_{t=a}^{t=b} \stackrel{\text{def}}{=}F(b) - F(a).\\
 >
-> When the variable is clear from the context, it is written \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_a^b\\. With FTC Part 2 ([Theorem 5](#thm-ftc)), \\\int_a^b f(t)\\dt = \mathopen{}\left\[F(t)\right\]\mathclose{}\_{t=a}^{t=b}\\ for any antiderivative \\F\\ of a continuous \\f\\, and computing \\F(b) - F(a)\\ from the bracket is called **evaluating at the limits** (the [limits of integration](notation.llms.md#def-lower-upper-limits) \\a\\ and \\b\\).
+> When the variable is clear from the context, it is written \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_a^b\\. Computing \\F(b) - F(a)\\ from the bracket is called **evaluating at the limits** (the [limits of integration](notation.llms.md#def-lower-upper-limits) \\a\\ and \\b\\).
 
 > **NOTE:**
 >
 > **Example 21 (Evaluating \\\int_1^3 2t\\dt\\ with a bracket)** \\F(t) = t^2\\ is an antiderivative of \\f(t) = 2t\\, since \\\frac{\partial}{\partial t} t^2 = 2t\\, so
 >
 > \\ \begin{aligned} \int_1^3 2t\\dt &= \mathopen{}\left\[t^2\right\]\mathclose{}\_{t=1}^{t=3} && \text{(FTC Part 2)} \\ &= 3^2 - 1^2 && \text{(definition of the evaluation bracket)} \\ &= 9 - 1 && \text{(square)} \\ &= 8 && \text{(subtract)} \end{aligned} \\
+
+> **NOTE:**
+>
+> *Remark 3* (The evaluation bracket and the Fundamental Theorem of Calculus). With FTC Part 2 ([Theorem 6](#thm-ftc-part2)), \\\int_a^b f(t)\\dt = \mathopen{}\left\[F(t)\right\]\mathclose{}\_{t=a}^{t=b}\\ for any antiderivative \\F\\ of a continuous \\f\\.
 
 > **NOTE:**
 >
@@ -721,7 +729,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > \\ \begin{aligned} F'(x) &= 2x \\ &= f(x), \end{aligned} \\
 >
-> as [Theorem 5](#thm-ftc) Part 1 predicts. [Figure 4](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
+> as [Theorem 5](#thm-ftc-part1) predicts. [Figure 4](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
 >
 > Show R code
 >

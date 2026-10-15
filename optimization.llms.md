@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 13:15:43 (PDT)
+Last modified: 2026-10-14 23:45:57 (PDT)
 
 ## 1 Optimality conditions in several variables
 
@@ -136,7 +136,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 >     index=["solution", "zero vector"],
 > )
 > #>                                                   beta                                        gradient
-> #> solution     [39.935861021170574, -0.1578447333536545]  [1.071498445526231e-11, 1.673470251262188e-10]
+> #> solution     [39.93586102117057, -0.15784473335365445]  [9.471534667682135e-12, 6.662048690486699e-11]
 > #> zero vector                                 [0.0, 0.0]               [-18381.600000000006, -1737437.6]
 > ```
 >
@@ -173,7 +173,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #> [1] 39.9358610 -0.1578447
 > #> 
 > #> $solution$gradient
-> #> [1] 1.071498e-11 1.673470e-10
+> #> [1] 9.471535e-12 6.662049e-11
 > #> 
 > #> 
 > #> $zero_vector
@@ -192,7 +192,7 @@ A local minimizer of a differentiable function on an open interval is a [flat po
 > #>  39.9358610  -0.1578447
 > ```
 >
-> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 1.7e-10, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
+> The solution is an intercept of 39.9 miles per gallon and a slope of -0.158 miles per gallon per unit of horsepower. The largest entry of the gradient there is 6.7e-11, zero up to rounding error, against 1,737,438 at the zero vector. So the solution is a stationary point ([Definition 1](#def-stationary-point)), and the zero vector is not. The library fits above agree with the solution of that equation.
 
 > **NOTE:**
 >
@@ -236,7 +236,7 @@ This theorem is the case \\n = 2\\ of ([Rudin 1976](#ref-rudin1976principles), T
 
 > **NOTE:**
 >
-> **Example 6 (For a quadratic form the expansion is exact)** Let \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. Its gradient is \\2 \mathbf{S} \tilde{x}\\ ([derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form)) and its Hessian is \\2 \mathbf{S}\\ at every point ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever \\\tau\\ is, [Theorem 4](#thm-taylor-mv) reads
+> **Example 6 (For a quadratic form the expansion is exact)** Let \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. Its gradient is \\2 \mathbf{S} \tilde{x}\\ ([derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric)) and its Hessian is \\2 \mathbf{S}\\ at every point ([Hessian of a quadratic form](vector-calculus.llms.md#thm-hessian-quadratic)), so whatever \\\tau\\ is, [Theorem 4](#thm-taylor-mv) reads
 >
 > \\ \begin{aligned} f(\tilde{z} + \tilde{h}) &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + {(2 \mathbf{S} \tilde{z})}^{\top} \tilde{h} + \frac{1}{2}\\{\tilde{h}}^{\top} (2 \mathbf{S}) \tilde{h} \\ &= {\tilde{z}}^{\top} \mathbf{S} \tilde{z} + 2\\{\tilde{z}}^{\top} \mathbf{S} \tilde{h} + {\tilde{h}}^{\top} \mathbf{S} \tilde{h}, \end{aligned} \\
 >
@@ -660,13 +660,13 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 >
 > **Example 27 (The gradients of the Lagrangian of a quadratic)** Let \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ with \\\mathbf{S}\\ symmetric and constant. By the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product), \\{\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} = {(\mathbf{A} \tilde{\lambda})}^{\top}\\, so
 >
-> \\ \begin{aligned} L(\tilde{x}, \tilde{\lambda}) &= \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b} && \text{(distribute)} \\ &= \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b}, && \text{(transpose of a product)} \end{aligned} \\
+> \\ \begin{aligned} L(\tilde{x}, \tilde{\lambda}) &= \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x} + {\tilde{\lambda}}^{\top} {\mathbf{A}}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b} && \text{(distribute)} \\ &= \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x} + {(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}- {\tilde{\lambda}}^{\top} \tilde{b}, && \text{(transpose of a product)} \end{aligned} \\
 >
 > and, since \\{\tilde{\lambda}}^{\top} \mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}\\ is \\1 \times 1\\ and so equals its transpose,
 >
-> \\ L(\tilde{x}, \tilde{\lambda}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}+ {\mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}}^{\top} \tilde{\lambda}. \\
+> \\ L(\tilde{x}, \tilde{\lambda}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x} + {\mathopen{}\left({\mathbf{A}}^{\top} \tilde{x}- \tilde{b}\right)\mathclose{}}^{\top} \tilde{\lambda}. \\
 >
-> The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for the first term, [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for the second (\\\mathbf{A} \tilde{\lambda}\\ is constant in \\\tilde{x}\\), and [constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector) for the third,
+> The partial derivatives of a sum are the sums of the partial derivatives, entry by entry. Using the first of these forms, [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) for the first term, [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for the second (\\\mathbf{A} \tilde{\lambda}\\ is constant in \\\tilde{x}\\), and [constant with respect to a vector](vector-calculus.llms.md#def-constant-wrt-vector) for the third,
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{x}} L(\tilde{x}, \tilde{\lambda}) &= \tfrac{1}{2}\\\frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x}\right)\mathclose{} + \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({(\mathbf{A} \tilde{\lambda})}^{\top} \tilde{x}\right)\mathclose{} - \frac{\partial}{\partial \tilde{x}} \mathopen{}\left({\tilde{\lambda}}^{\top} \tilde{b}\right)\mathclose{} && \text{(sum and constant multiple)} \\ &= \tfrac{1}{2} \mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{} + \mathbf{A} \tilde{\lambda}- \tilde{0}\_{p \times 1} && \text{(the three derivatives)} \\ &= \mathbf{S} \tilde{x}+ \mathbf{A} \tilde{\lambda}. && \text{(simplify)} \end{aligned} \\
 >
@@ -770,7 +770,7 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{M}^{-1}\\ is symmetric and does not depend on \\\tilde{b}\\, so [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) applies with \\\mathbf{M}^{-1}\\ in place of \\\mathbf{S}\\:
+> *Proof*. \\\mathbf{M}^{-1}\\ is symmetric and does not depend on \\\tilde{b}\\, so [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) applies with \\\mathbf{M}^{-1}\\ in place of \\\mathbf{S}\\:
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{b}} f^\*(\tilde{b}) &= \tfrac{1}{2}\\\frac{\partial}{\partial \tilde{b}} \mathopen{}\left({\tilde{b}}^{\top} \mathbf{M}^{-1} \tilde{b}\right)\mathclose{} && \text{(constant multiple)} \\ &= \tfrac{1}{2} \mathopen{}\left(2 \mathbf{M}^{-1} \tilde{b}\right)\mathclose{} && \text{(derivative of a quadratic form)} \\ &= \mathbf{M}^{-1} \tilde{b} && \text{(simplify)} \\ &= -\tilde{\lambda}^\*. && \text{(definition of } \tilde{\lambda}^\* \text{)} \end{aligned} \\
 
@@ -917,11 +917,11 @@ Here the objective ([Definition 9](#def-minimization-problem)) is a quadratic \
 
 > **NOTE:**
 >
-> **Theorem 13 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}- \tilde{c} \cdot \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 14](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
+> **Theorem 13 (Newton’s method minimizes a quadratic in one step)** Let \\\mathbf{S}\\ be a \\p \times p\\ [positive definite](linear-algebra-special-matrices.llms.md#def-positive-definite) matrix, \\\tilde{c} \in \mathbb{R}^p\\, and \\f(\tilde{x}) = \tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x} - \tilde{c} \cdot \tilde{x}\\. From any \\\tilde{x}^{(0)}\\, Newton’s method ([Definition 14](#def-newton-method)) gives \\\tilde{x}^{(1)} = \mathbf{S}^{-1} \tilde{c}\\, the unique minimizer of \\f\\.
 
 > **NOTE:**
 >
-> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#thm-quadratic-form) for \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for \\\tilde{c} \cdot \tilde{x}\\,
+> *Proof*. Partial derivatives of a sum or of a constant multiple are the sum or multiple of the partial derivatives, so by [derivative of a quadratic form](vector-calculus.llms.md#cor-quadratic-form-symmetric) for \\\tfrac{1}{2}\\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ and [derivative of a linear combination](vector-calculus.llms.md#cor-deriv-lincom-tp) for \\\tilde{c} \cdot \tilde{x}\\,
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{x}} f(\tilde{x}) &= \tfrac{1}{2} (2 \mathbf{S} \tilde{x}) - \tilde{c} \\ &= \mathbf{S} \tilde{x}- \tilde{c}; \end{aligned} \\
 >

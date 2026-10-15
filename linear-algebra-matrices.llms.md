@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 13:15:43 (PDT)
+Last modified: 2026-10-14 23:45:57 (PDT)
 
 ## 1 Matrices
 
@@ -732,6 +732,34 @@ Figure 1: The [graph](sets-functions.llms.md#def-graph) of \\f(x_1, x_2) = w_1 
 > \\ {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top} = \[3,\\ 4\] \begin{bmatrix} 1 \\ 2 \end{bmatrix} = 11, \qquad {\mathbf{A}}^{\top}\\{\mathbf{B}}^{\top} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \[3,\\ 4\] = \begin{bmatrix} 3 & 4 \\ 6 & 8 \end{bmatrix}. \\
 >
 > If instead \\\mathbf{A}\\ is \\2 \times 3\\ and \\\mathbf{B}\\ is \\3 \times 1\\, then \\{\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top}\\ is a \\(1 \times 3)(3 \times 2)\\ product, but \\{\mathbf{A}}^{\top}\\{\mathbf{B}}^{\top}\\ is a \\(3 \times 2)(1 \times 3)\\ product, which is undefined.
+
+> **NOTE:**
+>
+> **Theorem 17 (A \\1 \times 1\\ product equals its own transpose)** If \\\tilde{u}\\ and \\\tilde{v}\\ are vectors of length \\p\\ and \\\mathbf{M}\\ is a \\p \times p\\ matrix, then \\{\tilde{u}}^{\top}\mathbf{M}\tilde{v}\\ is a number, and
+>
+> \\ {\tilde{u}}^{\top}\mathbf{M}\tilde{v} = {\tilde{v}}^{\top}\\{\mathbf{M}}^{\top}\\\tilde{u}. \\
+>
+> In particular, \\{\tilde{u}}^{\top}\tilde{v} = {\tilde{v}}^{\top}\tilde{u}\\.
+
+> **NOTE:**
+>
+> *Proof*. The product \\{\tilde{u}}^{\top}\mathbf{M}\tilde{v}\\ is a \\(1 \times p)(p \times p)(p \times 1)\\ product, so it is a \\1 \times 1\\ matrix. The transpose of a \\1 \times 1\\ matrix is itself, so
+>
+> \\ \begin{aligned} {\tilde{u}}^{\top}\mathbf{M}\tilde{v} &= {\mathopen{}\left({\tilde{u}}^{\top}\mathbf{M}\tilde{v}\right)\mathclose{}}^{\top} && \text{(a } 1 \times 1 \text{ matrix equals its transpose)} \\ &= {\tilde{v}}^{\top}\\{\mathbf{M}}^{\top}\\{\mathopen{}\left({\tilde{u}}^{\top}\right)\mathclose{}}^{\top} && \text{(transpose of a product, twice)} \\ &= {\tilde{v}}^{\top}\\{\mathbf{M}}^{\top}\\\tilde{u} && \text{(transposing twice changes nothing)} \end{aligned} \\
+>
+> The transpose step is [Theorem 16](#thm-transpose-product). Taking \\\mathbf{M} = \mathbf{I}\\ gives the last statement.
+
+> **NOTE:**
+>
+> **Example 20 (Two ways to write the same number)** Take \\\tilde{u} = (1, 2)\\, \\\tilde{v} = (3, -1)\\ and \\\mathbf{M} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\. Then \\\mathbf{M}\tilde{v} = (1, -3)\\, so
+>
+> \\ {\tilde{u}}^{\top}\mathbf{M}\tilde{v} = 1 \cdot 1 + 2 \cdot (-3) = -5. \\
+>
+> Also \\{\mathbf{M}}^{\top} = \begin{bmatrix} 1 & 0 \\ 2 & 3 \end{bmatrix}\\ and \\{\mathbf{M}}^{\top}\tilde{u} = (1, 8)\\, so
+>
+> \\ {\tilde{v}}^{\top}\\{\mathbf{M}}^{\top}\\\tilde{u} = 3 \cdot 1 + (-1) \cdot 8 = -5. \\
+>
+> The two products are equal, as the theorem says. In least squares, this is why the two cross terms of \\{(\mathbf{X}\tilde{\beta}- \tilde{y})}^{\top}(\mathbf{X}\tilde{\beta}- \tilde{y})\\ are equal and can be combined.
 
 Back to top
 
