@@ -5,9 +5,18 @@ Let $\vecf{a}_1, \ldots, \vecf{a}_k$ be a basis of a subspace $\mathcal{S}$ (@de
 and let $\vecf{x} \in \mathcal{S}$.
 The **coordinates** of $\vecf{x}$ in this basis
 are the numbers $c_1, \ldots, c_k$ with
-$\vecf{x} = c_1 \vecf{a}_1 + \cdots + c_k \vecf{a}_k$,
-and $(c_1, \ldots, c_k) \in \reals^k$ is the **coordinate vector** of $\vecf{x}$.
+$\vecf{x} = c_1 \vecf{a}_1 + \cdots + c_k \vecf{a}_k$.
 By @thm-basis-unique there is exactly one such list of numbers.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-coordinate-vector}
+#### Coordinate vector
+
+With $\vecf{x}$ and its coordinates $c_1, \ldots, c_k$ as in @def-coordinates,
+$(c_1, \ldots, c_k) \in \reals^k$ is the **coordinate vector** of $\vecf{x}$.
 
 :::
 

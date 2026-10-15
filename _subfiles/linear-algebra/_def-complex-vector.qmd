@@ -1,9 +1,17 @@
 :::{#def-complex-vector}
-#### Complex vectors and matrices
+#### Complex vector
 
 A **complex vector** of length $p$ is a column vector
 whose entries are [complex numbers](algebra.qmd#def-complex-number);
 the set of all of them is denoted $\mathbb{C}^p$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-complex-matrix}
+#### Complex matrix
+
 A **complex matrix** of size $m \times n$ is a matrix with complex entries;
 the set of all of them is denoted $\mathbb{C}^{m \times n}$.
 

@@ -1,11 +1,19 @@
 :::{#def-line-search}
-#### Line search and exact line search
+#### Line search
 
 In gradient descent (@def-gradient-descent),
 a **line search** is a rule that chooses the step length $s^{(t)}$
 by examining the values of $f$ along the line
 $\cb{\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}) : s > 0}$.
-**Exact line search** is the line search that chooses $s^{(t)}$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-exact-line-search}
+#### Exact line search
+
+**Exact line search** is the line search (@def-line-search) that chooses $s^{(t)}$
 to minimize $f(\vx^{(t)} - s\,\deriv{\vx} f(\vx^{(t)}))$ over $s > 0$.
 
 :::

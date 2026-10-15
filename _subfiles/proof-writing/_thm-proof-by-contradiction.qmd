@@ -12,7 +12,7 @@ If $\neg P \Rightarrow Q$ is true and $Q$ is false, then $P$ is true.
 
 ::: proof
 
-By @def-logical-connective, $\neg P \Rightarrow Q$ is false only when $\neg P$ is true and $Q$ is false.
+By @def-implies, $\neg P \Rightarrow Q$ is false only when $\neg P$ is true and $Q$ is false.
 Here $Q$ is false, and $\neg P \Rightarrow Q$ is true,
 so $\neg P$ is not true.
 Then $\neg P$ is false.

@@ -1,5 +1,5 @@
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation).
-The goal of a proof is not just to convince yourself that a [result](#def-theorem) is true;
+The goal of a proof is not just to convince yourself that a [result](#def-result) is true;
 it is to convince a *reader*,
 and to show them *why* it is true.
 Each principle on this page serves that goal.
@@ -28,11 +28,67 @@ The symbols for [logical entailment](#def-logical-entailment) are listed under
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-not.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-not.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-and.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-and.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-or.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-or.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-implies.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-implies.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-iff.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-iff.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_exm-logical-connective.qmd >}}
 
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/proof-writing/_def-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-universal-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-universal-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-existential-quantifier.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-existential-quantifier.qmd >}}
 
 {{< slidebreak >}}
 
@@ -61,11 +117,11 @@ We can use any of:
 - $\models$ (`\models`)
 
 to denote logical entailment (@def-logical-entailment).
-$\Rightarrow$ also writes the connective "implies" (@def-logical-connective);
+$\Rightarrow$ also writes the connective "implies" (@def-implies);
 $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
 for every choice of values for the variables in $P$ and $Q$.
 
-Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-sequence-limit) results.
+Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-convergent-sequence) results.
 
 {{< slidebreak >}}
 
@@ -93,7 +149,35 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-seque
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/proof-writing/_def-result.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-result.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_rem-proposition-as-result.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/proof-writing/_def-theorem.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-theorem-sum-evens.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-lemma.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-lemma.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-corollary.qmd >}}
 
 {{< slidebreak >}}
 
@@ -114,6 +198,22 @@ Let's save $\rightarrow$ (`\rightarrow`) for [convergence](algebra.qmd#def-seque
 {{< slidebreak >}}
 
 {{< include mds/_subfiles/proof-writing/_exm-converse.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-sufficient-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-sufficient-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_def-necessary-condition.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/proof-writing/_exm-necessary-condition.qmd >}}
 
 {{< slidebreak >}}
 
@@ -226,7 +326,7 @@ which does.
 :::{#exm-direct-proof}
 #### The square of an odd integer is odd
 
-Claim: if $n$ is an [odd](notation.qmd#def-even-odd) integer,
+Claim: if $n$ is an [odd](notation.qmd#def-odd) integer,
 then $n^2$ is odd.
 
 Since $n$ is odd,

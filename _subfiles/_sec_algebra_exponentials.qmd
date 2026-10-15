@@ -60,10 +60,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/algebra/_exm-sequence-limit.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/algebra/_def-diverges-to-infinity.qmd >}}
 
 ## Exponentials and Logarithms

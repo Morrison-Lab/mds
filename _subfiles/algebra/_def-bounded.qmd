@@ -1,18 +1,56 @@
-:::{#def-bounded}
-#### Upper and lower bounds
+:::{#def-upper-bound}
+#### Upper bound
 
 Let $A \subseteq \reals$.
+A real number $\ubound$ is an **upper bound** for $A$
+if $a \le \ubound$ for all $a \in A$.
 
-- A real number $\ubound$ is an **upper bound** for $A$
-  if $a \le \ubound$ for all $a \in A$.
-- A real number $\lbound$ is a **lower bound** for $A$
-  if $\lbound \le a$ for all $a \in A$.
+:::
 
-$A$ is **bounded above** if it has an upper bound,
-**bounded below** if it has a lower bound,
-and **bounded** if it is both bounded above and bounded below.
+{{< slidebreak >}}
+
+:::{#def-lower-bound}
+#### Lower bound
+
+Let $A \subseteq \reals$.
+A real number $\lbound$ is a **lower bound** for $A$
+if $\lbound \le a$ for all $a \in A$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-bounded-above}
+#### Bounded above
+
+A set $A \subseteq \reals$ is **bounded above** if it has an upper bound (@def-upper-bound).
 A real-valued [function](sets-functions.qmd#def-function) is
-bounded above, bounded below, or bounded
+bounded above
+if its [image](sets-functions.qmd#def-image) is.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-bounded-below}
+#### Bounded below
+
+A set $A \subseteq \reals$ is **bounded below** if it has a lower bound (@def-lower-bound).
+A real-valued [function](sets-functions.qmd#def-function) is
+bounded below
+if its [image](sets-functions.qmd#def-image) is.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-bounded}
+#### Bounded
+
+A set $A \subseteq \reals$ is **bounded**
+if it is both bounded above (@def-bounded-above) and bounded below (@def-bounded-below).
+A real-valued [function](sets-functions.qmd#def-function) is
+bounded
 if its [image](sets-functions.qmd#def-image) is.
 
 :::

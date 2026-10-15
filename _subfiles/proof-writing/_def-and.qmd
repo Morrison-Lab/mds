@@ -1,0 +1,8 @@
+:::{#def-and}
+#### And
+
+The logical connective (@def-logical-connective) **and** is written $P \land Q$ ("$P$ and $Q$");
+it is true when $P$ and $Q$ are both true,
+and false otherwise.
+
+:::

@@ -2,12 +2,54 @@
 #### Interval
 
 For [real numbers](notation.qmd#def-real-numbers) $a \le b$,
-the **intervals** with **endpoints** $a$ and $b$ are:
+the **intervals** with **endpoints** $a$ and $b$ are
+the closed interval (@def-closed-interval),
+the open interval (@def-open-interval),
+and the half-open intervals (@def-half-open-interval).
+The unbounded intervals (@def-unbounded-interval) have at most one endpoint.
 
-- the **closed interval** $[a, b] \eqdef \set{x \in \reals : a \le x \le b}$;
-- the **open interval** $(a, b) \eqdef \set{x \in \reals : a < x < b}$;
-- the **half-open intervals** $[a, b) \eqdef \set{x \in \reals : a \le x < b}$
-  and $(a, b] \eqdef \set{x \in \reals : a < x \le b}$.
+A square bracket means the endpoint belongs to the interval,
+and a parenthesis means it does not.
+The symbols $\infty$ and $-\infty$ are not real numbers,
+so they always get a parenthesis.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-closed-interval}
+#### Closed interval
+
+For real numbers $a \le b$,
+the **closed interval** is $[a, b] \eqdef \set{x \in \reals : a \le x \le b}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-open-interval}
+#### Open interval
+
+For real numbers $a \le b$,
+the **open interval** is $(a, b) \eqdef \set{x \in \reals : a < x < b}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-half-open-interval}
+#### Half-open intervals
+
+For real numbers $a \le b$,
+the **half-open intervals** are $[a, b) \eqdef \set{x \in \reals : a \le x < b}$
+and $(a, b] \eqdef \set{x \in \reals : a < x \le b}$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-unbounded-interval}
+#### Unbounded intervals
 
 The **unbounded intervals** have at most one endpoint:
 
@@ -16,10 +58,5 @@ The **unbounded intervals** have at most one endpoint:
 - $(-\infty, b] \eqdef \set{x \in \reals : x \le b}$
   and $(-\infty, b) \eqdef \set{x \in \reals : x < b}$;
 - $(-\infty, \infty) \eqdef \reals$.
-
-A square bracket means the endpoint belongs to the interval,
-and a parenthesis means it does not.
-The symbols $\infty$ and $-\infty$ are not real numbers,
-so they always get a parenthesis.
 
 :::

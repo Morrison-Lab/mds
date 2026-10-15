@@ -1,5 +1,5 @@
 :::{#def-eigenvalue}
-#### Eigenvalue and eigenvector
+#### Eigenvalue
 
 Let $\matr{A}$ be a $p \times p$ matrix.
 A real number $\eigval$ is an **eigenvalue** of $\matr{A}$
@@ -10,7 +10,14 @@ $$
 = \eigval\,\underbrace{\vecf{v}}_{p \times 1}
 $$
 
-Any such $\vecf{v}$ is an **eigenvector** of $\matr{A}$ for $\eigval$.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-eigenvector}
+#### Eigenvector
+
+In @def-eigenvalue, any such $\vecf{v}$ is an **eigenvector** of $\matr{A}$ for $\eigval$.
 
 :::
 

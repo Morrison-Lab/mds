@@ -2,6 +2,6 @@
 #### Proposition (statement)
 
 A **proposition**, or **statement**,
-is a sentence that is either true or false.
+is a declarative sentence that is either true or false.
 
 :::

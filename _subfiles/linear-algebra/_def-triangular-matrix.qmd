@@ -1,11 +1,27 @@
 :::{#def-triangular-matrix}
-#### Triangular matrix
+#### Upper triangular matrix
 
 A square matrix $\matr{U}$ is **upper triangular** if every entry below the diagonal is $0$:
 $u_{ij} = 0$ whenever $i > j$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-lower-triangular-matrix}
+#### Lower triangular matrix
+
 A square matrix $\matr{L}$ is **lower triangular** if every entry above the diagonal is $0$:
 $\ell_{ij} = 0$ whenever $i < j$.
-A lower triangular matrix whose diagonal entries are all $1$ is **unit lower triangular**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-unit-lower-triangular-matrix}
+#### Unit lower triangular matrix
+
+A lower triangular matrix (@def-lower-triangular-matrix) whose diagonal entries are all $1$ is **unit lower triangular**.
 
 :::
 
