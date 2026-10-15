@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 02:09:42 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 08:34:45 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
@@ -400,10 +400,10 @@
 <p>which is positive, as positivity and definiteness require of a nonzero vector.</p>
 </div>
 </section><section class="slide level2"><div id="def-inner-product-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Inner product space)</strong></span> An <strong>inner product space</strong> is a vector space equipped with an inner product (<a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a>). For vectors in <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-vectors.html#def-real-coordinate-space">Definition&nbsp;2 in Vectors</a>), the pair <span class="math inline">\((\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\)</span> is a real inner product space.</p>
+<p><span class="theorem-title"><strong>Definition 2 (Inner product space)</strong></span> A <strong>real inner product space</strong> is a pair <span class="math inline">\((V, \left\langle \cdot, \cdot \right\rangle)\)</span> of a real vector space <span class="math inline">\(V\)</span> and an inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span> on it, a function with the four properties of <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a>. We say that <span class="math inline">\(V\)</span> is <strong>equipped with</strong> that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. <a href="#/def-inner-product" class="quarto-xref">Definition&nbsp;1</a> states the properties for <span class="math inline">\(V = \mathbb{R}^p\)</span> (<a href="./linear-algebra-vectors.html#def-real-coordinate-space">Definition&nbsp;2 in Vectors</a>), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.</p>
 </div>
 </section><section class="slide level2"><div id="exm-inner-product-space" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Real coordinate space as an inner product space)</strong></span> The Euclidean space <span class="math inline">\(\mathbb{R}^p\)</span> equipped with the standard dot product (1) is an inner product space, because the dot product satisfies the four inner product axioms (<a href="#/exm-dot-product-inner-product" class="quarto-xref">Example&nbsp;1</a>). For <span class="math inline">\(p = 2\)</span>, any vector <span class="math inline">\(\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\)</span> has squared norm <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle = x_1^2 + x_2^2 \ge 0\)</span>, which is zero if and only if</p>
+<p><span class="theorem-title"><strong>Example 2 (Real coordinate space as an inner product space)</strong></span> The Euclidean space <span class="math inline">\(\mathbb{R}^p\)</span> equipped with the standard dot product (1), that is, the pair <span class="math inline">\((\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\)</span> with <span class="math inline">\(\left\langle \tilde{x}, \tilde{y} \right\rangle = \tilde{x}\cdot \tilde{y}\)</span>, is an inner product space, because the dot product satisfies the four inner product axioms (<a href="#/exm-dot-product-inner-product" class="quarto-xref">Example&nbsp;1</a>). For <span class="math inline">\(p = 2\)</span>, any vector <span class="math inline">\(\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\)</span> has squared norm <span class="math inline">\(\left\langle \tilde{x}, \tilde{x} \right\rangle = x_1^2 + x_2^2 \ge 0\)</span>, which is zero if and only if</p>
 <p><span class="math display">\[
 \begin{aligned}
 x_1 &amp;= x_2 \\
@@ -896,7 +896,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </ul>
 </div>
 </section><section class="slide level2 scrollable"><div id="def-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Norm (normed vector space))</strong></span> A <strong>norm</strong> on a real vector space <span class="math inline">\(V\)</span> is a function <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to [0, \infty)\)</span> that assigns to each vector <span class="math inline">\(\tilde{x}\in V\)</span> a nonnegative real number <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\)</span>, and satisfies the following three axioms for all <span class="math inline">\(\tilde{x}, \tilde{y}\in V\)</span> and all scalars <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Norm (normed vector space, normed space))</strong></span> A <strong>norm</strong> on a real vector space <span class="math inline">\(V\)</span> is a function <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{} : V \to [0, \infty)\)</span> that assigns to each vector <span class="math inline">\(\tilde{x}\in V\)</span> a nonnegative real number <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\)</span>, and satisfies the following three axioms for all <span class="math inline">\(\tilde{x}, \tilde{y}\in V\)</span> and all scalars <span class="math inline">\(c \in \mathbb{R}\)</span>:</p>
 <ol type="1">
 <li>
 <strong>Positivity and definiteness</strong>: <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \ge 0\)</span>, and <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 0\)</span> if and only if <span class="math inline">\(\tilde{x}= \tilde{0}\)</span>;</li>
@@ -916,7 +916,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>Every inner product space <span class="math inline">\((\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\)</span> (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) naturally defines an induced norm <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\sqrt{\left\langle \tilde{x}, \tilde{x} \right\rangle}\)</span>, which satisfies all three norm axioms.</p>
 </div>
 </section><section class="slide level2"><div id="def-vector-p-norm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Vector <span class="math inline">\(p\)</span>-norm (<span class="math inline">\(\ell_p\)</span> norm, <span class="math inline">\(\ell_1\)</span> norm, <span class="math inline">\(\ell_2\)</span> norm, infinity norm))</strong></span> For a vector <span class="math inline">\(\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span> and any real number <span class="math inline">\(k \ge 1\)</span>, the <strong>vector <span class="math inline">\(p\)</span>-norm</strong> (or <strong><span class="math inline">\(\ell_p\)</span> norm</strong>, traditionally named with parameter <span class="math inline">\(p\)</span> but denoted here with exponent <span class="math inline">\(k\)</span> to avoid clashing with the ambient vector dimension <span class="math inline">\(p\)</span>) is:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Vector <span class="math inline">\(p\)</span>-norm (<span class="math inline">\(\ell_p\)</span> norm, <span class="math inline">\(\ell_1\)</span> norm, taxicab norm, Manhattan norm, <span class="math inline">\(\ell_2\)</span> norm, infinity norm))</strong></span> For a vector <span class="math inline">\(\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\)</span> and any real number <span class="math inline">\(k \ge 1\)</span>, the <strong>vector <span class="math inline">\(p\)</span>-norm</strong> (or <strong><span class="math inline">\(\ell_p\)</span> norm</strong>, traditionally named with parameter <span class="math inline">\(p\)</span> but denoted here with exponent <span class="math inline">\(k\)</span> to avoid clashing with the ambient vector dimension <span class="math inline">\(p\)</span>) is:</p>
 <p><span class="math display">\[
 \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}_k \stackrel{\text{def}}{=}\mathopen{}\left(\sum_{i=1}^p\mathopen{}\left|x_i\right|\mathclose{}^k\right)\mathclose{}^{1/k}.
 \]</span></p>
@@ -1012,38 +1012,29 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </div>
 <p>By part 1 of <a href="#/thm-vector-p-norm" class="quarto-xref">Theorem&nbsp;5</a>, the <span class="math inline">\(\ell_1\)</span> norm 7 equals <span class="math inline">\(\mathopen{}\left|3\right|\mathclose{} + \mathopen{}\left|-4\right|\mathclose{} = 7\)</span>, and the <span class="math inline">\(\ell_2\)</span> norm 5 equals <span class="math inline">\(\sqrt{3^2 + (-4)^2} = 5\)</span>. By part 2, the norms approach the maximum norm 4: at <span class="math inline">\(k = 64\)</span> the <span class="math inline">\(\ell_k\)</span> norm is within 0.00000000063 of it. By part 3, the triangle inequality holds at all 8 of the 8 values of <span class="math inline">\(k\)</span>.</p>
 </div>
-</section><section class="slide level2"><div id="def-cosine-sine" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Cosine and sine)</strong></span> The <em>unit circle</em> is the set of points <span class="math inline">\((x_1, x_2)\)</span> in the plane with <span class="math inline">\(x_1^2 + x_2^2 = 1\)</span>, and <span class="math inline">\(\pi \approx 3.14159\)</span> is half of its circumference. For a real number <span class="math inline">\(\theta\)</span>, start at the point <span class="math inline">\((1, 0)\)</span> and move a distance <span class="math inline">\(\mathopen{}\left|\theta\right|\mathclose{}\)</span> along the unit circle, counterclockwise if <span class="math inline">\(\theta\ge 0\)</span> and clockwise if <span class="math inline">\(\theta&lt; 0\)</span>. The point reached is <span class="math inline">\((\cos\theta, \sin\theta)\)</span>: its first coordinate is the <strong>cosine</strong> of <span class="math inline">\(\theta\)</span>, and its second coordinate is the <strong>sine</strong> of <span class="math inline">\(\theta\)</span>.</p>
-</div>
-</section><section class="slide level2"><div id="exm-cosine-sine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Cosines and sines of some angles)</strong></span> &nbsp;</p>
-<ul>
-<li><p><span class="math inline">\(\theta= 0\)</span> stays at <span class="math inline">\((1, 0)\)</span>, so <span class="math inline">\(\cos 0 = 1\)</span> and <span class="math inline">\(\sin 0 = 0\)</span>.</p></li>
-<li><p><span class="math inline">\(\theta= \pi\)</span> goes half way around the circle, to <span class="math inline">\((-1, 0)\)</span>, so <span class="math inline">\(\cos\pi = -1\)</span> and <span class="math inline">\(\sin\pi = 0\)</span>.</p></li>
-<li><p><span class="math inline">\(\theta= \pi/2\)</span> goes a quarter of the way round, to <span class="math inline">\((0, 1)\)</span>, so <span class="math inline">\(\cos(\pi/2) = 0\)</span> and <span class="math inline">\(\sin(\pi/2) = 1\)</span>.</p></li>
-<li>
-<p><span class="math inline">\(\theta= \pi/4\)</span> goes an eighth of the way round, to the point of the circle with <span class="math inline">\(x_1 = x_2 &gt; 0\)</span>. There <span class="math inline">\(x_1^2 + x_1^2 = 1\)</span>, so <span class="math inline">\(x_1^2 = \tfrac{1}{2}\)</span> and <span class="math inline">\(x_1 = \tfrac{1}{\sqrt{2}} \approx 0.7071\)</span>:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\cos(\pi/4) &amp;= \sin(\pi/4) \\
-&amp;= \tfrac{1}{\sqrt{2}}.
-\end{aligned}
-\]</span></p>
-</li>
-</ul>
-<p>Angles are also measured in <em>degrees</em>, with a full turn of <span class="math inline">\(2\pi\)</span> equal to <span class="math inline">\(360\)</span> degrees, so <span class="math inline">\(\pi/2\)</span> is <span class="math inline">\(90\)</span> degrees and <span class="math inline">\(\pi/4\)</span> is <span class="math inline">\(45\)</span> degrees.</p>
-</div>
 </section><section class="slide level2"><div id="def-angle" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Angle between two vectors)</strong></span> The <strong>angle</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y} \in \mathbb{R}^p\)</span> is the unique number <span class="math inline">\(\theta\in [0, \pi]\)</span> whose cosine (<a href="#/def-cosine-sine" class="quarto-xref">Definition&nbsp;7</a>) satisfies</p>
+<p><span class="theorem-title"><strong>Definition 7 (Angle between two vectors)</strong></span> The <strong>angle</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y} \in \mathbb{R}^p\)</span> is the unique number <span class="math inline">\(\theta\in [0, \pi]\)</span> whose cosine (<a href="./algebra-trigonometry.html#def-cosine-sine">Definition&nbsp;1 in Trigonometry</a>) satisfies</p>
 <p><span class="math display">\[
 \cos\theta= \frac{\tilde{x} \cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="rem-angle-well-defined" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Why the angle is well defined). </span>The denominator is positive, because both vectors are nonzero (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;1</a>), and by <a href="#/thm-cauchy-schwarz" class="quarto-xref">Theorem&nbsp;3</a> the ratio lies between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>. On <span class="math inline">\([0, \pi]\)</span>, <span class="math inline">\(\cos\)</span> is decreasing from <span class="math inline">\(1\)</span> to <span class="math inline">\(-1\)</span> and takes each value in <span class="math inline">\([-1, 1]\)</span> exactly once, so there is exactly one such <span class="math inline">\(\theta\)</span>. The angle is <span class="math inline">\(\pi/2\)</span> exactly when <span class="math inline">\(\tilde{x} \cdot \tilde{y} = 0\)</span>, so for nonzero vectors, orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;13 in Vectors</a>) means at a right angle.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Why the angle is well defined). </span>The denominator is positive, because both vectors are nonzero (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;1</a>), and by <a href="#/thm-cauchy-schwarz" class="quarto-xref">Theorem&nbsp;3</a> the ratio lies between <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>. On <span class="math inline">\([0, \pi]\)</span>, <span class="math inline">\(\cos\)</span> is decreasing from <span class="math inline">\(1\)</span> to <span class="math inline">\(-1\)</span> and takes each value in <span class="math inline">\([-1, 1]\)</span> exactly once (<a href="./algebra-trigonometry.html#thm-cosine-bijection">Theorem&nbsp;2 in Trigonometry</a>), so there is exactly one such <span class="math inline">\(\theta\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="cor-right-angle-orthogonal" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (A right angle means orthogonal)</strong></span> For nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y} \in \mathbb{R}^p\)</span> with angle <span class="math inline">\(\theta\)</span> (<a href="#/def-angle" class="quarto-xref">Definition&nbsp;7</a>),</p>
+<p><span class="math display">\[
+\theta= \frac{\pi}{2}
+\quad\Longleftrightarrow\quad
+\tilde{x} \cdot \tilde{y} = 0,
+\]</span></p>
+<p>so for nonzero vectors, orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;13 in Vectors</a>) means at a right angle.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Since <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} &gt; 0\)</span> (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;1</a>), <span class="math inline">\(\cos\theta= 0\)</span> exactly when <span class="math inline">\(\tilde{x} \cdot \tilde{y} = 0\)</span>. On <span class="math inline">\([0, \pi]\)</span>, <span class="math inline">\(\cos\)</span> vanishes only at <span class="math inline">\(\pi/2\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-angle" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Some angles in the plane)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 13 (Some angles in the plane)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span>: <span class="math inline">\(\cos\theta= \frac{1}{1 \cdot\sqrt{2}}\)</span>, so <span class="math inline">\(\theta= \pi/4\)</span>.</p></li>
 <li>
@@ -1070,13 +1061,13 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-cosine-similarity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Cosine similarity)</strong></span> The <strong>cosine similarity</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> is their dot product divided by the product of their lengths:</p>
+<p><span class="theorem-title"><strong>Definition 8 (Cosine similarity)</strong></span> The <strong>cosine similarity</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> is their dot product divided by the product of their lengths:</p>
 <p><span class="math display">\[
 \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\tilde{x}\cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-cosine-similarity" class="theorem example">
-<p><span class="theorem-title"><strong>Example 15 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)</strong></span> For vectors in <span class="math inline">\(\mathbb{R}^2\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 14 (Cosine similarity of parallel, orthogonal, and arbitrary vectors)</strong></span> For vectors in <span class="math inline">\(\mathbb{R}^2\)</span>:</p>
 <ul>
 <li>
 <p>Parallel vectors <span class="math inline">\(\tilde{x}= (1, 2)\)</span> and <span class="math inline">\(\tilde{y}= (2, 4)\)</span>:</p>
@@ -1111,22 +1102,34 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>When both vectors have unit Euclidean norm (<span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\)</span>), cosine similarity equals their inner product: <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="cor-cosine-similarity-angle" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (Cosine similarity is the cosine of the angle)</strong></span> For nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> with angle <span class="math inline">\(\theta\)</span> between them (<a href="#/def-angle" class="quarto-xref">Definition&nbsp;8</a>),</p>
+<p><span class="theorem-title"><strong>Corollary 2 (Cosine similarity is the cosine of the angle)</strong></span> For nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> with angle <span class="math inline">\(\theta\)</span> between them (<a href="#/def-angle" class="quarto-xref">Definition&nbsp;7</a>),</p>
 <p><span class="math display">\[
 \operatorname{cossim}(\tilde{x}, \tilde{y}) = \cos\theta.
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>The ratio that <a href="#/def-angle" class="quarto-xref">Definition&nbsp;8</a> sets equal to <span class="math inline">\(\cos\theta\)</span> is the ratio that <a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;9</a> defines as <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y})\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>The ratio that <a href="#/def-angle" class="quarto-xref">Definition&nbsp;7</a> sets equal to <span class="math inline">\(\cos\theta\)</span> is the ratio that <a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;8</a> defines as <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y})\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-cosine-similarity-inner-product-space" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Cosine similarity in an inner product space)</strong></span> In a general real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span> and induced norm <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span>, the <strong>cosine similarity</strong> is</p>
+<p><span class="theorem-title"><strong>Definition 9 (Cosine similarity in an inner product space)</strong></span> In a general real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span> and induced norm <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span>, the <strong>cosine similarity</strong> is</p>
 <p><span class="math display">\[
 \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
 </div>
+</section><section class="slide level2"><div id="cor-cosine-similarity-unit-vectors" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 3 (Cosine similarity of unit vectors is their inner product)</strong></span> In a real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>), for all vectors <span class="math inline">\(\tilde{x}\)</span> and <span class="math inline">\(\tilde{y}\)</span> with <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\)</span>,</p>
+<p><span class="math display">\[
+\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Both norms in the denominator of <a href="#/def-cosine-similarity-inner-product-space" class="quarto-xref">Definition&nbsp;9</a> equal <span class="math inline">\(1\)</span>, so</p>
+<p><span class="math display">\[
+\operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{1 \cdot 1} = \left\langle \tilde{x}, \tilde{y} \right\rangle.
+\]</span></p>
+</div>
 </section><section class="slide level2"><div id="thm-pearson-cosine-centered" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)</strong></span> Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^n\)</span> be two vectors that are not constant, with means <span class="math inline">\(\bar{x} = \frac{1}{n}\sum_{i=1}^nx_i\)</span> and <span class="math inline">\(\bar{y} = \frac{1}{n}\sum_{i=1}^ny_i\)</span>. Write <span class="math inline">\(\tilde{\tilde{x}} = \tilde{x}- \bar{x}\,\tilde{1}\)</span> and <span class="math inline">\(\tilde{\tilde{y}} = \tilde{y}- \bar{y}\,\tilde{1}\)</span> for the <strong>centered</strong> vectors, whose means are zero. Then the <a href="https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r">Pearson correlation coefficient</a> <span class="math inline">\(r\)</span> of the <span class="math inline">\(n\)</span> pairs <span class="math inline">\((x_i, y_i)\)</span> is the cosine similarity (<a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;9</a>) of the centered vectors:</p>
+<p><span class="theorem-title"><strong>Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)</strong></span> Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^n\)</span> be two vectors that are not constant, with means <span class="math inline">\(\bar{x} = \frac{1}{n}\sum_{i=1}^nx_i\)</span> and <span class="math inline">\(\bar{y} = \frac{1}{n}\sum_{i=1}^ny_i\)</span>. Write <span class="math inline">\(\tilde{\tilde{x}} = \tilde{x}- \bar{x}\,\tilde{1}\)</span> and <span class="math inline">\(\tilde{\tilde{y}} = \tilde{y}- \bar{y}\,\tilde{1}\)</span> for the <strong>centered</strong> vectors, whose means are zero. Then the <a href="https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r">Pearson correlation coefficient</a> <span class="math inline">\(r\)</span> of the <span class="math inline">\(n\)</span> pairs <span class="math inline">\((x_i, y_i)\)</span> is the cosine similarity (<a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;8</a>) of the centered vectors:</p>
 <p><span class="math display">\[
 r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \]</span></p>
@@ -1143,7 +1146,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>by the definitions of the dot product and the Euclidean norm. Dividing the first by the product of the other two gives the formula for <span class="math inline">\(r\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-pearson-cosine-centered" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Centering changes the cosine similarity)</strong></span> Take <span class="math inline">\(\tilde{x}= (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{y}= (1, 3, 2)\)</span>. Their means are <span class="math inline">\(\bar{x} = \bar{y} = 2\)</span>, so <span class="math inline">\(\tilde{\tilde{x}} = (-1, 0, 1)\)</span> and <span class="math inline">\(\tilde{\tilde{y}} = (-1, 1, 0)\)</span>. Then</p>
+<p><span class="theorem-title"><strong>Example 15 (Centering changes the cosine similarity)</strong></span> Take <span class="math inline">\(\tilde{x}= (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{y}= (1, 3, 2)\)</span>. Their means are <span class="math inline">\(\bar{x} = \bar{y} = 2\)</span>, so <span class="math inline">\(\tilde{\tilde{x}} = (-1, 0, 1)\)</span> and <span class="math inline">\(\tilde{\tilde{y}} = (-1, 1, 0)\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{\tilde{x}} \cdot \tilde{\tilde{y}} &amp;= 1 + 0 + 0 = 1, \\
@@ -1201,7 +1204,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-dot-linear-sum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Dotting with a combination of three vectors)</strong></span> Let <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span> and take the combination <span class="math inline">\(2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)\)</span>. Directly,</p>
+<p><span class="theorem-title"><strong>Example 16 (Dotting with a combination of three vectors)</strong></span> Let <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span> and take the combination <span class="math inline">\(2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)\)</span>. Directly,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{x} \cdot (2, -1, 4) &amp;= 2 - 2 + 12 \\
@@ -1234,7 +1237,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>So every <span class="math inline">\(c_i = 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthonormal-independent" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Three orthonormal vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Example 17 (Three orthonormal vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let</p>
 <p><span class="math display">\[
 \tilde{q}_1 = (0, 0, 1), \quad
 \tilde{q}_2 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0), \quad
@@ -1258,21 +1261,21 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>The converse fails: <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span> are linearly independent, since <span class="math inline">\(c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>, but they are not orthonormal, since <span class="math inline">\((1, 0) \cdot (1, 1) = 1 \ne 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-basis" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Orthonormal basis)</strong></span> An <strong>orthonormal basis</strong> of a subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) whose vectors are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;17 in Vectors</a>).</p>
+<p><span class="theorem-title"><strong>Definition 10 (Orthonormal basis)</strong></span> An <strong>orthonormal basis</strong> of a subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) whose vectors are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;17 in Vectors</a>).</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exm-orthonormal-basis" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (Orthonormal bases of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 18 (Orthonormal bases of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
 <ul>
 <li>The indicator vectors <span class="math inline">\(\tilde{e}_1, \tilde{e}_2, \tilde{e}_3\)</span> are orthonormal
 <ol start="2" class="example" type="1">
 <li>and a basis of <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</li>
 </ol>
 </li>
-<li>The vectors <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <a href="#/exm-orthonormal-independent" class="quarto-xref">Example&nbsp;18</a> are orthonormal and linearly independent, so they are a basis of their span (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>), which therefore has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and is all of <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). So they are an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span> too.</li>
+<li>The vectors <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <a href="#/exm-orthonormal-independent" class="quarto-xref">Example&nbsp;17</a> are orthonormal and linearly independent, so they are a basis of their span (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>), which therefore has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and is all of <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). So they are an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span> too.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-not-orthonormal-basis" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Bases that are not orthonormal, and orthonormal lists that are not bases)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 19 (Bases that are not orthonormal, and orthonormal lists that are not bases)</strong></span> &nbsp;</p>
 <ul>
 <li>
 <span class="math inline">\((1, 0), (1, 1)\)</span> is a basis of <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-subspaces.html#exm-basis">Example&nbsp;11 in Subspaces and Rank</a>). It is not an orthonormal basis, since <span class="math inline">\((1, 0) \cdot (1, 1) = 1\)</span>.</li>
@@ -1281,7 +1284,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-orthonormal-expansion" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (Coordinates in an orthonormal basis are dot products)</strong></span> If <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> is an orthonormal basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>), then every <span class="math inline">\(\tilde{x} \in \mathcal{S}\)</span> satisfies</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Coordinates in an orthonormal basis are dot products)</strong></span> If <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> is an orthonormal basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;10</a>), then every <span class="math inline">\(\tilde{x} \in \mathcal{S}\)</span> satisfies</p>
 <p><span class="math display">\[
 \tilde{x} = \sum_{i=1}^{k} (\tilde{q}_i \cdot \tilde{x})\,\tilde{q}_i.
 \]</span></p>
@@ -1304,7 +1307,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>so each coefficient <span class="math inline">\(c_i\)</span> is <span class="math inline">\(\tilde{q}_i \cdot \tilde{x}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthonormal-expansion" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Expanding a vector in an orthonormal basis)</strong></span> With the orthonormal basis <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <span class="math inline">\(\mathbb{R}^3\)</span> from <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;19</a> and <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span>: <span class="math inline">\(\tilde{q}_1 \cdot \tilde{x} = 3\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 20 (Expanding a vector in an orthonormal basis)</strong></span> With the orthonormal basis <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <span class="math inline">\(\mathbb{R}^3\)</span> from <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;18</a> and <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span>: <span class="math inline">\(\tilde{q}_1 \cdot \tilde{x} = 3\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_2 \cdot \tilde{x} &amp;= \tfrac{1}{\sqrt{2}}\,(1 + 2) \\
@@ -1336,7 +1339,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>which is <span class="math inline">\(\tilde{x}\)</span>, as <a href="#/thm-orthonormal-expansion" class="quarto-xref">Theorem&nbsp;9</a> says.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="def-gram-schmidt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Gram-Schmidt process)</strong></span> The <strong>Gram-Schmidt process</strong> takes vectors <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span> and, for <span class="math inline">\(i = 1, 2, \ldots, k\)</span> in turn:</p>
+<p><span class="theorem-title"><strong>Definition 11 (Gram-Schmidt process)</strong></span> The <strong>Gram-Schmidt process</strong> takes vectors <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span> and, for <span class="math inline">\(i = 1, 2, \ldots, k\)</span> in turn:</p>
 <ol type="1">
 <li>
 <strong>Orthogonalize:</strong> <span class="math inline">\(\tilde{\tilde{q}}_i \stackrel{\text{def}}{=}\tilde{a}_i - \sum_{j=1}^{i-1} (\tilde{q}_j \cdot \tilde{a}_i)\,\tilde{q}_j\)</span> (for <span class="math inline">\(i = 1\)</span> the sum is empty, so <span class="math inline">\(\tilde{\tilde{q}}_1 = \tilde{a}_1\)</span>);</li>
@@ -1348,7 +1351,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>The output is the list <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \ldots\)</span> produced before the process stops, or all <span class="math inline">\(k\)</span> of them if it never stops.</p>
 </div>
 </section><section class="slide level2"><div id="exm-gram-schmidt" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (Two steps of Gram-Schmidt in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 1, 0)\)</span> and <span class="math inline">\(\tilde{a}_2 = (1, 0, 1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 21 (Two steps of Gram-Schmidt in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 1, 0)\)</span> and <span class="math inline">\(\tilde{a}_2 = (1, 0, 1)\)</span>.</p>
 <ul>
 <li><p><strong>Step 1.</strong> <span class="math inline">\(\tilde{\tilde{q}}_1 = (1, 1, 0)\)</span>, with norm <span class="math inline">\(\sqrt{2}\)</span>, so <span class="math inline">\(\tilde{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)\)</span>.</p></li>
 <li>
@@ -1391,7 +1394,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-gram-schmidt-stops" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (Gram-Schmidt stops on dependent vectors)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 2)\)</span> and <span class="math inline">\(\tilde{a}_2 = (2, 4)\)</span>. Step 1 gives <span class="math inline">\(\tilde{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)\)</span>. In step 2,</p>
+<p><span class="theorem-title"><strong>Example 22 (Gram-Schmidt stops on dependent vectors)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 2)\)</span> and <span class="math inline">\(\tilde{a}_2 = (2, 4)\)</span>. Step 1 gives <span class="math inline">\(\tilde{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)\)</span>. In step 2,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_1 \cdot \tilde{a}_2 &amp;= \tfrac{1}{\sqrt{5}}\,(2 + 8) \\
@@ -1410,12 +1413,12 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>so the process stops: <span class="math inline">\(\tilde{a}_2\)</span> is a multiple of <span class="math inline">\(\tilde{a}_1\)</span>.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="thm-gram-schmidt" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (What Gram-Schmidt produces)</strong></span> Run the Gram-Schmidt process (<a href="#/def-gram-schmidt" class="quarto-xref">Definition&nbsp;12</a>) on <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 10 (What Gram-Schmidt produces)</strong></span> Run the Gram-Schmidt process (<a href="#/def-gram-schmidt" class="quarto-xref">Definition&nbsp;11</a>) on <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span>.</p>
 <ol type="1">
 <li>If it has produced <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_i\)</span> without stopping, then <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_i\)</span> are orthonormal and <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{q}_1, \ldots, \tilde{q}_i\right\}\mathclose{}
 = \operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_i\right\}\mathclose{}\)</span>.</li>
 <li>If it reaches step <span class="math inline">\(i\)</span> (that is, it did not stop at steps <span class="math inline">\(1, \ldots, i - 1\)</span>), it stops there exactly when <span class="math inline">\(\tilde{a}_i \in \operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_{i-1}\right\}\mathclose{}\)</span>.</li>
-<li>It completes all <span class="math inline">\(k\)</span> steps exactly when <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> are linearly independent; then <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> is an orthonormal basis of <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_k\right\}\mathclose{}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>).</li>
+<li>It completes all <span class="math inline">\(k\)</span> steps exactly when <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> are linearly independent; then <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> is an orthonormal basis of <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_k\right\}\mathclose{}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;10</a>).</li>
 </ol>
 </div>
 <div class="proof">
@@ -1432,7 +1435,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \begin{aligned}
 \tilde{q}_l \cdot \tilde{\tilde{q}}_i
 &amp;= \tilde{q}_l \cdot \mathopen{}\left(1\,\tilde{a}_i + \sum_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}_j \cdot \tilde{a}_i\right)\mathclose{}\,\tilde{q}_j\right)\mathclose{}
-&amp;&amp; \text{(}\href{#def-gram-schmidt}{\text{Definition~12}}\text{, as a linear combination)}
+&amp;&amp; \text{(}\href{#def-gram-schmidt}{\text{Definition~11}}\text{, as a linear combination)}
 \\
 &amp;= 1\,(\tilde{q}_l \cdot \tilde{a}_i) + \sum_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}_j \cdot \tilde{a}_i\right)\mathclose{}\,(\tilde{q}_l \cdot \tilde{q}_j)
 &amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)}
@@ -1471,7 +1474,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p><strong>Part 3.</strong> If the process completes, then <span class="math inline">\(\tilde{a}_1 \notin \operatorname{span}\)</span> of the empty list, and for each <span class="math inline">\(i \ge 2\)</span>, <span class="math inline">\(\tilde{a}_i \notin \operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_{i-1}\right\}\mathclose{}\)</span> (part 2). Applying <a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a> <span class="math inline">\(k\)</span> times, starting from the empty list, shows that <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> are linearly independent. Conversely, if they are linearly independent, no <span class="math inline">\(\tilde{a}_i\)</span> is a linear combination <span class="math inline">\(\sum_{j&lt;i} c_j \tilde{a}_j\)</span> of the earlier ones, because then <span class="math inline">\(\sum_{j&lt;i} c_j \tilde{a}_j - \tilde{a}_i = \tilde{0}\)</span> would be a combination with a nonzero coefficient; so by part 2 the process never stops. When it completes, <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> are orthonormal, hence linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a>), and span <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_k\right\}\mathclose{}\)</span> (part 1), so they are an orthonormal basis of it.</p>
 </div>
 </section><section class="slide level2"><div id="exm-thm-gram-schmidt" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (Finishing an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Continue <a href="#/exm-gram-schmidt" class="quarto-xref">Example&nbsp;22</a> with <span class="math inline">\(\tilde{a}_3 = (0, 1, 1)\)</span>. <span class="math inline">\(\tilde{q}_1 \cdot \tilde{a}_3 = \tfrac{1}{\sqrt{2}}\)</span> and</p>
+<p><span class="theorem-title"><strong>Example 23 (Finishing an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Continue <a href="#/exm-gram-schmidt" class="quarto-xref">Example&nbsp;21</a> with <span class="math inline">\(\tilde{a}_3 = (0, 1, 1)\)</span>. <span class="math inline">\(\tilde{q}_1 \cdot \tilde{a}_3 = \tfrac{1}{\sqrt{2}}\)</span> and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_2 \cdot \tilde{a}_3 &amp;= \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) \\
@@ -1511,7 +1514,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="cor-orthonormal-basis-exists" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 2 (Every subspace has an orthonormal basis)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Every orthonormal list of vectors in <span class="math inline">\(\mathcal{S}\)</span> extends to an orthonormal basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>). Starting from the empty list shows that <span class="math inline">\(\mathcal{S}\)</span> has an orthonormal basis.</p>
+<p><span class="theorem-title"><strong>Corollary 4 (Every subspace has an orthonormal basis)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Every orthonormal list of vectors in <span class="math inline">\(\mathcal{S}\)</span> extends to an orthonormal basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;10</a>). Starting from the empty list shows that <span class="math inline">\(\mathcal{S}\)</span> has an orthonormal basis.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r \in \mathcal{S}\)</span> be orthonormal. They are linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a>), so they extend to a basis <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r, \tilde{a}_{r+1}, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/thm-gram-schmidt" class="quarto-xref">Theorem&nbsp;10</a>, part 3).</p>
@@ -1532,7 +1535,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 <p>So the orthonormal basis contains the starting list.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exm-orthonormal-basis-exists" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (Extending one unit vector to an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Start from the unit vector <span class="math inline">\(\tilde{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)\)</span>. Extend it to a basis of <span class="math inline">\(\mathbb{R}^3\)</span> as in <a href="./linear-algebra-subspaces.html#exm-extend-basis">Example&nbsp;18 in Subspaces and Rank</a>, starting from the empty list: <span class="math inline">\(\tilde{u}_1\)</span> is not in the span of the empty list, <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, because <span class="math inline">\(\mathopen{}\left\lVert\tilde{u}_1\right\rVert\mathclose{} = 1\)</span>; <span class="math inline">\((1, 0, 0)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1\right\}\mathclose{}\)</span>, because every multiple of <span class="math inline">\(\tilde{u}_1\)</span> has equal first and second entries, and <span class="math inline">\((0, 0, 1)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1, (1, 0, 0)\right\}\mathclose{}\)</span>, because every combination of those two vectors has third entry <span class="math inline">\(0\)</span>. So <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a>), and three linearly independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span> are a basis of it (they are a basis of their span, which has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and so is <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>)). Gram-Schmidt on <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 24 (Extending one unit vector to an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Start from the unit vector <span class="math inline">\(\tilde{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)\)</span>. Extend it to a basis of <span class="math inline">\(\mathbb{R}^3\)</span> as in <a href="./linear-algebra-subspaces.html#exm-extend-basis">Example&nbsp;18 in Subspaces and Rank</a>, starting from the empty list: <span class="math inline">\(\tilde{u}_1\)</span> is not in the span of the empty list, <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, because <span class="math inline">\(\mathopen{}\left\lVert\tilde{u}_1\right\rVert\mathclose{} = 1\)</span>; <span class="math inline">\((1, 0, 0)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1\right\}\mathclose{}\)</span>, because every multiple of <span class="math inline">\(\tilde{u}_1\)</span> has equal first and second entries, and <span class="math inline">\((0, 0, 1)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1, (1, 0, 0)\right\}\mathclose{}\)</span>, because every combination of those two vectors has third entry <span class="math inline">\(0\)</span>. So <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a>), and three linearly independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span> are a basis of it (they are a basis of their span, which has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and so is <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>)). Gram-Schmidt on <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span>:</p>
 <ol type="1">
 <li><p><span class="math inline">\(\tilde{q}_1 = \tilde{u}_1\)</span>.</p></li>
 <li>
@@ -1547,12 +1550,12 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 </li>
 <li><p><span class="math inline">\((0, 0, 1)\)</span> is orthogonal to <span class="math inline">\(\tilde{q}_1\)</span> and <span class="math inline">\(\tilde{q}_2\)</span>, so <span class="math inline">\(\tilde{\tilde{q}}_3 = (0, 0, 1)\)</span>, which already has norm <span class="math inline">\(1\)</span>, and <span class="math inline">\(\tilde{q}_3 = (0, 0, 1)\)</span>.</p></li>
 </ol>
-<p>The result is the orthonormal basis of <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;19</a>, in a different order.</p>
+<p>The result is the orthonormal basis of <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;18</a>, in a different order.</p>
 </div>
 </section><section id="outer-product" class="slide level2" data-number="4"><h2>
 <span class="header-section-number">4</span> Outer product</h2>
 <div id="def-outer-product" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 13 (Outer product)</strong></span> The <strong>outer product</strong> of a vector <span class="math inline">\(\tilde{u}\)</span> of length <span class="math inline">\(m\)</span> and a vector <span class="math inline">\(\tilde{v}\)</span> of length <span class="math inline">\(n\)</span> is the <span class="math inline">\(m \times n\)</span> matrix product (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;7 in Matrices</a>) <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> of the column vector <span class="math inline">\(\tilde{u}\)</span> with the row vector <span class="math inline">\({\tilde{v}}^{\top}\)</span>. Its entries are</p>
+<p><span class="theorem-title"><strong>Definition 12 (Outer product)</strong></span> The <strong>outer product</strong> of a vector <span class="math inline">\(\tilde{u}\)</span> of length <span class="math inline">\(m\)</span> and a vector <span class="math inline">\(\tilde{v}\)</span> of length <span class="math inline">\(n\)</span> is the <span class="math inline">\(m \times n\)</span> matrix product (<a href="./linear-algebra-matrices.html#def-matrix-mult">Definition&nbsp;7 in Matrices</a>) <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> of the column vector <span class="math inline">\(\tilde{u}\)</span> with the row vector <span class="math inline">\({\tilde{v}}^{\top}\)</span>. Its entries are</p>
 <p><span class="math display">\[
 \mathopen{}\left(\underbrace{\tilde{u}}_{m \times 1}\,\underbrace{{\tilde{v}}^{\top}}_{1 \times n}\right)\mathclose{}_{ij}
 = u_i v_j
@@ -1560,7 +1563,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-outer-product" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (An outer product)</strong></span> For <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 25 (An outer product)</strong></span> For <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{u}\,{\tilde{v}}^{\top}
@@ -1586,7 +1589,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 </div>
 </section><section class="slide level2"><div id="rem-outer-vs-dot-product" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (Outer product and dot product). </span>The dot product <span class="math inline">\({\tilde{u}}^{\top}\tilde{v}\)</span> (<a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>) needs two vectors of the same length and gives a number. The outer product <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> takes vectors of any two lengths and gives a matrix <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 1</a>, p.&nbsp;11)</span>.</p>
-<p>For example, <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span> in <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;26</a> have different lengths, so they have no dot product, but their outer product is a <span class="math inline">\(3 \times 2\)</span> matrix. For <span class="math inline">\(\tilde{a} = (1, 2)\)</span> and <span class="math inline">\(\tilde{b} = (3, 4)\)</span>, which have the same length, both products exist:</p>
+<p>For example, <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span> in <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;25</a> have different lengths, so they have no dot product, but their outer product is a <span class="math inline">\(3 \times 2\)</span> matrix. For <span class="math inline">\(\tilde{a} = (1, 2)\)</span> and <span class="math inline">\(\tilde{b} = (3, 4)\)</span>, which have the same length, both products exist:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\tilde{a}}^{\top}\tilde{b}
@@ -1628,7 +1631,7 @@ v_k\,(v_j \tilde{u}) - v_j\,(v_k \tilde{u})
 <p>Either way, every pair of columns has a combination with coefficients that are not all zero and that equals <span class="math inline">\(\tilde{0}\)</span>. Now take any set of two or more columns. It contains a pair <span class="math inline">\(j \neq k\)</span>. Use that pair’s coefficients for columns <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and the coefficient <span class="math inline">\(0\)</span> for every other column in the set. This combination equals <span class="math inline">\(\tilde{0}\)</span>, and its coefficients are not all zero, so the set is not linearly independent (<a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). The largest linearly independent set of columns therefore has one column.</p>
 </div>
 </section><section class="slide level2 smaller scrollable" id="references"><div id="exm-outer-product-rank" class="theorem example">
-<p><span class="theorem-title"><strong>Example 27 (The rank of an outer product)</strong></span> In <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;26</a>, the second column <span class="math inline">\((5, 10, 15)\)</span> of <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> is <span class="math inline">\(\frac{5}{4}\)</span> times the first column <span class="math inline">\((4, 8, 12)\)</span>, because the columns are <span class="math inline">\(v_1 \tilde{u} = 4\tilde{u}\)</span> and <span class="math inline">\(v_2 \tilde{u} = 5\tilde{u}\)</span>. So the two columns are not linearly independent, and the <span class="math inline">\(3 \times 2\)</span> matrix has rank <span class="math inline">\(1\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 26 (The rank of an outer product)</strong></span> In <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;25</a>, the second column <span class="math inline">\((5, 10, 15)\)</span> of <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> is <span class="math inline">\(\frac{5}{4}\)</span> times the first column <span class="math inline">\((4, 8, 12)\)</span>, because the columns are <span class="math inline">\(v_1 \tilde{u} = 4\tilde{u}\)</span> and <span class="math inline">\(v_2 \tilde{u} = 5\tilde{u}\)</span>. So the two columns are not linearly independent, and the <span class="math inline">\(3 \times 2\)</span> matrix has rank <span class="math inline">\(1\)</span>.</p>
 </div>
 
 

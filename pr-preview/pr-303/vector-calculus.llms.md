@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 02:09:42 (PDT)
+Last modified: 2026-10-15 08:34:45 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -79,6 +79,23 @@ Let \\\tilde{x}\\ and \\\tilde{\beta}\\ be column vectors of length \\p\\ (see [
 > \\\begin{aligned} \frac{\partial f}{\partial \sigma} &= -\frac{1}{\sqrt{2\pi}}\sigma^{-2}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} + \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{} \cdot\mathopen{}\left\[\frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} \\ &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned}\\
 >
 > *Remark:* Setting \\\frac{\partial f}{\partial \mu} = 0\\ and \\\frac{\partial f}{\partial \sigma} = 0\\ for a sample of independent observations leads directly to the values that make the sample most probable, which statistics calls the maximum likelihood estimates: \\\hat{\mu}= \bar{x}\\ and \\\hat{\sigma}^2 = \frac{1}{n}\sum\_{i=1}^n(x_i - \bar{x})^2\\.
+
+> **NOTE:**
+>
+> **Theorem 1 (Partial derivatives of the normal density with respect to its parameters)** Let \\\mu\in \mathbb{R}\\ and \\\sigma\> 0\\, and let
+>
+> \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi\sigma^2}}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\
+>
+> Then for every \\x \in \mathbb{R}\\,
+>
+> \\ \begin{aligned} \frac{\partial f}{\partial \mu} &= \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma) \\ \frac{\partial f}{\partial \sigma} &= \mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma) \end{aligned} \\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 2](#exr-miller-pderiv-normal-parameters), worked in [Solution 2](#sol-miller-pderiv-normal-parameters). The argument has two steps.
+>
+> 1.  For \\\frac{\partial f}{\partial \mu}\\, treat \\\sigma\\ as constant. The prefactor is constant, so the chain rule on the exponential gives \\\frac{\partial f}{\partial \mu} = f(x; \mu, \sigma) \cdot\mathopen{}\left\[-\frac{2(x - \mu)(-1)}{2\sigma^2}\right\]\mathclose{} = \frac{x - \mu}{\sigma^2} f(x; \mu, \sigma)\\.
+> 2.  For \\\frac{\partial f}{\partial \sigma}\\, write \\f(x; \mu, \sigma) = \frac{1}{\sqrt{2\pi}}\sigma^{-1}\operatorname{exp}\mathopen{}\left\\-\frac{(x - \mu)^2}{2\sigma^2}\right\\\mathclose{}\\. The product rule gives one term from differentiating \\\sigma^{-1}\\, namely \\-\sigma^{-1} f(x; \mu, \sigma)\\, and one from the chain rule on the exponential, namely \\\frac{(x - \mu)^2}{\sigma^3} f(x; \mu, \sigma)\\. Adding them gives \\\mathopen{}\left\[-\frac{1}{\sigma} + \frac{(x - \mu)^2}{\sigma^3}\right\]\mathclose{} f(x; \mu, \sigma)\\.
 
 > **NOTE:**
 >
@@ -350,7 +367,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 1 (Row and column derivatives are transposes)** \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\right)\mathclose{}}^{\top} \tag{2}\\
+> **Theorem 2 (Row and column derivatives are transposes)** \\\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}}\right)\mathclose{}}^{\top} \tag{2}\\
 >
 > \\\frac{\partial f(\tilde{\beta})}{\partial \tilde{\beta}} = {\mathopen{}\left(\frac{\partial f(\tilde{\beta})}{\partial {\tilde{\beta}}^{\top}}\right)\mathclose{}}^{\top} \tag{3}\\
 
@@ -376,7 +393,11 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > \\ \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\right\]\mathclose{}\_{ij} \stackrel{\text{def}}{=}\frac{\partial}{\partial \beta\_{i}} y_j, \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q. \\
 >
-> Writing derivatives this way is the **denominator layout**, which these notes use throughout: rows index the entries of \\\tilde{\beta}\\ (the denominator) and columns index the entries of \\\tilde{y}\\ (the numerator), so column \\j\\ is the vector derivative \\\frac{\partial}{\partial \tilde{\beta}} y_j\\ ([Definition 2](#def-vector-derivative)). Both \\\frac{\partial}{\partial \tilde{\beta}} \tilde{y}\\ and \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ denote this \\p \times q\\ matrix.
+> Both \\\frac{\partial}{\partial \tilde{\beta}} \tilde{y}\\ and \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ denote this \\p \times q\\ matrix.
+
+> **NOTE:**
+>
+> **Definition 7 (Denominator layout)** Writing derivatives as in [Definition 6](#def-vector-valued-derivative) is the **denominator layout**, which these notes use throughout: rows index the entries of \\\tilde{\beta}\\ (the denominator) and columns index the entries of \\\tilde{y}\\ (the numerator), so column \\j\\ is the vector derivative \\\frac{\partial}{\partial \tilde{\beta}} y_j\\ ([Definition 2](#def-vector-derivative)).
 
 > **NOTE:**
 >
@@ -386,11 +407,15 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Definition 7 (Jacobian matrix)** Let
+> **Definition 8 (Jacobian matrix)** Let
 >
 > \\ \begin{aligned} \tilde{y}&= \tilde{y}(\tilde{\beta}) \\ &= {(y_1, \ldots, y_q)}^{\top} \end{aligned} \\
 >
-> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\. The **Jacobian matrix** of \\\tilde{y}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative). Writing derivatives this way, with rows indexing the entries of \\\tilde{y}\\ (the numerator) and columns indexing the entries of \\\tilde{\beta}\\ (the denominator), is the **numerator layout**.
+> be a \\q \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\. The **Jacobian matrix** of \\\tilde{y}\\ is the \\q \times p\\ matrix whose \\(j, i)\\ entry is \\\frac{\partial}{\partial \beta\_{i}} y_j\\, for \\j = 1, \ldots, q\\ and \\i = 1, \ldots, p\\. It is the transpose of the derivative \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{y}}^{\top}\\ of [Definition 6](#def-vector-valued-derivative).
+
+> **NOTE:**
+>
+> **Definition 9 (Numerator layout)** Writing derivatives as in [Definition 8](#def-jacobian-matrix), with rows indexing the entries of \\\tilde{y}\\ (the numerator) and columns indexing the entries of \\\tilde{\beta}\\ (the denominator), is the **numerator layout**.
 
 > **NOTE:**
 >
@@ -402,11 +427,11 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 3* (Numerator layout). Some sources use the numerator layout ([Definition 7](#def-jacobian-matrix)) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative ([Definition 5](#def-row-vector-derivative)). Check a source’s layout before combining its formulas with these.
+> *Remark 3* (Numerator layout). Some sources use the numerator layout ([Definition 9](#def-numerator-layout)) throughout, so that their derivative of a vector-valued function is the Jacobian matrix, the transpose of the derivative used in these notes. In numerator layout, the derivative of a scalar-valued function is a row vector: the row-vector derivative ([Definition 5](#def-row-vector-derivative)). Check a source’s layout before combining its formulas with these.
 
 > **NOTE:**
 >
-> **Definition 8 (Constant)** A \\q \times 1\\ vector \\\tilde{x}\\ is **constant with respect to** the \\p \times 1\\ vector \\\tilde{\beta}\\ if its derivative ([Definition 6](#def-vector-valued-derivative)) is zero:
+> **Definition 10 (Constant)** A \\q \times 1\\ vector \\\tilde{x}\\ is **constant with respect to** the \\p \times 1\\ vector \\\tilde{\beta}\\ if its derivative ([Definition 6](#def-vector-valued-derivative)) is zero:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{p \times q} = \underbrace{\mathbf{0}}\_{p \times q} \\
 
@@ -416,7 +441,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top}}\_{2 \times 2} &= \frac{\partial}{\partial \tilde{\beta}} \begin{bmatrix}x_1 & x_2\end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} x_1 & \frac{\partial}{\partial \beta\_{1}} x_2 \\ \frac{\partial}{\partial \beta\_{2}} x_1 & \frac{\partial}{\partial \beta\_{2}} x_2 \end{bmatrix} \\ &= \begin{bmatrix} \frac{\partial}{\partial \beta\_{1}} 3 & \frac{\partial}{\partial \beta\_{1}} 5 \\ \frac{\partial}{\partial \beta\_{2}} 3 & \frac{\partial}{\partial \beta\_{2}} 5 \end{bmatrix} \\ &= \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} \\ &= \underbrace{\mathbf{0}}\_{2 \times 2} \end{aligned} \\
 >
-> Every entry is the derivative of a constant, so \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top} = \underbrace{\mathbf{0}}\_{2 \times 2}\\ and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\ ([Definition 8](#def-constant-wrt-vector)).
+> Every entry is the derivative of a constant, so \\\frac{\partial}{\partial \tilde{\beta}} {\tilde{x}}^{\top} = \underbrace{\mathbf{0}}\_{2 \times 2}\\ and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\ ([Definition 10](#def-constant-wrt-vector)).
 
 > **NOTE:**
 >
@@ -446,7 +471,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 2 (Derivative of a dot product)** If \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 3 (Derivative of a dot product)** If \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, then:
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{x}\cdot \tilde{\beta})}\_{p \times 1} &= \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta}\cdot \tilde{x})}\_{p \times 1} \\ &= \underbrace{\tilde{x}}\_{p \times 1} \end{aligned} \\
 
@@ -456,7 +481,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 10 (Derivative of a dot product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ (constant with respect to \\\tilde{\beta}\\; see [Example 8](#exm-constant-wrt-vector)) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\tilde{x}\cdot \tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Theorem 2](#thm-deriv-lincom):
+> **Example 10 (Derivative of a dot product)** Let \\\tilde{x}= {(3, 5)}^{\top}\\ (constant with respect to \\\tilde{\beta}\\; see [Example 8](#exm-constant-wrt-vector)) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\tilde{x}\cdot \tilde{\beta}= 3\beta\_{1} + 5\beta\_{2}\\, and by [Theorem 3](#thm-deriv-lincom):
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta})}\_{2 \times 1} &= \underbrace{\tilde{x}}\_{2 \times 1} \\ &= \begin{pmatrix} 3 \\ 5 \end{pmatrix} \end{aligned} \\
 >
@@ -468,7 +493,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 3 (Product rule for dot-products)** If \\\tilde{a} = \tilde{a}(\tilde{x})\\ and \\\tilde{b} = \tilde{b}(\tilde{x})\\ are differentiable \\p \times 1\\ vector functions of \\\tilde{x}\\, then:
+> **Theorem 4 (Product rule for dot-products)** If \\\tilde{a} = \tilde{a}(\tilde{x})\\ and \\\tilde{b} = \tilde{b}(\tilde{x})\\ are differentiable \\p \times 1\\ vector functions of \\\tilde{x}\\, then:
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \underbrace{\tilde{x}}\_{p \times 1}} \underbrace{\tilde{a}}\_{p \times 1} \cdot \underbrace{\tilde{b}}\_{p \times 1} &= \mathopen{}\left( \frac{\partial}{\partial \underbrace{\tilde{x}}\_{p \times 1}} \underbrace{{\tilde{a}}^{\top}}\_{1 \times p} \right)\mathclose{} \underbrace{\tilde{b}}\_{p \times 1} + \mathopen{}\left( \frac{\partial}{\partial \underbrace{\tilde{x}}\_{p \times 1}} \underbrace{{\tilde{b}}^{\top}}\_{1 \times p} \right)\mathclose{} \underbrace{\tilde{a}}\_{p \times 1} \end{aligned} \\
 
@@ -480,7 +505,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 11 (Example of the dot-product rule)** Apply [Theorem 3](#thm-deriv-dot-product) with the vector \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ in the role of \\\tilde{x}\\. Let \\\tilde{a}(\tilde{\beta}) = {(\beta\_{1}, \beta\_{1}\beta\_{2})}^{\top}\\ and \\\tilde{b}(\tilde{\beta}) = {(\beta\_{2}, \beta\_{1})}^{\top}\\. Then:
+> **Example 11 (Example of the dot-product rule)** Apply [Theorem 4](#thm-deriv-dot-product) with the vector \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\ in the role of \\\tilde{x}\\. Let \\\tilde{a}(\tilde{\beta}) = {(\beta\_{1}, \beta\_{1}\beta\_{2})}^{\top}\\ and \\\tilde{b}(\tilde{\beta}) = {(\beta\_{2}, \beta\_{1})}^{\top}\\. Then:
 >
 > \\ \begin{aligned} \tilde{a} \cdot \tilde{b} &= \beta\_{1} \cdot \beta\_{2} + \beta\_{1}\beta\_{2} \cdot \beta\_{1} \\ &= \beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2} \end{aligned} \\
 >
@@ -488,7 +513,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{a} \cdot \tilde{b})}\_{2 \times 1} &= \frac{\partial}{\partial \tilde{\beta}}(\beta\_{1}\beta\_{2} + \beta\_{1}^2\beta\_{2}) \\ &= \begin{pmatrix} \beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1} + \beta\_{1}^2 \end{pmatrix} \end{aligned} \\
 >
-> By the product rule ([Theorem 3](#thm-deriv-dot-product)), using \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{a}}^{\top}}\_{2 \times 2} = \begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}\\ and \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{b}}^{\top}}\_{2 \times 2} = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\\:
+> By the product rule ([Theorem 4](#thm-deriv-dot-product)), using \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{a}}^{\top}}\_{2 \times 2} = \begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}\\ and \\\underbrace{\frac{\partial}{\partial \tilde{\beta}}{\tilde{b}}^{\top}}\_{2 \times 2} = \begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\\:
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{a} \cdot \tilde{b})}\_{2 \times 1} &= \underbrace{\begin{pmatrix}1 & \beta\_{2} \\ 0 & \beta\_{1}\end{pmatrix}}\_{2 \times 2} \underbrace{\begin{pmatrix}\beta\_{2} \\ \beta\_{1}\end{pmatrix}}\_{2 \times 1} + \underbrace{\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}}\_{2 \times 2} \underbrace{\begin{pmatrix}\beta\_{1} \\ \beta\_{1}\beta\_{2}\end{pmatrix}}\_{2 \times 1} \\ &= \begin{pmatrix}\beta\_{2} + \beta\_{1}\beta\_{2} \\ \beta\_{1}^2\end{pmatrix} + \begin{pmatrix}\beta\_{1}\beta\_{2} \\ \beta\_{1}\end{pmatrix} \\ &= \begin{pmatrix}\beta\_{2} + 2\beta\_{1}\beta\_{2} \\ \beta\_{1}^2 + \beta\_{1}\end{pmatrix} \end{aligned} \\
 >
@@ -496,7 +521,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 4 (Derivative of a linear map)** If \\\mathbf{A}\\ is an \\m \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 5 (Derivative of a linear map)** If \\\mathbf{A}\\ is an \\m \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta})}\_{p \times m} = \underbrace{{\mathbf{A}}^{\top}}\_{p \times m} \\
 
@@ -508,13 +533,13 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 12 (Derivative of a linear map)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\tilde{\beta}= 2\beta\_{1} + 3\beta\_{2}\\, and by [Theorem 4](#thm-deriv-linear-map):
+> **Example 12 (Derivative of a linear map)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\\mathbf{A}\tilde{\beta}= 2\beta\_{1} + 3\beta\_{2}\\, and by [Theorem 5](#thm-deriv-linear-map):
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\tilde{\beta})}\_{2 \times 1} &= \underbrace{{\mathbf{A}}^{\top}}\_{2 \times 1} \\ &= \begin{pmatrix} 2 \\ 3 \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Theorem 5 (Vector-derivative of a matrix-vector product)** If \\\mathbf{A}\\ is an \\m \times q\\ matrix that is constant with respect to \\\tilde{\beta}\\, and \\\tilde{v} = \tilde{v}(\tilde{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\tilde{\beta}\\, then:
+> **Theorem 6 (Vector-derivative of a matrix-vector product)** If \\\mathbf{A}\\ is an \\m \times q\\ matrix that is constant with respect to \\\tilde{\beta}\\, and \\\tilde{v} = \tilde{v}(\tilde{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\tilde{\beta}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{v})}\_{p \times m} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{}}\_{p \times q} \underbrace{{\mathbf{A}}^{\top}}\_{q \times m} \\
 
@@ -526,13 +551,13 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Example 13 (Vector-derivative of a matrix-vector product)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\, constant) and \\\tilde{v}(\tilde{\beta}) = {(\beta\_{1}^2, \beta\_{2}^2)}^{\top}\\. Then \\\mathbf{A}\tilde{v} = 2\beta\_{1}^2 + 3\beta\_{2}^2\\. By [Theorem 5](#thm-deriv-matrix-vector):
+> **Example 13 (Vector-derivative of a matrix-vector product)** Let \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ (\\1 \times 2\\, constant) and \\\tilde{v}(\tilde{\beta}) = {(\beta\_{1}^2, \beta\_{2}^2)}^{\top}\\. Then \\\mathbf{A}\tilde{v} = 2\beta\_{1}^2 + 3\beta\_{2}^2\\. By [Theorem 6](#thm-deriv-matrix-vector):
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\mathbf{A}\tilde{v})}\_{2 \times 1} &= \begin{pmatrix} 2\beta\_{1} & 0 \\ 0 & 2\beta\_{2} \end{pmatrix} \begin{pmatrix} 2 \\ 3 \end{pmatrix} \\ &= \begin{pmatrix} 4\beta\_{1} \\ 6\beta\_{2} \end{pmatrix} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 4* (The derivative of a linear map as a special case). This result generalizes [Theorem 4](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top}\\, which is \\{\mathbf{A}}^{\top}\\). For example, [Example 12](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and
+> *Remark 4* (The derivative of a linear map as a special case). This result generalizes [Theorem 5](#thm-deriv-linear-map), which is the special case \\\tilde{v} = \tilde{\beta}\\ (so that \\q = p\\, \\\frac{\partial}{\partial \tilde{\beta}} \tilde{\beta}= \mathbf{I}\_p\\, and \\\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A}\tilde{\beta}) = \mathbf{I}\_p {\mathbf{A}}^{\top}\\, which is \\{\mathbf{A}}^{\top}\\). For example, [Example 12](#exm-deriv-linear-map) is the case \\\mathbf{A} = \begin{pmatrix} 2 & 3 \end{pmatrix}\\ and
 >
 > \\ \begin{aligned} \tilde{v} &= \tilde{\beta}\\ &= {(\beta\_{1}, \beta\_{2})}^{\top}, \end{aligned} \\
 >
@@ -540,13 +565,13 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 6 (Vector-derivative of a product of matrices)** If \\\mathbf{A}\\ (\\k \times m\\) and \\\mathbf{B}\\ (\\m \times q\\) are constant with respect to \\\tilde{\beta}\\, and \\\tilde{v} = \tilde{v}(\tilde{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\tilde{\beta}\\, then:
+> **Theorem 7 (Vector-derivative of a product of matrices)** If \\\mathbf{A}\\ (\\k \times m\\) and \\\mathbf{B}\\ (\\m \times q\\) are constant with respect to \\\tilde{\beta}\\, and \\\tilde{v} = \tilde{v}(\tilde{\beta})\\ is a \\q \times 1\\ vector that depends on the \\p \times 1\\ vector \\\tilde{\beta}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\mathbf{A} \mathbf{B} \tilde{v})}\_{p \times k} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{}}\_{p \times q} \underbrace{{\mathbf{B}}^{\top}}\_{q \times m} \underbrace{{\mathbf{A}}^{\top}}\_{m \times k} \\
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 5](#thm-deriv-matrix-vector) with the constant \\k \times q\\ matrix \\\mathbf{A}\mathbf{B}\\, then use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product):
+> *Proof*. Apply [Theorem 6](#thm-deriv-matrix-vector) with the constant \\k \times q\\ matrix \\\mathbf{A}\mathbf{B}\\, then use the [transpose of a product](linear-algebra-matrices.llms.md#thm-transpose-product):
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}} (\mathbf{A} \mathbf{B} \tilde{v}) &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {(\mathbf{A}\mathbf{B})}^{\top} && \text{(derivative of a matrix-vector product)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}} \tilde{v}\right)\mathclose{} {\mathbf{B}}^{\top}\\{\mathbf{A}}^{\top} && \text{(transpose of a product)} \end{aligned} \\
 
@@ -564,19 +589,19 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Proof*. **Using [Theorem 2](#thm-deriv-lincom):**
+> *Proof*. **Using [Theorem 3](#thm-deriv-lincom):**
 >
 > Since \\{\tilde{x}}^{\top}\tilde{\beta}= \tilde{x}\cdot \tilde{\beta}\\ (see [dot product](linear-algebra-vectors.llms.md#def-dot-product)), and \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\:
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}(\tilde{x}\cdot \tilde{\beta}) \\ &= \tilde{x} \end{aligned} \\
 >
-> by [Theorem 2](#thm-deriv-lincom).
+> by [Theorem 3](#thm-deriv-lincom).
 
 > **NOTE:**
 >
-> *Proof*. **Using [Theorem 5](#thm-deriv-matrix-vector):**
+> *Proof*. **Using [Theorem 6](#thm-deriv-matrix-vector):**
 >
-> Since \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, \\\mathbf{A} = {\tilde{x}}^{\top}\\ is a constant \\1 \times p\\ matrix. Applying [Theorem 5](#thm-deriv-matrix-vector) with \\\tilde{v} = \tilde{\beta}\\ (so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}= \mathbf{I}\\):
+> Since \\\tilde{x}\\ is constant with respect to \\\tilde{\beta}\\, \\\mathbf{A} = {\tilde{x}}^{\top}\\ is a constant \\1 \times p\\ matrix. Applying [Theorem 6](#thm-deriv-matrix-vector) with \\\tilde{v} = \tilde{\beta}\\ (so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}= \mathbf{I}\\):
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}({\tilde{x}}^{\top}\tilde{\beta}) &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\beta}\right)\mathclose{} {({\tilde{x}}^{\top})}^{\top} \\ &= \mathbf{I} \cdot \tilde{x}\\ &= \tilde{x} \end{aligned} \\
 
@@ -592,7 +617,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Theorem 7 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 8 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{(\mathbf{S} + {\mathbf{S}}^{\top}) \tilde{\beta}}\_{p \times 1}. \\
 
@@ -604,13 +629,13 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, \\\mathbf{S}\\ is symmetric (and, as in [Theorem 7](#thm-quadratic-form), \\p \times p\\ and constant with respect to \\\tilde{\beta}\\), then
+> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, \\\mathbf{S}\\ is symmetric (and, as in [Theorem 8](#thm-quadratic-form), \\p \times p\\ and constant with respect to \\\tilde{\beta}\\), then
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{2 \mathbf{S} \tilde{\beta}}\_{p \times 1}. \\
 
 > **NOTE:**
 >
-> *Proof*. If \\\mathbf{S} = {\mathbf{S}}^{\top}\\, then \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so [Theorem 7](#thm-quadratic-form) gives \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
+> *Proof*. If \\\mathbf{S} = {\mathbf{S}}^{\top}\\, then \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so [Theorem 8](#thm-quadratic-form) gives \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
 
 > **NOTE:**
 >
@@ -628,7 +653,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 >
 > Both methods agree.
 >
-> For a matrix that is not symmetric, such as \\\mathbf{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}\\, [Theorem 7](#thm-quadratic-form) gives
+> For a matrix that is not symmetric, such as \\\mathbf{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}\\, [Theorem 8](#thm-quadratic-form) gives
 >
 > \\ \begin{aligned} (\mathbf{S} + {\mathbf{S}}^{\top}) \tilde{\beta} &= \begin{pmatrix} 2 & 2 \\ 2 & 6 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 2\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 6\beta\_{2} \end{pmatrix}, \end{aligned} \\
 >
@@ -658,11 +683,15 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> **Definition 9 (Residual vector and residuals)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\tilde{y}\in \mathbb{R}^n\\, and \\\tilde{\beta}\in \mathbb{R}^p\\. The **residual vector** of \\\tilde{\beta}\\ is \\\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})\_i\\ are the **residuals**.
+> **Definition 11 (Residual vector and residuals)** Let \\\mathbf{X}\\ be an \\n \times p\\ matrix, \\\tilde{y}\in \mathbb{R}^n\\, and \\\tilde{\beta}\in \mathbb{R}^p\\. The **residual vector** of \\\tilde{\beta}\\ is \\\tilde{\varepsilon}(\tilde{\beta}) \stackrel{\text{def}}{=}\tilde{y}- \mathbf{X}\tilde{\beta}\\, and its entries \\\varepsilon_i = y_i - (\mathbf{X}\tilde{\beta})\_i\\ are the **residuals**.
 
 > **NOTE:**
 >
-> **Definition 10 (Squared errors and residual sum of squares)** In the setting of [Definition 9](#def-residual), the square \\\varepsilon_i^2\\ is the \\i\\th **squared error**, and their sum
+> **Definition 12 (Squared error)** In the setting of [Definition 11](#def-residual), the square \\\varepsilon_i^2\\ is the \\i\\th **squared error**.
+
+> **NOTE:**
+>
+> **Definition 13 (Residual sum of squares)** In the setting of [Definition 11](#def-residual), the sum of the squared errors ([Definition 12](#def-squared-error))
 >
 > \\ \begin{aligned} \tilde{\varepsilon}\cdot \tilde{\varepsilon} &= \sum\_{i=1}^n\tilde{\varepsilon}\_i^2 \\ &= \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}^2 \end{aligned} \\
 >
@@ -670,7 +699,7 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 8* (Least squares solutions minimize the residual sum of squares). A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares ([Definition 10](#def-residual-sum-of-squares)) as small as possible too.
+> *Remark 8* (Least squares solutions minimize the residual sum of squares). A [least squares solution](linear-algebra-projections.llms.md#def-least-squares) of \\\mathbf{X}\tilde{\beta}= \tilde{y}\\ makes \\\mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\\ as small as possible, and so makes the residual sum of squares ([Definition 13](#def-residual-sum-of-squares)) as small as possible too.
 
 > **NOTE:**
 >
@@ -682,14 +711,14 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **TIP:**
 >
-> Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on gradients of sums and means of squared errors ([Definition 10](#def-residual-sum-of-squares)):
+> Jon Krohn’s “Calculus for Machine Learning” YouTube playlist has videos on gradients of sums and means of squared errors ([Definition 13](#def-residual-sum-of-squares)):
 >
 > - [The Gradient of Quadratic Cost](https://www.youtube.com/watch?v=rhn7ie7JBdA&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [The Gradient of Mean Squared Error](https://www.youtube.com/watch?v=KLXP2RL0-Vg&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
 > **NOTE:**
 >
-> **Theorem 8 (Vector chain rule)** Let \\\tilde{x}\\ be a \\p \times 1\\ vector, let \\\tilde{y}= \tilde{g}(\tilde{x})\\ be a \\q \times 1\\ vector-valued function of \\\tilde{x}\\, and let \\z = f(\tilde{y})\\ be a scalar-valued function of \\\tilde{y}\\, where \\\tilde{g}\\ and \\f\\ have continuous partial derivatives. Then \\z = f(\tilde{g}(\tilde{x}))\\, as a function of \\\tilde{x}\\, satisfies
+> **Theorem 9 (Vector chain rule)** Let \\\tilde{x}\\ be a \\p \times 1\\ vector, let \\\tilde{y}= \tilde{g}(\tilde{x})\\ be a \\q \times 1\\ vector-valued function of \\\tilde{x}\\, and let \\z = f(\tilde{y})\\ be a scalar-valued function of \\\tilde{y}\\, where \\\tilde{g}\\ and \\f\\ have continuous partial derivatives. Then \\z = f(\tilde{g}(\tilde{x}))\\, as a function of \\\tilde{x}\\, satisfies
 >
 > \\ \underbrace{\frac{\partial z}{\partial \tilde{x}}}\_{p \times 1} = \underbrace{\frac{\partial \tilde{y}}{\partial \tilde{x}}}\_{p \times q} \underbrace{\frac{\partial z}{\partial \tilde{y}}}\_{q \times 1} \\
 >
@@ -697,9 +726,9 @@ Turn the blue arrow in [Figure 1](#fig-gradient-explorer) and watch the rate: i
 
 > **NOTE:**
 >
-> *Remark 9* (The order of the factors matters). The vector chain rule ([Theorem 8](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
+> *Remark 9* (The order of the factors matters). The vector chain rule ([Theorem 9](#thm-chain-vec)) is like the univariate [chain rule](calculus-derivatives.llms.md#thm-chain-rule), but the order matters now: \\\frac{\partial \tilde{y}}{\partial \tilde{x}}\\ is \\p \times q\\ and \\\frac{\partial z}{\partial \tilde{y}}\\ is \\q \times 1\\, so the product \\\frac{\partial z}{\partial \tilde{y}} \frac{\partial \tilde{y}}{\partial \tilde{x}}\\ in the other order is not even defined unless \\p = 1\\.
 >
-> The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 5](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 1](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives \\{\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\, with the factors in the reverse order; there \\{\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\ is the Jacobian matrix of \\\tilde{y}\\ as a function of \\\tilde{x}\\ ([Definition 7](#def-jacobian-matrix)).
+> The version presented here is for the gradient ([Definition 2](#def-vector-derivative)), a column vector. The total derivative ([Definition 5](#def-row-vector-derivative)), a row vector, is the transpose of the gradient ([Theorem 2](#thm-row-deriv-tp-col-deriv)), and transposing both sides gives \\{\mathopen{}\left(\frac{\partial z}{\partial \tilde{x}}\right)\mathclose{}}^{\top} = {\mathopen{}\left(\frac{\partial z}{\partial \tilde{y}}\right)\mathclose{}}^{\top} {\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\, with the factors in the reverse order; there \\{\mathopen{}\left(\frac{\partial \tilde{y}}{\partial \tilde{x}}\right)\mathclose{}}^{\top}\\ is the Jacobian matrix of \\\tilde{y}\\ as a function of \\\tilde{x}\\ ([Definition 8](#def-jacobian-matrix)).
 
 > **NOTE:**
 >
@@ -731,7 +760,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Proof*. Apply [Theorem 8](#thm-chain-vec) with \\\tilde{x}= \tilde{\beta}\\, \\\tilde{y}= \tilde{\varepsilon}\\, \\q = n\\, and
+> *Proof*. Apply [Theorem 9](#thm-chain-vec) with \\\tilde{x}= \tilde{\beta}\\, \\\tilde{y}= \tilde{\varepsilon}\\, \\q = n\\, and
 >
 > \\ \begin{aligned} z &= f(\tilde{\varepsilon}) \\ &= \tilde{\varepsilon}\cdot \tilde{\varepsilon}\\ &= {\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}: \end{aligned} \\
 >
@@ -741,7 +770,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 20 (Derivative of the residual sum of squares)** Let \\\tilde{y}\\ (\\n \times 1\\) and \\\mathbf{X}\\ (\\n \times p\\) be constant with respect to \\\tilde{\beta}\\, and let \\\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\\ be the residual vector ([Definition 9](#def-residual)). By [Theorem 4](#thm-deriv-linear-map), \\\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\\, and \\\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}\_{p \times n}\\ because \\\tilde{y}\\ is constant, so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\\ (\\p \times n\\). By [Corollary 4](#cor-chain-qf):
+> **Example 20 (Derivative of the residual sum of squares)** Let \\\tilde{y}\\ (\\n \times 1\\) and \\\mathbf{X}\\ (\\n \times p\\) be constant with respect to \\\tilde{\beta}\\, and let \\\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\\ be the residual vector ([Definition 11](#def-residual)). By [Theorem 5](#thm-deriv-linear-map), \\\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\\, and \\\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}\_{p \times n}\\ because \\\tilde{y}\\ is constant, so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\\ (\\p \times n\\). By [Corollary 4](#cor-chain-qf):
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(-{\mathbf{X}}^{\top}\right)\mathclose{} \mathopen{}\left(2\tilde{\varepsilon}\right)\mathclose{} && \text{(vector chain rule for quadratic forms)} \\ &= -2\\{\mathbf{X}}^{\top}\mathopen{}\left(\tilde{y}- \mathbf{X}\tilde{\beta}\right)\mathclose{} && \text{(substitute } \tilde{\varepsilon}= \tilde{y}- \mathbf{X}\tilde{\beta}\text{)} \end{aligned} \\
 >
@@ -756,7 +785,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 11 (Matrix derivative (gradient))** For a scalar-valued function \\f(\mathbf{X})\\ of an \\m \times n\\ matrix \\\mathbf{X}\\, the **matrix derivative** is the \\m \times n\\ matrix whose \\(i,j)\\ entry is the partial derivative of \\f\\ with respect to the \\(i,j)\\ entry of \\\mathbf{X}\\:
+> **Definition 14 (Matrix derivative (gradient))** For a scalar-valued function \\f(\mathbf{X})\\ of an \\m \times n\\ matrix \\\mathbf{X}\\, the **matrix derivative** is the \\m \times n\\ matrix whose \\(i,j)\\ entry is the partial derivative of \\f\\ with respect to the \\(i,j)\\ entry of \\\mathbf{X}\\:
 >
 > \\ \mathopen{}\left\[\frac{\partial}{\partial \mathbf{X}} f\right\]\mathclose{}\_{ij} = \frac{\partial}{\partial X\_{ij}} f \\
 >
@@ -774,7 +803,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 9 (Matrix derivative of the trace of a matrix product)** If \\\mathbf{A}\\ (\\r \times m\\) and \\\mathbf{B}\\ (\\n \times r\\) are constant with respect to the \\m \times n\\ matrix \\\mathbf{X}\\, then:
+> **Theorem 10 (Matrix derivative of the trace of a matrix product)** If \\\mathbf{A}\\ (\\r \times m\\) and \\\mathbf{B}\\ (\\n \times r\\) are constant with respect to the \\m \times n\\ matrix \\\mathbf{X}\\, then:
 >
 > \\ \underbrace{\frac{\partial}{\partial \mathbf{X}} \operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})}\_{m \times n} = \underbrace{{\mathbf{A}}^{\top}}\_{m \times r} \underbrace{{\mathbf{B}}^{\top}}\_{r \times n} \\
 
@@ -786,7 +815,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Remark 10* (Why the theorem uses the trace). The trace makes \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\ a scalar, so its matrix derivative ([Definition 11](#def-matrix-derivative)) is again an \\m \times n\\ matrix. The matrix product \\\mathbf{A} \mathbf{X} \mathbf{B}\\ itself (without the trace) is an \\r \times r\\ matrix, and each of its \\r^2\\ entries has a partial derivative with respect to each of the \\m n\\ entries of \\\mathbf{X}\\. Those \\r^2 m n\\ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\.
+> *Remark 10* (Why the theorem uses the trace). The trace makes \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\ a scalar, so its matrix derivative ([Definition 14](#def-matrix-derivative)) is again an \\m \times n\\ matrix. The matrix product \\\mathbf{A} \mathbf{X} \mathbf{B}\\ itself (without the trace) is an \\r \times r\\ matrix, and each of its \\r^2\\ entries has a partial derivative with respect to each of the \\m n\\ entries of \\\mathbf{X}\\. Those \\r^2 m n\\ partial derivatives form a four-index array (a fourth-order tensor), not a matrix, which is why this result is stated for the scalar \\\operatorname{tr}(\mathbf{A} \mathbf{X} \mathbf{B})\\.
 >
 > For example, with
 >
@@ -828,13 +857,33 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > What is unusual is that the gradient came out **constant**: it does not mention \\W\\ at all. The constant answer is not a quirk of this particular \\A\\. \\g\\ is a linear function of \\W\\, and the gradient of a linear function is constant everywhere, for the same reason the derivative of \\f(w) = cw\\ is \\c\\ no matter where it is evaluated.
 >
-> A constant gradient is the easy case, and it is not the case we usually face. Most functions we minimize are curved — the residual sum of squares of a linear model ([Definition 10](#def-residual-sum-of-squares)) is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.
+> A constant gradient is the easy case, and it is not the case we usually face. Most functions we minimize are curved — the residual sum of squares of a linear model ([Definition 13](#def-residual-sum-of-squares)) is the standard example — so their gradient changes from point to point and the downhill direction has to be worked out afresh at every step.
+
+> **NOTE:**
+>
+> **Theorem 11 (Gradient of an entrywise inner product with a fixed matrix)** Let \\A\\ be a fixed \\m \times n\\ matrix, and for \\W \in \mathbb{R}^{m \times n}\\ define
+>
+> \\g(W) = \sum\_{i=1}^{m} \sum\_{j=1}^{n} W\_{ij} A\_{ij}\\
+>
+> Then for every \\W\\, \\\nabla_W\\ g(W) = A\\. In particular, the gradient is constant: it does not depend on \\W\\.
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 7](#exr-gradient-of-linear), worked in [Solution 7](#sol-gradient-of-linear), where \\m = 2\\, \\n = 3\\, and the entries of \\A\\ are given. The same argument works for every \\A\\: each \\W\_{ij}\\ appears in exactly one term, multiplied by \\A\_{ij}\\, so \\\frac{\partial g}{\partial W\_{ij}} = A\_{ij}\\.
 
 ## 2 Second partial derivatives and the Hessian
 
 > **NOTE:**
 >
-> **Definition 12 (Open and closed balls)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\. The **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\. The open and closed balls of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
+> **Definition 15 (Open ball)** Let \\\tilde{x}\in \mathbb{R}^p\\ and \\r \> 0\\. The **open ball** of radius \\r\\ around \\\tilde{x}\\ is the set \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< r\right\\\mathclose{}\\, of points whose distance from \\\tilde{x}\\ (the [Euclidean norm](linear-algebra-vectors.llms.md#def-euclidean-norm) of the difference) is less than \\r\\.
+
+> **NOTE:**
+>
+> **Definition 16 (Closed ball)** For \\\tilde{x}\\ and \\r\\ as in [Definition 15](#def-ball), the **closed ball** of radius \\r\\ around \\\tilde{x}\\ is \\\mathopen{}\left\\\tilde{y}\in \mathbb{R}^p : \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \le r\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 17 (Unit ball)** The open and closed balls ([Definition 15](#def-ball), [Definition 16](#def-closed-ball)) of radius \\1\\ around \\\tilde{0}\\ are the open and closed **unit balls**.
 
 > **NOTE:**
 >
@@ -856,7 +905,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 13 (Second partial derivative)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\, and let \\i, j \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\. Suppose the partial derivative \\\frac{\partial}{\partial x_j} f\\ ([Definition 1](#def-partial-derivative)) exists at every point of an open ball around \\\tilde{x}\\ ([Definition 12](#def-ball)). The **second partial derivative** of \\f\\ at \\\tilde{x}\\, first with respect to \\x_j\\ and then with respect to \\x_i\\, is
+> **Definition 18 (Second partial derivative)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\, and let \\i, j \in \mathopen{}\left\\1, \ldots, p\right\\\mathclose{}\\. Suppose the partial derivative \\\frac{\partial}{\partial x_j} f\\ ([Definition 1](#def-partial-derivative)) exists at every point of an open ball around \\\tilde{x}\\ ([Definition 15](#def-ball)). The **second partial derivative** of \\f\\ at \\\tilde{x}\\, first with respect to \\x_j\\ and then with respect to \\x_i\\, is
 >
 > \\ \frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{}, \\
 >
@@ -878,11 +927,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 14 (Mixed partial derivative)** When \\i \ne j\\, the second partial derivative of [Definition 13](#def-second-partial-derivative) is a **mixed partial derivative**.
+> **Definition 19 (Mixed partial derivative)** When \\i \ne j\\, the second partial derivative of [Definition 18](#def-second-partial-derivative) is a **mixed partial derivative**.
 
 > **NOTE:**
 >
-> **Definition 15 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ ([Definition 12](#def-ball)) and whose second partial derivatives ([Definition 13](#def-second-partial-derivative)) exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
+> **Definition 20 (Hessian matrix)** Let \\f\\ be a scalar-valued function of a \\p \times 1\\ vector \\\tilde{x}\\ whose first partial derivatives exist on an open ball around \\\tilde{x}\\ ([Definition 15](#def-ball)) and whose second partial derivatives ([Definition 18](#def-second-partial-derivative)) exist at \\\tilde{x}\\. The **Hessian matrix** of \\f\\ at \\\tilde{x}\\ is the derivative ([Definition 6](#def-vector-valued-derivative)) of the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ ([Definition 2](#def-vector-derivative)):
 >
 > \\ \underbrace{\mathbf{H}\_f(\tilde{x})}\_{p \times p} \stackrel{\text{def}}{=}\frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}. \tag{4}\\
 
@@ -904,7 +953,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 10 (Other ways to write the Hessian, and its entries)** Let \\f\\ and \\\tilde{x}\\ be as in [Definition 15](#def-hessian).
+> **Theorem 12 (Other ways to write the Hessian, and its entries)** Let \\f\\ and \\\tilde{x}\\ be as in [Definition 20](#def-hessian).
 >
 > 1.  The Hessian can be written with the row-vector derivative ([Definition 5](#def-row-vector-derivative)) of \\f\\:
 >
@@ -916,7 +965,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> *Proof*. **Part 1.** By [Theorem 1](#thm-row-deriv-tp-col-deriv), the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ equals the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\. Substituting it into [Equation 4](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 2](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
+> *Proof*. **Part 1.** By [Theorem 2](#thm-row-deriv-tp-col-deriv), the transposed gradient \\{\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} f(\tilde{x})\right)\mathclose{}}^{\top}\\ equals the row-vector derivative \\\frac{\partial f(\tilde{x})}{\partial {\tilde{x}}^{\top}}\\. Substituting it into [Equation 4](#eq-hessian) gives the first line. The second line is the same expression written as a second derivative. It follows the shape rule of matrix multiplication ([Remark 2](#rem-row-derivative-shape)): the \\p \times 1\\ column-vector operator \\\frac{\partial}{\partial \tilde{x}}\\ stands on the left of a \\1 \times p\\ row vector, giving a \\p \times p\\ matrix.
 >
 > **Part 2.** Let \\y_j \stackrel{\text{def}}{=}\frac{\partial}{\partial x_j} f(\tilde{x})\\ be entry \\j\\ of the gradient. By [Definition 6](#def-vector-valued-derivative), the \\(i, j)\\ entry of the derivative of the vector \\\tilde{y}= (y_1, \ldots, y_p)\\ with respect to \\\tilde{x}\\ is
 >
@@ -971,7 +1020,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Definition 16 (Continuity in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. It is **continuous on** a set if it is continuous at every point of the set. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\.
+> **Definition 21 (Continuity at a point in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous at** \\\tilde{x}\\ if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. For \\q = 1\\, \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} = \mathopen{}\left\|f(\tilde{y}) - f(\tilde{x})\right\|\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 22 (Continuity on a set in several variables)** A function \\f\\ from \\\mathbb{R}^p\\ to \\\mathbb{R}^q\\ is **continuous on** a set if it is continuous at every point of the set ([Definition 21](#def-continuous-several)).
 
 > **NOTE:**
 >
@@ -987,9 +1040,9 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 11 (Continuity in one variable, and sums, multiples and compositions)**  
+> **Theorem 13 (Continuity in one variable, and sums, multiples and compositions)**  
 >
-> 1.  For \\p = q = 1\\, a function \\f\\ is continuous at \\x\\ in the sense of [Definition 16](#def-continuous-several) exactly when \\\lim\_{y \to x} f(y) = f(x)\\ ([limit](calculus-derivatives.llms.md#def-limit)), which is the usual [continuity](calculus-integration.llms.md#def-continuous) at \\x\\.
+> 1.  For \\p = q = 1\\, a function \\f\\ is continuous at \\x\\ in the sense of [Definition 21](#def-continuous-several) exactly when \\\lim\_{y \to x} f(y) = f(x)\\ ([limit](calculus-derivatives.llms.md#def-limit)), which is the usual [continuity](calculus-integration.llms.md#def-continuous) at \\x\\.
 > 2.  If \\f : \mathbb{R}^p \to \mathbb{R}^q\\ is continuous at \\\tilde{x}\\ and \\g : \mathbb{R}^q \to \mathbb{R}^r\\ is continuous at \\f(\tilde{x})\\, then the [composition](sets-functions.llms.md#def-composition) \\g \circ f\\ is continuous at \\\tilde{x}\\.
 > 3.  If \\f, g : \mathbb{R}^p \to \mathbb{R}\\ are continuous at \\\tilde{x}\\, then \\f + g\\ is continuous at \\\tilde{x}\\.
 > 4.  If \\f : \mathbb{R}^p \to \mathbb{R}\\ is continuous at \\\tilde{x}\\ and \\c \in \mathbb{R}\\, then \\c f\\ is continuous at \\\tilde{x}\\.
@@ -1000,7 +1053,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > *Proof*. Let \\\varepsilon\> 0\\ be given.
 >
-> **Part 1.** For \\p = q = 1\\, \\\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left\|f(y) - f(x)\right\|\mathclose{}\\ and \\\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left\|y - x\right\|\mathclose{}\\. [Definition 16](#def-continuous-several) then asks for a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(y) - f(x)\right\|\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The [limit definition](calculus-derivatives.llms.md#def-limit) with \\L = f(x)\\ asks for the same inequality, but only whenever \\0 \< \mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The two agree, because at \\y = x\\ the inequality \\\mathopen{}\left\|f(x) - f(x)\right\|\mathclose{} = 0 \< \varepsilon\\ holds for every \\\delta\\.
+> **Part 1.** For \\p = q = 1\\, \\\mathopen{}\left\lVert f(y) - f(x)\right\rVert\mathclose{} = \mathopen{}\left\|f(y) - f(x)\right\|\mathclose{}\\ and \\\mathopen{}\left\lVert y - x\right\rVert\mathclose{} = \mathopen{}\left\|y - x\right\|\mathclose{}\\. [Definition 21](#def-continuous-several) then asks for a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(y) - f(x)\right\|\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The [limit definition](calculus-derivatives.llms.md#def-limit) with \\L = f(x)\\ asks for the same inequality, but only whenever \\0 \< \mathopen{}\left\|y - x\right\|\mathclose{} \< \delta\\. The two agree, because at \\y = x\\ the inequality \\\mathopen{}\left\|f(x) - f(x)\right\|\mathclose{} = 0 \< \varepsilon\\ holds for every \\\delta\\.
 >
 > **Part 2.** Because \\g\\ is continuous at \\f(\tilde{x})\\, there is a \\\delta_g \> 0\\ such that \\\mathopen{}\left\lVert g(\tilde{z}) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\ whenever \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\. Because \\f\\ is continuous at \\\tilde{x}\\, applied with \\\delta_g\\ in the role of \\\varepsilon\\, there is a \\\delta\> 0\\ such that \\\mathopen{}\left\lVert f(\tilde{y}) - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\ whenever \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\. So if \\\mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{} \< \delta\\, then \\\tilde{z} = f(\tilde{y})\\ has \\\mathopen{}\left\lVert\tilde{z} - f(\tilde{x})\right\rVert\mathclose{} \< \delta_g\\, and therefore \\\mathopen{}\left\lVert g(f(\tilde{y})) - g(f(\tilde{x}))\right\rVert\mathclose{} \< \varepsilon\\.
 >
@@ -1014,7 +1067,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Example 29 (Choosing \\\delta\\ for a sum, a multiple and a composition)** Let \\f(\tilde{x}) = x_1\\ and \\g(\tilde{x}) = x_2\\ on \\\mathbb{R}^2\\, and \\h(t) = 3t\\ on \\\mathbb{R}\\. Since \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, the functions \\f\\ and \\g\\ are continuous with \\\delta= \varepsilon\\, and \\h\\ is continuous with \\\delta= \varepsilon/ 3\\, because \\\mathopen{}\left\|h(s) - h(t)\right\|\mathclose{} = 3\\\mathopen{}\left\|s - t\right\|\mathclose{}\\. Take \\\tilde{x}= (1, 2)\\ and \\\varepsilon= 0.1\\. The proof of [Theorem 11](#thm-continuous-several) gives these values of \\\delta\\:
+> **Example 29 (Choosing \\\delta\\ for a sum, a multiple and a composition)** Let \\f(\tilde{x}) = x_1\\ and \\g(\tilde{x}) = x_2\\ on \\\mathbb{R}^2\\, and \\h(t) = 3t\\ on \\\mathbb{R}\\. Since \\\mathopen{}\left\|y_i - x_i\right\|\mathclose{} \le \mathopen{}\left\lVert\tilde{y}- \tilde{x}\right\rVert\mathclose{}\\, the functions \\f\\ and \\g\\ are continuous with \\\delta= \varepsilon\\, and \\h\\ is continuous with \\\delta= \varepsilon/ 3\\, because \\\mathopen{}\left\|h(s) - h(t)\right\|\mathclose{} = 3\\\mathopen{}\left\|s - t\right\|\mathclose{}\\. Take \\\tilde{x}= (1, 2)\\ and \\\varepsilon= 0.1\\. The proof of [Theorem 13](#thm-continuous-several) gives these values of \\\delta\\:
 >
 > - for \\f + g\\ (part 3), \\\delta= \min\mathopen{}\left\\\varepsilon/ 2, \varepsilon/ 2\right\\\mathclose{}\\;
 > - for \\3 f\\ (part 4), \\\delta= \varepsilon/ (3 + 1)\\;
@@ -1053,7 +1106,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 > data.frame(delta = deltas, largest_change = largest_change, eps = eps)
 > ```
 >
-> For 3 of the 3 functions, the largest change among the 10000 points is below \\\varepsilon= 0.1\\, as [Theorem 11](#thm-continuous-several) guarantees.
+> For 3 of the 3 functions, the largest change among the 10000 points is below \\\varepsilon= 0.1\\, as [Theorem 13](#thm-continuous-several) guarantees.
 
 > **NOTE:**
 >
@@ -1071,7 +1124,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > and the limit as \\h \to 0\\ is \\0\\: \\\frac{\partial}{\partial x_1} f(\tilde{0}) = 0\\ ([Definition 1](#def-partial-derivative)). The same steps with \\f(0, h) = 0\\ give \\\frac{\partial}{\partial x_2} f(\tilde{0}) = 0\\.
 >
-> **But \\f\\ is not continuous at \\\tilde{0}\\** ([Definition 16](#def-continuous-several)). Take \\\varepsilon= \tfrac{1}{4}\\ and any \\\delta\> 0\\, and let \\t = \delta/ 2\\ and \\\tilde{y}= {(t, t)}^{\top}\\. Then
+> **But \\f\\ is not continuous at \\\tilde{0}\\** ([Definition 21](#def-continuous-several)). Take \\\varepsilon= \tfrac{1}{4}\\ and any \\\delta\> 0\\, and let \\t = \delta/ 2\\ and \\\tilde{y}= {(t, t)}^{\top}\\. Then
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y}- \tilde{0}\right\rVert\mathclose{} &= \sqrt{t^2 + t^2} \\ &= t \sqrt{2} \\ &= \delta/ \sqrt{2} \\ &\< \delta, \end{aligned} \\
 >
@@ -1085,7 +1138,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Theorem 12 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 16](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 12](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 15](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
+> **Theorem 14 (Symmetry of the Hessian)** If the second partial derivatives of \\f\\ exist and are continuous ([Definition 21](#def-continuous-several)) on an open ball around \\\tilde{x}\\ ([Definition 15](#def-ball)), then \\\frac{\partial}{\partial x_i} \mathopen{}\left(\frac{\partial}{\partial x_j} f(\tilde{x})\right)\mathclose{} = \frac{\partial}{\partial x_j} \mathopen{}\left(\frac{\partial}{\partial x_i} f(\tilde{x})\right)\mathclose{}\\ for all \\i, j\\, so \\\mathbf{H}\_f(\tilde{x})\\ ([Definition 20](#def-hessian)) is symmetric ([symmetric matrix](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
 
 The proof applies the one-variable mean value theorem twice, which these notes do not develop; see ([Rudin 1976](#ref-rudin1976principles), Theorem 9.41), which is stated for two variables: apply it to \\f\\ as a function of \\x_i\\ and \\x_j\\, with the other coordinates held fixed.
 
@@ -1103,23 +1156,23 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 >
 > \\ \begin{aligned} \frac{\partial}{\partial x_1} f(\tilde{0}) &= \lim\_{h \to 0} (0 - 0)/h \\ &= 0, \end{aligned} \\
 >
-> so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 15](#def-hessian))
+> so \\\frac{\partial}{\partial x_1} f(0, x_2) = -x_2\\ holds at \\x_2 = 0\\ too. In the same way, with the roles of \\x_1\\ and \\x_2\\ swapped, \\f(x_1, k) / k = x_1 (x_1^2 - k^2) / (x_1^2 + k^2) \to x_1\\, so \\\frac{\partial}{\partial x_2} f(x_1, 0) = x_1\\ for every \\x_1\\. So at \\\tilde{0}\\ ([Definition 20](#def-hessian))
 >
 > \\ \begin{aligned} \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{21} &= \frac{\partial}{\partial x_2} \mathopen{}\left(\frac{\partial}{\partial x_1} f\right)\mathclose{} \\ &= \frac{d }{d x_2} (-x_2) \\ &= -1, \\ \mathopen{}\left\[\mathbf{H}\_f(\tilde{0})\right\]\mathclose{}\_{12} &= \frac{\partial}{\partial x_1} \mathopen{}\left(\frac{\partial}{\partial x_2} f\right)\mathclose{} \\ &= \frac{d }{d x_1} x_1 \\ &= 1: \end{aligned} \\
 >
-> the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 12](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
+> the Hessian at \\\tilde{0}\\ is not symmetric. By [Theorem 14](#thm-hessian-symmetric), then, the second partial derivatives of this \\f\\ cannot all be continuous near \\\tilde{0}\\.
 
 > **NOTE:**
 >
-> **Theorem 13 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{x}\\, then \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ has \\\mathbf{H}\_f(\tilde{x}) = 2 \mathbf{S}\\ for every \\\tilde{x}\\.
+> **Theorem 15 (Hessian of a quadratic form)** If \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{x}\\, then \\f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ has \\\mathbf{H}\_f(\tilde{x}) = 2 \mathbf{S}\\ for every \\\tilde{x}\\.
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~15}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#cor-quadratic-form-symmetric}{\text{Corollary~2}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~4}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~20}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#cor-quadratic-form-symmetric}{\text{Corollary~2}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~6}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~4}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Example 33 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 13](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 15](#def-hessian)) gives
+> **Example 33 (The Hessian of a \\2 \times 2\\ quadratic form)** For \\\mathbf{S} = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix}\\ as in [Example 16](#exm-deriv-quadratic-form), [Theorem 15](#thm-hessian-quadratic) gives \\\mathbf{H}\_f(\tilde{x}) = \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}\\. Directly, the gradient found there, with \\\beta\_{i}\\ renamed \\x_i\\, is \\{(6 x_1 + 2 x_2,\\ 2 x_1 + 4 x_2)}^{\top}\\, and differentiating its entries by \\x_1\\ and by \\x_2\\ ([Definition 20](#def-hessian)) gives
 >
 > \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \begin{bmatrix} \frac{\partial}{\partial x_1} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_1} (2 x_1 + 4 x_2) \\ \frac{\partial}{\partial x_2} (6 x_1 + 2 x_2) & \frac{\partial}{\partial x_2} (2 x_1 + 4 x_2) \end{bmatrix} \\ &= \begin{bmatrix} 6 & 2 \\ 2 & 4 \end{bmatrix}. \end{aligned} \\
 
