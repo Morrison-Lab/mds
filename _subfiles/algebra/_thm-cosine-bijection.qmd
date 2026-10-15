@@ -1,5 +1,5 @@
 :::{#thm-cosine-bijection}
-#### Cosine takes each value in $[-1, 1]$ once on $[0, \pi]$
+#### Cosine takes each value from $-1$ to $1$ exactly once between $0$ and $\pi$
 
 The function $\cos : [0, \pi] \to [-1, 1]$ is decreasing, with $\cos 0 = 1$ and $\cos\pi = -1$,
 and takes each value in $[-1, 1]$ exactly once.

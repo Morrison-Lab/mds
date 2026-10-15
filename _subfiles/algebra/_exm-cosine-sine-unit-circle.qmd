@@ -1,0 +1,75 @@
+:::{#exm-cosine-sine-unit-circle}
+#### The unit circle and the angle $\pi/3$
+
+Take $\angpar = \pi/3$, one sixth of the way round the circle.
+@fig-cosine-sine-unit-circle shows the point reached,
+$(\cos\angpar, \sin\angpar) \approx$
+(`r round(cos(pi / 3), 3)`, `r round(sin(pi / 3), 3)`),
+and its two coordinates.
+As @thm-cosine-sine-identity says, the squared coordinates add to
+`r round(cos(pi / 3)^2 + sin(pi / 3)^2, 3)`.
+
+:::{#fig-cosine-sine-unit-circle}
+
+```{r}
+#| code-fold: true
+#| echo: !expr knitr::is_html_output()
+#| message: false
+#| warning: false
+#| fig-alt: "The unit circle in the plane. A radius from the origin to the point (0.5, 0.866) on the circle makes an angle of pi/3 with the positive horizontal axis. A dashed vertical segment of length 0.866, the sine, joins the point to the horizontal axis, and the horizontal axis from the origin to 0.5 is marked as the cosine."
+
+# angle in radians, and the point it reaches on the unit circle
+angle <- pi / 3
+point <- data.frame(x1 = cos(angle), x2 = sin(angle))
+
+# points around the whole circle
+circle <- data.frame(t = seq(0, 2 * pi, length.out = 200))
+circle$x1 <- cos(circle$t)
+circle$x2 <- sin(circle$t)
+
+# arc from angle 0 to the chosen angle
+arc <- data.frame(t = seq(0, angle, length.out = 50))
+arc$x1 <- 0.25 * cos(arc$t)
+arc$x2 <- 0.25 * sin(arc$t)
+
+unit_circle_plot <- ggplot2::ggplot() +
+  ggplot2::geom_path(data = circle, ggplot2::aes(x1, x2)) +
+  ggplot2::geom_path(data = arc, ggplot2::aes(x1, x2)) +
+  ggplot2::geom_segment(
+    ggplot2::aes(x = 0, y = 0, xend = point$x1, yend = point$x2),
+    colour = "firebrick"
+  ) +
+  ggplot2::geom_segment(
+    ggplot2::aes(x = point$x1, y = 0, xend = point$x1, yend = point$x2),
+    linetype = "dashed"
+  ) +
+  ggplot2::geom_segment(
+    ggplot2::aes(x = 0, y = 0, xend = point$x1, yend = 0),
+    colour = "steelblue", linewidth = 1.2
+  ) +
+  ggplot2::geom_point(data = point, ggplot2::aes(x1, x2)) +
+  ggplot2::annotate("text", x = 0.4, y = 0.1, label = "angle") +
+  ggplot2::annotate(
+    "text", x = point$x1 / 2, y = -0.09, label = "cosine"
+  ) +
+  ggplot2::annotate(
+    "text", x = point$x1 + 0.05, y = point$x2 / 2, label = "sine",
+    hjust = 0
+  ) +
+  ggplot2::coord_equal() +
+  ggplot2::labs(x = "x1", y = "x2") +
+  ggplot2::theme_minimal()
+
+if (knitr::is_html_output()) {
+  plotly::ggplotly(unit_circle_plot)
+} else {
+  unit_circle_plot
+}
+```
+
+The unit circle with the point at angle $\pi/3$.
+Its horizontal coordinate is the cosine and its vertical coordinate is the sine.
+
+:::
+
+:::
