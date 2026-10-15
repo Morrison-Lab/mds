@@ -70,7 +70,7 @@ but it is what justifies the
 [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint)
 corollary in *Probability for Data Science*.
 A [probability measure](measures.qmd#def-probability-measure) $P$ on $\samplespace$ has $P(\samplespace) = 1 < \infty$,
-so it is [finite](measures.qmd#def-sigma-finite), and hence $\sigma$-finite
+so it is [finite](measures.qmd#def-finite-measure), and hence $\sigma$-finite
 ([finite and $\sigma$-finite measures](measures.qmd#exm-sigma-finite));
 for probability measures, the $\sigma$-finiteness condition is automatic.
 

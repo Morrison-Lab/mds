@@ -1,10 +1,37 @@
 :::{#def-probability-space}
-#### Probability space, sample space, outcomes and events
+#### Probability space
 
 For a probability measure $\P$ (@def-probability-measure) on a [measurable space](#def-measurable-space) $(\samplespace, \events)$,
-$(\samplespace, \events, \P)$ is a **probability space**,
-$\samplespace$ is its **sample space**,
-the elements of $\samplespace$ are **outcomes**,
-and the sets in $\events$ are **events**.
+$(\samplespace, \events, \P)$ is a **probability space**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-sample-space}
+#### Sample space
+
+In a probability space $(\samplespace, \events, \P)$ (@def-probability-space),
+$\samplespace$ is its **sample space**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-outcome}
+#### Outcome
+
+In a probability space $(\samplespace, \events, \P)$ (@def-probability-space),
+the elements of the sample space $\samplespace$ (@def-sample-space) are **outcomes**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-event}
+#### Event
+
+In a probability space $(\samplespace, \events, \P)$ (@def-probability-space),
+the sets in $\events$ are **events**.
 
 :::
