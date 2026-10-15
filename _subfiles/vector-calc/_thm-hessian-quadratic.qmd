@@ -15,7 +15,7 @@ $$
 && \text{(@def-hessian)}
 \\
 &= \deriv{\vx} \tp{\paren{2 \matr{S} \vx}}
-&& \text{(@thm-quadratic-form)}
+&& \text{(@cor-quadratic-form-symmetric)}
 \\
 &= \paren{\deriv{\vx} \vx}\,\tp{(2 \matr{S})}
 && \text{(@thm-deriv-matrix-vector, with } \matr{A} = 2 \matr{S} \text{ and } \vecf{v} = \vx \text{; } \deriv{\vx} \tp{(2 \matr{S} \vx)} = \deriv{\vx} (2 \matr{S} \vx) \text{, @def-vector-valued-derivative)}

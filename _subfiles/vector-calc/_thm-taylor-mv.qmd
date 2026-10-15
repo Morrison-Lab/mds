@@ -91,7 +91,7 @@ $$
 #### For a quadratic form the expansion is exact
 
 Let $f(\vx) = \tp{\vx} \matr{S} \vx$ with $\matr{S}$ symmetric and constant.
-Its gradient is $2 \matr{S} \vx$ ([derivative of a quadratic form](vector-calculus.qmd#thm-quadratic-form))
+Its gradient is $2 \matr{S} \vx$ ([derivative of a quadratic form](vector-calculus.qmd#cor-quadratic-form-symmetric))
 and its Hessian is $2 \matr{S}$ at every point ([Hessian of a quadratic form](vector-calculus.qmd#thm-hessian-quadratic)),
 so whatever $\midpt$ is, @thm-taylor-mv reads
 

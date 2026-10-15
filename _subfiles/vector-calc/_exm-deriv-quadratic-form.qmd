@@ -5,7 +5,7 @@
 Let $\matr{S} = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}$ ($2 \times 2$, symmetric and constant)
 and $\vcoef = \tp{(\coef{1}, \coef{2})}$.
 Then $\tp{\vcoef}\matr{S}\vcoef = 3\coef{1}^2 + 2\coef{1}\coef{2} + 2\coef{2}^2$.
-By @thm-quadratic-form:
+By @cor-quadratic-form-symmetric:
 
 $$
 \begin{aligned}
@@ -26,7 +26,7 @@ $$
 Both methods agree.
 
 For a matrix that is not symmetric, such as $\matr{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}$,
-the first part of @thm-quadratic-form gives
+@thm-quadratic-form gives
 
 $$
 \begin{aligned}

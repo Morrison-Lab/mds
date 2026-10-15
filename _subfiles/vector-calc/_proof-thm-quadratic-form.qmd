@@ -17,6 +17,4 @@ $$
 \ea
 $$
 
-When $\matr{S}$ is symmetric ($\matr{S} = \tp{\matr{S}}$), $\matr{S} + \tp{\matr{S}} = 2\matr{S}$, so $\deriv{\vcoef}(\tp{\vcoef}\matr{S}\vcoef) = 2\matr{S}\vcoef$.
-
 :::

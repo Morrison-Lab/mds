@@ -1,6 +1,6 @@
 ::: proof
 
-Applying @thm-quadratic-form with $\matr{S} = \matr{I}_{p \times p}$ (which is symmetric and constant with respect to $\vcoef$):
+Applying @cor-quadratic-form-symmetric with $\matr{S} = \matr{I}_{p \times p}$ (which is symmetric and constant with respect to $\vcoef$):
 
 $$
 \ba

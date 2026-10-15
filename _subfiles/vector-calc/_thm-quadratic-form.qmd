@@ -10,10 +10,4 @@ $$
 \underbrace{\deriv{\vcoef} (\tp{\vcoef} \matr{S} \vcoef)}_{p \times 1} = \underbrace{(\matr{S} + \tp{\matr{S}}) \vcoef}_{p \times 1}.
 $$
 
-If $\matr{S}$ is also symmetric, this is
-
-$$
-\deriv{\vcoef} (\tp{\vcoef} \matr{S} \vcoef) = 2 \matr{S} \vcoef.
-$$
-
 :::

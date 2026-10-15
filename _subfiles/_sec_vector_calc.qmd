@@ -150,6 +150,8 @@
 
 {{< include mds/_subfiles/vector-calc/_proof-thm-quadratic-form.qmd >}}
 
+{{< include mds/_subfiles/vector-calc/_cor-quadratic-form-symmetric.qmd >}}
+
 {{< include mds/_subfiles/vector-calc/_rem-quadratic-form-scalar.qmd >}}
 
 {{< slidebreak >}}
