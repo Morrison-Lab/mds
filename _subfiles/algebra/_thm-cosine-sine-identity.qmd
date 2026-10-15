@@ -1,0 +1,17 @@
+:::{#thm-cosine-sine-identity}
+#### The Pythagorean identity
+
+For every real number $\angpar$,
+
+$$
+\cos^2\angpar + \sin^2\angpar = 1.
+$$
+
+:::
+
+::: proof
+
+The point $(\cos\angpar, \sin\angpar)$ lies on the unit circle (@def-cosine-sine),
+so its coordinates satisfy $x_1^2 + x_2^2 = 1$.
+
+:::

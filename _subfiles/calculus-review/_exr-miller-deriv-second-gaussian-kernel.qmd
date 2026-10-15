@@ -9,7 +9,7 @@ $$f(x) = \exp{-\frac{x^2}{2}}$$
 :::
 
 ::: {#sol-miller-deriv-second-gaussian-kernel}
-From @exr-miller-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp{-x^2/2}$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp{-x^2/2}$:
+From @thm-deriv-gaussian-kernel, the first derivative is $f'(x) = -x\exp{-x^2/2}$. Apply the product rule (@thm-product-rule) to $u(x) = -x$ and $v(x) = \exp{-x^2/2}$:
 
 $$\ba
 u'(x) &= -1

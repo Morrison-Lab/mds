@@ -21,6 +21,8 @@ The algebra notes are split across these pages:
 - [Polynomials, Exponentials and Logarithms](algebra-exponentials.qmd):
   polynomials, affine and linear functions of one variable,
   limits of sequences, exponentials and logarithms.
+- [Trigonometry](algebra-trigonometry.qmd):
+  cosine and sine on the unit circle, and the identities later pages use.
 - [Complex Numbers](algebra-complex.qmd):
   complex numbers and their arithmetic.
 
@@ -39,7 +41,7 @@ goes on to the page that now holds it.
 
 - @abramson2021algebra
   is a free online textbook on algebra and trigonometry.
-  It covers equations, inequalities, polynomials, exponentials, and logarithms,
+  It covers equations, inequalities, polynomials, exponentials, logarithms, and trigonometry,
   which overlap with the algebra in these notes.
 - @rudin1976principles
   develops the real numbers, including the least upper bound property

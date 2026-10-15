@@ -35,6 +35,7 @@ page-xrefs:
       - algebra-basics.qmd
       - algebra-sums.qmd
       - algebra-exponentials.qmd
+      - algebra-trigonometry.qmd
       - algebra-complex.qmd
   - index: calculus.qmd
     pages:

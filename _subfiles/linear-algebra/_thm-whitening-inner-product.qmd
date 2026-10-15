@@ -1,0 +1,24 @@
+:::{#thm-whitening-inner-product}
+#### A matrix-induced inner product is a dot product of transformed vectors
+
+Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix,
+and let $\matr{W}$ be any $p \times p$ matrix with $\matr{A} = \tp{\matr{W}}\matr{W}$.
+Then for all $\vx, \vy \in \reals^p$, the $\matr{A}$-inner product (@def-matrix-induced-inner-product) satisfies
+
+$$
+\iprod{\vx}{\vy}_{\matr{A}} = (\matr{W}\vx) \cdot (\matr{W}\vy).
+$$
+
+:::
+
+::: proof
+
+$$
+\begin{aligned}
+\iprod{\vx}{\vy}_{\matr{A}} &= \tp{\vx} \tp{\matr{W}}\matr{W} \vy \\
+&= \tp{(\matr{W}\vx)} (\matr{W}\vy) \\
+&= (\matr{W}\vx) \cdot (\matr{W}\vy).
+\end{aligned}
+$$
+
+:::
