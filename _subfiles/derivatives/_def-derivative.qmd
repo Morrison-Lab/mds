@@ -5,8 +5,23 @@ If $f$ is differentiable at $c$ (@def-differentiable),
 the number $f'(c)$ is the **derivative** of $f$ at $c$.
 The **derivative** of $f$ is the function $f'$
 whose value at each $x$ where $f$ is differentiable is $f'(x)$.
-Writing the derivative with a prime, as $f'$ or $f'(x)$, is **Lagrange's notation**.
-The derivative of $f$ is also written $\dif{f}{x}$ or $\dif{}{x} f(x)$,
+:::
+
+{{< slidebreak >}}
+
+:::{#def-lagrange-notation}
+#### Lagrange's notation
+
+Writing the derivative (@def-derivative) with a prime, as $f'$ or $f'(x)$, is **Lagrange's notation**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-leibniz-notation}
+#### Leibniz notation
+
+The derivative of $f$ (@def-derivative) is also written $\dif{f}{x}$ or $\dif{}{x} f(x)$,
 which is **Leibniz notation**.
 
 :::
