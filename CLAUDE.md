@@ -40,7 +40,7 @@ Mirrors [`.github/copilot-instructions.md`](.github/copilot-instructions.md). Ke
 - **Quarto chunks**: prefer chunk options as YAML-style `#|` directives, not as inline `r, opt = val` arguments.
 - **Useful resources**: a course, book or video that covers a topic mds teaches goes in the Further reading section of the matching page,
   even when lds already lists it in a directory (Ezra, 2026-10-15).
-  Check each license: adapt with attribution only when the license allows it, and otherwise link.
+  Link the resource, and adapt it with attribution only when its license allows adapting.
   See [`track-useful-resources`](https://github.com/Morrison-Lab/ai-config/blob/main/shared/workflow/track-useful-resources.md).
 - **One term per `#def-` div**: define a single term in each definition div, and give each further term its own div and id, placed right after the first (or before it, if the first uses it) and linking to it. Aliases of one term ("also called ...") stay in the same div, in bold and in the div title. Put commentary in a separate `#rem-` div and each example in an `#exm-` div after the definition it illustrates. A theorem-type div states one result. Keep the old id on the original term (Ezra, 2026-10-12); see psw's [Writing for teaching](https://morrison-lab.github.io/psw/chapters/teaching.html).
 

@@ -63,7 +63,7 @@ The wording is canonical in psw's [Writing for teaching](https://morrison-lab.gi
 
 A course, book or video that covers a topic mds teaches goes in the Further reading section of the matching page,
 even when lds already lists it in a directory (Ezra, 2026-10-15).
-Adapt a resource with attribution only where its license allows adapting, and otherwise link to it.
+Link the resource, and adapt it with attribution only where its license allows adapting.
 See [`track-useful-resources`](https://github.com/Morrison-Lab/ai-config/blob/main/shared/workflow/track-useful-resources.md).
 
 ## Code Chunks
