@@ -1,12 +1,15 @@
 :::{#def-inner-product-space}
 #### Inner product space
 
-An **inner product space** is a pair $(\reals^p, \iprod{\cdot}{\cdot})$
-of the space $\reals^p$ (@def-real-coordinate-space)
-and an inner product $\iprod{\cdot}{\cdot}$ on it (@def-inner-product).
-We say that $\reals^p$ is **equipped with** that inner product:
+A **real inner product space** is a pair $(V, \iprod{\cdot}{\cdot})$
+of a real vector space $V$ and an inner product $\iprod{\cdot}{\cdot}$ on it,
+a function with the four properties of @def-inner-product.
+We say that $V$ is **equipped with** that inner product:
 the inner product is part of the data of the space,
 so the same set of vectors with a different inner product is a different inner product space.
+@def-inner-product states the properties for $V = \reals^p$ (@def-real-coordinate-space),
+and the same four properties define an inner product on other real vector spaces,
+such as spaces of matrices or functions.
 
 :::
 

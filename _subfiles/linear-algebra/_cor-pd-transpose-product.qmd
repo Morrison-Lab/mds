@@ -1,0 +1,16 @@
+:::{#cor-pd-transpose-product}
+#### A positive definite matrix is a transpose product
+
+Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix (@def-positive-definite).
+Then $\matr{A} = \tp{\matr{W}}\matr{W}$ for some invertible $p \times p$ matrix $\matr{W}$.
+
+:::
+
+::: proof
+
+By the Cholesky factorization (@thm-cholesky), $\matr{A} = \matr{L}\tp{\matr{L}}$
+with $\matr{L}$ lower triangular with positive diagonal entries.
+Take $\matr{W} = \tp{\matr{L}}$, which is invertible because it is upper triangular with positive diagonal entries.
+Then $\tp{\matr{W}}\matr{W} = \matr{L}\tp{\matr{L}} = \matr{A}$.
+
+:::

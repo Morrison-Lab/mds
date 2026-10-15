@@ -1,9 +1,9 @@
 :::{#thm-whitening-inner-product}
 #### A matrix-induced inner product is a dot product of transformed vectors
 
-Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix (@def-positive-definite).
-Then $\matr{A} = \tp{\matr{W}}\matr{W}$ for some invertible $p \times p$ matrix $\matr{W}$,
-and for all $\vx, \vy \in \reals^p$, the $\matr{A}$-inner product (@def-matrix-induced-inner-product) satisfies
+Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix,
+and let $\matr{W}$ be any $p \times p$ matrix with $\matr{A} = \tp{\matr{W}}\matr{W}$.
+Then for all $\vx, \vy \in \reals^p$, the $\matr{A}$-inner product (@def-matrix-induced-inner-product) satisfies
 
 $$
 \iprod{\vx}{\vy}_{\matr{A}} = (\matr{W}\vx) \cdot (\matr{W}\vy).
@@ -12,11 +12,6 @@ $$
 :::
 
 ::: proof
-
-By the Cholesky factorization (@thm-cholesky), $\matr{A} = \matr{L}\tp{\matr{L}}$
-with $\matr{L}$ lower triangular with positive diagonal entries,
-so $\matr{W} = \tp{\matr{L}}$ is invertible and $\matr{A} = \tp{\matr{W}}\matr{W}$.
-Then
 
 $$
 \begin{aligned}

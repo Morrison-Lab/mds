@@ -12,8 +12,8 @@ tailors geometric notions of distance, angle, and projection to the structure of
    The induced distance
    $d_{\matr{\covmat}^{-1}}(\vx, \vy) = \sqrt{\tp{(\vx - \vy)}\matr{\covmat}^{-1}(\vx - \vy)}$
    measures statistical distance normalized by variance along each principal direction.
-   Factoring $\matr{\covmat}^{-1} = \tp{\matr{W}}\matr{W}$ (via Cholesky or spectral decomposition),
-   this inner product corresponds to the Euclidean dot product of whitened coordinates $\vecf{z} = \matr{W}\vx$
+   Factoring $\matr{\covmat}^{-1} = \tp{\matr{W}}\matr{W}$ (via Cholesky or spectral decomposition, @cor-pd-transpose-product),
+   this inner product is the Euclidean dot product of the whitened vectors $\matr{W}\vx$ and $\matr{W}\vy$
    (@thm-whitening-inner-product).
 
 2. **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**:
@@ -27,7 +27,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
 
 3. **Embeddings and cosine similarity**:
    In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations.
-   The angle between embeddings captures semantic similarity through cosine similarity (@def-cosine-similarity):
+   The angle between embeddings captures semantic similarity through cosine similarity (@def-cosine-similarity-inner-product-space):
    $$
    \cossim(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
    $$

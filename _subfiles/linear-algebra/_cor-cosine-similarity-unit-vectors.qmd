@@ -1,7 +1,8 @@
 :::{#cor-cosine-similarity-unit-vectors}
 #### Cosine similarity of unit vectors is their inner product
 
-In a real inner product space (@def-inner-product-space), if $\norm{\vx} = \norm{\vy} = 1$, then
+In a real inner product space (@def-inner-product-space),
+for all vectors $\vx$ and $\vy$ with $\norm{\vx} = \norm{\vy} = 1$,
 
 $$
 \cossim(\vx, \vy) = \iprod{\vx}{\vy}.

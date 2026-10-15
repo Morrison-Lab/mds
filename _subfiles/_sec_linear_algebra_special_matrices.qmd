@@ -172,11 +172,11 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_thm-whitening-inner-product.qmd >}}
+{{< include mds/_subfiles/linear-algebra/_cor-pd-transpose-product.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_cor-cosine-similarity-unit-vectors.qmd >}}
+{{< include mds/_subfiles/linear-algebra/_thm-whitening-inner-product.qmd >}}
 
 {{< slidebreak >}}
 

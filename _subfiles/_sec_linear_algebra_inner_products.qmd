@@ -82,6 +82,10 @@
 
 {{< slidebreak >}}
 
+{{< include mds/_subfiles/linear-algebra/_cor-cosine-similarity-unit-vectors.qmd >}}
+
+{{< slidebreak >}}
+
 {{< include mds/_subfiles/linear-algebra/_thm-pearson-cosine-centered.qmd >}}
 
 ## Orthonormal bases and Gram-Schmidt {#sec-gram-schmidt}
