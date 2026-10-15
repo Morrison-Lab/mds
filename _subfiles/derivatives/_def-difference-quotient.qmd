@@ -8,6 +8,6 @@ $$
 \frac{f(c + h) - f(c)}{h},
 $$
 
-the [slope](algebra.qmd#def-affine-function) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
+the [slope](algebra.qmd#def-slope) of the line through the points $(c, f(c))$ and $(c + h, f(c + h))$.
 
 :::
