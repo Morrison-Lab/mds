@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 17:33:03 (PDT)
+Last modified: 2026-10-14 22:27:27 (PDT)
 
 ## 1 Special Matrices
 
@@ -327,25 +327,25 @@ Some special matrices appeared earlier:
 >
 > **Theorem 6 (A quadratic form is additive in its matrix)** If \\\mathbf{A}\\ and \\\mathbf{B}\\ are \\p \times p\\ matrices, \\c\\ is a number and \\\tilde{x}\\ is a vector of length \\p\\, then
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{B})\tilde{x}&= {\tilde{x}}^{\top}\mathbf{A}\tilde{x}+ {\tilde{x}}^{\top}\mathbf{B}\tilde{x}, \\ {\tilde{x}}^{\top}(c\\\mathbf{A})\tilde{x}&= c\\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}. \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{B})\tilde{x}&= {\tilde{x}}^{\top} \mathbf{A} \tilde{x} + {\tilde{x}}^{\top} \mathbf{B} \tilde{x}, \\ {\tilde{x}}^{\top}(c\\\mathbf{A})\tilde{x}&= c\\{\tilde{x}}^{\top} \mathbf{A} \tilde{x}. \end{aligned} \\
 >
-> So for a fixed \\\tilde{x}\\, the map \\\mathbf{S} \mapsto {\tilde{x}}^{\top}\mathbf{S}\tilde{x}\\ is linear in \\\mathbf{S}\\.
+> So for a fixed \\\tilde{x}\\, the map \\\mathbf{S} \mapsto {\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ is linear in \\\mathbf{S}\\.
 
 > **NOTE:**
 >
 > *Proof*. By the distributive law ([Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib)), applied on the left and then on the right,
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{B})\tilde{x} &= \mathopen{}\left({\tilde{x}}^{\top}\mathbf{A} + {\tilde{x}}^{\top}\mathbf{B}\right)\mathclose{}\tilde{x} && \text{(distribute } {\tilde{x}}^{\top} \text{ over the sum)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{x}+ {\tilde{x}}^{\top}\mathbf{B}\tilde{x} && \text{(distribute } \tilde{x}\text{ over the sum)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{B})\tilde{x} &= \mathopen{}\left({\tilde{x}}^{\top}\mathbf{A} + {\tilde{x}}^{\top}\mathbf{B}\right)\mathclose{}\tilde{x} && \text{(distribute } {\tilde{x}}^{\top} \text{ over the sum)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{x} + {\tilde{x}}^{\top} \mathbf{B} \tilde{x} && \text{(distribute } \tilde{x}\text{ over the sum)} \end{aligned} \\
 >
-> For the scalar, a number can be moved out of any product, so \\{\tilde{x}}^{\top}(c\\\mathbf{A})\tilde{x}= c\\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\\.
+> For the scalar, a number can be moved out of any product, so \\{\tilde{x}}^{\top}(c\\\mathbf{A})\tilde{x}= c\\{\tilde{x}}^{\top} \mathbf{A} \tilde{x}\\.
 
 > **NOTE:**
 >
 > **Example 14 (Combining two quadratic forms into one)** Take \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\, \\\mathbf{B} = \mathbf{I}\\ and \\\tilde{x}= (1, 2)\\. Then
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}\tilde{x}&= 1 + 4 + 12 = 17, \\ {\tilde{x}}^{\top}\mathbf{I}\tilde{x}&= 1 + 4 = 5, \\ {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{I})\tilde{x} &= {\tilde{x}}^{\top}\begin{bmatrix} 2 & 2 \\ 0 & 4 \end{bmatrix}\tilde{x}\\ &= 2 + 4 + 16 \\ &= 22, \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= 1 + 4 + 12 = 17, \\ {\tilde{x}}^{\top} \mathbf{I} \tilde{x} &= 1 + 4 = 5, \\ {\tilde{x}}^{\top}(\mathbf{A} + \mathbf{I})\tilde{x} &= {\tilde{x}}^{\top}\begin{bmatrix} 2 & 2 \\ 0 & 4 \end{bmatrix}\tilde{x}\\ &= 2 + 4 + 16 \\ &= 22, \end{aligned} \\
 >
-> which equals \\17 + 5\\. In particular, \\{\tilde{x}}^{\top}(\mathbf{A} + c\\\mathbf{I})\tilde{x}= {\tilde{x}}^{\top}\mathbf{A}\tilde{x}+ c\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\ for every number \\c\\, because \\{\tilde{x}}^{\top}\mathbf{I}\tilde{x}= {\tilde{x}}^{\top}\tilde{x}= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\. This is how two quadratic terms in the same vector combine into a single quadratic form.
+> which equals \\17 + 5\\. In particular, \\{\tilde{x}}^{\top}(\mathbf{A} + c\\\mathbf{I})\tilde{x}= {\tilde{x}}^{\top} \mathbf{A} \tilde{x} + c\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\ for every number \\c\\, because \\{\tilde{x}}^{\top} \mathbf{I} \tilde{x} = {\tilde{x}}^{\top}\tilde{x}= \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2\\. This is how two quadratic terms in the same vector combine into a single quadratic form.
 
 > **NOTE:**
 >
@@ -365,19 +365,19 @@ Some special matrices appeared earlier:
 >
 > **Theorem 7 (A quadratic form depends only on the symmetric part)** If \\\mathbf{S}\\ is a \\p \times p\\ matrix and \\\tilde{x}\\ is a vector of length \\p\\, then
 >
-> \\ {\tilde{x}}^{\top}\mathbf{S}\tilde{x} = {\tilde{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\tilde{x}. \\
+> \\ {\tilde{x}}^{\top} \mathbf{S} \tilde{x} = {\tilde{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\tilde{x}. \\
 >
 > So the value of a quadratic form depends only on the symmetric part ([Definition 12](#def-symmetric-part)) of \\\mathbf{S}\\.
 
 > **NOTE:**
 >
-> *Proof*. The quadratic form \\{\tilde{x}}^{\top}\mathbf{S}\tilde{x}\\ is a \\1 \times 1\\ matrix, so it equals its own transpose:
+> *Proof*. The quadratic form \\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\ is a \\1 \times 1\\ matrix, so it equals its own transpose:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{S}\tilde{x} &= {\mathopen{}\left({\tilde{x}}^{\top}\mathbf{S}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a } 1 \times 1 \text{ matrix is symmetric)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\{\mathopen{}\left({\tilde{x}}^{\top}\right)\mathclose{}}^{\top} && \text{(transpose of a product, twice)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\\tilde{x} && \text{(transposing twice changes nothing)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{S} \tilde{x} &= {\mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(a } 1 \times 1 \text{ matrix is symmetric)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\{\mathopen{}\left({\tilde{x}}^{\top}\right)\mathclose{}}^{\top} && \text{(transpose of a product, twice)} \\ &= {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\\tilde{x} && \text{(transposing twice changes nothing)} \end{aligned} \\
 >
-> Averaging the two expressions for \\{\tilde{x}}^{\top}\mathbf{S}\tilde{x}\\:
+> Averaging the two expressions for \\{\tilde{x}}^{\top} \mathbf{S} \tilde{x}\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{S}\tilde{x} &= \frac{1}{2}\mathopen{}\left({\tilde{x}}^{\top}\mathbf{S}\tilde{x}+ {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\\tilde{x}\right)\mathclose{} && \text{(average of two equal numbers)} \\ &= \frac{1}{2}\\{\tilde{x}}^{\top}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\tilde{x} && \text{(distributive law)} \\ &= {\tilde{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\tilde{x} && \text{(move the scalar } \tfrac{1}{2} \text{ inside)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{S} \tilde{x} &= \frac{1}{2}\mathopen{}\left({\tilde{x}}^{\top} \mathbf{S} \tilde{x} + {\tilde{x}}^{\top}\\{\mathbf{S}}^{\top}\\\tilde{x}\right)\mathclose{} && \text{(average of two equal numbers)} \\ &= \frac{1}{2}\\{\tilde{x}}^{\top}\mathopen{}\left(\mathbf{S} + {\mathbf{S}}^{\top}\right)\mathclose{}\tilde{x} && \text{(distributive law)} \\ &= {\tilde{x}}^{\top}\mathopen{}\left(\frac{1}{2}(\mathbf{S}+{\mathbf{S}}^{\top})\right)\mathclose{}\tilde{x} && \text{(move the scalar } \tfrac{1}{2} \text{ inside)} \end{aligned} \\
 >
 > The distributive step is [Theorem 6 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-distrib), and the transpose step is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product).
 
@@ -385,7 +385,7 @@ Some special matrices appeared earlier:
 >
 > **Example 16 (Replacing a matrix by its symmetric part)** With \\\mathbf{S} = \begin{bmatrix} 1 & 2 \\ 0 & 3 \end{bmatrix}\\ from [Example 15](#exm-symmetric-part) and \\\tilde{x}= (1, 1)\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{S}\tilde{x} &= 1 + 2 + 0 + 3 \\ &= 6 \\ {\tilde{x}}^{\top}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\tilde{x} &= 1 + 1 + 1 + 3 \\ &= 6 \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{S} \tilde{x} &= 1 + 2 + 0 + 3 \\ &= 6 \\ {\tilde{x}}^{\top}\begin{bmatrix} 1 & 1 \\ 1 & 3 \end{bmatrix}\tilde{x} &= 1 + 1 + 1 + 3 \\ &= 6 \end{aligned} \\
 >
 > Both quadratic forms equal the sum of their matrix’s entries, because every entry of \\\tilde{x}\\ is \\1\\.
 
@@ -816,13 +816,13 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 > **Definition 19 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\ge 0\\ for every vector \\\tilde{x}\\ of length \\p\\.
+> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for every vector \\\tilde{x}\\ of length \\p\\.
 
 > **NOTE:**
 >
 > **Example 27 (A positive semidefinite matrix)** Let \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\, which is symmetric. For any \\\tilde{x}= (x_1, x_2)\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{B}\tilde{x} &= x_1^2 + x_1 x_2 + x_2 x_1 + x_2^2 && \text{(multiply out the quadratic form)} \\ &= (x_1 + x_2)^2 && \text{(complete the square)} \\ &\ge 0 && \text{(a square is non-negative)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{B} \tilde{x} &= x_1^2 + x_1 x_2 + x_2 x_1 + x_2^2 && \text{(multiply out the quadratic form)} \\ &= (x_1 + x_2)^2 && \text{(complete the square)} \\ &\ge 0 && \text{(a square is non-negative)} \end{aligned} \\
 >
 > So \\\mathbf{B}\\ is positive semidefinite.
 
@@ -831,29 +831,29 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 > **Definition 20 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
-> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for every vector \\\tilde{x}\neq \tilde{0}\\ of length \\p\\.
+> - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every vector \\\tilde{x}\neq \tilde{0}\\ of length \\p\\.
 
 > **NOTE:**
 >
 > **Example 28 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top}\mathbf{I}\_p\tilde{x}= \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
+> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top} \mathbf{I}\_p \tilde{x} = \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
 >
 > - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 27](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\,
 >
->   \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{B}\tilde{x}&= (1 - 1)^2 \\ &= 0. \end{aligned} \\
+>   \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{B} \tilde{x} &= (1 - 1)^2 \\ &= 0. \end{aligned} \\
 >
 > - \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ is symmetric but not positive semidefinite: at \\\tilde{x}= (1, -1)\\,
 >
->   \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{D}\tilde{x}&= 1 - 2 - 2 + 1 \\ &= -2 \\ &\< 0. \end{aligned} \\
+>   \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{D} \tilde{x} &= 1 - 2 - 2 + 1 \\ &= -2 \\ &\< 0. \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 18* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 19](#def-positive-semidefinite)): \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for every \\\tilde{x}\neq \tilde{0}\\, and \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. For example, \\\mathbf{I}\_p\\ in [Example 28](#exm-positive-definite) is both.
+> *Remark 18* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 19](#def-positive-semidefinite)): \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every \\\tilde{x}\neq \tilde{0}\\, and \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. For example, \\\mathbf{I}\_p\\ in [Example 28](#exm-positive-definite) is both.
 >
 > Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues ([Definition 16](#def-eigenvalue)). For example, \\\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\\ is not symmetric, and for any \\\tilde{x}= (x_1, x_2)\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{C}\tilde{x} &= x_1 (x_1 + x_2) + x_2 (-x_1 + x_2) && \text{(multiply out the quadratic form)} \\ &= x_1^2 + x_1 x_2 - x_2 x_1 + x_2^2 && \text{(distribute)} \\ &= x_1^2 + x_2^2 && \text{(the middle terms cancel)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{C} \tilde{x} &= x_1 (x_1 + x_2) + x_2 (-x_1 + x_2) && \text{(multiply out the quadratic form)} \\ &= x_1^2 + x_1 x_2 - x_2 x_1 + x_2^2 && \text{(distribute)} \\ &= x_1^2 + x_2^2 && \text{(the middle terms cancel)} \end{aligned} \\
 >
 > which is positive for every \\\tilde{x}\neq \tilde{0}\\. But suppose \\\mathbf{C}\tilde{v} = \lambda\tilde{v}\\ for a real number \\\lambda\\. Matching entries gives \\v_1 + v_2 = \lambda v_1\\ and \\-v_1 + v_2 = \lambda v_2\\, so \\v_2 = (\lambda- 1)\\ v_1\\ and \\-v_1 = (\lambda- 1)\\ v_2\\. Substituting the first into the second gives \\-v_1 = (\lambda- 1)^2 v_1\\, so \\\mathopen{}\left(1 + (\lambda- 1)^2\right)\mathclose{} v_1 = 0\\. Since \\1 + (\lambda- 1)^2 \> 0\\, \\v_1 = 0\\, and then
 >
@@ -874,11 +874,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > *Proof*. For any vector \\\tilde{x}\\ of length \\p\\, let \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{x}\\. Then:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}\tilde{x} &= {\tilde{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\tilde{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\tilde{y}}^{\top}\mathbf{\Lambda}\tilde{y} && \text{(definition of } \tilde{y} \text{)} \\ &= \sum\_{i=1}^p\lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= {\tilde{x}}^{\top}\mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\tilde{x} && \text{(substitute the eigendecomposition)} \\ &= {\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{}}^{\top}\mathbf{\Lambda}\mathopen{}\left({\mathbf{Q}}^{\top}\tilde{x}\right)\mathclose{} && \text{(transpose of a product)} \\ &= {\tilde{y}}^{\top}\mathbf{\Lambda}\tilde{y} && \text{(definition of } \tilde{y} \text{)} \\ &= \sum\_{i=1}^p\lambda_i y_i^2 && \text{(} \mathbf{\Lambda} \text{ is diagonal)} \end{aligned} \\
 >
 > The second step is [Theorem 16 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-product). Also, \\\tilde{x}= \tilde{0}\\ exactly when \\\tilde{y} = \tilde{0}\\: \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\ for an orthogonal matrix ([Definition 10](#def-orthogonal-matrix)), so \\\tilde{x}= \mathbf{Q}\tilde{y}\\.
 >
-> *If every \\\lambda_i \ge 0\\*, then every term \\\lambda_i y_i^2 \ge 0\\, so \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\ge 0\\. *If every \\\lambda_i \> 0\\* and \\\tilde{x}\neq \tilde{0}\\, then some \\y_i \neq 0\\, so at least one term is positive and the rest are non-negative, and \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\.
+> *If every \\\lambda_i \ge 0\\*, then every term \\\lambda_i y_i^2 \ge 0\\, so \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\. *If every \\\lambda_i \> 0\\* and \\\tilde{x}\neq \tilde{0}\\, then some \\y_i \neq 0\\, so at least one term is positive and the rest are non-negative, and \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\.
 >
 > *Conversely*, take \\\tilde{x}= \tilde{q}\_i\\, column \\i\\ of \\\mathbf{Q}\\, which is not \\\tilde{0}\\ because it has norm 1. Then \\\tilde{y} = {\mathbf{Q}}^{\top}\tilde{q}\_i\\ is column \\i\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\, so \\y_i = 1\\ and every other entry of \\\tilde{y}\\ is \\0\\, and the display gives \\{\tilde{q}\_i}^{\top}\mathbf{A}\tilde{q}\_i = \lambda_i\\. So if \\\mathbf{A}\\ is positive semidefinite, \\\lambda_i \ge 0\\, and if \\\mathbf{A}\\ is positive definite, \\\lambda_i \> 0\\.
 
@@ -929,7 +929,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > **Definition 21 (Paraboloid)** A **paraboloid** in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\tilde{x}, f(\tilde{x})) \mid \tilde{x}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
 >
-> \\ f(\tilde{x}) = {\tilde{x}}^{\top}\mathbf{S}\tilde{x}+ \tilde{b} \cdot \tilde{x} + c, \\
+> \\ f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x} + \tilde{b} \cdot \tilde{x} + c, \\
 >
 > where \\\mathbf{S}\\ is a nonzero symmetric \\p \times p\\ matrix ([Definition 3](#def-symmetric-matrix)), \\\tilde{b} \in \mathbb{R}^p\\, and \\c \in \mathbb{R}\\. The first term is a quadratic form ([Definition 11](#def-quadratic-form)). The paraboloid is **elliptic** if \\\mathbf{S}\\ is positive definite ([Definition 20](#def-positive-definite)); it is then a bowl that opens upward.
 
@@ -937,7 +937,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > **Example 31 (A bowl with its lowest point at the origin)** Take \\p = 2\\, \\\mathbf{S} = \mathbf{I}\_2\\, \\\tilde{b} = \tilde{0}\_{2 \times 1}\\ and \\c = 0\\. Then \\\mathbf{S}\\ is positive definite ([Example 28](#exm-positive-definite)), so the graph of
 >
-> \\ \begin{aligned} f(\tilde{x}) &= {\tilde{x}}^{\top}\mathbf{I}\_2\tilde{x}\\ &= x_1^2 + x_2^2 \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{x}) &= {\tilde{x}}^{\top} \mathbf{I}\_2 \tilde{x} \\ &= x_1^2 + x_2^2 \end{aligned} \\
 >
 > is an elliptic paraboloid. At \\\tilde{x}= \tilde{0}\\, \\f(\tilde{x}) = 0\\; at \\\tilde{x}= (1, 1)\\, \\f(\tilde{x}) = 2\\; and \\f(\tilde{x}) \> 0\\ at every \\\tilde{x}\neq \tilde{0}\\, so the origin is the only lowest point of the bowl. [Figure 1](#fig-paraboloid) shows the surface.
 >
@@ -960,7 +960,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 22 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 20](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}\> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
+> **Definition 22 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 20](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
 >
 > \\ \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} \stackrel{\text{def}}{=}{\tilde{x}}^{\top} \mathbf{A} \tilde{y}. \\
 
@@ -972,7 +972,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > For any nonzero vector \\\tilde{x}= (x_1, x_2) \in \mathbb{R}^2\\:
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\mathbf{A}\tilde{x} &= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2 && \text{(expand the quadratic form)} \\ &= (x_1 + x_2)^2 + x_1^2 + x_2^2 && \text{(complete the square)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2 && \text{(expand the quadratic form)} \\ &= (x_1 + x_2)^2 + x_1^2 + x_2^2 && \text{(complete the square)} \end{aligned} \\
 >
 > which is strictly positive because \\x_1^2 + x_2^2 \> 0\\ when \\\tilde{x}\neq \tilde{0}\\. Thus \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)).
 >
@@ -1002,7 +1002,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > *Proof*.
 >
-> - **positivity**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\mathbf{A}} = {\tilde{x}}^{\top}\mathbf{A}\tilde{x}\ge 0\\ for all \\\tilde{x}\in \mathbb{R}^p\\, because \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite));
+> - **positivity**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for all \\\tilde{x}\in \mathbb{R}^p\\, because \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite));
 > - **definiteness**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\mathbf{A}} = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\, by definition of a positive definite matrix ([Definition 20](#def-positive-definite));
 > - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\mathbf{A}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 > - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \left\langle \tilde{y}, \tilde{x} \right\rangle\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
@@ -1015,7 +1015,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} A\_{ji} &= \left\langle \tilde{e}\_j, \tilde{e}\_i \right\rangle \\ &= \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \\ &= A\_{ij}, \end{aligned} \\
 >
-> so \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top}\mathbf{A}\tilde{x}= \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)).
+> so \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} = \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)).
 >
 > For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\left\langle \tilde{x}, \tilde{y} \right\rangle = {\tilde{x}}^{\top}\mathbf{B}\tilde{y}\\ for all \\\tilde{x}, \tilde{y}\\, evaluating at \\\tilde{x}= \tilde{e}\_i\\ and \\\tilde{y}= \tilde{e}\_j\\ gives
 >

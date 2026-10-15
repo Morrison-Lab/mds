@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-14 17:33:03 (PDT)</p>
+  <p class="date">Last modified: 2026-10-14 22:27:27 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
@@ -1070,7 +1070,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </ul>
 </div>
 </section><section class="slide level2"><div id="def-cosine-similarity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Cosine similarity)</strong></span> The <strong>cosine similarity</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> is the cosine of the angle between them (<a href="#/def-angle" class="quarto-xref">Definition&nbsp;8</a>):</p>
+<p><span class="theorem-title"><strong>Definition 9 (Cosine similarity)</strong></span> The <strong>cosine similarity</strong> between two nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> is their dot product divided by the product of their lengths:</p>
 <p><span class="math display">\[
 \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\tilde{x}\cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
@@ -1109,6 +1109,15 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </li>
 </ul>
 <p>When both vectors have unit Euclidean norm (<span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\)</span>), cosine similarity equals their inner product: <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="cor-cosine-similarity-angle" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corollary 1 (Cosine similarity is the cosine of the angle)</strong></span> For nonzero vectors <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^p\)</span> with angle <span class="math inline">\(\theta\)</span> between them (<a href="#/def-angle" class="quarto-xref">Definition&nbsp;8</a>),</p>
+<p><span class="math display">\[
+\operatorname{cossim}(\tilde{x}, \tilde{y}) = \cos\theta.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The ratio that <a href="#/def-angle" class="quarto-xref">Definition&nbsp;8</a> sets equal to <span class="math inline">\(\cos\theta\)</span> is the ratio that <a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;9</a> defines as <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y})\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-cosine-similarity-inner-product-space" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 10 (Cosine similarity in an inner product space)</strong></span> In a general real inner product space (<a href="#/def-inner-product-space" class="quarto-xref">Definition&nbsp;2</a>) with inner product <span class="math inline">\(\left\langle \cdot, \cdot \right\rangle\)</span> and induced norm <span class="math inline">\(\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\)</span>, the <strong>cosine similarity</strong> is</p>
@@ -1502,7 +1511,7 @@ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="cor-orthonormal-basis-exists" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corollary 1 (Every subspace has an orthonormal basis)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Every orthonormal list of vectors in <span class="math inline">\(\mathcal{S}\)</span> extends to an orthonormal basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>). Starting from the empty list shows that <span class="math inline">\(\mathcal{S}\)</span> has an orthonormal basis.</p>
+<p><span class="theorem-title"><strong>Corollary 2 (Every subspace has an orthonormal basis)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Every orthonormal list of vectors in <span class="math inline">\(\mathcal{S}\)</span> extends to an orthonormal basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>). Starting from the empty list shows that <span class="math inline">\(\mathcal{S}\)</span> has an orthonormal basis.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r \in \mathcal{S}\)</span> be orthonormal. They are linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a>), so they extend to a basis <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r, \tilde{a}_{r+1}, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/thm-gram-schmidt" class="quarto-xref">Theorem&nbsp;10</a>, part 3).</p>

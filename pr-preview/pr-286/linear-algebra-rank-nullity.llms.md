@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 17:33:03 (PDT)
+Last modified: 2026-10-14 22:27:27 (PDT)
 
 ## 1 Column space and null space
 
@@ -188,7 +188,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > 1.  Entry \\(i, j)\\ of \\\mathbf{G}\\ is \\\tilde{a}\_i \cdot \tilde{a}\_j\\.
 > 2.  \\\mathbf{G}\\ is symmetric ([Definition 3 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-symmetric-matrix)).
-> 3.  \\{\tilde{x}}^{\top} \mathbf{G} \tilde{x}= \mathopen{}\left\lVert\mathbf{A} \tilde{x}\right\rVert\mathclose{}^2 \ge 0\\ for every \\\tilde{x}\in \mathbb{R}^n\\, so \\\mathbf{G}\\ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite).
+> 3.  \\{\tilde{x}}^{\top} \mathbf{G} \tilde{x} = \mathopen{}\left\lVert\mathbf{A} \tilde{x}\right\rVert\mathclose{}^2 \ge 0\\ for every \\\tilde{x}\in \mathbb{R}^n\\, so \\\mathbf{G}\\ is [positive semidefinite](linear-algebra-special-matrices.llms.md#def-positive-semidefinite).
 
 > **NOTE:**
 >

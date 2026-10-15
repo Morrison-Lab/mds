@@ -9,7 +9,10 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="site_libs/quarto-contrib/code-language-labels-1.0.2/code-language-labels.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.19">
 <title>Math for Data Science – Derivatives and Taylor Series</title>
@@ -353,7 +356,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-14 17:33:03 (PDT)</p>
+  <p class="date">Last modified: 2026-10-14 22:27:27 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-derivatives" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Derivatives</h2>
 <h3 id="sec-limits-derivatives">Limits and derivatives</h3>
@@ -398,7 +401,7 @@
 <li>The <strong>right-hand limit</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c^+} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\)</span> for every <span class="math inline">\(x\)</span> with <span class="math inline">\(c &lt; x &lt; c + \delta\)</span>.</li>
 <li>The <strong>left-hand limit</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is <span class="math inline">\(L\)</span>, written <span class="math inline">\(\lim_{x \to c^-} f(x) = L\)</span>, if for every <span class="math inline">\(\varepsilon&gt; 0\)</span> there is a <span class="math inline">\(\delta&gt; 0\)</span> such that <span class="math inline">\(\mathopen{}\left|f(x) - L\right|\mathclose{} &lt; \varepsilon\)</span> for every <span class="math inline">\(x\)</span> with <span class="math inline">\(c - \delta&lt; x &lt; c\)</span>.</li>
 </ul>
-<p>These are the <strong>one-sided limits</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>. The limit <span class="math inline">\(\lim_{x \to c} f(x)\)</span> (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) exists exactly when both one-sided limits exist and are equal, and then all three are equal.</p>
+<p>These are the <strong>one-sided limits</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-one-sided-limit" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (One-sided limits of a step function)</strong></span> Let <span class="math inline">\(H(x) = 1\)</span> for <span class="math inline">\(x \ge 0\)</span> and <span class="math inline">\(H(x) = 0\)</span> for <span class="math inline">\(x &lt; 0\)</span>.</p>
@@ -409,6 +412,9 @@
 <span class="math inline">\(\lim_{x \to 0^-} H(x) = 0\)</span>, because <span class="math inline">\(H(x) = 0\)</span> for every <span class="math inline">\(x &lt; 0\)</span>.</li>
 </ul>
 <p>The one-sided limits differ, since <span class="math inline">\(1 \ne 0\)</span>, so <span class="math inline">\(\lim_{x \to 0} H(x)\)</span> does not exist.</p>
+</div>
+</section><section class="slide level2"><div id="rem-one-sided-limit-and-limit" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em> (A limit exists exactly when both one-sided limits exist and are equal). </span>The limit <span class="math inline">\(\lim_{x \to c} f(x)\)</span> (<a href="#/def-limit" class="quarto-xref">Definition&nbsp;1</a>) exists exactly when both one-sided limits (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;2</a>) exist and are equal, and then all three are equal.</p>
 </div>
 </section><section class="slide level2"><div title="Videos">
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1042,14 +1048,126 @@ f''(x)
 \end{aligned}
 \]</span></p>
 </div>
-<h3 id="sec-tangent-lines">Tangent lines</h3>
+<h3 id="sec-function-profile">Studying a new function</h3>
+<div id="def-function-profile" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Profile of a function)</strong></span> The <strong>profile</strong> of a function <span class="math inline">\(f\)</span> of a real variable is the list of related functions and values to work out when meeting <span class="math inline">\(f\)</span> for the first time:</p>
+<ul>
+<li>the logarithm <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span>, where <span class="math inline">\(f(x) &gt; 0\)</span>;</li>
+<li>the derivatives <span class="math inline">\(f'(x)\)</span>, <span class="math inline">\(f''(x)\)</span>, and so on, as far as they are informative;</li>
+<li>the <strong>logarithmic derivative</strong> <span class="math inline">\(\frac{f'(x)}{f(x)}\)</span>, which equals <span class="math inline">\(\frac{d }{d x}\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{}\)</span> by <a href="#/cor-deriv-log-chain" class="quarto-xref">Corollary&nbsp;1</a> and measures the rate of change of <span class="math inline">\(f\)</span> relative to its size; it needs <span class="math inline">\(f(x) &gt; 0\)</span>, and for <span class="math inline">\(f(x) &lt; 0\)</span> the same expression is the derivative of <span class="math inline">\(\operatorname{log}\mathopen{}\left\{\mathopen{}\left|f(x)\right|\mathclose{}\right\}\mathclose{}\)</span>;</li>
+<li>the inverse function <span class="math inline">\(f^{-1}\)</span> (<a href="./sets-functions.html#def-inverse-function">definition</a>), which exists on the range of <span class="math inline">\(f\)</span> when <span class="math inline">\(f\)</span> is one-to-one, and otherwise only after restricting the domain of <span class="math inline">\(f\)</span>;</li>
+<li>the complement <span class="math inline">\(1 - f(x)\)</span>, which is informative when <span class="math inline">\(f\)</span> takes values in <span class="math inline">\([0, 1]\)</span>, as a probability does;</li>
+<li>the reciprocal <span class="math inline">\(\frac{1}{f(x)}\)</span>, where <span class="math inline">\(f(x) \neq 0\)</span> (not to be confused with <span class="math inline">\(f^{-1}\)</span>);</li>
+<li>an antiderivative of <span class="math inline">\(f\)</span>, a function <span class="math inline">\(F\)</span> with <span class="math inline">\(F' = f\)</span> (<a href="./calculus-integration.html#sec-integration">integration</a>);</li>
+<li>the values <span class="math inline">\(f(0)\)</span> and <span class="math inline">\(f(1)\)</span>, and the limits of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x \to \infty\)</span> and as <span class="math inline">\(x \to -\infty\)</span>, at each of these that lies in the domain of <span class="math inline">\(f\)</span> or exists;</li>
+<li>the graph of <span class="math inline">\(f\)</span>.</li>
+</ul>
+</div>
+</section><section class="slide level2"><div id="exm-function-profile-logistic" class="theorem example">
+<p><span class="theorem-title"><strong>Example 8 (The profile of the logistic function)</strong></span> The <strong>logistic function</strong> (also called <span class="math inline">\(\operatorname{expit}\)</span> or the sigmoid) is</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{1 + e^{-x}}.
+\]</span></p>
+<p>The profile in <a href="#/def-function-profile" class="quarto-xref">Definition&nbsp;8</a> of <span class="math inline">\(f\)</span> is as follows. Write <span class="math inline">\(E = e^{-x}\)</span>, so that <span class="math inline">\(f = \frac{1}{1 + E}\)</span> and <span class="math inline">\(1 - f = \frac{E}{1 + E}\)</span>.</p>
+<ul>
+<li><p><strong>Logarithm:</strong> <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f(x)\right\}\mathclose{} = -\operatorname{log}\mathopen{}\left\{1 + e^{-x}\right\}\mathclose{}\)</span>, defined for every real <span class="math inline">\(x\)</span> because <span class="math inline">\(f(x) &gt; 0\)</span>.</p></li>
+<li>
+<p><strong>Derivative:</strong> by the chain rule,</p>
+<p><span class="math display">\[
+\begin{aligned}
+f'(x)
+&amp;= \frac{e^{-x}}{\mathopen{}\left(1 + e^{-x}\right)\mathclose{}^2}
+&amp;&amp; \text{(chain rule applied to } (1 + e^{-x})^{-1} \text{)} \\
+&amp;= \frac{1}{1 + E} \cdot \frac{E}{1 + E}
+&amp;&amp; \text{(split the square)} \\
+&amp;= f(x)\,\mathopen{}\left(1 - f(x)\right)\mathclose{}.
+&amp;&amp; \text{(identify } f \text{ and } 1 - f \text{)}
+\end{aligned}
+\]</span></p>
+<p>Differentiating again with the product rule gives <span class="math inline">\(f''(x) = f'(1 - f) - f f' = f(x)\mathopen{}\left(1 - f(x)\right)\mathclose{}\mathopen{}\left(1 - 2f(x)\right)\mathclose{}\)</span>.</p>
+</li>
+<li><p><strong>Logarithmic derivative:</strong> <span class="math inline">\(\frac{f'(x)}{f(x)} = 1 - f(x)\)</span>, so the relative rate of change of <span class="math inline">\(f\)</span> is the complement of <span class="math inline">\(f\)</span> itself.</p></li>
+<li>
+<p><strong>Inverse:</strong> for <span class="math inline">\(y \in (0, 1)\)</span>, solving <span class="math inline">\(y = \frac{1}{1 + e^{-x}}\)</span> for <span class="math inline">\(x\)</span> gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{1}{y} &amp;= 1 + e^{-x} \\
+e^{-x} &amp;= \frac{1 - y}{y} \\
+x &amp;= \operatorname{log}\mathopen{}\left\{\frac{y}{1 - y}\right\}\mathclose{}.
+\end{aligned}
+\]</span></p>
+<p>So <span class="math inline">\(f^{-1}(y) = \operatorname{logit}\mathopen{}\left\{y\right\}\mathclose{}\)</span>, the log-odds. The inverse exists because <span class="math inline">\(f' = f(1 - f) &gt; 0\)</span>, so <span class="math inline">\(f\)</span> is strictly increasing and therefore one-to-one.</p>
+</li>
+<li><p><strong>Complement:</strong> <span class="math inline">\(1 - f(x) = \frac{e^{-x}}{1 + e^{-x}} = \frac{1}{e^{x} + 1} = f(-x)\)</span>.</p></li>
+<li><p><strong>Reciprocal:</strong> <span class="math inline">\(\frac{1}{f(x)} = 1 + e^{-x}\)</span>.</p></li>
+<li><p><strong>Antiderivative:</strong> <span class="math inline">\(F(x) = \operatorname{log}\mathopen{}\left\{1 + e^{x}\right\}\mathclose{}\)</span> satisfies <span class="math inline">\(F'(x) = \frac{e^{x}}{1 + e^{x}} = f(x)\)</span>, so <span class="math inline">\(\int f(x)\,dx = \operatorname{log}\mathopen{}\left\{1 + e^{x}\right\}\mathclose{} + C\)</span>.</p></li>
+<li><p><strong>Key values:</strong> <span class="math inline">\(f(0) = \frac{1}{1 + 1} = \frac{1}{2}\)</span> and <span class="math inline">\(f(1) = \frac{1}{1 + e^{-1}}\)</span>. As <span class="math inline">\(x \to \infty\)</span>, <span class="math inline">\(e^{-x} \to 0\)</span>, so <span class="math inline">\(f(x) \to 1\)</span>; as <span class="math inline">\(x \to -\infty\)</span>, <span class="math inline">\(e^{-x} \to \infty\)</span>, so <span class="math inline">\(f(x) \to 0\)</span>.</p></li>
+</ul>
+<p>The code checks these results numerically, using the base R functions <code><a href="https://rdrr.io/r/stats/Logistic.html">plogis()</a></code> for <span class="math inline">\(f\)</span> and <code><a href="https://rdrr.io/r/stats/Logistic.html">qlogis()</a></code> for <span class="math inline">\(f^{-1}\)</span>, and <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> to differentiate symbolically.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a>f <span class="ot">&lt;-</span> plogis</span>
+<span id="cb1-2"><a aria-label="2"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb1-3"><a aria-label="3"></a></span>
+<span id="cb1-4"><a aria-label="4"></a>f_expr <span class="ot">&lt;-</span> <span class="fu">quote</span>(<span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)))</span>
+<span id="cb1-5"><a aria-label="5"></a>f_prime <span class="ot">&lt;-</span> <span class="fu">eval</span>(<span class="fu">D</span>(f_expr, <span class="st">"x"</span>), <span class="fu">list</span>(<span class="at">x =</span> x))</span>
+<span id="cb1-6"><a aria-label="6"></a>f_second <span class="ot">&lt;-</span> <span class="fu">eval</span>(<span class="fu">D</span>(<span class="fu">D</span>(f_expr, <span class="st">"x"</span>), <span class="st">"x"</span>), <span class="fu">list</span>(<span class="at">x =</span> x))</span>
+<span id="cb1-7"><a aria-label="7"></a></span>
+<span id="cb1-8"><a aria-label="8"></a>checks <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-9"><a aria-label="9"></a>  <span class="at">derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_prime <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)))),</span>
+<span id="cb1-10"><a aria-label="10"></a>  <span class="at">second_derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_second <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="fu">f</span>(x)))),</span>
+<span id="cb1-11"><a aria-label="11"></a>  <span class="at">log_derivative =</span> <span class="fu">max</span>(<span class="fu">abs</span>(f_prime <span class="sc">/</span> <span class="fu">f</span>(x) <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x)))),</span>
+<span id="cb1-12"><a aria-label="12"></a>  <span class="at">inverse =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="fu">qlogis</span>(<span class="fu">f</span>(x)) <span class="sc">-</span> x)),</span>
+<span id="cb1-13"><a aria-label="13"></a>  <span class="at">complement =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(x) <span class="sc">-</span> <span class="fu">f</span>(<span class="sc">-</span>x))),</span>
+<span id="cb1-14"><a aria-label="14"></a>  <span class="at">reciprocal =</span> <span class="fu">max</span>(<span class="fu">abs</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">f</span>(x) <span class="sc">-</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)))),</span>
+<span id="cb1-15"><a aria-label="15"></a>  <span class="at">antiderivative =</span> <span class="fu">abs</span>(</span>
+<span id="cb1-16"><a aria-label="16"></a>    <span class="fu">integrate</span>(f, <span class="dv">0</span>, <span class="dv">1</span>)<span class="sc">$</span>value <span class="sc">-</span> (<span class="fu">log</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="dv">1</span>)) <span class="sc">-</span> <span class="fu">log</span>(<span class="dv">2</span>))</span>
+<span id="cb1-17"><a aria-label="17"></a>  )</span>
+<span id="cb1-18"><a aria-label="18"></a>)</span>
+<span id="cb1-19"><a aria-label="19"></a><span class="fu">signif</span>(checks, <span class="dv">3</span>)</span>
+<span id="cb1-20"><a aria-label="20"></a><span class="co">#&gt;        derivative second_derivative    log_derivative           inverse </span></span>
+<span id="cb1-21"><a aria-label="21"></a><span class="co">#&gt;          1.46e-16          1.18e-16          1.53e-16          3.11e-15 </span></span>
+<span id="cb1-22"><a aria-label="22"></a><span class="co">#&gt;        complement        reciprocal    antiderivative </span></span>
+<span id="cb1-23"><a aria-label="23"></a><span class="co">#&gt;          1.46e-16          0.00e+00          0.00e+00</span></span>
+<span id="cb1-24"><a aria-label="24"></a><span class="fu">stopifnot</span>(<span class="fu">all</span>(checks <span class="sc">&lt;</span> <span class="fl">1e-14</span>))</span>
+<span id="cb1-25"><a aria-label="25"></a></span>
+<span id="cb1-26"><a aria-label="26"></a>key_values <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">f</span>(<span class="dv">0</span>), <span class="fu">f</span>(<span class="dv">1</span>), <span class="fu">f</span>(<span class="dv">10</span>), <span class="fu">f</span>(<span class="sc">-</span><span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Each entry of <code>checks</code> is the largest discrepancy between a formula above and a numerical computation; every one is below <span class="math inline">\(10^{-14}\)</span> (the chunk stops with an error otherwise), which is rounding error. The key values are <span class="math inline">\(f(0) =\)</span> 0.5 and <span class="math inline">\(f(1) \approx\)</span> 0.7311. At <span class="math inline">\(x = 10\)</span> and <span class="math inline">\(x = -10\)</span> the function is already close to its limits, <span class="math inline">\(f(10) \approx\)</span> 0.99995 and <span class="math inline">\(f(-10) \approx\)</span> 0.0000454. <a href="#/fig-function-profile-logistic" class="quarto-xref">Figure&nbsp;1</a> graphs <span class="math inline">\(f\)</span>, <span class="math inline">\(f'\)</span> and <span class="math inline">\(\operatorname{log}\mathopen{}\left\{f\right\}\mathclose{}\)</span>.</p>
+<div class="cell">
+<details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-label="1"></a>grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">6</span>, <span class="dv">6</span>, <span class="at">length.out =</span> <span class="dv">241</span>)</span>
+<span id="cb2-2"><a aria-label="2"></a>panels <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-3"><a aria-label="3"></a>  <span class="at">x =</span> <span class="fu">rep</span>(grid, <span class="dv">3</span>),</span>
+<span id="cb2-4"><a aria-label="4"></a>  <span class="at">panel =</span> <span class="fu">factor</span>(</span>
+<span id="cb2-5"><a aria-label="5"></a>    <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"f(x)"</span>, <span class="st">"f'(x)"</span>, <span class="st">"log f(x)"</span>), <span class="at">each =</span> <span class="fu">length</span>(grid)),</span>
+<span id="cb2-6"><a aria-label="6"></a>    <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"f(x)"</span>, <span class="st">"f'(x)"</span>, <span class="st">"log f(x)"</span>)</span>
+<span id="cb2-7"><a aria-label="7"></a>  ),</span>
+<span id="cb2-8"><a aria-label="8"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="fu">f</span>(grid), <span class="fu">f</span>(grid) <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">f</span>(grid)), <span class="fu">log</span>(<span class="fu">f</span>(grid)))</span>
+<span id="cb2-9"><a aria-label="9"></a>)</span>
+<span id="cb2-10"><a aria-label="10"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(panels) <span class="sc">+</span></span>
+<span id="cb2-11"><a aria-label="11"></a>  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> value) <span class="sc">+</span></span>
+<span id="cb2-12"><a aria-label="12"></a>  ggplot2<span class="sc">::</span><span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb2-13"><a aria-label="13"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>panel, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb2-14"><a aria-label="14"></a>  ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="cn">NULL</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
+<div id="fig-function-profile-logistic" class="quarto-float quarto-figure quarto-figure-center" alt="Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.">
+<figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-function-profile-logistic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The logistic function, its derivative and its logarithm
+</figcaption><div aria-describedby="fig-function-profile-logistic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The logistic function, its derivative and its logarithm"><img data-src="calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png" alt="Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right." width="672"></a>
+</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><h3 id="sec-tangent-lines">Tangent lines</h3>
 <div id="def-tangent-line" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>). The <strong>tangent line</strong> to the <a href="./sets-functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
+<p><span class="theorem-title"><strong>Definition 9 (Tangent line)</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>). The <strong>tangent line</strong> to the <a href="./sets-functions.html#def-graph">graph</a> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span> is the graph of the <a href="./algebra-exponentials.html#def-affine-function">affine function</a></p>
 <p><span class="math display">\[x \mapsto f(c) + f'(c)\,(x - c),\]</span></p>
 <p>the line through the point <span class="math inline">\((c, f(c))\)</span> with <a href="./algebra-exponentials.html#def-affine-function">slope</a> <span class="math inline">\(f'(c)\)</span>. The slope <span class="math inline">\(f'(c)\)</span> is also called the <strong>tangent slope</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(c\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-tangent-line" class="theorem example">
-<p><span class="theorem-title"><strong>Example 8 (The tangent line to <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span> (<a href="#/exm-derivative" class="quarto-xref">Example&nbsp;5</a>), so the tangent line is the graph of</p>
+<p><span class="theorem-title"><strong>Example 9 (The tangent line to <span class="math inline">\(x^2\)</span> at <span class="math inline">\(1\)</span>)</strong></span> For <span class="math inline">\(f(x) = x^2\)</span> at <span class="math inline">\(c = 1\)</span>, <span class="math inline">\(f(1) = 1\)</span> and <span class="math inline">\(f'(1) = 2\)</span> (<a href="#/exm-derivative" class="quarto-xref">Example&nbsp;5</a>), so the tangent line is the graph of</p>
 <p><span class="math display">\[
 \begin{aligned}
 x
@@ -1066,50 +1184,50 @@ x
 <p>For a differentiable function <span class="math inline">\(f\)</span> and a small step <span class="math inline">\(\varepsilon\)</span>,</p>
 <p><span id="eq-linear-approx"><span class="math display">\[f(w + \varepsilon) \approx f(w) + \varepsilon\,\frac{d }{d w}f(w) \tag{1}\]</span></span></p>
 </section><section class="slide level2"><div id="def-linear-approximation" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Linear approximation (first-order Taylor approximation))</strong></span> For a function <span class="math inline">\(f\)</span> that is differentiable at <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> (also called the <strong>first-order Taylor approximation</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
+<p><span class="theorem-title"><strong>Definition 10 (Linear approximation (first-order Taylor approximation))</strong></span> For a function <span class="math inline">\(f\)</span> that is differentiable at <span class="math inline">\(w\)</span>, the <strong>linear approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(w\)</span> (also called the <strong>first-order Taylor approximation</strong>) is the function of the step <span class="math inline">\(\varepsilon\)</span></p>
 <p><span class="math display">\[\hat{f}_w(\varepsilon) = f(w) + \varepsilon\,\frac{d }{d w}f(w)\]</span></p>
-<p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;1</a> illustrates this approximation interactively for a quadratic function.</p>
+<p>so <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> says <span class="math inline">\(f(w + \varepsilon) \approx \hat{f}_w(\varepsilon)\)</span> for small <span class="math inline">\(\varepsilon\)</span>. <a href="#/fig-linear-approx" class="quarto-xref">Figure&nbsp;2</a> illustrates this approximation interactively for a quadratic function.</p>
 </div>
 </section><section class="slide level2"><div id="rem-linear-approx-affine" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;9</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its slope is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its intercept is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>, section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.</p>
+<p><span class="proof-title"><em>Remark 2</em> (The “linear” approximation is affine). </span>The linear approximation <span class="math inline">\(\hat{f}_w\)</span> (<a href="#/def-linear-approximation" class="quarto-xref">Definition&nbsp;10</a>) is an <a href="./algebra-exponentials.html#def-affine-function">affine function</a> of the step <span class="math inline">\(\varepsilon\)</span>: its slope is <span class="math inline">\(\frac{d }{d w}f(w)\)</span> and its intercept is <span class="math inline">\(f(w)\)</span>. It is <a href="./algebra-exponentials.html#def-linear-function">linear</a> in <span class="math inline">\(\varepsilon\)</span> only when <span class="math inline">\(f(w) = 0\)</span>. The name “linear approximation” uses “linear” in the looser sense of elementary algebra (<a href="./algebra-exponentials.html#rem-linear-function-terminology">remark</a>). <span class="citation" data-cites="boyd2018vmls">Boyd and Vandenberghe (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>, section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.</p>
 </div>
-</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-startfrom="2" data-source-offset="-72"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb1-2"><a aria-label="2"></a>tanF <span class="op">=</span> (w) <span class="kw">=&gt;</span> w <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> w <span class="op">+</span> <span class="dv">7</span></span>
-<span id="cb1-3"><a aria-label="3"></a>tanDf <span class="op">=</span> (w) <span class="kw">=&gt;</span> <span class="dv">2</span> <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span></span>
-<span id="cb1-4"><a aria-label="4"></a>tanPred <span class="op">=</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> tanEps <span class="op">*</span> <span class="fu">tanDf</span>(tanW)</span>
-<span id="cb1-5"><a aria-label="5"></a>tanExact <span class="op">=</span> <span class="fu">tanF</span>(tanW <span class="op">+</span> tanEps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb2-0"><a aria-label="0"></a>viewof tanW <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>})</span>
-<span id="cb2-1"><a aria-label="1"></a>viewof tanEps <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.01</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">transform</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step </span><span class="sc">\u03b5</span><span class="st">"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3~f"</span>)})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb3--1"><a aria-label="-1"></a><span class="fu">md</span><span class="vs">`At w = </span><span class="sc">${</span>tanW<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">, f(w) = </span><span class="sc">${</span><span class="fu">tanF</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs"> and f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span><span class="fu">tanDf</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">.</span></span>
-<span id="cb3-0"><a aria-label="0"></a></span>
-<span id="cb3-1"><a aria-label="1"></a><span class="vs">A step of </span><span class="sc">\u03b5</span><span class="vs"> = </span><span class="sc">${</span>tanEps<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">:</span></span>
-<span id="cb3-2"><a aria-label="2"></a></span>
-<span id="cb3-3"><a aria-label="3"></a><span class="vs">- predicted by the tangent line, f(w) + </span><span class="sc">\u03b5</span><span class="vs"> f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span>tanPred<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
-<span id="cb3-4"><a aria-label="4"></a><span class="vs">- exact, f(w + </span><span class="sc">\u03b5</span><span class="vs">) = </span><span class="sc">${</span>tanExact<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
-<span id="cb3-5"><a aria-label="5"></a><span class="vs">- error </span><span class="sc">${</span>(tanExact <span class="op">-</span> tanPred)<span class="op">.</span><span class="fu">toPrecision</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">, and error / </span><span class="sc">\u03b5\u00b2</span><span class="vs"> = </span><span class="sc">${</span>((tanExact <span class="op">-</span> tanPred) <span class="op">/</span> tanEps <span class="op">**</span> <span class="dv">2</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">.`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb4--1"><a aria-label="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb4-0"><a aria-label="0"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'The parabola f of w, '</span> <span class="op">+</span></span>
-<span id="cb4-1"><a aria-label="1"></a>    <span class="st">'with the tangent line at the chosen w, '</span> <span class="op">+</span></span>
-<span id="cb4-2"><a aria-label="2"></a>    <span class="st">'and two points above w plus epsilon: '</span> <span class="op">+</span></span>
-<span id="cb4-3"><a aria-label="3"></a>    <span class="st">'one on the tangent line (the prediction) and one on the curve (the exact value), '</span> <span class="op">+</span></span>
-<span id="cb4-4"><a aria-label="4"></a>    <span class="st">'joined by a red segment showing the error.'</span><span class="op">,</span></span>
-<span id="cb4-5"><a aria-label="5"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">460</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">340</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb4-6"><a aria-label="6"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>}<span class="op">,</span></span>
-<span id="cb4-7"><a aria-label="7"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w)"</span>}<span class="op">,</span></span>
-<span id="cb4-8"><a aria-label="8"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb4-9"><a aria-label="9"></a>    Plot<span class="op">.</span><span class="fu">line</span>(d3<span class="op">.</span><span class="fu">range</span>(<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.51</span><span class="op">,</span> <span class="fl">0.05</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> tanF<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb4-10"><a aria-label="10"></a>    Plot<span class="op">.</span><span class="fu">line</span>([<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> (w <span class="op">-</span> tanW) <span class="op">*</span> <span class="fu">tanDf</span>(tanW)<span class="op">,</span></span>
-<span id="cb4-11"><a aria-label="11"></a>                        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"6,4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb4-12"><a aria-label="12"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([tanW <span class="op">+</span> tanEps]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#bbb"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,3"</span>})<span class="op">,</span></span>
-<span id="cb4-13"><a aria-label="13"></a>    Plot<span class="op">.</span><span class="fu">link</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> tanPred<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> tanExact<span class="op">,</span></span>
-<span id="cb4-14"><a aria-label="14"></a>                    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb4-15"><a aria-label="15"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW<span class="op">,</span> <span class="fu">tanF</span>(tanW)]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#222"</span>})<span class="op">,</span></span>
-<span id="cb4-16"><a aria-label="16"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanPred]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
-<span id="cb4-17"><a aria-label="17"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanExact]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})</span>
-<span id="cb4-18"><a aria-label="18"></a>  ]</span>
-<span id="cb4-19"><a aria-label="19"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section><section class="slide level2"><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-startfrom="2" data-source-offset="-72"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb3-2"><a aria-label="2"></a>tanF <span class="op">=</span> (w) <span class="kw">=&gt;</span> w <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> w <span class="op">+</span> <span class="dv">7</span></span>
+<span id="cb3-3"><a aria-label="3"></a>tanDf <span class="op">=</span> (w) <span class="kw">=&gt;</span> <span class="dv">2</span> <span class="op">*</span> w <span class="op">-</span> <span class="dv">4</span></span>
+<span id="cb3-4"><a aria-label="4"></a>tanPred <span class="op">=</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> tanEps <span class="op">*</span> <span class="fu">tanDf</span>(tanW)</span>
+<span id="cb3-5"><a aria-label="5"></a>tanExact <span class="op">=</span> <span class="fu">tanF</span>(tanW <span class="op">+</span> tanEps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-startfrom="0" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb4-0"><a aria-label="0"></a>viewof tanW <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">1</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>})</span>
+<span id="cb4-1"><a aria-label="1"></a>viewof tanEps <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.01</span><span class="op">,</span> <span class="dv">2</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span> <span class="dt">transform</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">log</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"step </span><span class="sc">\u03b5</span><span class="st">"</span><span class="op">,</span> <span class="dt">format</span><span class="op">:</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3~f"</span>)})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb5--1"><a aria-label="-1"></a><span class="fu">md</span><span class="vs">`At w = </span><span class="sc">${</span>tanW<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">, f(w) = </span><span class="sc">${</span><span class="fu">tanF</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs"> and f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span><span class="fu">tanDf</span>(tanW)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">.</span></span>
+<span id="cb5-0"><a aria-label="0"></a></span>
+<span id="cb5-1"><a aria-label="1"></a><span class="vs">A step of </span><span class="sc">\u03b5</span><span class="vs"> = </span><span class="sc">${</span>tanEps<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">:</span></span>
+<span id="cb5-2"><a aria-label="2"></a></span>
+<span id="cb5-3"><a aria-label="3"></a><span class="vs">- predicted by the tangent line, f(w) + </span><span class="sc">\u03b5</span><span class="vs"> f</span><span class="sc">\u2032</span><span class="vs">(w) = </span><span class="sc">${</span>tanPred<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb5-4"><a aria-label="4"></a><span class="vs">- exact, f(w + </span><span class="sc">\u03b5</span><span class="vs">) = </span><span class="sc">${</span>tanExact<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">4</span>)<span class="sc">}</span><span class="vs">;</span></span>
+<span id="cb5-5"><a aria-label="5"></a><span class="vs">- error </span><span class="sc">${</span>(tanExact <span class="op">-</span> tanPred)<span class="op">.</span><span class="fu">toPrecision</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">, and error / </span><span class="sc">\u03b5\u00b2</span><span class="vs"> = </span><span class="sc">${</span>((tanExact <span class="op">-</span> tanPred) <span class="op">/</span> tanEps <span class="op">**</span> <span class="dv">2</span>)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">.`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><details class="code-fold"><summary>[R code]</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-startfrom="-1" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -2;"><span id="cb6--1"><a aria-label="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb6-0"><a aria-label="0"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">'The parabola f of w, '</span> <span class="op">+</span></span>
+<span id="cb6-1"><a aria-label="1"></a>    <span class="st">'with the tangent line at the chosen w, '</span> <span class="op">+</span></span>
+<span id="cb6-2"><a aria-label="2"></a>    <span class="st">'and two points above w plus epsilon: '</span> <span class="op">+</span></span>
+<span id="cb6-3"><a aria-label="3"></a>    <span class="st">'one on the tangent line (the prediction) and one on the curve (the exact value), '</span> <span class="op">+</span></span>
+<span id="cb6-4"><a aria-label="4"></a>    <span class="st">'joined by a red segment showing the error.'</span><span class="op">,</span></span>
+<span id="cb6-5"><a aria-label="5"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">460</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">340</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb6-6"><a aria-label="6"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"w"</span>}<span class="op">,</span></span>
+<span id="cb6-7"><a aria-label="7"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">20</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"f(w)"</span>}<span class="op">,</span></span>
+<span id="cb6-8"><a aria-label="8"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb6-9"><a aria-label="9"></a>    Plot<span class="op">.</span><span class="fu">line</span>(d3<span class="op">.</span><span class="fu">range</span>(<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.51</span><span class="op">,</span> <span class="fl">0.05</span>)<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> tanF<span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb6-10"><a aria-label="10"></a>    Plot<span class="op">.</span><span class="fu">line</span>([<span class="op">-</span><span class="fl">1.5</span><span class="op">,</span> <span class="fl">6.5</span>]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> w<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (w) <span class="kw">=&gt;</span> <span class="fu">tanF</span>(tanW) <span class="op">+</span> (w <span class="op">-</span> tanW) <span class="op">*</span> <span class="fu">tanDf</span>(tanW)<span class="op">,</span></span>
+<span id="cb6-11"><a aria-label="11"></a>                        <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"6,4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb6-12"><a aria-label="12"></a>    Plot<span class="op">.</span><span class="fu">ruleX</span>([tanW <span class="op">+</span> tanEps]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"#bbb"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"2,3"</span>})<span class="op">,</span></span>
+<span id="cb6-13"><a aria-label="13"></a>    Plot<span class="op">.</span><span class="fu">link</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> tanW <span class="op">+</span> tanEps<span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> tanPred<span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> tanExact<span class="op">,</span></span>
+<span id="cb6-14"><a aria-label="14"></a>                    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"#d62728"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb6-15"><a aria-label="15"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW<span class="op">,</span> <span class="fu">tanF</span>(tanW)]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#222"</span>})<span class="op">,</span></span>
+<span id="cb6-16"><a aria-label="16"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanPred]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#1f77b4"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})<span class="op">,</span></span>
+<span id="cb6-17"><a aria-label="17"></a>    Plot<span class="op">.</span><span class="fu">dot</span>([[tanW <span class="op">+</span> tanEps<span class="op">,</span> tanExact]]<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> (d) <span class="kw">=&gt;</span> d[<span class="dv">1</span>]<span class="op">,</span> <span class="dt">r</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#555"</span><span class="op">,</span> <span class="dt">clip</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb6-18"><a aria-label="18"></a>  ]</span>
+<span id="cb6-19"><a aria-label="19"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="fig-linear-approx" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-linear-approx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The linear approximation <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> for <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>, at any <span class="math inline">\(w\)</span> and step <span class="math inline">\(\varepsilon\)</span>.
+Figure&nbsp;2: The linear approximation <a href="#/eq-linear-approx" class="quarto-xref">Equation&nbsp;1</a> for <span class="math inline">\(f(w) = w^2 - 4w + 7\)</span>, at any <span class="math inline">\(w\)</span> and step <span class="math inline">\(\varepsilon\)</span>.
 </figcaption><div aria-describedby="fig-linear-approx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell hidden">
 <div class="cell-output cell-output-display hidden">
@@ -1174,7 +1292,7 @@ Figure&nbsp;1: The linear approximation <a href="#/eq-linear-approx" class="quar
 </div>
 </div>
 </div>
-<p>The dashed blue line is the tangent line (<a href="#/def-tangent-line" class="quarto-xref">Definition&nbsp;8</a>) at <span class="math inline">\(w\)</span>; the red segment is the error of the prediction.</p>
+<p>The dashed blue line is the tangent line (<a href="#/def-tangent-line" class="quarto-xref">Definition&nbsp;9</a>) at <span class="math inline">\(w\)</span>; the red segment is the error of the prediction.</p>
 </div></div>
 </div>
 </figure>
@@ -1212,10 +1330,10 @@ f'(\pi/4) &amp;= 4 - \sqrt{2}\sin\mathopen{}\left(\frac{\pi}{4}\right)\mathclose
 </div>
 </section><section class="slide level2"><h3 id="sec-critical-points">Critical points and optimization</h3>
 <div id="def-flat-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Flat point (stationary point))</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>). If <span class="math inline">\(f'(c) = 0\)</span>, then <span class="math inline">\(c\)</span> is a <strong>flat point</strong> of <span class="math inline">\(f\)</span> (also called a <strong>stationary point</strong>).</p>
+<p><span class="theorem-title"><strong>Definition 11 (Flat point (stationary point))</strong></span> Let <span class="math inline">\(f\)</span> be differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>). If <span class="math inline">\(f'(c) = 0\)</span>, then <span class="math inline">\(c\)</span> is a <strong>flat point</strong> of <span class="math inline">\(f\)</span> (also called a <strong>stationary point</strong>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-flat-point" class="theorem example">
-<p><span class="theorem-title"><strong>Example 9 (Flat points, and a point that is not one)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 10 (Flat points, and a point that is not one)</strong></span> &nbsp;</p>
 <ul>
 <li>
 <span class="math inline">\(f(w) = w^3\)</span> has <span class="math inline">\(f'(w) = 3w^2\)</span>, which is <span class="math inline">\(0\)</span> at <span class="math inline">\(w = 0\)</span>, so <span class="math inline">\(0\)</span> is a flat point. Yet <span class="math inline">\(f(0) = 0\)</span> is neither the <a href="./algebra-basics.html#def-minimum">minimum</a> nor the <a href="./algebra-basics.html#def-maximum">maximum</a> of the values <span class="math inline">\(f\)</span> takes on any open interval around <span class="math inline">\(0\)</span>: <span class="math inline">\(f(w) &lt; 0\)</span> for <span class="math inline">\(w &lt; 0\)</span> and <span class="math inline">\(f(w) &gt; 0\)</span> for <span class="math inline">\(w &gt; 0\)</span>.</li>
@@ -1268,10 +1386,10 @@ f(1.01)
 <p>a change of <span class="math inline">\(-0.0199\)</span>. The prediction is off by <span class="math inline">\(0.0001\)</span>, which is <span class="math inline">\(\varepsilon^2\)</span>: the linear approximation drops everything of that order and smaller, so halving the step quarters the error. That trade is the whole bargain of <a href="./optimization.html#def-gradient-descent">gradient descent</a>, the step-by-step method of fitting models defined on the optimization page. We take a step in the direction the derivative recommends, and the recommendation is trustworthy only as far as the step is small.</p>
 </div>
 </section><section class="slide level2"><div id="def-critical-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11 (Critical point)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined on an <a href="./sets-functions.html#def-interval">open interval</a> containing <span class="math inline">\(c\)</span>. The point <span class="math inline">\(c\)</span> is a <strong>critical point</strong> of <span class="math inline">\(f\)</span> if either <span class="math inline">\(f'(c) = 0\)</span> or <span class="math inline">\(f\)</span> is not differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>).</p>
+<p><span class="theorem-title"><strong>Definition 12 (Critical point)</strong></span> Let <span class="math inline">\(f\)</span> be a function defined on an <a href="./sets-functions.html#def-interval">open interval</a> containing <span class="math inline">\(c\)</span>. The point <span class="math inline">\(c\)</span> is a <strong>critical point</strong> of <span class="math inline">\(f\)</span> if either <span class="math inline">\(f'(c) = 0\)</span> or <span class="math inline">\(f\)</span> is not differentiable at <span class="math inline">\(c\)</span> (<a href="#/def-differentiable" class="quarto-xref">Definition&nbsp;4</a>).</p>
 </div>
 </section><section class="slide level2"><div id="exm-critical-point" class="theorem example">
-<p><span class="theorem-title"><strong>Example 10 (Critical points that are and are not flat points)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 11 (Critical points that are and are not flat points)</strong></span> &nbsp;</p>
 <ul>
 <li><p><span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span> has no derivative at <span class="math inline">\(w = 0\)</span>: its one-sided derivatives there are <span class="math inline">\(1\)</span> and <span class="math inline">\(-1\)</span> (<a href="#/exm-one-sided-derivative" class="quarto-xref">Example&nbsp;6</a>), so the difference quotient <span class="math inline">\(\tfrac{\mathopen{}\left|h\right|\mathclose{} - 0}{h}\)</span> has no limit as <span class="math inline">\(h \to 0\)</span> (<a href="#/def-one-sided-limit" class="quarto-xref">Definition&nbsp;2</a>). So <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> but not a flat point.</p></li>
 <li>
@@ -1288,15 +1406,15 @@ f'(0) &amp;= 3 \cdot 0^2 \\
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-flat-point-critical" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 11 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="#/def-flat-point" class="quarto-xref">Definition&nbsp;10</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;11</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 11 (Every flat point is a critical point)</strong></span> If <span class="math inline">\(c\)</span> is a flat point of <span class="math inline">\(f\)</span> (<a href="#/def-flat-point" class="quarto-xref">Definition&nbsp;11</a>), then <span class="math inline">\(c\)</span> is a critical point of <span class="math inline">\(f\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;12</a>).</p>
 </div>
 </section><section class="slide level2"></section><section class="slide level2"><div id="exm-flat-point-critical" class="theorem example">
-<p><span class="theorem-title"><strong>Example 11 (The flat points of a cubic, and a critical point that is not flat)</strong></span> For <span class="math inline">\(f(w) = w^3 - 3w\)</span>, the derivative is <span class="math inline">\(f'(w) = 3w^2 - 3\)</span>. The code differentiates <span class="math inline">\(f\)</span> with <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> and evaluates <span class="math inline">\(f'\)</span> at several points. For <span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span>, it computes the difference quotients at <span class="math inline">\(0\)</span> from both sides.</p>
+<p><span class="theorem-title"><strong>Example 12 (The flat points of a cubic, and a critical point that is not flat)</strong></span> For <span class="math inline">\(f(w) = w^3 - 3w\)</span>, the derivative is <span class="math inline">\(f'(w) = 3w^2 - 3\)</span>. The code differentiates <span class="math inline">\(f\)</span> with <code><a href="https://rdrr.io/r/stats/deriv.html">D()</a></code> and evaluates <span class="math inline">\(f'\)</span> at several points. For <span class="math inline">\(g(w) = \mathopen{}\left|w\right|\mathclose{}\)</span>, it computes the difference quotients at <span class="math inline">\(0\)</span> from both sides.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a>f_prime <span class="ot">&lt;-</span> <span class="fu">D</span>(<span class="fu">quote</span>(w<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> w), <span class="st">"w"</span>)</span>
-<span id="cb5-2"><a aria-label="2"></a>points <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb5-3"><a aria-label="3"></a>derivs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">w =</span> points, <span class="at">f_prime =</span> <span class="fu">eval</span>(f_prime, <span class="fu">list</span>(<span class="at">w =</span> points)))</span>
-<span id="cb5-4"><a aria-label="4"></a>derivs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a>f_prime <span class="ot">&lt;-</span> <span class="fu">D</span>(<span class="fu">quote</span>(w<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">3</span> <span class="sc">*</span> w), <span class="st">"w"</span>)</span>
+<span id="cb7-2"><a aria-label="2"></a>points <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb7-3"><a aria-label="3"></a>derivs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">w =</span> points, <span class="at">f_prime =</span> <span class="fu">eval</span>(f_prime, <span class="fu">list</span>(<span class="at">w =</span> points)))</span>
+<span id="cb7-4"><a aria-label="4"></a>derivs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1304,14 +1422,14 @@ f'(0) &amp;= 3 \cdot 0^2 \\
   </script>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-label="1"></a>flat <span class="ot">&lt;-</span> derivs<span class="sc">$</span>w[derivs<span class="sc">$</span>f_prime <span class="sc">==</span> <span class="dv">0</span>]</span>
-<span id="cb6-2"><a aria-label="2"></a></span>
-<span id="cb6-3"><a aria-label="3"></a>h <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1e-3</span>, <span class="fl">1e-3</span>)</span>
-<span id="cb6-4"><a aria-label="4"></a>quotients <span class="ot">&lt;-</span> <span class="fu">abs</span>(h) <span class="sc">/</span> h</span>
-<span id="cb6-5"><a aria-label="5"></a>quotients</span>
-<span id="cb6-6"><a aria-label="6"></a><span class="co">#&gt; [1] -1  1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-label="1"></a>flat <span class="ot">&lt;-</span> derivs<span class="sc">$</span>w[derivs<span class="sc">$</span>f_prime <span class="sc">==</span> <span class="dv">0</span>]</span>
+<span id="cb8-2"><a aria-label="2"></a></span>
+<span id="cb8-3"><a aria-label="3"></a>h <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1e-3</span>, <span class="fl">1e-3</span>)</span>
+<span id="cb8-4"><a aria-label="4"></a>quotients <span class="ot">&lt;-</span> <span class="fu">abs</span>(h) <span class="sc">/</span> h</span>
+<span id="cb8-5"><a aria-label="5"></a>quotients</span>
+<span id="cb8-6"><a aria-label="6"></a><span class="co">#&gt; [1] -1  1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;11</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;11</a>), but not a flat point.</p>
+<p>The derivative is <span class="math inline">\(0\)</span> at 2 of the 5 points, namely <span class="math inline">\(w = -1\)</span> and <span class="math inline">\(w = 1\)</span>. These are flat points of <span class="math inline">\(f\)</span>, so by <a href="#/thm-flat-point-critical" class="quarto-xref">Theorem&nbsp;11</a> they are critical points. The difference quotients of <span class="math inline">\(g\)</span> at <span class="math inline">\(0\)</span> are -1 from the left and 1 from the right, so <span class="math inline">\(g\)</span> has no derivative at <span class="math inline">\(0\)</span>. Thus <span class="math inline">\(0\)</span> is a critical point of <span class="math inline">\(g\)</span> (<a href="#/def-critical-point" class="quarto-xref">Definition&nbsp;12</a>), but not a flat point.</p>
 </div>
 </section><section class="slide level2"><div id="exr-miller-deriv-opt-gamma-kernel" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 15 (Maximizing a gamma-family kernel)</strong></span> Adapted from <span class="citation" data-cites="problifesavercalc">Miller (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, Question 1.1.10.</p>
@@ -1383,7 +1501,7 @@ f''(1/2) &amp;= 24(1/2) - 6 \\
 </div>
 </section><section class="slide level2"><h3 id="sec-taylor-series">Taylor series</h3>
 <div id="def-taylor-polynomial" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 12 (Taylor polynomial and Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
+<p><span class="theorem-title"><strong>Definition 13 (Taylor polynomial)</strong></span> Let <span class="math inline">\(f\)</span> be a function that has at least <span class="math inline">\(n\)</span> derivatives at a point <span class="math inline">\(x_0\)</span>. The <strong>Taylor polynomial</strong> of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span> is:</p>
 <p><span id="eq-taylor-poly-def"><span class="math display">\[
 \begin{aligned}
 P_n(x)
@@ -1391,10 +1509,9 @@ P_n(x)
 &amp;= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n
 \end{aligned}
 \tag{2}\]</span></span></p>
-<p>When <span class="math inline">\(x_0 = 0\)</span>, <span class="math inline">\(P_n(x)\)</span> is called the <strong>Maclaurin polynomial</strong>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-taylor-polynomial-exponential" class="theorem example">
-<p><span class="theorem-title"><strong>Example 12 (Taylor series of the exponential function)</strong></span> For <span class="math inline">\(f(x) = e^x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, every derivative is</p>
+<p><span class="theorem-title"><strong>Example 13 (Taylor series of the exponential function)</strong></span> For <span class="math inline">\(f(x) = e^x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, every derivative is</p>
 <p><span class="math display">\[
 \begin{aligned}
 f^{(k)}(0) &amp;= e^0 \\
@@ -1412,6 +1529,12 @@ P_n(x)
 <p>Because the remainder <span class="math inline">\(R_n(x) \to 0\)</span> as <span class="math inline">\(n \to \infty\)</span> for all <span class="math inline">\(x \in \mathbb{R}\)</span>, the Taylor series converges everywhere to <span class="math inline">\(e^x\)</span>:</p>
 <p><span class="math display">\[e^x = \sum_{k=0}^\infty \frac{x^k}{k!}\]</span></p>
 </div>
+</section><section class="slide level2"><div id="def-maclaurin-polynomial" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 14 (Maclaurin polynomial)</strong></span> When <span class="math inline">\(x_0 = 0\)</span>, the Taylor polynomial <span class="math inline">\(P_n(x)\)</span> (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;13</a>) is called the <strong>Maclaurin polynomial</strong>.</p>
+</div>
+</section><section class="slide level2"><div id="def-taylor-series" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 15 (Taylor series)</strong></span> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(x_0\)</span> be as in <a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;13</a>. When <span class="math inline">\(f\)</span> is infinitely differentiable and the series converges to <span class="math inline">\(f(x)\)</span> on an open interval containing <span class="math inline">\(x_0\)</span>, the infinite sum <span class="math inline">\(\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\)</span> is the <strong>Taylor series</strong> of <span class="math inline">\(f\)</span> centered at <span class="math inline">\(x_0\)</span>.</p>
+</div>
 </section><section class="slide level2"><div title="Video">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1425,7 +1548,7 @@ P_n(x)
 <p>Chapter 11 of the <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"><em>Essence of calculus</em></a> series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:</p>
 <ul>
 <li>
-<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;12</a>).</li>
+<a href="https://www.youtube.com/watch?v=3d6DsjIBzJ4">Taylor series</a> shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations (<a href="#/def-taylor-polynomial" class="quarto-xref">Definition&nbsp;13</a>).</li>
 </ul>
 </div>
 </div>
@@ -1488,7 +1611,7 @@ P_2(x)
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-taylor-polynomial-cosine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 13 (Taylor series of the cosine function)</strong></span> For <span class="math inline">\(f(x) = \cos x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives follow a repeating cycle of length 4:</p>
+<p><span class="theorem-title"><strong>Example 14 (Taylor series of the cosine function)</strong></span> For <span class="math inline">\(f(x) = \cos x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives follow a repeating cycle of length 4:</p>
 <p><span class="math display">\[\begin{aligned}
 f(0) &amp;= \cos(0) \\
 &amp;= 1, \\
@@ -1509,7 +1632,7 @@ f'''(0) &amp;= \sin(0) \\
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-taylor-polynomial-sine" class="theorem example">
-<p><span class="theorem-title"><strong>Example 14 (Taylor series of the sine function)</strong></span> For <span class="math inline">\(f(x) = \sin x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives evaluate at <span class="math inline">\(0\)</span> to <span class="math inline">\(f^{(2k)}(0) = 0\)</span> and <span class="math inline">\(f^{(2k+1)}(0) = (-1)^k\)</span> for all <span class="math inline">\(k \ge 0\)</span>. The Taylor series converges everywhere to <span class="math inline">\(\sin x\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 15 (Taylor series of the sine function)</strong></span> For <span class="math inline">\(f(x) = \sin x\)</span> centered at <span class="math inline">\(x_0 = 0\)</span>, the derivatives evaluate at <span class="math inline">\(0\)</span> to <span class="math inline">\(f^{(2k)}(0) = 0\)</span> and <span class="math inline">\(f^{(2k+1)}(0) = (-1)^k\)</span> for all <span class="math inline">\(k \ge 0\)</span>. The Taylor series converges everywhere to <span class="math inline">\(\sin x\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \sin x
@@ -2384,7 +2507,38 @@ Miller, Steven J. 2016. <em>The Probability Lifesaver: Calculus Review Problems<
           }
         }
       });
-      </script>
+      </script><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
 
 
 </body></html>

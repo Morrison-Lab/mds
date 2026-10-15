@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 17:33:03 (PDT)
+Last modified: 2026-10-14 22:27:27 (PDT)
 
 ## 1 Similarity and diagonalization
 
@@ -412,7 +412,7 @@ Last modified: 2026-10-14 17:33:03 (PDT)
 >
 > **Part 2.** \\\alpha_1 \mathbf{A}\_1 + \alpha_2 \mathbf{A}\_2\\ is symmetric: its transpose is \\\alpha_1 {\mathbf{A}\_1}^{\top} + \alpha_2 {\mathbf{A}\_2}^{\top} = \alpha_1 \mathbf{A}\_1 + \alpha_2 \mathbf{A}\_2\\ ([Theorem 15 in Matrices](linear-algebra-matrices.llms.md#thm-transpose-sum), [Definition 6 in Matrices](linear-algebra-matrices.llms.md#def-scalar-mult), [Definition 3 in Matrices](linear-algebra-matrices.llms.md#def-matrix-transpose)). For \\\tilde{x}\ne \tilde{0}\\,
 >
-> \\ \begin{aligned} {\tilde{x}}^{\top}\\(\alpha_1 \mathbf{A}\_1 + \alpha_2 \mathbf{A}\_2)\\\tilde{x} &= {\tilde{x}}^{\top}\\(\alpha_1 \mathbf{A}\_1)\\\tilde{x}+ {\tilde{x}}^{\top}\\(\alpha_2 \mathbf{A}\_2)\\\tilde{x} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{, twice)} \\ &= \alpha_1\\{\tilde{x}}^{\top} \mathbf{A}\_1 \tilde{x}+ \alpha_2\\{\tilde{x}}^{\top} \mathbf{A}\_2 \tilde{x} && \text{(}\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)} \\ &\> 0. && \text{(each term is positive)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{x}}^{\top}\\(\alpha_1 \mathbf{A}\_1 + \alpha_2 \mathbf{A}\_2)\\\tilde{x} &= {\tilde{x}}^{\top}\\(\alpha_1 \mathbf{A}\_1)\\\tilde{x}+ {\tilde{x}}^{\top}\\(\alpha_2 \mathbf{A}\_2)\\\tilde{x} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{, twice)} \\ &= \alpha_1\\{\tilde{x}}^{\top} \mathbf{A}\_1 \tilde{x} + \alpha_2\\{\tilde{x}}^{\top} \mathbf{A}\_2 \tilde{x} && \text{(}\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)} \\ &\> 0. && \text{(each term is positive)} \end{aligned} \\
 
 > **NOTE:**
 >

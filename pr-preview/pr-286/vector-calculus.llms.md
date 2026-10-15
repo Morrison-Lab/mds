@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 17:33:03 (PDT)
+Last modified: 2026-10-14 22:27:27 (PDT)
 
 (adapted from Fieller ([2016](#ref-fieller2018basics)), [Section 7.2](https://www.taylorfrancis.com/chapters/mono/10.1201/9781315370200-7/vector-matrix-calculus-nick-fieller?context=ubx&refId=c310b723-786a-4f33-ae56-720a6cccd3a1))
 
@@ -588,51 +588,65 @@ Figure 1: A gradient explorer: the red arrow points along the gradient at the c
 
 > **NOTE:**
 >
-> **Theorem 7 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a symmetric \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
+> **Theorem 7 (Derivative of a quadratic form)** For a quadratic form (see [quadratic form](linear-algebra-special-matrices.llms.md#def-quadratic-form)), if \\\mathbf{S}\\ is a \\p \times p\\ matrix that is constant with respect to \\\tilde{\beta}\\, then:
 >
-> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{2 \mathbf{S} \tilde{\beta}}\_{p \times 1} \\
+> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{(\mathbf{S} + {\mathbf{S}}^{\top}) \tilde{\beta}}\_{p \times 1}. \\
 
 > **NOTE:**
 >
-> *Proof*. Expanding entry-wise, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k}\\. Differentiating component-wise with respect to \\\beta\_{i}\\ for \\i = 1, \ldots, p\\:
+> *Proof*. Expanding entry-wise, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k}\\. Differentiating component-wise with respect to \\\beta\_{i}\\ for \\i = 1, \ldots, p\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})\right\]\mathclose{}\_i &= \frac{\partial}{\partial \beta\_{i}} \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k} && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^{p} s\_{ik} \beta\_{k} + \sum\_{j=1}^ps\_{ji} \beta\_{j} && \text{(product rule for } \beta\_{i} \beta\_{k} \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
->
-> When \\\mathbf{S}\\ is symmetric (\\\mathbf{S} = {\mathbf{S}}^{\top}\\), \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
+> \\ \begin{aligned} \mathopen{}\left\[\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})\right\]\mathclose{}\_i &= \frac{\partial}{\partial \beta\_{i}} \sum\_{j=1}^p\sum\_{k=1}^{p} s\_{jk} \beta\_{j} \beta\_{k} && \text{(expand quadratic form)} \\ &= \sum\_{k=1}^{p} s\_{ik} \beta\_{k} + \sum\_{j=1}^ps\_{ji} \beta\_{j} && \text{(product rule for } \beta\_{i} \beta\_{k} \text{)} \\ &= \[\mathbf{S}\tilde{\beta}\]\_i + \[{\mathbf{S}}^{\top}\tilde{\beta}\]\_i && \text{(matrix-vector multiplication definition)} \\ &= \[(\mathbf{S} + {\mathbf{S}}^{\top})\tilde{\beta}\]\_i && \text{(linearity of matrix multiplication)} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 6* (Like the derivative of \\cx^2\\). This operation is like taking the derivative of \\cx^2\\ with respect to \\x\\ in non-vector calculus: \\\frac{\partial}{\partial x} (cx^2) = 2cx\\, and [Theorem 7](#thm-quadratic-form) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2 \mathbf{S} \tilde{\beta}\\. For example, with \\p = 1\\, \\\mathbf{S} = (3)\\, and \\\tilde{\beta}= (\beta\_{1})\\, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}= 3\beta\_{1}^2\\, and its derivative is \\6\beta\_{1} = 2 \mathbf{S} \tilde{\beta}\\.
+> **Corollary 2 (Derivative of a quadratic form with a symmetric matrix)** If, in addition, \\\mathbf{S}\\ is symmetric (and, as in [Theorem 7](#thm-quadratic-form), \\p \times p\\ and constant with respect to \\\tilde{\beta}\\), then
+>
+> \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{p \times 1} = \underbrace{2 \mathbf{S} \tilde{\beta}}\_{p \times 1}. \\
 
 > **NOTE:**
 >
-> **Example 16 (Derivative of a quadratic form)** Let \\\mathbf{S} = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}\\ (\\2 \times 2\\, symmetric and constant) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta}= 3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2\\. By [Theorem 7](#thm-quadratic-form):
+> *Proof*. If \\\mathbf{S} = {\mathbf{S}}^{\top}\\, then \\\mathbf{S} + {\mathbf{S}}^{\top} = 2\mathbf{S}\\, so [Theorem 7](#thm-quadratic-form) gives \\\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2\mathbf{S}\tilde{\beta}\\.
+
+> **NOTE:**
 >
-> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{S}\tilde{\beta})}\_{2 \times 1} &= 2 \mathbf{S} \tilde{\beta}\\ &= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \end{aligned} \\
+> *Remark 6* (Like the derivative of \\cx^2\\). This operation is like taking the derivative of \\cx^2\\ with respect to \\x\\ in non-vector calculus: \\\frac{\partial}{\partial x} (cx^2) = 2cx\\, and [Corollary 2](#cor-quadratic-form-symmetric) says \\\frac{\partial}{\partial \tilde{\beta}} ({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta}) = 2 \mathbf{S} \tilde{\beta}\\. For example, with \\p = 1\\, \\\mathbf{S} = (3)\\, and \\\tilde{\beta}= (\beta\_{1})\\, \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = 3\beta\_{1}^2\\, and its derivative is \\6\beta\_{1} = 2 \mathbf{S} \tilde{\beta}\\.
+
+> **NOTE:**
+>
+> **Example 16 (Derivative of a quadratic form)** Let \\\mathbf{S} = \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix}\\ (\\2 \times 2\\, symmetric and constant) and \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\. Then \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = 3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2\\. By [Corollary 2](#cor-quadratic-form-symmetric):
+>
+> \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta})}\_{2 \times 1} &= 2 \mathbf{S} \tilde{\beta}\\ &= 2 \begin{pmatrix} 3 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \end{aligned} \\
 >
 > Differentiating component-wise directly:
 >
 > \\ \begin{pmatrix} \frac{\partial}{\partial \beta\_{1}}(3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2) \\ \frac{\partial}{\partial \beta\_{2}}(3\beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 2\beta\_{2}^2) \end{pmatrix} = \begin{pmatrix} 6\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 4\beta\_{2} \end{pmatrix} \\
 >
 > Both methods agree.
+>
+> For a matrix that is not symmetric, such as \\\mathbf{S} = \begin{pmatrix} 1 & 2 \\ 0 & 3 \end{pmatrix}\\, [Theorem 7](#thm-quadratic-form) gives
+>
+> \\ \begin{aligned} (\mathbf{S} + {\mathbf{S}}^{\top}) \tilde{\beta} &= \begin{pmatrix} 2 & 2 \\ 2 & 6 \end{pmatrix} \begin{pmatrix} \beta\_{1} \\ \beta\_{2} \end{pmatrix} \\ &= \begin{pmatrix} 2\beta\_{1} + 2\beta\_{2} \\ 2\beta\_{1} + 6\beta\_{2} \end{pmatrix}, \end{aligned} \\
+>
+> which matches differentiating \\{\tilde{\beta}}^{\top} \mathbf{S} \tilde{\beta} = \beta\_{1}^2 + 2\beta\_{1}\beta\_{2} + 3\beta\_{2}^2\\ directly.
 
 > **NOTE:**
 >
-> **Corollary 2 (Derivative of a simple quadratic form)** \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta})}\_{p \times 1} = \underbrace{2\tilde{\beta}}\_{p \times 1} \\
+> **Corollary 3 (Derivative of a simple quadratic form)** \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta})}\_{p \times 1} = \underbrace{2\tilde{\beta}}\_{p \times 1} \\
 
 > **NOTE:**
 >
-> *Proof*. Applying [Theorem 7](#thm-quadratic-form) with \\\mathbf{S} = \mathbf{I}\_{p \times p}\\ (which is symmetric and constant with respect to \\\tilde{\beta}\\):
+> *Proof*. Applying [Corollary 2](#cor-quadratic-form-symmetric) with \\\mathbf{S} = \mathbf{I}\_{p \times p}\\ (which is symmetric and constant with respect to \\\tilde{\beta}\\):
 >
-> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top}\mathbf{I}\_{p \times p}\tilde{\beta}) && \text{(rewrite with identity matrix)} \\ &= 2\mathbf{I}\_{p \times p}\tilde{\beta} && \text{(derivative of a quadratic form, with } \mathbf{S} = \mathbf{I}\_{p \times p} \text{)} \\ &= 2\tilde{\beta} && \text{(identity matrix property)} \end{aligned} \\
+> \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta}) &= \frac{\partial}{\partial \tilde{\beta}}({\tilde{\beta}}^{\top} \mathbf{I}\_{p \times p} \tilde{\beta}) && \text{(rewrite with identity matrix)} \\ &= 2\mathbf{I}\_{p \times p}\tilde{\beta} && \text{(derivative of a quadratic form, with } \mathbf{S} = \mathbf{I}\_{p \times p} \text{)} \\ &= 2\tilde{\beta} && \text{(identity matrix property)} \end{aligned} \\
 
 > **NOTE:**
 >
-> *Remark 7* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 2](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta\_{1})\\, \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2\\, and its derivative is \\2\beta\_{1} = 2\tilde{\beta}\\.
+> *Remark 7* (Like the derivative of \\x^2\\). This vector derivative is like taking the derivative of \\x^2\\: in scalar calculus \\\frac{\partial}{\partial x} x^2 = 2x\\, and [Corollary 3](#cor-deriv-normsq) says \\\frac{\partial}{\partial \tilde{\beta}} (\tilde{\beta} \cdot \tilde{\beta}) = 2\tilde{\beta}\\. For example, with \\p = 1\\ and \\\tilde{\beta}= (\beta\_{1})\\, \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2\\, and its derivative is \\2\beta\_{1} = 2\tilde{\beta}\\.
 
 > **NOTE:**
 >
-> **Example 17 (Derivative of a sum of squares)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 2](#cor-deriv-normsq):
+> **Example 17 (Derivative of a sum of squares)** Let \\\tilde{\beta}= {(\beta\_{1}, \beta\_{2})}^{\top}\\, so \\\tilde{\beta} \cdot \tilde{\beta} = \beta\_{1}^2 + \beta\_{2}^2\\. By [Corollary 3](#cor-deriv-normsq):
 >
 > \\ \begin{aligned} \underbrace{\frac{\partial}{\partial \tilde{\beta}}(\tilde{\beta} \cdot \tilde{\beta})}\_{2 \times 1} &= 2\tilde{\beta}\\ &= \begin{pmatrix} 2\beta\_{1} \\ 2\beta\_{2} \end{pmatrix} \end{aligned} \\
 >
@@ -707,7 +721,7 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 
 > **NOTE:**
 >
-> **Corollary 3 (Vector chain rule for quadratic forms)** If \\\tilde{\varepsilon}= \tilde{\varepsilon}(\tilde{\beta})\\ is an \\n \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\, with continuous partial derivatives, then
+> **Corollary 4 (Vector chain rule for quadratic forms)** If \\\tilde{\varepsilon}= \tilde{\varepsilon}(\tilde{\beta})\\ is an \\n \times 1\\ vector-valued function of the \\p \times 1\\ vector \\\tilde{\beta}\\, with continuous partial derivatives, then
 >
 > \\ \underbrace{\frac{\partial}{\partial \tilde{\beta}}{\mathopen{}\left(\tilde{\varepsilon}(\tilde{\beta})\cdot \tilde{\varepsilon}(\tilde{\beta})\right)\mathclose{}}}\_{p \times 1} = \underbrace{\mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}(\tilde{\beta})\right)\mathclose{}}\_{p \times n} \underbrace{\mathopen{}\left(2 \tilde{\varepsilon}(\tilde{\beta})\right)\mathclose{}}\_{n \times 1} \\
 
@@ -719,11 +733,11 @@ See Felippa ([n.d.](#ref-felippa_ifem_matrix_calculus)), and Wikipedia contribut
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}\right)\mathclose{} \frac{\partial}{\partial \tilde{\varepsilon}}\mathopen{}\left({\tilde{\varepsilon}}^{\top}\tilde{\varepsilon}\right)\mathclose{} && \text{(vector chain rule)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}\right)\mathclose{} \mathopen{}\left(2\tilde{\varepsilon}\right)\mathclose{} && \text{(derivative of a simple quadratic form, in } \tilde{\varepsilon}\text{)} \end{aligned} \\
 >
-> The second step is [Corollary 2](#cor-deriv-normsq), applied to the \\n \times 1\\ vector \\\tilde{\varepsilon}\\ in place of \\\tilde{\beta}\\.
+> The second step is [Corollary 3](#cor-deriv-normsq), applied to the \\n \times 1\\ vector \\\tilde{\varepsilon}\\ in place of \\\tilde{\beta}\\.
 
 > **NOTE:**
 >
-> **Example 20 (Derivative of the residual sum of squares)** Let \\\tilde{y}\\ (\\n \times 1\\) and \\\mathbf{X}\\ (\\n \times p\\) be constant with respect to \\\tilde{\beta}\\, and let \\\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\\ be the residual vector ([Definition 9](#def-residual)). By [Theorem 4](#thm-deriv-linear-map), \\\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\\, and \\\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}\_{p \times n}\\ because \\\tilde{y}\\ is constant, so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\\ (\\p \times n\\). By [Corollary 3](#cor-chain-qf):
+> **Example 20 (Derivative of the residual sum of squares)** Let \\\tilde{y}\\ (\\n \times 1\\) and \\\mathbf{X}\\ (\\n \times p\\) be constant with respect to \\\tilde{\beta}\\, and let \\\tilde{\varepsilon}(\tilde{\beta}) = \tilde{y}- \mathbf{X}\tilde{\beta}\\ be the residual vector ([Definition 9](#def-residual)). By [Theorem 4](#thm-deriv-linear-map), \\\frac{\partial}{\partial \tilde{\beta}}(\mathbf{X}\tilde{\beta}) = {\mathbf{X}}^{\top}\\, and \\\frac{\partial}{\partial \tilde{\beta}}\tilde{y}= \mathbf{0}\_{p \times n}\\ because \\\tilde{y}\\ is constant, so \\\frac{\partial}{\partial \tilde{\beta}}\tilde{\varepsilon}= -{\mathbf{X}}^{\top}\\ (\\p \times n\\). By [Corollary 4](#cor-chain-qf):
 >
 > \\ \begin{aligned} \frac{\partial}{\partial \tilde{\beta}}\mathopen{}\left(\tilde{\varepsilon}\cdot \tilde{\varepsilon}\right)\mathclose{} &= \mathopen{}\left(-{\mathbf{X}}^{\top}\right)\mathclose{} \mathopen{}\left(2\tilde{\varepsilon}\right)\mathclose{} && \text{(vector chain rule for quadratic forms)} \\ &= -2\\{\mathbf{X}}^{\top}\mathopen{}\left(\tilde{y}- \mathbf{X}\tilde{\beta}\right)\mathclose{} && \text{(substitute } \tilde{\varepsilon}= \tilde{y}- \mathbf{X}\tilde{\beta}\text{)} \end{aligned} \\
 >
@@ -1097,7 +1111,7 @@ The proof applies the one-variable mean value theorem twice, which these notes d
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~15}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#thm-quadratic-form}{\text{Theorem~7}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~4}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathbf{H}\_f(\tilde{x}) &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(\frac{\partial}{\partial \tilde{x}} ({\tilde{x}}^{\top} \mathbf{S} \tilde{x})\right)\mathclose{}}^{\top} && \text{(}\href{#def-hessian}{\text{Definition~15}}\text{)} \\ &= \frac{\partial}{\partial \tilde{x}} {\mathopen{}\left(2 \mathbf{S} \tilde{x}\right)\mathclose{}}^{\top} && \text{(}\href{#cor-quadratic-form-symmetric}{\text{Corollary~2}}\text{)} \\ &= \mathopen{}\left(\frac{\partial}{\partial \tilde{x}} \tilde{x}\right)\mathclose{}\\{(2 \mathbf{S})}^{\top} && \text{(}\href{#thm-deriv-matrix-vector}{\text{Theorem~5}}\text{, with } \mathbf{A} = 2 \mathbf{S} \text{ and } \tilde{v} = \tilde{x}\text{; } \frac{\partial}{\partial \tilde{x}} {(2 \mathbf{S} \tilde{x})}^{\top} = \frac{\partial}{\partial \tilde{x}} (2 \mathbf{S} \tilde{x}) \text{, }\href{#def-vector-valued-derivative}{\text{Definition~6}}\text{)} \\ &= \mathbf{I}\_p\\{(2 \mathbf{S})}^{\top} && \text{(} \frac{\partial}{\partial \tilde{x}} \tilde{x}= \mathbf{I}\_p \text{, }\href{#rem-deriv-matrix-vector-special-case}{\text{Remark~4}}\text{)} \\ &= 2 \mathbf{S}. && \text{(} \mathbf{S} \text{ is symmetric)} \end{aligned} \\
 
 > **NOTE:**
 >

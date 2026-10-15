@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 17:33:03 (PDT)
+Last modified: 2026-10-14 22:27:27 (PDT)
 
 ## 1 Inner products
 
@@ -469,7 +469,7 @@ Last modified: 2026-10-14 17:33:03 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Cosine similarity)** The **cosine similarity** between two nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ is the cosine of the angle between them ([Definition 8](#def-angle)):
+> **Definition 9 (Cosine similarity)** The **cosine similarity** between two nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ is their dot product divided by the product of their lengths:
 >
 > \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\tilde{x}\cdot \tilde{y}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\
 
@@ -490,6 +490,16 @@ Last modified: 2026-10-14 17:33:03 (PDT)
 >   \\ \begin{aligned} \operatorname{cossim}(\tilde{x}, \tilde{y}) &= \frac{1 \cdot 1 + 0 \cdot 1}{1 \cdot\sqrt{2}} \\ &= \frac{1}{\sqrt{2}}. \end{aligned} \\
 >
 > When both vectors have unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals their inner product: \\\operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle\\.
+
+> **NOTE:**
+>
+> **Corollary 1 (Cosine similarity is the cosine of the angle)** For nonzero vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ with angle \\\theta\\ between them ([Definition 8](#def-angle)),
+>
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \cos\theta. \\
+
+> **NOTE:**
+>
+> *Proof*. The ratio that [Definition 8](#def-angle) sets equal to \\\cos\theta\\ is the ratio that [Definition 9](#def-cosine-similarity) defines as \\\operatorname{cossim}(\tilde{x}, \tilde{y})\\.
 
 > **NOTE:**
 >
@@ -725,7 +735,7 @@ Last modified: 2026-10-14 17:33:03 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 1 (Every subspace has an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\. Every orthonormal list of vectors in \\\mathcal{S}\\ extends to an orthonormal basis of \\\mathcal{S}\\ ([Definition 11](#def-orthonormal-basis)). Starting from the empty list shows that \\\mathcal{S}\\ has an orthonormal basis.
+> **Corollary 2 (Every subspace has an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\. Every orthonormal list of vectors in \\\mathcal{S}\\ extends to an orthonormal basis of \\\mathcal{S}\\ ([Definition 11](#def-orthonormal-basis)). Starting from the empty list shows that \\\mathcal{S}\\ has an orthonormal basis.
 
 > **NOTE:**
 >
