@@ -1,5 +1,5 @@
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation).
-The goal of a proof is not just to convince yourself that a [result](#def-theorem) is true;
+The goal of a proof is not just to convince yourself that a [result](#def-result) is true;
 it is to convince a *reader*,
 and to show them *why* it is true.
 Each principle on this page serves that goal.
@@ -61,7 +61,7 @@ We can use any of:
 - $\models$ (`\models`)
 
 to denote logical entailment (@def-logical-entailment).
-$\Rightarrow$ also writes the connective "implies" (@def-logical-connective);
+$\Rightarrow$ also writes the connective "implies" (@def-implies);
 $P$ entails $Q$ exactly when $P \Rightarrow Q$ is true
 for every choice of values for the variables in $P$ and $Q$.
 

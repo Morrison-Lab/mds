@@ -6,9 +6,9 @@ and the alternatives you may meet in other sources.
 
 | symbol | meaning | LaTeX
 |-------------|--------------------------------------------------|-----------
-| $\neg$      | [not](proof-writing.qmd#def-logical-connective)                   | `\neg`
-| $\forall$   | [for all](proof-writing.qmd#def-quantifier)                       | `\forall`
-| $\exists$   | [there exists](proof-writing.qmd#def-quantifier)                  | `\exists`
+| $\neg$      | [not](proof-writing.qmd#def-not)                   | `\neg`
+| $\forall$   | [for all](proof-writing.qmd#def-universal-quantifier)                       | `\forall`
+| $\exists$   | [there exists](proof-writing.qmd#def-existential-quantifier)                  | `\exists`
 | $\cup$      | union, "or"                                      | `\cup`
 | $\cap$      | intersection, "and"                              | `\cap`
 | $\mid$      | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|`
