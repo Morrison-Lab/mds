@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 09:23:43 (PDT)
+Last modified: 2026-10-15 10:07:44 (PDT)
 
 ## 1 Integration
 
@@ -131,7 +131,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 3 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets-functions.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
+> **Definition 3 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets-functions.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
 >
 > ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
 
@@ -174,7 +174,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 5 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ if both one-sided limits ([Definition 2 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 4](#def-continuous)).
+> **Definition 5 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ if both one-sided limits ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 4](#def-continuous)).
 
 > **NOTE:**
 >

@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 09:23:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 10:07:44 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -391,7 +391,7 @@ c\,\tilde{u}
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>All three sets in the formula are subspaces (<a href="#/thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a>), so each has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>). Let <span class="math inline">\(k = \dim(\mathcal{S}_1 \cap \mathcal{S}_2)\)</span>, <span class="math inline">\(d_1 = \dim(\mathcal{S}_1)\)</span> and <span class="math inline">\(d_2 = \dim(\mathcal{S}_2)\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span>All three sets in the formula are subspaces (<a href="#/thm-sum-intersection-subspace" class="quarto-xref">Theorem&nbsp;1</a>), so each has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>). Let <span class="math inline">\(k = \dim(\mathcal{S}_1 \cap \mathcal{S}_2)\)</span>, <span class="math inline">\(d_1 = \dim(\mathcal{S}_1)\)</span> and <span class="math inline">\(d_2 = \dim(\mathcal{S}_2)\)</span>.</p>
 <p><strong>Build a list.</strong> Choose a basis <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k\)</span> of <span class="math inline">\(\mathcal{S}_1 \cap \mathcal{S}_2\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>). These vectors are linearly independent and lie in <span class="math inline">\(\mathcal{S}_1\)</span>, so <a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a> extends them to a basis <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k, \tilde{x}_1, \ldots, \tilde{x}_{d_1 - k}\)</span> of <span class="math inline">\(\mathcal{S}_1\)</span>, which has <span class="math inline">\(d_1\)</span> vectors (<a href="./linear-algebra-subspaces.html#thm-basis-size">Theorem&nbsp;7 in Subspaces and Rank</a>). In the same way, extend them to a basis <span class="math inline">\(\tilde{z}_1, \ldots, \tilde{z}_k, \tilde{y}_1, \ldots, \tilde{y}_{d_2 - k}\)</span> of <span class="math inline">\(\mathcal{S}_2\)</span>. We show that the <span class="math inline">\(\tilde{z}\)</span>’s, <span class="math inline">\(\tilde{x}\)</span>’s and <span class="math inline">\(\tilde{y}\)</span>’s together, <span class="math inline">\(k + (d_1 - k) + (d_2 - k) = d_1 + d_2 - k\)</span> vectors, are a basis of <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>).</p>
 <p><strong>They span <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span>.</strong> Any <span class="math inline">\(\tilde{v} \in \mathcal{S}_1 + \mathcal{S}_2\)</span> is <span class="math inline">\(\tilde{v}_1 + \tilde{v}_2\)</span> with <span class="math inline">\(\tilde{v}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{v}_2 \in \mathcal{S}_2\)</span>. <span class="math inline">\(\tilde{v}_1\)</span> is a linear combination of the <span class="math inline">\(\tilde{z}\)</span>’s and <span class="math inline">\(\tilde{x}\)</span>’s, and <span class="math inline">\(\tilde{v}_2\)</span> is a linear combination of the <span class="math inline">\(\tilde{z}\)</span>’s and <span class="math inline">\(\tilde{y}\)</span>’s, so their sum is a linear combination of all three groups. Conversely, each vector in the list is in <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> (for example, <span class="math inline">\(\tilde{x}_1 = \tilde{x}_1 + \tilde{0}\)</span>), and <span class="math inline">\(\mathcal{S}_1 + \mathcal{S}_2\)</span> is a subspace, so it contains every linear combination of them.</p>
 <p><strong>They are linearly independent.</strong> Suppose</p>
@@ -523,14 +523,20 @@ a &amp;= b \\
 </section>
 <section class="slide level2">
 
-<div id="def-direct-sum" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Direct sum)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span>, <span class="math inline">\(\mathcal{S}_2\)</span> and <span class="math inline">\(\mathcal{V}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>. <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are <strong>complementary</strong> in <span class="math inline">\(\mathcal{V}\)</span> if</p>
+<div id="def-complementary-subspaces" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Complementary subspaces)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span>, <span class="math inline">\(\mathcal{S}_2\)</span> and <span class="math inline">\(\mathcal{V}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>. <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are <strong>complementary</strong> in <span class="math inline">\(\mathcal{V}\)</span> if</p>
 <p><span class="math display">\[
 \mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2
 \quad \text{and} \quad
 \mathcal{S}_1 \cap \mathcal{S}_2 = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}
 \]</span></p>
-<p>(<a href="#/def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a>). Then <span class="math inline">\(\mathcal{V}\)</span> is the <strong>direct sum</strong> of <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span>, written <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
+<p>(<a href="#/def-subspace-sum" class="quarto-xref">Definition&nbsp;1</a>).</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-direct-sum" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Direct sum)</strong></span> If <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> are complementary in <span class="math inline">\(\mathcal{V}\)</span> (<a href="#/def-complementary-subspaces" class="quarto-xref">Definition&nbsp;2</a>), then <span class="math inline">\(\mathcal{V}\)</span> is the <strong>direct sum</strong> of <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span>, written <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -562,7 +568,7 @@ a &amp;= b \\
 <div id="thm-direct-sum-equiv" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 4 (Three ways to recognize a direct sum)</strong></span> Let <span class="math inline">\(\mathcal{S}_1\)</span> and <span class="math inline">\(\mathcal{S}_2\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span>, and let <span class="math inline">\(\mathcal{V} = \mathcal{S}_1 + \mathcal{S}_2\)</span>. The following statements are equivalent:</p>
 <ol type="1">
-<li><span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>).</li>
+<li><span class="math inline">\(\mathcal{V} = \mathcal{S}_1 \oplus \mathcal{S}_2\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>).</li>
 <li><span class="math inline">\(\dim(\mathcal{V}) = \dim(\mathcal{S}_1) + \dim(\mathcal{S}_2)\)</span>.</li>
 <li>Every <span class="math inline">\(\tilde{x} \in \mathcal{V}\)</span> can be written as <span class="math inline">\(\tilde{x} = \tilde{x}_1 + \tilde{x}_2\)</span> with <span class="math inline">\(\tilde{x}_1 \in \mathcal{S}_1\)</span> and <span class="math inline">\(\tilde{x}_2 \in \mathcal{S}_2\)</span> in only one way.</li>
 </ol>
@@ -631,7 +637,7 @@ a &amp;= b \\
 <section class="slide level2">
 
 <div id="def-projection" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>), and let <span class="math inline">\(\tilde{y} \in \mathbb{R}^p\)</span>. By <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\tilde{y} = \tilde{u} + \tilde{v}\)</span> for exactly one <span class="math inline">\(\tilde{u} \in \mathcal{S}\)</span> and <span class="math inline">\(\tilde{v} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\tilde{u}\)</span> is the <strong>projection</strong> of <span class="math inline">\(\tilde{y}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014</a>, Definition 6.3, p.&nbsp;163)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 4 (Projection onto a subspace along a complement)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{T}\)</span> be subspaces of <span class="math inline">\(\mathbb{R}^p\)</span> with <span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{T}\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>), and let <span class="math inline">\(\tilde{y} \in \mathbb{R}^p\)</span>. By <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>, <span class="math inline">\(\tilde{y} = \tilde{u} + \tilde{v}\)</span> for exactly one <span class="math inline">\(\tilde{u} \in \mathcal{S}\)</span> and <span class="math inline">\(\tilde{v} \in \mathcal{T}\)</span>. The vector <span class="math inline">\(\tilde{u}\)</span> is the <strong>projection</strong> of <span class="math inline">\(\tilde{y}\)</span> onto <span class="math inline">\(\mathcal{S}\)</span> along <span class="math inline">\(\mathcal{T}\)</span> <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014</a>, Definition 6.3, p.&nbsp;163)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -649,7 +655,7 @@ a &amp;= b \\
 &amp;= \mathcal{S} \oplus \mathcal{T}_2
 \end{aligned}
 \]</span></p>
-<p>(<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>, <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>). The same vector has a different projection onto the same subspace when the complement changes.</p>
+<p>(<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>, <a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>). The same vector has a different projection onto the same subspace when the complement changes.</p>
 </div>
 </section>
 <section id="sec-orthogonal-complements" class="slide level2" data-number="2">
@@ -672,10 +678,10 @@ a &amp;= b \\
 \begin{aligned}
 \tilde{x} \cdot (a\,\tilde{u} + b\,\tilde{w})
 &amp;= \sum_{i=1}^px_i\,(a\,\tilde{u} + b\,\tilde{w})_i
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= \sum_{i=1}^px_i\,(a u_i + b w_i)
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)}
 \\
 &amp;= \sum_{i=1}^p\mathopen{}\left(x_i a u_i + x_i b w_i\right)\mathclose{}
 &amp;&amp; \text{(distribute each } x_i \text{)}
@@ -690,7 +696,7 @@ a &amp;= b \\
 &amp;&amp; \text{(factor } a \text{ and } b \text{ out of the sums)}
 \\
 &amp;= a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}).
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \end{aligned}
 \]</span></p>
 <p><strong>First slot.</strong></p>
@@ -740,7 +746,7 @@ a\,(\tilde{x} \cdot \tilde{u}) + b\,(\tilde{x} \cdot \tilde{w}) &amp;= 2 \cdot 3
 <section class="slide level2">
 
 <div id="def-orthogonal-complement" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;14 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
+<p><span class="theorem-title"><strong>Definition 5 (Orthogonal complement)</strong></span> The <strong>orthogonal complement</strong> of a set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span> is the set of vectors orthogonal (<a href="./linear-algebra-vectors.html#def-orthogonal-vectors">Definition&nbsp;15 in Vectors</a>) to every vector of <span class="math inline">\(\mathcal{X}\)</span>:</p>
 <p><span class="math display">\[
 \mathcal{X}^\perp
 \stackrel{\text{def}}{=}
@@ -784,13 +790,13 @@ u_1 &amp;= u_2 \\
 <section class="slide level2">
 
 <div id="rem-orthogonal-complement-any-set" class="proof remark">
-<p><span class="proof-title"><em>Remark 1</em> (The orthogonal complement of a set that is not a subspace). </span><span class="math inline">\(\mathcal{X}\)</span> in <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a> need not be a subspace.</p>
+<p><span class="proof-title"><em>Remark 1</em> (The orthogonal complement of a set that is not a subspace). </span><span class="math inline">\(\mathcal{X}\)</span> in <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;5</a> need not be a subspace.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="thm-orthogonal-complement-subspace" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (An orthogonal complement is a subspace)</strong></span> For any set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span>, <span class="math inline">\(\mathcal{X}^\perp\)</span> (<a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 6 (An orthogonal complement is a subspace)</strong></span> For any set <span class="math inline">\(\mathcal{X}\)</span> of vectors in <span class="math inline">\(\mathbb{R}^p\)</span>, <span class="math inline">\(\mathcal{X}^\perp\)</span> (<a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;5</a>) is a subspace of <span class="math inline">\(\mathbb{R}^p\)</span> (<a href="./linear-algebra-subspaces.html#def-subspace">Definition&nbsp;4 in Subspaces and Rank</a>).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{X}^\perp\)</span> is not empty:</p>
@@ -867,13 +873,13 @@ u_1 &amp;= u_2 \\
 \begin{aligned}
 ({\mathbf{A}}^{\top} \tilde{x})_j
 &amp;= \sum_{i=1}^{m} ({\mathbf{A}}^{\top})_{ji}\, x_i
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)}
 \\
 &amp;= \sum_{i=1}^{m} a_{ij}\, x_i
 &amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)}
 \\
 &amp;= \tilde{a}_j \cdot \tilde{x}.
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \end{aligned}
 \]</span></p>
 <p>So <span class="math inline">\(\tilde{x} \in \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="./linear-algebra-rank-nullity.html#def-null-space">Definition&nbsp;3 in Column Space, Null Space and Rank-Nullity</a>) exactly when <span class="math inline">\(\tilde{a}_j \cdot \tilde{x} = 0\)</span> for every column <span class="math inline">\(\tilde{a}_j\)</span>.</p>
@@ -883,10 +889,10 @@ u_1 &amp;= u_2 \\
 \begin{aligned}
 \tilde{y} \cdot \tilde{x}
 &amp;= \sum_{i=1}^{m} (\mathbf{A} \tilde{z})_i\, x_i
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= \sum_{i=1}^{m} \mathopen{}\left(\sum_{j=1}^na_{ij} z_j\right)\mathclose{}\, x_i
-&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)}
 \\
 &amp;= \sum_{i=1}^{m} \sum_{j=1}^na_{ij}\, z_j\, x_i
 &amp;&amp; \text{(distribute each } x_i \text{ over the inner sum)}
@@ -898,7 +904,7 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(commute, then factor } z_j \text{ out of the inner sum)}
 \\
 &amp;= \sum_{j=1}^nz_j\, (\tilde{a}_j \cdot \tilde{x})
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= \sum_{j=1}^nz_j \cdot 0
 &amp;&amp; \text{(each } \tilde{a}_j \cdot \tilde{x} = 0 \text{)}
@@ -921,7 +927,7 @@ u_1 &amp;= u_2 \\
 &amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{, special case } b = 0 \text{, first slot)}
 \\
 &amp;= c\,(-3 + 3)
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= 0.
 &amp;&amp; \text{(arithmetic)}
@@ -936,12 +942,12 @@ u_1 &amp;= u_2 \\
 <ol type="1">
 <li><span class="math inline">\(\mathcal{S} \cap \mathcal{S}^\perp = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>;</li>
 <li><span class="math inline">\(\dim(\mathcal{S}) + \dim(\mathcal{S}^\perp) = p\)</span>;</li>
-<li><span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{S}^\perp\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;2</a>).</li>
+<li><span class="math inline">\(\mathbb{R}^p = \mathcal{S} \oplus \mathcal{S}^\perp\)</span> (<a href="#/def-direct-sum" class="quarto-xref">Definition&nbsp;3</a>).</li>
 </ol>
 <p>So every <span class="math inline">\(\tilde{y} \in \mathbb{R}^p\)</span> can be written as <span class="math inline">\(\tilde{y} = \tilde{u} + \tilde{v}\)</span> with <span class="math inline">\(\tilde{u} \in \mathcal{S}\)</span> and <span class="math inline">\(\tilde{v} \in \mathcal{S}^\perp\)</span> in only one way (<a href="#/thm-direct-sum-equiv" class="quarto-xref">Theorem&nbsp;4</a>).</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>), so it has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>).</p>
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>), so it has a dimension (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>).</p>
 <p><strong>Part 1.</strong> Both <span class="math inline">\(\mathcal{S}\)</span> and <span class="math inline">\(\mathcal{S}^\perp\)</span> contain <span class="math inline">\(\tilde{0}\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-zero">Theorem&nbsp;1 in Subspaces and Rank</a>). If <span class="math inline">\(\tilde{x}\)</span> is in both, then <span class="math inline">\(\tilde{x}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}\)</span>, <span class="math inline">\(\tilde{x}\)</span> itself included, so</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -950,7 +956,7 @@ u_1 &amp;= u_2 \\
 \end{aligned}
 \]</span></p>
 <p>which forces every <span class="math inline">\(x_i = 0\)</span>.</p>
-<p><strong>Part 2.</strong> Let <span class="math inline">\(d = \dim(\mathcal{S})\)</span>. If <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\(\mathcal{S}\)</span> has a basis (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>) with <span class="math inline">\(0\)</span> vectors (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>), the empty list, whose span is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>); so <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, <span class="math inline">\(\mathcal{S}^\perp = \mathbb{R}^p\)</span> (every <span class="math inline">\(\tilde{u}\)</span> satisfies <span class="math inline">\(\tilde{0}\cdot \tilde{u} = 0\)</span>), and <span class="math inline">\(0 + p = p\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). If <span class="math inline">\(d \ge 1\)</span>, choose a basis <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>), and let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(p \times d\)</span> matrix with these columns. The basis spans <span class="math inline">\(\mathcal{S}\)</span>, so <span class="math inline">\(\mathcal{S} = \mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\(\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is <span class="math inline">\(d \times p\)</span>, so</p>
+<p><strong>Part 2.</strong> Let <span class="math inline">\(d = \dim(\mathcal{S})\)</span>. If <span class="math inline">\(d = 0\)</span>, then <span class="math inline">\(\mathcal{S}\)</span> has a basis (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>) with <span class="math inline">\(0\)</span> vectors (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;9 in Subspaces and Rank</a>), the empty list, whose span is <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span> (<a href="./linear-algebra-subspaces.html#def-span">Definition&nbsp;5 in Subspaces and Rank</a>); so <span class="math inline">\(\mathcal{S} = \mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, <span class="math inline">\(\mathcal{S}^\perp = \mathbb{R}^p\)</span> (every <span class="math inline">\(\tilde{u}\)</span> satisfies <span class="math inline">\(\tilde{0}\cdot \tilde{u} = 0\)</span>), and <span class="math inline">\(0 + p = p\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). If <span class="math inline">\(d \ge 1\)</span>, choose a basis <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>), and let <span class="math inline">\(\mathbf{A}\)</span> be the <span class="math inline">\(p \times d\)</span> matrix with these columns. The basis spans <span class="math inline">\(\mathcal{S}\)</span>, so <span class="math inline">\(\mathcal{S} = \mathcal{C}(\mathbf{A})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>), and <span class="math inline">\(\mathcal{S}^\perp = \mathcal{N}({\mathbf{A}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). <span class="math inline">\({\mathbf{A}}^{\top}\)</span> is <span class="math inline">\(d \times p\)</span>, so</p>
 <p><span class="math display">\[
 \begin{aligned}
 \dim(\mathcal{S}^\perp)
@@ -1043,7 +1049,7 @@ a &amp;= c \\
 \]</span></p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp\)</span>.</strong> Take <span class="math inline">\(\tilde{s} \in \mathcal{S}\)</span> and any <span class="math inline">\(\tilde{v} \in \mathcal{S}^\perp\)</span>. By <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;4</a>, <span class="math inline">\(\tilde{s} \cdot \tilde{v} = 0\)</span>, so <span class="math inline">\(\tilde{v} \cdot \tilde{s} = 0\)</span> too (<a href="./linear-algebra-vectors.html#thm-lincom-symmetric">Theorem&nbsp;1 in Vectors</a>). So <span class="math inline">\(\tilde{s}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}^\perp\)</span>, that is, <span class="math inline">\(\tilde{s} \in (\mathcal{S}^\perp)^\perp\)</span>.</p>
+<p><span class="proof-title"><em>Proof</em>. </span><strong><span class="math inline">\(\mathcal{S} \subseteq (\mathcal{S}^\perp)^\perp\)</span>.</strong> Take <span class="math inline">\(\tilde{s} \in \mathcal{S}\)</span> and any <span class="math inline">\(\tilde{v} \in \mathcal{S}^\perp\)</span>. By <a href="#/def-orthogonal-complement" class="quarto-xref">Definition&nbsp;5</a>, <span class="math inline">\(\tilde{s} \cdot \tilde{v} = 0\)</span>, so <span class="math inline">\(\tilde{v} \cdot \tilde{s} = 0\)</span> too (<a href="./linear-algebra-vectors.html#thm-lincom-symmetric">Theorem&nbsp;1 in Vectors</a>). So <span class="math inline">\(\tilde{s}\)</span> is orthogonal to every vector of <span class="math inline">\(\mathcal{S}^\perp\)</span>, that is, <span class="math inline">\(\tilde{s} \in (\mathcal{S}^\perp)^\perp\)</span>.</p>
 <p><strong>Equal dimensions.</strong> <span class="math inline">\(\mathcal{S}^\perp\)</span> is a subspace (<a href="#/thm-orthogonal-complement-subspace" class="quarto-xref">Theorem&nbsp;6</a>), so part 2 of <a href="#/thm-orthogonal-direct-sum" class="quarto-xref">Theorem&nbsp;8</a> applies to it as well as to <span class="math inline">\(\mathcal{S}\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1064,7 +1070,7 @@ a &amp;= c \\
 <section class="slide level2">
 
 <div id="exm-double-complement" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Back to the line)</strong></span> In <a href="#/exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \tilde{w} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;11 in Matrices</a>), <span class="math inline">\(\tilde{w} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
+<p><span class="theorem-title"><strong>Example 16 (Back to the line)</strong></span> In <a href="#/exm-orthogonal-direct-sum" class="quarto-xref">Example&nbsp;15</a>, <span class="math inline">\(\mathcal{S} = \operatorname{span}\mathopen{}\left\{(1, 1, 0)\right\}\mathclose{}\)</span> and <span class="math inline">\(\mathcal{S}^\perp = \operatorname{span}\mathopen{}\left\{(1, -1, 0), (0, 0, 1)\right\}\mathclose{}\)</span>. Put those two spanning vectors in the columns of the <span class="math inline">\(3 \times 2\)</span> matrix <span class="math inline">\(\mathbf{B} = \begin{bmatrix} 1 &amp; 0 \\ -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>, so <span class="math inline">\(\mathcal{S}^\perp = \mathcal{C}(\mathbf{B})\)</span> (<a href="./linear-algebra-rank-nullity.html#thm-column-space-span">Theorem&nbsp;1 in Column Space, Null Space and Rank-Nullity</a>) and <span class="math inline">\((\mathcal{S}^\perp)^\perp = \mathcal{N}({\mathbf{B}}^{\top})\)</span> (<a href="#/thm-complement-null-space" class="quarto-xref">Theorem&nbsp;7</a>). Since <span class="math inline">\({\mathbf{B}}^{\top} \tilde{w} = (w_1 - w_2,\ w_3)\)</span> (<a href="./linear-algebra-matrices.html#def-matvec-mult">Definition&nbsp;13 in Matrices</a>), <span class="math inline">\(\tilde{w} \in (\mathcal{S}^\perp)^\perp\)</span> exactly when <span class="math inline">\(w_1 - w_2 = 0\)</span> and <span class="math inline">\(w_3 = 0\)</span>. So</p>
 <p><span class="math display">\[
 \begin{aligned}
 (\mathcal{S}^\perp)^\perp &amp;= \mathopen{}\left\{(a, a, 0) : a \in \mathbb{R}\right\}\mathclose{} \\
@@ -1161,7 +1167,7 @@ a &amp;= c \\
 &amp;&amp; \text{(}\href{#thm-dot-linear}{\text{Theorem~5}}\text{)}
 \\
 &amp;= 1 \cdot 1 + (-t) \cdot 9
-&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)}
+&amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)}
 \\
 &amp;= 1 - 9t,
 &amp;&amp; \text{(arithmetic)}

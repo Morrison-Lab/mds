@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 09:23:43 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 10:07:44 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -302,7 +302,13 @@
 <section id="sec-complex-vectors-matrices" class="slide level2" data-number="1">
 <h2><span class="header-section-number">1</span> Complex vectors and matrices</h2>
 <div id="def-complex-vector" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1 (Complex vectors and matrices)</strong></span> A <strong>complex vector</strong> of length <span class="math inline">\(p\)</span> is a column vector whose entries are <a href="./algebra-complex.html#def-complex-number">complex numbers</a>; the set of all of them is denoted <span class="math inline">\(\mathbb{C}^p\)</span>. A <strong>complex matrix</strong> of size <span class="math inline">\(m \times n\)</span> is a matrix with complex entries; the set of all of them is denoted <span class="math inline">\(\mathbb{C}^{m \times n}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 1 (Complex vector)</strong></span> A <strong>complex vector</strong> of length <span class="math inline">\(p\)</span> is a column vector whose entries are <a href="./algebra-complex.html#def-complex-number">complex numbers</a>; the set of all of them is denoted <span class="math inline">\(\mathbb{C}^p\)</span>.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="def-complex-matrix" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Complex matrix)</strong></span> A <strong>complex matrix</strong> of size <span class="math inline">\(m \times n\)</span> is a matrix with complex entries; the set of all of them is denoted <span class="math inline">\(\mathbb{C}^{m \times n}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -319,13 +325,13 @@
 <section class="slide level2">
 
 <div id="def-complex-conjugate-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2 (Complex conjugate of a complex vector or matrix)</strong></span> The <strong>complex conjugate</strong> of a complex vector or matrix takes the <a href="./algebra-complex.html#def-complex-conjugate">complex conjugate</a> of each entry: <span class="math inline">\((\overline{\mathbf{A}})_{jk} \stackrel{\text{def}}{=}\overline{a_{jk}}\)</span>.</p>
+<p><span class="theorem-title"><strong>Definition 3 (Complex conjugate of a complex vector or matrix)</strong></span> The <strong>complex conjugate</strong> of a complex vector or matrix takes the <a href="./algebra-complex.html#def-complex-conjugate">complex conjugate</a> of each entry: <span class="math inline">\((\overline{\mathbf{A}})_{jk} \stackrel{\text{def}}{=}\overline{a_{jk}}\)</span>.</p>
 </div>
 </section>
 <section class="slide level2">
 
 <div id="def-conjugate-transpose" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))</strong></span> The <strong>conjugate transpose</strong> (also called the <strong>Hermitian adjoint</strong>, <strong>Hermitian conjugate</strong>, or <strong>transjugate</strong>) of an <span class="math inline">\(m \times n\)</span> complex matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> obtained by transposing <span class="math inline">\(\mathbf{A}\)</span> and then taking the complex conjugate of each entry:</p>
+<p><span class="theorem-title"><strong>Definition 4 (Conjugate transpose (Hermitian adjoint, Hermitian conjugate, transjugate))</strong></span> The <strong>conjugate transpose</strong> (also called the <strong>Hermitian adjoint</strong>, <strong>Hermitian conjugate</strong>, or <strong>transjugate</strong>) of an <span class="math inline">\(m \times n\)</span> complex matrix <span class="math inline">\(\mathbf{A}\)</span> is the <span class="math inline">\(n \times m\)</span> matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> obtained by transposing <span class="math inline">\(\mathbf{A}\)</span> and then taking the complex conjugate of each entry:</p>
 <p><span class="math display">\[(\mathbf{A}^{\mathsf{H}})_{jk} \stackrel{\text{def}}{=}\overline{a_{kj}}
 \quad \text{for } j \in \{1, \ldots, n\},\ k \in \{1, \ldots, m\}.\]</span></p>
 </div>
@@ -377,7 +383,7 @@
 <section class="slide level2 scrollable">
 
 <div id="thm-hermitian-adjoint-properties" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1 (Properties of the Hermitian adjoint)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> be complex matrices of compatible dimensions, and let <span class="math inline">\(c \in \mathbb{C}\)</span> be a scalar. The Hermitian adjoint (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;3</a>) satisfies:</p>
+<p><span class="theorem-title"><strong>Theorem 1 (Properties of the Hermitian adjoint)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span> be complex matrices of compatible dimensions, and let <span class="math inline">\(c \in \mathbb{C}\)</span> be a scalar. The Hermitian adjoint (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>) satisfies:</p>
 <ol type="1">
 <li><strong>Involution</strong>: <span class="math display">\[(\mathbf{A}^{\mathsf{H}})^{\mathsf{H}} = \mathbf{A}\]</span></li>
 <li><strong>Additivity</strong>: <span class="math display">\[(\mathbf{A} + \mathbf{B})^{\mathsf{H}} = \mathbf{A}^{\mathsf{H}} + \mathbf{B}^{\mathsf{H}}\]</span></li>
@@ -426,7 +432,7 @@
 \begin{aligned}
 [(\mathbf{A}\mathbf{B})^{\mathsf{H}}]_{ij}
 &amp;= \overline{(\mathbf{A}\mathbf{B})_{ji}}
-&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{)}
+&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{)}
 \\
 &amp;= \overline{\sum_{s=1}^{k} a_{js}\,b_{si}}
 &amp;&amp; \text{(definition of matrix multiplication)}
@@ -438,7 +444,7 @@
 &amp;&amp; \text{(complex multiplication is commutative)}
 \\
 &amp;= \sum_{s=1}^{k} (\mathbf{B}^{\mathsf{H}})_{is}\,(\mathbf{A}^{\mathsf{H}})_{sj}
-&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{)}
+&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{)}
 \\
 &amp;= (\mathbf{B}^{\mathsf{H}}\mathbf{A}^{\mathsf{H}})_{ij}
 &amp;&amp; \text{(definition of matrix multiplication)}.
@@ -505,7 +511,7 @@
 \begin{aligned}
 \tilde{z}^{\mathsf{H}}\tilde{z}
 &amp;= \sum_{j=1}^p\overline{z_j}\,z_j
-&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{, and the row-times-column product)}
+&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{, and the row-times-column product)}
 \\
 &amp;= \sum_{j=1}^pz_j\,\overline{z_j}
 &amp;&amp; \text{(complex multiplication is commutative)}
@@ -585,7 +591,7 @@
 \begin{aligned}
 \underbrace{\tilde{z}^{\mathsf{H}}}_{1 \times 2}\,\underbrace{\tilde{z}}_{2 \times 1}
 &amp;= \overline{1} \cdot 1 + \overline{i} \cdot i
-&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~3}}\text{)}
+&amp;&amp; \text{(}\href{#def-conjugate-transpose}{\text{Definition~4}}\text{)}
 \\
 &amp;= 1 + (-i) \cdot i
 &amp;&amp; \text{(conjugate each entry)}
@@ -603,7 +609,7 @@
 <section class="slide level2">
 
 <div id="def-hermitian-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Hermitian matrix (self-adjoint matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>Hermitian</strong> (or <strong>self-adjoint</strong>) if it equals its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;3</a>):</p>
+<p><span class="theorem-title"><strong>Definition 5 (Hermitian matrix (self-adjoint matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>Hermitian</strong> (or <strong>self-adjoint</strong>) if it equals its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>):</p>
 <p><span class="math display">\[\mathbf{A}^{\mathsf{H}} = \mathbf{A}.\]</span></p>
 </div>
 </section>
@@ -651,7 +657,7 @@ i &amp; 0
 <section class="slide level2">
 
 <div id="def-skew-hermitian-matrix" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Skew-Hermitian matrix (anti-Hermitian matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>skew-Hermitian</strong> (or <strong>anti-Hermitian</strong>) if it equals the negative of its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;3</a>):</p>
+<p><span class="theorem-title"><strong>Definition 6 (Skew-Hermitian matrix (anti-Hermitian matrix))</strong></span> A square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> is <strong>skew-Hermitian</strong> (or <strong>anti-Hermitian</strong>) if it equals the negative of its conjugate transpose (<a href="#/def-conjugate-transpose" class="quarto-xref">Definition&nbsp;4</a>):</p>
 <p><span class="math display">\[\mathbf{A}^{\mathsf{H}} = -\mathbf{A}.\]</span></p>
 </div>
 </section>
@@ -709,7 +715,7 @@ a_{jj} + \overline{a_{jj}} &amp;= 2\operatorname{Re}(a_{jj}) \\
 <section class="slide level2">
 
 <div id="thm-hermitian-skew-hermitian-decomposition" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 4 (Hermitian and skew-Hermitian decomposition)</strong></span> Every square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> can be uniquely expressed as the sum of a Hermitian matrix <span class="math inline">\(\mathbf{H}\)</span> (<a href="#/def-hermitian-matrix" class="quarto-xref">Definition&nbsp;4</a>) and a skew-Hermitian matrix <span class="math inline">\(\mathbf{S}\)</span> (<a href="#/def-skew-hermitian-matrix" class="quarto-xref">Definition&nbsp;5</a>):</p>
+<p><span class="theorem-title"><strong>Theorem 4 (Hermitian and skew-Hermitian decomposition)</strong></span> Every square complex matrix <span class="math inline">\(\mathbf{A} \in \mathbb{C}^{n \times n}\)</span> can be uniquely expressed as the sum of a Hermitian matrix <span class="math inline">\(\mathbf{H}\)</span> (<a href="#/def-hermitian-matrix" class="quarto-xref">Definition&nbsp;5</a>) and a skew-Hermitian matrix <span class="math inline">\(\mathbf{S}\)</span> (<a href="#/def-skew-hermitian-matrix" class="quarto-xref">Definition&nbsp;6</a>):</p>
 <p><span class="math display">\[\mathbf{A} = \mathbf{H} + \mathbf{S},\]</span></p>
 <p>where</p>
 <p><span class="math display">\[\mathbf{H} = \frac{\mathbf{A} + \mathbf{A}^{\mathsf{H}}}{2}

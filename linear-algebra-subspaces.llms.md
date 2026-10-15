@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 09:23:43 (PDT)
+Last modified: 2026-10-15 10:07:44 (PDT)
 
 ## 1 Rank
 
@@ -148,7 +148,7 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 >
 > *Proof*. Compare entry \\i\\ of the two sides, for each \\i = 1, \ldots, m\\. Entry \\i\\ of \\\tilde{a}\_j\\ is \\a\_{ij}\\, so
 >
-> \\ \begin{aligned} (\mathbf{A} \tilde{x})\_i &= a\_{i1} x_1 + \cdots + a\_{in} x_n && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= x_1 a\_{i1} + \cdots + x_n a\_{in} && \text{(multiplication of numbers is commutative)} \\ &= (x_1 \tilde{a}\_1 + \cdots + x_n \tilde{a}\_n)\_i && \text{(entry } i \text{ of each } x_j \tilde{a}\_j \text{ is } x_j a\_{ij} \text{)} \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{A} \tilde{x})\_i &= a\_{i1} x_1 + \cdots + a\_{in} x_n && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= x_1 a\_{i1} + \cdots + x_n a\_{in} && \text{(multiplication of numbers is commutative)} \\ &= (x_1 \tilde{a}\_1 + \cdots + x_n \tilde{a}\_n)\_i && \text{(entry } i \text{ of each } x_j \tilde{a}\_j \text{ is } x_j a\_{ij} \text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -170,7 +170,7 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 >
 > **Example 9 (Applying a matrix to a combination)** Let \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\, \\\tilde{z}\_1 = (1, 0)\\ and \\\tilde{z}\_2 = (0, 1)\\. Then \\\mathbf{A} \tilde{z}\_1 = (1, 3)\\ and \\\mathbf{A} \tilde{z}\_2 = (2, 4)\\, and for the combination \\2 \tilde{z}\_1 - \tilde{z}\_2 = (2, -1)\\:
 >
-> \\ \begin{aligned} \mathbf{A}\\(2, -1) &= (1 \cdot 2 + 2 \cdot(-1),\\ 3 \cdot 2 + 4 \cdot(-1)) && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= (0, 2) && \text{(arithmetic)} \\ &= 2\\(1, 3) - (2, 4), && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{A}\\(2, -1) &= (1 \cdot 2 + 2 \cdot(-1),\\ 3 \cdot 2 + 4 \cdot(-1)) && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= (0, 2) && \text{(arithmetic)} \\ &= 2\\(1, 3) - (2, 4), && \text{(arithmetic)} \end{aligned} \\
 >
 > which is \\2\\\mathbf{A} \tilde{z}\_1 - \mathbf{A} \tilde{z}\_2\\, as [Theorem 4](#thm-matvec-linear) says.
 
@@ -252,13 +252,17 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Coordinates in a basis)** Let \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\ be a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), and let \\\tilde{x} \in \mathcal{S}\\. The **coordinates** of \\\tilde{x}\\ in this basis are the numbers \\c_1, \ldots, c_k\\ with \\\tilde{x} = c_1 \tilde{a}\_1 + \cdots + c_k \tilde{a}\_k\\, and \\(c_1, \ldots, c_k) \in \mathbb{R}^k\\ is the **coordinate vector** of \\\tilde{x}\\. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
+> **Definition 7 (Coordinates in a basis)** Let \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\ be a basis of a subspace \\\mathcal{S}\\ ([Definition 6](#def-basis)), and let \\\tilde{x} \in \mathcal{S}\\. The **coordinates** of \\\tilde{x}\\ in this basis are the numbers \\c_1, \ldots, c_k\\ with \\\tilde{x} = c_1 \tilde{a}\_1 + \cdots + c_k \tilde{a}\_k\\. By [Theorem 6](#thm-basis-unique) there is exactly one such list of numbers.
+
+> **NOTE:**
+>
+> **Definition 8 (Coordinate vector)** With \\\tilde{x}\\ and its coordinates \\c_1, \ldots, c_k\\ as in [Definition 7](#def-coordinates), \\(c_1, \ldots, c_k) \in \mathbb{R}^k\\ is the **coordinate vector** of \\\tilde{x}\\.
 
 > **NOTE:**
 >
 > **Example 14 (Coordinates of \\(4, 1)\\ in two bases of \\\mathbb{R}^2\\)** In the basis \\(1, 0), (1, 1)\\ of [Example 11](#exm-basis), the coordinates of \\(4, 1)\\ are \\3\\ and \\1\\:
 >
-> \\ \begin{aligned} 3\\(1, 0) + 1\\(1, 1) &= (3 + 1,\\ 0 + 1) && \text{(}\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~8 in Vectors}}\text{, entry by entry)} \\ &= (4, 1). && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} 3\\(1, 0) + 1\\(1, 1) &= (3 + 1,\\ 0 + 1) && \text{(}\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{, entry by entry)} \\ &= (4, 1). && \text{(add)} \end{aligned} \\
 >
 > In the basis \\(1, 0), (0, 1)\\, its coordinates are its entries, \\4\\ and \\1\\.
 
@@ -270,7 +274,7 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 >
 > *Proof*. Let \\\mathbf{A}\\ be the \\p \times k\\ matrix with columns \\\tilde{a}\_1, \ldots, \tilde{a}\_k\\, and \\\mathbf{B}\\ the \\p \times l\\ matrix with columns \\\tilde{b}\_1, \ldots, \tilde{b}\_l\\.
 >
-> **Write \\\mathbf{A}\\ in terms of \\\mathbf{B}\\.** Each \\\tilde{a}\_j\\ is in \\\mathcal{S}\\, and the \\\tilde{b}\\’s span \\\mathcal{S}\\ ([Definition 5](#def-span)), so \\\tilde{a}\_j = \mathbf{B} \tilde{c}\_j\\ for some \\\tilde{c}\_j \in \mathbb{R}^l\\ ([Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let \\\mathbf{C}\\ be the \\l \times k\\ matrix with columns \\\tilde{c}\_1, \ldots, \tilde{c}\_k\\. Then \\\underbrace{\mathbf{A}}\_{p \times k} = \underbrace{\mathbf{B}}\_{p \times l}\\\underbrace{\mathbf{C}}\_{l \times k}\\, because column \\j\\ of \\\mathbf{B} \mathbf{C}\\ is \\\mathbf{B} \tilde{c}\_j\\.
+> **Write \\\mathbf{A}\\ in terms of \\\mathbf{B}\\.** Each \\\tilde{a}\_j\\ is in \\\mathcal{S}\\, and the \\\tilde{b}\\’s span \\\mathcal{S}\\ ([Definition 5](#def-span)), so \\\tilde{a}\_j = \mathbf{B} \tilde{c}\_j\\ for some \\\tilde{c}\_j \in \mathbb{R}^l\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). Let \\\mathbf{C}\\ be the \\l \times k\\ matrix with columns \\\tilde{c}\_1, \ldots, \tilde{c}\_k\\. Then \\\underbrace{\mathbf{A}}\_{p \times k} = \underbrace{\mathbf{B}}\_{p \times l}\\\underbrace{\mathbf{C}}\_{l \times k}\\, because column \\j\\ of \\\mathbf{B} \mathbf{C}\\ is \\\mathbf{B} \tilde{c}\_j\\.
 >
 > **The columns of \\\mathbf{C}\\ are linearly independent.** Suppose \\\mathbf{C} \tilde{x} = \tilde{0}\\ for some \\\tilde{x} \in \mathbb{R}^k\\. Then
 >
@@ -286,14 +290,14 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Dimension)** The **dimension** of a subspace \\\mathcal{S}\\, written \\\dim(\mathcal{S})\\, is the number of vectors in any basis of \\\mathcal{S}\\ ([Definition 6](#def-basis)). [Theorem 7](#thm-basis-size) makes this number well defined. By convention, the empty list is the basis of \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, so \\\dim(\mathopen{}\left\\\tilde{0}\right\\\mathclose{}) = 0\\.
+> **Definition 9 (Dimension)** The **dimension** of a subspace \\\mathcal{S}\\, written \\\dim(\mathcal{S})\\, is the number of vectors in any basis of \\\mathcal{S}\\ ([Definition 6](#def-basis)). [Theorem 7](#thm-basis-size) makes this number well defined. By convention, the empty list is the basis of \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, so \\\dim(\mathopen{}\left\\\tilde{0}\right\\\mathclose{}) = 0\\.
 
 > **NOTE:**
 >
 > **Example 16 (The dimensions of some subspaces)**  
 >
-> - \\\dim(\mathopen{}\left\\\tilde{0}\right\\\mathclose{}) = 0\\, by the convention in [Definition 8](#def-dimension).
-> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \tilde{e}\_1 + \cdots + c_p \tilde{e}\_p = (c_1, \ldots, c_p)\\, which is \\\tilde{0}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\tilde{x} = x_1 \tilde{e}\_1 + \cdots + x_p \tilde{e}\_p\\.
+> - \\\dim(\mathopen{}\left\\\tilde{0}\right\\\mathclose{}) = 0\\, by the convention in [Definition 9](#def-dimension).
+> - \\\dim(\mathbb{R}^2) = 2\\, by [Example 11](#exm-basis). More generally, \\\dim(\mathbb{R}^p) = p\\: the indicator vectors \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) are linearly independent, since \\c_1 \tilde{e}\_1 + \cdots + c_p \tilde{e}\_p = (c_1, \ldots, c_p)\\, which is \\\tilde{0}\_p\\ only if every \\c_i = 0\\; and they span \\\mathbb{R}^p\\, since any \\\tilde{x} = x_1 \tilde{e}\_1 + \cdots + x_p \tilde{e}\_p\\.
 > - The line in [Example 3](#exm-subspace) has dimension \\1\\: the single vector \\(1, 2)\\ is linearly independent and spans the line.
 > - The plane \\z = 0\\ in [Example 6](#exm-span) has dimension \\2\\, with basis \\(1, 0, 0), (0, 1, 0)\\.
 
@@ -341,7 +345,7 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 10 (An independent list in a subspace has at most \\\dim\\ vectors)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = d\\ ([Definition 8](#def-dimension)).
+> **Theorem 10 (An independent list in a subspace has at most \\\dim\\ vectors)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ with \\\dim(\mathcal{S}) = d\\ ([Definition 9](#def-dimension)).
 >
 > 1.  Any linearly independent list of vectors in \\\mathcal{S}\\ has at most \\d\\ vectors.
 > 2.  If \\\mathcal{T}\\ is a subspace with \\\mathcal{T} \subseteq \mathcal{S}\\, then \\\dim(\mathcal{T}) \le \dim(\mathcal{S})\\.
@@ -364,7 +368,7 @@ Last modified: 2026-10-15 09:23:43 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 11 (A subspace inside another of the same dimension equals it)** If \\\mathcal{T}\\ and \\\mathcal{S}\\ are subspaces of \\\mathbb{R}^p\\ with \\\mathcal{T} \subseteq \mathcal{S}\\ and \\\dim(\mathcal{T}) = \dim(\mathcal{S})\\ ([Definition 8](#def-dimension)), then \\\mathcal{T} = \mathcal{S}\\.
+> **Theorem 11 (A subspace inside another of the same dimension equals it)** If \\\mathcal{T}\\ and \\\mathcal{S}\\ are subspaces of \\\mathbb{R}^p\\ with \\\mathcal{T} \subseteq \mathcal{S}\\ and \\\dim(\mathcal{T}) = \dim(\mathcal{S})\\ ([Definition 9](#def-dimension)), then \\\mathcal{T} = \mathcal{S}\\.
 
 > **NOTE:**
 >

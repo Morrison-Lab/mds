@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 09:23:43 (PDT)
+Last modified: 2026-10-15 10:07:44 (PDT)
 
 ## 1 Special Matrices
 
@@ -12,7 +12,7 @@ Some special matrices appeared earlier:
 
 - the zero matrix ([Definition 4 in Matrices](linear-algebra-matrices.llms.md#def-zero-matrix)), in the section on matrix addition
 - square matrices ([Definition 8 in Matrices](linear-algebra-matrices.llms.md#def-square-matrix)), in the section on square and identity matrices
-- the identity matrix ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)), in that same section
+- the identity matrix ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)), in that same section
 
 > **NOTE:**
 >
@@ -84,7 +84,7 @@ Some special matrices appeared earlier:
 >
 > \\ \begin{aligned} \mathbf{A}\mathbf{B} &= \mathbf{B}\mathbf{A} \\ &= \mathbf{I}\_p, \end{aligned} \\
 >
-> where \\\mathbf{I}\_p\\ is the identity matrix ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)). A square matrix that is not invertible is **singular**.
+> where \\\mathbf{I}\_p\\ is the identity matrix ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)). A square matrix that is not invertible is **singular**.
 
 > **NOTE:**
 >
@@ -270,7 +270,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Remark 5* (The columns of an orthogonal matrix are orthonormal). Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 5](#def-matrix-inverse)) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
+> *Remark 5* (The columns of an orthogonal matrix are orthonormal). Entry \\(i, j)\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ is the dot product of column \\i\\ and column \\j\\ of \\\mathbf{Q}\\, so \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ says that the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). For a square matrix, \\{\mathbf{Q}}^{\top}\mathbf{Q} = \mathbf{I}\_p\\ also implies \\\mathbf{Q}{\mathbf{Q}}^{\top} = \mathbf{I}\_p\\, so \\\mathbf{Q}^{-1} = {\mathbf{Q}}^{\top}\\ ([Definition 5](#def-matrix-inverse)) ([Banerjee and Roy 2014, chap. 8](#ref-banerjee2014linear), Theorem 8.1 and Definition 8.1, p. 209).
 >
 > For example, the columns of \\\mathbf{Q}\\ in [Example 11](#exm-orthogonal-matrix) are \\(0.6, 0.8)\\ and \\(-0.8, 0.6)\\. The diagonal entries \\0.36 + 0.64 = 1\\ of \\{\mathbf{Q}}^{\top}\mathbf{Q}\\ are their squared norms, and the off-diagonal entries \\-0.48 + 0.48 = 0\\ are their dot product. Multiplying in the other order also gives \\\mathbf{I}\_2\\:
 >
@@ -491,7 +491,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 8* (The matrix inner product as a dot product). [Theorem 9](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 7 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)) of the two matrices’ entries, each listed as one vector of length \\np\\, with both matrices’ entries listed in the same order.
+> *Remark 8* (The matrix inner product as a dot product). [Theorem 9](#thm-matrix-inner-product-entries) says that the matrix inner product is the dot product ([Definition 8 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)) of the two matrices’ entries, each listed as one vector of length \\np\\, with both matrices’ entries listed in the same order.
 >
 > For example, listing the entries of \\\mathbf{A}\\ and \\\mathbf{B}\\ in [Example 19](#exm-matrix-inner-product) row by row gives \\(1, 2, 3, 4)\\ and \\(0, 1, -1, 2)\\, and
 >
@@ -515,7 +515,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 9* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 9](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
+> *Remark 9* (The Frobenius norm is the Euclidean norm of the entries). By [Theorem 9](#thm-matrix-inner-product-entries), \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2\\, a sum of squares, so the square root is always defined. \\\mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F\\ is the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) of the entries of \\\mathbf{A}\\, listed as one vector of length \\np\\ ([Banerjee and Roy 2014, chap. 15](#ref-banerjee2014linear), Definition 15.4, p. 492).
 >
 > For example, listing the entries of \\\mathbf{A}\\ in [Example 20](#exm-frobenius-norm) row by row gives the vector \\(1, 2, 3, 4)\\ of length \\2 \cdot 2 = 4\\, and
 >
@@ -531,7 +531,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > *Proof*. Entry \\i\\ of \\\tilde{a}\_j\\ is \\a\_{ij}\\, so
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2 && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~9}}\text{)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}^2 && \text{(swap the order of two finite sums)} \\ &= \sum\_{j=1}^p\mathopen{}\left\lVert\tilde{a}\_j\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-vectors.qmd#def-euclidean-norm}{\text{Definition~15 in Vectors}}\text{, applied to each column)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F^2 &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}^2 && \text{(}\href{#rem-frobenius-norm-entries}{\text{Remark~9}}\text{)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}^2 && \text{(swap the order of two finite sums)} \\ &= \sum\_{j=1}^p\mathopen{}\left\lVert\tilde{a}\_j\right\rVert\mathclose{}^2 && \text{(}\href{linear-algebra-vectors.qmd#def-euclidean-norm}{\text{Definition~16 in Vectors}}\text{, applied to each column)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -635,11 +635,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Example 24 (An eigendecomposition of a \\2 \times 2\\ symmetric matrix)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\, [Example 22](#exm-eigenvalue) found the eigenvectors \\(1, 1)\\ for \\3\\ and \\(1, -1)\\ for \\1\\. They are orthogonal ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)):
+> **Example 24 (An eigendecomposition of a \\2 \times 2\\ symmetric matrix)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\, [Example 22](#exm-eigenvalue) found the eigenvectors \\(1, 1)\\ for \\3\\ and \\(1, -1)\\ for \\1\\. They are orthogonal ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)):
 >
 > \\ \begin{aligned} (1, 1) \cdot (1, -1) &= 1 \cdot 1 + 1 \cdot(-1) && \text{(definition of the dot product)} \\ &= 1 - 1 && \text{(multiply)} \\ &= 0 && \text{(add)} \end{aligned} \\
 >
-> Each has norm \\\sqrt{1^2 + 1^2} = \sqrt{2}\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)), so dividing each by \\\sqrt{2}\\ gives two orthonormal eigenvectors ([Definition 18 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). Put them in the columns of \\\mathbf{Q}\\, and the matching eigenvalues on the diagonal of \\\mathbf{\Lambda}\\:
+> Each has norm \\\sqrt{1^2 + 1^2} = \sqrt{2}\\ ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)), so dividing each by \\\sqrt{2}\\ gives two orthonormal eigenvectors ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)). Put them in the columns of \\\mathbf{Q}\\, and the matching eigenvalues on the diagonal of \\\mathbf{\Lambda}\\:
 >
 > \\ \mathbf{Q} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \qquad \mathbf{\Lambda} = \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix} \\
 >
@@ -783,7 +783,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > For \\i \> r\\, every term is \\0\\, so \\\lambda_i = 0\\.
 >
-> **The eigenvectors.** Write \\\tilde{v}\_i\\ for column \\i\\ of \\\mathbf{V}\\, and \\\tilde{e}\_i\\ for the indicator vector ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) of length \\p\\. Column \\i\\ of \\{\mathbf{V}}^{\top}\mathbf{V} = \mathbf{I}\_p\\ says \\{\mathbf{V}}^{\top}\tilde{v}\_i = \tilde{e}\_i\\. Then
+> **The eigenvectors.** Write \\\tilde{v}\_i\\ for column \\i\\ of \\\mathbf{V}\\, and \\\tilde{e}\_i\\ for the indicator vector ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)) of length \\p\\. Column \\i\\ of \\{\mathbf{V}}^{\top}\mathbf{V} = \mathbf{I}\_p\\ says \\{\mathbf{V}}^{\top}\tilde{v}\_i = \tilde{e}\_i\\. Then
 >
 > \\ \begin{aligned} {\mathbf{A}}^{\top}\mathbf{A}\\\tilde{v}\_i &= \mathbf{V}\mathbf{\Lambda}\\{\mathbf{V}}^{\top}\tilde{v}\_i && \text{(the factorization)} \\ &= \mathbf{V}\mathbf{\Lambda}\\\tilde{e}\_i && \text{(} {\mathbf{V}}^{\top}\tilde{v}\_i = \tilde{e}\_i \text{)} \\ &= \mathbf{V}\\(\lambda_i\\\tilde{e}\_i) && \text{(column } i \text{ of the diagonal matrix } \mathbf{\Lambda} \text{)} \\ &= \lambda_i\\\mathbf{V}\tilde{e}\_i && \text{(move the scalar } \lambda_i \text{ to the front)} \\ &= \lambda_i\\\tilde{v}\_i && \text{(} \mathbf{V}\tilde{e}\_i \text{ is column } i \text{ of } \mathbf{V} \text{)} \end{aligned} \\
 >
@@ -837,7 +837,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > **Example 28 (Positive definite, semidefinite, and neither)**  
 >
-> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top} \mathbf{I}\_p \tilde{x} = \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
+> - The identity matrix \\\mathbf{I}\_p\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)) is positive definite: \\{\tilde{x}}^{\top} \mathbf{I}\_p \tilde{x} = \sum\_{i=1}^px_i^2\\, which is positive unless every \\x_i\\ is \\0\\.
 >
 > - \\\mathbf{B} = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\\ from [Example 27](#exm-positive-semidefinite) is positive semidefinite but not positive definite: at \\\tilde{x}= (1, -1) \neq \tilde{0}\\,
 >
@@ -980,7 +980,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > For vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (3, -1)\\, their inner product induced by \\\mathbf{A}\\ is:
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} && \text{(substitute vectors and matrix)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix} && \text{(multiply and add)} \\ &= 1 \cdot 5 + 2 \cdot 1 && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= 7. && \text{(multiply and add)} \end{aligned} \\
+> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} && \text{(substitute vectors and matrix)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix} && \text{(multiply and add)} \\ &= 1 \cdot 5 + 2 \cdot 1 && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= 7. && \text{(multiply and add)} \end{aligned} \\
 >
 > In contrast, the standard dot product yields:
 >
@@ -998,7 +998,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > Taking \\\mathbf{A} = \mathbf{I}\_p\\ recovers the standard dot product ([Example 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-dot-product-inner-product)), while taking \\\mathbf{A} = \operatorname{diag}(c_1, \ldots, c_p)\\ recovers the weighted inner product ([Example 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-weighted-inner-product)).
 >
-> Conversely, every inner product on \\\mathbb{R}^p\\ has this form for a unique symmetric positive definite matrix \\\mathbf{A}\\, whose \\(i, j)\\ entry is \\A\_{ij} = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\\, where \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ are the standard basis vectors ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
+> Conversely, every inner product on \\\mathbb{R}^p\\ has this form for a unique symmetric positive definite matrix \\\mathbf{A}\\, whose \\(i, j)\\ entry is \\A\_{ij} = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\\, where \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ are the standard basis vectors ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
 
 > **NOTE:**
 >
@@ -1009,9 +1009,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 > - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\mathbf{A}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 > - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \left\langle \tilde{y}, \tilde{x} \right\rangle\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
 >
-> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^px_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
+> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^px_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
 >
 > Symmetry of \\\left\langle \cdot, \cdot \right\rangle\\ ensures
 >
