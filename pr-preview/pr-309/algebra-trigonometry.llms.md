@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 02:50:52 (PDT)
+Last modified: 2026-10-15 05:32:53 (PDT)
 
 ## 1 Cosine and sine
 
@@ -40,7 +40,11 @@ Last modified: 2026-10-15 02:50:52 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta) \approx\\ (0.5, 0.866), and its two coordinates. As [Theorem 1](#thm-cosine-sine-identity) says, the squared coordinates add to 1.
+> **Example 2 (The unit circle and the angle \\\pi/3\\)** Take \\\theta= \pi/3\\, one sixth of the way round the circle. [Figure 1](#fig-cosine-sine-unit-circle) shows the point reached, \\(\cos\theta, \sin\theta)\\, and its two coordinates. The point is a vertex of a regular hexagon inscribed in the unit circle, whose sides have the same length as its radius, so the point is at distance \\1\\ from \\(1, 0)\\. Writing \\(x_1, x_2) = (\cos\theta, \sin\theta)\\,
+>
+> \\ \begin{aligned} 1 &= (x_1 - 1)^2 + x_2^2 \\ &= x_1^2 + x_2^2 - 2 x_1 + 1 \\ &= 2 - 2 x_1, \end{aligned} \\
+>
+> so \\\cos(\pi/3) = x_1 = \tfrac{1}{2}\\, and then \\\sin(\pi/3) = \sqrt{1 - \tfrac{1}{4}} = \tfrac{\sqrt{3}}{2}\\. To three decimal places these are 0.5 and 0.866. As [Theorem 1](#thm-cosine-sine-identity) says, the squared coordinates add to 1.
 >
 > > **NOTE:**
 > >
@@ -104,6 +108,6 @@ Last modified: 2026-10-15 02:50:52 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. For \\\theta\in \[0, \pi\]\\, the point \\(\cos\theta, \sin\theta)\\ is at distance \\\theta\\ along the circle from \\(1, 0)\\, counterclockwise, so it lies on the upper half of the unit circle, \\\mathopen{}\left\\(x_1, x_2) : x_1^2 + x_2^2 = 1,\\ x_2 \ge 0\right\\\mathclose{}\\, which gives \\\sin\theta\ge 0\\. Different values of \\\theta\\ in \\\[0, \pi\]\\ are different distances along that half circle, so they give different points. Two different points of the upper half have different first coordinates, because \\x_2 = \sqrt{1 - x_1^2}\\ is determined by \\x_1\\. So \\\cos\\ is one-to-one on \\\[0, \pi\]\\. Every \\x_1 \in \[-1, 1\]\\ is the first coordinate of the point \\(x_1, \sqrt{1 - x_1^2})\\ of the upper half, and the distance along the half circle from \\(1, 0)\\ to that point is some \\\theta\in \[0, \pi\]\\, so \\\cos\\ takes every value in \\\[-1, 1\]\\. A one-to-one continuous function that goes from \\1\\ at \\0\\ to \\-1\\ at \\\pi\\ is decreasing.
+> *Proof*. For \\\theta\in \[0, \pi\]\\, the point \\(\cos\theta, \sin\theta)\\ is at distance \\\theta\\ along the circle from \\(1, 0)\\, counterclockwise, so it lies on the upper half of the unit circle, \\\mathopen{}\left\\(x_1, x_2) : x_1^2 + x_2^2 = 1,\\ x_2 \ge 0\right\\\mathclose{}\\, which gives \\\sin\theta\ge 0\\. Different values of \\\theta\\ in \\\[0, \pi\]\\ are different distances along that half circle, so they give different points. Two different points of the upper half have different first coordinates, because \\x_2 = \sqrt{1 - x_1^2}\\ is determined by \\x_1\\. So \\\cos\\ is one-to-one on \\\[0, \pi\]\\. Every \\x_1 \in \[-1, 1\]\\ is the first coordinate of the point \\(x_1, \sqrt{1 - x_1^2})\\ of the upper half, and the distance along the half circle from \\(1, 0)\\ to that point is some \\\theta\in \[0, \pi\]\\, so \\\cos\\ takes every value in \\\[-1, 1\]\\. Finally, move along the upper half circle from \\(1, 0)\\ to \\(-1, 0)\\ as \\\theta\\ increases from \\0\\ to \\\pi\\. The first coordinate never takes the same value twice, so it never turns back. It starts at \\\cos 0 = 1\\ and ends at \\\cos\pi = -1\\, so it only decreases.
 
 Back to top

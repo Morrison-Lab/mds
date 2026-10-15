@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 02:50:52 (PDT)
+Last modified: 2026-10-15 05:32:53 (PDT)
 
 ## 1 Inner products
 
@@ -38,7 +38,7 @@ Last modified: 2026-10-15 02:50:52 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Inner product space)** An **inner product space** is a pair \\(\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle)\\ of the space \\\mathbb{R}^p\\ ([Definition 2 in Vectors](linear-algebra-vectors.llms.md#def-real-coordinate-space)) and an inner product \\\left\langle \cdot, \cdot \right\rangle\\ on it ([Definition 1](#def-inner-product)). We say that \\\mathbb{R}^p\\ is **equipped with** that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space.
+> **Definition 2 (Inner product space)** A **real inner product space** is a pair \\(V, \left\langle \cdot, \cdot \right\rangle)\\ of a real vector space \\V\\ and an inner product \\\left\langle \cdot, \cdot \right\rangle\\ on it, a function with the four properties of [Definition 1](#def-inner-product). We say that \\V\\ is **equipped with** that inner product: the inner product is part of the data of the space, so the same set of vectors with a different inner product is a different inner product space. [Definition 1](#def-inner-product) states the properties for \\V = \mathbb{R}^p\\ ([Definition 2 in Vectors](linear-algebra-vectors.llms.md#def-real-coordinate-space)), and the same four properties define an inner product on other real vector spaces, such as spaces of matrices or functions.
 
 > **NOTE:**
 >
@@ -501,6 +501,18 @@ Last modified: 2026-10-15 02:50:52 (PDT)
 
 > **NOTE:**
 >
+> **Corollary 3 (Cosine similarity of unit vectors is their inner product)** In a real inner product space ([Definition 2](#def-inner-product-space)), for all vectors \\\tilde{x}\\ and \\\tilde{y}\\ with \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\,
+>
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \left\langle \tilde{x}, \tilde{y} \right\rangle. \\
+
+> **NOTE:**
+>
+> *Proof*. Both norms in the denominator of [Definition 9](#def-cosine-similarity-inner-product-space) equal \\1\\, so
+>
+> \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{1 \cdot 1} = \left\langle \tilde{x}, \tilde{y} \right\rangle. \\
+
+> **NOTE:**
+>
 > **Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)** Let \\\tilde{x}, \tilde{y}\in \mathbb{R}^n\\ be two vectors that are not constant, with means \\\bar{x} = \frac{1}{n}\sum\_{i=1}^nx_i\\ and \\\bar{y} = \frac{1}{n}\sum\_{i=1}^ny_i\\. Write \\\tilde{\tilde{x}} = \tilde{x}- \bar{x}\\\tilde{1}\\ and \\\tilde{\tilde{y}} = \tilde{y}- \bar{y}\\\tilde{1}\\ for the **centered** vectors, whose means are zero. Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r) \\r\\ of the \\n\\ pairs \\(x_i, y_i)\\ is the cosine similarity ([Definition 8](#def-cosine-similarity)) of the centered vectors:
 >
 > \\ r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}). \\
@@ -727,7 +739,7 @@ Last modified: 2026-10-15 02:50:52 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 3 (Every subspace has an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\. Every orthonormal list of vectors in \\\mathcal{S}\\ extends to an orthonormal basis of \\\mathcal{S}\\ ([Definition 10](#def-orthonormal-basis)). Starting from the empty list shows that \\\mathcal{S}\\ has an orthonormal basis.
+> **Corollary 4 (Every subspace has an orthonormal basis)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\. Every orthonormal list of vectors in \\\mathcal{S}\\ extends to an orthonormal basis of \\\mathcal{S}\\ ([Definition 10](#def-orthonormal-basis)). Starting from the empty list shows that \\\mathcal{S}\\ has an orthonormal basis.
 
 > **NOTE:**
 >
