@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Column space and null space
 
@@ -40,7 +40,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \mathbf{A} \tilde{x} &= (x_1 - 2x_2 - 2x_3,\\ 3\\(x_1 - 2x_2 - 2x_3)) \\ &= (x_1 - 2x_2 - 2x_3)\\(1, 3) \end{aligned} \\
 >
-> ([Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). The number \\x_1 - 2x_2 - 2x_3\\ can be any real number (take \\x_2 = 0\\ and \\x_3 = 0\\), so \\\mathcal{C}(\mathbf{A}) = \mathopen{}\left\\c\\(1, 3) : c \in \mathbb{R}\right\\\mathclose{}\\, a line in \\\mathbb{R}^2\\. The vector \\(1, 0)\\ is not in \\\mathcal{C}(\mathbf{A})\\: \\c\\(1, 3)\\ has second entry \\3c\\, which is \\0\\ only if \\c = 0\\, and then the first entry is \\0\\, not \\1\\.
+> ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)). The number \\x_1 - 2x_2 - 2x_3\\ can be any real number (take \\x_2 = 0\\ and \\x_3 = 0\\), so \\\mathcal{C}(\mathbf{A}) = \mathopen{}\left\\c\\(1, 3) : c \in \mathbb{R}\right\\\mathclose{}\\, a line in \\\mathbb{R}^2\\. The vector \\(1, 0)\\ is not in \\\mathcal{C}(\mathbf{A})\\: \\c\\(1, 3)\\ has second entry \\3c\\, which is \\0\\ only if \\c = 0\\, and then the first entry is \\0\\, not \\1\\.
 
 > **NOTE:**
 >
@@ -92,7 +92,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > and, for each entry \\i = 1, \ldots, m\\,
 >
-> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}\\(c \tilde{u})\right)\mathclose{}\_i &= a\_{i1} (c u_1) + \cdots + a\_{in} (c u_n) && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= c\\(a\_{i1} u_1 + \cdots + a\_{in} u_n) && \text{(factor } c \text{ out of each term)} \\ &= c\\(\mathbf{A} \tilde{u})\_i && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= c \cdot 0 && \text{(} \tilde{u} \text{ is in the null space)} \\ &= 0, && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}\\(c \tilde{u})\right)\mathclose{}\_i &= a\_{i1} (c u_1) + \cdots + a\_{in} (c u_n) && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= c\\(a\_{i1} u_1 + \cdots + a\_{in} u_n) && \text{(factor } c \text{ out of each term)} \\ &= c\\(\mathbf{A} \tilde{u})\_i && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= c \cdot 0 && \text{(} \tilde{u} \text{ is in the null space)} \\ &= 0, && \text{(arithmetic)} \end{aligned} \\
 >
 > so \\\mathbf{A}\\(c \tilde{u}) = \tilde{0}\_m\\. Therefore \\\tilde{u} + \tilde{w}\\ and \\c \tilde{u}\\ are in \\\mathcal{N}(\mathbf{A})\\.
 
@@ -256,7 +256,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > **The chosen columns span \\\mathcal{C}(\mathbf{A})\\.** The span of the chosen columns is a subspace ([Theorem 2 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-span-subspace)), so it is closed under addition and scalar multiplication, and it contains every linear combination of the columns of \\\mathbf{A}\\. By [Theorem 1](#thm-column-space-span), those combinations make up \\\mathcal{C}(\mathbf{A})\\, so \\\mathcal{C}(\mathbf{A})\\ is contained in the span of the chosen columns. The chosen columns are themselves columns of \\\mathbf{A}\\, so their span is contained in \\\mathcal{C}(\mathbf{A})\\, and the two sets are equal.
 >
-> The chosen columns are linearly independent and span \\\mathcal{C}(\mathbf{A})\\, so they are a basis of it, and \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)). If \\r = 0\\, every column is \\\tilde{0}\_m\\, \\\mathcal{C}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_m\right\\\mathclose{}\\, and both sides are \\0\\.
+> The chosen columns are linearly independent and span \\\mathcal{C}(\mathbf{A})\\, so they are a basis of it, and \\\dim\mathopen{}\left(\mathcal{C}(\mathbf{A})\right)\mathclose{} = r\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)). If \\r = 0\\, every column is \\\tilde{0}\_m\\, \\\mathcal{C}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_m\right\\\mathclose{}\\, and both sides are \\0\\.
 
 > **NOTE:**
 >
@@ -378,23 +378,23 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > \\ \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{S}\right\\\mathclose{} \\
 >
-> for some vector \\\tilde{x}\_0 \in \mathbb{R}^p\\ and some subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)): the [image](sets-functions.llms.md#def-image) of \\\mathcal{S}\\ under the translation by \\\tilde{x}\_0\\ ([Definition 16 in Matrices](linear-algebra-matrices.llms.md#def-translation)).
+> for some vector \\\tilde{x}\_0 \in \mathbb{R}^p\\ and some subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)): the [image](sets-functions.llms.md#def-image) of \\\mathcal{S}\\ under the translation by \\\tilde{x}\_0\\ ([Definition 18 in Matrices](linear-algebra-matrices.llms.md#def-translation)).
 
 > **NOTE:**
 >
 > **Example 17 (A line that misses the origin is an affine subspace)** The line \\\mathcal{T} = \mathopen{}\left\\(x, 1) : x \in \mathbb{R}\right\\\mathclose{}\\ of [Example 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-not-subspace) is not a subspace, but it is an affine subspace, with \\\tilde{x}\_0 = (0, 1)\\ and \\\mathcal{S} = \operatorname{span}\mathopen{}\left\\(1, 0)\right\\\mathclose{}\\ ([Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)):
 >
-> \\ \begin{aligned} (0, 1) + c\\(1, 0) &= (0 + c,\\ 1 + 0) && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)} \\ &= (c, 1), && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} (0, 1) + c\\(1, 0) &= (0 + c,\\ 1 + 0) && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= (c, 1), && \text{(add)} \end{aligned} \\
 >
 > and as \\c\\ ranges over \\\mathbb{R}\\, \\(c, 1)\\ ranges over all of \\\mathcal{T}\\. Every subspace \\\mathcal{S}\\ is also an affine subspace, with \\\tilde{x}\_0 = \tilde{0}\\.
 
 > **NOTE:**
 >
-> **Theorem 11 (A hyperplane is a translated subspace of dimension \\p - 1\\)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b = 0\right\\\mathclose{}\\ be the hyperplane with normal vector \\\tilde{w}\\ and offset \\b\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and let \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}= 0\right\\\mathclose{}\\ be the hyperplane with the same normal vector and offset \\0\\.
+> **Theorem 11 (A hyperplane is a translated subspace of dimension \\p - 1\\)** Let \\\tilde{w} \in \mathbb{R}^p\\ be nonzero, let \\b \in \mathbb{R}\\, let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}+ b = 0\right\\\mathclose{}\\ be the hyperplane with normal vector \\\tilde{w}\\ and offset \\b\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and let \\\mathcal{H}\_0 = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w}^{\top} \tilde{x}= 0\right\\\mathclose{}\\ be the hyperplane with the same normal vector and offset \\0\\.
 >
-> 1.  \\\mathcal{H}\_0\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension \\p - 1\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
+> 1.  \\\mathcal{H}\_0\\ is a subspace of \\\mathbb{R}^p\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)) of dimension \\p - 1\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
 > 2.  \\\mathcal{H}\\ is not empty, and for any \\\tilde{x}\_0 \in \mathcal{H}\\, \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + \tilde{s} : \tilde{s} \in \mathcal{H}\_0\right\\\mathclose{}\\, so \\\mathcal{H}\\ is an affine subspace ([Definition 8](#def-affine-subspace)).
-> 3.  For any \\\tilde{x}, \tilde{y}\in \mathcal{H}\\, the normal vector is orthogonal to their difference: \\\tilde{w} \perp (\tilde{x}- \tilde{y})\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
+> 3.  For any \\\tilde{x}, \tilde{y}\in \mathcal{H}\\, the normal vector is orthogonal to their difference: \\\tilde{w} \perp (\tilde{x}- \tilde{y})\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)).
 
 > **NOTE:**
 >
@@ -438,7 +438,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Theorem 12 (Where a hyperplane passes, and its shape in \\\mathbb{R}^2\\ and \\\mathbb{R}^3\\)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
+> **Theorem 12 (Where a hyperplane passes, and its shape in \\\mathbb{R}^2\\ and \\\mathbb{R}^3\\)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)).
 >
 > 1.  \\\mathcal{H}\\ contains the origin \\\tilde{0}\\ exactly when \\b = 0\\.
 > 2.  If \\p = 2\\, then \\\mathcal{H}\\ is a line: \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\_0 + t\\\tilde{v} : t \in \mathbb{R}\right\\\mathclose{}\\ for some \\\tilde{x}\_0 \in \mathbb{R}^2\\ and some nonzero \\\tilde{v} \in \mathbb{R}^2\\.
@@ -495,7 +495,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 9 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
+> **Definition 9 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
 >
 > \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b \< 0\right\\\mathclose{}. \tag{1}\\
 >
@@ -507,7 +507,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Example 20 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\tilde{w} = (1, 2)\\ and \\b = -2\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\tilde{w} \cdot \tilde{x} + b\\ at three points ([Definition 9](#def-half-space)):
+> **Example 20 (Half-spaces of a line in the plane)** Let \\\mathcal{H}\\ be the line in \\\mathbb{R}^2\\ with \\\tilde{w} = (1, 2)\\ and \\b = -2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), so \\\mathcal{H} = \mathopen{}\left\\\tilde{x}: x_1 + 2 x_2 - 2 = 0\right\\\mathclose{}\\. Evaluate \\\tilde{w} \cdot \tilde{x} + b\\ at three points ([Definition 9](#def-half-space)):
 >
 > - At \\(0, 0)\\ it equals \\0 + 0 - 2 = -2 \< 0\\, so \\(0, 0) \in \mathcal{H}^-\\.
 > - At \\(2, 0)\\ it equals \\2 + 0 - 2 = 0\\, so \\(2, 0) \in \mathcal{H}\\.
@@ -540,13 +540,13 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >
 > \\ \begin{aligned} \tilde{w} \cdot (\tilde{x}\_t + \tilde{v}) + b &= \mathopen{}\left(\tilde{w} \cdot \tilde{x}\_t + b\right)\mathclose{} + \tilde{w} \cdot \tilde{v} && \text{(linearity of } \tilde{x}\mapsto \tilde{w} \cdot \tilde{x} \text{)} \\ &= t\\\tilde{w} \cdot \tilde{w} + \tilde{w} \cdot \tilde{v}. && \text{(the display above)} \end{aligned} \\
 >
-> Because \\\tilde{w} \cdot \tilde{w} \> 0\\, this is positive once \\t \> -\tilde{w} \cdot \tilde{v} / \tilde{w} \cdot \tilde{w}\\. Choose such a \\t \> 0\\. Then \\\tilde{x}\_t\\ and \\\tilde{x}\_t + \tilde{v}\\ are both in \\\mathcal{H}^+\\, and their difference is \\\tilde{v}\\. So \\\tilde{v} \in D(\mathcal{H}^+)\\. The whole space \\\mathbb{R}^p\\ is a subspace of dimension \\p\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
+> Because \\\tilde{w} \cdot \tilde{w} \> 0\\, this is positive once \\t \> -\tilde{w} \cdot \tilde{v} / \tilde{w} \cdot \tilde{w}\\. Choose such a \\t \> 0\\. Then \\\tilde{x}\_t\\ and \\\tilde{x}\_t + \tilde{v}\\ are both in \\\mathcal{H}^+\\, and their difference is \\\tilde{v}\\. So \\\tilde{v} \in D(\mathcal{H}^+)\\. The whole space \\\mathbb{R}^p\\ is a subspace of dimension \\p\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)).
 >
 > The proof for \\\mathcal{H}^-\\ is the same with \\-\tilde{w}\\ and \\-b\\ in place of \\\tilde{w}\\ and \\b\\.
 
 > **NOTE:**
 >
-> **Example 21 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\tilde{x}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\tilde{x}\\ gives a coefficient vector \\\tilde{w}\\ and an intercept \\b\\. The line \\\tilde{w} \cdot \tilde{x} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 19 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
+> **Example 21 (Two iris species on either side of a line)** The `iris` data set in R has the petal length and petal width, in centimeters, of 150 irises. Take the 100 flowers of the species versicolor and virginica, and let \\\tilde{x}= (x_1, x_2)\\ be the petal length and petal width of one flower. A logistic regression of the species on \\\tilde{x}\\ gives a coefficient vector \\\tilde{w}\\ and an intercept \\b\\. The line \\\tilde{w} \cdot \tilde{x} + b = 0\\ is a hyperplane in \\\mathbb{R}^2\\ ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)), and the two species mostly fall in its two open half-spaces ([Definition 9](#def-half-space)). [Figure 1](#fig-half-space-iris) shows the line and the flowers.
 >
 > Show R code
 >

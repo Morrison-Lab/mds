@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 The linear algebra notes are split across these pages:
 
@@ -29,6 +29,7 @@ A link to a section, theorem or definition on this page from before the split go
 - Banerjee and Roy ([2014](#ref-banerjee2014linear))
 - Searle and Khuri ([2017](#ref-searle2017matrix))
 - Petersen and Pedersen ([2012](#ref-petersen2012matrix)) is a free desk reference that collects matrix identities: it lists results on determinants, inverses, decompositions, and [derivatives](calculus-derivatives.llms.md#def-derivative) of vectors and matrices, so it is a quick place to look up a formula these pages prove.
+- Stanford University ([2024](#ref-stanford2024ee278notes)) (Stanford EE 278, taught by Tsachy Weissman) applies this page’s tools to probability and inference. Its “MMSE Geometry” lecture treats the best estimate as an orthogonal [projection](linear-algebra-projections.llms.md), and its lectures on spectral decomposition, the Karhunen-Loeve expansion and principal component analysis treat [diagonalization](linear-algebra-diagonalization.llms.md) of a covariance matrix.
 - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) is a 16-video YouTube playlist by Grant Sanderson (3Blue1Brown) that develops visual and geometric intuition for vectors, linear combinations, spans, linear transformations, matrix multiplication, determinants, inverses, dot and cross products, change of basis, and eigenvectors and eigenvalues.
 
 ## References
@@ -42,6 +43,8 @@ Fieller, Nick. 2016. *Basics of Matrix Algebra for Statistics with R*. Chapman; 
 Petersen, Kaare Brandt, and Michael Syskind Pedersen. 2012. *The Matrix Cookbook*. Technical University of Denmark. <https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf>.
 
 Searle, Shayle R, and Andre I Khuri. 2017. *Matrix Algebra Useful for Statistics*. John Wiley & Sons.
+
+Stanford University. 2024. *EE 278, Probability and Statistical Inference: Fall 2024 Lecture Notes*. Handwritten lecture notes. <https://web.stanford.edu/class/ee278/lectures.html>.
 
 Strang, Gilbert. 2023. *Introduction to Linear Algebra*. 6th ed. Wellesley-Cambridge Press. <https://math.mit.edu/~gs/linearalgebra/>.
 

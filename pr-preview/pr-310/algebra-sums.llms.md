@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Convex functions
 
@@ -96,7 +96,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 13 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 12 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
+> *Proof*. Let \\x^\*\\ be a local minimizer of \\f\\, so there is a \\\delta\> 0\\ with \\f(x^\*) \le f(x)\\ whenever \\\mathopen{}\left\lVert x - x^\*\right\rVert\mathclose{} \< \delta\\ ([Definition 17 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-local-minimizer)). Suppose \\x^\*\\ is not a global minimizer ([Definition 16 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-global-minimizer)). Then some \\y \in \mathbb{R}^p\\ has \\f(y) \< f(x^\*)\\, and in particular \\y \ne x^\*\\.
 >
 > Let \\t = \min\mathopen{}\left\\\tfrac{1}{2}, \dfrac{\delta}{2 \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{}}\right\\\mathclose{}\\, so \\t \in (0, 1)\\, and let \\z = t y + (1 - t) x^\*\\. Then \\z - x^\* = t (y - x^\*)\\, so \\\mathopen{}\left\lVert z - x^\*\right\rVert\mathclose{} = t \mathopen{}\left\lVert y - x^\*\right\rVert\mathclose{} \le \delta/ 2 \< \delta\\.
 >
@@ -130,18 +130,29 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-strictly-convex), then \\-f\\ is convex, and applying [Theorem 2](#thm-jensen) to \\-f\\ reverses the inequality: \\f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 5](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
+> *Remark 2* (The inequality reverses for concave functions). If \\f\\ is [concave](optimization.llms.md#def-concave), then \\-f\\ is convex, and applying [Theorem 2](#thm-jensen) to \\-f\\ reverses the inequality: \\f\mathopen{}\left(\sum_i w_i x_i\right)\mathclose{} \ge \sum_i w_i f(x_i)\\. For \\f(x) = -x^2\\ and the points in [Example 5](#exm-jensen), \\f(3) = -9 \ge -\tfrac{41}{3}\\.
 
 ## 2 Infimum and supremum
 
 > **NOTE:**
 >
-> **Definition 4 (Upper and lower bounds)** Let \\A \subseteq \mathbb{R}\\.
+> **Definition 4 (Upper bound)** Let \\A \subseteq \mathbb{R}\\. A real number \\u\\ is an **upper bound** for \\A\\ if \\a \le u\\ for all \\a \in A\\.
+
+> **NOTE:**
 >
-> - A real number \\u\\ is an **upper bound** for \\A\\ if \\a \le u\\ for all \\a \in A\\.
-> - A real number \\\ell\\ is a **lower bound** for \\A\\ if \\\ell\le a\\ for all \\a \in A\\.
+> **Definition 5 (Lower bound)** Let \\A \subseteq \mathbb{R}\\. A real number \\\ell\\ is a **lower bound** for \\A\\ if \\\ell\le a\\ for all \\a \in A\\.
+
+> **NOTE:**
 >
-> \\A\\ is **bounded above** if it has an upper bound, **bounded below** if it has a lower bound, and **bounded** if it is both bounded above and bounded below. A real-valued [function](sets-functions.llms.md#def-function) is bounded above, bounded below, or bounded if its [image](sets-functions.llms.md#def-image) is.
+> **Definition 6 (Bounded above)** A set \\A \subseteq \mathbb{R}\\ is **bounded above** if it has an upper bound ([Definition 4](#def-upper-bound)). A real-valued [function](sets-functions.llms.md#def-function) is bounded above if its [image](sets-functions.llms.md#def-image) is.
+
+> **NOTE:**
+>
+> **Definition 7 (Bounded below)** A set \\A \subseteq \mathbb{R}\\ is **bounded below** if it has a lower bound ([Definition 5](#def-lower-bound)). A real-valued [function](sets-functions.llms.md#def-function) is bounded below if its [image](sets-functions.llms.md#def-image) is.
+
+> **NOTE:**
+>
+> **Definition 8 (Bounded)** A set \\A \subseteq \mathbb{R}\\ is **bounded** if it is both bounded above ([Definition 6](#def-bounded-above)) and bounded below ([Definition 7](#def-bounded-below)). A real-valued [function](sets-functions.llms.md#def-function) is bounded if its [image](sets-functions.llms.md#def-image) is.
 
 > **NOTE:**
 >
@@ -154,7 +165,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > **Theorem 3 (Completeness of the real numbers)** Let \\A \subseteq \mathbb{R}\\ be nonempty.
 >
-> - If \\A\\ is [bounded above](#def-bounded), the set of upper bounds of \\A\\ has a [minimum](algebra-basics.llms.md#def-minimum).
+> - If \\A\\ is [bounded above](#def-bounded-above), the set of upper bounds of \\A\\ has a [minimum](algebra-basics.llms.md#def-minimum).
 > - If \\A\\ is bounded below, the set of lower bounds of \\A\\ has a [maximum](algebra-basics.llms.md#def-maximum).
 
 > **NOTE:**
@@ -167,7 +178,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 4](#def-bounded)). The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
+> **Definition 9 (Infimum (greatest lower bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded below ([Definition 7](#def-bounded-below)). The **infimum** of \\A\\, written \\\inf A\\, is the greatest real number \\t\\ satisfying \\t \le a\\ for all \\a \in A\\:
 >
 > \\\inf A \stackrel{\text{def}}{=}\max\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ t \le a\right\\\mathclose{}\\
 >
@@ -175,7 +186,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 3* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 5](#def-infimum) always exists, by the completeness of the real numbers ([Theorem 3](#thm-completeness)). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
+> *Remark 3* (Existence of the infimum, and when it is a minimum). The maximum in [Definition 9](#def-infimum) always exists, by the completeness of the real numbers ([Theorem 3](#thm-completeness)). For example, for \\A = (1, 2\]\\, the numbers \\t\\ with \\t \le a\\ for all \\a \in A\\ are those with \\t \le 1\\, and the largest of them is \\1\\, so \\\inf A = 1\\.
 >
 > If the infimum belongs to \\A\\, it equals the minimum: \\\inf A = \min A\\. For example,
 >
@@ -203,7 +214,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 4](#def-bounded)). The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
+> **Definition 10 (Supremum (least upper bound))** Let \\A \subseteq \mathbb{R}\\ be nonempty and bounded above ([Definition 6](#def-bounded-above)). The **supremum** of \\A\\, written \\\sup A\\, is the smallest real number \\t\\ satisfying \\a \le t\\ for all \\a \in A\\:
 >
 > \\\sup A \stackrel{\text{def}}{=}\min\mathopen{}\left\\t \in \mathbb{R}: \forall a \in A,\\ a \le t\right\\\mathclose{}\\
 >
@@ -211,7 +222,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 4* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 6](#def-supremum) always exists, by the completeness of the real numbers ([Theorem 3](#thm-completeness)). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
+> *Remark 4* (Existence of the supremum, and when it is a maximum). The minimum in [Definition 10](#def-supremum) always exists, by the completeness of the real numbers ([Theorem 3](#thm-completeness)). For example, for \\A = \[1, 2)\\, the numbers \\t\\ with \\a \le t\\ for all \\a \in A\\ are those with \\t \ge 2\\, and the smallest of them is \\2\\, so \\\sup A = 2\\.
 >
 > If the supremum belongs to \\A\\, it equals the maximum: \\\sup A = \max A\\. For example,
 >
@@ -231,7 +242,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Term of a sum)** In a sum \\a_1 + a_2 + \cdots + a_n\\, each of the numbers or expressions \\a_1, a_2, \ldots, a_n\\ being added is a **term** of the sum.
+> **Definition 11 (Term of a sum)** In a sum \\a_1 + a_2 + \cdots + a_n\\, each of the numbers or expressions \\a_1, a_2, \ldots, a_n\\ being added is a **term** of the sum.
 
 > **NOTE:**
 >
@@ -242,7 +253,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Identity element)** Let \\S\\ be a set, such as the real numbers \\\mathbb{R}\\, and let \\\star\\ be an operation that combines two elements \\a\\ and \\b\\ of \\S\\ into an element \\a \star b\\ of \\S\\, such as addition (\\a + b\\) or multiplication (\\a \times b\\) of real numbers. An element \\u\\ of \\S\\ is an **identity element** for \\\star\\ if \\a \star u = a\\ and \\u \star a = a\\ for every \\a \in S\\.
+> **Definition 12 (Identity element)** Let \\S\\ be a set, such as the real numbers \\\mathbb{R}\\, and let \\\star\\ be an operation that combines two elements \\a\\ and \\b\\ of \\S\\ into an element \\a \star b\\ of \\S\\, such as addition (\\a + b\\) or multiplication (\\a \times b\\) of real numbers. An element \\u\\ of \\S\\ is an **identity element** for \\\star\\ if \\a \star u = a\\ and \\u \star a = a\\ for every \\a \in S\\.
 
 > **NOTE:**
 >
@@ -254,7 +265,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 8](#def-identity-element)) is **commutative** if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 5](#thm-sum-symmetric) and [Theorem 8](#thm-prod-symmetric), call a commutative operation **symmetric**.
+> **Definition 13 (Commutative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **commutative** if \\a \star b = b \star a\\ for all \\a, b \in S\\: the order of the two inputs does not matter. Some sources, including the titles of [Theorem 5](#thm-sum-symmetric) and [Theorem 8](#thm-prod-symmetric), call a commutative operation **symmetric**.
 
 > **NOTE:**
 >
@@ -268,7 +279,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Associative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 8](#def-identity-element)) is **associative** if \\(a \star b) \star c = a \star (b \star c)\\ for all \\a, b, c \in S\\: which pair is combined first does not matter.
+> **Definition 14 (Associative operation)** An operation \\\star\\ on a set \\S\\ ([Definition 12](#def-identity-element)) is **associative** if \\(a \star b) \star c = a \star (b \star c)\\ for all \\a, b, c \in S\\: which pair is combined first does not matter.
 
 > **NOTE:**
 >
@@ -338,7 +349,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Distributes over)** An operation \\\star\\ on a set \\S\\ **distributes over** an operation \\\diamond\\ on \\S\\ if
+> **Definition 15 (Distributes over)** An operation \\\star\\ on a set \\S\\ **distributes over** an operation \\\diamond\\ on \\S\\ if
 >
 > \\a \star (b \diamond c) = (a \star b) \diamond (a \star c)\\
 >
@@ -352,11 +363,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} (2 + 3) \times (2 + 4) &= 5 \times 6 \\ &= 30. \end{aligned} \\
 >
-> So [Definition 11](#def-distributes-over) fails with \\\star = +\\ and \\\diamond = \times\\.
+> So [Definition 15](#def-distributes-over) fails with \\\star = +\\ and \\\diamond = \times\\.
 
 > **NOTE:**
 >
-> **Definition 12 (Distributive law)** The **distributive law** is the statement that multiplication distributes over addition ([Definition 11](#def-distributes-over)): \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)). We then say multiplication is **distributive**.
+> **Definition 16 (Distributive law)** The **distributive law** is the statement that multiplication distributes over addition ([Definition 15](#def-distributes-over)): \\a \times (b + c) = (a \times b) + (a \times c)\\ ([Theorem 11](#thm-mult-distr)). We then say multiplication is **distributive**.
 
 > **NOTE:**
 >
@@ -372,7 +383,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Like terms)** Two [terms](#def-term) of a sum are **like terms** if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product. To **collect** like terms is to replace their sum by one term, using the distributive law ([Theorem 11](#thm-mult-distr)): \\c_1 m + c_2 m = (c_1 + c_2) m\\.
+> **Definition 17 (Like terms)** Two [terms](#def-term) of a sum are **like terms** if they are the same product of variables, each to the same power, possibly multiplied by different constants: \\c_1 m\\ and \\c_2 m\\, where \\c_1\\ and \\c_2\\ are constants and \\m\\ is that product.
+
+> **NOTE:**
+>
+> **Definition 18 (Collecting like terms)** To **collect** like terms ([Definition 17](#def-like-terms)) is to replace their sum by one term, using the distributive law ([Theorem 11](#thm-mult-distr)): \\c_1 m + c_2 m = (c_1 + c_2) m\\.
 
 > **NOTE:**
 >
@@ -402,7 +417,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > To see where that extra term comes from, write the square as a product and apply the distributive law ([Theorem 11](#thm-mult-distr)) twice:
 >
-> \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms, }\href{#def-like-terms}{\text{Definition~13}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} (a + b)^2 &= (a + b)(a + b) && \text{(definition of a square)} \\ &= (a + b)\\a + (a + b)\\b && \text{(distributive law)} \\ &= (a^2 + ba) + (ab + b^2) && \text{(distributive law, twice)} \\ &= a^2 + ab + ab + b^2 && \text{(commutative and associative laws)} \\ &= a^2 + 2ab + b^2 && \text{(collect like terms, }\href{#def-collect-like-terms}{\text{Definition~18}}\text{)} \end{aligned} \\
 >
 > The step “commutative and associative laws” uses [Theorem 8](#thm-prod-symmetric) to write \\ba\\ as \\ab\\, and [Theorem 6](#thm-sum-assoc) to drop the parentheses.
 
@@ -449,11 +464,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
+> **Definition 19 (Summation notation)** Let \\m\\ and \\n\\ be integers with \\m \le n\\, and let \\a_m, a\_{m+1}, \ldots, a_n\\ be numbers. The **sum** of \\a_m\\ through \\a_n\\ is
 >
 > \\ \sum\_{i=m}^{n} a_i \stackrel{\text{def}}{=}a_m + a\_{m+1} + \cdots + a_n \\
 >
-> The variable \\i\\ is the **index** of the sum; \\m\\ and \\n\\ are its **lower** and **upper limits**.
+> The numbers \\m\\ and \\n\\ are its lower and upper limits, defined in the [notation for limits of a sum](notation.llms.md#def-lower-upper-limits).
+
+> **NOTE:**
+>
+> **Definition 20 (Index of a sum)** The variable \\i\\ in \\\sum\_{i=m}^{n} a_i\\ ([Definition 19](#def-summation)) is the **index** of the sum.
 
 > **NOTE:**
 >
@@ -467,11 +486,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
+> **Definition 21 (Empty sum)** When the upper limit is less than the lower limit (\\n \< m\\), the sum \\\sum\_{i=m}^{n} a_i\\ has no terms. By convention, such an **empty sum** equals \\0\\. For example, \\\sum\_{i=1}^{0} a_i = 0\\.
 
 > **NOTE:**
 >
-> **Exercise 4 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 14](#def-summation) and the rules of algebra above, show that:
+> **Exercise 4 (Rearrange a sum)** Let \\c\\ be a number, and let \\a_1, a_2, a_3\\ and \\b_1, b_2, b_3\\ be numbers. Using [Definition 19](#def-summation) and the rules of algebra above, show that:
 >
 > 1.  \\\sum\_{i=1}^{3} c\\ a_i = c \sum\_{i=1}^{3} a_i\\;
 > 2.  \\\sum\_{i=1}^{3} \mathopen{}\left(a_i + b_i\right)\mathclose{} = \sum\_{i=1}^{3} a_i + \sum\_{i=1}^{3} b_i\\.
@@ -480,7 +499,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Solution 4*. Each step below applies [Definition 14](#def-summation), the distributive law ([Theorem 11](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 5](#thm-sum-symmetric) and [Theorem 6](#thm-sum-assoc)).
+> *Solution 4*. Each step below applies [Definition 19](#def-summation), the distributive law ([Theorem 11](#thm-mult-distr)), or the commutative and associative laws of addition ([Theorem 5](#thm-sum-symmetric) and [Theorem 6](#thm-sum-assoc)).
 >
 > 1.  Expand the sum, then factor out \\c\\:
 >
@@ -531,7 +550,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](sets-functions.llms.md#def-finite-set) [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
+> **Definition 22 (Sum over a finite set)** Let \\A = \mathopen{}\left\\x_1, x_2, \ldots, x_k\right\\\mathclose{}\\ be a [finite](sets-functions.llms.md#def-finite-set) [set](sets-functions.llms.md#def-set) with \\k \ge 1\\ different elements. Let \\f\\ be a [function](sets-functions.llms.md#def-function) that gives a number \\f(x)\\ for each element \\x\\ of \\A\\. The **sum of \\f\\ over \\A\\** is
 >
 > \\ \sum\_{x \in A} f(x) \stackrel{\text{def}}{=}f(x_1) + f(x_2) + \cdots + f(x_k) \\
 >
@@ -541,7 +560,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Remark 7* (The order of the terms does not matter). The order in which we list the elements of \\A\\ does not change the sum. The reason is that addition is commutative and associative: we can reorder and regroup the terms of a finite sum without changing the total. For example, if \\A = \mathopen{}\left\\1, 2, 3\right\\\mathclose{}\\ and \\f(x) = x^2\\, listing \\A\\ as \\1, 2, 3\\ gives \\1 + 4 + 9 = 14\\, and listing \\A\\ as \\3, 1, 2\\ gives \\9 + 1 + 4 = 14\\. [Exercise 5](#exr-sum-over-set), part 2, shows another example.
 >
-> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 14](#def-summation).
+> When \\A = \mathopen{}\left\\m, m+1, \ldots, n\right\\\mathclose{}\\, this sum is the same as \\\sum\_{i=m}^{n} f(i)\\ from [Definition 19](#def-summation).
 
 > **NOTE:**
 >
@@ -555,48 +574,64 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
+> **Definition 23 (Quotient)** For real numbers \\a\\ and \\b\\ with \\b \neq 0\\, the **quotient** of \\a\\ by \\b\\ is the result of dividing \\a\\ by \\b\\:
 >
 > \\\frac{a}{b}\\
 
 > **NOTE:**
 >
-> **Definition 18 (Fraction, numerator, and denominator)** A quotient \\\frac{a}{b}\\ ([Definition 17](#def-quotient)) is also called a **fraction**; \\a\\ is its **numerator** and \\b\\ its **denominator**. For example, the fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
+> **Definition 24 (Fraction)** A quotient \\\frac{a}{b}\\ ([Definition 23](#def-quotient)) is also called a **fraction**.
 
 > **NOTE:**
 >
-> **Example 19 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 17](#def-quotient) requires a nonzero denominator.
+> **Definition 25 (Numerator)** In a fraction \\\frac{a}{b}\\ ([Definition 24](#def-fraction)), \\a\\ is its **numerator**.
 
 > **NOTE:**
 >
-> **Definition 19 (Follow-up and person-years)** In a study that observes participants over time, a participant’s **follow-up** is the length of time the study observes that participant, and the study’s **person-years** are the sum of the follow-up times of all participants, measured in years.
+> **Definition 26 (Denominator)** In a fraction \\\frac{a}{b}\\ ([Definition 24](#def-fraction)), \\b\\ is its **denominator**.
 
 > **NOTE:**
 >
-> **Example 20 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+> **Example 19 (Numerator and denominator of a fraction)** The fraction \\\frac{6}{4}\\ has numerator \\6\\ and denominator \\4\\.
 
 > **NOTE:**
 >
-> **Definition 20 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up ([Definition 19](#def-person-years)). For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
+> **Example 20 (A quotient)** The quotient of \\6\\ by \\4\\ is \\\frac{6}{4} = 1.5\\. The quotient of \\6\\ by \\0\\ is undefined, because [Definition 23](#def-quotient) requires a nonzero denominator.
+
+> **NOTE:**
+>
+> **Definition 27 (Follow-up)** In a study that observes participants over time, a participant’s **follow-up** is the length of time the study observes that participant.
+
+> **NOTE:**
+>
+> **Definition 28 (Person-years)** In a study that observes participants over time, the study’s **person-years** are the sum of the follow-up times ([Definition 27](#def-follow-up)) of all participants, measured in years.
+
+> **NOTE:**
+>
+> **Example 21 (Counting person-years)** If \\10\\ people are each followed for \\2\\ years, the study has \\10 \cdot 2 = 20\\ person-years. If one person is followed for \\3\\ years and another for \\\tfrac{1}{2}\\ year, the study has \\3 + \tfrac{1}{2} = 3.5\\ person-years.
+
+> **NOTE:**
+>
+> **Definition 29 (Rate)** A **rate** is a quotient of two quantities, usually with a denominator that measures time, such as weeks or person-years of follow-up ([Definition 28](#def-person-years)). For example, \\12\\ new cases in \\4\\ weeks is a rate of \\\frac{12}{4} = 3\\ new cases per week, and \\30\\ cases over \\10{,}000\\ person-years of follow-up is a rate of \\\frac{30}{10{,}000} = 0.003\\ cases per person-year.
 
 cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Definition 21 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
+> **Definition 30 (Ratios)** A **ratio** is a quotient in which the numerator and denominator are measured using the same unit scales.
 >
 > cf. <https://en.wikipedia.org/wiki/Ratio>
 
 > **NOTE:**
 >
-> **Example 21 (A ratio, and a quotient that is not one)**  
+> **Example 22 (A ratio, and a quotient that is not one)**  
 >
 > - A board \\150\\ cm long and one \\75\\ cm long have length ratio \\\tfrac{150 \text{ cm}}{75 \text{ cm}} = 2\\: both lengths are in centimeters, so the units cancel and the ratio has none.
 > - A sample of mass \\300\\ g and volume \\150\\ cm\\^3\\ gives the quotient \\\tfrac{300 \text{ g}}{150 \text{ cm}^3} = 2\\ g per cm\\^3\\, its density. The numerator and denominator are in different units, so this quotient is not a ratio.
 
 > **NOTE:**
 >
-> **Definition 22 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
+> **Definition 31 (Proportion)** In statistics, a **proportion** typically means a ratio where the numerator represents a subset of the denominator.
 >
 > See <https://en.wikipedia.org/wiki/Population_proportion>.
 >
@@ -604,18 +639,18 @@ cf. <https://en.wikipedia.org/wiki/Rate_(mathematics)>
 
 > **NOTE:**
 >
-> **Example 22 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
+> **Example 23 (A proportion, and a ratio that is not one)** In a clinic with \\120\\ patients, \\30\\ of whom smoke:
 >
 > - the proportion of patients who smoke is \\\tfrac{30}{120} = 0.25\\: the \\30\\ smokers are a subset of the \\120\\ patients;
 > - the ratio of smokers to non-smokers is \\\tfrac{30}{90} = \tfrac{1}{3}\\. Both counts are of patients, so this quotient is a ratio, but it is not a proportion: the \\30\\ smokers are not part of the \\90\\ non-smokers.
 
 > **NOTE:**
 >
-> **Definition 23 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
+> **Definition 32 (Proportional)** Two functions \\f(x)\\ and \\g(x)\\ are **proportional** if their ratio \\\frac{f(x)}{g(x)}\\ does not depend on \\x\\. (cf. <https://en.wikipedia.org/wiki/Proportionality_(mathematics)>)
 
 > **NOTE:**
 >
-> **Example 23 (Proportional and non-proportional functions)**  
+> **Example 24 (Proportional and non-proportional functions)**  
 >
 > - \\f(x) = 6x^2\\ and \\g(x) = 2x^2\\ are proportional: for \\x \ne 0\\,
 >

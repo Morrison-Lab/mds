@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 Mathematical notation is not standardized. This section states the conventions these notes use, and the alternatives you may meet in other sources.
 
@@ -12,9 +12,9 @@ Mathematical notation is not standardized. This section states the conventions t
 >
 > | symbol | meaning | LaTeX |
 > |----|----|----|
-> | \\\neg\\ | [not](proof-writing.llms.md#def-logical-connective) | `\neg` |
-> | \\\forall\\ | [for all](proof-writing.llms.md#def-quantifier) | `\forall` |
-> | \\\exists\\ | [there exists](proof-writing.llms.md#def-quantifier) | `\exists` |
+> | \\\neg\\ | [not](proof-writing.llms.md#def-not) | `\neg` |
+> | \\\forall\\ | [for all](proof-writing.llms.md#def-universal-quantifier) | `\forall` |
+> | \\\exists\\ | [there exists](proof-writing.llms.md#def-existential-quantifier) | `\exists` |
 > | \\\cup\\ | union, “or” | `\cup` |
 > | \\\cap\\ | intersection, “and” | `\cap` |
 > | \\\mid\\ | given, [conditional on](https://morrison-lab.github.io/pds/probability-basics.html#def-conditional-prob) | `\mid`, `|` |
@@ -60,7 +60,15 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > \\\mathbb{Z} \stackrel{\text{def}}{=}\mathopen{}\left\\\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\right\\\mathclose{}\\
 >
-> An **integer** is an element of \\\mathbb{Z}\\. The integers greater than \\0\\ are the **positive integers**, and the integers less than \\0\\ are the **negative integers**.
+> An **integer** is an element of \\\mathbb{Z}\\.
+
+> **NOTE:**
+>
+> **Definition 2 (Positive integers)** The integers ([Definition 1](#def-integers)) greater than \\0\\ are the **positive integers**.
+
+> **NOTE:**
+>
+> **Definition 3 (Negative integers)** The integers ([Definition 1](#def-integers)) less than \\0\\ are the **negative integers**.
 
 > **NOTE:**
 >
@@ -72,7 +80,11 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> **Definition 2 (Even and odd integers)** An integer ([Definition 1](#def-integers)) \\n\\ is **even** if \\n = 2k\\ for some integer \\k\\, and **odd** if \\n = 2k + 1\\ for some integer \\k\\.
+> **Definition 4 (Even integer)** An integer ([Definition 1](#def-integers)) \\n\\ is **even** if \\n = 2k\\ for some integer \\k\\.
+
+> **NOTE:**
+>
+> **Definition 5 (Odd integer)** An integer ([Definition 1](#def-integers)) \\n\\ is **odd** if \\n = 2k + 1\\ for some integer \\k\\.
 
 > **NOTE:**
 >
@@ -86,13 +98,13 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> **Definition 3 (Natural numbers (our convention))** In these notes, the **natural numbers** are the positive integers ([Definition 1](#def-integers)):
+> **Definition 6 (Natural numbers (our convention))** In these notes, the **natural numbers** are the positive integers ([Definition 2](#def-positive-integer)):
 >
 > \\\mathbb{N}\stackrel{\text{def}}{=}\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 4 (Non-negative integers)** The **non-negative integers** are the natural numbers ([Definition 3](#def-natural-numbers)) together with \\0\\:
+> **Definition 7 (Non-negative integers)** The **non-negative integers** are the natural numbers ([Definition 6](#def-natural-numbers)) together with \\0\\:
 >
 > \\\mathbb{N}\_0 \stackrel{\text{def}}{=}\mathopen{}\left\\0, 1, 2, 3, \ldots\right\\\mathclose{} = \mathbb{N}\cup \mathopen{}\left\\0\right\\\mathclose{}\\
 
@@ -121,7 +133,7 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> **Definition 5 (Rational numbers)** A **rational number** is a number that can be written as a fraction \\\frac{a}{b}\\, where \\a\\ and \\b\\ are integers ([Definition 1](#def-integers)) and \\b \ne 0\\. The set of rational numbers is written \\\mathbb{Q}\\:
+> **Definition 8 (Rational numbers)** A **rational number** is a number that can be written as a fraction \\\frac{a}{b}\\, where \\a\\ and \\b\\ are integers ([Definition 1](#def-integers)) and \\b \ne 0\\. The set of rational numbers is written \\\mathbb{Q}\\:
 >
 > \\\mathbb{Q} \stackrel{\text{def}}{=}\mathopen{}\left\\\frac{a}{b} : a \in \mathbb{Z},\\ b \in \mathbb{Z},\\ b \ne 0\right\\\mathclose{}\\
 
@@ -136,11 +148,11 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 
 > **NOTE:**
 >
-> **Definition 6 (Real numbers)** A **real number** is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written \\\mathbb{R}\\.
+> **Definition 9 (Real numbers)** A **real number** is a number that can be written as a decimal expansion: an integer part, followed by a decimal point and a finite or infinite list of decimal places after it. Equivalently, the real numbers are the points on the number line. The set of real numbers is written \\\mathbb{R}\\.
 
 > **NOTE:**
 >
-> *Remark 1* (A working definition). [Definition 6](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin ([1976](#ref-rudin1976principles), Appendix to Chapter 1) constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, \\0.999\ldots\\ and \\1.000\ldots\\ are the same real number, \\1\\.
+> *Remark 1* (A working definition). [Definition 9](#def-real-numbers) is a working definition, not a construction: it does not say what an infinite decimal expansion is, or how to add or multiply two of them. Rudin ([1976](#ref-rudin1976principles), Appendix to Chapter 1) constructs the real numbers rigorously. Some real numbers have two decimal expansions: for example, \\0.999\ldots\\ and \\1.000\ldots\\ are the same real number, \\1\\.
 
 > **NOTE:**
 >
@@ -148,11 +160,11 @@ The third column of [Table 1](#tbl-notation-collected) gives the LaTeX command 
 >
 > - \\3\\, \\-0.5\\, and \\\frac{1}{3} = 0.333\ldots\\ are real numbers.
 > - \\\pi = 3.14159\ldots\\ is a real number.
-> - Every rational number ([Definition 5](#def-rational-numbers)) is a real number, so \\\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\\.
+> - Every rational number ([Definition 8](#def-rational-numbers)) is a real number, so \\\mathbb{N}\subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\\.
 
 > **NOTE:**
 >
-> **Definition 7 (Irrational numbers)** An **irrational number** is a real number ([Definition 6](#def-real-numbers)) that is not rational ([Definition 5](#def-rational-numbers)).
+> **Definition 10 (Irrational numbers)** An **irrational number** is a real number ([Definition 9](#def-real-numbers)) that is not rational ([Definition 8](#def-rational-numbers)).
 
 > **NOTE:**
 >
@@ -168,7 +180,7 @@ The word “percent” comes from the Latin “per centum”; “centum” is La
 
 > **NOTE:**
 >
-> **Definition 8 (Percent)** For a real number \\x\\, “\\x\\ **percent**”, written \\x\\\\, means \\x / 100\\:
+> **Definition 11 (Percent)** For a real number \\x\\, “\\x\\ **percent**”, written \\x\\\\, means \\x / 100\\:
 >
 > \\ x\\ \stackrel{\text{def}}{=}\frac{x}{100} \\
 >
@@ -186,7 +198,7 @@ You are welcome to switch between decimal and percent notation freely; just make
 
 An **indicator function** is a mathematical function that signals whether an element belongs to a specified set, or whether a given logical condition is satisfied. In statistics and epidemiology, indicator functions are ubiquitous. They represent:
 
-- binary variables, which take only the values \\0\\ and \\1\\ ([Definition 11](#def-binary-variable));
+- binary variables, which take only the values \\0\\ and \\1\\ ([Definition 14](#def-binary-variable));
 - event and censoring indicators in survival analysis, the study of the time until an event such as death, where an observation is censored when follow-up ends before its event is seen;
 - membership in subpopulations;
 - domain restrictions in integrals and sums.
@@ -195,13 +207,13 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 9 (Indicator function (set indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
+> **Definition 12 (Indicator function (set indicator))** For any subset \\A \subseteq \Omega\\ of a universal set \\\Omega\\, the **indicator function** of \\A\\, or **set indicator**, is the function \\\mathbb{1}\_{A} : \Omega\to \\0, 1\\\\ defined by:
 >
 > \\ \mathbb{1}\_{A}(x) \stackrel{\text{def}}{=}\begin{cases} 1, & x \in A \\ 0, & x \notin A \end{cases} \\
 
 > **NOTE:**
 >
-> **Definition 10 (Predicate indicator)** For any logical proposition or predicate \\P\\, the **indicator** of \\P\\, or **predicate indicator**, takes the value \\1\\ when \\P\\ is true and \\0\\ when \\P\\ is false:
+> **Definition 13 (Predicate indicator)** For any logical proposition or predicate \\P\\, the **indicator** of \\P\\, or **predicate indicator**, takes the value \\1\\ when \\P\\ is true and \\0\\ when \\P\\ is false:
 >
 > \\ \mathbb{1}\mathopen{}\left(P\right)\mathclose{} \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
@@ -218,11 +230,11 @@ Despite their conceptual simplicity, notation for indicator functions varies sub
 
 > **NOTE:**
 >
-> **Definition 11 (Binary variable)** A **binary variable** is a variable that takes only the values \\0\\ and \\1\\.
+> **Definition 14 (Binary variable)** A **binary variable** is a variable that takes only the values \\0\\ and \\1\\.
 
 > **NOTE:**
 >
-> **Example 9 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 11](#def-binary-variable)). It is also the predicate indicator ([Definition 9](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
+> **Example 9 (A binary variable is an indicator)** In a study of \\n\\ people, let \\s_i = 1\\ if person \\i\\ smokes and \\s_i = 0\\ otherwise, for \\i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\. Then \\s_i\\ is a binary variable ([Definition 14](#def-binary-variable)). It is also the predicate indicator ([Definition 12](#def-indicator-function)) of the proposition “person \\i\\ smokes”: \\s_i = \mathbb{1}\mathopen{}\left(\text{person } i \text{ smokes}\right)\mathclose{}\\.
 >
 > In the same way, every indicator is a binary variable, and every binary variable \\X\\ is the indicator of its own value being \\1\\: \\X = \mathbb{1}\mathopen{}\left(X = 1\right)\mathclose{}\\, since both sides are \\1\\ when \\X = 1\\ and \\0\\ when \\X = 0\\.
 
@@ -232,11 +244,15 @@ The vast majority of indicator notations belong to one of two families: set nota
 
 > **NOTE:**
 >
-> **Definition 12 (Set notation and predicate notation for indicators)** An indicator ([Definition 9](#def-indicator-function)) is written in **set notation** when the set \\A\\ appears as a subscript, as in \\\mathbb{1}\_{A}(x)\\, and in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\.
+> **Definition 15 (Set notation for indicators)** An indicator ([Definition 12](#def-indicator-function)) is written in **set notation** when the set \\A\\ appears as a subscript, as in \\\mathbb{1}\_{A}(x)\\.
 
 > **NOTE:**
 >
-> **Example 10 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 12](#def-set-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
+> **Definition 16 (Predicate notation for indicators)** An indicator ([Definition 12](#def-indicator-function)) is written in **predicate notation** when a proposition or predicate \\P\\ ([definition](proof-writing.llms.md#def-predicate)) appears as its argument, as in \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Example 10 (One indicator in both notations)** Let \\A = \[0, \infty)\\, the nonnegative real numbers. The indicator of \\A\\ is \\\mathbb{1}\_{A}(x)\\ in set notation, and \\\mathbb{1}\mathopen{}\left(x \in A\right)\mathclose{}\\ or \\\mathbb{1}\mathopen{}\left(x \ge 0\right)\mathclose{}\\ in predicate notation ([Definition 15](#def-set-predicate-notation), [Definition 16](#def-predicate-notation)). At \\x = 3.5\\, all three equal \\1\\; at \\x = -2.1\\, all three equal \\0\\.
 
 #### Set notation
 
@@ -270,7 +286,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 
 > **NOTE:**
 >
-> **Definition 13 (Support of a distribution)** The **support** of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
+> **Definition 17 (Support of a distribution)** The **support** of a discrete distribution is the set of values it gives positive probability. The support of a continuous distribution is the set of values where its density is positive.
 
 > **NOTE:**
 >
@@ -279,7 +295,7 @@ The two paradigms are connected by evaluating the predicate indicator at the mem
 > - A fair six-sided die gives each of \\1, 2, \ldots, 6\\ probability \\\tfrac{1}{6} \> 0\\ and every other value probability \\0\\, so its support is \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\.
 > - A count that can be \\0\\, \\1\\, \\2\\, and so on, each with positive probability, such as the number of hospital visits in a year, has support \\\mathbb{N}\_0 = \mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\.
 
-Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 13](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
+Set notation is more natural when the underlying set \\A\\ has a standard name (such as the support of a distribution ([Definition 17](#def-support)), or a geometric region). Predicate notation is more natural when the condition involves compound inequalities, such as \\\mathbb{1}\mathopen{}\left(0 \le t \le u\right)\mathclose{}\\.
 
 ### 5.2 Iverson bracket notation
 
@@ -287,7 +303,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Definition 14 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
+> **Definition 18 (Iverson bracket)** For any logical proposition \\P\\, the **Iverson bracket** of \\P\\ is
 >
 > \\ \[P\] \stackrel{\text{def}}{=}\begin{cases} 1, & \text{if } P \text{ is true} \\ 0, & \text{if } P \text{ is false} \end{cases} \\
 
@@ -301,7 +317,7 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> *Remark 2* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 9](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 8](#exm-indicator-numerical) become
+> *Remark 2* (The Iverson bracket is the predicate indicator). The Iverson bracket \\\[P\]\\ is the predicate indicator \\\mathbb{1}\mathopen{}\left(P\right)\mathclose{}\\ ([Definition 12](#def-indicator-function)) in different notation. Under this notation, set membership is written \\\[x \in A\]\\, so \\\[x \in A\] = \mathbb{1}\_{A}(x)\\. For example, the values in [Example 8](#exm-indicator-numerical) become
 >
 > \\ \begin{aligned} \[7.2 \> 5\] &= \mathbb{1}\mathopen{}\left(7.2 \> 5\right)\mathclose{} \\ &= 1 \end{aligned} \\
 >
@@ -311,11 +327,11 @@ In 1962, Kenneth Iverson introduced a compact notation in the programming langua
 
 > **NOTE:**
 >
-> **Definition 15 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
+> **Definition 19 (Kronecker delta)** For integers \\i\\ and \\j\\, the **Kronecker delta** is
 >
 > \\\delta\_{ij} \stackrel{\text{def}}{=}\[i = j\]\\
 >
-> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 14](#def-iverson-bracket)).
+> that is, \\\delta\_{ij} = 1\\ when \\i = j\\ and \\\delta\_{ij} = 0\\ when \\i \neq j\\ ([Definition 18](#def-iverson-bracket)).
 
 > **NOTE:**
 >
@@ -337,7 +353,7 @@ The primary advantage of the Iverson bracket is algebraic conciseness: it turns 
 
 With \\A = \mathopen{}\left\\2, 4\right\\\mathclose{}\\, \\f(x) = x\\, and \\U = \mathopen{}\left\\1, 2, 3, 4, 5\right\\\mathclose{}\\, both sides equal \\2 + 4 = 6\\.
 
-However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets-functions.llms.md#def-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\operatorname{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
+However, in statistics and epidemiology, square brackets are already heavily overloaded: they denote [closed intervals](sets-functions.llms.md#def-closed-interval) \\\[a, b\]\\, [conditional expectations](https://morrison-lab.github.io/pds/expectation.html#def-cond-expectation) \\\operatorname{E}\[Y \mid X\]\\ (defined in the probability notes), and matrix delimiters. To prevent visual confusion with expectation brackets or intervals, statistical literature predominantly uses \\\mathbb{1}\\ or \\I\\ rather than the bare Iverson bracket.
 
 ### 5.4 Summary of indicator notations
 
@@ -373,7 +389,7 @@ Indicator functions translate the logical connectives ([definition](proof-writin
 
 > **NOTE:**
 >
-> **Definition 16 (Idempotent)** A number \\a\\ is **idempotent** if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](sets-functions.llms.md#def-domain).
+> **Definition 20 (Idempotent)** A number \\a\\ is **idempotent** if \\a \cdot a = a\\. A function \\f\\ with real values is **idempotent** if \\f(x) \cdot f(x) = f(x)\\ for every \\x\\ in its [domain](sets-functions.llms.md#def-domain).
 
 > **NOTE:**
 >
@@ -397,7 +413,7 @@ For subsets \\A\\ and \\B\\ of \\\Omega\\, with [complement](sets-functions.llms
 
 - **Complement (“not”):** \\\mathbb{1}\_{A^c}(x) = 1 - \mathbb{1}\_{A}(x)\\
 
-- **Idempotence ([Definition 16](#def-idempotent)):** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
+- **Idempotence ([Definition 20](#def-idempotent)):** \\(\mathbb{1}\_{A}(x))^2 = \mathbb{1}\_{A}(x)\\
 
 - **Expectation gives probability:** When \\\Omega\\ is a [sample space](https://morrison-lab.github.io/pds/probability-basics.html#def-sample-space) and \\A\\ is an [event](https://morrison-lab.github.io/pds/probability-basics.html#def-event), the [expectation](https://morrison-lab.github.io/pds/expectation.html#def-expectation) of its indicator is the [probability](https://morrison-lab.github.io/pds/probability-basics.html#def-probability) of the event (all four terms are defined in the Morrison Lab’s probability notes):
 
@@ -413,7 +429,15 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 
 > **NOTE:**
 >
-> **Definition 17 (Lower and upper limits of a sum or integral)** In a [sum](algebra-sums.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\, and the **upper limit** \\n\\ is its last value. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration, and the **upper limit** \\b\\ is its right end; together they are the **limits of integration**. In both, the lower limit is written below the symbol and the upper limit above it.
+> **Definition 21 (Lower limit of a sum or integral)** In a [sum](algebra-sums.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **lower limit** \\m\\ is the first value of the index \\i\\. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **lower limit** \\a\\ is the left end of the interval of integration. In both, the lower limit is written below the symbol.
+
+> **NOTE:**
+>
+> **Definition 22 (Upper limit of a sum or integral)** In a [sum](algebra-sums.llms.md#def-summation) \\\sum\_{i=m}^{n} a_i\\, the **upper limit** \\n\\ is the last value of the index \\i\\. In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the **upper limit** \\b\\ is the right end of the interval of integration. In both, the upper limit is written above the symbol.
+
+> **NOTE:**
+>
+> **Definition 23 (Limits of integration)** In an [integral](calculus-integration.llms.md#def-riemann-integral) \\\int_a^b f(x)\\dx\\, the lower limit ([Definition 21](#def-lower-upper-limits)) \\a\\ and the upper limit ([Definition 22](#def-upper-limit)) \\b\\ together are the **limits of integration**.
 
 > **NOTE:**
 >
@@ -424,11 +448,15 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 
 > **NOTE:**
 >
-> *Remark 3* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 17](#def-lower-upper-limits)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra-exponentials.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
+> *Remark 3* (Two meanings of “limit”). The lower and upper limits of a sum or integral ([Definition 21](#def-lower-upper-limits), [Definition 22](#def-upper-limit)) are not limits in the calculus sense, such as the [limit of a function](calculus-derivatives.llms.md#def-limit) or the [limit of a sequence](algebra-exponentials.llms.md#def-sequence-limit). They are the ends of the values the index or variable runs over. The two meanings meet in an integral such as \\\int_0^{\infty} f(x)\\dx\\, which means \\\lim\_{b \to \infty} \int_0^b f(x)\\dx\\: the upper limit \\b\\ is sent to infinity by a calculus limit.
 
 > **NOTE:**
 >
-> **Definition 18 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context. The expression with every part written out is its **full form**.
+> **Definition 24 (Notational shorthand)** A **notational shorthand** is a way of writing an expression that leaves part of the expression out, such as the set a sum runs over or the limits of an integral, and relies on the reader to supply the missing part from context.
+
+> **NOTE:**
+>
+> **Definition 25 (Full form)** The **full form** of a notational shorthand ([Definition 24](#def-notational-shorthand)) is the expression with every part written out.
 
 > **NOTE:**
 >
@@ -441,7 +469,7 @@ This [identity](algebra-basics.llms.md#def-identity) turns probabilities into ex
 
 > **NOTE:**
 >
-> **Definition 19 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
+> **Definition 26 (Range of a variable)** The **range** of a variable \\x\\, written \\\mathcal{R}(x)\\, is the set of values that \\x\\ can take.
 
 For example, if \\x\\ is the number of heads in two tosses of a coin, then \\\mathcal{R}(x) = \mathopen{}\left\\0, 1, 2\right\\\mathclose{}\\. A [random variable](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable) \\X\\ (defined in the Morrison Lab’s probability notes) is a [function](sets-functions.llms.md#def-function), and the set of values \\X\\ can take, \\\mathcal{R}(X)\\, is the [image](sets-functions.llms.md#def-image) of \\X\\. These notes use “range” only for variables: for a function, “range” can mean either the image or the codomain ([Image and range](sets-functions.llms.md#rem-image-range)). In statistics, “the range” of a dataset can also mean its largest value minus its smallest value; \\\mathcal{R}(x)\\ is a set, not that difference.
 

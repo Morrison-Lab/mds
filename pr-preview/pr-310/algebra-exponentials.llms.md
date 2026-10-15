@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Polynomials
 
@@ -36,7 +36,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The constants \\a_0, a_1, \ldots, a_n\\ are the **coefficients** of \\f\\, with \\a_k\\ the coefficient of \\x^k\\, and the [terms](algebra-sums.llms.md#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
+> **Definition 2 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The [terms](algebra-sums.llms.md#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
 
 > **NOTE:**
 >
@@ -44,7 +44,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
+> **Definition 3 (Coefficients of a polynomial)** The constants \\a_0, a_1, \ldots, a_n\\ of a polynomial \\f\\ ([Definition 2](#def-polynomial)) are the **coefficients** of \\f\\, with \\a_k\\ the coefficient of \\x^k\\.
+
+> **NOTE:**
+>
+> **Definition 4 (Degree of a polynomial)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) with \\a_n \ne 0\\. The integer \\n\\ is the **degree** of \\f\\.
 
 > **NOTE:**
 >
@@ -56,7 +60,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
+> **Definition 5 (Leading coefficient)** Let \\f(x) = a_n x^n + \cdots + a_1 x + a_0\\ be a [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\n\\. The constant \\a_n\\ is the **leading coefficient** of \\f\\.
 
 > **NOTE:**
 >
@@ -67,7 +71,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Quadratic and cubic polynomials)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\2\\, \\f(x) = a_2 x^2 + a_1 x + a_0\\ with \\a_2 \ne 0\\, is a **quadratic** polynomial. A polynomial of degree \\3\\ is a **cubic** polynomial.
+> **Definition 6 (Quadratic polynomial)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\2\\, \\f(x) = a_2 x^2 + a_1 x + a_0\\ with \\a_2 \ne 0\\, is a **quadratic** polynomial.
+
+> **NOTE:**
+>
+> **Definition 7 (Cubic polynomial)** A [polynomial](#def-polynomial) of [degree](#def-polynomial-degree) \\3\\ is a **cubic** polynomial.
 
 > **NOTE:**
 >
@@ -83,7 +91,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Parabola)** A **parabola** is the [graph](sets-functions.llms.md#def-graph) of a quadratic polynomial ([Definition 5](#def-quadratic-cubic)).
+> **Definition 8 (Parabola)** A **parabola** is the [graph](sets-functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
 
 > **NOTE:**
 >
@@ -93,21 +101,27 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Affine function of one variable)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** if there are numbers \\m\\ and \\b\\ such that
+> **Definition 9 (Affine function of one variable)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** if there are numbers \\m\\ and \\b\\ such that
 >
 > \\f(x) = m x + b \quad \text{for all } x \in \mathbb{R}\\
->
-> In this formula, \\m\\ is called the **slope** of \\f\\ and \\b\\ its **intercept**.
 
 > **NOTE:**
 >
-> **Definition 8 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** if it is affine ([Definition 7](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
+> **Definition 10 (Slope)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 9](#def-affine-function)), \\m\\ is called the **slope** of \\f\\.
+
+> **NOTE:**
+>
+> **Definition 11 (Intercept)** In the formula \\f(x) = m x + b\\ for an affine function \\f\\ ([Definition 9](#def-affine-function)), \\b\\ is called the **intercept** of \\f\\.
+
+> **NOTE:**
+>
+> **Definition 12 (Linear function of one variable)** A function \\f: \mathbb{R}\to \mathbb{R}\\ is **linear** if it is affine ([Definition 9](#def-affine-function)) with intercept \\0\\; that is, if there is a number \\m\\ such that
 >
 > \\f(x) = m x \quad \text{for all } x \in \mathbb{R}\\
 
 > **NOTE:**
 >
-> **Theorem 1 (Intercept and slope of an affine function)** Let \\f(x) = m x + b\\ be an affine function ([Definition 7](#def-affine-function)).
+> **Theorem 1 (Intercept and slope of an affine function)** Let \\f(x) = m x + b\\ be an affine function ([Definition 9](#def-affine-function)).
 >
 > 1.  The intercept is the value at zero: \\f(0) = b\\.
 > 2.  The slope is the change in \\f\\ per unit change in \\x\\: for any \\x_1 \neq x_2\\, \\\frac{f(x_2) - f(x_1)}{x_2 - x_1} = m\\
@@ -117,11 +131,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. **Part 1.**
 >
-> \\ \begin{aligned} f(0) &= m \cdot 0 + b && \text{(}\href{#def-affine-function}{\text{Definition~7}}\text{)} \\&= 0 + b && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= b + 0 && \text{(}\href{algebra-sums.qmd#thm-sum-symmetric}{\text{Theorem~5 in Convexity, Infimum and Sums}}\text{)} \\&= b && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} f(0) &= m \cdot 0 + b && \text{(}\href{#def-affine-function}{\text{Definition~9}}\text{)} \\&= 0 + b && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= b + 0 && \text{(}\href{algebra-sums.qmd#thm-sum-symmetric}{\text{Theorem~5 in Convexity, Infimum and Sums}}\text{)} \\&= b && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
 > **Part 2.** First the numerator:
 >
-> \\ \begin{aligned} f(x_2) - f(x_1) &= (m x_2 + b) - (m x_1 + b) && \text{(}\href{#def-affine-function}{\text{Definition~7}}\text{)} \\&= m x_2 + b - m x_1 - b && \text{(subtracting a sum subtracts each term)} \\&= m x_2 - m x_1 + b - b && \text{(}\href{algebra-sums.qmd#thm-sum-symmetric}{\text{Theorem~5 in Convexity, Infimum and Sums}}\text{, swapping } b \text{ and } {-m x_1} \text{)} \\&= (m x_2 - m x_1) + (b - b) && \text{(}\href{algebra-sums.qmd#thm-sum-assoc}{\text{Theorem~6 in Convexity, Infimum and Sums}}\text{)} \\&= (m x_2 - m x_1) + 0 && (b - b = 0) \\&= m x_2 - m x_1 && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)} \\&= m x_2 + m (-x_1) && (-(m x_1) = m (-x_1) \text{, by }\href{algebra-basics.qmd#thm-negative-one}{\text{Theorem~6 in Equalities, Inequalities and Minimizers}}\text{ and }\href{algebra-sums.qmd#thm-prod-assoc}{\text{Theorem~9 in Convexity, Infimum and Sums}}\text{)} \\&= m (x_2 + (-x_1)) && \text{(}\href{algebra-sums.qmd#thm-mult-distr}{\text{Theorem~11 in Convexity, Infimum and Sums}}\text{, read right to left)} \\&= m (x_2 - x_1) && \text{(adding a negative is subtracting)} \end{aligned} \\
+> \\ \begin{aligned} f(x_2) - f(x_1) &= (m x_2 + b) - (m x_1 + b) && \text{(}\href{#def-affine-function}{\text{Definition~9}}\text{)} \\&= m x_2 + b - m x_1 - b && \text{(subtracting a sum subtracts each term)} \\&= m x_2 - m x_1 + b - b && \text{(}\href{algebra-sums.qmd#thm-sum-symmetric}{\text{Theorem~5 in Convexity, Infimum and Sums}}\text{, swapping } b \text{ and } {-m x_1} \text{)} \\&= (m x_2 - m x_1) + (b - b) && \text{(}\href{algebra-sums.qmd#thm-sum-assoc}{\text{Theorem~6 in Convexity, Infimum and Sums}}\text{)} \\&= (m x_2 - m x_1) + 0 && (b - b = 0) \\&= m x_2 - m x_1 && \text{(}\href{algebra-sums.qmd#thm-add-ident}{\text{Theorem~4 in Convexity, Infimum and Sums}}\text{)} \\&= m x_2 + m (-x_1) && (-(m x_1) = m (-x_1) \text{, by }\href{algebra-basics.qmd#thm-negative-one}{\text{Theorem~6 in Equalities, Inequalities and Minimizers}}\text{ and }\href{algebra-sums.qmd#thm-prod-assoc}{\text{Theorem~9 in Convexity, Infimum and Sums}}\text{)} \\&= m (x_2 + (-x_1)) && \text{(}\href{algebra-sums.qmd#thm-mult-distr}{\text{Theorem~11 in Convexity, Infimum and Sums}}\text{, read right to left)} \\&= m (x_2 - x_1) && \text{(adding a negative is subtracting)} \end{aligned} \\
 >
 > Then, writing \\d = x_2 - x_1\\, which is not \\0\\ because \\x_1 \neq x_2\\,
 >
@@ -149,28 +163,39 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Limit of a sequence)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **converges** to a real number \\L\\, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
+> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
->
-> Then \\L\\ is the **limit** of the sequence. A sequence that converges to some real number is **convergent**, and a sequence that does not converge to any real number **diverges**.
 
 > **NOTE:**
 >
-> **Example 7 (A convergent sequence and a divergent one)**  
->
-> - \\a_n = \frac{1}{n}\\ converges to \\0\\. Given \\\varepsilon\> 0\\, take \\N\\ to be any natural number larger than \\\frac{1}{\varepsilon}\\. For every \\n \ge N\\, \\\mathopen{}\left\|\frac{1}{n} - 0\right\|\mathclose{} = \frac{1}{n} \le \frac{1}{N} \< \varepsilon\\. For example, with \\\varepsilon= 0.01\\, take \\N = 101\\: every \\n \ge 101\\ has \\\frac{1}{n} \le \frac{1}{101} \< 0.01\\.
-> - \\c_n = n\\ diverges. For any real number \\L\\ and \\\varepsilon= 1\\, every \\n \> L + 1\\ has \\\mathopen{}\left\|n - L\right\|\mathclose{} \> 1\\, so no \\N\\ works. For example, with \\L = 5\\, every \\n \ge 7\\ has \\\mathopen{}\left\|n - 5\right\|\mathclose{} \ge 2\\. It diverges to \\\infty\\: for every real number \\M\\, every \\n \ge N\\ has \\c_n = n \> M\\ when \\N\\ is a natural number larger than \\M\\.
+> **Example 7 (The limit of a sequence)** \\a_n = \frac{1}{n}\\ has limit \\0\\. Given \\\varepsilon\> 0\\, take \\N\\ to be any natural number larger than \\\frac{1}{\varepsilon}\\. For every \\n \ge N\\, \\\mathopen{}\left\|\frac{1}{n} - 0\right\|\mathclose{} = \frac{1}{n} \le \frac{1}{N} \< \varepsilon\\. For example, with \\\varepsilon= 0.01\\, take \\N = 101\\: every \\n \ge 101\\ has \\\frac{1}{n} \le \frac{1}{101} \< 0.01\\.
 
 > **NOTE:**
 >
-> **Definition 10 (Divergence of a sequence to infinity)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
+> **Definition 14 (Convergent sequence (converges))** A sequence \\(a_n)\\ of real numbers **converges** to a real number \\L\\ if \\L\\ is its limit ([Definition 13](#def-sequence-limit)). A sequence that converges to some real number is **convergent**.
+
+> **NOTE:**
+>
+> **Example 8 (A convergent sequence)** \\a_n = \frac{1}{n}\\ converges to \\0\\, because \\0\\ is its limit ([Example 7](#exm-sequence-limit)), so \\a_n = \frac{1}{n}\\ is convergent.
+
+> **NOTE:**
+>
+> **Definition 15 (Divergent sequence (diverges))** A sequence that does not converge ([Definition 14](#def-convergent-sequence)) to any real number **diverges**, and a sequence that diverges is **divergent**.
+
+> **NOTE:**
+>
+> **Example 9 (A divergent sequence)** \\c_n = n\\ diverges. For any real number \\L\\ and \\\varepsilon= 1\\, every \\n \> L + 1\\ has \\\mathopen{}\left\|n - L\right\|\mathclose{} \> 1\\, so no \\N\\ works. For example, with \\L = 5\\, every \\n \ge 7\\ has \\\mathopen{}\left\|n - 5\right\|\mathclose{} \ge 2\\. It diverges to \\\infty\\: for every real number \\M\\, every \\n \ge N\\ has \\c_n = n \> M\\ when \\N\\ is a natural number larger than \\M\\.
+
+> **NOTE:**
+>
+> **Definition 16 (Divergence of a sequence to infinity)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
 
 ## 4 Exponentials and Logarithms
 
 > **NOTE:**
 >
-> **Definition 11 (Exponential function)** The **exponential function** \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
+> **Definition 17 (Exponential function)** The **exponential function** \\\operatorname{exp}: \mathbb{R}\to (0, \infty)\\ is
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
@@ -178,7 +203,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 8 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
+> **Example 10 (Approximating \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{}\\)** For \\x = 1\\, the terms \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ are:
 >
 > |    \\n\\ | \\\mathopen{}\left(1 + \frac{1}{n}\right)\mathclose{}^n\\ |
 > |---------:|:----------------------------------------------------------|
@@ -191,68 +216,68 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 12 (Euler’s number)** **Euler’s number** is
+> **Definition 18 (Euler’s number)** **Euler’s number** is
 >
 > \\e \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = 2.71828\ldots\\
 
 > **NOTE:**
 >
-> **Example 9 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
+> **Example 11 (Euler’s number is irrational)** \\e = 2.71828\ldots\\ is an [irrational number](notation.llms.md#def-irrational-numbers), so no fraction equals it exactly. The fraction \\\frac{19}{7} = 2.714\ldots\\ is close, but \\\frac{19}{7} \ne e\\ (see [Wikipedia: e (mathematical constant)](https://en.wikipedia.org/wiki/E_(mathematical_constant))).
 
 > **NOTE:**
 >
-> **Definition 13 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 11](#def-exponential-function)).
+> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
 
 > **NOTE:**
 >
-> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 12](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
+> *Remark 3* (Other notations for the natural logarithm). In these notes, \\\operatorname{log}\mathopen{}\left\\x\right\\\mathclose{}\\ is always the natural logarithm, the logarithm with base \\e\\ ([Definition 18](#def-euler-number)). Some sources write \\\ln x\\ for the natural logarithm and reserve \\\log x\\ for the logarithm with base 10.
 
 > **NOTE:**
 >
-> **Example 10 (Natural logarithms)**  
+> **Example 12 (Natural logarithms)**  
 >
-> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 8](#exm-exponential-function)).
-> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 12](#def-euler-number)).
+> - \\\operatorname{log}\mathopen{}\left\\1\right\\\mathclose{} = 0\\, because \\\operatorname{exp}\mathopen{}\left\\0\right\\\mathclose{} = 1\\ ([Example 10](#exm-exponential-function)).
+> - \\\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1\\, because \\\operatorname{exp}\mathopen{}\left\\1\right\\\mathclose{} = e\\ ([Definition 18](#def-euler-number)).
 > - \\\operatorname{log}\mathopen{}\left\\0\right\\\mathclose{}\\ and \\\operatorname{log}\mathopen{}\left\\-2\right\\\mathclose{}\\ are not defined, because \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} \> 0\\ for every real \\y\\.
 
 > **NOTE:**
 >
-> **Definition 14 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
+> **Definition 20 (Power with a real exponent)** For a real number \\a \> 0\\ and a real number \\b\\,
 >
 > \\a^b \stackrel{\text{def}}{=}\operatorname{exp}\mathopen{}\left\\b \cdot\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\right\\\mathclose{}.\\
 >
-> When \\b\\ is an integer, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer).
+> When \\b\\ is an integer, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer).
 
 > **NOTE:**
 >
-> **Example 11 (Real powers, and \\e^x\\)**  
+> **Example 13 (Real powers, and \\e^x\\)**  
 >
 > - \\2^3 = \operatorname{exp}\mathopen{}\left\\3 \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\3 \cdot 0.69315\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\2.07944\right\\\mathclose{} \approx 8\\, which agrees with
 >
 >   \\ \begin{aligned} 2^3 &= 2 \cdot 2 \cdot 2 \\ &= 8 \end{aligned} \\
 >
->   from [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
+>   from [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
 >
-> - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 6 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - \\2^{1/2} = \operatorname{exp}\mathopen{}\left\\\frac{1}{2} \cdot\operatorname{log}\mathopen{}\left\\2\right\\\mathclose{}\right\\\mathclose{} \approx \operatorname{exp}\mathopen{}\left\\0.34657\right\\\mathclose{} \approx 1.41421\\, which is \\\sqrt{2}\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 >
-> - For every real \\x\\, with base \\e\\ ([Definition 12](#def-euler-number)):
+> - For every real \\x\\, with base \\e\\ ([Definition 18](#def-euler-number)):
 >
->   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~14}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~10}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
+>   \\ \begin{aligned} e^x &= \operatorname{exp}\mathopen{}\left\\x \cdot\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{}\right\\\mathclose{} && \text{(}\href{#def-real-power}{\text{Definition~20}}\text{, with } a = e \text{ and } b = x \text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x \cdot 1\right\\\mathclose{} && \text{(}\operatorname{log}\mathopen{}\left\\e\right\\\mathclose{} = 1 \text{, by }\href{#exm-natural-log}{\text{Example~12}}\text{)} \\ &= \operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} && \text{(}\href{algebra-sums.qmd#thm-mult-one}{\text{Theorem~7 in Convexity, Infimum and Sums}}\text{)} \end{aligned} \\
 >
 >   So \\e^x\\ and \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{}\\ are two names for the same number.
 
 > **NOTE:**
 >
-> **Definition 15 (Real powers of zero and of negative numbers)** [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 14](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
+> **Definition 21 (Real powers of zero and of negative numbers)** [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power), [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer) and [Definition 20](#def-real-power) leave some powers \\b^c\\ with \\b \le 0\\ unassigned. We complete them as follows.
 >
-> - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
-> - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](notation.llms.md#def-integers), by [Definition 4 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
+> - For a real number \\c \> 0\\, \\0^c \stackrel{\text{def}}{=}0\\. For a natural number \\c\\, this agrees with [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power).
+> - For \\b \< 0\\, \\b^c\\ is defined only when \\c\\ is an [integer](notation.llms.md#def-integers), by [Definition 5 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power) and [Definition 9 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-power-integer); for \\b \< 0\\ and a non-integer \\c\\, \\b^c\\ is undefined.
 
 > **NOTE:**
 >
-> **Example 12 (Powers of zero and of negative numbers)**  
+> **Example 14 (Powers of zero and of negative numbers)**  
 >
-> - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 6 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
+> - \\0^{1/2} = 0\\, which agrees with \\\sqrt{0} = 0\\ ([Definition 10 in Equalities, Inequalities and Minimizers](algebra-basics.llms.md#def-square-root)).
 > - \\(-8)^2 = 64\\ and \\(-8)^{-1} = -\tfrac{1}{8}\\ are defined, since the exponents are integers.
 > - \\(-8)^{1/3}\\ is undefined, even though \\(-2)^3 = -8\\. R follows the same convention: `(-8)^(1/3)` is `NaN`.
 
@@ -297,7 +322,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 13 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
+> **Example 15 (Exponential of a sum)** With \\a = 2\\ and \\b = 3\\, \\\operatorname{exp}\mathopen{}\left\\2 + 3\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{} \approx 148.41\\, and \\\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{} \cdot\operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 7.3891 \cdot 20.0855 \approx 148.41\\.
 
 > **NOTE:**
 >
@@ -307,7 +332,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 14 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
+> **Example 16 (Exponential of a difference)** With \\a = 5\\ and \\b = 2\\, \\\operatorname{exp}\mathopen{}\left\\5 - 2\right\\\mathclose{} = \operatorname{exp}\mathopen{}\left\\3\right\\\mathclose{} \approx 20.09\\, and \\\frac{\operatorname{exp}\mathopen{}\left\\5\right\\\mathclose{}}{\operatorname{exp}\mathopen{}\left\\2\right\\\mathclose{}} \approx \frac{148.4132}{7.3891} \approx 20.09\\.
 
 > **NOTE:**
 >
@@ -327,7 +352,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 15 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\,
+> **Example 17 (Power of a sum)** With \\a = 2\\, \\b = 3\\, and \\c = 4\\,
 >
 > \\ \begin{aligned} 2^{3+4} &= 2^7 \\ &= 128, \end{aligned} \\
 >
@@ -345,7 +370,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 16 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\,
+> **Example 18 (Power of a product)** With \\a = 2\\, \\b = 3\\, and \\c = 2\\,
 >
 > \\ \begin{aligned} (2 \cdot 3)^2 &= 6^2 \\ &= 36, \end{aligned} \\
 >
@@ -361,7 +386,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
+> **Example 19 (A negative base)** With \\a = -1\\, \\b = 2\\, and \\c = \frac{1}{2}\\:
 >
 > \\ \begin{aligned} a^{bc} &= (-1)^{2 \cdot\frac{1}{2}} \\ &= (-1)^{1} \\ &= -1 \end{aligned} \\
 >
@@ -389,13 +414,13 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
+> **Definition 22 (Contour line)** For a function \\g\\ of two real variables \\b\\ and \\c\\ and a number \\k\\, the **contour line** of \\g\\ at height \\k\\ is the set of points where \\g\\ equals \\k\\:
 >
 > \\\mathopen{}\left\\(b, c) : g(b, c) = k\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Example 18 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example,
+> **Example 20 (Contour lines of a bowl)** For \\g(b, c) = b^2 + c^2\\, the contour line at height \\k = 4\\ is \\\mathopen{}\left\\(b, c) : b^2 + c^2 = 4\right\\\mathclose{}\\, the circle of radius \\2\\ around \\(0, 0)\\: for example,
 >
 > \\ \begin{aligned} g(2, 0) &= 4 + 0 \\ &= 4 \end{aligned} \\
 >
@@ -415,7 +440,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 15](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
+> *Solution 2*. We only count a pair \\(b, c)\\ when \\b^c\\ is defined, so for \\b \< 0\\ we only consider integer \\c\\ ([Definition 21](#def-power-nonpositive-base)). With that convention, \\bc = b^c\\ in each of the following cases:
 >
 > 1.  \\c = 1\\, for every \\b\\.
 >
@@ -568,6 +593,20 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
+> **Theorem 10 (When exponentiation equals multiplication)** Let \\b, c \in \mathbb{R}\\, where \\b^c\\ is defined (for \\b \< 0\\, only integer \\c\\ is allowed; [Definition 21](#def-power-nonpositive-base)). Then \\b^c = bc\\ if and only if one of the following holds:
+>
+> 1.  \\c = 1\\;
+> 2.  \\b = 0\\ and \\c \> 0\\;
+> 3.  \\b \> 0\\, \\c \> 0\\, \\c \neq 1\\, and \\b = \operatorname{exp}\mathopen{}\left\\\frac{\operatorname{log}\mathopen{}\left\\c\right\\\mathclose{}}{c-1}\right\\\mathclose{}\\;
+> 4.  \\b \< 0\\, \\c\\ is an odd integer with \\c \ge 3\\, and \\b = -c^{1/(c-1)}\\;
+> 5.  \\b \< 0\\, \\c\\ is an even integer with \\c \le -2\\, and \\b = -(-c)^{1/(c-1)}\\.
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 2](#exr-exp-vs-mult), worked in [Solution 2](#sol-exp-vs-mult).
+
+> **NOTE:**
+>
 > **Exercise 3 (Repeated exponentiation)** For \\a \ge 0,~b,c \in \mathbb{R}\\, when does \\(a^b)^c = a^{(b^c)}\\?
 
 > **NOTE:**
@@ -585,9 +624,9 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 > The last line of [Equation 1](#eq-double-exp-log-scale) holds exactly when
 >
 > 1.  \\a = 1\\ (so that \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{} = 0\\), or
-> 2.  \\bc = b^c\\ (see [Exercise 2](#exr-exp-vs-mult)).
+> 2.  \\bc = b^c\\ (see [Theorem 10](#thm-exp-vs-mult)).
 >
-> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 15](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
+> **Case \\a = 0\\.** Here we cannot take logarithms, so we work from the values of powers of \\0\\: \\0^s = 0\\ for \\s \> 0\\ ([Definition 21](#def-power-nonpositive-base)), \\0^0 = 1\\, and \\0^s\\ is undefined for \\s \< 0\\.
 >
 > - If \\b \< 0\\, then \\0^b\\ is undefined, so \\(a^b)^c\\ is undefined.
 >
@@ -610,5 +649,16 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 > \\ \begin{aligned} (a^b)^c &= (0^b)^0 \\ &= 1 \end{aligned} \\
 >
 > \\ \begin{aligned} a^{(b^c)} &= 0^{(b^0)} \\ &= 0^1 \\ &= 0 \end{aligned} \\
+
+> **NOTE:**
+>
+> **Theorem 11 (When repeated exponentiation is not reordered)** Let \\a \ge 0\\ and \\b, c \in \mathbb{R}\\, where \\b^c\\ is defined. Then \\(a^b)^c = a^{(b^c)}\\, with both sides defined, if and only if
+>
+> - \\a \> 0\\ and either \\a = 1\\ or \\bc = b^c\\; or
+> - \\a = 0\\, \\b \ge 0\\, and \\c \> 0\\.
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 3](#exr-double-exponential), worked in [Solution 3](#sol-double-exponential).
 
 Back to top

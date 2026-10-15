@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Inner products
 
@@ -63,7 +63,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > For linearity in the first slot, take \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\:
 >
-> \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\tilde{c}} &= \sum\_{i=1}^pc_i\\(a\\\tilde{x}+ b\\\tilde{y})\_i\\z_i && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \\ &= \sum\_{i=1}^pc_i\\(a x_i + b y_i)\\z_i && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\c_i x_i z_i + b\\c_i y_i z_i\right)\mathclose{} && \text{(distribute, and commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\c_i x_i z_i + \sum\_{i=1}^pb\\c_i y_i z_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^pc_i x_i z_i + b \sum\_{i=1}^pc_i y_i z_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\tilde{c}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\tilde{c}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \end{aligned} \\
+> \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\tilde{c}} &= \sum\_{i=1}^pc_i\\(a\\\tilde{x}+ b\\\tilde{y})\_i\\z_i && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \\ &= \sum\_{i=1}^pc_i\\(a x_i + b y_i)\\z_i && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\mathopen{}\left(a\\c_i x_i z_i + b\\c_i y_i z_i\right)\mathclose{} && \text{(distribute, and commute the factors in each product)} \\ &= \sum\_{i=1}^pa\\c_i x_i z_i + \sum\_{i=1}^pb\\c_i y_i z_i && \text{(split the finite sum)} \\ &= a \sum\_{i=1}^pc_i x_i z_i + b \sum\_{i=1}^pc_i y_i z_i && \text{(factor } a \text{ and } b \text{ out of the sums)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\tilde{c}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\tilde{c}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\tilde{c}} \text{)} \end{aligned} \\
 >
 > Different inner products can give different numbers for the same pair of vectors. With \\p = 2\\, \\\tilde{c} = (2, 1)\\, \\\tilde{x}= (1, 3)\\ and \\\tilde{y}= (4, -1)\\:
 >
@@ -125,7 +125,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 2* (Orthogonality for the dot product). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), the condition of [Definition 3](#def-orthogonal-inner-product) is orthogonality as in [Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
+> *Remark 2* (Orthogonality for the dot product). With the dot product as the inner product ([Example 1](#exm-dot-product-inner-product)), the condition of [Definition 3](#def-orthogonal-inner-product) is orthogonality as in [Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors).
 
 ## 2 Cauchy-Schwarz and the triangle inequality
 
@@ -150,7 +150,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 6 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 10 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm
+> **Example 6 (Scaling a vector scales its length)** For \\\tilde{x} = (3, 4)\\, \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 5\\ ([Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm)). Then \\-2\\\tilde{x} = (-6, -8)\\ has norm
 >
 > \\ \begin{aligned} \sqrt{36 + 64} &= 10 \\ &= \mathopen{}\left\|-2\right\|\mathclose{} \cdot 5, \end{aligned} \\
 >
@@ -158,7 +158,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tfrac{1}{5}\\\tilde{x}\right\rVert\mathclose{} &= \tfrac{1}{5} \cdot 5 \\ &= 1, \end{aligned} \\
 >
-> and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 10 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
+> and \\\tfrac{1}{5}\\\tilde{x} = (0.6, 0.8)\\ is the unit vector in [Example 11 in Vectors](linear-algebra-vectors.llms.md#exm-euclidean-norm).
 
 > **NOTE:**
 >
@@ -166,7 +166,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + 2\\(\tilde{x} \cdot \tilde{y}) + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2. \\
 >
-> In particular, if \\\tilde{x} \perp \tilde{y}\\ ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)), then \\\mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2\\ (the **Pythagorean theorem**).
+> In particular, if \\\tilde{x} \perp \tilde{y}\\ ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)), then \\\mathopen{}\left\lVert\tilde{x} + \tilde{y}\right\rVert\mathclose{}^2 = \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}^2\\ (the **Pythagorean theorem**).
 
 > **NOTE:**
 >
@@ -294,7 +294,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 10 (Euclidean space as a normed vector space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the Euclidean norm ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) is a normed vector space:
+> **Example 10 (Euclidean space as a normed vector space)** The Euclidean space \\\mathbb{R}^p\\ equipped with the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)) is a normed vector space:
 >
 > - Positivity and absolute homogeneity hold by [Theorem 1](#thm-norm-properties).
 > - The triangle inequality holds by [Theorem 4](#thm-triangle-inequality).
@@ -349,7 +349,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > **Theorem 5 (The \\\ell_1\\, \\\ell_2\\ and infinity norms, and the norm axioms)** Let \\\tilde{x}= (x_1, \ldots, x_p) \in \mathbb{R}^p\\.
 >
-> 1.  \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 = \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}\\, and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 = \sqrt{\sum\_{i=1}^px_i^2}\\, which is the Euclidean norm ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)).
+> 1.  \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_1 = \sum\_{i=1}^p\mathopen{}\left\|x_i\right\|\mathclose{}\\, and \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_2 = \sqrt{\sum\_{i=1}^px_i^2}\\, which is the Euclidean norm ([Definition 16 in Vectors](linear-algebra-vectors.llms.md#def-euclidean-norm)).
 > 2.  \\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_\infty = \lim\_{k \to \infty} \mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\_k\\.
 > 3.  For every real number \\k \ge 1\\, and for \\k = \infty\\, \\\mathopen{}\left\lVert\cdot\right\rVert\mathclose{}\_k\\ is a norm on \\\mathbb{R}^p\\ ([Definition 4](#def-norm)).
 
@@ -433,7 +433,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \theta= \frac{\pi}{2} \quad\Longleftrightarrow\quad \tilde{x} \cdot \tilde{y} = 0, \\
 >
-> so for nonzero vectors, orthogonal ([Definition 13 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
+> so for nonzero vectors, orthogonal ([Definition 15 in Vectors](linear-algebra-vectors.llms.md#def-orthogonal-vectors)) means at a right angle.
 
 > **NOTE:**
 >
@@ -551,7 +551,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. Write \\u\_{ji}\\ for entry \\i\\ of \\\tilde{u}\_j\\. Then
 >
-> \\ \begin{aligned} \tilde{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{u}\_j\right)\mathclose{} &= \sum\_{i=1}^px_i \sum\_{j=1}^{k} c_j u\_{ji} && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{, }\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~8 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^{k} x_i c_j u\_{ji} && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^px_i c_j u\_{ji} && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^pc_j x_i u\_{ji} && \text{(commute the factors in each product)} \\ &= \sum\_{j=1}^{k} c_j \sum\_{i=1}^px_i u\_{ji} && \text{(factor } c_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{x} \cdot \tilde{u}\_j). && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{x} \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{u}\_j\right)\mathclose{} &= \sum\_{i=1}^px_i \sum\_{j=1}^{k} c_j u\_{ji} && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{, }\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^{k} x_i c_j u\_{ji} && \text{(distribute each } x_i \text{ over the inner sum)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^px_i c_j u\_{ji} && \text{(swap the order of the finite sums)} \\ &= \sum\_{j=1}^{k} \sum\_{i=1}^pc_j x_i u\_{ji} && \text{(commute the factors in each product)} \\ &= \sum\_{j=1}^{k} c_j \sum\_{i=1}^px_i u\_{ji} && \text{(factor } c_j \text{ out of the inner sum)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{x} \cdot \tilde{u}\_j). && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -563,7 +563,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 8 (Orthonormal vectors are linearly independent)** If \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ are orthonormal ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
+> **Theorem 8 (Orthonormal vectors are linearly independent)** If \\\tilde{q}\_1, \ldots, \tilde{q}\_k\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), then they are linearly independent ([Definition 1 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-linearly-independent)).
 
 > **NOTE:**
 >
@@ -593,7 +593,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Orthonormal basis)** An **orthonormal basis** of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ is a basis of \\\mathcal{S}\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
+> **Definition 10 (Orthonormal basis)** An **orthonormal basis** of a subspace \\\mathcal{S}\\ of \\\mathbb{R}^p\\ is a basis of \\\mathcal{S}\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)) whose vectors are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)).
 
 > **NOTE:**
 >
@@ -601,7 +601,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > - The indicator vectors \\\tilde{e}\_1, \tilde{e}\_2, \tilde{e}\_3\\ are orthonormal
 >   2.  and a basis of \\\mathbb{R}^3\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
-> - The vectors \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of [Example 17](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension \\3\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
+> - The vectors \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ of [Example 17](#exm-orthonormal-independent) are orthonormal and linearly independent, so they are a basis of their span ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis)), which therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and is all of \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). So they are an orthonormal basis of \\\mathbb{R}^3\\ too.
 
 > **NOTE:**
 >
@@ -620,7 +620,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. The basis spans \\\mathcal{S}\\, so \\\tilde{x} = \sum\_{j=1}^{k} c_j \tilde{q}\_j\\ for some numbers \\c_j\\. For each \\i\\,
 >
-> \\ \begin{aligned} \tilde{q}\_i \cdot \tilde{x} &= \tilde{q}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{q}\_j\right)\mathclose{} && \text{(substitute)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{q}\_i \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i, && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~17 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{q}\_i \cdot \tilde{x} &= \tilde{q}\_i \cdot \mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{q}\_j\right)\mathclose{} && \text{(substitute)} \\ &= \sum\_{j=1}^{k} c_j\\(\tilde{q}\_i \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= c_i, && \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~19 in Vectors}}\text{)} \end{aligned} \\
 >
 > so each coefficient \\c_i\\ is \\\tilde{q}\_i \cdot \tilde{x}\\.
 
@@ -702,7 +702,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *\\\tilde{\tilde{q}}\_i\\ is orthogonal to the earlier \\\tilde{q}\\’s.* For each \\l \< i\\,
 >
-> \\ \begin{aligned} \tilde{q}\_l \cdot \tilde{\tilde{q}}\_i &= \tilde{q}\_l \cdot \mathopen{}\left(1\\\tilde{a}\_i + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\\tilde{q}\_j\right)\mathclose{} && \text{(}\href{#def-gram-schmidt}{\text{Definition~11}}\text{, as a linear combination)} \\ &= 1\\(\tilde{q}\_l \cdot \tilde{a}\_i) + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(} 1\\z = z \text{, and pull the minus signs out of the sum)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \tilde{q}\_l \cdot \tilde{a}\_i && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~17 in Vectors}}\text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{q}\_l \cdot \tilde{\tilde{q}}\_i &= \tilde{q}\_l \cdot \mathopen{}\left(1\\\tilde{a}\_i + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\\tilde{q}\_j\right)\mathclose{} && \text{(}\href{#def-gram-schmidt}{\text{Definition~11}}\text{, as a linear combination)} \\ &= 1\\(\tilde{q}\_l \cdot \tilde{a}\_i) + \sum\_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}\_j \cdot \tilde{a}\_i\right)\mathclose{}\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \sum\_{j=1}^{i-1} (\tilde{q}\_j \cdot \tilde{a}\_i)\\(\tilde{q}\_l \cdot \tilde{q}\_j) && \text{(} 1\\z = z \text{, and pull the minus signs out of the sum)} \\ &= \tilde{q}\_l \cdot \tilde{a}\_i - \tilde{q}\_l \cdot \tilde{a}\_i && \text{(only the } j = l \text{ term survives, }\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~19 in Vectors}}\text{)} \\ &= 0. && \text{(arithmetic)} \end{aligned} \\
 >
 > *Part 2 at step \\i\\.* If \\\tilde{\tilde{q}}\_i = \tilde{0}\\, then \\\tilde{a}\_i = \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j \in \mathcal{S}\_{i-1}\\. Conversely, if \\\tilde{a}\_i \in \mathcal{S}\_{i-1}\\, then \\\tilde{a}\_i = \sum\_{j\<i} (\tilde{q}\_j \cdot \tilde{a}\_i)\\\tilde{q}\_j\\ ([Theorem 9](#thm-orthonormal-expansion)), so \\\tilde{\tilde{q}}\_i = \tilde{0}\\.
 >
@@ -729,7 +729,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \tilde{\tilde{q}}\_3 &= (0, 1, 1) - \tfrac{1}{\sqrt{2}} \cdot\tfrac{1}{\sqrt{2}}\\(1, 1, 0) - \tfrac{1}{\sqrt{6}} \cdot\tfrac{1}{\sqrt{6}}\\(1, -1, 2) && \text{(orthogonalize)} \\ &= (0, 1, 1) - \tfrac{1}{2}\\(1, 1, 0) - \tfrac{1}{6}\\(1, -1, 2) && \text{(multiply the scalars)} \\ &= \mathopen{}\left(0 - \tfrac{1}{2} - \tfrac{1}{6},\\ 1 - \tfrac{1}{2} + \tfrac{1}{6},\\ 1 - 0 - \tfrac{2}{6}\right)\mathclose{} && \text{(subtract entrywise)} \\ &= \mathopen{}\left(-\tfrac{2}{3}, \tfrac{2}{3}, \tfrac{2}{3}\right)\mathclose{}, && \text{(arithmetic)} \end{aligned} \\
 >
-> with norm \\\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\\, so \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\. The process did not stop, so by [Theorem 10](#thm-gram-schmidt) \\\tilde{a}\_1, \tilde{a}\_2, \tilde{a}\_3\\ are linearly independent and \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ is an orthonormal basis of their span. That span therefore has dimension \\3\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), so it is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). As a check,
+> with norm \\\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\\, so \\\tilde{q}\_3 = \tfrac{1}{\sqrt{3}}\\(-1, 1, 1)\\. The process did not stop, so by [Theorem 10](#thm-gram-schmidt) \\\tilde{a}\_1, \tilde{a}\_2, \tilde{a}\_3\\ are linearly independent and \\\tilde{q}\_1, \tilde{q}\_2, \tilde{q}\_3\\ is an orthonormal basis of their span. That span therefore has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), so it is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). As a check,
 >
 > \\ \begin{aligned} \tilde{q}\_1 \cdot \tilde{q}\_3 &= \tfrac{1}{\sqrt{6}}\\(-1 + 1 + 0) \\ &= 0 \end{aligned} \\
 >
@@ -757,7 +757,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 24 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\tilde{u}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: \\\tilde{u}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\tilde{u}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1\right\\\mathclose{}\\, because every multiple of \\\tilde{u}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\:
+> **Example 24 (Extending one unit vector to an orthonormal basis of \\\mathbb{R}^3\\)** Start from the unit vector \\\tilde{u}\_1 = \tfrac{1}{\sqrt{2}}\\(1, 1, 0)\\. Extend it to a basis of \\\mathbb{R}^3\\ as in [Example 18 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-extend-basis), starting from the empty list: \\\tilde{u}\_1\\ is not in the span of the empty list, \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, because \\\mathopen{}\left\lVert\tilde{u}\_1\right\rVert\mathclose{} = 1\\; \\(1, 0, 0)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1\right\\\mathclose{}\\, because every multiple of \\\tilde{u}\_1\\ has equal first and second entries, and \\(0, 0, 1)\\ is not in \\\operatorname{span}\mathopen{}\left\\\tilde{u}\_1, (1, 0, 0)\right\\\mathclose{}\\, because every combination of those two vectors has third entry \\0\\. So \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\ are linearly independent ([Theorem 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-add-outside-span)), and three linearly independent vectors in \\\mathbb{R}^3\\ are a basis of it (they are a basis of their span, which has dimension \\3\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) and so is \\\mathbb{R}^3\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim), [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension))). Gram-Schmidt on \\\tilde{u}\_1, (1, 0, 0), (0, 0, 1)\\:
 >
 > 1.  \\\tilde{q}\_1 = \tilde{u}\_1\\.
 >

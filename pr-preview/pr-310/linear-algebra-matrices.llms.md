@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Matrices
 
@@ -190,7 +190,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Main diagonal)** The **main diagonal** of an \\m \times n\\ matrix \\\mathbf{A}\\ is the list of its entries \\a\_{11}, a\_{22}, \ldots, a\_{kk}\\, where \\k\\ is the smaller of \\m\\ and \\n\\. These are the **diagonal entries** of \\\mathbf{A}\\; every entry \\a\_{ij}\\ with \\i \ne j\\ is an **off-diagonal entry**.
+> **Definition 9 (Main diagonal)** The **main diagonal** of an \\m \times n\\ matrix \\\mathbf{A}\\ is the list of its entries \\a\_{11}, a\_{22}, \ldots, a\_{kk}\\, where \\k\\ is the smaller of \\m\\ and \\n\\.
+
+> **NOTE:**
+>
+> **Definition 10 (Diagonal entry)** The entries on the main diagonal ([Definition 9](#def-main-diagonal)) of a matrix \\\mathbf{A}\\ are the **diagonal entries** of \\\mathbf{A}\\.
+
+> **NOTE:**
+>
+> **Definition 11 (Off-diagonal entry)** In an \\m \times n\\ matrix \\\mathbf{A}\\ with main diagonal ([Definition 9](#def-main-diagonal)), every entry \\a\_{ij}\\ with \\i \ne j\\ is an **off-diagonal entry**.
 
 > **NOTE:**
 >
@@ -201,7 +209,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 10 (Identity matrix)** The \\p \times p\\ **identity matrix** \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
+> **Definition 12 (Identity matrix)** The \\p \times p\\ **identity matrix** \\\mathbf{I}\_p\\ (or \\\mathbf{I}\\ when the size is clear from context) has ones on the [main diagonal](#def-main-diagonal) and zeros elsewhere:
 >
 > \\ (\mathbf{I}\_p)\_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases} \qquad \mathbf{I}\_p = \begin{bmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{bmatrix} \\
 
@@ -227,25 +235,25 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Matrix-vector multiplication)** The **matrix-vector product** of an \\m \times p\\ matrix \\\mathbf{A}\\ and a \\p \times 1\\ column vector \\\tilde{x}\\ is the \\m \times 1\\ column vector \\\mathbf{A}\tilde{x}\\ with entries:
+> **Definition 13 (Matrix-vector multiplication)** The **matrix-vector product** of an \\m \times p\\ matrix \\\mathbf{A}\\ and a \\p \times 1\\ column vector \\\tilde{x}\\ is the \\m \times 1\\ column vector \\\mathbf{A}\tilde{x}\\ with entries:
 >
 > \\(\mathbf{A}\tilde{x})\_i = \sum\_{j=1}^pa\_{ij}\\ x_j\\
 
 > **NOTE:**
 >
-> *Remark 4* (Each entry is a dot product). Matrix-vector multiplication extends the dot product ([Definition 7 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)): entry \\i\\ of \\\mathbf{A}\tilde{x}\\ is the dot product of row \\i\\ of \\\mathbf{A}\\ with \\\tilde{x}\\. For example,
+> *Remark 4* (Each entry is a dot product). Matrix-vector multiplication extends the dot product ([Definition 8 in Vectors](linear-algebra-vectors.llms.md#def-dot-product)): entry \\i\\ of \\\mathbf{A}\tilde{x}\\ is the dot product of row \\i\\ of \\\mathbf{A}\\ with \\\tilde{x}\\. For example,
 >
 > \\ \begin{aligned} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} &= \begin{bmatrix} 1 \cdot 1 + 2 \cdot(-1) \\ 3 \cdot 1 + 4 \cdot(-1) \end{bmatrix} \\ &= \begin{bmatrix} -1 \\ -1 \end{bmatrix}. \end{aligned} \\
 
 > **NOTE:**
 >
-> **Definition 12 (Linear system (system of linear equations))** A **linear system** (or **system of linear equations**) with \\m\\ equations in \\n\\ unknowns is an equation \\\mathbf{A} \tilde{x}= \tilde{b}\\ in which the \\m \times n\\ matrix \\\mathbf{A}\\ and the vector \\\tilde{b} \in \mathbb{R}^m\\ are given. A **solution** of the system is a vector \\\tilde{x}\in \mathbb{R}^n\\ for which \\\mathbf{A} \tilde{x}= \tilde{b}\\ holds.
+> **Definition 14 (Linear system (system of linear equations))** A **linear system** (or **system of linear equations**) with \\m\\ equations in \\n\\ unknowns is an equation \\\mathbf{A} \tilde{x}= \tilde{b}\\ in which the \\m \times n\\ matrix \\\mathbf{A}\\ and the vector \\\tilde{b} \in \mathbb{R}^m\\ are given. A **solution** of the system is a vector \\\tilde{x}\in \mathbb{R}^n\\ for which \\\mathbf{A} \tilde{x}= \tilde{b}\\ holds.
 
 > **NOTE:**
 >
-> **Example 10 (Two equations in two unknowns)** By [Definition 11](#def-matvec-mult), row \\i\\ of \\\mathbf{A} \tilde{x}= \tilde{b}\\ is the equation \\a\_{i1} x_1 + \cdots + a\_{in} x_n = b_i\\. So the two equations \\x_1 + 2 x_2 = 5\\ and \\3 x_1 + 4 x_2 = 6\\ form the linear system \\\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \tilde{x}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\\. The vector \\\tilde{x}= (-4, 4.5)\\ is a solution:
+> **Example 10 (Two equations in two unknowns)** By [Definition 13](#def-matvec-mult), row \\i\\ of \\\mathbf{A} \tilde{x}= \tilde{b}\\ is the equation \\a\_{i1} x_1 + \cdots + a\_{in} x_n = b_i\\. So the two equations \\x_1 + 2 x_2 = 5\\ and \\3 x_1 + 4 x_2 = 6\\ form the linear system \\\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \tilde{x}= \begin{bmatrix} 5 \\ 6 \end{bmatrix}\\. The vector \\\tilde{x}= (-4, 4.5)\\ is a solution:
 >
-> \\ \begin{aligned} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} -4 \\ 4.5 \end{bmatrix} &= \begin{bmatrix} 1 \cdot(-4) + 2 \cdot 4.5 \\ 3 \cdot(-4) + 4 \cdot 4.5 \end{bmatrix} && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\ &= \begin{bmatrix} -4 + 9 \\ -12 + 18 \end{bmatrix} && \text{(multiply)} \\ &= \begin{bmatrix} 5 \\ 6 \end{bmatrix} && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \begin{bmatrix} -4 \\ 4.5 \end{bmatrix} &= \begin{bmatrix} 1 \cdot(-4) + 2 \cdot 4.5 \\ 3 \cdot(-4) + 4 \cdot 4.5 \end{bmatrix} && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\ &= \begin{bmatrix} -4 + 9 \\ -12 + 18 \end{bmatrix} && \text{(multiply)} \\ &= \begin{bmatrix} 5 \\ 6 \end{bmatrix} && \text{(add)} \end{aligned} \\
 >
 > The vector \\(1, 2)\\ is not a solution: its first equation holds, since \\1 + 2 \cdot 2 = 5\\, but its second gives \\3 \cdot 1 + 4 \cdot 2 = 11 \ne 6\\.
 
@@ -253,7 +261,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Linear map (linear transformation, linear function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
+> **Definition 15 (Linear map (linear transformation, linear function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a **linear map** (also called a **linear transformation** or **linear function**) if it preserves vector addition and scalar multiplication: for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ and \\c \in \mathbb{R}\\,
 >
 > 1.  \\f(\tilde{x}+ \tilde{y}) = f(\tilde{x}) + f(\tilde{y})\\ (*additivity*)
 > 2.  \\f(c\tilde{x}) = c f(\tilde{x})\\ (*homogeneity*)
@@ -276,7 +284,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Linear operator)** A **linear operator** on \\\mathbb{R}^p\\ is a linear map ([Definition 13](#def-linear-map)) from \\\mathbb{R}^p\\ to itself, that is, a linear map \\f : \mathbb{R}^p \to \mathbb{R}^p\\ whose input and output have the same length. Some authors use “operator” more loosely, for any linear map.
+> **Definition 16 (Linear operator)** A **linear operator** on \\\mathbb{R}^p\\ is a linear map ([Definition 15](#def-linear-map)) from \\\mathbb{R}^p\\ to itself, that is, a linear map \\f : \mathbb{R}^p \to \mathbb{R}^p\\ whose input and output have the same length. Some authors use “operator” more loosely, for any linear map.
 
 > **NOTE:**
 >
@@ -284,7 +292,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 8 (A linear map sends zero to zero)** If \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a linear map ([Definition 13](#def-linear-map)), then \\f(\tilde{0}) = \tilde{0}\\.
+> **Theorem 8 (A linear map sends zero to zero)** If \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a linear map ([Definition 15](#def-linear-map)), then \\f(\tilde{0}) = \tilde{0}\\.
 
 > **NOTE:**
 >
@@ -300,23 +308,23 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (Multiplying by a matrix is a linear map)** For any \\m \times p\\ matrix \\\mathbf{A}\\, the function \\f: \mathbb{R}^p \to \mathbb{R}^m\\ defined by \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ is a linear map ([Definition 13](#def-linear-map)).
+> **Theorem 9 (Multiplying by a matrix is a linear map)** For any \\m \times p\\ matrix \\\mathbf{A}\\, the function \\f: \mathbb{R}^p \to \mathbb{R}^m\\ defined by \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ is a linear map ([Definition 15](#def-linear-map)).
 
 > **NOTE:**
 >
 > *Proof*. Both conditions are checked one entry at a time. For each \\i \in \\1, \ldots, m\\\\, additivity:
 >
-> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(\tilde{x}+ \tilde{y})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (\tilde{x}+ \tilde{y})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= \sum\_{j=1}^pa\_{ij} (x_j + y_j) && \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)} \\&= \sum\_{j=1}^p(a\_{ij} x_j + a\_{ij} y_j) && \text{(multiplication distributes over addition)} \\&= \sum\_{j=1}^pa\_{ij} x_j + \sum\_{j=1}^pa\_{ij} y_j && \text{(a sum of sums splits)} \\&= (\mathbf{A}\tilde{x})\_i + (\mathbf{A}\tilde{y})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= (\mathbf{A}\tilde{x}+ \mathbf{A}\tilde{y})\_i && \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(\tilde{x}+ \tilde{y})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (\tilde{x}+ \tilde{y})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\&= \sum\_{j=1}^pa\_{ij} (x_j + y_j) && \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \\&= \sum\_{j=1}^p(a\_{ij} x_j + a\_{ij} y_j) && \text{(multiplication distributes over addition)} \\&= \sum\_{j=1}^pa\_{ij} x_j + \sum\_{j=1}^pa\_{ij} y_j && \text{(a sum of sums splits)} \\&= (\mathbf{A}\tilde{x})\_i + (\mathbf{A}\tilde{y})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\&= (\mathbf{A}\tilde{x}+ \mathbf{A}\tilde{y})\_i && \text{(}\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \end{aligned} \\
 >
 > and homogeneity:
 >
-> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(c\tilde{x})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (c\tilde{x})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= \sum\_{j=1}^pa\_{ij}\\ c\\ x_j && \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)} \\&= \sum\_{j=1}^pc\\ a\_{ij} x_j && \text{(products are symmetric)} \\&= c \sum\_{j=1}^pa\_{ij} x_j && \text{(a constant factor comes out of a sum)} \\&= c\\ (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= (c\\ \mathbf{A}\tilde{x})\_i && \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\mathbf{A}(c\tilde{x})\right)\mathclose{}\_i &= \sum\_{j=1}^pa\_{ij} (c\tilde{x})\_j && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\&= \sum\_{j=1}^pa\_{ij}\\ c\\ x_j && \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)} \\&= \sum\_{j=1}^pc\\ a\_{ij} x_j && \text{(products are symmetric)} \\&= c \sum\_{j=1}^pa\_{ij} x_j && \text{(a constant factor comes out of a sum)} \\&= c\\ (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\&= (c\\ \mathbf{A}\tilde{x})\_i && \text{(}\href{#def-scalar-mult}{\text{Definition~6}}\text{)} \end{aligned} \\
 >
 > The four algebra rules cited here are on the [algebra page](algebra.llms.md): [distributivity](algebra-sums.llms.md#thm-mult-distr), [a sum of sums](algebra-sums.llms.md#thm-sum-of-sums), [symmetry of products](algebra-sums.llms.md#thm-prod-symmetric), and [a constant factor](algebra-sums.llms.md#thm-sum-constant-factor).
 
 > **NOTE:**
 >
-> **Theorem 10 (A linear map preserves linear combinations)** If \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a linear map ([Definition 13](#def-linear-map)), then for any vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k \in \mathbb{R}^p\\ and any coefficients \\c_1, \ldots, c_k \in \mathbb{R}\\:
+> **Theorem 10 (A linear map preserves linear combinations)** If \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a linear map ([Definition 15](#def-linear-map)), then for any vectors \\\tilde{v}\_1, \ldots, \tilde{v}\_k \in \mathbb{R}^p\\ and any coefficients \\c_1, \ldots, c_k \in \mathbb{R}\\:
 >
 > \\f\mathopen{}\left(\sum\_{j=1}^{k} c_j \tilde{v}\_j\right)\mathclose{} = \sum\_{j=1}^{k} c_j f(\tilde{v}\_j)\\
 
@@ -330,11 +338,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 11 (Every linear map is multiplication by a matrix)** If \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a linear map ([Definition 13](#def-linear-map)), then there is exactly one \\m \times p\\ matrix \\\mathbf{A}\\ such that
+> **Theorem 11 (Every linear map is multiplication by a matrix)** If \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is a linear map ([Definition 15](#def-linear-map)), then there is exactly one \\m \times p\\ matrix \\\mathbf{A}\\ such that
 >
 > \\f(\tilde{x}) = \mathbf{A}\tilde{x}\quad \text{for all } \tilde{x}\in \mathbb{R}^p\\
 >
-> Column \\j\\ of \\\mathbf{A}\\ is \\f(\tilde{e}\_j)\\, the value of \\f\\ at the \\j\\th indicator vector ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)); that is, \\a\_{ij} = \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i\\.
+> Column \\j\\ of \\\mathbf{A}\\ is \\f(\tilde{e}\_j)\\, the value of \\f\\ at the \\j\\th indicator vector ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)); that is, \\a\_{ij} = \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i\\.
 
 > **NOTE:**
 >
@@ -344,11 +352,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > and entry \\i\\ of that sum is
 >
-> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^px_j f(\tilde{e}\_j)\right)\mathclose{}\_i &= \sum\_{j=1}^px_j \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i && \text{(}\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~8 in Vectors}}\text{, entry by entry)} \\&= \sum\_{j=1}^px_j a\_{ij} && \text{(definition of } \mathbf{A} \text{)} \\&= \sum\_{j=1}^pa\_{ij} x_j && \text{(products are symmetric)} \\&= (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(\sum\_{j=1}^px_j f(\tilde{e}\_j)\right)\mathclose{}\_i &= \sum\_{j=1}^px_j \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i && \text{(}\href{linear-algebra-vectors.qmd#def-linear-combination}{\text{Definition~9 in Vectors}}\text{, entry by entry)} \\&= \sum\_{j=1}^px_j a\_{ij} && \text{(definition of } \mathbf{A} \text{)} \\&= \sum\_{j=1}^pa\_{ij} x_j && \text{(products are symmetric)} \\&= (\mathbf{A}\tilde{x})\_i && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \end{aligned} \\
 >
 > **Uniqueness.** Suppose \\\mathbf{B}\\ is any \\m \times p\\ matrix with \\f(\tilde{x}) = \mathbf{B}\tilde{x}\\ for all \\\tilde{x}\\. Taking \\\tilde{x}= \tilde{e}\_j\\, for each \\i\\:
 >
-> \\ \begin{aligned} \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i &= (\mathbf{B}\tilde{e}\_j)\_i && \text{(assumption on } \mathbf{B} \text{)} \\&= \sum\_{k=1}^{p} b\_{ik} (\tilde{e}\_j)\_k && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= b\_{ij} \cdot 1 + \sum\_{k \neq j} b\_{ik} \cdot 0 && \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~12 in Vectors}}\text{, splitting off the } k = j \text{ term)} \\&= b\_{ij} + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= b\_{ij} && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left(f(\tilde{e}\_j)\right)\mathclose{}\_i &= (\mathbf{B}\tilde{e}\_j)\_i && \text{(assumption on } \mathbf{B} \text{)} \\&= \sum\_{k=1}^{p} b\_{ik} (\tilde{e}\_j)\_k && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\&= b\_{ij} \cdot 1 + \sum\_{k \neq j} b\_{ik} \cdot 0 && \text{(}\href{linear-algebra-vectors.qmd#def-indicator-vector}{\text{Definition~14 in Vectors}}\text{, splitting off the } k = j \text{ term)} \\&= b\_{ij} + 0 && \text{(times } 1 \text{ changes nothing; times } 0 \text{ gives } 0 \text{)} \\&= b\_{ij} && \text{(adding } 0 \text{ changes nothing)} \end{aligned} \\
 >
 > So
 >
@@ -358,7 +366,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Matrix of a linear map)** The **matrix of** a linear map \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is the unique \\m \times p\\ matrix \\\mathbf{A}\\ with \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ for all \\\tilde{x}\\ ([Theorem 11](#thm-linear-map-matrix)). Its column \\j\\ is \\f(\tilde{e}\_j)\\.
+> **Definition 17 (Matrix of a linear map)** The **matrix of** a linear map \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is the unique \\m \times p\\ matrix \\\mathbf{A}\\ with \\f(\tilde{x}) = \mathbf{A}\tilde{x}\\ for all \\\tilde{x}\\ ([Theorem 11](#thm-linear-map-matrix)). Its column \\j\\ is \\f(\tilde{e}\_j)\\.
 
 > **NOTE:**
 >
@@ -366,11 +374,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ f(\tilde{e}\_1) = f\mathopen{}\left(\begin{bmatrix}1 \\ 0\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 1 \\ 1 + 0\end{bmatrix} = \begin{bmatrix}2 \\ 1\end{bmatrix}, \qquad f(\tilde{e}\_2) = f\mathopen{}\left(\begin{bmatrix}0 \\ 1\end{bmatrix}\right)\mathclose{} = \begin{bmatrix}2 \cdot 0 \\ 0 + 1\end{bmatrix} = \begin{bmatrix}0 \\ 1\end{bmatrix} \\
 >
-> and these are the columns of the matrix of \\f\\ ([Definition 15](#def-matrix-of-linear-map)): \\\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}\\.
+> and these are the columns of the matrix of \\f\\ ([Definition 17](#def-matrix-of-linear-map)): \\\mathbf{A} = \begin{bmatrix}2 & 0 \\ 1 & 1\end{bmatrix}\\.
 
 > **NOTE:**
 >
-> **Corollary 1 (Linear functions from vectors to numbers)** A function \\f: \mathbb{R}^p \to \mathbb{R}\\ is linear ([Definition 13](#def-linear-map)) if and only if there is a vector \\\tilde{w} \in \mathbb{R}^p\\ such that
+> **Corollary 1 (Linear functions from vectors to numbers)** A function \\f: \mathbb{R}^p \to \mathbb{R}\\ is linear ([Definition 15](#def-linear-map)) if and only if there is a vector \\\tilde{w} \in \mathbb{R}^p\\ such that
 >
 > \\f(\tilde{x}) = \tilde{w} \cdot \tilde{x} \quad \text{for all } \tilde{x}\in \mathbb{R}^p\\
 >
@@ -404,12 +412,12 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > Two chapters of the [*Essence of linear algebra*](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) series by 3Blue1Brown show the results above geometrically:
 >
-> - [Linear transformations and matrices](https://www.youtube.com/watch?v=kYB8IZa5AuE) (Chapter 3) shows why a linear map is fixed by where it sends the indicator vectors, which become the columns of its matrix ([Definition 15](#def-matrix-of-linear-map)).
+> - [Linear transformations and matrices](https://www.youtube.com/watch?v=kYB8IZa5AuE) (Chapter 3) shows why a linear map is fixed by where it sends the indicator vectors, which become the columns of its matrix ([Definition 17](#def-matrix-of-linear-map)).
 > - [Dot products and duality](https://www.youtube.com/watch?v=LyGKycYT2v0) (Chapter 9) shows why every linear map from \\\mathbb{R}^p\\ to \\\mathbb{R}\\ is a dot product with a fixed vector ([Corollary 1](#cor-linear-scalar)).
 
 > **NOTE:**
 >
-> **Definition 16 (Translation)** For a fixed vector \\\tilde{b} \in \mathbb{R}^m\\, the **translation** by \\\tilde{b}\\ is the function \\t\_{\tilde{b}} : \mathbb{R}^m \to \mathbb{R}^m\\ defined by
+> **Definition 18 (Translation)** For a fixed vector \\\tilde{b} \in \mathbb{R}^m\\, the **translation** by \\\tilde{b}\\ is the function \\t\_{\tilde{b}} : \mathbb{R}^m \to \mathbb{R}^m\\ defined by
 >
 > \\t\_{\tilde{b}}(\tilde{y}) = \tilde{y}+ \tilde{b}\\
 
@@ -427,11 +435,13 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Affine map (affine transformation, affine function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 16](#def-translation)) (a [composition](sets-functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
+> **Definition 19 (Affine map (affine transformation, affine function))** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}^p \to \mathbb{R}^m\\ is an **affine map** (also called an **affine transformation** or **affine function**) if it is a matrix product followed by a translation ([Definition 18](#def-translation)) (a [composition](sets-functions.llms.md#def-composition), with the matrix product as the inner function): there are an \\m \times p\\ matrix \\\mathbf{A}\\ and a vector \\\tilde{b} \in \mathbb{R}^m\\ such that
 >
 > \\ \begin{aligned} f(\tilde{x}) &= t\_{\tilde{b}}(\mathbf{A} \tilde{x}) \\ &= \mathbf{A} \tilde{x}+ \tilde{b} \quad \text{for all } \tilde{x}\in \mathbb{R}^p \end{aligned} \\
+
+> **NOTE:**
 >
-> The vector \\\tilde{b}\\ is called the **offset** of \\f\\ (statistics also calls it the **intercept**, and machine learning the **bias**).
+> **Definition 20 (Offset (intercept, bias) of an affine map)** In [Definition 19](#def-affine-map), the vector \\\tilde{b}\\ is called the **offset** of \\f\\ (statistics also calls it the **intercept**, and machine learning the **bias**).
 
 > **NOTE:**
 >
@@ -441,7 +451,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Augmented vector)** The **augmented vector** of \\\tilde{x}\in \mathbb{R}^p\\ is the vector \\\tilde{\tilde{x}} \in \mathbb{R}^{p+1}\\ formed by placing a \\1\\ above the entries of \\\tilde{x}\\:
+> **Definition 21 (Augmented vector)** The **augmented vector** of \\\tilde{x}\in \mathbb{R}^p\\ is the vector \\\tilde{\tilde{x}} \in \mathbb{R}^{p+1}\\ formed by placing a \\1\\ above the entries of \\\tilde{x}\\:
 >
 > \\ \begin{aligned} \tilde{\tilde{x}} &= \begin{bmatrix}1 \\ \tilde{x}\end{bmatrix} \\ &= {(1, x_1, \ldots, x_p)}^{\top} \end{aligned} \\
 
@@ -453,21 +463,21 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 12 (An affine map sends zero to its offset)** An affine map \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\\ ([Definition 17](#def-affine-map)) satisfies \\f(\tilde{0}) = \tilde{b}\\.
+> **Theorem 12 (An affine map sends zero to its offset)** An affine map \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\\ ([Definition 19](#def-affine-map)) satisfies \\f(\tilde{0}) = \tilde{b}\\.
 
 > **NOTE:**
 >
 > *Proof*. First, \\\mathbf{A}\tilde{0}= \tilde{0}\\: for each \\i\\,
 >
-> \\ \begin{aligned} (\mathbf{A}\tilde{0})\_i &= \sum\_{j=1}^pa\_{ij} \cdot 0 && \text{(}\href{#def-matvec-mult}{\text{Definition~11}}\text{)} \\&= \sum\_{j=1}^p0 && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= 0 && \text{(a sum of zeros is } 0 \text{)} \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{A}\tilde{0})\_i &= \sum\_{j=1}^pa\_{ij} \cdot 0 && \text{(}\href{#def-matvec-mult}{\text{Definition~13}}\text{)} \\&= \sum\_{j=1}^p0 && \text{(any number times } 0 \text{ is } 0 \text{)} \\&= 0 && \text{(a sum of zeros is } 0 \text{)} \end{aligned} \\
 >
 > Then
 >
-> \\ \begin{aligned} f(\tilde{0}) &= \mathbf{A}\tilde{0}+ \tilde{b} && \text{(}\href{#def-affine-map}{\text{Definition~17}}\text{)} \\&= \tilde{0}+ \tilde{b} && (\mathbf{A}\tilde{0}= \tilde{0}) \\&= \tilde{b} && \text{(adding } \tilde{0}\text{ changes no entry; }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~6 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} f(\tilde{0}) &= \mathbf{A}\tilde{0}+ \tilde{b} && \text{(}\href{#def-affine-map}{\text{Definition~19}}\text{)} \\&= \tilde{0}+ \tilde{b} && (\mathbf{A}\tilde{0}= \tilde{0}) \\&= \tilde{b} && \text{(adding } \tilde{0}\text{ changes no entry; }\href{linear-algebra-vectors.qmd#def-vector-addition}{\text{Definition~7 in Vectors}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
-> **Theorem 13 (An affine map is linear exactly when its offset is zero)** An affine map \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\\ ([Definition 17](#def-affine-map)) is linear ([Definition 13](#def-linear-map)) if and only if \\\tilde{b} = \tilde{0}\\.
+> **Theorem 13 (An affine map is linear exactly when its offset is zero)** An affine map \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\\ ([Definition 19](#def-affine-map)) is linear ([Definition 15](#def-linear-map)) if and only if \\\tilde{b} = \tilde{0}\\.
 
 > **NOTE:**
 >
@@ -483,7 +493,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Corollary 2 (Every linear map is affine)** Every linear map \\f : \mathbb{R}^p \to \mathbb{R}^m\\ ([Definition 13](#def-linear-map)) is an affine map ([Definition 17](#def-affine-map)) with offset \\\tilde{0}\\.
+> **Corollary 2 (Every linear map is affine)** Every linear map \\f : \mathbb{R}^p \to \mathbb{R}^m\\ ([Definition 15](#def-linear-map)) is an affine map ([Definition 19](#def-affine-map)) with offset \\\tilde{0}\\.
 
 > **NOTE:**
 >
@@ -491,11 +501,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} f(\tilde{x}) &= \mathbf{A}\tilde{x}\\ &= \mathbf{A}\tilde{x}+ \tilde{0}, \end{aligned} \\
 >
-> which is [Definition 17](#def-affine-map) with \\\tilde{b} = \tilde{0}\\.
+> which is [Definition 19](#def-affine-map) with \\\tilde{b} = \tilde{0}\\.
 
 > **NOTE:**
 >
-> **Theorem 14 (An affine map determines its matrix and offset)** If \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\\ and \\f(\tilde{x}) = \mathbf{A}'\tilde{x}+ \tilde{b}'\\ for all \\\tilde{x}\in \mathbb{R}^p\\ ([Definition 17](#def-affine-map)), then \\\mathbf{A}' = \mathbf{A}\\ and \\\tilde{b}' = \tilde{b}\\.
+> **Theorem 14 (An affine map determines its matrix and offset)** If \\f(\tilde{x}) = \mathbf{A}\tilde{x}+ \tilde{b}\\ and \\f(\tilde{x}) = \mathbf{A}'\tilde{x}+ \tilde{b}'\\ for all \\\tilde{x}\in \mathbb{R}^p\\ ([Definition 19](#def-affine-map)), then \\\mathbf{A}' = \mathbf{A}\\ and \\\tilde{b}' = \tilde{b}\\.
 
 > **NOTE:**
 >
@@ -507,26 +517,30 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \mathbf{A}\tilde{x}&= f(\tilde{x}) - \tilde{b} \\ &= \mathbf{A}'\tilde{x} \end{aligned} \\
 >
-> for all \\\tilde{x}\\, so \\\mathbf{A}\\ and \\\mathbf{A}'\\ are both matrices ([Definition 15](#def-matrix-of-linear-map)) of the linear map \\\tilde{x}\mapsto f(\tilde{x}) - \tilde{b}\\ (linear by [Theorem 9](#thm-matrix-map-linear)), and the uniqueness in [Theorem 11](#thm-linear-map-matrix) gives \\\mathbf{A}' = \mathbf{A}\\.
+> for all \\\tilde{x}\\, so \\\mathbf{A}\\ and \\\mathbf{A}'\\ are both matrices ([Definition 17](#def-matrix-of-linear-map)) of the linear map \\\tilde{x}\mapsto f(\tilde{x}) - \tilde{b}\\ (linear by [Theorem 9](#thm-matrix-map-linear)), and the uniqueness in [Theorem 11](#thm-linear-map-matrix) gives \\\mathbf{A}' = \mathbf{A}\\.
 
 > **NOTE:**
 >
-> *Remark 7* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 13](#def-linear-map), so by [Theorem 13](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra-exponentials.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
+> *Remark 7* (“Linear” in this site, and in machine learning and statistics). This site uses “linear” only in the sense of [Definition 15](#def-linear-map), so by [Theorem 13](#thm-affine-linear-iff) a function with a nonzero offset is affine but not linear. For functions of one variable, this is the same split as [affine](algebra-exponentials.llms.md#def-affine-function) \\a x + b\\ versus [linear](algebra-exponentials.llms.md#def-linear-function) \\a x\\ on the algebra page. (The algebra page writes these as \\m x + b\\ and \\m x\\; here \\m\\ already names the number of outputs.)
 >
-> Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset \\b\\ the bias (machine learning) or the intercept (statistics), as [Definition 17](#def-affine-map) notes. A model with an intercept is affine in \\\tilde{x}\\ but linear in its coefficients \\(b, \tilde{w})\\, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: \\w_1 x + w_2 x^2 + b\\ is not affine in \\x\\, but it is linear in \\(b, w_1, w_2)\\. Separately, the affine function \\\tilde{w} \cdot \tilde{x} + b\\ is a linear function of the augmented vector \\\tilde{\tilde{x}}\\ ([Definition 18](#def-augmented-vector)), with \\b\\ as the coefficient on its first entry.
+> Machine learning and statistics often call any function of the form [Equation 1](#eq-linear-scalar) “linear”, as in a *linear model* in statistics or a *linear layer* in a neural network, and call the offset \\b\\ the bias (machine learning) or the intercept (statistics), as [Definition 19](#def-affine-map) notes. A model with an intercept is affine in \\\tilde{x}\\ but linear in its coefficients \\(b, \tilde{w})\\, and that is the sense of “linear” in “linear model”: it stays linear in the coefficients even when the inputs are transformed: \\w_1 x + w_2 x^2 + b\\ is not affine in \\x\\, but it is linear in \\(b, w_1, w_2)\\. Separately, the affine function \\\tilde{w} \cdot \tilde{x} + b\\ is a linear function of the augmented vector \\\tilde{\tilde{x}}\\ ([Definition 21](#def-augmented-vector)), with \\b\\ as the coefficient on its first entry.
 
 > **TIP:**
 >
-> - Zhou ([2024](#ref-zhou2024matrix)), sections 6 (“Linear functions and operators”; see [Definition 14](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 11](#thm-linear-map-matrix), and that every affine function has the form \\\mathbf{A}\tilde{x}+ \tilde{b}\\. It defines “affine” differently, by \\f(\alpha\tilde{x}+ \beta\tilde{y}) = \alpha f(\tilde{x}) + \beta f(\tilde{y})\\ whenever \\\alpha+ \beta= 1\\, and shows that this condition holds exactly for the maps \\\mathbf{A}\tilde{x}+ \tilde{b}\\, so the two definitions agree.
+> - Zhou ([2024](#ref-zhou2024matrix)), sections 6 (“Linear functions and operators”; see [Definition 16](#def-linear-operator)) and 7 (“Affine functions”), proves that every linear function is a matrix-vector product by the same route as [Theorem 11](#thm-linear-map-matrix), and that every affine function has the form \\\mathbf{A}\tilde{x}+ \tilde{b}\\. It defines “affine” differently, by \\f(\alpha\tilde{x}+ \beta\tilde{y}) = \alpha f(\tilde{x}) + \beta f(\tilde{y})\\ whenever \\\alpha+ \beta= 1\\, and shows that this condition holds exactly for the maps \\\mathbf{A}\tilde{x}+ \tilde{b}\\, so the two definitions agree.
 > - Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), chapter 2 (“Linear functions”), covers the vector-to-number case: linear functions as inner products, affine functions, the [first-order Taylor approximation](calculus-derivatives.llms.md#def-linear-approximation) as an affine function, and the regression model. Section 8.1 (“Linear and affine functions”) covers the vector-to-vector case. A free PDF is on the book’s website.
 
 > **NOTE:**
 >
-> **Definition 19 (Hyperplane)** A **hyperplane** in \\\mathbb{R}^p\\ is the set of points \\\tilde{x}\in \mathbb{R}^p\\ satisfying
+> **Definition 22 (Hyperplane)** A **hyperplane** in \\\mathbb{R}^p\\ is the set of points \\\tilde{x}\in \mathbb{R}^p\\ satisfying
 >
 > \\\tilde{w} \cdot \tilde{x} + b = 0\\
 >
-> for some vector \\\tilde{w} \in \mathbb{R}^p \setminus \\\tilde{0}\\\\ and number \\b \in \mathbb{R}\\. The vector \\\tilde{w}\\ is a **normal vector** of the hyperplane, and \\b\\ is its offset.
+> for some vector \\\tilde{w} \in \mathbb{R}^p \setminus \\\tilde{0}\\\\ and number \\b \in \mathbb{R}\\. The number \\b\\ is the offset of the hyperplane.
+
+> **NOTE:**
+>
+> **Definition 23 (Normal vector of a hyperplane)** In [Definition 22](#def-hyperplane), the vector \\\tilde{w}\\ is a **normal vector** of the hyperplane.
 
 > **NOTE:**
 >
@@ -673,7 +687,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Exercise 3 (Which of these are affine in \\\tilde{w}\\?)** Each of the five expressions is a function of the weights \\\tilde{w} \in \mathbb{R}^p\\, with the data \\\tilde{x}\\ and \\y\\ held fixed. Say which ones are affine ([Definition 17](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 13](#def-linear-map)).
+> **Exercise 3 (Which of these are affine in \\\tilde{w}\\?)** Each of the five expressions is a function of the weights \\\tilde{w} \in \mathbb{R}^p\\, with the data \\\tilde{x}\\ and \\y\\ held fixed. Say which ones are affine ([Definition 19](#def-affine-map)), that is, have the form [Equation 1](#eq-linear-scalar) — an inner product plus an offset — and which of those are also linear ([Definition 15](#def-linear-map)).
 >
 > 1.  \\\tilde{w}^{\top} \tilde{x}\\
 > 2.  \\\tilde{w}^{\top} \tilde{x}- y\\

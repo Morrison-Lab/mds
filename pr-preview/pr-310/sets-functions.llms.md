@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 > **NOTE:**
 >
@@ -34,19 +34,29 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Interval)** For [real numbers](notation.llms.md#def-real-numbers) \\a \le b\\, the **intervals** with **endpoints** \\a\\ and \\b\\ are:
+> **Definition 3 (Interval)** For [real numbers](notation.llms.md#def-real-numbers) \\a \le b\\, the **intervals** with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
 >
-> - the **closed interval** \\\[a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \le b\right\\\mathclose{}\\;
-> - the **open interval** \\(a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \< b\right\\\mathclose{}\\;
-> - the **half-open intervals** \\\[a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \< b\right\\\mathclose{}\\ and \\(a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \le b\right\\\mathclose{}\\.
+> A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
+
+> **NOTE:**
 >
-> The **unbounded intervals** have at most one endpoint:
+> **Definition 4 (Closed interval)** For real numbers \\a \le b\\, the **closed interval** is \\\[a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \le b\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 5 (Open interval)** For real numbers \\a \le b\\, the **open interval** is \\(a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \< b\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 6 (Half-open intervals)** For real numbers \\a \le b\\, the **half-open intervals** are \\\[a, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \le x \< b\right\\\mathclose{}\\ and \\(a, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: a \< x \le b\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 7 (Unbounded intervals)** The **unbounded intervals** have at most one endpoint:
 >
 > - \\\[a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \ge a\right\\\mathclose{}\\ and \\(a, \infty) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \> a\right\\\mathclose{}\\;
 > - \\(-\infty, b\] \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \le b\right\\\mathclose{}\\ and \\(-\infty, b) \stackrel{\text{def}}{=}\mathopen{}\left\\x \in \mathbb{R}: x \< b\right\\\mathclose{}\\;
 > - \\(-\infty, \infty) \stackrel{\text{def}}{=}\mathbb{R}\\.
->
-> A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
 
 > **NOTE:**
 >
@@ -59,7 +69,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Subset)** A set \\A\\ is a **subset** of a set \\B\\, written \\A \subseteq B\\, if every element of \\A\\ is an element of \\B\\.
+> **Definition 8 (Subset)** A set \\A\\ is a **subset** of a set \\B\\, written \\A \subseteq B\\, if every element of \\A\\ is an element of \\B\\.
 
 > **NOTE:**
 >
@@ -71,11 +81,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. Every element of \\A\\ is an element of \\A\\, which is [Definition 4](#def-subset) with \\B = A\\.
+> *Proof*. Every element of \\A\\ is an element of \\A\\, which is [Definition 8](#def-subset) with \\B = A\\.
 
 > **NOTE:**
 >
-> **Definition 5 (Strict subset)** A set \\A\\ is a **strict subset** of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
+> **Definition 9 (Strict subset)** A set \\A\\ is a **strict subset** of a set \\B\\, written \\A \subsetneq B\\, if \\A\\ is a [subset](#def-subset) of \\B\\ and \\A \neq B\\.
 
 > **NOTE:**
 >
@@ -83,7 +93,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Superset)** A set \\B\\ is a **superset** of a set \\A\\, written \\B \supseteq A\\, if every element of \\A\\ is an element of \\B\\.
+> **Definition 10 (Superset)** A set \\B\\ is a **superset** of a set \\A\\, written \\B \supseteq A\\, if every element of \\A\\ is an element of \\B\\.
 
 > **NOTE:**
 >
@@ -91,7 +101,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Strict superset)** A set \\B\\ is a **strict superset** of a set \\A\\, written \\B \supsetneq A\\, if \\B\\ is a [superset](#def-superset) of \\A\\ and \\B \neq A\\.
+> **Definition 11 (Strict superset)** A set \\B\\ is a **strict superset** of a set \\A\\, written \\B \supsetneq A\\, if \\B\\ is a [superset](#def-superset) of \\A\\ and \\B \neq A\\.
 
 > **NOTE:**
 >
@@ -107,7 +117,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Empty set)** The **empty set**, denoted \\\emptyset\\, is the set that has no elements.
+> **Definition 12 (Empty set)** The **empty set**, denoted \\\emptyset\\, is the set that has no elements.
 
 > **NOTE:**
 >
@@ -119,7 +129,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Vacuous truth)** A statement of the form “every element of \\A\\ has property \\P\\” is **vacuously true** when \\A\\ is the [empty set](#def-empty-set): \\A\\ has no elements, so no element of \\A\\ fails to have property \\P\\.
+> **Definition 13 (Vacuous truth)** A statement of the form “every element of \\A\\ has property \\P\\” is **vacuously true** when \\A\\ is the [empty set](#def-empty-set): \\A\\ has no elements, so no element of \\A\\ fails to have property \\P\\.
 
 > **NOTE:**
 >
@@ -139,11 +149,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 4](#def-subset), \\\emptyset \subseteq A\\ fails only if some element of \\\emptyset\\ is not in \\A\\. The [empty set](#def-empty-set) has no elements, so no such element exists.
+> *Proof*. By [Definition 8](#def-subset), \\\emptyset \subseteq A\\ fails only if some element of \\\emptyset\\ is not in \\A\\. The [empty set](#def-empty-set) has no elements, so no such element exists.
 
 > **NOTE:**
 >
-> **Definition 10 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) is a set whose elements are themselves sets.
+> **Definition 14 (Collection of sets (family of sets))** A **collection of sets** (also called a **family of sets**) is a set whose elements are themselves sets.
 
 > **NOTE:**
 >
@@ -157,33 +167,33 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 11 (Union)** The **union** of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
+> **Definition 15 (Union)** The **union** of sets \\A\\ and \\B\\, written \\A \cup B\\, is the set of elements that are in \\A\\, in \\B\\, or in both:
 >
 > \\A \cup B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ or } x \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 12 (Union of a family of sets)** Let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **union** of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcup\_{i=1}^{n} A_i\\ or \\A_1 \cup \cdots \cup A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcup\_{i=1}^{\infty} A_i\\.
+> **Definition 16 (Union of a family of sets)** Let \\I\\ be a set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **union** of the sets \\A_i\\, written \\\bigcup\_{i \in I} A_i\\, is the set of elements that are in at least one \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcup\_{i=1}^{n} A_i\\ or \\A_1 \cup \cdots \cup A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcup\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
-> **Definition 13 (Intersection)** The **intersection** of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
+> **Definition 17 (Intersection)** The **intersection** of sets \\A\\ and \\B\\, written \\A \cap B\\, is the set of elements that are in both \\A\\ and \\B\\:
 >
 > \\A \cap B \stackrel{\text{def}}{=}\mathopen{}\left\\x : x \in A \text{ and } x \in B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 14 (Intersection of a family of sets)** Let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **intersection** of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcap\_{i=1}^{n} A_i\\ or \\A_1 \cap \cdots \cap A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcap\_{i=1}^{\infty} A_i\\.
+> **Definition 18 (Intersection of a family of sets)** Let \\I\\ be a nonempty set of indices, such as \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ or \\\mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, and let \\A_i\\ be a set for each \\i \in I\\. The **intersection** of the sets \\A_i\\, written \\\bigcap\_{i \in I} A_i\\, is the set of elements that are in every \\A_i\\. For \\I = \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\, it is also written \\\bigcap\_{i=1}^{n} A_i\\ or \\A_1 \cap \cdots \cap A_n\\, and for \\I = \mathopen{}\left\\1, 2, 3, \ldots\right\\\mathclose{}\\, it is written \\\bigcap\_{i=1}^{\infty} A_i\\.
 
 > **NOTE:**
 >
-> **Definition 15 (Set difference)** The **set difference** of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
+> **Definition 19 (Set difference)** The **set difference** of sets \\A\\ and \\B\\, written \\A \setminus B\\, is the set of elements of \\A\\ that are not in \\B\\:
 >
 > \\A \setminus B \stackrel{\text{def}}{=}\mathopen{}\left\\x \in A : x \notin B\right\\\mathclose{}\\
 
 > **NOTE:**
 >
-> **Definition 16 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** of \\A\\ in \\S\\ is the set difference ([Definition 15](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
+> **Definition 20 (Complement)** Let \\A\\ be a [subset](#def-subset) of a set \\S\\. The **complement** of \\A\\ in \\S\\ is the set difference ([Definition 19](#def-set-difference)) \\S \setminus A\\: the elements of \\S\\ that are not in \\A\\. When the set \\S\\ is clear from context, the complement of \\A\\ is written \\A^c\\:
 >
 > \\A^c \stackrel{\text{def}}{=}S \setminus A = \mathopen{}\left\\x \in S : x \notin A\right\\\mathclose{}\\
 
@@ -221,17 +231,17 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} S \setminus \bigcup\_{i \in I} A_i &= \bigcap\_{i \in I} (S \setminus A_i) \\ S \setminus \bigcap\_{i \in I} A_i &= \bigcup\_{i \in I} (S \setminus A_i) \end{aligned} \\
 >
-> With the complement notation of [Definition 16](#def-complement), these read \\\mathopen{}\left(\bigcup\_{i \in I} A_i\right)\mathclose{}^c = \bigcap\_{i \in I} A_i^c\\ and \\\mathopen{}\left(\bigcap\_{i \in I} A_i\right)\mathclose{}^c = \bigcup\_{i \in I} A_i^c\\.
+> With the complement notation of [Definition 20](#def-complement), these read \\\mathopen{}\left(\bigcup\_{i \in I} A_i\right)\mathclose{}^c = \bigcap\_{i \in I} A_i^c\\ and \\\mathopen{}\left(\bigcap\_{i \in I} A_i\right)\mathclose{}^c = \bigcup\_{i \in I} A_i^c\\.
 
 > **NOTE:**
 >
 > *Proof*. Two sets are equal when they have the same elements ([Definition 1](#def-set)), so it is enough to show that an element \\x\\ is in the left-hand side [if and only if](proof-writing.llms.md#def-necessary-sufficient) (\\\iff\\) it is in the right-hand side. For the first law:
 >
-> \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~15}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~11}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~15}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~13}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} x \in S \setminus \bigcup\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcup\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for every } i \in I && \text{(}\href{#def-union}{\text{Definition~15}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for every } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in \bigcap\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-intersection}{\text{Definition~17}}\text{)} \end{aligned} \\
 >
 > For the second law:
 >
-> \\ \begin{aligned} x \in S \setminus \bigcap\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcap\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~15}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I && \text{(}\href{#def-intersection}{\text{Definition~13}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for some } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~15}}\text{)} \\ &\iff x \in \bigcup\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-union}{\text{Definition~11}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} x \in S \setminus \bigcap\_{i \in I} A_i &\iff x \in S \text{ and } x \notin \bigcap\_{i \in I} A_i && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in S \text{ and } x \notin A_i \text{ for some } i \in I && \text{(}\href{#def-intersection}{\text{Definition~17}}\text{)} \\ &\iff x \in S \setminus A_i \text{ for some } i \in I && \text{(}\href{#def-set-difference}{\text{Definition~19}}\text{)} \\ &\iff x \in \bigcup\_{i \in I} (S \setminus A_i) && \text{(}\href{#def-union}{\text{Definition~15}}\text{)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -251,11 +261,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 17 (Ordered pair)** An **ordered pair** \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
+> **Definition 21 (Ordered pair)** An **ordered pair** \\(a, b)\\ is a pair of objects listed in order, with \\a\\ first and \\b\\ second; two ordered pairs are equal, \\(a, b) = (c, d)\\, when \\a = c\\ and \\b = d\\.
 
 > **NOTE:**
 >
-> **Definition 18 (Cartesian product)** The **Cartesian product** of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
+> **Definition 22 (Cartesian product)** The **Cartesian product** of sets \\A\\ and \\B\\, written \\A \times B\\, is the set of ordered pairs whose first entry is in \\A\\ and whose second entry is in \\B\\:
 >
 > \\A \times B \stackrel{\text{def}}{=}\mathopen{}\left\\(a, b) : a \in A \text{ and } b \in B\right\\\mathclose{}\\
 
@@ -271,7 +281,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
+> **Definition 23 (Function (map, mapping, transformation))** A **function** \\f\\ from a set \\A\\ to a set \\B\\, written \\f : A \to B\\, assigns to each element \\a \in A\\ exactly one element \\f(a) \in B\\.
 >
 > - The element \\a \in A\\ is called the **argument** (or **input**) to \\f\\.
 > - The assigned element \\f(a) \in B\\ is called the **value** (or **output**) of \\f\\ at \\a\\.
@@ -284,7 +294,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Relation)** A **relation** \\\sim\\ on a set \\S\\ is a rule that, for each [ordered pair](#def-ordered-pair) of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
+> **Definition 24 (Relation)** A **relation** \\\sim\\ on a set \\S\\ is a rule that, for each [ordered pair](#def-ordered-pair) of elements \\a, b \in S\\, says whether \\a \sim b\\ holds (“\\a\\ is related to \\b\\”).
 
 > **NOTE:**
 >
@@ -292,15 +302,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
+> **Definition 25 (Domain)** The **domain** of a [function](#def-function) \\f : A \to B\\ is the set \\A\\ of elements that \\f\\ assigns values to.
 
 > **NOTE:**
 >
-> **Definition 22 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
+> **Definition 26 (Codomain)** The **codomain** of a [function](#def-function) \\f : A \to B\\ is the set \\B\\ that its values are required to lie in.
 
 > **NOTE:**
 >
-> **Definition 23 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
+> **Definition 27 (Image)** The **image** of a [function](#def-function) \\f : A \to B\\ is the set of values that \\f\\ actually takes:
 >
 > \\f(A) \stackrel{\text{def}}{=}\mathopen{}\left\\f(a) : a \in A\right\\\mathclose{}\\
 >
@@ -324,7 +334,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Graph of a function)** The **graph** of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
+> **Definition 28 (Graph of a function)** The **graph** of a [function](#def-function) \\f : A \to B\\ is the set of [ordered pairs](#def-ordered-pair) \\(a, f(a))\\, one for each element \\a\\ of its domain:
 >
 > \\\mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{}\\
 
@@ -338,7 +348,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 8* (What a function is fundamentally). [Definition 19](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](#def-ordered-pair) and its graph ([Definition 24](#def-graph)): the set of pairs \\G = \mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{} \subseteq A \times B\\. Authors define a function formally in one of two ways:
+> *Remark 8* (What a function is fundamentally). [Definition 23](#def-function) defines what a function *does*: it assigns an output to each input. In formal set theory, what a function *is* is described in terms of [ordered pairs](#def-ordered-pair) and its graph ([Definition 28](#def-graph)): the set of pairs \\G = \mathopen{}\left\\(a, f(a)) : a \in A\right\\\mathclose{} \subseteq A \times B\\. Authors define a function formally in one of two ways:
 >
 > 1.  **As its graph** ([Halmos 1974, sec. 8](#ref-halmos1974naive), p. 30): a function is a subset of \\A \times B\\ containing exactly one pair \\(a, b)\\ for each \\a \in A\\, where \\b = f(a)\\, and the statement \\f(a) = b\\ is notation for \\(a, b) \in f\\. Under this convention, the codomain \\B\\ is specified alongside the graph in the declaration \\f : A \to B\\.
 > 2.  **As a triple \\(A, B, G)\\**: the function consists of the domain \\A\\, the codomain \\B\\, and the graph \\G \subseteq A \times B\\. This explicit packaging retains the codomain \\B\\ as part of the function itself, distinguishing functions that have the same graph but different codomains (such as a function mapping into \\\mathbb{R}\\ versus into integers).
@@ -355,11 +365,17 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 25 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
+> **Definition 29 (Composition)** Let \\g : A \to B\\ and \\f : B \to C\\ be [functions](#def-function). The **composition** of \\f\\ and \\g\\ is the function \\f \circ g : A \to C\\ defined by
 >
 > \\(f \circ g)(a) \stackrel{\text{def}}{=}f(g(a)) \quad \text{for each } a \in A.\\
+
+> **NOTE:**
 >
-> In \\f \circ g\\, \\g\\ is the **inner function**, applied first, and \\f\\ is the **outer function**, applied to the result.
+> **Definition 30 (Inner function)** In a composition \\f \circ g\\ ([Definition 29](#def-composition)), \\g\\ is the **inner function**, applied first.
+
+> **NOTE:**
+>
+> **Definition 31 (Outer function)** In a composition \\f \circ g\\ ([Definition 29](#def-composition)), \\f\\ is the **outer function**, applied to the result.
 
 > **NOTE:**
 >
@@ -377,7 +393,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** of \\f\\, written \\f^{-1}\\, if both
+> **Definition 32 (Inverse function)** Let \\f : A \to B\\ be a [function](#def-function). A function \\g : B \to A\\ is the **inverse function** of \\f\\, written \\f^{-1}\\, if both
 >
 > - \\g(f(a)) = a\\ for every \\a \in A\\, and
 > - \\f(g(b)) = b\\ for every \\b \in B\\.
@@ -400,7 +416,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 27 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= \mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
+> **Definition 33 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= \mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
 >
 > \\ f^{\odot}(\tilde{x}) = \mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}^{\top}. \\
 >
@@ -436,7 +452,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 28 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\ and called its \\n\\th **term**, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 34 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+
+> **NOTE:**
+>
+> **Definition 35 (Term of a sequence)** The value \\a_n\\ of a sequence \\(a_n)\\ ([Definition 34](#def-sequence)) is called its \\n\\th **term**.
 
 > **NOTE:**
 >
@@ -448,11 +468,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 29 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
+> **Definition 36 (Finite sequence)** Let \\S\\ be a set. A **finite sequence** of length \\n\\ is a function from \\\mathopen{}\left\\1, \ldots, n\right\\\mathclose{}\\ to \\S\\, written \\a_1, \ldots, a_n\\.
 
 > **NOTE:**
 >
-> **Definition 30 (Expression)** An **expression** is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](#def-function): it fixes the output for each input.
+> **Definition 37 (Expression)** An **expression** is a string of symbols, built from constants, variables, operations and function names according to the rules of the notation. When its variables are read as inputs, an expression *denotes* a [function](#def-function): it fixes the output for each input.
 
 > **NOTE:**
 >
@@ -462,7 +482,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 31 (Parse tree)** The **parse tree** of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
+> **Definition 38 (Parse tree)** The **parse tree** of an [expression](#def-expression) is the tree that shows how its symbols group into operations. Its leaves are the constants and variables of the expression, and each internal node is an operation applied to the nodes below it.
 
 > **NOTE:**
 >
@@ -482,11 +502,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Remark 11* (Expressions, precedence and parse trees). An expression does not say how to compute the output it fixes, and many expressions denote the same function. A function is the input-output relationship itself; an expression is one way of writing it down.
 >
-> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 31](#def-parse-tree)).
+> The rules of operator precedence (PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction) decide how the symbols group. They turn the string into its parse tree ([Definition 38](#def-parse-tree)).
 
 > **NOTE:**
 >
-> **Definition 32 (Algorithm)** An **algorithm** is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](#def-function): for each input it returns the function’s value at that input.
+> **Definition 39 (Algorithm)** An **algorithm** is a finite list of unambiguous steps that, applied to any valid input, halts and returns an output. An algorithm *computes* a [function](#def-function): for each input it returns the function’s value at that input.
 
 > **NOTE:**
 >
@@ -514,7 +534,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 33 (Finite set and cardinality)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 29](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once. That number \\n\\ is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
+> **Definition 40 (Finite set)** A set \\A\\ is **finite** if it is empty, or if, for some natural number \\n\\, its elements can be listed as a finite sequence ([Definition 36](#def-finite-sequence)) \\a_1, \ldots, a_n\\ in which each element of \\A\\ appears exactly once.
+
+> **NOTE:**
+>
+> **Definition 41 (Cardinality)** For a finite set \\A\\ ([Definition 40](#def-finite-set)), the number \\n\\ in such a list is the **cardinality** of \\A\\, its number of elements, written \\\mathopen{}\left\|A\right\|\mathclose{}\\; the empty set has cardinality \\\mathopen{}\left\|\emptyset\right\|\mathclose{} = 0\\.
 
 > **NOTE:**
 >
@@ -531,15 +555,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 34 (Infinite set)** A set that is not finite ([Definition 33](#def-finite-set)) is **infinite**.
+> **Definition 42 (Infinite set)** A set that is not finite ([Definition 40](#def-finite-set)) is **infinite**.
 
 > **NOTE:**
 >
-> **Definition 35 (Countable set)** A set is **countable** if it is finite ([Definition 33](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 28](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
+> **Definition 43 (Countable set)** A set is **countable** if it is finite ([Definition 40](#def-finite-set)), or if its elements can be listed as a sequence ([Definition 34](#def-sequence)) \\a_1, a_2, a_3, \ldots\\ in which every element appears.
 
 > **NOTE:**
 >
-> **Definition 36 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
+> **Definition 44 (Countably infinite set)** A set is **countably infinite** if it is [countable](#def-countable-set) and not finite.
 
 > **NOTE:**
 >
@@ -561,7 +585,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 37 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
+> **Definition 45 (Extended non-negative real numbers)** The **extended non-negative real numbers**, written \\\[0, \infty\]\\, are the non-negative real numbers together with an extra element \\\infty\\ that is greater than every real number:
 >
 > \\\[0, \infty\] \stackrel{\text{def}}{=}\[0, \infty) \cup \mathopen{}\left\\\infty\right\\\mathclose{}\\
 >

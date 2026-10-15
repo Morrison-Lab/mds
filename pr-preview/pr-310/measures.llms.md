@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. A measure assigns a size to each set in a [collection of sets](sets-functions.llms.md#def-collection): how many elements it has, how long it is, or how likely it is. This page builds measures from \\\sigma\\-algebras and additivity, using the [sets and functions](sets-functions.llms.md) page’s definitions. One kind of measure, the probability measure ([Definition 20](#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
+> *Remark*. A measure assigns a size to each set in a [collection of sets](sets-functions.llms.md#def-collection): how many elements it has, how long it is, or how likely it is. This page builds measures from \\\sigma\\-algebras and additivity, using the [sets and functions](sets-functions.llms.md) page’s definitions. One kind of measure, the probability measure ([Definition 22](#def-probability-measure)), is the starting point of the Morrison Lab’s probability notes ([probability measure](https://morrison-lab.github.io/pds/probability-basics.html#def-probability)).
 
 ## 1 \\\sigma\\-algebras
 
@@ -183,7 +183,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\\sum\_{i=1}^{\infty} a_i \stackrel{\text{def}}{=}\lim\_{n \to \infty} s_n\\
 >
-> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-sequence-limit) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
+> Here the limit is a real number when the partial sums are real numbers that [converge](algebra-exponentials.llms.md#def-convergent-sequence) to it, and it is \\\infty\\ when the partial sums [diverge to \\\infty\\](algebra-exponentials.llms.md#def-diverges-to-infinity) or some partial sum is \\\infty\\; [Lemma 1](#lem-nonneg-series), next, shows that one of these always happens. Sums with other index ranges, such as \\\sum\_{k=0}^{\infty} a_k\\, are defined the same way.
 
 > **NOTE:**
 >
@@ -202,7 +202,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} s\_{n+1} &= s_n + a\_{n+1} && \text{(definition of } s\_{n+1} \text{)} \\ &\ge s_n && \text{(} a\_{n+1} \ge 0 \text{)} \end{aligned} \\
 >
-> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded), it [converges](algebra-exponentials.llms.md#def-sequence-limit) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
+> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
 
 ## 4 Additivity
 
@@ -214,7 +214,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 10 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](sets-functions.llms.md#def-finite-set)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 6](#exm-pairwise-disjoint)), and:
+> **Example 10 (Counting elements is finitely additive)** For the die rolls \\D = \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ ([sets of die rolls](sets-functions.llms.md#exm-set)), let \\\mu(A) \stackrel{\text{def}}{=}\mathopen{}\left\|A\right\|\mathclose{}\\, the number of elements of \\A\\ ([cardinality](sets-functions.llms.md#def-cardinality)), for each set \\A\\ in the \\\sigma\\-algebra of all subsets of \\D\\ ([Example 1](#exm-sigma-algebra)). The sets \\\mathopen{}\left\\1, 2\right\\\mathclose{}\\ and \\\mathopen{}\left\\5, 6\right\\\mathclose{}\\ are pairwise disjoint ([Example 6](#exm-pairwise-disjoint)), and:
 >
 > \\ \begin{aligned} \mu(\mathopen{}\left\\1, 2\right\\\mathclose{} \cup \mathopen{}\left\\5, 6\right\\\mathclose{}) &= \mu(\mathopen{}\left\\1, 2, 5, 6\right\\\mathclose{}) && \text{(take the union)} \\ &= 4 && \text{(count the elements)} \\ &= 2 + 2 && \text{(write 4 as a sum)} \\ &= \mu(\mathopen{}\left\\1, 2\right\\\mathclose{}) + \mu(\mathopen{}\left\\5, 6\right\\\mathclose{}) && \text{(count each set's elements)} \end{aligned} \\
 >
@@ -351,7 +351,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Measurable space)** A **measurable space** \\(S, \mathcal{S})\\ is a set \\S\\ together with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ on \\S\\; the sets in \\\mathcal{S}\\ are its **measurable sets**.
+> **Definition 13 (Measurable space)** A **measurable space** \\(S, \mathcal{S})\\ is a set \\S\\ together with a [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ on \\S\\.
+
+> **NOTE:**
+>
+> **Definition 14 (Measurable set)** In a [measurable space](#def-measurable-space) \\(S, \mathcal{S})\\, the sets in \\\mathcal{S}\\ are its **measurable sets**.
 
 > **NOTE:**
 >
@@ -362,7 +366,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 14 (Measure space)** A **measure space** \\(S, \mathcal{S}, \mu)\\ is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) \\\mu\\ on \\\mathcal{S}\\.
+> **Definition 15 (Measure space)** A **measure space** \\(S, \mathcal{S}, \mu)\\ is a [measurable space](#def-measurable-space) together with a [measure](#def-measure) \\\mu\\ on \\\mathcal{S}\\.
 
 > **NOTE:**
 >
@@ -370,7 +374,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 15 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathcal{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
+> **Definition 16 (Lebesgue measure)** **Lebesgue measure** on \\\mathbb{R}\\ is the [measure](#def-measure) \\\lambda\\ on the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) \\\mathcal{B}\\ that assigns each [interval](sets-functions.llms.md#def-interval) its length: for real numbers \\a \le b\\,
 >
 > \\ \begin{aligned} \lambda(\[a, b\]) &= \lambda((a, b)) \\ &= \lambda(\[a, b)) \\ &= \lambda((a, b\]) \\ &\stackrel{\text{def}}{=}b - a, \end{aligned} \\
 >
@@ -382,7 +386,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Lebesgue measure on an interval)** **Lebesgue measure on an interval** \\I\\, such as \\\[0, 1\]\\, is \\\lambda\\ ([Definition 15](#def-lebesgue-measure)) applied only to the Borel sets that are subsets of \\I\\.
+> **Definition 17 (Lebesgue measure on an interval)** **Lebesgue measure on an interval** \\I\\, such as \\\[0, 1\]\\, is \\\lambda\\ ([Definition 16](#def-lebesgue-measure)) applied only to the Borel sets that are subsets of \\I\\.
 
 > **NOTE:**
 >
@@ -406,11 +410,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 15](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
+> *Remark 7* (Measures generalize size). A [measure](#def-measure) generalizes size: it can measure how many elements a set has, as in [Definition 12](#def-counting-measure), or how long a set of real numbers is, as Lebesgue measure ([Definition 16](#def-lebesgue-measure)) does, assigning each [interval](sets-functions.llms.md#def-interval) \\\[a, b\]\\ its length \\b - a\\. For example, the counting measure on \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ gives \\\mathopen{}\left\\2, 3, 4, 5\right\\\mathclose{}\\ the value \\4\\, while the Lebesgue measure of the interval \\\[2, 5\]\\ is \\5 - 2 = 3\\. Both can serve as the measures \\\mu_1\\ and \\\mu_2\\ in the [Tonelli](calculus-double-integrals.llms.md#thm-tonelli-measure) and [Fubini](calculus-double-integrals.llms.md#thm-fubini-measure) theorems.
 
 > **NOTE:**
 >
-> **Definition 17 (Measure zero (null set))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
+> **Definition 18 (Measure zero (null set))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A set \\A \in \mathcal{S}\\ has **measure zero** (also called a **null set** for \\\mu\\) if \\\mu(A) = 0\\.
 
 > **NOTE:**
 >
@@ -421,7 +425,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 18 (Almost everywhere (\\\mu\\-almost everywhere, \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
+> **Definition 19 (Almost everywhere (\\\mu\\-almost everywhere, \\\mu\\-a.e.))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A statement about the elements of \\S\\ holds **\\\mu\\-almost everywhere** (written **\\\mu\\-a.e.**, or **almost everywhere** when \\\mu\\ is clear from context) if the set of elements for which it fails is a [subset](sets-functions.llms.md#def-subset) of a set of [measure zero](#def-measure-zero).
 
 > **NOTE:**
 >
@@ -431,7 +435,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Finite and \\\sigma\\-finite measures)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **finite** if \\\mu(S) \< \infty\\. It is **\\\sigma\\-finite** if \\S\\ is the union \\\bigcup\_{i=1}^{\infty} A_i\\ of a sequence of sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\ with \\\mu(A_i) \< \infty\\ for every \\i\\.
+> **Definition 20 (Finite measure)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **finite** if \\\mu(S) \< \infty\\.
+
+> **NOTE:**
+>
+> **Definition 21 (\\\sigma\\-finite measure)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). The measure \\\mu\\ is **\\\sigma\\-finite** if \\S\\ is the union \\\bigcup\_{i=1}^{\infty} A_i\\ of a sequence of sets \\A_1, A_2, \ldots\\ in \\\mathcal{S}\\ with \\\mu(A_i) \< \infty\\ for every \\i\\.
 
 > **NOTE:**
 >
@@ -453,7 +461,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 20 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\ is a [measure](#def-measure) \\\operatorname{P}\\ on \\\mathcal{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
+> **Definition 22 (Probability measure)** A **probability measure** on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\ is a [measure](#def-measure) \\\operatorname{P}\\ on \\\mathcal{F}\\ that gives the whole set \\\Omega\\ the value \\1\\:
 >
 > \\\operatorname{P}\mathopen{}\left(\Omega\right)\mathclose{} = 1\\
 
@@ -479,7 +487,19 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 21 (Probability space, sample space, outcomes and events)** For a probability measure \\\operatorname{P}\\ ([Definition 20](#def-probability-measure)) on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\, \\(\Omega, \mathcal{F}, \operatorname{P})\\ is a **probability space**, \\\Omega\\ is its **sample space**, the elements of \\\Omega\\ are **outcomes**, and the sets in \\\mathcal{F}\\ are **events**.
+> **Definition 23 (Probability space)** For a probability measure \\\operatorname{P}\\ ([Definition 22](#def-probability-measure)) on a [measurable space](#def-measurable-space) \\(\Omega, \mathcal{F})\\, \\(\Omega, \mathcal{F}, \operatorname{P})\\ is a **probability space**.
+
+> **NOTE:**
+>
+> **Definition 24 (Sample space)** In a probability space \\(\Omega, \mathcal{F}, \operatorname{P})\\ ([Definition 23](#def-probability-space)), \\\Omega\\ is its **sample space**.
+
+> **NOTE:**
+>
+> **Definition 25 (Outcome)** In a probability space \\(\Omega, \mathcal{F}, \operatorname{P})\\ ([Definition 23](#def-probability-space)), the elements of the sample space \\\Omega\\ ([Definition 24](#def-sample-space)) are **outcomes**.
+
+> **NOTE:**
+>
+> **Definition 26 (Event)** In a probability space \\(\Omega, \mathcal{F}, \operatorname{P})\\ ([Definition 23](#def-probability-space)), the sets in \\\mathcal{F}\\ are **events**.
 
 > **NOTE:**
 >
@@ -489,13 +509,13 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 22 (Measurable function)** Let \\(S, \mathcal{S})\\ be a [measurable space](#def-measurable-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathcal{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
+> **Definition 27 (Measurable function)** Let \\(S, \mathcal{S})\\ be a [measurable space](#def-measurable-space). A [function](sets-functions.llms.md#def-function) \\f : S \to \mathbb{R}\\ is **measurable** (with respect to \\\mathcal{S}\\) if, for every real number \\c\\, the set of elements where \\f\\ is at most \\c\\ is measurable:
 >
 > \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathcal{S}\\
 
 > **NOTE:**
 >
-> *Remark 9* (Measurable functions in general). Other sources define a function \\f : S \to T\\ between measurable spaces \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ to be measurable when \\\mathopen{}\left\\s \in S : f(s) \in B\right\\\mathclose{} \in \mathcal{S}\\ for every \\B \in \mathcal{T}\\. For \\T = \mathbb{R}\\ with the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra), that definition is equivalent to [Definition 22](#def-measurable-function) (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)). For example, with \\B = (-\infty, c\]\\, the general definition requires \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathcal{S}\\, which is the condition in [Definition 22](#def-measurable-function).
+> *Remark 9* (Measurable functions in general). Other sources define a function \\f : S \to T\\ between measurable spaces \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ to be measurable when \\\mathopen{}\left\\s \in S : f(s) \in B\right\\\mathclose{} \in \mathcal{S}\\ for every \\B \in \mathcal{T}\\. For \\T = \mathbb{R}\\ with the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra), that definition is equivalent to [Definition 27](#def-measurable-function) (see [Wikipedia: Measurable function](https://en.wikipedia.org/wiki/Measurable_function)). For example, with \\B = (-\infty, c\]\\, the general definition requires \\\mathopen{}\left\\s \in S : f(s) \le c\right\\\mathclose{} \in \mathcal{S}\\, which is the condition in [Definition 27](#def-measurable-function).
 
 > **NOTE:**
 >
@@ -508,7 +528,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 23 (Integral of a non-negative function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
+> **Definition 28 (Integral of a non-negative function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \[0, \infty)\\ be [measurable](#def-measurable-function). The **integral** of \\f\\ with respect to \\\mu\\ is
 >
 > \\ \int_S f \\ d\mu\stackrel{\text{def}}{=} \sup \mathopen{}\left\\\sum\_{i=1}^n\mathopen{}\left(\inf\_{s \in A_i} f(s)\right)\mathclose{} \mu(A_i)\right\\\mathclose{} \\
 >
@@ -518,7 +538,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 23](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus-integration.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda= \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
+> *Remark 10* (Each sum is a lower estimate). Each sum in [Definition 28](#def-integral-nonneg) splits \\S\\ into pieces and weights each piece \\A_i\\ by the smallest value \\f\\ approaches on it, so each sum is at most the integral. For Lebesgue measure on a closed interval \\\[a, b\]\\ and a function \\f \ge 0\\ that has a [Riemann integral](calculus-integration.llms.md#def-riemann-integral) on \\\[a, b\]\\, the two integrals agree: \\\int\_{\[a, b\]} f \\ d\lambda= \int_a^b f(x) \\ dx\\ (see [Wikipedia: Lebesgue integral](https://en.wikipedia.org/wiki/Lebesgue_integral)).
 
 > **NOTE:**
 >
@@ -540,19 +560,27 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 24 (Positive and negative parts of a function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** and **negative part** of \\f\\ are the non-negative functions
+> **Definition 29 (Positive part of a function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). The **positive part** of \\f\\ is the non-negative function
 >
-> \\ \begin{aligned} f^{+}(s) &\stackrel{\text{def}}{=}\max\mathopen{}\left\\f(s), 0\right\\\mathclose{} \\ f^{-}(s) &\stackrel{\text{def}}{=}\max\mathopen{}\left\\-f(s), 0\right\\\mathclose{} \end{aligned} \\
->
-> so that \\f = f^{+} - f^{-}\\ and \\\mathopen{}\left\|f\right\|\mathclose{} = f^{+} + f^{-}\\. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995](#ref-billingsley1995probability), Theorem 13.3).)
+> \\ f^{+}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\\f(s), 0\right\\\mathclose{}. \\
 
 > **NOTE:**
 >
-> **Definition 25 (Integral of a real-valued function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). Let \\f^{+}\\ and \\f^{-}\\ be the positive and negative parts of \\f\\ ([Definition 24](#def-positive-negative-parts)). The **integral** of \\f\\ with respect to \\\mu\\ is
+> **Definition 30 (Negative part of a function)** For \\f\\ as in [Definition 29](#def-positive-negative-parts), the **negative part** of \\f\\ is the non-negative function
+>
+> \\ f^{-}(s) \stackrel{\text{def}}{=}\max\mathopen{}\left\\-f(s), 0\right\\\mathclose{}. \\
+
+> **NOTE:**
+>
+> *Remark 11* (A function in terms of its positive and negative parts). With the positive part ([Definition 29](#def-positive-negative-parts)) and negative part ([Definition 30](#def-negative-part)), \\f = f^{+} - f^{-}\\ and \\\mathopen{}\left\|f\right\|\mathclose{} = f^{+} + f^{-}\\. (\\f^{+}\\, \\f^{-}\\, and \\\mathopen{}\left\|f\right\|\mathclose{}\\ are measurable when \\f\\ is ([Billingsley 1995](#ref-billingsley1995probability), Theorem 13.3).)
+
+> **NOTE:**
+>
+> **Definition 31 (Integral of a real-valued function)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\f : S \to \mathbb{R}\\ be [measurable](#def-measurable-function). Let \\f^{+}\\ and \\f^{-}\\ be the positive and negative parts of \\f\\ ([Definition 29](#def-positive-negative-parts), [Definition 30](#def-negative-part)). The **integral** of \\f\\ with respect to \\\mu\\ is
 >
 > \\\int_S f \\ d\mu\stackrel{\text{def}}{=}\int_S f^{+} \\ d\mu- \int_S f^{-} \\ d\mu,\\
 >
-> using [Definition 23](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined.
+> using [Definition 28](#def-integral-nonneg) for each term, when at least one of the two terms is finite; otherwise, the integral of \\f\\ is undefined.
 >
 > ([Billingsley 1995, sec. 15](#ref-billingsley1995probability))
 
@@ -572,7 +600,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 26 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
+> **Definition 32 (Absolutely integrable function (integrable function, absolute integrability))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). A [measurable](#def-measurable-function) function \\f : S \to \mathbb{R}\\ is **absolutely integrable** with respect to \\\mu\\ (often just called **integrable**) if the integral of its [absolute value](algebra-basics.llms.md#def-absolute-value) is finite:
 >
 > \\\int_S \mathopen{}\left\|f\right\|\mathclose{} \\ d\mu\< \infty\\
 >
@@ -580,7 +608,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 11* (An absolutely integrable function has a finite integral). If \\f\\ is absolutely integrable, then \\\int_S f^{+} \\ d\mu\\ and \\\int_S f^{-} \\ d\mu\\ are both finite, because \\f^{+} \le \mathopen{}\left\|f\right\|\mathclose{}\\ and \\f^{-} \le \mathopen{}\left\|f\right\|\mathclose{}\\, so each sum in [Definition 23](#def-integral-nonneg) for \\f^{+}\\ or \\f^{-}\\ is at most the matching sum for \\\mathopen{}\left\|f\right\|\mathclose{}\\. So \\\int_S f \\ d\mu\\ ([Definition 25](#def-integral)) is a real number.
+> *Remark 12* (An absolutely integrable function has a finite integral). If \\f\\ is absolutely integrable, then \\\int_S f^{+} \\ d\mu\\ and \\\int_S f^{-} \\ d\mu\\ are both finite, because \\f^{+} \le \mathopen{}\left\|f\right\|\mathclose{}\\ and \\f^{-} \le \mathopen{}\left\|f\right\|\mathclose{}\\, so each sum in [Definition 28](#def-integral-nonneg) for \\f^{+}\\ or \\f^{-}\\ is at most the matching sum for \\\mathopen{}\left\|f\right\|\mathclose{}\\. So \\\int_S f \\ d\mu\\ ([Definition 31](#def-integral)) is a real number.
 
 > **NOTE:**
 >
@@ -602,15 +630,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 27 (\\L^p\\ space and \\L^p\\ norm (\\L^p(\mu)\\, \\\mathcal{L}^p\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For any real number \\p \ge 1\\, the **\\L^p\\ norm** of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
+> **Definition 33 (\\L^p\\ space and \\L^p\\ norm (\\L^p(\mu)\\, \\\mathcal{L}^p\\))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For any real number \\p \ge 1\\, the **\\L^p\\ norm** of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \stackrel{\text{def}}{=}\mathopen{}\left(\int_S \mathopen{}\left\|f\right\|\mathclose{}^p \\ d\mu\right)\mathclose{}^{1/p}. \\
 >
-> The space \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ consists of all measurable functions \\f : S \to \mathbb{R}\\ for which \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\. To satisfy the definiteness axiom of a [norm](linear-algebra-inner-products.llms.md#def-norm) (\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p = 0\\ if and only if \\f = 0\\), functions that are equal [almost everywhere](#def-almost-everywhere) (\\\mu\\-a.e.) are identified into equivalence classes. The resulting normed vector space is the **\\L^p\\ space**, denoted \\L^p(S, \mathcal{S}, \mu)\\ (or simply **\\L^p(\mu)\\**). The case \\p = \infty\\ is defined separately, in [Definition 28](#def-linf-space).
+> The space \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ consists of all measurable functions \\f : S \to \mathbb{R}\\ for which \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\. To satisfy the definiteness axiom of a [norm](linear-algebra-inner-products.llms.md#def-norm) (\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p = 0\\ if and only if \\f = 0\\), functions that are equal [almost everywhere](#def-almost-everywhere) (\\\mu\\-a.e.) are identified into equivalence classes. The resulting normed vector space is the **\\L^p\\ space**, denoted \\L^p(S, \mathcal{S}, \mu)\\ (or simply **\\L^p(\mu)\\**). The case \\p = \infty\\ is defined separately, in [Definition 34](#def-linf-space).
 
 > **NOTE:**
 >
-> **Example 29 (An \\L^1\\ function not in \\L^2\\)** Consider the interval \\(0, 1)\\ equipped with the Borel \\\sigma\\-algebra ([Definition 4](#def-borel-sigma-algebra)) and Lebesgue measure \\\mu\\ ([Definition 15](#def-lebesgue-measure)). Define \\f : (0, 1) \to \mathbb{R}\\ by \\f(x) = x^{-1/2}\\.
+> **Example 29 (An \\L^1\\ function not in \\L^2\\)** Consider the interval \\(0, 1)\\ equipped with the Borel \\\sigma\\-algebra ([Definition 4](#def-borel-sigma-algebra)) and Lebesgue measure \\\mu\\ ([Definition 16](#def-lebesgue-measure)). Define \\f : (0, 1) \to \mathbb{R}\\ by \\f(x) = x^{-1/2}\\.
 >
 > 1.  For \\p = 1\\: \\ \begin{aligned} \mathopen{}\left\lVert f\right\rVert\mathclose{}\_1 &= \int_0^1 x^{-1/2} \\ dx \\ &= \mathopen{}\left\[2 x^{1/2}\right\]\mathclose{}\_0^1 \\ &= 2 \\ &\< \infty, \end{aligned} \\ so \\f \in L^1((0, 1), \mu)\\.
 > 2.  For \\p = 2\\: \\ \begin{aligned} \mathopen{}\left\|f(x)\right\|\mathclose{}^2 &= \mathopen{}\left(x^{-1/2}\right)\mathclose{}^2 \\ &= \frac{1}{x}. \end{aligned} \\ The integral is: \\ \begin{aligned} \int_0^1 \frac{1}{x} \\ dx &= \lim\_{\varepsilon\to 0^+} \mathopen{}\left\[\ln x\right\]\mathclose{}\_\varepsilon^1 \\ &= \lim\_{\varepsilon\to 0^+} (-\ln \varepsilon) \\ &= \infty. \end{aligned} \\ Therefore, \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_2 = \infty\\, so \\f \notin L^2((0, 1), \mu)\\.
@@ -619,15 +647,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 28 (\\L^\infty\\ space and essential supremum norm (\\L^\infty\\ norm))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For \\p = \infty\\, the **essential supremum norm** (or **\\L^\infty\\ norm**) of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
+> **Definition 34 (\\L^\infty\\ space and essential supremum norm (\\L^\infty\\ norm))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For \\p = \infty\\, the **essential supremum norm** (or **\\L^\infty\\ norm**) of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\inf \mathopen{}\left\\ C \ge 0 : \mu(\mathopen{}\left\\s \in S : \mathopen{}\left\|f(s)\right\|\mathclose{} \> C\right\\\mathclose{}) = 0 \right\\\mathclose{}. \\
 >
-> The space \\L^\infty(S, \mathcal{S}, \mu)\\ consists of equivalence classes of essentially bounded measurable functions, identified as in [Definition 27](#def-lp-space) when they are equal [almost everywhere](#def-almost-everywhere).
+> The space \\L^\infty(S, \mathcal{S}, \mu)\\ consists of equivalence classes of essentially bounded measurable functions, identified as in [Definition 33](#def-lp-space) when they are equal [almost everywhere](#def-almost-everywhere).
 
 > **NOTE:**
 >
-> **Theorem 5 (Holder’s inequality)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\p, q \in \[1, \infty\]\\ be conjugate exponents satisfying \\\frac{1}{p} + \frac{1}{q} = 1\\ (with the convention that \\q = \infty\\ when \\p = 1\\, and \\q = 1\\ when \\p = \infty\\). If \\f \in L^p(\mu)\\ and \\g \in L^q(\mu)\\ ([Definition 27](#def-lp-space)), then their product \\f g\\ is [absolutely integrable](#def-absolutely-integrable) (\\f g \in L^1(\mu)\\) and satisfies:
+> **Theorem 5 (Holder’s inequality)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space), and let \\p, q \in \[1, \infty\]\\ be conjugate exponents satisfying \\\frac{1}{p} + \frac{1}{q} = 1\\ (with the convention that \\q = \infty\\ when \\p = 1\\, and \\q = 1\\ when \\p = \infty\\). If \\f \in L^p(\mu)\\ and \\g \in L^q(\mu)\\ ([Definition 33](#def-lp-space)), then their product \\f g\\ is [absolutely integrable](#def-absolutely-integrable) (\\f g \in L^1(\mu)\\) and satisfies:
 >
 > \\ \mathopen{}\left\lVert f g\right\rVert\mathclose{}\_1 = \int_S \mathopen{}\left\|f g\right\|\mathclose{} \\ d\mu\le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p\\\mathopen{}\left\lVert g\right\rVert\mathclose{}\_q. \\
 >
@@ -639,7 +667,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Minkowski’s inequality (\\L^p\\ triangle inequality))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space) and let \\1 \le p \le \infty\\. For any functions \\f, g \in L^p(\mu)\\ ([Definition 27](#def-lp-space)), their sum \\f + g\\ is in \\L^p(\mu)\\ and satisfies:
+> **Theorem 6 (Minkowski’s inequality (\\L^p\\ triangle inequality))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space) and let \\1 \le p \le \infty\\. For any functions \\f, g \in L^p(\mu)\\ ([Definition 33](#def-lp-space)), their sum \\f + g\\ is in \\L^p(\mu)\\ and satisfies:
 >
 > \\ \mathopen{}\left\lVert f + g\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p + \mathopen{}\left\lVert g\right\rVert\mathclose{}\_p. \\
 >
@@ -655,7 +683,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 >     gives the standard vector [Cauchy-Schwarz inequality](linear-algebra-inner-products.llms.md#thm-cauchy-schwarz).
 >
-> 2.  **Covariance bound for random variables**: On a probability space with measure \\\operatorname{P}\\ ([Definition 20](#def-probability-measure)), taking
+> 2.  **Covariance bound for random variables**: On a probability space with measure \\\operatorname{P}\\ ([Definition 22](#def-probability-measure)), taking
 >
 >     \\ \begin{aligned} p &= q \\ &= 2 \end{aligned} \\
 >
@@ -663,9 +691,9 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Remark 12* (\\L^p\\ spaces and norms in probability and machine learning). In probability, statistics, and machine learning, \\L^p\\ spaces structure the geometry of random variables, estimators, and loss functions:
+> *Remark 13* (\\L^p\\ spaces and norms in probability and machine learning). In probability, statistics, and machine learning, \\L^p\\ spaces structure the geometry of random variables, estimators, and loss functions:
 >
-> 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu= \operatorname{P}\\ is a probability measure ([Definition 20](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra-sums.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
+> 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu= \operatorname{P}\\ is a probability measure ([Definition 22](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra-sums.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
 >
 > 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
 >
@@ -679,7 +707,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 29 (Product \\\sigma\\-algebra)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\. The **product \\\sigma\\-algebra** \\\mathcal{S}\otimes \mathcal{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
+> **Definition 35 (Measurable rectangle)** Let \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ be [measurable spaces](#def-measurable-space). A **measurable rectangle** is a [Cartesian product](sets-functions.llms.md#def-cartesian-product) \\A \times B\\ with \\A \in \mathcal{S}\\ and \\B \in \mathcal{T}\\.
+
+> **NOTE:**
+>
+> **Definition 36 (Product \\\sigma\\-algebra)** For the measurable spaces \\(S, \mathcal{S})\\ and \\(T, \mathcal{T})\\ of [Definition 35](#def-measurable-rectangle), the **product \\\sigma\\-algebra** \\\mathcal{S}\otimes \mathcal{T}\\ is the \\\sigma\\-algebra on \\S \times T\\ [generated by](#def-generated-sigma-algebra) the measurable rectangles.
 
 > **NOTE:**
 >
@@ -690,7 +722,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 30 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu\otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
+> **Definition 37 (Product measure)** Let \\(S, \mathcal{S}, \mu)\\ and \\(T, \mathcal{T}, \nu)\\ be measure spaces with [\\\sigma\\-finite](#def-sigma-finite) measures \\\mu\\ and \\\nu\\. The **product measure** \\\mu\otimes \nu\\ is the measure on the [product \\\sigma\\-algebra](#def-product-sigma-algebra) \\\mathcal{S}\otimes \mathcal{T}\\ that gives each measurable rectangle the product of the measures of its sides:
 >
 > \\(\mu\otimes \nu)(A \times B) = \mu(A) \\ \nu(B) \quad \text{for all } A \in \mathcal{S}\text{ and } B \in \mathcal{T},\\
 >

@@ -4,15 +4,15 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
-This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-theorem) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
+This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
 ## 1 Definitions for proofs
 
 > **NOTE:**
 >
-> **Definition 1 (Proposition (statement))** A **proposition**, or **statement**, is a sentence that is either true or false.
+> **Definition 1 (Proposition (statement))** A **proposition**, or **statement**, is a declarative sentence that is either true or false.
 
 > **NOTE:**
 >
@@ -24,7 +24,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 2 (Predicate)** A **predicate** \\P(x)\\ is a sentence about a variable \\x\\ that becomes a proposition ([Definition 1](#def-proposition)) whenever a value is substituted for \\x\\.
+> **Definition 2 (Predicate)** A **predicate** \\P(x)\\ is a declarative sentence about a variable \\x\\ that becomes a proposition ([Definition 1](#def-proposition)) whenever a value is substituted for \\x\\.
 
 > **NOTE:**
 >
@@ -35,17 +35,67 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 3 (Logical connective)** A **logical connective** builds a new proposition ([Definition 1](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five:
->
-> - **not**: \\\neg P\\ (“not \\P\\”) is true when \\P\\ is false, and false when \\P\\ is true.
-> - **and**: \\P \land Q\\ (“\\P\\ and \\Q\\”) is true when \\P\\ and \\Q\\ are both true, and false otherwise.
-> - **or**: \\P \lor Q\\ (“\\P\\ or \\Q\\”) is true when at least one of \\P\\ and \\Q\\ is true, and false when both are false.
-> - **implies**: \\P \Rightarrow Q\\ (“if \\P\\, then \\Q\\”, or “\\P\\ implies \\Q\\”) is false when \\P\\ is true and \\Q\\ is false, and true otherwise.
-> - **if and only if**: \\P \Leftrightarrow Q\\ (“\\P\\ if and only if \\Q\\”) is true when \\P\\ and \\Q\\ have the same truth value, and false otherwise.
+> **Definition 3 (Logical connective)** A **logical connective** builds a new proposition ([Definition 1](#def-proposition)) from one or two propositions \\P\\ and \\Q\\, with a truth value that depends only on the truth values of \\P\\ and \\Q\\. These notes use five, defined next: not ([Definition 4](#def-not)), and ([Definition 5](#def-and)), or ([Definition 6](#def-or)), implies ([Definition 7](#def-implies)), and if and only if ([Definition 8](#def-iff)).
 
 > **NOTE:**
 >
-> **Example 3 (Truth values of connectives)** Let \\P\\ be “\\2 + 3 = 5\\”, which is true, and let \\Q\\ be “\\7\\ is [even](notation.llms.md#def-even-odd)”, which is false.
+> **Definition 4 (Not)** The logical connective ([Definition 3](#def-logical-connective)) **not** is written \\\neg P\\ (“not \\P\\”); it is true when \\P\\ is false, and false when \\P\\ is true.
+
+> **NOTE:**
+>
+> **Example 3 (Negating a true and a false proposition)** Let \\P\\ be “\\5 \> 3\\”, which is true, and let \\Q\\ be “\\2 \> 3\\”, which is false.
+>
+> - \\\neg P\\, “it is not true that \\5 \> 3\\”, is false, because \\P\\ is true.
+> - \\\neg Q\\, “it is not true that \\2 \> 3\\”, is true, because \\Q\\ is false.
+
+> **NOTE:**
+>
+> **Definition 5 (And)** The logical connective ([Definition 3](#def-logical-connective)) **and** is written \\P \land Q\\ (“\\P\\ and \\Q\\”); it is true when \\P\\ and \\Q\\ are both true, and false otherwise.
+
+> **NOTE:**
+>
+> **Example 4 (Two propositions joined by “and”)** Let \\P\\ be “\\3 \< 5\\”, which is true, let \\Q\\ be “\\5 \< 4\\”, which is false, and let \\R\\ be “\\5 \< 7\\”, which is true.
+>
+> - \\P \land R\\ is true, because \\P\\ and \\R\\ are both true.
+> - \\P \land Q\\ is false, because \\Q\\ is false.
+
+> **NOTE:**
+>
+> **Definition 6 (Or)** The logical connective ([Definition 3](#def-logical-connective)) **or** is written \\P \lor Q\\ (“\\P\\ or \\Q\\”); it is true when at least one of \\P\\ and \\Q\\ is true, and false when both are false.
+
+> **NOTE:**
+>
+> **Example 5 (Two propositions joined by “or”)** Let \\P\\ be “\\3 \< 2\\”, which is false, let \\Q\\ be “\\5 \< 7\\”, which is true, and let \\R\\ be “\\5 \< 4\\”, which is false.
+>
+> - \\P \lor Q\\ is true, because \\Q\\ is true.
+> - \\P \lor R\\ is false, because \\P\\ and \\R\\ are both false.
+
+> **NOTE:**
+>
+> **Definition 7 (Implies)** The logical connective ([Definition 3](#def-logical-connective)) **implies** is written \\P \Rightarrow Q\\ (“if \\P\\, then \\Q\\”, or “\\P\\ implies \\Q\\”); it is false when \\P\\ is true and \\Q\\ is false, and true otherwise.
+
+> **NOTE:**
+>
+> **Example 6 (Implications with a true and a false premise)** Take \\x = 3\\.
+>
+> - \\x \> 2 \Rightarrow x \> 1\\ is true: the premise \\3 \> 2\\ is true and the conclusion \\3 \> 1\\ is true.
+> - \\x \> 2 \Rightarrow x \> 4\\ is false: the premise \\3 \> 2\\ is true, but the conclusion \\3 \> 4\\ is false.
+> - \\x \> 5 \Rightarrow x \> 4\\ is true: the premise \\3 \> 5\\ is false, so the implication is true whatever the conclusion.
+
+> **NOTE:**
+>
+> **Definition 8 (If and only if)** The logical connective ([Definition 3](#def-logical-connective)) **if and only if** is written \\P \Leftrightarrow Q\\ (“\\P\\ if and only if \\Q\\”); it is true when \\P\\ and \\Q\\ have the same truth value, and false otherwise.
+
+> **NOTE:**
+>
+> **Example 7 (“If and only if” with equal and different truth values)** Take \\x = 4\\.
+>
+> - “\\x\\ is [even](notation.llms.md#def-even-odd) \\\Leftrightarrow x \> 3\\” is true: \\4\\ is even and \\4 \> 3\\, so both sides are true.
+> - “\\x \> 3 \Leftrightarrow x \> 5\\” is false: \\4 \> 3\\ is true, but \\4 \> 5\\ is false.
+
+> **NOTE:**
+>
+> **Example 8 (Truth values of connectives)** Let \\P\\ be “\\2 + 3 = 5\\”, which is true, and let \\Q\\ be “\\7\\ is [even](notation.llms.md#def-even-odd)”, which is false.
 >
 > - \\\neg Q\\, “\\7\\ is not even”, is true, because \\Q\\ is false.
 > - \\P \land Q\\ is false, because \\Q\\ is false.
@@ -56,14 +106,33 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 4 (Quantifier)** A **quantifier** turns a predicate \\P(x)\\ ([Definition 2](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 1](#def-proposition)):
->
-> - the **universal quantifier** “for all”: \\\forall x \in S, P(x)\\ (“for every \\x\\ in \\S\\, \\P(x)\\”) is true when \\P(x)\\ is true for every element \\x\\ of \\S\\, and false otherwise;
-> - the **existential quantifier** “there exists”: \\\exists x \in S, P(x)\\ (“there is an \\x\\ in \\S\\ such that \\P(x)\\”) is true when \\P(x)\\ is true for at least one element \\x\\ of \\S\\, and false otherwise.
+> **Definition 9 (Quantifier)** A **quantifier** turns a predicate \\P(x)\\ ([Definition 2](#def-predicate)) about the elements \\x\\ of a set \\S\\ into a proposition ([Definition 1](#def-proposition)). There are two: the universal quantifier ([Definition 10](#def-universal-quantifier)) and the existential quantifier ([Definition 11](#def-existential-quantifier)).
 
 > **NOTE:**
 >
-> **Example 4 (Quantified propositions)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for [integers](notation.llms.md#def-integers) \\x\\.
+> **Definition 10 (Universal quantifier)** The **universal quantifier** “for all” is a quantifier ([Definition 9](#def-quantifier)): \\\forall x \in S, P(x)\\ (“for every \\x\\ in \\S\\, \\P(x)\\”) is true when \\P(x)\\ is true for every element \\x\\ of \\S\\, and false otherwise.
+
+> **NOTE:**
+>
+> **Example 9 (A universally quantified proposition)** Let \\P(x)\\ be the predicate “\\x\\ is [even](notation.llms.md#def-even-odd)”.
+>
+> - “\\\forall x \in \mathopen{}\left\\2, 4, 6\right\\\mathclose{}, P(x)\\” is true, because \\2\\, \\4\\, and \\6\\ are all even.
+> - “\\\forall x \in \mathopen{}\left\\2, 3, 4\right\\\mathclose{}, P(x)\\” is false, because \\P(3)\\ is false.
+
+> **NOTE:**
+>
+> **Definition 11 (Existential quantifier)** The **existential quantifier** “there exists” is a quantifier ([Definition 9](#def-quantifier)): \\\exists x \in S, P(x)\\ (“there is an \\x\\ in \\S\\ such that \\P(x)\\”) is true when \\P(x)\\ is true for at least one element \\x\\ of \\S\\, and false otherwise.
+
+> **NOTE:**
+>
+> **Example 10 (An existentially quantified proposition)** Let \\P(x)\\ be the predicate “\\x\\ is [even](notation.llms.md#def-even-odd)”.
+>
+> - “\\\exists x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is true, because \\P(2)\\ is true.
+> - “\\\exists x \in \mathopen{}\left\\1, 3, 5\right\\\mathclose{}, P(x)\\” is false, because none of \\1\\, \\3\\, and \\5\\ is even.
+
+> **NOTE:**
+>
+> **Example 11 (Quantified propositions)** Let \\P(x)\\ be the predicate “\\x \> 2\\”, for [integers](notation.llms.md#def-integers) \\x\\.
 >
 > - “\\\exists x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is true, because \\P(3)\\ is true.
 > - “\\\forall x \in \mathopen{}\left\\1, 2, 3\right\\\mathclose{}, P(x)\\” is false, because \\P(1)\\ is false.
@@ -71,7 +140,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 5 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions \\a\\ and \\b\\ whose values are [real numbers](notation.llms.md#def-real-numbers), in one of the forms:
+> **Definition 12 (Inequality)** An **inequality** is a proposition ([Definition 1](#def-proposition)) or a predicate ([Definition 2](#def-predicate)) that compares two expressions \\a\\ and \\b\\ whose values are [real numbers](notation.llms.md#def-real-numbers), in one of the forms:
 >
 > - \\a \< b\\ (“\\a\\ is less than \\b\\”);
 > - \\a \le b\\ (“\\a\\ is less than or equal to \\b\\”);
@@ -80,7 +149,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Example 5 (Inequalities)**  
+> **Example 12 (Inequalities)**  
 >
 > - “\\3 \< 5\\” is an inequality, and it is true.
 > - “\\5 \le 3\\” is an inequality, and it is false.
@@ -89,11 +158,11 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 6 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates \\P_1, \ldots, P_n\\ ([Definition 1](#def-proposition), [Definition 2](#def-predicate)) **logically entail** a proposition or predicate \\Q\\ when every choice of values for their variables that makes all of \\P_1, \ldots, P_n\\ true also makes \\Q\\ true. Then \\Q\\ is a **logical consequence**, or **deductive consequence**, of \\P_1, \ldots, P_n\\.
+> **Definition 13 (Logical entailment (logical consequence, deductive consequence))** Propositions or predicates \\P_1, \ldots, P_n\\ ([Definition 1](#def-proposition), [Definition 2](#def-predicate)) **logically entail** a proposition or predicate \\Q\\ when every choice of values for their variables that makes all of \\P_1, \ldots, P_n\\ true also makes \\Q\\ true. Then \\Q\\ is a **logical consequence**, or **deductive consequence**, of \\P_1, \ldots, P_n\\.
 
 > **NOTE:**
 >
-> **Example 6 (Entailment, and its failure)** Let \\x\\ be an [integer](notation.llms.md#def-integers).
+> **Example 13 (Entailment, and its failure)** Let \\x\\ be an [integer](notation.llms.md#def-integers).
 >
 > - “\\x = 2\\” entails “\\x^2 = 4\\”: the only value that makes “\\x = 2\\” true is \\x = 2\\, and \\2^2 = 4\\.
 > - “\\x \> 3\\” and “\\x \< 5\\” together entail “\\x = 4\\”: \\4\\ is the only integer greater than \\3\\ and less than \\5\\.
@@ -105,13 +174,13 @@ We can use any of:
 - \\\Rightarrow\\ (`\Rightarrow`),
 - \\\models\\ (`\models`)
 
-to denote logical entailment ([Definition 6](#def-logical-entailment)). \\\Rightarrow\\ also writes the connective “implies” ([Definition 3](#def-logical-connective)); \\P\\ entails \\Q\\ exactly when \\P \Rightarrow Q\\ is true for every choice of values for the variables in \\P\\ and \\Q\\.
+to denote logical entailment ([Definition 13](#def-logical-entailment)). \\\Rightarrow\\ also writes the connective “implies” ([Definition 7](#def-implies)); \\P\\ entails \\Q\\ exactly when \\P \Rightarrow Q\\ is true for every choice of values for the variables in \\P\\ and \\Q\\.
 
-Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-sequence-limit) results.
+Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponentials.llms.md#def-convergent-sequence) results.
 
 > **NOTE:**
 >
-> **Definition 7 (Proof)** A **proof** of a proposition ([Definition 1](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
+> **Definition 14 (Proof)** A **proof** of a proposition ([Definition 1](#def-proposition)) is a finite list of statements that ends with that proposition, in which each statement is
 >
 > - an assumption,
 > - a definition,
@@ -120,7 +189,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Example 7 (The sum of two even integers is even)** Let \\a\\ and \\b\\ be even integers ([definition](notation.llms.md#def-even-odd)). Then \\a = 2j\\ and \\b = 2k\\ for some integers \\j\\ and \\k\\, and
+> **Example 14 (The sum of two even integers is even)** Let \\a\\ and \\b\\ be even integers ([definition](notation.llms.md#def-even-odd)). Then \\a = 2j\\ and \\b = 2k\\ for some integers \\j\\ and \\k\\, and
 >
 > \\ \begin{aligned} a + b &= 2j + 2k && \text{(substitute } a = 2j \text{ and } b = 2k \text{)} \\ &= 2(j + k) && \text{(distributive law)} \end{aligned} \\
 >
@@ -130,11 +199,11 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 8 (Derivation)** A **derivation** is a proof ([Definition 7](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by \\=\\ or by an inequality sign ([Definition 5](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.
+> **Definition 15 (Derivation)** A **derivation** is a proof ([Definition 14](#def-proof)), or a part of one, written as a chain of expressions, one per line, in which each line is joined to the line before it by \\=\\ or by an inequality sign ([Definition 12](#def-inequality)), and carries an annotation that names the reason that step holds: an assumption, a definition, a previously proved result, or a rule of algebra.
 
 > **NOTE:**
 >
-> **Example 8 (A derivation with equalities and inequalities)** For every real number \\x\\:
+> **Example 15 (A derivation with equalities and inequalities)** For every real number \\x\\:
 >
 > \\ \begin{aligned} (x + 1)^2 &= x^2 + 2x + 1 && \text{(square of a sum)} \\ &\ge 2x + 1 && \text{(} x^2 \ge 0 \text{)} \\ &\> 2x && \text{(} 1 \> 0 \text{)} \end{aligned} \\
 >
@@ -142,7 +211,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Theorem 1 (What a derivation shows)** Consider a derivation ([Definition 8](#def-derivation)) with expressions \\E_0, E_1, \ldots, E_n\\, where each line \\E_j\\ is joined to the line \\E\_{j-1}\\ before it by \\=\\, \\\le\\ or \\\<\\.
+> **Theorem 1 (What a derivation shows)** Consider a derivation ([Definition 15](#def-derivation)) with expressions \\E_0, E_1, \ldots, E_n\\, where each line \\E_j\\ is joined to the line \\E\_{j-1}\\ before it by \\=\\, \\\le\\ or \\\<\\.
 >
 > 1.  If every step is \\=\\, then \\E_0 = E_n\\.
 > 2.  If every step is \\=\\ or \\\le\\, then \\E_0 \le E_n\\.
@@ -162,7 +231,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 >
 > - If \\R\\ and \\S\\ are both \\=\\, then \\a = c\\ ([equalities are transitive](algebra-basics.llms.md#thm-equal-trans)).
 > - If exactly one of \\R\\ and \\S\\ is \\=\\, replace \\b\\ by the equal expression in the other relation ([substitution](algebra-basics.llms.md#thm-substitution)). This gives the other relation between \\a\\ and \\c\\.
-> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict and non-strict inequalities](algebra-basics.llms.md#def-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
+> - If neither is \\=\\, then each of \\a \mathrel{R} b\\ and \\b \mathrel{S} c\\ is \\\le\\ or \\\<\\, and \\\le\\ means \\\<\\ or \\=\\ ([strict](algebra-basics.llms.md#def-strict-inequality) and [non-strict inequalities](algebra-basics.llms.md#def-non-strict-inequality)). A case with an \\=\\ is covered by the previous bullet, and the remaining case is \\a \< b\\ and \\b \< c\\, which gives \\a \< c\\ because \\\<\\ is transitive on the real numbers. So two steps that are each \\\le\\ or \\\<\\ give \\\<\\ if either is \\\<\\, and otherwise \\\le\\.
 >
 > Now let \\T_j\\ be the relation named by the same rule applied to the first \\j\\ steps of the chain, with \\T_0\\ being \\=\\. We show \\E_0 \mathrel{T_j} E_j\\ by induction on \\j\\. For \\j = 0\\, \\E_0 = E_0\\. If \\E_0 \mathrel{T_j} E_j\\, then the step from \\E_j\\ to \\E\_{j+1}\\ and the fact above give \\E_0 \mathrel{T\_{j+1}} E\_{j+1}\\. At \\j = n\\, \\T_n\\ is \\=\\ when every step is \\=\\, which is part 1. It is \\\le\\ or \\=\\ when every step is \\=\\ or \\\le\\, and \\=\\ implies \\\le\\, which is part 2. It is \\\<\\ when some step is \\\<\\, which is part 3.
 >
@@ -170,7 +239,7 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Example 9 (Checking a derivation line by line)** The derivation in [Example 8](#exm-derivation) has the steps \\=\\, \\\ge\\ and \\\>\\, so by [Theorem 1](#thm-derivation-chain) it shows \\(x + 1)^2 \> 2x\\. The code evaluates the four lines of that derivation at several values of \\x\\, and checks each step and the comparison of the first line with the last.
+> **Example 16 (Checking a derivation line by line)** The derivation in [Example 15](#exm-derivation) has the steps \\=\\, \\\ge\\ and \\\>\\, so by [Theorem 1](#thm-derivation-chain) it shows \\(x + 1)^2 \> 2x\\. The code evaluates the four lines of that derivation at several values of \\x\\, and checks each step and the comparison of the first line with the last.
 >
 > ``` downlit
 > x <- c(-3, -1, 0, 2, 3)
@@ -202,11 +271,11 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 9 (Result, theorem, lemma, and corollary)** A **result** is a proposition ([Definition 1](#def-proposition)) that has a proof ([Definition 7](#def-proof)). These notes label each result by its role:
+> **Definition 16 (Result)** A **result** is a proposition ([Definition 1](#def-proposition)) that has a proof ([Definition 14](#def-proof)). These notes label each result by its role: as a theorem ([Definition 17](#def-theorem)), a lemma ([Definition 18](#def-lemma)), or a corollary ([Definition 19](#def-corollary)).
+
+> **NOTE:**
 >
-> - a **theorem** is a result of interest in its own right;
-> - a **lemma** is a result proved mainly as a step in the proof of another result;
-> - a **corollary** is a result that follows from a theorem with little extra work.
+> **Example 17 (A proposition that is a result, and one that is not)** “\\2 + 3 = 5\\” is a proposition ([Definition 1](#def-proposition)) that has a proof, the computation of \\2 + 3\\, so it is a result. “\\7\\ is [even](notation.llms.md#def-even-odd)” is a proposition that is false, so it has no proof and is not a result.
 
 > **NOTE:**
 >
@@ -214,7 +283,27 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Example 10 (A corollary of a result)** [Example 7](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example,
+> **Definition 17 (Theorem)** A **theorem** is a result ([Definition 16](#def-result)) of interest in its own right.
+
+> **NOTE:**
+>
+> **Example 18 (A theorem)** “The sum of two even integers is even” is a result: [Example 14](#exm-proof) proves it. It is of interest in its own right, since it applies whenever two even integers are added, as in \\2 + 4 = 6\\, so it is a theorem.
+
+> **NOTE:**
+>
+> **Definition 18 (Lemma)** A **lemma** is a result ([Definition 16](#def-result)) proved mainly as a step in the proof of another result.
+
+> **NOTE:**
+>
+> **Example 19 (A lemma in the proof of a larger result)** To show that the sum of four even integers \\a\\, \\b\\, \\c\\, and \\d\\ is even, write \\a + b + c + d = (a + b) + (c + d)\\. By the result of [Example 14](#exm-proof), \\a + b\\ and \\c + d\\ are even, and applying that result again to these two sums shows that their sum is even. Here that result is proved mainly as a step in the proof of another result, so it serves as a lemma. For example, \\2 + 4 + 6 + 8 = (2 + 4) + (6 + 8) = 6 + 14 = 20\\, which is even.
+
+> **NOTE:**
+>
+> **Definition 19 (Corollary)** A **corollary** is a result ([Definition 16](#def-result)) that follows from a theorem with little extra work.
+
+> **NOTE:**
+>
+> **Example 20 (A corollary of a result)** [Example 14](#exm-proof) proves the result “the sum of two even integers is even”. A corollary follows with little extra work: the sum of three even integers \\a\\, \\b\\, and \\c\\ is even, because \\a + b + c = (a + b) + c\\, \\a + b\\ is even by that result, and applying the result again to the even integers \\a + b\\ and \\c\\ shows that \\(a + b) + c\\ is even. For example,
 >
 > \\ \begin{aligned} 2 + 4 + 6 &= (2 + 4) + 6 \\ &= 6 + 6 \\ &= 12, \end{aligned} \\
 >
@@ -222,19 +311,19 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 10 (Counterexample)** A **counterexample** to a proposition of the form “for every \\x\\ in \\A\\, \\P(x)\\”, where \\P(x)\\ is a predicate ([Definition 2](#def-predicate)), is an element \\x\\ of \\A\\ for which \\P(x)\\ is false. A single counterexample shows that the proposition is false.
+> **Definition 20 (Counterexample)** A **counterexample** to a proposition of the form “for every \\x\\ in \\A\\, \\P(x)\\”, where \\P(x)\\ is a predicate ([Definition 2](#def-predicate)), is an element \\x\\ of \\A\\ for which \\P(x)\\ is false. A single counterexample shows that the proposition is false.
 
 > **NOTE:**
 >
-> **Example 11 (A counterexample)** The proposition “for every integer \\n\\, \\n + n \> n\\” is false. The integer \\n = 0\\ is a counterexample: \\0 + 0 = 0\\, and \\0 \> 0\\ is false. The proposition is true for some integers, such as \\n = 3\\, since \\3 + 3 = 6 \> 3\\, but one counterexample is enough to make it false.
+> **Example 21 (A counterexample)** The proposition “for every integer \\n\\, \\n + n \> n\\” is false. The integer \\n = 0\\ is a counterexample: \\0 + 0 = 0\\, and \\0 \> 0\\ is false. The proposition is true for some integers, such as \\n = 3\\, since \\3 + 3 = 6 \> 3\\, but one counterexample is enough to make it false.
 
 > **NOTE:**
 >
-> **Definition 11 (Converse)** The **converse** of the proposition “if \\P\\, then \\Q\\” is the proposition “if \\Q\\, then \\P\\”.
+> **Definition 21 (Converse)** The **converse** of the proposition “if \\P\\, then \\Q\\” is the proposition “if \\Q\\, then \\P\\”.
 
 > **NOTE:**
 >
-> **Example 12 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
+> **Example 22 (A true proposition with a false converse)** For an integer \\n\\, call \\n\\ a multiple of \\4\\ if \\n = 4k\\ for some integer \\k\\.
 >
 > - “If \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true:
 >
@@ -242,17 +331,33 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 >
 >   and \\2k\\ is an integer.
 >
-> - Its converse, “if \\n\\ is even, then \\n\\ is a multiple of \\4\\”, is false. The integer \\n = 2\\ is a counterexample ([Definition 10](#def-counterexample)): \\2\\ is even, but \\2 = 4k\\ only for \\k = \frac{1}{2}\\, which is not an integer.
+> - Its converse, “if \\n\\ is even, then \\n\\ is a multiple of \\4\\”, is false. The integer \\n = 2\\ is a counterexample ([Definition 20](#def-counterexample)): \\2\\ is even, but \\2 = 4k\\ only for \\k = \frac{1}{2}\\, which is not an integer.
 >
 > So a proposition can be true while its converse is false.
 
 > **NOTE:**
 >
-> **Definition 12 (Necessary and sufficient conditions)** When the proposition “if \\P\\, then \\Q\\” is true, \\P\\ is a **sufficient condition** for \\Q\\, and \\Q\\ is a **necessary condition** for \\P\\. When both “if \\P\\, then \\Q\\” and its converse ([Definition 11](#def-converse)) are true, \\P\\ is a **necessary and sufficient condition** for \\Q\\, written “\\P\\ if and only if \\Q\\”.
+> **Definition 22 (Sufficient condition)** When the proposition “if \\P\\, then \\Q\\” is true, \\P\\ is a **sufficient condition** for \\Q\\.
 
 > **NOTE:**
 >
-> **Example 13 (Necessary but not sufficient)** In [Example 12](#exm-converse), “if \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true, so:
+> **Example 23 (A sufficient condition)** For a real number \\x\\, “if \\x \> 5\\, then \\x \> 2\\” is true, because a number greater than \\5\\ is greater than \\2\\. So \\x \> 5\\ is a sufficient condition for \\x \> 2\\: knowing that \\x = 6\\ satisfies \\x \> 5\\ is enough to conclude that \\6 \> 2\\.
+
+> **NOTE:**
+>
+> **Definition 23 (Necessary condition)** When the proposition “if \\P\\, then \\Q\\” is true, \\Q\\ is a **necessary condition** for \\P\\.
+
+> **NOTE:**
+>
+> **Example 24 (A necessary condition)** For an integer \\n\\, “if \\n\\ is a multiple of \\6\\, then \\n\\ is a multiple of \\3\\” is true, because \\6k = 3 \cdot(2k)\\ for every integer \\k\\. So being a multiple of \\3\\ is a necessary condition for being a multiple of \\6\\: \\12 = 6 \cdot 2\\ is a multiple of \\6\\, and it is also a multiple of \\3\\, since \\12 = 3 \cdot 4\\.
+
+> **NOTE:**
+>
+> **Definition 24 (Necessary and sufficient condition)** When both “if \\P\\, then \\Q\\” and its converse ([Definition 21](#def-converse)) are true, \\P\\ is a **necessary and sufficient condition** for \\Q\\ ([Definition 22](#def-sufficient-condition), [Definition 23](#def-necessary-condition)), written “\\P\\ if and only if \\Q\\”.
+
+> **NOTE:**
+>
+> **Example 25 (Necessary but not sufficient)** In [Example 22](#exm-converse), “if \\n\\ is a multiple of \\4\\, then \\n\\ is even” is true, so:
 >
 > - being a multiple of \\4\\ is a sufficient condition for \\n\\ to be even;
 > - being even is a necessary condition for \\n\\ to be a multiple of \\4\\.
@@ -261,11 +366,11 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> **Definition 13 (Proof by contradiction)** A **proof by contradiction** of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false.
+> **Definition 25 (Proof by contradiction)** A **proof by contradiction** of a proposition \\P\\ assumes that \\P\\ is false, and derives from that assumption a proposition that is known to be false.
 
 > **NOTE:**
 >
-> **Example 14 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([definition](notation.llms.md#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
+> **Example 26 (No integer is both even and odd)** Suppose, for contradiction, that some integer \\n\\ is both even and odd ([definition](notation.llms.md#def-even-odd)). Then \\n = 2j\\ and \\n = 2k + 1\\ for some integers \\j\\ and \\k\\, and
 >
 > \\ \begin{aligned} 2j &= 2k + 1 && \text{(both equal } n \text{)} \\ 2j - 2k &= 1 && \text{(subtract } 2k \text{ from both sides)} \\ 2(j - k) &= 1 && \text{(distributive law)} \\ j - k &= \tfrac{1}{2} && \text{(divide both sides by } 2 \text{)} \end{aligned} \\
 >
@@ -277,11 +382,11 @@ Let’s save \\\rightarrow\\ (`\rightarrow`) for [convergence](algebra-exponenti
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 3](#def-logical-connective), \\\neg P \Rightarrow Q\\ is false only when \\\neg P\\ is true and \\Q\\ is false. Here \\Q\\ is false, and \\\neg P \Rightarrow Q\\ is true, so \\\neg P\\ is not true. Then \\\neg P\\ is false. Since \\\neg P\\ is true whenever \\P\\ is false, \\P\\ must be true.
+> *Proof*. By [Definition 7](#def-implies), \\\neg P \Rightarrow Q\\ is false only when \\\neg P\\ is true and \\Q\\ is false. Here \\Q\\ is false, and \\\neg P \Rightarrow Q\\ is true, so \\\neg P\\ is not true. Then \\\neg P\\ is false. Since \\\neg P\\ is true whenever \\P\\ is false, \\P\\ must be true.
 
 > **NOTE:**
 >
-> **Example 15 (A truth table for a proof by contradiction)** There are only four ways to assign truth values to \\P\\ and \\Q\\. The code lists them, with the truth value of \\\neg P \Rightarrow Q\\, and marks the rows where \\\neg P \Rightarrow Q\\ is true and \\Q\\ is false.
+> **Example 27 (A truth table for a proof by contradiction)** There are only four ways to assign truth values to \\P\\ and \\Q\\. The code lists them, with the truth value of \\\neg P \Rightarrow Q\\, and marks the rows where \\\neg P \Rightarrow Q\\ is true and \\Q\\ is false.
 >
 > ``` downlit
 > tt <- expand.grid(Q = c(TRUE, FALSE), P = c(TRUE, FALSE))
@@ -316,11 +421,11 @@ The [Linear Algebra](linear-algebra-projections.llms.md#thm-hat-matrix) page use
 
 > **NOTE:**
 >
-> **Definition 14 (Direct proof)** A **direct proof** of a proposition \\Q\\ starts from the assumptions that \\Q\\ is stated under, if any, and reaches \\Q\\ through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that \\Q\\ is false; compare [proof by contradiction](#def-proof-by-contradiction), which does.
+> **Definition 26 (Direct proof)** A **direct proof** of a proposition \\Q\\ starts from the assumptions that \\Q\\ is stated under, if any, and reaches \\Q\\ through a chain of steps, each of which applies a definition, a previously proved result, or one rule of logic or algebra to the assumptions or to earlier steps. A direct proof never assumes that \\Q\\ is false; compare [proof by contradiction](#def-proof-by-contradiction), which does.
 
 > **NOTE:**
 >
-> **Example 16 (The square of an odd integer is odd)** Claim: if \\n\\ is an [odd](notation.llms.md#def-even-odd) integer, then \\n^2\\ is odd.
+> **Example 28 (The square of an odd integer is odd)** Claim: if \\n\\ is an [odd](notation.llms.md#def-odd) integer, then \\n^2\\ is odd.
 >
 > Since \\n\\ is odd, there is an integer \\k\\ with \\n = 2k + 1\\. Then
 >
@@ -350,7 +455,7 @@ Many proofs in these notes show that a statement holds for every [natural number
 
 > **NOTE:**
 >
-> **Definition 15 (Proof by induction)** Let \\n_0\\ be an [integer](notation.llms.md#def-integers), and let \\P(n)\\ be a [predicate](proof-writing.llms.md#def-predicate) about the integers \\n \ge n_0\\. A **proof by induction** on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
+> **Definition 27 (Proof by induction)** Let \\n_0\\ be an [integer](notation.llms.md#def-integers), and let \\P(n)\\ be a [predicate](proof-writing.llms.md#def-predicate) about the integers \\n \ge n_0\\. A **proof by induction** on \\n\\ shows that \\P(n)\\ holds for every integer \\n \ge n_0\\ by showing two things:
 >
 > 1.  **Base case:** \\P(n_0)\\ holds.
 > 2.  **Inductive step:** for every integer \\n \> n_0\\, if \\P(n - 1)\\ holds, then \\P(n)\\ holds.
@@ -367,11 +472,11 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Example 17 (Sum of the first \\n\\ natural numbers)** For every \\n \in \mathbb{N}\\,
+> **Example 29 (Sum of the first \\n\\ natural numbers)** For every \\n \in \mathbb{N}\\,
 >
 > \\ \sum\_{i=1}^ni = \frac{n(n+1)}{2}. \\
 >
-> For example, with \\n = 3\\, \\1 + 2 + 3 = 6\\ and \\\frac{3 \cdot 4}{2} = 6\\. To prove the equation for every \\n\\, let \\P(n)\\ be the equation and use [Definition 15](#def-proof-by-induction) with \\n_0 = 1\\.
+> For example, with \\n = 3\\, \\1 + 2 + 3 = 6\\ and \\\frac{3 \cdot 4}{2} = 6\\. To prove the equation for every \\n\\, let \\P(n)\\ be the equation and use [Definition 27](#def-proof-by-induction) with \\n_0 = 1\\.
 >
 > **Base case, \\n = 1\\.** The sum has one term:
 >
@@ -391,21 +496,21 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 >
 > \\ \begin{aligned} \sum\_{i=1}^ni &= 1 + 2 + \cdots + (n-1) + n && \text{(definition of a sum)} \\ &= \mathopen{}\left(1 + 2 + \cdots + (n-1)\right)\mathclose{} + n && \text{(associative law)} \\ &= \sum\_{i=1}^{n-1} i + n && \text{(definition of a sum)} \\ &= \frac{(n-1)\\\mathopen{}\left((n-1)+1\right)\mathclose{}}{2} + n && \text{(induction hypothesis)} \\ &= \frac{(n-1)\\n}{2} + n && \text{(} (n-1) + 1 = n \text{)} \\ &= \frac{(n-1)\\n}{2} + \frac{2n}{2} && \text{(} n = \tfrac{2n}{2} \text{)} \\ &= \frac{(n-1)\\n + 2n}{2} && \text{(common denominator)} \\ &= \frac{\mathopen{}\left((n-1) + 2\right)\mathclose{}\\n}{2} && \text{(distributive law)} \\ &= \frac{(n+1)\\n}{2} && \text{(} (n-1) + 2 = n + 1 \text{)} \\ &= \frac{n(n+1)}{2}, && \text{(commutative law)} \end{aligned} \\
 >
-> which is \\P(n)\\. By [Definition 15](#def-proof-by-induction), the equation holds for every \\n \in \mathbb{N}\\.
+> which is \\P(n)\\. By [Definition 27](#def-proof-by-induction), the equation holds for every \\n \in \mathbb{N}\\.
 
 ## 7 Formal logic
 
 > **NOTE:**
 >
-> **Definition 16 (Propositional logic)** **Propositional logic** is the study of [logical entailment](#def-logical-entailment) among [propositions](#def-proposition) built from basic propositions \\P, Q, R, \ldots\\ using only the [logical connectives](#def-logical-connective). Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.
+> **Definition 28 (Propositional logic)** **Propositional logic** is the study of [logical entailment](#def-logical-entailment) among [propositions](#def-proposition) built from basic propositions \\P, Q, R, \ldots\\ using only the [logical connectives](#def-logical-connective). Whether such propositions entail one another depends only on the truth values of the basic propositions, not on what the basic propositions say.
 
 > **NOTE:**
 >
-> **Example 18 (\\P\\ and \\P \Rightarrow Q\\ entail \\Q\\)** Suppose \\P\\ is true and \\P \Rightarrow Q\\ is true. If \\Q\\ were false, then \\P \Rightarrow Q\\ would have a true \\P\\ and a false \\Q\\, so \\P \Rightarrow Q\\ would be false, which contradicts the assumption. So \\Q\\ is true. This holds whatever \\P\\ and \\Q\\ say, so \\P\\ and \\P \Rightarrow Q\\ logically entail \\Q\\.
+> **Example 30 (\\P\\ and \\P \Rightarrow Q\\ entail \\Q\\)** Suppose \\P\\ is true and \\P \Rightarrow Q\\ is true. If \\Q\\ were false, then \\P \Rightarrow Q\\ would have a true \\P\\ and a false \\Q\\, so \\P \Rightarrow Q\\ would be false, which contradicts the assumption. So \\Q\\ is true. This holds whatever \\P\\ and \\Q\\ say, so \\P\\ and \\P \Rightarrow Q\\ logically entail \\Q\\.
 
 > **NOTE:**
 >
-> **Definition 17 (First-order logic)** **First-order logic** extends propositional logic ([Definition 16](#def-propositional-logic)) by also allowing:
+> **Definition 29 (First-order logic)** **First-order logic** extends propositional logic ([Definition 28](#def-propositional-logic)) by also allowing:
 >
 > - variables \\x, y, \ldots\\ that stand for elements of a set;
 > - [predicates](#def-predicate) of one or more of those variables, such as \\P(x)\\ or \\x \< y\\;
@@ -415,15 +520,15 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 > **NOTE:**
 >
-> **Example 19 (From “for all” to one element)** Let \\P(x)\\ be a predicate about the elements of a set \\S\\, and let \\a \in S\\. The propositions \\\forall x \in S, P(x)\\ and \\a \in S\\ logically entail \\P(a)\\: if \\P(x)\\ is true for every element \\x\\ of \\S\\, then it is true for the element \\a\\. For example, \\\forall x \in \mathbb{Z}, x^2 \ge 0\\ entails \\3^2 \ge 0\\. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of \\S\\.
+> **Example 31 (From “for all” to one element)** Let \\P(x)\\ be a predicate about the elements of a set \\S\\, and let \\a \in S\\. The propositions \\\forall x \in S, P(x)\\ and \\a \in S\\ logically entail \\P(a)\\: if \\P(x)\\ is true for every element \\x\\ of \\S\\, then it is true for the element \\a\\. For example, \\\forall x \in \mathbb{Z}, x^2 \ge 0\\ entails \\3^2 \ge 0\\. Propositional logic alone cannot express this entailment, because it has no way to refer to the elements of \\S\\.
 
 > **NOTE:**
 >
-> **Definition 18 (Formal proof)** A **formal proof** is a [proof](#def-proof) written in propositional logic ([Definition 16](#def-propositional-logic)) or first-order logic ([Definition 17](#def-first-order-logic)) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.
+> **Definition 30 (Formal proof)** A **formal proof** is a [proof](#def-proof) written in propositional logic ([Definition 28](#def-propositional-logic)) or first-order logic ([Definition 29](#def-first-order-logic)) in which each step is an assumption or follows from earlier steps by one rule taken from a fixed list of allowed rules, so that checking the proof needs no understanding of what its propositions mean.
 
 > **NOTE:**
 >
-> **Example 20 (A three-step formal proof)** Suppose the allowed rules include “from \\P\\ and \\P \Rightarrow Q\\, conclude \\Q\\”. Then this is a formal proof of \\Q\\ from the assumptions \\P\\ and \\P \Rightarrow Q\\:
+> **Example 32 (A three-step formal proof)** Suppose the allowed rules include “from \\P\\ and \\P \Rightarrow Q\\, conclude \\Q\\”. Then this is a formal proof of \\Q\\ from the assumptions \\P\\ and \\P \Rightarrow Q\\:
 >
 > 1.  \\P\\ (assumption)
 > 2.  \\P \Rightarrow Q\\ (assumption)
@@ -433,6 +538,12 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 - Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
 - Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
+
+Free course materials on formal logic:
+
+- Thomas Icard’s [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150) (Stanford) review sets, relations and functions, then cover propositional, modal and first-order logic.
+- John Wilcox’s [logic handouts](https://www.johnwilcox.org/logic.html) supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
+- Eric Pacuit’s [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html) (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.
 
 ## References
 

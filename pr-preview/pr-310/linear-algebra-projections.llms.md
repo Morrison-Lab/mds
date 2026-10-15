@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Design Matrix
 
@@ -106,7 +106,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Orthogonal projection onto a subspace)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ and \\\tilde{y} \in \mathbb{R}^p\\. By [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\tilde{y} = \tilde{u} + \tilde{v}\\ for exactly one \\\tilde{u} \in \mathcal{S}\\ and \\\tilde{v} \in \mathcal{S}^\perp\\. The vector \\\tilde{u}\\ is the **orthogonal projection** of \\\tilde{y}\\ onto \\\mathcal{S}\\. It is the projection of \\\tilde{y}\\ onto \\\mathcal{S}\\ along \\\mathcal{S}^\perp\\ ([Definition 3 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-projection)).
+> **Definition 3 (Orthogonal projection onto a subspace)** Let \\\mathcal{S}\\ be a subspace of \\\mathbb{R}^p\\ and \\\tilde{y} \in \mathbb{R}^p\\. By [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\tilde{y} = \tilde{u} + \tilde{v}\\ for exactly one \\\tilde{u} \in \mathcal{S}\\ and \\\tilde{v} \in \mathcal{S}^\perp\\. The vector \\\tilde{u}\\ is the **orthogonal projection** of \\\tilde{y}\\ onto \\\mathcal{S}\\. It is the projection of \\\tilde{y}\\ onto \\\mathcal{S}\\ along \\\mathcal{S}^\perp\\ ([Definition 4 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-projection)).
 
 > **NOTE:**
 >
@@ -126,7 +126,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. By [Definition 3](#def-orthogonal-projection), \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\. Both \\\tilde{u}\\ and \\\tilde{w}\\ are in \\\mathcal{S}\\, so \\\tilde{u} - \tilde{w} = \tilde{u} + (-1)\\\tilde{w} \in \mathcal{S}\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)), and therefore \\(\tilde{y} - \tilde{u}) \perp (\tilde{u} - \tilde{w})\\ ([Definition 4 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-orthogonal-complement)). Then
+> *Proof*. By [Definition 3](#def-orthogonal-projection), \\\tilde{y} - \tilde{u} \in \mathcal{S}^\perp\\. Both \\\tilde{u}\\ and \\\tilde{w}\\ are in \\\mathcal{S}\\, so \\\tilde{u} - \tilde{w} = \tilde{u} + (-1)\\\tilde{w} \in \mathcal{S}\\ ([Definition 4 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-subspace)), and therefore \\(\tilde{y} - \tilde{u}) \perp (\tilde{u} - \tilde{w})\\ ([Definition 5 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#def-orthogonal-complement)). Then
 >
 > \\ \begin{aligned} \mathopen{}\left\lVert\tilde{y} - \tilde{w}\right\rVert\mathclose{}^2 &= \mathopen{}\left\lVert(\tilde{y} - \tilde{u}) + (\tilde{u} - \tilde{w})\right\rVert\mathclose{}^2 && \text{(add and subtract } \tilde{u} \text{)} \\ &= \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{}^2 + \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 && \text{(Pythagorean theorem, }\href{linear-algebra-inner-products.qmd#thm-norm-sum-square}{\text{Theorem~2 in Inner Products and Orthogonality}}\text{)} \\ &\ge \mathopen{}\left\lVert\tilde{y} - \tilde{u}\right\rVert\mathclose{}^2, && \text{(} \mathopen{}\left\lVert\tilde{u} - \tilde{w}\right\rVert\mathclose{}^2 \ge 0 \text{, }\href{linear-algebra-inner-products.qmd#thm-norm-properties}{\text{Theorem~1 in Inner Products and Orthogonality}}\text{)} \end{aligned} \\
 >
@@ -152,9 +152,9 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. **\\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\.** Write \\q\_{ki}\\ for entry \\k\\ of \\\tilde{q}\_i\\, which is entry \\(k, i)\\ of \\\mathbf{Q}\\. Then
 >
-> \\ \begin{aligned} ({\mathbf{Q}}^{\top} \mathbf{Q})\_{ij} &= \sum\_{k=1}^{p} ({\mathbf{Q}}^{\top})\_{ik}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \sum\_{k=1}^{p} q\_{ki}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= \tilde{q}\_i \cdot \tilde{q}\_j, && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} ({\mathbf{Q}}^{\top} \mathbf{Q})\_{ij} &= \sum\_{k=1}^{p} ({\mathbf{Q}}^{\top})\_{ik}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \sum\_{k=1}^{p} q\_{ki}\\ q\_{kj} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= \tilde{q}\_i \cdot \tilde{q}\_j, && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \end{aligned} \\
 >
-> which is \\1\\ if \\i = j\\ and \\0\\ otherwise ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
+> which is \\1\\ if \\i = j\\ and \\0\\ otherwise ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)), so \\{\mathbf{Q}}^{\top} \mathbf{Q} = \mathbf{I}\_r\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix)).
 >
 > **The split.** Let \\\tilde{u} = \mathbf{Q} {\mathbf{Q}}^{\top} \tilde{y}\\ and \\\tilde{v} = \tilde{y} - \tilde{u}\\, so \\\tilde{y} = \tilde{u} + \tilde{v}\\. \\\tilde{u} = \mathbf{Q}\\({\mathbf{Q}}^{\top} \tilde{y})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)) is in \\\mathcal{C}(\mathbf{Q})\\ ([Definition 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-column-space)), which is \\\operatorname{span}\mathopen{}\left\\\tilde{q}\_1, \ldots, \tilde{q}\_r\right\\\mathclose{} = \mathcal{S}\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)). For \\\tilde{v}\\,
 >
@@ -205,7 +205,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > ([Theorem 7 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-complement-null-space)). By the uniqueness in [Theorem 8 in Direct Sums and Orthogonal Complements](linear-algebra-direct-sums.llms.md#thm-orthogonal-direct-sum), \\\mathbf{P} \tilde{y}\\ is the orthogonal projection of \\\tilde{y}\\ onto \\\mathcal{C}(\mathbf{P})\\.
 >
-> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 3](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \tilde{e}\_j = \mathbf{P}\_2 \tilde{e}\_j\\ for each indicator vector \\\tilde{e}\_j\\ ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). \\\mathbf{P}\_1 \tilde{e}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\tilde{e}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
+> **Part 2.** The orthogonal projection of a vector onto \\\mathcal{S}\\ is unique ([Definition 3](#def-orthogonal-projection)), so \\\mathbf{P}\_1 \tilde{e}\_j = \mathbf{P}\_2 \tilde{e}\_j\\ for each indicator vector \\\tilde{e}\_j\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). \\\mathbf{P}\_1 \tilde{e}\_j\\ is column \\j\\ of \\\mathbf{P}\_1\\: by [Theorem 3 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-matvec-columns) it is the combination of the columns of \\\mathbf{P}\_1\\ with coefficients the entries of \\\tilde{e}\_j\\, which are \\1\\ in place \\j\\ and \\0\\ elsewhere ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). Likewise for \\\mathbf{P}\_2\\, so the two matrices have the same columns.
 
 > **NOTE:**
 >
@@ -233,7 +233,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > So for every \\\tilde{b} \in \mathbb{R}^p\\, \\\mathbf{X}\tilde{b} = (\mathbf{H} \mathbf{X})\\\tilde{b}\\, since \\\mathbf{H} \mathbf{X}= \mathbf{X}\\, and \\(\mathbf{H} \mathbf{X})\\\tilde{b} = \mathbf{H}\\(\mathbf{X}\tilde{b})\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc)), which is in \\\mathcal{C}(\mathbf{H})\\.
 >
-> \\\mathcal{C}(\mathbf{X})\\ has dimension \\p \ge 1\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), so an orthonormal basis of it has \\p\\ vectors ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ also gives the orthogonal projection onto \\\mathcal{C}(\mathbf{X})\\ ([Theorem 4](#thm-projector-onb), with \\n\\ in place of \\p\\ and \\r = p\\). By [Theorem 5](#thm-projection-matrix-projects), part 2, \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\.
+> \\\mathcal{C}(\mathbf{X})\\ has dimension \\p \ge 1\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), so an orthonormal basis of it has \\p\\ vectors ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)), and \\\mathbf{Q} {\mathbf{Q}}^{\top}\\ also gives the orthogonal projection onto \\\mathcal{C}(\mathbf{X})\\ ([Theorem 4](#thm-projector-onb), with \\n\\ in place of \\p\\ and \\r = p\\). By [Theorem 5](#thm-projection-matrix-projects), part 2, \\\mathbf{H} = \mathbf{Q} {\mathbf{Q}}^{\top}\\.
 
 > **NOTE:**
 >
@@ -413,7 +413,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 > **Theorem 12 (Every matrix has a Moore-Penrose inverse)** Every \\m \times n\\ matrix \\\mathbf{A}\\ has a Moore-Penrose inverse ([Definition 5](#def-moore-penrose)), written \\\mathbf{A}^+\\; it is unique by [Theorem 11](#thm-moore-penrose-unique).
 >
 > - If \\\mathbf{A} = \mathbf{0}\_{m \times n}\\, then \\\mathbf{A}^+ = \mathbf{0}\_{n \times m}\\.
-> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 10 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-rank-factorization)), then
+> - If \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ and \\\mathbf{A} = \mathbf{C} \mathbf{R}\\ is a rank factorization ([Definition 11 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#def-rank-factorization)), then
 >
 > \\ \underbrace{\mathbf{A}^+}\_{n \times m} = \underbrace{{\mathbf{R}}^{\top}}\_{n \times r} \underbrace{(\mathbf{R} {\mathbf{R}}^{\top})^{-1}}\_{r \times r} \underbrace{({\mathbf{C}}^{\top} \mathbf{C})^{-1}}\_{r \times r} \underbrace{{\mathbf{C}}^{\top}}\_{r \times m}. \\
 
@@ -479,11 +479,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Consistent linear system)** A linear system ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \tilde{x} = \tilde{b}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, is **consistent** if it has at least one solution \\\tilde{x} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
+> **Definition 6 (Consistent linear system)** A linear system ([Definition 14 in Matrices](linear-algebra-matrices.llms.md#def-linear-system)) \\\mathbf{A} \tilde{x} = \tilde{b}\\, with \\\mathbf{A}\\ an \\m \times n\\ matrix and \\\tilde{b} \in \mathbb{R}^m\\, is **consistent** if it has at least one solution \\\tilde{x} \in \mathbb{R}^n\\, and **inconsistent** otherwise.
 
 > **NOTE:**
 >
-> **Example 18 (A consistent system and an inconsistent one)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{A}\\(x_1, x_2) = (x_1, 0)\\ ([Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
+> **Example 18 (A consistent system and an inconsistent one)** With \\\mathbf{A} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}\\, \\\mathbf{A}\\(x_1, x_2) = (x_1, 0)\\ ([Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)).
 >
 > - \\\mathbf{A} \tilde{x} = (2, 0)\\ is consistent: \\\tilde{x} = (2, 0)\\ is a solution.
 > - \\\mathbf{A} \tilde{x} = (2, 1)\\ is inconsistent: the second entry of \\\mathbf{A} \tilde{x}\\ is always \\0\\, never \\1\\.
@@ -564,7 +564,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. **Part 1.** By [Theorem 13](#thm-consistency), the system is consistent for every \\\tilde{b}\\ exactly when \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\. \\\mathcal{C}(\mathbf{A})\\ is a subspace of \\\mathbb{R}^m\\ ([Theorem 1 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-column-space-span)) with dimension \\\operatorname{rank}(\mathbf{A})\\ ([Theorem 7 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-dim)), and \\\dim(\mathbb{R}^m) = m\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). If the dimension is \\m\\, then \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\ ([Theorem 11 in Subspaces and Rank](linear-algebra-subspaces.llms.md#thm-subspace-equal-dim)); if \\\mathcal{C}(\mathbf{A}) = \mathbb{R}^m\\, the dimension is \\m\\.
 >
-> **Part 2.** By [Theorem 14](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, by [Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
+> **Part 2.** By [Theorem 14](#thm-solution-set), the solutions are a particular solution plus the vectors of \\\mathcal{N}(\mathbf{A})\\, so there is exactly one solution exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, that is, when \\\operatorname{nullity}(\mathbf{A}) = 0\\ (a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\, by [Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension) and [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span); and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\, by [Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)). By [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity), that is when \\\operatorname{rank}(\mathbf{A}) = n\\.
 
 > **NOTE:**
 >
@@ -643,7 +643,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. Row \\i\\ of \\\mathbf{U} \tilde{x} = \tilde{b}\\ reads
 >
-> \\ \begin{aligned} b_i &= \sum\_{j=1}^nu\_{ij}\\x_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= \sum\_{j=i}^{n} u\_{ij}\\x_j && \text{(} u\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= u\_{ii}\\x_i + \sum\_{j=i+1}^{n} u\_{ij}\\x_j. && \text{(split off the } j = i \text{ term)} \end{aligned} \\
+> \\ \begin{aligned} b_i &= \sum\_{j=1}^nu\_{ij}\\x_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \sum\_{j=i}^{n} u\_{ij}\\x_j && \text{(} u\_{ij} = 0 \text{ for } j \< i \text{)} \\ &= u\_{ii}\\x_i + \sum\_{j=i+1}^{n} u\_{ij}\\x_j. && \text{(split off the } j = i \text{ term)} \end{aligned} \\
 >
 > This equation is equivalent to each of
 >
@@ -669,7 +669,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{Q}}\_{m \times n}\\\underbrace{\mathbf{R}}\_{n \times n}, \\
 >
-> where the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 17 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and \\\mathbf{R}\\ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
+> where the columns of \\\mathbf{Q}\\ are orthonormal ([Definition 19 in Vectors](linear-algebra-vectors.llms.md#def-orthonormal-vectors)) and \\\mathbf{R}\\ is upper triangular ([Definition 7](#def-triangular-matrix)) with positive diagonal entries.
 
 > **NOTE:**
 >

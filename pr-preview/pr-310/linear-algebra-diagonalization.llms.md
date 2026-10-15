@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 08:32:48 (PDT)
+Last modified: 2026-10-15 13:37:28 (PDT)
 
 ## 1 Similarity and diagonalization
 
@@ -20,15 +20,15 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. **Invertible implies rank \\n\\.** If \\\mathbf{A} \tilde{x} = \tilde{0}\_n\\, then
 >
-> \\ \begin{aligned} \tilde{x} &= \mathbf{I}\_n \tilde{x} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= (\mathbf{A}^{-1} \mathbf{A})\\\tilde{x} && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{A}^{-1}\\(\mathbf{A} \tilde{x}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A}^{-1}\\\tilde{0}\_n && \text{(} \mathbf{A} \tilde{x} = \tilde{0}\_n \text{)} \\ &= \tilde{0}\_n, && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \tilde{x} &= \mathbf{I}\_n \tilde{x} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= (\mathbf{A}^{-1} \mathbf{A})\\\tilde{x} && \text{(}\href{linear-algebra-special-matrices.qmd#def-matrix-inverse}{\text{Definition~5 in Special Matrices and Decompositions}}\text{)} \\ &= \mathbf{A}^{-1}\\(\mathbf{A} \tilde{x}) && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{A}^{-1}\\\tilde{0}\_n && \text{(} \mathbf{A} \tilde{x} = \tilde{0}\_n \text{)} \\ &= \tilde{0}\_n, && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
 >
 > so \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, the nullity is \\0\\, and \\\operatorname{rank}(\mathbf{A}) = n\\ ([Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity)).
 >
-> **Rank \\n\\ implies invertible.** Every system \\\mathbf{A} \tilde{y} = \tilde{b}\\ has exactly one solution ([Corollary 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with \\m = n\\). Let \\\tilde{y}\_j\\ solve \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let \\\mathbf{B}\\ have columns \\\tilde{y}\_1, \ldots, \tilde{y}\_n\\. Column \\j\\ of \\\mathbf{A} \mathbf{B}\\ is \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ (1), so \\\mathbf{A} \mathbf{B} = \mathbf{I}\_n\\. For the other order,
+> **Rank \\n\\ implies invertible.** Every system \\\mathbf{A} \tilde{y} = \tilde{b}\\ has exactly one solution ([Corollary 1 in Projections and Linear Systems](linear-algebra-projections.llms.md#cor-solution-unique), both parts, with \\m = n\\). Let \\\tilde{y}\_j\\ solve \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), and let \\\mathbf{B}\\ have columns \\\tilde{y}\_1, \ldots, \tilde{y}\_n\\. Column \\j\\ of \\\mathbf{A} \mathbf{B}\\ is \\\mathbf{A} \tilde{y}\_j = \tilde{e}\_j\\ (1), so \\\mathbf{A} \mathbf{B} = \mathbf{I}\_n\\. For the other order,
 >
 > \\ \begin{aligned} \mathbf{A}\\(\mathbf{B} \mathbf{A} - \mathbf{I}\_n) &= \mathbf{A} \mathbf{B} \mathbf{A} - \mathbf{A} \mathbf{I}\_n && \text{(}\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{, }\href{linear-algebra-matrices.qmd#thm-matmul-assoc}{\text{Theorem~5 in Matrices}}\text{)} \\ &= \mathbf{I}\_n \mathbf{A} - \mathbf{A} \mathbf{I}\_n && \text{(} \mathbf{A} \mathbf{B} = \mathbf{I}\_n \text{)} \\ &= \mathbf{A} - \mathbf{A} && \text{(}\href{linear-algebra-matrices.qmd#thm-identity}{\text{Theorem~7 in Matrices}}\text{)} \\ &= \mathbf{0}\_{n \times n}, && \text{(arithmetic)} \end{aligned} \\
 >
-> so every column of \\\mathbf{B} \mathbf{A} - \mathbf{I}\_n\\ is in \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\ (1), and \\\mathbf{B} \mathbf{A} = \mathbf{I}\_n\\. So \\\mathbf{B}\\ satisfies [Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity): the nullity is \\0\\ exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, because a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension), [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)), and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
+> so every column of \\\mathbf{B} \mathbf{A} - \mathbf{I}\_n\\ is in \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\ (1), and \\\mathbf{B} \mathbf{A} = \mathbf{I}\_n\\. So \\\mathbf{B}\\ satisfies [Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix). The two conditions in the statement are equivalent by [Theorem 8 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-rank-nullity): the nullity is \\0\\ exactly when \\\mathcal{N}(\mathbf{A}) = \mathopen{}\left\\\tilde{0}\_n\right\\\mathclose{}\\, because a subspace of dimension \\0\\ has the empty list as a basis, whose span is \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension), [Definition 5 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-span)), and \\\mathopen{}\left\\\tilde{0}\right\\\mathclose{}\\ has dimension \\0\\ ([Example 16 in Subspaces and Rank](linear-algebra-subspaces.llms.md#exm-dimension)).
 
 > **NOTE:**
 >
@@ -39,7 +39,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Eigenspace and geometric multiplicity)** Let \\\lambda\\ be an eigenvalue of a \\p \times p\\ matrix \\\mathbf{A}\\ ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** of \\\lambda\\ is \\\mathcal{E}\_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\\\mathbf{I}\_p)\\. It is a subspace of \\\mathbb{R}^p\\ ([Theorem 2 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-null-space-subspace)), and its dimension ([Definition 8 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) is the **geometric multiplicity** of \\\lambda\\.
+> **Definition 1 (Eigenspace)** Let \\\lambda\\ be an eigenvalue of a \\p \times p\\ matrix \\\mathbf{A}\\ ([Definition 16 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigenvalue)). The **eigenspace** of \\\lambda\\ is \\\mathcal{E}\_\lambda\stackrel{\text{def}}{=}\mathcal{N}(\mathbf{A} - \lambda\\\mathbf{I}\_p)\\. It is a subspace of \\\mathbb{R}^p\\ ([Theorem 2 in Column Space, Null Space and Rank-Nullity](linear-algebra-rank-nullity.llms.md#thm-null-space-subspace)).
+
+> **NOTE:**
+>
+> **Definition 2 (Geometric multiplicity)** The dimension ([Definition 9 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-dimension)) of the eigenspace \\\mathcal{E}\_\lambda\\ ([Definition 1](#def-eigenspace)) of an eigenvalue \\\lambda\\ is the **geometric multiplicity** of \\\lambda\\.
 
 > **NOTE:**
 >
@@ -116,7 +120,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> *Proof*. \\\mathbf{U} - \lambda\\\mathbf{I}\_p\\ is upper triangular, with diagonal entries \\u\_{ii} - \lambda\\ ([Definition 10 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix), [Definition 5 in Matrices](linear-algebra-matrices.llms.md#def-matrix-addition)).
+> *Proof*. \\\mathbf{U} - \lambda\\\mathbf{I}\_p\\ is upper triangular, with diagonal entries \\u\_{ii} - \lambda\\ ([Definition 12 in Matrices](linear-algebra-matrices.llms.md#def-identity-matrix), [Definition 5 in Matrices](linear-algebra-matrices.llms.md#def-matrix-addition)).
 >
 > **If \\\lambda\\ is not a diagonal entry,** every \\u\_{ii} - \lambda\ne 0\\, so \\(\mathbf{U} - \lambda\\\mathbf{I}\_p)\\\tilde{v} = \tilde{0}\\ has exactly one solution, \\\tilde{v} = \tilde{0}\\ ([Theorem 16 in Projections and Linear Systems](linear-algebra-projections.llms.md#thm-back-substitution)), and \\\lambda\\ is not an eigenvalue ([Theorem 2](#thm-eigenvalue-singular)).
 >
@@ -183,7 +187,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Similar matrices)** Two \\p \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ are **similar** if \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\ for some invertible \\p \times p\\ matrix \\\mathbf{P}\\ ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
+> **Definition 3 (Similar matrices)** Two \\p \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ are **similar** if \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\ for some invertible \\p \times p\\ matrix \\\mathbf{P}\\ ([Definition 6 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-invertible-matrix)).
 
 > **NOTE:**
 >
@@ -201,7 +205,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > **Example 8 (A matrix similar to a diagonal one)** Let \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ and \\\mathbf{P} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}\\. Then
 >
-> \\ \begin{aligned} \mathbf{P}^2 &= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot(-1) \\ 1 \cdot 1 + (-1) \cdot 1 & 1 \cdot 1 + (-1)(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} && \text{(arithmetic)} \\ &= 2\\\mathbf{I}\_2, && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-identity-matrix}{\text{Definition~10 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathbf{P}^2 &= \begin{bmatrix} 1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot(-1) \\ 1 \cdot 1 + (-1) \cdot 1 & 1 \cdot 1 + (-1)(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-mult}{\text{Definition~7 in Matrices}}\text{)} \\ &= \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} && \text{(arithmetic)} \\ &= 2\\\mathbf{I}\_2, && \text{(}\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-identity-matrix}{\text{Definition~12 in Matrices}}\text{)} \end{aligned} \\
 >
 > so
 >
@@ -219,7 +223,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 6 (Similar matrices have the same eigenvalues)** If \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\ ([Definition 2](#def-similar)), then \\\tilde{v}\\ is an eigenvector of \\\mathbf{A}\\ for \\\lambda\\ exactly when \\\mathbf{P}^{-1} \tilde{v}\\ is an eigenvector of \\\mathbf{B}\\ for \\\lambda\\. So \\\mathbf{A}\\ and \\\mathbf{B}\\ have the same eigenvalues.
+> **Theorem 6 (Similar matrices have the same eigenvalues)** If \\\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}\\ ([Definition 3](#def-similar)), then \\\tilde{v}\\ is an eigenvector of \\\mathbf{A}\\ for \\\lambda\\ exactly when \\\mathbf{P}^{-1} \tilde{v}\\ is an eigenvector of \\\mathbf{B}\\ for \\\lambda\\. So \\\mathbf{A}\\ and \\\mathbf{B}\\ have the same eigenvalues.
 
 > **NOTE:**
 >
@@ -231,7 +235,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \tilde{v} &= \mathbf{I}\_p \tilde{v} \\ &= \mathbf{P}\\(\mathbf{P}^{-1} \tilde{v}) \\ &= \mathbf{P}\\\tilde{0}\\ &= \tilde{0} \end{aligned} \\
 >
-> ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-identity), 2, [Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc), [Definition 11 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), which is false.
+> ([Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-identity), 2, [Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc), [Definition 13 in Matrices](linear-algebra-matrices.llms.md#def-matvec-mult)), which is false.
 >
 > **From \\\mathbf{B}\\ to \\\mathbf{A}\\.** By [Remark 1](#rem-similar-both-ways),
 >
@@ -269,7 +273,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Diagonalizable matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **diagonalizable** if \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ for some invertible \\p \times p\\ matrix \\\mathbf{X}\\ and diagonal \\p \times p\\ matrix \\\mathbf{\Lambda}\\ ([Definition 4 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)); by [Remark 1](#rem-similar-both-ways), that is the same as \\\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}\\, so a diagonalizable matrix is one similar to a diagonal matrix ([Definition 2](#def-similar)).
+> **Definition 4 (Diagonalizable matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **diagonalizable** if \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ for some invertible \\p \times p\\ matrix \\\mathbf{X}\\ and diagonal \\p \times p\\ matrix \\\mathbf{\Lambda}\\ ([Definition 4 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-diagonal-matrix)); by [Remark 1](#rem-similar-both-ways), that is the same as \\\mathbf{\Lambda} = \mathbf{X}^{-1} \mathbf{A} \mathbf{X}\\, so a diagonalizable matrix is one similar to a diagonal matrix ([Definition 3](#def-similar)).
 
 > **NOTE:**
 >
@@ -285,7 +289,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 8 (Diagonalizable means a basis of eigenvectors)** A \\p \times p\\ matrix \\\mathbf{A}\\ is diagonalizable ([Definition 3](#def-diagonalizable)) exactly when it has \\p\\ linearly independent eigenvectors. Then \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ with the eigenvectors as the columns of \\\mathbf{X}\\ and their eigenvalues, in the same order, on the diagonal of \\\mathbf{\Lambda}\\.
+> **Theorem 8 (Diagonalizable means a basis of eigenvectors)** A \\p \times p\\ matrix \\\mathbf{A}\\ is diagonalizable ([Definition 4](#def-diagonalizable)) exactly when it has \\p\\ linearly independent eigenvectors. Then \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ with the eigenvectors as the columns of \\\mathbf{X}\\ and their eigenvalues, in the same order, on the diagonal of \\\mathbf{\Lambda}\\.
 
 > **NOTE:**
 >
@@ -311,7 +315,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Example 12 (Building the diagonalization from eigenvectors)** The eigenvectors \\(1, 1)\\ and \\(1, -1)\\ of \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ are linearly independent ([Example 10](#exm-eigenvectors-independent)), so with \\\mathbf{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}\\ and \\\mathbf{\Lambda} = \operatorname{diag}(3, 1)\\, \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\; by [Remark 1](#rem-similar-both-ways) this is the similarity of [Example 8](#exm-similar), with \\\mathbf{X} = \mathbf{P}\\. Because \\\mathbf{A}\\ is symmetric, [Theorem 11 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) even gives such a factorization with orthonormal eigenvectors ([Definition 17 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)): dividing each column of \\\mathbf{X}\\ by its length \\\sqrt{2}\\ gives one. By contrast, every eigenvector of \\\mathbf{J}\\ in [Example 2](#exm-eigenspace) has the form \\(t, 0)\\, so any two of them are multiples of each other, and \\\mathbf{J}\\ has no two linearly independent eigenvectors: another way to see that it is not diagonalizable.
+> **Example 12 (Building the diagonalization from eigenvectors)** The eigenvectors \\(1, 1)\\ and \\(1, -1)\\ of \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ are linearly independent ([Example 10](#exm-eigenvectors-independent)), so with \\\mathbf{X} = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}\\ and \\\mathbf{\Lambda} = \operatorname{diag}(3, 1)\\, \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\; by [Remark 1](#rem-similar-both-ways) this is the similarity of [Example 8](#exm-similar), with \\\mathbf{X} = \mathbf{P}\\. Because \\\mathbf{A}\\ is symmetric, [Theorem 11 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#thm-spectral) even gives such a factorization with orthonormal eigenvectors ([Definition 18 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-eigendecomposition)): dividing each column of \\\mathbf{X}\\ by its length \\\sqrt{2}\\ gives one. By contrast, every eigenvector of \\\mathbf{J}\\ in [Example 2](#exm-eigenspace) has the form \\(t, 0)\\, so any two of them are multiples of each other, and \\\mathbf{J}\\ has no two linearly independent eigenvectors: another way to see that it is not diagonalizable.
 
 > **NOTE:**
 >
@@ -327,7 +331,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 9 (Powers of a diagonalizable matrix)** If \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ ([Definition 3](#def-diagonalizable)) with \\\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\\, then for every positive integer \\k\\, \\\mathbf{A}^k = \mathbf{X} \mathbf{\Lambda}^k \mathbf{X}^{-1}\\ and \\\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\\.
+> **Theorem 9 (Powers of a diagonalizable matrix)** If \\\mathbf{A} = \mathbf{X} \mathbf{\Lambda} \mathbf{X}^{-1}\\ ([Definition 4](#def-diagonalizable)) with \\\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \ldots, \lambda_p)\\, then for every positive integer \\k\\, \\\mathbf{A}^k = \mathbf{X} \mathbf{\Lambda}^k \mathbf{X}^{-1}\\ and \\\mathbf{\Lambda}^k = \operatorname{diag}(\lambda_1^k, \ldots, \lambda_p^k)\\.
 
 > **NOTE:**
 >
@@ -364,8 +368,8 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > **Theorem 10 (Definite matrices are Gram matrices)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix.
 >
-> 1.  \\\mathbf{A}\\ is positive semidefinite ([Definition 19 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-semidefinite)) exactly when \\\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\\ for some matrix \\\mathbf{B}\\ with \\p\\ columns.
-> 2.  \\\mathbf{A}\\ is positive definite ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\\ for some matrix \\\mathbf{B}\\ with \\p\\ linearly independent columns.
+> 1.  \\\mathbf{A}\\ is positive semidefinite ([Definition 21 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-semidefinite)) exactly when \\\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\\ for some matrix \\\mathbf{B}\\ with \\p\\ columns.
+> 2.  \\\mathbf{A}\\ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A} = {\mathbf{B}}^{\top} \mathbf{B}\\ for some matrix \\\mathbf{B}\\ with \\p\\ linearly independent columns.
 
 > **NOTE:**
 >
@@ -397,7 +401,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > **Theorem 11 (Operations that preserve definiteness)**  
 >
-> 1.  If \\\mathbf{C}\\ is a \\p \times p\\ positive definite matrix ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) and \\\mathbf{A}\\ is a \\p \times k\\ matrix with \\k\\ linearly independent columns, then the \\k \times k\\ matrix \\{\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\\ is positive definite.
+> 1.  If \\\mathbf{C}\\ is a \\p \times p\\ positive definite matrix ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) and \\\mathbf{A}\\ is a \\p \times k\\ matrix with \\k\\ linearly independent columns, then the \\k \times k\\ matrix \\{\mathbf{A}}^{\top} \mathbf{C} \mathbf{A}\\ is positive definite.
 > 2.  If \\\mathbf{A}\_1\\ and \\\mathbf{A}\_2\\ are positive definite \\p \times p\\ matrices and \\\alpha_1, \alpha_2 \> 0\\, then \\\alpha_1 \mathbf{A}\_1 + \alpha_2 \mathbf{A}\_2\\ is positive definite.
 
 > **NOTE:**
@@ -432,7 +436,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Block matrix)** Split the rows of an \\m \times n\\ matrix \\\mathbf{X}\\ into the first \\k\\ and the last \\m - k\\, and its columns into the first \\l\\ and the last \\n - l\\, with \\1 \le k \< m\\ and \\1 \le l \< n\\. This cuts \\\mathbf{X}\\ into four smaller matrices, its **blocks**:
+> **Definition 5 (Block matrix)** Split the rows of an \\m \times n\\ matrix \\\mathbf{X}\\ into the first \\k\\ and the last \\m - k\\, and its columns into the first \\l\\ and the last \\n - l\\, with \\1 \le k \< m\\ and \\1 \le l \< n\\. This cuts \\\mathbf{X}\\ into four smaller matrices, its **blocks**:
 >
 > \\ \mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}, \\
 >
@@ -458,21 +462,21 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Leading block (top-left block) of a square matrix)** When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ of [Definition 4](#def-block-matrix) with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
+> **Definition 6 (Leading block (top-left block) of a square matrix)** When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ of [Definition 5](#def-block-matrix) with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
 
 > **NOTE:**
 >
-> **Theorem 12 (Leading blocks of a positive definite matrix are positive definite)** Let \\\mathbf{X}\\ be a \\p \times p\\ positive definite matrix ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)), and for \\1 \le k \le p\\ let \\\mathbf{X}\_k\\ be its leading \\k \times k\\ block ([Definition 4](#def-block-matrix)), with entries \\x\_{ij}\\ for \\i, j \le k\\. Then \\\mathbf{X}\_k\\ is positive definite. Also, every diagonal entry of a positive definite matrix is positive.
+> **Theorem 12 (Leading blocks of a positive definite matrix are positive definite)** Let \\\mathbf{X}\\ be a \\p \times p\\ positive definite matrix ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)), and for \\1 \le k \le p\\ let \\\mathbf{X}\_k\\ be its leading \\k \times k\\ block ([Definition 5](#def-block-matrix)), with entries \\x\_{ij}\\ for \\i, j \le k\\. Then \\\mathbf{X}\_k\\ is positive definite. Also, every diagonal entry of a positive definite matrix is positive.
 
 > **NOTE:**
 >
 > *Proof*. \\\mathbf{X}\_k\\ is symmetric, because \\\mathbf{X}\\ is. For \\\tilde{u} \in \mathbb{R}^k\\ with \\\tilde{u} \ne \tilde{0}\\, let \\\tilde{y} = (u_1, \ldots, u_k, 0, \ldots, 0) \in \mathbb{R}^p\\, which is nonzero, with entries \\y_i = u_i\\ for \\i \le k\\ and \\y_i = 0\\ for \\i \> k\\. Then
 >
-> \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^py_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{u}}^{\top} \mathbf{X}\_k \tilde{u} &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} u_i\\x\_{ij}\\u_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \\ &= \sum\_{i=1}^{k} \sum\_{j=1}^{k} y_i\\x\_{ij}\\y_j && \text{(} y_i = u_i \text{ for } i \le k \text{)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^py_i\\x\_{ij}\\y_j && \text{(each added term has a factor } y_i = 0 \text{ or } y_j = 0 \text{)} \\ &= {\tilde{y}}^{\top} \mathbf{X} \tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite, } \tilde{y} \ne \tilde{0}\text{)} \end{aligned} \\
 >
-> For the diagonal entry \\x\_{ii}\\, take \\\tilde{e}\_i\\ ([Definition 12 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
+> For the diagonal entry \\x\_{ii}\\, take \\\tilde{e}\_i\\ ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)), which is nonzero:
 >
-> \\ \begin{aligned} {\tilde{e}\_i}^{\top} \mathbf{X} \tilde{e}\_i &= \sum\_{r=1}^{p} \sum\_{s=1}^{p} (\tilde{e}\_i)\_r\\x\_{rs}\\(\tilde{e}\_i)\_s && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{)} \\ &= x\_{ii} && \text{(only the term with } r \text{ and } s \text{ both equal to } i \text{ is nonzero)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{e}\_i}^{\top} \mathbf{X} \tilde{e}\_i &= \sum\_{r=1}^{p} \sum\_{s=1}^{p} (\tilde{e}\_i)\_r\\x\_{rs}\\(\tilde{e}\_i)\_s && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{, }\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{)} \\ &= x\_{ii} && \text{(only the term with } r \text{ and } s \text{ both equal to } i \text{ is nonzero)} \\ &\> 0. && \text{(} \mathbf{X} \text{ positive definite)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -480,11 +484,11 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \det(-\mathbf{I}\_2) &= (-1)(-1) - 0 \\ &= 1 \\ &\> 0 \end{aligned} \\
 >
-> ([Definition 23 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ of [Example 28 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
+> ([Definition 26 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-determinant)); a positive determinant alone does not make a matrix positive definite. And positive diagonal entries are not enough: \\\mathbf{D} = \begin{bmatrix} 1 & 2 \\ 2 & 1 \end{bmatrix}\\ of [Example 28 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#exm-positive-definite) has them but is not positive definite.
 
 > **NOTE:**
 >
-> **Theorem 13 (The quadratic form of a block matrix)** Let \\k, m \ge 1\\, let \\\mathbf{A}\\ be a symmetric \\k \times k\\ matrix, \\\mathbf{B}\\ a \\k \times m\\ matrix and \\\mathbf{C}\\ a symmetric \\m \times m\\ matrix, and let \\\mathbf{X}\\ be the \\(k + m) \times (k + m)\\ block matrix ([Definition 4](#def-block-matrix))
+> **Theorem 13 (The quadratic form of a block matrix)** Let \\k, m \ge 1\\, let \\\mathbf{A}\\ be a symmetric \\k \times k\\ matrix, \\\mathbf{B}\\ a \\k \times m\\ matrix and \\\mathbf{C}\\ a symmetric \\m \times m\\ matrix, and let \\\mathbf{X}\\ be the \\(k + m) \times (k + m)\\ block matrix ([Definition 5](#def-block-matrix))
 >
 > \\ \mathbf{X} = \begin{bmatrix} \underbrace{\mathbf{A}}\_{k \times k} & \underbrace{\mathbf{B}}\_{k \times m} \\ \underbrace{{\mathbf{B}}^{\top}}\_{m \times k} & \underbrace{\mathbf{C}}\_{m \times m} \end{bmatrix}, \\
 >
@@ -504,13 +508,13 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > *Proof*. **\\\mathbf{X} \tilde{v}\\ in blocks.** For \\i \le k\\,
 >
-> \\ \begin{aligned} (\mathbf{X} \tilde{v})\_i &= \sum\_{j=1}^{k+m} x\_{ij}\\v_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \\ &= \sum\_{j=1}^{k} x\_{ij}\\v_j + \sum\_{j=1}^{m} x\_{i, k+j}\\v\_{k+j} && \text{(split the sum at } j = k \text{)} \\ &= \sum\_{j=1}^{k} a\_{ij}\\u_j + \sum\_{j=1}^{m} b\_{ij}\\w_j && \text{(the blocks of } \mathbf{X} \text{ and of } \tilde{v} \text{)} \\ &= (\mathbf{A} \tilde{u})\_i + (\mathbf{B} \tilde{w})\_i, && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~11 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} (\mathbf{X} \tilde{v})\_i &= \sum\_{j=1}^{k+m} x\_{ij}\\v_j && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \sum\_{j=1}^{k} x\_{ij}\\v_j + \sum\_{j=1}^{m} x\_{i, k+j}\\v\_{k+j} && \text{(split the sum at } j = k \text{)} \\ &= \sum\_{j=1}^{k} a\_{ij}\\u_j + \sum\_{j=1}^{m} b\_{ij}\\w_j && \text{(the blocks of } \mathbf{X} \text{ and of } \tilde{v} \text{)} \\ &= (\mathbf{A} \tilde{u})\_i + (\mathbf{B} \tilde{w})\_i, && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
 >
 > and in the same way \\(\mathbf{X} \tilde{v})\_{k+i} = ({\mathbf{B}}^{\top} \tilde{u})\_i + (\mathbf{C} \tilde{w})\_i\\ for \\i \le m\\.
 >
 > **The expansion.**
 >
-> \\ \begin{aligned} {\tilde{v}}^{\top} \mathbf{X} \tilde{v} &= \sum\_{i=1}^{k} u_i\\(\mathbf{X} \tilde{v})\_i + \sum\_{i=1}^{m} w_i\\(\mathbf{X} \tilde{v})\_{k+i} && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~7 in Vectors}}\text{, split the sum at } k \text{)} \\ &= \tilde{u} \cdot (\mathbf{A} \tilde{u} + \mathbf{B} \tilde{w}) + \tilde{w} \cdot ({\mathbf{B}}^{\top} \tilde{u} + \mathbf{C} \tilde{w}) && \text{(the blocks of } \mathbf{X} \tilde{v} \text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w} && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w} && \text{(} {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} = {\mathopen{}\left({\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u}\right)\mathclose{}}^{\top} \text{, which equals } {\tilde{u}}^{\top} \mathbf{B} \tilde{w} \text{; } 1 \times 1 \text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}. && \text{(combine like terms)} \end{aligned} \\
+> \\ \begin{aligned} {\tilde{v}}^{\top} \mathbf{X} \tilde{v} &= \sum\_{i=1}^{k} u_i\\(\mathbf{X} \tilde{v})\_i + \sum\_{i=1}^{m} w_i\\(\mathbf{X} \tilde{v})\_{k+i} && \text{(}\href{linear-algebra-vectors.qmd#def-dot-product}{\text{Definition~8 in Vectors}}\text{, split the sum at } k \text{)} \\ &= \tilde{u} \cdot (\mathbf{A} \tilde{u} + \mathbf{B} \tilde{w}) + \tilde{w} \cdot ({\mathbf{B}}^{\top} \tilde{u} + \mathbf{C} \tilde{w}) && \text{(the blocks of } \mathbf{X} \tilde{v} \text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w} && \text{(}\href{linear-algebra-direct-sums.qmd#thm-dot-linear}{\text{Theorem~5 in Direct Sums and Orthogonal Complements}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w} && \text{(} {\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u} = {\mathopen{}\left({\tilde{w}}^{\top} {\mathbf{B}}^{\top} \tilde{u}\right)\mathclose{}}^{\top} \text{, which equals } {\tilde{u}}^{\top} \mathbf{B} \tilde{w} \text{; } 1 \times 1 \text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{)} \\ &= {\tilde{u}}^{\top} \mathbf{A} \tilde{u} + 2\\{\tilde{u}}^{\top} \mathbf{B} \tilde{w} + {\tilde{w}}^{\top} \mathbf{C} \tilde{w}. && \text{(combine like terms)} \end{aligned} \\
 >
 > **Completing the square.** Write \\\tilde{d} \stackrel{\text{def}}{=}\mathbf{A}^{-1} \mathbf{B} \tilde{w}\\, so \\\tilde{z} = \tilde{u} + \tilde{d}\\ and \\\mathbf{A} \tilde{d} = \mathbf{B} \tilde{w}\\ ([Theorem 5 in Matrices](linear-algebra-matrices.llms.md#thm-matmul-assoc), 2, [Theorem 7 in Matrices](linear-algebra-matrices.llms.md#thm-identity)); \\\mathbf{A}^{-1}\\ is symmetric ([Corollary 1 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#cor-inverse-symmetric)). Then
 >
@@ -538,7 +542,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Schur complement)** For a block matrix \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ as in [Theorem 13](#thm-block-quadratic) with \\\mathbf{A}\\ invertible, the **Schur complement** of \\\mathbf{A}\\ in \\\mathbf{X}\\ is the \\m \times m\\ matrix \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ defined in [Theorem 13](#thm-block-quadratic).
+> **Definition 7 (Schur complement)** For a block matrix \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ as in [Theorem 13](#thm-block-quadratic) with \\\mathbf{A}\\ invertible, the **Schur complement** of \\\mathbf{A}\\ in \\\mathbf{X}\\ is the \\m \times m\\ matrix \\\mathbf{S} = \mathbf{C} - {\mathbf{B}}^{\top} \mathbf{A}^{-1} \mathbf{B}\\ defined in [Theorem 13](#thm-block-quadratic).
 
 > **NOTE:**
 >
@@ -558,7 +562,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 14 (Schur complement test)** Let \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ be as in [Theorem 13](#thm-block-quadratic). Then \\\mathbf{X}\\ is positive definite ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A}\\ is positive definite and its Schur complement \\\mathbf{S}\\ ([Definition 6](#def-schur-complement)) is positive definite.
+> **Theorem 14 (Schur complement test)** Let \\\mathbf{X} = \begin{bmatrix} \mathbf{A} & \mathbf{B} \\ {\mathbf{B}}^{\top} & \mathbf{C} \end{bmatrix}\\ be as in [Theorem 13](#thm-block-quadratic). Then \\\mathbf{X}\\ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A}\\ is positive definite and its Schur complement \\\mathbf{S}\\ ([Definition 7](#def-schur-complement)) is positive definite.
 
 > **NOTE:**
 >
@@ -579,7 +583,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 
 > **NOTE:**
 >
-> **Theorem 15 (Cholesky factorization)** A \\p \times p\\ matrix \\\mathbf{A}\\ is positive definite ([Definition 20 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\\ for some lower triangular \\\mathbf{L}\\ ([Definition 7 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-triangular-matrix)) with positive diagonal entries. For a positive definite \\\mathbf{A}\\ that \\\mathbf{L}\\ is unique; it is the **Cholesky factor** of \\\mathbf{A}\\.
+> **Theorem 15 (Cholesky factorization)** A \\p \times p\\ matrix \\\mathbf{A}\\ is positive definite ([Definition 22 in Special Matrices and Decompositions](linear-algebra-special-matrices.llms.md#def-positive-definite)) exactly when \\\mathbf{A} = \mathbf{L} {\mathbf{L}}^{\top}\\ for some lower triangular \\\mathbf{L}\\ ([Definition 8 in Projections and Linear Systems](linear-algebra-projections.llms.md#def-lower-triangular-matrix)) with positive diagonal entries. For a positive definite \\\mathbf{A}\\ that \\\mathbf{L}\\ is unique; it is the **Cholesky factor** of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -603,7 +607,7 @@ Last modified: 2026-10-15 08:32:48 (PDT)
 >
 > \\ \begin{aligned} \mathbf{L}\_{22} {\mathbf{L}\_{22}}^{\top} &= \mathbf{A}\_{22} - \tilde{g} {\tilde{g}}^{\top} && \text{(subtract } \tilde{g} {\tilde{g}}^{\top} \text{)} \\ &= \mathbf{A}\_{22} - \mathopen{}\left(\tfrac{1}{\ell\_{11}}\\\tilde{b}\right)\mathclose{} {\mathopen{}\left(\tfrac{1}{\ell\_{11}}\\\tilde{b}\right)\mathclose{}}^{\top} && \text{(substitute } \tilde{g} \text{)} \\ &= \mathbf{A}\_{22} - \tfrac{1}{\ell\_{11}^2}\\\tilde{b} {\tilde{b}}^{\top} && \text{(}\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{, }\href{linear-algebra-projections.qmd#thm-scalar-matmul}{\text{Theorem~7 in Projections and Linear Systems}}\text{)} \\ &= \mathbf{A}\_{22} - \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top}. && \text{(} \ell\_{11}^2 = a\_{11} \text{)} \end{aligned} \\
 >
-> Here \\\[a\_{11}\]\\ is invertible with inverse \\\[1 / a\_{11}\]\\, so with \\\mathbf{B} = {\tilde{b}}^{\top}\\ in [Definition 6](#def-schur-complement),
+> Here \\\[a\_{11}\]\\ is invertible with inverse \\\[1 / a\_{11}\]\\, so with \\\mathbf{B} = {\tilde{b}}^{\top}\\ in [Definition 7](#def-schur-complement),
 >
 > \\ \begin{aligned} {\mathbf{B}}^{\top}\\\[a\_{11}\]^{-1} \mathbf{B} &= \tilde{b}\\\tfrac{1}{a\_{11}}\\{\tilde{b}}^{\top} \\ &= \tfrac{1}{a\_{11}}\\\tilde{b} {\tilde{b}}^{\top} \end{aligned} \\
 >
