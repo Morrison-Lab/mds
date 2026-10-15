@@ -1,5 +1,5 @@
 :::{#def-ball}
-#### Open and closed balls
+#### Open ball
 
 Let $\vx \in \reals^p$ and $r > 0$.
 The **open ball** of radius $r$ around $\vx$ is the set
@@ -7,9 +7,26 @@ $\cb{\vy \in \reals^p : \norm{\vy - \vx} < r}$,
 of points whose distance from $\vx$
 (the [Euclidean norm](linear-algebra.qmd#def-euclidean-norm) of the difference)
 is less than $r$.
-The **closed ball** of radius $r$ around $\vx$ is
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-closed-ball}
+#### Closed ball
+
+For $\vx$ and $r$ as in @def-ball,
+the **closed ball** of radius $r$ around $\vx$ is
 $\cb{\vy \in \reals^p : \norm{\vy - \vx} \le r}$.
-The open and closed balls of radius $1$ around $\vzero$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-unit-ball}
+#### Unit ball
+
+The open and closed balls (@def-ball, @def-closed-ball) of radius $1$ around $\vzero$
 are the open and closed **unit balls**.
 
 :::

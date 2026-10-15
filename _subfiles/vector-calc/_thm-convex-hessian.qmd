@@ -2,7 +2,7 @@
 #### Second-derivative test for convexity
 
 Let $f : \reals^p \to \reals$ have first and second partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)).
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)).
 
 1. If $\matr{H}_f(\vx)$ is [positive semidefinite](linear-algebra.qmd#def-positive-semidefinite) for every $\vx$,
    then $f$ is [convex](algebra.qmd#def-convex-function).

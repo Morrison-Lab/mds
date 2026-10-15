@@ -1,11 +1,27 @@
 :::{#def-strictly-convex}
-#### Strictly convex and concave functions
+#### Strictly convex function
 
 A function $f : \reals^p \to \reals$ is **strictly convex** if
 $f(t \vx + (1 - t) \vy) < t f(\vx) + (1 - t) f(\vy)$
 for all $\vx \ne \vy$ in $\reals^p$ and all $t \in (0, 1)$.
-It is **concave** if $-f$ is [convex](algebra.qmd#def-convex-function),
-and **strictly concave** if $-f$ is strictly convex.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-concave}
+#### Concave function
+
+A function $f : \reals^p \to \reals$ is **concave** if $-f$ is [convex](algebra.qmd#def-convex-function).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-strictly-concave}
+#### Strictly concave function
+
+A function $f : \reals^p \to \reals$ is **strictly concave** if $-f$ is strictly convex (@def-strictly-convex).
 
 :::
 

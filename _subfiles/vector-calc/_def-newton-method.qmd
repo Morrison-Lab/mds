@@ -9,7 +9,15 @@ $$
 \vx^{(t+1)} \eqdef \vx^{(t)} - \sb{\matr{H}_f(\vx^{(t)})}^{-1} \deriv{\vx} f(\vx^{(t)}).
 $$
 
-The vector $-\sb{\matr{H}_f(\vx^{(t)})}^{-1} \deriv{\vx} f(\vx^{(t)})$ is the **Newton step** at $\vx^{(t)}$.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-newton-step}
+#### Newton step
+
+In Newton's method (@def-newton-method),
+the vector $-\sb{\matr{H}_f(\vx^{(t)})}^{-1} \deriv{\vx} f(\vx^{(t)})$ is the **Newton step** at $\vx^{(t)}$.
 
 :::
 
@@ -54,7 +62,7 @@ From $x^{(0)} = 2.5$:
   (to six decimals);
 - $x^{(3)} = 2.0000001$ (to seven decimals).
 
-The iterates (@def-iterative-method) approach $2$, the local minimizer of $f$
+The iterates (@def-iterate) approach $2$, the local minimizer of $f$
 (a stationary point, since $f'(2) = 0$, with $f''(2) = 4 > 0$; @thm-second-order-condition).
 
 :::

@@ -2,7 +2,7 @@
 #### First-order characterization of convexity
 
 Let $f : \reals^p \to \reals$ have first partial derivatives
-that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-several)).
+that are continuous on $\reals^p$ ([continuity](vector-calculus.qmd#def-continuous-on)).
 Then $f$ is [convex](algebra.qmd#def-convex-function) if and only if
 
 $$

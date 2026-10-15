@@ -6,10 +6,18 @@ with $\matr{A}$ a $p \times m$ matrix and $\vecf{b} \in \reals^m$,
 the **Lagrangian** is the function of $\vx \in \reals^p$ and $\vlagmult \in \reals^m$
 
 $$
-L(\vx, \vlagmult) \eqdef f(\vx) + \tp{\vlagmult} \paren{\tp{\matr{A}} \vx - \vecf{b}},
+L(\vx, \vlagmult) \eqdef f(\vx) + \tp{\vlagmult} \paren{\tp{\matr{A}} \vx - \vecf{b}}.
 $$
 
-and the entries of $\vlagmult$ are the **Lagrange multipliers**, one per constraint.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-lagrange-multipliers}
+#### Lagrange multipliers
+
+In the Lagrangian $L(\vx, \vlagmult)$ (@def-lagrangian),
+the entries of $\vlagmult$ are the **Lagrange multipliers**, one per constraint.
 
 :::
 

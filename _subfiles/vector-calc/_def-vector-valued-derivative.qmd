@@ -20,12 +20,20 @@ $$
 \qquad i = 1, \ldots, p, \quad j = 1, \ldots, q.
 $$
 
-Writing derivatives this way is the **denominator layout**,
+Both $\deriv{\vcoef} \vy$ and $\deriv{\vcoef} \tp{\vy}$ denote this $p \times q$ matrix.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-denominator-layout}
+#### Denominator layout
+
+Writing derivatives as in @def-vector-valued-derivative is the **denominator layout**,
 which these notes use throughout:
 rows index the entries of $\vcoef$ (the denominator)
 and columns index the entries of $\vy$ (the numerator),
 so column $j$ is the vector derivative $\deriv{\vcoef} y_j$ (@def-vector-derivative).
-Both $\deriv{\vcoef} \vy$ and $\deriv{\vcoef} \tp{\vy}$ denote this $p \times q$ matrix.
 
 :::
 

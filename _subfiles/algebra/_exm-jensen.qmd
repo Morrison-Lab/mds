@@ -39,7 +39,7 @@ For $f(x) = x^2$, Jensen's inequality says this average squared distance is neve
 :::{#rem-jensen-concave}
 #### The inequality reverses for concave functions
 
-If $f$ is [concave](optimization.qmd#def-strictly-convex),
+If $f$ is [concave](optimization.qmd#def-concave),
 then $-f$ is convex, and applying @thm-jensen to $-f$
 reverses the inequality:
 $f\paren{\sum_i w_i x_i} \ge \sum_i w_i f(x_i)$.
