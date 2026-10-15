@@ -3,7 +3,7 @@
 
 In a problem that looks for a best point among some allowed points of $\reals^p$,
 the set $F \subseteq \reals^p$ of allowed points is the **feasible set**,
-and its points are **feasible**.
+and its points are feasible.
 
 :::
 
@@ -43,7 +43,7 @@ $\vzero$ is not feasible, since $3 \cd 0 + 4 \cd 0 = 0 \ne 5$.
 #### Objective function (objective)
 
 Let $f : \reals^p \to \reals$ and let $F \subseteq \reals^p$ be a feasible set (@def-feasible-set).
-In the problem of minimizing $f$ over $F$ (@def-minimization-problem),
+In the problem of minimizing $f$ over $F$,
 $f$ is the **objective function** (or **objective**).
 
 :::
@@ -67,7 +67,7 @@ a [global minimizer](algebra.qmd#def-global-minimizer) of $f$ with its domain re
 With $f$ and $F$ as in @def-objective-function,
 the **minimization problem** is to find a minimizer of $f$ over $F$ (@def-minimizer-over-feasible-set).
 When $F$ is given by constraints (@def-constraints),
-the problem is to minimize $f$ **subject to** them.
+the problem is to minimize $f$ subject to them.
 
 :::
 
