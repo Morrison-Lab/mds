@@ -37,6 +37,8 @@ website:
     left:
       - text: "Notation"
         href: notation.qmd
+      - text: "Indicator Functions"
+        href: indicator-functions.qmd
       - text: "Sets and Functions"
         href: sets-functions.qmd
       - text: "Algebra"
@@ -94,6 +96,7 @@ website:
       - text: "Home"
         href: index.qmd
       - notation.qmd
+      - indicator-functions.qmd
       - sets-functions.qmd
       - section: "Algebra"
         href: algebra.qmd

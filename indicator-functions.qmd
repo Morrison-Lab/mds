@@ -1,0 +1,13 @@
+---
+title: "Indicator Functions"
+format:
+  html: default
+  revealjs:
+    output-file: indicator-functions-slides.html
+  pdf:
+    output-file: indicator-functions-handout.pdf
+  docx:
+    output-file: indicator-functions.docx
+---
+
+{{< include mds/_indicator-functions.qmd >}}

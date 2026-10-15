@@ -24,6 +24,7 @@ which are what a host site includes:
 | Page | Fragment(s) to include |
 |------|------------------------|
 | [Notation](notation.qmd) | `mds/_notation.qmd` |
+| [Indicator Functions](indicator-functions.qmd) | `mds/_indicator-functions.qmd` |
 | [Sets and Functions](sets-functions.qmd) | `mds/_sets-functions.qmd` |
 | [Algebra](algebra.qmd) | `mds/_algebra.qmd` |
 | [Measures](measures.qmd) | `mds/_measures.qmd` |
@@ -33,7 +34,7 @@ which are what a host site includes:
 | [Optimization](optimization.qmd) | `mds/_subfiles/_sec_optimization.qmd` |
 | [Proof Writing](proof-writing.qmd) | `mds/_proof-writing.qmd` |
 
-`_notation.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, and `_measures.qmd` include `latex-macros/macros.qmd` themselves;
+`_notation.qmd`, `_indicator-functions.qmd`, `_sets-functions.qmd`, `_algebra.qmd`, and `_measures.qmd` include `latex-macros/macros.qmd` themselves;
 a host page that includes any of the other fragments
 must include `latex-macros/macros.qmd` first,
 as the pages of this site do.

@@ -88,11 +88,11 @@ $Y$ (defined in the Morrison Lab's probability notes).
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_def-binary-variable.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_def-binary-variable.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_exm-binary-variable.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_exm-binary-variable.qmd >}}
 
 ### Two primary notational paradigms: set vs. predicate notation
 
@@ -101,11 +101,11 @@ set notation or predicate notation.
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_def-set-predicate-notation.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_def-set-predicate-notation.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_exm-set-predicate-notation.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_exm-set-predicate-notation.qmd >}}
 
 #### Set notation
 
@@ -152,7 +152,7 @@ $$
 \mathbf{1}_A(x) = \mathbb{I}(x \in A)
 $$
 
-{{< include mds/_subfiles/notation/_def-support.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_def-support.qmd >}}
 
 {{< slidebreak >}}
 
@@ -343,11 +343,11 @@ Indicator functions translate the logical connectives ([definition](proof-writin
 into ordinary arithmetic on real numbers.
 One of the identities below uses idempotence:
 
-{{< include mds/_subfiles/notation/_def-idempotent.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_def-idempotent.qmd >}}
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/notation/_exm-idempotent-indicator.qmd >}}
+{{< include mds/_subfiles/indicator-functions/_exm-idempotent-indicator.qmd >}}
 
 {{< slidebreak >}}
 
