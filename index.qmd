@@ -36,7 +36,7 @@ organized by topic:
   and the extended non-negative real numbers
 - [Algebra](algebra.qmd):
   equalities and [inequalities](proof-writing.qmd#def-inequality), infimum and supremum,
-  sums, products, limits of sums, notational shorthands, quotients, exponentials and logarithms
+  sums, products, quotients, limits of sums, notational shorthands, exponentials and logarithms
 - [Measures](measures.qmd):
   $\sigma$-algebras, pairwise disjoint sets, finite and countable additivity,
   measures, and the counting measure
