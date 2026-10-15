@@ -3,9 +3,10 @@
 
 Let $f(x) = x^3 - 3x$ for $x \in \reals$.
 
-1. Show that $f(x) - f(1) = (x - 1)^2 (x + 2)$.
-2. Use part 1 to show that $f(x) \ge f(1)$
+1. Factor $f(x) - f(1)$ completely.
+2. Use part 1 to compare $f(x)$ with $f(1)$
    for every $x$ in the interval $(0, 2)$.
+   Which is larger?
 3. Compute $f(-3)$.
    Is $f(1)$ the smallest value $f$ takes on all of $\reals$?
 4. Does $f$ take a smallest value anywhere on $\reals$?
