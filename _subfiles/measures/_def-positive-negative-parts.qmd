@@ -1,18 +1,37 @@
 :::{#def-positive-negative-parts}
-#### Positive and negative parts of a function
+#### Positive part of a function
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space),
 and let $f : S \to \reals$ be [measurable](#def-measurable-function).
-The **positive part** and **negative part** of $f$ are the non-negative functions
+The **positive part** of $f$ is the non-negative function
 
 $$
-\ba
-f^{+}(s) &\eqdef \max\cb{f(s), 0} \\
-f^{-}(s) &\eqdef \max\cb{-f(s), 0}
-\ea
+f^{+}(s) \eqdef \max\cb{f(s), 0}.
 $$
 
-so that $f = f^{+} - f^{-}$ and $\abs{f} = f^{+} + f^{-}$.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-negative-part}
+#### Negative part of a function
+
+For $f$ as in @def-positive-negative-parts,
+the **negative part** of $f$ is the non-negative function
+
+$$
+f^{-}(s) \eqdef \max\cb{-f(s), 0}.
+$$
+
+:::
+
+{{< slidebreak >}}
+
+:::{#rem-positive-negative-parts}
+#### A function in terms of its positive and negative parts
+
+With the positive part (@def-positive-negative-parts) and negative part (@def-negative-part),
+$f = f^{+} - f^{-}$ and $\abs{f} = f^{+} + f^{-}$.
 ($f^{+}$, $f^{-}$, and $\abs{f}$ are measurable when $f$ is
 [@billingsley1995probability, Theorem 13.3].)
 
