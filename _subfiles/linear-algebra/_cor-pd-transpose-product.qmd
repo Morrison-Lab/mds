@@ -1,0 +1,30 @@
+:::{#cor-pd-transpose-product}
+#### A positive definite matrix is a transpose product
+
+Let $\matr{A}$ be a $p \times p$ symmetric positive definite matrix (@def-positive-definite).
+Then $\matr{A} = \tp{\matr{W}}\matr{W}$ for some invertible $p \times p$ matrix $\matr{W}$.
+
+:::
+
+::: proof
+
+By the spectral theorem (@thm-spectral), $\matr{A} = \matr{Q}\matr{\Eigvals}\tp{\matr{Q}}$
+with $\matr{Q}$ orthogonal and $\matr{\Eigvals}$ diagonal with the eigenvalues $\eigval_i$ of $\matr{A}$ on its diagonal.
+These are positive (@thm-definite-eigenvalues),
+so $\matr{\Eigvals}^{1/2}$, the diagonal matrix with entries $\sqrt{\eigval_i}$, is defined.
+Take $\matr{W} = \matr{\Eigvals}^{1/2}\tp{\matr{Q}}$.
+Since $\matr{\Eigvals}^{1/2}$ is diagonal, $\tp{(\matr{\Eigvals}^{1/2})} = \matr{\Eigvals}^{1/2}$, and
+
+$$
+\begin{aligned}
+\tp{\matr{W}}\matr{W} &= \matr{Q}\matr{\Eigvals}^{1/2}\matr{\Eigvals}^{1/2}\tp{\matr{Q}} \\
+&= \matr{Q}\matr{\Eigvals}\tp{\matr{Q}} \\
+&= \matr{A}.
+\end{aligned}
+$$
+
+$\matr{W}$ is invertible, because $\tp{\matr{Q}}$ has inverse $\matr{Q}$ and $\matr{\Eigvals}^{1/2}$ is diagonal with positive entries,
+so it has the diagonal inverse with entries $1/\sqrt{\eigval_i}$,
+and a product of invertible matrices is invertible (@thm-inverse-product).
+
+:::

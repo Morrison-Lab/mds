@@ -1,0 +1,15 @@
+---
+title: "Trigonometry"
+format:
+  html: default
+  revealjs:
+    output-file: algebra-trigonometry-slides.html
+  pdf:
+    output-file: algebra-trigonometry-handout.pdf
+  docx:
+    output-file: algebra-trigonometry.docx
+---
+
+{{< include latex-macros/macros.qmd >}}
+
+{{< include mds/_subfiles/_sec_algebra_trigonometry.qmd >}}
