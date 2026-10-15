@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 02:13:30 (PDT)
+Last modified: 2026-10-15 08:34:28 (PDT)
 
 > **NOTE:**
 >
@@ -606,7 +606,7 @@ Last modified: 2026-10-15 02:13:30 (PDT)
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \stackrel{\text{def}}{=}\mathopen{}\left(\int_S \mathopen{}\left\|f\right\|\mathclose{}^p \\ d\mu\right)\mathclose{}^{1/p}. \\
 >
-> The space \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ consists of all measurable functions \\f : S \to \mathbb{R}\\ for which \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\. To satisfy the definiteness axiom of a [norm](linear-algebra-inner-products.llms.md#def-norm) (\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p = 0\\ if and only if \\f = 0\\), functions that are equal [almost everywhere](#def-almost-everywhere) (\\\mu\\-a.e.) are identified into equivalence classes. The resulting normed vector space is the **\\L^p\\ space**, denoted \\L^p(S, \mathcal{S}, \mu)\\ (or simply \\L^p(\mu)\\). The case \\p = \infty\\ is defined separately, in [Definition 28](#def-linf-space).
+> The space \\\mathcal{L}^p(S, \mathcal{S}, \mu)\\ consists of all measurable functions \\f : S \to \mathbb{R}\\ for which \\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p \< \infty\\. To satisfy the definiteness axiom of a [norm](linear-algebra-inner-products.llms.md#def-norm) (\\\mathopen{}\left\lVert f\right\rVert\mathclose{}\_p = 0\\ if and only if \\f = 0\\), functions that are equal [almost everywhere](#def-almost-everywhere) (\\\mu\\-a.e.) are identified into equivalence classes. The resulting normed vector space is the **\\L^p\\ space**, denoted \\L^p(S, \mathcal{S}, \mu)\\ (or simply **\\L^p(\mu)\\**). The case \\p = \infty\\ is defined separately, in [Definition 28](#def-linf-space).
 
 > **NOTE:**
 >
@@ -619,7 +619,7 @@ Last modified: 2026-10-15 02:13:30 (PDT)
 
 > **NOTE:**
 >
-> **Definition 28 (\\L^\infty\\ space and essential supremum norm)** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For \\p = \infty\\, the **essential supremum norm** (or **\\L^\infty\\ norm**) of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
+> **Definition 28 (\\L^\infty\\ space and essential supremum norm (\\L^\infty\\ norm))** Let \\(S, \mathcal{S}, \mu)\\ be a [measure space](#def-measure-space). For \\p = \infty\\, the **essential supremum norm** (or **\\L^\infty\\ norm**) of a [measurable function](#def-measurable-function) \\f : S \to \mathbb{R}\\ is:
 >
 > \\ \mathopen{}\left\lVert f\right\rVert\mathclose{}\_\infty \stackrel{\text{def}}{=}\inf \mathopen{}\left\\ C \ge 0 : \mu(\mathopen{}\left\\s \in S : \mathopen{}\left\|f(s)\right\|\mathclose{} \> C\right\\\mathclose{}) = 0 \right\\\mathclose{}. \\
 >
