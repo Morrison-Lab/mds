@@ -68,10 +68,6 @@
 
 {{< slidebreak >}}
 
-{{< include mds/_subfiles/linear-algebra/_def-cosine-sine.qmd >}}
-
-{{< slidebreak >}}
-
 {{< include mds/_subfiles/linear-algebra/_def-angle.qmd >}}
 
 {{< slidebreak >}}

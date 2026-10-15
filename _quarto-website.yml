@@ -46,6 +46,7 @@ website:
           - algebra-basics.qmd
           - algebra-sums.qmd
           - algebra-exponentials.qmd
+          - algebra-trigonometry.qmd
           - algebra-complex.qmd
       - text: "Measures"
         href: measures.qmd
@@ -100,6 +101,7 @@ website:
           - algebra-basics.qmd
           - algebra-sums.qmd
           - algebra-exponentials.qmd
+          - algebra-trigonometry.qmd
           - algebra-complex.qmd
       - measures.qmd
       - section: "Calculus"
