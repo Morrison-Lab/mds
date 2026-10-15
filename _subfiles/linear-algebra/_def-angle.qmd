@@ -20,8 +20,31 @@ and by @thm-cauchy-schwarz the ratio lies between $-1$ and $1$.
 On $[0, \pi]$, $\cos$ is decreasing from $1$ to $-1$
 and takes each value in $[-1, 1]$ exactly once,
 so there is exactly one such $\angpar$.
-The angle is $\pi/2$ exactly when $\vecf{x} \cdot \vecf{y} = 0$,
+
+:::
+
+{{< slidebreak >}}
+
+:::{#cor-right-angle-orthogonal}
+#### A right angle means orthogonal
+
+For nonzero vectors $\vecf{x}, \vecf{y} \in \reals^p$ with angle $\angpar$ (@def-angle),
+
+$$
+\angpar = \frac{\pi}{2}
+\quad\Longleftrightarrow\quad
+\vecf{x} \cdot \vecf{y} = 0,
+$$
+
 so for nonzero vectors, orthogonal (@def-orthogonal-vectors) means at a right angle.
+
+:::
+
+::: proof
+
+Since $\norm{\vecf{x}}\,\norm{\vecf{y}} > 0$ (@thm-norm-properties),
+$\cos\angpar = 0$ exactly when $\vecf{x} \cdot \vecf{y} = 0$.
+On $[0, \pi]$, $\cos$ vanishes only at $\pi/2$.
 
 :::
 
