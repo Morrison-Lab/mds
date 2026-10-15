@@ -1,5 +1,5 @@
 :::{#def-norm}
-#### Norm (normed vector space)
+#### Norm (normed vector space, normed space)
 
 A **norm** on a real vector space $V$ is a function $\norm{\cdot} : V \to [0, \infty)$
 that assigns to each vector $\vx \in V$ a nonnegative real number $\norm{\vx}$,

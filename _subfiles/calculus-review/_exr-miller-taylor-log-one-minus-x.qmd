@@ -11,7 +11,7 @@ at $x_0 = 0$.
 :::
 
 ::: {#sol-miller-taylor-log-one-minus-x}
-Substitute $u = -x$ into the expansion for $\log(1 + u)$ from @exr-miller-taylor-log-one-plus-x:
+Substitute $u = -x$ into the expansion for $\log(1 + u)$ from @thm-taylor-log-one-plus-x:
 
 $$
 \begin{aligned}

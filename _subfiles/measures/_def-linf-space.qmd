@@ -1,5 +1,5 @@
 :::{#def-linf-space}
-#### $L^\infty$ space and essential supremum norm
+#### $L^\infty$ space and essential supremum norm ($L^\infty$ norm)
 
 Let $(S, \salg, \measure)$ be a [measure space](#def-measure-space).
 For $p = \infty$, the **essential supremum norm** (or **$L^\infty$ norm**) of a [measurable function](#def-measurable-function) $f : S \to \reals$ is:
