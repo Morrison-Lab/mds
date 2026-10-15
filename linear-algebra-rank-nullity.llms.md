@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 23:45:57 (PDT)
+Last modified: 2026-10-15 00:49:40 (PDT)
 
 ## 1 Column space and null space
 
@@ -570,9 +570,11 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 >   ggplot2::labs(x = "Petal length (cm)", y = "Petal width (cm)")
 > ```
 >
-> [![Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them.](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png)](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png "Figure 1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species")
->
-> Figure 1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
+> > **NOTE:**
+> >
+> > [![Scatter plot of petal width against petal length for 100 irises. Versicolor points, in one color, are mostly to the lower left. Virginica points, in another color, are mostly to the upper right. A straight line runs between the two groups and separates most of them.](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png)](linear-algebra-rank-nullity_files/figure-html/fig-half-space-iris-1.png "Figure 1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species")
+> >
+> > Figure 1: Petal length and width of versicolor and virginica irises, with the line where a logistic regression is indifferent between the two species
 >
 > ``` downlit
 > table(two_species$Species, two_species$side)

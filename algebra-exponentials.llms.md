@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 23:45:57 (PDT)
+Last modified: 2026-10-15 00:49:40 (PDT)
 
 ## 1 Polynomials
 
@@ -441,126 +441,130 @@ Last modified: 2026-10-14 23:45:57 (PDT)
 >
 > See the red contours in [Figure 2](#fig-double-exponential2) for a visualization of the \\b \ge 0\\ cases.
 
-Show R code
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> mult_f <- function(b, c) b * c
+> pow_f <- function(b, c) b^c
+> values_b <- seq(0, 5, by = .01)
+> values_c <- seq(-.5, 3, by = .01)
+>
+> mult_mat <- outer(values_b, values_c, mult_f)
+> pow_mat <- outer(values_b, values_c, pow_f)
+> pow_mat[is.infinite(pow_mat)] <- NA
+>
+> opacity <- .3
+> z_min <- min(mult_mat, pow_mat, na.rm = TRUE)
+> z_max <- 5
+> plotly::plot_ly(
+>   x = ~values_b,
+>   y = ~values_c
+> ) |>
+>   plotly::add_surface(
+>     z = ~ t(mult_mat),
+>     contours = list(
+>       z = list(
+>         show = TRUE,
+>         start = -1,
+>         end = 1,
+>         size = .1
+>       )
+>     ),
+>     name = "b*c",
+>     showscale = FALSE,
+>     opacity = opacity,
+>     colorscale = list(c(0, 1), c("green", "green"))
+>   ) |>
+>   plotly::add_surface(
+>     opacity = opacity,
+>     colorscale = list(c(0, 1), c("red", "red")),
+>     z = ~ t(pow_mat),
+>     contours = list(
+>       z = list(
+>         show = TRUE,
+>         start = z_min,
+>         end = z_max,
+>         size = .2
+>       )
+>     ),
+>     showscale = FALSE,
+>     name = "b^c"
+>   ) |>
+>   plotly::layout(
+>     scene = list(
+>       xaxis = list(
+>         # type = "log",
+>         title = "b"
+>       ),
+>       yaxis = list(
+>         # type = "log",
+>         title = "c"
+>       ),
+>       zaxis = list(
+>         # type = "log",
+>         range = c(z_min, z_max),
+>         title = "outcome"
+>       ),
+>       camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
+>       aspectratio = list(x = .9, y = .8, z = 0.7)
+>     )
+>   )
+> ```
+>
+> Figure 1: Graph of \\b\*c\\ and \\b^c\\
 
-``` downlit
-mult_f <- function(b, c) b * c
-pow_f <- function(b, c) b^c
-values_b <- seq(0, 5, by = .01)
-values_c <- seq(-.5, 3, by = .01)
-
-mult_mat <- outer(values_b, values_c, mult_f)
-pow_mat <- outer(values_b, values_c, pow_f)
-pow_mat[is.infinite(pow_mat)] <- NA
-
-opacity <- .3
-z_min <- min(mult_mat, pow_mat, na.rm = TRUE)
-z_max <- 5
-plotly::plot_ly(
-  x = ~values_b,
-  y = ~values_c
-) |>
-  plotly::add_surface(
-    z = ~ t(mult_mat),
-    contours = list(
-      z = list(
-        show = TRUE,
-        start = -1,
-        end = 1,
-        size = .1
-      )
-    ),
-    name = "b*c",
-    showscale = FALSE,
-    opacity = opacity,
-    colorscale = list(c(0, 1), c("green", "green"))
-  ) |>
-  plotly::add_surface(
-    opacity = opacity,
-    colorscale = list(c(0, 1), c("red", "red")),
-    z = ~ t(pow_mat),
-    contours = list(
-      z = list(
-        show = TRUE,
-        start = z_min,
-        end = z_max,
-        size = .2
-      )
-    ),
-    showscale = FALSE,
-    name = "b^c"
-  ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(
-        # type = "log",
-        title = "b"
-      ),
-      yaxis = list(
-        # type = "log",
-        title = "c"
-      ),
-      zaxis = list(
-        # type = "log",
-        range = c(z_min, z_max),
-        title = "outcome"
-      ),
-      camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
-      aspectratio = list(x = .9, y = .8, z = 0.7)
-    )
-  )
-```
-
-Figure 1: Graph of \\b\*c\\ and \\b^c\\
-
-Show R code
-
-``` downlit
-pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
-
-mat1 <- outer(values_b, values_c, pow_minus_mult_f)
-mat1[is.infinite(mat1)] <- NA
-
-opacity <- .3
-plotly::plot_ly(
-  x = ~values_b,
-  y = ~values_c
-) |>
-  plotly::add_surface(
-    z = ~ t(mat1),
-    contours = list(
-      z = list(
-        show = TRUE,
-        start = 0,
-        end = 1,
-        size = 1,
-        color = "red"
-      )
-    ),
-    name = "b^c - b*c",
-    showscale = TRUE,
-    opacity = opacity
-  ) |>
-  plotly::layout(
-    scene = list(
-      xaxis = list(
-        # type = "log",
-        title = "b"
-      ),
-      yaxis = list(
-        # type = "log",
-        title = "c"
-      ),
-      zaxis = list(
-        title = "outcome"
-      ),
-      camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
-      aspectratio = list(x = .9, y = .8, z = 0.7)
-    )
-  )
-```
-
-Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
+> **NOTE:**
+>
+> Show R code
+>
+> ``` downlit
+> pow_minus_mult_f <- function(b, c) pow_f(b, c) - mult_f(b, c)
+>
+> mat1 <- outer(values_b, values_c, pow_minus_mult_f)
+> mat1[is.infinite(mat1)] <- NA
+>
+> opacity <- .3
+> plotly::plot_ly(
+>   x = ~values_b,
+>   y = ~values_c
+> ) |>
+>   plotly::add_surface(
+>     z = ~ t(mat1),
+>     contours = list(
+>       z = list(
+>         show = TRUE,
+>         start = 0,
+>         end = 1,
+>         size = 1,
+>         color = "red"
+>       )
+>     ),
+>     name = "b^c - b*c",
+>     showscale = TRUE,
+>     opacity = opacity
+>   ) |>
+>   plotly::layout(
+>     scene = list(
+>       xaxis = list(
+>         # type = "log",
+>         title = "b"
+>       ),
+>       yaxis = list(
+>         # type = "log",
+>         title = "c"
+>       ),
+>       zaxis = list(
+>         title = "outcome"
+>       ),
+>       camera = list(eye = list(x = -1.25, y = -1.25, z = 0.5)),
+>       aspectratio = list(x = .9, y = .8, z = 0.7)
+>     )
+>   )
+> ```
+>
+> Figure 2: **Graph of \\b^c - b\*c\\**. The red [contour lines](#def-contour-line) are at heights \\0\\ and \\1\\; the ones at height \\0\\ show where \\b^c = b\*c\\.
 
 > **NOTE:**
 >

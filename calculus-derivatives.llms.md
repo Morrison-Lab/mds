@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 23:45:57 (PDT)
+Last modified: 2026-10-15 00:49:40 (PDT)
 
 ## 1 Derivatives
 
@@ -645,9 +645,11 @@ Last modified: 2026-10-14 23:45:57 (PDT)
 >   ggplot2::labs(x = "x", y = NULL)
 > ```
 >
-> [![Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png)](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png "Figure 1: The logistic function, its derivative and its logarithm")
->
-> Figure 1: The logistic function, its derivative and its logarithm
+> > **NOTE:**
+> >
+> > [![Three panels over x from -6 to 6. The first, the logistic function, rises in an S shape from near 0 to near 1 and passes through 0.5 at x = 0. The second, its derivative, is a bell-shaped bump with maximum 0.25 at x = 0 and tails near 0. The third, the logarithm of the logistic function, increases from a steep line of slope 1 on the left and flattens toward 0 on the right.](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png)](calculus-derivatives_files/figure-html/fig-function-profile-logistic-1.png "Figure 1: The logistic function, its derivative and its logarithm")
+> >
+> > Figure 1: The logistic function, its derivative and its logarithm
 
 ### 1.4 Tangent lines
 
@@ -685,63 +687,65 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > *Remark 2* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 10](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
 
-Show R code
-
-``` js
-tanF = (w) => w * w - 4 * w + 7
-tanDf = (w) => 2 * w - 4
-tanPred = tanF(tanW) + tanEps * tanDf(tanW)
-tanExact = tanF(tanW + tanEps)
-```
-
-Show R code
-
-``` js
-viewof tanW = Inputs.range([-1, 4], {value: 1, step: 0.05, label: "w"})
-viewof tanEps = Inputs.range([0.01, 2], {value: 0.5, transform: Math.log, label: "step \u03b5", format: d3.format(".3~f")})
-```
-
-Show R code
-
-``` js
-md`At w = ${tanW.toFixed(2)}, f(w) = ${tanF(tanW).toFixed(4)} and f\u2032(w) = ${tanDf(tanW).toFixed(2)}.
-
-A step of \u03b5 = ${tanEps.toFixed(3)}:
-
-- predicted by the tangent line, f(w) + \u03b5 f\u2032(w) = ${tanPred.toFixed(4)};
-- exact, f(w + \u03b5) = ${tanExact.toFixed(4)};
-- error ${(tanExact - tanPred).toPrecision(3)}, and error / \u03b5\u00b2 = ${((tanExact - tanPred) / tanEps ** 2).toFixed(3)}.`
-```
-
-Show R code
-
-``` js
-Plot.plot({
-  ariaLabel: 'The parabola f of w, ' +
-    'with the tangent line at the chosen w, ' +
-    'and two points above w plus epsilon: ' +
-    'one on the tangent line (the prediction) and one on the curve (the exact value), ' +
-    'joined by a red segment showing the error.',
-  width: 460, height: 340, grid: true,
-  x: {domain: [-1.5, 6.5], label: "w"},
-  y: {domain: [0, 20], label: "f(w)"},
-  marks: [
-    Plot.line(d3.range(-1.5, 6.51, 0.05), {x: (w) => w, y: tanF, stroke: "#555", strokeWidth: 2, clip: true}),
-    Plot.line([-1.5, 6.5], {x: (w) => w, y: (w) => tanF(tanW) + (w - tanW) * tanDf(tanW),
-                        stroke: "#1f77b4", strokeWidth: 2, strokeDasharray: "6,4", clip: true}),
-    Plot.ruleX([tanW + tanEps], {stroke: "#bbb", strokeDasharray: "2,3"}),
-    Plot.link([0], {x1: tanW + tanEps, x2: tanW + tanEps, y1: tanPred, y2: tanExact,
-                    stroke: "#d62728", strokeWidth: 3, clip: true}),
-    Plot.dot([[tanW, tanF(tanW)]], {x: (d) => d[0], y: (d) => d[1], r: 5, fill: "#222"}),
-    Plot.dot([[tanW + tanEps, tanPred]], {x: (d) => d[0], y: (d) => d[1], r: 4, fill: "#1f77b4", clip: true}),
-    Plot.dot([[tanW + tanEps, tanExact]], {x: (d) => d[0], y: (d) => d[1], r: 4, fill: "#555", clip: true})
-  ]
-})
-```
-
-The dashed blue line is the tangent line ([Definition 9](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
-
-Figure 2: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\varepsilon\\.
+> **NOTE:**
+>
+> Show R code
+>
+> ``` js
+> tanF = (w) => w * w - 4 * w + 7
+> tanDf = (w) => 2 * w - 4
+> tanPred = tanF(tanW) + tanEps * tanDf(tanW)
+> tanExact = tanF(tanW + tanEps)
+> ```
+>
+> Show R code
+>
+> ``` js
+> viewof tanW = Inputs.range([-1, 4], {value: 1, step: 0.05, label: "w"})
+> viewof tanEps = Inputs.range([0.01, 2], {value: 0.5, transform: Math.log, label: "step \u03b5", format: d3.format(".3~f")})
+> ```
+>
+> Show R code
+>
+> ``` js
+> md`At w = ${tanW.toFixed(2)}, f(w) = ${tanF(tanW).toFixed(4)} and f\u2032(w) = ${tanDf(tanW).toFixed(2)}.
+>
+> A step of \u03b5 = ${tanEps.toFixed(3)}:
+>
+> - predicted by the tangent line, f(w) + \u03b5 f\u2032(w) = ${tanPred.toFixed(4)};
+> - exact, f(w + \u03b5) = ${tanExact.toFixed(4)};
+> - error ${(tanExact - tanPred).toPrecision(3)}, and error / \u03b5\u00b2 = ${((tanExact - tanPred) / tanEps ** 2).toFixed(3)}.`
+> ```
+>
+> Show R code
+>
+> ``` js
+> Plot.plot({
+>   ariaLabel: 'The parabola f of w, ' +
+>     'with the tangent line at the chosen w, ' +
+>     'and two points above w plus epsilon: ' +
+>     'one on the tangent line (the prediction) and one on the curve (the exact value), ' +
+>     'joined by a red segment showing the error.',
+>   width: 460, height: 340, grid: true,
+>   x: {domain: [-1.5, 6.5], label: "w"},
+>   y: {domain: [0, 20], label: "f(w)"},
+>   marks: [
+>     Plot.line(d3.range(-1.5, 6.51, 0.05), {x: (w) => w, y: tanF, stroke: "#555", strokeWidth: 2, clip: true}),
+>     Plot.line([-1.5, 6.5], {x: (w) => w, y: (w) => tanF(tanW) + (w - tanW) * tanDf(tanW),
+>                         stroke: "#1f77b4", strokeWidth: 2, strokeDasharray: "6,4", clip: true}),
+>     Plot.ruleX([tanW + tanEps], {stroke: "#bbb", strokeDasharray: "2,3"}),
+>     Plot.link([0], {x1: tanW + tanEps, x2: tanW + tanEps, y1: tanPred, y2: tanExact,
+>                     stroke: "#d62728", strokeWidth: 3, clip: true}),
+>     Plot.dot([[tanW, tanF(tanW)]], {x: (d) => d[0], y: (d) => d[1], r: 5, fill: "#222"}),
+>     Plot.dot([[tanW + tanEps, tanPred]], {x: (d) => d[0], y: (d) => d[1], r: 4, fill: "#1f77b4", clip: true}),
+>     Plot.dot([[tanW + tanEps, tanExact]], {x: (d) => d[0], y: (d) => d[1], r: 4, fill: "#555", clip: true})
+>   ]
+> })
+> ```
+>
+> The dashed blue line is the tangent line ([Definition 9](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
+>
+> Figure 2: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\varepsilon\\.
 
 > **NOTE:**
 >

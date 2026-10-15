@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 23:45:57 (PDT)
+Last modified: 2026-10-15 00:49:40 (PDT)
 
 ## 1 Integration
 
@@ -49,44 +49,46 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > See [Figure 1](#fig-antiderivatives).
 >
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
->   ggplot2::labs(x = "x", y = expression(f(x))) +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-integration_files/figure-html/antiderivatives-f-code-1.png)](calculus-integration_files/figure-html/antiderivatives-f-code-1.png "Figure 1 (a): The function f(x) = x^2.")
->
-> \(a\) The function \\f(x) = x^2\\.
->
-> Show R code
->
-> ``` downlit
-> x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
-> df <- C_vals |>
->   lapply(\(C) {
->     tibble::tibble(
->       x = x_seq,
->       y = x_seq^3 / 3 + C,
->       C = factor(C)
->     )
->   }) |>
->   dplyr::bind_rows()
->
-> ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
->   ggplot2::geom_line(linewidth = 0.8) +
->   ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-integration_files/figure-html/antiderivatives-F-code-1.png)](calculus-integration_files/figure-html/antiderivatives-F-code-1.png "Figure 1 (b): Family of antiderivatives F(x) = x^3/3 + C.")
->
-> \(b\) Family of antiderivatives \\F(x) = x^3/3 + C\\.
->
-> Figure 1: The function \\f(x) = x^2\\ and five antiderivatives \\F(x) = x^3/3 + C\\ for \\C \in \\-2, -1, 0, 1, 2\\\\. Each antiderivative has the same derivative \\f\\; they differ only by a vertical shift.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_function(fun = \(x) x^2, xlim = x_lim, linewidth = 1) +
+> >   ggplot2::labs(x = "x", y = expression(f(x))) +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/antiderivatives-f-code-1.png)](calculus-integration_files/figure-html/antiderivatives-f-code-1.png "Figure 1 (a): The function f(x) = x^2.")
+> >
+> > \(a\) The function \\f(x) = x^2\\.
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > x_seq <- seq(x_lim[1], x_lim[2], length.out = 200)
+> > df <- C_vals |>
+> >   lapply(\(C) {
+> >     tibble::tibble(
+> >       x = x_seq,
+> >       y = x_seq^3 / 3 + C,
+> >       C = factor(C)
+> >     )
+> >   }) |>
+> >   dplyr::bind_rows()
+> >
+> > ggplot2::ggplot(df, ggplot2::aes(x = x, y = y, color = C)) +
+> >   ggplot2::geom_line(linewidth = 0.8) +
+> >   ggplot2::labs(x = "x", y = expression(F(x)), color = "C") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/antiderivatives-F-code-1.png)](calculus-integration_files/figure-html/antiderivatives-F-code-1.png "Figure 1 (b): Family of antiderivatives F(x) = x^3/3 + C.")
+> >
+> > \(b\) Family of antiderivatives \\F(x) = x^3/3 + C\\.
+> >
+> > Figure 1: The function \\f(x) = x^2\\ and five antiderivatives \\F(x) = x^3/3 + C\\ for \\C \in \\-2, -1, 0, 1, 2\\\\. Each antiderivative has the same derivative \\f\\; they differ only by a vertical shift.
 
 > **NOTE:**
 >
@@ -354,19 +356,21 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > This [counterexample](proof-writing.llms.md#def-counterexample) shows that the [converse](proof-writing.llms.md#def-converse) of [Theorem 2](#thm-diff-implies-cont) fails: continuity does not imply differentiability. See [Figure 2](#fig-abs-value).
 >
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
->   ggplot2::geom_point(ggplot2::aes(x = 0, y = 0), size = 3) +
->   ggplot2::labs(x = "x", y = expression(f(x) == abs(x))) +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-integration_files/figure-html/abs-value-code-1.png)](calculus-integration_files/figure-html/abs-value-code-1.png "Figure 2: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps.")
->
-> Figure 2: \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ has a sharp corner at \\x = 0\\ (not differentiable there) but is continuous everywhere: no gaps or jumps.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_function(fun = abs, xlim = c(-2, 2), linewidth = 1) +
+> >   ggplot2::geom_point(ggplot2::aes(x = 0, y = 0), size = 3) +
+> >   ggplot2::labs(x = "x", y = expression(f(x) == abs(x))) +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/abs-value-code-1.png)](calculus-integration_files/figure-html/abs-value-code-1.png "Figure 2: f(x) = \mathopen{}\left|x\right|\mathclose{} has a sharp corner at x = 0 (not differentiable there) but is continuous everywhere: no gaps or jumps.")
+> >
+> > Figure 2: \\f(x) = \mathopen{}\left\|x\right\|\mathclose{}\\ has a sharp corner at \\x = 0\\ (not differentiable there) but is continuous everywhere: no gaps or jumps.
 
 > **NOTE:**
 >
@@ -386,39 +390,41 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 >
 > This counterexample shows that the converse of [Theorem 3](#thm-cont-implies-int) fails: integrability does not imply continuity. See [Figure 3](#fig-step).
 >
-> Show R code
->
-> ``` downlit
-> step_df <- tibble::tibble(
->   x = c(0, 0.5, 0.5, 1),
->   y = c(0, 0, 1, 1),
->   segment = c("left", "left", "right", "right")
-> )
->
-> ggplot2::ggplot() +
->   ggplot2::geom_rect(
->     ggplot2::aes(xmin = 0.5, xmax = 1, ymin = 0, ymax = 1),
->     fill = "steelblue", alpha = 0.3
->   ) +
->   ggplot2::geom_line(
->     data = step_df,
->     ggplot2::aes(x = x, y = y, group = segment),
->     linewidth = 1
->   ) +
->   ggplot2::geom_point(ggplot2::aes(x = 0.5, y = 0), shape = 1, size = 3) +
->   ggplot2::geom_point(ggplot2::aes(x = 0.5, y = 1), shape = 16, size = 3) +
->   ggplot2::scale_x_continuous(
->     breaks = c(0, 0.5, 1),
->     labels = c("0", "1/2", "1")
->   ) +
->   ggplot2::scale_y_continuous(limits = c(-0.1, 1.2)) +
->   ggplot2::labs(x = "x", y = "f(x)") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-integration_files/figure-html/step-code-1.png)](calculus-integration_files/figure-html/step-code-1.png "Figure 3: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 18.")
->
-> Figure 3: Step function: \\f(x) = 0\\ on \\\[0, \tfrac{1}{2})\\ (open circle at the jump) and \\f(x) = 1\\ on \\\[\tfrac{1}{2}, 1\]\\ (filled circle). The shaded rectangle has area \\\tfrac{1}{2}\\, matching the integral computed in [Example 18](#exm-int-not-cont).
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > step_df <- tibble::tibble(
+> >   x = c(0, 0.5, 0.5, 1),
+> >   y = c(0, 0, 1, 1),
+> >   segment = c("left", "left", "right", "right")
+> > )
+> >
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_rect(
+> >     ggplot2::aes(xmin = 0.5, xmax = 1, ymin = 0, ymax = 1),
+> >     fill = "steelblue", alpha = 0.3
+> >   ) +
+> >   ggplot2::geom_line(
+> >     data = step_df,
+> >     ggplot2::aes(x = x, y = y, group = segment),
+> >     linewidth = 1
+> >   ) +
+> >   ggplot2::geom_point(ggplot2::aes(x = 0.5, y = 0), shape = 1, size = 3) +
+> >   ggplot2::geom_point(ggplot2::aes(x = 0.5, y = 1), shape = 16, size = 3) +
+> >   ggplot2::scale_x_continuous(
+> >     breaks = c(0, 0.5, 1),
+> >     labels = c("0", "1/2", "1")
+> >   ) +
+> >   ggplot2::scale_y_continuous(limits = c(-0.1, 1.2)) +
+> >   ggplot2::labs(x = "x", y = "f(x)") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/step-code-1.png)](calculus-integration_files/figure-html/step-code-1.png "Figure 3: Step function: f(x) = 0 on [0, \tfrac{1}{2}) (open circle at the jump) and f(x) = 1 on [\tfrac{1}{2}, 1] (filled circle). The shaded rectangle has area \tfrac{1}{2}, matching the integral computed in Example 18.")
+> >
+> > Figure 3: Step function: \\f(x) = 0\\ on \\\[0, \tfrac{1}{2})\\ (open circle at the jump) and \\f(x) = 1\\ on \\\[\tfrac{1}{2}, 1\]\\ (filled circle). The shaded rectangle has area \\\tfrac{1}{2}\\, matching the integral computed in [Example 18](#exm-int-not-cont).
 
 Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implies-int) establish the chain:
 
@@ -731,69 +737,71 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > as [Theorem 5](#thm-ftc-part1) predicts. [Figure 4](#fig-ftc-part1) shows the integrand on the left (shaded area equals \\F(x)\\ at each \\x\\) and the accumulation function \\F(x) = x^2\\ on the right (its slope at \\x\\ equals \\f(x) = 2x\\).
 >
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_area(
->     data = tibble::tibble(t = seq(0, x_focus, length.out = 200)),
->     ggplot2::aes(x = t, y = 2 * t),
->     fill = "steelblue", alpha = 0.4
->   ) +
->   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
->   ggplot2::geom_vline(
->     data = tibble::tibble(x = x_marks),
->     ggplot2::aes(xintercept = x, color = factor(x)),
->     linetype = "dashed", linewidth = 0.6
->   ) +
->   ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
->   ggplot2::theme_minimal() +
->   ggplot2::theme(legend.position = "bottom")
-> ```
->
-> [![](calculus-integration_files/figure-html/ftc-part1-left-code-1.png)](calculus-integration_files/figure-html/ftc-part1-left-code-1.png "Figure 4 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
->
-> \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
->
-> Show R code
->
-> ``` downlit
-> slope_df <- tibble::tibble(
->   x = x_marks,
->   Fx = x_marks^2,
->   slope = 2 * x_marks
-> )
->
-> ggplot2::ggplot() +
->   ggplot2::geom_function(fun = \(x) x^2, xlim = c(0, 2.2), linewidth = 1) +
->   ggplot2::geom_point(
->     data = slope_df,
->     ggplot2::aes(x = x, y = Fx, color = factor(x)),
->     size = 3
->   ) +
->   ggplot2::geom_segment(
->     data = slope_df,
->     ggplot2::aes(
->       x = x - 0.3, xend = x + 0.3,
->       y = Fx - 0.3 * slope, yend = Fx + 0.3 * slope,
->       color = factor(x)
->     ),
->     linewidth = 0.8
->   ) +
->   ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
->   ggplot2::theme_minimal() +
->   ggplot2::theme(legend.position = "bottom")
-> ```
->
-> [![](calculus-integration_files/figure-html/ftc-part1-right-code-1.png)](calculus-integration_files/figure-html/ftc-part1-right-code-1.png "Figure 4 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
->
-> \(b\) \\F(x) = x^2\\; tangent slope at each marked \\x\\ equals \\f(x) = 2x\\.
->
-> Left: \\f(t) = 2t\\; the shaded area
->
-> \\ \begin{aligned} \int_0^{1.5} 2t\\dt &= F(1.5) \\ &= 2.25; \end{aligned} \\
->
-> Figure 4: vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_area(
+> >     data = tibble::tibble(t = seq(0, x_focus, length.out = 200)),
+> >     ggplot2::aes(x = t, y = 2 * t),
+> >     fill = "steelblue", alpha = 0.4
+> >   ) +
+> >   ggplot2::geom_function(fun = \(t) 2 * t, xlim = c(0, 2.2), linewidth = 1) +
+> >   ggplot2::geom_vline(
+> >     data = tibble::tibble(x = x_marks),
+> >     ggplot2::aes(xintercept = x, color = factor(x)),
+> >     linetype = "dashed", linewidth = 0.6
+> >   ) +
+> >   ggplot2::labs(x = "t", y = "f(t) = 2t", color = "x") +
+> >   ggplot2::theme_minimal() +
+> >   ggplot2::theme(legend.position = "bottom")
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/ftc-part1-left-code-1.png)](calculus-integration_files/figure-html/ftc-part1-left-code-1.png "Figure 4 (a): f(t) = 2t; shaded area equals F(1.5) = 2.25; vertical lines mark x \in \{1, 1.5, 2\}.")
+> >
+> > \(a\) \\f(t) = 2t\\; shaded area equals \\F(1.5) = 2.25\\; vertical lines mark \\x \in \\1, 1.5, 2\\\\.
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > slope_df <- tibble::tibble(
+> >   x = x_marks,
+> >   Fx = x_marks^2,
+> >   slope = 2 * x_marks
+> > )
+> >
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_function(fun = \(x) x^2, xlim = c(0, 2.2), linewidth = 1) +
+> >   ggplot2::geom_point(
+> >     data = slope_df,
+> >     ggplot2::aes(x = x, y = Fx, color = factor(x)),
+> >     size = 3
+> >   ) +
+> >   ggplot2::geom_segment(
+> >     data = slope_df,
+> >     ggplot2::aes(
+> >       x = x - 0.3, xend = x + 0.3,
+> >       y = Fx - 0.3 * slope, yend = Fx + 0.3 * slope,
+> >       color = factor(x)
+> >     ),
+> >     linewidth = 0.8
+> >   ) +
+> >   ggplot2::labs(x = "x", y = expression(F(x) == x^2), color = "x") +
+> >   ggplot2::theme_minimal() +
+> >   ggplot2::theme(legend.position = "bottom")
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/ftc-part1-right-code-1.png)](calculus-integration_files/figure-html/ftc-part1-right-code-1.png "Figure 4 (b): F(x) = x^2; tangent slope at each marked x equals f(x) = 2x.")
+> >
+> > \(b\) \\F(x) = x^2\\; tangent slope at each marked \\x\\ equals \\f(x) = 2x\\.
+> >
+> > Left: \\f(t) = 2t\\; the shaded area
+> >
+> > \\ \begin{aligned} \int_0^{1.5} 2t\\dt &= F(1.5) \\ &= 2.25; \end{aligned} \\
+> >
+> > Figure 4: vertical lines mark \\x \in \\1, 1.5, 2\\\\. Right: \\F(x) = x^2\\; for each marked \\x\\, the tangent slope equals \\f(x) = 2x\\.
 
 > **NOTE:**
 >
@@ -817,56 +825,58 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > See [Figure 5](#fig-exp-pdf-cdf).
 >
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_area(
->     data = tibble::tibble(t = seq(0, t_focus, length.out = 300)),
->     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
->     fill = "steelblue", alpha = 0.4
->   ) +
->   ggplot2::geom_function(
->     fun = \(t) lambda * exp(-lambda * t),
->     xlim = c(0, t_max), linewidth = 1
->   ) +
->   ggplot2::labs(x = "t", y = "f(t)") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 5 (a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865.")
->
-> \(a\) PDF with \\{\lambda}= 1\\; shaded area equals \\F(2) \approx 0.865\\.
->
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::geom_function(
->     fun = \(t) 1 - exp(-lambda * t),
->     xlim = c(0, t_max), linewidth = 1
->   ) +
->   ggplot2::geom_point(
->     ggplot2::aes(x = t_focus, y = F_at_focus),
->     size = 3, color = "steelblue"
->   ) +
->   ggplot2::geom_segment(
->     ggplot2::aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
->     linetype = "dashed", color = "steelblue"
->   ) +
->   ggplot2::geom_segment(
->     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
->     linetype = "dashed", color = "steelblue"
->   ) +
->   ggplot2::labs(x = "t", y = "F(t)") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 5 (b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865.")
->
-> \(b\) CDF with \\{\lambda}= 1\\; point marks \\F(2) \approx 0.865\\.
->
-> Figure 5: Exponential distribution with \\{\lambda}= 1\\. Left: the PDF \\f(t) = {\lambda}\text{e}^{-{\lambda}t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-{\lambda}t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_area(
+> >     data = tibble::tibble(t = seq(0, t_focus, length.out = 300)),
+> >     ggplot2::aes(x = t, y = lambda * exp(-lambda * t)),
+> >     fill = "steelblue", alpha = 0.4
+> >   ) +
+> >   ggplot2::geom_function(
+> >     fun = \(t) lambda * exp(-lambda * t),
+> >     xlim = c(0, t_max), linewidth = 1
+> >   ) +
+> >   ggplot2::labs(x = "t", y = "f(t)") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-pdf-code-1.png "Figure 5 (a): PDF with {\lambda}= 1; shaded area equals F(2) \approx 0.865.")
+> >
+> > \(a\) PDF with \\{\lambda}= 1\\; shaded area equals \\F(2) \approx 0.865\\.
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > ggplot2::ggplot() +
+> >   ggplot2::geom_function(
+> >     fun = \(t) 1 - exp(-lambda * t),
+> >     xlim = c(0, t_max), linewidth = 1
+> >   ) +
+> >   ggplot2::geom_point(
+> >     ggplot2::aes(x = t_focus, y = F_at_focus),
+> >     size = 3, color = "steelblue"
+> >   ) +
+> >   ggplot2::geom_segment(
+> >     ggplot2::aes(x = t_focus, xend = t_focus, y = 0, yend = F_at_focus),
+> >     linetype = "dashed", color = "steelblue"
+> >   ) +
+> >   ggplot2::geom_segment(
+> >     ggplot2::aes(x = 0, xend = t_focus, y = F_at_focus, yend = F_at_focus),
+> >     linetype = "dashed", color = "steelblue"
+> >   ) +
+> >   ggplot2::labs(x = "t", y = "F(t)") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png)](calculus-integration_files/figure-html/exp-pdf-cdf-cdf-code-1.png "Figure 5 (b): CDF with {\lambda}= 1; point marks F(2) \approx 0.865.")
+> >
+> > \(b\) CDF with \\{\lambda}= 1\\; point marks \\F(2) \approx 0.865\\.
+> >
+> > Figure 5: Exponential distribution with \\{\lambda}= 1\\. Left: the PDF \\f(t) = {\lambda}\text{e}^{-{\lambda}t}\\; the shaded area under the curve from \\0\\ to \\2\\ equals \\F(2) \approx 0.865\\. Right: the CDF \\F(t) = 1 - \text{e}^{-{\lambda}t}\\; the dashed lines mark the value \\F(2)\\ computed via FTC Part 2.
 
 > **NOTE:**
 >

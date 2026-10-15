@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 23:45:57 (PDT)
+Last modified: 2026-10-15 00:49:40 (PDT)
 
 ## 1 Double Integrals
 
@@ -70,38 +70,40 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_D \text{e}^{-x^2}\\dA.\\
 >
-> Show R code
->
-> ``` downlit
-> region <- tibble::tibble(x = c(0, 1, 1), y = c(0, 0, 1))
-> ggplot2::ggplot(region, ggplot2::aes(x = x, y = y)) +
->   ggplot2::geom_polygon(
->     fill = "steelblue", alpha = 0.4, color = "black", linewidth = 0.7
->   ) +
->   ggplot2::annotate(
->     "text", x = 0.65, y = 0.28, label = "D", size = 8, fontface = "italic"
->   ) +
->   ggplot2::annotate(
->     "text", x = 0.36, y = 0.52, label = "y == x",
->     parse = TRUE, angle = 45
->   ) +
->   ggplot2::annotate(
->     "text", x = 1.08, y = 0.5, label = "x == 1",
->     parse = TRUE, angle = 90, hjust = 0.5
->   ) +
->   ggplot2::annotate(
->     "text", x = 0.5, y = -0.1, label = "y == 0", parse = TRUE
->   ) +
->   ggplot2::scale_x_continuous(breaks = c(0, 0.5, 1), limits = c(-0.1, 1.3)) +
->   ggplot2::scale_y_continuous(breaks = c(0, 0.5, 1), limits = c(-0.2, 1.2)) +
->   ggplot2::coord_equal() +
->   ggplot2::labs(x = "x", y = "y") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-double-integrals_files/figure-html/unnamed-chunk-1-1.png)](calculus-double-integrals_files/figure-html/unnamed-chunk-1-1.png "Figure 1: Triangular integration region D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}, bounded below by y = 0, above-left by y = x, and on the right by x = 1.")
->
-> Figure 1: Triangular integration region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\, bounded below by \\y = 0\\, above-left by \\y = x\\, and on the right by \\x = 1\\.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > region <- tibble::tibble(x = c(0, 1, 1), y = c(0, 0, 1))
+> > ggplot2::ggplot(region, ggplot2::aes(x = x, y = y)) +
+> >   ggplot2::geom_polygon(
+> >     fill = "steelblue", alpha = 0.4, color = "black", linewidth = 0.7
+> >   ) +
+> >   ggplot2::annotate(
+> >     "text", x = 0.65, y = 0.28, label = "D", size = 8, fontface = "italic"
+> >   ) +
+> >   ggplot2::annotate(
+> >     "text", x = 0.36, y = 0.52, label = "y == x",
+> >     parse = TRUE, angle = 45
+> >   ) +
+> >   ggplot2::annotate(
+> >     "text", x = 1.08, y = 0.5, label = "x == 1",
+> >     parse = TRUE, angle = 90, hjust = 0.5
+> >   ) +
+> >   ggplot2::annotate(
+> >     "text", x = 0.5, y = -0.1, label = "y == 0", parse = TRUE
+> >   ) +
+> >   ggplot2::scale_x_continuous(breaks = c(0, 0.5, 1), limits = c(-0.1, 1.3)) +
+> >   ggplot2::scale_y_continuous(breaks = c(0, 0.5, 1), limits = c(-0.2, 1.2)) +
+> >   ggplot2::coord_equal() +
+> >   ggplot2::labs(x = "x", y = "y") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-double-integrals_files/figure-html/unnamed-chunk-1-1.png)](calculus-double-integrals_files/figure-html/unnamed-chunk-1-1.png "Figure 1: Triangular integration region D = \{(x, y) : x \in [0, 1],\; y \in [0, x]\}, bounded below by y = 0, above-left by y = x, and on the right by x = 1.")
+> >
+> > Figure 1: Triangular integration region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\, bounded below by \\y = 0\\, above-left by \\y = x\\, and on the right by \\x = 1\\.
 >
 > **Order \\dx\\dy\\ is intractable.** Re-describing \\D\\ as \\D = \\(x, y) : y \in \[0, 1\],\\ x \in \[y, 1\]\\\\, the inner integral is
 >
@@ -123,30 +125,32 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > The solid whose volume equals this integral is shown in [Figure 2](#fig-fubini-nonrect).
 >
-> Show R code
->
-> ``` downlit
-> n_grid <- 51
-> x_seq <- seq(0, 1, length.out = n_grid)
-> y_seq <- seq(0, 1, length.out = n_grid)
->
-> z_mat <- outer(x_seq, y_seq, function(x, y) {
->   z <- exp(-x^2)
->   z[y > x] <- NA
->   z
-> })
->
-> plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
->   plotly::add_surface(showscale = FALSE) |>
->   plotly::layout(scene = list(
->     xaxis = list(title = "x"),
->     yaxis = list(title = "y"),
->     zaxis = list(title = "z = exp(-x^2)"),
->     camera = list(eye = list(x = 1.6, y = -1.6, z = 0.8))
->   ))
-> ```
->
-> Figure 2: Surface \\z = e^{-x^2}\\ over the region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\. The surface depends only on \\x\\ (constant in \\y\\), so for each \\x\\ the inner integral over \\y \in \[0, x\]\\ contributes \\x \cdot e^{-x^2}\\.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > n_grid <- 51
+> > x_seq <- seq(0, 1, length.out = n_grid)
+> > y_seq <- seq(0, 1, length.out = n_grid)
+> >
+> > z_mat <- outer(x_seq, y_seq, function(x, y) {
+> >   z <- exp(-x^2)
+> >   z[y > x] <- NA
+> >   z
+> > })
+> >
+> > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
+> >   plotly::add_surface(showscale = FALSE) |>
+> >   plotly::layout(scene = list(
+> >     xaxis = list(title = "x"),
+> >     yaxis = list(title = "y"),
+> >     zaxis = list(title = "z = exp(-x^2)"),
+> >     camera = list(eye = list(x = 1.6, y = -1.6, z = 0.8))
+> >   ))
+> > ```
+> >
+> > Figure 2: Surface \\z = e^{-x^2}\\ over the region \\D = \\(x, y) : x \in \[0, 1\],\\ y \in \[0, x\]\\\\. The surface depends only on \\x\\ (constant in \\y\\), so for each \\x\\ the inner integral over \\y \in \[0, x\]\\ contributes \\x \cdot e^{-x^2}\\.
 
 > **NOTE:**
 >
@@ -236,37 +240,39 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > [Figure 3](#fig-fubini-fail) shows the surface. The failure comes from the origin, where \\f\\ is undefined and unbounded.
 >
-> Show R code
->
-> ``` downlit
-> n_grid <- 81
-> eps <- 0.04
-> x_seq <- seq(eps, 1, length.out = n_grid)
-> y_seq <- seq(eps, 1, length.out = n_grid)
->
-> z_mat <- outer(x_seq, y_seq, function(x, y) (x^2 - y^2) / (x^2 + y^2)^2)
-> z_clip <- 50
-> z_mat[z_mat > z_clip] <- z_clip
-> z_mat[z_mat < -z_clip] <- -z_clip
->
-> plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
->   plotly::add_surface(
->     showscale = FALSE,
->     colorscale = list(
->       list(0, "#3b4cc0"),
->       list(0.5, "#dddddd"),
->       list(1, "#b40426")
->     )
->   ) |>
->   plotly::layout(scene = list(
->     xaxis = list(title = "x"),
->     yaxis = list(title = "y"),
->     zaxis = list(title = "f(x, y)", range = c(-z_clip, z_clip)),
->     camera = list(eye = list(x = 1.6, y = 1.6, z = 0.6))
->   ))
-> ```
->
-> Figure 3: Surface \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ on \\\[0, 1\]^2\\, sampled away from the origin and clipped to \\\[-50, 50\]\\ for display. Approaching the origin, the function grows without bound along the \\x\\-axis (red ridge, \\f \> 0\\ when \\\|x\| \> \|y\|\\) and falls without bound along the \\y\\-axis (blue ridge, \\f \< 0\\ when \\\|y\| \> \|x\|\\). Because \\f\\ is undefined at \\(0, 0)\\, \\f\\ is not continuous on \\R\\ and [Theorem 1](#thm-fubini) does not apply.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > n_grid <- 81
+> > eps <- 0.04
+> > x_seq <- seq(eps, 1, length.out = n_grid)
+> > y_seq <- seq(eps, 1, length.out = n_grid)
+> >
+> > z_mat <- outer(x_seq, y_seq, function(x, y) (x^2 - y^2) / (x^2 + y^2)^2)
+> > z_clip <- 50
+> > z_mat[z_mat > z_clip] <- z_clip
+> > z_mat[z_mat < -z_clip] <- -z_clip
+> >
+> > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
+> >   plotly::add_surface(
+> >     showscale = FALSE,
+> >     colorscale = list(
+> >       list(0, "#3b4cc0"),
+> >       list(0.5, "#dddddd"),
+> >       list(1, "#b40426")
+> >     )
+> >   ) |>
+> >   plotly::layout(scene = list(
+> >     xaxis = list(title = "x"),
+> >     yaxis = list(title = "y"),
+> >     zaxis = list(title = "f(x, y)", range = c(-z_clip, z_clip)),
+> >     camera = list(eye = list(x = 1.6, y = 1.6, z = 0.6))
+> >   ))
+> > ```
+> >
+> > Figure 3: Surface \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ on \\\[0, 1\]^2\\, sampled away from the origin and clipped to \\\[-50, 50\]\\ for display. Approaching the origin, the function grows without bound along the \\x\\-axis (red ridge, \\f \> 0\\ when \\\|x\| \> \|y\|\\) and falls without bound along the \\y\\-axis (blue ridge, \\f \< 0\\ when \\\|y\| \> \|x\|\\). Because \\f\\ is undefined at \\(0, 0)\\, \\f\\ is not continuous on \\R\\ and [Theorem 1](#thm-fubini) does not apply.
 
 > **NOTE:**
 >
@@ -290,27 +296,29 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\\operatorname{E}\mathopen{}\left\[g(X, Y)\right\]\mathclose{} = \iint_R \mathopen{}\left(x^2 + y^2\right)\mathclose{}\\dA.\\
 >
-> Show R code
->
-> ``` downlit
-> ggplot2::ggplot() +
->   ggplot2::annotate(
->     "rect", xmin = 0, xmax = 1, ymin = 0, ymax = 1,
->     fill = "steelblue", alpha = 0.4, color = "black", linewidth = 0.7
->   ) +
->   ggplot2::annotate(
->     "text", x = 0.5, y = 0.5, label = "R", size = 8, fontface = "italic"
->   ) +
->   ggplot2::scale_x_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
->   ggplot2::scale_y_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
->   ggplot2::coord_equal() +
->   ggplot2::labs(x = "x", y = "y") +
->   ggplot2::theme_minimal()
-> ```
->
-> [![](calculus-double-integrals_files/figure-html/unnamed-chunk-6-1.png)](calculus-double-integrals_files/figure-html/unnamed-chunk-6-1.png "Figure 4: Integration region R = [0, 1]^2, the unit square.")
->
-> Figure 4: Integration region \\R = \[0, 1\]^2\\, the unit square.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > ggplot2::ggplot() +
+> >   ggplot2::annotate(
+> >     "rect", xmin = 0, xmax = 1, ymin = 0, ymax = 1,
+> >     fill = "steelblue", alpha = 0.4, color = "black", linewidth = 0.7
+> >   ) +
+> >   ggplot2::annotate(
+> >     "text", x = 0.5, y = 0.5, label = "R", size = 8, fontface = "italic"
+> >   ) +
+> >   ggplot2::scale_x_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
+> >   ggplot2::scale_y_continuous(breaks = c(0, 1), limits = c(-0.15, 1.25)) +
+> >   ggplot2::coord_equal() +
+> >   ggplot2::labs(x = "x", y = "y") +
+> >   ggplot2::theme_minimal()
+> > ```
+> >
+> > [![](calculus-double-integrals_files/figure-html/unnamed-chunk-6-1.png)](calculus-double-integrals_files/figure-html/unnamed-chunk-6-1.png "Figure 4: Integration region R = [0, 1]^2, the unit square.")
+> >
+> > Figure 4: Integration region \\R = \[0, 1\]^2\\, the unit square.
 >
 > The integrand is continuous on \\R\\, so [Corollary 1](#cor-fubini-rect) applies and either order of integration yields the same value.
 >
@@ -334,24 +342,26 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > The solid whose volume equals this integral is shown in [Figure 5](#fig-fubini-rect).
 >
-> Show R code
->
-> ``` downlit
-> n_grid <- 41
-> x_seq <- seq(0, 1, length.out = n_grid)
-> y_seq <- seq(0, 1, length.out = n_grid)
-> z_mat <- outer(x_seq, y_seq, function(x, y) x^2 + y^2)
->
-> plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
->   plotly::add_surface(showscale = FALSE) |>
->   plotly::layout(scene = list(
->     xaxis = list(title = "x"),
->     yaxis = list(title = "y"),
->     zaxis = list(title = "z", range = c(0, 2))
->   ))
-> ```
->
-> Figure 5: Surface \\z = x^2 + y^2\\ over the unit square \\\[0, 1\]^2\\. The double integral \\\tfrac{2}{3}\\ is the volume between this surface and the \\xy\\-plane, and equals \\\operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}\\.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > n_grid <- 41
+> > x_seq <- seq(0, 1, length.out = n_grid)
+> > y_seq <- seq(0, 1, length.out = n_grid)
+> > z_mat <- outer(x_seq, y_seq, function(x, y) x^2 + y^2)
+> >
+> > plotly::plot_ly(x = ~x_seq, y = ~y_seq, z = ~t(z_mat)) |>
+> >   plotly::add_surface(showscale = FALSE) |>
+> >   plotly::layout(scene = list(
+> >     xaxis = list(title = "x"),
+> >     yaxis = list(title = "y"),
+> >     zaxis = list(title = "z", range = c(0, 2))
+> >   ))
+> > ```
+> >
+> > Figure 5: Surface \\z = x^2 + y^2\\ over the unit square \\\[0, 1\]^2\\. The double integral \\\tfrac{2}{3}\\ is the volume between this surface and the \\xy\\-plane, and equals \\\operatorname{E}\mathopen{}\left\[X^2 + Y^2\right\]\mathclose{}\\.
 
 > **NOTE:**
 >

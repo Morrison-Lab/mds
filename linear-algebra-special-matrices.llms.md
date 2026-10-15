@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-14 23:45:57 (PDT)
+Last modified: 2026-10-15 00:49:40 (PDT)
 
 ## 1 Special Matrices
 
@@ -941,22 +941,24 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > is an elliptic paraboloid. At \\\tilde{x}= \tilde{0}\\, \\f(\tilde{x}) = 0\\; at \\\tilde{x}= (1, 1)\\, \\f(\tilde{x}) = 2\\; and \\f(\tilde{x}) \> 0\\ at every \\\tilde{x}\neq \tilde{0}\\, so the origin is the only lowest point of the bowl. [Figure 1](#fig-paraboloid) shows the surface.
 >
-> Show R code
->
-> ``` downlit
-> axis_values <- seq(-2, 2, length.out = 41)
-> height <- outer(axis_values, axis_values, function(x1, x2) x1^2 + x2^2)
->
-> plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
->   plotly::add_surface(showscale = FALSE) |>
->   plotly::layout(scene = list(
->     xaxis = list(title = "x1"),
->     yaxis = list(title = "x2"),
->     zaxis = list(title = "f(x)")
->   ))
-> ```
->
-> Figure 1: The surface \\z = x_1^2 + x_2^2\\ over \\\[-2, 2\]^2\\: a bowl that opens upward, with its lowest point above the origin. Horizontal slices of the bowl are circles around the origin.
+> > **NOTE:**
+> >
+> > Show R code
+> >
+> > ``` downlit
+> > axis_values <- seq(-2, 2, length.out = 41)
+> > height <- outer(axis_values, axis_values, function(x1, x2) x1^2 + x2^2)
+> >
+> > plotly::plot_ly(x = ~axis_values, y = ~axis_values, z = ~t(height)) |>
+> >   plotly::add_surface(showscale = FALSE) |>
+> >   plotly::layout(scene = list(
+> >     xaxis = list(title = "x1"),
+> >     yaxis = list(title = "x2"),
+> >     zaxis = list(title = "f(x)")
+> >   ))
+> > ```
+> >
+> > Figure 1: The surface \\z = x_1^2 + x_2^2\\ over \\\[-2, 2\]^2\\: a bowl that opens upward, with its lowest point above the origin. Horizontal slices of the bowl are circles around the origin.
 
 > **NOTE:**
 >
