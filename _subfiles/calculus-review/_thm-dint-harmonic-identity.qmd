@@ -1,0 +1,17 @@
+:::{#thm-dint-harmonic-identity}
+#### Harmonic numbers as a double integral
+
+For every positive integer $n$,
+
+$$
+\int_0^1 \int_0^1 n(1 - xy)^{n-1}\,dx\,dy
+= \sumto{k}{n} \frac{1}{k}
+$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-dint-harmonic-identity, worked in @sol-miller-dint-harmonic-identity.
+
+:::
