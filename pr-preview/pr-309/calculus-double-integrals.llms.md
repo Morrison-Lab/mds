@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-15 05:32:53 (PDT)
+Last modified: 2026-10-15 07:34:52 (PDT)
 
 ## 1 Double Integrals
 
-The **Fubini–Tonelli theorem** states conditions under which the order of integration in a double integral can be exchanged. We state them in two settings: the Riemann version ([Theorem 1](#thm-fubini)) is what applied courses usually use for double integrals of continuous functions on simple regions; the [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measure-theoretic versions ([Theorem 2](#thm-tonelli-measure) and [Theorem 3](#thm-fubini-measure)) are included to make the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science* follow from a stated theorem rather than from an aside.
+The **Fubini–Tonelli theorem** states conditions under which the order of integration in a double integral can be exchanged. We state them in two settings: the Riemann version ([Theorem 1](#thm-fubini)) is what applied courses usually use for double integrals of continuous functions on simple regions; the [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measure-theoretic versions ([Theorem 4](#thm-tonelli-measure) and [Theorem 5](#thm-fubini-measure)) are included to make the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science* follow from a stated theorem rather than from an aside.
 
 > **NOTE:**
 >
@@ -427,6 +427,16 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
+> **Theorem 2 (Double integral of a product of powers)** For \\m, n \> 0\\,
+>
+> \\\int_0^1 \int_0^1 x^m y^n\\dy\\dx = \frac{1}{(m + 1)(n + 1)}\\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 5](#exr-miller-dint-separable), worked in [Solution 5](#sol-miller-dint-separable).
+
+> **NOTE:**
+>
 > **Exercise 6 (Double integral with polynomial and radical terms)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.52.
 >
 > Evaluate the double integral:
@@ -495,7 +505,17 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Theorem 2 (Tonelli’s theorem (measure-theoretic form))** Let \\(\Omega_1, \mathcal F_1, \mu_1)\\ and \\(\Omega_2, \mathcal F_2, \mu_2)\\ be [measure spaces](measures.llms.md#def-measure-space) with [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measures, and let \\f : \Omega_1 \times \Omega_2 \to \mathbb{R}\\ be [measurable](measures.llms.md#def-measurable-function) with respect to the [product \\\sigma\\-algebra](measures.llms.md#def-product-sigma-algebra) \\\mathcal F_1 \otimes \mathcal F_2\\. If \\f \ge 0\\ [almost everywhere](measures.llms.md#def-almost-everywhere) with respect to the [product measure](measures.llms.md#def-product-measure) \\\mu_1 \otimes \mu_2\\, then both iterated [integrals](measures.llms.md#def-integral) exist (possibly equal to \\+\infty\\), agree with the double integral, and equal each other:
+> **Theorem 3 (Harmonic numbers as a double integral)** For every positive integer \\n\\,
+>
+> \\ \int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy = \sum\_{k=1}^{n} \frac{1}{k} \\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 8](#exr-miller-dint-harmonic-identity), worked in [Solution 8](#sol-miller-dint-harmonic-identity).
+
+> **NOTE:**
+>
+> **Theorem 4 (Tonelli’s theorem (measure-theoretic form))** Let \\(\Omega_1, \mathcal F_1, \mu_1)\\ and \\(\Omega_2, \mathcal F_2, \mu_2)\\ be [measure spaces](measures.llms.md#def-measure-space) with [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measures, and let \\f : \Omega_1 \times \Omega_2 \to \mathbb{R}\\ be [measurable](measures.llms.md#def-measurable-function) with respect to the [product \\\sigma\\-algebra](measures.llms.md#def-product-sigma-algebra) \\\mathcal F_1 \otimes \mathcal F_2\\. If \\f \ge 0\\ [almost everywhere](measures.llms.md#def-almost-everywhere) with respect to the [product measure](measures.llms.md#def-product-measure) \\\mu_1 \otimes \mu_2\\, then both iterated [integrals](measures.llms.md#def-integral) exist (possibly equal to \\+\infty\\), agree with the double integral, and equal each other:
 >
 > \\ \begin{aligned} \int\_{\Omega_1 \times \Omega_2} f\\d(\mu_1 \otimes \mu_2) &= \int\_{\Omega_1} \mathopen{}\left(\int\_{\Omega_2} f(\omega_1, \omega_2)\\d\mu_2(\omega_2)\right)\mathclose{}\\d\mu_1(\omega_1)\\ &= \int\_{\Omega_2} \mathopen{}\left(\int\_{\Omega_1} f(\omega_1, \omega_2)\\d\mu_1(\omega_1)\right)\mathclose{}\\d\mu_2(\omega_2). \end{aligned} \\
 >
@@ -503,7 +523,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Theorem 3 (Fubini’s theorem (measure-theoretic form))** Let \\(\Omega_1, \mathcal F_1, \mu_1)\\ and \\(\Omega_2, \mathcal F_2, \mu_2)\\ be [measure spaces](measures.llms.md#def-measure-space) with [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measures, and let \\f : \Omega_1 \times \Omega_2 \to \mathbb{R}\\ be [measurable](measures.llms.md#def-measurable-function) with respect to the [product \\\sigma\\-algebra](measures.llms.md#def-product-sigma-algebra) \\\mathcal F_1 \otimes \mathcal F_2\\. If \\\int\_{\Omega_1 \times \Omega_2} \mathopen{}\left\|f\right\|\mathclose{}\\d(\mu_1 \otimes \mu_2) \< \infty\\, that is, \\f\\ is [absolutely integrable](measures.llms.md#def-absolutely-integrable), then both iterated [integrals](measures.llms.md#def-integral) exist, agree with the double integral, and equal each other:
+> **Theorem 5 (Fubini’s theorem (measure-theoretic form))** Let \\(\Omega_1, \mathcal F_1, \mu_1)\\ and \\(\Omega_2, \mathcal F_2, \mu_2)\\ be [measure spaces](measures.llms.md#def-measure-space) with [\\\sigma\\-finite](measures.llms.md#def-sigma-finite) measures, and let \\f : \Omega_1 \times \Omega_2 \to \mathbb{R}\\ be [measurable](measures.llms.md#def-measurable-function) with respect to the [product \\\sigma\\-algebra](measures.llms.md#def-product-sigma-algebra) \\\mathcal F_1 \otimes \mathcal F_2\\. If \\\int\_{\Omega_1 \times \Omega_2} \mathopen{}\left\|f\right\|\mathclose{}\\d(\mu_1 \otimes \mu_2) \< \infty\\, that is, \\f\\ is [absolutely integrable](measures.llms.md#def-absolutely-integrable), then both iterated [integrals](measures.llms.md#def-integral) exist, agree with the double integral, and equal each other:
 >
 > \\ \begin{aligned} \int\_{\Omega_1 \times \Omega_2} f\\d(\mu_1 \otimes \mu_2) &= \int\_{\Omega_1} \mathopen{}\left(\int\_{\Omega_2} f(\omega_1, \omega_2)\\d\mu_2(\omega_2)\right)\mathclose{}\\d\mu_1(\omega_1)\\ &= \int\_{\Omega_2} \mathopen{}\left(\int\_{\Omega_1} f(\omega_1, \omega_2)\\d\mu_1(\omega_1)\right)\mathclose{}\\d\mu_2(\omega_2). \end{aligned} \\
 >
@@ -517,11 +537,11 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Example 6 (Positive application of [Theorem 2](#thm-tonelli-measure))** Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Exponential}(1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = e^{-(x+y)}\\ for \\x, y \ge 0\\.
+> **Example 6 (Positive application of [Theorem 4](#thm-tonelli-measure))** Let \\X\\ and \\Y\\ be [independent](https://morrison-lab.github.io/pds/independence.html#def-indpt) [\\\operatorname{Exponential}(1)\\](https://morrison-lab.github.io/pds/random-variables.html#def-exponential) [random variables](https://morrison-lab.github.io/pds/random-variables.html#def-random-variable), with [joint density](https://morrison-lab.github.io/pds/random-variables.html#def-pdf) \\f(x, y) = e^{-(x+y)}\\ for \\x, y \ge 0\\.
 >
-> The probability \\P(X \le 1,\\ Y \le 1)\\ is the integral of \\f\\ over \\\[0, 1\]^2\\ with respect to Lebesgue measure (ordinary length) in each coordinate. Lebesgue measure on \\\[0, \infty)\\ is \\\sigma\\-finite, because \\\[0, \infty)\\ is the union of the intervals \\\[0, n\]\\, \\n \in \mathbb{N}\\, each of finite length \\n\\; so the \\\sigma\\-finiteness condition of [Theorem 2](#thm-tonelli-measure) holds. Since \\f(x,y) = e^{-(x+y)} \ge 0\\, the nonnegativity condition is also satisfied.
+> The probability \\P(X \le 1,\\ Y \le 1)\\ is the integral of \\f\\ over \\\[0, 1\]^2\\ with respect to Lebesgue measure (ordinary length) in each coordinate. Lebesgue measure on \\\[0, \infty)\\ is \\\sigma\\-finite, because \\\[0, \infty)\\ is the union of the intervals \\\[0, n\]\\, \\n \in \mathbb{N}\\, each of finite length \\n\\; so the \\\sigma\\-finiteness condition of [Theorem 4](#thm-tonelli-measure) holds. Since \\f(x,y) = e^{-(x+y)} \ge 0\\, the nonnegativity condition is also satisfied.
 >
-> By [Theorem 2](#thm-tonelli-measure), both iterated integrals exist and agree. Integrating \\y\\ first, then \\x\\:
+> By [Theorem 4](#thm-tonelli-measure), both iterated integrals exist and agree. Integrating \\y\\ first, then \\x\\:
 >
 > \\ \begin{aligned} P(X \le 1,\\ Y \le 1) &= \int_0^1\\\int_0^1 e^{-(x+y)}\\dy\\dx \\&= \int_0^1\\\int_0^1 e^{-x} e^{-y}\\dy\\dx && \text{(exponential of a sum)} \\&= \int_0^1 e^{-x}\mathopen{}\left(\int_0^1 e^{-y}\\dy\right)\mathclose{}\\dx && \text{(} e^{-x} \text{ is constant in } y \text{)} \\&= \int_0^1 e^{-x}\mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_{y=0}^{y=1}\\dx && \text{(antiderivative of } e^{-y} \text{)} \\&= \int_0^1 e^{-x}(1 - e^{-1})\\dx && \text{(evaluate at the limits)} \\&= (1 - e^{-1})\int_0^1 e^{-x}\\dx && \text{(} 1 - e^{-1} \text{ is constant in } x \text{)} \\&= (1 - e^{-1})\mathopen{}\left\[-e^{-x}\right\]\mathclose{}\_{x=0}^{x=1} && \text{(antiderivative of } e^{-x} \text{)} \\&= (1 - e^{-1})^2 && \text{(evaluate at the limits)} \end{aligned} \\
 >
@@ -529,13 +549,13 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\ \begin{aligned} P(X \le 1,\\ Y \le 1) &= \int_0^1\\\int_0^1 e^{-(x+y)}\\dx\\dy \\&= \int_0^1\\\int_0^1 e^{-y} e^{-x}\\dx\\dy && \text{(exponential of a sum)} \\&= \int_0^1 e^{-y}\mathopen{}\left(\int_0^1 e^{-x}\\dx\right)\mathclose{}\\dy && \text{(} e^{-y} \text{ is constant in } x \text{)} \\&= \int_0^1 e^{-y}\mathopen{}\left\[-e^{-x}\right\]\mathclose{}\_{x=0}^{x=1}\\dy && \text{(antiderivative of } e^{-x} \text{)} \\&= \int_0^1 e^{-y}(1 - e^{-1})\\dy && \text{(evaluate at the limits)} \\&= (1 - e^{-1})\int_0^1 e^{-y}\\dy && \text{(} 1 - e^{-1} \text{ is constant in } y \text{)} \\&= (1 - e^{-1})\mathopen{}\left\[-e^{-y}\right\]\mathclose{}\_{y=0}^{y=1} && \text{(antiderivative of } e^{-y} \text{)} \\&= (1 - e^{-1})^2 && \text{(evaluate at the limits)} \end{aligned} \\
 >
-> Both iterated integrals equal \\(1 - e^{-1})^2 \approx 0.400\\, as [Theorem 2](#thm-tonelli-measure) guarantees.
+> Both iterated integrals equal \\(1 - e^{-1})^2 \approx 0.400\\, as [Theorem 4](#thm-tonelli-measure) guarantees.
 
 > **NOTE:**
 >
-> **Example 7 (When neither Tonelli’s nor Fubini’s condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 4](#exm-fubini-fail) illustrates a case where neither the hypothesis of [Theorem 2](#thm-tonelli-measure) nor that of [Theorem 3](#thm-fubini-measure) is satisfied.
+> **Example 7 (When neither Tonelli’s nor Fubini’s condition is satisfied)** The same function \\f(x, y) = (x^2 - y^2)/(x^2 + y^2)^2\\ from [Example 4](#exm-fubini-fail) illustrates a case where neither the hypothesis of [Theorem 4](#thm-tonelli-measure) nor that of [Theorem 5](#thm-fubini-measure) is satisfied.
 >
-> **Why the hypotheses fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates the absolute-integrability hypothesis of [Theorem 3](#thm-fubini-measure). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies
+> **Why the hypotheses fail:** \\\iint_R \|f\|\\dA = \infty\\, which violates the absolute-integrability hypothesis of [Theorem 5](#thm-fubini-measure). Switching to polar coordinates \\(r, \theta)\\ near the origin, the integrand satisfies
 >
 > \\ \begin{aligned} \|f(x, y)\| &= \mathopen{}\left\|x^2 - y^2\right\|\mathclose{}/(x^2 + y^2)^2 \\ &= \mathopen{}\left\|\cos 2\theta\right\|\mathclose{}/r^2, \end{aligned} \\
 >
@@ -543,7 +563,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\ \begin{aligned} \iint_R \|f\|\\dA &\ge \int_0^{\pi/2}\\\int_0^{\varepsilon} \frac{\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}}{r^2}\\ r\\dr\\d\theta\\ &= \mathopen{}\left(\int_0^{\pi/2}\mathopen{}\left\|\cos 2\theta\right\|\mathclose{}\\d\theta\right)\mathclose{} \int_0^{\varepsilon} \frac{dr}{r}\\ &= +\infty, \end{aligned} \\
 >
-> since \\\int_0^{\varepsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and the hypothesis of [Theorem 3](#thm-fubini-measure) is not satisfied. (The hypothesis of [Theorem 2](#thm-tonelli-measure) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 4](#exm-fubini-fail) are thus consistent with both theorems: neither one applies.
+> since \\\int_0^{\varepsilon} dr/r\\ diverges. Therefore \\\iint_R \|f\|\\dA = \infty\\, and the hypothesis of [Theorem 5](#thm-fubini-measure) is not satisfied. (The hypothesis of [Theorem 4](#thm-tonelli-measure) also fails: \\f\\ takes both positive and negative values, so it is not nonnegative a.e.) The unequal iterated integrals from [Example 4](#exm-fubini-fail) are thus consistent with both theorems: neither one applies.
 >
 > ([Wikipedia contributors 2024](#ref-wp:fubini))
 
