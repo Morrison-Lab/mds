@@ -1,0 +1,16 @@
+:::{#thm-double-exponential}
+#### When repeated exponentiation is not reordered
+
+Let $a \ge 0$ and $b, c \in \reals$, where $b^c$ is defined.
+Then $(a^b)^c = a^{(b^c)}$, with both sides defined, if and only if
+
+- $a > 0$ and either $a = 1$ or $bc = b^c$; or
+- $a = 0$, $b \ge 0$, and $c > 0$.
+
+:::
+
+::: proof
+
+This is the solution to @exr-double-exponential, worked in @sol-double-exponential.
+
+:::
