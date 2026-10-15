@@ -4,11 +4,11 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:56:31 (PDT)
+Last modified: 2026-10-15 15:23:10 (PDT)
 
 > **NOTE:**
 >
-> *Remark*. A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the [functions](functions.llms.md) in the Morrison Lab’s probability and statistics notes, their parse trees, and algorithms, which compute those functions.
+> *Remark*. A function can be written down as an expression and computed by an algorithm. This page defines expressions, which write down the [functions](functions.llms.md) in the Morrison Lab’s probability and statistics notes, the parse trees of expressions, and algorithms, which compute those functions.
 
 ## 1 Expressions
 

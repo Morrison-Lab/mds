@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:56:31 (PDT)
+Last modified: 2026-10-15 15:23:10 (PDT)
 
 ## 1 Polynomials
 
@@ -25,7 +25,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Constant function)** A [function](sets-functions.llms.md#def-function) \\f : A \to B\\ is **constant** if there is some \\c \in B\\ with \\f(x) = c\\ for all \\x \in A\\.
+> **Definition 1 (Constant function)** A [function](functions.llms.md#def-function) \\f : A \to B\\ is **constant** if there is some \\c \in B\\ with \\f(x) = c\\ for all \\x \in A\\.
 
 > **NOTE:**
 >
@@ -36,7 +36,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](sets-functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The [terms](algebra-sums.llms.md#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
+> **Definition 2 (Polynomial)** A **polynomial** (in one variable \\x\\) is a [function](functions.llms.md#def-function) \\f : \mathbb{R}\to \mathbb{R}\\ that can be written as \\ f(x) = a_n x^n + a\_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\ for some integer \\n \ge 0\\ and constants \\a_0, a_1, \ldots, a_n \in \mathbb{R}\\ with \\a_n \ne 0\\. The [terms](algebra-sums.llms.md#def-term) of \\f\\ are \\a_n x^n, \ldots, a_1 x, a_0\\.
 
 > **NOTE:**
 >
@@ -91,7 +91,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Parabola)** A **parabola** is the [graph](sets-functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
+> **Definition 8 (Parabola)** A **parabola** is the [graph](functions.llms.md#def-graph) of a quadratic polynomial ([Definition 6](#def-quadratic-polynomial)).
 
 > **NOTE:**
 >
@@ -101,7 +101,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Affine function of one variable)** A [function](sets-functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** if there are numbers \\m\\ and \\b\\ such that
+> **Definition 9 (Affine function of one variable)** A [function](functions.llms.md#def-function) \\f: \mathbb{R}\to \mathbb{R}\\ is **affine** if there are numbers \\m\\ and \\b\\ such that
 >
 > \\f(x) = m x + b \quad \text{for all } x \in \mathbb{R}\\
 
@@ -163,7 +163,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
+> **Definition 13 (Limit of a sequence)** A real number \\L\\ is the **limit** of a [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers, written \\\lim\_{n \to \infty} a_n = L\\ or \\a_n \to L\\, if for every \\\varepsilon\> 0\\ there is a natural number \\N\\ such that
 >
 > \\\mathopen{}\left\|a_n - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } n \ge N.\\
 
@@ -189,7 +189,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 16 (Divergence of a sequence to infinity)** A [sequence](sets-functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
+> **Definition 16 (Divergence of a sequence to infinity)** A [sequence](functions.llms.md#def-sequence) \\(a_n)\\ of real numbers **diverges to \\\infty\\**, written \\\lim\_{n \to \infty} a_n = \infty\\, if for every real number \\M\\ there is a natural number \\N\\ such that \\a_n \> M\\ for every \\n \ge N\\.
 
 ## 4 Exponentials and Logarithms
 
@@ -199,7 +199,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 >
 > \\\operatorname{exp}\mathopen{}\left\\x\right\\\mathclose{} \stackrel{\text{def}}{=}\lim\_{n \to \infty} \mathopen{}\left(1 + \frac{x}{n}\right)\mathclose{}^n,\\
 >
-> the [limit](#def-sequence-limit) of the [sequence](sets-functions.llms.md#def-sequence) \\\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots\\. That limit exists for every real number \\x\\, and it is positive.
+> the [limit](#def-sequence-limit) of the [sequence](functions.llms.md#def-sequence) \\\mathopen{}\left(1 + \frac{x}{1}\right)\mathclose{}^1, \mathopen{}\left(1 + \frac{x}{2}\right)\mathclose{}^2, \mathopen{}\left(1 + \frac{x}{3}\right)\mathclose{}^3, \ldots\\. That limit exists for every real number \\x\\, and it is positive.
 
 > **NOTE:**
 >
@@ -226,7 +226,7 @@ Last modified: 2026-10-15 13:56:31 (PDT)
 
 > **NOTE:**
 >
-> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](sets-functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
+> **Definition 19 (Natural logarithm)** For a real number \\a \> 0\\, the **natural logarithm** of \\a\\, written \\\operatorname{log}\mathopen{}\left\\a\right\\\mathclose{}\\, is the real number \\y\\ with \\\operatorname{exp}\mathopen{}\left\\y\right\\\mathclose{} = a\\. The exponential function takes each positive value at exactly one input, so there is exactly one such \\y\\, and \\\log : (0, \infty) \to \mathbb{R}\\ is the [inverse function](functions.llms.md#def-inverse-function) of \\\operatorname{exp}\\ ([Definition 17](#def-exponential-function)).
 
 > **NOTE:**
 >

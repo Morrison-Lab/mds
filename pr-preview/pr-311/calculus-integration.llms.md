@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:56:31 (PDT)
+Last modified: 2026-10-15 15:23:10 (PDT)
 
 ## 1 Integration
 
@@ -131,7 +131,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 3 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets-functions.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
+> **Definition 3 (Differentiable on an interval)** A function \\f\\ is **differentiable on** an interval if it is differentiable ([Definition 6 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-differentiable)) at every point of the interval other than its [endpoints](sets.llms.md#def-interval), and, at each endpoint that belongs to the interval, it has the one-sided derivative ([Definition 12 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-derivative)) from inside the interval: the right-hand derivative at the left endpoint and the left-hand derivative at the right endpoint.
 >
 > ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
 
@@ -150,7 +150,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > 2.  \\\lim\_{x \to c} f(x)\\ exists, and
 > 3.  \\\lim\_{x \to c} f(x) = f(c)\\.
 >
-> If any of the three conditions fails, \\f\\ is **discontinuous** at \\c\\.
+> ([Larson and Edwards 2018, sec. 1.4](#ref-larsonCalc11e), p. 73)
+
+> **NOTE:**
+>
+> **Definition 5 (Discontinuous function)** If any of the three conditions of [Definition 4](#def-continuous) fails, \\f\\ is **discontinuous** at \\c\\.
 >
 > ([Larson and Edwards 2018, sec. 1.4](#ref-larsonCalc11e), p. 73)
 
@@ -174,7 +178,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 5 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ if both one-sided limits ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 4](#def-continuous)).
+> **Definition 6 (Jump discontinuity)** A function \\f\\ has a **jump discontinuity** at \\c\\ if both one-sided limits ([Definition 4 in Derivatives and Taylor Series](calculus-derivatives.llms.md#def-one-sided-limit)) \\\lim\_{x \to c^-} f(x)\\ and \\\lim\_{x \to c^+} f(x)\\ exist but are not equal. Then \\\lim\_{x \to c} f(x)\\ does not exist, so \\f\\ is discontinuous at \\c\\ ([Definition 5](#def-discontinuous)).
 
 > **NOTE:**
 >
@@ -185,7 +189,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 6 (Continuous on a closed interval)** A function \\f\\ is **continuous on** a closed interval \\\[a, b\]\\ if all three conditions hold:
+> **Definition 7 (Continuous on a closed interval)** A function \\f\\ is **continuous on** a closed interval \\\[a, b\]\\ if all three conditions hold:
 >
 > 1.  \\f\\ is continuous ([Definition 4](#def-continuous)) at every point of the open interval \\(a, b)\\,
 > 2.  \\\lim\_{x \to a^+} f(x) = f(a)\\, and
@@ -195,7 +199,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Example 6 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, the [square root](algebra-basics.llms.md#def-square-root), defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 6](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\,
+> **Example 6 (Continuity on \\\lbrack 0, 1\rbrack\\ uses one-sided limits at the endpoints)** Let \\f(x) = \sqrt{x}\\, the [square root](algebra-basics.llms.md#def-square-root), defined for \\x \ge 0\\. Because \\f\\ is undefined for \\x \< 0\\, only the right-hand limit of \\f\\ at \\0\\ makes sense, and [Definition 7](#def-continuous-on) asks only for that one-sided limit at the endpoint \\0\\. Here \\f\\ is continuous at every point of \\(0, 1)\\,
 >
 > \\ \begin{aligned} \lim\_{x \to 0^+} \sqrt{x} &= 0 \\ &= f(0), \end{aligned} \\
 >
@@ -203,11 +207,11 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > \\ \begin{aligned} \lim\_{x \to 1^-} \sqrt{x} &= 1 \\ &= f(1), \end{aligned} \\
 >
-> so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 6](#def-continuous-on)).
+> so \\f\\ is continuous on \\\[0, 1\]\\ ([Definition 7](#def-continuous-on)).
 
 > **NOTE:**
 >
-> **Example 7 (A function not continuous on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = 0\\ for \\0 \le x \< 1\\ and \\f(1) = 2\\. Conditions 1 and 2 of [Definition 6](#def-continuous-on) hold, but
+> **Example 7 (A function not continuous on \\\lbrack 0, 1\rbrack\\)** Let \\f(x) = 0\\ for \\0 \le x \< 1\\ and \\f(1) = 2\\. Conditions 1 and 2 of [Definition 7](#def-continuous-on) hold, but
 >
 > \\ \begin{aligned} \lim\_{x \to 1^-} f(x) &= 0 \\ &\ne 2 \\ &= f(1), \end{aligned} \\
 >
@@ -215,7 +219,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 7 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
+> **Definition 8 (Partition of an interval)** A **partition** \\\mathcal{P}\\ of a closed interval \\\[a, b\]\\ is a finite list of points
 >
 > \\ \begin{aligned} a &= x_0 \\ &\< x_1 \\ &\< \cdots \\ &\< x_n \\ &= b. \end{aligned} \\
 >
@@ -236,7 +240,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 8 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 7](#def-partition)) is its largest subinterval width,
+> **Definition 9 (Mesh of a partition)** The **mesh** of a partition \\\mathcal{P}\\ ([Definition 8](#def-partition)) is its largest subinterval width,
 >
 > \\\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \stackrel{\text{def}}{=}\max\_{i \in \mathopen{}\left\\1, \ldots, n\right\\\mathclose{}} \Delta x_i,\\
 >
@@ -250,11 +254,17 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 9 (Riemann sum)** Let \\f\\ be a function on \\\[a, b\]\\, let \\\mathcal{P}\\ be a partition
+> **Definition 10 (Sample point)** For a partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)), choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\.
+>
+> ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e))
+
+> **NOTE:**
+>
+> **Definition 11 (Riemann sum)** Let \\f\\ be a function on \\\[a, b\]\\, let \\\mathcal{P}\\ be a partition
 >
 > \\ \begin{aligned} a &= x_0 \\ &\< x_1 \\ &\< \cdots \\ &\< x_n \\ &= b \end{aligned} \\
 >
-> of \\\[a, b\]\\ ([Definition 7](#def-partition)), and choose a **sample point** \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ and these sample points is
+> of \\\[a, b\]\\ ([Definition 8](#def-partition)), and choose a sample point \\x_i^\*\\ ([Definition 10](#def-sample-point)) in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann sum** of \\f\\ for \\\mathcal{P}\\ and these sample points is
 >
 > \\\sum\_{i=1}^nf(x_i^\*)\\\Delta x_i,\\
 >
@@ -270,7 +280,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 10 (Riemann integral (definite integral))** Let \\f\\ be a [bounded](algebra-sums.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 7](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 9](#def-riemann-sum)) as the mesh ([Definition 8](#def-mesh)) shrinks to zero:
+> **Definition 12 (Riemann integral (definite integral))** Let \\f\\ be a [bounded](algebra-sums.llms.md#def-bounded) function on \\\[a, b\]\\. For each partition \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)), choose a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\. The **Riemann integral** of \\f\\ over \\\[a, b\]\\ (also called the **definite integral** of \\f\\ from \\a\\ to \\b\\) is the limit of the Riemann sums ([Definition 11](#def-riemann-sum)) as the mesh ([Definition 9](#def-mesh)) shrinks to zero:
 >
 > \\\int_a^b f(x)\\dx \stackrel{\text{def}}{=}\lim\_{\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{} \to 0} \sum\_{i=1}^nf(x_i^\*)\\\Delta x_i,\\
 >
@@ -280,7 +290,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 
 > **NOTE:**
 >
-> **Definition 11 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if the Riemann sums ([Definition 9](#def-riemann-sum)) \\\sum\_{i=1}^nf(x_i^\*)\\\Delta x_i\\, over partitions \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 7](#def-partition)) with a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\, approach a real-number limit as the mesh \\\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{}\\ ([Definition 8](#def-mesh)) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.
+> **Definition 13 (Riemann integrable)** A bounded function \\f\\ is **Riemann integrable on** \\\[a, b\]\\ if the Riemann sums ([Definition 11](#def-riemann-sum)) \\\sum\_{i=1}^nf(x_i^\*)\\\Delta x_i\\, over partitions \\\mathcal{P}\\ of \\\[a, b\]\\ ([Definition 8](#def-partition)) with a sample point \\x_i^\*\\ in each subinterval \\\[x\_{i-1}, x_i\]\\, approach a real-number limit as the mesh \\\mathopen{}\left\lVert\mathcal{P}\right\rVert\mathclose{}\\ ([Definition 9](#def-mesh)) shrinks to zero, and that limit is the same for every choice of the partitions and of the sample points.
 >
 > ([Larson and Edwards 2018, sec. 4.3](#ref-larsonCalc11e), p. 272)
 
@@ -290,26 +300,26 @@ Integration is the inverse operation of differentiation: it recovers a function 
 >
 > \\ \begin{aligned} \sum\_{i=1}^nf(x_i^\*)\\\Delta x_i &= \sum\_{i=1}^n2\\\Delta x_i && \text{(} f \text{ is } 2 \text{ everywhere)} \\ &= 2 \sum\_{i=1}^n\Delta x_i && \text{(factor out the constant)} \\ &= 2 \cdot(3 - 0) && \text{(the widths add up to the length of } \[0, 3\] \text{)} \\ &= 6, && \text{(multiply)} \end{aligned} \\
 >
-> so the sums have the same limit, \\6\\, for every choice: \\f\\ is Riemann integrable on \\\[0, 3\]\\ ([Definition 11](#def-integrable)), and \\\int_0^3 2\\dx = 6\\ ([Definition 10](#def-riemann-integral)).
+> so the sums have the same limit, \\6\\, for every choice: \\f\\ is Riemann integrable on \\\[0, 3\]\\ ([Definition 13](#def-integrable)), and \\\int_0^3 2\\dx = 6\\ ([Definition 12](#def-riemann-integral)).
 
 > **NOTE:**
 >
-> **Definition 12 (Integrand)** In an integral such as \\\int_a^b f(x)\\dx\\ ([Definition 10](#def-riemann-integral)) or \\\int f(x)\\dx\\ ([Definition 2](#def-indefinite-integral)), the function \\f\\ being integrated is the **integrand**.
+> **Definition 14 (Integrand)** In an integral such as \\\int_a^b f(x)\\dx\\ ([Definition 12](#def-riemann-integral)) or \\\int f(x)\\dx\\ ([Definition 2](#def-indefinite-integral)), the function \\f\\ being integrated is the **integrand**.
 
 > **NOTE:**
 >
 > **Example 13 (Integrands)**  
 >
-> - In \\\int_0^3 2\\dx = 6\\ ([Example 12](#exm-integrable-constant)), the integrand is the [constant function](algebra-exponentials.llms.md#def-constant-function) \\f(x) = 2\\, and the [limits of integration](notation.llms.md#def-lower-upper-limits) are \\0\\ and \\3\\.
+> - In \\\int_0^3 2\\dx = 6\\ ([Example 12](#exm-integrable-constant)), the integrand is the [constant function](algebra-exponentials.llms.md#def-constant-function) \\f(x) = 2\\, and the [limits of integration](notation.llms.md#def-limits-of-integration) are \\0\\ and \\3\\.
 > - In \\\int \mathopen{}\left(3x^2 - 1\right)\mathclose{}\\dx = x^3 - x + C\\ ([Example 2](#exm-integral-rules-quadratic)), the integrand is \\f(x) = 3x^2 - 1\\; its value at \\x = 2\\ is \\3 \cdot 4 - 1 = 11\\.
 
 > **NOTE:**
 >
-> *Remark 1* (Riemann integrable functions and Riemann integrals). A bounded function \\f\\ is Riemann integrable on \\\[a, b\]\\ exactly when its Riemann integral \\\int_a^b f(x)\\dx\\ ([Definition 10](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let \\g(x) = 1\\ when \\x\\ is [rational](notation.llms.md#def-rational-numbers) and \\g(x) = 0\\ when \\x\\ is [irrational](notation.llms.md#def-irrational-numbers), on \\\[0, 1\]\\. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives \\\sum\_{i=1}^n1 \cdot\Delta x_i = 1\\ for every partition, because the widths \\\Delta x_i\\ add up to the length \\1 - 0 = 1\\ of \\\[0, 1\]\\, and choosing every sample point irrational gives \\\sum\_{i=1}^n0 \cdot\Delta x_i = 0\\. The two limits differ, so \\g\\ is not Riemann integrable on \\\[0, 1\]\\, and \\\int_0^1 g(x)\\dx\\ does not exist.
+> *Remark 1* (Riemann integrable functions and Riemann integrals). A bounded function \\f\\ is Riemann integrable on \\\[a, b\]\\ exactly when its Riemann integral \\\int_a^b f(x)\\dx\\ ([Definition 12](#def-riemann-integral)) exists; the integral is the common limit of the sums. For example, let \\g(x) = 1\\ when \\x\\ is [rational](notation.llms.md#def-rational-numbers) and \\g(x) = 0\\ when \\x\\ is [irrational](notation.llms.md#def-irrational-numbers), on \\\[0, 1\]\\. Every subinterval contains both rational and irrational points. Choosing every sample point rational gives \\\sum\_{i=1}^n1 \cdot\Delta x_i = 1\\ for every partition, because the widths \\\Delta x_i\\ add up to the length \\1 - 0 = 1\\ of \\\[0, 1\]\\, and choosing every sample point irrational gives \\\sum\_{i=1}^n0 \cdot\Delta x_i = 0\\. The two limits differ, so \\g\\ is not Riemann integrable on \\\[0, 1\]\\, and \\\int_0^1 g(x)\\dx\\ does not exist.
 
 > **NOTE:**
 >
-> **Definition 13 (Equal-width Riemann sum)** For a bounded function \\f\\ on \\\[a, b\]\\ and a positive integer \\n\\, split \\\[a, b\]\\ into \\n\\ subintervals of equal width \\\Delta x \stackrel{\text{def}}{=}(b - a)/n\\, and let \\x_i^\*\\ be any point in the \\i\\-th subinterval. The **equal-width Riemann sum** is
+> **Definition 15 (Equal-width Riemann sum)** For a bounded function \\f\\ on \\\[a, b\]\\ and a positive integer \\n\\, split \\\[a, b\]\\ into \\n\\ subintervals of equal width \\\Delta x \stackrel{\text{def}}{=}(b - a)/n\\, and let \\x_i^\*\\ be any point in the \\i\\-th subinterval. The **equal-width Riemann sum** is
 >
 > \\S_n \stackrel{\text{def}}{=}\sum\_{i=1}^nf(x_i^\*)\\\Delta x.\\
 
@@ -326,7 +336,7 @@ Integration is the inverse operation of differentiation: it recovers a function 
 > - [The Method of Exhaustion](https://www.youtube.com/watch?v=h0gPomI3h8o&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 > - [Numeric Integration with Python](https://www.youtube.com/watch?v=f4nfLIkNv0A&list=PLRDl2inPrWQVu2OvnTvtkRpJ-wz-URMJx)
 
-Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand \\f\\ is continuous on \\\[a, b\]\\; continuity is [sufficient](proof-writing.llms.md#def-necessary-sufficient) there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity gives us.
+Before stating the Fundamental Theorem of Calculus, we record two prerequisite results. The usual statement of the Fundamental Theorem of Calculus assumes that the integrand \\f\\ is continuous on \\\[a, b\]\\; continuity is [sufficient](proof-writing.llms.md#def-sufficient-condition) there, though not necessary. The two results are “differentiability implies continuity”, which says where continuity comes from, and “continuity implies integrability”, which says what continuity gives us.
 
 > **NOTE:**
 >
@@ -384,7 +394,7 @@ Before stating the Fundamental Theorem of Calculus, we record two prerequisite r
 
 > **NOTE:**
 >
-> **Example 18 (Integrable but not continuous: a step function)** Let \\f(x) = 0\\ for \\x \< \tfrac{1}{2}\\ and \\f(x) = 1\\ for \\x \ge \tfrac{1}{2}\\. Then \\f\\ has a jump discontinuity ([Definition 5](#def-jump-discontinuity)) at \\x = \tfrac{1}{2}\\, but it is integrable on \\\[0, 1\]\\:
+> **Example 18 (Integrable but not continuous: a step function)** Let \\f(x) = 0\\ for \\x \< \tfrac{1}{2}\\ and \\f(x) = 1\\ for \\x \ge \tfrac{1}{2}\\. Then \\f\\ has a jump discontinuity ([Definition 6](#def-jump-discontinuity)) at \\x = \tfrac{1}{2}\\, but it is integrable on \\\[0, 1\]\\:
 >
 > \\ \begin{aligned} \int_0^1 f(x)\\dx &= \int_0^{1/2} 0\\dx + \int\_{1/2}^1 1\\dx \\ &= 0 + \tfrac{1}{2} \\ &= \tfrac{1}{2}. \end{aligned} \\
 >
@@ -434,13 +444,13 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 
 > **NOTE:**
 >
-> **Theorem 4 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 11](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 13](#def-riemann-sum-equal-width)) converge to the integral:
+> **Theorem 4 (Equal-width Riemann sums converge to the integral)** If \\f\\ is Riemann integrable on \\\[a, b\]\\ ([Definition 13](#def-integrable)), then for every choice of the sample points \\x_i^\*\\, the equal-width Riemann sums ([Definition 15](#def-riemann-sum-equal-width)) converge to the integral:
 >
 > \\\lim\_{n \to \infty} S_n = \int_a^b f(x)\\dx.\\
 
 > **NOTE:**
 >
-> *Proof*. The \\n\\ equal-width subintervals form a partition of \\\[a, b\]\\ whose mesh ([Definition 8](#def-mesh)) is \\(b - a)/n\\, which goes to \\0\\ as \\n \to \infty\\. So \\S_n\\ is one of the sums in the limit that defines the integral ([Definition 10](#def-riemann-integral)), along a sequence of partitions whose mesh goes to \\0\\, and a limit that has the same value for every choice of partitions has that value along this sequence too.
+> *Proof*. The \\n\\ equal-width subintervals form a partition of \\\[a, b\]\\ whose mesh ([Definition 9](#def-mesh)) is \\(b - a)/n\\, which goes to \\0\\ as \\n \to \infty\\. So \\S_n\\ is one of the sums in the limit that defines the integral ([Definition 12](#def-riemann-integral)), along a sequence of partitions whose mesh goes to \\0\\, and a limit that has the same value for every choice of partitions has that value along this sequence too.
 
 > **NOTE:**
 >
@@ -454,7 +464,7 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 
 > **NOTE:**
 >
-> **Definition 14 (Accumulation function)** Let \\f\\ be Riemann integrable on \\\[a, b\]\\ ([Definition 11](#def-integrable)). The **accumulation function** of \\f\\ from \\a\\ is the function \\F\\ on \\\[a, b\]\\ with \\F(a) \stackrel{\text{def}}{=}0\\ and
+> **Definition 16 (Accumulation function)** Let \\f\\ be Riemann integrable on \\\[a, b\]\\ ([Definition 13](#def-integrable)). The **accumulation function** of \\f\\ from \\a\\ is the function \\F\\ on \\\[a, b\]\\ with \\F(a) \stackrel{\text{def}}{=}0\\ and
 >
 > \\F(x) \stackrel{\text{def}}{=}\int_a^x f(t)\\dt \quad \text{for } a \< x \le b.\\
 >
@@ -478,17 +488,17 @@ Together, [Theorem 2](#thm-diff-implies-cont) and [Theorem 3](#thm-cont-implie
 
 > **NOTE:**
 >
-> *Remark 2* (Why the integration variable is called \\t\\). The letter \\t\\ inside the integral is a placeholder, renamed from \\x\\ so that \\x\\ can serve as the [upper limit](notation.llms.md#def-lower-upper-limits).
+> *Remark 2* (Why the integration variable is called \\t\\). The letter \\t\\ inside the integral is a placeholder, renamed from \\x\\ so that \\x\\ can serve as the [upper limit](notation.llms.md#def-upper-limit).
 
 > **NOTE:**
 >
-> **Theorem 5 (Fundamental Theorem of Calculus, Part 1 (derivative of an integral))** Let \\f\\ be a continuous function on a closed interval \\\[a, b\]\\. Let \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\ be the accumulation function of \\f\\ from \\a\\ ([Definition 14](#def-accumulation-function)). Then \\F\\ is differentiable and:
+> **Theorem 5 (Fundamental Theorem of Calculus, Part 1 (derivative of an integral))** Let \\f\\ be a continuous function on a closed interval \\\[a, b\]\\. Let \\F(x) = \int_a^x f(t)\\dt\\ for \\x \in \[a, b\]\\ be the accumulation function of \\f\\ from \\a\\ ([Definition 16](#def-accumulation-function)). Then \\F\\ is differentiable and:
 >
 > \\\frac{\partial}{\partial x}\int_a^x f(t)\\dt = f(x) \tag{1}\\
 >
 > > **NOTE:**
 > >
-> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 11](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 5](#def-jump-discontinuity)) elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
+> > Continuity on all of \\\[a, b\]\\ is a sufficient condition. More generally, Part 1 holds at any individual point \\x\\ where \\f\\ is integrable on \\\[a, b\]\\ (see [Definition 13](#def-integrable)) and continuous at \\x\\ (see [Definition 4](#def-continuous)), even if \\f\\ has jump discontinuities ([Definition 6](#def-jump-discontinuity)) elsewhere ([Rudin 1976](#ref-rudin1976principles), Theorem 6.20, p. 133).
 >
 > ([Larson and Edwards 2018](#ref-larsonCalc11e), Theorem 4.11, p. 288)
 
@@ -517,11 +527,11 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 
 > **NOTE:**
 >
-> **Definition 15 (Evaluation bracket)** For a function \\F\\ and numbers \\a\\ and \\b\\ where \\F\\ is defined, the **evaluation bracket** is the difference
+> **Definition 17 (Evaluation bracket)** For a function \\F\\ and numbers \\a\\ and \\b\\ where \\F\\ is defined, the **evaluation bracket** is the difference
 >
 > \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_{t=a}^{t=b} \stackrel{\text{def}}{=}F(b) - F(a).\\
 >
-> When the variable is clear from the context, it is written \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_a^b\\. Computing \\F(b) - F(a)\\ from the bracket is called **evaluating at the limits** (the [limits of integration](notation.llms.md#def-lower-upper-limits) \\a\\ and \\b\\).
+> When the variable is clear from the context, it is written \\\mathopen{}\left\[F(t)\right\]\mathclose{}\_a^b\\. Computing \\F(b) - F(a)\\ from the bracket is called **evaluating at the limits** (the [limits of integration](notation.llms.md#def-limits-of-integration) \\a\\ and \\b\\).
 
 > **NOTE:**
 >
@@ -905,7 +915,7 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 >
 > **Exercise 11 (Convolution of two uniform densities)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.41.
 >
-> Let \\f(x) = \mathbf{1}\_{\[0, 1\]}(x)\\ be the indicator of the unit interval:
+> Let \\f(x) = \mathbb{1}\_{\[0, 1\]}(x)\\ be the indicator of the unit interval:
 >
 > \\f(x) = \begin{cases} 1 & \text{if } x \in \[0, 1\] \\ 0 & \text{otherwise} \end{cases}\\
 >
@@ -940,6 +950,22 @@ The standard form of the FTC assumes \\f\\ is continuous on \\\[a, b\]\\; contin
 > \\(f \* f)(x) = \begin{cases} x & \text{if } 0 \le x \le 1 \\ 2 - x & \text{if } 1 \< x \le 2 \\ 0 & \text{otherwise} \end{cases}\\
 >
 > *Remark:* In probability theory, if \\X_1, X_2 \sim \text{Uniform}(0, 1)\\ independently, the probability density function of their sum \\S = X_1 + X_2\\ is the convolution of their individual densities, producing this symmetric triangular distribution on \\\[0, 2\]\\.
+
+> **NOTE:**
+>
+> **Theorem 7 (Convolution of two uniform densities)** Let \\f(x) = \mathbb{1}\_{\[0, 1\]}(x)\\ be the indicator of the unit interval. Then for every \\x \in \mathbb{R}\\,
+>
+> \\ (f \* f)(x) = \int\_{-\infty}^\infty f(t)f(x - t)\\dt = \begin{cases} x & \text{if } 0 \le x \le 1 \\ 2 - x & \text{if } 1 \< x \le 2 \\ 0 & \text{otherwise.} \end{cases} \\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 11](#exr-miller-int-uniform-convolution), worked in [Solution 11](#sol-miller-int-uniform-convolution).
+>
+> The integrand \\f(t)f(x - t)\\ equals \\1\\ when both \\t \in \[0, 1\]\\ and \\x - t \in \[0, 1\]\\, and \\0\\ otherwise. The second condition is \\x - 1 \le t \le x\\, so the integrand is \\1\\ exactly on the overlap \\\[\max(0, x - 1), \min(1, x)\]\\, and the integral is the length of that overlap.
+>
+> - If \\x \< 0\\ or \\x \> 2\\, the overlap is empty, so \\(f \* f)(x) = 0\\.
+> - If \\0 \le x \le 1\\, the overlap is \\\[0, x\]\\, so \\(f \* f)(x) = \int_0^x 1\\dt = x\\.
+> - If \\1 \< x \le 2\\, the overlap is \\\[x - 1, 1\]\\, so \\(f \* f)(x) = \int\_{x-1}^1 1\\dt = 2 - x\\.
 
 > **TIP:**
 >
