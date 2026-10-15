@@ -16,7 +16,12 @@ As @thm-cosine-sine-identity says, the squared coordinates add to
 #| echo: !expr knitr::is_html_output()
 #| message: false
 #| warning: false
-#| fig-alt: "The unit circle in the plane. A radius from the origin to the point (0.5, 0.866) on the circle makes an angle of pi/3 with the positive horizontal axis. A dashed vertical segment of length 0.866, the sine, joins the point to the horizontal axis, and the horizontal axis from the origin to 0.5 is marked as the cosine."
+#| fig-alt: >-
+#|   The unit circle in the plane. A radius from the origin to the point
+#|   (0.5, 0.866) on the circle makes an angle of pi/3 with the positive
+#|   horizontal axis. A dashed vertical segment of length 0.866, the sine,
+#|   joins the point to the horizontal axis, and the horizontal axis from
+#|   the origin to 0.5 is marked as the cosine.
 
 # angle in radians, and the point it reaches on the unit circle
 angle <- pi / 3
