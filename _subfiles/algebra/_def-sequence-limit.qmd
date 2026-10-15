@@ -1,5 +1,5 @@
 :::{#def-sequence-limit}
-#### Limit of a sequence
+#### Limit of a sequence (converges, convergent)
 
 A [sequence](sets-functions.qmd#def-sequence) $(a_n)$ of real numbers
 **converges** to a real number $L$,

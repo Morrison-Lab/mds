@@ -7,7 +7,6 @@ $$z = a + b\,i,$$
 
 where $a$ and $b$ are real numbers and $i$ is the imaginary unit (@def-imaginary-unit).
 The set of all complex numbers is $\bbC \eqdef \{a + b\,i : a, b \in \reals\}$.
-Two complex numbers are equal exactly when their real parts (@def-real-part) are equal and their imaginary parts (@def-imaginary-part) are equal.
 
 :::
 
@@ -26,6 +25,15 @@ The **real part** of a complex number $z = a + b\,i$ (@def-complex-number) is $\
 #### Imaginary part
 
 The **imaginary part** of a complex number $z = a + b\,i$ (@def-complex-number) is $\operatorname{Im} z \eqdef b$.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-complex-equality}
+#### Equality of complex numbers
+
+Two complex numbers (@def-complex-number) are equal exactly when their real parts (@def-real-part) are equal and their imaginary parts (@def-imaginary-part) are equal.
 
 :::
 
