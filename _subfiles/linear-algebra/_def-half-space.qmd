@@ -1,5 +1,5 @@
 :::{#def-half-space}
-#### Half-space
+#### Open half-space
 
 Let $\mathcal{H} = \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b = 0}$ be a hyperplane (@def-hyperplane).
 The two **open half-spaces** of $\mathcal{H}$ are
@@ -10,7 +10,14 @@ $$
 \mathcal{H}^- \eqdef \cb{\vx \in \reals^p : \dprod{\vec{w}}{\vx} + b < 0}.
 $$ {#eq-half-space}
 
-The **closed half-spaces** also include $\mathcal{H}$ itself:
+:::
+
+{{< slidebreak >}}
+
+:::{#def-closed-half-space}
+#### Closed half-space
+
+The **closed half-spaces** of the hyperplane $\mathcal{H}$ of @def-half-space also include $\mathcal{H}$ itself:
 $\mathcal{H}^+ \cup \mathcal{H}$ and $\mathcal{H}^- \cup \mathcal{H}$.
 
 :::

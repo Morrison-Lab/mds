@@ -3,7 +3,7 @@
 
 An **LU factorization** of an $n \times n$ matrix $\matr{A}$ is a product
 $\matr{A} = \matr{L} \matr{U}$
-with $\matr{L}$ unit lower triangular and $\matr{U}$ upper triangular (@def-triangular-matrix).
+with $\matr{L}$ unit lower triangular (@def-unit-lower-triangular-matrix) and $\matr{U}$ upper triangular (@def-triangular-matrix).
 
 :::
 

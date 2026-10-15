@@ -1,11 +1,20 @@
 :::{#def-eigenspace}
-#### Eigenspace and geometric multiplicity
+#### Eigenspace
 
 Let $\eigval$ be an eigenvalue of a $p \times p$ matrix $\matr{A}$ (@def-eigenvalue).
 The **eigenspace** of $\eigval$ is
 $\mathcal{E}_\eigval \eqdef \mathcal{N}(\matr{A} - \eigval\,\matr{I}_p)$.
-It is a subspace of $\reals^p$ (@thm-null-space-subspace),
-and its dimension (@def-dimension) is the **geometric multiplicity** of $\eigval$.
+It is a subspace of $\reals^p$ (@thm-null-space-subspace).
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-geometric-multiplicity}
+#### Geometric multiplicity
+
+The dimension (@def-dimension) of the eigenspace $\mathcal{E}_\eigval$ (@def-eigenspace)
+of an eigenvalue $\eigval$ is the **geometric multiplicity** of $\eigval$.
 
 :::
 
