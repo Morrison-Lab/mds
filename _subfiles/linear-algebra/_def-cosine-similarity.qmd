@@ -2,7 +2,7 @@
 #### Cosine similarity
 
 The **cosine similarity** between two nonzero vectors $\vx, \vy \in \reals^p$ is
-the cosine of the angle between them (@def-angle):
+their dot product divided by the product of their lengths:
 
 $$
 \cossim(\vx, \vy) \eqdef \frac{\vx \cdot \vy}{\norm{\vx}\,\norm{\vy}}.
