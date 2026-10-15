@@ -5,12 +5,12 @@ If $\matr{A}$ and $\matr{B}$ are $p \times p$ matrices, $c$ is a number and $\vx
 
 $$
 \ba
-\tp{\vx}(\matr{A} + \matr{B})\vx &= \tp{\vx}\matr{A}\vx + \tp{\vx}\matr{B}\vx, \\
-\tp{\vx}(c\,\matr{A})\vx &= c\,\tp{\vx}\matr{A}\vx.
+\tp{\vx}(\matr{A} + \matr{B})\vx &= \qform{\matr{A}}{\vx} + \qform{\matr{B}}{\vx}, \\
+\tp{\vx}(c\,\matr{A})\vx &= c\,\qform{\matr{A}}{\vx}.
 \ea
 $$
 
-So for a fixed $\vx$, the map $\matr{S} \mapsto \tp{\vx}\matr{S}\vx$ is linear in $\matr{S}$.
+So for a fixed $\vx$, the map $\matr{S} \mapsto \qform{\matr{S}}{\vx}$ is linear in $\matr{S}$.
 
 :::
 
@@ -24,12 +24,12 @@ $$
 &= \paren{\tp{\vx}\matr{A} + \tp{\vx}\matr{B}}\vx
 && \text{(distribute } \tp{\vx} \text{ over the sum)}
 \\
-&= \tp{\vx}\matr{A}\vx + \tp{\vx}\matr{B}\vx
+&= \qform{\matr{A}}{\vx} + \qform{\matr{B}}{\vx}
 && \text{(distribute } \vx \text{ over the sum)}
 \ea
 $$
 
-For the scalar, a number can be moved out of any product, so $\tp{\vx}(c\,\matr{A})\vx = c\,\tp{\vx}\matr{A}\vx$.
+For the scalar, a number can be moved out of any product, so $\tp{\vx}(c\,\matr{A})\vx = c\,\qform{\matr{A}}{\vx}$.
 
 :::
 
@@ -43,8 +43,8 @@ Then
 
 $$
 \ba
-\tp{\vx}\matr{A}\vx &= 1 + 4 + 12 = 17, \\
-\tp{\vx}\matr{I}\vx &= 1 + 4 = 5, \\
+\qform{\matr{A}}{\vx} &= 1 + 4 + 12 = 17, \\
+\qform{\matr{I}}{\vx} &= 1 + 4 = 5, \\
 \tp{\vx}(\matr{A} + \matr{I})\vx
 &= \tp{\vx}\begin{bmatrix} 2 & 2 \\ 0 & 4 \end{bmatrix}\vx \\
 &= 2 + 4 + 16 \\
@@ -53,7 +53,7 @@ $$
 $$
 
 which equals $17 + 5$.
-In particular, $\tp{\vx}(\matr{A} + c\,\matr{I})\vx = \tp{\vx}\matr{A}\vx + c\,\norm{\vx}^2$ for every number $c$, because $\tp{\vx}\matr{I}\vx = \tp{\vx}\vx = \norm{\vx}^2$.
+In particular, $\tp{\vx}(\matr{A} + c\,\matr{I})\vx = \qform{\matr{A}}{\vx} + c\,\norm{\vx}^2$ for every number $c$, because $\qform{\matr{I}}{\vx} = \tp{\vx}\vx = \norm{\vx}^2$.
 This is how two quadratic terms in the same vector combine into a single quadratic form.
 
 :::

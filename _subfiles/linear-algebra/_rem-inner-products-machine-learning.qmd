@@ -29,7 +29,7 @@ tailors geometric notions of distance, angle, and projection to the structure of
    In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations.
    The angle between embeddings captures semantic similarity through cosine similarity (@def-cosine-similarity):
    $$
-   \operatorname{cossim}(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
+   \cossim(\vx, \vy) = \frac{\iprod{\vx}{\vy}}{\norm{\vx}\,\norm{\vy}}.
    $$
    When embedding vectors are normalized to unit Euclidean norm ($\norm{\vx} = 1$ and $\norm{\vy} = 1$),
    cosine similarity equals the inner product $\iprod{\vx}{\vy}$.

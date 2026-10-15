@@ -9,7 +9,7 @@ Then the [Pearson correlation coefficient](https://morrison-lab.github.io/sds/ex
 of the $n$ pairs $(x_i, y_i)$ is the cosine similarity (@def-cosine-similarity) of the centered vectors:
 
 $$
-r = \operatorname{cossim}(\tilde{\vx}, \tilde{\vy}).
+r = \cossim(\tilde{\vx}, \tilde{\vy}).
 $$
 
 :::
@@ -49,10 +49,10 @@ $$
 \ea
 $$
 
-so $r = \operatorname{cossim}(\tilde{\vx}, \tilde{\vy}) = 1 / 2$.
+so $r = \cossim(\tilde{\vx}, \tilde{\vy}) = 1 / 2$.
 
 Without centering, $\vx \cdot \vy = 1 + 6 + 6 = 13$ and $\norm{\vx} = \norm{\vy} = \sqrt{14}$,
-so $\operatorname{cossim}(\vx, \vy) = 13 / 14$.
+so $\cossim(\vx, \vy) = 13 / 14$.
 The uncentered value is close to $1$ mostly because both vectors have positive entries and the same mean, not because they move together.
 
 :::

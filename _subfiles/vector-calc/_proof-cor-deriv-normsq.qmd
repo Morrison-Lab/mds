@@ -5,7 +5,7 @@ Applying @cor-quadratic-form-symmetric with $\matr{S} = \matr{I}_{p \times p}$ (
 $$
 \ba
 \deriv{\vcoef}(\dprod{\vcoef}{\vcoef})
-&= \deriv{\vcoef}(\tp{\vcoef}\matr{I}_{p \times p}\vcoef)
+&= \deriv{\vcoef}(\qform{\matr{I}_{p \times p}}{\vcoef})
 && \text{(rewrite with identity matrix)} \\
 &= 2\matr{I}_{p \times p}\vcoef
 && \text{(derivative of a quadratic form, with } \matr{S} = \matr{I}_{p \times p} \text{)} \\

@@ -6,7 +6,7 @@ $\set{(\vx, f(\vx)) \mid \vx \in \reals^p}$
 of a function
 
 $$
-f(\vx) = \tp{\vx}\matr{S}\vx + \dprod{\vecf{b}}{\vx} + c,
+f(\vx) = \qform{\matr{S}}{\vx} + \dprod{\vecf{b}}{\vx} + c,
 $$
 
 where $\matr{S}$ is a nonzero symmetric $p \times p$ matrix
@@ -31,7 +31,7 @@ so the graph of
 
 $$
 \begin{aligned}
-f(\vx) &= \tp{\vx}\matr{I}_2\vx \\
+f(\vx) &= \qform{\matr{I}_2}{\vx} \\
 &= x_1^2 + x_2^2
 \end{aligned}
 $$

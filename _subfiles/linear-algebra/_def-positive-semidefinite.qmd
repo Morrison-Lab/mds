@@ -6,7 +6,7 @@ if it satisfies both conditions:
 
 - $\matr{A}$ is symmetric (@def-symmetric-matrix).
 - Every quadratic form (@def-quadratic-form) in $\matr{A}$ is non-negative:
-  $\tp{\vx}\matr{A}\vx \ge 0$ for every vector $\vx$ of length $p$.
+  $\qform{\matr{A}}{\vx} \ge 0$ for every vector $\vx$ of length $p$.
 
 :::
 
@@ -21,7 +21,7 @@ For any $\vx = (x_1, x_2)$:
 
 $$
 \ba
-\tp{\vx}\matr{B}\vx
+\qform{\matr{B}}{\vx}
 &= x_1^2 + x_1 x_2 + x_2 x_1 + x_2^2
 && \text{(multiply out the quadratic form)}
 \\

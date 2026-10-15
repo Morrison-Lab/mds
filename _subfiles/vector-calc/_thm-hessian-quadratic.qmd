@@ -2,7 +2,7 @@
 #### Hessian of a quadratic form
 
 If $\matr{S}$ is a symmetric $p \times p$ matrix that is constant with respect to $\vx$,
-then $f(\vx) = \tp{\vx} \matr{S} \vx$ has $\matr{H}_f(\vx) = 2 \matr{S}$ for every $\vx$.
+then $f(\vx) = \qform{\matr{S}}{\vx}$ has $\matr{H}_f(\vx) = 2 \matr{S}$ for every $\vx$.
 
 :::
 
@@ -11,7 +11,7 @@ then $f(\vx) = \tp{\vx} \matr{S} \vx$ has $\matr{H}_f(\vx) = 2 \matr{S}$ for eve
 $$
 \ba
 \matr{H}_f(\vx)
-&= \deriv{\vx} \tp{\paren{\deriv{\vx} (\tp{\vx} \matr{S} \vx)}}
+&= \deriv{\vx} \tp{\paren{\deriv{\vx} (\qform{\matr{S}}{\vx})}}
 && \text{(@def-hessian)}
 \\
 &= \deriv{\vx} \tp{\paren{2 \matr{S} \vx}}

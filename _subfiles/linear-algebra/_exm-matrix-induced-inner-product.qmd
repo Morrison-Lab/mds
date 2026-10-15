@@ -11,7 +11,7 @@ For any nonzero vector $\vx = (x_1, x_2) \in \reals^2$:
 
 $$
 \ba
-\tp{\vx}\matr{A}\vx
+\qform{\matr{A}}{\vx}
 &= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2
 && \text{(expand the quadratic form)}
 \\

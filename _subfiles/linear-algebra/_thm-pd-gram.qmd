@@ -27,7 +27,7 @@ $$
 
 $$
 \ba
-\tp{\vx} \matr{A} \vx
+\qform{\matr{A}}{\vx}
 &= \tp{\vx}\,\tp{\matr{B}}\,\matr{B} \vx
 && \text{(substitute } \matr{A} \text{)}
 \\

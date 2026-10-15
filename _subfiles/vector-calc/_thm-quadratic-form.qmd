@@ -7,7 +7,7 @@ For a quadratic form
 if $\matr{S}$ is a $p \times p$ matrix that is constant with respect to $\vcoef$, then:
 
 $$
-\underbrace{\deriv{\vcoef} (\tp{\vcoef} \matr{S} \vcoef)}_{p \times 1} = \underbrace{(\matr{S} + \tp{\matr{S}}) \vcoef}_{p \times 1}.
+\underbrace{\deriv{\vcoef} (\qform{\matr{S}}{\vcoef})}_{p \times 1} = \underbrace{(\matr{S} + \tp{\matr{S}}) \vcoef}_{p \times 1}.
 $$
 
 :::
