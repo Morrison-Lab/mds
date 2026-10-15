@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 02:10:58 (PDT)
+Last modified: 2026-10-15 08:34:36 (PDT)
 
 ## 1 Similarity and diagonalization
 
@@ -462,7 +462,7 @@ Last modified: 2026-10-15 02:10:58 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (Leading block of a square matrix)** When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ of [Definition 5](#def-block-matrix) with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
+> **Definition 6 (Leading block (top-left block) of a square matrix)** When \\\mathbf{X}\\ is \\n \times n\\ and \\1 \le k \le n\\, the \\k \times k\\ matrix of the entries \\x\_{ij}\\ with \\i, j \le k\\ is the **leading** (or **top-left**) \\k \times k\\ **block** of \\\mathbf{X}\\; for \\k \< n\\ it is the block \\\mathbf{A}\\ of [Definition 5](#def-block-matrix) with \\l = k\\, and for \\k = n\\ it is \\\mathbf{X}\\ itself.
 
 > **NOTE:**
 >
