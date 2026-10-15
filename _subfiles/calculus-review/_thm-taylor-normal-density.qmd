@@ -1,0 +1,15 @@
+:::{#thm-taylor-normal-density}
+#### Maclaurin polynomial of the standard normal density
+
+The Maclaurin polynomial (@def-maclaurin-polynomial) of degree 3 of the standard normal density
+$\normpdf(x) = \frac{1}{\sqrt{2\pi}}\expf{-\frac{x^2}{2}}$ is
+
+$$P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}$$
+
+:::
+
+::: proof
+
+This is the solution to @exr-miller-taylor-normal-density, worked in @sol-miller-taylor-normal-density.
+
+:::
