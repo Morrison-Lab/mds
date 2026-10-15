@@ -352,7 +352,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-14 15:47:20 (PDT)</p>
+  <p class="date">Last modified: 2026-10-14 17:33:03 (PDT)</p>
 </section><section class="slide level2"></section><section id="sec-inner-products" class="slide level2" data-number="1"><h2>
 <span class="header-section-number">1</span> Inner products</h2>
 <div id="def-inner-product" class="theorem definition">
@@ -1116,6 +1116,34 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \operatorname{cossim}(\tilde{x}, \tilde{y}) \stackrel{\text{def}}{=}\frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\,\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}.
 \]</span></p>
 </div>
+</section><section class="slide level2"><div id="thm-pearson-cosine-centered" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 6 (Pearson correlation is the cosine similarity of the centered vectors)</strong></span> Let <span class="math inline">\(\tilde{x}, \tilde{y}\in \mathbb{R}^n\)</span> be two vectors that are not constant, with means <span class="math inline">\(\bar{x} = \frac{1}{n}\sum_{i=1}^nx_i\)</span> and <span class="math inline">\(\bar{y} = \frac{1}{n}\sum_{i=1}^ny_i\)</span>. Write <span class="math inline">\(\tilde{\tilde{x}} = \tilde{x}- \bar{x}\,\tilde{1}\)</span> and <span class="math inline">\(\tilde{\tilde{y}} = \tilde{y}- \bar{y}\,\tilde{1}\)</span> for the <strong>centered</strong> vectors, whose means are zero. Then the <a href="https://morrison-lab.github.io/sds/exploratory-descriptive.html#def-pearson-r">Pearson correlation coefficient</a> <span class="math inline">\(r\)</span> of the <span class="math inline">\(n\)</span> pairs <span class="math inline">\((x_i, y_i)\)</span> is the cosine similarity (<a href="#/def-cosine-similarity" class="quarto-xref">Definition&nbsp;9</a>) of the centered vectors:</p>
+<p><span class="math display">\[
+r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\tilde{\tilde{x}}\)</span> is <span class="math inline">\(x_i - \bar{x}\)</span>, and entry <span class="math inline">\(i\)</span> of <span class="math inline">\(\tilde{\tilde{y}}\)</span> is <span class="math inline">\(y_i - \bar{y}\)</span>. Neither centered vector is zero, because neither <span class="math inline">\(\tilde{x}\)</span> nor <span class="math inline">\(\tilde{y}\)</span> is constant, so the cosine similarity is defined. The three pieces of the cosine similarity are</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{\tilde{x}} \cdot \tilde{\tilde{y}} &amp;= \sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y}), \\
+\mathopen{}\left\lVert\tilde{\tilde{x}}\right\rVert\mathclose{} &amp;= \sqrt{\sum_{i=1}^n(x_i - \bar{x})^2}, \\
+\mathopen{}\left\lVert\tilde{\tilde{y}}\right\rVert\mathclose{} &amp;= \sqrt{\sum_{i=1}^n(y_i - \bar{y})^2},
+\end{aligned}
+\]</span></p>
+<p>by the definitions of the dot product and the Euclidean norm. Dividing the first by the product of the other two gives the formula for <span class="math inline">\(r\)</span>.</p>
+</div>
+</section><section class="slide level2"><div id="exm-pearson-cosine-centered" class="theorem example">
+<p><span class="theorem-title"><strong>Example 16 (Centering changes the cosine similarity)</strong></span> Take <span class="math inline">\(\tilde{x}= (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{y}= (1, 3, 2)\)</span>. Their means are <span class="math inline">\(\bar{x} = \bar{y} = 2\)</span>, so <span class="math inline">\(\tilde{\tilde{x}} = (-1, 0, 1)\)</span> and <span class="math inline">\(\tilde{\tilde{y}} = (-1, 1, 0)\)</span>. Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tilde{\tilde{x}} \cdot \tilde{\tilde{y}} &amp;= 1 + 0 + 0 = 1, \\
+\mathopen{}\left\lVert\tilde{\tilde{x}}\right\rVert\mathclose{} &amp;= \mathopen{}\left\lVert\tilde{\tilde{y}}\right\rVert\mathclose{} = \sqrt{2},
+\end{aligned}
+\]</span></p>
+<p>so <span class="math inline">\(r = \operatorname{cossim}(\tilde{\tilde{x}}, \tilde{\tilde{y}}) = 1 / 2\)</span>.</p>
+<p>Without centering, <span class="math inline">\(\tilde{x}\cdot \tilde{y}= 1 + 6 + 6 = 13\)</span> and <span class="math inline">\(\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = \mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = \sqrt{14}\)</span>, so <span class="math inline">\(\operatorname{cossim}(\tilde{x}, \tilde{y}) = 13 / 14\)</span>. The uncentered value is close to <span class="math inline">\(1\)</span> mostly because both vectors have positive entries and the same mean, not because they move together.</p>
+</div>
 </section><section id="sec-gram-schmidt" class="slide level2" data-number="3"><h2>
 <span class="header-section-number">3</span> Orthonormal bases and Gram-Schmidt</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1132,7 +1160,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </div>
 </div>
 </section><section class="slide level2"><div id="thm-dot-linear-sum" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 6 (The dot product of a vector with a linear combination)</strong></span> For vectors <span class="math inline">\(\tilde{x}, \tilde{u}_1, \ldots, \tilde{u}_k \in \mathbb{R}^p\)</span> and numbers <span class="math inline">\(c_1, \ldots, c_k\)</span>, with <span class="math inline">\(k \ge 1\)</span>,</p>
+<p><span class="theorem-title"><strong>Theorem 7 (The dot product of a vector with a linear combination)</strong></span> For vectors <span class="math inline">\(\tilde{x}, \tilde{u}_1, \ldots, \tilde{u}_k \in \mathbb{R}^p\)</span> and numbers <span class="math inline">\(c_1, \ldots, c_k\)</span>, with <span class="math inline">\(k \ge 1\)</span>,</p>
 <p><span class="math display">\[
 \tilde{x} \cdot \mathopen{}\left(\sum_{j=1}^{k} c_j \tilde{u}_j\right)\mathclose{}
 = \sum_{j=1}^{k} c_j\,(\tilde{x} \cdot \tilde{u}_j).
@@ -1164,17 +1192,17 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-dot-linear-sum" class="theorem example">
-<p><span class="theorem-title"><strong>Example 16 (Dotting with a combination of three vectors)</strong></span> Let <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span> and take the combination <span class="math inline">\(2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)\)</span>. Directly,</p>
+<p><span class="theorem-title"><strong>Example 17 (Dotting with a combination of three vectors)</strong></span> Let <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span> and take the combination <span class="math inline">\(2\,(1, 0, 0) - (0, 1, 0) + 4\,(0, 0, 1) = (2, -1, 4)\)</span>. Directly,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{x} \cdot (2, -1, 4) &amp;= 2 - 2 + 12 \\
 &amp;= 12.
 \end{aligned}
 \]</span></p>
-<p>By <a href="#/thm-dot-linear-sum" class="quarto-xref">Theorem&nbsp;6</a>, <span class="math inline">\(2 \cdot 1 - 1 \cdot 2 + 4 \cdot 3 = 12\)</span>, the same number.</p>
+<p>By <a href="#/thm-dot-linear-sum" class="quarto-xref">Theorem&nbsp;7</a>, <span class="math inline">\(2 \cdot 1 - 1 \cdot 2 + 4 \cdot 3 = 12\)</span>, the same number.</p>
 </div>
 </section><section class="slide level2"><div id="thm-orthonormal-independent" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 7 (Orthonormal vectors are linearly independent)</strong></span> If <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;17 in Vectors</a>), then they are linearly independent (<a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 8 (Orthonormal vectors are linearly independent)</strong></span> If <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;17 in Vectors</a>), then they are linearly independent (<a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Suppose <span class="math inline">\(\sum_{j=1}^{k} c_j \tilde{q}_j = \tilde{0}\)</span>, and fix any <span class="math inline">\(i\)</span> between <span class="math inline">\(1\)</span> and <span class="math inline">\(k\)</span>. Then</p>
@@ -1188,7 +1216,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(substitute the supposed equation)}
 \\
 &amp;= \sum_{j=1}^{k} c_j\,(\tilde{q}_i \cdot \tilde{q}_j)
-&amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~6}}\text{)}
+&amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)}
 \\
 &amp;= c_i.
 &amp;&amp; \text{(} \tilde{q}_i \cdot \tilde{q}_j \text{ is } 1 \text{ if } j = i \text{ and } 0 \text{ otherwise)}
@@ -1197,7 +1225,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>So every <span class="math inline">\(c_i = 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthonormal-independent" class="theorem example">
-<p><span class="theorem-title"><strong>Example 17 (Three orthonormal vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let</p>
+<p><span class="theorem-title"><strong>Example 18 (Three orthonormal vectors in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let</p>
 <p><span class="math display">\[
 \tilde{q}_1 = (0, 0, 1), \quad
 \tilde{q}_2 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0), \quad
@@ -1217,25 +1245,25 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;= 0.
 \end{aligned}
 \]</span></p>
-<p>So by <a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;7</a> they are linearly independent, with no need to solve <span class="math inline">\(c_1 \tilde{q}_1 + c_2 \tilde{q}_2 + c_3 \tilde{q}_3 = \tilde{0}\)</span>.</p>
+<p>So by <a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a> they are linearly independent, with no need to solve <span class="math inline">\(c_1 \tilde{q}_1 + c_2 \tilde{q}_2 + c_3 \tilde{q}_3 = \tilde{0}\)</span>.</p>
 <p>The converse fails: <span class="math inline">\((1, 0)\)</span> and <span class="math inline">\((1, 1)\)</span> are linearly independent, since <span class="math inline">\(c_1 (1, 0) + c_2 (1, 1) = (c_1 + c_2, c_2)\)</span> is <span class="math inline">\(\tilde{0}\)</span> only if <span class="math inline">\(c_2 = 0\)</span> and then <span class="math inline">\(c_1 = 0\)</span>, but they are not orthonormal, since <span class="math inline">\((1, 0) \cdot (1, 1) = 1 \ne 0\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="def-orthonormal-basis" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11 (Orthonormal basis)</strong></span> An <strong>orthonormal basis</strong> of a subspace <span class="math inline">\(\mathcal{S}\)</span> of <span class="math inline">\(\mathbb{R}^p\)</span> is a basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>) whose vectors are orthonormal (<a href="./linear-algebra-vectors.html#def-orthonormal-vectors">Definition&nbsp;17 in Vectors</a>).</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exm-orthonormal-basis" class="theorem example">
-<p><span class="theorem-title"><strong>Example 18 (Orthonormal bases of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 19 (Orthonormal bases of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> &nbsp;</p>
 <ul>
 <li>The indicator vectors <span class="math inline">\(\tilde{e}_1, \tilde{e}_2, \tilde{e}_3\)</span> are orthonormal
 <ol start="2" class="example" type="1">
 <li>and a basis of <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>).</li>
 </ol>
 </li>
-<li>The vectors <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <a href="#/exm-orthonormal-independent" class="quarto-xref">Example&nbsp;17</a> are orthonormal and linearly independent, so they are a basis of their span (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>), which therefore has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and is all of <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). So they are an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span> too.</li>
+<li>The vectors <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <a href="#/exm-orthonormal-independent" class="quarto-xref">Example&nbsp;18</a> are orthonormal and linearly independent, so they are a basis of their span (<a href="./linear-algebra-subspaces.html#def-basis">Definition&nbsp;6 in Subspaces and Rank</a>), which therefore has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and is all of <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). So they are an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span> too.</li>
 </ul>
 </div>
 </section><section class="slide level2"><div id="exm-not-orthonormal-basis" class="theorem example">
-<p><span class="theorem-title"><strong>Example 19 (Bases that are not orthonormal, and orthonormal lists that are not bases)</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Example 20 (Bases that are not orthonormal, and orthonormal lists that are not bases)</strong></span> &nbsp;</p>
 <ul>
 <li>
 <span class="math inline">\((1, 0), (1, 1)\)</span> is a basis of <span class="math inline">\(\mathbb{R}^2\)</span> (<a href="./linear-algebra-subspaces.html#exm-basis">Example&nbsp;11 in Subspaces and Rank</a>). It is not an orthonormal basis, since <span class="math inline">\((1, 0) \cdot (1, 1) = 1\)</span>.</li>
@@ -1244,7 +1272,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </ul>
 </div>
 </section><section class="slide level2"><div id="thm-orthonormal-expansion" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8 (Coordinates in an orthonormal basis are dot products)</strong></span> If <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> is an orthonormal basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>), then every <span class="math inline">\(\tilde{x} \in \mathcal{S}\)</span> satisfies</p>
+<p><span class="theorem-title"><strong>Theorem 9 (Coordinates in an orthonormal basis are dot products)</strong></span> If <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> is an orthonormal basis of a subspace <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>), then every <span class="math inline">\(\tilde{x} \in \mathcal{S}\)</span> satisfies</p>
 <p><span class="math display">\[
 \tilde{x} = \sum_{i=1}^{k} (\tilde{q}_i \cdot \tilde{x})\,\tilde{q}_i.
 \]</span></p>
@@ -1258,7 +1286,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(substitute)}
 \\
 &amp;= \sum_{j=1}^{k} c_j\,(\tilde{q}_i \cdot \tilde{q}_j)
-&amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~6}}\text{)}
+&amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)}
 \\
 &amp;= c_i,
 &amp;&amp; \text{(}\href{linear-algebra-vectors.qmd#def-orthonormal-vectors}{\text{Definition~17 in Vectors}}\text{)}
@@ -1267,7 +1295,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>so each coefficient <span class="math inline">\(c_i\)</span> is <span class="math inline">\(\tilde{q}_i \cdot \tilde{x}\)</span>.</p>
 </div>
 </section><section class="slide level2"><div id="exm-orthonormal-expansion" class="theorem example">
-<p><span class="theorem-title"><strong>Example 20 (Expanding a vector in an orthonormal basis)</strong></span> With the orthonormal basis <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <span class="math inline">\(\mathbb{R}^3\)</span> from <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;18</a> and <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span>: <span class="math inline">\(\tilde{q}_1 \cdot \tilde{x} = 3\)</span>,</p>
+<p><span class="theorem-title"><strong>Example 21 (Expanding a vector in an orthonormal basis)</strong></span> With the orthonormal basis <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> of <span class="math inline">\(\mathbb{R}^3\)</span> from <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;19</a> and <span class="math inline">\(\tilde{x} = (1, 2, 3)\)</span>: <span class="math inline">\(\tilde{q}_1 \cdot \tilde{x} = 3\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_2 \cdot \tilde{x} &amp;= \tfrac{1}{\sqrt{2}}\,(1 + 2) \\
@@ -1296,7 +1324,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(add entrywise)}
 \end{aligned}
 \]</span></p>
-<p>which is <span class="math inline">\(\tilde{x}\)</span>, as <a href="#/thm-orthonormal-expansion" class="quarto-xref">Theorem&nbsp;8</a> says.</p>
+<p>which is <span class="math inline">\(\tilde{x}\)</span>, as <a href="#/thm-orthonormal-expansion" class="quarto-xref">Theorem&nbsp;9</a> says.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="def-gram-schmidt" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 12 (Gram-Schmidt process)</strong></span> The <strong>Gram-Schmidt process</strong> takes vectors <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span> and, for <span class="math inline">\(i = 1, 2, \ldots, k\)</span> in turn:</p>
@@ -1311,7 +1339,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>The output is the list <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \ldots\)</span> produced before the process stops, or all <span class="math inline">\(k\)</span> of them if it never stops.</p>
 </div>
 </section><section class="slide level2"><div id="exm-gram-schmidt" class="theorem example">
-<p><span class="theorem-title"><strong>Example 21 (Two steps of Gram-Schmidt in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 1, 0)\)</span> and <span class="math inline">\(\tilde{a}_2 = (1, 0, 1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 22 (Two steps of Gram-Schmidt in <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 1, 0)\)</span> and <span class="math inline">\(\tilde{a}_2 = (1, 0, 1)\)</span>.</p>
 <ul>
 <li><p><strong>Step 1.</strong> <span class="math inline">\(\tilde{\tilde{q}}_1 = (1, 1, 0)\)</span>, with norm <span class="math inline">\(\sqrt{2}\)</span>, so <span class="math inline">\(\tilde{q}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)\)</span>.</p></li>
 <li>
@@ -1354,7 +1382,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-gram-schmidt-stops" class="theorem example">
-<p><span class="theorem-title"><strong>Example 22 (Gram-Schmidt stops on dependent vectors)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 2)\)</span> and <span class="math inline">\(\tilde{a}_2 = (2, 4)\)</span>. Step 1 gives <span class="math inline">\(\tilde{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)\)</span>. In step 2,</p>
+<p><span class="theorem-title"><strong>Example 23 (Gram-Schmidt stops on dependent vectors)</strong></span> Let <span class="math inline">\(\tilde{a}_1 = (1, 2)\)</span> and <span class="math inline">\(\tilde{a}_2 = (2, 4)\)</span>. Step 1 gives <span class="math inline">\(\tilde{q}_1 = \tfrac{1}{\sqrt{5}}\,(1, 2)\)</span>. In step 2,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_1 \cdot \tilde{a}_2 &amp;= \tfrac{1}{\sqrt{5}}\,(2 + 8) \\
@@ -1373,7 +1401,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>so the process stops: <span class="math inline">\(\tilde{a}_2\)</span> is a multiple of <span class="math inline">\(\tilde{a}_1\)</span>.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="thm-gram-schmidt" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 9 (What Gram-Schmidt produces)</strong></span> Run the Gram-Schmidt process (<a href="#/def-gram-schmidt" class="quarto-xref">Definition&nbsp;12</a>) on <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 10 (What Gram-Schmidt produces)</strong></span> Run the Gram-Schmidt process (<a href="#/def-gram-schmidt" class="quarto-xref">Definition&nbsp;12</a>) on <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k \in \mathbb{R}^p\)</span>.</p>
 <ol type="1">
 <li>If it has produced <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_i\)</span> without stopping, then <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_i\)</span> are orthonormal and <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{q}_1, \ldots, \tilde{q}_i\right\}\mathclose{}
 = \operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_i\right\}\mathclose{}\)</span>.</li>
@@ -1389,7 +1417,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;= \operatorname{span}\mathopen{}\left\{\tilde{q}_1, \ldots, \tilde{q}_{i-1}\right\}\mathclose{}.
 \end{aligned}
 \]</span></p>
-<p>The orthonormal vectors <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_{i-1}\)</span> are linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;7</a>) and span <span class="math inline">\(\mathcal{S}_{i-1}\)</span>, so they are an orthonormal basis of it.</p>
+<p>The orthonormal vectors <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_{i-1}\)</span> are linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a>) and span <span class="math inline">\(\mathcal{S}_{i-1}\)</span>, so they are an orthonormal basis of it.</p>
 <p><em><span class="math inline">\(\tilde{\tilde{q}}_i\)</span> is orthogonal to the earlier <span class="math inline">\(\tilde{q}\)</span>’s.</em> For each <span class="math inline">\(l &lt; i\)</span>,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1398,7 +1426,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(}\href{#def-gram-schmidt}{\text{Definition~12}}\text{, as a linear combination)}
 \\
 &amp;= 1\,(\tilde{q}_l \cdot \tilde{a}_i) + \sum_{j=1}^{i-1} \mathopen{}\left(-\tilde{q}_j \cdot \tilde{a}_i\right)\mathclose{}\,(\tilde{q}_l \cdot \tilde{q}_j)
-&amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~6}}\text{)}
+&amp;&amp; \text{(}\href{#thm-dot-linear-sum}{\text{Theorem~7}}\text{)}
 \\
 &amp;= \tilde{q}_l \cdot \tilde{a}_i - \sum_{j=1}^{i-1} (\tilde{q}_j \cdot \tilde{a}_i)\,(\tilde{q}_l \cdot \tilde{q}_j)
 &amp;&amp; \text{(} 1\,z = z \text{, and pull the minus signs out of the sum)}
@@ -1410,7 +1438,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p><em>Part 2 at step <span class="math inline">\(i\)</span>.</em> If <span class="math inline">\(\tilde{\tilde{q}}_i = \tilde{0}\)</span>, then <span class="math inline">\(\tilde{a}_i = \sum_{j&lt;i} (\tilde{q}_j \cdot \tilde{a}_i)\,\tilde{q}_j \in \mathcal{S}_{i-1}\)</span>. Conversely, if <span class="math inline">\(\tilde{a}_i \in \mathcal{S}_{i-1}\)</span>, then <span class="math inline">\(\tilde{a}_i = \sum_{j&lt;i} (\tilde{q}_j \cdot \tilde{a}_i)\,\tilde{q}_j\)</span> (<a href="#/thm-orthonormal-expansion" class="quarto-xref">Theorem&nbsp;8</a>), so <span class="math inline">\(\tilde{\tilde{q}}_i = \tilde{0}\)</span>.</p>
+<p><em>Part 2 at step <span class="math inline">\(i\)</span>.</em> If <span class="math inline">\(\tilde{\tilde{q}}_i = \tilde{0}\)</span>, then <span class="math inline">\(\tilde{a}_i = \sum_{j&lt;i} (\tilde{q}_j \cdot \tilde{a}_i)\,\tilde{q}_j \in \mathcal{S}_{i-1}\)</span>. Conversely, if <span class="math inline">\(\tilde{a}_i \in \mathcal{S}_{i-1}\)</span>, then <span class="math inline">\(\tilde{a}_i = \sum_{j&lt;i} (\tilde{q}_j \cdot \tilde{a}_i)\,\tilde{q}_j\)</span> (<a href="#/thm-orthonormal-expansion" class="quarto-xref">Theorem&nbsp;9</a>), so <span class="math inline">\(\tilde{\tilde{q}}_i = \tilde{0}\)</span>.</p>
 <p><em>Part 1 at step <span class="math inline">\(i\)</span>, if the process does not stop.</em> Then <span class="math inline">\(\tilde{\tilde{q}}_i \ne \tilde{0}\)</span>, so <span class="math inline">\(\mathopen{}\left\lVert\tilde{\tilde{q}}_i\right\rVert\mathclose{} &gt; 0\)</span>, and <span class="math inline">\(\tilde{q}_i = \tilde{\tilde{q}}_i / \mathopen{}\left\lVert\tilde{\tilde{q}}_i\right\rVert\mathclose{}\)</span> has norm <span class="math inline">\(\mathopen{}\left\lVert\tilde{\tilde{q}}_i\right\rVert\mathclose{} / \mathopen{}\left\lVert\tilde{\tilde{q}}_i\right\rVert\mathclose{} = 1\)</span> (<a href="#/thm-norm-properties" class="quarto-xref">Theorem&nbsp;1</a>) and for <span class="math inline">\(l &lt; i\)</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1431,10 +1459,10 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <span class="math inline">\(\tilde{q}_i = \mathopen{}\left(\tilde{a}_i - \sum_{j&lt;i} (\tilde{q}_j \cdot \tilde{a}_i)\,\tilde{q}_j\right)\mathclose{} / \mathopen{}\left\lVert\tilde{\tilde{q}}_i\right\rVert\mathclose{}\)</span> is in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_i\right\}\mathclose{}\)</span>, because each <span class="math inline">\(\tilde{q}_j\)</span> with <span class="math inline">\(j &lt; i\)</span> lies in <span class="math inline">\(\mathcal{S}_{i-1}\)</span>; and so is each of <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_{i-1}\)</span>.</li>
 </ul>
 <p>A span is a subspace (<a href="./linear-algebra-subspaces.html#thm-span-subspace">Theorem&nbsp;2 in Subspaces and Rank</a>), so it contains every linear combination of vectors in it; each span therefore contains the other, and they are equal.</p>
-<p><strong>Part 3.</strong> If the process completes, then <span class="math inline">\(\tilde{a}_1 \notin \operatorname{span}\)</span> of the empty list, and for each <span class="math inline">\(i \ge 2\)</span>, <span class="math inline">\(\tilde{a}_i \notin \operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_{i-1}\right\}\mathclose{}\)</span> (part 2). Applying <a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a> <span class="math inline">\(k\)</span> times, starting from the empty list, shows that <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> are linearly independent. Conversely, if they are linearly independent, no <span class="math inline">\(\tilde{a}_i\)</span> is a linear combination <span class="math inline">\(\sum_{j&lt;i} c_j \tilde{a}_j\)</span> of the earlier ones, because then <span class="math inline">\(\sum_{j&lt;i} c_j \tilde{a}_j - \tilde{a}_i = \tilde{0}\)</span> would be a combination with a nonzero coefficient; so by part 2 the process never stops. When it completes, <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> are orthonormal, hence linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;7</a>), and span <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_k\right\}\mathclose{}\)</span> (part 1), so they are an orthonormal basis of it.</p>
+<p><strong>Part 3.</strong> If the process completes, then <span class="math inline">\(\tilde{a}_1 \notin \operatorname{span}\)</span> of the empty list, and for each <span class="math inline">\(i \ge 2\)</span>, <span class="math inline">\(\tilde{a}_i \notin \operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_{i-1}\right\}\mathclose{}\)</span> (part 2). Applying <a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a> <span class="math inline">\(k\)</span> times, starting from the empty list, shows that <span class="math inline">\(\tilde{a}_1, \ldots, \tilde{a}_k\)</span> are linearly independent. Conversely, if they are linearly independent, no <span class="math inline">\(\tilde{a}_i\)</span> is a linear combination <span class="math inline">\(\sum_{j&lt;i} c_j \tilde{a}_j\)</span> of the earlier ones, because then <span class="math inline">\(\sum_{j&lt;i} c_j \tilde{a}_j - \tilde{a}_i = \tilde{0}\)</span> would be a combination with a nonzero coefficient; so by part 2 the process never stops. When it completes, <span class="math inline">\(\tilde{q}_1, \ldots, \tilde{q}_k\)</span> are orthonormal, hence linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a>), and span <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{a}_1, \ldots, \tilde{a}_k\right\}\mathclose{}\)</span> (part 1), so they are an orthonormal basis of it.</p>
 </div>
 </section><section class="slide level2"><div id="exm-thm-gram-schmidt" class="theorem example">
-<p><span class="theorem-title"><strong>Example 23 (Finishing an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Continue <a href="#/exm-gram-schmidt" class="quarto-xref">Example&nbsp;21</a> with <span class="math inline">\(\tilde{a}_3 = (0, 1, 1)\)</span>. <span class="math inline">\(\tilde{q}_1 \cdot \tilde{a}_3 = \tfrac{1}{\sqrt{2}}\)</span> and</p>
+<p><span class="theorem-title"><strong>Example 24 (Finishing an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Continue <a href="#/exm-gram-schmidt" class="quarto-xref">Example&nbsp;22</a> with <span class="math inline">\(\tilde{a}_3 = (0, 1, 1)\)</span>. <span class="math inline">\(\tilde{q}_1 \cdot \tilde{a}_3 = \tfrac{1}{\sqrt{2}}\)</span> and</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_2 \cdot \tilde{a}_3 &amp;= \tfrac{1}{\sqrt{6}}\,(0 - 1 + 2) \\
@@ -1458,7 +1486,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 &amp;&amp; \text{(arithmetic)}
 \end{aligned}
 \]</span></p>
-<p>with norm <span class="math inline">\(\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\)</span>, so <span class="math inline">\(\tilde{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)\)</span>. The process did not stop, so by <a href="#/thm-gram-schmidt" class="quarto-xref">Theorem&nbsp;9</a> <span class="math inline">\(\tilde{a}_1, \tilde{a}_2, \tilde{a}_3\)</span> are linearly independent and <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> is an orthonormal basis of their span. That span therefore has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>), so it is <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). As a check,</p>
+<p>with norm <span class="math inline">\(\sqrt{3 \cdot\tfrac{4}{9}} = \tfrac{2}{\sqrt{3}}\)</span>, so <span class="math inline">\(\tilde{q}_3 = \tfrac{1}{\sqrt{3}}\,(-1, 1, 1)\)</span>. The process did not stop, so by <a href="#/thm-gram-schmidt" class="quarto-xref">Theorem&nbsp;10</a> <span class="math inline">\(\tilde{a}_1, \tilde{a}_2, \tilde{a}_3\)</span> are linearly independent and <span class="math inline">\(\tilde{q}_1, \tilde{q}_2, \tilde{q}_3\)</span> is an orthonormal basis of their span. That span therefore has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>), so it is <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>). As a check,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{q}_1 \cdot \tilde{q}_3 &amp;= \tfrac{1}{\sqrt{6}}\,(-1 + 1 + 0) \\
@@ -1477,7 +1505,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p><span class="theorem-title"><strong>Corollary 1 (Every subspace has an orthonormal basis)</strong></span> Let <span class="math inline">\(\mathcal{S}\)</span> be a subspace of <span class="math inline">\(\mathbb{R}^p\)</span>. Every orthonormal list of vectors in <span class="math inline">\(\mathcal{S}\)</span> extends to an orthonormal basis of <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/def-orthonormal-basis" class="quarto-xref">Definition&nbsp;11</a>). Starting from the empty list shows that <span class="math inline">\(\mathcal{S}\)</span> has an orthonormal basis.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r \in \mathcal{S}\)</span> be orthonormal. They are linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;7</a>), so they extend to a basis <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r, \tilde{a}_{r+1}, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/thm-gram-schmidt" class="quarto-xref">Theorem&nbsp;9</a>, part 3).</p>
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r \in \mathcal{S}\)</span> be orthonormal. They are linearly independent (<a href="#/thm-orthonormal-independent" class="quarto-xref">Theorem&nbsp;8</a>), so they extend to a basis <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r, \tilde{a}_{r+1}, \ldots, \tilde{a}_d\)</span> of <span class="math inline">\(\mathcal{S}\)</span> (<a href="./linear-algebra-subspaces.html#thm-extend-basis">Theorem&nbsp;9 in Subspaces and Rank</a>). Run the Gram-Schmidt process on this basis. It is linearly independent, so the process completes, and the output is an orthonormal basis of its span, which is <span class="math inline">\(\mathcal{S}\)</span> (<a href="#/thm-gram-schmidt" class="quarto-xref">Theorem&nbsp;10</a>, part 3).</p>
 <p>The first <span class="math inline">\(r\)</span> outputs are <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_r\)</span> themselves, by <a href="./proof-writing.html#def-proof-by-induction">induction</a> on <span class="math inline">\(i \le r\)</span>. Suppose the outputs before step <span class="math inline">\(i\)</span> are <span class="math inline">\(\tilde{u}_1, \ldots, \tilde{u}_{i-1}\)</span> (for <span class="math inline">\(i = 1\)</span> there are none, and the sum below is empty). Then</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1495,7 +1523,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 <p>So the orthonormal basis contains the starting list.</p>
 </div>
 </section><section class="slide level2 scrollable"><div id="exm-orthonormal-basis-exists" class="theorem example">
-<p><span class="theorem-title"><strong>Example 24 (Extending one unit vector to an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Start from the unit vector <span class="math inline">\(\tilde{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)\)</span>. Extend it to a basis of <span class="math inline">\(\mathbb{R}^3\)</span> as in <a href="./linear-algebra-subspaces.html#exm-extend-basis">Example&nbsp;18 in Subspaces and Rank</a>, starting from the empty list: <span class="math inline">\(\tilde{u}_1\)</span> is not in the span of the empty list, <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, because <span class="math inline">\(\mathopen{}\left\lVert\tilde{u}_1\right\rVert\mathclose{} = 1\)</span>; <span class="math inline">\((1, 0, 0)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1\right\}\mathclose{}\)</span>, because every multiple of <span class="math inline">\(\tilde{u}_1\)</span> has equal first and second entries, and <span class="math inline">\((0, 0, 1)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1, (1, 0, 0)\right\}\mathclose{}\)</span>, because every combination of those two vectors has third entry <span class="math inline">\(0\)</span>. So <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a>), and three linearly independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span> are a basis of it (they are a basis of their span, which has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and so is <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>)). Gram-Schmidt on <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 25 (Extending one unit vector to an orthonormal basis of <span class="math inline">\(\mathbb{R}^3\)</span>)</strong></span> Start from the unit vector <span class="math inline">\(\tilde{u}_1 = \tfrac{1}{\sqrt{2}}\,(1, 1, 0)\)</span>. Extend it to a basis of <span class="math inline">\(\mathbb{R}^3\)</span> as in <a href="./linear-algebra-subspaces.html#exm-extend-basis">Example&nbsp;18 in Subspaces and Rank</a>, starting from the empty list: <span class="math inline">\(\tilde{u}_1\)</span> is not in the span of the empty list, <span class="math inline">\(\mathopen{}\left\{\tilde{0}\right\}\mathclose{}\)</span>, because <span class="math inline">\(\mathopen{}\left\lVert\tilde{u}_1\right\rVert\mathclose{} = 1\)</span>; <span class="math inline">\((1, 0, 0)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1\right\}\mathclose{}\)</span>, because every multiple of <span class="math inline">\(\tilde{u}_1\)</span> has equal first and second entries, and <span class="math inline">\((0, 0, 1)\)</span> is not in <span class="math inline">\(\operatorname{span}\mathopen{}\left\{\tilde{u}_1, (1, 0, 0)\right\}\mathclose{}\)</span>, because every combination of those two vectors has third entry <span class="math inline">\(0\)</span>. So <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span> are linearly independent (<a href="./linear-algebra-subspaces.html#thm-add-outside-span">Theorem&nbsp;8 in Subspaces and Rank</a>), and three linearly independent vectors in <span class="math inline">\(\mathbb{R}^3\)</span> are a basis of it (they are a basis of their span, which has dimension <span class="math inline">\(3\)</span> (<a href="./linear-algebra-subspaces.html#def-dimension">Definition&nbsp;8 in Subspaces and Rank</a>) and so is <span class="math inline">\(\mathbb{R}^3\)</span> (<a href="./linear-algebra-subspaces.html#thm-subspace-equal-dim">Theorem&nbsp;11 in Subspaces and Rank</a>, <a href="./linear-algebra-subspaces.html#exm-dimension">Example&nbsp;16 in Subspaces and Rank</a>)). Gram-Schmidt on <span class="math inline">\(\tilde{u}_1, (1, 0, 0), (0, 0, 1)\)</span>:</p>
 <ol type="1">
 <li><p><span class="math inline">\(\tilde{q}_1 = \tilde{u}_1\)</span>.</p></li>
 <li>
@@ -1510,7 +1538,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </li>
 <li><p><span class="math inline">\((0, 0, 1)\)</span> is orthogonal to <span class="math inline">\(\tilde{q}_1\)</span> and <span class="math inline">\(\tilde{q}_2\)</span>, so <span class="math inline">\(\tilde{\tilde{q}}_3 = (0, 0, 1)\)</span>, which already has norm <span class="math inline">\(1\)</span>, and <span class="math inline">\(\tilde{q}_3 = (0, 0, 1)\)</span>.</p></li>
 </ol>
-<p>The result is the orthonormal basis of <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;18</a>, in a different order.</p>
+<p>The result is the orthonormal basis of <a href="#/exm-orthonormal-basis" class="quarto-xref">Example&nbsp;19</a>, in a different order.</p>
 </div>
 </section><section id="outer-product" class="slide level2" data-number="4"><h2>
 <span class="header-section-number">4</span> Outer product</h2>
@@ -1523,7 +1551,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="exm-outer-product" class="theorem example">
-<p><span class="theorem-title"><strong>Example 25 (An outer product)</strong></span> For <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span>:</p>
+<p><span class="theorem-title"><strong>Example 26 (An outer product)</strong></span> For <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \tilde{u}\,{\tilde{v}}^{\top}
@@ -1549,7 +1577,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 </div>
 </section><section class="slide level2"><div id="rem-outer-vs-dot-product" class="proof remark">
 <p><span class="proof-title"><em>Remark 5</em> (Outer product and dot product). </span>The dot product <span class="math inline">\({\tilde{u}}^{\top}\tilde{v}\)</span> (<a href="./linear-algebra-matrices.html#exm-dot-product-matmul">Example&nbsp;6 in Matrices</a>) needs two vectors of the same length and gives a number. The outer product <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> takes vectors of any two lengths and gives a matrix <span class="citation" data-cites="banerjee2014linear">(<a href="#/references" role="doc-biblioref" onclick="">Banerjee and Roy 2014, chap. 1</a>, p.&nbsp;11)</span>.</p>
-<p>For example, <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span> in <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;25</a> have different lengths, so they have no dot product, but their outer product is a <span class="math inline">\(3 \times 2\)</span> matrix. For <span class="math inline">\(\tilde{a} = (1, 2)\)</span> and <span class="math inline">\(\tilde{b} = (3, 4)\)</span>, which have the same length, both products exist:</p>
+<p>For example, <span class="math inline">\(\tilde{u} = (1, 2, 3)\)</span> and <span class="math inline">\(\tilde{v} = (4, 5)\)</span> in <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;26</a> have different lengths, so they have no dot product, but their outer product is a <span class="math inline">\(3 \times 2\)</span> matrix. For <span class="math inline">\(\tilde{a} = (1, 2)\)</span> and <span class="math inline">\(\tilde{b} = (3, 4)\)</span>, which have the same length, both products exist:</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\tilde{a}}^{\top}\tilde{b}
@@ -1562,7 +1590,7 @@ a\,h(\tilde{x}, \tilde{y}) &amp;= (-1) \cdot(\mathopen{}\left|1 \cdot 1\right|\m
 \]</span></p>
 </div>
 </section><section class="slide level2"><div id="thm-outer-product-rank" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 10 (An outer product has rank one)</strong></span> If <span class="math inline">\(\tilde{u}\)</span> is a nonzero vector of length <span class="math inline">\(m\)</span> and <span class="math inline">\(\tilde{v}\)</span> is a nonzero vector of length <span class="math inline">\(n\)</span>, then <span class="math inline">\(\operatorname{rank}(\tilde{u}\,{\tilde{v}}^{\top}) = 1\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>).</p>
+<p><span class="theorem-title"><strong>Theorem 11 (An outer product has rank one)</strong></span> If <span class="math inline">\(\tilde{u}\)</span> is a nonzero vector of length <span class="math inline">\(m\)</span> and <span class="math inline">\(\tilde{v}\)</span> is a nonzero vector of length <span class="math inline">\(n\)</span>, then <span class="math inline">\(\operatorname{rank}(\tilde{u}\,{\tilde{v}}^{\top}) = 1\)</span> (<a href="./linear-algebra-subspaces.html#def-rank">Definition&nbsp;2 in Subspaces and Rank</a>).</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Column <span class="math inline">\(j\)</span> of <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> has entries <span class="math inline">\(u_1 v_j, \ldots, u_m v_j\)</span>, so it is the vector <span class="math inline">\(v_j \tilde{u}\)</span>.</p>
@@ -1591,7 +1619,7 @@ v_k\,(v_j \tilde{u}) - v_j\,(v_k \tilde{u})
 <p>Either way, every pair of columns has a combination with coefficients that are not all zero and that equals <span class="math inline">\(\tilde{0}\)</span>. Now take any set of two or more columns. It contains a pair <span class="math inline">\(j \neq k\)</span>. Use that pair’s coefficients for columns <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span>, and the coefficient <span class="math inline">\(0\)</span> for every other column in the set. This combination equals <span class="math inline">\(\tilde{0}\)</span>, and its coefficients are not all zero, so the set is not linearly independent (<a href="./linear-algebra-subspaces.html#def-linearly-independent">Definition&nbsp;1 in Subspaces and Rank</a>). The largest linearly independent set of columns therefore has one column.</p>
 </div>
 </section><section class="slide level2 smaller scrollable" id="references"><div id="exm-outer-product-rank" class="theorem example">
-<p><span class="theorem-title"><strong>Example 26 (The rank of an outer product)</strong></span> In <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;25</a>, the second column <span class="math inline">\((5, 10, 15)\)</span> of <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> is <span class="math inline">\(\frac{5}{4}\)</span> times the first column <span class="math inline">\((4, 8, 12)\)</span>, because the columns are <span class="math inline">\(v_1 \tilde{u} = 4\tilde{u}\)</span> and <span class="math inline">\(v_2 \tilde{u} = 5\tilde{u}\)</span>. So the two columns are not linearly independent, and the <span class="math inline">\(3 \times 2\)</span> matrix has rank <span class="math inline">\(1\)</span>.</p>
+<p><span class="theorem-title"><strong>Example 27 (The rank of an outer product)</strong></span> In <a href="#/exm-outer-product" class="quarto-xref">Example&nbsp;26</a>, the second column <span class="math inline">\((5, 10, 15)\)</span> of <span class="math inline">\(\tilde{u}\,{\tilde{v}}^{\top}\)</span> is <span class="math inline">\(\frac{5}{4}\)</span> times the first column <span class="math inline">\((4, 8, 12)\)</span>, because the columns are <span class="math inline">\(v_1 \tilde{u} = 4\tilde{u}\)</span> and <span class="math inline">\(v_2 \tilde{u} = 5\tilde{u}\)</span>. So the two columns are not linearly independent, and the <span class="math inline">\(3 \times 2\)</span> matrix has rank <span class="math inline">\(1\)</span>.</p>
 </div>
 
 
