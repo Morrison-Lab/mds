@@ -2,11 +2,11 @@
 
 ::: remark
 
-Probability and statistics use several number systems:
-the integers and natural numbers that count,
-and the rational, real, and irrational numbers that measure.
-This page defines them and the words (even, odd, rational, irrational)
-that sort their members.
+Probability and statistics count with the integers and natural numbers
+and measure with the real numbers.
+This page defines those number systems.
+It also defines the words that sort their members:
+even and odd integers, and rational and irrational real numbers.
 
 :::
 
