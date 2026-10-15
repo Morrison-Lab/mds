@@ -27,6 +27,9 @@
    so their product is at least $0$.
    By part 1, $f(x) - f(1) \ge 0$,
    that is, $f(x) \ge f(1)$.
+   So $f(x)$ is never smaller than $f(1)$ on $(0, 2)$.
+   It equals $f(1)$ only when $(x - 1)^2 = 0$, that is, only at $x = 1$,
+   and it is larger than $f(1)$ at every other $x \in (0, 2)$.
 
 3. $$
    \begin{aligned}
@@ -86,6 +89,9 @@
    so their product is at least $0$.
    By part 1, $f(x) - f(1) \ge 0$,
    that is, $f(x) \ge f(1)$.
+   So $f(x)$ is never smaller than $f(1)$ on $(0, 2)$.
+   It equals $f(1)$ only when $(x - 1)^2 = 0$, that is, only at $x = 1$,
+   and it is larger than $f(1)$ at every other $x \in (0, 2)$.
 
 :::
 
