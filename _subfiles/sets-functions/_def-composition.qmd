@@ -7,7 +7,22 @@ is the function $f \circ g : A \to C$ defined by
 
 $$(f \circ g)(a) \eqdef f(g(a)) \quad \text{for each } a \in A.$$
 
-In $f \circ g$, $g$ is the **inner function**, applied first,
-and $f$ is the **outer function**, applied to the result.
+:::
+
+{{< slidebreak >}}
+
+:::{#def-inner-function}
+#### Inner function
+
+In a composition $f \circ g$ (@def-composition), $g$ is the **inner function**, applied first.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-outer-function}
+#### Outer function
+
+In a composition $f \circ g$ (@def-composition), $f$ is the **outer function**, applied to the result.
 
 :::
