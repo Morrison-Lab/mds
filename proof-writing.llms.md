@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 12:42:30 (PDT)
+Last modified: 2026-10-15 13:39:21 (PDT)
 
 This page collects general advice on how to write [proofs](#def-proof) and [derivations](#def-derivation). The goal of a proof is not just to convince yourself that a [result](#def-result) is true; it is to convince a *reader*, and to show them *why* it is true. Each principle on this page serves that goal. The symbols for [logical entailment](#def-logical-entailment) are listed under [Definitions for proofs](#sec-proof-definitions) below.
 
@@ -12,7 +12,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 1 (Proposition (statement))** A **proposition**, or **statement**, is a sentence that is either true or false.
+> **Definition 1 (Proposition (statement))** A **proposition**, or **statement**, is a declarative sentence that is either true or false.
 
 > **NOTE:**
 >
@@ -24,7 +24,7 @@ This page collects general advice on how to write [proofs](#def-proof) and [deri
 
 > **NOTE:**
 >
-> **Definition 2 (Predicate)** A **predicate** \\P(x)\\ is a sentence about a variable \\x\\ that becomes a proposition ([Definition 1](#def-proposition)) whenever a value is substituted for \\x\\.
+> **Definition 2 (Predicate)** A **predicate** \\P(x)\\ is a declarative sentence about a variable \\x\\ that becomes a proposition ([Definition 1](#def-proposition)) whenever a value is substituted for \\x\\.
 
 > **NOTE:**
 >
@@ -538,6 +538,12 @@ The following example uses [summation notation](algebra-sums.llms.md#def-summati
 
 - Velleman ([2019](#ref-velleman2019prove)) is a structured introduction to proof techniques such as [direct proof](#def-direct-proof), [proof by contradiction](proof-writing.llms.md#def-proof-by-contradiction), and induction.
 - Barker-Plummer et al. ([2011](#ref-barkerplummer2011language)) treats proofs as [formal proofs](#def-formal-proof) in [propositional logic](#def-propositional-logic) and [first-order logic](#def-first-order-logic).
+
+Free course materials on formal logic:
+
+- Thomas Icard’s [Phil 150/250, Mathematical Logic course notes](https://web.stanford.edu/~icard/phil150) (Stanford) review sets, relations and functions, then cover propositional, modal and first-order logic.
+- John Wilcox’s [logic handouts](https://www.johnwilcox.org/logic.html) supplement the same Stanford course, with a handout per week on the syntax and semantics of propositional and first-order logic, natural deduction and metalogic.
+- Eric Pacuit’s [Phil 151: First Order Logic](https://cs.stanford.edu/~epacuit/classes/phil151winter09.html) (Stanford, Winter 2009) posts a syllabus, a modal logic study guide and problem sets.
 
 ## References
 
