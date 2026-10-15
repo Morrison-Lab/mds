@@ -9,7 +9,15 @@ if for every $\tolout > 0$ there is a natural number $N$ such that
 $$\abs{a_n - L} < \tolout \quad \text{for every } n \ge N.$$
 
 Then $L$ is the **limit** of the sequence.
-A sequence that converges to some real number is **convergent**,
-and a sequence that does not converge to any real number **diverges**.
+A sequence that converges to some real number is **convergent**.
+
+:::
+
+{{< slidebreak >}}
+
+:::{#def-divergent-sequence}
+#### Divergent sequence
+
+A sequence that does not converge to any real number (@def-sequence-limit) **diverges**.
 
 :::
