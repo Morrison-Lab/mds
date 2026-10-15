@@ -102,7 +102,7 @@ the derivative of the [power](algebra.qmd#def-real-power) $x^q$ is:
 
 $$\deriv{x}x^q = qx^{q-1}$$
 
-When $q$ is a positive [integer](notation.qmd#def-integers),
+When $q$ is a positive [integer](number-systems.qmd#def-integers),
 the same formula holds for every real $x$.
 
 :::

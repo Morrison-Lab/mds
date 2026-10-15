@@ -2,7 +2,7 @@
 #### Power
 
 Let $a$ be a real number and $n$ a
-[natural number](notation.qmd#def-natural-numbers).
+[natural number](number-systems.qmd#def-natural-numbers).
 The $n$th **power** of $a$ is the product of $n$ copies of $a$:
 
 $$a^n \eqdef \underbrace{a \cd a \cd \cdots \cd a}_{n \text{ factors}}$$

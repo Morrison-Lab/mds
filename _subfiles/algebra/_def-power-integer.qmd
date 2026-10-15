@@ -1,7 +1,7 @@
 :::{#def-power-integer}
 #### Powers with exponent zero or a negative integer
 
-For the exponent $0$ and negative [integer](notation.qmd#def-integers) exponents:
+For the exponent $0$ and negative [integer](number-systems.qmd#def-integers) exponents:
 
 - $a^0 \eqdef 1$, including $0^0 = 1$ by convention;
 - $a^{-n} \eqdef \frac{1}{a^n}$, when $a \ne 0$.

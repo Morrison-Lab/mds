@@ -1,0 +1,75 @@
+{{< include latex-macros/macros.qmd >}}
+
+::: remark
+
+Probability and statistics use several number systems:
+the integers and natural numbers that count,
+and the rational, real, and irrational numbers that measure.
+This page defines them and the words (even, odd, rational, irrational)
+that sort their members.
+
+:::
+
+## Natural numbers {#sec-notation-naturals}
+
+{{< include mds/_subfiles/number-systems/_exr-naturals-below-three.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_sol-naturals-below-three.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_def-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_def-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-even-odd.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_def-natural-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_def-nonnegative-integers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-natural-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_note-natural-numbers-other-conventions.qmd >}}
+
+## Rational, real, and irrational numbers {#sec-notation-reals}
+
+{{< include mds/_subfiles/number-systems/_def-rational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-rational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_def-real-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-real-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_def-irrational-numbers.qmd >}}
+
+{{< slidebreak >}}
+
+{{< include mds/_subfiles/number-systems/_exm-irrational-numbers.qmd >}}
