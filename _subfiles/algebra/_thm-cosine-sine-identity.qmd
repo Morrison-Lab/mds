@@ -11,7 +11,7 @@ $$
 
 ::: proof
 
-The point $(\cos\angpar, \sin\angpar)$ lies on the unit circle (@def-cosine-sine),
+The point $(\cos\angpar, \sin\angpar)$ lies on the unit circle (@def-unit-circle),
 so its coordinates satisfy $x_1^2 + x_2^2 = 1$.
 
 :::
