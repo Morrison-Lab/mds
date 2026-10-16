@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:35:37 (PDT)
+Last modified: 2026-10-15 17:50:35 (PDT)
 
 > **NOTE:**
 >
@@ -30,11 +30,11 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Example 2 (Even die rolls in set-builder notation)** \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \text{ is even}\right\\\mathclose{} = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is the set of [even](notation.llms.md#def-even-odd) rolls, and \\\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}\\ is the set of positive [real numbers](notation.llms.md#def-real-numbers).
+> **Example 2 (Even die rolls in set-builder notation)** \\\mathopen{}\left\\x \in \mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{} : x \text{ is even}\right\\\mathclose{} = \mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\ is the set of [even](number-systems.llms.md#def-even-odd) rolls, and \\\mathopen{}\left\\x \in \mathbb{R}: x \> 0\right\\\mathclose{}\\ is the set of positive [real numbers](number-systems.llms.md#def-real-numbers).
 
 > **NOTE:**
 >
-> **Definition 3 (Interval)** For [real numbers](notation.llms.md#def-real-numbers) \\a \le b\\, the **intervals** with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
+> **Definition 3 (Interval)** For [real numbers](number-systems.llms.md#def-real-numbers) \\a \le b\\, the **intervals** with **endpoints** \\a\\ and \\b\\ are the closed interval ([Definition 4](#def-closed-interval)), the open interval ([Definition 5](#def-open-interval)), and the half-open intervals ([Definition 6](#def-half-open-interval)). The unbounded intervals ([Definition 7](#def-unbounded-interval)) have at most one endpoint.
 >
 > A square bracket means the endpoint belongs to the interval, and a parenthesis means it does not. The symbols \\\infty\\ and \\-\infty\\ are not real numbers, so they always get a parenthesis.
 
@@ -416,17 +416,17 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 33 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= \mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
+> **Definition 33 (Elementwise application of a function to a vector)** Let \\f : A \to B\\ be a function ([definition](#def-function)), and let \\\tilde{x}= {\mathopen{}\left(x_1, x_2, \ldots, x_n\right)\mathclose{}}^{\top}\\ be a vector whose entries all lie in \\A\\. The **elementwise application** of \\f\\ to \\\tilde{x}\\, written \\f^{\odot}(\tilde{x})\\, is the vector of the values of \\f\\ at the entries of \\\tilde{x}\\:
 >
-> \\ f^{\odot}(\tilde{x}) = \mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}^{\top}. \\
+> \\ f^{\odot}(\tilde{x}) = {\mathopen{}\left(f(x_1), f(x_2), \ldots, f(x_n)\right)\mathclose{}}^{\top}. \\
 >
 > It is a function \\f^{\odot} : A^n \to B^n\\, where \\A^n\\ is the \\n\\-fold Cartesian product of \\A\\ with itself ([definition](#def-cartesian-product)).
 
 > **NOTE:**
 >
-> **Example 20 (The exponential and logistic functions applied to a vector)** Let \\\tilde{x}= \mathopen{}\left(-1, 0, 2\right)\mathclose{}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
+> **Example 20 (The exponential and logistic functions applied to a vector)** Let \\\tilde{x}= {\mathopen{}\left(-1, 0, 2\right)\mathclose{}}^{\top}\\. With \\\operatorname{exp}(t) = e^t\\ and the logistic function \\\operatorname{expit}(t) = \frac{1}{1 + e^{-t}}\\,
 >
-> \\ \begin{aligned} \operatorname{exp}^{\odot}(\tilde{x}) &= \mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}^{\top}, \\ \operatorname{expit}^{\odot}(\tilde{x}) &= \mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}^{\top}. \end{aligned} \\
+> \\ \begin{aligned} \operatorname{exp}^{\odot}(\tilde{x}) &= {\mathopen{}\left(e^{-1}, e^{0}, e^{2}\right)\mathclose{}}^{\top}, \\ \operatorname{expit}^{\odot}(\tilde{x}) &= {\mathopen{}\left(\operatorname{expit}(-1), \operatorname{expit}(0), \operatorname{expit}(2)\right)\mathclose{}}^{\top}. \end{aligned} \\
 >
 > The code evaluates both, using R’s [`exp()`](https://rdrr.io/r/base/Log.html) and [`plogis()`](https://rdrr.io/r/stats/Logistic.html), which apply to a vector entry by entry.
 >
@@ -452,7 +452,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 34 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](notation.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
+> **Definition 34 (Sequence)** A **sequence** in a set \\S\\ is a [function](#def-function) \\a : \mathbb{N}\to S\\ from the [natural numbers](number-systems.llms.md#def-natural-numbers) to \\S\\. Its value \\a(n)\\ is written \\a_n\\, and the sequence is written \\(a_n)\\ or \\a_1, a_2, a_3, \ldots\\.
 
 > **NOTE:**
 >
@@ -570,8 +570,8 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 > **Example 27 (Countable and uncountable sets)**  
 >
 > - \\\mathopen{}\left\\1, 2, 3, 4, 5, 6\right\\\mathclose{}\\ is countable, because it is finite.
-> - The [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
-> - The [integers](notation.llms.md#def-integers) are countably infinite too: the sequence \\0, 1, -1, 2, -2, 3, -3, \ldots\\ lists every one of them.
+> - The [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\ are countably infinite: the sequence \\0, 1, 2, \ldots\\ lists them.
+> - The [integers](number-systems.llms.md#def-integers) are countably infinite too: the sequence \\0, 1, -1, 2, -2, 3, -3, \ldots\\ lists every one of them.
 
 > **NOTE:**
 >
@@ -579,7 +579,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> *Remark 15* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](notation.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
+> *Remark 15* (Cantor’s diagonal argument). The standard [proof](proof-writing.llms.md#def-proof) is Cantor’s diagonal argument: given any sequence of numbers in \\\[0, 1\]\\, it builds a number in \\\[0, 1\]\\ whose [decimal expansion](number-systems.llms.md#def-real-numbers) differs from the \\n\\th number’s in the \\n\\th digit (its \\n\\th decimal place, one of \\0, 1, \ldots, 9\\), so the sequence misses it (see [Wikipedia: Cantor’s diagonal argument](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument)). One way to choose the \\n\\th digit is to use \\5\\, unless the \\n\\th number’s \\n\\th digit is \\5\\, in which case use \\4\\. For example, if the sequence starts \\0.1234\ldots\\, \\0.3579\ldots\\, \\0.2468\ldots\\, the diagonal digits are \\1\\, \\5\\, and \\6\\, so the new number starts \\0.545\ldots\\, which differs from the first number in the first digit, from the second in the second digit, and from the third in the third digit.
 
 ## 5 Extended non-negative real numbers
 

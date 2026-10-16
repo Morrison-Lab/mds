@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:35:37 (PDT)
+Last modified: 2026-10-15 17:50:35 (PDT)
 
 ## 1 Double Integrals
 
@@ -469,15 +469,17 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> **Exercise 8 (Harmonic numbers via double integrals)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.54.
+> **Exercise 8 (A double integral with a parameter)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.54.
 >
-> Prove that for every positive integer \\n\\:
+> Evaluate the double integral
 >
-> \\ \begin{aligned} \int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy &= \sum\_{k=1}^{n} \frac{1}{k} \\ &= 1 + \frac{1}{2} + \dots + \frac{1}{n} \end{aligned} \\
+> \\\int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy\\
+>
+> for every positive integer \\n\\, and write the result as a sum of reciprocals of integers.
 
 > **NOTE:**
 >
-> *Solution 8*. **Method 1 (integration then geometric series):** Integrate with respect to \\x\\ first:
+> *Solution 8*. **Integration, then a geometric series:** Integrate with respect to \\x\\ first:
 >
 > \\ \begin{aligned} \int_0^1 n(1 - xy)^{n-1}\\dx &= \mathopen{}\left\[-\frac{(1 - xy)^n}{y}\right\]\mathclose{}\_{x=0}^1 \\ &= \frac{1 - (1 - y)^n}{y} \end{aligned} \\
 >
@@ -493,13 +495,17 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 >
 > \\ \begin{aligned} \sum\_{k=0}^{n-1} \frac{1}{k+1} &= \sum\_{j=1}^n\frac{1}{j} \\ &= 1 + \frac{1}{2} + \dots + \frac{1}{n} \end{aligned} \\
 >
-> **Method 2 (binomial expansion):** Expand \\(1 - xy)^{n-1} = \sum\_{k=0}^{n-1} \binom{n-1}{k}(-1)^k (xy)^k\\. Integrating over \\\[0, 1\]^2\\:
+> The result is stated as [Theorem 3](#thm-dint-harmonic-identity).
+>
+> *Remark (binomial expansion):* The same integral can be expanded in a different way. Expand \\(1 - xy)^{n-1} = \sum\_{k=0}^{n-1} \binom{n-1}{k}(-1)^k (xy)^k\\. Integrating over \\\[0, 1\]^2\\:
 >
 > \\\int_0^1 \int_0^1 (xy)^k\\dx\\dy = \mathopen{}\left(\frac{1}{k+1}\right)\mathclose{}^2\\
 >
 > Multiplying by \\n\\ and using the identity \\\frac{n}{k+1}\binom{n-1}{k} = \binom{n}{k+1}\\:
 >
-> \\ \begin{aligned} \int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy &= \sum\_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} \\ &= \sum\_{j=1}^n\frac{1}{j} \end{aligned} \\
+> \\ \begin{aligned} \int_0^1 \int_0^1 n(1 - xy)^{n-1}\\dx\\dy &= \sum\_{k=0}^{n-1} \binom{n}{k+1}\frac{(-1)^k}{k+1} \end{aligned} \\
+>
+> This reaches the alternating binomial sum for the same integral as above, so it inherits the value \\\sum\_{j=1}^n\frac{1}{j}\\ from the integration-then-geometric-series computation.
 >
 > *Remark:* This integral identity connects multivariable integration with harmonic numbers \\H_n = \sum\_{k=1}^{n} \frac{1}{k} \approx \log n + \gamma\\, where \\\gamma \approx 0.5772\\ is the Euler-Mascheroni constant.
 
@@ -531,7 +537,7 @@ The **Fubini–Tonelli theorem** states conditions under which the order of inte
 
 > **NOTE:**
 >
-> *Remark 1* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science*. A [probability measure](measures.llms.md#def-probability-measure) \\P\\ on \\\Omega\\ has \\P(\Omega) = 1 \< \infty\\, so it is [finite](measures.llms.md#def-sigma-finite), and hence \\\sigma\\-finite ([finite and \\\sigma\\-finite measures](measures.llms.md#exm-sigma-finite)); for probability measures, the \\\sigma\\-finiteness condition is automatic.
+> *Remark 1* (Fubini–Tonelli for probability measures). Applied courses rarely need the measure-theoretic generalization itself, but it is what justifies the [joint-distribution form](https://morrison-lab.github.io/pds/expectation.html#cor-fubini-joint) corollary in *Probability for Data Science*. A [probability measure](measures.llms.md#def-probability-measure) \\P\\ on \\\Omega\\ has \\P(\Omega) = 1 \< \infty\\, so it is [finite](measures.llms.md#def-finite-measure), and hence \\\sigma\\-finite ([finite and \\\sigma\\-finite measures](measures.llms.md#exm-sigma-finite)); for probability measures, the \\\sigma\\-finiteness condition is automatic.
 >
 > The integrability conditions (nonnegativity or [absolute integrability](measures.llms.md#def-absolutely-integrable)) still need to be verified in each application. For example, [Lebesgue measure](measures.llms.md#def-lebesgue-measure) (ordinary length) on \\\[0, 1\]\\ is a probability measure, so the \\\sigma\\-finiteness condition holds for both factors \\\[0, 1\]\\, yet the two iterated integrals in [Example 4](#exm-fubini-fail) are \\\pi/4\\ and \\-\pi/4\\. So \\\sigma\\-finiteness alone does not make the iterated integrals agree.
 

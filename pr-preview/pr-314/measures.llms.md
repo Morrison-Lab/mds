@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:35:37 (PDT)
+Last modified: 2026-10-15 17:50:35 (PDT)
 
 > **NOTE:**
 >
@@ -22,7 +22,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). For example, Billingsley ([1995](#ref-billingsley1995probability)) uses “\\\sigma\\-field”. The two names mean the same thing. Casella and Berger call it a **Borel field** ([Casella and Berger 2002](#ref-CaseBerg01), Def. 1.2.1). That is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
+> *Remark 1* (\\\sigma\\-field). Other sources call a \\\sigma\\-algebra a **\\\sigma\\-field** ([Billingsley 1995](#ref-billingsley1995probability)) or a **Borel field** ([Casella and Berger 2002](#ref-CaseBerg01), Def. 1.2.1) (see [Wikipedia: \\\sigma\\-algebra](https://en.wikipedia.org/wiki/%CE%A3-algebra)). The names mean the same thing. The “Borel” in “Borel field” is a different use of “Borel” from the [Borel \\\sigma\\-algebra](#def-borel-sigma-algebra) on \\\mathbb{R}\\, which is one particular \\\sigma\\-algebra.
 
 > **NOTE:**
 >
@@ -44,7 +44,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > **Example 3 (Closed and not closed)**  
 >
-> - The [even](notation.llms.md#def-even-odd) integers are closed under addition: for example, \\2 + 4 = 6\\ is even, and \\2m + 2n = 2(m + n)\\ is even for all integers \\m\\ and \\n\\.
+> - The [even](number-systems.llms.md#def-even-odd) integers are closed under addition: for example, \\2 + 4 = 6\\ is even, and \\2m + 2n = 2(m + n)\\ is even for all integers \\m\\ and \\n\\.
 > - The odd integers are not closed under addition: \\1\\ and \\3\\ are odd, but \\1 + 3 = 4\\ is even.
 > - A [\\\sigma\\-algebra](#def-sigma-algebra) \\\mathcal{S}\\ on a set \\S\\ is closed under complements in \\S\\ and under unions of sequences of its sets, because [Definition 1](#def-sigma-algebra) requires both. The collection in [Example 2](#exm-not-sigma-algebra) is not closed under complements.
 
@@ -124,7 +124,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > - Every interval, such as \\\[0, 1\]\\, \\(2, 5)\\, or \\\[0, \infty)\\, is a Borel set.
 > - A single point \\\mathopen{}\left\\a\right\\\mathclose{} = \[a, a\]\\ is an interval, so it is a Borel set.
-> - The [integers](notation.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
+> - The [integers](number-systems.llms.md#def-integers) are a Borel set: they are the union of the sequence of single points \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\1\right\\\mathclose{}, \mathopen{}\left\\-1\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\-2\right\\\mathclose{}, \ldots\\ ([countable and uncountable sets](sets-functions.llms.md#exm-countable-set) lists them this way), and \\\mathcal{B}\\ contains that union by [Definition 1](#def-sigma-algebra).
 > - The complement \\\mathbb{R}\setminus \[0, 1\]\\ is a Borel set, because \\\mathcal{B}\\ contains the complement of each of its sets.
 
 ## 2 Pairwise disjoint sets
@@ -202,7 +202,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > \\ \begin{aligned} s\_{n+1} &= s_n + a\_{n+1} && \text{(definition of } s\_{n+1} \text{)} \\ &\ge s_n && \text{(} a\_{n+1} \ge 0 \text{)} \end{aligned} \\
 >
-> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](notation.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
+> If some partial sum \\s_N\\ is \\\infty\\, then \\s_n = \infty\\ for every \\n \ge N\\, so the limit is \\\infty\\. Otherwise, the partial sums form a non-decreasing sequence of [real numbers](number-systems.llms.md#def-real-numbers). If that sequence is [bounded above](algebra-sums.llms.md#def-bounded-above), it [converges](algebra-exponentials.llms.md#def-convergent-sequence) to a finite number (see [Wikipedia: Monotone convergence theorem](https://en.wikipedia.org/wiki/Monotone_convergence_theorem)). If it is not bounded above, then for every number \\M\\ some \\s_N\\ exceeds \\M\\, and so does every later \\s_n \ge s_N\\; the limit is \\\infty\\.
 
 ## 4 Additivity
 
@@ -345,7 +345,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Example 17 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](notation.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees:
+> **Example 17 (Counting measure on the non-negative integers)** For the counting measure \\\mu\\ on the [non-negative integers](number-systems.llms.md#def-nonnegative-integers) \\\mathopen{}\left\\0, 1, 2, \ldots\right\\\mathclose{}\\, \\\mu(\mathopen{}\left\\0, 1, 2\right\\\mathclose{}) = 3\\, and the set of even numbers has \\\mu(\mathopen{}\left\\0, 2, 4, \ldots\right\\\mathclose{}) = \infty\\. The even numbers are the union of the pairwise disjoint sets \\\mathopen{}\left\\0\right\\\mathclose{}, \mathopen{}\left\\2\right\\\mathclose{}, \mathopen{}\left\\4\right\\\mathclose{}, \ldots\\, and countable additivity agrees:
 >
 > \\ \begin{aligned} \sum\_{k=0}^{\infty} \mu(\mathopen{}\left\\2k\right\\\mathclose{}) &= 1 + 1 + \cdots \\ &= \infty. \end{aligned} \\
 
@@ -503,7 +503,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> *Remark 8* (Mutually exclusive events). In probability, [pairwise disjoint](#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](notation.llms.md#def-even-odd)”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
+> *Remark 8* (Mutually exclusive events). In probability, [pairwise disjoint](#def-pairwise-disjoint) [events](#def-probability-measure) are usually called **mutually exclusive**. For example, for one roll of a six-sided die, the events “the roll is [even](number-systems.llms.md#def-even-odd)”, \\\mathopen{}\left\\2, 4, 6\right\\\mathclose{}\\, and “the roll is odd”, \\\mathopen{}\left\\1, 3, 5\right\\\mathclose{}\\, are mutually exclusive: no roll is both even and odd.
 
 ## 7 Measurable functions and integrals
 
@@ -695,7 +695,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > 1.  **Random variables, moments, and inclusion of \\L^p\\ spaces**: When \\\mu= \operatorname{P}\\ is a probability measure ([Definition 22](#def-probability-measure)) with total measure \\\operatorname{P}\mathopen{}\left(S\right)\mathclose{} = 1\\, an \\L^p\\ function is a random variable \\X\\ with finite \\p\\-th moment: \\ \mathopen{}\left\lVert X\right\rVert\mathclose{}\_p = \mathopen{}\left(\operatorname{E}\mathopen{}\left\[\mathopen{}\left\|X\right\|\mathclose{}^p\right\]\mathclose{}\right)\mathclose{}^{1/p}. \\ By [Jensen’s inequality](algebra-sums.llms.md#thm-jensen), if \\1 \le p \le q \le \infty\\, then \\\mathopen{}\left\lVert X\right\rVert\mathclose{}\_p \le \mathopen{}\left\lVert X\right\rVert\mathclose{}\_q\\, so \\L^q(P) \subseteq L^p(P)\\. For instance, every random variable with finite variance (\\X \in L^2\\) has finite expectation (\\X \in L^1\\).
 >
-> 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product \\\left\langle f, g \right\rangle \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
+> 2.  **The unique Hilbert space \\L^2\\ and conditional expectation**: Among all \\L^p\\ spaces, only \\L^2(\mu)\\ is an [inner product space](linear-algebra-inner-products.llms.md#def-inner-product-space), equipped with the inner product \\\mathopen{}\left\langle f, g\right\rangle\mathclose{} \stackrel{\text{def}}{=}\int_S f g \\ d\mu\\ (all other \\L^p\\ spaces fail the parallelogram law). The completeness of \\L^2\\ makes it a Hilbert space. In regression, the conditional expectation \\\operatorname{E}\mathopen{}\left\[Y \mid X\right\]\mathclose{}\\ is the orthogonal projection of \\Y \in L^2\\ onto the closed subspace of \\L^2\\ functions measurable with respect to \\X\\, minimizing the expected mean squared error \\\mathopen{}\left\lVert Y - g(X)\right\rVert\mathclose{}\_2^2\\.
 >
 > 3.  **Loss functions, estimation, and robustness**: The choice of \\p\\ in \\L^p\\ norms defines loss functions for optimization and regression:
 >

@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:35:37 (PDT)
+Last modified: 2026-10-15 17:50:35 (PDT)
 
 ## 1 Column space and null space
 
@@ -495,11 +495,13 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 9 (Half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
+> **Definition 9 (Open half-space)** Let \\\mathcal{H} = \mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b = 0\right\\\mathclose{}\\ be a hyperplane ([Definition 22 in Matrices](linear-algebra-matrices.llms.md#def-hyperplane)). The two **open half-spaces** of \\\mathcal{H}\\ are
 >
 > \\ \mathcal{H}^+ \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b \> 0\right\\\mathclose{} \quad \text{and} \quad \mathcal{H}^- \stackrel{\text{def}}{=}\mathopen{}\left\\\tilde{x}\in \mathbb{R}^p : \tilde{w} \cdot \tilde{x} + b \< 0\right\\\mathclose{}. \tag{1}\\
+
+> **NOTE:**
 >
-> The **closed half-spaces** also include \\\mathcal{H}\\ itself: \\\mathcal{H}^+ \cup \mathcal{H}\\ and \\\mathcal{H}^- \cup \mathcal{H}\\.
+> **Definition 10 (Closed half-space)** The **closed half-spaces** of the hyperplane \\\mathcal{H}\\ of [Definition 9](#def-half-space) also include \\\mathcal{H}\\ itself: \\\mathcal{H}^+ \cup \mathcal{H}\\ and \\\mathcal{H}^- \cup \mathcal{H}\\.
 
 > **NOTE:**
 >
@@ -610,7 +612,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Definition 10 (Rank factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A **rank factorization** of \\\mathbf{A}\\ is a product
+> **Definition 11 (Rank factorization)** Let \\\mathbf{A}\\ be an \\m \times n\\ matrix with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\. A **rank factorization** of \\\mathbf{A}\\ is a product
 >
 > \\ \underbrace{\mathbf{A}}\_{m \times n} = \underbrace{\mathbf{C}}\_{m \times r}\\\underbrace{\mathbf{R}}\_{r \times n}. \\
 
@@ -624,7 +626,7 @@ For two column vectors it is the \\1 \times 1\\ matrix holding their [dot produc
 
 > **NOTE:**
 >
-> **Theorem 14 (Every nonzero matrix has a rank factorization)** Every \\m \times n\\ matrix \\\mathbf{A}\\ with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ has a rank factorization ([Definition 10](#def-rank-factorization)). One is given by taking the columns of \\\mathbf{C}\\ to be any basis of \\\mathcal{C}(\mathbf{A})\\.
+> **Theorem 14 (Every nonzero matrix has a rank factorization)** Every \\m \times n\\ matrix \\\mathbf{A}\\ with \\\operatorname{rank}(\mathbf{A}) = r \ge 1\\ has a rank factorization ([Definition 11](#def-rank-factorization)). One is given by taking the columns of \\\mathbf{C}\\ to be any basis of \\\mathcal{C}(\mathbf{A})\\.
 
 > **NOTE:**
 >

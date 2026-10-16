@@ -293,7 +293,7 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">Last modified: 2026-10-15 13:35:37 (PDT)</p>
+  <p class="date">Last modified: 2026-10-15 17:50:35 (PDT)</p>
 </section>
 <section class="slide level2">
 
@@ -465,8 +465,8 @@
 <section class="slide level2">
 
 <div id="thm-adjoint-inner-product" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 2 (The adjoint property for inner products)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> complex matrix. Under the standard inner product on complex Euclidean space, <span class="math inline">\(\left\langle \tilde{u}, \tilde{v} \right\rangle \stackrel{\text{def}}{=}\tilde{u}^{\mathsf{H}}\tilde{v}\)</span>,</p>
-<p><span class="math display">\[\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v} \right\rangle
+<p><span class="theorem-title"><strong>Theorem 2 (The adjoint property for inner products)</strong></span> Let <span class="math inline">\(\mathbf{A}\)</span> be an <span class="math inline">\(m \times n\)</span> complex matrix. Under the standard inner product on complex Euclidean space, <span class="math inline">\(\mathopen{}\left\langle \tilde{u}, \tilde{v}\right\rangle\mathclose{} \stackrel{\text{def}}{=}\tilde{u}^{\mathsf{H}}\tilde{v}\)</span>,</p>
+<p><span class="math display">\[\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v}\right\rangle\mathclose{}
 \quad \text{for all } \tilde{u} \in \mathbb{C}^n \text{ and } \tilde{v} \in \mathbb{C}^m.\]</span></p>
 </div>
 </section>
@@ -476,7 +476,7 @@
 <p><span class="proof-title"><em>Proof</em>. </span>By the definition of the standard complex inner product and the product rule for the Hermitian adjoint (<a href="#/thm-hermitian-adjoint-properties" class="quarto-xref">Theorem&nbsp;1</a>):</p>
 <p><span class="math display">\[
 \begin{aligned}
-\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle
+\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{}
 &amp;= (\mathbf{A}\tilde{u})^{\mathsf{H}}\tilde{v}
 &amp;&amp; \text{(definition of standard inner product)}
 \\
@@ -486,7 +486,7 @@
 &amp;= \tilde{u}^{\mathsf{H}}(\mathbf{A}^{\mathsf{H}}\tilde{v})
 &amp;&amp; \text{(associativity of matrix multiplication)}
 \\
-&amp;= \left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v} \right\rangle
+&amp;= \mathopen{}\left\langle \tilde{u}, \mathbf{A}^{\mathsf{H}}\tilde{v}\right\rangle\mathclose{}
 &amp;&amp; \text{(definition of standard inner product)}.
 \end{aligned}
 \]</span></p>
@@ -495,7 +495,7 @@
 <section class="slide level2">
 
 <div id="rem-adjoint-name" class="proof remark">
-<p><span class="proof-title"><em>Remark 3</em> (Where the name “adjoint” comes from). </span>This identity is the origin of the name <strong>adjoint</strong>: in functional analysis and operator theory, the <em>adjoint</em> of a linear map <span class="math inline">\(T: V \to W\)</span> between inner product spaces is defined as the unique operator <span class="math inline">\(T^*: W \to V\)</span> satisfying <span class="math inline">\(\left\langle T\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, T^*\tilde{v} \right\rangle\)</span> (<span class="citation" data-cites="axler2024linear">Axler (<a href="#/references" role="doc-biblioref" onclick="">2024</a>, Definition 7.1, p.&nbsp;226)</span>). When <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator <span class="math inline">\(T^*\)</span> is precisely the Hermitian adjoint matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> (<span class="citation" data-cites="axler2024linear">Axler (<a href="#/references" role="doc-biblioref" onclick="">2024</a>, Proposition 7.9, p.&nbsp;231)</span>).</p>
+<p><span class="proof-title"><em>Remark 3</em> (Where the name “adjoint” comes from). </span>This identity is the origin of the name <strong>adjoint</strong>: in functional analysis and operator theory, the <em>adjoint</em> of a linear map <span class="math inline">\(T: V \to W\)</span> between inner product spaces is defined as the unique operator <span class="math inline">\(T^*: W \to V\)</span> satisfying <span class="math inline">\(\mathopen{}\left\langle T\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, T^*\tilde{v}\right\rangle\mathclose{}\)</span> (<span class="citation" data-cites="axler2024linear">Axler (<a href="#/references" role="doc-biblioref" onclick="">2024</a>, Definition 7.1, p.&nbsp;226)</span>). When <span class="math inline">\(V\)</span> and <span class="math inline">\(W\)</span> are finite-dimensional spaces equipped with their standard orthonormal bases, the matrix representing the adjoint operator <span class="math inline">\(T^*\)</span> is precisely the Hermitian adjoint matrix <span class="math inline">\(\mathbf{A}^{\mathsf{H}}\)</span> (<span class="citation" data-cites="axler2024linear">Axler (<a href="#/references" role="doc-biblioref" onclick="">2024</a>, Proposition 7.9, p.&nbsp;231)</span>).</p>
 </div>
 </section>
 <section class="slide level2">
@@ -616,7 +616,7 @@
 <section class="slide level2">
 
 <div id="rem-hermitian-self-adjoint" class="proof remark">
-<p><span class="proof-title"><em>Remark 4</em> (Why “self-adjoint”). </span>The term <em>self-adjoint</em> comes directly from <a href="#/thm-adjoint-inner-product" class="quarto-xref">Theorem&nbsp;2</a>: when <span class="math inline">\(\mathbf{A}\)</span> is Hermitian, <span class="math inline">\(\left\langle \mathbf{A}\tilde{u}, \tilde{v} \right\rangle = \left\langle \tilde{u}, \mathbf{A}\tilde{v} \right\rangle\)</span> for all <span class="math inline">\(\tilde{u}, \tilde{v} \in \mathbb{C}^n\)</span>. The linear operator moves across the inner product without change.</p>
+<p><span class="proof-title"><em>Remark 4</em> (Why “self-adjoint”). </span>The term <em>self-adjoint</em> comes directly from <a href="#/thm-adjoint-inner-product" class="quarto-xref">Theorem&nbsp;2</a>: when <span class="math inline">\(\mathbf{A}\)</span> is Hermitian, <span class="math inline">\(\mathopen{}\left\langle \mathbf{A}\tilde{u}, \tilde{v}\right\rangle\mathclose{} = \mathopen{}\left\langle \tilde{u}, \mathbf{A}\tilde{v}\right\rangle\mathclose{}\)</span> for all <span class="math inline">\(\tilde{u}, \tilde{v} \in \mathbb{C}^n\)</span>. The linear operator moves across the inner product without change.</p>
 </div>
 </section>
 <section class="slide level2">

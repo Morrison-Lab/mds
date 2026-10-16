@@ -14,7 +14,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:35:37 (PDT)
+Last modified: 2026-10-15 17:50:35 (PDT)
 
 ## 1 Derivatives
 
@@ -22,7 +22,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](sets-functions.llms.md#def-function) defined at every point of an [open interval](sets-functions.llms.md#def-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](notation.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\, written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
+> **Definition 1 (Limit of a function at a point)** Let \\f\\ be a [function](sets-functions.llms.md#def-function) defined at every point of an [open interval](sets-functions.llms.md#def-open-interval) around \\c\\, except possibly at \\c\\ itself, and let \\L\\ be a [real number](number-systems.llms.md#def-real-numbers). The **limit** of \\f(x)\\ as \\x\\ approaches \\c\\ is \\L\\, written \\\lim\_{x \to c} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that
 >
 > \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\quad \text{for every } x \text{ with } 0 \< \mathopen{}\left\|x - c\right\|\mathclose{} \< \delta.\\
 >
@@ -40,12 +40,15 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 2 (One-sided limits)** Let \\f\\ be a function and \\L\\ a real number.
+> **Definition 2 (Right-hand limit)** Let \\f\\ be a function and \\L\\ a real number. The **right-hand limit** of \\f\\ at \\c\\ is \\L\\, written \\\lim\_{x \to c^+} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c \< x \< c + \delta\\.
+
+> **NOTE:**
 >
-> - The **right-hand limit** of \\f\\ at \\c\\ is \\L\\, written \\\lim\_{x \to c^+} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c \< x \< c + \delta\\.
-> - The **left-hand limit** of \\f\\ at \\c\\ is \\L\\, written \\\lim\_{x \to c^-} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c - \delta\< x \< c\\.
+> **Definition 3 (Left-hand limit)** Let \\f\\ be a function and \\L\\ a real number. The **left-hand limit** of \\f\\ at \\c\\ is \\L\\, written \\\lim\_{x \to c^-} f(x) = L\\, if for every \\\varepsilon\> 0\\ there is a \\\delta\> 0\\ such that \\\mathopen{}\left\|f(x) - L\right\|\mathclose{} \< \varepsilon\\ for every \\x\\ with \\c - \delta\< x \< c\\.
+
+> **NOTE:**
 >
-> These are the **one-sided limits** of \\f\\ at \\c\\.
+> **Definition 4 (One-sided limits)** Let \\f\\ be a function. The right-hand limit ([Definition 2](#def-right-hand-limit)) and the left-hand limit ([Definition 3](#def-left-hand-limit)) of \\f\\ at \\c\\ are the **one-sided limits** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -58,7 +61,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> *Remark 1* (A limit exists exactly when both one-sided limits exist and are equal). The limit \\\lim\_{x \to c} f(x)\\ ([Definition 1](#def-limit)) exists exactly when both one-sided limits ([Definition 2](#def-one-sided-limit)) exist and are equal, and then all three are equal.
+> *Remark 1* (A limit exists exactly when both one-sided limits exist and are equal). The limit \\\lim\_{x \to c} f(x)\\ ([Definition 1](#def-limit)) exists exactly when both one-sided limits ([Definition 4](#def-one-sided-limit)) exist and are equal, and then all three are equal.
 
 > **TIP:**
 >
@@ -72,11 +75,11 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 3 (Difference quotient)** Let \\f\\ be a real-valued function of one variable, defined at \\c\\ and at \\c + h\\, with \\h \ne 0\\. The **difference quotient** of \\f\\ at \\c\\ with increment \\h\\ is
+> **Definition 5 (Difference quotient)** Let \\f\\ be a real-valued function of one variable, defined at \\c\\ and at \\c + h\\, with \\h \ne 0\\. The **difference quotient** of \\f\\ at \\c\\ with increment \\h\\ is
 >
 > \\ \frac{f(c + h) - f(c)}{h}, \\
 >
-> the [slope](algebra-exponentials.llms.md#def-affine-function) of the line through the points \\(c, f(c))\\ and \\(c + h, f(c + h))\\.
+> the [slope](algebra-exponentials.llms.md#def-slope) of the line through the points \\(c, f(c))\\ and \\(c + h, f(c + h))\\.
 
 > **NOTE:**
 >
@@ -90,11 +93,11 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 4 (Differentiable function)** A function \\f\\ is **differentiable at** \\x = c\\ if the limit ([Definition 1](#def-limit)) of the difference quotient ([Definition 3](#def-difference-quotient)) as \\h \to 0\\,
+> **Definition 6 (Differentiable function)** A function \\f\\ is **differentiable at** \\x = c\\ if the limit ([Definition 1](#def-limit)) of the difference quotient ([Definition 5](#def-difference-quotient)) as \\h \to 0\\,
 >
 > \\f'(c) \stackrel{\text{def}}{=}\lim\_{h \to 0} \frac{f(c + h) - f(c)}{h},\\
 >
-> exists and is finite. The number \\f'(c)\\ is the derivative of \\f\\ at \\c\\ ([Definition 5](#def-derivative)).
+> exists and is finite. The number \\f'(c)\\ is the derivative of \\f\\ at \\c\\ ([Definition 7](#def-derivative)).
 >
 > ([Larson and Edwards 2018, sec. 2.1](#ref-larsonCalc11e), p. 100)
 
@@ -116,7 +119,15 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 5 (Derivative)** If \\f\\ is differentiable at \\c\\ ([Definition 4](#def-differentiable)), the number \\f'(c)\\ is the **derivative** of \\f\\ at \\c\\. The **derivative** of \\f\\ is the function \\f'\\ whose value at each \\x\\ where \\f\\ is differentiable is \\f'(x)\\. Writing the derivative with a prime, as \\f'\\ or \\f'(x)\\, is **Lagrange’s notation**. The derivative of \\f\\ is also written \\\frac{d f}{d x}\\ or \\\frac{d }{d x} f(x)\\, which is **Leibniz notation**.
+> **Definition 7 (Derivative)** If \\f\\ is differentiable at \\c\\ ([Definition 6](#def-differentiable)), the number \\f'(c)\\ is the **derivative** of \\f\\ at \\c\\. The **derivative** of \\f\\ is the function \\f'\\ whose value at each \\x\\ where \\f\\ is differentiable is \\f'(x)\\.
+
+> **NOTE:**
+>
+> **Definition 8 (Lagrange’s notation)** Writing the derivative ([Definition 7](#def-derivative)) with a prime, as \\f'\\ or \\f'(x)\\, is **Lagrange’s notation**.
+
+> **NOTE:**
+>
+> **Definition 9 (Leibniz notation)** The derivative of \\f\\ ([Definition 7](#def-derivative)) is also written \\\frac{d f}{d x}\\ or \\\frac{d }{d x} f(x)\\, which is **Leibniz notation**.
 
 > **NOTE:**
 >
@@ -124,12 +135,15 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 6 (One-sided derivatives)** Let \\f\\ be a function defined at \\c\\.
+> **Definition 10 (Right-hand derivative)** Let \\f\\ be a function defined at \\c\\. The **right-hand derivative** of \\f\\ at \\c\\ is the right-hand limit ([Definition 2](#def-right-hand-limit)) \\\lim\_{h \to 0^+} \frac{f(c + h) - f(c)}{h}\\ of the difference quotient ([Definition 5](#def-difference-quotient)), when that limit exists and is finite.
+
+> **NOTE:**
 >
-> - The **right-hand derivative** of \\f\\ at \\c\\ is the right-hand limit ([Definition 2](#def-one-sided-limit)) \\\lim\_{h \to 0^+} \frac{f(c + h) - f(c)}{h}\\ of the difference quotient ([Definition 3](#def-difference-quotient)), when that limit exists and is finite.
-> - The **left-hand derivative** of \\f\\ at \\c\\ is the left-hand limit \\\lim\_{h \to 0^-} \frac{f(c + h) - f(c)}{h}\\, when that limit exists and is finite.
+> **Definition 11 (Left-hand derivative)** Let \\f\\ be a function defined at \\c\\. The **left-hand derivative** of \\f\\ at \\c\\ is the left-hand limit ([Definition 3](#def-left-hand-limit)) \\\lim\_{h \to 0^-} \frac{f(c + h) - f(c)}{h}\\, when that limit exists and is finite.
+
+> **NOTE:**
 >
-> These are the **one-sided derivatives** of \\f\\ at \\c\\.
+> **Definition 12 (One-sided derivatives)** Let \\f\\ be a function defined at \\c\\. The right-hand derivative ([Definition 10](#def-right-hand-derivative)) and the left-hand derivative ([Definition 11](#def-left-hand-derivative)) of \\f\\ at \\c\\ are the **one-sided derivatives** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -151,7 +165,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 7 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose derivative \\f'\\ ([Definition 5](#def-derivative)) exists at every point of an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. If \\f'\\ is differentiable ([Definition 4](#def-differentiable)) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\.
+> **Definition 13 (Second derivative)** Let \\f\\ be a real-valued function of one variable whose derivative \\f'\\ ([Definition 7](#def-derivative)) exists at every point of an [open interval](sets-functions.llms.md#def-open-interval) containing \\c\\. If \\f'\\ is differentiable ([Definition 6](#def-differentiable)) at \\c\\, its derivative there, written \\f''(c)\\ or \\\frac{d ^2 f}{d x^2}\\, is the **second derivative** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -191,7 +205,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > \\\frac{\partial}{\partial x}x^q = qx^{q-1}\\
 >
-> When \\q\\ is a positive [integer](notation.llms.md#def-integers), the same formula holds for every real \\x\\.
+> When \\q\\ is a positive [integer](number-systems.llms.md#def-integers), the same formula holds for every real \\x\\.
 
 > **TIP:**
 >
@@ -411,7 +425,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > \\\begin{aligned} \frac{d a}{d c} &= \frac{d a}{d b} \frac{d b}{d c} \\ &= \frac{d b}{d c} \frac{d a}{d b} \end{aligned} \\
 >
-> or in Lagrange’s notation ([Definition 5](#def-derivative)), if \\g\\ is differentiable at \\x\\ and \\f\\ is differentiable at \\g(x)\\, then for the [composition](sets-functions.llms.md#def-composition) \\f \circ g\\, with inner function \\g\\ and outer function \\f\\:
+> or in Lagrange’s notation ([Definition 7](#def-derivative)), if \\g\\ is differentiable at \\x\\ and \\f\\ is differentiable at \\g(x)\\, then for the [composition](sets-functions.llms.md#def-composition) \\f \circ g\\, with inner function \\g\\ and outer function \\f\\:
 >
 > \\(f(g(x)))' = g'(x) f'(g(x))\\
 
@@ -431,6 +445,16 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
+> **Theorem 11 (Derivative of the standard Gaussian kernel)** For \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\ and every \\x \in \mathbb{R}\\,
+>
+> \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 7](#exr-miller-deriv-gaussian-kernel), worked in [Solution 7](#sol-miller-deriv-gaussian-kernel).
+
+> **NOTE:**
+>
 > **Exercise 8 (Second derivative of the Gaussian kernel)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.6.
 >
 > Find the second derivative of
@@ -439,13 +463,23 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> *Solution 8*. From [Exercise 7](#exr-miller-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 8](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
+> *Solution 8*. From [Theorem 11](#thm-deriv-gaussian-kernel), the first derivative is \\f'(x) = -x\operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\. Apply the product rule ([Theorem 8](#thm-product-rule)) to \\u(x) = -x\\ and \\v(x) = \operatorname{exp}\mathopen{}\left\\-x^2/2\right\\\mathclose{}\\:
 >
 > \\\begin{aligned} u'(x) &= -1 \\ v'(x) &= -x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
 >
 > Therefore:
 >
 > \\\begin{aligned} f''(x) &= u'(x)v(x) + u(x)v'(x) \\ &= (-1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} + (-x)\mathopen{}\left\[-x\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\right\]\mathclose{} \\ &= (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{} \end{aligned}\\
+
+> **NOTE:**
+>
+> **Theorem 12 (Second derivative of the standard Gaussian kernel)** For \\f(x) = \operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\ and every \\x \in \mathbb{R}\\,
+>
+> \\f''(x) = (x^2 - 1)\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 8](#exr-miller-deriv-second-gaussian-kernel), worked in [Solution 8](#sol-miller-deriv-second-gaussian-kernel).
 
 > **NOTE:**
 >
@@ -549,11 +583,15 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 8 (Profile of a function)** The **profile** of a function \\f\\ of a real variable is the list of related functions and values to work out when meeting \\f\\ for the first time:
+> **Definition 14 (Logarithmic derivative)** The **logarithmic derivative** \\\frac{f'(x)}{f(x)}\\ of a function \\f\\ of a real variable equals \\\frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of \\f\\ relative to its size; it needs \\f(x) \> 0\\, and for \\f(x) \< 0\\ the same expression is the derivative of \\\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|f(x)\right\|\mathclose{}\right\\\mathclose{}\\.
+
+> **NOTE:**
+>
+> **Definition 15 (Profile of a function)** The **profile** of a function \\f\\ of a real variable is the list of related functions and values to work out when meeting \\f\\ for the first time:
 >
 > - the logarithm \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\, where \\f(x) \> 0\\;
 > - the derivatives \\f'(x)\\, \\f''(x)\\, and so on, as far as they are informative;
-> - the **logarithmic derivative** \\\frac{f'(x)}{f(x)}\\, which equals \\\frac{d }{d x}\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{}\\ by [Corollary 1](#cor-deriv-log-chain) and measures the rate of change of \\f\\ relative to its size; it needs \\f(x) \> 0\\, and for \\f(x) \< 0\\ the same expression is the derivative of \\\operatorname{log}\mathopen{}\left\\\mathopen{}\left\|f(x)\right\|\mathclose{}\right\\\mathclose{}\\;
+> - the [logarithmic derivative](#def-logarithmic-derivative) \\\frac{f'(x)}{f(x)}\\;
 > - the inverse function \\f^{-1}\\ ([definition](sets-functions.llms.md#def-inverse-function)), which exists on the range of \\f\\ when \\f\\ is one-to-one, and otherwise only after restricting the domain of \\f\\;
 > - the complement \\1 - f(x)\\, which is informative when \\f\\ takes values in \\\[0, 1\]\\, as a probability does;
 > - the reciprocal \\\frac{1}{f(x)}\\, where \\f(x) \neq 0\\ (not to be confused with \\f^{-1}\\);
@@ -567,7 +605,7 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 >
 > \\ f(x) = \frac{1}{1 + e^{-x}}. \\
 >
-> The profile in [Definition 8](#def-function-profile) of \\f\\ is as follows. Write \\E = e^{-x}\\, so that \\f = \frac{1}{1 + E}\\ and \\1 - f = \frac{E}{1 + E}\\.
+> The profile in [Definition 15](#def-function-profile) of \\f\\ is as follows. Write \\E = e^{-x}\\, so that \\f = \frac{1}{1 + E}\\ and \\1 - f = \frac{E}{1 + E}\\.
 >
 > - **Logarithm:** \\\operatorname{log}\mathopen{}\left\\f(x)\right\\\mathclose{} = -\operatorname{log}\mathopen{}\left\\1 + e^{-x}\right\\\mathclose{}\\, defined for every real \\x\\ because \\f(x) \> 0\\.
 >
@@ -655,11 +693,11 @@ Last modified: 2026-10-15 13:35:37 (PDT)
 
 > **NOTE:**
 >
-> **Definition 9 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
+> **Definition 16 (Tangent line)** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). The **tangent line** to the [graph](sets-functions.llms.md#def-graph) of \\f\\ at \\c\\ is the graph of the [affine function](algebra-exponentials.llms.md#def-affine-function)
 >
 > \\x \mapsto f(c) + f'(c)\\(x - c),\\
 >
-> the line through the point \\(c, f(c))\\ with [slope](algebra-exponentials.llms.md#def-affine-function) \\f'(c)\\. The slope \\f'(c)\\ is also called the **tangent slope** of \\f\\ at \\c\\.
+> the line through the point \\(c, f(c))\\ with [slope](algebra-exponentials.llms.md#def-slope) \\f'(c)\\. The slope \\f'(c)\\ is also called the **tangent slope** of \\f\\ at \\c\\.
 
 > **NOTE:**
 >
@@ -677,7 +715,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 10 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\varepsilon\\
+> **Definition 17 (Linear approximation (first-order Taylor approximation))** For a function \\f\\ that is differentiable at \\w\\, the **linear approximation** of \\f\\ at \\w\\ (also called the **first-order Taylor approximation**) is the function of the step \\\varepsilon\\
 >
 > \\\hat{f}\_w(\varepsilon) = f(w) + \varepsilon\\\frac{d }{d w}f(w)\\
 >
@@ -685,7 +723,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Remark 2* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 10](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
+> *Remark 2* (The “linear” approximation is affine). The linear approximation \\\hat{f}\_w\\ ([Definition 17](#def-linear-approximation)) is an [affine function](algebra-exponentials.llms.md#def-affine-function) of the step \\\varepsilon\\: its slope is \\\frac{d }{d w}f(w)\\ and its intercept is \\f(w)\\. It is [linear](algebra-exponentials.llms.md#def-linear-function) in \\\varepsilon\\ only when \\f(w) = 0\\. The name “linear approximation” uses “linear” in the looser sense of elementary algebra ([remark](algebra-exponentials.llms.md#rem-linear-function-terminology)). Boyd and Vandenberghe ([2018](#ref-boyd2018vmls)), section 2.2, treats the first-order Taylor approximation as an affine function for functions of several variables as well.
 
 > **NOTE:**
 >
@@ -743,7 +781,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > })
 > ```
 >
-> The dashed blue line is the tangent line ([Definition 9](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
+> The dashed blue line is the tangent line ([Definition 16](#def-tangent-line)) at \\w\\; the red segment is the error of the prediction.
 >
 > Figure 2: The linear approximation [Equation 1](#eq-linear-approx) for \\f(w) = w^2 - 4w + 7\\, at any \\w\\ and step \\\varepsilon\\.
 
@@ -785,7 +823,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 11 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 4](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**).
+> **Definition 18 (Flat point (stationary point))** Let \\f\\ be differentiable at \\c\\ ([Definition 6](#def-differentiable)). If \\f'(c) = 0\\, then \\c\\ is a **flat point** of \\f\\ (also called a **stationary point**).
 
 > **NOTE:**
 >
@@ -830,13 +868,13 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 12 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 4](#def-differentiable)).
+> **Definition 19 (Critical point)** Let \\f\\ be a function defined on an [open interval](sets-functions.llms.md#def-open-interval) containing \\c\\. The point \\c\\ is a **critical point** of \\f\\ if either \\f'(c) = 0\\ or \\f\\ is not differentiable at \\c\\ ([Definition 6](#def-differentiable)).
 
 > **NOTE:**
 >
 > **Example 11 (Critical points that are and are not flat points)**  
 >
-> - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 2](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
+> - \\g(w) = \mathopen{}\left\|w\right\|\mathclose{}\\ has no derivative at \\w = 0\\: its one-sided derivatives there are \\1\\ and \\-1\\ ([Example 6](#exm-one-sided-derivative)), so the difference quotient \\\tfrac{\mathopen{}\left\|h\right\|\mathclose{} - 0}{h}\\ has no limit as \\h \to 0\\ ([Definition 4](#def-one-sided-limit)). So \\0\\ is a critical point of \\g\\ but not a flat point.
 >
 > - \\f(w) = w^3\\ has
 >
@@ -848,11 +886,11 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Theorem 11 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 11](#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 12](#def-critical-point)).
+> **Theorem 13 (Every flat point is a critical point)** If \\c\\ is a flat point of \\f\\ ([Definition 18](#def-flat-point)), then \\c\\ is a critical point of \\f\\ ([Definition 19](#def-critical-point)).
 
 > **NOTE:**
 >
-> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 12](#def-critical-point), so \\c\\ is a critical point.
+> *Proof*. A flat point \\c\\ has \\f\\ differentiable at \\c\\ and \\f'(c) = 0\\. The condition “\\f'(c) = 0\\” is the first alternative in [Definition 19](#def-critical-point), so \\c\\ is a critical point.
 
 > **NOTE:**
 >
@@ -874,7 +912,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 > #> [1] -1  1
 > ```
 >
-> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 11](#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 12](#def-critical-point)), but not a flat point.
+> The derivative is \\0\\ at 2 of the 5 points, namely \\w = -1\\ and \\w = 1\\. These are flat points of \\f\\, so by [Theorem 13](#thm-flat-point-critical) they are critical points. The difference quotients of \\g\\ at \\0\\ are -1 from the left and 1 from the right, so \\g\\ has no derivative at \\0\\. Thus \\0\\ is a critical point of \\g\\ ([Definition 19](#def-critical-point)), but not a flat point.
 
 > **NOTE:**
 >
@@ -944,7 +982,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 13 (Taylor polynomial)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
+> **Definition 20 (Taylor polynomial)** Let \\f\\ be a function that has at least \\n\\ derivatives at a point \\x_0\\. The **Taylor polynomial** of degree \\n\\ for \\f\\ centered at \\x_0\\ is:
 >
 > \\ \begin{aligned} P_n(x) &= \sum\_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k \\ &= f(x_0) + f'(x_0)(x - x_0) + \frac{f''(x_0)}{2!}(x - x_0)^2 + \dots + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n \end{aligned} \tag{2}\\
 
@@ -964,17 +1002,17 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> **Definition 14 (Maclaurin polynomial)** When \\x_0 = 0\\, the Taylor polynomial \\P_n(x)\\ ([Definition 13](#def-taylor-polynomial)) is called the **Maclaurin polynomial**.
+> **Definition 21 (Maclaurin polynomial)** When \\x_0 = 0\\, the Taylor polynomial \\P_n(x)\\ ([Definition 20](#def-taylor-polynomial)) is called the **Maclaurin polynomial**.
 
 > **NOTE:**
 >
-> **Definition 15 (Taylor series)** Let \\f\\ and \\x_0\\ be as in [Definition 13](#def-taylor-polynomial). When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
+> **Definition 22 (Taylor series)** Let \\f\\ and \\x_0\\ be as in [Definition 20](#def-taylor-polynomial). When \\f\\ is infinitely differentiable and the series converges to \\f(x)\\ on an open interval containing \\x_0\\, the infinite sum \\\sum\_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k\\ is the **Taylor series** of \\f\\ centered at \\x_0\\.
 
 > **TIP:**
 >
 > Chapter 11 of the [*Essence of calculus*](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) series by 3Blue1Brown develops the geometric and polynomial intuition behind Taylor approximations:
 >
-> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 13](#def-taylor-polynomial)).
+> - [Taylor series](https://www.youtube.com/watch?v=3d6DsjIBzJ4) shows how higher-order derivatives match the curvature and rate of change of a function near a point to build polynomial approximations ([Definition 20](#def-taylor-polynomial)).
 
 > **NOTE:**
 >
@@ -1148,6 +1186,16 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
+> **Theorem 14 (Maclaurin polynomial of the standard normal density)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of the standard normal density \\\phi(x) = \frac{1}{\sqrt{2\pi}}\operatorname{exp}\mathopen{}\left\\-\frac{x^2}{2}\right\\\mathclose{}\\ is
+>
+> \\P_3(x) = \frac{1}{\sqrt{2\pi}} - \frac{x^2}{2\sqrt{2\pi}}\\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 23](#exr-miller-taylor-normal-density), worked in [Solution 23](#sol-miller-taylor-normal-density).
+
+> **NOTE:**
+>
 > **Exercise 24 (Taylor expansion of the square root)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.23.
 >
 > Find the first three terms (up to degree 2) of the Taylor series for
@@ -1228,6 +1276,16 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
+> **Theorem 15 (Maclaurin polynomial of \\\log(1 + x)\\)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of \\f(x) = \log(1 + x)\\ is
+>
+> \\P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}\\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 27](#exr-miller-taylor-log-one-plus-x), worked in [Solution 27](#sol-miller-taylor-log-one-plus-x).
+
+> **NOTE:**
+>
 > **Exercise 28 (Maclaurin series of \\\log(1 - x)\\)** Adapted from Miller ([2016](#ref-problifesavercalc)), Question 1.1.27.
 >
 > Find the terms up to degree 3 of the Taylor series for
@@ -1238,9 +1296,19 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 
 > **NOTE:**
 >
-> *Solution 28*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Exercise 27](#exr-miller-taylor-log-one-plus-x):
+> *Solution 28*. Substitute \\u = -x\\ into the expansion for \\\log(1 + u)\\ from [Theorem 15](#thm-taylor-log-one-plus-x):
 >
 > \\ \begin{aligned} \log(1 - x) &= (-x) - \frac{(-x)^2}{2} + \frac{(-x)^3}{3} - \dots \\ &= -x - \frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
+
+> **NOTE:**
+>
+> **Theorem 16 (Maclaurin polynomial of \\\log(1 - x)\\)** The Maclaurin polynomial ([Definition 21](#def-maclaurin-polynomial)) of degree 3 of \\f(x) = \log(1 - x)\\ is
+>
+> \\P_3(x) = -x - \frac{x^2}{2} - \frac{x^3}{3}\\
+
+> **NOTE:**
+>
+> *Proof*. This is the solution to [Exercise 28](#exr-miller-taylor-log-one-minus-x), worked in [Solution 28](#sol-miller-taylor-log-one-minus-x).
 
 > **NOTE:**
 >
@@ -1258,7 +1326,7 @@ For a differentiable function \\f\\ and a small step \\\varepsilon\\,
 >
 > \\ \begin{aligned} f(x) &= \log(1 - x) + \log(e^x) \\ &= \log(1 - x) + x \end{aligned} \\
 >
-> Substitute the series for \\\log(1 - x)\\ from [Exercise 28](#exr-miller-taylor-log-one-minus-x):
+> Substitute the series for \\\log(1 - x)\\ from [Theorem 16](#thm-taylor-log-one-minus-x):
 >
 > \\ \begin{aligned} f(x) &= \mathopen{}\left(-x - \frac{x^2}{2} - \frac{x^3}{3} - \dots\right)\mathclose{} + x \\ &= -\frac{x^2}{2} - \frac{x^3}{3} - \dots \end{aligned} \\
 >

@@ -4,7 +4,7 @@ Code
 
 Published
 
-Last modified: 2026-10-15 13:35:37 (PDT)
+Last modified: 2026-10-15 17:50:35 (PDT)
 
 ## 1 Special Matrices
 
@@ -136,7 +136,7 @@ Some special matrices appeared earlier:
 >
 > **Theorem 2 (Inverse of a transpose)** If \\\mathbf{A}\\ is an invertible \\p \times p\\ matrix, then \\{\mathbf{A}}^{\top}\\ is invertible, and
 >
-> \\\mathopen{}\left({\mathbf{A}}^{\top}\right)^{-1}\mathclose{} = {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\
+> \\{\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}}^{-1} = {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top}\\
 
 > **NOTE:**
 >
@@ -152,7 +152,7 @@ Some special matrices appeared earlier:
 >
 > **Example 6 (Inverting a transpose)** For \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\, [Example 5](#exm-invertible-matrix) gives \\\mathbf{A}^{-1} = \begin{bmatrix} 0.5 & -0.5 \\ 0 & 1 \end{bmatrix}\\, so [Theorem 2](#thm-inverse-transpose) says
 >
-> \\ \begin{aligned} \mathopen{}\left({\mathbf{A}}^{\top}\right)^{-1}\mathclose{} &= \mathopen{}\left(\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\right)^{-1}\mathclose{} \\ &= {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top} \\ &= \begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix}, \end{aligned} \\
+> \\ \begin{aligned} {\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}}^{-1} &= {\mathopen{}\left(\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\right)\mathclose{}}^{-1} \\ &= {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top} \\ &= \begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix}, \end{aligned} \\
 >
 > and multiplying \\\begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 0.5 & 0 \\ -0.5 & 1 \end{bmatrix}\\ out does give \\\mathbf{I}\_2\\.
 
@@ -162,7 +162,7 @@ Some special matrices appeared earlier:
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top} &= \mathopen{}\left({\mathbf{A}}^{\top}\right)^{-1}\mathclose{} && \text{(inverse of a transpose)} \\ &= \mathbf{A}^{-1} && \text{(} \mathbf{A} \text{ is symmetric)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} {\mathopen{}\left(\mathbf{A}^{-1}\right)\mathclose{}}^{\top} &= {\mathopen{}\left({\mathbf{A}}^{\top}\right)\mathclose{}}^{-1} && \text{(inverse of a transpose)} \\ &= \mathbf{A}^{-1} && \text{(} \mathbf{A} \text{ is symmetric)} \end{aligned} \\
 >
 > The first step is [Theorem 2](#thm-inverse-transpose).
 
@@ -461,7 +461,7 @@ Some special matrices appeared earlier:
 >
 > **Definition 14 (Matrix inner product)** The **inner product** of two \\n \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\ is
 >
-> \\ \left\langle \mathbf{A}, \mathbf{B} \right\rangle \stackrel{\text{def}}{=} \operatorname{tr}\mathopen{}\left(\underbrace{{\mathbf{A}}^{\top}\mathbf{B}}\_{p \times p}\right)\mathclose{} \\
+> \\ \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{} \stackrel{\text{def}}{=} \operatorname{tr}\mathopen{}\left(\underbrace{{\mathbf{A}}^{\top}\mathbf{B}}\_{p \times p}\right)\mathclose{} \\
 
 Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) defines the same inner product on \\n \times p\\ matrices with the trace.
 
@@ -469,11 +469,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > **Theorem 9 (The matrix inner product multiplies matching entries)** For two \\n \times p\\ matrices \\\mathbf{A}\\ and \\\mathbf{B}\\:
 >
-> \\ \left\langle \mathbf{A}, \mathbf{B} \right\rangle = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}\\ b\_{ij} \\
+> \\ \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{} = \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}\\ b\_{ij} \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \left\langle \mathbf{A}, \mathbf{B} \right\rangle &= \operatorname{tr}({\mathbf{A}}^{\top}\mathbf{B}) && \text{(definition of the inner product)} \\ &= \sum\_{j=1}^p({\mathbf{A}}^{\top}\mathbf{B})\_{jj} && \text{(definition of the trace)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^n({\mathbf{A}}^{\top})\_{ji}\\ b\_{ij} && \text{(definition of matrix multiplication)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}\\ b\_{ij} && \text{(definition of the transpose)} \\ &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}\\ b\_{ij} && \text{(swap the order of two finite sums)} \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{} &= \operatorname{tr}({\mathbf{A}}^{\top}\mathbf{B}) && \text{(definition of the inner product)} \\ &= \sum\_{j=1}^p({\mathbf{A}}^{\top}\mathbf{B})\_{jj} && \text{(definition of the trace)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^n({\mathbf{A}}^{\top})\_{ji}\\ b\_{ij} && \text{(definition of matrix multiplication)} \\ &= \sum\_{j=1}^p\sum\_{i=1}^na\_{ij}\\ b\_{ij} && \text{(definition of the transpose)} \\ &= \sum\_{i=1}^n\sum\_{j=1}^pa\_{ij}\\ b\_{ij} && \text{(swap the order of two finite sums)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -483,11 +483,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > From [Definition 14](#def-matrix-inner-product):
 >
-> \\ \begin{aligned} \left\langle \mathbf{A}, \mathbf{B} \right\rangle &= \operatorname{tr}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{B}\right)\mathclose{} && \text{(definition of the inner product)} \\ &= \operatorname{tr}\mathopen{}\left( {\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}^{\top} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \right)\mathclose{} && \text{(substitute)} \\ &= \operatorname{tr}\mathopen{}\left( \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \right)\mathclose{} && \text{(definition of the transpose)} \\ &= \operatorname{tr}\mathopen{}\left(\begin{bmatrix} -3 & 7 \\ -4 & 10 \end{bmatrix}\right)\mathclose{} && \text{(multiply)} \\ &= -3 + 10 && \text{(definition of the trace)} \\ &= 7 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{} &= \operatorname{tr}\mathopen{}\left({\mathbf{A}}^{\top}\mathbf{B}\right)\mathclose{} && \text{(definition of the inner product)} \\ &= \operatorname{tr}\mathopen{}\left( {\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}}^{\top} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \right)\mathclose{} && \text{(substitute)} \\ &= \operatorname{tr}\mathopen{}\left( \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 2 \end{bmatrix} \right)\mathclose{} && \text{(definition of the transpose)} \\ &= \operatorname{tr}\mathopen{}\left(\begin{bmatrix} -3 & 7 \\ -4 & 10 \end{bmatrix}\right)\mathclose{} && \text{(multiply)} \\ &= -3 + 10 && \text{(definition of the trace)} \\ &= 7 && \text{(add)} \end{aligned} \\
 >
 > From [Theorem 9](#thm-matrix-inner-product-entries):
 >
-> \\ \begin{aligned} \left\langle \mathbf{A}, \mathbf{B} \right\rangle &= 1 \cdot 0 + 2 \cdot 1 + 3 \cdot(-1) + 4 \cdot 2 && \text{(multiply matching entries and add)} \\ &= 0 + 2 - 3 + 8 && \text{(multiply)} \\ &= 7 && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{} &= 1 \cdot 0 + 2 \cdot 1 + 3 \cdot(-1) + 4 \cdot 2 && \text{(multiply matching entries and add)} \\ &= 0 + 2 - 3 + 8 && \text{(multiply)} \\ &= 7 && \text{(add)} \end{aligned} \\
 
 > **NOTE:**
 >
@@ -495,21 +495,21 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > For example, listing the entries of \\\mathbf{A}\\ and \\\mathbf{B}\\ in [Example 19](#exm-matrix-inner-product) row by row gives \\(1, 2, 3, 4)\\ and \\(0, 1, -1, 2)\\, and
 >
-> \\ \begin{aligned} (1, 2, 3, 4) \cdot (0, 1, -1, 2) &= 7 \\ &= \left\langle \mathbf{A}, \mathbf{B} \right\rangle. \end{aligned} \\
+> \\ \begin{aligned} (1, 2, 3, 4) \cdot (0, 1, -1, 2) &= 7 \\ &= \mathopen{}\left\langle \mathbf{A}, \mathbf{B}\right\rangle\mathclose{}. \end{aligned} \\
 
 > **NOTE:**
 >
 > **Definition 15 (Frobenius norm)** The **Frobenius norm** of an \\n \times p\\ matrix \\\mathbf{A}\\ is
 >
-> \\ \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F \stackrel{\text{def}}{=}\sqrt{\left\langle \mathbf{A}, \mathbf{A} \right\rangle} \\
+> \\ \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F \stackrel{\text{def}}{=}\sqrt{\mathopen{}\left\langle \mathbf{A}, \mathbf{A}\right\rangle\mathclose{}} \\
 >
-> where \\\left\langle \cdot, \cdot \right\rangle\\ is the matrix inner product ([Definition 14](#def-matrix-inner-product)).
+> where \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ is the matrix inner product ([Definition 14](#def-matrix-inner-product)).
 
 > **NOTE:**
 >
 > **Example 20 (The Frobenius norm of a \\2 \times 2\\ matrix)** For \\\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}\\:
 >
-> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F &= \sqrt{\left\langle \mathbf{A}, \mathbf{A} \right\rangle} && \text{(definition of the Frobenius norm)} \\ &= \sqrt{1 \cdot 1 + 2 \cdot 2 + 3 \cdot 3 + 4 \cdot 4} && \text{(sum of products of matching entries)} \\ &= \sqrt{1 + 4 + 9 + 16} && \text{(multiply)} \\ &= \sqrt{30} && \text{(add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\lVert\mathbf{A}\right\rVert\mathclose{}\_F &= \sqrt{\mathopen{}\left\langle \mathbf{A}, \mathbf{A}\right\rangle\mathclose{}} && \text{(definition of the Frobenius norm)} \\ &= \sqrt{1 \cdot 1 + 2 \cdot 2 + 3 \cdot 3 + 4 \cdot 4} && \text{(sum of products of matching entries)} \\ &= \sqrt{1 + 4 + 9 + 16} && \text{(multiply)} \\ &= \sqrt{30} && \text{(add)} \end{aligned} \\
 >
 > The second step is [Theorem 9](#thm-matrix-inner-product-entries).
 
@@ -545,11 +545,13 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 16 (Eigenvalue and eigenvector)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix. A real number \\\lambda\\ is an **eigenvalue** of \\\mathbf{A}\\ if some real vector \\\tilde{v} \neq \tilde{0}\\ of length \\p\\ satisfies
+> **Definition 16 (Eigenvalue)** Let \\\mathbf{A}\\ be a \\p \times p\\ matrix. A real number \\\lambda\\ is an **eigenvalue** of \\\mathbf{A}\\ if some real vector \\\tilde{v} \neq \tilde{0}\\ of length \\p\\ satisfies
 >
 > \\ \underbrace{\mathbf{A}}\_{p \times p}\\\underbrace{\tilde{v}}\_{p \times 1} = \lambda\\\underbrace{\tilde{v}}\_{p \times 1} \\
+
+> **NOTE:**
 >
-> Any such \\\tilde{v}\\ is an **eigenvector** of \\\mathbf{A}\\ for \\\lambda\\.
+> **Definition 17 (Eigenvector)** In [Definition 16](#def-eigenvalue), any such \\\tilde{v}\\ is an **eigenvector** of \\\mathbf{A}\\ for \\\lambda\\.
 
 > **NOTE:**
 >
@@ -627,7 +629,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 17 (Eigendecomposition (spectral decomposition))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition**, or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
+> **Definition 18 (Eigendecomposition (spectral decomposition))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries. An **eigendecomposition**, or **spectral decomposition**, of \\\mathbf{A}\\ is a factorization
 >
 > \\ \mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top} \\
 >
@@ -691,7 +693,11 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 18 (Singular value decomposition and singular values)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\. A **singular value decomposition** (SVD) of \\\mathbf{A}\\ is a factorization \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ with \\\mathbf{U}\\, \\\mathbf{D}\\ and \\\mathbf{V}\\ as in [Theorem 12](#thm-svd). The numbers \\\sigma_1 \ge \cdots \ge \sigma_r \> 0\\ on the diagonal of \\\mathbf{D}\\ are the **singular values** of \\\mathbf{A}\\.
+> **Definition 19 (Singular value decomposition)** Let \\\mathbf{A}\\ be an \\n \times p\\ matrix with real entries and \\\operatorname{rank}(\mathbf{A}) = r\\. A **singular value decomposition** (SVD) of \\\mathbf{A}\\ is a factorization \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ with \\\mathbf{U}\\, \\\mathbf{D}\\ and \\\mathbf{V}\\ as in [Theorem 12](#thm-svd).
+
+> **NOTE:**
+>
+> **Definition 20 (Singular values)** The numbers \\\sigma_1 \ge \cdots \ge \sigma_r \> 0\\ on the diagonal of \\\mathbf{D}\\ in a singular value decomposition of \\\mathbf{A}\\ ([Definition 19](#def-svd)) are the **singular values** of \\\mathbf{A}\\.
 
 > **NOTE:**
 >
@@ -751,15 +757,15 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 >
 > \\ \begin{aligned} \mathbf{U} &= \mathbf{V} \\ &= \mathbf{I}\_2 \end{aligned} \\
 >
-> and \\\mathbf{D} = \mathbf{B}\\ gives an SVD \\\mathbf{B} = \mathbf{I}\_2 \mathbf{B} {\mathbf{I}\_2}^{\top}\\, so by [Definition 18](#def-svd), \\\mathbf{B}\\ has one singular value, \\\sigma_1 = 3\\. R’s [`svd()`](https://rdrr.io/r/base/svd.html) reports \\\min(2, 2) = 2\\ singular values for \\\mathbf{B}\\: \\3\\ and \\0\\.
+> and \\\mathbf{D} = \mathbf{B}\\ gives an SVD \\\mathbf{B} = \mathbf{I}\_2 \mathbf{B} {\mathbf{I}\_2}^{\top}\\, so by [Definition 20](#def-singular-values), \\\mathbf{B}\\ has one singular value, \\\sigma_1 = 3\\. R’s [`svd()`](https://rdrr.io/r/base/svd.html) reports \\\min(2, 2) = 2\\ singular values for \\\mathbf{B}\\: \\3\\ and \\0\\.
 
 > **NOTE:**
 >
-> **Theorem 13 (An SVD gives an eigendecomposition of \\{\mathbf{A}}^{\top}\mathbf{A}\\)** Let \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ be a singular value decomposition ([Definition 18](#def-svd)) of an \\n \times p\\ matrix \\\mathbf{A}\\ with singular values \\\sigma_1, \ldots, \sigma_r\\. Then \\{\mathbf{A}}^{\top}\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)), and
+> **Theorem 13 (An SVD gives an eigendecomposition of \\{\mathbf{A}}^{\top}\mathbf{A}\\)** Let \\\mathbf{A} = \mathbf{U}\mathbf{D}{\mathbf{V}}^{\top}\\ be a singular value decomposition ([Definition 19](#def-svd)) of an \\n \times p\\ matrix \\\mathbf{A}\\ with singular values \\\sigma_1, \ldots, \sigma_r\\. Then \\{\mathbf{A}}^{\top}\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)), and
 >
 > \\ \underbrace{{\mathbf{A}}^{\top}\mathbf{A}}\_{p \times p} = \underbrace{\mathbf{V}}\_{p \times p}\\ \underbrace{\mathbf{\Lambda}}\_{p \times p}\\ \underbrace{{\mathbf{V}}^{\top}}\_{p \times p} \\
 >
-> where \\\mathbf{\Lambda} \stackrel{\text{def}}{=}{\mathbf{D}}^{\top}\mathbf{D}\\ is the \\p \times p\\ diagonal matrix whose \\i\\-th diagonal entry \\\lambda_i\\ is \\\sigma_i^2\\ for \\i \le r\\ and \\0\\ for \\i \> r\\. So \\\mathbf{V}\mathbf{\Lambda}{\mathbf{V}}^{\top}\\ is an eigendecomposition ([Definition 17](#def-eigendecomposition)) of \\{\mathbf{A}}^{\top}\mathbf{A}\\: column \\i\\ of \\\mathbf{V}\\ is an eigenvector of \\{\mathbf{A}}^{\top}\mathbf{A}\\ for the eigenvalue \\\lambda_i\\.
+> where \\\mathbf{\Lambda} \stackrel{\text{def}}{=}{\mathbf{D}}^{\top}\mathbf{D}\\ is the \\p \times p\\ diagonal matrix whose \\i\\-th diagonal entry \\\lambda_i\\ is \\\sigma_i^2\\ for \\i \le r\\ and \\0\\ for \\i \> r\\. So \\\mathbf{V}\mathbf{\Lambda}{\mathbf{V}}^{\top}\\ is an eigendecomposition ([Definition 18](#def-eigendecomposition)) of \\{\mathbf{A}}^{\top}\mathbf{A}\\: column \\i\\ of \\\mathbf{V}\\ is an eigenvector of \\{\mathbf{A}}^{\top}\mathbf{A}\\ for the eigenvalue \\\lambda_i\\.
 
 > **NOTE:**
 >
@@ -813,7 +819,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 19 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** if it satisfies both conditions:
+> **Definition 21 (Positive semidefinite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive semidefinite** if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
 > - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ is non-negative: \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for every vector \\\tilde{x}\\ of length \\p\\.
@@ -828,7 +834,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> **Definition 20 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** if it satisfies both conditions:
+> **Definition 22 (Positive definite matrix)** A \\p \times p\\ matrix \\\mathbf{A}\\ is **positive definite** if it satisfies both conditions:
 >
 > - \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)).
 > - Every quadratic form ([Definition 11](#def-quadratic-form)) in \\\mathbf{A}\\ at a nonzero vector is positive: \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every vector \\\tilde{x}\neq \tilde{0}\\ of length \\p\\.
@@ -849,7 +855,7 @@ Banerjee and Roy ([2014, chap. 15](#ref-banerjee2014linear), eq. 15.7, p. 491) 
 
 > **NOTE:**
 >
-> *Remark 18* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 19](#def-positive-semidefinite)): \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every \\\tilde{x}\neq \tilde{0}\\, and \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. For example, \\\mathbf{I}\_p\\ in [Example 28](#exm-positive-definite) is both.
+> *Remark 18* (Why the definition requires symmetry). A positive definite matrix is positive semidefinite ([Definition 21](#def-positive-semidefinite)): \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for every \\\tilde{x}\neq \tilde{0}\\, and \\{\tilde{0}}^{\top}\mathbf{A}\tilde{0}= 0\\. For example, \\\mathbf{I}\_p\\ in [Example 28](#exm-positive-definite) is both.
 >
 > Some sources drop the symmetry condition from both definitions. These notes keep it, because without it a matrix can pass the quadratic-form condition and still have no real eigenvalues ([Definition 16](#def-eigenvalue)). For example, \\\mathbf{C} = \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}\\ is not symmetric, and for any \\\tilde{x}= (x_1, x_2)\\:
 >
@@ -865,10 +871,10 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Theorem 14 (Definiteness and eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 17](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then:
+> **Theorem 14 (Definiteness and eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then:
 >
-> - \\\mathbf{A}\\ is positive semidefinite ([Definition 19](#def-positive-semidefinite)) if and only if every \\\lambda_i \ge 0\\.
-> - \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)) if and only if every \\\lambda_i \> 0\\.
+> - \\\mathbf{A}\\ is positive semidefinite ([Definition 21](#def-positive-semidefinite)) if and only if every \\\lambda_i \ge 0\\.
+> - \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)) if and only if every \\\lambda_i \> 0\\.
 
 > **NOTE:**
 >
@@ -891,7 +897,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Theorem 15 (A positive definite matrix has a positive definite inverse)** Let \\\mathbf{A}\\ be a \\p \times p\\ positive definite matrix ([Definition 20](#def-positive-definite)) with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 17](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\. Then \\\mathbf{A}\\ is invertible ([Definition 6](#def-invertible-matrix)),
+> **Theorem 15 (A positive definite matrix has a positive definite inverse)** Let \\\mathbf{A}\\ be a \\p \times p\\ positive definite matrix ([Definition 22](#def-positive-definite)) with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\. Then \\\mathbf{A}\\ is invertible ([Definition 6](#def-invertible-matrix)),
 >
 > \\ \mathbf{A}^{-1} = \mathbf{Q}\\\mathbf{\Lambda}^{-1}\\{\mathbf{Q}}^{\top}, \qquad \mathbf{\Lambda}^{-1} = \begin{bmatrix} 1/\lambda_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 1/\lambda_p \end{bmatrix}, \\
 >
@@ -927,11 +933,15 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 21 (Paraboloid)** A **paraboloid** in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\tilde{x}, f(\tilde{x})) \mid \tilde{x}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
+> **Definition 23 (Paraboloid)** A **paraboloid** in \\\mathbb{R}^{p+1}\\ is the graph \\\mathopen{}\left\\(\tilde{x}, f(\tilde{x})) \mid \tilde{x}\in \mathbb{R}^p\right\\\mathclose{}\\ of a function
 >
 > \\ f(\tilde{x}) = {\tilde{x}}^{\top} \mathbf{S} \tilde{x} + \tilde{b} \cdot \tilde{x} + c, \\
 >
-> where \\\mathbf{S}\\ is a nonzero symmetric \\p \times p\\ matrix ([Definition 3](#def-symmetric-matrix)), \\\tilde{b} \in \mathbb{R}^p\\, and \\c \in \mathbb{R}\\. The first term is a quadratic form ([Definition 11](#def-quadratic-form)). The paraboloid is **elliptic** if \\\mathbf{S}\\ is positive definite ([Definition 20](#def-positive-definite)); it is then a bowl that opens upward.
+> where \\\mathbf{S}\\ is a nonzero symmetric \\p \times p\\ matrix ([Definition 3](#def-symmetric-matrix)), \\\tilde{b} \in \mathbb{R}^p\\, and \\c \in \mathbb{R}\\. The first term is a quadratic form ([Definition 11](#def-quadratic-form)).
+
+> **NOTE:**
+>
+> **Definition 24 (Elliptic paraboloid)** The paraboloid of [Definition 23](#def-paraboloid) is **elliptic** if \\\mathbf{S}\\ is positive definite ([Definition 22](#def-positive-definite)); it is then a bowl that opens upward.
 
 > **NOTE:**
 >
@@ -962,9 +972,9 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Definition 22 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 20](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
+> **Definition 25 (Matrix-induced inner product (\\\mathbf{A}\\-inner product))** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 22](#def-positive-definite)) (\\\mathbf{A} = {\mathbf{A}}^{\top}\\ and \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} \> 0\\ for all nonzero \\\tilde{x}\in \mathbb{R}^p\\). The **matrix-induced inner product** (or **\\\mathbf{A}\\-inner product**) on \\\mathbb{R}^p\\ is defined for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ by
 >
-> \\ \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} \stackrel{\text{def}}{=}{\tilde{x}}^{\top} \mathbf{A} \tilde{y}. \\
+> \\ \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} \stackrel{\text{def}}{=}{\tilde{x}}^{\top} \mathbf{A} \tilde{y}. \\
 
 > **NOTE:**
 >
@@ -976,11 +986,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} {\tilde{x}}^{\top} \mathbf{A} \tilde{x} &= 2 x_1^2 + 2 x_1 x_2 + 2 x_2^2 && \text{(expand the quadratic form)} \\ &= (x_1 + x_2)^2 + x_1^2 + x_2^2 && \text{(complete the square)} \end{aligned} \\
 >
-> which is strictly positive because \\x_1^2 + x_2^2 \> 0\\ when \\\tilde{x}\neq \tilde{0}\\. Thus \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)).
+> which is strictly positive because \\x_1^2 + x_2^2 \> 0\\ when \\\tilde{x}\neq \tilde{0}\\. Thus \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)).
 >
 > For vectors \\\tilde{x}= (1, 2)\\ and \\\tilde{y}= (3, -1)\\, their inner product induced by \\\mathbf{A}\\ is:
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} && \text{(substitute vectors and matrix)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix} && \text{(multiply and add)} \\ &= 1 \cdot 5 + 2 \cdot 1 && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= 7. && \text{(multiply and add)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ -1 \end{bmatrix} && \text{(substitute vectors and matrix)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 2 \cdot 3 + 1 \cdot(-1) \\ 1 \cdot 3 + 2 \cdot(-1) \end{bmatrix} && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= \begin{bmatrix} 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 1 \end{bmatrix} && \text{(multiply and add)} \\ &= 1 \cdot 5 + 2 \cdot 1 && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \\ &= 7. && \text{(multiply and add)} \end{aligned} \\
 >
 > In contrast, the standard dot product yields:
 >
@@ -990,44 +1000,44 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 >
 > \\ \begin{aligned} A\_{12} &= A\_{21} \\ &= 1 \end{aligned} \\
 >
-> couple the coordinate directions, altering lengths and angles from their Euclidean values. When \\\mathbf{A} = \mathbf{I}\_p\\, the matrix-induced inner product recovers the standard dot product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{I}\_p} = \tilde{x}\cdot \tilde{y}\\.
+> couple the coordinate directions, altering lengths and angles from their Euclidean values. When \\\mathbf{A} = \mathbf{I}\_p\\, the matrix-induced inner product recovers the standard dot product \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{I}\_p} = \tilde{x}\cdot \tilde{y}\\.
 
 > **NOTE:**
 >
-> **Theorem 16 (Properties of the matrix-induced inner product)** For every \\p \times p\\ symmetric positive definite matrix \\\mathbf{A}\\, the function \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{y}\\ satisfies the four inner product axioms ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus \\(\mathbb{R}^p, \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}})\\ is an inner product space ([Definition 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
+> **Theorem 16 (Properties of the matrix-induced inner product)** For every \\p \times p\\ symmetric positive definite matrix \\\mathbf{A}\\, the function \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{y}\\ satisfies the four inner product axioms ([Definition 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product)): positivity, definiteness, linearity in the first slot, and symmetry. Thus \\(\mathbb{R}^p, \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}})\\ is an inner product space ([Definition 2 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-inner-product-space)).
 >
 > Taking \\\mathbf{A} = \mathbf{I}\_p\\ recovers the standard dot product ([Example 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-dot-product-inner-product)), while taking \\\mathbf{A} = \operatorname{diag}(c_1, \ldots, c_p)\\ recovers the weighted inner product ([Example 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#exm-weighted-inner-product)).
 >
-> Conversely, every inner product on \\\mathbb{R}^p\\ has this form for a unique symmetric positive definite matrix \\\mathbf{A}\\, whose \\(i, j)\\ entry is \\A\_{ij} = \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\\, where \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ are the standard basis vectors ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
+> Conversely, every inner product on \\\mathbb{R}^p\\ has this form for a unique symmetric positive definite matrix \\\mathbf{A}\\, whose \\(i, j)\\ entry is \\A\_{ij} = \mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{}\\, where \\\tilde{e}\_1, \ldots, \tilde{e}\_p\\ are the standard basis vectors ([Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)).
 
 > **NOTE:**
 >
 > *Proof*.
 >
-> - **positivity**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for all \\\tilde{x}\in \mathbb{R}^p\\, because \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite));
-> - **definiteness**: \\\left\langle \tilde{x}, \tilde{x} \right\rangle\_{\mathbf{A}} = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\, by definition of a positive definite matrix ([Definition 20](#def-positive-definite));
-> - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= a\\\left\langle \tilde{x}, \tilde{z} \right\rangle\_{\mathbf{A}} + b\\\left\langle \tilde{y}, \tilde{z} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
-> - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \left\langle \tilde{y}, \tilde{x} \right\rangle\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} && \text{(definition of } \left\langle \cdot, \cdot \right\rangle\_{\mathbf{A}} \text{)} \end{aligned} \\
+> - **positivity**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\mathbf{A}} = {\tilde{x}}^{\top} \mathbf{A} \tilde{x} \ge 0\\ for all \\\tilde{x}\in \mathbb{R}^p\\, because \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite));
+> - **definiteness**: \\\mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{}\_{\mathbf{A}} = 0\\ if and only if \\\tilde{x}= \tilde{0}\_{p \times 1}\\, by definition of a positive definite matrix ([Definition 22](#def-positive-definite));
+> - **linearity in the first slot**: for all \\\tilde{x}, \tilde{y}, \tilde{z} \in \mathbb{R}^p\\ and real numbers \\a, b\\, \\ \begin{aligned} \mathopen{}\left\langle a\\\tilde{x}+ b\\\tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\mathbf{A}} &= {(a\\\tilde{x}+ b\\\tilde{y})}^{\top}\\\mathbf{A}\tilde{z} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= (a\\{\tilde{x}}^{\top} + b\\{\tilde{y}}^{\top})\\\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-sum}{\text{Theorem~15 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-scalar-mult}{\text{Definition~6 in Matrices}}\text{, }\href{linear-algebra-matrices.qmd#def-matrix-transpose}{\text{Definition~3 in Matrices}}\text{)} \\ &= a\\{\tilde{x}}^{\top}\mathbf{A}\tilde{z} + b\\{\tilde{y}}^{\top}\mathbf{A}\tilde{z} && \text{(}\href{linear-algebra-matrices.qmd#thm-matmul-distrib}{\text{Theorem~6 in Matrices}}\text{)} \\ &= a\\\mathopen{}\left\langle \tilde{x}, \tilde{z}\right\rangle\mathclose{}\_{\mathbf{A}} + b\\\mathopen{}\left\langle \tilde{y}, \tilde{z}\right\rangle\mathclose{}\_{\mathbf{A}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \end{aligned} \\
+> - **symmetry**: because \\{\tilde{y}}^{\top}\mathbf{A}\tilde{x}\\ is a \\1 \times 1\\ scalar and \\\mathbf{A}\\ is symmetric (\\{\mathbf{A}}^{\top} = \mathbf{A}\\), \\ \begin{aligned} \mathopen{}\left\langle \tilde{y}, \tilde{x}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\tilde{y}}^{\top}\mathbf{A}\tilde{x} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \\ &= {\mathopen{}\left({\tilde{y}}^{\top}\mathbf{A}\tilde{x}\right)\mathclose{}}^{\top} && \text{(a scalar equals its transpose)} \\ &= {\tilde{x}}^{\top}{\mathbf{A}}^{\top}\tilde{y} && \text{(}\href{linear-algebra-matrices.qmd#thm-transpose-product}{\text{Theorem~16 in Matrices}}\text{, twice)} \\ &= {\tilde{x}}^{\top}\mathbf{A}\tilde{y} && \text{(\$\mathbf{A}\$ is symmetric)} \\ &= \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} && \text{(definition of } \mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\_{\mathbf{A}} \text{)} \end{aligned} \\
 >
-> For the converse, let \\\left\langle \cdot, \cdot \right\rangle\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^px_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
+> For the converse, let \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ be any inner product on \\\mathbb{R}^p\\. Any vectors \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\ can be written in the standard basis as \\\tilde{x}= \sum\_{i=1}^px_i\\\tilde{e}\_i\\ and \\\tilde{y}= \sum\_{j=1}^py_j\\\tilde{e}\_j\\ ([Definition 6 in Subspaces and Rank](linear-algebra-subspaces.llms.md#def-basis), [Definition 14 in Vectors](linear-algebra-vectors.llms.md#def-indicator-vector)). By linearity in both slots ([Remark 1 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#rem-inner-product-other-sources)):
 >
-> \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle &= \left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j \right\rangle && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
+> \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} &= \mathopen{}\left\langle \sum\_{i=1}^px_i\\\tilde{e}\_i, \sum\_{j=1}^py_j\\\tilde{e}\_j\right\rangle\mathclose{} && \text{(expand in the standard basis)} \\ &= \sum\_{i=1}^p\sum\_{j=1}^px_i y_j\\\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} && \text{(linearity in both slots)} \\ &= \sum\_{i=1}^px_i \sum\_{j=1}^pA\_{ij} y_j && \text{(define } A\_{ij} \stackrel{\text{def}}{=}\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} \text{)} \\ &= {\tilde{x}}^{\top} \mathbf{A} \tilde{y}. && \text{(}\href{linear-algebra-matrices.qmd#def-matvec-mult}{\text{Definition~13 in Matrices}}\text{)} \end{aligned} \\
 >
-> Symmetry of \\\left\langle \cdot, \cdot \right\rangle\\ ensures
+> Symmetry of \\\mathopen{}\left\langle \cdot, \cdot\right\rangle\mathclose{}\\ ensures
 >
-> \\ \begin{aligned} A\_{ji} &= \left\langle \tilde{e}\_j, \tilde{e}\_i \right\rangle \\ &= \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \\ &= A\_{ij}, \end{aligned} \\
+> \\ \begin{aligned} A\_{ji} &= \mathopen{}\left\langle \tilde{e}\_j, \tilde{e}\_i\right\rangle\mathclose{} \\ &= \mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} \\ &= A\_{ij}, \end{aligned} \\
 >
-> so \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} = \left\langle \tilde{x}, \tilde{x} \right\rangle \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)).
+> so \\\mathbf{A}\\ is symmetric ([Definition 3](#def-symmetric-matrix)). For any \\\tilde{x}\neq \tilde{0}\\, \\{\tilde{x}}^{\top} \mathbf{A} \tilde{x} = \mathopen{}\left\langle \tilde{x}, \tilde{x}\right\rangle\mathclose{} \> 0\\ by positivity and definiteness of the inner product, so \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)).
 >
-> For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\left\langle \tilde{x}, \tilde{y} \right\rangle = {\tilde{x}}^{\top}\mathbf{B}\tilde{y}\\ for all \\\tilde{x}, \tilde{y}\\, evaluating at \\\tilde{x}= \tilde{e}\_i\\ and \\\tilde{y}= \tilde{e}\_j\\ gives
+> For uniqueness, if another matrix \\\mathbf{B}\\ satisfies \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{} = {\tilde{x}}^{\top}\mathbf{B}\tilde{y}\\ for all \\\tilde{x}, \tilde{y}\\, evaluating at \\\tilde{x}= \tilde{e}\_i\\ and \\\tilde{y}= \tilde{e}\_j\\ gives
 >
-> \\ \begin{aligned} B\_{ij} &= {\tilde{e}\_i}^{\top}\mathbf{B}\tilde{e}\_j \\ &= \left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle \\ &= A\_{ij}, \end{aligned} \\
+> \\ \begin{aligned} B\_{ij} &= {\tilde{e}\_i}^{\top}\mathbf{B}\tilde{e}\_j \\ &= \mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{} \\ &= A\_{ij}, \end{aligned} \\
 >
 > so \\\mathbf{B} = \mathbf{A}\\.
 
 > **NOTE:**
 >
-> **Example 33 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 32](#exm-matrix-induced-inner-product), the vectors \\\tilde{x}= (1, 2)\\, \\\tilde{y}= (3, -1)\\ and \\\tilde{z} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 16](#thm-matrix-induced-inner-product), and then the numbers \\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\_{\mathbf{A}}\\ for the standard basis vectors.
+> **Example 33 (Checking the inner product axioms, and recovering the matrix from the inner product)** Take \\\mathbf{A} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}\\ from [Example 32](#exm-matrix-induced-inner-product), the vectors \\\tilde{x}= (1, 2)\\, \\\tilde{y}= (3, -1)\\ and \\\tilde{z} = (0, 4)\\, and the numbers \\a = 2\\ and \\b = -3\\. The code computes both sides of each axiom in [Theorem 16](#thm-matrix-induced-inner-product), and then the numbers \\\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{}\_{\mathbf{A}}\\ for the standard basis vectors.
 >
 > ``` downlit
 > A <- matrix(c(2, 1, 1, 2), nrow = 2)
@@ -1057,11 +1067,11 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 > #> [2,]    1    2
 > ```
 >
-> The inner product of \\\tilde{x}\\ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers \\\left\langle \tilde{e}\_i, \tilde{e}\_j \right\rangle\_{\mathbf{A}}\\ is equal to \\\mathbf{A}\\, as the converse in [Theorem 16](#thm-matrix-induced-inner-product) says.
+> The inner product of \\\tilde{x}\\ with itself is 14, which is positive. The two orders give the same number, 7 and 7. Both sides of the linearity axiom equal 28. The matrix of numbers \\\mathopen{}\left\langle \tilde{e}\_i, \tilde{e}\_j\right\rangle\mathclose{}\_{\mathbf{A}}\\ is equal to \\\mathbf{A}\\, as the converse in [Theorem 16](#thm-matrix-induced-inner-product) says.
 
 > **NOTE:**
 >
-> **Corollary 2 (A positive definite matrix is a transpose product)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 20](#def-positive-definite)). Then \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\ for some invertible \\p \times p\\ matrix \\\mathbf{W}\\.
+> **Corollary 2 (A positive definite matrix is a transpose product)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix ([Definition 22](#def-positive-definite)). Then \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\ for some invertible \\p \times p\\ matrix \\\mathbf{W}\\.
 
 > **NOTE:**
 >
@@ -1073,31 +1083,31 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> **Theorem 17 (A matrix-induced inner product is a dot product of transformed vectors)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix, and let \\\mathbf{W}\\ be any \\p \times p\\ matrix with \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\. Then for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, the \\\mathbf{A}\\-inner product ([Definition 22](#def-matrix-induced-inner-product)) satisfies
+> **Theorem 17 (A matrix-induced inner product is a dot product of transformed vectors)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric positive definite matrix, and let \\\mathbf{W}\\ be any \\p \times p\\ matrix with \\\mathbf{A} = {\mathbf{W}}^{\top}\mathbf{W}\\. Then for all \\\tilde{x}, \tilde{y}\in \mathbb{R}^p\\, the \\\mathbf{A}\\-inner product ([Definition 25](#def-matrix-induced-inner-product)) satisfies
 >
-> \\ \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} = (\mathbf{W}\tilde{x}) \cdot (\mathbf{W}\tilde{y}). \\
+> \\ \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} = (\mathbf{W}\tilde{x}) \cdot (\mathbf{W}\tilde{y}). \\
 
 > **NOTE:**
 >
-> *Proof*. \\ \begin{aligned} \left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{A}} &= {\tilde{x}}^{\top} {\mathbf{W}}^{\top}\mathbf{W} \tilde{y}\\ &= {(\mathbf{W}\tilde{x})}^{\top} (\mathbf{W}\tilde{y}) \\ &= (\mathbf{W}\tilde{x}) \cdot (\mathbf{W}\tilde{y}). \end{aligned} \\
+> *Proof*. \\ \begin{aligned} \mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{A}} &= {\tilde{x}}^{\top} {\mathbf{W}}^{\top}\mathbf{W} \tilde{y}\\ &= {(\mathbf{W}\tilde{x})}^{\top} (\mathbf{W}\tilde{y}) \\ &= (\mathbf{W}\tilde{x}) \cdot (\mathbf{W}\tilde{y}). \end{aligned} \\
 
 > **NOTE:**
 >
 > *Remark 19* (Inner product spaces in machine learning). In machine learning and statistics, choosing or learning an inner product space tailors geometric notions of distance, angle, and projection to the structure of the data:
 >
-> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix \\\mathbf{\Sigma}\\ ([Definition 20](#def-positive-definite)), the precision matrix \\\mathbf{A} = \mathbf{\Sigma}^{-1}\\ ([Theorem 15](#thm-pd-inverse)) defines the Mahalanobis inner product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\_{\mathbf{\Sigma}^{-1}} = {\tilde{x}}^{\top} \mathbf{\Sigma}^{-1} \tilde{y}\\. The induced distance \\d\_{\mathbf{\Sigma}^{-1}}(\tilde{x}, \tilde{y}) = \sqrt{{(\tilde{x}- \tilde{y})}^{\top}\mathbf{\Sigma}^{-1}(\tilde{x}- \tilde{y})}\\ measures statistical distance normalized by variance along each principal direction. Factoring \\\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}\\ (via Cholesky or spectral decomposition, [Corollary 2](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors \\\mathbf{W}\tilde{x}\\ and \\\mathbf{W}\tilde{y}\\ ([Theorem 17](#thm-whitening-inner-product)).
+> 1.  **Mahalanobis metric and whitening**: Standard Euclidean distance treats all coordinate axes identically, ignoring feature correlations and variance differences. If data features have a symmetric positive definite covariance matrix \\\mathbf{\Sigma}\\ ([Definition 22](#def-positive-definite)), the precision matrix \\\mathbf{A} = \mathbf{\Sigma}^{-1}\\ ([Theorem 15](#thm-pd-inverse)) defines the Mahalanobis inner product \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\_{\mathbf{\Sigma}^{-1}} = {\tilde{x}}^{\top} \mathbf{\Sigma}^{-1} \tilde{y}\\. The induced distance \\d\_{\mathbf{\Sigma}^{-1}}(\tilde{x}, \tilde{y}) = \sqrt{{(\tilde{x}- \tilde{y})}^{\top}\mathbf{\Sigma}^{-1}(\tilde{x}- \tilde{y})}\\ measures statistical distance normalized by variance along each principal direction. Factoring \\\mathbf{\Sigma}^{-1} = {\mathbf{W}}^{\top}\mathbf{W}\\ (via Cholesky or spectral decomposition, [Corollary 2](#cor-pd-transpose-product)), this inner product is the Euclidean dot product of the whitened vectors \\\mathbf{W}\tilde{x}\\ and \\\mathbf{W}\tilde{y}\\ ([Theorem 17](#thm-whitening-inner-product)).
 >
-> 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products \\\left\langle \tilde{x}\_i, \tilde{x}\_j \right\rangle\\. By mapping data into a higher- or infinite-dimensional inner product space via a feature map \\\phi: \mathbb{R}^p \to \mathcal{H}\\, the kernel trick replaces the computation of \\\phi(\tilde{x}\_i)\\ with an evaluation of a positive definite kernel function: \\ k(\tilde{x}\_i, \tilde{x}\_j) \stackrel{\text{def}}{=}\left\langle \phi(\tilde{x}\_i), \phi(\tilde{x}\_j) \right\rangle\_{\mathcal{H}}. \\ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space \\\mathcal{H}\\ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
+> 2.  **The kernel trick and reproducing kernel Hilbert spaces (RKHS)**: Algorithms such as support vector machines (SVMs), kernel ridge regression, and Gaussian processes depend on training vectors solely through pairwise inner products \\\mathopen{}\left\langle \tilde{x}\_i, \tilde{x}\_j\right\rangle\mathclose{}\\. By mapping data into a higher- or infinite-dimensional inner product space via a feature map \\\phi: \mathbb{R}^p \to \mathcal{H}\\, the kernel trick replaces the computation of \\\phi(\tilde{x}\_i)\\ with an evaluation of a positive definite kernel function: \\ k(\tilde{x}\_i, \tilde{x}\_j) \stackrel{\text{def}}{=}\mathopen{}\left\langle \phi(\tilde{x}\_i), \phi(\tilde{x}\_j)\right\rangle\mathclose{}\_{\mathcal{H}}. \\ Mercer’s theorem guarantees that every symmetric positive definite kernel function implicitly defines a valid inner product space \\\mathcal{H}\\ (a reproducing kernel Hilbert space) without requiring explicit coordinate representations.
 >
-> 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-cosine-similarity-inner-product-space)): \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\left\langle \tilde{x}, \tilde{y} \right\rangle}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\ When embedding vectors are normalized to unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals the inner product \\\left\langle \tilde{x}, \tilde{y} \right\rangle\\ ([Corollary 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-cosine-similarity-unit-vectors)). Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products \\\tilde{q} \cdot \tilde{k} / \sqrt{d_k}\\.
+> 3.  **Embeddings and cosine similarity**: In natural language processing and recommendation systems, data items are embedded as vectors in high-dimensional representations. The angle between embeddings captures semantic similarity through cosine similarity ([Definition 9 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#def-cosine-similarity-inner-product-space)): \\ \operatorname{cossim}(\tilde{x}, \tilde{y}) = \frac{\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}}{\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{}\\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{}}. \\ When embedding vectors are normalized to unit Euclidean norm (\\\mathopen{}\left\lVert\tilde{x}\right\rVert\mathclose{} = 1\\ and \\\mathopen{}\left\lVert\tilde{y}\right\rVert\mathclose{} = 1\\), cosine similarity equals the inner product \\\mathopen{}\left\langle \tilde{x}, \tilde{y}\right\rangle\mathclose{}\\ ([Corollary 3 in Inner Products and Orthogonality](linear-algebra-inner-products.llms.md#cor-cosine-similarity-unit-vectors)). Similarly, the self-attention mechanism in Transformers computes query-key alignment scores through scaled inner products \\\tilde{q} \cdot \tilde{k} / \sqrt{d_k}\\.
 >
-> 4.  **Weighted and generalized least squares**: In linear regression \\\tilde{y}\approx \mathbf{X}\tilde{\beta}\\, when observation errors have unequal variances or known correlations with positive definite covariance matrix \\\mathbf{\Omega}\\, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by \\\mathbf{W} = \mathbf{\Omega}^{-1}\\: \\ \min\_{\tilde{\beta}} \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\_{\mathbf{W}}^2 = \min\_{\tilde{\beta}} \left\langle \tilde{y}- \mathbf{X}\tilde{\beta}, \tilde{y}- \mathbf{X}\tilde{\beta} \right\rangle\_{\mathbf{W}}. \\
+> 4.  **Weighted and generalized least squares**: In linear regression \\\tilde{y}\approx \mathbf{X}\tilde{\beta}\\, when observation errors have unequal variances or known correlations with positive definite covariance matrix \\\mathbf{\Omega}\\, ordinary least squares is inefficient. Generalized least squares minimizes the residual norm in the inner product space induced by \\\mathbf{W} = \mathbf{\Omega}^{-1}\\: \\ \min\_{\tilde{\beta}} \mathopen{}\left\lVert\tilde{y}- \mathbf{X}\tilde{\beta}\right\rVert\mathclose{}\_{\mathbf{W}}^2 = \min\_{\tilde{\beta}} \mathopen{}\left\langle \tilde{y}- \mathbf{X}\tilde{\beta}, \tilde{y}- \mathbf{X}\tilde{\beta}\right\rangle\mathclose{}\_{\mathbf{W}}. \\
 
 ## 6 Determinants
 
 > **NOTE:**
 >
-> **Definition 23 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
+> **Definition 26 (Determinant)** The **determinant** of a \\p \times p\\ matrix \\\mathbf{A}\\ with entries \\a\_{ij}\\, written \\\det(\mathbf{A})\\ or \\\mathopen{}\left\|\mathbf{A}\right\|\mathclose{}\\, is the number defined recursively in \\p\\:
 >
 > - For \\p = 1\\, \\\det(\mathbf{A}) = a\_{11}\\.
 > - For \\p \ge 2\\, \\ \det(\mathbf{A}) = \sum\_{j=1}^p(-1)^{1+j}\\ a\_{1j} \det\mathopen{}\left(\mathbf{A}\_{(1j)}\right)\mathclose{}, \\ where \\\mathbf{A}\_{(1j)}\\ is the \\(p-1) \times (p-1)\\ matrix left after deleting row \\1\\ and column \\j\\ of \\\mathbf{A}\\.
@@ -1114,7 +1124,7 @@ See also <https://en.wikipedia.org/wiki/Definite_matrix>.
 
 > **NOTE:**
 >
-> *Remark 20* (Cofactor expansion). The recursive formula in [Definition 23](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree ([Banerjee and Roy 2014](#ref-banerjee2014linear)).
+> *Remark 20* (Cofactor expansion). The recursive formula in [Definition 26](#def-determinant) is the *cofactor expansion* along the first row. Other sources define the determinant as a sum over all orderings of the columns and derive this expansion from it; the two definitions agree ([Banerjee and Roy 2014](#ref-banerjee2014linear)).
 >
 > Each ordering picks one entry from each row, from the column that the ordering assigns to that row, and multiplies them. Its sign is \\+1\\ if the ordering takes an even number of swaps of two columns to reach from \\(1, 2, \ldots, p)\\, and \\-1\\ if it takes an odd number.
 >
@@ -1130,7 +1140,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Theorem 18 (Determinant of a diagonal matrix)** The determinant ([Definition 23](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
+> **Theorem 18 (Determinant of a diagonal matrix)** The determinant ([Definition 26](#def-determinant)) of a \\p \times p\\ diagonal matrix ([Definition 4](#def-diagonal-matrix)) is the product of its diagonal entries:
 >
 > \\ \det\mathopen{}\left( \begin{bmatrix} d_1 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & d_p \end{bmatrix} \right)\mathclose{} = \prod\_{i=1}^p d_i \\
 
@@ -1178,7 +1188,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Theorem 20 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 17](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then
+> **Theorem 20 (The determinant of a symmetric matrix is the product of its eigenvalues)** Let \\\mathbf{A}\\ be a \\p \times p\\ symmetric matrix with real entries, with eigendecomposition \\\mathbf{A} = \mathbf{Q}\mathbf{\Lambda}{\mathbf{Q}}^{\top}\\ ([Definition 18](#def-eigendecomposition)) and eigenvalues \\\lambda_1, \ldots, \lambda_p\\ on the diagonal of \\\mathbf{\Lambda}\\. Then
 >
 > \\ \det(\mathbf{A}) = \prod\_{i=1}^p \lambda_i. \\
 
@@ -1196,7 +1206,7 @@ See also <https://en.wikipedia.org/wiki/Determinant>.
 
 > **NOTE:**
 >
-> **Corollary 3 (A positive definite matrix has a positive determinant)** If \\\mathbf{A}\\ is positive definite ([Definition 20](#def-positive-definite)), then \\\det(\mathbf{A}) \> 0\\.
+> **Corollary 3 (A positive definite matrix has a positive determinant)** If \\\mathbf{A}\\ is positive definite ([Definition 22](#def-positive-definite)), then \\\det(\mathbf{A}) \> 0\\.
 
 > **NOTE:**
 >
